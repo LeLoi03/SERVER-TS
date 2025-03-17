@@ -2,7 +2,6 @@
 import { GoogleGenerativeAI, GenerationConfig } from "@google/generative-ai";
 import logToFile from '../utils/logger';
 import { HistoryItem } from '../shared/types'; // Shared type
-import { ModelConfig } from './configLoader'; // Import ModelConfig
 
 
 export class GeminiService {

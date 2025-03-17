@@ -1,0 +1,85 @@
+[
+  {
+    "id": "user123",
+    "email": "john.doe@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dob": "1990-05-15",
+    "role": "user",
+    "followedConferences": [],
+    "calendar": [],
+    "createdAt": "2023-01-20T10:00:00Z",
+    "updatedAt": "2023-01-20T10:00:00Z"
+  },
+  {
+    "id": "5b0cf9cc-db16-446c-bb95-1147b81d90f1",
+    "email": "nguyenhuuthang02032003@gmail.com",
+    "firstName": "THẮNG",
+    "lastName": "NGUYỄN",
+    "dob": "2025-03-16T02:23:28.637Z",
+    "role": "user",
+    "followedConferences": [],
+    "calendar": [],
+    "createdAt": "2025-03-16T02:23:28.642Z",
+    "updatedAt": "2025-03-16T02:23:28.642Z"
+  },
+  {
+    "id": "admin456",
+    "email": "jane.admin@example.com",
+    "firstName": "Jane",
+    "lastName": "Admin",
+    "dob": "1985-12-10",
+    "role": "user",
+    "followedConferences": [],
+    "calendar": [],
+    "createdAt": "2022-11-05T14:30:00Z",
+    "updatedAt": "2023-02-10T16:45:00Z"
+  },
+  {
+    "id": "user789",
+    "email": "peter.pan@example.com",
+    "firstName": "Peter",
+    "lastName": "Pan",
+    "dob": "2000-03-22",
+    "role": "user",
+    "followedConferences": [],
+    "calendar": [],
+    "createdAt": "2024-02-28T09:15:00Z",
+    "updatedAt": "2024-03-01T11:20:00Z"
+  },
+  {
+    "id": "specialUser",
+    "email": "special.user@example.net",
+    "firstName": "Special",
+    "lastName": "User",
+    "dob": "1978-07-04",
+    "role": "user",
+    "followedConferences": [],
+    "calendar": [],
+    "createdAt": "2021-06-05T12:00:00.000Z",
+    "updatedAt": "2021-06-05T12:00:00.000Z"
+  },
+  {
+    "id": "test",
+    "email": "test@gmail.com",
+    "firstName": "test",
+    "lastName": "test",
+    "dob": "1978-07-04",
+    "role": "user",
+    "followedConferences": [
+      "abcdef01-2345-6789-abcd-ef0123456789",
+      "a1b2c3d4-e5f6-4789-8abc-9012def34567"
+    ],
+    "calendar": [
+      "abcdef01-2345-6789-abcd-ef0123456789",
+      "11223344-5566-7788-99aa-bbccddeeff00",
+      "e5f6a7b8-9012-4cde-af12-3456789abcde",
+      "a1b2c3d4-e5f6-4789-8abc-9012def34567",
+      "a1b2c3d4-e5f6-4789-8abc-9012def34568",
+      "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
+      "7a8b9c10-1112-4d5e-8f66-234567890abc"
+    ],
+    "createdAt": "2021-06-05T12:00:00.000Z",
+    "updatedAt": "2021-06-05T12:00:00.000Z"
+  }
+]

@@ -176,18 +176,6 @@ interface Criteria {
   [key: string]: any;
 }
 
-interface Conference {
-  name: string;
-  date: string;
-  location?: string;
-}
-
-interface Journal {
-  title: string;
-  impactFactor?: number;
-  subjectArea: string;
-}
-
 interface ChartData {
   echartsConfig: any;
   sqlQuery: string;
@@ -222,7 +210,7 @@ async function extractUserQuestions(history: HistoryItem[]): Promise<string[]> {
 
 // --- Intent Handlers ---
 
-async function handleFindInformationConferenceIntent(criteria: Criteria): Promise<string> {
+export async function handleFindInformationConferenceIntent(criteria: Criteria): Promise<string> {
   logToFile(`Filtering conferences with criteria: ${JSON.stringify(criteria)}`);
   try {
     const filterCriteria = criteria["Filter conference"];
@@ -231,17 +219,17 @@ async function handleFindInformationConferenceIntent(criteria: Criteria): Promis
       "./evaluate.csv",
       "./output.txt"
     );
-    await logToFile(`filterConferences result (raw): ${conferenceResults}`); // Log raw result
+    logToFile(`filterConferences result (raw): ${conferenceResults}`); // Log raw result
 
     return conferenceResults; // Trả về chuỗi kết quả trực tiếp
   } catch (error) {
     console.error("Error filtering conference data:", error);
-    await logToFile(`Error filtering conference data: ${error}`); // Log the error
+    logToFile(`Error filtering conference data: ${error}`); // Log the error
     return ""; // Return empty array on error
   }
 }
 
-async function handleFindInformationJournalIntent(criteria: Criteria): Promise<string> {
+export async function handleFindInformationJournalIntent(criteria: Criteria): Promise<string> {
   await logToFile(`Filtering journals with criteria: ${JSON.stringify(criteria)}`);
   try {
     const filterCriteria = criteria["Filter journal"];
@@ -260,7 +248,7 @@ async function handleFindInformationJournalIntent(criteria: Criteria): Promise<s
   }
 }
 
-async function handleDrawChartIntent(history: HistoryItem[], intent: string): Promise<ChatResponse> {
+export async function handleDrawChartIntent(history: HistoryItem[], intent: string): Promise<ChatResponse> {
   const systemInstruction = getSystemInstruction(intent);
   const chartQuestionsHistory = history.filter(entry => (entry.role === 'user' && entry.type !== 'text'))
     .map((entry, index) => `User question ${index + 1}: ${entry.parts[0].text}`)
@@ -340,7 +328,7 @@ async function handleDrawChartIntent(history: HistoryItem[], intent: string): Pr
   }
 }
 
-async function handleWebsiteNavigationIntent(
+export async function handleWebsiteNavigationIntent(
   userIntent: UserIntent
 ): Promise<ChatResponse> {
   logToFile(`Handling website navigation intent. User intent: ${JSON.stringify(userIntent)}`); // Log user intent
@@ -382,7 +370,7 @@ async function handleWebsiteNavigationIntent(
   }
 }
 
-async function handleNoIntent(): Promise<string> {
+export async function handleNoIntent(): Promise<string> {
   logToFile('Handling no intent.'); // Log no intent
   const greetings = [
     "Hi there!  How can I help you with conferences, journals, or website information?",
@@ -395,7 +383,7 @@ async function handleNoIntent(): Promise<string> {
   return selectedGreeting;
 }
 
-async function handleInvalidIntent(
+export async function handleInvalidIntent(
   criteria: Criteria
 ): Promise<string> {
   logToFile(`Handling invalid intent. Criteria: ${JSON.stringify(criteria)}`); // Log invalid intent

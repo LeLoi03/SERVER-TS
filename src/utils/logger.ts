@@ -15,4 +15,4 @@ function logToFile(message: string): void {
 }
 
 
-export default logToFile ;
+export default logToFile;

@@ -1,0 +1,805 @@
+[
+  {
+    "conference": {
+      "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
+      "title": "International Conference on Machine Learning",
+      "acronym": "ICML",
+      "creatorId": "f8765432-10ab-4cde-8901-23456789abcd",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-02-28T14:45:00.000Z"
+    },
+    "organization": {
+      "id": "1a2b3c4d-5e6f-7890-abcd-ef0123456789",
+      "year": 2024,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
+      "summary": "The International Conference on Machine Learning (ICML) is the premier gathering of professionals dedicated to the advancement of the branch of artificial intelligence known as machine learning.",
+      "callForPaper": "ICML 2024 welcomes submissions on all aspects of machine learning, including but not limited to...",
+      "link": "https://icml.cc/Conferences/2024",
+      "cfpLink": "https://icml.cc/Conferences/2024/CallForPapers",
+      "impLink": "https://icml.cc/Conferences/2024/ImportantDates",
+      "topics": [
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Generative Models",
+        "Optimization",
+        "Theory"
+      ],
+      "createdAt": "2024-01-16T10:30:00.000Z",
+      "updatedAt": "2024-03-01T14:45:00.000Z"
+    },
+    "locations": {
+      "id": "2b3c4d5e-6f7a-8901-bcde-f0123456789a",
+      "address": "Hawaii Convention Center",
+      "cityStateProvince": "Honolulu, Hawaii",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": "2024-01-16T10:30:00.000Z",
+      "updatedAt": "2024-03-01T14:45:00.000Z",
+      "isAvailable": true,
+      "organizeId": "1a2b3c4d-5e6f-7890-abcd-ef0123456789"
+    },
+    "dates": [
+      {
+        "id": "3c4d5e6f-7a8b-9012-cdef-0123456789ab",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456789",
+        "fromDate": "2024-02-01T17:00:00.000Z",
+        "toDate": "2024-02-01T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4d5e6f7a-8b9c-0123-def4-56789abcdef0",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456789",
+        "fromDate": "2025-07-21T17:00:00.000Z",
+        "toDate": "2025-07-27T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "Machine Learning"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "a1b2c3d4-e5f6-4789-8abc-9012def34568",
+      "title": "Test",
+      "acronym": "Test",
+      "creatorId": "f8765432-10ab-4cde-8901-23456789abce",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-02-28T14:45:00.000Z"
+    },
+    "organization": {
+      "id": "a1b2c3d4-e5f6-4789-8abc-9012def34568",
+      "year": 2024,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "a1b2c3d4-e5f6-4789-8abc-9012def34561",
+      "summary": "The International Conference on Machine Learning (ICML) is the premier gathering of professionals dedicated to the advancement of the branch of artificial intelligence known as machine learning.",
+      "callForPaper": "ICML 2024 welcomes submissions on all aspects of machine learning, including but not limited to...",
+      "link": "https://icml.cc/Conferences/2024",
+      "cfpLink": "https://icml.cc/Conferences/2024/CallForPapers",
+      "impLink": "https://icml.cc/Conferences/2024/ImportantDates",
+      "topics": [
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Generative Models",
+        "Optimization",
+        "Theory"
+      ],
+      "createdAt": "2024-01-16T10:30:00.000Z",
+      "updatedAt": "2024-03-01T14:45:00.000Z"
+    },
+    "locations": {
+      "id": "2b3c4d5e-6f7a-8901-bcde-f0123456789b",
+      "address": "Hawaii Convention Center",
+      "cityStateProvince": "Honolulu, Hawaii",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": "2024-01-16T10:30:00.000Z",
+      "updatedAt": "2024-03-01T14:45:00.000Z",
+      "isAvailable": true,
+      "organizeId": "1a2b3c4d-5e6f-7890-abcd-ef0123456788"
+    },
+    "dates": [
+      {
+        "id": "3c4d5e6f-7a8b-9012-cdef-0123456789ac",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456788",
+        "fromDate": "2024-02-01T17:00:00.000Z",
+        "toDate": "2024-02-01T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4d5e6f7a-8b9c-0123-def4-56789abcdef0",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456788",
+        "fromDate": "2025-07-22T17:00:00.000Z",
+        "toDate": "2025-07-29T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "Machine Learning"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
+      "title": "Conference on Neural Information Processing Systems",
+      "acronym": "NeurIPS",
+      "creatorId": "01234567-89ab-4cde-8f90-abcdef123456",
+      "createdAt": "2024-02-20T11:45:00.000Z",
+      "updatedAt": "2024-03-15T16:00:00.000Z"
+    },
+    "organization": {
+      "id": "5e6f7890-abcd-ef01-2345-6789abcdef01",
+      "year": 2024,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
+      "summary": "NeurIPS is a multi-track machine learning and computational neuroscience conference that includes invited talks, demonstrations, symposia and oral and poster presentations of refereed papers.",
+      "callForPaper": "NeurIPS 2024 invites submissions presenting new and original research on all aspects of neural information processing systems.",
+      "link": "https://nips.cc/",
+      "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
+      "impLink": "https://nips.cc/Conferences/2024/ImportantDates",
+      "topics": [
+        "Neuroscience",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Reinforcement Learning",
+        "Theory"
+      ],
+      "createdAt": "2024-02-21T11:45:00.000Z",
+      "updatedAt": "2024-03-16T16:00:00.000Z"
+    },
+    "locations": {
+      "id": "6f7a8b9c-0123-def4-5678-9abcdef01234",
+      "address": "Vancouver Convention Centre",
+      "cityStateProvince": "Vancouver, British Columbia",
+      "country": "Canada",
+      "continent": "North America",
+      "createdAt": "2024-02-21T11:45:00.000Z",
+      "updatedAt": "2024-03-16T16:00:00.000Z",
+      "isAvailable": true,
+      "organizeId": "5e6f7890-abcd-ef01-2345-6789abcdef01"
+    },
+    "dates": [
+      {
+        "id": "7a8b9c01-2345-def6-789a-bcdef0123456",
+        "organizedId": "5e6f7890-abcd-ef01-2345-6789abcdef01",
+        "fromDate": "2024-05-16T17:00:00.000Z",
+        "toDate": "2024-05-16T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-02-21T11:45:00.000Z",
+        "updatedAt": "2024-03-16T16:00:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8b9c0123-4567-def8-9abc-def012345678",
+        "organizedId": "5e6f7890-abcd-ef01-2345-6789abcdef01",
+        "fromDate": "2024-12-09T18:00:00.000Z",
+        "toDate": "2024-12-15T18:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-02-21T11:45:00.000Z",
+        "updatedAt": "2024-03-16T16:00:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "Neural Networks"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "7a8b9c10-1112-4d5e-8f66-234567890abc",
+      "title": "European Conference on Computer Vision",
+      "acronym": "ECCV",
+      "creatorId": "bcdef123-4567-890a-bcde-f0123456789a",
+      "createdAt": "2024-03-10T09:20:00.000Z",
+      "updatedAt": "2024-04-05T13:35:00.000Z"
+    },
+    "organization": {
+      "id": "9c012345-6789-abcd-ef01-23456789abcd",
+      "year": 2024,
+      "accessType": "Online",
+      "isAvailable": true,
+      "conferenceId": "7a8b9c10-1112-4d5e-8f66-234567890abc",
+      "summary": "ECCV is a biennial research conference, alternating with ICCV, and held in the even-numbered years.  It is one of the top conferences in the field of computer vision.",
+      "callForPaper": "ECCV 2024 welcomes high-quality research papers on all aspects of computer vision and related areas.",
+      "link": "https://eccv2024.org/",
+      "cfpLink": "https://eccv2024.org/call-for-papers/",
+      "impLink": "https://eccv2024.org/important-dates/",
+      "topics": [
+        "Object Detection",
+        "Image Segmentation",
+        "3D Reconstruction",
+        "Video Analysis",
+        "Scene Understanding"
+      ],
+      "createdAt": "2024-03-11T09:20:00.000Z",
+      "updatedAt": "2024-04-06T13:35:00.000Z"
+    },
+    "locations": {
+      "id": "01234567-89ab-cdef-0123-456789abcdef",
+      "address": "MiCo Milano Convention Centre",
+      "cityStateProvince": "Milan",
+      "country": "Italy",
+      "continent": "Europe",
+      "createdAt": "2024-03-11T09:20:00.000Z",
+      "updatedAt": "2024-04-06T13:35:00.000Z",
+      "isAvailable": true,
+      "organizeId": "9c012345-6789-abcd-ef01-23456789abcd"
+    },
+    "dates": [
+      {
+        "id": "12345678-9abc-def0-1234-56789abcdef0",
+        "organizedId": "9c012345-6789-abcd-ef01-23456789abcd",
+        "fromDate": "2024-03-01T17:00:00.000Z",
+        "toDate": "2024-03-01T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-03-11T09:20:00.000Z",
+        "updatedAt": "2024-04-06T13:35:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "23456789-abcd-ef01-2345-6789abcdef01",
+        "organizedId": "9c012345-6789-abcd-ef01-23456789abcd",
+        "fromDate": "2025-09-29T17:00:00.000Z",
+        "toDate": "2025-10-04T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-03-11T09:20:00.000Z",
+        "updatedAt": "2024-04-06T13:35:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "researchFields": "Computer Vision"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
+      "title": "International Joint Conference on Artificial Intelligence",
+      "acronym": "IJCAI",
+      "creatorId": "12345678-9abc-4def-8012-3456789abcdef",
+      "createdAt": "2024-01-28T12:55:00.000Z",
+      "updatedAt": "2024-03-08T17:10:00.000Z"
+    },
+    "organization": {
+      "id": "3456789a-bcde-f012-3456-789abcdef012",
+      "year": 2024,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "c3d4e5f6-7890-4abc-8def-0123456789ab",
+      "summary": "IJCAI is the International Joint Conference on Artificial Intelligence, the premier international gathering of AI scientists and practitioners.",
+      "callForPaper": "IJCAI 2024 invites submissions across all areas of artificial intelligence.",
+      "link": "https://2025.ijcai.org/",
+      "cfpLink": "https://ijcai-24.org/call-for-papers/",
+      "impLink": "https://ijcai-24.org/important-dates/",
+      "topics": [
+        "Multi-Agent Systems",
+        "Robotics",
+        "Knowledge Representation",
+        "Machine Learning",
+        "Natural Language Processing"
+      ],
+      "createdAt": "2024-01-29T12:55:00.000Z",
+      "updatedAt": "2024-03-09T17:10:00.000Z"
+    },
+    "locations": {
+      "id": "456789ab-cdef-0123-4567-89abcdef0123",
+      "address": "International Convention Center Jeju",
+      "cityStateProvince": "Jeju Island",
+      "country": "South Korea",
+      "continent": "Asia",
+      "createdAt": "2024-01-29T12:55:00.000Z",
+      "updatedAt": "2024-03-09T17:10:00.000Z",
+      "isAvailable": true,
+      "organizeId": "3456789a-bcde-f012-3456-789abcdef012"
+    },
+    "dates": [
+      {
+        "id": "56789abc-def0-1234-5678-9abcdef01234",
+        "organizedId": "3456789a-bcde-f012-3456-789abcdef012",
+        "fromDate": "2024-01-12T17:00:00.000Z",
+        "toDate": "2024-01-19T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-01-29T12:55:00.000Z",
+        "updatedAt": "2024-03-09T17:10:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6789abcd-ef01-2345-6789-abcdef012345",
+        "organizedId": "3456789a-bcde-f012-3456-789abcdef012",
+        "fromDate": "2024-08-03T17:00:00.000Z",
+        "toDate": "2024-08-09T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-01-29T12:55:00.000Z",
+        "updatedAt": "2024-03-09T17:10:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "Artificial Intelligence"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
+      "title": "ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
+      "acronym": "SIGGRAPH",
+      "creatorId": "23456789-abcd-4ef0-9123-456789abcdef0",
+      "createdAt": "2024-02-10T14:20:00.000Z",
+      "updatedAt": "2024-03-22T18:35:00.000Z"
+    },
+    "organization": {
+      "id": "789abcde-f012-3456-789a-bcdef01234567",
+      "year": 2024,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
+      "summary": "SIGGRAPH is the world's largest, most influential annual conference and exhibition in computer graphics and interactive techniques.",
+      "callForPaper": "SIGGRAPH 2024 invites submissions of technical papers, posters, and art, showcasing the latest innovations in computer graphics and interactive techniques.",
+      "link": "https://s2024.siggraph.org/",
+      "cfpLink": "https://s2024.siggraph.org/program/call-for-submissions/",
+      "impLink": "https://s2024.siggraph.org/program/important-dates/",
+      "topics": [
+        "Animation",
+        "Virtual Reality",
+        "Rendering",
+        "Simulation",
+        "Visualization"
+      ],
+      "createdAt": "2024-02-11T14:20:00.000Z",
+      "updatedAt": "2024-03-23T18:35:00.000Z"
+    },
+    "locations": {
+      "id": "89abcdef-0123-4567-89ab-cdef012345678",
+      "address": "Colorado Convention Center",
+      "cityStateProvince": "Denver, Colorado",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": "2024-02-11T14:20:00.000Z",
+      "updatedAt": "2024-03-23T18:35:00.000Z",
+      "isAvailable": true,
+      "organizeId": "789abcde-f012-3456-789a-bcdef01234567"
+    },
+    "dates": [
+      {
+        "id": "9abcdef0-1234-5678-9abc-def0123456789",
+        "organizedId": "789abcde-f012-3456-789a-bcdef01234567",
+        "fromDate": "2024-01-23T17:00:00.000Z",
+        "toDate": "2024-01-23T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Technical Papers Deadline",
+        "createdAt": "2024-02-11T14:20:00.000Z",
+        "updatedAt": "2024-03-23T18:35:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "abcdef01-2345-6789-abcd-ef01234567890",
+        "organizedId": "789abcde-f012-3456-789a-bcdef01234567",
+        "fromDate": "2024-07-28T17:00:00.000Z",
+        "toDate": "2024-08-01T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-02-11T14:20:00.000Z",
+        "updatedAt": "2024-03-23T18:35:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "External",
+        "researchFields": "Computer Graphics"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "e5f6a7b8-9012-4cde-af12-3456789abcde",
+      "title": "International Conference on Computer Vision",
+      "acronym": "ICCV",
+      "creatorId": "890abcdef-1234-5678-9abc-def012345678",
+      "createdAt": "2024-12-03T16:45:00.000Z",
+      "updatedAt": "2025-03-01T09:22:00.000Z"
+    },
+    "organization": {
+      "id": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+      "year": 2025,
+      "accessType": "Online",
+      "isAvailable": true,
+      "conferenceId": "e5f6a7b8-9012-4cde-af12-3456789abcde",
+      "summary": "ICCV is the premier international computer vision event comprising the main conference and several co-located workshops and tutorials.",
+      "callForPaper": "ICCV 2025 calls for high-quality, original research papers in all areas of computer vision.",
+      "link": "https://iccv2025.thecvf.com/",
+      "cfpLink": "https://iccv2025.thecvf.com/call-for-papers",
+      "impLink": "https://iccv2025.thecvf.com/important-dates",
+      "topics": [
+        "Action Recognition",
+        "Biometrics",
+        "Computational Photography",
+        "3D Computer Vision",
+        "Motion and Tracking"
+      ],
+      "createdAt": "2024-12-04T16:45:00.000Z",
+      "updatedAt": "2025-03-02T09:22:00.000Z"
+    },
+    "locations": {
+      "id": "a7b8c9d0-1234-5678-9abc-def0123456789a",
+      "address": "Paris Convention Centre",
+      "cityStateProvince": "Paris",
+      "country": "France",
+      "continent": "Europe",
+      "createdAt": "2024-12-04T16:45:00.000Z",
+      "updatedAt": "2025-03-02T09:22:00.000Z",
+      "isAvailable": true,
+      "organizeId": "f6a7b8c9-0123-4def-89ab-cdef0123456789"
+    },
+    "dates": [
+      {
+        "id": "b8c9d0e1-2345-6789-abcd-ef01234567890b",
+        "organizedId": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+        "fromDate": "2025-03-07T17:00:00.000Z",
+        "toDate": "2025-03-07T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-12-04T16:45:00.000Z",
+        "updatedAt": "2025-03-02T09:22:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c9d0e1f2-3456-789a-bcde-f012345678901c",
+        "organizedId": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+        "fromDate": "2025-10-27T17:00:00.000Z",
+        "toDate": "2025-11-02T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2024-12-04T16:45:00.000Z",
+        "updatedAt": "2025-03-02T09:22:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "researchFields": "Computer Vision"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "34567890-abcd-4ef1-8234-56789abcdef1",
+      "title": "Conference on Empirical Methods in Natural Language Processing",
+      "acronym": "EMNLP",
+      "creatorId": "456789abcd-ef01-2345-6789-abcdef01234",
+      "createdAt": "2024-03-05T10:10:00.000Z",
+      "updatedAt": "2024-04-10T14:25:00.000Z"
+    },
+    "organization": {
+      "id": "4ef18234-5678-9abc-def0-123456789abcd",
+      "year": 2024,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "34567890-abcd-4ef1-8234-56789abcdef1",
+      "summary": "EMNLP is one of the leading conferences in the area of natural language processing and artificial intelligence.",
+      "callForPaper": "EMNLP 2024 invites the submission of long and short papers on substantial, original, and unpublished research in all aspects of empirical methods in natural language processing.",
+      "link": "https://2024.emnlp.org/",
+      "cfpLink": "https://2024.emnlp.org/calls/papers/",
+      "impLink": "https://2024.emnlp.org/important-dates/",
+      "topics": [
+        "Machine Translation",
+        "Text Summarization",
+        "Sentiment Analysis",
+        "Question Answering",
+        "Dialogue Systems"
+      ],
+      "createdAt": "2024-03-06T10:10:00.000Z",
+      "updatedAt": "2024-04-11T14:25:00.000Z"
+    },
+    "locations": {
+      "id": "56789abc-def1-8234-5678-9abcdef012345",
+      "address": "Hyatt Regency Miami",
+      "cityStateProvince": "Miami, Florida",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": "2024-03-06T10:10:00.000Z",
+      "updatedAt": "2024-04-11T14:25:00.000Z",
+      "isAvailable": true,
+      "organizeId": "4ef18234-5678-9abc-def0-123456789abcd"
+    },
+    "dates": [
+      {
+        "id": "6789abcd-ef01-2345-6789-abcdef0123456",
+        "organizedId": "4ef18234-5678-9abc-def0-123456789abcd",
+        "fromDate": "2024-05-20T17:00:00.000Z",
+        "toDate": "2024-05-20T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-03-06T10:10:00.000Z",
+        "updatedAt": "2024-04-11T14:25:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "789abcde-f012-3456-789a-bcdef01234567",
+        "organizedId": "4ef18234-5678-9abc-def0-123456789abcd",
+        "fromDate": "2024-11-12T18:00:00.000Z",
+        "toDate": "2024-11-16T18:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-03-06T10:10:00.000Z",
+        "updatedAt": "2024-04-11T14:25:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "researchFields": "Natural Language Processing"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "abcdef01-2345-6789-abcd-ef0123456789",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "acronym": "AAAI",
+      "creatorId": "56789abcde-f012-3456-789a-bcdef0123456",
+      "createdAt": "2024-04-18T11:30:00.000Z",
+      "updatedAt": "2024-05-02T15:45:00.000Z"
+    },
+    "organization": {
+      "id": "82345678-9abc-def0-1234-56789abcdef012",
+      "year": 2025,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "abcdef01-2345-6789-abcd-ef0123456789",
+      "summary": "AAAI is one of the top conferences in artificial intelligence, promoting research in AI and scientific exchange among AI researchers, practitioners, and educators.",
+      "callForPaper": "AAAI 2025 invites submissions on a broad range of topics in artificial intelligence.",
+      "link": "https://aaai.org/Conferences/AAAI-25/",
+      "cfpLink": "https://aaai.org/Conferences/AAAI-25/aaai25call/",
+      "impLink": "https://aaai.org/Conferences/AAAI-25/important-dates/",
+      "topics": [
+        "Explainable AI",
+        "AI Ethics",
+        "Human-AI Collaboration",
+        "Knowledge Representation and Reasoning",
+        "Robotics"
+      ],
+      "createdAt": "2024-04-19T11:30:00.000Z",
+      "updatedAt": "2024-05-03T15:45:00.000Z"
+    },
+    "locations": {
+      "id": "9abcde01-2345-6789-abcd-ef01234567890a",
+      "address": "Vancouver Convention Centre",
+      "cityStateProvince": "Vancouver, British Columbia",
+      "country": "Canada",
+      "continent": "North America",
+      "createdAt": "2024-04-19T11:30:00.000Z",
+      "updatedAt": "2024-05-03T15:45:00.000Z",
+      "isAvailable": true,
+      "organizeId": "82345678-9abc-def0-1234-56789abcdef012"
+    },
+    "dates": [
+      {
+        "id": "abcdef01-2345-6789-abcd-ef0123456789bc",
+        "organizedId": "82345678-9abc-def0-1234-56789abcdef012",
+        "fromDate": "2024-09-01T17:00:00.000Z",
+        "toDate": "2024-09-01T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2024-04-19T11:30:00.000Z",
+        "updatedAt": "2024-05-03T15:45:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "bcdef012-3456-789a-bcde-f0123456789012",
+        "organizedId": "82345678-9abc-def0-1234-56789abcdef012",
+        "fromDate": "2025-02-22T17:00:00.000Z",
+        "toDate": "2025-02-28T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-04-19T11:30:00.000Z",
+        "updatedAt": "2024-05-03T15:45:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "Artificial Intelligence"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "11223344-5566-7788-99aa-bbccddeeff00",
+      "title": "The Web Conference",
+      "acronym": "WWW",
+      "creatorId": "aabbccdd-eeff-0011-2233-445566778899",
+      "createdAt": "2024-03-29T14:00:00.000Z",
+      "updatedAt": "2024-05-10T10:30:00.000Z"
+    },
+    "organization": {
+      "id": "ccddeeff-0011-2233-4455-66778899aabb",
+      "year": 2025,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "11223344-5566-7788-99aa-bbccddeeff00",
+      "summary": "The Web Conference (formerly known as the International World Wide Web Conference, abbreviated as WWW) is a yearly international conference on the topic of the future direction of the World Wide Web.",
+      "callForPaper": "The Web Conference 2025 solicits original, high-impact research papers on all aspects of the Web.",
+      "link": "https://www2025.thewebconf.org/",
+      "cfpLink": "https://www2025.thewebconf.org/calls/papers/",
+      "impLink": "https://www2025.thewebconf.org/important-dates/",
+      "topics": [
+        "Web Mining",
+        "Semantic Web",
+        "Web Security",
+        "Web Information Retrieval",
+        "Social Networks"
+      ],
+      "createdAt": "2024-03-30T14:00:00.000Z",
+      "updatedAt": "2024-05-11T10:30:00.000Z"
+    },
+    "locations": {
+      "id": "ddeeff00-1122-3344-5566-778899aabbcc",
+      "address": "Marina Bay Sands Expo and Convention Centre",
+      "cityStateProvince": "Singapore",
+      "country": "Singapore",
+      "continent": "Asia",
+      "createdAt": "2024-03-30T14:00:00.000Z",
+      "updatedAt": "2024-05-11T10:30:00.000Z",
+      "isAvailable": true,
+      "organizeId": "ccddeeff-0011-2233-4455-66778899aabb"
+    },
+    "dates": [
+      {
+        "id": "eeff0011-2233-4455-6677-8899aabbccdd",
+        "organizedId": "ccddeeff-0011-2233-4455-66778899aabb",
+        "fromDate": "2024-10-15T17:00:00.000Z",
+        "toDate": "2024-10-15T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Research Track Paper Submission",
+        "createdAt": "2024-03-30T14:00:00.000Z",
+        "updatedAt": "2024-05-11T10:30:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ff001122-3344-5566-7788-99aabbccdde",
+        "organizedId": "ccddeeff-0011-2233-4455-66778899aabb",
+        "fromDate": "2025-05-05T17:00:00.000Z",
+        "toDate": "2025-05-09T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2024-03-30T14:00:00.000Z",
+        "updatedAt": "2024-05-11T10:30:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "researchFields": "World Wide Web"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "fedcba98-7654-3210-fedc-ba9876543210",
+      "title": "USENIX Security Symposium",
+      "acronym": "USENIX Security",
+      "creatorId": "01fedcba-9876-5432-10fe-dcba98765432",
+      "createdAt": "2023-12-01T08:00:00.000Z",
+      "updatedAt": "2024-02-15T12:00:00.000Z"
+    },
+    "organization": {
+      "id": "76543210-fedc-ba98-7654-3210fedcba98",
+      "year": 2024,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "fedcba98-7654-3210-fedc-ba9876543210",
+      "summary": "The USENIX Security Symposium brings together researchers, practitioners, system administrators, system programmers, and others interested in the latest advances in computer systems security.",
+      "callForPaper": "USENIX Security '24 invites submissions on all aspects of computer security, with an emphasis on practical results and real-world impact.",
+      "link": "https://www.usenix.org/conference/usenixsecurity24",
+      "cfpLink": "https://www.usenix.org/conference/usenixsecurity24/call-for-papers",
+      "impLink": "https://www.usenix.org/conference/usenixsecurity24/important-dates",
+      "topics": [
+        "Network Security",
+        "System Security",
+        "Web Security",
+        "Cryptography",
+        "Privacy-Enhancing Technologies"
+      ],
+      "createdAt": "2023-12-02T08:00:00.000Z",
+      "updatedAt": "2024-02-16T12:00:00.000Z"
+    },
+    "locations": {
+      "id": "6543210f-edcb-a987-6543-210fedcba987",
+      "address": "Philadelphia Marriott Downtown",
+      "cityStateProvince": "Philadelphia, Pennsylvania",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": "2023-12-02T08:00:00.000Z",
+      "updatedAt": "2024-02-16T12:00:00.000Z",
+      "isAvailable": true,
+      "organizeId": "76543210-fedc-ba98-7654-3210fedcba98"
+    },
+    "dates": [
+      {
+        "id": "543210fe-dcba-9876-5432-10fedcba9876",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "fromDate": "2024-02-08T17:00:00.000Z",
+        "toDate": "2024-02-08T17:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2023-12-02T08:00:00.000Z",
+        "updatedAt": "2024-02-16T12:00:00.000Z",
+        "isAvailable": true
+      },
+      {
+        "id": "43210fed-cba9-8765-4321-0fedcba98765",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "fromDate": "2024-08-14T17:00:00.000Z",
+        "toDate": "2024-08-16T17:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Dates",
+        "createdAt": "2023-12-02T08:00:00.000Z",
+        "updatedAt": "2024-02-16T12:00:00.000Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [
+      {
+        "rank": "A*",
+        "source": "External",
+        "researchFields": "Computer Security"
+      }
+    ]
+  }
+]

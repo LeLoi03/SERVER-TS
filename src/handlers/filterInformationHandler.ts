@@ -34,8 +34,8 @@ const filterGenerationConfig: FilterGenerationConfig = {
 };
 
 interface ConferenceCriteria {
-  "Conferences name list"?: string[];
-  "Conferences acronym list"?: string[];
+  "ConferencesNameList"?: string[];
+  "ConferencesAcronymList"?: string[];
   AverageRating?: string | string[];
   Source?: string | string[];
   PrimaryFoR?: string | string[];
@@ -109,9 +109,9 @@ async function filterConferences(criteria: ConferenceCriteria, csvFilePath: stri
           try {
             let isMatch = true;
 
-            if (criteria["Conferences name list"]) {
-              console.log(criteria["Conferences name list"])
-              const nameMatch = criteria["Conferences name list"].some(
+            if (criteria["ConferencesNameList"]) {
+              console.log(criteria["ConferencesNameList"])
+              const nameMatch = criteria["ConferencesNameList"].some(
                 (criteriaName) => row["Name"] && row["Name"].toLowerCase().includes(criteriaName.toLowerCase())
               );
               if (!nameMatch) {
@@ -119,8 +119,8 @@ async function filterConferences(criteria: ConferenceCriteria, csvFilePath: stri
               }
             }
 
-            if (criteria["Conferences acronym list"]) {
-              const acronymMatch = criteria["Conferences acronym list"].some(
+            if (criteria["ConferencesAcronymList"]) {
+              const acronymMatch = criteria["ConferencesAcronymList"].some(
                 (criteriaAcronym) => row["Acronym"] && row["Acronym"].toLowerCase().includes(criteriaAcronym.toLowerCase())
               );
               if (!acronymMatch) {
@@ -152,7 +152,7 @@ async function filterConferences(criteria: ConferenceCriteria, csvFilePath: stri
               }
             }
 
-            for (let dateKey of ["Conference dates", "Submission date", "Notification date", "Camera-ready date", "Registration date"]) {
+            for (let dateKey of ["ConferenceDates", "SubmissionDate", "NotificationDate", "CameraReadyDate", "RegistrationDate"]) {
               if (criteria[dateKey]) {
                 try {
                   const criteriaDates = Array.isArray(criteria[dateKey]) ? criteria[dateKey] : [criteria[dateKey]];
@@ -565,11 +565,11 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May,, notification in June, Camera ready in June, registration in June\nUser question 7: submission in last week of May\nUser question 8: Official website" },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"AI\",\n      \"Artificial Intelligence\"\n    ],\n    \"Country\": [\n      \"Vietnam\"\n    ],\n    \"Type\": [\n      \"Hybrid\"\n    ],\n    \"Continent\": [\n      \"Asia\"\n    ],\n    \"Conference dates\": \"May - December, 2025\",\n    \"Submision date\": \"May, 2025\",\n    \"Notification date\": \"June, 2025\",\n    \"Camera-ready date\": \"June, 2025\",\n    \"Registration date\": \"June, 2025\"\n  },\n  \"Description\": \"The user is seeking information about Hybrid conferences related to AI and Artificial Intelligence taking place in Vietnam (within Asia) between May and December 2025. The specific deadlines are: Submission in late May 2025, Notification in June 2025, Camera-ready in June 2025, and Registration in June 2025.\"\n}" },
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May\nUser question 7: last week of May\nUser question 8: Official website\nUser question 9: List again conferences in Asian but in all format\nUser question 10: I have a research paper in Automation area, specific in AI computer automation, can you suggest me some conferences fit for me ?\nUser question 11: Im time range i specified\nUser question 12: Details about dates in these conferences\nUser question 13: Do any of the above conferences have notification dates in July?\nUser question 14: Tell me details about AAAI conference" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Conferences acronym list\": [\n      \"AAAI\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the AAAI conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the AAAI conference, disregarding previous date constraints.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesAcronymList\": [\n      \"AAAI\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the AAAI conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the AAAI conference, disregarding previous date constraints.\"\n}" },
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May\nUser question 7: last week of May\nUser question 8: Official website\nUser question 9: List again conferences in Asian but in all format\nUser question 10: I have a research paper in Automation area, specific in AI computer automation, can you suggest me some conferences fit for me ?\nUser question 11: In time range I specified\nUser question 12: Details about dates in these conferences\nUser question 13: Do any of the above conferences have notification dates in July?\nUser question 14: Tell me details about  International Conference on Ambient Systems, Networks and Technologies conference" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Conferences name list\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the 'International Conference on Ambient Systems, Networks and Technologies' conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the specified conference, potentially disregarding previous date and topic constraints if necessary to fulfill the request.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesNameList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the 'International Conference on Ambient Systems, Networks and Technologies' conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the specified conference, potentially disregarding previous date and topic constraints if necessary to fulfill the request.\"\n}" },
     { text: "input: User question 1: Tell me details about  International Conference on Ambient Systems, Networks and Technologies and ACM International Conference on Advances in Geographic Information Systems" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Conferences name list\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\",\n      \"ACM International Conference on Advances in Geographic Information Systems\"\n    ]\n  },\n  \"Description\": \"The user is now requesting details about two specific conferences: the 'International Conference on Ambient Systems, Networks and Technologies' and the 'ACM International Conference on Advances in Geographic Information Systems'.  The system should focus on providing information about both of these conferences. Any previously established constraints (such as topic, date range, or location) from earlier in the conversation should be considered as *hints* but not strict requirements; prioritize providing details about the specified conferences, even if they don't perfectly match those earlier criteria.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesNameList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\",\n      \"ACM International Conference on Advances in Geographic Information Systems\"\n    ]\n  },\n  \"Description\": \"The user is now requesting details about two specific conferences: the 'International Conference on Ambient Systems, Networks and Technologies' and the 'ACM International Conference on Advances in Geographic Information Systems'.  The system should focus on providing information about both of these conferences. Any previously established constraints (such as topic, date range, or location) from earlier in the conversation should be considered as *hints* but not strict requirements; prioritize providing details about the specified conferences, even if they don't perfectly match those earlier criteria.\"\n}" },
     { text: "input: User question 1: List all conferences in rank A and B focus on Education" },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Rank\": [\n      \"A\",\n      \"B\"\n    ],\n    \"Topics\": [\n      \"Education\"\n    ]\n  },\n  \"Description\": \"The user is requesting a list of conferences ranked A or B that focus on the topic of Education.\"\n}" },
     { text: "input: User question 1: List all conferences" },
@@ -591,7 +591,7 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
     { text: "input: User question 1: Hi there.\nUser question 2: Find me conferences related to Natural Language Processing.\nUser question 3: In North America.\nUser question 4:  Preferably in the United States.\nUser question 5:  Any format is okay.\nUser question 6:  Taking place in 2025.\nUser question 7:  I'm interested in conferences with early submission deadlines, perhaps in January or February.\nUser question 8:  And notification dates around April.\nUser question 9:  Are there any top-tier conferences, like rank A* or A?\nUser question 10: List conferences with official websites available in the search result." },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"Natural Language Processing\"\n    ],\n    \"Continent\": [\n      \"North America\"\n    ],\n    \"Country\": [\n      \"United States\"\n    ],\n    \"Conference dates\": \"January - December, 2025\",\n    \"Submission date\": \"January - February, 2025\",\n    \"Notification date\": \"April, 2025\",\n    \"Rank\": [\n      \"A*\",\n      \"A\"\n    ]\n  },\n  \"Description\": \"The user is requesting a list of top-tier (Rank A* or A) conferences related to Natural Language Processing taking place in North America, specifically in the United States, during 2025. They are interested in any conference format (Hybrid, Offline, or Online), with submission deadlines in January or February and notification dates around April. The search result should include only conferences with official websites available.\"\n}" },
     { text: "input: User question 1: Hello.\nUser question 2: List conferences in Asia.\nUser question 3:  Hybrid format preferred.\nUser question 4:  Dates in 2026.\nUser question 5:  Topics: Natural Language Processing.\nUser question 6: Show me rank A conferences.\nUser question 7:  What about conferences specifically named \"ICCV\"?" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Conferences acronym list\": [\n      \"ICCV\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting information about conferences with the acronym 'ICCV', shifting the search away from previous criteria related to location (Asia), format (Hybrid), dates (2026), topic (Natural Language Processing), and rank (A). The system should prioritize providing details about ICCV conferences, and previous search parameters should only be considered if relevant to those specific conferences.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesAcronymList\": [\n      \"ICCV\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting information about conferences with the acronym 'ICCV', shifting the search away from previous criteria related to location (Asia), format (Hybrid), dates (2026), topic (Natural Language Processing), and rank (A). The system should prioritize providing details about ICCV conferences, and previous search parameters should only be considered if relevant to those specific conferences.\"\n}" },
     { text: "input: User question 1:  Hello, I'm looking for conferences in Computer Science.\nUser question 2:  Specifically focusing on Software Engineering.\nUser question 3:  In Europe, perhaps UK or Ireland.\nUser question 4:  Hybrid or in-person format.\nUser question 5:  Taking place in Spring 2026, say April or May.\nUser question 6:  Submission deadline maybe around December 2025.\nUser question 7:  Are there any student paper competitions at these conferences?\nUser question 8:  Also, I'm interested in conferences with workshops on Agile methodologies." },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"Software Engineering\",\n      \"Agile\"\n    ],\n    \"Continent\": [\n      \"Europe\"\n    ],\n    \"Country\": [\n      \"UK\",\n      \"United Kingdom\",\n      \"Ireland\"\n    ],\n    \"Type\": [\n      \"Hybrid\",\n      \"Offline\"\n    ],\n    \"Conference dates\": \"April - May, 2026\",\n    \"Submission date\": \"December, 2025\"\n  },\n  \"Description\": \"The user is requesting a list of conferences focused on Software Engineering and Agile methodologies, located in Europe (specifically the UK or Ireland), with a Hybrid or in-person format, taking place in April or May 2026, and having a submission deadline around December 2025. They are also interested in knowing if these conferences have student paper competitions.\"\n}" },
     { text: "input: User question 1: Take me to the About page." },
@@ -735,13 +735,13 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
             "type": "string"
           }
         },
-        "Conferences name list": {
+        "ConferencesNameList": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        "Conferences acronym list": {
+        "ConferencesAcronymList": {
           "type": "array",
           "items": {
             "type": "string"

@@ -1,0 +1,131 @@
+[
+  {
+    "conference": {
+      "id": "cf2ade5c-4284-4fbd-9ced-00b85942d400",
+      "title": "name",
+      "acronym": "acronym",
+      "creatorId": "test",
+      "createdAt": "2025-03-16T12:03:36.525Z",
+      "updatedAt": "2025-03-16T12:03:36.525Z"
+    },
+    "organization": {
+      "id": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "cf2ade5c-4284-4fbd-9ced-00b85942d400",
+      "summary": "Test",
+      "callForPaper": "",
+      "link": "link",
+      "cfpLink": "",
+      "impLink": "",
+      "topics": [
+        "AI",
+        "Machine learning"
+      ],
+      "createdAt": "2025-03-16T12:03:36.525Z",
+      "updatedAt": "2025-03-16T12:03:36.525Z"
+    },
+    "locations": {
+      "id": "0a78ef63-3539-41cf-82f3-ef1efbae1db0",
+      "address": "address",
+      "cityStateProvince": "citystateprovince",
+      "country": "country",
+      "continent": "continent",
+      "createdAt": "2025-03-16T12:03:36.525Z",
+      "updatedAt": "2025-03-16T12:03:36.525Z",
+      "isAvailable": true,
+      "organizeId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea"
+    },
+    "dates": [
+      {
+        "id": "1eade17d-776d-4b19-a8fa-aec9b9828588",
+        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
+        "fromDate": "2025-03-01T00:00:00.000Z",
+        "toDate": "2025-03-10T00:00:00.000Z",
+        "type": "Conference Date",
+        "name": "Conference Date",
+        "createdAt": "2025-03-16T12:03:36.525Z",
+        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "isAvailable": true
+      },
+      {
+        "id": "0f6a9d51-a0e5-4395-a5b6-d3c71dfa4e99",
+        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
+        "fromDate": "2025-03-11T00:00:00.000Z",
+        "toDate": "2025-03-18T00:00:00.000Z",
+        "type": "submission date",
+        "name": "submissiondeadline",
+        "createdAt": "2025-03-16T12:03:36.525Z",
+        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "isAvailable": true
+      },
+      {
+        "id": "332628c0-3b6b-4413-889d-589f37cb3182",
+        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
+        "fromDate": "2025-04-09T00:00:00.000Z",
+        "toDate": "2025-03-06T00:00:00.000Z",
+        "type": "notification date",
+        "name": "notificationdeadline",
+        "createdAt": "2025-03-16T12:03:36.525Z",
+        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [],
+    "status": "Pending"
+  },
+  {
+    "conference": {
+      "id": "cadd804c-ca91-49fa-92a2-c0caa1f541ea",
+      "title": "name",
+      "acronym": "acronym",
+      "creatorId": "test",
+      "createdAt": "2025-03-16T12:08:14.228Z",
+      "updatedAt": "2025-03-16T12:08:14.228Z"
+    },
+    "organization": {
+      "id": "32301b09-a1dd-4514-ba65-45fc1140b739",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "cadd804c-ca91-49fa-92a2-c0caa1f541ea",
+      "summary": "abc",
+      "callForPaper": "",
+      "link": "link",
+      "cfpLink": "",
+      "impLink": "",
+      "topics": [
+        "AI"
+      ],
+      "createdAt": "2025-03-16T12:08:14.228Z",
+      "updatedAt": "2025-03-16T12:08:14.228Z"
+    },
+    "locations": {
+      "id": "a4cc41ce-b3d5-4b4d-9578-fbf0696d8d49",
+      "address": "address",
+      "cityStateProvince": "citystateprovince",
+      "country": "country",
+      "continent": "continent",
+      "createdAt": "2025-03-16T12:08:14.228Z",
+      "updatedAt": "2025-03-16T12:08:14.228Z",
+      "isAvailable": true,
+      "organizeId": "32301b09-a1dd-4514-ba65-45fc1140b739"
+    },
+    "dates": [
+      {
+        "id": "12dcd701-d66c-49c5-9bbd-c67b9d4cae3c",
+        "organizedId": "32301b09-a1dd-4514-ba65-45fc1140b739",
+        "fromDate": "2025-03-06T00:00:00.000Z",
+        "toDate": "2025-03-12T00:00:00.000Z",
+        "type": "Conference Date",
+        "name": "Conference Date",
+        "createdAt": "2025-03-16T12:08:14.228Z",
+        "updatedAt": "2025-03-16T12:08:14.228Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [],
+    "status": "Pending"
+  }
+]
