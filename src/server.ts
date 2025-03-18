@@ -706,240 +706,243 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
   console.log("Request query parameters:", req.query);
 
   try {
-      const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-      const addedFilePath = path.resolve(__dirname, './database/add_conferences.json');
+    const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+    const addedFilePath = path.resolve(__dirname, './database/add_conferences.json');
 
-      console.log("detailsFilePath:", detailsFilePath);
-      console.log("addedFilePath:", addedFilePath);
+    console.log("detailsFilePath:", detailsFilePath);
+    console.log("addedFilePath:", addedFilePath);
 
-      const detailsData = await fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => {
-          console.log("Error reading detailsFilePath. Returning empty array.");
-          return '[]';
+    const detailsData = await fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => {
+      console.log("Error reading detailsFilePath. Returning empty array.");
+      return '[]';
+    });
+    const addedData = await fs.promises.readFile(addedFilePath, 'utf-8').catch(() => {
+      console.log("Error reading addedFilePath. Returning empty array.");
+      return '[]';
+    });
+
+    console.log("detailsData (first 100 chars):", detailsData.substring(0, 100));
+    console.log("addedData (first 100 chars):", addedData.substring(0, 100));
+
+    let detailsConferences: ConferenceResponse[];
+    let addedConferences: AddedConference[];
+
+    try {
+      detailsConferences = JSON.parse(detailsData);
+      addedConferences = JSON.parse(addedData);
+      console.log("detailsConferences length:", detailsConferences.length);
+      console.log("addedConferences length:", addedConferences.length);
+    } catch (parseError) {
+      console.error("Error parsing JSON:", parseError);
+      res.status(500).json({ message: 'Error parsing JSON data' });
+      return;
+    }
+
+
+    const allConferences: CombinedConference[] = [
+      ...detailsConferences.map(c => ({
+        id: c.conference.id,
+        title: c.conference.title,
+        acronym: c.conference.acronym,
+        location: c.locations,
+        year: c.organization.year,
+        rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
+        topics: c.organization.topics,
+        dates: c.dates[0],
+        link: c.organization.link,
+        accessType: c.organization.accessType,
+        creatorId: c.conference.creatorId,
+        callForPaper: c.organization.callForPaper,
+        summary: c.organization.summary,
+      })),
+      ...addedConferences.map(c => ({
+        id: c.conference.id,
+        title: c.conference.title,
+        acronym: c.conference.acronym,
+        location: c.locations,
+        year: c.organization.year,
+        rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
+        topics: c.organization.topics,
+        dates: c.dates[0],
+        link: c.organization.link,
+        accessType: c.organization.accessType,
+        creatorId: c.conference.creatorId,
+        status: c.status,
+        callForPaper: c.organization.callForPaper,
+        summary: c.organization.summary,
+      })),
+    ];
+
+    console.log("allConferences length:", allConferences.length);
+
+    const queryParams = new URLSearchParams(req.query as any);
+
+    const topics = queryParams.getAll('topics');
+    const publishers = queryParams.getAll('publisher');
+    const countries = queryParams.getAll('country');
+    const types = queryParams.getAll('type');
+    const keyword = queryParams.get('keyword');
+    const startDateStr = queryParams.get('startDate');
+    const endDateStr = queryParams.get('endDate');
+    const rank = queryParams.get('rank');
+    const sourceYear = queryParams.get('sourceYear');
+    const page = parseInt(queryParams.get('page') || '1', 10);
+    const sortBy = queryParams.get('sortBy') || 'date';
+    const limit = parseInt(queryParams.get('limit') || '8', 10);
+    const sortOrder = queryParams.get('sortOrder') || 'asc'; // Get sortOrder
+
+    console.log("Filtering with parameters:");
+    console.log("  topics:", topics);
+    console.log("  publishers:", publishers);
+    console.log("  countries:", countries);
+    console.log("  types:", types);
+    console.log("  keyword:", keyword);
+    console.log("  startDateStr:", startDateStr);
+    console.log("  endDateStr:", endDateStr);
+    console.log("  rank:", rank);
+    console.log("  sourceYear:", sourceYear);
+    console.log("  page:", page);
+    console.log("  sortBy:", sortBy);
+    console.log("  limit:", limit);
+    console.log("  sortOrder:", sortOrder); // Log sortOrder
+
+
+    let filteredConferences = allConferences;
+
+    // --- FILTERING (Same as before) ---
+    if (keyword) {
+      const keywordLower = keyword.toLowerCase();
+      console.log("Before keyword filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        conf.title.toLowerCase().includes(keywordLower) ||
+        conf.acronym.toLowerCase().includes(keywordLower) ||
+        conf.topics.some(topic => topic.toLowerCase().includes(keywordLower)) ||
+        (conf.summary && conf.summary.toLowerCase().includes(keywordLower)) ||
+        (conf.callForPaper && conf.callForPaper.toLowerCase().includes(keywordLower))
+      );
+      console.log("After keyword filter:", filteredConferences.length);
+    }
+    if (topics.length > 0) {
+      console.log("Before topics filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        topics.some(topic => conf.topics.includes(topic))
+      );
+      console.log("After topics filter:", filteredConferences.length);
+    }
+    if (publishers.length > 0) {
+      console.log("Before publishers filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        conf.rankSourceFoRData?.source && publishers.includes(conf.rankSourceFoRData.source)
+      ); // Use optional chaining and check for existence
+      console.log("After publishers filter:", filteredConferences.length);
+    }
+
+    if (countries.length > 0) {
+      console.log("Before countries filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        countries.includes(conf.location.country)
+      );
+      console.log("After countries filter:", filteredConferences.length);
+    }
+
+    if (types.length > 0) {
+      console.log("Before types filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        types.includes(conf.accessType)
+      );
+      console.log("After types filter:", filteredConferences.length);
+    }
+
+    if (startDateStr) {
+      const startDate = new Date(startDateStr);
+      console.log("Before startDate filter:", filteredConferences.length);
+      console.log("startDate:", startDate);
+      filteredConferences = filteredConferences.filter(conf => {
+        const confStartDate = new Date(conf.dates.fromDate);
+        console.log("confStartDate:", confStartDate);
+        return confStartDate >= startDate;
       });
-      const addedData = await fs.promises.readFile(addedFilePath, 'utf-8').catch(() => {
-          console.log("Error reading addedFilePath. Returning empty array.");
-          return '[]';
+      console.log("After startDate filter:", filteredConferences.length);
+    }
+    if (endDateStr) {
+      const endDate = new Date(endDateStr);
+      console.log("Before endDate filter:", filteredConferences.length);
+      console.log("endDate:", endDate);
+      filteredConferences = filteredConferences.filter(conf => {
+        const confEndDate = new Date(conf.dates.toDate);
+        console.log("confEndDate:", confEndDate);
+        return confEndDate <= endDate;
       });
+      console.log("After endDate filter:", filteredConferences.length);
+    }
 
-      console.log("detailsData (first 100 chars):", detailsData.substring(0, 100));
-      console.log("addedData (first 100 chars):", addedData.substring(0, 100));
+    if (rank) {
+      console.log("Before rank filter:", filteredConferences.length);
+      filteredConferences = filteredConferences.filter(conf =>
+        conf.rankSourceFoRData?.rank && conf.rankSourceFoRData.rank === rank
+      ); // Use optional chaining and check for existence
 
-      let detailsConferences: ConferenceResponse[];
-      let addedConferences: AddedConference[];
+      console.log("After rank filter:", filteredConferences.length);
+    }
 
-      try {
-          detailsConferences = JSON.parse(detailsData);
-          addedConferences = JSON.parse(addedData);
-          console.log("detailsConferences length:", detailsConferences.length);
-          console.log("addedConferences length:", addedConferences.length);
-      } catch (parseError) {
-          console.error("Error parsing JSON:", parseError);
-          res.status(500).json({ message: 'Error parsing JSON data' });
-          return;
+    if (sourceYear) {
+      const year = parseInt(sourceYear);
+      console.log("Before sourceYear filter:", filteredConferences.length);
+      if (!isNaN(year)) {
+        filteredConferences = filteredConferences.filter(conf => conf.year === year);
       }
+      console.log("After sourceYear filter:", filteredConferences.length);
+    }
 
 
-      const allConferences: CombinedConference[] = [
-          ...detailsConferences.map(c => ({
-              id: c.conference.id,
-              title: c.conference.title,
-              acronym: c.conference.acronym,
-              location: c.locations,
-              year: c.organization.year,
-              rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
-              topics: c.organization.topics,
-              dates: c.dates[0],
-              link: c.organization.link,
-              accessType: c.organization.accessType,
-              creatorId: c.conference.creatorId,
-              callForPaper: c.organization.callForPaper,
-              summary: c.organization.summary,
-          })),
-          ...addedConferences.map(c => ({
-              id: c.conference.id,
-              title: c.conference.title,
-              acronym: c.conference.acronym,
-              location: c.locations,
-              year: c.organization.year,
-              rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
-              topics: c.organization.topics,
-              dates: c.dates[0],
-              link: c.organization.link,
-              accessType: c.organization.accessType,
-              creatorId: c.conference.creatorId,
-              status: c.status,
-              callForPaper: c.organization.callForPaper,
-              summary: c.organization.summary,
-          })),
-      ];
-
-      console.log("allConferences length:", allConferences.length);
-
-      const queryParams = new URLSearchParams(req.query as any);
-
-      const topics = queryParams.getAll('topics');
-      const publishers = queryParams.getAll('publisher');
-      const countries = queryParams.getAll('country');
-      const types = queryParams.getAll('type');
-      const keyword = queryParams.get('keyword');
-      const startDateStr = queryParams.get('startDate');
-      const endDateStr = queryParams.get('endDate');
-      const rank = queryParams.get('rank');
-      const sourceYear = queryParams.get('sourceYear');
-      const page = parseInt(queryParams.get('page') || '1', 10);
-      const sortBy = queryParams.get('sortBy') || 'date';
-      const limit = parseInt(queryParams.get('limit') || '8', 10);
-
-      console.log("Filtering with parameters:");
-      console.log("  topics:", topics);
-      console.log("  publishers:", publishers);
-      console.log("  countries:", countries);
-      console.log("  types:", types);
-      console.log("  keyword:", keyword);
-      console.log("  startDateStr:", startDateStr);
-      console.log("  endDateStr:", endDateStr);
-      console.log("  rank:", rank);
-      console.log("  sourceYear:", sourceYear);
-      console.log("  page:", page);
-      console.log("  sortBy:", sortBy);
-      console.log("  limit:", limit);
-
-
-      let filteredConferences = allConferences;
-
-      if (keyword) {
-          const keywordLower = keyword.toLowerCase();
-          console.log("Before keyword filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              conf.title.toLowerCase().includes(keywordLower) ||
-              conf.acronym.toLowerCase().includes(keywordLower) ||
-              conf.topics.some(topic => topic.toLowerCase().includes(keywordLower)) ||
-              (conf.summary && conf.summary.toLowerCase().includes(keywordLower)) ||
-              (conf.callForPaper && conf.callForPaper.toLowerCase().includes(keywordLower))
-          );
-          console.log("After keyword filter:", filteredConferences.length);
-      }
-      if (topics.length > 0) {
-          console.log("Before topics filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              topics.some(topic => conf.topics.includes(topic))
-          );
-          console.log("After topics filter:", filteredConferences.length);
-      }
-      if (publishers.length > 0) {
-          console.log("Before publishers filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              conf.rankSourceFoRData?.source && publishers.includes(conf.rankSourceFoRData.source)
-          ); // Use optional chaining and check for existence
-          console.log("After publishers filter:", filteredConferences.length);
-      }
-
-      if (countries.length > 0) {
-          console.log("Before countries filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              countries.includes(conf.location.country)
-          );
-          console.log("After countries filter:", filteredConferences.length);
-      }
-
-      if (types.length > 0) {
-          console.log("Before types filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              types.includes(conf.accessType)
-          );
-          console.log("After types filter:", filteredConferences.length);
-      }
-
-      if (startDateStr) {
-          const startDate = new Date(startDateStr);
-          console.log("Before startDate filter:", filteredConferences.length);
-          console.log("startDate:", startDate);
-          filteredConferences = filteredConferences.filter(conf => {
-              const confStartDate = new Date(conf.dates.fromDate);
-              console.log("confStartDate:", confStartDate);
-              return confStartDate >= startDate;
-          });
-          console.log("After startDate filter:", filteredConferences.length);
-      }
-      if (endDateStr) {
-          const endDate = new Date(endDateStr);
-          console.log("Before endDate filter:", filteredConferences.length);
-          console.log("endDate:", endDate);
-          filteredConferences = filteredConferences.filter(conf => {
-              const confEndDate = new Date(conf.dates.toDate);
-              console.log("confEndDate:", confEndDate);
-              return confEndDate <= endDate;
-          });
-          console.log("After endDate filter:", filteredConferences.length);
-      }
-
-      if (rank) {
-          console.log("Before rank filter:", filteredConferences.length);
-          filteredConferences = filteredConferences.filter(conf =>
-              conf.rankSourceFoRData?.rank && conf.rankSourceFoRData.rank === rank
-          ); // Use optional chaining and check for existence
-
-          console.log("After rank filter:", filteredConferences.length);
-      }
-
-      if (sourceYear) {
-          const year = parseInt(sourceYear);
-          console.log("Before sourceYear filter:", filteredConferences.length);
-          if (!isNaN(year)) {
-              filteredConferences = filteredConferences.filter(conf => conf.year === year);
-          }
-          console.log("After sourceYear filter:", filteredConferences.length);
-      }
-
-      // --- SORTING (Server-Side) ---
-      console.log("Before sorting:", filteredConferences.length);
-      if (sortBy === 'date' || sortBy === 'startDate') {
-          filteredConferences.sort((a, b) => {
-              const dateA = a.dates.fromDate ? new Date(a.dates.fromDate).getTime() : -Infinity;
-              const dateB = b.dates.fromDate ? new Date(b.dates.fromDate).getTime() : -Infinity;
-              return dateA - dateB;
-          });
-      } else if (sortBy === 'endDate') {
-          filteredConferences.sort((a, b) => {
-              const dateA = a.dates.toDate ? new Date(a.dates.toDate).getTime() : -Infinity;
-              const dateB = b.dates.toDate ? new Date(b.dates.toDate).getTime() : -Infinity;
-              return dateA - dateB;
-          });
-      } else if (sortBy === 'rank') {
-          filteredConferences.sort((a, b) => {
-              // Use optional chaining and provide a default value for comparison
-              const rankA = a.rankSourceFoRData?.rank || '';
-              const rankB = b.rankSourceFoRData?.rank || '';
-              return rankA.localeCompare(rankB);
-          });
-      } else if (sortBy === 'name') {
-          filteredConferences.sort((a, b) => a.title.localeCompare(b.title));
-      }
-      console.log("After sorting:", filteredConferences.length);
-      // Add other sorting options as needed
-
-      // --- PAGINATION (Server-Side) ---
-      const startIndex = (page - 1) * limit;
-      const endIndex = page * limit;
-      console.log("startIndex:", startIndex);
-      console.log("endIndex:", endIndex);
-      const paginatedConferences = filteredConferences.slice(startIndex, endIndex);
-      console.log("paginatedConferences length:", paginatedConferences.length);
-
-      // --- RETURN PAGINATED RESULTS AND TOTAL COUNT ---
-      res.status(200).json({
-          items: paginatedConferences,
-          total: filteredConferences.length,
+    // --- SORTING (Server-Side) WITH sortOrder ---
+    console.log("Before sorting:", filteredConferences.length);
+    if (sortBy === 'date' || sortBy === 'startDate') {
+      filteredConferences.sort((a, b) => {
+        const dateA = a.dates.fromDate ? new Date(a.dates.fromDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
+        const dateB = b.dates.fromDate ? new Date(b.dates.fromDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
+        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA; // Use sortOrder
       });
+    } else if (sortBy === 'endDate') {
+      filteredConferences.sort((a, b) => {
+        const dateA = a.dates.toDate ? new Date(a.dates.toDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
+        const dateB = b.dates.toDate ? new Date(b.dates.toDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
+        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA; // Use sortOrder
+      });
+    } else if (sortBy === 'rank') {
+      filteredConferences.sort((a, b) => {
+        const rankA = a.rankSourceFoRData?.rank || '';
+        const rankB = b.rankSourceFoRData?.rank || '';
+        return sortOrder === 'asc' ? rankA.localeCompare(rankB) : rankB.localeCompare(rankA); // Use sortOrder
+      });
+    } else if (sortBy === 'name') {
+      filteredConferences.sort((a, b) => {
+        return sortOrder === 'asc' ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title); // Use sortOrder
+      });
+    }
+    console.log("After sorting:", filteredConferences.length);
+
+    // --- PAGINATION (Server-Side) ---
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    console.log("startIndex:", startIndex);
+    console.log("endIndex:", endIndex);
+    const paginatedConferences = filteredConferences.slice(startIndex, endIndex);
+    console.log("paginatedConferences length:", paginatedConferences.length);
+
+    // --- RETURN PAGINATED RESULTS AND TOTAL COUNT ---
+    res.status(200).json({
+      items: paginatedConferences,
+      total: filteredConferences.length,
+    });
 
   } catch (error: any) {
-      console.error('Error filtering conferences:', error);
-      res.status(500).json({ message: 'Internal server error' });
+    console.error('Error filtering conferences:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 
-app.get('/api/v1/filter-conferences', getFilteredConferences); // New route
-
+app.get('/api/v1/filter-conferences', getFilteredConferences);
 // --- Start the server ---
 app.listen(3000, () => {
   console.log(`Server listening on port 3000`);

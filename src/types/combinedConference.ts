@@ -25,7 +25,7 @@ interface CombinedConference {
     accessType: string; // "online", "offline", "hybrid"
     // Add other fields you need for filtering/displaying
     creatorId?: string; // Might be useful
-    status?: string;    // "Pending", etc. (from AddedConference)
+    status?: 'Pending' | 'Approved' | 'Rejected'; // Add the status property
     callForPaper?: string; //From organization.
     summary?: string;
   }
