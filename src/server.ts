@@ -1010,6 +1010,61 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
 app.get('/api/v1/filter-conferences', getFilteredConferences);
 
 
+// 11. Add feedback
+const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
+  const { conferenceId } = req.params; // Get conferenceId from URL
+  const { description, star, creatorId } = req.body;
+
+  // Basic validation
+  if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
+      res.status(400).json({ message: 'Invalid feedback data' });
+      return;
+  }
+
+  try {
+      const filePath = path.resolve(__dirname, './database/conference_details_list.json');
+      const data = await fs.promises.readFile(filePath, 'utf-8');
+      const conferences: ConferenceResponse[] = JSON.parse(data);
+
+      // Find the conference using conferenceId
+      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+
+      if (conferenceIndex === -1) {
+          res.status(404).json({ message: 'Conference not found' });
+          return;
+      }
+
+      // Get organizedId from the found conference
+      const organizedId = conferences[conferenceIndex].organization.id;
+
+      const newFeedback: Feedback = {
+          id: uuidv4(),
+          organizedId, // Use organizedId from the conference
+          creatorId,
+          description,
+          star,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+      };
+
+      // Add the feedback to the conference
+      if (!conferences[conferenceIndex].feedBacks) {
+          conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
+      }
+      conferences[conferenceIndex].feedBacks.push(newFeedback);
+
+      // Write the updated data back to the file
+      await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
+
+      res.status(201).json(newFeedback); // Return the new feedback
+  } catch (error: any) {
+      console.error('Error adding feedback:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
+
+
 const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res):Promise<any> => {
   try {
       const userId = req.params.id;
