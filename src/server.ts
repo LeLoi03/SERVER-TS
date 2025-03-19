@@ -397,7 +397,7 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
 app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 
 
-// 5. Thêm conference
+// 5. Add conference
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const conferenceData: ConferenceFormData = req.body;
@@ -503,7 +503,31 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
 };
 app.post('/api/v1/user/add-conferences', addConference);
 
-// 3. Follow conference
+// 6. Get User's Conferences ---
+const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { message: string }, any, any> = async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    if (!userId) {
+      return res.status(400).json({ message: 'Missing userId' }) as any;
+    }
+
+    const filePath = path.resolve(__dirname, 'add_conferences.json');
+    const data = await fs.promises.readFile(filePath, 'utf-8').catch(() => '[]'); // Handle file not found
+    const addedConferences: AddedConference[] = JSON.parse(data);
+
+    // Filter conferences by creatorId
+    const userConferences = addedConferences.filter(conf => conf.conference.creatorId === userId);
+
+    res.status(200).json(userConferences);
+  } catch (error: any) {
+    console.error('Error fetching user conferences:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+app.get('/api/v1/user/:id/conferences', getMyConferences); // New route
+
+// 7. Add to calendar
 const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const { conferenceId, userId } = req.body;  // Lấy conferenceId và userId từ body
@@ -557,8 +581,7 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
 };
 app.post('/api/v1/user/:id/add-to-calendar', addToCalendar);
 
-
-// 6. Lấy calendar events
+// 8. Lấy calendar events
 const getUserCalendar: RequestHandler = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -698,9 +721,9 @@ const getUserCalendar: RequestHandler = async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 };
-
 app.get('/api/v1/user/:id/calendar', getUserCalendar);
 
+// 9. Filter conferences
 const getFilteredConferences: RequestHandler<any, { items: CombinedConference[]; total: number; } | { message: string }, any, any> = async (req, res) => {
   console.log("Request received at /api/v1/filter-conferences");
   console.log("Request query parameters:", req.query);
@@ -941,8 +964,8 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
     res.status(500).json({ message: 'Internal server error' });
   }
 };
-
 app.get('/api/v1/filter-conferences', getFilteredConferences);
+
 // --- Start the server ---
 app.listen(3000, () => {
   console.log(`Server listening on port 3000`);

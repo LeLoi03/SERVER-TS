@@ -9,6 +9,7 @@ export type UserResponse = {
   role: "user" | "admin" | string; 
   followedConferences: string[];
   calendar: string[];
+  myConferences: string[];
   createdAt: string; 
   updatedAt: string; 
 }
