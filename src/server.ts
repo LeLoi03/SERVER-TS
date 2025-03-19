@@ -206,7 +206,7 @@ app.use(bodyParser.json());
 
 // Replace for database
 
-import { ConferenceResponse } from './types/conference.response';
+import { ConferenceResponse, FollowerInfo } from './types/conference.response';
 import { ConferenceListResponse } from './types/conference.list.response';
 import { UserResponse } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
@@ -311,57 +311,110 @@ app.get('/api/v1/conferences', getConferenceList);
 // 3. Follow conference
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
-    const { conferenceId, userId } = req.body;  // Lấy conferenceId và userId từ body
+    const { conferenceId, userId } = req.body;
 
     if (!conferenceId || !userId) {
       res.status(400).json({ message: 'Missing conferenceId or userId' });
+      return;
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
-    const users: UserResponse[] = JSON.parse(data);
+    // --- User Update ---
+    const userFilePath = path.resolve(__dirname, './database/users_list.json');
+    const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+    const users: UserResponse[] = JSON.parse(userData);
 
-    const userIndex = users.findIndex(u => u.id === userId);  // Tìm theo ID, không phải email
+    const userIndex = users.findIndex(u => u.id === userId);
 
     if (userIndex === -1) {
       res.status(404).json({ message: 'User not found' });
+      return;
     }
 
     const updatedUser: UserResponse = { ...users[userIndex] };
+    const now = new Date().toISOString();
 
     if (!updatedUser.followedConferences) {
       updatedUser.followedConferences = [];
     }
 
-    const isFollowing = updatedUser.followedConferences.includes(conferenceId);
+    const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
 
-    if (isFollowing) {
-      updatedUser.followedConferences = updatedUser.followedConferences.filter(id => id !== conferenceId);
+    if (existingFollowIndex !== -1) {
+      // Unfollow: Remove the conference object
+      updatedUser.followedConferences.splice(existingFollowIndex, 1);
     } else {
-      if (!updatedUser.followedConferences.includes(conferenceId)) {
-        updatedUser.followedConferences.push(conferenceId);
-      }
+      // Follow: Add a new conference object
+      updatedUser.followedConferences.push({
+        id: conferenceId,
+        createdAt: now,
+        updatedAt: now,
+      });
     }
 
-    // Ghi lại vào file (quan trọng!)
     users[userIndex] = updatedUser;
-    await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi lại, pretty-printed
 
-    res.status(200).json(updatedUser); // Trả về user đã update
+
+    // --- Conference Update ---
+    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+    const conferenceData = await fs.promises.readFile(conferenceFilePath, 'utf-8');
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      // Rollback user changes
+      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+      return;
+    }
+
+    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
+
+    if (!updatedConference.followedBy) {
+      updatedConference.followedBy = [];
+    }
+
+    const followerInfo: FollowerInfo = {
+      id: updatedUser.id,
+      email: updatedUser.email,
+      firstName: updatedUser.firstName,
+      lastName: updatedUser.lastName,
+      createdAt: updatedUser.createdAt,
+      updatedAt: updatedUser.updatedAt,
+    };
+
+    const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
+
+    if (isUserFollowingIndex !== -1) {
+        // Unfollow: Remove user from followedBy
+        updatedConference.followedBy.splice(isUserFollowingIndex, 1);
+    } else {
+        // Follow: Add user to followedBy
+        updatedConference.followedBy.push(followerInfo);
+    }
+
+
+    conferences[conferenceIndex] = updatedConference;
+
+    // --- Write Changes to Files ---
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+    await fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8');
+
+    res.status(200).json(updatedUser);
+
   } catch (error: any) {
-    // Xử lý lỗi như trước
-    console.error('Error updating user data:', error);
+    console.error('Error updating user/conference data:', error);
     if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
     } else if (error.code === 'ENOENT') {
-      res.status(500).json({ message: 'user-list.json not found' });
+      res.status(500).json({ message: 'A required JSON file was not found' });
     } else {
       res.status(500).json({ message: 'Internal server error' });
     }
   }
 };
-app.post('/api/v1/user/:id/follow', followConference);
 
+app.post('/api/v1/user/:id/follow', followConference);
 
 // 4. Lấy thông tin user theo ID ---
 const getUserById: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -372,7 +425,7 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
       res.status(400).json({ message: 'Missing userId' });
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json'); // Thay 'user-list.json' bằng tên file thực tế
+    const filePath = path.resolve(__dirname, './database/users_list.json'); 
     const data = await fs.promises.readFile(filePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(data);
 
@@ -397,7 +450,8 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
 };
 app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 
-// 5.Update User
+
+// 5. Update User
 const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
   try {
       const userId = req.params.id;
@@ -439,6 +493,7 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
   }
 };
 app.put('/api/v1/user/:id', updateUser); // Sử dụng method PUT
+
 
 // 6. Add conference
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -546,6 +601,7 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
 };
 app.post('/api/v1/user/add-conferences', addConference);
 
+
 // 7. Get User's Conferences ---
 const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { message: string }, any, any> = async (req, res) => {
   try {
@@ -569,6 +625,7 @@ const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { mes
   }
 };
 app.get('/api/v1/user/:id/conferences', getMyConferences); // New route
+
 
 // 8. Add to calendar
 const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -623,6 +680,7 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
   }
 };
 app.post('/api/v1/user/:id/add-to-calendar', addToCalendar);
+
 
 // 9. Lấy calendar events
 const getUserCalendar: RequestHandler = async (req, res) => {
@@ -765,6 +823,7 @@ const getUserCalendar: RequestHandler = async (req, res) => {
   }
 };
 app.get('/api/v1/user/:id/calendar', getUserCalendar);
+
 
 // 10. Filter conferences
 const getFilteredConferences: RequestHandler<any, { items: CombinedConference[]; total: number; } | { message: string }, any, any> = async (req, res) => {
@@ -1065,6 +1124,7 @@ const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { 
 app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
 
 
+// 12. Delete User
 const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res):Promise<any> => {
   try {
       const userId = req.params.id;
@@ -1121,8 +1181,8 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
       res.status(500).json({ error: 'Internal server error' });
   }
 };
-
 app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
+
 
 // --- Start the server ---
 app.listen(3000, () => {

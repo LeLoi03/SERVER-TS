@@ -5,6 +5,7 @@ export type ConferenceResponse = {
   dates: ImportantDate[];
   rankSourceFoRData: Rank[];
   feedBacks: Feedback[];
+  followedBy: FollowerInfo[];
 };
 
 export type ConferenceIdentity = {
@@ -71,3 +72,14 @@ export type Feedback = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type FollowerInfo = {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+
