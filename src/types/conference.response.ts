@@ -4,6 +4,7 @@ export type ConferenceResponse = {
   locations: Location;
   dates: ImportantDate[];
   rankSourceFoRData: Rank[];
+  feedBacks: Feedback[];
 };
 
 export type ConferenceIdentity = {
@@ -59,4 +60,14 @@ export type Rank = {
   rank: string;
   source: string;
   researchFields: string;
+};
+
+export type Feedback = {
+  id: string;
+  organizedId: string;
+  creatorId: string;
+  description: string;
+  star: number;
+  createdAt: string;
+  updatedAt: string;
 };

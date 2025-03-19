@@ -8,6 +8,9 @@
     "role": "user",
     "followedConferences": [],
     "calendar": [],
+    "feedBacks": [
+      "5e6f7a8b-9c01-2345-6789-abcdef01234"
+    ],
     "createdAt": "2023-01-20T10:00:00Z",
     "updatedAt": "2023-01-20T10:00:00Z"
   },
@@ -20,6 +23,9 @@
     "role": "user",
     "followedConferences": [],
     "calendar": [],
+    "feedBacks": [
+      "6f7a8b9c-0123-4567-89ab-cdef01234567"
+    ],
     "createdAt": "2025-03-16T02:23:28.642Z",
     "updatedAt": "2025-03-16T02:23:28.642Z"
   },
@@ -32,6 +38,9 @@
     "role": "user",
     "followedConferences": [],
     "calendar": [],
+    "feedBacks": [
+      "7d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a"
+    ],
     "createdAt": "2022-11-05T14:30:00Z",
     "updatedAt": "2023-02-10T16:45:00Z"
   },
@@ -44,6 +53,7 @@
     "role": "user",
     "followedConferences": [],
     "calendar": [],
+    "feedBacks": [],
     "createdAt": "2024-02-28T09:15:00Z",
     "updatedAt": "2024-03-01T11:20:00Z"
   },
@@ -56,15 +66,26 @@
     "role": "user",
     "followedConferences": [],
     "calendar": [],
+    "feedBacks": [
+      "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+      "e6f7a8b9-c01d-2e3f-4a5b-6c7d8e9f0a1b",
+      "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+      "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+      "8d9e0f1a-2b3c-4d5e-6f7a-8b9c0d1e2f3a",
+      "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "4b5c6d7e-8f9a-0b1c-2d3e-4f5a6b7c8d9e",
+      "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
+      "5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"
+    ],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z"
   },
   {
     "id": "test",
-    "email": "test@gmail.com",
-    "firstName": "test",
-    "lastName": "test",
-    "dob": "1978-07-04",
+    "email": "loicute5fps@gmail.com",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "dob": "2003-10-22",
     "role": "user",
     "followedConferences": [
       "abcdef01-2345-6789-abcd-ef0123456789",
@@ -80,7 +101,18 @@
       "7a8b9c10-1112-4d5e-8f66-234567890abc",
       "34567890-abcd-4ef1-8234-56789abcdef1"
     ],
+    "feedBacks": [
+      "9a8b7c6d-5e4f-3a2b-1c0d-ef9a8b7c6d5e",
+      "d5e6f7a8-b9c0-1d2e-3f4a-5b6c7d8e9f0a",
+      "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
+      "9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b",
+      "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
+      "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b"
+    ],
     "createdAt": "2021-06-05T12:00:00.000Z",
-    "updatedAt": "2021-06-05T12:00:00.000Z"
+    "updatedAt": "2021-06-05T12:00:00.000Z",
+    "designation": "ABC",
+    "about": "Master AI"
   }
 ]

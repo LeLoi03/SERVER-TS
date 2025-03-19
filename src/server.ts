@@ -211,13 +211,13 @@ import { ConferenceListResponse } from './types/conference.list.response';
 import { UserResponse } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
+import { Feedback } from './types/conference.response';
 import { v4 as uuidv4 } from 'uuid'; // Import thư viện uuid
-import { promises } from 'dns';
 
 // --- Route Handlers ---
 
 
-// 1. Lấy Conference theo ID (giữ nguyên, nhưng chỉnh đường dẫn file)
+// 1. Lấy Conference theo ID
 const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { message: string }, any, any> = async (
   req,
   res
@@ -306,6 +306,7 @@ const getConferenceList: RequestHandler<any, ConferenceListResponse | { message:
   }
 };
 app.get('/api/v1/conferences', getConferenceList);
+
 
 // 3. Follow conference
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -396,8 +397,50 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
 };
 app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 
+// 5.Update User
+const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
+  try {
+      const userId = req.params.id;
+      const updatedData = req.body;
 
-// 5. Add conference
+      if (!userId) {
+          return res.status(400).json({ message: 'Missing userId' }) as any;
+      }
+
+      const filePath = path.resolve(__dirname, './database/users_list.json'); // Đường dẫn đến file JSON
+      const data = await fs.promises.readFile(filePath, 'utf-8');
+      const users: UserResponse[] = JSON.parse(data);
+
+      const userIndex = users.findIndex(u => u.id === userId);
+
+      if (userIndex === -1) {
+          return res.status(404).json({ message: 'User not found' });
+      }
+
+      // Cập nhật thông tin user
+      users[userIndex] = { ...users[userIndex], ...updatedData };
+
+      // Ghi lại vào file
+      await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
+
+      res.status(200).json(users[userIndex]); // Trả về user đã được update
+
+  } catch (error: any) {
+      console.error('Error updating user:', error);
+      if (error instanceof SyntaxError) {
+        res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+      } else if (error.code === 'ENOENT') {
+        res.status(500).json({ message: 'user-list.json not found' });
+      }
+      else {
+          res.status(500).json({ message: 'Internal server error' });
+      }
+
+  }
+};
+app.put('/api/v1/user/:id', updateUser); // Sử dụng method PUT
+
+// 6. Add conference
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const conferenceData: ConferenceFormData = req.body;
@@ -503,7 +546,7 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
 };
 app.post('/api/v1/user/add-conferences', addConference);
 
-// 6. Get User's Conferences ---
+// 7. Get User's Conferences ---
 const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { message: string }, any, any> = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -527,7 +570,7 @@ const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { mes
 };
 app.get('/api/v1/user/:id/conferences', getMyConferences); // New route
 
-// 7. Add to calendar
+// 8. Add to calendar
 const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const { conferenceId, userId } = req.body;  // Lấy conferenceId và userId từ body
@@ -581,7 +624,7 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
 };
 app.post('/api/v1/user/:id/add-to-calendar', addToCalendar);
 
-// 8. Lấy calendar events
+// 9. Lấy calendar events
 const getUserCalendar: RequestHandler = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -723,7 +766,7 @@ const getUserCalendar: RequestHandler = async (req, res) => {
 };
 app.get('/api/v1/user/:id/calendar', getUserCalendar);
 
-// 9. Filter conferences
+// 10. Filter conferences
 const getFilteredConferences: RequestHandler<any, { items: CombinedConference[]; total: number; } | { message: string }, any, any> = async (req, res) => {
   console.log("Request received at /api/v1/filter-conferences");
   console.log("Request query parameters:", req.query);
@@ -965,6 +1008,62 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
   }
 };
 app.get('/api/v1/filter-conferences', getFilteredConferences);
+
+// 11. Add feedback
+const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
+  const { conferenceId } = req.params; // Get conferenceId from URL
+  const { description, star, creatorId } = req.body;
+
+  // Basic validation
+  if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
+      res.status(400).json({ message: 'Invalid feedback data' });
+      return;
+  }
+
+  try {
+      const filePath = path.resolve(__dirname, './database/conference_details_list.json');
+      const data = await fs.promises.readFile(filePath, 'utf-8');
+      const conferences: ConferenceResponse[] = JSON.parse(data);
+
+      // Find the conference using conferenceId
+      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+
+      if (conferenceIndex === -1) {
+          res.status(404).json({ message: 'Conference not found' });
+          return;
+      }
+
+      // Get organizedId from the found conference
+      const organizedId = conferences[conferenceIndex].organization.id;
+
+      const newFeedback: Feedback = {
+          id: uuidv4(),
+          organizedId, // Use organizedId from the conference
+          creatorId,
+          description,
+          star,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+      };
+
+      // Add the feedback to the conference
+      if (!conferences[conferenceIndex].feedBacks) {
+          conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
+      }
+      conferences[conferenceIndex].feedBacks.push(newFeedback);
+
+      // Write the updated data back to the file
+      await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
+
+      res.status(201).json(newFeedback); // Return the new feedback
+  } catch (error: any) {
+      console.error('Error adding feedback:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
+
 
 // --- Start the server ---
 app.listen(3000, () => {

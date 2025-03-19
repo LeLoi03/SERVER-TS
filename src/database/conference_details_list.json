@@ -70,6 +70,26 @@
         "source": "CORE2023",
         "researchFields": "Machine Learning"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "5e6f7a8b-9c01-2345-6789-abcdef01234",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456789",
+        "creatorId": "user123",
+        "description": "Great conference!",
+        "star": 5,
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z"
+      },
+      {
+        "id": "6f7a8b9c-0123-4567-89ab-cdef01234567",
+        "organizedId": "1a2b3c4d-5e6f-7890-abcd-ef0123456789",
+        "creatorId": "5b0cf9cc-db16-446c-bb95-1147b81d90f1",
+        "description": "Good!",
+        "star": 4,
+        "createdAt": "2024-01-16T10:30:00.000Z",
+        "updatedAt": "2024-03-01T14:45:00.000Z"
+      }
     ]
   },
   {
@@ -82,11 +102,11 @@
       "updatedAt": "2024-02-28T14:45:00.000Z"
     },
     "organization": {
-      "id": "a1b2c3d4-e5f6-4789-8abc-9012def34568",
+      "id": "a1b2c3d4-e5f6-4789-8abc-9012def34561",
       "year": 2024,
       "accessType": "Hybrid",
       "isAvailable": true,
-      "conferenceId": "a1b2c3d4-e5f6-4789-8abc-9012def34561",
+      "conferenceId": "a1b2c3d4-e5f6-4789-8abc-9012def34568",
       "summary": "The International Conference on Machine Learning (ICML) is the premier gathering of professionals dedicated to the advancement of the branch of artificial intelligence known as machine learning.",
       "callForPaper": "ICML 2024 welcomes submissions on all aspects of machine learning, including but not limited to...",
       "link": "https://icml.cc/Conferences/2024",
@@ -142,6 +162,17 @@
         "rank": "A*",
         "source": "CORE2023",
         "researchFields": "Machine Learning"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "7d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
+        "organizedId": "a1b2c3d4-e5f6-4789-8abc-9012def34561",
+        "creatorId": "admin456",
+        "description": "Well-organized event.",
+        "star": 4,
+        "createdAt": "2024-02-10T09:00:00.000Z",
+        "updatedAt": "2024-02-28T11:30:00.000Z"
       }
     ]
   },
@@ -216,6 +247,26 @@
         "source": "CORE2023",
         "researchFields": "Neural Networks"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+        "organizedId": "5e6f7890-abcd-ef01-2345-6789abcdef01",
+        "creatorId": "admin456",
+        "description": "The speakers were excellent.",
+        "star": 5,
+        "createdAt": "2024-01-20T14:20:00.000Z",
+        "updatedAt": "2024-03-05T16:50:00.000Z"
+      },
+      {
+        "id": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+        "organizedId": "5e6f7890-abcd-ef01-2345-6789abcdef01",
+        "creatorId": "admin456",
+        "description": "I enjoyed the networking opportunities.",
+        "star": 4,
+        "createdAt": "2024-01-22T11:15:00.000Z",
+        "updatedAt": "2024-03-08T13:45:00.000Z"
+      }
     ]
   },
   {
@@ -288,6 +339,35 @@
         "rank": "A",
         "source": "CORE2023",
         "researchFields": "Computer Vision"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+        "organizedId": "9c012345-6789-abcd-ef01-23456789abcd",
+        "creatorId": "specialUser",
+        "description": "Could be improved with more interactive sessions.",
+        "star": 3,
+        "createdAt": "2024-02-01T16:00:00.000Z",
+        "updatedAt": "2024-02-25T18:00:00.000Z"
+      },
+      {
+        "id": "1234abcd-5678-efab-cdef-901234567890",
+        "organizedId": "9c012345-6789-abcd-ef01-23456789abcd",
+        "creatorId": "admin456",
+        "description": "The sessions were informative and engaging.",
+        "star": 5,
+        "createdAt": "2024-03-10T12:30:00.000Z",
+        "updatedAt": "2024-03-15T15:45:00.000Z"
+      },
+      {
+        "id": "9a8b7c6d-5e4f-3a2b-1c0d-ef9a8b7c6d5e",
+        "organizedId": "9c012345-6789-abcd-ef01-23456789abcd",
+        "creatorId": "test",
+        "description": "Enjoyed the variety of topics covered.",
+        "star": 4,
+        "createdAt": "2024-03-12T09:45:00.000Z",
+        "updatedAt": "2024-03-18T12:00:00.000Z"
       }
     ]
   },
@@ -362,6 +442,17 @@
         "source": "CORE2023",
         "researchFields": "Artificial Intelligence"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "d5e6f7a8-b9c0-1d2e-3f4a-5b6c7d8e9f0a",
+        "organizedId": "3456789a-bcde-f012-3456-789abcdef012",
+        "creatorId": "test",
+        "description": "The venue was perfect.",
+        "star": 5,
+        "createdAt": "2024-01-15T10:00:00.000Z",
+        "updatedAt": "2024-03-01T12:00:00.000Z"
+      }
     ]
   },
   {
@@ -434,6 +525,26 @@
         "rank": "A*",
         "source": "External",
         "researchFields": "Computer Graphics"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "e6f7a8b9-c01d-2e3f-4a5b-6c7d8e9f0a1b",
+        "organizedId": "789abcde-f012-3456-789a-bcdef01234567",
+        "creatorId": "specialUser",
+        "description": "A bit too long, but overall good content.",
+        "star": 3,
+        "createdAt": "2024-02-05T14:00:00.000Z",
+        "updatedAt": "2024-02-27T17:30:00.000Z"
+      },
+      {
+        "id": "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+        "organizedId": "789abcde-f012-3456-789a-bcdef01234567",
+        "creatorId": "specialUser",
+        "description": "Excellent organization and great speakers!",
+        "star": 5,
+        "createdAt": "2024-02-08T09:30:00.000Z",
+        "updatedAt": "2024-03-03T11:00:00.000Z"
       }
     ]
   },
@@ -508,6 +619,35 @@
         "source": "CORE2023",
         "researchFields": "Computer Vision"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+        "organizedId": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+        "creatorId": "specialUser",
+        "description": "Good value for money.",
+        "star": 4,
+        "createdAt": "2024-01-25T11:45:00.000Z",
+        "updatedAt": "2024-03-10T14:15:00.000Z"
+      },
+      {
+        "id": "8d9e0f1a-2b3c-4d5e-6f7a-8b9c0d1e2f3a",
+        "organizedId": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+        "creatorId": "specialUser",
+        "description": "The food was delicious!",
+        "star": 5,
+        "createdAt": "2024-01-28T18:20:00.000Z",
+        "updatedAt": "2024-03-12T20:00:00.000Z"
+      },
+      {
+        "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+        "organizedId": "f6a7b8c9-0123-4def-89ab-cdef0123456789",
+        "creatorId": "specialUser",
+        "description": "Well-organized, but the venue was a bit crowded.",
+        "star": 3,
+        "createdAt": "2024-01-30T15:00:00.000Z",
+        "updatedAt": "2024-03-14T17:45:00.000Z"
+      }
     ]
   },
   {
@@ -580,6 +720,17 @@
         "rank": "A",
         "source": "CORE2023",
         "researchFields": "Natural Language Processing"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
+        "organizedId": "4ef18234-5678-9abc-def0-123456789abcd",
+        "creatorId": "test",
+        "description": "Interesting topics, but some sessions were too technical.",
+        "star": 3,
+        "createdAt": "2024-02-12T10:30:00.000Z",
+        "updatedAt": "2024-03-02T13:00:00.000Z"
       }
     ]
   },
@@ -654,6 +805,26 @@
         "source": "CORE2023",
         "researchFields": "Artificial Intelligence"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b",
+        "organizedId": "82345678-9abc-def0-1234-56789abcdef012",
+        "creatorId": "test",
+        "description": "Met some interesting people.",
+        "star": 4,
+        "createdAt": "2024-01-18T16:45:00.000Z",
+        "updatedAt": "2024-03-07T19:15:00.000Z"
+      },
+      {
+        "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+        "organizedId": "82345678-9abc-def0-1234-56789abcdef012",
+        "creatorId": "test",
+        "description": "The keynote speaker was inspiring.",
+        "star": 5,
+        "createdAt": "2024-01-21T12:00:00.000Z",
+        "updatedAt": "2024-03-06T14:30:00.000Z"
+      }
     ]
   },
   {
@@ -727,6 +898,26 @@
         "source": "CORE2023",
         "researchFields": "World Wide Web"
       }
+    ],
+    "feedBacks": [
+      {
+        "id": "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
+        "organizedId": "ccddeeff-0011-2233-4455-66778899aabb",
+        "creatorId": "test",
+        "description": "Not enough breaks between sessions.",
+        "star": 2,
+        "createdAt": "2024-02-03T08:00:00.000Z",
+        "updatedAt": "2024-02-26T10:00:00.000Z"
+      },
+      {
+        "id": "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b",
+        "organizedId": "ccddeeff-0011-2233-4455-66778899aabb",
+        "creatorId": "test",
+        "description": "Great event overall!  Well organized and informative.",
+        "star": 4,
+        "createdAt": "2024-02-06T13:30:00.000Z",
+        "updatedAt": "2024-03-01T15:45:00.000Z"
+      }
     ]
   },
   {
@@ -799,6 +990,53 @@
         "rank": "A*",
         "source": "External",
         "researchFields": "Computer Security"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "4b5c6d7e-8f9a-0b1c-2d3e-4f5a6b7c8d9e",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "creatorId": "specialUser",
+        "description": "I learned a lot!",
+        "star": 5,
+        "createdAt": "2024-01-17T14:00:00.000Z",
+        "updatedAt": "2024-03-04T16:30:00.000Z"
+      },
+      {
+        "id": "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "creatorId": "specialUser",
+        "description": "The location was convenient.",
+        "star": 4,
+        "createdAt": "2024-01-19T09:00:00.000Z",
+        "updatedAt": "2024-03-09T11:00:00.000Z"
+      },
+      {
+        "id": "5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "creatorId": "specialUser",
+        "description": "Would recommend to colleagues.",
+        "star": 4,
+        "createdAt": "2024-01-23T17:30:00.000Z",
+        "updatedAt": "2024-03-07T20:00:00.000Z"
+      },
+      {
+        "id": "4c3bdaad-ea77-494c-ac27-0d33600c7394",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "creatorId": "test",
+        "description": "Nhu db",
+        "star": 1,
+        "createdAt": "2025-03-19T09:04:41.052Z",
+        "updatedAt": "2025-03-19T09:04:41.052Z"
+      },
+      {
+        "id": "579c0cb2-fb33-4d63-98fe-423e23c6ef6b",
+        "organizedId": "76543210-fedc-ba98-7654-3210fedcba98",
+        "creatorId": "test",
+        "description": "Nhu qq",
+        "star": 1,
+        "createdAt": "2025-03-19T09:05:01.917Z",
+        "updatedAt": "2025-03-19T09:05:01.917Z"
       }
     ]
   }
