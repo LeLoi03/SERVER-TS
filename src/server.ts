@@ -1009,61 +1009,65 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
 };
 app.get('/api/v1/filter-conferences', getFilteredConferences);
 
-// 11. Add feedback
-const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
-  const { conferenceId } = req.params; // Get conferenceId from URL
-  const { description, star, creatorId } = req.body;
 
-  // Basic validation
-  if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
-      res.status(400).json({ message: 'Invalid feedback data' });
-      return;
-  }
-
+const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res):Promise<any> => {
   try {
-      const filePath = path.resolve(__dirname, './database/conference_details_list.json');
-      const data = await fs.promises.readFile(filePath, 'utf-8');
-      const conferences: ConferenceResponse[] = JSON.parse(data);
+      const userId = req.params.id;
 
-      // Find the conference using conferenceId
-      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-
-      if (conferenceIndex === -1) {
-          res.status(404).json({ message: 'Conference not found' });
-          return;
+      if (!userId) {
+          return res.status(400).json({ message: 'Missing userId' });
       }
 
-      // Get organizedId from the found conference
-      const organizedId = conferences[conferenceIndex].organization.id;
+      const filePath = path.resolve(__dirname, './database/users_list.json'); // Path to your users file
+      let usersData: string;
 
-      const newFeedback: Feedback = {
-          id: uuidv4(),
-          organizedId, // Use organizedId from the conference
-          creatorId,
-          description,
-          star,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-      };
-
-      // Add the feedback to the conference
-      if (!conferences[conferenceIndex].feedBacks) {
-          conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
+      try {
+        usersData = await fs.promises.readFile(filePath, 'utf-8');
+      } catch (readError: any) {
+        if (readError.code === 'ENOENT') {
+          // File doesn't exist, meaning no users.  That's not really an error in this context.
+          return res.status(404).json({ message: 'No users found.' });
+        }
+        console.error("Error reading users file:", readError);
+        return res.status(500).json({ message: "Error reading user data" });
       }
-      conferences[conferenceIndex].feedBacks.push(newFeedback);
 
-      // Write the updated data back to the file
-      await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
+      let users: UserResponse[];
+      try {
+          users = JSON.parse(usersData);
+      } catch (parseError) {
+          console.error("Error parsing user data:", parseError);
+           return res.status(500).json({ message: 'Invalid user data format.' });
+      }
 
-      res.status(201).json(newFeedback); // Return the new feedback
+
+      const userIndex = users.findIndex(user => user.id === userId);
+
+
+      console.log(userIndex)
+      if (userIndex === -1) {
+          return res.status(404).json({ message: 'User not found' });
+      }
+
+      // Remove the user from the array
+      users.splice(userIndex, 1);
+
+      try {
+        await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8');
+    } catch (writeError) {
+        console.error("Error writing updated user data:", writeError);
+        return res.status(500).json({ message: "Error saving updated user data." });
+    }
+
+      res.status(200).json({ message: 'User deleted successfully' });
+
   } catch (error: any) {
-      console.error('Error adding feedback:', error);
-      res.status(500).json({ message: 'Internal server error' });
+      console.error('Error deleting user:', error);
+      res.status(500).json({ error: 'Internal server error' });
   }
 };
 
-app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
-
+app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
 
 // --- Start the server ---
 app.listen(3000, () => {
