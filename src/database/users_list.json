@@ -12,6 +12,7 @@
     "feedBacks": [
       "5e6f7a8b-9c01-2345-6789-abcdef01234"
     ],
+    "notifications": [],
     "createdAt": "2023-01-20T10:00:00Z",
     "updatedAt": "2023-01-20T10:00:00Z"
   },
@@ -28,6 +29,7 @@
     "feedBacks": [
       "6f7a8b9c-0123-4567-89ab-cdef01234567"
     ],
+    "notifications": [],
     "createdAt": "2025-03-16T02:23:28.642Z",
     "updatedAt": "2025-03-16T02:23:28.642Z"
   },
@@ -44,6 +46,7 @@
     "feedBacks": [
       "7d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a"
     ],
+    "notifications": [],
     "createdAt": "2022-11-05T14:30:00Z",
     "updatedAt": "2023-02-10T16:45:00Z"
   },
@@ -58,6 +61,7 @@
     "myConferences": [],
     "calendar": [],
     "feedBacks": [],
+    "notifications": [],
     "createdAt": "2024-02-28T09:15:00Z",
     "updatedAt": "2024-03-01T11:20:00Z"
   },
@@ -82,6 +86,7 @@
       "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
       "5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"
     ],
+    "notifications": [],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z"
   },
@@ -95,15 +100,20 @@
     "followedConferences": [
       {
         "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
-        "createdAt": "2025-03-20T04:30:01.669Z",
-        "updatedAt": "2025-03-20T04:30:01.669Z"
+        "createdAt": "2025-03-20T07:16:42.510Z",
+        "updatedAt": "2025-03-20T07:16:42.510Z"
+      },
+      {
+        "id": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
+        "createdAt": "2025-03-20T07:24:18.319Z",
+        "updatedAt": "2025-03-20T07:24:18.319Z"
       }
     ],
     "myConferences": [
       {
         "id": "bbde47ca-9243-4267-af7c-88d9eb8e21d7",
-        "status": "Pending",
-        "statusTime": "",
+        "status": "Approved",
+        "statusTime": "2025-03-20T04:50:31.463Z",
         "submittedAt": "2025-03-20T04:36:46.814Z"
       }
     ],
@@ -123,9 +133,28 @@
       "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
       "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b"
     ],
+    "notifications": [
+      {
+        "id": "75c7e880-9463-4cf5-8a5d-f8d68b84597d",
+        "createdAt": "2025-03-20T07:24:18.319Z",
+        "isImportant": false,
+        "seenAt": "",
+        "deletedAt": "",
+        "message": "Le Loi followed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
+        "type": "Follow Conference"
+      }
+    ],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z",
     "designation": "ABC",
-    "about": "Master AI"
+    "about": "Master AI",
+    "avatar": "/avatar3.jpg",
+    "aboutme": "Mồn lèo",
+    "interestedTopics": [
+      "Blockchain",
+      "Furniture",
+      "AI"
+    ],
+    "background": "/light.jpg"
   }
 ]

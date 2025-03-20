@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import pkg from 'pg';
+import { Server as HttpServer } from 'http'; // Import HttpServer
+import { Server as SocketIOServer, Socket } from 'socket.io'; // Import Socket.IO
 const { Pool } = pkg;
 import cors from 'cors';
 import 'dotenv/config';
@@ -13,6 +15,7 @@ import { runNonStreamChat, saveHistoryToFile } from './chatbotService';
 import logToFile from './utils/logger';
 // import { handleDrawChartIntent, handleWebsiteNavigationIntent, handleFindInformationConferenceIntent, handleFindInformationJournalIntent, handleFindInformationWebsiteIntent, handleNoIntent, handleInvalidIntent } from "./handlers/intentHandler"
 
+
 const corsOptions = {
   origin: '*', // Replace with the actual origin(s) of your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -22,10 +25,42 @@ const corsOptions = {
 
 const app = express();
 
+const httpServer = new HttpServer(app); // Create an HTTP server
+const io = new SocketIOServer(httpServer, { // Initialize Socket.IO
+  cors: {
+    origin: "*",  // Adjust as needed for security in production!
+    methods: ["GET", "POST"]
+  }
+});
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận dữ liệu từ form HTML
+
+// --- Socket.IO Connection Handling ---
+
+const connectedUsers = new Map<string, Socket>(); // Store connected users
+
+io.on('connection', (socket: Socket) => {
+  console.log('A user connected:', socket.id);
+
+  socket.on('register', (userId: string) => {
+    connectedUsers.set(userId, socket);
+    console.log(`User ${userId} registered with socket ${socket.id}`);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected:', socket.id);
+    // Remove user from connectedUsers map
+    connectedUsers.forEach((userSocket, userId) => {
+      if (userSocket.id === socket.id) {
+        connectedUsers.delete(userId);
+      }
+    });
+  });
+});
+
 
 // // Database connection
 // const pool = new Pool({
@@ -206,11 +241,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận
 //   });
 // });
 
-// Replace for database
+
 
 import { ConferenceResponse, FollowerInfo } from './types/conference.response';
 import { ConferenceListResponse, ConferenceInfo } from './types/conference.list.response';
-import { UserResponse, MyConference } from './types/user.response';
+import { UserResponse, MyConference, Notification } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
 import { Feedback } from './types/conference.response';
@@ -310,6 +345,105 @@ const getConferenceList: RequestHandler<any, ConferenceListResponse | { message:
 app.get('/api/v1/conferences', getConferenceList);
 
 
+// // 3. Follow conference
+// const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
+//   try {
+//     const { conferenceId, userId } = req.body;
+
+//     if (!conferenceId || !userId) {
+//       res.status(400).json({ message: 'Missing conferenceId or userId' });
+//       return;
+//     }
+
+//     const userFilePath = path.resolve(__dirname, './database/users_list.json');
+//     const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+
+//     // Use Promise.all to read both files concurrently
+//     const [userData, conferenceData] = await Promise.all([
+//       fs.promises.readFile(userFilePath, 'utf-8'),
+//       fs.promises.readFile(conferenceFilePath, 'utf-8'),
+//     ]);
+
+//     const users: UserResponse[] = JSON.parse(userData);
+//     const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+
+//     const userIndex = users.findIndex(u => u.id === userId);
+//     if (userIndex === -1) {
+//       res.status(404).json({ message: 'User not found' });
+//       return;
+//     }
+
+//     const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+//     if (conferenceIndex === -1) {
+//       res.status(404).json({ message: 'Conference not found' });
+//       return; // No need for rollback, we haven't modified anything yet.
+//     }
+
+//     const updatedUser: UserResponse = { ...users[userIndex] };
+//     const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
+//     const now = new Date().toISOString();
+
+//     if (!updatedUser.followedConferences) {
+//       updatedUser.followedConferences = [];
+//     }
+//     if (!updatedConference.followedBy) {
+//       updatedConference.followedBy = [];
+//     }
+
+//     const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
+//     const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
+
+//     // Simplify the follow/unfollow logic using a single conditional
+//     if (existingFollowIndex !== -1) {
+//       // Unfollow:
+//       updatedUser.followedConferences.splice(existingFollowIndex, 1);
+//       updatedConference.followedBy.splice(isUserFollowingIndex, 1);
+//     } else {
+//       // Follow:
+//       updatedUser.followedConferences.push({
+//         id: conferenceId,
+//         createdAt: now,
+//         updatedAt: now,
+//       });
+
+//       const followerInfo: FollowerInfo = {
+//         id: updatedUser.id,
+//         email: updatedUser.email,
+//         firstName: updatedUser.firstName,
+//         lastName: updatedUser.lastName,
+//         createdAt: updatedUser.createdAt,
+//         updatedAt: updatedUser.updatedAt,
+//       };
+//       updatedConference.followedBy.push(followerInfo);
+//     }
+
+
+//     users[userIndex] = updatedUser;
+//     conferences[conferenceIndex] = updatedConference;
+
+//     // Use Promise.all to write both files concurrently
+//     await Promise.all([
+//       fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
+//       fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+//     ]);
+
+//     res.status(200).json(updatedUser); // Send the updated user
+
+//   } catch (error: any) {
+//     console.error('Error updating user/conference data:', error);
+//     // More specific error handling, as you had, is good.
+//     if (error instanceof SyntaxError) {
+//       res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
+//     } else if (error.code === 'ENOENT') {
+//       res.status(500).json({ message: 'A required JSON file was not found' });
+//     } else {
+//       res.status(500).json({ message: 'Internal server error' });
+//     }
+//   }
+// };
+// app.post('/api/v1/user/:id/follow', followConference);
+
+
 // 3. Follow conference
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
@@ -376,10 +510,45 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
         email: updatedUser.email,
         firstName: updatedUser.firstName,
         lastName: updatedUser.lastName,
-        createdAt: updatedUser.createdAt,
-        updatedAt: updatedUser.updatedAt,
+        createdAt: now,
+        updatedAt: now,
       };
       updatedConference.followedBy.push(followerInfo);
+
+      // --- Send Real-time Notification ---
+      const notification: Notification = {
+        id: uuidv4(), // Unique ID for the notification
+        createdAt: new Date().toISOString(),
+        isImportant: false, // Or true, depending on your logic
+        seenAt: '', // Not seen yet
+        deletedAt: '',  //Not delete yet
+        message: `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`,
+        type: 'Follow Conference', // Important for distinguishing notification types
+      };
+
+      // Add notification to followers's notifcations field.
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(follower => {
+          const userFollowIndex = users.findIndex(u => u.id === follower.id);
+          if (userFollowIndex !== -1) {
+            if (!users[userFollowIndex].notifications) {
+              users[userFollowIndex].notifications = [];
+            }
+            console.log(users[userFollowIndex])
+            users[userFollowIndex].notifications?.push(notification);
+          }
+        })
+      }
+
+      // Send to specific user.  Loop through all connected users
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(follower => {
+          const userSocket = connectedUsers.get(follower.id);
+          if (userSocket) {
+            userSocket.emit('notification', notification); // Send the notification
+          }
+        });
+      }
     }
 
 
@@ -407,6 +576,7 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
   }
 };
 app.post('/api/v1/user/:id/follow', followConference);
+
 
 // 4. Lấy thông tin user theo ID ---
 const getUserById: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -1450,7 +1620,11 @@ app.get('/admin/conferences', adminConferences);
 app.post('/admin/conferences', adminConferences);
 
 
-// --- Start the server ---
-app.listen(3000, () => {
-  console.log(`Server listening on port 3000`);
+// // --- Start the server ---
+// app.listen(3000, () => {
+//   console.log(`Server listening on port 3000`);
+// });
+
+httpServer.listen(3000, () => {
+  console.log(`Server is running on port 3000`);
 });

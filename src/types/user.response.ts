@@ -10,7 +10,7 @@ export type UserResponse = {
   myConferences?: MyConference[]; // Now an array of objects
   calendar?: Calendar[]; // Replace 'any' with a more specific type if you have one
   feedBacks?: string[];
-  notifcations?: string[];
+  notifications?: Notification[];
   createdAt: string;
   updatedAt: string;
 }
@@ -35,5 +35,14 @@ export type MyConference = {
   submittedAt: string;
 }
 
+export type Notification = {
+  id: string;
+  createdAt: string;
+  isImportant: boolean;
+  seenAt: string;
+  deletedAt: string;
+  message: string;
+  type: string;
+}
 
 

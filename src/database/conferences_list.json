@@ -362,6 +362,33 @@
       "updatedAt": "2024-02-15T12:00:00.000Z",
       "creatorId": "01fedcba-9876-5432-10fe-dcba98765432",
       "accessType": "Offline"
+    },
+    {
+      "id": "bbde47ca-9243-4267-af7c-88d9eb8e21d7",
+      "title": "name",
+      "acronym": "acronym",
+      "location": {
+        "cityStateProvince": "",
+        "country": "Vietnam",
+        "address": "address",
+        "continent": "Asia"
+      },
+      "year": 2025,
+      "topics": [
+        "AI"
+      ],
+      "dates": {
+        "fromDate": "",
+        "toDate": "",
+        "name": "",
+        "type": ""
+      },
+      "link": "link",
+      "createdAt": "2025-03-20T04:50:31.463Z",
+      "updatedAt": "2025-03-20T04:50:31.463Z",
+      "creatorId": "test",
+      "accessType": "offline",
+      "status": "Approved"
     }
   ],
   "meta": {
