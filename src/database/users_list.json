@@ -6,18 +6,7 @@
     "lastName": "Doe",
     "dob": "1990-05-15",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "abcdef01-2345-6789-abcd-ef0123456789",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [
@@ -33,18 +22,7 @@
     "lastName": "NGUYỄN",
     "dob": "2025-03-16T02:23:28.637Z",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "fedcba98-7654-3210-fedc-ba9876543210",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [
@@ -60,23 +38,7 @@
     "lastName": "Admin",
     "dob": "1985-12-10",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "34567890-abcd-4ef1-8234-56789abcdef1",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "abcdef01-2345-6789-abcd-ef0123456789",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2025-03-19T11:48:54.782Z",
-        "updatedAt": "2025-03-19T11:48:54.782Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [
@@ -92,13 +54,7 @@
     "lastName": "Pan",
     "dob": "2000-03-22",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2025-03-19T11:49:50.033Z",
-        "updatedAt": "2025-03-19T11:49:50.033Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [],
@@ -112,23 +68,7 @@
     "lastName": "nghi",
     "dob": "1978-07-04",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2025-03-19T11:50:14.392Z",
-        "updatedAt": "2025-03-19T11:50:14.392Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [
@@ -154,47 +94,25 @@
     "role": "user",
     "followedConferences": [
       {
-        "id": "abcdef01-2345-6789-abcd-ef0123456789",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "fedcba98-7654-3210-fedc-ba9876543210",
-        "createdAt": "2024-01-16T10:30:00.000Z",
-        "updatedAt": "2024-03-01T14:45:00.000Z"
-      },
-      {
-        "id": "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
-        "createdAt": "2025-03-19T11:44:13.710Z",
-        "updatedAt": "2025-03-19T11:44:13.710Z"
-      },
-      {
-        "id": "a1b2c3d4-e5f6-4789-8abc-9012def34568",
-        "createdAt": "2025-03-20T02:15:39.954Z",
-        "updatedAt": "2025-03-20T02:15:39.954Z"
-      },
-      {
-        "id": "f8360c38-a010-401d-ad4e-2533c61e084d",
-        "createdAt": "2025-03-20T02:36:48.549Z",
-        "updatedAt": "2025-03-20T02:36:48.549Z"
+        "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
+        "createdAt": "2025-03-20T04:30:01.669Z",
+        "updatedAt": "2025-03-20T04:30:01.669Z"
       }
     ],
-    "myConferences": [],
+    "myConferences": [
+      {
+        "id": "bbde47ca-9243-4267-af7c-88d9eb8e21d7",
+        "status": "Pending",
+        "statusTime": "",
+        "submittedAt": "2025-03-20T04:36:46.814Z"
+      }
+    ],
     "calendar": [
-      "abcdef01-2345-6789-abcd-ef0123456789",
-      "11223344-5566-7788-99aa-bbccddeeff00",
-      "e5f6a7b8-9012-4cde-af12-3456789abcde",
-      "a1b2c3d4-e5f6-4789-8abc-9012def34567",
-      "a1b2c3d4-e5f6-4789-8abc-9012def34568",
-      "b2c3d4e5-f6a7-4890-9bcd-0123def45678",
-      "7a8b9c10-1112-4d5e-8f66-234567890abc",
-      "34567890-abcd-4ef1-8234-56789abcdef1",
-      "f8360c38-a010-401d-ad4e-2533c61e084d"
+      {
+        "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
+        "createdAt": "2025-03-20T04:30:02.760Z",
+        "updatedAt": "2025-03-20T04:30:02.760Z"
+      }
     ],
     "feedBacks": [
       "9a8b7c6d-5e4f-3a2b-1c0d-ef9a8b7c6d5e",

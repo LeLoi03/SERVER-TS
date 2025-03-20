@@ -210,7 +210,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận
 
 import { ConferenceResponse, FollowerInfo } from './types/conference.response';
 import { ConferenceListResponse, ConferenceInfo } from './types/conference.list.response';
-import { UserResponse } from './types/user.response';
+import { UserResponse, MyConference } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
 import { Feedback } from './types/conference.response';
@@ -320,92 +320,83 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
       return;
     }
 
-    // --- User Update ---
     const userFilePath = path.resolve(__dirname, './database/users_list.json');
-    const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+
+    // Use Promise.all to read both files concurrently
+    const [userData, conferenceData] = await Promise.all([
+      fs.promises.readFile(userFilePath, 'utf-8'),
+      fs.promises.readFile(conferenceFilePath, 'utf-8'),
+    ]);
+
     const users: UserResponse[] = JSON.parse(userData);
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
 
     const userIndex = users.findIndex(u => u.id === userId);
-
     if (userIndex === -1) {
       res.status(404).json({ message: 'User not found' });
       return;
     }
 
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      return; // No need for rollback, we haven't modified anything yet.
+    }
+
     const updatedUser: UserResponse = { ...users[userIndex] };
+    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
     const now = new Date().toISOString();
 
     if (!updatedUser.followedConferences) {
       updatedUser.followedConferences = [];
     }
+    if (!updatedConference.followedBy) {
+      updatedConference.followedBy = [];
+    }
 
     const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
+    const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
 
+    // Simplify the follow/unfollow logic using a single conditional
     if (existingFollowIndex !== -1) {
-      // Unfollow: Remove the conference object
+      // Unfollow:
       updatedUser.followedConferences.splice(existingFollowIndex, 1);
+      updatedConference.followedBy.splice(isUserFollowingIndex, 1);
     } else {
-      // Follow: Add a new conference object
+      // Follow:
       updatedUser.followedConferences.push({
         id: conferenceId,
         createdAt: now,
         updatedAt: now,
       });
-    }
 
-    users[userIndex] = updatedUser;
-
-
-    // --- Conference Update ---
-    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const conferenceData = await fs.promises.readFile(conferenceFilePath, 'utf-8');
-    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
-
-    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-
-    if (conferenceIndex === -1) {
-      res.status(404).json({ message: 'Conference not found' });
-      // Rollback user changes
-      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-      return;
-    }
-
-    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
-
-    if (!updatedConference.followedBy) {
-      updatedConference.followedBy = [];
-    }
-
-    const followerInfo: FollowerInfo = {
-      id: updatedUser.id,
-      email: updatedUser.email,
-      firstName: updatedUser.firstName,
-      lastName: updatedUser.lastName,
-      createdAt: updatedUser.createdAt,
-      updatedAt: updatedUser.updatedAt,
-    };
-
-    const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
-
-    if (isUserFollowingIndex !== -1) {
-      // Unfollow: Remove user from followedBy
-      updatedConference.followedBy.splice(isUserFollowingIndex, 1);
-    } else {
-      // Follow: Add user to followedBy
+      const followerInfo: FollowerInfo = {
+        id: updatedUser.id,
+        email: updatedUser.email,
+        firstName: updatedUser.firstName,
+        lastName: updatedUser.lastName,
+        createdAt: updatedUser.createdAt,
+        updatedAt: updatedUser.updatedAt,
+      };
       updatedConference.followedBy.push(followerInfo);
     }
 
 
+    users[userIndex] = updatedUser;
     conferences[conferenceIndex] = updatedConference;
 
-    // --- Write Changes to Files ---
-    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-    await fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8');
+    // Use Promise.all to write both files concurrently
+    await Promise.all([
+      fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
+      fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+    ]);
 
-    res.status(200).json(updatedUser);
+    res.status(200).json(updatedUser); // Send the updated user
 
   } catch (error: any) {
     console.error('Error updating user/conference data:', error);
+    // More specific error handling, as you had, is good.
     if (error instanceof SyntaxError) {
       res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
     } else if (error.code === 'ENOENT') {
@@ -415,7 +406,6 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     }
   }
 };
-
 app.post('/api/v1/user/:id/follow', followConference);
 
 // 4. Lấy thông tin user theo ID ---
@@ -497,44 +487,41 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
 app.put('/api/v1/user/:id', updateUser); // Sử dụng method PUT
 
 
-// 6. Add conference
+// 6. Add conference (updated)
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const conferenceData: ConferenceFormData = req.body;
-
-    // Lấy userId TỪ req.body (KHÔNG an toàn)
-    const { userId } = req.body; // Frontend phải gửi userId trong request body
+    const { userId } = req.body; // Get userId from request body
 
     if (!userId) {
-      res.status(401).json({ message: 'Unauthorized: Missing userId' }); // Trả về 401 Unauthorized
+      return res.status(401).json({ message: 'Unauthorized: Missing userId' }) as any; // Return 401 Unauthorized
     }
 
-    // Tạo các ID duy nhất
+    // Create unique IDs
     const conferenceId = uuidv4();
     const organizationId = uuidv4();
     const locationId = uuidv4();
 
-    // ... (phần tạo addedConference và ghi file giữ nguyên) ...
     const addedConference: AddedConference = {
       conference: {
         id: conferenceId,
         title: conferenceData.title,
         acronym: conferenceData.acronym,
-        creatorId: userId, // LẤY USER ID TỪ REQUEST (KHÔNG AN TOÀN)
+        creatorId: userId, // Get user ID from request
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       },
       organization: {
         id: organizationId,
-        year: new Date().getFullYear(), // Năm hiện tại
-        accessType: conferenceData.type, // Lấy từ form
+        year: new Date().getFullYear(), // Current year
+        accessType: conferenceData.type, // Get from form
         isAvailable: true,
         conferenceId: conferenceId,
-        summary: conferenceData.description, // Tạm dùng description làm summary
-        callForPaper: '',   // Để trống, hoặc thêm logic tạo call for paper
+        summary: conferenceData.description,
+        callForPaper: '',
         link: conferenceData.link,
-        cfpLink: '',        // Để trống
-        impLink: '',        // Để trống
+        cfpLink: '',
+        impLink: '',
         topics: conferenceData.topics,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
@@ -551,10 +538,10 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
         organizeId: organizationId,
       },
       dates: conferenceData.dates.map(date => ({
-        id: uuidv4(), // Tạo ID duy nhất cho mỗi date
+        id: uuidv4(),
         organizedId: organizationId,
-        fromDate: new Date(date.fromDate).toISOString(), // Chuyển sang ISO string
-        toDate: new Date(date.toDate).toISOString(),     // Chuyển sang ISO string
+        fromDate: new Date(date.fromDate).toISOString(),
+        toDate: new Date(date.toDate).toISOString(),
         type: date.type,
         name: date.name,
         createdAt: new Date().toISOString(),
@@ -562,41 +549,85 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
         isAvailable: true,
       })),
 
-      rankSourceFoRData: [],  // Để mảng rỗng, hoặc thêm logic
-      status: 'Pending', // Trạng thái mặc định
+      rankSourceFoRData: [],
+      status: 'Pending', // Default status
     };
 
 
-    const filePath = path.resolve(__dirname, './database/add_conferences.json');
+    const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
     let existingConferences: AddedConference[] = [];
 
+    // Read and update add_conferences.json (as before)
     try {
-      const fileExists = await fs.promises.access(filePath).then(() => true).catch(() => false); // Kiểm tra file tồn tại
+      const fileExists = await fs.promises.access(addConferencesFilePath).then(() => true).catch(() => false);
       if (fileExists) {
-        const data = await fs.promises.readFile(filePath, 'utf-8');
-        // CHỈ parse nếu chuỗi data không rỗng
+        const data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
         if (data.trim() !== "") {
           existingConferences = JSON.parse(data);
         }
       }
     } catch (error: any) {
-      // Xử lý các lỗi khác (ngoài lỗi file không tồn tại)
       if (error.code !== 'ENOENT') {
-        console.error('Error reading conference data:', error); // Thêm log lỗi chi tiết hơn ở đây.
+        console.error('Error reading conference data:', error);
         throw error;
       }
     }
     existingConferences.push(addedConference);
-    await fs.promises.writeFile(filePath, JSON.stringify(existingConferences, null, 2), 'utf-8');
+    await fs.promises.writeFile(addConferencesFilePath, JSON.stringify(existingConferences, null, 2), 'utf-8');
 
-    res.status(201).json(addedConference); // Trả về conference đã thêm
+
+    // --- Update users_list.json ---
+    const usersListFilePath = path.resolve(__dirname, './database/users_list.json');
+    let usersList: UserResponse[] = [];
+
+    try {
+      const usersFileExists = await fs.promises.access(usersListFilePath).then(() => true).catch(() => false);
+      if (usersFileExists) {
+        const usersData = await fs.promises.readFile(usersListFilePath, 'utf-8');
+        if (usersData.trim() !== "") {
+          usersList = JSON.parse(usersData);
+        }
+      }
+    } catch (error: any) {
+      if (error.code !== 'ENOENT') {
+        console.error('Error reading users data:', error);
+        throw error;
+      }
+    }
+
+    // Find the user in users_list.json
+    const userIndex = usersList.findIndex(user => user.id === userId);
+
+    if (userIndex === -1) {
+      return res.status(404).json({ message: 'User not found' }) as any; // User not found in users_list.json
+    }
+
+    // Create the MyConference object
+    const newMyConference: MyConference = {
+      id: conferenceId,
+      status: 'Pending', // Initial status
+      statusTime: "",
+      submittedAt: new Date().toISOString(),
+    };
+
+    // Add or update the myConferences array
+    if (!usersList[userIndex].myConferences) {
+      usersList[userIndex].myConferences = [newMyConference];
+    } else {
+      usersList[userIndex].myConferences.push(newMyConference);
+    }
+
+    // Write the updated users list back to the file
+    await fs.promises.writeFile(usersListFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
+
+
+    res.status(201).json(addedConference); // Return the added conference
 
   } catch (error: any) {
     console.error('Error adding conference:', error);
     if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in add_conferences.json' });
-    }
-    else {
+      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
+    } else {
       res.status(500).json({ message: 'Internal server error' });
     }
   }
@@ -662,8 +693,8 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
       res.status(400).json({ message: 'Missing conferenceId or userId' });
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const userFilePath = path.resolve(__dirname, './database/users_list.json');
+    const data = await fs.promises.readFile(userFilePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(data);
 
     const userIndex = users.findIndex(u => u.id === userId);  // Tìm theo ID, không phải email
@@ -673,33 +704,53 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
     }
 
     const updatedUser: UserResponse = { ...users[userIndex] };
+    const now = new Date().toISOString();
 
     if (!updatedUser.calendar) {
       updatedUser.calendar = [];
     }
 
-    const isAddToCalendar = updatedUser.calendar.includes(conferenceId);
+    const isAddToCalendar = updatedUser.calendar.findIndex(fc => fc.id === conferenceId);
 
-    if (isAddToCalendar) {
-      updatedUser.calendar = updatedUser.calendar.filter(id => id !== conferenceId);
+    if (isAddToCalendar !== -1) {
+      // UnAddToCalendar: Remove the conference object
+      updatedUser.calendar.splice(isAddToCalendar, 1);
     } else {
-      if (!updatedUser.calendar.includes(conferenceId)) {
-        updatedUser.calendar.push(conferenceId);
-      }
+      // Add to calendar: Add a new conference object
+      updatedUser.calendar.push({
+        id: conferenceId,
+        createdAt: now,
+        updatedAt: now,
+      });
     }
 
-    // Ghi lại vào file (quan trọng!)
     users[userIndex] = updatedUser;
-    await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi lại, pretty-printed
+
+    // --- Conference Update ---
+    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+    const conferenceData = await fs.promises.readFile(conferenceFilePath, 'utf-8');
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+
+
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      // Rollback user changes
+      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+      return;
+    }
+
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
 
     res.status(200).json(updatedUser); // Trả về user đã update
+
   } catch (error: any) {
-    // Xử lý lỗi như trước
-    console.error('Error updating user data:', error);
+    console.error('Error updating user/conference data:', error);
     if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
     } else if (error.code === 'ENOENT') {
-      res.status(500).json({ message: 'user-list.json not found' });
+      res.status(500).json({ message: 'A required JSON file was not found' });
     } else {
       res.status(500).json({ message: 'Internal server error' });
     }
@@ -748,7 +799,7 @@ const getUserCalendar: RequestHandler = async (req, res) => {
       return res.status(404).json({ message: 'User not found or no calendar data' });
     }
 
-    const calendarIds = user.calendar;
+    const calendarIds = user.calendar.map(item => item.id);
     console.log("8. User's calendar IDs:", calendarIds);
 
     const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
@@ -1055,7 +1106,7 @@ app.get('/api/v1/filter-conferences', getFilteredConferences);
 
 
 // 11. Add feedback
-const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
+const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
   const { conferenceId } = req.params; // Get conferenceId from URL
   const { description, star, creatorId } = req.body;
 
@@ -1106,7 +1157,7 @@ const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { 
     res.status(500).json({ message: 'Internal server error' });
   }
 };
-app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
+app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback); // Use conferenceId in URL
 
 
 // 12. Delete User
@@ -1169,29 +1220,31 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
 app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
 
 
-const adminConferences: RequestHandler = async (req, res) => {
+const adminConferences: RequestHandler = async (req, res): Promise<void> => {
   const addConferencesPath = path.resolve(__dirname, './database/add_conferences.json');
   const conferencesListPath = path.resolve(__dirname, './database/conferences_list.json');
   const conferenceDetailsListPath = path.resolve(__dirname, './database/conference_details_list.json');
+  const usersListPath = path.resolve(__dirname, './database/users_list.json'); // Path to users_list.json
+
 
   if (req.method === 'GET') {
+    // ... (Your existing GET request handling - no changes needed) ...
     try {
       let data = '';
       try {
         data = await fs.promises.readFile(addConferencesPath, 'utf-8');
       } catch (readError) {
         if ((readError as NodeJS.ErrnoException).code === 'ENOENT') {
-          // File không tồn tại, coi như không có hội nghị chờ duyệt
-          data = '[]'; // Khởi tạo một mảng rỗng
+          // File not found
+          data = '[]';
         } else {
-          throw readError; // Ném lỗi khác
+          throw readError; // Other errors
         }
       }
-      // Nếu data rỗng, parse thành mảng rỗng
       const addConferences: AddedConference[] = data.trim() ? JSON.parse(data) : [];
       const pendingConferences = addConferences.filter(c => c.status === 'Pending');
 
-      // Tạo HTML động (sử dụng template literals cho gọn gàng)
+      // Create the HTML response
       const html = `
       <!DOCTYPE html>
       <html>
@@ -1247,41 +1300,29 @@ const adminConferences: RequestHandler = async (req, res) => {
     }
 
   } else if (req.method === 'POST') {
-    // Xử lý Approve/Reject
     const { conferenceId, action } = req.body;
 
-    if (!conferenceId || !action) {
-      res.status(400).send('Bad Request: Missing conferenceId or action');
-      return;
-    }
-
-    if (action !== 'approve' && action !== 'reject') {
-      res.status(400).send('Bad Request: Invalid action');
-      return;
+    if (!conferenceId || !action || (action !== 'approve' && action !== 'reject')) {
+      res.status(400).send('Bad Request: Invalid input');
     }
 
     try {
-      // Đọc dữ liệu từ các file JSON, xử lý trường hợp file rỗng hoặc không tồn tại
+      // Read files (handling potential errors)
       let addConferences: AddedConference[] = [];
       try {
-        const addConferencesData = await fs.promises.readFile(addConferencesPath, 'utf-8');
-        // Nếu addConferencesData rỗng, parse thành mảng rỗng
-        addConferences = addConferencesData.trim() ? JSON.parse(addConferencesData) : [];
+        const data = await fs.promises.readFile(addConferencesPath, 'utf-8');
+        addConferences = data.trim() ? JSON.parse(data) : [];
       } catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-          throw error; // Ném lỗi khác nếu không phải lỗi file không tồn tại.
-        }
-        // Nếu file không tồn tại, addConferences đã là mảng rỗng
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
       }
-
 
       let conferencesList: ConferenceListResponse;
       try {
-        const conferencesListData = await fs.promises.readFile(conferencesListPath, 'utf-8');
-        conferencesList = JSON.parse(conferencesListData);
+        const data = await fs.promises.readFile(conferencesListPath, 'utf-8');
+        conferencesList = JSON.parse(data);
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-          conferencesList = { payload: [], meta: { curPage: 0, perPage: 0, prevPage: 0, totalPage: 0, nextPage: 0, totalItems: 0 } }; // Khởi tạo nếu file không tồn tại
+          conferencesList = { payload: [], meta: { curPage: 0, perPage: 0, prevPage: 0, totalPage: 0, nextPage: 0, totalItems: 0 } }; // Initialize
         } else {
           throw error;
         }
@@ -1290,32 +1331,41 @@ const adminConferences: RequestHandler = async (req, res) => {
 
       let conferenceDetailsList: ConferenceResponse[] = [];
       try {
-        const conferenceDetailsListData = await fs.promises.readFile(conferenceDetailsListPath, 'utf-8');
-        conferenceDetailsList = conferenceDetailsListData.trim() ? JSON.parse(conferenceDetailsListData) : [];
+        const data = await fs.promises.readFile(conferenceDetailsListPath, 'utf-8');
+        conferenceDetailsList = data.trim() ? JSON.parse(data) : [];
       } catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-          throw error; // Ném lỗi khác nếu không phải lỗi file không tồn tại.
-        }
-        // Nếu file không tồn tại, conferenceDetailsList đã là mảng rỗng
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
       }
 
-      // Tìm conference cần duyệt
-      const conferenceIndex = addConferences.findIndex(c => c.conference.id === conferenceId);
+      let usersList: UserResponse[] = [];
+      try {
+        const data = await fs.promises.readFile(usersListPath, 'utf-8');
+        usersList = data.trim() ? JSON.parse(data) : [];
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      }
 
+
+      // Find the conference
+      const conferenceIndex = addConferences.findIndex(c => c.conference.id === conferenceId);
       if (conferenceIndex === -1) {
         res.status(404).send('Conference not found');
-        return;
       }
-
-      // Lấy conference object
       const conferenceToProcess = addConferences[conferenceIndex];
 
-      // Xử lý logic duyệt/từ chối
+      // Get the creator's ID.  *CRITICAL* for updating the user's record.
+      const creatorId = conferenceToProcess.conference.creatorId;
+
+      // Find the user in users_list.json
+      const userIndex = usersList.findIndex(user => user.id === creatorId);
+      if (userIndex === -1) {
+        res.status(404).json({ message: 'User not found' }); // Very important!
+      }
+
+      // Approve/Reject logic
       if (action === 'approve') {
-        // Cập nhật trạng thái thành "Approved"
         conferenceToProcess.status = 'Approved';
 
-        // Tạo conference item cho conferences_list.json
         const newConferenceListItem: ConferenceInfo = {
           id: conferenceToProcess.conference.id,
           title: conferenceToProcess.conference.title,
@@ -1342,12 +1392,7 @@ const adminConferences: RequestHandler = async (req, res) => {
           accessType: conferenceToProcess.organization.accessType,
           status: conferenceToProcess.status
         };
-
-        // Thêm vào conferences_list.json
         conferencesList.payload.push(newConferenceListItem);
-
-
-        // Tạo conference item cho conference_details_list.json
 
         const newConferenceDetailItem: ConferenceResponse = {
           conference: conferenceToProcess.conference,
@@ -1358,24 +1403,40 @@ const adminConferences: RequestHandler = async (req, res) => {
           feedBacks: [],
           followedBy: []
         };
-
-        // Thêm vào conference_details_list.json
         conferenceDetailsList.push(newConferenceDetailItem);
 
+        // Find and update the conference status in the user's myConferences array
+        const myConfIndex = usersList[userIndex].myConferences?.findIndex(c => c.id === conferenceId);
+        if (myConfIndex !== undefined && myConfIndex !== -1) {
+          usersList[userIndex].myConferences![myConfIndex].status = 'Approved'; // Update the status
+          usersList[userIndex].myConferences![myConfIndex].statusTime = new Date().toISOString(); // Update the status; // Update the status
 
-      } else {
-        // Cập nhật trạng thái thành "Rejected" (nếu từ chối)
+        }
+
+
+      } else { // action === 'reject'
         conferenceToProcess.status = 'Rejected';
+
+        // Find and update the conference status in the user's myConferences array
+        const myConfIndex = usersList[userIndex].myConferences?.findIndex(c => c.id === conferenceId);
+        if (myConfIndex !== undefined && myConfIndex !== -1) {
+          usersList[userIndex].myConferences![myConfIndex].status = 'Rejected'; // Update the status
+          usersList[userIndex].myConferences![myConfIndex].statusTime = new Date().toISOString(); // Update the status; // Update the status
+
+        }
       }
-      // Cập nhật lại addConferences (dù là approve hay reject)
+
+      // Update addConferences (for both approve and reject)
       addConferences[conferenceIndex] = conferenceToProcess;
 
-      // Ghi lại vào các file JSON
-      await fs.promises.writeFile(addConferencesPath, JSON.stringify(addConferences, null, 2));
-      await fs.promises.writeFile(conferencesListPath, JSON.stringify(conferencesList, null, 2));
-      await fs.promises.writeFile(conferenceDetailsListPath, JSON.stringify(conferenceDetailsList, null, 2));
+      // Write back to files
+      await Promise.all([
+        fs.promises.writeFile(addConferencesPath, JSON.stringify(addConferences, null, 2)),
+        fs.promises.writeFile(conferencesListPath, JSON.stringify(conferencesList, null, 2)),
+        fs.promises.writeFile(conferenceDetailsListPath, JSON.stringify(conferenceDetailsList, null, 2)),
+        fs.promises.writeFile(usersListPath, JSON.stringify(usersList, null, 2)), // Update users_list.json
+      ]);
 
-      // Redirect về trang admin (hoặc trang nào bạn muốn)
       res.redirect('/admin/conferences');
 
     } catch (error) {

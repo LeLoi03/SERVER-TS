@@ -362,34 +362,6 @@
       "updatedAt": "2024-02-15T12:00:00.000Z",
       "creatorId": "01fedcba-9876-5432-10fe-dcba98765432",
       "accessType": "Offline"
-    },
-    {
-      "id": "f8360c38-a010-401d-ad4e-2533c61e084d",
-      "title": "name",
-      "acronym": "acronym",
-      "location": {
-        "cityStateProvince": "",
-        "country": "Vietnam",
-        "address": "address",
-        "continent": "Asia"
-      },
-      "year": 2025,
-      "topics": [
-        "AI",
-        "Machine Learning"
-      ],
-      "dates": {
-        "fromDate": "",
-        "toDate": "",
-        "name": "",
-        "type": ""
-      },
-      "link": "link",
-      "createdAt": "2025-03-20T02:24:50.842Z",
-      "updatedAt": "2025-03-20T02:24:50.842Z",
-      "creatorId": "test",
-      "accessType": "offline",
-      "status": "Approved"
     }
   ],
   "meta": {
