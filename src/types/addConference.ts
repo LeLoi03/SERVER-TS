@@ -2,6 +2,7 @@ export interface ConferenceFormData {
     title: string;
     acronym: string;
     link: string;
+    year: number;
     topics: string[];
     type: 'offline' | 'online' | 'hybrid';
     location: LocationInput;
@@ -75,5 +76,5 @@ export interface AddedConference {
         source: string;
         researchFields: string;
     }[];
-    status: 'Pending'; // Thêm trạng thái
+    status: string; // Thêm trạng thái
 }

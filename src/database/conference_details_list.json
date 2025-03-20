@@ -225,7 +225,16 @@
         "updatedAt": "2024-03-01T14:45:00.000Z"
       }
     ],
-    "followedBy": []
+    "followedBy": [
+      {
+        "id": "test",
+        "email": "loicute5fps@gmail.com",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2021-06-05T12:00:00.000Z",
+        "updatedAt": "2021-06-05T12:00:00.000Z"
+      }
+    ]
   },
   {
     "conference": {
@@ -1174,6 +1183,103 @@
         "lastName": "Loi",
         "createdAt": "2024-01-16T10:30:00.000Z",
         "updatedAt": "2024-03-01T14:45:00.000Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "f8360c38-a010-401d-ad4e-2533c61e084d",
+      "title": "name",
+      "acronym": "acronym",
+      "creatorId": "test",
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z"
+    },
+    "organization": {
+      "id": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+      "year": 2025,
+      "accessType": "offline",
+      "isAvailable": true,
+      "conferenceId": "f8360c38-a010-401d-ad4e-2533c61e084d",
+      "summary": "Test conference",
+      "callForPaper": "",
+      "link": "link",
+      "cfpLink": "",
+      "impLink": "",
+      "topics": [
+        "AI",
+        "Machine Learning"
+      ],
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z"
+    },
+    "locations": {
+      "id": "f9301775-9e78-4aa3-84b1-01a9c0d6d97c",
+      "address": "address",
+      "cityStateProvince": "",
+      "country": "Vietnam",
+      "continent": "Asia",
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z",
+      "isAvailable": true,
+      "organizeId": "13c35494-5e34-4db8-8b1e-d56de52f6693"
+    },
+    "dates": [
+      {
+        "id": "d1f05845-a013-4e06-8c19-1e54cbf23c62",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-23T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Date",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
+        "isAvailable": true
+      },
+      {
+        "id": "11b86e54-cdd7-41d8-9002-bcf3943aa0b7",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-20T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "submissiondeadline",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
+        "isAvailable": true
+      },
+      {
+        "id": "22a7200c-506c-4249-bde9-d836df1c92ff",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-21T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "notificationdeadline",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f230ebca-4d63-476d-90a3-363026f55ffd",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-21T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "camerareadydeadline",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [],
+    "feedBacks": [],
+    "followedBy": [
+      {
+        "id": "test",
+        "email": "loicute5fps@gmail.com",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2021-06-05T12:00:00.000Z",
+        "updatedAt": "2021-06-05T12:00:00.000Z"
       }
     ]
   }

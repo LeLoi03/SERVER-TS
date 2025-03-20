@@ -1,131 +1,151 @@
 [
   {
     "conference": {
-      "id": "cf2ade5c-4284-4fbd-9ced-00b85942d400",
+      "id": "f8360c38-a010-401d-ad4e-2533c61e084d",
       "title": "name",
       "acronym": "acronym",
       "creatorId": "test",
-      "createdAt": "2025-03-16T12:03:36.525Z",
-      "updatedAt": "2025-03-16T12:03:36.525Z"
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z"
     },
     "organization": {
-      "id": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
+      "id": "13c35494-5e34-4db8-8b1e-d56de52f6693",
       "year": 2025,
-      "accessType": "Offline",
+      "accessType": "offline",
       "isAvailable": true,
-      "conferenceId": "cf2ade5c-4284-4fbd-9ced-00b85942d400",
-      "summary": "Test",
+      "conferenceId": "f8360c38-a010-401d-ad4e-2533c61e084d",
+      "summary": "Test conference",
       "callForPaper": "",
       "link": "link",
       "cfpLink": "",
       "impLink": "",
       "topics": [
         "AI",
-        "Machine learning"
+        "Machine Learning"
       ],
-      "createdAt": "2025-03-16T12:03:36.525Z",
-      "updatedAt": "2025-03-16T12:03:36.525Z"
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z"
     },
     "locations": {
-      "id": "0a78ef63-3539-41cf-82f3-ef1efbae1db0",
+      "id": "f9301775-9e78-4aa3-84b1-01a9c0d6d97c",
       "address": "address",
-      "cityStateProvince": "citystateprovince",
-      "country": "country",
-      "continent": "continent",
-      "createdAt": "2025-03-16T12:03:36.525Z",
-      "updatedAt": "2025-03-16T12:03:36.525Z",
+      "cityStateProvince": "",
+      "country": "Vietnam",
+      "continent": "Asia",
+      "createdAt": "2025-03-20T02:24:13.786Z",
+      "updatedAt": "2025-03-20T02:24:13.786Z",
       "isAvailable": true,
-      "organizeId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea"
+      "organizeId": "13c35494-5e34-4db8-8b1e-d56de52f6693"
     },
     "dates": [
       {
-        "id": "1eade17d-776d-4b19-a8fa-aec9b9828588",
-        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
-        "fromDate": "2025-03-01T00:00:00.000Z",
-        "toDate": "2025-03-10T00:00:00.000Z",
-        "type": "Conference Date",
+        "id": "d1f05845-a013-4e06-8c19-1e54cbf23c62",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-23T00:00:00.000Z",
+        "type": "conferenceDates",
         "name": "Conference Date",
-        "createdAt": "2025-03-16T12:03:36.525Z",
-        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
         "isAvailable": true
       },
       {
-        "id": "0f6a9d51-a0e5-4395-a5b6-d3c71dfa4e99",
-        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
-        "fromDate": "2025-03-11T00:00:00.000Z",
-        "toDate": "2025-03-18T00:00:00.000Z",
-        "type": "submission date",
+        "id": "11b86e54-cdd7-41d8-9002-bcf3943aa0b7",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-20T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "submissionDate",
         "name": "submissiondeadline",
-        "createdAt": "2025-03-16T12:03:36.525Z",
-        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
         "isAvailable": true
       },
       {
-        "id": "332628c0-3b6b-4413-889d-589f37cb3182",
-        "organizedId": "8e4ba9e3-ab26-4ed6-8975-039b00e595ea",
-        "fromDate": "2025-04-09T00:00:00.000Z",
-        "toDate": "2025-03-06T00:00:00.000Z",
-        "type": "notification date",
+        "id": "22a7200c-506c-4249-bde9-d836df1c92ff",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-21T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "notificationDate",
         "name": "notificationdeadline",
-        "createdAt": "2025-03-16T12:03:36.525Z",
-        "updatedAt": "2025-03-16T12:03:36.525Z",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f230ebca-4d63-476d-90a3-363026f55ffd",
+        "organizedId": "13c35494-5e34-4db8-8b1e-d56de52f6693",
+        "fromDate": "2025-03-21T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "camerareadydeadline",
+        "createdAt": "2025-03-20T02:24:13.786Z",
+        "updatedAt": "2025-03-20T02:24:13.786Z",
         "isAvailable": true
       }
     ],
     "rankSourceFoRData": [],
-    "status": "Pending"
+    "status": "Approved"
   },
   {
     "conference": {
-      "id": "cadd804c-ca91-49fa-92a2-c0caa1f541ea",
+      "id": "ce67d71c-0197-451b-a5eb-9b53ec0aaab5",
       "title": "name",
       "acronym": "acronym",
       "creatorId": "test",
-      "createdAt": "2025-03-16T12:08:14.228Z",
-      "updatedAt": "2025-03-16T12:08:14.228Z"
+      "createdAt": "2025-03-20T02:34:32.999Z",
+      "updatedAt": "2025-03-20T02:34:32.999Z"
     },
     "organization": {
-      "id": "32301b09-a1dd-4514-ba65-45fc1140b739",
+      "id": "66ac4900-6168-4955-8e9c-289499e537d1",
       "year": 2025,
-      "accessType": "Offline",
+      "accessType": "offline",
       "isAvailable": true,
-      "conferenceId": "cadd804c-ca91-49fa-92a2-c0caa1f541ea",
-      "summary": "abc",
+      "conferenceId": "ce67d71c-0197-451b-a5eb-9b53ec0aaab5",
+      "summary": "hhqsqjop",
       "callForPaper": "",
       "link": "link",
       "cfpLink": "",
       "impLink": "",
-      "topics": [
-        "AI"
-      ],
-      "createdAt": "2025-03-16T12:08:14.228Z",
-      "updatedAt": "2025-03-16T12:08:14.228Z"
+      "topics": [],
+      "createdAt": "2025-03-20T02:34:32.999Z",
+      "updatedAt": "2025-03-20T02:34:32.999Z"
     },
     "locations": {
-      "id": "a4cc41ce-b3d5-4b4d-9578-fbf0696d8d49",
+      "id": "e5882392-9c35-4ec8-8e89-18d95655b490",
       "address": "address",
-      "cityStateProvince": "citystateprovince",
-      "country": "country",
-      "continent": "continent",
-      "createdAt": "2025-03-16T12:08:14.228Z",
-      "updatedAt": "2025-03-16T12:08:14.228Z",
+      "cityStateProvince": "",
+      "country": "Vietnam",
+      "continent": "Asia",
+      "createdAt": "2025-03-20T02:34:32.999Z",
+      "updatedAt": "2025-03-20T02:34:32.999Z",
       "isAvailable": true,
-      "organizeId": "32301b09-a1dd-4514-ba65-45fc1140b739"
+      "organizeId": "66ac4900-6168-4955-8e9c-289499e537d1"
     },
     "dates": [
       {
-        "id": "12dcd701-d66c-49c5-9bbd-c67b9d4cae3c",
-        "organizedId": "32301b09-a1dd-4514-ba65-45fc1140b739",
-        "fromDate": "2025-03-06T00:00:00.000Z",
-        "toDate": "2025-03-12T00:00:00.000Z",
-        "type": "Conference Date",
+        "id": "839bf2fc-fdb6-4513-9546-46a7d0a9bce7",
+        "organizedId": "66ac4900-6168-4955-8e9c-289499e537d1",
+        "fromDate": "2025-03-30T00:00:00.000Z",
+        "toDate": "2025-03-31T00:00:00.000Z",
+        "type": "conferenceDates",
         "name": "Conference Date",
-        "createdAt": "2025-03-16T12:08:14.228Z",
-        "updatedAt": "2025-03-16T12:08:14.228Z",
+        "createdAt": "2025-03-20T02:34:32.999Z",
+        "updatedAt": "2025-03-20T02:34:32.999Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c11f5ccd-53e7-4298-adb1-e6b4781623f3",
+        "organizedId": "66ac4900-6168-4955-8e9c-289499e537d1",
+        "fromDate": "2025-03-21T00:00:00.000Z",
+        "toDate": "2025-03-22T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "submissiondeadline",
+        "createdAt": "2025-03-20T02:34:32.999Z",
+        "updatedAt": "2025-03-20T02:34:32.999Z",
         "isAvailable": true
       }
     ],
     "rankSourceFoRData": [],
-    "status": "Pending"
+    "status": "Rejected"
   }
 ]

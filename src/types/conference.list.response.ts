@@ -19,6 +19,7 @@ export type ConferenceInfo = {
   updatedAt: string; // Keep as string (ISO 8601)
   creatorId: string;
   accessType: string; //  "Offline" | "Online" | "Hybrid";  //  more specific type
+  status: string;
 };
 
 export type Location = {

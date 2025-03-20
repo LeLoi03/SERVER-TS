@@ -12,7 +12,6 @@ import fs from 'fs';
 import { runNonStreamChat, saveHistoryToFile } from './chatbotService';
 import logToFile from './utils/logger';
 // import { handleDrawChartIntent, handleWebsiteNavigationIntent, handleFindInformationConferenceIntent, handleFindInformationJournalIntent, handleFindInformationWebsiteIntent, handleNoIntent, handleInvalidIntent } from "./handlers/intentHandler"
-const app = express();
 
 const corsOptions = {
   origin: '*', // Replace with the actual origin(s) of your frontend
@@ -21,9 +20,12 @@ const corsOptions = {
   optionsSuccessStatus: 204,
 };
 
+const app = express();
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận dữ liệu từ form HTML
 
 // // Database connection
 // const pool = new Pool({
@@ -207,7 +209,7 @@ app.use(bodyParser.json());
 // Replace for database
 
 import { ConferenceResponse, FollowerInfo } from './types/conference.response';
-import { ConferenceListResponse } from './types/conference.list.response';
+import { ConferenceListResponse, ConferenceInfo } from './types/conference.list.response';
 import { UserResponse } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
@@ -386,11 +388,11 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
 
     if (isUserFollowingIndex !== -1) {
-        // Unfollow: Remove user from followedBy
-        updatedConference.followedBy.splice(isUserFollowingIndex, 1);
+      // Unfollow: Remove user from followedBy
+      updatedConference.followedBy.splice(isUserFollowingIndex, 1);
     } else {
-        // Follow: Add user to followedBy
-        updatedConference.followedBy.push(followerInfo);
+      // Follow: Add user to followedBy
+      updatedConference.followedBy.push(followerInfo);
     }
 
 
@@ -425,7 +427,7 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
       res.status(400).json({ message: 'Missing userId' });
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json'); 
+    const filePath = path.resolve(__dirname, './database/users_list.json');
     const data = await fs.promises.readFile(filePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(data);
 
@@ -454,41 +456,41 @@ app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 // 5. Update User
 const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
   try {
-      const userId = req.params.id;
-      const updatedData = req.body;
+    const userId = req.params.id;
+    const updatedData = req.body;
 
-      if (!userId) {
-          return res.status(400).json({ message: 'Missing userId' }) as any;
-      }
+    if (!userId) {
+      return res.status(400).json({ message: 'Missing userId' }) as any;
+    }
 
-      const filePath = path.resolve(__dirname, './database/users_list.json'); // Đường dẫn đến file JSON
-      const data = await fs.promises.readFile(filePath, 'utf-8');
-      const users: UserResponse[] = JSON.parse(data);
+    const filePath = path.resolve(__dirname, './database/users_list.json'); // Đường dẫn đến file JSON
+    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const users: UserResponse[] = JSON.parse(data);
 
-      const userIndex = users.findIndex(u => u.id === userId);
+    const userIndex = users.findIndex(u => u.id === userId);
 
-      if (userIndex === -1) {
-          return res.status(404).json({ message: 'User not found' });
-      }
+    if (userIndex === -1) {
+      return res.status(404).json({ message: 'User not found' });
+    }
 
-      // Cập nhật thông tin user
-      users[userIndex] = { ...users[userIndex], ...updatedData };
+    // Cập nhật thông tin user
+    users[userIndex] = { ...users[userIndex], ...updatedData };
 
-      // Ghi lại vào file
-      await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
+    // Ghi lại vào file
+    await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
 
-      res.status(200).json(users[userIndex]); // Trả về user đã được update
+    res.status(200).json(users[userIndex]); // Trả về user đã được update
 
   } catch (error: any) {
-      console.error('Error updating user:', error);
-      if (error instanceof SyntaxError) {
-        res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
-      } else if (error.code === 'ENOENT') {
-        res.status(500).json({ message: 'user-list.json not found' });
-      }
-      else {
-          res.status(500).json({ message: 'Internal server error' });
-      }
+    console.error('Error updating user:', error);
+    if (error instanceof SyntaxError) {
+      res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+    } else if (error.code === 'ENOENT') {
+      res.status(500).json({ message: 'user-list.json not found' });
+    }
+    else {
+      res.status(500).json({ message: 'Internal server error' });
+    }
 
   }
 };
@@ -599,7 +601,7 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
     }
   }
 };
-app.post('/api/v1/user/add-conferences', addConference);
+app.post('/api/v1/user/add-conference', addConference);
 
 
 // 7. Get User's Conferences ---
@@ -611,15 +613,39 @@ const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { mes
       return res.status(400).json({ message: 'Missing userId' }) as any;
     }
 
-    const filePath = path.resolve(__dirname, 'add_conferences.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8').catch(() => '[]'); // Handle file not found
-    const addedConferences: AddedConference[] = JSON.parse(data);
+    const filePath = path.resolve(__dirname, './database/add_conferences.json');
 
-    // Filter conferences by creatorId
+    let addedConferences: AddedConference[] = []; // Initialize as empty array
+
+    try {
+      const data = await fs.promises.readFile(filePath, 'utf-8');
+      // Check for empty file *before* parsing.  This is much more robust.
+      if (data.trim() === '') {  // .trim() removes leading/trailing whitespace
+        // File is empty, no need to parse. `addedConferences` is already [].
+        // You *could* return here with a specific message, but it's not usually necessary.
+      } else {
+        addedConferences = JSON.parse(data);  // Parse only if there's content
+      }
+
+
+    } catch (error: any) {
+      // Distinguish between file-not-found and other errors.
+      if (error.code === 'ENOENT') {
+        // File not found, `addedConferences` remains [].  This is a perfectly valid case.
+        // Again, you could return a specific message if you wanted.
+      } else {
+        // Other I/O or parsing errors
+        console.error('Error reading or parsing conference file:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+      }
+    }
+
+    // Filter conferences by creatorId.  This will work correctly even if addedConferences is [].
     const userConferences = addedConferences.filter(conf => conf.conference.creatorId === userId);
 
     res.status(200).json(userConferences);
   } catch (error: any) {
+    // This outer catch is probably not needed if you handle errors within the inner try/catch properly.
     console.error('Error fetching user conferences:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
@@ -726,17 +752,12 @@ const getUserCalendar: RequestHandler = async (req, res) => {
     console.log("8. User's calendar IDs:", calendarIds);
 
     const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const addedFilePath = path.resolve(__dirname, './database/add_conferences.json');
     console.log("9. Conference details file path:", detailsFilePath);
-    console.log("10. Added conferences file path:", addedFilePath);
 
     let detailsData: string;
-    let addedData: string;
     try {
-      [detailsData, addedData] = await Promise.all([
-        fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => '[]'),
-        fs.promises.readFile(addedFilePath, 'utf-8').catch(() => '[]')
-      ]);
+      detailsData = await
+        fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => '[]');
       console.log("11. Conference data read successfully.");
     } catch (error) {
       console.error("Error reading conference files:", error);
@@ -744,7 +765,6 @@ const getUserCalendar: RequestHandler = async (req, res) => {
     }
 
     let detailsConferences: ConferenceResponse[];
-    let addedConferences: AddedConference[];
     try {
       detailsConferences = JSON.parse(detailsData);
       console.log("12. Details conferences parsed. Count:", detailsConferences.length);
@@ -752,13 +772,7 @@ const getUserCalendar: RequestHandler = async (req, res) => {
       console.error("Error parsing conference_details_list.json", error);
       return res.status(500).json({ message: "Error parsing details conference data." });
     }
-    try {
-      addedConferences = JSON.parse(addedData);
-      console.log("13. Added conferences parsed. Count:", addedConferences.length);
-    } catch (error) {
-      console.error("Error parsing add_conferences.json", error);
-      return res.status(500).json({ message: "Error parsing added conference data." });
-    }
+
 
     const allConferences = [
       ...detailsConferences.map(c => ({
@@ -766,13 +780,9 @@ const getUserCalendar: RequestHandler = async (req, res) => {
         title: c.conference.title,
         dates: c.dates,
       })),
-      ...addedConferences.map(c => ({
-        id: c.conference.id,
-        title: c.conference.title,
-        dates: c.dates,
-      })),
+
     ];
-    console.log("14. All conferences combined. Count:", allConferences.length);
+    console.log("14. All conferences. Count:", allConferences.length);
 
     const calendar = allConferences.filter(conf => calendarIds.includes(conf.id));
     console.log("15. Filtered calendar conferences. Count:", calendar.length);
@@ -832,31 +842,22 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
 
   try {
     const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const addedFilePath = path.resolve(__dirname, './database/add_conferences.json');
 
     console.log("detailsFilePath:", detailsFilePath);
-    console.log("addedFilePath:", addedFilePath);
 
     const detailsData = await fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => {
       console.log("Error reading detailsFilePath. Returning empty array.");
       return '[]';
     });
-    const addedData = await fs.promises.readFile(addedFilePath, 'utf-8').catch(() => {
-      console.log("Error reading addedFilePath. Returning empty array.");
-      return '[]';
-    });
+
 
     console.log("detailsData (first 100 chars):", detailsData.substring(0, 100));
-    console.log("addedData (first 100 chars):", addedData.substring(0, 100));
 
     let detailsConferences: ConferenceResponse[];
-    let addedConferences: AddedConference[];
 
     try {
       detailsConferences = JSON.parse(detailsData);
-      addedConferences = JSON.parse(addedData);
       console.log("detailsConferences length:", detailsConferences.length);
-      console.log("addedConferences length:", addedConferences.length);
     } catch (parseError) {
       console.error("Error parsing JSON:", parseError);
       res.status(500).json({ message: 'Error parsing JSON data' });
@@ -877,22 +878,6 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
         link: c.organization.link,
         accessType: c.organization.accessType,
         creatorId: c.conference.creatorId,
-        callForPaper: c.organization.callForPaper,
-        summary: c.organization.summary,
-      })),
-      ...addedConferences.map(c => ({
-        id: c.conference.id,
-        title: c.conference.title,
-        acronym: c.conference.acronym,
-        location: c.locations,
-        year: c.organization.year,
-        rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
-        topics: c.organization.topics,
-        dates: c.dates[0],
-        link: c.organization.link,
-        accessType: c.organization.accessType,
-        creatorId: c.conference.creatorId,
-        status: c.status,
         callForPaper: c.organization.callForPaper,
         summary: c.organization.summary,
       })),
@@ -1076,112 +1061,332 @@ const addFeedbackHandler: RequestHandler<{ conferenceId: string }, Feedback | { 
 
   // Basic validation
   if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
-      res.status(400).json({ message: 'Invalid feedback data' });
-      return;
+    res.status(400).json({ message: 'Invalid feedback data' });
+    return;
   }
 
   try {
-      const filePath = path.resolve(__dirname, './database/conference_details_list.json');
-      const data = await fs.promises.readFile(filePath, 'utf-8');
-      const conferences: ConferenceResponse[] = JSON.parse(data);
+    const filePath = path.resolve(__dirname, './database/conference_details_list.json');
+    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const conferences: ConferenceResponse[] = JSON.parse(data);
 
-      // Find the conference using conferenceId
-      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+    // Find the conference using conferenceId
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
 
-      if (conferenceIndex === -1) {
-          res.status(404).json({ message: 'Conference not found' });
-          return;
-      }
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      return;
+    }
 
-      // Get organizedId from the found conference
-      const organizedId = conferences[conferenceIndex].organization.id;
+    // Get organizedId from the found conference
+    const organizedId = conferences[conferenceIndex].organization.id;
 
-      const newFeedback: Feedback = {
-          id: uuidv4(),
-          organizedId, // Use organizedId from the conference
-          creatorId,
-          description,
-          star,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-      };
+    const newFeedback: Feedback = {
+      id: uuidv4(),
+      organizedId, // Use organizedId from the conference
+      creatorId,
+      description,
+      star,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
 
-      // Add the feedback to the conference
-      if (!conferences[conferenceIndex].feedBacks) {
-          conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
-      }
-      conferences[conferenceIndex].feedBacks.push(newFeedback);
+    // Add the feedback to the conference
+    if (!conferences[conferenceIndex].feedBacks) {
+      conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
+    }
+    conferences[conferenceIndex].feedBacks.push(newFeedback);
 
-      // Write the updated data back to the file
-      await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
+    // Write the updated data back to the file
+    await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
 
-      res.status(201).json(newFeedback); // Return the new feedback
+    res.status(201).json(newFeedback); // Return the new feedback
   } catch (error: any) {
-      console.error('Error adding feedback:', error);
-      res.status(500).json({ message: 'Internal server error' });
+    console.error('Error adding feedback:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 app.post('/api/v1/conferences/:conferenceId/feedback', addFeedbackHandler); // Use conferenceId in URL
 
 
 // 12. Delete User
-const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res):Promise<any> => {
+const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res): Promise<any> => {
   try {
-      const userId = req.params.id;
+    const userId = req.params.id;
 
-      if (!userId) {
-          return res.status(400).json({ message: 'Missing userId' });
-      }
-
-      const filePath = path.resolve(__dirname, './database/users_list.json'); // Path to your users file
-      let usersData: string;
-
-      try {
-        usersData = await fs.promises.readFile(filePath, 'utf-8');
-      } catch (readError: any) {
-        if (readError.code === 'ENOENT') {
-          // File doesn't exist, meaning no users.  That's not really an error in this context.
-          return res.status(404).json({ message: 'No users found.' });
-        }
-        console.error("Error reading users file:", readError);
-        return res.status(500).json({ message: "Error reading user data" });
-      }
-
-      let users: UserResponse[];
-      try {
-          users = JSON.parse(usersData);
-      } catch (parseError) {
-          console.error("Error parsing user data:", parseError);
-           return res.status(500).json({ message: 'Invalid user data format.' });
-      }
-
-
-      const userIndex = users.findIndex(user => user.id === userId);
-
-
-      console.log(userIndex)
-      if (userIndex === -1) {
-          return res.status(404).json({ message: 'User not found' });
-      }
-
-      // Remove the user from the array
-      users.splice(userIndex, 1);
-
-      try {
-        await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8');
-    } catch (writeError) {
-        console.error("Error writing updated user data:", writeError);
-        return res.status(500).json({ message: "Error saving updated user data." });
+    if (!userId) {
+      return res.status(400).json({ message: 'Missing userId' });
     }
 
-      res.status(200).json({ message: 'User deleted successfully' });
+    const filePath = path.resolve(__dirname, './database/users_list.json'); // Path to your users file
+    let usersData: string;
+
+    try {
+      usersData = await fs.promises.readFile(filePath, 'utf-8');
+    } catch (readError: any) {
+      if (readError.code === 'ENOENT') {
+        // File doesn't exist, meaning no users.  That's not really an error in this context.
+        return res.status(404).json({ message: 'No users found.' });
+      }
+      console.error("Error reading users file:", readError);
+      return res.status(500).json({ message: "Error reading user data" });
+    }
+
+    let users: UserResponse[];
+    try {
+      users = JSON.parse(usersData);
+    } catch (parseError) {
+      console.error("Error parsing user data:", parseError);
+      return res.status(500).json({ message: 'Invalid user data format.' });
+    }
+
+
+    const userIndex = users.findIndex(user => user.id === userId);
+
+
+    console.log(userIndex)
+    if (userIndex === -1) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Remove the user from the array
+    users.splice(userIndex, 1);
+
+    try {
+      await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8');
+    } catch (writeError) {
+      console.error("Error writing updated user data:", writeError);
+      return res.status(500).json({ message: "Error saving updated user data." });
+    }
+
+    res.status(200).json({ message: 'User deleted successfully' });
 
   } catch (error: any) {
-      console.error('Error deleting user:', error);
-      res.status(500).json({ error: 'Internal server error' });
+    console.error('Error deleting user:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
 app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
+
+
+const adminConferences: RequestHandler = async (req, res) => {
+  const addConferencesPath = path.resolve(__dirname, './database/add_conferences.json');
+  const conferencesListPath = path.resolve(__dirname, './database/conferences_list.json');
+  const conferenceDetailsListPath = path.resolve(__dirname, './database/conference_details_list.json');
+
+  if (req.method === 'GET') {
+    try {
+      let data = '';
+      try {
+        data = await fs.promises.readFile(addConferencesPath, 'utf-8');
+      } catch (readError) {
+        if ((readError as NodeJS.ErrnoException).code === 'ENOENT') {
+          // File không tồn tại, coi như không có hội nghị chờ duyệt
+          data = '[]'; // Khởi tạo một mảng rỗng
+        } else {
+          throw readError; // Ném lỗi khác
+        }
+      }
+      // Nếu data rỗng, parse thành mảng rỗng
+      const addConferences: AddedConference[] = data.trim() ? JSON.parse(data) : [];
+      const pendingConferences = addConferences.filter(c => c.status === 'Pending');
+
+      // Tạo HTML động (sử dụng template literals cho gọn gàng)
+      const html = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Admin Panel - Conference Approval</title>
+        <style>
+          table { border-collapse: collapse; width: 100%; }
+          th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        </style>
+      </head>
+      <body>
+        <h1>Pending Conferences</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Acronym</th>
+              <th>Created At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${pendingConferences.map(conf => `
+              <tr>
+                <td>${conf.conference.title}</td>
+                <td>${conf.conference.acronym}</td>
+                <td>${conf.conference.createdAt}</td>
+                <td>
+                  <form action="/admin/conferences" method="POST">
+                    <input type="hidden" name="conferenceId" value="${conf.conference.id}">
+                    <input type="hidden" name="action" value="approve">
+                    <button type="submit">Approve</button>
+                  </form>
+                  <form action="/admin/conferences" method="POST">
+                    <input type="hidden" name="conferenceId" value="${conf.conference.id}">
+                    <input type="hidden" name="action" value="reject">
+                    <button type="submit">Reject</button>
+                  </form>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </body>
+      </html>
+    `;
+
+      res.status(200).send(html);
+
+    } catch (error) {
+      console.error('Error reading or parsing add_conferences.json:', error);
+      res.status(500).send('Internal Server Error');
+    }
+
+  } else if (req.method === 'POST') {
+    // Xử lý Approve/Reject
+    const { conferenceId, action } = req.body;
+
+    if (!conferenceId || !action) {
+      res.status(400).send('Bad Request: Missing conferenceId or action');
+      return;
+    }
+
+    if (action !== 'approve' && action !== 'reject') {
+      res.status(400).send('Bad Request: Invalid action');
+      return;
+    }
+
+    try {
+      // Đọc dữ liệu từ các file JSON, xử lý trường hợp file rỗng hoặc không tồn tại
+      let addConferences: AddedConference[] = [];
+      try {
+        const addConferencesData = await fs.promises.readFile(addConferencesPath, 'utf-8');
+        // Nếu addConferencesData rỗng, parse thành mảng rỗng
+        addConferences = addConferencesData.trim() ? JSON.parse(addConferencesData) : [];
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+          throw error; // Ném lỗi khác nếu không phải lỗi file không tồn tại.
+        }
+        // Nếu file không tồn tại, addConferences đã là mảng rỗng
+      }
+
+
+      let conferencesList: ConferenceListResponse;
+      try {
+        const conferencesListData = await fs.promises.readFile(conferencesListPath, 'utf-8');
+        conferencesList = JSON.parse(conferencesListData);
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+          conferencesList = { payload: [], meta: { curPage: 0, perPage: 0, prevPage: 0, totalPage: 0, nextPage: 0, totalItems: 0 } }; // Khởi tạo nếu file không tồn tại
+        } else {
+          throw error;
+        }
+      }
+
+
+      let conferenceDetailsList: ConferenceResponse[] = [];
+      try {
+        const conferenceDetailsListData = await fs.promises.readFile(conferenceDetailsListPath, 'utf-8');
+        conferenceDetailsList = conferenceDetailsListData.trim() ? JSON.parse(conferenceDetailsListData) : [];
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+          throw error; // Ném lỗi khác nếu không phải lỗi file không tồn tại.
+        }
+        // Nếu file không tồn tại, conferenceDetailsList đã là mảng rỗng
+      }
+
+      // Tìm conference cần duyệt
+      const conferenceIndex = addConferences.findIndex(c => c.conference.id === conferenceId);
+
+      if (conferenceIndex === -1) {
+        res.status(404).send('Conference not found');
+        return;
+      }
+
+      // Lấy conference object
+      const conferenceToProcess = addConferences[conferenceIndex];
+
+      // Xử lý logic duyệt/từ chối
+      if (action === 'approve') {
+        // Cập nhật trạng thái thành "Approved"
+        conferenceToProcess.status = 'Approved';
+
+        // Tạo conference item cho conferences_list.json
+        const newConferenceListItem: ConferenceInfo = {
+          id: conferenceToProcess.conference.id,
+          title: conferenceToProcess.conference.title,
+          acronym: conferenceToProcess.conference.acronym,
+          location: {
+            cityStateProvince: conferenceToProcess.locations.cityStateProvince,
+            country: conferenceToProcess.locations.country,
+            address: conferenceToProcess.locations.address,
+            continent: conferenceToProcess.locations.continent
+          },
+          year: conferenceToProcess.organization.year,
+          rankSourceFoRData: conferenceToProcess.rankSourceFoRData[0],
+          topics: conferenceToProcess.organization.topics,
+          dates: {
+            fromDate: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.fromDate || '',
+            toDate: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.toDate || '',
+            name: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.name || '',
+            type: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.type || ''
+          },
+          link: conferenceToProcess.organization.link,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          creatorId: conferenceToProcess.conference.creatorId,
+          accessType: conferenceToProcess.organization.accessType,
+          status: conferenceToProcess.status
+        };
+
+        // Thêm vào conferences_list.json
+        conferencesList.payload.push(newConferenceListItem);
+
+
+        // Tạo conference item cho conference_details_list.json
+
+        const newConferenceDetailItem: ConferenceResponse = {
+          conference: conferenceToProcess.conference,
+          organization: conferenceToProcess.organization,
+          locations: conferenceToProcess.locations,
+          dates: conferenceToProcess.dates,
+          rankSourceFoRData: conferenceToProcess.rankSourceFoRData,
+          feedBacks: [],
+          followedBy: []
+        };
+
+        // Thêm vào conference_details_list.json
+        conferenceDetailsList.push(newConferenceDetailItem);
+
+
+      } else {
+        // Cập nhật trạng thái thành "Rejected" (nếu từ chối)
+        conferenceToProcess.status = 'Rejected';
+      }
+      // Cập nhật lại addConferences (dù là approve hay reject)
+      addConferences[conferenceIndex] = conferenceToProcess;
+
+      // Ghi lại vào các file JSON
+      await fs.promises.writeFile(addConferencesPath, JSON.stringify(addConferences, null, 2));
+      await fs.promises.writeFile(conferencesListPath, JSON.stringify(conferencesList, null, 2));
+      await fs.promises.writeFile(conferenceDetailsListPath, JSON.stringify(conferenceDetailsList, null, 2));
+
+      // Redirect về trang admin (hoặc trang nào bạn muốn)
+      res.redirect('/admin/conferences');
+
+    } catch (error) {
+      console.error('Error processing approval/rejection:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  }
+};
+
+app.get('/admin/conferences', adminConferences);
+app.post('/admin/conferences', adminConferences);
 
 
 // --- Start the server ---
