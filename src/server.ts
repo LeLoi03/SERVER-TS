@@ -352,156 +352,156 @@ app.get('/api/v1/conferences', getConferenceList);
 // 3. Follow conference (CORRECTED - No Duplicate Notifications)
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
-      const { conferenceId, userId } = req.body;
+    const { conferenceId, userId } = req.body;
 
-      if (!conferenceId || !userId) {
-          res.status(400).json({ message: 'Missing conferenceId or userId' });
-          return;
-      }
+    if (!conferenceId || !userId) {
+      res.status(400).json({ message: 'Missing conferenceId or userId' });
+      return;
+    }
 
-      const [userData, conferenceData] = await Promise.all([
-          fs.promises.readFile(userFilePath, 'utf-8'),
-          fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
-      ]);
+    const [userData, conferenceData] = await Promise.all([
+      fs.promises.readFile(userFilePath, 'utf-8'),
+      fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
+    ]);
 
-      const users: UserResponse[] = JSON.parse(userData);
-      const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+    const users: UserResponse[] = JSON.parse(userData);
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
 
-      const userIndex = users.findIndex(u => u.id === userId);
-      if (userIndex === -1) {
-          res.status(404).json({ message: 'User not found' });
-          return;
-      }
+    const userIndex = users.findIndex(u => u.id === userId);
+    if (userIndex === -1) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
 
-      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-      if (conferenceIndex === -1) {
-          res.status(404).json({ message: 'Conference not found' });
-          return;
-      }
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      return;
+    }
 
-      const updatedUser: UserResponse = { ...users[userIndex] };
-      const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
-      const now = new Date().toISOString();
+    const updatedUser: UserResponse = { ...users[userIndex] };
+    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
+    const now = new Date().toISOString();
 
-      if (!updatedUser.followedConferences) {
-          updatedUser.followedConferences = [];
-      }
-      if (!updatedConference.followedBy) {
-          updatedConference.followedBy = [];
-      }
+    if (!updatedUser.followedConferences) {
+      updatedUser.followedConferences = [];
+    }
+    if (!updatedConference.followedBy) {
+      updatedConference.followedBy = [];
+    }
 
-      const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
+    const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
 
-      let notificationType: 'Follow Conference' | 'Unfollow Conference';
-      let notificationMessage: string;
-      let isFollowing: boolean; // Keep track of follow/unfollow
+    let notificationType: 'Follow Conference' | 'Unfollow Conference';
+    let notificationMessage: string;
+    let isFollowing: boolean; // Keep track of follow/unfollow
 
-      if (existingFollowIndex !== -1) {
-          // Unfollow:
-          updatedUser.followedConferences.splice(existingFollowIndex, 1);
-          updatedConference.followedBy = updatedConference.followedBy.filter(follower => follower.id !== userId);
-          notificationType = 'Unfollow Conference';
-          notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
-          isFollowing = false;
-      } else {
-          // Follow:
-          updatedUser.followedConferences.push({
-              id: conferenceId,
-              createdAt: now,
-              updatedAt: now,
-          });
+    if (existingFollowIndex !== -1) {
+      // Unfollow:
+      updatedUser.followedConferences.splice(existingFollowIndex, 1);
+      updatedConference.followedBy = updatedConference.followedBy.filter(follower => follower.id !== userId);
+      notificationType = 'Unfollow Conference';
+      notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
+      isFollowing = false;
+    } else {
+      // Follow:
+      updatedUser.followedConferences.push({
+        id: conferenceId,
+        createdAt: now,
+        updatedAt: now,
+      });
 
-          const followerInfo: FollowerInfo = {
-              id: updatedUser.id,
-              email: updatedUser.email,
-              firstName: updatedUser.firstName,
-              lastName: updatedUser.lastName,
-              createdAt: now,
-              updatedAt: now,
-          };
-          updatedConference.followedBy.push(followerInfo);
-          notificationType = 'Follow Conference';
-          notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
-          isFollowing = true;
-      }
-
-      // --- Create the notification object ---
-      const notification: Notification = {
-          id: uuidv4(),
-          createdAt: now,
-          isImportant: false,
-          seenAt: null,
-          deletedAt: null,
-          message: notificationMessage,
-          type: notificationType,
+      const followerInfo: FollowerInfo = {
+        id: updatedUser.id,
+        email: updatedUser.email,
+        firstName: updatedUser.firstName,
+        lastName: updatedUser.lastName,
+        createdAt: now,
+        updatedAt: now,
       };
+      updatedConference.followedBy.push(followerInfo);
+      notificationType = 'Follow Conference';
+      notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
+      isFollowing = true;
+    }
 
-      // --- 1. Add notification to the ACTING user's notifications ---
-      if (!updatedUser.notifications) {
-          updatedUser.notifications = [];
-      }
-      updatedUser.notifications.push(notification);
+    // --- Create the notification object ---
+    const notification: Notification = {
+      id: uuidv4(),
+      createdAt: now,
+      isImportant: false,
+      seenAt: null,
+      deletedAt: null,
+      message: notificationMessage,
+      type: notificationType,
+    };
 
-      // --- 2. Send real-time notification to the ACTING user ---
-      const actingUserSocket = connectedUsers.get(userId);
-      if (actingUserSocket) {
-          actingUserSocket.emit('notification', notification);
-      }
+    // --- 1. Add notification to the ACTING user's notifications ---
+    if (!updatedUser.notifications) {
+      updatedUser.notifications = [];
+    }
+    updatedUser.notifications.push(notification);
 
-      // --- 3. Add notification to OTHER followers (and send real-time) ---
-      // ONLY if it's a FOLLOW action, and EXCLUDE the acting user.
-      if (isFollowing) { // Only send to other followers on FOLLOW
-          if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-              updatedConference.followedBy.forEach(follower => {
-                 if (follower.id !== userId) { // Exclude the acting user!
-                      const userFollowIndex = users.findIndex(u => u.id === follower.id);
-                      if (userFollowIndex !== -1) {
-                          const followerNotification: Notification = {
-                              id: uuidv4(), // New ID for each!
-                              createdAt: now,
-                              isImportant: false,
-                              seenAt: null,
-                              deletedAt: null,
-                              message: notificationMessage, // Same message/type
-                              type: notificationType,
-                          };
+    // --- 2. Send real-time notification to the ACTING user ---
+    const actingUserSocket = connectedUsers.get(userId);
+    if (actingUserSocket) {
+      actingUserSocket.emit('notification', notification);
+    }
 
-                          if (!users[userFollowIndex].notifications) {
-                              users[userFollowIndex].notifications = [];
-                          }
-                          users[userFollowIndex].notifications?.push(followerNotification);
+    // --- 3. Add notification to OTHER followers (and send real-time) ---
+    // ONLY if it's a FOLLOW action, and EXCLUDE the acting user.
+    if (isFollowing) { // Only send to other followers on FOLLOW
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(follower => {
+          if (follower.id !== userId) { // Exclude the acting user!
+            const userFollowIndex = users.findIndex(u => u.id === follower.id);
+            if (userFollowIndex !== -1) {
+              const followerNotification: Notification = {
+                id: uuidv4(), // New ID for each!
+                createdAt: now,
+                isImportant: false,
+                seenAt: null,
+                deletedAt: null,
+                message: notificationMessage, // Same message/type
+                type: notificationType,
+              };
 
-                          // Realtime
-                          const userSocket = connectedUsers.get(follower.id);
-                          if (userSocket) {
-                              userSocket.emit('notification', followerNotification); // Send to followers
-                          }
-                      }
-                  }
-              });
+              if (!users[userFollowIndex].notifications) {
+                users[userFollowIndex].notifications = [];
+              }
+              users[userFollowIndex].notifications?.push(followerNotification);
+
+              // Realtime
+              const userSocket = connectedUsers.get(follower.id);
+              if (userSocket) {
+                userSocket.emit('notification', followerNotification); // Send to followers
+              }
+            }
           }
+        });
       }
+    }
 
-      // --- Update user and conference data ---
-      users[userIndex] = updatedUser;
-      conferences[conferenceIndex] = updatedConference;
+    // --- Update user and conference data ---
+    users[userIndex] = updatedUser;
+    conferences[conferenceIndex] = updatedConference;
 
-      await Promise.all([
-          fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
-          fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
-      ]);
+    await Promise.all([
+      fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
+      fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+    ]);
 
-      res.status(200).json(updatedUser);
+    res.status(200).json(updatedUser);
 
   } catch (error: any) {
-      console.error('Error updating user/conference data:', error);
-      if (error instanceof SyntaxError) {
-          res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
-      } else if (error.code === 'ENOENT') {
-          res.status(500).json({ message: 'A required JSON file was not found' });
-      } else {
-          res.status(500).json({ message: 'Internal server error' });
-      }
+    console.error('Error updating user/conference data:', error);
+    if (error instanceof SyntaxError) {
+      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
+    } else if (error.code === 'ENOENT') {
+      res.status(500).json({ message: 'A required JSON file was not found' });
+    } else {
+      res.status(500).json({ message: 'Internal server error' });
+    }
   }
 };
 
@@ -541,48 +541,119 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
 app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 
 
+// Hàm so sánh mảng không quan tâm thứ tự
+function areArraysEqual(arr1: any[] | undefined, arr2: any[] | undefined): boolean {
+    if (!arr1 && !arr2) return true; // Cả hai đều undefined
+    if (!arr1 || !arr2) return false; // Một trong hai là undefined
+    if (arr1.length !== arr2.length) return false;
+
+    const sortedArr1 = [...arr1].sort();
+    const sortedArr2 = [...arr2].sort();
+
+    for (let i = 0; i < sortedArr1.length; i++) {
+        if (sortedArr1[i] !== sortedArr2[i]) return false;
+    }
+
+    return true;
+}
+
 // 5. Update User
 const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
-  try {
-    const userId = req.params.id;
-    const updatedData = req.body;
+    try {
+        const userId = req.params.id;
+        const updatedData = req.body;
 
-    if (!userId) {
-      return res.status(400).json({ message: 'Missing userId' }) as any;
+        if (!userId) {
+            return res.status(400).json({ message: 'Missing userId' }) as any;
+        }
+
+        const data = await fs.promises.readFile(userFilePath, 'utf-8');
+        const users: UserResponse[] = JSON.parse(data);
+
+        const userIndex = users.findIndex(u => u.id === userId);
+
+        if (userIndex === -1) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const oldUser = { ...users[userIndex] }; // Lưu lại user data cũ để so sánh
+        const updatedUser = { ...users[userIndex], ...updatedData }; // Cập nhật thông tin user
+
+        // --- Tạo notification ---
+        const now = new Date().toISOString();
+        let notificationMessage = `Your profile has been updated.`; // Default message
+
+        // So sánh các trường quan trọng để tạo message chi tiết hơn (optional):
+        const changedFields: string[] = [];
+        if (oldUser.firstName !== updatedUser.firstName) {
+            changedFields.push('First Name');
+        }
+        if (oldUser.lastName !== updatedUser.lastName) {
+            changedFields.push('Last Name');
+        }
+        if (oldUser.email !== updatedUser.email) {
+            changedFields.push("Email");
+        }
+        if (oldUser.aboutme !== updatedUser.aboutme) {
+            changedFields.push("About me");
+        }
+        if (oldUser.avatar !== updatedUser.avatar) {
+            changedFields.push("Avatar");
+        }
+        if (!areArraysEqual(oldUser.interestedTopics, updatedUser.interestedTopics)) {
+            changedFields.push("Interested topics");
+        }
+        if (oldUser.background !== updatedUser.background) {
+            changedFields.push("Interests");
+        }
+
+
+        if (changedFields.length > 0) {
+             notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
+        }
+        //Tạo notification
+        const notification: Notification = {
+            id: uuidv4(),
+            createdAt: now,
+            isImportant: false, // Or true, depending on your needs
+            seenAt: null,
+            deletedAt: null,
+            message: notificationMessage,
+            type: 'Profile Update', // Set a notification type
+        };
+
+        // --- 1. Add to user's notifications ---
+        if (!updatedUser.notifications) {
+            updatedUser.notifications = [];
+        }
+        updatedUser.notifications.push(notification);
+
+        // --- 2. Send real-time notification ---
+        const userSocket = connectedUsers.get(userId);
+        if (userSocket) {
+            userSocket.emit('notification', notification);
+        }
+
+
+        // --- Update user data ---
+        users[userIndex] = updatedUser;
+        await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+        res.status(200).json(updatedUser);
+
+    } catch (error: any) {
+        console.error('Error updating user:', error);
+        if (error instanceof SyntaxError) {
+            res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+        } else if (error.code === 'ENOENT') {
+            res.status(500).json({ message: 'user-list.json not found' });
+        } else {
+            res.status(500).json({ message: 'Internal server error' });
+        }
     }
-
-    const data = await fs.promises.readFile(userFilePath, 'utf-8');
-    const users: UserResponse[] = JSON.parse(data);
-
-    const userIndex = users.findIndex(u => u.id === userId);
-
-    if (userIndex === -1) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-
-    // Cập nhật thông tin user
-    users[userIndex] = { ...users[userIndex], ...updatedData };
-
-    // Ghi lại vào file
-    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
-
-    res.status(200).json(users[userIndex]); // Trả về user đã được update
-
-  } catch (error: any) {
-    console.error('Error updating user:', error);
-    if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
-    } else if (error.code === 'ENOENT') {
-      res.status(500).json({ message: 'user-list.json not found' });
-    }
-    else {
-      res.status(500).json({ message: 'Internal server error' });
-    }
-
-  }
 };
-app.put('/api/v1/user/:id', updateUser); // Sử dụng method PUT
 
+app.put('/api/v1/user/:id', updateUser);
 
 // 6. Add conference (updated)
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -780,66 +851,144 @@ const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { mes
 app.get('/api/v1/user/:id/conferences', getMyConferences); // New route
 
 
-// 8. Add to calendar
+// 8. Add to calendar (with real-time notifications)
 const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
-    const { conferenceId, userId } = req.body;  // Lấy conferenceId và userId từ body
+    const { conferenceId, userId } = req.body;
 
     if (!conferenceId || !userId) {
       res.status(400).json({ message: 'Missing conferenceId or userId' });
+      return;
     }
 
     const userFilePath = path.resolve(__dirname, './database/users_list.json');
-    const data = await fs.promises.readFile(userFilePath, 'utf-8');
-    const users: UserResponse[] = JSON.parse(data);
+    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
 
-    const userIndex = users.findIndex(u => u.id === userId);  // Tìm theo ID, không phải email
+    const [userData, conferenceData] = await Promise.all([
+      fs.promises.readFile(userFilePath, 'utf-8'),
+      fs.promises.readFile(conferenceFilePath, 'utf-8'),
+    ]);
 
+    const users: UserResponse[] = JSON.parse(userData);
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+
+    const userIndex = users.findIndex(u => u.id === userId);
     if (userIndex === -1) {
       res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+    if (conferenceIndex === -1) {
+      res.status(404).json({ message: 'Conference not found' });
+      return;
     }
 
     const updatedUser: UserResponse = { ...users[userIndex] };
+    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
     const now = new Date().toISOString();
 
     if (!updatedUser.calendar) {
       updatedUser.calendar = [];
     }
 
-    const isAddToCalendar = updatedUser.calendar.findIndex(fc => fc.id === conferenceId);
+    const existingCalendarIndex = updatedUser.calendar.findIndex(c => c.id === conferenceId);
 
-    if (isAddToCalendar !== -1) {
-      // UnAddToCalendar: Remove the conference object
-      updatedUser.calendar.splice(isAddToCalendar, 1);
+    let notificationType: 'Add to Calendar' | 'Remove from Calendar';
+    let notificationMessage: string;
+    let isAdding: boolean; // Flag to indicate add or remove
+
+    if (existingCalendarIndex !== -1) {
+      // Remove from calendar:
+      updatedUser.calendar.splice(existingCalendarIndex, 1);
+      notificationType = 'Remove from Calendar';
+      notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} removed the conference "${updatedConference.conference.title}" from their calendar.`;
+      isAdding = false;
     } else {
-      // Add to calendar: Add a new conference object
+      // Add to calendar:
       updatedUser.calendar.push({
         id: conferenceId,
         createdAt: now,
         updatedAt: now,
       });
+      notificationType = 'Add to Calendar';
+      notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} added the conference "${updatedConference.conference.title}" to their calendar.`;
+      isAdding = true;
     }
 
+    // --- Create the notification object ---
+    const notification: Notification = {
+      id: uuidv4(),
+      createdAt: now,
+      isImportant: false,  // Or true, based on your needs
+      seenAt: null,
+      deletedAt: null,
+      message: notificationMessage,
+      type: notificationType,
+    };
+
+    // --- 1. Add notification to the ACTING user's notifications ---
+    if (!updatedUser.notifications) {
+      updatedUser.notifications = [];
+    }
+    updatedUser.notifications.push(notification);
+
+    // --- 2. Send real-time notification to the ACTING user ---
+    const actingUserSocket = connectedUsers.get(userId);
+    if (actingUserSocket) {
+      actingUserSocket.emit('notification', notification);
+    }
+
+    // --- 3. Add notification to OTHER followers (and send real-time) ---
+    // ONLY if it's an ADD action, and EXCLUDE the acting user.
+    //  AND ONLY if the user is also following the conference.
+    if (isAdding) {  //Only send notification add
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(follower => {
+          if (follower.id !== userId) { // Exclude acting user
+            const userFollowIndex = users.findIndex(u => u.id === follower.id);
+            if (userFollowIndex !== -1) {
+              //Check user is following the conference
+              if (users[userFollowIndex].followedConferences?.find(fc => fc.id === conferenceId)) {
+                const followerNotification: Notification = {
+                  id: uuidv4(),
+                  createdAt: now,
+                  isImportant: false,
+                  seenAt: null,
+                  deletedAt: null,
+                  message: notificationMessage, //Same message
+                  type: notificationType
+                };
+
+                if (!users[userFollowIndex].notifications) {
+                  users[userFollowIndex].notifications = [];
+                }
+                users[userFollowIndex].notifications?.push(followerNotification);
+
+                //Realtime
+                const userSocket = connectedUsers.get(follower.id);
+                if (userSocket) {
+                  userSocket.emit('notification', followerNotification);
+                }
+              }
+            }
+          }
+        })
+      }
+    }
+
+
+
+    // --- Update user and conference data ---
     users[userIndex] = updatedUser;
+    conferences[conferenceIndex] = updatedConference; // Update conference as well (though no changes here, good practice)
 
-    // --- Conference Update ---
-    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const conferenceData = await fs.promises.readFile(conferenceFilePath, 'utf-8');
-    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+    await Promise.all([
+      fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
+      fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+    ]);
 
-    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-
-
-    if (conferenceIndex === -1) {
-      res.status(404).json({ message: 'Conference not found' });
-      // Rollback user changes
-      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-      return;
-    }
-
-    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-
-    res.status(200).json(updatedUser); // Trả về user đã update
+    res.status(200).json(updatedUser);
 
   } catch (error: any) {
     console.error('Error updating user/conference data:', error);
@@ -1201,36 +1350,48 @@ const getFilteredConferences: RequestHandler<any, { items: CombinedConference[];
 app.get('/api/v1/filter-conferences', getFilteredConferences);
 
 
-// 11. Add feedback
+// 11. Add feedback (with real-time notifications)
 const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
-  const { conferenceId } = req.params; // Get conferenceId from URL
+  const { conferenceId } = req.params;
   const { description, star, creatorId } = req.body;
 
-  // Basic validation
   if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
     res.status(400).json({ message: 'Invalid feedback data' });
     return;
   }
 
   try {
-    const filePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
-    const conferences: ConferenceResponse[] = JSON.parse(data);
+    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+    const userFilePath = path.resolve(__dirname, './database/users_list.json'); // Need user data
 
-    // Find the conference using conferenceId
+    const [conferenceData, userData] = await Promise.all([
+      fs.promises.readFile(conferenceFilePath, 'utf-8'),
+      fs.promises.readFile(userFilePath, 'utf-8'), // Read user data
+    ]);
+
+    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+    const users: UserResponse[] = JSON.parse(userData); // Parse user data
+
     const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-
     if (conferenceIndex === -1) {
       res.status(404).json({ message: 'Conference not found' });
       return;
     }
 
-    // Get organizedId from the found conference
-    const organizedId = conferences[conferenceIndex].organization.id;
+    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
+    const organizedId = updatedConference.organization.id;
+
+    // --- Find the creator user ---
+    const creatorIndex = users.findIndex(u => u.id === creatorId);
+    if (creatorIndex === -1) {
+      res.status(404).json({ message: 'Creator user not found' });
+      return; // Important: Return to prevent further execution
+    }
+    const creatorUser = users[creatorIndex];
 
     const newFeedback: Feedback = {
       id: uuidv4(),
-      organizedId, // Use organizedId from the conference
+      organizedId,
       creatorId,
       description,
       star,
@@ -1238,16 +1399,78 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
       updatedAt: new Date().toISOString(),
     };
 
-    // Add the feedback to the conference
-    if (!conferences[conferenceIndex].feedBacks) {
-      conferences[conferenceIndex].feedBacks = []; // Initialize if it doesn't exist
+    if (!updatedConference.feedBacks) {
+      updatedConference.feedBacks = [];
     }
-    conferences[conferenceIndex].feedBacks.push(newFeedback);
+    updatedConference.feedBacks.push(newFeedback);
 
-    // Write the updated data back to the file
-    await fs.promises.writeFile(filePath, JSON.stringify(conferences, null, 2), 'utf-8');
 
-    res.status(201).json(newFeedback); // Return the new feedback
+    // --- Create the notification message ---
+    const notificationMessage = `${creatorUser.firstName} ${creatorUser.lastName} provided feedback for the conference "${updatedConference.conference.title}": ${star} stars.`;
+
+    // --- Create the notification object ---
+    const notification: Notification = {
+      id: uuidv4(),
+      createdAt: new Date().toISOString(),
+      isImportant: false, // Set as appropriate
+      seenAt: null,
+      deletedAt: null,
+      message: notificationMessage,
+      type: 'New Feedback', // Consistent notification type
+    };
+
+    // --- 1. Send real-time notification to the ACTING user (the feedback creator) ---
+    const actingUserSocket = connectedUsers.get(creatorId);
+    if (actingUserSocket) {
+      const creatorNotification: Notification = { ...notification, id: uuidv4() }; // Create a separate notification object
+      if (!creatorUser.notifications) {
+        creatorUser.notifications = [];
+      }
+      creatorUser.notifications.push(creatorNotification);
+      actingUserSocket.emit('notification', creatorNotification); // Notify the creator
+    }
+
+
+    // --- 2. Send to followers (excluding the creator) ---
+    if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+      updatedConference.followedBy.forEach(follower => {
+        if (follower.id !== creatorId) {  // Exclude the feedback creator
+          const followerIndex = users.findIndex(u => u.id === follower.id);
+          if (followerIndex !== -1) {
+            const followerUser = users[followerIndex];
+
+            // Create a separate notification object for each follower
+            const followerNotification: Notification = {
+              ...notification, // Copy common properties
+              id: uuidv4(),     // Ensure unique ID
+            };
+
+            if (!followerUser.notifications) {
+              followerUser.notifications = [];
+            }
+            followerUser.notifications.push(followerNotification);
+
+            // Real-time notification to follower
+            const followerSocket = connectedUsers.get(follower.id);
+            if (followerSocket) {
+              followerSocket.emit('notification', followerNotification);
+            }
+          }
+        }
+      });
+    }
+
+    // --- Update conference and users data ---
+    conferences[conferenceIndex] = updatedConference; // Update the conference
+    users[creatorIndex] = creatorUser; //Update creator
+
+    await Promise.all([
+      fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+      fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'), // Write updated users
+    ]);
+
+
+    res.status(201).json(newFeedback);
   } catch (error: any) {
     console.error('Error adding feedback:', error);
     res.status(500).json({ message: 'Internal server error' });
@@ -1315,8 +1538,7 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
 };
 app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
 
-// 13/ Get Notifications
-// NEW: Get Notifications for a User
+// 13. Get notifications
 const getUserNotifications: RequestHandler<{ id: string }, Notification[] | { message: string }, any, any> = async (req, res) => {
   try {
     const { id } = req.params;
@@ -1331,8 +1553,15 @@ const getUserNotifications: RequestHandler<{ id: string }, Notification[] | { me
       return;
     }
 
-    // Return notifications, or an empty array if none exist.  Important for consistency.
-    res.status(200).json(user.notifications || []);
+    // Sắp xếp notifications trước khi trả về
+    const sortedNotifications = (user.notifications || []).sort((a, b) => {
+      // Chuyển đổi chuỗi ngày tháng thành đối tượng Date để so sánh
+      const dateA = new Date(a.createdAt);
+      const dateB = new Date(b.createdAt);
+      return dateB.getTime() - dateA.getTime(); // Sắp xếp giảm dần (mới nhất lên đầu)
+    });
+
+    res.status(200).json(sortedNotifications);
 
   } catch (error) {
     console.error('Error getting user notifications:', error);
@@ -1344,35 +1573,35 @@ app.get('/api/v1/user/:id/notifications', getUserNotifications);
 // 14. Mark All Notifications as Read
 const markAllNotificationsAsRead: RequestHandler<{ id: string }, { message: string }, any, any> = async (req, res) => {
   try {
-      const { id } = req.params;
+    const { id } = req.params;
 
-      const userData = await fs.promises.readFile(userFilePath, 'utf-8');
-      const users: UserResponse[] = JSON.parse(userData);
+    const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+    const users: UserResponse[] = JSON.parse(userData);
 
-      const userIndex = users.findIndex(u => u.id === id);
-      if (userIndex === -1) {
-          res.status(404).json({ message: 'User not found' });
-          return;
-      }
+    const userIndex = users.findIndex(u => u.id === id);
+    if (userIndex === -1) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
 
-      const updatedUser: UserResponse = { ...users[userIndex] };
+    const updatedUser: UserResponse = { ...users[userIndex] };
 
-      // Mark all notifications as read (set seenAt)
-      if (updatedUser.notifications && updatedUser.notifications.length > 0) {
-          updatedUser.notifications = updatedUser.notifications.map(n => ({
-              ...n,
-              seenAt: n.seenAt ? n.seenAt : new Date().toISOString(), // Don't overwrite if already seen
-          }));
-      }
+    // Mark all notifications as read (set seenAt)
+    if (updatedUser.notifications && updatedUser.notifications.length > 0) {
+      updatedUser.notifications = updatedUser.notifications.map(n => ({
+        ...n,
+        seenAt: n.seenAt ? n.seenAt : new Date().toISOString(), // Don't overwrite if already seen
+      }));
+    }
 
-      users[userIndex] = updatedUser;
-      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+    users[userIndex] = updatedUser;
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
 
-      res.status(200).json({ message: 'Notifications marked as read' });
+    res.status(200).json({ message: 'Notifications marked as read' });
 
   } catch (error) {
-      console.error('Error marking notifications as read:', error);
-      res.status(500).json({ message: 'Internal server error' });
+    console.error('Error marking notifications as read:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 

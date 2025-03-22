@@ -465,16 +465,33 @@
         "star": 5,
         "createdAt": "2025-03-20T04:52:50.129Z",
         "updatedAt": "2025-03-20T04:52:50.129Z"
+      },
+      {
+        "id": "a2fef434-ded0-4c94-9d8a-a8baaa00fdfe",
+        "organizedId": "3456789a-bcde-f012-3456-789abcdef012",
+        "creatorId": "test",
+        "description": "Hello",
+        "star": 5,
+        "createdAt": "2025-03-22T08:43:58.676Z",
+        "updatedAt": "2025-03-22T08:43:58.676Z"
       }
     ],
     "followedBy": [
+      {
+        "id": "user123",
+        "email": "john.doe@example.com",
+        "firstName": "John",
+        "lastName": "Doe",
+        "createdAt": "2025-03-22T08:56:33.720Z",
+        "updatedAt": "2025-03-22T08:56:33.720Z"
+      },
       {
         "id": "test",
         "email": "loicute5fps@gmail.com",
         "firstName": "Le",
         "lastName": "Loi",
-        "createdAt": "2025-03-22T05:34:41.805Z",
-        "updatedAt": "2025-03-22T05:34:41.805Z"
+        "createdAt": "2025-03-22T11:04:50.800Z",
+        "updatedAt": "2025-03-22T11:04:50.800Z"
       }
     ]
   },
@@ -570,7 +587,16 @@
         "updatedAt": "2024-03-01T14:45:00.000Z"
       }
     ],
-    "followedBy": []
+    "followedBy": [
+      {
+        "id": "test",
+        "email": "loicute5fps@gmail.com",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-22T10:26:25.002Z",
+        "updatedAt": "2025-03-22T10:26:25.002Z"
+      }
+    ]
   },
   {
     "conference": {
