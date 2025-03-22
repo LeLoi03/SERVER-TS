@@ -254,6 +254,12 @@ import { v4 as uuidv4 } from 'uuid'; // Import thư viện uuid
 // --- Route Handlers ---
 
 
+
+const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+const conferencesListFilePath = path.resolve(__dirname, './database/conferences_list.json');
+const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
+
 // 1. Lấy Conference theo ID
 const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { message: string }, any, any> = async (
   req,
@@ -262,8 +268,7 @@ const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { m
   const conferenceId = req.params.id;
 
   try {
-    const filePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const data = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
     const conferences: ConferenceResponse[] = JSON.parse(data); // Đổi kiểu này
 
 
@@ -316,8 +321,7 @@ const getConferenceList: RequestHandler<any, ConferenceListResponse | { message:
   res
 ): Promise<void> => {
   try {
-    const filePath = path.resolve(__dirname, './database/conferences_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const data = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
 
     // Parse toàn bộ file JSON thành đối tượng ConferenceListResponse
     const conferenceListResponse: ConferenceListResponse = JSON.parse(data);
@@ -345,238 +349,163 @@ const getConferenceList: RequestHandler<any, ConferenceListResponse | { message:
 app.get('/api/v1/conferences', getConferenceList);
 
 
-// // 3. Follow conference
-// const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
-//   try {
-//     const { conferenceId, userId } = req.body;
-
-//     if (!conferenceId || !userId) {
-//       res.status(400).json({ message: 'Missing conferenceId or userId' });
-//       return;
-//     }
-
-//     const userFilePath = path.resolve(__dirname, './database/users_list.json');
-//     const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-
-//     // Use Promise.all to read both files concurrently
-//     const [userData, conferenceData] = await Promise.all([
-//       fs.promises.readFile(userFilePath, 'utf-8'),
-//       fs.promises.readFile(conferenceFilePath, 'utf-8'),
-//     ]);
-
-//     const users: UserResponse[] = JSON.parse(userData);
-//     const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
-
-//     const userIndex = users.findIndex(u => u.id === userId);
-//     if (userIndex === -1) {
-//       res.status(404).json({ message: 'User not found' });
-//       return;
-//     }
-
-//     const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-//     if (conferenceIndex === -1) {
-//       res.status(404).json({ message: 'Conference not found' });
-//       return; // No need for rollback, we haven't modified anything yet.
-//     }
-
-//     const updatedUser: UserResponse = { ...users[userIndex] };
-//     const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
-//     const now = new Date().toISOString();
-
-//     if (!updatedUser.followedConferences) {
-//       updatedUser.followedConferences = [];
-//     }
-//     if (!updatedConference.followedBy) {
-//       updatedConference.followedBy = [];
-//     }
-
-//     const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
-//     const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
-
-//     // Simplify the follow/unfollow logic using a single conditional
-//     if (existingFollowIndex !== -1) {
-//       // Unfollow:
-//       updatedUser.followedConferences.splice(existingFollowIndex, 1);
-//       updatedConference.followedBy.splice(isUserFollowingIndex, 1);
-//     } else {
-//       // Follow:
-//       updatedUser.followedConferences.push({
-//         id: conferenceId,
-//         createdAt: now,
-//         updatedAt: now,
-//       });
-
-//       const followerInfo: FollowerInfo = {
-//         id: updatedUser.id,
-//         email: updatedUser.email,
-//         firstName: updatedUser.firstName,
-//         lastName: updatedUser.lastName,
-//         createdAt: updatedUser.createdAt,
-//         updatedAt: updatedUser.updatedAt,
-//       };
-//       updatedConference.followedBy.push(followerInfo);
-//     }
-
-
-//     users[userIndex] = updatedUser;
-//     conferences[conferenceIndex] = updatedConference;
-
-//     // Use Promise.all to write both files concurrently
-//     await Promise.all([
-//       fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
-//       fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
-//     ]);
-
-//     res.status(200).json(updatedUser); // Send the updated user
-
-//   } catch (error: any) {
-//     console.error('Error updating user/conference data:', error);
-//     // More specific error handling, as you had, is good.
-//     if (error instanceof SyntaxError) {
-//       res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
-//     } else if (error.code === 'ENOENT') {
-//       res.status(500).json({ message: 'A required JSON file was not found' });
-//     } else {
-//       res.status(500).json({ message: 'Internal server error' });
-//     }
-//   }
-// };
-// app.post('/api/v1/user/:id/follow', followConference);
-
-
-// 3. Follow conference
+// 3. Follow conference (CORRECTED - No Duplicate Notifications)
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
-    const { conferenceId, userId } = req.body;
+      const { conferenceId, userId } = req.body;
 
-    if (!conferenceId || !userId) {
-      res.status(400).json({ message: 'Missing conferenceId or userId' });
-      return;
-    }
+      if (!conferenceId || !userId) {
+          res.status(400).json({ message: 'Missing conferenceId or userId' });
+          return;
+      }
 
-    const userFilePath = path.resolve(__dirname, './database/users_list.json');
-    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
+      const [userData, conferenceData] = await Promise.all([
+          fs.promises.readFile(userFilePath, 'utf-8'),
+          fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
+      ]);
 
-    // Use Promise.all to read both files concurrently
-    const [userData, conferenceData] = await Promise.all([
-      fs.promises.readFile(userFilePath, 'utf-8'),
-      fs.promises.readFile(conferenceFilePath, 'utf-8'),
-    ]);
+      const users: UserResponse[] = JSON.parse(userData);
+      const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
 
-    const users: UserResponse[] = JSON.parse(userData);
-    const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
+      const userIndex = users.findIndex(u => u.id === userId);
+      if (userIndex === -1) {
+          res.status(404).json({ message: 'User not found' });
+          return;
+      }
 
-    const userIndex = users.findIndex(u => u.id === userId);
-    if (userIndex === -1) {
-      res.status(404).json({ message: 'User not found' });
-      return;
-    }
+      const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
+      if (conferenceIndex === -1) {
+          res.status(404).json({ message: 'Conference not found' });
+          return;
+      }
 
-    const conferenceIndex = conferences.findIndex(c => c.conference.id === conferenceId);
-    if (conferenceIndex === -1) {
-      res.status(404).json({ message: 'Conference not found' });
-      return; // No need for rollback, we haven't modified anything yet.
-    }
+      const updatedUser: UserResponse = { ...users[userIndex] };
+      const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
+      const now = new Date().toISOString();
 
-    const updatedUser: UserResponse = { ...users[userIndex] };
-    const updatedConference: ConferenceResponse = { ...conferences[conferenceIndex] };
-    const now = new Date().toISOString();
+      if (!updatedUser.followedConferences) {
+          updatedUser.followedConferences = [];
+      }
+      if (!updatedConference.followedBy) {
+          updatedConference.followedBy = [];
+      }
 
-    if (!updatedUser.followedConferences) {
-      updatedUser.followedConferences = [];
-    }
-    if (!updatedConference.followedBy) {
-      updatedConference.followedBy = [];
-    }
+      const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
 
-    const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
-    const isUserFollowingIndex = updatedConference.followedBy.findIndex(f => f.id === userId);
+      let notificationType: 'Follow Conference' | 'Unfollow Conference';
+      let notificationMessage: string;
+      let isFollowing: boolean; // Keep track of follow/unfollow
 
-    // Simplify the follow/unfollow logic using a single conditional
-    if (existingFollowIndex !== -1) {
-      // Unfollow:
-      updatedUser.followedConferences.splice(existingFollowIndex, 1);
-      updatedConference.followedBy.splice(isUserFollowingIndex, 1);
-    } else {
-      // Follow:
-      updatedUser.followedConferences.push({
-        id: conferenceId,
-        createdAt: now,
-        updatedAt: now,
-      });
+      if (existingFollowIndex !== -1) {
+          // Unfollow:
+          updatedUser.followedConferences.splice(existingFollowIndex, 1);
+          updatedConference.followedBy = updatedConference.followedBy.filter(follower => follower.id !== userId);
+          notificationType = 'Unfollow Conference';
+          notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
+          isFollowing = false;
+      } else {
+          // Follow:
+          updatedUser.followedConferences.push({
+              id: conferenceId,
+              createdAt: now,
+              updatedAt: now,
+          });
 
-      const followerInfo: FollowerInfo = {
-        id: updatedUser.id,
-        email: updatedUser.email,
-        firstName: updatedUser.firstName,
-        lastName: updatedUser.lastName,
-        createdAt: now,
-        updatedAt: now,
-      };
-      updatedConference.followedBy.push(followerInfo);
+          const followerInfo: FollowerInfo = {
+              id: updatedUser.id,
+              email: updatedUser.email,
+              firstName: updatedUser.firstName,
+              lastName: updatedUser.lastName,
+              createdAt: now,
+              updatedAt: now,
+          };
+          updatedConference.followedBy.push(followerInfo);
+          notificationType = 'Follow Conference';
+          notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
+          isFollowing = true;
+      }
 
-      // --- Send Real-time Notification ---
+      // --- Create the notification object ---
       const notification: Notification = {
-        id: uuidv4(), // Unique ID for the notification
-        createdAt: new Date().toISOString(),
-        isImportant: false, // Or true, depending on your logic
-        seenAt: '', // Not seen yet
-        deletedAt: '',  //Not delete yet
-        message: `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`,
-        type: 'Follow Conference', // Important for distinguishing notification types
+          id: uuidv4(),
+          createdAt: now,
+          isImportant: false,
+          seenAt: null,
+          deletedAt: null,
+          message: notificationMessage,
+          type: notificationType,
       };
 
-      // Add notification to followers's notifcations field.
-      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-        updatedConference.followedBy.forEach(follower => {
-          const userFollowIndex = users.findIndex(u => u.id === follower.id);
-          if (userFollowIndex !== -1) {
-            if (!users[userFollowIndex].notifications) {
-              users[userFollowIndex].notifications = [];
-            }
-            console.log(users[userFollowIndex])
-            users[userFollowIndex].notifications?.push(notification);
-          }
-        })
+      // --- 1. Add notification to the ACTING user's notifications ---
+      if (!updatedUser.notifications) {
+          updatedUser.notifications = [];
+      }
+      updatedUser.notifications.push(notification);
+
+      // --- 2. Send real-time notification to the ACTING user ---
+      const actingUserSocket = connectedUsers.get(userId);
+      if (actingUserSocket) {
+          actingUserSocket.emit('notification', notification);
       }
 
-      // Send to specific user.  Loop through all connected users
-      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-        updatedConference.followedBy.forEach(follower => {
-          const userSocket = connectedUsers.get(follower.id);
-          if (userSocket) {
-            userSocket.emit('notification', notification); // Send the notification
+      // --- 3. Add notification to OTHER followers (and send real-time) ---
+      // ONLY if it's a FOLLOW action, and EXCLUDE the acting user.
+      if (isFollowing) { // Only send to other followers on FOLLOW
+          if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+              updatedConference.followedBy.forEach(follower => {
+                 if (follower.id !== userId) { // Exclude the acting user!
+                      const userFollowIndex = users.findIndex(u => u.id === follower.id);
+                      if (userFollowIndex !== -1) {
+                          const followerNotification: Notification = {
+                              id: uuidv4(), // New ID for each!
+                              createdAt: now,
+                              isImportant: false,
+                              seenAt: null,
+                              deletedAt: null,
+                              message: notificationMessage, // Same message/type
+                              type: notificationType,
+                          };
+
+                          if (!users[userFollowIndex].notifications) {
+                              users[userFollowIndex].notifications = [];
+                          }
+                          users[userFollowIndex].notifications?.push(followerNotification);
+
+                          // Realtime
+                          const userSocket = connectedUsers.get(follower.id);
+                          if (userSocket) {
+                              userSocket.emit('notification', followerNotification); // Send to followers
+                          }
+                      }
+                  }
+              });
           }
-        });
       }
-    }
 
+      // --- Update user and conference data ---
+      users[userIndex] = updatedUser;
+      conferences[conferenceIndex] = updatedConference;
 
-    users[userIndex] = updatedUser;
-    conferences[conferenceIndex] = updatedConference;
+      await Promise.all([
+          fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
+          fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+      ]);
 
-    // Use Promise.all to write both files concurrently
-    await Promise.all([
-      fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
-      fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
-    ]);
-
-    res.status(200).json(updatedUser); // Send the updated user
+      res.status(200).json(updatedUser);
 
   } catch (error: any) {
-    console.error('Error updating user/conference data:', error);
-    // More specific error handling, as you had, is good.
-    if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
-    } else if (error.code === 'ENOENT') {
-      res.status(500).json({ message: 'A required JSON file was not found' });
-    } else {
-      res.status(500).json({ message: 'Internal server error' });
-    }
+      console.error('Error updating user/conference data:', error);
+      if (error instanceof SyntaxError) {
+          res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
+      } else if (error.code === 'ENOENT') {
+          res.status(500).json({ message: 'A required JSON file was not found' });
+      } else {
+          res.status(500).json({ message: 'Internal server error' });
+      }
   }
 };
-app.post('/api/v1/user/:id/follow', followConference);
 
+app.post('/api/v1/user/:id/follow', followConference);
 
 // 4. Lấy thông tin user theo ID ---
 const getUserById: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
@@ -587,8 +516,7 @@ const getUserById: RequestHandler<{ id: string }, UserResponse | { message: stri
       res.status(400).json({ message: 'Missing userId' });
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json');
-    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const data = await fs.promises.readFile(userFilePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(data);
 
     const user = users.find(u => u.id === userId);
@@ -623,8 +551,7 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
       return res.status(400).json({ message: 'Missing userId' }) as any;
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json'); // Đường dẫn đến file JSON
-    const data = await fs.promises.readFile(filePath, 'utf-8');
+    const data = await fs.promises.readFile(userFilePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(data);
 
     const userIndex = users.findIndex(u => u.id === userId);
@@ -637,7 +564,7 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
     users[userIndex] = { ...users[userIndex], ...updatedData };
 
     // Ghi lại vào file
-    await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'); // Ghi đẹp (indent 2 spaces)
 
     res.status(200).json(users[userIndex]); // Trả về user đã được update
 
@@ -724,7 +651,6 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
     };
 
 
-    const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
     let existingConferences: AddedConference[] = [];
 
     // Read and update add_conferences.json (as before)
@@ -1388,6 +1314,69 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
   }
 };
 app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
+
+// 13/ Get Notifications
+// NEW: Get Notifications for a User
+const getUserNotifications: RequestHandler<{ id: string }, Notification[] | { message: string }, any, any> = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const userFilePath = path.resolve(__dirname, './database/users_list.json');
+
+    const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+    const users: UserResponse[] = JSON.parse(userData);
+
+    const user = users.find(u => u.id === id);
+    if (!user) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    // Return notifications, or an empty array if none exist.  Important for consistency.
+    res.status(200).json(user.notifications || []);
+
+  } catch (error) {
+    console.error('Error getting user notifications:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+app.get('/api/v1/user/:id/notifications', getUserNotifications);
+
+// 14. Mark All Notifications as Read
+const markAllNotificationsAsRead: RequestHandler<{ id: string }, { message: string }, any, any> = async (req, res) => {
+  try {
+      const { id } = req.params;
+
+      const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+      const users: UserResponse[] = JSON.parse(userData);
+
+      const userIndex = users.findIndex(u => u.id === id);
+      if (userIndex === -1) {
+          res.status(404).json({ message: 'User not found' });
+          return;
+      }
+
+      const updatedUser: UserResponse = { ...users[userIndex] };
+
+      // Mark all notifications as read (set seenAt)
+      if (updatedUser.notifications && updatedUser.notifications.length > 0) {
+          updatedUser.notifications = updatedUser.notifications.map(n => ({
+              ...n,
+              seenAt: n.seenAt ? n.seenAt : new Date().toISOString(), // Don't overwrite if already seen
+          }));
+      }
+
+      users[userIndex] = updatedUser;
+      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+      res.status(200).json({ message: 'Notifications marked as read' });
+
+  } catch (error) {
+      console.error('Error marking notifications as read:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsAsRead); // Use PUT or POST
 
 
 const adminConferences: RequestHandler = async (req, res): Promise<void> => {
