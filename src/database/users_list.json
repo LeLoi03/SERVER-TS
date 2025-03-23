@@ -21,6 +21,7 @@
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true
     },
+    "password": "123456",
     "createdAt": "2023-01-20T10:00:00Z",
     "updatedAt": "2023-01-20T10:00:00Z"
   },
@@ -46,6 +47,7 @@
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true
     },
+    "password": "123456",
     "createdAt": "2025-03-16T02:23:28.642Z",
     "updatedAt": "2025-03-16T02:23:28.642Z"
   },
@@ -71,6 +73,7 @@
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true
     },
+    "password": "123456",
     "createdAt": "2022-11-05T14:30:00Z",
     "updatedAt": "2023-02-10T16:45:00Z"
   },
@@ -96,6 +99,7 @@
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true
     },
+    "password": "123456",
     "createdAt": "2024-02-28T09:15:00Z",
     "updatedAt": "2024-03-01T11:20:00Z"
   },
@@ -121,20 +125,47 @@
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true
     },
+    "password": "123456",
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z"
   },
   {
-    "id": "test",
-    "email": "loicute5fps@gmail.com",
-    "firstName": "Le",
-    "lastName": "Loi",
+    "id": "admin",
+    "email": "admin@gmail.com",
+    "firstName": "Admin",
+    "lastName": "Admin",
     "dob": "2003-10-22",
-    "role": "user",
-    "followedConferences": [],
+    "role": "admin",
+    "followedConferences": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-23T13:45:56.222Z",
+        "updatedAt": "2025-03-23T13:45:56.222Z"
+      }
+    ],
     "myConferences": [],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "3c1733d6-d337-4cb6-9ef8-6dfb905fba60",
+        "createdAt": "2025-03-23T13:45:56.222Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Admin Admin followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "bc313141-1dfe-47be-b441-6fcd1ccde958",
+        "createdAt": "2025-03-23T13:47:26.779Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      }
+    ],
+    "password": "123456",
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z",
     "avatar": "/avatar3.jpg",
@@ -146,10 +177,106 @@
     "background": "/light.jpg",
     "calendar": [],
     "setting": {
+      "receiveNotifications": false,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    }
+  },
+  {
+    "id": "test",
+    "email": "loicute5fps@gmail.com",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "dob": "2003-10-22",
+    "role": "user",
+    "followedConferences": [
+      {
+        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-23T13:42:34.424Z",
+        "updatedAt": "2025-03-23T13:42:34.424Z"
+      },
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-23T13:47:48.105Z",
+        "updatedAt": "2025-03-23T13:47:48.105Z"
+      }
+    ],
+    "myConferences": [],
+    "feedBacks": [],
+    "notifications": [
+      {
+        "id": "2e9be7ab-10c7-4e43-a3a3-43bd11261d3b",
+        "createdAt": "2025-03-23T13:42:34.424Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference: IEEE International Conference on Computer Communications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "e8d0a43e-f280-45f6-95d4-d683d2bf5a14",
+        "createdAt": "2025-03-23T13:43:05.169Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi added the conference \"IEEE International Conference on Computer Communications\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "1346268e-277c-494f-9635-b1425c584b1e",
+        "createdAt": "2025-03-23T13:47:26.779Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "859ea6d5-7e89-41e3-96ba-fad06f5460d8",
+        "createdAt": "2025-03-23T13:47:46.724Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi unfollowed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "11b27174-4aee-46c0-b1a9-279a99968473",
+        "createdAt": "2025-03-23T13:47:48.105Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      }
+    ],
+    "password": "123456",
+    "createdAt": "2021-06-05T12:00:00.000Z",
+    "updatedAt": "2021-06-05T12:00:00.000Z",
+    "avatar": "/avatar3.jpg",
+    "aboutme": "Meo Meo",
+    "interestedTopics": [
+      "Blockchain",
+      "AI"
+    ],
+    "background": "/light.jpg",
+    "calendar": [
+      {
+        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-23T13:43:05.169Z",
+        "updatedAt": "2025-03-23T13:43:05.169Z"
+      }
+    ],
+    "setting": {
       "receiveNotifications": true,
       "autoAddFollowToCalendar": true,
-      "notificationWhenConferencesChanges": false,
-      "upComingEvent": false,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,

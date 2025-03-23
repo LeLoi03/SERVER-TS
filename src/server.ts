@@ -315,6 +315,31 @@ app.get('/api/v1/conference/:id', getConferenceById);
 
 
 // 3. Follow conference (CORRECTED - No Duplicate Notifications)
+// --- Helper Function to Check Notification Settings ---
+function shouldSendNotification(user: UserResponse, notificationType: 'Follow' | 'Unfollow'): boolean {
+  const settings = user.setting;
+
+  if (!settings) {
+    return false; // No settings, default to no notifications.
+  }
+
+  if (settings.receiveNotifications === false) {
+    return false; // User has disabled all notifications.
+  }
+
+    if (notificationType === 'Follow' && settings.notificationWhenFollow === false) {
+        return false;
+    }
+    if (notificationType === 'Unfollow' && settings.notificationWhenFollow === false){
+        return false;
+    }
+
+
+  return true; // All checks passed, send notification.
+}
+
+// --- Follow/Unfollow Conference Handler ---
+
 const followConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
   try {
     const { conferenceId, userId } = req.body;
@@ -351,8 +376,8 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     if (!updatedUser.followedConferences) {
       updatedUser.followedConferences = [];
     }
-    if (!updatedConference.follower) {
-      updatedConference.follower = [];
+    if (!updatedConference.followedBy) {
+      updatedConference.followedBy = [];
     }
 
     const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
@@ -364,7 +389,7 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     if (existingFollowIndex !== -1) {
       // Unfollow:
       updatedUser.followedConferences.splice(existingFollowIndex, 1);
-      updatedConference.follower = updatedConference.follower.filter(follower => follower.id !== userId);
+      updatedConference.followedBy = updatedConference.followedBy.filter(followedBy => followedBy.id !== userId);
       notificationType = 'Unfollow Conference';
       notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
       isFollowing = false;
@@ -384,68 +409,73 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
         createdAt: now,
         updatedAt: now,
       };
-      updatedConference.follower.push(followerInfo);
+      updatedConference.followedBy.push(followerInfo);
       notificationType = 'Follow Conference';
       notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
       isFollowing = true;
     }
 
-    // --- Create the notification object ---
-    const notification: Notification = {
-      id: uuidv4(),
-      createdAt: now,
-      isImportant: false,
-      seenAt: null,
-      deletedAt: null,
-      message: notificationMessage,
-      type: notificationType,
-    };
+    // --- Notification Logic (with settings check) ---
+        const notification: Notification = {
+          id: uuidv4(),
+          createdAt: now,
+          isImportant: false,
+          seenAt: null,
+          deletedAt: null,
+          message: notificationMessage,
+          type: notificationType,
+        };
+    // 1.  ACTING USER
+    if (shouldSendNotification(updatedUser, isFollowing ? 'Follow' : 'Unfollow')) {
+      if (!updatedUser.notifications) {
+        updatedUser.notifications = [];
+      }
+      updatedUser.notifications.push(notification);
 
-    // --- 1. Add notification to the ACTING user's notifications ---
-    if (!updatedUser.notifications) {
-      updatedUser.notifications = [];
+      const actingUserSocket = connectedUsers.get(userId);
+      if (actingUserSocket) {
+        actingUserSocket.emit('notification', notification);
+      }
     }
-    updatedUser.notifications.push(notification);
 
-    // --- 2. Send real-time notification to the ACTING user ---
-    const actingUserSocket = connectedUsers.get(userId);
-    if (actingUserSocket) {
-      actingUserSocket.emit('notification', notification);
-    }
+    // 2. OTHER FOLLOWERS (only on follow, and check THEIR settings)
+    if (isFollowing) {
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(followedBy => {
+          if (followedBy.id !== userId) {
+            const userFollowIndex = users.findIndex(u => u.id === followedBy.id);
+              if (userFollowIndex !== -1) {
+                const followerUser = users[userFollowIndex];
+                 if (shouldSendNotification(followerUser, 'Follow')) {
+                    const followerNotification: Notification = {
+                        id: uuidv4(),
+                        createdAt: now,
+                        isImportant: false,
+                        seenAt: null,
+                        deletedAt: null,
+                        message: notificationMessage,
+                        type: notificationType,
+                    };
 
-    // --- 3. Add notification to OTHER followers (and send real-time) ---
-    // ONLY if it's a FOLLOW action, and EXCLUDE the acting user.
-    if (isFollowing) { // Only send to other followers on FOLLOW
-      if (updatedConference.follower && updatedConference.follower.length > 0) {
-        updatedConference.follower.forEach(follower => {
-          if (follower.id !== userId) { // Exclude the acting user!
-            const userFollowIndex = users.findIndex(u => u.id === follower.id);
-            if (userFollowIndex !== -1) {
-              const followerNotification: Notification = {
-                id: uuidv4(), // New ID for each!
-                createdAt: now,
-                isImportant: false,
-                seenAt: null,
-                deletedAt: null,
-                message: notificationMessage, // Same message/type
-                type: notificationType,
-              };
+                    if (!followerUser.notifications) {
+                        followerUser.notifications = [];
+                    }
+                    followerUser.notifications.push(followerNotification);
+                    const userSocket = connectedUsers.get(followedBy.id);
+                    if (userSocket) {
+                        userSocket.emit('notification', followerNotification);
+                    }
 
-              if (!users[userFollowIndex].notifications) {
-                users[userFollowIndex].notifications = [];
+
+                }
+
               }
-              users[userFollowIndex].notifications?.push(followerNotification);
-
-              // Realtime
-              const userSocket = connectedUsers.get(follower.id);
-              if (userSocket) {
-                userSocket.emit('notification', followerNotification); // Send to followers
-              }
-            }
           }
         });
       }
     }
+
+
 
     // --- Update user and conference data ---
     users[userIndex] = updatedUser;
@@ -469,6 +499,7 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     }
   }
 };
+
 app.post('/api/v1/user/:id/follow', followConference);
 
 // 4. Lấy thông tin user theo ID ---
@@ -521,7 +552,26 @@ function areArraysEqual(arr1: any[] | undefined, arr2: any[] | undefined): boole
   return true;
 }
 
-// 5. Update User 
+
+function shouldSendUpdateNotification(user: UserResponse): boolean {
+  const settings = user.setting;
+
+  if (!settings) {
+      return false;
+  }
+
+  if (settings.receiveNotifications === false) {
+      return false;
+  }
+
+  if (settings.notificationWhenUpdateProfile === false) {
+      return false;
+  }
+
+  return true;
+}
+
+
 const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -540,13 +590,10 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
       return res.status(404).json({ message: 'User not found' });
     }
 
-    const oldUser = { ...users[userIndex] }; //  Copy of old user data
+    const oldUser = { ...users[userIndex] }; // Copy of old user data
     const updatedUser = { ...users[userIndex], ...updatedData }; // Merge updates
 
-    // --- Notification Creation (Improved) ---
-    const now = new Date().toISOString();
-    let notificationMessage = `Your profile has been updated.`;
-
+    // --- Determine changed fields ---
     const changedFields: string[] = [];
     if (oldUser.firstName !== updatedUser.firstName) changedFields.push('First Name');
     if (oldUser.lastName !== updatedUser.lastName) changedFields.push('Last Name');
@@ -555,39 +602,45 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
     if (oldUser.avatar !== updatedUser.avatar) changedFields.push("Avatar");
     if (!areArraysEqual(oldUser.interestedTopics, updatedUser.interestedTopics)) changedFields.push("Interested topics");
     if (oldUser.background !== updatedUser.background) changedFields.push("Interests");
-    if (oldUser.setting?.autoAddFollowToCalendar !== updatedUser.setting?.autoAddFollowToCalendar) changedFields.push("Auto Add Follow To Calendar");  // Corrected
-    if (oldUser.setting?.notificationWhenConferencesChanges !== updatedUser.setting?.notificationWhenConferencesChanges) changedFields.push("Notification When Conferences Change"); // Corrected
-    if (oldUser.setting?.upComingEvent !== updatedUser.setting?.upComingEvent) changedFields.push("Upcoming Event"); // Corrected
-    if (oldUser.setting?.notificationThrough !== updatedUser.setting?.notificationThrough) changedFields.push("Notification Delivery Method"); // Corrected
 
+    const settingChangedFields: string[] = [];
+    if (oldUser.setting?.autoAddFollowToCalendar !== updatedUser.setting?.autoAddFollowToCalendar) settingChangedFields.push("Auto Add Follow To Calendar");
+    if (oldUser.setting?.notificationWhenConferencesChanges !== updatedUser.setting?.notificationWhenConferencesChanges) settingChangedFields.push("Notification When Conferences Change");
+    if (oldUser.setting?.upComingEvent !== updatedUser.setting?.upComingEvent) settingChangedFields.push("Upcoming Event");
+    if (oldUser.setting?.notificationThrough !== updatedUser.setting?.notificationThrough) settingChangedFields.push("Notification Delivery Method");
 
-    if (changedFields.length > 0) {
-      notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
+    // --- Check for non-setting changes ---
+    const hasNonSettingChanges = changedFields.length > 0;
+
+    // --- Create and send notification (only for non-setting changes AND if settings allow) ---
+    if (hasNonSettingChanges && shouldSendUpdateNotification(updatedUser)) { // Key change: Check settings
+      const now = new Date().toISOString();
+      let notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
+
+      const notification: Notification = {
+        id: uuidv4(),
+        createdAt: now,
+        isImportant: false,
+        seenAt: null,
+        deletedAt: null,
+        message: notificationMessage,
+        type: 'Profile Update',
+      };
+
+      if (!updatedUser.notifications) {
+        updatedUser.notifications = [];
+      }
+      updatedUser.notifications.push(notification);
+
+      // --- Send real-time notification (if connected) ---
+      const userSocket = connectedUsers.get(userId);
+      if (userSocket) {
+        userSocket.emit('notification', notification); // Send via Socket.IO
+      }
     }
 
-    const notification: Notification = {
-      id: uuidv4(),
-      createdAt: now,
-      isImportant: false,
-      seenAt: null,
-      deletedAt: null,
-      message: notificationMessage,
-      type: 'Profile Update',
-    };
 
-    if (!updatedUser.notifications) {
-      updatedUser.notifications = [];
-    }
-    updatedUser.notifications.push(notification);
-
-    // --- Real-time notification (using mock connectedUsers) ---
-    const userSocket = connectedUsers.get(userId);
-    if (userSocket) {
-      userSocket.emit('notification', notification); //  Emit to Socket.IO (if you set it up)
-    }
-
-
-    // --- Update User Data ---
+    // --- Update user data ---
     users[userIndex] = updatedUser;
     await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
 
@@ -595,205 +648,225 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
 
   } catch (error: any) {
     console.error('Error updating user:', error);
-    res.status(500).json({ message: 'Internal server error' }); // Simplified error handling
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 app.put('/api/v1/user/:id', updateUser);
 
 // 6. Add conference (updated with notifications)
+// --- Helper function to check notification settings ---
+function shouldSendAddConferenceNotification(user: UserResponse): boolean {
+  const settings = user.setting;
+
+  if (!settings || settings.receiveNotifications === false) {
+      return false; // No settings or notifications disabled.
+  }
+
+  // Currently, there's no specific setting for "add conference" notifications,
+  // so we just check receiveNotifications.  If you add a specific setting
+  // in the future (e.g., notificationWhenAddConference), you'd check it here.
+
+  return true; // All checks passed, send notification.
+}
+
+// 6. Add conference (updated with notifications and settings check)
 const addConference: RequestHandler<any, AddedConference | { message: string }, any, any> = async (req, res): Promise<void> => {
-  try {
-    const conferenceData: ConferenceFormData = req.body;
-    const { userId } = req.body; // Get userId from request body
+try {
+  const conferenceData: ConferenceFormData = req.body;
+  const { userId } = req.body; // Get userId from request body
 
-    if (!userId) {
-      return res.status(401).json({ message: 'Unauthorized: Missing userId' }) as any; // Return 401 Unauthorized
-    }
+  if (!userId) {
+    return res.status(401).json({ message: 'Unauthorized: Missing userId' }) as any; // Return 401 Unauthorized
+  }
 
-    // Create unique IDs
-    const conferenceId = uuidv4();
-    const organizationId = uuidv4();
-    const locationId = uuidv4();
+  // Create unique IDs
+  const conferenceId = uuidv4();
+  const organizationId = uuidv4();
+  const locationId = uuidv4();
 
-    const addedConference: AddedConference = {
-      conference: {
-        id: conferenceId,
-        title: conferenceData.title,
-        acronym: conferenceData.acronym,
-        creatorId: userId, // Get user ID from request
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      },
-      organization: {
-        id: organizationId,
-        year: new Date().getFullYear(), // Current year
-        accessType: conferenceData.type, // Get from form
-        isAvailable: true,
-        conferenceId: conferenceId,
-        summary: conferenceData.description,
-        callForPaper: '',
-        link: conferenceData.link,
-        cfpLink: '',
-        impLink: '',
-        topics: conferenceData.topics,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      },
-      locations: {
-        id: locationId,
-        address: conferenceData.location.address,
-        cityStateProvince: conferenceData.location.cityStateProvince,
-        country: conferenceData.location.country,
-        continent: conferenceData.location.continent,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-        isAvailable: true,
-        organizeId: organizationId,
-      },
-      dates: conferenceData.dates.map(date => ({
-        id: uuidv4(),
-        organizedId: organizationId,
-        fromDate: new Date(date.fromDate).toISOString(),
-        toDate: new Date(date.toDate).toISOString(),
-        type: date.type,
-        name: date.name,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-        isAvailable: true,
-      })),
-
-      rankSourceFoRData: [],
-      status: 'Pending', // Default status
-    };
-
-
-    let existingConferences: AddedConference[] = [];
-
-    // Read and update add_conferences.json (as before)
-    try {
-      const fileExists = await fs.promises.access(addConferencesFilePath).then(() => true).catch(() => false);
-      if (fileExists) {
-        const data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
-        if (data.trim() !== "") {
-          existingConferences = JSON.parse(data);
-        }
-      }
-    } catch (error: any) {
-      if (error.code !== 'ENOENT') {
-        console.error('Error reading conference data:', error);
-        throw error;
-      }
-    }
-    existingConferences.push(addedConference);
-    await fs.promises.writeFile(addConferencesFilePath, JSON.stringify(existingConferences, null, 2), 'utf-8');
-
-
-    // --- Update users_list.json ---
-    let usersList: UserResponse[] = [];
-
-    try {
-      const usersFileExists = await fs.promises.access(userFilePath).then(() => true).catch(() => false);
-      if (usersFileExists) {
-        const usersData = await fs.promises.readFile(userFilePath, 'utf-8');
-        if (usersData.trim() !== "") {
-          usersList = JSON.parse(usersData);
-        }
-      }
-    } catch (error: any) {
-      if (error.code !== 'ENOENT') {
-        console.error('Error reading users data:', error);
-        throw error;
-      }
-    }
-
-    // Find the user in users_list.json
-    const userIndex = usersList.findIndex(user => user.id === userId);
-
-    if (userIndex === -1) {
-      return res.status(404).json({ message: 'User not found' }) as any; // User not found in users_list.json
-    }
-
-    // Create the MyConference object
-    const newMyConference: MyConference = {
+  const addedConference: AddedConference = {
+    conference: {
       id: conferenceId,
-      status: 'Pending', // Initial status
-      statusTime: "",
-      submittedAt: new Date().toISOString(),
-    };
-
-    // Add or update the myConferences array
-    if (!usersList[userIndex].myConferences) {
-      usersList[userIndex].myConferences = [newMyConference];
-    } else {
-      usersList[userIndex].myConferences.push(newMyConference);
-    }
-    // --- NOTIFICATIONS ---
-
-    const now = new Date().toISOString();
-    const notificationMessage = `You added a new conference: ${addedConference.conference.title}`;
-
-    // 1. Notification for the ACTING user
-    const userNotification: Notification = {
+      title: conferenceData.title,
+      acronym: conferenceData.acronym,
+      creatorId: userId, // Get user ID from request
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    },
+    organization: {
+      id: organizationId,
+      year: new Date().getFullYear(), // Current year
+      accessType: conferenceData.type, // Get from form
+      publisher: "",
+      isAvailable: true,
+      conferenceId: conferenceId,
+      summerize: conferenceData.description,
+      callForPaper: '',
+      link: conferenceData.link,
+      cfpLink: '',
+      impLink: '',
+      topics: conferenceData.topics,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    },
+    location: {
+      id: locationId,
+      address: conferenceData.location.address,
+      cityStateProvince: conferenceData.location.cityStateProvince,
+      country: conferenceData.location.country,
+      continent: conferenceData.location.continent,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      isAvailable: true,
+      organizeId: organizationId,
+    },
+    dates: conferenceData.dates.map(date => ({
       id: uuidv4(),
-      createdAt: now,
-      isImportant: false,
-      seenAt: null,
-      deletedAt: null,
-      message: notificationMessage,
-      type: 'Add Conference',
-    };
+      organizedId: organizationId,
+      fromDate: new Date(date.fromDate).toISOString(),
+      toDate: new Date(date.toDate).toISOString(),
+      type: date.type,
+      name: date.name,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      isAvailable: true,
+    })),
 
-    if (!usersList[userIndex].notifications) {
-      usersList[userIndex].notifications = [];
-    }
-    usersList[userIndex].notifications.push(userNotification);
+    rankSourceFoRData: [],
+    status: 'Pending', // Default status
+  };
 
-    // 2. Real-time notification to the ACTING user
-    const actingUserSocket = connectedUsers.get(userId);
-    if (actingUserSocket) {
-      actingUserSocket.emit('notification', userNotification);
-    }
 
-    // 3. Notification for ADMIN users
-    const adminNotificationMessage = `User ${usersList[userIndex].firstName} ${usersList[userIndex].lastName} added a new conference: ${addedConference.conference.title}`;
+  let existingConferences: AddedConference[] = [];
 
-    for (const user of usersList) {
-      if (user.role === 'admin') { // Assuming you have a 'role' property
-        const adminNotification: Notification = {
-          id: uuidv4(),
-          createdAt: now,
-          isImportant: true, // Mark as important for admins
-          seenAt: null,
-          deletedAt: null,
-          message: adminNotificationMessage,
-          type: 'Add Conference',
-        };
-
-        if (!user.notifications) {
-          user.notifications = [];
-        }
-        user.notifications.push(adminNotification);
-
-        // Real-time notification to the admin
-        const adminSocket = connectedUsers.get(user.id);
-        if (adminSocket) {
-          adminSocket.emit('notification', adminNotification);
-        }
+  // Read and update add_conferences.json (as before)
+  try {
+    const fileExists = await fs.promises.access(addConferencesFilePath).then(() => true).catch(() => false);
+    if (fileExists) {
+      const data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
+      if (data.trim() !== "") {
+        existingConferences = JSON.parse(data);
       }
     }
-
-    // Write the updated users list back to the file
-    await fs.promises.writeFile(userFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
-    res.status(201).json(addedConference); // Return the added conference
-
   } catch (error: any) {
-    console.error('Error adding conference:', error);
-    if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
-    } else {
-      res.status(500).json({ message: 'Internal server error' });
+    if (error.code !== 'ENOENT') {
+      console.error('Error reading conference data:', error);
+      throw error;
     }
   }
+  existingConferences.push(addedConference);
+  await fs.promises.writeFile(addConferencesFilePath, JSON.stringify(existingConferences, null, 2), 'utf-8');
+
+
+  // --- Update users_list.json ---
+  let usersList: UserResponse[] = [];
+
+  try {
+    const usersFileExists = await fs.promises.access(userFilePath).then(() => true).catch(() => false);
+    if (usersFileExists) {
+      const usersData = await fs.promises.readFile(userFilePath, 'utf-8');
+      if (usersData.trim() !== "") {
+        usersList = JSON.parse(usersData);
+      }
+    }
+  } catch (error: any) {
+    if (error.code !== 'ENOENT') {
+      console.error('Error reading users data:', error);
+      throw error;
+    }
+  }
+
+  // Find the user in users_list.json
+  const userIndex = usersList.findIndex(user => user.id === userId);
+
+  if (userIndex === -1) {
+    return res.status(404).json({ message: 'User not found' }) as any; // User not found in users_list.json
+  }
+
+  // Create the MyConference object
+  const newMyConference: MyConference = {
+    id: conferenceId,
+    status: 'Pending', // Initial status
+    statusTime: "",
+    submittedAt: new Date().toISOString(),
+  };
+
+  // Add or update the myConferences array
+  if (!usersList[userIndex].myConferences) {
+    usersList[userIndex].myConferences = [newMyConference];
+  } else {
+    usersList[userIndex].myConferences.push(newMyConference);
+  }
+  // --- NOTIFICATIONS ---
+
+  const now = new Date().toISOString();
+  const notificationMessage = `You added a new conference: ${addedConference.conference.title}`;
+
+  // 1. Notification for the ACTING user (check settings!)
+  if (shouldSendAddConferenceNotification(usersList[userIndex])) {
+      const userNotification: Notification = {
+          id: uuidv4(),
+          createdAt: now,
+          isImportant: false,
+          seenAt: null,
+          deletedAt: null,
+          message: notificationMessage,
+          type: 'Add Conference',
+      };
+
+      if (!usersList[userIndex].notifications) {
+          usersList[userIndex].notifications = [];
+      }
+      usersList[userIndex].notifications.push(userNotification);
+
+      // 2. Real-time notification to the ACTING user
+      const actingUserSocket = connectedUsers.get(userId);
+      if (actingUserSocket) {
+          actingUserSocket.emit('notification', userNotification);
+      }
+  }
+
+  // 3. Notification for ADMIN users (always send to admins)
+  const adminNotificationMessage = `User ${usersList[userIndex].firstName} ${usersList[userIndex].lastName} added a new conference: ${addedConference.conference.title}`;
+
+  for (const user of usersList) {
+    if (user.role === 'admin') { // Assuming you have a 'role' property
+        // Admins *always* get notifications, so no settings check needed here.
+      const adminNotification: Notification = {
+        id: uuidv4(),
+        createdAt: now,
+        isImportant: true, // Mark as important for admins
+        seenAt: null,
+        deletedAt: null,
+        message: adminNotificationMessage,
+        type: 'Add Conference',
+      };
+
+      if (!user.notifications) {
+        user.notifications = [];
+      }
+      user.notifications.push(adminNotification);
+
+      // Real-time notification to the admin
+      const adminSocket = connectedUsers.get(user.id);
+      if (adminSocket) {
+        adminSocket.emit('notification', adminNotification);
+      }
+    }
+  }
+
+  // Write the updated users list back to the file
+  await fs.promises.writeFile(userFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
+  res.status(201).json(addedConference); // Return the added conference
+
+} catch (error: any) {
+  console.error('Error adding conference:', error);
+  if (error instanceof SyntaxError) {
+    res.status(500).json({ message: 'Invalid JSON format in a JSON file' });
+  } else {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}
 };
 app.post('/api/v1/user/add-conference', addConference);
 
@@ -935,10 +1008,10 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
     // ONLY if it's an ADD action, and EXCLUDE the acting user.
     //  AND ONLY if the user is also following the conference.
     if (isAdding) {  //Only send notification add
-      if (updatedConference.follower && updatedConference.follower.length > 0) {
-        updatedConference.follower.forEach(follower => {
-          if (follower.id !== userId) { // Exclude acting user
-            const userFollowIndex = users.findIndex(u => u.id === follower.id);
+      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+        updatedConference.followedBy.forEach(followedBy => {
+          if (followedBy.id !== userId) { // Exclude acting user
+            const userFollowIndex = users.findIndex(u => u.id === followedBy.id);
             if (userFollowIndex !== -1) {
               //Check user is following the conference
               if (users[userFollowIndex].followedConferences?.find(fc => fc.id === conferenceId)) {
@@ -958,7 +1031,7 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
                 users[userFollowIndex].notifications?.push(followerNotification);
 
                 //Realtime
-                const userSocket = connectedUsers.get(follower.id);
+                const userSocket = connectedUsers.get(followedBy.id);
                 if (userSocket) {
                   userSocket.emit('notification', followerNotification);
                 }
@@ -1196,14 +1269,14 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
 
 
     // --- 2. Send to followers (excluding the creator) ---
-    if (updatedConference.follower && updatedConference.follower.length > 0) {
-      updatedConference.follower.forEach(follower => {
-        if (follower.id !== creatorId) {  // Exclude the feedback creator
-          const followerIndex = users.findIndex(u => u.id === follower.id);
+    if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+      updatedConference.followedBy.forEach(followedBy => {
+        if (followedBy.id !== creatorId) {  // Exclude the feedback creator
+          const followerIndex = users.findIndex(u => u.id === followedBy.id);
           if (followerIndex !== -1) {
             const followerUser = users[followerIndex];
 
-            // Create a separate notification object for each follower
+            // Create a separate notification object for each followedBy
             const followerNotification: Notification = {
               ...notification, // Copy common properties
               id: uuidv4(),     // Ensure unique ID
@@ -1214,8 +1287,8 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
             }
             followerUser.notifications.push(followerNotification);
 
-            // Real-time notification to follower
-            const followerSocket = connectedUsers.get(follower.id);
+            // Real-time notification to followedBy
+            const followerSocket = connectedUsers.get(followedBy.id);
             if (followerSocket) {
               followerSocket.emit('notification', followerNotification);
             }
@@ -1588,10 +1661,10 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
           title: conferenceToProcess.conference.title,
           acronym: conferenceToProcess.conference.acronym,
           location: {
-            cityStateProvince: conferenceToProcess.locations.cityStateProvince,
-            country: conferenceToProcess.locations.country,
-            address: conferenceToProcess.locations.address,
-            continent: conferenceToProcess.locations.continent
+            cityStateProvince: conferenceToProcess.location.cityStateProvince,
+            country: conferenceToProcess.location.country,
+            address: conferenceToProcess.location.address,
+            continent: conferenceToProcess.location.continent
           },
           year: conferenceToProcess.organization.year,
           rankSourceFoRData: conferenceToProcess.rankSourceFoRData[0],
@@ -1607,6 +1680,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
           updatedAt: new Date().toISOString(),
           creatorId: conferenceToProcess.conference.creatorId,
           accessType: conferenceToProcess.organization.accessType,
+          publisher: conferenceToProcess.organization.publisher,
           status: conferenceToProcess.status
         };
         conferencesList.payload.push(newConferenceListItem);
@@ -1614,11 +1688,11 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
         const newConferenceDetailItem: ConferenceResponse = {
           conference: conferenceToProcess.conference,
           organization: conferenceToProcess.organization,
-          locations: conferenceToProcess.locations,
+          location: conferenceToProcess.location,
           dates: conferenceToProcess.dates,
           rankSourceFoRData: conferenceToProcess.rankSourceFoRData,
           feedBacks: [],
-          follower: []
+          followedBy: []
         };
         conferenceDetailsList.push(newConferenceDetailItem);
 
@@ -1711,7 +1785,6 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
     }
   }
 };
-
 app.get('/admin/conferences', adminConferences);
 app.post('/admin/conferences', adminConferences);
 
@@ -1729,11 +1802,11 @@ const transformToDetail = (conference: any): ConferenceResponse => {
       updatedAt: conference.updatedAt,
     },
     organization: conference.organization, // Initialize as null
-    locations: null, // Initialize as []
+    location: null, // Initialize as []
     dates: [],
     rankSourceFoRData: [],
     feedBacks: [],
-    follower: [],
+    followedBy: [],
   };
 
 
@@ -1744,8 +1817,9 @@ const transformToDetail = (conference: any): ConferenceResponse => {
       accessType: conference.accessType || null,
       isAvailable: null,
       conferenceId: conference.id,
-      summary: null,
+      summerize: null,
       callForPaper: null,
+      publisher: null,
       link: conference.link || null,
       cfpLink: null,
       impLink: null,
@@ -1758,7 +1832,7 @@ const transformToDetail = (conference: any): ConferenceResponse => {
 
 
   if (conference.location) {
-    detail.locations = {
+    detail.location = {
       id: conference.id,  // Use a consistent ID scheme.  conference.id for now
       address: conference.location.address || null,
       cityStateProvince: conference.location.cityStateProvince || null,
@@ -1879,8 +1953,6 @@ const saveConferenceData: RequestHandler<any, { message: string }, ConferenceLis
     res.status(500).json({ message: 'Internal server error' });
   }
 };
-
-
 app.post('/api/v1/conferences/save', saveConferenceData);
 
 // 17. Register User
@@ -1949,12 +2021,9 @@ const signupUser: RequestHandler<any, { message: string } | UserResponse, { firs
     res.status(500).json({ message: 'Internal server error' });
   }
 };
-
 app.post('/api/v1/user/signup', signupUser); // Register the route
 
 // 18. Login user
-// ... (các import và code khác, KHÔNG import bcrypt) ...
-
 const signinUser: RequestHandler<any, { message: string; user?: Omit<UserResponse, "password"> }, { email: string; password: string }, any> = async (req, res): Promise<any> => {
   try {
     const { email, password } = req.body;

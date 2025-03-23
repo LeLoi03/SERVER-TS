@@ -1,0 +1,53 @@
+[
+  {
+    "conference": {
+      "id": "29996657-75d9-4870-9295-4151be8ef8d6",
+      "title": "name",
+      "acronym": "acronym",
+      "creatorId": "test",
+      "createdAt": "2025-03-23T10:00:25.179Z",
+      "updatedAt": "2025-03-23T10:00:25.179Z"
+    },
+    "organization": {
+      "id": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89",
+      "year": 2025,
+      "accessType": "offline",
+      "isAvailable": true,
+      "conferenceId": "29996657-75d9-4870-9295-4151be8ef8d6",
+      "summerize": "ugiuj",
+      "callForPaper": "",
+      "link": "link",
+      "cfpLink": "",
+      "impLink": "",
+      "topics": [],
+      "createdAt": "2025-03-23T10:00:25.179Z",
+      "updatedAt": "2025-03-23T10:00:25.179Z"
+    },
+    "location": {
+      "id": "09243fd5-d487-4231-8ff0-a8eab912f690",
+      "address": "address",
+      "cityStateProvince": "",
+      "country": "",
+      "continent": "",
+      "createdAt": "2025-03-23T10:00:25.179Z",
+      "updatedAt": "2025-03-23T10:00:25.179Z",
+      "isAvailable": true,
+      "organizeId": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89"
+    },
+    "dates": [
+      {
+        "id": "10c0aebf-cdd4-47cf-9ae7-44ed6347de3b",
+        "organizedId": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89",
+        "fromDate": "2025-03-25T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "Conference Date",
+        "createdAt": "2025-03-23T10:00:25.179Z",
+        "updatedAt": "2025-03-23T10:00:25.179Z",
+        "isAvailable": true
+      }
+    ],
+    "rankSourceFoRData": [],
+    "status": "Approved"
+  }
+]

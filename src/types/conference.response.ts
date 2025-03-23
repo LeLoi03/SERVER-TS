@@ -1,11 +1,11 @@
 export type ConferenceResponse = {
   conference: ConferenceIdentity;
   organization: Organization;
-  locations: Location | null;
+  location: Location | null;
   dates: ImportantDate[] | null;
   rankSourceFoRData: Rank[] | null;
   feedBacks: Feedback[] | null;
-  follower: FollowerInfo[] | null;
+  followedBy: FollowerInfo[] | null;
 };
 
 export type ConferenceIdentity = {
@@ -23,8 +23,9 @@ export type Organization = {
   accessType: string | null;
   isAvailable: boolean | null;
   conferenceId: string | null;
-  summary: string | null;
+  summerize: string | null;
   callForPaper: string | null;
+  publisher: string | null;
   link: string | null;
   cfpLink: string | null;
   impLink: string | null;

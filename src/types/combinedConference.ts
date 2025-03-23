@@ -27,5 +27,5 @@ interface CombinedConference {
     creatorId?: string; // Might be useful
     status?: 'Pending' | 'Approved' | 'Rejected'; // Add the status property
     callForPaper?: string; //From organization.
-    summary?: string;
+    summerize?: string;
   }
