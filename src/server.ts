@@ -1777,6 +1777,145 @@ const saveConferenceData: RequestHandler<any, { message: string }, ConferenceLis
 };
 
 app.post('/api/v1/conferences/save', saveConferenceData);
+
+// 17. Register User
+const signupUser: RequestHandler<any, { message: string } | UserResponse, { firstname: string; lastname: string; email: string; password: string }, any> = async (req, res): Promise<any> => {
+  try {
+    const { firstname, lastname, email, password } = req.body;
+
+    // --- Basic Validation (giống như trong form, nhưng nên validate cả ở backend) ---
+    if (!firstname || !lastname || !email || !password) {
+      return res.status(400).json({ message: 'Missing required fields' });
+    }
+
+    // Simple email format check (improve as needed)
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return res.status(400).json({ message: 'Invalid email format' });
+    }
+
+    // --- Check for Existing User (IMPORTANT) ---
+    let users: UserResponse[] = [];
+    try {
+      const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+      users = JSON.parse(userData);
+    } catch (error: any) {
+      if (error.code !== 'ENOENT') { // Ignore "file not found", as that just means it's the first user.
+        console.error('Error reading or parsing user data:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+      }
+      // If ENOENT (file not found), `users` will remain an empty array, which is fine.
+    }
+
+    const emailExists = users.some(user => user.email === email);
+    if (emailExists) {
+      return res.status(409).json({ message: 'Email already registered' }); // 409 Conflict
+    }
+
+    // --- Create User Object ---
+    const now = new Date().toISOString();
+    const newUser: UserResponse = {
+      id: uuidv4(), // Generate unique ID
+      firstName: firstname,  // Corrected casing
+      lastName: lastname,    // Corrected casing
+      email,
+      password, //  Store the password (ideally, you'd hash this)
+      dob: "",
+      role: 'user', // Default role
+      followedConferences: [],
+      myConferences: [],
+      calendar: [],
+      feedBacks: [],
+      notifications: [],
+      createdAt: now,
+      updatedAt: now,
+    };
+    // --- Add to Users Array and Save ---
+    users.push(newUser);
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+    // --- Return Success Response (201 Created) ---
+    //   It's good practice to return *some* user data, but NOT the password!
+    const responseUser: UserResponse = { ...newUser };
+    delete responseUser.password; //  Remove the password field
+    res.status(201).json(responseUser);
+
+  } catch (error: any) {
+    console.error('Error signing up user:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/user/signup', signupUser); // Register the route
+
+// 18. Login user
+// ... (các import và code khác, KHÔNG import bcrypt) ...
+
+const signinUser: RequestHandler<any, { message: string; user?: Omit<UserResponse, "password"> }, { email: string; password: string }, any> = async (req, res): Promise<any> => {
+  try {
+    const { email, password } = req.body;
+
+    // --- Basic Validation ---
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Missing email or password' });
+    }
+
+    // --- Read User Data ---
+    let users: UserResponse[] = [];
+    try {
+      const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+      users = JSON.parse(userData);
+    } catch (error: any) {
+      if (error.code !== 'ENOENT') {
+        console.error('Error reading or parsing user data:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+      }
+      // If file doesn't exist, there are no users, login will fail.
+    }
+
+    // --- Find User by Email ---
+    const user = users.find(u => u.email === email);
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid email or password' }); // 401 Unauthorized
+    }
+
+    // --- Check Password (DIRECT comparison - NOT RECOMMENDED) ---
+    if (user.password !== password) { //  So sánh trực tiếp. KHÔNG AN TOÀN!
+      return res.status(401).json({ message: 'Invalid email or password' }); // 401 Unauthorized
+    }
+      // --- Return Success Response (200 OK) ---
+    // Create a copy of the user object and remove the password.  VERY IMPORTANT!
+    const responseUser: Omit<UserResponse, "password"> = {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      dob: user.dob,
+      role: user.role,
+      followedConferences: user.followedConferences,
+      myConferences: user.myConferences,
+      calendar: user.calendar,
+      feedBacks: user.feedBacks,
+      notifications: user.notifications,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+      // Include any other fields you want to send *except* password
+      ...(user.avatar && { avatar: user.avatar }),         // Conditionally include avatar
+      ...(user.aboutme && { aboutme: user.aboutme }),   // Conditionally include aboutme
+      ...(user.interestedTopics && { interestedTopics: user.interestedTopics }),
+      ...(user.background && { background: user.background }),
+    };
+
+    res.status(200).json({ message: 'Login successful', user: responseUser });
+
+
+  } catch (error: any) {
+    console.error('Error signing in user:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/user/signin', signinUser); // Register the route
+
 // // --- Start the server ---
 // app.listen(3000, () => {
 //   console.log(`Server listening on port 3000`);

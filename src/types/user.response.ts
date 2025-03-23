@@ -5,6 +5,7 @@ export type UserResponse = {
   firstName: string;
   lastName: string;
   dob?: string; // Optional, as it might not be present in all users
+  password?: string;
   role: string;
   avatar?: string;
   aboutme?: string;
