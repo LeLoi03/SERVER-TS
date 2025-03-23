@@ -210,29 +210,11 @@
     "feedBacks": [],
     "notifications": [
       {
-        "id": "2e9be7ab-10c7-4e43-a3a3-43bd11261d3b",
-        "createdAt": "2025-03-23T13:42:34.424Z",
+        "id": "11b27174-4aee-46c0-b1a9-279a99968473",
+        "createdAt": "2025-03-23T13:47:48.105Z",
         "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: IEEE International Conference on Computer Communications",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "e8d0a43e-f280-45f6-95d4-d683d2bf5a14",
-        "createdAt": "2025-03-23T13:43:05.169Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"IEEE International Conference on Computer Communications\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "1346268e-277c-494f-9635-b1425c584b1e",
-        "createdAt": "2025-03-23T13:47:26.779Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
+        "seenAt": "2025-03-23T14:51:42.517Z",
+        "deletedAt": "2025-03-23T14:51:50.671Z",
         "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
       },
@@ -240,18 +222,36 @@
         "id": "859ea6d5-7e89-41e3-96ba-fad06f5460d8",
         "createdAt": "2025-03-23T13:47:46.724Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-03-23T14:54:12.700Z",
         "deletedAt": null,
         "message": "Le Loi unfollowed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Unfollow Conference"
       },
       {
-        "id": "11b27174-4aee-46c0-b1a9-279a99968473",
-        "createdAt": "2025-03-23T13:47:48.105Z",
+        "id": "1346268e-277c-494f-9635-b1425c584b1e",
+        "createdAt": "2025-03-23T13:47:26.779Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-03-23T14:54:12.700Z",
         "deletedAt": null,
         "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "e8d0a43e-f280-45f6-95d4-d683d2bf5a14",
+        "createdAt": "2025-03-23T13:43:05.169Z",
+        "isImportant": false,
+        "seenAt": "2025-03-23T14:52:08.840Z",
+        "deletedAt": null,
+        "message": "Le Loi added the conference \"IEEE International Conference on Computer Communications\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "2e9be7ab-10c7-4e43-a3a3-43bd11261d3b",
+        "createdAt": "2025-03-23T13:42:34.424Z",
+        "isImportant": false,
+        "seenAt": "2025-03-23T14:54:12.701Z",
+        "deletedAt": null,
+        "message": "Le Loi followed the conference: IEEE International Conference on Computer Communications",
         "type": "Follow Conference"
       }
     ],
