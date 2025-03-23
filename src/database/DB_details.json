@@ -43,16 +43,7 @@
       }
     ],
     "feedBacks": [],
-    "follower": [
-      {
-        "id": "test",
-        "email": "loicute5fps@gmail.com",
-        "firstName": "Le",
-        "lastName": "Loi",
-        "createdAt": "2025-03-23T04:17:16.033Z",
-        "updatedAt": "2025-03-23T04:17:16.033Z"
-      }
-    ]
+    "follower": []
   },
   {
     "conference": {

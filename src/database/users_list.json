@@ -81,26 +81,10 @@
     "lastName": "Loi",
     "dob": "2003-10-22",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "840606e5-5797-4b33-86ff-9d907ce75633",
-        "createdAt": "2025-03-23T04:17:16.033Z",
-        "updatedAt": "2025-03-23T04:17:16.033Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "feedBacks": [],
-    "notifications": [
-      {
-        "id": "6e77b136-ff96-42c4-acc0-c977e42830a7",
-        "createdAt": "2025-03-23T04:17:16.033Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
-        "type": "Follow Conference"
-      }
-    ],
+    "notifications": [],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z",
     "avatar": "/avatar3.jpg",
