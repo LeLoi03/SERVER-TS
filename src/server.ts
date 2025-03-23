@@ -2021,6 +2021,50 @@ const signinUser: RequestHandler<any, { message: string; user?: Omit<UserRespons
 
 app.post('/api/v1/user/signin', signinUser); // Register the route
 
+// 19. Get Topics
+app.get('/api/v1/topics', (req, res) => {
+  try {
+      const rawData = fs.readFileSync(conferenceDetailsFilePath, 'utf8');
+      const data = JSON.parse(rawData); // data is now an ARRAY
+
+      // Check if data is an array
+      if (!Array.isArray(data)) {
+          res.status(500).json({ error: 'Invalid data format: Expected an array' });
+          return;
+      }
+
+      // Accumulate topics from all conferences
+      let allTopics: string[] = [];
+      for (const conferenceData of data) {
+          if (conferenceData.organization && Array.isArray(conferenceData.organization.topics)) {
+              allTopics = allTopics.concat(conferenceData.organization.topics);
+          }
+      }
+
+      // Remove duplicate topics (important!)
+      const uniqueTopics = [...new Set(allTopics)];
+
+      if (uniqueTopics.length === 0) {
+           res.status(404).json({ error: 'Topics not found in the data' });
+           return
+      }
+
+      res.json(uniqueTopics);
+
+  } catch (error) {
+    if ((error as any).code === 'ENOENT') {
+      console.error('Error: DB_details.json not found at:', conferenceDetailsFilePath);
+          res.status(500).json({ error: 'Database file not found' });
+      } else if (error instanceof SyntaxError) {
+          console.error('Error: Invalid JSON in DB_details.json:', error);
+          res.status(500).json({ error: 'Invalid database file format' });
+      } else {
+          console.error('Error reading or parsing DB_details.json:', error);
+          res.status(500).json({ error: 'Failed to retrieve topics' });
+      }
+  }
+});
+
 // // --- Start the server ---
 // app.listen(3000, () => {
 //   console.log(`Server listening on port 3000`);
