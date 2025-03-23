@@ -11,6 +11,16 @@
     "calendar": [],
     "feedBacks": [],
     "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
     "createdAt": "2023-01-20T10:00:00Z",
     "updatedAt": "2023-01-20T10:00:00Z"
   },
@@ -26,6 +36,16 @@
     "calendar": [],
     "feedBacks": [],
     "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
     "createdAt": "2025-03-16T02:23:28.642Z",
     "updatedAt": "2025-03-16T02:23:28.642Z"
   },
@@ -41,6 +61,16 @@
     "calendar": [],
     "feedBacks": [],
     "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
     "createdAt": "2022-11-05T14:30:00Z",
     "updatedAt": "2023-02-10T16:45:00Z"
   },
@@ -56,6 +86,16 @@
     "calendar": [],
     "feedBacks": [],
     "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
     "createdAt": "2024-02-28T09:15:00Z",
     "updatedAt": "2024-03-01T11:20:00Z"
   },
@@ -71,6 +111,16 @@
     "calendar": [],
     "feedBacks": [],
     "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z"
   },
@@ -90,8 +140,20 @@
     "avatar": "/avatar3.jpg",
     "aboutme": "Meo Meo",
     "interestedTopics": [
-      "Blockchain"
+      "Blockchain",
+      "AI"
     ],
-    "background": "/light.jpg"
+    "background": "/light.jpg",
+    "calendar": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": false,
+      "upComingEvent": false,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    }
   }
 ]

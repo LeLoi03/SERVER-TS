@@ -458,5 +458,1845 @@
     ],
     "feedBacks": [],
     "follower": []
+  },
+  {
+    "conference": {
+      "id": "1fd209f2-72bc-45bd-a418-ed8a46bba44c",
+      "title": "ACM Symposium on Principles of Distributed Computing",
+      "acronym": "PODC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.591Z",
+      "updatedAt": "2025-03-22T12:16:32.591Z"
+    },
+    "organization": {
+      "id": "1fd209f2-72bc-45bd-a418-ed8a46bba44c",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "1fd209f2-72bc-45bd-a418-ed8a46bba44c",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.591Z",
+      "updatedAt": "2025-03-22T12:16:32.591Z"
+    },
+    "locations": {
+      "id": "1fd209f2-72bc-45bd-a418-ed8a46bba44c",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.591Z",
+      "updatedAt": "2025-03-22T12:16:32.591Z",
+      "isAvailable": null,
+      "organizeId": "1fd209f2-72bc-45bd-a418-ed8a46bba44c"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "73a6ef11-d605-4a06-badd-67e6ecb97a9f",
+      "title": "ACM Symposium on Solid and Physical Modelling",
+      "acronym": "SPM",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.688Z",
+      "updatedAt": "2025-03-22T12:16:32.688Z"
+    },
+    "organization": {
+      "id": "73a6ef11-d605-4a06-badd-67e6ecb97a9f",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "73a6ef11-d605-4a06-badd-67e6ecb97a9f",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.688Z",
+      "updatedAt": "2025-03-22T12:16:32.688Z"
+    },
+    "locations": {
+      "id": "73a6ef11-d605-4a06-badd-67e6ecb97a9f",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.688Z",
+      "updatedAt": "2025-03-22T12:16:32.688Z",
+      "isAvailable": null,
+      "organizeId": "73a6ef11-d605-4a06-badd-67e6ecb97a9f"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "c5a945f1-5833-4339-83d5-835606f37b72",
+      "title": "ACM Symposium on Theory of Computing",
+      "acronym": "STOC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.821Z",
+      "updatedAt": "2025-03-22T12:16:32.821Z"
+    },
+    "organization": {
+      "id": "c5a945f1-5833-4339-83d5-835606f37b72",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "c5a945f1-5833-4339-83d5-835606f37b72",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.821Z",
+      "updatedAt": "2025-03-22T12:16:32.821Z"
+    },
+    "locations": {
+      "id": "c5a945f1-5833-4339-83d5-835606f37b72",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.821Z",
+      "updatedAt": "2025-03-22T12:16:32.821Z",
+      "isAvailable": null,
+      "organizeId": "c5a945f1-5833-4339-83d5-835606f37b72"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "118467e8-4d04-431d-a4ab-8e611715d706",
+      "title": "ACM Symposium on User Interface Software and Technology",
+      "acronym": "UIST",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.954Z",
+      "updatedAt": "2025-03-22T12:16:32.954Z"
+    },
+    "organization": {
+      "id": "118467e8-4d04-431d-a4ab-8e611715d706",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "118467e8-4d04-431d-a4ab-8e611715d706",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.954Z",
+      "updatedAt": "2025-03-22T12:16:32.954Z"
+    },
+    "locations": {
+      "id": "118467e8-4d04-431d-a4ab-8e611715d706",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.954Z",
+      "updatedAt": "2025-03-22T12:16:32.954Z",
+      "isAvailable": null,
+      "organizeId": "118467e8-4d04-431d-a4ab-8e611715d706"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "34ec9aca-ee48-4194-be91-5373b486ab62",
+      "title": "ACM Virtual Reality Software and Technology",
+      "acronym": "VRST",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:33.057Z",
+      "updatedAt": "2025-03-22T12:16:33.057Z"
+    },
+    "organization": {
+      "id": "34ec9aca-ee48-4194-be91-5373b486ab62",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "34ec9aca-ee48-4194-be91-5373b486ab62",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:33.057Z",
+      "updatedAt": "2025-03-22T12:16:33.057Z"
+    },
+    "locations": {
+      "id": "34ec9aca-ee48-4194-be91-5373b486ab62",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:33.057Z",
+      "updatedAt": "2025-03-22T12:16:33.057Z",
+      "isAvailable": null,
+      "organizeId": "34ec9aca-ee48-4194-be91-5373b486ab62"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "1ee87a2d-21f7-4935-b717-3f5abb048d6b",
+      "title": "ACM Workshop on Hot Topics in Networks",
+      "acronym": "HOTNETS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:33.241Z",
+      "updatedAt": "2025-03-22T12:16:33.241Z"
+    },
+    "organization": {
+      "id": "1ee87a2d-21f7-4935-b717-3f5abb048d6b",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "1ee87a2d-21f7-4935-b717-3f5abb048d6b",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:33.241Z",
+      "updatedAt": "2025-03-22T12:16:33.241Z"
+    },
+    "locations": {
+      "id": "1ee87a2d-21f7-4935-b717-3f5abb048d6b",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:33.241Z",
+      "updatedAt": "2025-03-22T12:16:33.241Z",
+      "isAvailable": null,
+      "organizeId": "1ee87a2d-21f7-4935-b717-3f5abb048d6b"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "79a7c7fc-b3de-4f2e-a491-1dd2d0b4740e",
+      "title": "ACM-SIGACT Symposium on Principles of Programming Languages",
+      "acronym": "POPL",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:33.357Z",
+      "updatedAt": "2025-03-22T12:16:33.357Z"
+    },
+    "organization": {
+      "id": "79a7c7fc-b3de-4f2e-a491-1dd2d0b4740e",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "79a7c7fc-b3de-4f2e-a491-1dd2d0b4740e",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:33.357Z",
+      "updatedAt": "2025-03-22T12:16:33.357Z"
+    },
+    "locations": {
+      "id": "79a7c7fc-b3de-4f2e-a491-1dd2d0b4740e",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:33.357Z",
+      "updatedAt": "2025-03-22T12:16:33.357Z",
+      "isAvailable": null,
+      "organizeId": "79a7c7fc-b3de-4f2e-a491-1dd2d0b4740e"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "1e61baf4-c46e-491c-875d-b24ab842e9f3",
+      "title": "ACM-SIGPLAN Conference on Programming Language Design and Implementation",
+      "acronym": "PLDI",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:33.409Z",
+      "updatedAt": "2025-03-22T12:16:33.409Z"
+    },
+    "organization": {
+      "id": "1e61baf4-c46e-491c-875d-b24ab842e9f3",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "1e61baf4-c46e-491c-875d-b24ab842e9f3",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:33.409Z",
+      "updatedAt": "2025-03-22T12:16:33.409Z"
+    },
+    "locations": {
+      "id": "1e61baf4-c46e-491c-875d-b24ab842e9f3",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:33.409Z",
+      "updatedAt": "2025-03-22T12:16:33.409Z",
+      "isAvailable": null,
+      "organizeId": "1e61baf4-c46e-491c-875d-b24ab842e9f3"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "d7955a54-bccd-43e0-bedd-267b239cd795",
+      "title": "ACM-SIGRAPH Interactive 3D Graphics and Games",
+      "acronym": "I3DG",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:33.875Z",
+      "updatedAt": "2025-03-22T12:16:33.875Z"
+    },
+    "organization": {
+      "id": "d7955a54-bccd-43e0-bedd-267b239cd795",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "d7955a54-bccd-43e0-bedd-267b239cd795",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:33.875Z",
+      "updatedAt": "2025-03-22T12:16:33.875Z"
+    },
+    "locations": {
+      "id": "d7955a54-bccd-43e0-bedd-267b239cd795",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:33.875Z",
+      "updatedAt": "2025-03-22T12:16:33.875Z",
+      "isAvailable": null,
+      "organizeId": "d7955a54-bccd-43e0-bedd-267b239cd795"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "ebfacda6-fa81-47ad-ae9f-e12da6947b5b",
+      "title": "ACM/IEEE International Conference on Human-Robot Interaction",
+      "acronym": "HRI",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.183Z",
+      "updatedAt": "2025-03-22T12:16:34.183Z"
+    },
+    "organization": {
+      "id": "ebfacda6-fa81-47ad-ae9f-e12da6947b5b",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "ebfacda6-fa81-47ad-ae9f-e12da6947b5b",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.183Z",
+      "updatedAt": "2025-03-22T12:16:34.183Z"
+    },
+    "locations": {
+      "id": "ebfacda6-fa81-47ad-ae9f-e12da6947b5b",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.183Z",
+      "updatedAt": "2025-03-22T12:16:34.183Z",
+      "isAvailable": null,
+      "organizeId": "ebfacda6-fa81-47ad-ae9f-e12da6947b5b"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "a8461a75-b60c-4a82-a368-1dc1ae2c116a",
+      "title": "ACM/IEEE International Conference on Modelling, Analysis and Simulation of Wireless and Mobile Systems",
+      "acronym": "MSWIM",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.312Z",
+      "updatedAt": "2025-03-22T12:16:34.312Z"
+    },
+    "organization": {
+      "id": "a8461a75-b60c-4a82-a368-1dc1ae2c116a",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "a8461a75-b60c-4a82-a368-1dc1ae2c116a",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.312Z",
+      "updatedAt": "2025-03-22T12:16:34.312Z"
+    },
+    "locations": {
+      "id": "a8461a75-b60c-4a82-a368-1dc1ae2c116a",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.312Z",
+      "updatedAt": "2025-03-22T12:16:34.312Z",
+      "isAvailable": null,
+      "organizeId": "a8461a75-b60c-4a82-a368-1dc1ae2c116a"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "df0456f3-72ed-4cbd-94e7-5e83afbb98ef",
+      "title": "ACM/IEEE Symposium on Edge Computing",
+      "acronym": "SEC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.433Z",
+      "updatedAt": "2025-03-22T12:16:34.433Z"
+    },
+    "organization": {
+      "id": "df0456f3-72ed-4cbd-94e7-5e83afbb98ef",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "df0456f3-72ed-4cbd-94e7-5e83afbb98ef",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.433Z",
+      "updatedAt": "2025-03-22T12:16:34.433Z"
+    },
+    "locations": {
+      "id": "df0456f3-72ed-4cbd-94e7-5e83afbb98ef",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.433Z",
+      "updatedAt": "2025-03-22T12:16:34.433Z",
+      "isAvailable": null,
+      "organizeId": "df0456f3-72ed-4cbd-94e7-5e83afbb98ef"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "9a1d4551-ee14-4c75-a489-676a2d4bafed",
+      "title": "ACM/IFIP/USENIX International Middleware Conference",
+      "acronym": "Middleware",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.621Z",
+      "updatedAt": "2025-03-22T12:16:34.621Z"
+    },
+    "organization": {
+      "id": "9a1d4551-ee14-4c75-a489-676a2d4bafed",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "9a1d4551-ee14-4c75-a489-676a2d4bafed",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.621Z",
+      "updatedAt": "2025-03-22T12:16:34.621Z"
+    },
+    "locations": {
+      "id": "9a1d4551-ee14-4c75-a489-676a2d4bafed",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.621Z",
+      "updatedAt": "2025-03-22T12:16:34.621Z",
+      "isAvailable": null,
+      "organizeId": "9a1d4551-ee14-4c75-a489-676a2d4bafed"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "db83627a-310d-48ce-bd83-a79cc5769792",
+      "title": "ACM/SIAM Symposium on Discrete Algorithms",
+      "acronym": "SODA",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.714Z",
+      "updatedAt": "2025-03-22T12:16:34.714Z"
+    },
+    "organization": {
+      "id": "db83627a-310d-48ce-bd83-a79cc5769792",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "db83627a-310d-48ce-bd83-a79cc5769792",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.714Z",
+      "updatedAt": "2025-03-22T12:16:34.714Z"
+    },
+    "locations": {
+      "id": "db83627a-310d-48ce-bd83-a79cc5769792",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.714Z",
+      "updatedAt": "2025-03-22T12:16:34.714Z",
+      "isAvailable": null,
+      "organizeId": "db83627a-310d-48ce-bd83-a79cc5769792"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "1cc89613-a670-4dbc-afdf-b7dc7b48af7f",
+      "title": "ACM/SPEC International Conference on Performance Engineering",
+      "acronym": "ICPE",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:34.918Z",
+      "updatedAt": "2025-03-22T12:16:34.918Z"
+    },
+    "organization": {
+      "id": "1cc89613-a670-4dbc-afdf-b7dc7b48af7f",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "1cc89613-a670-4dbc-afdf-b7dc7b48af7f",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:34.918Z",
+      "updatedAt": "2025-03-22T12:16:34.918Z"
+    },
+    "locations": {
+      "id": "1cc89613-a670-4dbc-afdf-b7dc7b48af7f",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:34.918Z",
+      "updatedAt": "2025-03-22T12:16:34.918Z",
+      "isAvailable": null,
+      "organizeId": "1cc89613-a670-4dbc-afdf-b7dc7b48af7f"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "87badf85-489f-4b1d-af78-7d1ddd8af0c2",
+      "title": "ACS/IEEE International Conference on Computer Systems and Applications",
+      "acronym": "AICCSA",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.373Z",
+      "updatedAt": "2025-03-22T12:16:35.373Z"
+    },
+    "organization": {
+      "id": "87badf85-489f-4b1d-af78-7d1ddd8af0c2",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "87badf85-489f-4b1d-af78-7d1ddd8af0c2",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.373Z",
+      "updatedAt": "2025-03-22T12:16:35.373Z"
+    },
+    "locations": {
+      "id": "87badf85-489f-4b1d-af78-7d1ddd8af0c2",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.373Z",
+      "updatedAt": "2025-03-22T12:16:35.373Z",
+      "isAvailable": null,
+      "organizeId": "87badf85-489f-4b1d-af78-7d1ddd8af0c2"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "c9df11f5-83e7-4101-a91f-5bc29f387fe5",
+      "title": "Advanced Concepts for Intelligent Vision Systems",
+      "acronym": "ACIVS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.447Z",
+      "updatedAt": "2025-03-22T12:16:35.447Z"
+    },
+    "organization": {
+      "id": "c9df11f5-83e7-4101-a91f-5bc29f387fe5",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "c9df11f5-83e7-4101-a91f-5bc29f387fe5",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.447Z",
+      "updatedAt": "2025-03-22T12:16:35.447Z"
+    },
+    "locations": {
+      "id": "c9df11f5-83e7-4101-a91f-5bc29f387fe5",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.447Z",
+      "updatedAt": "2025-03-22T12:16:35.447Z",
+      "isAvailable": null,
+      "organizeId": "c9df11f5-83e7-4101-a91f-5bc29f387fe5"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "13b33f9c-e20f-4be4-8e6b-db875144d024",
+      "title": "Advanced Visual Interfaces",
+      "acronym": "AVI",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.553Z",
+      "updatedAt": "2025-03-22T12:16:35.553Z"
+    },
+    "organization": {
+      "id": "13b33f9c-e20f-4be4-8e6b-db875144d024",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "13b33f9c-e20f-4be4-8e6b-db875144d024",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.553Z",
+      "updatedAt": "2025-03-22T12:16:35.553Z"
+    },
+    "locations": {
+      "id": "13b33f9c-e20f-4be4-8e6b-db875144d024",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.553Z",
+      "updatedAt": "2025-03-22T12:16:35.553Z",
+      "isAvailable": null,
+      "organizeId": "13b33f9c-e20f-4be4-8e6b-db875144d024"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "2a54168a-e04b-45c0-804d-896a04a66953",
+      "title": "Advances in Cryptology",
+      "acronym": "CRYPTO",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.708Z",
+      "updatedAt": "2025-03-22T12:16:35.708Z"
+    },
+    "organization": {
+      "id": "2a54168a-e04b-45c0-804d-896a04a66953",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "2a54168a-e04b-45c0-804d-896a04a66953",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.708Z",
+      "updatedAt": "2025-03-22T12:16:35.708Z"
+    },
+    "locations": {
+      "id": "2a54168a-e04b-45c0-804d-896a04a66953",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.708Z",
+      "updatedAt": "2025-03-22T12:16:35.708Z",
+      "isAvailable": null,
+      "organizeId": "2a54168a-e04b-45c0-804d-896a04a66953"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "afb8c318-2edb-4ecd-a96b-d6debf3adbd6",
+      "title": "Advances in Modal Logic",
+      "acronym": "AiML",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.774Z",
+      "updatedAt": "2025-03-22T12:16:35.774Z"
+    },
+    "organization": {
+      "id": "afb8c318-2edb-4ecd-a96b-d6debf3adbd6",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "afb8c318-2edb-4ecd-a96b-d6debf3adbd6",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.774Z",
+      "updatedAt": "2025-03-22T12:16:35.774Z"
+    },
+    "locations": {
+      "id": "afb8c318-2edb-4ecd-a96b-d6debf3adbd6",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.774Z",
+      "updatedAt": "2025-03-22T12:16:35.774Z",
+      "isAvailable": null,
+      "organizeId": "afb8c318-2edb-4ecd-a96b-d6debf3adbd6"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f2dc382f-0194-4390-b757-37b1ec32d814",
+      "title": "Advances in Neural Information Processing Systems (was NIPS)",
+      "acronym": "NeurIPS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.842Z",
+      "updatedAt": "2025-03-22T12:16:35.842Z"
+    },
+    "organization": {
+      "id": "f2dc382f-0194-4390-b757-37b1ec32d814",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f2dc382f-0194-4390-b757-37b1ec32d814",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.842Z",
+      "updatedAt": "2025-03-22T12:16:35.842Z"
+    },
+    "locations": {
+      "id": "f2dc382f-0194-4390-b757-37b1ec32d814",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.842Z",
+      "updatedAt": "2025-03-22T12:16:35.842Z",
+      "isAvailable": null,
+      "organizeId": "f2dc382f-0194-4390-b757-37b1ec32d814"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f6dbd67b-0456-412a-97fd-a4ed7edb6ee6",
+      "title": "Algorithmic Learning Theory",
+      "acronym": "ALT",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:35.980Z",
+      "updatedAt": "2025-03-22T12:16:35.980Z"
+    },
+    "organization": {
+      "id": "f6dbd67b-0456-412a-97fd-a4ed7edb6ee6",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f6dbd67b-0456-412a-97fd-a4ed7edb6ee6",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:35.980Z",
+      "updatedAt": "2025-03-22T12:16:35.980Z"
+    },
+    "locations": {
+      "id": "f6dbd67b-0456-412a-97fd-a4ed7edb6ee6",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:35.980Z",
+      "updatedAt": "2025-03-22T12:16:35.980Z",
+      "isAvailable": null,
+      "organizeId": "f6dbd67b-0456-412a-97fd-a4ed7edb6ee6"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f62b62bb-f030-48ee-81fd-251d6859da1a",
+      "title": "Algorithms and Data Structures Symposium (was Workshop on Algorithms and Data Structures)",
+      "acronym": "WADS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.059Z",
+      "updatedAt": "2025-03-22T12:16:36.059Z"
+    },
+    "organization": {
+      "id": "f62b62bb-f030-48ee-81fd-251d6859da1a",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f62b62bb-f030-48ee-81fd-251d6859da1a",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.059Z",
+      "updatedAt": "2025-03-22T12:16:36.059Z"
+    },
+    "locations": {
+      "id": "f62b62bb-f030-48ee-81fd-251d6859da1a",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.059Z",
+      "updatedAt": "2025-03-22T12:16:36.059Z",
+      "isAvailable": null,
+      "organizeId": "f62b62bb-f030-48ee-81fd-251d6859da1a"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "317d7299-a178-42bd-a331-477c87ab0f31",
+      "title": "American Medical Informatics Annual Fall Symposium",
+      "acronym": "AMIA",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.111Z",
+      "updatedAt": "2025-03-22T12:16:36.111Z"
+    },
+    "organization": {
+      "id": "317d7299-a178-42bd-a331-477c87ab0f31",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "317d7299-a178-42bd-a331-477c87ab0f31",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.111Z",
+      "updatedAt": "2025-03-22T12:16:36.111Z"
+    },
+    "locations": {
+      "id": "317d7299-a178-42bd-a331-477c87ab0f31",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.111Z",
+      "updatedAt": "2025-03-22T12:16:36.111Z",
+      "isAvailable": null,
+      "organizeId": "317d7299-a178-42bd-a331-477c87ab0f31"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "6dd0fa16-c366-42ac-be77-71b8a095e24f",
+      "title": "Annual Computer Security Applications Conference",
+      "acronym": "ACSAC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.281Z",
+      "updatedAt": "2025-03-22T12:16:36.281Z"
+    },
+    "organization": {
+      "id": "6dd0fa16-c366-42ac-be77-71b8a095e24f",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "6dd0fa16-c366-42ac-be77-71b8a095e24f",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.281Z",
+      "updatedAt": "2025-03-22T12:16:36.281Z"
+    },
+    "locations": {
+      "id": "6dd0fa16-c366-42ac-be77-71b8a095e24f",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.281Z",
+      "updatedAt": "2025-03-22T12:16:36.281Z",
+      "isAvailable": null,
+      "organizeId": "6dd0fa16-c366-42ac-be77-71b8a095e24f"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "3520f8e7-addd-4404-b160-059bc748ec85",
+      "title": "Annual Conference on Computer Science Logic",
+      "acronym": "CSL",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.353Z",
+      "updatedAt": "2025-03-22T12:16:36.353Z"
+    },
+    "organization": {
+      "id": "3520f8e7-addd-4404-b160-059bc748ec85",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "3520f8e7-addd-4404-b160-059bc748ec85",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.353Z",
+      "updatedAt": "2025-03-22T12:16:36.353Z"
+    },
+    "locations": {
+      "id": "3520f8e7-addd-4404-b160-059bc748ec85",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.353Z",
+      "updatedAt": "2025-03-22T12:16:36.353Z",
+      "isAvailable": null,
+      "organizeId": "3520f8e7-addd-4404-b160-059bc748ec85"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "876c77a9-801d-43d7-9c4b-728519965a8f",
+      "title": "Annual Conference on Innovation and Technology in Computer Science Education",
+      "acronym": "ITiCSE",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.417Z",
+      "updatedAt": "2025-03-22T12:16:36.417Z"
+    },
+    "organization": {
+      "id": "876c77a9-801d-43d7-9c4b-728519965a8f",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "876c77a9-801d-43d7-9c4b-728519965a8f",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.417Z",
+      "updatedAt": "2025-03-22T12:16:36.417Z"
+    },
+    "locations": {
+      "id": "876c77a9-801d-43d7-9c4b-728519965a8f",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.417Z",
+      "updatedAt": "2025-03-22T12:16:36.417Z",
+      "isAvailable": null,
+      "organizeId": "876c77a9-801d-43d7-9c4b-728519965a8f"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "58631a3b-9301-4102-b01f-17e7cdc6e8eb",
+      "title": "Annual Conference on Privacy, Security and Trust",
+      "acronym": "PST",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.577Z",
+      "updatedAt": "2025-03-22T12:16:36.577Z"
+    },
+    "organization": {
+      "id": "58631a3b-9301-4102-b01f-17e7cdc6e8eb",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "58631a3b-9301-4102-b01f-17e7cdc6e8eb",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.577Z",
+      "updatedAt": "2025-03-22T12:16:36.577Z"
+    },
+    "locations": {
+      "id": "58631a3b-9301-4102-b01f-17e7cdc6e8eb",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.577Z",
+      "updatedAt": "2025-03-22T12:16:36.577Z",
+      "isAvailable": null,
+      "organizeId": "58631a3b-9301-4102-b01f-17e7cdc6e8eb"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f18f797c-317b-42a0-8a61-32270cc65dbe",
+      "title": "Annual International Workshop on Presence",
+      "acronym": "ISPR",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.651Z",
+      "updatedAt": "2025-03-22T12:16:36.651Z"
+    },
+    "organization": {
+      "id": "f18f797c-317b-42a0-8a61-32270cc65dbe",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f18f797c-317b-42a0-8a61-32270cc65dbe",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.651Z",
+      "updatedAt": "2025-03-22T12:16:36.651Z"
+    },
+    "locations": {
+      "id": "f18f797c-317b-42a0-8a61-32270cc65dbe",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.651Z",
+      "updatedAt": "2025-03-22T12:16:36.651Z",
+      "isAvailable": null,
+      "organizeId": "f18f797c-317b-42a0-8a61-32270cc65dbe"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "36cee636-4ed1-4598-8551-b8d4928dad25",
+      "title": "Annual Meeting of the Cognitive Science Society",
+      "acronym": "CogSci",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.729Z",
+      "updatedAt": "2025-03-22T12:16:36.729Z"
+    },
+    "organization": {
+      "id": "36cee636-4ed1-4598-8551-b8d4928dad25",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "36cee636-4ed1-4598-8551-b8d4928dad25",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.729Z",
+      "updatedAt": "2025-03-22T12:16:36.729Z"
+    },
+    "locations": {
+      "id": "36cee636-4ed1-4598-8551-b8d4928dad25",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.729Z",
+      "updatedAt": "2025-03-22T12:16:36.729Z",
+      "isAvailable": null,
+      "organizeId": "36cee636-4ed1-4598-8551-b8d4928dad25"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f7654bdb-80d8-4971-867b-98b1692fb28d",
+      "title": "Annual Meeting of the Special Interest Group on Discourse and Dialog",
+      "acronym": "SIGdial",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:36.826Z",
+      "updatedAt": "2025-03-22T12:16:36.826Z"
+    },
+    "organization": {
+      "id": "f7654bdb-80d8-4971-867b-98b1692fb28d",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f7654bdb-80d8-4971-867b-98b1692fb28d",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:36.826Z",
+      "updatedAt": "2025-03-22T12:16:36.826Z"
+    },
+    "locations": {
+      "id": "f7654bdb-80d8-4971-867b-98b1692fb28d",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:36.826Z",
+      "updatedAt": "2025-03-22T12:16:36.826Z",
+      "isAvailable": null,
+      "organizeId": "f7654bdb-80d8-4971-867b-98b1692fb28d"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f831b2f8-4982-46b9-a45e-68dc35939ca6",
+      "title": "Applications of Information Visualization",
+      "acronym": "IV-App",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:37.007Z",
+      "updatedAt": "2025-03-22T12:16:37.007Z"
+    },
+    "organization": {
+      "id": "f831b2f8-4982-46b9-a45e-68dc35939ca6",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f831b2f8-4982-46b9-a45e-68dc35939ca6",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:37.007Z",
+      "updatedAt": "2025-03-22T12:16:37.007Z"
+    },
+    "locations": {
+      "id": "f831b2f8-4982-46b9-a45e-68dc35939ca6",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:37.007Z",
+      "updatedAt": "2025-03-22T12:16:37.007Z",
+      "isAvailable": null,
+      "organizeId": "f831b2f8-4982-46b9-a45e-68dc35939ca6"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "9f5edf4c-8f97-4947-a4d3-f835dc1f6c97",
+      "title": "Applications of Natural Language to Data Bases",
+      "acronym": "NLDB",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:37.106Z",
+      "updatedAt": "2025-03-22T12:16:37.106Z"
+    },
+    "organization": {
+      "id": "9f5edf4c-8f97-4947-a4d3-f835dc1f6c97",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "9f5edf4c-8f97-4947-a4d3-f835dc1f6c97",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:37.106Z",
+      "updatedAt": "2025-03-22T12:16:37.106Z"
+    },
+    "locations": {
+      "id": "9f5edf4c-8f97-4947-a4d3-f835dc1f6c97",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:37.106Z",
+      "updatedAt": "2025-03-22T12:16:37.106Z",
+      "isAvailable": null,
+      "organizeId": "9f5edf4c-8f97-4947-a4d3-f835dc1f6c97"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "a0232f06-e6ab-4229-ae19-4494f6750485",
+      "title": "ArtsIT, Interactivity & Game Creation (was International Conference on Arts and Technology)",
+      "acronym": "ArtsIT",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:37.622Z",
+      "updatedAt": "2025-03-22T12:16:37.622Z"
+    },
+    "organization": {
+      "id": "a0232f06-e6ab-4229-ae19-4494f6750485",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "a0232f06-e6ab-4229-ae19-4494f6750485",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:37.622Z",
+      "updatedAt": "2025-03-22T12:16:37.622Z"
+    },
+    "locations": {
+      "id": "a0232f06-e6ab-4229-ae19-4494f6750485",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:37.622Z",
+      "updatedAt": "2025-03-22T12:16:37.622Z",
+      "isAvailable": null,
+      "organizeId": "a0232f06-e6ab-4229-ae19-4494f6750485"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "543badaa-f065-4c23-9f8b-88c3715c48fb",
+      "title": "Asian Conference on Computer Vision",
+      "acronym": "ACCV",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:38.893Z",
+      "updatedAt": "2025-03-22T12:16:38.893Z"
+    },
+    "organization": {
+      "id": "543badaa-f065-4c23-9f8b-88c3715c48fb",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "543badaa-f065-4c23-9f8b-88c3715c48fb",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:38.893Z",
+      "updatedAt": "2025-03-22T12:16:38.893Z"
+    },
+    "locations": {
+      "id": "543badaa-f065-4c23-9f8b-88c3715c48fb",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:38.893Z",
+      "updatedAt": "2025-03-22T12:16:38.893Z",
+      "isAvailable": null,
+      "organizeId": "543badaa-f065-4c23-9f8b-88c3715c48fb"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f7dbfc55-1de2-4c0e-9c0d-82502ebcaddf",
+      "title": "Asian Conference on Intelligent Information and Database Systems",
+      "acronym": "ACIIDS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:39.140Z",
+      "updatedAt": "2025-03-22T12:16:39.140Z"
+    },
+    "organization": {
+      "id": "f7dbfc55-1de2-4c0e-9c0d-82502ebcaddf",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f7dbfc55-1de2-4c0e-9c0d-82502ebcaddf",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:39.140Z",
+      "updatedAt": "2025-03-22T12:16:39.140Z"
+    },
+    "locations": {
+      "id": "f7dbfc55-1de2-4c0e-9c0d-82502ebcaddf",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:39.140Z",
+      "updatedAt": "2025-03-22T12:16:39.140Z",
+      "isAvailable": null,
+      "organizeId": "f7dbfc55-1de2-4c0e-9c0d-82502ebcaddf"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "c6ea689e-3932-44a5-b012-37e94ad8f023",
+      "title": "Australasian Database Conference",
+      "acronym": "ADC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:40.716Z",
+      "updatedAt": "2025-03-22T12:16:40.716Z"
+    },
+    "organization": {
+      "id": "c6ea689e-3932-44a5-b012-37e94ad8f023",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "c6ea689e-3932-44a5-b012-37e94ad8f023",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:40.716Z",
+      "updatedAt": "2025-03-22T12:16:40.716Z"
+    },
+    "locations": {
+      "id": "c6ea689e-3932-44a5-b012-37e94ad8f023",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:40.716Z",
+      "updatedAt": "2025-03-22T12:16:40.716Z",
+      "isAvailable": null,
+      "organizeId": "c6ea689e-3932-44a5-b012-37e94ad8f023"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "248a5084-4a05-4660-81ae-db94bc413399",
+      "title": "Australasian Document Computing Symposium",
+      "acronym": "ADCS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:40.784Z",
+      "updatedAt": "2025-03-22T12:16:40.784Z"
+    },
+    "organization": {
+      "id": "248a5084-4a05-4660-81ae-db94bc413399",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "248a5084-4a05-4660-81ae-db94bc413399",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:40.784Z",
+      "updatedAt": "2025-03-22T12:16:40.784Z"
+    },
+    "locations": {
+      "id": "248a5084-4a05-4660-81ae-db94bc413399",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:40.784Z",
+      "updatedAt": "2025-03-22T12:16:40.784Z",
+      "isAvailable": null,
+      "organizeId": "248a5084-4a05-4660-81ae-db94bc413399"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "d0db1dd3-c039-4da4-8506-07ddc4826dcf",
+      "title": "Australasian Information Security Conference",
+      "acronym": "AISC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:40.971Z",
+      "updatedAt": "2025-03-22T12:16:40.971Z"
+    },
+    "organization": {
+      "id": "d0db1dd3-c039-4da4-8506-07ddc4826dcf",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "d0db1dd3-c039-4da4-8506-07ddc4826dcf",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:40.971Z",
+      "updatedAt": "2025-03-22T12:16:40.971Z"
+    },
+    "locations": {
+      "id": "d0db1dd3-c039-4da4-8506-07ddc4826dcf",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:40.971Z",
+      "updatedAt": "2025-03-22T12:16:40.971Z",
+      "isAvailable": null,
+      "organizeId": "d0db1dd3-c039-4da4-8506-07ddc4826dcf"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "49494f50-693b-4857-8dac-5f4cdd5314a5",
+      "title": "Australasian Joint Conference on Artificial Intelligence",
+      "acronym": "AI",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:41.103Z",
+      "updatedAt": "2025-03-22T12:16:41.103Z"
+    },
+    "organization": {
+      "id": "49494f50-693b-4857-8dac-5f4cdd5314a5",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "49494f50-693b-4857-8dac-5f4cdd5314a5",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:41.103Z",
+      "updatedAt": "2025-03-22T12:16:41.103Z"
+    },
+    "locations": {
+      "id": "49494f50-693b-4857-8dac-5f4cdd5314a5",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:41.103Z",
+      "updatedAt": "2025-03-22T12:16:41.103Z",
+      "isAvailable": null,
+      "organizeId": "49494f50-693b-4857-8dac-5f4cdd5314a5"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
   }
 ]
