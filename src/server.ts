@@ -250,16 +250,16 @@ import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
 import { Feedback } from './types/conference.response';
 import { v4 as uuidv4 } from 'uuid'; // Import thư viện uuid
+import { AnyCnameRecord } from 'dns';
 
 // --- Route Handlers ---
 
 
 
 const userFilePath = path.resolve(__dirname, './database/users_list.json');
-const conferenceDetailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-const conferencesListFilePath = path.resolve(__dirname, './database/conferences_list.json');
 const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
-
+const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, './database/DB_details.json');
 // 1. Lấy Conference theo ID
 const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { message: string }, any, any> = async (
   req,
@@ -285,11 +285,11 @@ const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { m
     // Nếu bạn chỉ cần string ISO, bạn có thể bỏ qua phần này.
     if (foundConference.dates && foundConference.dates.length > 0) {
       foundConference.dates.forEach(date => {
-        if (date.fromDate) {
-          date.fromDate = new Date(date.fromDate).toISOString();
+        if (date?.fromDate) {
+          date.fromDate = new Date(date?.fromDate).toISOString();
         }
-        if (date.toDate) {
-          date.toDate = new Date(date.toDate).toISOString();
+        if (date?.toDate) {
+          date.toDate = new Date(date?.toDate).toISOString();
         }
       });
     }
@@ -313,40 +313,6 @@ const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { m
   }
 };
 app.get('/api/v1/conference/:id', getConferenceById);
-
-
-// 2. Lấy danh sách Conferences
-const getConferenceList: RequestHandler<any, ConferenceListResponse | { message: string }, any, any> = async (
-  req,
-  res
-): Promise<void> => {
-  try {
-    const data = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
-
-    // Parse toàn bộ file JSON thành đối tượng ConferenceListResponse
-    const conferenceListResponse: ConferenceListResponse = JSON.parse(data);
-
-    console.log("success");
-    // Trả về đối tượng ConferenceListResponse đã parse
-    res.status(200).json(conferenceListResponse);
-    return;
-
-
-  } catch (error: any) {
-    console.error('Error reading or processing conference data:', error);
-    if (error instanceof SyntaxError) {
-      res.status(500).json({ message: 'Invalid JSON format in conference-list.json' });
-      return;
-    } else if (error.code === 'ENOENT') {
-      res.status(500).json({ message: 'conference-list.json not found' });
-      return;
-    } else {
-      res.status(500).json({ message: 'Internal server error' });
-      return;
-    }
-  }
-};
-app.get('/api/v1/conferences', getConferenceList);
 
 
 // 3. Follow conference (CORRECTED - No Duplicate Notifications)
@@ -386,8 +352,8 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     if (!updatedUser.followedConferences) {
       updatedUser.followedConferences = [];
     }
-    if (!updatedConference.followedBy) {
-      updatedConference.followedBy = [];
+    if (!updatedConference.follower) {
+      updatedConference.follower = [];
     }
 
     const existingFollowIndex = updatedUser.followedConferences.findIndex(fc => fc.id === conferenceId);
@@ -399,7 +365,7 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     if (existingFollowIndex !== -1) {
       // Unfollow:
       updatedUser.followedConferences.splice(existingFollowIndex, 1);
-      updatedConference.followedBy = updatedConference.followedBy.filter(follower => follower.id !== userId);
+      updatedConference.follower = updatedConference.follower.filter(follower => follower.id !== userId);
       notificationType = 'Unfollow Conference';
       notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
       isFollowing = false;
@@ -419,7 +385,7 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
         createdAt: now,
         updatedAt: now,
       };
-      updatedConference.followedBy.push(followerInfo);
+      updatedConference.follower.push(followerInfo);
       notificationType = 'Follow Conference';
       notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
       isFollowing = true;
@@ -451,8 +417,8 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     // --- 3. Add notification to OTHER followers (and send real-time) ---
     // ONLY if it's a FOLLOW action, and EXCLUDE the acting user.
     if (isFollowing) { // Only send to other followers on FOLLOW
-      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-        updatedConference.followedBy.forEach(follower => {
+      if (updatedConference.follower && updatedConference.follower.length > 0) {
+        updatedConference.follower.forEach(follower => {
           if (follower.id !== userId) { // Exclude the acting user!
             const userFollowIndex = users.findIndex(u => u.id === follower.id);
             if (userFollowIndex !== -1) {
@@ -504,7 +470,6 @@ const followConference: RequestHandler<{ id: string }, UserResponse | { message:
     }
   }
 };
-
 app.post('/api/v1/user/:id/follow', followConference);
 
 // 4. Lấy thông tin user theo ID ---
@@ -543,114 +508,114 @@ app.get('/api/v1/user/:id', getUserById); // Route để lấy thông tin user
 
 // Hàm so sánh mảng không quan tâm thứ tự
 function areArraysEqual(arr1: any[] | undefined, arr2: any[] | undefined): boolean {
-    if (!arr1 && !arr2) return true; // Cả hai đều undefined
-    if (!arr1 || !arr2) return false; // Một trong hai là undefined
-    if (arr1.length !== arr2.length) return false;
+  if (!arr1 && !arr2) return true; // Cả hai đều undefined
+  if (!arr1 || !arr2) return false; // Một trong hai là undefined
+  if (arr1.length !== arr2.length) return false;
 
-    const sortedArr1 = [...arr1].sort();
-    const sortedArr2 = [...arr2].sort();
+  const sortedArr1 = [...arr1].sort();
+  const sortedArr2 = [...arr2].sort();
 
-    for (let i = 0; i < sortedArr1.length; i++) {
-        if (sortedArr1[i] !== sortedArr2[i]) return false;
-    }
+  for (let i = 0; i < sortedArr1.length; i++) {
+    if (sortedArr1[i] !== sortedArr2[i]) return false;
+  }
 
-    return true;
+  return true;
 }
 
 // 5. Update User
 const updateUser: RequestHandler<{ id: string }, UserResponse | { message: string }, Partial<UserResponse>, any> = async (req, res) => {
-    try {
-        const userId = req.params.id;
-        const updatedData = req.body;
+  try {
+    const userId = req.params.id;
+    const updatedData = req.body;
 
-        if (!userId) {
-            return res.status(400).json({ message: 'Missing userId' }) as any;
-        }
-
-        const data = await fs.promises.readFile(userFilePath, 'utf-8');
-        const users: UserResponse[] = JSON.parse(data);
-
-        const userIndex = users.findIndex(u => u.id === userId);
-
-        if (userIndex === -1) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-
-        const oldUser = { ...users[userIndex] }; // Lưu lại user data cũ để so sánh
-        const updatedUser = { ...users[userIndex], ...updatedData }; // Cập nhật thông tin user
-
-        // --- Tạo notification ---
-        const now = new Date().toISOString();
-        let notificationMessage = `Your profile has been updated.`; // Default message
-
-        // So sánh các trường quan trọng để tạo message chi tiết hơn (optional):
-        const changedFields: string[] = [];
-        if (oldUser.firstName !== updatedUser.firstName) {
-            changedFields.push('First Name');
-        }
-        if (oldUser.lastName !== updatedUser.lastName) {
-            changedFields.push('Last Name');
-        }
-        if (oldUser.email !== updatedUser.email) {
-            changedFields.push("Email");
-        }
-        if (oldUser.aboutme !== updatedUser.aboutme) {
-            changedFields.push("About me");
-        }
-        if (oldUser.avatar !== updatedUser.avatar) {
-            changedFields.push("Avatar");
-        }
-        if (!areArraysEqual(oldUser.interestedTopics, updatedUser.interestedTopics)) {
-            changedFields.push("Interested topics");
-        }
-        if (oldUser.background !== updatedUser.background) {
-            changedFields.push("Interests");
-        }
-
-
-        if (changedFields.length > 0) {
-             notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
-        }
-        //Tạo notification
-        const notification: Notification = {
-            id: uuidv4(),
-            createdAt: now,
-            isImportant: false, // Or true, depending on your needs
-            seenAt: null,
-            deletedAt: null,
-            message: notificationMessage,
-            type: 'Profile Update', // Set a notification type
-        };
-
-        // --- 1. Add to user's notifications ---
-        if (!updatedUser.notifications) {
-            updatedUser.notifications = [];
-        }
-        updatedUser.notifications.push(notification);
-
-        // --- 2. Send real-time notification ---
-        const userSocket = connectedUsers.get(userId);
-        if (userSocket) {
-            userSocket.emit('notification', notification);
-        }
-
-
-        // --- Update user data ---
-        users[userIndex] = updatedUser;
-        await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-
-        res.status(200).json(updatedUser);
-
-    } catch (error: any) {
-        console.error('Error updating user:', error);
-        if (error instanceof SyntaxError) {
-            res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
-        } else if (error.code === 'ENOENT') {
-            res.status(500).json({ message: 'user-list.json not found' });
-        } else {
-            res.status(500).json({ message: 'Internal server error' });
-        }
+    if (!userId) {
+      return res.status(400).json({ message: 'Missing userId' }) as any;
     }
+
+    const data = await fs.promises.readFile(userFilePath, 'utf-8');
+    const users: UserResponse[] = JSON.parse(data);
+
+    const userIndex = users.findIndex(u => u.id === userId);
+
+    if (userIndex === -1) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const oldUser = { ...users[userIndex] }; // Lưu lại user data cũ để so sánh
+    const updatedUser = { ...users[userIndex], ...updatedData }; // Cập nhật thông tin user
+
+    // --- Tạo notification ---
+    const now = new Date().toISOString();
+    let notificationMessage = `Your profile has been updated.`; // Default message
+
+    // So sánh các trường quan trọng để tạo message chi tiết hơn (optional):
+    const changedFields: string[] = [];
+    if (oldUser.firstName !== updatedUser.firstName) {
+      changedFields.push('First Name');
+    }
+    if (oldUser.lastName !== updatedUser.lastName) {
+      changedFields.push('Last Name');
+    }
+    if (oldUser.email !== updatedUser.email) {
+      changedFields.push("Email");
+    }
+    if (oldUser.aboutme !== updatedUser.aboutme) {
+      changedFields.push("About me");
+    }
+    if (oldUser.avatar !== updatedUser.avatar) {
+      changedFields.push("Avatar");
+    }
+    if (!areArraysEqual(oldUser.interestedTopics, updatedUser.interestedTopics)) {
+      changedFields.push("Interested topics");
+    }
+    if (oldUser.background !== updatedUser.background) {
+      changedFields.push("Interests");
+    }
+
+
+    if (changedFields.length > 0) {
+      notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
+    }
+    //Tạo notification
+    const notification: Notification = {
+      id: uuidv4(),
+      createdAt: now,
+      isImportant: false, // Or true, depending on your needs
+      seenAt: null,
+      deletedAt: null,
+      message: notificationMessage,
+      type: 'Profile Update', // Set a notification type
+    };
+
+    // --- 1. Add to user's notifications ---
+    if (!updatedUser.notifications) {
+      updatedUser.notifications = [];
+    }
+    updatedUser.notifications.push(notification);
+
+    // --- 2. Send real-time notification ---
+    const userSocket = connectedUsers.get(userId);
+    if (userSocket) {
+      userSocket.emit('notification', notification);
+    }
+
+
+    // --- Update user data ---
+    users[userIndex] = updatedUser;
+    await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+    res.status(200).json(updatedUser);
+
+  } catch (error: any) {
+    console.error('Error updating user:', error);
+    if (error instanceof SyntaxError) {
+      res.status(500).json({ message: 'Invalid JSON format in user-list.json' });
+    } else if (error.code === 'ENOENT') {
+      res.status(500).json({ message: 'user-list.json not found' });
+    } else {
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  }
 };
 
 app.put('/api/v1/user/:id', updateUser);
@@ -744,13 +709,12 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
 
 
     // --- Update users_list.json ---
-    const usersListFilePath = path.resolve(__dirname, './database/users_list.json');
     let usersList: UserResponse[] = [];
 
     try {
-      const usersFileExists = await fs.promises.access(usersListFilePath).then(() => true).catch(() => false);
+      const usersFileExists = await fs.promises.access(userFilePath).then(() => true).catch(() => false);
       if (usersFileExists) {
-        const usersData = await fs.promises.readFile(usersListFilePath, 'utf-8');
+        const usersData = await fs.promises.readFile(userFilePath, 'utf-8');
         if (usersData.trim() !== "") {
           usersList = JSON.parse(usersData);
         }
@@ -785,7 +749,7 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
     }
 
     // Write the updated users list back to the file
-    await fs.promises.writeFile(usersListFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
+    await fs.promises.writeFile(userFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
 
 
     res.status(201).json(addedConference); // Return the added conference
@@ -811,12 +775,11 @@ const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { mes
       return res.status(400).json({ message: 'Missing userId' }) as any;
     }
 
-    const filePath = path.resolve(__dirname, './database/add_conferences.json');
 
     let addedConferences: AddedConference[] = []; // Initialize as empty array
 
     try {
-      const data = await fs.promises.readFile(filePath, 'utf-8');
+      const data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
       // Check for empty file *before* parsing.  This is much more robust.
       if (data.trim() === '') {  // .trim() removes leading/trailing whitespace
         // File is empty, no need to parse. `addedConferences` is already [].
@@ -861,12 +824,9 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
       return;
     }
 
-    const userFilePath = path.resolve(__dirname, './database/users_list.json');
-    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-
     const [userData, conferenceData] = await Promise.all([
       fs.promises.readFile(userFilePath, 'utf-8'),
-      fs.promises.readFile(conferenceFilePath, 'utf-8'),
+      fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
     ]);
 
     const users: UserResponse[] = JSON.parse(userData);
@@ -943,8 +903,8 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
     // ONLY if it's an ADD action, and EXCLUDE the acting user.
     //  AND ONLY if the user is also following the conference.
     if (isAdding) {  //Only send notification add
-      if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-        updatedConference.followedBy.forEach(follower => {
+      if (updatedConference.follower && updatedConference.follower.length > 0) {
+        updatedConference.follower.forEach(follower => {
           if (follower.id !== userId) { // Exclude acting user
             const userFollowIndex = users.findIndex(u => u.id === follower.id);
             if (userFollowIndex !== -1) {
@@ -1004,350 +964,124 @@ const addToCalendar: RequestHandler<{ id: string }, UserResponse | { message: st
 app.post('/api/v1/user/:id/add-to-calendar', addToCalendar);
 
 
-// 9. Lấy calendar events
 const getUserCalendar: RequestHandler = async (req, res) => {
   try {
-    const userId = req.params.id;
-    console.log("1. Received request for userId:", userId);
+      const userId = req.params.id;
 
-    if (!userId) {
-      console.log("2. UserId is missing. Returning 400.");
-      return res.status(400).json({ message: 'Missing userId' }) as any;
-    }
-
-    const userFilePath = path.resolve(__dirname, './database/users_list.json');
-    console.log("3. User file path:", userFilePath);
-
-    let userData: string;
-    try {
-      userData = await fs.promises.readFile(userFilePath, 'utf-8');
-      console.log("4. User data read successfully.");
-    } catch (error) {
-      console.error("Error reading users_list.json:", error);
-      return res.status(500).json({ message: 'Error reading user data' });
-    }
-
-    let users: UserResponse[];
-    try {
-      users = JSON.parse(userData);
-      console.log("5. User data parsed successfully. Number of users:", users.length);
-    } catch (error) {
-      console.error("Error parsing users_list.json:", error);
-      return res.status(500).json({ message: 'Error parsing user data' });
-    }
-
-    const user = users.find(u => u.id === userId);
-    console.log("6. Found user:", user);
-
-    if (!user || !user.calendar) {
-      console.log("7. User not found or no calendar data. Returning 404.");
-      return res.status(404).json({ message: 'User not found or no calendar data' });
-    }
-
-    const calendarIds = user.calendar.map(item => item.id);
-    console.log("8. User's calendar IDs:", calendarIds);
-
-    const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    console.log("9. Conference details file path:", detailsFilePath);
-
-    let detailsData: string;
-    try {
-      detailsData = await
-        fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => '[]');
-      console.log("11. Conference data read successfully.");
-    } catch (error) {
-      console.error("Error reading conference files:", error);
-      return res.status(500).json({ message: "Error reading conference data." });
-    }
-
-    let detailsConferences: ConferenceResponse[];
-    try {
-      detailsConferences = JSON.parse(detailsData);
-      console.log("12. Details conferences parsed. Count:", detailsConferences.length);
-    } catch (error) {
-      console.error("Error parsing conference_details_list.json", error);
-      return res.status(500).json({ message: "Error parsing details conference data." });
-    }
-
-
-    const allConferences = [
-      ...detailsConferences.map(c => ({
-        id: c.conference.id,
-        title: c.conference.title,
-        dates: c.dates,
-      })),
-
-    ];
-    console.log("14. All conferences. Count:", allConferences.length);
-
-    const calendar = allConferences.filter(conf => calendarIds.includes(conf.id));
-    console.log("15. Filtered calendar conferences. Count:", calendar.length);
-
-    const calendarEvents: CalendarEvent[] = [];
-
-    calendar.forEach((conf, confIndex) => {
-      console.log(`16. Processing conference ${confIndex + 1}:`, conf.title);
-      conf.dates.forEach((date, dateIndex) => {
-        console.log(`  17. Processing date ${dateIndex + 1} for conference ${confIndex + 1}:`, date);
-        const fromDate = new Date(date.fromDate);
-        const toDate = new Date(date.toDate);
-        const diffTime = Math.abs(toDate.getTime() - fromDate.getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-        if (diffDays > 0) {
-          for (let i = 0; i <= diffDays; i++) {
-            const currentDate = new Date(fromDate);
-            currentDate.setDate(fromDate.getDate() + i);
-            calendarEvents.push({
-              day: currentDate.getDate(),
-              month: currentDate.getMonth() + 1,
-              year: currentDate.getFullYear(),
-              type: date.type,
-              conference: conf.title,
-              conferenceId: conf.id,
-            });
-          }
-        } else {
-          calendarEvents.push({
-            day: fromDate.getDate(),
-            month: fromDate.getMonth() + 1,
-            year: fromDate.getFullYear(),
-            type: date.type,
-            conference: conf.title,
-            conferenceId: conf.id,
-          });
-        }
-      });
-    });
-
-    console.log("18. Calendar events created. Count:", calendarEvents.length);
-    return res.status(200).json(calendarEvents);
-
-  } catch (error: any) {
-    console.error('Error fetching calendar events:', error);
-    return res.status(500).json({ message: 'Internal server error' });
-  }
-};
-app.get('/api/v1/user/:id/calendar', getUserCalendar);
-
-
-// 10. Filter conferences
-const getFilteredConferences: RequestHandler<any, { items: CombinedConference[]; total: number; } | { message: string }, any, any> = async (req, res) => {
-  console.log("Request received at /api/v1/filter-conferences");
-  console.log("Request query parameters:", req.query);
-
-  try {
-    const detailsFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-
-    console.log("detailsFilePath:", detailsFilePath);
-
-    const detailsData = await fs.promises.readFile(detailsFilePath, 'utf-8').catch(() => {
-      console.log("Error reading detailsFilePath. Returning empty array.");
-      return '[]';
-    });
-
-
-    console.log("detailsData (first 100 chars):", detailsData.substring(0, 100));
-
-    let detailsConferences: ConferenceResponse[];
-
-    try {
-      detailsConferences = JSON.parse(detailsData);
-      console.log("detailsConferences length:", detailsConferences.length);
-    } catch (parseError) {
-      console.error("Error parsing JSON:", parseError);
-      res.status(500).json({ message: 'Error parsing JSON data' });
-      return;
-    }
-
-
-    const allConferences: CombinedConference[] = [
-      ...detailsConferences.map(c => ({
-        id: c.conference.id,
-        title: c.conference.title,
-        acronym: c.conference.acronym,
-        location: c.locations,
-        year: c.organization.year,
-        rankSourceFoRData: c.rankSourceFoRData?.[0], // Use optional chaining
-        topics: c.organization.topics,
-        dates: c.dates[0],
-        link: c.organization.link,
-        accessType: c.organization.accessType,
-        creatorId: c.conference.creatorId,
-        callForPaper: c.organization.callForPaper,
-        summary: c.organization.summary,
-      })),
-    ];
-
-    console.log("allConferences length:", allConferences.length);
-
-    const queryParams = new URLSearchParams(req.query as any);
-
-    const topics = queryParams.getAll('topics');
-    const publishers = queryParams.getAll('publisher');
-    const countries = queryParams.getAll('country');
-    const types = queryParams.getAll('type');
-    const keyword = queryParams.get('keyword');
-    const startDateStr = queryParams.get('startDate');
-    const endDateStr = queryParams.get('endDate');
-    const rank = queryParams.get('rank');
-    const sourceYear = queryParams.get('sourceYear');
-    const page = parseInt(queryParams.get('page') || '1', 10);
-    const sortBy = queryParams.get('sortBy') || 'date';
-    const limit = parseInt(queryParams.get('limit') || '8', 10);
-    const sortOrder = queryParams.get('sortOrder') || 'asc'; // Get sortOrder
-
-    console.log("Filtering with parameters:");
-    console.log("  topics:", topics);
-    console.log("  publishers:", publishers);
-    console.log("  countries:", countries);
-    console.log("  types:", types);
-    console.log("  keyword:", keyword);
-    console.log("  startDateStr:", startDateStr);
-    console.log("  endDateStr:", endDateStr);
-    console.log("  rank:", rank);
-    console.log("  sourceYear:", sourceYear);
-    console.log("  page:", page);
-    console.log("  sortBy:", sortBy);
-    console.log("  limit:", limit);
-    console.log("  sortOrder:", sortOrder); // Log sortOrder
-
-
-    let filteredConferences = allConferences;
-
-    // --- FILTERING (Same as before) ---
-    if (keyword) {
-      const keywordLower = keyword.toLowerCase();
-      console.log("Before keyword filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        conf.title.toLowerCase().includes(keywordLower) ||
-        conf.acronym.toLowerCase().includes(keywordLower) ||
-        conf.topics.some(topic => topic.toLowerCase().includes(keywordLower)) ||
-        (conf.summary && conf.summary.toLowerCase().includes(keywordLower)) ||
-        (conf.callForPaper && conf.callForPaper.toLowerCase().includes(keywordLower))
-      );
-      console.log("After keyword filter:", filteredConferences.length);
-    }
-    if (topics.length > 0) {
-      console.log("Before topics filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        topics.some(topic => conf.topics.includes(topic))
-      );
-      console.log("After topics filter:", filteredConferences.length);
-    }
-    if (publishers.length > 0) {
-      console.log("Before publishers filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        conf.rankSourceFoRData?.source && publishers.includes(conf.rankSourceFoRData.source)
-      ); // Use optional chaining and check for existence
-      console.log("After publishers filter:", filteredConferences.length);
-    }
-
-    if (countries.length > 0) {
-      console.log("Before countries filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        countries.includes(conf.location.country)
-      );
-      console.log("After countries filter:", filteredConferences.length);
-    }
-
-    if (types.length > 0) {
-      console.log("Before types filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        types.includes(conf.accessType)
-      );
-      console.log("After types filter:", filteredConferences.length);
-    }
-
-    if (startDateStr) {
-      const startDate = new Date(startDateStr);
-      console.log("Before startDate filter:", filteredConferences.length);
-      console.log("startDate:", startDate);
-      filteredConferences = filteredConferences.filter(conf => {
-        const confStartDate = new Date(conf.dates.fromDate);
-        console.log("confStartDate:", confStartDate);
-        return confStartDate >= startDate;
-      });
-      console.log("After startDate filter:", filteredConferences.length);
-    }
-    if (endDateStr) {
-      const endDate = new Date(endDateStr);
-      console.log("Before endDate filter:", filteredConferences.length);
-      console.log("endDate:", endDate);
-      filteredConferences = filteredConferences.filter(conf => {
-        const confEndDate = new Date(conf.dates.toDate);
-        console.log("confEndDate:", confEndDate);
-        return confEndDate <= endDate;
-      });
-      console.log("After endDate filter:", filteredConferences.length);
-    }
-
-    if (rank) {
-      console.log("Before rank filter:", filteredConferences.length);
-      filteredConferences = filteredConferences.filter(conf =>
-        conf.rankSourceFoRData?.rank && conf.rankSourceFoRData.rank === rank
-      ); // Use optional chaining and check for existence
-
-      console.log("After rank filter:", filteredConferences.length);
-    }
-
-    if (sourceYear) {
-      const year = parseInt(sourceYear);
-      console.log("Before sourceYear filter:", filteredConferences.length);
-      if (!isNaN(year)) {
-        filteredConferences = filteredConferences.filter(conf => conf.year === year);
+      if (!userId) {
+          return res.status(400).json({ message: 'Missing userId' }) as any;
       }
-      console.log("After sourceYear filter:", filteredConferences.length);
-    }
 
+      let users: UserResponse[] = [];
+      try {
+          const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+          users = JSON.parse(userData);
+      } catch (error: any) {
+          if (error.code !== 'ENOENT') {
+              console.error("Error reading or parsing users_list.json:", error);
+              return res.status(500).json({ message: 'Error reading or parsing user data' });
+          }
+      }
 
-    // --- SORTING (Server-Side) WITH sortOrder ---
-    console.log("Before sorting:", filteredConferences.length);
-    if (sortBy === 'date' || sortBy === 'startDate') {
-      filteredConferences.sort((a, b) => {
-        const dateA = a.dates.fromDate ? new Date(a.dates.fromDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
-        const dateB = b.dates.fromDate ? new Date(b.dates.fromDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
-        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA; // Use sortOrder
-      });
-    } else if (sortBy === 'endDate') {
-      filteredConferences.sort((a, b) => {
-        const dateA = a.dates.toDate ? new Date(a.dates.toDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
-        const dateB = b.dates.toDate ? new Date(b.dates.toDate).getTime() : (sortOrder === 'asc' ? Infinity : -Infinity);
-        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA; // Use sortOrder
-      });
-    } else if (sortBy === 'rank') {
-      filteredConferences.sort((a, b) => {
-        const rankA = a.rankSourceFoRData?.rank || '';
-        const rankB = b.rankSourceFoRData?.rank || '';
-        return sortOrder === 'asc' ? rankA.localeCompare(rankB) : rankB.localeCompare(rankA); // Use sortOrder
-      });
-    } else if (sortBy === 'name') {
-      filteredConferences.sort((a, b) => {
-        return sortOrder === 'asc' ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title); // Use sortOrder
-      });
-    }
-    console.log("After sorting:", filteredConferences.length);
+      const user = users.find(u => u.id === userId);
 
-    // --- PAGINATION (Server-Side) ---
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    console.log("startIndex:", startIndex);
-    console.log("endIndex:", endIndex);
-    const paginatedConferences = filteredConferences.slice(startIndex, endIndex);
-    console.log("paginatedConferences length:", paginatedConferences.length);
+      if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+      }
 
-    // --- RETURN PAGINATED RESULTS AND TOTAL COUNT ---
-    res.status(200).json({
-      items: paginatedConferences,
-      total: filteredConferences.length,
-    });
+      if (!user.calendar || user.calendar.length === 0) {
+          return res.status(200).json([]);
+      }
+
+      const calendarIds = user.calendar.map(item => item.id);
+
+      let detailsConferences: ConferenceResponse[] = [];
+      try {
+          const detailsData = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
+          detailsConferences = JSON.parse(detailsData);
+      } catch (error: any) {
+          if (error.code !== 'ENOENT') {
+              console.error("Error reading or parsing conference_details_list.json:", error);
+              return res.status(500).json({ message: "Error reading or parsing details conference data." });
+          }
+      }
+
+      if (detailsConferences.length === 0) {
+          return res.status(200).json([]);
+      }
+
+      const allConferences = detailsConferences.map(c => ({
+          id: c.conference.id,
+          title: c.conference.title || "No Title", // Handle null titles
+          dates: c.dates || [],
+      }));
+
+      const calendar = allConferences.filter(conf => calendarIds.includes(conf.id));
+
+      if (calendar.length === 0) {
+          return res.status(200).json([]);
+      }
+
+      const calendarEvents: CalendarEvent[] = [];
+
+      calendar.forEach(conf => {
+          if (conf.dates) {
+              conf.dates.forEach(date => {
+                  // Check for null values on date properties
+                  if (date && date.fromDate && date.toDate) {
+                      const fromDate = new Date(date.fromDate);
+                      const toDate = new Date(date.toDate);
+
+                      if (isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) {
+                          console.error(`Invalid date format for conference ${conf.id}, date:`, date);
+                          return;
+                      }
+
+                      const diffTime = Math.abs(toDate.getTime() - fromDate.getTime());
+                      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                      if (diffDays > 0) {
+                          for (let i = 0; i <= diffDays; i++) {
+                              const currentDate = new Date(fromDate);
+                              currentDate.setDate(fromDate.getDate() + i);
+                              calendarEvents.push({
+                                  day: currentDate.getDate(),
+                                  month: currentDate.getMonth() + 1,
+                                  year: currentDate.getFullYear(),
+                                  type: date.type, // Already handled null type in interface
+                                  conference: conf.title,
+                                  conferenceId: conf.id,
+                              });
+                          }
+                      } else {
+                          calendarEvents.push({
+                              day: fromDate.getDate(),
+                              month: fromDate.getMonth() + 1,
+                              year: fromDate.getFullYear(),
+                              type: date.type, // Already handled null type in interface
+                              conference: conf.title,
+                              conferenceId: conf.id,
+                          });
+                      }
+                  } else {
+                       console.warn(`Skipping date for conference ${conf.id} due to missing fromDate or toDate`);
+                  }
+
+              });
+          } else {
+              console.warn(`Skipping conference ${conf.id} due to missing dates`);
+          }
+      });
+
+      return res.status(200).json(calendarEvents);
 
   } catch (error: any) {
-    console.error('Error filtering conferences:', error);
-    res.status(500).json({ message: 'Internal server error' });
+      console.error('Error fetching calendar events:', error);
+      return res.status(500).json({ message: 'Internal server error' });
   }
 };
-app.get('/api/v1/filter-conferences', getFilteredConferences);
+
+app.get('/api/v1/user/:id/calendar', getUserCalendar);
 
 
 // 11. Add feedback (with real-time notifications)
@@ -1361,11 +1095,9 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
   }
 
   try {
-    const conferenceFilePath = path.resolve(__dirname, './database/conference_details_list.json');
-    const userFilePath = path.resolve(__dirname, './database/users_list.json'); // Need user data
 
     const [conferenceData, userData] = await Promise.all([
-      fs.promises.readFile(conferenceFilePath, 'utf-8'),
+      fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
       fs.promises.readFile(userFilePath, 'utf-8'), // Read user data
     ]);
 
@@ -1432,8 +1164,8 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
 
 
     // --- 2. Send to followers (excluding the creator) ---
-    if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-      updatedConference.followedBy.forEach(follower => {
+    if (updatedConference.follower && updatedConference.follower.length > 0) {
+      updatedConference.follower.forEach(follower => {
         if (follower.id !== creatorId) {  // Exclude the feedback creator
           const followerIndex = users.findIndex(u => u.id === follower.id);
           if (followerIndex !== -1) {
@@ -1465,7 +1197,7 @@ const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message
     users[creatorIndex] = creatorUser; //Update creator
 
     await Promise.all([
-      fs.promises.writeFile(conferenceFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
+      fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8'),
       fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'), // Write updated users
     ]);
 
@@ -1488,11 +1220,10 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
       return res.status(400).json({ message: 'Missing userId' });
     }
 
-    const filePath = path.resolve(__dirname, './database/users_list.json'); // Path to your users file
     let usersData: string;
 
     try {
-      usersData = await fs.promises.readFile(filePath, 'utf-8');
+      usersData = await fs.promises.readFile(userFilePath, 'utf-8');
     } catch (readError: any) {
       if (readError.code === 'ENOENT') {
         // File doesn't exist, meaning no users.  That's not really an error in this context.
@@ -1523,7 +1254,7 @@ const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: 
     users.splice(userIndex, 1);
 
     try {
-      await fs.promises.writeFile(filePath, JSON.stringify(users, null, 2), 'utf-8');
+      await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
     } catch (writeError) {
       console.error("Error writing updated user data:", writeError);
       return res.status(500).json({ message: "Error saving updated user data." });
@@ -1542,7 +1273,6 @@ app.delete('/api/v1/user/:id', deleteUser); // Define the DELETE route
 const getUserNotifications: RequestHandler<{ id: string }, Notification[] | { message: string }, any, any> = async (req, res) => {
   try {
     const { id } = req.params;
-    const userFilePath = path.resolve(__dirname, './database/users_list.json');
 
     const userData = await fs.promises.readFile(userFilePath, 'utf-8');
     const users: UserResponse[] = JSON.parse(userData);
@@ -1570,7 +1300,55 @@ const getUserNotifications: RequestHandler<{ id: string }, Notification[] | { me
 };
 app.get('/api/v1/user/:id/notifications', getUserNotifications);
 
-// 14. Mark All Notifications as Read
+// 14. Update User Notifications:
+// NEW ROUTE: Update user notifications
+interface UpdateNotificationsRequest extends Request {
+  params: {
+      userId: string;
+  };
+  body: {  //Define the body type
+      notifications: Notification[];
+  };
+}
+
+const updateNotificationsHandler: RequestHandler<UpdateNotificationsRequest["params"], { message: string }, UpdateNotificationsRequest["body"]> = async (req, res) => {
+  try {
+      const { userId } = req.params;
+      const { notifications } = req.body;
+
+      // 1. Read the users_list.json file
+      const fileContent = await fs.promises.readFile(userFilePath, 'utf-8');
+      const usersList = JSON.parse(fileContent);
+
+      // 2. Find the user by ID
+      const userIndex = usersList.findIndex((user: any) => user.id === userId);
+
+      if (userIndex === -1) {
+          return res.status(404).json({ message: 'User not found' }) as any;
+      }
+
+      // 3. Validate the notifications data (optional, but recommended)
+      if (!Array.isArray(notifications)) {
+          return res.status(400).json({ message: 'Invalid notifications data. Must be an array.' });
+      }
+      // You might add more specific validation of the Notification objects here.
+
+      // 4. Update the user's notifications
+      usersList[userIndex].notifications = notifications;
+
+      // 5. Write the updated data back to the file
+      await fs.promises.writeFile(userFilePath, JSON.stringify(usersList, null, 2), 'utf-8');
+
+      res.status(200).json({ message: 'Notifications updated successfully' });
+
+  } catch (error: any) {
+      console.error('Error updating notifications:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+app.put('/api/v1/user/:id/notifications', updateNotificationsHandler);
+
+// 15. Mark All Notifications as Read
 const markAllNotificationsAsRead: RequestHandler<{ id: string }, { message: string }, any, any> = async (req, res) => {
   try {
     const { id } = req.params;
@@ -1609,10 +1387,6 @@ app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsA
 
 
 const adminConferences: RequestHandler = async (req, res): Promise<void> => {
-  const addConferencesPath = path.resolve(__dirname, './database/add_conferences.json');
-  const conferencesListPath = path.resolve(__dirname, './database/conferences_list.json');
-  const conferenceDetailsListPath = path.resolve(__dirname, './database/conference_details_list.json');
-  const usersListPath = path.resolve(__dirname, './database/users_list.json'); // Path to users_list.json
 
 
   if (req.method === 'GET') {
@@ -1620,7 +1394,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
     try {
       let data = '';
       try {
-        data = await fs.promises.readFile(addConferencesPath, 'utf-8');
+        data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
       } catch (readError) {
         if ((readError as NodeJS.ErrnoException).code === 'ENOENT') {
           // File not found
@@ -1698,7 +1472,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
       // Read files (handling potential errors)
       let addConferences: AddedConference[] = [];
       try {
-        const data = await fs.promises.readFile(addConferencesPath, 'utf-8');
+        const data = await fs.promises.readFile(addConferencesFilePath, 'utf-8');
         addConferences = data.trim() ? JSON.parse(data) : [];
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
@@ -1706,7 +1480,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
 
       let conferencesList: ConferenceListResponse;
       try {
-        const data = await fs.promises.readFile(conferencesListPath, 'utf-8');
+        const data = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
         conferencesList = JSON.parse(data);
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
@@ -1719,7 +1493,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
 
       let conferenceDetailsList: ConferenceResponse[] = [];
       try {
-        const data = await fs.promises.readFile(conferenceDetailsListPath, 'utf-8');
+        const data = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
         conferenceDetailsList = data.trim() ? JSON.parse(data) : [];
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
@@ -1727,7 +1501,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
 
       let usersList: UserResponse[] = [];
       try {
-        const data = await fs.promises.readFile(usersListPath, 'utf-8');
+        const data = await fs.promises.readFile(userFilePath, 'utf-8');
         usersList = data.trim() ? JSON.parse(data) : [];
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
@@ -1789,7 +1563,7 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
           dates: conferenceToProcess.dates,
           rankSourceFoRData: conferenceToProcess.rankSourceFoRData,
           feedBacks: [],
-          followedBy: []
+          follower: []
         };
         conferenceDetailsList.push(newConferenceDetailItem);
 
@@ -1819,10 +1593,10 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
 
       // Write back to files
       await Promise.all([
-        fs.promises.writeFile(addConferencesPath, JSON.stringify(addConferences, null, 2)),
-        fs.promises.writeFile(conferencesListPath, JSON.stringify(conferencesList, null, 2)),
-        fs.promises.writeFile(conferenceDetailsListPath, JSON.stringify(conferenceDetailsList, null, 2)),
-        fs.promises.writeFile(usersListPath, JSON.stringify(usersList, null, 2)), // Update users_list.json
+        fs.promises.writeFile(addConferencesFilePath, JSON.stringify(addConferences, null, 2)),
+        fs.promises.writeFile(conferencesListFilePath, JSON.stringify(conferencesList, null, 2)),
+        fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferenceDetailsList, null, 2)),
+        fs.promises.writeFile(userFilePath, JSON.stringify(usersList, null, 2)), // Update users_list.json
       ]);
 
       res.redirect('/admin/conferences');
@@ -1838,6 +1612,171 @@ app.get('/admin/conferences', adminConferences);
 app.post('/admin/conferences', adminConferences);
 
 
+
+// Helper function to transform data to detail format
+const transformToDetail = (conference: any): ConferenceResponse => {
+  const detail: ConferenceResponse = {
+      conference: {
+          id: conference.id,
+          title: conference.title,
+          acronym: conference.acronym || null,
+          creatorId: conference.creatorId,
+          createdAt: conference.createdAt,
+          updatedAt: conference.updatedAt,
+      },
+      organization: conference.organization, // Initialize as null
+      locations: null, // Initialize as []
+      dates: [],
+      rankSourceFoRData: [],
+      feedBacks: [],
+      follower: [],
+  };
+
+
+  if (conference.location || conference.link || conference.topics || conference.accessType || conference.year) {
+      detail.organization = {
+          id: conference.id, //  Use conference.id as a temporary unique ID
+          year: conference.year || null,
+          accessType: conference.accessType || null,
+          isAvailable: null,
+          conferenceId: conference.id,
+          summary: null,
+          callForPaper: null,
+          link: conference.link || null,
+          cfpLink: null,
+          impLink: null,
+          topics: conference.topics || null,
+          createdAt: conference.createdAt,  // Use conference's createdAt
+          updatedAt: conference.updatedAt,    // Use conference's updatedAt
+
+      }
+  }
+
+
+  if (conference.location) {
+      detail.locations = {
+          id: conference.id,  // Use a consistent ID scheme.  conference.id for now
+          address: conference.location.address || null,
+          cityStateProvince: conference.location.cityStateProvince || null,
+          country: conference.location.country || null,
+          continent: conference.location.continent || null,
+          createdAt: conference.createdAt,
+          updatedAt: conference.updatedAt,
+          isAvailable: null,
+          organizeId: conference.id, //  Link to organization
+      }
+  }
+  //Dates
+  if (conference.dates && Array.isArray(conference.dates)) {
+      detail.dates = conference.dates.map((date: any) => ({
+          id: date.id,
+          organizedId: conference.id, // Use conference ID
+          fromDate: date.fromDate || null,
+          toDate: date.toDate || null,
+          type: date.type || null,
+          name: date.name || null,
+          createdAt: date.createdAt,
+          updatedAt: date.updatedAt,
+          isAvailable: date.isAvailable,
+      }));
+  } else {
+      detail.dates = null; // Explicitly set to null if not an array or doesn't exist.
+  }
+
+  //rankSourceFoRData
+  if (conference.rank || conference.researchFields || conference.source) {
+      detail.rankSourceFoRData = [
+          {
+              rank: conference.rank || null,
+              source: conference.source || null,
+              researchFields: conference.researchFields || null,
+          },
+      ]
+  }
+  return detail;
+};
+
+// 16. DB to JSON : Receive and save conference data
+// MODIFIED ROUTE: Receive and save conference data (only if DB.json is empty)
+const saveConferenceData: RequestHandler<any, { message: string }, ConferenceListResponse, any> = async (
+  req,
+  res
+) => {
+  try {
+      const receivedData: ConferenceListResponse = req.body;
+
+      if (!receivedData || !receivedData.payload || !Array.isArray(receivedData.payload)) {
+          return res.status(400).json({ message: 'Invalid data format received.' }) as any;
+      }
+
+      // --- DB.json Handling ---
+      let dbData;
+      try {
+          const fileContent = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
+          dbData = JSON.parse(fileContent);
+          if (dbData && ((Array.isArray(dbData) && dbData.length > 0) || (typeof dbData === 'object' && Object.keys(dbData).length > 0))) {
+              //DB.json is valid.  Skip write to DB.json.  We'll still process DB_details.
+          } else {
+              //DB.json is empty.  Write to it.
+              await fs.promises.writeFile(conferencesListFilePath, JSON.stringify(receivedData, null, 2), 'utf-8');
+          }
+
+      } catch (error: any) {
+          if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) {
+              console.error('Error reading DB.json:', error);
+              return res.status(500).json({ message: 'Error reading DB.json' });
+          }
+          //If file does not exists, write data
+          await fs.promises.writeFile(conferencesListFilePath, JSON.stringify(receivedData, null, 2), 'utf-8');
+
+      }
+
+
+      // --- DB_details.json Handling ---
+      let dbDetailsData: ConferenceResponse[] = [];
+      try {
+          const detailsFileContent = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
+          dbDetailsData = JSON.parse(detailsFileContent);
+
+          //  Check for valid JSON.
+          if (!Array.isArray(dbDetailsData)) {
+              dbDetailsData = []; // Initialize if invalid.
+          }
+      } catch (error: any) {
+          if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) {
+              console.error('Error reading DB_details.json:', error);
+              return res.status(500).json({ message: 'Error reading DB_details.json' });
+          }
+          //If file does not exist.  It will be created later.
+      }
+
+      const newDetails: ConferenceResponse[] = [];
+      for (const conference of receivedData.payload) {
+          // Check if the conference already exists in DB_details.json
+          const exists = dbDetailsData.some(detail => detail?.conference?.id === conference.id);
+          if (!exists) {
+              newDetails.push(transformToDetail(conference));
+          }
+      }
+
+      // Append new details to existing details
+      const updatedDetailsData = [...dbDetailsData, ...newDetails];
+      await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(updatedDetailsData, null, 2), 'utf-8');
+
+      //Only return success when data saved
+      if (newDetails.length > 0 || (dbData === undefined || !((Array.isArray(dbData) && dbData.length > 0) || (typeof dbData === 'object' && Object.keys(dbData).length > 0)))) {
+          res.status(200).json({ message: 'Conference data and details saved successfully.' });
+      }
+      else {
+          res.status(200).json({ message: 'Conference details already exists.' });
+      }
+  } catch (error: any) {
+      console.error('Error saving conference data:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/conferences/save', saveConferenceData);
 // // --- Start the server ---
 // app.listen(3000, () => {
 //   console.log(`Server listening on port 3000`);

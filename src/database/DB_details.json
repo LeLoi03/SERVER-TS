@@ -1,0 +1,471 @@
+[
+  {
+    "conference": {
+      "id": "840606e5-5797-4b33-86ff-9d907ce75633",
+      "title": "ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
+      "acronym": "PEPM",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:30.639Z",
+      "updatedAt": "2025-03-22T12:16:30.639Z"
+    },
+    "organization": {
+      "id": "840606e5-5797-4b33-86ff-9d907ce75633",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "840606e5-5797-4b33-86ff-9d907ce75633",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:30.639Z",
+      "updatedAt": "2025-03-22T12:16:30.639Z"
+    },
+    "locations": {
+      "id": "840606e5-5797-4b33-86ff-9d907ce75633",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:30.639Z",
+      "updatedAt": "2025-03-22T12:16:30.639Z",
+      "isAvailable": null,
+      "organizeId": "840606e5-5797-4b33-86ff-9d907ce75633"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": [
+      {
+        "id": "test",
+        "email": "loicute5fps@gmail.com",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-23T04:17:16.033Z",
+        "updatedAt": "2025-03-23T04:17:16.033Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "b0b8641a-8642-41b3-9349-09f410c99f01",
+      "title": "ACM SIGSIM Conference on Principles of Advanced Discrete Simulation (was Parallel and Distributed Simulation)",
+      "acronym": "PADS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:31.058Z",
+      "updatedAt": "2025-03-22T12:16:31.058Z"
+    },
+    "organization": {
+      "id": "b0b8641a-8642-41b3-9349-09f410c99f01",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "b0b8641a-8642-41b3-9349-09f410c99f01",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:31.058Z",
+      "updatedAt": "2025-03-22T12:16:31.058Z"
+    },
+    "locations": {
+      "id": "b0b8641a-8642-41b3-9349-09f410c99f01",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:31.058Z",
+      "updatedAt": "2025-03-22T12:16:31.058Z",
+      "isAvailable": null,
+      "organizeId": "b0b8641a-8642-41b3-9349-09f410c99f01"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "d63cd16e-8cee-4904-be5c-516884eea0d7",
+      "title": "ACM SIGUCCS Conference on User Services",
+      "acronym": "SIGUCCS",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:31.487Z",
+      "updatedAt": "2025-03-22T12:16:31.487Z"
+    },
+    "organization": {
+      "id": "d63cd16e-8cee-4904-be5c-516884eea0d7",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "d63cd16e-8cee-4904-be5c-516884eea0d7",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:31.487Z",
+      "updatedAt": "2025-03-22T12:16:31.487Z"
+    },
+    "locations": {
+      "id": "d63cd16e-8cee-4904-be5c-516884eea0d7",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:31.487Z",
+      "updatedAt": "2025-03-22T12:16:31.487Z",
+      "isAvailable": null,
+      "organizeId": "d63cd16e-8cee-4904-be5c-516884eea0d7"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a",
+      "title": "ACM Special Interest Group on Computer Science Education Conference",
+      "acronym": "SIGCSE",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:31.651Z",
+      "updatedAt": "2025-03-22T12:16:31.651Z"
+    },
+    "organization": {
+      "id": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:31.651Z",
+      "updatedAt": "2025-03-22T12:16:31.651Z"
+    },
+    "locations": {
+      "id": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:31.651Z",
+      "updatedAt": "2025-03-22T12:16:31.651Z",
+      "isAvailable": null,
+      "organizeId": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b",
+      "title": "ACM Special Interest Group on Management of Data Conference",
+      "acronym": "SIGMOD",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:31.802Z",
+      "updatedAt": "2025-03-22T12:16:31.802Z"
+    },
+    "organization": {
+      "id": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:31.802Z",
+      "updatedAt": "2025-03-22T12:16:31.802Z"
+    },
+    "locations": {
+      "id": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:31.802Z",
+      "updatedAt": "2025-03-22T12:16:31.802Z",
+      "isAvailable": null,
+      "organizeId": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "b389f50c-203d-46ca-ae08-61aec721abad",
+      "title": "ACM Special Interest Group on Supporting Group Work (was SIGGRoup)",
+      "acronym": "Group",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.032Z",
+      "updatedAt": "2025-03-22T12:16:32.032Z"
+    },
+    "organization": {
+      "id": "b389f50c-203d-46ca-ae08-61aec721abad",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "b389f50c-203d-46ca-ae08-61aec721abad",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.032Z",
+      "updatedAt": "2025-03-22T12:16:32.032Z"
+    },
+    "locations": {
+      "id": "b389f50c-203d-46ca-ae08-61aec721abad",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.032Z",
+      "updatedAt": "2025-03-22T12:16:32.032Z",
+      "isAvailable": null,
+      "organizeId": "b389f50c-203d-46ca-ae08-61aec721abad"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "df3a66a0-bb74-4094-968e-c0784948fd12",
+      "title": "ACM Symposium on Access Control Models and Technologies (previously ACM Workshop on Role-Based Access Control, RBAC, changed in 2000)",
+      "acronym": "SACMAT",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.142Z",
+      "updatedAt": "2025-03-22T12:16:32.142Z"
+    },
+    "organization": {
+      "id": "df3a66a0-bb74-4094-968e-c0784948fd12",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "df3a66a0-bb74-4094-968e-c0784948fd12",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.142Z",
+      "updatedAt": "2025-03-22T12:16:32.142Z"
+    },
+    "locations": {
+      "id": "df3a66a0-bb74-4094-968e-c0784948fd12",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.142Z",
+      "updatedAt": "2025-03-22T12:16:32.142Z",
+      "isAvailable": null,
+      "organizeId": "df3a66a0-bb74-4094-968e-c0784948fd12"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f",
+      "title": "ACM Symposium on Applied Computing",
+      "acronym": "SAC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.232Z",
+      "updatedAt": "2025-03-22T12:16:32.232Z"
+    },
+    "organization": {
+      "id": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.232Z",
+      "updatedAt": "2025-03-22T12:16:32.232Z"
+    },
+    "locations": {
+      "id": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.232Z",
+      "updatedAt": "2025-03-22T12:16:32.232Z",
+      "isAvailable": null,
+      "organizeId": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed",
+      "title": "ACM Symposium on Document Engineering",
+      "acronym": "DocEng",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.333Z",
+      "updatedAt": "2025-03-22T12:16:32.333Z"
+    },
+    "organization": {
+      "id": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.333Z",
+      "updatedAt": "2025-03-22T12:16:32.333Z"
+    },
+    "locations": {
+      "id": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.333Z",
+      "updatedAt": "2025-03-22T12:16:32.333Z",
+      "isAvailable": null,
+      "organizeId": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  },
+  {
+    "conference": {
+      "id": "3c889b20-0533-4864-9768-97972b46aa6c",
+      "title": "ACM Symposium on Mobile Ad Hoc Networking and Computing",
+      "acronym": "MOBIHOC",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "createdAt": "2025-03-22T12:16:32.535Z",
+      "updatedAt": "2025-03-22T12:16:32.535Z"
+    },
+    "organization": {
+      "id": "3c889b20-0533-4864-9768-97972b46aa6c",
+      "year": null,
+      "accessType": null,
+      "isAvailable": null,
+      "conferenceId": "3c889b20-0533-4864-9768-97972b46aa6c",
+      "summary": null,
+      "callForPaper": null,
+      "link": null,
+      "cfpLink": null,
+      "impLink": null,
+      "topics": [],
+      "createdAt": "2025-03-22T12:16:32.535Z",
+      "updatedAt": "2025-03-22T12:16:32.535Z"
+    },
+    "locations": {
+      "id": "3c889b20-0533-4864-9768-97972b46aa6c",
+      "address": null,
+      "cityStateProvince": null,
+      "country": null,
+      "continent": null,
+      "createdAt": "2025-03-22T12:16:32.535Z",
+      "updatedAt": "2025-03-22T12:16:32.535Z",
+      "isAvailable": null,
+      "organizeId": "3c889b20-0533-4864-9768-97972b46aa6c"
+    },
+    "dates": null,
+    "rankSourceFoRData": [
+      {
+        "rank": null,
+        "source": null,
+        "researchFields": []
+      }
+    ],
+    "feedBacks": [],
+    "follower": []
+  }
+]

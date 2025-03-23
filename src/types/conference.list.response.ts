@@ -1,52 +1,50 @@
-// File ConferenceListResponse:
-
 export type ConferenceListResponse = {
   payload: ConferenceInfo[];
   meta: Meta;
 };
 
 export type ConferenceInfo = {
-  id: string;
+  id: string | null;
   title: string;
   acronym: string;
-  location: Location;  // Defined a separate type for Location
-  year: number;
-  rankSourceFoRData: RankSourceFoRData; // Defined a separate type
-  topics: string[];
-  dates: ImportantDates;
-  link: string;
-  createdAt: string; // Keep as string (ISO 8601)
-  updatedAt: string; // Keep as string (ISO 8601)
+  location: Location | null; // Location có thể null
+  rank: string | null;       // Thêm rank trực tiếp, và có thể null
+  source: string | null;     // Thêm source trực tiếp, có thể null
+  year: number | null;        // year có thể null
+  researchFields: string[];   // researchFields là một mảng string (có thể rỗng)
+  topics: string[];           // topics là một mảng string (có thể rỗng)
+  dates: ImportantDates[] | null; // dates là một mảng ImportantDates, hoặc null
+  link: string | null;         // link có thể null
+  createdAt: string;
+  updatedAt: string;
   creatorId: string;
-  accessType: string; //  "Offline" | "Online" | "Hybrid";  //  more specific type
+  accessType: string | null;  // accessType có thể null
   status: string;
 };
 
 export type Location = {
-  cityStateProvince: string;
-  country: string;
-  address: string;
-  continent: string;
+  cityStateProvince: string | null;
+  country: string | null;
+  address: string | null;
+  continent: string | null;
 };
 
-export type RankSourceFoRData = {
-  rank: string;
-  source: string;
-  researchFields: string;  // Changed to string, assuming it's a single field or comma-separated.  If it *must* be an array, change back to string[].
-};
+// Loại bỏ RankSourceFoRData, vì nó không phản ánh đúng cấu trúc dữ liệu
+// Thay vào đó, 'rank' và 'source' được đưa trực tiếp vào ConferenceInfo
 
 export type ImportantDates = {
   name: string;
   type: string;
-  fromDate: string;  // Keep as string (ISO 8601)
-  toDate: string;    // Keep as string (ISO 8601)
-};
+  fromDate: string;
+  toDate: string;
+} | null; // ImportantDates có thể null (mặc dù trong JSON mẫu, dates là null, không phải từng phần tử trong dates)
+//Nếu dates không bao giờ là null, mà là một array có thể chứa các object null, thì ImportantDates[] là đủ
 
 export type Meta = {
   curPage: number;
   perPage: number;
   totalPage: number;
-  prevPage: number | null; // Changed to number | null
+  prevPage: number | null;
   nextPage: number | null;
   totalItems: number;
 };

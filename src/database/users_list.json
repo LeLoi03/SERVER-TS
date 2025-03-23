@@ -6,119 +6,11 @@
     "lastName": "Doe",
     "dob": "1990-05-15",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
-        "createdAt": "2025-03-22T08:56:33.720Z",
-        "updatedAt": "2025-03-22T08:56:33.720Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
-    "feedBacks": [
-      "5e6f7a8b-9c01-2345-6789-abcdef01234"
-    ],
-    "notifications": [
-      {
-        "id": "fd7423b7-3dc4-4285-a913-554c1452cc1a",
-        "createdAt": "2025-03-22T08:56:33.720Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T08:58:19.903Z",
-        "deletedAt": null,
-        "message": "John Doe followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "e9a803d2-f6cf-4692-9a8b-41236de176b5",
-        "createdAt": "2025-03-22T08:57:23.668Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T08:58:19.903Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "b690cd06-5c08-4d4b-a8c8-7535ef59c009",
-        "createdAt": "2025-03-22T08:58:04.067Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T08:58:19.903Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "1b159db4-26c0-409e-b202-92d7508e35bf",
-        "createdAt": "2025-03-22T09:04:23.817Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "f7d15f09-fa02-4ad1-b906-2be4436f3145",
-        "createdAt": "2025-03-22T09:51:17.498Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "5d28193a-9346-42ec-8c54-82b43c161221",
-        "createdAt": "2025-03-22T09:51:29.715Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "c2cba90d-6ccb-4afb-be6e-dc0af424bbd0",
-        "createdAt": "2025-03-22T09:51:32.029Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "0a875f7b-6467-44dc-b08a-229ffee8004d",
-        "createdAt": "2025-03-22T09:51:37.207Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "3596c1c3-691f-4384-afcf-a451d635877a",
-        "createdAt": "2025-03-22T10:07:56.157Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "221a836b-e98c-4726-b5e4-1e82485fa3da",
-        "createdAt": "2025-03-22T11:04:26.688Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:04:46.999Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "6f21cec4-257e-4c7a-a709-8b80c0bdfc00",
-        "createdAt": "2025-03-22T11:04:50.800Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      }
-    ],
+    "feedBacks": [],
+    "notifications": [],
     "createdAt": "2023-01-20T10:00:00Z",
     "updatedAt": "2023-01-20T10:00:00Z"
   },
@@ -132,9 +24,7 @@
     "followedConferences": [],
     "myConferences": [],
     "calendar": [],
-    "feedBacks": [
-      "6f7a8b9c-0123-4567-89ab-cdef01234567"
-    ],
+    "feedBacks": [],
     "notifications": [],
     "createdAt": "2025-03-16T02:23:28.642Z",
     "updatedAt": "2025-03-16T02:23:28.642Z"
@@ -149,9 +39,7 @@
     "followedConferences": [],
     "myConferences": [],
     "calendar": [],
-    "feedBacks": [
-      "7d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a"
-    ],
+    "feedBacks": [],
     "notifications": [],
     "createdAt": "2022-11-05T14:30:00Z",
     "updatedAt": "2023-02-10T16:45:00Z"
@@ -181,17 +69,7 @@
     "followedConferences": [],
     "myConferences": [],
     "calendar": [],
-    "feedBacks": [
-      "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
-      "e6f7a8b9-c01d-2e3f-4a5b-6c7d8e9f0a1b",
-      "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
-      "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
-      "8d9e0f1a-2b3c-4d5e-6f7a-8b9c0d1e2f3a",
-      "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
-      "4b5c6d7e-8f9a-0b1c-2d3e-4f5a6b7c8d9e",
-      "8f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
-      "5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"
-    ],
+    "feedBacks": [],
     "notifications": [],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z"
@@ -205,360 +83,30 @@
     "role": "user",
     "followedConferences": [
       {
-        "id": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
-        "createdAt": "2025-03-22T10:26:25.002Z",
-        "updatedAt": "2025-03-22T10:26:25.002Z"
-      },
-      {
-        "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
-        "createdAt": "2025-03-22T11:04:50.800Z",
-        "updatedAt": "2025-03-22T11:04:50.800Z"
+        "id": "840606e5-5797-4b33-86ff-9d907ce75633",
+        "createdAt": "2025-03-23T04:17:16.033Z",
+        "updatedAt": "2025-03-23T04:17:16.033Z"
       }
     ],
-    "myConferences": [
-      {
-        "id": "bbde47ca-9243-4267-af7c-88d9eb8e21d7",
-        "status": "Approved",
-        "statusTime": "2025-03-20T04:50:31.463Z",
-        "submittedAt": "2025-03-20T04:36:46.814Z"
-      }
-    ],
-    "calendar": [
-      {
-        "id": "d4e5f6a7-8901-4bcd-9ef0-123456789abc",
-        "createdAt": "2025-03-22T09:40:24.242Z",
-        "updatedAt": "2025-03-22T09:40:24.242Z"
-      },
-      {
-        "id": "c3d4e5f6-7890-4abc-8def-0123456789ab",
-        "createdAt": "2025-03-22T11:04:26.688Z",
-        "updatedAt": "2025-03-22T11:04:26.688Z"
-      }
-    ],
-    "feedBacks": [
-      "9a8b7c6d-5e4f-3a2b-1c0d-ef9a8b7c6d5e",
-      "d5e6f7a8-b9c0-1d2e-3f4a-5b6c7d8e9f0a",
-      "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
-      "9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b",
-      "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
-      "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
-      "7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b"
-    ],
+    "myConferences": [],
+    "feedBacks": [],
     "notifications": [
       {
-        "id": "5c4ec1cf-4e2f-43bc-9b37-352237eb6f8d",
-        "createdAt": "2025-03-22T11:04:50.800Z",
+        "id": "6e77b136-ff96-42c4-acc0-c977e42830a7",
+        "createdAt": "2025-03-23T04:17:16.033Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
+        "message": "Le Loi followed the conference: ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
         "type": "Follow Conference"
-      },
-      {
-        "id": "caf6b150-9f95-41b0-b929-6e7a1dc0f8ea",
-        "createdAt": "2025-03-22T11:04:41.522Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:46:00.150Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "7b8cf968-0d0b-4c82-a71c-71a448bd9667",
-        "createdAt": "2025-03-22T11:04:26.688Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:46:11.458Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "ccc735da-75ce-4b12-90d3-599aa41d85cb",
-        "createdAt": "2025-03-22T11:04:23.657Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi removed the conference \"International Joint Conference on Artificial Intelligence\" from their calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "51258721-2119-493c-9c24-70767692a2ab",
-        "createdAt": "2025-03-22T10:50:02.536Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:03:18.990Z",
-        "deletedAt": null,
-        "message": "Your profile has been updated.",
-        "type": "Profile Update"
-      },
-      {
-        "id": "f46d899c-b909-4cca-bab5-9dc08ceb08cf",
-        "createdAt": "2025-03-22T10:47:24.410Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:03:18.990Z",
-        "deletedAt": null,
-        "message": "Your profile has been updated: About me, Interested topics were changed.",
-        "type": "Profile Update"
-      },
-      {
-        "id": "46ce911a-4f74-4c06-8be8-a4c4b17b73fc",
-        "createdAt": "2025-03-22T10:46:49.520Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:03:18.990Z",
-        "deletedAt": null,
-        "message": "Your profile has been updated.",
-        "type": "Profile Update"
-      },
-      {
-        "id": "c18d8e87-4c19-4ad0-827a-581b9d187f64",
-        "createdAt": "2025-03-22T10:46:23.260Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T11:03:18.990Z",
-        "deletedAt": null,
-        "message": "Your profile has been updated.",
-        "type": "Profile Update"
-      },
-      {
-        "id": "0b224873-46f4-47f4-91d0-0fa8832647ca",
-        "createdAt": "2025-03-22T10:26:25.002Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:27:16.595Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "b300c28b-9ce5-487b-ad45-c690757450b3",
-        "createdAt": "2025-03-22T10:26:17.736Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:27:16.595Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "278f74d7-f9d9-4ef9-839c-b02677680f4f",
-        "createdAt": "2025-03-22T10:26:06.243Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:27:16.595Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "6f31a2b9-3240-4afa-ad46-694368075b43",
-        "createdAt": "2025-03-22T10:26:04.034Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:27:16.595Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "ca59e16b-995c-44ed-bef0-96cd07ce74a8",
-        "createdAt": "2025-03-22T10:07:56.157Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:46:30.624Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "cdcef175-54b9-4b0b-b327-6a1640ce7bb4",
-        "createdAt": "2025-03-22T10:07:54.751Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi removed the conference \"International Joint Conference on Artificial Intelligence\" from their calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "e0da4035-b3ae-4591-8d54-099c81bc9e6b",
-        "createdAt": "2025-03-22T09:51:37.207Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "4e9127ab-0d1d-4506-bdf8-e4e88947fcb3",
-        "createdAt": "2025-03-22T09:51:36.363Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi removed the conference \"International Joint Conference on Artificial Intelligence\" from their calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "e5adbb7f-309f-4333-85da-490e3a5ba066",
-        "createdAt": "2025-03-22T09:51:32.029Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "f50ca2ed-9621-485a-9e5c-9aa808da3457",
-        "createdAt": "2025-03-22T09:51:31.305Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "585549fc-2d6f-4edb-beac-d6ab25b6b9b2",
-        "createdAt": "2025-03-22T09:51:29.715Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "39284af1-a397-452d-948e-522e4db691de",
-        "createdAt": "2025-03-22T09:51:28.847Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi removed the conference \"International Joint Conference on Artificial Intelligence\" from their calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "05fd3d26-a828-49fd-98df-f345993b2301",
-        "createdAt": "2025-03-22T09:51:17.498Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "813597e6-3ca0-4b78-9a84-b365b3bfe6e9",
-        "createdAt": "2025-03-22T09:51:15.005Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "d10fbaa2-8124-4c4b-b9ab-ac78d82ca9e5",
-        "createdAt": "2025-03-22T09:40:25.582Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "08b7b08b-6863-46d1-becc-c12192d97a9f",
-        "createdAt": "2025-03-22T09:40:24.242Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "824e1a36-4469-4f65-adab-094506c99920",
-        "createdAt": "2025-03-22T09:04:23.817Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "09065a28-f826-49ba-bb98-f49ac2acd926",
-        "createdAt": "2025-03-22T09:04:21.867Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "2a4a3f62-fc09-4b46-884f-28a5e2cdfab9",
-        "createdAt": "2025-03-22T08:58:04.067Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi added the conference \"International Joint Conference on Artificial Intelligence\" to their calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "0035d9a0-4f02-4305-ab83-2262127916e1",
-        "createdAt": "2025-03-22T08:58:01.892Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi removed the conference \"International Joint Conference on Artificial Intelligence\" from their calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "518fa12b-4b0f-4756-b2d7-efba1cdbb76e",
-        "createdAt": "2025-03-22T08:57:23.668Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "720d8b85-c41b-46c5-85df-c81911c4bd61",
-        "createdAt": "2025-03-22T08:56:52.006Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "8a679254-b2ca-4f52-80d4-103791ea8a09",
-        "createdAt": "2025-03-22T08:56:33.720Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "John Doe followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "f3d00ec6-b0b7-44df-b3fe-964a57930fa6",
-        "createdAt": "2025-03-22T08:55:39.381Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi followed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "4b765339-3ec9-40df-bbe2-e35242abed8c",
-        "createdAt": "2025-03-22T08:50:59.232Z",
-        "isImportant": false,
-        "seenAt": "2025-03-22T10:49:44.768Z",
-        "deletedAt": null,
-        "message": "Le Loi unfollowed the conference: International Joint Conference on Artificial Intelligence",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "9149af88-3a49-40db-b633-9e0a2d4ae314",
-        "createdAt": "2025-03-22T11:46:11.496Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Your profile has been updated.",
-        "type": "Profile Update"
       }
     ],
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z",
     "avatar": "/avatar3.jpg",
-    "aboutme": "Meo",
+    "aboutme": "Meo Meo",
     "interestedTopics": [
-      "AI",
-      "Home Improvement"
+      "Blockchain"
     ],
     "background": "/light.jpg"
   }

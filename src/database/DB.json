@@ -1,0 +1,242 @@
+{
+  "payload": [
+    {
+      "id": "840606e5-5797-4b33-86ff-9d907ce75633",
+      "title": "ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
+      "acronym": "PEPM",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:30.639Z",
+      "updatedAt": "2025-03-22T12:16:30.639Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "b0b8641a-8642-41b3-9349-09f410c99f01",
+      "title": "ACM SIGSIM Conference on Principles of Advanced Discrete Simulation (was Parallel and Distributed Simulation)",
+      "acronym": "PADS",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:31.058Z",
+      "updatedAt": "2025-03-22T12:16:31.058Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "d63cd16e-8cee-4904-be5c-516884eea0d7",
+      "title": "ACM SIGUCCS Conference on User Services",
+      "acronym": "SIGUCCS",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:31.487Z",
+      "updatedAt": "2025-03-22T12:16:31.487Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "f7b682c9-cf72-4785-a53a-8a6cb6e9d34a",
+      "title": "ACM Special Interest Group on Computer Science Education Conference",
+      "acronym": "SIGCSE",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:31.651Z",
+      "updatedAt": "2025-03-22T12:16:31.651Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "84366e98-4f5e-4a0a-aba8-0f2b1e0aac4b",
+      "title": "ACM Special Interest Group on Management of Data Conference",
+      "acronym": "SIGMOD",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:31.802Z",
+      "updatedAt": "2025-03-22T12:16:31.802Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "b389f50c-203d-46ca-ae08-61aec721abad",
+      "title": "ACM Special Interest Group on Supporting Group Work (was SIGGRoup)",
+      "acronym": "Group",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:32.032Z",
+      "updatedAt": "2025-03-22T12:16:32.032Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "df3a66a0-bb74-4094-968e-c0784948fd12",
+      "title": "ACM Symposium on Access Control Models and Technologies (previously ACM Workshop on Role-Based Access Control, RBAC, changed in 2000)",
+      "acronym": "SACMAT",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:32.142Z",
+      "updatedAt": "2025-03-22T12:16:32.142Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "ceba69bc-3fe5-41f5-ad7c-9fd7fbdedc8f",
+      "title": "ACM Symposium on Applied Computing",
+      "acronym": "SAC",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:32.232Z",
+      "updatedAt": "2025-03-22T12:16:32.232Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "4ba1f8ca-fa98-445c-bed7-c2c505ae81ed",
+      "title": "ACM Symposium on Document Engineering",
+      "acronym": "DocEng",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:32.333Z",
+      "updatedAt": "2025-03-22T12:16:32.333Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    },
+    {
+      "id": "3c889b20-0533-4864-9768-97972b46aa6c",
+      "title": "ACM Symposium on Mobile Ad Hoc Networking and Computing",
+      "acronym": "MOBIHOC",
+      "location": {
+        "cityStateProvince": null,
+        "country": null,
+        "address": null,
+        "continent": null
+      },
+      "rank": null,
+      "source": null,
+      "year": null,
+      "researchFields": [],
+      "topics": [],
+      "dates": null,
+      "link": null,
+      "createdAt": "2025-03-22T12:16:32.535Z",
+      "updatedAt": "2025-03-22T12:16:32.535Z",
+      "creatorId": "7e054bed-8fe4-423f-ba5c-71a208c57335",
+      "accessType": null,
+      "status": "pending"
+    }
+  ],
+  "meta": {
+    "curPage": "1",
+    "perPage": 10,
+    "totalPage": 96,
+    "prevPage": null,
+    "nextPage": "11",
+    "totalItems": 955
+  }
+}
