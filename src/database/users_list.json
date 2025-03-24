@@ -179,10 +179,206 @@
     "lastName": "Loi",
     "dob": "2003-10-22",
     "role": "user",
-    "followedConferences": [],
+    "followedConferences": [
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-24T07:44:49.700Z",
+        "updatedAt": "2025-03-24T07:44:49.700Z"
+      }
+    ],
     "myConferences": [],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "42fe3623-f5db-4b5b-a513-c84e8fc876cd",
+        "createdAt": "2025-03-24T07:44:29.621Z",
+        "isImportant": false,
+        "seenAt": "2025-03-24T07:44:43.492Z",
+        "deletedAt": null,
+        "message": "Le Loi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "27ffaca6-c2b6-4c79-b76a-40f59a38860a",
+        "createdAt": "2025-03-24T07:44:37.300Z",
+        "isImportant": false,
+        "seenAt": "2025-03-24T07:44:43.492Z",
+        "deletedAt": null,
+        "message": "Le Loi unfollowed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "ef262def-dbd4-4297-8d9f-d6691183def9",
+        "createdAt": "2025-03-24T07:44:49.700Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "83bd57ee-5084-4ddb-a59b-cd8456d5e6d3",
+        "createdAt": "2025-03-24T07:45:00.763Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "5e37b13b-cd24-42a1-a861-a9bead9192c0",
+        "createdAt": "2025-03-24T07:46:01.033Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "df044465-6999-489c-a032-276fae5e19d4",
+        "createdAt": "2025-03-24T07:47:00.380Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "f8f369a2-1dea-4881-8646-31e328ec2464",
+        "createdAt": "2025-03-24T07:48:00.771Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "55e964d4-32fa-4948-baac-7441b1f20f52",
+        "createdAt": "2025-03-24T07:49:00.220Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "9ec4ce8a-fdc4-4e7b-a452-2cc9f12225cd",
+        "createdAt": "2025-03-24T07:50:00.705Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "9d8cf137-6d8a-435b-b49e-7929d866eb8d",
+        "createdAt": "2025-03-24T07:51:01.056Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "27394f47-13af-46dd-a17f-e655192932ee",
+        "createdAt": "2025-03-24T07:52:00.427Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "28b65da6-0815-49e3-951a-ac7d97e6511d",
+        "createdAt": "2025-03-24T07:53:00.819Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "ed4fcacc-b044-477f-b0d7-8dd4f8adf842",
+        "createdAt": "2025-03-24T07:54:00.330Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "05539095-b905-4187-8ac8-65f407bebc53",
+        "createdAt": "2025-03-24T07:55:00.836Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "f25ded69-06e9-4f6e-b215-eab6c7e7d2d4",
+        "createdAt": "2025-03-24T07:56:00.352Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "69767ffc-7866-4115-b678-6f376deadf9f",
+        "createdAt": "2025-03-24T07:57:00.748Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "f33522a9-4422-4ea7-9ff6-87cf2c0a2e3a",
+        "createdAt": "2025-03-24T07:58:00.175Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "cb89aad7-3af1-4dd6-8410-59bff8d471cb",
+        "createdAt": "2025-03-24T07:59:00.750Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "2d73e830-e6e9-40c8-8596-20cc224283d4",
+        "createdAt": "2025-03-24T08:00:00.743Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "ba4d5def-754c-4dc3-9487-a4b7fe57b484",
+        "createdAt": "2025-03-24T08:01:00.891Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "3f00e45d-5bbc-414c-8760-8d770c2a1b17",
+        "createdAt": "2025-03-24T08:02:00.301Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      }
+    ],
     "password": "123456",
     "createdAt": "2021-06-05T12:00:00.000Z",
     "updatedAt": "2021-06-05T12:00:00.000Z",
@@ -206,183 +402,23 @@
     }
   },
   {
-    "id": "af69597e-0806-45b2-aefe-066dee9abcb1",
+    "id": "891cff72-a11a-4454-8eaa-9ebcd88e7995",
     "firstName": "Lê",
     "lastName": "Lâm Lợi",
     "email": "loicute5FPS@gmail.com",
     "password": "",
     "dob": "",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-24T05:35:45.406Z",
-        "updatedAt": "2025-03-24T05:35:45.406Z"
-      },
-      {
-        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-24T05:37:25.259Z",
-        "updatedAt": "2025-03-24T05:37:25.259Z"
-      },
-      {
-        "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
-        "createdAt": "2025-03-24T06:25:04.233Z",
-        "updatedAt": "2025-03-24T06:25:04.233Z"
-      },
-      {
-        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
-        "createdAt": "2025-03-24T07:28:59.603Z",
-        "updatedAt": "2025-03-24T07:28:59.603Z"
-      }
-    ],
-    "myConferences": [
-      {
-        "id": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
-        "status": "Approved",
-        "statusTime": "2025-03-24T06:22:26.779Z",
-        "submittedAt": "2025-03-24T06:21:22.688Z"
-      }
-    ],
-    "calendar": [
-      {
-        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-24T05:36:27.254Z",
-        "updatedAt": "2025-03-24T05:36:27.254Z"
-      },
-      {
-        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-24T05:37:23.770Z",
-        "updatedAt": "2025-03-24T05:37:23.770Z"
-      }
-    ],
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
     "feedBacks": [],
-    "notifications": [
-      {
-        "id": "6f33566f-ebc8-411b-b602-a7ceb71ccf52",
-        "createdAt": "2025-03-24T06:25:04.233Z",
-        "isImportant": false,
-        "seenAt": "2025-03-24T06:29:52.851Z",
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi followed the conference: AAAI Conference on Human Computation and Crowdsourcing",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "f72e6830-8956-4cd2-b12c-1b7cb69a99ad",
-        "createdAt": "2025-03-24T06:22:26.778Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Your conference \"name\" has been approved.",
-        "type": "Approve Conference"
-      },
-      {
-        "id": "2f1228c1-b2a8-4ce7-92ff-a9224291850d",
-        "createdAt": "2025-03-24T06:21:22.688Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added a new conference: name",
-        "type": "Add Conference"
-      },
-      {
-        "id": "2c0a6507-7dc2-4d05-9d32-7dbea4466b79",
-        "createdAt": "2025-03-24T05:37:25.259Z",
-        "isImportant": false,
-        "seenAt": "2025-03-24T06:29:43.315Z",
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi followed the conference: IEEE International Conference on Computer Communications",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "19316249-12ac-4154-aa68-cce156817a30",
-        "createdAt": "2025-03-24T05:35:45.406Z",
-        "isImportant": false,
-        "seenAt": "2025-03-24T05:37:05.029Z",
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi followed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "b86a0b05-b8f6-4d1a-a2d1-9be3646657ad",
-        "createdAt": "2025-03-24T07:25:09.836Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "dee02573-19b5-446c-99db-6b3dac9b93d1",
-        "createdAt": "2025-03-24T07:28:57.730Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi unfollowed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "51f2e10e-4bab-4d62-bede-4ff927c7f73f",
-        "createdAt": "2025-03-24T07:28:59.603Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Lê Lâm Lợi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "ed18658b-9479-4a30-9f71-5099c9b29a89",
-        "createdAt": "2025-03-24T07:37:00.783Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "0c22a8c4-e566-41d5-8b9b-e43a386b044c",
-        "createdAt": "2025-03-24T07:38:00.121Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "64248e0d-89de-4694-b502-60869b6202cb",
-        "createdAt": "2025-03-24T07:39:00.568Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "8e3a43b8-d6b5-4534-8a51-b4d188c8cef9",
-        "createdAt": "2025-03-24T07:40:01.010Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "468428e1-c6c3-4a54-802d-646fbf015cda",
-        "createdAt": "2025-03-24T07:41:00.475Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
-        "type": "Upcoming Conference"
-      }
-    ],
-    "createdAt": "2025-03-24T03:12:52.419Z",
-    "updatedAt": "2025-03-24T03:12:52.419Z",
+    "notifications": [],
+    "createdAt": "2025-03-24T07:59:58.619Z",
+    "updatedAt": "2025-03-24T07:59:58.619Z",
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
     "aboutme": "",
-    "interestedTopics": [
-      "AI",
-      "Blockchain"
-    ],
+    "interestedTopics": [],
     "background": "",
     "setting": {
       "receiveNotifications": true,
@@ -392,7 +428,7 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": false
+      "notificationWhenAddTocalendar": true
     }
   }
 ]
