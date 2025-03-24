@@ -2,8 +2,8 @@ export type ConferenceResponse = {
   conference: ConferenceIdentity;
   organization: Organization;
   location: Location | null;
-  dates: ImportantDate[] | null;
-  rankSourceFoRData: Rank[] | null;
+  dates: ImportantDates[] | null;
+  ranks: Rank[] | null;
   feedBacks: Feedback[] | null;
   followedBy: FollowerInfo[] | null;
 };
@@ -34,7 +34,7 @@ export type Organization = {
   updatedAt: string | null;
 };
 
-export type ImportantDate = {
+export type ImportantDates = {
   id: string;
   organizedId: string | null;
   fromDate: string | null;
@@ -61,7 +61,7 @@ export type Location = {
 export type Rank = {
   rank: string;
   source: string | null;
-  researchFields: string | null;
+  fieldOfResearch: string | null;
 };
 
 export type Feedback = {

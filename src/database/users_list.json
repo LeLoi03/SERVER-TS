@@ -136,33 +136,18 @@
     "lastName": "Admin",
     "dob": "2003-10-22",
     "role": "admin",
-    "followedConferences": [
-      {
-        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-23T13:45:56.222Z",
-        "updatedAt": "2025-03-23T13:45:56.222Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "feedBacks": [],
     "notifications": [
       {
-        "id": "3c1733d6-d337-4cb6-9ef8-6dfb905fba60",
-        "createdAt": "2025-03-23T13:45:56.222Z",
-        "isImportant": false,
+        "id": "0ec97175-b023-416b-932f-fc107f77eba4",
+        "createdAt": "2025-03-24T06:21:22.688Z",
+        "isImportant": true,
         "seenAt": null,
         "deletedAt": null,
-        "message": "Admin Admin followed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "bc313141-1dfe-47be-b441-6fcd1ccde958",
-        "createdAt": "2025-03-23T13:47:26.779Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Follow Conference"
+        "message": "User Lê Lâm Lợi added a new conference: name",
+        "type": "Add Conference"
       }
     ],
     "password": "123456",
@@ -194,13 +179,7 @@
     "lastName": "Loi",
     "dob": "2003-10-22",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-23T13:47:48.105Z",
-        "updatedAt": "2025-03-23T13:47:48.105Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "feedBacks": [],
     "notifications": [],
@@ -214,13 +193,7 @@
       "AI"
     ],
     "background": "/light.jpg",
-    "calendar": [
-      {
-        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-23T13:43:05.169Z",
-        "updatedAt": "2025-03-23T13:43:05.169Z"
-      }
-    ],
+    "calendar": [],
     "setting": {
       "receiveNotifications": true,
       "autoAddFollowToCalendar": true,
@@ -240,16 +213,186 @@
     "password": "",
     "dob": "",
     "role": "user",
-    "followedConferences": [],
-    "myConferences": [],
-    "calendar": [],
+    "followedConferences": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-24T05:35:45.406Z",
+        "updatedAt": "2025-03-24T05:35:45.406Z"
+      },
+      {
+        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-24T05:37:25.259Z",
+        "updatedAt": "2025-03-24T05:37:25.259Z"
+      },
+      {
+        "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
+        "createdAt": "2025-03-24T06:25:04.233Z",
+        "updatedAt": "2025-03-24T06:25:04.233Z"
+      },
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-24T07:28:59.603Z",
+        "updatedAt": "2025-03-24T07:28:59.603Z"
+      }
+    ],
+    "myConferences": [
+      {
+        "id": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
+        "status": "Approved",
+        "statusTime": "2025-03-24T06:22:26.779Z",
+        "submittedAt": "2025-03-24T06:21:22.688Z"
+      }
+    ],
+    "calendar": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-24T05:36:27.254Z",
+        "updatedAt": "2025-03-24T05:36:27.254Z"
+      },
+      {
+        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-24T05:37:23.770Z",
+        "updatedAt": "2025-03-24T05:37:23.770Z"
+      }
+    ],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "6f33566f-ebc8-411b-b602-a7ceb71ccf52",
+        "createdAt": "2025-03-24T06:25:04.233Z",
+        "isImportant": false,
+        "seenAt": "2025-03-24T06:29:52.851Z",
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi followed the conference: AAAI Conference on Human Computation and Crowdsourcing",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "f72e6830-8956-4cd2-b12c-1b7cb69a99ad",
+        "createdAt": "2025-03-24T06:22:26.778Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your conference \"name\" has been approved.",
+        "type": "Approve Conference"
+      },
+      {
+        "id": "2f1228c1-b2a8-4ce7-92ff-a9224291850d",
+        "createdAt": "2025-03-24T06:21:22.688Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added a new conference: name",
+        "type": "Add Conference"
+      },
+      {
+        "id": "2c0a6507-7dc2-4d05-9d32-7dbea4466b79",
+        "createdAt": "2025-03-24T05:37:25.259Z",
+        "isImportant": false,
+        "seenAt": "2025-03-24T06:29:43.315Z",
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi followed the conference: IEEE International Conference on Computer Communications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "19316249-12ac-4154-aa68-cce156817a30",
+        "createdAt": "2025-03-24T05:35:45.406Z",
+        "isImportant": false,
+        "seenAt": "2025-03-24T05:37:05.029Z",
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "b86a0b05-b8f6-4d1a-a2d1-9be3646657ad",
+        "createdAt": "2025-03-24T07:25:09.836Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "dee02573-19b5-446c-99db-6b3dac9b93d1",
+        "createdAt": "2025-03-24T07:28:57.730Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi unfollowed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "51f2e10e-4bab-4d62-bede-4ff927c7f73f",
+        "createdAt": "2025-03-24T07:28:59.603Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Lê Lâm Lợi followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "ed18658b-9479-4a30-9f71-5099c9b29a89",
+        "createdAt": "2025-03-24T07:37:00.783Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "0c22a8c4-e566-41d5-8b9b-e43a386b044c",
+        "createdAt": "2025-03-24T07:38:00.121Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "64248e0d-89de-4694-b502-60869b6202cb",
+        "createdAt": "2025-03-24T07:39:00.568Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "8e3a43b8-d6b5-4534-8a51-b4d188c8cef9",
+        "createdAt": "2025-03-24T07:40:01.010Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "468428e1-c6c3-4a54-802d-646fbf015cda",
+        "createdAt": "2025-03-24T07:41:00.475Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26T00:00:00.000Z",
+        "type": "Upcoming Conference"
+      }
+    ],
     "createdAt": "2025-03-24T03:12:52.419Z",
     "updatedAt": "2025-03-24T03:12:52.419Z",
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
     "aboutme": "",
-    "interestedTopics": [],
-    "background": ""
+    "interestedTopics": [
+      "AI",
+      "Blockchain"
+    ],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": false
+    }
   }
 ]

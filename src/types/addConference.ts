@@ -72,7 +72,7 @@ export interface AddedConference {
         updatedAt: string;
         isAvailable: boolean;
     }[];
-    rankSourceFoRData: { // Có thể để mảng rỗng, hoặc thêm logic
+    ranks: { // Có thể để mảng rỗng, hoặc thêm logic
         rank: string;
         source: string;
         researchFields: string;

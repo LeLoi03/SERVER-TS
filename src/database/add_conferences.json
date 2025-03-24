@@ -1,49 +1,52 @@
 [
   {
     "conference": {
-      "id": "29996657-75d9-4870-9295-4151be8ef8d6",
+      "id": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
       "title": "name",
       "acronym": "acronym",
-      "creatorId": "test",
-      "createdAt": "2025-03-23T10:00:25.179Z",
-      "updatedAt": "2025-03-23T10:00:25.179Z"
+      "creatorId": "af69597e-0806-45b2-aefe-066dee9abcb1",
+      "createdAt": "2025-03-24T06:21:22.684Z",
+      "updatedAt": "2025-03-24T06:21:22.684Z"
     },
     "organization": {
-      "id": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89",
+      "id": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff",
       "year": 2025,
       "accessType": "offline",
+      "publisher": "",
       "isAvailable": true,
-      "conferenceId": "29996657-75d9-4870-9295-4151be8ef8d6",
-      "summerize": "ugiuj",
+      "conferenceId": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
+      "summerize": "",
       "callForPaper": "",
       "link": "link",
       "cfpLink": "",
       "impLink": "",
-      "topics": [],
-      "createdAt": "2025-03-23T10:00:25.179Z",
-      "updatedAt": "2025-03-23T10:00:25.179Z"
+      "topics": [
+        "AI"
+      ],
+      "createdAt": "2025-03-24T06:21:22.684Z",
+      "updatedAt": "2025-03-24T06:21:22.684Z"
     },
     "location": {
-      "id": "09243fd5-d487-4231-8ff0-a8eab912f690",
+      "id": "79d8aebc-b11c-4efd-8217-5d94638c4022",
       "address": "address",
       "cityStateProvince": "",
-      "country": "",
-      "continent": "",
-      "createdAt": "2025-03-23T10:00:25.179Z",
-      "updatedAt": "2025-03-23T10:00:25.179Z",
+      "country": "Vietnam",
+      "continent": "Asia",
+      "createdAt": "2025-03-24T06:21:22.684Z",
+      "updatedAt": "2025-03-24T06:21:22.684Z",
       "isAvailable": true,
-      "organizeId": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89"
+      "organizeId": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff"
     },
     "dates": [
       {
-        "id": "10c0aebf-cdd4-47cf-9ae7-44ed6347de3b",
-        "organizedId": "dc1a5b8f-fd08-4a52-b7f2-4e2ef1720d89",
-        "fromDate": "2025-03-25T00:00:00.000Z",
-        "toDate": "2025-03-28T00:00:00.000Z",
+        "id": "4387f8f5-a7a6-403d-9b3d-50a8d28e31ed",
+        "organizedId": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff",
+        "fromDate": "2025-03-18T00:00:00.000Z",
+        "toDate": "2025-03-27T00:00:00.000Z",
         "type": "conferenceDates",
         "name": "Conference Date",
-        "createdAt": "2025-03-23T10:00:25.179Z",
-        "updatedAt": "2025-03-23T10:00:25.179Z",
+        "createdAt": "2025-03-24T06:21:22.685Z",
+        "updatedAt": "2025-03-24T06:21:22.685Z",
         "isAvailable": true
       }
     ],

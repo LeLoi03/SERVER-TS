@@ -4,7 +4,7 @@ export type ConferenceListResponse = {
 };
 
 export type ConferenceInfo = {
-  id: string | null;
+  id: string;
   title: string;
   acronym: string;
   location: Location | null; // Location có thể null

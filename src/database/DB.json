@@ -22,11 +22,19 @@
         "Communications",
         "Computation",
         "Architecture",
+        "Methods",
+        "Intensive Computing",
+        "Big Data",
         "Programming Models",
-        "Computing Systems",
-        "Grid Computing",
-        "Cloud Computing",
-        "Network Systems"
+        "Networks",
+        "Systems Communications",
+        "Turbulence Modeling",
+        "Simulation",
+        "Distributed Systems",
+        "Control",
+        "Dynamical Systems",
+        "Measurement",
+        "Management"
       ],
       "dates": {
         "fromDate": "2024-04-14T00:00:00.000Z",
@@ -34,7 +42,7 @@
         "name": "conferenceDates",
         "type": "conferenceDates"
       },
-      "link": "https://www.iaria.org/conferences2024/INFOCOMP24.html",
+      "link": "",
       "createdAt": "2025-03-23T10:23:08.805Z",
       "updatedAt": "2025-03-23T10:23:08.805Z",
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
@@ -60,24 +68,56 @@
         "Distributed computing and systems software"
       ],
       "topics": [
-        "Computer Communications",
-        "Data Communication Networks",
         "Artificial Intelligence",
-        "Machine learning",
         "Cellular wireless broadband systems",
-        "6G",
-        "Censorship circumvention",
-        "Net neutrality",
-        "Cloud computing",
-        "Mobile cloud computing",
         "Cyber-physical network systems",
         "Datacenter networking",
-        "Edge computing",
-        "Fog computing",
         "Green networks",
         "Internet of Things",
         "Quantum networking",
-        "Software-defined networking"
+        "Machine learning for networking",
+        "Censorship circumvention and net neutrality",
+        "Dynamic spectrum sharing",
+        "Edge and fog computing/networking",
+        "Extremely high-frequency communications",
+        "Fault tolerance",
+        "reliability",
+        "and survivability",
+        "Information-centric networking",
+        "Interference management and mitigation",
+        "Internet architectures",
+        "Large-scale MIMO-based networking",
+        "Localization and location-based services",
+        "Medium access control",
+        "Mobile sensing and applications",
+        "Mobility management and models",
+        "Multimedia networking",
+        "Network economics and pricing",
+        "Network management",
+        "Network measurement and analysis",
+        "Network security and privacy",
+        "Network support for VR/AR",
+        "Network virtualization",
+        "Networked autonomous aerial/terrestrial/underwater systems",
+        "Non-terrestrial networks",
+        "Online social networks",
+        "Optical networks",
+        "Overlay and peer-to-peer networks",
+        "Quality-of-service and resource management",
+        "Radio Frequency Identification (RFID) and Near-Field Communication (NFC)",
+        "Router and switch design",
+        "Routing and multicast",
+        "Scaling laws and fundamental limits",
+        "Software-defined networking (SDN)",
+        "Tactile Internet",
+        "Testbeds",
+        "experimentations",
+        "and networked experimental platforms",
+        "Ultra-Reliable Low-Latency Communications (URLLC)",
+        "Vehicular networks",
+        "Visible light communications (VLC)",
+        "Web applications and content distribution",
+        "Wireless local/personal area networks"
       ],
       "dates": {
         "fromDate": "2025-05-19T00:00:00.000Z",
@@ -85,7 +125,7 @@
         "name": "conferenceDates",
         "type": "conferenceDates"
       },
-      "link": "https://infocom2025.ieee-infocom.org/",
+      "link": "",
       "createdAt": "2025-03-23T10:23:08.923Z",
       "updatedAt": "2025-03-23T10:23:08.923Z",
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
@@ -159,11 +199,11 @@
         "Crowdsourcing",
         "Human-Computer Interaction",
         "Social Computing",
-        "Artificial Intelligence Economics",
         "Computational Social Science",
         "Digital Humanities",
         "Policy",
-        "Ethics"
+        "Ethics",
+        "Economics"
       ],
       "dates": {
         "fromDate": "2024-10-16T00:00:00.000Z",
@@ -373,8 +413,8 @@
         "Social Choice"
       ],
       "dates": {
-        "fromDate": "2025-03-23T13:41:41.609Z",
-        "toDate": "2025-03-23T13:41:41.609Z",
+        "fromDate": "2025-03-24T05:24:23.009Z",
+        "toDate": "2025-03-24T05:24:23.009Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -572,8 +612,8 @@
       ],
       "topics": [],
       "dates": {
-        "fromDate": "2025-03-23T13:41:40.935Z",
-        "toDate": "2025-03-23T13:41:40.935Z",
+        "fromDate": "2025-03-24T05:24:22.104Z",
+        "toDate": "2025-03-24T05:24:22.104Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -642,8 +682,8 @@
       ],
       "topics": [],
       "dates": {
-        "fromDate": "2025-03-23T13:41:40.788Z",
-        "toDate": "2025-03-23T13:41:40.788Z",
+        "fromDate": "2025-03-24T05:24:22.120Z",
+        "toDate": "2025-03-24T05:24:22.120Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -720,8 +760,8 @@
       ],
       "topics": [],
       "dates": {
-        "fromDate": "2025-03-23T13:41:40.868Z",
-        "toDate": "2025-03-23T13:41:40.868Z",
+        "fromDate": "2025-03-24T05:24:22.132Z",
+        "toDate": "2025-03-24T05:24:22.132Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -761,8 +801,8 @@
         "Knowledge Management"
       ],
       "dates": {
-        "fromDate": "2025-03-23T13:41:41.594Z",
-        "toDate": "2025-03-23T13:41:41.594Z",
+        "fromDate": "2025-03-24T05:24:23.037Z",
+        "toDate": "2025-03-24T05:24:23.037Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -799,8 +839,8 @@
         "Multi-Surface Technologies"
       ],
       "dates": {
-        "fromDate": "2025-03-23T13:41:41.597Z",
-        "toDate": "2025-03-23T13:41:41.597Z",
+        "fromDate": "2025-03-24T05:24:23.049Z",
+        "toDate": "2025-03-24T05:24:23.049Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -1005,12 +1045,25 @@
         "Distributed computing and systems software"
       ],
       "topics": [
-        "Programming Languages",
+        "Visualization",
+        "Machine learning",
+        "Applications",
         "Compilers",
-        "Tools",
-        "High-Performance Computing Systems",
-        "Processor Architectures",
-        "High-Performance Algorithms"
+        "High-performance computing systems",
+        "Processor architectures",
+        "Memory architectures",
+        "Storage architectures",
+        "Interconnect architectures",
+        "System architectures",
+        "Programming languages",
+        "Paradigms and execution models",
+        "Runtime systems",
+        "System software",
+        "High-performance algorithms",
+        "Large-scale data analytics",
+        "Tools for measurement",
+        "Performance modeling",
+        "Energy analysis"
       ],
       "dates": {
         "fromDate": "2025-06-08T00:00:00.000Z",
@@ -1180,8 +1233,8 @@
       ],
       "topics": [],
       "dates": {
-        "fromDate": "2025-03-23T13:41:40.920Z",
-        "toDate": "2025-03-23T13:41:40.920Z",
+        "fromDate": "2025-03-24T05:24:22.062Z",
+        "toDate": "2025-03-24T05:24:22.062Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -1395,8 +1448,8 @@
         "New Technologies"
       ],
       "dates": {
-        "fromDate": "2025-03-23T13:41:41.620Z",
-        "toDate": "2025-03-23T13:41:41.620Z",
+        "fromDate": "2025-03-24T05:24:23.013Z",
+        "toDate": "2025-03-24T05:24:23.013Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -1564,8 +1617,8 @@
         "Networking"
       ],
       "dates": {
-        "fromDate": "2025-03-23T13:41:41.624Z",
-        "toDate": "2025-03-23T13:41:41.624Z",
+        "fromDate": "2025-03-24T05:24:23.024Z",
+        "toDate": "2025-03-24T05:24:23.024Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -1883,8 +1936,8 @@
       ],
       "topics": [],
       "dates": {
-        "fromDate": "2025-03-23T13:41:40.979Z",
-        "toDate": "2025-03-23T13:41:40.979Z",
+        "fromDate": "2025-03-24T05:24:22.169Z",
+        "toDate": "2025-03-24T05:24:22.169Z",
         "name": "",
         "type": "conferenceDates"
       },
@@ -2103,12 +2156,2202 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "Offline",
       "status": "pending"
+    },
+    {
+      "id": "df1b8943-94bb-49f8-8087-65b57af98943",
+      "title": "ACM/IEEE International Conference on Human-Robot Interaction",
+      "acronym": "HRI",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Human-centred computing"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.190Z",
+        "toDate": "2025-03-24T05:24:22.190Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:34.493Z",
+      "updatedAt": "2025-03-23T10:26:34.493Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "46a27e9a-45b5-41b5-89bd-4916100e3f6d",
+      "title": "ACM/IEEE International Conference on Modelling, Analysis and Simulation of Wireless and Mobile Systems",
+      "acronym": "MSWIM",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.192Z",
+        "toDate": "2025-03-24T05:24:22.192Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:34.551Z",
+      "updatedAt": "2025-03-23T10:26:34.551Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "580658a1-2b63-4274-8a31-3f2233ba2829",
+      "title": "ACM/IEEE Symposium on Edge Computing",
+      "acronym": "SEC",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "unranked",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.196Z",
+        "toDate": "2025-03-24T05:24:22.196Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:34.617Z",
+      "updatedAt": "2025-03-23T10:26:34.617Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "53578522-c26f-4c48-942e-2c7cf52c00d8",
+      "title": "ACM/IFIP/USENIX International Middleware Conference",
+      "acronym": "Middleware",
+      "location": {
+        "cityStateProvince": "Nashville, Tennessee",
+        "country": "United States",
+        "address": "Nashville, TN, USA",
+        "continent": "North America"
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [
+        "Big Data",
+        "Cloud Computing",
+        "Security",
+        "Privacy",
+        "Cyber-Physical Systems",
+        "Analysis",
+        "Verification",
+        "Evaluation",
+        "Machine Learning",
+        "Communication",
+        "Serverless Computing",
+        "Middleware",
+        "Resource Management",
+        "Scheduling",
+        "Fault Tolerance",
+        "AI",
+        "Mobile Systems",
+        "Distributed Systems",
+        "Real-Time Systems",
+        "Virtualization",
+        "Networking",
+        "Edge Computing",
+        "Tools",
+        "Architectures",
+        "Data Science",
+        "Platforms",
+        "Computing Storage",
+        "Internet-of-Things",
+        "Smart Cities",
+        "Multimedia Systems",
+        "Consistency",
+        "Parallel Systems",
+        "Distributed Ledgers",
+        "Blockchains",
+        "Event-Based Systems",
+        "Publish/Subscribe",
+        "Streaming",
+        "Peer-to-Peer Systems",
+        "Function-as-a-Service",
+        "Fog Computing",
+        "Data Centers",
+        "Network Function Virtualization",
+        "Software-Defined Networking",
+        "Pervasive Systems",
+        "Programming Abstractions",
+        "Paradigms",
+        "Reconfigurable Middleware",
+        "Adaptable Middleware",
+        "Reflective Middleware",
+        "Methodologies",
+        "Monitoring",
+        "Auto-Scaling",
+        "Provisioning",
+        "Energy-Aware Techniques",
+        "Power-Aware Techniques"
+      ],
+      "dates": {
+        "fromDate": "2025-12-15T00:00:00.000Z",
+        "toDate": "2025-12-19T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://middleware-conf.github.io/2025/",
+      "createdAt": "2025-03-23T10:26:34.684Z",
+      "updatedAt": "2025-03-23T10:26:34.684Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "1b9a9820-a49a-4936-bd3b-69b8d24b5b99",
+      "title": "ACM/SIAM Symposium on Discrete Algorithms",
+      "acronym": "SODA",
+      "location": {
+        "cityStateProvince": "Alexandria, Virginia",
+        "country": "United States of America",
+        "address": "Alexandria, Virginia",
+        "continent": "North America"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Discrete Mathematics",
+        "Efficient Algorithms",
+        "Data Structures"
+      ],
+      "dates": {
+        "fromDate": "2024-01-07T00:00:00.000Z",
+        "toDate": "2024-01-10T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.siam.org/conferences-events/past-event-archive/soda24/",
+      "createdAt": "2025-03-23T10:26:34.756Z",
+      "updatedAt": "2025-03-23T10:26:34.756Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "3ead550e-8291-487b-9cc3-66e78ed6b630",
+      "title": "ACM/SPEC International Conference on Performance Engineering",
+      "acronym": "ICPE",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Software engineering",
+        "Software engineering",
+        "Distributed computing and systems software"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.211Z",
+        "toDate": "2025-03-24T05:24:22.211Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:34.816Z",
+      "updatedAt": "2025-03-23T10:26:34.816Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "c7dc8931-59ee-4ff9-964e-10ccfcf3d93a",
+      "title": "ACS/IEEE International Conference on Computer Systems and Applications",
+      "acronym": "AICCSA",
+      "location": {
+        "cityStateProvince": "Doha",
+        "country": "Qatar",
+        "address": "Doha, Qatar",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Information and computing sciences",
+        "Information and computing sciences",
+        "Information and computing sciences"
+      ],
+      "topics": [
+        "Security",
+        "Machine Learning",
+        "Distributed Computing",
+        "Data Science",
+        "Computer Systems",
+        "Computer Applications"
+      ],
+      "dates": {
+        "fromDate": "2025-10-19T00:00:00.000Z",
+        "toDate": "2025-10-22T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://conferences.sigappfr.org/aiccsa2025/",
+      "createdAt": "2025-03-23T10:26:34.932Z",
+      "updatedAt": "2025-03-23T10:26:34.932Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "18bbfba0-1874-4137-8f33-4f445f618713",
+      "title": "Advanced Concepts for Intelligent Vision Systems",
+      "acronym": "ACIVS",
+      "location": {
+        "cityStateProvince": "Tokyo",
+        "country": "Japan",
+        "address": "Tokyo, Japan",
+        "continent": "Asia"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Computer vision and multimedia computation",
+        "Computer vision and multimedia computation",
+        "Computer vision and multimedia computation"
+      ],
+      "topics": [
+        "Modeling",
+        "Information Retrieval",
+        "Fusion",
+        "Deep Learning",
+        "Classification",
+        "Computer Vision",
+        "Image Processing",
+        "Forensics",
+        "Information Security",
+        "Multimedia Information Processing",
+        "Robotics",
+        "Control",
+        "Color Imaging",
+        "Multi-spectral Imaging",
+        "Hyperspectral Imaging",
+        "Polarimetric Imaging",
+        "Sensing",
+        "Representation",
+        "Registration",
+        "Motion Estimation",
+        "Image Interpretation",
+        "Video Interpretation",
+        "Restoration",
+        "Enhancement",
+        "Image Quality Models",
+        "Video Quality Models",
+        "Detection",
+        "Recognition",
+        "Retrieval"
+      ],
+      "dates": {
+        "fromDate": "2025-07-28T00:00:00.000Z",
+        "toDate": "2025-07-30T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "http://www.acivs2025.com/",
+      "createdAt": "2025-03-23T10:26:34.994Z",
+      "updatedAt": "2025-03-23T10:26:34.994Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "fbb76f49-1199-4502-9933-1ad63fdcd891",
+      "title": "Advanced Visual Interfaces",
+      "acronym": "AVI",
+      "location": {
+        "cityStateProvince": "Frascati",
+        "country": "Italy",
+        "address": "Villa Tuscolana Park Hotel, Frascati, Rome, Italy",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing"
+      ],
+      "topics": [
+        "Human-Computer Interaction (HCI)",
+        "Conception",
+        "design",
+        "implementation and evaluation of novel visual interfaces"
+      ],
+      "dates": {
+        "fromDate": "2022-06-06T00:00:00.000Z",
+        "toDate": "2022-06-10T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "None",
+      "createdAt": "2025-03-23T10:26:35.137Z",
+      "updatedAt": "2025-03-23T10:26:35.137Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "ad7f4802-e7c6-4deb-b8a6-f7ff9facf480",
+      "title": "Advances in Cryptology",
+      "acronym": "CRYPTO",
+      "location": {
+        "cityStateProvince": "Santa Barbara, California",
+        "country": "United States",
+        "address": "Santa Barbara, California, USA",
+        "continent": "North America"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "cryptographic topic",
+        "foundational theory and mathematics",
+        "cryptographic primitives and protocols",
+        "secure implementation and optimization in hardware or software",
+        "applied aspects of cryptography"
+      ],
+      "dates": {
+        "fromDate": "2025-08-17T00:00:00.000Z",
+        "toDate": "2025-08-21T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://crypto.iacr.org/2025/",
+      "createdAt": "2025-03-23T10:26:35.202Z",
+      "updatedAt": "2025-03-23T10:26:35.202Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "e75ea7fd-cca1-4a54-bc0e-3f99ba93cc39",
+      "title": "Advances in Modal Logic",
+      "acronym": "AiML",
+      "location": {
+        "cityStateProvince": "Prague",
+        "country": "Czech Republic",
+        "address": "Prague, The Czech Republic",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Modal Logic",
+        "Description Logics",
+        "Dynamic Logics",
+        "Epistemic Logics",
+        "Deontic Logics",
+        "Hybrid Logic",
+        "Intuitionistic Logic",
+        "Substructural Logics"
+      ],
+      "dates": {
+        "fromDate": "2024-08-19T00:00:00.000Z",
+        "toDate": "2024-08-23T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.cs.cas.cz/aiml2024/",
+      "createdAt": "2025-03-23T10:26:35.271Z",
+      "updatedAt": "2025-03-23T10:26:35.271Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "5c5b7e87-a148-4dd3-8f4e-5cfd2fbe3a81",
+      "title": "Advances in Neural Information Processing Systems (was NIPS)",
+      "acronym": "NeurIPS",
+      "location": {
+        "cityStateProvince": "San Diego, California",
+        "country": "United States",
+        "address": "San Diego Convention Center",
+        "continent": "North America"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Machine learning",
+        "Machine learning",
+        "Machine learning"
+      ],
+      "topics": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Optimization",
+        "Neuroscience",
+        "Statistics",
+        "Computer Vision",
+        "Life Sciences",
+        "Natural Sciences",
+        "Social Sciences"
+      ],
+      "dates": {
+        "fromDate": "2025-12-02T00:00:00.000Z",
+        "toDate": "2025-12-07T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://neurips.cc/Conferences/2025",
+      "createdAt": "2025-03-23T10:26:35.365Z",
+      "updatedAt": "2025-03-23T10:26:35.365Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "16d30370-9bab-4f1e-8d05-ccab59043044",
+      "title": "Algorithmic Learning Theory",
+      "acronym": "ALT",
+      "location": {
+        "cityStateProvince": "Milan",
+        "country": "Italy",
+        "address": "Politecnico di Milano, Milan, Italy",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Machine learning",
+        "Machine learning",
+        "Machine learning"
+      ],
+      "topics": [
+        "Machine Learning",
+        "Game Theory",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Algorithmic Learning Theory",
+        "Learning Algorithms",
+        "Statistical Learning Theory",
+        "Online Learning",
+        "Optimization Methods",
+        "Unsupervised Learning",
+        "Semi-Supervised Learning",
+        "Active Learning",
+        "Privacy-Preserving Data Analysis",
+        "Robustness of Learning Algorithms",
+        "Artificial Neural Networks",
+        "Bayesian Methods",
+        "Learning from Complex Data"
+      ],
+      "dates": {
+        "fromDate": "2025-02-24T00:00:00.000Z",
+        "toDate": "2025-02-27T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "http://algorithmiclearningtheory.org/alt2025/",
+      "createdAt": "2025-03-23T10:26:35.427Z",
+      "updatedAt": "2025-03-23T10:26:35.427Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "a6ab80f3-75f8-4270-b72d-9ab669915bb7",
+      "title": "Algorithms and Data Structures Symposium (was Workshop on Algorithms and Data Structures)",
+      "acronym": "WADS",
+      "location": {
+        "cityStateProvince": "Toronto, Ontario",
+        "country": "Canada",
+        "address": "York University, Toronto, Canada",
+        "continent": "North America"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Visualization",
+        "Approximation Algorithms",
+        "Machine Learning",
+        "Algorithms",
+        "Information Retrieval",
+        "Mechanism Design",
+        "Algorithmic Game Theory",
+        "Optimization",
+        "Data Structures",
+        "Parameterized Algorithms",
+        "Distributed Algorithms",
+        "Parallel Algorithms",
+        "External-Memory Algorithms",
+        "Computational Geometry",
+        "Computational Topology",
+        "Exponential Time Algorithms",
+        "Online Algorithms",
+        "Randomized Algorithms",
+        "Streaming Algorithms",
+        "Sub-Linear Algorithms",
+        "Graph Analysis",
+        "Bioinformatics",
+        "String Processing"
+      ],
+      "dates": {
+        "fromDate": "2025-08-11T00:00:00.000Z",
+        "toDate": "2025-08-15T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html",
+      "createdAt": "2025-03-23T10:26:35.494Z",
+      "updatedAt": "2025-03-23T10:26:35.494Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "6a28be94-4c64-459e-80ac-2507aec8dc5d",
+      "title": "American Medical Informatics Annual Fall Symposium",
+      "acronym": "AMIA",
+      "location": {
+        "cityStateProvince": "Atlanta, Georgia",
+        "country": "United States of America",
+        "address": "Atlanta, Georgia",
+        "continent": "North America"
+      },
+      "rank": "National: USA",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Applied computing",
+        "Applied computing"
+      ],
+      "topics": [
+        "Biomedical Informatics",
+        "Health Informatics",
+        "Clinical Informatics",
+        "Public Health Informatics",
+        "Translational Bioinformatics"
+      ],
+      "dates": {
+        "fromDate": "2025-11-15T00:00:00.000Z",
+        "toDate": "2025-11-19T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://amia.org/education-events/amia-2025-annual-symposium",
+      "createdAt": "2025-03-23T10:26:35.607Z",
+      "updatedAt": "2025-03-23T10:26:35.607Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "616d73b2-711d-4280-91cc-c2358d9311f4",
+      "title": "Annual Computer Security Applications Conference",
+      "acronym": "ACSAC",
+      "location": {
+        "cityStateProvince": "Honolulu, Hawaii",
+        "country": "United States of America",
+        "address": "Honolulu, Hawaii, USA",
+        "continent": "North America"
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "Privacy",
+        "Computer Security",
+        "Cybersecurity",
+        "Network Security"
+      ],
+      "dates": {
+        "fromDate": "2024-12-09T00:00:00.000Z",
+        "toDate": "2024-12-13T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.acsac.org/",
+      "createdAt": "2025-03-23T10:26:35.674Z",
+      "updatedAt": "2025-03-23T10:26:35.674Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "c5d7210c-6367-458d-8bb1-7a582e09311c",
+      "title": "Annual Conference on Computer Science Logic",
+      "acronym": "CSL",
+      "location": {
+        "cityStateProvince": "Amsterdam",
+        "country": "Netherlands",
+        "address": "Amsterdam, the Netherlands",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Description Logics",
+        "Formal Methods",
+        "Automated Deduction",
+        "Interactive Theorem Proving",
+        "Concurrency",
+        "Distributed Computation",
+        "Constructive Mathematics",
+        "Type Theory",
+        "Equational Logic",
+        "Term Rewriting",
+        "Automata and Games",
+        "Game Semantics",
+        "Model Checking",
+        "Decision Procedures",
+        "Modal and Temporal Logic",
+        "Logical Aspects of Computational Complexity",
+        "Logical Aspects of AI",
+        "Finite Model Theory",
+        "Computability",
+        "Computational Proof Theory",
+        "Logic Programming",
+        "Constraints",
+        "Lambda Calculus",
+        "Combinatory Logic",
+        "Domain Theory",
+        "Categorical Logic",
+        "Topological Semantics",
+        "Database Theory",
+        "Specification",
+        "Extraction and Transformation of Programs",
+        "Logical Aspects of Quantum Computing",
+        "Logical Foundations of Programming Paradigms",
+        "Verification and Program Analysis",
+        "Linear Logic",
+        "Higher-Order Logic",
+        "Knowledge Representation and Reasoning",
+        "Nonmonotonic Reasoning"
+      ],
+      "dates": {
+        "fromDate": "2025-02-10T00:00:00.000Z",
+        "toDate": "2025-02-14T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://csl2025.github.io/",
+      "createdAt": "2025-03-23T10:26:35.740Z",
+      "updatedAt": "2025-03-23T10:26:35.740Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "de2df208-6ad4-4b4e-b797-25408a7d1ed2",
+      "title": "Annual Conference on Innovation and Technology in Computer Science Education",
+      "acronym": "ITiCSE",
+      "location": {
+        "cityStateProvince": "Nijmegen",
+        "country": "Netherlands",
+        "address": "Radboud University, Netherlands",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing"
+      ],
+      "topics": [
+        "Computing Education"
+      ],
+      "dates": {
+        "fromDate": "2025-06-30T00:00:00.000Z",
+        "toDate": "2025-07-02T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://iticse.acm.org/2025/",
+      "createdAt": "2025-03-23T10:26:35.799Z",
+      "updatedAt": "2025-03-23T10:26:35.799Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "0846a0d5-54b9-4673-ad63-1f0aee26eb15",
+      "title": "Annual Conference on Privacy, Security and Trust",
+      "acronym": "PST",
+      "location": {
+        "cityStateProvince": "Fredericton",
+        "country": "Canada",
+        "address": "Fredericton, Canada",
+        "continent": "North America"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "Security",
+        "Privacy",
+        "Trust",
+        "Cybersecurity"
+      ],
+      "dates": {
+        "fromDate": "2025-08-26T00:00:00.000Z",
+        "toDate": "2025-08-28T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://pstnet.ca/pst2025/",
+      "createdAt": "2025-03-23T10:26:35.861Z",
+      "updatedAt": "2025-03-23T10:26:35.861Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "d354cb3b-801b-4d97-aa2d-373634aac77c",
+      "title": "Annual International Workshop on Presence",
+      "acronym": "ISPR",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Graphics, augmented reality and games",
+        "Human-centred computing",
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games"
+      ],
+      "topics": [
+        "Telepresence",
+        "Presence"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.071Z",
+        "toDate": "2025-03-24T05:24:23.071Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://ispr.info/",
+      "createdAt": "2025-03-23T10:26:35.930Z",
+      "updatedAt": "2025-03-23T10:26:35.930Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Online",
+      "status": "pending"
+    },
+    {
+      "id": "c1182679-f612-45d0-979e-2cc24905e01a",
+      "title": "Applied Computing Conference",
+      "acronym": "ACC",
+      "location": {
+        "cityStateProvince": "Catania, Sicily",
+        "country": "Italy",
+        "address": "Catania, Sicily, Italy",
+        "continent": "Europe"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Applied computing",
+        "Applied computing"
+      ],
+      "topics": [
+        "Applied Computing"
+      ],
+      "dates": {
+        "fromDate": "2025-03-31T00:00:00.000Z",
+        "toDate": "2025-04-04T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.sigapp.org/sac/sac2025/",
+      "createdAt": "2025-03-23T10:26:36.268Z",
+      "updatedAt": "2025-03-23T10:26:36.268Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "1bfdb28c-700c-46e8-afd4-691707cf9c07",
+      "title": "Architectural Support for Programming Languages and Operating Systems",
+      "acronym": "ASPLOS",
+      "location": {
+        "cityStateProvince": "Rotterdam",
+        "country": "Netherlands",
+        "address": "Rotterdam, The Netherlands",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Software engineering",
+        "Distributed computing and systems software",
+        "Software engineering",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Software engineering"
+      ],
+      "topics": [
+        "Cloud Computing",
+        "Embedded Systems",
+        "Machine Learning",
+        "Operating Systems",
+        "Programming Languages",
+        "Mobile Systems",
+        "Secure Systems",
+        "Real-Time Systems",
+        "Virtualization",
+        "Networking",
+        "Computer Architecture",
+        "Storage"
+      ],
+      "dates": {
+        "fromDate": "2025-03-30T00:00:00.000Z",
+        "toDate": "2025-04-03T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.asplos-conference.org/asplos2025/",
+      "createdAt": "2025-03-23T10:26:36.355Z",
+      "updatedAt": "2025-03-23T10:26:36.355Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "c10c0614-0218-4943-95c9-e8fe5d3ff562",
+      "title": "Artificial Intelligence Applications and Innovations",
+      "acronym": "AIAI",
+      "location": {
+        "cityStateProvince": "Limassol",
+        "country": "Cyprus",
+        "address": "Cyprus University of Technology, Limassol, Cyprus",
+        "continent": "Europe"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Applied computing",
+        "Artificial intelligence",
+        "Applied computing"
+      ],
+      "topics": [
+        "Natural Language Processing",
+        "Multimedia",
+        "Deep Learning",
+        "Computer Vision",
+        "Artificial Neural Networks",
+        "Accessibility and Computers",
+        "Affective Computing",
+        "Agent and Multi-Agent Systems",
+        "AI and Ethical Issues",
+        "Autonomous and Ubiquitous Computing",
+        "Biologically Inspired Neural Networks",
+        "Biomedical systems",
+        "Collective Computational Intelligence",
+        "Computational Intelligence",
+        "Convolutional Neural Networks",
+        "Crisis and Risk Management",
+        "Cybersecurity and AI",
+        "Data Fusion",
+        "Data Mining and Information Retrieval",
+        "Decision Support Systems",
+        "Distributed AI Systems and Architectures",
+        "eBusiness",
+        "eCommerce",
+        "eHealth",
+        "eLearning",
+        "Engineering and Industry",
+        "Environmental Intelligent Modelling",
+        "Evaluation of AI Systems",
+        "Evolving Systems – Optimization",
+        "Expert Systems",
+        "Finance and AI",
+        "Fuzzy Logic and Systems",
+        "Genetic Algorithms and Programming",
+        "Human-Machine Interaction",
+        "Intelligent Real Time Monitoring and Control",
+        "Knowledge Acquisition and Representation",
+        "Mathematical Foundations of AI",
+        "Graphics and Artificial Intelligent Music",
+        "Pattern Recognition",
+        "Planning and Scheduling",
+        "Project Management Recommendation Systems",
+        "Recurrent Neural Networks and Reservoir Computing",
+        "Robotics and Virtual Reality",
+        "Signal and Image Processing",
+        "Smart Graphics",
+        "Social Impact of AI",
+        "Time Series and Forecasting"
+      ],
+      "dates": {
+        "fromDate": "2025-06-26T00:00:00.000Z",
+        "toDate": "2025-06-29T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://ifipaiai.org/2025/",
+      "createdAt": "2025-03-23T10:26:36.414Z",
+      "updatedAt": "2025-03-23T10:26:36.414Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Hybrid",
+      "status": "pending"
+    },
+    {
+      "id": "c47cfd01-abcb-42d1-b30d-8fb7ae66e39e",
+      "title": "ArtsIT, Interactivity & Game Creation (was International Conference on Arts and Technology)",
+      "acronym": "ArtsIT",
+      "location": {
+        "cityStateProvince": "Dubai",
+        "country": "UAE",
+        "address": "Heriot-Watt University Dubai, UAE",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Graphics, augmented reality and games",
+        "Human-centred computing",
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games"
+      ],
+      "topics": [
+        "Human Computer Interaction",
+        "Virtual Reality",
+        "Augmented Reality",
+        "Metaverse",
+        "Performance",
+        "Presence",
+        "Art",
+        "Information Technology",
+        "Digital Artworks",
+        "Cultural Heritage",
+        "Audio Art",
+        "Games",
+        "Gamification",
+        "Human Robot Interaction",
+        "Interactive Art",
+        "Interactive Installations",
+        "Media Art",
+        "Avatars",
+        "Virtual Worlds"
+      ],
+      "dates": {
+        "fromDate": "2025-11-07T00:00:00.000Z",
+        "toDate": "2025-11-09T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://artsit.eai-conferences.org/2025/",
+      "createdAt": "2025-03-23T10:26:36.494Z",
+      "updatedAt": "2025-03-23T10:26:36.494Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "cb3fa969-011f-4e1d-92e8-fe48934688a8",
+      "title": "Asia and South Pacific Design Automation Conference",
+      "acronym": "ASPDAC",
+      "location": {
+        "cityStateProvince": "Tokyo",
+        "country": "Japan",
+        "address": "Tokyo Odaiba Miraikan, Japan",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [
+        "Machine Learning",
+        "Systems",
+        "Electronic Design Automation (EDA)",
+        "VLSI",
+        "HW/SW co-design",
+        "IoT Systems",
+        "Artificial Intelligence (AI)",
+        "Photonic/RF/Analog-Mixed Signal Design",
+        "High-Level Synthesis",
+        "Physical Design",
+        "Design for Manufacturability/Reliability",
+        "Hardware and Embedded Security",
+        "Emerging Devices and Technologies"
+      ],
+      "dates": {
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-23T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.aspdac.com/aspdac2025/",
+      "createdAt": "2025-03-23T10:26:36.561Z",
+      "updatedAt": "2025-03-23T10:26:36.561Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "ad8ec330-3d0c-4b14-b506-348cdeb6f3d0",
+      "title": "Asia Conference on Information, Computer and Communications Security",
+      "acronym": "AsiaCCS",
+      "location": {
+        "cityStateProvince": "Hanoi",
+        "country": "Vietnam",
+        "address": "Hanoi, Vietnam",
+        "continent": "Asia"
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "Security",
+        "Privacy",
+        "Computer Security",
+        "Communications Security"
+      ],
+      "dates": {
+        "fromDate": "2025-08-25T00:00:00.000Z",
+        "toDate": "2025-08-29T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://asiaccs2025.hust.edu.vn/",
+      "createdAt": "2025-03-23T10:26:36.726Z",
+      "updatedAt": "2025-03-23T10:26:36.726Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "b2ba9571-baf8-4306-955d-aec742956771",
+      "title": "Asia Pacific Conference on Communications",
+      "acronym": "APCC",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [
+        "Communications"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.011Z",
+        "toDate": "2025-03-24T05:24:23.011Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.comsoc.org/membership/chapters/find-chapter/asiapacific-region-10/awards",
+      "createdAt": "2025-03-23T10:26:36.873Z",
+      "updatedAt": "2025-03-23T10:26:36.873Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "a1e70893-1193-4611-bb2a-29f87d9fc988",
+      "title": "Asia Pacific Symposium on Intelligent and Evolutionary Systems (was Australia-Japan Joint Workshop on  Intelligent and Evolutionary Systems)",
+      "acronym": "IES",
+      "location": {
+        "cityStateProvince": "Maastricht",
+        "country": "Netherlands",
+        "address": "Maastricht, Netherlands",
+        "continent": "Europe"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence"
+      ],
+      "topics": [
+        "Neural Networks"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.015Z",
+        "toDate": "2025-03-24T05:24:23.015Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "None",
+      "createdAt": "2025-03-23T10:26:37.057Z",
+      "updatedAt": "2025-03-23T10:26:37.057Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "9b4f425b-aae2-4114-ab9e-4adebecb522b",
+      "title": "Asia-Pacific Bioinformatics Conference",
+      "acronym": "APBC",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Applied computing",
+        "Applied computing"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.073Z",
+        "toDate": "2025-03-24T05:24:22.073Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:37.127Z",
+      "updatedAt": "2025-03-23T10:26:37.127Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "dd2dac35-97f2-4cf3-808f-d927d18734a5",
+      "title": "Asia-Pacific Conference on Conceptual Modelling",
+      "acronym": "APCCM",
+      "location": {
+        "cityStateProvince": "Auckland",
+        "country": "New Zealand",
+        "address": "Auckland, New Zealand",
+        "continent": "Oceania"
+      },
+      "rank": "Australasian C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Data management and data science",
+        "Data management and data science",
+        "Data management and data science"
+      ],
+      "topics": [
+        "Information Modeling"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.019Z",
+        "toDate": "2025-03-24T05:24:23.019Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://apccm.org/",
+      "createdAt": "2025-03-23T10:26:37.195Z",
+      "updatedAt": "2025-03-23T10:26:37.195Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "c6937b0e-799d-4cf4-9149-9ecf783a5175",
+      "title": "Asia-Pacific Network Operations and Management Symposium",
+      "acronym": "APNOMS",
+      "location": {
+        "cityStateProvince": "Honolulu",
+        "country": "United States",
+        "address": "Honolulu, HI, USA",
+        "continent": "North America"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [
+        "Network Management",
+        "Service Management",
+        "Business Management"
+      ],
+      "dates": {
+        "fromDate": "2025-05-12T00:00:00.000Z",
+        "toDate": "2025-05-16T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://noms2025.ieee-noms.org/",
+      "createdAt": "2025-03-23T10:26:37.517Z",
+      "updatedAt": "2025-03-23T10:26:37.517Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "2c9623c0-da72-40c9-b439-4b6b26327596",
+      "title": "ACM Symposium on Theory of Computing",
+      "acronym": "STOC",
+      "location": {
+        "cityStateProvince": "Prague",
+        "country": "Czech Republic",
+        "address": "Prague, Czech Republic",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2021",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Networks",
+        "Privacy",
+        "Cryptography",
+        "Algorithms and Data Structures",
+        "Computational Complexity",
+        "Randomness in Computing",
+        "Algorithmic Graph Theory and Combinatorics",
+        "Analysis of Boolean Functions",
+        "Approximation Algorithms",
+        "Computational Learning Theory",
+        "Continuous and Discrete Optimization",
+        "Economics and Computation",
+        "Parallel and Distributed Algorithms",
+        "Quantum Computing",
+        "Algorithmic Coding Theory",
+        "Computational Geometry and Topology",
+        "Computational Applications of Logic",
+        "Algebraic Computation",
+        "Machine Learning",
+        "Fairness",
+        "Data Management",
+        "Databases and Computational Biology"
+      ],
+      "dates": {
+        "fromDate": "2025-06-23T00:00:00.000Z",
+        "toDate": "2025-06-27T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://acm-stoc.org/stoc2025/",
+      "createdAt": "2025-03-23T10:26:33.239Z",
+      "updatedAt": "2025-03-23T10:26:33.239Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "9255cb1c-7ad9-4f15-8603-eed55eb62c6c",
+      "title": "ACM Symposium on User Interface Software and Technology",
+      "acronym": "UIST",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "A*",
+      "source": "CORE2021",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.089Z",
+        "toDate": "2025-03-24T05:24:22.089Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:33.332Z",
+      "updatedAt": "2025-03-23T10:26:33.332Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "9159f76b-fc52-4b58-b14d-1b2e83c9d622",
+      "title": "ACM Virtual Reality Software and Technology",
+      "acronym": "VRST",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "A",
+      "source": "CORE2021",
+      "year": 2025,
+      "researchFields": [
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.094Z",
+        "toDate": "2025-03-24T05:24:22.094Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:33.764Z",
+      "updatedAt": "2025-03-23T10:26:33.764Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "0b6cfb6c-1682-4817-ac49-dc5573c30fe3",
+      "title": "ACM Workshop on Hot Topics in Networks",
+      "acronym": "HOTNETS",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "National: USA",
+      "source": "CORE2021",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.101Z",
+        "toDate": "2025-03-24T05:24:22.101Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:33.867Z",
+      "updatedAt": "2025-03-23T10:26:33.867Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "5d60c81a-169c-46af-b5b2-481a861709b9",
+      "title": "ACM-SIGACT Symposium on Principles of Programming Languages",
+      "acronym": "POPL",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "A*",
+      "source": "CORE2021",
+      "year": 2025,
+      "researchFields": [
+        "Software engineering",
+        "Software engineering",
+        "Software engineering"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:22.095Z",
+        "toDate": "2025-03-24T05:24:22.095Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:34.012Z",
+      "updatedAt": "2025-03-23T10:26:34.012Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "06ab6191-5369-455b-a51d-230b49d57ac7",
+      "title": "ACM-SIGPLAN Conference on Programming Language Design and Implementation",
+      "acronym": "PLDI",
+      "location": {
+        "cityStateProvince": "Seoul",
+        "country": "South Korea",
+        "address": "The Westin Josun Seoul, Seoul, South Korea",
+        "continent": "Asia"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Software engineering",
+        "Software engineering",
+        "Software engineering"
+      ],
+      "topics": [
+        "Applications",
+        "Programming Systems",
+        "Design",
+        "Implementation",
+        "Programming Languages",
+        "Theory",
+        "Performance"
+      ],
+      "dates": {
+        "fromDate": "2025-06-18T00:00:00.000Z",
+        "toDate": "2025-06-20T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://pldi25.sigplan.org/",
+      "createdAt": "2025-03-23T10:26:34.370Z",
+      "updatedAt": "2025-03-23T10:26:34.370Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "e8494e3d-c54b-4b31-9436-c30d7c09c88d",
+      "title": "ACM-SIGRAPH Interactive 3D Graphics and Games",
+      "acronym": "I3DG",
+      "location": {
+        "cityStateProvince": "Jersey City, New Jersey",
+        "country": "United States of America",
+        "address": "NJIT, Jersey City, NJ, USA",
+        "continent": "North America"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games",
+        "Graphics, augmented reality and games"
+      ],
+      "topics": [
+        "Virtual Reality",
+        "Augmented Reality",
+        "Deep Learning",
+        "Real-time 3D Computer Graphics",
+        "Human Interaction",
+        "Real-time Rendering",
+        "Ray Tracing",
+        "Path Tracing",
+        "Physics-based Animation",
+        "Collision Detection",
+        "Real-time Computer Vision",
+        "Navigation in Virtual Environments",
+        "Texture Synthesis",
+        "Real-time Post-Processing Effects",
+        "Interactive 3D Modeling",
+        "Level-of-Detail Approaches",
+        "Real-time Surface Shading",
+        "Impostors",
+        "Image-based Techniques",
+        "Motion Synthesis",
+        "Path Planning",
+        "Character Animation",
+        "Crowd Animation",
+        "Simulation Techniques",
+        "Interaction Devices",
+        "Sketch-based 3D Modeling",
+        "Video Game Techniques",
+        "Content Generation Techniques"
+      ],
+      "dates": {
+        "fromDate": "2025-05-07T00:00:00.000Z",
+        "toDate": "2025-05-09T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://i3dsymposium.org/2025/",
+      "createdAt": "2025-03-23T10:26:34.431Z",
+      "updatedAt": "2025-03-23T10:26:34.431Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "8c8af0d6-72c0-49a8-9c4c-b817719c2999",
+      "title": "Annual Meeting of the Cognitive Science Society",
+      "acronym": "CogSci",
+      "location": {
+        "cityStateProvince": "San Francisco, California",
+        "country": "United States",
+        "address": "Marriott Marquis, San Francisco, California",
+        "continent": "North America"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence"
+      ],
+      "topics": [
+        "Cognitive Science"
+      ],
+      "dates": {
+        "fromDate": "2025-07-30T00:00:00.000Z",
+        "toDate": "2025-08-02T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://cognitivesciencesociety.org/cogsci-2025/",
+      "createdAt": "2025-03-23T10:26:36.003Z",
+      "updatedAt": "2025-03-23T10:26:36.003Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Hybrid",
+      "status": "pending"
+    },
+    {
+      "id": "dcb3d720-7491-4cbb-b3df-c979c975c038",
+      "title": "Annual Meeting of the Special Interest Group on Discourse and Dialog",
+      "acronym": "SIGdial",
+      "location": {
+        "cityStateProvince": "Avignon",
+        "country": "France",
+        "address": "Avignon University, France",
+        "continent": "Europe"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence"
+      ],
+      "topics": [
+        "Tools",
+        "Discourse",
+        "Dialogue",
+        "Discourse Processing",
+        "Pragmatic and Semantic Modeling",
+        "Dialogue Systems",
+        "LLM-Based Dialogue Technologies",
+        "Corpora",
+        "Methodology"
+      ],
+      "dates": {
+        "fromDate": "2025-08-25T00:00:00.000Z",
+        "toDate": "2025-08-27T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://2025.sigdial.org/",
+      "createdAt": "2025-03-23T10:26:36.072Z",
+      "updatedAt": "2025-03-23T10:26:36.072Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "d4c6ebd6-11de-49fd-9d4b-eb9bd70df917",
+      "title": "Applications of Information Visualization",
+      "acronym": "IV-App",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing"
+      ],
+      "topics": [
+        "Information Visualization",
+        "Data Visualization",
+        "Visual Analytics",
+        "Scientific Visualization"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.035Z",
+        "toDate": "2025-03-24T05:24:23.035Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://ivapp.scitevents.org/",
+      "createdAt": "2025-03-23T10:26:36.135Z",
+      "updatedAt": "2025-03-23T10:26:36.135Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "af00aec3-b23d-4430-94a3-324492d8ee35",
+      "title": "Applications of Natural Language to Data Bases",
+      "acronym": "NLDB",
+      "location": {
+        "cityStateProvince": "Kanazawa",
+        "country": "Japan",
+        "address": "Kanazawa, Japan",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Data management and data science",
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Data management and data science",
+        "Data management and data science",
+        "Artificial intelligence"
+      ],
+      "topics": [
+        "Natural Language Processing",
+        "Large Language Models",
+        "Information Systems",
+        "Multimodal Models",
+        "AI Safety and ethics"
+      ],
+      "dates": {
+        "fromDate": "2025-07-04T00:00:00.000Z",
+        "toDate": "2025-07-06T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.jaist.ac.jp/event/nldb2025/",
+      "createdAt": "2025-03-23T10:26:36.200Z",
+      "updatedAt": "2025-03-23T10:26:36.200Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "5780859d-3333-4535-a2db-e10c9fd53687",
+      "title": "Asian Conference on Machine Learning",
+      "acronym": "ACML",
+      "location": {
+        "cityStateProvince": "Hanoi",
+        "country": "Vietnam",
+        "address": "Hanoi, Vietnam",
+        "continent": "Asia"
+      },
+      "rank": "Unranked",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Machine learning",
+        "Machine learning",
+        "Machine learning"
+      ],
+      "topics": [
+        "Machine Learning"
+      ],
+      "dates": {
+        "fromDate": "2024-12-05T00:00:00.000Z",
+        "toDate": "2024-12-08T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.acml-conf.org/2024/",
+      "createdAt": "2025-03-23T10:26:38.039Z",
+      "updatedAt": "2025-03-23T10:26:38.039Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "abc35d3e-5c18-4541-9253-38a46523f304",
+      "title": "ASIAN Symposium on Programming Languages and Systems",
+      "acronym": "APLAS",
+      "location": {
+        "cityStateProvince": "Bengaluru",
+        "country": "India",
+        "address": "Bengaluru, India",
+        "continent": "Asia"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Software engineering",
+        "Software engineering",
+        "Software engineering"
+      ],
+      "topics": [
+        "Programming Languages",
+        "Systems"
+      ],
+      "dates": {
+        "fromDate": "2025-10-27T00:00:00.000Z",
+        "toDate": "2025-10-30T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://conf.researchr.org/home/aplas-2025",
+      "createdAt": "2025-03-23T10:26:38.154Z",
+      "updatedAt": "2025-03-23T10:26:38.154Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "75173c1d-c28f-4b77-b569-11e8f9f41c55",
+      "title": "Asilomar Conference on Signals, Systems and Computing",
+      "acronym": "ACSSC",
+      "location": {
+        "cityStateProvince": "Pacific Grove, California",
+        "country": "United States",
+        "address": "Asilomar Hotel and Conference Grounds, Pacific Grove, California",
+        "continent": "North America"
+      },
+      "rank": "National: USA",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software"
+      ],
+      "topics": [
+        "Data Analytics",
+        "Networks",
+        "Machine Learning",
+        "Signal Processing",
+        "Image Processing",
+        "Communication Systems",
+        "MIMO Communications",
+        "Graphs",
+        "Speech Processing",
+        "Video Processing",
+        "Biomedical Signal Processing",
+        "Biomedical Image Processing",
+        "Adaptive Systems"
+      ],
+      "dates": {
+        "fromDate": "2025-03-24T05:24:23.039Z",
+        "toDate": "2025-03-24T05:24:23.039Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.asilomarsscconf.org/",
+      "createdAt": "2025-03-23T10:26:38.218Z",
+      "updatedAt": "2025-03-23T10:26:38.218Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "035ef906-ab6e-4d39-b198-89080d276aa5",
+      "title": "Association for Computational Linguistics",
+      "acronym": "ACL",
+      "location": {
+        "cityStateProvince": "Vienna",
+        "country": "Austria",
+        "address": "Vienna, Austria",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence"
+      ],
+      "topics": [
+        "Computational Social Science",
+        "Ethics",
+        "Generation",
+        "Natural Language Processing",
+        "Summarization",
+        "Computational Linguistics",
+        "Cultural Analytics",
+        "Dialogue and Interactive Systems",
+        "Discourse and Pragmatics",
+        "Efficient/Low-Resource Methods for NLP",
+        "Bias",
+        "and Fairness",
+        "Human-Centered NLP",
+        "Information Extraction",
+        "Information Retrieval and Text Mining",
+        "Interpretability and Analysis of Models for NLP",
+        "Language Modeling",
+        "Linguistic theories",
+        "Cognitive Modeling and Psycholinguistics",
+        "Machine Learning for NLP",
+        "Machine Translation",
+        "Multilinguality and Language Diversity",
+        "Multimodality and Language Grounding to Vision",
+        "Robotics and Beyond",
+        "NLP Applications",
+        "Phonology",
+        "Morphology and Word Segmentation",
+        "Question Answering",
+        "Resources and Evaluation",
+        "Semantics: Lexical and Sentence-Level",
+        "Sentiment Analysis",
+        "Stylistic Analysis",
+        "and Argument Mining",
+        "Speech recognition",
+        "text-to-speech and spoken language understanding",
+        "Syntax: Tagging",
+        "Chunking and Parsing"
+      ],
+      "dates": {
+        "fromDate": "2025-07-27T00:00:00.000Z",
+        "toDate": "2025-08-01T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://2025.aclweb.org/",
+      "createdAt": "2025-03-23T10:26:38.278Z",
+      "updatedAt": "2025-03-23T10:26:38.278Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "title": "Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+      "acronym": "CAADRIA",
+      "location": {
+        "cityStateProvince": "Tokyo",
+        "country": "Japan",
+        "address": "Tokyo, Japan",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Applied computing",
+        "Applied computing"
+      ],
+      "topics": [
+        "Simulation",
+        "Theory",
+        "Robotics",
+        "Architectural Informatics",
+        "Artificial intelligence",
+        "neural networks and machine learning",
+        "Building Information Modeling (BIM)",
+        "City Information Modeling (CIM)",
+        "Collective",
+        "collaborative & interdisciplinary design",
+        "Computational design research & education",
+        "Design cognition and human-computer interaction",
+        "Disrupted practices",
+        "resilience",
+        "and social sustainability",
+        "Environmental and ecological performance",
+        "Generative",
+        "algorithmic & evolutionary design",
+        "Digital Heritage",
+        "Interactive environments",
+        "Material systems",
+        "processes and assembly",
+        "Practice-based design research",
+        "digital fabrication and construction",
+        "visualisation and impact projection",
+        "philosophy & methodology of computational design research",
+        "Urban analytics",
+        "big data analysis and smart cities",
+        "AR / VR / XR",
+        "Application of technology in the context of the Asia-Pacific Region"
+      ],
+      "dates": {
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.caadria2025.org/",
+      "createdAt": "2025-03-23T10:26:38.337Z",
+      "updatedAt": "2025-03-23T10:26:38.337Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "38f30904-a1db-4d69-a3f4-f70493b05ee9",
+      "title": "Australasian Computing Education Conference (ACE)",
+      "acronym": "ACE",
+      "location": {
+        "cityStateProvince": "Brisbane",
+        "country": "Australia",
+        "address": "University of Queensland, Brisbane, Australia",
+        "continent": "Oceania"
+      },
+      "rank": "Australasian B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing"
+      ],
+      "topics": [
+        "Computing Education",
+        "Online Learning",
+        "Technology in Computing Education",
+        "Course Content",
+        "Curriculum Structure",
+        "Assessment and Evaluation",
+        "Pedagogy and Learning Theories",
+        "Mobile Learning",
+        "Flexible Learning",
+        "Alternative Approaches"
+      ],
+      "dates": {
+        "fromDate": "2025-02-10T00:00:00.000Z",
+        "toDate": "2025-02-14T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://aceconference2025.github.io/",
+      "createdAt": "2025-03-23T10:26:38.402Z",
+      "updatedAt": "2025-03-23T10:26:38.402Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "db02d1aa-f5e9-4b13-b533-d09f45106b2e",
+      "title": "Australasian Conference on Combinatorial Mathematics and Combinatorial Computing",
+      "acronym": "ACCMCC",
+      "location": {
+        "cityStateProvince": "Wellington",
+        "country": "New Zealand",
+        "address": "Victoria University of Wellington",
+        "continent": "Oceania"
+      },
+      "rank": "Australasian C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Theory of computation",
+        "Theory of computation"
+      ],
+      "topics": [
+        "Computer Science",
+        "Combinatorics",
+        "Mathematics"
+      ],
+      "dates": {
+        "fromDate": "2025-12-01T00:00:00.000Z",
+        "toDate": "2025-12-05T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://sms.wgtn.ac.nz/Events/ACC47/WebHome",
+      "createdAt": "2025-03-23T10:26:38.688Z",
+      "updatedAt": "2025-03-23T10:26:38.688Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "ff8f75ef-7a42-4409-a85f-ecd0ad9329cf",
+      "title": "Australasian Conference on Information Security and Privacy",
+      "acronym": "ACISP",
+      "location": {
+        "cityStateProvince": "Wollongong",
+        "country": "Australia",
+        "address": "Wollongong, Australia",
+        "continent": "Australia"
+      },
+      "rank": "Australasian B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "Privacy",
+        "Information Security",
+        "Network Security",
+        "Access Control",
+        "Authentication",
+        "Blockchain Technology",
+        "Cloud Security",
+        "Cryptology",
+        "Cyber-Physical Systems Security",
+        "Database Security",
+        "Digital Forensics",
+        "Key Management",
+        "Lightweight Security",
+        "IoT Security",
+        "Privacy Attacks",
+        "Privacy Defenses",
+        "Privacy Enhancing Technologies",
+        "Security Implementation",
+        "Security Policy",
+        "Security Protocols",
+        "Software Security",
+        "System Security",
+        "Trustworthy AI"
+      ],
+      "dates": {
+        "fromDate": "2025-07-14T00:00:00.000Z",
+        "toDate": "2025-07-16T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://uow-ic2.github.io/acisp2025/",
+      "createdAt": "2025-03-23T10:26:39.040Z",
+      "updatedAt": "2025-03-23T10:26:39.040Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
+      "title": "name",
+      "acronym": "acronym",
+      "location": {
+        "cityStateProvince": "",
+        "country": "Vietnam",
+        "address": "address",
+        "continent": "Asia"
+      },
+      "year": 2025,
+      "topics": [
+        "AI"
+      ],
+      "dates": {
+        "fromDate": "",
+        "toDate": "",
+        "name": "",
+        "type": ""
+      },
+      "link": "link",
+      "createdAt": "2025-03-24T06:22:26.779Z",
+      "updatedAt": "2025-03-24T06:22:26.779Z",
+      "creatorId": "af69597e-0806-45b2-aefe-066dee9abcb1",
+      "accessType": "offline",
+      "publisher": "",
+      "status": "Approved"
     }
   ],
   "meta": {
     "curPage": 1,
-    "perPage": 50,
-    "totalPage": 21,
+    "perPage": 100,
+    "totalPage": 11,
     "prevPage": null,
     "nextPage": 2,
     "totalItems": 1006
