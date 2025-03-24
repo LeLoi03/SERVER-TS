@@ -249,6 +249,7 @@ import { UserResponse, MyConference, Notification, Setting } from './types/user.
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
 import { Feedback } from './types/conference.response';
+import { GoogleLoginRequestBody } from './types/google-login';
 import { v4 as uuidv4 } from 'uuid'; // Import thư viện uuid
 
 // --- Route Handlers ---
@@ -2027,7 +2028,7 @@ app.post('/api/v1/user/signup', signupUser); // Register the route
 const signinUser: RequestHandler<any, { message: string; user?: Omit<UserResponse, "password"> }, { email: string; password: string }, any> = async (req, res): Promise<any> => {
   try {
     const { email, password } = req.body;
-
+    
     // --- Basic Validation ---
     if (!email || !password) {
       return res.status(400).json({ message: 'Missing email or password' });
@@ -2087,13 +2088,95 @@ const signinUser: RequestHandler<any, { message: string; user?: Omit<UserRespons
     res.status(500).json({ message: 'Internal server error' });
   }
 };
-
 app.post('/api/v1/user/signin', signinUser); // Register the route
 
-// 19. Get Topics
-app.get('/api/v1/topics', (req, res) => {
+
+const googleLoginHandler: RequestHandler<any, { message: string; user?: Omit<UserResponse, 'password'> }, GoogleLoginRequestBody, any> = async (req, res) => {
   try {
-      const rawData = fs.readFileSync(conferenceDetailsFilePath, 'utf8');
+      const { email, name, photoUrl } = req.body;
+      console.log("Received from frontend:", { email, name, photoUrl }); // Log
+
+      if (!email || !name) {
+           console.log("Missing email or name in request body");
+          return res.status(400).json({ message: "Missing email or name" }) as any;
+      }
+
+        // --- Read User Data ---
+      let users: UserResponse[] = [];
+      try {
+          const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+          users = JSON.parse(userData);
+      } catch (error: any) {
+           if (error.code !== 'ENOENT') {
+              console.error('Error reading or parsing user data:', error);
+              return res.status(500).json({ message: 'Internal server error' });
+          }
+      }
+      // --- Find or Create User ---
+      let user = users.find(u => u.email === email);
+      if (!user) {
+          // Create
+          const newUser: UserResponse = {
+              id: uuidv4(),
+              firstName: name.split(' ')[0],
+              lastName: name.split(' ').slice(1).join(' '),
+              email,
+              password: '', // Important:  Empty password
+              dob: '',
+              role: 'user',
+              followedConferences: [],
+              myConferences: [],
+              calendar: [],
+              feedBacks: [],
+              notifications: [],
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+              avatar: photoUrl || '', // Use provided photo URL
+              aboutme: '',
+              interestedTopics: [],
+              background: ''
+          };
+          users.push(newUser);
+          user = newUser;
+           console.log("New user created:", user); // Log
+
+      }
+      else{
+          // Update avatar
+          if (photoUrl && user.avatar !== photoUrl) {
+              user.avatar = photoUrl;
+              console.log("User avatar updated:", user); // Log
+          }
+      }
+
+      // --- Save User Data ---
+       try {
+          await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2));
+           console.log("User data saved to file."); // Log
+
+      }
+      catch (err) {
+          console.error("Error write user data:", err)
+          return res.status(500).json({message: "Error write file user data"})
+      }
+
+      // --- Return User Data ---
+      const { password, ...userWithoutPassword } = user;
+      res.status(200).json({ message: 'Google login successful', user: userWithoutPassword });
+
+  } catch (error) {
+      console.error("Google login backend error:", error); // Log tổng quát
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/user/google-login', googleLoginHandler); // Register the route
+
+
+// 19. Get Topics
+app.get('/api/v1/topics', async (req, res) => {
+  try {
+      const rawData = await fs.promises.readFile(conferenceDetailsFilePath, 'utf8');
       const data = JSON.parse(rawData); // data is now an ARRAY
 
       // Check if data is an array
