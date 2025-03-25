@@ -10,103 +10,95 @@
       "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
     },
     "organization": {
-      "id": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-      "year": 2024,
+      "id": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+      "year": 2025,
       "accessType": "Hybrid",
       "isAvailable": true,
       "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
       "publisher": "IARIA Press",
-      "summerize": "The Fourteenth International Conference on Advanced Communications and Computation (INFOCOMP 2024) is dedicated to academic and industrial achievements and visions in advanced communications and computing, covering a wide range of topics and welcoming academic, research, and industrial contributions. Onsite and online options are available to accommodate a large number of situations.",
-      "callForPaper": "INFOCOMP 2024 invites submissions on various aspects of advanced communications and computing, including (but not limited to) the following conference tracks:\n\n*   Trends and advances on architecture/methods\n*   Trends and advances on disciplines/applications\n*   Large scale and fast computation\n*   Programming models\n*   Networks/systems communications\n*   Networks/systems measurement, control and management\n*   Turbulence modeling and simulation\n*   Advanced applications\n*   Legal context, economic use and re-use\n*   Evaluation context\n*   Biometry, security, access technologies, algorithms, and applications\n\nAccepted contributions will be published by IARIA Press and archived in the Open Access IARIA ThinkMind Digital Library. Authors of selected papers will be invited to submit extended versions to an IARIA Journal.",
-      "link": "",
-      "cfpLink": "https://www.iaria.org/conferences2024/CfPINFOCOMP24.html",
-      "impLink": "None",
-      "createdAt": "2025-03-23T14:17:36.882Z",
-      "updatedAt": "2025-03-23T14:17:36.882Z",
+      "summerize": "The Fifteenth International Conference on Advanced Communications and Computation (INFOCOMP 2025) is dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions. To accommodate various situations, INFOCOMP 2025 offers the option for either physical presence or virtual participation. INFOCOMP 2025 is colocated with DataSys 2025 Congress.",
+      "callForPaper": "INFOCOMP 2025 solicits academic, research, and industrial contributions. We welcome technical papers, position papers, survey papers, short papers on work in progress, and panel proposals. Key topics include:\n\n*   **Tracks:** Trends and advances on architecture/methods, trends and advances on disciplines/applications, large scale and fast computation, programming models, networks/systems communications, networks/systems measurement, control and management, turbulence modeling and simulation, advanced applications, legal context, economic use and re-use, evaluation context, biometry, security, access technologies, algorithms, and applications.\n*   **Contribution types:** Regular papers, short papers (work in progress), ideas contributions, extended abstracts, posters, slide-only posters, slide-only presentations, and demos.\n*   **Format:** .pdf or .doc files. Final author manuscripts will be 8.5\" x 11\", not exceeding 6 pages (max 4 extra pages allowed at additional cost).\n*   **Publication:** The conference proceedings are published by IARIA Press, archived in the Open Access IARIA ThinkMind Digital Library, and prints are available at Curran Associates, Inc. Authors of selected papers will be invited to submit extended versions to an IARIA Journal.",
+      "link": "https://www.iaria.org/conferences2025/INFOCOMP25.html",
+      "cfpLink": "https://www.iaria.org/conferences2025/CfPINFOCOMP25.html",
+      "impLink": "https://www.iaria.org/conferences2025/INFOCOMP25.html",
+      "createdAt": "2025-03-25T07:52:42.603Z",
+      "updatedAt": "2025-03-25T07:52:42.603Z",
       "topics": [
-        "Communications",
         "Computation",
-        "Architecture",
-        "Methods",
-        "Intensive Computing",
-        "Big Data",
-        "Programming Models",
-        "Networks",
-        "Systems Communications",
-        "Turbulence Modeling",
-        "Simulation",
+        "High Performance Computing",
+        "Security",
+        "Mobile Services",
         "Distributed Systems",
-        "Control",
-        "Dynamical Systems",
-        "Measurement",
-        "Management"
+        "Networking",
+        "Biometry",
+        "Advanced Communications"
       ]
     },
     "location": {
-      "id": "92157eff-5557-4c0c-a214-643c730c7c51",
-      "createdAt": "2025-03-23T14:17:36.902Z",
-      "updatedAt": "2025-03-23T14:17:36.902Z",
+      "id": "81b7c812-b775-4c2a-9c2a-6e926e57772f",
+      "createdAt": "2025-03-25T07:52:42.616Z",
+      "updatedAt": "2025-03-25T07:52:42.616Z",
       "isAvailable": true,
-      "organizeId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-      "cityStateProvince": "Venice",
-      "country": "Italy",
-      "address": "Venice, Italy",
+      "organizeId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+      "cityStateProvince": "Valencia",
+      "country": "Spain",
+      "address": "Valencia, Spain",
       "continent": "Europe"
     },
     "dates": [
       {
-        "id": "69838554-6362-4ff7-88c1-70b871c1dda1",
-        "organizedId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-        "fromDate": "2024-02-23T00:00:00.000Z",
-        "toDate": "2024-02-23T00:00:00.000Z",
+        "id": "478113be-b3f5-4890-929f-8047a80aba84",
+        "organizedId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+        "fromDate": "2025-02-16T00:00:00.000Z",
+        "toDate": "2025-02-16T00:00:00.000Z",
         "type": "notificationDate",
         "name": "Notification",
-        "createdAt": "2025-03-23T14:17:36.919Z",
-        "updatedAt": "2025-03-23T14:17:36.919Z",
+        "createdAt": "2025-03-25T07:52:42.626Z",
+        "updatedAt": "2025-03-25T07:52:42.626Z",
         "isAvailable": true
       },
       {
-        "id": "5ad8d712-c114-4b2d-a544-a0db354fcc27",
-        "organizedId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-        "fromDate": "2024-03-09T00:00:00.000Z",
-        "toDate": "2024-03-09T00:00:00.000Z",
+        "id": "64445faa-a594-45db-86ed-de8b3aa987d3",
+        "organizedId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+        "fromDate": "2025-02-28T00:00:00.000Z",
+        "toDate": "2025-02-28T00:00:00.000Z",
         "type": "registrationDate",
         "name": "Registration",
-        "createdAt": "2025-03-23T14:17:36.918Z",
-        "updatedAt": "2025-03-23T14:17:36.918Z",
+        "createdAt": "2025-03-25T07:52:42.625Z",
+        "updatedAt": "2025-03-25T07:52:42.625Z",
         "isAvailable": true
       },
       {
-        "id": "6de5fda4-9d76-4200-99b6-45e789abdfb3",
-        "organizedId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-        "fromDate": "2024-03-14T00:00:00.000Z",
-        "toDate": "2024-03-14T00:00:00.000Z",
+        "id": "290cbd5a-6476-42a4-86d9-00a2e0b65143",
+        "organizedId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+        "fromDate": "2025-03-05T00:00:00.000Z",
+        "toDate": "2025-03-05T00:00:00.000Z",
         "type": "cameraReadyDate",
         "name": "Camera ready",
-        "createdAt": "2025-03-23T14:17:36.916Z",
-        "updatedAt": "2025-03-23T14:17:36.916Z",
+        "createdAt": "2025-03-25T07:52:42.623Z",
+        "updatedAt": "2025-03-25T07:52:42.623Z",
         "isAvailable": true
       },
       {
-        "id": "22ebb36f-2ee7-4c9b-8553-f37c735f8ad2",
-        "organizedId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-        "fromDate": "2024-02-05T00:00:00.000Z",
-        "toDate": "2024-02-05T00:00:00.000Z",
+        "id": "0317867e-4cf0-45ee-b94f-4c998f157b0c",
+        "organizedId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
         "type": "submissionDate",
         "name": "Submission",
-        "createdAt": "2025-03-23T14:17:36.914Z",
-        "updatedAt": "2025-03-23T14:17:36.914Z",
+        "createdAt": "2025-03-25T07:52:42.621Z",
+        "updatedAt": "2025-03-25T07:52:42.621Z",
         "isAvailable": true
       },
       {
-        "id": "62659113-a2c3-4003-bc48-5f345667f719",
-        "organizedId": "a4a4be3b-7889-4089-b849-1c3f9d263166",
-        "fromDate": "2024-04-14T00:00:00.000Z",
-        "toDate": "2024-04-14T00:00:00.000Z",
+        "id": "c3354f86-8edc-410a-8d8b-788747e26126",
+        "organizedId": "6241e09a-baa7-4737-b897-ec4df0eb8970",
+        "fromDate": "2025-04-06T00:00:00.000Z",
+        "toDate": "2025-04-06T00:00:00.000Z",
         "type": "conferenceDates",
         "name": "conferenceDates",
-        "createdAt": "2025-03-23T14:17:36.911Z",
-        "updatedAt": "2025-03-23T14:17:36.911Z",
+        "createdAt": "2025-03-25T07:52:42.619Z",
+        "updatedAt": "2025-03-25T07:52:42.619Z",
         "isAvailable": true
       }
     ],
@@ -559,16 +551,7 @@
       }
     ],
     "feedBacks": [],
-    "followedBy": [
-      {
-        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-25T02:02:02.708Z",
-        "updatedAt": "2025-03-25T02:02:02.708Z"
-      }
-    ]
+    "followedBy": []
   },
   {
     "conference": {
@@ -780,24 +763,7 @@
       }
     ],
     "feedBacks": [],
-    "followedBy": [
-      {
-        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-25T02:38:55.164Z",
-        "updatedAt": "2025-03-25T02:38:55.164Z"
-      },
-      {
-        "id": "5b0cf9cc-db16-446c-bb95-1147b81d90f1",
-        "email": "nguyenhuuthang02032003@gmail.com",
-        "firstName": "THẮNG",
-        "lastName": "NGUYỄN",
-        "createdAt": "2025-03-25T03:34:57.221Z",
-        "updatedAt": "2025-03-25T03:34:57.221Z"
-      }
-    ]
+    "followedBy": []
   },
   {
     "conference": {
@@ -925,16 +891,7 @@
       }
     ],
     "feedBacks": [],
-    "followedBy": [
-      {
-        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-25T03:59:48.896Z",
-        "updatedAt": "2025-03-25T03:59:48.896Z"
-      }
-    ]
+    "followedBy": []
   },
   {
     "conference": {
@@ -1570,18 +1527,8 @@
         "fieldOfResearch": "Theory of computation"
       }
     ],
-    "followBy": [],
     "feedbacks": [],
-    "followedBy": [
-      {
-        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-25T02:36:18.145Z",
-        "updatedAt": "2025-03-25T02:36:18.145Z"
-      }
-    ],
+    "followedBy": [],
     "feedBacks": [
       {
         "id": "b4bb5278-b289-43f9-9c48-e86f94b6f1f7",
@@ -1623,7 +1570,6 @@
         "fieldOfResearch": "Data management and data science"
       }
     ],
-    "followBy": [],
     "feedbacks": [],
     "followedBy": [],
     "feedBacks": []
@@ -1648,7 +1594,6 @@
         "fieldOfResearch": "Computer vision and multimedia computation"
       }
     ],
-    "followBy": [],
     "feedbacks": [],
     "followedBy": [],
     "feedBacks": []
@@ -1673,18 +1618,8 @@
         "fieldOfResearch": "Cybersecurity and privacy"
       }
     ],
-    "followBy": [],
     "feedbacks": [],
-    "followedBy": [
-      {
-        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-25T02:43:31.604Z",
-        "updatedAt": "2025-03-25T02:43:31.604Z"
-      }
-    ],
+    "followedBy": [],
     "feedBacks": []
   },
   {
@@ -1797,7 +1732,6 @@
         "fieldOfResearch": "Human-centred computing"
       }
     ],
-    "followBy": [],
     "feedbacks": [],
     "followedBy": [],
     "feedBacks": []

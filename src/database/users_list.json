@@ -32,13 +32,7 @@
     "lastName": "NGUYỄN",
     "dob": "2025-03-16T02:23:28.637Z",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "f5f85255-923a-4ccf-b234-466767e84898",
-        "createdAt": "2025-03-25T03:34:57.221Z",
-        "updatedAt": "2025-03-25T03:34:57.221Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
     "calendar": [],
     "feedBacks": [],
@@ -169,95 +163,51 @@
     }
   },
   {
-    "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+    "id": "cf03b506-10df-4657-bd48-98d8c848c1cc",
     "firstName": "Lê",
     "lastName": "Lâm Lợi",
     "email": "loicute5FPS@gmail.com",
     "password": "",
     "dob": "",
     "role": "user",
-    "followedConferences": [
-      {
-        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
-        "createdAt": "2025-03-25T02:02:02.708Z",
-        "updatedAt": "2025-03-25T02:02:02.708Z"
-      },
-      {
-        "id": "1b9a9820-a49a-4936-bd3b-69b8d24b5b99",
-        "createdAt": "2025-03-25T02:36:18.145Z",
-        "updatedAt": "2025-03-25T02:36:18.145Z"
-      },
-      {
-        "id": "f5f85255-923a-4ccf-b234-466767e84898",
-        "createdAt": "2025-03-25T02:38:55.164Z",
-        "updatedAt": "2025-03-25T02:38:55.164Z"
-      },
-      {
-        "id": "b6f1b970-1a83-42dd-ae1a-a48aa15abd17",
-        "createdAt": "2025-03-25T02:43:31.604Z",
-        "updatedAt": "2025-03-25T02:43:31.604Z"
-      },
-      {
-        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
-        "createdAt": "2025-03-25T03:59:48.896Z",
-        "updatedAt": "2025-03-25T03:59:48.896Z"
-      }
-    ],
+    "followedConferences": [],
     "myConferences": [],
-    "calendar": [
-      {
-        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
-        "createdAt": "2025-03-25T02:02:22.628Z",
-        "updatedAt": "2025-03-25T02:02:22.628Z"
-      },
-      {
-        "id": "f5f85255-923a-4ccf-b234-466767e84898",
-        "createdAt": "2025-03-25T02:39:19.792Z",
-        "updatedAt": "2025-03-25T02:39:19.792Z"
-      }
-    ],
+    "calendar": [],
     "feedBacks": [],
-    "notifications": [
-      {
-        "id": "06879557-9366-412b-b565-df20fa8825d6",
-        "createdAt": "2025-03-25T05:30:00.814Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Post Conference Tour on 2025-03-29",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "73c18fdf-7ee8-4edf-9977-0ee9d24a44d7",
-        "createdAt": "2025-03-25T05:30:00.824Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Conference Dinner on 2025-03-28",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "fa0bc942-7e32-4439-b92d-68ad714f6354",
-        "createdAt": "2025-03-25T05:30:00.840Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "70e180ee-c428-47fa-baab-ea61987d5c7c",
-        "createdAt": "2025-03-25T05:30:00.859Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
-        "type": "Upcoming Conference"
-      }
-    ],
-    "createdAt": "2025-03-25T02:00:58.924Z",
-    "updatedAt": "2025-03-25T02:00:58.924Z",
+    "notifications": [],
+    "createdAt": "2025-03-25T07:13:32.844Z",
+    "updatedAt": "2025-03-25T07:13:32.844Z",
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    }
+  },
+  {
+    "id": "d56b78a2-a1f4-43a6-8483-38f39cb9ab6d",
+    "firstName": "abc",
+    "lastName": "xyz",
+    "email": "1@gmail.com",
+    "password": "123",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-25T07:33:38.090Z",
+    "updatedAt": "2025-03-25T07:33:38.090Z",
+    "avatar": "",
     "aboutme": "",
     "interestedTopics": [],
     "background": "",
