@@ -2410,6 +2410,116 @@ import cron from 'node-cron';
 // Schedule the task.  Run every 30 minutes.  Adjust as needed.
 cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
 
+// 20. API Xác Thực (Verify Password) ---
+const verifyPassword: RequestHandler<any, { message: string }, { id: string; currentPassword?: string }, any> = async (req, res): Promise<any> => {
+  try {
+      const { id, currentPassword } = req.body;
+
+      if (!id || !currentPassword) {
+          return res.status(400).json({ message: 'Missing required fields' });
+      }
+
+      const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+      const users: UserResponse[] = JSON.parse(userData);
+
+      const user = users.find(u => u.id === id);
+      if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+      }
+      // So sánh mật khẩu (Dùng bcrypt nếu bạn hash mật khẩu)
+      // const passwordMatch = await bcrypt.compare(currentPassword, user.password); // Dùng bcrypt để compare
+      const passwordMatch = currentPassword === user.password; // So sánh trực tiếp (KHÔNG AN TOÀN!)
+      if (!passwordMatch) {
+          return res.status(401).json({ message: 'Invalid password' });
+      }
+
+      res.status(200).json({ message: 'Password verified' });
+
+  } catch (error: any) {
+      console.error('Error verifying password:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+app.post('/api/v1/user/verify-password', verifyPassword); // POST request
+
+
+// 21. API Đổi Mật Khẩu (Change Password) ---
+const changePassword: RequestHandler<any, { message: string }, { id: string; newPassword?: string; confirmNewPassword?: string }, any> = async (req, res): Promise<any> => {
+try {
+  const { id, newPassword, confirmNewPassword } = req.body;
+
+  // --- 1. Basic Validation ---
+  if (!id || !newPassword || !confirmNewPassword) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  if (newPassword !== confirmNewPassword) {
+    return res.status(400).json({ message: 'New password and confirmation do not match' });
+  }
+
+  // --- 2. Read User Data ---
+  let users: UserResponse[] = [];
+  try {
+    const userData = await fs.promises.readFile(userFilePath, 'utf-8');
+    users = JSON.parse(userData);
+    
+  } catch (error: any) {
+    if (error.code !== 'ENOENT') {
+      console.error('Error reading or parsing user data:', error);
+      return res.status(500).json({ message: 'Internal server error' });
+    }
+     // If file is not found, that's an error (no users exist).
+    return res.status(404).json({message: "Users not found"})
+  }
+
+  // --- 3. Find User ---
+  const userIndex = users.findIndex(u => u.id === id);
+  console.log(userIndex)
+  if (userIndex === -1) {
+    console.log(userIndex)
+    return res.status(404).json({ message: 'User not found' });
+  }
+  const user = users[userIndex];
+
+  // --- 4. Validate New Password (ADD MORE CHECKS AS NEEDED) ---
+  if (newPassword.length < 8) {
+    return res.status(400).json({ message: 'New password must be at least 8 characters long' });
+  }
+  // Check for password strength (add more checks as needed)
+    //   if (!/[a-z]/.test(newPassword)) {
+    //     return res.status(400).json({ message: "Password must contain a lowercase letter" });
+    //   }
+    //   if (!/[A-Z]/.test(newPassword)) {
+    //       return res.status(400).json({ message: "Password must contain an uppercase letter" });
+    //   }
+    //   if (!/[0-9]/.test(newPassword)) {
+    //       return res.status(400).json({ message: "Password must contain a number" });
+    //   }
+    //   if (!/[^a-zA-Z0-9\s]/.test(newPassword)) {
+    //     return res.status(400).json({ message: "Password must contain a special character" });
+    // }
+
+  // // --- 5. Hash New Password (NẾU DÙNG HASH) ---
+  //  const saltRounds = 10;
+  //  const hashedNewPassword = await bcrypt.hash(newPassword, saltRounds);
+
+  // --- 6. Update User Data ---
+  users[userIndex] = { ...users[userIndex], password: newPassword, updatedAt: new Date().toISOString() }; // KHÔNG HASH
+  // users[userIndex] = { ...users[userIndex], password: hashedNewPassword, updatedAt: new Date().toISOString() }; // CÓ HASH
+  await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+  // --- 7. Return Success ---
+  res.status(200).json({ message: 'Password changed successfully' });
+
+} catch (error: any) {
+  console.error('Error changing password:', error);
+  res.status(500).json({ message: 'Internal server error' });
+}
+};
+
+app.post('/api/v1/user/change-password', changePassword); // PUT request
+
 
 // // --- Start the server ---
 // app.listen(3000, () => {
@@ -2419,3 +2529,4 @@ cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
 httpServer.listen(3000, () => {
   console.log(`Server is running on port 3000`);
 });
+
