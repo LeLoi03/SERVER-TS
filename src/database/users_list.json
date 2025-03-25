@@ -944,6 +944,15 @@
         "deletedAt": null,
         "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26",
         "type": "Upcoming Conference"
+      },
+      {
+        "id": "0bb93855-2ed8-444c-9729-11718d877a11",
+        "createdAt": "2025-03-25T03:11:00.314Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\": Keynote speeches and paper presentations on 2025-03-26",
+        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-25T02:00:58.924Z",
