@@ -244,8 +244,8 @@ io.on('connection', (socket: Socket) => {
 
 
 import { ConferenceResponse, FollowerInfo } from './types/conference.response';
-import { ConferenceListResponse, ConferenceInfo } from './types/conference.list.response';
-import { UserResponse, MyConference, Notification, Setting } from './types/user.response';
+import { ConferenceListResponse, ConferenceInfo, Meta } from './types/conference.list.response';
+import { UserResponse, MyConference, Notification } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
 import { CalendarEvent } from './types/calendar';
 import { Feedback } from './types/conference.response';
@@ -260,6 +260,7 @@ const userFilePath = path.resolve(__dirname, './database/users_list.json');
 const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
 const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, './database/DB_details.json');
+
 // 1. Lấy Conference theo ID
 const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { message: string }, any, any> = async (
   req,
@@ -313,6 +314,39 @@ const getConferenceById: RequestHandler<{ id: string }, ConferenceResponse | { m
   }
 };
 app.get('/api/v1/conference/:id', getConferenceById);
+
+// 2. Lấy danh sách Conferences
+const getConferenceList: RequestHandler<any, ConferenceListResponse | { message: string }, any, any> = async (
+  req,
+  res
+): Promise<void> => {
+  try {
+    const data = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
+
+    // Parse toàn bộ file JSON thành đối tượng ConferenceListResponse
+    const conferenceListResponse: ConferenceListResponse = JSON.parse(data);
+
+    // Trả về đối tượng ConferenceListResponse đã parse
+    res.status(200).json(conferenceListResponse);
+    return;
+
+
+  } catch (error: any) {
+    console.error('Error reading or processing conference data:', error);
+    if (error instanceof SyntaxError) {
+      res.status(500).json({ message: 'Invalid JSON format in conference-list.json' });
+      return;
+    } else if (error.code === 'ENOENT') {
+      res.status(500).json({ message: 'conference-list.json not found' });
+      return;
+    } else {
+      res.status(500).json({ message: 'Internal server error' });
+      return;
+    }
+  }
+};
+app.get('/api/v1/conference', getConferenceList);
+
 
 
 // 3. Follow conference (CORRECTED - No Duplicate Notifications)
@@ -732,8 +766,9 @@ const addConference: RequestHandler<any, AddedConference | { message: string }, 
         updatedAt: new Date().toISOString(),
         isAvailable: true,
       })),
-
-      ranks: [],
+      rank: "",
+      source: "",
+      researchFields: "",
       status: 'Pending', // Default status
     };
 
@@ -1244,7 +1279,6 @@ app.get('/api/v1/user/:id/calendar', getUserCalendar);
 const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { message: string }, { description: string; star: number; creatorId: string }> = async (req, res) => {
   const { conferenceId } = req.params;
   const { description, star, creatorId } = req.body;
-
   if (!description || star === undefined || star < 1 || star > 5 || !creatorId) {
     res.status(400).json({ message: 'Invalid feedback data' });
     return;
@@ -1371,7 +1405,6 @@ app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback); // Use conf
 const deleteUser: RequestHandler<{ id: string }, { message: string } | { error: string }, any, any> = async (req, res): Promise<any> => {
   try {
     const userId = req.params.id;
-
     if (!userId) {
       return res.status(400).json({ message: 'Missing userId' });
     }
@@ -1718,13 +1751,15 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
             continent: conferenceToProcess.location.continent
           },
           year: conferenceToProcess.organization.year,
-          ranks: conferenceToProcess.ranks[0],
+          rank: conferenceToProcess.rank,
+          source: conferenceToProcess.source,
+          researchFields: conferenceToProcess.researchFields,
           topics: conferenceToProcess.organization.topics,
           dates: {
-            fromDate: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.fromDate || '',
-            toDate: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.toDate || '',
-            name: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.name || '',
-            type: conferenceToProcess.dates.find(d => d.type === 'Conference Date')?.type || ''
+            fromDate: conferenceToProcess.dates.find(d => d.type === 'conferenceDates')?.fromDate || '',
+            toDate: conferenceToProcess.dates.find(d => d.type === 'conferenceDates')?.toDate || '',
+            name: conferenceToProcess.dates.find(d => d.type === 'conferenceDates')?.name || '',
+            type: conferenceToProcess.dates.find(d => d.type === 'conferenceDates')?.type || ''
           },
           link: conferenceToProcess.organization.link,
           createdAt: new Date().toISOString(),
@@ -1741,7 +1776,12 @@ const adminConferences: RequestHandler = async (req, res): Promise<void> => {
           organization: conferenceToProcess.organization,
           location: conferenceToProcess.location,
           dates: conferenceToProcess.dates,
-          ranks: conferenceToProcess.ranks,
+          ranks: [{
+            rank: conferenceToProcess.rank,
+            source: conferenceToProcess.source,
+            fieldOfResearch: conferenceToProcess.researchFields,
+          }],
+
           feedBacks: [],
           followedBy: []
         };
@@ -1842,7 +1882,7 @@ app.post('/admin/conferences', adminConferences);
 
 
 // 16. DB to JSON : Receive and save conference data
-// MODIFIED ROUTE: Receive and save conference data (only if DB.json is empty)
+// --- Save Conference List ---
 const saveConferenceData: RequestHandler<any, { message: string }, ConferenceListResponse, any> = async (
   req,
   res
@@ -1854,16 +1894,14 @@ const saveConferenceData: RequestHandler<any, { message: string }, ConferenceLis
       return res.status(400).json({ message: 'Invalid data format received.' }) as any;
     }
 
-    // --- DB.json Handling ---
-    let dbData;
+    let dbData: ConferenceListResponse = { payload: [], meta: {} as Meta }; // Initialize with an empty structure
     try {
       const fileContent = await fs.promises.readFile(conferencesListFilePath, 'utf-8');
       dbData = JSON.parse(fileContent);
-      if (dbData && ((Array.isArray(dbData) && dbData.length > 0) || (typeof dbData === 'object' && Object.keys(dbData).length > 0))) {
-        //DB.json is valid.  Skip write to DB.json.  We'll still process DB_details.
-      } else {
-        //DB.json is empty.  Write to it.
-        await fs.promises.writeFile(conferencesListFilePath, JSON.stringify(receivedData, null, 2), 'utf-8');
+
+      //Ensure that dbData and its payload are arrays.
+      if (!dbData || !dbData.payload || !Array.isArray(dbData.payload)) {
+        dbData = { payload: [], meta: dbData?.meta || {} as Meta }; //Re-initialize if necessary
       }
 
     } catch (error: any) {
@@ -1871,20 +1909,29 @@ const saveConferenceData: RequestHandler<any, { message: string }, ConferenceLis
         console.error('Error reading DB.json:', error);
         return res.status(500).json({ message: 'Error reading DB.json' });
       }
-      //If file does not exists, write data
-      await fs.promises.writeFile(conferencesListFilePath, JSON.stringify(receivedData, null, 2), 'utf-8');
-
+      // If the file doesn't exist, it's fine; dbData is already initialized.
     }
 
+    // Iterate through received conferences and add them if they don't exist.
+    let addedCount = 0;
+    for (const conference of receivedData.payload) {
+      const exists = dbData.payload.some(existingConf => existingConf.id === conference.id);
+      if (!exists) {
+        dbData.payload.push(conference);
+        addedCount++;
+      }
+    }
+    dbData.meta = receivedData.meta;
 
 
-    //Only return success when data saved
-    if ((dbData === undefined || !((Array.isArray(dbData) && dbData.length > 0) || (typeof dbData === 'object' && Object.keys(dbData).length > 0)))) {
-      res.status(200).json({ message: 'Conference data saved successfully.' });
+    // Only write if there are new conferences.
+    if (addedCount > 0) {
+      await fs.promises.writeFile(conferencesListFilePath, JSON.stringify(dbData, null, 2), 'utf-8');
+      res.status(200).json({ message: `${addedCount} new conferences added.` });
+    } else {
+      res.status(200).json({ message: 'No new conferences to add.' }); // Still a 200 OK
     }
-    else {
-      res.status(200).json({ message: 'Conference already exists.' });
-    }
+
   } catch (error: any) {
     console.error('Error saving conference data:', error);
     res.status(500).json({ message: 'Internal server error' });
@@ -1893,7 +1940,7 @@ const saveConferenceData: RequestHandler<any, { message: string }, ConferenceLis
 app.post('/api/v1/conferences/save', saveConferenceData);
 
 
-// --- New saveConferenceDetails route ---
+// --- Save Conference Details ---
 const saveConferenceDetails: RequestHandler<any, { message: string }, ConferenceResponse, any> = async (req, res) => {
   try {
     const receivedData: ConferenceResponse = req.body;
@@ -1904,40 +1951,54 @@ const saveConferenceDetails: RequestHandler<any, { message: string }, Conference
 
     const conferenceId = receivedData.conference.id;
 
-    // --- DB_details.json Handling ---
-    let dbDetailsData: ConferenceResponse[] = []; // Initialize as an array
+    let dbDetailsData: ConferenceResponse[] = [];
     try {
       const fileContent = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
       dbDetailsData = JSON.parse(fileContent);
 
-      // Ensure dbDetailsData is an array
       if (!Array.isArray(dbDetailsData)) {
-        dbDetailsData = []; // Reset to empty array if it's not an array.
+        dbDetailsData = [];
       }
-
     } catch (error: any) {
       if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) {
         console.error('Error reading DB_details.json:', error);
         return res.status(500).json({ message: 'Error reading DB_details.json' });
       }
-      // If file doesn't exist, it's okay, dbDetailsData is already initialized as an empty array.
+      // If file doesn't exist, dbDetailsData is already an empty array.
     }
-    // Check for existing conference by ID.
+
     const existingConferenceIndex = dbDetailsData.findIndex(conf => conf.conference.id === conferenceId);
 
     if (existingConferenceIndex === -1) {
       // Conference doesn't exist, add it.
+      receivedData.followedBy = [];
+      receivedData.feedBacks = [];
       dbDetailsData.push(receivedData);
       await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
       res.status(200).json({ message: 'Conference details saved successfully.' });
-    }
-    else {
-      // Conference already exists.
-      res.status(200).json({ message: 'Conference details already exist.' }); // 200 OK, but no save.
-    }
+    } else {
+      // Conference exists, update it (except Feedback and FollowerInfo).
 
+      // Create a copy of the existing conference.
+      const updatedConference = { ...dbDetailsData[existingConferenceIndex] };
+
+      // Update the fields.  Explicitly copy each top-level field.
+      updatedConference.conference = receivedData.conference;  //Overwrites completely
+      updatedConference.organization = receivedData.organization;
+      updatedConference.location = receivedData.location;
+      updatedConference.dates = receivedData.dates;
+      updatedConference.ranks = receivedData.ranks;
+      // DO NOT update feedBacks and followedBy
+
+
+      // Replace the existing conference with the updated one.
+      dbDetailsData[existingConferenceIndex] = updatedConference;
+
+      await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
+      res.status(200).json({ message: 'Conference details updated successfully.' });
+    }
   } catch (error: any) {
-    console.error('Error saving conference details:', error);
+    console.error('Error saving/updating conference details:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 };
@@ -2174,20 +2235,14 @@ app.post('/api/v1/user/google-login', googleLoginHandler); // Register the route
 // 19. Get Topics
 app.get('/api/v1/topics', async (req, res) => {
   try {
-    const rawData = await fs.promises.readFile(conferenceDetailsFilePath, 'utf8');
+    const rawData = await fs.promises.readFile(conferencesListFilePath, 'utf8');
     const data = JSON.parse(rawData); // data is now an ARRAY
-
-    // Check if data is an array
-    if (!Array.isArray(data)) {
-      res.status(500).json({ error: 'Invalid data format: Expected an array' });
-      return;
-    }
 
     // Accumulate topics from all conferences
     let allTopics: string[] = [];
-    for (const conferenceData of data) {
-      if (conferenceData.organization && Array.isArray(conferenceData.organization.topics)) {
-        allTopics = allTopics.concat(conferenceData.organization.topics);
+    for (const conferenceData of data.payload) {
+      if (conferenceData.topics && Array.isArray(conferenceData.topics)) {
+        allTopics = allTopics.concat(conferenceData.topics);
       }
     }
 
@@ -2203,7 +2258,7 @@ app.get('/api/v1/topics', async (req, res) => {
 
   } catch (error) {
     if ((error as any).code === 'ENOENT') {
-      console.error('Error: DB_details.json not found at:', conferenceDetailsFilePath);
+      console.error('Error: DB_details.json not found at:', conferencesListFilePath);
       res.status(500).json({ error: 'Database file not found' });
     } else if (error instanceof SyntaxError) {
       console.error('Error: Invalid JSON in DB_details.json:', error);
@@ -2217,8 +2272,7 @@ app.get('/api/v1/topics', async (req, res) => {
 
 
 // --- Scheduled Task (using node-cron) ---
-// Helper Function: shouldSendUpcomingEventNotification
-// This function checks for upcoming conference dates and sends notifications.
+
 // Helper Function: shouldSendUpcomingEventNotification
 function shouldSendUpcomingEventNotification(user: UserResponse): boolean {
   const settings = user.setting;
@@ -2276,7 +2330,7 @@ async function checkUpcomingConferenceDates() {
             console.log(`  Checking date: ${date.name} (ID: ${date.id}), Start Date: ${startDate.toISOString()}, Hours Before: ${hoursBefore.toFixed(2)}`);
 
             // Example: Notify 24 hours and 1 hour before. Adjust as needed.
-            if ((hoursBefore > 24 && hoursBefore <= 48) || (hoursBefore > 0.9 && hoursBefore <= 1)) {
+            if ((hoursBefore > 5 && hoursBefore <= 48) || (hoursBefore > 0.9 && hoursBefore <= 1)) {
               console.log(`    Date is within notification window.`);
 
               // Find users following this conference.
@@ -2289,8 +2343,7 @@ async function checkUpcomingConferenceDates() {
                     console.log(`    Checking follower: ${user.firstName} ${user.lastName} (ID: ${user.id})`);
 
                     if (shouldSendUpcomingEventNotification(user)) {
-                      const notificationMessage = `Upcoming event in conference "${conference.conference.title}": ${date.name || 'Event'} on ${date.fromDate}`;
-                      console.log(`      Sending notification to user ${user.id}: ${notificationMessage}`);
+                      const notificationMessage = `Upcoming event in conference "${conference.conference.title}": ${date.name || 'Event'} on ${date.fromDate.toString().substring(0, 10)}`;                      console.log(`      Sending notification to user ${user.id}: ${notificationMessage}`);
 
                       const notification: Notification = {
                         id: uuidv4(),

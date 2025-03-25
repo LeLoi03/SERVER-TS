@@ -127,18 +127,8 @@
         "fieldOfResearch": "Information and computing sciences"
       }
     ],
-    "followBy": [],
-    "feedbacks": [],
-    "followedBy": [
-      {
-        "id": "af69597e-0806-45b2-aefe-066dee9abcb1",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-24T05:35:45.406Z",
-        "updatedAt": "2025-03-24T05:35:45.406Z"
-      }
-    ]
+    "feedBacks": [],
+    "followedBy": []
   },
   {
     "conference": {
@@ -291,202 +281,8 @@
         "fieldOfResearch": "Distributed computing and systems software"
       }
     ],
-    "followBy": [],
-    "feedbacks": [],
-    "followedBy": [
-      {
-        "id": "af69597e-0806-45b2-aefe-066dee9abcb1",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-24T05:37:25.259Z",
-        "updatedAt": "2025-03-24T05:37:25.259Z"
-      }
-    ]
-  },
-  {
-    "conference": {
-      "id": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
-      "title": "name",
-      "acronym": "acronym",
-      "creatorId": "af69597e-0806-45b2-aefe-066dee9abcb1",
-      "createdAt": "2025-03-24T06:21:22.684Z",
-      "updatedAt": "2025-03-24T06:21:22.684Z"
-    },
-    "organization": {
-      "id": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff",
-      "year": 2025,
-      "accessType": "offline",
-      "publisher": "",
-      "isAvailable": true,
-      "conferenceId": "5464e2d3-fe79-4038-b922-1a82f2cb2b72",
-      "summerize": "",
-      "callForPaper": "",
-      "link": "link",
-      "cfpLink": "",
-      "impLink": "",
-      "topics": [
-        "AI"
-      ],
-      "createdAt": "2025-03-24T06:21:22.684Z",
-      "updatedAt": "2025-03-24T06:21:22.684Z"
-    },
-    "location": {
-      "id": "79d8aebc-b11c-4efd-8217-5d94638c4022",
-      "address": "address",
-      "cityStateProvince": "",
-      "country": "Vietnam",
-      "continent": "Asia",
-      "createdAt": "2025-03-24T06:21:22.684Z",
-      "updatedAt": "2025-03-24T06:21:22.684Z",
-      "isAvailable": true,
-      "organizeId": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff"
-    },
-    "dates": [
-      {
-        "id": "4387f8f5-a7a6-403d-9b3d-50a8d28e31ed",
-        "organizedId": "6d1032ac-5ef8-454a-81cc-dfcba6e5b7ff",
-        "fromDate": "2025-03-18T00:00:00.000Z",
-        "toDate": "2025-03-27T00:00:00.000Z",
-        "type": "conferenceDates",
-        "name": "Conference Date",
-        "createdAt": "2025-03-24T06:21:22.685Z",
-        "updatedAt": "2025-03-24T06:21:22.685Z",
-        "isAvailable": true
-      }
-    ],
-    "rankSourceFoRData": [],
     "feedBacks": [],
     "followedBy": []
-  },
-  {
-    "conference": {
-      "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
-      "title": "AAAI Conference on Human Computation and Crowdsourcing",
-      "acronym": "HCOMP",
-      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
-      "createdAt": "2025-03-23T10:26:29.368Z",
-      "updatedAt": "2025-03-23T10:26:29.368Z",
-      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
-    },
-    "organization": {
-      "id": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-      "year": 2024,
-      "accessType": "Offline",
-      "isAvailable": true,
-      "conferenceId": "19d5efbf-01b2-4337-b079-16eae6fec17f",
-      "publisher": "",
-      "summerize": "The 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024) will be held October 16-19th in Pittsburgh, Pennsylvania, with a focus on ''Responsible Crowd Work for Better AI.'' HCOMP is the premier venue for disseminating the latest research findings on human computation and crowdsourcing, promoting broad, interdisciplinary research.",
-      "callForPaper": "HCOMP 2024 invites submissions that address important research challenges and advancements in human computation and crowdsourcing. The conference focuses on interdisciplinary research, including human-centered qualitative studies, HCI design, social computing, artificial intelligence economics, computational social science, digital humanities, policy, and ethics.",
-      "link": "https://www.humancomputation.com/",
-      "cfpLink": "None",
-      "impLink": "None",
-      "createdAt": "2025-03-24T05:51:47.645Z",
-      "updatedAt": "2025-03-24T05:51:47.645Z",
-      "topics": [
-        "Artificial Intelligence",
-        "Human Computation",
-        "Crowdsourcing",
-        "Human-Computer Interaction",
-        "Social Computing",
-        "Computational Social Science",
-        "Digital Humanities",
-        "Policy",
-        "Ethics",
-        "Economics"
-      ]
-    },
-    "location": {
-      "id": "6f7c1852-74c8-40de-9840-754be0bb10ea",
-      "createdAt": "2025-03-24T05:51:47.654Z",
-      "updatedAt": "2025-03-24T05:51:47.654Z",
-      "isAvailable": true,
-      "organizeId": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-      "cityStateProvince": "Pittsburgh, Pennsylvania",
-      "country": "United States",
-      "address": "Pittsburgh, Pennsylvania",
-      "continent": "North America"
-    },
-    "dates": [
-      {
-        "id": "667bf810-8bbe-4f1e-8da0-16d34716109d",
-        "organizedId": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-        "fromDate": "2024-07-31T00:00:00.000Z",
-        "toDate": "2024-07-31T00:00:00.000Z",
-        "type": "notificationDate",
-        "name": "Notifications",
-        "createdAt": "2025-03-24T05:51:47.662Z",
-        "updatedAt": "2025-03-24T05:51:47.662Z",
-        "isAvailable": true
-      },
-      {
-        "id": "5a3e1d85-61b6-4c98-bbc7-04a4c351d7c0",
-        "organizedId": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-        "fromDate": "2024-06-12T00:00:00.000Z",
-        "toDate": "2024-06-12T00:00:00.000Z",
-        "type": "submissionDate",
-        "name": "Full papers due",
-        "createdAt": "2025-03-24T05:51:47.660Z",
-        "updatedAt": "2025-03-24T05:51:47.660Z",
-        "isAvailable": true
-      },
-      {
-        "id": "e5bf02a9-22d9-4a3f-b8f5-d264808a9b51",
-        "organizedId": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-        "fromDate": "2024-06-05T00:00:00.000Z",
-        "toDate": "2024-06-05T00:00:00.000Z",
-        "type": "submissionDate",
-        "name": "Abstracts due",
-        "createdAt": "2025-03-24T05:51:47.659Z",
-        "updatedAt": "2025-03-24T05:51:47.659Z",
-        "isAvailable": true
-      },
-      {
-        "id": "5a449329-96e7-4cd5-ad8e-fd1857b4f3e6",
-        "organizedId": "c1fec3f5-e773-4620-b5fd-7c87602679c9",
-        "fromDate": "2024-10-16T00:00:00.000Z",
-        "toDate": "2024-10-19T00:00:00.000Z",
-        "type": "conferenceDates",
-        "name": "conferenceDates",
-        "createdAt": "2025-03-24T05:51:47.657Z",
-        "updatedAt": "2025-03-24T05:51:47.657Z",
-        "isAvailable": true
-      }
-    ],
-    "ranks": [
-      {
-        "rank": "B",
-        "source": "CORE2023",
-        "fieldOfResearch": "Human-centred computing"
-      },
-      {
-        "rank": "B",
-        "source": "CORE2023",
-        "fieldOfResearch": "Data management and data science"
-      },
-      {
-        "rank": "B",
-        "source": "CORE2021",
-        "fieldOfResearch": "Data management and data science"
-      },
-      {
-        "rank": "B",
-        "source": "CORE2021",
-        "fieldOfResearch": "Human-centred computing"
-      }
-    ],
-    "followBy": [],
-    "feedbacks": [],
-    "followedBy": [
-      {
-        "id": "af69597e-0806-45b2-aefe-066dee9abcb1",
-        "email": "loicute5FPS@gmail.com",
-        "firstName": "Lê",
-        "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-24T06:25:04.233Z",
-        "updatedAt": "2025-03-24T06:25:04.233Z"
-      }
-    ]
   },
   {
     "conference": {
@@ -762,25 +558,1225 @@
         "fieldOfResearch": "Applied computing"
       }
     ],
+    "feedBacks": [],
+    "followedBy": [
+      {
+        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+        "email": "loicute5FPS@gmail.com",
+        "firstName": "Lê",
+        "lastName": "Lâm Lợi",
+        "createdAt": "2025-03-25T02:02:02.708Z",
+        "updatedAt": "2025-03-25T02:02:02.708Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "f5f85255-923a-4ccf-b234-466767e84898",
+      "title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
+      "acronym": "PODS",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:31.928Z",
+      "updatedAt": "2025-03-23T10:26:31.928Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "f5f85255-923a-4ccf-b234-466767e84898",
+      "publisher": "ACM",
+      "summerize": "The ACM SIGMOD/PODS Conference is a leading international forum for database researchers, practitioners, developers, and users. The 2025 conference will be held in Berlin, Germany, from June 22-27, 2025. The PODS symposium series, held in conjunction with the SIGMOD conference series, provides a premier annual forum for the communication of new advances in the theoretical foundations of data management.",
+      "callForPaper": "PODS 2025 seeks scientific articles that present principled contributions to modeling, application, and system building in data management. Key details:\n\n*   **Submission Deadlines:** Two submission phases:\n    *   First Phase:\n        *   Abstract: May 31, 2024\n        *   Submission: June 7, 2024\n    *   Second Phase:\n        *   Abstract: December 2, 2024\n        *   Submission: December 9, 2024\n*   **Topics of Interest:** Include database processing, design, access, data quality, analysis, uncertainty, interoperability, responsible data management, human-database interaction, and connections between database principles and other disciplines.\n*   **Submission Format:** Use the standard ACM \"acmsmall\" proceedings stylesheet. Submissions can be up to 15 pages, not including references.\n*   **Double-Anonymous Reviewing:** The conference applies a double-blind reviewing process.\n*   **Publication:** Accepted papers will be published in a PODS 2025 issue of the PACMMOD journal.",
+      "link": "https://2025.sigmod.org/",
+      "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
+      "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml",
+      "createdAt": "2025-03-25T02:40:17.198Z",
+      "updatedAt": "2025-03-25T02:40:17.198Z",
+      "topics": [
+        "Data Management",
+        "Database Systems"
+      ]
+    },
+    "location": {
+      "id": "e37aaf24-85c7-47b1-b8f0-78f9cd4fec0f",
+      "createdAt": "2025-03-25T02:40:17.208Z",
+      "updatedAt": "2025-03-25T02:40:17.208Z",
+      "isAvailable": true,
+      "organizeId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+      "cityStateProvince": "Berlin",
+      "country": "Germany",
+      "address": "Berlin, Germany",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "eed98a18-5b18-4ca4-bc47-6283609dcb25",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-02-28T00:00:00.000Z",
+        "toDate": "2025-02-28T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "SECOND SUBMISSION PHASE Revision submission",
+        "createdAt": "2025-03-25T02:40:17.234Z",
+        "updatedAt": "2025-03-25T02:40:17.234Z",
+        "isAvailable": true
+      },
+      {
+        "id": "029b095b-c0da-4ba6-b39b-b8686b47d460",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-02-03T00:00:00.000Z",
+        "toDate": "2025-02-07T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "SECOND SUBMISSION PHASE Rebuttal",
+        "createdAt": "2025-03-25T02:40:17.233Z",
+        "updatedAt": "2025-03-25T02:40:17.233Z",
+        "isAvailable": true
+      },
+      {
+        "id": "7a66cfdc-8619-457e-8128-84070d8b84b3",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-08-26T00:00:00.000Z",
+        "toDate": "2024-08-26T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "FIRST SUBMISSION PHASE Revision submission",
+        "createdAt": "2025-03-25T02:40:17.231Z",
+        "updatedAt": "2025-03-25T02:40:17.231Z",
+        "isAvailable": true
+      },
+      {
+        "id": "02bd41e9-406c-4901-9890-2e1ec7ca2727",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-07-29T00:00:00.000Z",
+        "toDate": "2024-08-01T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "FIRST SUBMISSION PHASE Rebuttal",
+        "createdAt": "2025-03-25T02:40:17.230Z",
+        "updatedAt": "2025-03-25T02:40:17.230Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ba306e19-72b4-4553-ae6d-cb8942cd745f",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-03-07T00:00:00.000Z",
+        "toDate": "2025-03-07T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "SECOND SUBMISSION PHASE Final notification",
+        "createdAt": "2025-03-25T02:40:17.228Z",
+        "updatedAt": "2025-03-25T02:40:17.228Z",
+        "isAvailable": true
+      },
+      {
+        "id": "71553366-c25f-4980-8707-224276b15e36",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-02-14T00:00:00.000Z",
+        "toDate": "2025-02-14T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "SECOND SUBMISSION PHASE Initial notification",
+        "createdAt": "2025-03-25T02:40:17.227Z",
+        "updatedAt": "2025-03-25T02:40:17.227Z",
+        "isAvailable": true
+      },
+      {
+        "id": "192087f4-5d40-4c19-bb09-fd0762a6546e",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-09-02T00:00:00.000Z",
+        "toDate": "2024-09-02T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "FIRST SUBMISSION PHASE Final notification",
+        "createdAt": "2025-03-25T02:40:17.225Z",
+        "updatedAt": "2025-03-25T02:40:17.225Z",
+        "isAvailable": true
+      },
+      {
+        "id": "fc0d8695-dd98-4a41-a1a0-7008fee60a8f",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-08-12T00:00:00.000Z",
+        "toDate": "2024-08-12T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "FIRST SUBMISSION PHASE Initial notification",
+        "createdAt": "2025-03-25T02:40:17.224Z",
+        "updatedAt": "2025-03-25T02:40:17.224Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4593986a-46c9-4b77-ad0d-58c63dfd1de0",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-12-09T00:00:00.000Z",
+        "toDate": "2024-12-09T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "SECOND SUBMISSION PHASE Submission",
+        "createdAt": "2025-03-25T02:40:17.222Z",
+        "updatedAt": "2025-03-25T02:40:17.222Z",
+        "isAvailable": true
+      },
+      {
+        "id": "792cc643-2561-47f9-b506-f6a44c1ba093",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-12-02T00:00:00.000Z",
+        "toDate": "2024-12-02T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "SECOND SUBMISSION PHASE Abstract",
+        "createdAt": "2025-03-25T02:40:17.220Z",
+        "updatedAt": "2025-03-25T02:40:17.220Z",
+        "isAvailable": true
+      },
+      {
+        "id": "e62a23d2-3688-4a02-beb5-b3a1e8b3c6de",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-06-07T00:00:00.000Z",
+        "toDate": "2024-06-07T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "FIRST SUBMISSION PHASE Submission",
+        "createdAt": "2025-03-25T02:40:17.218Z",
+        "updatedAt": "2025-03-25T02:40:17.218Z",
+        "isAvailable": true
+      },
+      {
+        "id": "13f82ce4-71bc-4f26-97ee-69b9bca9bacc",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2024-05-31T00:00:00.000Z",
+        "toDate": "2024-05-31T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "FIRST SUBMISSION PHASE Abstract",
+        "createdAt": "2025-03-25T02:40:17.216Z",
+        "updatedAt": "2025-03-25T02:40:17.216Z",
+        "isAvailable": true
+      },
+      {
+        "id": "60dcd253-1161-45fb-b95d-8248ec67cbb6",
+        "organizedId": "e5df9526-db28-4a49-8e5c-3c62332bf9eb",
+        "fromDate": "2025-06-22T00:00:00.000Z",
+        "toDate": "2025-06-27T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-25T02:40:17.213Z",
+        "updatedAt": "2025-03-25T02:40:17.213Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Data management and data science"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": [
+      {
+        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+        "email": "loicute5FPS@gmail.com",
+        "firstName": "Lê",
+        "lastName": "Lâm Lợi",
+        "createdAt": "2025-03-25T02:38:55.164Z",
+        "updatedAt": "2025-03-25T02:38:55.164Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "title": "ACIS Conference on Software Engineering Research, Management and Applications",
+      "acronym": "SERA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.435Z",
+      "updatedAt": "2025-03-23T10:26:29.435Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "publisher": "",
+      "summerize": "The 23rd IEEE/ACIS International Conference on Software Engineering, Management and Applications (SERA 2025) brings together researchers, scientists, engineers, industry practitioners, and students to discuss, encourage and exchange new ideas, research results, and experiences on all aspects of Software Engineering, Management and Applications. SERA 2025 aims to facilitate cross-fertilizations among key technology enabling areas.",
+      "callForPaper": "SERA 2025 invites submissions on all aspects of Software Engineering, Management, and Applications. Key dates to remember:\n\n*   **Workshop/Special Session Proposal:** January 10, 2025\n*   **Full Paper Submission:** March 28, 2025 (extended)\n*   **Acceptance Notification:**\n    *   Papers submitted by March 14: April 4, 2025\n    *   Papers submitted after March 14: April 11, 2025\n*   **Camera Ready Papers/Registration:** April 18, 2025\n\nThe conference aims to facilitate cross-fertilization among different technology areas.",
+      "link": "https://acisinternational.org/conferences/sera-2025/",
+      "cfpLink": "http://acisinternational.org/wp-content/uploads/2025/03/SERA_2025_CFP-9.pdf",
+      "impLink": "https://acisinternational.org/conferences/sera-2025/",
+      "createdAt": "2025-03-24T06:16:27.405Z",
+      "updatedAt": "2025-03-24T06:16:27.405Z",
+      "topics": [
+        "Software Engineering",
+        "Software Management",
+        "Software Applications"
+      ]
+    },
+    "location": {
+      "id": "ebe97dec-8f43-49f4-9c41-caae384db67e",
+      "createdAt": "2025-03-24T06:16:27.417Z",
+      "updatedAt": "2025-03-24T06:16:27.417Z",
+      "isAvailable": true,
+      "organizeId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+      "cityStateProvince": "Las Vegas, Nevada",
+      "country": "United States",
+      "address": "UNLV Campus, Las Vegas, Nevada, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "3fe6d1d0-0786-4a07-9e04-a344b67d82e8",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-01-10T00:00:00.000Z",
+        "toDate": "2025-01-10T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Workshop/Special Session Proposal",
+        "createdAt": "2025-03-24T06:16:27.431Z",
+        "updatedAt": "2025-03-24T06:16:27.431Z",
+        "isAvailable": true
+      },
+      {
+        "id": "9dbc2973-4883-41ef-b8b4-16c11865e6a1",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-04-11T00:00:00.000Z",
+        "toDate": "2025-04-11T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification (Papers submitted after March 14)",
+        "createdAt": "2025-03-24T06:16:27.429Z",
+        "updatedAt": "2025-03-24T06:16:27.429Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8057d0f9-f862-4556-a4c3-c90c54f1a627",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-04-04T00:00:00.000Z",
+        "toDate": "2025-04-04T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification (papers submitted by March 14)",
+        "createdAt": "2025-03-24T06:16:27.427Z",
+        "updatedAt": "2025-03-24T06:16:27.427Z",
+        "isAvailable": true
+      },
+      {
+        "id": "67991c80-f703-46a3-bc9d-114e56535d3d",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-04-18T00:00:00.000Z",
+        "toDate": "2025-04-18T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera Ready Papers/Registration",
+        "createdAt": "2025-03-24T06:16:27.425Z",
+        "updatedAt": "2025-03-24T06:16:27.425Z",
+        "isAvailable": true
+      },
+      {
+        "id": "22dc7394-5965-4dbb-ad1b-ca243a9a22b5",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full Paper Submission",
+        "createdAt": "2025-03-24T06:16:27.423Z",
+        "updatedAt": "2025-03-24T06:16:27.423Z",
+        "isAvailable": true
+      },
+      {
+        "id": "efe5d991-570a-4a3c-8134-5e30e433f971",
+        "organizedId": "fc219c6d-9797-4f0d-aaa4-c83841de5e59",
+        "fromDate": "2025-05-29T00:00:00.000Z",
+        "toDate": "2025-05-31T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-24T06:16:27.421Z",
+        "updatedAt": "2025-03-24T06:16:27.421Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2021",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Software engineering"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
+      "title": "ACM Int'l Symposium on Field Programmable Gate Arrays",
+      "acronym": "FPGA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:30.177Z",
+      "updatedAt": "2025-03-23T10:26:30.177Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "7848876c-fdb6-4fd0-974e-f977b173913c",
+      "publisher": "ACM",
+      "summerize": "The ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (ISFPGA) is a premier conference for the presentation of advances in FPGA technology. In 2025, the 33rd edition of ISFPGA will be held in Monterey, California, USA. Accepted papers will be published in the conference proceedings and available in the ACM Digital Library.",
+      "callForPaper": "ISFPGA 2025 invites submissions related to advances in FPGA technology. Key details include:\n\n*   **Submission Deadlines (AoE):**\n    *   Abstracts Due: October 1, 2024\n    *   Submissions Due: October 8, 2024\n*   **Topics of Interest:** The conference seeks research papers related to a wide range of topics:\n    *   FPGA Architecture\n    *   FPGA Circuit Design\n    *   CAD for FPGAs\n    *   High-Level Abstractions and Tools for FPGAs\n    *   FPGA-based and FPGA-like Computing Engines\n    *   Applications and Design Studies\n    *   AI/ML for and on FPGAs\n*   **Submission Guidelines:**\n    *   Papers should use the sigconf ACM format template.\n    *   Submissions will be considered for acceptance as regular (10 pages max, excluding references) or short papers (6 pages max, excluding references).\n    *   The FPGA Symposium uses a double-blind reviewing system.\n*   **Artifact Evaluation:** The conference will allow authors to submit accompanying artifacts for their paper submissions for evaluation.\n*   **Double Blind Policy:** The FPGA Symposium uses a double-blind reviewing system. Manuscripts must not identify authors or their affiliations",
+      "link": "https://www.isfpga.org/",
+      "cfpLink": "https://www.isfpga.org/call-for-papers/",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:34:54.620Z",
+      "updatedAt": "2025-03-23T10:34:54.620Z",
+      "topics": [
+        "FPGA Architecture",
+        "FPGA Circuit Design",
+        "CAD for FPGAs",
+        "High-Level Abstractions and Tools for FPGAs",
+        "FPGA-based Computing Engines",
+        "AI/ML on FPGAs"
+      ]
+    },
+    "location": {
+      "id": "c0daa67f-de29-4f01-9e9e-c0274245f905",
+      "createdAt": "2025-03-23T10:34:54.633Z",
+      "updatedAt": "2025-03-23T10:34:54.633Z",
+      "isAvailable": true,
+      "organizeId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+      "cityStateProvince": "Monterey, California",
+      "country": "United States of America",
+      "address": "Monterey Marriott, Monterey, California, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "1048fea8-431a-43ff-a801-551e10ef7d13",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2018-11-11T00:00:00.000Z",
+        "toDate": "2024-11-18T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Rebuttal Period",
+        "createdAt": "2025-03-23T10:34:54.652Z",
+        "updatedAt": "2025-03-23T10:34:54.652Z",
+        "isAvailable": true
+      },
+      {
+        "id": "443f5e42-c4bc-4eda-a811-0a822727715c",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-11-30T00:00:00.000Z",
+        "toDate": "2024-11-30T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Acceptance",
+        "createdAt": "2025-03-23T10:34:54.650Z",
+        "updatedAt": "2025-03-23T10:34:54.650Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c7d42ec4-7a7b-4f41-946e-195c04dcd43e",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "registrationDate",
+        "name": "Early Registration Deadline",
+        "createdAt": "2025-03-23T10:34:54.648Z",
+        "updatedAt": "2025-03-23T10:34:54.648Z",
+        "isAvailable": true
+      },
+      {
+        "id": "dd8a897a-9f19-4a25-a16e-2c2ead972678",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-12-31T00:00:00.000Z",
+        "toDate": "2024-12-31T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera-Ready Submission Due",
+        "createdAt": "2025-03-23T10:34:54.646Z",
+        "updatedAt": "2025-03-23T10:34:54.646Z",
+        "isAvailable": true
+      },
+      {
+        "id": "bd3c2356-2ed2-4d27-b468-44a2746ce484",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-10-08T00:00:00.000Z",
+        "toDate": "2024-10-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Submissions Due",
+        "createdAt": "2025-03-23T10:34:54.644Z",
+        "updatedAt": "2025-03-23T10:34:54.644Z",
+        "isAvailable": true
+      },
+      {
+        "id": "cf14ca29-f80a-471a-aff6-eae159d0fa47",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-10-01T00:00:00.000Z",
+        "toDate": "2024-10-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstracts Due",
+        "createdAt": "2025-03-23T10:34:54.641Z",
+        "updatedAt": "2025-03-23T10:34:54.641Z",
+        "isAvailable": true
+      },
+      {
+        "id": "35dfa264-a79e-4f83-843a-e76611cf5f39",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2025-02-27T00:00:00.000Z",
+        "toDate": "2025-03-01T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:34:54.637Z",
+        "updatedAt": "2025-03-23T10:34:54.637Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "TBR",
+        "source": "CORE2023",
+        "fieldOfResearch": "Computer Systems Engineering"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "1bfdb28c-700c-46e8-afd4-691707cf9c07",
+      "title": "Architectural Support for Programming Languages and Operating Systems",
+      "acronym": "ASPLOS",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:36.355Z",
+      "updatedAt": "2025-03-23T10:26:36.355Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "7326b779-4f0a-45e9-845c-46728075e799",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "1bfdb28c-700c-46e8-afd4-691707cf9c07",
+      "publisher": "ACM",
+      "summerize": "ASPLOS (ACM International Conference on Architectural Support for Programming Languages and Operating Systems) is a premier academic forum for multidisciplinary computer systems research. ASPLOS 2025 will be held in Rotterdam, The Netherlands, from March 30 to April 3, 2025, co-located with EuroSys 2025. It has three submission deadlines: spring, summer, and fall.",
+      "callForPaper": "ASPLOS 2025 invites original, high-quality research submissions related to computer architecture, programming languages, operating systems, and associated areas. Key aspects of the call include:\n\n*   **Areas of Interest:** Encompasses existing, emerging, and non-traditional compute platforms, heterogeneous architectures, cloud computing, memory, storage, networking, security, virtualization, and systems for big data and machine learning.\n*   **Submission Cycles:** Spring, Summer, and Fall deadlines to encourage timely submission of ready papers.\n*   **Double-Blind Review:** ASPLOS employs a double-blind review process, and submissions should be carefully anonymized.\n*   **Artifact Evaluation:** Authors are encouraged to submit artifacts to support reproducibility.\n*   **Major Revisions:** A “Major Revision” decision may be offered, allowing authors to revise and resubmit their work for a second review.",
+      "link": "https://www.asplos-conference.org/asplos2025/",
+      "cfpLink": "https://www.asplos-conference.org/asplos2025/cfp/",
+      "impLink": "https://www.asplos-conference.org/asplos2025/cfp/#important_dates",
+      "createdAt": "2025-03-23T10:50:10.789Z",
+      "updatedAt": "2025-03-23T10:50:10.789Z",
+      "topics": [
+        "Cloud Computing",
+        "Embedded Systems",
+        "Machine Learning",
+        "Operating Systems",
+        "Programming Languages",
+        "Mobile Systems",
+        "Secure Systems",
+        "Real-Time Systems",
+        "Virtualization",
+        "Networking",
+        "Computer Architecture",
+        "Storage"
+      ]
+    },
+    "location": {
+      "id": "be50248a-14b6-480e-8fbf-423586d74859",
+      "createdAt": "2025-03-23T10:50:10.802Z",
+      "updatedAt": "2025-03-23T10:50:10.802Z",
+      "isAvailable": true,
+      "organizeId": "7326b779-4f0a-45e9-845c-46728075e799",
+      "cityStateProvince": "Rotterdam",
+      "country": "Netherlands",
+      "address": "Rotterdam, The Netherlands",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "b1fd7843-30de-402f-b5a7-5c5cceb62651",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2025-01-13T00:00:00.000Z",
+        "toDate": "2025-01-15T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Fall Cycle Author Response Period",
+        "createdAt": "2025-03-23T10:50:10.825Z",
+        "updatedAt": "2025-03-23T10:50:10.825Z",
+        "isAvailable": true
+      },
+      {
+        "id": "0af8a78d-795e-41c0-b724-a232e22f93b6",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-09-09T00:00:00.000Z",
+        "toDate": "2024-09-13T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Summer Cycle Author Response Period",
+        "createdAt": "2025-03-23T10:50:10.823Z",
+        "updatedAt": "2025-03-23T10:50:10.823Z",
+        "isAvailable": true
+      },
+      {
+        "id": "68e1bf78-c646-49a5-a759-c00ae7f1ce1f",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-05-15T00:00:00.000Z",
+        "toDate": "2024-05-20T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Spring Cycle Author Response Period",
+        "createdAt": "2025-03-23T10:50:10.822Z",
+        "updatedAt": "2025-03-23T10:50:10.822Z",
+        "isAvailable": true
+      },
+      {
+        "id": "17c661a5-a325-4253-a46a-4b8e82306ffe",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2025-01-27T00:00:00.000Z",
+        "toDate": "2025-01-27T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Fall Cycle Notification Date",
+        "createdAt": "2025-03-23T10:50:10.820Z",
+        "updatedAt": "2025-03-23T10:50:10.820Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4a54dcc2-4f40-4bfc-a593-fba9a4c3918d",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-10-02T00:00:00.000Z",
+        "toDate": "2024-10-02T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Summer Cycle Notification Date",
+        "createdAt": "2025-03-23T10:50:10.818Z",
+        "updatedAt": "2025-03-23T10:50:10.818Z",
+        "isAvailable": true
+      },
+      {
+        "id": "2fd27a6a-c1db-4ef1-85fd-ce3e0d714d33",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-06-06T00:00:00.000Z",
+        "toDate": "2024-06-06T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Spring Cycle Notification Date",
+        "createdAt": "2025-03-23T10:50:10.817Z",
+        "updatedAt": "2025-03-23T10:50:10.817Z",
+        "isAvailable": true
+      },
+      {
+        "id": "83f0218e-b3d9-4874-a4d8-15deed6a7a15",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-10-18T00:00:00.000Z",
+        "toDate": "2024-10-18T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Fall Cycle Paper Deadline",
+        "createdAt": "2025-03-23T10:50:10.815Z",
+        "updatedAt": "2025-03-23T10:50:10.815Z",
+        "isAvailable": true
+      },
+      {
+        "id": "75750e71-32f4-43ad-b937-23626a5bafc0",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-06-24T00:00:00.000Z",
+        "toDate": "2024-06-24T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Summer Cycle Paper Deadline",
+        "createdAt": "2025-03-23T10:50:10.813Z",
+        "updatedAt": "2025-03-23T10:50:10.813Z",
+        "isAvailable": true
+      },
+      {
+        "id": "58acef6e-4ba8-47fe-9e96-50517fffa0f1",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-06-17T00:00:00.000Z",
+        "toDate": "2024-06-17T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Summer Cycle Abstract Deadline",
+        "createdAt": "2025-03-23T10:50:10.811Z",
+        "updatedAt": "2025-03-23T10:50:10.811Z",
+        "isAvailable": true
+      },
+      {
+        "id": "699fe7c9-61e1-4218-8b6e-a6f9b85ceae8",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-03-01T00:00:00.000Z",
+        "toDate": "2024-03-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Spring Cycle Paper Deadline",
+        "createdAt": "2025-03-23T10:50:10.810Z",
+        "updatedAt": "2025-03-23T10:50:10.810Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d4185079-76a4-432b-a7af-8c03b05afcf5",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2024-02-23T00:00:00.000Z",
+        "toDate": "2024-02-23T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Spring Cycle Abstract Deadline",
+        "createdAt": "2025-03-23T10:50:10.808Z",
+        "updatedAt": "2025-03-23T10:50:10.808Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1e7c4497-eafa-4174-aa1c-3595f1f18a3e",
+        "organizedId": "7326b779-4f0a-45e9-845c-46728075e799",
+        "fromDate": "2025-03-30T00:00:00.000Z",
+        "toDate": "2025-04-03T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:50:10.806Z",
+        "updatedAt": "2025-03-23T10:50:10.806Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Software engineering"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "511ca8e1-c96c-4b25-999a-30f16226997e",
+      "title": "ACM SIGUCCS Conference on User Services",
+      "acronym": "SIGUCCS",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:32.346Z",
+      "updatedAt": "2025-03-23T10:26:32.346Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "511ca8e1-c96c-4b25-999a-30f16226997e",
+      "publisher": "",
+      "summerize": "The SIGUCCS Annual Conference 2025 will be held in Denver from April 6-9, 2025. This conference is a great opportunity for networking with other higher education technology professionals, learning new skills, and discussing trends. Attendees can expand their professional network and form new connections.",
+      "callForPaper": "SIGUCCS 2025 invites proposals for a variety of session formats, including:\n\n*   **SIGUCCS Academy:** Structured and interactive sessions tailored for learning useful skills in Customer Service, Student Employee Management, or Project Management.\n*   **Presentation:** Standard presentation format with an opportunity for questions and answers (60 minutes total).\n*   **Panel:** Presenters from multiple schools offer insights and lead discussions on a specific topic of interest (60 minutes total).\n*   **Poster:** Authors present their topics in poster format and answer questions in a one-on-one setting.\n*   **Lightning Talks:** Group presentation format where each member of a small group is allocated 7 minutes for a concise presentation on a specific topic.",
+      "link": "https://siguccs.org/Conference/2025/",
+      "cfpLink": "https://siguccs.org/Conference/2025/program/call-for-proposals/",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:35:57.632Z",
+      "updatedAt": "2025-03-23T10:35:57.632Z",
+      "topics": [
+        "Higher Education Technology",
+        "Customer Service",
+        "Student Employee Management",
+        "Project Management"
+      ]
+    },
+    "location": {
+      "id": "30c7a290-8c6c-4eb8-999f-bfb94991c92f",
+      "createdAt": "2025-03-23T10:35:57.644Z",
+      "updatedAt": "2025-03-23T10:35:57.644Z",
+      "isAvailable": true,
+      "organizeId": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+      "cityStateProvince": "Denver",
+      "country": "United States",
+      "address": "Denver, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "23dea374-1335-4353-b73f-5cde0f8cb5ae",
+        "organizedId": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+        "fromDate": "2025-03-07T00:00:00.000Z",
+        "toDate": "2025-03-07T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Hotel Reservation Deadline",
+        "createdAt": "2025-03-23T10:35:57.651Z",
+        "updatedAt": "2025-03-23T10:35:57.651Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ea96fcb4-c973-4b12-86e6-06f6033142d9",
+        "organizedId": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+        "fromDate": "2024-07-01T00:00:00.000Z",
+        "toDate": "2024-07-01T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Call for Proposals Opens",
+        "createdAt": "2025-03-23T10:35:57.650Z",
+        "updatedAt": "2025-03-23T10:35:57.650Z",
+        "isAvailable": true
+      },
+      {
+        "id": "93761694-505f-442d-bdc3-4bf6da6dee7c",
+        "organizedId": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+        "fromDate": "2024-09-06T00:00:00.000Z",
+        "toDate": "2024-09-06T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Presentation Abstracts Due",
+        "createdAt": "2025-03-23T10:35:57.648Z",
+        "updatedAt": "2025-03-23T10:35:57.648Z",
+        "isAvailable": true
+      },
+      {
+        "id": "175024c3-6ffe-4b76-8bfd-db32a28d308e",
+        "organizedId": "5b2da652-ce61-4174-8650-01cf9baaeba5",
+        "fromDate": "2025-04-06T00:00:00.000Z",
+        "toDate": "2025-04-09T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:35:57.646Z",
+        "updatedAt": "2025-03-23T10:35:57.646Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "National: USA",
+        "source": "CORE2023",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "National: USA",
+        "source": "CORE2021",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "National: USA",
+        "source": "CORE2020",
+        "fieldOfResearch": "Applied computing"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "2cf15ed6-ce87-46e2-88c9-2e21db007b33",
+      "title": "International Workshop on Developments in Computational Models",
+      "acronym": "DCM",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:47:20.596Z",
+      "updatedAt": "2025-03-23T10:47:20.596Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Theory of computation"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "12f112ec-7a5f-4a39-bda8-ce0035974fe6",
+      "title": " International Conference on Ambient Systems, Networks and Technologies",
+      "acronym": "ANT",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.309Z",
+      "updatedAt": "2025-03-23T10:26:29.309Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "ced93e9c-1d6b-4a09-a6e7-fc1ead5c43af",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "12f112ec-7a5f-4a39-bda8-ce0035974fe6",
+      "publisher": "Elsevier Science",
+      "summerize": "The 14th International Workshop on Agent-based Mobility, Traffic and Transportation Models (ABMTRANS-2025) will be held in conjunction with the 16th International Conference on Ambient Systems, Networks and Technologies (ANT-2025) in Patras, Greece, from April 22nd to 24th, 2025. ABMTrans provides a multidisciplinary forum for researchers and practitioners to present new research results and novel ideas related to agent-based traffic and transportation modeling.",
+      "callForPaper": "ABMTrans 2025 invites submissions presenting new research results and novel ideas related to the theory or practice of agent-based traffic and transportation modeling. Topics of interest include but are not limited to:\n\n*   Agent-based modeling and simulation\n*   Agent-human interactions\n*   Environment modeling and interaction protocols\n*   Data mining, learning, and adaptation\n*   Marketing decision support\n*   Collaboration, cooperation, competition, coalitions in traffic and transportation models\n\nAccepted papers will be published by Elsevier Science in the open-access Procedia Computer Science series on-line and indexed by Scopus and by Thomson Reuters' Conference Proceeding Citation Index.",
+      "link": "None",
+      "cfpLink": "",
+      "impLink": "",
+      "createdAt": "2025-03-23T10:31:29.971Z",
+      "updatedAt": "2025-03-23T10:31:29.971Z",
+      "topics": [
+        "Agent-based Modeling",
+        "Traffic",
+        "Transportation",
+        "Data Mining",
+        "Agent-Human Interactions",
+        "Environment Modeling",
+        "Learning and Adaptation",
+        "Marketing Decision Support",
+        "Multi-Agent Systems"
+      ]
+    },
+    "location": {
+      "id": "439991bc-c4fb-4cd1-b801-f3380e64ffd0",
+      "createdAt": "2025-03-23T10:31:29.981Z",
+      "updatedAt": "2025-03-23T10:31:29.981Z",
+      "isAvailable": true,
+      "organizeId": "ced93e9c-1d6b-4a09-a6e7-fc1ead5c43af",
+      "cityStateProvince": "Patras",
+      "country": "Greece",
+      "address": "Patras, Greece",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "8f9b44ef-d85e-41f2-9782-04f8919120fe",
+        "organizedId": "ced93e9c-1d6b-4a09-a6e7-fc1ead5c43af",
+        "fromDate": "2025-04-22T00:00:00.000Z",
+        "toDate": "2025-04-24T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:31:29.983Z",
+        "updatedAt": "2025-03-23T10:31:29.983Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "Unranked",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "1b9a9820-a49a-4936-bd3b-69b8d24b5b99",
+      "title": "ACM/SIAM Symposium on Discrete Algorithms",
+      "acronym": "SODA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:34.756Z",
+      "updatedAt": "2025-03-23T10:26:34.756Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "54d6c973-97c2-4ff1-bb1c-244d0e5d33e9",
+      "year": 2024,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "1b9a9820-a49a-4936-bd3b-69b8d24b5b99",
+      "publisher": "SIAM",
+      "summerize": "The ACM-SIAM Symposium on Discrete Algorithms (SODA) focuses on research related to the design and analysis of efficient algorithms and data structures for discrete problems. SODA24 took place in Alexandria, Virginia, from January 7-10, 2024. The scope includes theoretical analysis, as well as experimental validation, and the mathematical problems related to their development or limitations.",
+      "callForPaper": "SODA focuses on research topics related to design and analysis of efficient algorithms and data structures for discrete problems. The scope includes theoretical analysis, as well as experimental validation, and the mathematical problems related to their development or limitations. Papers that raise important algorithmic problems that can benefit from theoretical investigation and analysis, are encouraged.",
+      "link": "https://www.siam.org/conferences-events/past-event-archive/soda24/",
+      "cfpLink": "None",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:47:15.417Z",
+      "updatedAt": "2025-03-23T10:47:15.417Z",
+      "topics": [
+        "Discrete Mathematics",
+        "Efficient Algorithms",
+        "Data Structures"
+      ]
+    },
+    "location": {
+      "id": "9429fc0b-0e4b-4138-8cfa-e745a4860ea1",
+      "createdAt": "2025-03-23T10:47:15.429Z",
+      "updatedAt": "2025-03-23T10:47:15.429Z",
+      "isAvailable": true,
+      "organizeId": "54d6c973-97c2-4ff1-bb1c-244d0e5d33e9",
+      "cityStateProvince": "Alexandria, Virginia",
+      "country": "United States of America",
+      "address": "Alexandria, Virginia",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "0cc98cfe-9e89-4f10-a5a9-2316894b6e12",
+        "organizedId": "54d6c973-97c2-4ff1-bb1c-244d0e5d33e9",
+        "fromDate": "2024-01-07T00:00:00.000Z",
+        "toDate": "2024-01-10T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:47:15.431Z",
+        "updatedAt": "2025-03-23T10:47:15.431Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Theory of computation"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Theory of computation"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Theory of computation"
+      }
+    ],
     "followBy": [],
     "feedbacks": [],
     "followedBy": [
       {
-        "id": "af69597e-0806-45b2-aefe-066dee9abcb1",
+        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
         "email": "loicute5FPS@gmail.com",
         "firstName": "Lê",
         "lastName": "Lâm Lợi",
-        "createdAt": "2025-03-24T07:44:48.515Z",
-        "updatedAt": "2025-03-24T07:44:48.515Z"
+        "createdAt": "2025-03-25T02:36:18.145Z",
+        "updatedAt": "2025-03-25T02:36:18.145Z"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "b4bb5278-b289-43f9-9c48-e86f94b6f1f7",
+        "organizedId": "54d6c973-97c2-4ff1-bb1c-244d0e5d33e9",
+        "creatorId": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+        "description": "hello",
+        "star": 5,
+        "createdAt": "2025-03-25T02:36:39.424Z",
+        "updatedAt": "2025-03-25T02:36:39.424Z"
       },
       {
-        "id": "test",
-        "email": "loicute5fps@gmail.com",
-        "firstName": "Le",
-        "lastName": "Loi",
-        "createdAt": "2025-03-24T07:44:49.700Z",
-        "updatedAt": "2025-03-24T07:44:49.700Z"
+        "id": "3ab195fa-54b1-4830-b945-b82f78fe0eaf",
+        "organizedId": "54d6c973-97c2-4ff1-bb1c-244d0e5d33e9",
+        "creatorId": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+        "description": "Như qq",
+        "star": 5,
+        "createdAt": "2025-03-25T02:38:14.794Z",
+        "updatedAt": "2025-03-25T02:38:14.794Z"
       }
     ]
+  },
+  {
+    "conference": {
+      "id": "b502db4f-ac1a-45fd-8e22-afef6f905a65",
+      "title": "International Workshop on the Web and Databases",
+      "acronym": "WebDB",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:47:23.430Z",
+      "updatedAt": "2025-03-23T10:47:23.430Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "National: USA",
+        "source": "CORE2020",
+        "fieldOfResearch": "Data management and data science"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "950e1d05-1ec9-4a2b-9139-c30485707e5e",
+      "title": "International Symposium on Intelligent and Interactive Multimedia: Systems and Services",
+      "acronym": "KES IIMSS",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:47:16.309Z",
+      "updatedAt": "2025-03-23T10:47:16.309Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Computer vision and multimedia computation"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "b6f1b970-1a83-42dd-ae1a-a48aa15abd17",
+      "title": "International Workshop on Coding and Cryptography",
+      "acronym": "WCC",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:47:19.610Z",
+      "updatedAt": "2025-03-23T10:47:19.610Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2020",
+        "fieldOfResearch": "Cybersecurity and privacy"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "5abd5c96-ed5d-46ae-962d-92ff501a0693",
+        "email": "loicute5FPS@gmail.com",
+        "firstName": "Lê",
+        "lastName": "Lâm Lợi",
+        "createdAt": "2025-03-25T02:43:31.604Z",
+        "updatedAt": "2025-03-25T02:43:31.604Z"
+      }
+    ],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
+      "title": "AAAI Conference on Human Computation and Crowdsourcing",
+      "acronym": "HCOMP",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.368Z",
+      "updatedAt": "2025-03-23T10:26:29.368Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+      "year": 2024,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "19d5efbf-01b2-4337-b079-16eae6fec17f",
+      "publisher": "",
+      "summerize": "The 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024) will be held October 16-19th in Pittsburgh, Pennsylvania, focusing on ''Responsible Crowd Work for Better AI.'' HCOMP is the premier venue for disseminating research findings on human computation and crowdsourcing, promoting interdisciplinary research and dialogue across disciplines and communities of practice. HCOMP 2024 is colocated with ACM UIST 2024 (October 13-16, 2024).",
+      "callForPaper": "HCOMP 2024 calls for papers, specifically focusing on human computation and crowdsourcing. The conference promotes interdisciplinary research, and encourages the exchange of advances in human computation and crowdsourcing not only among researchers but also engineers and practitioners to encourage dialogue across disciplines and communities of practice. The conference covers AI and HCI, human-centered qualitative studies and HCI design, social computing, artificial intelligence economics, computational social science, digital humanities, policy, and ethics.",
+      "link": "https://www.humancomputation.com/",
+      "cfpLink": "None",
+      "impLink": "None",
+      "createdAt": "2025-03-24T10:38:49.893Z",
+      "updatedAt": "2025-03-24T10:38:49.893Z",
+      "topics": [
+        "Artificial Intelligence",
+        "Human Computation",
+        "Crowdsourcing",
+        "Human-Computer Interaction"
+      ]
+    },
+    "location": {
+      "id": "e841df41-5e73-4dde-8262-f169ea7f8502",
+      "createdAt": "2025-03-24T10:38:49.902Z",
+      "updatedAt": "2025-03-24T10:38:49.902Z",
+      "isAvailable": true,
+      "organizeId": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+      "cityStateProvince": "Pittsburgh, Pennsylvania",
+      "country": "United States of America",
+      "address": "Pittsburgh, Pennsylvania",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "f5cf980d-35c8-4118-b4b4-cb348029fcd3",
+        "organizedId": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+        "fromDate": "2024-07-31T00:00:00.000Z",
+        "toDate": "2024-07-31T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notifications",
+        "createdAt": "2025-03-24T10:38:49.911Z",
+        "updatedAt": "2025-03-24T10:38:49.911Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1431018e-77de-478d-bec3-d5e19d9aba6b",
+        "organizedId": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+        "fromDate": "2024-06-12T00:00:00.000Z",
+        "toDate": "2024-06-12T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full papers due",
+        "createdAt": "2025-03-24T10:38:49.909Z",
+        "updatedAt": "2025-03-24T10:38:49.909Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6a7becde-a2d4-4122-a1ab-afe9946bf0f1",
+        "organizedId": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+        "fromDate": "2024-06-05T00:00:00.000Z",
+        "toDate": "2024-06-05T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstracts due",
+        "createdAt": "2025-03-24T10:38:49.907Z",
+        "updatedAt": "2025-03-24T10:38:49.907Z",
+        "isAvailable": true
+      },
+      {
+        "id": "aad75065-8dc9-4619-83b3-df6ef699db80",
+        "organizedId": "74684ce2-0f1b-4d04-a720-8bc0edcf5452",
+        "fromDate": "2024-10-16T00:00:00.000Z",
+        "toDate": "2024-10-19T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-24T10:38:49.904Z",
+        "updatedAt": "2025-03-24T10:38:49.904Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Human-centred computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2021",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2021",
+        "fieldOfResearch": "Human-centred computing"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
+    "feedBacks": []
   }
 ]

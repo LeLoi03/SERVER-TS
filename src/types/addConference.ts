@@ -24,13 +24,13 @@ export interface ImportantDateInput {
     fromDate: string;
     toDate: string;
 }
-// Kiểu cho conference sau khi đã được xử lý và thêm các trường cần thiết
+
 export interface AddedConference {
     conference: {
         id: string;
         title: string;
         acronym: string;
-        creatorId: string; // Thêm creatorId
+        creatorId: string;
         createdAt: string;
         updatedAt: string;
     };
@@ -41,11 +41,11 @@ export interface AddedConference {
         isAvailable: boolean;
         conferenceId: string;
         summerize: string;
-        callForPaper: string; // Có thể để trống, hoặc thêm logic để tạo tự động
+        callForPaper: string;
         publisher: string | null;
         link: string;
-        cfpLink: string;      // Có thể để trống, hoặc thêm logic
-        impLink: string;      // Có thể để trống
+        cfpLink: string;
+        impLink: string;
         topics: string[];
         createdAt: string;
         updatedAt: string;
@@ -72,10 +72,8 @@ export interface AddedConference {
         updatedAt: string;
         isAvailable: boolean;
     }[];
-    ranks: { // Có thể để mảng rỗng, hoặc thêm logic
-        rank: string;
-        source: string;
-        researchFields: string;
-    }[];
-    status: string; // Thêm trạng thái
+    rank: string;
+    source: string;
+    researchFields: string;
+    status: string;
 }
