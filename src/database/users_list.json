@@ -193,20 +193,101 @@
     }
   },
   {
-    "id": "d56b78a2-a1f4-43a6-8483-38f39cb9ab6d",
+    "id": "708a9555-5434-4c62-9015-a45e8c6557c1",
     "firstName": "abc",
     "lastName": "xyz",
     "email": "1@gmail.com",
-    "password": "123",
+    "password": "12345678",
     "dob": "",
     "role": "user",
-    "followedConferences": [],
+    "followedConferences": [
+      {
+        "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
+        "createdAt": "2025-03-25T09:30:59.021Z",
+        "updatedAt": "2025-03-25T09:30:59.021Z"
+      }
+    ],
     "myConferences": [],
-    "calendar": [],
+    "calendar": [
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-25T08:34:49.686Z",
+        "updatedAt": "2025-03-25T08:34:49.686Z"
+      },
+      {
+        "id": "19d5efbf-01b2-4337-b079-16eae6fec17f",
+        "createdAt": "2025-03-25T09:31:00.438Z",
+        "updatedAt": "2025-03-25T09:31:00.438Z"
+      }
+    ],
     "feedBacks": [],
-    "notifications": [],
-    "createdAt": "2025-03-25T07:33:38.090Z",
-    "updatedAt": "2025-03-25T07:33:38.090Z",
+    "notifications": [
+      {
+        "id": "85c6934a-2dc0-479e-a403-0b8a469cf916",
+        "createdAt": "2025-03-25T09:31:00.438Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz added the conference \"AAAI Conference on Human Computation and Crowdsourcing\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "c8c85363-22b1-48a5-9feb-eb76f48eb4a9",
+        "createdAt": "2025-03-25T09:30:59.021Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz followed the conference: AAAI Conference on Human Computation and Crowdsourcing",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "5cf7de93-e7ce-4e18-8e08-cdeacca65923",
+        "createdAt": "2025-03-25T09:14:24.217Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz removed the conference \"IEEE International Conference on Computer Communications\" from their calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "313f5f00-1a6d-43b6-8af1-8fa718d8d301",
+        "createdAt": "2025-03-25T09:14:23.347Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz added the conference \"IEEE International Conference on Computer Communications\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "446b1d1a-09ce-4704-9185-0a1e965d1bc6",
+        "createdAt": "2025-03-25T09:13:40.761Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz removed the conference \"IEEE International Conference on Computer Communications\" from their calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "4961c365-6876-4a41-839b-9e6da8ca5dfc",
+        "createdAt": "2025-03-25T09:13:39.997Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz added the conference \"IEEE International Conference on Computer Communications\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "27cd5113-6582-4ca7-a5ab-aaf94a508f70",
+        "createdAt": "2025-03-25T08:34:49.686Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": "2025-03-25T09:31:09.324Z",
+        "message": "abc xyz added the conference \"ACIS Conference on Software Engineering Research, Management and Applications\" to their calendar.",
+        "type": "Add to Calendar"
+      }
+    ],
+    "createdAt": "2025-03-25T08:23:45.515Z",
+    "updatedAt": "2025-03-25T08:23:45.515Z",
     "avatar": "",
     "aboutme": "",
     "interestedTopics": [],

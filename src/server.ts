@@ -2202,12 +2202,12 @@ const saveConferenceDetails: RequestHandler<any, { message: string }, Conference
 app.post('/api/v1/conferences/details/save', saveConferenceDetails);
 
 // 17. Register User
-const signupUser: RequestHandler<any, { message: string } | UserResponse, { firstname: string; lastname: string; email: string; password: string }, any> = async (req, res): Promise<any> => {
+const signupUser: RequestHandler<any, { message: string } | UserResponse, { firstName: string; lastName: string; email: string; password: string }, any> = async (req, res): Promise<any> => {
   try {
-    const { firstname, lastname, email, password } = req.body;
-
+    const { firstName, lastName, email, password } = req.body;
+    console.log(req.body)
     // --- Basic Validation (giống như trong form, nhưng nên validate cả ở backend) ---
-    if (!firstname || !lastname || !email || !password) {
+    if (!firstName || !lastName || !email || !password) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
 
@@ -2238,8 +2238,8 @@ const signupUser: RequestHandler<any, { message: string } | UserResponse, { firs
     const now = new Date().toISOString();
     const newUser: UserResponse = {
       id: uuidv4(), // Generate unique ID
-      firstName: firstname,  // Corrected casing
-      lastName: lastname,    // Corrected casing
+      firstName: firstName,  // Corrected casing
+      lastName: lastName,    // Corrected casing
       email,
       password, //  Store the password (ideally, you'd hash this)
       dob: "",
