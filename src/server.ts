@@ -243,7 +243,7 @@ io.on('connection', (socket: Socket) => {
 
 
 
-import { ConferenceResponse, FollowerInfo } from './types/conference.response';
+import { ConferenceResponse, FollowerInfo, ImportantDates, Location } from './types/conference.response';
 import { ConferenceListResponse, ConferenceInfo, Meta } from './types/conference.list.response';
 import { UserResponse, MyConference, Notification } from './types/user.response';
 import { AddedConference, ConferenceFormData } from './types/addConference';
@@ -588,7 +588,7 @@ function areArraysEqual(arr1: any[] | undefined, arr2: any[] | undefined): boole
 }
 
 
-function shouldSendUpdateNotification(user: UserResponse): boolean {
+function shouldSendUpdateProfileNotification(user: UserResponse): boolean {
   const settings = user.setting;
 
   if (!settings) {
@@ -648,7 +648,7 @@ const updateUser: RequestHandler<{ id: string }, UserResponse | { message: strin
     const hasNonSettingChanges = changedFields.length > 0;
 
     // --- Create and send notification (only for non-setting changes AND if settings allow) ---
-    if (hasNonSettingChanges && shouldSendUpdateNotification(updatedUser)) { // Key change: Check settings
+    if (hasNonSettingChanges && shouldSendUpdateProfileNotification(updatedUser)) { // Key change: Check settings
       const now = new Date().toISOString();
       let notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
 
@@ -1941,6 +1941,119 @@ app.post('/api/v1/conferences/save', saveConferenceData);
 
 
 // --- Save Conference Details ---
+
+// --- Helper Function to Compare Conference Details and Generate Detailed Message ---
+function getConferenceChanges(oldConf: ConferenceResponse, newConf: ConferenceResponse): { hasChanges: boolean; message: string } {
+  let message = "Conference updates:";
+  let hasChanges = false;
+
+  function addChange(field: string, oldValue: any, newValue: any) {
+    if (JSON.stringify(oldValue) !== JSON.stringify(newValue)) {
+      message += `\n- ${field}: Changed from "${oldValue ?? 'N/A'}" to "${newValue ?? 'N/A'}".\n`;
+      hasChanges = true;
+    }
+  }
+
+  function addChangeDate(field: string, oldDates: ImportantDates[] | null, newDates: ImportantDates[] | null) {
+    if (!oldDates && !newDates) return;
+
+    if (!oldDates || !newDates || oldDates.length !== newDates.length) {
+      message += `- ${field}: Dates have been changed.\n`;
+      hasChanges = true;
+      return;
+    }
+
+    for (let i = 0; i < oldDates.length; i++) {
+      const oldDate = oldDates[i];
+      const newDate = newDates[i];
+
+      if (!oldDate && !newDate) continue;
+      if (!oldDate || !newDate) {
+        message += `- ${field}: Dates have been changed.\n`;
+        hasChanges = true;
+        return;
+      }
+
+      // Only check and provide detailed changes for "conferenceDates"
+      if (oldDate.type === "conferenceDates" && newDate.type === "conferenceDates") {
+        if (oldDate.fromDate !== newDate.fromDate) {
+          message += `- ${field}: Conference start date changed from "${oldDate.fromDate ?? 'N/A'}" to "${newDate.fromDate ?? 'N/A'}".\n`;
+          hasChanges = true;
+        }
+        if (oldDate.toDate !== newDate.toDate) {
+          message += `- ${field}: Conference end date changed from "${oldDate.toDate ?? 'N/A'}" to "${newDate.toDate ?? 'N/A'}".\n`;
+          hasChanges = true;
+        }
+      } else if (oldDate.fromDate !== newDate.fromDate || oldDate.toDate !== newDate.toDate || oldDate.name !== newDate.name || oldDate.type !== newDate.type) {
+        // For other date types, just indicate a change
+        message += `- ${field}: Dates have been changed.\n`;
+        hasChanges = true;
+        return; // Important: Exit the loop after finding a change in non-conference dates
+      }
+    }
+  }
+
+  function addChangeLocation(field: string, oldLocation: Location | null, newLocation: Location | null) {
+    if (!oldLocation && !newLocation) return;
+    if (!oldLocation || !newLocation) {
+      message += `\n- ${field}: Location has been changed.\n`;
+      hasChanges = true;
+      return;
+    }
+    if (oldLocation.address !== newLocation.address) {
+      message += `\n  - ${field}: Address changed from "${oldLocation.address ?? 'N/A'}" to "${newLocation.address ?? 'N/A'}".\n`;
+      hasChanges = true;
+    }
+    if (oldLocation.cityStateProvince !== newLocation.cityStateProvince) {
+      message += `\n  - ${field}:  City/State/Province from "${oldLocation.cityStateProvince ?? 'N/A'}" to "${newLocation.cityStateProvince ?? 'N/A'}".\n`;
+      hasChanges = true;
+    }
+    if (oldLocation.country !== newLocation.country) {
+      message += `\n  - ${field}: Country changed from "${oldLocation.country ?? 'N/A'}" to "${newLocation.country ?? 'N/A'}".\n`;
+      hasChanges = true;
+    }
+    if (oldLocation.continent !== newLocation.continent) {
+      message += `\n  - ${field}: Continent changed from "${oldLocation.continent ?? 'N/A'}" to "${newLocation.continent ?? 'N/A'}".\n`;
+      hasChanges = true;
+    }
+  }
+
+
+  addChange("Title", oldConf.conference.title, newConf.conference.title);
+  addChange("Acronym", oldConf.conference.acronym, newConf.conference.acronym);
+  addChange("Organization Link", oldConf.organization?.link, newConf.organization?.link);
+  addChange("Publisher", oldConf.organization?.publisher, newConf.organization?.publisher);
+  addChange("Access Type", oldConf.organization?.accessType, newConf.organization?.accessType);
+  addChange("Year", oldConf.organization?.year, newConf.organization?.year);
+  addChangeDate("Dates", oldConf.dates, newConf.dates);
+  addChangeLocation("Location", oldConf.location, newConf.location);
+  addChange("Ranks", JSON.stringify(oldConf.ranks), JSON.stringify(newConf.ranks));
+
+
+  return { hasChanges, message: hasChanges ? message : "" };
+}
+
+// --- Helper Function to Check Notification Settings ---
+function shouldSendUpdateConferenceNotification(user: UserResponse, notificationType: string): boolean {
+  const settings = user.setting;
+
+  if (!settings) {
+    return false; // Default to no notifications if settings are missing
+  }
+
+  if (settings.receiveNotifications === false) {
+    return false; // User has disabled all notifications
+  }
+  if (notificationType === "Conference Update" && settings.notificationWhenConferencesChanges === false) {
+    return false;
+  }
+
+  // Add more specific checks here based on notificationType and user settings
+  return true; // All checks passed, or no specific checks for this type
+}
+
+// --- Save Conference Details ---
+// --- Save Conference Details ---
 const saveConferenceDetails: RequestHandler<any, { message: string }, ConferenceResponse, any> = async (req, res) => {
   try {
     const receivedData: ConferenceResponse = req.body;
@@ -1952,10 +2065,11 @@ const saveConferenceDetails: RequestHandler<any, { message: string }, Conference
     const conferenceId = receivedData.conference.id;
 
     let dbDetailsData: ConferenceResponse[] = [];
+    let users: UserResponse[] = [];
+
     try {
       const fileContent = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
       dbDetailsData = JSON.parse(fileContent);
-
       if (!Array.isArray(dbDetailsData)) {
         dbDetailsData = [];
       }
@@ -1964,38 +2078,120 @@ const saveConferenceDetails: RequestHandler<any, { message: string }, Conference
         console.error('Error reading DB_details.json:', error);
         return res.status(500).json({ message: 'Error reading DB_details.json' });
       }
-      // If file doesn't exist, dbDetailsData is already an empty array.
+    }
+
+    try {
+      const usersFileContent = await fs.promises.readFile(userFilePath, 'utf-8');
+      users = JSON.parse(usersFileContent);
+
+      if (!Array.isArray(users)) {
+        users = [];
+      }
+    } catch (userError: any) {
+      if (userError.code !== 'ENOENT' && !(userError instanceof SyntaxError)) {
+        console.error('Error reading users.json:', userError);
+        return res.status(500).json({ message: 'Error reading users.json' });
+      }
     }
 
     const existingConferenceIndex = dbDetailsData.findIndex(conf => conf.conference.id === conferenceId);
 
     if (existingConferenceIndex === -1) {
-      // Conference doesn't exist, add it.
-      receivedData.followedBy = [];
-      receivedData.feedBacks = [];
+      // Conference doesn't exist, add it (no notifications on initial add).
       dbDetailsData.push(receivedData);
       await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
-      res.status(200).json({ message: 'Conference details saved successfully.' });
+      return res.status(200).json({ message: 'Conference details saved successfully.' });
     } else {
-      // Conference exists, update it (except Feedback and FollowerInfo).
+      // Conference exists, update it.
+      const oldConference = { ...dbDetailsData[existingConferenceIndex] };
+      const updatedConference = { ...oldConference };
 
-      // Create a copy of the existing conference.
-      const updatedConference = { ...dbDetailsData[existingConferenceIndex] };
-
-      // Update the fields.  Explicitly copy each top-level field.
-      updatedConference.conference = receivedData.conference;  //Overwrites completely
+      updatedConference.conference = receivedData.conference;
       updatedConference.organization = receivedData.organization;
       updatedConference.location = receivedData.location;
       updatedConference.dates = receivedData.dates;
       updatedConference.ranks = receivedData.ranks;
-      // DO NOT update feedBacks and followedBy
+      // Do NOT update feedBacks and followedBy
 
+      const { hasChanges, message: detailedMessage } = getConferenceChanges(oldConference, updatedConference);
 
-      // Replace the existing conference with the updated one.
-      dbDetailsData[existingConferenceIndex] = updatedConference;
+      if (hasChanges) {
+        dbDetailsData[existingConferenceIndex] = updatedConference;
+        await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
 
-      await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
-      res.status(200).json({ message: 'Conference details updated successfully.' });
+        // --- Notification Logic ---
+        const now = new Date().toISOString();
+
+        // 1. Notify Followers:
+        if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
+          updatedConference.followedBy.forEach(followerInfo => {
+            const user = users.find(u => u.id === followerInfo.id);
+            // Find the follow information for this conference
+            const followInfo = user?.followedConferences?.find(f => f.id === conferenceId);
+            // Construct base message with conference and follow details
+            const baseMessage = `Update for conference "${updatedConference.conference.title}" (Followed since ${followInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
+
+            if (user && shouldSendUpdateConferenceNotification(user, "Conference Update")) {
+              const notification: Notification = {
+                id: uuidv4(),
+                createdAt: now,
+                isImportant: true,
+                seenAt: null,
+                deletedAt: null,
+                message: baseMessage + detailedMessage, // Combine base and detailed messages
+                type: 'Conference Update',
+              };
+              if (!user.notifications) {
+                user.notifications = [];
+              }
+              user.notifications.push(notification);
+
+              const userSocket = connectedUsers.get(user.id);
+              if (userSocket) {
+                userSocket.emit('notification', notification);
+              }
+            }
+          });
+        }
+
+        // 2. Notify Users who added to Calendar:
+        users.forEach(user => {
+          if (user.calendar && user.calendar.some(c => c.id === conferenceId)) {
+            //Find the calendar information for this conference
+            const calendarInfo = user.calendar.find(c => c.id === conferenceId);
+            // Construct base message with conference and calendar details
+            const baseMessage = `Update for conference "${updatedConference.conference.title}" (Added to calendar since ${calendarInfo?.createdAt ?? 'N/A'}):\n`;
+
+            if (shouldSendUpdateConferenceNotification(user, "Conference Update")) {
+              const calendarNotification: Notification = {
+                id: uuidv4(),
+                createdAt: now,
+                isImportant: true,
+                seenAt: null,
+                deletedAt: null,
+                message: baseMessage + detailedMessage, // Combine base and detailed
+                type: 'Conference Update',
+              };
+
+              if (!user.notifications) {
+                user.notifications = [];
+              }
+              user.notifications.push(calendarNotification);
+
+              const userSocket = connectedUsers.get(user.id);
+              if (userSocket) {
+                userSocket.emit('notification', calendarNotification);
+              }
+            }
+          }
+        });
+
+        await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+        return res.status(200).json({ message: 'Conference details updated successfully. Notifications sent.' });
+      } else {
+        return res.status(200).json({ message: 'Conference details updated. No changes detected.' });
+      }
     }
   } catch (error: any) {
     console.error('Error saving/updating conference details:', error);
@@ -2276,26 +2472,26 @@ app.get('/api/v1/topics', async (req, res) => {
 // Helper Function: shouldSendUpcomingEventNotification
 function shouldSendUpcomingEventNotification(user: UserResponse): boolean {
   const settings = user.setting;
-  console.log(`Checking settings for user ${user.id}:`, settings); // Log user settings
+  // console.log(`Checking settings for user ${user.id}:`, settings); // Log user settings
   if (!settings) {
-    console.log(`User ${user.id} has no settings.  Not sending notification.`);
+    // console.log(`User ${user.id} has no settings.  Not sending notification.`);
     return false;
   }
 
   if (settings.receiveNotifications === false) {
-    console.log(`User ${user.id} has receiveNotifications disabled. Not sending notification.`);
+    // console.log(`User ${user.id} has receiveNotifications disabled. Not sending notification.`);
     return false;
   }
   if (settings.upComingEvent === false) {
-    console.log(`User ${user.id} has upComingEvent disabled. Not sending notification.`);
+    // console.log(`User ${user.id} has upComingEvent disabled. Not sending notification.`);
     return false;
   }
-  console.log(`User ${user.id} settings allow upcoming event notifications.`);
+  // console.log(`User ${user.id} settings allow upcoming event notifications.`);
   return true;
 }
 
 async function checkUpcomingConferenceDates() {
-  console.log('--- Starting checkUpcomingConferenceDates ---');
+  // console.log('--- Starting checkUpcomingConferenceDates ---');
   try {
     const [userData, conferenceData] = await Promise.all([
       fs.promises.readFile(userFilePath, 'utf-8').catch(err => {
@@ -2308,16 +2504,16 @@ async function checkUpcomingConferenceDates() {
       }),
     ]);
 
-    console.log('Successfully read user and conference data.');
+    // console.log('Successfully read user and conference data.');
 
     const users: UserResponse[] = JSON.parse(userData);
     const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
 
     const now = new Date();
-    console.log('Current time:', now.toISOString());
+    // console.log('Current time:', now.toISOString());
 
     for (const conference of conferences) {
-      console.log(`Checking conference: ${conference.conference.title} (ID: ${conference.conference.id})`);
+      // console.log(`Checking conference: ${conference.conference.title} (ID: ${conference.conference.id})`);
       // Check if dates exist and are an array
       if (conference.dates && Array.isArray(conference.dates)) {
         for (const date of conference.dates) {
@@ -2327,23 +2523,23 @@ async function checkUpcomingConferenceDates() {
             const timeDiffMs = startDate.getTime() - now.getTime();
             const hoursBefore = timeDiffMs / (1000 * 60 * 60);
 
-            console.log(`  Checking date: ${date.name} (ID: ${date.id}), Start Date: ${startDate.toISOString()}, Hours Before: ${hoursBefore.toFixed(2)}`);
+            // console.log(`  Checking date: ${date.name} (ID: ${date.id}), Start Date: ${startDate.toISOString()}, Hours Before: ${hoursBefore.toFixed(2)}`);
 
             // Example: Notify 24 hours and 1 hour before. Adjust as needed.
-            if ((hoursBefore > 5 && hoursBefore <= 48) || (hoursBefore > 0.9 && hoursBefore <= 1)) {
-              console.log(`    Date is within notification window.`);
+            if ((hoursBefore > 5 && hoursBefore <= 96) || (hoursBefore > 0.9 && hoursBefore <= 1)) {
+              // console.log(`    Date is within notification window.`);
 
               // Find users following this conference.
               if (conference.followedBy) {
-                console.log(`    Conference has ${conference.followedBy.length} followers.`);
+                // console.log(`    Conference has ${conference.followedBy.length} followers.`);
                 for (const follower of conference.followedBy) {
                   const user = users.find(u => u.id === follower.id);
 
                   if (user) {
-                    console.log(`    Checking follower: ${user.firstName} ${user.lastName} (ID: ${user.id})`);
+                    // console.log(`    Checking follower: ${user.firstName} ${user.lastName} (ID: ${user.id})`);
 
                     if (shouldSendUpcomingEventNotification(user)) {
-                      const notificationMessage = `Upcoming event in conference "${conference.conference.title}": ${date.name || 'Event'} on ${date.fromDate.toString().substring(0, 10)}`;                      console.log(`      Sending notification to user ${user.id}: ${notificationMessage}`);
+                      const notificationMessage = `Upcoming event in conference "${conference.conference.title}": ${date.name || 'Event'} on ${date.fromDate.toString().substring(0, 10)}`; console.log(`      Sending notification to user ${user.id}: ${notificationMessage}`);
 
                       const notification: Notification = {
                         id: uuidv4(),
@@ -2363,16 +2559,16 @@ async function checkUpcomingConferenceDates() {
                       // Send real-time notification.
                       const userSocket = connectedUsers.get(user.id);
                       if (userSocket) {
-                        console.log(`        Sending real-time notification to user ${user.id}`);
+                        // console.log(`        Sending real-time notification to user ${user.id}`);
                         userSocket.emit('notification', notification);
                       } else {
-                        console.log(`        User ${user.id} is not currently connected.`);
+                        // console.log(`        User ${user.id} is not currently connected.`);
                       }
                     } else {
-                      console.log(`      User ${user.id} does not meet notification criteria.`);
+                      // console.log(`      User ${user.id} does not meet notification criteria.`);
                     }
                   } else {
-                    console.log(`    Follower with ID ${follower.id} not found in users.`);
+                    // console.log(`    Follower with ID ${follower.id} not found in users.`);
                   }
                 }
               } else {
@@ -2380,7 +2576,7 @@ async function checkUpcomingConferenceDates() {
               }
 
               //Write to file  //MOVED INSIDE THE DATE/USER LOOP
-              console.log("    Writing updated data to files...");
+              // console.log("    Writing updated data to files...");
               await Promise.all([
                 fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
                 fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8')
@@ -2388,17 +2584,17 @@ async function checkUpcomingConferenceDates() {
                 .catch(err => console.error("    Error writing to files:", err));
 
             } else {
-              console.log('    Date is not within notification window.');
+              // console.log('    Date is not within notification window.');
             }
           } else {
-            console.log('    Date or fromDate is missing for a conference date.');
+            // console.log('    Date or fromDate is missing for a conference date.');
           }
         }
       } else {
-        console.log('    Conference dates are missing or not an array.');
+        // console.log('    Conference dates are missing or not an array.');
       }
     }
-    console.log('--- Finished checkUpcomingConferenceDates ---');
+    // console.log('--- Finished checkUpcomingConferenceDates ---');
 
   } catch (error) {
     console.error('Error in checkUpcomingConferenceDates:', error);
@@ -2408,7 +2604,7 @@ async function checkUpcomingConferenceDates() {
 import cron from 'node-cron';
 
 // Schedule the task.  Run every 30 minutes.  Adjust as needed.
-cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
+cron.schedule('*/30 * * * *', checkUpcomingConferenceDates);
 
 
 // // --- Start the server ---
