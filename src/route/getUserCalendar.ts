@@ -9,7 +9,7 @@ import { ConferenceResponse } from '../types/conference.response';
 import { CalendarEvent } from '../types/calendar';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
-const conferenceDetailsFilePath = path.resolve(__dirname, '.../database/DB_details.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 
 
