@@ -1,28 +1,52 @@
 [
-    {
-      "id": "user123",
-      "email": "john.doe@example.com",
-      "firstName": "John",
-      "lastName": "Doe",
-      "dob": "1990-05-15",
-      "role": "user",
-      "followedConferences": [],
-      "myConferences": [],
-      "calendar": [],
-      "feedBacks": [],
-      "notifications": [],
-      "setting": {
-        "receiveNotifications": true,
-        "autoAddFollowToCalendar": true,
-        "notificationWhenConferencesChanges": true,
-        "upComingEvent": true,
-        "notificationThrough": "System",
-        "notificationWhenUpdateProfile": true,
-        "notificationWhenFollow": true,
-        "notificationWhenAddTocalendar": true
-      },
-      "password": "123456",
-      "createdAt": "2023-01-20T10:00:00Z",
-      "updatedAt": "2023-01-20T10:00:00Z"
-    }
+  {
+    "id": "user123",
+    "email": "john.doe@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dob": "1990-05-15",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true
+    },
+    "password": "123456",
+    "createdAt": "2023-01-20T10:00:00Z",
+    "updatedAt": "2023-01-20T10:00:00Z"
+  },
+  {
+    "id": "6cb7601a-b66f-4e33-ad32-526445ef1655",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "email": "loicute5fps@gmail.com",
+    "password": "12345678",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-26T05:14:23.248Z",
+    "updatedAt": "2025-03-26T05:14:23.248Z",
+    "avatar": "",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {},
+    "isVerified": false,
+    "verificationToken": "304b7c5d9cd2ce6fbd4e084b8003a2d17532f2c1",
+    "verificationTokenExpires": "2025-03-26T06:14:23.248Z"
+  }
 ]

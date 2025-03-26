@@ -16,7 +16,7 @@
     "@google/generative-ai": "^0.23.0",
     "@types/webaudioapi": "^0.0.27",
     "cors": "^2.8.5",
-    "crypto-random-string": "^5.0.0",
+    "crypto-random-string": "^2.0.0",
     "csv-parser": "^3.2.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
