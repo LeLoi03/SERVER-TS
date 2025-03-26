@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { ConferenceListResponse, Meta } from '../types/conference.list.response';
 
-const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
+const conferencesListFilePath = path.resolve(__dirname, '../database/DB.json');
 
 // 16. DB to JSON : Receive and save conference data
 // --- Save Conference List ---

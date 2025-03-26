@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { UserResponse } from '../types/user.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 
 // 4. Lấy thông tin user theo ID ---

@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { UserResponse } from '../types/user.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 // 15. Mark All Notifications as Read
 export const markAllNotificationsAsRead: RequestHandler<{ id: string }, { message: string }, any, any> = async (req, res) => {

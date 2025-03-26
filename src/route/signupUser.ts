@@ -4,13 +4,12 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 // --- Route Handlers ---
 import nodemailer from 'nodemailer'; // Import nodemailer
-import cryptoRandomString from 'crypto-random-string'; // Import token generator
 
 
 import { UserResponse } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 
 // --- Cấu hình Nodemailer (Ví dụ với Gmail - Không khuyến khích cho production) ---
@@ -114,6 +113,8 @@ export const signupUser: RequestHandler<any, { message: string }, { firstName: s
         const hashedPassword = password; // <<< THAY THẾ BẰNG HASH THỰC SỰ
 
         // --- Tạo Token và Thời gian hết hạn ---
+        const { default: cryptoRandomString } = await import('crypto-random-string');
+
         const verificationToken = cryptoRandomString({ length: 40, type: 'url-safe' });
         const now = new Date();
         const expires = new Date(now.getTime() + 3600 * 1000); // Hết hạn sau 1 giờ

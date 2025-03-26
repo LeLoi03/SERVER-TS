@@ -11,8 +11,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { connectedUsers } from '../server-ts';
 import { ImportantDates, Location } from '../types/conference.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
-const conferenceDetailsFilePath = path.resolve(__dirname, './database/DB_details.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 
 // --- Helper Function to Compare Conference Details and Generate Detailed Message ---

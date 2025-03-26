@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { UserResponse } from '../types/user.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 // 21. API Đổi Mật Khẩu (Change Password) ---
 export const changePassword: RequestHandler<any, { message: string }, { id: string; newPassword?: string; confirmNewPassword?: string }, any> = async (req, res): Promise<any> => {

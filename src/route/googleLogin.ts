@@ -8,7 +8,7 @@ import { UserResponse } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
 import { GoogleLoginRequestBody } from '../types/google-login';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 export const googleLogin: RequestHandler<any, { message: string; user?: Omit<UserResponse, 'password'> }, GoogleLoginRequestBody, any> = async (req, res) => {
     try {

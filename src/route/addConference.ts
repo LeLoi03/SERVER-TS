@@ -13,8 +13,8 @@ import { ConferenceFormData } from '../types/addConference';
 import { MyConference } from '../types/user.response';
 
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
-const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
+const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
 
 
 // 6. Add conference (updated with notifications and settings check)
