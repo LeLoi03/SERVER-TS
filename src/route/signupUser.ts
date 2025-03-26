@@ -4,12 +4,11 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 // --- Route Handlers ---
 import nodemailer from 'nodemailer'; // Import nodemailer
-
+import cryptoRandomString from 'crypto-random-string'; // Import crypto-random-string from 'crypto-random-string';
 
 import { UserResponse } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
 
-const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 
