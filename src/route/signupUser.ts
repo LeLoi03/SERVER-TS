@@ -137,7 +137,17 @@ export const signupUser: RequestHandler<any, { message: string }, { firstName: s
             aboutme: '',
             interestedTopics: [],
             background: '',
-            setting: { /* default settings */ },
+            setting: {
+                receiveNotifications: true,
+                autoAddFollowToCalendar: true,
+                notificationWhenConferencesChanges: true,
+                upComingEvent: true,
+                notificationThrough: "System",
+                notificationWhenUpdateProfile: true,
+                notificationWhenFollow: true,
+                notificationWhenAddTocalendar: true,
+                notificationWhenAddToBlacklist: true
+            },
             isVerified: false, // <<< Mặc định chưa xác thực
             verificationToken: verificationToken, // <<< Lưu token
             verificationTokenExpires: expires.toISOString(), // <<< Lưu thời gian hết hạn

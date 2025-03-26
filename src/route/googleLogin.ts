@@ -62,7 +62,8 @@ export const googleLogin: RequestHandler<any, { message: string; user?: Omit<Use
                     notificationThrough: "System",
                     notificationWhenUpdateProfile: true,
                     notificationWhenFollow: true,
-                    notificationWhenAddTocalendar: true
+                    notificationWhenAddTocalendar: true,
+                    notificationWhenAddToBlacklist: true
                 }
             };
             users.push(newUser);

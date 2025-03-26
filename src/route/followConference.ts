@@ -12,8 +12,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { connectedUsers } from '../server-ts';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
-const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
-const conferencesListFilePath = path.resolve(__dirname, '../database/DB.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 

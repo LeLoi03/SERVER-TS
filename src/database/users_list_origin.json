@@ -19,7 +19,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "createdAt": "2023-01-20T10:00:00Z",
@@ -45,7 +46,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "createdAt": "2025-03-16T02:23:28.642Z",
@@ -71,7 +73,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "createdAt": "2022-11-05T14:30:00Z",
@@ -97,7 +100,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "createdAt": "2024-02-28T09:15:00Z",
@@ -123,7 +127,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "createdAt": "2021-06-05T12:00:00.000Z",
@@ -159,7 +164,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     }
   },
   {
@@ -192,7 +198,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     }
   },
   {
@@ -222,7 +229,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     }
   }
 ]

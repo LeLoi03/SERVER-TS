@@ -81,6 +81,7 @@ import { checkUpcomingConferenceDates } from './route/checkUpcomingConferenceDat
 import { verifyPassword } from './route/verifyPassword';
 import { changePassword } from './route/changePassword';
 import { verifyEmail } from './route/signupUser';
+import { blacklistConference } from './route/addToBlacklist';
 
 app.get('/api/v1/conference/:id', getConferenceById);
 app.get('/api/v1/conference', getConferenceList);
@@ -90,6 +91,7 @@ app.put('/api/v1/user/:id', updateUser);
 app.post('/api/v1/user/add-conference', addConference);
 app.get('/api/v1/user/:id/conferences', getMyConferences);
 app.post('/api/v1/user/:id/add-to-calendar', addToCalendar);
+app.post('/api/v1/user/:id/blacklist', blacklistConference);
 app.get('/api/v1/user/:id/calendar', getUserCalendar);
 app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback);
 app.delete('/api/v1/user/:id', deleteUser);
@@ -142,7 +144,6 @@ app.get('/api/v1/topics', async (req, res) => {
 app.post('/api/v1/user/verify-password', verifyPassword);
 app.post('/api/v1/user/change-password', changePassword);
 app.get('/api/v1/user/verify-email/:token', verifyEmail);
-
 
 
 

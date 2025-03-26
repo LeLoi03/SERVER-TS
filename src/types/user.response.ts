@@ -16,6 +16,7 @@ export type UserResponse = {
   calendar?: Calendar[];
   feedBacks?: string[];
   notifications?: Notification[];
+  blacklist?: BlackList[]; // <-- ADD THIS LINE
   setting?: Setting;
   isVerified?: boolean;
   verificationToken?: string | null;
@@ -54,6 +55,10 @@ export type Notification = {
   type: string;
 }
 
+export type BlackList = {
+  id: string;
+  addedAt: string;
+}
 
 export type Setting = {
   receiveNotifications?: boolean;
@@ -64,4 +69,5 @@ export type Setting = {
   notificationWhenUpdateProfile?: boolean;
   notificationWhenFollow?: boolean;
   notificationWhenAddTocalendar?: boolean;
+  notificationWhenAddToBlacklist?: boolean;
 }

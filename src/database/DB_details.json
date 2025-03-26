@@ -181,6 +181,16 @@
     ],
     "followBy": [],
     "feedbacks": [],
-    "isLessReputable": true
+    "isLessReputable": true,
+    "followedBy": [
+      {
+        "id": "b9339c1f-4976-4afc-a57f-e838691739a2",
+        "email": "loicute5fps@gmail.com",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-26T09:43:03.811Z",
+        "updatedAt": "2025-03-26T09:43:03.811Z"
+      }
+    ]
   }
 ]

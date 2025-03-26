@@ -19,7 +19,8 @@
       "notificationThrough": "System",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
     },
     "password": "123456",
     "isVerified": false,
@@ -36,20 +37,213 @@
     "password": "12345678",
     "dob": "",
     "role": "user",
-    "followedConferences": [],
+    "followedConferences": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-26T09:43:03.811Z",
+        "updatedAt": "2025-03-26T09:43:03.811Z"
+      }
+    ],
     "myConferences": [],
-    "calendar": [],
+    "calendar": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-26T09:40:25.568Z",
+        "updatedAt": "2025-03-26T09:40:25.568Z"
+      }
+    ],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "c9249f73-d970-4ea3-820d-e98605477f57",
+        "createdAt": "2025-03-26T09:33:02.730Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:42:31.530Z",
+        "deletedAt": null,
+        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "35c1bc8f-5c72-4f68-bc41-a86d9d342db9",
+        "createdAt": "2025-03-26T09:39:57.381Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:42:31.530Z",
+        "deletedAt": null,
+        "message": "You removed \" International Conference on Advanced Communications and Computation\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      },
+      {
+        "id": "d32d8c9a-8f29-4d52-912c-a8855ba72f0a",
+        "createdAt": "2025-03-26T09:40:01.819Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:42:31.530Z",
+        "deletedAt": null,
+        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "dfb8b403-cacb-4bbc-a510-98d71ba395cf",
+        "createdAt": "2025-03-26T09:40:11.265Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:42:31.530Z",
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "7b4e32a8-822d-4782-9308-cec974941da8",
+        "createdAt": "2025-03-26T09:40:25.568Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:42:31.530Z",
+        "deletedAt": null,
+        "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "fd63da48-a946-4fe5-9251-b2bec6aee59e",
+        "createdAt": "2025-03-26T09:42:33.581Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:44:20.846Z",
+        "deletedAt": null,
+        "message": "You removed \" International Conference on Advanced Communications and Computation\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      },
+      {
+        "id": "9231ea61-57be-412c-9fde-653d93417f5d",
+        "createdAt": "2025-03-26T09:42:58.868Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:44:20.846Z",
+        "deletedAt": null,
+        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "aa3b34a2-3206-4415-92b1-c0c29fd13947",
+        "createdAt": "2025-03-26T09:43:01.921Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:44:20.846Z",
+        "deletedAt": null,
+        "message": "Le Loi unfollowed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "b7e869db-870a-41f6-92d4-4d704080370a",
+        "createdAt": "2025-03-26T09:43:03.811Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T09:44:20.846Z",
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "7c6b2987-46b6-4737-9017-68ade960bd19",
+        "createdAt": "2025-03-26T09:44:22.674Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed \" International Conference on Advanced Communications and Computation\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      },
+      {
+        "id": "b4f04f66-05bd-4504-a393-2d4735bb8ddf",
+        "createdAt": "2025-03-26T09:46:02.895Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
+        "type": "Add to Blacklist"
+      }
+    ],
     "createdAt": "2025-03-26T05:33:27.943Z",
     "updatedAt": "2025-03-26T05:33:27.943Z",
     "avatar": "",
     "aboutme": "",
     "interestedTopics": [],
     "background": "",
-    "setting": {},
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
     "isVerified": false,
     "verificationToken": "1e5e9f4a887e540483d4cea17559ca42b2012167",
-    "verificationTokenExpires": "2025-03-26T06:33:27.943Z"
+    "verificationTokenExpires": "2025-03-26T06:33:27.943Z",
+    "blacklist": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "addedAt": "2025-03-26T09:46:02.895Z"
+      }
+    ]
+  },
+  {
+    "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
+    "firstName": "abc",
+    "lastName": "xyz",
+    "email": "1@gmail.com",
+    "password": "12345678",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-26T09:55:06.596Z",
+    "updatedAt": "2025-03-26T09:55:06.596Z",
+    "avatar": "",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
+    "isVerified": false,
+    "verificationToken": "781a39744cd27b197f0b1b7320d5dc90ce661352",
+    "verificationTokenExpires": "2025-03-26T10:55:06.596Z"
+  },
+  {
+    "id": "1ff52334-0161-46b2-9fe8-2d6139dd3c85",
+    "firstName": "Lê",
+    "lastName": "Lâm Lợi",
+    "email": "loicute5FPS@gmail.com",
+    "password": "",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-26T10:04:54.047Z",
+    "updatedAt": "2025-03-26T10:04:54.047Z",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    }
   }
 ]
