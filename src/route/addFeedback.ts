@@ -11,8 +11,8 @@ import { Feedback } from '../types/conference.response';
 import { v4 as uuidv4 } from 'uuid';
 import { connectedUsers } from '../server-ts';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
-const conferenceDetailsFilePath = path.resolve(__dirname, './database/DB_details.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 
 // 11. Add feedback (with real-time notifications)

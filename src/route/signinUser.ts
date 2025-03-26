@@ -5,7 +5,7 @@ import fs from 'fs';
 
 
 import { UserResponse } from '../types/user.response';
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 // 18. Login user
 export const signinUser: RequestHandler<any, { message: string; user?: Omit<UserResponse, "password"> }, { email: string; password: string }, any> = async (req, res): Promise<any> => {

@@ -6,10 +6,10 @@ import fs from 'fs';
 
 import { ConferenceListResponse } from '../types/conference.list.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
-const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
-const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
-const conferenceDetailsFilePath = path.resolve(__dirname, './database/DB_details.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
+const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
+const conferencesListFilePath = path.resolve(__dirname, '../database/DB.json');
+const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 
 // 2. Lấy danh sách Conferences

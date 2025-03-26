@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { AddedConference } from '../types/addConference';
 
-const addConferencesFilePath = path.resolve(__dirname, './database/add_conferences.json');
+const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
 
 // 7. Get User's Conferences ---
 export const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { message: string }, any, any> = async (req, res) => {

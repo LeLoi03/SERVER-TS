@@ -7,7 +7,7 @@ import fs from 'fs';
 
 import { Notification } from '../types/user.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 
 // 14. Update User Notifications:

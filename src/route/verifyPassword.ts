@@ -6,7 +6,7 @@ import fs from 'fs';
 
 import { UserResponse } from '../types/user.response';
 
-const userFilePath = path.resolve(__dirname, './database/users_list.json');
+const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 // 20. API Xác Thực (Verify Password) ---
 export const verifyPassword: RequestHandler<any, { message: string }, { id: string; currentPassword?: string }, any> = async (req, res): Promise<any> => {
