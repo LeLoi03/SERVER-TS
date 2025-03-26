@@ -6,7 +6,7 @@ import 'dotenv/config';
 import path from 'path';
 import bodyParser from 'body-parser';
 import fs from 'fs';
-
+import multer from 'multer';
 const corsOptions = {
     origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -54,6 +54,8 @@ io.on('connection', (socket: Socket) => {
 
 
 const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 import { getConferenceById } from './route/getConferenceById';
 import { getConferenceList } from './route/getConferenceList';
@@ -69,7 +71,7 @@ import { deleteUser } from './route/deleteUser';
 import { getUserNotifications } from './route/getNotifications';
 import { updateNotifications } from './route/updateNotifications';
 import { markAllNotificationsAsRead } from './route/markAllNotificationsAsRead';
-import { adminConferences } from './route/adminConferences';
+import { adminConferences_GET, adminConferences_POST } from './route/adminConferences';
 import { saveConferenceData } from './route/saveConferenceData';
 import { saveConferenceDetails } from './route/saveConferenceDetails';
 import { signupUser } from './route/signupUser';
@@ -94,8 +96,8 @@ app.delete('/api/v1/user/:id', deleteUser);
 app.get('/api/v1/user/:id/notifications', getUserNotifications);
 app.put('/api/v1/user/:id/notifications', updateNotifications);
 app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsAsRead);
-app.get('/admin/conferences', adminConferences);
-app.post('/admin/conferences', adminConferences);
+app.get('/admin/conferences', adminConferences_GET);
+app.post('/admin/conferences', upload.single('csvFile'), adminConferences_POST);
 app.post('/api/v1/conferences/save', saveConferenceData);
 app.post('/api/v1/conferences/details/save', saveConferenceDetails);
 app.post('/api/v1/user/signup', signupUser);

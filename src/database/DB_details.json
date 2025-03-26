@@ -1,0 +1,186 @@
+[
+  {
+    "conference": {
+      "id": "79d58db9-f8c3-485d-8e87-0da7a454d12a",
+      "title": "GI International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment",
+      "acronym": "DIMVA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:51.110Z",
+      "updatedAt": "2025-03-23T10:26:51.110Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Cybersecurity and privacy"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2021",
+        "fieldOfResearch": "Cybersecurity and privacy"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Cybersecurity and privacy"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": []
+  },
+  {
+    "conference": {
+      "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+      "title": " International Conference on Advanced Communications and Computation",
+      "acronym": "INFOCOMP",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:23:08.805Z",
+      "updatedAt": "2025-03-26T08:35:36.647Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+      "year": 2025,
+      "accessType": "Hybrid",
+      "isAvailable": true,
+      "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+      "publisher": "IARIA Press",
+      "summerize": "The Fifteenth International Conference on Advanced Communications and Computation (INFOCOMP 2025) aims to cover advanced communications and computing aspects, showcasing academic and industrial achievements and visions. The conference offers onsite and online options to accommodate various situations. It is part of the DataSys 2025 Congress and is colocated with several other events.",
+      "callForPaper": "INFOCOMP 2025 calls for contributions covering technical, research, and industrial results. They invite position papers, survey papers, and panel proposals. The topics suggested include advanced applications, legal context, evaluation context, energy-aware networks, and various aspects of communications, computing, and security. Specific tracks include trends and advances on architecture/methods, trends and advances on disciplines/applications, large-scale and fast computation, programming models, networks/systems communications, turbulence modeling and simulation, advanced applications, legal context, economic use and re-use, evaluation context, biometry, security, access technologies, algorithms, and applications. All topics and submission formats are open to both research and industry contributions.",
+      "link": "https://www.iaria.org/conferences2025/INFOCOMP25.html",
+      "cfpLink": "https://www.iaria.org/conferences2025/CfPINFOCOMP25.html",
+      "impLink": "https://www.iaria.org/conferences2025/INFOCOMP25.html",
+      "createdAt": "2025-03-26T03:03:04.151Z",
+      "updatedAt": "2025-03-26T03:03:04.151Z",
+      "topics": [
+        "Big Data",
+        "Biometry",
+        "security",
+        "access technologies",
+        "algorithms",
+        "and applications",
+        "computing",
+        "communication",
+        "architecture/methods",
+        "scalability",
+        "disciplines/applications",
+        "computation",
+        "networks/systems communications",
+        "turbulence modeling and simulation",
+        "advanced applications"
+      ]
+    },
+    "location": {
+      "id": "7884ad28-80f2-420d-a8de-7861354f8b68",
+      "createdAt": "2025-03-26T03:03:04.163Z",
+      "updatedAt": "2025-03-26T03:03:04.163Z",
+      "isAvailable": true,
+      "organizeId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+      "cityStateProvince": "Valencia",
+      "country": "Spain",
+      "address": "Valencia, Spain",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "d59946f1-cf64-4b24-a03b-c67e14f36473",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "fromDate": "2025-02-16T00:00:00.000Z",
+        "toDate": "2025-02-16T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification",
+        "createdAt": "2025-03-26T03:03:04.173Z",
+        "updatedAt": "2025-03-26T03:03:04.173Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c5ce1008-df34-42a6-aea2-1f76ff758c57",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "fromDate": "2025-02-28T00:00:00.000Z",
+        "toDate": "2025-02-28T00:00:00.000Z",
+        "type": "registrationDate",
+        "name": "Registration",
+        "createdAt": "2025-03-26T03:03:04.171Z",
+        "updatedAt": "2025-03-26T03:03:04.171Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1491b8a5-a7be-4e4d-b57f-ff2297d7711c",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "fromDate": "2025-03-05T00:00:00.000Z",
+        "toDate": "2025-03-05T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera ready",
+        "createdAt": "2025-03-26T03:03:04.170Z",
+        "updatedAt": "2025-03-26T03:03:04.170Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ba2f24cd-73df-4c25-b04f-f60fe4e6ef55",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Submission",
+        "createdAt": "2025-03-26T03:03:04.167Z",
+        "updatedAt": "2025-03-26T03:03:04.167Z",
+        "isAvailable": true
+      },
+      {
+        "id": "178ad2d2-a7b2-4544-b164-f96d9bccf9e2",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "fromDate": "2025-04-06T00:00:00.000Z",
+        "toDate": "2025-04-10T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-26T03:03:04.165Z",
+        "updatedAt": "2025-03-26T03:03:04.165Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "Unranked",
+        "source": "CORE2023",
+        "fieldOfResearch": "Information and computing sciences"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2021",
+        "fieldOfResearch": "Information and computing sciences"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2020",
+        "fieldOfResearch": "Information and computing sciences"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "Unranked",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "isLessReputable": true
+  }
+]

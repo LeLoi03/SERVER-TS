@@ -6,6 +6,8 @@ export type ConferenceResponse = {
   ranks: Rank[] | null;
   feedBacks: Feedback[] | null;
   followedBy: FollowerInfo[] | null;
+  isLessReputable?: boolean; // <-- ADD THIS LINE
+
 };
 
 export type ConferenceIdentity = {

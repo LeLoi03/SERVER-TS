@@ -21,6 +21,8 @@ export type ConferenceInfo = {
   creatorId: string;
   accessType: string | null;
   status: string;
+  isLessReputable?: boolean; // <-- ADD THIS LINE
+
 };
 
 export type Location = {

@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import pkg from 'pg';
+import { parse } from 'csv-parse/sync'; // <-- Import csv-parse (sync version for simplicity here)
+
 const { Pool } = pkg;
 import cors from 'cors';
 import 'dotenv/config';
@@ -211,5 +213,3 @@ app.post('/log', (req, res) => {
 app.listen(3000, () => {
   console.log(`Server listening on port 3000`);
 });
-
-
