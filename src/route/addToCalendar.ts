@@ -81,14 +81,16 @@ export const addToCalendar: RequestHandler<{ id: string }, UserResponse | { mess
         const existingCalendarIndex = updatedUser.calendar.findIndex(c => c.id === conferenceId);
 
         let notificationType: 'Add to Calendar' | 'Remove from Calendar';
-        let notificationMessage: string;
+        let notificationMessageForUser: string; // Message for the acting user
+        let notificationMessageForOthers: string; // Message for other followers
         let isAdding: boolean; // Flag to indicate add or remove
 
         if (existingCalendarIndex !== -1) {
             // Remove from calendar:
             updatedUser.calendar.splice(existingCalendarIndex, 1);
             notificationType = 'Remove from Calendar';
-            notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} removed the conference "${updatedConference.conference.title}" from their calendar.`;
+            notificationMessageForUser = `You removed the conference "${updatedConference.conference.title}" from your calendar.`; // Changed to "your"
+            notificationMessageForOthers = `${updatedUser.firstName} ${updatedUser.lastName} removed the conference "${updatedConference.conference.title}" from their calendar.`;
             isAdding = false;
         } else {
             // Add to calendar:
@@ -98,36 +100,36 @@ export const addToCalendar: RequestHandler<{ id: string }, UserResponse | { mess
                 updatedAt: now,
             });
             notificationType = 'Add to Calendar';
-            notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} added the conference "${updatedConference.conference.title}" to their calendar.`;
+            notificationMessageForUser = `You added the conference "${updatedConference.conference.title}" to your calendar.`; // Changed to "your"
+            notificationMessageForOthers = `${updatedUser.firstName} ${updatedUser.lastName} added the conference "${updatedConference.conference.title}" to their calendar.`;
             isAdding = true;
         }
 
-        // --- Create the notification object ---
-        const notification: Notification = {
-            id: uuidv4(),
-            createdAt: now,
-            isImportant: false,  // Or true, based on your needs
-            seenAt: null,
-            deletedAt: null,
-            message: notificationMessage,
-            type: notificationType,
-        };
-
-        // --- 1. Add notification to the ACTING user's notifications (IF SETTINGS ALLOW) ---
+        // --- 1.  ACTING USER NOTIFICATION ---
         if (shouldSendAddToCalendarNotification(updatedUser, isAdding ? 'add' : 'remove')) {
+            const notification: Notification = {
+                id: uuidv4(),
+                createdAt: now,
+                isImportant: false,
+                seenAt: null,
+                deletedAt: null,
+                message: notificationMessageForUser, // Use the "You" message
+                type: notificationType,
+            };
+
             if (!updatedUser.notifications) {
                 updatedUser.notifications = [];
             }
             updatedUser.notifications.push(notification);
 
-            // --- 2. Send real-time notification to the ACTING user ---
+            // --- Send real-time notification to the ACTING user ---
             const actingUserSocket = connectedUsers.get(userId);
             if (actingUserSocket) {
                 actingUserSocket.emit('notification', notification);
             }
         }
 
-        // --- 3. Add notification to OTHER followers (and send real-time) ---
+        // --- 2. Add notification to OTHER followers (and send real-time) ---
         // ONLY if it's an ADD action, and EXCLUDE the acting user.
         //  AND ONLY if the user is also following the conference.
         //  AND ONLY if the follower's settings allow it.
@@ -148,7 +150,7 @@ export const addToCalendar: RequestHandler<{ id: string }, UserResponse | { mess
                                         isImportant: false,
                                         seenAt: null,
                                         deletedAt: null,
-                                        message: notificationMessage, //Same message
+                                        message: notificationMessageForOthers, // Message for others
                                         type: notificationType
                                     };
 

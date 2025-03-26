@@ -192,5 +192,1590 @@
         "updatedAt": "2025-03-26T09:43:03.811Z"
       }
     ]
+  },
+  {
+    "conference": {
+      "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "title": "ACIS Conference on Software Engineering Research, Management and Applications",
+      "acronym": "SERA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.435Z",
+      "updatedAt": "2025-03-23T10:26:29.435Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "publisher": "",
+      "summerize": "The 23rd IEEE/ACIS International Conference on Software Engineering, Management and Applications (SERA 2025) aims to bring researchers, scientists, engineers, industry practitioners, and students together to discuss and exchange new ideas, research results, and experiences on all aspects of Software Engineering, Management, and Applications. SERA 2025 will be held at UNLV Campus in Las Vegas, USA from May 29-31, 2025.",
+      "callForPaper": "SERA 2025 invites submissions on all aspects of Software Engineering, Management, and Applications. Key dates to remember:\n\n*   **Workshop/Special Session Proposal:** January 10, 2025\n*   **Full Paper Submission:** March 28, 2025 (extended)\n*   **Acceptance Notification (papers submitted by March 14):** April 4, 2025\n*   **Acceptance Notification (Papers submitted after March 14):** April 11, 2025\n*   **Camera Ready Papers/Registration:** April 18, 2025",
+      "link": "https://acisinternational.org/conferences/sera-2025/",
+      "cfpLink": "http://acisinternational.org/wp-content/uploads/2025/03/SERA_2025_CFP-9.pdf",
+      "impLink": "https://acisinternational.org/conferences/sera-2025/",
+      "createdAt": "2025-03-26T11:09:49.959Z",
+      "updatedAt": "2025-03-26T11:09:49.959Z",
+      "topics": [
+        "Software Engineering",
+        "Software Management",
+        "Software Applications"
+      ]
+    },
+    "location": {
+      "id": "0b1383b1-bd9e-4652-b761-9d6f189e25cc",
+      "createdAt": "2025-03-26T11:09:49.971Z",
+      "updatedAt": "2025-03-26T11:09:49.971Z",
+      "isAvailable": true,
+      "organizeId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+      "cityStateProvince": "Las Vegas, Nevada",
+      "country": "United States of America",
+      "address": "UNLV Campus, Las Vegas, Nevada, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "aade00aa-9f8d-407b-9396-78a4a0acfbff",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-01-10T00:00:00.000Z",
+        "toDate": "2025-01-10T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Workshop/Special Session Proposal",
+        "createdAt": "2025-03-26T11:09:49.985Z",
+        "updatedAt": "2025-03-26T11:09:49.985Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1be5a9c3-e9e5-4acf-b6c9-d5c8e48e3b5b",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-04-11T00:00:00.000Z",
+        "toDate": "2025-04-11T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification (Papers submitted after March 14)",
+        "createdAt": "2025-03-26T11:09:49.984Z",
+        "updatedAt": "2025-03-26T11:09:49.984Z",
+        "isAvailable": true
+      },
+      {
+        "id": "9fdd5cd7-b92f-4556-ac40-7394096fab84",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-04-04T00:00:00.000Z",
+        "toDate": "2025-04-04T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification (papers submitted by March 14)",
+        "createdAt": "2025-03-26T11:09:49.982Z",
+        "updatedAt": "2025-03-26T11:09:49.982Z",
+        "isAvailable": true
+      },
+      {
+        "id": "102780c6-0fdc-4431-b650-91be08c8cd16",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-04-18T00:00:00.000Z",
+        "toDate": "2025-04-18T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera Ready Papers/Registration",
+        "createdAt": "2025-03-26T11:09:49.980Z",
+        "updatedAt": "2025-03-26T11:09:49.980Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3eb2abc6-7be0-4942-8282-1548dee63aad",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full Paper Submission",
+        "createdAt": "2025-03-26T11:09:49.977Z",
+        "updatedAt": "2025-03-26T11:09:49.977Z",
+        "isAvailable": true
+      },
+      {
+        "id": "5dd368e9-c210-499f-b286-aab39f30dba7",
+        "organizedId": "4d86f06d-47c6-4687-8d46-dd857bac8283",
+        "fromDate": "2025-05-29T00:00:00.000Z",
+        "toDate": "2025-05-31T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-26T11:09:49.975Z",
+        "updatedAt": "2025-03-26T11:09:49.975Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2021",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
+        "email": "1@gmail.com",
+        "firstName": "abc",
+        "lastName": "xyz",
+        "createdAt": "2025-03-26T11:52:59.430Z",
+        "updatedAt": "2025-03-26T11:52:59.430Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "ffcb0fa9-6fa9-43d6-8b97-02440113bb01",
+      "title": "ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "acronym": "SIGCOMM",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.507Z",
+      "updatedAt": "2025-03-23T10:26:29.507Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "ffcb0fa9-6fa9-43d6-8b97-02440113bb01",
+      "publisher": "ACM",
+      "summerize": "ACM SIGCOMM is the flagship annual conference of the ACM Special Interest Group on Data Communication (SIGCOMM). ACM SIGCOMM 2025 will be held in Coimbra, Portugal, from September 8-11, 2025. The conference seeks papers describing significant research contributions or significant deployment experiences in communication networks and networked systems.",
+      "callForPaper": "The ACM SIGCOMM 2025 conference invites submissions on significant research contributions or deployment experiences in communication networks and networked systems. Key aspects of the call include:\n\n*   **Scope:** Broad view of networking encompassing computer networks, mobile, wide-area, data center, embedded, home, and enterprise networks, wired and wireless technologies, and various aspects of network lifecycle and design.\n*   **Tracks:** Submissions are accepted in two tracks: research and experience.\n*   **Anonymity:** All submissions must be anonymous, although experience submissions may reveal the name of the deploying organization or system.\n*   **Formatting:** Submissions should be in two-column, 10-point format, and up to 12 pages in length with additional pages for references and appendices.\n*   **Ethical Considerations:** All papers must include a statement or subsection about ethical issues raised by the work.\n*   **Artifact Evaluation:** Authors of accepted papers will be invited to submit supporting materials to the Artifact Evaluation process.\n*   **New This Year:** SIGCOMM shorts (lightning talks) and one-shot revision.",
+      "link": "https://conferences.sigcomm.org/sigcomm/2025/",
+      "cfpLink": "https://conferences.sigcomm.org/sigcomm/2025/cfp/",
+      "impLink": "None",
+      "createdAt": "2025-03-26T11:39:07.842Z",
+      "updatedAt": "2025-03-26T11:39:07.842Z",
+      "topics": [
+        "Communication Networks",
+        "Networked Systems",
+        "Computer Networks",
+        "Mobile Networks",
+        "Wide-Area Networks",
+        "Data Center Networks",
+        "Embedded Networks",
+        "Home Networks",
+        "Enterprise Networks",
+        "Wired Technologies",
+        "Wireless Technologies",
+        "Optical Communication",
+        "Radio Communication",
+        "Acoustic Communication",
+        "Security",
+        "Privacy",
+        "Verification",
+        "Machine Learning",
+        "Resource Management",
+        "AI",
+        "Virtualization",
+        "Economics",
+        "Robustness",
+        "Performance",
+        "Network Architecture",
+        "Mobility",
+        "Energy Consumption",
+        "Environmental Impact",
+        "Topology",
+        "Diagnosis",
+        "Evolution",
+        "Light-Based Communication",
+        "Packet-Switched Hardware and Software",
+        "Circuit-Switched Hardware and Software"
+      ]
+    },
+    "location": {
+      "id": "442c3073-2874-462d-b44e-43015e57e063",
+      "createdAt": "2025-03-26T11:39:07.857Z",
+      "updatedAt": "2025-03-26T11:39:07.857Z",
+      "isAvailable": true,
+      "organizeId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+      "cityStateProvince": "Coimbra",
+      "country": "Portugal",
+      "address": "Coimbra, Portugal",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "3d61bff6-6a61-4d22-8947-1ab64aa85f76",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-06-27T00:00:00.000Z",
+        "toDate": "2025-06-27T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "One-shot revision deadline",
+        "createdAt": "2025-03-26T11:39:07.879Z",
+        "updatedAt": "2025-03-26T11:39:07.879Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8d590288-b9cb-4105-91c2-ae24d2ee5ba3",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-01-24T00:00:00.000Z",
+        "toDate": "2025-01-24T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Abstract registration",
+        "createdAt": "2025-03-26T11:39:07.878Z",
+        "updatedAt": "2025-03-26T11:39:07.878Z",
+        "isAvailable": true
+      },
+      {
+        "id": "cfe29641-370f-46f7-b513-6d2b77f60fcd",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-07-11T00:00:00.000Z",
+        "toDate": "2025-07-11T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Revision results’ notification",
+        "createdAt": "2025-03-26T11:39:07.876Z",
+        "updatedAt": "2025-03-26T11:39:07.876Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c6d3d232-2e66-4fae-9229-28bf87e17999",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-04-29T00:00:00.000Z",
+        "toDate": "2025-04-29T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Review results’ notification",
+        "createdAt": "2025-03-26T11:39:07.875Z",
+        "updatedAt": "2025-03-26T11:39:07.875Z",
+        "isAvailable": true
+      },
+      {
+        "id": "b823fa2e-84ca-464f-b703-55e076d32170",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-05-18T00:00:00.000Z",
+        "toDate": "2025-05-18T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Student Research Competition",
+        "createdAt": "2025-03-26T11:39:07.873Z",
+        "updatedAt": "2025-03-26T11:39:07.873Z",
+        "isAvailable": true
+      },
+      {
+        "id": "86337bd5-ea2d-4f32-a56f-342c075bca53",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Workshop Proposal submission",
+        "createdAt": "2025-03-26T11:39:07.872Z",
+        "updatedAt": "2025-03-26T11:39:07.872Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d162c6a8-0190-455a-9ab6-10f3413bc4b8",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-02-18T00:00:00.000Z",
+        "toDate": "2025-02-18T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Tutorial and Hackathon Proposal submission",
+        "createdAt": "2025-03-26T11:39:07.870Z",
+        "updatedAt": "2025-03-26T11:39:07.870Z",
+        "isAvailable": true
+      },
+      {
+        "id": "86521769-4318-40df-9507-af198c3d7495",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-04-20T00:00:00.000Z",
+        "toDate": "2025-04-20T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Non-Paper Sessions Proposal submission",
+        "createdAt": "2025-03-26T11:39:07.868Z",
+        "updatedAt": "2025-03-26T11:39:07.868Z",
+        "isAvailable": true
+      },
+      {
+        "id": "88ddedd9-007f-45d2-a67c-21395cb44abb",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-05-01T00:00:00.000Z",
+        "toDate": "2025-05-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Workshop Paper submission",
+        "createdAt": "2025-03-26T11:39:07.867Z",
+        "updatedAt": "2025-03-26T11:39:07.867Z",
+        "isAvailable": true
+      },
+      {
+        "id": "cc49ce54-db06-41a4-8916-ded79ac22947",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-05-08T00:00:00.000Z",
+        "toDate": "2025-05-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Call for Posters, Demos Paper submission",
+        "createdAt": "2025-03-26T11:39:07.865Z",
+        "updatedAt": "2025-03-26T11:39:07.865Z",
+        "isAvailable": true
+      },
+      {
+        "id": "9d0790ea-f663-4406-9040-3a53709fdd3d",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper submission",
+        "createdAt": "2025-03-26T11:39:07.863Z",
+        "updatedAt": "2025-03-26T11:39:07.863Z",
+        "isAvailable": true
+      },
+      {
+        "id": "01d7e21e-6fbb-46b5-8e78-a1398de4a484",
+        "organizedId": "a13f709b-f98a-443b-b702-bc9f626d3dc1",
+        "fromDate": "2025-09-08T00:00:00.000Z",
+        "toDate": "2025-09-11T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-26T11:39:07.861Z",
+        "updatedAt": "2025-03-26T11:39:07.861Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
+        "email": "1@gmail.com",
+        "firstName": "abc",
+        "lastName": "xyz",
+        "createdAt": "2025-03-26T11:53:51.997Z",
+        "updatedAt": "2025-03-26T11:53:51.997Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "title": "Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+      "acronym": "CAADRIA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:38.337Z",
+      "updatedAt": "2025-03-23T10:26:38.337Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "f060a646-3ca5-4640-b4ab-70df721acda7",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "publisher": "",
+      "summerize": "CAADRIA 2025, with the theme of 'Architectural Informatics,' reexamines the fundamental existence of architecture in the age of information technology. The conference is scheduled to be held in Tokyo from March 22-29, 2025. It invites original high-quality papers presenting current computer-aided architectural design research, accommodating a broad spectrum of approaches ranging from speculative, informal investigations to conventional scientific research.",
+      "callForPaper": "CAADRIA 2025 invites original high-quality papers presenting current computer-aided architectural design research. Topics of interest include:\n\n*   Artificial intelligence, neural networks and machine learning\n*   Building Information Modeling (BIM)\n*   City Information Modeling (CIM)\n*   Collective, collaborative & interdisciplinary design\n*   Computational design research & education\n*   Design cognition and human-computer interaction\n*   Disrupted practices, resilience, and social sustainability\n*   Environmental and ecological performance\n*   Generative, algorithmic & evolutionary design\n*   Digital Heritage\n*   Interactive environments\n*   Material systems, processes and assembly\n*   Practice-based design research\n*   Robotics, digital fabrication and construction\n*   Simulation, visualization and impact projection\n*   Theory, philosophy & methodology of computational design research\n*   Urban analytics, big data analysis and smart cities\n*   AR / VR / XR\n*   Application of technology in the context of the Asia-Pacific Region\n\nPaper acceptance is subject to a two-stage reviewing process. CAADRIA 2025 also offers opportunities to submit a poster for the project exhibition, and Master’s and PhD students are invited to apply to present their research at the Postgraduate Student Consortium.",
+      "link": "https://www.caadria2025.org/",
+      "cfpLink": "https://www.caadria2025.org/call-for-papers",
+      "impLink": "https://www.caadria2025.org/timeline",
+      "createdAt": "2025-03-25T11:48:14.692Z",
+      "updatedAt": "2025-03-25T11:48:14.692Z",
+      "topics": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Networks",
+        "Architectural Informatics",
+        "Building Information Modeling (BIM)",
+        "City Information Modeling (CIM)",
+        "Computational Design",
+        "Digital Fabrication"
+      ]
+    },
+    "location": {
+      "id": "f2f4b68c-83bf-4c1f-a9a5-018a52ccd849",
+      "createdAt": "2025-03-25T11:48:14.723Z",
+      "updatedAt": "2025-03-25T11:48:14.723Z",
+      "isAvailable": true,
+      "organizeId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+      "cityStateProvince": "Tokyo",
+      "country": "Japan",
+      "address": "Tokyo",
+      "continent": "Asia"
+    },
+    "dates": [
+      {
+        "id": "1e050508-86fb-45a7-bb7e-d0bd497244b9",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-29T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Post Conference Tour",
+        "createdAt": "2025-03-25T11:48:14.760Z",
+        "updatedAt": "2025-03-25T11:48:14.760Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4ae86081-cf6b-4b34-a2ab-b78e064fd7b3",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Conference Dinner",
+        "createdAt": "2025-03-25T11:48:14.759Z",
+        "updatedAt": "2025-03-25T11:48:14.759Z",
+        "isAvailable": true
+      },
+      {
+        "id": "02d1f071-1fc5-4c0b-9860-59d9407d5db5",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-26T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Keynote speeches and paper presentations",
+        "createdAt": "2025-03-25T11:48:14.757Z",
+        "updatedAt": "2025-03-25T11:48:14.757Z",
+        "isAvailable": true
+      },
+      {
+        "id": "2eedd4ef-8229-489d-9d6b-8f5adc3dce9b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-25T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Workshop",
+        "createdAt": "2025-03-25T11:48:14.756Z",
+        "updatedAt": "2025-03-25T11:48:14.756Z",
+        "isAvailable": true
+      },
+      {
+        "id": "571656b0-8b48-424d-a860-77167a796f0b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-20T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Student Review of Architectural Informatics Society",
+        "createdAt": "2025-03-25T11:48:14.754Z",
+        "updatedAt": "2025-03-25T11:48:14.754Z",
+        "isAvailable": true
+      },
+      {
+        "id": "23851e8d-51d6-407b-8c81-1cb191658548",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Deadline for WS application for participants",
+        "createdAt": "2025-03-25T11:48:14.752Z",
+        "updatedAt": "2025-03-25T11:48:14.752Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d07a67d7-77cc-47e8-ba19-26e9b02a4ea6",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-09T00:00:00.000Z",
+        "toDate": "2025-01-09T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "WS application opening for participants",
+        "createdAt": "2025-03-25T11:48:14.750Z",
+        "updatedAt": "2025-03-25T11:48:14.750Z",
+        "isAvailable": true
+      },
+      {
+        "id": "af512f8d-4a7a-4dde-8d8f-83478cdf745a",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Project Exhibition notification of acceptance",
+        "createdAt": "2025-03-25T11:48:14.748Z",
+        "updatedAt": "2025-03-25T11:48:14.748Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6a3d55cd-e500-405e-866e-fe9f0eadc919",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-01T00:00:00.000Z",
+        "toDate": "2025-01-01T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Full paper acceptance notification",
+        "createdAt": "2025-03-25T11:48:14.746Z",
+        "updatedAt": "2025-03-25T11:48:14.746Z",
+        "isAvailable": true
+      },
+      {
+        "id": "565e4ccc-2b21-401c-bf60-6ab83bdb70dd",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-10-01T00:00:00.000Z",
+        "toDate": "2024-10-01T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Abstract acceptance notification",
+        "createdAt": "2025-03-25T11:48:14.745Z",
+        "updatedAt": "2025-03-25T11:48:14.745Z",
+        "isAvailable": true
+      },
+      {
+        "id": "22d7a79e-c280-4fb9-bc6f-feba501b0c0f",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera-ready Full paper submission deadline",
+        "createdAt": "2025-03-25T11:48:14.743Z",
+        "updatedAt": "2025-03-25T11:48:14.743Z",
+        "isAvailable": true
+      },
+      {
+        "id": "96299cbb-85af-4943-b8c9-f0643a70a9b8",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-15T00:00:00.000Z",
+        "toDate": "2025-01-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "PGSC candidature submission",
+        "createdAt": "2025-03-25T11:48:14.741Z",
+        "updatedAt": "2025-03-25T11:48:14.741Z",
+        "isAvailable": true
+      },
+      {
+        "id": "532e69e5-8dcc-44c9-bec2-7e3498d76e1b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-15T00:00:00.000Z",
+        "toDate": "2025-01-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Project Exhibition submission deadline",
+        "createdAt": "2025-03-25T11:48:14.739Z",
+        "updatedAt": "2025-03-25T11:48:14.739Z",
+        "isAvailable": true
+      },
+      {
+        "id": "a5afbc2b-601a-4d6d-bd68-a9f9698fd584",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-11-24T00:00:00.000Z",
+        "toDate": "2024-11-24T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full paper submission deadline",
+        "createdAt": "2025-03-25T11:48:14.736Z",
+        "updatedAt": "2025-03-25T11:48:14.736Z",
+        "isAvailable": true
+      },
+      {
+        "id": "617c0120-26f3-4e71-81bb-1575d7fa8298",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-11-07T00:00:00.000Z",
+        "toDate": "2024-11-07T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Deadline of workshop proposals",
+        "createdAt": "2025-03-25T11:48:14.733Z",
+        "updatedAt": "2025-03-25T11:48:14.733Z",
+        "isAvailable": true
+      },
+      {
+        "id": "7b9a67ee-b049-46bd-99fa-84358423023f",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-08-27T00:00:00.000Z",
+        "toDate": "2024-08-27T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstract submission deadline",
+        "createdAt": "2025-03-25T11:48:14.731Z",
+        "updatedAt": "2025-03-25T11:48:14.731Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3739a764-8d06-42e7-bfc3-f5585871b966",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-25T11:48:14.728Z",
+        "updatedAt": "2025-03-25T11:48:14.728Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2021",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2020",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
+        "email": "1@gmail.com",
+        "firstName": "abc",
+        "lastName": "xyz",
+        "createdAt": "2025-03-26T12:00:59.071Z",
+        "updatedAt": "2025-03-26T12:00:59.071Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "49d19de1-49f8-4681-9219-a2b85d465f9f",
+      "title": "International Conference on Agents and Artificial Intelligence",
+      "acronym": "ICAART",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:27:09.132Z",
+      "updatedAt": "2025-03-23T10:27:09.132Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Artificial intelligence"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2021",
+        "fieldOfResearch": "Artificial intelligence"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Artificial intelligence"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": []
+  },
+  {
+    "conference": {
+      "id": "0e468fb7-7573-417a-817d-f86c78596846",
+      "title": "International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+      "acronym": "TAPSOFT",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-25T13:00:34.987Z",
+      "updatedAt": "2025-03-25T13:00:34.987Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": null,
+    "location": null,
+    "dates": null,
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": []
+  },
+  {
+    "conference": {
+      "id": "8bfbdaed-e897-4fef-8ea3-0e4e878a12c8",
+      "title": "ACM International Conference on Knowledge Discovery and Data Mining",
+      "acronym": "KDD",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:30.726Z",
+      "updatedAt": "2025-03-23T10:26:30.726Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "8bfbdaed-e897-4fef-8ea3-0e4e878a12c8",
+      "publisher": "ACM",
+      "summerize": "ACM KDD 2025 is a premier data science conference that will be held in Toronto, Canada, from August 3 to August 7, 2025. It features both Research and Applied Data Science Tracks. The conference aims to foster the exchange of innovative research and advancements in data science.",
+      "callForPaper": "KDD 2025 invites submissions to the Research Track and the Applied Data Science (ADS) Track. Noteworthy points from the call include:\n\n*   **Submission Cycles:** Two cycles are available, with deadlines in August 2024 (already completed) and February 2025.\n*   **Important Dates:** February Cycle (Abstract Deadline: Feb 3, 2025; Paper Deadline: Feb 10, 2025; Author Rebuttal Period: Apr 4-18, 2025; Notification: May 16, 2025).\n*   **Scope:** Encompasses all aspects of knowledge discovery and data science, from theoretical foundations to novel models and algorithms.\n*   **OpenReview Profiles:** All listed authors must have up-to-date OpenReview profiles.\n*   **Ethical Use of Data:** Authors are encouraged to include a section on the ethical use of data and/or informed consent of research subjects.\n*   **Transparency:** By submitting, authors agree that the original submission, reviews, meta-reviews, and discussions will be made public in OpenReview for all accepted papers.",
+      "link": "https://kdd2025.kdd.org/",
+      "cfpLink": "https://kdd2025.kdd.org/research-track-call-for-papers/",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:37:38.761Z",
+      "updatedAt": "2025-03-23T10:37:38.761Z",
+      "topics": [
+        "Visualization",
+        "Ethics",
+        "Security",
+        "Privacy",
+        "Machine Learning",
+        "Fairness",
+        "Interpretability",
+        "Optimization",
+        "Data Science",
+        "Sampling",
+        "Summarization",
+        "Deep Learning",
+        "Transfer Learning",
+        "Reinforcement Learning",
+        "Classification",
+        "Clustering",
+        "Regression",
+        "Personalization",
+        "Robustness"
+      ]
+    },
+    "location": {
+      "id": "b2a8e053-e058-41bf-a90e-dd14f1fa843b",
+      "createdAt": "2025-03-23T10:37:38.774Z",
+      "updatedAt": "2025-03-23T10:37:38.774Z",
+      "isAvailable": true,
+      "organizeId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+      "cityStateProvince": "Toronto, Ontario",
+      "country": "Canada",
+      "address": "Toronto, ON, Canada",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "6e582aea-31ee-446a-9f91-a097e44bf8fa",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-04-04T00:00:00.000Z",
+        "toDate": "2025-04-18T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "2nd Cycle Author Rebuttal Period",
+        "createdAt": "2025-03-23T10:37:38.791Z",
+        "updatedAt": "2025-03-23T10:37:38.791Z",
+        "isAvailable": true
+      },
+      {
+        "id": "be22669c-245d-4e19-b121-1305dc4e3b9a",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2024-10-04T00:00:00.000Z",
+        "toDate": "2024-10-18T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "1st Cycle Author Rebuttal Period",
+        "createdAt": "2025-03-23T10:37:38.790Z",
+        "updatedAt": "2025-03-23T10:37:38.790Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f78f5e81-1a45-4907-8488-818df8ff5bf2",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2024-05-16T00:00:00.000Z",
+        "toDate": "2024-05-16T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification to Authors",
+        "createdAt": "2025-03-23T10:37:38.789Z",
+        "updatedAt": "2025-03-23T10:37:38.789Z",
+        "isAvailable": true
+      },
+      {
+        "id": "96b4d1ad-6421-4c4a-967f-55207f47f2f7",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-05-16T00:00:00.000Z",
+        "toDate": "2025-05-16T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "2nd Cycle Notification to Authors",
+        "createdAt": "2025-03-23T10:37:38.787Z",
+        "updatedAt": "2025-03-23T10:37:38.787Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ee822d2f-2d60-409a-a168-7ae69c3426ee",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2024-11-16T00:00:00.000Z",
+        "toDate": "2024-11-16T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "1st Cycle Notification to Authors",
+        "createdAt": "2025-03-23T10:37:38.786Z",
+        "updatedAt": "2025-03-23T10:37:38.786Z",
+        "isAvailable": true
+      },
+      {
+        "id": "eb81d334-c2d2-46c0-bba0-ac6b1924cc3e",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-02-24T00:00:00.000Z",
+        "toDate": "2025-02-24T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Deadline",
+        "createdAt": "2025-03-23T10:37:38.785Z",
+        "updatedAt": "2025-03-23T10:37:38.785Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c7b29535-6ff0-4e21-aa63-58f4374408d6",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-02-17T00:00:00.000Z",
+        "toDate": "2025-02-17T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Abstract Deadline",
+        "createdAt": "2025-03-23T10:37:38.783Z",
+        "updatedAt": "2025-03-23T10:37:38.783Z",
+        "isAvailable": true
+      },
+      {
+        "id": "b555fc2e-b182-46d9-b735-37b0b5a8657f",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-02-10T00:00:00.000Z",
+        "toDate": "2025-02-10T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "2nd Cycle Paper Deadline",
+        "createdAt": "2025-03-23T10:37:38.782Z",
+        "updatedAt": "2025-03-23T10:37:38.782Z",
+        "isAvailable": true
+      },
+      {
+        "id": "b5d800e3-c964-4391-b7c6-204eb07fbce9",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-02-03T00:00:00.000Z",
+        "toDate": "2025-02-03T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "2nd Cycle Paper Abstract Deadline",
+        "createdAt": "2025-03-23T10:37:38.781Z",
+        "updatedAt": "2025-03-23T10:37:38.781Z",
+        "isAvailable": true
+      },
+      {
+        "id": "b067db4f-9de4-48ce-8c5a-949fdffa9b91",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2024-08-08T00:00:00.000Z",
+        "toDate": "2024-08-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "1st Cycle Paper Deadline",
+        "createdAt": "2025-03-23T10:37:38.779Z",
+        "updatedAt": "2025-03-23T10:37:38.779Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1b1c3051-6aa6-492d-8341-f0e5dfa2e991",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2024-08-01T00:00:00.000Z",
+        "toDate": "2024-08-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "1st Cycle Paper Abstract Deadline",
+        "createdAt": "2025-03-23T10:37:38.778Z",
+        "updatedAt": "2025-03-23T10:37:38.778Z",
+        "isAvailable": true
+      },
+      {
+        "id": "db284c9b-d52c-46f0-9915-b780436b6afe",
+        "organizedId": "ee41de64-2da8-44de-bd24-c897ca6619e0",
+        "fromDate": "2025-08-03T00:00:00.000Z",
+        "toDate": "2025-08-07T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:37:38.776Z",
+        "updatedAt": "2025-03-23T10:37:38.776Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Machine learning"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Machine learning"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": []
+  },
+  {
+    "conference": {
+      "id": "a4cee71c-2164-4d1a-bfc6-662a54eb9dda",
+      "title": "ACM Symposium on Mobile Ad Hoc Networking and Computing",
+      "acronym": "MOBIHOC",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:32.936Z",
+      "updatedAt": "2025-03-23T10:26:32.936Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "a4cee71c-2164-4d1a-bfc6-662a54eb9dda",
+      "publisher": "IEEE/ACM",
+      "summerize": "MobiHoc 2025, the 26th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing, will be held in Houston, USA, from October 27-30, 2025. It serves as a premier international symposium dedicated to addressing challenges in dynamic networks and computing and aims to bring together top researchers to build bridges across different wireless subcommunities.",
+      "callForPaper": "ACM MobiHoc invites submissions addressing challenges in networked systems. Key areas include:\n\n*   **Modeling, Optimization, and Analysis:** Modeling and analysis of computer and mobile networks; optimization and control; measurement and performance monitoring; anomaly detection; dependability and fault tolerance.\n*   **Mobile and Next-Generation Wireless Networks:** Theory and systems for NextG cellular networks, Open-RAN, and RAN Intelligent Control (RIC); protocol design; experimental studies; interplanetary and non-terrestrial networks; wireless networks for localization and tracking; low-power sensor networks; sensing with new mediums.\n*   **Machine Learning/AI and Networking:** Big-data analytics and applications of machine learning; networked machine learning; LLMs and generative AI for networks and network support.\n*   **Edge, Cloud, and Distributed Systems:** Mobile, edge/fog, and distributed computing; cloud computing and data center networks; Software Defined Networking; information-centric networking; energy efficiency.\n*   **Security, Trust, and Privacy:** Trust, security, and privacy in networked systems; incentive mechanism and game theory.\n*   **Emerging Applications and Systems:** Internet-of-Things (IoT); virtual/augmented/mixed reality; smart spaces; networked and mobile unmanned/autonomous systems; goal-oriented semantic communication and networks; blockchain, metaverse, and emerging networked systems.\n\nAuthors can choose to keep or omit their names on their submitted paper. A selected set of papers will be chosen for fast-tracked publication in IEEE/ACM Transactions on Networking.",
+      "link": "https://www.sigmobile.org/mobihoc/2025/",
+      "cfpLink": "https://www.sigmobile.org/mobihoc/2025/cfp.html",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:36:21.386Z",
+      "updatedAt": "2025-03-23T10:36:21.386Z",
+      "topics": [
+        "Modeling",
+        "Networked Systems",
+        "Mobile Networks",
+        "Cloud Computing",
+        "Security",
+        "Privacy",
+        "Wireless Networks",
+        "Cyber-Physical Systems",
+        "Analysis",
+        "Mobile Computing",
+        "Distributed Systems",
+        "Online Social Networks",
+        "Optimization",
+        "Next-Generation Wireless Networks",
+        "Machine Learning/AI and Networking",
+        "Edge Computing",
+        "Trust",
+        "Emerging Applications"
+      ]
+    },
+    "location": {
+      "id": "e93a7d40-2da1-4ee1-b663-3f8776189c28",
+      "createdAt": "2025-03-23T10:36:21.400Z",
+      "updatedAt": "2025-03-23T10:36:21.400Z",
+      "isAvailable": true,
+      "organizeId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+      "cityStateProvince": "Houston",
+      "country": "United States",
+      "address": "Houston, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "845701e8-883d-473e-a550-99109542caf3",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-07-06T00:00:00.000Z",
+        "toDate": "2025-07-06T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Rebuttal Deadline",
+        "createdAt": "2025-03-23T10:36:21.411Z",
+        "updatedAt": "2025-03-23T10:36:21.411Z",
+        "isAvailable": true
+      },
+      {
+        "id": "80f18078-549b-40d2-b921-e7558a0423e3",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-06-30T00:00:00.000Z",
+        "toDate": "2025-06-30T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Rebuttal Start",
+        "createdAt": "2025-03-23T10:36:21.409Z",
+        "updatedAt": "2025-03-23T10:36:21.409Z",
+        "isAvailable": true
+      },
+      {
+        "id": "10d05f02-3edf-416e-8c0b-05048d44e65f",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-07-26T00:00:00.000Z",
+        "toDate": "2025-07-26T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Acceptance",
+        "createdAt": "2025-03-23T10:36:21.407Z",
+        "updatedAt": "2025-03-23T10:36:21.407Z",
+        "isAvailable": true
+      },
+      {
+        "id": "58fbb2d5-3eca-4073-8bfc-a9227160d14d",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-03-30T00:00:00.000Z",
+        "toDate": "2025-03-30T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission Deadline",
+        "createdAt": "2025-03-23T10:36:21.406Z",
+        "updatedAt": "2025-03-23T10:36:21.406Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3b61555c-fa0c-438c-ba60-87e19c3ac3f9",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-03-23T00:00:00.000Z",
+        "toDate": "2025-03-23T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstract Registration Deadline",
+        "createdAt": "2025-03-23T10:36:21.404Z",
+        "updatedAt": "2025-03-23T10:36:21.404Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1e7e0f43-47a3-4fd9-90a7-a2dd8ddff845",
+        "organizedId": "d312936e-b274-4a0a-890f-aeb3b9a4e1e1",
+        "fromDate": "2025-10-27T00:00:00.000Z",
+        "toDate": "2025-10-30T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:36:21.402Z",
+        "updatedAt": "2025-03-23T10:36:21.402Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": []
+  },
+  {
+    "conference": {
+      "id": "c9420c07-191e-4b3e-b525-7ccae6b714e3",
+      "title": "ACM International Conference on Recommender Systems",
+      "acronym": "RecSys",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:30.856Z",
+      "updatedAt": "2025-03-23T10:26:30.856Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "c9420c07-191e-4b3e-b525-7ccae6b714e3",
+      "publisher": "ACM",
+      "summerize": "The ACM Conference on Recommender Systems (RecSys) is a premier international forum for presenting new research results, systems, and techniques in the field of recommender systems. RecSys 2025 will be held in Prague, Czech Republic, from September 22nd to 26th, 2025. The conference will bring together researchers and practitioners from academia and industry to present their latest findings and identify new trends and challenges.",
+      "callForPaper": "RecSys 2025 invites contributions covering the full spectrum of recommender system research. The conference will feature tracks for full papers, short papers, reproducibility papers, doctoral symposium, industry contributions, demos, and late-breaking results.\n\n*   **Full Papers:** Welcome high-impact original papers contributing to all aspects of recommender systems. Submissions are limited to 8 pages (plus 2 pages for references).\n*   **Short Papers:** Contributions that discuss exciting work not yet mature enough for the full paper track. Limited to 4 pages (plus 2 pages for references).\n*   **Reproducibility Papers:** Analyze prior works in different contexts, introduce new resources, or propose novel evaluation methodologies.\n*   **Industry Contributions:** Focused on challenges and practical solutions to significant real-world issues faced by industry practitioners. Submissions are not anonymized and limited to 3 pages (plus 1 page of bios and references).\n*   **Late-Breaking Results (LBR):** Present new, interesting, preliminary results and speculative or innovative work in progress. Limited to 4 pages (plus 1 page for references).\n*   **Tutorial Proposals:** Cover specific topics including building and deploying recommender systems, recommender systems techniques, using different types of data, intersections of recommender systems with other domains, designing user experiences, and social, ethical and legal aspects.\n\nAll accepted papers are expected to be presented in person at the conference.",
+      "link": "https://recsys.acm.org/recsys25/",
+      "cfpLink": "https://recsys.acm.org/recsys25/call/",
+      "impLink": "https://recsys.acm.org/recsys25/dates/",
+      "createdAt": "2025-03-23T10:33:25.874Z",
+      "updatedAt": "2025-03-23T10:33:25.874Z",
+      "topics": [
+        "Recommender Systems",
+        "Algorithms",
+        "User Interfaces",
+        "E-commerce"
+      ]
+    },
+    "location": {
+      "id": "0012db05-efcd-4ebd-b366-33d38bc46ad1",
+      "createdAt": "2025-03-23T10:33:25.885Z",
+      "updatedAt": "2025-03-23T10:33:25.885Z",
+      "isAvailable": true,
+      "organizeId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+      "cityStateProvince": "Prague",
+      "country": "Czech Republic",
+      "address": "Prague, Czech Republic",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "bec54cec-693d-4ad8-b572-ee60386a10b9",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-06-05T00:00:00.000Z",
+        "toDate": "2025-06-10T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Reproducibility papers Rebuttal",
+        "createdAt": "2025-03-23T10:33:25.944Z",
+        "updatedAt": "2025-03-23T10:33:25.944Z",
+        "isAvailable": true
+      },
+      {
+        "id": "831c2fd4-1dab-4c9d-924e-04a9b9814d14",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-06-05T00:00:00.000Z",
+        "toDate": "2025-06-10T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Short papers Rebuttal",
+        "createdAt": "2025-03-23T10:33:25.942Z",
+        "updatedAt": "2025-03-23T10:33:25.942Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f2a20351-23d3-4b86-b949-89528ba42e4b",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-05-20T00:00:00.000Z",
+        "toDate": "2025-05-26T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Full papers Rebuttal",
+        "createdAt": "2025-03-23T10:33:25.940Z",
+        "updatedAt": "2025-03-23T10:33:25.940Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8147976e-89ee-478a-b025-8247db4b726c",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-30T00:00:00.000Z",
+        "toDate": "2025-04-30T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Tutorial proposals",
+        "createdAt": "2025-03-23T10:33:25.939Z",
+        "updatedAt": "2025-03-23T10:33:25.939Z",
+        "isAvailable": true
+      },
+      {
+        "id": "e887a638-a0ef-47ec-a027-717458b368a5",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Workshop proposals",
+        "createdAt": "2025-03-23T10:33:25.936Z",
+        "updatedAt": "2025-03-23T10:33:25.936Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3f737dd7-bf58-4679-a706-9db74fd11b82",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-06-15T00:00:00.000Z",
+        "toDate": "2025-06-15T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Woman’s Journal paper of the Year",
+        "createdAt": "2025-03-23T10:33:25.934Z",
+        "updatedAt": "2025-03-23T10:33:25.934Z",
+        "isAvailable": true
+      },
+      {
+        "id": "83032d31-e1b0-4666-bdf9-872690422bc6",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-08-04T00:00:00.000Z",
+        "toDate": "2025-08-04T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Demo&LBR papers",
+        "createdAt": "2025-03-23T10:33:25.932Z",
+        "updatedAt": "2025-03-23T10:33:25.932Z",
+        "isAvailable": true
+      },
+      {
+        "id": "e36dc415-5fb4-4563-90ea-3f109420effe",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-03T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Industry papers",
+        "createdAt": "2025-03-23T10:33:25.930Z",
+        "updatedAt": "2025-03-23T10:33:25.930Z",
+        "isAvailable": true
+      },
+      {
+        "id": "2e11f55e-8cd5-43f7-a868-ee00287cb292",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-03T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "DS papers",
+        "createdAt": "2025-03-23T10:33:25.928Z",
+        "updatedAt": "2025-03-23T10:33:25.928Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d5febe7a-c92c-4616-a1cf-dcd2a6de7bf6",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-03T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Reproducibility papers Notification",
+        "createdAt": "2025-03-23T10:33:25.926Z",
+        "updatedAt": "2025-03-23T10:33:25.926Z",
+        "isAvailable": true
+      },
+      {
+        "id": "0d986792-6c67-4f73-a8cc-97a31d326fdc",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-03T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Short papers Notification",
+        "createdAt": "2025-03-23T10:33:25.924Z",
+        "updatedAt": "2025-03-23T10:33:25.924Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4b75368c-6d95-41e3-abb7-884aefa6b8f6",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-03T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Full papers Notification",
+        "createdAt": "2025-03-23T10:33:25.922Z",
+        "updatedAt": "2025-03-23T10:33:25.922Z",
+        "isAvailable": true
+      },
+      {
+        "id": "016f9340-36fa-4acd-882e-e9825dc372e4",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-14T00:00:00.000Z",
+        "toDate": "2025-07-14T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Tutorial proposals Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.920Z",
+        "updatedAt": "2025-03-23T10:33:25.920Z",
+        "isAvailable": true
+      },
+      {
+        "id": "14412814-4571-40c9-94e9-a4b7d770883a",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-14T00:00:00.000Z",
+        "toDate": "2025-07-14T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Workshop proposals Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.918Z",
+        "updatedAt": "2025-03-23T10:33:25.918Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8a1a05c3-0731-4a01-943c-e86d6942d8e7",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-08-11T00:00:00.000Z",
+        "toDate": "2025-08-11T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Demo&LBR papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.916Z",
+        "updatedAt": "2025-03-23T10:33:25.916Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f9819046-de94-43e8-a4a7-fdb5700fa345",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-21T00:00:00.000Z",
+        "toDate": "2025-07-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Industry papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.915Z",
+        "updatedAt": "2025-03-23T10:33:25.915Z",
+        "isAvailable": true
+      },
+      {
+        "id": "076be68f-b693-4977-b3f6-b38a9832d278",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-21T00:00:00.000Z",
+        "toDate": "2025-07-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "DS papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.913Z",
+        "updatedAt": "2025-03-23T10:33:25.913Z",
+        "isAvailable": true
+      },
+      {
+        "id": "835c75ea-3f4a-4103-a5bc-f65e9dcdff62",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-21T00:00:00.000Z",
+        "toDate": "2025-07-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Reproducibility papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.912Z",
+        "updatedAt": "2025-03-23T10:33:25.912Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3a545bf7-8c37-4f0a-aeb6-ba1f775fc05a",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-21T00:00:00.000Z",
+        "toDate": "2025-07-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Short papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.910Z",
+        "updatedAt": "2025-03-23T10:33:25.910Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1ac99f79-8556-47ae-bb15-494d1af21e28",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-21T00:00:00.000Z",
+        "toDate": "2025-07-21T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Full papers Camera-ready",
+        "createdAt": "2025-03-23T10:33:25.909Z",
+        "updatedAt": "2025-03-23T10:33:25.909Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4f52f219-e4f0-486c-afe2-1c1711b84891",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-15T00:00:00.000Z",
+        "toDate": "2025-04-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Tutorial proposals",
+        "createdAt": "2025-03-23T10:33:25.907Z",
+        "updatedAt": "2025-03-23T10:33:25.907Z",
+        "isAvailable": true
+      },
+      {
+        "id": "24baee5e-cc3e-48c5-8a7c-924c76ee3090",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-02-27T00:00:00.000Z",
+        "toDate": "2025-02-27T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Workshop proposals",
+        "createdAt": "2025-03-23T10:33:25.906Z",
+        "updatedAt": "2025-03-23T10:33:25.906Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f561ef27-dbb3-441e-a2dc-3c1863539672",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-30T00:00:00.000Z",
+        "toDate": "2025-04-30T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Woman’s Journal paper of the Year",
+        "createdAt": "2025-03-23T10:33:25.904Z",
+        "updatedAt": "2025-03-23T10:33:25.904Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ae8025b9-1795-40d0-8eec-ba6cab2c77db",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-07-09T00:00:00.000Z",
+        "toDate": "2025-07-09T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Demo&LBR papers",
+        "createdAt": "2025-03-23T10:33:25.903Z",
+        "updatedAt": "2025-03-23T10:33:25.903Z",
+        "isAvailable": true
+      },
+      {
+        "id": "0f86e077-d22b-468c-899b-bbea99e550bc",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-05-15T00:00:00.000Z",
+        "toDate": "2025-05-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Industry papers",
+        "createdAt": "2025-03-23T10:33:25.901Z",
+        "updatedAt": "2025-03-23T10:33:25.901Z",
+        "isAvailable": true
+      },
+      {
+        "id": "19191409-514a-4459-800e-5b0cefcf73be",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-06-03T00:00:00.000Z",
+        "toDate": "2025-06-03T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "DS papers",
+        "createdAt": "2025-03-23T10:33:25.899Z",
+        "updatedAt": "2025-03-23T10:33:25.899Z",
+        "isAvailable": true
+      },
+      {
+        "id": "1e201e16-5adf-4a7c-aee2-317debaeca8e",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-05-13T00:00:00.000Z",
+        "toDate": "2025-05-13T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Reproducibility papers Paper",
+        "createdAt": "2025-03-23T10:33:25.897Z",
+        "updatedAt": "2025-03-23T10:33:25.897Z",
+        "isAvailable": true
+      },
+      {
+        "id": "cef7eed4-2cee-49c9-a233-b5d5c5f8ea40",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-05-06T00:00:00.000Z",
+        "toDate": "2025-05-06T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Reproducibility papers Abstract",
+        "createdAt": "2025-03-23T10:33:25.896Z",
+        "updatedAt": "2025-03-23T10:33:25.896Z",
+        "isAvailable": true
+      },
+      {
+        "id": "e9af0b48-0826-42ed-b54d-21ea6b1bfc8c",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-29T00:00:00.000Z",
+        "toDate": "2025-04-29T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Short papers Paper",
+        "createdAt": "2025-03-23T10:33:25.894Z",
+        "updatedAt": "2025-03-23T10:33:25.894Z",
+        "isAvailable": true
+      },
+      {
+        "id": "e65717ed-5e06-463c-b2a3-06cd9dc44865",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-22T00:00:00.000Z",
+        "toDate": "2025-04-22T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Short papers Abstract",
+        "createdAt": "2025-03-23T10:33:25.892Z",
+        "updatedAt": "2025-03-23T10:33:25.892Z",
+        "isAvailable": true
+      },
+      {
+        "id": "36ec5793-8be1-499c-9af0-6e200940632c",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-08T00:00:00.000Z",
+        "toDate": "2025-04-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full papers Paper",
+        "createdAt": "2025-03-23T10:33:25.891Z",
+        "updatedAt": "2025-03-23T10:33:25.891Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6bd57199-b77d-4622-8d9b-199c9cc9a00b",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-04-01T00:00:00.000Z",
+        "toDate": "2025-04-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full papers Abstract",
+        "createdAt": "2025-03-23T10:33:25.889Z",
+        "updatedAt": "2025-03-23T10:33:25.889Z",
+        "isAvailable": true
+      },
+      {
+        "id": "0e054a67-f149-4619-b02d-1c04cfaecea8",
+        "organizedId": "f1df6fd6-3ec4-497f-bf1e-81fc50e0e7a2",
+        "fromDate": "2025-09-22T00:00:00.000Z",
+        "toDate": "2025-09-26T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:33:25.887Z",
+        "updatedAt": "2025-03-23T10:33:25.887Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2021",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2020",
+        "fieldOfResearch": "Data management and data science"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": []
   }
 ]

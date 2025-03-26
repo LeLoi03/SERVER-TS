@@ -126,10 +126,10 @@ function shouldSendUpdateConferenceNotification(user: UserResponse, notification
 }
 
 // --- Save Conference Details ---
-// --- Save Conference Details ---
 export const saveConferenceDetails: RequestHandler<any, { message: string }, ConferenceResponse, any> = async (req, res) => {
     try {
         const receivedData: ConferenceResponse = req.body;
+        console.log("Received Data:", receivedData)
 
         if (!receivedData || !receivedData.conference || !receivedData.conference.id) {
             return res.status(400).json({ message: 'Invalid data format received.  Missing conference ID.' }) as any;
@@ -173,8 +173,11 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
             // Conference doesn't exist, add it (no notifications on initial add).
             dbDetailsData.push(receivedData);
             await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
+            console.log("Add new conference details successfully!");
+
             return res.status(200).json({ message: 'Conference details saved successfully.' });
         } else {
+
             // Conference exists, update it.
             const oldConference = { ...dbDetailsData[existingConferenceIndex] };
             const updatedConference = { ...oldConference };
@@ -202,7 +205,7 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
                         // Find the follow information for this conference
                         const followInfo = user?.followedConferences?.find(f => f.id === conferenceId);
                         // Construct base message with conference and follow details
-                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Followed since ${followInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
+                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Followed at ${followInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
 
                         if (user && shouldSendUpdateConferenceNotification(user, "Conference Update")) {
                             const notification: Notification = {
@@ -233,7 +236,7 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
                         //Find the calendar information for this conference
                         const calendarInfo = user.calendar.find(c => c.id === conferenceId);
                         // Construct base message with conference and calendar details
-                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Added to calendar since ${calendarInfo?.createdAt ?? 'N/A'}):\n`;
+                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Added to calendar at ${calendarInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
 
                         if (shouldSendUpdateConferenceNotification(user, "Conference Update")) {
                             const calendarNotification: Notification = {
@@ -260,6 +263,8 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
                 });
 
                 await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+                console.log("Update new conference details successfully!");
+
 
                 return res.status(200).json({ message: 'Conference details updated successfully. Notifications sent.' });
             } else {

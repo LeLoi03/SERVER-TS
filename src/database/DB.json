@@ -8011,14 +8011,109 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "",
       "status": "pending"
+    },
+    {
+      "id": "49d19de1-49f8-4681-9219-a2b85d465f9f",
+      "title": "International Conference on Agents and Artificial Intelligence",
+      "acronym": "ICAART",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-26T11:56:45.051Z",
+        "toDate": "2025-03-26T11:56:45.051Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:27:09.132Z",
+      "updatedAt": "2025-03-23T10:27:09.132Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "0e468fb7-7573-417a-817d-f86c78596846",
+      "title": "International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+      "acronym": "TAPSOFT",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "C",
+      "source": "CORE2018",
+      "year": 2025,
+      "researchFields": [
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-26T11:56:45.050Z",
+        "toDate": "2025-03-26T11:56:45.050Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-25T13:00:34.987Z",
+      "updatedAt": "2025-03-25T13:00:34.987Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "6ada813c-8996-4a20-bff4-6132d58da88e",
+      "title": "Workshop on Combinatorial and Algorithmic Aspects of Networking",
+      "acronym": "CAAN",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2017",
+      "year": 2025,
+      "researchFields": [
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-26T11:56:45.054Z",
+        "toDate": "2025-03-26T11:56:45.054Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-25T13:00:54.305Z",
+      "updatedAt": "2025-03-25T13:00:54.305Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
     }
   ],
   "meta": {
-    "curPage": 4,
-    "perPage": 50,
-    "totalPage": 35,
-    "prevPage": 3,
-    "nextPage": 5,
-    "totalItems": 1748
+    "curPage": 1,
+    "perPage": 5,
+    "totalPage": 1,
+    "prevPage": null,
+    "nextPage": null,
+    "totalItems": 4
   }
 }

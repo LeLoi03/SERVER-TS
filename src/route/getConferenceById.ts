@@ -7,9 +7,6 @@ import fs from 'fs';
 import { ConferenceResponse } from '../types/conference.response';
 
 
-const userFilePath = path.resolve(__dirname, '../database/users_list.json');
-const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
-const conferencesListFilePath = path.resolve(__dirname, '../database/DB.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
 
@@ -19,7 +16,7 @@ export const getConferenceById: RequestHandler<{ id: string }, ConferenceRespons
   res
 ): Promise<void> => {
   const conferenceId = req.params.id;
-
+  console.log("Receive:", conferenceId)
   try {
     const data = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
     const conferences: ConferenceResponse[] = JSON.parse(data); // Đổi kiểu này

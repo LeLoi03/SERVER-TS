@@ -189,11 +189,183 @@
     "password": "12345678",
     "dob": "",
     "role": "user",
-    "followedConferences": [],
+    "followedConferences": [
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-26T11:52:59.430Z",
+        "updatedAt": "2025-03-26T11:52:59.430Z"
+      },
+      {
+        "id": "ffcb0fa9-6fa9-43d6-8b97-02440113bb01",
+        "createdAt": "2025-03-26T11:53:51.997Z",
+        "updatedAt": "2025-03-26T11:53:51.997Z"
+      },
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-26T12:00:59.071Z",
+        "updatedAt": "2025-03-26T12:00:59.071Z"
+      }
+    ],
     "myConferences": [],
-    "calendar": [],
+    "calendar": [
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-26T11:53:06.801Z",
+        "updatedAt": "2025-03-26T11:53:06.801Z"
+      },
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-26T12:00:58.054Z",
+        "updatedAt": "2025-03-26T12:00:58.054Z"
+      }
+    ],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "e4f57e90-28a3-489a-a803-fdc60f78d6a3",
+        "createdAt": "2025-03-26T11:52:59.430Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "c777c130-1fcb-47b2-884c-7efd03ac0166",
+        "createdAt": "2025-03-26T11:53:06.801Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz added the conference \"ACIS Conference on Software Engineering Research, Management and Applications\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "c940084b-b2d6-409a-af4b-6131557228b5",
+        "createdAt": "2025-03-26T11:53:51.997Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "5b4b6008-b81a-4cab-82cd-bff1e5bd1693",
+        "createdAt": "2025-03-26T11:53:53.799Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "You added \"ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "ed022221-4f96-47b6-8a97-1e5cee16853c",
+        "createdAt": "2025-03-26T12:00:00.512Z",
+        "isImportant": true,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "0cd880ff-ce02-44a3-a12f-3b7a720c26b2",
+        "createdAt": "2025-03-26T12:00:58.054Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz added the conference \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" to their calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "3f7a606c-c31f-4103-8b73-bb9506199244",
+        "createdAt": "2025-03-26T12:00:59.071Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "40764610-84f2-4780-8dab-62071de4da7b",
+        "createdAt": "2025-03-26T12:01:00.649Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "You added \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "52d46d2a-2d30-49df-ae76-a2f3c37a8053",
+        "createdAt": "2025-03-26T12:06:24.912Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "115f67d8-2cf0-4f1f-93c2-ebba05c8385a",
+        "createdAt": "2025-03-26T12:06:26.047Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz unfollowed the conference: International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "1719980d-9dd8-4648-9bd4-ffe30608e260",
+        "createdAt": "2025-03-26T12:06:48.549Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "7fd1e8d5-1156-4099-bcf5-23c17393c465",
+        "createdAt": "2025-03-26T12:06:49.875Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz unfollowed the conference: International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "0d91b0a6-b7f1-417a-a162-4111b9ffba7b",
+        "createdAt": "2025-03-26T12:30:00.522Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz followed the conference: ACM International Conference on Recommender Systems",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "4727cb09-0a1e-469c-925d-772c1f9d4d56",
+        "createdAt": "2025-03-26T12:30:01.775Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "abc xyz unfollowed the conference: ACM International Conference on Recommender Systems",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "12c75672-66e7-44dc-8b01-2ff8df1a4cff",
+        "createdAt": "2025-03-26T12:30:05.941Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "You added \"ACM International Conference on Recommender Systems\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "d70d37f1-4f8b-4c87-9db6-3751ed400b87",
+        "createdAt": "2025-03-26T12:30:06.801Z",
+        "isImportant": false,
+        "seenAt": "2025-03-26T12:30:09.334Z",
+        "deletedAt": null,
+        "message": "You removed \"ACM International Conference on Recommender Systems\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      }
+    ],
     "createdAt": "2025-03-26T09:55:06.596Z",
     "updatedAt": "2025-03-26T09:55:06.596Z",
     "avatar": "",
@@ -213,7 +385,17 @@
     },
     "isVerified": false,
     "verificationToken": "781a39744cd27b197f0b1b7320d5dc90ce661352",
-    "verificationTokenExpires": "2025-03-26T10:55:06.596Z"
+    "verificationTokenExpires": "2025-03-26T10:55:06.596Z",
+    "blacklist": [
+      {
+        "id": "ffcb0fa9-6fa9-43d6-8b97-02440113bb01",
+        "addedAt": "2025-03-26T11:53:53.799Z"
+      },
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "addedAt": "2025-03-26T12:01:00.649Z"
+      }
+    ]
   },
   {
     "id": "1ff52334-0161-46b2-9fe8-2d6139dd3c85",

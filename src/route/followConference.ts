@@ -92,7 +92,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
             updatedUser.followedConferences.splice(existingFollowIndex, 1);
             updatedConference.followedBy = updatedConference.followedBy.filter(followedBy => followedBy.id !== userId);
             notificationType = 'Unfollow Conference';
-            notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} unfollowed the conference: ${updatedConference.conference.title}`;
+            notificationMessage = `You unfollowed the conference: ${updatedConference.conference.title}`; // Changed for user
             isFollowing = false;
         } else {
             // Follow:
@@ -112,7 +112,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
             };
             updatedConference.followedBy.push(followerInfo);
             notificationType = 'Follow Conference';
-            notificationMessage = `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`;
+            notificationMessage = `You followed the conference: ${updatedConference.conference.title}`; // Changed for user
             isFollowing = true;
         }
 
@@ -154,7 +154,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
                                     isImportant: false,
                                     seenAt: null,
                                     deletedAt: null,
-                                    message: notificationMessage,
+                                    message: `${updatedUser.firstName} ${updatedUser.lastName} followed the conference: ${updatedConference.conference.title}`, // Changed for others
                                     type: notificationType,
                                 };
 
