@@ -16,7 +16,7 @@ export const getConferenceById: RequestHandler<{ id: string }, ConferenceRespons
   res
 ): Promise<void> => {
   const conferenceId = req.params.id;
-  console.log("Receive:", conferenceId)
+  // console.log("Receive:", conferenceId)
   try {
     const data = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
     const conferences: ConferenceResponse[] = JSON.parse(data); // Đổi kiểu này

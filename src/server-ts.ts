@@ -85,7 +85,7 @@ import { blacklistConference } from './route/addToBlacklist';
 
 app.get('/api/v1/conference/:id', getConferenceById);
 app.get('/api/v1/conference', getConferenceList);
-app.post('/api/v1/user/:id/follow', followConference);
+app.post('/api/v1/user/follow', followConference);
 app.get('/api/v1/user/:id', getUserById);
 app.put('/api/v1/user/:id', updateUser);
 app.post('/api/v1/user/add-conference', addConference);

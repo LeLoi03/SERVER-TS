@@ -129,7 +129,7 @@ function shouldSendUpdateConferenceNotification(user: UserResponse, notification
 export const saveConferenceDetails: RequestHandler<any, { message: string }, ConferenceResponse, any> = async (req, res) => {
     try {
         const receivedData: ConferenceResponse = req.body;
-        console.log("Received Data:", receivedData)
+        // console.log("Received Data:", receivedData)
 
         if (!receivedData || !receivedData.conference || !receivedData.conference.id) {
             return res.status(400).json({ message: 'Invalid data format received.  Missing conference ID.' }) as any;
@@ -171,6 +171,9 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
 
         if (existingConferenceIndex === -1) {
             // Conference doesn't exist, add it (no notifications on initial add).
+            receivedData.followedBy = [];
+            receivedData.feedBacks = [];
+
             dbDetailsData.push(receivedData);
             await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
             console.log("Add new conference details successfully!");
@@ -268,6 +271,7 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
 
                 return res.status(200).json({ message: 'Conference details updated successfully. Notifications sent.' });
             } else {
+                console.log("No changes detected in conference details.")
                 return res.status(200).json({ message: 'Conference details updated. No changes detected.' });
             }
         }
