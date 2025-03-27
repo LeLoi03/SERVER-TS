@@ -105,6 +105,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
             const followerInfo: FollowerInfo = {
                 id: updatedUser.id,
                 email: updatedUser.email,
+                avatar: updatedUser.avatar,
                 firstName: updatedUser.firstName,
                 lastName: updatedUser.lastName,
                 createdAt: now,

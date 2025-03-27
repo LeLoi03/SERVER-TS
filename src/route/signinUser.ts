@@ -49,6 +49,10 @@ export const signinUser: RequestHandler<any, { message: string; user?: Omit<User
             email: user.email,
             dob: user.dob,
             role: user.role,
+            avatar: user.avatar,
+            aboutme: user.aboutme,
+            interestedTopics: user.interestedTopics,
+            background: user.background,
             followedConferences: user.followedConferences,
             myConferences: user.myConferences,
             calendar: user.calendar,
@@ -56,11 +60,7 @@ export const signinUser: RequestHandler<any, { message: string; user?: Omit<User
             notifications: user.notifications,
             createdAt: user.createdAt,
             updatedAt: user.updatedAt,
-            // Include any other fields you want to send *except* password
-            ...(user.avatar && { avatar: user.avatar }),         // Conditionally include avatar
-            ...(user.aboutme && { aboutme: user.aboutme }),   // Conditionally include aboutme
-            ...(user.interestedTopics && { interestedTopics: user.interestedTopics }),
-            ...(user.background && { background: user.background }),
+            
         };
 
         res.status(200).json({ message: 'Login successful', user: responseUser });

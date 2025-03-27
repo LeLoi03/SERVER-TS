@@ -55,6 +55,9 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
             id: uuidv4(),
             organizedId,
             creatorId,
+            firstName: creatorUser.firstName,
+            lastName: creatorUser.lastName,
+            avatar: creatorUser.avatar,
             description,
             star,
             createdAt: new Date().toISOString(),
@@ -68,7 +71,8 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
 
 
         // --- Create the notification message ---
-        const notificationMessage = `${creatorUser.firstName} ${creatorUser.lastName} provided feedback for the conference "${updatedConference.conference.title}": ${star} stars.`;
+        const creatorNotificationMessage = `You provided feedback for the conference "${updatedConference.conference.title}": ${star} stars.`;
+        const followersNotificationMessage = `${creatorUser.firstName} ${creatorUser.lastName} provided feedback for the conference "${updatedConference.conference.title}" which you followed: ${star} stars.`;
 
         // --- Create the notification object ---
         const notification: Notification = {
@@ -77,7 +81,7 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
             isImportant: false, // Set as appropriate
             seenAt: null,
             deletedAt: null,
-            message: notificationMessage,
+            message: creatorNotificationMessage,
             type: 'New Feedback', // Consistent notification type
         };
 
@@ -101,10 +105,15 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
                     if (followerIndex !== -1) {
                         const followerUser = users[followerIndex];
 
-                        // Create a separate notification object for each followedBy
+                        // --- Create the notification object ---
                         const followerNotification: Notification = {
-                            ...notification, // Copy common properties
-                            id: uuidv4(),     // Ensure unique ID
+                            id: uuidv4(),
+                            createdAt: new Date().toISOString(),
+                            isImportant: false, // Set as appropriate
+                            seenAt: null,
+                            deletedAt: null,
+                            message: followersNotificationMessage,
+                            type: 'New Feedback', // Consistent notification type
                         };
 
                         if (!followerUser.notifications) {

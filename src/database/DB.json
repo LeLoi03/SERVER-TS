@@ -291,14 +291,218 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "Offline",
       "status": "pending"
+    },
+    {
+      "id": "70f82de5-776f-4d99-91f9-e053db5b5d5f",
+      "title": "ACM Conference on Embedded Software",
+      "acronym": "EMSOFT",
+      "location": {
+        "cityStateProvince": "Taipei",
+        "country": "Taiwan",
+        "address": "Taipei, Taiwan",
+        "continent": "Asia"
+      },
+      "rank": "Journal published",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Networked Systems",
+        "Cyber-Physical Systems",
+        "Embedded Software",
+        "Embedded Systems",
+        "Embedded Distributed Systems",
+        "Time-Critical Embedded Systems"
+      ],
+      "dates": {
+        "fromDate": "2025-09-28T00:00:00.000Z",
+        "toDate": "2025-10-03T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://esweek.org/emsoft/",
+      "createdAt": "2025-03-23T10:26:29.834Z",
+      "updatedAt": "2025-03-23T10:26:29.834Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "9cebd6b1-0dde-43b2-9bad-a7a48267b434",
+      "title": "ACM Conference on Object Oriented Programming Systems Languages and Applications",
+      "acronym": "OOPSLA",
+      "location": {
+        "cityStateProvince": "Singapore",
+        "country": "Singapore",
+        "address": "Singapore",
+        "continent": "Asia"
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Software engineering",
+        "Software engineering",
+        "Software engineering",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Modeling",
+        "Programming Systems",
+        "Languages",
+        "and Environments",
+        "Software Development",
+        "Requirements",
+        "Prototyping",
+        "Design",
+        "Implementation",
+        "Generation",
+        "Analysis",
+        "Verification",
+        "Testing",
+        "Evaluation",
+        "Maintenance",
+        "and Reuse of Software Systems"
+      ],
+      "dates": {
+        "fromDate": "2025-10-12T00:00:00.000Z",
+        "toDate": "2025-10-18T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://2025.splashcon.org/",
+      "createdAt": "2025-03-23T10:26:29.920Z",
+      "updatedAt": "2025-03-23T10:26:29.920Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "c880eb91-7fa1-4044-9ff4-7b93943737e8",
+      "title": "ACM Conference on Security and Privacy in Wireless and Mobile Networks",
+      "acronym": "ACM_WiSec",
+      "location": {
+        "cityStateProvince": "Arlington, Virginia",
+        "country": "United States of America",
+        "address": "Arlington, Virginia, USA",
+        "continent": "North America"
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy"
+      ],
+      "topics": [
+        "Internet of Things",
+        "Mobile Networks",
+        "Security",
+        "Privacy",
+        "Wireless Networks",
+        "Cyber-Physical Systems",
+        "Biometrics",
+        "Cryptography",
+        "Mobile Applications",
+        "Usable Security"
+      ],
+      "dates": {
+        "fromDate": "2025-06-30T00:00:00.000Z",
+        "toDate": "2025-07-03T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://wisec2025.gmu.edu/",
+      "createdAt": "2025-03-23T10:26:30.031Z",
+      "updatedAt": "2025-03-23T10:26:30.031Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "d8788762-fe00-4b4f-acf0-d796917a8933",
+      "title": "ACM Information Technology Education",
+      "acronym": "SIGITE",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "National: USA",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-27T03:58:41.417Z",
+        "toDate": "2025-03-27T03:58:41.417Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:26:30.111Z",
+      "updatedAt": "2025-03-23T10:26:30.111Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
+      "title": "ACM Int'l Symposium on Field Programmable Gate Arrays",
+      "acronym": "FPGA",
+      "location": {
+        "cityStateProvince": "Monterey, California",
+        "country": "United States of America",
+        "address": "Monterey Marriott, Monterey, California, USA",
+        "continent": "North America"
+      },
+      "rank": "TBR",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Computer Systems Engineering"
+      ],
+      "topics": [
+        "FPGA Architecture",
+        "FPGA Circuit Design",
+        "CAD for FPGAs",
+        "High-Level Abstractions and Tools for FPGAs",
+        "FPGA-based Computing Engines",
+        "AI/ML on FPGAs"
+      ],
+      "dates": {
+        "fromDate": "2025-02-27T00:00:00.000Z",
+        "toDate": "2025-03-01T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.isfpga.org/",
+      "createdAt": "2025-03-23T10:26:30.177Z",
+      "updatedAt": "2025-03-23T10:26:30.177Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
     }
   ],
   "meta": {
-    "curPage": 1,
+    "curPage": 3,
     "perPage": 5,
     "totalPage": 350,
-    "prevPage": null,
-    "nextPage": 2,
+    "prevPage": 2,
+    "nextPage": 4,
     "totalItems": 1748
   }
 }

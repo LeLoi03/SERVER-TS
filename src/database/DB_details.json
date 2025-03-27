@@ -142,10 +142,365 @@
       {
         "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
         "email": "1@gmail.com",
+        "avatar": "/avatar1.jpg",
         "firstName": "abc",
         "lastName": "xyz",
-        "createdAt": "2025-03-27T00:45:33.901Z",
-        "updatedAt": "2025-03-27T00:45:33.901Z"
+        "createdAt": "2025-03-27T02:50:28.094Z",
+        "updatedAt": "2025-03-27T02:50:28.094Z"
+      },
+      {
+        "id": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "email": "123@gmail.com",
+        "avatar": "/avatar3.jpg",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-27T03:57:35.577Z",
+        "updatedAt": "2025-03-27T03:57:35.577Z"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "8f90e5e5-4d9b-4b17-9ec3-11ddefc2ae05",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "creatorId": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
+        "firstName": "abc",
+        "lastName": "xyz",
+        "avatar": "/avatar1.jpg",
+        "description": "Helo",
+        "star": 4,
+        "createdAt": "2025-03-27T02:53:21.994Z",
+        "updatedAt": "2025-03-27T02:53:21.994Z"
+      },
+      {
+        "id": "679d89aa-5b9e-4f92-98ae-24133c1ff744",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "creatorId": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "avatar": "/avatar3.jpg",
+        "description": "Hello",
+        "star": 4,
+        "createdAt": "2025-03-27T03:55:38.651Z",
+        "updatedAt": "2025-03-27T03:55:38.651Z"
+      },
+      {
+        "id": "3268e173-0f33-4375-b52b-ba902ebc5fc6",
+        "organizedId": "1b89e40b-9d53-4b44-bb57-0374edae8bd9",
+        "creatorId": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "avatar": "/avatar3.jpg",
+        "description": "Ok",
+        "star": 2,
+        "createdAt": "2025-03-27T03:57:19.063Z",
+        "updatedAt": "2025-03-27T03:57:19.063Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
+      "title": "ACM Int'l Symposium on Field Programmable Gate Arrays",
+      "acronym": "FPGA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:30.177Z",
+      "updatedAt": "2025-03-23T10:26:30.177Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "7848876c-fdb6-4fd0-974e-f977b173913c",
+      "publisher": "ACM",
+      "summerize": "The ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (ISFPGA) is a premier conference for the presentation of advances in FPGA technology. In 2025, the 33rd edition of ISFPGA will be held in Monterey, California, USA. Accepted papers will be published in the conference proceedings and available in the ACM Digital Library.",
+      "callForPaper": "ISFPGA 2025 invites submissions related to advances in FPGA technology. Key details include:\n\n*   **Submission Deadlines (AoE):**\n    *   Abstracts Due: October 1, 2024\n    *   Submissions Due: October 8, 2024\n*   **Topics of Interest:** The conference seeks research papers related to a wide range of topics:\n    *   FPGA Architecture\n    *   FPGA Circuit Design\n    *   CAD for FPGAs\n    *   High-Level Abstractions and Tools for FPGAs\n    *   FPGA-based and FPGA-like Computing Engines\n    *   Applications and Design Studies\n    *   AI/ML for and on FPGAs\n*   **Submission Guidelines:**\n    *   Papers should use the sigconf ACM format template.\n    *   Submissions will be considered for acceptance as regular (10 pages max, excluding references) or short papers (6 pages max, excluding references).\n    *   The FPGA Symposium uses a double-blind reviewing system.\n*   **Artifact Evaluation:** The conference will allow authors to submit accompanying artifacts for their paper submissions for evaluation.\n*   **Double Blind Policy:** The FPGA Symposium uses a double-blind reviewing system. Manuscripts must not identify authors or their affiliations",
+      "link": "https://www.isfpga.org/",
+      "cfpLink": "https://www.isfpga.org/call-for-papers/",
+      "impLink": "None",
+      "createdAt": "2025-03-23T10:34:54.620Z",
+      "updatedAt": "2025-03-23T10:34:54.620Z",
+      "topics": [
+        "FPGA Architecture",
+        "FPGA Circuit Design",
+        "CAD for FPGAs",
+        "High-Level Abstractions and Tools for FPGAs",
+        "FPGA-based Computing Engines",
+        "AI/ML on FPGAs"
+      ]
+    },
+    "location": {
+      "id": "c0daa67f-de29-4f01-9e9e-c0274245f905",
+      "createdAt": "2025-03-23T10:34:54.633Z",
+      "updatedAt": "2025-03-23T10:34:54.633Z",
+      "isAvailable": true,
+      "organizeId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+      "cityStateProvince": "Monterey, California",
+      "country": "United States of America",
+      "address": "Monterey Marriott, Monterey, California, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "1048fea8-431a-43ff-a801-551e10ef7d13",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2018-11-11T00:00:00.000Z",
+        "toDate": "2024-11-18T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Rebuttal Period",
+        "createdAt": "2025-03-23T10:34:54.652Z",
+        "updatedAt": "2025-03-23T10:34:54.652Z",
+        "isAvailable": true
+      },
+      {
+        "id": "443f5e42-c4bc-4eda-a811-0a822727715c",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-11-30T00:00:00.000Z",
+        "toDate": "2024-11-30T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Acceptance",
+        "createdAt": "2025-03-23T10:34:54.650Z",
+        "updatedAt": "2025-03-23T10:34:54.650Z",
+        "isAvailable": true
+      },
+      {
+        "id": "c7d42ec4-7a7b-4f41-946e-195c04dcd43e",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "registrationDate",
+        "name": "Early Registration Deadline",
+        "createdAt": "2025-03-23T10:34:54.648Z",
+        "updatedAt": "2025-03-23T10:34:54.648Z",
+        "isAvailable": true
+      },
+      {
+        "id": "dd8a897a-9f19-4a25-a16e-2c2ead972678",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-12-31T00:00:00.000Z",
+        "toDate": "2024-12-31T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera-Ready Submission Due",
+        "createdAt": "2025-03-23T10:34:54.646Z",
+        "updatedAt": "2025-03-23T10:34:54.646Z",
+        "isAvailable": true
+      },
+      {
+        "id": "bd3c2356-2ed2-4d27-b468-44a2746ce484",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-10-08T00:00:00.000Z",
+        "toDate": "2024-10-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Submissions Due",
+        "createdAt": "2025-03-23T10:34:54.644Z",
+        "updatedAt": "2025-03-23T10:34:54.644Z",
+        "isAvailable": true
+      },
+      {
+        "id": "cf14ca29-f80a-471a-aff6-eae159d0fa47",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2024-10-01T00:00:00.000Z",
+        "toDate": "2024-10-01T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstracts Due",
+        "createdAt": "2025-03-23T10:34:54.641Z",
+        "updatedAt": "2025-03-23T10:34:54.641Z",
+        "isAvailable": true
+      },
+      {
+        "id": "35dfa264-a79e-4f83-843a-e76611cf5f39",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "fromDate": "2025-02-27T00:00:00.000Z",
+        "toDate": "2025-03-01T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-23T10:34:54.637Z",
+        "updatedAt": "2025-03-23T10:34:54.637Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "TBR",
+        "source": "CORE2023",
+        "fieldOfResearch": "Computer Systems Engineering"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "email": "123@gmail.com",
+        "avatar": "/avatar3.jpg",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-27T03:59:13.210Z",
+        "updatedAt": "2025-03-27T03:59:13.210Z"
+      }
+    ],
+    "feedBacks": [
+      {
+        "id": "95b3863c-40f9-47ed-9ed4-dad6d7ad0507",
+        "organizedId": "244b97c2-bfe6-4cdd-8a14-ed43e1de7a43",
+        "creatorId": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "avatar": "/avatar3.jpg",
+        "description": "ok",
+        "star": 5,
+        "createdAt": "2025-03-27T03:59:25.741Z",
+        "updatedAt": "2025-03-27T03:59:25.741Z"
+      }
+    ]
+  },
+  {
+    "conference": {
+      "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "title": "ACIS Conference on Software Engineering Research, Management and Applications",
+      "acronym": "SERA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.435Z",
+      "updatedAt": "2025-03-23T10:26:29.435Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+      "publisher": "",
+      "summerize": "The 23rd IEEE/ACIS International Conference on Software Engineering, Management and Applications (SERA 2025) brings together researchers, scientists, engineers, industry practitioners, and students to discuss, encourage, and exchange new ideas, research results, and experiences on all aspects of Software Engineering, Management, and Applications. SERA 2025 aims to facilitate cross-fertilizations among key technology enabling areas.",
+      "callForPaper": "SERA 2025 invites submissions of research papers on various aspects of Software Engineering, Management and Applications. Key dates include:\n\n*   **Workshop/Special Session Proposal:** January 10, 2025\n*   **Full Paper Submission:** March 28, 2025 (extended)\n*   **Acceptance Notification (papers submitted by March 14):** April 4, 2025\n*   **Acceptance Notification (Papers submitted after March 14):** April 11, 2025\n*   **Camera Ready Papers/Registration:** April 18, 2025",
+      "link": "https://acisinternational.org/conferences/sera-2025/",
+      "cfpLink": "http://acisinternational.org/wp-content/uploads/2025/03/SERA_2025_CFP-9.pdf",
+      "impLink": "https://acisinternational.org/conferences/sera-2025/",
+      "createdAt": "2025-03-27T04:36:40.203Z",
+      "updatedAt": "2025-03-27T04:36:40.203Z",
+      "topics": [
+        "Software Engineering",
+        "Management and Applications"
+      ]
+    },
+    "location": {
+      "id": "f8a8387a-525a-45ab-b95e-4a69297cb3f2",
+      "createdAt": "2025-03-27T04:36:40.215Z",
+      "updatedAt": "2025-03-27T04:36:40.215Z",
+      "isAvailable": true,
+      "organizeId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+      "cityStateProvince": "Las Vegas, Nevada",
+      "country": "United States",
+      "address": "UNLV Campus, Las Vegas, Nevada, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "0be4007a-c0a8-4017-81b1-655721287cde",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-01-10T00:00:00.000Z",
+        "toDate": "2025-01-10T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Workshop/Special Session Proposal",
+        "createdAt": "2025-03-27T04:36:40.228Z",
+        "updatedAt": "2025-03-27T04:36:40.228Z",
+        "isAvailable": true
+      },
+      {
+        "id": "8818adb6-f372-4c83-b83d-f881264057b9",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-04-11T00:00:00.000Z",
+        "toDate": "2025-04-11T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification Papers submitted after March 14",
+        "createdAt": "2025-03-27T04:36:40.226Z",
+        "updatedAt": "2025-03-27T04:36:40.226Z",
+        "isAvailable": true
+      },
+      {
+        "id": "f0fe23d9-c323-4b32-92f1-1379687616b4",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-04-04T00:00:00.000Z",
+        "toDate": "2025-04-04T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Acceptance Notification papers submitted by March 14",
+        "createdAt": "2025-03-27T04:36:40.225Z",
+        "updatedAt": "2025-03-27T04:36:40.225Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d5defa65-a8c2-4aff-968c-4c2b318f256d",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-04-18T00:00:00.000Z",
+        "toDate": "2025-04-18T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera Ready Papers/Registration",
+        "createdAt": "2025-03-27T04:36:40.223Z",
+        "updatedAt": "2025-03-27T04:36:40.223Z",
+        "isAvailable": true
+      },
+      {
+        "id": "de4c5a78-be4d-49f6-ad91-3554fa08f251",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full Paper Submission",
+        "createdAt": "2025-03-27T04:36:40.221Z",
+        "updatedAt": "2025-03-27T04:36:40.221Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4dd66216-fd6a-4bb7-837e-634ab25c07b0",
+        "organizedId": "dc500bbd-f56e-45b9-a9e5-930af20b87d4",
+        "fromDate": "2025-05-29T00:00:00.000Z",
+        "toDate": "2025-05-31T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-27T04:36:40.218Z",
+        "updatedAt": "2025-03-27T04:36:40.218Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2021",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2020",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "email": "123@gmail.com",
+        "avatar": "/avatar3.jpg",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-27T04:26:48.002Z",
+        "updatedAt": "2025-03-27T04:26:48.002Z"
       }
     ],
     "feedBacks": []

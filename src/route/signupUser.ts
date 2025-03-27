@@ -133,10 +133,10 @@ export const signupUser: RequestHandler<any, { message: string }, { firstName: s
             notifications: [],
             createdAt: now.toISOString(),
             updatedAt: now.toISOString(),
-            avatar: '',
-            aboutme: '',
+            avatar: "",
+            aboutme: "",
             interestedTopics: [],
-            background: '',
+            background: "",
             setting: {
                 receiveNotifications: true,
                 autoAddFollowToCalendar: true,

@@ -9,7 +9,7 @@ import { ConferenceResponse } from '../types/conference.response';
 import { Notification } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
 import { connectedUsers } from '../server-ts';
-import { ImportantDates, Location } from '../types/conference.response';
+import { ImportantDate, Location } from '../types/conference.response';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
@@ -27,7 +27,7 @@ function getConferenceChanges(oldConf: ConferenceResponse, newConf: ConferenceRe
         }
     }
 
-    function addChangeDate(field: string, oldDates: ImportantDates[] | null, newDates: ImportantDates[] | null) {
+    function addChangeDate(field: string, oldDates: ImportantDate[] | null, newDates: ImportantDate[] | null) {
         if (!oldDates && !newDates) return;
 
         if (!oldDates || !newDates || oldDates.length !== newDates.length) {

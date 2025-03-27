@@ -2,7 +2,7 @@ export type ConferenceResponse = {
   conference: ConferenceIdentity;
   organization: Organization;
   location: Location | null;
-  dates: ImportantDates[] | null;
+  dates: ImportantDate[] | null;
   ranks: Rank[] | null;
   feedBacks: Feedback[] | null;
   followedBy: FollowerInfo[] | null;
@@ -36,7 +36,7 @@ export type Organization = {
   updatedAt: string | null;
 };
 
-export type ImportantDates = {
+export type ImportantDate = {
   id: string;
   organizedId: string | null;
   fromDate: string | null;
@@ -70,6 +70,9 @@ export type Feedback = {
   id: string;
   organizedId: string | null;
   creatorId: string | null;
+  firstName: string | null;
+  lastName: string | null;
+  avatar: string;
   description: string | null;
   star: number | null;
   createdAt: string | null;
@@ -81,6 +84,7 @@ export type FollowerInfo = {
   email: string | null;
   firstName: string | null;
   lastName: string | null;
+  avatar: string;
   createdAt: string | null;
   updatedAt: string | null;
 };

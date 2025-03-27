@@ -75,141 +75,69 @@
     "followedConferences": [
       {
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-27T00:45:33.901Z",
-        "updatedAt": "2025-03-27T00:45:33.901Z"
+        "createdAt": "2025-03-27T02:50:28.094Z",
+        "updatedAt": "2025-03-27T02:50:28.094Z"
       }
     ],
     "myConferences": [],
     "calendar": [
       {
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-27T00:45:32.974Z",
-        "updatedAt": "2025-03-27T00:45:32.974Z"
+        "createdAt": "2025-03-27T02:15:15.615Z",
+        "updatedAt": "2025-03-27T02:15:15.615Z"
       }
     ],
     "feedBacks": [],
     "notifications": [
       {
-        "id": "bda169f7-91c6-4df8-9bef-2c5b3488aa93",
-        "createdAt": "2025-03-26T13:12:13.643Z",
+        "id": "73834b7d-10db-4562-b9d0-66e51f7414de",
+        "createdAt": "2025-03-27T03:14:56.428Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
-        "type": "Add to Calendar"
+        "message": "Your profile has been updated: Avatar were changed.",
+        "type": "Profile Update"
       },
       {
-        "id": "617c64ca-7910-4680-a378-c0f0a7634b8f",
-        "createdAt": "2025-03-26T13:12:17.145Z",
+        "id": "de864453-c713-468d-b505-42f9708f0ec2",
+        "createdAt": "2025-03-27T03:12:45.993Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
+        "message": "Your profile has been updated: Avatar were changed.",
+        "type": "Profile Update"
+      },
+      {
+        "id": "37fae3c9-2073-4f09-8842-dd8bab119d92",
+        "createdAt": "2025-03-27T03:55:38.653Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi provided feedback for the conference \" International Conference on Advanced Communications and Computation\" which you followed: 4 stars.",
+        "type": "New Feedback"
+      },
+      {
+        "id": "4cadaca8-fbc2-4212-ad8f-ca1758dbc2af",
+        "createdAt": "2025-03-27T03:57:19.064Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi provided feedback for the conference \" International Conference on Advanced Communications and Computation\" which you followed: 2 stars.",
+        "type": "New Feedback"
+      },
+      {
+        "id": "6b907d33-9431-4d43-be8c-2e4cbf4c470f",
+        "createdAt": "2025-03-27T03:57:35.577Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
-      },
-      {
-        "id": "47f3f1eb-dcc5-468b-b819-6e50f2140635",
-        "createdAt": "2025-03-27T00:07:30.087Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You unfollowed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "c0e1534b-8af5-486f-adca-e6703b3f6f5d",
-        "createdAt": "2025-03-27T00:07:34.447Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed the conference \" International Conference on Advanced Communications and Computation\" from your calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "7861b0dc-8cdf-4135-9cc5-4cb982000311",
-        "createdAt": "2025-03-27T00:07:51.964Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "1155a671-d5c9-44d9-be55-3851e1b863d8",
-        "createdAt": "2025-03-27T00:07:57.430Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "1e115073-cba9-4f1b-9815-59bffdd499e1",
-        "createdAt": "2025-03-27T00:38:12.107Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed the conference \" International Conference on Advanced Communications and Computation\" from your calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "e5a70f6e-b034-484f-9f16-0300efacf13f",
-        "createdAt": "2025-03-27T00:38:17.054Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "dd8da264-9cac-4cc4-a141-2b7baaff1cd3",
-        "createdAt": "2025-03-27T00:45:14.137Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed the conference \" International Conference on Advanced Communications and Computation\" from your calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "9bcfc64c-f6a9-40f8-9b30-6ba351ddce3e",
-        "createdAt": "2025-03-27T00:45:29.339Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You unfollowed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "903fa47d-f005-4502-8b5e-d07bea1106f5",
-        "createdAt": "2025-03-27T00:45:32.974Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "a4589204-ba36-4dea-bffe-fde795775abe",
-        "createdAt": "2025-03-27T00:45:33.901Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
-        "type": "Follow Conference"
-      },
-      {
-        "id": "e91b555d-1716-4b93-b683-42d6c0723515",
-        "createdAt": "2025-03-27T00:57:18.093Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
-        "type": "Add to Blacklist"
       }
     ],
     "createdAt": "2025-03-26T09:55:06.596Z",
-    "updatedAt": "2025-03-26T09:55:06.596Z",
-    "avatar": "",
+    "updatedAt": "2025-03-27T03:14:56.428Z",
+    "avatar": "/avatar1.jpg",
     "aboutme": "",
     "interestedTopics": [],
     "background": "",
@@ -230,7 +158,7 @@
     "blacklist": [
       {
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "addedAt": "2025-03-27T00:57:18.093Z"
+        "addedAt": "2025-03-27T02:15:18.575Z"
       }
     ]
   },
@@ -298,5 +226,275 @@
     "isVerified": false,
     "verificationToken": "ddbbd5ae6bc741d81cd296ff97dfbcc6d7088084",
     "verificationTokenExpires": "2025-03-27T02:31:39.938Z"
+  },
+  {
+    "id": "f89e27a2-280c-41c4-837b-064be4051957",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "email": "abcxyz@gmail.com",
+    "password": "12345678",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-27T03:21:25.444Z",
+    "updatedAt": "2025-03-27T03:21:25.444Z",
+    "avatar": "",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
+    "isVerified": false,
+    "verificationToken": "af3c245bda3ba323d30ee2f791dfce4f8be1193e",
+    "verificationTokenExpires": "2025-03-27T04:21:25.444Z"
+  },
+  {
+    "id": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "email": "123@gmail.com",
+    "password": "12345678",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-27T03:57:35.577Z",
+        "updatedAt": "2025-03-27T03:57:35.577Z"
+      },
+      {
+        "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
+        "createdAt": "2025-03-27T03:59:13.210Z",
+        "updatedAt": "2025-03-27T03:59:13.210Z"
+      },
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T04:26:48.002Z",
+        "updatedAt": "2025-03-27T04:26:48.002Z"
+      }
+    ],
+    "myConferences": [],
+    "calendar": [
+      {
+        "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
+        "createdAt": "2025-03-27T03:59:14.507Z",
+        "updatedAt": "2025-03-27T03:59:14.507Z"
+      },
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T04:26:46.770Z",
+        "updatedAt": "2025-03-27T04:26:46.770Z"
+      }
+    ],
+    "feedBacks": [],
+    "notifications": [
+      {
+        "id": "6f59f3cf-ffc0-4c74-8035-df4c799d2202",
+        "createdAt": "2025-03-27T03:53:19.512Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your profile has been updated: Interested topics were changed.",
+        "type": "Profile Update"
+      },
+      {
+        "id": "9cf5f630-3263-4d89-bc70-3088b632eb65",
+        "createdAt": "2025-03-27T03:53:02.212Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your profile has been updated: Avatar were changed.",
+        "type": "Profile Update"
+      },
+      {
+        "id": "7b8dbc1b-bfcb-4efc-824b-d5be8b0bd29f",
+        "createdAt": "2025-03-27T03:39:57.846Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your profile has been updated: Avatar were changed.",
+        "type": "Profile Update"
+      },
+      {
+        "id": "d0925794-e0b9-4b49-b3d8-8c29e2a1da0a",
+        "createdAt": "2025-03-27T03:38:12.259Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your profile has been updated: Avatar were changed.",
+        "type": "Profile Update"
+      },
+      {
+        "id": "3a2cae99-a0f3-4519-b739-ec766a379f3f",
+        "createdAt": "2025-03-27T03:55:38.652Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You provided feedback for the conference \" International Conference on Advanced Communications and Computation\": 4 stars.",
+        "type": "New Feedback"
+      },
+      {
+        "id": "208d1c28-f251-498f-b0c7-ef844763928a",
+        "createdAt": "2025-03-27T03:57:19.063Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You provided feedback for the conference \" International Conference on Advanced Communications and Computation\": 2 stars.",
+        "type": "New Feedback"
+      },
+      {
+        "id": "8553c0f0-9aba-4deb-bfe7-9dbdf27e9a68",
+        "createdAt": "2025-03-27T03:57:35.577Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "85f4e023-b110-4b6b-8098-60a4d246ba55",
+        "createdAt": "2025-03-27T03:59:13.210Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACM Int'l Symposium on Field Programmable Gate Arrays",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "30282381-3545-4dde-b85d-d15d7fb3b08f",
+        "createdAt": "2025-03-27T03:59:14.507Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"ACM Int'l Symposium on Field Programmable Gate Arrays\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "78406922-f387-41d0-be0e-219cccb54651",
+        "createdAt": "2025-03-27T03:59:25.742Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You provided feedback for the conference \"ACM Int'l Symposium on Field Programmable Gate Arrays\": 5 stars.",
+        "type": "New Feedback"
+      },
+      {
+        "id": "5e874144-67a9-46d1-b999-abde7c36058b",
+        "createdAt": "2025-03-27T04:26:46.770Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"ACIS Conference on Software Engineering Research, Management and Applications\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "d2a801f3-a716-4af5-84be-753f37b26fbe",
+        "createdAt": "2025-03-27T04:26:48.002Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "40d69b41-e6cc-4713-9b85-2af6c8f2cd81",
+        "createdAt": "2025-03-27T04:29:30.617Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Followed at 2025-03-27):\nConference updates:\n  - Location: Country changed from \"United States of America\" to \"United States\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "f973d0b1-2087-4ca5-9efa-fae0b43cc991",
+        "createdAt": "2025-03-27T04:29:30.617Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Added to calendar at 2025-03-27):\nConference updates:\n  - Location: Country changed from \"United States of America\" to \"United States\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "17a966ab-b69e-4b14-aa0a-3d6b27d01f41",
+        "createdAt": "2025-03-27T04:31:59.814Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Followed at 2025-03-27):\nConference updates:\n  - Location: Country changed from \"United States\" to \"United States of America\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "5d7aa21b-2f00-4880-9449-e128d99d9c3e",
+        "createdAt": "2025-03-27T04:31:59.814Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Added to calendar at 2025-03-27):\nConference updates:\n  - Location: Country changed from \"United States\" to \"United States of America\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "5857414b-aaf7-40cf-a647-77ff0b8d0c8a",
+        "createdAt": "2025-03-27T04:36:50.011Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Followed at 2025-03-27):\nConference updates:- Dates: Dates have been changed.\n\n  - Location: Country changed from \"United States of America\" to \"United States\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "b61f1888-3dbd-4fdc-9d16-ea13a0ba488e",
+        "createdAt": "2025-03-27T04:36:50.011Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \"ACIS Conference on Software Engineering Research, Management and Applications\" (Added to calendar at 2025-03-27):\nConference updates:- Dates: Dates have been changed.\n\n  - Location: Country changed from \"United States of America\" to \"United States\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "05c80f99-b499-4d31-a02f-f088ae7ea2cf",
+        "createdAt": "2025-03-27T05:00:00.099Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      }
+    ],
+    "createdAt": "2025-03-27T03:25:32.327Z",
+    "updatedAt": "2025-03-27T03:53:19.512Z",
+    "avatar": "/avatar3.jpg",
+    "aboutme": "",
+    "interestedTopics": [
+      "Blockchain",
+      "AI"
+    ],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
+    "isVerified": false,
+    "verificationToken": "0cfdd0f23e9bf8ee752f5f277d85e3f5f18b9d3b",
+    "verificationTokenExpires": "2025-03-27T04:25:32.327Z"
   }
 ]

@@ -7,7 +7,7 @@ export type UserResponse = {
   dob?: string;
   password?: string;
   role: string;
-  avatar?: string;
+  avatar: string;
   aboutme?: string;
   interestedTopics?: string[];
   background?: string;

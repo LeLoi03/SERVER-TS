@@ -66,14 +66,10 @@ function shouldSendBlacklistNotification(user: UserResponse, notificationType: '
 }
 
 // --- Blacklist/Unblacklist Conference Handler ---
-export const blacklistConference: RequestHandler<
-    { id: string },
-    UserResponse | { message: string },
-    { conferenceId: string },
-    any
-> = async (req, res): Promise<void> => {
-    const userId = req.params.id;
-    const { conferenceId } = req.body;
+export const blacklistConference: RequestHandler<{ id: string }, UserResponse | { message: string }, any, any> = async (req, res): Promise<void> => {
+
+    const { conferenceId, userId } = req.body;
+
 
     if (!conferenceId || !userId) {
         res.status(400).json({ message: 'Missing conferenceId or userId' });
@@ -168,7 +164,7 @@ export const blacklistConference: RequestHandler<
                 console.log(`User ${userId} is not connected for real-time notification.`);
             }
         } else {
-             console.log(`Notification suppressed for user ${userId} due to settings.`);
+            console.log(`Notification suppressed for user ${userId} due to settings.`);
         }
 
 
