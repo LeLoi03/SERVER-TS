@@ -194,7 +194,7 @@
     "blacklist": [
       {
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "addedAt": "2025-03-27T02:15:18.575Z"
+        "blacklistedAt": "2025-03-27T02:15:18.575Z"
       }
     ]
   },
@@ -584,6 +584,24 @@
         "deletedAt": null,
         "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
         "type": "Add to Calendar"
+      },
+      {
+        "id": "6998a169-faeb-4880-834d-dcfc76254795",
+        "createdAt": "2025-03-27T06:00:00.784Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "0a5b18cd-427a-4656-9988-8be5332133c5",
+        "createdAt": "2025-03-27T06:19:24.048Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added \" International Conference on Advanced Communications and Computation\" to your blacklist.",
+        "type": "Add to Blacklist"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
@@ -608,6 +626,12 @@
     },
     "isVerified": false,
     "verificationToken": "0cfdd0f23e9bf8ee752f5f277d85e3f5f18b9d3b",
-    "verificationTokenExpires": "2025-03-27T04:25:32.327Z"
+    "verificationTokenExpires": "2025-03-27T04:25:32.327Z",
+    "blacklist": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "blacklistedAt": "2025-03-27T06:19:24.048Z"
+      }
+    ]
   }
 ]

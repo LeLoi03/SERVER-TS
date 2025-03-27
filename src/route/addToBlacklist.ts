@@ -7,7 +7,7 @@ import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid'; // Import uuid
 
 // Import necessary types
-import { UserResponse, BlackList, Notification } from '../types/user.response';
+import { UserResponse, Blacklist, Notification } from '../types/user.response';
 import { ConferenceResponse } from '../types/conference.response'; // Need this for conference title
 
 // Import WebSocket connections map
@@ -125,9 +125,9 @@ export const blacklistConference: RequestHandler<{ id: string }, UserResponse | 
             console.log(`User ${userId} removed conference ${conferenceId} from blacklist.`);
         } else {
             // --- Blacklist ---
-            const newBlacklistItem: BlackList = {
+            const newBlacklistItem: Blacklist = {
                 id: conferenceId,
-                addedAt: now,
+                blacklistedAt: now,
             };
             updatedUser.blacklist.push(newBlacklistItem);
             notificationType = 'Add to Blacklist';
