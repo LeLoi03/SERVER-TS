@@ -68,15 +68,15 @@ export type Rank = {
 
 export type Feedback = {
   id: string;
-  organizedId: string | null;
-  creatorId: string | null;
-  firstName: string | null;
-  lastName: string | null;
+  organizedId: string;
+  creatorId: string;
+  firstName: string;
+  lastName: string;
   avatar: string;
-  description: string | null;
-  star: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
+  description: string;
+  star: number;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type FollowerInfo = {
@@ -88,5 +88,3 @@ export type FollowerInfo = {
   createdAt: string | null;
   updatedAt: string | null;
 };
-
-

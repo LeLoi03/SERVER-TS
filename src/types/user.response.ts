@@ -47,6 +47,7 @@ export type MyConference = {
 
 export type Notification = {
   id: string;
+  conferenceId: string;
   createdAt: string;
   isImportant: boolean;
   seenAt: string | null;

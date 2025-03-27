@@ -213,6 +213,7 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
                         if (user && shouldSendUpdateConferenceNotification(user, "Conference Update")) {
                             const notification: Notification = {
                                 id: uuidv4(),
+                                conferenceId: conferenceId,
                                 createdAt: now,
                                 isImportant: true,
                                 seenAt: null,
@@ -244,6 +245,7 @@ export const saveConferenceDetails: RequestHandler<any, { message: string }, Con
                         if (shouldSendUpdateConferenceNotification(user, "Conference Update")) {
                             const calendarNotification: Notification = {
                                 id: uuidv4(),
+                                conferenceId: conferenceId,
                                 createdAt: now,
                                 isImportant: true,
                                 seenAt: null,

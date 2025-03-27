@@ -110,6 +110,7 @@ export const updateUser: RequestHandler<{ id: string }, UserResponse | { message
             let notificationMessage = `Your profile has been updated: ${changedFields.join(', ')} were changed.`;
             const notification: Notification = {
                 id: uuidv4(),
+                conferenceId: "",
                 createdAt: now,
                 isImportant: false,
                 seenAt: null,

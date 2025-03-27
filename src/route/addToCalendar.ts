@@ -109,6 +109,7 @@ export const addToCalendar: RequestHandler<{ id: string }, UserResponse | { mess
         if (shouldSendAddToCalendarNotification(updatedUser, isAdding ? 'add' : 'remove')) {
             const notification: Notification = {
                 id: uuidv4(),
+                conferenceId: conferenceId,
                 createdAt: now,
                 isImportant: false,
                 seenAt: null,
@@ -146,6 +147,7 @@ export const addToCalendar: RequestHandler<{ id: string }, UserResponse | { mess
                                 if (shouldSendAddToCalendarNotification(followerUser, 'add')) {
                                     const followerNotification: Notification = {
                                         id: uuidv4(),
+                                        conferenceId: conferenceId,
                                         createdAt: now,
                                         isImportant: false,
                                         seenAt: null,

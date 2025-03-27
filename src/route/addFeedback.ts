@@ -77,6 +77,7 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
         // --- Create the notification object ---
         const notification: Notification = {
             id: uuidv4(),
+            conferenceId: conferenceId,
             createdAt: new Date().toISOString(),
             isImportant: false, // Set as appropriate
             seenAt: null,
@@ -108,6 +109,7 @@ export const addFeedback: RequestHandler<{ conferenceId: string }, Feedback | { 
                         // --- Create the notification object ---
                         const followerNotification: Notification = {
                             id: uuidv4(),
+                            conferenceId: conferenceId,
                             createdAt: new Date().toISOString(),
                             isImportant: false, // Set as appropriate
                             seenAt: null,

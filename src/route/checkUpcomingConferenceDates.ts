@@ -88,6 +88,7 @@ export async function checkUpcomingConferenceDates() {
 
                                             const notification: Notification = {
                                                 id: uuidv4(),
+                                                conferenceId: conference.conference.id,
                                                 createdAt: new Date().toISOString(),
                                                 isImportant: true, // Mark as important
                                                 seenAt: null,

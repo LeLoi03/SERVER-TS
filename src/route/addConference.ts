@@ -170,6 +170,7 @@ export const addConference: RequestHandler<any, AddedConference | { message: str
         if (shouldSendAddConferenceNotification(usersList[userIndex])) {
             const userNotification: Notification = {
                 id: uuidv4(),
+                conferenceId: conferenceId,
                 createdAt: now,
                 isImportant: false,
                 seenAt: null,
@@ -198,6 +199,7 @@ export const addConference: RequestHandler<any, AddedConference | { message: str
                 // Admins *always* get notifications, so no settings check needed here.
                 const adminNotification: Notification = {
                     id: uuidv4(),
+                    conferenceId: conferenceId,
                     createdAt: now,
                     isImportant: true, // Mark as important for admins
                     seenAt: null,

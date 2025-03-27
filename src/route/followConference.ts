@@ -120,6 +120,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
         // --- Notification Logic (with settings check) ---
         const notification: Notification = {
             id: uuidv4(),
+            conferenceId: conferenceId,
             createdAt: now,
             isImportant: false,
             seenAt: null,
@@ -151,6 +152,7 @@ export const followConference: RequestHandler<{ id: string }, UserResponse | { m
                             if (shouldSendFollowNotification(followerUser, 'Follow')) {
                                 const followerNotification: Notification = {
                                     id: uuidv4(),
+                                    conferenceId: conferenceId,
                                     createdAt: now,
                                     isImportant: false,
                                     seenAt: null,

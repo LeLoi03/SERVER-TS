@@ -368,6 +368,7 @@ export const adminConferences_POST: RequestHandler = async (req, res): Promise<v
             // --- Notifications ---
             const creatorNotification: Notification = {
                 id: uuidv4(),
+                conferenceId: conferenceId,
                 createdAt: now,
                 isImportant: true,
                 seenAt: null,

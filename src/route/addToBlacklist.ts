@@ -140,6 +140,7 @@ export const blacklistConference: RequestHandler<{ id: string }, UserResponse | 
         if (shouldSendBlacklistNotification(updatedUser, notificationType)) {
             const notification: Notification = {
                 id: uuidv4(),
+                conferenceId: conferenceId,
                 createdAt: now,
                 isImportant: false, // Blacklisting might not be considered "important"
                 seenAt: null,
