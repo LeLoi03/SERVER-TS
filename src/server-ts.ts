@@ -82,6 +82,8 @@ import { verifyPassword } from './route/verifyPassword';
 import { changePassword } from './route/changePassword';
 import { verifyEmail } from './route/signupUser';
 import { blacklistConference } from './route/addToBlacklist';
+import { getVisualizationData } from './route/getVisualizationData';
+
 
 app.get('/api/v1/conference/:id', getConferenceById);
 app.get('/api/v1/conference', getConferenceList);
@@ -145,6 +147,7 @@ app.post('/api/v1/user/verify-password', verifyPassword);
 app.post('/api/v1/user/change-password', changePassword);
 app.get('/api/v1/user/verify-email/:token', verifyEmail);
 
+app.get('/api/v1/visualization/conference', getVisualizationData);
 
 
 import cron from 'node-cron';

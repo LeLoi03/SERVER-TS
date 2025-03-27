@@ -410,6 +410,46 @@
         "deletedAt": null,
         "message": "You unfollowed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Unfollow Conference"
+      },
+      {
+        "id": "31c3e510-2590-4c74-969b-96ace469ddd1",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T09:00:00.777Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "50f534ef-8269-418a-9e21-b3d3e9095fc8",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T10:00:00.666Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "7e25d3fc-1aa3-466c-b14b-681b479c4457",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T11:00:00.560Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
+      },
+      {
+        "id": "52c2caa3-0d38-4595-b0c9-6a62ec767fb6",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-27T12:00:00.275Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
+        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
