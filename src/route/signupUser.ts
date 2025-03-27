@@ -133,7 +133,7 @@ export const signupUser: RequestHandler<any, { message: string }, { firstName: s
             notifications: [],
             createdAt: now.toISOString(),
             updatedAt: now.toISOString(),
-            avatar: "",
+            avatar: `https://ui-avatars.com/api/?name=${firstName}+${lastName}&background=random&size=32`,
             aboutme: "",
             interestedTopics: [],
             background: "",

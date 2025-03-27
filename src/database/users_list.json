@@ -133,6 +133,42 @@
         "deletedAt": null,
         "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
+      },
+      {
+        "id": "31e8cf20-fa4a-4203-811a-c5931505dc8f",
+        "createdAt": "2025-03-27T05:16:01.361Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \" International Conference on Advanced Communications and Computation\" (Followed at 2025-03-27):\nConference updates:- Dates: Conference end date changed from \"2025-04-10T00:00:00.000Z\" to \"2025-04-06T00:00:00.000Z\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "d3f14ce4-2720-4d3f-b8f7-02a563c366f1",
+        "createdAt": "2025-03-27T05:16:01.361Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \" International Conference on Advanced Communications and Computation\" (Added to calendar at 2025-03-27):\nConference updates:- Dates: Conference end date changed from \"2025-04-10T00:00:00.000Z\" to \"2025-04-06T00:00:00.000Z\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "75be7c99-498b-4948-b84b-8c39540d5f9a",
+        "createdAt": "2025-03-27T05:16:11.524Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "b92370d6-7952-46bc-9c03-c5a4894540ab",
+        "createdAt": "2025-03-27T05:16:13.434Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
+        "type": "Add to Calendar"
       }
     ],
     "createdAt": "2025-03-26T09:55:06.596Z",
@@ -271,19 +307,19 @@
     "role": "user",
     "followedConferences": [
       {
-        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-27T03:57:35.577Z",
-        "updatedAt": "2025-03-27T03:57:35.577Z"
-      },
-      {
         "id": "7848876c-fdb6-4fd0-974e-f977b173913c",
         "createdAt": "2025-03-27T03:59:13.210Z",
         "updatedAt": "2025-03-27T03:59:13.210Z"
       },
       {
         "id": "7b9b7efa-d860-4057-910d-15454b13627d",
-        "createdAt": "2025-03-27T04:26:48.002Z",
-        "updatedAt": "2025-03-27T04:26:48.002Z"
+        "createdAt": "2025-03-27T05:14:54.579Z",
+        "updatedAt": "2025-03-27T05:14:54.579Z"
+      },
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-27T05:16:11.524Z",
+        "updatedAt": "2025-03-27T05:16:11.524Z"
       }
     ],
     "myConferences": [],
@@ -295,8 +331,13 @@
       },
       {
         "id": "7b9b7efa-d860-4057-910d-15454b13627d",
-        "createdAt": "2025-03-27T04:26:46.770Z",
-        "updatedAt": "2025-03-27T04:26:46.770Z"
+        "createdAt": "2025-03-27T05:14:52.198Z",
+        "updatedAt": "2025-03-27T05:14:52.198Z"
+      },
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-27T05:16:13.434Z",
+        "updatedAt": "2025-03-27T05:16:13.434Z"
       }
     ],
     "feedBacks": [],
@@ -471,6 +512,78 @@
         "deletedAt": null,
         "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
         "type": "Upcoming Conference"
+      },
+      {
+        "id": "5805b7ff-62d4-4960-8fd2-e30ae5f76d8e",
+        "createdAt": "2025-03-27T05:14:51.091Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"ACIS Conference on Software Engineering Research, Management and Applications\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "de94b267-10ec-4d84-bc15-0e961be246eb",
+        "createdAt": "2025-03-27T05:14:52.198Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"ACIS Conference on Software Engineering Research, Management and Applications\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "930902dc-2cf6-4aec-aceb-cb0b6bc9ee8d",
+        "createdAt": "2025-03-27T05:14:53.635Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "949b4272-7eee-4a3b-ad76-171ba732ac1d",
+        "createdAt": "2025-03-27T05:14:54.579Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "cb787573-a06e-4e30-b572-1b47ab8abf79",
+        "createdAt": "2025-03-27T05:16:01.361Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for conference \" International Conference on Advanced Communications and Computation\" (Followed at 2025-03-27):\nConference updates:- Dates: Conference end date changed from \"2025-04-10T00:00:00.000Z\" to \"2025-04-06T00:00:00.000Z\".\n",
+        "type": "Conference Update"
+      },
+      {
+        "id": "6ef22199-dfe5-43ce-bbe5-cd17e227fd60",
+        "createdAt": "2025-03-27T05:16:10.670Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "c3b83619-ad54-4a6e-b97e-8134f1b904cd",
+        "createdAt": "2025-03-27T05:16:11.524Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "3a896410-0412-4f92-b29b-55a42c7c94c5",
+        "createdAt": "2025-03-27T05:16:13.434Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
+        "type": "Add to Calendar"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
