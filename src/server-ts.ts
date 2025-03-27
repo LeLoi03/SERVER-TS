@@ -89,7 +89,7 @@ app.post('/api/v1/user/follow', followConference);
 app.get('/api/v1/user/:id', getUserById);
 app.put('/api/v1/user/:id', updateUser);
 app.post('/api/v1/user/add-conference', addConference);
-app.get('/api/v1/user/my-conferences', getMyConferences);
+app.get('/api/v1/user/:id/my-conferences', getMyConferences);
 app.post('/api/v1/user/add-to-calendar', addToCalendar);
 app.post('/api/v1/user/blacklist', blacklistConference);
 app.get('/api/v1/user/:id/calendar', getUserCalendar);

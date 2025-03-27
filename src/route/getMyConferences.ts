@@ -11,7 +11,7 @@ const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferen
 // 7. Get User's Conferences ---
 export const getMyConferences: RequestHandler<{ id: string }, AddedConference[] | { message: string }, any, any> = async (req, res) => {
     try {
-        const userId = req.body;
+        const userId = req.params.id;
 
         if (!userId) {
             return res.status(400).json({ message: 'Missing userId' }) as any;
