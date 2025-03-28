@@ -146,9 +146,9 @@ app.post('/api/v1/user/verify-password', verifyPassword);
 app.post('/api/v1/user/change-password', changePassword);
 app.post('/api/v1/user/verify-email', verifyEmail); // <<< Thêm route mới
 
-app.get('/api/v1/visualization/conference', getVisualizationData);
+app.get('/api/v1/visualization/conference', getVisualizationData)
 
-
+ 
 import cron from 'node-cron';
 cron.schedule('*/60 * * * *', checkUpcomingConferenceDates);
 
