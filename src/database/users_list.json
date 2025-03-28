@@ -479,6 +479,16 @@
         "deletedAt": null,
         "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
         "type": "Add to Calendar"
+      },
+      {
+        "id": "5952373f-92f2-451f-bafc-553a7bc74f0a",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-28T14:51:06.943Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Follow Conference"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
@@ -524,6 +534,16 @@
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
         "createdAt": "2025-03-28T13:50:21.796Z",
         "updatedAt": "2025-03-28T13:50:21.796Z"
+      },
+      {
+        "id": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-28T14:51:06.943Z",
+        "updatedAt": "2025-03-28T14:51:06.943Z"
+      },
+      {
+        "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-28T14:52:50.699Z",
+        "updatedAt": "2025-03-28T14:52:50.699Z"
       }
     ],
     "myConferences": [],
@@ -537,13 +557,83 @@
     "feedBacks": [],
     "notifications": [
       {
-        "id": "c822451b-b3fa-42fb-9bff-c9cfa1de5f86",
-        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
-        "createdAt": "2025-03-28T13:50:21.796Z",
+        "id": "26b25509-fd51-4819-a217-6e2d6668aa50",
+        "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-28T14:52:50.699Z",
+        "isImportant": false,
+        "seenAt": "2025-03-28T14:55:50.001Z",
+        "deletedAt": null,
+        "message": "You followed the conference: Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "1fc4e9a9-cafa-45d1-a319-f797eec98de6",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-03-28T14:51:06.943Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
+        "message": "You followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "66feb5a3-32e3-4685-8fc6-8f92863c7a05",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:30:17.058Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed \"IEEE International Conference on Computer Communications\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      },
+      {
+        "id": "549b7a02-c8a0-4c9a-93bb-a7bb749f1cb7",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:30:08.580Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added \"IEEE International Conference on Computer Communications\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "2b3f7be1-7dba-4f60-aa26-0865f4527880",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:27:50.280Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"IEEE International Conference on Computer Communications\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "a7345b5b-b49a-4323-8f3a-b11582f04b97",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:27:34.383Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"IEEE International Conference on Computer Communications\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "350ea6d4-ae53-463f-9f94-dafe19b72c2c",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:21:54.766Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference: IEEE International Conference on Computer Communications",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "9c9efc90-47da-4a36-b8c5-b1cf5406b1f0",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:21:08.069Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: IEEE International Conference on Computer Communications",
         "type": "Follow Conference"
       },
       {
@@ -557,68 +647,28 @@
         "type": "Add to Calendar"
       },
       {
-        "id": "9c9efc90-47da-4a36-b8c5-b1cf5406b1f0",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:21:08.069Z",
+        "id": "c822451b-b3fa-42fb-9bff-c9cfa1de5f86",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:50:21.796Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You followed the conference: IEEE International Conference on Computer Communications",
+        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
       },
       {
-        "id": "350ea6d4-ae53-463f-9f94-dafe19b72c2c",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:21:54.766Z",
-        "isImportant": false,
+        "id": "f4aa7efc-8f96-42b9-a572-f1d2490bc2bc",
+        "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-28T14:58:00.982Z",
+        "isImportant": true,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You unfollowed the conference: IEEE International Conference on Computer Communications",
-        "type": "Unfollow Conference"
-      },
-      {
-        "id": "a7345b5b-b49a-4323-8f3a-b11582f04b97",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:27:34.383Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added the conference \"IEEE International Conference on Computer Communications\" to your calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "2b3f7be1-7dba-4f60-aa26-0865f4527880",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:27:50.280Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed the conference \"IEEE International Conference on Computer Communications\" from your calendar.",
-        "type": "Remove from Calendar"
-      },
-      {
-        "id": "549b7a02-c8a0-4c9a-93bb-a7bb749f1cb7",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:30:08.580Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You added \"IEEE International Conference on Computer Communications\" to your blacklist.",
-        "type": "Add to Blacklist"
-      },
-      {
-        "id": "66feb5a3-32e3-4685-8fc6-8f92863c7a05",
-        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
-        "createdAt": "2025-03-28T14:30:17.058Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed \"IEEE International Conference on Computer Communications\" from your blacklist.",
-        "type": "Remove from Blacklist"
+        "message": "Upcoming: Post Conference Tour in \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" starting tomorrow (3/29/2025 07:00 AM)",
+        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-28T13:35:20.438Z",
-    "updatedAt": "2025-03-28T14:20:30.934Z",
+    "updatedAt": "2025-03-28T14:55:23.330Z",
     "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
     "aboutme": "",
     "interestedTopics": [],

@@ -2,283 +2,300 @@ import 'dotenv/config';
 import path from 'path';
 import { RequestHandler } from 'express';
 import fs from 'fs';
-
-
-import { UserResponse } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response';
-import { Notification } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
+
+// Import types and services
+import { UserResponse, Notification, Setting, defaultUserSettings } from '../types/user.response';
+import { ConferenceResponse, ImportantDate, Location } from '../types/conference.response';
 import { connectedUsers } from '../server-ts';
-import { ImportantDate, Location } from '../types/conference.response';
+import * as emailService from './emailService'; // Import email service
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
-
-// --- Helper Function to Compare Conference Details and Generate Detailed Message ---
+// --- Helper Function: getConferenceChanges (Keep as is) ---
 function getConferenceChanges(oldConf: ConferenceResponse, newConf: ConferenceResponse): { hasChanges: boolean; message: string } {
-    let message = "Conference updates:";
+    // ... (implementation remains the same)
+     let message = ""; // Initialize as empty string
     let hasChanges = false;
 
     function addChange(field: string, oldValue: any, newValue: any) {
         if (JSON.stringify(oldValue) !== JSON.stringify(newValue)) {
-            message += `\n- ${field}: Changed from "${oldValue ?? 'N/A'}" to "${newValue ?? 'N/A'}".\n`;
+            message += `\n- ${field}: Changed from "${oldValue ?? 'N/A'}" to "${newValue ?? 'N/A'}".`; // Removed extra \n
             hasChanges = true;
         }
     }
-
+     // --- Refined Date Change Logic ---
     function addChangeDate(field: string, oldDates: ImportantDate[] | null, newDates: ImportantDate[] | null) {
-        if (!oldDates && !newDates) return;
+        const format = (d: ImportantDate | null) => d ? `${d.name || d.type || 'Date'}: ${d.fromDate?.substring(0, 10) ?? 'N/A'}${d.toDate ? ` to ${d.toDate.substring(0, 10)}` : ''}` : 'N/A';
+        const oldDatesMap = new Map((oldDates || []).filter(d => d).map(d => [d!.id || `${d!.type}-${d!.name}`, format(d)]));
+        const newDatesMap = new Map((newDates || []).filter(d => d).map(d => [d!.id || `${d!.type}-${d!.name}`, format(d)]));
 
-        if (!oldDates || !newDates || oldDates.length !== newDates.length) {
-            message += `- ${field}: Dates have been changed.\n`;
-            hasChanges = true;
-            return;
+        let dateChangesDetected = false;
+        let dateChangeMessage = `\n- ${field}:`;
+
+        // Check for added/modified dates
+        for (const [key, newVal] of newDatesMap) {
+            const oldVal = oldDatesMap.get(key);
+            if (!oldVal) {
+                dateChangeMessage += `\n  - Added: ${newVal}`;
+                dateChangesDetected = true;
+            } else if (oldVal !== newVal) {
+                dateChangeMessage += `\n  - Modified: ${oldVal} -> ${newVal}`;
+                dateChangesDetected = true;
+            }
+        }
+        // Check for removed dates
+        for (const [key, oldVal] of oldDatesMap) {
+            if (!newDatesMap.has(key)) {
+                dateChangeMessage += `\n  - Removed: ${oldVal}`;
+                dateChangesDetected = true;
+            }
         }
 
-        for (let i = 0; i < oldDates.length; i++) {
-            const oldDate = oldDates[i];
-            const newDate = newDates[i];
-
-            if (!oldDate && !newDate) continue;
-            if (!oldDate || !newDate) {
-                message += `- ${field}: Dates have been changed.\n`;
-                hasChanges = true;
-                return;
-            }
-
-            // Only check and provide detailed changes for "conferenceDates"
-            if (oldDate.type === "conferenceDates" && newDate.type === "conferenceDates") {
-                if (oldDate.fromDate !== newDate.fromDate) {
-                    message += `- ${field}: Conference start date changed from "${oldDate.fromDate ?? 'N/A'}" to "${newDate.fromDate ?? 'N/A'}".\n`;
-                    hasChanges = true;
-                }
-                if (oldDate.toDate !== newDate.toDate) {
-                    message += `- ${field}: Conference end date changed from "${oldDate.toDate ?? 'N/A'}" to "${newDate.toDate ?? 'N/A'}".\n`;
-                    hasChanges = true;
-                }
-            } else if (oldDate.fromDate !== newDate.fromDate || oldDate.toDate !== newDate.toDate || oldDate.name !== newDate.name || oldDate.type !== newDate.type) {
-                // For other date types, just indicate a change
-                message += `- ${field}: Dates have been changed.\n`;
-                hasChanges = true;
-                return; // Important: Exit the loop after finding a change in non-conference dates
-            }
+        if (dateChangesDetected) {
+            message += dateChangeMessage;
+            hasChanges = true;
         }
     }
-
+     // --- Refined Location Change Logic ---
     function addChangeLocation(field: string, oldLocation: Location | null, newLocation: Location | null) {
-        if (!oldLocation && !newLocation) return;
-        if (!oldLocation || !newLocation) {
-            message += `\n- ${field}: Location has been changed.\n`;
-            hasChanges = true;
-            return;
-        }
-        if (oldLocation.address !== newLocation.address) {
-            message += `\n  - ${field}: Address changed from "${oldLocation.address ?? 'N/A'}" to "${newLocation.address ?? 'N/A'}".\n`;
-            hasChanges = true;
-        }
-        if (oldLocation.cityStateProvince !== newLocation.cityStateProvince) {
-            message += `\n  - ${field}:  City/State/Province from "${oldLocation.cityStateProvince ?? 'N/A'}" to "${newLocation.cityStateProvince ?? 'N/A'}".\n`;
-            hasChanges = true;
-        }
-        if (oldLocation.country !== newLocation.country) {
-            message += `\n  - ${field}: Country changed from "${oldLocation.country ?? 'N/A'}" to "${newLocation.country ?? 'N/A'}".\n`;
-            hasChanges = true;
-        }
-        if (oldLocation.continent !== newLocation.continent) {
-            message += `\n  - ${field}: Continent changed from "${oldLocation.continent ?? 'N/A'}" to "${newLocation.continent ?? 'N/A'}".\n`;
-            hasChanges = true;
-        }
-    }
+         if (JSON.stringify(oldLocation) === JSON.stringify(newLocation)) return; // Quick exit if identical
 
+         let locationChangeMessage = `\n- ${field}:`;
+         let locationChangesDetected = false;
+
+         if (!oldLocation && newLocation) {
+             locationChangeMessage += ` Added (Address: ${newLocation.address ?? 'N/A'}, City: ${newLocation.cityStateProvince ?? 'N/A'}, Country: ${newLocation.country ?? 'N/A'})`;
+             locationChangesDetected = true;
+         } else if (oldLocation && !newLocation) {
+              locationChangeMessage += ` Removed (was Address: ${oldLocation.address ?? 'N/A'}, City: ${oldLocation.cityStateProvince ?? 'N/A'}, Country: ${oldLocation.country ?? 'N/A'})`;
+              locationChangesDetected = true;
+         } else if (oldLocation && newLocation) {
+              if (oldLocation.address !== newLocation.address) {
+                 locationChangeMessage += `\n  - Address: "${oldLocation.address ?? 'N/A'}" -> "${newLocation.address ?? 'N/A'}"`;
+                 locationChangesDetected = true;
+             }
+              if (oldLocation.cityStateProvince !== newLocation.cityStateProvince) {
+                  locationChangeMessage += `\n  - City/State/Province: "${oldLocation.cityStateProvince ?? 'N/A'}" -> "${newLocation.cityStateProvince ?? 'N/A'}"`;
+                  locationChangesDetected = true;
+              }
+              if (oldLocation.country !== newLocation.country) {
+                   locationChangeMessage += `\n  - Country: "${oldLocation.country ?? 'N/A'}" -> "${newLocation.country ?? 'N/A'}"`;
+                   locationChangesDetected = true;
+              }
+             // Continent change might be less relevant for users, keep if needed
+             // if (oldLocation.continent !== newLocation.continent) {
+             //     locationChangeMessage += `\n  - Continent: "${oldLocation.continent ?? 'N/A'}" -> "${newLocation.continent ?? 'N/A'}"`;
+             //     locationChangesDetected = true;
+             // }
+         }
+
+         if (locationChangesDetected) {
+             message += locationChangeMessage;
+             hasChanges = true;
+         }
+    }
 
     addChange("Title", oldConf.conference.title, newConf.conference.title);
     addChange("Acronym", oldConf.conference.acronym, newConf.conference.acronym);
+    // Organization details changes (Example)
     addChange("Organization Link", oldConf.organization?.link, newConf.organization?.link);
     addChange("Publisher", oldConf.organization?.publisher, newConf.organization?.publisher);
-    addChange("Access Type", oldConf.organization?.accessType, newConf.organization?.accessType);
-    addChange("Year", oldConf.organization?.year, newConf.organization?.year);
+    // Call refined date/location checkers
     addChangeDate("Dates", oldConf.dates, newConf.dates);
     addChangeLocation("Location", oldConf.location, newConf.location);
+    // Ranks - Keep simple JSON compare or implement detailed rank diff if needed
     addChange("Ranks", JSON.stringify(oldConf.ranks), JSON.stringify(newConf.ranks));
 
+    // Clean up leading/trailing whitespace from the message
+    message = message.trim();
 
-    return { hasChanges, message: hasChanges ? message : "" };
+    return { hasChanges, message };
 }
 
-// --- Helper Function to Check Notification Settings ---
-function shouldSendUpdateConferenceNotification(user: UserResponse, notificationType: string): boolean {
-    const settings = user.setting;
 
-    if (!settings) {
-        return false; // Default to no notifications if settings are missing
-    }
+// --- Helper Function Renamed & Updated (using defaults) ---
+// Checks IF a notification EVENT should be generated based on master/specific toggles
+function shouldGenerateConferenceUpdateNotification(user: UserResponse | undefined): boolean {
+    if (!user) return false;
+
+    const settings: Setting = { ...defaultUserSettings, ...(user.setting || {}) }; // Merge with defaults
 
     if (settings.receiveNotifications === false) {
-        return false; // User has disabled all notifications
+        return false; // Master switch off
     }
-    if (notificationType === "Conference Update" && settings.notificationWhenConferencesChanges === false) {
+
+    // Check specific toggle for conference change events
+    if (settings.notificationWhenConferencesChanges === false) {
         return false;
     }
 
-    // Add more specific checks here based on notificationType and user settings
-    return true; // All checks passed, or no specific checks for this type
+    return true; // Checks passed, event can be generated.
 }
+
 
 // --- Save Conference Details ---
 export const saveConferenceDetails: RequestHandler<any, { message: string }, ConferenceResponse, any> = async (req, res) => {
     try {
         const receivedData: ConferenceResponse = req.body;
-        // console.log("Received Data:", receivedData)
 
-        if (!receivedData || !receivedData.conference || !receivedData.conference.id) {
-            return res.status(400).json({ message: 'Invalid data format received.  Missing conference ID.' }) as any;
+        if (!receivedData?.conference?.id) {
+             return res.status(400).json({ message: 'Invalid data format: Missing conference ID.' }) as any;
         }
 
         const conferenceId = receivedData.conference.id;
-
         let dbDetailsData: ConferenceResponse[] = [];
-        let users: UserResponse[] = [];
+        let usersData: UserResponse[] = [];
+        let usersModified = false; // Flag to track if user notifications are changed
 
+        // --- Load Data (Simplified error handling)---
         try {
-            const fileContent = await fs.promises.readFile(conferenceDetailsFilePath, 'utf-8');
+            const [fileContent, usersFileContent] = await Promise.all([
+                fs.promises.readFile(conferenceDetailsFilePath, 'utf-8').catch(() => '[]'), // Default to empty array string on error/ENOENT
+                fs.promises.readFile(userFilePath, 'utf-8').catch(() => '[]')
+            ]);
             dbDetailsData = JSON.parse(fileContent);
-            if (!Array.isArray(dbDetailsData)) {
-                dbDetailsData = [];
-            }
-        } catch (error: any) {
-            if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) {
-                console.error('Error reading DB_details.json:', error);
-                return res.status(500).json({ message: 'Error reading DB_details.json' });
-            }
+            usersData = JSON.parse(usersFileContent);
+
+            if (!Array.isArray(dbDetailsData)) dbDetailsData = [];
+            if (!Array.isArray(usersData)) usersData = [];
+
+        } catch (parseError) {
+            console.error('Error parsing JSON data:', parseError);
+            return res.status(500).json({ message: 'Error reading or parsing data files.' });
         }
 
-        try {
-            const usersFileContent = await fs.promises.readFile(userFilePath, 'utf-8');
-            users = JSON.parse(usersFileContent);
+        // Use 'let' for users array as it will be modified
+        let users: UserResponse[] = usersData;
 
-            if (!Array.isArray(users)) {
-                users = [];
-            }
-        } catch (userError: any) {
-            if (userError.code !== 'ENOENT' && !(userError instanceof SyntaxError)) {
-                console.error('Error reading users.json:', userError);
-                return res.status(500).json({ message: 'Error reading users.json' });
-            }
-        }
+        const existingConferenceIndex = dbDetailsData.findIndex(conf => conf.conference?.id === conferenceId);
 
-        const existingConferenceIndex = dbDetailsData.findIndex(conf => conf.conference.id === conferenceId);
-
+        // --- Handle Add vs Update ---
         if (existingConferenceIndex === -1) {
-            // Conference doesn't exist, add it (no notifications on initial add).
-            receivedData.followedBy = [];
-            receivedData.feedBacks = [];
-
+            // Add New Conference
+            receivedData.followedBy = receivedData.followedBy || []; // Ensure arrays exist
+            receivedData.feedBacks = receivedData.feedBacks || [];
             dbDetailsData.push(receivedData);
             await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
-            console.log("Add new conference details successfully!");
-
-            return res.status(200).json({ message: 'Conference details saved successfully.' });
+            console.log(`Added new conference: ${conferenceId}`);
+            return res.status(201).json({ message: 'New conference details saved successfully.' }); // 201 Created
         } else {
+            // Update Existing Conference
+            const oldConference = dbDetailsData[existingConferenceIndex];
+            // Create updated version, preserving followers and feedback
+            const updatedConference: ConferenceResponse = {
+                ...receivedData, // Take all new data first
+                followedBy: oldConference.followedBy || [], // Keep existing followers
+                feedBacks: oldConference.feedBacks || [],   // Keep existing feedback
+            };
 
-            // Conference exists, update it.
-            const oldConference = { ...dbDetailsData[existingConferenceIndex] };
-            const updatedConference = { ...oldConference };
+            // Ensure core properties are taken from receivedData if they exist
+            updatedConference.conference = receivedData.conference || oldConference.conference;
+            updatedConference.organization = receivedData.organization || oldConference.organization;
+            updatedConference.location = receivedData.location !== undefined ? receivedData.location : oldConference.location; // Handle null location explicitly
+            updatedConference.dates = receivedData.dates !== undefined ? receivedData.dates : oldConference.dates; // Handle null dates
+            updatedConference.ranks = receivedData.ranks !== undefined ? receivedData.ranks : oldConference.ranks; // Handle null ranks
 
-            updatedConference.conference = receivedData.conference;
-            updatedConference.organization = receivedData.organization;
-            updatedConference.location = receivedData.location;
-            updatedConference.dates = receivedData.dates;
-            updatedConference.ranks = receivedData.ranks;
-            // Do NOT update feedBacks and followedBy
 
-            const { hasChanges, message: detailedMessage } = getConferenceChanges(oldConference, updatedConference);
+            const { hasChanges, message: detailedChangeMessage } = getConferenceChanges(oldConference, updatedConference);
 
-            if (hasChanges) {
-                dbDetailsData[existingConferenceIndex] = updatedConference;
-                await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
+            if (!hasChanges) {
+                console.log(`No functional changes detected for conference: ${conferenceId}`);
+                 // Optionally update the DB anyway if you want updatedAt timestamps etc., to change
+                 // dbDetailsData[existingConferenceIndex] = updatedConference;
+                 // await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8');
+                return res.status(200).json({ message: 'Conference details checked. No functional changes detected.' });
+            }
 
-                // --- Notification Logic ---
-                const now = new Date().toISOString();
+            console.log(`Changes detected for conference: ${conferenceId}. Preparing notifications.`);
+            dbDetailsData[existingConferenceIndex] = updatedConference; // Update the array
+            await fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(dbDetailsData, null, 2), 'utf-8'); // Save updated conference data
 
-                // 1. Notify Followers:
-                if (updatedConference.followedBy && updatedConference.followedBy.length > 0) {
-                    updatedConference.followedBy.forEach(followerInfo => {
-                        const user = users.find(u => u.id === followerInfo.id);
-                        // Find the follow information for this conference
-                        const followInfo = user?.followedConferences?.find(f => f.id === conferenceId);
-                        // Construct base message with conference and follow details
-                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Followed at ${followInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
+            // --- Notification Logic ---
+            const now = new Date().toISOString();
+            const notifiedUserIds = new Set<string>(); // Track users notified in this cycle
 
-                        if (user && shouldSendUpdateConferenceNotification(user, "Conference Update")) {
-                            const notification: Notification = {
-                                id: uuidv4(),
-                                conferenceId: conferenceId,
-                                createdAt: now,
-                                isImportant: true,
-                                seenAt: null,
-                                deletedAt: null,
-                                message: baseMessage + detailedMessage, // Combine base and detailed messages
-                                type: 'Conference Update',
-                            };
-                            if (!user.notifications) {
-                                user.notifications = [];
-                            }
-                            user.notifications.push(notification);
-
-                            const userSocket = connectedUsers.get(user.id);
-                            if (userSocket) {
-                                userSocket.emit('notification', notification);
-                            }
-                        }
-                    });
+            // Combine follower list and calendar users list for efficient processing
+            const potentiallyAffectedUserIds = new Set<string>();
+            (updatedConference.followedBy || []).forEach(f => potentiallyAffectedUserIds.add(f.id));
+            users.forEach(u => {
+                if (u.calendar?.some(c => c.id === conferenceId)) {
+                    potentiallyAffectedUserIds.add(u.id);
                 }
+            });
 
-                // 2. Notify Users who added to Calendar:
-                users.forEach(user => {
-                    if (user.calendar && user.calendar.some(c => c.id === conferenceId)) {
-                        //Find the calendar information for this conference
-                        const calendarInfo = user.calendar.find(c => c.id === conferenceId);
-                        // Construct base message with conference and calendar details
-                        const baseMessage = `Update for conference "${updatedConference.conference.title}" (Added to calendar at ${calendarInfo?.createdAt.toString().substring(0, 10) ?? 'N/A'}):\n`;
+            for (const userId of potentiallyAffectedUserIds) {
+                 if (notifiedUserIds.has(userId)) continue; // Already processed this user
 
-                        if (shouldSendUpdateConferenceNotification(user, "Conference Update")) {
-                            const calendarNotification: Notification = {
-                                id: uuidv4(),
-                                conferenceId: conferenceId,
-                                createdAt: now,
-                                isImportant: true,
-                                seenAt: null,
-                                deletedAt: null,
-                                message: baseMessage + detailedMessage, // Combine base and detailed
-                                type: 'Conference Update',
-                            };
+                 const userIndex = users.findIndex(u => u.id === userId);
+                 if (userIndex === -1) continue; // User not found
 
-                            if (!user.notifications) {
-                                user.notifications = [];
-                            }
-                            user.notifications.push(calendarNotification);
+                 const user = users[userIndex];
 
-                            const userSocket = connectedUsers.get(user.id);
-                            if (userSocket) {
-                                userSocket.emit('notification', calendarNotification);
-                            }
+                 // Check if user wants *any* conference update notifications
+                 if (shouldGenerateConferenceUpdateNotification(user)) {
+                    const userSettings: Setting = { ...defaultUserSettings, ...(user.setting || {}) };
+                    const preferredChannels = userSettings.notificationThrough || defaultUserSettings.notificationThrough;
+
+                    // Construct notification message (consider adding context like 'followed' or 'in calendar')
+                    let context = '';
+                    if (updatedConference.followedBy?.some(f => f.id === userId)) context += '(following)';
+                    if (user.calendar?.some(c => c.id === conferenceId)) context += (context ? ' & in calendar' : '(in calendar)');
+
+                    const notificationMessage = `Update for "${updatedConference.conference.title}" ${context}:\n${detailedChangeMessage.trim()}`;
+
+                    const notification: Notification = {
+                        id: uuidv4(), conferenceId: conferenceId, createdAt: now, isImportant: true, // Updates are likely important
+                        seenAt: null, deletedAt: null, message: notificationMessage, type: 'Conference Update',
+                    };
+
+                     console.log(` -> User ${userId}: Preparing notification via [${preferredChannels}].`);
+
+                    // Send via SYSTEM if preferred
+                    if (preferredChannels === 'System' || preferredChannels === 'All') {
+                        if (!users[userIndex].notifications) users[userIndex].notifications = [];
+                        users[userIndex].notifications.push(notification);
+                        usersModified = true; // Mark for saving
+                        console.log(`   - System notification added for user ${userId}`);
+
+                        const userSocket = connectedUsers.get(userId);
+                        if (userSocket) {
+                            userSocket.emit('notification', notification);
+                            console.log(`   - Real-time notification emitted to user ${userId}`);
                         }
                     }
-                });
 
+                    // Send via EMAIL if preferred
+                    if (preferredChannels === 'Email' || preferredChannels === 'All') {
+                        console.log(`   - Attempting email notification for user ${userId}`);
+                        try {
+                            await emailService.sendConferenceUpdateEmail({
+                                recipientUser: user,
+                                conference: updatedConference,
+                                changeDetails: detailedChangeMessage.trim() // Pass trimmed changes
+                            });
+                        } catch (emailError) {
+                             console.error(`   - Email sending failed for user ${userId} (error logged in emailService).`);
+                        }
+                    }
+
+                    notifiedUserIds.add(userId); // Mark user as notified for this update cycle
+                 } else {
+                      console.log(` -> User ${userId}: Notification suppressed by settings.`);
+                 }
+            } // End loop through potentially affected users
+
+            // Save modified user data ONCE if needed
+            if (usersModified) {
                 await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
-                console.log("Update new conference details successfully!");
-
-
-                return res.status(200).json({ message: 'Conference details updated successfully. Notifications sent.' });
-            } else {
-                console.log("No changes detected in conference details.")
-                return res.status(200).json({ message: 'Conference details updated. No changes detected.' });
+                console.log("User notifications updated and saved.");
             }
+
+            return res.status(200).json({ message: 'Conference details updated successfully. Notifications processed.' });
         }
     } catch (error: any) {
-        console.error('Error saving/updating conference details:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error('Error in saveConferenceDetails handler:', error);
+        res.status(500).json({ message: 'Internal server error during save/update.' });
     }
 };

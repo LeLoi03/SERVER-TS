@@ -150,7 +150,7 @@ app.get('/api/v1/visualization/conference', getVisualizationData)
 
  
 import cron from 'node-cron';
-cron.schedule('*/60 * * * *', checkUpcomingConferenceDates);
+cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
 
 /////////////////////////////////////////////////////////////////////
 import pkg from 'pg';

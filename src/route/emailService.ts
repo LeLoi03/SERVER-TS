@@ -3,6 +3,7 @@ import * as brevo from '@getbrevo/brevo'; // <<< Sử dụng import này nhất 
 import 'dotenv/config';
 import { UserResponse } from '../types/user.response';
 import { ConferenceResponse } from '../types/conference.response';
+import { ImportantDate } from '../types/conference.response';
 
 
 // --- Kiểm tra biến môi trường NGAY TỪ ĐẦU ---
@@ -279,6 +280,139 @@ export const sendBlacklistNotificationEmail = async (params: BlacklistNotificati
         console.log(`Blacklist Action Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
     } catch (error: any) {
         console.error(`Error sending blacklist action email to ${recipientUser.email} via Brevo:`);
+        if (error.response) {
+            console.error('Status:', error.response.status);
+            console.error('Body:', error.response.body || error.response.text);
+        } else {
+            console.error('Error Message:', error.message);
+        }
+        // Log error, but don't throw
+    }
+};
+
+// --- NEW: Function to send Upcoming Event Notification Email ---
+
+interface UpcomingEventEmailParams {
+    recipientUser: UserResponse;
+    conference: ConferenceResponse; // Pass the whole conference for title
+    importantDate: ImportantDate;   // Pass the specific date object
+    hoursBefore?: number; // Optional: For more specific messaging
+}
+
+export const sendUpcomingEventEmail = async (params: UpcomingEventEmailParams): Promise<void> => {
+    const { recipientUser, conference, importantDate, hoursBefore } = params;
+
+    // --- Validate Inputs ---
+    if (!importantDate || !importantDate.fromDate) {
+        console.warn(`Upcoming event email skipped for user ${recipientUser.email}: Missing date information.`);
+        return;
+    }
+
+    // --- Determine Subject and Content ---
+    const conferenceTitle = conference.conference.title || `Conference ID ${conference.conference.id}`;
+    const eventName = importantDate.name || 'An important date';
+    const eventDateStr = new Date(importantDate.fromDate).toLocaleDateString(undefined, { // Format date nicely
+        year: 'numeric', month: 'long', day: 'numeric', /* timeZone: 'UTC' // Specify timezone if needed */
+    });
+    const eventTimeStr = new Date(importantDate.fromDate).toLocaleTimeString(undefined, { // Format time nicely
+        hour: '2-digit', minute: '2-digit', /* timeZone: 'UTC' */
+    });
+    const recipientName = recipientUser.firstName || 'User';
+
+    // Basic subject and content, can be enhanced with hoursBefore
+    let subject = `Upcoming: ${eventName} for ${conferenceTitle}`;
+    let timeQualifier = `on ${eventDateStr} at ${eventTimeStr}`;
+    if (hoursBefore !== undefined) {
+        if (hoursBefore <= 1) {
+            subject = `Reminder (1 Hour): ${eventName} for ${conferenceTitle}`;
+            timeQualifier = `starting in about 1 hour (${eventTimeStr})`;
+        } else if (hoursBefore <= 24) {
+             subject = `Reminder (24 Hours): ${eventName} for ${conferenceTitle}`;
+             timeQualifier = `starting tomorrow (${eventDateStr} at ${eventTimeStr})`;
+        }
+        // Add more conditions if needed (e.g., 48 hours)
+    }
+
+
+    const htmlContent = `
+        <html><body>
+            <h1>Hi ${recipientName},</h1>
+            <p>This is a reminder about an upcoming event for the conference <strong>"${conferenceTitle}"</strong>:</p>
+            <p style="font-size: 1.1em; margin-left: 20px;">
+                <strong>Event:</strong> ${eventName}<br/>
+                <strong>Date:</strong> ${timeQualifier}
+            </p>
+            <p>You can view more details in the app.</p>
+            <br/><p>Thanks,</p><p>The Your App Name Team</p>
+        </body></html>
+    `;
+
+    // --- Prepare and Send Email ---
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
+    sendSmtpEmail.sender = { name: senderName, email: senderEmail };
+    sendSmtpEmail.to = [{ email: recipientUser.email, name: recipientName }];
+
+    try {
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log(`Upcoming Event Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
+    } catch (error: any) {
+        console.error(`Error sending upcoming event email to ${recipientUser.email} via Brevo:`);
+        if (error.response) {
+            console.error('Status:', error.response.status);
+            console.error('Body:', error.response.body || error.response.text);
+        } else {
+            console.error('Error Message:', error.message);
+        }
+        // Log error, but don't throw to avoid stopping the cron job
+    }
+};
+
+
+
+// --- NEW: Function to send Conference Update Notification Email ---
+
+interface ConferenceUpdateEmailParams {
+    recipientUser: UserResponse;
+    conference: ConferenceResponse; // Updated conference data for title etc.
+    changeDetails: string;       // The pre-formatted string detailing changes
+}
+
+export const sendConferenceUpdateEmail = async (params: ConferenceUpdateEmailParams): Promise<void> => {
+    const { recipientUser, conference, changeDetails } = params;
+
+    // --- Determine Subject and Content ---
+    const conferenceTitle = conference.conference.title || `Conference ID ${conference.conference.id}`;
+    const recipientName = recipientUser.firstName || 'User';
+
+    // Convert newline characters in changeDetails to <br> tags for HTML email
+    const changesHtml = changeDetails.replace(/\n/g, '<br/>');
+
+    const subject = `Update for Conference: ${conferenceTitle}`;
+    const htmlContent = `
+        <html><body>
+            <h1>Hi ${recipientName},</h1>
+            <p>There has been an update to the conference <strong>"${conferenceTitle}"</strong> that you are following or have added to your calendar.</p>
+            <h2>Changes:</h2>
+            <div style="background-color: #f8f8f8; border-left: 4px solid #ccc; padding: 10px; margin-bottom: 15px; font-family: monospace; white-space: pre-wrap;">${changesHtml}</div>
+            <p>You can view the latest details in the app.</p>
+            <br/><p>Thanks,</p><p>The Your App Name Team</p>
+        </body></html>
+    `;
+
+    // --- Prepare and Send Email ---
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
+    sendSmtpEmail.sender = { name: senderName, email: senderEmail };
+    sendSmtpEmail.to = [{ email: recipientUser.email, name: recipientName }];
+
+    try {
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log(`Conference Update Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
+    } catch (error: any) {
+        console.error(`Error sending conference update email to ${recipientUser.email} via Brevo:`);
         if (error.response) {
             console.error('Status:', error.response.status);
             console.error('Body:', error.response.body || error.response.text);

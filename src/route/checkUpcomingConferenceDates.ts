@@ -1,148 +1,186 @@
+// src/jobs/upcomingEventsChecker.ts (or wherever this function lives)
+
 import 'dotenv/config';
 import path from 'path';
 import fs from 'fs';
-
-
-import { UserResponse } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response';
-import { Notification } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
-import { connectedUsers } from '../server-ts';
+
+// Import types and services
+import { UserResponse, Notification, Setting, defaultUserSettings } from '../types/user.response'; // Import Setting/default
+import { ConferenceResponse, ImportantDate } from '../types/conference.response';
+import { connectedUsers } from '../server-ts'; // Adjust path if needed
+import * as emailService from './emailService'; // Import email service
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 
-// --- Scheduled Task (using node-cron) ---
+// --- Helper Function Renamed & Updated (using defaults) ---
+// Checks IF a notification EVENT should be generated based on master/specific toggles
+function shouldGenerateUpcomingEventNotification(user: UserResponse | undefined): boolean {
+    if (!user) return false;
 
-// Helper Function: shouldSendUpcomingEventNotification
-function shouldSendUpcomingEventNotification(user: UserResponse): boolean {
-    const settings = user.setting;
-    // console.log(`Checking settings for user ${user.id}:`, settings); // Log user settings
-    if (!settings) {
-        // console.log(`User ${user.id} has no settings.  Not sending notification.`);
-        return false;
-    }
+    const settings: Setting = { ...defaultUserSettings, ...(user.setting || {}) }; // Merge with defaults
 
     if (settings.receiveNotifications === false) {
-        // console.log(`User ${user.id} has receiveNotifications disabled. Not sending notification.`);
-        return false;
+        return false; // Master switch off
     }
+
+    // Check specific toggle for upcoming events
     if (settings.upComingEvent === false) {
-        // console.log(`User ${user.id} has upComingEvent disabled. Not sending notification.`);
         return false;
     }
-    // console.log(`User ${user.id} settings allow upcoming event notifications.`);
-    return true;
+
+    return true; // Checks passed, event can be generated.
 }
 
 export async function checkUpcomingConferenceDates() {
-    // console.log('--- Starting checkUpcomingConferenceDates ---');
+    console.log(`[${new Date().toISOString()}] Starting checkUpcomingConferenceDates job...`);
+    let usersModified = false; // Flag to track if users file needs saving
+
     try {
         const [userData, conferenceData] = await Promise.all([
-            fs.promises.readFile(userFilePath, 'utf-8').catch(err => {
-                console.error("Error reading user file:", err);
-                throw err; // Re-throw to be caught by the outer catch
-            }),
-            fs.promises.readFile(conferenceDetailsFilePath, 'utf-8').catch(err => {
-                console.error("Error reading conference file:", err);
-                throw err;
-            }),
+            fs.promises.readFile(userFilePath, 'utf-8'),
+            fs.promises.readFile(conferenceDetailsFilePath, 'utf-8'),
         ]);
 
-        // console.log('Successfully read user and conference data.');
-
-        const users: UserResponse[] = JSON.parse(userData);
+        // Use 'let' to allow modification of user notification arrays
+        let users: UserResponse[] = JSON.parse(userData);
         const conferences: ConferenceResponse[] = JSON.parse(conferenceData);
 
         const now = new Date();
-        // console.log('Current time:', now.toISOString());
 
         for (const conference of conferences) {
-            // console.log(`Checking conference: ${conference.conference.title} (ID: ${conference.conference.id})`);
-            // Check if dates exist and are an array
-            if (conference.dates && Array.isArray(conference.dates)) {
-                for (const date of conference.dates) {
-                    // Check if fromDate exists
-                    if (date && date.fromDate) {
-                        const startDate = new Date(date.fromDate);
-                        const timeDiffMs = startDate.getTime() - now.getTime();
-                        const hoursBefore = timeDiffMs / (1000 * 60 * 60);
+            if (!conference.dates || !Array.isArray(conference.dates)) continue; // Skip if no dates
 
-                        // console.log(`  Checking date: ${date.name} (ID: ${date.id}), Start Date: ${startDate.toISOString()}, Hours Before: ${hoursBefore.toFixed(2)}`);
+            for (const date of conference.dates) {
+                // Skip if date is null or fromDate is missing
+                if (!date || !date.fromDate) continue;
 
-                        // Example: Notify 24 hours and 1 hour before. Adjust as needed.
-                        if ((hoursBefore > 5 && hoursBefore <= 96) || (hoursBefore > 0.9 && hoursBefore <= 1)) {
-                            // console.log(`    Date is within notification window.`);
+                const startDate = new Date(date.fromDate);
+                const timeDiffMs = startDate.getTime() - now.getTime();
+                const hoursBefore = timeDiffMs / (1000 * 60 * 60);
 
-                            // Find users following this conference.
-                            if (conference.followedBy) {
-                                // console.log(`    Conference has ${conference.followedBy.length} followers.`);
-                                for (const follower of conference.followedBy) {
-                                    const user = users.find(u => u.id === follower.id);
+                // Define notification windows (e.g., ~24h, ~1h)
+                // Adjust ranges slightly to avoid missing exact times due to cron schedule jitter
+                const notify24h = hoursBefore > 2 && hoursBefore <= 96; // Around 24 hours before
+                const notify1h = hoursBefore > 0.9 && hoursBefore <= 1.1;   // Around 1 hour before
 
-                                    if (user) {
-                                        // console.log(`    Checking follower: ${user.firstName} ${user.lastName} (ID: ${user.id})`);
+                // Add more windows if needed (e.g., 48h)
+                // const notify48h = hoursBefore > 47.9 && hoursBefore <= 48.1;
 
-                                        if (shouldSendUpcomingEventNotification(user)) {
-                                            const notificationMessage = `Upcoming event in conference "${conference.conference.title}": ${date.name || 'Event'} on ${date.fromDate.toString().substring(0, 10)}`; console.log(`      Sending notification to user ${user.id}: ${notificationMessage}`);
+                if (notify24h || notify1h /* || notify48h */) {
+                    console.log(`[Upcoming Event] Found relevant date: ${date.name || 'Event'} in "${conference.conference.title}" (${hoursBefore.toFixed(1)}h)`);
 
-                                            const notification: Notification = {
-                                                id: uuidv4(),
-                                                conferenceId: conference.conference.id,
-                                                createdAt: new Date().toISOString(),
-                                                isImportant: true, // Mark as important
-                                                seenAt: null,
-                                                deletedAt: null,
-                                                message: notificationMessage,
-                                                type: 'Upcoming Conference',
-                                            };
+                    if (!conference.followedBy || conference.followedBy.length === 0) continue; // Skip if no followers
 
-                                            if (!user.notifications) {
-                                                user.notifications = [];
-                                            }
-                                            user.notifications.push(notification);
+                    for (const follower of conference.followedBy) {
+                        const userIndex = users.findIndex(u => u.id === follower.id);
+                        if (userIndex === -1) continue; // Follower not found in current user list
 
-                                            // Send real-time notification.
-                                            const userSocket = connectedUsers.get(user.id);
-                                            if (userSocket) {
-                                                // console.log(`        Sending real-time notification to user ${user.id}`);
-                                                userSocket.emit('notification', notification);
-                                            } else {
-                                                // console.log(`        User ${user.id} is not currently connected.`);
-                                            }
-                                        } else {
-                                            // console.log(`      User ${user.id} does not meet notification criteria.`);
-                                        }
-                                    } else {
-                                        // console.log(`    Follower with ID ${follower.id} not found in users.`);
-                                    }
-                                }
-                            } else {
-                                console.log('    Conference has no followers.');
+                        const user = users[userIndex]; // Get user reference from the main array
+
+                        // Check if this user should get *any* notification for upcoming events
+                        if (shouldGenerateUpcomingEventNotification(user)) {
+                            const userSettings: Setting = { ...defaultUserSettings, ...(user.setting || {}) };
+                            const preferredChannels = userSettings.notificationThrough || defaultUserSettings.notificationThrough;
+
+                            // Check if this specific notification was already sent recently (prevent duplicates if cron runs often)
+                            // Basic check: Look for a similar notification in the last N hours (e.g., 6 hours)
+                            const sixHoursAgo = new Date(now.getTime() - 6 * 60 * 60 * 1000).toISOString();
+                            const alreadyNotified = user.notifications?.some(n =>
+                                n.type === 'Upcoming Conference' &&
+                                n.conferenceId === conference.conference.id &&
+                                // Check message content loosely using optional chaining for fromDate
+                                // If date.fromDate is null, date.fromDate?.substring(...) becomes undefined.
+                                // The nullish coalescing operator (|| '') provides an empty string fallback
+                                // if both date.name and the substring result are null/undefined.
+                                n.message.includes(date.name || date.fromDate?.substring(0, 10) || '') &&
+                                n.createdAt > sixHoursAgo
+                            );
+
+                            if (alreadyNotified) {
+                                console.log(` -> User ${user.id}: Already notified recently. Skipping.`);
+                                continue; // Skip if already notified recently
                             }
 
-                            //Write to file  //MOVED INSIDE THE DATE/USER LOOP
-                            // console.log("    Writing updated data to files...");
-                            await Promise.all([
-                                fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8'),
-                                fs.promises.writeFile(conferenceDetailsFilePath, JSON.stringify(conferences, null, 2), 'utf-8')
-                            ]).then(() => console.log("    Data written to files successfully."))
-                                .catch(err => console.error("    Error writing to files:", err));
+                            // --- Create Notification Object ---
+                            let notificationMessage = `Upcoming: ${date.name || 'Event'} in "${conference.conference.title}"`;
+                            if (notify1h) notificationMessage += ` starting soon (~1 hour)`;
+                            else if (notify24h) notificationMessage += ` starting tomorrow`;
+                            // Add date/time for clarity
+                            notificationMessage += ` (${new Date(date.fromDate).toLocaleDateString()} ${new Date(date.fromDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`;
 
+
+                            const notification: Notification = {
+                                id: uuidv4(),
+                                conferenceId: conference.conference.id,
+                                createdAt: now.toISOString(), // Use consistent timestamp
+                                isImportant: true, // Mark as important
+                                seenAt: null,
+                                deletedAt: null,
+                                message: notificationMessage,
+                                type: 'Upcoming Conference',
+                            };
+
+                            console.log(` -> User ${user.id}: Preparing notification via [${preferredChannels}].`);
+
+                            // --- Dispatch based on channel preference ---
+
+                            // Send via SYSTEM if preferred
+                            if (preferredChannels === 'System' || preferredChannels === 'All') {
+                                // IMPORTANT: Modify the user object directly in the 'users' array
+                                if (!users[userIndex].notifications) {
+                                    users[userIndex].notifications = [];
+                                }
+                                users[userIndex].notifications.push(notification);
+                                usersModified = true; // Mark that file needs saving
+                                console.log(`   - System notification added for user ${user.id}`);
+
+                                // Send real-time via Socket.IO
+                                const userSocket = connectedUsers.get(user.id);
+                                if (userSocket) {
+                                    userSocket.emit('notification', notification);
+                                    console.log(`   - Real-time notification emitted to user ${user.id}`);
+                                }
+                            }
+
+                            // Send via EMAIL if preferred
+                            if (preferredChannels === 'Email' || preferredChannels === 'All') {
+                                console.log(`   - Attempting email notification for user ${user.id}`);
+                                try {
+                                    // Pass relevant info to email service
+                                    await emailService.sendUpcomingEventEmail({
+                                        recipientUser: user,
+                                        conference: conference,
+                                        importantDate: date,
+                                        hoursBefore: hoursBefore // Pass hours for potentially better email content
+                                    });
+                                    // No need to modify users array for email, service handles it
+                                } catch (emailError) {
+                                    // Error is already logged in the service
+                                    console.error(`   - Email sending failed for user ${user.id} (error logged in emailService).`);
+                                }
+                            }
                         } else {
-                            // console.log('    Date is not within notification window.');
+                            console.log(` -> User ${user.id}: Notification suppressed by settings.`);
                         }
-                    } else {
-                        // console.log('    Date or fromDate is missing for a conference date.');
-                    }
-                }
-            } else {
-                // console.log('    Conference dates are missing or not an array.');
-            }
+                    } // End follower loop
+                } // End if (notify24h || notify1h)
+            } // End date loop
+        } // End conference loop
+
+        // --- Save User Data **ONCE** if modifications were made ---
+        if (usersModified) {
+            console.log(`[${new Date().toISOString()}] Saving modified user data...`);
+            await fs.promises.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf-8');
+            console.log(`[${new Date().toISOString()}] User data saved.`);
+        } else {
+            console.log(`[${new Date().toISOString()}] No user modifications detected, skipping save.`);
         }
-        // console.log('--- Finished checkUpcomingConferenceDates ---');
+
+        console.log(`[${new Date().toISOString()}] Finished checkUpcomingConferenceDates job.`);
 
     } catch (error) {
-        console.error('Error in checkUpcomingConferenceDates:', error);
+        console.error(`[${new Date().toISOString()}] FATAL ERROR in checkUpcomingConferenceDates:`, error);
     }
 }

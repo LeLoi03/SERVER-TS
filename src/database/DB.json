@@ -789,6 +789,148 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "Offline",
       "status": "pending"
+    },
+    {
+      "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "title": "Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+      "acronym": "CAADRIA",
+      "location": {
+        "cityStateProvince": "Tokyo",
+        "country": "Japan",
+        "address": "Tokyo",
+        "continent": "Asia"
+      },
+      "rank": "C",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Applied computing",
+        "Applied computing",
+        "Applied computing",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Networks",
+        "Architectural Informatics",
+        "Building Information Modeling (BIM)",
+        "City Information Modeling (CIM)",
+        "Computational Design",
+        "Digital Fabrication"
+      ],
+      "dates": {
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.caadria2025.org/",
+      "createdAt": "2025-03-23T10:26:38.337Z",
+      "updatedAt": "2025-03-23T10:26:38.337Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "49d19de1-49f8-4681-9219-a2b85d465f9f",
+      "title": "International Conference on Agents and Artificial Intelligence",
+      "acronym": "ICAART",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-28T14:52:50.751Z",
+        "toDate": "2025-03-28T14:52:50.751Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-23T10:27:09.132Z",
+      "updatedAt": "2025-03-23T10:27:09.132Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "0e468fb7-7573-417a-817d-f86c78596846",
+      "title": "International Joint Conference CAAP/FASE on Theory and Practice of Software Development",
+      "acronym": "TAPSOFT",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "C",
+      "source": "CORE2018",
+      "year": 2025,
+      "researchFields": [
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-28T14:52:50.743Z",
+        "toDate": "2025-03-28T14:52:50.743Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-25T13:00:34.987Z",
+      "updatedAt": "2025-03-25T13:00:34.987Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
+    },
+    {
+      "id": "6ada813c-8996-4a20-bff4-6132d58da88e",
+      "title": "Workshop on Combinatorial and Algorithmic Aspects of Networking",
+      "acronym": "CAAN",
+      "location": {
+        "cityStateProvince": "",
+        "country": "",
+        "address": "",
+        "continent": ""
+      },
+      "rank": "B",
+      "source": "CORE2017",
+      "year": 2025,
+      "researchFields": [
+        "UNDEFINED"
+      ],
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-28T14:52:50.751Z",
+        "toDate": "2025-03-28T14:52:50.751Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "",
+      "createdAt": "2025-03-25T13:00:54.305Z",
+      "updatedAt": "2025-03-25T13:00:54.305Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "",
+      "status": "pending"
     }
   ],
   "meta": {
@@ -797,6 +939,6 @@
     "totalPage": 1,
     "prevPage": null,
     "nextPage": null,
-    "totalItems": 2
+    "totalItems": 4
   }
 }

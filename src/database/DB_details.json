@@ -551,6 +551,15 @@
         "lastName": "Loi",
         "createdAt": "2025-03-27T05:14:54.579Z",
         "updatedAt": "2025-03-27T05:14:54.579Z"
+      },
+      {
+        "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+        "email": "loicute5fps@gmail.com",
+        "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-28T14:51:06.943Z",
+        "updatedAt": "2025-03-28T14:51:06.943Z"
       }
     ],
     "feedBacks": []
@@ -880,6 +889,303 @@
     "followBy": [],
     "feedbacks": [],
     "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "title": "Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+      "acronym": "CAADRIA",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:38.337Z",
+      "updatedAt": "2025-03-23T10:26:38.337Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "f060a646-3ca5-4640-b4ab-70df721acda7",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
+      "publisher": "",
+      "summerize": "CAADRIA 2025, with the theme of 'Architectural Informatics,' reexamines the fundamental existence of architecture in the age of information technology. The conference is scheduled to be held in Tokyo from March 22-29, 2025. It invites original high-quality papers presenting current computer-aided architectural design research, accommodating a broad spectrum of approaches ranging from speculative, informal investigations to conventional scientific research.",
+      "callForPaper": "CAADRIA 2025 invites original high-quality papers presenting current computer-aided architectural design research. Topics of interest include:\n\n*   Artificial intelligence, neural networks and machine learning\n*   Building Information Modeling (BIM)\n*   City Information Modeling (CIM)\n*   Collective, collaborative & interdisciplinary design\n*   Computational design research & education\n*   Design cognition and human-computer interaction\n*   Disrupted practices, resilience, and social sustainability\n*   Environmental and ecological performance\n*   Generative, algorithmic & evolutionary design\n*   Digital Heritage\n*   Interactive environments\n*   Material systems, processes and assembly\n*   Practice-based design research\n*   Robotics, digital fabrication and construction\n*   Simulation, visualization and impact projection\n*   Theory, philosophy & methodology of computational design research\n*   Urban analytics, big data analysis and smart cities\n*   AR / VR / XR\n*   Application of technology in the context of the Asia-Pacific Region\n\nPaper acceptance is subject to a two-stage reviewing process. CAADRIA 2025 also offers opportunities to submit a poster for the project exhibition, and Master’s and PhD students are invited to apply to present their research at the Postgraduate Student Consortium.",
+      "link": "https://www.caadria2025.org/",
+      "cfpLink": "https://www.caadria2025.org/call-for-papers",
+      "impLink": "https://www.caadria2025.org/timeline",
+      "createdAt": "2025-03-25T11:48:14.692Z",
+      "updatedAt": "2025-03-25T11:48:14.692Z",
+      "topics": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Networks",
+        "Architectural Informatics",
+        "Building Information Modeling (BIM)",
+        "City Information Modeling (CIM)",
+        "Computational Design",
+        "Digital Fabrication"
+      ]
+    },
+    "location": {
+      "id": "f2f4b68c-83bf-4c1f-a9a5-018a52ccd849",
+      "createdAt": "2025-03-25T11:48:14.723Z",
+      "updatedAt": "2025-03-25T11:48:14.723Z",
+      "isAvailable": true,
+      "organizeId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+      "cityStateProvince": "Tokyo",
+      "country": "Japan",
+      "address": "Tokyo",
+      "continent": "Asia"
+    },
+    "dates": [
+      {
+        "id": "1e050508-86fb-45a7-bb7e-d0bd497244b9",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-29T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Post Conference Tour",
+        "createdAt": "2025-03-25T11:48:14.760Z",
+        "updatedAt": "2025-03-25T11:48:14.760Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4ae86081-cf6b-4b34-a2ab-b78e064fd7b3",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-28T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Conference Dinner",
+        "createdAt": "2025-03-25T11:48:14.759Z",
+        "updatedAt": "2025-03-25T11:48:14.759Z",
+        "isAvailable": true
+      },
+      {
+        "id": "02d1f071-1fc5-4c0b-9860-59d9407d5db5",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-26T00:00:00.000Z",
+        "toDate": "2025-03-28T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Keynote speeches and paper presentations",
+        "createdAt": "2025-03-25T11:48:14.757Z",
+        "updatedAt": "2025-03-25T11:48:14.757Z",
+        "isAvailable": true
+      },
+      {
+        "id": "2eedd4ef-8229-489d-9d6b-8f5adc3dce9b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-25T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Workshop",
+        "createdAt": "2025-03-25T11:48:14.756Z",
+        "updatedAt": "2025-03-25T11:48:14.756Z",
+        "isAvailable": true
+      },
+      {
+        "id": "571656b0-8b48-424d-a860-77167a796f0b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-20T00:00:00.000Z",
+        "toDate": "2025-03-21T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Student Review of Architectural Informatics Society",
+        "createdAt": "2025-03-25T11:48:14.754Z",
+        "updatedAt": "2025-03-25T11:48:14.754Z",
+        "isAvailable": true
+      },
+      {
+        "id": "23851e8d-51d6-407b-8c81-1cb191658548",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Deadline for WS application for participants",
+        "createdAt": "2025-03-25T11:48:14.752Z",
+        "updatedAt": "2025-03-25T11:48:14.752Z",
+        "isAvailable": true
+      },
+      {
+        "id": "d07a67d7-77cc-47e8-ba19-26e9b02a4ea6",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-09T00:00:00.000Z",
+        "toDate": "2025-01-09T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "WS application opening for participants",
+        "createdAt": "2025-03-25T11:48:14.750Z",
+        "updatedAt": "2025-03-25T11:48:14.750Z",
+        "isAvailable": true
+      },
+      {
+        "id": "af512f8d-4a7a-4dde-8d8f-83478cdf745a",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-31T00:00:00.000Z",
+        "toDate": "2025-01-31T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Project Exhibition notification of acceptance",
+        "createdAt": "2025-03-25T11:48:14.748Z",
+        "updatedAt": "2025-03-25T11:48:14.748Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6a3d55cd-e500-405e-866e-fe9f0eadc919",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-01T00:00:00.000Z",
+        "toDate": "2025-01-01T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Full paper acceptance notification",
+        "createdAt": "2025-03-25T11:48:14.746Z",
+        "updatedAt": "2025-03-25T11:48:14.746Z",
+        "isAvailable": true
+      },
+      {
+        "id": "565e4ccc-2b21-401c-bf60-6ab83bdb70dd",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-10-01T00:00:00.000Z",
+        "toDate": "2024-10-01T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Abstract acceptance notification",
+        "createdAt": "2025-03-25T11:48:14.745Z",
+        "updatedAt": "2025-03-25T11:48:14.745Z",
+        "isAvailable": true
+      },
+      {
+        "id": "22d7a79e-c280-4fb9-bc6f-feba501b0c0f",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-20T00:00:00.000Z",
+        "toDate": "2025-01-20T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Camera-ready Full paper submission deadline",
+        "createdAt": "2025-03-25T11:48:14.743Z",
+        "updatedAt": "2025-03-25T11:48:14.743Z",
+        "isAvailable": true
+      },
+      {
+        "id": "96299cbb-85af-4943-b8c9-f0643a70a9b8",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-15T00:00:00.000Z",
+        "toDate": "2025-01-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "PGSC candidature submission",
+        "createdAt": "2025-03-25T11:48:14.741Z",
+        "updatedAt": "2025-03-25T11:48:14.741Z",
+        "isAvailable": true
+      },
+      {
+        "id": "532e69e5-8dcc-44c9-bec2-7e3498d76e1b",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-01-15T00:00:00.000Z",
+        "toDate": "2025-01-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Project Exhibition submission deadline",
+        "createdAt": "2025-03-25T11:48:14.739Z",
+        "updatedAt": "2025-03-25T11:48:14.739Z",
+        "isAvailable": true
+      },
+      {
+        "id": "a5afbc2b-601a-4d6d-bd68-a9f9698fd584",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-11-24T00:00:00.000Z",
+        "toDate": "2024-11-24T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full paper submission deadline",
+        "createdAt": "2025-03-25T11:48:14.736Z",
+        "updatedAt": "2025-03-25T11:48:14.736Z",
+        "isAvailable": true
+      },
+      {
+        "id": "617c0120-26f3-4e71-81bb-1575d7fa8298",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-11-07T00:00:00.000Z",
+        "toDate": "2024-11-07T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Deadline of workshop proposals",
+        "createdAt": "2025-03-25T11:48:14.733Z",
+        "updatedAt": "2025-03-25T11:48:14.733Z",
+        "isAvailable": true
+      },
+      {
+        "id": "7b9a67ee-b049-46bd-99fa-84358423023f",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2024-08-27T00:00:00.000Z",
+        "toDate": "2024-08-27T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstract submission deadline",
+        "createdAt": "2025-03-25T11:48:14.731Z",
+        "updatedAt": "2025-03-25T11:48:14.731Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3739a764-8d06-42e7-bfc3-f5585871b966",
+        "organizedId": "f060a646-3ca5-4640-b4ab-70df721acda7",
+        "fromDate": "2025-03-22T00:00:00.000Z",
+        "toDate": "2025-03-29T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-25T11:48:14.728Z",
+        "updatedAt": "2025-03-25T11:48:14.728Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2021",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2020",
+        "fieldOfResearch": "Applied computing"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+        "email": "loicute5fps@gmail.com",
+        "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-28T14:52:50.699Z",
+        "updatedAt": "2025-03-28T14:52:50.699Z"
+      }
+    ],
     "feedBacks": []
   }
 ]
