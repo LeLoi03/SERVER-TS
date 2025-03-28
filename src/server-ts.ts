@@ -171,24 +171,24 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận dữ liệu từ form HTML
 
-// Database connection
-const pool = new Pool({
-    user: process.env.DB_USER || "postgres",
-    host: process.env.DB_HOST || "localhost",
-    database: process.env.DB_NAME || "Conferences",
-    password: process.env.DB_PASSWORD || "123456",
-    port: parseInt(process.env.DB_PORT || "5432"),
-});
+// // Database connection
+// const pool = new Pool({
+//     user: process.env.DB_USER || "postgres",
+//     host: process.env.DB_HOST || "localhost",
+//     database: process.env.DB_NAME || "Conferences",
+//     password: process.env.DB_PASSWORD || "123456",
+//     port: parseInt(process.env.DB_PORT || "5432"),
+// });
 
-// Test database connection
-pool.connect()
-    .then(client => {
-        console.log('Successfully connected to the database!');
-        client.release();
-    })
-    .catch(err => {
-        console.error('Error connecting to the database:', err);
-    });
+// // Test database connection
+// pool.connect()
+//     .then(client => {
+//         console.log('Successfully connected to the database!');
+//         client.release();
+//     })
+//     .catch(err => {
+//         console.error('Error connecting to the database:', err);
+//     });
 
 
 
@@ -222,10 +222,10 @@ const nonStreamChatHandler: RequestHandler = async (req, res) => {
         logToFile(`/api/non-stream-chat: chatResponse = ${JSON.stringify(chatResponse)}`);
 
         if (chatResponse.type === 'chart') {
-            const sqlResult = await pool.query(chatResponse.sqlQuery);
-            logToFile(`/api/non-stream-chat: SQL Result = ${JSON.stringify(sqlResult.rows)}`);
-            res.json({ type: 'chart', echartsConfig: chatResponse.echartsConfig, sqlResult: sqlResult.rows, description: chatResponse.description });
-            // ADDED RETURN
+            // const sqlResult = await pool.query(chatResponse.sqlQuery);
+            // logToFile(`/api/non-stream-chat: SQL Result = ${JSON.stringify(sqlResult.rows)}`);
+            // res.json({ type: 'chart', echartsConfig: chatResponse.echartsConfig, sqlResult: sqlResult.rows, description: chatResponse.description });
+            // // ADDED RETURN
         } else if (chatResponse.type === 'text') {
             res.json({ type: 'text', message: chatResponse.message });
             return; // ADDED RETURN
