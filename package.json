@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@getbrevo/brevo": "^2.2.0",
     "@google/generative-ai": "^0.23.0",
     "@types/webaudioapi": "^0.0.27",
     "cors": "^2.8.5",

@@ -18,9 +18,9 @@ export type UserResponse = {
   notifications?: Notification[];
   blacklist?: Blacklist[]; // <-- ADD THIS LINE
   setting?: Setting;
-  isVerified?: boolean;
-  verificationToken?: string | null;
-  verificationTokenExpires?: string | null;
+  isVerified: boolean;             // Trạng thái xác thực
+  verificationCode?: string | null; // Mã xác thực (có thể null)
+  verificationCodeExpires?: string | null; // Thời gian hết hạn mã (ISO string, có thể null)
   createdAt: string;
   updatedAt: string;
 }

@@ -30,41 +30,6 @@
     "updatedAt": "2023-01-20T10:00:00Z"
   },
   {
-    "id": "b9339c1f-4976-4afc-a57f-e838691739a2",
-    "firstName": "Le",
-    "lastName": "Loi",
-    "email": "loicute5fps@gmail.com",
-    "password": "12345678",
-    "dob": "",
-    "role": "user",
-    "followedConferences": [],
-    "myConferences": [],
-    "calendar": [],
-    "feedBacks": [],
-    "notifications": [],
-    "createdAt": "2025-03-26T05:33:27.943Z",
-    "updatedAt": "2025-03-26T05:33:27.943Z",
-    "avatar": "",
-    "aboutme": "",
-    "interestedTopics": [],
-    "background": "",
-    "setting": {
-      "receiveNotifications": true,
-      "autoAddFollowToCalendar": true,
-      "notificationWhenConferencesChanges": true,
-      "upComingEvent": true,
-      "notificationThrough": "System",
-      "notificationWhenUpdateProfile": true,
-      "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true,
-      "notificationWhenAddToBlacklist": true
-    },
-    "isVerified": false,
-    "verificationToken": "1e5e9f4a887e540483d4cea17559ca42b2012167",
-    "verificationTokenExpires": "2025-03-26T06:33:27.943Z",
-    "blacklist": []
-  },
-  {
     "id": "4dd74b6e-77ce-4635-a27d-e8633594a65d",
     "firstName": "abc",
     "lastName": "xyz",
@@ -176,37 +141,6 @@
         "blacklistedAt": "2025-03-27T02:15:18.575Z"
       }
     ]
-  },
-  {
-    "id": "1ff52334-0161-46b2-9fe8-2d6139dd3c85",
-    "firstName": "Lê",
-    "lastName": "Lâm Lợi",
-    "email": "loicute5FPS@gmail.com",
-    "password": "",
-    "dob": "",
-    "role": "user",
-    "followedConferences": [],
-    "myConferences": [],
-    "calendar": [],
-    "feedBacks": [],
-    "notifications": [],
-    "createdAt": "2025-03-26T10:04:54.047Z",
-    "updatedAt": "2025-03-26T10:04:54.047Z",
-    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
-    "aboutme": "",
-    "interestedTopics": [],
-    "background": "",
-    "setting": {
-      "receiveNotifications": true,
-      "autoAddFollowToCalendar": true,
-      "notificationWhenConferencesChanges": true,
-      "upComingEvent": true,
-      "notificationThrough": "System",
-      "notificationWhenUpdateProfile": true,
-      "notificationWhenFollow": true,
-      "notificationWhenAddTocalendar": true,
-      "notificationWhenAddToBlacklist": true
-    }
   },
   {
     "id": "45dca597-e98f-4dac-b886-0320fe8fce16",
@@ -536,5 +470,39 @@
         "blacklistedAt": "2025-03-27T06:19:24.048Z"
       }
     ]
+  },
+  {
+    "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+    "firstName": "Le",
+    "lastName": "Loi",
+    "email": "loicute5fps@gmail.com",
+    "password": "12345678",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-03-28T13:35:20.438Z",
+    "updatedAt": "2025-03-28T13:35:34.889Z",
+    "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
+    "isVerified": true,
+    "verificationCode": null,
+    "verificationCodeExpires": null
   }
 ]

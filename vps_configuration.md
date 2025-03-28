@@ -308,3 +308,7 @@ Bây giờ bạn có thể truy cập ứng dụng của mình một cách an to
 Trình duyệt sẽ hiển thị biểu tượng ổ khóa, cho biết kết nối đã được mã hóa và xác thực. Truy cập `http://confhub.ddns.net/en` cũng sẽ tự động chuyển hướng sang `https`.
 
 Chúc mừng bạn đã thiết lập HTTPS thành công!
+
+
+
+brevo-code:bafd25fca8febe657dd731009f03f4c1
