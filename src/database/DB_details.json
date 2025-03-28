@@ -149,6 +149,15 @@
         "lastName": "Loi",
         "createdAt": "2025-03-27T07:40:31.079Z",
         "updatedAt": "2025-03-27T07:40:31.079Z"
+      },
+      {
+        "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+        "email": "loicute5fps@gmail.com",
+        "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-28T13:50:21.796Z",
+        "updatedAt": "2025-03-28T13:50:21.796Z"
       }
     ],
     "feedBacks": [
@@ -684,6 +693,193 @@
         "updatedAt": "2025-03-28T04:08:35.266Z"
       }
     ],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+      "title": "IEEE International Conference on Computer Communications",
+      "acronym": "INFOCOM",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:23:08.923Z",
+      "updatedAt": "2025-03-23T10:23:08.923Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+      "publisher": "IEEE",
+      "summerize": "IEEE INFOCOM is a top-ranked networking conference of the IEEE Communications Society. IEEE INFOCOM 2025 will be conducted in person in London, United Kingdom. It solicits research papers describing significant and innovative research contributions to the field of computer and data communication networks. The conference invites submissions on a wide range of research topics, spanning both theoretical and systems research.",
+      "callForPaper": "IEEE INFOCOM 2025 invites submissions on a wide range of topics, including artificial intelligence/machine learning for networking, cellular wireless broadband systems, censorship circumvention and net neutrality, challenging network environments, cloud computing, cyber-physical network systems, datacenter networking, dynamic spectrum sharing, edge and fog computing, extremely high-frequency communications, fault tolerance, green networks, information-centric networking, Internet architectures, Internet of Things, large-scale MIMO-based networking, localization, medium access control, mobile sensing and applications, mobility management, multimedia networking, network economics, network management, network security and privacy, network support for VR/AR, network virtualization, networked autonomous systems, non-terrestrial networks, online social networks, optical networks, overlay and peer-to-peer networks, quality-of-service, quantum networking, RFID and NFC, router and switch design, routing and multicast, scaling laws, software-defined networking, tactile Internet, testbeds, ultra-reliable low-latency communications, vehicular networks, visible light communications, and web applications.\n\n*   **Preprints Policy:** The submitted manuscript or its title/abstract should not be posted on a public website, such as arXiv.org, or transmitted via public mailing lists.\n*   **Conflict of Interest (CoI):** Before submission, please update your CoIs in the EDAS system.\n*   **Submission Cap:** The maximum number of papers an author can submit is five.\n*   **Length:** Submitted papers must be written in English, with a maximum length limit of 10 printed pages. The main text must be no more than 9 pages.\n*   **Formatting:** Use the standard IEEE Transactions templates for Microsoft Word or LaTeX formats.\n\nAccepted and presented papers will be published in the IEEE INFOCOM 2025 Conference Proceedings and submitted to IEEE Xplore®.",
+      "link": "https://infocom2025.ieee-infocom.org/",
+      "cfpLink": "https://infocom2025.ieee-infocom.org/authors/call-papers-main-conference",
+      "impLink": "None",
+      "createdAt": "2025-03-25T10:47:53.489Z",
+      "updatedAt": "2025-03-25T10:47:53.489Z",
+      "topics": [
+        "Data Communication Networks",
+        "Artificial Intelligence",
+        "Internet of Things",
+        "Cloud Computing",
+        "Machine Learning",
+        "Resource Management",
+        "Fault Tolerance",
+        "Reliability",
+        "Mobile Applications",
+        "Online Social Networks",
+        "Edge Computing",
+        "Localization",
+        "Fog Computing",
+        "Software-Defined Networking",
+        "Network Management",
+        "Network Security",
+        "Tactile Internet",
+        "Testbeds",
+        "Computer Communication Networks",
+        "Censorship Circumvention",
+        "Net Neutrality",
+        "Mobile Cloud Computing",
+        "Cyber-Physical Network Systems",
+        "Datacenter Networking",
+        "Dynamic Spectrum Sharing",
+        "Survivability",
+        "Full Duplex Communication Networks",
+        "Green Networks",
+        "Information-Centric Networking",
+        "Interference Management",
+        "Internet Architectures",
+        "Location-Based Services",
+        "Medium Access Control",
+        "Mobile Sensing",
+        "Mobility Management",
+        "Multimedia Networking",
+        "Network Economics",
+        "Pricing",
+        "Network Measurement",
+        "Network Support for VR/AR",
+        "Network Virtualization",
+        "Non-Terrestrial Networks",
+        "Optical Networks",
+        "Overlay Networks",
+        "Peer-to-Peer Networks",
+        "Quality-of-Service",
+        "Quantum Networking",
+        "RFID",
+        "Near-Field Communication",
+        "Router Design",
+        "Switch Design",
+        "Routing",
+        "Multicast",
+        "Scaling Laws",
+        "Experimentations",
+        "Ultra-Reliable Low-Latency Communications",
+        "Vehicular Networks",
+        "Visible Light Communications",
+        "Web Applications",
+        "Content Distribution",
+        "Wireless Local Area Networks",
+        "Cellular Wireless Broadband Systems",
+        "Cross-Layer Designs",
+        "Extremely High-Frequency Communications",
+        "Large-Scale MIMO-Based Networking",
+        "Network Analysis",
+        "Network Privacy",
+        "Networked Autonomous Aerial Systems",
+        "Networked Autonomous Terrestrial Systems",
+        "Networked Autonomous Underwater Systems",
+        "Wireless Personal Area Networks"
+      ]
+    },
+    "location": {
+      "id": "63553184-3412-4bfa-98b7-769fe57e0d62",
+      "createdAt": "2025-03-25T10:47:53.518Z",
+      "updatedAt": "2025-03-25T10:47:53.518Z",
+      "isAvailable": true,
+      "organizeId": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+      "cityStateProvince": "London",
+      "country": "United Kingdom",
+      "address": "London, United Kingdom",
+      "continent": "Europe"
+    },
+    "dates": [
+      {
+        "id": "d4187c6c-e0a5-4fdd-9b9f-b0d25db4307f",
+        "organizedId": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+        "fromDate": "2024-12-06T00:00:00.000Z",
+        "toDate": "2024-12-06T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Acceptance",
+        "createdAt": "2025-03-25T10:47:53.527Z",
+        "updatedAt": "2025-03-25T10:47:53.527Z",
+        "isAvailable": true
+      },
+      {
+        "id": "44cb4ff0-07b9-4c22-b542-ca6122860c33",
+        "organizedId": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+        "fromDate": "2024-07-31T00:00:00.000Z",
+        "toDate": "2024-07-31T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full Paper Due",
+        "createdAt": "2025-03-25T10:47:53.526Z",
+        "updatedAt": "2025-03-25T10:47:53.526Z",
+        "isAvailable": true
+      },
+      {
+        "id": "01e689cf-75f9-41f0-98d8-e5064108fb26",
+        "organizedId": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+        "fromDate": "2024-07-24T00:00:00.000Z",
+        "toDate": "2024-07-24T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstract Due",
+        "createdAt": "2025-03-25T10:47:53.524Z",
+        "updatedAt": "2025-03-25T10:47:53.524Z",
+        "isAvailable": true
+      },
+      {
+        "id": "21ecdcc0-c990-44ee-aacb-ccea04601f92",
+        "organizedId": "49d6d831-a418-4db0-845b-f68e816cb9f7",
+        "fromDate": "2025-05-19T00:00:00.000Z",
+        "toDate": "2025-05-22T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-25T10:47:53.521Z",
+        "updatedAt": "2025-03-25T10:47:53.521Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
     "feedBacks": []
   }
 ]

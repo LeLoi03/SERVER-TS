@@ -72,3 +72,17 @@ export type Setting = {
   notificationWhenAddTocalendar?: boolean;
   notificationWhenAddToBlacklist?: boolean;
 }
+
+
+// It's good practice to define a default setting object
+export const defaultUserSettings: Setting = {
+  receiveNotifications: true,
+  autoAddFollowToCalendar: false,
+  notificationWhenConferencesChanges: true,
+  upComingEvent: true,
+  notificationThrough: "System", // Default to System only
+  notificationWhenUpdateProfile: true,
+  notificationWhenFollow: true,
+  notificationWhenAddTocalendar: true,
+  notificationWhenAddToBlacklist: true,
+};

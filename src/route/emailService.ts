@@ -1,6 +1,9 @@
 // src/services/emailService.ts
 import * as brevo from '@getbrevo/brevo'; // <<< Sử dụng import này nhất quán
 import 'dotenv/config';
+import { UserResponse } from '../types/user.response';
+import { ConferenceResponse } from '../types/conference.response';
+
 
 // --- Kiểm tra biến môi trường NGAY TỪ ĐẦU ---
 if (!process.env.BREVO_API_KEY) {
@@ -89,5 +92,199 @@ export const sendVerificationEmail = async (toEmail: string, firstName: string, 
     }
 };
 
-// --- Có thể thêm các hàm gửi email khác ở đây (ví dụ: quên mật khẩu) ---
-// Ví dụ: export const sendPasswordResetEmail = async (...) => { ... }
+
+
+// --- NEW: Function to send Follow/Unfollow Notification Email ---
+
+interface FollowNotificationEmailParams {
+    recipientUser: UserResponse; // Who receives the email
+    actingUser?: UserResponse; // Who performed the action (null if recipient is the actor)
+    conference: ConferenceResponse;
+    isFollowing: boolean; // True if follow, false if unfollow
+    isRecipientTheActor: boolean; // True if the email is for the person who followed/unfollowed
+}
+
+export const sendFollowNotificationEmail = async (params: FollowNotificationEmailParams): Promise<void> => {
+    const { recipientUser, actingUser, conference, isFollowing, isRecipientTheActor } = params;
+
+    // --- Determine Subject and Content ---
+    let subject = '';
+    let htmlContent = '';
+    const conferenceTitle = conference.conference.title;
+    const recipientName = recipientUser.firstName || 'User';
+
+    if (isRecipientTheActor) {
+        // Email for the user who performed the action
+        subject = isFollowing
+            ? `You followed ${conferenceTitle}`
+            : `You unfollowed ${conferenceTitle}`;
+        htmlContent = `
+            <html><body>
+                <h1>Hi ${recipientName},</h1>
+                <p>You have successfully ${isFollowing ? 'followed' : 'unfollowed'} the conference: <strong>${conferenceTitle}</strong>.</p>
+                <p>You can manage your followed conferences in your profile.</p>
+                <br/><p>Thanks,</p><p>The Your App Name Team</p>
+            </body></html>
+        `;
+    } else if (actingUser) {
+        // Email for other followers about someone else's action (only for follow)
+        if (!isFollowing) return; // Typically don't notify others on unfollow
+
+        const actorName = `${actingUser.firstName || ''} ${actingUser.lastName || ''}`.trim() || 'Someone';
+        subject = `${actorName} followed ${conferenceTitle}`;
+        htmlContent = `
+            <html><body>
+                <h1>Hi ${recipientName},</h1>
+                <p><strong>${actorName}</strong> has just followed the conference: <strong>${conferenceTitle}</strong>, which you are also following.</p>
+                <br/><p>Thanks,</p><p>The Your App Name Team</p>
+            </body></html>
+        `;
+    } else {
+        // Should not happen with current logic, but good to handle
+        console.warn("sendFollowNotificationEmail called without sufficient context.");
+        return;
+    }
+
+    // --- Prepare and Send Email ---
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
+    sendSmtpEmail.sender = { name: senderName, email: senderEmail };
+    sendSmtpEmail.to = [{ email: recipientUser.email, name: recipientName }]; // Use recipient's details
+
+    try {
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log(`Follow/Unfollow Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
+    } catch (error: any) {
+        console.error(`Error sending follow/unfollow email to ${recipientUser.email} via Brevo:`);
+        if (error.response) {
+            console.error('Status:', error.response.status);
+            console.error('Body:', error.response.body || error.response.text);
+        } else {
+            console.error('Error Message:', error.message);
+        }
+        // Log the error, but don't throw here to avoid stopping the main request
+        // The calling function should be aware that email might fail.
+    }
+};
+
+
+// --- NEW: Function to send Add/Remove Calendar Notification Email ---
+
+interface CalendarNotificationEmailParams {
+    recipientUser: UserResponse; // Who receives the email
+    actingUser: UserResponse;   // Who performed the action
+    conference: ConferenceResponse;
+    isAdding: boolean; // True if adding, false if removing
+    isRecipientTheActor: boolean; // True if the email is for the person who performed the action
+}
+
+export const sendCalendarNotificationEmail = async (params: CalendarNotificationEmailParams): Promise<void> => {
+    const { recipientUser, actingUser, conference, isAdding, isRecipientTheActor } = params;
+
+    // --- Determine Subject and Content ---
+    let subject = '';
+    let htmlContent = '';
+    const conferenceTitle = conference.conference.title;
+    const recipientName = recipientUser.firstName || 'User';
+    const actionVerbPast = isAdding ? 'added' : 'removed';
+    const actionVerbPresent = isAdding ? 'add' : 'remove';
+    const preposition = isAdding ? 'to' : 'from';
+
+    if (isRecipientTheActor) {
+        // Email for the user who performed the action
+        subject = `Conference ${actionVerbPast} ${preposition} your calendar: ${conferenceTitle}`;
+        htmlContent = `
+            <html><body>
+                <h1>Hi ${recipientName},</h1>
+                <p>You have successfully ${actionVerbPast} the conference <strong>"${conferenceTitle}"</strong> ${preposition} your calendar.</p>
+                <p>You can view your calendar in your profile.</p>
+                <br/><p>Thanks,</p><p>The Your App Name Team</p>
+            </body></html>
+        `;
+    } else {
+        // Email for other followers about someone else's action (only for 'add' currently)
+        if (!isAdding) return; // Assuming we only notify others on 'add' as per original logic
+
+        const actorName = `${actingUser.firstName || ''} ${actingUser.lastName || ''}`.trim() || 'Someone';
+        subject = `${actorName} ${actionVerbPast} ${conferenceTitle} ${preposition} their calendar`;
+        htmlContent = `
+            <html><body>
+                <h1>Hi ${recipientName},</h1>
+                <p>Just letting you know, <strong>${actorName}</strong> has ${actionVerbPast} the conference <strong>"${conferenceTitle}"</strong> ${preposition} their calendar.</p>
+                ${'' /* Optional: Add context like "which you are also following" if relevant */}
+                <br/><p>Thanks,</p><p>The Your App Name Team</p>
+            </body></html>
+        `;
+    }
+
+    // --- Prepare and Send Email ---
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
+    sendSmtpEmail.sender = { name: senderName, email: senderEmail };
+    sendSmtpEmail.to = [{ email: recipientUser.email, name: recipientName }];
+
+    try {
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log(`Calendar Action Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
+    } catch (error: any) {
+        console.error(`Error sending calendar action email to ${recipientUser.email} via Brevo:`);
+        if (error.response) {
+            console.error('Status:', error.response.status);
+            console.error('Body:', error.response.body || error.response.text);
+        } else {
+            console.error('Error Message:', error.message);
+        }
+        // Log error, but don't throw to avoid stopping the main request
+    }
+};
+
+
+// --- NEW: Function to send Blacklist/Unblacklist Notification Email ---
+
+interface BlacklistNotificationEmailParams {
+    recipientUser: UserResponse; // Who receives the email (always the actor)
+    conferenceTitle: string;     // Title of the conference
+    isBlacklisting: boolean;     // True if adding to blacklist, false if removing
+}
+
+export const sendBlacklistNotificationEmail = async (params: BlacklistNotificationEmailParams): Promise<void> => {
+    const { recipientUser, conferenceTitle, isBlacklisting } = params;
+
+    // --- Determine Subject and Content ---
+    const actionVerbPast = isBlacklisting ? 'added' : 'removed';
+    const preposition = isBlacklisting ? 'to' : 'from';
+    const recipientName = recipientUser.firstName || 'User';
+
+    const subject = `Conference ${actionVerbPast} ${preposition} your blacklist: ${conferenceTitle}`;
+    const htmlContent = `
+        <html><body>
+            <h1>Hi ${recipientName},</h1>
+            <p>You have successfully ${actionVerbPast} the conference <strong>"${conferenceTitle}"</strong> ${preposition} your blacklist.</p>
+            <p>You can manage your blacklist settings in your profile.</p>
+            <br/><p>Thanks,</p><p>The Your App Name Team</p>
+        </body></html>
+    `;
+
+    // --- Prepare and Send Email ---
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
+    sendSmtpEmail.sender = { name: senderName, email: senderEmail };
+    sendSmtpEmail.to = [{ email: recipientUser.email, name: recipientName }];
+
+    try {
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log(`Blacklist Action Email sent successfully to ${recipientUser.email}. Brevo Response:`, JSON.stringify(data));
+    } catch (error: any) {
+        console.error(`Error sending blacklist action email to ${recipientUser.email} via Brevo:`);
+        if (error.response) {
+            console.error('Status:', error.response.status);
+            console.error('Body:', error.response.body || error.response.text);
+        } else {
+            console.error('Error Message:', error.message);
+        }
+        // Log error, but don't throw
+    }
+};

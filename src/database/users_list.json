@@ -113,6 +113,26 @@
         "deletedAt": null,
         "message": "Le Loi provided feedback for the conference \" International Conference on Advanced Communications and Computation\" which you followed: 5 stars.",
         "type": "New Feedback"
+      },
+      {
+        "id": "888a54f3-69d7-4cd9-acff-e5b6e8d612a5",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:50:21.796Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "57e45d92-4bff-4577-ab15-aac5d76980f3",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:56:23.453Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
+        "type": "Add to Calendar"
       }
     ],
     "createdAt": "2025-03-26T09:55:06.596Z",
@@ -439,6 +459,26 @@
         "deletedAt": null,
         "message": "You followed the conference: ACM Conference on Embedded Networked Sensor Systems",
         "type": "Follow Conference"
+      },
+      {
+        "id": "b39642a2-3321-4a8c-a2b3-40bcf42cd8ba",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:50:21.796Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "8eb27ab8-aa12-4a3f-a6db-29b14ae757c9",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:56:23.453Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
+        "type": "Add to Calendar"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
@@ -479,13 +519,106 @@
     "password": "12345678",
     "dob": "",
     "role": "user",
-    "followedConferences": [],
+    "followedConferences": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:50:21.796Z",
+        "updatedAt": "2025-03-28T13:50:21.796Z"
+      }
+    ],
     "myConferences": [],
-    "calendar": [],
+    "calendar": [
+      {
+        "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:56:23.453Z",
+        "updatedAt": "2025-03-28T13:56:23.453Z"
+      }
+    ],
     "feedBacks": [],
-    "notifications": [],
+    "notifications": [
+      {
+        "id": "c822451b-b3fa-42fb-9bff-c9cfa1de5f86",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:50:21.796Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "12e54368-0399-47cb-85fe-711acf7e9141",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-28T13:56:23.453Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "9c9efc90-47da-4a36-b8c5-b1cf5406b1f0",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:21:08.069Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: IEEE International Conference on Computer Communications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "350ea6d4-ae53-463f-9f94-dafe19b72c2c",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:21:54.766Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference: IEEE International Conference on Computer Communications",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "a7345b5b-b49a-4323-8f3a-b11582f04b97",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:27:34.383Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"IEEE International Conference on Computer Communications\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "2b3f7be1-7dba-4f60-aa26-0865f4527880",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:27:50.280Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"IEEE International Conference on Computer Communications\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "549b7a02-c8a0-4c9a-93bb-a7bb749f1cb7",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:30:08.580Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added \"IEEE International Conference on Computer Communications\" to your blacklist.",
+        "type": "Add to Blacklist"
+      },
+      {
+        "id": "66feb5a3-32e3-4685-8fc6-8f92863c7a05",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-28T14:30:17.058Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed \"IEEE International Conference on Computer Communications\" from your blacklist.",
+        "type": "Remove from Blacklist"
+      }
+    ],
     "createdAt": "2025-03-28T13:35:20.438Z",
-    "updatedAt": "2025-03-28T13:35:34.889Z",
+    "updatedAt": "2025-03-28T14:20:30.934Z",
     "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
     "aboutme": "",
     "interestedTopics": [],
@@ -495,7 +628,7 @@
       "autoAddFollowToCalendar": true,
       "notificationWhenConferencesChanges": true,
       "upComingEvent": true,
-      "notificationThrough": "System",
+      "notificationThrough": "All",
       "notificationWhenUpdateProfile": true,
       "notificationWhenFollow": true,
       "notificationWhenAddTocalendar": true,
@@ -503,6 +636,7 @@
     },
     "isVerified": true,
     "verificationCode": null,
-    "verificationCodeExpires": null
+    "verificationCodeExpires": null,
+    "blacklist": []
   }
 ]
