@@ -495,14 +495,308 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "Offline",
       "status": "pending"
+    },
+    {
+      "id": "ffcb0fa9-6fa9-43d6-8b97-02440113bb01",
+      "title": "ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "acronym": "SIGCOMM",
+      "location": {
+        "cityStateProvince": "Coimbra",
+        "country": "Portugal",
+        "address": "Coimbra, Portugal",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Communication Networks",
+        "Networked Systems",
+        "Computer Networks",
+        "Mobile Networks",
+        "Wide-Area Networks",
+        "Data Center Networks",
+        "Embedded Networks",
+        "Home Networks",
+        "Enterprise Networks",
+        "Wired Technologies",
+        "Wireless Technologies",
+        "Optical Communication",
+        "Radio Communication",
+        "Acoustic Communication",
+        "Security",
+        "Privacy",
+        "Verification",
+        "Machine Learning",
+        "Resource Management",
+        "AI",
+        "Virtualization",
+        "Economics",
+        "Robustness",
+        "Performance",
+        "Network Architecture",
+        "Mobility",
+        "Energy Consumption",
+        "Environmental Impact",
+        "Topology",
+        "Diagnosis",
+        "Evolution",
+        "Light-Based Communication",
+        "Packet-Switched Hardware and Software",
+        "Circuit-Switched Hardware and Software"
+      ],
+      "dates": {
+        "fromDate": "2025-09-08T00:00:00.000Z",
+        "toDate": "2025-09-11T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://conferences.sigcomm.org/sigcomm/2025/",
+      "createdAt": "2025-03-23T10:26:29.507Z",
+      "updatedAt": "2025-03-23T10:26:29.507Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "ec0692b8-bc83-4c8a-b45a-ce8e1d30cfcf",
+      "title": "ACM Conference on Computer and Communications Security",
+      "acronym": "CCS",
+      "location": {
+        "cityStateProvince": "Taipei",
+        "country": "Taiwan",
+        "address": "Taipei, Taiwan",
+        "continent": "Asia"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "Cybersecurity and privacy",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Privacy",
+        "Computer Security",
+        "Communications Security"
+      ],
+      "dates": {
+        "fromDate": "2025-10-13T00:00:00.000Z",
+        "toDate": "2025-10-17T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.sigsac.org/ccs/CCS2025/",
+      "createdAt": "2025-03-23T10:26:29.575Z",
+      "updatedAt": "2025-03-23T10:26:29.575Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "df59913c-0a95-4df4-9693-27b5ee746533",
+      "title": "ACM Conference on Computer Supported Cooperative Work",
+      "acronym": "CSCW",
+      "location": {
+        "cityStateProvince": "Bergen",
+        "country": "Norway",
+        "address": "Bergen, Norway",
+        "continent": "Europe"
+      },
+      "rank": "A",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Human-centred computing",
+        "Human-centred computing",
+        "Human-centred computing",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Crowdsourcing",
+        "Social Computing",
+        "Machine Learning",
+        "Computer-Supported Cooperative Work",
+        "Social Media",
+        "Collaboration",
+        "Communication",
+        "Education",
+        "Work Articulation",
+        "Coordination",
+        "Awareness",
+        "Information Sharing",
+        "AI",
+        "Robotics",
+        "AR/VR"
+      ],
+      "dates": {
+        "fromDate": "2025-10-18T00:00:00.000Z",
+        "toDate": "2025-10-22T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://cscw.acm.org/2025/",
+      "createdAt": "2025-03-23T10:26:29.638Z",
+      "updatedAt": "2025-03-23T10:26:29.638Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "949fd408-b7df-471b-b93b-e785fe46bc21",
+      "title": "ACM Conference on Economics and Computation",
+      "acronym": "EC",
+      "location": {
+        "cityStateProvince": "Stanford, California",
+        "country": "United States",
+        "address": "Stanford University, Stanford, CA",
+        "continent": "North America"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Theory of computation",
+        "Artificial intelligence",
+        "Artificial intelligence",
+        "Theory of computation",
+        "Artificial intelligence",
+        "Theory of computation",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Computation",
+        "Economics"
+      ],
+      "dates": {
+        "fromDate": "2025-03-28T04:06:23.531Z",
+        "toDate": "2025-03-28T04:06:23.531Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://ec25.sigecom.org/",
+      "createdAt": "2025-03-23T10:26:29.705Z",
+      "updatedAt": "2025-03-23T10:26:29.705Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+      "title": "ACM Conference on Embedded Networked Sensor Systems",
+      "acronym": "SENSYS",
+      "location": {
+        "cityStateProvince": "Irvine",
+        "country": "United States",
+        "address": "Irvine, USA",
+        "continent": "North America"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "UNDEFINED",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Cyber-Physical Systems",
+        "Embedded Systems",
+        "Machine Learning",
+        "Mobile Computing",
+        "Networked Sensor Systems",
+        "Internet of Things (IoT)",
+        "Wireless Communications",
+        "Signal Processing",
+        "AI-driven Applications"
+      ],
+      "dates": {
+        "fromDate": "2025-05-06T00:00:00.000Z",
+        "toDate": "2025-05-09T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://sensys.acm.org/2025/",
+      "createdAt": "2025-03-23T10:26:29.768Z",
+      "updatedAt": "2025-03-23T10:26:29.768Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "75173c1d-c28f-4b77-b569-11e8f9f41c55",
+      "title": "Asilomar Conference on Signals, Systems and Computing",
+      "acronym": "ACSSC",
+      "location": {
+        "cityStateProvince": "Pacific Grove, California",
+        "country": "United States",
+        "address": "Asilomar Hotel and Conference Grounds, Pacific Grove, California",
+        "continent": "North America"
+      },
+      "rank": "National: USA",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "Distributed computing and systems software",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Data Analytics",
+        "Networks",
+        "Machine Learning",
+        "Signal Processing",
+        "Image Processing",
+        "Communication Systems",
+        "MIMO Communications",
+        "Graphs",
+        "Speech Processing",
+        "Video Processing",
+        "Biomedical Signal Processing",
+        "Biomedical Image Processing",
+        "Adaptive Systems"
+      ],
+      "dates": {
+        "fromDate": "2025-03-28T04:08:39.772Z",
+        "toDate": "2025-03-28T04:08:39.772Z",
+        "name": "",
+        "type": "conferenceDates"
+      },
+      "link": "https://www.asilomarsscconf.org/",
+      "createdAt": "2025-03-23T10:26:38.218Z",
+      "updatedAt": "2025-03-23T10:26:38.218Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
     }
   ],
   "meta": {
-    "curPage": 3,
+    "curPage": 1,
     "perPage": 5,
-    "totalPage": 350,
-    "prevPage": 2,
-    "nextPage": 4,
-    "totalItems": 1748
+    "totalPage": 1,
+    "prevPage": null,
+    "nextPage": null,
+    "totalItems": 2
   }
 }

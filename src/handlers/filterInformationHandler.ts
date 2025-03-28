@@ -671,11 +671,33 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
         *   **Irrelevant parameters:** Only include what has been specified by the user. If the values do not apply to the filters then *do not include them*.
 
 7.  **Website Navigation ("Redirect"):**
-    *   If the "Intent" is ""Website navigation"", populate the "Redirect" object:
-        *   "Type":  Choose the appropriate type (""Internal website"", ""Conference website"", ""Journal website"", or ""Invalid"").
-        *   "Value": Set the target URL or path. If a valid URL cannot be determined or if the request is ambiguous, set ""Value"" to "null" and provide a descriptive message to the user.
-        *   "Message": Provide a user-friendly confirmation or explanation message. This is *required*.
-
+    *   If the "Intent" is "Website navigation", populate the "Redirect" object.
+    *   **Allowed Internal Paths:** Redirection to *internal website pages* is **ONLY** permitted for the following exact paths:
+        *   /conferences
+        *   /dashboard
+        *   /journals
+        *   /chatbot
+        *   /visualization
+        *   /chatbot/chat
+        *   /chatbot/livechat
+        *   /support
+        *   /other
+        *   /addconference
+        *   /conferences/detail
+        *   /journals/detail
+        *   /auth/login
+        *   /auth/register
+        *   /updateconference
+    *   **Processing Navigation Request:**
+        *   Determine the user's intended destination type (Internal website, External Conference site, External Journal site).
+        *   **If Internal:** Identify the specific internal path requested (e.g., from "go to dashboard", infer /dashboard).
+            *   Check if the inferred path **exactly matches** one of the **Allowed Internal Paths**.
+                *   **Match Found:** Set Type to "Internal website" and Value to the matched path (e.g., "/dashboard"). Provide a confirmation Message.
+                *   **No Match:** Set Type to "Invalid", set Value to null. Provide a Message explaining that navigation to that *specific internal page* is not supported or recognized. Suggest allowed pages if relevant.
+        *   **If External (Conference/Journal website):** Set Type to "Conference website" or "Journal website". Attempt to determine the external URL and set it as the Value. If a specific external URL cannot be reliably determined (e.g., user asks "go to the website for the AI conference" without specifying which one), set Type to "Invalid", Value to null, and explain the ambiguity in the Message.
+        *   **If Ambiguous/Impossible:** If the target cannot be determined, is inherently vague ("go to details" without specifying conference or journal), or asks for impossible navigation, set Type to "Invalid", Value to null, and explain why in the Message.
+    *   **Message:** A user-friendly Message explaining the outcome (successful redirection path, reason for failure/invalidity) is **always required** within the "Redirect" object.
+    * 
 8.  **Context Maintenance:**
 
     *   Remember the context from previous turns in the conversation.

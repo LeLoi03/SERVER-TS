@@ -299,6 +299,11 @@
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
         "createdAt": "2025-03-27T07:40:31.079Z",
         "updatedAt": "2025-03-27T07:40:31.079Z"
+      },
+      {
+        "id": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:08:35.266Z",
+        "updatedAt": "2025-03-28T04:08:35.266Z"
       }
     ],
     "myConferences": [],
@@ -450,6 +455,56 @@
         "deletedAt": null,
         "message": "Upcoming event in conference \"ACIS Conference on Software Engineering Research, Management and Applications\": Full Paper Submission on 2025-03-28",
         "type": "Upcoming Conference"
+      },
+      {
+        "id": "04753c36-3a37-449b-a847-605205f5e800",
+        "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:07:32.615Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACM Conference on Embedded Networked Sensor Systems",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "7e4b0191-0f9f-4fa5-aace-c11c6ffe8782",
+        "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:07:48.966Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"ACM Conference on Embedded Networked Sensor Systems\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "f9045302-5362-4aa4-8f93-1f982a0e8bf2",
+        "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:08:31.231Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"ACM Conference on Embedded Networked Sensor Systems\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "711c6dc9-5023-4785-949e-d9d7d44f81d0",
+        "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:08:32.033Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference: ACM Conference on Embedded Networked Sensor Systems",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "8c55e313-3d44-4375-8179-0d32fb0565ea",
+        "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+        "createdAt": "2025-03-28T04:08:35.266Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACM Conference on Embedded Networked Sensor Systems",
+        "type": "Follow Conference"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",

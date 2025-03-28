@@ -545,5 +545,145 @@
       }
     ],
     "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+      "title": "ACM Conference on Embedded Networked Sensor Systems",
+      "acronym": "SENSYS",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "createdAt": "2025-03-23T10:26:29.768Z",
+      "updatedAt": "2025-03-23T10:26:29.768Z",
+      "creatorName": "c7a19f75-f21e-47c1-8607-507f0a1c42ab"
+    },
+    "organization": {
+      "id": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "35f2c766-2d8e-4490-891b-ad57b3c3a015",
+      "publisher": "",
+      "summerize": "ACM SenSys 2025, the 23rd ACM Conference on Embedded Networked Sensor Systems, will be held in Irvine, USA, from May 6-9, 2025. SenSys will continue as a SenSys event while transitioning toward a merger with IPSN and IoTDI, forming a single premier conference on Embedded Artificial Intelligence and Sensing Systems. SenSys 2025 will be collocated with CPS-IoT Week 2025, providing a unique opportunity for interdisciplinary exchange.",
+      "callForPaper": "ACM SenSys 2025 invites submissions on networked sensor systems, embedded systems, mobile computing, the Internet of Things (IoT), wireless communications, signal processing, machine learning, cyber-physical systems, and AI-driven applications. The topics of interest include:\n\n*   Sensors and Networked Sensing Systems\n*   Platforms, Networking, and Communication Protocols\n*   Embedded AI, Information Processing, and Machine Learning\n*   Algorithms, Data, and Theory\n*   Applications and Real-world Deployments\n*   Security, and Privacy in Embedded Sensing Systems\n*   Novel Paradigms and Architectures for Embedded Sensing Systems\n*   Visions, Experiences, Tools, Datasets, and Benchmarks\n\nAuthors may choose to submit either as a full paper (12 pages) or a short paper (6 pages) for the 8th category. The submission must be unpublished and not currently under review for any other publication. The style files can be found on the conference website.",
+      "link": "https://sensys.acm.org/2025/",
+      "cfpLink": "https://sensys.acm.org/2025/cfp.html",
+      "impLink": "https://sensys.acm.org/2025/",
+      "createdAt": "2025-03-25T07:51:27.820Z",
+      "updatedAt": "2025-03-25T07:51:27.820Z",
+      "topics": [
+        "Cyber-Physical Systems",
+        "Embedded Systems",
+        "Machine Learning",
+        "Mobile Computing",
+        "Networked Sensor Systems",
+        "Internet of Things (IoT)",
+        "Wireless Communications",
+        "Signal Processing",
+        "AI-driven Applications"
+      ]
+    },
+    "location": {
+      "id": "7356a855-a0d3-48ad-b6cd-6d1fcd3548a5",
+      "createdAt": "2025-03-25T07:51:27.829Z",
+      "updatedAt": "2025-03-25T07:51:27.829Z",
+      "isAvailable": true,
+      "organizeId": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+      "cityStateProvince": "Irvine",
+      "country": "United States",
+      "address": "Irvine, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "07384eba-901f-4aea-89a2-cb476ce3245c",
+        "organizedId": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+        "fromDate": "2025-01-21T00:00:00.000Z",
+        "toDate": "2025-01-21T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Paper Acceptance",
+        "createdAt": "2025-03-25T07:51:27.836Z",
+        "updatedAt": "2025-03-25T07:51:27.836Z",
+        "isAvailable": true
+      },
+      {
+        "id": "2b039aea-079e-4bef-8200-cb132a7fa988",
+        "organizedId": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+        "fromDate": "2024-11-14T00:00:00.000Z",
+        "toDate": "2024-11-14T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Submission",
+        "createdAt": "2025-03-25T07:51:27.835Z",
+        "updatedAt": "2025-03-25T07:51:27.835Z",
+        "isAvailable": true
+      },
+      {
+        "id": "418b5e09-ffac-401a-a293-df1878a3e3d5",
+        "organizedId": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+        "fromDate": "2024-11-14T00:00:00.000Z",
+        "toDate": "2024-11-14T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Paper Registration and Abstract",
+        "createdAt": "2025-03-25T07:51:27.834Z",
+        "updatedAt": "2025-03-25T07:51:27.834Z",
+        "isAvailable": true
+      },
+      {
+        "id": "3dfd7fcf-1b32-4b05-8907-b76fee44b756",
+        "organizedId": "b4c06f73-4604-490e-a940-b95f1334d8eb",
+        "fromDate": "2025-05-06T00:00:00.000Z",
+        "toDate": "2025-05-09T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-03-25T07:51:27.832Z",
+        "updatedAt": "2025-03-25T07:51:27.832Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2021",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2020",
+        "fieldOfResearch": "Distributed computing and systems software"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2018",
+        "fieldOfResearch": "UNDEFINED"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2017",
+        "fieldOfResearch": "UNDEFINED"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [
+      {
+        "id": "d2ec72fb-2dcf-4fcd-9a3c-f90634c49a34",
+        "email": "123@gmail.com",
+        "avatar": "/avatar3.jpg",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-03-28T04:08:35.266Z",
+        "updatedAt": "2025-03-28T04:08:35.266Z"
+      }
+    ],
+    "feedBacks": []
   }
 ]
