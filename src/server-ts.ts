@@ -159,17 +159,11 @@ import pkg from 'pg';
 const { Pool } = pkg;
 import 'dotenv/config';
 import { RequestHandler } from 'express';
-import { NextFunction } from 'express';
 
 // Import các module đã tạo (cho chatbot)
 import { runNonStreamChat, saveHistoryToFile } from './chatbotService';
 import logToFile from './utils/logger';
 
-
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); // Quan trọng để nhận dữ liệu từ form HTML
 
 // // Database connection
 // const pool = new Pool({
