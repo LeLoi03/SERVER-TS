@@ -133,6 +133,16 @@
         "deletedAt": null,
         "message": "Le Loi added the conference \" International Conference on Advanced Communications and Computation\" to their calendar.",
         "type": "Add to Calendar"
+      },
+      {
+        "id": "88994d41-5051-4dcf-957a-53943560c566",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-29T07:10:52.160Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for \" International Conference on Advanced Communications and Computation\" (following) & in calendar:\n- Organization Link: Changed from \"https://www.iaria.org/conferences2025/INFOCOMP25.html\" to \"https://www.iaria.org/conferences/INFOCOMP.html\".\n- Dates:\n  - Added: Notification: 2025-02-16 to 2025-02-16\n  - Added: Registration: 2025-02-28 to 2025-02-28\n  - Added: Camera ready: 2025-03-05 to 2025-03-05\n  - Added: Submission: 2025-01-20 to 2025-01-20\n  - Added: conferenceDates: 2025-04-06 to 2025-04-06\n  - Removed: Notification: 2025-02-16 to 2025-02-16\n  - Removed: Registration: 2025-02-28 to 2025-02-28\n  - Removed: Camera ready: 2025-03-05 to 2025-03-05\n  - Removed: Submission: 2025-01-20 to 2025-01-20\n  - Removed: conferenceDates: 2025-04-06 to 2025-04-06",
+        "type": "Conference Update"
       }
     ],
     "createdAt": "2025-03-26T09:55:06.596Z",
@@ -489,6 +499,16 @@
         "deletedAt": null,
         "message": "Le Loi followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
         "type": "Follow Conference"
+      },
+      {
+        "id": "ede953d2-1a6b-427d-ac8e-977529d8616b",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-29T07:10:52.160Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for \" International Conference on Advanced Communications and Computation\" (following) & in calendar:\n- Organization Link: Changed from \"https://www.iaria.org/conferences2025/INFOCOMP25.html\" to \"https://www.iaria.org/conferences/INFOCOMP.html\".\n- Dates:\n  - Added: Notification: 2025-02-16 to 2025-02-16\n  - Added: Registration: 2025-02-28 to 2025-02-28\n  - Added: Camera ready: 2025-03-05 to 2025-03-05\n  - Added: Submission: 2025-01-20 to 2025-01-20\n  - Added: conferenceDates: 2025-04-06 to 2025-04-06\n  - Removed: Notification: 2025-02-16 to 2025-02-16\n  - Removed: Registration: 2025-02-28 to 2025-02-28\n  - Removed: Camera ready: 2025-03-05 to 2025-03-05\n  - Removed: Submission: 2025-01-20 to 2025-01-20\n  - Removed: conferenceDates: 2025-04-06 to 2025-04-06",
+        "type": "Conference Update"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
@@ -544,9 +564,26 @@
         "id": "fa0f127d-2023-4561-98b4-882b076c692d",
         "createdAt": "2025-03-28T14:52:50.699Z",
         "updatedAt": "2025-03-28T14:52:50.699Z"
+      },
+      {
+        "id": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-29T07:13:56.383Z",
+        "updatedAt": "2025-03-29T07:13:56.383Z"
+      },
+      {
+        "id": "f5f85255-923a-4ccf-b234-466767e84898",
+        "createdAt": "2025-03-29T07:17:38.339Z",
+        "updatedAt": "2025-03-29T07:17:38.339Z"
       }
     ],
-    "myConferences": [],
+    "myConferences": [
+      {
+        "id": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
+        "status": "Approved",
+        "statusTime": "2025-03-29T07:08:22.428Z",
+        "submittedAt": "2025-03-29T07:07:50.575Z"
+      }
+    ],
     "calendar": [
       {
         "id": "93028780-6670-4b3f-ace1-63b34fdd4421",
@@ -556,6 +593,86 @@
     ],
     "feedBacks": [],
     "notifications": [
+      {
+        "id": "7fcfdd7c-a973-4063-8922-84b5b6ee4085",
+        "conferenceId": "f5f85255-923a-4ccf-b234-466767e84898",
+        "createdAt": "2025-03-29T07:17:54.824Z",
+        "isImportant": true,
+        "seenAt": "2025-03-29T07:18:04.261Z",
+        "deletedAt": null,
+        "message": "Update for \"ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems\" (following):\n- Publisher: Changed from \"PACMMOD\" to \"ACM\".\n- Dates:\n  - Added: Revision submission2: 2025-02-28 to 2025-02-28\n  - Added: Rebuttal2: 2025-02-03 to 2025-02-07\n  - Added: Revision submission: 2024-08-26 to 2024-08-26\n  - Added: Rebuttal: 2025-07-29 to 2024-08-01\n  - Added: Final notification2: 2025-03-07 to 2025-03-07\n  - Added: Initial notification2: 2025-02-14 to 2025-02-14\n  - Added: Final notification: 2024-09-02 to 2024-09-02\n  - Added: Initial notification: 2024-08-12 to 2024-08-12\n  - Added: Submission2: 2024-12-09 to 2024-12-09\n  - Added: Abstract2: 2024-12-02 to 2024-12-02\n  - Added: Submission: 2024-06-07 to 2024-06-07\n  - Added: Abstract: 2024-05-31 to 2024-05-31\n  - Added: conferenceDates: 2025-06-22 to 2025-06-27\n  - Removed: Revision submission2: 2025-02-28 to 2025-02-28\n  - Removed: Rebuttal2: 2025-02-03 to 2025-02-07\n  - Removed: Revision submission: 2024-08-26 to 2024-08-26\n  - Removed: Rebuttal: 2025-07-29 to 2024-08-01\n  - Removed: Final notification2: 2025-03-07 to 2025-03-07\n  - Removed: Initial notification2: 2025-02-14 to 2025-02-14\n  - Removed: Final notification: 2024-09-02 to 2024-09-02\n  - Removed: Initial notification: 2024-08-12 to 2024-08-12\n  - Removed: Submission2: 2024-12-09 to 2024-12-09\n  - Removed: Abstract2: 2024-12-02 to 2024-12-02\n  - Removed: Submission: 2024-06-07 to 2024-06-07\n  - Removed: Abstract: 2024-05-31 to 2024-05-31\n  - Removed: conferenceDates: 2025-06-22 to 2025-06-27",
+        "type": "Conference Update"
+      },
+      {
+        "id": "b4f6f236-d5bb-4016-83dc-7406171ea485",
+        "conferenceId": "f5f85255-923a-4ccf-b234-466767e84898",
+        "createdAt": "2025-03-29T07:17:38.339Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "6d1da2b8-6a22-4305-acb4-c47003a6ecf5",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-29T07:14:38.894Z",
+        "isImportant": true,
+        "seenAt": "2025-03-29T07:15:09.787Z",
+        "deletedAt": null,
+        "message": "Update for \"IEEE International Conference on Computer Communications\" (following):\n- Dates:\n  - Added: Notification of Acceptance: 2024-12-06 to 2024-12-06\n  - Added: Full Paper Due: 2024-07-31 to 2024-07-31\n  - Added: Abstract Due: 2024-07-24 to 2024-07-24\n  - Added: conferenceDates: 2025-05-19 to 2025-05-22\n  - Removed: Notification of Acceptance: 2024-12-06 to 2024-12-06\n  - Removed: Full Paper Due: 2024-07-31 to 2024-07-31\n  - Removed: Abstract Due: 2024-07-24 to 2024-07-24\n  - Removed: conferenceDates: 2025-05-19 to 2025-05-22",
+        "type": "Conference Update"
+      },
+      {
+        "id": "d466491b-ce48-43f3-8d03-b2c905dcad31",
+        "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
+        "createdAt": "2025-03-29T07:13:56.383Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: IEEE International Conference on Computer Communications",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "868b262a-55fe-48a5-8380-ceb6c8019c25",
+        "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
+        "createdAt": "2025-03-29T07:10:52.160Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Update for \" International Conference on Advanced Communications and Computation\" (following) & in calendar:\n- Organization Link: Changed from \"https://www.iaria.org/conferences2025/INFOCOMP25.html\" to \"https://www.iaria.org/conferences/INFOCOMP.html\".\n- Dates:\n  - Added: Notification: 2025-02-16 to 2025-02-16\n  - Added: Registration: 2025-02-28 to 2025-02-28\n  - Added: Camera ready: 2025-03-05 to 2025-03-05\n  - Added: Submission: 2025-01-20 to 2025-01-20\n  - Added: conferenceDates: 2025-04-06 to 2025-04-06\n  - Removed: Notification: 2025-02-16 to 2025-02-16\n  - Removed: Registration: 2025-02-28 to 2025-02-28\n  - Removed: Camera ready: 2025-03-05 to 2025-03-05\n  - Removed: Submission: 2025-01-20 to 2025-01-20\n  - Removed: conferenceDates: 2025-04-06 to 2025-04-06",
+        "type": "Conference Update"
+      },
+      {
+        "id": "fed25ef8-4cd3-4e6d-a70d-bded3b2791d5",
+        "conferenceId": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
+        "createdAt": "2025-03-29T07:08:22.428Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Your conference \"Test\" has been approved.",
+        "type": "Approve Conference"
+      },
+      {
+        "id": "28768963-86a0-43bb-9b57-476cfe6e87a2",
+        "conferenceId": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
+        "createdAt": "2025-03-29T07:07:50.575Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added a new conference: Test",
+        "type": "Add Conference"
+      },
+      {
+        "id": "f4aa7efc-8f96-42b9-a572-f1d2490bc2bc",
+        "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
+        "createdAt": "2025-03-28T14:58:00.982Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming: Post Conference Tour in \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" starting tomorrow (3/29/2025 07:00 AM)",
+        "type": "Upcoming Conference"
+      },
       {
         "id": "26b25509-fd51-4819-a217-6e2d6668aa50",
         "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
@@ -655,16 +772,6 @@
         "deletedAt": null,
         "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
-      },
-      {
-        "id": "f4aa7efc-8f96-42b9-a572-f1d2490bc2bc",
-        "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
-        "createdAt": "2025-03-28T14:58:00.982Z",
-        "isImportant": true,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "Upcoming: Post Conference Tour in \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" starting tomorrow (3/29/2025 07:00 AM)",
-        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-28T13:35:20.438Z",

@@ -931,6 +931,117 @@
       "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
       "accessType": "",
       "status": "pending"
+    },
+    {
+      "id": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
+      "title": "Test",
+      "acronym": "acronym",
+      "location": {
+        "cityStateProvince": "Badakhshan",
+        "country": "Afghanistan",
+        "address": "Ha Noi",
+        "continent": "Asia"
+      },
+      "year": 2025,
+      "rank": "",
+      "source": "",
+      "researchFields": "",
+      "topics": [],
+      "dates": {
+        "fromDate": "2025-03-29T00:00:00.000Z",
+        "toDate": "2025-03-31T00:00:00.000Z",
+        "name": "Conference Date",
+        "type": "conferenceDates"
+      },
+      "link": "link",
+      "createdAt": "2025-03-29T07:07:50.570Z",
+      "updatedAt": "2025-03-29T07:08:22.428Z",
+      "creatorId": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+      "accessType": "offline",
+      "publisher": "",
+      "status": "Approved",
+      "isLessReputable": false
+    },
+    {
+      "id": "f5f85255-923a-4ccf-b234-466767e84898",
+      "title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
+      "acronym": "PODS",
+      "location": {
+        "cityStateProvince": "Berlin",
+        "country": "Germany",
+        "address": "Berlin, Germany",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Data management and data science",
+        "Data management and data science",
+        "Data management and data science",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Data Management",
+        "Database Processing",
+        "Database Design",
+        "Data Quality",
+        "Data Analysis",
+        "Interoperability",
+        "Uncertainty",
+        "Responsible Data Management",
+        "Human-Database Interaction",
+        "Data Access"
+      ],
+      "dates": {
+        "fromDate": "2025-06-22T00:00:00.000Z",
+        "toDate": "2025-06-27T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://2025.sigmod.org/",
+      "createdAt": "2025-03-23T10:26:31.928Z",
+      "updatedAt": "2025-03-23T10:26:31.928Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
+    },
+    {
+      "id": "4dd3c9ae-1b97-467f-a407-8373a1ffcb18",
+      "title": "ACM Special Interest Group on Management of Data Conference",
+      "acronym": "SIGMOD",
+      "location": {
+        "cityStateProvince": "Berlin",
+        "country": "Germany",
+        "address": "Berlin, Germany",
+        "continent": "Europe"
+      },
+      "rank": "A*",
+      "source": "CORE2023",
+      "year": 2025,
+      "researchFields": [
+        "Data management and data science",
+        "Data management and data science",
+        "Data management and data science",
+        "UNDEFINED",
+        "UNDEFINED"
+      ],
+      "topics": [
+        "Data Management"
+      ],
+      "dates": {
+        "fromDate": "2025-06-22T00:00:00.000Z",
+        "toDate": "2025-06-27T00:00:00.000Z",
+        "name": "conferenceDates",
+        "type": "conferenceDates"
+      },
+      "link": "https://2025.sigmod.org/",
+      "createdAt": "2025-03-23T10:26:32.499Z",
+      "updatedAt": "2025-03-23T10:26:32.499Z",
+      "creatorId": "c7a19f75-f21e-47c1-8607-507f0a1c42ab",
+      "accessType": "Offline",
+      "status": "pending"
     }
   ],
   "meta": {
@@ -939,6 +1050,6 @@
     "totalPage": 1,
     "prevPage": null,
     "nextPage": null,
-    "totalItems": 4
+    "totalItems": 2
   }
 }

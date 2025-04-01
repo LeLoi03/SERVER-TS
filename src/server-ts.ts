@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
 import cors from 'cors';
@@ -7,6 +7,16 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import fs from 'fs';
 import multer from 'multer';
+import cron from 'node-cron';
+
+// Import modules from server-crawl (using relative paths)
+import { logger } from './conference/11_utils';
+import { getConferenceList as getConferenceListFromCrawl } from './conference/3_core_portal_scraping';
+import { crawlConferences } from './conference/crawl_conferences';
+import { crawlJournals } from './journal/crawl_journals';
+import { OUTPUT_JSON } from './config';
+import { ConferenceData } from './conference/types'; // Import ConferenceData type
+
 const corsOptions = {
     origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -15,7 +25,6 @@ const corsOptions = {
 };
 
 const app = express();
-
 const httpServer = new HttpServer(app);
 const io = new SocketIOServer(httpServer, {
     cors: {
@@ -24,13 +33,17 @@ const io = new SocketIOServer(httpServer, {
     }
 });
 
+// --- Middleware ---
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Multer setup
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-
+// --- Socket.IO ---
 export const connectedUsers = new Map<string, Socket>();
 
 io.on('connection', (socket: Socket) => {
@@ -52,11 +65,11 @@ io.on('connection', (socket: Socket) => {
     });
 });
 
-
+// --- Database Path ---
 const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
 
+
+// --- Route Imports ---
 import { getConferenceById } from './route/getConferenceById';
 import { getConferenceList } from './route/getConferenceList';
 import { followConference } from './route/followConference';
@@ -84,6 +97,7 @@ import { blacklistConference } from './route/addToBlacklist';
 import { getVisualizationData } from './route/getVisualizationData';
 import { verifyEmail } from './route/verifyEmail';
 
+// --- Route Definitions ---
 app.get('/api/v1/conference/:id', getConferenceById);
 app.get('/api/v1/conference', getConferenceList);
 app.post('/api/v1/user/follow', followConference);
@@ -106,6 +120,11 @@ app.post('/api/v1/conferences/details/save', saveConferenceDetails);
 app.post('/api/v1/user/signup', signupUser);
 app.post('/api/v1/user/signin', signinUser);
 app.post('/api/v1/user/google-login', googleLogin);
+app.post('/api/v1/user/verify-password', verifyPassword);
+app.post('/api/v1/user/change-password', changePassword);
+app.post('/api/v1/user/verify-email', verifyEmail);
+app.get('/api/v1/visualization/conference', getVisualizationData);
+
 app.get('/api/v1/topics', async (req, res) => {
     try {
         const rawData = await fs.promises.readFile(conferencesListFilePath, 'utf8');
@@ -142,17 +161,160 @@ app.get('/api/v1/topics', async (req, res) => {
         }
     }
 });
-app.post('/api/v1/user/verify-password', verifyPassword);
-app.post('/api/v1/user/change-password', changePassword);
-app.post('/api/v1/user/verify-email', verifyEmail); // <<< Thêm route mới
 
-app.get('/api/v1/visualization/conference', getVisualizationData)
 
- 
-import cron from 'node-cron';
+// --- server_crawl.ts routes ---
+// Custom middleware with types
+const conditionalJsonBodyParser = (req: Request, res: Response, next: NextFunction) => {
+    if (req.query.dataSource === 'client') {
+        bodyParser.json()(req, res, next);
+    } else {
+        next();
+    }
+};
+
+app.use(conditionalJsonBodyParser);
+
+// --- Function to handle the crawl-conferences logic ---
+async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
+    const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    const routeLogger = logger.child({ requestId, route: '/crawl-conferences' });
+
+    routeLogger.info({ query: req.query, method: req.method }, "Received request to crawl conferences");
+
+    const startTime = Date.now();
+
+    try {
+        const dataSource = (req.query.dataSource as string) || 'api';
+        let conferenceList: ConferenceData[];
+
+        routeLogger.info({ dataSource }, "Determining conference data source");
+
+        if (dataSource === 'client') {
+            conferenceList = req.body;
+            if (!Array.isArray(conferenceList)) {
+                routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body");
+                res.status(400).json({ message: 'Invalid conference list provided in the request body.' });
+                return;
+            }
+            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
+        } else {
+            try {
+                routeLogger.info("Fetching conference list from API...");
+                conferenceList = await getConferenceListFromCrawl() as ConferenceData[];
+                routeLogger.info({ count: conferenceList.length }, "Successfully fetched conference list from API");
+            } catch (apiError: any) {
+                routeLogger.error(apiError, "Failed to fetch conference list from API");
+                res.status(500).json({
+                    message: 'Failed to fetch conference list from API',
+                    error: apiError.message
+                });
+                return;
+            }
+        }
+
+        routeLogger.info({ conferenceCount: conferenceList.length }, "Calling crawlConferences...");
+        const results = await crawlConferences(conferenceList);
+
+        const endTime = Date.now();
+        const runTime = endTime - startTime;
+        const runTimeSeconds = (runTime / 1000).toFixed(2);
+
+        routeLogger.info({ runtimeSeconds: runTimeSeconds, resultsPreview: results.slice(0, 3) }, "crawlConferences finished successfully.");
+
+        try {
+            const runtimeFilePath = path.resolve(__dirname, 'crawl_conferences_runtime.txt');
+            await fs.promises.writeFile(runtimeFilePath, `Execution time: ${runTimeSeconds} s`);
+            routeLogger.debug({ path: runtimeFilePath }, "Successfully wrote runtime file.");
+        } catch (writeError: any) {
+            routeLogger.warn(writeError, "Could not write crawl conferences runtime file");
+        }
+
+        res.status(200).json({
+            message: 'Conference crawling completed successfully!',
+            runtime: `${runTimeSeconds} s`
+        });
+        routeLogger.info({ statusCode: 200 }, "Sent successful response");
+
+    } catch (error: any) {
+        const endTime = Date.now();
+        const runTime = endTime - startTime;
+        routeLogger.error(error, "Conference crawling failed within route handler", { runtimeMs: runTime });
+
+        res.status(500).json({
+            message: 'Conference crawling failed',
+            error: error.message
+        });
+        routeLogger.warn({ statusCode: 500 }, "Sent error response");
+    }
+}
+
+// --- Function to handle the crawl-journals logic ---
+async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
+    const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    const routeLogger = logger.child({ requestId, route: '/crawl-journals' });
+
+    routeLogger.info({ method: req.method }, "Received request to crawl journals");
+
+    const startTime = Date.now();
+
+    try {
+        routeLogger.info("Starting journal crawling...");
+        const journalData = await crawlJournals(); // Call crawlJournals function
+        routeLogger.info("Journal crawling completed.");
+
+        const endTime = Date.now();
+        const runTime = endTime - startTime;
+        const runTimeSeconds = (runTime / 1000).toFixed(2);
+
+        routeLogger.info({ runtimeSeconds: runTimeSeconds }, "Journal crawling finished successfully.");
+
+        try {
+            const runtimeFilePath = path.resolve(__dirname, 'crawl_journals_runtime.txt');
+            await fs.promises.writeFile(runtimeFilePath, `Execution time: ${runTimeSeconds} s`);
+            routeLogger.debug({ path: runtimeFilePath }, "Successfully wrote runtime file.");
+
+            await fs.promises.writeFile(OUTPUT_JSON, JSON.stringify(journalData, null, 2), 'utf8');
+            routeLogger.debug({ path: OUTPUT_JSON }, "Successfully wrote journal data to JSON file.");
+
+        } catch (writeError: any) {
+            routeLogger.warn(writeError, "Could not write journal crawling runtime or data file");
+        }
+
+        res.status(200).json({
+            message: 'Journal crawling completed successfully!',
+            data: journalData,
+            runtime: `${runTimeSeconds} s`
+        });
+        routeLogger.info({ statusCode: 200 }, "Sent successful response");
+
+    } catch (error: any) {
+        routeLogger.error(error, "Journal crawling failed within route handler");
+
+        res.status(500).json({
+            message: 'Journal crawling failed',
+            error: error.message,
+            stack: error.stack,
+        });
+        routeLogger.warn({ statusCode: 500 }, "Sent error response");
+    }
+}
+
+// --- server_crawl.ts Route Definitions ---
+app.post('/crawl-conferences', async (req: Request<{}, any, ConferenceData[]>, res: Response) => {
+    await handleCrawlConferences(req, res);
+});
+
+app.post('/crawl-journals', async (req: Request, res: Response) => {
+    await handleCrawlJournals(req, res);
+});
+
+// --- Cron Job ---
 cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
 
 /////////////////////////////////////////////////////////////////////
+
+
 import pkg from 'pg';
 
 const { Pool } = pkg;
