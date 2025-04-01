@@ -1,14 +1,18 @@
 [
   {
-    "Title": "Conference on Algorithmic Aspects in Information and Management",
-    "Acronym": "AAIM"
+    "Title": "IEEE International Conference on Automation Science and Engineering",
+    "Acronym": "CASE"
   },
   {
-    "Title": "International Joint Conference on Autonomous Agents and Multiagent Systems (previously the International Conference on Multiagent Systems, ICMAS, changed in 2000)",
-    "Acronym": "AAMAS"
+    "Title": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+    "Acronym": "CASES"
   },
   {
-    "Title": "International Conference Abstract State Machines, Alloy, B, TLA, VDM, and Z (Previously International Conference of B and Z Users, ZB, changed in 2008)",
-    "Acronym": "ABZ"
+    "Title": "International Conference on Computers and their Applications",
+    "Acronym": "CATA"
+  },
+  {
+    "Title": "Computer Aided Verification",
+    "Acronym": "CAV"
   }
 ]

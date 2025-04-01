@@ -1,7 +1,7 @@
 [
   {
-    "conferenceName": "Symposium of Asian Association for Algorithms and Computation",
-    "conferenceAcronym": "AAAC",
+    "conferenceName": "Computer Aided Verification",
+    "conferenceAcronym": "CAV",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -10,42 +10,41 @@
     "conferenceComments": "",
     "conferenceRating": "",
     "conferenceDetails": [],
-    "conferenceIndex": "2",
-    "conferenceLink": "https://conference.cs.cityu.edu.hk/aaac2025/",
-    "formatConferenceText": "Website of AAAC_2: https://conference.cs.cityu.edu.hk/aaac2025/\nWebsite information of AAAC_2:\n\nAAAC 2025  \n   \n  The 16th Annual Meeting of Asian Association for Algorithms and Computation  \n  \n Program Committees Call for Papers Registration Sponsors  \n   \n Program  \n Keynote Speakers  \n Yossi Azar (Tel-Aviv University)  \n Eunjung Kim (Korea Advanced Institute of Science & Technology)  \n  \n Program Committees  \n Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))  \n Sang Won Bae (Kyonggi University)  \n Ho-Lin Chen (National Taiwan University)  \n Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)  \n Minming Li (City University of Hong Kong)  \n Chung-Shou Liao (National Tsing Hua University)  \n Pinyan Lu (Shanghai University of Finance and Economics)  \n Heejin Park (Hanyang University)  \n Kunihiko Sadakane (The University of Tokyo)  \n Xiaoming Sun (Chinese Academy of Sciences)  \n Takeshi Tokuyama (Tohoku University)  \n Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))  \n Guochuan Zhang (Zhejiang University)  \n Shengyu Zhang (The Chinese University of Hong Kong)  \n\n AAAC 2025 Call for Papers  \n AAAC 2025   \n  The 16th Annual Meeting of Asian Association for Algorithms and Computation ( http://www.aa-ac.org/ ) will take place on May 31 and June 1, 2025, at the City University of Hong Kong, Hong Kong, China. We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.  \n Topics  \n All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.  \n Submissions  \n Authors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System:  \n  https://easychair.org/conferences?conf=aaac2025 .  \n Important Dates  \n Submission due: February 28 (Fri), 2025 (AoE) \n  Notification: March 28 (Fri), 2025 \n  Camera-ready version due: April 18 (Fri), 2025 \n  Early Registration due: April 25 (Fri), 2025 \n  Conference Dates: May 31(Sat)- June 1(Sun), 2025 \n  Best Student Presentation Award  \n The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.  \n  \n Accepted Papers  \n Ke Yi. Instance Optimality in Differential Privacy  \n Moshe Babaioff, Yiding Feng and Noam Manaker Morag. On the Efficiency of Fair and Truthful Trade Mechanisms  \n Subhash Suri, Jie Xue, Xiongxin Yang and Jiumu Zhu. Dynamic Maximum Depth of Geometric Objects  \n Yiding Feng and Wei Tang. Confusion Matrix Design for Downstream Decision-making  \n Lin Chen, Yuchen Mao and Guochuan Zhang. Long Arithmetic Progressions in Sumsets and Subset Sums: Constructive Proofs and Efficient Witnesses  \n Wan-Ting Huang and Hsu-Chun Yen. Crossing Minimization in Ortho-Radial Drawings of Column Trees  \n Siu-Wing Cheng, Haoqiang Huang and Shuo Zhang. Constant Approximation of Fréchet Distance in Strongly Subquadratic Time  \n Tetsuo Asano, Risa Ishikawa, Naoki Katoh and Takeshi Tokuyama. Near-unit Distance Embedding of Points in the Plane and Space  \n Siu-Wing Cheng, Haoqiang Huang and Le Jiang. Simplification of Trajectory Streams  \n Taekang Eom, Taehoon Ahn, Minju Song and Hee-Kap Ahn. Shortcutting the Diameter of a Polygon  \n Rin Saito and Takehiro Ito. Complexity of Reconfiguring Vertex-Disjoint Shortest Paths  \n Daiki Okayama, Yuya Higashikawa and Shuichi Miyazaki. Online Exploration of Grid Graphs with Multiple Searchers  \n Ren Kimura, Sankardeep Chakraborty, Roberto Grossi, Giulia Punzi, Kunihiko Sadakane and Wiktor Zuba. Space-efficient Representations for a Set of k-mers  \n Yuki Seto, Kunihiko Sadakane and Kazunari Tozawa. Private-Preserving Encoding and Decoding Using Variable-Length Coding Schemes  \n Genjie Qin, Wenjing Liu and Qizhi Fang. Mechanism Design for Locating a Bridge Between Regions with Prelocated Facilities  \n Daigo Oitaira. Space-Efficient Data Structure for (k...21)-avoiding Involutions  \n Chih-Chung Chen and Chung-Shou Liao. Learning-Augmented Algorithms for Online Time-Window TSP  \n Riki Muto and Yasuhiko Takenaga. Yavalath is PSPACE-Complete  \n Yi-Fang Lee and Chung-Shou Liao. Learning-augmented Algorithms for Density Peaks Clustering  \n Byeonguk Kang, Hwi Kim and Hee-Kap Ahn. Guarding Terrains with Guards on a Line  \n Felix Hommelsheim, Zhenwei Liu, Nicole Megow and Guochuan Zhang. Protecting the Connectivity of a Graph Under Non-Uniform Edge Failures  \n Chaeyoon Chung, Jaegun Lee and Hee-Kap Ahn. Improved Algorithms for Finding the Smallest Color-Spanning Two Squares  \n I-Fan Chan, Ya-Chun Liang and Chung-Shou Liao. The Public University Secretary Problem with Predictions  \n Minming Li, Biaoshuai Tao, Houyu Zhou and Tianze Wei. Fair Allocation of Items in Multiple Regions  \n Bo Li. Approximate Maximin Share with Subjective Divisibility  \n Yi-Ting Hsieh, Cheng-Yu Ma and Chung-Shou Liao. Topological Features for Graph Representations  \n Fei Wu, Jannik Matuschke and Erik Demeulemeester. Interdiction Game on Machine Scheduling under Budgeted Unavailability Patterns  \n Jaegun Lee, Hyojeong An, Hwi Kim and Hee-Kap Ahn. Monotone Partitions of Simple Polygons  \n  \n Registration  \n Registration Link Normal registration 1800 HKD  \n Student registration 900 HKD  \n Early bird registration by April 15  \n  \n Sponsors  \n Details about sponsors will be updated.",
-    "conferenceText": "AAAC 2025  \n   \n  The 16th Annual Meeting of Asian Association for Algorithms and Computation  \n  \n Program Committees Call for Papers Registration Sponsors  \n   \n Program  \n Keynote Speakers  \n Yossi Azar (Tel-Aviv University)  \n Eunjung Kim (Korea Advanced Institute of Science & Technology)  \n  \n Program Committees  \n Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))  \n Sang Won Bae (Kyonggi University)  \n Ho-Lin Chen (National Taiwan University)  \n Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)  \n Minming Li (City University of Hong Kong)  \n Chung-Shou Liao (National Tsing Hua University)  \n Pinyan Lu (Shanghai University of Finance and Economics)  \n Heejin Park (Hanyang University)  \n Kunihiko Sadakane (The University of Tokyo)  \n Xiaoming Sun (Chinese Academy of Sciences)  \n Takeshi Tokuyama (Tohoku University)  \n Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))  \n Guochuan Zhang (Zhejiang University)  \n Shengyu Zhang (The Chinese University of Hong Kong)  \n\n AAAC 2025 Call for Papers  \n AAAC 2025   \n  The 16th Annual Meeting of Asian Association for Algorithms and Computation ( http://www.aa-ac.org/ ) will take place on May 31 and June 1, 2025, at the City University of Hong Kong, Hong Kong, China. We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.  \n Topics  \n All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.  \n Submissions  \n Authors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System:  \n  https://easychair.org/conferences?conf=aaac2025 .  \n Important Dates  \n Submission due: February 28 (Fri), 2025 (AoE) \n  Notification: March 28 (Fri), 2025 \n  Camera-ready version due: April 18 (Fri), 2025 \n  Early Registration due: April 25 (Fri), 2025 \n  Conference Dates: May 31(Sat)- June 1(Sun), 2025 \n  Best Student Presentation Award  \n The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.  \n  \n Accepted Papers  \n Ke Yi. Instance Optimality in Differential Privacy  \n Moshe Babaioff, Yiding Feng and Noam Manaker Morag. On the Efficiency of Fair and Truthful Trade Mechanisms  \n Subhash Suri, Jie Xue, Xiongxin Yang and Jiumu Zhu. Dynamic Maximum Depth of Geometric Objects  \n Yiding Feng and Wei Tang. Confusion Matrix Design for Downstream Decision-making  \n Lin Chen, Yuchen Mao and Guochuan Zhang. Long Arithmetic Progressions in Sumsets and Subset Sums: Constructive Proofs and Efficient Witnesses  \n Wan-Ting Huang and Hsu-Chun Yen. Crossing Minimization in Ortho-Radial Drawings of Column Trees  \n Siu-Wing Cheng, Haoqiang Huang and Shuo Zhang. Constant Approximation of Fréchet Distance in Strongly Subquadratic Time  \n Tetsuo Asano, Risa Ishikawa, Naoki Katoh and Takeshi Tokuyama. Near-unit Distance Embedding of Points in the Plane and Space  \n Siu-Wing Cheng, Haoqiang Huang and Le Jiang. Simplification of Trajectory Streams  \n Taekang Eom, Taehoon Ahn, Minju Song and Hee-Kap Ahn. Shortcutting the Diameter of a Polygon  \n Rin Saito and Takehiro Ito. Complexity of Reconfiguring Vertex-Disjoint Shortest Paths  \n Daiki Okayama, Yuya Higashikawa and Shuichi Miyazaki. Online Exploration of Grid Graphs with Multiple Searchers  \n Ren Kimura, Sankardeep Chakraborty, Roberto Grossi, Giulia Punzi, Kunihiko Sadakane and Wiktor Zuba. Space-efficient Representations for a Set of k-mers  \n Yuki Seto, Kunihiko Sadakane and Kazunari Tozawa. Private-Preserving Encoding and Decoding Using Variable-Length Coding Schemes  \n Genjie Qin, Wenjing Liu and Qizhi Fang. Mechanism Design for Locating a Bridge Between Regions with Prelocated Facilities  \n Daigo Oitaira. Space-Efficient Data Structure for (k...21)-avoiding Involutions  \n Chih-Chung Chen and Chung-Shou Liao. Learning-Augmented Algorithms for Online Time-Window TSP  \n Riki Muto and Yasuhiko Takenaga. Yavalath is PSPACE-Complete  \n Yi-Fang Lee and Chung-Shou Liao. Learning-augmented Algorithms for Density Peaks Clustering  \n Byeonguk Kang, Hwi Kim and Hee-Kap Ahn. Guarding Terrains with Guards on a Line  \n Felix Hommelsheim, Zhenwei Liu, Nicole Megow and Guochuan Zhang. Protecting the Connectivity of a Graph Under Non-Uniform Edge Failures  \n Chaeyoon Chung, Jaegun Lee and Hee-Kap Ahn. Improved Algorithms for Finding the Smallest Color-Spanning Two Squares  \n I-Fan Chan, Ya-Chun Liang and Chung-Shou Liao. The Public University Secretary Problem with Predictions  \n Minming Li, Biaoshuai Tao, Houyu Zhou and Tianze Wei. Fair Allocation of Items in Multiple Regions  \n Bo Li. Approximate Maximin Share with Subjective Divisibility  \n Yi-Ting Hsieh, Cheng-Yu Ma and Chung-Shou Liao. Topological Features for Graph Representations  \n Fei Wu, Jannik Matuschke and Erik Demeulemeester. Interdiction Game on Machine Scheduling under Budgeted Unavailability Patterns  \n Jaegun Lee, Hyojeong An, Hwi Kim and Hee-Kap Ahn. Monotone Partitions of Simple Polygons  \n  \n Registration  \n Registration Link Normal registration 1800 HKD  \n Student registration 900 HKD  \n Early bird registration by April 15  \n  \n Sponsors  \n Details about sponsors will be updated.",
-    "cfpLink": "https://easychair.org/conferences?conf=aaac2025",
-    "impLink": "None",
-    "cfpText": " \n EasyChair Log in Pages | Docs | EasyChair Log in Pages | Docs \n EasyChair Log in Pages | Docs \n Home | Log in \n\n Log in to EasyChair for AAAC 2025   \n Submission of new papers for AAAC 2025 (the 15th annual meeting of Asian Association for Algorithms and Computation) is closed.  \n EasyChair uses cookies for user authentication. To use EasyChair, you should allow your browser to save cookies from easychair.org.   \n   \n EasyChair Requires JavaScript!  \n You can only use EasyChair with a browser that supports JavaScript. Your browser either does not support JavaScript or it has JavaScript support disabled. Please upgrade your browser or enable Javascript support.  \n   \n Email address or user name: * |  \n Password: * |  \n  \n      Useful links:  \n Forgot your password? \n  Create account \n  Problems to log in? | Home | Log in | Email address or user name: * | Password: * |  \n Home | Log in \n Email address or user name: * |  \n Password: * |  \n Copyright © 2002 – 2025 EasyChair \n  \n  ",
-    "impText": "",
-    "determineResponseText": "{\n\"Call for papers link\": \"https://easychair.org/conferences?conf=aaac2025\",\n\"Important dates link\": \"None\",\n\"Official Website\": \"https://conference.cs.cityu.edu.hk/aaac2025/\"\n}",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://conferences.i-cav.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_0_initial_f2a4832e-0d68-4a5d-9c17-865c38b1a119.txt",
+    "cfpLink": "https://conferences.i-cav.org/2025/calls/call-for-papers",
+    "impLink": "https://conferences.i-cav.org/2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_determine_response_e781c428-4cde-42b2-b5e9-3177cf93d59d.txt",
     "determineMetaData": {
-      "promptTokenCount": 48132,
-      "candidatesTokenCount": 65,
-      "totalTokenCount": 48197,
+      "promptTokenCount": 42061,
+      "candidatesTokenCount": 80,
+      "totalTokenCount": 42141,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 48132
+          "tokenCount": 42061
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 65
+          "tokenCount": 80
         }
       ]
     },
-    "extractResponseText": "{\n  \"Conference dates\": \"May 31 - June 1, 2025\",\n  \"Year\": \"2025\",\n  \"Location\": \"City University of Hong Kong, Hong Kong, China\",\n  \"City-State-Province\": \"Hong Kong, Hong Kong\",\n  \"Country\": \"China\",\n  \"Continent\": \"Asia\",\n  \"Type\": \"Offline\",\n  \"Submission Date\": {\n    \"Submission due\": \"February 28, 2025\"\n  },\n  \"Notification Date\": {\n    \"Notification\": \"March 28, 2025\"\n  },\n  \"Camera-ready Date\": {\n    \"Camera-ready version due\": \"April 18, 2025\"\n  },\n  \"Registration Date\": {\n    \"Early Registration due\": \"April 25, 2025\"\n  },\n  \"Topics\": \"Theoretical Computer Science, Algorithms, Complexity Theory\",\n  \"Summary\": \"The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will be held at the City University of Hong Kong, Hong Kong, China on May 31 and June 1, 2025.  The meeting invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. It is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.\",\n  \"Call for Papers\": \"# AAAC 2025: Call for Papers\\n\\nThe 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on **May 31 - June 1, 2025**, at the **City University of Hong Kong, Hong Kong, China.**\\n\\nWe invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.\\n\\n## Topics\\n\\nAll areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.\\n\\n## Keynote Speakers\\n\\n*   Yossi Azar (Tel-Aviv University)\\n*   Eunjung Kim (Korea Advanced Institute of Science & Technology)\\n\\n## Submissions\\n\\nAuthors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System: [https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025).\\n\\n## Important Dates\\n\\n*   **Submission due:** February 28, 2025\\n*   **Notification:** March 28, 2025\\n*   **Camera-ready version due:** April 18, 2025\\n*   **Early Registration due:** April 25, 2025\\n*   **Conference Dates:** May 31 - June 1, 2025\\n\\n## Best Student Presentation Award\\n\\nThe Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.\\n\\n## Program Committees\\n\\n*   Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))\\n*   Sang Won Bae (Kyonggi University)\\n*   Ho-Lin Chen (National Taiwan University)\\n*   Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)\\n*   Minming Li (City University of Hong Kong)\\n*   Chung-Shou Liao (National Tsing Hua University)\\n*   Pinyan Lu (Shanghai University of Finance and Economics)\\n*   Heejin Park (Hanyang University)\\n*   Kunihiko Sadakane (The University of Tokyo)\\n*   Xiaoming Sun (Chinese Academy of Sciences)\\n*   Takeshi Tokuyama (Tohoku University)\\n*   Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))\\n*   Guochuan Zhang (Zhejiang University)\\n*   Shengyu Zhang (The Chinese University of Hong Kong)\"\n}",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_cfp_2025_ad74240e-18ad-4441-995d-82a2525d463e.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_imp_2025_15ca9aa1-7dd6-46d1-9ae3-74bf33dd5256.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_extract_response_d3df0406-933d-4fa9-9544-87408195f1c0.txt",
     "extractMetaData": {
-      "promptTokenCount": 138744,
-      "candidatesTokenCount": 1041,
-      "totalTokenCount": 139785,
+      "promptTokenCount": 137783,
+      "candidatesTokenCount": 359,
+      "totalTokenCount": 138142,
       "cachedContentTokenCount": 136999,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 138744
+          "tokenCount": 137783
         }
       ],
       "cacheTokensDetails": [
@@ -57,7 +56,192 @@
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 1041
+          "tokenCount": 359
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Computers and their Applications",
+    "conferenceAcronym": "CATA",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_0_initial_400b1f8f-2ea9-4c52-bccc-dfda46424c0c.txt",
+    "cfpLink": "http://www.isca-hq.org/isca.php?p=Conferences",
+    "impLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_determine_response_9acfb0d3-984a-44b4-a270-9fcd0dad7032.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49092,
+      "candidatesTokenCount": 91,
+      "totalTokenCount": 49183,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49092
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 91
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_cfp_2025_6331c01e-9393-4f35-9dfd-d31aa43faa2f.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_imp_2025_d421d0fd-0039-42ea-9f48-7f57644762a1.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_extract_response_f350611a-7dd4-4c6b-9d5e-c920a7d74bcf.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140876,
+      "candidatesTokenCount": 1135,
+      "totalTokenCount": 142011,
+      "cachedContentTokenCount": 136999,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140876
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 136999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1135
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+    "conferenceAcronym": "CASES",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://esweek.org/cases/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_0_initial_7659c355-f832-4458-9ceb-0be8d4027b4e.txt",
+    "cfpLink": "https://esweek.org/call-for-papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_determine_response_a84bbda8-fea8-47c5-a4a8-f0fa4c2cf71c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45324,
+      "candidatesTokenCount": 48,
+      "totalTokenCount": 45372,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45324
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_cfp_2025_22ba2399-8ba9-418d-a80c-1fa738ba3286.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_extract_response_24e82d7c-81fd-4363-a0d4-4d3943d50b3a.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138712,
+      "candidatesTokenCount": 537,
+      "totalTokenCount": 139249,
+      "cachedContentTokenCount": 136999,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138712
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 136999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 537
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE International Conference on Automation Science and Engineering",
+    "conferenceAcronym": "CASE",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://2025.ieeecase.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_0_initial_bf233a71-7f12-4145-8ff0-190f7e02386f.txt",
+    "cfpLink": "https://2025.ieeecase.org/call-for-papers",
+    "impLink": "https://2025.ieeecase.org/key-dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_determine_response_28ab3bf4-4535-49f0-89d7-1023aa9b5b15.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48158,
+      "candidatesTokenCount": 73,
+      "totalTokenCount": 48231,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48158
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 73
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_cfp_2025_66cf3397-ffcd-4d54-877b-4a1cc3ff1616.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_imp_2025_9857601e-d100-4784-a784-fef247b2b4f8.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_extract_response_3a10c091-d3c3-49c2-a960-b7d124895707.txt",
+    "extractMetaData": {
+      "promptTokenCount": 144303,
+      "candidatesTokenCount": 2031,
+      "totalTokenCount": 146334,
+      "cachedContentTokenCount": 136999,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 144303
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 136999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 2031
         }
       ]
     }

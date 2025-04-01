@@ -14,7 +14,7 @@ const CSV_FILE_PATH = './CORE_2023.csv';
 
 // <<< --- Cấu hình chế độ chạy --- >>>
 const USE_CLIENT_DATA = true;  // true: Đọc từ CSV, false: Gọi API không kèm data
-const ENABLE_CHUNKING = true; // true: Chia thành chunks, false: Gửi tất cả cùng lúc (chỉ áp dụng nếu USE_CLIENT_DATA=true)
+const ENABLE_CHUNKING = false; // true: Chia thành chunks, false: Gửi tất cả cùng lúc (chỉ áp dụng nếu USE_CLIENT_DATA=true)
 const CHUNK_SIZE = 5;          // Kích thước chunk nếu ENABLE_CHUNKING=true
 
 // --- Hàm đọc và parse CSV (như trước) ---

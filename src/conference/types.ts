@@ -102,16 +102,20 @@ export interface BatchEntry {
     conferenceDetails: DetailsArray; // Changed to DetailsArray
     conferenceIndex: string;
     conferenceLink: string;
-    formatConferenceText: string;
-    conferenceText: string;
-    cfpLink: string;
-    impLink: string;
-    cfpText: string;
-    impText: string;
-    determineResponseText?: string;
+    
+    cfpLink?: string;
+    impLink?: string;
+   
     determineMetaData?: any; // TODO: Refine type for determineMetaData
-    extractResponseText?: string;
     extractMetaData?: any; // TODO: Refine type for extractMetaData
+
+    // --- Các trường Path ---
+    conferenceTextPath?: string; // Đường dẫn đến file chứa full text của trang gốc/đã sửa
+    cfpTextPath?: string | null;        // Đường dẫn đến file chứa text của trang CFP
+    impTextPath?: string | null;        // Đường dẫn đến file chứa text của trang Important Dates
+    determineResponseTextPath?: string; // Đường dẫn file chứa response của determine_links_api
+    extractResponseTextPath?: string;   // Đường dẫn file chứa response của extract_information_api
+
 }
 
 export interface ConferenceUpdateData { // Dữ liệu đầu vào cho updateHTMLContent và updateBatchToFile
@@ -130,12 +134,15 @@ export interface ConferenceUpdateData { // Dữ liệu đầu vào cho updateHTM
 export interface BatchUpdateEntry { // Dữ liệu batch sau khi updateBatchToFile
     conferenceName: string;
     conferenceAcronym: string;
-    conferenceText: string;
-    cfpLink: string;
-    impLink: string;
-    cfpText: string;
-    impText: string;
-    extractResponseText?: string;
+
+    cfpLink?: string;
+    impLink?: string;
+    // Paths to temporary files
+    conferenceTextPath?: string;
+    cfpTextPath?: string | null;
+    impTextPath?: string | null;
+    extractResponseTextPath?: string;
+    // Metadata (keep if small)
     extractMetaData?: any;
 }
 // ---------------------7_gemini_api_utils.ts-----------------------
@@ -234,8 +241,7 @@ export interface InputRowData {
     conferenceLink?: string;
     cfpLink?: string; // Added based on usage in writeCSVFile
     impLink?: string; // Added based on usage in writeCSVFile
-    extractResponseText?: string; // The raw JSON string (potentially)
-    // Add other potential fields if necessary
+    extractResponseTextPath?: string    // Add other potential fields if necessary
 }
 
 // Describes the structure of the final row written to the CSV
@@ -253,7 +259,6 @@ export interface ProcessedRowData extends ProcessedResponseData {
     link: string;
     cfpLink: string;
     impLink: string;
-    // Inherits all fields from ProcessedResponseData
 }
 
 
@@ -277,7 +282,7 @@ export interface PinoFileDestination extends Writable {
 
 // ---------------------12_playwright_setup.ts-----------------------
 
-import {Browser, BrowserContext } from "playwright";
+import { Browser, BrowserContext } from "playwright";
 
 
 // Định nghĩa kiểu dữ liệu cho kết quả trả về

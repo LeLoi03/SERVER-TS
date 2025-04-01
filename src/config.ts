@@ -248,7 +248,7 @@ export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
 
 export const GOOGLE_CSE_ID: string | undefined = process.env.GOOGLE_CSE_ID;
 
-export const MAX_USAGE_PER_KEY: number = 95; // Should probably be from env: parseInt(process.env.MAX_USAGE_PER_KEY || '95', 10)
+export const MAX_USAGE_PER_KEY: number = 100; // Should probably be from env: parseInt(process.env.MAX_USAGE_PER_KEY || '95', 10)
 export const KEY_ROTATION_DELAY_MS: number = parseInt(process.env.KEY_ROTATION_DELAY_MS || '60000', 10);
 
 // --- Journal Crawl Specific ---

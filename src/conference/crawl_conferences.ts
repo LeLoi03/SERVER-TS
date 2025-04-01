@@ -7,6 +7,7 @@ import { filterSearchResults } from './4_link_filtering';
 import { saveHTMLContent, updateHTMLContent } from './6_playwright_utils';
 import { setupPlaywright } from './12_playwright_setup';
 import { writeCSVFile } from './10_response_processing';
+import { cleanupTempFiles } from './11_utils';
 
 // Import config chung
 import {
@@ -116,6 +117,9 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
     let skippedSearchCount: number = 0;
     let successfulSaveCount: number = 0;
     let failedSaveCount: number = 0;
+    let successfulBatches: number = 0;
+    let failedBatches: number = 0;
+
 
     currentKeyIndex = 0;
     currentKeyUsageCount = 0;
@@ -178,8 +182,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                 taskLogger.info(`Processing conference`);
 
                 try {
-                    if (conference.hasOwnProperty('Title') && conference.hasOwnProperty('Acronym') && conference.hasOwnProperty('mainLink')
-                        && conference.hasOwnProperty('cfpLink') && conference.hasOwnProperty('impLink')) {
+                    if (conference.mainLink && conference.cfpLink && conference.impLink) {
                         taskLogger.info(`Processing with pre-defined links`);
                         // Create ConferenceUpdateData object
                         const conferenceUpdateData: ConferenceUpdateData = {
@@ -192,7 +195,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                             cfpText: "",        // Initialize as empty, will be updated
                             impText: ""         // Initialize as empty, will be updated
                         };
-                        await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises); // Pass ConferenceUpdateData
+                        await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises);
 
                     } else {
                         taskLogger.info(`Searching and processing`);
@@ -235,7 +238,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                             }, `Attempting Google Search`);
 
                             try {
-                                searchResults = await searchGoogleCSE(apiKey, GOOGLE_CSE_ID!, searchQuery);                                
+                                searchResults = await searchGoogleCSE(apiKey, GOOGLE_CSE_ID!, searchQuery);
                                 searchSuccess = true;
                                 successfulSearchCount++;
                                 taskLogger.info({
@@ -335,70 +338,86 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         await Promise.all(conferenceTasks);
         logger.info("All conference processing tasks added to queue have finished.");
 
-        logger.info("Waiting for all batch write operations to settle...");
+        // --- Chờ và tổng hợp kết quả Batch ---
+        logger.info({ promiseCount: batchPromises.length }, "Waiting for all batch operations to settle...");
         const settledResults = await Promise.allSettled(batchPromises);
-        let successfulBatches: number = 0;
-        let failedBatches: number = 0;
+        logger.info("All batch operations settled. Aggregating results...");
+
+        // clear allBatches before aggregating
+        allBatches = []; // Ensure it's empty before pushing potentially stale data if run multiple times
 
         logger.info("Aggregating results from batches...");
-        for (const result of settledResults) {
+        for (let i = 0; i < settledResults.length; i++) {
+            const result = settledResults[i];
             if (result.status === 'fulfilled' && result.value) {
-                allBatches.push(...result.value);
-                successfulBatches++;
-
+                // result.value là BatchEntry[] | null
+                if (Array.isArray(result.value)) { // Check if it's an array (not null)
+                    allBatches.push(...result.value); // result.value is BatchEntry[]
+                    successfulBatches++;
+                } else {
+                    // Handle the case where the promise resolved to null (maybe intended failure?)
+                    logger.warn({ batchIndex: i /* approximate */ }, "Batch promise resolved to null or non-array value.");
+                    failedBatches++; // Or handle differently if null has specific meaning
+                }
 
             } else if (result.status === 'rejected') {
                 failedBatches++;
-                logger.error({ reason: result.reason }, "Batch write operation failed");
+                // Cố gắng log thêm context nếu có thể (index giúp định vị phần nào)
+                logger.error({ batchIndex: i /* approximate */, reason: result.reason }, "Batch operation failed");
             }
         }
+        logger.info({ successfulBatches, failedBatches, aggregatedCount: allBatches.length }, "Finished aggregating batch results.");
 
 
-        logger.info("Crawler processing finished. Writing final outputs...");
-
+        // --- Ghi file output cuối cùng ---
+        logger.info("Writing final outputs...");
         const allBatchesFilePath = path.join(__dirname, `./data/allBatches.json`);
         const evaluateFilePath = path.join(__dirname, './data/evaluate.csv');
 
         try {
             logger.info({ path: allBatchesFilePath, count: allBatches.length }, 'Writing aggregated results (allBatches) to JSON file');
+            // File JSON này sẽ chứa paths
             await fs.promises.writeFile(
                 allBatchesFilePath,
-                JSON.stringify(allBatches, null, 2),
+                JSON.stringify(allBatches, null, 2), // allBatches giờ chứa paths
                 "utf8"
             );
             logger.info('Successfully wrote allBatches JSON file.');
         } catch (writeBatchesError: any) {
             logger.error(writeBatchesError, `Error writing allBatches to JSON file: ${allBatchesFilePath}`);
+            // Có thể throw lỗi ở đây nếu file này quan trọng
         }
 
+        let finalProcessedData: ProcessedResponseData[] = [];
         if (allBatches && allBatches.length > 0) {
             try {
                 logger.info({ path: evaluateFilePath, recordCount: allBatches.length }, 'Writing final results to CSV file');
-                const processedBatches: ProcessedResponseData[] = await writeCSVFile(evaluateFilePath, allBatches); // Expect ProcessedResponseData[]
+                // writeCSVFile đã được điều chỉnh để đọc từ paths trong allBatches
+                finalProcessedData = await writeCSVFile(evaluateFilePath, allBatches);
                 logger.info('Successfully wrote CSV file.');
-                return processedBatches; // Return ProcessedResponseData[]
             } catch (csvError: any) {
                 logger.error(csvError, `Error writing final CSV file: ${evaluateFilePath}`);
-                throw csvError;
+                // Quyết định có nên dừng hoàn toàn hay không
+                // throw csvError; // Ném lại lỗi nếu file CSV là bắt buộc
             }
         } else {
             logger.warn("No data available in allBatches to write to CSV.");
-            return []; // Return empty ProcessedResponseData[] array
+            // finalProcessedData sẽ là mảng rỗng
         }
+        return finalProcessedData; // Trả về kết quả cuối cùng
+
 
     } catch (error: any) {
         logger.fatal(error, "Fatal error during crawling process");
-        return [];
+        return []; // Trả về mảng rỗng khi có lỗi nghiêm trọng
     } finally {
-        logger.info({
-            totalConferencesInput: conferenceList.length,
-            processedConferences: processedConferenceCount,
-            totalGoogleApiRequests: totalGoogleApiRequests,
-            successfulSearches: successfulSearchCount,
-            failedSearches: failedSearchCount,
-            skippedSearches: skippedSearchCount,
-        }, "Crawling process summary");
+        // --- Luôn thực hiện cleanup ---
+        logger.info("Performing final cleanup...");
 
+        // 1. Dọn dẹp file tạm
+        await cleanupTempFiles(); // <<< THÊM BƯỚC NÀY
+
+        // 2. Đóng trình duyệt
         if (browser) { //  Check if browser is not null/undefined
             logger.info("Closing Playwright browser...");
             try {
@@ -408,6 +427,20 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                 logger.error(closeError, "Error closing Playwright browser");
             }
         }
+
+        // 3. Log thông tin tổng kết
+        logger.info({
+            totalConferencesInput: conferenceList.length,
+            processedConferences: processedConferenceCount,
+            totalGoogleApiRequests: totalGoogleApiRequests,
+            successfulSearches: successfulSearchCount,
+            failedSearches: failedSearchCount,
+            skippedSearches: skippedSearchCount,
+            successfulBatches,
+            failedBatches
+        }, "Crawling process summary");
+
         logger.info("crawlConferences process finished.");
+        // --- Kết thúc cleanup ---
     }
 };

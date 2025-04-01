@@ -1,59 +1,228 @@
 "name","acronym","link","cfpLink","impLink","source","rank","rating","fieldOfResearch","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"Symposium of Asian Association for Algorithms and Computation","AAAC","https://conference.cs.cityu.edu.hk/aaac2025/","https://easychair.org/conferences?conf=aaac2025","None","","","","","Conference dates: May 31 - June 1, 2025
+"Computer Aided Verification","CAV","https://conferences.i-cav.org/2025/","https://conferences.i-cav.org/2025/calls/call-for-papers","https://conferences.i-cav.org/2025/","","","","","Conference dates: July 21 - 25, 2025
 Year: 2025
-Location: City University of Hong Kong, Hong Kong, China
-City-State-Province: Hong Kong, Hong Kong
-Country: China
-Continent: Asia
+Location: Zagreb, Croatia
+City-State-Province: Zagreb
+Country: Croatia
+Continent: Europe
 Type: Offline
-Submission due: February 28, 2025
-Notification: March 28, 2025
-Camera-ready version due: April 18, 2025
-Early Registration due: April 25, 2025
-Topics: Theoretical Computer Science, Algorithms, Complexity Theory","May 31 - June 1, 2025","2025","City University of Hong Kong, Hong Kong, China","Hong Kong, Hong Kong","China","Asia","Offline","{""Submission due"":""February 28, 2025""}","{""Notification"":""March 28, 2025""}","{""Camera-ready version due"":""April 18, 2025""}","{""Early Registration due"":""April 25, 2025""}","{}","Theoretical Computer Science, Algorithms, Complexity Theory","","The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will be held at the City University of Hong Kong, Hong Kong, China on May 31 and June 1, 2025.  The meeting invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. It is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.","# AAAC 2025: Call for Papers
+Full papers due: January 31, 2025
+Author notification: April 2, 2025
+Author Response Period: March 11 - 14, 2025
+Workshops: July 21 - 22, 2025
+Main conference: July 23 - 25, 2025
+Proposals are due by email to the Workshop chair: December 1, 2024
+Organizers will be notified about the participation: December 18, 2024","July 21 - 25, 2025","2025","Zagreb, Croatia","Zagreb","Croatia","Europe","Offline","{""Full papers due"":""January 31, 2025""}","{""Author notification"":""April 2, 2025""}","{}","{}","{""Author Response Period"":""March 11 - 14, 2025"",""Workshops"":""July 21 - 22, 2025"",""Main conference"":""July 23 - 25, 2025"",""Proposals are due by email to the Workshop chair"":""December 1, 2024"",""Organizers will be notified about the participation"":""December 18, 2024""}","","","The 37th International Conference on Computer Aided Verification (CAV 2025) will be held from July 21-25, 2025 in Zagreb, Croatia.  The main conference will run from July 23-25, with workshops scheduled for July 21-22.","No call for papers available"
+"International Conference on Computers and their Applications","CATA","https://www.nwmissouri.edu/csis/CATA2025/index.htm","http://www.isca-hq.org/isca.php?p=Conferences","https://www.nwmissouri.edu/csis/CATA2025/index.htm","","","","","Conference dates: March 17 - 18, 2025
+Year: 2025
+Location: Crowne Plaza Hotel, San Francisco Airport, CA, US
+City-State-Province: San Francisco, California
+Country: United States
+Continent: North America
+Type: Offline
+Full paper submission: November 16, 2024
+Notification of acceptance: January 4, 2025
+Word files, PDF's of final Camera-ready paper and License to publish due: January 18, 2025
+Conference registration materials due: February 7, 2025
+Topics: Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics
+Publisher: Springer Nature","March 17 - 18, 2025","2025","Crowne Plaza Hotel, San Francisco Airport, CA, US","San Francisco, California","United States","North America","Offline","{""Full paper submission"":""November 16, 2024""}","{""Notification of acceptance"":""January 4, 2025""}","{""Word files, PDF's of final Camera-ready paper and License to publish due"":""January 18, 2025""}","{""Conference registration materials due"":""February 7, 2025""}","{}","Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics","Springer Nature","The 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the Crowne Plaza Hotel near San Francisco Airport, CA, US, on March 17-18, 2025.  The conference provides an international forum for the presentation and discussion of research on computers and their applications, including theory, practice, and applications.","# CATA 2025: Call for Papers
 
-The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on **May 31 - June 1, 2025**, at the **City University of Hong Kong, Hong Kong, China.**
+The 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the **Crowne Plaza Hotel, San Francisco Airport, CA, US, on March 17-18, 2025.**
 
-We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.
+## Conference Overview
+
+The conference provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes the best paper award, given for a paper presented at the conference.
 
 ## Topics
 
-All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.
+The topics will include, but are not limited to, the following areas:
 
-## Keynote Speakers
+*   Artificial Intelligence
+*   Computer and Network Security
+*   Computer Graphics
+*   Computer Modeling
+*   Computer Networks
+*   Computer Vision
+*   Computers and Education
+*   Control Systems
+*   Data Communications
+*   Databases
+*   Data Mining/Knowledge Discovery
+*   Digital Signal Processing
+*   Expert Systems
+*   Human-Computer Interface
+*   Human-Computer Visualization
+*   Image Processing
+*   Information Systems
+*   Multimedia Applications
+*   Neural Networks
+*   Pattern Recognition
+*   Programming Languages
+*   Real-Time Computing
+*   Robotics
 
-*   Yossi Azar (Tel-Aviv University)
-*   Eunjung Kim (Korea Advanced Institute of Science & Technology)
+## Keynote Speaker
 
-## Submissions
+*   Bilal Clarance, Director of Engineering Graph Serving Team at Google: ""Knowledge for Search and AI""
 
-Authors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System: [https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025).
+## Submission Guidelines
+
+Papers will be accepted only by electronic submission (PDF only). A full paper, including title, author's name(s) and affiliation, mailing address, telephone, fax, and email of the principal author, should be submitted before **November 16, 2024** online.
+
+The submitted manuscript should closely reflect the final paper as it will appear in the proceedings published in Springer Nature. Accepted papers will be published by Springer Nature and submitted for indexing to major online indexes, such as Google Scholar and Scopus.
+
+## Publication
+
+Accepted papers in CATA-2025 will be published (full text online) in Springer and will be indexed in Scopus, Google Scholar, EI, and INSPEC, and submitted to DBLP for indexing.
 
 ## Important Dates
 
-*   **Submission due:** February 28, 2025
-*   **Notification:** March 28, 2025
-*   **Camera-ready version due:** April 18, 2025
-*   **Early Registration due:** April 25, 2025
-*   **Conference Dates:** May 31 - June 1, 2025
+*   **Full paper submission:** November 16, 2024
+*   **Notification of acceptance:** January 4, 2025
+*   **Word files, PDFs of final Camera-ready paper and License to publish due:** January 18, 2025
+*   **Conference registration materials due:** February 7, 2025
+*   **CATA 2025 in San Francisco, CA, USA:** March 17-18, 2025
 
-## Best Student Presentation Award
+## Templates
 
-The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.
+[https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)"
+"International Conference on Compilers, Architecture, and Synthesis for Embedded Systems","CASES","https://esweek.org/cases/","https://esweek.org/call-for-papers/","None","","","","","Conference dates: September 28 - October 3, 2025
+Year: 2025
+Location: Taipei, Taiwan
+City-State-Province: Taipei
+Country: Taiwan
+Continent: Asia
+Type: Offline
+Journal Track: Abstract Submission: March 23, 2025
+Journal Track: Full Paper Submission: March 30, 2025
+Late Breaking Tracks: Paper Submission: June 1, 2025
+Journal track: Revised paper submission: June 15, 2025
+All tracks (full paper, LB, Special Session): Camera ready: August 11, 2025
+Journal track: First Round Notification: May 18, 2025
+Late Breaking Tracks: Notification: July 13, 2025
+Journal Track: Notification: July 13, 2025
+Special Session Proposals: March 30, 2025
+Tutorial Proposals: March 30, 2025
+Workshop Proposals: March 30, 2025
+Education Class Proposals: March 30, 2025
+Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition: TBD
+Topics: Compilers, Architectures, Synthesis for Embedded Systems, Embedded processor, Memory, Interconnect, Storage architectures, Compiler techniques, Performance, Power, Predictability, Security, Reliability, Heterogeneous architectures, Accelerator-rich architectures","September 28 - October 3, 2025","2025","Taipei, Taiwan","Taipei","Taiwan","Asia","Offline","{""Journal Track: Abstract Submission"":""March 23, 2025"",""Journal Track: Full Paper Submission"":""March 30, 2025"",""Late Breaking Tracks: Paper Submission"":""June 1, 2025"",""Journal track: Revised paper submission"":""June 15, 2025"",""All tracks (full paper, LB, Special Session): Camera ready"":""August 11, 2025""}","{""Journal track: First Round Notification"":""May 18, 2025"",""Late Breaking Tracks: Notification"":""July 13, 2025"",""Journal Track: Notification"":""July 13, 2025""}","{}","{}","{""Special Session Proposals"":""March 30, 2025"",""Tutorial Proposals"":""March 30, 2025"",""Workshop Proposals"":""March 30, 2025"",""Education Class Proposals"":""March 30, 2025"",""Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition"":""TBD""}","Compilers, Architectures, Synthesis for Embedded Systems, Embedded processor, Memory, Interconnect, Storage architectures, Compiler techniques, Performance, Power, Predictability, Security, Reliability, Heterogeneous architectures, Accelerator-rich architectures","","CASES is a premier forum where researchers, developers, and practitioners exchange information on the latest advances in compilers and architectures for high-performance, low-power embedded systems. The conference will be held in Taipei, Taiwan, from September 28 to October 3, 2025, as part of Embedded Systems Week.","No call for papers available"
+"IEEE International Conference on Automation Science and Engineering","CASE","https://2025.ieeecase.org/","https://2025.ieeecase.org/call-for-papers","https://2025.ieeecase.org/key-dates","","","","","Conference dates: August 17 - 21, 2025
+Year: 2025
+Location: Los Angeles, California, USA
+City-State-Province: Los Angeles, California
+Country: United States
+Continent: North America
+Type: Offline
+Regular paper submission deadline: March 15, 2025
+Submission deadline for Workshop/tutorial proposals, Industry papers and work-in-progress papers: April 15, 2025
+Submission deadline for T-ASE, T-RO, RA-L and RAM paper presentations: April 30, 2025
+Paper acceptance notification: May 30, 2025
+Final paper submission and author registration: June 27, 2025
+Special session proposal submission: February 15, 2025
+Early bird registration: June 13, 2025
+Final program: July 17, 2025
+Pre-conference workshops: August 17, 2025
+Conference officially starts: August 18, 2025
+Topics: Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, Secured and Trustworthy Automation, Foundation of Automation, Human-centered automation, Automation in life science and healthcare, Sustainability and green automation, Automation in agriculture and horticulture, Smart building and construction, Knowledge-based automation, Manufacturing automation, Cloud-based automation, Privacy and security in automation","August 17 - 21, 2025","2025","Los Angeles, California, USA","Los Angeles, California","United States","North America","Offline","{""Regular paper submission deadline"":""March 15, 2025"",""Submission deadline for Workshop/tutorial proposals, Industry papers and work-in-progress papers"":""April 15, 2025"",""Submission deadline for T-ASE, T-RO, RA-L and RAM paper presentations"":""April 30, 2025""}","{""Paper acceptance notification"":""May 30, 2025""}","{""Final paper submission and author registration"":""June 27, 2025""}","{}","{""Special session proposal submission"":""February 15, 2025"",""Early bird registration"":""June 13, 2025"",""Final program"":""July 17, 2025"",""Pre-conference workshops"":""August 17, 2025"",""Conference officially starts"":""August 18, 2025""}","Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, Secured and Trustworthy Automation, Foundation of Automation, Human-centered automation, Automation in life science and healthcare, Sustainability and green automation, Automation in agriculture and horticulture, Smart building and construction, Knowledge-based automation, Manufacturing automation, Cloud-based automation, Privacy and security in automation","","The IEEE International Conference on Automation Science and Engineering (CASE 2025) is the flagship automation conference of the IEEE Robotics and Automation Society. CASE 2025 will be held on August 17-21, 2025, in Los Angeles, California, USA. The conference will focus on Secured and Trustworthy Automation.","# CASE 2025: Call for Papers
 
-## Program Committees
+The 2025 IEEE 21st International Conference on Automation Science and Engineering (CASE 2025) will be held in **Los Angeles, California, USA from August 17 – August 21, 2025**. The pre-conference workshops will be held on August 17, 2025.
 
-*   Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))
-*   Sang Won Bae (Kyonggi University)
-*   Ho-Lin Chen (National Taiwan University)
-*   Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)
-*   Minming Li (City University of Hong Kong)
-*   Chung-Shou Liao (National Tsing Hua University)
-*   Pinyan Lu (Shanghai University of Finance and Economics)
-*   Heejin Park (Hanyang University)
-*   Kunihiko Sadakane (The University of Tokyo)
-*   Xiaoming Sun (Chinese Academy of Sciences)
-*   Takeshi Tokuyama (Tohoku University)
-*   Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))
-*   Guochuan Zhang (Zhejiang University)
-*   Shengyu Zhang (The Chinese University of Hong Kong)"
+## Theme
+
+**Secured and Trustworthy Automation:** Automation systems increasingly rely on secured and trustworthy automation. Research is needed to overcome vulnerability and bias due to imperfect system design, data collection, machine learning, or control.
+
+## Topics
+
+The conference will cover a wide range of topics on Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, etc.
+
+Topics include, but are not limited to:
+
+*   Foundation of Automation
+*   Human-centered automation
+*   Automation in life science and healthcare
+*   Sustainability and green automation
+*   Automation in agriculture and horticulture
+*   Automation in meso, micro and nano-scale
+*   Smart building and construction
+*   Knowledge-based automation
+*   Manufacturing automation
+*   Cloud-based automation
+*   Big data, data mining and machine learning
+*   Privacy and security in automation
+
+## Submission Categories
+
+Authors are invited to submit their research contributions, which may include:
+
+*   Regular Papers
+*   Special Session Papers
+*   Special Session Abstracts
+*   Industry Papers
+*   Presentation-only Papers
+
+### Regular Papers
+
+*   The number of pages (including text, figures, tables, acknowledgement, and references) is limited to six, but two additional pages will be permitted at an extra page charge.
+*   Regular papers exceeding 8 pages will be returned without review.
+*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
+*   All accepted regular papers will be included in the conference program and published in IEEE Xplore.
+*   **Submission deadline:** March 15, 2025
+
+### Special Session Papers
+
+*   Special session papers are distinct from regular papers because they are tailored to the specific topic of a special session.
+*   They undergo the same review and selection process as regular papers but are grouped together within the special session to create a cohesive program.
+*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to six, but two additional pages will be permitted at an extra page charge.
+*   Special session papers exceeding 8 pages will be returned without review.
+*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
+*   Special session papers will be included in the conference program and published in IEEE Xplore.
+*   **Submission deadline:** March 15, 2025
+
+### Special Session Abstracts
+
+*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to two.
+*   Abstracts exceeding 2 pages will be returned without review.
+*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
+*   Accepted abstracts will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
+*   **Submission deadline:** April 1, 2025
+
+### Work-in-progress and Industry Presentation-only Papers
+
+*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to four.
+*   Work-in-progress and industry presentation-only papers exceeding 4 pages will be returned without review.
+*   Presentation-only Papers will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
+*   **Submission deadline:** April 15, 2025
+
+### Work-in-progress and Industry Presentation-only Papers for Special Sessions
+
+*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to four.
+*   Work-in-progress and industry presentation-only papers exceeding 4 pages will be returned without review.
+*   Presentation-only Papers will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
+*   **Submission deadline:** April 15, 2025
+
+### T-ASE, T-RO, RA-L and RAM Presentations
+
+If you have published (authored or co-authored) a paper in one of the IEEE Robotics & Automation Society journals, you have the possibility to present your work at CASE 2025.
+
+*   Only the original paper abstract is required. You should also include the full journal paper and the citation details, plus DOI.
+*   To be eligible for presentation at CASE 2025, your paper must be transferred between December 1, 2024, and May 2, 2025.
+*   The paper must be transferred within 270 days of acceptance. Authors may not request any acceleration or delay of the review process based on these time windows.
+*   **Submission deadline:** April 30, 2025
+
+## Important Dates
+
+*   **Special session proposal submission:** February 15, 2025
+*   **Regular and special session full paper submission:** March 15, 2025 (final)
+*   **Workshop/tutorial proposal submission, Industry paper and work-in-progress paper submission:** April 15, 2025
+*   **T-ASE, T-RO, RA-L and RAM presentation submission:** April 30, 2025
+*   **Paper acceptance notification:** May 30, 2025
+*   **Early bird registration:** June 13, 2025
+*   **Final paper submission and author registration:** June 27, 2025
+*   **Final program:** July 17, 2025
+*   **Pre-conference workshops:** August 17, 2025
+*   **Conference officially starts:** August 18, 2025
+
+## Venue
+
+Millennium Biltmore Downtown Los Angeles, California, USA"

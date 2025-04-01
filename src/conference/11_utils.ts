@@ -292,3 +292,43 @@ console.log('[DEBUG] End of utils/logger.ts execution. Logger should be exported
 // export { pinoConfig, levelLabels, fileDestination }; // Không nên export fileDestination trực tiếp trừ khi thực sự cần
 
 
+import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
+
+// --- Thư mục lưu file tạm ---
+const TEMP_TEXT_DIR = path.join(__dirname, './data/temp_texts');
+
+
+// --- Hàm tiện ích ghi file tạm ---
+export async function writeTempFile(content: string, baseName: string): Promise<string> {
+    if (!fs.existsSync(TEMP_TEXT_DIR)) {
+        fs.mkdirSync(TEMP_TEXT_DIR, { recursive: true });
+    }
+    const uniqueId = uuidv4();
+    const filePath = path.join(TEMP_TEXT_DIR, `${baseName}_${uniqueId}.txt`);
+    await fs.promises.writeFile(filePath, content, 'utf8');
+    return filePath;
+}
+
+// --- Hàm tiện ích đọc file ---
+export async function readContentFromFile(filePath: string | undefined | null): Promise<string> {
+    if (!filePath) return "";
+    try {
+        return await fs.promises.readFile(filePath, 'utf8');
+    } catch (error) {
+        console.error(`Error reading file ${filePath}:`, error);
+        return ""; // Hoặc throw lỗi tùy ngữ cảnh
+    }
+}
+
+// --- Thêm hàm dọn dẹp ---
+export const cleanupTempFiles = async (): Promise<void> => {
+    try {
+        if (fs.existsSync(TEMP_TEXT_DIR)) {
+            await fs.promises.rm(TEMP_TEXT_DIR, { recursive: true, force: true });
+            console.log(`Cleaned up temporary directory: ${TEMP_TEXT_DIR}`);
+        }
+    } catch (error) {
+        console.error("Error cleaning up temporary files:", error);
+    }
+};

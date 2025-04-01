@@ -3,7 +3,7 @@ import { parse } from "json2csv"; // Import types if available/needed
 import type { Options as Json2CsvOptions } from 'json2csv'; // Import specific type for options
 
 import { ProcessedResponseData, InputRowData, ProcessedRowData } from './types';
-
+import { readContentFromFile } from './11_utils'; //
 
 // --- Helper Functions ---
 
@@ -33,7 +33,7 @@ function isDateDetailKey(key: string): key is keyof Pick<ProcessedResponseData, 
 
 // Type guard to check if a key is a direct string property key
 function isDirectStringKey(key: string): key is keyof Omit<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate' | 'information'> {
-     return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher", "summary", "callForPapers"].includes(key);
+    return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher", "summary", "callForPapers"].includes(key);
 }
 
 
@@ -100,30 +100,30 @@ export const processResponse = (response: Record<string, any> | null | undefined
                         }
                     } else {
                         // Handle primitive values and arrays (treat as string)
-                         const stringValue = String(value ?? ''); // Convert value to string, handle null/undefined
+                        const stringValue = String(value ?? ''); // Convert value to string, handle null/undefined
 
                         if (isDirectStringKey(camelCaseKey)) {
-                             result[camelCaseKey] = stringValue;
-                             // Append to information if not summary or callForPapers
-                             if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
-                                 result.information += `${key}: ${stringValue}\n`;
-                             }
+                            result[camelCaseKey] = stringValue;
+                            // Append to information if not summary or callForPapers
+                            if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
+                                result.information += `${key}: ${stringValue}\n`;
+                            }
                         } else {
                             // Handle any other keys not explicitly matched (like potential future fields)
-                             if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
+                            if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
                                 result.information += `${key}: ${stringValue}\n`;
                             }
                         }
                     }
                 } catch (valueProcessingError: unknown) {
-                     const message = valueProcessingError instanceof Error ? valueProcessingError.message : String(valueProcessingError);
+                    const message = valueProcessingError instanceof Error ? valueProcessingError.message : String(valueProcessingError);
                     console.error("Error processing value for key:", key, message);
                 }
             }
         }
         result.information = result.information.trim(); // Remove trailing newline
     } catch (responseProcessingError: unknown) {
-         const message = responseProcessingError instanceof Error ? responseProcessingError.message : String(responseProcessingError);
+        const message = responseProcessingError instanceof Error ? responseProcessingError.message : String(responseProcessingError);
         console.error("Error in processResponse:", message);
         if (responseProcessingError instanceof Error) console.error(responseProcessingError.stack);
         // Return the partially processed result object on error
@@ -136,37 +136,62 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
     let processedData: ProcessedRowData[] = []; // Initialize with correct type
 
     try {
-        // Use map and filter, ensuring type safety
-        processedData = data.map((row: InputRowData): ProcessedRowData | null => { // Explicitly type map callback return
+        // 1. Sử dụng map với async callback để xử lý từng row
+        const processPromises = data.map(async (row: InputRowData): Promise<ProcessedRowData | null> => {
             try {
-                let parsedTruncatedInfo: Record<string, any> = {}; // Keep as Record<string, any> or define more strictly if possible
-                try {
-                    if (row.extractResponseText && typeof row.extractResponseText === 'string') {
-                        // Remove control characters
-                        const cleanedText = row.extractResponseText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
-                        parsedTruncatedInfo = JSON.parse(cleanedText);
-                         // Basic check if it's an object after parsing
-                         if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) {
-                            console.warn("Parsed extractResponseText is not an object for row:", row, "\nContent:", row.extractResponseText);
-                            parsedTruncatedInfo = {}; // Reset to empty object
-                         }
-                    } else {
-                         console.warn("extractResponseText missing or not a string for row:", row)
+                let fileContent: string = ""; // Nội dung đọc từ file
+
+                // 2. Kiểm tra và đọc file từ path
+                if (row.extractResponseTextPath) {
+                    try {
+                        fileContent = await readContentFromFile(row.extractResponseTextPath);
+                    } catch (readError: unknown) {
+                        const message = readError instanceof Error ? readError.message : String(readError);
+                        console.error(`Error reading file ${row.extractResponseTextPath} for row: ${row.conferenceAcronym}: ${message}`);
+                        // Quyết định xử lý tiếp hay bỏ qua row này.
+                        // Ở đây, chúng ta tiếp tục với fileContent rỗng, JSON.parse sẽ xử lý.
                     }
-                } catch (parseError: unknown) {
-                     const message = parseError instanceof Error ? parseError.message : String(parseError);
-                    console.error("Error parsing extractResponseText JSON:", message, "for row:", /* Consider logging less verbose row info */ { acronym: row.conferenceAcronym, link: row.conferenceLink }, "\nContent snippet:", row.extractResponseText?.substring(0, 100));
-                    parsedTruncatedInfo = {}; // Ensure it's an object on error
+                } else {
+                    console.warn(`extractResponseTextPath missing for row: ${row.conferenceAcronym}`);
+                    // Không có path -> không có nội dung để parse
                 }
 
                 // Process the parsed data
-                const processedResponse = processResponse(parsedTruncatedInfo);
+                let parsedTruncatedInfo: Record<string, any> = {};
+                try {
+                    // 3. Parse nội dung đọc được từ file (nếu có)
+                    if (fileContent) { // Chỉ parse nếu có nội dung
+                        // Remove control characters
+                        const cleanedText = fileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
 
-                // Construct the final row object conforming to ProcessedRowData
+                        // Thêm kiểm tra xem cleanedText có rỗng không trước khi parse
+                        if (cleanedText.trim()) {
+                            parsedTruncatedInfo = JSON.parse(cleanedText);
+                            // Basic check if it's an object after parsing
+                            if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) {
+                                console.warn("Parsed file content is not an object for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath });
+                                parsedTruncatedInfo = {}; // Reset to empty object
+                            }
+                        } else {
+                            console.warn("Cleaned file content is empty, skipping parse for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath });
+                            // parsedTruncatedInfo vẫn là {}
+                        }
+                    } else {
+                        // Log nếu không có nội dung để parse (do path thiếu hoặc đọc file lỗi/rỗng)
+                        console.warn("No content to parse for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath || 'N/A' });
+                    }
+                } catch (parseError: unknown) {
+                    const message = parseError instanceof Error ? parseError.message : String(parseError);
+                    // Log lỗi kèm path và nội dung snippet
+                    console.error("Error parsing JSON from file:", message, "for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath }, "\nContent snippet:", fileContent.substring(0, 100));
+                    parsedTruncatedInfo = {}; // Ensure it's an object on error
+                }
+
+                // Process the parsed data (logic này giữ nguyên)
+                const processedResponse = processResponse(parsedTruncatedInfo);
+                // Construct the final row object conforming to ProcessedRowData (logic này giữ nguyên)
                 const finalRow: ProcessedRowData = {
-                    // Fields from InputRowData (provide defaults)
                     name: row.conferenceName || "",
-                    // Handle potential _diff suffix
                     acronym: (row.conferenceAcronym || "").split("_diff")[0],
                     rank: row.conferenceRank || "",
                     rating: row.conferenceRating || "",
@@ -178,19 +203,26 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                     link: row.conferenceLink || "",
                     cfpLink: row.cfpLink || "",
                     impLink: row.impLink || "",
-                    // Spread the processed data (already matches part of ProcessedRowData)
                     ...processedResponse,
-                    // Ensure 'information' from processedResponse is included (it's part of the spread)
                 };
                 return finalRow;
 
             } catch (rowProcessingError: unknown) {
-                 const message = rowProcessingError instanceof Error ? rowProcessingError.message : String(rowProcessingError);
+                const message = rowProcessingError instanceof Error ? rowProcessingError.message : String(rowProcessingError);
                 console.error("Error processing row:", message, "Row Acronym:", row.conferenceAcronym);
                 return null; // Skip this row on error
             }
-        }).filter((row): row is ProcessedRowData => row !== null); // Type predicate to filter out nulls
+        });
 
+
+        // 4. Chờ tất cả các promise xử lý row hoàn thành
+        const resolvedResults = await Promise.all(processPromises);
+
+        // 5. Lọc bỏ các kết quả null (những row bị lỗi)
+        processedData = resolvedResults.filter((row): row is ProcessedRowData => row !== null);
+
+
+        // ----- Phần còn lại của việc tạo và ghi CSV giữ nguyên -----
 
         // Define fields for CSV header and ordering
         // Ensure these fields match the keys in ProcessedRowData
@@ -203,23 +235,19 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
             "otherDate", "topics", "publisher", "summary", "callForPapers"
         ];
 
-        // Define options for json2csv parser
         const opts: Json2CsvOptions<ProcessedRowData> = { fields };
 
         try {
+            // Dữ liệu đầu vào cho parse giờ là processedData đã được xử lý hoàn chỉnh
             const csv = parse(processedData, opts);
-
-            // Use async writeFile
             await fs.writeFile(filePath, csv, "utf8");
             console.log(`CSV file saved to: ${filePath}`);
 
-        } catch (parseOrWriteError: unknown) { // Catch errors from parse or writeFile
+        } catch (parseOrWriteError: unknown) {
              const message = parseOrWriteError instanceof Error ? parseOrWriteError.message : String(parseOrWriteError);
             console.error("Error parsing data to CSV or writing file:", message);
              if (parseOrWriteError instanceof Error) console.error(parseOrWriteError.stack);
-            // Don't write a partial/corrupt CSV. Rethrow or handle as needed.
-            // Depending on requirements, you might want to throw here to signal failure
-             // throw parseOrWriteError;
+             // Có thể throw lỗi ở đây nếu cần thiết
         }
 
         return processedData; // Return the successfully processed data
@@ -228,11 +256,6 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
         const message = error instanceof Error ? error.message : String(error);
         console.error("Fatal error in writeCSVFile:", message);
         if (error instanceof Error) console.error(error.stack);
-        // Decide return value on fatal error: empty array or throw
-        return []; // Return empty array as a fallback
-        // Or rethrow: throw error;
+        return []; // Trả về mảng rỗng khi có lỗi nghiêm trọng
     }
 };
-
-// Export writeCSVFile as the default export if needed (or keep named exports)
-// export default writeCSVFile;

@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "March 17 - 18, 2025",
+  "Year": "2025",
+  "Location": "Crowne Plaza Hotel, San Francisco Airport, CA, US",
+  "City-State-Province": "San Francisco, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full paper submission": "November 16, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "January 4, 2025"
+  },
+  "Camera-ready Date": {
+    "Word files, PDF's of final Camera-ready paper and License to publish due": "January 18, 2025"
+  },
+  "Registration Date": {
+    "Conference registration materials due": "February 7, 2025"
+  },
+  "Topics": "Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics",
+  "Publisher": "Springer Nature",
+  "Summary": "The 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the Crowne Plaza Hotel near San Francisco Airport, CA, US, on March 17-18, 2025.  The conference provides an international forum for the presentation and discussion of research on computers and their applications, including theory, practice, and applications.",
+  "Call for Papers": "# CATA 2025: Call for Papers\n\nThe 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the **Crowne Plaza Hotel, San Francisco Airport, CA, US, on March 17-18, 2025.**\n\n## Conference Overview\n\nThe conference provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes the best paper award, given for a paper presented at the conference.\n\n## Topics\n\nThe topics will include, but are not limited to, the following areas:\n\n*   Artificial Intelligence\n*   Computer and Network Security\n*   Computer Graphics\n*   Computer Modeling\n*   Computer Networks\n*   Computer Vision\n*   Computers and Education\n*   Control Systems\n*   Data Communications\n*   Databases\n*   Data Mining/Knowledge Discovery\n*   Digital Signal Processing\n*   Expert Systems\n*   Human-Computer Interface\n*   Human-Computer Visualization\n*   Image Processing\n*   Information Systems\n*   Multimedia Applications\n*   Neural Networks\n*   Pattern Recognition\n*   Programming Languages\n*   Real-Time Computing\n*   Robotics\n\n## Keynote Speaker\n\n*   Bilal Clarance, Director of Engineering Graph Serving Team at Google: \"Knowledge for Search and AI\"\n\n## Submission Guidelines\n\nPapers will be accepted only by electronic submission (PDF only). A full paper, including title, author's name(s) and affiliation, mailing address, telephone, fax, and email of the principal author, should be submitted before **November 16, 2024** online.\n\nThe submitted manuscript should closely reflect the final paper as it will appear in the proceedings published in Springer Nature. Accepted papers will be published by Springer Nature and submitted for indexing to major online indexes, such as Google Scholar and Scopus.\n\n## Publication\n\nAccepted papers in CATA-2025 will be published (full text online) in Springer and will be indexed in Scopus, Google Scholar, EI, and INSPEC, and submitted to DBLP for indexing.\n\n## Important Dates\n\n*   **Full paper submission:** November 16, 2024\n*   **Notification of acceptance:** January 4, 2025\n*   **Word files, PDFs of final Camera-ready paper and License to publish due:** January 18, 2025\n*   **Conference registration materials due:** February 7, 2025\n*   **CATA 2025 in San Francisco, CA, USA:** March 17-18, 2025\n\n## Templates\n\n[https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)"
+}
+```
