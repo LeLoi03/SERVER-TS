@@ -69,20 +69,6 @@ export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
         // // --- Kết thúc phần chặn tài nguyên ---
 
 
-        // Optional: Thêm xử lý lỗi trang để ghi log
-        browserContext.on('page', (page: Page) => {
-            page.on('crash', () => console.error(`Page crashed: ${page.url()}`));
-            page.on('pageerror', (error) => {
-                if (error instanceof Error) {
-                    console.error(`Page error in ${page.url()}: ${error.message}`);
-                    console.error(`Error stack: ${error.stack}`); // Add the stack trace
-                } else {
-                    console.error(`Page error in ${page.url()}:`, error); // Log the whole error object if not an Error instance
-                }
-            });
-            // page.on('requestfailed', request => console.log(`Request failed: ${request.url()}`)); // Ghi log request thất bại (nhiều log)
-        });
-
         console.log("Playwright browser and context setup successfully.");
         return { browser, browserContext }; // Trả về cả browser và context
 

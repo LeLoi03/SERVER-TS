@@ -1,0 +1,8 @@
+[2025-04-01T08:29:28.043Z] Error accessing modifiedLink: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.aamas2025-conference.auckland.ac.nz/
+Call log:
+[2m  - navigating to "https://www.aamas2025-conference.auckland.ac.nz/", waiting until "domcontentloaded"[22m
+ for AAMAS
+[2025-04-01T08:29:35.577Z] Error accessing originalLink: page.goto: Navigation to "https://www.aamas2024-conference.auckland.ac.nz/" is interrupted by another navigation to "chrome-error://chromewebdata/"
+Call log:
+[2m  - navigating to "https://www.aamas2024-conference.auckland.ac.nz/", waiting until "domcontentloaded"[22m
+ for AAMAS

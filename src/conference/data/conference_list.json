@@ -1,14 +1,22 @@
 [
   {
     "Title": "Symposium of Asian Association for Algorithms and Computation",
-    "Acronym": "AAAC",
-    "Source": "CORE2023",
-    "Rank": "C",
-    "Note": "none",
-    "DBLP": "none",
-    "PrimaryFoR": "4613",
-    "Comments": "0",
-    "Rating": "N/A",
-    "Details": []
+    "Acronym": "AAAC"
+  },
+  {
+    "Title": "National Conference of the American Association for Artificial Intelligence",
+    "Acronym": "AAAI"
+  },
+  {
+    "Title": "Conference on Algorithmic Aspects in Information and Management",
+    "Acronym": "AAIM"
+  },
+  {
+    "Title": "International Joint Conference on Autonomous Agents and Multiagent Systems (previously the International Conference on Multiagent Systems, ICMAS, changed in 2000)",
+    "Acronym": "AAMAS"
+  },
+  {
+    "Title": "International Conference Abstract State Machines, Alloy, B, TLA, VDM, and Z (Previously International Conference of B and Z Users, ZB, changed in 2008)",
+    "Acronym": "ABZ"
   }
 ]

@@ -375,5 +375,5 @@ export const getConferenceList = async (): Promise<ConferenceData[]> => {
 
     console.log(`--- Scraping Finished ---`);
     console.log(`Total conferences collected across ${pagesToFetch} pages: ${allConferences.length}`);
-    return allConferences.slice(0,1);
+    return allConferences;
 };
