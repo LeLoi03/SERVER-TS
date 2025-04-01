@@ -4,7 +4,7 @@ import { chromium, Browser, BrowserContext, Page } from "playwright";
 import { CHANNEL, HEADLESS, USER_AGENT } from '../config';
 
 import { PlaywrightSetupResult } from "./types";
- 
+
 export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
     let browser: Browser | null = null; // Initialize to null, but allow Browser later
 
@@ -21,8 +21,6 @@ export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
                 "--disable-gpu",
                 "--blink-settings=imagesEnabled=false", // Cân nhắc việc chặn ảnh ở đây hay ở context.route
                 "--ignore-certificate-errors",
-                "--disable-dev-shm-usage", // Thường hữu ích trong môi trường Docker/CI
-                "--window-size=1280,720", // Đặt kích thước cửa sổ ở launch args cũng là một lựa chọn
             ],
         });
 
@@ -36,7 +34,6 @@ export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
             // locale: 'en-US',
             // timezoneId: 'America/New_York',
             // geolocation: { longitude: 12.4924, latitude: 41.8902 }, // Ví dụ: Rome
-            acceptDownloads: true, // Cho phép tải file nếu cần
             javaScriptEnabled: true, // Mặc định là true, đảm bảo bật nếu cần JS
             bypassCSP: true, // Bỏ qua Content Security Policy nếu gặp sự cố
         });
@@ -74,9 +71,16 @@ export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
 
         // Optional: Thêm xử lý lỗi trang để ghi log
         browserContext.on('page', (page: Page) => {
-           page.on('crash', () => console.error(`Page crashed: ${page.url()}`));
-           page.on('pageerror', (error) => console.error(`Page error in ${page.url()}:`, error));
-           // page.on('requestfailed', request => console.log(`Request failed: ${request.url()}`)); // Ghi log request thất bại (nhiều log)
+            page.on('crash', () => console.error(`Page crashed: ${page.url()}`));
+            page.on('pageerror', (error) => {
+                if (error instanceof Error) {
+                    console.error(`Page error in ${page.url()}: ${error.message}`);
+                    console.error(`Error stack: ${error.stack}`); // Add the stack trace
+                } else {
+                    console.error(`Page error in ${page.url()}:`, error); // Log the whole error object if not an Error instance
+                }
+            });
+            // page.on('requestfailed', request => console.log(`Request failed: ${request.url()}`)); // Ghi log request thất bại (nhiều log)
         });
 
         console.log("Playwright browser and context setup successfully.");

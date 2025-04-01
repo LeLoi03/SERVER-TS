@@ -19,7 +19,7 @@ export const extractTextFromPDF = async (pdfUrl: string): Promise<string | null>
             timeout: 15000, // 15 giây
             // Có thể thêm các headers cần thiết, ví dụ User-Agent
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' // Ví dụ
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0' // Ví dụ
             }
         });
 

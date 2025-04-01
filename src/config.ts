@@ -1,9 +1,35 @@
 import path from 'path';
 import dotenv from 'dotenv';
-import PQueue from 'p-queue';
+import type { Options as PQueueOptions, default as PQueueClass } from 'p-queue';
+
+export const MAX_TABS: number = parseInt(process.env.PQUEUE_CONCURRENCY || '5', 10);
+
+// Define a type for the PQueue class instance more specifically
+// You might need to adjust the generic types based on your queue's task and result types
+// Using <any, any> is a placeholder if you don't have specific types yet.
+type QueueType = InstanceType<typeof PQueueClass<any, any>>;
+
+async function initializeQueue(): Promise<QueueType> {
+    // Dynamically import p-queue
+    const { default: PQueue } = await import('p-queue');
+    const queueOptions: PQueueOptions<any, any> = { concurrency: MAX_TABS };
+    console.log(`Initializing queue with concurrency: ${MAX_TABS}`); // Optional: Add logging
+    return new PQueue(queueOptions);
+}
+
+// Export the promise directly
+export const queuePromise: Promise<QueueType> = initializeQueue();
+
+// Optional: Add a catch block for initialization errors
+queuePromise.catch(error => {
+    console.error("FATAL: Failed to initialize the queue:", error);
+    // Depending on your app, you might want to exit or implement retry logic
+    // process.exit(1);
+});
+
+
 import pLimit from 'p-limit';
 import type { Limit } from 'p-limit'; // Import type for clarity
-import type { Options as PQueueOptions } from 'p-queue'; // Import type for clarity
 
 // **** ADD SDK TYPE IMPORTS ****
 import {
@@ -14,9 +40,6 @@ import {
 // ******************************
 
 dotenv.config();
-
-// Ensure __dirname works correctly in ES Modules with TypeScript
-const __dirname = path.dirname(__filename);
 
 // --- CRAWL Configuration ---
 export const PORTAL: string = process.env.PORTAL || "https://portal.core.edu.au/conf-ranks";
@@ -31,8 +54,8 @@ type PlaywrightChannel = 'chrome' | 'msedge' | 'firefox' | 'webkit' | 'chrome-be
 
 // Xuất các hằng số với kiểu dữ liệu cụ thể
 export const CHANNEL: PlaywrightChannel = 'msedge'; // Hoặc giá trị từ biến môi trường: process.env.PLAYWRIGHT_CHANNEL as PlaywrightChannel || 'chrome'
-export const HEADLESS: boolean = process.env.NODE_ENV === 'production'; // Ví dụ: true trong production, false khi dev
-export const USER_AGENT: string = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36'; // Thay bằng user agent bạn muốn
+export const HEADLESS: boolean = Boolean(process.env.HEADLESS) || true; // Ví dụ: true trong production, false khi dev
+export const USER_AGENT: string = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0'; // Thay bằng user agent bạn muốn
 
 const currentYear: number = new Date().getFullYear();
 const previousYear: number = currentYear - 1;
@@ -62,10 +85,6 @@ export const UNWANTED_DOMAINS: string[] = parseEnvKeywords("UNWANTED_DOMAINS");
 
 console.log("CFP_TAB_KEYWORDS:", CFP_TAB_KEYWORDS); // Log for debugging
 
-export const MAX_TABS: number = parseInt(process.env.PQUEUE_CONCURRENCY || '5', 10);
-const queueOptions: PQueueOptions<any, any> = { concurrency: MAX_TABS }; // Define options type
-export const QUEUE: PQueue = new PQueue(queueOptions);
-
 // --- API Configuration ---
 export const GEMINI_API_KEY: string | undefined = process.env.GEMINI_API_KEY;
 
@@ -80,9 +99,6 @@ if (!GEMINI_API_KEY) {
 // --- Constants ---
 export const API_TYPE_EXTRACT: string = "extract";
 export const API_TYPE_DETERMINE: string = "determine";
-export const RESPONSE_OUTPUT_DIR: string = "./conference/data/responses";
-export const EXTRACT_INFORMATION_CSV: string = "./conference/examples/extract_infor.csv";
-export const DETERMINE_LINKS_CSV: string = "./conference/examples/determine_links.csv";
 
 // --- Concurrency Control ---
 const MAX_CONCURRENT_REQUESTS: number = parseInt(process.env.MAX_CONCURRENT_REQUESTS || "2", 10);
@@ -216,17 +232,15 @@ export const CACHE_OPTIONS: CacheOptions = {
     checkperiod: parseInt(process.env.CACHE_CHECK_PERIOD || String(60 * 60), 10), // 1 hour
 };
 
-export const LOG_FILE: string = path.join(__dirname, './journal/data/crawl_journal.log');
-
 // Filter out potential undefined values from process.env
 export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
+    process.env.CUSTOM_SEARCH_API_KEY_3,
+    process.env.CUSTOM_SEARCH_API_KEY_4,
     process.env.CUSTOM_SEARCH_API_KEY_5,
     process.env.CUSTOM_SEARCH_API_KEY_6,
     process.env.CUSTOM_SEARCH_API_KEY_7,
     process.env.CUSTOM_SEARCH_API_KEY_1,
     process.env.CUSTOM_SEARCH_API_KEY_2,
-    process.env.CUSTOM_SEARCH_API_KEY_3,
-    process.env.CUSTOM_SEARCH_API_KEY_4,
     process.env.CUSTOM_SEARCH_API_KEY_8,
     process.env.CUSTOM_SEARCH_API_KEY_9,
     process.env.CUSTOM_SEARCH_API_KEY_10
@@ -240,13 +254,8 @@ export const KEY_ROTATION_DELAY_MS: number = parseInt(process.env.KEY_ROTATION_D
 // --- Journal Crawl Specific ---
 export const JOURNAL_CRAWL_BIOXBIO: boolean = process.env.JOURNAL_CRAWL_BIOXBIO !== 'false';
 export const JOURNAL_CRAWL_MODE: 'scimago' | 'csv' = (process.env.JOURNAL_CRAWL_MODE === 'csv' ? 'csv' : 'scimago'); // Type restrict to known values
-export const INPUT_CSV: string = path.join(__dirname, './journal/csv/import_journal.csv');
 export const JOURNAL_CRAWL_DETAILS: boolean = process.env.JOURNAL_CRAWL_DETAILS !== 'false';
-export const OUTPUT_JSON: string = path.join(__dirname, './journal/data/all_journal_data.json');
 export const JOURNAL_CSV_HEADERS: string = process.env.JOURNAL_CSV_HEADERS || "Title,Type,SJR,H index,Total Docs. (2023),Total Docs. (3years),Total Refs. (2023),Total Cites (3years),Citable Docs. (3years),Cites / Doc. (2years),Ref. / Doc. (2023),Country,Details";
-
-// --- Conference Specific ---
-export const CONFERENCE_OUTPUT_PATH: string = path.join(__dirname, './conference/data/conference_list.json');
 
 
 // --- LOGGER Configuration ---
@@ -258,19 +267,18 @@ export type AllowedLogLevel = LevelWithSilent; // Sử dụng kiểu của Pino
 
 // Lấy giá trị từ biến môi trường, ép kiểu và cung cấp giá trị mặc định an toàn
 const getLogLevel = (): AllowedLogLevel => {
-	const envLevel = process.env.LOG_LEVEL?.toLowerCase();
-	// Kiểm tra xem envLevel có phải là một trong các giá trị hợp lệ không
-	const validLevels: AllowedLogLevel[] = ['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent'];
-	if (envLevel && validLevels.includes(envLevel as AllowedLogLevel)) {
-		return envLevel as AllowedLogLevel;
-	}
-	return 'info'; // Giá trị mặc định
+    const envLevel = process.env.LOG_LEVEL?.toLowerCase();
+    // Kiểm tra xem envLevel có phải là một trong các giá trị hợp lệ không
+    const validLevels: AllowedLogLevel[] = ['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent'];
+    if (envLevel && validLevels.includes(envLevel as AllowedLogLevel)) {
+        return envLevel as AllowedLogLevel;
+    }
+    return 'info'; // Giá trị mặc định
 };
 
 export const LOG_LEVEL: AllowedLogLevel = getLogLevel();// Nên sử dụng path.resolve để đảm bảo đường dẫn tuyệt đối ngay từ đầu
 export const LOGS_DIRECTORY = path.resolve(process.env.LOGS_DIR || './logs');
 export const APP_LOG_FILE_PATH: string = path.join(LOGS_DIRECTORY, process.env.LOG_FILE_NAME || 'app.log');
-// export const ERROR_LOG_FILE_PATH: string = "./conference/data/error_api_log.txt"; // Uncomment if needed
 
 // --- Validation for GOOGLE CSE ---
 if (!GOOGLE_CSE_ID) {

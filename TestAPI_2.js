@@ -1,17 +1,15 @@
 // test_api.js
-import axios from 'axios';
-import fs from 'fs';
+import { axios } from 'axios';
+import { fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { parse } from 'csv-parse/sync';
-// Không cần readline nữa
-// import readline from 'readline';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const API_CONFERENCE_ENDPOINT = 'http://localhost:3000/crawl-conferences';
-const API_JOURNAL_ENDPOINT = 'http://localhost:3000/crawl-journals';
+const API_CONFERENCE_ENDPOINT = 'http://localhost:3001/crawl-conferences';
+const API_JOURNAL_ENDPOINT = 'http://localhost:3001/crawl-journals';
 const CSV_FILE_PATH = './CORE_2023.csv';
 
 // <<< --- Cấu hình chế độ chạy --- >>>

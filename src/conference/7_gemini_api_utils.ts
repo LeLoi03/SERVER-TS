@@ -21,13 +21,16 @@ import {
 import { logger } from './11_utils'; // Assuming 11_utils.ts exists and exports logger
 import {
     apiConfigs, API_TYPE_EXTRACT, API_TYPE_DETERMINE,
-    RESPONSE_OUTPUT_DIR, GEMINI_API_KEY, apiLimiter,
+    GEMINI_API_KEY, apiLimiter,
     MODEL_RATE_LIMIT_POINTS, MODEL_RATE_LIMIT_DURATION, MODEL_RATE_LIMIT_BLOCK_DURATION,
     MAX_RETRIES, INITIAL_DELAY_BETWEEN_RETRIES, MAX_DELAY_BETWEEN_RETRIES,
     type ApiConfig // Import the interface type from config
 } from '../config'; // Import from .ts file
 
 import { RetryableFunction, type ApiResponse, type CallGeminiApiParams } from "./types";
+
+export const RESPONSE_OUTPUT_DIR: string = path.join(__dirname, "./data/responses");
+
 
 // --- Persistent Cache Map Configuration ---
 const CACHE_MAP_DIR: string = path.resolve(process.env.CACHE_MAP_DIR || './data'); // Thư mục lưu file map

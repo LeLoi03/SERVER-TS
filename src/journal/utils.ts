@@ -1,7 +1,9 @@
 import { pino } from 'pino';
-import { LOG_FILE } from '../config.js';
 import fs from 'fs/promises';
 import { parse } from 'csv-parse/sync'; // Import thư viện csv-parse/sync
+import path from 'path';
+
+export const LOG_FILE: string = path.join(__dirname, './data/crawl_journal.log');
 
 // Cấu hình logger (Pino)
 const transport = pino.transport({

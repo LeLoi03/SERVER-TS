@@ -509,6 +509,16 @@
         "deletedAt": null,
         "message": "Update for \" International Conference on Advanced Communications and Computation\" (following) & in calendar:\n- Organization Link: Changed from \"https://www.iaria.org/conferences2025/INFOCOMP25.html\" to \"https://www.iaria.org/conferences/INFOCOMP.html\".\n- Dates:\n  - Added: Notification: 2025-02-16 to 2025-02-16\n  - Added: Registration: 2025-02-28 to 2025-02-28\n  - Added: Camera ready: 2025-03-05 to 2025-03-05\n  - Added: Submission: 2025-01-20 to 2025-01-20\n  - Added: conferenceDates: 2025-04-06 to 2025-04-06\n  - Removed: Notification: 2025-02-16 to 2025-02-16\n  - Removed: Registration: 2025-02-28 to 2025-02-28\n  - Removed: Camera ready: 2025-03-05 to 2025-03-05\n  - Removed: Submission: 2025-01-20 to 2025-01-20\n  - Removed: conferenceDates: 2025-04-06 to 2025-04-06",
         "type": "Conference Update"
+      },
+      {
+        "id": "30790c89-f7f4-4c24-a1e3-f34d1f6285ad",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-04-01T04:57:00.129Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
+        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-27T03:25:32.327Z",
@@ -772,6 +782,16 @@
         "deletedAt": null,
         "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
+      },
+      {
+        "id": "1b9fba0b-0d97-441e-bb95-fddbbb45b153",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-04-01T04:57:00.129Z",
+        "isImportant": true,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
+        "type": "Upcoming Conference"
       }
     ],
     "createdAt": "2025-03-28T13:35:20.438Z",

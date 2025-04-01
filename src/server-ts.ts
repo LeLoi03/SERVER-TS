@@ -14,8 +14,9 @@ import { logger } from './conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from './conference/3_core_portal_scraping';
 import { crawlConferences } from './conference/crawl_conferences';
 import { crawlJournals } from './journal/crawl_journals';
-import { OUTPUT_JSON } from './config';
 import { ConferenceData } from './conference/types'; // Import ConferenceData type
+
+export const OUTPUT_JSON: string = path.join(__dirname,'./journal/data/all_journal_data.json');
 
 const corsOptions = {
     origin: '*',
@@ -310,8 +311,7 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
 });
 
 // --- Cron Job ---
-cron.schedule('*/1 * * * *', checkUpcomingConferenceDates);
-
+cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
 

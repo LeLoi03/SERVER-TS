@@ -1,0 +1,63 @@
+"name","acronym","link","cfpLink","impLink","source","rank","rating","fieldOfResearch","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
+"International Conference on the Theory and Application of Cryptographic Techniques","EuroCrypt","https://eurocrypt.iacr.org/2025/","https://eurocrypt.iacr.org/2025/callforpapers.php","None","","","","","Conference dates: May 4 - 8, 2025
+Year: 2025
+Location: Madrid, Spain
+City-State-Province: Madrid
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission deadline: October 2, 2024
+Second submission deadline for affiliated events proposals: December 6, 2024
+Rebuttal period begins: December 8, 2024
+Rebuttal period ends: December 12, 2024
+Final notification: January 31, 2025
+Student stipend request deadline: February 17, 2025
+Conference begins: May 4, 2025
+Topics: Cryptography, Foundational Theory, Cryptographic Primitives, Cryptographic Protocols, Secure Implementation, Optimization, Hardware, Software, Applied Cryptography
+Publisher: Springer","May 4 - 8, 2025","2025","Madrid, Spain","Madrid","Spain","Europe","Offline","{""Submission deadline"":""October 2, 2024""}","{}","{}","{}","{""Second submission deadline for affiliated events proposals"":""December 6, 2024"",""Rebuttal period begins"":""December 8, 2024"",""Rebuttal period ends"":""December 12, 2024"",""Final notification"":""January 31, 2025"",""Student stipend request deadline"":""February 17, 2025"",""Conference begins"":""May 4, 2025""}","Cryptography, Foundational Theory, Cryptographic Primitives, Cryptographic Protocols, Secure Implementation, Optimization, Hardware, Software, Applied Cryptography","Springer","Eurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in Madrid, Spain on May 4-8, 2025. Eurocrypt 2025 is organized by the International Association for Cryptologic Research (IACR).","# Eurocrypt 2025: Call for Papers
+
+Eurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in **Madrid, Spain on May 4-8, 2025**.
+
+Eurocrypt 2025 is organized by the International Association for Cryptologic Research (IACR). The proceedings will be published by Springer in the LNCS series.
+
+## Topics of Interest
+
+Original research papers are welcomed on any cryptographic topic, including but not limited to:
+
+*   foundational theory and mathematics
+*   the design, proposal, and analysis of cryptographic primitives and protocols
+*   secure implementation and optimization in hardware or software
+*   applied aspects of cryptography
+
+Authors of accepted papers are asked to present their work in person at the conference.
+
+## Submission
+
+Author instructions for paper submission may be found on the submission page. [Submit a paper](https://www.iacr.org/conferences/eurocrypt2025/)
+
+Submissions must be at most 27 pages using the Springer LNCS format, including title page and figures, but excluding references. Optionally, any amount of clearly marked supplementary material may be supplied, following after the main body of the paper. However, reviewers are not required to read or review beyond the main body, and submissions are expected to be intelligible, and show sufficient scientific quality and depth, without the supplementary material.
+
+The final published version of an accepted paper will be limited to 30 pages including references and is expected to closely match the submission. For further details, consult the paper submission page.
+
+## Review Process
+
+Eurocrypt 2025 will operate a two-round review system with a rebuttal phase. In the first round, the program committee selects the submissions that will proceed to the second round, and the authors receive the first round notification. The authors of the selected submissions are invited to submit a text-based rebuttal letter to respond to the reviews. Furthermore, in cases where this is considered useful by the PC chairs and/or the reviewers, additional communication between authors and reviewers may be initiated (in both rounds).
+
+The submissions that have not been selected during the first round of reviews (early rejects) may be submitted to other conferences after the first round notification date.
+
+In the second round, the program committee further reviews the selected submissions by taking into account the rebuttal letters. The committee then makes the final decision of acceptance or rejection.
+
+## Important Dates
+
+*   **Oct 2, 2024 (AoE):** Submission deadline
+*   **Dec 6, 2024 (AoE):** Second submission deadline for affiliated events proposals
+*   **Dec 8, 2024:** Rebuttal period begins
+*   **Dec 12, 2024:** Rebuttal period ends
+*   **Jan 31, 2025:** Final notification
+*   **Feb 17, 2025:** Student stipend request deadline
+*   **May 4, 2025:** Conference begins
+
+## Program Co-chairs
+
+*   Serge Fehr, Centrum Wiskunde & Informatica (CWI) and Leiden University, The Netherlands
+*   Pierre-Alain Fouque, University of Rennes, France"

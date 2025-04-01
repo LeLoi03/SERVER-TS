@@ -2,17 +2,24 @@
 
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
 import fs from 'fs';
-import ora from 'ora';
+import path from 'path';
+let ora: any; // Declare ora with type any temporarily
+
+async function initializeOra() {
+    const { default: oraModule } = await import('ora');
+    ora = oraModule;
+}
+
+
 import {
   MAX_TABS,
   JOURNAL_CRAWL_BIOXBIO,
-  INPUT_CSV,
   JOURNAL_CRAWL_DETAILS,
   JOURNAL_CSV_HEADERS,
   BASE_URL,
   HEADLESS, CHANNEL,
   JOURNAL_CRAWL_MODE,
-  OUTPUT_JSON, USER_AGENT,
+  USER_AGENT,
   GOOGLE_CUSTOM_SEARCH_API_KEYS,
   GOOGLE_CSE_ID,
   MAX_USAGE_PER_KEY,
@@ -21,6 +28,11 @@ import {
 import { processPage, fetchDetails, getImageUrlAndDetails, getLastPageNumber } from './scimagojr';
 import { fetchBioxbioData } from './bioxbio';
 import { createURLList, logger, readCSV } from './utils';
+
+export const LOG_FILE: string = path.join(__dirname,'./data/crawl_journal.log');
+export const INPUT_CSV: string = path.join(__dirname,'./csv/import_journal.csv');
+export const OUTPUT_JSON: string = path.join(__dirname,'./data/journal_list.json');
+
 
 // --- Types ---
 
@@ -67,6 +79,8 @@ async function getNextJournalApiKey(): Promise<string | null> {
 }
 
 export const crawlJournals = async (): Promise<JournalDetails[]> => {
+  await initializeOra(); // Wait for ora to load
+
   // Reset trạng thái key API của Journal mỗi khi hàm chạy
   currentJournalKeyIndex = 0;
   currentJournalKeyUsageCount = 0;

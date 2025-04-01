@@ -1,12 +1,12 @@
-// src/utils/dom_processing.ts
 import { JSDOM } from 'jsdom';
-import { EXCLUDE_TEXTS, CFP_TAB_KEYWORDS, IMPORTANT_DATES_TABS, EXACT_KEYWORDS } from '../config'; // Import from config.ts
+import { EXCLUDE_TEXTS, CFP_TAB_KEYWORDS, IMPORTANT_DATES_TABS, EXACT_KEYWORDS } from '../config';
 
 // DOM Cleaning Function
 export const cleanDOM = (htmlContent: string): Document | null => {
     try {
         const dom = new JSDOM(htmlContent);
         const document: Document = dom.window.document;
+        const window = dom.window as any; // Explicitly cast dom.window to any to access DOM interfaces
         const scripts: NodeListOf<HTMLScriptElement> = document.querySelectorAll('script');
         scripts.forEach(script => {
             try {
@@ -49,6 +49,7 @@ export const normalizeTextNode = (text: string): string => {
         return text; // Return the original text if normalization fails
     }
 };
+
 
 // Table Processing Function
 export const processTable = (table: ParentNode, acronym: string | null | undefined, year: number | null | undefined): string => {
@@ -120,6 +121,7 @@ export const processList = (list: ParentNode, acronym: string | null | undefined
 };
 
 // Node Traversal Function
+// Node Traversal Function
 export const traverseNodes = (node: Node, acronym: string | null | undefined, year: number | null | undefined): string => {
     let text: string = '';
     const yearString = String(year);
@@ -134,45 +136,44 @@ export const traverseNodes = (node: Node, acronym: string | null | undefined, ye
         } else if (node.nodeType === 1) { // Element node
             const element = node as Element; // Type assertion to Element
             const tagName: string = element.tagName.toLowerCase();
+            const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+            const window = dom.window as any; // Explicitly cast dom.window to any to access DOM interfaces
             try {
-                if (tagName === 'a' && element instanceof HTMLAnchorElement) {
-                    const href: string | null = element.getAttribute('href');
-                    const lowercaseHref: string = (href || "").toLowerCase();
-                    // Use optional chaining and nullish coalescing operator here
-                    const linkText: string = (element.textContent ?? "").toLowerCase().trim();
-                    const isImageLink: boolean = lowercaseHref.endsWith('.png') || lowercaseHref.endsWith('.jpeg') || lowercaseHref.endsWith('.jpg');
-                    const isExcludedText: boolean = EXCLUDE_TEXTS.some(keyword => linkText.includes(keyword));
-                    const normalizedAcronym: string = (acronym || "").toLowerCase().trim(); // Handle undefined safely
-                    const hasExactKeyword: boolean = EXACT_KEYWORDS.includes(linkText) || EXACT_KEYWORDS.includes(lowercaseHref);
-                    const hasAcronymInLink: boolean = linkText.includes(normalizedAcronym) || lowercaseHref.includes(normalizedAcronym) || linkText.includes(String(year) || "") || lowercaseHref.includes(String(year) || "");
-                    const hasRelevantKeyword: boolean = CFP_TAB_KEYWORDS.some(keyword => linkText.includes(keyword) || lowercaseHref.includes(keyword)) || IMPORTANT_DATES_TABS.some(keyword => linkText.includes(keyword) || lowercaseHref.includes(keyword));
+                if (tagName === 'a' && element instanceof window.HTMLAnchorElement) {
+                  const href: string | null = element.getAttribute('href');
+                  const lowercaseHref: string = (href || "").toLowerCase();
+                  const linkText: string = (element.textContent ?? "").toLowerCase().trim();
+                  const isImageLink: boolean = lowercaseHref.endsWith('.png') || lowercaseHref.endsWith('.jpeg') || lowercaseHref.endsWith('.jpg');
+                  const isExcludedText: boolean = EXCLUDE_TEXTS.some(keyword => linkText.includes(keyword));
+                  const normalizedAcronym: string = (acronym || "").toLowerCase().trim();
+                  const hasExactKeyword: boolean = EXACT_KEYWORDS.includes(linkText) || EXACT_KEYWORDS.includes(lowercaseHref);
+                  const hasAcronymInLink: boolean = linkText.includes(normalizedAcronym) || lowercaseHref.includes(normalizedAcronym) || linkText.includes(String(year) || "") || lowercaseHref.includes(String(year) || "");
+                  const hasRelevantKeyword: boolean = CFP_TAB_KEYWORDS.some(keyword => linkText.includes(keyword) || lowercaseHref.includes(keyword)) || IMPORTANT_DATES_TABS.some(keyword => linkText.includes(keyword) || lowercaseHref.includes(keyword));
 
-                    if (!isImageLink && !isExcludedText) {
-                        if (hasExactKeyword || hasAcronymInLink || hasRelevantKeyword) {
-                            text += `href="${href}" - ${element.textContent?.trim() ?? ''}\n`; // Use optional chaining here too, and nullish coalescing
-                        } else {
-                            // Recursively process child nodes if no relevant keywords found
-                            element.childNodes.forEach(child => {
-                                try {
-                                    text += traverseNodes(child, acronym, year);
-                                } catch (childTraverseError: unknown) {
-                                    const errorMessage = childTraverseError instanceof Error ? childTraverseError.message : String(childTraverseError);
-                                    console.error("Error traversing child node (in 'a' tag):", errorMessage);
-                                }
-                            });
-                        }
-                    } else {
-                        // Recursively process child nodes for image links and excluded text
-                        element.childNodes.forEach(child => {
-                            try {
-                                text += traverseNodes(child, acronym, year);
-                            } catch (childTraverseError: unknown) {
-                                const errorMessage = childTraverseError instanceof Error ? childTraverseError.message : String(childTraverseError);
-                                console.error("Error traversing child node (in excluded 'a' tag):", errorMessage);
-                            }
-                        });
-                    }
-                } else if (tagName === 'option' && element instanceof HTMLOptionElement) {
+                  if (!isImageLink && !isExcludedText) {
+                      if (hasExactKeyword || hasAcronymInLink || hasRelevantKeyword) {
+                          text += `href="${href}" - ${element.textContent?.trim() ?? ''}\n`;
+                      } else {
+                          element.childNodes.forEach(child => {
+                              try {
+                                  text += traverseNodes(child, acronym, year);
+                              } catch (childTraverseError: unknown) {
+                                  const errorMessage = childTraverseError instanceof Error ? childTraverseError.message : String(childTraverseError);
+                                  console.error("Error traversing child node (in 'a' tag):", errorMessage);
+                              }
+                          });
+                      }
+                  } else {
+                      element.childNodes.forEach(child => {
+                          try {
+                              text += traverseNodes(child, acronym, year);
+                          } catch (childTraverseError: unknown) {
+                              const errorMessage = childTraverseError instanceof Error ? childTraverseError.message : String(childTraverseError);
+                              console.error("Error traversing child node (in excluded 'a' tag):", errorMessage);
+                          }
+                      });
+                  }
+              } else if (tagName === 'option' && element instanceof window.HTMLOptionElement) {
                     const value: string | null = element.getAttribute('value');
                     const lowercaseValue: string = (value || "").toLowerCase();
                     // Use optional chaining and nullish coalescing operator here
@@ -190,9 +191,9 @@ export const traverseNodes = (node: Node, acronym: string | null | undefined, ye
                         }
                         // No recursive processing for child nodes, as <option> tags typically don't have meaningful child nodes.  Adjust if needed.
                     }
-                } else if (tagName === 'table' && element instanceof HTMLTableElement) {
+                } else if (tagName === 'table' ) {
                     text += processTable(element, acronym, year); // Pass acronym and year
-                } else if (tagName === 'li' && element instanceof HTMLLIElement) {
+                } else if (tagName === 'li') {
                     const childrenText: string[] = [];
                     element.childNodes.forEach(child => {
                         try {
@@ -220,7 +221,7 @@ export const traverseNodes = (node: Node, acronym: string | null | undefined, ye
                             console.error("Error traversing child node (in generic tag):", errorMessage);
                         }
                     });
-                    if ((tagName === 'ul' || tagName === 'ol') && element instanceof HTMLUListElement || element instanceof HTMLOListElement) {
+                     if ((tagName === 'ul' || tagName === 'ol')) {
                         const liElements: NodeListOf<HTMLLIElement> = element.querySelectorAll('li');
                         if (liElements.length === 0) {
                             text += processList(element, acronym, year); //pass acronym and year

@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-// Import modules (sử dụng đường dẫn tương đối, bắt đầu từ thư mục gốc)
-const __dirname = path.dirname(__filename);
 
 import { searchGoogleCSE } from './1_google_search';
 import { filterSearchResults } from './4_link_filtering';
@@ -12,7 +10,7 @@ import { writeCSVFile } from './10_response_processing';
 
 // Import config chung
 import {
-    QUEUE, YEAR1, YEAR2, YEAR3, SEARCH_QUERY_TEMPLATE, MAX_LINKS, CONFERENCE_OUTPUT_PATH, GOOGLE_CUSTOM_SEARCH_API_KEYS,
+    queuePromise, YEAR1, YEAR2, YEAR3, SEARCH_QUERY_TEMPLATE, MAX_LINKS, GOOGLE_CUSTOM_SEARCH_API_KEYS,
     GOOGLE_CSE_ID,
     MAX_USAGE_PER_KEY,
     KEY_ROTATION_DELAY_MS, UNWANTED_DOMAINS, SKIP_KEYWORDS
@@ -23,6 +21,8 @@ import { logger } from './11_utils';
 import { GoogleSearchResult, ConferenceData, BatchEntry, ConferenceUpdateData, ProcessedResponseData } from './types';
 import { Browser } from 'playwright';
 
+// --- Conference Specific ---
+export const CONFERENCE_OUTPUT_PATH: string = path.join(__dirname, './data/conference_list.json');
 
 
 // --- Biến quản lý trạng thái Key API ---
@@ -103,6 +103,9 @@ async function getNextApiKey(): Promise<string | null> {
 }
 
 export const crawlConferences = async (conferenceList: ConferenceData[]): Promise<ProcessedResponseData[]> => { // Updated conferenceList type to Conference[]
+    // IMPORTANT: Wait for the queue to be ready
+    const QUEUE = await queuePromise;
+
     logger.info({ totalConferences: conferenceList.length }, 'Starting crawlConferences process');
 
     let browser = null;
@@ -232,7 +235,8 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                             }, `Attempting Google Search`);
 
                             try {
-                                searchResults = await searchGoogleCSE(apiKey, GOOGLE_CSE_ID!, searchQuery);                                searchSuccess = true;
+                                searchResults = await searchGoogleCSE(apiKey, GOOGLE_CSE_ID!, searchQuery);                                
+                                searchSuccess = true;
                                 successfulSearchCount++;
                                 taskLogger.info({
                                     keyIndex: currentKeyIndex + 1,

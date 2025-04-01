@@ -2,7 +2,10 @@ import csv from 'csv-parser';
 import { createReadStream, promises as fsPromises, ReadStream } from 'fs'; // Import specific types
 // Assuming logger might be added back later, keep the comment or import its type if available
 // import { logger } from './11_utils'; // Adjust path and ensure 11_utils is also TS
-import { apiConfigs, EXTRACT_INFORMATION_CSV, DETERMINE_LINKS_CSV } from '../config'; // Import from .ts file (or let resolution handle it)
+import path from 'path';
+import { apiConfigs } from '../config'; // Import from .ts file (or let resolution handle it)
+const EXTRACT_INFORMATION_CSV: string = path.join(__dirname, "./examples/extract_infor.csv");
+const DETERMINE_LINKS_CSV: string = path.join(__dirname, "./examples/determine_links.csv");
 
 import { InputsOutputs, CsvRowData } from './types';
 

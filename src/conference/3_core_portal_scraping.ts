@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 // Assuming config.js exports these as constants (e.g., strings)
 // If config.js is complex, consider converting it to .ts
-import { PORTAL, BY, CORE, SORT } from '../config.js'; // Keep .js if not converted
+import { PORTAL, BY, CORE, SORT } from '../config'; // Keep .js if not converted
 import { ConferenceData } from './types'
 
 /**

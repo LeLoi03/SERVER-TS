@@ -11,7 +11,7 @@ import { MAIN_CONTENT_KEYWORDS, YEAR2 } from '../config'; // Assuming .js extens
 
 import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData } from './types';
 
-
+import path from 'path';
 
 
 async function fetchContentWithRetry(page: Page, maxRetries: number = 3): Promise<string> {
@@ -290,8 +290,8 @@ export const saveBatchToFile = async (batch: BatchEntry[], batchIndex: number, b
         }
 
         try {
-            if (!fs.existsSync("./conference/data/batches")) {
-                fs.mkdirSync("./conference/data/batches", { recursive: true });
+            if (!fs.existsSync(path.join(__dirname, "./data/batches"))) {
+                fs.mkdirSync((path.join(__dirname, "./data/batches")), { recursive: true });
             }
         } catch (mkdirError: any) { // Type mkdirError as any or Error
             console.error("Error creating batches directory:", mkdirError);
@@ -300,9 +300,9 @@ export const saveBatchToFile = async (batch: BatchEntry[], batchIndex: number, b
 
         const conferenceAcronym = batch[0].conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
         const fileFullLinksName = `${batchIndex}_${conferenceAcronym}_full_links.txt`;
-        const fileFullLinksPath = `./conference/data/batches/${fileFullLinksName}`;
+        const fileFullLinksPath = path.join(__dirname, `./data/batches/${fileFullLinksName}`);
         const fileMainLinkName = `${batchIndex}_${conferenceAcronym}_main_link.txt`;
-        const fileMainLinkPath = `./conference/data/batches/${fileMainLinkName}`;
+        const fileMainLinkPath = path.join(__dirname, `./data/batches/${fileMainLinkName}`);
 
         let batchContent = batch
             .map((entry, index) => `${index + 1}. ${entry.formatConferenceText}\n\n`)
@@ -413,7 +413,7 @@ export const saveHTMLContent = async (
                 } catch (error: any) { // Type error as any or Error
                     const timestamp = new Date().toISOString();
                     const logMessage = `[${timestamp}] Error accessing modifiedLink: ${error.message} for ${conference.Acronym}\n`;
-                    await fs.promises.appendFile('./conference/data/error_access_link_log.txt', logMessage, 'utf8');
+                    await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8');
                     useModifiedLink = false;
                 }
 
@@ -429,7 +429,7 @@ export const saveHTMLContent = async (
                     } catch (error: any) { // Type error as any or Error
                         const timestamp = new Date().toISOString();
                         const logMessage = `[${timestamp}] Error accessing originalLink: ${error.message} for ${conference.Acronym}\n`;
-                        await fs.promises.appendFile('./conference/data/error_access_link_log.txt', logMessage, 'utf8');
+                        await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8');
                         continue;
                     }
                 }
@@ -455,7 +455,7 @@ export const saveHTMLContent = async (
                     } catch (err: any) { // Type err as any or Error
                         errorDetails = `Timeout or unstable state after redirect: ${err.message}`;
                         const logMessage = `[${new Date().toISOString()}] Acronym: ${conference.Acronym} | Link: ${originalLink} | Modified Link: ${useModifiedLink ? modifiedLink : 'N/A'} | Final Link: ${finalLink} | Error: ${errorDetails}\n`;
-                        await fs.promises.appendFile('./conference/data/error_access_link_log.txt', logMessage, 'utf8');
+                        await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8');
                         continue;
                     }
                 }
@@ -496,7 +496,7 @@ export const saveHTMLContent = async (
                 } else {
                     errorDetails = 'Unexpected URL after navigation.';
                     const logMessage = `[${timestamp}] Acronym: ${conference.Acronym} | Link: ${originalLink} | Modified Link: ${useModifiedLink ? modifiedLink : 'N/A'} | Final Link: ${finalLink} | Error: ${errorDetails}\n`;
-                    await fs.promises.appendFile('./conference/data/error_access_link_log.txt', logMessage, 'utf8');
+                    await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8');
                     continue;
                 }
 
@@ -550,7 +550,7 @@ export const updateHTMLContent = async (
             } catch (error: any) {
                 const timestamp = new Date().toISOString();
                 const logMessage = `[${timestamp}] Error accessing mainLink: ${error.message} for ${conference.Acronym}\n`;
-                await fs.promises.appendFile('./conference/data/error_access_link_log.txt', logMessage, 'utf8');
+                await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8');
                 return { updatedBatches: [] };
             }
 
@@ -604,8 +604,8 @@ export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: num
         }
 
         try {
-            if (!fs.existsSync("./conference/data/batches")) {
-                fs.mkdirSync("./conference/data/batches", { recursive: true });
+            if (!fs.existsSync(path.join(__dirname, "./data/batches"))) {
+                fs.mkdirSync(path.join(__dirname, "./data/batches"), { recursive: true });
             }
         } catch (mkdirError: any) {
             console.error("Error creating batches directory:", mkdirError);
@@ -614,7 +614,7 @@ export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: num
 
         const conferenceAcronym = batch.conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
         const fileUpdateName = `${conferenceAcronym}_update_${batchIndex}.txt`;
-        const fileUpdatePath = `./conference/data/batches/${fileUpdateName}`;
+        const fileUpdatePath = path.join(__dirname, `./data/batches/${fileUpdateName}`);
 
         if (batch.cfpLink && batch.cfpLink.toLowerCase() !== "none") {
             try {
