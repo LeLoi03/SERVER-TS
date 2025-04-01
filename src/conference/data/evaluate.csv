@@ -1,63 +1,61 @@
 "name","acronym","link","cfpLink","impLink","source","rank","rating","fieldOfResearch","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"International Conference on the Theory and Application of Cryptographic Techniques","EuroCrypt","https://eurocrypt.iacr.org/2025/","https://eurocrypt.iacr.org/2025/callforpapers.php","None","","","","","Conference dates: May 4 - 8, 2025
+"Symposium of Asian Association for Algorithms and Computation","AAAC","https://conference.cs.cityu.edu.hk/aaac2025/","https://easychair.org/conferences?conf=aaac2025","http://www.aa-ac.org/","CORE2023","C","N/A","4613","Conference dates: May 31 - June 1, 2025
 Year: 2025
-Location: Madrid, Spain
-City-State-Province: Madrid
-Country: Spain
-Continent: Europe
+Location: City University of Hong Kong, Hong Kong, China
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
 Type: Offline
-Submission deadline: October 2, 2024
-Second submission deadline for affiliated events proposals: December 6, 2024
-Rebuttal period begins: December 8, 2024
-Rebuttal period ends: December 12, 2024
-Final notification: January 31, 2025
-Student stipend request deadline: February 17, 2025
-Conference begins: May 4, 2025
-Topics: Cryptography, Foundational Theory, Cryptographic Primitives, Cryptographic Protocols, Secure Implementation, Optimization, Hardware, Software, Applied Cryptography
-Publisher: Springer","May 4 - 8, 2025","2025","Madrid, Spain","Madrid","Spain","Europe","Offline","{""Submission deadline"":""October 2, 2024""}","{}","{}","{}","{""Second submission deadline for affiliated events proposals"":""December 6, 2024"",""Rebuttal period begins"":""December 8, 2024"",""Rebuttal period ends"":""December 12, 2024"",""Final notification"":""January 31, 2025"",""Student stipend request deadline"":""February 17, 2025"",""Conference begins"":""May 4, 2025""}","Cryptography, Foundational Theory, Cryptographic Primitives, Cryptographic Protocols, Secure Implementation, Optimization, Hardware, Software, Applied Cryptography","Springer","Eurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in Madrid, Spain on May 4-8, 2025. Eurocrypt 2025 is organized by the International Association for Cryptologic Research (IACR).","# Eurocrypt 2025: Call for Papers
+Submission due: February 28, 2025
+Notification: March 28, 2025
+Camera-ready version due: April 18, 2025
+Early Registration due: April 25, 2025
+Topics: Theoretical Computer Science, Algorithms, Complexity Theory","May 31 - June 1, 2025","2025","City University of Hong Kong, Hong Kong, China","Hong Kong","China","Asia","Offline","{""Submission due"":""February 28, 2025""}","{""Notification"":""March 28, 2025""}","{""Camera-ready version due"":""April 18, 2025""}","{""Early Registration due"":""April 25, 2025""}","{}","Theoretical Computer Science, Algorithms, Complexity Theory","","The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will be held at the City University of Hong Kong, Hong Kong, China on May 31 and June 1, 2025. The meeting invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science and it's a face-to-face event.","# AAAC 2025: Call for Papers
 
-Eurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in **Madrid, Spain on May 4-8, 2025**.
+The 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC) will take place on **May 31 and June 1, 2025, at the City University of Hong Kong, Hong Kong, China**.
 
-Eurocrypt 2025 is organized by the International Association for Cryptologic Research (IACR). The proceedings will be published by Springer in the LNCS series.
+We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a **face-to-face event**, and at least one author of each submission is expected to register and give the talk at the venue.
 
-## Topics of Interest
+## Topics
 
-Original research papers are welcomed on any cryptographic topic, including but not limited to:
+All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.
 
-*   foundational theory and mathematics
-*   the design, proposal, and analysis of cryptographic primitives and protocols
-*   secure implementation and optimization in hardware or software
-*   applied aspects of cryptography
+## Submission Details
 
-Authors of accepted papers are asked to present their work in person at the conference.
+Authors are invited to submit **one-page (A4) abstracts (in pdf format)** that can be based on original results or surveys of existing results. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work.
 
-## Submission
-
-Author instructions for paper submission may be found on the submission page. [Submit a paper](https://www.iacr.org/conferences/eurocrypt2025/)
-
-Submissions must be at most 27 pages using the Springer LNCS format, including title page and figures, but excluding references. Optionally, any amount of clearly marked supplementary material may be supplied, following after the main body of the paper. However, reviewers are not required to read or review beyond the main body, and submissions are expected to be intelligible, and show sufficient scientific quality and depth, without the supplementary material.
-
-The final published version of an accepted paper will be limited to 30 pages including references and is expected to closely match the submission. For further details, consult the paper submission page.
-
-## Review Process
-
-Eurocrypt 2025 will operate a two-round review system with a rebuttal phase. In the first round, the program committee selects the submissions that will proceed to the second round, and the authors receive the first round notification. The authors of the selected submissions are invited to submit a text-based rebuttal letter to respond to the reviews. Furthermore, in cases where this is considered useful by the PC chairs and/or the reviewers, additional communication between authors and reviewers may be initiated (in both rounds).
-
-The submissions that have not been selected during the first round of reviews (early rejects) may be submitted to other conferences after the first round notification date.
-
-In the second round, the program committee further reviews the selected submissions by taking into account the rebuttal letters. The committee then makes the final decision of acceptance or rejection.
+All submissions should be made electronically through the EasyChair Conference System: [https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025).
 
 ## Important Dates
 
-*   **Oct 2, 2024 (AoE):** Submission deadline
-*   **Dec 6, 2024 (AoE):** Second submission deadline for affiliated events proposals
-*   **Dec 8, 2024:** Rebuttal period begins
-*   **Dec 12, 2024:** Rebuttal period ends
-*   **Jan 31, 2025:** Final notification
-*   **Feb 17, 2025:** Student stipend request deadline
-*   **May 4, 2025:** Conference begins
+*   Submission due: February 28, 2025
+*   Notification: March 28, 2025
+*   Camera-ready version due: April 18, 2025
+*   Early Registration due: April 25, 2025
+*   Conference Dates: May 31 - June 1, 2025
 
-## Program Co-chairs
+## Best Student Presentation Award
 
-*   Serge Fehr, Centrum Wiskunde & Informatica (CWI) and Leiden University, The Netherlands
-*   Pierre-Alain Fouque, University of Rennes, France"
+The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.
+
+## Keynote Speakers
+
+*   Yossi Azar (Tel-Aviv University)
+*   Eunjung Kim (Korea Advanced Institute of Science & Technology)
+
+## Program Committees
+
+*   Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))
+*   Sang Won Bae (Kyonggi University)
+*   Ho-Lin Chen (National Taiwan University)
+*   Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)
+*   Minming Li (City University of Hong Kong)
+*   Chung-Shou Liao (National Tsing Hua University)
+*   Pinyan Lu (Shanghai University of Finance and Economics)
+*   Heejin Park (Hanyang University)
+*   Kunihiko Sadakane (The University of Tokyo)
+*   Xiaoming Sun (Chinese Academy of Sciences)
+*   Takeshi Tokuyama (Tohoku University)
+*   Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))
+*   Guochuan Zhang (Zhejiang University)
+*   Shengyu Zhang (The Chinese University of Hong Kong)"

@@ -16,7 +16,7 @@ import { crawlConferences } from './conference/crawl_conferences';
 import { crawlJournals } from './journal/crawl_journals';
 import { ConferenceData } from './conference/types'; // Import ConferenceData type
 
-export const OUTPUT_JSON: string = path.join(__dirname,'./journal/data/all_journal_data.json');
+export const OUTPUT_JSON: string = path.join(__dirname, './journal/data/all_journal_data.json');
 
 const corsOptions = {
     origin: '*',
@@ -170,6 +170,7 @@ const conditionalJsonBodyParser = (req: Request, res: Response, next: NextFuncti
     if (req.query.dataSource === 'client') {
         bodyParser.json()(req, res, next);
     } else {
+        req.body = null; // Đặt req.body thành null
         next();
     }
 };
@@ -200,6 +201,10 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
             }
             routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
         } else {
+            // Thêm đoạn này để xử lý trường hợp không có body khi dataSource là 'api'
+            if (req.body && Object.keys(req.body).length > 0) {
+                routeLogger.warn("Received body when dataSource is 'api'.  Ignoring body.");
+            }
             try {
                 routeLogger.info("Fetching conference list from API...");
                 conferenceList = await getConferenceListFromCrawl() as ConferenceData[];
@@ -213,6 +218,14 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
                 return;
             }
         }
+
+        // Kiểm tra conferenceList trước khi gọi crawlConferences
+        if (!conferenceList || !Array.isArray(conferenceList)) {
+            routeLogger.error("conferenceList is not a valid array.");
+            res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
+            return;
+        }
+
 
         routeLogger.info({ conferenceCount: conferenceList.length }, "Calling crawlConferences...");
         const results = await crawlConferences(conferenceList);

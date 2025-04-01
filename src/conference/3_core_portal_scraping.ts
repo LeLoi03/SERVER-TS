@@ -341,7 +341,7 @@ export const getConferenceList = async (): Promise<ConferenceData[]> => {
 
 
     const allConferences: ConferenceData[] = [];
-    const maxPagesToScrape = 4; // Your original code limit
+    const maxPagesToScrape = 1; // Your original code limit
     const pagesToFetch = Math.min(totalPages, maxPagesToScrape); // Limit fetching
 
     console.log(`Starting conference scraping for ${pagesToFetch} pages (Total found: ${totalPages}, Limit: ${maxPagesToScrape})...`);
@@ -375,19 +375,5 @@ export const getConferenceList = async (): Promise<ConferenceData[]> => {
 
     console.log(`--- Scraping Finished ---`);
     console.log(`Total conferences collected across ${pagesToFetch} pages: ${allConferences.length}`);
-    return allConferences;
+    return allConferences.slice(0,1);
 };
-
-// Example of how to run (optional, usually called from another module)
-/*
-getConferenceList()
-    .then(conferences => {
-        console.log("Conference scraping complete.");
-        // Optionally save the final combined list to a file
-        // fs.writeFileSync('all_conferences.json', JSON.stringify(conferences, null, 2), 'utf8');
-        // console.log("Saved all conferences to all_conferences.json");
-    })
-    .catch(error => {
-        console.error("An error occurred during the main conference list retrieval:", error);
-    });
-*/

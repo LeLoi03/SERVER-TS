@@ -576,7 +576,7 @@ const callGeminiAPI = async ({
 
                 // --- Ghi response ra file (bất đồng bộ) ---
                 const safeAcronym = acronym || 'noacronym'; // Đảm bảo tên file hợp lệ
-                const response_outputPath = path.join(RESPONSE_OUTPUT_DIR, `result_${apiType}_${modelName}_${batchIndex}_${safeAcronym}.txt`);
+                const response_outputPath = path.join(RESPONSE_OUTPUT_DIR, `result_${apiType}_${modelName}_${safeAcronym}.txt`);
                 try {
                     if (!existsSync(RESPONSE_OUTPUT_DIR)) {
                         await fsPromises.mkdir(RESPONSE_OUTPUT_DIR, { recursive: true });

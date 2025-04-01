@@ -1,6 +1,14 @@
 [
   {
-    "Title": "International Conference on the Theory and Application of Cryptographic Techniques",
-    "Acronym": "EuroCrypt"
+    "Title": "Symposium of Asian Association for Algorithms and Computation",
+    "Acronym": "AAAC",
+    "Source": "CORE2023",
+    "Rank": "C",
+    "Note": "none",
+    "DBLP": "none",
+    "PrimaryFoR": "4613",
+    "Comments": "0",
+    "Rating": "N/A",
+    "Details": []
   }
 ]

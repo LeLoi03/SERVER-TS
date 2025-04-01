@@ -299,9 +299,9 @@ export const saveBatchToFile = async (batch: BatchEntry[], batchIndex: number, b
         }
 
         const conferenceAcronym = batch[0].conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-        const fileFullLinksName = `${batchIndex}_${conferenceAcronym}_full_links.txt`;
+        const fileFullLinksName = `${conferenceAcronym}_full_links.txt`;
         const fileFullLinksPath = path.join(__dirname, `./data/batches/${fileFullLinksName}`);
-        const fileMainLinkName = `${batchIndex}_${conferenceAcronym}_main_link.txt`;
+        const fileMainLinkName = `${conferenceAcronym}_main_link.txt`;
         const fileMainLinkPath = path.join(__dirname, `./data/batches/${fileMainLinkName}`);
 
         let batchContent = batch
@@ -613,7 +613,7 @@ export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: num
         }
 
         const conferenceAcronym = batch.conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-        const fileUpdateName = `${conferenceAcronym}_update_${batchIndex}.txt`;
+        const fileUpdateName = `${conferenceAcronym}_update.txt`;
         const fileUpdatePath = path.join(__dirname, `./data/batches/${fileUpdateName}`);
 
         if (batch.cfpLink && batch.cfpLink.toLowerCase() !== "none") {
