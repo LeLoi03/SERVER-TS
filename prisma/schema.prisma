@@ -1,0 +1,372 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../generated/prisma_client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admins {
+  id          String        @id
+  email       String        @unique
+  password    String
+  fullName    String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime
+  Conferences Conferences[]
+}
+
+model ConferenceBlacklists {
+  id           String      @id
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+  Users        Users       @relation(fields: [userId], references: [id])
+}
+
+model ConferenceCalendars {
+  id           String      @id
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+  Users        Users       @relation(fields: [userId], references: [id])
+
+  @@unique([conferenceId, userId])
+}
+
+model ConferenceCrawlJobs {
+  id           String      @id
+  conferenceId String
+  status       String
+  progress     Int
+  message      String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+}
+
+model ConferenceDates {
+  id                      String                  @id
+  organizedId             String
+  fromDate                DateTime
+  toDate                  DateTime
+  type                    String
+  name                    String
+  createdAt               DateTime                @default(now())
+  updatedAt               DateTime
+  isAvailable             Boolean
+  ConferenceOrganizations ConferenceOrganizations @relation(fields: [organizedId], references: [id])
+}
+
+model ConferenceFeedbacks {
+  id           String      @id
+  conferenceId String
+  creatorId    String
+  description  String
+  star         Int
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+  Users        Users       @relation(fields: [creatorId], references: [id])
+}
+
+model ConferenceFollows {
+  id           String      @id
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+  Users        Users       @relation(fields: [userId], references: [id])
+
+  @@unique([conferenceId, userId])
+}
+
+model ConferenceLikes {
+  id           String      @id
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+  Conferences  Conferences @relation(fields: [conferenceId], references: [id])
+  Users        Users       @relation(fields: [userId], references: [id])
+
+  @@unique([conferenceId, userId])
+}
+
+model ConferenceOrganizations {
+  id               String             @id
+  year             Int?
+  accessType       String
+  isAvailable      Boolean
+  conferenceId     String
+  publisher        String
+  summerize        String
+  callForPaper     String
+  link             String
+  cfpLink          String
+  impLink          String
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime
+  ConferenceDates  ConferenceDates[]
+  Conferences      Conferences        @relation(fields: [conferenceId], references: [id])
+  ConferenceTopics ConferenceTopics[]
+  Locations        Locations[]
+}
+
+model ConferenceRanks {
+  id                String           @id
+  year              Int
+  conferenceId      String
+  fieldOfResearchId String
+  rankId            String
+  Conferences       Conferences      @relation(fields: [conferenceId], references: [id])
+  FieldOfResearchs  FieldOfResearchs @relation(fields: [fieldOfResearchId], references: [id])
+  Ranks             Ranks            @relation(fields: [rankId], references: [id])
+}
+
+model ConferenceTopics {
+  id                      String                  @id
+  organizeId              String
+  topicId                 String
+  createdAt               DateTime                @default(now())
+  updatedAt               DateTime
+  ConferenceOrganizations ConferenceOrganizations @relation(fields: [organizeId], references: [id])
+  Topics                  Topics                  @relation(fields: [topicId], references: [id])
+}
+
+model Conferences {
+  id                      String                    @id
+  title                   String
+  acronym                 String
+  creatorId               String?
+  createdAt               DateTime                  @default(now())
+  updatedAt               DateTime
+  status                  String
+  adminId                 String?
+  ConferenceBlacklists    ConferenceBlacklists[]
+  ConferenceCalendars     ConferenceCalendars[]
+  ConferenceCrawlJobs     ConferenceCrawlJobs[]
+  ConferenceFeedbacks     ConferenceFeedbacks[]
+  ConferenceFollows       ConferenceFollows[]
+  ConferenceLikes         ConferenceLikes[]
+  ConferenceOrganizations ConferenceOrganizations[]
+  ConferenceRanks         ConferenceRanks[]
+  Admins                  Admins?                   @relation(fields: [adminId], references: [id])
+  Users                   Users?                    @relation(fields: [creatorId], references: [id])
+
+  @@unique([title, acronym])
+}
+
+model FieldOfResearchs {
+  id              String            @id
+  name            String
+  code            String
+  ConferenceRanks ConferenceRanks[]
+  JournalRanks    JournalRanks[]
+}
+
+model JournalCrawlJobs {
+  id        String   @id
+  journalId String
+  status    String
+  progress  Int
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Journals  Journals @relation(fields: [journalId], references: [id])
+}
+
+model JournalFollows {
+  id        String   @id
+  journalId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Journals  Journals @relation(fields: [journalId], references: [id])
+  Users     Users    @relation(fields: [userId], references: [id])
+}
+
+model JournalLikes {
+  id        String   @id
+  journalId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Journals  Journals @relation(fields: [journalId], references: [id])
+  Users     Users    @relation(fields: [userId], references: [id])
+}
+
+model JournalRanks {
+  id                String           @id
+  year              Int
+  journalId         String
+  fieldOfResearchId String
+  rankId            String
+  FieldOfResearchs  FieldOfResearchs @relation(fields: [fieldOfResearchId], references: [id])
+  Journals          Journals         @relation(fields: [journalId], references: [id])
+  Ranks             Ranks            @relation(fields: [rankId], references: [id])
+}
+
+model JournalTopics {
+  id        String   @id
+  journalId String
+  topicId   String
+  Journals  Journals @relation(fields: [journalId], references: [id])
+  Topics    Topics   @relation(fields: [topicId], references: [id])
+}
+
+model Journals {
+  id               String             @id
+  name             String
+  issn             String
+  hIndex           Int
+  publisher        String
+  nation           String
+  scope            String
+  emailSubmission  String
+  creator          String
+  JournalCrawlJobs JournalCrawlJobs[]
+  JournalFollows   JournalFollows[]
+  JournalLikes     JournalLikes[]
+  JournalRanks     JournalRanks[]
+  JournalTopics    JournalTopics[]
+  Users            Users              @relation(fields: [creator], references: [id])
+}
+
+model Locations {
+  id                      String                  @id
+  address                 String?
+  cityStateProvince       String?
+  country                 String?
+  continent               String?
+  createdAt               DateTime                @default(now())
+  updatedAt               DateTime
+  isAvailable             Boolean
+  organizeId              String
+  ConferenceOrganizations ConferenceOrganizations @relation(fields: [organizeId], references: [id])
+}
+
+model NotificationSettings {
+  id                 String             @id
+  userId             String
+  notificationId     String
+  isEnabled          Boolean            @default(true)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime
+  NotificationsTypes NotificationsTypes @relation(fields: [notificationId], references: [id])
+  Users              Users              @relation(fields: [userId], references: [id])
+}
+
+model Notifications {
+  id                 String             @id
+  notificationId     String
+  userId             String
+  message            String
+  isRead             Boolean            @default(false)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime
+  NotificationsTypes NotificationsTypes @relation(fields: [notificationId], references: [id])
+  Users              Users              @relation(fields: [userId], references: [id])
+
+  @@unique([userId, notificationId])
+}
+
+model NotificationsTypes {
+  id                   String                 @id
+  name                 String                 @unique
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  NotificationSettings NotificationSettings[]
+  Notifications        Notifications[]
+}
+
+model Passenger {
+  id        String @id
+  firstName String @unique
+  lastName  String
+}
+
+model Ranks {
+  id              String            @id
+  name            String
+  value           Int
+  sourceId        String
+  ConferenceRanks ConferenceRanks[]
+  JournalRanks    JournalRanks[]
+  Sources         Sources           @relation(fields: [sourceId], references: [id])
+}
+
+model Sources {
+  id    String  @id
+  name  String  @unique
+  link  String?
+  Ranks Ranks[]
+}
+
+model TopicUserInteresteds {
+  userId    String
+  topicId   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Topics    Topics   @relation(fields: [topicId], references: [id])
+  Users     Users    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, topicId])
+}
+
+model Topics {
+  id                   String                 @id
+  name                 String                 @unique
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  ConferenceTopics     ConferenceTopics[]
+  JournalTopics        JournalTopics[]
+  TopicUserInteresteds TopicUserInteresteds[]
+}
+
+model UserVerification {
+  id                      String   @id
+  userId                  String
+  verificationCode        String
+  verificationCodeExpires DateTime
+  isVerified              Boolean  @default(false)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime
+  Users                   Users    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, verificationCode, verificationCodeExpires])
+}
+
+model Users {
+  id                   String                 @id
+  email                String                 @unique
+  password             String
+  firstName            String
+  lastName             String
+  dob                  DateTime
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  aboutMe              String
+  avatar               String
+  background           String
+  ConferenceBlacklists ConferenceBlacklists[]
+  ConferenceCalendars  ConferenceCalendars[]
+  ConferenceFeedbacks  ConferenceFeedbacks[]
+  ConferenceFollows    ConferenceFollows[]
+  ConferenceLikes      ConferenceLikes[]
+  Conferences          Conferences[]
+  JournalFollows       JournalFollows[]
+  JournalLikes         JournalLikes[]
+  Journals             Journals[]
+  NotificationSettings NotificationSettings[]
+  Notifications        Notifications[]
+  TopicUserInteresteds TopicUserInteresteds[]
+  UserVerification     UserVerification[]
+}
