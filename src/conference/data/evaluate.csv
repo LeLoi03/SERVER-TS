@@ -1,228 +1,180 @@
 "name","acronym","link","cfpLink","impLink","source","rank","rating","fieldOfResearch","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"Computer Aided Verification","CAV","https://conferences.i-cav.org/2025/","https://conferences.i-cav.org/2025/calls/call-for-papers","https://conferences.i-cav.org/2025/","","","","","Conference dates: July 21 - 25, 2025
+"The Theory and Application of Diagrams","DIAGRAMS","https://diagrams-conference.org/","None","None","","","","","Conference dates: No conference dates available
+Year: No year available
+Location: No location available
+Type: Offline
+Topics: Diagrammatic communication, diagrams, sketches, visualisations, communication, computation, cognition, creative thought, problem solving, architecture, artificial intelligence, cartography, cognitive science, computer science, education, graphic design, history of science, human-computer interaction, linguistics, logic, mathematics, philosophy, psychology, software modelling","No conference dates available","No year available","No location available","","","","Offline","{}","{}","{}","{}","{}","Diagrammatic communication, diagrams, sketches, visualisations, communication, computation, cognition, creative thought, problem solving, architecture, artificial intelligence, cartography, cognitive science, computer science, education, graphic design, history of science, human-computer interaction, linguistics, logic, mathematics, philosophy, psychology, software modelling","","The International Conference on the Theory and Application of Diagrams is a biannual, international, and interdisciplinary conference series covering all aspects of research on the theory and application of diagrams.  Recent technological advances have enabled the large-scale adoption of diagrams in a diverse range of areas, triggering a surge of interest in their study.","No call for papers available"
+"IEEE International Conference on Distributed Computing in Sensor Systems","DCOSS","https://dcoss.org/","https://dcoss.org/call-for-papers/","None","","","","","Conference dates: June 9 - 11, 2025
 Year: 2025
-Location: Zagreb, Croatia
-City-State-Province: Zagreb
-Country: Croatia
+Location: Tuscany (Lucca), Italy
+City-State-Province: Lucca, Tuscany
+Country: Italy
 Continent: Europe
 Type: Offline
-Full papers due: January 31, 2025
-Author notification: April 2, 2025
-Author Response Period: March 11 - 14, 2025
-Workshops: July 21 - 22, 2025
-Main conference: July 23 - 25, 2025
-Proposals are due by email to the Workshop chair: December 1, 2024
-Organizers will be notified about the participation: December 18, 2024","July 21 - 25, 2025","2025","Zagreb, Croatia","Zagreb","Croatia","Europe","Offline","{""Full papers due"":""January 31, 2025""}","{""Author notification"":""April 2, 2025""}","{}","{}","{""Author Response Period"":""March 11 - 14, 2025"",""Workshops"":""July 21 - 22, 2025"",""Main conference"":""July 23 - 25, 2025"",""Proposals are due by email to the Workshop chair"":""December 1, 2024"",""Organizers will be notified about the participation"":""December 18, 2024""}","","","The 37th International Conference on Computer Aided Verification (CAV 2025) will be held from July 21-25, 2025 in Zagreb, Croatia.  The main conference will run from July 23-25, with workshops scheduled for July 21-22.","No call for papers available"
-"International Conference on Computers and their Applications","CATA","https://www.nwmissouri.edu/csis/CATA2025/index.htm","http://www.isca-hq.org/isca.php?p=Conferences","https://www.nwmissouri.edu/csis/CATA2025/index.htm","","","","","Conference dates: March 17 - 18, 2025
-Year: 2025
-Location: Crowne Plaza Hotel, San Francisco Airport, CA, US
-City-State-Province: San Francisco, California
-Country: United States
-Continent: North America
-Type: Offline
-Full paper submission: November 16, 2024
-Notification of acceptance: January 4, 2025
-Word files, PDF's of final Camera-ready paper and License to publish due: January 18, 2025
-Conference registration materials due: February 7, 2025
-Topics: Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics
-Publisher: Springer Nature","March 17 - 18, 2025","2025","Crowne Plaza Hotel, San Francisco Airport, CA, US","San Francisco, California","United States","North America","Offline","{""Full paper submission"":""November 16, 2024""}","{""Notification of acceptance"":""January 4, 2025""}","{""Word files, PDF's of final Camera-ready paper and License to publish due"":""January 18, 2025""}","{""Conference registration materials due"":""February 7, 2025""}","{}","Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics","Springer Nature","The 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the Crowne Plaza Hotel near San Francisco Airport, CA, US, on March 17-18, 2025.  The conference provides an international forum for the presentation and discussion of research on computers and their applications, including theory, practice, and applications.","# CATA 2025: Call for Papers
+Abstract Registration Deadline: February 11, 2025
+Paper Submission Deadline: February 11, 2025
+Posters/Demos Deadline: March 31, 2025
+Acceptance Notification: March 28, 2025
+Posters/Demos Notifications: April 7, 2025
+Camera Ready Deadline: April 15, 2025
+Camera ready deadline for Posters: April 11, 2025
+Camera ready deadline for Workshops papers: May 9, 2025
+Topics: Distributed Computing, Smart Systems, Internet of Things, Artificial Intelligence for IoT, Machine Learning for IoT, Smart healthcare, Edge and fog computing, Machine intelligence in distributed sensor systems, Novel communication paradigms, Cyber-Physical Systems, Autonomous systems, Time and location management, Robustness, resilience, and dependability, Security and privacy, Performance analysis, Mobile and human-centric sensing, Interoperability, heterogeneity and scalability, Unmanned aerial vehicle (UAV)-based sensing/communications/networking, Social sensing and crowd sensing, Complex systems, IoT for emerging economies, Green IoT, Sensors and Robots for Internet of Intelligent Things, Real-world applications
+Publisher: IEEE","June 9 - 11, 2025","2025","Tuscany (Lucca), Italy","Lucca, Tuscany","Italy","Europe","Offline","{""Abstract Registration Deadline"":""February 11, 2025"",""Paper Submission Deadline"":""February 11, 2025"",""Posters/Demos Deadline"":""March 31, 2025""}","{""Acceptance Notification"":""March 28, 2025"",""Posters/Demos Notifications"":""April 7, 2025""}","{""Camera Ready Deadline"":""April 15, 2025"",""Camera ready deadline for Posters"":""April 11, 2025"",""Camera ready deadline for Workshops papers"":""May 9, 2025""}","{}","{}","Distributed Computing, Smart Systems, Internet of Things, Artificial Intelligence for IoT, Machine Learning for IoT, Smart healthcare, Edge and fog computing, Machine intelligence in distributed sensor systems, Novel communication paradigms, Cyber-Physical Systems, Autonomous systems, Time and location management, Robustness, resilience, and dependability, Security and privacy, Performance analysis, Mobile and human-centric sensing, Interoperability, heterogeneity and scalability, Unmanned aerial vehicle (UAV)-based sensing/communications/networking, Social sensing and crowd sensing, Complex systems, IoT for emerging economies, Green IoT, Sensors and Robots for Internet of Intelligent Things, Real-world applications","IEEE","The 21st Annual International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT 2025) will take place in Tuscany (Lucca), Italy, from June 9-11, 2025.  The conference covers distributed computing in smart systems and the Internet of Things (IoT), including high-level abstractions, models, communication technologies, algorithms, applications, system designs, and deployment tools.","# DCOSS-IoT 2025: Call for Papers
 
-The 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the **Crowne Plaza Hotel, San Francisco Airport, CA, US, on March 17-18, 2025.**
+The 21st International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT 2025) will be held in **Tuscany (Lucca), Italy, from June 9 to 11, 2025.**
 
-## Conference Overview
+DCOSS-IoT 2025 is technically co-sponsored by the IEEE Computer Society and the IEEE Technical Committee on Parallel Processing (TCPP). Proceedings are published by IEEE Xplore.
 
-The conference provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes the best paper award, given for a paper presented at the conference.
+## Topics of Interest
 
-## Topics
+Potential authors are invited to submit original, unpublished manuscripts demonstrating recent advances in theoretical and experimental research. Topics of interest include, but are not limited to:
 
-The topics will include, but are not limited to, the following areas:
-
-*   Artificial Intelligence
-*   Computer and Network Security
-*   Computer Graphics
-*   Computer Modeling
-*   Computer Networks
-*   Computer Vision
-*   Computers and Education
-*   Control Systems
-*   Data Communications
-*   Databases
-*   Data Mining/Knowledge Discovery
-*   Digital Signal Processing
-*   Expert Systems
-*   Human-Computer Interface
-*   Human-Computer Visualization
-*   Image Processing
-*   Information Systems
-*   Multimedia Applications
-*   Neural Networks
-*   Pattern Recognition
-*   Programming Languages
-*   Real-Time Computing
-*   Robotics
-
-## Keynote Speaker
-
-*   Bilal Clarance, Director of Engineering Graph Serving Team at Google: ""Knowledge for Search and AI""
+*   Artificial Intelligence for IoT
+*   Machine learning and data mining for IoT and Smart Systems
+*   Smart healthcare to combat epidemics
+*   Edge and fog computing: distributed computing models from sensor to cloud
+*   Machine intelligence in distributed sensor systems and real-time analytics
+*   Novel communication paradigms (e.g., 5G/6G, VLC, DSA) for IoT and Smart Systems
+*   Cyber-Physical Systems
+*   IoT and Smart Systems for Smart and Connected Communities
+*   Autonomous systems: closing the loop between sensing and actuation
+*   Time and location management
+*   Robustness, resilience, and dependability of IoT and smart systems
+*   Security and privacy in IoT and Smart Systems
+*   Performance analysis: complexity, correctness, scalability
+*   Mobile and human-centric sensing
+*   IoT and Smart Systems for social computing
+*   Interoperability, heterogeneity and scalability
+*   Unmanned aerial vehicle (UAV)-based sensing/communications/networking
+*   Social sensing and crowd sensing techniques, applications, and systems
+*   Complex systems comprising wearable, robotic and/or fixed sensor systems
+*   IoT and Smart Systems for emerging and developing economies
+*   Green and environmentally friendly IoT (low power, harvesting, energy management)
+*   Sensors and Robots for Internet of Intelligent Things
+*   Design and implementation of real-world applications and systems
+*   Approaches, tools, and experience of deployment and operation
+*   Interdisciplinary applications of IoT and Smart Systems
+*   Smart healthcare and digital epidemiology
+*   Smart agriculture
+*   Smart infrastructures
+*   Smart cities
+*   Smart energy, transportation, and water distribution systems
+*   Smart factories
+*   Smart workspace
 
 ## Submission Guidelines
 
-Papers will be accepted only by electronic submission (PDF only). A full paper, including title, author's name(s) and affiliation, mailing address, telephone, fax, and email of the principal author, should be submitted before **November 16, 2024** online.
+Authors are invited to submit original, unpublished manuscripts demonstrating current research on distributed smart systems and IoT related to the aforementioned topics of interest.  Please use the US letter size (8.5 X 11 in) standard IEEE conference LaTeX format or Microsoft Word template available on: [http://www.ieee.org/conferences_events/conferences/publishing/templates.html](http://www.ieee.org/conferences_events/conferences/publishing/templates.html).
 
-The submitted manuscript should closely reflect the final paper as it will appear in the proceedings published in Springer Nature. Accepted papers will be published by Springer Nature and submitted for indexing to major online indexes, such as Google Scholar and Scopus.
+All submissions should be written in English and have a maximum of eight (8) printed pages, including figures and references. Two (2) additional pages at 100$/page for supplementary material only (such as theorems, proofs, implementation details) are allowed. Starting 2023, DCOSS-IoT follows a double-blind review process. As a result, authors must make a good faith effort to anonymize their submissions. Although submission is double-blind, the existence or availability of non-anonymous preprints (on arXiv or other preprint servers) will not lead to your paper being rejected. Reviewers will be instructed not to look for such preprints actively but encountering them will not constitute a conflict of interest. Papers that do not meet the size, formatting, and anonymization requirements will not be reviewed. We require each paper to be in Adobe Portable Document Format (PDF) and submitted through the EDAS submission system.
+
+## Important Dates
+
+*   **Abstract Registration Deadline:** February 11, 2025
+*   **Paper Submission Deadline:** February 11, 2025
+*   **Acceptance Notification:** March 28, 2025
+*   **Camera Ready Deadline:** April 15, 2025
+
+## Special Issue and Best Paper Awards
+
+DCOSS-IoT 2025 will announce a best paper award and a best poster/demo award. Extended versions of selected best papers from DCOSS-IoT 2025 will be included in a Special Issue of the Computer Networks (COMNET) Journal.
+
+## Key Organizers
+
+*   **Technical Program Committee Co-Chairs:** Dario Pompili (Rutgers University, USA), Jennifer Simonjan (Technology Innovation Institute – TII, UAE), Zhi Sun (Tsinghua University, China)
+*   **General Chairs:** Francesco Betti Sorbelli (UNIPG, Italy), Cristina M. Pinotti (UNIPG, Italy)
+*   **Steering Committee Chair:** Sotiris Nikoletseas (University of Patras and CTI, Greece)"
+"Developments in eSystems Engineering","DeSE","https://dese.ai/dese-2025/","https://dese.ai/dese-2025-callforpapers/","https://dese.ai/dese-2025-important-dates/","","","","","Conference dates: November 10 - 12, 2025
+Year: 2025
+Location: Bucharest, Romania
+City-State-Province: Bucharest
+Country: Romania
+Continent: Europe
+Type: Offline
+Full paper Submission: August 1, 2025
+Notification of acceptance: One month after submission
+Submission of camera ready papers: October 1, 2025
+Author online registration: October 11, 2025
+Topics: eSystems Engineering, Artificial Intelligence, Intelligent Systems Applications, Evolutionary Computations, Fuzzy Systems, Neural Networks, Bioinformatics, Bioengineering, Robotics, Smart Applications, Sensors, Industry 4.0, Emergent Technologies, Cognitive Systems, Development Systems, Intelligent Computation, Machine Learning","November 10 - 12, 2025","2025","Bucharest, Romania","Bucharest","Romania","Europe","Offline","{""Full paper Submission"":""August 1, 2025""}","{""Notification of acceptance"":""One month after submission""}","{""Submission of camera ready papers"":""October 1, 2025""}","{""Author online registration"":""October 11, 2025""}","{}","eSystems Engineering, Artificial Intelligence, Intelligent Systems Applications, Evolutionary Computations, Fuzzy Systems, Neural Networks, Bioinformatics, Bioengineering, Robotics, Smart Applications, Sensors, Industry 4.0, Emergent Technologies, Cognitive Systems, Development Systems, Intelligent Computation, Machine Learning","","The 18th International Conference on Developments in eSystems Engineering (DeSE 2025) will be held in Bucharest, Romania, from November 10-12, 2025. The conference will focus on AI and Industry 4.0 for a sustainable world and disseminate the latest knowledge in eSystem Developments.","# DeSE 2025: Call for Papers
+
+The 18th International Conference on Developments in eSystems Engineering (DeSE 2025) will be held from **November 10-12, 2025 in Bucharest, Romania**.
+
+DeSE is an international core-ranked non-profit conference that disseminates the latest knowledge in eSystem Developments, including Artificial Intelligence (AI), Intelligent Systems Applications, Evolutionary Computations, Fuzzy Systems, Neural Networks, Bioinformatics and Bioengineering, robotics, Smart Applications, Sensors, and other related subjects that support Industry 4.0.
+
+## Conference Topics
+
+The conference is aimed at addressing current research issues in the design, engineering, and adoption of eSystems. DeSE 2025 comprises stimulating tracks:
+
+*   Advanced Robotics
+*   Nanomaterials and Energy
+*   Sensors, Sensors Applications, and Sensors Platforms
+*   Internet of Everything and its Applications
+*   AI and its Applications
+*   Biomedical Intelligence, Image Processing and Medical Imaging & Clinical Data Analysis
+*   Bio-informatics, Health Informatics, and Bio-Computing
+*   Computational intelligence
+*   Decision Support Systems
+*   Genetic Algorithms
+*   Novel Data Processing and Analytics, Tools and Systems
+*   Big Data Systems, Mining and Management, Tools and Applications
+*   Machine Learning, Web-based Decision Making
+*   Deep Learning Methods and Techniques
+*   General Session: eSystems Engineering
+
+## Submission Guidelines
+
+All submitted papers will be peer-reviewed, and accepted papers will be published in the conference proceedings. The proceedings will be submitted for review by IEEE, and if it meets IEEE quality review standards, it may be eligible for inclusion in the IEEE Xplore Digital Library. The papers will also be included in SCOPUS and indexed by other relevant indexation services.
+
+## Important Dates
+
+*   **Full paper Submission:** August 1, 2025
+*   **Notification of acceptance:** Up to one month after submission
+*   **Submission of camera-ready papers:** October 1, 2025
+*   **Author online registration:** October 11, 2025
 
 ## Publication
 
-Accepted papers in CATA-2025 will be published (full text online) in Springer and will be indexed in Scopus, Google Scholar, EI, and INSPEC, and submitted to DBLP for indexing.
-
-## Important Dates
-
-*   **Full paper submission:** November 16, 2024
-*   **Notification of acceptance:** January 4, 2025
-*   **Word files, PDFs of final Camera-ready paper and License to publish due:** January 18, 2025
-*   **Conference registration materials due:** February 7, 2025
-*   **CATA 2025 in San Francisco, CA, USA:** March 17-18, 2025
-
-## Templates
-
-[https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)"
-"International Conference on Compilers, Architecture, and Synthesis for Embedded Systems","CASES","https://esweek.org/cases/","https://esweek.org/call-for-papers/","None","","","","","Conference dates: September 28 - October 3, 2025
+Accepted papers will be published in the conference proceedings and may be eligible for inclusion in the IEEE Xplore Digital Library. The papers will also be included in SCOPUS and indexed by other relevant indexation services."
+"International Conference on Dependability of Computer Systems","DEPCoS","https://depcos.pwr.edu.pl/","https://cmt3.research.microsoft.com/DEPCOS2025","None","","","","","Conference dates: June 30 - July 3, 2025
 Year: 2025
-Location: Taipei, Taiwan
-City-State-Province: Taipei
-Country: Taiwan
-Continent: Asia
+Location: Poland
+City-State-Province: 
+Country: Poland
+Continent: Europe
 Type: Offline
-Journal Track: Abstract Submission: March 23, 2025
-Journal Track: Full Paper Submission: March 30, 2025
-Late Breaking Tracks: Paper Submission: June 1, 2025
-Journal track: Revised paper submission: June 15, 2025
-All tracks (full paper, LB, Special Session): Camera ready: August 11, 2025
-Journal track: First Round Notification: May 18, 2025
-Late Breaking Tracks: Notification: July 13, 2025
-Journal Track: Notification: July 13, 2025
-Special Session Proposals: March 30, 2025
-Tutorial Proposals: March 30, 2025
-Workshop Proposals: March 30, 2025
-Education Class Proposals: March 30, 2025
-Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition: TBD
-Topics: Compilers, Architectures, Synthesis for Embedded Systems, Embedded processor, Memory, Interconnect, Storage architectures, Compiler techniques, Performance, Power, Predictability, Security, Reliability, Heterogeneous architectures, Accelerator-rich architectures","September 28 - October 3, 2025","2025","Taipei, Taiwan","Taipei","Taiwan","Asia","Offline","{""Journal Track: Abstract Submission"":""March 23, 2025"",""Journal Track: Full Paper Submission"":""March 30, 2025"",""Late Breaking Tracks: Paper Submission"":""June 1, 2025"",""Journal track: Revised paper submission"":""June 15, 2025"",""All tracks (full paper, LB, Special Session): Camera ready"":""August 11, 2025""}","{""Journal track: First Round Notification"":""May 18, 2025"",""Late Breaking Tracks: Notification"":""July 13, 2025"",""Journal Track: Notification"":""July 13, 2025""}","{}","{}","{""Special Session Proposals"":""March 30, 2025"",""Tutorial Proposals"":""March 30, 2025"",""Workshop Proposals"":""March 30, 2025"",""Education Class Proposals"":""March 30, 2025"",""Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition"":""TBD""}","Compilers, Architectures, Synthesis for Embedded Systems, Embedded processor, Memory, Interconnect, Storage architectures, Compiler techniques, Performance, Power, Predictability, Security, Reliability, Heterogeneous architectures, Accelerator-rich architectures","","CASES is a premier forum where researchers, developers, and practitioners exchange information on the latest advances in compilers and architectures for high-performance, low-power embedded systems. The conference will be held in Taipei, Taiwan, from September 28 to October 3, 2025, as part of Embedded Systems Week.","No call for papers available"
-"IEEE International Conference on Automation Science and Engineering","CASE","https://2025.ieeecase.org/","https://2025.ieeecase.org/call-for-papers","https://2025.ieeecase.org/key-dates","","","","","Conference dates: August 17 - 21, 2025
-Year: 2025
-Location: Los Angeles, California, USA
-City-State-Province: Los Angeles, California
-Country: United States
-Continent: North America
-Type: Offline
-Regular paper submission deadline: March 15, 2025
-Submission deadline for Workshop/tutorial proposals, Industry papers and work-in-progress papers: April 15, 2025
-Submission deadline for T-ASE, T-RO, RA-L and RAM paper presentations: April 30, 2025
-Paper acceptance notification: May 30, 2025
-Final paper submission and author registration: June 27, 2025
-Special session proposal submission: February 15, 2025
-Early bird registration: June 13, 2025
-Final program: July 17, 2025
-Pre-conference workshops: August 17, 2025
-Conference officially starts: August 18, 2025
-Topics: Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, Secured and Trustworthy Automation, Foundation of Automation, Human-centered automation, Automation in life science and healthcare, Sustainability and green automation, Automation in agriculture and horticulture, Smart building and construction, Knowledge-based automation, Manufacturing automation, Cloud-based automation, Privacy and security in automation","August 17 - 21, 2025","2025","Los Angeles, California, USA","Los Angeles, California","United States","North America","Offline","{""Regular paper submission deadline"":""March 15, 2025"",""Submission deadline for Workshop/tutorial proposals, Industry papers and work-in-progress papers"":""April 15, 2025"",""Submission deadline for T-ASE, T-RO, RA-L and RAM paper presentations"":""April 30, 2025""}","{""Paper acceptance notification"":""May 30, 2025""}","{""Final paper submission and author registration"":""June 27, 2025""}","{}","{""Special session proposal submission"":""February 15, 2025"",""Early bird registration"":""June 13, 2025"",""Final program"":""July 17, 2025"",""Pre-conference workshops"":""August 17, 2025"",""Conference officially starts"":""August 18, 2025""}","Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, Secured and Trustworthy Automation, Foundation of Automation, Human-centered automation, Automation in life science and healthcare, Sustainability and green automation, Automation in agriculture and horticulture, Smart building and construction, Knowledge-based automation, Manufacturing automation, Cloud-based automation, Privacy and security in automation","","The IEEE International Conference on Automation Science and Engineering (CASE 2025) is the flagship automation conference of the IEEE Robotics and Automation Society. CASE 2025 will be held on August 17-21, 2025, in Los Angeles, California, USA. The conference will focus on Secured and Trustworthy Automation.","# CASE 2025: Call for Papers
+Full version of the paper: 
+Notification of acceptance: March 17, 2025
+Camera-ready papers: March 25, 2025
+Conference payment: March 25, 2025
+Topics: Dependability, Computer Aided Medicine, Cloud Technologies, Deep Learning, Intelligent & Soft Computing, Machine Vision, Smart Systems, Industry 4.0, Data Science, Business, Medicine, Cloud and Grid Computing, Dependable & High Performance Computing, Big Data, Data Mining, Blockchain, Cybersecurity, Internet of Things, Mobile applications, Social computing, Infocommunication technologies, Ambient Intelligence, Sensor Networks, Medical imaging, AI in medical diagnosis, VR, AR, Predictive analytics, Telemedicine, Dependability engineering, System modelling, Risk analysis, Quality assurance, Softcomputing, Web Services, Secure Transactions, Smart systems, Networks theory, Communication technology, Natural Language Processing, Human-computer interaction, Medical data analysis, Smart Healthcare, Virtual Reality, Augmented Reality, Software dependability, testing, validation and verification, Industry 4.0, Smart Logistics, Smart Economy, Military systems, Unmanned Aerial Vehicles, Green energy, Power systems, Smart grids, e-learning, Web-based Learning, e-economic, e-commerce, e-business, e-management
+Publisher: Springer","June 30 - July 3, 2025","2025","Poland","","Poland","Europe","Offline","{""Full version of the paper"":""""}","{""Notification of acceptance"":""March 17, 2025""}","{""Camera-ready papers"":""March 25, 2025""}","{""Conference payment"":""March 25, 2025""}","{}","Dependability, Computer Aided Medicine, Cloud Technologies, Deep Learning, Intelligent & Soft Computing, Machine Vision, Smart Systems, Industry 4.0, Data Science, Business, Medicine, Cloud and Grid Computing, Dependable & High Performance Computing, Big Data, Data Mining, Blockchain, Cybersecurity, Internet of Things, Mobile applications, Social computing, Infocommunication technologies, Ambient Intelligence, Sensor Networks, Medical imaging, AI in medical diagnosis, VR, AR, Predictive analytics, Telemedicine, Dependability engineering, System modelling, Risk analysis, Quality assurance, Softcomputing, Web Services, Secure Transactions, Smart systems, Networks theory, Communication technology, Natural Language Processing, Human-computer interaction, Medical data analysis, Smart Healthcare, Virtual Reality, Augmented Reality, Software dependability, testing, validation and verification, Industry 4.0, Smart Logistics, Smart Economy, Military systems, Unmanned Aerial Vehicles, Green energy, Power systems, Smart grids, e-learning, Web-based Learning, e-economic, e-commerce, e-business, e-management","Springer","The 20th International Conference on Dependability of Computer Systems (DepCoS–RELCOMEX 2025) will take place in Poland from June 30 to July 3, 2025. The conference focuses on dependable and timely results from quantitative and qualitative data using precise and AI models and algorithms.","# DepCoS–RELCOMEX 2025: Call for Papers
 
-The 2025 IEEE 21st International Conference on Automation Science and Engineering (CASE 2025) will be held in **Los Angeles, California, USA from August 17 – August 21, 2025**. The pre-conference workshops will be held on August 17, 2025.
-
-## Theme
-
-**Secured and Trustworthy Automation:** Automation systems increasingly rely on secured and trustworthy automation. Research is needed to overcome vulnerability and bias due to imperfect system design, data collection, machine learning, or control.
+The 20th International Conference on Dependability of Computer Systems (DepCoS–RELCOMEX 2025) will take place from **June 30 - July 3, 2025 in Poland**.
 
 ## Topics
 
-The conference will cover a wide range of topics on Systems, Automation, Autonomous Systems, Discrete Event Systems, Smart Cities, Robotics, Building Automation, Automation in Meso, Micro and Nano-scale, Big Data, Machine Learning, Information and Communication Technologies, etc.
+We invite submissions on the following topics:
 
-Topics include, but are not limited to:
+*   **Theory and Practice of Dependability:**  Dependability vs trends in computer systems, Cloud and Grid Computing, Deep Learning, Neural Networks and Expert Systems, Cognitive Computing, Dependable & High Performance Computing, Data Science: Big Data & Data Mining, Blockchain and Cybersecurity, Internet of Things and Industry 4.0, Mobile applications and social computing, Challenges in infocommunication technologies, Ambient Intelligence & Sensing, Sensor Networks
+*   **Medicine and healthcare:** Next-generation medical imaging and Machine Vision, AI in medical diagnosis and intervention, VR / AR in educating and assisting physicians, Big Data and predictive analytics in disease prevention, Cybersecurity in healthcare systems, Telemedicine and remote care
+*   **Methodology and tools:** Dependability engineering in software, hardware & network systems, System modelling for threats, dependability & maintenance, Risk analysis, security and quality assurance, Efficiency analysis of systems and networks, Softcomputing for analysis and modelling of complex systems, Web Services and Performance, Secure Transactions
+*   **General problems:** General aspects of smart systems, networks theory and communication technology, Dependability theory of networks, systems and its elements, Artificial Intelligence, Natural Language Processing, Human-computer interaction, Theory of information and IT systems
+*   **Applications:** Medical data analysis & diagnosis, Smart Healthcare, AI in medicine, Computer Vision, Virtual / Augmented Reality, Planning & maintenance in systems and networks, Dependability and quality of service, Software dependability, testing, validation and verification, Industry 4.0, Smart Logistics & Smart Economy, Military systems and equipment; Unmanned Aerial Vehicles, Green energy, power systems and smart grids, e-learning & Web-based Learning, e-economic, e-commerce, e-business, e-management, Artificial Intelligence, Deep learning: machine learning, neural networks, data mining, Theory of information and IT systems
 
-*   Foundation of Automation
-*   Human-centered automation
-*   Automation in life science and healthcare
-*   Sustainability and green automation
-*   Automation in agriculture and horticulture
-*   Automation in meso, micro and nano-scale
-*   Smart building and construction
-*   Knowledge-based automation
-*   Manufacturing automation
-*   Cloud-based automation
-*   Big data, data mining and machine learning
-*   Privacy and security in automation
+## Publication
 
-## Submission Categories
+Published by Springer in an esteemed Springer book series.
 
-Authors are invited to submit their research contributions, which may include:
+## Submission Guidelines
 
-*   Regular Papers
-*   Special Session Papers
-*   Special Session Abstracts
-*   Industry Papers
-*   Presentation-only Papers
-
-### Regular Papers
-
-*   The number of pages (including text, figures, tables, acknowledgement, and references) is limited to six, but two additional pages will be permitted at an extra page charge.
-*   Regular papers exceeding 8 pages will be returned without review.
-*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
-*   All accepted regular papers will be included in the conference program and published in IEEE Xplore.
-*   **Submission deadline:** March 15, 2025
-
-### Special Session Papers
-
-*   Special session papers are distinct from regular papers because they are tailored to the specific topic of a special session.
-*   They undergo the same review and selection process as regular papers but are grouped together within the special session to create a cohesive program.
-*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to six, but two additional pages will be permitted at an extra page charge.
-*   Special session papers exceeding 8 pages will be returned without review.
-*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
-*   Special session papers will be included in the conference program and published in IEEE Xplore.
-*   **Submission deadline:** March 15, 2025
-
-### Special Session Abstracts
-
-*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to two.
-*   Abstracts exceeding 2 pages will be returned without review.
-*   All papers must be submitted in PDF and must follow the standard IEEE conference double-column format.
-*   Accepted abstracts will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
-*   **Submission deadline:** April 1, 2025
-
-### Work-in-progress and Industry Presentation-only Papers
-
-*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to four.
-*   Work-in-progress and industry presentation-only papers exceeding 4 pages will be returned without review.
-*   Presentation-only Papers will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
-*   **Submission deadline:** April 15, 2025
-
-### Work-in-progress and Industry Presentation-only Papers for Special Sessions
-
-*   The number of pages (including text, figures, tables, acknowledgement and references) is limited to four.
-*   Work-in-progress and industry presentation-only papers exceeding 4 pages will be returned without review.
-*   Presentation-only Papers will make oral presentations at the conference, but they will NOT appear in IEEE Xplore and thus will NOT be indexed on platforms like Scopus.
-*   **Submission deadline:** April 15, 2025
-
-### T-ASE, T-RO, RA-L and RAM Presentations
-
-If you have published (authored or co-authored) a paper in one of the IEEE Robotics & Automation Society journals, you have the possibility to present your work at CASE 2025.
-
-*   Only the original paper abstract is required. You should also include the full journal paper and the citation details, plus DOI.
-*   To be eligible for presentation at CASE 2025, your paper must be transferred between December 1, 2024, and May 2, 2025.
-*   The paper must be transferred within 270 days of acceptance. Authors may not request any acceleration or delay of the review process based on these time windows.
-*   **Submission deadline:** April 30, 2025
+*   Please make sure to follow Springer’s authors’ guidelines.
+*   The text should be 8 - 10 pages long after final formatting including all figures, tables and bibliography positions; additional fee will apply for extra pages over the limit.
+*   Submissions are handled via [https://cmt3.research.microsoft.com/DEPCOS2025](https://cmt3.research.microsoft.com/DEPCOS2025)
 
 ## Important Dates
 
-*   **Special session proposal submission:** February 15, 2025
-*   **Regular and special session full paper submission:** March 15, 2025 (final)
-*   **Workshop/tutorial proposal submission, Industry paper and work-in-progress paper submission:** April 15, 2025
-*   **T-ASE, T-RO, RA-L and RAM presentation submission:** April 30, 2025
-*   **Paper acceptance notification:** May 30, 2025
-*   **Early bird registration:** June 13, 2025
-*   **Final paper submission and author registration:** June 27, 2025
-*   **Final program:** July 17, 2025
-*   **Pre-conference workshops:** August 17, 2025
-*   **Conference officially starts:** August 18, 2025
-
-## Venue
-
-Millennium Biltmore Downtown Los Angeles, California, USA"
+*   **Full version of the paper:** late submission still possible. Please additionally send a notification to depcos@pwr.edu.pl.
+*   **Notification of acceptance:** March 17, 2025
+*   **Camera-ready papers:** March 25, 2025
+*   **Conference payment:** March 25, 2025"

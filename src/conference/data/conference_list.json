@@ -1,18 +1,22 @@
 [
   {
-    "Title": "IEEE International Conference on Automation Science and Engineering",
-    "Acronym": "CASE"
+    "Title": "IEEE International Conference on Distributed Computing in Sensor Systems",
+    "Acronym": "DCOSS"
   },
   {
-    "Title": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-    "Acronym": "CASES"
+    "Title": "International Conference on Dependability of Computer Systems",
+    "Acronym": "DEPCoS"
   },
   {
-    "Title": "International Conference on Computers and their Applications",
-    "Acronym": "CATA"
+    "Title": "Developments in eSystems Engineering",
+    "Acronym": "DeSE"
   },
   {
-    "Title": "Computer Aided Verification",
-    "Acronym": "CAV"
+    "Title": "International Conference on Database and Expert Systems Applications",
+    "Acronym": "DEXA"
+  },
+  {
+    "Title": "The Theory and Application of Diagrams",
+    "Acronym": "DIAGRAMS"
   }
 ]

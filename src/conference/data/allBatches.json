@@ -1,7 +1,7 @@
 [
   {
-    "conferenceName": "Computer Aided Verification",
-    "conferenceAcronym": "CAV",
+    "conferenceName": "The Theory and Application of Diagrams",
+    "conferenceAcronym": "DIAGRAMS",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -10,144 +10,62 @@
     "conferenceComments": "",
     "conferenceRating": "",
     "conferenceDetails": [],
-    "conferenceIndex": "0",
-    "conferenceLink": "https://conferences.i-cav.org/2025/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_0_initial_f2a4832e-0d68-4a5d-9c17-865c38b1a119.txt",
-    "cfpLink": "https://conferences.i-cav.org/2025/calls/call-for-papers",
-    "impLink": "https://conferences.i-cav.org/2025/",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_determine_response_e781c428-4cde-42b2-b5e9-3177cf93d59d.txt",
-    "determineMetaData": {
-      "promptTokenCount": 42061,
-      "candidatesTokenCount": 80,
-      "totalTokenCount": 42141,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 42061
-        }
-      ],
-      "candidatesTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 80
-        }
-      ]
-    },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_cfp_2025_ad74240e-18ad-4441-995d-82a2525d463e.txt",
-    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_imp_2025_15ca9aa1-7dd6-46d1-9ae3-74bf33dd5256.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_extract_response_d3df0406-933d-4fa9-9544-87408195f1c0.txt",
-    "extractMetaData": {
-      "promptTokenCount": 137783,
-      "candidatesTokenCount": 359,
-      "totalTokenCount": 138142,
-      "cachedContentTokenCount": 136999,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 137783
-        }
-      ],
-      "cacheTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 136999
-        }
-      ],
-      "candidatesTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 359
-        }
-      ]
-    }
-  },
-  {
-    "conferenceName": "International Conference on Computers and their Applications",
-    "conferenceAcronym": "CATA",
-    "conferenceSource": "",
-    "conferenceRank": "",
-    "conferenceNote": "",
-    "conferenceDBLP": "",
-    "conferencePrimaryFoR": "",
-    "conferenceComments": "",
-    "conferenceRating": "",
-    "conferenceDetails": [],
-    "conferenceIndex": "0",
-    "conferenceLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_0_initial_400b1f8f-2ea9-4c52-bccc-dfda46424c0c.txt",
-    "cfpLink": "http://www.isca-hq.org/isca.php?p=Conferences",
-    "impLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_determine_response_9acfb0d3-984a-44b4-a270-9fcd0dad7032.txt",
-    "determineMetaData": {
-      "promptTokenCount": 49092,
-      "candidatesTokenCount": 91,
-      "totalTokenCount": 49183,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 49092
-        }
-      ],
-      "candidatesTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 91
-        }
-      ]
-    },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_cfp_2025_6331c01e-9393-4f35-9dfd-d31aa43faa2f.txt",
-    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_imp_2025_d421d0fd-0039-42ea-9f48-7f57644762a1.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_extract_response_f350611a-7dd4-4c6b-9d5e-c920a7d74bcf.txt",
-    "extractMetaData": {
-      "promptTokenCount": 140876,
-      "candidatesTokenCount": 1135,
-      "totalTokenCount": 142011,
-      "cachedContentTokenCount": 136999,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 140876
-        }
-      ],
-      "cacheTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 136999
-        }
-      ],
-      "candidatesTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 1135
-        }
-      ]
-    }
-  },
-  {
-    "conferenceName": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-    "conferenceAcronym": "CASES",
-    "conferenceSource": "",
-    "conferenceRank": "",
-    "conferenceNote": "",
-    "conferenceDBLP": "",
-    "conferencePrimaryFoR": "",
-    "conferenceComments": "",
-    "conferenceRating": "",
-    "conferenceDetails": [],
-    "conferenceIndex": "0",
-    "conferenceLink": "https://esweek.org/cases/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_0_initial_7659c355-f832-4458-9ceb-0be8d4027b4e.txt",
-    "cfpLink": "https://esweek.org/call-for-papers/",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://diagrams-conference.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DIAGRAMS_1_initial_58582b44-df6c-4d03-a196-b171a48b09eb.txt",
+    "cfpLink": "None",
     "impLink": "None",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_determine_response_a84bbda8-fea8-47c5-a4a8-f0fa4c2cf71c.txt",
-    "determineMetaData": {
-      "promptTokenCount": 45324,
-      "candidatesTokenCount": 48,
-      "totalTokenCount": 45372,
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DIAGRAMS_extract_response_cba8f698-0cca-46f9-a5fd-eeb4f4836d32.txt",
+    "extractMetaData": {
+      "promptTokenCount": 137483,
+      "candidatesTokenCount": 204,
+      "totalTokenCount": 137687,
+      "cachedContentTokenCount": 136999,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 45324
+          "tokenCount": 137483
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 136999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 204
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE International Conference on Distributed Computing in Sensor Systems",
+    "conferenceAcronym": "DCOSS",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://dcoss.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_0_initial_e6574b5f-469a-49e0-8087-566d51e7d573.txt",
+    "cfpLink": "https://dcoss.org/call-for-papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_determine_response_317330f0-1a07-491a-96ce-82138c7863b8.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49610,
+      "candidatesTokenCount": 48,
+      "totalTokenCount": 49658,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49610
         }
       ],
       "candidatesTokensDetails": [
@@ -157,17 +75,17 @@
         }
       ]
     },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_cfp_2025_22ba2399-8ba9-418d-a80c-1fa738ba3286.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_extract_response_24e82d7c-81fd-4363-a0d4-4d3943d50b3a.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_cfp_2025_8d502454-5b71-4030-99e0-0e7cc506aa48.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_extract_response_261d48b7-8d4f-4a95-bcb2-fed7ac3daa50.txt",
     "extractMetaData": {
-      "promptTokenCount": 138712,
-      "candidatesTokenCount": 537,
-      "totalTokenCount": 139249,
+      "promptTokenCount": 142416,
+      "candidatesTokenCount": 1647,
+      "totalTokenCount": 144063,
       "cachedContentTokenCount": 136999,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 138712
+          "tokenCount": 142416
         }
       ],
       "cacheTokensDetails": [
@@ -179,14 +97,14 @@
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 537
+          "tokenCount": 1647
         }
       ]
     }
   },
   {
-    "conferenceName": "IEEE International Conference on Automation Science and Engineering",
-    "conferenceAcronym": "CASE",
+    "conferenceName": "Developments in eSystems Engineering",
+    "conferenceAcronym": "DeSE",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -196,40 +114,40 @@
     "conferenceRating": "",
     "conferenceDetails": [],
     "conferenceIndex": "0",
-    "conferenceLink": "https://2025.ieeecase.org/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_0_initial_bf233a71-7f12-4145-8ff0-190f7e02386f.txt",
-    "cfpLink": "https://2025.ieeecase.org/call-for-papers",
-    "impLink": "https://2025.ieeecase.org/key-dates",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_determine_response_28ab3bf4-4535-49f0-89d7-1023aa9b5b15.txt",
+    "conferenceLink": "https://dese.ai/dese-2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_0_initial_e11e6bda-65c4-4ec3-bba6-36624df87920.txt",
+    "cfpLink": "https://dese.ai/dese-2025-callforpapers/",
+    "impLink": "https://dese.ai/dese-2025-important-dates/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_determine_response_1d1e44b8-65ad-4a64-9f2b-a77622cb4684.txt",
     "determineMetaData": {
-      "promptTokenCount": 48158,
-      "candidatesTokenCount": 73,
-      "totalTokenCount": 48231,
+      "promptTokenCount": 49444,
+      "candidatesTokenCount": 71,
+      "totalTokenCount": 49515,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 48158
+          "tokenCount": 49444
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 73
+          "tokenCount": 71
         }
       ]
     },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_cfp_2025_66cf3397-ffcd-4d54-877b-4a1cc3ff1616.txt",
-    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_imp_2025_9857601e-d100-4784-a784-fef247b2b4f8.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_extract_response_3a10c091-d3c3-49c2-a960-b7d124895707.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_cfp_2025_50d300dc-9ca5-40aa-8bda-b819d3e59295.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_imp_2025_829414e9-6c41-4442-ae4a-6e5bb1753231.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_extract_response_a0cb1ba2-b8c3-486b-946c-a4875fd609c2.txt",
     "extractMetaData": {
-      "promptTokenCount": 144303,
-      "candidatesTokenCount": 2031,
-      "totalTokenCount": 146334,
+      "promptTokenCount": 141097,
+      "candidatesTokenCount": 892,
+      "totalTokenCount": 141989,
       "cachedContentTokenCount": 136999,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 144303
+          "tokenCount": 141097
         }
       ],
       "cacheTokensDetails": [
@@ -241,7 +159,68 @@
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 2031
+          "tokenCount": 892
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Dependability of Computer Systems",
+    "conferenceAcronym": "DEPCoS",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://depcos.pwr.edu.pl/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_0_initial_124d6bdd-e3f4-4a1b-9bb3-ffc9f3c1f439.txt",
+    "cfpLink": "https://cmt3.research.microsoft.com/DEPCOS2025",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_determine_response_a73e6c51-7f44-4191-bd58-8d731fdab657.txt",
+    "determineMetaData": {
+      "promptTokenCount": 53470,
+      "candidatesTokenCount": 56,
+      "totalTokenCount": 53526,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 53470
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 56
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_cfp_2025_681f648c-dd52-4f36-ac8b-2b8f806f8a67.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_extract_response_c34c0b2f-31a0-46b3-a1bd-da4dd67cacf9.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139668,
+      "candidatesTokenCount": 1199,
+      "totalTokenCount": 140867,
+      "cachedContentTokenCount": 136999,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139668
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 136999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1199
         }
       ]
     }

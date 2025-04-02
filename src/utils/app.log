@@ -385,3 +385,19 @@
 [2025-04-01T12:24:31.608Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
 [2025-04-01T12:24:31.610Z] GeminiService initialized for model: gemini-2.0-flash
 [2025-04-01T12:24:31.611Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:32:36.602Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-02T01:32:36.603Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-02T01:32:36.605Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:32:36.607Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:33:08.057Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-02T01:33:08.059Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-02T01:33:08.061Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:33:08.062Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:33:21.809Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-02T01:33:21.810Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-02T01:33:21.812Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:33:21.812Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:58:15.910Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-02T01:58:15.912Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-02T01:58:15.913Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-02T01:58:15.914Z] GeminiService initialized for model: gemini-2.0-flash

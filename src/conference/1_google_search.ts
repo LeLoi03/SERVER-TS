@@ -9,7 +9,7 @@ export async function searchGoogleCSE(apiKey: string, cseId: string, query: stri
     console.log("Gọi Search") // Keep if you want to see each API call clearly, consider logger.debug/trace in TS
 
     const searchUrl = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cseId}&q=${encodeURIComponent(query)}&num=8`; // Always encode query
-    logger.debug({ searchUrl }, 'Executing Google Custom Search request');
+    // logger.debug({ searchUrl }, 'Executing Google Custom Search request');
 
     try {
         const response: AxiosResponse<GoogleCSEApiResponse> = await axios.get(searchUrl, {
@@ -20,7 +20,7 @@ export async function searchGoogleCSE(apiKey: string, cseId: string, query: stri
         if (response.data && response.data.error) {
             const errorDetails = response.data.error;
             const errorMessage = `Google API Error (in response body): ${errorDetails.message} (Code: ${errorDetails.code})`;
-            logger.error({ keyPrefix: apiKey.substring(0, 5), details: errorDetails }, errorMessage);
+            // logger.error({ keyPrefix: apiKey.substring(0, 5), details: errorDetails }, errorMessage);
             // Throw custom error for easier identification at the calling point
             throw new GoogleSearchError(errorMessage, {
                 googleErrorCode: errorDetails.code,
@@ -48,9 +48,9 @@ export async function searchGoogleCSE(apiKey: string, cseId: string, query: stri
                     logger.warn({ itemReceived: item }, "Received search result item with missing title or link, skipping.");
                 }
             });
-            logger.debug({ count: results.length }, `Google Search returned results`);
+            // logger.debug({ count: results.length }, `Google Search returned results`);
         } else {
-            logger.debug("No valid 'items' array found in Google Search response.");
+            // logger.debug("No valid 'items' array found in Google Search response.");
         }
 
         return results;
@@ -75,15 +75,15 @@ export async function searchGoogleCSE(apiKey: string, cseId: string, query: stri
                     errorDetails.googleErrors = googleError.errors;
                     errorDetails.isGoogleBodyError = true; // Still error from Google
                 }
-                logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
+                // logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
             } else if (axiosError.request) {
                 // Request sent but no response received (network error, timeout)
                 errorMessage = `Google API request failed: No response received (Code: ${axiosError.code})`;
-                logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
+                // logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
             } else {
                 // Error setting up the request
                 errorMessage = `Error setting up Google API request: ${axiosError.message}`;
-                logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
+                // logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
             }
         } else if (error instanceof GoogleSearchError) {
             // Error already handled and re-thrown from try block above (error in 200 response body)
@@ -93,7 +93,7 @@ export async function searchGoogleCSE(apiKey: string, cseId: string, query: stri
         else {
             // Other unexpected error, not Axios or known GoogleSearchError
             errorMessage = `Unexpected error during Google CSE processing: ${error.message}`;
-            logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
+            // logger.error({ keyPrefix: apiKey.substring(0, 5), ...errorDetails }, errorMessage);
         }
 
         // Throw custom error so calling function can easily access details
