@@ -117,39 +117,22 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.AdminsScalarFieldEnum = {
+exports.Prisma.PassengerScalarFieldEnum = {
   id: 'id',
-  email: 'email',
-  password: 'password',
-  fullName: 'fullName',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  firstName: 'firstName',
+  lastName: 'lastName'
 };
 
-exports.Prisma.ConferenceBlacklistsScalarFieldEnum = {
+exports.Prisma.LocationsScalarFieldEnum = {
   id: 'id',
-  conferenceId: 'conferenceId',
-  userId: 'userId',
+  address: 'address',
+  cityStateProvince: 'cityStateProvince',
+  country: 'country',
+  continent: 'continent',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.ConferenceCalendarsScalarFieldEnum = {
-  id: 'id',
-  conferenceId: 'conferenceId',
-  userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.ConferenceCrawlJobsScalarFieldEnum = {
-  id: 'id',
-  conferenceId: 'conferenceId',
-  status: 'status',
-  progress: 'progress',
-  message: 'message',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  isAvailable: 'isAvailable',
+  organizeId: 'organizeId'
 };
 
 exports.Prisma.ConferenceDatesScalarFieldEnum = {
@@ -162,32 +145,6 @@ exports.Prisma.ConferenceDatesScalarFieldEnum = {
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   isAvailable: 'isAvailable'
-};
-
-exports.Prisma.ConferenceFeedbacksScalarFieldEnum = {
-  id: 'id',
-  conferenceId: 'conferenceId',
-  creatorId: 'creatorId',
-  description: 'description',
-  star: 'star',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.ConferenceFollowsScalarFieldEnum = {
-  id: 'id',
-  conferenceId: 'conferenceId',
-  userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.ConferenceLikesScalarFieldEnum = {
-  id: 'id',
-  conferenceId: 'conferenceId',
-  userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.ConferenceOrganizationsScalarFieldEnum = {
@@ -206,18 +163,17 @@ exports.Prisma.ConferenceOrganizationsScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ConferenceRanksScalarFieldEnum = {
-  id: 'id',
-  year: 'year',
-  conferenceId: 'conferenceId',
-  fieldOfResearchId: 'fieldOfResearchId',
-  rankId: 'rankId'
-};
-
 exports.Prisma.ConferenceTopicsScalarFieldEnum = {
   id: 'id',
   organizeId: 'organizeId',
   topicId: 'topicId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.TopicsScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -229,8 +185,15 @@ exports.Prisma.ConferencesScalarFieldEnum = {
   creatorId: 'creatorId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  status: 'status',
-  adminId: 'adminId'
+  status: 'status'
+};
+
+exports.Prisma.ConferenceRanksScalarFieldEnum = {
+  id: 'id',
+  year: 'year',
+  conferenceId: 'conferenceId',
+  fieldOfResearchId: 'fieldOfResearchId',
+  rankId: 'rankId'
 };
 
 exports.Prisma.FieldOfResearchsScalarFieldEnum = {
@@ -239,30 +202,23 @@ exports.Prisma.FieldOfResearchsScalarFieldEnum = {
   code: 'code'
 };
 
-exports.Prisma.JournalCrawlJobsScalarFieldEnum = {
+exports.Prisma.RanksScalarFieldEnum = {
   id: 'id',
-  journalId: 'journalId',
-  status: 'status',
-  progress: 'progress',
-  message: 'message',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  name: 'name',
+  value: 'value',
+  sourceId: 'sourceId'
 };
 
-exports.Prisma.JournalFollowsScalarFieldEnum = {
+exports.Prisma.SourcesScalarFieldEnum = {
   id: 'id',
-  journalId: 'journalId',
-  userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  name: 'name',
+  link: 'link'
 };
 
-exports.Prisma.JournalLikesScalarFieldEnum = {
+exports.Prisma.JournalTopicsScalarFieldEnum = {
   id: 'id',
   journalId: 'journalId',
-  userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  topicId: 'topicId'
 };
 
 exports.Prisma.JournalRanksScalarFieldEnum = {
@@ -271,12 +227,6 @@ exports.Prisma.JournalRanksScalarFieldEnum = {
   journalId: 'journalId',
   fieldOfResearchId: 'fieldOfResearchId',
   rankId: 'rankId'
-};
-
-exports.Prisma.JournalTopicsScalarFieldEnum = {
-  id: 'id',
-  journalId: 'journalId',
-  topicId: 'topicId'
 };
 
 exports.Prisma.JournalsScalarFieldEnum = {
@@ -291,23 +241,94 @@ exports.Prisma.JournalsScalarFieldEnum = {
   creator: 'creator'
 };
 
-exports.Prisma.LocationsScalarFieldEnum = {
+exports.Prisma.ConferenceFollowsScalarFieldEnum = {
   id: 'id',
-  address: 'address',
-  cityStateProvince: 'cityStateProvince',
-  country: 'country',
-  continent: 'continent',
+  conferenceId: 'conferenceId',
+  userId: 'userId',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  isAvailable: 'isAvailable',
-  organizeId: 'organizeId'
+  updatedAt: 'updatedAt'
 };
 
-exports.Prisma.NotificationSettingsScalarFieldEnum = {
+exports.Prisma.ConferenceLikesScalarFieldEnum = {
   id: 'id',
+  conferenceId: 'conferenceId',
   userId: 'userId',
-  notificationId: 'notificationId',
-  isEnabled: 'isEnabled',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ConferenceFeedbacksScalarFieldEnum = {
+  id: 'id',
+  conferenceId: 'conferenceId',
+  creatorId: 'creatorId',
+  description: 'description',
+  star: 'star',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ConferenceCalendarsScalarFieldEnum = {
+  id: 'id',
+  conferenceId: 'conferenceId',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.JournalLikesScalarFieldEnum = {
+  id: 'id',
+  journalId: 'journalId',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.JournalFollowsScalarFieldEnum = {
+  id: 'id',
+  journalId: 'journalId',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.UsersScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  password: 'password',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  dob: 'dob',
+  avatar: 'avatar',
+  aboutMe: 'aboutMe',
+  background: 'background',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ConferenceCrawlJobsScalarFieldEnum = {
+  id: 'id',
+  conferenceId: 'conferenceId',
+  status: 'status',
+  progress: 'progress',
+  message: 'message',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ConferenceBlacklistsScalarFieldEnum = {
+  id: 'id',
+  conferenceId: 'conferenceId',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.JournalCrawlJobsScalarFieldEnum = {
+  id: 'id',
+  journalId: 'journalId',
+  status: 'status',
+  progress: 'progress',
+  message: 'message',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -329,35 +350,18 @@ exports.Prisma.NotificationsTypesScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.PassengerScalarFieldEnum = {
+exports.Prisma.NotificationSettingsScalarFieldEnum = {
   id: 'id',
-  firstName: 'firstName',
-  lastName: 'lastName'
-};
-
-exports.Prisma.RanksScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  value: 'value',
-  sourceId: 'sourceId'
-};
-
-exports.Prisma.SourcesScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  link: 'link'
+  userId: 'userId',
+  notificationId: 'notificationId',
+  isEnabled: 'isEnabled',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.TopicUserInterestedsScalarFieldEnum = {
   userId: 'userId',
   topicId: 'topicId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.TopicsScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -370,20 +374,6 @@ exports.Prisma.UserVerificationScalarFieldEnum = {
   isVerified: 'isVerified',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
-};
-
-exports.Prisma.UsersScalarFieldEnum = {
-  id: 'id',
-  email: 'email',
-  password: 'password',
-  firstName: 'firstName',
-  lastName: 'lastName',
-  dob: 'dob',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  aboutMe: 'aboutMe',
-  avatar: 'avatar',
-  background: 'background'
 };
 
 exports.Prisma.SortOrder = {
@@ -403,36 +393,35 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  Admins: 'Admins',
-  ConferenceBlacklists: 'ConferenceBlacklists',
-  ConferenceCalendars: 'ConferenceCalendars',
-  ConferenceCrawlJobs: 'ConferenceCrawlJobs',
-  ConferenceDates: 'ConferenceDates',
-  ConferenceFeedbacks: 'ConferenceFeedbacks',
-  ConferenceFollows: 'ConferenceFollows',
-  ConferenceLikes: 'ConferenceLikes',
-  ConferenceOrganizations: 'ConferenceOrganizations',
-  ConferenceRanks: 'ConferenceRanks',
-  ConferenceTopics: 'ConferenceTopics',
-  Conferences: 'Conferences',
-  FieldOfResearchs: 'FieldOfResearchs',
-  JournalCrawlJobs: 'JournalCrawlJobs',
-  JournalFollows: 'JournalFollows',
-  JournalLikes: 'JournalLikes',
-  JournalRanks: 'JournalRanks',
-  JournalTopics: 'JournalTopics',
-  Journals: 'Journals',
-  Locations: 'Locations',
-  NotificationSettings: 'NotificationSettings',
-  Notifications: 'Notifications',
-  NotificationsTypes: 'NotificationsTypes',
   Passenger: 'Passenger',
+  Locations: 'Locations',
+  ConferenceDates: 'ConferenceDates',
+  ConferenceOrganizations: 'ConferenceOrganizations',
+  ConferenceTopics: 'ConferenceTopics',
+  Topics: 'Topics',
+  Conferences: 'Conferences',
+  ConferenceRanks: 'ConferenceRanks',
+  FieldOfResearchs: 'FieldOfResearchs',
   Ranks: 'Ranks',
   Sources: 'Sources',
+  JournalTopics: 'JournalTopics',
+  JournalRanks: 'JournalRanks',
+  Journals: 'Journals',
+  ConferenceFollows: 'ConferenceFollows',
+  ConferenceLikes: 'ConferenceLikes',
+  ConferenceFeedbacks: 'ConferenceFeedbacks',
+  ConferenceCalendars: 'ConferenceCalendars',
+  JournalLikes: 'JournalLikes',
+  JournalFollows: 'JournalFollows',
+  Users: 'Users',
+  ConferenceCrawlJobs: 'ConferenceCrawlJobs',
+  ConferenceBlacklists: 'ConferenceBlacklists',
+  JournalCrawlJobs: 'JournalCrawlJobs',
+  Notifications: 'Notifications',
+  NotificationsTypes: 'NotificationsTypes',
+  NotificationSettings: 'NotificationSettings',
   TopicUserInteresteds: 'TopicUserInteresteds',
-  Topics: 'Topics',
-  UserVerification: 'UserVerification',
-  Users: 'Users'
+  UserVerification: 'UserVerification'
 };
 
 /**
