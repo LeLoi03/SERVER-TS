@@ -190,19 +190,39 @@ const fetchAndProcessWebsiteInfo = async (page: Page, officialWebsite: string, b
     }
 };
 
-// --- processDetermineLinksResponse làm việc với file paths ---
-const processDetermineLinksResponse = async (responseText: string, batch: BatchEntry[], batchIndex: number, browserContext: BrowserContext, year: number): Promise<BatchEntry[]> => {
-    const page = await browserContext.newPage();
+
+
+
+// --- processDetermineLinksResponse ---
+const processDetermineLinksResponse = async (
+    responseText: string,
+    batch: BatchEntry[],
+    batchIndex: number,
+    browserContext: BrowserContext,
+    year: number,
+    apiCallNumber: 1 | 2 = 1 // Thêm tham số để biết đây là lần gọi API thứ mấy
+): Promise<BatchEntry[]> => {
+    // Base context cho function này
+    const baseLogContext = {
+        batchIndex,
+        conferenceAcronym: batch[0]?.conferenceAcronym,
+        conferenceName: batch[0]?.conferenceName,
+        function: 'processDetermineLinksResponse',
+        apiCallNumber // Thêm số lần gọi API vào context
+    };
+    logger.info({ ...baseLogContext, event: 'process_determine_start' }, "Starting processDetermineLinksResponse");
+    let page: Page | null = null;
+
     try {
-        // ... (parse linksData như cũ) ...
+        page = await browserContext.newPage();
         let linksData: any;
         try {
             linksData = JSON.parse(responseText);
         } catch (parseError: any) {
-            console.error("Error parsing JSON response from determine_links_api:", parseError);
-            console.error("Response text was:", responseText);
-            await page.close();
-            batch[0].conferenceLink = "None"; // Giữ lại đánh dấu lỗi
+            logger.error({ ...baseLogContext, err: parseError, responseTextPreview: responseText.substring(0, 100), event: 'process_determine_json_parse_failed' }, `Error parsing JSON response from determine_links_api (call ${apiCallNumber})`);
+            if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse error"));
+            batch[0].conferenceLink = "None"; // Mark as error
+            logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'JSON parse failed' }, "Finishing processDetermineLinksResponse with error state");
             return [batch[0]];
         }
 
@@ -211,73 +231,114 @@ const processDetermineLinksResponse = async (responseText: string, batch: BatchE
         let impLink: string | undefined = linksData["Important dates link"]?.trim();
 
         if (!officialWebsite || officialWebsite.toLowerCase() === "none") {
-            await page.close();
-            console.log("Không xác định được link chính");
+            logger.warn({ ...baseLogContext, linksData, event: 'process_determine_no_official_website' }, "Official website link not found or 'None' in determine_links_api response");
+            if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after no official website"));
             batch[0].conferenceLink = "None";
+            logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'No official website' }, "Finishing processDetermineLinksResponse with error state");
             return [batch[0]];
         }
 
         officialWebsite = officialWebsite.endsWith('/') ? officialWebsite.slice(0, -1) : officialWebsite;
+        const originalOfficialWebsite = officialWebsite;
         cfpLink = normalizeAndJoinLink(officialWebsite, cfpLink);
         impLink = normalizeAndJoinLink(officialWebsite, impLink);
+        logger.debug({ ...baseLogContext, officialWebsite, cfpLink, impLink, event: 'process_determine_links_normalized' }, "Parsed and normalized initial links");
 
-        let matchingEntry: BatchEntry | undefined = batch.find(entry => {
-            // ... (logic tìm matchingEntry như cũ, so sánh conferenceLink) ...
-            try {
-                // Check if entry.conferenceLink exists before normalizing
+        let matchingEntry: BatchEntry | undefined;
+        try {
+            matchingEntry = batch.find(entry => {
                 if (!entry.conferenceLink) return false;
                 const normalizedEntryLink = entry.conferenceLink.endsWith('/') ? entry.conferenceLink.slice(0, -1) : entry.conferenceLink;
-                return normalizedEntryLink === officialWebsite;
-            } catch (findError: any) { // Type findError as any or Error
-                console.error("Error in find:", findError);
-                return false;
-            }
-        });
+                return normalizedEntryLink === originalOfficialWebsite;
+            });
+        } catch (findError: any) {
+            logger.error({ ...baseLogContext, err: findError, event: 'process_determine_entry_match_error' }, "Error during batch.find matching entry");
+            if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after find error"));
+            batch[0].conferenceLink = "None";
+            logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Error finding matching entry' }, "Finishing processDetermineLinksResponse with error state");
+            return [batch[0]];
+        }
+
 
         if (matchingEntry) {
+            logger.info({ ...baseLogContext, matchedLink: matchingEntry.conferenceLink, event: 'process_determine_entry_match_found' }, "Found matching entry in batch based on official website");
+            let saveErrorOccurred = false;
             try {
                 matchingEntry.cfpLink = cfpLink || "";
                 matchingEntry.impLink = impLink || "";
 
                 if (cfpLink && cfpLink.toLowerCase() !== "none") {
-                    // Lưu path vào matchingEntry
+                    const saveContext = { ...baseLogContext, url: cfpLink, contentType: 'CFP' };
+                    logger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving CFP content for matched entry");
                     matchingEntry.cfpTextPath = await saveHTMLFromCallForPapers(page, cfpLink, matchingEntry.conferenceAcronym, year);
+                    logger.info({ ...saveContext, filePath: matchingEntry.cfpTextPath, event: 'process_determine_save_matched_success' }, "Saved CFP content for matched entry");
                 }
                 if (impLink && impLink.toLowerCase() !== "none") {
-                    // Lưu path vào matchingEntry
+                     const saveContext = { ...baseLogContext, url: impLink, contentType: 'IMP' };
+                    logger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving Important Dates content for matched entry");
                     matchingEntry.impTextPath = await saveHTMLFromImportantDates(page, impLink, matchingEntry.conferenceAcronym, year);
+                    logger.info({ ...saveContext, filePath: matchingEntry.impTextPath, event: 'process_determine_save_matched_success' }, "Saved Important Dates content for matched entry");
                 }
+            } catch (saveContentError: any) {
+                 saveErrorOccurred = true;
+                 logger.error({ ...baseLogContext, err: saveContentError, cfpLink, impLink, event: 'process_determine_save_matched_failed' }, "Error saving CFP/IMP content for matched entry");
             } finally {
-                await page.close();
+                if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page for matched entry"));
             }
+            // Vẫn trả về entry ngay cả khi lưu lỗi, nhưng log trạng thái cuối cùng
+            logger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for matched entry (save error: ${saveErrorOccurred})`);
             return [matchingEntry];
 
         } else {
-            // Xử lý trường hợp không khớp: fetch từ officialWebsite mới
-            const websiteInfo = await fetchAndProcessWebsiteInfo(page, officialWebsite, batch[0], year);
+            logger.info({ ...baseLogContext, officialWebsite: originalOfficialWebsite, event: 'process_determine_entry_match_not_found' }, "No matching entry found. Fetching content from official website directly.");
+            let websiteInfo;
+            try {
+                websiteInfo = await fetchAndProcessWebsiteInfo(page, originalOfficialWebsite, batch[0], year);
+            } catch (fetchError: any) {
+                logger.error({ ...baseLogContext, url: originalOfficialWebsite, err: fetchError, event: 'process_determine_fetch_new_failed' }, "Failed to fetch and process main website info");
+                 if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after fetch error"));
+                batch[0].conferenceLink = "None";
+                logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Fetch new website failed' }, "Finishing processDetermineLinksResponse with error state");
+                return [batch[0]];
+            }
 
-            if (!websiteInfo) {
-                await page.close();
-                batch[0].conferenceLink = "None"; // Đánh dấu lỗi
+
+            if (!websiteInfo) { // Double check in case fetchAndProcessWebsiteInfo returns null without error
+                logger.error({ ...baseLogContext, url: originalOfficialWebsite, event: 'process_determine_fetch_new_failed' }, "Fetched main website info is null/undefined");
+                if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after null fetch result"));
+                batch[0].conferenceLink = "None";
+                logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Fetch new website returned null' }, "Finishing processDetermineLinksResponse with error state");
                 return [batch[0]];
             }
 
             const { finalUrl, textPath } = websiteInfo;
+            logger.info({ ...baseLogContext, initialUrl: originalOfficialWebsite, finalUrl, filePath: textPath, event: 'process_determine_fetch_new_success' }, "Successfully fetched and processed main website info");
 
-            // Đọc lại nội dung từ file path để gửi đi (nếu API cần nội dung)
-            const fullText = await readContentFromFile(textPath); // Đọc từ file tạm mới tạo
-
-            const initialFullContent = `1. Website of ${batch[0].conferenceAcronym}_0: ${officialWebsite}\nWebsite information of ${batch[0].conferenceAcronym}_0:\n\n${fullText}`; // Dùng fullText đã đọc
-            const batchContentForApi = `Conference full name: ${batch[0].conferenceName} (${batch[0].conferenceAcronym})\n\n` + initialFullContent;
-            let websiteLinksResponseText: string = "";
+            let fullText = '';
             try {
-                // Gọi API lần 2
-                const determineLinksResponse = await determine_links_api(batchContentForApi, batchIndex, batch[0].conferenceName, batch[0].conferenceAcronym);
-                websiteLinksResponseText = determineLinksResponse.responseText || "";
+                fullText = await readContentFromFile(textPath);
+            } catch(readErr: any) {
+                 logger.error({ ...baseLogContext, filePath: textPath, err: readErr, event: 'process_determine_read_fetched_failed' }, "Failed to read fetched content file");
+                 // Consider failing the process here? For now, continue, API call will likely fail.
+            }
+
+            // Corrected structure for determine_links_api (assuming it expects this format)
+            const batchContentForApi = `Conference full name: ${batch[0].conferenceName} (${batch[0].conferenceAcronym})\n\n1. Website of ${batch[0].conferenceAcronym}: ${finalUrl}\nWebsite information of ${batch[0].conferenceAcronym}:\n\n${fullText.trim()}`;
+
+            let websiteLinksResponseText: string = "";
+            let websiteLinksResponse: any;
+
+            try {
+                logger.info({ ...baseLogContext, event: 'process_determine_api2_start' }, "Calling determine_links_api (2nd call) for the fetched website");
+                // Pass correct conference name/acronym
+                websiteLinksResponse = await determine_links_api(batchContentForApi, batchIndex, batch[0].conferenceName, batch[0].conferenceAcronym);
+                websiteLinksResponseText = websiteLinksResponse.responseText || "";
+                logger.info({ ...baseLogContext, responseLength: websiteLinksResponseText.length, event: 'process_determine_api2_end', success: true }, "Received response from determine_links_api (2nd call)");
             } catch (determineLinksError: any) {
-                console.error("Error calling determine_links_api (2nd call):", determineLinksError);
-                await page.close();
-                batch[0].conferenceLink = "None"; // Đánh dấu lỗi
+                logger.error({ ...baseLogContext, err: determineLinksError, event: 'process_determine_api2_call_failed' }, "Error calling determine_links_api (2nd call)");
+                if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after API 2 error"));
+                batch[0].conferenceLink = "None";
+                 logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'API call 2 failed' }, "Finishing processDetermineLinksResponse with error state");
                 return [batch[0]];
             }
 
@@ -285,292 +346,462 @@ const processDetermineLinksResponse = async (responseText: string, batch: BatchE
             try {
                 websiteLinksData = JSON.parse(websiteLinksResponseText);
             } catch (parseError: any) {
-                console.error("Error parsing JSON response from determine_links_api (2nd call):", parseError);
-                console.error("Response text was (2nd call):", websiteLinksResponseText);
-                await page.close();
-                batch[0].conferenceLink = "None"; // Đánh dấu lỗi
+                logger.error({ ...baseLogContext, err: parseError, responseTextPreview: websiteLinksResponseText.substring(0, 100), event: 'process_determine_json_parse_failed', apiCallNumber: 2 }, "Error parsing JSON response from determine_links_api (2nd call)");
+                if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse 2 error"));
+                batch[0].conferenceLink = "None";
+                logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'JSON parse 2 failed' }, "Finishing processDetermineLinksResponse with error state");
                 return [batch[0]];
             }
 
             let websiteCfpLink: string | undefined = websiteLinksData["Call for papers link"]?.trim();
             let websiteImpDatesLink: string | undefined = websiteLinksData["Important dates link"]?.trim();
 
-            websiteCfpLink = normalizeAndJoinLink(officialWebsite, websiteCfpLink); // Use the confirmed officialWebsite
-            websiteImpDatesLink = normalizeAndJoinLink(officialWebsite, websiteImpDatesLink); // Use the confirmed officialWebsite
+            websiteCfpLink = normalizeAndJoinLink(finalUrl, websiteCfpLink);
+            websiteImpDatesLink = normalizeAndJoinLink(finalUrl, websiteImpDatesLink);
+            logger.debug({ ...baseLogContext, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_links_normalized', source: 'api_call_2' }, "Parsed and normalized links from 2nd API call");
 
+            let saveErrorOccurred = false;
             try {
-                // Cập nhật entry gốc (batch[0]) với thông tin mới
                 batch[0].conferenceLink = finalUrl;
-                batch[0].conferenceTextPath = textPath; // Cập nhật đường dẫn file text chính
+                batch[0].conferenceTextPath = textPath;
                 batch[0].cfpLink = websiteCfpLink || "";
                 batch[0].impLink = websiteImpDatesLink || "";
 
                 if (websiteCfpLink && websiteCfpLink.toLowerCase() !== "none") {
+                    const saveContext = { ...baseLogContext, url: websiteCfpLink, contentType: 'CFP', source: 'api_call_2' };
+                    logger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving CFP content (from 2nd API call)");
                     batch[0].cfpTextPath = await saveHTMLFromCallForPapers(page, websiteCfpLink, batch[0].conferenceAcronym, year);
+                    logger.info({ ...saveContext, filePath: batch[0].cfpTextPath, event: 'process_determine_save_new_success' }, "Saved CFP content (from 2nd API call)");
                 }
                 if (websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none") {
+                    const saveContext = { ...baseLogContext, url: websiteImpDatesLink, contentType: 'IMP', source: 'api_call_2' };
+                    logger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving Important Dates content (from 2nd API call)");
                     batch[0].impTextPath = await saveHTMLFromImportantDates(page, websiteImpDatesLink, batch[0].conferenceAcronym, year);
+                    logger.info({ ...saveContext, filePath: batch[0].impTextPath, event: 'process_determine_save_new_success' }, "Saved Important Dates content (from 2nd API call)");
                 }
+                logger.info({ ...baseLogContext, event: 'process_determine_update_entry_success' }, "Updated original batch entry with new links and paths");
+            } catch (saveContentError: any) {
+                 saveErrorOccurred = true;
+                 logger.error({ ...baseLogContext, err: saveContentError, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_save_new_failed', source: 'api_call_2' }, "Error saving CFP/IMP content (from 2nd API call)");
             } finally {
-                await page.close();
+                if (page && !page.isClosed()) await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page for new entry"));
             }
-            return [batch[0]]; // Trả về entry đã cập nhật
+             logger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for new entry (save error: ${saveErrorOccurred})`);
+            return [batch[0]];
         }
-    } catch (error: any) { // Type error as any or Error
-        console.error("Error in processDetermineLinksResponse:", error);
-        console.error(error.stack);
-
+    } catch (error: any) {
+        logger.error({ ...baseLogContext, err: error, event: 'process_determine_unhandled_error' }, "Unhandled error in processDetermineLinksResponse");
         if (page && !page.isClosed()) {
-            try {
-                await page.close();
-            } catch (closeError: any) { // Type closeError as any or Error
-                console.error("Error closing page in outer catch block:", closeError);
-            }
+            await page.close().catch(e => logger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page in outer catch block"));
         }
-        batch[0].conferenceLink = "None";
-        return [batch[0]];
+        if (batch && batch[0]) {
+            batch[0].conferenceLink = "None";
+             logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Unhandled error' }, "Finishing processDetermineLinksResponse with error state due to unhandled error");
+            return [batch[0]];
+        }
+        logger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Unhandled error and invalid batch' }, "Finishing processDetermineLinksResponse empty due to unhandled error and invalid batch");
+        return [];
     }
 };
 
-// --- saveBatchToFile làm việc với file paths ---
-export const saveBatchToFile = async (batch: BatchEntry[], batchIndex: number, adjustedAcronym: string, browserContext: BrowserContext): Promise<BatchEntry[] | null> => {
+// --- saveBatchToFile ---
+export const saveBatchToFile = async (
+    batch: BatchEntry[],
+    batchIndex: number,
+    adjustedAcronym: string, // Giữ lại để dùng trong formattedText nếu cần
+    browserContext: BrowserContext
+): Promise<BatchEntry[] | null> => {
+    const baseLogContext = { batchIndex, function: 'saveBatchToFile' };
+    logger.info({ ...baseLogContext, event: 'save_batch_start' }, "Starting saveBatchToFile");
+
     try {
-        await init();
+        await init(); // Giả định init() không cần log thêm ở đây
 
         if (!batch || batch.length === 0 || !batch[0]?.conferenceAcronym || !batch[0]?.conferenceName) {
-            console.warn(`saveBatchToFile called with invalid batch. batchIndex: ${batchIndex}`);
+            logger.warn({ ...baseLogContext, event: 'save_batch_invalid_input' }, "Called with invalid or empty batch");
+            logger.warn({ ...baseLogContext, event: 'save_batch_finish_failed', reason: 'Invalid input batch' }, "Finishing saveBatchToFile with null due to invalid input");
             return null;
         }
 
-        // --- Tạo thư mục batches nếu chưa có ---
+        // Sử dụng acronym gốc từ batch[0] để đặt tên file và context log
+        const conferenceAcronym = batch[0].conferenceAcronym;
+        const safeConferenceAcronym = conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
+        const logContext = { ...baseLogContext, conferenceAcronym, conferenceName: batch[0].conferenceName };
+
         const batchesDir = path.join(__dirname, "./data/batches");
         try {
             if (!fs.existsSync(batchesDir)) {
+                logger.info({ ...logContext, path: batchesDir, event: 'save_batch_dir_create' }, "Creating batches directory");
                 fs.mkdirSync(batchesDir, { recursive: true });
             }
         } catch (mkdirError: any) {
-            console.error("Error creating batches directory:", mkdirError);
-            throw mkdirError; // Re-throw critical error
+            logger.error({ ...logContext, err: mkdirError, path: batchesDir, event: 'save_batch_dir_create_failed' }, "Error creating batches directory");
+            throw mkdirError; // Ném lại lỗi nghiêm trọng
         }
 
-        const conferenceAcronym = batch[0].conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-        const fileFullLinksName = `${conferenceAcronym}_full_links.txt`;
-        const fileFullLinksPath = path.join(__dirname, `./data/batches/${fileFullLinksName}`);
-        const fileMainLinkName = `${conferenceAcronym}_main_link.txt`;
-        const fileMainLinkPath = path.join(__dirname, `./data/batches/${fileMainLinkName}`);
+        const fileFullLinksName = `${safeConferenceAcronym}_full_links.txt`;
+        const fileFullLinksPath = path.join(batchesDir, fileFullLinksName);
+        const fileMainLinkName = `${safeConferenceAcronym}_main_link.txt`;
+        const fileMainLinkPath = path.join(batchesDir, fileMainLinkName);
 
+        // --- Aggregation ---
+        logger.debug({ ...logContext, event: 'save_batch_aggregate_content_start' }, "Aggregating content for full_links file");
         let batchContentParts: string[] = [];
-        for (let i = 0; i < batch.length; i++) {
-            const entry = batch[i];
-            const text = await readContentFromFile(entry.conferenceTextPath); // Đọc từ file
-            const formattedText = `Website of ${adjustedAcronym}: ${entry.conferenceLink}\nWebsite information of ${adjustedAcronym}:\n\n${text.trim()}`;
-            batchContentParts.push(`${i + 1}. ${formattedText}\n\n`);
-        }
-        const batchContent = `Conference full name: ${batch[0].conferenceName} (${batch[0].conferenceAcronym})\n\n` + batchContentParts.join("");
+        const readPromises = batch.map(async (entry, i) => {
+             try {
+                const text = await readContentFromFile(entry.conferenceTextPath);
+                // Sử dụng adjustedAcronym ở đây nếu cần phân biệt index trong text
+                const formattedText = `Website of ${adjustedAcronym}: ${entry.conferenceLink}\nWebsite information of ${adjustedAcronym}:\n\n${text.trim()}`;
+                return { index: i, content: `${i + 1}. ${formattedText}\n\n` };
+             } catch (readError: any) {
+                  logger.error({...logContext, err: readError, filePath: entry.conferenceTextPath, entryIndex: i, event:'save_batch_read_content_failed'}, "Error reading content file for batch aggregation");
+                  return { index: i, content: `${i+1}. ERROR READING CONTENT\n\n` }; // Placeholder
+             }
+        });
+        const readResults = await Promise.all(readPromises);
+        // Sắp xếp lại theo index để đảm bảo thứ tự
+        readResults.sort((a, b) => a.index - b.index);
+        batchContentParts = readResults.map(r => r.content);
+        const batchContent = `Conference full name: ${logContext.conferenceName} (${logContext.conferenceAcronym})\n\n` + batchContentParts.join("");
+         logger.debug({ ...logContext, event: 'save_batch_aggregate_content_end' }, "Finished aggregating content");
+        // --- End Aggregation ---
+
 
         // Ghi file _full_links.txt
-        const fileFullLinksPromise = fs.promises.writeFile(fileFullLinksPath, batchContent, "utf8");
+        const writeFullLinksContext = { ...logContext, filePath: fileFullLinksPath, fileType: 'full_links' };
+        logger.debug({ ...writeFullLinksContext, event: 'save_batch_write_file_start' }, "Writing full links content");
+        const fileFullLinksPromise = fs.promises.writeFile(fileFullLinksPath, batchContent, "utf8")
+            .then(() => {
+                 logger.debug({ ...writeFullLinksContext, event: 'save_batch_write_file_success' }, "Successfully wrote full links file");
+            })
+            .catch(writeError => {
+                logger.error({ ...writeFullLinksContext, err: writeError, event: 'save_batch_write_file_failed' }, "Error writing full_links file");
+                // Không throw ở đây, nhưng có thể ảnh hưởng đến API call
+            });
 
         // Gọi determine_links_api
         let determineLinksResponse: any;
+        let determineResponseTextPath: string | undefined;
+        const determineApiContext = { ...logContext, apiType: 'determine' };
         try {
-            determineLinksResponse = await determine_links_api(batchContent, batchIndex, batch[0].conferenceName, batch[0].conferenceAcronym);
-            // Ghi response vào file tạm và lưu path
+            logger.info({ ...determineApiContext, event: 'save_batch_determine_api_start' }, "Calling determine_links_api");
+            determineLinksResponse = await determine_links_api(batchContent, batchIndex, logContext.conferenceName, logContext.conferenceAcronym);
             const determineResponseText = determineLinksResponse.responseText || "";
-            batch[0].determineResponseTextPath = await writeTempFile(determineResponseText, `${conferenceAcronym}_determine_response`);
-            batch[0].determineMetaData = determineLinksResponse.metaData; // Giữ lại metadata nếu nhỏ
-
+            // Sử dụng safeConferenceAcronym cho tên file tạm
+            determineResponseTextPath = await writeTempFile(determineResponseText, `${safeConferenceAcronym}_determine_response`);
+            batch[0].determineResponseTextPath = determineResponseTextPath;
+            batch[0].determineMetaData = determineLinksResponse.metaData;
+            logger.info({ ...determineApiContext, responseLength: determineResponseText.length, filePath: determineResponseTextPath, event: 'save_batch_determine_api_end', success: true }, "determine_links_api call successful, response saved");
         } catch (determineLinksError: any) {
-            console.error("Error calling determine_links_api from saveBatchToFile:", determineLinksError);
-            await fileFullLinksPromise; // Đảm bảo file full_links được ghi nếu có thể
-            return null; // Hoặc trả về batch với lỗi?
-        }
-
-        // Xử lý kết quả determine_links_api (hàm này sẽ cập nhật paths trong batch[0])
-        const mainLinkBatch = await processDetermineLinksResponse(
-            await readContentFromFile(batch[0].determineResponseTextPath), // Đọc response từ file
-            batch, // Truyền batch gốc (chứa entry với paths)
-            batchIndex,
-            browserContext,
-            YEAR2
-        );
-
-        if (!mainLinkBatch || mainLinkBatch.length === 0 || mainLinkBatch[0].conferenceLink === "None") {
-            console.warn(`mainLinkBatch is invalid after processDetermineLinksResponse for batchIndex: ${batchIndex}. Skipping main link file and extract API.`);
-            await fileFullLinksPromise; // Đảm bảo file full_links được ghi
-            // Có thể cần trả về batch gốc với trạng thái lỗi?
+            logger.error({ ...determineApiContext, err: determineLinksError, event: 'save_batch_determine_api_call_failed' }, "Error calling determine_links_api");
+            await fileFullLinksPromise; // Chờ ghi file xong trước khi thoát
+            logger.warn({ ...logContext, event: 'save_batch_finish_failed', reason: 'Determine API call failed' }, "Finishing saveBatchToFile with null");
             return null;
         }
 
-        // --- Tạo contentSendToAPI bằng cách đọc từ file paths ---
-        const mainText = await readContentFromFile(mainLinkBatch[0].conferenceTextPath);
-        const cfpText = await readContentFromFile(mainLinkBatch[0].cfpTextPath);
-        const impText = await readContentFromFile(mainLinkBatch[0].impTextPath);
+         // Đọc lại response từ file (nếu thành công)
+         if (!determineResponseTextPath) {
+             logger.error({...logContext, event:'save_batch_missing_determine_path'}, "Determine response path is missing after API call");
+             await fileFullLinksPromise;
+             logger.warn({ ...logContext, event: 'save_batch_finish_failed', reason: 'Missing determine response path' }, "Finishing saveBatchToFile with null");
+             return null;
+         }
+         let determineResponseFromFile = '';
+         try {
+             determineResponseFromFile = await readContentFromFile(determineResponseTextPath);
+         } catch (readErr: any) {
+              logger.error({...logContext, err: readErr, filePath: determineResponseTextPath, event:'save_batch_read_determine_failed'}, "Error reading determine response file");
+              await fileFullLinksPromise;
+              logger.warn({ ...logContext, event: 'save_batch_finish_failed', reason: 'Failed to read determine response' }, "Finishing saveBatchToFile with null");
+             return null;
+         }
+
+
+        // Xử lý kết quả determine_links_api
+        const processDetermineContext = { ...logContext, event_group: 'process_determine_in_save_batch' };
+        logger.info({ ...processDetermineContext, event: 'save_batch_process_determine_start' }, "Processing determine_links_api response");
+        let mainLinkBatch: BatchEntry[] | null = null; // Initialize as null
+        try {
+             mainLinkBatch = await processDetermineLinksResponse(
+                determineResponseFromFile,
+                batch,
+                batchIndex,
+                browserContext,
+                YEAR2,
+                1 // Đây là lần gọi API determine đầu tiên trong ngữ cảnh saveBatchToFile
+            );
+        } catch (processError: any) {
+             logger.error({ ...processDetermineContext, err: processError, event: 'save_batch_process_determine_call_failed'}, "Error calling processDetermineLinksResponse");
+             mainLinkBatch = null; // Ensure it's null on error
+        }
+
+
+        if (!mainLinkBatch || mainLinkBatch.length === 0 || mainLinkBatch[0].conferenceLink === "None") {
+            logger.warn({ ...processDetermineContext, event: 'save_batch_process_determine_failed_invalid' }, "Main link batch is invalid after processing determine_links response. Skipping main link file and extract API.");
+            await fileFullLinksPromise;
+             logger.warn({ ...logContext, event: 'save_batch_finish_failed', reason: 'Processing determine response failed' }, "Finishing saveBatchToFile with null");
+            return null;
+        }
+        logger.info({ ...processDetermineContext, finalLink: mainLinkBatch[0].conferenceLink, event: 'save_batch_process_determine_success' }, "Successfully processed determine_links_api response");
+
+
+        // --- Tạo contentSendToAPI ---
+        const aggregateExtractContext = { ...logContext, event_group: 'aggregate_for_extract' };
+        logger.debug({ ...aggregateExtractContext, event: 'save_batch_aggregate_extract_start' }, "Aggregating content for extract_information_api");
+        let mainText = '', cfpText = '', impText = '';
+         try { mainText = await readContentFromFile(mainLinkBatch[0].conferenceTextPath); }
+         catch (e: any) { logger.warn({ ...aggregateExtractContext, err: e, filePath: mainLinkBatch[0].conferenceTextPath, contentType:'main', event:'save_batch_aggregate_extract_read_failed' }, "Could not read main text file"); }
+         try { cfpText = await readContentFromFile(mainLinkBatch[0].cfpTextPath); }
+         catch (e: any) { logger.warn({ ...aggregateExtractContext, err: e, filePath: mainLinkBatch[0].cfpTextPath, contentType:'cfp', event:'save_batch_aggregate_extract_read_failed' }, "Could not read CFP text file"); }
+         try { impText = await readContentFromFile(mainLinkBatch[0].impTextPath); }
+         catch (e: any) { logger.warn({ ...aggregateExtractContext, err: e, filePath: mainLinkBatch[0].impTextPath, contentType:'imp', event:'save_batch_aggregate_extract_read_failed' }, "Could not read IMP text file"); }
 
         const impContent = impText ? ` \n\nImportant Dates information:\n${impText}` : "";
         const cfpContent = cfpText ? ` \n\nCall for Papers information:\n${cfpText}` : "";
         const contentSendToAPI = `Conference ${mainLinkBatch[0].conferenceAcronym}:\n\n${mainText}${cfpContent}${impContent}`;
-        const acronym = mainLinkBatch[0].conferenceAcronym; // Acronym đã chuẩn hóa (không có index)
+        const acronymForExtract = mainLinkBatch[0].conferenceAcronym; // Dùng acronym từ mainLinkBatch
+        // --- End tạo contentSendToAPI ---
+
 
         // Ghi file _main_link.txt
-        const fileMainLinkPromise = fs.promises.writeFile(fileMainLinkPath, contentSendToAPI, "utf8");
+        const writeMainLinkContext = { ...logContext, filePath: fileMainLinkPath, fileType: 'main_link' };
+        logger.debug({ ...writeMainLinkContext, event: 'save_batch_write_file_start' }, "Writing main link content");
+        const fileMainLinkPromise = fs.promises.writeFile(fileMainLinkPath, contentSendToAPI, "utf8")
+          .then(() => {
+               logger.debug({ ...writeMainLinkContext, event: 'save_batch_write_file_success' }, "Successfully wrote main link file");
+          })
+         .catch(writeError => {
+                logger.error({ ...writeMainLinkContext, err: writeError, event: 'save_batch_write_file_failed' }, "Error writing main_link file");
+            });
 
         // Gọi extract_information_api
-        mainLinkBatch[0].extractResponseTextPath = undefined; // Reset path
+        mainLinkBatch[0].extractResponseTextPath = undefined;
         mainLinkBatch[0].extractMetaData = undefined;
-
+        let extractResponseTextPath: string | undefined;
+        const extractApiContext = { ...logContext, apiType: 'extract', acronym: acronymForExtract };
         try {
-            const extractInformationResponse = await extract_information_api(contentSendToAPI, batchIndex, acronym);
-            // Ghi response vào file tạm và lưu path
+            logger.info({ ...extractApiContext, event: 'save_batch_extract_api_start' }, "Calling extract_information_api");
+            const extractInformationResponse = await extract_information_api(contentSendToAPI, batchIndex, acronymForExtract);
             const extractResponseText = extractInformationResponse.responseText || "";
-            mainLinkBatch[0].extractResponseTextPath = await writeTempFile(extractResponseText, `${conferenceAcronym}_extract_response`);
-            mainLinkBatch[0].extractMetaData = extractInformationResponse.metaData; // Giữ metadata
+             // Sử dụng safeConferenceAcronym cho tên file tạm
+            extractResponseTextPath = await writeTempFile(extractResponseText, `${safeConferenceAcronym}_extract_response`);
+            mainLinkBatch[0].extractResponseTextPath = extractResponseTextPath;
+            mainLinkBatch[0].extractMetaData = extractInformationResponse.metaData;
+             logger.info({ ...extractApiContext, responseLength: extractResponseText.length, filePath: extractResponseTextPath, event: 'save_batch_extract_api_end', success: true }, "extract_information_api call successful, response saved");
 
         } catch (extractInformationError: any) {
-            console.error("Error calling extract_information_api from saveBatchToFile:", extractInformationError);
-            await Promise.all([fileFullLinksPromise, fileMainLinkPromise]).catch(e => console.error("Error finalizing file writes before returning null:", e)); // Đảm bảo file được ghi nếu có thể
-            return null; // Hoặc trả về batch với lỗi?
+            logger.error({ ...extractApiContext, err: extractInformationError, event: 'save_batch_extract_api_call_failed' }, "Error calling extract_information_api");
+            await Promise.allSettled([fileFullLinksPromise, fileMainLinkPromise]); // Chờ ghi file trước khi thoát
+            logger.warn({ ...logContext, event: 'save_batch_finish_failed', reason: 'Extract API call failed' }, "Finishing saveBatchToFile with null");
+            return null;
         }
 
-        // Chờ cả hai file được ghi xong
-        await Promise.all([fileFullLinksPromise, fileMainLinkPromise]);
+        await Promise.all([fileFullLinksPromise, fileMainLinkPromise]); // Chờ cả hai file ghi xong
+        logger.info({ ...logContext, event: 'save_batch_files_written' }, "Finished saving batch files (_full_links, _main_link)");
 
-        // Trả về batch đã được cập nhật với tất cả các paths
-        return mainLinkBatch;
+        logger.info({ ...logContext, event: 'save_batch_finish_success' }, "Finishing saveBatchToFile successfully");
+        return mainLinkBatch; // Trả về batch đã được cập nhật
 
     } catch (error: any) {
-        console.error("Error in saveBatchToFile:", error);
-        console.error(error.stack);
+        logger.error({ ...baseLogContext, err: error, event:'save_batch_unhandled_error' }, "Unhandled error in saveBatchToFile");
+        logger.warn({ ...baseLogContext, event: 'save_batch_finish_failed', reason: 'Unhandled error' }, "Finishing saveBatchToFile with null due to unhandled error");
         return null;
     }
 };
 
-// --- saveHTMLContent làm việc với file paths ---
+
+// --- saveHTMLContent ---
 export const saveHTMLContent = async (
     browserContext: BrowserContext,
     conference: ConferenceData,
     links: string[],
     batchIndexRef: { current: number },
-    existingAcronyms: Set<string>, // Cần được quản lý cẩn thận nếu dùng chung
+    existingAcronyms: Set<string>,
     batchPromises: Promise<BatchEntry[] | null>[],
     year: number
-): Promise<{ updatedBatches: [] }> => { // Kiểu trả về này có vẻ không đúng, nên bỏ qua?
+): Promise<void> => {
+    // Context kế thừa từ taskLogger của crawlConferences, thêm function name
+    const baseLogContext = { conferenceAcronym: conference.Acronym, conferenceName: conference.Title, function: 'saveHTMLContent' };
+    logger.info({ ...baseLogContext, linkCount: links.length, event: 'save_html_start' }, "Starting saveHTMLContent");
 
     try {
-        const batch: BatchEntry[] = []; // Batch này giờ chỉ chứa metadata và paths
+        const batch: BatchEntry[] = [];
         if (!links || links.length === 0) {
-            console.warn(`saveHTMLContent called with empty or null links for conference: ${conference.Acronym}`);
-            return { updatedBatches: [] }; // Hoặc return void/Promise<void>
+            logger.warn({ ...baseLogContext, event: 'save_html_skipped_no_links' }, "Called with empty or null links array, skipping.");
+             logger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent (no links)"); // Log kết thúc
+            return;
         }
 
-        let adjustedAcronym = "";
+        let finalAdjustedAcronym = "";
+        let linkProcessingSuccessCount = 0;
+        let linkProcessingFailedCount = 0;
+
+        // Không log "Processing links" nữa vì đã có log start
+
         for (let i = 0; i < links.length; i++) {
-            const page = await browserContext.newPage();
+            const linkIndex = i;
+            // Log context riêng cho từng link
+            const linkLogContext = { ...baseLogContext, linkIndex, originalUrl: links[i], event_group: 'link_processing' };
+             logger.info({ ...linkLogContext, event: 'link_processing_start' }, `Processing link ${i + 1}/${links.length}`);
+            let page: Page | null = null;
+            let linkProcessedSuccessfully = false; // Cờ cho link hiện tại
+
             try {
+                page = await browserContext.newPage();
                 let originalLink: string = links[i];
                 let finalLink: string = originalLink;
                 let useModifiedLink: boolean = false;
                 let modifiedLink: string = originalLink;
 
-                let yearOld1 = year - 1;
-                let yearOld2 = year - 2;
-
-                const yearOld1Str = String(yearOld1);
-                const yearOld2Str = String(yearOld2);
+                const yearOld1 = year - 1;
+                const yearOld2 = year - 2;
                 const yearStr = String(year);
 
-                if (originalLink.includes(yearOld1Str)) {
-                    modifiedLink = originalLink.replace(new RegExp(yearOld1Str, 'g'), yearStr);
+                if (originalLink.includes(String(yearOld1))) {
+                    modifiedLink = originalLink.replace(new RegExp(String(yearOld1), 'g'), yearStr);
                     useModifiedLink = true;
-                } else if (originalLink.includes(yearOld2Str)) {
-                    modifiedLink = originalLink.replace(new RegExp(yearOld2Str, 'g'), yearStr);
+                } else if (originalLink.includes(String(yearOld2))) {
+                    modifiedLink = originalLink.replace(new RegExp(String(yearOld2), 'g'), yearStr);
                     useModifiedLink = true;
                 }
 
-                try {
-                    if (useModifiedLink) {
-                        console.log(`[${conference.Acronym}] Trying modifiedLink: ${modifiedLink}`);
-                        const response = await page.goto(modifiedLink, { waitUntil: "domcontentloaded", timeout: 15000 });
-                        if (response && response.ok()) {
-                            finalLink = page.url(); // Update finalLink even if modified worked
-                            // Keep useModifiedLink = true to indicate which link was successful
-                        } else {
-                            // Modified link failed, reset to try original
-                            console.log(`[${conference.Acronym}] Modified link failed (${response?.status()}), reverting to original.`);
-                            finalLink = originalLink; // Reset finalLink
-                            useModifiedLink = false; // Must try original now
-                        }
-                    }
-                } catch (error: any) {
-                    const timestamp = new Date().toISOString();
-                    const logMessage = `[${timestamp}] Error accessing modifiedLink: ${error.message} for ${conference.Acronym}\n`;
-                    // Log error, but don't necessarily stop; proceed to try original link
-                    console.warn(logMessage); // Log as warning, not critical error yet
-                    await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8').catch(e => console.error("Failed to write to error log:", e));
-                    finalLink = originalLink; // Reset finalLink
-                    useModifiedLink = false; // Ensure original link is tried
-                }
+                let accessSuccess = false;
+                let accessError: any = null;
+                let responseStatus: number | null = null;
+                let accessType: 'modified' | 'original' | null = null;
 
-                // Only try original link if modified wasn't used or failed
-                if (!useModifiedLink) {
-                    console.log(`[${conference.Acronym}] Trying originalLink: ${originalLink}`);
+                // Try modified link
+                if (useModifiedLink) {
+                    accessType = 'modified';
+                    logger.info({ ...linkLogContext, url: modifiedLink, type: accessType, event: 'link_access_attempt' }, "Attempting modified link");
                     try {
-                        const response = await page.goto(originalLink, { waitUntil: "domcontentloaded", timeout: 15000 });
+                        const response = await page.goto(modifiedLink, { waitUntil: "domcontentloaded", timeout: 15000 });
+                        responseStatus = response?.status() ?? null;
                         if (response && response.ok()) {
-                            finalLink = page.url(); // Update finalLink based on actual navigation
+                            finalLink = page.url(); // Cập nhật finalLink ngay khi thành công
+                            logger.info({ ...linkLogContext, url: modifiedLink, status: responseStatus, finalUrl: finalLink, type: accessType, event: 'link_access_success' }, "Modified link access successful");
+                            accessSuccess = true;
                         } else {
-                            // Both modified (if tried) and original links failed
-                            throw new Error(`HTTP Error accessing originalLink: ${response ? response.status() : 'Unknown'} - ${conference.Acronym}`);
+                             accessError = new Error(`HTTP ${responseStatus} accessing modified link`);
+                            logger.warn({ ...linkLogContext, url: modifiedLink, status: responseStatus, type: accessType, event: 'link_access_failed' }, "Modified link failed (HTTP status), reverting to original");
+                            useModifiedLink = false;
+                            finalLink = originalLink;
                         }
                     } catch (error: any) {
-                        // This link is definitively inaccessible
-                        const timestamp = new Date().toISOString();
-                        const logMessage = `[${timestamp}] Error accessing originalLink ${originalLink}: ${error.message} for ${conference.Acronym}\n`;
-                        console.error(logMessage); // Log as error
-                        await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8').catch(e => console.error("Failed to write to error log:", e));
-                        // Skip this link and continue to the next one in the loop
-                        continue; // <<<<< Important: Continue to next link
+                        accessError = error;
+                        logger.warn({ ...linkLogContext, url: modifiedLink, type: accessType, err: error, event: 'link_access_failed' }, "Error accessing modified link (exception), will try original");
+                        useModifiedLink = false;
+                        finalLink = originalLink;
+                         // Ghi log phụ nếu cần
+                        // const timestamp = new Date().toISOString(); ... log file phụ ...
                     }
                 }
 
-                // Check for redirects (logic might need refinement depending on Playwright version)
-                // Simple check: is the final navigated URL different from the one we intended to go to?
-                let intendedUrl = useModifiedLink ? modifiedLink : originalLink;
-                let isRedirect = page.url() !== intendedUrl;
-                if (isRedirect) {
-                    finalLink = page.url(); // Update finalLink to the redirected URL
-                    console.log(`[${conference.Acronym}] Redirect detected from ${intendedUrl} to ${finalLink}`);
-                    // Optionally wait longer after a redirect
+                // Try original link if needed
+                if (!accessSuccess) {
+                     accessType = 'original';
+                    logger.info({ ...linkLogContext, url: originalLink, type: accessType, event: 'link_access_attempt' }, "Attempting original link");
                     try {
-                        await page.waitForLoadState('load', { timeout: 10000 }); // Shorter wait after initial load
-                    } catch (err: any) {
-                        console.warn(`[${conference.Acronym}] Timeout or unstable state after redirect to ${finalLink}: ${err.message}`);
-                        // Decide whether to proceed or skip. Let's try proceeding.
+                        const response = await page.goto(originalLink, { waitUntil: "domcontentloaded", timeout: 15000 });
+                        responseStatus = response?.status() ?? null;
+                        if (response && response.ok()) {
+                            finalLink = page.url();
+                            logger.info({ ...linkLogContext, url: originalLink, status: responseStatus, finalUrl: finalLink, type: accessType, event: 'link_access_success' }, "Original link access successful");
+                            accessSuccess = true;
+                        } else {
+                            accessError = new Error(`HTTP ${responseStatus} accessing originalLink`);
+                            logger.error({ ...linkLogContext, url: originalLink, status: responseStatus, type: accessType, event: 'link_access_failed' }, `Original link failed (HTTP ${responseStatus}), skipping link`);
+                        }
+                    } catch (error: any) {
+                        accessError = error;
+                        logger.error({ ...linkLogContext, url: originalLink, type: accessType, err: error, event: 'link_access_failed' }, "Error accessing original link (exception), skipping link");
+                         // Ghi log phụ nếu cần
+                        // const timestamp = new Date().toISOString(); ... log file phụ ...
                     }
                 }
 
+                // If access failed completely for this link, log and continue
+                 if (!accessSuccess) {
+                     linkProcessingFailedCount++;
+                     logger.error({ ...linkLogContext, err: accessError, finalStatus: responseStatus, event: 'link_processing_failed_skip' }, "Failed to access link after all attempts, skipping this link.");
+                     continue; // Skip to the next link in the loop
+                 }
 
+                // --- Access Success, Proceed ---
 
-
-                // Fetch and process content
-                const htmlContent = await fetchContentWithRetry(page);
-                const document = cleanDOM(htmlContent);
-                if (!document) {
-                    console.warn(`[${conference.Acronym}] Failed to clean DOM for ${finalLink}. Skipping.`);
-                    continue;
+                // Check for redirects and wait if necessary
+                let intendedUrl = useModifiedLink ? modifiedLink : originalLink;
+                 // Check if page.url() is different from the *intended* target (could be modified or original)
+                if (page.url() !== intendedUrl && page.url() !== finalLink) {
+                     finalLink = page.url(); // Update finalLink again to the absolute final URL
+                     logger.info({ ...linkLogContext, fromUrl: intendedUrl, toUrl: finalLink, event: 'redirect_detected' }, "Redirect detected");
+                    try {
+                        await page.waitForLoadState('load', { timeout: 10000 });
+                        logger.debug({ ...linkLogContext, url: finalLink, event: 'redirect_wait_success' }, "Waited for load state after redirect.");
+                    } catch (err: any) {
+                         logger.warn({ ...linkLogContext, url: finalLink, err: err, event: 'redirect_wait_failed' }, "Timeout or unstable state after redirect.");
+                    }
                 }
-                let fullText = traverseNodes(document.body as HTMLElement, conference.Acronym, year);
-                fullText = removeExtraEmptyLines(fullText);
 
-                // Ghi text vào file tạm
-                const safeAcronym = conference.Acronym.replace(/[^a-zA-Z0-9_-]/g, '-');
-                const textPath = await writeTempFile(fullText, `${safeAcronym}_${i}_initial`);
+                // Fetch content
+                let htmlContent;
+                const fetchContext = { ...linkLogContext, url: finalLink };
+                try {
+                     logger.debug({ ...fetchContext, event: 'content_fetch_start' }, "Fetching content");
+                     htmlContent = await fetchContentWithRetry(page); // Assume this handles retries and logs internally
+                     logger.debug({ ...fetchContext, event: 'content_fetch_success' }, "Content fetched");
+                } catch (fetchErr: any) {
+                     linkProcessingFailedCount++;
+                     logger.error({ ...fetchContext, err: fetchErr, event: 'content_fetch_failed' }, "Failed to fetch content, skipping link.");
+                     continue; // Skip this link
+                }
 
-                // Lấy adjustedAcronym (logic addAcronymSafely cần được kiểm tra lại)
-                const acronym_index = `${conference.Acronym}_${i}`;
-                adjustedAcronym = await addAcronymSafely(existingAcronyms, acronym_index); // existingAcronyms cần được quản lý đồng bộ đúng cách
-                let acronym_no_index = adjustedAcronym.substring(0, adjustedAcronym.lastIndexOf('_'));
 
+                // Clean DOM
+                let document;
+                const cleanContext = { ...linkLogContext, url: finalLink };
+                try {
+                    logger.debug({ ...cleanContext, event: 'dom_clean_start' }, "Cleaning DOM");
+                    document = cleanDOM(htmlContent);
+                    if (!document || !document.body) {
+                        throw new Error("Cleaned DOM or document body is null");
+                    }
+                     logger.debug({ ...cleanContext, event: 'dom_clean_success' }, "DOM cleaned");
+                } catch(cleanErr: any) {
+                    linkProcessingFailedCount++;
+                    logger.warn({ ...cleanContext, err: cleanErr, event: 'dom_clean_failed' }, "Failed to clean DOM or body is null, skipping link");
+                    continue; // Skip this link
+                }
+
+
+                // Traverse Nodes & Save Text
+                let fullText = '';
+                let textPath = '';
+                const traverseContext = { ...linkLogContext, url: finalLink };
+                try {
+                    logger.debug({ ...traverseContext, event: 'node_traverse_start' }, "Traversing nodes");
+                    fullText = traverseNodes(document.body as HTMLElement, conference.Acronym, year);
+                    fullText = removeExtraEmptyLines(fullText);
+                    logger.debug({ ...traverseContext, textLength: fullText.length, event: 'node_traverse_success' }, "Nodes traversed");
+
+                    const safeAcronym = conference.Acronym.replace(/[^a-zA-Z0-9_-]/g, '-');
+                    // Sử dụng safeAcronym cho tên file tạm
+                    textPath = await writeTempFile(fullText, `${safeAcronym}_${linkIndex}_initial`);
+                    logger.debug({ ...traverseContext, filePath: textPath, event: 'initial_text_saved' }, "Saved initial text to temp file");
+                } catch (traverseSaveErr: any) {
+                    linkProcessingFailedCount++;
+                    logger.error({ ...traverseContext, err: traverseSaveErr, event: 'node_traverse_or_save_failed' }, "Error traversing nodes or saving text, skipping link.");
+                    continue; // Skip this link
+                }
+
+
+                // Acronym handling (giữ nguyên)
+                const acronym_index = `${conference.Acronym}_${linkIndex}`;
+                const adjustedAcronym = await addAcronymSafely(existingAcronyms, acronym_index);
+                finalAdjustedAcronym = adjustedAcronym;
+                let acronym_no_index = adjustedAcronym.replace(/_\d+$/, '');
+
+                // Add to batch
                 batch.push({
                     conferenceName: conference.Title,
                     conferenceAcronym: acronym_no_index,
@@ -581,54 +812,70 @@ export const saveHTMLContent = async (
                     conferencePrimaryFoR: conference.PrimaryFoR || "",
                     conferenceComments: conference.Comments || "",
                     conferenceRating: conference.Rating || "",
-                    conferenceDetails: conference.Details || [], // Use the array directly, default to empty array
-                    conferenceIndex: String(i),
-                    conferenceLink: finalLink, // Link cuối cùng truy cập được
-                    conferenceTextPath: textPath, // Chỉ lưu path
-                    // Các trường khác sẽ được điền sau trong saveBatchToFile/processDetermineLinksResponse
-                    cfpLink: "",
-                    impLink: "",
-                    // cfpTextPath, impTextPath, etc. sẽ được điền sau
+                    conferenceDetails: conference.Details || [],
+                    conferenceIndex: String(linkIndex),
+                    conferenceLink: finalLink, // Final successful URL
+                    conferenceTextPath: textPath,
+                    cfpLink: "", impLink: "", // To be filled by saveBatchToFile
+                    // Các path khác sẽ được điền bởi saveBatchToFile
                 });
 
+                linkProcessedSuccessfully = true; // Đánh dấu link này xử lý thành công
+                linkProcessingSuccessCount++;
+                logger.info({ ...linkLogContext, finalUrl: finalLink, textPath, adjustedAcronym, event: 'link_processing_success' }, "Successfully processed link and added to batch");
+
             } catch (loopError: any) {
-                console.error(`Error processing link ${links[i]} for conference ${conference.Acronym}:`, loopError);
-                // Log lỗi chi tiết hơn nếu cần
-                const timestamp = new Date().toISOString();
-                const logMessage = `[${timestamp}] Unhandled loop error for ${conference.Acronym} link ${links[i]}: ${loopError.message}\n${loopError.stack}\n`;
-                await fs.promises.appendFile('./data/error_processing_log.txt', logMessage, 'utf8').catch(e => console.error("Failed to write to error log:", e));
+                 linkProcessingFailedCount++; // Đếm lỗi không xác định trong vòng lặp
+                 logger.error({ ...linkLogContext, url: links[i], err: loopError, event: 'link_loop_unhandled_error' }, "Unhandled error processing link in loop");
+                // Ghi log phụ nếu cần
+                // const timestamp = new Date().toISOString(); ... log file phụ ...
+                // Continue to next link implicitly
 
             } finally {
+                 logger.debug({ ...linkLogContext, success: linkProcessedSuccessfully, event: 'link_processing_end' }, `Finished processing link ${i + 1}`);
                 if (page && !page.isClosed()) {
                     try {
                         await page.close();
                     } catch (closeError: any) {
-                        console.error("Error closing page:", closeError);
+                         logger.error({ ...linkLogContext, err: closeError, event: 'page_close_failed' }, "Error closing page in finally block");
                     }
                 }
             }
         } // End for loop links
 
-
-
+        // --- Create Batch Task ---
         if (batch.length > 0) {
             const currentBatchIndex = batchIndexRef.current;
             batchIndexRef.current++;
-            // Gọi saveBatchToFile, promise này sẽ giải quyết thành BatchEntry[] chứa paths
-            const batchPromise = saveBatchToFile(batch, currentBatchIndex, adjustedAcronym, browserContext);
+            // Log sự kiện tạo batch task
+            logger.info({
+                ...baseLogContext,
+                batchIndex: currentBatchIndex,
+                entries: batch.length,
+                linksProcessedSuccessfully: linkProcessingSuccessCount, // Thêm thông tin
+                linksProcessingFailed: linkProcessingFailedCount, // Thêm thông tin
+                event: 'batch_task_create'
+            }, `Creating batch task`);
+            // Hàm saveBatchToFile sẽ log chi tiết bên trong
+            const batchPromise = saveBatchToFile(batch, currentBatchIndex, finalAdjustedAcronym, browserContext);
             batchPromises.push(batchPromise);
         } else {
-            console.log(`Batch is empty for ${conference.Acronym} after processing all links.`);
+            logger.warn({
+                 ...baseLogContext,
+                 linksProcessedSuccessfully: linkProcessingSuccessCount,
+                 linksProcessingFailed: linkProcessingFailedCount,
+                 event: 'batch_creation_skipped_empty'
+                }, "Batch is empty after processing all links (all failed or skipped). No batch task created.");
         }
 
-        // Kiểu trả về { updatedBatches: [] } không còn ý nghĩa vì batchPromises được quản lý bên ngoài
-        // Có thể trả về Promise<void>
-        return { updatedBatches: [] }; // Giữ lại để không thay đổi signature quá nhiều, nhưng giá trị này không hữu ích
+        logger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent"); // Log kết thúc hàm
+        return;
 
     } catch (error: any) {
-        console.error("Error in saveHTMLContent:", error);
-        console.error(error.stack);
-        return { updatedBatches: [] }; // Hoặc throw lỗi
+         logger.error({ ...baseLogContext, err: error, event:'save_html_unhandled_error' }, "Unhandled error in saveHTMLContent main try block");
+         // Không re-throw để không làm dừng toàn bộ crawlConferences nếu không cần thiết
+         logger.info({ ...baseLogContext, event: 'save_html_finish_failed' }, "Finishing saveHTMLContent due to unhandled error");
+        return;
     }
 };
 
@@ -760,7 +1007,6 @@ export const updateHTMLContent = async (
 
 
 // --- Revised updateBatchToFile ---
-// Remove 'page' parameter
 export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: number): Promise<BatchUpdateEntry[] | null> => {
     await init(); // Assuming this is necessary setup
     const taskLogger = logger.child({ acronym: batch.conferenceAcronym, batchIndex, function: 'updateBatchToFile' });
@@ -850,3 +1096,5 @@ export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: num
         return null; // Indicate failure
     }
 };
+
+

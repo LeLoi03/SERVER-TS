@@ -234,6 +234,8 @@ export const CACHE_OPTIONS: CacheOptions = {
 
 // Filter out potential undefined values from process.env
 export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
+    process.env.CUSTOM_SEARCH_API_KEY_11,
+    process.env.CUSTOM_SEARCH_API_KEY_12,
     process.env.CUSTOM_SEARCH_API_KEY_4,
     process.env.CUSTOM_SEARCH_API_KEY_3,
     process.env.CUSTOM_SEARCH_API_KEY_5,

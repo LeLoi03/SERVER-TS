@@ -27,9 +27,9 @@ const corsOptions = {
 
 const app = express();
 const httpServer = new HttpServer(app);
-const io = new SocketIOServer(httpServer, {
+export const io = new SocketIOServer(httpServer, { // <<< Export 'io'
     cors: {
-        origin: "*",
+        origin: process.env.FRONTEND_URL || "*", // <<< Cấu hình CORS chặt chẽ hơn
         methods: ["GET", "POST"]
     }
 });
@@ -162,6 +162,7 @@ app.get('/api/v1/topics', async (req, res) => {
         }
     }
 });
+
 
 
 // --- server_crawl.ts routes ---
@@ -327,6 +328,52 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
 cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
+import { performLogAnalysis } from './route/logAnalyzerService'; // <<< Import service mới
+import { LogAnalysisResult } from './types/logAnalysis'; // <<< Import interface
+
+
+// --- Lưu trữ kết quả phân tích mới nhất ---
+let latestAnalysisResult: LogAnalysisResult | null = null;
+
+
+// --- Chạy phân tích lần đầu khi server khởi động (Tùy chọn) ---
+(async () => {
+    logger.info('Performing initial log analysis on startup...');
+    try {
+        latestAnalysisResult = await performLogAnalysis();
+        logger.info('Initial log analysis completed.');
+    } catch (error) {
+        logger.error({ err: error }, 'Initial log analysis failed.');
+    }
+})();
+
+// --- Cron Job để phân tích định kỳ ---
+// Ví dụ: Chạy mỗi phút
+cron.schedule('* * * * *', async () => {
+    logger.info('[Cron] Running scheduled log analysis...');
+    try {
+        const results = await performLogAnalysis();
+        latestAnalysisResult = results; // Cập nhật kết quả mới nhất
+        io.emit('log_analysis_update', results); // <<< Phát sự kiện đến tất cả client
+        logger.info('[Cron] Log analysis finished and results emitted via Socket.IO.');
+    } catch (error) {
+        logger.error({ err: error }, '[Cron] Scheduled log analysis failed.');
+        // Quyết định xem có nên emit lỗi không, hoặc giữ nguyên latestAnalysisResult cũ
+    }
+});
+
+// Route để lấy dữ liệu phân tích MỚI NHẤT (cho lần tải đầu của frontend)
+app.get('/api/v1/logs/analysis/latest', (req, res) => {
+    if (latestAnalysisResult) {
+        res.status(200).json(latestAnalysisResult);
+    } else {
+        res.status(404).json({ message: 'Log analysis data not yet available. Please wait.' });
+    }
+});
+
+
+
+///////////////////////////////////////////
 
 import pkg from 'pg';
 

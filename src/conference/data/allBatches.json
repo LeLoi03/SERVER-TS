@@ -1,7 +1,708 @@
 [
   {
-    "conferenceName": "The Theory and Application of Diagrams",
-    "conferenceAcronym": "DIAGRAMS",
+    "conferenceName": "International Workshop on Web and Wireless Geographical Information Systems",
+    "conferenceAcronym": "W2GIS",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://sites.google.com/view/w2gis-2025/home",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\W2GIS_main_2025_f4653e23-4948-4af1-a773-1f5f8279de3d.txt",
+    "cfpLink": "https://sites.google.com/view/w2gis-2025/call-for-papers",
+    "impLink": "https://sites.google.com/view/w2gis-2025/home",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\W2GIS_determine_response_7ab7ffba-5119-4adc-8e9f-91e486b7c1c6.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48352,
+      "candidatesTokenCount": 64,
+      "totalTokenCount": 48416,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48352
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 64
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\W2GIS_cfp_2025_21ad0b91-993d-42be-a023-d782af583903.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\W2GIS_imp_2025_f2511d01-4d4e-4159-8b6a-5fc1a1127460.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\W2GIS_extract_response_a446b6de-b8b6-4c5c-99e5-87c767ddb538.txt",
+    "extractMetaData": {
+      "promptTokenCount": 145569,
+      "candidatesTokenCount": 1464,
+      "totalTokenCount": 147033,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 145569
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1464
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE Conference on Virtual Reality and 3D User Interfaces",
+    "conferenceAcronym": "VR",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "http://ieeevr.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VR_0_initial_d1b7963a-ad51-4dc1-a070-b0b436719b35.txt",
+    "cfpLink": "https://ieeevr.org/2025/contribute/papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VR_determine_response_9b52bdc9-2802-40c4-81f4-5fe048dad278.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45416,
+      "candidatesTokenCount": 55,
+      "totalTokenCount": 45471,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45416
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 55
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VR_cfp_2025_bf89607d-2447-4c20-8958-5ab37e8533ef.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VR_extract_response_dae6b39a-d1db-4b5b-91da-0c6732132623.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142989,
+      "candidatesTokenCount": 1917,
+      "totalTokenCount": 144906,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142989
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1917
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE VLSI Test Symposium",
+    "conferenceAcronym": "VTS",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://tttc-vts.org/public_html/new/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTS_0_initial_23956717-8029-4a4a-b222-91f6a39a354b.txt",
+    "cfpLink": "https://tttc-vts.org/public_html/new/2025/call-for-papers/",
+    "impLink": "https://tttc-vts.org/public_html/new/2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTS_determine_response_e89ab5d2-fef6-4515-8148-51b870a1b7de.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46095,
+      "candidatesTokenCount": 93,
+      "totalTokenCount": 46188,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46095
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 93
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTS_cfp_2025_5d7e60cc-d40c-4527-84fa-b07af7c27cb9.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTS_imp_2025_51005aaa-f8fa-415b-b574-eb8c7aad3444.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTS_extract_response_f8dd6ac3-db34-4b43-b2b1-14b22625029c.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141328,
+      "candidatesTokenCount": 1661,
+      "totalTokenCount": 142989,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141328
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1661
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE Vehicular Technology Conference",
+    "conferenceAcronym": "VTC",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://events.vtsociety.org/vtc2025-spring/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTC_0_initial_fdb792df-ba30-46d4-979f-e64cca2e5289.txt",
+    "cfpLink": "https://events.vtsociety.org/vtc2025-spring/authors/call-for-papers/",
+    "impLink": "https://events.vtsociety.org/vtc2025-spring/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTC_determine_response_6b2873ad-7c16-42e9-9182-aeb4938eb80c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49862,
+      "candidatesTokenCount": 92,
+      "totalTokenCount": 49954,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49862
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 92
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTC_cfp_2025_ba2d309d-7005-4825-a742-a8bb82dcaf4f.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTC_imp_2025_1a459c5b-b9ec-4e70-b2dd-d4afeef600ef.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VTC_extract_response_ae0465da-6204-491a-aeba-8ecae9ed072b.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142943,
+      "candidatesTokenCount": 1109,
+      "totalTokenCount": 144052,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142943
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1109
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "ACM Virtual Reality Software and Technology",
+    "conferenceAcronym": "VRST",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://vrst.acm.org/vrst2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VRST_0_initial_803bec27-be37-49d1-849b-ab1c031a3cf8.txt",
+    "cfpLink": "https://vrst.acm.org/vrst2025/index.php/call-for-participation/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VRST_determine_response_1b337876-722c-45dd-ba0c-5a8214df31b6.txt",
+    "determineMetaData": {
+      "promptTokenCount": 53137,
+      "candidatesTokenCount": 68,
+      "totalTokenCount": 53205,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 53137
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 68
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VRST_cfp_2025_1b3d49e1-a44c-4fe4-a47b-0e8b342049a4.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\VRST_extract_response_f7cae006-f4d0-4af3-bb7c-7c1f940e5e6d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142386,
+      "candidatesTokenCount": 1502,
+      "totalTokenCount": 143888,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142386
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1502
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop on Algorithms in Bioinformatics",
+    "conferenceAcronym": "WABI",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://wabiconf.github.io/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WABI_main_2025_8e120513-436b-4d96-a11b-b2fac7ffa72f.txt",
+    "cfpLink": "https://wabiconf.github.io/2025/",
+    "impLink": "https://wabiconf.github.io/2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WABI_determine_response_51646cd8-576f-4512-8844-05f709cf6b1c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 79926,
+      "candidatesTokenCount": 43,
+      "totalTokenCount": 79969,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 79926
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 43
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WABI_cfp_2025_b3104770-89b5-4dd0-b30d-defe86bb9e16.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WABI_imp_2025_beacebea-8e5d-42c5-8e93-61d15757f693.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WABI_extract_response_be46409b-bd1a-43b7-8b87-6731184b7142.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140250,
+      "candidatesTokenCount": 1162,
+      "totalTokenCount": 141412,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140250
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1162
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE Workshop on Applications of Computer Vision",
+    "conferenceAcronym": "WACV",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://wacv2025.thecvf.com/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WACV_0_initial_bcd03dc6-66d7-4cf8-824f-1d239decaba6.txt",
+    "cfpLink": "https://wacv2025.thecvf.com/submissions/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WACV_determine_response_fb21cbbc-244b-46a9-9095-262ec2a4a341.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46838,
+      "candidatesTokenCount": 60,
+      "totalTokenCount": 46898,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46838
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 60
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WACV_cfp_2025_ecac4d7a-6add-480e-b396-796541d7c6b3.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WACV_extract_response_175f9b92-608e-4b39-b6e2-091b98ab8740.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141077,
+      "candidatesTokenCount": 1527,
+      "totalTokenCount": 142604,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141077
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1527
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Algorithms and Data Structures Symposium (was Workshop on Algorithms and Data Structures)",
+    "conferenceAcronym": "WADS",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "2",
+    "conferenceLink": "https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WADS_2_initial_93c3f66f-07e3-4767-b81b-7e767c80b9e3.txt",
+    "cfpLink": "https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html/Call%20for%20Papers.html",
+    "impLink": "https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html/Dates_1.html",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WADS_cfp_2025_2ee63a11-7f7a-4528-8d2c-248db02d0af2.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WADS_imp_2025_1e882ce4-8501-4017-9180-d22f40dd61b7.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WADS_extract_response_4b49d159-0ceb-4c6d-b273-d985f55e3595.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138839,
+      "candidatesTokenCount": 960,
+      "totalTokenCount": 139799,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138839
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 960
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Workshop on the Algorithmic Foundations of Robotics",
+    "conferenceAcronym": "WAFR",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.algorithmic-robotics.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAFR_0_initial_55ab52ff-73d2-45f7-bd49-e376931f393c.txt",
+    "cfpLink": "http://algorithmic-robotics.org/cfp.php",
+    "impLink": "http://algorithmic-robotics.org/authors.php",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAFR_determine_response_070ce3ab-161f-416c-93fd-a96f61752f2a.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47294,
+      "candidatesTokenCount": 62,
+      "totalTokenCount": 47356,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47294
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 62
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAFR_cfp_2025_22d9da49-44f1-4a79-903a-d7475316bc48.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAFR_imp_2025_f4b64034-f382-433c-b0d4-e81576d27745.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAFR_extract_response_8c796f20-092d-45e8-b4c5-cb5ee1ca9640.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142165,
+      "candidatesTokenCount": 1623,
+      "totalTokenCount": 143788,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142165
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1623
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop on Algorithms And Models For The Web Graph",
+    "conferenceAcronym": "WAW",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://math.torontomu.ca/waw2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAW_0_initial_ae7101ac-4dbb-4a45-ab15-3fab63b2d534.txt",
+    "cfpLink": "https://math.torontomu.ca/waw2025/cfp.html",
+    "impLink": "https://math.torontomu.ca/waw2025/cfp.html",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAW_determine_response_caafa68e-46d1-43f5-9362-df27de1621b3.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47348,
+      "candidatesTokenCount": 85,
+      "totalTokenCount": 47433,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47348
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 85
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAW_cfp_2025_1b338837-005a-4ca2-a0aa-7a586ad8319b.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAW_imp_2025_d4f32087-c598-4846-bf0b-3f5a58b78088.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAW_extract_response_8cf0583c-89b4-4df9-91d4-251963abc923.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140718,
+      "candidatesTokenCount": 995,
+      "totalTokenCount": 141713,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140718
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 995
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop on Approximation and Online Algorithms",
+    "conferenceAcronym": "WAOA",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "2",
+    "conferenceLink": "https://algo-conference.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAOA_2_initial_338f1136-59b9-4c35-b26d-ee7ea93c0d3f.txt",
+    "cfpLink": "None",
+    "impLink": "None",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAOA_extract_response_20c837c9-be5f-456c-b0c5-25b4b2d0eb85.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138635,
+      "candidatesTokenCount": 188,
+      "totalTokenCount": 138823,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138635
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 188
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop on the Arithmetic of Finite Fields",
+    "conferenceAcronym": "WAIFI",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "http://waifi.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAIFI_0_initial_d4fae46f-53d0-4a65-9997-5310f298eb3a.txt",
+    "cfpLink": "None",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAIFI_determine_response_7b2ed453-4977-4e74-bd8b-0c7c30de00ff.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48120,
+      "candidatesTokenCount": 35,
+      "totalTokenCount": 48155,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48120
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 35
+        }
+      ]
+    },
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WAIFI_extract_response_9aa9877c-1b4b-48f8-a216-9cbdc5f0a4ea.txt",
+    "extractMetaData": {
+      "promptTokenCount": 137626,
+      "candidatesTokenCount": 216,
+      "totalTokenCount": 137842,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137626
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 216
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference and Workshops on Algorithms and Computation",
+    "conferenceAcronym": "WALCOM",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -11,39 +712,40 @@
     "conferenceRating": "",
     "conferenceDetails": [],
     "conferenceIndex": "1",
-    "conferenceLink": "https://diagrams-conference.org/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DIAGRAMS_1_initial_58582b44-df6c-4d03-a196-b171a48b09eb.txt",
-    "cfpLink": "None",
+    "conferenceLink": "https://tcsuestc.com/walcom2025",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WALCOM_1_initial_5f948d2b-bd1f-4f86-89db-aff083d528c9.txt",
+    "cfpLink": "https://tcsuestc.com/walcom2025/pages/cfp.html",
     "impLink": "None",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DIAGRAMS_extract_response_cba8f698-0cca-46f9-a5fd-eeb4f4836d32.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WALCOM_cfp_2025_864d9057-73de-4333-8218-cc593c070ba2.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WALCOM_extract_response_5aa3bea0-86b9-4dc6-ae68-6c0ab49f2de1.txt",
     "extractMetaData": {
-      "promptTokenCount": 137483,
-      "candidatesTokenCount": 204,
-      "totalTokenCount": 137687,
-      "cachedContentTokenCount": 136999,
+      "promptTokenCount": 138802,
+      "candidatesTokenCount": 1071,
+      "totalTokenCount": 139873,
+      "cachedContentTokenCount": 137044,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 137483
+          "tokenCount": 138802
         }
       ],
       "cacheTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 136999
+          "tokenCount": 137044
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 204
+          "tokenCount": 1071
         }
       ]
     }
   },
   {
-    "conferenceName": "IEEE International Conference on Distributed Computing in Sensor Systems",
-    "conferenceAcronym": "DCOSS",
+    "conferenceName": "IEEE Wireless Communications and Networking Conference",
+    "conferenceAcronym": "WCNC",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -53,58 +755,58 @@
     "conferenceRating": "",
     "conferenceDetails": [],
     "conferenceIndex": "0",
-    "conferenceLink": "https://dcoss.org/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_0_initial_e6574b5f-469a-49e0-8087-566d51e7d573.txt",
-    "cfpLink": "https://dcoss.org/call-for-papers/",
+    "conferenceLink": "https://wcnc2025.ieee-wcnc.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCNC_0_initial_f428d496-e7d1-4efc-8c15-e28e1bf255f9.txt",
+    "cfpLink": "https://wcnc2025.ieee-wcnc.org/call-papers",
     "impLink": "None",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_determine_response_317330f0-1a07-491a-96ce-82138c7863b8.txt",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCNC_determine_response_f0ba9115-6d80-47cd-95fc-1d934927ecda.txt",
     "determineMetaData": {
-      "promptTokenCount": 49610,
-      "candidatesTokenCount": 48,
-      "totalTokenCount": 49658,
+      "promptTokenCount": 48938,
+      "candidatesTokenCount": 62,
+      "totalTokenCount": 49000,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 49610
+          "tokenCount": 48938
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 48
+          "tokenCount": 62
         }
       ]
     },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_cfp_2025_8d502454-5b71-4030-99e0-0e7cc506aa48.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DCOSS_extract_response_261d48b7-8d4f-4a95-bcb2-fed7ac3daa50.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCNC_cfp_2025_dbd0e8e6-487a-4374-aae1-f32bdffb78b8.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCNC_extract_response_5ac97f01-0912-4d68-9b39-37d114cc6a0d.txt",
     "extractMetaData": {
-      "promptTokenCount": 142416,
-      "candidatesTokenCount": 1647,
-      "totalTokenCount": 144063,
-      "cachedContentTokenCount": 136999,
+      "promptTokenCount": 141316,
+      "candidatesTokenCount": 1819,
+      "totalTokenCount": 143135,
+      "cachedContentTokenCount": 137044,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 142416
+          "tokenCount": 141316
         }
       ],
       "cacheTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 136999
+          "tokenCount": 137044
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 1647
+          "tokenCount": 1819
         }
       ]
     }
   },
   {
-    "conferenceName": "Developments in eSystems Engineering",
-    "conferenceAcronym": "DeSE",
+    "conferenceName": "IEEE/WIC/ACM International Conference on Web Intelligence (previously joint with Intelligent Agent Technology WI-IAT)",
+    "conferenceAcronym": "WI",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -114,59 +816,234 @@
     "conferenceRating": "",
     "conferenceDetails": [],
     "conferenceIndex": "0",
-    "conferenceLink": "https://dese.ai/dese-2025/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_0_initial_e11e6bda-65c4-4ec3-bba6-36624df87920.txt",
-    "cfpLink": "https://dese.ai/dese-2025-callforpapers/",
-    "impLink": "https://dese.ai/dese-2025-important-dates/",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_determine_response_1d1e44b8-65ad-4a64-9f2b-a77622cb4684.txt",
+    "conferenceLink": "https://www.wi-iat.com/wi-iat2024/index.html",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WI_0_initial_99a7dfb0-f070-48c5-9477-e563305f637c.txt",
+    "cfpLink": "https://www.wi-iat.com/wi-iat2024/Call-for-Paper.html",
+    "impLink": "https://www.wi-iat.com/wi-iat2024/index.html",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WI_determine_response_057a97af-20c5-479b-bb21-765c9c12a7cc.txt",
     "determineMetaData": {
-      "promptTokenCount": 49444,
-      "candidatesTokenCount": 71,
-      "totalTokenCount": 49515,
+      "promptTokenCount": 42655,
+      "candidatesTokenCount": 94,
+      "totalTokenCount": 42749,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 49444
+          "tokenCount": 42655
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 71
+          "tokenCount": 94
         }
       ]
     },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_cfp_2025_50d300dc-9ca5-40aa-8bda-b819d3e59295.txt",
-    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_imp_2025_829414e9-6c41-4442-ae4a-6e5bb1753231.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DeSE_extract_response_a0cb1ba2-b8c3-486b-946c-a4875fd609c2.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WI_cfp_2025_a57b47ea-257a-42d3-9000-b78209ddebea.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WI_imp_2025_fecf4d45-dd9f-454f-b4e4-d134c9a8cb89.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WI_extract_response_1f41c12f-6a37-4f88-aeda-b87547c04729.txt",
     "extractMetaData": {
-      "promptTokenCount": 141097,
-      "candidatesTokenCount": 892,
-      "totalTokenCount": 141989,
-      "cachedContentTokenCount": 136999,
+      "promptTokenCount": 142091,
+      "candidatesTokenCount": 996,
+      "totalTokenCount": 143087,
+      "cachedContentTokenCount": 137044,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 141097
+          "tokenCount": 142091
         }
       ],
       "cacheTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 136999
+          "tokenCount": 137044
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 892
+          "tokenCount": 996
         }
       ]
     }
   },
   {
-    "conferenceName": "International Conference on Dependability of Computer Systems",
-    "conferenceAcronym": "DEPCoS",
+    "conferenceName": "Workshop on Computational Optimization",
+    "conferenceAcronym": "WCO",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "1",
+    "conferenceLink": "https://2025.fedcsis.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCO_1_initial_2650ad1d-1d52-4dc8-8718-ce120303ae51.txt",
+    "cfpLink": "https://2025.fedcsis.org/cfp",
+    "impLink": "https://2025.fedcsis.org/important_dates",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCO_cfp_2025_e0f309f0-b9f3-4142-9af5-14a270d53dbc.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCO_imp_2025_ca768907-5ab7-45dd-b9b5-56c3dd760dad.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WCO_extract_response_75aed95e-4859-44b0-aa1c-16bcbe88a4c9.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141659,
+      "candidatesTokenCount": 1105,
+      "totalTokenCount": 142764,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141659
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1105
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Web Information Systems and Technologies",
+    "conferenceAcronym": "WEBIST",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "1",
+    "conferenceLink": "https://webist.scitevents.org/?y=2025",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WEBIST_1_initial_f3f6724c-6161-4c69-aecb-eaee1daa6385.txt",
+    "cfpLink": "https://webist.scitevents.org/CallForPapers.aspx?y=2025",
+    "impLink": "https://webist.scitevents.org/ImportantDates.aspx?y=2025",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WEBIST_cfp_2025_c49a7732-18f6-4394-9b09-969c770c6e80.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WEBIST_imp_2025_548c817c-0481-4719-a943-e8c58eef2873.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WEBIST_extract_response_98642c31-016b-4e4f-9a42-c8de366ac1b6.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143043,
+      "candidatesTokenCount": 1732,
+      "totalTokenCount": 144775,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143043
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1732
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Workshops on Enabling Technologies: Infrastructures for Collaborative Enterprises",
+    "conferenceAcronym": "WETICE",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "2",
+    "conferenceLink": "https://www.dmi.unict.it/wetice2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WETICE_2_initial_48460853-bcbb-4501-99ed-0c3d19fdad07.txt",
+    "cfpLink": "https://www.dmi.unict.it/wetice2025/#call-for-papers",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WETICE_cfp_2025_d5b081ea-87ef-4032-be4a-b3489bfa755f.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WETICE_extract_response_3c7afbdd-4ad9-4a06-a007-35cb5f9e397f.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142331,
+      "candidatesTokenCount": 1520,
+      "totalTokenCount": 143851,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142331
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1520
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "IEEE International Conference on Wireless and Mobile Computing, Networking and Communications",
+    "conferenceAcronym": "WiMob",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "1",
+    "conferenceLink": "http://www.wimob.org/wimob2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiMob_1_initial_51321fe3-2caa-49bb-8ba4-d1913718fb12.txt",
+    "cfpLink": "http://www.wimob.org/wimob2025/cfp.php",
+    "impLink": "http://www.wimob.org/wimob2025/dates.php",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiMob_cfp_2025_1b4c3a93-5ab6-4e7e-b314-8df92ce4ff19.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiMob_imp_2025_b2a487a8-7c10-4d6d-83ee-337131bcddfa.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiMob_extract_response_f8c03e91-f673-483b-9e06-37918950f3fb.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140244,
+      "candidatesTokenCount": 1966,
+      "totalTokenCount": 142210,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140244
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1966
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Wireless Networks and Mobile Communications",
+    "conferenceAcronym": "WINCOM",
     "conferenceSource": "",
     "conferenceRank": "",
     "conferenceNote": "",
@@ -176,19 +1053,142 @@
     "conferenceRating": "",
     "conferenceDetails": [],
     "conferenceIndex": "0",
-    "conferenceLink": "https://depcos.pwr.edu.pl/",
-    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_0_initial_124d6bdd-e3f4-4a1b-9bb3-ffc9f3c1f439.txt",
-    "cfpLink": "https://cmt3.research.microsoft.com/DEPCOS2025",
-    "impLink": "None",
-    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_determine_response_a73e6c51-7f44-4191-bd58-8d731fdab657.txt",
+    "conferenceLink": "http://wincom-conf.org/WINCOM_2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WINCOM_0_initial_af6e9ac2-a2ab-4721-9d9d-55b8ca66507b.txt",
+    "cfpLink": "http://wincom-conf.org/WINCOM_2025/?page=cfp",
+    "impLink": "http://wincom-conf.org/WINCOM_2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WINCOM_determine_response_e5a5b63d-d92b-459f-adb9-fb7687cccbba.txt",
     "determineMetaData": {
-      "promptTokenCount": 53470,
+      "promptTokenCount": 48569,
+      "candidatesTokenCount": 80,
+      "totalTokenCount": 48649,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48569
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 80
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WINCOM_cfp_2025_8ee993ee-37ca-4953-857e-0ab2a313bef6.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WINCOM_imp_2025_eb7d5cc9-7fa2-4f72-8439-60b8826320fc.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WINCOM_extract_response_b9e35b01-5ddc-4df7-a559-c37977e3f58c.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141078,
+      "candidatesTokenCount": 992,
+      "totalTokenCount": 142070,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141078
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 992
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Symposium on Modelling and Optimization in Mobile, Ad Hoc, and Wireless Networks",
+    "conferenceAcronym": "WiOpt",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://wiopt2025.github.io/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiOpt_0_initial_4d4ca75a-1e12-477f-877b-f9e7b541c70f.txt",
+    "cfpLink": "https://wiopt2025.github.io/cfp.html",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiOpt_determine_response_09fcf262-9e35-4973-9611-87bf63187575.txt",
+    "determineMetaData": {
+      "promptTokenCount": 43921,
+      "candidatesTokenCount": 45,
+      "totalTokenCount": 43966,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 43921
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiOpt_cfp_2025_890e9edb-244d-46d1-abf0-37d3a4091e80.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WiOpt_extract_response_6f0e0532-c568-4d94-a91a-b27ce8958067.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138698,
+      "candidatesTokenCount": 1311,
+      "totalTokenCount": 140009,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138698
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1311
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Workshop on Information Security Applications",
+    "conferenceAcronym": "WISA",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.wisa.or.kr/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISA_0_initial_256825f1-f103-4d8b-827c-44a7dd0f99ee.txt",
+    "cfpLink": "https://www.wisa.or.kr/society/kiisc/conference/wisa2024/c4pOriginal",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISA_determine_response_a9b3f678-a066-41ba-b8be-e0b51e0a3518.txt",
+    "determineMetaData": {
+      "promptTokenCount": 50870,
       "candidatesTokenCount": 56,
-      "totalTokenCount": 53526,
+      "totalTokenCount": 50926,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 53470
+          "tokenCount": 50870
         }
       ],
       "candidatesTokensDetails": [
@@ -198,29 +1198,461 @@
         }
       ]
     },
-    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_cfp_2025_681f648c-dd52-4f36-ac8b-2b8f806f8a67.txt",
-    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\DEPCoS_extract_response_c34c0b2f-31a0-46b3-a1bd-da4dd67cacf9.txt",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISA_cfp_2025_d1d759d2-15d0-4e94-9b89-cbce0f17e873.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISA_extract_response_07c83b4a-c13b-4608-b6d2-e6c98da9350d.txt",
     "extractMetaData": {
-      "promptTokenCount": 139668,
-      "candidatesTokenCount": 1199,
-      "totalTokenCount": 140867,
-      "cachedContentTokenCount": 136999,
+      "promptTokenCount": 139778,
+      "candidatesTokenCount": 7,
+      "totalTokenCount": 139785,
+      "cachedContentTokenCount": 137044,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 139668
+          "tokenCount": 139778
         }
       ],
       "cacheTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 136999
+          "tokenCount": 137044
         }
       ],
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 1199
+          "tokenCount": 7
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Workshop on Graph-Theoretic Concepts in Computer Science",
+    "conferenceAcronym": "WG",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://algo.uni-trier.de/wg2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WG_0_initial_5e57b5ad-d75b-44a8-b290-545333f042f8.txt",
+    "cfpLink": "https://algo.uni-trier.de/wg2025/cfp/",
+    "impLink": "https://algo.uni-trier.de/wg2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WG_determine_response_b041b8bf-6301-44a8-b8e8-13f759a4490f.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45032,
+      "candidatesTokenCount": 78,
+      "totalTokenCount": 45110,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45032
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 78
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WG_cfp_2025_83718537-8795-4f06-86ed-268a26a94566.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WG_imp_2025_a1a922e9-3078-411a-9aa7-5d4bfeac262d.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WG_extract_response_4f58a4ba-88bb-474c-b36b-8ca6afbbb36b.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139216,
+      "candidatesTokenCount": 1126,
+      "totalTokenCount": 140342,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139216
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1126
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "World Multi-Conference on Systemics, Cybernetics and Informatics",
+    "conferenceAcronym": "WMSCI",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.iiis2025.org/wmsci/website/default.asp?vc=1",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WMSCI_0_initial_0b1803c8-5e5d-41e3-bb81-0b6e63544a57.txt",
+    "cfpLink": "https://www.iiis2025.org/wmsci/Submission/Index.asp?vc=1",
+    "impLink": "https://www.iiis2025.org/wmsci/Website/ImportantDates.asp?vc=1",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WMSCI_determine_response_8643d75f-8e83-45fa-aedf-cd24887d99dd.txt",
+    "determineMetaData": {
+      "promptTokenCount": 167951,
+      "candidatesTokenCount": 103,
+      "totalTokenCount": 168054,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 167951
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 103
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WMSCI_cfp_2025_b91c6709-90de-487f-828e-5d15e04ffdc5.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WMSCI_imp_2025_20fb57b9-7c8b-4708-b61d-73c938dc9ab8.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WMSCI_extract_response_9f01b1d3-a52f-47b7-9086-09fa417b4fb2.txt",
+    "extractMetaData": {
+      "promptTokenCount": 763504,
+      "candidatesTokenCount": 1416,
+      "totalTokenCount": 764920,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 763504
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1416
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop in Information Security Theory and Practices",
+    "conferenceAcronym": "WISTP",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "1",
+    "conferenceLink": "https://wistp2024.roc.cnam.fr/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISTP_1_initial_7b5f1774-ed78-45c2-b59b-bcabce7dce9c.txt",
+    "cfpLink": "https://wistp2024.roc.cnam.fr/?page_id=720",
+    "impLink": "https://wistp2024.roc.cnam.fr/?page_id=74",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISTP_determine_response_daef10dd-48fe-4473-833d-c0eb934baf99.txt",
+    "determineMetaData": {
+      "promptTokenCount": 172175,
+      "candidatesTokenCount": 87,
+      "totalTokenCount": 172262,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172175
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 87
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISTP_cfp_2025_03e6b340-e847-42ad-bafc-fe0ae0b9b5fe.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISTP_imp_2025_5bdb6fef-8e0b-4b36-85c6-e0908c56a295.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISTP_extract_response_0c861e51-0bea-4c85-b60b-9740bd7faa2d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139415,
+      "candidatesTokenCount": 1335,
+      "totalTokenCount": 140750,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139415
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1335
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "Workshop on Logic, Language, Information and Computation",
+    "conferenceAcronym": "WoLLIC",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://wollic2025.github.io/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WoLLIC_0_initial_d1191ce1-69b5-476d-80ac-23085c346e72.txt",
+    "cfpLink": "https://easychair.org/conferences/?conf=wollic2025",
+    "impLink": "https://wollic2025.github.io/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WoLLIC_determine_response_73f881e1-2ca0-4a06-9478-95830c16433e.txt",
+    "determineMetaData": {
+      "promptTokenCount": 62824,
+      "candidatesTokenCount": 69,
+      "totalTokenCount": 62893,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 62824
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 69
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WoLLIC_cfp_2025_e7285858-77e0-4ffd-bae0-8fc199700784.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WoLLIC_imp_2025_d4a9ccdc-c4c6-4106-b851-000a55f0daf1.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WoLLIC_extract_response_72f388c4-fd17-4f5a-a56e-b592608b4116.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139188,
+      "candidatesTokenCount": 1090,
+      "totalTokenCount": 140278,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139188
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1090
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "International Conference on Web Information Systems Engineering",
+    "conferenceAcronym": "WISE",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "1",
+    "conferenceLink": "http://www.wise-conferences.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISE_1_initial_f8718a4d-43ea-4704-95b9-c77e56b15372.txt",
+    "cfpLink": "None",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISE_determine_response_a29331f1-476d-4783-9f32-c288ec646eb3.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47186,
+      "candidatesTokenCount": 39,
+      "totalTokenCount": 47225,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47186
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 39
+        }
+      ]
+    },
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WISE_extract_response_5ac7fd40-dbc2-4e20-8ff8-c02b3e009f13.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138890,
+      "candidatesTokenCount": 328,
+      "totalTokenCount": 139218,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138890
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 328
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "World Conference on Information Systems and Technologies",
+    "conferenceAcronym": "WorldCIST",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.worldcist.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WorldCIST_0_initial_d22b7a5a-29a4-4a48-83a9-feba34362284.txt",
+    "cfpLink": "https://www.worldcist.org/index.php/call-for-papers",
+    "impLink": "https://www.worldcist.org/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WorldCIST_determine_response_ecf949ec-fbae-49f7-b6bd-52250987c94f.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49733,
+      "candidatesTokenCount": 61,
+      "totalTokenCount": 49794,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49733
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 61
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WorldCIST_cfp_2025_f9b2539c-2dff-4559-8430-4ff399e41a7a.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WorldCIST_imp_2025_770662b8-6ff9-4dce-9a75-1379244dc9b6.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WorldCIST_extract_response_ae66011b-9378-4003-89b7-db4321e021fd.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141475,
+      "candidatesTokenCount": 1278,
+      "totalTokenCount": 142753,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141475
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1278
+        }
+      ]
+    }
+  },
+  {
+    "conferenceName": "World Congress in Computer Science, Computer Engineering, and Applied Computing",
+    "conferenceAcronym": "WORLDCOMP",
+    "conferenceSource": "",
+    "conferenceRank": "",
+    "conferenceNote": "",
+    "conferenceDBLP": "",
+    "conferencePrimaryFoR": "",
+    "conferenceComments": "",
+    "conferenceRating": "",
+    "conferenceDetails": [],
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.american-cse.org/index.html/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WORLDCOMP_0_initial_d26c26a2-08a6-412b-a2e9-9e7b3e7f37f5.txt",
+    "cfpLink": "https://www.american-cse.org/index.html/",
+    "impLink": "https://www.american-cse.org/index.html/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WORLDCOMP_determine_response_f02f82b3-80b1-4b8d-a1b1-64a1e5eec1cb.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47543,
+      "candidatesTokenCount": 66,
+      "totalTokenCount": 47609,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47543
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 66
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WORLDCOMP_cfp_2025_537e6571-41e6-475c-b107-f17d85caabff.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WORLDCOMP_imp_2025_cfa7fe7a-05dd-4bf7-91f8-cea76d1d6c3b.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\WORLDCOMP_extract_response_506a41f5-80b7-48af-bb63-4c8f8cd51caa.txt",
+    "extractMetaData": {
+      "promptTokenCount": 145428,
+      "candidatesTokenCount": 1092,
+      "totalTokenCount": 146520,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 145428
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1092
         }
       ]
     }

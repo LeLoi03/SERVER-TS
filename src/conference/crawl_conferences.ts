@@ -103,102 +103,107 @@ async function getNextApiKey(): Promise<string | null> {
     return apiKey;
 }
 
-export const crawlConferences = async (conferenceList: ConferenceData[]): Promise<ProcessedResponseData[]> => { // Updated conferenceList type to Conference[]
-    // IMPORTANT: Wait for the queue to be ready
-    const QUEUE = await queuePromise;
 
-    logger.info({ totalConferences: conferenceList.length }, 'Starting crawlConferences process');
+export const crawlConferences = async (conferenceList: ConferenceData[]): Promise<ProcessedResponseData[]> => {
+    const QUEUE = await queuePromise; // IMPORTANT: Wait for the queue
 
-    let browser = null;
+    const operationStartTime = Date.now(); // Ghi lại thời điểm bắt đầu
+    logger.info({
+        event: 'crawl_start', // Thêm event type để dễ lọc
+        totalConferences: conferenceList.length,
+        startTime: new Date(operationStartTime).toISOString()
+    }, 'Starting crawlConferences process');
+
+    let playwrightBrowser: Browser | null = null; // Đổi tên biến để tránh trùng với 'browser' import
     let allBatches: BatchEntry[] = [];
-    let processedConferenceCount: number = 0;
-    let successfulSearchCount: number = 0;
-    let failedSearchCount: number = 0;
-    let skippedSearchCount: number = 0;
-    let successfulSaveCount: number = 0;
-    let failedSaveCount: number = 0;
-    let successfulBatches: number = 0;
-    let failedBatches: number = 0;
 
-
+    // --- Khởi tạo lại trạng thái API key cho mỗi lần chạy ---
     currentKeyIndex = 0;
     currentKeyUsageCount = 0;
     totalGoogleApiRequests = 0;
     allKeysExhausted = false;
+    // -------------------------------------------------------
 
     const MAX_SEARCH_RETRIES: number = 2;
     const RETRY_DELAY_MS: number = 2000;
 
     if (!GOOGLE_CUSTOM_SEARCH_API_KEYS || GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
-        logger.fatal("CRITICAL: GOOGLE_CUSTOM_SEARCH_API_KEYS is empty or not defined. Searches will be skipped.");
-        allKeysExhausted = true;
+        logger.fatal({ event: 'config_error' }, "CRITICAL: GOOGLE_CUSTOM_SEARCH_API_KEYS is empty or not defined. Searches will be skipped.");
+        allKeysExhausted = true; // Đặt cờ này vẫn hợp lý
     }
 
     try {
-        logger.info("Setting up Playwright...");
-        const { browser, browserContext } = await setupPlaywright();
+        logger.info({ event: 'playwright_setup_start' }, "Setting up Playwright...");
+        // Đổi tên biến trả về để không trùng
+        const { browser: pwBrowser, browserContext } = await setupPlaywright();
+        playwrightBrowser = pwBrowser; // Gán vào biến phạm vi ngoài
         const browserCtx = browserContext;
-        if (!browser || !browserCtx) {
-            logger.error("Playwright setup failed. Exiting crawlConferences.");
+
+        if (!playwrightBrowser || !browserCtx) {
+             // Log lỗi đã có trong setupPlaywright nếu cần, ở đây chỉ cần throw
+            logger.error({ event: 'playwright_setup_failed' }, "Playwright setup failed. Exiting crawlConferences.");
             throw new Error("Playwright setup failed");
         }
-        logger.info("Playwright setup successful.");
+        logger.info({ event: 'playwright_setup_success' }, "Playwright setup successful.");
 
         const existingAcronyms: Set<string> = new Set();
-        const batchIndexRef = { current: 1 };
+        const batchIndexRef = { current: 1 }; // Ref để tạo batch index duy nhất
         const batchPromises: Promise<BatchEntry[] | null>[] = [];
         const customSearchPath = path.join(__dirname, "./data/custom_search");
         const sourceRankPath = path.join(__dirname, "./data/source_rank");
 
+        // --- Tạo thư mục ---
         try {
-            logger.debug({ customSearchPath, sourceRankPath }, 'Ensuring output directories exist');
+            logger.debug({ customSearchPath, sourceRankPath, event: 'ensure_dirs' }, 'Ensuring output directories exist');
             if (!fs.existsSync(customSearchPath)) {
                 fs.mkdirSync(customSearchPath, { recursive: true });
-                logger.info({ path: customSearchPath }, 'Created directory');
+                logger.info({ path: customSearchPath, event: 'dir_created' }, 'Created directory');
             }
             if (!fs.existsSync(sourceRankPath)) {
                 fs.mkdirSync(sourceRankPath, { recursive: true });
-                logger.info({ path: sourceRankPath }, 'Created directory');
+                logger.info({ path: sourceRankPath, event: 'dir_created' }, 'Created directory');
             }
-
         } catch (mkdirError: any) {
-            logger.error(mkdirError, "Error creating directories");
-            throw mkdirError;
+            logger.error({ err: mkdirError, event: 'dir_create_error' }, "Error creating directories");
+            throw mkdirError; // Ném lỗi nghiêm trọng
         }
+        // ------------------
 
-        logger.info({ concurrency: QUEUE.concurrency }, "Starting conference processing queue");
+        logger.info({ concurrency: QUEUE.concurrency, event: 'queue_start' }, "Starting conference processing queue");
 
+        // --- Ghi file input ban đầu ---
         try {
-            logger.debug({ path: CONFERENCE_OUTPUT_PATH }, 'Writing initial conference list');
+            logger.debug({ path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list' }, 'Writing initial conference list');
             await fs.promises.writeFile(CONFERENCE_OUTPUT_PATH, JSON.stringify(conferenceList, null, 2), "utf8");
         } catch (writeFileError: any) {
-            logger.warn(writeFileError, `Could not write initial conference list to file: ${CONFERENCE_OUTPUT_PATH}`);
+            logger.warn({ err: writeFileError, path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list_failed' }, `Could not write initial conference list`);
         }
+        // ----------------------------
 
+        // --- Xử lý từng conference trong Queue ---
         const conferenceTasks = conferenceList.map((conference, index) => {
             return QUEUE.add(async () => {
                 const confAcronym = conference?.Acronym || `Unknown-${index}`;
-                const taskLogger = logger.child({ acronym: confAcronym, taskIndex: index + 1 });
-                taskLogger.info(`Processing conference`);
+                // Child logger để tự động thêm acronym và taskIndex vào mỗi log của task này
+                const taskLogger = logger.child({ acronym: confAcronym, taskIndex: index + 1, event_group: 'conference_task' });
+                taskLogger.info({ event: 'task_start' }, `Processing conference`);
+                let taskHasError = false; // Cờ để đánh dấu lỗi trong task
 
                 try {
                     if (conference.mainLink && conference.cfpLink && conference.impLink) {
-                        taskLogger.info(`Processing with pre-defined links`);
-                        // Create ConferenceUpdateData object
-                        const conferenceUpdateData: ConferenceUpdateData = {
-                            Acronym: conference.Acronym,
-                            Title: conference.Title,
-                            mainLink: conference.mainLink || "", // Ensure mainLink is not undefined
-                            cfpLink: conference.cfpLink || "",   // Ensure cfpLink is not undefined
-                            impLink: conference.impLink || "",   // Ensure impLink is not undefined
-                            conferenceText: "", // Initialize as empty, will be updated
-                            cfpText: "",        // Initialize as empty, will be updated
-                            impText: ""         // Initialize as empty, will be updated
-                        };
-                        await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises);
+                        taskLogger.info({ event: 'process_predefined_links' }, `Processing with pre-defined links`);
+                        const conferenceUpdateData: ConferenceUpdateData = { /* ... như cũ ... */ Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "", conferenceText: "", cfpText: "", impText: "" };
+                         try {
+                            // Giả sử updateHTMLContent log chi tiết bên trong
+                            await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises);
+                            taskLogger.info({ event: 'process_predefined_links_success' }, "Predefined links processing step completed.");
+                         } catch (updateError: any) {
+                             taskHasError = true;
+                             taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined links processing.");
+                         }
 
                     } else {
-                        taskLogger.info(`Searching and processing`);
+                        taskLogger.info({ event: 'search_and_process_start' }, `Searching and processing`);
                         let searchResults: GoogleSearchResult[] = [];
                         let searchResultsLinks: string[] = [];
                         let searchSuccess: boolean = false;
@@ -212,235 +217,240 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                             .replace(/\${Year3}/g, String(YEAR3))
                             .replace(/\${Year1}/g, String(YEAR1));
 
-
+                        // --- Google Search Loop ---
                         for (let attempt = 1; attempt <= MAX_SEARCH_RETRIES + 1; attempt++) {
                             if (allKeysExhausted) {
-                                taskLogger.warn(`Skipping Google Search attempt ${attempt} - All API keys are exhausted.`);
-                                skippedSearchCount++;
+                                taskLogger.warn({ attempt, event: 'search_skip_all_keys_exhausted' }, `Skipping Google Search attempt - All API keys exhausted.`);
+                                // Không cần biến đếm skippedSearchCount++;
                                 lastSearchError = new Error("All API keys exhausted during search attempts.");
-                                break;
+                                break; // Thoát vòng lặp tìm kiếm
                             }
 
-                            const apiKey = await getNextApiKey();
+                            const apiKey = await getNextApiKey(); // Hàm này nên log key index và total requests nếu cần
 
                             if (!apiKey) {
-                                taskLogger.warn(`Skipping Google Search attempt ${attempt} - Failed to get a valid API key.`);
-                                skippedSearchCount++;
+                                taskLogger.warn({ attempt, event: 'search_skip_no_key' }, `Skipping Google Search attempt - Failed to get valid API key.`);
+                                // Không cần biến đếm skippedSearchCount++;
                                 lastSearchError = new Error("Failed to get API key for search attempt.");
-                                break;
+                                break; // Thoát vòng lặp tìm kiếm
                             }
 
-                            taskLogger.info({
-                                attempt,
-                                maxAttempts: MAX_SEARCH_RETRIES + 1,
-                                keyIndex: currentKeyIndex + 1,
-                                totalRequests: totalGoogleApiRequests
-                            }, `Attempting Google Search`);
+                            // Log khi bắt đầu thử search (đã có trong code gốc, giữ nguyên)
+                            taskLogger.info({ attempt, maxAttempts: MAX_SEARCH_RETRIES + 1, keyIndex: currentKeyIndex + 1, totalRequestsAtAttempt: totalGoogleApiRequests, event: 'search_attempt' }, `Attempting Google Search`);
 
                             try {
                                 searchResults = await searchGoogleCSE(apiKey, GOOGLE_CSE_ID!, searchQuery);
                                 searchSuccess = true;
-                                successfulSearchCount++;
-                                taskLogger.info({
-                                    keyIndex: currentKeyIndex + 1,
-                                    usage: currentKeyUsageCount,
-                                    attempt,
-                                    resultsCount: searchResults.length
-                                }, `Google Search successful on attempt ${attempt}`);
-
-
-                                break;
+                                // Log thành công (đã có trong code gốc, giữ nguyên)
+                                taskLogger.info({ keyIndex: currentKeyIndex + 1, usage: currentKeyUsageCount, attempt, resultsCount: searchResults.length, event: 'search_success' }, `Google Search successful on attempt ${attempt}`);
+                                break; // Thoát vòng lặp khi thành công
 
                             } catch (searchError: any) {
-                                lastSearchError = searchError;
-                                taskLogger.warn({
-                                    attempt,
-                                    maxAttempts: MAX_SEARCH_RETRIES + 1,
-                                    keyIndex: currentKeyIndex + 1,
-                                    err: searchError.message,
-                                    details: searchError.details
-                                }, `Google Search attempt ${attempt} failed`);
+                                lastSearchError = searchError; // Lưu lỗi cuối cùng
+                                // Log lỗi search attempt (đã có trong code gốc, giữ nguyên)
+                                taskLogger.warn({ attempt, maxAttempts: MAX_SEARCH_RETRIES + 1, keyIndex: currentKeyIndex + 1, err: searchError, details: searchError.details, event: 'search_attempt_failed' }, `Google Search attempt ${attempt} failed`);
 
-                                const isQuotaError = searchError.details?.status === 429 ||
-                                    searchError.details?.googleErrorCode === 429 ||
-                                    searchError.details?.googleErrors?.some((e: any) => e.reason === 'rateLimitExceeded' || e.reason === 'quotaExceeded');
+                                const isQuotaError = searchError.details?.status === 429 || /* ... như cũ ... */ searchError.details?.googleErrorCode === 429 || searchError.details?.googleErrors?.some((e: any) => e.reason === 'rateLimitExceeded' || e.reason === 'quotaExceeded');
 
-                                let rotated = false;
+                                // Xử lý Quota Error và xoay key (đã có, giữ nguyên logic log)
                                 if (isQuotaError && attempt <= MAX_SEARCH_RETRIES) {
-                                    taskLogger.warn(`Quota/Rate limit error (429) detected on attempt ${attempt}. Forcing API key rotation.`);
-                                    rotated = await forceRotateApiKey();
+                                    taskLogger.warn({ attempt, event: 'search_quota_error_detected' }, `Quota/Rate limit error (429) detected. Forcing API key rotation.`);
+                                    const rotated = await forceRotateApiKey(); // Hàm này nên log nếu xoay thành công/thất bại
                                     if (!rotated) {
-                                        taskLogger.error("Failed to rotate key after quota error, stopping retries for this conference.");
-                                        break;
+                                        taskLogger.error({ event: 'search_key_rotation_failed' }, "Failed to rotate key after quota error, stopping retries for this conference.");
+                                        break; // Dừng retry nếu không xoay được key
                                     }
                                 }
 
+                                // Log khi hết số lần thử (đã có, giữ nguyên)
                                 if (attempt > MAX_SEARCH_RETRIES) {
-                                    taskLogger.error({
-                                        finalAttempt: attempt,
-                                        err: searchError.message,
-                                        details: searchError.details
-                                    }, `Google Search failed after maximum retries.`);
+                                    taskLogger.error({ finalAttempt: attempt, err: searchError, details: searchError.details, event: 'search_failed_max_retries' }, `Google Search failed after maximum retries.`);
+                                    // Không cần failedSearchCount++;
                                 } else if (!allKeysExhausted) {
-                                    taskLogger.info({ attempt, delaySeconds: RETRY_DELAY_MS / 1000 }, `Waiting before retry attempt ${attempt + 1}...`);
+                                    // Log chờ retry (đã có, giữ nguyên)
+                                    taskLogger.info({ attempt, delaySeconds: RETRY_DELAY_MS / 1000, event: 'search_retry_wait' }, `Waiting before retry attempt ${attempt + 1}...`);
                                     await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS));
                                 }
                             }
-                        }
+                        } // Kết thúc for loop search
 
+                        // --- Xử lý kết quả Search ---
                         if (searchSuccess) {
+                            // Log lọc kết quả (đã có, giữ nguyên)
                             const filteredResults = filterSearchResults(searchResults, UNWANTED_DOMAINS, SKIP_KEYWORDS);
                             const limitedResults = filteredResults.slice(0, MAX_LINKS || 4);
                             searchResultsLinks = limitedResults.map(res => res.link);
+                            taskLogger.info({ rawResults: searchResults.length, filteredResults: limitedResults.length, event: 'search_results_filtered' }, `Filtered search results`);
 
-                            taskLogger.info({
-                                rawResults: searchResults.length,
-                                filteredResults: limitedResults.length
-                            }, `Filtered search results`);
-
+                            // Ghi file links (đã có, giữ nguyên logic log)
                             const allLinks = searchResults.map(result => result.link);
-                            const allLinksOutputPath = path.join(__dirname, `./data/custom_search/${conference.Acronym.replace(/[^a-zA-Z0-9_.-]/g, '-')}_links.json`);
+                            const allLinksOutputPath = path.join(__dirname, `./data/custom_search/${confAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-')}_links.json`);
                             try {
-                                taskLogger.debug({ path: allLinksOutputPath }, 'Writing search result links to file');
+                                taskLogger.debug({ path: allLinksOutputPath, event: 'write_search_links' }, 'Writing search result links to file');
                                 fs.writeFileSync(allLinksOutputPath, JSON.stringify(allLinks, null, 2), "utf8");
                             } catch (writeLinksError: any) {
-                                taskLogger.warn(writeLinksError, `Could not write search result links to file: ${allLinksOutputPath}`);
+                                taskLogger.warn({ err: writeLinksError, path: allLinksOutputPath, event: 'write_search_links_failed' }, `Could not write search result links`);
                             }
-
-
                         } else {
-                            failedSearchCount++;
-                            taskLogger.error({ err: lastSearchError?.message, details: lastSearchError?.details }, "Google Search ultimately failed for this conference.");
-                            searchResultsLinks = [];
+                            // Log search thất bại cuối cùng (đã có, giữ nguyên)
+                             // Đảm bảo log này được ghi KHI searchSuccess là false sau vòng lặp
+                            taskLogger.error({ err: lastSearchError, details: lastSearchError?.details, event: 'search_ultimately_failed' }, "Google Search ultimately failed for this conference.");
+                            searchResultsLinks = []; // Đảm bảo links rỗng
                         }
+                        // --------------------------
 
-                        taskLogger.info({ linksToCrawl: searchResultsLinks.length }, `Attempting to save HTML content`);
+                        // --- Lưu HTML Content ---
+                        // Log bắt đầu lưu (đã có, giữ nguyên)
+                        taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content`);
                         try {
+                             // Hàm saveHTMLContent sẽ log chi tiết bên trong (thành công/thất bại từng link)
                             await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2);
-                            if (searchResultsLinks.length > 0) successfulSaveCount++;
-                            taskLogger.info('Save HTML content step completed.');
+                            // Log khi bước lưu hoàn tất (không phân biệt có link hay không)
+                            taskLogger.info({ event: 'save_html_step_completed' }, 'Save HTML content step completed.');
+                            // Không cần successfulSaveCount++;
                         } catch (saveError: any) {
-                            failedSaveCount++;
-                            taskLogger.error(saveError, 'Save HTML content failed');
+                            taskHasError = true; // Đánh dấu lỗi cho task này
+                            // Log lỗi lưu (đã có, giữ nguyên)
+                            taskLogger.error({ err: saveError, event: 'save_html_failed' }, 'Save HTML content failed');
+                            // Không cần failedSaveCount++;
                         }
+                        // ----------------------
                     }
-                    processedConferenceCount++;
+
+                    // Không cần processedConferenceCount++ ở đây
 
                 } catch (taskError: any) {
-                    processedConferenceCount++;
-                    taskLogger.error(taskError, `Unhandled error processing conference task`);
+                    taskHasError = true; // Đánh dấu lỗi cho task này
+                    // Log lỗi không xác định trong task (đã có, giữ nguyên)
+                    taskLogger.error({ err: taskError, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
+                    // Không cần processedConferenceCount++ ở đây
                 } finally {
-                    taskLogger.debug(`Finished processing queue item`);
+                    // Log kết thúc xử lý task, thêm trạng thái thành công/thất bại
+                    taskLogger.info({ event: 'task_finish', success: !taskHasError }, `Finished processing queue item`);
                 }
             });
-        });
+        }); // Kết thúc map conferenceList
 
+        // --- Chờ tất cả task trong queue hoàn thành ---
         await Promise.all(conferenceTasks);
-        logger.info("All conference processing tasks added to queue have finished.");
+        logger.info({ event: 'queue_finished' }, "All conference processing tasks added to queue have finished.");
+        // --------------------------------------------
 
         // --- Chờ và tổng hợp kết quả Batch ---
-        logger.info({ promiseCount: batchPromises.length }, "Waiting for all batch operations to settle...");
+        logger.info({ promiseCount: batchPromises.length, event: 'batch_aggregation_start' }, "Waiting for all batch operations to settle...");
         const settledResults = await Promise.allSettled(batchPromises);
-        logger.info("All batch operations settled. Aggregating results...");
+        logger.info({ event: 'batch_aggregation_settled' }, "All batch operations settled. Aggregating results...");
 
-        // clear allBatches before aggregating
-        allBatches = []; // Ensure it's empty before pushing potentially stale data if run multiple times
+        allBatches = []; // Xóa batch cũ trước khi tổng hợp
 
-        logger.info("Aggregating results from batches...");
-        for (let i = 0; i < settledResults.length; i++) {
-            const result = settledResults[i];
+        // Phân tích kết quả batch và log chi tiết từng cái
+        let aggregatedSuccessCount = 0;
+        let aggregatedFailedCount = 0;
+        settledResults.forEach((result, i) => {
+            const batchLogContext = { batchPromiseIndex: i }; // Index của promise trong mảng batchPromises
             if (result.status === 'fulfilled' && result.value) {
-                // result.value là BatchEntry[] | null
-                if (Array.isArray(result.value)) { // Check if it's an array (not null)
-                    allBatches.push(...result.value); // result.value is BatchEntry[]
-                    successfulBatches++;
-                } else {
-                    // Handle the case where the promise resolved to null (maybe intended failure?)
-                    logger.warn({ batchIndex: i /* approximate */ }, "Batch promise resolved to null or non-array value.");
-                    failedBatches++; // Or handle differently if null has specific meaning
-                }
-
+                 if (Array.isArray(result.value) && result.value.length > 0) { // Phải là mảng không rỗng
+                     allBatches.push(...result.value);
+                     aggregatedSuccessCount++;
+                     logger.info({ ...batchLogContext, batchCount: result.value.length, status: result.status, event: 'batch_aggregation_item_success' }, "Batch promise fulfilled with data.");
+                 } else {
+                     // Resolved thành null hoặc mảng rỗng -> coi là thất bại logic
+                     aggregatedFailedCount++;
+                     logger.warn({ ...batchLogContext, status: result.status, valueType: typeof result.value, isEmptyArray: Array.isArray(result.value), event: 'batch_aggregation_item_failed_logic' }, "Batch promise resolved to null or empty array.");
+                 }
             } else if (result.status === 'rejected') {
-                failedBatches++;
-                // Cố gắng log thêm context nếu có thể (index giúp định vị phần nào)
-                logger.error({ batchIndex: i /* approximate */, reason: result.reason }, "Batch operation failed");
+                aggregatedFailedCount++;
+                 // Log lỗi từ batch promise (đã có, giữ nguyên)
+                logger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_aggregation_item_failed_rejected' }, "Batch operation promise rejected");
+            } else {
+                 // Trường hợp fulfilled nhưng value là null/undefined (đã xử lý ở trên)
+                 aggregatedFailedCount++; // Xử lý như một thất bại
+                 logger.warn({ ...batchLogContext, status: result.status, value: result.value, event: 'batch_aggregation_item_failed_nodata' }, "Batch promise fulfilled but with no value.");
             }
-        }
-        logger.info({ successfulBatches, failedBatches, aggregatedCount: allBatches.length }, "Finished aggregating batch results.");
+        });
 
+        // Log kết quả tổng hợp batch cuối cùng (sử dụng biến đếm *cục bộ* trong vòng lặp trên)
+        logger.info({
+            successfulBatches: aggregatedSuccessCount,
+            failedBatches: aggregatedFailedCount,
+            aggregatedCount: allBatches.length, // Số lượng entry thực tế được thêm
+            event: 'batch_aggregation_finished'
+        }, "Finished aggregating batch results.");
+        // Không cần successfulBatches, failedBatches ở phạm vi ngoài
+        // ------------------------------------
 
         // --- Ghi file output cuối cùng ---
-        logger.info("Writing final outputs...");
+        logger.info({ event: 'final_output_start' }, "Writing final outputs...");
         const allBatchesFilePath = path.join(__dirname, `./data/allBatches.json`);
         const evaluateFilePath = path.join(__dirname, './data/evaluate.csv');
 
+        // Ghi allBatches.json (đã có, giữ nguyên logic log)
         try {
-            logger.info({ path: allBatchesFilePath, count: allBatches.length }, 'Writing aggregated results (allBatches) to JSON file');
-            // File JSON này sẽ chứa paths
-            await fs.promises.writeFile(
-                allBatchesFilePath,
-                JSON.stringify(allBatches, null, 2), // allBatches giờ chứa paths
-                "utf8"
-            );
-            logger.info('Successfully wrote allBatches JSON file.');
+            logger.info({ path: allBatchesFilePath, count: allBatches.length, event: 'write_allbatches_json' }, 'Writing aggregated results (allBatches) to JSON file');
+            await fs.promises.writeFile(allBatchesFilePath, JSON.stringify(allBatches, null, 2), "utf8");
+            logger.info({ path: allBatchesFilePath, event: 'write_allbatches_json_success' }, 'Successfully wrote allBatches JSON file.');
         } catch (writeBatchesError: any) {
-            logger.error(writeBatchesError, `Error writing allBatches to JSON file: ${allBatchesFilePath}`);
-            // Có thể throw lỗi ở đây nếu file này quan trọng
+            logger.error({ err: writeBatchesError, path: allBatchesFilePath, event: 'write_allbatches_json_failed' }, `Error writing allBatches to JSON file`);
         }
 
+        // Ghi evaluate.csv (đã có, giữ nguyên logic log)
         let finalProcessedData: ProcessedResponseData[] = [];
         if (allBatches && allBatches.length > 0) {
             try {
-                logger.info({ path: evaluateFilePath, recordCount: allBatches.length }, 'Writing final results to CSV file');
-                // writeCSVFile đã được điều chỉnh để đọc từ paths trong allBatches
-                finalProcessedData = await writeCSVFile(evaluateFilePath, allBatches);
-                logger.info('Successfully wrote CSV file.');
+                logger.info({ path: evaluateFilePath, recordCount: allBatches.length, event: 'write_evaluate_csv' }, 'Writing final results to CSV file');
+                finalProcessedData = await writeCSVFile(evaluateFilePath, allBatches); // Hàm này nên log bên trong nếu có lỗi
+                logger.info({ path: evaluateFilePath, event: 'write_evaluate_csv_success' }, 'Successfully wrote CSV file.');
             } catch (csvError: any) {
-                logger.error(csvError, `Error writing final CSV file: ${evaluateFilePath}`);
-                // Quyết định có nên dừng hoàn toàn hay không
-                // throw csvError; // Ném lại lỗi nếu file CSV là bắt buộc
+                logger.error({ err: csvError, path: evaluateFilePath, event: 'write_evaluate_csv_failed' }, `Error writing final CSV file`);
             }
         } else {
-            logger.warn("No data available in allBatches to write to CSV.");
-            // finalProcessedData sẽ là mảng rỗng
+            logger.warn({ event: 'write_evaluate_csv_skipped' }, "No data available in allBatches to write to CSV.");
         }
-        return finalProcessedData; // Trả về kết quả cuối cùng
+        // ------------------------------
 
+        // Trả về dữ liệu cuối cùng
+        return finalProcessedData;
 
     } catch (error: any) {
-        logger.fatal(error, "Fatal error during crawling process");
-        return []; // Trả về mảng rỗng khi có lỗi nghiêm trọng
+         // Log lỗi nghiêm trọng của toàn bộ quá trình (đã có, giữ nguyên)
+        logger.fatal({ err: error, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
+        return []; // Trả về mảng rỗng
     } finally {
         // --- Luôn thực hiện cleanup ---
-        logger.info("Performing final cleanup...");
+        logger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
 
-        // 1. Dọn dẹp file tạm
-        await cleanupTempFiles(); // <<< THÊM BƯỚC NÀY
+        // 1. Dọn dẹp file tạm (đã có, giữ nguyên)
+        await cleanupTempFiles(); // Hàm này nên log bên trong
 
-        // 2. Đóng trình duyệt
-        if (browser) { //  Check if browser is not null/undefined
-            logger.info("Closing Playwright browser...");
+        // 2. Đóng trình duyệt (đã có, giữ nguyên logic log)
+        if (playwrightBrowser) {
+            logger.info({ event: 'playwright_close_start' }, "Closing Playwright browser...");
             try {
-                await (browser as Browser).close();  // Type assertion: Tell TypeScript to treat 'browser' as a 'Browser' here
-                logger.info("Playwright browser closed successfully.");
+                await playwrightBrowser.close();
+                logger.info({ event: 'playwright_close_success' }, "Playwright browser closed successfully.");
             } catch (closeError: any) {
-                logger.error(closeError, "Error closing Playwright browser");
+                logger.error({ err: closeError, event: 'playwright_close_failed' }, "Error closing Playwright browser");
             }
         }
 
-        // 3. Log thông tin tổng kết
+        // 3. Log thông tin tổng kết - LOẠI BỎ CÁC BIẾN ĐẾM
+        const operationEndTime = Date.now();
+        const durationSeconds = Math.round((operationEndTime - operationStartTime) / 1000);
         logger.info({
+            event: 'crawl_summary', // Đổi tên event
             totalConferencesInput: conferenceList.length,
-            processedConferences: processedConferenceCount,
-            totalGoogleApiRequests: totalGoogleApiRequests,
-            successfulSearches: successfulSearchCount,
-            failedSearches: failedSearchCount,
-            skippedSearches: skippedSearchCount,
-            successfulBatches,
-            failedBatches
-        }, "Crawling process summary");
+            // processedConferences: processedConferenceCount, // Bỏ
+            totalGoogleApiRequests: totalGoogleApiRequests, // Giữ lại nếu biến này vẫn được quản lý và cập nhật đúng
+            // successfulSearches: successfulSearchCount,      // Bỏ
+            // failedSearches: failedSearchCount,            // Bỏ
+            // skippedSearches: skippedSearchCount,          // Bỏ
+            // successfulBatches,                             // Bỏ (đã log ở bước aggregation)
+            // failedBatches                                  // Bỏ (đã log ở bước aggregation)
+            durationSeconds,
+            endTime: new Date(operationEndTime).toISOString()
+        }, "Crawling process summary"); // Giữ message này
 
-        logger.info("crawlConferences process finished.");
+        logger.info({ event: 'crawl_end' }, "crawlConferences process finished.");
         // --- Kết thúc cleanup ---
     }
 };

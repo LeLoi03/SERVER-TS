@@ -4,7 +4,14 @@ import { Mutex } from 'async-mutex';
 import { APP_LOG_FILE_PATH, LOG_LEVEL, LOGS_DIRECTORY } from '../config'; // Import từ config.ts
 
 import { PinoFileDestination } from './types';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const VIETNAM_TIMEZONE = 'Asia/Ho_Chi_Minh';
 
 // --- Đảm bảo thư mục log tồn tại ---
 // LOGS_DIRECTORY và APP_LOG_FILE_PATH đã là đường dẫn tuyệt đối từ config.ts
@@ -36,13 +43,15 @@ const levelLabels: { [key: number]: string } = {
 // Sử dụng LoggerOptions để định kiểu cho cấu hình
 const pinoConfig: LoggerOptions = {
     level: LOG_LEVEL, // Đã có kiểu AllowedLogLevel từ config
+    // timestamp: () => `,"time":"${dayjs().tz(VIETNAM_TIMEZONE).format('YYYY-MM-DD')}"`,
     timestamp: stdTimeFunctions.isoTime, // Sử dụng hàm chuẩn của Pino
     formatters: {
         level: (label: string, number: number): { level: string } => ({
             level: levelLabels[number] || label
         }),
     },
-    // base: undefined, // Bỏ các trường mặc định như pid, hostname nếu muốn
+    
+    base: undefined, // Bỏ các trường mặc định như pid, hostname
 };
 
 // --- Khởi tạo Pino Logger ---
@@ -242,25 +251,25 @@ export const addAcronymSafely = async (set: Set<string>, acronymIndex: string): 
     try {
         let adjustedAcronym = acronymIndex;
         let counter = 1;
-        // Xóa hậu tố _diffN hiện có (nếu có) để lấy base
-        const baseAcronym = acronymIndex.replace(/_diff\d+$/, '');
-
+        // Xóa hậu tố _N hiện có (nếu có) để lấy base
+        const baseAcronym = acronymIndex.replace(/_\d+$/, '');
+ 
         adjustedAcronym = baseAcronym; // Bắt đầu kiểm tra từ base
 
-        // Kiểm tra xem base hoặc các phiên bản _diffN đã tồn tại chưa
+        // Kiểm tra xem base hoặc các phiên bản _N đã tồn tại chưa
         if (set.has(adjustedAcronym)) {
-            logger.debug({ acronym: adjustedAcronym }, 'Base acronym exists, starting diff check.');
+            logger.debug({ acronym: adjustedAcronym }, 'Base acronym exists, starting  check.');
             do {
-                adjustedAcronym = `${baseAcronym}_diff${counter}`;
+                adjustedAcronym = `${baseAcronym}_${counter}`;
                 counter++;
                  // Thêm giới hạn để tránh vòng lặp vô hạn tiềm ẩn (tuỳ chọn)
                  if (counter > 10000) { // Tăng giới hạn nếu cần
-                    logger.warn({ baseAcronym, attempt: counter }, 'addAcronymSafely: Excessive diff counter reached, potential infinite loop or very high collision rate.');
+                    logger.warn({ baseAcronym, attempt: counter }, 'addAcronymSafely: Excessive  counter reached, potential infinite loop or very high collision rate.');
                     // Trả về giá trị lỗi hoặc throw để báo hiệu vấn đề nghiêm trọng
-                    return `${baseAcronym}_diff_limit_reached`; // Hoặc throw new Error(...)
+                    return `${baseAcronym}_limit_reached`; // Hoặc throw new Error(...)
                  }
             } while (set.has(adjustedAcronym));
-            logger.debug({ original: acronymIndex, adjusted: adjustedAcronym }, 'Found non-conflicting acronym with _diff.');
+            logger.debug({ original: acronymIndex, adjusted: adjustedAcronym }, 'Found non-conflicting acronym with _.');
         } else {
             logger.debug({ acronym: adjustedAcronym }, 'Base acronym does not exist, using it directly.');
         }
@@ -332,3 +341,5 @@ export const cleanupTempFiles = async (): Promise<void> => {
         console.error("Error cleaning up temporary files:", error);
     }
 };
+
+

@@ -1,31 +1,30 @@
 import {
     GoogleGenerativeAI,
-    type CachedContent, // Import specific type
-    type GenerativeModel, // Import specific type
-    type Content, // Import specific type
-    type Part, // Import specific type
-    type GenerateContentRequest, // Import specific type
-    type GenerateContentResult, // Use GenerateContentResult
+    type CachedContent,
+    type GenerativeModel,
+    type Content,
+    type Part,
+    type GenerateContentRequest,
+    type GenerateContentResult,
     // HarmCategory, HarmBlockThreshold, // Optionally import safety types if needed
 } from "@google/generative-ai";
-// Check your SDK version if '@google/generative-ai/server' path gives issues.
 import { GoogleAICacheManager } from "@google/generative-ai/server";
 
-import { promises as fsPromises, existsSync } from 'fs'; // Use promises and existsSync
+import { promises as fsPromises, existsSync } from 'fs';
 import path from 'path';
 import {
     RateLimiterRes,
     RateLimiterMemory,
-    type IRateLimiterOptions, // Import type for options
+    type IRateLimiterOptions,
 } from 'rate-limiter-flexible';
-import { logger } from './11_utils'; // Assuming 11_utils.ts exists and exports logger
+import { logger } from './11_utils';
 import {
     apiConfigs, API_TYPE_EXTRACT, API_TYPE_DETERMINE,
     GEMINI_API_KEY, apiLimiter,
     MODEL_RATE_LIMIT_POINTS, MODEL_RATE_LIMIT_DURATION, MODEL_RATE_LIMIT_BLOCK_DURATION,
     MAX_RETRIES, INITIAL_DELAY_BETWEEN_RETRIES, MAX_DELAY_BETWEEN_RETRIES,
-    type ApiConfig // Import the interface type from config
-} from '../config'; // Import from .ts file
+    type ApiConfig
+} from '../config';
 
 import { RetryableFunction, type ApiResponse, type CallGeminiApiParams } from "./types";
 
@@ -33,86 +32,91 @@ export const RESPONSE_OUTPUT_DIR: string = path.join(__dirname, "./data/response
 
 
 // --- Persistent Cache Map Configuration ---
-const CACHE_MAP_DIR: string = path.resolve(process.env.CACHE_MAP_DIR || './data'); // Thư mục lưu file map
+const CACHE_MAP_DIR: string = path.resolve(process.env.CACHE_MAP_DIR || './data');
 const CACHE_MAP_FILENAME: string = 'gemini_cache_map.json';
 const CACHE_MAP_FILE_PATH: string = path.join(CACHE_MAP_DIR, CACHE_MAP_FILENAME);
 
 // --- Cache Storage ---
-// Map<modelName (string), cacheName (string)> - Stores names loaded from/saved to file
 let persistentCacheNameMap: Map<string, string> = new Map();
-// Map<modelName (string), cacheObject (CachedContent)> - Stores actual cache objects in memory
 const extractApiCaches: Map<string, CachedContent> = new Map();
 
 // --- Khởi tạo Google Generative AI ---
 let genAI: GoogleGenerativeAI | null = null;
-console.log("Initializing GoogleGenerativeAI...");
+logger.info("Initializing GoogleGenerativeAI..."); // Changed from console.log
 try {
     if (!GEMINI_API_KEY) {
         throw new Error("GEMINI_API_KEY is missing.");
     }
     genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    console.log("GoogleGenerativeAI initialized successfully.");
-    logger.info("GoogleGenerativeAI initialized successfully.");
+    logger.info("GoogleGenerativeAI initialized successfully."); // Changed from console.log
 } catch (initError: unknown) {
-    const message = initError instanceof Error ? initError.message : String(initError);
-    console.error("Failed to initialize GoogleGenerativeAI:", message);
-    logger.fatal(initError, "Failed to initialize GoogleGenerativeAI. Gemini API calls will likely fail.");
+    const errorDetails = initError instanceof Error ? { name: initError.name, message: initError.message, stack: initError.stack } : { details: String(initError) };
+    logger.fatal({ err: errorDetails }, "Failed to initialize GoogleGenerativeAI. Gemini API calls will likely fail."); // Structured logging
     // genAI remains null
-    // Consider exiting if genAI is critical: process.exit(1);
 }
 
 // --- Cache Name Map File I/O Functions ---
 const loadCacheNameMap = async (): Promise<void> => {
-    logger.info(`Attempting to load cache name map from: ${CACHE_MAP_FILE_PATH}`);
+    const logContext = { filePath: CACHE_MAP_FILE_PATH, function: 'loadCacheNameMap' };
+    logger.info(logContext, "Attempting to load cache name map");
     try {
         if (!existsSync(CACHE_MAP_DIR)) {
-            logger.warn(`Cache map directory not found, creating: ${CACHE_MAP_DIR}`);
+            logger.warn({ ...logContext, directory: CACHE_MAP_DIR }, "Cache map directory not found, creating");
             await fsPromises.mkdir(CACHE_MAP_DIR, { recursive: true });
+            logger.info({ ...logContext, directory: CACHE_MAP_DIR }, "Cache map directory created");
         }
         if (!existsSync(CACHE_MAP_FILE_PATH)) {
-            logger.warn(`Cache map file not found at ${CACHE_MAP_FILE_PATH}. Starting with an empty map.`);
+            logger.warn(logContext, "Cache map file not found. Starting with an empty map.");
             persistentCacheNameMap = new Map();
             return;
         }
         const fileContent = await fsPromises.readFile(CACHE_MAP_FILE_PATH, 'utf8');
         if (!fileContent.trim()) {
-            logger.warn(`Cache map file is empty. Starting with an empty map.`);
+            logger.warn(logContext, "Cache map file is empty. Starting with an empty map.");
             persistentCacheNameMap = new Map();
             return;
         }
-        // Type the parsed data explicitly
         const data: Record<string, string> = JSON.parse(fileContent);
         persistentCacheNameMap = new Map<string, string>(Object.entries(data));
-        logger.info(`Successfully loaded ${persistentCacheNameMap.size} cache name entries from file.`);
+        logger.info({ ...logContext, loadedCount: persistentCacheNameMap.size }, "Successfully loaded cache name entries from file");
     } catch (error: unknown) {
-        logger.error(error, `Failed to load or parse cache name map from ${CACHE_MAP_FILE_PATH}. Starting with an empty map.`);
+        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+        logger.error({ ...logContext, err: errorDetails }, "Failed to load or parse cache name map. Starting with an empty map.");
         persistentCacheNameMap = new Map(); // Reset on error
     }
 };
 
 const saveCacheNameMap = async (): Promise<void> => {
-    if (!genAI) return; // Avoid saving if genAI failed
+    const logContext = { filePath: CACHE_MAP_FILE_PATH, function: 'saveCacheNameMap' };
+    if (!genAI) {
+        logger.warn(logContext, "Skipping save cache name map: GoogleGenerativeAI not initialized.");
+        return;
+    }
 
-    logger.debug(`Attempting to save cache name map to: ${CACHE_MAP_FILE_PATH}`);
+    logger.debug(logContext, "Attempting to save cache name map");
     try {
         if (!existsSync(CACHE_MAP_DIR)) {
+            logger.info({ ...logContext, directory: CACHE_MAP_DIR }, "Creating cache map directory before saving");
             await fsPromises.mkdir(CACHE_MAP_DIR, { recursive: true });
         }
-        // Convert Map to object for JSON.stringify
         const dataToSave: Record<string, string> = Object.fromEntries(persistentCacheNameMap);
         const jsonString = JSON.stringify(dataToSave, null, 2);
         await fsPromises.writeFile(CACHE_MAP_FILE_PATH, jsonString, 'utf8');
-        logger.debug(`Successfully saved cache name map (${persistentCacheNameMap.size} entries) to file.`);
+        logger.debug({ ...logContext, savedCount: persistentCacheNameMap.size }, "Successfully saved cache name map to file");
     } catch (error: unknown) {
-        logger.error(error, `Failed to save cache name map to ${CACHE_MAP_FILE_PATH}.`);
+        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+        logger.error({ ...logContext, err: errorDetails }, "Failed to save cache name map");
     }
 };
 
 const removePersistentCacheEntry = async (modelName: string): Promise<void> => {
+    const logContext = { modelName, function: 'removePersistentCacheEntry' };
     if (persistentCacheNameMap.has(modelName)) {
-        logger.warn(`Removing persistent cache entry for model ${modelName}.`);
+        logger.warn(logContext, "Removing persistent cache entry");
         persistentCacheNameMap.delete(modelName);
         await saveCacheNameMap(); // Save immediately after removal
+    } else {
+        logger.debug(logContext, "No persistent cache entry found to remove");
     }
 };
 
@@ -125,21 +129,23 @@ const removePersistentCacheEntry = async (modelName: string): Promise<void> => {
 // --- Cache Manager Initialization ---
 let cacheManager: GoogleAICacheManager | null = null;
 const initializeCacheManager = (): GoogleAICacheManager | null => {
+    const logContext = { function: 'initializeCacheManager' };
     if (!genAI) {
-        logger.warn("GoogleGenerativeAI not initialized, skipping CacheManager initialization.");
+        logger.warn(logContext, "GoogleGenerativeAI not initialized, skipping CacheManager initialization.");
         return null;
     }
     if (cacheManager) {
+        logger.debug(logContext, "CacheManager already initialized.");
         return cacheManager;
     }
-    logger.info("Initializing GoogleAICacheManager...");
+    logger.info(logContext, "Initializing GoogleAICacheManager...");
     try {
-        // Ensure API Key is valid before passing
         if (!GEMINI_API_KEY) throw new Error("Cannot initialize CacheManager without GEMINI_API_KEY");
         cacheManager = new GoogleAICacheManager(GEMINI_API_KEY);
-        logger.info("GoogleAICacheManager initialized successfully.");
+        logger.info(logContext, "GoogleAICacheManager initialized successfully.");
     } catch (error: unknown) {
-        logger.error(error, "Failed to initialize GoogleAICacheManager");
+        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+        logger.error({ ...logContext, err: errorDetails }, "Failed to initialize GoogleAICacheManager");
         cacheManager = null;
     }
     return cacheManager;
@@ -150,128 +156,132 @@ const initializeCacheManager = (): GoogleAICacheManager | null => {
 const modelRateLimiters: Map<string, RateLimiterMemory> = new Map();
 
 function getRateLimiterForModel(modelName: string): RateLimiterMemory {
+    const logContext = { modelName, function: 'getRateLimiterForModel' };
     if (!modelRateLimiters.has(modelName)) {
-        logger.info(`Creating new rate limiter for model: ${modelName}`);
-        // Type the options explicitly
+        logger.info(logContext, "Creating new rate limiter");
         const limiterOptions: IRateLimiterOptions = {
             points: MODEL_RATE_LIMIT_POINTS,
             duration: MODEL_RATE_LIMIT_DURATION,
             blockDuration: MODEL_RATE_LIMIT_BLOCK_DURATION,
-            keyPrefix: `model_${modelName}`, // Unique prefix per model
+            keyPrefix: `model_${modelName}`,
         };
         try {
             const newLimiter = new RateLimiterMemory(limiterOptions);
-            // Check if creation was successful and it's a valid object
             if (!newLimiter || typeof newLimiter.consume !== 'function') {
-                logger.error(`!!! Failed to create a valid rate limiter object for ${modelName} !!!`, { options: limiterOptions });
+                logger.error({ ...logContext, options: limiterOptions }, "Failed to create a valid rate limiter object");
                 throw new Error(`Failed to create valid rate limiter for ${modelName}`);
             }
-            logger.debug({ modelName, options: limiterOptions }, "Rate limiter created successfully.");
+            logger.debug({ ...logContext, options: limiterOptions }, "Rate limiter created successfully");
             modelRateLimiters.set(modelName, newLimiter);
         } catch (creationError: unknown) {
-            logger.error(creationError, `!!! Exception during RateLimiterMemory creation for ${modelName} !!!`);
-            // Rethrow to signal critical failure
+            const errorDetails = creationError instanceof Error ? { name: creationError.name, message: creationError.message } : { details: String(creationError) };
+            logger.error({ ...logContext, err: errorDetails, options: limiterOptions }, "Exception during RateLimiterMemory creation");
             throw creationError;
         }
     }
 
     const limiterInstance = modelRateLimiters.get(modelName);
 
-    // Final check before returning (should theoretically always pass if logic above is correct)
     if (!limiterInstance || typeof limiterInstance.consume !== 'function') {
-        logger.error(`!!! Invalid limiter found in map for ${modelName} just before returning !!!`);
+        logger.error(logContext, "Invalid limiter found in map or failed creation");
         throw new Error(`Retrieved invalid rate limiter from map for ${modelName}`);
     }
-
+    logger.debug(logContext, "Retrieved existing rate limiter");
     return limiterInstance;
 }
+
 
 // --- Get Or Create Extract Cache (with Persistent Logic) ---
 const getOrCreateExtractCache = async (
     modelName: string,
-    systemInstructionText: string, // Keep as string text
+    systemInstructionText: string,
     fewShotParts: Part[]
 ): Promise<CachedContent | null> => {
-    logger.debug(`Getting or creating extract cache for model: ${modelName}`);
+    const baseLogContext = { modelName, function: 'getOrCreateExtractCache' };
+    logger.debug({ ...baseLogContext, event: 'cache_get_or_create_start' }, "Getting or creating extract cache");
 
-    // 1. Check in-memory cache object map first
     const cachedInMemory = extractApiCaches.get(modelName);
-    if (cachedInMemory) {
-        logger.debug({ cacheName: cachedInMemory.name, modelName }, "Reusing existing extract API cache object from in-memory map");
+    if (cachedInMemory?.name) {
+        logger.debug({ ...baseLogContext, cacheName: cachedInMemory.name, event: 'cache_reuse_in_memory' }, "Reusing existing extract API cache object from in-memory map");
         return cachedInMemory;
     }
-    logger.debug(`Cache object not found in memory for model ${modelName}. Checking persistent store...`);
+    logger.debug({ ...baseLogContext, event: 'cache_check_persistent' }, "Cache object not found in memory. Checking persistent store...");
 
     const manager = initializeCacheManager();
     if (!manager) {
-        logger.warn("CacheManager not available. Cannot create or use cache.");
+        logger.warn({ ...baseLogContext, event: 'cache_manager_unavailable' }, "CacheManager not available. Cannot create or use cache.");
         return null;
     }
 
-    // 2. Check persistent cache *name* map
     const knownCacheName = persistentCacheNameMap.get(modelName);
     if (knownCacheName) {
-        logger.info(`Found persistent cache name (${knownCacheName}) for model ${modelName}. Attempting to retrieve from Google...`);
+        const retrieveContext = { ...baseLogContext, cacheName: knownCacheName };
+        logger.debug({ ...retrieveContext, event: 'cache_persistent_retrieve_start' }, "Found persistent cache name. Attempting to retrieve from Google...");
         try {
-            // 3. Attempt to retrieve cache object from Google using the known name
-            // CORRECT
             const retrievedCache = await manager.get(knownCacheName);
 
-            if (retrievedCache?.name) { // Check if retrieved cache is valid
-                logger.info(`Successfully retrieved cache object ${retrievedCache.name} from Google.`);
-                extractApiCaches.set(modelName, retrievedCache); // Store in memory
+            if (retrievedCache?.name) {
+                logger.debug({ ...retrieveContext, event: 'cache_persistent_retrieve_success' }, "Successfully retrieved cache object from Google");
+                extractApiCaches.set(modelName, retrievedCache);
                 return retrievedCache;
             } else {
-                logger.warn(`manager.get for ${knownCacheName} returned invalid object. Proceeding to create new cache.`);
-                await removePersistentCacheEntry(modelName); // Remove invalid entry
+                logger.warn({ ...retrieveContext, retrievedObject: retrievedCache, event: 'cache_persistent_retrieve_invalid' }, "manager.get returned invalid object. Proceeding to create new cache.");
+                await removePersistentCacheEntry(modelName); // Log inside this function
             }
         } catch (getError: unknown) {
-            const errorMsg = getError instanceof Error ? getError.message.toLowerCase() : '';
-            if (errorMsg.includes('not found') || errorMsg.includes('permission denied')) {
-                logger.warn(getError, `Persistent cache name ${knownCacheName} for model ${modelName} not found or accessible on Google server. Removing from persistent map.`);
+            const errorDetails = getError instanceof Error ? { name: getError.name, message: getError.message } : { details: String(getError) };
+            const errorMsgLower = errorDetails.message?.toLowerCase() ?? '';
+            if (errorMsgLower.includes('not found') || errorMsgLower.includes('permission denied')) {
+                logger.warn({ ...retrieveContext, err: errorDetails, event: 'cache_persistent_retrieve_not_found_or_denied' }, "Persistent cache not found or accessible on Google server. Removing from persistent map.");
             } else {
-                logger.error(getError, `Failed to retrieve cache ${knownCacheName} from Google for model ${modelName}. Proceeding to create new cache.`);
+                logger.error({ ...retrieveContext, err: errorDetails, event: 'cache_persistent_retrieve_failed' }, "Failed to retrieve cache from Google. Proceeding to create new cache.");
             }
-            await removePersistentCacheEntry(modelName); // Remove entry if get fails
+            await removePersistentCacheEntry(modelName); // Log inside this function
         }
     } else {
-        logger.info(`No persistent cache name found for model ${modelName}.`);
+        logger.info({ ...baseLogContext, event: 'cache_persistent_name_not_found' }, "No persistent cache name found.");
     }
 
-    // 4. If not retrieved -> Create New Cache
-    logger.info(`Attempting to create NEW context cache for extract API model: ${modelName}`);
+    // --- Create New Cache ---
+    const createContext = { ...baseLogContext };
+    logger.info({ ...createContext, event: 'cache_create_start' }, "Attempting to create NEW context cache");
     try {
-        // Construct Content object for system instruction and few-shot parts
         const systemInstructionContent: Part[] = [{ text: systemInstructionText }];
-        const contentToCache: Content[] = [{ role: 'user', parts: fewShotParts }]; // Assuming fewShotParts is already structured correctly
+        const contentToCache: Content[] = [];
+        for (let i = 0; i < fewShotParts.length; i += 2) {
+            if (fewShotParts[i]) contentToCache.push({ role: 'user', parts: [fewShotParts[i]] });
+            if (fewShotParts[i + 1]) contentToCache.push({ role: 'model', parts: [fewShotParts[i + 1]] });
+        }
+
+        const modelForCacheApi = `models/${modelName}`;
+        const displayName = `cache-${modelName}-${Date.now()}`;
+        logger.debug({ ...createContext, modelForCache: modelForCacheApi, displayName, contentCount: contentToCache.length, event: 'cache_create_details' }, "Cache creation details");
 
         const createdCache = await manager.create({
-            model: `models/${modelName}`, // Model name needs 'models/' prefix for cache API
+            model: modelForCacheApi,
             systemInstruction: { role: "system", parts: systemInstructionContent },
             contents: contentToCache,
-            // ttl: { seconds: 3600 * 24 * 7 }, // Optional: Example TTL: 1 week
-            displayName: `cache-${modelName}-${Date.now()}` // Optional display name
+            displayName: displayName
         });
 
-        if (!createdCache?.name) { // Validate response
-            logger.error({ createdCacheObject: createdCache, modelName }, "Failed to create context cache: Invalid cache object returned by manager.create");
+        if (!createdCache?.name) {
+            logger.error({ ...createContext, modelForCache: modelForCacheApi, createdCacheObject: createdCache, event: 'cache_create_failed_invalid_object' }, "Failed to create context cache: Invalid cache object returned by manager.create");
             return null;
         }
 
-        logger.info({ cacheName: createdCache.name, model: createdCache.model }, "Context cache created successfully");
+        logger.info({ ...createContext, cacheName: createdCache.name, model: createdCache.model, event: 'cache_create_success' }, "Context cache created successfully");
 
-        // 5. Store the NEW cache object in memory AND its name persistently
         extractApiCaches.set(modelName, createdCache);
         persistentCacheNameMap.set(modelName, createdCache.name);
-        await saveCacheNameMap();
+        await saveCacheNameMap(); // Log inside this function
 
         return createdCache;
 
     } catch (cacheError: unknown) {
-        logger.error(cacheError, "Failed to create NEW context cache for extract API", { modelName });
-        // Check for specific errors like invalid model format
-        if (cacheError instanceof Error && cacheError.message.includes("invalid model")) {
-            logger.error(`Ensure model name '${modelName}' is correct and potentially prefixed with 'models/' for caching API.`);
+        const errorDetails = cacheError instanceof Error ? { name: cacheError.name, message: cacheError.message } : { details: String(cacheError) };
+        logger.error({ ...createContext, err: errorDetails, event: 'cache_create_failed' }, "Failed to create NEW context cache");
+        if (errorDetails.message?.includes("invalid model")) {
+            logger.error({ ...createContext, modelForCache: `models/${modelName}`, event: 'cache_create_invalid_model_error' }, "Ensure model name is correct and potentially prefixed with 'models/' for caching API.");
         }
         return null;
     }
@@ -283,89 +293,93 @@ const executeWithRetry = async (
     fn: RetryableFunction,
     apiType: string,
     batchIndex: number,
-    // key: string, // 'key' parameter seems unused, removed
     modelName: string,
     modelRateLimiter: RateLimiterMemory
 ): Promise<ApiResponse> => {
-    logger.debug(`Executing with retry: apiType=${apiType}, batchIndex=${batchIndex}, model=${modelName}`);
+    const baseLogContext = { apiType, batchIndex, modelName, function: 'executeWithRetry' };
+    logger.debug({ ...baseLogContext, event: 'retry_loop_start' }, "Executing with retry");
     let retryCount = 0;
     let currentDelay = INITIAL_DELAY_BETWEEN_RETRIES;
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
 
     while (retryCount < MAX_RETRIES) {
+        const attempt = retryCount + 1;
+        const attemptLogContext = { ...baseLogContext, attempt, maxAttempts: MAX_RETRIES };
+        logger.debug({ ...attemptLogContext, event: 'retry_attempt_start' }, "Executing function attempt");
         try {
             if (!genAI) {
-                logger.error(`Cannot execute function for ${apiType} batch #${batchIndex}: GoogleGenerativeAI is not initialized.`);
+                 // This is a critical setup error, not retryable in the loop
+                logger.error({ ...attemptLogContext, event: 'retry_genai_not_init' }, "Cannot execute function: GoogleGenerativeAI is not initialized.");
                 return defaultResponse;
             }
-            logger.debug(`Executing function (attempt ${retryCount + 1}): apiType=${apiType}, batchIndex=${batchIndex}, model=${modelName}`);
-            // Pass the specific rate limiter to the function
-            return await fn(modelRateLimiter);
+            return await fn(modelRateLimiter); // Execute the core function
 
         } catch (error: unknown) {
-            // Check if it's a rate limit error from our internal limiter
-            if (error instanceof RateLimiterRes) {
-                const waitTimeMs = error.msBeforeNext;
-                logger.warn({ apiType, batchIndex, modelName, retryCount, waitTimeMs }, `Internal rate limit exceeded for model ${modelName}. Waiting ${waitTimeMs} ms...`);
-                await new Promise(resolve => setTimeout(resolve, waitTimeMs));
-                // Don't increment retry count for internal limiter waits, just loop again
-                continue;
-            }
-
             let shouldRetry = true;
             let invalidateCache = false;
-            const errorMessage = error instanceof Error ? error.message : "Unknown error";
-            const errorDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) }
+            const errorDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            const errorMessageLower = errorDetails.message?.toLowerCase() ?? '';
+            let errorEvent = 'retry_attempt_error_unknown'; // Default error event
 
-            // Handle specific Gemini API errors / other errors
-            if (errorMessage.includes("CachedContent not found") || errorMessage.includes("Permission denied on cached content") || errorMessage.includes("INVALID_ARGUMENT: Cannot find cached content")) {
-                logger.warn({ apiType, batchIndex, modelName, cacheName: extractApiCaches.get(modelName)?.name, error: errorMessage }, `Cache related error encountered. Invalidating cache reference for model.`);
-                invalidateCache = true;
-            } else if (errorMessage.includes("429") || errorMessage.includes("RESOURCE_EXHAUSTED")) { // Check for 429 or specific gRPC code
-                logger.warn({ apiType, batchIndex, modelName, retryCount }, `429/Resource Exhausted Error from Gemini API for model ${modelName}. Retrying after delay...`);
-            } else if (errorMessage.includes("503") || errorMessage.includes("500") || errorMessage.includes("UNAVAILABLE") || errorMessage.includes("INTERNAL")) {
-                logger.warn({ apiType, batchIndex, modelName, retryCount, err: errorDetails }, `5xx/Server Error from Gemini API for model ${modelName}. Retrying after delay...`);
-            } else if (errorMessage.toLowerCase().includes("blocked") || errorMessage.toLowerCase().includes("safety")) {
-                logger.error({ apiType, batchIndex, modelName, retryCount, err: errorDetails }, `Request blocked by Gemini safety settings for model ${modelName}. No further retries.`);
-                shouldRetry = false;
-            } else {
-                // Log other errors but still retry by default
-                logger.warn({ apiType, batchIndex, modelName, retryCount, err: errorDetails }, `Unhandled/other error encountered during execution attempt for model ${modelName}. Retrying...`);
+            // Check internal rate limiter first
+            if (error instanceof RateLimiterRes) {
+                const waitTimeMs = error.msBeforeNext;
+                logger.warn({ ...attemptLogContext, waitTimeMs, event: 'retry_internal_rate_limit_wait' }, `Internal rate limit exceeded. Waiting...`);
+                await new Promise(resolve => setTimeout(resolve, waitTimeMs));
+                continue; // Loop again without incrementing retryCount
             }
 
+            // Handle specific Gemini/other errors
+            if (errorMessageLower.includes('cachedcontent not found') || errorMessageLower.includes('permission denied on cached content') || errorMessageLower.includes('cannot find cached content')) {
+                errorEvent = 'retry_attempt_error_cache';
+                logger.warn({ ...attemptLogContext, err: errorDetails, cacheName: extractApiCaches.get(modelName)?.name, event: errorEvent }, "Cache related error. Invalidating cache reference and retrying.");
+                invalidateCache = true; // Mark for invalidation below
+            } else if (errorMessageLower.includes('429') || errorMessageLower.includes('resource_exhausted')) {
+                errorEvent = 'retry_attempt_error_429';
+                logger.warn({ ...attemptLogContext, status: 429, err: errorDetails, event: errorEvent }, "429/Resource Exhausted Error from Gemini API. Retrying after delay...");
+            } else if (errorMessageLower.includes('503') || errorMessageLower.includes('500') || errorMessageLower.includes('unavailable') || errorMessageLower.includes('internal')) {
+                errorEvent = 'retry_attempt_error_5xx';
+                logger.warn({ ...attemptLogContext, status: 500, err: errorDetails, event: errorEvent }, "5xx/Server Error from Gemini API. Retrying after delay...");
+            } else if (errorMessageLower.includes("blocked") || errorMessageLower.includes("safety")) {
+                errorEvent = 'retry_attempt_error_safety_blocked';
+                logger.error({ ...attemptLogContext, err: errorDetails, event: errorEvent }, "Request blocked by Gemini safety settings. No further retries.");
+                shouldRetry = false;
+            } else {
+                 // Keep default errorEvent = 'retry_attempt_error_unknown'
+                logger.warn({ ...attemptLogContext, err: errorDetails, event: errorEvent }, "Unhandled/other error during execution attempt. Retrying...");
+            }
 
-            // Invalidate cache if marked (applies only to extract API)
+            // Invalidate cache if marked (only for extract API)
             if (invalidateCache && apiType === API_TYPE_EXTRACT) {
-                logger.info(`Removing cache entry for model ${modelName} due to error.`);
+                logger.info({ ...attemptLogContext, cacheName: extractApiCaches.get(modelName)?.name, event: 'retry_cache_invalidate' }, "Removing cache entry due to error.");
                 extractApiCaches.delete(modelName);
-                await removePersistentCacheEntry(modelName);
+                await removePersistentCacheEntry(modelName); // Logs internally
             }
 
             // Increment retry count *after* handling the error type
             retryCount++;
-            const isLastRetry = retryCount >= MAX_RETRIES;
+            const isLastAttempt = retryCount >= MAX_RETRIES;
 
             if (!shouldRetry) {
-                logger.error({ apiType, batchIndex, modelName, finalError: errorDetails }, `Non-retryable error encountered. Aborting retries.`);
+                logger.error({ ...attemptLogContext, finalError: errorDetails, event: 'retry_abort_non_retryable' }, "Non-retryable error encountered. Aborting retries.");
                 return defaultResponse;
             }
 
-            // Decide whether to wait and retry
-            if (!isLastRetry) {
-                const jitter = Math.random() * 500; // Add jitter
-                const delayWithJitter = Math.max(0, currentDelay + jitter); // Ensure delay is non-negative
-                logger.info({ apiType, batchIndex, modelName, retryCount, delaySeconds: (delayWithJitter / 1000).toFixed(2) }, `Waiting before next retry...`);
-                await new Promise(resolve => setTimeout(resolve, delayWithJitter));
-                // Exponential backoff with cap
-                currentDelay = Math.min(currentDelay * 2, MAX_DELAY_BETWEEN_RETRIES);
-            } else {
-                logger.error({ apiType, batchIndex, modelName, maxRetries: MAX_RETRIES, finalError: errorDetails }, `Failed to process after ${MAX_RETRIES} retries.`);
+            if (isLastAttempt) {
+                logger.error({ ...attemptLogContext, maxRetries: MAX_RETRIES, finalError: errorDetails, event: 'retry_failed_max_retries' }, `Failed to process after maximum retries.`);
                 return defaultResponse;
             }
+
+            // Wait before next retry
+            const jitter = Math.random() * 500;
+            const delayWithJitter = Math.max(0, currentDelay + jitter);
+            logger.info({ ...attemptLogContext, nextAttempt: retryCount + 1, delaySeconds: (delayWithJitter / 1000).toFixed(2), event: 'retry_wait_before_next' }, `Waiting before next retry...`);
+            await new Promise(resolve => setTimeout(resolve, delayWithJitter));
+            currentDelay = Math.min(currentDelay * 2, MAX_DELAY_BETWEEN_RETRIES); // Exponential backoff
         }
     }
-    // Fallback return (should not be reached if MAX_RETRIES > 0)
-    logger.error({ apiType, batchIndex, modelName }, "Exited retry loop unexpectedly.");
+    // Fallback return (should only be reached if MAX_RETRIES is 0)
+    logger.error({ ...baseLogContext, event: 'retry_loop_exit_unexpected' }, "Exited retry loop unexpectedly (MAX_RETRIES might be 0).");
     return defaultResponse;
 };
 
@@ -374,238 +388,230 @@ const executeWithRetry = async (
 const callGeminiAPI = async ({
     batch, batchIndex, acronym, apiType, systemInstruction, modelName, generationConfig
 }: CallGeminiApiParams): Promise<ApiResponse> => {
+    const baseLogContext = { apiType, batchIndex, modelName, acronym: acronym || 'N/A', function: 'callGeminiAPI' };
+    logger.info({ ...baseLogContext, event: 'gemini_call_start' }, "Preparing Gemini API call");
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
-    logger.debug(`Calling Gemini API: apiType=${apiType}, batchIndex=${batchIndex}, model=${modelName}`);
 
-    // --- Lấy Rate Limiter và Config ---
     let modelRateLimiter: RateLimiterMemory;
     try {
-        modelRateLimiter = getRateLimiterForModel(modelName); // Hàm này cần throw lỗi nếu không tạo được limiter
+        modelRateLimiter = getRateLimiterForModel(modelName); // Logs internally
     } catch (limiterError: unknown) {
-        logger.error(limiterError, `Failed to get or create rate limiter for ${modelName}. Aborting API call.`);
+        const errorDetails = limiterError instanceof Error ? { name: limiterError.name, message: limiterError.message } : { details: String(limiterError) };
+        logger.error({ ...baseLogContext, err: errorDetails, event: 'gemini_call_limiter_init_failed' }, "Failed to get or create rate limiter. Aborting API call.");
         return defaultResponse;
     }
 
     const apiConfig: ApiConfig | undefined = apiConfigs[apiType];
     if (!apiConfig) {
-        logger.error({ apiType, acronym, batchIndex }, "Invalid apiType provided. Cannot find configuration.");
+        logger.error({ ...baseLogContext, event: 'gemini_call_invalid_apitype' }, "Invalid apiType provided. Cannot find configuration.");
         return defaultResponse;
     }
 
-    // --- Chuẩn bị Few-Shot Parts ---
-    const inputs = apiConfig.inputs || {};
-    const outputs = apiConfig.outputs || {};
+    // Prepare Few-Shot Parts
+    const fewShotContext = { ...baseLogContext, event_group: 'few_shot_prep' };
+    logger.debug({ ...fewShotContext, event: 'few_shot_prep_start' }, "Preparing few-shot parts");
     const fewShotParts: Part[] = [];
      try {
+        const inputs = apiConfig.inputs || {};
+        const outputs = apiConfig.outputs || {};
         Object.entries(inputs).forEach(([inputKey, inputValue]) => {
             const outputKey = inputKey.replace('input', 'output');
             const outputValue = outputs[outputKey] || '';
             fewShotParts.push({ text: inputValue });
             fewShotParts.push({ text: outputValue });
         });
+        logger.debug({ ...fewShotContext, fewShotCount: fewShotParts.length / 2, event: 'few_shot_prep_success' }, "Prepared few-shot parts");
     } catch (fewShotError: unknown) {
-        logger.error(fewShotError, "Error processing few-shot examples", { apiType, batchIndex });
-        // Có thể quyết định thất bại hoặc tiếp tục mà không có few-shot
-        // return defaultResponse; // Hoặc chỉ ghi log và tiếp tục
+        const errorDetails = fewShotError instanceof Error ? { name: fewShotError.name, message: fewShotError.message } : { details: String(fewShotError) };
+        logger.error({ ...fewShotContext, err: errorDetails, event: 'few_shot_prep_failed' }, "Error processing few-shot examples. Continuing without them.");
+        fewShotParts.length = 0; // Clear array on error
     }
 
-    // --- Thiết lập Model và Content Request ---
+    // Setup Model (Cached or Non-Cached)
     let model: GenerativeModel | undefined;
-    let contentRequest: GenerateContentRequest | string; // String khi dùng cache, object khi không dùng
+    let contentRequest: GenerateContentRequest | string;
     let usingCache = false;
     let currentCache: CachedContent | null = null;
-    const generationModelName = modelName; // Sử dụng tên gốc cho getGenerativeModel
+    const generationModelName = modelName; // Use the passed modelName for generation
 
-    // --- Xử lý Cache cho API_TYPE_EXTRACT ---
+    // Cache logic only for Extract API
     if (apiType === API_TYPE_EXTRACT) {
+        const cacheSetupContext = { ...baseLogContext, event_group: 'cache_setup' };
+        logger.debug({ ...cacheSetupContext, event: 'cache_setup_get_or_create' }, "Attempting to get or create cache");
         try {
-            // Hàm getOrCreateExtractCache đã được định nghĩa ở trên
-            currentCache = await getOrCreateExtractCache(modelName, systemInstruction, fewShotParts);
+            currentCache = await getOrCreateExtractCache(modelName, systemInstruction, fewShotParts); // Logs internally
         } catch (cacheSetupError: unknown) {
-            logger.error(cacheSetupError, "Critical error during cache setup, proceeding without cache", { apiType, batchIndex, acronym, modelName });
+            // getOrCreate should handle its internal errors, but catch here just in case
+            const errorDetails = cacheSetupError instanceof Error ? { name: cacheSetupError.name, message: cacheSetupError.message } : { details: String(cacheSetupError) };
+            logger.error({ ...cacheSetupContext, err: errorDetails, event: 'cache_setup_get_or_create_failed' }, "Critical error during cache setup, proceeding without cache");
             currentCache = null;
         }
 
-        // --- Sử dụng Cache nếu có ---
         if (currentCache?.name) {
-            logger.debug({ apiType, batchIndex, acronym, cacheName: currentCache.name, modelName }, "Attempting to use cached context object");
+             logger.info({ ...cacheSetupContext, cacheName: currentCache.name, event: 'cache_setup_attempt_use' }, "Attempting to use cached context object");
             try {
                 if (!genAI) throw new Error("genAI not initialized");
-
-                // Lấy model từ cache. Lưu ý: GenerationConfig thường được kế thừa từ cache.
                 model = genAI.getGenerativeModelFromCachedContent(currentCache);
-
-                // Khi dùng cache, chỉ gửi input mới dưới dạng string
-                contentRequest = batch;
+                contentRequest = batch; // For cached model, request is just the new user content
                 usingCache = true;
-                logger.info(`Using cached context ${currentCache.name} for model ${modelName}.`);
-
+                logger.info({ ...cacheSetupContext, cacheName: currentCache.name, event: 'cache_setup_use_success' }, "Using cached context model");
             } catch (getModelError: unknown) {
-                logger.error(getModelError, "Error getting model from cached content, falling back to non-cached", { apiType, batchIndex, acronym, modelName, cacheName: currentCache?.name });
-                // Hủy cache nếu không lấy được model từ nó
+                const errorDetails = getModelError instanceof Error ? { name: getModelError.name, message: getModelError.message } : { details: String(getModelError) };
+                logger.error({ ...cacheSetupContext, cacheName: currentCache?.name, err: errorDetails, event: 'cache_setup_getmodel_failed' }, "Error getting model from cached content, falling back to non-cached");
                 extractApiCaches.delete(modelName);
-                await removePersistentCacheEntry(modelName);
+                await removePersistentCacheEntry(modelName); // Logs internally
                 currentCache = null;
-                usingCache = false; // Đảm bảo fallback
+                usingCache = false;
             }
         }
+    }
 
-        // --- Fallback (Không dùng Cache) ---
-        if (!usingCache) {
-            // Log lý do fallback
-            if (currentCache) { // Nếu đã cố gắng dùng cache nhưng thất bại
-                 logger.warn({ apiType, batchIndex, acronym, modelName }, "Falling back to non-cached model due to error getting model from cache.");
-            } else { // Nếu không tìm thấy cache hoặc tạo cache thất bại
-                 logger.info({ apiType, batchIndex, acronym, modelName }, "Proceeding without cache (not found, create failed, or getModel failed).");
-            }
-            // Tạo model và request không dùng cache
-            try {
-                 if (!genAI) throw new Error("genAI not initialized");
-                 // Khởi tạo model không có generationConfig ở đây
-                 model = genAI.getGenerativeModel({
-                     model: generationModelName,
-                     systemInstruction: { role: "system", parts: [{ text: systemInstruction }] },
-                 });
-                 // Xây dựng lịch sử hội thoại (few-shot + input mới)
-                 const history: Content[] = [];
-                 for (let i = 0; i < fewShotParts.length; i += 2) {
-                     if (fewShotParts[i]) history.push({ role: "user", parts: [fewShotParts[i]] });
-                     if (fewShotParts[i + 1]) history.push({ role: "model", parts: [fewShotParts[i + 1]] });
-                 }
-                 history.push({ role: "user", parts: [{ text: batch }] }); // Input mới nhất
-                 // *Đưa generationConfig vào bên trong request object*
-                 contentRequest = {
-                     contents: history,
-                     generationConfig: generationConfig, // SỬA LỖI: Config nằm ở đây
-                 };
-                 logger.info(`Using non-cached model ${generationModelName}.`);
-            } catch (getModelError: unknown) {
-                 logger.error(getModelError, "Error getting non-cached generative model", { apiType, batchIndex, acronym, modelName: generationModelName });
-                 return defaultResponse;
-            }
+    // Fallback for Extract or other API types
+    if (!usingCache) {
+        const nonCachedSetupContext = { ...baseLogContext, event_group: 'non_cached_setup' };
+        if (apiType === API_TYPE_EXTRACT) {
+             logger.info({ ...nonCachedSetupContext, event: 'non_cached_setup_fallback' }, "Proceeding without cache (setup failed or error).");
+        } else {
+            logger.debug({ ...nonCachedSetupContext, event: 'non_cached_setup_normal' }, "Setting up non-cached model.");
         }
-    } else { // --- API Types khác (Không dùng Cache) ---
-        logger.debug({ apiType, batchIndex, acronym, modelName: generationModelName }, "Not using cache for this API type.");
         try {
             if (!genAI) throw new Error("genAI not initialized");
-            // Khởi tạo model không có generationConfig ở đây
-            model = genAI.getGenerativeModel({
-                model: generationModelName,
-                systemInstruction: { role: "system", parts: [{ text: systemInstruction }] },
-            });
-            // Xây dựng lịch sử hội thoại
-            const history: Content[] = [];
-            for (let i = 0; i < fewShotParts.length; i += 2) {
+             model = genAI.getGenerativeModel({
+                 model: generationModelName, // Use the actual model name for generation
+                 systemInstruction: { role: "system", parts: [{ text: systemInstruction }] },
+             });
+             // Construct history for non-cached request
+             const history: Content[] = [];
+             for (let i = 0; i < fewShotParts.length; i += 2) {
                  if (fewShotParts[i]) history.push({ role: "user", parts: [fewShotParts[i]] });
                  if (fewShotParts[i + 1]) history.push({ role: "model", parts: [fewShotParts[i + 1]] });
-            }
-            history.push({ role: "user", parts: [{ text: batch }] });
-            // *Đưa generationConfig vào bên trong request object*
-            contentRequest = {
-                contents: history,
-                generationConfig: generationConfig, // SỬA LỖI: Config nằm ở đây
-            };
-            logger.info(`Using non-cached model ${generationModelName}.`);
+             }
+             history.push({ role: "user", parts: [{ text: batch }] }); // Add the current user input
+             contentRequest = {
+                 contents: history,
+                 generationConfig: generationConfig, // Apply generation config
+             };
+             logger.info({ ...nonCachedSetupContext, generationModelName, historyLength: history.length, event: 'non_cached_setup_success' }, "Using non-cached model setup");
         } catch (getModelError: unknown) {
-            logger.error(getModelError, "Error getting generative model", { apiType, batchIndex, acronym, modelName: generationModelName });
-            return defaultResponse;
+            const errorDetails = getModelError instanceof Error ? { name: getModelError.name, message: getModelError.message } : { details: String(getModelError) };
+             logger.error({ ...nonCachedSetupContext, generationModelName, err: errorDetails, event: 'non_cached_setup_failed' }, "Error getting non-cached generative model");
+             return defaultResponse; // Cannot proceed without a model
         }
-        usingCache = false;
     }
-    // --- Kết thúc Thiết lập Model và Content Request ---
 
-    // --- Gọi API với Logic Retry ---
-    // executeWithRetry được giả định là đã định nghĩa đúng ở trên
+    // --- Call API with Retry Logic ---
     return executeWithRetry(async (limiter): Promise<ApiResponse> => {
-        // Kiểm tra model trước khi dùng
+        // Context for the actual API call attempt within retry loop
+        const callAttemptContext = { ...baseLogContext, usingCache, cacheName: usingCache ? currentCache?.name : 'N/A', event_group:'gemini_api_attempt' };
+
         if (!model) {
-            logger.error({ apiType, batchIndex, acronym, modelName: generationModelName, usingCache }, "Model object is undefined before calling generateContent.");
-            throw new Error("Model is not initialized"); // Gây lỗi để retry hoặc thất bại
+            // This check is crucial within the retry function scope
+            logger.error({ ...callAttemptContext, event: 'gemini_api_model_undefined' }, "Model object is undefined before calling generateContent.");
+            throw new Error("Model is not initialized"); // Throw to trigger retry logic potentially
         }
 
-        // Sử dụng p-limit (apiLimiter) để giới hạn tổng số request đồng thời
+        // Apply the global API limiter first
         return await apiLimiter(async () => {
-            const rateLimitKey = `${apiType}_${batchIndex}_${modelName}`; // Key chi tiết hơn cho rate limiter
+            // Apply the model-specific rate limiter
+            const rateLimitKey = `${apiType}_${batchIndex}_${modelName}`; // Use a specific key per call if needed
+             logger.debug({ ...callAttemptContext, event: 'gemini_api_rate_limit_consume' }, `Attempting to consume rate limit points`);
             try {
-                // Sử dụng rate-limiter-flexible (limiter) cho từng model
-                await limiter.consume(rateLimitKey);
-                logger.debug({ apiType, batchIndex, acronym, modelName: generationModelName, usingCache, cacheName: usingCache ? currentCache?.name : 'N/A' }, `Rate limit check passed for model ${modelName}. Sending request...`);
+                await limiter.consume(rateLimitKey, 1); // Consume 1 point
+                logger.debug({ ...callAttemptContext, event: 'gemini_api_rate_limit_passed' }, `Rate limit check passed. Sending request...`);
+            } catch (limiterError: unknown) {
+                 // If consume fails, it throws RateLimiterRes - caught by executeWithRetry
+                 logger.warn({ ...callAttemptContext, event: 'gemini_api_rate_limit_failed' }, `Rate limit consumption failed.`);
+                 throw limiterError; // Propagate for executeWithRetry to handle waiting
+            }
 
-                let result: GenerateContentResult;
-                try {
-                    // ****** GỌI API THỰC TẾ - ĐÃ BỎ ĐỐI SỐ THỨ HAI ******
-                    result = await model.generateContent(contentRequest);
-                    // ******************************************************
-                    logger.info(`Gemini API call successful for model ${modelName}.`);
-                } catch (generateContentError: unknown) {
-                    // Log và xử lý lỗi, bao gồm hủy cache nếu cần
-                    logger.error(generateContentError, "Error during model.generateContent", { apiType, batchIndex, acronym, modelName: generationModelName, usingCache, cacheName: usingCache ? currentCache?.name : 'N/A' });
-                    if (usingCache && generateContentError instanceof Error && (generateContentError.message.includes("CachedContent not found") || generateContentError.message.includes("Permission denied"))) {
-                        logger.warn(`Invalidating cache for model ${modelName} due to generateContent error.`);
-                        extractApiCaches.delete(modelName);
-                        await removePersistentCacheEntry(modelName); // Đảm bảo xóa cả persistent
-                    }
-                    throw generateContentError; // Ném lại lỗi để executeWithRetry xử lý
+            // --- Actual API Call ---
+            let result: GenerateContentResult;
+            try {
+                logger.info({ ...callAttemptContext, event: 'gemini_api_generate_start' }, "Calling model.generateContent");
+                // *** API Call ***
+                result = await model.generateContent(contentRequest);
+                // **************
+                logger.info({ ...callAttemptContext, event: 'gemini_api_generate_success' }, "model.generateContent successful");
+            } catch (generateContentError: unknown) {
+                const errorDetails = generateContentError instanceof Error ? { name: generateContentError.name, message: generateContentError.message } : { details: String(generateContentError) };
+                logger.error({ ...callAttemptContext, err: errorDetails, event: 'gemini_api_generate_failed' }, "Error during model.generateContent");
+                // Check if error is cache-related to potentially invalidate
+                if (usingCache && (errorDetails.message?.toLowerCase().includes("cachedcontent not found") || errorDetails.message?.toLowerCase().includes("permission denied"))) {
+                    logger.warn({ ...callAttemptContext, event: 'gemini_api_generate_invalidate_cache' }, "Invalidating cache due to generateContent error.");
+                    // Marking invalidateCache here won't help as it's inside retry loop,
+                    // The error itself being thrown will trigger retry logic which checks cache errors
                 }
+                throw generateContentError; // Propagate error for retry handling
+            }
+            // --- End Actual API Call ---
 
-                // --- Xử lý Response ---
-                const response = result?.response;
-                if (!response) {
-                    const feedback = result?.response?.promptFeedback; // Sửa lại cách truy cập feedback
-                    logger.warn({ apiType, batchIndex, acronym, modelName, feedback }, "Gemini API returned result with missing response object.");
-                    if (feedback?.blockReason) {
-                        throw new Error(`Request blocked by safety settings: ${feedback.blockReason}`);
-                    }
-                    throw new Error("Empty or invalid response object from Gemini API.");
+
+            const response = result?.response;
+            const feedback = response?.promptFeedback; // Access feedback safely
+
+            if (!response) {
+                logger.warn({ ...callAttemptContext, feedback, event: 'gemini_api_response_missing' }, "Gemini API returned result with missing response object.");
+                if (feedback?.blockReason) {
+                    logger.error({ ...callAttemptContext, blockReason: feedback.blockReason, safetyRatings: feedback.safetyRatings, event: 'gemini_api_response_blocked' }, "Request blocked by safety settings");
+                    throw new Error(`Request blocked by safety settings: ${feedback.blockReason}`); // Throw to trigger retry logic (which will likely fail)
                 }
+                throw new Error("Empty or invalid response object from Gemini API."); // Throw for retry
+            }
 
-                // Lấy text an toàn
-                let responseText = "";
-                try {
-                     responseText = response.text(); // Cách chính thức và an toàn nhất
-                } catch (textError: unknown) {
-                     logger.warn(textError, "Response.text() accessor failed, trying fallback.", { apiType, batchIndex, acronym, modelName });
-                     // Fallback (ít dùng hơn với SDK mới)
-                     responseText = response.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-                     if (!responseText) {
-                         logger.warn({ apiType, batchIndex, acronym, modelName, responseStructure: response }, "Could not extract text content from response via fallback.");
-                     }
+            // Check for block reason even if response exists (sometimes happens)
+            if (feedback?.blockReason) {
+                 logger.error({ ...callAttemptContext, blockReason: feedback.blockReason, safetyRatings: feedback.safetyRatings, event: 'gemini_api_response_blocked' }, "Request blocked by safety settings (found in feedback)");
+                 throw new Error(`Request blocked by safety settings: ${feedback.blockReason}`); // Throw to trigger retry logic
+            }
+
+            let responseText = "";
+            try {
+                responseText = response.text(); // Preferred method
+                logger.debug({ ...callAttemptContext, event: 'gemini_api_text_extract_success' }, "Extracted text using response.text()");
+            } catch (textError: unknown) {
+                const errorDetails = textError instanceof Error ? { name: textError.name, message: textError.message } : { details: String(textError) };
+                logger.warn({ ...callAttemptContext, err: errorDetails, event: 'gemini_api_text_extract_failed' }, "Response.text() accessor failed, trying fallback.");
+                responseText = response.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+                if (!responseText) {
+                    logger.warn({ ...callAttemptContext, responseStructure: response, event: 'gemini_api_text_extract_fallback_failed' }, "Could not extract text content from response via fallback.");
+                    // Consider throwing an error here if text is absolutely required
+                    // throw new Error("Failed to extract text content from API response.");
+                } else {
+                    logger.debug({ ...callAttemptContext, event: 'gemini_api_text_extract_fallback_success' }, "Extracted text using fallback");
                 }
+            }
 
-                const metaData = response.usageMetadata;
+            const metaData = response.usageMetadata ?? null;
 
-                // --- Ghi response ra file (bất đồng bộ) ---
-                const safeAcronym = acronym || 'noacronym'; // Đảm bảo tên file hợp lệ
-                const safeAcronymSafe = safeAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-                const response_outputPath = path.join(RESPONSE_OUTPUT_DIR, `result_${apiType}_${modelName}_${safeAcronymSafe}.txt`);
+            // Write response to file (fire-and-forget)
+            const safeAcronym = (acronym || 'noacronym').replace(/[^a-zA-Z0-9_.-]/g, '-');
+            const responseOutputPath = path.join(RESPONSE_OUTPUT_DIR, `result_${apiType}_${modelName}_${safeAcronym}_${batchIndex}.txt`); // Add batchIndex
+            const fileLogContext = { ...callAttemptContext, filePath: responseOutputPath, event_group:'response_file_write' };
+            (async () => {
                 try {
                     if (!existsSync(RESPONSE_OUTPUT_DIR)) {
                         await fsPromises.mkdir(RESPONSE_OUTPUT_DIR, { recursive: true });
-                        logger.info({ directory: RESPONSE_OUTPUT_DIR }, "Created response output directory");
+                        logger.info({ directory: RESPONSE_OUTPUT_DIR, event: 'response_dir_created' }, "Created response output directory");
                     }
-                    await fsPromises.writeFile(response_outputPath, responseText || "", "utf8"); // Ghi chuỗi rỗng nếu responseText null/undefined
-                    logger.debug({ filePath: response_outputPath }, "Successfully wrote response to file");
+                    logger.debug({ ...fileLogContext, event: 'response_file_write_start' }, "Writing response to file");
+                    await fsPromises.writeFile(responseOutputPath, responseText || "", "utf8");
+                    logger.debug({ ...fileLogContext, event: 'response_file_write_success' }, "Successfully wrote response to file");
                 } catch (fileWriteError: unknown) {
-                    logger.error(fileWriteError, "Error writing response to file", { filePath: response_outputPath });
-                    // Không coi là lỗi nghiêm trọng của API call
+                    const errorDetails = fileWriteError instanceof Error ? { name: fileWriteError.name, message: fileWriteError.message } : { details: String(fileWriteError) };
+                    logger.error({ ...fileLogContext, err: errorDetails, event: 'response_file_write_failed' }, "Error writing response to file");
                 }
+            })();
 
-                // --- Hoàn thành ---
-                logger.info({ apiType, batchIndex, acronym, modelName: generationModelName, usingCache, cacheName: usingCache ? currentCache?.name : 'N/A' }, "Gemini API request processed successfully.");
-                return { responseText, metaData };
+            logger.info({ ...callAttemptContext, responseLength: responseText.length, hasMetaData: !!metaData, tokens: metaData?.totalTokenCount, event: 'gemini_api_attempt_success' }, "Gemini API request processed successfully for this attempt.");
+            return { responseText, metaData }; // Return successful response
 
-            } catch (limiterOrApiError: unknown) {
-                // Bắt lỗi từ limiter.consume() hoặc khối try bên trong
-                logger.warn({ error: limiterOrApiError instanceof Error ? limiterOrApiError.message : limiterOrApiError }, `Error within apiLimiter block for model ${modelName}. Propagating for retry handling.`);
-                throw limiterOrApiError; // Ném lại lỗi để executeWithRetry xử lý
-            }
-        });
-    }, apiType, batchIndex, modelName, modelRateLimiter); // Truyền các đối số cần thiết cho executeWithRetry
+        }); // End apiLimiter wrapper
+
+    }, apiType, batchIndex, modelName, modelRateLimiter); // End executeWithRetry call
 };
 
 // --- Exported API Functions ---
 
-// Round-Robin Index for Extract Models
 let extractModelIndex: number = 0;
 
 export const extract_information_api = async (
@@ -616,58 +622,57 @@ export const extract_information_api = async (
     const apiType = API_TYPE_EXTRACT;
     const config: ApiConfig | undefined = apiConfigs[apiType];
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
+    const baseLogContext = { apiType, batchIndex, acronym: acronym || 'N/A', function: 'extract_information_api' };
 
     if (!config) {
-        logger.error(`Configuration for ${apiType} not found.`);
+        logger.error(baseLogContext, "Configuration not found.");
         return defaultResponse;
     }
-    const modelNames = config.modelNames; // Expect array from config
+    const modelNames = config.modelNames;
     if (!modelNames || modelNames.length === 0) {
-        logger.error(`No model names configured for ${apiType} in apiConfigs.`);
+        logger.error(baseLogContext, "No model names configured.");
         return defaultResponse;
     }
 
-    // Select Model Round-Robin
     const selectedModelName = modelNames[extractModelIndex];
-    extractModelIndex = (extractModelIndex + 1) % modelNames.length; // Update index
-
-    logger.debug({ apiType, batchIndex, selectedModel: selectedModelName, nextIndex: extractModelIndex }, "Initiating extract_information_api call");
+    const nextIndex = (extractModelIndex + 1) % modelNames.length;
+    logger.debug({ ...baseLogContext, selectedModel: selectedModelName, nextIndex }, "Initiating API call (round-robin)");
+    extractModelIndex = nextIndex; // Update index *after* logging
 
     try {
         const { responseText, metaData } = await callGeminiAPI({
             batch, batchIndex, acronym, apiType,
-            systemInstruction: config.systemInstruction || "", // Provide default
+            systemInstruction: config.systemInstruction || "",
             modelName: selectedModelName,
             generationConfig: config.generationConfig,
         });
 
-        // --- JSON Cleaning Logic ---
+        // JSON Cleaning Logic
         const firstCurly = responseText.indexOf('{');
         const lastCurly = responseText.lastIndexOf('}');
         let cleanedResponseText = "";
+        const cleaningLogContext = { ...baseLogContext, modelUsed: selectedModelName };
 
         if (firstCurly !== -1 && lastCurly !== -1 && lastCurly >= firstCurly) {
             const potentialJson = responseText.substring(firstCurly, lastCurly + 1);
             try {
-                // Validate by parsing
-                JSON.parse(potentialJson);
+                JSON.parse(potentialJson); // Validate
                 cleanedResponseText = potentialJson.trim();
-                logger.debug({ batchIndex, modelUsed: selectedModelName }, "Successfully cleaned and validated JSON response.");
+                logger.debug(cleaningLogContext, "Successfully cleaned and validated JSON response.");
             } catch (parseError: unknown) {
-                logger.warn({ batchIndex, modelUsed: selectedModelName, rawResponseSnippet: responseText.substring(0, 200), error: parseError instanceof Error ? parseError.message : String(parseError) }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
-                // cleanedResponseText remains ""
+                 const errorDetails = parseError instanceof Error ? { name: parseError.name, message: parseError.message } : { details: String(parseError) };
+                logger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200), err: errorDetails }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
             }
         } else {
-            logger.warn({ batchIndex, modelUsed: selectedModelName, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
-            // cleanedResponseText remains ""
+            logger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
         }
-        // --- End JSON Cleaning ---
 
-        logger.info(`extract_information_api call successful: batchIndex=${batchIndex}, modelUsed=${selectedModelName}`);
+        logger.info({ ...cleaningLogContext, cleanedResponseLength: cleanedResponseText.length }, "API call finished.");
         return { responseText: cleanedResponseText, metaData };
 
     } catch (error: unknown) {
-        logger.error(error, `Unhandled error in extract_information_api main function`, { batchIndex, modelUsed: selectedModelName });
+        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+        logger.error({ ...baseLogContext, modelUsed: selectedModelName, err: errorDetails }, "Unhandled error in main function");
         return defaultResponse;
     }
 };
@@ -675,27 +680,27 @@ export const extract_information_api = async (
 export const determine_links_api = async (
     batch: string,
     batchIndex: number,
-    title: string | undefined, // Allow undefined
-    acronym: string | undefined // Allow undefined
+    title: string | undefined,
+    acronym: string | undefined
 ): Promise<ApiResponse> => {
     const apiType = API_TYPE_DETERMINE;
     const config: ApiConfig | undefined = apiConfigs[apiType];
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
+    const baseLogContext = { apiType, batchIndex, title: title || 'N/A', acronym: acronym || 'N/A', function: 'determine_links_api' };
 
     if (!config) {
-        logger.error(`Configuration for ${apiType} not found.`);
+        logger.error(baseLogContext, "Configuration not found.");
         return defaultResponse;
     }
-    const modelName = config.modelName; // Expect single string from config
+    const modelName = config.modelName;
     if (!modelName) {
-        logger.error(`No model name configured for ${apiType} in apiConfigs.`);
+        logger.error(baseLogContext, "No model name configured.");
         return defaultResponse;
     }
-
-    logger.debug({ apiType, batchIndex, model: modelName, title, acronym }, "Initiating determine_links_api call");
+    const logContextWithModel = { ...baseLogContext, modelName };
+    logger.debug(logContextWithModel, "Initiating API call");
 
     try {
-        // Replace placeholders in system instruction safely
         const systemInstruction = (config.systemInstruction || "")
             .replace(/\${Title}/g, title || 'N/A')
             .replace(/\${Acronym}/g, acronym || 'N/A');
@@ -707,32 +712,32 @@ export const determine_links_api = async (
             generationConfig: config.generationConfig,
         });
 
-        // --- JSON Cleaning Logic (same as extract) ---
+        // JSON Cleaning Logic
         const firstCurly = responseText.indexOf('{');
         const lastCurly = responseText.lastIndexOf('}');
         let cleanedResponseText = "";
+        const cleaningLogContext = { ...logContextWithModel }; // Use context with model
 
         if (firstCurly !== -1 && lastCurly !== -1 && lastCurly >= firstCurly) {
             const potentialJson = responseText.substring(firstCurly, lastCurly + 1);
             try {
-                JSON.parse(potentialJson);
+                JSON.parse(potentialJson); // Validate
                 cleanedResponseText = potentialJson.trim();
-                logger.debug({ batchIndex, modelUsed: modelName }, "Successfully cleaned and validated JSON response.");
+                logger.debug(cleaningLogContext, "Successfully cleaned and validated JSON response.");
             } catch (parseError: unknown) {
-                logger.warn({ batchIndex, modelUsed: modelName, rawResponseSnippet: responseText.substring(0, 200), error: parseError instanceof Error ? parseError.message : String(parseError) }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
-                // cleanedResponseText remains ""
+                 const errorDetails = parseError instanceof Error ? { name: parseError.name, message: parseError.message } : { details: String(parseError) };
+                logger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200), err: errorDetails }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
             }
         } else {
-            logger.warn({ batchIndex, modelUsed: modelName, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
-            // cleanedResponseText remains ""
+            logger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
         }
-        // --- End JSON Cleaning ---
 
-        logger.info(`determine_links_api call successful: batchIndex=${batchIndex}, modelUsed=${modelName}`);
+        logger.info({ ...cleaningLogContext, cleanedResponseLength: cleanedResponseText.length }, "API call finished.");
         return { responseText: cleanedResponseText, metaData };
 
     } catch (error: unknown) {
-        logger.error(error, `Unhandled error in determine_links_api main function`, { batchIndex, modelUsed: modelName, title, acronym });
+        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+        logger.error({ ...logContextWithModel, err: errorDetails }, "Unhandled error in main function");
         return defaultResponse;
     }
 };

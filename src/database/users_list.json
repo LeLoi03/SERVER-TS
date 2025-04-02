@@ -618,7 +618,7 @@
         "conferenceId": "f5f85255-923a-4ccf-b234-466767e84898",
         "createdAt": "2025-03-29T07:17:38.339Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You followed the conference: ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
         "type": "Follow Conference"
@@ -638,7 +638,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-29T07:13:56.383Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You followed the conference: IEEE International Conference on Computer Communications",
         "type": "Follow Conference"
@@ -648,7 +648,7 @@
         "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
         "createdAt": "2025-03-29T07:10:52.160Z",
         "isImportant": true,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "Update for \" International Conference on Advanced Communications and Computation\" (following) & in calendar:\n- Organization Link: Changed from \"https://www.iaria.org/conferences2025/INFOCOMP25.html\" to \"https://www.iaria.org/conferences/INFOCOMP.html\".\n- Dates:\n  - Added: Notification: 2025-02-16 to 2025-02-16\n  - Added: Registration: 2025-02-28 to 2025-02-28\n  - Added: Camera ready: 2025-03-05 to 2025-03-05\n  - Added: Submission: 2025-01-20 to 2025-01-20\n  - Added: conferenceDates: 2025-04-06 to 2025-04-06\n  - Removed: Notification: 2025-02-16 to 2025-02-16\n  - Removed: Registration: 2025-02-28 to 2025-02-28\n  - Removed: Camera ready: 2025-03-05 to 2025-03-05\n  - Removed: Submission: 2025-01-20 to 2025-01-20\n  - Removed: conferenceDates: 2025-04-06 to 2025-04-06",
         "type": "Conference Update"
@@ -658,7 +658,7 @@
         "conferenceId": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
         "createdAt": "2025-03-29T07:08:22.428Z",
         "isImportant": true,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "Your conference \"Test\" has been approved.",
         "type": "Approve Conference"
@@ -668,7 +668,7 @@
         "conferenceId": "c762e9e1-c76b-48e7-98a9-a38f8d1466e5",
         "createdAt": "2025-03-29T07:07:50.575Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You added a new conference: Test",
         "type": "Add Conference"
@@ -678,7 +678,7 @@
         "conferenceId": "fa0f127d-2023-4561-98b4-882b076c692d",
         "createdAt": "2025-03-28T14:58:00.982Z",
         "isImportant": true,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "Upcoming: Post Conference Tour in \"Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference\" starting tomorrow (3/29/2025 07:00 AM)",
         "type": "Upcoming Conference"
@@ -698,7 +698,7 @@
         "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
         "createdAt": "2025-03-28T14:51:06.943Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You followed the conference: ACIS Conference on Software Engineering Research, Management and Applications",
         "type": "Follow Conference"
@@ -708,7 +708,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:30:17.058Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You removed \"IEEE International Conference on Computer Communications\" from your blacklist.",
         "type": "Remove from Blacklist"
@@ -718,7 +718,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:30:08.580Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You added \"IEEE International Conference on Computer Communications\" to your blacklist.",
         "type": "Add to Blacklist"
@@ -728,7 +728,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:27:50.280Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You removed the conference \"IEEE International Conference on Computer Communications\" from your calendar.",
         "type": "Remove from Calendar"
@@ -738,7 +738,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:27:34.383Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You added the conference \"IEEE International Conference on Computer Communications\" to your calendar.",
         "type": "Add to Calendar"
@@ -748,7 +748,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:21:54.766Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You unfollowed the conference: IEEE International Conference on Computer Communications",
         "type": "Unfollow Conference"
@@ -758,7 +758,7 @@
         "conferenceId": "488aed45-c0d1-4e29-8108-1b59f55d6996",
         "createdAt": "2025-03-28T14:21:08.069Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You followed the conference: IEEE International Conference on Computer Communications",
         "type": "Follow Conference"
@@ -768,7 +768,7 @@
         "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
         "createdAt": "2025-03-28T13:56:23.453Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You added the conference \" International Conference on Advanced Communications and Computation\" to your calendar.",
         "type": "Add to Calendar"
@@ -778,7 +778,7 @@
         "conferenceId": "93028780-6670-4b3f-ace1-63b34fdd4421",
         "createdAt": "2025-03-28T13:50:21.796Z",
         "isImportant": false,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "You followed the conference:  International Conference on Advanced Communications and Computation",
         "type": "Follow Conference"
@@ -788,7 +788,7 @@
         "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
         "createdAt": "2025-04-01T04:57:00.129Z",
         "isImportant": true,
-        "seenAt": null,
+        "seenAt": "2025-04-02T07:02:49.755Z",
         "deletedAt": null,
         "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
         "type": "Upcoming Conference"
