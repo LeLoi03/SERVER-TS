@@ -14,9 +14,9 @@ dayjs.extend(timezone);
 const VIETNAM_TIMEZONE = 'Asia/Ho_Chi_Minh';
 
 // --- Đảm bảo thư mục log tồn tại ---
-// LOGS_DIRECTORY và APP_LOG_FILE_PATH đã là đường dẫn tuyệt đối từ config.ts
-console.log(`[DEBUG] Target log directory: ${LOGS_DIRECTORY}`);
-console.log(`[DEBUG] Target absolute log file path: ${APP_LOG_FILE_PATH}`);
+// // LOGS_DIRECTORY và APP_LOG_FILE_PATH đã là đường dẫn tuyệt đối từ config.ts
+// console.log(`[DEBUG] Target log directory: ${LOGS_DIRECTORY}`);
+// console.log(`[DEBUG] Target absolute log file path: ${APP_LOG_FILE_PATH}`);
 
 try {
     // Kiểm tra và tạo thư mục nếu chưa tồn tại
@@ -26,7 +26,7 @@ try {
     }
     // Kiểm tra quyền ghi vào thư mục
     fs.accessSync(LOGS_DIRECTORY, fs.constants.W_OK);
-    console.log(`[DEBUG] Write access to directory ${LOGS_DIRECTORY} confirmed.`);
+    // console.log(`[DEBUG] Write access to directory ${LOGS_DIRECTORY} confirmed.`);
 } catch (err: unknown) {
     // Sử dụng unknown và kiểm tra kiểu lỗi
     const errorMessage = err instanceof Error ? err.message : String(err);
@@ -82,7 +82,7 @@ const createFallbackLogger = (): MinimalLogger => ({
 });
 
 
-console.log('[DEBUG] Initializing Pino logger with pino.destination...');
+// console.log('[DEBUG] Initializing Pino logger with pino.destination...');
 try {
     // Sử dụng Type Assertion hai bước (as unknown as PinoFileDestination)
     // để ép kiểu kết quả trả về từ pino.destination
@@ -106,10 +106,10 @@ try {
     // Khởi tạo logger Pino thật sự, truyền vào destination đã được ép kiểu
     logger = pino(pinoConfig, fileDestination);
 
-    console.log('[DEBUG] Pino logger initialization successful (pino.destination).');
+    // console.log('[DEBUG] Pino logger initialization successful (pino.destination).');
     // Sử dụng logger đã khởi tạo
     logger.fatal({ initCheck: true }, "LOGGER INITIALIZED (pino.destination). This should appear in the log file.");
-    console.log("[DEBUG] Called logger.fatal right after initialization.");
+    // console.log("[DEBUG] Called logger.fatal right after initialization.");
 
 } catch (pinoInitError: unknown) {
     const errorMessage = pinoInitError instanceof Error ? pinoInitError.message : String(pinoInitError);
@@ -295,7 +295,7 @@ export const addAcronymSafely = async (set: Set<string>, acronymIndex: string): 
     }
 };
 
-console.log('[DEBUG] End of utils/logger.ts execution. Logger should be exported.');
+// console.log('[DEBUG] End of utils/logger.ts execution. Logger should be exported.');
 
 // Optional: Export thêm các thành phần khác nếu cần
 // export { pinoConfig, levelLabels, fileDestination }; // Không nên export fileDestination trực tiếp trừ khi thực sự cần

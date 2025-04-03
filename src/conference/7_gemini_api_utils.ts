@@ -32,7 +32,7 @@ export const RESPONSE_OUTPUT_DIR: string = path.join(__dirname, "./data/response
 
 
 // --- Persistent Cache Map Configuration ---
-const CACHE_MAP_DIR: string = path.resolve(process.env.CACHE_MAP_DIR || './data');
+const CACHE_MAP_DIR: string = path.join(__dirname, './data');
 const CACHE_MAP_FILENAME: string = 'gemini_cache_map.json';
 const CACHE_MAP_FILE_PATH: string = path.join(CACHE_MAP_DIR, CACHE_MAP_FILENAME);
 

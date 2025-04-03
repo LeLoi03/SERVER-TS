@@ -13,6 +13,8 @@ import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData } fr
 
 import path from 'path';
 
+const ERROR_ACCESS_LINK_LOG_PATH: string = path.join(__dirname, "./data/error_access_link_log.txt");
+
 import { readContentFromFile, writeTempFile } from './11_utils';
 
 
@@ -923,7 +925,7 @@ export const updateHTMLContent = async (
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error accessing/processing mainLink ${mainLink}: ${error.message} for ${conference.Acronym}\n`;
             taskLogger.error({ link: mainLink, error: error.message }, `Error accessing/processing main link`);
-            await fs.promises.appendFile('./data/error_access_link_log.txt', logMessage, 'utf8').catch(e => console.error("Failed to write error log:", e));
+            await fs.promises.appendFile(ERROR_ACCESS_LINK_LOG_PATH, logMessage, 'utf8').catch(e => console.error("Failed to write error log:", e));
             // Decide if we should continue without main content? Let's assume yes for now.
         }
 

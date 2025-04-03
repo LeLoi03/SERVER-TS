@@ -237,14 +237,6 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
 
         routeLogger.info({ runtimeSeconds: runTimeSeconds, resultsPreview: results.slice(0, 3) }, "crawlConferences finished successfully.");
 
-        try {
-            const runtimeFilePath = path.resolve(__dirname, 'crawl_conferences_runtime.txt');
-            await fs.promises.writeFile(runtimeFilePath, `Execution time: ${runTimeSeconds} s`);
-            routeLogger.debug({ path: runtimeFilePath }, "Successfully wrote runtime file.");
-        } catch (writeError: any) {
-            routeLogger.warn(writeError, "Could not write crawl conferences runtime file");
-        }
-
         res.status(200).json({
             message: 'Conference crawling completed successfully!',
             runtime: `${runTimeSeconds} s`
@@ -476,7 +468,7 @@ async function getConferences(filter: any): Promise<any> {
     const conferenceResults = await filterConferences(
         filter,
         "./evaluate.csv",
-        "./output.txt"
+        "./conferences_filtered.txt"
     );
     return conferenceResults;
 }
@@ -486,7 +478,7 @@ async function getJournals(filter: any): Promise<any> {
     const journalResults = await filterJournals(
         filter,
         "./scimagojr_2023.csv",
-        "./journal_output.txt"
+        "./journals_filtered.txt"
     );
     return journalResults;
 }

@@ -13,7 +13,7 @@ async function initializeQueue(): Promise<QueueType> {
     // Dynamically import p-queue
     const { default: PQueue } = await import('p-queue');
     const queueOptions: PQueueOptions<any, any> = { concurrency: MAX_TABS };
-    console.log(`Initializing queue with concurrency: ${MAX_TABS}`); // Optional: Add logging
+    // console.log(`Initializing queue with concurrency: ${MAX_TABS}`); // Optional: Add logging
     return new PQueue(queueOptions);
 }
 
@@ -83,7 +83,6 @@ export const EXACT_KEYWORDS: string[] = parseEnvKeywords("EXACT_KEYWORDS");
 export const SKIP_KEYWORDS: string[] = parseEnvKeywords("SKIP_KEYWORDS");
 export const UNWANTED_DOMAINS: string[] = parseEnvKeywords("UNWANTED_DOMAINS");
 
-console.log("CFP_TAB_KEYWORDS:", CFP_TAB_KEYWORDS); // Log for debugging
 
 // --- API Configuration ---
 export const GEMINI_API_KEY: string | undefined = process.env.GEMINI_API_KEY;

@@ -1890,3 +1890,82 @@
 {"level":"info","time":"2025-04-02T13:18:01.017Z","event":"analysis_finish_success","parsed":1888,"total":1888,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
 {"level":"info","time":"2025-04-02T13:18:01.019Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
 {"level":"info","time":"2025-04-02T13:18:05.149Z","msg":"Received SIGINT. Shutting down gracefully..."}
+{"level":"fatal","time":"2025-04-03T01:20:14.874Z","initCheck":true,"msg":"LOGGER INITIALIZED (pino.destination). This should appear in the log file."}
+{"level":"info","time":"2025-04-03T01:20:16.991Z","msg":"Initializing GoogleGenerativeAI..."}
+{"level":"info","time":"2025-04-03T01:20:16.991Z","msg":"GoogleGenerativeAI initialized successfully."}
+{"level":"info","time":"2025-04-03T01:20:16.991Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","msg":"Attempting to load cache name map"}
+{"level":"warn","time":"2025-04-03T01:20:16.991Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","msg":"Cache map file not found. Starting with an empty map."}
+{"level":"info","time":"2025-04-03T01:20:19.164Z","msg":"Performing initial log analysis on startup..."}
+{"level":"info","time":"2025-04-03T01:20:19.165Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:20:19.530Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:20:19.530Z","event":"analysis_finish_success","parsed":1892,"total":1892,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:20:19.530Z","msg":"Initial log analysis completed."}
+{"level":"info","time":"2025-04-03T01:21:00.431Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:21:00.431Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:21:00.585Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:21:00.585Z","event":"analysis_finish_success","parsed":1892,"total":1892,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:21:00.590Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:22:00.356Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:22:00.356Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:22:00.391Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:22:00.391Z","event":"analysis_finish_success","parsed":1892,"total":1892,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:22:00.393Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:23:00.768Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:23:00.768Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:23:00.801Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:23:00.801Z","event":"analysis_finish_success","parsed":1892,"total":1892,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:23:00.802Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:24:00.307Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:24:00.307Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:24:00.332Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:24:00.332Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:24:00.333Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:25:00.731Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:25:00.731Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:25:00.755Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:25:00.755Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:25:00.757Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:26:00.120Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:26:00.120Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:26:00.142Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:26:00.142Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:26:00.143Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:27:00.508Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:27:00.508Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:27:00.530Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:27:00.530Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:27:00.531Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:28:00.930Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:28:00.930Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:28:00.954Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:28:00.954Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:28:00.955Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:29:00.317Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:29:00.317Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:29:00.341Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:29:00.341Z","event":"analysis_finish_success","parsed":1919,"total":1919,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:29:00.342Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:30:00.597Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:30:00.597Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:30:00.622Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:30:00.622Z","event":"analysis_finish_success","parsed":1945,"total":1945,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:30:00.623Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:31:00.001Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:31:00.001Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:31:00.036Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:31:00.036Z","event":"analysis_finish_success","parsed":1945,"total":1945,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:31:00.037Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:32:00.395Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:32:00.395Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:32:00.427Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:32:00.428Z","event":"analysis_finish_success","parsed":1945,"total":1945,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:32:00.429Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:33:00.814Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:33:00.814Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:33:00.845Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:33:00.845Z","event":"analysis_finish_success","parsed":1945,"total":1945,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}
+{"level":"info","time":"2025-04-03T01:33:00.846Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-03T01:34:00.203Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-03T01:34:00.203Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performLogAnalysis","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-04-03T01:34:00.237Z","event":"analysis_final_calculations_start","msg":"Performing final calculations"}
+{"level":"info","time":"2025-04-03T01:34:00.237Z","event":"analysis_finish_success","parsed":1945,"total":1945,"errors":0,"parseErrors":0,"conferencesProcessed":30,"tasksSuccess":30,"tasksFailed":0,"msg":"Log analysis execution completed successfully."}

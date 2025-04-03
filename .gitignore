@@ -40,3 +40,4 @@ next-env.d.ts
 /src/journal/data
 
 /src/utils/app.log
+src/chat_history.txt
