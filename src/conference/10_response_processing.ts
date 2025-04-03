@@ -193,13 +193,13 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                 const finalRow: ProcessedRowData = {
                     name: row.conferenceName || "",
                     acronym: (row.conferenceAcronym || "").split("_diff")[0],
-                    rank: row.conferenceRank || "",
-                    rating: row.conferenceRating || "",
-                    dblp: row.conferenceDBLP || "",
-                    note: row.conferenceNote || "",
-                    comments: row.conferenceComments || "",
-                    fieldOfResearch: row.conferencePrimaryFoR || "",
-                    source: row.conferenceSource || "",
+                    // rank: row.conferenceRank || "",
+                    // rating: row.conferenceRating || "",
+                    // dblp: row.conferenceDBLP || "",
+                    // note: row.conferenceNote || "",
+                    // comments: row.conferenceComments || "",
+                    // fieldOfResearch: row.conferencePrimaryFoR || "",
+                    // source: row.conferenceSource || "",
                     link: row.conferenceLink || "",
                     cfpLink: row.cfpLink || "",
                     impLink: row.impLink || "",
@@ -227,8 +227,9 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
         // Define fields for CSV header and ordering
         // Ensure these fields match the keys in ProcessedRowData
         const fields: (keyof ProcessedRowData)[] = [
-            "name", "acronym", "link", "cfpLink", "impLink", "source", "rank",
-            "rating", "fieldOfResearch", "information", "conferenceDates", "year",
+            "name", "acronym", "link", "cfpLink", "impLink",
+            // , "source", "rank", "rating", "fieldOfResearch", 
+            "information", "conferenceDates", "year",
             "location", "cityStateProvince", "country", "continent", "type",
             // Note: Date objects need special handling if not just strings
             "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",

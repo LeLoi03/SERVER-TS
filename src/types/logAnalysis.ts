@@ -17,6 +17,8 @@ export interface ConferenceAnalysisDetail {
         html_save_success: boolean | null; // Có thể cần logic phức tạp hơn để xác định chính xác
         link_processing_attempted: number;
         link_processing_success: number;
+        link_processing_failed: Array<{ timestamp: string; message: string; details?: any }>;
+
         gemini_determine_attempted: boolean;
         gemini_determine_success: boolean | null;
         gemini_determine_cache_used: boolean | null;
@@ -29,26 +31,22 @@ export interface ConferenceAnalysisDetail {
 }
 
 /** Cấu trúc kết quả phân tích log tổng thể và chi tiết theo conference */
-// --- Cập nhật cấu trúc kết quả để bao gồm bộ lọc ---
 export interface LogAnalysisResult {
     analysisTimestamp: string;
     logFilePath: string;
-    filterStartTime?: string; // Thời gian bắt đầu lọc (nếu có)
-    filterEndTime?: string;   // Thời gian kết thúc lọc (nếu có)
-    totalLogEntriesInFile: number; // Tổng số dòng trong file (không đổi)
-    parsedLogEntriesInFile: number; // Tổng số dòng parse thành công trong file (không đổi)
-    processedEntriesInRange: number; // Số dòng được xử lý trong khoảng thời gian lọc
+    totalLogEntries: number;
+    parsedLogEntries: number;
     parseErrors: number;
-    errorLogCount: number; // Lỗi >= ERROR trong khoảng thời gian lọc
-    fatalLogCount: number; // Lỗi >= FATAL trong khoảng thời gian lọc
+    errorLogCount: number; // Tổng số log >= ERROR
+    fatalLogCount: number; // Tổng số log >= FATAL
 
-    // --- Tổng hợp chung (cho khoảng thời gian lọc) ---
+    // --- Tổng hợp chung (vẫn giữ để có cái nhìn tổng quan) ---
     overall: {
-        startTime: string | null; // Log sớm nhất trong khoảng thời gian
-        endTime: string | null;   // Log muộn nhất trong khoảng thời gian
-        durationSeconds: number | null; // Khoảng thời gian giữa log sớm nhất và muộn nhất
-        totalConferencesInput: number | null; // Input ban đầu (có thể lấy từ log 'crawl_start' đầu tiên trong khoảng)
-        processedConferencesCount: number; // Số conference có log trong khoảng
+        startTime: string | null;
+        endTime: string | null;
+        durationSeconds: number | null;
+        totalConferencesInput: number | null;
+        processedConferencesCount: number; // Số conference có log được ghi nhận
         completedTasks: number;         // Tasks Completed (Ran without fatal errors logged by task_finish or inferred)
         failedOrCrashedTasks: number;   // Tasks Failed/Crashed (Logged fatal errors or task_finish success=false or inferred failure)
         successfulExtractions: number;  // Tasks with Successful Gemini Extraction API calls
@@ -83,7 +81,7 @@ export interface LogAnalysisResult {
         successfulCalls: number;
         failedCalls: number;
         retriesByType: { [apiType: string]: number };
-        retriesByModel: { [modelName: string]: number };
+        retriesByModel: { [apiType: string]: number };
         cacheAttempts: number;
         cacheHits: number;
         cacheMisses: number;

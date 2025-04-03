@@ -737,3 +737,131 @@
 [2025-04-03T07:58:07.279Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
 [2025-04-03T07:58:07.281Z] GeminiService initialized for model: gemini-2.0-flash
 [2025-04-03T07:58:07.283Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:13:43.793Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:13:43.794Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:13:43.796Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:13:43.797Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:15:42.851Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:15:42.853Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:15:42.855Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:15:42.856Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:16:19.871Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:16:19.874Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:16:19.876Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:16:19.877Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:17:25.957Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:17:25.959Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:17:25.960Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:17:25.961Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:18:46.628Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:18:46.630Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:18:46.631Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:18:46.632Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:19:45.132Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:19:45.133Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:19:45.135Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:19:45.136Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:45:33.630Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T09:45:33.631Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T09:45:33.633Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T09:45:33.633Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:19:32.128Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T10:19:32.130Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T10:19:32.131Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:19:32.132Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:22:37.411Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T10:22:37.412Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T10:22:37.414Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:22:37.414Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:23:46.961Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T10:23:46.962Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T10:23:46.965Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T10:23:46.965Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:09:05.167Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:09:05.168Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:09:05.171Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:09:05.172Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:10:52.331Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:10:52.332Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:10:52.334Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:10:52.335Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:03.853Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:17:03.855Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:17:03.857Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:03.860Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:32.904Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:17:32.905Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:17:32.907Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:32.908Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:52.386Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:17:52.387Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:17:52.389Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:17:52.390Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:26:00.254Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:26:00.255Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:26:00.257Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:26:00.258Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:30:10.656Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:30:10.657Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:30:10.659Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:30:10.659Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:32:47.204Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:32:47.205Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:32:47.207Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:32:47.207Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:32:57.876Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:32:57.878Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:32:57.881Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:32:57.882Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:34:31.511Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:34:31.513Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:34:31.515Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:34:31.516Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:34:44.143Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:34:44.144Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:34:44.146Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:34:44.147Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:37:29.451Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T11:37:29.452Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T11:37:29.454Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T11:37:29.456Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:13:17.019Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:13:17.021Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:13:17.022Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:13:17.023Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:13:32.806Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:13:32.808Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:13:32.810Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:13:32.810Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:14:23.104Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:14:23.106Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:14:23.108Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:14:23.109Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:14:41.124Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:14:41.126Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:14:41.128Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:14:41.128Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:15:02.283Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:15:02.284Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:15:02.286Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:15:02.287Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:15:31.667Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:15:31.673Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:15:31.675Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:15:31.677Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:18:54.749Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:18:54.751Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:18:54.752Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:18:54.753Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:19:12.787Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:19:12.789Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:19:12.790Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:19:12.791Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:25:21.634Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:25:21.635Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:25:21.637Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:25:21.638Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:33:51.771Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-03T12:33:51.773Z] Loaded model config for VISUALIZE: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"application/json"}
+[2025-04-03T12:33:51.774Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-03T12:33:51.775Z] GeminiService initialized for model: gemini-2.0-flash

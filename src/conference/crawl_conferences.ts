@@ -140,7 +140,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         const browserCtx = browserContext;
 
         if (!playwrightBrowser || !browserCtx) {
-             // Log lỗi đã có trong setupPlaywright nếu cần, ở đây chỉ cần throw
+            // Log lỗi đã có trong setupPlaywright nếu cần, ở đây chỉ cần throw
             logger.error({ event: 'playwright_setup_failed' }, "Playwright setup failed. Exiting crawlConferences.");
             throw new Error("Playwright setup failed");
         }
@@ -193,14 +193,14 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                     if (conference.mainLink && conference.cfpLink && conference.impLink) {
                         taskLogger.info({ event: 'process_predefined_links' }, `Processing with pre-defined links`);
                         const conferenceUpdateData: ConferenceUpdateData = { /* ... như cũ ... */ Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "", conferenceText: "", cfpText: "", impText: "" };
-                         try {
+                        try {
                             // Giả sử updateHTMLContent log chi tiết bên trong
                             await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises);
                             taskLogger.info({ event: 'process_predefined_links_success' }, "Predefined links processing step completed.");
-                         } catch (updateError: any) {
-                             taskHasError = true;
-                             taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined links processing.");
-                         }
+                        } catch (updateError: any) {
+                            taskHasError = true;
+                            taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined links processing.");
+                        }
 
                     } else {
                         taskLogger.info({ event: 'search_and_process_start' }, `Searching and processing`);
@@ -293,7 +293,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                             }
                         } else {
                             // Log search thất bại cuối cùng (đã có, giữ nguyên)
-                             // Đảm bảo log này được ghi KHI searchSuccess là false sau vòng lặp
+                            // Đảm bảo log này được ghi KHI searchSuccess là false sau vòng lặp
                             taskLogger.error({ err: lastSearchError, details: lastSearchError?.details, event: 'search_ultimately_failed' }, "Google Search ultimately failed for this conference.");
                             searchResultsLinks = []; // Đảm bảo links rỗng
                         }
@@ -303,7 +303,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                         // Log bắt đầu lưu (đã có, giữ nguyên)
                         taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content`);
                         try {
-                             // Hàm saveHTMLContent sẽ log chi tiết bên trong (thành công/thất bại từng link)
+                            // Hàm saveHTMLContent sẽ log chi tiết bên trong (thành công/thất bại từng link)
                             await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2);
                             // Log khi bước lưu hoàn tất (không phân biệt có link hay không)
                             taskLogger.info({ event: 'save_html_step_completed' }, 'Save HTML content step completed.');
@@ -349,23 +349,23 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         settledResults.forEach((result, i) => {
             const batchLogContext = { batchPromiseIndex: i }; // Index của promise trong mảng batchPromises
             if (result.status === 'fulfilled' && result.value) {
-                 if (Array.isArray(result.value) && result.value.length > 0) { // Phải là mảng không rỗng
-                     allBatches.push(...result.value);
-                     aggregatedSuccessCount++;
-                     logger.info({ ...batchLogContext, batchCount: result.value.length, status: result.status, event: 'batch_aggregation_item_success' }, "Batch promise fulfilled with data.");
-                 } else {
-                     // Resolved thành null hoặc mảng rỗng -> coi là thất bại logic
-                     aggregatedFailedCount++;
-                     logger.warn({ ...batchLogContext, status: result.status, valueType: typeof result.value, isEmptyArray: Array.isArray(result.value), event: 'batch_aggregation_item_failed_logic' }, "Batch promise resolved to null or empty array.");
-                 }
+                if (Array.isArray(result.value) && result.value.length > 0) { // Phải là mảng không rỗng
+                    allBatches.push(...result.value);
+                    aggregatedSuccessCount++;
+                    logger.info({ ...batchLogContext, batchCount: result.value.length, status: result.status, event: 'batch_aggregation_item_success' }, "Batch promise fulfilled with data.");
+                } else {
+                    // Resolved thành null hoặc mảng rỗng -> coi là thất bại logic
+                    aggregatedFailedCount++;
+                    logger.warn({ ...batchLogContext, status: result.status, valueType: typeof result.value, isEmptyArray: Array.isArray(result.value), event: 'batch_aggregation_item_failed_logic' }, "Batch promise resolved to null or empty array.");
+                }
             } else if (result.status === 'rejected') {
                 aggregatedFailedCount++;
-                 // Log lỗi từ batch promise (đã có, giữ nguyên)
+                // Log lỗi từ batch promise (đã có, giữ nguyên)
                 logger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_aggregation_item_failed_rejected' }, "Batch operation promise rejected");
             } else {
-                 // Trường hợp fulfilled nhưng value là null/undefined (đã xử lý ở trên)
-                 aggregatedFailedCount++; // Xử lý như một thất bại
-                 logger.warn({ ...batchLogContext, status: result.status, value: result.value, event: 'batch_aggregation_item_failed_nodata' }, "Batch promise fulfilled but with no value.");
+                // Trường hợp fulfilled nhưng value là null/undefined (đã xử lý ở trên)
+                aggregatedFailedCount++; // Xử lý như một thất bại
+                logger.warn({ ...batchLogContext, status: result.status, value: result.value, event: 'batch_aggregation_item_failed_nodata' }, "Batch promise fulfilled but with no value.");
             }
         });
 
@@ -412,7 +412,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         return finalProcessedData;
 
     } catch (error: any) {
-         // Log lỗi nghiêm trọng của toàn bộ quá trình (đã có, giữ nguyên)
+        // Log lỗi nghiêm trọng của toàn bộ quá trình (đã có, giữ nguyên)
         logger.fatal({ err: error, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
         return []; // Trả về mảng rỗng
     } finally {
@@ -439,18 +439,12 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         logger.info({
             event: 'crawl_summary', // Đổi tên event
             totalConferencesInput: conferenceList.length,
-            // processedConferences: processedConferenceCount, // Bỏ
-            totalGoogleApiRequests: totalGoogleApiRequests, // Giữ lại nếu biến này vẫn được quản lý và cập nhật đúng
-            // successfulSearches: successfulSearchCount,      // Bỏ
-            // failedSearches: failedSearchCount,            // Bỏ
-            // skippedSearches: skippedSearchCount,          // Bỏ
-            // successfulBatches,                             // Bỏ (đã log ở bước aggregation)
-            // failedBatches                                  // Bỏ (đã log ở bước aggregation)
+            totalGoogleApiRequests: totalGoogleApiRequests,
             durationSeconds,
             endTime: new Date(operationEndTime).toISOString()
         }, "Crawling process summary"); // Giữ message này
 
-        logger.info({ event: 'crawl_end' }, "crawlConferences process finished.");
+        logger.info({ event: 'crawl_end_success' }, "crawlConferences process finished.");
         // --- Kết thúc cleanup ---
     }
 };

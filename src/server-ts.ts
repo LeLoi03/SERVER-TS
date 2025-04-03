@@ -235,7 +235,7 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
         const runTime = endTime - startTime;
         const runTimeSeconds = (runTime / 1000).toFixed(2);
 
-        routeLogger.info({ runtimeSeconds: runTimeSeconds, resultsPreview: results.slice(0, 3) }, "crawlConferences finished successfully.");
+        routeLogger.info({ runtimeSeconds: runTimeSeconds, event: 'crawl_conference_result', results: results }, "crawlConferences finished successfully.");
 
         res.status(200).json({
             message: 'Conference crawling completed successfully!',
@@ -325,14 +325,14 @@ import { LogAnalysisResult } from './types/logAnalysis'; // <<< Import interface
 
 
 // --- Lưu trữ kết quả phân tích mới nhất ---
-let latestAnalysisResult: LogAnalysisResult | null = null;
+let latestOverallAnalysisResult: LogAnalysisResult | null = null;
 
 
 // --- Chạy phân tích lần đầu khi server khởi động (Tùy chọn) ---
 (async () => {
     logger.info('Performing initial log analysis on startup...');
     try {
-        latestAnalysisResult = await performLogAnalysis();
+        latestOverallAnalysisResult = await performLogAnalysis();
         logger.info('Initial log analysis completed.');
     } catch (error) {
         logger.error({ err: error }, 'Initial log analysis failed.');
@@ -345,25 +345,61 @@ cron.schedule('5 * * * *', async () => {
     logger.info('[Cron] Running scheduled log analysis...');
     try {
         const results = await performLogAnalysis();
-        latestAnalysisResult = results; // Cập nhật kết quả mới nhất
+        latestOverallAnalysisResult = results; // Cập nhật kết quả mới nhất
         io.emit('log_analysis_update', results); // <<< Phát sự kiện đến tất cả client
         logger.info('[Cron] Log analysis finished and results emitted via Socket.IO.');
     } catch (error) {
         logger.error({ err: error }, '[Cron] Scheduled log analysis failed.');
-        // Quyết định xem có nên emit lỗi không, hoặc giữ nguyên latestAnalysisResult cũ
+        // Quyết định xem có nên emit lỗi không, hoặc giữ nguyên latestOverallAnalysisResult cũ
     }
 });
 
-// Route để lấy dữ liệu phân tích MỚI NHẤT (cho lần tải đầu của frontend)
-app.get('/api/v1/logs/analysis/latest', async (req, res) => {
+
+// Route để lấy dữ liệu phân tích, chấp nhận bộ lọc thời gian
+app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
     try {
-        const results = await performLogAnalysis();
-        latestAnalysisResult = results; // Cập nhật kết quả mới nhất
-        res.status(200).json(latestAnalysisResult);
-    } catch (error) {
-        res.status(404).json({ message: 'Log analysis data not yet available. Please wait.' });
+        // Đọc và parse tham số query (dạng string) thành number (milliseconds)
+        const filterStartTimeStr = req.query.filterStartTime as string | undefined;
+        const filterEndTimeStr = req.query.filterEndTime as string | undefined;
+
+        let filterStartTime: number | undefined = undefined;
+        let filterEndTime: number | undefined = undefined;
+
+        if (filterStartTimeStr && !isNaN(parseInt(filterStartTimeStr, 10))) {
+            filterStartTime = parseInt(filterStartTimeStr, 10);
+        }
+
+        if (filterEndTimeStr && !isNaN(parseInt(filterEndTimeStr, 10))) {
+            filterEndTime = parseInt(filterEndTimeStr, 10);
+        }
+
+        console.log(`Backend received request with filterStartTime: ${filterStartTime}, filterEndTime: ${filterEndTime}`);
+
+        // Gọi hàm phân tích với các tham số thời gian (hoặc undefined nếu không có)
+        const results = await performLogAnalysis(filterStartTime, filterEndTime);
+
+        // Cập nhật kết quả mới nhất *tổng thể* nếu không có bộ lọc (dành cho socket?)
+        // Hoặc bạn có thể quyết định không cần biến này nữa nếu socket cũng gửi dữ liệu lọc.
+        // Tạm thời vẫn cập nhật nếu không lọc:
+        if (filterStartTime === undefined && filterEndTime === undefined) {
+           latestOverallAnalysisResult = results;
+        }
+
+        // Trả về kết quả (đã lọc hoặc không)
+        res.status(200).json(results);
+
+    } catch (error: any) {
+        console.error("Error performing log analysis:", error);
+        // Có thể trả về lỗi cụ thể hơn
+        // Kiểm tra xem lỗi có phải do chưa có dữ liệu không
+        if (error.message === 'No log data found for the specified period') {
+             res.status(404).json({ message: error.message || 'Log analysis data not available for the selected period.' });
+        } else {
+            res.status(500).json({ message: 'Failed to perform log analysis.', error: error.message });
+        }
     }
 });
+
 
 
 

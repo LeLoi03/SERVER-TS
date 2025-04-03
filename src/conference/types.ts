@@ -231,13 +231,13 @@ export interface ProcessedResponseData {
 export interface InputRowData {
     conferenceName?: string; // Mark as optional if they might be missing
     conferenceAcronym?: string;
-    conferenceRank?: string;
-    conferenceRating?: string;
-    conferenceDBLP?: string;
-    conferenceNote?: string;
-    conferenceComments?: string;
-    conferencePrimaryFoR?: string;
-    conferenceSource?: string;
+    // conferenceRank?: string;
+    // conferenceRating?: string;
+    // conferenceDBLP?: string;
+    // conferenceNote?: string;
+    // conferenceComments?: string;
+    // conferencePrimaryFoR?: string;
+    // conferenceSource?: string;
     conferenceLink?: string;
     cfpLink?: string; // Added based on usage in writeCSVFile
     impLink?: string; // Added based on usage in writeCSVFile
@@ -249,13 +249,13 @@ export interface InputRowData {
 export interface ProcessedRowData extends ProcessedResponseData {
     name: string;
     acronym: string;
-    rank: string;
-    rating: string;
-    dblp: string;
-    note: string;
-    comments: string;
-    fieldOfResearch: string;
-    source: string;
+    // rank: string;
+    // rating: string;
+    // dblp: string;
+    // note: string;
+    // comments: string;
+    // fieldOfResearch: string;
+    // source: string;
     link: string;
     cfpLink: string;
     impLink: string;
