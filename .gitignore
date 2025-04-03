@@ -38,3 +38,5 @@ next-env.d.ts
 
 /src/conference/data
 /src/journal/data
+
+/src/utils/app.log
