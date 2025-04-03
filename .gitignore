@@ -36,7 +36,8 @@ yarn-error.log*
 next-env.d.ts
 .env
 
-/src/conference/data
+*.txt
+*links.json
 /src/journal/data
 
 /src/utils/app.log

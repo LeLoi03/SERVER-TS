@@ -1,0 +1,202 @@
+[
+  {
+    "Title": "International Symposium on Fundamentals of Computation Theory",
+    "Acronym": "FCT"
+  },
+  {
+    "Title": "International Conference on the Foundations of Digital Games",
+    "Acronym": "FDG"
+  },
+  {
+    "Title": "Forum on Specification and Design Languages",
+    "Acronym": "FDL"
+  },
+  {
+    "Title": "Workshop on Fault Diagnosis and Tolerance in Cryptography",
+    "Acronym": "FDTC"
+  },
+  {
+    "Title": "CONFERENCE ON COMPUTER SCIENCE AND INTELLIGENCE SYSTEMS",
+    "Acronym": "FedCSIS"
+  },
+  {
+    "Title": "IEEE International Conference on Automatic Face and Gesture Recognition",
+    "Acronym": "FG"
+  },
+  {
+    "Title": "Frontiers in Education",
+    "Acronym": "FIE"
+  },
+  {
+    "Title": "International Conference on Frontiers of Information Technology",
+    "Acronym": "FIT"
+  },
+  {
+    "Title": "Florida Artificial Intelligence Research Society Conference",
+    "Acronym": "FlAIRS"
+  },
+  {
+    "Title": "International FLINS Conference on Robotics and Artificial Intelligence (was International Fuzzy Logic and Intelligent technologies in Nuclear Science Conference)",
+    "Acronym": "FLINS"
+  },
+  {
+    "Title": "International Symposium on Functional and Logic Programming",
+    "Acronym": "FLOPS"
+  },
+  {
+    "Title": "International Symposium on Formal Methods (was Formal Methods Europe FME)",
+    "Acronym": "FM"
+  },
+  {
+    "Title": "Formal Methods in Computer-Aided Design",
+    "Acronym": "FMCAD"
+  },
+  {
+    "Title": "Int. Workshop on Formal Methods for Industrial Critical Systems",
+    "Acronym": "FMICS"
+  },
+  {
+    "Title": "International Workshop on Formal Methods for interactive Systems",
+    "Acronym": "FMIS"
+  },
+  {
+    "Title": "The International Conference on Future Networks and Communications",
+    "Acronym": "FNC"
+  },
+  {
+    "Title": "IEEE Symposium on Foundations of Computer Science",
+    "Acronym": "FOCS"
+  },
+  {
+    "Title": "Foundations of Genetic Algorithms",
+    "Acronym": "FOGA"
+  },
+  {
+    "Title": "International Conference on Formal Ontology in Information Systems",
+    "Acronym": "FOIS"
+  },
+  {
+    "Title": "IFIP Joint International Conference on Formal Description Techniques and Protocol Specification, Testing, And Verification",
+    "Acronym": "FORTE"
+  },
+  {
+    "Title": "Foundations of Software Science and Computational Structures",
+    "Acronym": "FOSSACS"
+  },
+  {
+    "Title": "ACM Int'l Symposium on Field Programmable Gate Arrays",
+    "Acronym": "FPGA"
+  },
+  {
+    "Title": "Field Programmable Logic and Applications",
+    "Acronym": "FPL"
+  },
+  {
+    "Title": "Flexible Query-Answering Systems",
+    "Acronym": "FQAS"
+  },
+  {
+    "Title": "IEEE Conference of the Open Innovations Association FRUCT",
+    "Acronym": "FRUCT"
+  },
+  {
+    "Title": "International Conference on Formal Structures for Computation and Deduction",
+    "Acronym": "FSCD"
+  },
+  {
+    "Title": "International Workshop on Fast Software Encryption",
+    "Acronym": "FSE"
+  },
+  {
+    "Title": "ACM International Conference on the Foundations of Software Engineering (was ESEC/FSE, changed 2024; duplicate previously listed as ESEC, removed from DB)",
+    "Acronym": "FSE"
+  },
+  {
+    "Title": "Foundations of Software Technology and Theoretical Computer Science",
+    "Acronym": "FST&TCS"
+  },
+  {
+    "Title": "Workshop on Formal Techniques for Java-like Programs",
+    "Acronym": "FTfJP"
+  },
+  {
+    "Title": "Conference on Fun with Algorithms",
+    "Acronym": "FUN"
+  },
+  {
+    "Title": "International Conference on Information Fusion",
+    "Acronym": "FUSION"
+  },
+  {
+    "Title": "IEEE International Conference on Fuzzy Systems",
+    "Acronym": "FUZZ-IEEE"
+  },
+  {
+    "Title": "Graph Drawing",
+    "Acronym": "GD"
+  },
+  {
+    "Title": "Genetic and Evolutionary Computations",
+    "Acronym": "GECCO"
+  },
+  {
+    "Title": "Graphics Interface",
+    "Acronym": "GI"
+  },
+  {
+    "Title": "IEEE Global Internet Symposium",
+    "Acronym": "GI"
+  },
+  {
+    "Title": "IEEE Global Telecommunications Conference",
+    "Acronym": "GLOBECOM"
+  },
+  {
+    "Title": "Geometry Modeling and Processing",
+    "Acronym": "GMP"
+  },
+  {
+    "Title": "International Conference on Green, Pervasive and Cloud Computing (was Grid and Pervasive Computing)",
+    "Acronym": "GPC"
+  },
+  {
+    "Title": "International Conference on Generative Programming and Component Engineering",
+    "Acronym": "GPCE"
+  },
+  {
+    "Title": "Workshop on Applications of Graph Theory in Wireless Ad hoc Networks and Sensor Networks",
+    "Acronym": "Graph-hoc"
+  },
+  {
+    "Title": "Visualization In Science and Education",
+    "Acronym": "GRC"
+  },
+  {
+    "Title": "ACM Special Interest Group on Supporting Group Work (was SIGGRoup)",
+    "Acronym": "Group"
+  },
+  {
+    "Title": "International Wordnet Conference (Global Wordnet Conference)",
+    "Acronym": "GWC"
+  },
+  {
+    "Title": "Human-Agent Interaction",
+    "Acronym": "HAI"
+  },
+  {
+    "Title": "International Conference on Hybrid Artificial Intelligence Systems",
+    "Acronym": "HAIS"
+  },
+  {
+    "Title": "Haskell Workshop",
+    "Acronym": "HASKELL"
+  },
+  {
+    "Title": "British Computer Society Conference on Human-Computer Interaction",
+    "Acronym": "HCI"
+  },
+  {
+    "Title": "HCist - International Conference on Health and Social Care Information Systems and Technologies",
+    "Acronym": "HCist"
+  }
+]

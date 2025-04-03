@@ -1,0 +1,202 @@
+[
+  {
+    "Title": "International Conference on Probabilistic, Combinatorial, and Asymptotic Methods in the Analysis of Algorithms (was Conference on Analysis of Algorithms)",
+    "Acronym": "AofA"
+  },
+  {
+    "Title": "Asia-Pacific Bioinformatics Conference",
+    "Acronym": "APBC"
+  },
+  {
+    "Title": "Asia Pacific Conference on Communications",
+    "Acronym": "APCC"
+  },
+  {
+    "Title": "Asia-Pacific Conference on Conceptual Modelling",
+    "Acronym": "APCCM"
+  },
+  {
+    "Title": "ASIAN Symposium on Programming Languages and Systems",
+    "Acronym": "APLAS"
+  },
+  {
+    "Title": "Asia-Pacific Network Operations and Management Symposium",
+    "Acronym": "APNOMS"
+  },
+  {
+    "Title": "Conference of the Association of Asian-Pacific Operational Research Societies",
+    "Acronym": "APORS"
+  },
+  {
+    "Title": "International Workshop on Approximation Algorithms for Combinatorial Optimization Problems and International Conference on Randomization and Computation",
+    "Acronym": "APPROX/RANDOM"
+  },
+  {
+    "Title": "Asia-Pacific Services Computing Conference",
+    "Acronym": "APSCC"
+  },
+  {
+    "Title": "Asia-Pacific Software Engineering Conference",
+    "Acronym": "APSEC"
+  },
+  {
+    "Title": "Web and Big Data",
+    "Acronym": "APWEB"
+  },
+  {
+    "Title": "International Conference on Availability, Reliability and Security",
+    "Acronym": "ARES"
+  },
+  {
+    "Title": "IEEE Symposium on Computer Arithmetic",
+    "Acronym": "ARITH"
+  },
+  {
+    "Title": "International Symposium on Artificial Life and Robotics",
+    "Acronym": "AROB"
+  },
+  {
+    "Title": "ArtsIT, Interactivity & Game Creation (was International Conference on Arts and Technology)",
+    "Acronym": "ArtsIT"
+  },
+  {
+    "Title": "Automated Software Engineering Conference",
+    "Acronym": "ASE"
+  },
+  {
+    "Title": "Asia Conference on Information, Computer and Communications Security",
+    "Acronym": "AsiaCCS"
+  },
+  {
+    "Title": "International Conference on the Theory and Application of Cryptology and Information Security",
+    "Acronym": "ASIACRYPT"
+  },
+  {
+    "Title": "IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining",
+    "Acronym": "ASONAM"
+  },
+  {
+    "Title": "National Conference of The Australian Society for Operations Research",
+    "Acronym": "ASOR"
+  },
+  {
+    "Title": "Asia and South Pacific Design Automation Conference",
+    "Acronym": "ASPDAC"
+  },
+  {
+    "Title": "Architectural Support for Programming Languages and Operating Systems",
+    "Acronym": "ASPLOS"
+  },
+  {
+    "Title": "IEEE Automatic Speech Recognition and Understanding Workshop",
+    "Acronym": "ASRU"
+  },
+  {
+    "Title": "International ACM SIGACCESS Conference on Computers and Accessibility",
+    "Acronym": "ASSETS"
+  },
+  {
+    "Title": "Automation of Software Test",
+    "Acronym": "AST"
+  },
+  {
+    "Title": "International Conference on Advanced and Trusted Computing (was International Conference on Autonomic and Trusted Computing)",
+    "Acronym": "ATC"
+  },
+  {
+    "Title": "Workshop on Algorithmic Approaches for Transportation Modelling, Optimization, and Systems",
+    "Acronym": "ATMOS"
+  },
+  {
+    "Title": "International Conference on Advanced Technologies For Signal & Image Processing",
+    "Acronym": "ATSIP"
+  },
+  {
+    "Title": "International Symposium on Automated Technology for Verification and Analysis",
+    "Acronym": "ATVA"
+  },
+  {
+    "Title": "Australian Data Mining Conference",
+    "Acronym": "AusDM"
+  },
+  {
+    "Title": "Australasian Symposium on Parallel and Distributed Computing (was AusGrid)",
+    "Acronym": "AusPDC"
+  },
+  {
+    "Title": "Advanced Visual Interfaces",
+    "Acronym": "AVI"
+  },
+  {
+    "Title": "IEEE International Conference on Advanced Video and Signal Based Surveillance",
+    "Acronym": "AVSS"
+  },
+  {
+    "Title": "IEEE/ACM International Conference on Big Data Computing, Applications and Technologies",
+    "Acronym": "BDCAT"
+  },
+  {
+    "Title": "IEEE Bioinformatics and Bioengineering",
+    "Acronym": "BIBE"
+  },
+  {
+    "Title": "IEEE International Conference on Big Data",
+    "Acronym": "BigData"
+  },
+  {
+    "Title": "British Machine Vision Conference",
+    "Acronym": "BMVC"
+  },
+  {
+    "Title": "International Conference in Business Process Management",
+    "Acronym": "BPM"
+  },
+  {
+    "Title": "International Conference on Broadband Communications, Networks and Systems",
+    "Acronym": "Broadnets"
+  },
+  {
+    "Title": "Body Sensor Networks",
+    "Acronym": "BSN"
+  },
+  {
+    "Title": "Datenbanksysteme für Business, Technologie und Web",
+    "Acronym": "BTW"
+  },
+  {
+    "Title": "Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference",
+    "Acronym": "CAADRIA"
+  },
+  {
+    "Title": "International Conference on Automated Deduction",
+    "Acronym": "CADE"
+  },
+  {
+    "Title": "ISCA International Conference on Computer Applications in Industry and Engineering",
+    "Acronym": "CAINE"
+  },
+  {
+    "Title": "International Conference on Computer Analysis of Images and Patterns",
+    "Acronym": "CAIP"
+  },
+  {
+    "Title": "International Conference on Advanced Information Systems Engineering",
+    "Acronym": "CaiSE"
+  },
+  {
+    "Title": "Computer Animation, Information Visualisation, and Digital Effects",
+    "Acronym": "CAivDE"
+  },
+  {
+    "Title": "Conference on Algebra and Coalgebra in Computer Science",
+    "Acronym": "CALCO"
+  },
+  {
+    "Title": "International Conference on Cryptology and Network Security",
+    "Acronym": "CANS"
+  },
+  {
+    "Title": "Smart Card Research and Advanced Application Conference",
+    "Acronym": "CARDIS"
+  }
+]
