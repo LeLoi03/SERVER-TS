@@ -325,8 +325,8 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                     taskLogger.error({ err: taskError, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
                     // Không cần processedConferenceCount++ ở đây
                 } finally {
-                    // Log kết thúc xử lý task, thêm trạng thái thành công/thất bại
-                    taskLogger.info({ event: 'task_finish', success: !taskHasError }, `Finished processing queue item`);
+                    // Log kết thúc xử lý task, thêm trạng thái hoàn thành/thất bại -> Chỉ là hoàn thành, còn thành công hay công là do extract api
+                    taskLogger.info({ event: 'task_finish', status: (!taskHasError === true) ? "completed" : "failed" }, `Finished processing queue item`);
                 }
             });
         }); // Kết thúc map conferenceList

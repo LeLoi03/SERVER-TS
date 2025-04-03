@@ -192,6 +192,8 @@ function getRateLimiterForModel(modelName: string): RateLimiterMemory {
 
 
 // --- Get Or Create Extract Cache (with Persistent Logic) ---
+let cachePromises: Map<string, Promise<CachedContent | null>> = new Map();
+
 const getOrCreateExtractCache = async (
     modelName: string,
     systemInstructionText: string,
@@ -200,91 +202,112 @@ const getOrCreateExtractCache = async (
     const baseLogContext = { modelName, function: 'getOrCreateExtractCache' };
     logger.debug({ ...baseLogContext, event: 'cache_get_or_create_start' }, "Getting or creating extract cache");
 
+    // 1. Check in-memory cache first (fast path)
     const cachedInMemory = extractApiCaches.get(modelName);
     if (cachedInMemory?.name) {
         logger.debug({ ...baseLogContext, cacheName: cachedInMemory.name, event: 'cache_reuse_in_memory' }, "Reusing existing extract API cache object from in-memory map");
         return cachedInMemory;
     }
-    logger.debug({ ...baseLogContext, event: 'cache_check_persistent' }, "Cache object not found in memory. Checking persistent store...");
 
-    const manager = initializeCacheManager();
-    if (!manager) {
-        logger.warn({ ...baseLogContext, event: 'cache_manager_unavailable' }, "CacheManager not available. Cannot create or use cache.");
-        return null;
+    // 2. Check if a creation promise exists
+    let cachePromise = cachePromises.get(modelName);
+    if (cachePromise) {
+        logger.debug({ ...baseLogContext, event: 'cache_creation_in_progress' }, "Cache creation already in progress, awaiting...");
+        return await cachePromise; // Wait for the promise to resolve
     }
 
-    const knownCacheName = persistentCacheNameMap.get(modelName);
-    if (knownCacheName) {
-        const retrieveContext = { ...baseLogContext, cacheName: knownCacheName };
-        logger.debug({ ...retrieveContext, event: 'cache_persistent_retrieve_start' }, "Found persistent cache name. Attempting to retrieve from Google...");
+     // Check persistent storage again
+        const knownCacheName = persistentCacheNameMap.get(modelName);
+        if(knownCacheName) {
+           const manager = initializeCacheManager();
+           if(!manager) return null;
+           try {
+              const retrievedCache = await manager.get(knownCacheName);
+              if(retrievedCache) {
+                  extractApiCaches.set(modelName, retrievedCache);
+                  return retrievedCache;
+              }
+           } catch (err) {
+              console.error("Error retrieving cache before locking", err);
+           }
+        }
+
+    // 3. Create a promise and store it
+    cachePromise = (async (): Promise<CachedContent | null> => {
         try {
-            const retrievedCache = await manager.get(knownCacheName);
-
-            if (retrievedCache?.name) {
-                logger.debug({ ...retrieveContext, event: 'cache_persistent_retrieve_success' }, "Successfully retrieved cache object from Google");
-                extractApiCaches.set(modelName, retrievedCache);
-                return retrievedCache;
-            } else {
-                logger.warn({ ...retrieveContext, retrievedObject: retrievedCache, event: 'cache_persistent_retrieve_invalid' }, "manager.get returned invalid object. Proceeding to create new cache.");
-                await removePersistentCacheEntry(modelName); // Log inside this function
+            const manager = initializeCacheManager();
+            if (!manager) {
+                logger.warn({ ...baseLogContext, event: 'cache_manager_unavailable' }, "CacheManager not available. Cannot create or use cache.");
+                return null;
             }
-        } catch (getError: unknown) {
-            const errorDetails = getError instanceof Error ? { name: getError.name, message: getError.message } : { details: String(getError) };
-            const errorMsgLower = errorDetails.message?.toLowerCase() ?? '';
-            if (errorMsgLower.includes('not found') || errorMsgLower.includes('permission denied')) {
-                logger.warn({ ...retrieveContext, err: errorDetails, event: 'cache_persistent_retrieve_not_found_or_denied' }, "Persistent cache not found or accessible on Google server. Removing from persistent map.");
-            } else {
-                logger.error({ ...retrieveContext, err: errorDetails, event: 'cache_persistent_retrieve_failed' }, "Failed to retrieve cache from Google. Proceeding to create new cache.");
+
+            // Double-check in case another request created the cache while we were waiting
+            const cachedInMemory = extractApiCaches.get(modelName);
+            if (cachedInMemory?.name) {
+                logger.debug({ ...baseLogContext, cacheName: cachedInMemory.name, event: 'cache_reuse_in_memory' }, "Reusing existing extract API cache object from in-memory map");
+                 cachePromises.delete(modelName);  // Clear the promise
+                return cachedInMemory;
             }
-            await removePersistentCacheEntry(modelName); // Log inside this function
+
+
+            // --- Create New Cache ---
+            const createContext = { ...baseLogContext };
+            logger.info({ ...createContext, event: 'cache_create_start' }, "Attempting to create NEW context cache");
+            try {
+                const systemInstructionContent: Part[] = [{ text: systemInstructionText }];
+                const contentToCache: Content[] = [];
+                for (let i = 0; i < fewShotParts.length; i += 2) {
+                    if (fewShotParts[i]) contentToCache.push({ role: 'user', parts: [fewShotParts[i]] });
+                    if (fewShotParts[i + 1]) contentToCache.push({ role: 'model', parts: [fewShotParts[i + 1]] });
+                }
+
+                const modelForCacheApi = `models/${modelName}`;
+                const displayName = `cache-${modelName}-${Date.now()}`;
+                logger.debug({ ...createContext, modelForCache: modelForCacheApi, displayName, contentCount: contentToCache.length, event: 'cache_create_details' }, "Cache creation details");
+
+                const createdCache = await manager.create({
+                    model: modelForCacheApi,
+                    systemInstruction: { role: "system", parts: systemInstructionContent },
+                    contents: contentToCache,
+                    displayName: displayName
+                });
+
+                if (!createdCache?.name) {
+                    logger.error({ ...createContext, modelForCache: modelForCacheApi, createdCacheObject: createdCache, event: 'cache_create_failed_invalid_object' }, "Failed to create context cache: Invalid cache object returned by manager.create");
+                    return null;
+                }
+
+                logger.info({ ...createContext, cacheName: createdCache.name, model: createdCache.model, event: 'cache_create_success' }, "Context cache created successfully");
+
+                extractApiCaches.set(modelName, createdCache);
+                persistentCacheNameMap.set(modelName, createdCache.name);
+                await saveCacheNameMap(); // Log inside this function
+
+                return createdCache;
+
+            } catch (cacheError: unknown) {
+                const errorDetails = cacheError instanceof Error ? { name: cacheError.name, message: cacheError.message } : { details: String(cacheError) };
+                logger.error({ ...createContext, err: errorDetails, event: 'cache_create_failed' }, "Failed to create NEW context cache");
+                if (errorDetails.message?.includes("invalid model")) {
+                    logger.error({ ...createContext, modelForCache: `models/${modelName}`, event: 'cache_create_invalid_model_error' }, "Ensure model name is correct and potentially prefixed with 'models/' for caching API.");
+                }
+                return null;
+            } finally {
+                cachePromises.delete(modelName); // Remove the promise from the map
+            }
+
+        } catch (err) {
+            cachePromises.delete(modelName); // Ensure promise is removed on error
+            console.error("Error creating cache", err);
+            return null;  // Or re-throw, depending on desired error handling
         }
-    } else {
-        logger.info({ ...baseLogContext, event: 'cache_persistent_name_not_found' }, "No persistent cache name found.");
-    }
 
-    // --- Create New Cache ---
-    const createContext = { ...baseLogContext };
-    logger.info({ ...createContext, event: 'cache_create_start' }, "Attempting to create NEW context cache");
-    try {
-        const systemInstructionContent: Part[] = [{ text: systemInstructionText }];
-        const contentToCache: Content[] = [];
-        for (let i = 0; i < fewShotParts.length; i += 2) {
-            if (fewShotParts[i]) contentToCache.push({ role: 'user', parts: [fewShotParts[i]] });
-            if (fewShotParts[i + 1]) contentToCache.push({ role: 'model', parts: [fewShotParts[i + 1]] });
-        }
+    })();
 
-        const modelForCacheApi = `models/${modelName}`;
-        const displayName = `cache-${modelName}-${Date.now()}`;
-        logger.debug({ ...createContext, modelForCache: modelForCacheApi, displayName, contentCount: contentToCache.length, event: 'cache_create_details' }, "Cache creation details");
+    cachePromises.set(modelName, cachePromise); // Store promise BEFORE awaiting
 
-        const createdCache = await manager.create({
-            model: modelForCacheApi,
-            systemInstruction: { role: "system", parts: systemInstructionContent },
-            contents: contentToCache,
-            displayName: displayName
-        });
+    return await cachePromise; // Await the promise
 
-        if (!createdCache?.name) {
-            logger.error({ ...createContext, modelForCache: modelForCacheApi, createdCacheObject: createdCache, event: 'cache_create_failed_invalid_object' }, "Failed to create context cache: Invalid cache object returned by manager.create");
-            return null;
-        }
-
-        logger.info({ ...createContext, cacheName: createdCache.name, model: createdCache.model, event: 'cache_create_success' }, "Context cache created successfully");
-
-        extractApiCaches.set(modelName, createdCache);
-        persistentCacheNameMap.set(modelName, createdCache.name);
-        await saveCacheNameMap(); // Log inside this function
-
-        return createdCache;
-
-    } catch (cacheError: unknown) {
-        const errorDetails = cacheError instanceof Error ? { name: cacheError.name, message: cacheError.message } : { details: String(cacheError) };
-        logger.error({ ...createContext, err: errorDetails, event: 'cache_create_failed' }, "Failed to create NEW context cache");
-        if (errorDetails.message?.includes("invalid model")) {
-            logger.error({ ...createContext, modelForCache: `models/${modelName}`, event: 'cache_create_invalid_model_error' }, "Ensure model name is correct and potentially prefixed with 'models/' for caching API.");
-        }
-        return null;
-    }
 };
 
 

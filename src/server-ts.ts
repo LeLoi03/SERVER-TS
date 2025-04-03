@@ -341,7 +341,7 @@ let latestAnalysisResult: LogAnalysisResult | null = null;
 
 // --- Cron Job để phân tích định kỳ ---
 // Ví dụ: Chạy mỗi phút
-cron.schedule('* * * * *', async () => {
+cron.schedule('5 * * * *', async () => {
     logger.info('[Cron] Running scheduled log analysis...');
     try {
         const results = await performLogAnalysis();
@@ -355,10 +355,12 @@ cron.schedule('* * * * *', async () => {
 });
 
 // Route để lấy dữ liệu phân tích MỚI NHẤT (cho lần tải đầu của frontend)
-app.get('/api/v1/logs/analysis/latest', (req, res) => {
-    if (latestAnalysisResult) {
+app.get('/api/v1/logs/analysis/latest', async (req, res) => {
+    try {
+        const results = await performLogAnalysis();
+        latestAnalysisResult = results; // Cập nhật kết quả mới nhất
         res.status(200).json(latestAnalysisResult);
-    } else {
+    } catch (error) {
         res.status(404).json({ message: 'Log analysis data not yet available. Please wait.' });
     }
 });

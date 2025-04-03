@@ -60,37 +60,68 @@ const addConferenceError = (
         timestamp: timestamp,
         message: normError,
         // Optional: Include raw error details if needed for debugging later
-        // details: errorSource ? JSON.stringify(errorSource, Object.getOwnPropertyNames(errorSource)) : undefined
+        details: errorSource ? JSON.stringify(errorSource, Object.getOwnPropertyNames(errorSource)) : undefined
     });
 };
 
 
 // --- Core Log Analysis Function ---
-export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
+// --- Core Log Analysis Function (Đã sửa đổi) ---
+export const performLogAnalysis = async (
+    filterStartTime?: string | Date, // Thêm tham số
+    filterEndTime?: string | Date    // Thêm tham số
+): Promise<LogAnalysisResult> => {
     const logFilePath = path.join(__dirname, '../../logs/app.log'); // !!! KIỂM TRA LẠI ĐƯỜNG DẪN NÀY !!!
     const logContext = { filePath: logFilePath, function: 'performLogAnalysis' };
-    logger.info({ ...logContext, event: 'analysis_start' }, 'Starting log analysis execution');
+    logger.info({ ...logContext, event: 'analysis_start', filterStartTime, filterEndTime }, 'Starting log analysis execution');
+
+    // --- Chuyển đổi và xác thực thời gian lọc ---
+    let startMillis: number | null = null;
+    let endMillis: number | null = null;
+    let filterStartISO: string | undefined = undefined;
+    let filterEndISO: string | undefined = undefined;
+
+    if (filterStartTime) {
+        const startDate = filterStartTime instanceof Date ? filterStartTime : new Date(filterStartTime);
+        if (!isNaN(startDate.getTime())) {
+            startMillis = startDate.getTime();
+            filterStartISO = startDate.toISOString();
+        } else {
+            logger.warn({ ...logContext, event: 'analysis_invalid_filter', filterStartTime }, "Invalid start time provided, ignoring.");
+        }
+    }
+    if (filterEndTime) {
+        const endDate = filterEndTime instanceof Date ? filterEndTime : new Date(filterEndTime);
+        if (!isNaN(endDate.getTime())) {
+            endMillis = endDate.getTime();
+            filterEndISO = endDate.toISOString();
+        } else {
+            logger.warn({ ...logContext, event: 'analysis_invalid_filter', filterEndTime }, "Invalid end time provided, ignoring.");
+        }
+    }
 
     // --- Initialize Results Structure ---
     const results: LogAnalysisResult = {
         analysisTimestamp: new Date().toISOString(),
         logFilePath: logFilePath,
-        totalLogEntries: 0,
-        parsedLogEntries: 0,
+        filterStartTime: filterStartISO, // Lưu lại bộ lọc
+        filterEndTime: filterEndISO,     // Lưu lại bộ lọc
+        totalLogEntriesInFile: 0,
+        parsedLogEntriesInFile: 0,
+        processedEntriesInRange: 0, // Bắt đầu bằng 0
         parseErrors: 0,
         errorLogCount: 0,
         fatalLogCount: 0,
-        // Overall Aggregates
-        overall: { startTime: null, endTime: null, durationSeconds: null, totalConferencesInput: null, processedConferencesCount: 0, successfulTasks: 0, failedTasks: 0 },
+        overall: { startTime: null, endTime: null, durationSeconds: null, totalConferencesInput: null, processedConferencesCount: 0, completedTasks: 0, failedOrCrashedTasks: 0, successfulExtractions: 0 },
         googleSearch: { totalRequests: 0, successfulSearches: 0, failedSearches: 0, skippedSearches: 0, quotaErrors: 0, keyUsage: {}, errorsByType: {} },
         playwright: { setupSuccess: null, setupError: null, htmlSaveAttempts: 0, successfulSaves: 0, failedSaves: 0, linkProcessing: { totalLinksAttempted: 0, successfulAccess: 0, failedAccess: 0, redirects: 0 }, errorsByType: {} },
-        geminiApi: { totalCalls: 0, callsByType: {}, successfulCalls: 0, failedCalls: 0, retries: 0, cacheAttempts: 0, cacheHits: 0, cacheMisses: 0, cacheCreationSuccess: 0, cacheCreationFailed: 0, cacheInvalidations: 0, blockedBySafety: 0, modelUsage: {}, totalTokens: 0, errorsByType: {}, rateLimitWaits: 0 },
+        geminiApi: { totalCalls: 0, callsByType: {}, callsByModel: {}, successfulCalls: 0, failedCalls: 0, retriesByType: {}, retriesByModel: {}, cacheAttempts: 0, cacheHits: 0, cacheMisses: 0, cacheCreationSuccess: 0, cacheCreationFailed: 0, cacheInvalidations: 0, blockedBySafety: 0, totalTokens: 0, errorsByType: {}, rateLimitWaits: 0 },
         batchProcessing: { totalBatchesAttempted: 0, successfulBatches: 0, failedBatches: 0, aggregatedResultsCount: null },
-        errorsAggregated: {}, // Aggregate critical/final errors
+        errorsAggregated: {},
         logProcessingErrors: [],
-        // Per-Conference Details
-        conferenceAnalysis: {}, // Using an object map: { [acronym]: ConferenceAnalysisDetail }
-    };
+        conferenceAnalysis: {},
+    };  
+
 
     try {
         if (!fs.existsSync(logFilePath)) {
@@ -101,20 +132,48 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
         const fileStream = fs.createReadStream(logFilePath);
         const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
 
-        let firstTimestampMillis: number | null = null;
-        let lastTimestampMillis: number | null = null;
-        // Track last known timestamp for each specific conference
-        const conferenceLastTimestamp: { [acronym: string]: number } = {};
+        // Timestamp cho log đầu tiên và cuối cùng *trong khoảng lọc*
+        let firstTimestampInRangeMillis: number | null = null;
+        let lastTimestampInRangeMillis: number | null = null;
+        // Timestamp cuối cùng của từng conference *trong khoảng lọc*
+        const conferenceLastTimestampInRange: { [acronym: string]: number } = {};
 
         // --- MAIN LOG PROCESSING LOOP ---
         for await (const line of rl) {
-            results.totalLogEntries++;
+            results.totalLogEntriesInFile++; // Luôn đếm tổng số dòng đọc được từ file
             if (!line.trim()) continue;
 
+            let logEntry: any;
             try {
-                const logEntry = JSON.parse(line);
-                results.parsedLogEntries++;
+                logEntry = JSON.parse(line);
+                results.parsedLogEntriesInFile++; // Đếm dòng parse thành công (trước khi lọc)
 
+                // --- BƯỚC LỌC THỜI GIAN ---
+                if (!logEntry.time) {
+                    // Bỏ qua log không có timestamp nếu đang lọc
+                    if (startMillis !== null || endMillis !== null) {
+                        continue;
+                    }
+                    // Nếu không lọc, có thể vẫn xử lý hoặc báo lỗi
+                }
+
+                const entryTimeMillis = new Date(logEntry.time).getTime();
+                if (isNaN(entryTimeMillis)) {
+                     // Bỏ qua log có timestamp không hợp lệ nếu đang lọc
+                    if (startMillis !== null || endMillis !== null) {
+                        continue;
+                    }
+                    // Nếu không lọc, có thể vẫn xử lý hoặc báo lỗi
+                }
+
+                // Áp dụng bộ lọc thời gian
+                if (startMillis !== null && entryTimeMillis < startMillis) {
+                    continue; // Log quá sớm
+                }
+                if (endMillis !== null && entryTimeMillis > endMillis) {
+                    continue; // Log quá muộn
+                }
+                
                 const entryTimeMillis = new Date(logEntry.time).getTime();
                 const entryTimestampISO = new Date(entryTimeMillis).toISOString();
 
@@ -176,13 +235,13 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
                             confDetail.endTime = entryTimestampISO;
                             // Only update status if it was 'processing' to avoid overwriting an earlier failure
                             if (confDetail.status === 'processing') {
-                                confDetail.status = context.success ? 'success' : 'failed';
+                                confDetail.status = context.status ? 'completed' : 'failed';
                             }
                             // If status ended up as failed, ensure an error is logged for it
                             if (confDetail.status === 'failed') {
-                                addConferenceError(confDetail, entryTimestampISO, error, msg || 'Task finished with success=false');
+                                addConferenceError(confDetail, entryTimestampISO, error, msg || 'Task finished with status=false');
                                 // Add to aggregated errors
-                                results.errorsAggregated[normalizeErrorKey(error || msg || 'Task finished with success=false')] = (results.errorsAggregated[normalizeErrorKey(error || msg || 'Task finished with success=false')] || 0) + 1;
+                                results.errorsAggregated[normalizeErrorKey(error || msg || 'Task finished with status=false')] = (results.errorsAggregated[normalizeErrorKey(error || msg || 'Task finished with status=false')] || 0) + 1;
                             }
                             // Calculate duration now that we have start and end
                             if (confDetail.startTime) {
@@ -344,7 +403,10 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
                     case 'retry_loop_start': break; // Informational
                     case 'retry_attempt_start': break; // Informational
                     case 'retry_internal_rate_limit_wait': results.geminiApi.rateLimitWaits++; break;
-                    case 'retry_wait_before_next': results.geminiApi.retries++; break; // Count waits as retries performed
+                    case 'retry_wait_before_next':
+                        if (context.modelName) results.geminiApi.retriesByModel[context.modelName] = (results.geminiApi.retriesByModel[context.modelName] || 0) + 1;
+                        if (apiType) results.geminiApi.retriesByType[apiType] = (results.geminiApi.retriesByType[apiType] || 0) + 1;
+                        break;
                     case 'retry_failed_max_retries':
                         results.geminiApi.failedCalls++;
                         const retryFailErrorKey = normalizeErrorKey(context.finalError || error || msg);
@@ -372,9 +434,39 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
                     case 'gemini_call_start':
                         results.geminiApi.totalCalls++;
                         if (apiType) results.geminiApi.callsByType[apiType] = (results.geminiApi.callsByType[apiType] || 0) + 1;
-                        if (context.modelName) results.geminiApi.modelUsage[context.modelName] = (results.geminiApi.modelUsage[context.modelName] || 0) + 1;
+                        if (context.modelName) results.geminiApi.callsByModel[context.modelName] = (results.geminiApi.callsByModel[context.modelName] || 0) + 1;
                         if (confDetail && apiType === 'determine') confDetail.steps.gemini_determine_attempted = true;
-                        if (confDetail && apiType === 'extract') confDetail.steps.gemini_extract_attempted = true;
+                        if (confDetail && apiType === 'extract') { // Chỉ xử lý khi là API extract và có confDetail
+                            switch (event) {
+                                case 'gemini_api_attempt_success':
+                                    confDetail.steps.gemini_extract_success = true;
+                                    confDetail.steps.gemini_extract_cache_used = context.usingCache ?? null;
+                                    break;
+                                case 'retry_failed_max_retries':
+                                case 'retry_abort_non_retryable':
+                                    // Kiểm tra lại xem lỗi này có đúng là của extract không (apiType nên có trong context)
+                                    confDetail.steps.gemini_extract_success = false;
+                                    // Lỗi đã được thêm vào confDetail.errors ở phần xử lý event chung
+                                    break;
+                                case 'gemini_api_response_blocked':
+                                case 'retry_attempt_error_safety_blocked':
+                                    confDetail.steps.gemini_extract_success = false;
+                                    // Lỗi đã được thêm vào confDetail.errors ở phần xử lý event chung
+                                    break;
+                                // Quan trọng: Cần đảm bảo không có event nào khác ghi đè true/false này
+                                // Nếu determine thất bại trước đó, gemini_extract_attempted sẽ là false
+                                // và gemini_extract_success sẽ không bao giờ được set thành true/false từ các event này
+                            }
+                        }
+                        
+                        // Xử lý trường hợp determine thất bại khiến extract không chạy
+                        if (confDetail && event === 'save_batch_process_determine_failed_invalid') {
+                            // Nếu determine thất bại, chắc chắn extract không thành công
+                            // Đảm bảo extract_attempted là false (nếu chưa chạy)
+                            confDetail.steps.gemini_extract_attempted = false;
+                            confDetail.steps.gemini_extract_success = null; // Hoặc false nếu muốn coi là thất bại
+                        }
+
                         break;
                     case 'gemini_api_attempt_success': // Success within a retry attempt (final success)
                         results.geminiApi.successfulCalls++;
@@ -483,17 +575,17 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
                 if (route === '/crawl-conferences' && context.resultsPreview && context.resultsPreview.length > 0) {
                     context.resultsPreview.forEach((preview: any) => {
                         const resultAcronym = preview?.acronym;
-            
+
                         if (resultAcronym && results.conferenceAnalysis) {
                             const conferenceAnalysisEntry = results.conferenceAnalysis[resultAcronym];
-            
+
                             if (conferenceAnalysisEntry) {
                                 conferenceAnalysisEntry.finalResultPreview = preview;
                             } else {
                                 console.warn(`Conference analysis entry not found for acronym: ${resultAcronym}`);
                             }
                         } else {
-                          console.warn("results.conferenceAnalysis is undefined");
+                            console.warn("results.conferenceAnalysis is undefined");
                         }
                     });
                 }
@@ -518,55 +610,58 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
         }
 
         // Finalize conference details and counts
-        let finalSuccessCount = 0;
-        let finalFailCount = 0;
+        let completionSuccessCount = 0; // Đếm task hoàn thành (không crash)
+        let completionFailCount = 0;    // Đếm task thất bại/crash
+        let extractionSuccessCount = 0; // Đếm task có extract thành công
+
+
         const processedAcronyms = Object.keys(results.conferenceAnalysis);
         results.overall.processedConferencesCount = processedAcronyms.length;
 
         processedAcronyms.forEach(acronym => {
             const detail = results.conferenceAnalysis[acronym];
 
-            // Ensure task started (has startTime) to be counted
-            if (!detail.startTime) {
-                logger.warn({ event: 'analysis_final_skip_no_start', acronym }, "Skipping conference in final count as it never logged task_start");
-                return; // Don't count conferences that never started
-            }
+            // Skip if task never started
+            if (!detail.startTime) return;
 
-            // Infer end time and status if task didn't log 'task_finish'
+            // Infer end time and status if task didn't finish cleanly
             if (!detail.endTime && lastTimestampMillis) {
-                let taskEndTimeMillis = conferenceLastTimestamp[acronym] || lastTimestampMillis; // Use specific end or overall end
+                let taskEndTimeMillis = conferenceLastTimestamp[acronym] || lastTimestampMillis;
                 detail.endTime = new Date(taskEndTimeMillis).toISOString();
-                const startMillis = new Date(detail.startTime).getTime();
+                const startMillis = new Date(detail.startTime!).getTime();
                 if (!isNaN(startMillis)) {
                     detail.durationSeconds = Math.round((taskEndTimeMillis - startMillis) / 1000);
                 }
-                // If status is still processing/unknown, mark as failed
                 if (detail.status === 'processing' || detail.status === 'unknown') {
-                    detail.status = 'failed';
+                    detail.status = 'failed'; // Mark as failed (completion failure)
                     const inferredErrorMsg = 'Task did not finish cleanly (inferred from log end)';
                     addConferenceError(detail, detail.endTime, null, inferredErrorMsg);
                     results.errorsAggregated[normalizeErrorKey(inferredErrorMsg)] = (results.errorsAggregated[normalizeErrorKey(inferredErrorMsg)] || 0) + 1;
                 }
             }
 
-            // Count final statuses
-            if (detail.status === 'success') finalSuccessCount++;
-            else if (detail.status === 'failed') finalFailCount++;
-            else {
-                // Should not happen if inference logic is correct, but log if it does
-                logger.warn({ event: 'analysis_final_unknown_status', acronym, status: detail.status }, "Conference ended with unexpected status");
-                finalFailCount++; // Count unexpected as failure
-                detail.status = 'failed'; // Force failed status
-                addConferenceError(detail, detail.endTime ?? results.overall.endTime!, null, `Task ended with unexpected status: ${detail.status}`);
+            // Count task completion status
+            if (detail.status === 'completed') {
+                completionSuccessCount++;
+            } else if (detail.status === 'failed') {
+                completionFailCount++;
+            }
+            // else: should not happen due to inference logic
 
+            // Count extraction success outcome
+            if (detail.steps.gemini_extract_success === true) {
+                extractionSuccessCount++;
             }
         });
-        results.overall.successfulTasks = finalSuccessCount;
-        results.overall.failedTasks = finalFailCount;
+
+        // Gán kết quả cuối cùng vào results.overall
+        results.overall.completedTasks = completionSuccessCount;
+        results.overall.failedOrCrashedTasks = completionFailCount;
+        results.overall.successfulExtractions = extractionSuccessCount; // Thống kê mới
 
         // Calculate final cache misses
         results.geminiApi.cacheMisses = Math.max(0, results.geminiApi.cacheAttempts - results.geminiApi.cacheHits);
-
+        
         logger.info({
             event: 'analysis_finish_success',
             parsed: results.parsedLogEntries,
@@ -574,9 +669,11 @@ export const performLogAnalysis = async (): Promise<LogAnalysisResult> => {
             errors: results.errorLogCount,
             parseErrors: results.parseErrors,
             conferencesProcessed: results.overall.processedConferencesCount,
-            tasksSuccess: results.overall.successfulTasks,
-            tasksFailed: results.overall.failedTasks
+            tasksCompleted: results.overall.completedTasks, // Tên mới/rõ nghĩa
+            tasksFailedOrCrashed: results.overall.failedOrCrashedTasks, // Tên mới/rõ nghĩa
+            successfulExtractions: results.overall.successfulExtractions // Chỉ số mới
         }, `Log analysis execution completed successfully.`);
+
         return results;
 
     } catch (error: any) {
