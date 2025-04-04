@@ -33,40 +33,42 @@ let totalGoogleApiRequests: number = 0;
 let allKeysExhausted: boolean = false;
 
 // --- Hàm trợ giúp để xoay key API NGAY LẬP TỨC ---
-async function forceRotateApiKey(): Promise<boolean> {
+async function forceRotateApiKey(parentLogger: typeof logger // Kiểu dữ liệu có thể là pino.Logger hoặc tương tự
+): Promise<boolean> {
     if (allKeysExhausted) {
-        logger.warn("Cannot force rotate key, all keys are already marked as exhausted.");
+        parentLogger.warn("Cannot force rotate key, all keys are already marked as exhausted.");
         return false;
     }
 
-    logger.warn({ oldKeyIndex: currentKeyIndex + 1 }, "Forcing rotation to next API key due to error (e.g., 429 or quota limit).");
+    parentLogger.warn({ oldKeyIndex: currentKeyIndex + 1 }, "Forcing rotation to next API key due to error (e.g., 429 or quota limit).");
 
     currentKeyIndex++;
     currentKeyUsageCount = 0;
 
     if (currentKeyIndex >= GOOGLE_CUSTOM_SEARCH_API_KEYS.length) {
-        logger.warn("Forced rotation failed: Reached end of API key list. Marking all keys as exhausted.");
+        parentLogger.warn("Forced rotation failed: Reached end of API key list. Marking all keys as exhausted.");
         allKeysExhausted = true;
         return false;
     }
 
-    logger.info({ newKeyIndex: currentKeyIndex + 1 }, "Successfully forced rotation to new API key.");
+    parentLogger.info({ newKeyIndex: currentKeyIndex + 1 }, "Successfully forced rotation to new API key.");
     return true;
 }
 
 
 // --- Hàm trợ giúp để lấy API Key tiếp theo ---
-async function getNextApiKey(): Promise<string | null> {
+async function getNextApiKey(parentLogger: typeof logger // Kiểu dữ liệu có thể là pino.Logger hoặc tương tự
+): Promise<string | null> {
     if (allKeysExhausted || !GOOGLE_CUSTOM_SEARCH_API_KEYS || GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
         if (!allKeysExhausted) {
-            logger.warn("No Google API Keys configured or all keys have been exhausted. Cannot perform searches.");
+            parentLogger.warn("No Google API Keys configured or all keys have been exhausted. Cannot perform searches.");
             allKeysExhausted = true;
         }
         return null;
     }
 
     if (currentKeyUsageCount >= MAX_USAGE_PER_KEY) {
-        logger.info({
+        parentLogger.info({
             keyIndex: currentKeyIndex + 1,
             usage: currentKeyUsageCount,
             limit: MAX_USAGE_PER_KEY
@@ -76,24 +78,24 @@ async function getNextApiKey(): Promise<string | null> {
         currentKeyUsageCount = 0;
 
         if (currentKeyIndex >= GOOGLE_CUSTOM_SEARCH_API_KEYS.length) {
-            logger.warn("All Google API keys have reached their usage limits.");
+            parentLogger.warn("All Google API keys have reached their usage limits.");
             allKeysExhausted = true;
             return null;
         }
 
-        logger.info({
+        parentLogger.info({
             delaySeconds: KEY_ROTATION_DELAY_MS / 1000,
             nextKeyIndex: currentKeyIndex + 1
         }, `Waiting before switching API key...`);
         await new Promise(resolve => setTimeout(resolve, KEY_ROTATION_DELAY_MS));
-        logger.info({ newKeyIndex: currentKeyIndex + 1 }, `Switching to API key`);
+        parentLogger.info({ newKeyIndex: currentKeyIndex + 1 }, `Switching to API key`);
     }
 
     const apiKey = GOOGLE_CUSTOM_SEARCH_API_KEYS[currentKeyIndex];
     currentKeyUsageCount++;
     totalGoogleApiRequests++;
 
-    logger.debug({
+    parentLogger.debug({
         keyIndex: currentKeyIndex + 1,
         currentUsage: currentKeyUsageCount,
         limit: MAX_USAGE_PER_KEY,
@@ -104,12 +106,18 @@ async function getNextApiKey(): Promise<string | null> {
 }
 
 
-export const crawlConferences = async (conferenceList: ConferenceData[]): Promise<ProcessedResponseData[]> => {
+// Thêm tham số parentLogger vào định nghĩa hàm
+export const crawlConferences = async (
+    conferenceList: ConferenceData[],
+    parentLogger: typeof logger // Kiểu dữ liệu có thể là pino.Logger hoặc tương tự
+): Promise<ProcessedResponseData[]> => {
     const QUEUE = await queuePromise; // IMPORTANT: Wait for the queue
 
-    const operationStartTime = Date.now(); // Ghi lại thời điểm bắt đầu
-    logger.info({
-        event: 'crawl_start', // Thêm event type để dễ lọc
+
+    const operationStartTime = Date.now();
+    // Sử dụng parentLogger thay vì logger toàn cục
+    parentLogger.info({
+        event: 'crawl_start',
         totalConferences: conferenceList.length,
         startTime: new Date(operationStartTime).toISOString()
     }, 'Starting crawlConferences process');
@@ -128,12 +136,12 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
     const RETRY_DELAY_MS: number = 2000;
 
     if (!GOOGLE_CUSTOM_SEARCH_API_KEYS || GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
-        logger.fatal({ event: 'config_error' }, "CRITICAL: GOOGLE_CUSTOM_SEARCH_API_KEYS is empty or not defined. Searches will be skipped.");
+        parentLogger.fatal({ event: 'config_error' }, "CRITICAL: GOOGLE_CUSTOM_SEARCH_API_KEYS is empty or not defined. Searches will be skipped.");
         allKeysExhausted = true; // Đặt cờ này vẫn hợp lý
     }
 
     try {
-        logger.info({ event: 'playwright_setup_start' }, "Setting up Playwright...");
+        parentLogger.info({ event: 'playwright_setup_start' }, "Setting up Playwright...");
         // Đổi tên biến trả về để không trùng
         const { browser: pwBrowser, browserContext } = await setupPlaywright();
         playwrightBrowser = pwBrowser; // Gán vào biến phạm vi ngoài
@@ -141,10 +149,10 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
 
         if (!playwrightBrowser || !browserCtx) {
             // Log lỗi đã có trong setupPlaywright nếu cần, ở đây chỉ cần throw
-            logger.error({ event: 'playwright_setup_failed' }, "Playwright setup failed. Exiting crawlConferences.");
+            parentLogger.error({ event: 'playwright_setup_failed' }, "Playwright setup failed. Exiting crawlConferences.");
             throw new Error("Playwright setup failed");
         }
-        logger.info({ event: 'playwright_setup_success' }, "Playwright setup successful.");
+        parentLogger.info({ event: 'playwright_setup_success' }, "Playwright setup successful.");
 
         const existingAcronyms: Set<string> = new Set();
         const batchIndexRef = { current: 1 }; // Ref để tạo batch index duy nhất
@@ -154,29 +162,29 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
 
         // --- Tạo thư mục ---
         try {
-            logger.debug({ customSearchPath, sourceRankPath, event: 'ensure_dirs' }, 'Ensuring output directories exist');
+            parentLogger.debug({ customSearchPath, sourceRankPath, event: 'ensure_dirs' }, 'Ensuring output directories exist');
             if (!fs.existsSync(customSearchPath)) {
                 fs.mkdirSync(customSearchPath, { recursive: true });
-                logger.info({ path: customSearchPath, event: 'dir_created' }, 'Created directory');
+                parentLogger.info({ path: customSearchPath, event: 'dir_created' }, 'Created directory');
             }
             if (!fs.existsSync(sourceRankPath)) {
                 fs.mkdirSync(sourceRankPath, { recursive: true });
-                logger.info({ path: sourceRankPath, event: 'dir_created' }, 'Created directory');
+                parentLogger.info({ path: sourceRankPath, event: 'dir_created' }, 'Created directory');
             }
         } catch (mkdirError: any) {
-            logger.error({ err: mkdirError, event: 'dir_create_error' }, "Error creating directories");
+            parentLogger.error({ err: mkdirError, event: 'dir_create_error' }, "Error creating directories");
             throw mkdirError; // Ném lỗi nghiêm trọng
         }
         // ------------------
 
-        logger.info({ concurrency: QUEUE.concurrency, event: 'queue_start' }, "Starting conference processing queue");
+        parentLogger.info({ concurrency: QUEUE.concurrency, event: 'queue_start' }, "Starting conference processing queue");
 
         // --- Ghi file input ban đầu ---
         try {
-            logger.debug({ path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list' }, 'Writing initial conference list');
+            parentLogger.debug({ path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list' }, 'Writing initial conference list');
             await fs.promises.writeFile(CONFERENCE_OUTPUT_PATH, JSON.stringify(conferenceList, null, 2), "utf8");
         } catch (writeFileError: any) {
-            logger.warn({ err: writeFileError, path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list_failed' }, `Could not write initial conference list`);
+            parentLogger.warn({ err: writeFileError, path: CONFERENCE_OUTPUT_PATH, event: 'write_initial_list_failed' }, `Could not write initial conference list`);
         }
         // ----------------------------
 
@@ -184,18 +192,20 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         const conferenceTasks = conferenceList.map((conference, index) => {
             return QUEUE.add(async () => {
                 const confAcronym = conference?.Acronym || `Unknown-${index}`;
+                const confTitle = conference?.Title || `Unknown-${index}`;
+                
                 // Child logger để tự động thêm acronym và taskIndex vào mỗi log của task này
-                const taskLogger = logger.child({ acronym: confAcronym, taskIndex: index + 1, event_group: 'conference_task' });
+                const taskLogger = parentLogger.child({ title: confTitle, acronym: confAcronym, taskIndex: index + 1, event_group: 'conference_task' });
                 taskLogger.info({ event: 'task_start' }, `Processing conference`);
                 let taskHasError = false; // Cờ để đánh dấu lỗi trong task
 
                 try {
                     if (conference.mainLink && conference.cfpLink && conference.impLink) {
                         taskLogger.info({ event: 'process_predefined_links' }, `Processing with pre-defined links`);
-                        const conferenceUpdateData: ConferenceUpdateData = { /* ... như cũ ... */ Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "", conferenceText: "", cfpText: "", impText: "" };
+                        const conferenceUpdateData: ConferenceUpdateData = { Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "", conferenceText: "", cfpText: "", impText: "" };
                         try {
                             // Giả sử updateHTMLContent log chi tiết bên trong
-                            await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises);
+                            await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, batchPromises, parentLogger);
                             taskLogger.info({ event: 'process_predefined_links_success' }, "Predefined links processing step completed.");
                         } catch (updateError: any) {
                             taskHasError = true;
@@ -226,7 +236,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                                 break; // Thoát vòng lặp tìm kiếm
                             }
 
-                            const apiKey = await getNextApiKey(); // Hàm này nên log key index và total requests nếu cần
+                            const apiKey = await getNextApiKey(parentLogger); // Hàm này nên log key index và total requests nếu cần
 
                             if (!apiKey) {
                                 taskLogger.warn({ attempt, event: 'search_skip_no_key' }, `Skipping Google Search attempt - Failed to get valid API key.`);
@@ -255,7 +265,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                                 // Xử lý Quota Error và xoay key (đã có, giữ nguyên logic log)
                                 if (isQuotaError && attempt <= MAX_SEARCH_RETRIES) {
                                     taskLogger.warn({ attempt, event: 'search_quota_error_detected' }, `Quota/Rate limit error (429) detected. Forcing API key rotation.`);
-                                    const rotated = await forceRotateApiKey(); // Hàm này nên log nếu xoay thành công/thất bại
+                                    const rotated = await forceRotateApiKey(parentLogger); // Hàm này nên log nếu xoay thành công/thất bại
                                     if (!rotated) {
                                         taskLogger.error({ event: 'search_key_rotation_failed' }, "Failed to rotate key after quota error, stopping retries for this conference.");
                                         break; // Dừng retry nếu không xoay được key
@@ -304,7 +314,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                         taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content`);
                         try {
                             // Hàm saveHTMLContent sẽ log chi tiết bên trong (thành công/thất bại từng link)
-                            await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2);
+                            await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, parentLogger);
                             // Log khi bước lưu hoàn tất (không phân biệt có link hay không)
                             taskLogger.info({ event: 'save_html_step_completed' }, 'Save HTML content step completed.');
                             // Không cần successfulSaveCount++;
@@ -317,13 +327,11 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                         // ----------------------
                     }
 
-                    // Không cần processedConferenceCount++ ở đây
 
                 } catch (taskError: any) {
                     taskHasError = true; // Đánh dấu lỗi cho task này
                     // Log lỗi không xác định trong task (đã có, giữ nguyên)
                     taskLogger.error({ err: taskError, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
-                    // Không cần processedConferenceCount++ ở đây
                 } finally {
                     // Log kết thúc xử lý task, thêm trạng thái hoàn thành/thất bại -> Chỉ là hoàn thành, còn thành công hay công là do extract api
                     taskLogger.info({ event: 'task_finish', status: (!taskHasError === true) ? "completed" : "failed" }, `Finished processing queue item`);
@@ -333,13 +341,13 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
 
         // --- Chờ tất cả task trong queue hoàn thành ---
         await Promise.all(conferenceTasks);
-        logger.info({ event: 'queue_finished' }, "All conference processing tasks added to queue have finished.");
+        parentLogger.info({ event: 'queue_finished' }, "All conference processing tasks added to queue have finished.");
         // --------------------------------------------
 
         // --- Chờ và tổng hợp kết quả Batch ---
-        logger.info({ promiseCount: batchPromises.length, event: 'batch_aggregation_start' }, "Waiting for all batch operations to settle...");
+        parentLogger.info({ promiseCount: batchPromises.length, event: 'batch_aggregation_start' }, "Waiting for all batch operations to settle...");
         const settledResults = await Promise.allSettled(batchPromises);
-        logger.info({ event: 'batch_aggregation_settled' }, "All batch operations settled. Aggregating results...");
+        parentLogger.info({ event: 'batch_aggregation_settled' }, "All batch operations settled. Aggregating results...");
 
         allBatches = []; // Xóa batch cũ trước khi tổng hợp
 
@@ -352,25 +360,25 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
                 if (Array.isArray(result.value) && result.value.length > 0) { // Phải là mảng không rỗng
                     allBatches.push(...result.value);
                     aggregatedSuccessCount++;
-                    logger.info({ ...batchLogContext, batchCount: result.value.length, status: result.status, event: 'batch_aggregation_item_success' }, "Batch promise fulfilled with data.");
+                    parentLogger.info({ ...batchLogContext, batchCount: result.value.length, status: result.status, event: 'batch_aggregation_item_success' }, "Batch promise fulfilled with data.");
                 } else {
                     // Resolved thành null hoặc mảng rỗng -> coi là thất bại logic
                     aggregatedFailedCount++;
-                    logger.warn({ ...batchLogContext, status: result.status, valueType: typeof result.value, isEmptyArray: Array.isArray(result.value), event: 'batch_aggregation_item_failed_logic' }, "Batch promise resolved to null or empty array.");
+                    parentLogger.warn({ ...batchLogContext, status: result.status, valueType: typeof result.value, isEmptyArray: Array.isArray(result.value), event: 'batch_aggregation_item_failed_logic' }, "Batch promise resolved to null or empty array.");
                 }
             } else if (result.status === 'rejected') {
                 aggregatedFailedCount++;
                 // Log lỗi từ batch promise (đã có, giữ nguyên)
-                logger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_aggregation_item_failed_rejected' }, "Batch operation promise rejected");
+                parentLogger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_aggregation_item_failed_rejected' }, "Batch operation promise rejected");
             } else {
                 // Trường hợp fulfilled nhưng value là null/undefined (đã xử lý ở trên)
                 aggregatedFailedCount++; // Xử lý như một thất bại
-                logger.warn({ ...batchLogContext, status: result.status, value: result.value, event: 'batch_aggregation_item_failed_nodata' }, "Batch promise fulfilled but with no value.");
+                parentLogger.warn({ ...batchLogContext, status: result.status, value: result.value, event: 'batch_aggregation_item_failed_nodata' }, "Batch promise fulfilled but with no value.");
             }
         });
 
         // Log kết quả tổng hợp batch cuối cùng (sử dụng biến đếm *cục bộ* trong vòng lặp trên)
-        logger.info({
+        parentLogger.info({
             successfulBatches: aggregatedSuccessCount,
             failedBatches: aggregatedFailedCount,
             aggregatedCount: allBatches.length, // Số lượng entry thực tế được thêm
@@ -380,31 +388,31 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
         // ------------------------------------
 
         // --- Ghi file output cuối cùng ---
-        logger.info({ event: 'final_output_start' }, "Writing final outputs...");
+        parentLogger.info({ event: 'final_output_start' }, "Writing final outputs...");
         const allBatchesFilePath = path.join(__dirname, `./data/allBatches.json`);
         const evaluateFilePath = path.join(__dirname, './data/evaluate.csv');
 
         // Ghi allBatches.json (đã có, giữ nguyên logic log)
         try {
-            logger.info({ path: allBatchesFilePath, count: allBatches.length, event: 'write_allbatches_json' }, 'Writing aggregated results (allBatches) to JSON file');
+            parentLogger.info({ path: allBatchesFilePath, count: allBatches.length, event: 'write_allbatches_json' }, 'Writing aggregated results (allBatches) to JSON file');
             await fs.promises.writeFile(allBatchesFilePath, JSON.stringify(allBatches, null, 2), "utf8");
-            logger.info({ path: allBatchesFilePath, event: 'write_allbatches_json_success' }, 'Successfully wrote allBatches JSON file.');
+            parentLogger.info({ path: allBatchesFilePath, event: 'write_allbatches_json_success' }, 'Successfully wrote allBatches JSON file.');
         } catch (writeBatchesError: any) {
-            logger.error({ err: writeBatchesError, path: allBatchesFilePath, event: 'write_allbatches_json_failed' }, `Error writing allBatches to JSON file`);
+            parentLogger.error({ err: writeBatchesError, path: allBatchesFilePath, event: 'write_allbatches_json_failed' }, `Error writing allBatches to JSON file`);
         }
 
         // Ghi evaluate.csv (đã có, giữ nguyên logic log)
         let finalProcessedData: ProcessedResponseData[] = [];
         if (allBatches && allBatches.length > 0) {
             try {
-                logger.info({ path: evaluateFilePath, recordCount: allBatches.length, event: 'write_evaluate_csv' }, 'Writing final results to CSV file');
+                parentLogger.info({ path: evaluateFilePath, recordCount: allBatches.length, event: 'write_evaluate_csv' }, 'Writing final results to CSV file');
                 finalProcessedData = await writeCSVFile(evaluateFilePath, allBatches); // Hàm này nên log bên trong nếu có lỗi
-                logger.info({ path: evaluateFilePath, event: 'write_evaluate_csv_success' }, 'Successfully wrote CSV file.');
+                parentLogger.info({ path: evaluateFilePath, event: 'write_evaluate_csv_success' }, 'Successfully wrote CSV file.');
             } catch (csvError: any) {
-                logger.error({ err: csvError, path: evaluateFilePath, event: 'write_evaluate_csv_failed' }, `Error writing final CSV file`);
+                parentLogger.error({ err: csvError, path: evaluateFilePath, event: 'write_evaluate_csv_failed' }, `Error writing final CSV file`);
             }
         } else {
-            logger.warn({ event: 'write_evaluate_csv_skipped' }, "No data available in allBatches to write to CSV.");
+            parentLogger.warn({ event: 'write_evaluate_csv_skipped' }, "No data available in allBatches to write to CSV.");
         }
         // ------------------------------
 
@@ -413,30 +421,30 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
 
     } catch (error: any) {
         // Log lỗi nghiêm trọng của toàn bộ quá trình (đã có, giữ nguyên)
-        logger.fatal({ err: error, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
+        parentLogger.fatal({ err: error, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
         return []; // Trả về mảng rỗng
     } finally {
         // --- Luôn thực hiện cleanup ---
-        logger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
+        parentLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
 
         // 1. Dọn dẹp file tạm (đã có, giữ nguyên)
         await cleanupTempFiles(); // Hàm này nên log bên trong
 
         // 2. Đóng trình duyệt (đã có, giữ nguyên logic log)
         if (playwrightBrowser) {
-            logger.info({ event: 'playwright_close_start' }, "Closing Playwright browser...");
+            parentLogger.info({ event: 'playwright_close_start' }, "Closing Playwright browser...");
             try {
                 await playwrightBrowser.close();
-                logger.info({ event: 'playwright_close_success' }, "Playwright browser closed successfully.");
+                parentLogger.info({ event: 'playwright_close_success' }, "Playwright browser closed successfully.");
             } catch (closeError: any) {
-                logger.error({ err: closeError, event: 'playwright_close_failed' }, "Error closing Playwright browser");
+                parentLogger.error({ err: closeError, event: 'playwright_close_failed' }, "Error closing Playwright browser");
             }
         }
 
         // 3. Log thông tin tổng kết - LOẠI BỎ CÁC BIẾN ĐẾM
         const operationEndTime = Date.now();
         const durationSeconds = Math.round((operationEndTime - operationStartTime) / 1000);
-        logger.info({
+        parentLogger.info({
             event: 'crawl_summary', // Đổi tên event
             totalConferencesInput: conferenceList.length,
             totalGoogleApiRequests: totalGoogleApiRequests,
@@ -444,7 +452,7 @@ export const crawlConferences = async (conferenceList: ConferenceData[]): Promis
             endTime: new Date(operationEndTime).toISOString()
         }, "Crawling process summary"); // Giữ message này
 
-        logger.info({ event: 'crawl_end_success' }, "crawlConferences process finished.");
+        parentLogger.info({ event: 'crawl_end_success' }, "crawlConferences process finished.");
         // --- Kết thúc cleanup ---
     }
 };

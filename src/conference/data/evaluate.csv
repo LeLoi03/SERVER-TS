@@ -1,0 +1,84 @@
+"title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
+"International Conference on Artificial Intelligence and Law","ICAIL","https://sites.northwestern.edu/icail2025/","https://sites.northwestern.edu/icail2025/cfp/","None","Conference dates: June 16 - 20, 2025
+Year: 2025
+Location: Northwestern University, Chicago
+City-State-Province: Chicago
+Country: United States
+Continent: North America
+Type: Offline
+Workshop and Tutorial Proposals Submission: December 20, 2024
+Paper Submission: January 28, 2025
+Demonstration Submission (including extended abstracts): January 28, 2025
+Notification of acceptance for Papers and Demonstrations: April 14, 2025
+Camera Ready papers due: May 5, 2025
+Registration opens: April 14, 2025
+Topics: Artificial Intelligence and Law, Argument mining on legal texts, Classification and automatic summarization of legal text, Computational methods for negotiation and contract formation, Computer-assisted dispute resolution, Computable representations of legal rules and domain specific languages for the law, Decision support systems in the legal domain, Deep learning on data and text from the legal domain, Dialog systems in the legal domain, e-discovery and e-disclosure, e-government, e-democracy and e-justice, Empirical research on the use of AI systems in legal practice, Innovative applications in AI and Law, Philosophical and legal-theoretical analysis of the significance and implications of methodologies or technical features of AI systems, Systems and methods designed for compliance checking with respect to normative principles, rules and standards, Methodologies for the technical design in AI systems of compliance with normative principles, rules and standards of trustworthy or responsible AI, Explainable AI for the legal domain, Formal and computational models of legal reasoning, Formal and conceptual modeling of fundamental legal concepts, Formal and computational models of evidential reasoning, Formal models of norms and norm-governed systems, Information extraction from legal databases and texts, Information retrieval, question answering, and literature recommendation in the legal domain, Intelligent legal tutoring systems, Intelligent support systems for forensics, Interdisciplinary applications of legal informatics methods and systems, Knowledge acquisition techniques for the legal domain, Knowledge representation, knowledge engineering, and ontologies in the legal domain, Legal design involving AI techniques, Machine learning and data analytics applied to the legal domain, Natural language processing of legal text, Applications of generative AI systems to the legal domain, Normative reasoning by autonomous agents, Open and linked data in the legal domain, Smart contracts and application of blockchain in the legal domain, Visualization techniques for legal information and data","June 16 - 20, 2025","2025","Northwestern University, Chicago","Chicago","United States","North America","Offline","{""Workshop and Tutorial Proposals Submission"":""December 20, 2024"",""Paper Submission"":""January 28, 2025"",""Demonstration Submission (including extended abstracts)"":""January 28, 2025""}","{""Notification of acceptance for Papers and Demonstrations"":""April 14, 2025""}","{""Camera Ready papers due"":""May 5, 2025""}","{}","{""Registration opens"":""April 14, 2025""}","Artificial Intelligence and Law, Argument mining on legal texts, Classification and automatic summarization of legal text, Computational methods for negotiation and contract formation, Computer-assisted dispute resolution, Computable representations of legal rules and domain specific languages for the law, Decision support systems in the legal domain, Deep learning on data and text from the legal domain, Dialog systems in the legal domain, e-discovery and e-disclosure, e-government, e-democracy and e-justice, Empirical research on the use of AI systems in legal practice, Innovative applications in AI and Law, Philosophical and legal-theoretical analysis of the significance and implications of methodologies or technical features of AI systems, Systems and methods designed for compliance checking with respect to normative principles, rules and standards, Methodologies for the technical design in AI systems of compliance with normative principles, rules and standards of trustworthy or responsible AI, Explainable AI for the legal domain, Formal and computational models of legal reasoning, Formal and conceptual modeling of fundamental legal concepts, Formal and computational models of evidential reasoning, Formal models of norms and norm-governed systems, Information extraction from legal databases and texts, Information retrieval, question answering, and literature recommendation in the legal domain, Intelligent legal tutoring systems, Intelligent support systems for forensics, Interdisciplinary applications of legal informatics methods and systems, Knowledge acquisition techniques for the legal domain, Knowledge representation, knowledge engineering, and ontologies in the legal domain, Legal design involving AI techniques, Machine learning and data analytics applied to the legal domain, Natural language processing of legal text, Applications of generative AI systems to the legal domain, Normative reasoning by autonomous agents, Open and linked data in the legal domain, Smart contracts and application of blockchain in the legal domain, Visualization techniques for legal information and data","","The 20th International Conference on Artificial Intelligence and Law (ICAIL 2025) will be held at Northwestern University in Chicago from June 16-20, 2025. ICAIL is the foremost international conference addressing research in Artificial Intelligence and Law.  The conference proceedings are published by ACM.","# ICAIL 2025: Call for Papers and Participation
+
+The 20th International Conference on Artificial Intelligence and Law (ICAIL 2025) will be held at **Northwestern University in Chicago from June 16-20, 2025**.
+
+ICAIL is the foremost international conference addressing research in Artificial Intelligence and Law. The conference proceedings are published by ACM.
+
+## Topics of Interest
+
+We invite submissions of original papers on Artificial Intelligence & Law, covering foundations, methods, tools, systems, and applications. Topics may include, but are not limited to, the following:
+
+*   Argument mining on legal texts
+*   Classification and automatic summarization of legal text
+*   Computational methods for negotiation and contract formation
+*   Computer-assisted dispute resolution
+*   Computable representations of legal rules and domain-specific languages for the law
+*   Decision support systems in the legal domain
+*   Deep learning on data and text from the legal domain
+*   Dialog systems in the legal domain
+*   e-discovery and e-disclosure
+*   e-government, e-democracy, and e-justice
+*   Empirical research (quantitative and qualitative analysis) on the use of AI systems in legal practice
+*   Innovative applications in AI and Law
+*   Philosophical and legal-theoretical analysis of the significance and implications of methodologies or technical features of AI systems
+*   Systems and methods designed for compliance checking with respect to normative principles, rules, and standards
+*   Methodologies for the technical design in AI systems of compliance with normative principles, rules, and standards of trustworthy or responsible AI
+*   Explainable AI for the legal domain
+*   Formal and computational models of legal reasoning
+*   Formal and conceptual modeling of fundamental legal concepts
+*   Formal and computational models of evidential reasoning
+*   Formal models of norms and norm-governed systems
+*   Information extraction from legal databases and texts
+*   Information retrieval, question answering, and literature recommendation in the legal domain
+*   Intelligent legal tutoring systems
+*   Intelligent support systems for forensics
+*   Interdisciplinary applications of legal informatics methods and systems
+*   Knowledge acquisition techniques for the legal domain
+*   Knowledge representation, knowledge engineering, and ontologies in the legal domain
+*   Legal design involving AI techniques
+*   Machine learning and data analytics applied to the legal domain
+*   Natural language processing of legal text
+*   Applications of generative AI systems (LLMs) to the legal domain
+*   Normative reasoning by autonomous agents
+*   Open and linked data in the legal domain
+*   Smart contracts and application of blockchain in the legal domain
+*   Visualization techniques for legal information and data
+
+## Paper Submission Guidelines
+
+*   Papers (up to 10 pages including references for long papers, up to 5 pages including references for short papers) should present contributions from relevant topics.
+*   All papers must make clear their relation to legal information, reasoning, or processes.
+*   There should be a statement about the novel scientific contribution.
+*   The relation to prior work must be well-developed.
+*   The paper ought to report a full and satisfying discussion of its findings.
+*   It is highly recommended that code and data be published alongside the papers for all submissions.
+*   Papers must be formatted using the ACM sigconf template (for LaTeX) or the interim template layout.docx (for Word), both at [http://www.acm.org/publications/proceedings-template](http://www.acm.org/publications/proceedings-template).
+*   Submissions can be made via the ConfTool platform: [https://www.conftool.net/icail2025/](https://www.conftool.net/icail2025/)
+
+## Important Dates
+
+*   **Workshop and Tutorial Proposals Submission:** December 20, 2024
+*   **Paper Submission:** January 28, 2025
+*   **Demonstration Submission (including extended abstracts):** January 28, 2025
+*   **Notification of acceptance for Papers and Demonstrations:** April 14, 2025
+*   **Registration opens:** April 14, 2025 (tentative)
+*   **Camera Ready papers due:** May 5, 2025
+*   **Conference:** June 16-20, 2025
+
+## Contact
+
+For any questions about the submission process, please direct them to [icail2025@conftool.net](mailto:icail2025@conftool.net)."

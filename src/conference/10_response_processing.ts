@@ -139,30 +139,47 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
         // 1. Sử dụng map với async callback để xử lý từng row
         const processPromises = data.map(async (row: InputRowData): Promise<ProcessedRowData | null> => {
             try {
-                let fileContent: string = ""; // Nội dung đọc từ file
+                let determineFileContent: string = ""; // Nội dung đọc từ file
+                let extractFileContent: string = ""; // Nội dung đọc từ file
 
-                // 2. Kiểm tra và đọc file từ path
+                // 2. Kiểm tra và đọc file từ determine path
+                if (row.determineResponseTextPath) {
+                    try {
+                        determineFileContent = await readContentFromFile(row.determineResponseTextPath);
+                    } catch (readError: unknown) {
+                        const message = readError instanceof Error ? readError.message : String(readError);
+                        console.error(`Error reading file ${row.determineResponseTextPath} for row: ${row.conferenceAcronym}: ${message}`);
+                        // Quyết định xử lý tiếp hay bỏ qua row này.
+                        // Ở đây, chúng ta tiếp tục với determineFileContent rỗng, JSON.parse sẽ xử lý.
+                    }
+                } else {
+                    console.warn(`determineResponseTextPath missing for row: ${row.conferenceAcronym}`);
+                    // Không có path -> không có nội dung để parse
+                }
+
+                // 3. Kiểm tra và đọc file từ extract path
                 if (row.extractResponseTextPath) {
                     try {
-                        fileContent = await readContentFromFile(row.extractResponseTextPath);
+                        extractFileContent = await readContentFromFile(row.extractResponseTextPath);
                     } catch (readError: unknown) {
                         const message = readError instanceof Error ? readError.message : String(readError);
                         console.error(`Error reading file ${row.extractResponseTextPath} for row: ${row.conferenceAcronym}: ${message}`);
                         // Quyết định xử lý tiếp hay bỏ qua row này.
-                        // Ở đây, chúng ta tiếp tục với fileContent rỗng, JSON.parse sẽ xử lý.
+                        // Ở đây, chúng ta tiếp tục với extractFileContent rỗng, JSON.parse sẽ xử lý.
                     }
                 } else {
                     console.warn(`extractResponseTextPath missing for row: ${row.conferenceAcronym}`);
                     // Không có path -> không có nội dung để parse
                 }
 
+
                 // Process the parsed data
                 let parsedTruncatedInfo: Record<string, any> = {};
                 try {
                     // 3. Parse nội dung đọc được từ file (nếu có)
-                    if (fileContent) { // Chỉ parse nếu có nội dung
+                    if (extractFileContent) { // Chỉ parse nếu có nội dung
                         // Remove control characters
-                        const cleanedText = fileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+                        const cleanedText = extractFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
 
                         // Thêm kiểm tra xem cleanedText có rỗng không trước khi parse
                         if (cleanedText.trim()) {
@@ -183,7 +200,7 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                 } catch (parseError: unknown) {
                     const message = parseError instanceof Error ? parseError.message : String(parseError);
                     // Log lỗi kèm path và nội dung snippet
-                    console.error("Error parsing JSON from file:", message, "for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath }, "\nContent snippet:", fileContent.substring(0, 100));
+                    console.error("Error parsing JSON from file:", message, "for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath }, "\nContent snippet:", extractFileContent.substring(0, 100));
                     parsedTruncatedInfo = {}; // Ensure it's an object on error
                 }
 
@@ -191,7 +208,7 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                 const processedResponse = processResponse(parsedTruncatedInfo);
                 // Construct the final row object conforming to ProcessedRowData (logic này giữ nguyên)
                 const finalRow: ProcessedRowData = {
-                    name: row.conferenceName || "",
+                    title: row.conferenceTitle || "",
                     acronym: (row.conferenceAcronym || "").split("_diff")[0],
                     // rank: row.conferenceRank || "",
                     // rating: row.conferenceRating || "",
@@ -200,6 +217,33 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                     // comments: row.conferenceComments || "",
                     // fieldOfResearch: row.conferencePrimaryFoR || "",
                     // source: row.conferenceSource || "",
+                    determineLinks: (() => { // Immediately Invoked Function Expression (IIFE)
+                        try {
+                            if (determineFileContent) {
+                                // Remove control characters
+                                const cleanedText = determineFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+            
+                                if (cleanedText.trim()) {
+                                    const parsedContent = JSON.parse(cleanedText);
+                                    if (typeof parsedContent === 'object' && parsedContent !== null) {
+                                        return parsedContent;
+                                    } else {
+                                        console.warn("Parsed determineFileContent is not an object for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath });
+                                        return {};
+                                    }
+                                } else {
+                                    console.warn("Cleaned determineFileContent is empty, skipping parse for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath });
+                                    return {};
+                                }
+                            } else {
+                                console.warn("No determineFileContent to parse for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath || 'N/A' });
+                                return {};
+                            }
+                        } catch (parseError: any) {
+                            console.error("Error parsing determineFileContent JSON:", parseError.message, "for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath }, "\nContent snippet:", determineFileContent.substring(0, 100));
+                            return {}; // Return empty object on parsing error
+                        }
+                    })(),
                     link: row.conferenceLink || "",
                     cfpLink: row.cfpLink || "",
                     impLink: row.impLink || "",
@@ -227,7 +271,7 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
         // Define fields for CSV header and ordering
         // Ensure these fields match the keys in ProcessedRowData
         const fields: (keyof ProcessedRowData)[] = [
-            "name", "acronym", "link", "cfpLink", "impLink",
+            "title", "acronym", "link", "cfpLink", "impLink",
             // , "source", "rank", "rating", "fieldOfResearch", 
             "information", "conferenceDates", "year",
             "location", "cityStateProvince", "country", "continent", "type",

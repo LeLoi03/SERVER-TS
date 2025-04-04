@@ -1,0 +1,55 @@
+[
+  {
+    "conferenceTitle": "International Conference on Artificial Intelligence and Law",
+    "conferenceAcronym": "ICAIL",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://sites.northwestern.edu/icail2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\ICAIL_0_initial_0db74669-23c6-4720-81b4-81d7f2e37de3.txt",
+    "cfpLink": "https://sites.northwestern.edu/icail2025/cfp/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\ICAIL_determine_response_fd22dd05-0636-4bf2-8fad-7c355de95150.txt",
+    "determineMetaData": {
+      "promptTokenCount": 51519,
+      "candidatesTokenCount": 61,
+      "totalTokenCount": 51580,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 51519
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 61
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\ICAIL_cfp_2025_9de27b04-1204-47d9-94bc-1920ea92f4eb.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\ICAIL_extract_response_85009e0d-802f-4c9e-a178-900e03549868.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140746,
+      "candidatesTokenCount": 1748,
+      "totalTokenCount": 142494,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140746
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1748
+        }
+      ]
+    }
+  }
+]

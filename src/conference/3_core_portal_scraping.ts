@@ -126,14 +126,14 @@ export const getConferencesOnPage = async (url: string, pageIndex: number): Prom
                 const conference: ConferenceData = {
                     Title: title_formatted,
                     Acronym: data[i + 1] || 'N/A',
-                    Source: data[i + 2] || 'N/A',
-                    Rank: data[i + 3] || 'N/A',
-                    Note: data[i + 4] || 'N/A',
-                    DBLP: data[i + 5] || 'N/A',
-                    PrimaryFoR: data[i + 6] || 'N/A',
-                    Comments: data[i + 7] || 'N/A',
-                    Rating: data[i + 8] || 'N/A',
-                    Details: [], // Initialize Details as an empty object
+                    // Source: data[i + 2] || 'N/A',
+                    // Rank: data[i + 3] || 'N/A',
+                    // Note: data[i + 4] || 'N/A',
+                    // DBLP: data[i + 5] || 'N/A',
+                    // PrimaryFoR: data[i + 6] || 'N/A',
+                    // Comments: data[i + 7] || 'N/A',
+                    // Rating: data[i + 8] || 'N/A',
+                    // Details: [], // Initialize Details as an empty object
                 };
                 conferences.push(conference);
             } catch (conferenceCreationError: unknown) {

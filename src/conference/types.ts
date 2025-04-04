@@ -62,44 +62,44 @@ export interface SearchResult {
 
 // ---------------------6_playwright_utils.ts-----------------------
 // Define an interface for a single detail object within the array
-interface DetailItem {
-    Acronym?: string;
-    "DBLP Source"?: string;
-    Source?: string;
-    Rank?: string;
-    "Field Of Research"?: string[];
-}
+// interface DetailItem {
+//     Acronym?: string;
+//     "DBLP Source"?: string;
+//     Source?: string;
+//     Rank?: string;
+//     "Field Of Research"?: string[];
+// }
 
-// Define the type for the Details array
-type DetailsArray = DetailItem[];
+// // Define the type for the Details array
+// type DetailsArray = DetailItem[];
 
 export interface ConferenceData {
     Acronym: string;
     Title: string;
-    Source?: string;
-    Rank?: string;
-    Note?: string;
-    DBLP?: string;
-    PrimaryFoR?: string;
-    Comments?: string;
-    Rating?: string;
-    Details?: DetailsArray; // Changed to DetailsArray
+    // Source?: string;
+    // Rank?: string;
+    // Note?: string;
+    // DBLP?: string;
+    // PrimaryFoR?: string;
+    // Comments?: string;
+    // Rating?: string;
+    // Details?: DetailsArray; // Changed to DetailsArray
     mainLink?: string;
     cfpLink?: string;
     impLink?: string;
 }
 
 export interface BatchEntry {
-    conferenceName: string;
+    conferenceTitle: string;
     conferenceAcronym: string;
-    conferenceSource: string;
-    conferenceRank: string;
-    conferenceNote: string;
-    conferenceDBLP: string;
-    conferencePrimaryFoR: string;
-    conferenceComments: string;
-    conferenceRating: string;
-    conferenceDetails: DetailsArray; // Changed to DetailsArray
+    // conferenceSource: string;
+    // conferenceRank: string;
+    // conferenceNote: string;
+    // conferenceDBLP: string;
+    // conferencePrimaryFoR: string;
+    // conferenceComments: string;
+    // conferenceRating: string;
+    // conferenceDetails: DetailsArray; // Changed to DetailsArray
     conferenceIndex: string;
     conferenceLink: string;
     
@@ -132,7 +132,7 @@ export interface ConferenceUpdateData { // Dữ liệu đầu vào cho updateHTM
 }
 
 export interface BatchUpdateEntry { // Dữ liệu batch sau khi updateBatchToFile
-    conferenceName: string;
+    conferenceTitle: string;
     conferenceAcronym: string;
 
     cfpLink?: string;
@@ -157,6 +157,8 @@ import {
 import {
     RateLimiterMemory,
 } from 'rate-limiter-flexible';
+import { logger } from './11_utils';
+
 
 // --- Type Definitions ---
 export interface ApiResponse {
@@ -176,6 +178,7 @@ export interface CallGeminiApiParams {
     systemInstruction: string;
     modelName: string;
     generationConfig: GenerationConfig | undefined;
+    parentLogger: typeof logger;
 }
 
 
@@ -229,7 +232,7 @@ export interface ProcessedResponseData {
 
 // Describes the structure of the input row data for writeCSVFile
 export interface InputRowData {
-    conferenceName?: string; // Mark as optional if they might be missing
+    conferenceTitle?: string; // Mark as optional if they might be missing
     conferenceAcronym?: string;
     // conferenceRank?: string;
     // conferenceRating?: string;
@@ -241,13 +244,16 @@ export interface InputRowData {
     conferenceLink?: string;
     cfpLink?: string; // Added based on usage in writeCSVFile
     impLink?: string; // Added based on usage in writeCSVFile
+    determineResponseTextPath?: string; // Đường dẫn file chứa response của determine_links_api
     extractResponseTextPath?: string    // Add other potential fields if necessary
 }
 
 // Describes the structure of the final row written to the CSV
 // It combines fields from InputRowData and ProcessedResponseData
+// Describes the structure of the final row written to the CSV
+// It combines fields from InputRowData and ProcessedResponseData
 export interface ProcessedRowData extends ProcessedResponseData {
-    name: string;
+    title: string;
     acronym: string;
     // rank: string;
     // rating: string;
@@ -256,11 +262,11 @@ export interface ProcessedRowData extends ProcessedResponseData {
     // comments: string;
     // fieldOfResearch: string;
     // source: string;
+    determineLinks: Record<string, any>; // Changed to an object type
     link: string;
     cfpLink: string;
     impLink: string;
 }
-
 
 
 

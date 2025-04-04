@@ -792,6 +792,26 @@
         "deletedAt": null,
         "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
         "type": "Upcoming Conference"
+      },
+      {
+        "id": "9d6328b8-f00a-443a-9534-e0f9e602f690",
+        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
+        "createdAt": "2025-04-04T08:32:26.392Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"International Conference on Artificial Intelligence and Law\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "efab2311-6a13-438f-bfdc-87842be9ad60",
+        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
+        "createdAt": "2025-04-04T08:32:29.962Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"International Conference on Artificial Intelligence and Law\" from your calendar.",
+        "type": "Remove from Calendar"
       }
     ],
     "createdAt": "2025-03-28T13:35:20.438Z",

@@ -163,6 +163,10 @@ app.get('/api/v1/topics', async (req, res) => {
     }
 });
 
+import { saveCrawlConferenceFromCsvToJson } from './route/saveCrawlConferenceFromCsvToJson'; // Adjust path
+app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson);
+
+
 
 
 // --- server_crawl.ts routes ---
@@ -229,13 +233,13 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
 
 
         routeLogger.info({ conferenceCount: conferenceList.length }, "Calling crawlConferences...");
-        const results = await crawlConferences(conferenceList);
-
+        const results = await crawlConferences(conferenceList, routeLogger);
+        
         const endTime = Date.now();
         const runTime = endTime - startTime;
         const runTimeSeconds = (runTime / 1000).toFixed(2);
 
-        routeLogger.info({ runtimeSeconds: runTimeSeconds, event: 'crawl_conference_result', results: results }, "crawlConferences finished successfully.");
+        routeLogger.info({ runtimeSeconds: runTimeSeconds, event: 'crawl_end_success', resultsPreview: results }, "crawlConferences finished successfully.");
 
         res.status(200).json({
             message: 'Conference crawling completed successfully!',
@@ -341,7 +345,7 @@ let latestOverallAnalysisResult: LogAnalysisResult | null = null;
 
 // --- Cron Job để phân tích định kỳ ---
 // Ví dụ: Chạy mỗi phút
-cron.schedule('5 * * * *', async () => {
+cron.schedule('30 * * * *', async () => {
     logger.info('[Cron] Running scheduled log analysis...');
     try {
         const results = await performLogAnalysis();
@@ -399,6 +403,7 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
         }
     }
 });
+
 
 
 
@@ -641,7 +646,6 @@ app.post('/log', (req, res) => {
         res.status(200).send('Đã ghi log.');
     });
 });
-
 
 
 httpServer.listen(3001, () => {

@@ -4,6 +4,7 @@ import readline from 'readline';
 // Đảm bảo đường dẫn import logger và types là chính xác
 import { logger } from '../conference/11_utils';
 import { LogAnalysisResult, ConferenceAnalysisDetail } from '../types/logAnalysis';
+import { title } from 'process';
 
 // --- Helper function: Normalize Error Key ---
 const normalizeErrorKey = (error: any): string => {
@@ -19,7 +20,8 @@ const normalizeErrorKey = (error: any): string => {
 };
 
 // --- Helper function: Initialize Conference Detail ---
-const initializeConferenceDetail = (acronym: string): ConferenceAnalysisDetail => ({
+const initializeConferenceDetail = (acronym: string, title: string): ConferenceAnalysisDetail => ({
+    title: title,
     acronym: acronym,
     status: 'unknown', // Initial status
     startTime: null,
@@ -91,7 +93,7 @@ export const performLogAnalysis = async (
         errorLogCount: 0, // Will be counted during analysis (phase 2)
         fatalLogCount: 0, // Will be counted during analysis (phase 2)
         overall: {
-            startTime: null, endTime: null, durationSeconds: null, totalConferencesInput: null,
+            startTime: null, endTime: null, durationSeconds: null, totalConferencesInput: 0,
             processedConferencesCount: 0, completedTasks: 0, failedOrCrashedTasks: 0, successfulExtractions: 0
         },
         googleSearch: {
@@ -247,12 +249,13 @@ export const performLogAnalysis = async (
                     const event = context.event;
                     const route = context.route;
                     const acronym = context.acronym || context.conferenceAcronym;
+                    const title = context.title || context.conferenceTitle;
                     const error = context.err || context.reason;
 
                     let confDetail: ConferenceAnalysisDetail | null = null;
                     if (acronym && typeof acronym === 'string' && acronym.trim() !== '') {
                         if (!results.conferenceAnalysis[acronym]) {
-                            results.conferenceAnalysis[acronym] = initializeConferenceDetail(acronym);
+                            results.conferenceAnalysis[acronym] = initializeConferenceDetail(acronym, title);
                         }
                         confDetail = results.conferenceAnalysis[acronym];
                         if (!isNaN(entryTimeMillis)) {
@@ -275,8 +278,8 @@ export const performLogAnalysis = async (
                             // Use analysisStartMillis/analysisEndMillis instead, maybe? Or keep first/last seen?
                             // Let's keep the log's start time for now, but final overall time uses analysisStart/End
                             if (!results.overall.startTime) results.overall.startTime = context.startTime ?? entryTimestampISO;
-                            if (context.totalConferences && results.overall.totalConferencesInput === null) { // Only take first seen? Or sum? Sum seems wrong.
-                                results.overall.totalConferencesInput = context.totalConferences;
+                            if (context.totalConferences && results.overall.totalConferencesInput !== null) { // Only take first seen? Or sum? Sum seems wrong.
+                                results.overall.totalConferencesInput++;
                             }
                             break;
                         case 'task_start':
@@ -425,7 +428,6 @@ export const performLogAnalysis = async (
                             if (confDetail) {
                                 confDetail.steps.link_processing_failed?.push({
                                     timestamp: entryTimestampISO,
-                                    message: error,
                                     // Optional: Include raw error details if needed for debugging later
                                     details: `Link access failed: ${context.url || msg}`
                                 });
@@ -615,25 +617,46 @@ export const performLogAnalysis = async (
                     }
 
                     // 6. Final Result Preview Logging
-                    if (route === '/crawl-conferences' && event === 'crawl_conference_result' && context.result) {
-                        const resultAcronym = context.result?.acronym;
+                    // Ensure this logic runs *after* the main switch cases that might initialize confDetail
+
+                    // 1. Handle specific per-conference result log FIRST
+                    if (route === '/crawl-conferences' && event === 'crawl_conference_result' && context.results && Array.isArray(context.results) && context.results.length > 0) {
+                        // Assuming context.results is an array, potentially with one item based on handler code
+                        const result = context.results[0]; // Adjust if structure is different
+                        const resultAcronym = result?.acronym;
+
                         if (resultAcronym && results.conferenceAnalysis[resultAcronym]) {
-                            results.conferenceAnalysis[resultAcronym].finalResultPreview = context.result;
+                            // Assign directly - this is the preferred source for this request
+                            results.conferenceAnalysis[resultAcronym].finalResultPreview = result;
+                            // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Assigned preview from crawl_conference_result");
+                        } else if (resultAcronym) {
+                            // This might indicate an issue if task_start wasn't logged or processed first for this acronym in this request
+                            logger.warn({ requestId: logEntry.requestId, acronym: resultAcronym, event: 'crawl_conference_result' }, "Found crawl_conference_result but no matching analysis entry for acronym in current request processing");
                         }
-                    } else if (route === '/crawl-conferences' && event === 'crawl_end_success' && context.resultsPreview) { // Original check for bulk results
-                        // This might log previews for conferences outside the current request if not careful
-                        // It's better to log preview per conference via a specific event like 'crawl_conference_result'
+                    }
+                    // 2. Handle bulk result log SECOND, as a fallback
+                    // NOTE: The provided handleCrawlConferences code logs 'results' with 'crawl_conference_result', NOT 'crawl_end_success'.
+                    // Adjusting the 'else if' condition based on the provided handler code:
+                    // If the handler *really* logged the final bulk results with 'crawl_end_success', use that event name.
+                    // If it logged with 'crawl_conference_result' as shown, the first 'if' block handles it.
+                    // Let's assume there might be an older 'crawl_end_success' event format as originally intended:
+                    else if (route === '/crawl-conferences' && event === 'crawl_end_success' && context.resultsPreview && Array.isArray(context.resultsPreview)) { // Check for the older event structure
+                        // logger.trace({ requestId: logEntry.requestId }, "Processing previews from crawl_end_success");
                         context.resultsPreview.forEach((preview: any) => {
                             const resultAcronym = preview?.acronym;
-                            // Check if this acronym belongs to the *currently processed* request's conferences?
-                            // This is tricky without more context linking preview to request.
-                            // Safer approach: Rely on per-conference result logs.
+
+                            // Check if analysis detail exists for this acronym (created by logs earlier in *this request*)
                             if (resultAcronym && results.conferenceAnalysis[resultAcronym]) {
-                                // Only assign if not already set by a more specific event?
+                                // Assign *only if* the specific log ('crawl_conference_result') didn't already provide it for this request's analysis
                                 if (!results.conferenceAnalysis[resultAcronym].finalResultPreview) {
-                                    // results.conferenceAnalysis[resultAcronym].finalResultPreview = preview;
-                                    // Temporarily disable this bulk assignment to prefer specific logs
+                                    results.conferenceAnalysis[resultAcronym].finalResultPreview = preview;
+                                    // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Assigned preview from crawl_end_success (fallback)");
+                                } else {
+                                    // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Skipping preview from crawl_end_success (already set by specific event)");
                                 }
+                            } else if (resultAcronym) {
+                                // Log warning if preview exists but no analysis entry was initialized for this acronym in this request
+                                logger.warn({ requestId: logEntry.requestId, acronym: resultAcronym, event: 'crawl_end_success' }, "Found preview in crawl_end_success but no matching analysis entry for acronym in current request processing");
                             }
                         });
                     }
