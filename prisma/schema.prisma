@@ -27,8 +27,8 @@ model Locations {
 model ConferenceDates {
   id          String                  @id @default(uuid())
   organizedId String
-  fromDate    DateTime
-  toDate      DateTime
+  fromDate    DateTime?
+  toDate      DateTime?
   type        String
   name        String
   createdAt   DateTime                @default(now())
@@ -84,7 +84,7 @@ model Conferences {
   creatorId     String
   createdAt     DateTime                  @default(now())
   updatedAt     DateTime                  @updatedAt
-  status        String
+  status        String                @default("draft") 
   follows       ConferenceFollows []
   likes         ConferenceLikes[]
   calendars     ConferenceCalendars[]

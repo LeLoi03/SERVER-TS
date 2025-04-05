@@ -5144,8 +5144,8 @@ export namespace Prisma {
   export type ConferenceDatesGroupByOutputType = {
     id: string
     organizedId: string
-    fromDate: Date
-    toDate: Date
+    fromDate: Date | null
+    toDate: Date | null
     type: string
     name: string
     createdAt: Date
@@ -5240,8 +5240,8 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       organizedId: string
-      fromDate: Date
-      toDate: Date
+      fromDate: Date | null
+      toDate: Date | null
       type: string
       name: string
       createdAt: Date
@@ -35822,8 +35822,8 @@ export namespace Prisma {
     NOT?: ConferenceDatesWhereInput | ConferenceDatesWhereInput[]
     id?: StringFilter<"ConferenceDates"> | string
     organizedId?: StringFilter<"ConferenceDates"> | string
-    fromDate?: DateTimeFilter<"ConferenceDates"> | Date | string
-    toDate?: DateTimeFilter<"ConferenceDates"> | Date | string
+    fromDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
+    toDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
     type?: StringFilter<"ConferenceDates"> | string
     name?: StringFilter<"ConferenceDates"> | string
     createdAt?: DateTimeFilter<"ConferenceDates"> | Date | string
@@ -35835,8 +35835,8 @@ export namespace Prisma {
   export type ConferenceDatesOrderByWithRelationInput = {
     id?: SortOrder
     organizedId?: SortOrder
-    fromDate?: SortOrder
-    toDate?: SortOrder
+    fromDate?: SortOrderInput | SortOrder
+    toDate?: SortOrderInput | SortOrder
     type?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -35851,8 +35851,8 @@ export namespace Prisma {
     OR?: ConferenceDatesWhereInput[]
     NOT?: ConferenceDatesWhereInput | ConferenceDatesWhereInput[]
     organizedId?: StringFilter<"ConferenceDates"> | string
-    fromDate?: DateTimeFilter<"ConferenceDates"> | Date | string
-    toDate?: DateTimeFilter<"ConferenceDates"> | Date | string
+    fromDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
+    toDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
     type?: StringFilter<"ConferenceDates"> | string
     name?: StringFilter<"ConferenceDates"> | string
     createdAt?: DateTimeFilter<"ConferenceDates"> | Date | string
@@ -35864,8 +35864,8 @@ export namespace Prisma {
   export type ConferenceDatesOrderByWithAggregationInput = {
     id?: SortOrder
     organizedId?: SortOrder
-    fromDate?: SortOrder
-    toDate?: SortOrder
+    fromDate?: SortOrderInput | SortOrder
+    toDate?: SortOrderInput | SortOrder
     type?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -35882,8 +35882,8 @@ export namespace Prisma {
     NOT?: ConferenceDatesScalarWhereWithAggregatesInput | ConferenceDatesScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"ConferenceDates"> | string
     organizedId?: StringWithAggregatesFilter<"ConferenceDates"> | string
-    fromDate?: DateTimeWithAggregatesFilter<"ConferenceDates"> | Date | string
-    toDate?: DateTimeWithAggregatesFilter<"ConferenceDates"> | Date | string
+    fromDate?: DateTimeNullableWithAggregatesFilter<"ConferenceDates"> | Date | string | null
+    toDate?: DateTimeNullableWithAggregatesFilter<"ConferenceDates"> | Date | string | null
     type?: StringWithAggregatesFilter<"ConferenceDates"> | string
     name?: StringWithAggregatesFilter<"ConferenceDates"> | string
     createdAt?: DateTimeWithAggregatesFilter<"ConferenceDates"> | Date | string
@@ -37684,8 +37684,8 @@ export namespace Prisma {
 
   export type ConferenceDatesCreateInput = {
     id?: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -37697,8 +37697,8 @@ export namespace Prisma {
   export type ConferenceDatesUncheckedCreateInput = {
     id?: string
     organizedId: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -37708,8 +37708,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -37721,8 +37721,8 @@ export namespace Prisma {
   export type ConferenceDatesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     organizedId?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -37733,8 +37733,8 @@ export namespace Prisma {
   export type ConferenceDatesCreateManyInput = {
     id?: string
     organizedId: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -37744,8 +37744,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -37756,8 +37756,8 @@ export namespace Prisma {
   export type ConferenceDatesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     organizedId?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -38009,7 +38009,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -38028,7 +38028,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -38082,7 +38082,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
   }
 
   export type ConferencesUpdateManyMutationInput = {
@@ -39637,6 +39637,17 @@ export namespace Prisma {
     _max?: NestedBoolFilter<$PrismaModel>
   }
 
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type ConferenceDatesCountOrderByAggregateInput = {
     id?: SortOrder
     organizedId?: SortOrder
@@ -39671,6 +39682,20 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     isAvailable?: SortOrder
+  }
+
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
@@ -40818,6 +40843,10 @@ export namespace Prisma {
     create?: XOR<ConferenceOrganizationsCreateWithoutConferenceDatesInput, ConferenceOrganizationsUncheckedCreateWithoutConferenceDatesInput>
     connectOrCreate?: ConferenceOrganizationsCreateOrConnectWithoutConferenceDatesInput
     connect?: ConferenceOrganizationsWhereUniqueInput
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
   }
 
   export type ConferenceOrganizationsUpdateOneRequiredWithoutConferenceDatesNestedInput = {
@@ -43122,6 +43151,31 @@ export namespace Prisma {
     _max?: NestedBoolFilter<$PrismaModel>
   }
 
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -43354,8 +43408,8 @@ export namespace Prisma {
 
   export type ConferenceDatesCreateWithoutBelongsToInput = {
     id?: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -43365,8 +43419,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUncheckedCreateWithoutBelongsToInput = {
     id?: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -43446,7 +43500,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -43464,7 +43518,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -43501,8 +43555,8 @@ export namespace Prisma {
     NOT?: ConferenceDatesScalarWhereInput | ConferenceDatesScalarWhereInput[]
     id?: StringFilter<"ConferenceDates"> | string
     organizedId?: StringFilter<"ConferenceDates"> | string
-    fromDate?: DateTimeFilter<"ConferenceDates"> | Date | string
-    toDate?: DateTimeFilter<"ConferenceDates"> | Date | string
+    fromDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
+    toDate?: DateTimeNullableFilter<"ConferenceDates"> | Date | string | null
     type?: StringFilter<"ConferenceDates"> | string
     name?: StringFilter<"ConferenceDates"> | string
     createdAt?: DateTimeFilter<"ConferenceDates"> | Date | string
@@ -44502,7 +44556,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -44520,7 +44574,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -45560,7 +45614,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsCreateNestedManyWithoutBelongsToInput
@@ -45578,7 +45632,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -45764,7 +45818,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsCreateNestedManyWithoutBelongsToInput
@@ -45782,7 +45836,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -45968,7 +46022,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -45986,7 +46040,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -46172,7 +46226,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsCreateNestedManyWithoutBelongsToInput
@@ -46190,7 +46244,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     organizations?: ConferenceOrganizationsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -46848,7 +46902,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -46865,7 +46919,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -47412,7 +47466,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -47430,7 +47484,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -47496,7 +47550,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsCreateNestedManyWithoutBelongsToInput
@@ -47514,7 +47568,7 @@ export namespace Prisma {
     creatorId: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
     follows?: ConferenceFollowsUncheckedCreateNestedManyWithoutBelongsToInput
     likes?: ConferenceLikesUncheckedCreateNestedManyWithoutBelongsToInput
     calendars?: ConferenceCalendarsUncheckedCreateNestedManyWithoutBelongsToInput
@@ -48490,8 +48544,8 @@ export namespace Prisma {
 
   export type ConferenceDatesCreateManyBelongsToInput = {
     id?: string
-    fromDate: Date | string
-    toDate: Date | string
+    fromDate?: Date | string | null
+    toDate?: Date | string | null
     type: string
     name: string
     createdAt?: Date | string
@@ -48519,8 +48573,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUpdateWithoutBelongsToInput = {
     id?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -48530,8 +48584,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUncheckedUpdateWithoutBelongsToInput = {
     id?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -48541,8 +48595,8 @@ export namespace Prisma {
 
   export type ConferenceDatesUncheckedUpdateManyWithoutBelongsToInput = {
     id?: StringFieldUpdateOperationsInput | string
-    fromDate?: DateTimeFieldUpdateOperationsInput | Date | string
-    toDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    fromDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    toDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     type?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -49261,7 +49315,7 @@ export namespace Prisma {
     acronym: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    status: string
+    status?: string
   }
 
   export type TopicUserInterestedsCreateManyBelongsToInput = {

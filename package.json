@@ -17,6 +17,7 @@
     "@google/generative-ai": "^0.23.0",
     "@prisma/client": "^6.5.0",
     "@types/webaudioapi": "^0.0.27",
+    "any-date-parser": "^2.0.3",
     "async-mutex": "^0.5.0",
     "axios": "^1.8.4",
     "cheerio": "^1.0.0",

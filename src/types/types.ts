@@ -221,3 +221,14 @@ import type {
   
   export const isAudioDataMessage = (a:unknown): a is AudioDataMessage =>
       prop(a, "audioData", "string")
+
+
+
+  export type ConferenceDateInput = {
+      fromDate: Date | null;
+      toDate: Date | null;
+      type: string;
+      name: string;
+      organizedId: string;
+      isAvailable: boolean;
+  };

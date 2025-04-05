@@ -4,6 +4,8 @@ import type { Options as Json2CsvOptions } from 'json2csv'; // Import specific t
 
 import { ProcessedResponseData, InputRowData, ProcessedRowData } from './types';
 import { readContentFromFile } from './11_utils'; //
+import { createConferenceDate, createConfereneOrganization, createLocation, createTopic, findOrCreateConference } from './0_database';
+import { PrismaClient } from '../../generated/prisma_client';
 
 // --- Helper Functions ---
 
@@ -131,6 +133,48 @@ export const processResponse = (response: Record<string, any> | null | undefined
     return result;
 };
 
+
+export const writeToDb = async (data : ProcessedRowData[]) => {
+    const prisma = new PrismaClient();
+    let user = await prisma.users.findFirst();
+    if(
+        !user
+    ) {
+        user = await prisma.users.create({
+            data : {
+                lastName : "System",
+                firstName : "System",
+                email : "test@test.com",
+                aboutMe : "System",
+                password : "test",
+                background : "System",
+                avatar : "System",
+                dob : new Date(),
+            }
+        })
+    }
+    console.log("user : ", user);
+    
+   for (const row of data) {
+        try {
+            const conference = await findOrCreateConference(row, user.id);
+            // Handle the conference object as needed
+            console.log("Conference processed:", conference.id);
+            const organization = await createConfereneOrganization(row, conference.id);
+            console
+            if(!organization) {
+                throw new Error("Organization not found");
+            }
+            const location = await createLocation(row, organization.id);
+            const dates = await createConferenceDate(row, organization.id);
+            const topics = await createTopic(row, organization.id);
+
+        } catch (error) {
+            console.error("Error processing conference:", error);
+        }
+    }
+}
+
 // Hàm ghi dữ liệu vào file CSV - Now async
 export const writeCSVFile = async (filePath: string, data: InputRowData[]): Promise<ProcessedRowData[]> => {
     let processedData: ProcessedRowData[] = []; // Initialize with correct type
@@ -249,6 +293,7 @@ export const writeCSVFile = async (filePath: string, data: InputRowData[]): Prom
                     impLink: row.impLink || "",
                     ...processedResponse,
                 };
+                await writeToDb([finalRow]);
                 return finalRow;
 
             } catch (rowProcessingError: unknown) {
