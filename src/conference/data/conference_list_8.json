@@ -1,0 +1,202 @@
+[
+  {
+    "Title": "AAAI Conference on Human Computation and Crowdsourcing",
+    "Acronym": "HCOMP"
+  },
+  {
+    "Title": "Heterogeneity in Computing Workshop",
+    "Acronym": "HCW"
+  },
+  {
+    "Title": "IEEE international conference on ehealth networking applications and services",
+    "Acronym": "HealthCom"
+  },
+  {
+    "Title": "Health Informatics Conference",
+    "Acronym": "HIC"
+  },
+  {
+    "Title": "International Conference on High Performance Computing",
+    "Acronym": "HiPC"
+  },
+  {
+    "Title": "International Workshop on High-Level Parallel Programming Models and Supportive Environments",
+    "Acronym": "HIPS"
+  },
+  {
+    "Title": "International Conference on Hybrid Intelligent Systems",
+    "Acronym": "HIS"
+  },
+  {
+    "Title": "International workshop on High-Level Parallel Programming and Applications",
+    "Acronym": "HLPP"
+  },
+  {
+    "Title": "Symposium on High Performance Chips",
+    "Acronym": "HOTCHIPS (HCS)"
+  },
+  {
+    "Title": "IEEE Symposium on High-Performance Interconnects",
+    "Acronym": "HOTI"
+  },
+  {
+    "Title": "Workshop on Mobile Computing Systems and Applications",
+    "Acronym": "HOTMOBILE"
+  },
+  {
+    "Title": "ACM Workshop on Hot Topics in Networks",
+    "Acronym": "HOTNETS"
+  },
+  {
+    "Title": "USENIX Workshop on Hot Topics in Operating Systems",
+    "Acronym": "HotOS"
+  },
+  {
+    "Title": "International Conference and Exhibition on High Performance Computing in the Asia-Pacific Region",
+    "Acronym": "HPC Asia"
+  },
+  {
+    "Title": "International Symposium on High Performance Computer Architecture",
+    "Acronym": "HPCA"
+  },
+  {
+    "Title": "IEEE International Conference on High Performance Computing and Communications",
+    "Acronym": "HPCC"
+  },
+  {
+    "Title": "ACM International Symposium on High Performance Distributed Computing",
+    "Acronym": "HPDC"
+  },
+  {
+    "Title": "International Conference on High Performance Scientific Computing",
+    "Acronym": "HPSC"
+  },
+  {
+    "Title": "IEEE Workshop on High Performance Switching and Routing",
+    "Acronym": "HPSR"
+  },
+  {
+    "Title": "ACM/IEEE International Conference on Human-Robot Interaction",
+    "Acronym": "HRI"
+  },
+  {
+    "Title": "Human System Interaction",
+    "Acronym": "HSI"
+  },
+  {
+    "Title": "ACM-SIGRAPH Interactive 3D Graphics and Games",
+    "Acronym": "I3DG"
+  },
+  {
+    "Title": "International Conference on Innovations for Community Services",
+    "Acronym": "I4CS"
+  },
+  {
+    "Title": "Innovative Applications in AI",
+    "Acronym": "IAAI"
+  },
+  {
+    "Title": "IADIS International Conference Applied Computing",
+    "Acronym": "IADIS AC"
+  },
+  {
+    "Title": "IEEE Industry Applications Society Annual Conference",
+    "Acronym": "IAS"
+  },
+  {
+    "Title": "International Symposium on Information Assurance and Security",
+    "Acronym": "IAS"
+  },
+  {
+    "Title": "International Conference on Artificial Intelligence",
+    "Acronym": "IC-AI"
+  },
+  {
+    "Title": "International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management",
+    "Acronym": "IC3K"
+  },
+  {
+    "Title": "International Conference on Algorithms and Architectures for Parallel Processing",
+    "Acronym": "ICA3PP"
+  },
+  {
+    "Title": "International Conference on Agents and Artificial Intelligence",
+    "Acronym": "ICAART"
+  },
+  {
+    "Title": "International Conference on Artificial Intelligence and Law",
+    "Acronym": "ICAIL"
+  },
+  {
+    "Title": "International Conference on Artificial Intelligence and Soft Computing",
+    "Acronym": "ICAISC"
+  },
+  {
+    "Title": "International Colloquium on Automata Languages and Programming",
+    "Acronym": "ICALP"
+  },
+  {
+    "Title": "IEEE International Conference on Advanced Learning Technologies",
+    "Acronym": "ICALT"
+  },
+  {
+    "Title": "International Conference on Artificial Neural Networks",
+    "Acronym": "ICANN"
+  },
+  {
+    "Title": "International Conference on Automated Planning and Scheduling",
+    "Acronym": "ICAPS"
+  },
+  {
+    "Title": "International Conference on Control, Automation, Robotics and Vision",
+    "Acronym": "ICARCV"
+  },
+  {
+    "Title": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "Acronym": "ICASSP"
+  },
+  {
+    "Title": "IEEE International Conference on Blockchain and Cryptocurrency",
+    "Acronym": "ICBC"
+  },
+  {
+    "Title": "IEEE/ACM International Conference on Computer-Aided Design",
+    "Acronym": "ICCAD"
+  },
+  {
+    "Title": "International Congress on Computational and Applied Mathematics",
+    "Acronym": "ICCAM"
+  },
+  {
+    "Title": "International Conference on Case-Based Reasoning",
+    "Acronym": "ICCBR"
+  },
+  {
+    "Title": "International Conference on Computational Creativity",
+    "Acronym": "ICCC"
+  },
+  {
+    "Title": "International Conference on Computational Collective Intelligence",
+    "Acronym": "ICCCI"
+  },
+  {
+    "Title": "International Conference on Computer Communication and Networks",
+    "Acronym": "ICCCN"
+  },
+  {
+    "Title": "IEEE International Conference on Computer Design",
+    "Acronym": "ICCD"
+  },
+  {
+    "Title": "International Conference on Computers in Education",
+    "Acronym": "ICCE"
+  },
+  {
+    "Title": "International Conference on Computers Helping People with Special Needs",
+    "Acronym": "ICCHP"
+  },
+  {
+    "Title": "IEEE International Conference on Cognitive Informatics",
+    "Acronym": "ICCI"
+  }
+]

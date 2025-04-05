@@ -10,7 +10,7 @@ export const setupPlaywright = async (): Promise<PlaywrightSetupResult> => {
 
     try {
         browser = await chromium.launch({
-            channel: "chrome",
+            channel: CHANNEL,
             headless: true, // Sử dụng biến HEADLESS từ config.ts
             args: [
                 "--disable-notifications",

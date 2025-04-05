@@ -3,369 +3,338 @@ Conference full name: Computer Algebra in Scientific Computing (CASC)
 1. Website of CASC_3: https://www.casc-conference.org/call.html
 Website information of CASC_3:
 
-Computer Algebra in Scientific Computing   
- Menu   
- Home 
-  CASC 2025 
-  Invited Talks 
-  Committees 
-  Bibliography 
-  Directions 
-
- ​​​​ CASC 2025 · Nov. 24 - 28, Dubai, The United Arab Emirates  
- Conference Information  
- The tools of Scientific Computing play an important role in the natural sciences and engineering. Computer Algebra Systems and the underlying algorithms for Symbolic Computation play an increasingly important role within Scientific Computation. The CASC workshop series has been running for over two decades to explore the interaction of these topics, their implementation, and their application.  
- Scope  
- The topics addressed in the workshop cover  
- 1. The theory of symbolic computation and its implementation in computer algebra systems.  
-  This includes, but is not limited to:  
+Computer Algebra in Scientific ComputingMenuHome 
+ href="call.html" - CASC 2025 
+ Invited Talks 
+ Committees 
+ Bibliography 
+ Directions 
+ ​​​​CASC 2025 · Nov. 24 - 28, Dubai, The United Arab Emirates 
+ Conference Information 
+ The tools of Scientific Computing play an important role in the natural sciences and engineering. Computer Algebra Systems and the underlying algorithms for Symbolic Computation play an increasingly important role within Scientific Computation. The CASC workshop series has been running for over two decades to explore the interaction of these topics, their implementation, and their application. 
+ Scope 
+ The topics addressed in the workshop cover 
+ 1. The theory of symbolic computation and its implementation in computer algebra systems. 
+ This includes, but is not limited to: 
  new methods on exact computation; 
-  symbolic algorithms and their complexity; 
-  automated reasoning in algebra and geometry; 
-  parallel symbolic / symbolic-numeric computation; 
-  symbolic / symbolic-numeric methods for differential, differential-algebraic and difference equations; 
-  symbolic / symbolic-numeric methods for polynomial equations and inequalities; 
-  the embedding of computer algebra technology within different software and hardware environments; 
-  2. All other areas of scientific computing in regards to their benefit from or use of computer algebra methods and software.  
-  This includes, but is not limited to:  
+ symbolic algorithms and their complexity; 
+ automated reasoning in algebra and geometry; 
+ parallel symbolic / symbolic-numeric computation; 
+ symbolic / symbolic-numeric methods for differential, differential-algebraic and difference equations; 
+ symbolic / symbolic-numeric methods for polynomial equations and inequalities; 
+ the embedding of computer algebra technology within different software and hardware environments; 
+ 2. All other areas of scientific computing in regards to their benefit from or use of computer algebra methods and software. 
+ This includes, but is not limited to: 
  the use of computer algebra in approximate computation; 
-  computer algebra methods in big data analytics; 
-  computer algebra methods for simulation and modeling; 
-  3. Applications of the above throughout the natural sciences and engineering.  
- We welcome papers on both fundamental research and implementation issues. We also accept survey papers but these MUST BE CLEARLY LABELLED as such in the title.  
- Conference Participation Options  
- We encourage wide participation at the workshop. In light of this, and that the conference scope spans computer science and mathematics (with their different publication traditions), we offer a variety of participation options.  
- 1. Participation with an accompanying paper in LNCS:  
-   
-  CASC has a long running relationship with the Springer book series Lecture Notes in Computer Science to publish conference proceedings. Work submitted here should contain an original research result. Submissions should be prepared in the LNCS style and not exceed 20 pages. Survey papers may have up to 25 pages. Click on the below logo to see the list of CASC proceedings published by Springer.  
-  2. Participation with abstract only:  
-   
-  Participants may opt to submit an extended abstract instead. These should have at least 2 and at most 4 pages in the LNCS style. They must contain the main results of the talk (without proofs). They will be lightly reviewed and distributed locally at the conference. We see three main audiences for this option:  
- Those who wish to talk on previously published work (in which case that work should be clearly cited in the abstract). 
-  Those whose work is not yet ready for publication, but wish to receive feedback. 
-  Those who plan to submit a journal paper on the work shortly. 
-  For the second group, there will be a subsequent journal topical collection call after the conference (see below).  
- Accompanying Topical Collection of Mathematics in Computer Science  
- CASC has formed a relationship with the Springer Birkhäuser journal Mathematics in Computer Science (MCS) for an ongoing series of topical collections on topics presented at CASC workshops. Work submitted here must be of journal quality and will be reviewed to the usual standards of MCS. Submission will be opened after the conference for authors of extended abstracts presented at that years conference. There is no a priori page limit, but the length must be justified by the contents of the paper. At notification authors may be asked to revise their paper for a secondary deadline.  
- Important Dates  
- Paper submission deadline: | May 18th, 2025 
-  Notification to Authors: | July 13th, 2025 
-  Submission of Final Version: | August 10th, 2025 
-  Conference: | November 24 – 28, 2025 
+ computer algebra methods in big data analytics; 
+ computer algebra methods for simulation and modeling; 
+ 3. Applications of the above throughout the natural sciences and engineering. 
+ We welcome papers on both fundamental research and implementation issues. We also accept survey papers but these MUST BE CLEARLY LABELLED as such in the title. 
+ Conference Participation Options 
+ We encourage wide participation at the workshop. In light of this, and that the conference scope spans computer science and mathematics (with their different publication traditions), we offer a variety of participation options. 
+ 1. Participation with an accompanying paper inhref="https://link.springer.com/conference/casc" - LNCS:
 
- © 2024-25 Computer Algebra in Scientific Computing.  
-  All rights reserved.  
+CASC has a long running relationship with the Springer book series Lecture Notes in Computer Science to publish conference proceedings. Work submitted here should contain an original research result. Submissions should be prepared in theLNCS styleand not exceed 20 pages. Survey papers may have up to 25 pages. Click on the below logo to see the list of CASC proceedings published by Springer. 
+ href="https://link.springer.com/conference/casc" - 
+2. Participation with abstract only: 
+  
+ Participants may opt to submit an extended abstract instead. These should have at least 2 and at most 4 pages in theLNCS style.They must contain the main results of the talk (without proofs). They will be lightly reviewed and distributed locally at the conference. We see three main audiences for this option: 
+ Those who wish to talk on previously published work (in which case that work should be clearly cited in the abstract). 
+ Those whose work is not yet ready for publication, but wish to receive feedback. 
+ Those who plan to submit a journal paper on the work shortly. 
+ For the second group, there will be a subsequent journal topical collection call after the conference (see below). 
+ Accompanying Topical Collection of Mathematics in Computer ScienceCASC has formed a relationship with the Springer Birkhäuser journal Mathematics in Computer Science (MCS)for an ongoing series of topical collections on topics presented at CASC workshops. Work submitted here must be of journal quality and will be reviewed to the usual standards of MCS. Submission will be opened after the conference for authors of extended abstracts presented at that years conference. There is no a priori page limit, but the length must be justified by the contents of the paper. At notification authors may be asked to revise their paper for a secondary deadline. 
+ Important Dates 
+ Paper submission deadline: | May 18th, 2025 
+ Notification to Authors: | July 13th, 2025 
+ Submission of Final Version: | August 10th, 2025 
+ Conference: | November 24 – 28, 2025 
+ © 2024-25 Computer Algebra in Scientific Computing. 
+ All rights reserved. 
  Privacy Policy 
-  Contact Webmaster
+ Contact Webmaster
 
 2. Website of CASC_3: http://www.casc-conference.org/
 Website information of CASC_3:
 
-Computer Algebra in Scientific Computing   
- Menu   
- Home 
-  CASC 2025 
-  Invited Talks 
-  Committees 
-  Bibliography 
-  Directions 
-
- CASC 2025 · Nov. 24 - 28, Dubai, The United Arab Emirates  
-
-  Invited Talks at CASC 2025  
- We are proud to present the invited speakers of CASC conference. Please find here the invited talks at CASC 2025.  
-
- © 2024-25 Computer Algebra in Scientific Computing.  
-  All rights reserved.  
+Computer Algebra in Scientific ComputingMenuHome 
+ href="call.html" - CASC 2025 
+ Invited Talks 
+ Committees 
+ Bibliography 
+ Directions 
+ CASC 2025 · Nov. 24 - 28, Dubai, The United Arab Emirates 
+ Invited Talks at CASC 2025 
+ We are proud to present the invited speakers of CASC conference.href="invitedTalks.html" - Please find here the invited talks at CASC 2025.
+© 2024-25 Computer Algebra in Scientific Computing. 
+ All rights reserved. 
  Privacy Policy 
-  Contact Webmaster
+ Contact Webmaster
 
-3. Website of CASC_3: https://akuncu.com/talks-conferences/
+3. Website of CASC_3: https://www.sigsam.org/
 Website information of CASC_3:
 
-Close Search   
- Type your search terms above and press return to see the search results.  
-
- Ali K. Uncu  
- aku21@bath.ac.uk  
-
- Menu  Education & Work Experience | Awards & Acknowledgements 
-  Grants & Scholarships 
-  Research | Publications 
-  Talks & Conferences 
-  Software 
-  Teaching | Courses Taught | Summer 2022 – The Theory of Integer Partitions 
-  Sample Teaching 
-  Evaluations 
-  Latest Posts | 15 Mins Academics Advice 
-  List of Coauthors: 
-  Leisure 
-  Search   
-
- Conferences & Talks  
-
- Conferences & Workshops | Invited Talks | Contributed Talks | PC Memberships | Research Visits 
+Toggle navigationHome 
+ Latest | News Archive 
+ Upcoming Conferences 
+ Mailing Lists 
+ SIGSAM Twitter 
+ ISSAC Website 
+ Resources | Upcoming Conferences 
+ Conference Series 
+ Journals 
+ Books 
+ Software 
+ Awards | Awards Overview 
+ Jenks Memorial Prize 
+ ISSAC Awards 
+ ACM Fellows 
+ CCA | ACM CCA 
+ SIGSAM publishes the quartley journal | Communications in Computer Algebra | . 
+ CCA Home Page 
+ ACM DL Archive 
+ Latest Issue 
+ CCA Editorial Board 
+ About | About SIGSAM 
+ SIGSAM is the ACM | S | pecial | I | nterest | G | roup in | S | ymbolic and | A | lgebraic | M | anipulation, supporting research in computer algebra. 
+ Bylaws 
+ Committee 
+ Reports 
+ Contact 
+ Join 
+ Evolution of SIGSAM, ISSAC and ACM's relationships 
+ You canfind here a document presenting the situation about evolution of SIGSAM, ISSAC and ACM’s relationships. 
   
- Organized Conferences & Workshops  
- CASC 2026 | – Computer Algebra in Scientific Computing, TBD, Bath UK | Main Organizer 
-  SYNASC 2023 | International Symposium on Symbolic and Numeric Algorithms for Scientific Computing, Nancy FR. September 11-14, 2023. | Special Session in honor of Professor James Davenport’s 70th Birthday | , Co-organizer 
-  ACA 2023 – 28th International Conference on Applications of Computer Algebra | , Warsaw, PL. July 17-21, 2023. | – Computer Algebra Applications in the Life Sciences – Co-organizer | Website 
-  Workshop on Cylindric Partitions | , Linz AT. November 21-25, 2022. | Johann Radon Institute for Computational and Applied Mathematics, Austrian Academy of Sciences. – Main Organizer. 
-  SCALE 2022 | – Symbolic Computation: Algorithms, Learning, Engineering, August 8-24, 2022, Istanbul TR. (The super-conference that includes ACA and CASC, as well as ICM and EMS supported Summer Schools, SAGEmath Days, etc.) | Treasurer 
-  ACA 2022 – 27th International Conference on Applications of Computer Algebra | – Algorithmic and Experimental Combinatorics Special Session – Co-organizer | Website | – Computer Algebra Applications in the Life Sciences – Co-organizer | Website 
-  CASC 2022 | – Computer Algebra in Scientific Computing, August 20-24, 2022, Istanbul TR | Program Committee 
-  SC 2  Workshop 2022 | – Satisfiability Checking and Symbolic Computation, | Bridging Two Communities to Solve Real Problems | (planned to take place alongside | FLoC 2022 | ) | Co-chair 
-  Summer School on Theory of Partitions | Nesin Mathematics Village | , Izmir TR. May 30-June 5, 2022 | Turkish Mathematical Society supports this event. 
-  JMM 2022 – Joint Mathematics Meetings, Seattle WA. | AMS Special Session on Early Career Number Theory Research with Combinatorics, Modular Forms, and Basic Hypergeometric Series, January 5-8, 2022 (Now April 6-9 – Online) | Program 
-  ACA 2021 – 26th International Conference on Applications of Computer Algebra | Algorithmic Combinatorics Special Session, July 23-27, 2021, Virtual Online | Conference | , | Special Session 
-  AMS-MAA 2020 Joint Mathematics Meetings, Denver CO. | AMS Special Session on Experimental and Computer-Assisted Mathematics, January 15-18, 2020 | Program 
-  MACIS 2019 – | Mathematical Aspects of Computer and Information Science | Gebze Technical University, Istanbul/Gebze, TR. November 13-15, 2019 | Program Committee, Co-chair of the “Tools and Software” event of the conference | Program 
-  15th International Symposium on Orthogonal Polynomials, Special Functions and Applications (OPSFA 2019) | Research Institute for Symbolic Computation, Hagenberg AUT. July 22-26, 2019 | Mini-Symposium | MS 11:Developments in q-series and the theory of partitions. | Program 
-  Workshop on Integer Partitions | Nesin Mathematics Village | , Izmir TR. May 21-25, 2018 | A note on the workshop. | I would like to note that this outstanding place won the IMU Leelavati Prize 2018 
-  The 2016 Gainesville International Number Theory Conference in honor of Krishna Alladi’s 60th birthday. | University of Florida, Gainesville FL. March 17-21, 2016 | 160+ attended. | Website | , | Facebook | , | All Recorded Talks 
-  5th Ankara Mathematics Days. | TOBB University of Economics and Technology, Ankara TR. June 4-5, 2010 | Program Committee and the designer for the conference proceedings book cover and | poster | . | 400+ attended 
-  Invited Talks  
- University of Florida Number Theory Seminar (2024/2025 Semester Kickoff), Gainesville, FL, August 13, 2024 | Modulo 11 and 13 Cylindric Kanade-Russell Conjectures 
-  The Legacy of Ramanujan 2024 | – Celebrating the 85th birthdays of George Andrews & Bruce Berndt, Pennsylvania State University PA, June 6, 2024 | Factorial Basis Method for q-Series Application 
-  International Conference on Modular Forms and q-Series, University of Cologne DE, March 15, 2024 | Factorial Basis Method for q-Series Applications 
-  International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC), Nancy FR. September 12, 2023 | A Poly-algorithmic Approach to Quantifier Elimination 
-  The International Symposium on Symbolic and Algebraic Computation (ISSAC), Tromso NO. July 26, 2023 | A Unified Approach to Unimodality of Gaussian Polynomials 
-  ACA 2022 – 27th International Conference on Applications of Computer Algebra, Gebze TR. August 16, 2022 | D-finite Functions and Beyond: Algorithms, Combinatorics, and Arithmetic | q-Difference Equation Systems for Cylindric Partitions 
-  Federated Logic Conference, Haifa IL. August 12, 2022 | Post IJCAR Workshops: 7th SCSC Workshop | SMT Solving Combinatorial Inequalities 
-  Ramanujan and Euler: Partitions, mock theta functions, and q-series, St Petersburg RU. July 18, 2022 | Some Recent Progress on Cylindric Partitions 
-  Joint Mathematics Meetings, Seattle WA. | AMS Special Session on | Partition Theory and Related Topics | , April 7, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
-  Denver University Algebra and Logic Seminar, Denver CO. February 25, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
-  University of Florida Number Theory Seminar, Gainesville FL. January 25, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
-  Rutgers Experimental Mathematics Seminar, NJ. November 11, 2021(Online), | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities | (Video) 
-  CASC 21: Computer Algebra in Scientific Computing, Sochi, RU. September 17, 2021 (Online) | qFunctions: A Mathematica package for partition theory applications, and its future 
-  SIAM Conference on Applied Algebraic Geometry, August 20, 2021 (Online) | MS108 Symbolic Computation and Satisfiability Checking Special Session | Practical Evaluation of QE Methods | (Video) | (on the SC-Square Website) 
-  ALCYON Lab Meeting, Istanbul/Gebze, TR. April 13, 2021 (Online) | On new modulo 8 cylindric partition identities (Video) 
-  University of Florida Colloquium, Gainesville FL. December 7, 2020 (Online) | On new modulo 8 cylindric partition identities | (Video) 
-  Hudson Colloquium, Georgia Southern University, Savannah GA. September 23, 2020 (Online) | Where do the maximum absolute q-series coefficients of  occur? (Pdf) 
-  Topics in Special Functions and Number Theory, Ashoka University, IN. July 16, 2020 (Online) | The Mathematica package qFunctions for q-series and partition theory applications (Video) 
-  RICAM Discrete Mathematics Seminar, Linz AUT. June 10, 2020 (Online) | Cylindric Partitions with profile (5,0,0) and Rogers-Ramanujan type identities 
-  Austrian High-Performance Computing Meeting 2020, IST Austria, Klagenfurt AUT. February 19, 2020 | Where do the maximum absolute q-series coefficients of  occur? 
-  Joint Mathematics Meetings, Denver CO. | AMS Special Session on Interactions Among Partitions, Basic Hypergeometric Series, and Modular Forms, January 15, 2020 | The method of weighted words re-revisited 
-  RICAM Symbolic Computation Group Seminar, Linz AUT. December 3, 2019 | The Mathematica package qFunctions for q-series and partition theory applications 
-  Mathematical Aspects of Computer and Information Sciences 2019 (MACIS), Gebze Technical University, Istanbul/Gebze, TR. November 13, 2019 | On a weighted spin of the Lebesgue identity 
-  Fall Southeastern Sectional Meeting University of Florida, Gainesville FL. | AMS Special Session on Partition Theory and Related Topics. November 3, 2019 | The method of weighted words re-revisited 
-  University of Florida Number Theory Seminar, Gainesville FL. October 29, 2019 | A computer assisted approach to the method of weighted words 
-  University of Florida Colloquium, Gainesville FL. October 22, 2019 | The Mathematica package qFunctions for q-series and partition theory applications 
-  Sapienza Universita di Roma, Rome, IT. September 13, 2019 | Polynomial identities that imply Capparelli’s partition theorems, and more 
-  8th CMAPT Workshop, Strobl AUT. August 27, 2019 | The Mathematica package qFunctions for partition theory applications 
-  15th International Symposium on Orthogonal Polynomials, Special Functions and Applications (OPSFA 2019) | Research Institute for Symbolic Computation, Hagenberg AUT. July 22-26, 2019 | Multisums related to Rogers–Ramanujan type identities and their refinements 
-  Algorithmic and Enumerative Combinatorics SFB-Statusseminar, Johan Radon Institute RICAM, Linz AUT, June 12, 2019 | The Mathematica package qFunctions for partition theory applications 
-  Farmingdale State College, Farmingdale NY. January 23, 2019 | Polynomial identities that imply Capparelli’s partition theorems, and more 
-  Joint Mathematics Meetings, Baltimore MD. | AMS Special Session on Partition Theory and Related Topics, January 19, 2019 | Polynomial Identities Implying Capparelli’s Partition Theorems 
-  SASTRA Ramanujan Award Ceremony, Kumbakonam IN. December 20, 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
-  Middle East Technical University (METU), Ankara TR. November 23, 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
-  Technical University of Vienna, Algorithmic and Enumerative Combinatorics, SFB Colloquium, Vienna AUT, October 19. 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
-  13th Ankara Mathematics Days, Ankara TR. April 27-28, 2018 | Heights of q-Rising Factorials and Some Related Series 
-  University of Vienna, Algorithmic and Enumerative Combinatorics, SFB Colloquium, Vienna AUT. March 16, 2018 | Log-concavity properties of the a,b;q-binomial coefficients 
-  Algorithmic and Enumerative Combinatorics SFB-Statusseminar, Strobl AUT. December 3, 2017 | On some partition Inequalities 
-  The Erwin Schrödinger International Institute for Mathematics and Physics, Workshop on Enumerative Combinatorics, Vienna AUT. October 24, 2017 | Heights of q-Rising Factorials and Some Related Series 
-  Sandia National Laboratories, Albuquerque NM. May 30, 2017 | An Exploration of Newly Discovered Weighted Partition Identities 
-  Joint Mathematics Meetings, Atlanta GA. | AMS Special Session on Arithmetic Properties of Sequences from Number Theory and Combinatorics. January 4, 2017 | Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
-  Samford University, Birmingham AL. November 18, 2016 | Changing the norm 
-  University of South Alabama, Mobile AL. November 17, 2016 | Partitions with fixed number of odd parts 
-  Sabanci University Colloquium, Istanbul TR. October 6, 2016 | Weighted Rogers-Ramanujan Partition Identities 
-  Bilkent University Colloquium, Ankara TR. October 5, 2016 | Generalized q-binomial coefficients 
-  TOBB University of Economics and Technology Colloquium, Ankara TR. October 5, 2016 | Weighted Partition Identities and new connections with Dyson Crank 
-  Ankara University General Colloquium, Ankara TR. September 28, 2016 | Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
-  The 2016 Gainesville International Number Theory Conference in honor of Krishna Alladi’s 60th birthday, Gainesville FL. March 20, 2016 | Some Weighted Partition Identities and Dyson Crank 
-  Spring Southeastern Sectional Meeting University of Georgia, Athens GA. | Special Session on Experimental Mathematics. March 5, 2016 | Four Parameter Generalization of Gaussian Polynomials 
-  Joint Mathematics Meetings, Seattle WA. | AMS Special Session on Modular Forms, q-Series, and Mathematics Inspired by Ramanujan. January 6, 2016 | A New Companion to Capparelli’s Identities and Some Combinatorial Inequalities 
-  Contributed Talks  
- Arbeitsgemeinschaft Diskrete Mathematik – University of Vienna & Technical University of Vienna, November 21, 2023. | Four decorated Ferrers diagrams and Schmidt-type partition identities 
-  Second AEC-SFB50 Veterans Meeting (SFB Veteran(inn)entreffen) – Admont, AT, December 7, 2022 | SMT solving partition identities 
-  RICAM Symbolic Computation Research Group Meeting, Linz AUT, October 11, 2023 | SMT solving partition identities 
-  RICAM Symbolic Computation Research Group Meeting, Linz AUT, October 11, 2023 | SMT solving partition identities 
-  Michigan Technological University, Houghton, MI, October 5, 2023 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | New Infinite Hierarchies Of Polynomial Identities Related To The Capparelli Partition Theorems 
-  Michigan Technological University, Houghton, MI, February 23, 2023 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | A Unified Approach to Unimodality of Gaussian Polynomials 
-  First AEC-SFB50 Veterans Meeting (SFB Veteran(inn)entreffen) – Admont, AUT, December 7, 2022 | Proofs of Modulo 11 and 13 Cylindric Kanade-Russell Conjectures 
-  The 88th Seminaire Lotharingien de Combinatoire, Strobl AUT. September 5, 2022 | Sequences in Overpartitions 
-  University of Bath, Computer Science Department, Bath UK. May 13, 2022 | Mathematical Foundations Group Seminar | Symbolic Computation for Combinatorial Inequalities 
-  Research Institute for Symbolic Computation, Johannes Kepler University, Hagenberg AUT, May 4, 2022 | Recent Progress in Cylindric Partitions 
-  University of Florida, Number Theory Seminar, Gainesville FL, March 29, 2022 (Online) | Recent Progress in Cylindric Partitions I I 
-  Johannes Kepler University Algebra Institute, Linz AUT, March 24, 2022 | Recent Progress in Cylindric Partitions. 
-  University of Florida, Number Theory Seminar, Gainesville FL, March 22, 2022 (Online) | Recent Progress in Cylindric Partitions I 
-  RICAM Symbolic Computation Research Group Meeting, Linz AUT, November 25, 2021 (Online) | Recent Advances in Cylindric Partitions 
-  Michigan Technological University, Houghton, MI, October 14, 2021 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | On new modulo 8 cylindric partition identities | ( | Video | ) 
-  AEC (Algorithmic Enumerative Combinatorics) SFB F-50 Status Seminar, Johannes Kepler University, Linz AUT, August 9-10, 2021 | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
-  26th International Conference on Applications of Computer Algebra (ACA 2021) | Algorithmic Combinatorics Special Session, July 25 2021, Virtual Online | The DEWCAD Project: Pushing Back the Doubly Exponential Wall of Cylindrical Algebraic Decomposition 
-  The 85th Seminaire Lotharingien de Combinatoire, Strobl AUT. September 6, 2020 | Where do the maximum absolute q-series coefficients of  occur? 
-  Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, June 5, 2019 | On generating functions as multisums, their refinements, and the q-Functions Mathematica package 
-  Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, January 7, 2019 | Forum Talk – Polynomial identities that imply Capparelli’s partition theorems, and more 
-  Combinatory Analysis 2018 Conference, Pennsylvania State University, State College PA, Jun 22, 2018 | Counting on 4-decorated Ferrers diagrams 
-  Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, April 11, 2018 | Stanley weights: From Boulet’s generating functions to Fu–Zeng’s k-strict partitions 
-  Research Institute for Symbolic Computation, Johannes Kepler University Linz, Hagenberg AUT, October 11, 2017 | On Heights of q-Rising Factorials and More 
-  UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. April 12, 2017 | Some Partition Inequalities and Their Implications 
-  SERMON 30 (South-Eastern Regional Meeting On Numbers ), University of North Florida Jacksonville, FL. April 2, 2017 | New Partition Inequalities 
-  UF Number Theory Seminar, University of Florida, Gainesville FL. January 31, 2017 | Some new observations on partitions and divisors 
-  PANTS XXVII (Palmetto Number Theory Series XXVII), University of South Carolina Colombia, SC. | December 3, 2016  
-  Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
-  UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. February 3, 2016 | Some Weighted Partition Identities 
-  PANTS XXV (Palmetto Number Theory Series XXV), Clemson University, Clemson SC. December 5, 2015 | On Partitions with fixed number of odd-indexed and even-indexed odd parts 
-  UF Combinatorics Seminar, University of Florida, Gainesville FL. November 12, 2015 | A New Companion to Capparelli’s identities and some combinatorial Inequalities 
-  UF Number Theory Seminar, University of Florida, Gainesville FL. March 17, 2015 | A new companion to Capparelli’s identities and the allied inequalities 
-  PANTS XXIII (Palmetto Number Theory Series XXIII), University of South Carolina, Colombia SC. December 6, 2014 | A new companion to Capparelli’s partition theorem 
-  UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. November 20, 2013 | Generating Functions for Partitions, Generalizations and Further Results 
-  UF Combinatorics Seminar, University of Florida, Gainesville FL. November 12, 2013 | Partitions of Numbers Into Four Variables and Related Results 
-  UF Colloquium, University of Florida, Gainesville FL. February 14, 2012 | Races Among Products 
-  UF Number Theory Seminar with Frank Patane, University of Florida, Gainesville FL. Three parts: | October 18, 2011 / October 25, 2011 / November 1, 2011 | Solving Quintic Equations I – III 
-  TOBB University of Economics and Technology Colloquium, TOBB ETU, Ankara TR. June 8, 2010 | Computational Aspects of Modular Forms 
-  METU – Bilkent Algebraic Geometry Seminars, METU, Ankara TR. April 16, 2010 | Modular symbols on congruence subgroups of SL2(Z) 
-  TOBB University of Economics and Technology Colloquium, TOBB ETU, Ankara TR. December 21, 2009 | From Origins of Modular forms to computational Modular Symbols 
-  Bilkent Number Theory Seminar, Bilkent University, Ankara TR. March 14, 2009 | V | ictor Miller Basis and Introduction to SAGE with Computations on Modular Spaces 
-  Utrecht Colloquium, Utrecht University, Utrecht NL. August 18, 2008 | Properties of Meromorphic functions on Torus Manifold and its relation with Biquadratic Curves 
-  Bilkent Colloquium, Bilkent University, Ankara TR. May 8, 2008 | Classification Problem of Indefinite Integral Lattices and Proof of V. V. Nikulin’s theorem for non-unimodular case 
-  Bilkent Colloquium, Bilkent University, Ankara TR. January 11, 2008 | Mobius Function on Prime Power Groups 
-  Program Committee Memberships  
- 2025: CADE 30  
-  2023: ACA 2023, SYNASC 2023  
-  2022: ACA 2022, SCSC 2022  
-   
- Research Visits  
- University of Bath | – Mar 3-19, 2022, | Oct 17-25, 2022, | Mar 10-17, 2023, | May 20-30, 2023, | Sep 15-20, 2023. | Visiting James Davenport and Russell Braford in the frame of DEWCAD project. 
-  Coventry University | – Feb 17-20, 2022, | May 8-11, 2022, | Oct 10-17, 2022. | Visiting Matthew England and the DEWCAD team. 
-  Dagstuhl | – February 13-18, 2022. | Visiting the SC-squared network | for a problem session 
-  University of Florida, Gainesville FL. | October 15- November 1, 2019, | August 8 – 16, 2024. | Visiting the Number Theory Research Group 
-  University of Rome La Sapienza, Rome FL. | September 9 – 19, 2019. | Visiting Prof Stefano Capparelli 
-  University of Florida, Gainesville FL. | July 12- November 27, 2018. | Visiting the Number Theory Research Group 
-   
- Share this:  
+ The goal is to trigger an informed discussion within the SIGSAM and ISSAC communities, which will then be asked to answer a consultation on the option to follow, during the business meeting at ISSAC 2024 conference and online. 
+  
+ The discussion takes placein this SIGSAM hosted forum. 
+  
+ Join the discussion!News 
+ To submit news articles contact theInformation Director. 
+ SIGSAM and ISSAC evolution 
+ June 2024 
+ SIGSAM and ISSAC steering committee are organizing a discussion on the evolution of their relationship with ACM. A presentation on the situation and the options can befound hereand a forum for disucssing these issues isopen to the community. 
+  
+ href="https://www.sigsam.org/News/#Updates2024b" - Full announcement.
+SIGSAM Committee Updates 
+ February 2024 
+ After SIGSAM Chair Veronika Pillwein stepped down due to personal reasons, Clément Pernet replaced her as acting SIGSAM Chair. In addition, Dan Roche joined the committee as SIGSAM Vice Chair. 
+  
+ href="https://www.sigsam.org/News/#Updates2024" - Full announcement.
+Agnes Szanto 1966-2022 
+ 4th April 2022 
+ Our dear colleague Agnes Szanto passed away on March 21st 2022, at the age of 55, succumbing to lymphoma. 
+  
+ We join her family in mourning this devastating loss. 
+  
+ Full announcement.SIGSAM Elections 
+ Friday 11th June 2021 
+ A new SIGSAM Committee has beenelectedfor the term 1st July 2021 - 30th June 2023:Veronika Pillweinwill be Chair,Clement PernetVice Chair,Shaoshi ChenSecretary, andMatthew EnglandTreasurer. 
+ CCA Issue 215 (Vol 55:1) available 
+ Tuesday 25th May 2021 
+ Issue 215 (Vol 55:1) of ACM Communications in Computer Algebra has been published and is available to SIGSAM membershere. 
+ Jenks Prize Awarded 
+ Friday 19th June 2021 
+ The 2021Richard D. Jenks Memorial Prizefor Excellence in Software Engineering Applied to Computer Algebra has been awarded to Henri Cohen, Karim Belabas, and Bill Allombert for the Pari/GP computer algebra system. 
+ Full stories and more news » 
+ Upcoming Conferences 
+ To have your conference promoted by SIGSAM contact theInformation Director. 
+ ISSAC 2024 
+ The International Symposium on Symbolic and Algebraic Computation 
+ 16-19 July 2024 
+ Raleigh, NC, USA 
+ ACA 2024 
+ The International Conference on Applications of Computer Algebra 
+ 24-28 June 2024 
+ Havana, Cuba 
+ CASC 2024 
+ href="http://www.casc-conference.org/" - The International Workshop on Computer Algebra in Scientific Computing
+ 
+ 2-6 September 2024 
+ Rennes, France 
+ SYNASC 2024 
+ The International Symposium on Symbolic and Numeric Algorithms for Scientific Computing 
+ 16-19 September 2024 
+ Timisoara, Romania 
+ View the full list » 
+ ACM DL Selections 
+ SIGSAM members benefit from access to theACM Digital Library. 
+ The Tropical Nullstellensatz and Positivstellensatz for Sparse Polynomial Systems 
+ Marianne Akian, Antoine Béreau, and Stéphane Gaubert 
+ ISSAC '23: Proceedings of the 2023 on International Symposium on Symbolic and Algebraic Computation, July 2023 
+ Digital Library LinkFlip Graphs for Matrix Multiplication 
+ Manuel Kauers and Jakob Moosbauer 
+ ISSAC '23: Proceedings of the 2023 on International Symposium on Symbolic and Algebraic Computation, July 2023 
+ Digital Library LinkAbout SIGSAM 
+ The Association for computing machinery (ACM) is the world's largest educational and scientific computing society. SIGSAM is the ACMSpecialInterestGroup inSymbolic andAlgebraicManipulation. We are an international organization dedicated to supporting and promoting research in computer algebra, symbolic computation and its applications. 
+ Volunteers Needed 
+ We are looking for volunteers to contribute content to the website. If you are interested please contact theInformation Director. 
  Twitter 
-  Facebook 
+ SIGSAM is now on Twitter as@acm_sigsam! 
+ Back to top© 2021 SIGSAM
 
- Like   Loading...    
-
- Create a website or blog at WordPress.com 
-
- Subscribe | Subscribed | Ali K. Uncu 
-          Sign me up    Already have a WordPress.com account? Log in now. 
-  Ali K. Uncu 
-  Subscribe | Subscribed 
-  Sign up 
-  Log in 
-  Copy shortlink 
-  Report this content 
-  View post in Reader 
-  Manage subscriptions 
-  Collapse this bar 
-    
-  %d
-
-4. Website of CASC_3: https://www.sigsam.org/
+4. Website of CASC_3: https://akuncu.com/talks-conferences/
 Website information of CASC_3:
 
-Toggle navigation         
- Home 
-  Latest | News Archive 
-  Upcoming Conferences 
-  Mailing Lists 
-  SIGSAM Twitter 
-  ISSAC Website 
-  Resources | Upcoming Conferences 
-  Conference Series 
-  Journals 
-  Books 
-  Software 
-  Awards | Awards Overview 
-  Jenks Memorial Prize 
-  ISSAC Awards 
-  ACM Fellows 
-  CCA | ACM CCA 
-  SIGSAM publishes the quartley journal | Communications in Computer Algebra | . 
-  CCA Home Page 
-  ACM DL Archive 
-  Latest Issue 
-  CCA Editorial Board 
-  About | About SIGSAM 
-  SIGSAM is the ACM | S | pecial | I | nterest | G | roup in | S | ymbolic and | A | lgebraic | M | anipulation, supporting research in computer algebra. 
-   Bylaws 
-  Committee 
-  Reports 
-  Contact 
-  Join 
-
- Evolution of SIGSAM, ISSAC and ACM's relationships   
- You can find here a document presenting the situation about evolution of SIGSAM, ISSAC and ACM’s relationships .  
-   
-  The goal is to trigger an informed discussion within the SIGSAM and ISSAC communities, which will then be asked to answer a consultation on the option to follow, during the business meeting at ISSAC 2024 conference and online.  
-   
-  The discussion takes place in this SIGSAM hosted forum .  
-   
-  Join the discussion!   
-
- News  
- To submit news articles contact the Information Director .  
- SIGSAM and ISSAC evolution  
- June 2024  
- SIGSAM and ISSAC steering committee are organizing a discussion on the evolution of their relationship with ACM. A presentation on the situation and the options can be found here and a forum for disucssing these issues is open to the community .  
-   
-  Full announcement.  
- SIGSAM Committee Updates  
- February 2024  
- After SIGSAM Chair Veronika Pillwein stepped down due to personal reasons, Clément Pernet replaced her as acting SIGSAM Chair. In addition, Dan Roche joined the committee as SIGSAM Vice Chair.  
-   
-  Full announcement.  
- Agnes Szanto 1966-2022  
- 4th April 2022  
- Our dear colleague Agnes Szanto passed away on March 21st 2022, at the age of 55, succumbing to lymphoma.  
-   
-  We join her family in mourning this devastating loss.  
-   
-  Full announcement.  
- SIGSAM Elections  
- Friday 11th June 2021  
- A new SIGSAM Committee has been elected for the term 1st July 2021 - 30th June 2023: Veronika Pillwein will be Chair, Clement Pernet Vice Chair, Shaoshi Chen Secretary, and Matthew England Treasurer.  
- CCA Issue 215 (Vol 55:1) available  
- Tuesday 25th May 2021  
- Issue 215 (Vol 55:1) of ACM Communications in Computer Algebra has been published and is available to SIGSAM members here .  
- Jenks Prize Awarded  
- Friday 19th June 2021  
- The 2021 Richard D. Jenks Memorial Prize for Excellence in Software Engineering Applied to Computer Algebra has been awarded to Henri Cohen, Karim Belabas, and Bill Allombert for the Pari/GP computer algebra system.  
- Full stories and more news »  
-   
- Upcoming Conferences  
- To have your conference promoted by SIGSAM contact the Information Director .  
- ISSAC 2024  
- The International Symposium on Symbolic and Algebraic Computation  
-  16-19 July 2024  
-  Raleigh, NC, USA  
- ACA 2024  
- The International Conference on Applications of Computer Algebra  
-  24-28 June 2024  
-  Havana, Cuba  
- CASC 2024  
- The International Workshop on Computer Algebra in Scientific Computing  
-  2-6 September 2024  
-  Rennes, France  
- SYNASC 2024  
- The International Symposium on Symbolic and Numeric Algorithms for Scientific Computing  
-  16-19 September 2024  
-  Timisoara, Romania  
- View the full list »  
-   
- ACM DL Selections  
- SIGSAM members benefit from access to the ACM Digital Library .  
- The Tropical Nullstellensatz and Positivstellensatz for Sparse Polynomial Systems   
-  Marianne Akian, Antoine Béreau, and Stéphane Gaubert  
-  ISSAC '23: Proceedings of the 2023 on International Symposium on Symbolic and Algebraic Computation, July 2023   
-  Digital Library Link  
- Flip Graphs for Matrix Multiplication   
-  Manuel Kauers and Jakob Moosbauer  
-  ISSAC '23: Proceedings of the 2023 on International Symposium on Symbolic and Algebraic Computation, July 2023   
-  Digital Library Link  
-
- About SIGSAM  
- The Association for computing machinery (ACM) is the world's largest educational and scientific computing society. SIGSAM is the ACM S  pecial I  nterest G  roup in S  ymbolic and A  lgebraic M  anipulation. We are an international organization dedicated to supporting and promoting research in computer algebra, symbolic computation and its applications.  
-     
- Volunteers Needed  
- We are looking for volunteers to contribute content to the website. If you are interested please contact the Information Director .  
- Twitter  
- SIGSAM is now on Twitter as @acm_sigsam !  
-
- Back to top  
-  © 2021 SIGSAM
+Close Search 
+ Type your search terms above and press return to see the search results. 
+ Ali K. Uncu 
+ aku21@bath.ac.uk 
+ MenuEducation & Work Experience | Awards & Acknowledgements 
+ Grants & Scholarships 
+ href="https://akuncu.com/research-2/" - Research | Publications 
+ Talks & Conferences 
+ Software 
+ Teaching | Courses Taught | Summer 2022 – The Theory of Integer Partitions 
+ Sample Teaching 
+ Evaluations 
+ Latest Posts | 15 Mins Academics Advice 
+ href="https://akuncu.com/coauthors/" - List of Coauthors: 
+ Leisure 
+ Search 
+ Conferences & Talks 
+  
+ Conferences & Workshops | Invited Talks | Contributed Talks | PC Memberships | href="/talks-conferences/#visits" - Research Visits 
+ Organized Conferences & Workshops 
+ CASC 2026 | – Computer Algebra in Scientific Computing, TBD, Bath UK | Main Organizer 
+ SYNASC 2023 | International Symposium on Symbolic and Numeric Algorithms for Scientific Computing, Nancy FR. September 11-14, 2023. | Special Session in honor of Professor James Davenport’s 70th Birthday | , Co-organizer 
+ ACA 2023 – 28th International Conference on Applications of Computer Algebra | , Warsaw, PL. July 17-21, 2023. | – Computer Algebra Applications in the Life Sciences – Co-organizer | Website 
+ Workshop on Cylindric Partitions | , Linz AT. November 21-25, 2022. | Johann Radon Institute for Computational and Applied Mathematics, Austrian Academy of Sciences. – Main Organizer. 
+ SCALE 2022 | – Symbolic Computation: Algorithms, Learning, Engineering, August 8-24, 2022, Istanbul TR. (The super-conference that includes ACA and CASC, as well as ICM and EMS supported Summer Schools, SAGEmath Days, etc.) | Treasurer 
+ ACA 2022 – 27th International Conference on Applications of Computer Algebra | – Algorithmic and Experimental Combinatorics Special Session – Co-organizer | Website | – Computer Algebra Applications in the Life Sciences – Co-organizer | Website 
+ href="https://scale.gtu.edu.tr/casc.html" - CASC 2022 | – Computer Algebra in Scientific Computing, August 20-24, 2022, Istanbul TR | Program Committee 
+ SC2Workshop 2022 | – Satisfiability Checking and Symbolic Computation, | Bridging Two Communities to Solve Real Problems | (planned to take place alongside | FLoC 2022 | ) | Co-chair 
+ Summer School on Theory of Partitions | Nesin Mathematics Village | , Izmir TR. May 30-June 5, 2022 | Turkish Mathematical Society supports this event. 
+ JMM 2022 – Joint Mathematics Meetings, Seattle WA. | AMS Special Session on Early Career Number Theory Research with Combinatorics, Modular Forms, and Basic Hypergeometric Series, January 5-8, 2022 (Now April 6-9 – Online) | Program 
+ ACA 2021 – 26th International Conference on Applications of Computer Algebra | Algorithmic Combinatorics Special Session, July 23-27, 2021, Virtual Online | href="https://aca2021.sba-research.org/index.html" - Conference | , | Special Session 
+ AMS-MAA 2020 Joint Mathematics Meetings, Denver CO. | AMS Special Session on Experimental and Computer-Assisted Mathematics, January 15-18, 2020 | Program 
+ MACIS 2019 – | Mathematical Aspects of Computer and Information Science | Gebze Technical University, Istanbul/Gebze, TR. November 13-15, 2019 | Program Committee, Co-chair of the “Tools and Software” event of the conference | Program 
+ 15th International Symposium on Orthogonal Polynomials, Special Functions and Applications (OPSFA 2019) | Research Institute for Symbolic Computation, Hagenberg AUT. July 22-26, 2019 | Mini-Symposium | MS 11:Developments in q-series and the theory of partitions. | Program 
+ Workshop on Integer Partitions | Nesin Mathematics Village | , Izmir TR. May 21-25, 2018 | A note on the workshop. | I would like to note that this outstanding place won the IMU Leelavati Prize 2018 
+ The 2016 Gainesville International Number Theory Conference in honor of Krishna Alladi’s 60th birthday. | University of Florida, Gainesville FL. March 17-21, 2016 | 160+ attended. | Website | , | Facebook | , | All Recorded Talks 
+ 5th Ankara Mathematics Days. | TOBB University of Economics and Technology, Ankara TR. June 4-5, 2010 | Program Committee and the designer for the conference proceedings book cover and | poster | . | 400+ attended 
+ Invited Talks 
+ University of Florida Number Theory Seminar (2024/2025 Semester Kickoff), Gainesville, FL, August 13, 2024 | Modulo 11 and 13 Cylindric Kanade-Russell Conjectures 
+ The Legacy of Ramanujan 2024 | – Celebrating the 85th birthdays of George Andrews & Bruce Berndt, Pennsylvania State University PA, June 6, 2024 | Factorial Basis Method for q-Series Application 
+ International Conference on Modular Forms and q-Series, University of Cologne DE, March 15, 2024 | Factorial Basis Method for q-Series Applications 
+ International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC), Nancy FR. September 12, 2023 | A Poly-algorithmic Approach to Quantifier Elimination 
+ The International Symposium on Symbolic and Algebraic Computation (ISSAC), Tromso NO. July 26, 2023 | A Unified Approach to Unimodality of Gaussian Polynomials 
+ ACA 2022 – 27th International Conference on Applications of Computer Algebra, Gebze TR. August 16, 2022 | D-finite Functions and Beyond: Algorithms, Combinatorics, and Arithmetic | q-Difference Equation Systems for Cylindric Partitions 
+ Federated Logic Conference, Haifa IL. August 12, 2022 | Post IJCAR Workshops: 7th SCSC Workshop | SMT Solving Combinatorial Inequalities 
+ Ramanujan and Euler: Partitions, mock theta functions, and q-series, St Petersburg RU. July 18, 2022 | Some Recent Progress on Cylindric Partitions 
+ Joint Mathematics Meetings, Seattle WA. | AMS Special Session on | href="https://meetings.ams.org/math/jmm2022/meetingapp.cgi/Session/3555" - Partition Theory and Related Topics | , April 7, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
+ Denver University Algebra and Logic Seminar, Denver CO. February 25, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
+ University of Florida Number Theory Seminar, Gainesville FL. January 25, 2022 (Online) | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
+ Rutgers Experimental Mathematics Seminar, NJ. November 11, 2021(Online), | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities | (Video) 
+ CASC 21: Computer Algebra in Scientific Computing, Sochi, RU. September 17, 2021 (Online) | href="https://www.casc-conference.org/schedule.html" - qFunctions: A Mathematica package for partition theory applications, and its future 
+ SIAM Conference on Applied Algebraic Geometry, August 20, 2021 (Online) | MS108 Symbolic Computation and Satisfiability Checking Special Session | Practical Evaluation of QE Methods | (Video) | (on the SC-Square Website) 
+ ALCYON Lab Meeting, Istanbul/Gebze, TR. April 13, 2021 (Online) | On new modulo 8 cylindric partition identities (Video) 
+ University of Florida Colloquium, Gainesville FL. December 7, 2020 (Online) | On new modulo 8 cylindric partition identities | (Video) 
+ Hudson Colloquium, Georgia Southern University, Savannah GA. September 23, 2020 (Online) | Where do the maximum absolute q-series coefficients ofoccur? (Pdf) 
+ Topics in Special Functions and Number Theory, Ashoka University, IN. July 16, 2020 (Online) | The Mathematica package qFunctions for q-series and partition theory applications (Video) 
+ RICAM Discrete Mathematics Seminar, Linz AUT. June 10, 2020 (Online) | Cylindric Partitions with profile (5,0,0) and Rogers-Ramanujan type identities 
+ Austrian High-Performance Computing Meeting 2020, IST Austria, Klagenfurt AUT. February 19, 2020 | Where do the maximum absolute q-series coefficients ofoccur? 
+ Joint Mathematics Meetings, Denver CO. | AMS Special Session on Interactions Among Partitions, Basic Hypergeometric Series, and Modular Forms, January 15, 2020 | The method of weighted words re-revisited 
+ RICAM Symbolic Computation Group Seminar, Linz AUT. December 3, 2019 | The Mathematica package qFunctions for q-series and partition theory applications 
+ Mathematical Aspects of Computer and Information Sciences 2019 (MACIS), Gebze Technical University, Istanbul/Gebze, TR. November 13, 2019 | On a weighted spin of the Lebesgue identity 
+ Fall Southeastern Sectional Meeting University of Florida, Gainesville FL. | AMS Special Session on Partition Theory and Related Topics. November 3, 2019 | The method of weighted words re-revisited 
+ University of Florida Number Theory Seminar, Gainesville FL. October 29, 2019 | A computer assisted approach to the method of weighted words 
+ University of Florida Colloquium, Gainesville FL. October 22, 2019 | The Mathematica package qFunctions for q-series and partition theory applications 
+ Sapienza Universita di Roma, Rome, IT. September 13, 2019 | Polynomial identities that imply Capparelli’s partition theorems, and more 
+ 8th CMAPT Workshop, Strobl AUT. August 27, 2019 | The Mathematica package qFunctions for partition theory applications 
+ 15th International Symposium on Orthogonal Polynomials, Special Functions and Applications (OPSFA 2019) | Research Institute for Symbolic Computation, Hagenberg AUT. July 22-26, 2019 | Multisums related to Rogers–Ramanujan type identities and their refinements 
+ Algorithmic and Enumerative Combinatorics SFB-Statusseminar, Johan Radon Institute RICAM, Linz AUT, June 12, 2019 | The Mathematica package qFunctions for partition theory applications 
+ Farmingdale State College, Farmingdale NY. January 23, 2019 | Polynomial identities that imply Capparelli’s partition theorems, and more 
+ Joint Mathematics Meetings, Baltimore MD. | AMS Special Session on Partition Theory and Related Topics, January 19, 2019 | Polynomial Identities Implying Capparelli’s Partition Theorems 
+ SASTRA Ramanujan Award Ceremony, Kumbakonam IN. December 20, 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
+ Middle East Technical University (METU), Ankara TR. November 23, 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
+ Technical University of Vienna, Algorithmic and Enumerative Combinatorics, SFB Colloquium, Vienna AUT, October 19. 2018 | Polynomial identities that imply Capparelli’s partition theorems, and more 
+ 13th Ankara Mathematics Days, Ankara TR. April 27-28, 2018 | Heights of q-Rising Factorials and Some Related Series 
+ University of Vienna, Algorithmic and Enumerative Combinatorics, SFB Colloquium, Vienna AUT. March 16, 2018 | Log-concavity properties of the a,b;q-binomial coefficients 
+ Algorithmic and Enumerative Combinatorics SFB-Statusseminar, Strobl AUT. December 3, 2017 | On some partition Inequalities 
+ The Erwin Schrödinger International Institute for Mathematics and Physics, Workshop on Enumerative Combinatorics, Vienna AUT. October 24, 2017 | Heights of q-Rising Factorials and Some Related Series 
+ Sandia National Laboratories, Albuquerque NM. May 30, 2017 | An Exploration of Newly Discovered Weighted Partition Identities 
+ Joint Mathematics Meetings, Atlanta GA. | AMS Special Session on Arithmetic Properties of Sequences from Number Theory and Combinatorics. January 4, 2017 | Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
+ Samford University, Birmingham AL. November 18, 2016 | Changing the norm 
+ University of South Alabama, Mobile AL. November 17, 2016 | Partitions with fixed number of odd parts 
+ Sabanci University Colloquium, Istanbul TR. October 6, 2016 | Weighted Rogers-Ramanujan Partition Identities 
+ Bilkent University Colloquium, Ankara TR. October 5, 2016 | Generalized q-binomial coefficients 
+ TOBB University of Economics and Technology Colloquium, Ankara TR. October 5, 2016 | Weighted Partition Identities and new connections with Dyson Crank 
+ Ankara University General Colloquium, Ankara TR. September 28, 2016 | Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
+ The 2016 Gainesville International Number Theory Conference in honor of Krishna Alladi’s 60th birthday, Gainesville FL. March 20, 2016 | Some Weighted Partition Identities and Dyson Crank 
+ Spring Southeastern Sectional Meeting University of Georgia, Athens GA. | Special Session on Experimental Mathematics. March 5, 2016 | Four Parameter Generalization of Gaussian Polynomials 
+ Joint Mathematics Meetings, Seattle WA. | AMS Special Session on Modular Forms, q-Series, and Mathematics Inspired by Ramanujan. January 6, 2016 | A New Companion to Capparelli’s Identities and Some Combinatorial Inequalities 
+ Contributed Talks 
+ Arbeitsgemeinschaft Diskrete Mathematik – University of Vienna & Technical University of Vienna, November 21, 2023. | Four decorated Ferrers diagrams and Schmidt-type partition identities 
+ Second AEC-SFB50 Veterans Meeting (SFB Veteran(inn)entreffen) – Admont, AT, December 7, 2022 | SMT solving partition identities 
+ RICAM Symbolic Computation Research Group Meeting, Linz AUT, October 11, 2023 | SMT solving partition identities 
+ RICAM Symbolic Computation Research Group Meeting, Linz AUT, October 11, 2023 | SMT solving partition identities 
+ Michigan Technological University, Houghton, MI, October 5, 2023 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | New Infinite Hierarchies Of Polynomial Identities Related To The Capparelli Partition Theorems 
+ Michigan Technological University, Houghton, MI, February 23, 2023 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | A Unified Approach to Unimodality of Gaussian Polynomials 
+ First AEC-SFB50 Veterans Meeting (SFB Veteran(inn)entreffen) – Admont, AUT, December 7, 2022 | Proofs of Modulo 11 and 13 Cylindric Kanade-Russell Conjectures 
+ The 88th Seminaire Lotharingien de Combinatoire, Strobl AUT. September 5, 2022 | Sequences in Overpartitions 
+ University of Bath, Computer Science Department, Bath UK. May 13, 2022 | Mathematical Foundations Group Seminar | Symbolic Computation for Combinatorial Inequalities 
+ Research Institute for Symbolic Computation, Johannes Kepler University, Hagenberg AUT, May 4, 2022 | Recent Progress in Cylindric Partitions 
+ University of Florida, Number Theory Seminar, Gainesville FL, March 29, 2022 (Online) | Recent Progress in Cylindric Partitions I I 
+ Johannes Kepler University Algebra Institute, Linz AUT, March 24, 2022 | Recent Progress in Cylindric Partitions. 
+ University of Florida, Number Theory Seminar, Gainesville FL, March 22, 2022 (Online) | Recent Progress in Cylindric Partitions I 
+ RICAM Symbolic Computation Research Group Meeting, Linz AUT, November 25, 2021 (Online) | Recent Advances in Cylindric Partitions 
+ Michigan Technological University, Houghton, MI, October 14, 2021 | Specialty Seminar in Partition Theory, | q | -Series and Related Topics (Online) | On new modulo 8 cylindric partition identities | ( | Video | ) 
+ AEC (Algorithmic Enumerative Combinatorics) SFB F-50 Status Seminar, Johannes Kepler University, Linz AUT, August 9-10, 2021 | Reflecting (on) the modulo 9 Kanade-Russell (conjectural) identities 
+ 26th International Conference on Applications of Computer Algebra (ACA 2021) | Algorithmic Combinatorics Special Session, July 25 2021, Virtual Online | The DEWCAD Project: Pushing Back the Doubly Exponential Wall of Cylindrical Algebraic Decomposition 
+ The 85th Seminaire Lotharingien de Combinatoire, Strobl AUT. September 6, 2020 | href="https://www.mat.univie.ac.at/~slc/wpapers/s85preface.html" - Where do the maximum absolute q-series coefficients of  occur? 
+ Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, June 5, 2019 | On generating functions as multisums, their refinements, and the q-Functions Mathematica package 
+ Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, January 7, 2019 | Forum Talk – Polynomial identities that imply Capparelli’s partition theorems, and more 
+ Combinatory Analysis 2018 Conference, Pennsylvania State University, State College PA, Jun 22, 2018 | Counting on 4-decorated Ferrers diagrams 
+ Research Institute for Symbolic Computation, Johannes Kepler University Linz, | Hagenberg AUT, April 11, 2018 | Stanley weights: From Boulet’s generating functions to Fu–Zeng’s k-strict partitions 
+ Research Institute for Symbolic Computation, Johannes Kepler University Linz, Hagenberg AUT, October 11, 2017 | On Heights of q-Rising Factorials and More 
+ UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. April 12, 2017 | Some Partition Inequalities and Their Implications 
+ SERMON 30 (South-Eastern Regional Meeting On Numbers ), University of North Florida Jacksonville, FL. April 2, 2017 | New Partition Inequalities 
+ UF Number Theory Seminar, University of Florida, Gainesville FL. January 31, 2017 | Some new observations on partitions and divisors 
+ PANTS XXVII (Palmetto Number Theory Series XXVII), University of South Carolina Colombia, SC. | December 3, 2016 
+ Weighted Partition Results Inspired by Nathan Fine’s False Theta Identities 
+ UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. February 3, 2016 | Some Weighted Partition Identities 
+ PANTS XXV (Palmetto Number Theory Series XXV), Clemson University, Clemson SC. December 5, 2015 | On Partitions with fixed number of odd-indexed and even-indexed odd parts 
+ UF Combinatorics Seminar, University of Florida, Gainesville FL. November 12, 2015 | A New Companion to Capparelli’s identities and some combinatorial Inequalities 
+ UF Number Theory Seminar, University of Florida, Gainesville FL. March 17, 2015 | A new companion to Capparelli’s identities and the allied inequalities 
+ PANTS XXIII (Palmetto Number Theory Series XXIII), University of South Carolina, Colombia SC. December 6, 2014 | A new companion to Capparelli’s partition theorem 
+ UF Graduate Mathematics Association Colloquium, University of Florida, Gainesville FL. November 20, 2013 | Generating Functions for Partitions, Generalizations and Further Results 
+ UF Combinatorics Seminar, University of Florida, Gainesville FL. November 12, 2013 | Partitions of Numbers Into Four Variables and Related Results 
+ UF Colloquium, University of Florida, Gainesville FL. February 14, 2012 | Races Among Products 
+ UF Number Theory Seminar with Frank Patane, University of Florida, Gainesville FL. Three parts: | October 18, 2011 / October 25, 2011 / November 1, 2011 | Solving Quintic Equations I – III 
+ TOBB University of Economics and Technology Colloquium, TOBB ETU, Ankara TR. June 8, 2010 | Computational Aspects of Modular Forms 
+ METU – Bilkent Algebraic Geometry Seminars, METU, Ankara TR. April 16, 2010 | Modular symbols on congruence subgroups of SL2(Z) 
+ TOBB University of Economics and Technology Colloquium, TOBB ETU, Ankara TR. December 21, 2009 | From Origins of Modular forms to computational Modular Symbols 
+ Bilkent Number Theory Seminar, Bilkent University, Ankara TR. March 14, 2009 | V | ictor Miller Basis and Introduction to SAGE with Computations on Modular Spaces 
+ Utrecht Colloquium, Utrecht University, Utrecht NL. August 18, 2008 | Properties of Meromorphic functions on Torus Manifold and its relation with Biquadratic Curves 
+ Bilkent Colloquium, Bilkent University, Ankara TR. May 8, 2008 | Classification Problem of Indefinite Integral Lattices and Proof of V. V. Nikulin’s theorem for non-unimodular case 
+ Bilkent Colloquium, Bilkent University, Ankara TR. January 11, 2008 | Mobius Function on Prime Power Groups 
+ Program Committee Memberships 
+ 2025: CADE 30 
+ 2023: ACA 2023, SYNASC 2023 
+ 2022: ACA 2022, SCSC 2022 
+ href="" - Research Visits
+University of Bath | – Mar 3-19, 2022, | Oct 17-25, 2022, | Mar 10-17, 2023, | May 20-30, 2023, | Sep 15-20, 2023. | Visiting James Davenport and Russell Braford in the frame of DEWCAD project. 
+ Coventry University | – Feb 17-20, 2022, | May 8-11, 2022, | Oct 10-17, 2022. | Visiting Matthew England and the DEWCAD team. 
+ Dagstuhl | – February 13-18, 2022. | Visiting the SC-squared network | for a problem session 
+ University of Florida, Gainesville FL. | October 15- November 1, 2019, | August 8 – 16, 2024. | Visiting the Number Theory Research Group 
+ University of Rome La Sapienza, Rome FL. | September 9 – 19, 2019. | Visiting Prof Stefano Capparelli 
+ University of Florida, Gainesville FL. | July 12- November 27, 2018. | Visiting the Number Theory Research Group 
+ Share this: 
+ Twitter 
+ Facebook 
+ LikeLoading... 
+ Create a website or blog at WordPress.com 
+ Subscribe | Subscribed | Ali K. Uncu 
+ Sign me upAlready have a WordPress.com account?Log in now. 
+ Ali K. Uncu 
+ Subscribe | Subscribed 
+ Sign up 
+ Log in 
+ Copy shortlink 
+ Report this content 
+ View post in Reader 
+ Manage subscriptions 
+ Collapse this bar 
+ %d
 

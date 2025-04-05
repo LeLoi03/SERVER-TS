@@ -1,0 +1,202 @@
+[
+  {
+    "Title": "International Symposium on Logic-based Program Synthesis and Transformation",
+    "Acronym": "LOPSTR"
+  },
+  {
+    "Title": "Logic Programming and Automated Reasoning",
+    "Acronym": "LPAR"
+  },
+  {
+    "Title": "International Conference on Logic Programming and Non-monotonic Reasoning",
+    "Acronym": "LPNMR"
+  },
+  {
+    "Title": "Language Resources and Evaluation Conference",
+    "Acronym": "LREC"
+  },
+  {
+    "Title": "International Workshop on MultiAgent Based Simulation",
+    "Acronym": "MABS"
+  },
+  {
+    "Title": "Symposium Model Analysis and Simulation of Computer and Telecommunications Systems",
+    "Acronym": "MASCOTS"
+  },
+  {
+    "Title": "IEEE International Conference on Mobile Ad-hoc and Sensor Systems",
+    "Acronym": "MASS"
+  },
+  {
+    "Title": "Machines, Computations and Universality",
+    "Acronym": "MCU"
+  },
+  {
+    "Title": "International Conference on Modelling Decisions for Artificial Intelligence",
+    "Acronym": "MDAI"
+  },
+  {
+    "Title": "International Conference on Mobile Data Management",
+    "Acronym": "MDM"
+  },
+  {
+    "Title": "International Conference on Management of Digital EcoSystems",
+    "Acronym": "MEDES"
+  },
+  {
+    "Title": "International Conference on Model and Data Engineering",
+    "Acronym": "MEDI"
+  },
+  {
+    "Title": "International Conference on Formal Methods and Models for Co-Design",
+    "Acronym": "MEMOCODE"
+  },
+  {
+    "Title": "International Symposium on Mathematical Foundations of Computer Science",
+    "Acronym": "MFCS"
+  },
+  {
+    "Title": "International Conference on Mathematical Foundations of Programming Semantics",
+    "Acronym": "MFPS"
+  },
+  {
+    "Title": "Malaysia International Conference on Communications",
+    "Acronym": "MICC"
+  },
+  {
+    "Title": "Medical Image Computing and Computer-Assisted Intervention",
+    "Acronym": "MICCAI"
+  },
+  {
+    "Title": "International Symposium on Microarchitecture",
+    "Acronym": "MICRO"
+  },
+  {
+    "Title": "ACM/IFIP/USENIX International Middleware Conference",
+    "Acronym": "Middleware"
+  },
+  {
+    "Title": "International Conference in Methodologies and Intelligent Systems for Technology Enhanced Learning",
+    "Acronym": "MIS4TEL"
+  },
+  {
+    "Title": "International Workshop on Modelling in Software Engineering",
+    "Acronym": "MISE"
+  },
+  {
+    "Title": "Multimedia and Network Information Systems",
+    "Acronym": "MISSI"
+  },
+  {
+    "Title": "International Conference on Methods and Models in Automation and Robotics",
+    "Acronym": "MMAR"
+  },
+  {
+    "Title": "International Conference on Multimedia Modelling",
+    "Acronym": "MMM"
+  },
+  {
+    "Title": "International Workshop on Multimedia Signal Processing",
+    "Acronym": "MMSP"
+  },
+  {
+    "Title": "ACM International Conference on Mobile Computing and Networking",
+    "Acronym": "MOBICOM"
+  },
+  {
+    "Title": "ACM Symposium on Mobile Ad Hoc Networking and Computing",
+    "Acronym": "MOBIHOC"
+  },
+  {
+    "Title": "International Conference on Human-Computer Interaction with Mobile Devices and Services",
+    "Acronym": "MobileHCI"
+  },
+  {
+    "Title": "International Conference on Mobile and Ubiquitous Systems: Networks and Services",
+    "Acronym": "Mobiquitous"
+  },
+  {
+    "Title": "International Conference on Mobile Systems and Pervasive Computing",
+    "Acronym": "MobiSPC"
+  },
+  {
+    "Title": "ACM SIGMOBILE International Conference on Mobile Systems, Applications and Services",
+    "Acronym": "Mobisys"
+  },
+  {
+    "Title": "International Conference on Model Driven Engineering Languages and Systems",
+    "Acronym": "MODELS"
+  },
+  {
+    "Title": "International Conference on Model-Driven Engineering and Software Development",
+    "Acronym": "MODELSWARD"
+  },
+  {
+    "Title": "International Congress on Modelling and Simulation",
+    "Acronym": "MODSIM"
+  },
+  {
+    "Title": "International Conference on Advances in Mobile Computing and Multimedia",
+    "Acronym": "MOMM"
+  },
+  {
+    "Title": "Modelling and Optimization: Theory and Applications",
+    "Acronym": "MOPTA"
+  },
+  {
+    "Title": "Mathematics of Program Construction",
+    "Acronym": "MPC"
+  },
+  {
+    "Title": "International Conference on Managed Programming Languages and Runtimes",
+    "Acronym": "MPLR"
+  },
+  {
+    "Title": "IEEE International Working Conference on Mining Software Repositories",
+    "Acronym": "MSR"
+  },
+  {
+    "Title": "IEEE Conference on Mass Storage Systems and Technologies",
+    "Acronym": "MSST"
+  },
+  {
+    "Title": "ACM/IEEE International Conference on Modelling, Analysis and Simulation of Wireless and Mobile Systems",
+    "Acronym": "MSWIM"
+  },
+  {
+    "Title": "Machine Translation Summit",
+    "Acronym": "MT SUMMIT"
+  },
+  {
+    "Title": "International Symposium on the Mathematical Theory of Networks and Systems",
+    "Acronym": "MTNS"
+  },
+  {
+    "Title": "Mensch & Computer",
+    "Acronym": "MuC"
+  },
+  {
+    "Title": "Mobile and Ubiquitous Multimedia",
+    "Acronym": "MUM"
+  },
+  {
+    "Title": "Machine Vision Applications",
+    "Acronym": "MVA"
+  },
+  {
+    "Title": "North American Association for Computational Linguistics",
+    "Acronym": "NAACL"
+  },
+  {
+    "Title": "IEEE International Symposium on Network Computing and Applications",
+    "Acronym": "NCA"
+  },
+  {
+    "Title": "Usenix Network and Distributed System Security Symposium",
+    "Acronym": "NDSS"
+  },
+  {
+    "Title": "International Conference on Network Softwarization",
+    "Acronym": "NetSoft"
+  }
+]

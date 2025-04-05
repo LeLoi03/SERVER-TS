@@ -1,0 +1,2386 @@
+[
+  {
+    "conferenceTitle": "Computer Aided Verification",
+    "conferenceAcronym": "CAV",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://conferences.i-cav.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_0_initial_bcae6f4d-40c5-4c6c-b0db-1bc452f809a5.txt",
+    "cfpLink": "https://conferences.i-cav.org/2025/cfp",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_determine_response_df94730d-1848-404f-8265-3bbb07021cf5.txt",
+    "determineMetaData": {
+      "promptTokenCount": 43155,
+      "candidatesTokenCount": 61,
+      "totalTokenCount": 43216,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 43155
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 61
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_cfp_2025_f531bfb5-a03e-4bdc-a817-f0eff232479d.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CAV_extract_response_ef843bcd-abe9-4f39-9545-8871aacb04d8.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139625,
+      "candidatesTokenCount": 1498,
+      "totalTokenCount": 141123,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139625
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1498
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+    "conferenceAcronym": "CASES",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://esweek.org/cases/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_0_initial_a72a3327-7ed9-4edc-bc7d-37c72f40b8e8.txt",
+    "cfpLink": "https://esweek.org/cases-call-for-papers-page/",
+    "impLink": "https://esweek.org/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_determine_response_f905e9c2-e473-4802-833a-f37485b3a52a.txt",
+    "determineMetaData": {
+      "promptTokenCount": 44979,
+      "candidatesTokenCount": 57,
+      "totalTokenCount": 45036,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 44979
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 57
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_cfp_2025_4c6eb354-e40d-4d29-ba0c-7b9002247d92.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_imp_2025_9a229d5f-82fa-4770-83a3-ca2c9847bdcb.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASES_extract_response_8e0d7c26-cf0e-468a-92d7-1779098d6a71.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142426,
+      "candidatesTokenCount": 1331,
+      "totalTokenCount": 143757,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142426
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1331
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Computers and their Applications",
+    "conferenceAcronym": "CATA",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_0_initial_79c7076e-fcc0-4c04-bf6c-47150f0268a3.txt",
+    "cfpLink": "http://www.isca-hq.org/Documents/CATA/CATA2025/CATA2025CFP.pdf",
+    "impLink": "https://www.nwmissouri.edu/csis/CATA2025/index.htm",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_determine_response_a155762b-682e-4607-8699-f02d62e58914.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48994,
+      "candidatesTokenCount": 105,
+      "totalTokenCount": 49099,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48994
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 105
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_cfp_2025_e1cae05f-bc7a-4a30-8f5a-fe49561ca975.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_imp_2025_52a05760-641e-425e-ae58-6fe7f927160e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CATA_extract_response_a963389d-db4f-431f-a52f-10013bd6b6ef.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141188,
+      "candidatesTokenCount": 1294,
+      "totalTokenCount": 142482,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141188
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1294
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Automation Science and Engineering",
+    "conferenceAcronym": "CASE",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://2025.ieeecase.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_0_initial_d7a2d8df-77dc-4ddf-a6b2-a0535a71e329.txt",
+    "cfpLink": "https://2025.ieeecase.org/call-for-papers/",
+    "impLink": "https://2025.ieeecase.org/#dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_determine_response_ffd2ce97-a314-4142-8b6d-8665f01b0ba6.txt",
+    "determineMetaData": {
+      "promptTokenCount": 51006,
+      "candidatesTokenCount": 71,
+      "totalTokenCount": 51077,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 51006
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 71
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_cfp_2025_a0a5fc3a-6c07-4d4c-aece-186fb12f435c.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_imp_2025_3750e908-0f51-47e5-81e7-bc340e5bfc1a.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASE_extract_response_3f329fbd-46c1-4f0c-b959-02a4c5089705.txt",
+    "extractMetaData": {
+      "promptTokenCount": 149128,
+      "candidatesTokenCount": 2104,
+      "totalTokenCount": 151232,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 149128
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 2104
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Computer Algebra in Scientific Computing",
+    "conferenceAcronym": "CASC",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.casc-conference.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASC_main_2025_f50ba667-883f-4ba7-85f4-7611eac70c44.txt",
+    "cfpLink": "https://www.casc-conference.org/call.html",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASC_determine_response_eb4907c9-d836-4ea9-9068-862a1ed5fae4.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48350,
+      "candidatesTokenCount": 65,
+      "totalTokenCount": 48415,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48350
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 65
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASC_cfp_2025_3b127862-bc1d-4e1c-a01e-db7204c0796e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CASC_extract_response_8874fb23-17c1-49a2-bb66-5db852d4517d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138128,
+      "candidatesTokenCount": 984,
+      "totalTokenCount": 139112,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138128
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 984
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Compiler Construction",
+    "conferenceAcronym": "CC",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://conf.researchr.org/home/CC-2025",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CC_1_initial_50d107ba-322b-4504-b466-6d0efc321d10.txt",
+    "cfpLink": "https://conf.researchr.org/track/CC-2025/CC-2025-main-conference",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CC_cfp_2025_133311cc-4ea5-4651-b277-fc57a24026a2.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CC_extract_response_b2a8d3ac-e934-432a-ab53-0db9acce76da.txt",
+    "extractMetaData": {
+      "promptTokenCount": 151670,
+      "candidatesTokenCount": 1284,
+      "totalTokenCount": 152954,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 151670
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1284
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Computability and Complexity in Analysis",
+    "conferenceAcronym": "CCA",
+    "conferenceIndex": "2",
+    "conferenceLink": "http://cca-net.de/cca2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCA_2_initial_e2ad24b9-a047-472c-8c76-3ffaf8d5f952.txt",
+    "cfpLink": "https://easychair.org/conferences/?conf=cca2025",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCA_cfp_2025_9a034d4b-3497-43b9-811f-52d58568e1e3.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCA_extract_response_d3117d3b-a429-4efa-829f-701eaf19a145.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138430,
+      "candidatesTokenCount": 1136,
+      "totalTokenCount": 139566,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138430
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1136
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE Conference on Computational Complexity",
+    "conferenceAcronym": "CCC",
+    "conferenceIndex": "1",
+    "conferenceLink": "http://www.fields.utoronto.ca/activities/25-26/CCC2025",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCC_1_initial_e89e3995-750b-44c2-aa4b-3c4174b6d2be.txt",
+    "cfpLink": "https://computationalcomplexity.org/Archive/2025/cfp.html",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCC_cfp_2025_b3b794c6-2f8c-4e95-898b-a94b440f6091.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCC_extract_response_69c6c803-1efc-44d2-9800-3187a9eff291.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141237,
+      "candidatesTokenCount": 1555,
+      "totalTokenCount": 142792,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141237
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1555
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "ACM Conference on Computer and Communications Security",
+    "conferenceAcronym": "CCS",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.sigsac.org/ccs/CCS2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCS_0_initial_cef89be0-9871-4af5-ba2b-42662fa4f390.txt",
+    "cfpLink": "https://www.sigsac.org/ccs/CCS2025/call-for-papers/",
+    "impLink": "https://www.sigsac.org/ccs/CCS2025/call-for-papers/#dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCS_determine_response_748c9b42-628e-4e5f-81a2-d43f9c834a79.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47271,
+      "candidatesTokenCount": 89,
+      "totalTokenCount": 47360,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47271
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 89
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCS_cfp_2025_ea4ef678-c92d-4fd8-99b0-223ef91a5651.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCS_imp_2025_80571972-6aff-4256-8141-c7f6c97eb209.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCS_extract_response_83784119-40df-4ab8-a639-94f09c83fe23.txt",
+    "extractMetaData": {
+      "promptTokenCount": 144719,
+      "candidatesTokenCount": 1838,
+      "totalTokenCount": 146557,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 144719
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1838
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Cooperative Design, Visualization, and Engineering",
+    "conferenceAcronym": "CDVE",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.cdve.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CDVE_0_initial_8202fb0a-98fe-4bf1-9a59-8c130c7cfc26.txt",
+    "cfpLink": "https://www.cdve.org/calls.html",
+    "impLink": "https://www.cdve.org/dates.html",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CDVE_determine_response_7afcee63-88fa-450b-b915-3e56fe9ef3a9.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46793,
+      "candidatesTokenCount": 59,
+      "totalTokenCount": 46852,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46793
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 59
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CDVE_cfp_2025_63a95fbb-4c5b-46dd-ac6b-b348fb1f5f9c.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CDVE_imp_2025_35ba4b6b-8565-4447-8eba-3a5a952050b2.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CDVE_extract_response_ec58ae5b-c632-4332-ba70-dcaf59584064.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139625,
+      "candidatesTokenCount": 1537,
+      "totalTokenCount": 141162,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139625
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1537
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Cloud Computing in Emerging Markets",
+    "conferenceAcronym": "CCEM",
+    "conferenceIndex": "2",
+    "conferenceLink": "https://2025.ieeeccem.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCEM_2_initial_b770aa8b-64c7-4f71-a9ff-f7fd2862fb7b.txt",
+    "cfpLink": "https://2025.ieeeccem.org/#cfp",
+    "impLink": "https://2025.ieeeccem.org/#cfp",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCEM_cfp_2025_084a74a1-bda4-4acd-9568-a0092d5e8b06.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCEM_imp_2025_d678a66b-4295-4c79-867e-1d7464d6cc4a.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCEM_extract_response_e9c7c25a-18aa-4324-bf6e-ac42defa2dd4.txt",
+    "extractMetaData": {
+      "promptTokenCount": 167547,
+      "candidatesTokenCount": 1427,
+      "totalTokenCount": 168974,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 167547
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1427
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Cross-Domain Conference for Machine Learning and Knowledge Extraction",
+    "conferenceAcronym": "CD-MAKE",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cd-make.net/index.html",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CD-MAKE_0_initial_e5c20080-74f4-4b80-94cc-37016c292f80.txt",
+    "cfpLink": "None",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CD-MAKE_determine_response_4d5bd754-e084-4863-9028-a61f84a95f13.txt",
+    "determineMetaData": {
+      "promptTokenCount": 51186,
+      "candidatesTokenCount": 40,
+      "totalTokenCount": 51226,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 51186
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 40
+        }
+      ]
+    },
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CD-MAKE_extract_response_ec6771fb-6179-4731-b9a0-1f3baa287ec7.txt",
+    "extractMetaData": {
+      "promptTokenCount": 137359,
+      "candidatesTokenCount": 118,
+      "totalTokenCount": 137477,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137359
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 118
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE Congress on Evolutionary Computation",
+    "conferenceAcronym": "CEC",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.cec2025.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CEC_0_initial_ad6bb6ea-8139-4ee9-b7e6-2f5b2d4c5eaa.txt",
+    "cfpLink": "https://www.cec2025.org/index/page.html?id=1307",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CEC_determine_response_1e86ed99-8671-4c4c-861e-7f2b22eece6c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47332,
+      "candidatesTokenCount": 63,
+      "totalTokenCount": 47395,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47332
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 63
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CEC_cfp_2025_97aed2fb-d478-4d24-b8a8-17250bd1f00a.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CEC_extract_response_88790e99-33e8-4a60-838a-7b0e843fda97.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143142,
+      "candidatesTokenCount": 1271,
+      "totalTokenCount": 144413,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143142
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1271
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Symposium on Cluster, Cloud and Grid Computing",
+    "conferenceAcronym": "CCGRID",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://site.uit.no/ccgrid2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCGRID_1_initial_71483a91-ec41-460b-8d04-fdf94d7269c7.txt",
+    "cfpLink": "https://site.uit.no/ccgrid2025/research-paper/",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCGRID_cfp_2025_035d3617-e7a0-4ab4-b094-91af5750f873.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CCGRID_extract_response_1ba34139-c747-4e4d-abe9-ae96ec3c1fdc.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141853,
+      "candidatesTokenCount": 1235,
+      "totalTokenCount": 143088,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141853
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1235
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Symposium on Code Generation and Optimization",
+    "conferenceAcronym": "CGO",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://2025.cgo.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGO_1_initial_42e33a1d-f000-4521-80ec-9b4472e2bbef.txt",
+    "cfpLink": "https://2025.cgo.org/track/cgo-2025-papers",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGO_cfp_2025_f6a77130-d614-4b9c-9eea-7f7faa83dbc2.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGO_extract_response_7ae4ab42-b39e-4469-81b5-21ea5a7c3867.txt",
+    "extractMetaData": {
+      "promptTokenCount": 169313,
+      "candidatesTokenCount": 1416,
+      "totalTokenCount": 170729,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 169313
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1416
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Information Security Symposium",
+    "conferenceAcronym": "CERIAS",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://events.research.purdue.edu/cerias/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CERIAS_1_initial_760fdd36-a6c7-4f8c-8a07-34f5a82e4c99.txt",
+    "cfpLink": "None",
+    "impLink": "None",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CERIAS_extract_response_8874e690-33c1-45b3-87f4-2f5e43600a3c.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138284,
+      "candidatesTokenCount": 220,
+      "totalTokenCount": 138504,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138284
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 220
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Human Factors in Computing Systems",
+    "conferenceAcronym": "CHI",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://chi2025.acm.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI_0_initial_25307327-f8d3-4697-bfe9-842447085731.txt",
+    "cfpLink": "https://chi2025.acm.org/for-authors/papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI_determine_response_5acf83ce-850a-46f0-8a3b-b4b1fd7e230a.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47394,
+      "candidatesTokenCount": 56,
+      "totalTokenCount": 47450,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47394
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 56
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI_cfp_2025_993c1d8d-0a25-4f01-a086-dd28c6df5461.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI_extract_response_79432a93-fb40-48cd-957c-d144c25eb9ac.txt",
+    "extractMetaData": {
+      "promptTokenCount": 146609,
+      "candidatesTokenCount": 1753,
+      "totalTokenCount": 148362,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 146609
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1753
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Computer Graphics International",
+    "conferenceAcronym": "CGI",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://www.cgs-network.org/cgi25/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGI_1_initial_320a0013-c999-4dd7-9ebe-408406daae80.txt",
+    "cfpLink": "https://www.cgs-network.org/cgi25/call-for-papers/",
+    "impLink": "https://www.cgs-network.org/cgi25/",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGI_cfp_2025_2661aa45-93f7-48e2-b7bd-770f25e5a27a.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGI_imp_2025_dd2f97ee-e57a-45c8-b2f5-3dc39f25a137.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CGI_extract_response_96270c2b-f103-4993-bde8-125d0337cf8d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139657,
+      "candidatesTokenCount": 1383,
+      "totalTokenCount": 141040,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139657
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1383
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "CHI PLAY: The Annual Symposium on Computer-Human Interaction in Play",
+    "conferenceAcronym": "CHI PLAY",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://chiplay.acm.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI-PLAY_0_initial_f8bf8f06-5d28-4597-aee9-89a3bdca4877.txt",
+    "cfpLink": "https://chiplay.acm.org/2025/full-papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI-PLAY_determine_response_7ee57f3b-1b29-4d9d-b1a3-f774e1ed5233.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46668,
+      "candidatesTokenCount": 58,
+      "totalTokenCount": 46726,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46668
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 58
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI-PLAY_cfp_2025_994bb712-16eb-46ba-b3db-1ed23a67dd6e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHI-PLAY_extract_response_cb77de9b-b518-422a-bcd4-040b56207a8a.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142975,
+      "candidatesTokenCount": 1281,
+      "totalTokenCount": 144256,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142975
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1281
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Workshop on Cryptographic Hardware and Embedded Systems",
+    "conferenceAcronym": "CHES",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://ches.iacr.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHES_1_initial_76aeb6a4-7df7-45f6-9ec4-7699aafc5486.txt",
+    "cfpLink": "https://ches.iacr.org/2025/callforpapers.php",
+    "impLink": "https://ches.iacr.org/2025/papersubmission.php",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHES_cfp_2025_94f4f404-df80-446d-adc5-f3574b4f6989.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHES_imp_2025_3cfcc61b-8949-460c-b1cc-41fe2048375a.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHES_extract_response_4c2bc670-66ce-4b15-8a1a-e39aebb6521d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142181,
+      "candidatesTokenCount": 1787,
+      "totalTokenCount": 143968,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142181
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1787
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IberoAmerican Congress on Pattern Recognition",
+    "conferenceAcronym": "CIARP",
+    "conferenceIndex": "0",
+    "conferenceLink": "http://www.ciarp24.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIARP_0_initial_b9b0cd75-7b82-40be-83a0-d1240512c5d6.txt",
+    "cfpLink": "http://recogna.tech/ciarp24/#section-call",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIARP_determine_response_129b241e-18c1-46c5-b96b-6d0a8152069f.txt",
+    "determineMetaData": {
+      "promptTokenCount": 77089,
+      "candidatesTokenCount": 53,
+      "totalTokenCount": 77142,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 77089
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 53
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIARP_cfp_2025_01c71e76-88b4-4377-865b-577064b3e836.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIARP_extract_response_9f7bd0c3-92cf-4939-abad-d4282357447d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143300,
+      "candidatesTokenCount": 1454,
+      "totalTokenCount": 144754,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143300
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1454
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology",
+    "conferenceAcronym": "CIBCB",
+    "conferenceIndex": "0",
+    "conferenceLink": "http://smile.ee.ncku.edu.tw/cibcb2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIBCB_main_2025_1c15c574-93c2-4633-b606-2a8bcacb16b4.txt",
+    "cfpLink": "http://smile.ee.ncku.edu.tw/cibcb2025/?page_id=326",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIBCB_determine_response_212230d9-bf9f-4c71-9489-cbded7f23673.txt",
+    "determineMetaData": {
+      "promptTokenCount": 53175,
+      "candidatesTokenCount": 78,
+      "totalTokenCount": 53253,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 53175
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 78
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIBCB_cfp_2025_d0f0f026-0391-4bd6-836b-ef56d15df0d9.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIBCB_extract_response_cb266137-487e-4cac-af77-e0a004a2d870.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140725,
+      "candidatesTokenCount": 355,
+      "totalTokenCount": 141080,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140725
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 355
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Algorithms and Complexity",
+    "conferenceAcronym": "CIAC",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://easyconferences.eu/ciac2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIAC_0_initial_fa97e96d-ecbf-48c3-9d1e-8f5edc393805.txt",
+    "cfpLink": "https://easyconferences.eu/ciac2025/call-for-papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIAC_determine_response_2b996c1d-023e-4ad8-82a0-5c4613d59275.txt",
+    "determineMetaData": {
+      "promptTokenCount": 60999,
+      "candidatesTokenCount": 62,
+      "totalTokenCount": 61061,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 60999
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 62
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIAC_cfp_2025_7413d1c1-76a2-431b-b9b5-7476d630da7d.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIAC_extract_response_a32fd544-c628-4833-8d51-5a2b73692799.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140822,
+      "candidatesTokenCount": 1195,
+      "totalTokenCount": 142017,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140822
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1195
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Intelligent Text Processing and Computational Linguistics",
+    "conferenceAcronym": "CICLING",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://coling2025.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICLING_1_initial_8f9f768d-60bc-4b8e-a542-320dab486729.txt",
+    "cfpLink": "https://coling2025.org/calls/main_conference_papers/",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICLING_cfp_2025_520c59f1-cbac-47ca-a6f7-bd28af28bca8.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICLING_extract_response_1f199b75-dd1e-49cf-868a-39d73e3abca7.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141170,
+      "candidatesTokenCount": 1640,
+      "totalTokenCount": 142810,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141170
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1640
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Computer-Human Interaction Research and Applications",
+    "conferenceAcronym": "CHIRA",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://chira.scitevents.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHIRA_0_initial_b8b41abe-b590-4566-bc89-3263e2049e14.txt",
+    "cfpLink": "https://chira.scitevents.org/CallForPapers.aspx",
+    "impLink": "https://chira.scitevents.org/ImportantDates.aspx",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHIRA_determine_response_c504139f-0b00-4aff-803b-2106a1e68f9c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47977,
+      "candidatesTokenCount": 68,
+      "totalTokenCount": 48045,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47977
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 68
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHIRA_cfp_2025_c88e1309-4c42-4ff3-beb4-8f8b2e0333e2.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHIRA_imp_2025_5bdb84ff-40ce-44a3-b255-eb0c6a6e4155.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CHIRA_extract_response_01a89ae6-b386-4503-b6bc-5f80fdae1083.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141683,
+      "candidatesTokenCount": 1853,
+      "totalTokenCount": 143536,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141683
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1853
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Conference on Intelligent Computer Mathematics",
+    "conferenceAcronym": "CICM",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cicm-conference.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICM_0_initial_bc11a4d8-b6ac-4904-9635-444c758ab304.txt",
+    "cfpLink": "https://cicm-conference.org/2025/cicm.php?event=&menu=cfp",
+    "impLink": "https://cicm-conference.org/2025/cicm.php?event=&menu=dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICM_determine_response_d987444c-9c62-4424-8b98-ef309d7d2cb6.txt",
+    "determineMetaData": {
+      "promptTokenCount": 44634,
+      "candidatesTokenCount": 89,
+      "totalTokenCount": 44723,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 44634
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 89
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICM_cfp_2025_5bd9704f-7620-488a-b53f-0e15d72e4150.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICM_imp_2025_ad78fbbf-d6ef-47ac-886c-ac8f1395ff80.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CICM_extract_response_6dbce915-a3a2-4ee8-9c76-8e667167fa89.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139778,
+      "candidatesTokenCount": 1438,
+      "totalTokenCount": 141216,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139778
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1438
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE Symposium on Computational Intelligence and Data Mining",
+    "conferenceAcronym": "CIDM",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://ieee-ssci.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDM_1_initial_5a108780-ba93-4f0c-903f-0d5df4524689.txt",
+    "cfpLink": "https://ieee-ssci.org/ui=call-for-papers",
+    "impLink": "None",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDM_cfp_2025_791d3feb-59a3-40b2-895f-38aded7203f6.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDM_extract_response_a9ec5d0c-e6a7-4640-8833-6dc9b6cee4e8.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138758,
+      "candidatesTokenCount": 284,
+      "totalTokenCount": 139042,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138758
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 284
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Conference on Innovative Data Systems Research",
+    "conferenceAcronym": "CIDR",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.cidrdb.org/cidr2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDR_0_initial_0186ad6c-5a8c-4287-a009-030afa90e4b5.txt",
+    "cfpLink": "https://www.cidrdb.org/cidr2025/cfp.html",
+    "impLink": "https://www.cidrdb.org/cidr2025/cfp.html",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDR_determine_response_d34e4d1c-2466-4fa9-9c86-21e604346957.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45488,
+      "candidatesTokenCount": 82,
+      "totalTokenCount": 45570,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45488
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 82
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDR_cfp_2025_3ba0d114-aec6-4719-9e4a-5def40bf6aca.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDR_imp_2025_ad224810-6e54-4b22-8dc1-dec2b93f99f5.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIDR_extract_response_1038aedd-ed88-4ee3-aa84-27c854bb7f5b.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140782,
+      "candidatesTokenCount": 1011,
+      "totalTokenCount": 141793,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140782
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1011
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "ACM International Conference on Information and Knowledge Management",
+    "conferenceAcronym": "CIKM",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cikm2025.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIKM_0_initial_11df6d87-a9e8-48f7-abf1-5fd1a365f058.txt",
+    "cfpLink": "https://cikm2025.org/calls/full-research-papers",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIKM_determine_response_684e57a4-c78b-4317-bed9-cd1fa8dc1cf8.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45610,
+      "candidatesTokenCount": 45,
+      "totalTokenCount": 45655,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45610
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIKM_cfp_2025_8ce62fb2-06dc-48f5-a73a-ec957619dcdb.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIKM_extract_response_acccadb7-ffd0-4c5e-9381-f627517cb0dc.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140509,
+      "candidatesTokenCount": 1798,
+      "totalTokenCount": 142307,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140509
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1798
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Computability in Europe: Logic and Theory of Algorithms",
+    "conferenceAcronym": "CiE",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://sites.google.com/view/cie2025-computabilityineurope/home",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CiE_main_2025_84042e93-5971-42fb-b423-c4b3f3eaedde.txt",
+    "cfpLink": "https://sites.google.com/view/cie2025-computabilityineurope/submissions",
+    "impLink": "https://sites.google.com/view/cie2025-computabilityineurope/important-dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CiE_determine_response_f83c2568-1944-4827-a41e-13998f55505e.txt",
+    "determineMetaData": {
+      "promptTokenCount": 57350,
+      "candidatesTokenCount": 52,
+      "totalTokenCount": 57402,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 57350
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 52
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CiE_cfp_2025_4d1c6cb3-b780-444e-98b7-d19833c8e179.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CiE_imp_2025_d5f6b3d0-1c9e-49ed-bef7-8490eaaa715c.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CiE_extract_response_7d11f98a-83bc-414a-a226-0f8e62dde85e.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141056,
+      "candidatesTokenCount": 912,
+      "totalTokenCount": 141968,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141056
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 912
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Cybernetics and Intelligent Systems",
+    "conferenceAcronym": "CIS",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cai.ieee.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_main_2025_8626887b-9769-4c79-a178-e420464d414e.txt",
+    "cfpLink": "https://cai.ieee.org/2025/call-for-papers/",
+    "impLink": "https://cai.ieee.org/2025/info-for-authors/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_determine_response_4f58724c-309e-4c76-a98d-22e360c2247d.txt",
+    "determineMetaData": {
+      "promptTokenCount": 44398,
+      "candidatesTokenCount": 75,
+      "totalTokenCount": 44473,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 44398
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 75
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_cfp_2025_d23d57db-5631-461b-8a5d-6639bf5f9842.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_imp_2025_483298da-3441-47b1-872f-ea237ca4a9d8.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_extract_response_1f27cedd-4b16-42ed-baa5-15e8ec803868.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143420,
+      "candidatesTokenCount": 1453,
+      "totalTokenCount": 144873,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143420
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1453
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Workshop on Combinations of Intelligent Methods and Applications",
+    "conferenceAcronym": "CIMA",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://iwcim.itu.edu.tr/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIMA_0_initial_deb3408e-4603-410f-a491-a2ae6558f652.txt",
+    "cfpLink": "https://iwcim.itu.edu.tr/paper_submission.html",
+    "impLink": "https://iwcim.itu.edu.tr/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIMA_determine_response_c2a03016-3829-4dd3-9c64-a80e5fffaab9.txt",
+    "determineMetaData": {
+      "promptTokenCount": 53281,
+      "candidatesTokenCount": 63,
+      "totalTokenCount": 53344,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 53281
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 63
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIMA_cfp_2025_380d9129-899b-4cfa-8f24-1428e8378fa5.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIMA_imp_2025_07f56f31-1a85-4238-a2a3-e5cac0fdf964.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIMA_extract_response_9d878990-9466-4125-bdac-fec0eda707b5.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138992,
+      "candidatesTokenCount": 1043,
+      "totalTokenCount": 140035,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138992
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1043
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Computational Intelligence and Security",
+    "conferenceAcronym": "CIS",
+    "conferenceIndex": "0",
+    "conferenceLink": "http://ww2.cis-lab.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_0_initial_102e7a6d-af59-4e27-8de6-9b4c1aa49c05.txt",
+    "cfpLink": "http://ww2.cis-lab.org/cis2024/call-for-paper/",
+    "impLink": "http://ww2.cis-lab.org/cis2024/important-dates/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_determine_response_eee077aa-3423-4ca2-925d-862cc29dfc78.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49076,
+      "candidatesTokenCount": 79,
+      "totalTokenCount": 49155,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49076
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 79
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_cfp_2025_612e8551-71ce-4c4d-8e51-af672d7da341.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_imp_2025_1b18b24b-cb9d-4754-bcd8-eb0fbd01d655.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIS_extract_response_e5bb3fb9-5ea8-430d-9f60-f25ee93ca4e2.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143183,
+      "candidatesTokenCount": 1238,
+      "totalTokenCount": 144421,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143183
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1238
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Complex, Intelligent and Software Intensive Systems",
+    "conferenceAcronym": "CISIS",
+    "conferenceIndex": "0",
+    "conferenceLink": "http://voyager.ce.fit.ac.jp/conf/cisis/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_0_initial_2c474aba-48ee-43c2-80a2-151947c6e2dc.txt",
+    "cfpLink": "http://voyager.ce.fit.ac.jp/conf/cisis/2025/public/CISIS-2025-CFPs-V5.pdf",
+    "impLink": "http://voyager.ce.fit.ac.jp/conf/cisis/2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_determine_response_a0f35f5f-ef34-4a8b-983f-19ad6f987320.txt",
+    "determineMetaData": {
+      "promptTokenCount": 50664,
+      "candidatesTokenCount": 89,
+      "totalTokenCount": 50753,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 50664
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 89
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_cfp_2025_460d1656-3233-44b0-80a2-7d99978d3c9e.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_imp_2025_03af13d6-ed1d-4f72-b18b-fac12a003dba.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_extract_response_5ee43230-df43-47a0-9f84-860f533b48da.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140919,
+      "candidatesTokenCount": 1687,
+      "totalTokenCount": 142606,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140919
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1687
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Computational Intelligence in Security for Information Systems",
+    "conferenceAcronym": "CISIS",
+    "conferenceIndex": "0",
+    "conferenceLink": "http://cisisconference.eu/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_0_initial_05926c7c-a712-4cdc-9784-4bf1aa1592b7.txt",
+    "cfpLink": "http://cisisconference.eu/call-for-papers/",
+    "impLink": "http://cisisconference.eu/important-dates/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_determine_response_6070d7c3-f17e-4099-a49e-de1ec8ffa1cf.txt",
+    "determineMetaData": {
+      "promptTokenCount": 61419,
+      "candidatesTokenCount": 58,
+      "totalTokenCount": 61477,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 61419
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 58
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_cfp_2025_850d0450-7a23-40da-bcb5-caa9d0d836f3.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_imp_2025_08da9f3b-c927-4d98-b66f-d21d51facd4e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISIS_extract_response_6859fa16-6322-413d-83a0-b71aeff78c2d.txt",
+    "extractMetaData": {
+      "promptTokenCount": 152314,
+      "candidatesTokenCount": 1411,
+      "totalTokenCount": 153725,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 152314
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1411
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Cloud Computing and Services Science",
+    "conferenceAcronym": "CLOSER",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://closer.scitevents.org/?y=2025",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOSER_1_initial_acf72d95-5873-4530-af27-c81d5fbe25f6.txt",
+    "cfpLink": "https://closer.scitevents.org/CallForPapers.aspx?y=2025",
+    "impLink": "https://closer.scitevents.org/ImportantDates.aspx?y=2025",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOSER_cfp_2025_a826d26d-3d22-4efe-b115-dd03819471d8.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOSER_imp_2025_39ac2f91-244c-4146-b544-816f88d63a5f.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOSER_extract_response_5b0c3c7b-6190-49a3-8cce-827a2c9c018e.txt",
+    "extractMetaData": {
+      "promptTokenCount": 144140,
+      "candidatesTokenCount": 1805,
+      "totalTokenCount": 145945,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 144140
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1805
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Conference on Information Sciences and Systems",
+    "conferenceAcronym": "CISS",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://ciss.jhu.edu/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISS_0_initial_5e0395bf-3203-4bfb-a50f-aaa766f2cf44.txt",
+    "cfpLink": "https://ciss.jhu.edu/paper-submission/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISS_determine_response_a6ef4d3e-db2a-407c-ba77-190255748be6.txt",
+    "determineMetaData": {
+      "promptTokenCount": 44638,
+      "candidatesTokenCount": 48,
+      "totalTokenCount": 44686,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 44638
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISS_cfp_2025_53e86bfe-5200-496b-88ea-1dd17da1c07c.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CISS_extract_response_3e87216e-adf3-4740-9a69-0bf3feb901f2.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138802,
+      "candidatesTokenCount": 696,
+      "totalTokenCount": 139498,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138802
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 696
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Cloud Computing",
+    "conferenceAcronym": "CLOUD",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://services.conferences.computer.org/2025/cloud/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOUD_0_initial_429f5ba1-bd50-4f7b-b12a-d157668c9c9b.txt",
+    "cfpLink": "https://services.conferences.computer.org/2025/cloud/cloud-call-for-papers",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOUD_determine_response_0c79932a-3d3f-4ac4-9024-753791e6c490.txt",
+    "determineMetaData": {
+      "promptTokenCount": 51265,
+      "candidatesTokenCount": 70,
+      "totalTokenCount": 51335,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 51265
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 70
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOUD_cfp_2025_8cfde97b-2953-42bb-8fd2-e42c4640edb6.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLOUD_extract_response_f9e76704-bb64-4a7c-91c1-f96cf4d72810.txt",
+    "extractMetaData": {
+      "promptTokenCount": 141293,
+      "candidatesTokenCount": 1237,
+      "totalTokenCount": 142530,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 141293
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1237
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Cluster Computing",
+    "conferenceAcronym": "CLUSTER",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://clustercomp.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLUSTER_0_initial_85adb1ea-53f2-4d73-a8fb-2bb00e845859.txt",
+    "cfpLink": "https://clustercomp.org/2025/papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLUSTER_determine_response_a1bd9f2f-727c-47ac-b90c-a5cc47051c18.txt",
+    "determineMetaData": {
+      "promptTokenCount": 42391,
+      "candidatesTokenCount": 52,
+      "totalTokenCount": 42443,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 42391
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 52
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLUSTER_cfp_2025_9de7afe4-07f3-4d2a-a761-802d7bbd8c23.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLUSTER_extract_response_9e053bf0-7223-4762-9e83-ee43c37da054.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139404,
+      "candidatesTokenCount": 1585,
+      "totalTokenCount": 140989,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139404
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1585
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Network and Service Management",
+    "conferenceAcronym": "CNSM",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.cnsm-conf.org/2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CNSM_0_initial_2d019e32-1f19-4ac3-ac4d-9bd97205b758.txt",
+    "cfpLink": "https://www.cnsm-conf.org/2025/cfp.html",
+    "impLink": "https://www.cnsm-conf.org/2025/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CNSM_determine_response_27989f02-3755-4f28-8f27-1a1e12463eec.txt",
+    "determineMetaData": {
+      "promptTokenCount": 49675,
+      "candidatesTokenCount": 80,
+      "totalTokenCount": 49755,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49675
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 80
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CNSM_cfp_2025_4c5fda82-e97d-49a2-bcac-80fd4082122d.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CNSM_imp_2025_524ae97b-581d-4f25-949b-78376d700f23.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CNSM_extract_response_be634800-329f-43ad-922b-1a19c34511f6.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139052,
+      "candidatesTokenCount": 1622,
+      "totalTokenCount": 140674,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139052
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1622
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Computer and Information Technology",
+    "conferenceAcronym": "CIT",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://event.asme.org/IDETC-CIE",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIT_1_initial_71c884a2-b452-4d33-8cc7-d49c1e1d8bb2.txt",
+    "cfpLink": "None",
+    "impLink": "https://event.asme.org/IDETC-CIE",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIT_determine_response_4be2caf9-a696-4b22-a0cd-1d952cae6564.txt",
+    "determineMetaData": {
+      "promptTokenCount": 47337,
+      "candidatesTokenCount": 54,
+      "totalTokenCount": 47391,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 47337
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 54
+        }
+      ]
+    },
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIT_imp_2025_aa89bffa-ef14-4d47-9e69-e5c6f976312e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CIT_extract_response_b2dd8b6a-9faf-4852-a2d7-67e5f514da09.txt",
+    "extractMetaData": {
+      "promptTokenCount": 140433,
+      "candidatesTokenCount": 1023,
+      "totalTokenCount": 141456,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 140433
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1023
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Conference on Combinatorial Optimization and Applications",
+    "conferenceAcronym": "COCOA",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://ecco2025.sciencesconf.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOA_1_initial_e6bbdf42-bd4a-48da-8f9d-e930363e0f1a.txt",
+    "cfpLink": "https://ecco2025.sciencesconf.org/page/customizable_page_11?lang=en",
+    "impLink": "https://ecco2025.sciencesconf.org/",
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOA_cfp_2025_cacc8072-3942-40ab-bfe0-3da96bea8b72.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOA_imp_2025_b096717d-b257-4027-b6c2-b11742b9b87a.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOA_extract_response_89f22ec6-92f1-4b95-ad05-7923999d649a.txt",
+    "extractMetaData": {
+      "promptTokenCount": 138976,
+      "candidatesTokenCount": 528,
+      "totalTokenCount": 139504,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 138976
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 528
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Latin American Conference on Informatics",
+    "conferenceAcronym": "CLEI",
+    "conferenceIndex": "1",
+    "conferenceLink": "https://conferencia2025.clei.org/en/home/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLEI_main_2025_5edd4643-e21f-4c99-aef3-c1c7f9b231bf.txt",
+    "cfpLink": "https://conferencia2025.clei.org/wp-content/uploads/sites/5/2025/03/CFP-CLEI2025_0202_v1_English.pdf",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLEI_determine_response_013d7972-1e4d-44c8-899e-b1262d95e6be.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48736,
+      "candidatesTokenCount": 62,
+      "totalTokenCount": 48798,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48736
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 62
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLEI_cfp_2025_dce975e9-2b20-4e73-959d-7daf7dc9d8ec.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CLEI_extract_response_802382bc-a024-4f5d-a684-8fa2029ee90e.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139969,
+      "candidatesTokenCount": 1303,
+      "totalTokenCount": 141272,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139969
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1303
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Computing and Combinatorics",
+    "conferenceAcronym": "COCOON",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://tcsuestc.com/cocoon2025/index.html",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOON_main_2025_2e2502d6-9c69-4a39-8c2e-a95dc680e3f1.txt",
+    "cfpLink": "https://tcsuestc.com/cocoon2025/pages/cfp.html",
+    "impLink": "https://tcsuestc.com/cocoon2025/index.html",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOON_determine_response_828ab2b1-f2ff-433d-ba1c-85620f01af09.txt",
+    "determineMetaData": {
+      "promptTokenCount": 48274,
+      "candidatesTokenCount": 69,
+      "totalTokenCount": 48343,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 48274
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 69
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOON_cfp_2025_aa8d0858-9b40-4883-a8b9-25183aa39b01.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOON_imp_2025_ff8c10f9-5c6f-4b7f-947e-8051cab9c649.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COCOON_extract_response_75704208-7259-4050-b974-9ddb9122873b.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139308,
+      "candidatesTokenCount": 1134,
+      "totalTokenCount": 140442,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139308
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1134
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "IEEE International Conference on Cloud Computing Technology and Science",
+    "conferenceAcronym": "CloudCom",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://www.cloudcom2024.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CloudCom_0_initial_39984c0f-aabf-4ec3-b40f-24253847f158.txt",
+    "cfpLink": "https://www.cloudcom2024.org/cfp",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CloudCom_determine_response_cd80997c-d806-481d-be8e-9b9687107a7c.txt",
+    "determineMetaData": {
+      "promptTokenCount": 44206,
+      "candidatesTokenCount": 42,
+      "totalTokenCount": 44248,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 44206
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 42
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CloudCom_cfp_2025_3364433f-0d3d-4d1d-a943-ea9ccab849d3.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CloudCom_extract_response_4062479e-e6cc-4a0c-9241-56ff9632abe0.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139598,
+      "candidatesTokenCount": 1015,
+      "totalTokenCount": 140613,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139598
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1015
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Hardware/Software Codesign and System Synthesis",
+    "conferenceAcronym": "CODES+ISSS",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://esweek.org/codes-isss/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CODES-ISSS_0_initial_7bf6b9e5-1f9a-4cb9-b705-fb210d348882.txt",
+    "cfpLink": "https://esweek.org/codesisss-call-for-papers-page/",
+    "impLink": "https://esweek.org/codesisss-call-for-papers-page/",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CODES-ISSS_determine_response_e1f910ce-5d29-450e-81a9-5eccec11a13d.txt",
+    "determineMetaData": {
+      "promptTokenCount": 45441,
+      "candidatesTokenCount": 74,
+      "totalTokenCount": 45515,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45441
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 74
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CODES-ISSS_cfp_2025_912a194e-68a8-47c5-9d48-a6a33660b142.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CODES-ISSS_imp_2025_e2ffa128-b12c-4762-9036-5b487f2e6231.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CODES-ISSS_extract_response_e9dd65d2-8209-404b-8ed1-86532d2be355.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142926,
+      "candidatesTokenCount": 1186,
+      "totalTokenCount": 144112,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142926
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1186
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "International Conference on Control, Decision and Information Technologies",
+    "conferenceAcronym": "CoDIT",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://codit2025.org/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CoDIT_0_initial_aae27787-e35e-42af-9845-c6ad8d010a40.txt",
+    "cfpLink": "https://codit2025.org/index.php/call-for-papers",
+    "impLink": "https://codit2025.org/index.php/key-dates",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CoDIT_determine_response_147a6f5e-c08c-4b93-b3c5-a26554f04803.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46348,
+      "candidatesTokenCount": 75,
+      "totalTokenCount": 46423,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46348
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 75
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CoDIT_cfp_2025_ceeaed26-2498-4418-bb17-fd466060547e.txt",
+    "impTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CoDIT_imp_2025_e5a0fe80-fc5b-4769-86e0-c2f0b92d624e.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CoDIT_extract_response_90c8c697-e904-478a-b3f6-4681c39d9fed.txt",
+    "extractMetaData": {
+      "promptTokenCount": 139432,
+      "candidatesTokenCount": 1263,
+      "totalTokenCount": 140695,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 139432
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1263
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Conference on Games",
+    "conferenceAcronym": "COG",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cog2025.inesc-id.pt/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COG_0_initial_a975c39b-00cd-40d1-928d-60f6e50e5d9f.txt",
+    "cfpLink": "https://cog2025.inesc-id.pt/call-for-papers/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COG_determine_response_93eb5c3c-42e0-481f-b987-6ca8a14c735e.txt",
+    "determineMetaData": {
+      "promptTokenCount": 52237,
+      "candidatesTokenCount": 62,
+      "totalTokenCount": 52299,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 52237
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 62
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COG_cfp_2025_c2b430af-cde4-4849-9697-21c9cfb98068.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\COG_extract_response_035504d0-08a2-4b89-b643-0e1f52f31ae2.txt",
+    "extractMetaData": {
+      "promptTokenCount": 142070,
+      "candidatesTokenCount": 1844,
+      "totalTokenCount": 143914,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 142070
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1844
+        }
+      ]
+    }
+  },
+  {
+    "conferenceTitle": "Annual Meeting of the Cognitive Science Society",
+    "conferenceAcronym": "CogSci",
+    "conferenceIndex": "0",
+    "conferenceLink": "https://cognitivesciencesociety.org/cogsci-2025/",
+    "conferenceTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CogSci_0_initial_fe66571a-5f12-42c8-b600-8ab3c8e856ef.txt",
+    "cfpLink": "https://cognitivesciencesociety.org/submissions/",
+    "impLink": "None",
+    "determineResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CogSci_determine_response_83eac8ee-1250-4d1f-b6a0-8a51b77cd5d0.txt",
+    "determineMetaData": {
+      "promptTokenCount": 46407,
+      "candidatesTokenCount": 57,
+      "totalTokenCount": 46464,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 46407
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 57
+        }
+      ]
+    },
+    "cfpTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CogSci_cfp_2025_84fde048-1d0a-496d-9996-4512de562e96.txt",
+    "extractResponseTextPath": "D:\\NEW-SERVER-TS\\src\\conference\\data\\temp_texts\\CogSci_extract_response_e4679106-d8ae-4b9d-b2df-b774f770e1c0.txt",
+    "extractMetaData": {
+      "promptTokenCount": 143616,
+      "candidatesTokenCount": 1383,
+      "totalTokenCount": 144999,
+      "cachedContentTokenCount": 137044,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 143616
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 137044
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1383
+        }
+      ]
+    }
+  }
+]
