@@ -1,4 +1,3 @@
-ssh admin_leloi@172.188.242.233
 
 
 sudo apt update
@@ -101,10 +100,6 @@ sudo systemctl status server-ts.service
 sudo journalctl -u crawl_server.service
 sudo journalctl -u client.service -f
 sudo journalctl -u crawl_server.service
-
-
-2QAA398G66NXT366LQ3NVVCP mã sendgrid
-
 
 
 =====================================

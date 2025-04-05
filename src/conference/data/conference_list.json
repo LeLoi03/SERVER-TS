@@ -1,0 +1,202 @@
+[
+  {
+    "Title": "International Conference on Parallel Processing and Applied Mathematics",
+    "Acronym": "PPAM"
+  },
+  {
+    "Title": "International Conference on Principles and Practice of Declarative Programming",
+    "Acronym": "PPDP"
+  },
+  {
+    "Title": "Principles and Practice of Parallel Programming",
+    "Acronym": "PPoPP"
+  },
+  {
+    "Title": "Parallel Problem Solving from Nature",
+    "Acronym": "PPSN"
+  },
+  {
+    "Title": "International Workshop on Post-Quantum Cryptography",
+    "Acronym": "PQCrypto"
+  },
+  {
+    "Title": "Pacific Rim International Symposium on Dependable Computing",
+    "Acronym": "PRDC"
+  },
+  {
+    "Title": "Pacific Rim International Conference on Artificial Intelligence",
+    "Acronym": "PRICAI"
+  },
+  {
+    "Title": "International Conference on Principles of Practice in Multi-Agent Systems (prior to 2009 was Pacific Rim International Workshop on Multi-Agents)",
+    "Acronym": "PRIMA"
+  },
+  {
+    "Title": "IFIP Working Conferences on Virtual Enterprises",
+    "Acronym": "PRO-VE"
+  },
+  {
+    "Title": "Product Focused Software Process Improvement",
+    "Acronym": "PROFES"
+  },
+  {
+    "Title": "International Conference on Provable Security",
+    "Acronym": "ProvSec"
+  },
+  {
+    "Title": "Pacific Symposium on Biocomputing",
+    "Acronym": "PSB"
+  },
+  {
+    "Title": "Prague Stringology Conference",
+    "Acronym": "PSC"
+  },
+  {
+    "Title": "Privacy in Statistical Databases",
+    "Acronym": "PSD"
+  },
+  {
+    "Title": "Pacific-Rim Symposium on Image and Video Technology",
+    "Acronym": "PSIVT"
+  },
+  {
+    "Title": "Annual Conference on Privacy, Security and Trust",
+    "Acronym": "PST"
+  },
+  {
+    "Title": "IEEE International Conference on Quantum Computing and Engineering",
+    "Acronym": "QCE"
+  },
+  {
+    "Title": "International Conference on Quality of Multimedia Experience",
+    "Acronym": "QoMEX"
+  },
+  {
+    "Title": "Software Quality, Reliability, and Security (was International Conference on Quality Software, QSIC, that merged with SERE 2015)",
+    "Acronym": "QRS"
+  },
+  {
+    "Title": "International Conference on Heterogeneous Networking for Quality, Reliability, Security and Robustness (was International Conference on Quality of Service in Heterogeneous Wired/Wireless Networks)",
+    "Acronym": "Qshine"
+  },
+  {
+    "Title": "International Conference on the Quality of Information and Communications Technology",
+    "Acronym": "QUATIC"
+  },
+  {
+    "Title": "The International Symposium on Research in Attacks, Intrusions and Defenses (was International Symposium on Recent Advances in Intrusion Detection)",
+    "Acronym": "RAID"
+  },
+  {
+    "Title": "International Conference on Relational and AlgebraicMethods in Computer Science (was International Conference on Relational Methods in Computer Science RelMiCS)",
+    "Acronym": "RAMiCS"
+  },
+  {
+    "Title": "International Conference on Recent Advances in Natural Language Processing",
+    "Acronym": "RANLP"
+  },
+  {
+    "Title": "International Conference on Reversible Computation",
+    "Acronym": "RC"
+  },
+  {
+    "Title": "International Conference on Research Challenges in Information Science",
+    "Acronym": "RCIS"
+  },
+  {
+    "Title": "IEEE International Requirements Engineering Conference",
+    "Acronym": "RE"
+  },
+  {
+    "Title": "International Conference on Computational Molecular Biology",
+    "Acronym": "RECOMB"
+  },
+  {
+    "Title": "ACM International Conference on Recommender Systems",
+    "Acronym": "RecSys"
+  },
+  {
+    "Title": "International Symposium 'Problems of Redundancy in Information and Control Systems'",
+    "Acronym": "Redundancy"
+  },
+  {
+    "Title": "International Workshop on Requirements Engineering: Foundation for Software Quality",
+    "Acronym": "REFSQ"
+  },
+  {
+    "Title": "Robot Soccer World Cup",
+    "Acronym": "RoboCup"
+  },
+  {
+    "Title": "International Conference on Robotics, Vision, Signal Processing and Power Applications (was ROVPIA)",
+    "Acronym": "RoVISP"
+  },
+  {
+    "Title": "IEEE International Symposium on Rapid System Prototyping (was IEEE Symposium on Rapid Prototyping)",
+    "Acronym": "RSP"
+  },
+  {
+    "Title": "Robotics: Science and Systems",
+    "Acronym": "RSS"
+  },
+  {
+    "Title": "IEEE Real-Time and Embedded Technology and Applications Symposium",
+    "Acronym": "RTAS"
+  },
+  {
+    "Title": "International Conference on Embedded and Real Time Computing Systems and Applications",
+    "Acronym": "RTCSA"
+  },
+  {
+    "Title": "International Conference on Real-Time and Network Systems",
+    "Acronym": "RTNS"
+  },
+  {
+    "Title": "Real Time Systems Symposium",
+    "Acronym": "RTSS"
+  },
+  {
+    "Title": "International Joint Conference on Rules and Reasoning",
+    "Acronym": "RuleML+RR"
+  },
+  {
+    "Title": "International Conference on Runtime Verification (was workshop pre 2010)",
+    "Acronym": "RV"
+  },
+  {
+    "Title": "ACM Symposium on Applied Computing",
+    "Acronym": "SAC"
+  },
+  {
+    "Title": "Selected Areas in Cryptography",
+    "Acronym": "SAC"
+  },
+  {
+    "Title": "International Symposium on Applied Computational Intelligence and Informatics",
+    "Acronym": "SACI"
+  },
+  {
+    "Title": "ACM Symposium on Access Control Models and Technologies (previously ACM Workshop on Role-Based Access Control, RBAC, changed in 2000)",
+    "Acronym": "SACMAT"
+  },
+  {
+    "Title": "International Conference on Computer Safety, Reliability and Security",
+    "Acronym": "SAFECOMP"
+  },
+  {
+    "Title": "IFAC Symposium on Fault Detection, Supervision and Safety of Technical Processes",
+    "Acronym": "SAFEProcess"
+  },
+  {
+    "Title": "International Symposium on Algorithmic Game Theory",
+    "Acronym": "SAGT"
+  },
+  {
+    "Title": "International Symposium on Applied Machine Intelligence and Informatics",
+    "Acronym": "SAMI"
+  },
+  {
+    "Title": "IEEE International Conference on Software Analysis, Evolution and Reengineering",
+    "Acronym": "SANER"
+  }
+]
