@@ -1,0 +1,253 @@
+"title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
+"ACM International Conference on Web Search and Data Mining","WSDM","https://www.wsdm-conference.org/2025/","https://www.wsdm-conference.org/2025/call-for-papers/","None","Conference dates: March 10 - 14, 2025
+Year: 2025
+Location: Hannover, Germany
+City-State-Province: Hannover
+Country: Germany
+Continent: Europe
+Type: Offline
+Abstract Deadline: August 9, 2024
+Papers Due: August 14, 2024
+Notifications: October 23, 2024
+Camera Ready: December 18, 2024
+Topics: Web Search, Web Mining and Content Analysis, Web of Things, Ubiquitous and Mobile Computing, Privacy, Fairness, Interpretability, Social Networks, Intelligent Assistants, Crowdsourcing and Human Computation, Emerging and Creative Applications, Information Integrity, Foundation Models
+Publisher: ACM","March 10 - 14, 2025","2025","Hannover, Germany","Hannover","Germany","Europe","Offline","{""Abstract Deadline"":""August 9, 2024"",""Papers Due"":""August 14, 2024""}","{""Notifications"":""October 23, 2024""}","{""Camera Ready"":""December 18, 2024""}","{}","{}","Web Search, Web Mining and Content Analysis, Web of Things, Ubiquitous and Mobile Computing, Privacy, Fairness, Interpretability, Social Networks, Intelligent Assistants, Crowdsourcing and Human Computation, Emerging and Creative Applications, Information Integrity, Foundation Models","ACM","The 18th ACM International Conference on Web Search and Data Mining (WSDM 2025) will take place in Hannover, Germany from March 10th-14th, 2025. WSDM is a highly selective conference that includes invited talks, as well as refereed full papers. WSDM publishes original, high-quality papers related to search and data mining on the Web and the Social Web.","# WSDM 2025: Call for Papers
+
+The 18th ACM International Conference on Web Search and Data Mining (WSDM 2025) will take place in **Hannover, Germany from March 10th-14th, 2025**.
+
+WSDM is a highly selective conference that includes invited talks, as well as refereed full papers. WSDM publishes original, high-quality papers related to search and data mining on the Web and the Social Web, with an emphasis on practical yet principled novel models of search and data mining, algorithm design and analysis, economic implications, and in-depth experimental analysis of accuracy and performance.
+
+## Call for Papers
+
+Original papers emphasizing novel algorithmic approaches are particularly encouraged. Application-oriented papers that make innovative technical contributions to research are welcome. Visionary papers on new and emerging topics are particularly encouraged.
+
+Authors are explicitly discouraged from submitting papers that do not clearly present their contribution with respect to previous works, that contain only incremental results, and that do not provide significant advances over existing approaches.
+
+## Important Dates
+
+All deadlines are 11:59 pm anywhere on earth.
+
+*   **Abstract Deadline:** August 9, 2024
+*   **Papers Due:** August 14, 2024
+*   **Notifications:** October 23, 2024
+*   **Camera Ready:** December 18, 2024
+*   **Conference:** March 10-14, 2025
+
+## List of Topics
+
+WSDM proceedings are published in the ACM Digital Library. We invite papers in the areas below, with example topics listed for each area:
+
+*   **Web Search:** Algorithms for web-scale search; Adversarial search; Search user interfaces and interaction; Distributed search, metasearch, peer-to-peer search; Local and mobile search; Multimedia web search, cross-lingual search; Query analysis and query processing; Search benchmarking and evaluation; Search user behavior and log analysis; Search with Foundation Models
+*   **Web Mining and Content Analysis:** Crawling and indexing web content; Web recommender systems and algorithms; Clustering, classification, and summarization of web data; Data, entity, event, and relationship extraction; Knowledge acquisition and automatic construction of knowledge bases; Large-scale graph analysis; Semantic search, faceted search, and knowledge graphs; Multimodal data mining; Scalable algorithms for mining web data; Opinion mining and sentiment analysis; Web traffic and log analysis; Web measurements, web evolution, and web models.
+*   **Web of Things, Ubiquitous and Mobile Computing:** Algorithms for web-scale search; Adversarial search; Search user interfaces and interaction; Distributed search, metasearch, peer-to-peer search; Local and mobile search; Multimedia web search, cross-lingual search; Query analysis and query processing; Search benchmarking and evaluation; Search user behavior and log analysis; Search with Foundation Models
+*   **Privacy, Fairness, Interpretability:** Fairness and accountability in ranking, recommendations, and advertising; Explainability in web systems; Model and algorithm transparency; Interpretable models of individual and social behavior; Web search and data mining under privacy constraints; Fairness and interpretability in applications of web mining for social good.
+*   **Social Networks:** Link prediction and community detection; Social network analysis and graph algorithms; Computational social science; Influence and viral marketing in social networks; Social sensing; Searching social and real-time content; Social network dynamics; Sampling, experiments, and evaluation in social networks; Social media analysis: blogs and friendship networks; Social network analysis, theories, models and applications; Social reputation and trust.
+*   **Intelligent Assistants:** Voice search, conversational search, and dialog systems; Personal assistants, dialogue models, and conversational interaction; Task-driven search; Zero-query and implicit search.
+*   **Crowdsourcing and Human Computation:** Collaborative search and question answering; Human-in-the-Loop and Collaborative Human-AI systems.
+*   **Emerging and Creative Applications:** Mental health and well-being support systems; Web mining for social good; Systems and algorithms for urban applications such as smart cities/buildings/etc; Online education systems; Monitoring and prevention of epidemics; Social chatbots.
+*   **Information Integrity:** Systems and algorithms for monitoring and detection of misinformation and fake news; Prevalence and virality of misinformation; Misinformation sources and origins; Source and content credibility; Detecting and combating spamming, trolling aggression, dog whistles, and toxic online behaviors; Methods for detecting and mitigating low-quality and offensive content, bullying and hate speech; Polarization, extremism and radicalization; Echo chambers and filter bubbles.
+*   **Foundation Models:** Use of large language models (LLMs) and other foundation models for web search and data mining, including but not limited to the following tasks: Generative question answering; Indexing and query analysis; Pre-training and self-supervised learning for web-based tasks; Development of new user interfaces and user experiences; Support to information integrity.
+
+## Submission Guidelines
+
+*   Papers can be submitted through CMT: [https://cmt3.research.microsoft.com/WSDM2025](https://cmt3.research.microsoft.com/WSDM2025)
+*   Manuscripts must be submitted in PDF according to the new ACM format published in ACM guidelines (use documentclass[sigconf,anonymous,review]{acmart}).
+*   Submissions should not exceed eight pages including any diagrams or tables, plus up to two additional pages for references and discussion of ethical considerations.
+*   Submissions must be self-contained and in English.
+*   PDF files submitted must be anonymized.
+*   Authors may submit supplementary material (up to 100MB compressed in .zip format).
+
+## Program Chairs
+
+*   Dr. Marc Najork, Distinguished Research Scientist, Google DeepMind
+*   Prof. Meeyoung Cha, Director, MPI-SP, Professor, KAIST
+*   Prof. Marie-Francine (Sien) Moens, Director, LIIR Research lab, Professor, KU Leuven
+
+## General Chairs
+
+*   Prof. Wolfgang Nejdl, Director, L3S Research Center, Professor, Leibniz Universität Hannover
+*   Prof. Sören Auer, Director, TIB Hannover, Professor, Leibniz Universität Hannover"
+"International World Wide Web Conference","WWW","https://www2025.thewebconf.org/","https://2025.thewebconf.org/research-tracks","None","Conference dates: April 28 - May 2, 2025
+Year: 2025
+Location: ICC Sydney: International Convention & Exhibition Centre, Sydney, Australia
+City-State-Province: Sydney
+Country: Australia
+Continent: Oceania
+Type: Hybrid
+Topics: World Wide Web, Web Technologies, Web Applications, Web Research, Web Development, Web Standards","April 28 - May 2, 2025","2025","ICC Sydney: International Convention & Exhibition Centre, Sydney, Australia","Sydney","Australia","Oceania","Hybrid","{}","{}","{}","{}","{}","World Wide Web, Web Technologies, Web Applications, Web Research, Web Development, Web Standards","","The ACM Web Conference 2025 will be held in Sydney, Australia from April 28 - May 2, 2025.  This yearly international academic conference on the future direction of the World Wide Web is the premier venue to present and discuss progress in research, development, standards, and applications of the topics related to the Web.","No call for papers available"
+"International Conferences in Central Europe on Computer Graphics, Visualization and Computer Vision","WSCG","http://www.wscg.eu/","http://www.wscg.cz","http://www.wscg.cz","Conference dates: May 26 - 29, 2025
+Year: 2025
+Location: Primavera Hotel and Congress Center, Prague/Pilsen, Czech Republic
+City-State-Province: Prague/Pilsen
+Country: Czech Republic
+Continent: Europe
+Type: Hybrid
+Abstract, Full paper, Short/Communication paper, Poster: March 17, 2025
+Acceptance decision (expected): April 15, 2025
+Final version submission: April 25, 2025
+Workshop or special session proposal: December 10, 2024
+Conference fee payment: April 30, 2025
+Venue: May 26, 2025
+Technical sessions: May 27 - 29, 2025
+Topics: Computer Graphics, Visualization, Computer Vision, Rendering Techniques, GPU Programming, Geometric Computing, Surface Meshing, Shape Modeling, Physically Based Modeling, Image Based Modeling, Medical Visualization, Scientific Visualization, Computational Photography, High Definition Range Images, Constraint Motion, Simulation, Computer Vision, Image Processing, Pattern Recognition, Virtual Reality, VR Interaction, Graphical Man Machine Interaction, HCI, Levels of Details, Geometric Algebra, Conformal Geometry, Computational Geometry, Compression for Graphics, Vision, Image Processing, Stereoscopy, Holography for Computer Graphics, 3D Displays, 3D TV, Animation Techniques, Mobile Graphics, WEB Graphics, CAD, CAGD, GIS Systems
+Publisher: Computer Science Research Notes (CSRN) and Journal of WSCG","May 26 - 29, 2025","2025","Primavera Hotel and Congress Center, Prague/Pilsen, Czech Republic","Prague/Pilsen","Czech Republic","Europe","Hybrid","{""Abstract, Full paper, Short/Communication paper, Poster"":""March 17, 2025""}","{""Acceptance decision (expected)"":""April 15, 2025""}","{""Final version submission"":""April 25, 2025""}","{}","{""Workshop or special session proposal"":""December 10, 2024"",""Conference fee payment"":""April 30, 2025"",""Venue"":""May 26, 2025"",""Technical sessions"":""May 27 - 29, 2025""}","Computer Graphics, Visualization, Computer Vision, Rendering Techniques, GPU Programming, Geometric Computing, Surface Meshing, Shape Modeling, Physically Based Modeling, Image Based Modeling, Medical Visualization, Scientific Visualization, Computational Photography, High Definition Range Images, Constraint Motion, Simulation, Computer Vision, Image Processing, Pattern Recognition, Virtual Reality, VR Interaction, Graphical Man Machine Interaction, HCI, Levels of Details, Geometric Algebra, Conformal Geometry, Computational Geometry, Compression for Graphics, Vision, Image Processing, Stereoscopy, Holography for Computer Graphics, 3D Displays, 3D TV, Animation Techniques, Mobile Graphics, WEB Graphics, CAD, CAGD, GIS Systems","Computer Science Research Notes (CSRN) and Journal of WSCG","The 33rd International Conference on Computer Graphics, Visualization and Computer Vision (WSCG 2025) will be held in a hybrid mode (in-person presentations with a virtual presentation option) from May 26-29, 2025, at the Primavera Hotel and Congress Center in Prague/Pilsen, Czech Republic.  The conference focuses on computer graphics, visualization, and computer vision.","# WSCG 2025: Call for Papers
+
+The 33rd International Conference in Central Europe on Computer Graphics, Visualization and Computer Vision (WSCG 2025) will be held in a **hybrid mode** from **May 26-29, 2025**, at the **Primavera Hotel & Congress Center in Pilsen (Plzen), Czech Republic**.
+
+## Important Dates
+
+*   **Workshop or special session proposal:** December 10, 2024 (acceptance decision by January 10, 2025) – via email to WSCGconf@gmail.com, subject: ""WSCG workshop - proposed name""
+*   **Abstract submission:** January 30, 2025 (recommended) – via submission server ONLY, by 21:00 GMT
+*   **Paper submission (formatted full text):** March 17, 2025 (EXTENDED) – via submission server ONLY. Full (20 mins.), Short (15 mins.) papers (up to 10 pages A4), Posters (up to 4 pages A4)
+*   **Acceptance decision (expected):** April 15, 2025
+*   **Final version submission:** April 25, 2025
+*   **Conference fee payment:** April 30, 2025 – via bank transfer
+*   **Venue:** May 26, 2025 – late afternoon registration only. May 27-29, 2025 – Technical sessions
+
+**NOTE:**  Physical attendance is preferred. Online presentation is possible, especially for participants from distant countries [Asia, Africa, Australia, South America] - online paper presentation is mandatory.
+
+## Submission Guidelines
+
+*   Abstract and paper submission ONLY via [https://wscgreg.zcu.cz](https://wscgreg.zcu.cz).
+*   No email paper submission will be accepted.
+*   Anonymous and affiliated FULL paper versions (no extended abstract) with the Copyright Transfer Form (CTF) MUST be submitted before the submission date.
+*   ""Pay to publish"" strategy submission is NOT acceptable; the not-presented paper will not be published.
+*   All co-authors MUST be registered with the WSCG submission server with a valid email.
+*   At least one author has to present the paper online at the conference.
+
+## Publication
+
+Accepted and presented full, communication, short papers, and posters will be published in the Computer Science Research Notes [CSRN] and in the Journal of WSCG proceedings with ISSN in an electronic form after the conference and will be available from the WSCG site ([http://www.wscg.eu](http://www.wscg.eu)) for download – access free. All papers will receive individual DOIs. The best-selected papers will be published in the regular Journal of WSCG.
+
+## Topics of Interest
+
+*   Computer graphics
+*   Scientific visualization
+*   Medical visualization
+*   Computer vision
+*   Image processing
+*   Pattern recognition
+*   GPU graphics
+*   Rendering and animation
+*   Virtual reality
+*   Haptic systems
+*   Medical imaging
+*   Graphical human-computer interfaces
+*   Graphical interaction
+*   Computational photography
+*   Data compression for graphics
+*   Image-based rendering
+*   Physically based modeling
+*   Mathematical methods for graphics and vision
+*   Geometric modeling
+*   Shape analysis
+*   Shape modeling
+*   Shape retrieval
+*   Surface and volume parameterization
+*   Parallel graphics
+*   CAD, CAGD and GIS systems
+*   Related applications and topics
+
+## Contact
+
+*   Prof. Vaclav Skala, [WSCGconf@gmail.com](mailto:WSCGconf@gmail.com) subject: <topic of your email>
+*   [skala@kiv.zcu.cz](mailto:skala@kiv.zcu.cz) subject: <WSCG>"
+"Conference on Agile Software Development","XP","https://conf.researchr.org/home/xp-2025","https://conf.researchr.org/home/xp-2025","https://conf.researchr.org/dates/xp-2025","Conference dates: June 2 - 5, 2025
+Year: 2025
+Location: Brugg-Windisch, Switzerland
+City-State-Province: Brugg-Windisch
+Country: Switzerland
+Continent: Europe
+Type: Offline
+(Research Papers) Submission deadline *extended*: January 29, 2025
+(Experience Reports) Submission deadline: January 26, 2025
+(Agile Training and Education) Submission Deadline: January 26, 2025
+(Industry and Practice) Submission Deadline: January 26, 2025
+(Posters) Submission deadline: March 19, 2025
+(AIandAgile) Submissions Due: March 10, 2025
+(GoHyb) Submissions Due: March 10, 2025
+(AgileIS) Submissions Due: March 10, 2025
+(Research Workshops) Workshop Proposal Submission Deadline: December 1, 2024
+(Experience Reports) Submission of final Experience Report: April 14, 2025
+(Research Papers) Author Notification **24h late**: March 1, 2025
+(Agile Training and Education) Notification of Acceptance: March 1, 2025
+(Industry and Practice) Acceptance notification: March 1, 2025
+(Experience Reports) Notification of Acceptance: February 15, 2025
+(Posters) Acceptance notification: April 7, 2025
+(Research Workshops) Notification of Acceptance: December 15, 2024
+(AIandAgile) Workshop paper notifications: April 1, 2025
+(GoHyb) Workshop paper notifications: April 1, 2025
+(AgileIS) Workshop paper notifications: April 1, 2025
+(Research Papers) Camera-ready submission: March 31, 2025
+(Experience Reports) Begin of Shepherding Process: February 17, 2025
+(Experience Reports) Progress Checkpoint: March 10, 2025
+(Research Workshops) Workshop Day: June 2, 2025
+(AIandAgile) Workshop day: June 2, 2025
+(GoHyb) Workshop day: June 2, 2025
+(AgileIS) Workshop day: June 2, 2025
+(AgileEAD) Workshop day: June 2, 2025
+(AgilePR) Workshop day: June 2, 2025
+Early Bird deadline is extended!: March 26, 2025
+Technical Coaching Kickstart by Emily Bache: March 14, 2025
+Topics: Agile Software Development, eXtreme Programming, Agile Approaches, Agility, AI and Agile Software Development, Agile Enterprise Architecture and Delivery, Agile and InnerSource, Global and Hybrid Work in Software Engineering","June 2 - 5, 2025","2025","Brugg-Windisch, Switzerland","Brugg-Windisch","Switzerland","Europe","Offline","{""(Research Papers) Submission deadline *extended*"":""January 29, 2025"",""(Experience Reports) Submission deadline"":""January 26, 2025"",""(Agile Training and Education) Submission Deadline"":""January 26, 2025"",""(Industry and Practice) Submission Deadline"":""January 26, 2025"",""(Posters) Submission deadline"":""March 19, 2025"",""(AIandAgile) Submissions Due"":""March 10, 2025"",""(GoHyb) Submissions Due"":""March 10, 2025"",""(AgileIS) Submissions Due"":""March 10, 2025"",""(Research Workshops) Workshop Proposal Submission Deadline"":""December 1, 2024"",""(Experience Reports) Submission of final Experience Report"":""April 14, 2025""}","{""(Research Papers) Author Notification **24h late**"":""March 1, 2025"",""(Agile Training and Education) Notification of Acceptance"":""March 1, 2025"",""(Industry and Practice) Acceptance notification"":""March 1, 2025"",""(Experience Reports) Notification of Acceptance"":""February 15, 2025"",""(Posters) Acceptance notification"":""April 7, 2025"",""(Research Workshops) Notification of Acceptance"":""December 15, 2024"",""(AIandAgile) Workshop paper notifications"":""April 1, 2025"",""(GoHyb) Workshop paper notifications"":""April 1, 2025"",""(AgileIS) Workshop paper notifications"":""April 1, 2025""}","{""(Research Papers) Camera-ready submission"":""March 31, 2025""}","{}","{""(Experience Reports) Begin of Shepherding Process"":""February 17, 2025"",""(Experience Reports) Progress Checkpoint"":""March 10, 2025"",""(Research Workshops) Workshop Day"":""June 2, 2025"",""(AIandAgile) Workshop day"":""June 2, 2025"",""(GoHyb) Workshop day"":""June 2, 2025"",""(AgileIS) Workshop day"":""June 2, 2025"",""(AgileEAD) Workshop day"":""June 2, 2025"",""(AgilePR) Workshop day"":""June 2, 2025"",""Early Bird deadline is extended!"":""March 26, 2025"",""Technical Coaching Kickstart by Emily Bache"":""March 14, 2025""}","Agile Software Development, eXtreme Programming, Agile Approaches, Agility, AI and Agile Software Development, Agile Enterprise Architecture and Delivery, Agile and InnerSource, Global and Hybrid Work in Software Engineering","","The 26th International Conference on Agile Software Development (XP 2025) will be held in Brugg-Windisch, Switzerland, from June 2-5, 2025. XP is the premier agile software development conference, combining research and practice. The overarching theme of XP 2025 is: “Adapt - Uncovering better ways to deliver valuable software products”.","# XP 2025: Call for Papers and Participation
+
+The 26th International Conference on Agile Software Development (XP 2025) will be held from **June 2-5, 2025, in Brugg-Windisch, Switzerland**.
+
+XP is the premier agile software development conference, combining research and practice. The overarching theme of XP 2025 is: **“Adapt - Uncovering better ways to deliver valuable software products”.**
+
+## Tracks
+
+XP 2025 will feature the following tracks:
+
+*   Agile Training and Education
+*   Experience Reports
+*   Industry and Practice
+*   Industry and Practice Workshops
+*   Keynotes
+*   Open Space
+*   Posters
+*   Research Papers
+*   Research Workshops
+
+## Workshops
+
+*   AI and Agile Software Development: From Frustration to Success
+*   Agile Enterprise Architecture and Delivery
+*   Agile and InnerSource - a Match Made in Heaven
+*   The Third International Workshop on Global and Hybrid Work in Software Engineering (GoHyb)
+*   Towards a closer collaboration between practice and research in Agile Software Development – What we learnt; and what not?
+
+## Important Dates
+
+**NOTE:** All deadlines are anywhere-on-earth (AoE).
+
+*   **Research Workshops:**
+    *   Workshop Proposal Submission Deadline: December 1, 2024
+    *   Notification of Acceptance: December 15, 2024
+    *   Workshop Day: June 2, 2025
+*   **Research Papers:**
+    *   Abstract (recommended): January 19, 2025
+    *   Submission deadline *extended*: January 29, 2025
+    *   Author Notification **24h late**: March 1, 2025
+    *   Camera-ready submission: March 31, 2025
+*   **Experience Reports:**
+    *   Submission deadline: January 26, 2025
+    *   Notification of Acceptance: February 15, 2025
+    *   Begin of Shepherding Process: February 17, 2025
+    *   Progress Checkpoint: March 10, 2025
+    *   Submission of final Experience Report: April 14, 2025
+*   **Industry and Practice:**
+    *   Submission Deadline: January 26, 2025
+    *   Acceptance notification: March 1, 2025
+*   **Agile Training and Education:**
+    *   Submission Deadline: January 26, 2025
+    *   Notification of Acceptance: March 1, 2025
+*   **Posters:**
+    *   Submission deadline: March 19, 2025
+    *   Acceptance notification: April 7, 2025
+*   **(AIandAgile, GoHyb, AgileIS, AgileEAD, AgilePR):**
+    *   Submissions Due: March 10, 2025
+    *   Workshop paper notifications: April 1, 2025
+    *   Workshop Day: June 2, 2025
+*   **Early Bird deadline is extended!:** March 26, 2025
+*   **Technical Coaching Kickstart by Emily Bache:** March 14, 2025"
