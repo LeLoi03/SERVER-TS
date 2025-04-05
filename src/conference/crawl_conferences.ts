@@ -334,7 +334,7 @@ export const crawlConferences = async (
                     taskLogger.error({ err: taskError, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
                 } finally {
                     // Log kết thúc xử lý task, thêm trạng thái hoàn thành/thất bại -> Chỉ là hoàn thành, còn thành công hay công là do extract api
-                    taskLogger.info({ event: 'task_finish', status: (!taskHasError === true) ? "completed" : "failed" }, `Finished processing queue item`);
+                    taskLogger.info({ event: 'task_finish', status: !taskHasError }, `Finished processing queue item`);
                 }
             });
         }); // Kết thúc map conferenceList

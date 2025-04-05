@@ -121,8 +121,7 @@ export const getConferencesOnPage = async (url: string, pageIndex: number): Prom
              }
             try {
                 // Remove potential year in parentheses from title
-                const title_formatted = data[i]?.replace(/\s*\(\d{4}\)$/g, '').trim() || 'N/A'; // Handle potential undefined
-
+                const title_formatted = data[i]?.replace(/\s*\(.*?\)$/g, '').trim() || 'N/A';
                 const conference: ConferenceData = {
                     Title: title_formatted,
                     Acronym: data[i + 1] || 'N/A',

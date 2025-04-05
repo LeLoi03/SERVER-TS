@@ -304,7 +304,7 @@ export const performLogAnalysis = async (
                                 confDetail.endTime = entryTimestampISO;
                                 // Only update status if it was 'processing' to avoid overwriting an earlier failure
                                 if (confDetail.status === 'processing') {
-                                    confDetail.status = context.status ? 'completed' : 'failed'; // Assuming context.status is boolean true=success
+                                    confDetail.status = context.status ? 'completed' : 'failed';
                                 }
                                 // If status ended up as failed, ensure an error is logged for it
                                 if (confDetail.status === 'failed') {
