@@ -53,7 +53,7 @@ export const PORT: number = parseInt(process.env.PORT || '3000', 10);
 type PlaywrightChannel = 'chrome' | 'msedge' | 'firefox' | 'webkit' | 'chrome-beta' | 'msedge-beta' | 'msedge-dev' | undefined;
 
 // Xuất các hằng số với kiểu dữ liệu cụ thể
-export const CHANNEL: PlaywrightChannel = 'msedge'; // Hoặc giá trị từ biến môi trường: process.env.PLAYWRIGHT_CHANNEL as PlaywrightChannel || 'chrome'
+export const CHANNEL: PlaywrightChannel = process.env.CHANNEL as PlaywrightChannel || 'chrome'; // Hoặc giá trị từ biến môi trường: process.env.PLAYWRIGHT_CHANNEL as PlaywrightChannel || 'chrome'
 export const HEADLESS: boolean = Boolean(process.env.HEADLESS) || true; // Ví dụ: true trong production, false khi dev
 export const USER_AGENT: string = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0'; // Thay bằng user agent bạn muốn
 
