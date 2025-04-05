@@ -40,7 +40,7 @@ export const saveCrawlConferenceFromCsvToJson:  RequestHandler = async (req, res
 
         // 3. Find Matching Row
         // Matching logic might need refinement (case-insensitivity, partial match?)
-         const matchingRow = records.find(record =>
+         const matchingRow  = records.find(record =>
              record.acronym?.trim().toLowerCase() === acronym.trim().toLowerCase() &&
              record.title?.trim().toLowerCase() === title.trim().toLowerCase() // Optional: match title too
          );

@@ -15,6 +15,7 @@
   "dependencies": {
     "@getbrevo/brevo": "^2.2.0",
     "@google/generative-ai": "^0.23.0",
+    "@prisma/client": "^6.5.0",
     "@types/webaudioapi": "^0.0.27",
     "async-mutex": "^0.5.0",
     "axios": "^1.8.4",
@@ -61,6 +62,7 @@
     "@types/pg": "^8.11.11",
     "@types/ws": "^8.18.0",
     "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.2"

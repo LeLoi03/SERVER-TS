@@ -1,0 +1,351 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+generator client {
+  provider = "prisma-client-js"
+  output = "../generated/prisma_client"
+}
+
+model Locations {
+  id                String                  @id @default(uuid())
+  address           String?
+  cityStateProvince String?
+  country           String?
+  continent         String?
+  createdAt         DateTime                @default(now())
+  updatedAt         DateTime                @updatedAt
+  isAvailable       Boolean
+  organizeId        String
+  belongsTo         ConferenceOrganizations @relation(fields: [organizeId], references: [id])
+}
+
+model ConferenceDates {
+  id          String                  @id @default(uuid())
+  organizedId String
+  fromDate    DateTime
+  toDate      DateTime
+  type        String
+  name        String
+  createdAt   DateTime                @default(now())
+  updatedAt   DateTime                @updatedAt
+  isAvailable Boolean
+  belongsTo   ConferenceOrganizations @relation(fields: [organizedId], references: [id])
+}
+
+model ConferenceOrganizations {
+  id              String            @id @default(uuid())
+  year            Int?
+  accessType      String
+  isAvailable     Boolean
+  conferenceDates ConferenceDates[]
+  locations       Locations[]
+  conferenceId    String
+  publisher       String
+  summerize       String
+  callForPaper    String
+  link            String
+  cfpLink         String
+  impLink         String
+  topics          ConferenceTopics[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  belongsTo       Conferences       @relation(fields: [conferenceId], references: [id])
+}
+
+model ConferenceTopics {
+  id           String      @id @default(uuid())
+  organizeId String
+  topicId      String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    ConferenceOrganizations @relation(fields: [organizeId], references: [id])
+  inTopic      Topics      @relation(fields: [topicId], references: [id])
+}
+
+model Topics {
+  id        String @id @default(uuid())
+  name      String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  inConferenceTopics ConferenceTopics[]
+  inJournalTopics    JournalTopics[]
+  inInterested TopicUserInteresteds[]
+}
+
+model Conferences {
+  id            String                    @id @default(uuid())
+  title         String
+  acronym       String
+  creatorId     String
+  createdAt     DateTime                  @default(now())
+  updatedAt     DateTime                  @updatedAt
+  status        String
+  follows       ConferenceFollows []
+  likes         ConferenceLikes[]
+  calendars     ConferenceCalendars[]
+  organizations ConferenceOrganizations[]
+  ranks         ConferenceRanks[]
+  crawlJobs     ConferenceCrawlJobs[]
+  createdByUser Users                  @relation(fields: [creatorId], references: [id])
+  feedbacks     ConferenceFeedbacks[]
+  blacklists    ConferenceBlacklists[]
+  @@unique([title, acronym])
+}
+
+model ConferenceRanks {
+  id                String           @id @default(uuid())
+  year              Int
+  conferenceId      String
+  fieldOfResearchId String
+  rankId            String
+  inFieldOfResearch FieldOfResearchs @relation(fields: [fieldOfResearchId], references: [id])
+  byRank            Ranks            @relation(fields: [rankId], references: [id])
+  belongsTo         Conferences      @relation(fields: [conferenceId], references: [id])
+}
+
+model FieldOfResearchs {
+  id              String            @id @default(uuid())
+  name            String
+  code            String
+  journalRanks    JournalRanks[]
+  conferenceRanks ConferenceRanks[]
+}
+
+model Ranks {
+  id              String            @id @default(uuid())
+  name            String
+  value           Int
+  sourceId        String
+  conferenceRanks ConferenceRanks[]
+  journalRanks    JournalRanks[]
+  belongsToSource Sources           @relation(fields: [sourceId], references: [id])
+}
+
+model Sources {
+  id    String  @id @default(uuid())
+  name  String  @unique
+  link  String?
+  ranks Ranks[]
+}
+
+model JournalTopics {
+  id                String   @id @default(uuid())
+  journalId         String
+  topicId           String
+  belongsToTopics   Topics   @relation(fields: [topicId], references: [id])
+  inJournals Journals @relation(fields: [journalId], references: [id])
+}
+
+model JournalRanks {
+  id                String           @id @default(uuid())
+  year              Int
+  journalId         String
+  fieldOfResearchId String
+  rankId            String
+  inFieldOfResearch FieldOfResearchs @relation(fields: [fieldOfResearchId], references: [id])
+  byRank            Ranks            @relation(fields: [rankId], references: [id])
+  belongsTo         Journals         @relation(fields: [journalId], references: [id])
+}
+
+model Journals {
+  id              String             @id @default(uuid())
+  name            String
+  issn            String
+  hIndex          Int
+  publisher       String
+  nation          String
+  scope           String
+  emailSubmission String
+  topics          JournalTopics[]
+  journalRanks    JournalRanks[]
+  journalLikes    JournalLikes[]
+  journalFollows  JournalFollows[]
+  crawlJobs       JournalCrawlJobs[]
+  creator         String
+  createdByUser   Users              @relation(fields: [creator], references: [id])
+}
+
+model ConferenceFollows {
+  id           String      @id @default(uuid())
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    Conferences @relation(fields: [conferenceId], references: [id])
+  byUser       Users       @relation(fields: [userId], references: [id])
+  @@unique([conferenceId, userId])
+}
+
+model ConferenceLikes {
+  id           String      @id @default(uuid())
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    Conferences @relation(fields: [conferenceId], references: [id])
+  byUser       Users       @relation(fields: [userId], references: [id])
+  @@unique([conferenceId, userId])
+}
+
+model ConferenceFeedbacks {
+  id          String      @id @default(uuid())
+  conferenceId String
+  creatorId       String
+  description String
+  star        Int
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    Conferences @relation(fields: [conferenceId], references: [id])
+  byUser       Users       @relation(fields: [creatorId], references: [id])
+}
+
+model ConferenceCalendars {
+  id         String      @id @default(uuid())
+  conferenceId String
+  userId      String
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  belongsTo  Conferences @relation(fields: [conferenceId], references: [id])
+  byUser     Users       @relation(fields: [userId], references: [id])
+  @@unique([conferenceId, userId])
+}
+
+model JournalLikes {
+  id        String   @id @default(uuid())
+  journalId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  belongsTo Journals @relation(fields: [journalId], references: [id])
+  byUser    Users    @relation(fields: [userId], references: [id])
+}
+
+model JournalFollows {
+  id        String   @id @default(uuid())
+  journalId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  belongsTo Journals @relation(fields: [journalId], references: [id])
+  byUser    Users    @relation(fields: [userId], references: [id])
+}
+
+model Users {
+  id                 String              @id @default(uuid())
+  email              String              @unique
+  password           String
+  firstName          String
+  lastName           String
+  dob                DateTime
+  avatar             String
+  aboutMe             String
+  background         String
+  followConference   ConferenceFollows[]
+  likes              ConferenceLikes[]
+  calendar           ConferenceCalendars[]
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  createdConferences Conferences[]
+  interestedTopics   TopicUserInteresteds[]
+  createdJournals    Journals[]
+  journalLikes       JournalLikes[]
+  journalFollows     JournalFollows[]
+  feedbacks          ConferenceFeedbacks[]
+  blacklists         ConferenceBlacklists[] 
+  notifications      Notifications[]
+  notificationSettings NotificationSettings[]
+  verification      UserVerification[]
+}
+
+model ConferenceCrawlJobs {
+  id           String      @id @default(uuid())
+  conferenceId String
+  status       String
+  progress     Int
+  message      String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    Conferences @relation(fields: [conferenceId], references: [id])
+}
+
+model ConferenceBlacklists {
+  id           String      @id @default(uuid())
+  conferenceId String
+  userId       String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  belongsTo    Conferences @relation(fields: [conferenceId], references: [id])
+  byUser       Users       @relation(fields: [userId], references: [id])
+}
+
+model JournalCrawlJobs {
+  id        String   @id @default(uuid())
+  journalId String
+  status    String
+  progress  Int
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  belongsTo Journals @relation(fields: [journalId], references: [id])
+}
+
+model Notifications {
+  id        String   @id @default(uuid())
+  notificationId String
+  userId    String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  belongToNotify NotificationsTypes @relation(fields: [notificationId], references: [id])
+  byUser    Users    @relation(fields: [userId], references: [id])
+  @@unique([userId, notificationId])
+}
+
+model NotificationsTypes {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  notifications Notifications[]
+  settings NotificationSettings[]
+}
+
+model NotificationSettings {
+  id        String   @id @default(uuid())
+  userId    String
+  notificationId String
+  isEnabled Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  byUser    Users    @relation(fields: [userId], references: [id])
+  belongToNotify NotificationsTypes @relation(fields: [notificationId], references: [id])
+}
+
+model TopicUserInteresteds { 
+  userId String
+  topicId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  belongsTo Users @relation(fields: [userId], references: [id])
+  inTopic Topics @relation(fields: [topicId], references: [id])
+  @@unique([userId, topicId])
+}
+
+model UserVerification { 
+  id        String   @id @default(uuid())
+  userId    String
+  verificationCode String
+  verificationCodeExpires DateTime
+  isVerified Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  byUser    Users    @relation(fields: [userId], references: [id])
+  @@unique([userId, verificationCode, verificationCodeExpires])
+  
+}
