@@ -1,6 +1,13 @@
 [
   {
     "Title": "International Conference on Artificial Intelligence and Law",
-    "Acronym": "ICAIL"
+    "Acronym": "ICAIL",
+    "Source": "CORE2023",
+    "Rank": "C",
+    "ResearchFields": [
+      "No",
+      "4602",
+      "4601"
+    ]
   }
 ]

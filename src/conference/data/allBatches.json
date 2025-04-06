@@ -4,10 +4,10 @@
     "conferenceAcronym": "ICAIL",
     "conferenceIndex": "0",
     "conferenceLink": "https://sites.northwestern.edu/icail2025/",
-    "conferenceTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_0_initial_0bd6a54b-df70-4387-bf44-4d553188b6eb.txt",
+    "conferenceTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_0_initial_58d5ed21-c77c-44b3-9533-72e6316093a1.txt",
     "cfpLink": "https://sites.northwestern.edu/icail2025/cfp/",
     "impLink": "None",
-    "determineResponseTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_determine_response_9e5e2b27-87ca-4055-893a-226f2c6e72f4.txt",
+    "determineResponseTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_determine_response_01de91ad-3255-425c-8bd6-747c83dba173.txt",
     "determineMetaData": {
       "promptTokenCount": 48236,
       "candidatesTokenCount": 61,
@@ -25,12 +25,12 @@
         }
       ]
     },
-    "cfpTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_cfp_2025_0cd100c7-5feb-47d8-bad1-b6c37be2fb9b.txt",
-    "extractResponseTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_extract_response_e5ee462a-32e8-47fd-b67a-db45c56dfc20.txt",
+    "cfpTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_cfp_2025_12be0d83-0f5f-4431-9dc0-9dd3b6dd9204.txt",
+    "extractResponseTextPath": "/Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/src/conference/data/temp_texts/ICAIL_extract_response_1f787fb5-9959-4376-afa4-326f04c4fff6.txt",
     "extractMetaData": {
       "promptTokenCount": 140746,
-      "candidatesTokenCount": 1999,
-      "totalTokenCount": 142745,
+      "candidatesTokenCount": 2062,
+      "totalTokenCount": 142808,
       "cachedContentTokenCount": 137044,
       "promptTokensDetails": [
         {
@@ -47,7 +47,7 @@
       "candidatesTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 1999
+          "tokenCount": 2062
         }
       ]
     }

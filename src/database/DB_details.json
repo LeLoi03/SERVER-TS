@@ -161,5 +161,153 @@
     "ranks": [],
     "followedBy": [],
     "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "f0bbfc10-2ff2-4659-9cb5-42f8a583906c",
+      "title": "ACM Special Interest Group on Supporting Group Work",
+      "acronym": "Group",
+      "creatorId": null,
+      "createdAt": "2025-04-06T03:43:01.164Z",
+      "updatedAt": "2025-04-06T03:43:01.164Z"
+    },
+    "organization": {
+      "id": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "f0bbfc10-2ff2-4659-9cb5-42f8a583906c",
+      "publisher": null,
+      "summerize": "The ACM International Conference on Supporting Group Work (GROUP 2025) will be held at Omni Hilton Head Oceanfront Resort, Hilton Head Island, South Carolina, USA, January 12-15, 2025. GROUP is a premier venue for research on Computer Supported Cooperative Work, Sociotechnical Studies, Practice-Centered Computing, Human Computer Interaction, Computer Supported Collaborative Learning, Open Source Software, and related endeavors.",
+      "callForPaper": "# GROUP 2025: Call for Papers\n\nThe ACM International Conference on Supporting Group Work (GROUP 2025), a PACM:HCI Affiliated Conference, will be held at the **Omni Hilton Head Oceanfront Resort, Hilton Head Island, South Carolina, USA, from January 12-15, 2025**.\n\nGROUP is a premier yet intimate and welcoming venue for research on Computer Supported Cooperative Work, Sociotechnical Studies, Practice-Centered Computing, Human Computer Interaction, Computer Supported Collaborative Learning, Open Source Software, and related endeavors.\n\n## Conference Topics\n\nConference topics include (but are not limited to):\n\n*   Theoretical, methodological, and/or conceptual contributions about key concepts relevant to CSCW and HCI, including critique.\n*   Social, behavioral, and computational studies of collaboration and communication.\n*   Technical architectures supporting collaboration.\n*   New tools/toolkits for collaborative technologies.\n*   Ethnographic studies of collaborative practices.\n*   Coordination and workflow technology.\n*   Social computing and contexts of collaboration.\n*   Studies on Open Source Software.\n*   Current work in, and future visions of, practice-centered computing.\n*   Social justice, ethical dimensions, and related issues in CSCW, HCI, and/or sociotechnical systems.\n*   Online communities, including issues of privacy, identity, trust, and participation.\n*   Cooperative knowledge management.\n*   Algorithmic decision-support systems, automation, and human-AI collaboration.\n*   Civic technologies and their uses.\n*   Organizational issues of technology design, use, or adaptation.\n*   Strategies for use of technology in business, government, and newer forms of organizations.\n*   The ethical conduct of research studying group work and sociotechnical systems\n*   Emerging technologies and their design, use, or appropriation in work, home, leisure, entertainment, or education.\n*   Learning at the workplace (CSCL at work, Technology-Enhanced Learning, TEL).\n*   Co-located and geographically-distributed teams, global collaboration.\n*   Cultural and cross-cultural collaboration and communication.\n*   Mobile and wearable technologies in collaboration.\n*   Innovative forms of human computer interaction for cooperative technologies.\n\n## Submission Types\n\nThe main technical program at GROUP will welcome submissions in a variety of forms:\n\n*   Traditional Papers\n*   Design Fiction\n*   Notes\n\n## Submission Guidelines\n\nAll papers, design fictions, and notes will be published in the Group track of Proceedings of the ACM on Human Computer Interaction (PACMHCI).\n\nACM authoring templates and detailed instructions on formatting can be found at [https://dl.acm.org/journal/pacmhci/submission-templates](https://dl.acm.org/journal/pacmhci/submission-templates).\n\n*   **Note:** between 4,000 and 6,000 words\n*   **Full Paper:** between 7,000 and 10,000 words\n*   **Design Fiction:** between 4,000 and 10,000 words. Design fictions should clearly state that the paper is a design fiction in the abstract.\n\nPapers are subject to anonymous reviewing. Submissions must have authors’ names and affiliations removed, and avoid obvious identifying statements.\n\n## Submission Process\n\nGROUP 2025 will offer authors two waves of submission opportunities. Both waves will undergo a rigorous two-round review process.\n\nMain technical program submissions must be submitted online via the GROUP 2025 selection in Precision Conference Systems (PCS): [https://new.precisionconference.com/submissions](https://new.precisionconference.com/submissions)\n\n## Important Dates\n\nAll deadlines below are at 23:59 Anywhere on Earth (AoE).\n\n### Full Paper First Wave Submissions\n\n*   **Submission Deadline:** June 7, 2023\n\n### Full Paper Second Wave Submissions\n\n*   **Abstract and Title Submission:** May 1, 2024\n*   **Submission Deadline:** May 8, 2024\n*   **1st Round Reviews and Notifications:** July 24, 2024\n*   **Resubmit Contributions Invited for Revision:** August 21, 2024\n*   **2nd Round Decisions:** October 2, 2024\n\n### Additional CfPs\n\n*   **Workshop Proposals Deadline:** July 15, 2024\n*   **Doctoral Consortium Deadline:** September 23, 2024\n*   **Posters, Demos, and Case Studies Deadline:** September 30, 2024\n\n## Contact\n\n*   **General Chairs:**\n    *   Guo Freeman, Clemson University, USA\n    *   David Unbehaun, Clausthal University of Technology and University of Siegen, Germany\n    *   [chairs2025@group.acm.org](mailto:chairs2025@group.acm.org)\n*   **Technical Program Chairs:**\n    *   Maria Menendez-Blanco, Free University of Bozen-Bolzano, Italy\n    *   Matthieu TIXIER, Université de Technologie de Troyes, France\n    *   Donghee Yvette Wohn, New Jersey Institute of Technology, USA\n    *   [papers2025@group.acm.org](mailto:papers2025@group.acm.org)",
+      "link": "https://group.acm.org/conferences/group25/",
+      "cfpLink": "https://group.acm.org/conferences/group25/papers.php",
+      "impLink": "https://group.acm.org/conferences/group25/",
+      "createdAt": "2025-04-06T03:43:01.164Z",
+      "updatedAt": "2025-04-06T03:43:01.164Z",
+      "topics": [
+        "Computer Supported Cooperative Work",
+        "Sociotechnical Studies",
+        "Practice-Centered Computing",
+        "Human Computer Interaction",
+        "Computer Supported Collaborative Learning",
+        "Open Source Software"
+      ]
+    },
+    "location": {
+      "id": "4f20cff9-b39e-4c74-9935-0dcc1eef2f15",
+      "createdAt": "2025-04-06T03:43:01.164Z",
+      "updatedAt": "2025-04-06T03:43:01.164Z",
+      "isAvailable": true,
+      "organizeId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+      "cityStateProvince": "Hilton Head Island, South Carolina",
+      "country": "United States",
+      "address": "Omni Hilton Head Oceanfront Resort, Hilton Head Island, South Carolina, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "71f54782-6a8c-4418-b6c7-b356075fc66f",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2025-01-12T00:00:00+07:00",
+        "toDate": "2025-01-15T00:00:00+07:00",
+        "type": "conferenceDates",
+        "name": "Conference",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6a066ab2-bdbd-43dc-a967-5b2236b4d103",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-05-01T00:00:00+07:00",
+        "toDate": "2024-05-01T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Full Paper Second Wave Submissions) Abstract and Title Submission",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "51c24601-3c9a-4f3b-b6c6-e0626158d607",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-05-08T00:00:00+07:00",
+        "toDate": "2024-05-08T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Full Paper Second Wave Submissions) Submission Deadline",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "6b8a1c7b-bcf1-4fd6-8ec1-ce1d6eff33c0",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2023-06-07T00:00:00+07:00",
+        "toDate": "2023-06-07T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Full Paper First Wave Submissions) Submission Deadline",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "a771b3fb-5e6d-482d-b401-fd7963f74d2f",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-07-15T00:00:00+07:00",
+        "toDate": "2024-07-15T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Additional CfPs) Workshop Proposals Deadline",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "4d9ddf3e-a67f-46ca-b67f-b841e266f74f",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-09-23T00:00:00+07:00",
+        "toDate": "2024-09-23T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Additional CfPs) Doctoral Consortium Deadline",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "b8e7b504-72c7-4e9b-b2f2-edf2959df463",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-09-30T00:00:00+07:00",
+        "toDate": "2024-09-30T00:00:00+07:00",
+        "type": "submissionDate",
+        "name": "(Additional CfPs) Posters, Demos, and Case Studies Deadline",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "ab98425a-035d-4286-b02f-dd15f3a76412",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-07-24T00:00:00+07:00",
+        "toDate": "2024-07-24T00:00:00+07:00",
+        "type": "notificationDate",
+        "name": "(Full Paper Second Wave Submissions) 1st Round Reviews and Notifications",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      },
+      {
+        "id": "9727e653-bae7-41a4-8cec-87972bdefe5e",
+        "organizedId": "0064257c-0e2a-4e80-bc55-5617ca955ac5",
+        "fromDate": "2024-10-02T00:00:00+07:00",
+        "toDate": "2024-10-02T00:00:00+07:00",
+        "type": "notificationDate",
+        "name": "(Full Paper Second Wave Submissions) 2nd Round Decisions",
+        "createdAt": "2025-04-06T03:43:01.164Z",
+        "updatedAt": "2025-04-06T03:43:01.164Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [],
+    "followedBy": [],
+    "feedBacks": []
   }
 ]

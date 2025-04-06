@@ -186,7 +186,7 @@ app.use(conditionalJsonBodyParser);
 async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const routeLogger = logger.child({ requestId, route: '/crawl-conferences' });
-
+    
     routeLogger.info({ query: req.query, method: req.method }, "Received request to crawl conferences");
 
     const startTime = Date.now();
