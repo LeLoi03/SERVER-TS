@@ -56,12 +56,12 @@ function generateVerificationCode(length: number = 6): string {
 
 // --- signupUser Controller ---
 
-export const signupUser: RequestHandler<any, { message: string }, { firstName: string; lastName: string; email: string; password: string }, any> = async (req, res): Promise<any> => {
+export const signupUser: RequestHandler<any, { message: string }, { firstName: string; lastName: string; dob: string; email: string; password: string }, any> = async (req, res): Promise<any> => {
     try {
-        const { firstName, lastName, email, password } = req.body;
+        const { firstName, lastName, dob, email, password } = req.body;
 
         // --- Validation ---
-        if (!firstName || !lastName || !email || !password) {
+        if (!firstName || !lastName || !email || !password || !dob) {
             return res.status(400).json({ message: 'Missing required fields' });
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -104,7 +104,7 @@ export const signupUser: RequestHandler<any, { message: string }, { firstName: s
             lastName,
             email,
             password: hashedPassword, // Lưu password đã hash
-            dob: "",
+            dob: dob,
             role: 'user',
             followedConferences: [],
             myConferences: [],
