@@ -173,6 +173,7 @@ export type RetryableFunction = (limiter: RateLimiterMemory) => Promise<ApiRespo
 export interface CallGeminiApiParams {
     batch: string;
     batchIndex: number;
+    title: string | undefined;
     acronym: string | undefined;
     apiType: string;
     systemInstruction: string;

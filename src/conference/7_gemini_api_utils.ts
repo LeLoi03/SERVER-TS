@@ -412,9 +412,9 @@ const executeWithRetry = async (
 
 // --- Core Gemini API Call Function ---
 const callGeminiAPI = async ({
-    batch, batchIndex, acronym, apiType, systemInstruction, modelName, generationConfig, parentLogger
+    batch, batchIndex, title, acronym, apiType, systemInstruction, modelName, generationConfig, parentLogger
 }: CallGeminiApiParams): Promise<ApiResponse> => {
-    const baseLogContext = { apiType, batchIndex, modelName, acronym: acronym || 'N/A', function: 'callGeminiAPI' };
+    const baseLogContext = { apiType, batchIndex, modelName, title: title, acronym: acronym || 'N/A', function: 'callGeminiAPI' };
     parentLogger.info({ ...baseLogContext, event: 'gemini_call_start' }, "Preparing Gemini API call");
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
 
@@ -643,13 +643,14 @@ let extractModelIndex: number = 0;
 export const extract_information_api = async (
     batch: string,
     batchIndex: number,
+    title: string,
     acronym: string | undefined,
     parentLogger: typeof logger
 ): Promise<ApiResponse> => {
     const apiType = API_TYPE_EXTRACT;
     const config: ApiConfig | undefined = apiConfigs[apiType];
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };
-    const baseLogContext = { apiType, batchIndex, acronym: acronym || 'N/A', function: 'extract_information_api' };
+    const baseLogContext = { apiType, batchIndex, title: title || 'N/A', acronym: acronym || 'N/A', function: 'extract_information_api' };
 
     if (!config) {
         parentLogger.error(baseLogContext, "Configuration not found.");
@@ -668,7 +669,7 @@ export const extract_information_api = async (
 
     try {
         const { responseText, metaData } = await callGeminiAPI({
-            batch, batchIndex, acronym, apiType,
+            batch, batchIndex, title, acronym, apiType,
             systemInstruction: config.systemInstruction || "",
             modelName: selectedModelName,
             generationConfig: config.generationConfig,
@@ -735,7 +736,7 @@ export const determine_links_api = async (
             .replace(/\${Acronym}/g, acronym || 'N/A');
 
         const { responseText, metaData } = await callGeminiAPI({
-            batch, batchIndex, acronym, apiType,
+            batch, batchIndex, title, acronym, apiType,
             systemInstruction: systemInstruction,
             modelName: modelName,
             generationConfig: config.generationConfig,

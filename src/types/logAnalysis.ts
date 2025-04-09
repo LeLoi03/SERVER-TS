@@ -105,6 +105,6 @@ export interface LogAnalysisResult {
 
     // --- Phân tích chi tiết theo từng Conference ---
     conferenceAnalysis: {
-        [acronym: string]: ConferenceAnalysisDetail;
+        [combined: string]: ConferenceAnalysisDetail;
     };
 }

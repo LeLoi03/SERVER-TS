@@ -584,6 +584,16 @@
         "id": "f5f85255-923a-4ccf-b234-466767e84898",
         "createdAt": "2025-03-29T07:17:38.339Z",
         "updatedAt": "2025-03-29T07:17:38.339Z"
+      },
+      {
+        "id": "0f5c06ed-a77d-4ffc-9ff2-56ec7fcf8467",
+        "createdAt": "2025-04-09T11:56:04.616Z",
+        "updatedAt": "2025-04-09T11:56:04.616Z"
+      },
+      {
+        "id": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-09T12:05:32.748Z",
+        "updatedAt": "2025-04-09T12:05:32.748Z"
       }
     ],
     "myConferences": [
@@ -603,6 +613,66 @@
     ],
     "feedBacks": [],
     "notifications": [
+      {
+        "id": "35b205d3-f359-4e35-85a5-89da11b623bd",
+        "conferenceId": "0f5c06ed-a77d-4ffc-9ff2-56ec7fcf8467",
+        "createdAt": "2025-04-09T11:56:04.616Z",
+        "isImportant": false,
+        "seenAt": "2025-04-09T11:56:12.570Z",
+        "deletedAt": null,
+        "message": "You followed the conference: International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "ca8c9797-6990-4a25-b561-faa268dac726",
+        "conferenceId": "0f5c06ed-a77d-4ffc-9ff2-56ec7fcf8467",
+        "createdAt": "2025-04-09T11:55:54.761Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You removed the conference \"International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "7e744d14-6a51-4715-aa8e-7422cbc6c685",
+        "conferenceId": "0f5c06ed-a77d-4ffc-9ff2-56ec7fcf8467",
+        "createdAt": "2025-04-09T11:55:22.059Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You added the conference \"International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "efab2311-6a13-438f-bfdc-87842be9ad60",
+        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
+        "createdAt": "2025-04-04T08:32:29.962Z",
+        "isImportant": false,
+        "seenAt": "2025-04-09T11:03:18.109Z",
+        "deletedAt": null,
+        "message": "You removed the conference \"International Conference on Artificial Intelligence and Law\" from your calendar.",
+        "type": "Remove from Calendar"
+      },
+      {
+        "id": "9d6328b8-f00a-443a-9534-e0f9e602f690",
+        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
+        "createdAt": "2025-04-04T08:32:26.392Z",
+        "isImportant": false,
+        "seenAt": "2025-04-09T11:03:18.109Z",
+        "deletedAt": null,
+        "message": "You added the conference \"International Conference on Artificial Intelligence and Law\" to your calendar.",
+        "type": "Add to Calendar"
+      },
+      {
+        "id": "1b9fba0b-0d97-441e-bb95-fddbbb45b153",
+        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
+        "createdAt": "2025-04-01T04:57:00.129Z",
+        "isImportant": true,
+        "seenAt": "2025-04-02T07:02:49.755Z",
+        "deletedAt": null,
+        "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
+        "type": "Upcoming Conference"
+      },
       {
         "id": "7fcfdd7c-a973-4063-8922-84b5b6ee4085",
         "conferenceId": "f5f85255-923a-4ccf-b234-466767e84898",
@@ -784,34 +854,14 @@
         "type": "Follow Conference"
       },
       {
-        "id": "1b9fba0b-0d97-441e-bb95-fddbbb45b153",
-        "conferenceId": "7b9b7efa-d860-4057-910d-15454b13627d",
-        "createdAt": "2025-04-01T04:57:00.129Z",
-        "isImportant": true,
-        "seenAt": "2025-04-02T07:02:49.755Z",
-        "deletedAt": null,
-        "message": "Upcoming: Acceptance Notification papers submitted by March 14 in \"ACIS Conference on Software Engineering Research, Management and Applications\" starting tomorrow (4/4/2025 07:00 AM)",
-        "type": "Upcoming Conference"
-      },
-      {
-        "id": "9d6328b8-f00a-443a-9534-e0f9e602f690",
-        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
-        "createdAt": "2025-04-04T08:32:26.392Z",
+        "id": "f20779a3-340f-4d01-ae5c-1acbb188f7d6",
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-09T12:05:32.748Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You added the conference \"International Conference on Artificial Intelligence and Law\" to your calendar.",
-        "type": "Add to Calendar"
-      },
-      {
-        "id": "efab2311-6a13-438f-bfdc-87842be9ad60",
-        "conferenceId": "d255f9df-b13e-41f8-8fa3-660bbeb14706",
-        "createdAt": "2025-04-04T08:32:29.962Z",
-        "isImportant": false,
-        "seenAt": null,
-        "deletedAt": null,
-        "message": "You removed the conference \"International Conference on Artificial Intelligence and Law\" from your calendar.",
-        "type": "Remove from Calendar"
+        "message": "You followed the conference: IEEE International Working Conference on Mining Software Repositories",
+        "type": "Follow Conference"
       }
     ],
     "createdAt": "2025-03-28T13:35:20.438Z",

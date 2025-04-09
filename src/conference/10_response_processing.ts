@@ -1,13 +1,18 @@
-import fs from 'fs/promises'; // Use promises API for async/await
-import { parse } from "json2csv"; // Import types if available/needed
-import type { Options as Json2CsvOptions } from 'json2csv'; // Import specific type for options
+import fs from 'fs';
+import fsp from 'fs/promises';
+import readline from 'readline';
+// *** SỬA IMPORT: Sử dụng 'Transform' được export từ thư viện ***
+import { ParserOptions, Transform as Json2CsvTransform } from '@json2csv/node';
+// Vẫn cần các kiểu stream gốc
+import { Readable, Transform as NodeTransform, TransformOptions } from 'stream';
+import { pipeline as streamPipeline } from 'stream/promises';
+import path from 'path';
 
+import { logger } from './11_utils';
 import { ProcessedResponseData, InputRowData, ProcessedRowData } from './types';
-import { readContentFromFile } from './11_utils'; //
+import { readContentFromFile } from './11_utils';
 
-// --- Helper Functions ---
-
-// Convert a string to camelCase
+// --- Helper Functions (toCamelCase, isDateDetailKey, isDirectStringKey) ---
 function toCamelCase(str: string): string {
     if (!str) return ""; // Handle empty or nullish input
     try {
@@ -23,21 +28,14 @@ function toCamelCase(str: string): string {
         return ""; // Or some other default value
     }
 }
-
-// --- Main Functions ---
-
-// Type guard to check if a key is a valid date detail key
 function isDateDetailKey(key: string): key is keyof Pick<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate'> {
     return ["submissionDate", "notificationDate", "cameraReadyDate", "registrationDate", "otherDate"].includes(key);
 }
-
-// Type guard to check if a key is a direct string property key
 function isDirectStringKey(key: string): key is keyof Omit<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate' | 'information'> {
     return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher", "summary", "callForPapers"].includes(key);
 }
 
-
-// Hàm xử lý dữ liệu "response"
+// --- Main Functions (processResponse) ---
 export const processResponse = (response: Record<string, any> | null | undefined): ProcessedResponseData => {
     // Initialize with default values matching the interface
     const result: ProcessedResponseData = {
@@ -110,6 +108,7 @@ export const processResponse = (response: Record<string, any> | null | undefined
                             }
                         } else {
                             // Handle any other keys not explicitly matched (like potential future fields)
+                            // Append to information string, avoiding summary/callForPapers
                             if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
                                 result.information += `${key}: ${stringValue}\n`;
                             }
@@ -131,176 +130,200 @@ export const processResponse = (response: Record<string, any> | null | undefined
     return result;
 };
 
-// Hàm ghi dữ liệu vào file CSV - Now async
-export const writeCSVFile = async (filePath: string, data: InputRowData[]): Promise<ProcessedRowData[]> => {
-    let processedData: ProcessedRowData[] = []; // Initialize with correct type
 
-    try {
-        // 1. Sử dụng map với async callback để xử lý từng row
-        const processPromises = data.map(async (row: InputRowData): Promise<ProcessedRowData | null> => {
-            try {
-                let determineFileContent: string = ""; // Nội dung đọc từ file
-                let extractFileContent: string = ""; // Nội dung đọc từ file
+// --- Định nghĩa các trường cho CSV ---
+const CSV_FIELDS: (keyof ProcessedRowData | { label: string; value: keyof ProcessedRowData })[] = [
+    "title", "acronym", "link", "cfpLink", "impLink",
+    // "source", "rank", "rating", "fieldOfResearch",
+    // 'determineLinks', // Object phức tạp, cân nhắc cách thể hiện trong CSV hoặc bỏ qua
+    "information", "conferenceDates", "year",
+    "location", "cityStateProvince", "country", "continent", "type",
+    "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
+    "otherDate", "topics", "publisher", "summary", "callForPapers"
+    // Thêm hoặc bớt trường nếu cần
+];
 
-                // 2. Kiểm tra và đọc file từ determine path
-                if (row.determineResponseTextPath) {
-                    try {
-                        determineFileContent = await readContentFromFile(row.determineResponseTextPath);
-                    } catch (readError: unknown) {
-                        const message = readError instanceof Error ? readError.message : String(readError);
-                        console.error(`Error reading file ${row.determineResponseTextPath} for row: ${row.conferenceAcronym}: ${message}`);
-                        // Quyết định xử lý tiếp hay bỏ qua row này.
-                        // Ở đây, chúng ta tiếp tục với determineFileContent rỗng, JSON.parse sẽ xử lý.
-                    }
-                } else {
-                    console.warn(`determineResponseTextPath missing for row: ${row.conferenceAcronym}`);
-                    // Không có path -> không có nội dung để parse
-                }
+// --- Hàm xử lý từng dòng JSONL và tạo ProcessedRowData ---
+async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof logger): AsyncGenerator<ProcessedRowData | null> { // Return null on error/skip
+    const fileStream = fs.createReadStream(jsonlFilePath);
+    const rl = readline.createInterface({
+        input: fileStream,
+        crlfDelay: Infinity
+    });
+    const logContextBase = { file: path.basename(jsonlFilePath), function: 'processJsonlStream' };
 
-                // 3. Kiểm tra và đọc file từ extract path
-                if (row.extractResponseTextPath) {
-                    try {
-                        extractFileContent = await readContentFromFile(row.extractResponseTextPath);
-                    } catch (readError: unknown) {
-                        const message = readError instanceof Error ? readError.message : String(readError);
-                        console.error(`Error reading file ${row.extractResponseTextPath} for row: ${row.conferenceAcronym}: ${message}`);
-                        // Quyết định xử lý tiếp hay bỏ qua row này.
-                        // Ở đây, chúng ta tiếp tục với extractFileContent rỗng, JSON.parse sẽ xử lý.
-                    }
-                } else {
-                    console.warn(`extractResponseTextPath missing for row: ${row.conferenceAcronym}`);
-                    // Không có path -> không có nội dung để parse
-                }
-
-
-                // Process the parsed data
-                let parsedTruncatedInfo: Record<string, any> = {};
-                try {
-                    // 3. Parse nội dung đọc được từ file (nếu có)
-                    if (extractFileContent) { // Chỉ parse nếu có nội dung
-                        // Remove control characters
-                        const cleanedText = extractFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
-
-                        // Thêm kiểm tra xem cleanedText có rỗng không trước khi parse
-                        if (cleanedText.trim()) {
-                            parsedTruncatedInfo = JSON.parse(cleanedText);
-                            // Basic check if it's an object after parsing
-                            if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) {
-                                console.warn("Parsed file content is not an object for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath });
-                                parsedTruncatedInfo = {}; // Reset to empty object
-                            }
-                        } else {
-                            console.warn("Cleaned file content is empty, skipping parse for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath });
-                            // parsedTruncatedInfo vẫn là {}
-                        }
-                    } else {
-                        // Log nếu không có nội dung để parse (do path thiếu hoặc đọc file lỗi/rỗng)
-                        console.warn("No content to parse for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath || 'N/A' });
-                    }
-                } catch (parseError: unknown) {
-                    const message = parseError instanceof Error ? parseError.message : String(parseError);
-                    // Log lỗi kèm path và nội dung snippet
-                    console.error("Error parsing JSON from file:", message, "for row:", { acronym: row.conferenceAcronym, path: row.extractResponseTextPath }, "\nContent snippet:", extractFileContent.substring(0, 100));
-                    parsedTruncatedInfo = {}; // Ensure it's an object on error
-                }
-
-                // Process the parsed data (logic này giữ nguyên)
-                const processedResponse = processResponse(parsedTruncatedInfo);
-                // Construct the final row object conforming to ProcessedRowData (logic này giữ nguyên)
-                const finalRow: ProcessedRowData = {
-                    title: row.conferenceTitle || "",
-                    acronym: (row.conferenceAcronym || "").split("_diff")[0],
-                    // rank: row.conferenceRank || "",
-                    // rating: row.conferenceRating || "",
-                    // dblp: row.conferenceDBLP || "",
-                    // note: row.conferenceNote || "",
-                    // comments: row.conferenceComments || "",
-                    // fieldOfResearch: row.conferencePrimaryFoR || "",
-                    // source: row.conferenceSource || "",
-                    determineLinks: (() => { // Immediately Invoked Function Expression (IIFE)
-                        try {
-                            if (determineFileContent) {
-                                // Remove control characters
-                                const cleanedText = determineFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
-            
-                                if (cleanedText.trim()) {
-                                    const parsedContent = JSON.parse(cleanedText);
-                                    if (typeof parsedContent === 'object' && parsedContent !== null) {
-                                        return parsedContent;
-                                    } else {
-                                        console.warn("Parsed determineFileContent is not an object for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath });
-                                        return {};
-                                    }
-                                } else {
-                                    console.warn("Cleaned determineFileContent is empty, skipping parse for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath });
-                                    return {};
-                                }
-                            } else {
-                                console.warn("No determineFileContent to parse for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath || 'N/A' });
-                                return {};
-                            }
-                        } catch (parseError: any) {
-                            console.error("Error parsing determineFileContent JSON:", parseError.message, "for row:", { acronym: row.conferenceAcronym, path: row.determineResponseTextPath }, "\nContent snippet:", determineFileContent.substring(0, 100));
-                            return {}; // Return empty object on parsing error
-                        }
-                    })(),
-                    link: row.conferenceLink || "",
-                    cfpLink: row.cfpLink || "",
-                    impLink: row.impLink || "",
-                    ...processedResponse,
-                };
-                return finalRow;
-
-            } catch (rowProcessingError: unknown) {
-                const message = rowProcessingError instanceof Error ? rowProcessingError.message : String(rowProcessingError);
-                console.error("Error processing row:", message, "Row Acronym:", row.conferenceAcronym);
-                return null; // Skip this row on error
-            }
-        });
-
-
-        // 4. Chờ tất cả các promise xử lý row hoàn thành
-        const resolvedResults = await Promise.all(processPromises);
-
-        // 5. Lọc bỏ các kết quả null (những row bị lỗi)
-        processedData = resolvedResults.filter((row): row is ProcessedRowData => row !== null);
-
-
-        // ----- Phần còn lại của việc tạo và ghi CSV giữ nguyên -----
-
-        // Define fields for CSV header and ordering
-        // Ensure these fields match the keys in ProcessedRowData
-        const fields: (keyof ProcessedRowData)[] = [
-            "title", "acronym", "link", "cfpLink", "impLink",
-            // , "source", "rank", "rating", "fieldOfResearch", 
-            "information", "conferenceDates", "year",
-            "location", "cityStateProvince", "country", "continent", "type",
-            // Note: Date objects need special handling if not just strings
-            "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
-            "otherDate", "topics", "publisher", "summary", "callForPapers"
-        ];
-
-        const opts: Json2CsvOptions<ProcessedRowData> = { fields };
-
-        try {
-            // Dữ liệu đầu vào cho parse giờ là processedData đã được xử lý hoàn chỉnh
-            const csv = parse(processedData, opts);
-            await fs.writeFile(filePath, csv, "utf8");
-            console.log(`CSV file saved to: ${filePath}`);
-
-        } catch (parseOrWriteError: unknown) {
-             const message = parseOrWriteError instanceof Error ? parseOrWriteError.message : String(parseOrWriteError);
-            console.error("Error parsing data to CSV or writing file:", message);
-             if (parseOrWriteError instanceof Error) console.error(parseOrWriteError.stack);
-             // Có thể throw lỗi ở đây nếu cần thiết
+    let lineNumber = 0;
+    for await (const line of rl) {
+        lineNumber++;
+        const logContext = { ...logContextBase, lineNumber };
+        if (!line.trim()) {
+            // parentLogger.info({ ...logContext, event: 'skipping_empty_line' });
+            continue;
         }
 
-        return processedData; // Return the successfully processed data
+        let inputRow: InputRowData | null = null;
+        try {
+            inputRow = JSON.parse(line) as InputRowData;
+        } catch (parseError: any) {
+            parentLogger.error({ ...logContext, err: parseError, lineContentSubstring: line.substring(0, 100), event: 'jsonl_parse_error' }, "Failed to parse line in JSONL file");
+            yield null; // Yield null to indicate an error/skip for this line
+            continue;
+        }
 
-    } catch (error: unknown) { // Catch any top-level errors
-        const message = error instanceof Error ? error.message : String(error);
-        console.error("Fatal error in writeCSVFile:", message);
-        if (error instanceof Error) console.error(error.stack);
-        return []; // Trả về mảng rỗng khi có lỗi nghiêm trọng
+        if (!inputRow) {
+            parentLogger.warn({ ...logContext, event: 'jsonl_empty_row_after_parse' }, "Parsed line resulted in null/undefined data");
+             yield null; // Yield null
+            continue;
+        }
+
+        // --- Đọc và xử lý nội dung file text ---
+        let determineFileContent: string = "";
+        let extractFileContent: string = "";
+        let parsedTruncatedInfo: Record<string, any> = {};
+        let parsedDetermineInfo: Record<string, any> = {};
+
+        try {
+            // Đọc determine file
+            if (inputRow.determineResponseTextPath) {
+                try {
+                    determineFileContent = await readContentFromFile(inputRow.determineResponseTextPath);
+                    const cleaned = determineFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+                    if (cleaned) {
+                         parsedDetermineInfo = JSON.parse(cleaned);
+                         if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
+                    } else parsedDetermineInfo = {};
+                } catch (readOrParseError: any) {
+                    parentLogger.warn({ ...logContext, err: readOrParseError, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' }, `Warning reading/parsing determine file for row ${inputRow.conferenceAcronym}`);
+                    parsedDetermineInfo = {};
+                }
+            } else {
+                parsedDetermineInfo = {};
+            }
+
+            // Đọc extract file
+            if (inputRow.extractResponseTextPath) {
+                try {
+                    extractFileContent = await readContentFromFile(inputRow.extractResponseTextPath);
+                     const cleaned = extractFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+                    if (cleaned) {
+                        parsedTruncatedInfo = JSON.parse(cleaned);
+                         if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) parsedTruncatedInfo = {};
+                    } else parsedTruncatedInfo = {};
+                } catch (readOrParseError: any) {
+                    parentLogger.warn({ ...logContext, err: readOrParseError, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' }, `Warning reading/parsing extract file for row ${inputRow.conferenceAcronym}`);
+                    parsedTruncatedInfo = {};
+                }
+            } else {
+                parsedTruncatedInfo = {};
+            }
+
+            const processedResponse = processResponse(parsedTruncatedInfo);
+
+            const finalRow: ProcessedRowData = {
+                title: inputRow.conferenceTitle || "",
+                acronym: (inputRow.conferenceAcronym || "").replace(/_\d+$/, ''),
+                link: inputRow.conferenceLink || "",
+                cfpLink: inputRow.cfpLink || "",
+                impLink: inputRow.impLink || "",
+                determineLinks: parsedDetermineInfo,
+                ...processedResponse,
+            };
+
+            yield finalRow;
+
+        } catch (rowProcessingError: any) {
+            parentLogger.error({ ...logContext, err: rowProcessingError, acronym: inputRow?.conferenceAcronym, event: 'row_processing_error' }, "Error processing row data");
+             yield null; // Yield null on processing error
+        }
+    }
+    parentLogger.info({ ...logContextBase, totalLines: lineNumber, event: 'jsonl_processing_finished' }, 'Finished processing JSONL file stream');
+}
+
+
+// --- Hàm chính để ghi CSV bằng Stream ---
+export const writeCSVStream = async (
+    jsonlFilePath: string,
+    csvFilePath: string,
+    parentLogger: typeof logger,
+): Promise<void> => {
+    const logContext = { jsonlInput: jsonlFilePath, csvOutput: csvFilePath, function: 'writeCSVStream' };
+    parentLogger.info({ ...logContext, event: 'csv_stream_start' }, 'Starting CSV writing stream');
+
+    // --- FIX: Assign the function directly ---
+    const processorGenerator = processJsonlStream;
+
+    let rowObjectStream: Readable | null = null;
+    let filterTransform: NodeTransform | null = null;
+    let csvTransform: Json2CsvTransform<ProcessedRowData, ProcessedRowData> | null = null;
+    let csvWriteStream: fs.WriteStream | null = null;
+
+    try {
+        // 1. Create source stream from the JSONL processing generator
+        // Now processorGenerator *is* the function, so this call is valid
+        rowObjectStream = Readable.from(processorGenerator(jsonlFilePath, parentLogger));
+        // Simple check (though Readable.from should handle async iterators fine)
+        if (!rowObjectStream || typeof rowObjectStream.pipe !== 'function') {
+             throw new Error('Failed to create Readable stream from generator.');
+        }
+
+        // 2. Create a transform stream to filter out null values (yielded on errors/skips)
+        filterTransform = new NodeTransform({
+            objectMode: true,
+            transform(chunk: ProcessedRowData | null, encoding, callback) {
+                if (chunk !== null) { // Only pass non-null objects
+                    this.push(chunk);
+                }
+                callback();
+            }
+        });
+         if (!filterTransform || typeof filterTransform.pipe !== 'function') throw new Error('Invalid filterTransform');
+
+
+        // 3. Set up the CSV parser options
+        // Make sure CSV_FIELDS aligns with ProcessedRowData properties
+        const csvOptions: ParserOptions<ProcessedRowData, ProcessedRowData> = { fields: CSV_FIELDS };
+        const transformOpts: TransformOptions = { objectMode: true };
+        const asyncOpts = {}; // Keep empty if no async specific options needed for json2csv
+
+
+        // 4. Create instance of the json2csv Transform stream
+        csvTransform = new Json2CsvTransform(csvOptions, asyncOpts, transformOpts);
+        if (!csvTransform || typeof csvTransform.pipe !== 'function') {
+            throw new Error('Failed to create Json2CsvTransform or it is not a valid stream.');
+        }
+
+        // 5. Create the destination stream to write the CSV file
+        csvWriteStream = fs.createWriteStream(csvFilePath);
+         if (!csvWriteStream || typeof csvWriteStream.on !== 'function') throw new Error('Invalid csvWriteStream');
+
+        // 6. Use pipeline
+        parentLogger.info({ ...logContext, event: 'pipeline_starting' }, 'Calling streamPipeline...');
+        await streamPipeline(
+            rowObjectStream,
+            filterTransform, // Filter out nulls first
+            csvTransform,
+            csvWriteStream
+        );
+
+        parentLogger.info({ ...logContext, event: 'csv_stream_success' }, 'CSV writing stream finished successfully.');
+
+    } catch (error: any) {
+        parentLogger.error({
+            ...logContext,
+            streamStatus: {
+                rowObjectStreamExists: !!rowObjectStream,
+                filterTransformExists: !!filterTransform,
+                csvTransformInstanceExists: !!csvTransform,
+                csvWriteStreamExists: !!csvWriteStream,
+            },
+            err: { message: error.message, stack: error.stack, code: error.code, type: error.constructor.name },
+            event: 'csv_stream_failed'
+        }, 'Error during CSV writing stream pipeline');
+        // Clean up streams if pipeline failed partially (though promisified pipeline often handles this)
+        rowObjectStream?.destroy();
+        filterTransform?.destroy();
+        csvTransform?.destroy();
+        csvWriteStream?.destroy(error); // Signal error during destruction
+        throw error; // Re-throw the error
     }
 };

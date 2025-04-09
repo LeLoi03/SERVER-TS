@@ -64,7 +64,8 @@ export const googleLogin: RequestHandler<any, { message: string; user?: Omit<Use
                     notificationWhenFollow: true,
                     notificationWhenAddTocalendar: true,
                     notificationWhenAddToBlacklist: true
-                }
+                },
+                isVerified: true
             };
             users.push(newUser);
             user = newUser;

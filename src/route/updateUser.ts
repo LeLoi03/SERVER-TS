@@ -7,7 +7,7 @@ import fs from 'fs';
 import { UserResponse } from '../types/user.response';
 import { Notification } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
-import { connectedUsers } from '../server-ts';
+import { connectedUsers } from '../server';
 import { ConferenceResponse } from '../types/conference.response';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');

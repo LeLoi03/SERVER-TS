@@ -42,3 +42,6 @@ next-env.d.ts
 
 /src/utils/app.log
 src/chat_history.txt
+
+/.clinic
+/dist

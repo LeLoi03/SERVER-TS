@@ -60,6 +60,7 @@ export const signinUser: RequestHandler<any, { message: string; user?: Omit<User
             notifications: user.notifications,
             createdAt: user.createdAt,
             updatedAt: user.updatedAt,
+            isVerified: true
             
         };
 

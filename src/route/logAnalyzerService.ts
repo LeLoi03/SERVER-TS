@@ -2,24 +2,35 @@ import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
 // Đảm bảo đường dẫn import logger và types là chính xác
-import { logger } from '../conference/11_utils';
-import { LogAnalysisResult, ConferenceAnalysisDetail } from '../types/logAnalysis';
-import { title } from 'process';
+import { logger } from '../conference/11_utils'; // Giả định đường dẫn đúng
+import { LogAnalysisResult, ConferenceAnalysisDetail } from '../types/logAnalysis'; // Giả định đường dẫn đúng
+// import { title } from 'process'; // Không cần import này nữa
 
 // --- Helper function: Normalize Error Key ---
 const normalizeErrorKey = (error: any): string => {
     let message = 'Unknown Error Structure';
     if (error && typeof error === 'object') {
-        // Ưu tiên message, reason (từ Promise rejection), hoặc details
         message = error.message || error.reason || error.details || JSON.stringify(error);
     } else if (error) {
         message = String(error);
     }
-    // Chuẩn hóa: giới hạn độ dài, thay số bằng N, loại bỏ khoảng trắng thừa
     return message.substring(0, 150).replace(/\d+/g, 'N').replace(/\s+/g, ' ').trim();
 };
 
+// --- Helper function: Create Composite Key ---
+const createConferenceKey = (acronym?: string | null, title?: string | null): string | null => {
+    if (acronym && typeof acronym === 'string' && acronym.trim() !== '' &&
+        title && typeof title === 'string' && title.trim() !== '') {
+        // Chỉ tạo key nếu cả acronym và title hợp lệ và không rỗng
+        return `${acronym.trim()} - ${title.trim()}`;
+    }
+    // Trả về null nếu thiếu thông tin để tạo key duy nhất đáng tin cậy
+    return null;
+};
+
+
 // --- Helper function: Initialize Conference Detail ---
+// Vẫn nhận acronym và title riêng biệt để lưu vào detail object
 const initializeConferenceDetail = (acronym: string, title: string): ConferenceAnalysisDetail => ({
     title: title,
     acronym: acronym,
@@ -29,16 +40,15 @@ const initializeConferenceDetail = (acronym: string, title: string): ConferenceA
     durationSeconds: null,
     steps: {
         search_attempted: false,
-        search_success: null, // null: not attempted, true: success, false: failed/skipped
+        search_success: null,
         search_attempts_count: 0,
         search_results_count: null,
         search_filtered_count: null,
         html_save_attempted: false,
         link_processing_failed: [],
-        html_save_success: null, // null: not attempted, true: success, false: failed
+        html_save_success: null,
         link_processing_attempted: 0,
         link_processing_success: 0,
-        // Gemini steps
         gemini_determine_attempted: false,
         gemini_determine_success: null,
         gemini_determine_cache_used: null,
@@ -46,12 +56,11 @@ const initializeConferenceDetail = (acronym: string, title: string): ConferenceA
         gemini_extract_success: null,
         gemini_extract_cache_used: null,
     },
-    errors: [], // Array of { timestamp: string, message: string, details?: any }
-    finalResultPreview: undefined, // Store final result preview if available
+    errors: [],
+    finalResultPreview: undefined,
 });
 
 // --- Helper function: Add Error to Conference Detail ---
-// Di chuyển ra ngoài để tránh khai báo lại trong vòng lặp
 const addConferenceError = (
     detail: ConferenceAnalysisDetail,
     timestamp: string,
@@ -62,7 +71,6 @@ const addConferenceError = (
     detail.errors.push({
         timestamp: timestamp,
         message: normError,
-        // Optional: Include raw error details if needed for debugging later
         details: errorSource ? JSON.stringify(errorSource, Object.getOwnPropertyNames(errorSource)) : undefined
     });
 };
@@ -79,19 +87,19 @@ export const performLogAnalysis = async (
     filterStartTime?: Date | number,
     filterEndTime?: Date | number
 ): Promise<LogAnalysisResult> => {
-    const logFilePath = path.join(__dirname, '../../logs/app.log'); // !!! CHECK THIS PATH !!!
+    const logFilePath = path.join(__dirname, '../../logs/app.log'); // !!! KIỂM TRA LẠI ĐƯỜNG DẪN NÀY !!!
     const logContext = { filePath: logFilePath, function: 'performLogAnalysis' };
     logger.info({ ...logContext, event: 'analysis_start', filterStartTime, filterEndTime }, 'Starting log analysis execution');
 
-    // --- Initialize Results Structure (Remains mostly the same) ---
     const results: LogAnalysisResult = {
+        // ... (các trường khác giữ nguyên cấu trúc) ...
         analysisTimestamp: new Date().toISOString(),
         logFilePath: logFilePath,
-        totalLogEntries: 0, // Will be counted in phase 1
-        parsedLogEntries: 0, // Will be counted in phase 1
-        parseErrors: 0, // Will be counted in phase 1
-        errorLogCount: 0, // Will be counted during analysis (phase 2)
-        fatalLogCount: 0, // Will be counted during analysis (phase 2)
+        totalLogEntries: 0,
+        parsedLogEntries: 0,
+        parseErrors: 0,
+        errorLogCount: 0,
+        fatalLogCount: 0,
         overall: {
             startTime: null, endTime: null, durationSeconds: null, totalConferencesInput: 0,
             processedConferencesCount: 0, completedTasks: 0, failedOrCrashedTasks: 0, successfulExtractions: 0
@@ -110,7 +118,8 @@ export const performLogAnalysis = async (
         },
         errorsAggregated: {},
         logProcessingErrors: [],
-        conferenceAnalysis: {},
+        // Key của conferenceAnalysis giờ sẽ là "acronym - title"
+        conferenceAnalysis: {}, // Kiểu: { [compositeKey: string]: ConferenceAnalysisDetail }
     };
 
     const requestsData = new Map<string, RequestLogData>();
@@ -181,7 +190,8 @@ export const performLogAnalysis = async (
         logger.info({ ...logContext, event: 'analysis_phase2_start' }, 'Starting Phase 2: Filtering and Analyzing Requests');
         let analysisStartMillis: number | null = null;
         let analysisEndMillis: number | null = null;
-        const conferenceLastTimestamp: { [acronym: string]: number } = {}; // Track last timestamp per conference *within analyzed requests*
+        // Key của conferenceLastTimestamp giờ sẽ là "acronym - title"
+        const conferenceLastTimestamp: { [compositeKey: string]: number } = {};
 
         for (const [requestId, requestInfo] of requestsData.entries()) {
             const reqStartMillis = requestInfo.startTime;
@@ -248,72 +258,77 @@ export const performLogAnalysis = async (
                     const context = logEntry;
                     const event = context.event;
                     const route = context.route;
-                    const acronym = context.acronym || context.conferenceAcronym;
-                    const title = context.title || context.conferenceTitle;
                     const error = context.err || context.reason;
 
+
+                    // --- Lấy acronym và title từ log entry ---
+                    const acronym = context.acronym || context.conferenceAcronym;
+                    const title = context.title || context.conferenceTitle;
+
+                    // --- Tạo composite key và lấy conference detail ---
+                    const compositeKey = createConferenceKey(acronym, title);
                     let confDetail: ConferenceAnalysisDetail | null = null;
-                    if (acronym && typeof acronym === 'string' && acronym.trim() !== '') {
-                        if (!results.conferenceAnalysis[acronym]) {
-                            results.conferenceAnalysis[acronym] = initializeConferenceDetail(acronym, title);
+
+                    if (compositeKey) { // Chỉ xử lý nếu có key hợp lệ (có cả acronym và title)
+                        if (!results.conferenceAnalysis[compositeKey]) {
+                            // Khởi tạo nếu chưa tồn tại, truyền acronym và title gốc
+                            results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(acronym!, title!); // Đã check null/undefined trong createConferenceKey
                         }
-                        confDetail = results.conferenceAnalysis[acronym];
+                        confDetail = results.conferenceAnalysis[compositeKey];
+
                         if (!isNaN(entryTimeMillis)) {
-                            // Track last timestamp for this conference *within the analyzed data*
-                            conferenceLastTimestamp[acronym] = Math.max(entryTimeMillis, conferenceLastTimestamp[acronym] ?? 0);
+                            // Track last timestamp cho composite key này
+                            conferenceLastTimestamp[compositeKey] = Math.max(entryTimeMillis, conferenceLastTimestamp[compositeKey] ?? 0);
                         }
+                    } else if (acronym && (event?.startsWith('task_') || event?.includes('conference'))) {
+                        // Ghi log cảnh báo nếu một event quan trọng liên quan đến conference thiếu title
+                        logger.warn({ ...logContext, event: 'analysis_missing_title_for_key', logEvent: event, acronym: acronym, requestId: requestId }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
                     }
 
 
-
-                    // --- Event-Based Analysis (Giữ nguyên logic bên trong các case) ---
-                    // Chỉ các log đã vượt qua bộ lọc thời gian mới đi vào các switch này
-                    // và cập nhật các chỉ số trong `results` và `confDetail`
+                    // --- Event-Based Analysis (Các case bên trong giữ nguyên logic) ---
+                    // Quan trọng: Mọi thao tác với `confDetail` phải nằm trong khối `if (confDetail)`
+                    // hoặc `if (compositeKey)` để đảm bảo nó chỉ thực thi khi có key hợp lệ.
 
                     // 1. Overall Process & Task Lifecycle
+                    // 1. Overall Process & Task Lifecycle
                     switch (event) {
-                        // Note: crawl_start/end might apply to multiple requests if run concurrently
-                        // We might need to adjust how overall start/end is truly determined
                         case 'crawl_start':
-                            // Use analysisStartMillis/analysisEndMillis instead, maybe? Or keep first/last seen?
-                            // Let's keep the log's start time for now, but final overall time uses analysisStart/End
                             if (!results.overall.startTime) results.overall.startTime = context.startTime ?? entryTimestampISO;
-                            if (context.totalConferences && results.overall.totalConferencesInput !== null) { // Only take first seen? Or sum? Sum seems wrong.
+                            if (context.totalConferences && results.overall.totalConferencesInput !== null) {
+                                // Cần xem xét lại logic đếm totalConferencesInput, có thể chỉ đếm 1 lần?
+                                // Hoặc đếm số lượng conference keys duy nhất được tạo?
+                                // Tạm thời giữ nguyên logic cũ: đếm số lần log 'crawl_start' có totalConferences
                                 results.overall.totalConferencesInput++;
                             }
                             break;
                         case 'task_start':
-                            if (confDetail) {
-                                // Ensure startTime is only set once per conference analysis instance
+                            if (confDetail) { // Chỉ thực hiện nếu confDetail tồn tại (có compositeKey)
                                 if (!confDetail.startTime) confDetail.startTime = entryTimestampISO;
                                 confDetail.status = 'processing';
                             }
                             break;
-
                         case 'task_unhandled_error':
                         case 'process_predefined_links_failed':
-                            if (confDetail) {
-                                confDetail.status = 'failed'; // Mark as failed immediately
+                            if (confDetail) { // Chỉ thực hiện nếu confDetail tồn tại
+                                confDetail.status = 'failed';
                                 addConferenceError(confDetail, entryTimestampISO, error, msg || `Task failed (${event})`);
-                                // Add to aggregated errors as this is a direct task failure cause
-                                results.errorsAggregated[normalizeErrorKey(error || msg)] = (results.errorsAggregated[normalizeErrorKey(error || msg)] || 0) + 1;
                             }
+                            // Lỗi này vẫn nên được tổng hợp ngay cả khi không có confDetail
+                            results.errorsAggregated[normalizeErrorKey(error || msg)] = (results.errorsAggregated[normalizeErrorKey(error || msg)] || 0) + 1;
                             break;
                         case 'task_finish':
-                            if (confDetail) {
+                            if (confDetail) { // Chỉ thực hiện nếu confDetail tồn tại
                                 confDetail.endTime = entryTimestampISO;
-                                // Only update status if it was 'processing' to avoid overwriting an earlier failure
                                 if (confDetail.status === 'processing') {
-                                    confDetail.status = context.status ? 'completed' : 'failed';
+                                    confDetail.status = context.status === false ? 'failed' : 'completed'; // Sửa lại logic: status false là failed
                                 }
-                                // If status ended up as failed, ensure an error is logged for it
                                 if (confDetail.status === 'failed') {
                                     const failureReason = error || (context.status === false ? 'Task finished with status=false' : 'Task inferred failure at finish');
                                     addConferenceError(confDetail, entryTimestampISO, error, msg || failureReason);
-                                    // Add to aggregated errors
+                                    // Thêm lỗi vào tổng hợp chỉ khi task thực sự fail và có confDetail
                                     results.errorsAggregated[normalizeErrorKey(failureReason)] = (results.errorsAggregated[normalizeErrorKey(failureReason)] || 0) + 1;
                                 }
-                                // Calculate duration now that we have start and end (ensure start is set)
                                 if (confDetail.startTime) {
                                     const startMillis = new Date(confDetail.startTime).getTime();
                                     if (!isNaN(startMillis) && !isNaN(entryTimeMillis)) {
@@ -322,8 +337,7 @@ export const performLogAnalysis = async (
                                 }
                             }
                             break;
-                        // ... other cases for lifecycle ...
-
+                        // ... các case lifecycle khác ...
                     }
 
                     // 2. Google Search Specific Events
@@ -333,20 +347,20 @@ export const performLogAnalysis = async (
                             if (context.keyIndex !== undefined) {
                                 results.googleSearch.keyUsage[`key_${context.keyIndex}`] = (results.googleSearch.keyUsage[`key_${context.keyIndex}`] || 0) + 1;
                             }
-                            if (confDetail) {
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 confDetail.steps.search_attempted = true;
                                 confDetail.steps.search_attempts_count++;
                             }
                             break;
                         case 'search_success':
                             results.googleSearch.successfulSearches++;
-                            if (confDetail) {
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 confDetail.steps.search_success = true;
                                 confDetail.steps.search_results_count = context.resultsCount ?? null;
                             }
                             break;
-                        case 'search_results_filtered': // Assuming this log is after successful search
-                            if (confDetail) {
+                        case 'search_results_filtered':
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 confDetail.steps.search_filtered_count = context.filteredResults ?? null;
                             }
                             break;
@@ -355,31 +369,31 @@ export const performLogAnalysis = async (
                             results.googleSearch.failedSearches++;
                             const failErrorKey = normalizeErrorKey(error || msg);
                             results.googleSearch.errorsByType[failErrorKey] = (results.googleSearch.errorsByType[failErrorKey] || 0) + 1;
-                            results.errorsAggregated[failErrorKey] = (results.errorsAggregated[failErrorKey] || 0) + 1; // Critical failure
-                            if (confDetail) {
+                            results.errorsAggregated[failErrorKey] = (results.errorsAggregated[failErrorKey] || 0) + 1;
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 confDetail.steps.search_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, error, msg || 'Search ultimately failed');
                             }
                             break;
-                        case 'search_attempt_failed': // Intermediate failure
+                        case 'search_attempt_failed':
                             const searchError = context.err;
                             const isQuotaError = searchError?.details?.status === 429 || searchError?.details?.googleErrorCode === 429 || searchError?.details?.googleErrors?.some((e: any) => e.reason === 'rateLimitExceeded' || e.reason === 'quotaExceeded');
                             if (isQuotaError) results.googleSearch.quotaErrors++;
                             const attemptErrorKey = normalizeErrorKey(searchError || msg);
                             results.googleSearch.errorsByType[attemptErrorKey] = (results.googleSearch.errorsByType[attemptErrorKey] || 0) + 1;
+                            // Không cần addConferenceError ở đây vì đây là lỗi trung gian
                             break;
                         case 'search_skip_all_keys_exhausted':
                         case 'search_skip_no_key':
                             results.googleSearch.skippedSearches++;
                             const skipErrorKey = normalizeErrorKey(msg);
                             results.googleSearch.errorsByType[skipErrorKey] = (results.googleSearch.errorsByType[skipErrorKey] || 0) + 1;
-                            results.errorsAggregated[skipErrorKey] = (results.errorsAggregated[skipErrorKey] || 0) + 1; // Treat skipping as critical failure
-                            if (confDetail) {
+                            results.errorsAggregated[skipErrorKey] = (results.errorsAggregated[skipErrorKey] || 0) + 1; // Coi skip là lỗi nghiêm trọng
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 confDetail.steps.search_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, null, msg);
                             }
                             break;
-
                     }
 
                     // 3. Playwright Specific Events
@@ -390,14 +404,15 @@ export const performLogAnalysis = async (
                             results.playwright.setupError = true;
                             const setupErrorKey = normalizeErrorKey(error || msg);
                             results.playwright.errorsByType[setupErrorKey] = (results.playwright.errorsByType[setupErrorKey] || 0) + 1;
-                            results.errorsAggregated[setupErrorKey] = (results.errorsAggregated[setupErrorKey] || 0) + 1; // Setup failure is critical
+                            results.errorsAggregated[setupErrorKey] = (results.errorsAggregated[setupErrorKey] || 0) + 1;
+                            // Lỗi setup không gắn với conference cụ thể
                             break;
                         case 'save_html_start':
-                            results.playwright.htmlSaveAttempts++; // Count overall attempts triggered
+                            results.playwright.htmlSaveAttempts++;
                             if (confDetail) confDetail.steps.html_save_attempted = true;
                             break;
                         case 'save_html_step_completed':
-                            results.playwright.successfulSaves++; // Increment overall count
+                            results.playwright.successfulSaves++;
                             if (confDetail) confDetail.steps.html_save_success = true;
                             break;
                         case 'save_html_failed':
@@ -408,44 +423,41 @@ export const performLogAnalysis = async (
                                 confDetail.steps.html_save_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, error, msg || 'Save HTML step failed');
                             }
-                            // Add to aggregated if save step failure means task failure
-                            results.errorsAggregated[saveErrorKey] = (results.errorsAggregated[saveErrorKey] || 0) + 1; // Decide if this is critical
+                            results.errorsAggregated[saveErrorKey] = (results.errorsAggregated[saveErrorKey] || 0) + 1;
                             break;
-                        case 'link_access_attempt': // From within saveHTMLContent
+                        case 'link_access_attempt':
                             results.playwright.linkProcessing.totalLinksAttempted++;
                             if (confDetail) confDetail.steps.link_processing_attempted++;
                             break;
-                        case 'link_access_success': // From within saveHTMLContent
+                        case 'link_access_success':
                             results.playwright.linkProcessing.successfulAccess++;
                             if (confDetail) confDetail.steps.link_processing_success++;
                             break;
-                        case 'link_access_failed': // From within saveHTMLContent
+                        case 'link_access_failed':
                             results.playwright.linkProcessing.failedAccess++;
                             const linkAccessErrorKey = normalizeErrorKey(error || msg);
                             results.playwright.errorsByType[linkAccessErrorKey] = (results.playwright.errorsByType[linkAccessErrorKey] || 0) + 1;
-
-
                             if (confDetail) {
                                 confDetail.steps.link_processing_failed?.push({
                                     timestamp: entryTimestampISO,
-                                    // Optional: Include raw error details if needed for debugging later
                                     details: `Link access failed: ${context.url || msg}`
                                 });
                             }
+                            // Lỗi truy cập link có thể không phải lỗi nghiêm trọng của cả task
                             break;
-                        case 'redirect_detected': // From within saveHTMLContent
+                        case 'redirect_detected':
                             results.playwright.linkProcessing.redirects++;
                             break;
-                        // Catch other potential PW errors
                         case 'page_close_failed':
                         case 'dom_clean_failed':
                         case 'content_fetch_failed':
                             const otherPwErrorKey = normalizeErrorKey(error || msg);
                             results.playwright.errorsByType[otherPwErrorKey] = (results.playwright.errorsByType[otherPwErrorKey] || 0) + 1;
                             if (confDetail) { addConferenceError(confDetail, entryTimestampISO, error, msg || `Playwright operation failed (${event})`); }
-                            // Decide if these should be aggregated critical errors
+                            // Quyết định xem có nên coi là lỗi nghiêm trọng không
                             // results.errorsAggregated[otherPwErrorKey] = (results.errorsAggregated[otherPwErrorKey] || 0) + 1;
                             break;
+
                     }
 
                     // 4. Gemini API Specific Events
@@ -454,93 +466,67 @@ export const performLogAnalysis = async (
                     switch (event) {
                         // Cache Events
                         case 'cache_create_start': results.geminiApi.cacheAttempts++; break;
-                        case 'cache_create_success': results.geminiApi.cacheCreationSuccess++; break;
-                        case 'cache_create_failed':
-                        case 'cache_create_failed_invalid_object':
-                        case 'cache_create_invalid_model_error':
-                            results.geminiApi.cacheCreationFailed++;
-                            const cacheCreateErrorKey = normalizeErrorKey(error || msg);
-                            results.geminiApi.errorsByType[cacheCreateErrorKey] = (results.geminiApi.errorsByType[cacheCreateErrorKey] || 0) + 1;
-                            break;
-                        case 'cache_setup_attempt_use': results.geminiApi.cacheAttempts++; break;
                         case 'cache_setup_use_success':
                             results.geminiApi.cacheHits++;
                             if (confDetail && apiType === 'determine') confDetail.steps.gemini_determine_cache_used = true;
                             if (confDetail && apiType === 'extract') confDetail.steps.gemini_extract_cache_used = true;
                             break;
-                        case 'retry_cache_invalidate':
-                        case 'gemini_api_generate_invalidate_cache':
-                            results.geminiApi.cacheInvalidations++;
-                            break;
-                        // Retry Events
-                        case 'retry_internal_rate_limit_wait': results.geminiApi.rateLimitWaits++; break;
-                        case 'retry_wait_before_next':
-                            if (context.modelName) results.geminiApi.retriesByModel[context.modelName] = (results.geminiApi.retriesByModel[context.modelName] || 0) + 1;
-                            if (apiType) results.geminiApi.retriesByType[apiType] = (results.geminiApi.retriesByType[apiType] || 0) + 1;
-                            break;
                         case 'retry_failed_max_retries':
                             results.geminiApi.failedCalls++;
                             const retryFailErrorKey = normalizeErrorKey(context.finalError || error || msg);
                             results.geminiApi.errorsByType[retryFailErrorKey] = (results.geminiApi.errorsByType[retryFailErrorKey] || 0) + 1;
-                            results.errorsAggregated[retryFailErrorKey] = (results.errorsAggregated[retryFailErrorKey] || 0) + 1; // Critical failure
-                            if (confDetail && apiType) {
+                            results.errorsAggregated[retryFailErrorKey] = (results.errorsAggregated[retryFailErrorKey] || 0) + 1;
+                            if (confDetail && apiType) { // Chỉ cập nhật nếu có confDetail và apiType
                                 if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
                                 if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, context.finalError || error, msg || 'Gemini API call failed after max retries');
                             }
                             break;
                         case 'retry_abort_non_retryable':
-                            // Don't double count failedCalls if specific handler below exists (e.g., safety)
                             const abortError = context.finalError || error || msg;
                             const abortErrorKey = normalizeErrorKey(abortError);
                             results.geminiApi.errorsByType[abortErrorKey] = (results.geminiApi.errorsByType[abortErrorKey] || 0) + 1;
-                            // Check if it's NOT a safety block before counting as general failure/adding to aggregated
                             const isSafetyBlock = (typeof abortError === 'string' && abortError.includes('SAFETY')) || (typeof abortError === 'object' && abortError?.finishReason === 'SAFETY');
                             if (!isSafetyBlock) {
-                                results.geminiApi.failedCalls++; // Count if not handled by safety block case
-                                results.errorsAggregated[abortErrorKey] = (results.errorsAggregated[abortErrorKey] || 0) + 1; // Critical
+                                results.geminiApi.failedCalls++;
+                                results.errorsAggregated[abortErrorKey] = (results.errorsAggregated[abortErrorKey] || 0) + 1;
                             }
-                            if (confDetail && apiType) {
+                            if (confDetail && apiType) { // Chỉ cập nhật nếu có confDetail và apiType
                                 if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
                                 if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, abortError, msg || 'Gemini API call aborted (non-retryable)');
                             }
                             break;
-                        // Core API Call Events
                         case 'gemini_call_start':
                             results.geminiApi.totalCalls++;
                             if (apiType) results.geminiApi.callsByType[apiType] = (results.geminiApi.callsByType[apiType] || 0) + 1;
                             if (context.modelName) results.geminiApi.callsByModel[context.modelName] = (results.geminiApi.callsByModel[context.modelName] || 0) + 1;
-                            // Set attempt flag - success/fail will overwrite later
                             if (confDetail && apiType === 'determine') confDetail.steps.gemini_determine_attempted = true;
                             if (confDetail && apiType === 'extract') confDetail.steps.gemini_extract_attempted = true;
                             break;
-                        case 'gemini_api_attempt_success': // Final success after retries (if any)
+                        case 'gemini_api_attempt_success':
                             results.geminiApi.successfulCalls++;
                             if (context.metaData?.totalTokenCount) results.geminiApi.totalTokens += Number(context.metaData.totalTokenCount) || 0;
-                            // Ensure we don't overwrite a previous failure status if multiple logs exist
-                            if (confDetail && apiType) {
-                                if (apiType === 'determine' && confDetail.steps.gemini_determine_success !== false) { // Avoid overwriting false
+                            if (confDetail && apiType) { // Chỉ cập nhật nếu có confDetail và apiType
+                                if (apiType === 'determine' && confDetail.steps.gemini_determine_success !== false) {
                                     confDetail.steps.gemini_determine_success = true;
-                                    // cache hit was handled by 'cache_setup_use_success'
                                     if (confDetail.steps.gemini_determine_cache_used === null) confDetail.steps.gemini_determine_cache_used = context.usingCache ?? false;
                                 }
-                                if (apiType === 'extract' && confDetail.steps.gemini_extract_success !== false) { // Avoid overwriting false
+                                if (apiType === 'extract' && confDetail.steps.gemini_extract_success !== false) {
                                     confDetail.steps.gemini_extract_success = true;
-                                    // cache hit was handled by 'cache_setup_use_success'
                                     if (confDetail.steps.gemini_extract_cache_used === null) confDetail.steps.gemini_extract_cache_used = context.usingCache ?? false;
                                 }
                             }
                             break;
                         case 'gemini_api_response_blocked':
                         case 'retry_attempt_error_safety_blocked':
-                            results.geminiApi.failedCalls++; // Counts as a failed call
+                            results.geminiApi.failedCalls++;
                             results.geminiApi.blockedBySafety++;
                             const blockError = error || context.blockReason || msg || 'Request blocked by safety settings';
                             const blockErrorKey = normalizeErrorKey(blockError);
                             results.geminiApi.errorsByType[blockErrorKey] = (results.geminiApi.errorsByType[blockErrorKey] || 0) + 1;
-                            results.errorsAggregated[blockErrorKey] = (results.errorsAggregated[blockErrorKey] || 0) + 1; // Critical
-                            if (confDetail && apiType) {
+                            results.errorsAggregated[blockErrorKey] = (results.errorsAggregated[blockErrorKey] || 0) + 1;
+                            if (confDetail && apiType) { // Chỉ cập nhật nếu có confDetail và apiType
                                 if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
                                 if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
                                 addConferenceError(confDetail, entryTimestampISO, blockError, msg || 'Request blocked by safety settings');
@@ -559,15 +545,14 @@ export const performLogAnalysis = async (
                         case 'gemini_call_limiter_init_failed':
                         case 'gemini_call_invalid_apitype':
                         case 'non_cached_setup_failed':
-                            results.geminiApi.failedCalls++; // Count these as failed calls directly
+                            results.geminiApi.failedCalls++;
                             const setupFailErrorKey = normalizeErrorKey(error || msg);
                             results.geminiApi.errorsByType[setupFailErrorKey] = (results.geminiApi.errorsByType[setupFailErrorKey] || 0) + 1;
-                            results.errorsAggregated[setupFailErrorKey] = (results.errorsAggregated[setupFailErrorKey] || 0) + 1; // Setup failures are critical
-                            if (confDetail && apiType) { // Mark relevant step as failed
+                            results.errorsAggregated[setupFailErrorKey] = (results.errorsAggregated[setupFailErrorKey] || 0) + 1;
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
+                                // Nếu có apiType, đánh dấu bước cụ thể thất bại
                                 if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
                                 if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
-                                addConferenceError(confDetail, entryTimestampISO, error, msg || `Gemini setup/call failed (${event})`);
-                            } else if (confDetail) { // If apiType unknown, still log error
                                 addConferenceError(confDetail, entryTimestampISO, error, msg || `Gemini setup/call failed (${event})`);
                             }
                             break;
@@ -586,77 +571,61 @@ export const performLogAnalysis = async (
                             results.batchProcessing.failedBatches++;
                             const batchRejectError = error || 'Batch promise rejected';
                             const batchRejectErrorKey = normalizeErrorKey(batchRejectError);
-                            results.errorsAggregated[batchRejectErrorKey] = (results.errorsAggregated[batchRejectErrorKey] || 0) + 1; // Batch rejection is critical
-                            // Add error to conference detail *if* the log includes the acronym
-                            if (confDetail) {
+                            results.errorsAggregated[batchRejectErrorKey] = (results.errorsAggregated[batchRejectErrorKey] || 0) + 1;
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail (log lỗi batch có chứa acronym/title)
                                 addConferenceError(confDetail, entryTimestampISO, error, 'Batch processing step failed (rejected)');
-                                // Might indicate the conference task failed overall, let task_finish decide status
                             }
                             break;
-                        case 'batch_aggregation_finished':
-                            results.batchProcessing.aggregatedResultsCount = context.aggregatedCount ?? null;
+                        case 'save_batch_dir_create_failed': // Lỗi hệ thống, không gắn với conf cụ thể
+                        case 'save_batch_read_content_failed': // Lỗi hệ thống
+                        case 'save_batch_write_file_failed': // Lỗi hệ thống
+                            const fsError = error || msg || `Save batch FS operation failed (${event})`;
+                            const fsErrorKey = normalizeErrorKey(fsError);
+                            results.errorsAggregated[fsErrorKey] = (results.errorsAggregated[fsErrorKey] || 0) + 1;
+                            // Không add vào conference detail cụ thể
                             break;
-                        // Errors within saveBatchToFile (before aggregation)
-                        case 'save_batch_dir_create_failed':
-                        case 'save_batch_read_content_failed':
-                        case 'save_batch_write_file_failed':
-                        case 'save_batch_determine_api_call_failed': // Associated with a specific conference
-                        case 'save_batch_extract_api_call_failed':   // Associated with a specific conference
-                        case 'save_batch_process_determine_call_failed': // Associated with a specific conference
-                        case 'save_batch_process_determine_failed_invalid': // Associated with a specific conference
-                            const saveBatchError = error || msg || `Save batch step failed (${event})`;
-                            const saveBatchErrorKey = normalizeErrorKey(saveBatchError);
-                            results.errorsAggregated[saveBatchErrorKey] = (results.errorsAggregated[saveBatchErrorKey] || 0) + 1; // Treat these as critical
-                            if (confDetail) {
+                        case 'save_batch_determine_api_call_failed':
+                        case 'save_batch_extract_api_call_failed':
+                        case 'save_batch_process_determine_call_failed':
+                        case 'save_batch_process_determine_failed_invalid':
+                            const saveBatchApiError = error || msg || `Save batch step failed (${event})`;
+                            const saveBatchApiErrorKey = normalizeErrorKey(saveBatchApiError);
+                            results.errorsAggregated[saveBatchApiErrorKey] = (results.errorsAggregated[saveBatchApiErrorKey] || 0) + 1;
+                            if (confDetail) { // Chỉ cập nhật nếu có confDetail
                                 addConferenceError(confDetail, entryTimestampISO, error, msg || `Save batch step failed (${event})`);
-                                // Mark Gemini steps as failed if applicable
                                 if (event.includes('determine')) confDetail.steps.gemini_determine_success = false;
                                 if (event.includes('extract')) confDetail.steps.gemini_extract_success = false;
                             }
                             break;
                     }
 
+
                     // 6. Final Result Preview Logging
-                    // Ensure this logic runs *after* the main switch cases that might initialize confDetail
-
-                    // 1. Handle specific per-conference result log FIRST
+                    // Cần lấy cả acronym và title từ context.results[0] hoặc preview
                     if (route === '/crawl-conferences' && event === 'crawl_conference_result' && context.results && Array.isArray(context.results) && context.results.length > 0) {
-                        // Assuming context.results is an array, potentially with one item based on handler code
-                        const result = context.results[0]; // Adjust if structure is different
+                        const result = context.results[0];
                         const resultAcronym = result?.acronym;
+                        const resultTitle = result?.title;
+                        const resultCompositeKey = createConferenceKey(resultAcronym, resultTitle);
 
-                        if (resultAcronym && results.conferenceAnalysis[resultAcronym]) {
-                            // Assign directly - this is the preferred source for this request
-                            results.conferenceAnalysis[resultAcronym].finalResultPreview = result;
-                            // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Assigned preview from crawl_conference_result");
-                        } else if (resultAcronym) {
-                            // This might indicate an issue if task_start wasn't logged or processed first for this acronym in this request
-                            logger.warn({ requestId: logEntry.requestId, acronym: resultAcronym, event: 'crawl_conference_result' }, "Found crawl_conference_result but no matching analysis entry for acronym in current request processing");
+                        if (resultCompositeKey && results.conferenceAnalysis[resultCompositeKey]) {
+                            results.conferenceAnalysis[resultCompositeKey].finalResultPreview = result;
+                        } else if (resultAcronym || resultTitle) {
+                            logger.warn({ requestId: logEntry.requestId, acronym: resultAcronym, title: resultTitle, event: 'crawl_conference_result' }, "Found crawl_conference_result but no matching analysis entry OR missing info for composite key");
                         }
                     }
-                    // 2. Handle bulk result log SECOND, as a fallback
-                    // NOTE: The provided handleCrawlConferences code logs 'results' with 'crawl_conference_result', NOT 'crawl_end_success'.
-                    // Adjusting the 'else if' condition based on the provided handler code:
-                    // If the handler *really* logged the final bulk results with 'crawl_end_success', use that event name.
-                    // If it logged with 'crawl_conference_result' as shown, the first 'if' block handles it.
-                    // Let's assume there might be an older 'crawl_end_success' event format as originally intended:
-                    else if (route === '/crawl-conferences' && event === 'crawl_end_success' && context.resultsPreview && Array.isArray(context.resultsPreview)) { // Check for the older event structure
-                        // logger.trace({ requestId: logEntry.requestId }, "Processing previews from crawl_end_success");
+                    else if (route === '/crawl-conferences' && event === 'crawl_end_success' && context.resultsPreview && Array.isArray(context.resultsPreview)) {
                         context.resultsPreview.forEach((preview: any) => {
-                            const resultAcronym = preview?.acronym;
+                            const previewAcronym = preview?.acronym;
+                            const previewTitle = preview?.title;
+                            const previewCompositeKey = createConferenceKey(previewAcronym, previewTitle);
 
-                            // Check if analysis detail exists for this acronym (created by logs earlier in *this request*)
-                            if (resultAcronym && results.conferenceAnalysis[resultAcronym]) {
-                                // Assign *only if* the specific log ('crawl_conference_result') didn't already provide it for this request's analysis
-                                if (!results.conferenceAnalysis[resultAcronym].finalResultPreview) {
-                                    results.conferenceAnalysis[resultAcronym].finalResultPreview = preview;
-                                    // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Assigned preview from crawl_end_success (fallback)");
-                                } else {
-                                    // logger.trace({ requestId: logEntry.requestId, acronym: resultAcronym }, "Skipping preview from crawl_end_success (already set by specific event)");
+                            if (previewCompositeKey && results.conferenceAnalysis[previewCompositeKey]) {
+                                if (!results.conferenceAnalysis[previewCompositeKey].finalResultPreview) {
+                                    results.conferenceAnalysis[previewCompositeKey].finalResultPreview = preview;
                                 }
-                            } else if (resultAcronym) {
-                                // Log warning if preview exists but no analysis entry was initialized for this acronym in this request
-                                logger.warn({ requestId: logEntry.requestId, acronym: resultAcronym, event: 'crawl_end_success' }, "Found preview in crawl_end_success but no matching analysis entry for acronym in current request processing");
+                            } else if (previewAcronym || previewTitle) {
+                                logger.warn({ requestId: logEntry.requestId, acronym: previewAcronym, title: previewTitle, event: 'crawl_end_success_preview' }, "Found preview in crawl_end_success but no matching analysis entry OR missing info for composite key");
                             }
                         });
                     }
@@ -706,15 +675,17 @@ export const performLogAnalysis = async (
         const processedAcronyms = Object.keys(results.conferenceAnalysis);
         results.overall.processedConferencesCount = processedAcronyms.length; // Count of conferences *touched* in the analyzed requests
 
-        processedAcronyms.forEach(acronym => {
-            const detail = results.conferenceAnalysis[acronym];
+        // Lặp qua các composite keys
+        const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
+        results.overall.processedConferencesCount = processedCompositeKeys.length; // Đếm số lượng key duy nhất
 
-            // Skip if task never even started logging within the analyzed range
+        processedCompositeKeys.forEach(key => { // 'key' is the compositeKey
+            const detail = results.conferenceAnalysis[key];
+
             if (!detail.startTime && detail.status === 'unknown') return;
 
-            // Infer end time and status if task didn't finish cleanly *within the analyzed logs*
-            // Use the latest timestamp seen for *this specific conference* during analysis phase
-            const lastSeenTimeMillis = conferenceLastTimestamp[acronym] ?? analysisEndMillis;
+            // Sử dụng composite key để lấy last timestamp
+            const lastSeenTimeMillis = conferenceLastTimestamp[key] ?? analysisEndMillis;
             if (!detail.endTime && lastSeenTimeMillis) {
                 detail.endTime = new Date(lastSeenTimeMillis).toISOString();
                 if (detail.startTime) {
@@ -723,30 +694,22 @@ export const performLogAnalysis = async (
                         detail.durationSeconds = Math.round((lastSeenTimeMillis - startMillis) / 1000);
                     }
                 }
-                // If status is still processing/unknown, mark as failed (within this analysis scope)
                 if (detail.status === 'processing' || detail.status === 'unknown') {
                     detail.status = 'failed';
                     const inferredErrorMsg = `Task did not finish cleanly (inferred from analyzed log range ending at ${detail.endTime})`;
                     addConferenceError(detail, detail.endTime, null, inferredErrorMsg);
-                    // Optionally add to aggregated errors, but might be noisy if logs were simply cut off by filter
-                    // results.errorsAggregated[normalizeErrorKey(inferredErrorMsg)] = (results.errorsAggregated[normalizeErrorKey(inferredErrorMsg)] || 0) + 1;
                 }
             } else if (!detail.startTime && detail.endTime) {
-                // Edge case: End event seen but no start event within filtered range
-                detail.status = 'unknown'; // Or 'failed' - unclear state
+                detail.status = 'unknown';
                 addConferenceError(detail, detail.endTime, null, 'Task end log found without start log within analyzed range');
             }
 
-
-            // Count task completion status
             if (detail.status === 'completed') {
                 completionSuccessCount++;
             } else if (detail.status === 'failed') {
                 completionFailCount++;
             }
-            // else: status might be 'unknown' or 'processing' if logs cut off weirdly
 
-            // Count extraction success outcome
             if (detail.steps.gemini_extract_success === true) {
                 extractionSuccessCount++;
             }
@@ -756,7 +719,6 @@ export const performLogAnalysis = async (
         results.overall.failedOrCrashedTasks = completionFailCount;
         results.overall.successfulExtractions = extractionSuccessCount;
 
-        // Calculate final cache misses
         results.geminiApi.cacheMisses = Math.max(0, results.geminiApi.cacheAttempts - results.geminiApi.cacheHits);
 
         logger.info({

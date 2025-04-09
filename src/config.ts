@@ -233,8 +233,10 @@ export const CACHE_OPTIONS: CacheOptions = {
 
 // Filter out potential undefined values from process.env
 export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
-    process.env.CUSTOM_SEARCH_API_KEY_5,
+    process.env.CUSTOM_SEARCH_API_KEY_9,
+    process.env.CUSTOM_SEARCH_API_KEY_10,
     process.env.CUSTOM_SEARCH_API_KEY_13,
+    process.env.CUSTOM_SEARCH_API_KEY_5,
     process.env.CUSTOM_SEARCH_API_KEY_4,
     process.env.CUSTOM_SEARCH_API_KEY_3,
     process.env.CUSTOM_SEARCH_API_KEY_2,
@@ -244,8 +246,6 @@ export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
     process.env.CUSTOM_SEARCH_API_KEY_11,
     process.env.CUSTOM_SEARCH_API_KEY_12,
     process.env.CUSTOM_SEARCH_API_KEY_8,
-    process.env.CUSTOM_SEARCH_API_KEY_10,
-    process.env.CUSTOM_SEARCH_API_KEY_9
 ].filter((key): key is string => typeof key === 'string'); // Type predicate to ensure string[]
 
 export const GOOGLE_CSE_ID: string | undefined = process.env.GOOGLE_CSE_ID;

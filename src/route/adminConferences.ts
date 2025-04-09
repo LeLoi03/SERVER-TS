@@ -9,7 +9,7 @@ import { UserResponse } from '../types/user.response';
 import { ConferenceResponse } from '../types/conference.response';
 import { Notification } from '../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
-import { connectedUsers } from '../server-ts';
+import { connectedUsers } from '../server';
 import { AddedConference } from '../types/addConference';
 import { ConferenceListResponse } from '../types/conference.list.response';
 import { ConferenceInfo } from '../types/conference.list.response';

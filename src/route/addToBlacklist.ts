@@ -10,7 +10,7 @@ import { ConferenceResponse } from '../types/conference.response'; // Need this 
 import * as emailService from './emailService'; // Import the email service
 
 // Import WebSocket connections map
-import { connectedUsers } from '../server-ts'; // Adjust path as needed
+import { connectedUsers } from '../server'; // Adjust path as needed
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 // *** Need conference details to get the title for the notification message ***
