@@ -592,8 +592,13 @@
       },
       {
         "id": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
-        "createdAt": "2025-04-09T12:05:32.748Z",
-        "updatedAt": "2025-04-09T12:05:32.748Z"
+        "createdAt": "2025-04-09T12:21:46.666Z",
+        "updatedAt": "2025-04-09T12:21:46.666Z"
+      },
+      {
+        "id": "003941cb-961f-4f3e-946f-c1ea6578608c",
+        "createdAt": "2025-04-12T06:22:57.270Z",
+        "updatedAt": "2025-04-12T06:22:57.270Z"
       }
     ],
     "myConferences": [
@@ -613,6 +618,46 @@
     ],
     "feedBacks": [],
     "notifications": [
+      {
+        "id": "75721ddd-4364-460b-941c-6197da744e80",
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-12T05:06:25.983Z",
+        "isImportant": true,
+        "seenAt": "2025-04-12T05:09:23.996Z",
+        "deletedAt": null,
+        "message": "Update for \"IEEE International Working Conference on Mining Software Repositories\" (following):\n- Location:\n  - Address: \"Rogers Centre, Ottawa, Ontario, Canada\" -> \"\"\n  - City/State/Province: \"Ottawa, Ontario\" -> \"\"\n  - Country: \"Canada\" -> \"\"",
+        "type": "Conference Update"
+      },
+      {
+        "id": "d8d582d9-031c-4cb0-ac71-5a796e946e9d",
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-09T12:21:46.666Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: IEEE International Working Conference on Mining Software Repositories",
+        "type": "Follow Conference"
+      },
+      {
+        "id": "71186fe5-487f-40b2-a59b-3e2ac96b6ce3",
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-09T12:21:16.407Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You unfollowed the conference: IEEE International Working Conference on Mining Software Repositories",
+        "type": "Unfollow Conference"
+      },
+      {
+        "id": "f20779a3-340f-4d01-ae5c-1acbb188f7d6",
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "createdAt": "2025-04-09T12:05:32.748Z",
+        "isImportant": false,
+        "seenAt": null,
+        "deletedAt": null,
+        "message": "You followed the conference: IEEE International Working Conference on Mining Software Repositories",
+        "type": "Follow Conference"
+      },
       {
         "id": "35b205d3-f359-4e35-85a5-89da11b623bd",
         "conferenceId": "0f5c06ed-a77d-4ffc-9ff2-56ec7fcf8467",
@@ -854,13 +899,13 @@
         "type": "Follow Conference"
       },
       {
-        "id": "f20779a3-340f-4d01-ae5c-1acbb188f7d6",
-        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
-        "createdAt": "2025-04-09T12:05:32.748Z",
+        "id": "d56308f3-7b1f-4745-9662-a908214e919d",
+        "conferenceId": "003941cb-961f-4f3e-946f-c1ea6578608c",
+        "createdAt": "2025-04-12T06:22:57.270Z",
         "isImportant": false,
         "seenAt": null,
         "deletedAt": null,
-        "message": "You followed the conference: IEEE International Working Conference on Mining Software Repositories",
+        "message": "You followed the conference: International Joint Conference on Computational Intelligence",
         "type": "Follow Conference"
       }
     ],
@@ -885,5 +930,37 @@
     "verificationCode": null,
     "verificationCodeExpires": null,
     "blacklist": []
+  },
+  {
+    "id": "750b54e3-792a-4305-9763-6ed26c7d0ba6",
+    "firstName": "Lê",
+    "lastName": "Lâm Lợi",
+    "email": "loicute5FPS@gmail.com",
+    "password": "",
+    "dob": "",
+    "role": "user",
+    "followedConferences": [],
+    "myConferences": [],
+    "calendar": [],
+    "feedBacks": [],
+    "notifications": [],
+    "createdAt": "2025-04-13T02:45:30.030Z",
+    "updatedAt": "2025-04-13T02:45:30.030Z",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLtYahssG2SyEcK_jIvUYoMosrTtIIWUghgQwDTKjx1WsnDWw=s100",
+    "aboutme": "",
+    "interestedTopics": [],
+    "background": "",
+    "setting": {
+      "receiveNotifications": true,
+      "autoAddFollowToCalendar": true,
+      "notificationWhenConferencesChanges": true,
+      "upComingEvent": true,
+      "notificationThrough": "System",
+      "notificationWhenUpdateProfile": true,
+      "notificationWhenFollow": true,
+      "notificationWhenAddTocalendar": true,
+      "notificationWhenAddToBlacklist": true
+    },
+    "isVerified": true
   }
 ]

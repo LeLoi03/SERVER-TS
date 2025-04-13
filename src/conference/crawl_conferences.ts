@@ -428,10 +428,10 @@ export const crawlConferences = async (
     } finally {
 
         // --- Luôn thực hiện cleanup ---
-        // parentLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
+        parentLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
 
-        // // 1. Dọn dẹp file tạm
-        // await cleanupTempFiles();
+        // 1. Dọn dẹp file tạm
+        await cleanupTempFiles();
 
         // 2. Đóng trình duyệt
         if (playwrightBrowser) {

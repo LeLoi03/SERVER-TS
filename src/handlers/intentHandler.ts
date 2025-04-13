@@ -200,11 +200,11 @@ export interface UserIntent {
 * Extracts user questions from the history.
 */
 async function extractUserQuestions(history: HistoryItem[]): Promise<string[]> {
-  await logToFile(`Extracting user questions from history. History length: ${history.length}`);
+  logToFile(`Extracting user questions from history. History length: ${history.length}`);
   const questions = history
     .filter(entry => entry.role === "user")
     .map((entry, index) => `User question ${index + 1}: ${entry.parts[0].text}`);
-  await logToFile(`Extracted user questions: ${JSON.stringify(questions)}`);
+  logToFile(`Extracted user questions: ${JSON.stringify(questions)}`);
   return questions;
 }
 

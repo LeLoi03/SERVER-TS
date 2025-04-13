@@ -248,6 +248,86 @@
       "updatedAt": "2025-04-09T03:32:40.267Z",
       "creatorName": "Admin"
     },
+    "organizations": [
+      {
+        "id": "a7ce14d6-3fea-4e6d-a498-2dfb1277566e",
+        "year": 2025,
+        "accessType": "Offline",
+        "isAvailable": true,
+        "conferenceId": "00879cf6-8346-46ed-ad9f-813f030c1ce0",
+        "publisher": "",
+        "summerize": "The Mining Software Repositories (MSR) conference is the premier venue for software analytics research, according to which software engineering data is analyzed using a mixture of data science, machine learning/artificial intelligence and qualitative methodologies. MSR 2025 will be held on April 28-29, 2025, in Ottawa, Canada.",
+        "callForPaper": "# MSR 2025: Call for Papers\n\nThe Mining Software Repositories (MSR) conference is the premier venue for software analytics research, according to which software engineering data is analyzed using a mixture of data science, machine learning/artificial intelligence, and qualitative methodologies. The goal of the conference is to improve software engineering practices by uncovering interesting and actionable information about software systems and projects.\n\nThe 22nd International Conference on Mining Software Repositories will be held on **April 28-29, 2025, in Ottawa, Canada**.\n\n## Evaluation Criteria\n\nWe invite both full (maximum ten pages, plus two additional pages of references) as well as short (four pages, plus references) papers to the Research Track. Full papers are expected to describe new techniques and/or novel research results, to have a high degree of technical rigor, and to be evaluated scientifically. Short papers are expected to discuss controversial issues in the field or present interesting or thought-provoking ideas that are not yet fully developed. Submissions will be evaluated according to the following criteria:\n\n*   **Soundness:** How well the paper’s contributions address the research questions posed and are backed by a thorough application of relevant research procedures.\n*   **Relevance:** The extent to which the paper successfully argues or illustrates that its contributions help bridge a significant knowledge gap or tackle a crucial practical issue within the field of software engineering.\n*   **Novelty:** How original the paper’s contributions are in comparison to existing knowledge or how significantly they contribute to the current body of knowledge. Note that this doesn’t discourage well-motivated replication studies.\n*   **Presentation:** How well-structured and clear the paper’s argumentation is, how clearly the contributions are articulated, the legibility of figures and tables, and the adequacy of English language usage. All papers should comply with the formatting instructions provided.\n*   **Replicability:** The extent to which the paper’s claims can be independently verified through available replication packages and/or sufficient information included in the paper to understand how data was obtained, analyzed, and interpreted, or how a proposed technique works.\n\n## Junior PC\n\nMSR 2025 will once again integrate junior reviewers into the Technical track program committee!\n\nThe main goal is to train the next generation of MSR (and, more broadly, SE) reviewers and program committee members.\n\n## Submission Process\n\nSubmissions must conform to the IEEE conference proceedings template. Submissions to the Technical Track can be made via the [submission site](https://msr2025-technical.hotcrp.com/) by the submission deadline. However, we encourage authors to submit at least the paper abstract and author details well in advance of the deadline, to leave enough time to properly enter conflicts of interest for anonymous reviewing.\n\n*   All submissions must not exceed 10 pages for the main text, inclusive of all figures, tables, appendices, etc. Two more pages containing only references are permitted. All submissions must be in PDF. Accepted papers will be allowed one extra page for the main text of the camera-ready version. The page limit is strict, and it will not be possible to purchase additional pages at any point in the process (including after acceptance).\n*   Submissions must strictly conform to the IEEE conference proceedings formatting instructions.\n*   By submitting to MSR, authors acknowledge that they are aware of and agree to be bound by the ACM Policy and Procedures on Plagiarism and the IEEE Plagiarism FAQ.\n*   Papers submitted to MSR 2025 must not have been published elsewhere and must not be under review or submitted for review elsewhere whilst under consideration for MSR 2025. Contravention of this concurrent submission policy will be deemed a serious breach of scientific ethics, and appropriate action will be taken in all such cases.\n*   By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including [ACM’s new Publications Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects).\n*   Please ensure that you and your co-authors obtain an ORCID ID.\n*   The MSR 2025 Technical Track will employ a double-anonymous review process.\n*   By submitting to MSR 2025, authors acknowledge that they conform to the [authorship policy of the ACM](https://www.acm.org/publications/policies/new-acm-policy-on-authorship), and [the authorship policy of the IEEE](https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/definition-of-authorship/).\n*   Submissions should also include a supporting statement on the data availability, per the Open Science policy below.\n*   Authors will have a chance to see the reviews and respond to reviewer comments before any decision about the submission is made.\n\n## Open Science Policy\n\nThe MSR conference actively supports the adoption of open science principles. We expect all contributing authors to disclose (anonymized and curated) data to increase reproducibility, replicability, and/or recoverability of the studies, provided that there are no ethical, legal, technical, economic, or sensible barriers preventing the disclosure.\n\n## Important Dates\n\n*   **Abstract Deadline:** November 6, 2024 AoE\n*   **Paper Deadline:** November 9, 2024 AoE\n*   **Author Response Period:** December 12–15, 2024 AoE\n*   **Author Notification:** January 12, 2025 AoE\n*   **Camera Ready Deadline:** February 5, 2025 AoE",
+        "link": "https://2025.msrconf.org/",
+        "cfpLink": "https://2025.msrconf.org/track/msr-2025-technical-papers",
+        "impLink": "None",
+        "createdAt": "2025-04-09T03:37:23.684Z",
+        "updatedAt": "2025-04-09T03:37:23.684Z",
+        "topics": [
+          "Software Analytics",
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Software Engineering"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "e4f72c11-6e02-42ce-8f75-0ecb076f3751",
+        "fromDate": "2025-04-28T00:00:00.000Z",
+        "toDate": "2025-04-29T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:37:26.175Z",
+        "updatedAt": "2025-04-09T03:37:26.175Z"
+      }
+    ],
+    "followBy": [
+      {
+        "id": "813aeb85-7c61-4e17-8dc2-6c57c8489885",
+        "userId": "d046b4d8-7b6f-4a3b-8c20-1a87a0f3e399",
+        "user": {
+          "avatar": null,
+          "firstName": "sieu",
+          "lastName": "nguyen"
+        },
+        "createdAt": "2025-04-10T02:30:08.389Z",
+        "updatedAt": "2025-04-10T02:30:08.389Z"
+      }
+    ],
+    "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "fieldOfResearch": "Software engineering"
+      },
+      {
+        "rank": "A",
+        "source": "CORE2023",
+        "fieldOfResearch": "Data management and data science"
+      }
+    ],
+    "followedBy": [
+      {
+        "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
+        "email": "loicute5fps@gmail.com",
+        "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
+        "firstName": "Le",
+        "lastName": "Loi",
+        "createdAt": "2025-04-09T12:21:46.666Z",
+        "updatedAt": "2025-04-09T12:21:46.666Z"
+      }
+    ],
+    "feedBacks": [],
     "organization": {
       "id": "a7ce14d6-3fea-4e6d-a498-2dfb1277566e",
       "year": 2025,
@@ -269,36 +349,616 @@
         "Artificial Intelligence",
         "Software Engineering"
       ]
+    }
+  },
+  {
+    "conference": {
+      "id": "f94e72b9-eadb-4aaf-9a08-e34701d6b596",
+      "title": "World Conference on Information Systems and Technologies",
+      "acronym": "WorldCIST",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:50.864Z",
+      "updatedAt": "2025-04-09T03:32:50.864Z",
+      "creatorName": "Admin"
+    },
+    "organization": {
+      "id": "61dffd8f-b48b-4f47-b863-adf3baca6fe9",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "f94e72b9-eadb-4aaf-9a08-e34701d6b596",
+      "publisher": "Springer",
+      "summerize": "WorldCist'25, the 13th World Conference on Information Systems and Technologies, will be held in Florianópolis, Brazil, from April 15-17, 2025. The conference is a global forum for researchers and practitioners to present and discuss the most recent innovations, trends, results, experiences, and concerns in various aspects of Information Systems and Technologies.",
+      "callForPaper": "# WorldCIST'25: Call for Papers\n\nThe WorldCist'25 - 13th World Conference on Information Systems and Technologies will be held in **Florianópolis, Brazil, from April 15-17, 2025**, at the **Federal University of Santa Catarina (UFSC)**.\n\n## Scope\n\nWorldCist'25 is a global forum for researchers and practitioners to present and discuss the most recent innovations, trends, results, experiences, and concerns in the several perspectives of Information Systems and Technologies.\n\n## Themes\n\nSubmitted papers should be related to one or more of the main themes proposed for the Conference:\n\nA) Information and Knowledge Management (IKM)\nB) Organizational Models and Information Systems (OMIS)\nC) Software and Systems Modeling (SSM)\nD) Software Systems, Architectures, Applications, and Tools (SSAAT)\nE) Multimedia Systems and Applications (MSA)\nF) Computer Networks, Mobility, and Pervasive Systems (CNMPS)\nG) Intelligent and Decision Support Systems (IDSS)\nH) Big Data Analytics and Applications (BDAA)\nI) Human-Computer Interaction (HCI)\nJ) Ethics, Computers, and Security (ECS)\nK) Health Informatics (HIS)\nL) Information Technologies in Education (ITE)\nM) Technologies for Biomedical Applications (TBA)\nN) Information Technologies in Radiocommunications (ITR)\n\n## Types of Submissions\n\nFour types of original papers can be submitted:\n\n*   **Full paper:** Finished or consolidated R&D works, to be included in one of the Conference themes. (12-page limit)\n*   **Short paper:** Ongoing works with relevant preliminary results, open to discussion. (8-page limit)\n*   **Poster paper:** Initial work with relevant ideas, open to discussion. (4-page limit)\n*   **Company paper:** Companies' papers that show practical experience, R&D, tools, etc., focused on some topics of the conference. (8-page limit)\n\n## Submission Guidelines\n\nSubmitted papers must comply with the format of the Lecture Notes in Networks and Systems series ([Instructions for Authors at Springer Website](https://www.springer.com/us/authors-editors/conference-proceedings/conference-proceedings-guidelines)), be written in English, must not have been published before, not be under review for any other conference or publication, and not include any information leading to the authors’ identification.  All papers will be subjected to a “double-blind review” by at least two members of the Program Committee.\n\n## Publication and Indexing\n\n*   To ensure publication and presentation, at least one author must be fully registered by January 15, 2025, and the paper must comply with the suggested layout and page limit.\n*   Full and Short papers will be published in Proceedings by Springer, in several books of the Lecture Notes in Networks and Systems series. Poster and company papers will not be published, just presented at the conference.\n*   Published Full and Short papers will be submitted for indexation by WoS, SCOPUS, DBLP, and Google Scholar, among others, and will be available in the SpringerLink Digital Library.\n\n## Important Dates\n\n*   **Paper Submission:** December 5, 2024\n*   **Notification of Acceptance:** January 5, 2025\n*   **Payment of Registration (to ensure the inclusion of an accepted paper in the conference proceedings):** January 15, 2025\n*   **Camera-ready Submission:** January 15, 2025\n\n## Keynote Speakers\n\n*   Gintautas Dzemyda, Doctor Honoris Causa of the University of Latvia. Director at Vilnius University Institute of Data Science and Digital Technologies, Lithuania. Editor-in-Chief of Informatica (JCR/Q1).\n*   Marjan Mernik, Full Professor, University of Maribor, Slovenia. Editor-in-Chief of the Journal of Computer Languages (JCR/Q3).",
+      "link": "https://worldcist.org/",
+      "cfpLink": "https://worldcist.org/index.php/call-for-papers",
+      "impLink": "None",
+      "createdAt": "2025-04-09T03:38:00.728Z",
+      "updatedAt": "2025-04-09T03:38:00.728Z",
+      "topics": [
+        "Information and Knowledge Management",
+        "Organizational Models and Information Systems",
+        "Software and Systems Modeling",
+        "Software Systems",
+        "Architectures",
+        "Applications and Tools",
+        "Multimedia Systems and Applications",
+        "Computer Networks",
+        "Mobility and Pervasive Systems",
+        "Intelligent and Decision Support Systems",
+        "Big Data Analytics and Applications",
+        "Human-Computer Interaction",
+        "Ethics",
+        "Computers & Security",
+        "Health Informatics",
+        "Information Technologies in Education",
+        "Information Technologies in Radiocommunications",
+        "Technologies for Biomedical Applications"
+      ]
     },
     "location": {
-      "id": "714cd519-c5c7-405b-95c1-6a1498aa9661",
-      "createdAt": "2025-04-09T03:37:23.757Z",
-      "updatedAt": "2025-04-09T03:37:23.757Z",
+      "id": "d02dcdb9-cb06-4114-b0cb-32b734fd9005",
+      "createdAt": "2025-04-09T03:38:00.793Z",
+      "updatedAt": "2025-04-09T03:38:00.793Z",
       "isAvailable": true,
-      "organizeId": "a7ce14d6-3fea-4e6d-a498-2dfb1277566e",
-      "cityStateProvince": "Ottawa, Ontario",
-      "country": "Canada",
-      "address": "Rogers Centre, Ottawa, Ontario, Canada",
-      "continent": "North America"
+      "organizeId": "61dffd8f-b48b-4f47-b863-adf3baca6fe9",
+      "cityStateProvince": "Florianópolis",
+      "country": "Brazil",
+      "address": "Majestic Palace Hotel, Florianópolis, Brazil",
+      "continent": "South America"
     },
     "dates": [
       {
-        "id": "e4f72c11-6e02-42ce-8f75-0ecb076f3751",
-        "organizedId": "a7ce14d6-3fea-4e6d-a498-2dfb1277566e",
-        "fromDate": "2025-04-28T00:00:00.000Z",
-        "toDate": "2025-04-29T00:00:00.000Z",
+        "id": "2c6cbf3d-5d9e-488d-aa0b-8fe6becbb946",
+        "organizedId": "61dffd8f-b48b-4f47-b863-adf3baca6fe9",
+        "fromDate": "2025-04-15T00:00:00.000Z",
+        "toDate": "2025-04-17T00:00:00.000Z",
         "type": "conferenceDates",
         "name": "conferenceDates",
-        "createdAt": "2025-04-09T03:37:26.175Z",
-        "updatedAt": "2025-04-09T03:37:26.175Z",
+        "createdAt": "2025-04-09T03:38:03.476Z",
+        "updatedAt": "2025-04-09T03:38:03.476Z",
         "isAvailable": true
       }
     ],
     "ranks": [
       {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Information and computing sciences"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "00dbe01e-63a3-404b-8a77-821e3bd3e8d5",
+      "title": "IEEE Symposium on Field Programmable Custom Computing Machines",
+      "acronym": "FCCM",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:40.595Z",
+      "updatedAt": "2025-04-09T03:32:40.595Z",
+      "creatorName": "Admin"
+    },
+    "organization": {
+      "id": "ceb4a782-2e1c-4f05-96a1-d0cb8584744c",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "00dbe01e-63a3-404b-8a77-821e3bd3e8d5",
+      "publisher": "",
+      "summerize": "The IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM) is the premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware. FCCM 2025 will be held in Fayetteville, Arkansas, USA from May 4-7, 2025.",
+      "callForPaper": "# FCCM 2025: Call for Papers\n\nThe IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM 2025) will be held in **Fayetteville, Arkansas, USA, from May 4-7, 2025.**\n\nFCCM is the premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware.  This year FCCM seeks to embrace its role as the venue where “firsts” are presented by encouraging submissions describing new forward-thinking research on emerging technologies with in-field reconfiguration capabilities for the upcoming post Moore’s Law era.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   **Custom Computing and Reconfigurable Architectures:**\n    *   Heterogeneous and mixed signal digital/analog field customizable accelerators\n    *   Neuromorphic emulation and accelerators\n    *   Memory centric computing architectures\n    *   Overlays, coarse grained reconfigurable architectures\n    *   Clusters, data centers, and large systems\n    *   IoT and Embedded SoC, MPSoC architectures with reconfigurable devices\n    *   Security enhancements for reconfigurable computing\n    *   Customizable soft processor systems\n*   **Abstractions, Programming Models, and Tools:**\n    *   Use of Large Language Models (LLMs) for FPGA design\n    *   Domain-specific languages, frameworks, and open-source hw/sw synthesis/compilation tools\n    *   Design tools, instrumentation, debug for designer productivity\n    *   High-level synthesis\n    *   Software-defined-systems (e.g., radio, networks, frameworks for new domains)\n    *   CAD tools, abstractions, and languages for mixed analog/digital fabrics\n*   **Run Time Reconfiguration:**\n    *   Run-time management and scheduling of reconfigurable hardware\n    *   System resilience/fault tolerance for reconfigurable hardware\n    *   Evolvable, adaptable, approximate, or autonomous reconfigurable computing systems\n    *   Security assessment and enhancement of run-time reconfiguration\n*   **Applications:**\n    *   Evaluations and analysis on custom computing architectures with GPUs, NPUs, or DSPs\n    *   Post Quantum Cryptography, Quantum control and emulation\n    *   Safety critical, reliable and high assurance\n    *   Security detection and prevention, and Side Channel analysis and Attack\n    *   Digital twin, modeling, and acceleration\n\n## Paper Types\n\nSubmissions can be made for any of the two paper types:\n\n*   **Traditional technical long papers:** That introduce and evaluate new technologies. These papers must have strong empirical results and address significant challenges of the corresponding problem. Page length is 8 pages (excluding references).\n*   **Short papers:** Intended for new projects, early results, late breaking, and work that can be presented concisely. Page length is 4 pages (excluding references).\n\n## Important Dates\n\nAll deadlines apply to the Anywhere on Earth (UTC – 12) timezone.\n\n*   **Abstracts Due (All Papers):** January 10, 2025 (NO EXTENSIONS)\n*   **Submissions Due (All Papers):** January 19th at 11:59 PM PST\n*   **Workshop Proposals Due:** February 23, 2025\n*   **Rebuttal Period:** February 16 – 24, 2025\n*   **Artifact Form Deadline:** February 24, 2025\n*   **Notification of Acceptance (All Papers):** March 14, 2025\n*   **Demo Night Submissions Due:** March 24, 2025 (No Extensions)\n*   **Notification of Acceptance (Demo Night):** March 31, 2025\n*   **Camera-Ready Submission Due:** April 4, 2025\n*   **Early Registration Deadline:** April 20, 2025\n*   **Hotel Rooms Reservation Deadline:** April 11, 2025\n*   **Conference:** May 4 - 7, 2025\n\n## Submission Website\n\n[https://fccm2025.hotcrp.com/](https://fccm2025.hotcrp.com/)\n\n## Paper Formats\n\n*   Long papers are limited to 8 pages (excluding references).\n*   Short papers are limited to 4 pages (excluding references).\n*   Submissions accepted as posters will have a one-page extended abstract.\n*   Page restrictions for all formats exclude references.\n*   Submissions violating the formatting requirements may be automatically rejected. Do not submit the same work in more than one of the formats.\n*   Accepted papers will have the same page lengths as initial submissions.\n\n## Templates\n\n*   [LaTeX Template](https://wp.fccm.org/templates/latex_template_fccm19.zip)\n*   [Microsoft Word Template](https://www.fccm.org/past/2024/wp-content/uploads/2023/01/word_template_fccm23.doc)\n\n## Simultaneous Submissions\n\nPapers must not be simultaneously under review or waiting to appear at another conference or in a journal and must not be essentially the same as any paper that has been previously published.\n\n## Review Process\n\nFCCM uses a double-blind reviewing system.  FCCM 2025 includes a rebuttal phase. Specific questions from reviewers will be made available by February 16, 2025. Authors have the option to provide an up to 500-word response by February 24, 2025. Reviewers will consider the responses during final paper deliberations.\n\n## Artifact Evaluation\n\nAuthors of accepted full-length papers can optionally participate in an artifact evaluation process.",
+      "link": "https://www.fccm.org/",
+      "cfpLink": "https://www.fccm.org/call-for-papers-2025/",
+      "impLink": "https://www.fccm.org/call-for-papers-2025/",
+      "createdAt": "2025-04-09T03:35:56.683Z",
+      "updatedAt": "2025-04-09T03:35:56.683Z",
+      "topics": [
+        "Custom Computing",
+        "Reconfigurable Architectures",
+        "Heterogeneous Computing",
+        "Mixed Signal Computing",
+        "Neuromorphic Computing",
+        "Memory Centric Computing",
+        "Overlays",
+        "Coarse Grained Reconfigurable Architectures",
+        "Clusters",
+        "Data Centers",
+        "Large Systems",
+        "IoT",
+        "Embedded SoC",
+        "MPSoC Architectures",
+        "Reconfigurable Devices",
+        "Security Enhancements",
+        "Customizable Soft Processor Systems",
+        "Large Language Models for FPGA Design",
+        "Domain-Specific Languages",
+        "High-Level Synthesis",
+        "Software-Defined Systems",
+        "CAD Tools",
+        "Run-Time Management",
+        "Scheduling",
+        "System Resilience",
+        "Fault Tolerance",
+        "Evolvable Computing",
+        "Adaptable Computing",
+        "Approximate Computing",
+        "Autonomous Computing",
+        "Security Assessment",
+        "GPUs",
+        "NPUs",
+        "DSPs",
+        "Post Quantum Cryptography",
+        "Quantum Control",
+        "Quantum Emulation",
+        "Safety Critical Systems",
+        "Reliable Systems",
+        "High Assurance Systems",
+        "Security Detection",
+        "Prevention",
+        "Side Channel Analysis",
+        "Digital Twin",
+        "Modeling",
+        "Acceleration"
+      ]
+    },
+    "location": {
+      "id": "e81497f4-7282-4263-bcd9-672d4480629a",
+      "createdAt": "2025-04-09T03:35:56.778Z",
+      "updatedAt": "2025-04-09T03:35:56.778Z",
+      "isAvailable": true,
+      "organizeId": "ceb4a782-2e1c-4f05-96a1-d0cb8584744c",
+      "cityStateProvince": "Fayetteville, Arkansas",
+      "country": "United States",
+      "address": "Fayetteville, Arkansas, USA",
+      "continent": "North America"
+    },
+    "dates": [
+      {
+        "id": "62f6b73f-3361-4543-8a80-f9bcd49769da",
+        "organizedId": "ceb4a782-2e1c-4f05-96a1-d0cb8584744c",
+        "fromDate": "2025-05-04T00:00:00.000Z",
+        "toDate": "2025-05-07T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": "2025-04-09T03:35:59.295Z",
+        "updatedAt": "2025-04-09T03:35:59.295Z",
+        "isAvailable": true
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Computer Systems Engineering"
+      },
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "0062e7db-b965-4481-a931-212b42cefe34",
+      "title": "International CSI Computer Conference",
+      "acronym": "CSICC",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:46.722Z",
+      "updatedAt": "2025-04-09T03:32:46.722Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "24ff2097-93cc-4b6b-bb96-7d7a27251f93",
+        "year": 2025,
+        "accessType": "Offline",
+        "isAvailable": true,
+        "conferenceId": "0062e7db-b965-4481-a931-212b42cefe34",
+        "publisher": "",
+        "summerize": "The Computer Society of Iran and Sharif University of Technology are holding the 29th International Computer Conference with the aim of developing computer knowledge and technology. The conference focuses on fundamental, strategic, and development aspects of computer science.",
+        "callForPaper": "# CSICC 2025: Call for Papers\n\nThe Computer Society of Iran and Sharif University of Technology are holding the 29th International Computer Conference with the aim of developing computer knowledge and technology. The conference focuses on fundamental, strategic, and development aspects of computer science. All researchers, academics, and engineers are invited to submit papers and participate in the conference.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** December 6, 2024\n*   **Call for Workshop Registration:** December 20, 2024\n*   **Acceptance Notification:** January 15, 2025\n*   **Registration and Camera-Ready Deadline:** January 24, 2025\n*   **Workshop Registration:** February 2, 2025\n*   **Conference Date:** February 5-6, 2025",
+        "link": "https://csicc2025.csi.org.ir/en/",
+        "cfpLink": "https://csicc2025.csi.org.ir/en/call-for-papers/",
+        "impLink": "https://csicc2025.csi.org.ir/en/important-dates/",
+        "createdAt": "2025-04-09T03:35:42.714Z",
+        "updatedAt": "2025-04-09T03:35:42.714Z",
+        "topics": [
+          ""
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "aeeccebd-52f9-4a9d-a3fb-7ed88af2ab95",
+        "fromDate": "2025-02-05T00:00:00.000Z",
+        "toDate": "2025-02-06T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:35:44.298Z",
+        "updatedAt": "2025-04-09T03:35:44.298Z"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "National: Iran",
+        "source": "CORE2023",
+        "fieldOfResearch": "Theory of computation"
+      }
+    ],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "00ca3745-6858-4643-b9a7-08f08dbbcf57",
+      "title": "Network and Operating System Support for Digital Audio and Video",
+      "acronym": "NOSSDAV",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:49.232Z",
+      "updatedAt": "2025-04-09T03:32:49.232Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "50599594-91a1-4d96-b217-92d32cfd7063",
+        "year": 2025,
+        "accessType": "Offline",
+        "isAvailable": true,
+        "conferenceId": "00ca3745-6858-4643-b9a7-08f08dbbcf57",
+        "publisher": "",
+        "summerize": "The 35th edition of the Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2025) will take place from March 31st to April 3rd, 2025, in Stellenbosch, South Africa. NOSSDAV focuses on both emerging and established multimedia systems research topics, especially high-risk/high-return ideas.",
+        "callForPaper": "# NOSSDAV 2025: Call for Papers\n\nThe 35th edition of the Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2025) will take place from **March 31st to April 3rd, 2025 in Stellenbosch, South Africa**.\n\nNOSSDAV is a workshop with a long-standing tradition focusing on both emerging and established multimedia systems research topics, especially high-risk/high-return ideas. The single-track format brings together academic and industry researchers and practitioners to engage in fruitful and constructive discussions.\n\n## Topics of Interest\n\nNOSSDAV encourages papers identifying fundamental open problems in multimedia systems research, advocating new radical ideas, or offering counterarguments or critiques on the existing state of the art. NOSSDAV prefers exciting—even-if-incomplete—papers or reports on promising ideas that may be supported by well-reasoned arguments. NOSSDAV takes a broad perspective on all areas of multimedia systems. Authors are especially encouraged to submit papers with real-world experimental results and datasets. This includes new ideas relating to (but not limited to):\n\n*   Virtual reality (VR), augmented reality (AR), and immersive systems\n*   Deep learning approaches to improve multimedia delivery and processing\n*   Cloud architectures for multimedia coding and processing\n*   Wireless, mobile, IoT, and embedded systems for multimedia applications\n*   Medical, surveillance, and autonomous driving multimedia systems\n*   Network-distributed media processing\n*   Networked GPUs/TPUs, graphics, and virtual environments\n*   Audio/Image/Video Analytics Systems\n*   System Support for Multimedia Interaction with humans\n*   Internet-Scale Multimedia Systems\n*   Large-language Model and AI-Generated Multimedia Systems\n\n## Submission Process\n\nProspective authors are invited to submit an electronic version of full papers, in PDF format, up to six (6) printed pages plus one (1) page solely for references in length (double-column ACM style format) at the workshop website. Authors must prepare their papers in a way that preserves the anonymity of the authors (double blind).\n\n*   **Submit by:** January 17th, 2025\n*   **Notifications on:** February 14th, 2025\n*   **Camera-ready on:** February 21st, 2025\n\n## Online Submission\n\n[https://nossdav2025.hotcrp.com/](https://nossdav2025.hotcrp.com/)\n\n## Program Chairs\n\n*   Xiaofei Wang (Tianjin University, China) [xiaofeiwang AT tju.edu.cn]\n*   Bo Han (George Mason University, United States of America) [bohan AT gmu.edu]\n\n## Program Committee\n\n*   Abdelhak Bentaleb, Concordia University, Canada\n*   Amr Rizk, Leibniz University Hannover, Germany\n*   Arvind Narayanan, AT&T Labs - Research, United States of America\n*   Ali Cengiz Beğen, Özyeğin University, Turkey\n*   Baochun Li, University of Toronto, Canada\n*   Bo Chen, University of Illinois at Urbana-Champaign, USA\n*   Carsten Griwodz, University of Oslo, Norway\n*   Chao Qiu, Tianjin University, China\n*   Cheng-Hsin Hsu, National Tsing Hua University, Taiwan\n*   Cheng Zhang, Tianjin University of Finance and Economics, China\n*   Christian Timmerer, Alpen-Adria-Universität Klagenfurt, Austria\n*   Débora Muchaluat-Saade, Universidade Federal Fluminense, Brazil\n*   Di Wu, Sun Yat-sen University, China\n*   Eddie Kohler, Harvard University, United States of America\n*   Farzad Tashtarian, Alpen-Adria-Universität, Austria\n*   Gregor Schiele, University of Duisburg-Essen, Germany\n*   Guanyu Gao, Nanjing University of Science and Technology, China\n*   Haihan Duan, The Chinese University of Hong Kong, Shenzhen China\n*   Huaming Wu, Tianjin University, China\n*   Irene Viola, CWI, The Netherlands\n*   Jeroen van der Hooft, Ghent University, Belgium\n*   Jesus Gutierrez, Universidad Politécnica de Madrid, Spain\n*   Jiayi Meng, The University of Texas at Arlington, USA\n*   Mallesham Dasari, Carnegie Mellon University, United States of America\n*   Maria Torres Vega, KU Leuven, Belgium\n*   Markus Fiedler, Blekinge Institute of Technology (BTH), Sweden\n*   Mathis Engelbart, TU Munich, Germany\n*   Matti Siekkinen, Aalto University, Finland\n*   Mea Wang, University of Calgary, Canada\n*   Mengbai Xiao, Shandong University, China\n*   Michael Zink, UMass Amherst, United States of America\n*   Michael Rudolph, University of Duisburg-Essen, Germany\n*   Michael Seufert, University of Augsburg, Germany\n*   Mohamed Hefeeda, Simon Fraser University, Canada\n*   Nils Aschenbruck, Universität Osnabrück, Germany\n*   Ralf Steinmetz, TU Darmstadt, Germany\n*   Ravi Prakash, University of Texas at Dallas, United States of America\n*   Roberto Azevedo, Disney Research, Switzerland\n*   Silvia Rossi, CWI, The Netherlands\n*   Songqing Chen, George Mason University, United States of America\n*   Stefano Petrangeli, Adobe, United States of America\n*   Takuya Fujihashi, Osaka University, Japan\n*   Tianchi Huang, Sony Group Corporation\n*   Tim Wauters, Ghent University, Belgium\n*   Tobias Hossfeld, UWUE Wuerzburg, Germany\n*   Wei Cai, The Chinese University of Hong Kong, Shenzhen China\n*   Wei Tsang Ooi, National University of Singapore, Singapore\n*   Wojciech Mazurczyk, Warsaw University of Technology, Poland\n*   Xinggong Zhang, Peking University, China\n*   Yao Liu, Rutgers University, United States of America\n*   Yi Zhao, Tsinghua University, China\n*   Yong Liu, New York University, United States of America\n*   Zhisheng Yan, George Mason University, United States of America",
+        "link": "https://nossdav.org/2025/",
+        "cfpLink": "https://nossdav2025.hotcrp.com/",
+        "impLink": "None",
+        "createdAt": "2025-04-09T03:37:31.791Z",
+        "updatedAt": "2025-04-09T03:37:31.791Z",
+        "topics": [
+          "Multimedia Systems",
+          "Virtual Reality",
+          "Augmented Reality",
+          "Immersive Systems",
+          "Deep Learning",
+          "Cloud Architectures",
+          "Wireless Systems",
+          "Mobile Systems",
+          "IoT",
+          "Embedded Systems",
+          "Medical Multimedia Systems",
+          "Surveillance Multimedia Systems",
+          "Autonomous Driving Multimedia Systems",
+          "Network-distributed Media Processing",
+          "Networked GPUs/TPUs",
+          "Graphics",
+          "Virtual Environments",
+          "Audio/Image/Video Analytics Systems",
+          "System Support for Multimedia Interaction",
+          "Internet-Scale Multimedia Systems",
+          "Large-language Model and AI-Generated Multimedia Systems"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "8774fa96-0a30-4fb1-a408-5abc41221cd6",
+        "fromDate": "2025-03-31T00:00:00.000Z",
+        "toDate": "2025-04-03T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:37:33.596Z",
+        "updatedAt": "2025-04-09T03:37:33.596Z"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Distributed computing and systems software"
+      }
+    ],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "01f00d5a-ffb7-426e-83ff-5c83f00fd7a9",
+      "title": "International Conference on Information Technology and Applications",
+      "acronym": "ICITA",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:44.318Z",
+      "updatedAt": "2025-04-09T03:32:44.318Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "b4761419-e700-4db9-a93f-9f87637edb84",
+        "year": 2025,
+        "accessType": "Hybrid",
+        "isAvailable": true,
+        "conferenceId": "01f00d5a-ffb7-426e-83ff-5c83f00fd7a9",
+        "publisher": "Computer Science Conference Proceedings",
+        "summerize": "The 14th International Conference on Advanced Information Technologies and Applications (ICAITA 2025) is an international forum for sharing knowledge and results in theory, methodology, and new advances and research results in the fields of Emerging Information Technologies and Applications. The conference will be held in Zurich, Switzerland, from May 17-18, 2025.",
+        "callForPaper": "# ICAITA 2025: Call for Papers\n\nThe 14th International Conference on Advanced Information Technologies and Applications (ICAITA 2025) is an international forum for sharing knowledge and results in theory, methodology, and new advances and research results in the fields of Emerging Information Technologies and Applications. The conference will be held in **Zurich, Switzerland, from May 17-18, 2025**.\n\n## Topics of Interest\n\nAuthors are solicited to contribute to the conference by submitting articles that illustrate research results, projects, surveying works, and industrial experiences that describe significant advances in the following areas (but are not limited to):\n\n*   Algorithms and Bioinformatics\n*   Compiler Design\n*   Computer Architecture and Real-time Systems\n*   Computer Graphics\n*   Database and Data Mining\n*   Dependable, Reliable and Autonomic Computing\n*   Distributed, Parallel Systems & Algorithms\n*   DSP/Image Processing/Pattern Recognition/Multimedia\n*   Embedded System and Software\n*   Game Theory\n*   Geographical Information Systems/Global Navigation Satellite Systems (GIS/GNSS)\n*   Grid and Scalable Computing\n*   Integrating Technology in Education\n*   Intelligent Information & Database Systems\n*   IT Policy and Business Management\n*   Mobile and Ubiquitous Computing\n*   Modeling and Simulation\n*   Multimedia Systems and Services\n*   Natural Language Processing\n*   Networking and Communications\n*   Operating Systems\n*   Performance Evaluation\n*   Programming Languages\n*   Security and Privacy\n*   Social Computing\n*   Soft Computing\n*   Software Design Patterns & Engineering\n*   Software Testing and Quality\n*   Symbolic Computation\n*   Telemedicine\n*   Theoretical Computer Science\n*   Web and Internet Computing\n\n## Submission Guidelines\n\nAuthors are invited to submit papers through the conference [Submission System](submission/index.php) by **April 05, 2025**.\n\nSubmissions must be original and should not have been published previously or be under consideration for publication while being evaluated for this conference. The proceedings of the conference will be published by Computer Science Conference Proceedings in Computer Science & Information Technology (CS & IT) series (Confirmed).\n\n*   Submit a full paper (CSCP format: 20 Pages including figures and references). You can confirm the CSCP Author Guidelines at the following web page: URL CSCP Format (Word Template).\n*   [Latex Template](Latex Template)\n*   Accepted papers will be given guidelines in preparing and submitting the final manuscript(s) together with the notification of acceptance.\n\n## Publication\n\nAll accepted papers will be published in the conference proceedings published by CSCP (CS & IT). Authors of selected outstanding papers will be invited to submit extended versions of their papers for consideration of publication in the following journals:\n\n*   International Journal of Computer Science & Information Technology (IJCSIT) | - WJCI,INSPEC Indexed\n*   International Journal of Computer Science and Engineering Survey (IJCSES)\n*   Computer Science & Engineering: An International Journal (CSEIJ)\n*   Advanced Computing: An International Journal (ACIJ)\n*   International Journal of Information Technology Convergence and Services (IJITCS)\n*   International Journal of Computer Science, Engineering and Applications (IJCSEA)\n*   International Journal of Advanced Information Technology (IJAIT)\n*   International Journal of Information Science & techniques (IJIST)\n*   International Journal in Foundations of Computer Science & Technology (IJFCST)\n*   International Journal of Information Technology, Control and Automation (IJITCA)\n*   International Journal on Computational Science & Applications (IJCSA)\n*   Information Technology in Industry (ITII)\n\nAll accepted papers will be published in the conference proceedings. At least one author of accepted papers is required to register at the full registration rate.\n\n## Important Dates\n\n**Third Batch: (Submissions after March 30, 2025)**\n\n*   **Submission Deadline:** April 05, 2025\n*   **Authors Notification:** May 05, 2025\n*   **Registration & Camera-Ready Paper Due:** May 12, 2025",
+        "link": "https://icaita2025.org/",
+        "cfpLink": "https://icaita2025.org/papersubmission",
+        "impLink": "None",
+        "createdAt": "2025-04-09T03:37:15.186Z",
+        "updatedAt": "2025-04-09T03:37:15.186Z",
+        "topics": [
+          "Algorithms and Bioinformatics",
+          "Compiler Design",
+          "Computer Architecture and Real time Systems",
+          "Computer Graphics",
+          "Database and Data Mining",
+          "Dependable",
+          "Reliable and Autonomic Computing",
+          "Distributed",
+          "Parallel Systems & Algorithms",
+          "DSP/Image Processing/Pattern Recognition/Multimedia",
+          "Embedded System and Software",
+          "Game Theory",
+          "Geographical Information Systems/Global Navigation Satellite Systems (GIS/GNSS)",
+          "Grid and Scalable Computing",
+          "Integrating Technology in Education",
+          "Intelligent Information & Database Systems",
+          "IT Policy and Business Management",
+          "Mobile and Ubiquitous Computing",
+          "Modeling and Simulation",
+          "Multimedia Systems and Services",
+          "Natural Language Processing",
+          "Networking and Communications",
+          "Operating Systems",
+          "Performance Evaluation",
+          "Programming Languages",
+          "Security and Privacy",
+          "Social Computing",
+          "Soft Computing",
+          "Software Design Patterns & Engineering",
+          "Software Testing and Quality",
+          "Symbolic Computation",
+          "Telemedicine",
+          "Theoretical Computer Science",
+          "Web and Internet Computing"
+        ]
+      },
+      {
+        "id": "c2e13230-c566-42df-8e74-6bf5ca2f59ef",
+        "year": 2025,
+        "accessType": "Hybrid",
+        "isAvailable": true,
+        "conferenceId": "01f00d5a-ffb7-426e-83ff-5c83f00fd7a9",
+        "publisher": "Springer",
+        "summerize": "The 19th International Conference on Information Technology and Applications (ICITA 2025) will be held in Oslo, Norway on 14 - 16 October 2025. The conference is an annual event and recognized as one of the major series of conferences in Information Technology (IT in short). ICITA continues to retain its tradition of being a high quality conference.",
+        "callForPaper": "# ICITA 2025: Call for Papers\n\nThe 19th International Conference on Information Technology and Applications (ICITA 2025) will be held in **Oslo, Norway, from October 14-16, 2025**.\n\nICITA is a high-quality conference that provides a platform for academics and professionals in computer technology to publish, present, meet, exchange ideas, and establish professional networks. It is a forum for specific disciplinary research, as well as multi-disciplinary studies.\n\n## Topics\n\nTopics for publication and presentation can include, but are not limited to, the following research and development areas/fields:\n\n*   Theme of the Conference\n*   Algorithms, Analytics and AI Applications\n*   Big Data Analytics\n*   Software Engineering\n*   Blockchain\n*   Cloud computing\n*   Computer Graphics and Games Programming\n*   Computer Networks\n*   Computer Vision and Image Processing\n*   Cybersecurity\n*   Data Science\n*   Digital Health\n*   Evolutionary Computing\n*   VR/VA and Games Applications in Industry\n*   Human Computer Interaction\n*   Information and Knowledge Management\n*   Internet of Things and Cyber-Physical Systems\n*   Machine learning\n*   Mobile Computing\n*   Digital Education\n*   eCommerce\n\n## Types of Submissions\n\n*   Finished or consolidated R&D work (10-page limit)\n*   Ongoing works with relevant preliminary results (10-page limit)\n\n## Submission Guidelines\n\nSubmitted papers for review must comply with the format of Lecture Notes in Network Systems Series ([Springer Website](https://www.springer.com/de/authors-editors/book-authors-editors/resources-guidelines/book-manuscript-guidelines/manuscript-preparation/5636)), be written in English, must not have been published before, not be under review for any other conference or publication, and not include any information leading to the authors’ identification. All papers will be subjected to a “double-blind review” by at least three members of the Program Committee.\n\n## Publication and Indexing\n\nTo ensure that a full paper is published, at least one of the authors must be fully registered by June 20, 2025, and the paper must comply with the suggested layout and page-limit. Additionally, all recommended changes must be addressed by the authors before they submit the camera-ready version.\n\nFull papers will be published in Proceedings by Springer, in Lecture Notes in Network System series. Poster and company papers will not be published, just presented in the conference. Published Full papers will be submitted for indexation by ISI, SCOPUS, and Google Scholar, among others, and will be available in the SpringerLink Digital Library.\n\n## Important Dates\n\n**Paper Submission Dates:**\n\n*   **Conference paper/submission deadline:** June 5, 2025\n*   **Conference paper notification:** August 26, 2025\n*   **Camera Ready Submission:** September 5, 2025\n\n**Workshop/Special Session Dates:**\n\n*   **Workshop/Special Session Proposal:** May 5, 2025\n*   **Notification of Workshop/Special Acceptance:** June 5, 2025\n*   **Workshop Final Information and Program Committee:** June 15, 2025\n*   **Deadline for paper submission:** July 5, 2025\n*   **Notification of Acceptance:** July 25, 2025\n*   **Camera ready paper and registration (Strict):** July 30, 2025",
+        "link": "https://www.icita.world/#/",
+        "cfpLink": "https://www.icita.world/#/callforpapers",
+        "impLink": "https://www.icita.world/#/importantdates",
+        "createdAt": "2025-04-09T03:36:18.861Z",
+        "updatedAt": "2025-04-09T03:36:18.861Z",
+        "topics": [
+          "Algorithms",
+          "Analytics and AI Applications",
+          "Big Data Analytics",
+          "Software Engineering",
+          "Blockchain",
+          "Cloud Computing",
+          "Computer Graphics and Games Programming",
+          "Computer Networks",
+          "Computer Vision and Image Processing",
+          "Cybersecurity",
+          "Data Science",
+          "Digital Health",
+          "Evolutionary Computing",
+          "VR/VA and Games Applications in Industry",
+          "Human Computer Interaction",
+          "Information and Knowledge Management",
+          "Internet of Things and Cyber-Physical Systems",
+          "Machine Learning",
+          "Mobile Computing",
+          "Digital Education",
+          "eCommerce"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "72996c54-2fe3-4d4c-bbb3-bca21bc9a756",
+        "fromDate": "2025-05-17T00:00:00.000Z",
+        "toDate": "2025-05-18T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:37:17.359Z",
+        "updatedAt": "2025-04-09T03:37:17.359Z"
+      },
+      {
+        "id": "c2d62767-56d9-43e3-a619-fac3fa0ea3a8",
+        "fromDate": "2025-10-14T00:00:00.000Z",
+        "toDate": "2025-10-16T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:36:21.857Z",
+        "updatedAt": "2025-04-09T03:36:21.857Z"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "Australasian C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Applied computing"
+      }
+    ],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "02210c1f-0faf-45b4-ae1e-5a4dd4c564c5",
+      "title": "International Conference on Integration of Artificial Intelligence and Operations Research Techniques in Constraint Programming for Combinatorial Optimization Problems",
+      "acronym": "CPAIOR",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:44.356Z",
+      "updatedAt": "2025-04-09T03:32:44.356Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "f10652af-243b-432c-a96b-90c50a080815",
+        "year": 2025,
+        "accessType": "Offline",
+        "isAvailable": true,
+        "conferenceId": "02210c1f-0faf-45b4-ae1e-5a4dd4c564c5",
+        "publisher": "Springer",
+        "summerize": "The 22nd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR 2025) will be held in Melbourne, Australia, from November 10 to November 13, 2025.  The conference aims to bring together researchers from Constraint Programming (CP), Artificial Intelligence (AI), and Operations Research (OR) to present new techniques, applications, and theoretical & practical insights.",
+        "callForPaper": "# CPAIOR 2025: Call for Papers\n\nThe 22nd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR 2025) will be held in **Melbourne, Australia, from November 10 to November 13, 2025**. The conference will be co-located with [ICAPS 2025](https://icaps25.icaps-conference.org/home/).\n\n## Conference Aim\n\nThe aim of the conference is to promote a space where researchers from Constraint Programming (CP), Artificial Intelligence (AI), and Operations Research (OR) present innovative techniques, new applications, and original cutting-edge ideas, thereby encouraging researchers from one area to learn from the others. Of particular interest are papers that integrate concepts and methodologies from these different fields, either proposing interesting new techniques for complex/practical problems or expanding our theoretical insights and cross-field understanding. High-quality original papers from a single area are welcome when also relevant to the other communities involved. The conference also strongly encourages regular papers or experience reports showcasing CP/AI/OR techniques on challenging real-world applications.\n\n## Topics of Interest\n\nThe program committee invites submissions that include, but are far from limited to, the following topics:\n\n*   New methodologies in the interface between predictive and prescriptive pipelines\n*   Novel relaxation and inference methods\n*   New search perspectives\n*   Advanced integrated methods\n*   Innovative models and applications of CP/AI/OR techniques\n*   Implementation or evaluation of CP/AI/OR techniques and optimization systems\n\n## Submission Types\n\nSubmissions are of two types:\n\n*   Regular papers (submitted for publication and presentation)\n*   Extended abstracts (submitted for presentation only)\n\n## Instructions for Regular Papers\n\nRegular papers present original unpublished work and can be of two types:\n\n*   Long papers (at most 15 pages plus references)\n*   Short papers (at most 8 pages plus references)\n\nBoth long and short papers will undergo rigorous review and are subject to the same criteria of quality. Both types are also eligible for the distinguished paper or student paper award. Short papers are particularly encouraged for interesting and novel work in progress, for which the practical or theoretical relevance is not yet fully identified.\n\nSubmissions to CPAIOR are single blind. The conference proceedings will be published in the Springer Lecture Notes in Computer Science series. All regular papers should be prepared in the format used for that series (LNCS instructions).\n\n## Submission Schedule for Regular Papers\n\n*   **Abstracts:** December 8, 2024 (AoE: anywhere on Earth)\n*   **Full papers:** December 15, 2024 (AoE, no extension possible)\n*   **Rebuttal Phase:** January 26-29, 2025 (AoE)\n*   **Notification:** February 10, 2025\n*   **Camera ready:** TBA\n\n## Instructions for Extended Abstracts\n\nExtended abstracts should be one or two pages in length and may present preliminary work or work already published in other outlets. The extended abstracts are submitted for presentation only (if accepted), and will not be formally published in the LNCS conference volume. A collection of the accepted extended abstracts will be published on the conference website.\n\n## Submission Schedule for Extended Abstracts\n\n*   **Abstract:** August 2025 (TBA)\n*   **Notification:** September 2025 (TBA)\n\n## Submission Process\n\nWe will use OpenReview.net to manage the reviewing process. Please use the following link to submit your papers:\n\n[https://openreview.net/group?id=cpaior.org/CPAIOR/2025/Conference](https://openreview.net/group?id=cpaior.org/CPAIOR/2025/Conference)\n\n## Contact\n\nFor any queries on the submission process, please contact the Program Chair Guido Tack at [cpaior2025@gmail.com](mailto:cpaior2025@gmail.com).",
+        "link": "https://sites.google.com/view/cpaior2025",
+        "cfpLink": "https://sites.google.com/view/cpaior2025/call-for-papers",
+        "impLink": "https://sites.google.com/view/cpaior2025/dates",
+        "createdAt": "2025-04-09T03:35:42.820Z",
+        "updatedAt": "2025-04-09T03:35:42.820Z",
+        "topics": [
+          "Constraint Programming",
+          "Artificial Intelligence",
+          "Operations Research"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "fc22efcd-6d0c-4bfd-81af-533ee5d39518",
+        "fromDate": "2025-11-10T00:00:00.000Z",
+        "toDate": "2025-11-13T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:35:44.868Z",
+        "updatedAt": "2025-04-09T03:35:44.868Z"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "B",
+        "source": "CORE2023",
+        "fieldOfResearch": "Artificial intelligence"
+      }
+    ],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "8454d78a-234e-4532-9144-c86c3c9f23bc",
+      "title": "International Conference on Web and Social Media",
+      "acronym": "ICWSM",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:46.551Z",
+      "updatedAt": "2025-04-09T03:32:46.551Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "8f76ba49-ea6f-4fca-9a08-07753822aea7",
+        "year": 2025,
+        "accessType": "Offline",
+        "isAvailable": true,
+        "conferenceId": "8454d78a-234e-4532-9144-c86c3c9f23bc",
+        "publisher": "",
+        "summerize": "The International AAAI Conference on Web and Social Media (ICWSM) is a forum for researchers from multiple disciplines to come together to share knowledge, discuss ideas, exchange information, and learn about cutting-edge research in diverse fields with the common theme of investigating the interplay of web and society.",
+        "callForPaper": "No call for papers available",
+        "link": "https://www.icwsm.org/2025/index.html",
+        "cfpLink": "https://www.icwsm.org/2025/index.html/submit/index.html#cfp-full-papers",
+        "impLink": "None",
+        "createdAt": "2025-04-09T03:36:26.697Z",
+        "updatedAt": "2025-04-09T03:36:26.697Z",
+        "topics": [
+          "Computational Social Science",
+          "Social Computing",
+          "Network Science",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Test/Data Mining",
+          "Natural Language Processing",
+          "Image/Multimedia Processing",
+          "Human Computer Interaction",
+          "Sociology",
+          "Communication",
+          "Political Science",
+          "Anthropology",
+          "Psychology",
+          "Economics",
+          "Digital Humanities"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "15d19cd5-1f78-48c9-8fb2-ad84753db82f",
+        "fromDate": "2025-06-23T00:00:00.000Z",
+        "toDate": "2025-06-26T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:36:29.764Z",
+        "updatedAt": "2025-04-09T03:36:29.764Z"
+      }
+    ],
+    "followBy": [],
+    "feedbacks": [],
+    "ranks": [
+      {
         "rank": "A",
         "source": "CORE2023",
-        "fieldOfResearch": "Software engineering"
+        "fieldOfResearch": "Applied computing"
       },
       {
         "rank": "A",
@@ -306,8 +966,86 @@
         "fieldOfResearch": "Data management and data science"
       }
     ],
-    "followBy": [],
+    "followedBy": [],
+    "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "003941cb-961f-4f3e-946f-c1ea6578608c",
+      "title": "International Joint Conference on Computational Intelligence",
+      "acronym": "IJCCI",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:46.878Z",
+      "updatedAt": "2025-04-09T03:32:46.878Z",
+      "creatorName": "Admin"
+    },
+    "organizations": [
+      {
+        "id": "8e04ceb1-28af-4bb5-b488-514031f0a061",
+        "year": 2025,
+        "accessType": "Hybrid",
+        "isAvailable": true,
+        "conferenceId": "003941cb-961f-4f3e-946f-c1ea6578608c",
+        "publisher": "",
+        "summerize": "The IJCCI 2025 conference brings together researchers, engineers, and practitioners in the areas of Fuzzy Computation, Evolutionary Computation, and Neural Computation, complemented by the transversal area of Explainable AI.  The conference will be held in a hybrid format, allowing speakers to present remotely if unable to travel to the venue.",
+        "callForPaper": "# IJCCI 2025: Call for Papers\n\nThe IJCCI 2025 conference brings together researchers, engineers, and practitioners in the areas of Fuzzy Computation, Evolutionary Computation, and Neural Computation, complemented by the transversal area of Explainable AI.\n\n## Scope\n\nThe purpose of IJCCI is to bring together researchers, engineers, and practitioners in the areas of Fuzzy Computation, Evolutionary Computation, and Neural Computation, complemented by the transversal area of Explainable AI. IJCCI is composed of four co-located conferences, each specialized in at least one of the aforementioned main knowledge areas.\n\n## Paper Submission\n\nAuthors should submit a paper in English, carefully checked for correct grammar and spelling, addressing one or several of the conference areas or topics. Each paper should clearly indicate the nature of its technical/scientific contribution, and the problems, domains, or environments to which it is applicable. To facilitate the double-blind paper evaluation method, authors are kindly requested to produce and provide the paper WITHOUT any reference to any of the authors, including the authors’ personal details, the acknowledgments section of the paper, and any other reference that may disclose the authors’ identity.\n\nOnly original papers should be submitted.  Authors are advised to read INSTICC's ethical norms regarding plagiarism and self-plagiarism thoroughly before submitting and must make sure that their submissions do not substantially overlap work which has been published elsewhere or simultaneously submitted to a journal or another conference with proceedings. Papers that contain any form of plagiarism will be rejected without reviews.\n\nAuthors can submit their work in the form of a Regular Paper, representing completed and validated research, or as a Position Paper, portraying a short report of work in progress or an arguable opinion about an issue discussing ideas, facts, situations, methods, procedures, or results of scientific research focused on one of the conference topic areas. All papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates. After the paper submission has been successfully completed, authors will receive an automatic confirmation e-mail.\n\n## Publications\n\nAll accepted papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. SCITEPRESS is a member of CrossRef ([http://www.crossref.org/](http://www.crossref.org/)) and every paper on our digital library is given a DOI (Digital Object Identifier). The proceedings will be submitted for indexation by Google Scholar, DBLP, EI, IET, Semantic Scholar, JST, Norwegian Register for Scientific Journals and Series, Web of Science / Conference Proceedings Citation Index, Mathematical Reviews, SCImago, SCOPUS, and zbMATH.\n\n## Important Dates\n\nAll dates refer to AOE time, i.e., \"Anywhere on Earth\"\n\n**Joint Conference:**\n\n*   **Regular Papers Paper Submission:** May 19, 2025\n*   **Authors Notification:** July 17, 2025\n*   **Camera Ready and Registration:** July 31, 2025\n\n**Position Papers / Regular Papers:**\n\n*   **Paper Submission:** June 26, 2025\n*   **Authors Notification:** July 31, 2025\n*   **Camera Ready and Registration:** September 5, 2025\n\n**Workshops:**\n\n*   **Workshop Proposal:** May 27, 2025\n\n**Special Sessions:**\n\n*   **Special Session Proposal:** May 27, 2025\n\n**Tutorials:**\n\n*   **Tutorial Proposal:** September 11, 2025\n\n**Demos:**\n\n*   **Demo Proposal:** September 11, 2025\n\n**Panels:**\n\n*   **Panel Proposal:** September 11, 2025\n\n**Abstracts Track:**\n\n*   **Abstract Submission:** July 31, 2025\n*   **Authors Notification:** September 8, 2025\n*   **Camera Ready and Registration:** September 17, 2025\n\n## Conference Chair\n\nJoaquim Filipe, Polytechnic Institute of Setúbal / INSTICC, Portugal\n\n## Keynote Speaker\n\nLuís Paulo Reis, University of Porto, Portugal",
+        "link": "https://ijcci.scitevents.org/",
+        "cfpLink": "https://ijcci.scitevents.org/CallForPapers.aspx",
+        "impLink": "https://ijcci.scitevents.org/ImportantDates.aspx",
+        "createdAt": "2025-04-09T03:37:02.939Z",
+        "updatedAt": "2025-04-09T03:37:02.939Z",
+        "topics": [
+          "Fuzzy Computation",
+          "Evolutionary Computation",
+          "Neural Computation",
+          "Explainable AI"
+        ]
+      }
+    ],
+    "location": {
+      "cityStateProvince": "",
+      "country": "",
+      "address": "",
+      "continent": ""
+    },
+    "dates": [
+      {
+        "id": "1dde99ce-ef0c-4ff2-8be1-45b50701f204",
+        "fromDate": null,
+        "toDate": null,
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "isAvailable": true,
+        "createdAt": "2025-04-09T03:37:04.822Z",
+        "updatedAt": "2025-04-09T03:37:04.822Z"
+      }
+    ],
+    "followBy": [
+      {
+        "id": "6278042c-9ea5-4f69-b3f2-c71f969aa1d4",
+        "userId": "43ca56f1-549a-49c7-92ff-fa2000467023",
+        "user": {
+          "avatar": "string",
+          "firstName": "Tung",
+          "lastName": "Le Ho"
+        },
+        "createdAt": "2025-04-09T17:52:47.544Z",
+        "updatedAt": "2025-04-09T17:52:47.544Z"
+      }
+    ],
     "feedbacks": [],
+    "ranks": [
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Artificial intelligence"
+      },
+      {
+        "rank": "C",
+        "source": "CORE2023",
+        "fieldOfResearch": "Machine learning"
+      }
+    ],
     "followedBy": [
       {
         "id": "00c085c3-bd2a-4a01-ad4e-97e3dae032bc",
@@ -315,10 +1053,171 @@
         "avatar": "https://ui-avatars.com/api/?name=Le+Loi&background=random&size=32",
         "firstName": "Le",
         "lastName": "Loi",
-        "createdAt": "2025-04-09T12:05:32.748Z",
-        "updatedAt": "2025-04-09T12:05:32.748Z"
+        "createdAt": "2025-04-12T06:22:57.270Z",
+        "updatedAt": "2025-04-12T06:22:57.270Z"
       }
     ],
     "feedBacks": []
+  },
+  {
+    "conference": {
+      "id": "0597a4a0-2508-4e07-aca0-c0d2bc097886",
+      "title": "National Conference of the American Association for Artificial Intelligence",
+      "acronym": "AAAI",
+      "creatorId": null,
+      "createdAt": "2025-04-09T03:32:49.195Z",
+      "updatedAt": "2025-04-09T03:32:49.195Z"
+    },
+    "organization": {
+      "id": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+      "year": 2025,
+      "accessType": "Offline",
+      "isAvailable": true,
+      "conferenceId": "0597a4a0-2508-4e07-aca0-c0d2bc097886",
+      "summerize": "The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in Philadelphia, Pennsylvania, at the Pennsylvania Convention Center from February 25 to March 4, 2025.  The conference promotes research in Artificial Intelligence and fosters scientific exchange between researchers, practitioners, scientists, students, and engineers.",
+      "callForPaper": "# AAAI-25: Main Technical Track Call for Papers\n\nThe Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in **Philadelphia, Pennsylvania, at the Pennsylvania Convention Center from February 25 to March 4, 2025.**\n\n## Theme\n\nThe theme of this conference is to create collaborative bridges within and beyond AI.  We also emphasize the importance of AI for social impact and responsible AI.\n\n## Tracks\n\nAAAI-25 will feature three technical tracks:\n\n1.  Main Track\n2.  Special Track on AI for Social Impact\n3.  Special Track on AI Alignment\n\n## Submission Guidelines\n\n*   Two-phase reviewing: two reviews in Phase 1, additional reviews in Phase 2 for papers not rejected in Phase 1. Author response after Phase 2, only for papers not rejected in Phase 1.\n*   Three kinds of supplementary material may be submitted alongside all papers: (1) technical appendix; (2) multimedia; (3) code and data. Supplementary material deadline is 3 days after the paper submission deadline.\n*   Additional pages for references only.\n*   All authors must complete a reproducibility checklist.\n*   All authors are expected to be available to review (light load), unless extenuating circumstances apply.\n\n## Important Dates\n\nNote: all deadlines are “anywhere on earth” (UTC-12)\n\n*   **AAAI-25 web site open for paper submission:** July 8, 2024\n*   **Abstracts due:** August 7, 2024\n*   **Full papers due:** August 15, 2024\n*   **Supplementary material and code due:** August 19, 2024\n*   **Notification of Phase 1 rejections:** October 14, 2024\n*   **Author feedback window:** November 4-8, 2024\n*   **Notification of final acceptance or rejection (Main Technical Track):** December 9, 2024\n*   **Submission of camera-ready files (Main Technical Track):** December 19, 2024\n*   **AAAI-25 Conference:** February 27 – March 4, 2025\n\nNote: Deadlines are track-specific and may differ from those listed above. Track-specific deadlines are listed on their respective CFP.\n\n## Submission Site\n\nAAAI-25 author registration and paper submissions will be accepted via OpenReview ([https://openreview.net/](https://openreview.net/)).\n\n## Plagiarism & Use of ChatGPT or similar LLMs Policy\n\nPapers that include text generated from a large-scale language model (LLM) such as ChatGPT are prohibited unless the produced text is presented as a part of the paper’s experimental analysis. This policy does not prohibit authors from using LLMs for editing or polishing author-written text.\n\n## Contact\n\nDirect inquiries about the submission process and the technical program to [workflowchairs25@aaai.zendesk.com](mailto:workflowchairs25@aaai.zendesk.com) and [pcchairs25@aaai.zendesk.com](mailto:pcchairs25@aaai.zendesk.com) respectively.  Other general inquiries to the AAAI-25 General and Program Co-chairs can be directed to [aaai25chairs@aaai.org](mailto:aaai25chairs@aaai.org).",
+      "publisher": "",
+      "link": "https://aaai.org/conference/aaai/aaai-25/",
+      "cfpLink": "https://aaai.org/conference/aaai/aaai-25/main-technical-track/",
+      "impLink": "",
+      "topics": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Data Mining",
+        "Multiagent Systems",
+        "Knowledge Representation",
+        "Human-in-the-loop AI",
+        "Search",
+        "Planning",
+        "Reasoning",
+        "Robotics and Perception",
+        "Ethics"
+      ],
+      "createdAt": "2025-04-12T10:29:10.980Z",
+      "updatedAt": "2025-04-12T10:29:10.980Z"
+    },
+    "location": {
+      "address": "Pennsylvania Convention Center, Philadelphia, Pennsylvania, USA",
+      "cityStateProvince": "Philadelphia, Pennsylvania",
+      "country": "United States",
+      "continent": "North America",
+      "createdAt": null,
+      "updatedAt": null,
+      "isAvailable": null,
+      "organizeId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d"
+    },
+    "dates": [
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2025-02-25T00:00:00.000Z",
+        "toDate": "2025-03-04T00:00:00.000Z",
+        "type": "conferenceDates",
+        "name": "conferenceDates",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-07-08T00:00:00.000Z",
+        "toDate": "2024-07-08T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "AAAI-25 web site open for paper submission",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-08-07T00:00:00.000Z",
+        "toDate": "2024-08-07T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Abstracts due",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-08-15T00:00:00.000Z",
+        "toDate": "2024-08-15T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Full papers due",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-08-19T00:00:00.000Z",
+        "toDate": "2024-08-19T00:00:00.000Z",
+        "type": "submissionDate",
+        "name": "Supplementary material and code due",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-10-14T00:00:00.000Z",
+        "toDate": "2024-10-14T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of Phase 1 rejections",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-12-09T00:00:00.000Z",
+        "toDate": "2024-12-09T00:00:00.000Z",
+        "type": "notificationDate",
+        "name": "Notification of final acceptance or rejection (Main Technical Track)",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-12-19T00:00:00.000Z",
+        "toDate": "2024-12-19T00:00:00.000Z",
+        "type": "cameraReadyDate",
+        "name": "Submission of camera-ready files (Main Technical Track)",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      },
+      {
+        "organizedId": "ee0dbf6f-d3ae-41b4-8759-19277e3a914d",
+        "fromDate": "2024-11-04T00:00:00.000Z",
+        "toDate": "2024-11-08T00:00:00.000Z",
+        "type": "otherDate",
+        "name": "Author feedback window",
+        "createdAt": null,
+        "updatedAt": null,
+        "isAvailable": null
+      }
+    ],
+    "ranks": [
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Artificial intelligence"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Computer vision and multimedia computation"
+      },
+      {
+        "rank": "A*",
+        "source": "CORE2023",
+        "fieldOfResearch": "Machine learning"
+      }
+    ],
+    "feedBacks": [],
+    "followedBy": []
   }
 ]

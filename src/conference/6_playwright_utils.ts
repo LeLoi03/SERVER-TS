@@ -17,8 +17,6 @@ const ERROR_ACCESS_LINK_LOG_PATH: string = path.join(__dirname, "./data/error_ac
 
 import { readContentFromFile, writeTempFile } from './11_utils';
 
-import { ProcessedRowData } from './types';
-
 async function fetchContentWithRetry(page: Page, maxRetries: number = 3): Promise<string> {
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
         try {
@@ -190,9 +188,6 @@ const fetchAndProcessWebsiteInfo = async (page: Page, officialWebsite: string, b
         return null;
     }
 };
-
-
-
 
 // --- processDetermineLinksResponse ---
 const processDetermineLinksResponse = async (

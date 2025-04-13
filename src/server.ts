@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response, NextFunction, RequestHandler } from 'express';
 
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
@@ -167,6 +167,65 @@ app.get('/api/v1/topics', async (req, res) => {
 import { saveCrawlConferenceFromCsvToJson } from './route/saveCrawlConferenceFromCsvToJson'; // Adjust path
 app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson);
 
+
+
+// --- API Endpoints (mỗi hàm một endpoint) ---
+
+app.post('/api/get_conferences', async (req, res) => {
+    try {
+        const filter = req.body;
+        console.log(filter);
+        const result = await getConferences(filter);
+        res.json(result);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message || "An unexpected error occurred." });
+    }
+});
+
+app.post('/api/get_journals', async (req, res) => {
+    try {
+        const filter = req.body;
+        const result = await getJournals(filter);
+        res.json(result);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message || "An unexpected error occurred." });
+    }
+});
+
+app.post('/api/get_website_information', async (req, res) => {
+    try {
+        const result = await getWebsiteInformation();
+        console.log(result)
+        res.json(result);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message || "An unexpected error occurred." });
+    }
+});
+
+app.post('/api/draw_chart', async (req, res) => {
+    try {
+        const data = req.body;
+        const result = await drawChart(data);
+        res.json(result);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message || "An unexpected error occurred." });
+    }
+});
+
+app.post('/log', (req, res) => {
+    const logData = req.body;
+    const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(logData, null, 2)}\n`;
+    const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
+
+    fs.appendFile(logFilePath, logEntry, (err) => {
+        if (err) {
+            console.error('Lỗi khi ghi vào file log:', err);
+            return res.status(500).send('Lỗi khi ghi log.');
+        }
+        console.log('Đã ghi log vào file.');
+        res.status(200).send('Đã ghi log.');
+    });
+});
 
 
 
@@ -359,7 +418,7 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
 cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
-import { performLogAnalysis } from './route/logAnalyzerService'; // <<< Import service mới
+import { performLogAnalysis } from './route/logAnalysisService'; // <<< Import service mới
 import { LogAnalysisResult } from './types/logAnalysis'; // <<< Import interface
 
 
@@ -445,36 +504,10 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
 
 ///////////////////////////////////////////
 
-import pkg from 'pg';
-
-const { Pool } = pkg;
-import 'dotenv/config';
-import { RequestHandler } from 'express';
 
 // Import các module đã tạo (cho chatbot)
 import { runNonStreamChat, saveHistoryToFile } from './chatbotService';
 import logToFile from './utils/logger';
-
-
-// // Database connection
-// const pool = new Pool({
-//     user: process.env.DB_USER || "postgres",
-//     host: process.env.DB_HOST || "localhost",
-//     database: process.env.DB_NAME || "Conferences",
-//     password: process.env.DB_PASSWORD || "123456",
-//     port: parseInt(process.env.DB_PORT || "5432"),
-// });
-
-// // Test database connection
-// pool.connect()
-//     .then(client => {
-//         console.log('Successfully connected to the database!');
-//         client.release();
-//     })
-//     .catch(err => {
-//         console.error('Error connecting to the database:', err);
-//     });
-
 
 
 // --- Chat endpoint ---
@@ -489,7 +522,6 @@ const nonStreamChatHandler: RequestHandler = async (req, res) => {
         if (!userInput) {
             logToFile("/api/non-stream-chat: Invalid request: Missing userInput");
             res.status(400).json({ error: 'Invalid request body: Missing userInput' });
-
         }
 
         // Move history saving to the top to avoid errors after sending a response
@@ -500,8 +532,6 @@ const nonStreamChatHandler: RequestHandler = async (req, res) => {
             logToFile(`/api/non-stream-chat: Error saving history: ${historyError.message}`);
             // Handle the error, but don't send a response yet.  Perhaps log it.
         }
-
-
 
         const chatResponse: any = await runNonStreamChat(userInput, history);
         logToFile(`/api/non-stream-chat: chatResponse = ${JSON.stringify(chatResponse)}`);
@@ -625,62 +655,6 @@ async function drawChart(data: any): Promise<any> {
     return { type: "chart", data: "/* Dữ liệu biểu đồ ở đây (ví dụ: base64 encoded image) */" };
 }
 
-// --- API Endpoints (mỗi hàm một endpoint) ---
-
-app.post('/api/get_conferences', async (req, res) => {
-    try {
-        const filter = req.body;
-        const result = await getConferences(filter);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
-
-app.post('/api/get_journals', async (req, res) => {
-    try {
-        const filter = req.body;
-        const result = await getJournals(filter);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
-
-app.post('/api/get_website_information', async (req, res) => {
-    try {
-        const result = await getWebsiteInformation();
-        console.log(result)
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
-
-app.post('/api/draw_chart', async (req, res) => {
-    try {
-        const data = req.body;
-        const result = await drawChart(data);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
-
-app.post('/log', (req, res) => {
-    const logData = req.body;
-    const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(logData, null, 2)}\n`;
-    const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
-
-    fs.appendFile(logFilePath, logEntry, (err) => {
-        if (err) {
-            console.error('Lỗi khi ghi vào file log:', err);
-            return res.status(500).send('Lỗi khi ghi log.');
-        }
-        console.log('Đã ghi log vào file.');
-        res.status(200).send('Đã ghi log.');
-    });
-});
 
 
 httpServer.listen(3001, () => {

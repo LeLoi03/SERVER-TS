@@ -34,16 +34,16 @@ const filterGenerationConfig: FilterGenerationConfig = {
 };
 
 interface ConferenceCriteria {
-  "ConferencesNameList"?: string[];
-  "ConferencesAcronymList"?: string[];
-  AverageRating?: string | string[];
-  Source?: string | string[];
-  PrimaryFoR?: string | string[];
-  Type?: string | string[];
-  Continent?: string | string[];
-  Country?: string | string[];
-  Rank?: string | string[];
-  Topics?: string | string[];
+  "conferencesTitleList"?: string[];
+  "conferencesAcronymList"?: string[];
+  averageRating?: string | string[];
+  source?: string | string[];
+  primaryFoR?: string | string[];
+  type?: string | string[];
+  continent?: string | string[];
+  country?: string | string[];
+  rank?: string | string[];
+  topics?: string | string[];
   "Conference dates"?: string | string[];
   "Submission date"?: string | string[];
   "Notification date"?: string | string[];
@@ -53,12 +53,12 @@ interface ConferenceCriteria {
 }
 
 interface Conference {
-  "Conference name": string;
+  "Title": string;
   "Acronym": string;
-  "Source": string;
-  "Rank": string;
-  "Average rating": string;
-  "Primary field of research": string;
+  // "Source": string;
+  // "Rank": string;
+  // "Average rating": string;
+  // "Primary field of research": string;
   "Official website": string;
   "Summary"?: string;
   "Call for papers"?: string;
@@ -92,177 +92,304 @@ function extractAlphanumericParts(input: string | undefined): AlphanumericParts 
   return { text: textParts, numbers: numberParts };
 }
 
-async function filterConferences(criteria: ConferenceCriteria, csvFilePath: string, outputFilePath: string): Promise<string> {
-  console.log(`filterConferences - Criteria received: ${JSON.stringify(criteria)}, CSV Path: ${csvFilePath}, Output Path: ${outputFilePath}`);
+/**
+ * Lọc dữ liệu hội nghị từ file CSV dựa trên các tiêu chí và ghi kết quả vào file output.
+ * @param criteria - Đối tượng chứa các tiêu chí lọc. Có thể là null hoặc undefined.
+ * @param csvFilePath - Đường dẫn đến file CSV đầu vào.
+ * @param outputFilePath - Đường dẫn đến file text đầu ra.
+ * @returns Promise chứa chuỗi output đã được ghi vào file, hoặc reject nếu có lỗi.
+ */
+async function filterConferences(
+  criteria: ConferenceCriteria | null | undefined, // Cho phép null/undefined
+  csvFilePath: string,
+  outputFilePath: string
+): Promise<string> {
+
+  console.log(`filterConferences - Initial criteria received: ${JSON.stringify(criteria)}, CSV Path: ${csvFilePath}, Output Path: ${outputFilePath}`);
+
+  // 1. Kiểm tra criteria đầu vào cơ bản
+  if (!criteria || Object.keys(criteria).length === 0) {
+      const message = "filterConferences - Error: Criteria object is null, undefined, or empty. No filtering applied.";
+      console.error(message);
+      // Quyết định: Reject hay trả về kết quả rỗng? Rejecting là an toàn hơn.
+      return Promise.reject(new Error(message));
+      // Hoặc nếu muốn tạo file rỗng:
+      // try {
+      //   writeFileSync(outputFilePath, "No criteria provided or criteria object is empty.");
+      //   console.log(`filterConferences - No criteria provided. Empty results file written to ${outputFilePath}`);
+      //   return Promise.resolve("No criteria provided or criteria object is empty.");
+      // } catch (writeErr) {
+      //   console.error(`filterConferences - Error writing empty results file: ${outputFilePath}`, writeErr);
+      //   return Promise.reject(writeErr);
+      // }
+  }
+
+  // 2. Sử dụng Promise để xử lý bất đồng bộ
   return new Promise((resolve, reject) => {
-    const results: Conference[] = [];
+      const results: Conference[] = [];
+      let rowCount = 0; // Đếm số dòng đã xử lý
 
-    try {
-      createReadStream(csvFilePath)
-        .on('error', (streamErr) => {
-          console.error(`filterConferences - Error creating read stream for CSV file: ${csvFilePath}`, streamErr);
-          reject(streamErr);
-          return; // Stop processing if stream creation fails
-        })
-        .pipe(csv())
-        .on('data', (row: any) => { // Explicitly type 'row' as 'any' to avoid type errors, better is to define row type
-          try {
-            let isMatch = true;
-
-            if (criteria["ConferencesNameList"]) {
-              console.log(criteria["ConferencesNameList"])
-              const nameMatch = criteria["ConferencesNameList"].some(
-                (criteriaName) => row["Name"] && row["Name"].toLowerCase().includes(criteriaName.toLowerCase())
-              );
-              if (!nameMatch) {
-                isMatch = false;
-              }
-            }
-
-            if (criteria["ConferencesAcronymList"]) {
-              const acronymMatch = criteria["ConferencesAcronymList"].some(
-                (criteriaAcronym) => row["Acronym"] && row["Acronym"].toLowerCase().includes(criteriaAcronym.toLowerCase())
-              );
-              if (!acronymMatch) {
-                isMatch = false;
-              }
-            }
-
-            for (let key of ["AverageRating", "Source", "PrimaryFoR", "Type", "Continent", "Country", "Rank", "Topics"]) {
-              if (criteria[key]) {
-                try {
-                  const isArray = Array.isArray(criteria[key]);
-                  if (isArray) {
-                    const arrayMatch = (criteria[key] as string[]).some( // Type assertion here
-                      (value) => row[key] && row[key].toLowerCase().includes(value.toLowerCase())
-                    );
-                    if (!arrayMatch) {
-                      isMatch = false;
-                    }
-                  } else {
-                    const singleMatch = row[key] && row[key].toLowerCase().includes((criteria[key] as string).toLowerCase()); // Type assertion here
-                    if (!singleMatch) {
-                      isMatch = false;
-                    }
-                  }
-                } catch (comparisonError) {
-                  console.error(`filterConferences - Error during criteria comparison for key '${key}':`, comparisonError);
-                  isMatch = false; // Treat comparison error as no match to prevent unexpected results.
-                }
-              }
-            }
-
-            for (let dateKey of ["ConferenceDates", "SubmissionDate", "NotificationDate", "CameraReadyDate", "RegistrationDate"]) {
-              if (criteria[dateKey]) {
-                try {
-                  const criteriaDates = Array.isArray(criteria[dateKey]) ? criteria[dateKey] : [criteria[dateKey]];
-                  let isMatchDate = false;
-
-                  for (const criteriaDate of criteriaDates) {
-                    try {
-                      const criteriaParts = extractAlphanumericParts(criteriaDate);
-                      const rowParts = extractAlphanumericParts(row[dateKey]);
-
-                      if (!row[dateKey]) continue; // Skip if row date is empty
-
-                      let textMatch = false;
-                      if (criteriaParts.text.length > 0 && rowParts.text.length > 0) {
-                        textMatch = criteriaParts.text.some(criteriaText =>
-                          rowParts.text.some(rowText => rowText.toLowerCase().includes(criteriaText.toLowerCase()))
-                        );
-                      } else if (criteriaParts.text.length === 0) {
-                        textMatch = true; // No text criteria, consider text part matched
+      try {
+          // 3. Tạo Read Stream và Pipe vào CSV Parser
+          const stream = createReadStream(csvFilePath)
+              .on('error', (streamErr) => {
+                  // Lỗi khi đọc file (vd: file không tồn tại, không có quyền đọc)
+                  console.error(`filterConferences - Error creating or reading CSV file stream: ${csvFilePath}`, streamErr);
+                  reject(new Error(`Failed to read CSV file: ${streamErr.message}`));
+              })
+              .pipe(csv({
+                  mapHeaders: ({ header }) => header.trim(), // Trim khoảng trắng ở header
+                  // skipEmptyLines: true, // Bỏ qua các dòng trống nếu cần
+              }))
+              .on('data', (row: any) => { // `row` đọc từ CSV parser thường là object key-value
+                  rowCount++;
+                  try {
+                      // **** KIỂM TRA CRITERIA QUAN TRỌNG ****
+                      // Đề phòng trường hợp criteria bị thay đổi không mong muốn (dù hiếm)
+                      if (!criteria) {
+                          console.warn(`filterConferences - Skipping row ${rowCount} because criteria became null/undefined unexpectedly during processing.`, row);
+                          return; // Bỏ qua dòng này
                       }
 
-                      let numberMatch = true; // Assume number match if no number criteria
-                      if (criteriaParts.numbers.length > 0) {
-                        numberMatch = criteriaParts.numbers.every(criteriaNumber =>
-                          rowParts.numbers.some(rowNumber => rowNumber === criteriaNumber)
-                        );
+                      let isMatch = true; // Giả định dòng này khớp ban đầu
+
+                      // --- Bắt đầu kiểm tra các tiêu chí ---
+
+                      // a) Tiêu chí Title (conferencesTitleList)
+                      const criteriaTitles = criteria.conferencesTitleList;
+                      if (isMatch && criteriaTitles && criteriaTitles.length > 0) {
+                          const rowTitle = row["title"] as string | undefined; // Lấy giá trị từ row
+                          if (!rowTitle) { // Nếu row không có title thì không khớp
+                              isMatch = false;
+                          } else {
+                              const titleMatch = criteriaTitles.some(
+                                  (criteriaTitle) => criteriaTitle && // Đảm bảo tiêu chí không rỗng
+                                      rowTitle.toLowerCase().includes(criteriaTitle.toLowerCase())
+                              );
+                              if (!titleMatch) {
+                                  isMatch = false;
+                              }
+                          }
                       }
 
-                      if (textMatch && numberMatch) {
-                        isMatchDate = true;
-                        break;
+                      // b) Tiêu chí Acronym (conferencesAcronymList)
+                      const criteriaAcronyms = criteria.conferencesAcronymList;
+                      if (isMatch && criteriaAcronyms && criteriaAcronyms.length > 0) {
+                           const rowAcronym = row["acronym"] as string | undefined;
+                          if (!rowAcronym) {
+                              isMatch = false;
+                          } else {
+                              const acronymMatch = criteriaAcronyms.some(
+                                  (criteriaAcronym) => criteriaAcronym &&
+                                      rowAcronym.toLowerCase().includes(criteriaAcronym.toLowerCase())
+                              );
+                              if (!acronymMatch) {
+                                  isMatch = false;
+                              }
+                          }
                       }
-                    } catch (dateProcessingError) {
-                      console.error(`filterConferences - Error processing date criteria for key '${dateKey}' and criteriaDate '${criteriaDate}':`, dateProcessingError);
-                      continue; // Continue to next criteria date in case of error
-                    }
+
+                      // c) Các tiêu chí dạng chuỗi/mảng chuỗi khác (trừ date)
+                      const generalKeys: (keyof ConferenceCriteria)[] = [
+                          "averageRating", "source", "primaryFoR", "type",
+                          "continent", "country", "rank", "topics"
+                      ];
+
+                      for (const key of generalKeys) {
+                          if (!isMatch) break; // Thoát sớm nếu đã không khớp
+
+                          const criteriaValue = criteria[key];
+                          if (criteriaValue !== undefined && criteriaValue !== null) { // Chỉ lọc nếu tiêu chí này được cung cấp
+                              const rowValue = row[key] as string | undefined; // Lấy giá trị từ row
+
+                              if (!rowValue) { // Nếu row không có giá trị cho key này -> không khớp
+                                  isMatch = false;
+                                  continue; // Chuyển sang key tiếp theo (hoặc break cũng được)
+                              }
+
+                              const rowValueLower = rowValue.toLowerCase();
+                              let keyMatch = false;
+
+                              try {
+                                  if (Array.isArray(criteriaValue)) {
+                                      // Tiêu chí là một mảng các giá trị cần kiểm tra (OR logic)
+                                      keyMatch = criteriaValue.some(
+                                          (value) => value && rowValueLower.includes(value.toLowerCase())
+                                      );
+                                  } else if (typeof criteriaValue === 'string' && criteriaValue.length > 0) {
+                                      // Tiêu chí là một chuỗi đơn
+                                      keyMatch = rowValueLower.includes(criteriaValue.toLowerCase());
+                                  } else {
+                                      // Tiêu chí có giá trị nhưng không phải mảng hoặc chuỗi hợp lệ -> bỏ qua hoặc coi là không khớp?
+                                      // Hiện tại coi như nó khớp nếu chỉ là giá trị rỗng '' hoặc mảng rỗng []
+                                      keyMatch = true; // Hoặc đặt isMatch = false nếu tiêu chí trống là không hợp lệ
+                                  }
+
+                                  if (!keyMatch) {
+                                      isMatch = false;
+                                  }
+                              } catch (comparisonError) {
+                                  console.error(`filterConferences - Row ${rowCount}: Error during comparison for key '${key}'`, comparisonError, `Row Value: ${rowValue}`, `Criteria Value: ${criteriaValue}`);
+                                  isMatch = false; // Lỗi so sánh => không khớp
+                              }
+                          }
+                      }
+
+                      // d) Các tiêu chí về Date
+                      const dateKeys: (keyof ConferenceCriteria)[] = [
+                          "conferenceDates", "submissionDate", "notificationDate",
+                          "cameraReadyDate", "registrationDate"
+                      ];
+
+                      for (const dateKey of dateKeys) {
+                          if (!isMatch) break; // Thoát sớm
+
+                          const criteriaValue = criteria[dateKey];
+                          if (criteriaValue !== undefined && criteriaValue !== null) { // Chỉ lọc nếu tiêu chí date được cung cấp
+                              const rowDateValue = row[dateKey] as string | undefined;
+
+                              if (!rowDateValue) { // Nếu row không có date này -> không khớp
+                                  isMatch = false;
+                                  continue;
+                              }
+
+                              let isMatchDateOverall = false; // Cần khớp ít nhất MỘT criteria date
+                              const criteriaDates = Array.isArray(criteriaValue) ? criteriaValue : [criteriaValue];
+
+                              for (const criteriaDate of criteriaDates) {
+                                  if (!criteriaDate) continue; // Bỏ qua tiêu chí date rỗng
+
+                                  try {
+                                      // ---- Logic xử lý Date của bạn ----
+                                      // (Giả định extractAlphanumericParts hoạt động đúng)
+                                      const criteriaParts = extractAlphanumericParts(criteriaDate);
+                                      const rowParts = extractAlphanumericParts(rowDateValue);
+
+                                      // 1. Kiểm tra phần text (nếu có tiêu chí text)
+                                      let textMatch = true; // Mặc định khớp nếu không có tiêu chí text
+                                      if (criteriaParts.text.length > 0) {
+                                          if (rowParts.text.length === 0) {
+                                              textMatch = false; // Row không có text để so khớp
+                                          } else {
+                                              // Cần khớp ÍT NHẤT MỘT phần text của criteria với ÍT NHẤT MỘT phần text của row
+                                              textMatch = criteriaParts.text.some(criteriaText =>
+                                                  rowParts.text.some(rowText => rowText.toLowerCase().includes(criteriaText.toLowerCase()))
+                                              );
+                                          }
+                                      }
+
+                                      // 2. Kiểm tra phần number (nếu có tiêu chí number)
+                                      let numberMatch = true; // Mặc định khớp nếu không có tiêu chí number
+                                      if (criteriaParts.numbers.length > 0) {
+                                           if (rowParts.numbers.length === 0) {
+                                               numberMatch = false; // Row không có number để so khớp
+                                           } else {
+                                               // Cần khớp TẤT CẢ các số của criteria với ÍT NHẤT MỘT số của row
+                                               // (Logic này có thể cần điều chỉnh tùy yêu cầu chính xác)
+                                               numberMatch = criteriaParts.numbers.every(criteriaNumber =>
+                                                   rowParts.numbers.some(rowNumber => rowNumber === criteriaNumber)
+                                               );
+                                           }
+                                      }
+                                      // ---- Kết thúc Logic xử lý Date ----
+
+                                      if (textMatch && numberMatch) {
+                                          isMatchDateOverall = true; // Chỉ cần khớp một criteriaDate là đủ cho dateKey này
+                                          break; // Thoát vòng lặp criteriaDates
+                                      }
+                                  } catch (dateProcessingError) {
+                                      console.error(`filterConferences - Row ${rowCount}: Error processing date criteria for key '${dateKey}' and criteriaDate '${criteriaDate}'`, dateProcessingError, `Row Value: ${rowDateValue}`);
+                                      // Không đặt isMatch = false ở đây, chỉ tiếp tục với criteriaDate tiếp theo
+                                  }
+                              } // Kết thúc for criteriaDates
+
+                              // Nếu không khớp bất kỳ criteriaDate nào cho dateKey này
+                              if (!isMatchDateOverall) {
+                                  isMatch = false;
+                              }
+                          }
+                      } // Kết thúc for dateKey
+
+                      // --- Kết thúc kiểm tra các tiêu chí ---
+
+                      // 4. Nếu dòng khớp tất cả tiêu chí, thêm vào kết quả
+                      if (isMatch) {
+                          const conference: Conference = {
+                              "Title": row["title"],
+                              "Acronym": row["acronym"],
+                              "Official website": row["link"] || row["official website"], // Lấy link hoặc official website
+                              "Summary": row["summary"],
+                              "Call for papers": row["callForPapers"] || row["call for papers"],
+                              // Xử lý trường Information cẩn thận
+                              "Information": (row["information"] && !row["information"].trim().toLowerCase().startsWith("no"))
+                                             ? row["information"]
+                                             : undefined,
+                              // Thêm các trường khác từ row nếu cần thiết cho output
+                              // "Source": row["source"],
+                              // "Rank": row["rank"],
+                              // "Average rating": row["rating"],
+                              // "Primary field of research": row["primaryFoR"],
+                          };
+                          results.push(conference);
+                      }
+
+                  } catch (rowDataProcessingError) {
+                      // Lỗi khi xử lý logic cho một dòng cụ thể
+                      console.error(`filterConferences - Error processing row ${rowCount} data:`, rowDataProcessingError, 'Problematic Row:', row);
+                      // Quyết định: Bỏ qua dòng lỗi hay dừng toàn bộ? Dừng lại có thể an toàn hơn.
+                      stream.destroy(); // Ngừng đọc stream
+                      reject(new Error(`Error processing data in row ${rowCount}: ${(rowDataProcessingError as Error).message}`));
+                      return; // Dừng xử lý callback 'data' này
                   }
+              })
+              .on('end', () => {
+                  // 5. Xử lý khi đọc xong toàn bộ file CSV
+                  console.log(`filterConferences - Finished processing ${rowCount} rows. Found ${results.length} matching conferences.`);
+                  try {
+                      // 6. Format kết quả thành chuỗi output
+                      const output = results.map((conf, index) => {
+                          // Xây dựng chuỗi cho mỗi hội nghị, bỏ qua các trường undefined/null
+                          let entry = `${index + 1}. Conference title: ${conf["Title"] || 'N/A'}\n`;
+                          entry += `Acronym: ${conf["Acronym"] || 'N/A'}\n`;
+                          if (conf["Official website"]) entry += `Official website: ${conf["Official website"]}\n`;
+                          // Thêm các trường khác tương tự nếu có
+                          // if (conf["Source"]) entry += `Source: ${conf["Source"]}\n`;
+                          // if (conf["Rank"]) entry += `Rank: ${conf["Rank"]}\n`;
+                          // ...
+                          if (conf["Information"]) entry += `Information: ${conf["Information"]}\n`; // Đã xử lý "no" ở trên
+                          if (conf["Summary"]) entry += `Summary: ${conf["Summary"]}\n`;
+                          if (conf["Call for papers"]) entry += `Call for papers: ${conf["Call for papers"]}\n`;
+                          return entry.trim(); // Loại bỏ dòng trắng thừa ở cuối nếu có
+                      }).join('\n\n'); // Phân tách các hội nghị bằng hai dấu xuống dòng
 
-                  if (!isMatchDate) {
-                    isMatch = false;
+                      // 7. Ghi chuỗi output vào file
+                      try {
+                          writeFileSync(outputFilePath, output || "No matching conferences found."); // Ghi nội dung hoặc thông báo rỗng
+                          console.log(`filterConferences - Results successfully written to ${outputFilePath}`);
+                          resolve(output || "No matching conferences found."); // Trả về nội dung đã ghi
+                      } catch (fileWriteError) {
+                          console.error(`filterConferences - Error writing results to file: ${outputFilePath}`, fileWriteError);
+                          reject(new Error(`Failed to write output file: ${(fileWriteError as Error).message}`));
+                      }
+                  } catch (outputProcessingError) {
+                      console.error(`filterConferences - Error processing and formatting output:`, outputProcessingError);
+                      reject(new Error(`Error formatting results: ${(outputProcessingError as Error).message}`));
                   }
-                } catch (dateCriteriaError) {
-                  console.error(`filterConferences - Error processing date criteria for key '${dateKey}':`, dateCriteriaError);
-                  isMatch = false; // Treat date criteria error as no match.
-                }
-              }
-            }
-
-            if (isMatch) {
-              const conference: Conference = {
-                "Conference name": row["Name"],
-                "Acronym": row["Acronym"],
-                "Source": row["Source"],
-                "Rank": row["Rank"],
-                "Average rating": row["Rating"],
-                "Primary field of research": row["PrimaryFoR"],
-                "Official website": row["Link"],
-                "Summary": row["Summary"],
-                "Call for papers": row["Call for papers"],
-                "Information": row["Information"] || undefined // Ensure Information is included, handle undefined
-              };
-
-              if (row["Information"] && !row["Information"].trim().toLowerCase().startsWith("no")) {
-                conference["Information"] = row["Information"];
-              }
-
-              results.push(conference);
-            }
-          } catch (rowDataProcessingError) {
-            console.error(`filterConferences - Error processing row data:`, rowDataProcessingError);
-            // Consider if you want to reject the whole promise or just skip the row. For now, skip the row:
-            return; // Skip to next row
-          }
-        })
-        .on('end', () => {
-          try {
-            const output = results.map((conf, index) => {
-              return `${index + 1}. Conference name: ${conf["Conference name"]}\n` +
-                `Acronym: ${conf["Acronym"]}\n` +
-                `Source: ${conf["Source"]}\n` +
-                `Rank: ${conf["Rank"]}\n` +
-                `Average rating: ${conf["Average rating"]}\n` +
-                `Primary field of research: ${conf["Primary field of research"]}\n` +
-                `Official website: ${conf["Official website"]}\n` +
-                `${conf["Information"] ? conf["Information"] + '\n' : ''}` +
-                `${conf["Summary"] ? conf["Summary"] + '\n' : ''}` +
-                `${conf["Call for papers"] ? conf["Call for papers"] + '\n' : ''}`;
-            }).join('\n');
-
-            try {
-              writeFileSync(outputFilePath, output);
-              console.log(`filterConferences - Results written to ${outputFilePath}`);
-              resolve(output);
-            } catch (fileWriteError) {
-              console.error(`filterConferences - Error writing results to file: ${outputFilePath}`, fileWriteError);
-              reject(fileWriteError);
-            }
-          } catch (outputProcessingError) {
-            console.error(`filterConferences - Error processing and formatting output:`, outputProcessingError);
-            reject(outputProcessingError);
-          }
-        })
-        .on('error', (err) => {
-          console.error(`filterConferences - CSV parsing error:`, err);
-          reject(err);
-        });
-    } catch (mainError) {
-      console.error(`filterConferences - An unexpected error occurred in the main function flow:`, mainError);
-      reject(mainError);
-    }
+              })
+              .on('error', (err) => {
+                  // Lỗi xảy ra trong quá trình phân tích CSV (sau khi stream đã bắt đầu đọc)
+                  // Lỗi này thường do định dạng CSV không đúng
+                  console.error(`filterConferences - CSV parsing error:`, err);
+                  if (!stream.destroyed) { // Đảm bảo stream được hủy nếu có lỗi parser
+                     stream.destroy();
+                  }
+                  reject(new Error(`CSV parsing failed: ${err.message}`));
+              });
+      } catch (mainError) {
+          // Lỗi xảy ra trước khi stream bắt đầu (vd: lỗi đồng bộ khi gọi createReadStream/pipe)
+          console.error(`filterConferences - An unexpected error occurred setting up the stream/pipe:`, mainError);
+          reject(new Error(`Setup failed: ${(mainError as Error).message}`));
+      }
   });
 }
 
@@ -565,11 +692,11 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May,, notification in June, Camera ready in June, registration in June\nUser question 7: submission in last week of May\nUser question 8: Official website" },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"AI\",\n      \"Artificial Intelligence\"\n    ],\n    \"Country\": [\n      \"Vietnam\"\n    ],\n    \"Type\": [\n      \"Hybrid\"\n    ],\n    \"Continent\": [\n      \"Asia\"\n    ],\n    \"Conference dates\": \"May - December, 2025\",\n    \"Submision date\": \"May, 2025\",\n    \"Notification date\": \"June, 2025\",\n    \"Camera-ready date\": \"June, 2025\",\n    \"Registration date\": \"June, 2025\"\n  },\n  \"Description\": \"The user is seeking information about Hybrid conferences related to AI and Artificial Intelligence taking place in Vietnam (within Asia) between May and December 2025. The specific deadlines are: Submission in late May 2025, Notification in June 2025, Camera-ready in June 2025, and Registration in June 2025.\"\n}" },
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May\nUser question 7: last week of May\nUser question 8: Official website\nUser question 9: List again conferences in Asian but in all format\nUser question 10: I have a research paper in Automation area, specific in AI computer automation, can you suggest me some conferences fit for me ?\nUser question 11: Im time range i specified\nUser question 12: Details about dates in these conferences\nUser question 13: Do any of the above conferences have notification dates in July?\nUser question 14: Tell me details about AAAI conference" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesAcronymList\": [\n      \"AAAI\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the AAAI conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the AAAI conference, disregarding previous date constraints.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"conferencesAcronymList\": [\n      \"AAAI\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the AAAI conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the AAAI conference, disregarding previous date constraints.\"\n}" },
     { text: "input: User question 1: Hello\nUser question 2: I want to know about conferences in Hybrid format ?\nUser question 3: Take place in Asia from May to December 2025\nUser question 4: Ok list all conferences take place in Viet Nam\nUser question 5: Relevant to AI\nUser question 6: Submission deadline in May\nUser question 7: last week of May\nUser question 8: Official website\nUser question 9: List again conferences in Asian but in all format\nUser question 10: I have a research paper in Automation area, specific in AI computer automation, can you suggest me some conferences fit for me ?\nUser question 11: In time range I specified\nUser question 12: Details about dates in these conferences\nUser question 13: Do any of the above conferences have notification dates in July?\nUser question 14: Tell me details about  International Conference on Ambient Systems, Networks and Technologies conference" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesNameList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the 'International Conference on Ambient Systems, Networks and Technologies' conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the specified conference, potentially disregarding previous date and topic constraints if necessary to fulfill the request.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"conferencesTitleList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting details about the 'International Conference on Ambient Systems, Networks and Technologies' conference, building upon a previous search for conferences related to AI, Automation, and Computer Automation in Asia between May and December 2025. The user had previously expressed interest in submission deadlines in May and all conference types. The system should now focus solely on providing information about the specified conference, potentially disregarding previous date and topic constraints if necessary to fulfill the request.\"\n}" },
     { text: "input: User question 1: Tell me details about  International Conference on Ambient Systems, Networks and Technologies and ACM International Conference on Advances in Geographic Information Systems" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesNameList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\",\n      \"ACM International Conference on Advances in Geographic Information Systems\"\n    ]\n  },\n  \"Description\": \"The user is now requesting details about two specific conferences: the 'International Conference on Ambient Systems, Networks and Technologies' and the 'ACM International Conference on Advances in Geographic Information Systems'.  The system should focus on providing information about both of these conferences. Any previously established constraints (such as topic, date range, or location) from earlier in the conversation should be considered as *hints* but not strict requirements; prioritize providing details about the specified conferences, even if they don't perfectly match those earlier criteria.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"conferencesTitleList\": [\n      \"International Conference on Ambient Systems, Networks and Technologies\",\n      \"ACM International Conference on Advances in Geographic Information Systems\"\n    ]\n  },\n  \"Description\": \"The user is now requesting details about two specific conferences: the 'International Conference on Ambient Systems, Networks and Technologies' and the 'ACM International Conference on Advances in Geographic Information Systems'.  The system should focus on providing information about both of these conferences. Any previously established constraints (such as topic, date range, or location) from earlier in the conversation should be considered as *hints* but not strict requirements; prioritize providing details about the specified conferences, even if they don't perfectly match those earlier criteria.\"\n}" },
     { text: "input: User question 1: List all conferences in rank A and B focus on Education" },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Rank\": [\n      \"A\",\n      \"B\"\n    ],\n    \"Topics\": [\n      \"Education\"\n    ]\n  },\n  \"Description\": \"The user is requesting a list of conferences ranked A or B that focus on the topic of Education.\"\n}" },
     { text: "input: User question 1: List all conferences" },
@@ -591,7 +718,7 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
     { text: "input: User question 1: Hi there.\nUser question 2: Find me conferences related to Natural Language Processing.\nUser question 3: In North America.\nUser question 4:  Preferably in the United States.\nUser question 5:  Any format is okay.\nUser question 6:  Taking place in 2025.\nUser question 7:  I'm interested in conferences with early submission deadlines, perhaps in January or February.\nUser question 8:  And notification dates around April.\nUser question 9:  Are there any top-tier conferences, like rank A* or A?\nUser question 10: List conferences with official websites available in the search result." },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"Natural Language Processing\"\n    ],\n    \"Continent\": [\n      \"North America\"\n    ],\n    \"Country\": [\n      \"United States\"\n    ],\n    \"Conference dates\": \"January - December, 2025\",\n    \"Submission date\": \"January - February, 2025\",\n    \"Notification date\": \"April, 2025\",\n    \"Rank\": [\n      \"A*\",\n      \"A\"\n    ]\n  },\n  \"Description\": \"The user is requesting a list of top-tier (Rank A* or A) conferences related to Natural Language Processing taking place in North America, specifically in the United States, during 2025. They are interested in any conference format (Hybrid, Offline, or Online), with submission deadlines in January or February and notification dates around April. The search result should include only conferences with official websites available.\"\n}" },
     { text: "input: User question 1: Hello.\nUser question 2: List conferences in Asia.\nUser question 3:  Hybrid format preferred.\nUser question 4:  Dates in 2026.\nUser question 5:  Topics: Natural Language Processing.\nUser question 6: Show me rank A conferences.\nUser question 7:  What about conferences specifically named \"ICCV\"?" },
-    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"ConferencesAcronymList\": [\n      \"ICCV\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting information about conferences with the acronym 'ICCV', shifting the search away from previous criteria related to location (Asia), format (Hybrid), dates (2026), topic (Natural Language Processing), and rank (A). The system should prioritize providing details about ICCV conferences, and previous search parameters should only be considered if relevant to those specific conferences.\"\n}" },
+    { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"conferencesAcronymList\": [\n      \"ICCV\"\n    ]\n  },\n  \"Description\": \"The user is now specifically requesting information about conferences with the acronym 'ICCV', shifting the search away from previous criteria related to location (Asia), format (Hybrid), dates (2026), topic (Natural Language Processing), and rank (A). The system should prioritize providing details about ICCV conferences, and previous search parameters should only be considered if relevant to those specific conferences.\"\n}" },
     { text: "input: User question 1:  Hello, I'm looking for conferences in Computer Science.\nUser question 2:  Specifically focusing on Software Engineering.\nUser question 3:  In Europe, perhaps UK or Ireland.\nUser question 4:  Hybrid or in-person format.\nUser question 5:  Taking place in Spring 2026, say April or May.\nUser question 6:  Submission deadline maybe around December 2025.\nUser question 7:  Are there any student paper competitions at these conferences?\nUser question 8:  Also, I'm interested in conferences with workshops on Agile methodologies." },
     { text: "output: {\n  \"Intent\": [\n    \"Find information\"\n  ],\n  \"About\": \"Conference\",\n  \"Filter conference\": {\n    \"Topics\": [\n      \"Software Engineering\",\n      \"Agile\"\n    ],\n    \"Continent\": [\n      \"Europe\"\n    ],\n    \"Country\": [\n      \"UK\",\n      \"United Kingdom\",\n      \"Ireland\"\n    ],\n    \"Type\": [\n      \"Hybrid\",\n      \"Offline\"\n    ],\n    \"Conference dates\": \"April - May, 2026\",\n    \"Submission date\": \"December, 2025\"\n  },\n  \"Description\": \"The user is requesting a list of conferences focused on Software Engineering and Agile methodologies, located in Europe (specifically the UK or Ireland), with a Hybrid or in-person format, taking place in April or May 2026, and having a submission deadline around December 2025. They are also interested in knowing if these conferences have student paper competitions.\"\n}" },
     { text: "input: User question 1: Take me to the About page." },
@@ -757,13 +884,13 @@ async function determineUserIntent(questionList: string): Promise<UserIntent | n
             "type": "string"
           }
         },
-        "ConferencesNameList": {
+        "conferencesTitleList": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        "ConferencesAcronymList": {
+        "conferencesAcronymList": {
           "type": "array",
           "items": {
             "type": "string"

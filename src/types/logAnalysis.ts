@@ -4,10 +4,13 @@
 export interface ConferenceAnalysisDetail {
     title: string;
     acronym: string;
-    status: 'completed' | 'failed' | 'processing' | 'unknown'; // Trạng thái cuối cùng
+    status: 'unknown' | 'processing' | 'completed' | 'failed'; // Status reflects final outcome *if known* within the analysis window
     startTime: string | null;
-    endTime: string | null;
+    endTime: string | null; // Set ONLY when status becomes 'completed' or 'failed' definitively within the window
     durationSeconds: number | null;
+    crawlEndTime?: string | null; // Optional: Track when the crawl/save phase finished
+    crawlSucceededWithoutError?: boolean | null; // Optional: Track if crawl phase had errors
+    csvWriteSuccess?: boolean | null; // Track if the specific CSV write event was seen
     steps: { // Theo dõi các bước chính
         search_attempted: boolean;
         search_success: boolean | null;
@@ -47,10 +50,11 @@ export interface LogAnalysisResult {
         endTime: string | null;
         durationSeconds: number | null;
         totalConferencesInput: number;
-        processedConferencesCount: number; // Số conference có log được ghi nhận
-        completedTasks: number;         // Tasks Completed (Ran without fatal errors logged by task_finish or inferred)
-        failedOrCrashedTasks: number;   // Tasks Failed/Crashed (Logged fatal errors or task_finish success=false or inferred failure)
-        successfulExtractions: number;  // Tasks with Successful Gemini Extraction API calls
+        processedConferencesCount: number; // Conferences touched within the analysis window
+        completedTasks: number;           // Status = 'completed'
+        failedOrCrashedTasks: number;     // Status = 'failed'
+        processingTasks: number;          // Status = 'processing' or 'unknown' but started
+        successfulExtractions: number;    // Based on gemini_extract_success = true
     };
     googleSearch: {
         totalRequests: number;
