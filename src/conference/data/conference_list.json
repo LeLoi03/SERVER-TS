@@ -1,22 +1,9 @@
 [
   {
-    "Title": "International Conference on Information Technology and Applications",
-    "Acronym": "ICITA"
-  },
-  {
-    "Title": "International Conference on Internet and Web Applications and Services",
-    "Acronym": "ICIW"
-  },
-  {
-    "Title": "International Conference on Logic Programming",
-    "Acronym": "ICLP"
-  },
-  {
-    "Title": "International Conference on Learning Representations",
-    "Acronym": "ICLR"
-  },
-  {
-    "Title": "IEEE International Conference on Multimedia and Expo",
-    "Acronym": "ICME"
+    "Title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
+    "Acronym": "PODS",
+    "mainLink": "https://2025.sigmod.org/",
+    "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
+    "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml"
   }
 ]

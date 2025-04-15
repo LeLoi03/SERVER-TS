@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 
 const API_CONFERENCE_ENDPOINT = 'http://localhost:3001/crawl-conferences';
 const API_JOURNAL_ENDPOINT = 'http://localhost:3001/crawl-journals';
-const CSV_FILE_PATH = './CORE_2023.csv';
+const CSV_FILE_PATH = './conferences_list.csv';
 
 // <<< --- Cấu hình chế độ chạy --- >>>
 const USE_CLIENT_DATA = true;  // true: Đọc từ CSV, false: Gọi API không kèm data

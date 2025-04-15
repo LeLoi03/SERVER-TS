@@ -76,14 +76,6 @@ export interface SearchResult {
 export interface ConferenceData {
     Acronym: string;
     Title: string;
-    // Source?: string;
-    // Rank?: string;
-    // Note?: string;
-    // DBLP?: string;
-    // PrimaryFoR?: string;
-    // Comments?: string;
-    // Rating?: string;
-    // Details?: DetailsArray; // Changed to DetailsArray
     mainLink?: string;
     cfpLink?: string;
     impLink?: string;
@@ -92,14 +84,7 @@ export interface ConferenceData {
 export interface BatchEntry {
     conferenceTitle: string;
     conferenceAcronym: string;
-    // conferenceSource: string;
-    // conferenceRank: string;
-    // conferenceNote: string;
-    // conferenceDBLP: string;
-    // conferencePrimaryFoR: string;
-    // conferenceComments: string;
-    // conferenceRating: string;
-    // conferenceDetails: DetailsArray; // Changed to DetailsArray
+ 
     conferenceIndex: string;
     conferenceLink: string;
     
@@ -124,20 +109,11 @@ export interface ConferenceUpdateData { // Dữ liệu đầu vào cho updateHTM
     mainLink: string;
     cfpLink: string;
     impLink: string;
-    conferenceText: string; // Nội dung chính đã fetch trước đó, có thể rỗng
-    cfpText: string;
-    impText: string;
-    extractResponseText?: string;
-    extractMetaData?: any;
 }
 
 export interface BatchUpdateEntry { // Dữ liệu batch sau khi updateBatchToFile
     conferenceTitle: string;
     conferenceAcronym: string;
-
-    cfpLink?: string;
-    impLink?: string;
-    // Paths to temporary files
     conferenceTextPath?: string;
     cfpTextPath?: string | null;
     impTextPath?: string | null;

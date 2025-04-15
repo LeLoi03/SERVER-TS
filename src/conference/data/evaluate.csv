@@ -1,346 +1,108 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"International Conference on Internet and Web Applications and Services","ICIW","https://www.iaria.org/conferences2025/ICIW25.html","https://www.iaria.org/conferences2025/CfPICIW25.html","https://www.iaria.org/conferences2025/ICIW25.html","Conference dates: April 6 - 10, 2025
+"ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems","PODS","","","","Conference dates: June 22 - 27, 2025
 Year: 2025
-Location: Valencia, Spain
-City-State-Province: Valencia
-Country: Spain
+Location: Berlin, Germany
+City-State-Province: Berlin
+Country: Germany
 Continent: Europe
-Type: Hybrid
-Submission: January 20, 2025
-Notification: February 16, 2025
-Camera ready: March 5, 2025
-Registration: February 28, 2025
-Topics: Internet, Web Applications, Web Services, Web Technologies, Web Applications Design and Development, Web-based Applications, E-business, P2P, Multimedia, GRID,  Service Computing, Social and Legal Aspects of Internet Computing, Virtual Environments, Web Applications for eLearning, Smart Mobile Web, Machine Learning, Online Communications, Collaborative Systems, Social Networks
-Publisher: IARIA Press","April 6 - 10, 2025","2025","Valencia, Spain","Valencia","Spain","Europe","Hybrid","{""Submission"":""January 20, 2025""}","{""Notification"":""February 16, 2025""}","{""Camera ready"":""March 5, 2025""}","{""Registration"":""February 28, 2025""}","{}","Internet, Web Applications, Web Services, Web Technologies, Web Applications Design and Development, Web-based Applications, E-business, P2P, Multimedia, GRID,  Service Computing, Social and Legal Aspects of Internet Computing, Virtual Environments, Web Applications for eLearning, Smart Mobile Web, Machine Learning, Online Communications, Collaborative Systems, Social Networks","IARIA Press","The Twentieth International Conference on Internet and Web Applications and Services (ICIW 2025) will be held in Valencia, Spain, from April 6th to 10th, 2025.  The conference offers onsite and online participation options and covers various aspects of designing and deploying applications based on IP&Web techniques and mechanisms.","# ICIW 2025: Call for Papers
+Type: Offline
+(FIRST SUBMISSION PHASE) Abstract: May 31, 2024
+(FIRST SUBMISSION PHASE) Submission: June 7, 2024
+(SECOND SUBMISSION PHASE) Abstract: December 2, 2024
+(SECOND SUBMISSION PHASE) Submission: December 9, 2024
+(SIGMOD) Research paper submission round 1 Abstract Submission and Declaration of COIs: January 10, 2024
+(SIGMOD) Research paper submission round 1 Paper Submission: January 17, 2024
+(SIGMOD) Research paper submission round 2 Abstract Submission and Declaration of COIs: April 10, 2024
+(SIGMOD) Research paper submission round 2 Paper Submission: April 17, 2024
+(SIGMOD) Research paper submission round 3 Abstract Submission and Declaration of COIs: July 10, 2024
+(SIGMOD) Research paper submission round 3 Paper Submission: July 17, 2024
+(SIGMOD) Research paper submission round 4 Abstract Submission and Declaration of COIs: October 10, 2024
+(SIGMOD) Research paper submission round 4 Paper Submission: October 17, 2024
+(SIGMOD) Industry paper submission Paper Submission: December 9, 2024
+(FIRST SUBMISSION PHASE) Initial notification: August 12, 2024
+(FIRST SUBMISSION PHASE) Final notification: September 2, 2024
+(SECOND SUBMISSION PHASE) Initial notification: February 14, 2025
+(SECOND SUBMISSION PHASE) Final notification: March 7, 2025
+(SIGMOD) Research paper submission round 1 Notification of Accept/Review/Reject: February 29, 2024
+(SIGMOD) Research paper submission round 2 Notification of Accept/Review/Reject: May 30, 2024
+(SIGMOD) Research paper submission round 3 Notification of Accept/Review/Reject: August 29, 2024
+(SIGMOD) Research paper submission round 4 Notification of Accept/Review/Reject: November 28, 2024
+(SIGMOD) Industry paper submission Notification of Accept/Reject: February 24, 2025
+(FIRST SUBMISSION PHASE) Revision submission: August 26, 2024
+(SECOND SUBMISSION PHASE) Revision submission: February 28, 2025
+(FIRST SUBMISSION PHASE) Rebuttal: July 29 - August 1, 2024
+(SECOND SUBMISSION PHASE) Rebuttal: February 3-7, 2025
+(SIGMOD) Research paper submission round 1 Submission of Revision Plan: March 7, 2024
+(SIGMOD) Research paper submission round 1 Revision Feedback: March 21, 2024
+(SIGMOD) Research paper submission round 2 Submission of Revision Plan: June 6, 2024
+(SIGMOD) Research paper submission round 2 Revision Feedback: June 20, 2024
+(SIGMOD) Research paper submission round 3 Submission of Revision Plan: September 5, 2024
+(SIGMOD) Research paper submission round 3 Revision Feedback: September 19, 2024
+(SIGMOD) Research paper submission round 4 Submission of Revision Plan: December 5, 2024
+(SIGMOD) Research paper submission round 4 Revision Feedback: December 19, 2024
+Topics: Data Management, Database Theory, Data Management Challenges, Data-driven Society, Efficiency, Scalability, Usability, Expressiveness, Robustness, Security, Clarity, Privacy, Database Processing, Query Evaluation, Query Optimization, Schema Management, Distributed Data Processing, Approximate Data Processing, Database Design, Data Models, Query Languages, Schemas, Constraints, Database Access, Data Structures, Access Methods, Concurrency, Transactions, Data Quality, Data Consistency, Data Cleaning, Data Discovery, Data Exploration, Data Analysis, Data Mining, Machine Learning, Information Extraction, Data Streams, Uncertainty, Incomplete Data, Inconsistent Data, Probabilistic Data, Interoperability, Mappings and Views, Data Integration, Data Exchange, Ontology-based Data Access, Responsible Data Management, Access Control, Privacy, Security, Verification, Ethical Aspects of Data Management, Human-Database Interaction, Data Summarization, Data Visualization, Explanation for Database Queries, Connections Between Database Principles and Other Disciplines","June 22 - 27, 2025","2025","Berlin, Germany","Berlin","Germany","Europe","Offline","{""(FIRST SUBMISSION PHASE) Abstract"":""May 31, 2024"",""(FIRST SUBMISSION PHASE) Submission"":""June 7, 2024"",""(SECOND SUBMISSION PHASE) Abstract"":""December 2, 2024"",""(SECOND SUBMISSION PHASE) Submission"":""December 9, 2024"",""(SIGMOD) Research paper submission round 1 Abstract Submission and Declaration of COIs"":""January 10, 2024"",""(SIGMOD) Research paper submission round 1 Paper Submission"":""January 17, 2024"",""(SIGMOD) Research paper submission round 2 Abstract Submission and Declaration of COIs"":""April 10, 2024"",""(SIGMOD) Research paper submission round 2 Paper Submission"":""April 17, 2024"",""(SIGMOD) Research paper submission round 3 Abstract Submission and Declaration of COIs"":""July 10, 2024"",""(SIGMOD) Research paper submission round 3 Paper Submission"":""July 17, 2024"",""(SIGMOD) Research paper submission round 4 Abstract Submission and Declaration of COIs"":""October 10, 2024"",""(SIGMOD) Research paper submission round 4 Paper Submission"":""October 17, 2024"",""(SIGMOD) Industry paper submission Paper Submission"":""December 9, 2024""}","{""(FIRST SUBMISSION PHASE) Initial notification"":""August 12, 2024"",""(FIRST SUBMISSION PHASE) Final notification"":""September 2, 2024"",""(SECOND SUBMISSION PHASE) Initial notification"":""February 14, 2025"",""(SECOND SUBMISSION PHASE) Final notification"":""March 7, 2025"",""(SIGMOD) Research paper submission round 1 Notification of Accept/Review/Reject"":""February 29, 2024"",""(SIGMOD) Research paper submission round 2 Notification of Accept/Review/Reject"":""May 30, 2024"",""(SIGMOD) Research paper submission round 3 Notification of Accept/Review/Reject"":""August 29, 2024"",""(SIGMOD) Research paper submission round 4 Notification of Accept/Review/Reject"":""November 28, 2024"",""(SIGMOD) Industry paper submission Notification of Accept/Reject"":""February 24, 2025""}","{""(FIRST SUBMISSION PHASE) Revision submission"":""August 26, 2024"",""(SECOND SUBMISSION PHASE) Revision submission"":""February 28, 2025""}","{}","{""(FIRST SUBMISSION PHASE) Rebuttal"":""July 29 - August 1, 2024"",""(SECOND SUBMISSION PHASE) Rebuttal"":""February 3-7, 2025"",""(SIGMOD) Research paper submission round 1 Submission of Revision Plan"":""March 7, 2024"",""(SIGMOD) Research paper submission round 1 Revision Feedback"":""March 21, 2024"",""(SIGMOD) Research paper submission round 2 Submission of Revision Plan"":""June 6, 2024"",""(SIGMOD) Research paper submission round 2 Revision Feedback"":""June 20, 2024"",""(SIGMOD) Research paper submission round 3 Submission of Revision Plan"":""September 5, 2024"",""(SIGMOD) Research paper submission round 3 Revision Feedback"":""September 19, 2024"",""(SIGMOD) Research paper submission round 4 Submission of Revision Plan"":""December 5, 2024"",""(SIGMOD) Research paper submission round 4 Revision Feedback"":""December 19, 2024""}","Data Management, Database Theory, Data Management Challenges, Data-driven Society, Efficiency, Scalability, Usability, Expressiveness, Robustness, Security, Clarity, Privacy, Database Processing, Query Evaluation, Query Optimization, Schema Management, Distributed Data Processing, Approximate Data Processing, Database Design, Data Models, Query Languages, Schemas, Constraints, Database Access, Data Structures, Access Methods, Concurrency, Transactions, Data Quality, Data Consistency, Data Cleaning, Data Discovery, Data Exploration, Data Analysis, Data Mining, Machine Learning, Information Extraction, Data Streams, Uncertainty, Incomplete Data, Inconsistent Data, Probabilistic Data, Interoperability, Mappings and Views, Data Integration, Data Exchange, Ontology-based Data Access, Responsible Data Management, Access Control, Privacy, Security, Verification, Ethical Aspects of Data Management, Human-Database Interaction, Data Summarization, Data Visualization, Explanation for Database Queries, Connections Between Database Principles and Other Disciplines","","The annual ACM SIGMOD/PODS Conference is a leading international forum for database researchers, practitioners, developers, and users to explore cutting-edge ideas and results, and to exchange techniques, tools, and experiences. The 2025 conference will be held in Berlin, Germany, on June 22-27, 2025.","# PODS 2025: Call for Research Papers
 
-The Twentieth International Conference on Internet and Web Applications and Services (ICIW 2025) will take place from **April 6 - 10, 2025, in Valencia, Spain.**  The conference offers **onsite and online participation options**.
+The Principles of Database Systems (PODS) symposium series, held in conjunction with the SIGMOD conference series, provides a premier annual forum for the communication of new advances in the theoretical foundations of data management.
 
-## Conference Overview
+## Mission
 
-ICIW continues a series of co-located events covering complementary aspects related to designing and deploying applications based on IP&Web techniques and mechanisms.  ICIW 2025 comprises several complementary tracks focusing on web technologies, the design and development of web-based applications, and interactions of these applications with other types of systems. Management aspects and challenges in specialized domains are also addressed, along with evaluation techniques and standard positions on different aspects.
+The PODS community aims to provide a solid scientific basis for methods, techniques, and solutions for the data management challenges that continually arise in our data-driven society. Our goal is to develop solutions that ensure high levels of efficiency, scalability, usability, expressiveness, robustness, security, clarity, and privacy, among others.
 
-## Tracks
+## Scope
 
-*   **TRINT:** Trends on Internet-based data, applications, and services
-*   **TRWEB:** Trends on Web-driven applications and services
-*   **ML:** Machine Learning for Web-based applications and Internet data
-*   **MOBWEB:** Smart Mobile Web
-*   **IWAS:** Internet and Web-based Applications and Services
-*   **WSSA:** Web Services-based Systems and Applications
-*   **ENSYS:** Entertainment Systems
-*   **P2PSA:** P2P Systems and Applications
-*   **ONLINE:** Online Communications, Collaborative Systems, and Social Networks
-*   **SERCOMP:** Service computing
-*   **SLAECE:** Social and Legal Aspects of Internet Computing
-*   **VEWAeL:** Virtual Environments and Web Applications for eLearning
-*   **VIDEO INFO:** Short video/links scientific content
-*   **ECC:** Enterprise cloud computing
-
-## Submission Guidelines
-
-*   Manuscripts must be prepared in 10-point font using the IEEE 8.5″ x 11″ two-column conference format.
-*   All papers must not exceed 8 pages and should be exported in PDF format and anonymized.
-*   The official language is English.
-*   Papers must be submitted electronically on EasyChair: [link to EasyChair system (not provided in input)]
-
-## Important Dates
-
-*   **Submission:** January 20, 2025
-*   **Notification:** February 16, 2025
-*   **Registration:** February 28, 2025
-*   **Camera-ready:** March 5, 2025
-
-Deadlines may differ for special tracks.  Please consult the conference home page for special tracks Call for Papers (if any)."
-"International Conference on Information Technology and Applications","ICITA","https://www.icita.world/#/","https://www.icita.world/#/callforpapers","https://www.icita.world/#/importantdates","Conference dates: October 14 - 16, 2025
-Year: 2025
-Location: Oslo, Norway
-City-State-Province: Oslo
-Country: Norway
-Continent: Europe
-Type: Hybrid
-Conference paper/ submission deadline: June 5, 2025
-Submission for online papers Only: August 5, 2025
-Workshop/Special Session Proposal: May 5, 2025
-Deadline for paper submission: July 5, 2025
-Conference paper notification: August 26, 2025
-Notification of Workshop/Special Acceptance: June 5, 2025
-Notification of Acceptance: July 25, 2025
-Camera Ready Submission: September 5, 2025
-Camera ready paper and registration (Strict): July 30, 2025
-Workshop Final Information and Program Committee: June 15, 2025
-Topics: Algorithms, Analytics, AI Applications, Big Data Analytics, Software Engineering, Blockchain, Cloud Computing, Computer Graphics, Games Programming, Computer Networks, Computer Vision, Image Processing, Cybersecurity, Data Science, Digital Health, Evolutionary Computing, VR/VA, Games Applications in Industry, Human Computer Interaction, Information and Knowledge Management, Internet of Things, Cyber-Physical Systems, Machine Learning, Mobile Computing, Digital Education, eCommerce
-Publisher: Springer","October 14 - 16, 2025","2025","Oslo, Norway","Oslo","Norway","Europe","Hybrid","{""Conference paper/ submission deadline"":""June 5, 2025"",""Submission for online papers Only"":""August 5, 2025"",""Workshop/Special Session Proposal"":""May 5, 2025"",""Deadline for paper submission"":""July 5, 2025""}","{""Conference paper notification"":""August 26, 2025"",""Notification of Workshop/Special Acceptance"":""June 5, 2025"",""Notification of Acceptance"":""July 25, 2025""}","{""Camera Ready Submission"":""September 5, 2025"",""Camera ready paper and registration (Strict)"":""July 30, 2025""}","{}","{""Workshop Final Information and Program Committee"":""June 15, 2025""}","Algorithms, Analytics, AI Applications, Big Data Analytics, Software Engineering, Blockchain, Cloud Computing, Computer Graphics, Games Programming, Computer Networks, Computer Vision, Image Processing, Cybersecurity, Data Science, Digital Health, Evolutionary Computing, VR/VA, Games Applications in Industry, Human Computer Interaction, Information and Knowledge Management, Internet of Things, Cyber-Physical Systems, Machine Learning, Mobile Computing, Digital Education, eCommerce","Springer","The 19th International Conference on Information Technology and Applications (ICITA 2025) will be held in Oslo, Norway, on October 14-16, 2025.  ICITA is a high-quality conference that provides a platform for academics and industry professionals worldwide to exchange their knowledge of state-of-the-art research and development in information technology and applications.","# ICITA 2025: Call for Papers
-
-The 19th International Conference on Information Technology and Applications (ICITA 2025) will be held in **Oslo, Norway, from October 14-16, 2025** in a **hybrid format (Online + Face to Face)**.
-
-## Conference Purpose
-
-ICITA aims to provide a platform for academics and professionals in computer technology to publish, present, meet, exchange ideas, and establish professional networks. It is a forum for specific disciplinary research, as well as multi-disciplinary studies.
+PODS seeks scientific articles that present principled contributions to modeling, application, and system building in the context of data management.  At a time when computer science is increasingly data-centric, it is essential to promote an active exchange of tools and techniques between PODS and other communities focused on data management. PODS thus pays special attention to those papers that help in the urgent process of integrating data management techniques within broader computer science.
 
 ## Topics
 
-Topics for publication and presentation can include, but are not limited to, the following research and development areas/fields:
+Topics that fit the interests of the symposium include, but are not limited to:
 
-*   Algorithms, Analytics, and AI Applications
-*   Big Data Analytics
-*   Software Engineering
-*   Blockchain
-*   Cloud Computing
-*   Computer Graphics and Games Programming
-*   Computer Networks
-*   Computer Vision and Image Processing
-*   Cybersecurity
-*   Data Science
-*   Digital Health
-*   Evolutionary Computing
-*   VR/VA and Games Applications in Industry
-*   Human Computer Interaction
-*   Information and Knowledge Management
-*   Internet of Things and Cyber-Physical Systems
-*   Machine Learning
-*   Mobile Computing
-*   Digital Education
-*   eCommerce
+*   Database processing
+*   Database design
+*   Database access
+*   Data quality
+*   Data analysis
+*   Uncertainty
+*   Interoperability
+*   Responsible data management
+*   Human-database interaction
+*   Connections between database principles and other disciplines
 
-## Types of Submissions
+## Submission Site
 
-*   Finished or consolidated R&D work (10-page limit)
-*   Ongoing works with relevant preliminary results (10-page limit)
+[https://easychair.org/conferences/?conf=pods2025](https://easychair.org/conferences/?conf=pods2025)
 
-## Submission Guidelines
+## Submission Format
 
-Submitted papers for review must comply with the format of Lecture Notes in Network Systems Series ([Springer Website](https://www.springer.com/de/authors-editors/book-authors-editors/resources-guidelines/book-manuscript-guidelines/manuscript-preparation/5636)), be written in English, must not have been published before, not be under review for any other conference or publication, and not include any information leading to the authors’ identification.
+Important: The submission format for PODS 2025 is different from that of previous years, for compatibility with the PACMMOD format of the PODS publications.
 
-All papers will be subjected to a “double-blind review” by at least three members of the Program Committee.
+*   LaTeX users must format their submission using the standard ACM ""acmsmall"" proceedings stylesheet: [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)
+*   They must use the following class declaration: `\documentclass[acmsmall,review,anonymous]{acmart}`
+*   A submission can be up to 15 pages, not including references, plus unlimited space for references. Additional details may be included in a clearly marked appendix, of unlimited length, that should be incorporated at submission time; online appendices are not allowed.
 
-## Publication and Indexing
+## Double-anonymous Reviewing
 
-To ensure that a full paper is published, at least one of the authors must be fully registered by June 20th, 2025, and the paper must comply with the suggested layout and page limit. Additionally, all recommended changes must be addressed by the authors before they submit the camera-ready version.
+PODS 2025 will use a lightweight double-anonymous reviewing process. This means that submissions must adhere to the following:
 
-Full papers will be published in Proceedings by Springer, in Lecture Notes in Network System series. Poster and company papers will not be published, just presented in the conference. Published Full papers will be submitted for indexation by ISI, SCOPUS, and Google Scholar, among others, and will be available in the SpringerLink Digital Library.
+*   Author names and institutions must be omitted.
+*   References to the authors’ own related work should be in the third person.
+*   Acknowledgements, grant numbers, and links to submitted papers in public repositories will not be allowed.
 
 ## Important Dates
 
-All deadlines are Anywhere on Earth (AoE).
+**FIRST SUBMISSION PHASE (All Deadlines are 5 PM Pacific Time):**
 
-### Paper Submission Dates
+*   Abstract: May 31, 2024
+*   Submission: June 7, 2024
+*   Rebuttal: July 29 - August 1, 2024
+*   Initial notification: August 12, 2024
+*   Revision submission: August 26, 2024
+*   Final notification: September 2, 2024
 
-*   **Conference paper/submission deadline:** June 5, 2025
-*   **Submission for online papers Only:** August 5, 2025
-*   **Conference paper notification:** August 26, 2025
-*   **Camera Ready Submission:** September 5, 2025
+**SECOND SUBMISSION PHASE (All Deadlines are 5 PM Pacific Time):**
 
-### Workshop/Special Session Dates
-
-*   **Workshop/Special Session Proposal:** May 5, 2025
-*   **Notification of Workshop/Special Acceptance:** June 5, 2025
-*   **Workshop Final Information and Program Committee:** June 15, 2025
-*   **Deadline for paper submission:** July 5, 2025
-*   **Notification of Acceptance:** July 25, 2025
-*   **Camera ready paper and registration (Strict):** July 30, 2025"
-"IEEE International Conference on Multimedia and Expo","ICME","https://2025.ieeeicme.org/","https://2025.ieeeicme.org/general-calls/","https://2025.ieeeicme.org/important-dates/","Conference dates: June 30 - July 4, 2025
-Year: 2025
-Location: Nantes, France
-City-State-Province: Nantes
-Country: France
-Continent: Europe
-Type: Offline
-Regular Paper Submissions (including Special Sessions): December 13, 2024
-Workshop paper submission: March 25, 2025
-Industry/Application paper submission deadline: April 19, 2025
-Regular Paper Acceptance notification: March 14, 2025
-Workshop paper notification: April 25, 2025
-Special Session proposals acceptance notification: November 29, 2024
-Workshop proposals acceptance notification: December 15, 2024
-Tutorial proposals acceptance notification: December 15, 2024
-Grand Challenge proposals acceptance notification: December 20, 2024
-Camera Ready deadline: April 2, 2025
-Workshop paper camera ready: May 15, 2025
-Special session proposals: November 22, 2024
-Workshop proposals: November 22, 2024
-Tutorial proposals: November 29, 2024
-Grand Challenge proposals: December 15, 2024
-Author rebuttal starts: February 17, 2025
-Author rebuttal ends: February 23, 2025
-Registration Open: March 17, 2025
-Industry Expo Proposals: March 25, 2025
-Panels proposals: March 25, 2025
-Demo proposals submission: March 25, 2025
-Industry Technology Workshop proposals: March 25, 2025
-Author Registration deadline: April 25, 2025
-Advance registration deadline, workshop/demo/grand challenge author registration deadline: May 30, 2025
-Topics: 3D multimedia, AR/VR and immersive media, Emerging multimedia applications and technologies, Artificial intelligence/machine learning based multimedia, Image and video processing, Multimedia analysis and generation, Multimedia communications, networking and mobility, Multimedia databases and data mining, Multimedia quality assessment and metrics, Multimedia security, privacy and forensics, Multimedia standards, trends and related research, Multi-modal media computing, interaction, and human-machine interaction, Social media analysis and applications, Speech/audio processing","June 30 - July 4, 2025","2025","Nantes, France","Nantes","France","Europe","Offline","{""Regular Paper Submissions (including Special Sessions)"":""December 13, 2024"",""Workshop paper submission"":""March 25, 2025"",""Industry/Application paper submission deadline"":""April 19, 2025""}","{""Regular Paper Acceptance notification"":""March 14, 2025"",""Workshop paper notification"":""April 25, 2025"",""Special Session proposals acceptance notification"":""November 29, 2024"",""Workshop proposals acceptance notification"":""December 15, 2024"",""Tutorial proposals acceptance notification"":""December 15, 2024"",""Grand Challenge proposals acceptance notification"":""December 20, 2024""}","{""Camera Ready deadline"":""April 2, 2025"",""Workshop paper camera ready"":""May 15, 2025""}","{}","{""Special session proposals"":""November 22, 2024"",""Workshop proposals"":""November 22, 2024"",""Tutorial proposals"":""November 29, 2024"",""Grand Challenge proposals"":""December 15, 2024"",""Author rebuttal starts"":""February 17, 2025"",""Author rebuttal ends"":""February 23, 2025"",""Registration Open"":""March 17, 2025"",""Industry Expo Proposals"":""March 25, 2025"",""Panels proposals"":""March 25, 2025"",""Demo proposals submission"":""March 25, 2025"",""Industry Technology Workshop proposals"":""March 25, 2025"",""Author Registration deadline"":""April 25, 2025"",""Advance registration deadline, workshop/demo/grand challenge author registration deadline"":""May 30, 2025""}","3D multimedia, AR/VR and immersive media, Emerging multimedia applications and technologies, Artificial intelligence/machine learning based multimedia, Image and video processing, Multimedia analysis and generation, Multimedia communications, networking and mobility, Multimedia databases and data mining, Multimedia quality assessment and metrics, Multimedia security, privacy and forensics, Multimedia standards, trends and related research, Multi-modal media computing, interaction, and human-machine interaction, Social media analysis and applications, Speech/audio processing","","The IEEE International Conference on Multimedia & Expo (ICME) 2025 will be held in Nantes, France, from June 30 to July 4, 2025. The conference promotes the exchange of the latest advances in multimedia technologies, systems, and applications from both research and development perspectives.","# ICME 2025: Call for Papers
-
-The IEEE International Conference on Multimedia & Expo (ICME) 2025 will be held in **Nantes, France, from June 30 to July 4, 2025**.
-
-ICME is the flagship multimedia conference sponsored by four IEEE societies, promoting the exchange of the latest advances in multimedia technologies, systems, and applications from both research and development perspectives.
-
-## Topics of Interest
-
-Topics of interest include (but are not limited to):
-
-*   3D multimedia, AR/VR, and immersive media
-*   Emerging multimedia applications and technologies
-*   Artificial intelligence/machine learning based multimedia
-*   Image and video processing
-*   Multimedia analysis and generation
-*   Multimedia communications, networking, and mobility
-*   Multimedia databases and data mining
-*   Multimedia quality assessment and metrics
-*   Multimedia security, privacy, and forensics
-*   Multimedia standards, trends, and related research
-*   Multi-modal media computing, interaction, and human-machine interaction
-*   Social media analysis and applications
-*   Speech/audio processing
-
-Additional specific topics of interest are covered by the [Special Sessions](https://2025.ieeeicme.org/special-sessions/).
-
-## Important Dates
-
-*   **Special Session proposals:** November 22, 2024
-*   **Workshop proposals:** November 22, 2024
-*   **Tutorial proposals:** November 29, 2024
-*   **Special Session proposals acceptance notification:** November 29, 2024
-*   **Grand Challenge proposals:** December 15, 2024
-*   **Regular Paper Submissions (including Special Sessions):** December 13, 2024
-*   **Workshop proposals acceptance notification:** December 15, 2024
-*   **Tutorial proposals acceptance notification:** December 15, 2024
-*   **Grand Challenge proposals acceptance notification:** December 20, 2024
-*   **Author rebuttal starts:** February 17, 2025
-*   **Author rebuttal ends:** February 23, 2025
-*   **Regular Paper Acceptance notification:** March 14, 2025
-*   **Registration Open:** March 17, 2025
-*   **Industry Expo Proposals:** March 25, 2025
-*   **Panels proposals:** March 25, 2025
-*   **Demo proposals submission:** March 25, 2025
-*   **Workshop paper submission:** March 25, 2025
-*   **Industry Technology Workshop proposals:** March 25, 2025
-*   **Camera Ready deadline:** April 2, 2025
-*   **Workshop paper notification:** April 25, 2025
-*   **Workshop paper camera ready:** May 15, 2025
-*   **Advance registration deadline, workshop/demo/grand challenge author registration deadline:** May 30, 2025"
-"International Conference on Learning Representations","ICLR","https://iclr.cc/Conferences/2025","https://iclr.cc/Conferences/2025/CallForPapers","https://iclr.cc/Conferences/2025/Dates","Conference dates: April 24 - 28, 2025
-Year: 2025
-Location: Singapore EXPO, Singapore
-City-State-Province: Singapore
-Country: Singapore
-Continent: Asia
-Type: Offline
-Abstract Submission Deadline: September 27, 2024
-Full Paper Submission Deadline: October 1, 2024
-Decision Notification: January 22, 2025
-Camera Ready Deadline: March 14, 2025
-Reviews released: November 12, 2024
-Author/Reviewer Discussion: November 12-26, 2024
-Author Last Day to Reply: November 27, 2024
-Meta Reviews Due: December 10, 2024
-Final Reviews Due: December 10, 2024
-Call for Socials Deadline: March 17, 2025
-Poster Details (Topics): April 9, 2025
-Registration Open: December 20, 2024
-Financial Assistance Application Deadline: March 2, 2025
-Financial Assistance Application Notification: March 9, 2025
-Early Registration Deadline: March 15, 2025
-Submission Open: September 13, 2024
-Review Period Begins: October 14, 2024
-Reviews Due: November 3, 2024
-Discussion Period Starts: November 13, 2024
-Discussion Period Ends: November 26, 2024
-Last Day Authors Can Respond: November 27, 2024
-Sponsor Portal Open: December 3, 2024
-Expo Calls Open: January 10, 2025
-Sponsor Expo Decision Notification: March 23, 2025
-Expo Calls Deadline: March 28, 2025
-Volunteer Application Deadline: March 9, 2025
-Volunteer Application Notification: March 17, 2025
-Workshop Import Accepted Papers Deadline: March 5, 2025
-Workshop Start And End Time Finalized Deadline: April 12, 2025
-Workshop Assign Complimentary Registrations Deadline: April 19, 2025
-Workshop Schedules Finalized Deadline: April 19, 2025
-Conference Sessions: April 24 - 26, 2025
-Workshops: April 27 - 28, 2025
-Topics: Representation Learning, Deep Learning, Artificial Intelligence, Statistics, Data Science, Machine Vision, Computational Biology, Speech Recognition, Text Understanding, Gaming, Robotics, Unsupervised Learning, Semi-supervised Learning, Supervised Learning, Transfer Learning, Meta Learning, Lifelong Learning, Reinforcement Learning, Computer Vision, Audio, Language, Metric Learning, Kernel Learning, Sparse Coding, Probabilistic Methods, Bayesian Methods, Variational Inference, Sampling, Uncertainty Quantification, Generative Models, Causal Reasoning, Optimization, Learning Theory, Learning on Graphs, Fairness, Safety, Privacy, Interpretability, Explainability, Visualization, Datasets, Benchmarks, Software Libraries, Hardware, Neurosymbolic AI, Hybrid AI Systems, Robotics, Autonomy, Planning, Neuroscience, Cognitive Science, Physical Sciences","April 24 - 28, 2025","2025","Singapore EXPO, Singapore","Singapore","Singapore","Asia","Offline","{""Abstract Submission Deadline"":""September 27, 2024"",""Full Paper Submission Deadline"":""October 1, 2024""}","{""Decision Notification"":""January 22, 2025""}","{""Camera Ready Deadline"":""March 14, 2025""}","{}","{""Reviews released"":""November 12, 2024"",""Author/Reviewer Discussion"":""November 12-26, 2024"",""Author Last Day to Reply"":""November 27, 2024"",""Meta Reviews Due"":""December 10, 2024"",""Final Reviews Due"":""December 10, 2024"",""Call for Socials Deadline"":""March 17, 2025"",""Poster Details (Topics)"":""April 9, 2025"",""Registration Open"":""December 20, 2024"",""Financial Assistance Application Deadline"":""March 2, 2025"",""Financial Assistance Application Notification"":""March 9, 2025"",""Early Registration Deadline"":""March 15, 2025"",""Submission Open"":""September 13, 2024"",""Review Period Begins"":""October 14, 2024"",""Reviews Due"":""November 3, 2024"",""Discussion Period Starts"":""November 13, 2024"",""Discussion Period Ends"":""November 26, 2024"",""Last Day Authors Can Respond"":""November 27, 2024"",""Sponsor Portal Open"":""December 3, 2024"",""Expo Calls Open"":""January 10, 2025"",""Sponsor Expo Decision Notification"":""March 23, 2025"",""Expo Calls Deadline"":""March 28, 2025"",""Volunteer Application Deadline"":""March 9, 2025"",""Volunteer Application Notification"":""March 17, 2025"",""Workshop Import Accepted Papers Deadline"":""March 5, 2025"",""Workshop Start And End Time Finalized Deadline"":""April 12, 2025"",""Workshop Assign Complimentary Registrations Deadline"":""April 19, 2025"",""Workshop Schedules Finalized Deadline"":""April 19, 2025"",""Conference Sessions"":""April 24 - 26, 2025"",""Workshops"":""April 27 - 28, 2025""}","Representation Learning, Deep Learning, Artificial Intelligence, Statistics, Data Science, Machine Vision, Computational Biology, Speech Recognition, Text Understanding, Gaming, Robotics, Unsupervised Learning, Semi-supervised Learning, Supervised Learning, Transfer Learning, Meta Learning, Lifelong Learning, Reinforcement Learning, Computer Vision, Audio, Language, Metric Learning, Kernel Learning, Sparse Coding, Probabilistic Methods, Bayesian Methods, Variational Inference, Sampling, Uncertainty Quantification, Generative Models, Causal Reasoning, Optimization, Learning Theory, Learning on Graphs, Fairness, Safety, Privacy, Interpretability, Explainability, Visualization, Datasets, Benchmarks, Software Libraries, Hardware, Neurosymbolic AI, Hybrid AI Systems, Robotics, Autonomy, Planning, Neuroscience, Cognitive Science, Physical Sciences","","The International Conference on Learning Representations (ICLR) is the premier gathering of professionals dedicated to the advancement of deep learning. ICLR 2025 will be held at the Singapore EXPO from April 24-28, 2025.","# ICLR 2025: Call for Papers
-
-The Thirteenth International Conference on Learning Representations (ICLR 2025) will be held at the **Singapore EXPO from Thursday, April 24th through Monday, April 28th, 2025.**
-
-ICLR is the premier gathering of professionals dedicated to the advancement of deep learning.  We welcome paper submissions from all areas of machine learning.
-
-## Key Dates
-
-All times are UTC-12h, aka “Anywhere on Earth”.
-
-*   **Abstract submission:** September 27, 2024, 11:59 PM
-*   **Submission date:** October 1, 2024, 11:59 PM
-*   **Reviews released:** November 12, 2024
-*   **Author/Reviewer Discussion:** November 12-26, 2024
-*   **Author Last Day to Reply:** November 27, 2024
-*   **Final decisions:** January 22, 2025
-*   **Camera Ready Deadline:** March 14, 2025
-
-## Subject Areas
-
-We consider a broad range of subject areas including feature learning, metric learning, compositional modeling, structured prediction, reinforcement learning, uncertainty quantification, and issues regarding large-scale learning and non-convex optimization, as well as applications in vision, audio, speech, language, music, robotics, games, healthcare, biology, sustainability, economics, ethical considerations in ML, and others.
-
-## Double-Blind Reviewing
-
-Submissions will be double-blind: reviewers cannot see author names when conducting reviews, and authors cannot see reviewer names.  Having papers on arXiv is allowed per the dual submission policy.
-
-## Submission Instructions
-
-*   Authors must submit paper abstracts by the abstract submission deadline of September 27, 2024.
-*   The full paper submission deadline is October 1, 2024, 11:59 PM AOE. Abstracts and papers must be submitted using the conference submission system at: [https://openreview.net/group?id=ICLR.cc/2025/Conference](https://openreview.net/group?id=ICLR.cc/2025/Conference).
-*   The submission site will be open on September 13, 2024. Supplementary material is due at the same time as the main paper.
-
-## Paper Length
-
-The main text must be between 6 and 10 pages (inclusive). This limit will be strictly enforced. The page limit applies to both the initial and final camera-ready version.
-
-The list of references does not count towards the page limit, and unlimited additional pages are allowed for the bibliography/references.  Authors may use as many pages of appendices (after the bibliography) as they wish, but reviewers are not required to read the appendix.
-
-## Style Files and Templates
-
-To prepare your submission, please use the LaTeX style files provided at: [https://github.com/ICLR/Master-Template/raw/master/iclr2025.zip](https://github.com/ICLR/Master-Template/raw/master/iclr2025.zip)
-
-## Reviewing Process
-
-Submissions to ICLR are uploaded on OpenReview, which enables public discussion. Official reviews are anonymous and publicly visible. 
-
-## Reciprocal Reviewing Requirement
-
-New this year, there is a requirement for authors to serve as reviewers based on the number of papers they submit.
-
-*   All authors who are on 3 or more papers must serve as a reviewer for at least 6 papers.
-*   Authors are exempt from the reviewing requirement if they are serving as an AC, SAC, or another organizing chair for ICLR 2025.
-*   All submissions must have at least one author who is registered to review at least 3 papers.
-
-## Code of Conduct and Ethics
-
-All ICLR participants, including authors, are required to adhere to the ICLR code of conduct ([https://iclr.cc/public/CodeOfConduct](https://iclr.cc/public/CodeOfConduct)) and Code of Ethics ([https://iclr.cc/public/CodeOfEthics](https://iclr.cc/public/CodeOfEthics)).
-
-## Dual Submission Policy
-
-Submissions that are identical (or substantially similar) to versions that have been previously published, or accepted for publication, or that have been submitted in parallel to this or other conferences or journals, are not allowed.
-
-## The Use of Large Language Models (LLMs)
-
-The use of LLMs is allowed as a general-purpose assist tool. Authors and reviewers should understand that they take full responsibility for the contents written under their name, including content generated by LLMs that could be construed as plagiarism or scientific misconduct.
-
-## Withdrawal Policy
-
-Authors have the right to withdraw papers from consideration at any time until paper notification."
-"International Conference on Logic Programming","ICLP","https://iclp25.demacs.unical.it/","https://iclp25.demacs.unical.it/calls/main-track","None","Conference dates: September 12 - 19, 2025
-Year: 2025
-Location: University of Calabria, Cosenza and Rende, Italy
-City-State-Province: Cosenza and Rende
-Country: Italy
-Continent: Europe
-Type: Offline
-Paper registration (regular papers): April 13, 2025
-Paper submission (regular papers): April 18, 2025
-Paper submission (TC papers, IJCAI Fast Track papers): June 15, 2025
-Revision submission (TPLP papers): June 15, 2025
-Notification (regular papers): May 25, 2025
-Final notification: July 6, 2025
-Final version: July 27, 2025
-Main conference: September 15-19, 2025
-Topics: Logic Programming","September 12 - 19, 2025","2025","University of Calabria, Cosenza and Rende, Italy","Cosenza and Rende","Italy","Europe","Offline","{""Paper registration (regular papers)"":""April 13, 2025"",""Paper submission (regular papers)"":""April 18, 2025"",""Paper submission (TC papers, IJCAI Fast Track papers)"":""June 15, 2025"",""Revision submission (TPLP papers)"":""June 15, 2025""}","{""Notification (regular papers)"":""May 25, 2025"",""Final notification"":""July 6, 2025""}","{""Final version"":""July 27, 2025""}","{}","{""Main conference"":""September 15-19, 2025""}","Logic Programming","","The 41st International Conference on Logic Programming (ICLP 2025) will be held at the University of Calabria in Cosenza and Rende, Italy, from September 12-19, 2025.  The conference focuses on all aspects of logic programming.","No call for papers available"
+*   Abstract: December 2, 2024
+*   Submission: December 9, 2024
+*   Rebuttal: February 3-7, 2025
+*   Initial notification: February 14, 2025
+*   Revision submission: February 28, 2025
+*   Final notification: March 7, 2025"

@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import readline from 'readline'; // Cần readline để đọc file jsonl hiệu quả
 
 
 import { searchGoogleCSE } from './1_google_search';
@@ -114,8 +113,12 @@ const EVALUATE_CSV_PATH = path.join(__dirname, './data/evaluate.csv'); // Đư�
 export const crawlConferences = async (
     conferenceList: ConferenceData[],
     parentLogger: typeof logger
-): Promise<void> => { // <<<--- Thành Promise<void> vì không trả về dữ liệu nữa
+): Promise<(ProcessedResponseData | null)[]> => { // <<<--- ĐỔI KIỂU TRẢ VỀ
     const QUEUE = await queuePromise;
+
+    // Mảng để lưu kết quả cuối cùng trả về
+    const finalResults: (ProcessedResponseData | null)[] = new Array(conferenceList.length).fill(null);
+
 
     const operationStartTime = Date.now();
     parentLogger.info({
@@ -161,8 +164,8 @@ export const crawlConferences = async (
     }
     // ---
 
-    const batchPromises: Promise<void>[] = [];
-    const updateBatchPromises: Promise<BatchUpdateEntry[] | null>[] = [];
+    // Mảng batchPromises bây giờ chỉ dùng cho luồng "save"
+    const batchPromises: Promise<void>[] = []; // Chỉ chứa promise từ saveBatchToFile
 
     try {
         parentLogger.info({ event: 'playwright_setup_start' }, "Setting up Playwright...");
@@ -182,6 +185,7 @@ export const crawlConferences = async (
 
         const customSearchPath = path.join(__dirname, "./data/custom_search");
         const sourceRankPath = path.join(__dirname, "./data/source_rank");
+        const batchesDir = path.join(__dirname, "./data/batches"); // Cần cho updateBatchToFile nữa
 
 
         // --- Tạo thư mục ---
@@ -201,6 +205,8 @@ export const crawlConferences = async (
                 parentLogger.info({ path: finalOutputDir, event: 'final_dir_create' }, "Creating final output directory");
                 fs.mkdirSync(finalOutputDir, { recursive: true });
             }
+            if (!fs.existsSync(batchesDir)) fs.mkdirSync(batchesDir, { recursive: true }); // Đảm bảo batches dir
+
         } catch (mkdirError: any) {
             parentLogger.error({ err: mkdirError, event: 'dir_create_error' }, "Error creating directories");
             throw mkdirError; // Ném lỗi nghiêm trọng
@@ -220,7 +226,7 @@ export const crawlConferences = async (
 
         // --- Xử lý từng conference trong Queue ---
         const conferenceTasks = conferenceList.map((conference, index) => {
-            return QUEUE.add(async () => {
+            return QUEUE.add(async (): Promise<ProcessedResponseData | null> => { // <<<--- Hàm async trả về ProcessedResponseData | null
                 const confAcronym = conference?.Acronym || `Unknown-${index}`;
                 const confTitle = conference?.Title || `Unknown-${index}`;
 
@@ -228,20 +234,23 @@ export const crawlConferences = async (
                 const taskLogger = parentLogger.child({ title: confTitle, acronym: confAcronym, taskIndex: index + 1, event_group: 'conference_task' });
                 taskLogger.info({ event: 'task_start' }, `Processing conference`);
                 let taskHasError = false; // Cờ để đánh dấu lỗi trong task
+                let taskResult: ProcessedResponseData | null = null; // Kết quả cho task này
 
                 try {
+                    // --- Luồng UPDATE ---
                     if (conference.mainLink && conference.cfpLink && conference.impLink) {
-                        taskLogger.info({ event: 'process_predefined_links' }, `Processing with pre-defined links`);
-                        const conferenceUpdateData: ConferenceUpdateData = { Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "", conferenceText: "", cfpText: "", impText: "" };
+                        taskLogger.info({ event: 'process_predefined_links' }, `Processing with pre-defined links (UPDATE flow)`);
+                        const conferenceUpdateData: ConferenceUpdateData = { Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "" };
                         try {
-                            // Giả sử updateHTMLContent log chi tiết bên trong
-                            await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, updateBatchPromises, parentLogger);
-                            taskLogger.info({ event: 'process_predefined_links_success' }, "Predefined links processing step completed.");
+                            // Gọi và đợi kết quả từ updateHTMLContent
+                            taskResult = await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, parentLogger);
+                            taskLogger.info({ event: 'process_predefined_links_success', hasResult: taskResult !== null }, "Predefined links processing step completed.");
                         } catch (updateError: any) {
-                            taskHasError = true;
                             taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined links processing.");
+                            taskResult = null; // Đảm bảo null nếu có lỗi
                         }
 
+                        // --- Luồng SAVE (Search) ---
                     } else {
                         taskLogger.info({ event: 'search_and_process_start' }, `Searching and processing`);
                         let searchResults: GoogleSearchResult[] = [];
@@ -339,131 +348,123 @@ export const crawlConferences = async (
                         }
                         // --------------------------
 
-                        // --- Lưu HTML Content ---
-                        // Log bắt đầu lưu (đã có, giữ nguyên)
-                        taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content`);
-                        try {
-                            // Hàm saveHTMLContent sẽ log chi tiết bên trong (thành công/thất bại từng link)
-                            await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, parentLogger);
-                            // Log khi bước lưu hoàn tất (không phân biệt có link hay không)
-                            taskLogger.info({ event: 'save_html_step_completed' }, 'Save HTML content step completed.');
-                            // Không cần successfulSaveCount++;
-                        } catch (saveError: any) {
-                            taskHasError = true; // Đánh dấu lỗi cho task này
-                            // Log lỗi lưu (đã có, giữ nguyên)
-                            taskLogger.error({ err: saveError, event: 'save_html_failed' }, 'Save HTML content failed');
-                            // Không cần failedSaveCount++;
+                        // --- Lưu HTML Content (Luồng Save) ---
+                        if (searchResultsLinks.length > 0) { // Chỉ gọi nếu có link
+                            taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content`);
+                            try {
+                                // saveHTMLContent bây giờ trả về void, nhưng nó sẽ đẩy promise vào batchPromises
+                                await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, parentLogger);
+                                taskLogger.info({ event: 'save_html_step_completed' }, 'Save HTML content step completed.');
+                            } catch (saveError: any) {
+                                taskLogger.error({ err: saveError, event: 'save_html_failed' }, 'Save HTML content failed');
+                                // Không set taskResult vì đây là luồng save
+                            }
+                        } else {
+                            taskLogger.warn({ event: 'save_html_skipped_no_links' }, "Skipping save HTML step as no valid search links were found.")
                         }
-                        // ----------------------
-                    }
+                        // Luồng save không trả về dữ liệu trực tiếp, nên taskResult giữ nguyên là null
+                        taskResult = null;
+                    } // End else (SAVE flow)
 
 
                 } catch (taskError: any) {
-                    taskHasError = true; // Đánh dấu lỗi cho task này
-                    // Log lỗi không xác định trong task (đã có, giữ nguyên)
                     taskLogger.error({ err: taskError, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
+                    taskResult = null; // Đảm bảo null nếu có lỗi không mong muốn
                 } finally {
-                    // Log kết thúc xử lý task, thêm trạng thái hoàn thành/thất bại -> Chỉ là hoàn thành, còn thành công hay công là do extract api
-                    taskLogger.info({ event: 'task_finish', status: !taskHasError }, `Finished processing queue item`);
+                    taskLogger.info({ event: 'task_finish', hasResult: taskResult !== null }, `Finished processing queue item`);
+                    // Gán kết quả vào mảng finalResults tại đúng vị trí index
+                    finalResults[index] = taskResult;
+                    return taskResult; // Trả về kết quả của task này
                 }
             });
         }); // Kết thúc map conferenceList
 
-        // --- Chờ tất cả task trong queue hoàn thành ---
+
+        // --- Chờ tất cả các Task trong Queue hoàn thành ---
+        // Promise.all sẽ trả về mảng kết quả theo đúng thứ tự
+        // Chúng ta đã lưu kết quả vào finalResults trong finally của mỗi task,
+        // nhưng chờ ở đây để đảm bảo mọi thứ đã chạy xong.
+        parentLogger.info({ event: 'queue_tasks_await_start', taskCount: conferenceTasks.length }, "Waiting for all conference processing tasks to complete...");
         await Promise.all(conferenceTasks);
-        parentLogger.info({ event: 'queue_finished' }, "All conference processing tasks added to queue have finished.");
-        // ---
+        parentLogger.info({ event: 'queue_tasks_await_end' }, "All conference processing tasks completed.");
+        // Tại thời điểm này, mảng finalResults đã được điền đầy đủ.
 
-        // --- Chờ và Xử lý Kết quả Batch Promises ---
-        parentLogger.info({ promiseCount: batchPromises.length, event: 'batch_settlement_start' }, "Waiting for all batch processing operations (saveBatchToFile/updateHTMLContent) to settle...");
-        const settledResults = await Promise.allSettled(batchPromises);
-        parentLogger.info({ event: 'batch_settlement_finished' }, "All batch processing operations settled. Checking results...");
+        // --- Chờ và Xử lý Kết quả Batch Promises (CHỈ CHO LUỒNG SAVE) ---
+        if (batchPromises.length > 0) {
+            parentLogger.info({ promiseCount: batchPromises.length, event: 'save_batch_settlement_start' }, "Waiting for SAVE batch operations (saveBatchToFile) to settle...");
+            const settledSaveResults = await Promise.allSettled(batchPromises);
+            parentLogger.info({ event: 'save_batch_settlement_finished' }, "SAVE batch operations settled. Checking results...");
 
-
-        settledResults.forEach((result, i) => {
-            const batchLogContext = { batchPromiseIndex: i };
-            if (result.status === 'fulfilled') {
-                successfulBatchOperations++;
-                parentLogger.info({ ...batchLogContext, status: result.status, event: 'batch_operation_settled_success' }, "Batch processing operation fulfilled successfully.");
-            } else { // status === 'rejected'
-                failedBatchOperations++;
-                // Log lỗi bị ném ra từ saveBatchToFile/updateHTMLContent
-                parentLogger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_operation_settled_failed' }, "Batch processing operation promise rejected.");
-            }
-        });
-
-        parentLogger.info({
-            successfulOperations: successfulBatchOperations,
-            failedOperations: failedBatchOperations,
-            totalOperations: settledResults.length,
-            event: 'batch_settlement_summary'
-        }, "Finished checking batch processing operation results.");
-        // ---
-
-        // --- Final Output Processing (CSV Streaming) ---
-        parentLogger.info({ event: 'final_output_processing_start' }, "Processing final outputs via streaming to CSV...");
-
-        // --- Gọi hàm ghi CSV Stream ---
-        if (fs.existsSync(FINAL_OUTPUT_PATH)) { // Chỉ chạy nếu file JSONL nguồn tồn tại
-            try {
-                parentLogger.info({ jsonlPath: FINAL_OUTPUT_PATH, csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_start' }, 'Starting CSV streaming process from JSONL file');
-                await writeCSVStream(FINAL_OUTPUT_PATH, EVALUATE_CSV_PATH, parentLogger); // <<<--- Gọi hàm mới
-                parentLogger.info({ csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_success' }, 'CSV streaming process completed successfully.');
-            } catch (csvStreamError: any) {
-                parentLogger.error({ err: csvStreamError, event: 'csv_stream_call_failed' }, `CSV streaming process failed`);
-                // Quyết định có nên dừng ở đây không hay chỉ log lỗi
-                // Nếu lỗi CSV là nghiêm trọng, có thể throw lại: throw csvStreamError;
-            }
+            settledSaveResults.forEach((result, i) => {
+                const batchLogContext = { batchPromiseIndex: i, flow: 'save' };
+                if (result.status === 'fulfilled') {
+                    successfulBatchOperations++;
+                    parentLogger.info({ ...batchLogContext, status: result.status, event: 'batch_operation_settled_success' }, "SAVE Batch operation fulfilled.");
+                } else {
+                    failedBatchOperations++;
+                    parentLogger.error({ ...batchLogContext, reason: result.reason, status: result.status, event: 'batch_operation_settled_failed' }, "SAVE Batch operation rejected.");
+                }
+            });
+            parentLogger.info({
+                successfulOperations: successfulBatchOperations,
+                failedOperations: failedBatchOperations,
+                totalOperations: settledSaveResults.length,
+                event: 'save_batch_settlement_summary'
+            }, "Finished checking SAVE batch results.");
         } else {
-            parentLogger.warn({ path: FINAL_OUTPUT_PATH, event: 'csv_stream_skipped_no_jsonl' }, 'Final output JSONL file not found. Skipping CSV generation.');
+            parentLogger.info({event: 'save_batch_settlement_skipped'}, "No SAVE batch operations were initiated.")
         }
         // ---
 
-        // Trả về void vì không còn giữ dữ liệu trong bộ nhớ
+        // --- Final Output Processing (CSV Streaming) --- (Giữ nguyên)
+        parentLogger.info({ event: 'final_output_processing_start' }, "Processing final outputs via streaming to CSV...");
+        if (fs.existsSync(FINAL_OUTPUT_PATH)) {
+             try {
+                 parentLogger.info({ jsonlPath: FINAL_OUTPUT_PATH, csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_start' }, 'Starting CSV streaming');
+                 await writeCSVStream(FINAL_OUTPUT_PATH, EVALUATE_CSV_PATH, parentLogger);
+                 parentLogger.info({ csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_success' }, 'CSV streaming completed.');
+             } catch (csvStreamError: any) {
+                 parentLogger.error({ err: csvStreamError, event: 'csv_stream_call_failed' }, `CSV streaming process failed`);
+             }
+         } else {
+             parentLogger.warn({ path: FINAL_OUTPUT_PATH, event: 'csv_stream_skipped_no_jsonl' }, 'Skipping CSV generation.');
+         }
+        // ---
+
+        // *** TRẢ VỀ MẢNG KẾT QUẢ ***
+        parentLogger.info({ event: 'crawl_return_results', resultsCount: finalResults.filter(r => r !== null).length }, "Returning processed results array.");
+        return finalResults;
 
     } catch (error: any) {
         parentLogger.fatal({ err: error, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
-        // Có thể ném lại lỗi nếu muốn báo hiệu lỗi nghiêm trọng ra bên ngoài
-        throw error;
+        throw error; // Ném lại lỗi nghiêm trọng
     } finally {
-
-        // --- Luôn thực hiện cleanup ---
+        // --- Cleanup (Giữ nguyên) ---
         parentLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
-
-        // 1. Dọn dẹp file tạm
-        await cleanupTempFiles();
-
-        // 2. Đóng trình duyệt
+        await cleanupTempFiles(); // Đảm bảo hàm này dọn dẹp cả file tạm của update
         if (playwrightBrowser) {
-            parentLogger.info({ event: 'playwright_close_start' }, "Closing Playwright browser...");
-            try {
-                await playwrightBrowser.close();
-                parentLogger.info({ event: 'playwright_close_success' }, "Playwright browser closed successfully.");
-            } catch (closeError: any) {
-                parentLogger.error({ err: closeError, event: 'playwright_close_failed' }, "Error closing Playwright browser");
-            }
+             parentLogger.info({ event: 'playwright_close_start' }, "Closing Playwright browser...");
+             try { await playwrightBrowser.close(); } catch (e:any) { parentLogger.error(e, "Error closing Playwright"); }
         }
-
-        // 3. Log thông tin tổng kết
+        // Log tổng kết (Điều chỉnh lại số liệu batch)
         const operationEndTime = Date.now();
         const durationSeconds = Math.round((operationEndTime - operationStartTime) / 1000);
-        const finalRecordCount = fs.existsSync(FINAL_OUTPUT_PATH)
-            ? (await fs.promises.readFile(FINAL_OUTPUT_PATH, 'utf8')).split('\n').filter(l => l.trim()).length
-            : 0; // Đếm số dòng thực tế trong file cuối cùng
+        const finalRecordCount = fs.existsSync(FINAL_OUTPUT_PATH) ? (await fs.promises.readFile(FINAL_OUTPUT_PATH, 'utf8')).split('\n').filter(l => l.trim()).length : 0;
 
         parentLogger.info({
             event: 'crawl_summary',
             totalConferencesInput: conferenceList.length,
-            totalBatchOperationsAttempted: batchPromises.length, // Số promise đã tạo
-            successfulBatchOperations: successfulBatchOperations, // Số promise fulfilled
-            failedBatchOperations: failedBatchOperations,     // Số promise rejected
-            finalRecordsWritten: finalRecordCount,         // Số bản ghi trong file .jsonl
+            // totalBatchOperationsAttempted: batchPromises.length, // Chỉ là SAVE batches
+            successfulSaveBatchOps: successfulBatchOperations, // Đổi tên cho rõ
+            failedSaveBatchOps: failedBatchOperations,     // Đổi tên cho rõ
+            totalSaveBatchOps: batchPromises.length, // Tổng số SAVE batches
+            finalRecordsWrittenToFile: finalRecordCount, // Tổng số dòng trong file JSONL
+            resultsReturnedToClient: finalResults.filter(r => r !== null).length, // Số kết quả trả về (chỉ từ update)
             totalGoogleApiRequests: totalGoogleApiRequests,
             durationSeconds,
             endTime: new Date(operationEndTime).toISOString()
         }, "Crawling process summary");
 
         parentLogger.info({ event: 'crawl_end_success' }, "crawlConferences process finished.");
-        // --- Kết thúc cleanup ---
     }
 };

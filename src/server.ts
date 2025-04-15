@@ -67,165 +67,123 @@ io.on('connection', (socket: Socket) => {
     });
 });
 
-// --- Database Path ---
-const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
+// // --- Database Path ---
+// const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
 
 
-// --- Route Imports ---
-import { getConferenceById } from './route/getConferenceById';
-import { getConferenceList } from './route/getConferenceList';
-import { followConference } from './route/followConference';
-import { getUserById } from './route/getUserById';
-import { updateUser } from './route/updateUser';
-import { addConference } from './route/addConference';
-import { getMyConferences } from './route/getMyConferences';
-import { addToCalendar } from './route/addToCalendar';
-import { getUserCalendar } from './route/getUserCalendar';
-import { addFeedback } from './route/addFeedback';
-import { deleteUser } from './route/deleteUser';
-import { getUserNotifications } from './route/getNotifications';
-import { updateNotifications } from './route/updateNotifications';
-import { markAllNotificationsAsRead } from './route/markAllNotificationsAsRead';
-import { adminConferences_GET, adminConferences_POST } from './route/adminConferences';
-import { saveConferenceData } from './route/saveConferenceData';
-import { saveConferenceDetails } from './route/saveConferenceDetails';
-import { signupUser } from './route/signupUser';
-import { signinUser } from './route/signinUser';
-import { googleLogin } from './route/googleLogin';
-import { checkUpcomingConferenceDates } from './route/checkUpcomingConferenceDates';
-import { verifyPassword } from './route/verifyPassword';
-import { changePassword } from './route/changePassword';
-import { blacklistConference } from './route/addToBlacklist';
-import { getVisualizationData } from './route/getVisualizationData';
-import { verifyEmail } from './route/verifyEmail';
+// // --- Route Imports ---
+// import { getConferenceById } from './route/getConferenceById';
+// import { getConferenceList } from './route/getConferenceList';
+// import { followConference } from './route/followConference';
+// import { getUserById } from './route/getUserById';
+// import { updateUser } from './route/updateUser';
+// import { addConference } from './route/addConference';
+// import { getMyConferences } from './route/getMyConferences';
+// import { addToCalendar } from './route/addToCalendar';
+// import { getUserCalendar } from './route/getUserCalendar';
+// import { addFeedback } from './route/addFeedback';
+// import { deleteUser } from './route/deleteUser';
+// import { getUserNotifications } from './route/getNotifications';
+// import { updateNotifications } from './route/updateNotifications';
+// import { markAllNotificationsAsRead } from './route/markAllNotificationsAsRead';
+// import { adminConferences_GET, adminConferences_POST } from './route/adminConferences';
+// import { saveConferenceData } from './route/saveConferenceData';
+// import { saveConferenceDetails } from './route/saveConferenceDetails';
+// import { signupUser } from './route/signupUser';
+// import { signinUser } from './route/signinUser';
+// import { googleLogin } from './route/googleLogin';
+// import { checkUpcomingConferenceDates } from './route/checkUpcomingConferenceDates';
+// import { verifyPassword } from './route/verifyPassword';
+// import { changePassword } from './route/changePassword';
+// import { blacklistConference } from './route/addToBlacklist';
+// import { getVisualizationData } from './route/getVisualizationData';
+// import { verifyEmail } from './route/verifyEmail';
 
-// --- Route Definitions ---
-app.get('/api/v1/conference/:id', getConferenceById);
-app.get('/api/v1/conference', getConferenceList);
-app.post('/api/v1/user/follow', followConference);
-app.get('/api/v1/user/:id', getUserById);
-app.put('/api/v1/user/:id', updateUser);
-app.post('/api/v1/user/add-conference', addConference);
-app.get('/api/v1/user/:id/my-conferences', getMyConferences);
-app.post('/api/v1/user/add-to-calendar', addToCalendar);
-app.post('/api/v1/user/blacklist', blacklistConference);
-app.get('/api/v1/user/:id/calendar', getUserCalendar);
-app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback);
-app.delete('/api/v1/user/:id', deleteUser);
-app.get('/api/v1/user/:id/notifications', getUserNotifications);
-app.put('/api/v1/user/:id/notifications', updateNotifications);
-app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsAsRead);
-app.get('/admin/conferences', adminConferences_GET);
-app.post('/admin/conferences', upload.single('csvFile'), adminConferences_POST);
-app.post('/api/v1/conferences/save', saveConferenceData);
-app.post('/api/v1/conferences/details/save', saveConferenceDetails);
-app.post('/api/v1/user/signup', signupUser);
-app.post('/api/v1/user/signin', signinUser);
-app.post('/api/v1/user/google-login', googleLogin);
-app.post('/api/v1/user/verify-password', verifyPassword);
-app.post('/api/v1/user/change-password', changePassword);
-app.post('/api/v1/user/verify-email', verifyEmail);
-app.get('/api/v1/visualization/conference', getVisualizationData);
+// // --- Route Definitions ---
+// app.get('/api/v1/conference/:id', getConferenceById);
+// app.get('/api/v1/conference', getConferenceList);
+// app.post('/api/v1/user/follow', followConference);
+// app.get('/api/v1/user/:id', getUserById);
+// app.put('/api/v1/user/:id', updateUser);
+// app.post('/api/v1/user/add-conference', addConference);
+// app.get('/api/v1/user/:id/my-conferences', getMyConferences);
+// app.post('/api/v1/user/add-to-calendar', addToCalendar);
+// app.post('/api/v1/user/blacklist', blacklistConference);
+// app.get('/api/v1/user/:id/calendar', getUserCalendar);
+// app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback);
+// app.delete('/api/v1/user/:id', deleteUser);
+// app.get('/api/v1/user/:id/notifications', getUserNotifications);
+// app.put('/api/v1/user/:id/notifications', updateNotifications);
+// app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsAsRead);
+// app.get('/admin/conferences', adminConferences_GET);
+// app.post('/admin/conferences', upload.single('csvFile'), adminConferences_POST);
+// app.post('/api/v1/conferences/save', saveConferenceData);
+// app.post('/api/v1/conferences/details/save', saveConferenceDetails);
+// app.post('/api/v1/user/signup', signupUser);
+// app.post('/api/v1/user/signin', signinUser);
+// app.post('/api/v1/user/google-login', googleLogin);
+// app.post('/api/v1/user/verify-password', verifyPassword);
+// app.post('/api/v1/user/change-password', changePassword);
+// app.post('/api/v1/user/verify-email', verifyEmail);
+// app.get('/api/v1/visualization/conference', getVisualizationData);
 
-app.get('/api/v1/topics', async (req, res) => {
-    try {
-        const rawData = await fs.promises.readFile(conferencesListFilePath, 'utf8');
-        const data = JSON.parse(rawData);
-
-
-        let allTopics: string[] = [];
-        for (const conferenceData of data.payload) {
-            if (conferenceData.topics && Array.isArray(conferenceData.topics)) {
-                allTopics = allTopics.concat(conferenceData.topics);
-            }
-        }
+// app.get('/api/v1/topics', async (req, res) => {
+//     try {
+//         const rawData = await fs.promises.readFile(conferencesListFilePath, 'utf8');
+//         const data = JSON.parse(rawData);
 
 
-        const uniqueTopics = [...new Set(allTopics)];
-
-        if (uniqueTopics.length === 0) {
-            res.status(404).json({ error: 'Topics not found in the data' });
-            return
-        }
-
-        res.json(uniqueTopics);
-
-    } catch (error) {
-        if ((error as any).code === 'ENOENT') {
-            console.error('Error: DB_details.json not found at:', conferencesListFilePath);
-            res.status(500).json({ error: 'Database file not found' });
-        } else if (error instanceof SyntaxError) {
-            console.error('Error: Invalid JSON in DB_details.json:', error);
-            res.status(500).json({ error: 'Invalid database file format' });
-        } else {
-            console.error('Error reading or parsing DB_details.json:', error);
-            res.status(500).json({ error: 'Failed to retrieve topics' });
-        }
-    }
-});
-
-import { saveCrawlConferenceFromCsvToJson } from './route/saveCrawlConferenceFromCsvToJson'; // Adjust path
-app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson);
+//         let allTopics: string[] = [];
+//         for (const conferenceData of data.payload) {
+//             if (conferenceData.topics && Array.isArray(conferenceData.topics)) {
+//                 allTopics = allTopics.concat(conferenceData.topics);
+//             }
+//         }
 
 
+//         const uniqueTopics = [...new Set(allTopics)];
 
-// --- API Endpoints (mỗi hàm một endpoint) ---
+//         if (uniqueTopics.length === 0) {
+//             res.status(404).json({ error: 'Topics not found in the data' });
+//             return
+//         }
 
-app.post('/api/get_conferences', async (req, res) => {
-    try {
-        const filter = req.body;
-        console.log(filter);
-        const result = await getConferences(filter);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
+//         res.json(uniqueTopics);
 
-app.post('/api/get_journals', async (req, res) => {
-    try {
-        const filter = req.body;
-        const result = await getJournals(filter);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
+//     } catch (error) {
+//         if ((error as any).code === 'ENOENT') {
+//             console.error('Error: DB_details.json not found at:', conferencesListFilePath);
+//             res.status(500).json({ error: 'Database file not found' });
+//         } else if (error instanceof SyntaxError) {
+//             console.error('Error: Invalid JSON in DB_details.json:', error);
+//             res.status(500).json({ error: 'Invalid database file format' });
+//         } else {
+//             console.error('Error reading or parsing DB_details.json:', error);
+//             res.status(500).json({ error: 'Failed to retrieve topics' });
+//         }
+//     }
+// });
 
-app.post('/api/get_website_information', async (req, res) => {
-    try {
-        const result = await getWebsiteInformation();
-        console.log(result)
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
+// import { saveCrawlConferenceFromCsvToJson } from './route/saveCrawlConferenceFromCsvToJson'; // Adjust path
+// app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson);
 
-app.post('/api/draw_chart', async (req, res) => {
-    try {
-        const data = req.body;
-        const result = await drawChart(data);
-        res.json(result);
-    } catch (error: any) {
-        res.status(500).json({ error: error.message || "An unexpected error occurred." });
-    }
-});
 
-app.post('/log', (req, res) => {
-    const logData = req.body;
-    const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(logData, null, 2)}\n`;
-    const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
 
-    fs.appendFile(logFilePath, logEntry, (err) => {
-        if (err) {
-            console.error('Lỗi khi ghi vào file log:', err);
-            return res.status(500).send('Lỗi khi ghi log.');
-        }
-        console.log('Đã ghi log vào file.');
-        res.status(200).send('Đã ghi log.');
-    });
-});
+// // --- API Endpoints (mỗi hàm một endpoint) ---
+// app.post('/log', (req, res) => {
+//     const logData = req.body;
+//     const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(logData, null, 2)}\n`;
+//     const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
+
+//     fs.appendFile(logFilePath, logEntry, (err) => {
+//         if (err) {
+//             console.error('Lỗi khi ghi vào file log:', err);
+//             return res.status(500).send('Lỗi khi ghi log.');
+//         }
+//         console.log('Đã ghi log vào file.');
+//         res.status(200).send('Đã ghi log.');
+//     });
+// });
 
 
 
@@ -246,114 +204,151 @@ app.use(conditionalJsonBodyParser);
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');
 const EVALUATE_CSV_PATH = path.join(__dirname, './data/evaluate.csv');
 
+
+import { ProcessedResponseData } from './conference/types';
+
 // --- Function to handle the crawl-conferences logic ---
 async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    // Sử dụng logger gốc được truyền vào hoặc logger mặc định
     const routeLogger = (req as any).log || logger.child({ requestId, route: '/crawl-conferences' });
 
-    routeLogger.info({ query: req.query, method: req.method }, "Received request to crawl conferences");
+    routeLogger.info({ query: req.query, method: req.method }, "Received request to crawl/update conferences");
 
     const startTime = Date.now();
+    const dataSource = (req.query.dataSource as string) || 'api'; // Mặc định là 'api'
 
     try {
-        const dataSource = (req.query.dataSource as string) || 'api';
-        let conferenceList: ConferenceData[]; // Sử dụng ConferenceData vì crawlConferences nhận type này
+        let conferenceList: ConferenceData[];
 
         routeLogger.info({ dataSource }, "Determining conference data source");
 
+        // --- Lấy danh sách conference ---
         if (dataSource === 'client') {
+            // --- Luồng UPDATE từ Client ---
             conferenceList = req.body;
-            if (!Array.isArray(conferenceList)) {
-                routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body");
-                res.status(400).json({ message: 'Invalid conference list provided in the request body.' });
+            if (!Array.isArray(conferenceList) || conferenceList.length === 0) {
+                routeLogger.warn({ bodyType: typeof conferenceList, count: conferenceList?.length }, "Invalid or empty conference list in request body for 'client' source.");
+                res.status(400).json({ message: 'Invalid or empty conference list provided in the request body.' });
                 return;
             }
-            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
+            // Kiểm tra sơ bộ cấu trúc cần thiết cho update (ví dụ: có mainLink)
+            const hasRequiredLinks = conferenceList.every(c => c.Acronym && c.Title && c.mainLink && c.cfpLink && c.impLink);
+            if (!hasRequiredLinks) {
+                routeLogger.warn("Client data source selected, but some conferences lack required links (main, cfp, imp) for the update flow.");
+                // Quyết định: Báo lỗi hay vẫn tiếp tục và bỏ qua các conference thiếu link?
+                // Hiện tại báo lỗi để rõ ràng:
+                 res.status(400).json({ message: "Client data source requires all conferences to have Acronym, Title, mainLink, cfpLink, and impLink for the update flow." });
+                 return;
+                // Hoặc lọc ra các conference hợp lệ:
+                // const validConferences = conferenceList.filter(c => c.Acronym && c.Title && c.mainLink && c.cfpLink && c.impLink);
+                // if (validConferences.length === 0) { /* ... xử lý không có conf hợp lệ ... */ }
+                // conferenceList = validConferences;
+                // routeLogger.info({ originalCount: req.body.length, validCount: validConferences.length }, "Filtered conferences for update flow.");
+            }
+            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client (expecting UPDATE flow)");
+
         } else {
+            // --- Luồng CRAWL/SAVE từ API ---
             if (req.body && Object.keys(req.body).length > 0) {
                 routeLogger.warn("Received body when dataSource is 'api'. Ignoring body.");
             }
             try {
-                routeLogger.info("Fetching conference list from API...");
-                // Đảm bảo getConferenceListFromCrawl trả về đúng kiểu ConferenceData[]
-                conferenceList = await getConferenceListFromCrawl() as ConferenceData[];
-                routeLogger.info({ count: conferenceList.length }, "Successfully fetched conference list from API");
+                routeLogger.info("Fetching conference list from internal source for CRAWL flow...");
+                conferenceList = await getConferenceListFromCrawl() as ConferenceData[]; // Hàm này phải trả về ConferenceData[]
+                routeLogger.info({ count: conferenceList.length }, "Successfully fetched conference list from internal source");
             } catch (apiError: any) {
-                routeLogger.error({ err: apiError }, "Failed to fetch conference list from API"); // Log lỗi đúng cách
-                res.status(500).json({
-                    message: 'Failed to fetch conference list from API',
-                    error: apiError.message // Trả về message lỗi thay vì object lỗi
-                });
+                routeLogger.error({ err: apiError }, "Failed to fetch conference list from internal source");
+                res.status(500).json({ message: 'Failed to fetch conference list from internal source', error: apiError.message });
                 return;
             }
         }
 
-        // Kiểm tra conferenceList trước khi gọi crawlConferences
+        // --- Kiểm tra conferenceList cuối cùng ---
         if (!conferenceList || !Array.isArray(conferenceList)) {
-            routeLogger.error("conferenceList is not a valid array after source determination.");
-            res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
-            return;
+             routeLogger.error("conferenceList is not a valid array after source determination.");
+             res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
+             return;
         }
         if (conferenceList.length === 0) {
-            routeLogger.warn("Conference list is empty. Nothing to crawl.");
+             routeLogger.warn("Conference list is empty. Nothing to process.");
              res.status(200).json({
-                 message: 'Conference list provided was empty. No crawling performed.',
+                 message: 'Conference list provided or fetched was empty. No processing performed.',
                  runtime: `0.00 s`,
-                 outputJsonlPath: FINAL_OUTPUT_PATH,
+                 outputJsonlPath: FINAL_OUTPUT_PATH, // Vẫn trả về path file (dù có thể trống)
                  outputCsvPath: EVALUATE_CSV_PATH
              });
              return;
-        } 
+        }
 
+        // --- Gọi hàm core ---
+        routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, `Calling crawlConferences (expecting ${dataSource === 'client' ? 'UPDATE results' : 'SAVE to file'})`);
 
-        routeLogger.info({ conferenceCount: conferenceList.length }, "Calling crawlConferences...");
-
-        // Gọi crawlConferences và chỉ await hoàn thành, không nhận kết quả trả về
-        await crawlConferences(conferenceList, routeLogger); // <<<--- THAY ĐỔI: Không gán vào biến results
+        // *** THAY ĐỔI: Nhận kết quả trả về từ crawlConferences ***
+        const crawlResults: (ProcessedResponseData | null)[] = await crawlConferences(conferenceList, routeLogger);
 
         const endTime = Date.now();
         const runTime = endTime - startTime;
         const runTimeSeconds = (runTime / 1000).toFixed(2);
 
-        // Cập nhật log thành công, không có resultsPreview
-        routeLogger.info({
-            runtimeSeconds: runTimeSeconds,
-            event: 'crawl_process_finished_successfully', // Đổi tên event rõ ràng hơn
-            outputJsonl: FINAL_OUTPUT_PATH,
-            outputCsv: EVALUATE_CSV_PATH
-        }, "crawlConferences process finished successfully. Results written to files.");
+        // --- Xử lý Response dựa trên dataSource ---
+        if (dataSource === 'client') {
+            // --- Trả về kết quả UPDATE cho Client ---
+            const processedClientResults = crawlResults.filter(result => result !== null) as ProcessedResponseData[];
+            routeLogger.info({
+                runtimeSeconds: runTimeSeconds,
+                totalProcessed: crawlResults.length, // Tổng số conf đã xử lý
+                resultsReturned: processedClientResults.length, // Số kết quả thực sự trả về
+                event: 'update_process_finished_successfully',
+                outputJsonl: FINAL_OUTPUT_PATH, // Vẫn ghi file JSONL
+                outputCsv: EVALUATE_CSV_PATH
+            }, "Conference UPDATE process finished. Returning processed data.");
 
-        // Cập nhật response thành công
-        res.status(200).json({
-            message: `Conference crawling process completed successfully! Results saved to server at specified paths.`,
-            runtime: `${runTimeSeconds} s`,
-            outputJsonlPath: FINAL_OUTPUT_PATH, // Thêm đường dẫn vào response
-            outputCsvPath: EVALUATE_CSV_PATH
-        });
+            res.status(200).json({
+                message: `Conference update process completed. ${processedClientResults.length} conference(s) processed successfully.`,
+                runtime: `${runTimeSeconds} s`,
+                data: processedClientResults, // *** TRẢ KẾT QUẢ ĐÃ XỬ LÝ ***
+                outputJsonlPath: FINAL_OUTPUT_PATH,
+                outputCsvPath: EVALUATE_CSV_PATH
+            });
+             routeLogger.info({ statusCode: 200, resultsCount: processedClientResults.length }, "Sent successful response with processed data");
 
-        routeLogger.info({ statusCode: 200 }, "Sent successful response");
+        } else {
+            // --- Chỉ xác nhận CRAWL/SAVE thành công cho Client ---
+            routeLogger.info({
+                runtimeSeconds: runTimeSeconds,
+                event: 'crawl_process_finished_successfully',
+                outputJsonl: FINAL_OUTPUT_PATH,
+                outputCsv: EVALUATE_CSV_PATH
+            }, "Conference CRAWL/SAVE process finished successfully. Results written to files.");
 
-    
+            res.status(200).json({
+                message: `Conference crawling process completed successfully! Results saved to server at specified paths.`,
+                runtime: `${runTimeSeconds} s`,
+                outputJsonlPath: FINAL_OUTPUT_PATH,
+                outputCsvPath: EVALUATE_CSV_PATH
+            });
+             routeLogger.info({ statusCode: 200 }, "Sent successful response (file confirmation only)");
+        }
 
     } catch (error: any) {
         const endTime = Date.now();
         const runTime = endTime - startTime;
-        // Log lỗi với context đầy đủ hơn
-        routeLogger.error({ err: error, stack: error.stack, runtimeMs: runTime }, "Conference crawling process failed within route handler");
+        routeLogger.error({ err: error, stack: error.stack, runtimeMs: runTime, dataSource }, "Conference processing failed within route handler");
 
-        // Gửi response lỗi
-        if (!res.headersSent) { // Kiểm tra xem response đã được gửi chưa
+        if (!res.headersSent) {
              res.status(500).json({
-                 message: 'Conference crawling process failed',
-                 error: error.message
+                 message: 'Conference processing failed',
+                 error: error.message,
+                 dataSource: dataSource // Có thể thêm thông tin này vào lỗi
              });
              routeLogger.warn({ statusCode: 500 }, "Sent error response");
         } else {
-             routeLogger.error("Headers already sent, could not send 500 error response for crawl failure.");
+             routeLogger.error("Headers already sent, could not send 500 error response for processing failure.");
         }
     }
 }
+
+
 // --- Function to handle the crawl-journals logic ---
 async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
@@ -414,8 +409,8 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
     await handleCrawlJournals(req, res);
 });
 
-// --- Cron Job ---
-cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
+// // --- Cron Job ---
+// cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
 import { performLogAnalysis } from './route/logAnalysisService'; // <<< Import service mới
@@ -502,166 +497,130 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
 
 
 
+
 ///////////////////////////////////////////
 
 
-// Import các module đã tạo (cho chatbot)
-import { runNonStreamChat, saveHistoryToFile } from './chatbotService';
+// src/server.ts
+// src/server.ts
+// import express, { Request, Response, NextFunction } from 'express';
+import http from 'http';
+// import cors from 'cors';
+import dotenv from 'dotenv';
+// import { Server as SocketIOServer, Socket } from 'socket.io'; // Import Socket.IO types
+import { handleUserInputStreaming } from './handlers/intentHandler'; // We'll adapt this handler
 import logToFile from './utils/logger';
+import { HistoryItem, ErrorUpdate } from './shared/types'; // Keep shared types
 
+dotenv.config();
 
-// --- Chat endpoint ---
-const nonStreamChatHandler: RequestHandler = async (req, res) => {
-    logToFile("--- /api/non-stream-chat: Endpoint hit ---");
-    try {
-        const userInput = req.body?.userInput;
-        let history: any[] = req.body?.history || [];
-        logToFile(`/api/non-stream-chat: userInput = ${userInput}`);
-        logToFile(`/api/non-stream-chat: Received History = ${JSON.stringify(history)}`);
+// const app = express();
+// const httpServer = http.createServer(app);
 
-        if (!userInput) {
-            logToFile("/api/non-stream-chat: Invalid request: Missing userInput");
-            res.status(400).json({ error: 'Invalid request body: Missing userInput' });
-        }
+// // --- Socket.IO Server Setup ---
+// const io = new SocketIOServer(httpServer, {
+//     cors: {
+//         origin: process.env.FRONTEND_URL || "*", // Configure allowed origins carefully
+//         methods: ["GET", "POST"],
+//         credentials: true
+//     },
+//     // Optional: Increase ping timeout/interval if needed for long Gemini calls
+//     // pingTimeout: 60000, // Default 5000ms (ping timeout) + 20000ms (server waits) = 25000ms total
+//     // pingInterval: 25000, // Default 25000ms
+// });
 
-        // Move history saving to the top to avoid errors after sending a response
-        const historyFilePath = path.join(process.cwd(), 'chat_history.txt');
-        try {
-            await saveHistoryToFile(history, historyFilePath);
-        } catch (historyError: any) {
-            logToFile(`/api/non-stream-chat: Error saving history: ${historyError.message}`);
-            // Handle the error, but don't send a response yet.  Perhaps log it.
-        }
+// --- Middleware ---
+// Keep CORS for Express if you have other REST endpoints
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*',
+    credentials: true
+}));
+app.use(express.json());
 
-        const chatResponse: any = await runNonStreamChat(userInput, history);
-        logToFile(`/api/non-stream-chat: chatResponse = ${JSON.stringify(chatResponse)}`);
-
-        if (chatResponse.type === 'chart') {
-            // const sqlResult = await pool.query(chatResponse.sqlQuery);
-            // logToFile(`/api/non-stream-chat: SQL Result = ${JSON.stringify(sqlResult.rows)}`);
-            // res.json({ type: 'chart', echartsConfig: chatResponse.echartsConfig, sqlResult: sqlResult.rows, description: chatResponse.description });
-            // // ADDED RETURN
-        } else if (chatResponse.type === 'text') {
-            res.json({ type: 'text', message: chatResponse.message });
-            return; // ADDED RETURN
-        } else if (chatResponse.type === 'navigation') {
-            res.json(chatResponse);
-            return; // ADDED RETURN
-        } else if (chatResponse.type === 'error') {
-            res.status(500).json({ error: chatResponse.message || 'An unknown error occurred.', thought: chatResponse.thought });
-            return; // ADDED RETURN
-        } else {
-            logToFile("/api/non-stream-chat: Error: Unknown response type or error from runNonStreamChat");
-            res.status(500).json({ error: 'An unknown error occurred.' });
-            return; // ADDED RETURN
-        }
-
-
-    } catch (error: any) {
-        logToFile(`/api/non-stream-chat: Error: ${error.message}`);
-        res.status(500).json({ error: 'Internal Server Error', details: error.message });
-    } finally {
-        logToFile("--- /api/non-stream-chat: Endpoint completed ---");
+// --- Basic Logging Middleware (Keep as is) ---
+app.use((req: Request, res: Response, next: NextFunction) => {
+    // ... (keep existing logging middleware for standard HTTP requests if any) ...
+    // You might want less logging here if most traffic moves to sockets
+    if (!req.url.startsWith('/socket.io/')) { // Avoid logging socket.io polls/requests
+        const start = Date.now();
+        logToFile(`Incoming HTTP Request: ${req.method} ${req.url}`);
+        res.on('finish', () => {
+            const duration = Date.now() - start;
+            logToFile(`HTTP Response Sent: ${res.statusCode} for ${req.method} ${req.url} in ${duration}ms`);
+        });
     }
-};
+    next();
+});
 
-app.post('/api/non-stream-chat', nonStreamChatHandler);
+// --- REMOVE the OLD SSE Endpoint ---
+// app.post('/api/stream-chat', streamChatHandler); // DELETE or comment out this line
 
-// Live API route
-import { filterConferences, filterJournals } from './handlers/filterInformationHandler';
-// --- Các hàm xử lý (mỗi hàm cho một function calling) ---
+// --- Socket.IO Connection Logic ---
+io.on('connection', (socket: Socket) => {
+    logToFile(`[Socket.IO] Client connected: ${socket.id}`);
 
-async function getConferences(filter: any): Promise<any> {
-    console.log("Filtering conferences:", filter);
-    const conferenceResults = await filterConferences(
-        filter,
-        "./evaluate.csv",
-        "./conferences_filtered.txt"
-    );
-    return conferenceResults;
-}
+    // --- Handle Incoming Chat Messages ---
+    socket.on('send_message', async (data: { userInput: string; history: HistoryItem[] }) => {
+        const { userInput, history } = data;
+        logToFile(`[Socket.IO ${socket.id}] Received 'send_message': UserInput = ${userInput}`);
 
-async function getJournals(filter: any): Promise<any> {
-    console.log("Filtering journals:", filter);
-    const journalResults = await filterJournals(
-        filter,
-        "./scimagojr_2023.csv",
-        "./journals_filtered.txt"
-    );
-    return journalResults;
-}
+        if (!userInput || typeof userInput !== 'string' || !userInput.trim()) {
+            logToFile(`[Socket.IO ${socket.id}] Invalid 'send_message' data: Missing or invalid userInput`);
+            // Send error back to *this specific client*
+            socket.emit('chat_error', {
+                type: 'error',
+                message: 'Invalid request: Missing or invalid userInput',
+                step: 'validation' // Add step if helpful
+            } as ErrorUpdate);
+            return;
+        }
 
-async function getWebsiteInformation(): Promise<any> {
-    return [
-        `1. **Website Title:** Global Conference & Journal Hub (GCJH)
-2. **Website Overview:**
-GCJH is a comprehensive online platform designed to connect researchers, academics, and professionals with relevant conferences and journals across all disciplines globally.  We provide a centralized, searchable database, offering detailed information to facilitate efficient research and networking opportunities. Our goal is to simplify the process of discovering and participating in relevant academic events and accessing high-quality scholarly publications.
-3. **Key Features:**
-    * **Comprehensive Database:**  Our database includes thousands of conferences and journals, encompassing a wide range of subjects and geographical locations.  Information is regularly updated to ensure accuracy and timeliness.  Data points include:
-        * **Conferences:** Conference title, dates, location, organizers, abstract submission deadlines, registration fees, call for papers, keynote speakers, accepted papers (if available), contact information, links to official websites.
-        * **Journals:** Journal title, ISSN, publisher, impact factor (where applicable), subject areas, open access status, indexing databases (e.g., Scopus, Web of Science), call for papers/submissions, editorial board information, links to official websites.
-    * **Advanced Search Functionality:** Users can search our database using various parameters, including keywords, subject areas, dates, location, publication type (conference or journal), and more.  Boolean operators (AND, OR, NOT) are supported for refined searches.
-    * **Personalized Profiles (for registered users):** Users can create personalized profiles to save their search preferences, track conferences and journals of interest, and receive relevant notifications.
-    * **Calendar Integration:**  Users can add conference dates to their personal calendars directly from the website.
-    * **Alert System:** Users can set up alerts to receive notifications about new conferences or journals matching their saved preferences.
-    * **Community Forum (future development):** A planned community forum will enable users to connect, discuss research topics, and share information.
-    * **AI-Powered Chatbot:**  A sophisticated AI-powered chatbot is integrated throughout the website to provide instant support and assistance.  The chatbot can:
-        * **Answer Frequently Asked Questions (FAQs):**  Provide quick answers to common questions about the website's functionality, search capabilities, and account management.
-        * **Assist with Searches:**  Refine search queries by understanding user intent and suggesting relevant keywords or filters.  It can handle complex search requests, including Boolean operators.
-        * **Provide Information Extraction:** Extract specific information from conference and journal listings based on user requests (e.g., 'What are the keynote speakers at the ACM Conference?').
-        * **Summarize Content:**  Provide concise summaries of conference abstracts or journal articles (with proper attribution and limitations clearly stated – e.g.,  'This is a brief summary generated by AI; please refer to the original content for complete information.').
-        * **Multilingual Support:** Offer support in multiple languages.
-        * **Personalized Recommendations:** Based on user activity and preferences, suggest relevant conferences or journals.
-    * **Data Visualization and Analytics (Dashboard):** Registered users have access to a personalized dashboard providing data visualization tools:
-        * **Conference Trends:** Visualize trends in conference participation over time, categorized by subject area, location, or other parameters (e.g., line charts, bar charts).
-        * **Journal Impact:** Visualize journal impact factors and citation trends (where data is available) using various chart types (e.g., scatter plots, histograms).
-        * **Research Area Analysis:** Explore the distribution and growth of research across various disciplines using interactive maps and charts.
-        * **Personalized Statistics:**  Track user's saved items, search history, and alert activity through charts and graphs.
-        * **Customizable Dashboards:** Users can customize their dashboards to display the most relevant data and visualizations.
-4. **How to Use the Website:**
-    1. **Navigation:** The website features a user-friendly interface with intuitive navigation. Users can easily browse by subject area, location, or use the advanced search bar.
-    2. **Searching:** Use the search bar to input keywords or phrases related to your area of interest. Utilize the advanced search filters for more precise results.
-    3. **Viewing Details:** Click on a conference or journal listing to access detailed information.
-    4. **Saving & Tracking:** Registered users can save conferences and journals to their personal profiles for easy access and tracking.
-    5. **Alerts:** Set up email alerts to receive notifications about upcoming events or publications relevant to your research interests.
-5. **Account Registration:** Registration is free and allows access to personalized features. Users need to provide:
-    * Email address
-    * Password (meeting strong password criteria)
-    * Name (optional)
-    * Affiliation (optional - university, company etc.)
-    * Research Interests (optional - allows for better alert customization)
-6. **Account Benefits:**
-    * **Personalized Search Results:** Save search preferences for faster and more efficient searches.
-    * **Saved Items:** Create a personalized list of conferences and journals of interest.
-    * **Email Alerts:** Receive notifications about new relevant content.
-    * **Calendar Integration:** Add conference dates to your personal calendar.
-    * **Profile Management:** Update personal information and preferences.
-    * **AI-Powered Assistance:** Access to the integrated AI chatbot for personalized support and information retrieval.
-    * **Data Visualization Dashboard:** Use interactive dashboards to analyze trends and visualize research data.
-7. **Additional Information:**
-    * **Contact Us:**  A dedicated 'Contact Us' page provides various methods (email, contact form) to reach our support team.
-    * **FAQ:** A comprehensive FAQ section addresses common user questions.
-    * **Terms of Service:**  Clearly defined terms and conditions governing website usage.
-    * **Privacy Policy:**  A detailed privacy policy outlining how user data is collected, used, and protected.
-    * **About Us:**  Information about the website's mission, team, and partners.
-    * **AI Limitations:** A clear statement outlining the limitations of the AI chatbot and its capabilities.  This should include disclaimers about the accuracy of AI-generated summaries and recommendations.  Emphasize the need to always consult original sources.
-    `
-    ]; // Example data
-}
+        try {
+            // --- *** ADAPTED Handler Call *** ---
+            // Pass the socket instance instead of response object
+            // The handler will now use socket.emit instead of res.write
+            await handleUserInputStreaming(
+                userInput,
+                history || [], // Ensure history is an array
+                socket // Pass the socket object
+            );
+            // The handler is now responsible for emitting results/errors/status
+            logToFile(`[Socket.IO ${socket.id}] handleUserInputStreaming finished for: "${userInput}"`);
 
-async function drawChart(data: any): Promise<any> {
-    console.log("Drawing chart with data:", data);
-    // Thay thế bằng logic vẽ biểu đồ thực tế của bạn (có thể trả về URL ảnh, SVG, v.v.)
-    return { type: "chart", data: "/* Dữ liệu biểu đồ ở đây (ví dụ: base64 encoded image) */" };
-}
+        } catch (error: any) {
+            logToFile(`[Socket.IO ${socket.id}] CRITICAL Error during 'send_message' handling: ${error.message}, Stack: ${error.stack}`);
+            // Send a generic error back to the client if the handler failed unexpectedly
+            try {
+                socket.emit('chat_error', {
+                    type: 'error',
+                    message: error.message || 'An unexpected server error occurred while processing your message.',
+                    step: 'handler_exception' // Add step if helpful
+                } as ErrorUpdate);
+            } catch (emitError: any) {
+                 logToFile(`[Socket.IO ${socket.id}] FAILED to emit critical error to client: ${emitError.message}`);
+            }
+        }
+    });
 
+    // --- Handle Disconnection ---
+    socket.on('disconnect', (reason: string) => {
+        logToFile(`[Socket.IO] Client disconnected: ${socket.id}. Reason: ${reason}`);
+        // IMPORTANT: The handleUserInputStreaming function MUST check
+        // `socket.connected` before/after long operations to stop processing
+        // if the client disconnects mid-way. Socket.IO doesn't automatically
+        // kill the async operations started for a disconnected socket.
+    });
 
-
-httpServer.listen(3001, () => {
-    console.log(`Server is running on port 3001`);
+     // --- Optional: Handle other socket errors ---
+     socket.on('error', (err) => {
+        logToFile(`[Socket.IO ${socket.id}] Socket Error: ${err.message}`);
+     });
 });
 
 
-
-
-
+// --- Start Server ---
+const PORT = process.env.PORT || 3001;
+httpServer.listen(PORT, () => {
+    console.log(`Server (including Socket.IO) is running on port ${PORT}`); // Original console log
+    // logToFile(`Server (including Socket.IO) started on port ${PORT}`);
+});

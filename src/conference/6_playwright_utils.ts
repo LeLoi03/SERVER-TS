@@ -9,8 +9,8 @@ import { extractTextFromPDF } from './9_pdf_utils';
 import { addAcronymSafely, logger } from './11_utils';
 import { MAIN_CONTENT_KEYWORDS, YEAR2 } from '../config';
 
-import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData } from './types';
-
+import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData, ProcessedResponseData } from './types';
+import { processResponse } from './10_response_processing';
 import path from 'path';
 
 const ERROR_ACCESS_LINK_LOG_PATH: string = path.join(__dirname, "./data/error_access_link_log.txt");
@@ -402,7 +402,6 @@ const processDetermineLinksResponse = async (
     }
 };
 
-
 const BATCHES_DIR = path.join(__dirname, "./data/batches");
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');
 
@@ -693,7 +692,6 @@ export const saveBatchToFile = async (
     }
 };
 
-
 // --- saveHTMLContent ---
 export const saveHTMLContent = async (
     browserContext: BrowserContext,
@@ -965,222 +963,265 @@ export const saveHTMLContent = async (
 };
 
 
-
 // --- Revised updateHTMLContent ---
 export const updateHTMLContent = async (
     browserContext: BrowserContext,
-    conference: ConferenceUpdateData, // Use specific interface
+    conference: ConferenceUpdateData,
     batchIndexRef: { current: number },
-    batchPromises: Promise<BatchUpdateEntry[] | null>[], // Promise returns BatchUpdateEntry[]
+    // batchPromises: Promise<void>[], // <<<--- Không cần batchPromises nữa cho luồng này
     parentLogger: typeof logger
-): Promise<{ updatedBatches: [] }> => { // Return type is minimal
-
+): Promise<ProcessedResponseData | null> => { // <<<--- Đổi kiểu trả về
     const taskLogger = parentLogger.child({ title: conference.Title, acronym: conference.Acronym, function: 'updateHTMLContent' });
-    let page: Page | null = null; // Declare page outside try
+    let page: Page | null = null;
 
     try {
         page = await browserContext.newPage();
-        taskLogger.info(`Processing update for ${conference.Acronym}`);
+        taskLogger.info({ event: 'update_start' }, `Starting updateHTMLContent`);
 
         let mainTextPath: string | undefined = undefined;
-        let cfpTextPath: string | undefined | null;
-        let impTextPath: string | undefined | null;
+        let cfpTextPath: string | undefined | null = undefined;
+        let impTextPath: string | undefined | null = undefined;
+        let finalMainLinkUrl = conference.mainLink;
 
-        // 1. Process Main Link
+        // 1. Process Main Link (như cũ, nhưng return null nếu thất bại)
         const mainLink = conference.mainLink;
+        if (!mainLink) {
+            taskLogger.error({ event: 'update_missing_main_link' }, "Main link is missing.");
+            return null; // <<<--- return null
+        }
         try {
-            taskLogger.debug({ link: mainLink }, `Navigating to main link`);
-            await page.goto(mainLink, { waitUntil: "domcontentloaded", timeout: 25000 });
-            const htmlContent = await fetchContentWithRetry(page);
-            const document = cleanDOM(htmlContent);
-            if (document) {
-                let fullText = traverseNodes(document.body as HTMLElement, conference.Acronym, YEAR2);
-                fullText = removeExtraEmptyLines(fullText);
-                if (fullText.trim()) {
-                    mainTextPath = await writeTempFile(fullText.trim(), `${conference.Acronym}_main_update`);
-                    taskLogger.info(`Main content processed and saved to path.`);
-                } else {
-                    taskLogger.warn("Main content extracted was empty.");
-                }
-            } else {
-                taskLogger.warn(`Failed to clean DOM for main link: ${mainLink}`);
-            }
+            // ... (logic goto, fetch, clean, traverse, writeTempFile như cũ) ...
+             const response = await page.goto(mainLink, { waitUntil: "domcontentloaded", timeout: 25000 });
+             finalMainLinkUrl = page.url();
+             taskLogger.info({ originalLink: mainLink, finalLink: finalMainLinkUrl, status: response?.status(), event: 'update_main_nav_success' }, `Navigation to main link successful.`);
+             const htmlContent = await fetchContentWithRetry(page);
+             const document = cleanDOM(htmlContent);
+             if (document && document.body) {
+                 let fullText = traverseNodes(document.body as HTMLElement, conference.Acronym, YEAR2);
+                 fullText = removeExtraEmptyLines(fullText);
+                 if (fullText.trim()) {
+                     mainTextPath = await writeTempFile(fullText.trim(), `${conference.Acronym}_main_update`);
+                     taskLogger.info({ path: mainTextPath, event: 'update_main_content_saved' }, `Main content processed and saved.`);
+                 } else { taskLogger.warn({ event: 'update_main_content_empty' }); }
+             } else { taskLogger.warn({ link: finalMainLinkUrl, event: 'update_main_dom_invalid' }); }
         } catch (error: any) {
-            const timestamp = new Date().toISOString();
-            const logMessage = `[${timestamp}] Error accessing/processing mainLink ${mainLink}: ${error.message} for ${conference.Acronym}\n`;
-            taskLogger.error({ link: mainLink, error: error.message }, `Error accessing/processing main link`);
-            await fs.promises.appendFile(ERROR_ACCESS_LINK_LOG_PATH, logMessage, 'utf8').catch(e => console.error("Failed to write error log:", e));
-            // Decide if we should continue without main content? Let's assume yes for now.
+            // ... (log lỗi như cũ) ...
+            taskLogger.error({ link: mainLink, finalUrl: finalMainLinkUrl, err: error, event: 'update_main_link_failed' }, `Error accessing/processing main link`);
+            // Ghi log phụ nếu cần
+             const timestamp = new Date().toISOString();
+             const logMessage = `[${timestamp}] Error accessing/processing mainLink ${mainLink} (final: ${finalMainLinkUrl}): ${error.message} for ${conference.Acronym}\n`;
+             await fs.promises.appendFile(ERROR_ACCESS_LINK_LOG_PATH, logMessage, 'utf8').catch(e => console.error("Failed to write error log:", e));
+             // return null; // Có thể quyết định dừng hẳn ở đây nếu main link lỗi là nghiêm trọng
         }
 
-        // Use the SAME page instance to fetch CFP and IMP if links exist
-        // 2. Process CFP Link (if exists)
-        if (conference.cfpLink && conference.cfpLink.toLowerCase() !== "none") {
-            try {
-                taskLogger.debug({ link: conference.cfpLink }, `Processing CFP link`);
-                // Use the existing 'saveHTML...' which now returns a path
-                cfpTextPath = await saveHTMLFromCallForPapers(page, conference.cfpLink, conference.Acronym, YEAR2);
-                if (cfpTextPath) {
-                    taskLogger.info(`CFP content processed and saved to path.`);
-                } else {
-                    taskLogger.warn(`Failed to process CFP content from link: ${conference.cfpLink}`);
-                }
-            } catch (cfpError: any) {
-                taskLogger.error({ link: conference.cfpLink, error: cfpError.message }, `Error processing CFP link`);
-            }
-        }
-
-        // 3. Process IMP Link (if exists)
-        if (conference.impLink && conference.impLink.toLowerCase() !== "none") {
-            try {
-                taskLogger.debug({ link: conference.impLink }, `Processing IMP link`);
-                // Use the existing 'saveHTML...' which now returns a path
-                impTextPath = await saveHTMLFromImportantDates(page, conference.impLink, conference.Acronym, YEAR2);
-                if (impTextPath) {
-                    taskLogger.info(`IMP content processed and saved to path.`);
-                } else {
-                    taskLogger.warn(`Failed to process IMP content from link: ${conference.impLink}`);
-                }
-            } catch (impError: any) {
-                taskLogger.error({ link: conference.impLink, error: impError.message }, `Error processing IMP link`);
-            }
-        }
-
-        // Only proceed if we have at least the main content path
+        // Chỉ tiếp tục nếu có mainTextPath (như cũ)
         if (!mainTextPath) {
-            taskLogger.error(`Skipping batch creation as main content could not be processed for ${conference.Acronym}`);
-            return { updatedBatches: [] };
+            taskLogger.error({ event: 'update_abort_no_main_text' }, `Skipping update as main content failed.`);
+            return null; // <<<--- return null
         }
 
-        // 4. Create Batch Entry with Paths
-        const batch: BatchUpdateEntry = {
+        // 2. Process CFP Link (như cũ)
+        if (conference.cfpLink && conference.cfpLink.trim().toLowerCase() !== "none") {
+            try {
+                cfpTextPath = await saveHTMLFromCallForPapers(page, conference.cfpLink, conference.Acronym, YEAR2);
+                 if (cfpTextPath) taskLogger.info({ path: cfpTextPath, event: 'update_cfp_success' });
+                 else taskLogger.warn({ link: conference.cfpLink, event: 'update_cfp_failed_no_path' });
+            } catch (cfpError: any) { taskLogger.error({ link: conference.cfpLink, err: cfpError, event: 'update_cfp_failed_exception' }); }
+        } else { taskLogger.debug({ event: 'update_cfp_skipped' }); }
+
+
+        // 3. Process IMP Link (như cũ)
+        if (conference.impLink && conference.impLink.trim().toLowerCase() !== "none") {
+             try {
+                 impTextPath = await saveHTMLFromImportantDates(page, conference.impLink, conference.Acronym, YEAR2);
+                 if (impTextPath) taskLogger.info({ path: impTextPath, event: 'update_imp_success' });
+                 else taskLogger.warn({ link: conference.impLink, event: 'update_imp_failed_no_path' });
+             } catch (impError: any) { taskLogger.error({ link: conference.impLink, err: impError, event: 'update_imp_failed_exception' }); }
+         } else { taskLogger.debug({ event: 'update_imp_skipped' }); }
+
+        // 4. Create Batch Entry (như cũ)
+        const batchData: BatchUpdateEntry = {
             conferenceTitle: conference.Title,
             conferenceAcronym: conference.Acronym,
-            // Store paths
             conferenceTextPath: mainTextPath,
             cfpTextPath: cfpTextPath,
             impTextPath: impTextPath,
-            // Store links for reference if needed later
-            cfpLink: conference.cfpLink,
-            impLink: conference.impLink,
-            // extractResponseTextPath will be added in updateBatchToFile
         };
 
-        // 5. Add promise to the queue (DO NOT pass 'page')
+        // 5. *** GỌI VÀ CHỜ updateBatchToFile ***
         const currentBatchIndex = batchIndexRef.current;
         batchIndexRef.current++;
-        taskLogger.info({ batchIndex: currentBatchIndex }, `Adding update batch task to queue`);
-        // Pass only the batch data (with paths)
-        const batchPromise = updateBatchToFile(batch, currentBatchIndex, parentLogger);
-        batchPromises.push(batchPromise);
+        taskLogger.info({ batchIndex: currentBatchIndex, event: 'update_calling_batch_processor' }, `Calling updateBatchToFile`);
 
+        // Gọi hàm updateBatchToFile và đợi kết quả (ProcessedResponseData | null)
+        const batchResult = await updateBatchToFile(batchData, currentBatchIndex, parentLogger);
 
-        return { updatedBatches: [] }; // Return minimal object
+        // Không cần đẩy vào batchPromises nữa
+        // batchPromises.push(batchPromise);
+
+        taskLogger.info({ event: 'update_finish_success', hasResult: batchResult !== null }, `Finishing updateHTMLContent.`);
+        return batchResult; // <<<--- Trả về kết quả từ updateBatchToFile
 
     } catch (error: any) {
-        taskLogger.error(error, "Unhandled error in updateHTMLContent");
-        console.error("Error in updateHTMLContent:", error); // Keep console for visibility
-        console.error(error.stack);
-        return { updatedBatches: [] };
+        taskLogger.error({ err: error, event: 'update_unhandled_error' }, "Unhandled error in updateHTMLContent");
+        return null; // <<<--- Trả về null nếu có lỗi không mong muốn
     } finally {
-        // Ensure page is closed
         if (page && !page.isClosed()) {
             taskLogger.debug("Closing page instance.");
-            await page.close().catch(err => taskLogger.error(err, "Error closing page in finally block"));
+            await page.close().catch(err => taskLogger.error({ err: err, event: 'update_page_close_failed' }, "Error closing page"));
         }
     }
 };
-
-
 // --- Revised updateBatchToFile ---
-export const updateBatchToFile = async (batch: BatchUpdateEntry, batchIndex: number, parentLogger: typeof logger): Promise<BatchUpdateEntry[] | null> => {
-    await init(); // Assuming this is necessary setup
-    const taskLogger = parentLogger.child({ title: batch.conferenceTitle, acronym: batch.conferenceAcronym, batchIndex, function: 'updateBatchToFile' });
+export const updateBatchToFile = async (
+    batchInput: BatchUpdateEntry,
+    batchIndex: number,
+    parentLogger: typeof logger
+): Promise<ProcessedResponseData | null> => { // <<<--- Đổi kiểu trả về thành ProcessedResponseData | null
+    const baseLogContext = { batchIndex, function: 'updateBatchToFile' };
+    let taskLogger = parentLogger.child(baseLogContext);
+
+    let processedDataResult: ProcessedResponseData | null = null; // Biến để lưu kết quả xử lý
 
     try {
-        // Basic validation
-        if (!batch || !batch.conferenceAcronym || !batch.conferenceTextPath) {
-            taskLogger.warn(`updateBatchToFile called with invalid batch data (missing acronym or main text path).`, { batch });
-            return null;
-        }
-        taskLogger.info(`Processing update batch`);
+        await init();
 
-        // Ensure output directory exists
-        const batchesDir = path.join(__dirname, "./data/batches");
+        if (!batchInput || !batchInput.conferenceAcronym || !batchInput.conferenceTitle || !batchInput.conferenceTextPath) {
+            taskLogger.warn({ event: 'update_batch_invalid_input', batchInput }, "Called with invalid batch data. Skipping.");
+            return null; // <<<--- Trả về null nếu input không hợp lệ
+        }
+
+        taskLogger = parentLogger.child({ ...baseLogContext, acronym: batchInput.conferenceAcronym, title: batchInput.conferenceTitle });
+        taskLogger.info({ event: 'update_batch_start' }, `Processing update batch`);
+
+        // Đảm bảo thư mục tồn tại (như cũ)
         try {
-            await fs.promises.mkdir(batchesDir, { recursive: true });
+            if (!fs.existsSync(BATCHES_DIR)) fs.mkdirSync(BATCHES_DIR, { recursive: true });
+            const finalOutputDir = path.dirname(FINAL_OUTPUT_PATH);
+            if (!fs.existsSync(finalOutputDir)) fs.mkdirSync(finalOutputDir, { recursive: true });
         } catch (mkdirError: any) {
-            taskLogger.error(mkdirError, "Error creating batches directory");
-            throw mkdirError; // Rethrow critical error
+            taskLogger.error({ err: mkdirError, event: 'update_batch_dir_create_failed' }, "Error creating necessary directories");
+            throw mkdirError; // Ném lỗi để Promise reject -> sẽ trả về null ở catch ngoài
         }
 
-        // Define final output file path
-        const conferenceAcronym = batch.conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-        const fileUpdateName = `${conferenceAcronym}_update.txt`;
-        const fileUpdatePath = path.join(batchesDir, fileUpdateName);
-
-        // 1. Read content from file paths
-        taskLogger.debug("Reading content from temporary files...");
-        const mainText = await readContentFromFile(batch.conferenceTextPath);
-        // Read CFP/IMP only if paths exist
-        const cfpText = batch.cfpTextPath ? await readContentFromFile(batch.cfpTextPath) : "";
-        const impText = batch.impTextPath ? await readContentFromFile(batch.impTextPath) : "";
-
-        if (!mainText && !cfpText && !impText) {
-            taskLogger.error("All text content (main, cfp, imp) is empty after reading files. Cannot proceed.");
-            return null; // Or handle as appropriate
-        }
-
-        // 2. Construct content for API
-        const impContent = impText ? ` \n\nImportant Dates information:\n${impText}` : "";
-        const cfpContent = cfpText ? ` \n\nCall for Papers information:\n${cfpText}` : "";
-        // Use mainText read from file
-        const contentSendToAPI = `Conference ${batch.conferenceAcronym}:\n\n${mainText}${cfpContent}${impContent}`;
-
-        // 3. Write the constructed content to the final output file (_update.txt)
-        taskLogger.debug({ path: fileUpdatePath }, "Writing constructed content to final update file");
-        const fileUpdatePromise = fs.promises.writeFile(fileUpdatePath, contentSendToAPI, "utf8");
-
-        // 4. Call Extraction API
-        batch.extractResponseTextPath = undefined; // Reset path
-        batch.extractMetaData = undefined;
-
-        let extractApiResponse: any;
+        // Đọc content từ file tạm (như cũ)
+        taskLogger.debug({ event: 'update_batch_read_start' }, "Reading content from temporary files");
+        let mainText = '', cfpText = '', impText = '';
         try {
-            taskLogger.info("Calling extract_information_api");
-            extractApiResponse = await extract_information_api(contentSendToAPI, batchIndex, batch.conferenceTitle, batch.conferenceAcronym, parentLogger);
+            mainText = await readContentFromFile(batchInput.conferenceTextPath);
+            if (batchInput.cfpTextPath) cfpText = await readContentFromFile(batchInput.cfpTextPath).catch(e => { taskLogger.warn({ err: e, path: batchInput.cfpTextPath, type: 'cfp' }, "Non-critical: Could not read CFP"); return ""; });
+            if (batchInput.impTextPath) impText = await readContentFromFile(batchInput.impTextPath).catch(e => { taskLogger.warn({ err: e, path: batchInput.impTextPath, type: 'imp' }, "Non-critical: Could not read IMP"); return ""; });
+        } catch (e: any) {
+            taskLogger.error({ err: e, path: batchInput.conferenceTextPath, type: 'main', event: 'update_batch_read_failed' }, "Failed to read main text file. Cannot proceed.");
+            throw e; // Ném lỗi -> sẽ trả về null ở catch ngoài
+        }
+        taskLogger.debug({ event: 'update_batch_read_end' }, "Finished reading content");
 
-            // 5. Save API response text to a temporary file
-            const responseText = extractApiResponse.responseText || "";
-            if (responseText) {
-                batch.extractResponseTextPath = await writeTempFile(responseText, `${conferenceAcronym}_extract_update_response`);
-                batch.extractMetaData = extractApiResponse.metaData; // Keep metadata
-                taskLogger.info(`API response saved to path.`);
+
+        // Gộp nội dung cho API (như cũ)
+        const impContent = impText ? ` \n\nImportant Dates information:\n${impText.trim()}` : "";
+        const cfpContent = cfpText ? ` \n\nCall for Papers information:\n${cfpText.trim()}` : "";
+        const contentSendToAPI = `Conference ${batchInput.conferenceTitle} (${batchInput.conferenceAcronym}):\n\n${mainText.trim()}${cfpContent}${impContent}`;
+
+        // Ghi file trung gian (như cũ, optional)
+        const safeConferenceAcronym = batchInput.conferenceAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
+        const fileUpdateName = `${safeConferenceAcronym}_update_${batchIndex}.txt`;
+        const fileUpdatePath = path.join(BATCHES_DIR, fileUpdateName);
+        const fileUpdatePromise = fs.promises.writeFile(fileUpdatePath, contentSendToAPI, "utf8").catch(writeError => {
+            taskLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'update_batch_write_intermediate_failed' }, "Error writing intermediate update file (non-critical)");
+        });
+
+        // Gọi API (như cũ)
+        let extractApiResponse: any;
+        let extractResponseText: string | undefined; // <<<--- Lưu text response trực tiếp
+        let extractResponseTextPath: string | undefined;
+        let extractMetaData: any;
+        const extractApiContext = { apiType: 'extract' };
+
+        try {
+            taskLogger.info({ ...extractApiContext, inputLength: contentSendToAPI.length, event: 'update_batch_extract_api_start' }, "Calling extract_information_api");
+            extractApiResponse = await extract_information_api(contentSendToAPI, batchIndex, batchInput.conferenceTitle, batchInput.conferenceAcronym, taskLogger);
+            extractResponseText = extractApiResponse.responseText || ""; // <<<--- Lấy text
+            extractMetaData = extractApiResponse.metaData;
+            taskLogger.info({ ...extractApiContext, responseLength: extractResponseText?.length, event: 'update_batch_extract_api_end', success: true }, "extract_information_api call successful");
+
+            // Chỉ lưu file nếu có nội dung (có thể bỏ qua nếu không cần file này nữa)
+            if (extractResponseText?.trim()) {
+                extractResponseTextPath = await writeTempFile(extractResponseText, `${safeConferenceAcronym}_extract_update_response_${batchIndex}`);
+                taskLogger.info({ path: extractResponseTextPath, event: 'update_batch_api_response_saved' }, `API response saved to temp file.`);
             } else {
-                taskLogger.warn("API response text was empty.");
+                extractResponseTextPath = undefined;
+                taskLogger.warn({ ...extractApiContext, event: 'update_batch_api_response_empty' }, "API response text was empty.");
             }
 
         } catch (apiError: any) {
-            taskLogger.error(apiError, "Error calling extract_information_api");
-            // Decide if batch should be considered failed - returning null here
-            await fileUpdatePromise.catch(e => taskLogger.error(e, "Error writing final update file even after API error")); // Ensure file write attempt finishes
-            return null;
+            taskLogger.error({ ...extractApiContext, err: apiError, event: 'update_batch_extract_api_failed' }, "Error calling extract_information_api");
+            await fileUpdatePromise; // Đợi ghi file trung gian xong nếu có lỗi API
+            throw apiError; // Ném lỗi -> sẽ trả về null ở catch ngoài
         }
 
-        // 6. Wait for the final file write to complete
-        await fileUpdatePromise;
-        taskLogger.info({ path: fileUpdatePath }, "Successfully wrote final update file.");
+        await fileUpdatePromise; // Đảm bảo file trung gian ghi xong
 
-        // 7. Return the batch entry containing all paths
-        taskLogger.info("Update batch processing successful.");
-        return [batch]; // Return array consistent with other batch function
+        // *** BƯỚC MỚI: Xử lý response API ***
+        if (extractResponseText && extractResponseText.trim()) {
+            try {
+                taskLogger.info({ event: 'update_batch_process_response_start' }, 'Processing API response text');
+                // Loại bỏ các ký tự không hợp lệ trước khi parse
+                const cleanedResponseText = extractResponseText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+                const parsedResponse = JSON.parse(cleanedResponseText); // Parse JSON
+                if (typeof parsedResponse === 'object' && parsedResponse !== null) {
+                     processedDataResult = processResponse(parsedResponse); // Gọi hàm xử lý
+                     taskLogger.info({ event: 'update_batch_process_response_success' }, 'Successfully processed API response');
+                } else {
+                    taskLogger.warn({ event: 'update_batch_process_response_invalid_json' }, 'Parsed API response is not a valid object');
+                     processedDataResult = null; // Đặt là null nếu JSON không hợp lệ
+                }
+
+            } catch (processError: any) {
+                taskLogger.error({ err: processError, event: 'update_batch_process_response_failed' }, 'Error parsing or processing API response text');
+                 processedDataResult = null; // Đặt là null nếu có lỗi xử lý
+            }
+        } else {
+             taskLogger.warn({ event: 'update_batch_process_response_skipped_empty' }, 'Skipping response processing as API response text was empty');
+             processedDataResult = null; // Đặt là null nếu response rỗng
+        }
+        // *** KẾT THÚC BƯỚC MỚI ***
+
+
+        // Ghi bản ghi cuối cùng vào FINAL_OUTPUT_PATH (vẫn cần làm điều này)
+        const finalAppendContext = { outputPath: FINAL_OUTPUT_PATH };
+        try {
+            taskLogger.info({ ...finalAppendContext, event: 'update_batch_prepare_final_record' }, "Preparing final record for appending");
+            // Cấu trúc finalRecord giữ nguyên để nhất quán file JSONL
+            const finalRecord: BatchUpdateEntry = { // Sử dụng kiểu BatchEntry cho nhất quán
+                conferenceTitle: batchInput.conferenceTitle,
+                conferenceAcronym: batchInput.conferenceAcronym,
+             
+                conferenceTextPath: batchInput.conferenceTextPath,
+                cfpTextPath: batchInput.cfpTextPath,
+                impTextPath: batchInput.impTextPath,
+                extractResponseTextPath: extractResponseTextPath, // Path file response (có thể undefined)
+                extractMetaData: extractMetaData,
+            };
+
+            const dataToWrite = JSON.stringify(finalRecord) + '\n';
+            taskLogger.info({ ...finalAppendContext, recordAcronym: finalRecord.conferenceAcronym, event: 'update_batch_append_start' }, "Appending final result to output file");
+            await fs.promises.appendFile(FINAL_OUTPUT_PATH, dataToWrite, 'utf8');
+            taskLogger.info({ ...finalAppendContext, recordAcronym: finalRecord.conferenceAcronym, event: 'update_batch_append_success' }, "Successfully appended final result");
+
+        } catch (appendError: any) {
+            taskLogger.error({ ...finalAppendContext, err: appendError, event: 'update_batch_append_final_failed' }, "CRITICAL: Failed to append final result to output file");
+            // Ném lỗi này, sẽ dẫn đến trả về null ở catch ngoài
+            throw appendError;
+        }
+
+        taskLogger.info({ event: 'update_batch_finish_success' }, "Finishing updateBatchToFile successfully");
+        // *** TRẢ VỀ KẾT QUẢ ĐÃ XỬ LÝ ***
+        return processedDataResult; // Trả về ProcessedResponseData hoặc null
 
     } catch (error: any) {
-        taskLogger.error(error, "Unhandled error in updateBatchToFile");
-        console.error("Error in updateBatchToFile:", error); // Keep console
-        console.error(error.stack);
-        return null; // Indicate failure
+        const finalAcronym = batchInput?.conferenceAcronym || 'unknown';
+        taskLogger.error({ err: error, finalAcronym, event: 'update_batch_unhandled_error_or_rethrown' }, "Error occurred during updateBatchToFile execution");
+        return null; // <<<--- Trả về null nếu có lỗi bị bắt ở đây
     }
 };
-
-
