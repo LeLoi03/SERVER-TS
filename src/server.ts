@@ -30,7 +30,7 @@ const app = express();
 const httpServer = new HttpServer(app);
 export const io = new SocketIOServer(httpServer, { // <<< Export 'io'
     cors: {
-        origin: process.env.FRONTEND_URL || "*", // <<< Cấu hình CORS chặt chẽ hơn
+        origin: "*", // <<< Cấu hình CORS chặt chẽ hơn
         methods: ["GET", "POST"]
     }
 });
@@ -500,11 +500,6 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
 
 ///////////////////////////////////////////
 
-
-// src/server.ts
-// src/server.ts
-// import express, { Request, Response, NextFunction } from 'express';
-import http from 'http';
 // import cors from 'cors';
 import dotenv from 'dotenv';
 // import { Server as SocketIOServer, Socket } from 'socket.io'; // Import Socket.IO types
@@ -512,30 +507,7 @@ import { handleUserInputStreaming } from './handlers/intentHandler'; // We'll ad
 import logToFile from './utils/logger';
 import { HistoryItem, ErrorUpdate } from './shared/types'; // Keep shared types
 
-dotenv.config();
 
-// const app = express();
-// const httpServer = http.createServer(app);
-
-// // --- Socket.IO Server Setup ---
-// const io = new SocketIOServer(httpServer, {
-//     cors: {
-//         origin: process.env.FRONTEND_URL || "*", // Configure allowed origins carefully
-//         methods: ["GET", "POST"],
-//         credentials: true
-//     },
-//     // Optional: Increase ping timeout/interval if needed for long Gemini calls
-//     // pingTimeout: 60000, // Default 5000ms (ping timeout) + 20000ms (server waits) = 25000ms total
-//     // pingInterval: 25000, // Default 25000ms
-// });
-
-// --- Middleware ---
-// Keep CORS for Express if you have other REST endpoints
-app.use(cors({
-    origin: process.env.FRONTEND_URL || '*',
-    credentials: true
-}));
-app.use(express.json());
 
 // --- Basic Logging Middleware (Keep as is) ---
 app.use((req: Request, res: Response, next: NextFunction) => {
