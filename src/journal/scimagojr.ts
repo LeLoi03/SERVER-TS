@@ -1,13 +1,25 @@
+
+// ============================================
+// File: src/journal/scimagojr.ts (Modified)
+// ============================================
 import { Page } from 'playwright';
-import { formatISSN, retryAsync } from './utils';
+import { formatISSN, retryAsync } from './utils'; // retryAsync is NOT modified
+// Assume fetchGoogleImage is modified to accept logger
 import { fetchGoogleImage } from './googleSearch';
 import { RETRY_OPTIONS } from '../config';
-
 import { TableRowData, JournalDetails, ImageResult } from './types';
+import { logger as baseLogger } from './utils'; // Import base logger type/instance
 
+// --- processPage ---
+export const processPage = async (
+    page: Page,
+    url: string,
+    logger: typeof baseLogger // <-- Accept logger
+): Promise<TableRowData[]> => {
+    const childLogger = logger.child({ function: 'processPage', url });
+    childLogger.info({ event: 'process_page_start' }, 'Starting page processing.');
 
-export const processPage = async (page: Page, url: string): Promise<TableRowData[]> => {
-    // Chặn script ở đây
+    // Route blocking logic remains the same
     await page.route("**/*", (route) => {
         const request = route.request();
         const resourceType = route.request().resourceType();
@@ -24,7 +36,12 @@ export const processPage = async (page: Page, url: string): Promise<TableRowData
     });
 
     try {
-        const tableData: TableRowData[] = await retryAsync(async () => {
+        // Log *around* retryAsync, not inside it
+        childLogger.debug({ event: 'process_page_attempt_start', retryOptions: RETRY_OPTIONS }, 'Attempting to process page with retries.');
+        const tableData: TableRowData[] = await retryAsync(async (attempt) => {
+            // Log inside the function passed to retryAsync
+            const attemptLogger = childLogger.child({ attempt });
+            attemptLogger.debug({ event: 'process_page_goto_start' }, 'Navigating to URL.');
             await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
             const tableData: TableRowData[] = await page.evaluate(() => {
                 const traverseNodes = (node: Node | null): string => {
@@ -77,40 +94,57 @@ export const processPage = async (page: Page, url: string): Promise<TableRowData
                 }
             });
             return tableData;
-        }, RETRY_OPTIONS);
+        }, RETRY_OPTIONS, childLogger );
+
+        childLogger.info({ event: 'process_page_success', rowCount: tableData.length }, 'Successfully processed page.');
         return tableData;
     } catch (error: any) {
-        // logger.error(`Error processing page ${url}: ${error.message}`);
-        return [];
+        childLogger.error({ err: error, event: 'process_page_failed' }, `Error processing page`);
+        // Re-throw or return empty array based on desired behavior
+        // Re-throwing is often better to signal failure upstream
+        throw error;
+        // return []; // Alternative: return empty on failure
+    } finally {
+        childLogger.info({ event: 'process_page_finish' }, 'Finished page processing attempt.');
     }
 };
 
-export const fetchDetails = async (page: Page, journalUrl: string | null): Promise<JournalDetails | null> => {
+// --- fetchDetails ---
+export const fetchDetails = async (
+    page: Page,
+    journalUrl: string | null,
+    logger: typeof baseLogger // <-- Accept logger
+): Promise<JournalDetails | null> => {
+    const childLogger = logger.child({ function: 'fetchDetails', journalUrl });
+
     if (!journalUrl) {
-        // logger.warn("fetchDetails called with null journalUrl.");
+        childLogger.warn({ event: 'fetch_details_skip_null_url' }, "Skipping fetchDetails: journalUrl is null.");
         return null;
     }
-    // logger.info(`Fetching details for: ${journalUrl}`);
+    childLogger.info({ event: 'fetch_details_start' }, `Starting detail fetch.`);
 
     try {
-        const details: JournalDetails = await retryAsync(async () => {
-            // logger.debug(`Attempting to navigate to ${journalUrl}`);
+        childLogger.debug({ event: 'fetch_details_attempt_start', retryOptions: RETRY_OPTIONS }, 'Attempting to fetch details with retries.');
+        const details: JournalDetails = await retryAsync(async (attempt) => {
+            const attemptLogger = childLogger.child({ attempt });
+            attemptLogger.debug({ event: 'fetch_details_goto_start' }, 'Navigating to journal URL.');
             await page.goto(journalUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
-            // logger.debug(`Navigation to ${journalUrl} successful. Evaluating page content...`);
+            attemptLogger.debug({ event: 'fetch_details_goto_success' }, 'Navigation successful. Evaluating page content.');
 
-            // Trước page.evaluate
             const tableRowSelector = 'body > div:nth-child(15) > div > div.cellcontent > div:nth-child(2) > table tbody tr';
-            // Hoặc nếu bạn muốn thử cả 15 và 16:
-            // const tableRowSelector = 'body > div:nth-child(15) > div > div.cellcontent > div:nth-child(2) > table tbody tr, body > div:nth-child(16) > div > div.cellcontent > div:nth-child(2) > table tbody tr';
+            // Selector waiting (optional but good practice)
             try {
-                await page.waitForSelector(tableRowSelector, { timeout: 10000 }); // Chờ tối đa 10 giây
+                 attemptLogger.debug({ event: 'wait_for_selector_start', selector: tableRowSelector });
+                 await page.waitForSelector(tableRowSelector, { timeout: 10000 });
+                 attemptLogger.debug({ event: 'wait_for_selector_success', selector: tableRowSelector });
             } catch (e) {
-                // logger.warn(`Table rows not found within timeout for selector: ${tableRowSelector}`);
-                // Có thể quyết định trả về null hoặc tiếp tục thử evaluate
-            }
+                attemptLogger.warn({ event: 'wait_for_selector_timeout', selector: tableRowSelector }, `Optional table rows selector not found within timeout.`);
+                // Continue anyway, evaluate might still work or find other data
+           }
 
-
-            const details: JournalDetails = await page.evaluate(() => {
+           attemptLogger.debug({ event: 'fetch_details_evaluate_start' });
+    
+            const evaluatedDetails: JournalDetails = await page.evaluate(() => {
                 // --- Hàm trợ giúp để thử nhiều selector ---
                 function querySelectorWithIndices(baseSelectorPattern: string, indices: number[]): { element: Element | null; successfulSelector: string | null } {
                     for (const index of indices) {
@@ -307,29 +341,38 @@ export const fetchDetails = async (page: Page, journalUrl: string | null): Promi
                 console.log('[Evaluation] Data extraction finished.');
                 return result;
             });
+            attemptLogger.debug({ event: 'fetch_details_evaluate_success', detailKeys: Object.keys(evaluatedDetails) }, 'Page evaluation complete.');
 
-            // logger.debug(`Page evaluation complete for ${journalUrl}.`);
-            // Kiểm tra xem details có rỗng không, nếu có thể là lỗi không tìm thấy gì
-            if (Object.keys(details).length === 0) {
-                //  logger.warn(`No details extracted for ${journalUrl}. Selectors might have failed or the page structure is different.`);
-                // Cân nhắc throw lỗi ở đây nếu việc không có dữ liệu nào là bất thường và cần retry
-                // throw new Error(`No details extracted for ${journalUrl}`);
-            } else {
-                //   logger.info(`Successfully extracted ${Object.keys(details).length} detail sections for ${journalUrl}.`);
+            if (Object.keys(evaluatedDetails).length === 0) {
+                 attemptLogger.warn({ event: 'fetch_details_warn_empty' }, "Evaluation finished, but no details were extracted. Selectors might have failed or page structure changed.");
+                // Optional: throw error here if empty details mean failure for retry
+                // throw new Error(`No details extracted for ${journalUrl} on attempt ${attempt}`);
             }
 
-            return details;
-        }, RETRY_OPTIONS);
+            return evaluatedDetails;
+        }, RETRY_OPTIONS, childLogger);
+
+        childLogger.info({ event: 'fetch_details_success', detailCount: Object.keys(details).length }, `Successfully fetched details.`);
         return details;
     } catch (error: any) {
-        // logger.error(`CRITICAL ERROR fetching details for ${journalUrl}: ${error.message}`);
-        // logger.debug(error.stack); // Log stack trace để debug sâu hơn nếu cần
-        return null;
+        childLogger.error({ err: error, event: 'fetch_details_failed', stack: error.stack }, `CRITICAL ERROR fetching details`);
+        return null; // Return null on failure after retries
+    } finally {
+         childLogger.info({ event: 'fetch_details_finish' }, 'Finished detail fetch attempt.');
     }
 };
 
+// --- getImageUrlAndDetails ---
+export const getImageUrlAndDetails = async (
+    details: JournalDetails | null,
+    row: any = null, // Consider using a more specific type like TableRowData | CSVRow | null
+    apiKey: string | null,
+    cseId: string | null,
+    logger: typeof baseLogger // <-- Accept logger
+): Promise<ImageResult> => {
+    const childLogger = logger.child({ function: 'getImageUrlAndDetails' });
+    childLogger.info({ event: 'get_image_start' }, 'Attempting to get image URL.');
 
-export const getImageUrlAndDetails = async (details: JournalDetails | null, row: any = null, apiKey: string | null, cseId: string | null): Promise<ImageResult> => {
     let issnText: string | null = null;
 
     if (row && row.Issn) {
@@ -351,38 +394,85 @@ export const getImageUrlAndDetails = async (details: JournalDetails | null, row:
     let imageResult: ImageResult = { Image: null, Image_Context: null };
 
     if (issnText) {
-        const formattedISSN = formatISSN(issnText);
+        childLogger.debug({ event: 'get_image_issn_found', issnRaw: issnText });
+        const formattedISSN = formatISSN(issnText); // formatISSN doesn't need logger
         if (formattedISSN) {
+            childLogger.debug({ event: 'get_image_issn_formatted', issnFormatted: formattedISSN, title });
             if (apiKey && cseId) {
+                childLogger.info({ event: 'fetch_google_image_start' }, `Calling Google Image search for ISSN: ${formattedISSN}`);
                 try {
-                    const { imageLink, contextLink } = await fetchGoogleImage(title, formattedISSN, apiKey, cseId);
-                    if (imageLink) {
+                    // ---> Pass logger to fetchGoogleImage (assuming it accepts one)
+                    const { imageLink, contextLink } = await fetchGoogleImage(title, formattedISSN, apiKey, cseId, childLogger);
                         imageResult = { Image: imageLink, Image_Context: contextLink };
-                    }
+                    childLogger.info({ event: 'fetch_google_image_result', hasImage: !!imageLink, hasContext: !!contextLink }, 'Google Image search finished.');
                 } catch (fetchError: any) {
-                    // logger.error(`Error occurred during fetchGoogleImage call for ISSN ${formattedISSN}: ${fetchError.message}`);
+                    // Log the error from fetchGoogleImage
+                    childLogger.error({ err: fetchError, event: 'fetch_google_image_failed', issn: formattedISSN }, `Error during fetchGoogleImage call.`);
+                    // Re-throw the error to be caught by performImageSearch in crawlJournals.ts
+                    // This allows the ApiKeyManager rotation logic to trigger correctly
+                    throw fetchError;
                 }
             } else {
-                // logger.warn(`Skipping image search for ISSN ${formattedISSN} because API key or CSE ID is missing.`);
+                childLogger.warn({ event: 'get_image_skip_missing_creds', issn: formattedISSN }, `Skipping image search: API key or CSE ID is missing.`);
             }
         } else {
-            // logger.warn(`Invalid ISSN format after processing: ${issnText}`);
+            childLogger.warn({ event: 'get_image_warn_invalid_issn', originalIssn: issnText }, `Invalid ISSN format after processing.`);
         }
     } else {
-        // logger.warn(`No ISSN found in details or row to search for image.`);
+        childLogger.warn({ event: 'get_image_skip_no_issn', title: title || 'N/A' }, `No ISSN found in details or row to search for image.`);
     }
 
+    childLogger.info({ event: 'get_image_finish', hasImage: !!imageResult.Image }, 'Finished image URL retrieval attempt.');
     return imageResult;
 };
 
-export const getLastPageNumber = async (firstPage: Page, baseUrl: string): Promise<number> => {
-    await firstPage.goto(`${baseUrl}&page=1`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-    const lastPageNumber = await firstPage.evaluate(() => {
-        const text = document.querySelector('body > div.ranking_body > div:nth-child(9) > div')?.textContent?.trim(); // Null check
-        if (!text) return 1;
-        const totalItems = parseInt(text.split('of')[1].trim());
-        return Math.ceil(totalItems / 50);
-    });
+// --- getLastPageNumber ---
+export const getLastPageNumber = async (
+    firstPage: Page,
+    baseUrl: string,
+    logger: typeof baseLogger // <-- Accept logger
+): Promise<number> => {
+    const childLogger = logger.child({ function: 'getLastPageNumber', baseUrl });
+    childLogger.info({ event: 'get_last_page_start' }, 'Attempting to determine last page number.');
+    const url = `${baseUrl}&page=1`; // Construct URL once
 
-    return lastPageNumber;
+    try {
+        childLogger.debug({ event: 'get_last_page_navigating', url });
+        await firstPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        childLogger.debug({ event: 'get_last_page_evaluating' });
+
+        const lastPageNumber = await firstPage.evaluate(() => {
+            const selector = 'body > div.ranking_body > div:nth-child(9) > div';
+            const text = document.querySelector(selector)?.textContent?.trim();
+            if (!text) {
+                console.warn(`[Evaluate] Selector '${selector}' not found or has no text.`);
+                return 1; // Default to 1 if selector fails
+            }
+            try {
+                const parts = text.split('of');
+                if (parts.length < 2) {
+                     console.warn(`[Evaluate] Text '${text}' does not contain 'of'.`);
+                     return 1;
+                }
+                const totalItemsStr = parts[1].trim().split(' ')[0].replace(/,/g, ''); // Handle commas in numbers
+                const totalItems = parseInt(totalItemsStr);
+                 if (isNaN(totalItems)) {
+                     console.warn(`[Evaluate] Could not parse total items from '${parts[1].trim()}'. Text was: ${text}`);
+                     return 1;
+                 }
+                return Math.ceil(totalItems / 50); // Assuming 50 items per page
+            } catch (e) {
+                console.error('[Evaluate] Error parsing last page number:', e);
+                return 1; // Default on parsing error
+            }
+        });
+
+        childLogger.info({ event: 'get_last_page_success', pageCount: lastPageNumber }, `Determined last page number: ${lastPageNumber}`);
+        return lastPageNumber;
+    } catch (error: any) {
+        childLogger.error({ err: error, event: 'get_last_page_failed', url }, `Failed to get last page number`);
+        throw error; // Re-throw to signal failure
+    } finally {
+         childLogger.info({ event: 'get_last_page_finish' }, 'Finished attempt to get last page number.');
+    }
 };

@@ -3,7 +3,7 @@ import path from 'path';
 import { RequestHandler } from 'express';
 import fs from 'fs';
 
-import { ConferenceResponse } from '../types/conference.response';
+import { ConferenceResponse } from '../../types/conference.response';
 
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');
 

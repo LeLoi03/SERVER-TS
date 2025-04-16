@@ -5,12 +5,12 @@ import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid'; // Import uuid
 
 // Import necessary types
-import { UserResponse, Blacklist, Notification, Setting, defaultUserSettings } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response'; // Need this for conference title
+import { UserResponse, Blacklist, Notification, Setting, defaultUserSettings } from '../../types/user.response';
+import { ConferenceResponse } from '../../types/conference.response'; // Need this for conference title
 import * as emailService from './emailService'; // Import the email service
 
 // Import WebSocket connections map
-import { connectedUsers } from '../../server'; // Adjust path as needed
+import { connectedUsers } from '../../../server'; // Adjust path as needed
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 // *** Need conference details to get the title for the notification message ***

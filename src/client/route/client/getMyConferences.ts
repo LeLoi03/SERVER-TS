@@ -4,7 +4,7 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 
 
-import { AddedConference } from '../types/addConference';
+import { AddedConference } from '../../types/addConference';
 
 const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');
 

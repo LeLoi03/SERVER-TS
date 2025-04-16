@@ -5,14 +5,14 @@ import fs from 'fs';
 import multer from 'multer';
 import { parse } from 'csv-parse/sync';
 
-import { UserResponse } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response';
-import { Notification } from '../types/user.response';
+import { UserResponse } from '../../types/user.response';
+import { ConferenceResponse } from '../../types/conference.response';
+import { Notification } from '../../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
-import { connectedUsers } from '../../server';
-import { AddedConference } from '../types/addConference';
-import { ConferenceListResponse } from '../types/conference.list.response';
-import { ConferenceInfo } from '../types/conference.list.response';
+import { connectedUsers } from '../../../server';
+import { AddedConference } from '../../types/addConference';
+import { ConferenceListResponse } from '../../types/conference.list.response';
+import { ConferenceInfo } from '../../types/conference.list.response';
 
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');

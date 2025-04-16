@@ -4,7 +4,7 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 
 
-import { UserResponse } from '../types/user.response';
+import { UserResponse } from '../../types/user.response';
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 
 // 18. Login user

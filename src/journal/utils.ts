@@ -264,31 +264,65 @@ export const formatISSN = (issn: string): string | null => {
 
 interface RetryOptions {
   retries: number;
-  minTimeout: number;
-  factor: number;
+  minTimeout: number; // Base delay in ms
+  factor: number;     // Multiplier for exponential backoff
 }
 
-// Hàm retry bất đồng bộ
-export const retryAsync = async <T>(fn: () => Promise<T>, options: RetryOptions): Promise<T> => {
+/**
+* Executes an async function with retries on failure.
+* @param fn The async function to execute. It receives the current attempt number (starting from 1).
+* @param options Retry configuration.
+* @param logger A logger instance (e.g., Pino) for logging retry attempts.
+* @returns The result of the function `fn` if successful.
+* @throws The error from the last attempt if all retries fail.
+*/
+export const retryAsync = async <T>(
+  fn: (attempt: number) => Promise<T>, // Function now accepts attempt number
+  options: RetryOptions,
+  logger: Logger | MinimalLogger // Accept logger instance
+): Promise<T> => {
   const { retries, minTimeout, factor } = options;
-  let attempt = 0;
+  let lastError: any = null; // Store the last error
 
-  while (attempt < retries) {
-    try {
-      return await fn();
-    } catch (error: any) {
-      attempt++;
-      if (attempt >= retries) {
-        throw error; // Ném lỗi nếu đã thử lại quá số lần quy định
+  for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+          // Pass the current attempt number to the function
+          return await fn(attempt);
+      } catch (error: any) {
+          lastError = error; // Store the error
+          if (attempt >= retries) {
+              logger.error({
+                  event: 'retry_max_attempts_reached',
+                  attempt,
+                  maxRetries: retries,
+                  err: lastError // Log the actual error object
+              }, `Function failed after maximum ${retries} attempts. Throwing last error.`);
+              throw lastError; // Throw the actual error from the last attempt
+          }
+
+          // Calculate delay using exponential backoff
+          // Delay = minTimeout * (factor ^ (attempt - 1)) -> Common pattern
+          // Or use factor ^ attempt for slightly faster increase: minTimeout * (factor ^ attempt)
+          const timeout = Math.round(minTimeout * Math.pow(factor, attempt - 1));
+
+          logger.warn({
+              event: 'retry_attempt_failed',
+              attempt,
+              maxRetries: retries,
+              delayMs: timeout,
+              err: error // Log the error for this specific attempt
+          }, `Attempt ${attempt}/${retries} failed. Retrying in ${timeout}ms...`);
+
+          await new Promise((resolve) => setTimeout(resolve, timeout));
       }
-
-      const timeout = minTimeout * Math.pow(factor, attempt - 1);
-      logger.warn(`Attempt ${attempt} failed: ${error.message}. Retrying in ${timeout}ms...`);
-      await new Promise((resolve) => setTimeout(resolve, timeout));
-    }
   }
-  throw new Error("Retry failed after multiple attempts"); // Should not happen, but good to have
+
+  // This part should theoretically not be reached if retries >= 1
+  // But it satisfies TypeScript's need for a return/throw at the end
+  logger.error({ event: 'retry_logic_error', err: lastError }, "Retry loop completed without success or throwing an error (unexpected). Throwing last encountered error.");
+  throw lastError || new Error("Retry failed after multiple attempts, but no specific error was captured.");
 };
+
 
 interface CSVRecord {
   [key: string]: string;

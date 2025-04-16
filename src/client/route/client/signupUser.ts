@@ -4,7 +4,7 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 import crypto from 'crypto'; // <<< Import crypto để tạo mã
 import { sendVerificationEmail } from './emailService';
-import { UserResponse } from '../types/user.response';
+import { UserResponse } from '../../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');

@@ -4,7 +4,7 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 
 
-import { ConferenceListResponse } from '../types/conference.list.response';
+import { ConferenceListResponse } from '../../types/conference.list.response';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const addConferencesFilePath = path.resolve(__dirname, '../database/add_conferences.json');

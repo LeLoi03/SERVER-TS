@@ -6,9 +6,9 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 
-import { UserResponse, Notification, Setting, defaultUserSettings } from '../types/user.response'; // Import Setting and default
-import { ConferenceResponse, FollowerInfo } from '../types/conference.response';
-import { connectedUsers } from '../../server'; // Assuming server-ts exports this
+import { UserResponse, Notification, Setting, defaultUserSettings } from '../../types/user.response'; // Import Setting and default
+import { ConferenceResponse, FollowerInfo } from '../../types/conference.response';
+import { connectedUsers } from '../../../server'; // Assuming server-ts exports this
 import * as emailService from './emailService'; // Import the email service
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');

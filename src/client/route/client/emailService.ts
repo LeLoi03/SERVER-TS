@@ -1,9 +1,9 @@
 // src/services/emailService.ts
 import * as brevo from '@getbrevo/brevo'; // <<< Sử dụng import này nhất quán
 import 'dotenv/config';
-import { UserResponse } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response';
-import { ImportantDate } from '../types/conference.response';
+import { UserResponse } from '../../types/user.response';
+import { ConferenceResponse } from '../../types/conference.response';
+import { ImportantDate } from '../../types/conference.response';
 
 
 // --- Kiểm tra biến môi trường NGAY TỪ ĐẦU ---

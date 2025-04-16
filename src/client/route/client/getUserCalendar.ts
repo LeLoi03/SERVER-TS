@@ -4,9 +4,9 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 
 
-import { UserResponse } from '../types/user.response';
-import { ConferenceResponse } from '../types/conference.response';
-import { CalendarEvent } from '../types/calendar';
+import { UserResponse } from '../../types/user.response';
+import { ConferenceResponse } from '../../types/conference.response';
+import { CalendarEvent } from '../../types/calendar';
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
 const conferenceDetailsFilePath = path.resolve(__dirname, '../database/DB_details.json');

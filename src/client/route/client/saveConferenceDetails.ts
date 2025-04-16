@@ -5,9 +5,9 @@ import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 
 // Import types and services
-import { UserResponse, Notification, Setting, defaultUserSettings } from '../types/user.response';
-import { ConferenceResponse, ImportantDate, Location } from '../types/conference.response';
-import { connectedUsers } from '../../server';
+import { UserResponse, Notification, Setting, defaultUserSettings } from '../../types/user.response';
+import { ConferenceResponse, ImportantDate, Location } from '../../types/conference.response';
+import { connectedUsers } from '../../../server';
 import * as emailService from './emailService'; // Import email service
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');

@@ -4,13 +4,13 @@ import { RequestHandler } from 'express';
 import fs from 'fs';
 
 
-import { UserResponse } from '../types/user.response';
-import { Notification } from '../types/user.response';
+import { UserResponse } from '../../types/user.response';
+import { Notification } from '../../types/user.response';
 import { v4 as uuidv4 } from 'uuid';
-import { connectedUsers } from '../../server';
-import { AddedConference } from '../types/addConference';
-import { ConferenceFormData } from '../types/addConference';
-import { MyConference } from '../types/user.response';
+import { connectedUsers } from '../../../server';
+import { AddedConference } from '../../types/addConference';
+import { ConferenceFormData } from '../../types/addConference';
+import { MyConference } from '../../types/user.response';
 
 
 const userFilePath = path.resolve(__dirname, '../database/users_list.json');
