@@ -351,6 +351,7 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
 
 // --- Function to handle the crawl-journals logic ---
 async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
+    console.log("Call crawl journals")
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const routeLogger = logger.child({ requestId, route: '/crawl-journals' });
 
@@ -360,7 +361,7 @@ async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
 
     try {
         routeLogger.info("Starting journal crawling...");
-        const journalData = await crawlJournals(); // Call crawlJournals function
+        const journalData = await crawlJournals(routeLogger); // Call crawlJournals function
         routeLogger.info("Journal crawling completed.");
 
         const endTime = Date.now();
@@ -373,9 +374,6 @@ async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
             const runtimeFilePath = path.resolve(__dirname, 'crawl_journals_runtime.txt');
             await fs.promises.writeFile(runtimeFilePath, `Execution time: ${runTimeSeconds} s`);
             routeLogger.debug({ path: runtimeFilePath }, "Successfully wrote runtime file.");
-
-            await fs.promises.writeFile(OUTPUT_JSON, JSON.stringify(journalData, null, 2), 'utf8');
-            routeLogger.debug({ path: OUTPUT_JSON }, "Successfully wrote journal data to JSON file.");
 
         } catch (writeError: any) {
             routeLogger.warn(writeError, "Could not write journal crawling runtime or data file");
@@ -413,8 +411,8 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
 // cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
-import { performLogAnalysis } from './route/logAnalysisService'; // <<< Import service mới
-import { LogAnalysisResult } from './types/logAnalysis'; // <<< Import interface
+import { performLogAnalysis } from './client/route/logAnalysisService'; // <<< Import service mới
+import { LogAnalysisResult } from './client/types/logAnalysis'; // <<< Import interface
 
 
 // --- Lưu trữ kết quả phân tích mới nhất ---
@@ -500,12 +498,10 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
 
 ///////////////////////////////////////////
 
-// import cors from 'cors';
-import dotenv from 'dotenv';
 // import { Server as SocketIOServer, Socket } from 'socket.io'; // Import Socket.IO types
-import { handleUserInputStreaming } from './handlers/intentHandler'; // We'll adapt this handler
-import logToFile from './utils/logger';
-import { HistoryItem, ErrorUpdate } from './shared/types'; // Keep shared types
+import { handleUserInputStreaming } from './chatbot/handlers/intentHandler'; // We'll adapt this handler
+import logToFile from './chatbot/utils/logger';
+import { HistoryItem, ErrorUpdate } from './chatbot/shared/types'; // Keep shared types
 
 
 

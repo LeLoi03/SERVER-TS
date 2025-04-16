@@ -68,7 +68,8 @@ export const YEAR3: number = parseInt(process.env.YEAR3 || String(nextYear), 10)
 
 export const SEARCH_QUERY_TEMPLATE: string = process.env.SEARCH_QUERY_TEMPLATE || "${Title} ${Acronym} ${Year2} conference";
 export const MAX_LINKS: number = parseInt(process.env.MAX_LINKS || '4', 10);
-
+export const MAX_SEARCH_RETRIES: number = 3;
+export const RETRY_DELAY_MS: number = 2000;
 // Utility function to parse keywords (typed)
 export function parseEnvKeywords(envVarName: string): string[] {
     const value = process.env[envVarName];

@@ -196,5 +196,5 @@ async function crawlJournals(): Promise<void> {
 }
 
 // *** Chạy hàm ***
-crawlConferences();
-// crawlJournals(); // Bỏ comment nếu muốn chạy
+// crawlConferences();
+crawlJournals(); // Bỏ comment nếu muốn chạy

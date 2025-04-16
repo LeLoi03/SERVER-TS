@@ -4,14 +4,7 @@ import { Mutex } from 'async-mutex';
 import { APP_LOG_FILE_PATH, LOG_LEVEL, LOGS_DIRECTORY } from '../config'; // Import từ config.ts
 
 import { PinoFileDestination } from './types';
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import timezone from 'dayjs/plugin/timezone';
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
-
-const VIETNAM_TIMEZONE = 'Asia/Ho_Chi_Minh';
 
 // --- Đảm bảo thư mục log tồn tại ---
 // // LOGS_DIRECTORY và APP_LOG_FILE_PATH đã là đường dẫn tuyệt đối từ config.ts
