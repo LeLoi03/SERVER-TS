@@ -2,6 +2,9 @@ import fs from 'fs';
 import { parse } from 'csv-parse/sync'; // Import thư viện csv-parse/sync
 import path from 'path';
 
+
+import { JournalDetails } from './types'; // Assuming you have this interface defined
+
 export const LOG_FILE: string = path.join(__dirname, './data/crawl_journal.log');
 import pino, { Logger, LoggerOptions, stdTimeFunctions } from 'pino';
 import { APP_LOG_FILE_PATH, LOG_LEVEL, LOGS_DIRECTORY } from '../config'; // Import từ config.ts
@@ -288,3 +291,50 @@ export const readCSV = async (filePath: string): Promise<CSVRecord[]> => {
     return [];
   }
 };
+
+
+
+// Define OUTPUT_JSON path if not already globally available in this scope
+export async function appendJournalToFile(
+  journalData: JournalDetails,
+  filePath: string,
+  taskLogger: typeof logger // Sử dụng kiểu logger được truyền vào
+): Promise<void> {
+  let jsonLine: string | undefined = undefined;
+  try {
+      // Log đối tượng gốc (sẽ trông giống Object Literal trên console)
+      taskLogger.debug({ event: 'append_received_object', journalTitle: journalData?.title || 'Untitled' }, "Received journalData object for appending.");
+      // console.log("Object received:", journalData); // Bật nếu cần xem chi tiết
+
+      taskLogger.debug({ event: 'stringify_start' }, "Attempting to stringify journal data...");
+      // ----> Bước 1: Cô lập lỗi stringify <----
+      try {
+          jsonLine = JSON.stringify(journalData);
+           if (!jsonLine) {
+             taskLogger.error({ event: 'stringify_failed_undefined', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL: JSON.stringify returned undefined!");
+             console.error(`!!!!!!!! STRINGIFY RETURNED UNDEFINED for ${journalData?.title || 'Untitled'} !!!!!!!!`);
+             return;
+           }
+           // Log một phần chuỗi JSON đã được stringify
+           taskLogger.debug({ event: 'stringify_success', firstChars: jsonLine.substring(0, 150) + "..." }, "Successfully stringified data. Output starts with keys in quotes.");
+           // console.log("Stringified JSON:", jsonLine.substring(0,150)+"..."); // Bật nếu cần xem chuỗi JSON thực tế
+      } catch (stringifyError: any) {
+          taskLogger.error({ err: stringifyError, event: 'stringify_failed_exception', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL ERROR DURING JSON.stringify!");
+          console.error(`!!!!!!!! STRINGIFY FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, stringifyError);
+          // Xem xét stack trace của lỗi stringifyError để tìm nguyên nhân (ví dụ: circular structure)
+          return; // Dừng lại nếu không stringify được
+      }
+
+      // ----> Bước 2: Thực hiện ghi file <----
+      const lineToWrite = jsonLine + '\n';
+      taskLogger.debug({ event: 'append_start', path: filePath }, `Attempting to append stringified data...`);
+      await fs.promises.appendFile(filePath, lineToWrite, 'utf8');
+      taskLogger.info({ event: 'append_success', path: filePath, journalTitle: journalData?.title || 'Untitled' }, `Successfully appended journal.`);
+      // console.log("Append successful for:", journalData?.title);
+
+  } catch (appendError: any) {
+      // Lỗi này là lỗi của fs.promises.appendFile
+      taskLogger.error({ err: appendError, path: filePath, event: 'append_failed_fs', journalTitle: journalData?.title || 'Untitled' }, `CRITICAL ERROR during fs.appendFile!`);
+      console.error(`!!!!!!!! FS APPEND FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, appendError);
+  }
+}

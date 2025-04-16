@@ -3,7 +3,7 @@
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
 import fs from 'fs';
 import path from 'path';
-import { logger } from './utils';
+import { appendJournalToFile, logger } from './utils';
 
 // Import the ApiKeyManager class
 // ============================================
@@ -171,20 +171,23 @@ import {
 import { processPage, fetchDetails, getImageUrlAndDetails, getLastPageNumber } from './scimagojr';
 import { fetchBioxbioData } from './bioxbio';
 import { createURLList, readCSV } from './utils'; // Assuming readCSV and createURLList are here
+// --- Types ---
+import { TableRowData, JournalDetails, CSVRow } from './types'; // Assuming types are defined here
 
 // --- Paths (Adjust if necessary) ---
 export const INPUT_CSV: string = path.join(__dirname, './csv/import_journal.csv');
-export const OUTPUT_JSON: string = path.join(__dirname, './data/journal_list.json');
+const OUTPUT_DIR = path.resolve(__dirname, './data'); // Or your output directory path
+const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl'); // Using .jsonl for JSON Lines format
 
-// --- Types ---
-import { TableRowData, JournalDetails, CSVRow } from './types'; // Assuming types are defined here
+
+
 
 // ============================================
 // Hàm Crawl Chính cho Journals
 // ============================================
 export const crawlJournals = async (
   parentLogger: typeof logger
-): Promise<JournalDetails[]> => {
+): Promise<void> => {
 
   const journalLogger = parentLogger.child({ service: 'crawlJournals' }); // Create a logger specific to this function
   journalLogger.info({ event: 'init_start', mode: JOURNAL_CRAWL_MODE }, "Initializing journal crawl...");
@@ -201,9 +204,28 @@ export const crawlJournals = async (
     // Logged internally by ApiKeyManager constructor if no keys provided
     journalLogger.error({ event: 'init_fail_no_keys' }, "Journal crawl cannot proceed without Google API Keys.");
     // Optionally throw an error or return early
-    // throw new Error("CRITICAL: No Google API Keys available for Journal crawling.");
-    return []; // Return empty array if no keys
+    throw new Error("CRITICAL: No Google API Keys available for Journal crawling.");
+    // return []; // Return empty array if no keys
   }
+
+
+
+   // --- Ensure Output Directory Exists --- <<< NEW SECTION
+   journalLogger.info({ event: 'ensure_output_dir_start', path: OUTPUT_DIR }, `Ensuring output directory exists: ${OUTPUT_DIR}`);
+   try {
+     // Use { recursive: true } to create parent directories if they don't exist
+     await fs.promises.mkdir(OUTPUT_DIR, { recursive: true });
+     journalLogger.info({ event: 'ensure_output_dir_success', path: OUTPUT_DIR }, "Output directory ensured.");
+   } catch (mkdirError: any) {
+     // Log an error if directory creation fails (e.g., due to permissions higher up the tree)
+     // but proceed to attempt writing anyway, letting the writeFile error handle it.
+     journalLogger.error({ err: mkdirError, path: OUTPUT_DIR, event: 'ensure_output_dir_failed' }, `Could not ensure output directory exists. File writing might fail.`);
+     // Decide if you want to stop here or let the writeFile attempt handle the error.
+     // For robustness, we can let writeFile try, but logging this error is important.
+     // throw new Error(`Failed to create output directory: ${mkdirError.message}`); // Option to stop execution
+   }
+   // --- End Ensure Output Directory Exists ---
+
 
 
   // --- Declare variables outside the try block ---
@@ -368,7 +390,8 @@ export const crawlJournals = async (
               await performImageSearch(taskLogger, null, row, journalData);
             }
           }
-          allJournalData.push(journalData);
+          // allJournalData.push(journalData);
+          await appendJournalToFile(journalData, OUTPUT_JSON, taskLogger);
           processedCount++;
           taskLogger.info({ event: 'task_success' }, `Successfully processed journal row`);
 
@@ -436,7 +459,8 @@ export const crawlJournals = async (
           // Still attempt image search if no details link
           await performImageSearch(taskLogger, null, row, journalData);
         }
-        allJournalData.push(journalData);
+        // allJournalData.push(journalData);
+        await appendJournalToFile(journalData, OUTPUT_JSON, taskLogger);
         processedCount++;
         taskLogger.info({ event: 'task_success' }, `Successfully processed CSV row`);
 
@@ -458,7 +482,7 @@ export const crawlJournals = async (
         lastPageNumber = await getLastPageNumber(firstPage, BASE_URL /*, journalLogger */);
         journalLogger.info({ event: 'scimago_last_page_found', lastPage: lastPageNumber }, `Total Scimago pages estimated: ${lastPageNumber}`);
         urls = createURLList(BASE_URL, lastPageNumber);
-        totalTasks = urls.slice(0,1).length; // Assign value here
+        totalTasks = urls.slice(0, 1).length; // Assign value here
 
         for (let i = 0; i < urls.length; i += MAX_TABS) {
           const batchUrls = urls.slice(i, i + MAX_TABS);
@@ -510,24 +534,13 @@ export const crawlJournals = async (
     } else {
       journalLogger.error({ event: 'invalid_mode', mode: JOURNAL_CRAWL_MODE }, `Invalid JOURNAL_CRAWL_MODE.`);
       if (browser) await browser.close();
-      return [];
+      return;
     }
-
-    // --- Write Output ---
-    journalLogger.info({ event: 'output_write_start', path: OUTPUT_JSON, count: allJournalData.length }, `Attempting to write ${allJournalData.length} journal records.`);
-    try {
-      await fs.promises.writeFile(OUTPUT_JSON, JSON.stringify(allJournalData, null, 2), 'utf8');
-      journalLogger.info({ event: 'output_write_success', path: OUTPUT_JSON }, `Journal data saved successfully.`);
-    } catch (error: any) {
-      journalLogger.error({ err: error, path: OUTPUT_JSON, event: 'output_write_failed' }, `Error writing final JSON file.`);
-      return allJournalData;
-    }
-
-    return allJournalData;
 
   } catch (error: any) {
     journalLogger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error' }, "Fatal error during journal crawling process");
-    return allJournalData; // Return whatever was collected before the fatal error
+    // return allJournalData; // Return whatever was collected before the fatal error
+    throw error;
   } finally {
     // --- Final Cleanup and Summary ---
     journalLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
@@ -561,5 +574,7 @@ export const crawlJournals = async (
 
     journalLogger.info({ event: 'crawl_end' }, "crawlJournals process finished.");
     // --- End Cleanup and Summary ---
+
+    return;
   }
 };
