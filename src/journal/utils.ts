@@ -237,14 +237,29 @@ export const createURLList = (baseURL: string, lastPageNumber: number): string[]
 };
 
 export const formatISSN = (issn: string): string | null => {
-  const issnValues = issn.split(',').map(item => item.trim());
-  const issnToSearch = issnValues[1] || issnValues[0];
-
-  if (issnToSearch) {
-    return issnToSearch.replace(/(\d{4})(\d{4})/, '$1-$2');
+  if (!issn) { // Thêm kiểm tra đầu vào null/undefined/empty
+      return null;
   }
+  const issnValues = issn.split(',').map(item => item.trim());
+  // Ưu tiên phần tử thứ 2 nếu có, nếu không lấy phần tử đầu tiên
+  const issnToSearch = (issnValues[1] || issnValues[0] || '').replace(/-/g, ''); // Xóa dấu gạch nối cũ nếu có
+
+  // Regex mới: 4 số, sau đó là 3 số và ký tự cuối cùng là số hoặc X
+  // Thêm ^ và $ để đảm bảo khớp toàn bộ chuỗi 8 ký tự sau khi xóa gạch nối
+  const issnRegex = /^(\d{4})(\d{3}[\dX])$/i; // i để không phân biệt hoa thường cho X
+
+  const match = issnToSearch.match(issnRegex);
+
+  if (match) {
+    // match[1] là group 1 (\d{4})
+    // match[2] là group 2 (\d{3}[\dX])
+    return `${match[1]}-${match[2]}`;
+  }
+
+  // Nếu không khớp định dạng 8 ký tự chuẩn (vd: 12345, ABCDEFGH) thì trả về null
   return null;
 };
+
 
 interface RetryOptions {
   retries: number;

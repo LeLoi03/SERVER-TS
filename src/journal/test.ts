@@ -177,7 +177,7 @@ import { TableRowData, JournalDetails, CSVRow } from './types'; // Assuming type
 
 // --- Paths (Adjust if necessary) ---
 export const INPUT_CSV: string = path.join(__dirname, './csv/import_journal.csv');
-const OUTPUT_DIR = path.resolve(__dirname, './data'); // Or your output directory path
+const OUTPUT_DIR = path.resolve(__dirname, '../output'); // Or your output directory path
 const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl'); // Using .jsonl for JSON Lines format
 
 
@@ -209,8 +209,6 @@ export const crawlJournals = async (
     // return []; // Return empty array if no keys
   }
 
-
-
   // --- Ensure Output Directory Exists --- <<< NEW SECTION
   journalLogger.info({ event: 'ensure_output_dir_start', path: OUTPUT_DIR }, `Ensuring output directory exists: ${OUTPUT_DIR}`);
   try {
@@ -226,7 +224,6 @@ export const crawlJournals = async (
     // throw new Error(`Failed to create output directory: ${mkdirError.message}`); // Option to stop execution
   }
   // --- End Ensure Output Directory Exists ---
-
 
 
   // --- Declare variables outside the try block ---
@@ -538,10 +535,11 @@ export const crawlJournals = async (
       return;
     }
 
+
   } catch (error: any) {
     journalLogger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error' }, "Fatal error during journal crawling process");
     // return allJournalData; // Return whatever was collected before the fatal error
-    throw error;
+    throw error
   } finally {
     // --- Final Cleanup and Summary ---
     journalLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
@@ -571,6 +569,7 @@ export const crawlJournals = async (
       startTime: new Date(operationStartTime).toISOString(),
       endTime: new Date(operationEndTime).toISOString(),
       outputPath: OUTPUT_JSON
+      
     }, "Journal crawling process summary");
 
     journalLogger.info({ event: 'crawl_end' }, "crawlJournals process finished.");
@@ -580,5 +579,5 @@ export const crawlJournals = async (
 
   }
 
-  // return;
+
 };
