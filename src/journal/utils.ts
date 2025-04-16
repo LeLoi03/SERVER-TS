@@ -2,6 +2,9 @@ import fs from 'fs';
 import { parse } from 'csv-parse/sync'; // Import thư viện csv-parse/sync
 import path from 'path';
 
+
+import { JournalDetails } from './types'; // Assuming you have this interface defined
+
 export const LOG_FILE: string = path.join(__dirname, './data/crawl_journal.log');
 import pino, { Logger, LoggerOptions, stdTimeFunctions } from 'pino';
 import { APP_LOG_FILE_PATH, LOG_LEVEL, LOGS_DIRECTORY } from '../config'; // Import từ config.ts
@@ -288,3 +291,27 @@ export const readCSV = async (filePath: string): Promise<CSVRecord[]> => {
     return [];
   }
 };
+
+
+
+// Define OUTPUT_JSON path if not already globally available in this scope
+const OUTPUT_DIR = path.resolve(__dirname, '../output'); // Or your output directory
+const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl'); // Using .jsonl for JSON Lines format
+
+// Helper function to append a single journal entry to the output file
+export async function appendJournalToFile(
+    journalData: JournalDetails,
+    filePath: string,
+    taskLogger: typeof logger // Pass logger for context
+): Promise<void> {
+    try {
+        // Convert the single journal object to a JSON string followed by a newline
+        const jsonLine = JSON.stringify(journalData) + '\n';
+        await fs.promises.appendFile(filePath, jsonLine, 'utf8');
+        taskLogger.debug({ event: 'append_success', path: filePath }, `Successfully appended journal: ${journalData.title || 'Untitled'}`);
+    } catch (error: any) {
+        taskLogger.error({ err: error, path: filePath, event: 'append_failed' }, `Failed to append journal data to file: ${journalData.title || 'Untitled'}`);
+        // Decide if you want to throw the error or just log it and continue
+        // throw error; // Option: re-throw if appending failure should stop the process for this item
+    }
+}

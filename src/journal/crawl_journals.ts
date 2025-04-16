@@ -171,13 +171,17 @@ import {
 import { processPage, fetchDetails, getImageUrlAndDetails, getLastPageNumber } from './scimagojr';
 import { fetchBioxbioData } from './bioxbio';
 import { createURLList, readCSV } from './utils'; // Assuming readCSV and createURLList are here
+// --- Types ---
+import { TableRowData, JournalDetails, CSVRow } from './types'; // Assuming types are defined here
+import app
 
 // --- Paths (Adjust if necessary) ---
 export const INPUT_CSV: string = path.join(__dirname, './csv/import_journal.csv');
-export const OUTPUT_JSON: string = path.join(__dirname, './data/journal_list.json');
+const OUTPUT_DIR = path.resolve(__dirname, '../output'); // Or your output directory path
+const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl'); // Using .jsonl for JSON Lines format
 
-// --- Types ---
-import { TableRowData, JournalDetails, CSVRow } from './types'; // Assuming types are defined here
+
+
 
 // ============================================
 // Hàm Crawl Chính cho Journals
@@ -458,7 +462,7 @@ export const crawlJournals = async (
         lastPageNumber = await getLastPageNumber(firstPage, BASE_URL /*, journalLogger */);
         journalLogger.info({ event: 'scimago_last_page_found', lastPage: lastPageNumber }, `Total Scimago pages estimated: ${lastPageNumber}`);
         urls = createURLList(BASE_URL, lastPageNumber);
-        totalTasks = urls.slice(0,1).length; // Assign value here
+        totalTasks = urls.slice(0, 1).length; // Assign value here
 
         for (let i = 0; i < urls.length; i += MAX_TABS) {
           const batchUrls = urls.slice(i, i + MAX_TABS);
@@ -513,6 +517,23 @@ export const crawlJournals = async (
       return [];
     }
 
+
+    // --- Ensure Output Directory Exists --- <<< NEW SECTION
+    journalLogger.info({ event: 'ensure_output_dir_start', path: OUTPUT_DIR }, `Ensuring output directory exists: ${OUTPUT_DIR}`);
+    try {
+      // Use { recursive: true } to create parent directories if they don't exist
+      await fs.promises.mkdir(OUTPUT_DIR, { recursive: true });
+      journalLogger.info({ event: 'ensure_output_dir_success', path: OUTPUT_DIR }, "Output directory ensured.");
+    } catch (mkdirError: any) {
+      // Log an error if directory creation fails (e.g., due to permissions higher up the tree)
+      // but proceed to attempt writing anyway, letting the writeFile error handle it.
+      journalLogger.error({ err: mkdirError, path: OUTPUT_DIR, event: 'ensure_output_dir_failed' }, `Could not ensure output directory exists. File writing might fail.`);
+      // Decide if you want to stop here or let the writeFile attempt handle the error.
+      // For robustness, we can let writeFile try, but logging this error is important.
+      // throw new Error(`Failed to create output directory: ${mkdirError.message}`); // Option to stop execution
+    }
+    // --- End Ensure Output Directory Exists ---
+
     // --- Write Output ---
     journalLogger.info({ event: 'output_write_start', path: OUTPUT_JSON, count: allJournalData.length }, `Attempting to write ${allJournalData.length} journal records.`);
     try {
@@ -520,10 +541,13 @@ export const crawlJournals = async (
       journalLogger.info({ event: 'output_write_success', path: OUTPUT_JSON }, `Journal data saved successfully.`);
     } catch (error: any) {
       journalLogger.error({ err: error, path: OUTPUT_JSON, event: 'output_write_failed' }, `Error writing final JSON file.`);
-      return allJournalData;
+      return allJournalData; // Still return data even if write fails
     }
 
-    return allJournalData;
+    return allJournalData; // Return data after successful write
+
+
+
 
   } catch (error: any) {
     journalLogger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error' }, "Fatal error during journal crawling process");
