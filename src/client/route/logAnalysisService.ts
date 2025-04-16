@@ -1,7 +1,7 @@
 import path from 'path';
 // Import necessary types and logger
 import { logger } from '../../conference/11_utils'; // Adjust path
-import { LogAnalysisResult, ConferenceAnalysisDetail } from '../types/logAnalysis'; // Adjust path
+import { LogAnalysisResult } from '../types/logAnalysis'; // Adjust path
 // Import the refactored steps and helpers
 import { initializeLogAnalysisResult } from './analysisHelpers'; // Adjust path
 import {
@@ -19,7 +19,7 @@ export const performLogAnalysis = async (
     filterStartTime?: Date | number,
     filterEndTime?: Date | number
 ): Promise<LogAnalysisResult> => {
-    const logFilePath = path.join(__dirname, '../../logs/app.log'); // !!! DOUBLE-CHECK THIS PATH !!!
+    const logFilePath = path.join(__dirname, '../../../logs/app.log'); // !!! DOUBLE-CHECK THIS PATH !!!
     const logContext = { filePath: logFilePath, function: 'performLogAnalysis' };
     logger.info({ ...logContext, event: 'analysis_start', filterStartTime, filterEndTime }, 'Starting log analysis execution');
 

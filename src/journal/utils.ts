@@ -233,7 +233,7 @@ export const traverseNodes = (node: Node | null): string => {
 };
 
 export const createURLList = (baseURL: string, lastPageNumber: number): string[] => {
-  return Array.from({ length: 1 }, (_, i) => `${baseURL}&page=${i + 1}`); // Corrected length
+  return Array.from({ length: lastPageNumber }, (_, i) => `${baseURL}&page=${i + 1}`); // Corrected length
 };
 
 export const formatISSN = (issn: string): string | null => {
@@ -259,6 +259,7 @@ export const formatISSN = (issn: string): string | null => {
   // Nếu không khớp định dạng 8 ký tự chuẩn (vd: 12345, ABCDEFGH) thì trả về null
   return null;
 };
+
 
 
 interface RetryOptions {
@@ -293,20 +294,44 @@ interface CSVRecord {
   [key: string]: string;
 }
 
-export const readCSV = async (filePath: string): Promise<CSVRecord[]> => {
+/**
+ * Reads a CSV file and parses its content.
+ * Handles semicolon delimiters.
+ * @param filePath Path to the CSV file.
+ * @param parentLogger Optional logger instance to use.
+ * @returns An array of parsed CSV records (objects).
+ */
+export const readCSV = async (filePath: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
+  const csvLogger = parentLogger.child({ service: 'readCSV', filePath });
+  csvLogger.info({ event: 'read_start' }, `Attempting to read CSV file.`);
+  console.log(`[readCSV][read_start] Attempting to read CSV file: ${filePath}`); // CONSOLE ADDED
+
   try {
     const fileContent = await fs.promises.readFile(filePath, { encoding: 'utf8' });
+    csvLogger.debug({ event: 'read_success', fileSize: fileContent.length }, `Successfully read file content.`);
+    console.log(`[readCSV][read_success] Successfully read file content (Size: ${fileContent.length} bytes).`); // CONSOLE ADDED
+
+    // Use sync parse for simplicity within async function, or use async parser if preferred
     const records: CSVRecord[] = parse(fileContent, {
-      columns: true,
+      columns: true, // Use the first line as headers
       skip_empty_lines: true,
+      delimiter: ';', // Specify the semicolon delimiter <--- SOLUTION
+      trim: true,     // Trim whitespace from headers and fields
+      // relax_column_count: true, // Might be useful if some rows have different numbers of columns
     });
+
+    csvLogger.info({ event: 'parse_success', recordCount: records.length }, `Successfully parsed ${records.length} records from CSV.`);
+    console.log(`[readCSV][parse_success] Successfully parsed ${records.length} records from CSV.`); // CONSOLE ADDED
+
     return records;
   } catch (error: any) {
-    logger.error(`Error read file csv ${filePath}: ${error}`);
-    return [];
+    csvLogger.error({ err: error, stack: error.stack, event: 'read_parse_failed' }, `Error reading or parsing CSV file.`);
+    // Log the error message specifically
+    console.error(`[readCSV][read_parse_failed] Error reading or parsing CSV file ${filePath}:`, error.message || error); // CONSOLE ADDED
+    console.error(`[readCSV][read_parse_failed] Stack trace:`, error.stack); // CONSOLE ADDED
+    return []; // Return empty array on failure
   }
 };
-
 
 
 // Define OUTPUT_JSON path if not already globally available in this scope
