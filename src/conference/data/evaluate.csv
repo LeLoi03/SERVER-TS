@@ -1,113 +1,110 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems","PODS","","","","Conference dates: June 22 - 27, 2025
+"International Conference on Distributed Computing and Artificial Intelligence","DCAI","https://www.dcai-conference.net/","https://www.dcai-conference.net/open-calls/call-papers","None","Conference dates: June 25 - 27, 2025
 Year: 2025
-Location: Berlin, Germany
-City-State-Province: Berlin
-Country: Germany
+Location: University of Lille, Lille, France
+City-State-Province: Lille
+Country: France
 Continent: Europe
 Type: Offline
-(FIRST SUBMISSION PHASE) Abstract: May 31, 2024
-(FIRST SUBMISSION PHASE) Submission: June 7, 2024
-(SECOND SUBMISSION PHASE) Abstract: December 2, 2024
-(SECOND SUBMISSION PHASE) Submission: December 9, 2024
-(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 1): January 10, 2024
-(SIGMOD Deadlines) Paper Submission (round 1): January 17, 2024
-(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 2): April 10, 2024
-(SIGMOD Deadlines) Paper Submission (round 2): April 17, 2024
-(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 3): July 10, 2024
-(SIGMOD Deadlines) Paper Submission (round 3): July 17, 2024
-(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 4): October 10, 2024
-(SIGMOD Deadlines) Paper Submission (round 4): October 17, 2024
-(SIGMOD Deadlines) Paper Submission (Industry paper submission): December 9, 2024
-(FIRST SUBMISSION PHASE) Initial notification: August 12, 2024
-(FIRST SUBMISSION PHASE) Final notification: September 2, 2024
-(SECOND SUBMISSION PHASE) Initial notification: February 14, 2025
-(SECOND SUBMISSION PHASE) Final notification: March 7, 2025
-(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 1): February 29, 2024
-(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 2): May 30, 2024
-(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 3): August 29, 2024
-(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 4): November 28, 2024
-(SIGMOD Deadlines) Notification of Accept/Reject (Industry paper submission): February 24, 2025
-(FIRST SUBMISSION PHASE) Revision submission: August 26, 2024
-(SECOND SUBMISSION PHASE) Revision submission: February 28, 2025
-(FIRST SUBMISSION PHASE) Rebuttal: July 29 - August 1, 2024
-(SECOND SUBMISSION PHASE) Rebuttal: February 3 - 7, 2025
-(SIGMOD Deadlines) Submission of Revision Plan (round 1): March 7, 2024
-(SIGMOD Deadlines) Revision Feedback (round 1): March 21, 2024
-(SIGMOD Deadlines) Submission of Revision Plan (round 2): June 6, 2024
-(SIGMOD Deadlines) Revision Feedback (round 2): June 20, 2024
-(SIGMOD Deadlines) Submission of Revision Plan (round 3): September 5, 2024
-(SIGMOD Deadlines) Revision Feedback (round 3): September 19, 2024
-(SIGMOD Deadlines) Submission of Revision Plan (round 4): December 5, 2024
-(SIGMOD Deadlines) Revision Feedback (round 4): December 19, 2024
-Topics: Data Management, Database Theory, Data Management Challenges, Data-driven Society, Efficiency, Scalability, Usability, Expressiveness, Robustness, Security, Clarity, Privacy, Database Processing, Query Evaluation, Query Optimization, Schema Management, Distributed Data Processing, Approximate Data Processing, Database Design, Data Models, Query Languages, Schemas, Constraints, Database Access, Data Structures, Access Methods, Concurrency, Transactions, Data Quality, Data Consistency, Data Cleaning, Data Discovery, Data Exploration, Data Analysis, Data Mining, Machine Learning, Information Extraction, Data Streams, Uncertainty, Incomplete Data, Inconsistent Data, Probabilistic Data, Interoperability, Mappings and Views, Data Integration, Data Exchange, Ontology-based Data Access, Responsible Data Management, Access Control, Privacy, Security, Verification, Ethical Aspects of Data Management, Human-Database Interaction, Data Summarization, Data Visualization, Explanation for Database Queries, Connections Between Database Principles and Other Disciplines","June 22 - 27, 2025","2025","Berlin, Germany","Berlin","Germany","Europe","Offline","{""(FIRST SUBMISSION PHASE) Abstract"":""May 31, 2024"",""(FIRST SUBMISSION PHASE) Submission"":""June 7, 2024"",""(SECOND SUBMISSION PHASE) Abstract"":""December 2, 2024"",""(SECOND SUBMISSION PHASE) Submission"":""December 9, 2024"",""(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 1)"":""January 10, 2024"",""(SIGMOD Deadlines) Paper Submission (round 1)"":""January 17, 2024"",""(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 2)"":""April 10, 2024"",""(SIGMOD Deadlines) Paper Submission (round 2)"":""April 17, 2024"",""(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 3)"":""July 10, 2024"",""(SIGMOD Deadlines) Paper Submission (round 3)"":""July 17, 2024"",""(SIGMOD Deadlines) Abstract Submission and Declaration of COIs (round 4)"":""October 10, 2024"",""(SIGMOD Deadlines) Paper Submission (round 4)"":""October 17, 2024"",""(SIGMOD Deadlines) Paper Submission (Industry paper submission)"":""December 9, 2024""}","{""(FIRST SUBMISSION PHASE) Initial notification"":""August 12, 2024"",""(FIRST SUBMISSION PHASE) Final notification"":""September 2, 2024"",""(SECOND SUBMISSION PHASE) Initial notification"":""February 14, 2025"",""(SECOND SUBMISSION PHASE) Final notification"":""March 7, 2025"",""(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 1)"":""February 29, 2024"",""(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 2)"":""May 30, 2024"",""(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 3)"":""August 29, 2024"",""(SIGMOD Deadlines) Notification of Accept/Review/Reject (round 4)"":""November 28, 2024"",""(SIGMOD Deadlines) Notification of Accept/Reject (Industry paper submission)"":""February 24, 2025""}","{""(FIRST SUBMISSION PHASE) Revision submission"":""August 26, 2024"",""(SECOND SUBMISSION PHASE) Revision submission"":""February 28, 2025""}","{}","{""(FIRST SUBMISSION PHASE) Rebuttal"":""July 29 - August 1, 2024"",""(SECOND SUBMISSION PHASE) Rebuttal"":""February 3 - 7, 2025"",""(SIGMOD Deadlines) Submission of Revision Plan (round 1)"":""March 7, 2024"",""(SIGMOD Deadlines) Revision Feedback (round 1)"":""March 21, 2024"",""(SIGMOD Deadlines) Submission of Revision Plan (round 2)"":""June 6, 2024"",""(SIGMOD Deadlines) Revision Feedback (round 2)"":""June 20, 2024"",""(SIGMOD Deadlines) Submission of Revision Plan (round 3)"":""September 5, 2024"",""(SIGMOD Deadlines) Revision Feedback (round 3)"":""September 19, 2024"",""(SIGMOD Deadlines) Submission of Revision Plan (round 4)"":""December 5, 2024"",""(SIGMOD Deadlines) Revision Feedback (round 4)"":""December 19, 2024""}","Data Management, Database Theory, Data Management Challenges, Data-driven Society, Efficiency, Scalability, Usability, Expressiveness, Robustness, Security, Clarity, Privacy, Database Processing, Query Evaluation, Query Optimization, Schema Management, Distributed Data Processing, Approximate Data Processing, Database Design, Data Models, Query Languages, Schemas, Constraints, Database Access, Data Structures, Access Methods, Concurrency, Transactions, Data Quality, Data Consistency, Data Cleaning, Data Discovery, Data Exploration, Data Analysis, Data Mining, Machine Learning, Information Extraction, Data Streams, Uncertainty, Incomplete Data, Inconsistent Data, Probabilistic Data, Interoperability, Mappings and Views, Data Integration, Data Exchange, Ontology-based Data Access, Responsible Data Management, Access Control, Privacy, Security, Verification, Ethical Aspects of Data Management, Human-Database Interaction, Data Summarization, Data Visualization, Explanation for Database Queries, Connections Between Database Principles and Other Disciplines","","The 2025 ACM SIGMOD/PODS Conference will be held in Berlin, Germany, on June 22-27, 2025.  The annual ACM SIGMOD/PODS Conference is a leading international forum for database researchers, practitioners, developers, and users to explore cutting-edge ideas and results, and to exchange techniques, tools, and experiences.","# PODS 2025: Call for Research Papers
+Deadline: March 7, 2025
+Special Session deadline: March 14, 2025
+Doctoral Consortium deadline: March 21, 2025
+Notification of acceptance: April 25, 2025
+Camera-Ready papers: May 9, 2025
+Topics: Intelligent Environments, Distributed Algorithms, Distributed Databases, Computer GRID, Cloud Computing, Edge Computing, Fog Computing, Multimedia and Distributed Animation Systems, Distributed Operating Systems, Real Time Systems, E-commerce and Electronic Business, Distributed Applications ICTs, Implementation of AI Bioinformatics, Implementation of AI Biotechnology, Implementation of AI in the Development of Mobile Devices, Distributed Architectures, Multiagent Systems, High-performance Distributed Systems, Languages, Compilers, Planning, Load Balancing, Mobile and Wireless Systems, Security in Computer Systems, Software Engineering and Formal Methods, Distributed Intelligent Information Systems, Robotics and Control, Internet of Things (IoT), Industrial Internet of Things (IIoT), Model Based Reasoning, Case Based Reasoning, Non-Monotonic Reasoning, Planning and Scheduling Tasks, Qualitative Reasoning, Reasoning Under Uncertainty, Temporal and Spatial Reasoning, Other Reasoning Models, Data Analysis and Big Data Techniques, Evolutionary Computation, Neural Networks, Reinforcement Learning, Other Learning Models, Applications of AI (TTIA), Logic, Decision-Making Support System, Fintech or Financial Technology, Intelligent Interaction, Knowledge Management, Knowledge Representation
+Publisher: Springer","June 25 - 27, 2025","2025","University of Lille, Lille, France","Lille","France","Europe","Offline","{""Deadline"":""March 7, 2025"",""Special Session deadline"":""March 14, 2025"",""Doctoral Consortium deadline"":""March 21, 2025""}","{""Notification of acceptance"":""April 25, 2025""}","{""Camera-Ready papers"":""May 9, 2025""}","{}","{}","Intelligent Environments, Distributed Algorithms, Distributed Databases, Computer GRID, Cloud Computing, Edge Computing, Fog Computing, Multimedia and Distributed Animation Systems, Distributed Operating Systems, Real Time Systems, E-commerce and Electronic Business, Distributed Applications ICTs, Implementation of AI Bioinformatics, Implementation of AI Biotechnology, Implementation of AI in the Development of Mobile Devices, Distributed Architectures, Multiagent Systems, High-performance Distributed Systems, Languages, Compilers, Planning, Load Balancing, Mobile and Wireless Systems, Security in Computer Systems, Software Engineering and Formal Methods, Distributed Intelligent Information Systems, Robotics and Control, Internet of Things (IoT), Industrial Internet of Things (IIoT), Model Based Reasoning, Case Based Reasoning, Non-Monotonic Reasoning, Planning and Scheduling Tasks, Qualitative Reasoning, Reasoning Under Uncertainty, Temporal and Spatial Reasoning, Other Reasoning Models, Data Analysis and Big Data Techniques, Evolutionary Computation, Neural Networks, Reinforcement Learning, Other Learning Models, Applications of AI (TTIA), Logic, Decision-Making Support System, Fintech or Financial Technology, Intelligent Interaction, Knowledge Management, Knowledge Representation","Springer","The 22nd International Conference on Distributed Computing and Artificial Intelligence 2025 is an annual forum that will bring together ideas, projects, and knowledge associated with distributed computing and artificial intelligence, and their application in different areas. This meeting will be held at the University of Lille (France) from June 25th-27th, 2025.","# DCAI 2025: Call for Papers
 
-The Principles of Database Systems (PODS) symposium series, held in conjunction with the SIGMOD conference series, provides a premier annual forum for the communication of new advances in the theoretical foundations of data management.
-
-The 2025 conference will be held in **Berlin, Germany**.
-
-## Mission
-
-The PODS community aims to provide a solid scientific basis for methods, techniques, and solutions for the data management challenges that continually arise in our data-driven society.  Our goal is to develop solutions that ensure high levels of efficiency, scalability, usability, expressiveness, robustness, security, clarity, and privacy, among others.
+The 22nd International Conference on Distributed Computing and Artificial Intelligence (DCAI 2025) will be held at the **University of Lille (France) from June 25th-27th, 2025**.
 
 ## Scope
 
-PODS seeks scientific articles that present principled contributions to modeling, application, and system building in the context of data management. Such articles might be based on establishing theoretical results, developing new concepts and frameworks, providing experimental work, or a rigorous analysis of important industry artifacts.
+DCAI is an annual forum that brings together ideas, projects, and knowledge associated with distributed computing and artificial intelligence, and their application in different areas.
 
 ## Topics
 
-Topics that fit the interests of the symposium include, but are not limited to:
+The topics of interest include, but are not limited to:
 
-*   Database processing
-*   Database design
-*   Database access
-*   Data quality
-*   Data analysis
-*   Uncertainty
-*   Interoperability
-*   Responsible data management
-*   Human-database interaction
-*   Connections between database principles and other disciplines
+*   Intelligent Environments
+*   Distributed Algorithms
+*   Distributed Databases
+*   Computer GRID
+*   Cloud Computing
+*   Edge Computing
+*   Fog Computing
+*   Multimedia and Distributed Animation Systems
+*   Distributed Operating Systems
+*   Real Time Systems
+*   E-commerce and Electronic Business
+*   Distributed Applications ICTs: trade, medicine, industry, the Internet, etc.
+*   Implementation of AI Bioinformatics
+*   Implementation of AI Biotechnology
+*   Implementation of AI in the Development of Mobile Devices
+*   Distributed Architectures
+*   Multiagent Systems
+*   High-performance Distributed Systems
+*   Languages, Compilers, Planning, Load Balancing
+*   Mobile and Wireless Systems
+*   Security in Computer Systems
+*   Software Engineering and Formal Methods
+*   Distributed Intelligent Information Systems
+*   Robotics and Control
+*   Internet of Things (IoT)
+*   Industrial Internet of Things (IIoT)
+*   Model Based Reasoning
+*   Case Based Reasoning
+*   Non-Monotonic Reasoning
+*   Planning and Scheduling Tasks
+*   Qualitative Reasoning
+*   Reasoning Under Uncertainty
+*   Temporal and Spatial Reasoning
+*   Other Reasoning Models
+*   Data Analysis and Big Data Techniques
+*   Evolutionary Computation
+*   Neural Networks
+*   Reinforcement Learning
+*   Other Learning Models
+*   Applications of AI (TTIA)
+*   Logic
+*   Decision-Making Support System
+*   Fintech or Financial Technology
+*   Intelligent Interaction
+*   Knowledge Management
+*   Knowledge Representation
 
-## Submission Site
+## Doctoral Consortium
 
-[https://easychair.org/conferences/?conf=pods2025](https://easychair.org/conferences/?conf=pods2025)
+The aim of the Doctoral Consortium is to provide a framework for students to present their ongoing research work, meet other students and researchers, and obtain feedback on lines of research for the future.
 
-## Submission Format
+## Submission
 
-The submission format for PODS 2025 is different from that of previous years, for compatibility with the PACMMOD format of the PODS publications.
+All proposed papers must be submitted in electronic form (PDF format) using the DCAI conference management system: [https://easychair.org/conferences/?conf=dcai25](https://easychair.org/conferences/?conf=dcai25)
 
-*   LaTeX users must format their submission using the standard ACM ""acmsmall"" proceedings stylesheet: [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)
-*   They must use the following class declaration: `\documentclass[acmsmall,review,anonymous]{acmart}`
-*   A submission can be up to 15 pages, not including references, plus unlimited space for references.
-*   Additional details may be included in a clearly marked appendix, of unlimited length, that should be incorporated at submission time; online appendices are not allowed.
+## Review Process
 
-## Double-Anonymous Reviewing
+All submitted papers will undergo a thorough review process; each paper will be refereed by at least three experts in the field based on relevance, originality, significance, quality, and clarity.
 
-PODS 2025 will use a lightweight double-anonymous reviewing process. This means that submissions must adhere to the following:
+## Publication
 
-*   Author names and institutions must be omitted.
-*   References to the authors’ own related work should be in the third person.
-*   Acknowledgements, grant numbers, and links to submitted papers in public repositories will not be allowed.
+Accepted papers will be included in DCAI Proceedings. At least one of the authors will be required to register and attend the symposium, where they will present the paper, this will allow for its inclusion in conference proceedings. All the accepted papers will be published by Lecture Notes in Networks and Systems series of Springer Verlag.
+
+## Special Issues
+
+Authors of selected papers from DCAI will be invited to submit an extended and improved version to special issues in different journals.
 
 ## Important Dates
 
-**FIRST SUBMISSION PHASE:**
+All deadlines are 11:59 PM AoE
 
-*   Abstract: May 31, 2024
-*   Submission: June 7, 2024
-*   Rebuttal: July 29 - August 1, 2024
-*   Initial notification: August 12, 2024
-*   Revision submission: August 26, 2024
-*   Final notification: September 2, 2024
+*   **Deadline:** March 7, 2025
+*   **Special Session deadline:** March 14, 2025
+*   **Doctoral Consortium deadline:** March 21, 2025
+*   **Notification of acceptance:** April 25, 2025
+*   **Camera-Ready papers:** May 9, 2025
+*   **Conference Celebration:** June 25-27, 2025
 
-**SECOND SUBMISSION PHASE:**
+## Committees
 
-*   Abstract: December 2, 2024
-*   Submission: December 9, 2024
-*   Rebuttal: February 3-7, 2025
-*   Initial notification: February 14, 2025
-*   Revision submission: February 28, 2025
-*   Final notification: March 7, 2025
-
-All deadlines end at 5 PM Pacific Time."
+*   **Program committee**
+*   **Special Sessions Chairs**
+*   **Advisory board**
+*   **Organizing committee**"

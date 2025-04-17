@@ -1,18 +1,8 @@
 import path from 'path';
-// Import necessary types and logger
-import { logger } from '../../conference/11_utils'; // Adjust path
-import { LogAnalysisResult } from '../types/logAnalysis'; // Adjust path
-// Import the refactored steps and helpers
-import { initializeLogAnalysisResult } from './analysisHelpers'; // Adjust path
-import {
-    readAndGroupLogs,
-    filterRequestsByTime,
-    processLogEntry,
-    calculateFinalMetrics,
-    ReadLogResult,
-    FilteredData,
-    RequestLogData // Ensure RequestLogData is exported if needed elsewhere
-} from './logProcessingSteps'; // Adjust path
+import { logger } from '../../conference/11_utils';
+import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis';
+import { initializeLogAnalysisResult } from './helpers';
+import { readAndGroupLogs, filterRequestsByTime, processLogEntry, calculateFinalMetrics } from './processingSteps';
 
 // --- Main Log Analysis Orchestration Function ---
 export const performLogAnalysis = async (
@@ -44,8 +34,8 @@ export const performLogAnalysis = async (
         results.logProcessingErrors.push(...readResult.logProcessingErrors);
 
         if (readResult.requestsData.size === 0 && readResult.totalEntries > 0) {
-             logger.warn({ ...logContext, event: 'analysis_warning_no_requests_found' }, 'Log file parsed, but no entries with requestIds found for analysis.');
-             // Return early or continue with empty analysis? Continue for now.
+            logger.warn({ ...logContext, event: 'analysis_warning_no_requests_found' }, 'Log file parsed, but no entries with requestIds found for analysis.');
+            // Return early or continue with empty analysis? Continue for now.
         }
 
         // --- Step 2: Filter Requests by Time ---
@@ -66,7 +56,7 @@ export const performLogAnalysis = async (
                 processLogEntry(logEntry, results, conferenceLastTimestamp, processLogContext);
             }
         }
-         logger.info({ ...logContext, event: 'analysis_processing_end' }, 'Finished Phase 2b: Processing log entries');
+        logger.info({ ...logContext, event: 'analysis_processing_end' }, 'Finished Phase 2b: Processing log entries');
 
 
         // --- Step 4: Calculate Final Metrics and Finalize Details ---

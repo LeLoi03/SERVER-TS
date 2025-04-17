@@ -52,6 +52,10 @@ export const initializeConferenceDetail = (acronym: string, title: string): Conf
         gemini_extract_cache_used: null,
     },
     errors: [],
+
+    validationIssues: [],
+
+
     finalResultPreview: undefined,
 });
 
@@ -101,6 +105,13 @@ export const initializeLogAnalysisResult = (logFilePath: string): LogAnalysisRes
     errorsAggregated: {},
     logProcessingErrors: [],
     conferenceAnalysis: {}, // Key: "acronym - title"
+
+    validationStats: {
+        totalValidationWarnings: 0,
+        warningsByField: {},
+        totalNormalizationsApplied: 0,
+        normalizationsByField: {},
+    },
 });
 
 // --- Helper function: Check if request overlaps with filter range ---
@@ -128,7 +139,7 @@ export const doesRequestOverlapFilter = (
     // Filter range:  [filterStartMillis, filterEndMillis]
     // Overlap exists if reqStart <= filterEnd AND reqEnd >= filterStart
     const overlaps = (filterEndMillis === null || reqStartMillis <= filterEndMillis) &&
-                     (filterStartMillis === null || reqEndMillis >= filterStartMillis);
+        (filterStartMillis === null || reqEndMillis >= filterStartMillis);
 
     // --- Alternative: Start Time Check (Simpler, if only filtering by start time is desired) ---
     /*
@@ -142,7 +153,7 @@ export const doesRequestOverlapFilter = (
     */
 
     if (!overlaps) {
-         logger.trace({ ...logContext, event: 'filter_exclude_no_overlap', reqStartMillis, reqEndMillis, filterStartMillis, filterEndMillis }, 'Excluding request: time range does not overlap with filter.');
+        logger.trace({ ...logContext, event: 'filter_exclude_no_overlap', reqStartMillis, reqEndMillis, filterStartMillis, filterEndMillis }, 'Excluding request: time range does not overlap with filter.');
     }
 
     return overlaps;

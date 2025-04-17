@@ -1,5 +1,25 @@
 // ../types/logAnalysis.ts
 
+export interface RequestLogData {
+    logs: any[];
+    startTime: number | null;
+    endTime: number | null;
+}
+
+export interface ReadLogResult {
+    requestsData: Map<string, RequestLogData>;
+    totalEntries: number;
+    parsedEntries: number;
+    parseErrors: number;
+    logProcessingErrors: string[];
+}
+
+export interface FilteredData {
+    filteredRequests: Map<string, RequestLogData>;
+    analysisStartMillis: number | null;
+    analysisEndMillis: number | null;
+}
+
 /** Thông tin chi tiết về quá trình xử lý một conference cụ thể */
 export interface ConferenceAnalysisDetail {
     title: string;
@@ -31,8 +51,22 @@ export interface ConferenceAnalysisDetail {
         gemini_extract_cache_used: boolean | null;
     };
     errors: Array<{ timestamp: string; message: string; details?: any }>; // Lưu lỗi cụ thể của conference này
+
+    validationIssues?: { field: string; value: any; action: string; timestamp: string }[];
+
+    
     finalResultPreview?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
 }
+
+
+export interface ValidationStats {
+    totalValidationWarnings: number;
+    warningsByField: { [field: string]: number }; // Đếm số lượng cảnh báo theo từng trường (field)
+    totalNormalizationsApplied: number; // Đếm số lần chuẩn hóa được áp dụng (nếu bạn log event này)
+    normalizationsByField: { [field: string]: number }; // Đếm số lần chuẩn hóa theo trường (nếu log)
+    // Có thể thêm các số liệu khác nếu cần (ví dụ: errors vs warnings)
+}
+
 
 /** Cấu trúc kết quả phân tích log tổng thể và chi tiết theo conference */
 export interface LogAnalysisResult {
@@ -111,4 +145,8 @@ export interface LogAnalysisResult {
     conferenceAnalysis: {
         [combined: string]: ConferenceAnalysisDetail;
     };
+    // --- THÊM TRƯỜNG MỚI ---
+    validationStats: ValidationStats;
+    // -----------------------
+
 }

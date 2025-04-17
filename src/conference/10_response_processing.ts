@@ -1,9 +1,6 @@
 import fs from 'fs';
-import fsp from 'fs/promises';
 import readline from 'readline';
-// *** SỬA IMPORT: Sử dụng 'Transform' được export từ thư viện ***
 import { ParserOptions, Transform as Json2CsvTransform } from '@json2csv/node';
-// Vẫn cần các kiểu stream gốc
 import { Readable, Transform as NodeTransform, TransformOptions } from 'stream';
 import { pipeline as streamPipeline } from 'stream/promises';
 import path from 'path';
@@ -11,7 +8,13 @@ import path from 'path';
 import { logger } from './11_utils';
 import { ProcessedResponseData, InputRowData, ProcessedRowData } from './types';
 import { readContentFromFile } from './11_utils';
-import { parsers } from 'date-fns';
+
+// --- Constants for Validation ---
+// NOTE: Adjust this list based on the exact valid continent names you expect/use.
+const VALID_CONTINENTS = new Set(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica']);
+const VALID_TYPES = new Set(['Hybrid', 'Online', 'Offline']);
+const YEAR_REGEX = /^\d{4}$/; // Simple check for 4 digits
+
 
 // --- Helper Functions (toCamelCase, isDateDetailKey, isDirectStringKey) ---
 function toCamelCase(str: string): string {
@@ -36,9 +39,8 @@ function isDirectStringKey(key: string): key is keyof Omit<ProcessedResponseData
     return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher", "summary", "callForPapers"].includes(key);
 }
 
-// --- Main Functions (processResponse) ---
+// --- Main Functions ---
 export const processResponse = (response: Record<string, any> | null | undefined): ProcessedResponseData => {
-    // Initialize with default values matching the interface
     const result: ProcessedResponseData = {
         conferenceDates: "",
         year: "",
@@ -136,17 +138,15 @@ export const processResponse = (response: Record<string, any> | null | undefined
 const CSV_FIELDS: (keyof ProcessedRowData | { label: string; value: keyof ProcessedRowData })[] = [
     "title", "acronym", "link", "cfpLink", "impLink",
     // "source", "rank", "rating", "fieldOfResearch",
-    // 'determineLinks', // Object phức tạp, cân nhắc cách thể hiện trong CSV hoặc bỏ qua
+    // 'determineLinks', // Consider flattening or omitting
     "information", "conferenceDates", "year",
     "location", "cityStateProvince", "country", "continent", "type",
     "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
     "otherDate", "topics", "publisher", "summary", "callForPapers"
-    // Thêm hoặc bớt trường nếu cần
 ];
 
-
 // --- Hàm xử lý từng dòng JSONL và tạo ProcessedRowData ---
-async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof logger): AsyncGenerator<ProcessedRowData | null> { // Return null on error/skip
+async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof logger): AsyncGenerator<ProcessedRowData | null> {
     const fileStream = fs.createReadStream(jsonlFilePath);
     const rl = readline.createInterface({
         input: fileStream,
@@ -159,7 +159,6 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
         lineNumber++;
         const logContext = { ...logContextBase, lineNumber };
         if (!line.trim()) {
-            // parentLogger.trace({ ...logContext, event: 'skipping_empty_line' }); // Optional trace log
             continue;
         }
 
@@ -169,131 +168,188 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
 
         try {
             inputRow = JSON.parse(line) as InputRowData;
-            // --- Extract acronym and title early for logging context ---
-            acronym = inputRow?.conferenceAcronym; // Use the field name from your InputRowData
-            title = inputRow?.conferenceTitle;   // Use the field name from your InputRowData
-            // -----------------------------------------------------------
-
+            acronym = inputRow?.conferenceAcronym;
+            title = inputRow?.conferenceTitle;
         } catch (parseError: any) {
-            // Log error *before* continuing, acronym/title won't be available here
             parentLogger.error({
                 ...logContext,
                 err: parseError,
                 lineContentSubstring: line.substring(0, 100),
                 event: 'jsonl_parse_error'
             }, "Failed to parse line in JSONL file");
-            yield null; // Yield null to indicate an error/skip for this line
+            yield null;
             continue;
         }
 
-        // Add acronym/title to context now that parsing succeeded
-        const rowLogContext = { ...logContext, acronym, title };
+        const rowLogContext = { ...logContext, acronym, title }; // Base context for this row
 
-        if (!inputRow || !acronym || !title) { // Check if essential data is present
+        if (!inputRow || !acronym || !title) {
             parentLogger.warn({
-                ...rowLogContext, // Use context with potential acronym/title
+                ...rowLogContext,
                 event: 'jsonl_missing_core_data',
                 hasInputRow: !!inputRow,
                 hasAcronym: !!acronym,
                 hasTitle: !!title
             }, "Parsed line missing essential data (row/acronym/title)");
-             yield null; // Yield null
+            yield null;
             continue;
         }
 
-        // --- Đọc và xử lý nội dung file text ---
         let determineFileContent: string = "";
         let extractFileContent: string = "";
         let parsedTruncatedInfo: Record<string, any> = {};
         let parsedDetermineInfo: Record<string, any> = {};
 
         try {
-            // Đọc determine file
             if (inputRow.determineResponseTextPath) {
                 try {
                     determineFileContent = await readContentFromFile(inputRow.determineResponseTextPath);
                     const cleaned = determineFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                    // Ensure parsing only happens if content exists
                     parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
                     if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
                 } catch (readOrParseError: any) {
                     parentLogger.warn({ ...rowLogContext, err: readOrParseError, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' }, `Warning reading/parsing determine file`);
-                    parsedDetermineInfo = {}; // Reset on error
+                    parsedDetermineInfo = {};
                 }
             } else {
                 parsedDetermineInfo = {};
             }
 
-            // Đọc extract file
             if (inputRow.extractResponseTextPath) {
                 try {
                     extractFileContent = await readContentFromFile(inputRow.extractResponseTextPath);
                     const cleaned = extractFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                    // Ensure parsing only happens if content exists
                     parsedTruncatedInfo = cleaned ? JSON.parse(cleaned) : {};
                     if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) parsedTruncatedInfo = {};
                 } catch (readOrParseError: any) {
                     parentLogger.warn({ ...rowLogContext, err: readOrParseError, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' }, `Warning reading/parsing extract file`);
-                     parsedTruncatedInfo = {}; // Reset on error
+                    parsedTruncatedInfo = {};
                 }
             } else {
                 parsedTruncatedInfo = {};
             }
 
-            // Process the parsed data (e.g., extract summaries)
-            const processedResponse = processResponse(parsedTruncatedInfo); // Assuming this function exists and works
+            // --- Process the parsed data ---
+            const processedResponse = processResponse(parsedTruncatedInfo);
 
             const finalRow: ProcessedRowData = {
-                // Ensure field names match your ProcessedRowData type
-                title: title, // Use already extracted title
-                acronym: acronym.replace(/_\d+$/, ''), // Use already extracted acronym, clean if needed
+                title: title,
+                acronym: acronym.replace(/_\d+$/, ''),
                 link: inputRow.conferenceLink || "",
                 cfpLink: inputRow.cfpLink || "",
                 impLink: inputRow.impLink || "",
-                determineLinks: parsedDetermineInfo, // This might need adjustment based on ProcessedRowData definition
-                ...processedResponse, // Spread the results from processResponse
+                determineLinks: parsedDetermineInfo,
+                ...processedResponse,
             };
 
-            // Yield the successfully processed row object
+            // ************************************************
+            // *** START: VALIDATION & NORMALIZATION LOGIC ***
+            // ************************************************
+            const validationLogContext = { ...rowLogContext }; // Use row context for validation logs
+
+            // --- Continent Validation & Normalization ---
+            const originalContinent = finalRow.continent?.trim();
+            if (!originalContinent) {
+                finalRow.continent = "No continent";
+                // Optional: Log normalization of empty value if needed for tracking
+                // parentLogger.trace({ ...validationLogContext, event: 'normalization_applied', field: 'continent', reason: 'empty_value' }, `Normalized empty continent`);
+            } else if (!VALID_CONTINENTS.has(originalContinent)) {
+                parentLogger.info({ // Log as info since we are normalizing
+                    ...validationLogContext,
+                    event: 'validation_warning',
+                    field: 'continent',
+                    invalidValue: originalContinent,
+                    action: 'normalized',
+                    normalizedTo: 'No continent'
+                }, `Invalid continent value found. Normalizing to 'No continent'.`);
+                finalRow.continent = "No continent"; // Normalize invalid value
+            } // else: continent is valid, keep the trimmed original value
+
+            // --- Type Validation & Normalization ---
+            const originalType = finalRow.type?.trim();
+            if (!originalType) {
+                finalRow.type = "Offline"; // Default for empty
+                // Optional: Log normalization
+                // parentLogger.trace({ ...validationLogContext, event: 'normalization_applied', field: 'type', reason: 'empty_value' }, `Normalized empty type to 'Offline'.`);
+            } else if (!VALID_TYPES.has(originalType)) {
+                parentLogger.info({ // Log as info
+                    ...validationLogContext,
+                    event: 'validation_warning',
+                    field: 'type',
+                    invalidValue: originalType,
+                    action: 'normalized',
+                    normalizedTo: 'Offline'
+                }, `Invalid type value found. Normalizing to 'Offline'.`);
+                finalRow.type = "Offline"; // Default for invalid
+            } // else: type is valid, keep the trimmed original value
+
+            // --- Location, City, Country Normalization (only for empty/missing) ---
+            if (!finalRow.location?.trim()) {
+                finalRow.location = "No location";
+            }
+            if (!finalRow.cityStateProvince?.trim()) {
+                finalRow.cityStateProvince = "No city/state/province";
+            }
+            if (!finalRow.country?.trim()) {
+                finalRow.country = "No country";
+            }
+
+            // --- Year Validation (Log only, no normalization here) ---
+            const originalYear = finalRow.year?.trim();
+            if (originalYear && !YEAR_REGEX.test(originalYear)) {
+                parentLogger.info({ // Log as info
+                    ...validationLogContext,
+                    event: 'validation_warning',
+                    field: 'year',
+                    invalidValue: originalYear,
+                    action: 'logged_only' // Indicate we are not changing it here
+                }, `Invalid year format detected. Value kept as is.`);
+                // Keep the original invalid value in the finalRow
+            }
+            // **********************************************
+            // *** END: VALIDATION & NORMALIZATION LOGIC ***
+            // **********************************************
+
+
+            // Yield the potentially modified row object
             yield finalRow;
 
         } catch (rowProcessingError: any) {
-            // Log error during the processing of *this specific row's* data
             parentLogger.error({
-                ...rowLogContext, // Includes acronym/title
+                ...rowLogContext, // Includes acronym/title if available
                 err: rowProcessingError,
                 event: 'row_processing_error'
             }, "Error processing row data after parsing JSONL");
-             yield null; // Yield null on processing error for this row
+            yield null; // Yield null on processing error for this row
         }
     }
     parentLogger.info({ ...logContextBase, totalLines: lineNumber, event: 'jsonl_processing_finished' }, 'Finished processing JSONL file stream');
 }
 
 
-// --- Hàm chính để ghi CSV bằng Stream ---
+// --- Hàm chính để ghi CSV bằng Stream (unchanged) ---
 export const writeCSVStream = async (
     jsonlFilePath: string,
     csvFilePath: string,
-    parentLogger: typeof logger, // Renamed parameter for clarity
+    parentLogger: typeof logger,
 ): Promise<void> => {
     const logContext = { jsonlInput: jsonlFilePath, csvOutput: csvFilePath, function: 'writeCSVStream' };
     parentLogger.info({ ...logContext, event: 'csv_stream_start' }, 'Starting CSV writing stream');
 
-    const processorGenerator = processJsonlStream; // Correctly assigned
+    const processorGenerator = processJsonlStream; // Use the updated generator
 
     let rowObjectStream: Readable | null = null;
-    let filterAndLogTransform: NodeTransform | null = null; // Renamed for clarity
+    let filterAndLogTransform: NodeTransform | null = null;
     let csvTransform: Json2CsvTransform<ProcessedRowData, ProcessedRowData> | null = null;
     let csvWriteStream: fs.WriteStream | null = null;
-    let recordsProcessed = 0; // Count records *before* filtering
-    let recordsWritten = 0;   // Count records successfully logged and passed to CSV transform
+    let recordsProcessed = 0;
+    let recordsWritten = 0;
 
     try {
         // 1. Create source stream
         rowObjectStream = Readable.from(processorGenerator(jsonlFilePath, parentLogger));
         if (!rowObjectStream || typeof rowObjectStream.pipe !== 'function') {
-             throw new Error('Failed to create Readable stream from generator.');
+            throw new Error('Failed to create Readable stream from generator.');
         }
 
         // 2. Create a transform stream to filter out nulls AND log success
@@ -301,27 +357,23 @@ export const writeCSVStream = async (
             objectMode: true,
             transform(chunk: ProcessedRowData | null, encoding, callback) {
                 recordsProcessed++;
-                if (chunk !== null && chunk.acronym && chunk.title) { // Ensure chunk is valid and has needed fields
-                    // *** THE CRUCIAL LOG EVENT for successful processing ***
+                if (chunk !== null && chunk.acronym && chunk.title) {
+                    // Log success *before* passing downstream
                     parentLogger.info({
-                        event: 'csv_write_record_success', // Event for analysis
+                        event: 'csv_write_record_success',
                         acronym: chunk.acronym,
                         title: chunk.title,
-                        // Optional: recordIndex: recordsWritten + 1 // Index of *written* records
-                        // Optional: sourceLineNumber: recordsProcessed // Line number from source JSONL (approximate)
-                    }, `Successfully processed record for CSV`);
-                    // *******************************************************
+                        // Optional: Add line number if you track it through transforms
+                    }, `Successfully processed and validated record for CSV`);
                     recordsWritten++;
                     this.push(chunk); // Pass the valid chunk downstream
                 } else {
-                    // Chunk is null (error in processJsonlStream) or missing core data
-                    // Error was already logged in processJsonlStream
-                    // parentLogger.debug({ event: 'csv_filter_null_or_incomplete', recordIndex: recordsProcessed, hasChunk: !!chunk, hasAcronym: !!chunk?.acronym, hasTitle: !!chunk?.title }, 'Filtering out null or incomplete record');
+                    // Error was already logged in processJsonlStream or chunk was invalid
                 }
                 callback();
             }
         });
-         if (!filterAndLogTransform || typeof filterAndLogTransform.pipe !== 'function') throw new Error('Invalid filterAndLogTransform');
+        if (!filterAndLogTransform || typeof filterAndLogTransform.pipe !== 'function') throw new Error('Invalid filterAndLogTransform');
 
 
         // 3. Set up CSV parser options
@@ -338,13 +390,13 @@ export const writeCSVStream = async (
 
         // 5. Create destination stream
         csvWriteStream = fs.createWriteStream(csvFilePath);
-         if (!csvWriteStream || typeof csvWriteStream.on !== 'function') throw new Error('Invalid csvWriteStream');
+        if (!csvWriteStream || typeof csvWriteStream.on !== 'function') throw new Error('Invalid csvWriteStream');
 
         // 6. Use pipeline
         parentLogger.info({ ...logContext, event: 'pipeline_starting' }, 'Calling streamPipeline...');
         await streamPipeline(
             rowObjectStream,
-            filterAndLogTransform, // Filter nulls and log success *before* CSV conversion
+            filterAndLogTransform,
             csvTransform,
             csvWriteStream
         );
@@ -352,21 +404,20 @@ export const writeCSVStream = async (
         parentLogger.info({
             ...logContext,
             event: 'csv_stream_success',
-            recordsProcessed, // Total lines attempted from JSONL
-            recordsWritten    // Lines successfully logged and sent to CSV writer
+            recordsProcessed,
+            recordsWritten
         }, 'CSV writing stream finished successfully.');
 
     } catch (error: any) {
-        // Log overall pipeline failure
         parentLogger.error({
             ...logContext,
-            streamStatus: { // Add status for debugging pipeline issues
+            streamStatus: {
                 rowObjectStreamExists: !!rowObjectStream,
                 filterTransformExists: !!filterAndLogTransform,
                 csvTransformInstanceExists: !!csvTransform,
                 csvWriteStreamExists: !!csvWriteStream,
             },
-            recordsProcessed, // Include counts in error log
+            recordsProcessed,
             recordsWritten,
             err: { message: error.message, stack: error.stack, code: error.code, type: error.constructor.name },
             event: 'csv_stream_failed'
@@ -376,10 +427,9 @@ export const writeCSVStream = async (
         rowObjectStream?.destroy();
         filterAndLogTransform?.destroy();
         csvTransform?.destroy();
-        // Destroy write stream with error to prevent partial file potentially
         if (csvWriteStream && !csvWriteStream.destroyed) {
-             csvWriteStream.destroy(error instanceof Error ? error : new Error(String(error)));
+            csvWriteStream.destroy(error instanceof Error ? error : new Error(String(error)));
         }
-        throw error; // Re-throw the error
+        throw error;
     }
 };

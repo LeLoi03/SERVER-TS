@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction, RequestHandler } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
@@ -9,13 +9,11 @@ import bodyParser from 'body-parser';
 import fs from 'fs';
 import multer from 'multer';
 import cron from 'node-cron';
-
-// Import modules from server-crawl (using relative paths)
 import { logger } from './conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from './conference/3_core_portal_scraping';
 import { crawlConferences } from './conference/crawl_conferences';
 import { crawlJournals } from './journal/crawl_journals';
-import { ConferenceData } from './conference/types'; // Import ConferenceData type
+import { ConferenceData } from './conference/types';
 
 export const OUTPUT_JSON: string = path.join(__dirname, './journal/data/all_journal_data.json');
 
@@ -67,126 +65,6 @@ io.on('connection', (socket: Socket) => {
     });
 });
 
-// // --- Database Path ---
-// const conferencesListFilePath = path.resolve(__dirname, './database/DB.json');
-
-
-// // --- Route Imports ---
-// import { getConferenceById } from './route/getConferenceById';
-// import { getConferenceList } from './route/getConferenceList';
-// import { followConference } from './route/followConference';
-// import { getUserById } from './route/getUserById';
-// import { updateUser } from './route/updateUser';
-// import { addConference } from './route/addConference';
-// import { getMyConferences } from './route/getMyConferences';
-// import { addToCalendar } from './route/addToCalendar';
-// import { getUserCalendar } from './route/getUserCalendar';
-// import { addFeedback } from './route/addFeedback';
-// import { deleteUser } from './route/deleteUser';
-// import { getUserNotifications } from './route/getNotifications';
-// import { updateNotifications } from './route/updateNotifications';
-// import { markAllNotificationsAsRead } from './route/markAllNotificationsAsRead';
-// import { adminConferences_GET, adminConferences_POST } from './route/adminConferences';
-// import { saveConferenceData } from './route/saveConferenceData';
-// import { saveConferenceDetails } from './route/saveConferenceDetails';
-// import { signupUser } from './route/signupUser';
-// import { signinUser } from './route/signinUser';
-// import { googleLogin } from './route/googleLogin';
-// import { checkUpcomingConferenceDates } from './route/checkUpcomingConferenceDates';
-// import { verifyPassword } from './route/verifyPassword';
-// import { changePassword } from './route/changePassword';
-// import { blacklistConference } from './route/addToBlacklist';
-// import { getVisualizationData } from './route/getVisualizationData';
-// import { verifyEmail } from './route/verifyEmail';
-
-// // --- Route Definitions ---
-// app.get('/api/v1/conference/:id', getConferenceById);
-// app.get('/api/v1/conference', getConferenceList);
-// app.post('/api/v1/user/follow', followConference);
-// app.get('/api/v1/user/:id', getUserById);
-// app.put('/api/v1/user/:id', updateUser);
-// app.post('/api/v1/user/add-conference', addConference);
-// app.get('/api/v1/user/:id/my-conferences', getMyConferences);
-// app.post('/api/v1/user/add-to-calendar', addToCalendar);
-// app.post('/api/v1/user/blacklist', blacklistConference);
-// app.get('/api/v1/user/:id/calendar', getUserCalendar);
-// app.post('/api/v1/conferences/:conferenceId/feedback', addFeedback);
-// app.delete('/api/v1/user/:id', deleteUser);
-// app.get('/api/v1/user/:id/notifications', getUserNotifications);
-// app.put('/api/v1/user/:id/notifications', updateNotifications);
-// app.put('/api/v1/user/:id/notifications/mark-all-as-read', markAllNotificationsAsRead);
-// app.get('/admin/conferences', adminConferences_GET);
-// app.post('/admin/conferences', upload.single('csvFile'), adminConferences_POST);
-// app.post('/api/v1/conferences/save', saveConferenceData);
-// app.post('/api/v1/conferences/details/save', saveConferenceDetails);
-// app.post('/api/v1/user/signup', signupUser);
-// app.post('/api/v1/user/signin', signinUser);
-// app.post('/api/v1/user/google-login', googleLogin);
-// app.post('/api/v1/user/verify-password', verifyPassword);
-// app.post('/api/v1/user/change-password', changePassword);
-// app.post('/api/v1/user/verify-email', verifyEmail);
-// app.get('/api/v1/visualization/conference', getVisualizationData);
-
-// app.get('/api/v1/topics', async (req, res) => {
-//     try {
-//         const rawData = await fs.promises.readFile(conferencesListFilePath, 'utf8');
-//         const data = JSON.parse(rawData);
-
-
-//         let allTopics: string[] = [];
-//         for (const conferenceData of data.payload) {
-//             if (conferenceData.topics && Array.isArray(conferenceData.topics)) {
-//                 allTopics = allTopics.concat(conferenceData.topics);
-//             }
-//         }
-
-
-//         const uniqueTopics = [...new Set(allTopics)];
-
-//         if (uniqueTopics.length === 0) {
-//             res.status(404).json({ error: 'Topics not found in the data' });
-//             return
-//         }
-
-//         res.json(uniqueTopics);
-
-//     } catch (error) {
-//         if ((error as any).code === 'ENOENT') {
-//             console.error('Error: DB_details.json not found at:', conferencesListFilePath);
-//             res.status(500).json({ error: 'Database file not found' });
-//         } else if (error instanceof SyntaxError) {
-//             console.error('Error: Invalid JSON in DB_details.json:', error);
-//             res.status(500).json({ error: 'Invalid database file format' });
-//         } else {
-//             console.error('Error reading or parsing DB_details.json:', error);
-//             res.status(500).json({ error: 'Failed to retrieve topics' });
-//         }
-//     }
-// });
-
-// import { saveCrawlConferenceFromCsvToJson } from './route/saveCrawlConferenceFromCsvToJson'; // Adjust path
-// app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson);
-
-
-
-// // --- API Endpoints (mỗi hàm một endpoint) ---
-// app.post('/log', (req, res) => {
-//     const logData = req.body;
-//     const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(logData, null, 2)}\n`;
-//     const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
-
-//     fs.appendFile(logFilePath, logEntry, (err) => {
-//         if (err) {
-//             console.error('Lỗi khi ghi vào file log:', err);
-//             return res.status(500).send('Lỗi khi ghi log.');
-//         }
-//         console.log('Đã ghi log vào file.');
-//         res.status(200).send('Đã ghi log.');
-//     });
-// });
-
-
-
 // --- server_crawl.ts routes ---
 // Custom middleware with types
 const conditionalJsonBodyParser = (req: Request, res: Response, next: NextFunction) => {
@@ -207,12 +85,12 @@ const EVALUATE_CSV_PATH = path.join(__dirname, './data/evaluate.csv');
 
 import { ProcessedResponseData } from './conference/types';
 
-// --- Function to handle the crawl-conferences logic ---
+// --- Function to handle the combined crawl/update logic ---
 async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const routeLogger = (req as any).log || logger.child({ requestId, route: '/crawl-conferences' });
 
-    routeLogger.info({ query: req.query, method: req.method }, "Received request to crawl/update conferences");
+    routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
 
     const startTime = Date.now();
     const dataSource = (req.query.dataSource as string) || 'api'; // Mặc định là 'api'
@@ -222,39 +100,23 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
 
         routeLogger.info({ dataSource }, "Determining conference data source");
 
-        // --- Lấy danh sách conference ---
+        // --- Lấy danh sách conference (Logic này giữ nguyên) ---
         if (dataSource === 'client') {
-            // --- Luồng UPDATE từ Client ---
             conferenceList = req.body;
-            if (!Array.isArray(conferenceList) || conferenceList.length === 0) {
-                routeLogger.warn({ bodyType: typeof conferenceList, count: conferenceList?.length }, "Invalid or empty conference list in request body for 'client' source.");
-                res.status(400).json({ message: 'Invalid or empty conference list provided in the request body.' });
+            if (!Array.isArray(conferenceList)) { // Chỉ cần kiểm tra là mảng
+                routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
+                res.status(400).json({ message: 'Invalid conference list provided in the request body (must be an array).' });
                 return;
             }
-            // Kiểm tra sơ bộ cấu trúc cần thiết cho update (ví dụ: có mainLink)
-            const hasRequiredLinks = conferenceList.every(c => c.Acronym && c.Title && c.mainLink && c.cfpLink && c.impLink);
-            if (!hasRequiredLinks) {
-                routeLogger.warn("Client data source selected, but some conferences lack required links (main, cfp, imp) for the update flow.");
-                // Quyết định: Báo lỗi hay vẫn tiếp tục và bỏ qua các conference thiếu link?
-                // Hiện tại báo lỗi để rõ ràng:
-                 res.status(400).json({ message: "Client data source requires all conferences to have Acronym, Title, mainLink, cfpLink, and impLink for the update flow." });
-                 return;
-                // Hoặc lọc ra các conference hợp lệ:
-                // const validConferences = conferenceList.filter(c => c.Acronym && c.Title && c.mainLink && c.cfpLink && c.impLink);
-                // if (validConferences.length === 0) { /* ... xử lý không có conf hợp lệ ... */ }
-                // conferenceList = validConferences;
-                // routeLogger.info({ originalCount: req.body.length, validCount: validConferences.length }, "Filtered conferences for update flow.");
-            }
-            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client (expecting UPDATE flow)");
-
-        } else {
-            // --- Luồng CRAWL/SAVE từ API ---
+            // Không cần kiểm tra link ở đây nữa, crawlConferences sẽ tự xử lý
+            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
+        } else { // dataSource === 'api' hoặc không được cung cấp
             if (req.body && Object.keys(req.body).length > 0) {
-                routeLogger.warn("Received body when dataSource is 'api'. Ignoring body.");
+                routeLogger.warn("Received body when dataSource is not 'client'. Ignoring body.");
             }
             try {
-                routeLogger.info("Fetching conference list from internal source for CRAWL flow...");
-                conferenceList = await getConferenceListFromCrawl() as ConferenceData[]; // Hàm này phải trả về ConferenceData[]
+                routeLogger.info("Fetching conference list from internal source...");
+                conferenceList = await getConferenceListFromCrawl() as ConferenceData[];
                 routeLogger.info({ count: conferenceList.length }, "Successfully fetched conference list from internal source");
             } catch (apiError: any) {
                 routeLogger.error({ err: apiError }, "Failed to fetch conference list from internal source");
@@ -263,9 +125,9 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
             }
         }
 
-        // --- Kiểm tra conferenceList cuối cùng ---
+        // --- Kiểm tra conferenceList cuối cùng (Logic này giữ nguyên) ---
         if (!conferenceList || !Array.isArray(conferenceList)) {
-             routeLogger.error("conferenceList is not a valid array after source determination.");
+             routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
              res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
              return;
         }
@@ -274,61 +136,46 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
              res.status(200).json({
                  message: 'Conference list provided or fetched was empty. No processing performed.',
                  runtime: `0.00 s`,
-                 outputJsonlPath: FINAL_OUTPUT_PATH, // Vẫn trả về path file (dù có thể trống)
+                 outputJsonlPath: FINAL_OUTPUT_PATH,
                  outputCsvPath: EVALUATE_CSV_PATH
              });
              return;
         }
 
-        // --- Gọi hàm core ---
-        routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, `Calling crawlConferences (expecting ${dataSource === 'client' ? 'UPDATE results' : 'SAVE to file'})`);
+        // --- Gọi hàm core (Logic này giữ nguyên) ---
+        routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, "Calling crawlConferences core function...");
 
-        // *** THAY ĐỔI: Nhận kết quả trả về từ crawlConferences ***
+        // *** Gọi crawlConferences và nhận kết quả (ProcessedResponseData | null)[] ***
         const crawlResults: (ProcessedResponseData | null)[] = await crawlConferences(conferenceList, routeLogger);
 
         const endTime = Date.now();
         const runTime = endTime - startTime;
         const runTimeSeconds = (runTime / 1000).toFixed(2);
 
-        // --- Xử lý Response dựa trên dataSource ---
-        if (dataSource === 'client') {
-            // --- Trả về kết quả UPDATE cho Client ---
-            const processedClientResults = crawlResults.filter(result => result !== null) as ProcessedResponseData[];
-            routeLogger.info({
-                runtimeSeconds: runTimeSeconds,
-                totalProcessed: crawlResults.length, // Tổng số conf đã xử lý
-                resultsReturned: processedClientResults.length, // Số kết quả thực sự trả về
-                event: 'update_process_finished_successfully',
-                outputJsonl: FINAL_OUTPUT_PATH, // Vẫn ghi file JSONL
-                outputCsv: EVALUATE_CSV_PATH
-            }, "Conference UPDATE process finished. Returning processed data.");
+        // --- Xử lý và gửi Response (Logic này áp dụng cho cả hai dataSource) ---
 
-            res.status(200).json({
-                message: `Conference update process completed. ${processedClientResults.length} conference(s) processed successfully.`,
-                runtime: `${runTimeSeconds} s`,
-                data: processedClientResults, // *** TRẢ KẾT QUẢ ĐÃ XỬ LÝ ***
-                outputJsonlPath: FINAL_OUTPUT_PATH,
-                outputCsvPath: EVALUATE_CSV_PATH
-            });
-             routeLogger.info({ statusCode: 200, resultsCount: processedClientResults.length }, "Sent successful response with processed data");
+        // Lọc ra các kết quả không null (chỉ những kết quả từ luồng update thành công)
+        const processedUpdateResults = crawlResults.filter(result => result !== null) as ProcessedResponseData[];
 
-        } else {
-            // --- Chỉ xác nhận CRAWL/SAVE thành công cho Client ---
-            routeLogger.info({
-                runtimeSeconds: runTimeSeconds,
-                event: 'crawl_process_finished_successfully',
-                outputJsonl: FINAL_OUTPUT_PATH,
-                outputCsv: EVALUATE_CSV_PATH
-            }, "Conference CRAWL/SAVE process finished successfully. Results written to files.");
+        routeLogger.info({
+            runtimeSeconds: runTimeSeconds,
+            totalProcessed: conferenceList.length, // Tổng số conf được yêu cầu xử lý
+            updateResultsReturned: processedUpdateResults.length, // Số kết quả từ luồng update trả về
+            event: 'processing_finished_successfully',
+            outputJsonl: FINAL_OUTPUT_PATH,
+            outputCsv: EVALUATE_CSV_PATH
+        }, "Conference processing finished. Returning any available update results.");
 
-            res.status(200).json({
-                message: `Conference crawling process completed successfully! Results saved to server at specified paths.`,
-                runtime: `${runTimeSeconds} s`,
-                outputJsonlPath: FINAL_OUTPUT_PATH,
-                outputCsvPath: EVALUATE_CSV_PATH
-            });
-             routeLogger.info({ statusCode: 200 }, "Sent successful response (file confirmation only)");
-        }
+        // *** Luôn trả về cấu trúc response này ***
+        res.status(200).json({
+            message: `Conference processing completed. ${processedUpdateResults.length} conference(s) yielded update data. All processing results (updates/saves) are reflected in server files.`,
+            runtime: `${runTimeSeconds} s`,
+            results: processedUpdateResults, // Trả về mảng kết quả update (có thể rỗng)
+            outputJsonlPath: FINAL_OUTPUT_PATH,
+            outputCsvPath: EVALUATE_CSV_PATH
+        });
+        routeLogger.info({ statusCode: 200, updateResultsCount: processedUpdateResults.length }, "Sent successful response");
+
 
     } catch (error: any) {
         const endTime = Date.now();
@@ -338,15 +185,15 @@ async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, r
         if (!res.headersSent) {
              res.status(500).json({
                  message: 'Conference processing failed',
-                 error: error.message,
-                 dataSource: dataSource // Có thể thêm thông tin này vào lỗi
+                 error: error.message
              });
              routeLogger.warn({ statusCode: 500 }, "Sent error response");
         } else {
-             routeLogger.error("Headers already sent, could not send 500 error response for processing failure.");
+             routeLogger.error("Headers already sent, could not send 500 error response.");
         }
     }
 }
+
 
 
 // --- Function to handle the crawl-journals logic ---
@@ -411,7 +258,7 @@ app.post('/crawl-journals', async (req: Request, res: Response) => {
 // cron.schedule('0 2 * * *', checkUpcomingConferenceDates);
 /////////////////////////////////////////////////////////////////////
 
-import { performLogAnalysis } from './client/route/logAnalysisService'; // <<< Import service mới
+import { performLogAnalysis } from './client/route/service'; // <<< Import service mới
 import { LogAnalysisResult } from './client/types/logAnalysis'; // <<< Import interface
 
 

@@ -108,3 +108,72 @@
 [2025-04-16T11:18:10.145Z] GeminiService initialized for model: gemini-2.0-flash
 [2025-04-16T11:22:02.419Z] GeminiService initialized for model: gemini-2.0-flash
 [2025-04-16T11:22:25.947Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-16T12:24:01.144Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T01:32:44.821Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T03:16:43.891Z] [Socket.IO] Client connected: i3P9hZGLeJuO861tAAAB
+[2025-04-17T03:16:43.934Z] [Socket.IO] Client connected: P9DO5nRWgabyxF2GAAAD
+[2025-04-17T03:17:17.827Z] [Socket.IO] Client disconnected: P9DO5nRWgabyxF2GAAAD. Reason: client namespace disconnect
+[2025-04-17T04:05:27.515Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:05:27.735Z] [Socket.IO] Client connected: dBwVxKUnS4IKc24UAAAB
+[2025-04-17T04:07:31.588Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:07:47.826Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:07:47.938Z] [Socket.IO] Client connected: 2ryBYbzs5cVrWnSZAAAB
+[2025-04-17T04:14:53.204Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:14:56.937Z] [Socket.IO] Client connected: hxIwE2-x01S28zcBAAAB
+[2025-04-17T04:19:40.143Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:19:40.322Z] [Socket.IO] Client connected: gNUPi9J1Umx5PKZ4AAAB
+[2025-04-17T04:20:21.697Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:20:21.766Z] [Socket.IO] Client connected: oiRZUS50fLBNVPkVAAAB
+[2025-04-17T04:21:51.202Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:21:53.949Z] [Socket.IO] Client connected: saWHdaUYWTrN6tUJAAAB
+[2025-04-17T04:22:17.661Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:22:17.717Z] [Socket.IO] Client connected: N0ELaOTL46KA9blsAAAB
+[2025-04-17T04:28:18.784Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:28:27.752Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:28:28.948Z] [Socket.IO] Client connected: DHvgx5QSvhv97kzBAAAB
+[2025-04-17T04:33:20.813Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:33:20.894Z] [Socket.IO] Client connected: cwKwnWJAQCagn9sgAAAB
+[2025-04-17T04:34:04.755Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:34:05.057Z] [Socket.IO] Client connected: gc2ovOgxVnHiMRv5AAAB
+[2025-04-17T04:34:37.596Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:34:37.759Z] [Socket.IO] Client connected: H67z-UZWFfIH5hhrAAAB
+[2025-04-17T04:34:48.645Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:34:48.748Z] [Socket.IO] Client connected: -TzdJ1Ls4Tzyg_KsAAAB
+[2025-04-17T04:35:35.998Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:35:36.225Z] [Socket.IO] Client connected: Gj7YVJ_M2WVekjHWAAAB
+[2025-04-17T04:37:15.987Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:37:16.201Z] [Socket.IO] Client connected: LeoGRF6boEp-bi0PAAAB
+[2025-04-17T04:39:23.366Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:39:23.453Z] [Socket.IO] Client connected: 7Fnm3IdKA4tk_HzjAAAB
+[2025-04-17T04:41:02.410Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:41:02.945Z] [Socket.IO] Client connected: GTuNgR9vpHzuZYVkAAAB
+[2025-04-17T04:41:35.249Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:41:35.453Z] [Socket.IO] Client connected: HIy9F5zzLvENWyjQAAAB
+[2025-04-17T04:43:39.355Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:43:42.942Z] [Socket.IO] Client connected: 1INhuXu4iWhJXUZHAAAB
+[2025-04-17T04:55:23.163Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T04:55:23.230Z] [Socket.IO] Client connected: Z8Sdnj9nPzPwJQ4wAAAB
+[2025-04-17T06:24:25.586Z] [Socket.IO] Client disconnected: Z8Sdnj9nPzPwJQ4wAAAB. Reason: transport close
+[2025-04-17T06:25:05.662Z] [Socket.IO] Client connected: BAqwsK5g0DJLz-fpAAAE
+[2025-04-17T06:30:12.094Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T06:30:12.260Z] [Socket.IO] Client connected: yHP-cakjP4eWW_3GAAAB
+[2025-04-17T06:37:05.787Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T06:37:08.038Z] [Socket.IO] Client connected: CkAVPvu-hiJ1l8mNAAAB
+[2025-04-17T06:37:57.361Z] [Socket.IO] Client disconnected: CkAVPvu-hiJ1l8mNAAAB. Reason: client namespace disconnect
+[2025-04-17T06:37:57.403Z] [Socket.IO] Client connected: EWLV-qG2dBxp7Md0AAAD
+[2025-04-17T06:53:34.742Z] Incoming HTTP Request: GET /favicon.ico
+[2025-04-17T06:53:34.749Z] HTTP Response Sent: 404 for GET /favicon.ico in 7ms
+[2025-04-17T07:32:49.358Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T07:35:57.886Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-17T07:35:57.890Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 4ms
+[2025-04-17T07:40:20.876Z] [Socket.IO] Client connected: LG9Oj9daMqgnpUnwAAAC
+[2025-04-17T07:58:28.043Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T07:58:28.249Z] [Socket.IO] Client connected: -By5arB-fuoLSB1aAAAB
+[2025-04-17T08:07:14.213Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T08:07:16.918Z] [Socket.IO] Client connected: 43KkLl9rsDNYslqiAAAB
+[2025-04-17T08:07:58.759Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T08:07:58.810Z] [Socket.IO] Client connected: TedEzfhcO4EKw6l0AAAB
+[2025-04-17T08:09:38.418Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T08:09:38.476Z] [Socket.IO] Client connected: ZdlaTz_zMkG3a-YOAAAB
+[2025-04-17T08:13:01.924Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-17T08:13:02.103Z] [Socket.IO] Client connected: hybhcHpwp3zR1kgFAAAB
