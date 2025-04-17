@@ -82,7 +82,7 @@ const loadCacheNameMap = async (): Promise<void> => {
         logger.info({ ...logContext, loadedCount: persistentCacheNameMap.size }, "Successfully loaded cache name entries from file");
     } catch (error: unknown) {
         const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
-        logger.error({ ...logContext, err: errorDetails }, "Failed to load or parse cache name map. Starting with an empty map.");
+        logger.error({ ...logContext, err: errorDetails, event: 'cache_load_failed' }, "Failed to load or parse cache name map. Starting with an empty map.");
         persistentCacheNameMap = new Map(); // Reset on error
     }
 };
@@ -103,10 +103,10 @@ const saveCacheNameMap = async (parentLogger: typeof logger): Promise<void> => {
         const dataToSave: Record<string, string> = Object.fromEntries(persistentCacheNameMap);
         const jsonString = JSON.stringify(dataToSave, null, 2);
         await fsPromises.writeFile(CACHE_MAP_FILE_PATH, jsonString, 'utf8');
-        parentLogger.debug({ ...logContext, savedCount: persistentCacheNameMap.size }, "Successfully saved cache name map to file");
+        parentLogger.info({ ...logContext, savedCount: persistentCacheNameMap.size, event: 'cache_write_success' }, "Successfully saved cache name map to file");
     } catch (error: unknown) {
         const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
-        parentLogger.error({ ...logContext, err: errorDetails }, "Failed to save cache name map");
+        parentLogger.error({ ...logContext, err: errorDetails, event: 'cache_write_failed' }, "Failed to save cache name map");
     }
 };
 
@@ -146,7 +146,7 @@ const initializeCacheManager = (): GoogleAICacheManager | null => {
         logger.info(logContext, "GoogleAICacheManager initialized successfully.");
     } catch (error: unknown) {
         const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
-        logger.error({ ...logContext, err: errorDetails }, "Failed to initialize GoogleAICacheManager");
+        logger.error({ ...logContext, err: errorDetails, event: 'cache_manager_create_failed' }, "Failed to initialize GoogleAICacheManager");
         cacheManager = null;
     }
     return cacheManager;
@@ -207,7 +207,7 @@ const getOrCreateExtractCache = async (
     // 1. Check in-memory cache first (fast path)
     const cachedInMemory = extractApiCaches.get(modelName);
     if (cachedInMemory?.name) {
-        parentLogger.debug({ ...baseLogContext, cacheName: cachedInMemory.name, event: 'cache_reuse_in_memory' }, "Reusing existing extract API cache object from in-memory map");
+        parentLogger.info({ ...baseLogContext, cacheName: cachedInMemory.name, event: 'cache_reuse_in_memory' }, "Reusing existing extract API cache object from in-memory map");
         return cachedInMemory;
     }
 
@@ -331,7 +331,7 @@ const executeWithRetry = async (
     while (retryCount < MAX_RETRIES) {
         const attempt = retryCount + 1;
         const attemptLogContext = { ...baseLogContext, attempt, maxAttempts: MAX_RETRIES };
-        parentLogger.debug({ ...attemptLogContext, event: 'retry_attempt_start' }, "Executing function attempt");
+        parentLogger.info({ ...attemptLogContext, event: 'retry_attempt_start' }, "Executing function attempt");
         try {
             if (!genAI) {
                 // This is a critical setup error, not retryable in the loop

@@ -296,7 +296,16 @@ export const calculateFinalMetrics = (
             if (detail.startTime) { // Only count if it actually started
                 processingCount++;
                 // DO NOT set endTime or durationSeconds. Leave them null.
-                // DO NOT change status to 'failed'.
+
+                // Ví dụ: Nếu extract là bắt buộc và đã thất bại
+                if (detail.steps.gemini_extract_attempted === true && detail.steps.gemini_extract_success === false) {
+                    logger.warn({ ...logContext, event: 'final_calc_mark_failed_critical_step', compositeKey: key, reason: 'Gemini extract failed' }, 'Marking processing task as failed due to critical step failure.');
+                    detail.status = 'failed';
+                    // Cập nhật lại bộ đếm
+                    processingCount--;
+                    completionFailCount++;
+                    // Không nên đặt endTime ở đây vì không biết chính xác khi nào nó dừng
+                }
                 logger.trace({ ...logContext, event: 'final_calc_task_processing', compositeKey: key, status: detail.status }, 'Task considered still processing at end of analysis window.');
             } else {
                 // Status is 'unknown' and no startTime - likely just initialized but never started processing within window. Ignore in counts.

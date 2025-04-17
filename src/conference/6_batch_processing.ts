@@ -172,7 +172,7 @@ export const saveBatchToFile = async (
  
          // Kiểm tra kết quả xử lý
          if (!mainLinkBatch || mainLinkBatch.length === 0 || !mainLinkBatch[0] || mainLinkBatch[0].conferenceLink === "None" || !mainLinkBatch[0].conferenceTextPath) {
-             parentLogger.warn({ ...processDetermineContext, mainLinkResult: mainLinkBatch?.[0]?.conferenceLink, mainTextPath: mainLinkBatch?.[0]?.conferenceTextPath, event: 'save_batch_process_determine_failed_invalid' }, "Main link/text path is invalid after processing determine_links response. Skipping further processing and final append for this batch.");
+             parentLogger.error({ ...processDetermineContext, mainLinkResult: mainLinkBatch?.[0]?.conferenceLink, mainTextPath: mainLinkBatch?.[0]?.conferenceTextPath, event: 'save_batch_process_determine_failed_invalid' }, "Main link/text path is invalid.");
              await fileFullLinksPromise; // Đợi ghi file log
              return; // Kết thúc thành công (không có lỗi), nhưng không ghi gì vào output cuối cùng
          }
@@ -194,13 +194,13 @@ export const saveBatchToFile = async (
              try { cfpText = await readContentFromFile(mainEntry.cfpTextPath); }
              catch (e: any) { parentLogger.warn({ ...aggregateExtractContext, err: e, filePath: mainEntry.cfpTextPath, contentType: 'cfp', event: 'save_batch_aggregate_extract_read_failed' }, "Could not read CFP text file"); }
          } else {
-              parentLogger.debug({ ...aggregateExtractContext, contentType: 'cfp', event: 'save_batch_aggregate_extract_read_skipped' }, "CFP text path not available, skipping read.");
+            //   parentLogger.debug({ ...aggregateExtractContext, contentType: 'cfp', event: 'save_batch_aggregate_extract_read_skipped' }, "CFP text path not available, skipping read.");
          }
          if (mainEntry.impTextPath) {
              try { impText = await readContentFromFile(mainEntry.impTextPath); }
              catch (e: any) { parentLogger.warn({ ...aggregateExtractContext, err: e, filePath: mainEntry.impTextPath, contentType: 'imp', event: 'save_batch_aggregate_extract_read_failed' }, "Could not read IMP text file"); }
          } else {
-             parentLogger.debug({ ...aggregateExtractContext, contentType: 'imp', event: 'save_batch_aggregate_extract_read_skipped' }, "IMP text path not available, skipping read.");
+            //  parentLogger.debug({ ...aggregateExtractContext, contentType: 'imp', event: 'save_batch_aggregate_extract_read_skipped' }, "IMP text path not available, skipping read.");
          }
  
  
@@ -265,20 +265,14 @@ export const saveBatchToFile = async (
                 conferenceTitle: mainLinkBatch[0].conferenceTitle,
                 conferenceAcronym: mainLinkBatch[0].conferenceAcronym, // Acronym gốc, không có index
                 conferenceIndex: mainLinkBatch[0].conferenceIndex, // Index gốc, không có acronym
-                
-                // conferenceSource: mainLinkBatch[0].conferenceSource, // Lấy từ batch gốc nếu cần
-                // conferenceRank: mainLinkBatch[0].conferenceRank, // Lấy từ batch gốc nếu cần
                 conferenceLink: mainLinkBatch[0].conferenceLink,
                 cfpLink: mainLinkBatch[0].cfpLink || "",
                 impLink: mainLinkBatch[0].impLink || "",
-                // Đường dẫn đến các file text gốc nếu cần giữ lại
                 conferenceTextPath: mainLinkBatch[0].conferenceTextPath,
                 cfpTextPath: mainLinkBatch[0].cfpTextPath,
                 impTextPath: mainLinkBatch[0].impTextPath,
-                // Đường dẫn đến file response API (quan trọng)
                 determineResponseTextPath: mainLinkBatch[0].determineResponseTextPath,
                 extractResponseTextPath: mainLinkBatch[0].extractResponseTextPath,
-                // Metadata từ API nếu cần
                 determineMetaData: mainLinkBatch[0].determineMetaData,
                 extractMetaData: mainLinkBatch[0].extractMetaData,
 
@@ -291,13 +285,13 @@ export const saveBatchToFile = async (
             parentLogger.info({ ...finalAppendContext, recordAcronym: finalRecord.conferenceAcronym, event: 'save_batch_append_success' }, "Successfully appended final result");
 
         } catch (appendError: any) {
-            parentLogger.error({ ...finalAppendContext, err: appendError, event: 'save_batch_append_final_failed' }, "CRITICAL: Failed to append final result to output file");
+            parentLogger.error({ ...finalAppendContext, err: appendError, event: 'save_batch_append_failed' }, "CRITICAL: Failed to append final result to output file");
             // Ném lỗi này vì đây là bước quan trọng nhất
             throw appendError;
         }
         // --- Hết ghi bản ghi cuối cùng ---
 
-        parentLogger.info({ ...logContext, event: 'save_batch_finish_success' }, "Finishing saveBatchToFile successfully");
+        // parentLogger.info({ ...logContext, event: 'save_batch_finish_success' }, "Finishing saveBatchToFile successfully");
         return; // <--- Kết thúc thành công (Promise<void>)
 
     } catch (error: any) {
@@ -327,7 +321,7 @@ export const saveHTMLContent = async (
     try {
         const batch: BatchEntry[] = [];
         if (!links || links.length === 0) {
-            parentLogger.warn({ ...baseLogContext, event: 'save_html_skipped_no_links' }, "Called with empty or null links array, skipping.");
+            parentLogger.error({ ...baseLogContext, event: 'save_html_skipped_no_links' }, "Called with empty or null links array, skipping.");
             parentLogger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent (no links)"); // Log kết thúc
             return;
         }
@@ -686,6 +680,7 @@ export const updateHTMLContent = async (
         }
     }
 };
+
 // --- Revised updateBatchToFile ---
 export const updateBatchToFile = async (
     batchInput: BatchUpdateEntry,

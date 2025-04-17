@@ -31,10 +31,10 @@ const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, entryTi
 
 const handleTaskCrawlStageFinish: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     if (confDetail) {
-       confDetail.crawlEndTime = entryTimestampISO;
-       confDetail.crawlSucceededWithoutError = logEntry.status !== false; // Assuming status is at root
-       logger.trace({ ...logContext, event: 'analysis_crawl_stage_finish', crawlSucceeded: confDetail.crawlSucceededWithoutError }, 'Noted crawl stage finish (task_finish).');
-   }
+        confDetail.crawlEndTime = entryTimestampISO;
+        confDetail.crawlSucceededWithoutError = logEntry.status !== false; // Assuming status is at root
+        logger.trace({ ...logContext, event: 'analysis_crawl_stage_finish', crawlSucceeded: confDetail.crawlSucceededWithoutError }, 'Noted crawl stage finish (task_finish).');
+    }
 };
 
 // Section 2: Step Failures & Errors
@@ -128,6 +128,10 @@ const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, confDetail
         const apiType = logEntry.context?.apiType; // 'determine' or 'extract'
         if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
         if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
+
+        confDetail.status = 'failed';
+        confDetail.endTime = entryTimestampISO;
+
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
     }
 };
@@ -142,6 +146,8 @@ const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, confDetail
         const apiType = logEntry.context?.apiType;
         if (apiType === 'determine') confDetail.steps.gemini_determine_success = false;
         if (apiType === 'extract') confDetail.steps.gemini_extract_success = false;
+        confDetail.status = 'failed';
+        confDetail.endTime = entryTimestampISO;
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
     }
 };
@@ -161,9 +167,12 @@ const handleSaveBatchApiFailure: LogEventHandler = (logEntry, results, confDetai
     const errorKey = normalizeErrorKey(error);
     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
     if (confDetail) {
-        addConferenceError(confDetail, entryTimestampISO, error, errorKey);
         if (logEntry.event.includes('determine')) confDetail.steps.gemini_determine_success = false;
         if (logEntry.event.includes('extract')) confDetail.steps.gemini_extract_success = false;
+        confDetail.status = 'failed';
+        confDetail.endTime = entryTimestampISO;
+        addConferenceError(confDetail, entryTimestampISO, error, errorKey);
+
     }
 };
 
@@ -180,9 +189,8 @@ const handleTaskUnhandledError: LogEventHandler = (logEntry, results, confDetail
     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
     if (confDetail) {
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
-        // Consider if this should immediately set status to 'failed'
-        // confDetail.status = 'failed';
-        // confDetail.endTime = entryTimestampISO;
+        confDetail.status = 'failed';
+        confDetail.endTime = entryTimestampISO;
     }
 };
 
@@ -198,6 +206,7 @@ const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, confDetail, e
     }
 };
 
+
 const handleCsvWriteFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     const error = logEntry.err || logEntry.reason || logEntry.msg || 'CSV record write failed';
     const errorKey = normalizeErrorKey(error);
@@ -211,6 +220,34 @@ const handleCsvWriteFailed: LogEventHandler = (logEntry, results, confDetail, en
         logger.warn({ ...logContext, event: 'analysis_mark_failed_csv_write' }, 'Marked conference as failed (CSV write failure).');
     } else {
         logger.warn({ ...logContext, event: 'analysis_csv_fail_no_detail', acronym: logEntry.context?.acronym, title: logEntry.context?.title }, 'CSV write failure event found but cannot link to conference detail.');
+    }
+};
+
+const handleJsonlWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+    if (confDetail) {
+        // confDetail.status = 'completed';
+        confDetail.jsonlWriteSuccess = true;
+        confDetail.endTime = entryTimestampISO;
+        logger.trace({ ...logContext, event: 'analysis_mark_completed_jsonl' }, 'Marked conference as completed (jsonl write success).');
+    } else {
+        logger.warn({ ...logContext, event: 'analysis_jsonl_success_no_detail', acronym: logEntry.context?.acronym, title: logEntry.context?.title }, 'jsonl write success event found but no corresponding conference detail.');
+    }
+};
+
+
+const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+    const error = logEntry.err || logEntry.reason || logEntry.msg || 'Jsonl record write failed';
+    const errorKey = normalizeErrorKey(error);
+    results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
+
+    if (confDetail) {
+        confDetail.status = 'failed';
+        confDetail.jsonlWriteSuccess = false;
+        confDetail.endTime = entryTimestampISO;
+        addConferenceError(confDetail, entryTimestampISO, error, errorKey);
+        logger.warn({ ...logContext, event: 'analysis_mark_failed_jsonl_write' }, 'Marked conference as failed (jsonl write failure).');
+    } else {
+        logger.warn({ ...logContext, event: 'analysis_jsonl_fail_no_detail', acronym: logEntry.context?.acronym, title: logEntry.context?.title }, 'JSONL write failure event found but cannot link to conference detail.');
     }
 };
 
@@ -237,16 +274,7 @@ const handlePlaywrightSetupSuccess: LogEventHandler = (logEntry, results, confDe
     results.playwright.setupError = null;
 };
 
-// const handleSaveHtmlSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
-//     // Assumes 'save_html_step_completed' marks success
-//     results.playwright.successfulSaves++;
-//     if (confDetail && confDetail.steps.html_save_success !== false) {
-//         confDetail.steps.html_save_success = true;
-//     }
-// };
-
 const handleSaveHtmlFinish: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
-    // Assuming 'save_html_finish' marks successful completion of the save step for the conference
     results.playwright.successfulSaves++;
     if (confDetail && confDetail.steps.html_save_success !== false) {
         confDetail.steps.html_save_success = true;
@@ -260,7 +288,6 @@ const handleLinkAccessSuccess: LogEventHandler = (logEntry, results, confDetail,
 };
 
 
-// Section 4: Intermediate Step Successes (Gemini)
 const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     results.geminiApi.successfulCalls++;
 
@@ -292,7 +319,6 @@ const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDetail, ent
     }
 };
 
-// Section 4: Intermediate Step Successes (Gemini Cache Hit)
 const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     results.geminiApi.cacheHits++;
     if (confDetail) {
@@ -310,8 +336,6 @@ const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail, en
 };
 
 
-// Section 4: Intermediate Step Successes (Batch)
-// ADDED Handler for save_batch_finish_success
 const handleSaveBatchFinishSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     // Assuming this event signifies one successful batch operation completion
     results.batchProcessing.successfulBatches++;
@@ -353,7 +377,6 @@ const handleRedirect: LogEventHandler = (logEntry, results, confDetail, entryTim
 const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     results.geminiApi.totalCalls++;
 
-    // CORRECTED: Access 'apiType' and 'modelName' directly from logEntry root
     const apiType = logEntry.apiType;
     const modelName = logEntry.modelName;
 
@@ -363,14 +386,25 @@ const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDetail, e
     if (confDetail) {
         if (apiType === 'determine') {
             confDetail.steps.gemini_determine_attempted = true;
-             logger.trace({ ...logContext, event: 'analysis_gemini_determine_attempted' }, 'Marked Gemini determine step as attempted.');
         }
         if (apiType === 'extract') {
             confDetail.steps.gemini_extract_attempted = true;
-            logger.trace({ ...logContext, event: 'analysis_gemini_extract_attempted' }, 'Marked Gemini extract step as attempted.');
         }
     }
 };
+
+
+const handlRetriesGeminiCall: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+
+    const apiType = logEntry.apiType;
+    const modelName = logEntry.modelName;
+
+    if (apiType) results.geminiApi.retriesByType[apiType] = (results.geminiApi.retriesByType[apiType] || 0) + 1;
+    if (modelName) results.geminiApi.retriesByModel[modelName] = (results.geminiApi.retriesByModel[modelName] || 0) + 1;
+};
+
+
+
 
 const handleCacheCreateStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     results.geminiApi.cacheAttempts++;
@@ -398,11 +432,15 @@ const handleBatchTaskCreate: LogEventHandler = (logEntry, results, confDetail, e
     results.batchProcessing.totalBatchesAttempted++;
 };
 
-const handleBatchLogicFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
-    // Treat 'logic' and 'nodata' similarly for now, potentially differentiate later
-    results.batchProcessing.failedBatches++;
-    // Could add specific logging or tracking here if needed
-};
+// const handleBatchLogicFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+//     results.batchProcessing.failedBatches++;
+//     const error = logEntry.err || logEntry.reason || 'Batch promise rejected';
+//     const errorKey = normalizeErrorKey(error);
+//     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
+//     if (confDetail) {
+//         addConferenceError(confDetail, entryTimestampISO, error, 'Batch processing step failed (rejected)');
+//     }
+// };
 
 const handleBatchAggregationEnd: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     if (logEntry.context?.aggregatedCount !== null) {
@@ -516,90 +554,104 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
     // Task Lifecycle
     'task_start': handleTaskStart,
     'task_crawl_stage_finish': handleTaskCrawlStageFinish, // Or 'task_finish'
-    'task_finish': handleTaskCrawlStageFinish, // Added based on logs
+    'task_finish': handleTaskCrawlStageFinish,
 
     // Search
     'search_failed_max_retries': handleSearchFailure,
     'search_ultimately_failed': handleSearchFailure,
     'search_skip_all_keys_exhausted': handleSearchFailure,
     'search_skip_no_key': handleSearchFailure,
-    'search_success': handleSearchSuccess, // Assuming handleSearchSuccess is correct
-    'search_results_filtered': handleSearchResultsFiltered, // Assuming handleSearchResultsFiltered is correct
-    'search_attempt': handleSearchAttempt, // Assuming handleSearchAttempt is correct
+    'search_success': handleSearchSuccess,
+    'search_results_filtered': handleSearchResultsFiltered,
+    'search_attempt': handleSearchAttempt,
 
     // Playwright
-    'playwright_setup_failed': handlePlaywrightSetupFailed, // Assuming correct
-    'playwright_setup_success': handlePlaywrightSetupSuccess, // Assuming correct
-    'save_html_start': handleSaveHtmlStart, // Assuming correct
-    'save_html_failed': handleSaveHtmlFailed, // Assuming correct
-    'save_html_finish': handleSaveHtmlFinish, // CORRECTED/ADDED - Map to the new/renamed handler
-    'link_access_failed': handleLinkAccessFailed, // Corrected access inside handler
-    'link_access_success': handleLinkAccessSuccess, // Assuming correct
-    'link_access_attempt': handleLinkAccessAttempt, // Assuming correct
-    // 'link_processing_start': (logEntry, results, confDetail, entryTimestampISO, logContext) => {}, // Often just informational
-    // 'link_processing_success': handleLinkProcessingSuccess, // Placeholder - Add if needed
+    'playwright_setup_failed': handlePlaywrightSetupFailed,
+    'playwright_setup_success': handlePlaywrightSetupSuccess,
+    'save_html_start': handleSaveHtmlStart,
+    'save_html_finish_failed': handleSaveHtmlFailed,
+    'save_html_unhandled_error': handleSaveHtmlFailed,
+    'save_html_skipped_no_links': handleSaveHtmlFailed,
+    'save_html_finish': handleSaveHtmlFinish,
+    'link_access_failed': handleLinkAccessFailed,
+    'link_processing_failed_skip': handleLinkAccessFailed,
+    'link_access_success': handleLinkAccessSuccess,
+    'link_access_attempt': handleLinkAccessAttempt,
+    'node_traverse_or_save_failed': handleOtherPlaywrightFailure,
+    'page_close_failed': handleOtherPlaywrightFailure,
+    'dom_clean_failed': handleOtherPlaywrightFailure,
+    'content_fetch_failed': handleOtherPlaywrightFailure,
+    'link_loop_unhandled_error': handleOtherPlaywrightFailure,
+    'redirect_detected': handleRedirect,
 
-    'page_close_failed': handleOtherPlaywrightFailure, // Assuming correct
-    'dom_clean_failed': handleOtherPlaywrightFailure, // Assuming correct
-    'content_fetch_failed': handleOtherPlaywrightFailure, // Assuming correct
-    'redirect_detected': handleRedirect, // Assuming correct
 
     // Gemini
-    'retry_failed_max_retries': handleGeminiFinalFailure, // Assuming correct
-    'retry_abort_non_retryable': handleGeminiFinalFailure, // Assuming correct
-    'gemini_api_response_blocked': handleGeminiFinalFailure, // Assuming correct
-    'retry_attempt_error_safety_blocked': handleGeminiFinalFailure, // Assuming correct
-    'gemini_call_limiter_init_failed': handleGeminiSetupFailure, // Assuming correct
-    'gemini_call_invalid_apitype': handleGeminiSetupFailure, // Assuming correct
-    'non_cached_setup_failed': handleGeminiSetupFailure, // Assuming correct
-    'gemini_api_attempt_success': handleGeminiSuccess, // CORRECTED inside handler
-    'cache_setup_use_success': handleGeminiCacheHit, // CORRECTED inside handler
-    'cache_write_success': handleCacheWriteSuccess, // Assuming correct
-    'gemini_call_start': handleGeminiCallStart, // CORRECTED inside handler
-    'cache_create_start': handleCacheCreateStart, // Assuming correct
-    'cache_write_failed': handleCacheWriteFailed, // Assuming correct
-    'cache_invalidate': handleCacheInvalidate, // Assuming correct
-    'retry_rate_limit_wait': handleRateLimitWait, // Assuming correct
-    'retry_attempt_error_cache': handleGeminiIntermediateError, // Assuming correct
-    'retry_attempt_error_429': handleGeminiIntermediateError, // Assuming correct
-    'retry_attempt_error_5xx': handleGeminiIntermediateError, // Assuming correct
-    'retry_attempt_error_unknown': handleGeminiIntermediateError, // Assuming correct
-    'gemini_api_generate_start': (logEntry, results, confDetail, entryTimestampISO, logContext) => {}, // Informational
-    'gemini_api_generate_success': (logEntry, results, confDetail, entryTimestampISO, logContext) => {}, // Informational precursor to attempt_success
+    // 'cache_reuse_in_memory': handleCacheCreateStart,
+    // 'cache'
+    'cache_create_start': handleCacheCreateStart,
+    'cache_setup_use_success': handleGeminiCacheHit,
+    'cache_write_success': handleCacheWriteSuccess,
+    'cache_write_failed': handleCacheWriteFailed,
+    'cache_manager_create_failed': handleCacheWriteFailed,
+    'cache_create_failed': handleCacheWriteFailed,
+    'cache_create_invalid_model_error': handleCacheWriteFailed,
+    'cache_setup_get_or_create_failed': handleCacheWriteFailed,
+    'cache_create_failed_invalid_object': handleCacheInvalidate,
+    'cache_load_failed': handleCacheInvalidate,
+    'cache_invalidate': handleCacheInvalidate,
+    'retry_failed_max_retries': handleGeminiFinalFailure,
+    'retry_abort_non_retryable': handleGeminiFinalFailure,
+    'gemini_api_response_blocked': handleGeminiFinalFailure,
+    'retry_attempt_error_safety_blocked': handleGeminiFinalFailure,
+    'gemini_call_limiter_init_failed': handleGeminiSetupFailure,
+    'gemini_call_invalid_apitype': handleGeminiSetupFailure,
+    'non_cached_setup_failed': handleGeminiSetupFailure,
+    'gemini_api_attempt_success': handleGeminiSuccess,
+    'gemini_call_start': handleGeminiCallStart,
+
+    'retry_attempt_start': handlRetriesGeminiCall,
+    'retry_wait_before_next': handleRateLimitWait,
+    'retry_genai_not_init': handleGeminiIntermediateError,
+    'retry_attempt_error_cache': handleGeminiIntermediateError,
+    'retry_attempt_error_429': handleGeminiIntermediateError,
+    'retry_attempt_error_5xx': handleGeminiIntermediateError,
+    'retry_attempt_error_unknown': handleGeminiIntermediateError,
+    'retry_loop_exit_unexpected': handleGeminiIntermediateError,
 
 
     // Batch Processing
-    'batch_aggregation_item_failed_rejected': handleBatchRejection, // Assuming correct
-    'save_batch_determine_api_call_failed': handleSaveBatchApiFailure, // Assuming correct
-    'save_batch_extract_api_call_failed': handleSaveBatchApiFailure, // Assuming correct
-    'save_batch_process_determine_call_failed': handleSaveBatchApiFailure, // Assuming correct
-    'save_batch_process_determine_failed_invalid': handleSaveBatchApiFailure, // Assuming correct
-    'save_batch_dir_create_failed': handleSaveBatchFsFailure, // Assuming correct
-    'save_batch_read_content_failed': handleSaveBatchFsFailure, // Assuming correct
-    'save_batch_write_file_failed': handleSaveBatchFsFailure, // Assuming correct
-    // 'batch_aggregation_item_success': handleBatchSuccess, // Event not present in logs
-    'batch_task_create': handleBatchTaskCreate, // Assuming correct
-    'batch_aggregation_item_failed_logic': handleBatchLogicFailure, // Assuming correct
-    'batch_aggregation_item_failed_nodata': handleBatchLogicFailure, // Assuming correct
-    'batch_aggregation_end': handleBatchAggregationEnd, // Assuming correct
-    'save_batch_finish_success': handleSaveBatchFinishSuccess, // CORRECTED/ADDED handler mapping
-    'save_batch_append_success': (logEntry, results, confDetail, entryTimestampISO, logContext) => {}, // Informational
+    'save_batch_unhandled_error_or_rethrown': handleBatchRejection,
+    'save_batch_missing_determine_path': handleSaveBatchApiFailure,
+    'save_batch_read_determine_failed': handleSaveBatchApiFailure,
+    'save_batch_determine_api_call_failed': handleSaveBatchApiFailure,
+    'save_batch_extract_api_call_failed': handleSaveBatchApiFailure,
+    'save_batch_process_determine_call_failed': handleSaveBatchApiFailure,
+    'save_batch_process_determine_failed_invalid': handleSaveBatchApiFailure,
+    'save_batch_dir_create_failed': handleSaveBatchFsFailure,
+    'save_batch_read_content_failed': handleSaveBatchFsFailure,
+    'save_batch_write_file_failed': handleSaveBatchFsFailure,
+    'batch_task_create': handleBatchTaskCreate,
+    'save_batch_aggregate_content_end': handleBatchAggregationEnd,
+    'save_batch_finish_success': handleSaveBatchFinishSuccess,
+
 
     // Unhandled Task Error
-    'task_unhandled_error': handleTaskUnhandledError, // Assuming correct
+    'task_unhandled_error': handleTaskUnhandledError,
 
-    // Definitive Completion/Failure (CSV Writing)
-    'csv_write_record_success': handleCsvWriteSuccess, // Assuming correct
-    'csv_write_record_failed': handleCsvWriteFailed, // Assuming correct
+    // Definitive Completion/Failure (Jsonl, CSV Writing)
+    'save_batch_append_success': handleJsonlWriteSuccess,
+    'save_batch_append_failed': handleJsonlWriteFailed,
+    'csv_write_record_success': handleCsvWriteSuccess,
+    'csv_write_record_failed': handleCsvWriteFailed,
 
     // Overall Process
-    'crawl_start': handleCrawlStart, // Assuming correct
+    'crawl_start': handleCrawlStart,
 
     // Final Result Preview Logging
-    'crawl_conference_result': handleCrawlConferenceResult, // Assuming correct
-    'crawl_end_success': handleCrawlEndSuccessPreview, // Assuming correct
+    'crawl_conference_result': handleCrawlConferenceResult,
+    'crawl_end_success': handleCrawlEndSuccessPreview,
 
     // Validation/Normalization
-    'validation_warning': handleValidationWarning, // Added previously
-    // 'normalization_applied': handleNormalizationApplied, // Optional
+    'validation_warning': handleValidationWarning,
+    'normalization_applied': handleNormalizationApplied,
 };

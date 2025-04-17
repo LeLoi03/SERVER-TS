@@ -293,6 +293,18 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
             if (!finalRow.country?.trim()) {
                 finalRow.country = "No country";
             }
+            if (!finalRow.publisher?.trim()) {
+                finalRow.publisher = "No publisher";
+            }
+            if (!finalRow.topics?.trim()) {
+                finalRow.topics = "No topics";
+            }
+            if (!finalRow.summary?.trim()) {
+                finalRow.summary = "No summary available";
+            }
+            if (!finalRow.callForPapers?.trim()) {
+                finalRow.callForPapers = "No call for papers available";
+            }
 
             // --- Year Validation (Log only, no normalization here) ---
             const originalYear = finalRow.year?.trim();

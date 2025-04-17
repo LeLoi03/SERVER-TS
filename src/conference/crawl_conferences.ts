@@ -415,7 +415,7 @@ export const crawlConferences = async (
 
                         // --- Lưu HTML Content (Luồng Save) ---
                         if (searchResultsLinks.length > 0) {
-                            taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content for found links`);
+                            // taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content for found links`);
                             try {
                                 // saveHTMLContent đẩy promise vào batchPromises
                                 await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, taskLogger); // Truyền taskLogger

@@ -30,6 +30,7 @@ export interface ConferenceAnalysisDetail {
     durationSeconds: number | null;
     crawlEndTime?: string | null; // Optional: Track when the crawl/save phase finished
     crawlSucceededWithoutError?: boolean | null; // Optional: Track if crawl phase had errors
+    jsonlWriteSuccess?: boolean | null; // Track if the specific jsonl write event was seen
     csvWriteSuccess?: boolean | null; // Track if the specific CSV write event was seen
     steps: { // Theo dõi các bước chính
         search_attempted: boolean;
