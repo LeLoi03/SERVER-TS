@@ -165,7 +165,7 @@ export class GeminiService {
             // Check for text response if no function call
              const responseText = response.text(); // response.text() handles candidate checking internally
              if (responseText) { // Check if text is not null/undefined/empty string
-                logToFile(`Model generated final text response: ${responseText.substring(0, 200)}...`);
+                logToFile(`Model generated final text response: ${responseText}...`);
                  return {
                      status: "final_text",
                      text: responseText

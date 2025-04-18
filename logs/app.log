@@ -128,3 +128,40 @@
 {"level":"fatal","time":"2025-04-18T02:07:01.400Z","initCheck":true,"msg":"LOGGER INITIALIZED (pino.destination). This should appear in the log file."}
 {"level":"info","time":"2025-04-18T02:07:01.686Z","msg":"Received uncaughtException. Shutting down gracefully..."}
 {"level":"error","time":"2025-04-18T02:07:01.686Z","err":{"type":"Object","message":"Cannot access 'logger_1' before initialization","stack":"ReferenceError: Cannot access 'logger_1' before initialization\n    at Object.<anonymous> (D:\\NEW-SERVER-TS\\src\\server.ts:18:1)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1554:14)\n    at Module._compile (D:\\NEW-SERVER-TS\\node_modules\\source-map-support\\source-map-support.js:568:25)\n    at Module.m._compile (C:\\Users\\LELOI~1\\AppData\\Local\\Temp\\ts-node-dev-hook-44930445575575395.js:69:33)\n    at node:internal/modules/cjs/loader:1706:10\n    at require.extensions..jsx.require.extensions..js (C:\\Users\\LELOI~1\\AppData\\Local\\Temp\\ts-node-dev-hook-44930445575575395.js:114:20)\n    at require.extensions.<computed> (C:\\Users\\LELOI~1\\AppData\\Local\\Temp\\ts-node-dev-hook-44930445575575395.js:71:20)\n    at Object.nodeDevHook [as .ts] (D:\\NEW-SERVER-TS\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)","name":"ReferenceError"},"msg":"Error triggered shutdown (uncaughtException)"}
+{"level":"fatal","time":"2025-04-18T04:51:10.440Z","initCheck":true,"msg":"LOGGER INITIALIZED (pino.destination). This should appear in the log file."}
+{"level":"info","time":"2025-04-18T04:51:14.209Z","msg":"Initializing GoogleGenerativeAI..."}
+{"level":"info","time":"2025-04-18T04:51:14.209Z","msg":"GoogleGenerativeAI initialized successfully."}
+{"level":"info","time":"2025-04-18T04:51:14.209Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","msg":"Attempting to load cache name map"}
+{"level":"info","time":"2025-04-18T04:51:16.085Z","msg":"Performing initial log analysis on startup..."}
+{"level":"info","time":"2025-04-18T04:51:16.085Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_start","msg":"Starting Phase 1: Reading and Grouping logs by requestId"}
+{"level":"info","time":"2025-04-18T04:51:16.120Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_end","totalEntries":130,"parsedEntries":130,"requestIdsFound":0,"parseErrors":0,"msg":"Finished Phase 1"}
+{"level":"info","time":"2025-04-18T04:51:16.121Z","function":"filterRequestsByTime","event":"filter_start","filterStartMillis":null,"filterEndMillis":null,"msg":"Starting Phase 2a: Filtering requests by time"}
+{"level":"info","time":"2025-04-18T04:51:16.121Z","function":"filterRequestsByTime","event":"filter_end","totalRequests":0,"includedRequests":0,"analysisStartMillis":null,"analysisEndMillis":null,"msg":"Finished Phase 2a: Filtering requests"}
+{"level":"info","time":"2025-04-18T04:51:16.122Z","function":"calculateFinalMetrics","event":"final_calc_start","msg":"Performing final calculations on analyzed data"}
+{"level":"info","time":"2025-04-18T04:51:16.122Z","function":"calculateFinalMetrics","event":"final_calc_end","completed":0,"failed":0,"processing":0,"processed":0,"msg":"Finished final calculations."}
+{"level":"info","time":"2025-04-18T04:51:16.122Z","msg":"Initial log analysis completed."}
+{"level":"info","time":"2025-04-18T04:51:16.122Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","loadedCount":1,"msg":"Successfully loaded cache name entries from file"}
+{"level":"info","time":"2025-04-18T05:30:00.134Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-18T05:30:00.134Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_start","msg":"Starting Phase 1: Reading and Grouping logs by requestId"}
+{"level":"info","time":"2025-04-18T05:30:00.137Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_end","totalEntries":130,"parsedEntries":130,"requestIdsFound":0,"parseErrors":0,"msg":"Finished Phase 1"}
+{"level":"info","time":"2025-04-18T05:30:00.137Z","function":"filterRequestsByTime","event":"filter_start","filterStartMillis":null,"filterEndMillis":null,"msg":"Starting Phase 2a: Filtering requests by time"}
+{"level":"info","time":"2025-04-18T05:30:00.137Z","function":"filterRequestsByTime","event":"filter_end","totalRequests":0,"includedRequests":0,"analysisStartMillis":null,"analysisEndMillis":null,"msg":"Finished Phase 2a: Filtering requests"}
+{"level":"info","time":"2025-04-18T05:30:00.137Z","function":"calculateFinalMetrics","event":"final_calc_start","msg":"Performing final calculations on analyzed data"}
+{"level":"info","time":"2025-04-18T05:30:00.137Z","function":"calculateFinalMetrics","event":"final_calc_end","completed":0,"failed":0,"processing":0,"processed":0,"msg":"Finished final calculations."}
+{"level":"info","time":"2025-04-18T05:30:00.139Z","msg":"[Cron] Log analysis finished and results emitted via Socket.IO."}
+{"level":"info","time":"2025-04-18T06:30:00.032Z","msg":"[Cron] Running scheduled log analysis..."}
+{"level":"info","time":"2025-04-18T06:30:00.033Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_start","msg":"Starting Phase 1: Reading and Grouping logs by requestId"}
+{"level":"fatal","time":"2025-04-18T09:38:29.188Z","initCheck":true,"msg":"LOGGER INITIALIZED (pino.destination). This should appear in the log file."}
+{"level":"info","time":"2025-04-18T09:38:32.107Z","msg":"Initializing GoogleGenerativeAI..."}
+{"level":"info","time":"2025-04-18T09:38:32.107Z","msg":"GoogleGenerativeAI initialized successfully."}
+{"level":"info","time":"2025-04-18T09:38:32.108Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","msg":"Attempting to load cache name map"}
+{"level":"info","time":"2025-04-18T09:38:33.941Z","msg":"Performing initial log analysis on startup..."}
+{"level":"info","time":"2025-04-18T09:38:33.942Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_start","msg":"Starting Phase 1: Reading and Grouping logs by requestId"}
+{"level":"info","time":"2025-04-18T09:38:33.976Z","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"readAndGroupLogs","event":"read_group_end","totalEntries":153,"parsedEntries":153,"requestIdsFound":0,"parseErrors":0,"msg":"Finished Phase 1"}
+{"level":"info","time":"2025-04-18T09:38:33.976Z","function":"filterRequestsByTime","event":"filter_start","filterStartMillis":null,"filterEndMillis":null,"msg":"Starting Phase 2a: Filtering requests by time"}
+{"level":"info","time":"2025-04-18T09:38:33.976Z","function":"filterRequestsByTime","event":"filter_end","totalRequests":0,"includedRequests":0,"analysisStartMillis":null,"analysisEndMillis":null,"msg":"Finished Phase 2a: Filtering requests"}
+{"level":"info","time":"2025-04-18T09:38:33.976Z","function":"calculateFinalMetrics","event":"final_calc_start","msg":"Performing final calculations on analyzed data"}
+{"level":"info","time":"2025-04-18T09:38:33.976Z","function":"calculateFinalMetrics","event":"final_calc_end","completed":0,"failed":0,"processing":0,"processed":0,"msg":"Finished final calculations."}
+{"level":"info","time":"2025-04-18T09:38:33.977Z","msg":"Initial log analysis completed."}
+{"level":"info","time":"2025-04-18T09:38:33.977Z","filePath":"D:\\NEW-SERVER-TS\\src\\conference\\data\\gemini_cache_map.json","function":"loadCacheNameMap","loadedCount":1,"msg":"Successfully loaded cache name entries from file"}
+{"level":"info","time":"2025-04-18T09:45:49.296Z","msg":"Received SIGINT. Shutting down gracefully..."}

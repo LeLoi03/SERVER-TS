@@ -17,7 +17,7 @@ import { getConferencesDeclaration, getJournalsDeclaration, getWebsiteInformatio
 import { loadModelConfig } from '../gemini/configLoader'; // Adjust path
 
 // --- Services, Tools, Config ---
-const chatbotService = new GeminiService(process.env.GEMINI_API_KEY || "", "gemini-1.5-flash-latest"); // Ensure API Key and Model Name are set
+const chatbotService = new GeminiService(process.env.GEMINI_API_KEY || "", process.env.CHATBOT_MODEL_NAME || "gemini-2.0-flash"); // Ensure API Key and Model Name are set
 
 const functionDeclarations: FunctionDeclaration[] = [
     getConferencesDeclaration,

@@ -103,7 +103,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         res.status(200).json({
             message: `Conference processing completed. ${processedUpdateResults.length} conference(s) yielded update data. All processing results (updates/saves) are reflected in server files.`,
             runtime: `${runTimeSeconds} s`,
-            results: processedUpdateResults, // Trả về mảng kết quả update (có thể rỗng)
+            data: processedUpdateResults, // Trả về mảng kết quả update (có thể rỗng)
             outputJsonlPath: FINAL_OUTPUT_PATH,
             outputCsvPath: EVALUATE_CSV_PATH
         });
