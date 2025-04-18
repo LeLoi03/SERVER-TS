@@ -13,10 +13,10 @@ export interface ModelConfig {
 
 export function loadModelConfig(prefix: string): ModelConfig {
     const config: ModelConfig = {
-        temperature: parseFloat(process.env[`${prefix}_TEMPERATURE`] || "0.7"),
-        topP: parseFloat(process.env[`${prefix}_TOP_P`] || "0.9"),
+        temperature: parseFloat(process.env[`${prefix}_TEMPERATURE`] || "0.3"),
+        topP: parseFloat(process.env[`${prefix}_TOP_P`] || "0.5"),
         topK: parseInt(process.env[`${prefix}_TOP_K`] || "40", 10),
-        maxOutputTokens: parseInt(process.env[`${prefix}_MAX_OUTPUT_TOKENS`] || "2048", 10),
+        maxOutputTokens: parseInt(process.env[`${prefix}_MAX_OUTPUT_TOKENS`] || "8192", 10),
         responseMimeType: process.env[`${prefix}_RESPONSE_MIME_TYPE`],
     };
     logToFile(`Loaded model config for ${prefix}: ${JSON.stringify(config)}`);
