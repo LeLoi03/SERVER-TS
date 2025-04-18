@@ -1,8 +1,7 @@
 import path from 'path';
-import { logger } from '../../conference/11_utils';
 import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis';
-import { initializeLogAnalysisResult } from './helpers';
-import { readAndGroupLogs, filterRequestsByTime, processLogEntry, calculateFinalMetrics } from './processingSteps';
+import { initializeLogAnalysisResult } from '../utils/helpers';
+import { readAndGroupLogs, filterRequestsByTime, processLogEntry, calculateFinalMetrics } from '../utils/processingSteps';
 
 // --- Main Log Analysis Orchestration Function ---
 export const performLogAnalysis = async (

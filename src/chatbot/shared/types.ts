@@ -69,7 +69,7 @@
 
 
 
-// src/shared/types.ts (Example)
+// src/shared/types.ts
 import { FunctionCall, Part } from "@google/generative-ai"; // Import necessary types
 
 // Ensure HistoryItem part can hold various types

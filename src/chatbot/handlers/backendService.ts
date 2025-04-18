@@ -1,5 +1,6 @@
 //src/handlers/backendService.ts
 import logToFile from '../utils/logger';
+import 'dotenv/config';
 
 const DATABASE_URL = "http://confhub.engineer/api/v1"; // Your backend base URL
 
