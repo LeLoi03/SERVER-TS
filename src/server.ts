@@ -13,6 +13,7 @@ import { LogAnalysisResult } from './client/types/logAnalysis';
 import { handleUserInputStreaming } from './chatbot/handlers/intentHandler';
 import logToFile from './chatbot/utils/logger';
 import { HistoryItem, ErrorUpdate } from './chatbot/shared/types';
+import { saveCrawlConferenceFromCsvToJson } from './client/route/client/saveCrawlConferenceFromCsvToJson';
 
 const app = express();
 
@@ -73,17 +74,8 @@ io.on('connection', (socket: Socket) => {
 
 // --- server_crawl.ts routes ---
 // Custom middleware with types
-const conditionalJsonBodyParser = (req: Request, res: Response, next: NextFunction) => {
-    if (req.query.dataSource === 'client') {
-        bodyParser.json()(req, res, next);
-    } else {
-        req.body = null; // Đặt req.body thành null
-        next();
-    }
-};
 
-app.use(conditionalJsonBodyParser);
-
+app.use(bodyParser.urlencoded({ extended: true }));
 // --- Basic Route ---
 app.get('/', (req, res) => {
     res.send('Crawl, Chatbot Server is Running');
@@ -92,9 +84,11 @@ app.get('/', (req, res) => {
 // --- server_crawl.ts Route Definitions ---
 app.post('/crawl-conferences', handleCrawlConferences);
 app.post('/crawl-journals', handleCrawlJournals);
-
-
-
+app.post('/api/v1/conference/save-to-json', async (req: Request, res: Response) => {
+    console.log('Received request to save conference from CSV to JSON.');
+    console.log(`Request body: ${JSON.stringify(req.body)}`);
+    return req.body
+})
 
 // --- Lưu trữ kết quả phân tích mới nhất ---
 let latestOverallAnalysisResult: LogAnalysisResult | null = null;
@@ -189,6 +183,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     }
     next();
 });
+
 
 
 // --- Store History Per Socket Connection ---

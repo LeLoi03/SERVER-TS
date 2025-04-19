@@ -14,11 +14,17 @@ interface SaveRequestBody {
 
 
 export const saveCrawlConferenceFromCsvToJson:  RequestHandler = async (req, res) => {
-    const { acronym, title } = req.body;
+    console.log('Received request to save conference from CSV to JSON.');
+    console.log(`Request body: ${JSON.stringify(req)}`);
+    return req.body;
+    let { acronym } = req.body;
 
-    if (!acronym || !title) {
+    if (!acronym ) {
         return res.status(400).json({ success: false, message: 'Missing acronym or title in request body.' }) as any;
     }
+    acronym = acronym.split('-')[0].trim() ;
+    const title = acronym.split('-')[1]?.trim() || ''; // Optional title for better matching
+    // Optional title for better matching
     console.log(`Received request to save conference: Acronym=${acronym}, Title=${title}`);
 
 

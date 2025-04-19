@@ -3389,3 +3389,160 @@ Happy to help further!
 [2025-04-18T06:01:31.822Z] --- [Handler-1744956080438 Socket gmNLGYHeeyR-wG9jAAAX] Handler execution path finished for input: "Oke any information about ACCV conference you have" (Socket connected: true) ---
 [2025-04-18T06:01:31.822Z] [Socket.IO gmNLGYHeeyR-wG9jAAAX] Updated history stored (28 items).
 [2025-04-18T06:01:31.822Z] [Socket.IO gmNLGYHeeyR-wG9jAAAX] handleUserInputStreaming finished processing for: "Oke any information about ACCV conference you have"
+[2025-04-18T06:19:25.891Z] [Socket.IO] Client connected: CF5WDIF8NDVIurWgAAAC
+[2025-04-18T06:19:25.893Z] [Socket.IO CF5WDIF8NDVIurWgAAAC] Initialized empty history.
+[2025-04-18T06:42:59.847Z] [Socket.IO] Client connected: 1mmScKlWQdq3ETGnAAAF
+[2025-04-18T06:42:59.847Z] [Socket.IO 1mmScKlWQdq3ETGnAAAF] Initialized empty history.
+[2025-04-18T06:55:01.751Z] [Socket.IO] Client disconnected: 1mmScKlWQdq3ETGnAAAF. Reason: client namespace disconnect
+[2025-04-18T06:55:01.757Z] [Socket.IO 1mmScKlWQdq3ETGnAAAF] Removed history from memory.
+[2025-04-18T06:55:01.771Z] [Socket.IO] Client disconnected: CF5WDIF8NDVIurWgAAAC. Reason: client namespace disconnect
+[2025-04-18T06:55:01.772Z] [Socket.IO CF5WDIF8NDVIurWgAAAC] Removed history from memory.
+[2025-04-18T06:55:17.557Z] [Socket.IO] Client connected: tLJbj2DYTbU7EQY6AAAI
+[2025-04-18T06:55:17.557Z] [Socket.IO tLJbj2DYTbU7EQY6AAAI] Initialized empty history.
+[2025-04-18T07:00:15.059Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:00:15.063Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 4ms
+[2025-04-18T07:00:15.064Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:00:15.066Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:00:15.068Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:00:15.070Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:00:15.071Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:00:15.072Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:00:15.073Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:00:15.074Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:24:07.620Z] [Socket.IO] Client disconnected: tLJbj2DYTbU7EQY6AAAI. Reason: transport close
+[2025-04-18T07:24:07.626Z] [Socket.IO tLJbj2DYTbU7EQY6AAAI] Removed history from memory.
+[2025-04-18T07:24:08.581Z] [Socket.IO] Client connected: V_-1tijIBUDiEcCEAAAK
+[2025-04-18T07:24:08.582Z] [Socket.IO V_-1tijIBUDiEcCEAAAK] Initialized empty history.
+[2025-04-18T07:39:29.918Z] [Socket.IO] Client disconnected: V_-1tijIBUDiEcCEAAAK. Reason: transport close
+[2025-04-18T07:39:29.919Z] [Socket.IO V_-1tijIBUDiEcCEAAAK] Removed history from memory.
+[2025-04-18T07:39:32.016Z] [Socket.IO] Client connected: VExbJGpEJa_NGE0VAAAM
+[2025-04-18T07:39:32.017Z] [Socket.IO VExbJGpEJa_NGE0VAAAM] Initialized empty history.
+[2025-04-18T07:46:43.086Z] [Socket.IO] Client disconnected: VExbJGpEJa_NGE0VAAAM. Reason: transport close
+[2025-04-18T07:46:43.087Z] [Socket.IO VExbJGpEJa_NGE0VAAAM] Removed history from memory.
+[2025-04-18T07:46:45.436Z] [Socket.IO] Client connected: OUMGMhEQcNS7Kg7DAAAO
+[2025-04-18T07:46:45.436Z] [Socket.IO OUMGMhEQcNS7Kg7DAAAO] Initialized empty history.
+[2025-04-18T07:48:29.303Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:48:29.303Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:48:29.304Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:48:30.496Z] [Socket.IO] Client connected: 4eBGX9ZJ53tCiPawAAAB
+[2025-04-18T07:48:30.496Z] [Socket.IO 4eBGX9ZJ53tCiPawAAAB] Initialized empty history.
+[2025-04-18T07:49:09.641Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:49:09.642Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:49:09.920Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:49:09.967Z] [Socket.IO] Client connected: 7j6F-NZpeS5oxA99AAAB
+[2025-04-18T07:49:09.967Z] [Socket.IO 7j6F-NZpeS5oxA99AAAB] Initialized empty history.
+[2025-04-18T07:49:18.781Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:18.782Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:18.784Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:18.785Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:18.786Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:18.788Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 7ms
+[2025-04-18T07:49:18.790Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 8ms
+[2025-04-18T07:49:18.791Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 7ms
+[2025-04-18T07:49:18.795Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 10ms
+[2025-04-18T07:49:18.796Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 10ms
+[2025-04-18T07:49:53.631Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:49:53.631Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:49:53.916Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:49:54.102Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:54.105Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 3ms
+[2025-04-18T07:49:54.107Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:54.108Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:54.109Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:49:54.110Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:49:54.111Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:54.113Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:49:54.114Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:49:54.115Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 1ms
+[2025-04-18T07:49:55.165Z] [Socket.IO] Client connected: VmDeR8ObcHspU28KAAAB
+[2025-04-18T07:49:55.165Z] [Socket.IO VmDeR8ObcHspU28KAAAB] Initialized empty history.
+[2025-04-18T07:50:15.631Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:50:15.631Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:50:15.915Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:50:16.113Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:50:16.116Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 3ms
+[2025-04-18T07:50:16.118Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:50:16.121Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 3ms
+[2025-04-18T07:50:16.122Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:50:16.123Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 1ms
+[2025-04-18T07:50:16.124Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:50:16.126Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 2ms
+[2025-04-18T07:50:16.128Z] Incoming HTTP Request: POST /api/v1/conference/save-to-json
+[2025-04-18T07:50:16.128Z] HTTP Response Sent: 404 for POST /api/v1/conference/save-to-json in 0ms
+[2025-04-18T07:50:16.923Z] [Socket.IO] Client connected: 7c5JEEvWzzjrGoJMAAAB
+[2025-04-18T07:50:16.923Z] [Socket.IO 7c5JEEvWzzjrGoJMAAAB] Initialized empty history.
+[2025-04-18T07:50:29.624Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:50:29.625Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:50:29.873Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:50:30.519Z] [Socket.IO] Client connected: dp2vaVmdHUFhUEwkAAAB
+[2025-04-18T07:50:30.519Z] [Socket.IO dp2vaVmdHUFhUEwkAAAB] Initialized empty history.
+[2025-04-18T07:51:20.678Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:51:20.678Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:51:20.951Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T07:52:06.700Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T07:52:06.700Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T07:52:06.968Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T09:34:04.233Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T09:34:04.234Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T09:34:04.471Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T09:34:07.924Z] [Socket.IO] Client connected: ZflSfi-DLOd5USrGAAAC
+[2025-04-18T09:34:07.924Z] [Socket.IO ZflSfi-DLOd5USrGAAAC] Initialized empty history.
+[2025-04-18T09:41:08.099Z] [Socket.IO] Client disconnected: ZflSfi-DLOd5USrGAAAC. Reason: transport close
+[2025-04-18T09:41:08.100Z] [Socket.IO ZflSfi-DLOd5USrGAAAC] Removed history from memory.
+[2025-04-18T09:41:09.828Z] [Socket.IO] Client connected: JF89g-bR1sDidlglAAAF
+[2025-04-18T09:41:09.828Z] [Socket.IO JF89g-bR1sDidlglAAAF] Initialized empty history.
+[2025-04-18T11:07:41.415Z] [Socket.IO] Client disconnected: JF89g-bR1sDidlglAAAF. Reason: transport close
+[2025-04-18T11:07:41.416Z] [Socket.IO JF89g-bR1sDidlglAAAF] Removed history from memory.
+[2025-04-18T11:07:42.679Z] [Socket.IO] Client connected: BaQo2ZTHxfcRZTFHAAAH
+[2025-04-18T11:07:42.679Z] [Socket.IO BaQo2ZTHxfcRZTFHAAAH] Initialized empty history.
+[2025-04-18T12:36:45.991Z] [Socket.IO] Client disconnected: BaQo2ZTHxfcRZTFHAAAH. Reason: transport close
+[2025-04-18T12:36:45.991Z] [Socket.IO BaQo2ZTHxfcRZTFHAAAH] Removed history from memory.
+[2025-04-18T12:36:47.968Z] [Socket.IO] Client connected: UpIM0uxmx3_T3EtSAAAK
+[2025-04-18T12:36:47.968Z] [Socket.IO UpIM0uxmx3_T3EtSAAAK] Initialized empty history.
+[2025-04-18T12:45:18.751Z] [Socket.IO] Client disconnected: UpIM0uxmx3_T3EtSAAAK. Reason: transport close
+[2025-04-18T12:45:18.752Z] [Socket.IO UpIM0uxmx3_T3EtSAAAK] Removed history from memory.
+[2025-04-18T12:45:20.498Z] [Socket.IO] Client connected: vkwJIIHIwHWlbgFdAAAN
+[2025-04-18T12:45:20.498Z] [Socket.IO vkwJIIHIwHWlbgFdAAAN] Initialized empty history.
+[2025-04-18T12:59:50.622Z] [Socket.IO] Client disconnected: vkwJIIHIwHWlbgFdAAAN. Reason: transport close
+[2025-04-18T12:59:50.623Z] [Socket.IO vkwJIIHIwHWlbgFdAAAN] Removed history from memory.
+[2025-04-18T12:59:52.384Z] [Socket.IO] Client connected: mClt9-InkU5l3euwAAAQ
+[2025-04-18T12:59:52.384Z] [Socket.IO mClt9-InkU5l3euwAAAQ] Initialized empty history.
+[2025-04-18T13:14:49.044Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:14:49.044Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:14:49.283Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:15:30.978Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:15:30.979Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:15:31.219Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:16:28.117Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:16:28.117Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:16:28.361Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:16:46.972Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:16:46.972Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:16:47.239Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:17:04.834Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:17:04.834Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:17:05.082Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:18:36.519Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:18:36.520Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:18:36.520Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:18:55.689Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:18:55.689Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:18:55.690Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:20:10.770Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:20:10.770Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:20:10.770Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:21:57.687Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:21:57.688Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:21:57.688Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:22:50.137Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:22:50.137Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:22:50.137Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:22:56.405Z] [Socket.IO] Client connected: fB7N_Sy28YsKKH8hAAAC
+[2025-04-18T13:22:56.405Z] [Socket.IO fB7N_Sy28YsKKH8hAAAC] Initialized empty history.
+[2025-04-18T13:26:31.984Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-18T13:26:31.984Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-18T13:26:31.984Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-18T13:26:33.474Z] [Socket.IO] Client connected: mn9PeSpx9NCCy41mAAAB
+[2025-04-18T13:26:33.475Z] [Socket.IO mn9PeSpx9NCCy41mAAAB] Initialized empty history.
+[2025-04-18T13:35:32.440Z] [Socket.IO] Client disconnected: mn9PeSpx9NCCy41mAAAB. Reason: transport close
+[2025-04-18T13:35:32.441Z] [Socket.IO mn9PeSpx9NCCy41mAAAB] Removed history from memory.
