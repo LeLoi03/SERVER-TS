@@ -3546,3 +3546,90 @@ Happy to help further!
 [2025-04-18T13:26:33.475Z] [Socket.IO mn9PeSpx9NCCy41mAAAB] Initialized empty history.
 [2025-04-18T13:35:32.440Z] [Socket.IO] Client disconnected: mn9PeSpx9NCCy41mAAAB. Reason: transport close
 [2025-04-18T13:35:32.441Z] [Socket.IO mn9PeSpx9NCCy41mAAAB] Removed history from memory.
+[2025-04-19T05:48:24.365Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T05:48:24.366Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T05:48:24.368Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T05:52:01.540Z] [Socket.IO] Client connected: O6jAd2Qx3QXy3K-dAAAB
+[2025-04-19T05:52:01.540Z] [Socket.IO O6jAd2Qx3QXy3K-dAAAB] Initialized empty history.
+[2025-04-19T05:52:03.378Z] [Socket.IO] Client disconnected: O6jAd2Qx3QXy3K-dAAAB. Reason: transport close
+[2025-04-19T05:52:03.379Z] [Socket.IO O6jAd2Qx3QXy3K-dAAAB] Removed history from memory.
+[2025-04-19T05:52:07.451Z] [Socket.IO] Client connected: KY5Bp56wl4bdkRJDAAAE
+[2025-04-19T05:52:07.452Z] [Socket.IO KY5Bp56wl4bdkRJDAAAE] Initialized empty history.
+[2025-04-19T06:20:47.322Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:20:47.323Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:20:47.324Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:20:51.777Z] [Socket.IO] Client connected: PTulMLnqbnN75YOfAAAB
+[2025-04-19T06:20:51.777Z] [Socket.IO PTulMLnqbnN75YOfAAAB] Initialized empty history.
+[2025-04-19T06:25:24.676Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:25:24.676Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:25:25.398Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:25:25.443Z] [Socket.IO] Client connected: O--GZIXDgWS58LQvAAAB
+[2025-04-19T06:25:25.444Z] [Socket.IO O--GZIXDgWS58LQvAAAB] Initialized empty history.
+[2025-04-19T06:25:35.046Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:25:35.047Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:25:35.732Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:25:36.052Z] [Socket.IO] Client connected: gli_SNcRFidILyI1AAAB
+[2025-04-19T06:25:36.053Z] [Socket.IO gli_SNcRFidILyI1AAAB] Initialized empty history.
+[2025-04-19T06:26:36.395Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:26:36.396Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:26:37.282Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:27:30.020Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:27:30.021Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:27:30.796Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:27:47.621Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:27:47.623Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:27:48.519Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:29:07.120Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:29:07.120Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:29:07.800Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:29:42.136Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:29:42.138Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:29:42.971Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:31:47.518Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:31:47.519Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:31:48.181Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:32:24.299Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:32:24.300Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:32:25.063Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:33:36.231Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:33:36.232Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:33:36.992Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:49:10.943Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:49:10.944Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:49:11.647Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:50:12.355Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:50:12.356Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:50:13.081Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T06:52:17.117Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:52:17.118Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:55:26.893Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T06:55:26.895Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T06:55:27.568Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:00:49.126Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:00:49.127Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:00:49.930Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:02:02.014Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:02:02.015Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:02:02.725Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:09:57.953Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:09:57.954Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:09:58.610Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:12:21.446Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:12:21.447Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:12:21.461Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:12:38.415Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:12:38.415Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:13:27.335Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:13:27.335Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:13:27.346Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:17:40.172Z] GeminiService initialized for model: gemini-1.5-flash-latest
+[2025-04-19T07:17:40.172Z] Loaded model config for CHATBOT: {"temperature":0.7,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-19T07:17:40.183Z] [Server] Allowed CORS Origins: http://localhost:8386
+[2025-04-19T07:22:16.389Z] [Socket.IO] Client connected: Hnyc7NYdO-mbr3_UAAAB
+[2025-04-19T07:22:16.390Z] [Socket.IO Hnyc7NYdO-mbr3_UAAAB] Initialized empty history.
+[2025-04-19T07:30:47.976Z] [Socket.IO] Client disconnected: Hnyc7NYdO-mbr3_UAAAB. Reason: transport close
+[2025-04-19T07:30:47.977Z] [Socket.IO Hnyc7NYdO-mbr3_UAAAB] Removed history from memory.
+[2025-04-19T07:30:52.267Z] [Socket.IO] Client connected: 9zhD5PIGp7cdWR-6AAAE
+[2025-04-19T07:30:52.267Z] [Socket.IO 9zhD5PIGp7cdWR-6AAAE] Initialized empty history.
+[2025-04-19T08:55:52.440Z] [Socket.IO] Client disconnected: 9zhD5PIGp7cdWR-6AAAE. Reason: transport close
+[2025-04-19T08:55:52.441Z] [Socket.IO 9zhD5PIGp7cdWR-6AAAE] Removed history from memory.

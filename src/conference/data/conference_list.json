@@ -1,14 +1,6 @@
 [
   {
-    "Title": " International Conference on Ambient Systems, Networks and Technologies",
-    "Acronym": "ANT"
-  },
-  {
-    "Title": "AAAI Conference on Human Computation and Crowdsourcing",
-    "Acronym": "HCOMP"
-  },
-  {
-    "Title": "ACIS Conference on Software Engineering Research, Management and Applications",
-    "Acronym": "SERA"
+    "Title": "ACM International Conference on Recommender Systems",
+    "Acronym": "RecSys"
   }
 ]

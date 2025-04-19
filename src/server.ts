@@ -84,11 +84,7 @@ app.get('/', (req, res) => {
 // --- server_crawl.ts Route Definitions ---
 app.post('/crawl-conferences', handleCrawlConferences);
 app.post('/crawl-journals', handleCrawlJournals);
-app.post('/api/v1/conference/save-to-json', async (req: Request, res: Response) => {
-    console.log('Received request to save conference from CSV to JSON.');
-    console.log(`Request body: ${JSON.stringify(req.body)}`);
-    return req.body
-})
+
 
 // --- Lưu trữ kết quả phân tích mới nhất ---
 let latestOverallAnalysisResult: LogAnalysisResult | null = null;
@@ -167,7 +163,7 @@ app.get('/api/v1/logs/analysis/latest', async (req: Request, res: Response) => {
 });
 
 
-
+app.post('/api/v1/conference/save-to-json', saveCrawlConferenceFromCsvToJson)
 
 // --- Basic Logging Middleware (Keep as is) ---
 app.use((req: Request, res: Response, next: NextFunction) => {
