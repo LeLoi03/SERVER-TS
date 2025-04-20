@@ -1,78 +1,294 @@
-[2025-04-18T09:39:09.019Z] [Socket.IO nypEfHAh6oEMvb3wAAAL] Received 'send_message': UserInput = "Find me conference in Vietnam"
-[2025-04-18T09:39:09.020Z] [Socket.IO nypEfHAh6oEMvb3wAAAL] Retrieved history with 0 items.
-[2025-04-18T09:39:09.022Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Handling input: "Find me conference in Vietnam" ---
-[2025-04-18T09:39:09.022Z] [Handler-1744969149022 History Check - Input] Received history with 0 items.
-[2025-04-18T09:39:09.023Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:09.024Z] [Handler-1744969149022 History Check - Turn 1 Prep] History now has 1 items after adding user input.
-[2025-04-18T09:39:09.024Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Turn 1: Sending to Model ---
-[2025-04-18T09:39:09.024Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:09.025Z] [Handler-1744969149022 History Check - Turn 1 Send] Sending history with 1 items to model.
-[2025-04-18T09:39:09.026Z] [GeminiService] Received history with 1 items before mapping.
-[2025-04-18T09:39:09.026Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
-[2025-04-18T09:39:09.027Z] [GeminiService] Last item role in effectiveHistory: user
-[2025-04-18T09:39:09.027Z] Calling generateContent for model: gemini-2.0-flash
-[2025-04-18T09:39:09.027Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
-[2025-04-18T09:39:09.028Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation"]
-[2025-04-18T09:39:09.028Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
-[2025-04-18T09:39:09.028Z] [GeminiService] Sending total 1 Content items to API.
-[2025-04-18T09:39:09.028Z]   - No valid next turn added, sending only history.
-[2025-04-18T09:39:11.782Z] Model Finish Reason: STOP
-[2025-04-18T09:39:11.783Z] Model requested function call: getConferences
-[2025-04-18T09:39:11.783Z] Arguments: {"searchQuery":"country=Vietnam&perPage=5&page=1"}
-[2025-04-18T09:39:11.783Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Turn 2: Processing Function Call ---
-[2025-04-18T09:39:11.784Z] [Handler-1744969149022 History Check - Turn 2 Prep] Appended model function call. History size: 2
-[2025-04-18T09:39:11.785Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:11.785Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:11.786Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?country=Vietnam&perPage=5&page=1
-[2025-04-18T09:39:28.154Z] Backend API Success for conference. Data length: 108
-[2025-04-18T09:39:28.156Z] Transforming conference data. Search query: country=Vietnam&perPage=5&page=1
-[2025-04-18T09:39:28.156Z] Conference data transformed successfully.
-[2025-04-18T09:39:28.157Z] Transformed Data: Meta:
-Current page: 1
-Per page: 5
-Total items: 0
-Total page: 0
-Prev page: null
-Next page: null
-
-Payload:
-No conferences found matching your criteria.
-
-[2025-04-18T09:39:28.157Z] [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Function getConferences execution finished.
-[2025-04-18T09:39:28.158Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:28.158Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Turn 3: Function Response to Model ---
-[2025-04-18T09:39:28.158Z] [Handler-1744969149022 History Check - Turn 3 Prep] Appended function response. History size: 3
-[2025-04-18T09:39:28.158Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Turn 3: Sending Function Response to Model ---
-[2025-04-18T09:39:28.159Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:28.159Z] [Handler-1744969149022 History Check - Turn 3 Send] Sending history with 3 items to model.
-[2025-04-18T09:39:28.159Z] [GeminiService] Received history with 3 items before mapping.
-[2025-04-18T09:39:28.159Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 3 items.
-[2025-04-18T09:39:28.160Z] [GeminiService] Last item role in effectiveHistory: function
-[2025-04-18T09:39:28.160Z] Calling generateContent for model: gemini-2.0-flash
-[2025-04-18T09:39:28.160Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
-[2025-04-18T09:39:28.160Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation"]
-[2025-04-18T09:39:28.161Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
-[2025-04-18T09:39:28.161Z] [GeminiService] Sending total 3 Content items to API.
-[2025-04-18T09:39:28.161Z]   - No valid next turn added, sending only history.
-[2025-04-18T09:39:30.054Z] Model Finish Reason: STOP
-[2025-04-18T09:39:30.055Z] Model generated final text response: No conferences found matching your search.
+[2025-04-20T10:50:15.455Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-20T10:50:15.456Z] Loaded model config for CHATBOT: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:50:16.161Z] [Server Config] Allowed CORS Origins: http://localhost:8386, https://confhub.ddns.net
+[2025-04-20T10:50:16.285Z] [Server Start] Server listening on port 3001.
+[2025-04-20T10:50:20.689Z] [Socket Auth Middleware] Attempting auth for socket mGeVnxY9DxH75XyWAAAC. Token provided: true
+[2025-04-20T10:50:20.704Z] [Socket Auth Middleware] Token validated successfully for socket mGeVnxY9DxH75XyWAAAC.
+[2025-04-20T10:50:20.706Z] [Socket.IO] Client connected: mGeVnxY9DxH75XyWAAAC (Authenticated via Token)
+[2025-04-20T10:50:20.706Z] [Socket.IO mGeVnxY9DxH75XyWAAAC] Initialized empty chat history.
+[2025-04-20T10:50:20.711Z] [Socket Auth Middleware] Attempting auth for socket 5h1dMUJ_CQLU0Mn7AAAD. Token provided: true
+[2025-04-20T10:50:20.715Z] [Socket Auth Middleware] Token validated successfully for socket 5h1dMUJ_CQLU0Mn7AAAD.
+[2025-04-20T10:50:20.715Z] [Socket.IO] Client connected: 5h1dMUJ_CQLU0Mn7AAAD (Authenticated via Token)
+[2025-04-20T10:50:20.715Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Initialized empty chat history.
+[2025-04-20T10:50:33.892Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Received 'send_message': UserInput = "Follow ACCV conference for me", Streaming = false, Language = en
+[2025-04-20T10:50:33.892Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Retrieved history with 0 items.
+[2025-04-20T10:50:33.893Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Calling handleNonStreaming...
+[2025-04-20T10:50:33.894Z] --- [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD] Handling NON-STREAMING input: "Follow ACCV conference for me", Lang: en ---
+[2025-04-20T10:50:33.894Z] [Language Config] Using configuration for language: en
+[2025-04-20T10:50:33.895Z] [Handler-NS-1745146233894] Using System Instructions (Lang: en): 
+### ROLE ###
+You are HCMUS, a friendly and helpful chatbot specializing in conferences, journals in...
+[2025-04-20T10:50:33.895Z] [Handler-NS-1745146233894] Using Tools (Lang: en): getConferences, getJournals, getWebsiteInformation, navigation, openGoogleMap, followUnfollowItem
+[2025-04-20T10:50:33.896Z] [Handler-NS-1745146233894 History Check - Start] Initialized working history with 1 items.
+[2025-04-20T10:50:33.898Z] [Handler-NS-1745146233894 Socket Emit Sent - 5h1dMUJ_CQLU0Mn7AAAD] Event: status_update, Type: status
+[2025-04-20T10:50:33.898Z] --- [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD] Turn 1: Sending to Model (History size: 1) ---
+[2025-04-20T10:50:33.899Z] [Handler-NS-1745146233894 Socket Emit Sent - 5h1dMUJ_CQLU0Mn7AAAD] Event: status_update, Type: status
+[2025-04-20T10:50:33.900Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-20T10:50:33.901Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-20T10:50:33.901Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-20T10:50:33.901Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:50:33.901Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:50:33.902Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:50:33.902Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:50:33.902Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-20T10:50:33.903Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:50:36.075Z] Model Finish Reason: STOP
+[2025-04-20T10:50:36.075Z] Model requested function call: followUnfollowItem
+[2025-04-20T10:50:36.076Z] Arguments: {"identifier":"ACCV","identifierType":"acronym","itemType":"conference","action":"follow"}
+[2025-04-20T10:50:36.076Z] [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD] Turn 1: Received requires_function_call: followUnfollowItem
+[2025-04-20T10:50:36.076Z] [Handler-NS-1745146233894 History Check - FC Prep 1] Appended model FC request. History size: 2
+[2025-04-20T10:50:36.078Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] Executing backend logic for function: followUnfollowItem (Authenticated: true)
+[2025-04-20T10:50:36.079Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: function_call, Message: Calling function: followUnfollowItem...
+[2025-04-20T10:50:36.080Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] Handling followUnfollowItem function.
+[2025-04-20T10:50:36.081Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: processing_request, Message: Processing follow request for conference: "ACCV"...
+[2025-04-20T10:50:36.082Z] Finding ID for conference with identifier: "ACCV" (type: acronym)
+[2025-04-20T10:50:36.083Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=ACCV&perPage=1&page=1
+[2025-04-20T10:50:36.271Z] Backend API Success for conference. Data length: 1642
+[2025-04-20T10:50:36.273Z] Transforming conference data with Markdown. Search query: acronym=ACCV&perPage=1&page=1
+[2025-04-20T10:50:36.322Z] Conference data transformed successfully.
+[2025-04-20T10:50:36.322Z] Found conference ID: e76fd867-789c-47d9-abfa-79986f4a2478 for identifier "ACCV"
+[2025-04-20T10:50:36.323Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: checking_status, Message: Checking follow status...
+[2025-04-20T10:50:36.324Z] Fetching followed conferences: GET http://confhub.engineer/api/v1/follow-conference/followed (using provided token)
+[2025-04-20T10:50:36.452Z] Successfully fetched 0 followed conference(s).
+[2025-04-20T10:50:36.452Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] User (ID: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiYzBkOWQ0ODgtM2ZlZS00ZGRhLTk4ZjMtNWRmMjc4ZWQwZTgyIiwiZW1haWwiOiJsb2ljdXRlNWZwc0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NDUxNDM3OTcsImV4cCI6MTc0NTE0NzM5N30.783eBnQEsU0c6T_Ycglikoz1nlQbnE_DFL0eOQHZ5BY) follow status for conference e76fd867-789c-47d9-abfa-79986f4a2478: false
+[2025-04-20T10:50:36.453Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: updating_follow_status, Message: Following...
+[2025-04-20T10:50:36.454Z] Executing follow action for conference e76fd867-789c-47d9-abfa-79986f4a2478: POST http://confhub.engineer/api/v1/follow-conference/add (using provided token)
+[2025-04-20T10:50:36.541Z] Successfully executed follow for conference e76fd867-789c-47d9-abfa-79986f4a2478.
+[2025-04-20T10:50:36.542Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] API call for follow successful.
+[2025-04-20T10:50:36.543Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: update_success, Message: Successfully followed conference.
+[2025-04-20T10:50:36.543Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] Function followUnfollowItem execution finished. ModelResponseContent length: 45, FrontendAction: undefined
+[2025-04-20T10:50:36.544Z] [Handler-NS-1745146233894 5h1dMUJ_CQLU0Mn7AAAD] ExecuteFunctionCall Status Emit Sent: Step: processing_function_result, Message: Processing result from followUnfollowItem...
+[2025-04-20T10:50:36.544Z] [Handler-NS-1745146233894 History Check - FC Done 1] Appended function response. History size: 3
+[2025-04-20T10:50:36.544Z] --- [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD] Turn 2: Sending to Model (History size: 3) ---
+[2025-04-20T10:50:36.545Z] [Handler-NS-1745146233894 Socket Emit Sent - 5h1dMUJ_CQLU0Mn7AAAD] Event: status_update, Type: status
+[2025-04-20T10:50:36.545Z] [GeminiService] Received history with 3 items before mapping.
+[2025-04-20T10:50:36.546Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 3 items.
+[2025-04-20T10:50:36.546Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-20T10:50:36.547Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:50:36.547Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:50:36.547Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:50:36.548Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:50:36.549Z] [GeminiService] Sending total 3 Content items to API.
+[2025-04-20T10:50:36.549Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:50:37.180Z] Model Finish Reason: STOP
+[2025-04-20T10:50:37.182Z] Model generated final text response: Okay, I've followed the ACCV conference for you.
 ...
-[2025-04-18T09:39:30.055Z] [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Preparing to send final text result (After Function Call).
-[2025-04-18T09:39:30.056Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: status_update, Type: status
-[2025-04-18T09:39:30.056Z] [Handler-1744969149022 History Check - Turn 3 Done] Appended final model response. History size: 4
-[2025-04-18T09:39:30.057Z] [Handler-1744969149022 Socket Emit Sent - nypEfHAh6oEMvb3wAAAL] Event: chat_result, Type: result
-[2025-04-18T09:39:30.057Z] --- [Handler-1744969149022 Socket nypEfHAh6oEMvb3wAAAL] Handler execution path finished for input: "Find me conference in Vietnam" (Socket connected: true) ---
-[2025-04-18T09:39:30.057Z] [Socket.IO nypEfHAh6oEMvb3wAAAL] Updated history stored (4 items).
-[2025-04-18T09:39:30.058Z] [Socket.IO nypEfHAh6oEMvb3wAAAL] handleUserInputStreaming finished processing for: "Find me conference in Vietnam"
-[2025-04-18T09:42:22.517Z] [Socket.IO] Client disconnected: UOB42UuuioRVd5MSAAAH. Reason: transport close
-[2025-04-18T09:42:22.518Z] [Socket.IO UOB42UuuioRVd5MSAAAH] Removed history from memory.
-[2025-04-18T09:42:22.520Z] [Socket.IO] Client disconnected: dY2nCvzmv8pV6qhJAAAG. Reason: transport close
-[2025-04-18T09:42:22.520Z] [Socket.IO dY2nCvzmv8pV6qhJAAAG] Removed history from memory.
-[2025-04-18T09:42:23.388Z] [Socket.IO] Client disconnected: zvou8eWjqTTKlFwfAAAK. Reason: transport close
-[2025-04-18T09:42:23.389Z] [Socket.IO zvou8eWjqTTKlFwfAAAK] Removed history from memory.
-[2025-04-18T09:42:23.397Z] [Socket.IO] Client disconnected: nypEfHAh6oEMvb3wAAAL. Reason: transport close
-[2025-04-18T09:42:23.397Z] [Socket.IO nypEfHAh6oEMvb3wAAAL] Removed history from memory.
-[2025-04-18T09:44:34.124Z] [Socket.IO] Client connected: dQ_NhT26gzPflrvJAAAO
-[2025-04-18T09:44:34.124Z] [Socket.IO dQ_NhT26gzPflrvJAAAO] Initialized empty history.
-[2025-04-18T09:44:34.136Z] [Socket.IO] Client connected: TaWr7qrhCg8trwqNAAAP
-[2025-04-18T09:44:34.136Z] [Socket.IO TaWr7qrhCg8trwqNAAAP] Initialized empty history.
+[2025-04-20T10:50:37.182Z] [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD] Turn 2: Received final_text.
+[2025-04-20T10:50:37.183Z] [Handler-NS-1745146233894 Socket Emit Sent - 5h1dMUJ_CQLU0Mn7AAAD] Event: status_update, Type: status
+[2025-04-20T10:50:37.184Z] [Handler-NS-1745146233894 History Check - Final] Appended final model response. History size: 4
+[2025-04-20T10:50:37.184Z] [Handler-NS-1745146233894 Socket Emit Sent - 5h1dMUJ_CQLU0Mn7AAAD] Event: chat_result, Type: result
+[2025-04-20T10:50:37.184Z] --- [Handler-NS-1745146233894 Socket 5h1dMUJ_CQLU0Mn7AAAD Lang: en] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-20T10:50:37.184Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Updated history stored (4 items).
+[2025-04-20T10:51:44.087Z] [Socket.IO] Client disconnected: 5h1dMUJ_CQLU0Mn7AAAD. Reason: transport close
+[2025-04-20T10:51:44.087Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Authenticated user (identified by token) disconnected.
+[2025-04-20T10:51:44.088Z] [Socket.IO 5h1dMUJ_CQLU0Mn7AAAD] Removed chat history.
+[2025-04-20T10:51:44.088Z] [Socket.IO] Client disconnected: mGeVnxY9DxH75XyWAAAC. Reason: transport close
+[2025-04-20T10:51:44.089Z] [Socket.IO mGeVnxY9DxH75XyWAAAC] Authenticated user (identified by token) disconnected.
+[2025-04-20T10:51:44.089Z] [Socket.IO mGeVnxY9DxH75XyWAAAC] Removed chat history.
+[2025-04-20T10:51:46.325Z] [Socket Auth Middleware] Attempting auth for socket u81d7AUqlcoB7lBnAAAG. Token provided: true
+[2025-04-20T10:51:46.329Z] [Socket Auth Middleware] Token validated successfully for socket u81d7AUqlcoB7lBnAAAG.
+[2025-04-20T10:51:46.330Z] [Socket.IO] Client connected: u81d7AUqlcoB7lBnAAAG (Authenticated via Token)
+[2025-04-20T10:51:46.330Z] [Socket.IO u81d7AUqlcoB7lBnAAAG] Initialized empty chat history.
+[2025-04-20T10:51:46.334Z] [Socket Auth Middleware] Attempting auth for socket ix45yprgzWffXOwlAAAH. Token provided: true
+[2025-04-20T10:51:46.337Z] [Socket Auth Middleware] Token validated successfully for socket ix45yprgzWffXOwlAAAH.
+[2025-04-20T10:51:46.338Z] [Socket.IO] Client connected: ix45yprgzWffXOwlAAAH (Authenticated via Token)
+[2025-04-20T10:51:46.338Z] [Socket.IO ix45yprgzWffXOwlAAAH] Initialized empty chat history.
+[2025-04-20T10:52:22.785Z] [Socket.IO ix45yprgzWffXOwlAAAH] Received 'send_message': UserInput = "Follow for me HNDH conference", Streaming = false, Language = en
+[2025-04-20T10:52:22.785Z] [Socket.IO ix45yprgzWffXOwlAAAH] Retrieved history with 0 items.
+[2025-04-20T10:52:22.785Z] [Socket.IO ix45yprgzWffXOwlAAAH] Calling handleNonStreaming...
+[2025-04-20T10:52:22.785Z] --- [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH] Handling NON-STREAMING input: "Follow for me HNDH conference", Lang: en ---
+[2025-04-20T10:52:22.786Z] [Language Config] Using configuration for language: en
+[2025-04-20T10:52:22.786Z] [Handler-NS-1745146342785] Using System Instructions (Lang: en): 
+### ROLE ###
+You are HCMUS, a friendly and helpful chatbot specializing in conferences, journals in...
+[2025-04-20T10:52:22.786Z] [Handler-NS-1745146342785] Using Tools (Lang: en): getConferences, getJournals, getWebsiteInformation, navigation, openGoogleMap, followUnfollowItem
+[2025-04-20T10:52:22.786Z] [Handler-NS-1745146342785 History Check - Start] Initialized working history with 1 items.
+[2025-04-20T10:52:22.787Z] [Handler-NS-1745146342785 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:52:22.787Z] --- [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH] Turn 1: Sending to Model (History size: 1) ---
+[2025-04-20T10:52:22.788Z] [Handler-NS-1745146342785 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:52:22.789Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-20T10:52:22.790Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-20T10:52:22.790Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-20T10:52:22.790Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:52:22.791Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:52:22.792Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:52:22.792Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:52:22.793Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-20T10:52:22.793Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:52:24.765Z] Model Finish Reason: STOP
+[2025-04-20T10:52:24.765Z] Model requested function call: followUnfollowItem
+[2025-04-20T10:52:24.766Z] Arguments: {"action":"follow","itemType":"conference","identifier":"HNDH","identifierType":"acronym"}
+[2025-04-20T10:52:24.766Z] [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH] Turn 1: Received requires_function_call: followUnfollowItem
+[2025-04-20T10:52:24.766Z] [Handler-NS-1745146342785 History Check - FC Prep 1] Appended model FC request. History size: 2
+[2025-04-20T10:52:24.766Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] Executing backend logic for function: followUnfollowItem (Authenticated: true)
+[2025-04-20T10:52:24.767Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: function_call, Message: Calling function: followUnfollowItem...
+[2025-04-20T10:52:24.767Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] Handling followUnfollowItem function.
+[2025-04-20T10:52:24.767Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_request, Message: Processing follow request for conference: "HNDH"...
+[2025-04-20T10:52:24.768Z] Finding ID for conference with identifier: "HNDH" (type: acronym)
+[2025-04-20T10:52:24.768Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=HNDH&perPage=1&page=1
+[2025-04-20T10:52:24.885Z] Backend API Success for conference. Data length: 834
+[2025-04-20T10:52:24.885Z] Transforming conference data with Markdown. Search query: acronym=HNDH&perPage=1&page=1
+[2025-04-20T10:52:24.887Z] Conference data transformed successfully.
+[2025-04-20T10:52:24.888Z] Found conference ID: cec484cc-3dac-4ba1-8013-132f8257ee0b for identifier "HNDH"
+[2025-04-20T10:52:24.888Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: checking_status, Message: Checking follow status...
+[2025-04-20T10:52:24.888Z] Fetching followed conferences: GET http://confhub.engineer/api/v1/follow-conference/followed (using provided token)
+[2025-04-20T10:52:25.005Z] Successfully fetched 1 followed conference(s).
+[2025-04-20T10:52:25.005Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] User (ID: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiYzBkOWQ0ODgtM2ZlZS00ZGRhLTk4ZjMtNWRmMjc4ZWQwZTgyIiwiZW1haWwiOiJsb2ljdXRlNWZwc0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NDUxNDM3OTcsImV4cCI6MTc0NTE0NzM5N30.783eBnQEsU0c6T_Ycglikoz1nlQbnE_DFL0eOQHZ5BY) follow status for conference cec484cc-3dac-4ba1-8013-132f8257ee0b: false
+[2025-04-20T10:52:25.006Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: updating_follow_status, Message: Following...
+[2025-04-20T10:52:25.014Z] Executing follow action for conference cec484cc-3dac-4ba1-8013-132f8257ee0b: POST http://confhub.engineer/api/v1/follow-conference/add (using provided token)
+[2025-04-20T10:52:25.095Z] Successfully executed follow for conference cec484cc-3dac-4ba1-8013-132f8257ee0b.
+[2025-04-20T10:52:25.095Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] API call for follow successful.
+[2025-04-20T10:52:25.096Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: update_success, Message: Successfully followed conference.
+[2025-04-20T10:52:25.096Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] Function followUnfollowItem execution finished. ModelResponseContent length: 45, FrontendAction: undefined
+[2025-04-20T10:52:25.097Z] [Handler-NS-1745146342785 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_function_result, Message: Processing result from followUnfollowItem...
+[2025-04-20T10:52:25.097Z] [Handler-NS-1745146342785 History Check - FC Done 1] Appended function response. History size: 3
+[2025-04-20T10:52:25.097Z] --- [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH] Turn 2: Sending to Model (History size: 3) ---
+[2025-04-20T10:52:25.098Z] [Handler-NS-1745146342785 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:52:25.098Z] [GeminiService] Received history with 3 items before mapping.
+[2025-04-20T10:52:25.098Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 3 items.
+[2025-04-20T10:52:25.098Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-20T10:52:25.098Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:52:25.099Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:52:25.099Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:52:25.099Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:52:25.099Z] [GeminiService] Sending total 3 Content items to API.
+[2025-04-20T10:52:25.099Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:52:25.767Z] Model Finish Reason: STOP
+[2025-04-20T10:52:25.767Z] Model generated final text response: Okay, I've followed the HNDH conference for you.
+...
+[2025-04-20T10:52:25.767Z] [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH] Turn 2: Received final_text.
+[2025-04-20T10:52:25.768Z] [Handler-NS-1745146342785 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:52:25.768Z] [Handler-NS-1745146342785 History Check - Final] Appended final model response. History size: 4
+[2025-04-20T10:52:25.769Z] [Handler-NS-1745146342785 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: chat_result, Type: result
+[2025-04-20T10:52:25.769Z] --- [Handler-NS-1745146342785 Socket ix45yprgzWffXOwlAAAH Lang: en] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-20T10:52:25.769Z] [Socket.IO ix45yprgzWffXOwlAAAH] Updated history stored (4 items).
+[2025-04-20T10:54:51.578Z] [Socket.IO ix45yprgzWffXOwlAAAH] Received 'send_message': UserInput = "Unfollow HNDH conference", Streaming = false, Language = en
+[2025-04-20T10:54:51.578Z] [Socket.IO ix45yprgzWffXOwlAAAH] Retrieved history with 4 items.
+[2025-04-20T10:54:51.578Z] [Socket.IO ix45yprgzWffXOwlAAAH] Calling handleNonStreaming...
+[2025-04-20T10:54:51.578Z] --- [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH] Handling NON-STREAMING input: "Unfollow HNDH conference", Lang: en ---
+[2025-04-20T10:54:51.579Z] [Language Config] Using configuration for language: en
+[2025-04-20T10:54:51.579Z] [Handler-NS-1745146491578] Using System Instructions (Lang: en): 
+### ROLE ###
+You are HCMUS, a friendly and helpful chatbot specializing in conferences, journals in...
+[2025-04-20T10:54:51.579Z] [Handler-NS-1745146491578] Using Tools (Lang: en): getConferences, getJournals, getWebsiteInformation, navigation, openGoogleMap, followUnfollowItem
+[2025-04-20T10:54:51.579Z] [Handler-NS-1745146491578 History Check - Start] Initialized working history with 5 items.
+[2025-04-20T10:54:51.580Z] [Handler-NS-1745146491578 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:54:51.580Z] --- [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH] Turn 1: Sending to Model (History size: 5) ---
+[2025-04-20T10:54:51.581Z] [Handler-NS-1745146491578 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:54:51.582Z] [GeminiService] Received history with 5 items before mapping.
+[2025-04-20T10:54:51.583Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 5 items.
+[2025-04-20T10:54:51.583Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-20T10:54:51.583Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:54:51.586Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:54:51.587Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:54:51.587Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:54:51.587Z] [GeminiService] Sending total 5 Content items to API.
+[2025-04-20T10:54:51.588Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:54:52.459Z] Model Finish Reason: STOP
+[2025-04-20T10:54:52.459Z] Model requested function call: followUnfollowItem
+[2025-04-20T10:54:52.459Z] Arguments: {"identifier":"HNDH","identifierType":"acronym","itemType":"conference","action":"unfollow"}
+[2025-04-20T10:54:52.460Z] [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH] Turn 1: Received requires_function_call: followUnfollowItem
+[2025-04-20T10:54:52.460Z] [Handler-NS-1745146491578 History Check - FC Prep 1] Appended model FC request. History size: 6
+[2025-04-20T10:54:52.460Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] Executing backend logic for function: followUnfollowItem (Authenticated: true)
+[2025-04-20T10:54:52.461Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: function_call, Message: Calling function: followUnfollowItem...
+[2025-04-20T10:54:52.461Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] Handling followUnfollowItem function.
+[2025-04-20T10:54:52.461Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_request, Message: Processing unfollow request for conference: "HNDH"...
+[2025-04-20T10:54:52.462Z] Finding ID for conference with identifier: "HNDH" (type: acronym)
+[2025-04-20T10:54:52.462Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=HNDH&perPage=1&page=1
+[2025-04-20T10:54:52.575Z] Backend API Success for conference. Data length: 834
+[2025-04-20T10:54:52.576Z] Transforming conference data with Markdown. Search query: acronym=HNDH&perPage=1&page=1
+[2025-04-20T10:54:52.578Z] Conference data transformed successfully.
+[2025-04-20T10:54:52.578Z] Found conference ID: cec484cc-3dac-4ba1-8013-132f8257ee0b for identifier "HNDH"
+[2025-04-20T10:54:52.579Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: checking_status, Message: Checking follow status...
+[2025-04-20T10:54:52.579Z] Fetching followed conferences: GET http://confhub.engineer/api/v1/follow-conference/followed (using provided token)
+[2025-04-20T10:54:52.714Z] Error fetching followed conferences (500): {"statusCode":500,"message":"Internal server error"}
+[2025-04-20T10:54:52.715Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] Error checking follow status: API Error (500) fetching followed conferences.
+[2025-04-20T10:54:52.716Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: function_error, Message: Error checking follow status.
+[2025-04-20T10:54:52.716Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] Function followUnfollowItem execution finished. ModelResponseContent length: 46, FrontendAction: undefined
+[2025-04-20T10:54:52.716Z] [Handler-NS-1745146491578 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_function_result, Message: Processing result from followUnfollowItem...
+[2025-04-20T10:54:52.717Z] [Handler-NS-1745146491578 History Check - FC Done 1] Appended function response. History size: 7
+[2025-04-20T10:54:52.717Z] --- [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH] Turn 2: Sending to Model (History size: 7) ---
+[2025-04-20T10:54:52.717Z] [Handler-NS-1745146491578 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:54:52.718Z] [GeminiService] Received history with 7 items before mapping.
+[2025-04-20T10:54:52.719Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 7 items.
+[2025-04-20T10:54:52.720Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-20T10:54:52.720Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:54:52.720Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:54:52.720Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:54:52.721Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:54:52.721Z] [GeminiService] Sending total 7 Content items to API.
+[2025-04-20T10:54:52.721Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:54:53.399Z] Model Finish Reason: STOP
+[2025-04-20T10:54:53.400Z] Model generated final text response: I was unable to unfollow that conference due to an error.
+...
+[2025-04-20T10:54:53.400Z] [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH] Turn 2: Received final_text.
+[2025-04-20T10:54:53.401Z] [Handler-NS-1745146491578 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:54:53.401Z] [Handler-NS-1745146491578 History Check - Final] Appended final model response. History size: 8
+[2025-04-20T10:54:53.402Z] [Handler-NS-1745146491578 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: chat_result, Type: result
+[2025-04-20T10:54:53.403Z] --- [Handler-NS-1745146491578 Socket ix45yprgzWffXOwlAAAH Lang: en] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-20T10:54:53.403Z] [Socket.IO ix45yprgzWffXOwlAAAH] Updated history stored (8 items).
+[2025-04-20T10:56:48.287Z] [Socket.IO ix45yprgzWffXOwlAAAH] Received 'send_message': UserInput = "Follow HNTD conference", Streaming = false, Language = en
+[2025-04-20T10:56:48.287Z] [Socket.IO ix45yprgzWffXOwlAAAH] Retrieved history with 8 items.
+[2025-04-20T10:56:48.288Z] [Socket.IO ix45yprgzWffXOwlAAAH] Calling handleNonStreaming...
+[2025-04-20T10:56:48.288Z] --- [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH] Handling NON-STREAMING input: "Follow HNTD conference", Lang: en ---
+[2025-04-20T10:56:48.288Z] [Language Config] Using configuration for language: en
+[2025-04-20T10:56:48.288Z] [Handler-NS-1745146608288] Using System Instructions (Lang: en): 
+### ROLE ###
+You are HCMUS, a friendly and helpful chatbot specializing in conferences, journals in...
+[2025-04-20T10:56:48.288Z] [Handler-NS-1745146608288] Using Tools (Lang: en): getConferences, getJournals, getWebsiteInformation, navigation, openGoogleMap, followUnfollowItem
+[2025-04-20T10:56:48.289Z] [Handler-NS-1745146608288 History Check - Start] Initialized working history with 9 items.
+[2025-04-20T10:56:48.289Z] [Handler-NS-1745146608288 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:56:48.289Z] --- [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH] Turn 1: Sending to Model (History size: 9) ---
+[2025-04-20T10:56:48.290Z] [Handler-NS-1745146608288 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:56:48.290Z] [GeminiService] Received history with 9 items before mapping.
+[2025-04-20T10:56:48.290Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 9 items.
+[2025-04-20T10:56:48.290Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-20T10:56:48.291Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:56:48.291Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:56:48.291Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:56:48.291Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:56:48.292Z] [GeminiService] Sending total 9 Content items to API.
+[2025-04-20T10:56:48.292Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:56:49.325Z] Model Finish Reason: STOP
+[2025-04-20T10:56:49.325Z] Model requested function call: followUnfollowItem
+[2025-04-20T10:56:49.326Z] Arguments: {"itemType":"conference","identifierType":"acronym","identifier":"HNTD","action":"follow"}
+[2025-04-20T10:56:49.326Z] [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH] Turn 1: Received requires_function_call: followUnfollowItem
+[2025-04-20T10:56:49.326Z] [Handler-NS-1745146608288 History Check - FC Prep 1] Appended model FC request. History size: 10
+[2025-04-20T10:56:49.326Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] Executing backend logic for function: followUnfollowItem (Authenticated: true)
+[2025-04-20T10:56:49.327Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: function_call, Message: Calling function: followUnfollowItem...
+[2025-04-20T10:56:49.327Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] Handling followUnfollowItem function.
+[2025-04-20T10:56:49.327Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_request, Message: Processing follow request for conference: "HNTD"...
+[2025-04-20T10:56:49.328Z] Finding ID for conference with identifier: "HNTD" (type: acronym)
+[2025-04-20T10:56:49.328Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=HNTD&perPage=1&page=1
+[2025-04-20T10:56:49.483Z] Backend API Success for conference. Data length: 763
+[2025-04-20T10:56:49.483Z] Transforming conference data with Markdown. Search query: acronym=HNTD&perPage=1&page=1
+[2025-04-20T10:56:49.485Z] Conference data transformed successfully.
+[2025-04-20T10:56:49.485Z] Found conference ID: e7e77412-9eb2-4b28-8e8e-da9688c19a3d for identifier "HNTD"
+[2025-04-20T10:56:49.486Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: checking_status, Message: Checking follow status...
+[2025-04-20T10:56:49.486Z] Fetching followed conferences: GET http://confhub.engineer/api/v1/follow-conference/followed (using provided token)
+[2025-04-20T10:56:49.603Z] Error fetching followed conferences (500): {"statusCode":500,"message":"Internal server error"}
+[2025-04-20T10:56:49.603Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] Error checking follow status: API Error (500) fetching followed conferences.
+[2025-04-20T10:56:49.604Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: function_error, Message: Error checking follow status.
+[2025-04-20T10:56:49.604Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] Function followUnfollowItem execution finished. ModelResponseContent length: 46, FrontendAction: undefined
+[2025-04-20T10:56:49.604Z] [Handler-NS-1745146608288 ix45yprgzWffXOwlAAAH] ExecuteFunctionCall Status Emit Sent: Step: processing_function_result, Message: Processing result from followUnfollowItem...
+[2025-04-20T10:56:49.605Z] [Handler-NS-1745146608288 History Check - FC Done 1] Appended function response. History size: 11
+[2025-04-20T10:56:49.605Z] --- [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH] Turn 2: Sending to Model (History size: 11) ---
+[2025-04-20T10:56:49.605Z] [Handler-NS-1745146608288 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:56:49.606Z] [GeminiService] Received history with 11 items before mapping.
+[2025-04-20T10:56:49.606Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 11 items.
+[2025-04-20T10:56:49.606Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-20T10:56:49.606Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-20T10:56:49.607Z] Generation Config: {"temperature":0.3,"topP":0.5,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-20T10:56:49.607Z] Tools provided: ["getConferences","getJournals","getWebsiteInformation","navigation","openGoogleMap","followUnfollowItem"]
+[2025-04-20T10:56:49.607Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-20T10:56:49.607Z] [GeminiService] Sending total 11 Content items to API.
+[2025-04-20T10:56:49.607Z]   - No valid next turn added, sending only history.
+[2025-04-20T10:56:50.384Z] Model Finish Reason: STOP
+[2025-04-20T10:56:50.384Z] Model generated final text response: I was unable to follow that conference due to an error.
+...
+[2025-04-20T10:56:50.384Z] [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH] Turn 2: Received final_text.
+[2025-04-20T10:56:50.385Z] [Handler-NS-1745146608288 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: status_update, Type: status
+[2025-04-20T10:56:50.385Z] [Handler-NS-1745146608288 History Check - Final] Appended final model response. History size: 12
+[2025-04-20T10:56:50.385Z] [Handler-NS-1745146608288 Socket Emit Sent - ix45yprgzWffXOwlAAAH] Event: chat_result, Type: result
+[2025-04-20T10:56:50.386Z] --- [Handler-NS-1745146608288 Socket ix45yprgzWffXOwlAAAH Lang: en] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-20T10:56:50.386Z] [Socket.IO ix45yprgzWffXOwlAAAH] Updated history stored (12 items).

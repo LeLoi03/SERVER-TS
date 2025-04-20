@@ -1,77 +1,5 @@
-// // shared/types.ts
-// export interface DatabaseConfig {
-//     user?: string;
-//     host?: string;
-//     database?: string;
-//     password?: string;
-//     port?: number;
-// }
-
-// export interface TextMessageResponse {
-//     type: 'text';
-//     message: string;
-//     thought?: string; // Add thought
-// }
-
-// export interface ChartMessageResponse {
-//     type: 'chart';
-//     echartsConfig: any;
-//     sqlQuery: string;
-//     sqlResult: any[]; //IMPORTANT:  This should be here
-//     description: string;
-//     thought?: string; // Add thought
-//     message?: string;
-// }
-
-// export interface InternalNavigationResponse {
-//     type: 'navigation';
-//     navigationType: 'internal';
-//     path: string;
-//     message: string;
-//     thought?: string; // Add thought
-
-// }
-
-// export interface ExternalNavigationResponse {
-//     type: 'navigation';
-//     navigationType: 'external';
-//     url: string;
-//     message: string;
-//     thought?: string; // Add thought
-
-
-// }
-
-// export interface ErrorResponse {
-//     type: 'error'; // Add type
-//     message: string;
-//     thought?: string;
-// }
-// // Union of response
-// export type ChatResponse =
-//     | TextMessageResponse
-//     | ChartMessageResponse
-//     | InternalNavigationResponse
-//     | ExternalNavigationResponse
-//     | ErrorResponse;
-
-
-// export type HistoryItem =
-// { role: "user" | "model"; parts: [{ text: string }]; type?: 'text' | 'chart' | 'error' | 'navigation' }
-
-// export type ChatHistoryType = HistoryItem[];
-
-// // ChatRequest is also shared
-// export interface ChatRequest {
-//     userInput?: string;
-//     history?: ChatHistoryType;
-// }
-
-
-
 // src/shared/types.ts
 import { FunctionCall, Part } from "@google/generative-ai"; // Import necessary types
-
 // Ensure HistoryItem part can hold various types
 export interface HistoryItem {
     role: "user" | "model" | "function"; // Add 'function' role
@@ -111,11 +39,34 @@ export interface StatusUpdate {
 
 }
 
+export interface ChatUpdate {
+    type: 'partial_result';
+    textChunk: string;
+
+}
+// --- Define Action Types ---
+export interface NavigationAction {
+    type: 'navigate';
+    url: string; // The URL (internal path or full external URL)
+}
+
+// <<< NEW: Define OpenMapAction >>>
+export interface OpenMapAction {
+    type: 'openMap';
+    location: string; // The location string to search on Google Maps
+}
+
+// --- Update ChatAction Union Type ---
+export type ChatAction = NavigationAction | OpenMapAction; // <<< ADDED OpenMapAction
+
+// --- ResultUpdate (No change needed here, already has optional 'action') ---
 export interface ResultUpdate {
     type: 'result';
-    message: string;
-    thoughts?: ThoughtStep[]; // Add the thought process history
+    message: string; // The text message to display
+    thoughts?: ThoughtStep[];
+    action?: ChatAction; // Now includes NavigationAction or OpenMapAction
 }
+
 
 export interface ErrorUpdate {
     type: 'error';
@@ -124,3 +75,27 @@ export interface ErrorUpdate {
     thought?: string; // Optional: keep if used elsewhere, or remove
     thoughts?: ThoughtStep[]; // Add the thought process history leading to the error
 }
+
+
+
+export type PrebuiltVoice = "Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" | "Orus" | "Zephyr";
+export type OutputModality = "text" | "audio" | "image";
+export type Language = 'en' | 'vi' | 'zh';
+export type ChatMode = 'live' | 'regular';
+export interface LanguageOption {
+    code: Language;
+    name: string;
+    flagCode: string;
+}
+
+
+export const AVAILABLE_LANGUAGES: LanguageOption[] = [
+    { code: 'en', name: 'English', flagCode: 'gb' },
+    { code: 'vi', name: 'Tiếng Việt', flagCode: 'vn' },
+    { code: 'zh', name: '中文', flagCode: 'cn' },
+    // Add other languages
+];
+
+export const DEFAULT_LANGUAGE: Language = 'vi';
+export const DEFAULT_VOICE: PrebuiltVoice = 'Puck';
+export const DEFAULT_MODALITY: OutputModality = 'audio';

@@ -1,378 +1,93 @@
 // src/handlers/backendService.ts
 import logToFile from '../utils/logger';
 import 'dotenv/config';
+import { transformConferenceData } from '../utils/transformData'; // Ensure this is correctly imported
 
-const DATABASE_URL = "http://confhub.engineer/api/v1"; // Your backend base URL
+const DATABASE_URL = process.env.INTERNAL_DATABASE_URL || "http://confhub.engineer/api/v1"; // Use your actual base URL
 
-// --- Helper Functions ---
-
-/**
- * Safely gets a nested property from an object.
- * @param obj The object to traverse.
- * @param path A dot-separated path string or an array of keys.
- * @param defaultValue The value to return if the path doesn't exist.
- * @returns The value at the path or the default value.
- */
-const safeGet = (obj: any, path: string | string[], defaultValue: any = undefined): any => {
-    if (!obj) return defaultValue;
-    const pathArray = Array.isArray(path) ? path : path.split('.');
-    let current = obj;
-    for (let i = 0; i < pathArray.length; i++) {
-        if (current === null || current === undefined || current[pathArray[i]] === undefined) {
-            return defaultValue;
-        }
-        current = current[pathArray[i]];
-    }
-    return current !== undefined ? current : defaultValue;
-};
-
-/**
- * Formats an ISO date string into a more readable format.
- * Handles date ranges (e.g., "Month Day - Day, Year" or just "Month Day, Year").
- * @param fromDateStr ISO date string for the start date.
- * @param toDateStr ISO date string for the end date.
- * @returns Formatted date string or "N/A".
- */
-const formatDateRange = (fromDateStr?: string | null, toDateStr?: string | null): string => {
-    if (!fromDateStr) return "N/A";
-
-    try {
-        const fromDate = new Date(fromDateStr);
-        const toDate = toDateStr ? new Date(toDateStr) : fromDate; // If no toDate, assume it's the same as fromDate
-
-        if (isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) return "N/A"; // Invalid date check
-
-        const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric' };
-        const yearOption: Intl.DateTimeFormatOptions = { year: 'numeric' };
-
-        const fromFormatted = fromDate.toLocaleDateString('en-US', options);
-        const toFormatted = toDate.toLocaleDateString('en-US', options);
-        const year = fromDate.toLocaleDateString('en-US', yearOption);
-
-        if (fromDate.toDateString() === toDate.toDateString()) {
-            return `${fromFormatted}, ${year}`;
-        } else {
-            // Check if dates are in the same month and year to avoid redundancy
-            if (fromDate.getFullYear() === toDate.getFullYear() && fromDate.getMonth() === toDate.getMonth()) {
-                 const fromDay = fromDate.toLocaleDateString('en-US', { day: 'numeric' });
-                 const toDay = toDate.toLocaleDateString('en-US', { day: 'numeric' });
-                 const month = fromDate.toLocaleDateString('en-US', { month: 'long' });
-                 return `${month} ${fromDay} - ${toDay}, ${year}`;
-            } else {
-                // Different months or years
-                 return `${fromFormatted} - ${toFormatted}, ${year}`; // Consider adding year to 'toFormatted' if needed
-            }
-        }
-    } catch (error) {
-        logToFile(`Error formatting date range (${fromDateStr}, ${toDateStr}): ${error}`);
-        return "N/A";
-    }
-};
-
-/**
- * Formats a single ISO date string.
- * @param dateStr ISO date string.
- * @returns Formatted date string "Month Day, Year" or "N/A".
- */
-const formatSingleDate = (dateStr?: string | null): string => {
-     if (!dateStr) return "N/A";
-     try {
-         const date = new Date(dateStr);
-         if (isNaN(date.getTime())) return "N/A";
-         const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
-         return date.toLocaleDateString('en-US', options);
-     } catch (error) {
-        logToFile(`Error formatting single date (${dateStr}): ${error}`);
-        return "N/A";
-     }
-};
-
-/**
- * Compares two values and adds a change indicator if they differ.
- * @param currentValue The current value.
- * @param previousValue The previous value.
- * @param formatter Optional function to format the previous value for display.
- * @returns A string indicating the change, or an empty string if no change or no previous value.
- */
-const formatChange = (currentValue: any, previousValue: any, formatter?: (val: any) => string): string => {
-    if (previousValue === undefined || previousValue === null || currentValue === previousValue) {
-        return "";
-    }
-    const formattedPrev = formatter ? formatter(previousValue) : String(previousValue || "N/A");
-    // Only show change if current value is also defined, otherwise it might be a removal (handled elsewhere if needed)
-    if (currentValue !== undefined && currentValue !== null) {
-         return ` (changed from "${formattedPrev}")`;
-    }
-    return ""; // Or handle removal case if required by prompt later
-};
-
-
-// --- Data Transformation Logic ---
-
-function transformConferenceData(rawData: string, searchQuery: string): string {
-    logToFile(`Transforming conference data. Search query: ${searchQuery}`);
-    let data;
-    try {
-        data = JSON.parse(rawData);
-        if (!data || typeof data !== 'object') {
-            logToFile(`Transformation Error: Parsed data is not a valid object.`);
-            return "Error: Could not parse conference data from API.";
-        }
-    } catch (error) {
-        logToFile(`Transformation Error: Failed to parse JSON: ${error}`);
-        return "Error: Invalid data format received from API.";
-    }
-
-    const payload = safeGet(data, 'payload', []);
-    const meta = safeGet(data, 'meta', {});
-    const isDetailMode = searchQuery.includes("mode=detail");
-
-    // 1. Format Metadata
-    let metaString = "Meta:\n";
-    metaString += `Current page: ${safeGet(meta, 'curPage', 'N/A')}\n`;
-    metaString += `Per page: ${safeGet(meta, 'perPage', 'N/A')}\n`;
-    metaString += `Total items: ${safeGet(meta, 'totalItems', 'N/A')}\n`;
-    metaString += `Total page: ${safeGet(meta, 'totalPage', 'N/A')}\n`;
-    metaString += `Prev page: ${safeGet(meta, 'prevPage', 'null')}\n`; // Explicitly show 'null'
-    metaString += `Next page: ${safeGet(meta, 'nextPage', 'null')}\n`; // Explicitly show 'null'
-
-    // 2. Format Payload
-    let payloadString = "\nPayload:\n";
-
-    if (!Array.isArray(payload) || payload.length === 0) {
-        payloadString += "No conferences found matching your criteria.\n";
-    } else {
-        payload.forEach((conf: any, index: number) => {
-            payloadString += `\n- Conference ${index + 1}.\n`;
-
-            if (isDetailMode) {
-                // --- Detail Mode Transformation ---
-                payloadString += `Title: ${safeGet(conf, 'title', 'N/A')}\n`;
-                payloadString += `Acronym: ${safeGet(conf, 'acronym', 'N/A')}\n`;
-
-                // Ranks
-                const ranks = safeGet(conf, 'ranks', []);
-                if (Array.isArray(ranks) && ranks.length > 0) {
-                    payloadString += `Ranks:\n`;
-                    ranks.forEach((rank: any, rankIndex: number) => {
-                        payloadString += `  ${rankIndex + 1}.\n`;
-                        payloadString += `  Rank: ${safeGet(rank, 'rank', 'N/A')}\n`;
-                        payloadString += `  Source: ${safeGet(rank, 'source', 'N/A')}\n`;
-                        payloadString += `  Research field: ${safeGet(rank, 'researchField', 'N/A')}\n`;
-                       // payloadString += `  Year: ${safeGet(rank, 'year', 'N/A')}\n`; // Year is often less relevant per-rank listing, but can be added
-                    });
-                } else {
-                     payloadString += `Ranks: N/A\n`;
-                }
-
-                // Organizations - Use latest, compare with previous if exists
-                const organizations = safeGet(conf, 'organizations', []);
-                const currentOrg = organizations && organizations.length > 0 ? organizations[organizations.length - 1] : {};
-                const previousOrg = organizations && organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
-
-                const currentLocation = safeGet(currentOrg, 'locations.0', {});
-                const previousLocation = safeGet(previousOrg, 'locations.0', undefined); // Use undefined for comparison
-
-                const currentDates = safeGet(currentOrg, 'dates', []);
-                const previousDates = safeGet(previousOrg, 'dates', []); // Empty array if not found
-
-                // Year (from current organization)
-                payloadString += `Year: ${safeGet(currentOrg, 'year', 'N/A')}\n`;
-
-                // Type (Access Type) with change tracking
-                const currentAccessType = safeGet(currentOrg, 'accessType', 'N/A');
-                const previousAccessType = safeGet(previousOrg, 'accessType', undefined);
-                payloadString += `Type: ${currentAccessType}${formatChange(currentAccessType, previousAccessType)}\n`;
-
-                 // Location (address) with change tracking
-                const currentAddress = safeGet(currentLocation, 'address', 'N/A');
-                const previousAddress = safeGet(previousLocation, 'address', undefined);
-                payloadString += `Location: ${currentAddress}${formatChange(currentAddress, previousAddress)}\n`;
-                payloadString += `Continent: ${safeGet(currentLocation, 'continent', 'N/A')}\n`; // Continent unlikely to change, show current
-
-
-                // Website link with change tracking
-                const currentLink = safeGet(currentOrg, 'link', 'N/A');
-                const previousLink = safeGet(previousOrg, 'link', undefined);
-                payloadString += `Website link: ${currentLink}${formatChange(currentLink, previousLink)}\n`;
-
-                // CFP link with change tracking
-                const currentCfpLink = safeGet(currentOrg, 'cfpLink', 'N/A');
-                const previousCfpLink = safeGet(previousOrg, 'cfpLink', undefined);
-                payloadString += `Call for papers link: ${currentCfpLink}${formatChange(currentCfpLink, previousCfpLink)}\n`;
-
-                 // Important Dates link (Assuming 'impLink', adjust if key is different) - with change tracking
-                const currentImpLink = safeGet(currentOrg, 'impLink', 'N/A'); // Adjust 'impLink' if the key name is different
-                const previousImpLink = safeGet(previousOrg, 'impLink', undefined);
-                if (currentImpLink !== 'N/A' || previousImpLink) { // Only show if it ever existed
-                     payloadString += `Important dates link: ${currentImpLink}${formatChange(currentImpLink, previousImpLink)}\n`;
-                }
-
-                 // Publisher with change tracking
-                const currentPublisher = safeGet(currentOrg, 'publisher', 'N/A');
-                const previousPublisher = safeGet(previousOrg, 'publisher', undefined);
-                 if (currentPublisher !== 'N/A' || previousPublisher) { // Only show if it ever existed
-                    payloadString += `Publisher: ${currentPublisher}${formatChange(currentPublisher, previousPublisher)}\n`;
-                 }
-
-
-                // Topics
-                const topics = safeGet(currentOrg, 'topics', []);
-                payloadString += `Topics: ${Array.isArray(topics) && topics.length > 0 ? topics.join(', ') : 'N/A'}\n`;
-
-                // Dates (Conference Dates first, then others with change tracking)
-                let conferenceDateStr = "N/A";
-                const importantDates: string[] = [];
-                const processedPrevDateIndices = new Set<number>(); // Keep track of previous dates matched
-
-                // Process current dates and compare with previous
-                currentDates.forEach((date: any) => {
-                    const dateType = safeGet(date, 'type', '');
-                    const dateName = safeGet(date, 'name', 'Unnamed Date');
-                    const fromDate = safeGet(date, 'fromDate');
-                    const toDate = safeGet(date, 'toDate');
-                    const formattedCurrentDate = formatDateRange(fromDate, toDate);
-
-                    // Find corresponding previous date
-                    let foundPrevIndex = -1;
-                    const prevDate = previousDates.find((pDate: any, index: number) => {
-                         if (safeGet(pDate, 'type') === dateType && safeGet(pDate, 'name') === dateName) {
-                              foundPrevIndex = index;
-                              return true;
-                         }
-                         return false;
-                    });
-
-                    let changeIndicator = "";
-                    if (prevDate) {
-                        processedPrevDateIndices.add(foundPrevIndex); // Mark as processed
-                        const prevFromDate = safeGet(prevDate, 'fromDate');
-                        const prevToDate = safeGet(prevDate, 'toDate');
-                        const formattedPrevDate = formatDateRange(prevFromDate, prevToDate);
-                        if (formattedCurrentDate !== formattedPrevDate) {
-                            changeIndicator = ` (changed from "${formattedPrevDate}")`;
-                        }
-                    } else if (previousOrg) { // Only mark as new if there *was* a previous org to compare against
-                        changeIndicator = " (new)";
-                    }
-
-                    if (dateType === 'conferenceDates') {
-                        conferenceDateStr = `${formattedCurrentDate}${changeIndicator}`;
-                    } else {
-                        importantDates.push(`${dateName}: ${formattedCurrentDate}${changeIndicator}`);
-                    }
-                });
-
-                 // Check for removed dates (present in previous but not current)
-                if (previousOrg) {
-                    previousDates.forEach((pDate: any, index: number) => {
-                        if (!processedPrevDateIndices.has(index)) { // If this previous date wasn't matched/processed
-                             const dateType = safeGet(pDate, 'type', '');
-                             // Avoid adding removed conferenceDates again if already handled
-                             if (dateType !== 'conferenceDates') {
-                                 const dateName = safeGet(pDate, 'name', 'Unnamed Date');
-                                 const formattedPrevDate = formatDateRange(safeGet(pDate, 'fromDate'), safeGet(pDate, 'toDate'));
-                                 importantDates.push(`${dateName}: ${formattedPrevDate} (removed)`);
-                             } else if (conferenceDateStr === "N/A") {
-                                // Handle removed conference date if no current one exists
-                                const formattedPrevDate = formatDateRange(safeGet(pDate, 'fromDate'), safeGet(pDate, 'toDate'));
-                                conferenceDateStr = `${formattedPrevDate} (removed)`
-                             }
-                        }
-                    });
-                }
-
-
-                payloadString += `Conference dates: ${conferenceDateStr}\n`;
-                importantDates.forEach(dateStr => {
-                    payloadString += `${dateStr}\n`;
-                });
-
-
-                // Summary and Call for Papers
-                payloadString += `Summary: ${safeGet(currentOrg, 'summary', 'N/A')}\n`;
-                payloadString += `Call for papers: ${safeGet(currentOrg, 'callForPaper', 'N/A')}\n`;
-
-
-            } else {
-                // --- Summary Mode Transformation ---
-                payloadString += `Title: ${safeGet(conf, 'title', 'N/A')}\n`;
-                payloadString += `Acronym: ${safeGet(conf, 'acronym', 'N/A')}\n`;
-                payloadString += `Location: ${safeGet(conf, 'location.address', 'N/A')}\n`;
-                payloadString += `Continent: ${safeGet(conf, 'location.continent', 'N/A')}\n`;
-                payloadString += `Rank: ${safeGet(conf, 'rank', 'N/A')}\n`;
-                payloadString += `Source: ${safeGet(conf, 'source', 'N/A')}\n`;
-                const researchFields = safeGet(conf, 'researchFields', []);
-                payloadString += `Research field: ${Array.isArray(researchFields) && researchFields.length > 0 ? researchFields.join(', ') : 'N/A'}\n`;
-                payloadString += `Year: ${safeGet(conf, 'year', 'N/A')}\n`;
-                payloadString += `Type: ${safeGet(conf, 'accessType', 'N/A')}\n`;
-                const topics = safeGet(conf, 'topics', []);
-                payloadString += `Topics: ${Array.isArray(topics) && topics.length > 0 ? topics.join(', ') : 'N/A'}\n`;
-                payloadString += `Conference dates: ${formatDateRange(safeGet(conf, 'dates.fromDate'), safeGet(conf, 'dates.toDate'))}\n`;
-                payloadString += `Website link: ${safeGet(conf, 'link', 'N/A')}\n`;
-            }
-        });
-    }
-
-    // 3. Combine Meta and Payload
-    return `${metaString}${payloadString}`;
+// --- Define the return type ---
+export interface ApiCallResult {
+    success: boolean;
+    rawData: string; // Raw JSON string or error message string
+    formattedData: string | null; // Formatted Markdown or null if transformation failed/not applicable
+    errorMessage?: string; // Specific error message if success is false
 }
 
 
-// --- API Call Execution ---
+interface FollowItem {
+    id: string; // Can be conferenceId or journalId depending on context
+    // Add other fields if your API returns them (like title, acronym)
+}
 
-async function executeApiCall(endpoint: string, searchQuery: string): Promise<string> {
+// --- API Call Execution (Revised) ---
+async function executeApiCall(endpoint: string, searchQuery: string): Promise<ApiCallResult> {
     const fullUrl = `${DATABASE_URL}/${endpoint}?${searchQuery}`;
     logToFile(`Executing backend API call: GET ${fullUrl}`);
     try {
         const response = await fetch(fullUrl, { method: 'GET' });
 
+        const rawResponseText = await response.text(); // Get text regardless of status
+
         if (!response.ok) {
-            const errorText = await response.text();
-            const truncatedError = errorText.substring(0, 200); // Limit error length
+            const truncatedError = rawResponseText.substring(0, 200);
+            const errorMessage = `API Error: Status ${response.status}. Failed to retrieve information for ${endpoint}. Details: ${truncatedError}`;
             logToFile(`Backend API Error (${response.status}) for ${endpoint}: ${truncatedError}`);
-            return `API Error: Status ${response.status}. Failed to retrieve information for ${endpoint}. Details: ${truncatedError}`;
+            return { success: false, rawData: rawResponseText, formattedData: null, errorMessage: errorMessage };
         }
 
-        const rawData = await response.text();
-        logToFile(`Backend API Success for ${endpoint}. Data length: ${rawData.length}`);
-        // logToFile(`Backend API Data (raw): ${rawData.substring(0, 300)}...`); // Log raw data cautiously
+        logToFile(`Backend API Success for ${endpoint}. Data length: ${rawResponseText.length}`);
+        const rawDataString = rawResponseText; // Keep the raw JSON string
 
-        // --- Transformation Step ---
+        let formattedData: string | null = null;
+        let transformationError: string | null = null;
+
+        // --- Transformation Step (Conditional) ---
         if (endpoint === 'conference') {
              try {
-                 const transformedData = transformConferenceData(rawData, searchQuery);
+                 // Attempt to parse AND transform
+                //  const parsedData = JSON.parse(rawDataString); // Parse first
+                 formattedData = transformConferenceData(rawDataString, searchQuery); // Transform the parsed object
                  logToFile(`Conference data transformed successfully.`);
-                logToFile(`Transformed Data: ${transformedData}`); // Log transformed data cautiously
-                 
-                return transformedData;
-             } catch (transformError: any) {
-                 logToFile(`Error during data transformation: ${transformError.message}`);
-                 // Return raw data if transformation fails, or a specific error message
-                 return `Transformation Error: Could not format the received data. Raw data: ${rawData.substring(0, 500)}...`;
+                // logToFile(`Transformed Data: ${formattedData}`); // Log transformed data cautiously
+             } catch (error: any) {
+                 transformationError = `Transformation/Parsing Error: ${error.message}`;
+                 logToFile(`Error during data parsing/transformation: ${error.message}. Raw data: ${rawDataString.substring(0, 200)}...`);
+                 formattedData = null; // Ensure formattedData is null on error
              }
-        } else {
-             // For other endpoints (like journal), return raw data for now
-             // or implement specific transformers if needed.
-             return rawData;
+        } else if (endpoint === 'journal') {
+            // TODO: Implement journal transformation if needed
+            // For now, we might just return the raw data as 'formatted' or leave it null
+            formattedData = null; // Or implement transformation
+            logToFile(`Journal transformation not implemented, returning raw data only conceptually.`);
         }
+        // Add other endpoints if necessary
+
         // --- End Transformation Step ---
 
+        // Return success with both raw and potentially formatted data
+        return {
+            success: true,
+            rawData: rawDataString,
+            formattedData: formattedData, // This will be null if transformation failed or not applicable
+            errorMessage: transformationError ?? undefined // Include transformation error if it occurred
+        };
 
     } catch (error: any) {
+        const errorMessage = `Network Error: Could not connect to the backend service for ${endpoint}. Details: ${error.message}`;
         logToFile(`Network or fetch error calling backend for ${endpoint}: ${error.message}`);
-        return `Network Error: Could not connect to the backend service to retrieve information for ${endpoint}. Details: ${error.message}`;
+        return { success: false, rawData: "", formattedData: null, errorMessage: errorMessage };
     }
 }
 
-export async function executeGetConferences(searchQuery: string): Promise<string> {
-    // The transformation is now handled within executeApiCall for the 'conference' endpoint
+// --- Service Functions (Using the new return type) ---
+
+export async function executeGetConferences(searchQuery: string): Promise<ApiCallResult> {
     return executeApiCall('conference', searchQuery);
 }
 
-export async function executeGetJournals(searchQuery: string): Promise<string> {
-    // Transformation for journals is not implemented here, returning raw data via executeApiCall
-    return executeApiCall('journal', searchQuery);
+export async function executeGetJournals(searchQuery: string): Promise<ApiCallResult> {
+    // Assuming journal transformation is not yet implemented or needed for link extraction only
+    return executeApiCall('journal', searchQuery); // Will likely have formattedData=null
 }
 
 export async function executeGetWebsiteInformation(): Promise<string> {
@@ -387,5 +102,155 @@ export async function executeGetWebsiteInformation(): Promise<string> {
     } catch (error: any) {
         logToFile(`Error retrieving website information: ${error.message}`);
         return `Error: Could not retrieve website information.`;
+    }
+}
+
+
+// <<< NEW: Function to get followed items >>>
+
+// --- Function to get followed items (REVISED - Token Only) ---
+export async function executeGetUserFollowedItems(
+    itemType: 'conference' | 'journal',
+    token: string | null // <<< ONLY NEED TOKEN
+): Promise<{ success: boolean; itemIds: string[]; errorMessage?: string }> {
+
+    if (!token) {
+        // This check might be redundant if intentHandler already checks, but good for safety
+        return { success: false, itemIds: [], errorMessage: "Authentication token is missing." };
+    }
+
+    const endpoint = itemType === 'conference' ? 'follow-conference/followed' : 'follow-journal/followed';
+    const url = `${DATABASE_URL}/${endpoint}`;
+    logToFile(`Fetching followed ${itemType}s: GET ${url} (using provided token)`);
+
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                "Authorization": `Bearer ${token}`, // <<< Use the token
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            logToFile(`Error fetching followed ${itemType}s (${response.status}): ${errorText.substring(0, 200)}`);
+            return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching followed ${itemType}s.` };
+        }
+
+        const followedItems: FollowItem[] = await response.json();
+        const itemIds = followedItems.map(item => item.id); // Assuming API returns { id: string } objects
+        logToFile(`Successfully fetched ${itemIds.length} followed ${itemType}(s).`);
+        return { success: true, itemIds: itemIds };
+
+    } catch (error: any) {
+        logToFile(`Network/Fetch error fetching followed ${itemType}s: ${error.message}`);
+        return { success: false, itemIds: [], errorMessage: `Network error fetching followed ${itemType}s.` };
+    }
+}
+
+
+// --- Function to call the follow/unfollow API (REVISED - Token Only) ---
+export async function executeFollowUnfollowApi(
+    itemId: string,
+    itemType: 'conference' | 'journal',
+    action: 'follow' | 'unfollow',
+    token: string | null // <<< REMOVED userId, ONLY NEED TOKEN
+): Promise<{ success: boolean; errorMessage?: string }> {
+
+     if (!token) {
+        return { success: false, errorMessage: "Authentication token is missing." };
+    }
+    if (!itemId) {
+         return { success: false, errorMessage: "Item ID is missing." };
+    }
+
+    const actionPath = action === 'follow' ? '/add' : '/remove';
+    const baseEndpoint = itemType === 'conference' ? 'follow-conference' : 'follow-journal';
+    const url = `${DATABASE_URL}/${baseEndpoint}${actionPath}`;
+    logToFile(`Executing ${action} action for ${itemType} ${itemId}: POST ${url} (using provided token)`);
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`, // <<< Use the token
+            },
+            // <<< REMOVE userId from body >>>
+            // Body now only contains the item ID (adjust key based on your API)
+            body: JSON.stringify(itemType === 'conference' ? { conferenceId: itemId } : { journalId: itemId }),
+        });
+        
+        if (!response.ok) {
+             const errorData = await response.json().catch(() => ({ message: `HTTP ${response.status}` })); // Try to parse error JSON
+            logToFile(`Error executing ${action} for ${itemType} ${itemId} (${response.status}): ${errorData.message || response.statusText}`);
+            return { success: false, errorMessage: `API Error (${response.status}): ${errorData.message || 'Failed to ' + action + ' ' + itemType}` };
+        }
+
+        // API might return the updated list or just a success status
+        // We just need to confirm success here.
+        logToFile(`Successfully executed ${action} for ${itemType} ${itemId}.`);
+        return { success: true };
+
+    } catch (error: any) {
+        logToFile(`Network/Fetch error executing ${action} for ${itemType} ${itemId}: ${error.message}`);
+        return { success: false, errorMessage: `Network error trying to ${action} ${itemType}.` };
+    }
+}
+
+
+// <<< Helper function to get Item ID from Identifier (Internal use in executeFunctionCall) >>>
+// This simplifies finding the ID within executeFunctionCall
+export async function findItemId(
+    identifier: string,
+    identifierType: string | undefined, // 'acronym', 'title', or 'id'
+    itemType: 'conference' | 'journal'
+): Promise<{ success: boolean; itemId?: string; errorMessage?: string }> {
+    logToFile(`Finding ID for ${itemType} with identifier: "${identifier}" (type: ${identifierType || 'unknown'})`);
+
+    if (identifierType === 'id') {
+        return { success: true, itemId: identifier }; // Identifier is already the ID
+    }
+
+    // Determine search query based on identifier type
+    let searchQuery = '';
+    if (identifierType === 'acronym') {
+        searchQuery = `acronym=${encodeURIComponent(identifier)}&perPage=1&page=1`;
+    } else { // Default to searching by title if type is 'title' or unknown/missing
+        searchQuery = `title=${encodeURIComponent(identifier)}&perPage=1&page=1`;
+    }
+
+    const apiResult: ApiCallResult = itemType === 'conference'
+        ? await executeGetConferences(searchQuery)
+        : await executeGetJournals(searchQuery);
+
+    if (!apiResult.success || !apiResult.rawData) {
+        return { success: false, errorMessage: apiResult.errorMessage || `Could not find ${itemType} using identifier "${identifier}".` };
+    }
+
+    try {
+        const parsedRawData = JSON.parse(apiResult.rawData);
+         // Adjust based on your actual API response structure (e.g., { data: { payload: [...] } })
+         let itemData: any = null;
+         if (parsedRawData && Array.isArray(parsedRawData.payload) && parsedRawData.payload.length > 0) {
+            itemData = parsedRawData.payload[0];
+         } else if (Array.isArray(parsedRawData) && parsedRawData.length > 0) { // Fallback if structure is simpler array
+             itemData = parsedRawData[0];
+         } else if (typeof parsedRawData === 'object' && parsedRawData !== null && !Array.isArray(parsedRawData)) { // Fallback for single object
+             itemData = parsedRawData;
+         }
+
+
+        if (itemData && itemData.id) {
+            logToFile(`Found ${itemType} ID: ${itemData.id} for identifier "${identifier}"`);
+            return { success: true, itemId: itemData.id };
+        } else {
+            logToFile(`Could not extract ID from data for identifier "${identifier}". Data structure might be unexpected.`);
+            return { success: false, errorMessage: `Found ${itemType} data for "${identifier}" but could not extract its ID.` };
+        }
+    } catch (parseError: any) {
+        logToFile(`Error parsing data while finding ID for "${identifier}": ${parseError.message}`);
+        return { success: false, errorMessage: `Error processing data for ${itemType} "${identifier}".` };
     }
 }
