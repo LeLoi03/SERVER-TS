@@ -418,7 +418,7 @@ export const crawlConferences = async (
                             // taskLogger.info({ linksToCrawl: searchResultsLinks.length, event: 'save_html_start' }, `Attempting to save HTML content for found links`);
                             try {
                                 // saveHTMLContent đẩy promise vào batchPromises
-                                await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, taskLogger); // Truyền taskLogger
+                                taskResult =  await saveHTMLContent(browserCtx, conference, searchResultsLinks, batchIndexRef, existingAcronyms, batchPromises, YEAR2, taskLogger); // Truyền taskLogger
                                 taskLogger.info({ event: 'save_html_step_enqueued' }, 'Save HTML content task enqueued/processed.'); // Lưu ý: Bước này có thể không đồng bộ hoàn toàn
                             } catch (saveError: any) {
                                 taskLogger.error({ err: saveError, event: 'save_html_failed' }, 'Error occurred during the save HTML content step');
@@ -427,7 +427,7 @@ export const crawlConferences = async (
                             taskLogger.warn({ event: 'save_html_skipped_no_links' }, "Skipping save HTML step as no valid search links were found or processed.")
                         }
                         // Luồng SAVE không trả về dữ liệu trực tiếp cho finalResults
-                        taskResult = null;
+                        finalResults[index] = taskResult;
                     } // End else (SAVE flow)
 
                 } catch (taskError: any) {

@@ -29,7 +29,7 @@ export const saveBatchToFile = async (
     adjustedAcronym: string, // không còn cần thiết trực tiếp ở đây nếu thông tin có trong batch
     browserContext: BrowserContext,
     parentLogger: typeof logger
-): Promise<void> => { // <--- Thay đổi kiểu trả về thành Promise<void>
+): Promise<any> => { // <--- Thay đổi kiểu trả về thành Promise<void>
     const baseLogContext = { batchIndex, function: 'saveBatchToFile' };
     parentLogger.info({ ...baseLogContext, event: 'save_batch_start', entryCount: batch.length }, "Starting saveBatchToFile");
 
@@ -279,7 +279,7 @@ export const saveBatchToFile = async (
             };
 
             const dataToWrite = JSON.stringify(finalRecord) + '\n'; // Định dạng JSON Lines
-
+            //need to change 
             parentLogger.info({ ...finalAppendContext, recordAcronym: finalRecord.conferenceAcronym, event: 'save_batch_append_start' }, "Appending final result to output file");
             await fs.promises.appendFile(FINAL_OUTPUT_PATH, dataToWrite, 'utf8');
             parentLogger.info({ ...finalAppendContext, recordAcronym: finalRecord.conferenceAcronym, event: 'save_batch_append_success' }, "Successfully appended final result");
@@ -292,7 +292,7 @@ export const saveBatchToFile = async (
         // --- Hết ghi bản ghi cuối cùng ---
 
         // parentLogger.info({ ...logContext, event: 'save_batch_finish_success' }, "Finishing saveBatchToFile successfully");
-        return; // <--- Kết thúc thành công (Promise<void>)
+        return ; // <--- Kết thúc thành công (Promise<void>)
 
     } catch (error: any) {
         // Bắt các lỗi được ném từ các bước trước (API calls, file read/write errors, append error)
@@ -313,7 +313,7 @@ export const saveHTMLContent = async (
     batchPromises: Promise<void>[],
     year: number,
     parentLogger: typeof logger
-): Promise<void> => {
+): Promise<any> => {
     // Context kế thừa từ taskLogger của crawlConferences, thêm function name
     const baseLogContext = { conferenceAcronym: conference.Acronym, conferenceTitle: conference.Title, function: 'saveHTMLContent' };
     parentLogger.info({ ...baseLogContext, linkCount: links.length, event: 'save_html_start' }, "Starting saveHTMLContent");
@@ -323,7 +323,7 @@ export const saveHTMLContent = async (
         if (!links || links.length === 0) {
             parentLogger.error({ ...baseLogContext, event: 'save_html_skipped_no_links' }, "Called with empty or null links array, skipping.");
             parentLogger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent (no links)"); // Log kết thúc
-            return;
+            return 
         }
 
         let finalAdjustedAcronym = "";
@@ -563,7 +563,7 @@ export const saveHTMLContent = async (
         }
 
         parentLogger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent"); // Log kết thúc hàm
-        return;
+        return ; 
 
     } catch (error: any) {
         parentLogger.error({ ...baseLogContext, err: error, event: 'save_html_unhandled_error' }, "Unhandled error in saveHTMLContent main try block");

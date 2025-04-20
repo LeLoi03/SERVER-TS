@@ -109,7 +109,6 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         });
         routeLogger.info({ statusCode: 200, updateResultsCount: processedUpdateResults.length }, "Sent successful response");
 
-
     } catch (error: any) {
         const endTime = Date.now();
         const runTime = endTime - startTime;
@@ -126,7 +125,6 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         }
     }
 }
-
 
 // --- Function to handle the crawl-journals logic ---
 export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {

@@ -1,2 +1,51 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"ACM International Conference on Recommender Systems","RecSys","https://recsys.acm.org/recsys25/","https://recsys.acm.org/recsys25/call/","https://recsys.acm.org/recsys25/dates/","","","","No location","No city/state/province","No country","No continent","Offline","{}","{}","{}","{}","{}","No topics","No publisher","No summary available","No call for papers available"
+"EURO AMERICAN CONFERENCE ON TELEMATICS AND INFORMATION SYSTEMS","EATIS","https://eatis.org/eatis2024/","https://eatis.org/eatis2024/call.pdf","None","Conference dates: July 3 - 5, 2024
+Year: 2024
+Location: University of Cabo Verde, Cabo Verde
+City-State-Province: Praia
+Country: Cabo Verde
+Continent: Africa
+Type: Offline
+Papers Submission Deadline: January 27, 2024
+Notification of acceptance: March 15, 2024
+Camera Ready & Author Registration: April 5, 2024
+Topics: Smart Cities, Information Systems, Information and Communication Technologies, Telematics Systems, Big Data, Cloud Computing, Distributed Systems, Human-Computer Interaction, E-applications, Intelligent Transportation Systems, Internet of Things, Education Methodologies based on ICT, Mobile Computing, Performance Analysis of Computational Systems, Web Architecture, Web Technologies, Web Systems, Web Semantics","July 3 - 5, 2024","2024","University of Cabo Verde, Cabo Verde","Praia","Cabo Verde","Africa","Offline","{""Papers Submission Deadline"":""January 27, 2024""}","{""Notification of acceptance"":""March 15, 2024""}","{""Camera Ready & Author Registration"":""April 5, 2024""}","{}","{}","Smart Cities, Information Systems, Information and Communication Technologies, Telematics Systems, Big Data, Cloud Computing, Distributed Systems, Human-Computer Interaction, E-applications, Intelligent Transportation Systems, Internet of Things, Education Methodologies based on ICT, Mobile Computing, Performance Analysis of Computational Systems, Web Architecture, Web Technologies, Web Systems, Web Semantics","No publisher","The 12th Euro American Conference on Telematics and Information Systems (EATIS 2024) will be held in Cabo Verde from July 3rd-5th, 2024, at the University of Cabo Verde.  The conference focuses on communities, contents, and technologies belonging to smart cities, encouraging the use of Information Systems, Information and Communication Technologies, and Telematics Systems to improve citizen access to government and public services.","# EATIS 2024: Call for Papers
+
+The 12th Euro American Conference on Telematics and Information Systems (EATIS 2024) will be held in **Praia, Cabo Verde from July 3rd to 5th, 2024 at the University of Cabo Verde.**
+
+EATIS.org is focused on the communities, contents, and technologies belonging to smart cities.  EATIS 2024 encourages the use of Information System (IS), Information and Communication Technologies (ICT), and Telematics Systems, making it easier for citizens to access government and public services at various levels, without any adverse impact on ethical aspects.
+
+## Topics of Interest
+
+Areas of interest include but are not limited to:
+
+1.  Big Data (Data Science and Analysis, Machine Learning and Open Data)
+2.  Cloud Computing and Distributed Systems
+3.  Human-Computer Interaction (HCI)
+4.  E-applications and case uses
+5.  Intelligent Transportation Systems (ITS)
+6.  Internet of Things (IoT): Middleware, Applications
+7.  Education Methodologies based on ICT
+8.  Mobile Computing and Applications
+9.  Performance Analysis of Computational Systems
+10. Web Architecture and Web Technologies and Society
+11. Web Systems and Web Semantic
+
+## Paper Submission
+
+We kindly ask for submissions of high-quality papers reporting original and novel research results on all above topics. All submitted papers will be blinded and peer-reviewed. Papers must be initially submitted in pdf (without author names) according to the guide for authors and templates given at the EATIS2024 webpage. Papers must be written in English, Spanish, or Portuguese, but Abstract, Title, and Keywords always in English. Papers must be unpublished and not submitted elsewhere. Critical parameters will include originality, significance, relevance, technical soundness, and language clarity.
+
+Type of submissions are: (i) short papers (with max 4 pages) and (ii) full papers (with max 8 pages). Short papers will be presented in the Panel/Poster Sessions. Full papers will be presented in Oral Sessions. Short and full papers will be included in the proceedings.  It is highly recommended to include any of the 11 areas of interest as a Keyword to ease the reviewing process.
+
+*   **Download Call for Paper:** [call.pdf](call.pdf)
+*   **Template for submission:** [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template) (select the double column template)
+*   **Submission for EATIS2024:** [https://cmt3.research.microsoft.com/EATIS2024](https://cmt3.research.microsoft.com/EATIS2024)
+
+At least one author must be registered and attend the conference if the paper is accepted.
+
+## Important Deadlines
+
+*   **Submission of short and full papers:** January 27, 2024
+*   **Notification of acceptance:** March 15, 2024
+*   **Camera Ready & Author Registration:** April 5, 2024
+*   **Conference days:** July 3rd ~ 5th, 2024"

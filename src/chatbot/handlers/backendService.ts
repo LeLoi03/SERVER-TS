@@ -2,7 +2,7 @@
 import logToFile from '../utils/logger';
 import 'dotenv/config';
 
-const DATABASE_URL = "http://confhub.engineer/api/v1"; // Your backend base URL
+const DATABASE_URL = process.env.NEXT_PUBLIC_DATABASE_URL + "/api/v1"; // Your backend base URL
 
 async function executeApiCall(endpoint: string, searchQuery: string): Promise<string> {
     const fullUrl = `${DATABASE_URL}/${endpoint}?${searchQuery}`;

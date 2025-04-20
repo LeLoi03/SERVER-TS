@@ -344,7 +344,7 @@ export const writeCSVStream = async (
     jsonlFilePath: string,
     csvFilePath: string,
     parentLogger: typeof logger,
-): Promise<void> => {
+): Promise<any> => {
     const logContext = { jsonlInput: jsonlFilePath, csvOutput: csvFilePath, function: 'writeCSVStream' };
     parentLogger.info({ ...logContext, event: 'csv_stream_start' }, 'Starting CSV writing stream');
 
@@ -419,6 +419,8 @@ export const writeCSVStream = async (
             recordsProcessed,
             recordsWritten
         }, 'CSV writing stream finished successfully.');
+
+        return rowObjectStream;
 
     } catch (error: any) {
         parentLogger.error({
