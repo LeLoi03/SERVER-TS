@@ -1,9 +1,7 @@
 import { Request, Response } from 'express';
-
 import 'dotenv/config';
 import path from 'path';
 import fs from 'fs';
-
 import { logger } from '../conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from '../conference/3_core_portal_scraping';
 import { crawlConferences } from '../conference/crawl_conferences';
@@ -12,8 +10,6 @@ import { ConferenceData } from '../conference/types';
 import { ProcessedResponseData } from '../conference/types';
 
 
-export const OUTPUT_JSON: string = path.join(__dirname, './journal/data/all_journal_data.json');
-// Định nghĩa đường dẫn file output (nên lấy từ config hoặc nơi tập trung)
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');
 const EVALUATE_CSV_PATH = path.join(__dirname, './data/evaluate.csv');
 
