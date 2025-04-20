@@ -2,12 +2,10 @@
 import {
     GenerationConfig,
     Tool,
-    FunctionDeclaration,
     FunctionResponsePart,
-    EnhancedGenerateContentResponse, // If used by geminiService
 } from "@google/generative-ai";
 import { Socket } from 'socket.io';
-import logToFile from '../utils/logger'; // Adjust path as needed
+import logToFile from '../utils/logger';
 import {
     HistoryItem,
     GeminiInteractionResult,
@@ -15,21 +13,21 @@ import {
     ResultUpdate,
     ErrorUpdate,
     ThoughtStep,
-    ChatUpdate,
-    ChatAction,       // <<< Import ChatAction
-    Language,         // <<< Import Language type
-} from '../shared/types'; // Adjust path as needed
-import { GeminiService } from '../gemini/geminiService'; // Adjust path as needed
+    ChatAction,
+    Language,
+} from '../shared/types';
+import { GeminiService } from '../gemini/geminiService';
 import {
     executeGetConferences,
     executeGetJournals,
     executeGetWebsiteInformation,
-
-    // executeDrawChart // Uncomment if you have this backend function
-} from './backendService'; // Adjust path as needed
-import { loadModelConfig } from '../gemini/configLoader'; // Adjust path as needed
-import { getLanguageConfig } from '../utils/languageConfig'; // <<< Import language helpers
-import { ApiCallResult } from './backendService'; // <<< Import the new type
+    executeGetUserFollowedItems,
+    executeFollowUnfollowApi,
+    findItemId
+} from './backendService';
+import { loadModelConfig } from '../gemini/configLoader';
+import { getLanguageConfig } from '../utils/languageConfig';
+import { ApiCallResult } from './backendService';
 
 // --- Services & Base Config ---
 // Consider making the model name configurable per handler if needed
@@ -37,21 +35,23 @@ const chatbotService = new GeminiService(process.env.GEMINI_API_KEY || "", proce
 const chatbotConfigPrefix = "CHATBOT"; // Assuming a config prefix for chatbot settings
 const chatbotGenerationConfig: GenerationConfig = loadModelConfig(chatbotConfigPrefix);
 
-// --- Helper Function: Execute Function Call (REVISED - Simplified getConf/getJourn) ---
+// --- Helper Function: Execute Function Call (REVISED - Token Only) ---
 async function executeFunctionCall(
     functionCall: { name: string; args: any; },
-    socket: Socket,
+    socket: Socket, // <<< Receive the full Socket object
     handlerId: string,
     language: Language
 ): Promise<{ modelResponseContent: string, frontendAction?: ChatAction }> {
 
     const declaredFunctionName = functionCall.name;
-    let modelResponseContent: string = ''; // Content to send BACK TO THE MODEL
-    let frontendAction: ChatAction | undefined = undefined; // Action for the FRONTEND (ONLY set for 'navigation')
+    let modelResponseContent: string = '';
+    let frontendAction: ChatAction | undefined = undefined;
     const socketId = socket.id;
 
+    // --- Get Authentication Token directly from socket data ---
+    const userToken = socket.data.token as string | null; // Get token attached by middleware
+    // ---
     const safeEmitStatus = (step: string, message: string, details?: any): boolean => {
-        // ... (safeEmitStatus implementation remains the same) ...
         if (!socket.connected) {
             logToFile(`[${handlerId} ${socketId}] ExecuteFunctionCall SKIPPED Status Emit: Client disconnected. Event: status_update (${step})`);
             return false;
@@ -66,7 +66,7 @@ async function executeFunctionCall(
         }
     };
 
-    logToFile(`[${handlerId} ${socketId}] Executing backend logic for declared function: ${declaredFunctionName}`);
+    logToFile(`[${handlerId} ${socketId}] Executing backend logic for function: ${declaredFunctionName} (Authenticated: ${!!userToken})`); // Log auth status
     if (!safeEmitStatus('function_call', `Calling function: ${declaredFunctionName}...`, { functionName: declaredFunctionName, args: functionCall.args })) {
         return { modelResponseContent: "Error: Could not initiate function call processing.", frontendAction: undefined };
     }
@@ -163,6 +163,99 @@ async function executeFunctionCall(
                     safeEmitStatus('function_error', 'Invalid location for map.');
                     frontendAction = undefined;
                 }
+                break;
+            }
+            // <<< END NEW CASE >>>
+
+            
+            case "followUnfollowItem": {
+                logToFile(`[${handlerId} ${socketId}] Handling followUnfollowItem function.`);
+                const args = functionCall.args;
+                const itemType = args?.itemType as ('conference' | 'journal' | undefined);
+                const identifier = args?.identifier as (string | undefined);
+                const identifierType = args?.identifierType as ('acronym' | 'title' | 'id' | undefined);
+                const action = args?.action as ('follow' | 'unfollow' | undefined);
+
+                // --- Input Validation (Include Auth Check) ---
+                if (!itemType || !identifier || !action) { /* ... handle missing args ... */ break; }
+                // <<< CHECK AUTHENTICATION (Token Presence) >>>
+                if (!userToken) {
+                     modelResponseContent = "Error: You must be logged in to follow or unfollow items.";
+                     logToFile(`[${handlerId} ${socketId}] Error: User not authenticated (no token) for follow/unfollow.`);
+                     safeEmitStatus('function_error', 'User not authenticated.');
+                     frontendAction = undefined;
+                     break; // <<< Exit case if no token
+                }
+                // --- End Auth Check ---
+
+                safeEmitStatus('processing_request', `Processing ${action} request for ${itemType}: "${identifier}"...`);
+
+
+                // --- Step 1: Find the Item ID ---
+                const idResult = await findItemId(identifier, identifierType, itemType);
+                if (!idResult.success || !idResult.itemId) {
+                    modelResponseContent = idResult.errorMessage || `Sorry, I couldn't find the specific ${itemType} "${identifier}" to ${action}.`;
+                    logToFile(`[${handlerId} ${socketId}] Error finding item ID for follow/unfollow: ${idResult.errorMessage}`);
+                    safeEmitStatus('function_error', `Could not find ${itemType}.`);
+                    frontendAction = undefined;
+                    break;
+                }
+                const itemId = idResult.itemId;
+
+                // Step 2: Check Current Follow Status (Pass token)
+                safeEmitStatus('checking_status', `Checking follow status...`);
+                const followStatusResult = await executeGetUserFollowedItems(itemType, userToken); // <<< Pass token
+                if (!followStatusResult.success) {
+                    modelResponseContent = followStatusResult.errorMessage || `Sorry, I couldn't check your current follow status due to an error.`;
+                    logToFile(`[${handlerId} ${socketId}] Error checking follow status: ${followStatusResult.errorMessage}`);
+                    safeEmitStatus('function_error', 'Error checking follow status.');
+                    frontendAction = undefined;
+                    break;
+                }
+                const isCurrentlyFollowing = followStatusResult.itemIds.includes(itemId);
+                logToFile(`[${handlerId} ${socketId}] User (ID: ${userToken}) follow status for ${itemType} ${itemId}: ${isCurrentlyFollowing}`);
+
+                // --- Step 3: Determine Action and Execute if Needed ---
+                let finalMessage = "";
+                let needsApiCall = false;
+
+                if (action === 'follow') {
+                    if (isCurrentlyFollowing) {
+                        finalMessage = `You are already following the ${itemType}: "${identifier}".`;
+                        logToFile(`[${handlerId} ${socketId}] Action 'follow' requested, but user already following.`);
+                    } else {
+                        finalMessage = `Okay, attempting to follow the ${itemType}: "${identifier}"...`; // Placeholder, will be updated after API call
+                        needsApiCall = true;
+                    }
+                } else { // action === 'unfollow'
+                    if (!isCurrentlyFollowing) {
+                        finalMessage = `You are not currently following the ${itemType}: "${identifier}".`;
+                        logToFile(`[${handlerId} ${socketId}] Action 'unfollow' requested, but user not following.`);
+                    } else {
+                        finalMessage = `Okay, attempting to unfollow the ${itemType}: "${identifier}"...`; // Placeholder
+                        needsApiCall = true;
+                    }
+                }
+
+                // Step 4: Call Follow/Unfollow API if necessary (Pass ONLY token)
+                if (needsApiCall) {
+                    safeEmitStatus('updating_follow_status', `${action === 'follow' ? 'Following' : 'Unfollowing'}...`);
+                    // <<< CALL API WITH TOKEN ONLY >>>
+                    const apiActionResult = await executeFollowUnfollowApi(itemId, itemType, action, userToken);
+
+                    if (apiActionResult.success) {
+                        finalMessage = `Successfully ${action === 'follow' ? 'followed' : 'unfollowed'} the ${itemType}: "${identifier}".`;
+                        logToFile(`[${handlerId} ${socketId}] API call for ${action} successful.`);
+                        safeEmitStatus('update_success', `Successfully ${action}ed ${itemType}.`);
+                    } else {
+                        finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${action} the ${itemType}: "${identifier}". Please try again later.`;
+                        logToFile(`[${handlerId} ${socketId}] API call for ${action} failed: ${apiActionResult.errorMessage}`);
+                        safeEmitStatus('function_error', `Failed to ${action} ${itemType}.`);
+                    }
+                }
+
+                modelResponseContent = finalMessage;
+                frontendAction = undefined; // No direct UI action from backend for follow/unfollow
                 break;
             }
             // <<< END NEW CASE >>>
@@ -296,14 +389,14 @@ export async function handleNonStreaming(
 
                 // **IMPORTANT:** Store the frontendAction *only if* it's for navigation (or other client actions)
                 // Do NOT store it if it came from getConferences/getJournals (it will be undefined anyway now)
-                 // <<< UPDATE: Store action if it's navigation OR openMap >>>
-                 if ((functionCall.name === 'navigation' || functionCall.name === 'openGoogleMap') && frontendAction) {
+                // <<< UPDATE: Store action if it's navigation OR openMap >>>
+                if ((functionCall.name === 'navigation' || functionCall.name === 'openGoogleMap') && frontendAction) {
                     frontendActionToSend = frontendAction;
                     logToFile(`[${handlerId} ${socketId}] Stored frontendAction from '${functionCall.name}' call.`);
-                } else if (frontendAction){
+                } else if (frontendAction) {
                     logToFile(`[${handlerId} ${socketId}] Warning: frontendAction generated by non-client-action function '${functionCall.name}'. Ignoring it.`);
                 }
-                 // <<< END UPDATE >>>
+                // <<< END UPDATE >>>
 
 
                 if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected after function execution in Turn ${currentTurn}.`); return; }

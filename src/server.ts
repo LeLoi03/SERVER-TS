@@ -1,18 +1,33 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
+import { logger } from './conference/11_utils'; // Giả sử logger được cấu hình đúng
+import logToFile from './chatbot/utils/logger'; // Giả sử logger này khác với pino logger?
+
 import cors from 'cors';
 import 'dotenv/config';
 import cron from 'node-cron';
-import { logger } from './conference/11_utils'; // Giả sử logger được cấu hình đúng
 import { handleCrawlConferences, handleCrawlJournals } from './crawl/crawl';
 import { performLogAnalysis } from './client/service/logAnalysisService';
 import { LogAnalysisResult } from './client/types/logAnalysis';
-import { handleNonStreaming, handleStreaming } from './chatbot/handlers/intentHandler'; // Chỉ cần handleStreaming nếu chỉ dùng socket
-import logToFile from './chatbot/utils/logger'; // Giả sử logger này khác với pino logger?
+import { handleNonStreaming } from './chatbot/handlers/intentHandler'; // Chỉ cần handleStreaming nếu chỉ dùng socket
 import { HistoryItem, ErrorUpdate } from './chatbot/shared/types';
 import { createLogAnalysisRouter } from './client/route/logAnalysisRoutes'; // <<< Import hàm tạo router
 import { Language } from './chatbot/shared/types';
+import jwt from 'jsonwebtoken'; // <<< Import JWT
+
+// --- Interface for Decoded Token Payload ---
+// --- Interface for Decoded Token Payload (Optional but good practice) ---
+// We might not use its content directly here, but it's good for verify structure
+interface DecodedToken {
+    // Expect fields required by your backend API authentication
+    // Example: might still contain 'id' or 'sub' but we won't store it in socket.data.user
+    [key: string]: any; // Allow other fields
+    iat?: number;
+    exp?: number;
+}
+
+
 // --- Core Application Setup ---
 const app = express();
 const httpServer = new HttpServer(app);
@@ -20,11 +35,15 @@ const httpServer = new HttpServer(app);
 // --- Configuration ---
 const PORT = process.env.PORT || 3001;
 const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS?.split(',') || [`http://localhost:8386`, `https://confhub.ddns.net`]; // Hoặc một port client khác
+const JWT_SECRET = process.env.JWT_SECRET; // <<< Load your JWT secret key
+if (!JWT_SECRET) {
+    logToFile('[Server Config] CRITICAL ERROR: JWT_SECRET environment variable is not set!');
+    process.exit(1); // Exit if secret is missing
+}
 logToFile(`[Server Config] Allowed CORS Origins: ${allowedOrigins.join(', ')}`);
 
 // --- Global State Variables ---
-// Dùng Map để lưu trữ socket của người dùng đã đăng ký (nếu cần map userId -> socket)
-export const connectedUsers = new Map<string, Socket>();
+// Dùng Map để lưu trữ socket của người dùng đã đăng ký (nếu cần map token -> socket)
 // Dùng Map để lưu trữ lịch sử chat cho mỗi phiên kết nối socket
 const sessionHistories: Map<string, HistoryItem[]> = new Map();
 // Lưu trữ kết quả phân tích log mới nhất
@@ -77,38 +96,89 @@ export const io = new SocketIOServer(httpServer, {
 });
 
 
-// --- Socket.IO Connection Handling (Unified) ---
+
+// --- Socket.IO Authentication Middleware (REVISED - Token Only) ---
+io.use((socket: Socket, next) => {
+    const token = socket.handshake.auth.token as string | undefined;
+    const socketId = socket.id;
+
+    logToFile(`[Socket Auth Middleware] Attempting auth for socket ${socketId}. Token provided: ${!!token}`);
+
+    if (!token) {
+        logToFile(`[Socket Auth Middleware] No token provided for socket ${socketId}. Allowing anonymous connection.`);
+        socket.data.token = null; // Mark as anonymous / no token
+        return next(); // Allow connection
+    }
+
+    try {
+        // Verify the token's validity (signature, expiration)
+        jwt.verify(token, JWT_SECRET); // We don't need the decoded payload here
+
+        // --- Token is valid ---
+        logToFile(`[Socket Auth Middleware] Token validated successfully for socket ${socketId}.`);
+
+        // Attach ONLY the token to the socket data
+        socket.data.token = token;
+
+        next(); // Proceed to the connection handler
+
+    } catch (err: any) {
+        // --- Token is invalid or expired ---
+        logToFile(`[Socket Auth Middleware] Token validation failed for socket ${socketId}. Reason: ${err.message}`);
+        const error = new Error(`Authentication error: Invalid or expired token.`); // More generic error
+        // error.data = { code: 'AUTH_FAILED', message: err.message };
+        next(error); // Reject the connection
+    }
+});
+// --- End Socket.IO Authentication Middleware ---
+
+
+// --- Socket.IO Connection Handling (REVISED - Token Only) ---
 io.on('connection', (socket: Socket) => {
     const socketId = socket.id;
-    logToFile(`[Socket.IO] Client connected: ${ socketId }`);
-    sessionHistories.set(socketId, []); // Initialize history
-    logToFile(`[Socket.IO ${ socketId }] Initialized empty chat history.`);
-    socket.on('register', (userId: string) => { if (userId && typeof userId === 'string') { connectedUsers.set(userId, socket); logToFile(`[Socket.IO ${socketId}] User '${userId}' registered`); socket.emit('registration_success', { userId }); } else { logToFile(`[Socket.IO ${socketId}] Invalid user ID: ${userId}`); socket.emit('registration_error', { message: 'Invalid user ID.' }); } });
-    socket.on('disconnect', (reason: string) => { logToFile(`[Socket.IO] Client disconnected: ${socketId}. Reason: ${reason}`); let disconnectedUserId: string | null = null; connectedUsers.forEach((userSocket, userId) => { if (userSocket.id === socketId) { connectedUsers.delete(userId); disconnectedUserId = userId; logToFile(`[Socket.IO ${socketId}] User '${userId}' unregistered.`); } }); sessionHistories.delete(socketId); logToFile(`[Socket.IO ${socketId}] Removed chat history.`); });
+    const authenticatedToken = socket.data.token as string | null; // Get token attached by middleware
+
+    // Log connection status based on token presence
+    if (authenticatedToken) {
+        logToFile(`[Socket.IO] Client connected: ${socketId} (Authenticated via Token)`);
+        // No need to manage connectedUsers map here based on token alone usually
+    } else {
+        logToFile(`[Socket.IO] Client connected: ${socketId} (Anonymous)`);
+    }
+
+    sessionHistories.set(socketId, []);
+    logToFile(`[Socket.IO ${socketId}] Initialized empty chat history.`);
+
+    // --- Disconnect Handling (REVISED) ---
+    socket.on('disconnect', (reason: string) => {
+        const token = socket.data.token as string | null;
+        logToFile(`[Socket.IO] Client disconnected: ${socketId}. Reason: ${reason}`);
+        if (token) {
+            logToFile(`[Socket.IO ${socketId}] Authenticated user (identified by token) disconnected.`);
+            // Remove from connectedUsers if you were tracking by token, but likely not needed
+        } else {
+            logToFile(`[Socket.IO ${socketId}] Anonymous user disconnected.`);
+        }
+        sessionHistories.delete(socketId);
+        logToFile(`[Socket.IO ${socketId}] Removed chat history.`);
+    });
+
+    // --- Error Handling (Keep as is) ---
     socket.on('error', (err: Error) => { logToFile(`[Socket.IO ${socketId}] Socket Error: ${err.message}`); });
 
-    // Handle Incoming Chat Messages (UPDATED)
+    // --- Handle 'send_message' (Keep as is - it calls intentHandler) ---
     socket.on('send_message', async (data: { userInput: string; isStreaming?: boolean; language: Language }) => {
-        const { userInput, isStreaming = true, language } = data; // <<< Extract language, provide default
-        logToFile(`[Socket.IO ${socketId}] Received 'send_message': UserInput = "${userInput}", Streaming = ${isStreaming}, Language = ${language}`);
-
-        // --- Validation ---
-        if (!userInput || typeof userInput !== 'string' || !userInput.trim()) {
-            logToFile(`[Socket.IO ${socketId}] Invalid 'send_message' data: Missing or invalid userInput.`);
-            return socket.emit('chat_error', { type: 'error', message: 'Invalid request: Missing or invalid userInput.', step: 'validation' } as ErrorUpdate);
-        }
-        if (typeof isStreaming !== 'boolean') {
-            logToFile(`[Socket.IO ${socketId}] Invalid 'send_message' data: Invalid 'isStreaming' flag.`);
-            return socket.emit('chat_error', { type: 'error', message: 'Invalid request: Invalid streaming flag.', step: 'validation' } as ErrorUpdate);
-        }
-        // Optional: Validate language if you have a defined list
-        // if (!AVAILABLE_LANGUAGES.includes(language)) {
-        //     logToFile(`[Socket.IO ${socketId}] Invalid 'send_message' data: Unsupported language: ${language}. Falling back to default.`);
-        //     language = DEFAULT_LANGUAGE; // Or return an error:
-        //     // return socket.emit('chat_error', { type: 'error', message: `Unsupported language: ${language}`, step: 'validation' } as ErrorUpdate);
+        const { userInput, isStreaming = true, language } = data;
+        // <<< IMPORTANT: Add Auth Check before calling handlers that require it >>>
+        // Example: Check if the requested action requires auth
+        // if (actionRequiresAuth(userInput) && !socket.data.user) {
+        //      logToFile(`[Socket.IO ${socketId}] Blocked unauthorized attempt for input: ${userInput}`);
+        //      return socket.emit('chat_error', { type: 'error', message: 'You must be logged in to perform this action.', step: 'authorization' } as ErrorUpdate);
         // }
+        // For follow/unfollow, the check happens *inside* executeFunctionCall
 
-        // --- Get History ---
+
+        logToFile(`[Socket.IO ${socketId}] Received 'send_message': UserInput = "${userInput}", Streaming = ${isStreaming}, Language = ${language}`);
         const currentHistory = sessionHistories.get(socketId);
         if (currentHistory === undefined) {
             logToFile(`[Socket.IO ${socketId}] CRITICAL Error: History not found. Re-initializing.`);
@@ -122,18 +192,18 @@ io.on('connection', (socket: Socket) => {
             let updatedHistory;
 
             if (isStreaming) {
-                // --- Gọi Handler Streaming ---
-                logToFile(`[Socket.IO ${socketId}] Calling handleStreaming...`);
-                // handleStreaming sẽ tự emit 'status_update', 'chat_update', 'chat_result'/'chat_error'
-                // Nó cũng nên trả về lịch sử đã cập nhật (bao gồm cả phản hồi cuối cùng của assistant)
-                updatedHistory = await handleStreaming(
-                    userInput, // userInput thực ra không cần nữa nếu đã thêm vào historyForHandler? Xem lại logic handleStreaming
-                    currentHistory, // <<< Truyền lịch sử đã bao gồm input của user
-                    socket,
-                    language // <<< Pass language
+                // // --- Gọi Handler Streaming ---
+                // logToFile(`[Socket.IO ${socketId}] Calling handleStreaming...`);
+                // // handleStreaming sẽ tự emit 'status_update', 'chat_update', 'chat_result'/'chat_error'
+                // // Nó cũng nên trả về lịch sử đã cập nhật (bao gồm cả phản hồi cuối cùng của assistant)
+                // updatedHistory = await handleStreaming(
+                //     userInput, // userInput thực ra không cần nữa nếu đã thêm vào historyForHandler? Xem lại logic handleStreaming
+                //     currentHistory, // <<< Truyền lịch sử đã bao gồm input của user
+                //     socket,
+                //     language // <<< Pass language
 
-                );
-                logToFile(`[Socket.IO ${socketId}] handleStreaming finished.`);
+                // );
+                // logToFile(`[Socket.IO ${socketId}] handleStreaming finished.`);
 
             } else {
                 // --- Gọi Handler Non-Streaming ---

@@ -124,7 +124,6 @@ const formatChangeMarkdown = (currentValue: any, previousValue: any, formatter?:
 
 
 // --- Data Transformation Logic with Markdown ---
-
 export function transformConferenceData(rawData: string, searchQuery: string): string {
     logToFile(`Transforming conference data with Markdown. Search query: ${searchQuery}`);
     let data;

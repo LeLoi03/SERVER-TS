@@ -6,7 +6,8 @@ import logToFile from '../utils/logger'; // Adjust path
 
 // Import all language-specific declarations and instructions
 import {
-    englishSystemInstructions, english_getConferencesDeclaration, english_getJournalsDeclaration, english_getWebsiteInformationDeclaration, english_navigationDeclaration, english_openGoogleMapDeclaration,
+    englishSystemInstructions, english_getConferencesDeclaration, english_getJournalsDeclaration, english_getWebsiteInformationDeclaration, 
+    english_navigationDeclaration, english_openGoogleMapDeclaration, english_followUnfollowItemDeclaration,
     vietnameseSystemInstructions, vietnam_getConferencesDeclaration, vietnam_getJournalsDeclaration, vietnam_getWebsiteInformationDeclaration, 
     chineseSystemInstructions, china_getConferencesDeclaration, china_getJournalsDeclaration, china_getWebsiteInformationDeclaration, china_drawChartDeclaration // Make sure this one is imported if used
 } from "../gemini/functionDeclarations"; // Adjust path
@@ -26,7 +27,8 @@ const languageConfigurations: Record<Language, LanguageConfig> = {
             english_getJournalsDeclaration,
             english_getWebsiteInformationDeclaration,
             english_navigationDeclaration,
-            english_openGoogleMapDeclaration, // <<< ADDED
+            english_openGoogleMapDeclaration,
+            english_followUnfollowItemDeclaration
 
         ],
     },
