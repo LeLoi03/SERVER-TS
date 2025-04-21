@@ -12,8 +12,6 @@ interface SaveRequestBody {
     title: string; // Include title for better matching if needed
 }
 export const saveCrawlConferenceFromCsvToJson:  RequestHandler = async (req, res) => {
-    console.log('Received request to save conference from CSV to JSON.');
-    console.log(`Request body: ${JSON.stringify(req.body)}`);
     let { acronym } = req.body;
 
     if (!acronym ) {

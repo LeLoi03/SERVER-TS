@@ -19,7 +19,7 @@ const app = express();
 
 
 // --- CORS Configuration ---
-const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS?.split(',') || ['http://localhost:8386'];
+const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS?.split(',') || ['*'];
 logToFile(`[Server] Allowed CORS Origins: ${allowedOrigins.join(', ')}`);
 const corsOptions = {
     origin: function (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) {

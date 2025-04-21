@@ -1,51 +1,65 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"EURO AMERICAN CONFERENCE ON TELEMATICS AND INFORMATION SYSTEMS","EATIS","https://eatis.org/eatis2024/","https://eatis.org/eatis2024/call.pdf","None","Conference dates: July 3 - 5, 2024
-Year: 2024
-Location: University of Cabo Verde, Cabo Verde
-City-State-Province: Praia
-Country: Cabo Verde
-Continent: Africa
+"International Workshop on Information Security Applications","WISA","https://www.wisa.or.kr/","https://www.wisa.or.kr/society/kiisc/conference/wisa2024/c4pOriginal","None","","","","No location","No city/state/province","No country","No continent","Offline","{}","{}","{}","{}","{}","No topics","No publisher","No summary available","No call for papers available"
+"International Workshop on Modelling in Software Engineering","MISE","https://conf.researchr.org/home/icse-2025/wsese-2025","https://conf.researchr.org/home/icse-2025","https://conf.researchr.org/home/icse-2025","Conference dates: May 27 - 3, 2025
+Year: 2025
+Location: Ottawa, Ontario, Canada
+City-State-Province: Ottawa, Ontario
+Country: Canada
+Continent: North America
 Type: Offline
-Papers Submission Deadline: January 27, 2024
-Notification of acceptance: March 15, 2024
-Camera Ready & Author Registration: April 5, 2024
-Topics: Smart Cities, Information Systems, Information and Communication Technologies, Telematics Systems, Big Data, Cloud Computing, Distributed Systems, Human-Computer Interaction, E-applications, Intelligent Transportation Systems, Internet of Things, Education Methodologies based on ICT, Mobile Computing, Performance Analysis of Computational Systems, Web Architecture, Web Technologies, Web Systems, Web Semantics","July 3 - 5, 2024","2024","University of Cabo Verde, Cabo Verde","Praia","Cabo Verde","Africa","Offline","{""Papers Submission Deadline"":""January 27, 2024""}","{""Notification of acceptance"":""March 15, 2024""}","{""Camera Ready & Author Registration"":""April 5, 2024""}","{}","{}","Smart Cities, Information Systems, Information and Communication Technologies, Telematics Systems, Big Data, Cloud Computing, Distributed Systems, Human-Computer Interaction, E-applications, Intelligent Transportation Systems, Internet of Things, Education Methodologies based on ICT, Mobile Computing, Performance Analysis of Computational Systems, Web Architecture, Web Technologies, Web Systems, Web Semantics","No publisher","The 12th Euro American Conference on Telematics and Information Systems (EATIS 2024) will be held in Cabo Verde from July 3rd-5th, 2024, at the University of Cabo Verde.  The conference focuses on communities, contents, and technologies belonging to smart cities, encouraging the use of Information Systems, Information and Communication Technologies, and Telematics Systems to improve citizen access to government and public services.","# EATIS 2024: Call for Papers
+Submission of papers: November 18, 2024
+Camera-ready: February 5, 2025
+Notification: December 8, 2024
+Topics: Software Engineering, Empirical Studies in Software Engineering, Machine Learning, Methodological Issues","May 27 - 3, 2025","2025","Ottawa, Ontario, Canada","Ottawa, Ontario","Canada","North America","Offline","{""Submission of papers"":""November 18, 2024"",""Camera-ready"":""February 5, 2025""}","{""Notification"":""December 8, 2024""}","{}","{}","{}","Software Engineering, Empirical Studies in Software Engineering, Machine Learning, Methodological Issues","No publisher","The 2nd International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE 2025) will be held in Ottawa, Canada, from April 27 to May 3, 2025, co-located with ICSE 2025. The workshop aims to increase awareness of the importance of quality and appropriateness in the methods applied during the different stages of software engineering empirical studies to yield reliable results.","# WSESE 2025: Call for Papers
 
-The 12th Euro American Conference on Telematics and Information Systems (EATIS 2024) will be held in **Praia, Cabo Verde from July 3rd to 5th, 2024 at the University of Cabo Verde.**
+The 2nd International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE 2025) will be co-located with ICSE 2025 in **Ottawa, Canada, from April 27 to May 3, 2025**.
 
-EATIS.org is focused on the communities, contents, and technologies belonging to smart cities.  EATIS 2024 encourages the use of Information System (IS), Information and Communication Technologies (ICT), and Telematics Systems, making it easier for citizens to access government and public services at various levels, without any adverse impact on ethical aspects.
+## Theme and Goals
+
+The workshop aims to increase awareness of the importance of quality and appropriateness in the methods applied during the different stages of software engineering empirical studies to yield reliable results and to disseminate this knowledge to the broader SE community. This year, we are placing a special emphasis on **Machine Learning (ML)**. We encourage submissions that explore the integration and application of ML techniques throughout the empirical process.
 
 ## Topics of Interest
 
-Areas of interest include but are not limited to:
+Topics of interest include, but are not restricted to:
 
-1.  Big Data (Data Science and Analysis, Machine Learning and Open Data)
-2.  Cloud Computing and Distributed Systems
-3.  Human-Computer Interaction (HCI)
-4.  E-applications and case uses
-5.  Intelligent Transportation Systems (ITS)
-6.  Internet of Things (IoT): Middleware, Applications
-7.  Education Methodologies based on ICT
-8.  Mobile Computing and Applications
-9.  Performance Analysis of Computational Systems
-10. Web Architecture and Web Technologies and Society
-11. Web Systems and Web Semantic
+*   Issues with the motivation and definition of appropriate research questions.
+*   Issues with the operationalization, e.g., missing standard metrics.
+*   Issues with the systematic identification of threats to validity and how to address them.
+*   Issues selecting an appropriate study design and the consequences of that selection.
+*   Issues with drawing appropriate conclusions from the findings and generalizing them.
+*   Issues with aggregating results from individual studies.
+*   Issues with reproduction, replication, or families of studies.
+*   Issues with quantitative, qualitative approaches and combined approaches.
+*   Issues with understanding failures and successes: lessons learned.
 
-## Paper Submission
+## Paper Categories
 
-We kindly ask for submissions of high-quality papers reporting original and novel research results on all above topics. All submitted papers will be blinded and peer-reviewed. Papers must be initially submitted in pdf (without author names) according to the guide for authors and templates given at the EATIS2024 webpage. Papers must be written in English, Spanish, or Portuguese, but Abstract, Title, and Keywords always in English. Papers must be unpublished and not submitted elsewhere. Critical parameters will include originality, significance, relevance, technical soundness, and language clarity.
+*   **Technical papers:** (6-8 pages including references) formally describe studies, explain how they were designed and executed to overcome challenges, highlight concrete results, and describe any advances to the state-of-the-art.
+*   **Experience reports / Work in progress:** (4-6 pages including references) describe the experience in conducting studies and lessons learned that address methodological issues.
+*   **Vision / Position papers:** (2-4 pages including references) describe new directions in conducting empirical studies including convincing arguments supported by clear rationale.
+*   **Panel proposals:** (1-2 pages including references) discuss hot topics about conducting empirical studies.
 
-Type of submissions are: (i) short papers (with max 4 pages) and (ii) full papers (with max 8 pages). Short papers will be presented in the Panel/Poster Sessions. Full papers will be presented in Oral Sessions. Short and full papers will be included in the proceedings.  It is highly recommended to include any of the 11 areas of interest as a Keyword to ease the reviewing process.
+Papers must describe original work that has not been submitted to or presented at other forums (although the studies described may have been). Accepted papers will be published in the ICSE workshop proceedings.
 
-*   **Download Call for Paper:** [call.pdf](call.pdf)
-*   **Template for submission:** [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template) (select the double column template)
-*   **Submission for EATIS2024:** [https://cmt3.research.microsoft.com/EATIS2024](https://cmt3.research.microsoft.com/EATIS2024)
+## Submission Information
 
-At least one author must be registered and attend the conference if the paper is accepted.
+Submissions will be made via HotCRP. Papers must be formatted according to [ICSE 2025 guidelines](https://conf.researchr.org/track/icse-2025/icse-2025-research-track#submission-process). Please note that WSESE does not follow a double-anonymous review process.
 
-## Important Deadlines
+## Submission Link
 
-*   **Submission of short and full papers:** January 27, 2024
-*   **Notification of acceptance:** March 15, 2024
-*   **Camera Ready & Author Registration:** April 5, 2024
-*   **Conference days:** July 3rd ~ 5th, 2024"
+[https://wsese2025.hotcrp.com/](https://wsese2025.hotcrp.com/)
+
+## Important Dates
+
+AoE (UTC-12h)
+
+*   **Submission of papers:** November 18, 2024
+*   **Notification:** December 8, 2024
+*   **Camera-ready:** February 5, 2025
+
+## Organizing Committee
+
+*   Sira Vegas, Universidad Politecnica de Madrid, Spain
+*   Andreas Jedlitschka, Fraunhofer IESE, Germany
+*   Sabato Nocera, University of Salerno, Italy
+*   Nyyti Saarimäki, University of Luxembourg, Luxembourg"
