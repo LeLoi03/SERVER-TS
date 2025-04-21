@@ -99,3 +99,44 @@ export const AVAILABLE_LANGUAGES: LanguageOption[] = [
 export const DEFAULT_LANGUAGE: Language = 'vi';
 export const DEFAULT_VOICE: PrebuiltVoice = 'Puck';
 export const DEFAULT_MODALITY: OutputModality = 'audio';
+
+
+
+// src/chabot/gemini/types.ts
+import { Socket } from 'socket.io';
+
+/**
+ * Input context provided to each function handler.
+ */
+export interface FunctionHandlerInput {
+    args: any; // Arguments provided by the LLM for the function call
+    userToken: string | null; // Authentication token for the user
+    language: Language; // Current language context
+    handlerId: string; // Unique ID for the main request handler invocation
+    socketId: string; // Socket ID for logging/tracking
+    socket: Socket; // The Socket object for emitting status updates *during* execution
+}
+
+/**
+ * Standardized output structure for all function handlers.
+ */
+export interface FunctionHandlerOutput {
+    modelResponseContent: string; // Content to be sent back to the LLM in the function response
+    frontendAction?: ChatAction; // Optional action to be executed by the frontend
+}
+
+
+// --- Define the return type ---
+// --- Define the return type ---
+export interface ApiCallResult {
+    success: boolean;
+    rawData: string; // Raw JSON string or error message string
+    formattedData: string | null; // Formatted Markdown or null if transformation failed/not applicable
+    errorMessage?: string; // Specific error message if success is false
+}
+
+
+export interface FollowItem {
+    id: string; // Can be conferenceId or journalId depending on context
+    // Add other fields if your API returns them (like title, acronym)
+}

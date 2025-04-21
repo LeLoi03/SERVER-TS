@@ -291,3 +291,4 @@ if (GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
     console.warn("WARN: No Google Custom Search API Keys found in environment variables (CUSTOM_SEARCH_API_KEY_...). Google Custom Search features may not work.");
 }
 
+export const DATABASE_URL = process.env.DATABASE_URL || "http://confhub.engineer/api/v1"; // Use your actual base URL

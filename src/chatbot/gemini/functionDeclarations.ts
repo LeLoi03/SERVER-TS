@@ -187,8 +187,6 @@ export const english_drawChartDeclaration: FunctionDeclaration = {
     },
 };
 
-// --- NEW Navigation Declaration ---
-// List of allowed internal paths (for the model's description)
 const internalPaths = [
     '/',
     '/conferences',
@@ -201,14 +199,14 @@ const internalPaths = [
     '/support',
     '/other',
     '/addconference',
-    '/conferences/detail', // Base path, model might need to know how to get full ID path if needed
-    '/journals/detail',    // Base path
+    // '/conferences/detail', 
+    // '/journals/detail',    
     '/auth/login',
     '/auth/register',
     '/auth/verify-email',
     '/auth/forgot-password',
     '/auth/reset-password',
-    '/updateconference' // Base path
+    // '/updateconference'
 ];
 
 export const english_navigationDeclaration: FunctionDeclaration = {
@@ -228,8 +226,6 @@ export const english_navigationDeclaration: FunctionDeclaration = {
     }
 };
 
-
-// <<< NEW: openGoogleMap Declaration >>>
 export const english_openGoogleMapDeclaration: FunctionDeclaration = {
     name: "openGoogleMap",
     description: "Opens Google Maps in a new browser tab directed to a specific location string (e.g., city, address, landmark). Use this ONLY AFTER obtaining the location string, often from the 'getConferences' or 'getJournals' functions.",
@@ -245,8 +241,6 @@ export const english_openGoogleMapDeclaration: FunctionDeclaration = {
     },
 };
 
-
-// <<< NEW: followUnfollowItem Declaration >>>
 export const english_followUnfollowItemDeclaration: FunctionDeclaration = {
     name: "followUnfollowItem",
     description: "Follows or unfollows a specific conference or journal for the currently logged-in user. Requires identifying the item first (e.g., using getConferences/getJournals).",
@@ -262,7 +256,6 @@ export const english_followUnfollowItemDeclaration: FunctionDeclaration = {
                 type: SchemaType.STRING,
                 description: "A unique identifier for the item, such as its acronym or exact title, that was previously retrieved.",
             },
-            // Optional: identifierType helps backend find the item faster
             identifierType: {
                  type: SchemaType.STRING,
                  description: "The type of the identifier provided.",
@@ -274,7 +267,7 @@ export const english_followUnfollowItemDeclaration: FunctionDeclaration = {
                 enum: ["follow", "unfollow"]
             },
         },
-        required: ["itemType", "identifier", "action"],
+        required: ["itemType", "identifier", "identifierType", "action"],
     },
 };
 

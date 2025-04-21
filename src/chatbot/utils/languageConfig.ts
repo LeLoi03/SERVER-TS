@@ -67,3 +67,6 @@ export function getLanguageConfig(lang: Language | undefined): LanguageConfig {
 
     return languageConfigurations[targetLang];
 }
+
+
+

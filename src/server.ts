@@ -10,7 +10,7 @@ import cron from 'node-cron';
 import { handleCrawlConferences, handleCrawlJournals } from './crawl/crawl';
 import { performLogAnalysis } from './client/service/logAnalysisService';
 import { LogAnalysisResult } from './client/types/logAnalysis';
-import { handleNonStreaming } from './chatbot/handlers/intentHandler'; // Chỉ cần handleStreaming nếu chỉ dùng socket
+import { handleNonStreaming, handleStreaming } from './chatbot/handlers/intentHandler'; // Chỉ cần handleStreaming nếu chỉ dùng socket
 import { HistoryItem, ErrorUpdate } from './chatbot/shared/types';
 import { createLogAnalysisRouter } from './client/route/logAnalysisRoutes'; // <<< Import hàm tạo router
 import { Language } from './chatbot/shared/types';
@@ -192,18 +192,18 @@ io.on('connection', (socket: Socket) => {
             let updatedHistory;
 
             if (isStreaming) {
-                // // --- Gọi Handler Streaming ---
-                // logToFile(`[Socket.IO ${socketId}] Calling handleStreaming...`);
-                // // handleStreaming sẽ tự emit 'status_update', 'chat_update', 'chat_result'/'chat_error'
-                // // Nó cũng nên trả về lịch sử đã cập nhật (bao gồm cả phản hồi cuối cùng của assistant)
-                // updatedHistory = await handleStreaming(
-                //     userInput, // userInput thực ra không cần nữa nếu đã thêm vào historyForHandler? Xem lại logic handleStreaming
-                //     currentHistory, // <<< Truyền lịch sử đã bao gồm input của user
-                //     socket,
-                //     language // <<< Pass language
+                // --- Gọi Handler Streaming ---
+                logToFile(`[Socket.IO ${socketId}] Calling handleStreaming...`);
+                // handleStreaming sẽ tự emit 'status_update', 'chat_update', 'chat_result'/'chat_error'
+                // Nó cũng nên trả về lịch sử đã cập nhật (bao gồm cả phản hồi cuối cùng của assistant)
+                updatedHistory = await handleStreaming(
+                    userInput, // userInput thực ra không cần nữa nếu đã thêm vào historyForHandler? Xem lại logic handleStreaming
+                    currentHistory, // <<< Truyền lịch sử đã bao gồm input của user
+                    socket,
+                    language // <<< Pass language
 
-                // );
-                // logToFile(`[Socket.IO ${socketId}] handleStreaming finished.`);
+                );
+                logToFile(`[Socket.IO ${socketId}] handleStreaming finished.`);
 
             } else {
                 // --- Gọi Handler Non-Streaming ---
