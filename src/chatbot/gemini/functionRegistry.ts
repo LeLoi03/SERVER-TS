@@ -3,6 +3,7 @@ import { Socket } from 'socket.io';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, Language } from '../shared/types';
 import logToFile from '../utils/logger';
+import { StatusUpdate } from '../shared/types';
 
 // Import all handlers
 import { GetConferencesHandler } from '../handlers/getConferences.handler';
@@ -46,78 +47,69 @@ const functionRegistry: Record<string, IFunctionHandler> = {
  * @param language The current language.
  * @returns Promise<FunctionHandlerOutput> The result from the executed handler.
  */
+
 export async function executeFunction(
     functionCall: { name: string; args: any },
-    socket: Socket, // Pass the full socket
+    // socket: Socket, // Keep socket if handlers need it for non-status things
     handlerId: string,
-    language: Language
+    language: Language,
+    // ADD the callback parameter
+    onStatusUpdate: (eventName: 'status_update', data: StatusUpdate) => boolean,
+    // Pass socket separately if needed by handlers for other reasons
+    socket: Socket
 ): Promise<FunctionHandlerOutput> {
 
-    // Emit status *before* executing the specific handler
-    const safeEmitStatus = (step: string, message: string, details?: any): boolean => {
-        if (!socket.connected) {
-            logToFile(`[${handlerId} ${socketId}] ExecuteFunction SKIPPED Status Emit: Client disconnected. Event: status_update (${step})`);
-            return false;
-        }
-        try {
-            socket.emit('status_update', { type: 'status', step, message, details });
-            logToFile(`[${handlerId} ${socketId}] ExecuteFunction Status Emit Sent: Step: ${step}, Message: ${message}`);
-            return true;
-        } catch (error: any) {
-            logToFile(`[${handlerId} ${socketId}] ExecuteFunction Status Emit FAILED: Step: ${step}, Error: ${error.message}`);
-            return false;
-        }
-    };
+    // REMOVE internal safeEmitStatus helper from executeFunction
 
     const functionName = functionCall.name;
     const args = functionCall.args;
-    const socketId = socket.id;
-    const userToken = socket.data.token as string | null; // Retrieve token here
+    const socketId = socket.id; // Get socketId from the passed socket
+    const userToken = socket.data.token as string | null;
 
-    logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Attempting to execute function: ${functionName} (Authenticated: ${!!userToken})`);
+    logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Attempting execution: ${functionName}`);
 
-    // Initial Step: Decision made to call this function
-    if (!safeEmitStatus('function_call', `Received request to call function: ${functionName}`, { functionName: functionName, args: args })) {
+    // Use the passed-in onStatusUpdate callback
+    if (!onStatusUpdate('status_update', { type: 'status', step: 'function_call', message: `Received request to call function: ${functionName}`, details: { functionName, args }, timestamp: new Date().toISOString() })) {
+        logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Failed to emit 'function_call' status via callback (maybe disconnected).`);
+        // Decide if this is fatal. If the callback returns false, it implies disconnection.
         return { modelResponseContent: "Error: Client disconnected before function call initiation.", frontendAction: undefined };
     }
 
-    const handler = functionRegistry[functionName] ?? functionRegistry.__unknown__;
-
+    const handler = functionRegistry[functionName]; // Use ?? functionRegistry.__unknown__ later if needed
 
     if (!handler) {
-        logToFile(`[${handlerId} ${socketId}] Error: Unknown function call requested: ${functionName}`);
-        safeEmitStatus('unknown_function', `Error: Function "${functionName}" is not recognized.`); // Specific step for unknown
+        logToFile(`[${handlerId} ${socketId}] Error: Unknown function: ${functionName}`);
+        // Emit via callback
+        onStatusUpdate('status_update', { type: 'status', step: 'unknown_function', message: `Error: Function "${functionName}" is not recognized.`, timestamp: new Date().toISOString() });
         return { modelResponseContent: `Error: The requested function "${functionName}" is not available.`, frontendAction: undefined };
     }
 
-
-
     try {
         const context: FunctionHandlerInput = {
-            args: handler === functionRegistry.__unknown__ ? { ...args, __functionName: functionName } : args, // Add name for unknown handler
+            args: args,
             userToken,
             language,
             handlerId,
             socketId,
-            socket // Pass socket for potential *internal* status updates within handler
+            onStatusUpdate, // Pass the callback down
+            socket // Pass the socket down
         };
 
-        // Execute the handler
+        // Execute the handler - IT will now use context.onStatusUpdate
         const result = await handler.execute(context);
 
-        logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Execution finished for ${functionName}. Result: Content Length=${result.modelResponseContent.length}, Action=${JSON.stringify(result.frontendAction)}`);
-        // Emit completion status *after* handler execution
-        safeEmitStatus('processing_function_result', `Received result from ${functionName}.`, { success: !result.modelResponseContent.toLowerCase().startsWith('error:') }); // Add success hint maybe
+        logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Execution finished for ${functionName}.`);
+        // Emit completion status *after* handler execution via callback
+        onStatusUpdate('status_update', { type: 'status', step: 'processing_function_result', message: `Received result from ${functionName}.`, details: { success: !result.modelResponseContent.toLowerCase().startsWith('error:') }, timestamp: new Date().toISOString() });
         return result;
 
     } catch (execError: any) {
-        logToFile(`[${handlerId} ${socketId}] CRITICAL Error executing function handler for ${functionName}: ${execError.message}, Stack: ${execError.stack}`);
-        safeEmitStatus('function_error', `System error during function execution (${functionName}).`, { error: execError.message });
-
-        // Return an error message for the model
+        logToFile(`[${handlerId} ${socketId}] CRITICAL Error executing handler for ${functionName}: ${execError.message}`);
+        // Emit error via callback
+        onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: `System error during function execution (${functionName}).`, details: { error: execError.message }, timestamp: new Date().toISOString() });
         return {
             modelResponseContent: `Error encountered while trying to execute the function ${functionName}: ${execError.message}`,
-            frontendAction: undefined, // Ensure no action on critical error
+            frontendAction: undefined,
         };
     }
 }

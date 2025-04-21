@@ -1,53 +1,77 @@
-// src/chatbot/handlers/getConferences.handler.ts
-import { executeGetConferences } from '../services/getConferences.service'; // Corrected path
-import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types';
-import logToFile from '../utils/logger';
+// src/handlers/getConferences.handler.ts
+import { executeGetConferences } from '../services/getConferences.service'; // Adjust path if needed
+import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
+import logToFile from '../utils/logger'; // Adjust path if needed
 
 export class GetConferencesHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId } = context;
-        const searchQuery = args?.searchQuery;
+        // Destructure the callback and other needed context props
+        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        const searchQuery = args?.searchQuery as string | undefined;
         const dataType = "conference";
 
         logToFile(`[${handlerId} ${socketId}] Handler: GetConferences, Args: ${JSON.stringify(args)}`);
 
-        // We can keep the status emit helper here or have the registry handle it.
-        // Let's keep it simple for now and allow handlers to emit progress if needed.
-        const safeEmitStatus = (step: string, message: string, details?: any): boolean => {
-             if (!context.socket.connected) return false;
-             try {
-                 context.socket.emit('status_update', { type: 'status', step, message, details });
-                 return true;
-             } catch (error: any) { return false; }
-        };
+        // REMOVED internal safeEmitStatus definition
 
-        if (!safeEmitStatus('retrieving_info', `Retrieving ${dataType} data...`)) {
-            return { modelResponseContent: "Error: Disconnected during function execution.", frontendAction: undefined };
-        }
+        try {
+            // --- Start Detailed Emits using context.onStatusUpdate ---
 
-        const apiResult = await executeGetConferences(searchQuery);
-
-        logToFile(`[${handlerId} ${socketId}] API result for getConferences('${searchQuery}'): Success=${apiResult.success}, FormattedData=${apiResult.formattedData !== null}, ErrorMsg=${apiResult.errorMessage}`);
-
-        let modelResponseContent: string;
-        if (apiResult.success) {
-            modelResponseContent = apiResult.formattedData ?? apiResult.rawData;
-            if (apiResult.formattedData === null) {
-                logToFile(`[${handlerId} ${socketId}] Warning: Formatted data is null for ${dataType}. Sending raw data/error back to model.`);
-                if (apiResult.errorMessage) {
-                    modelResponseContent = apiResult.errorMessage;
-                    safeEmitStatus('function_warning', `Data formatting issue for ${dataType}.`);
-                }
+            // 1. Validation
+            if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating arguments for getConferences...', details: { args }, timestamp: new Date().toISOString() })) {
+                if (!socket?.connected) throw new Error("Client disconnected during validation status update."); // Throw or return error
             }
-        } else {
-            modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data.`;
-            safeEmitStatus('function_error', `API call failed for ${dataType}.`);
-        }
+            // Add specific validation logic here if needed
 
-        return {
-            modelResponseContent,
-            frontendAction: undefined // No frontend action for this function
-        };
+            // 2. Prepare & Execute API Call
+            if (!onStatusUpdate('status_update', { type: 'status', step: 'retrieving_info', message: `Retrieving ${dataType} data...`, details: { dataType, searchQuery: searchQuery || 'N/A' }, timestamp: new Date().toISOString() })) {
+                if (!socket?.connected) throw new Error(`Client disconnected before retrieving ${dataType} data.`);
+                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'retrieving_info' status via callback, but continuing...`);
+            }
+
+
+            // --- KIỂM TRA SỰ TỒN TẠI VÀ TRẢ VỀ SỚM ---
+            if (!searchQuery) {
+                const errorMsg = "Missing search query.";
+                logToFile(`[${handlerId} ${socketId}] getConferences: Failed: ${errorMsg}`);
+                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Missing search query.', details: { error: errorMsg, args }, timestamp: new Date().toISOString() });
+                return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined };
+            }
+
+            const apiResult = await executeGetConferences(searchQuery);
+            logToFile(`[${handlerId} ${socketId}] API result: Success=${apiResult.success}`);
+
+            // 3. Process Result & Emit Detailed Status via callback
+            let modelResponseContent: string;
+            if (apiResult.success) {
+                modelResponseContent = apiResult.formattedData ?? apiResult.rawData;
+                if (apiResult.formattedData === null) {
+                    onStatusUpdate('status_update', { type: 'status', step: 'function_warning', message: `Data formatting issue for ${dataType}. The structure might be unexpected.`, details: { rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 50) + '...' : '[object]' }, timestamp: new Date().toISOString() });
+                    logToFile(`[${handlerId} ${socketId}] Warning: Formatted data is null for ${dataType}.`);
+                    if (apiResult.errorMessage) {
+                        modelResponseContent = apiResult.errorMessage;
+                    }
+                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Retrieved ${dataType} data, but formatting issue occurred.`, details: { success: true, formattingIssue: true }, timestamp: new Date().toISOString() });
+                } else {
+                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Successfully retrieved and processed ${dataType} data.`, details: { success: true }, timestamp: new Date().toISOString() });
+                }
+            } else {
+                modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data.`;
+                onStatusUpdate('status_update', { type: 'status', step: 'api_call_failed', message: `API call failed for ${dataType}.`, details: { error: apiResult.errorMessage, success: false }, timestamp: new Date().toISOString() });
+            }
+            // --- End Detailed Emits ---
+
+            return {
+                modelResponseContent,
+                frontendAction: undefined
+            };
+        } catch (error: any) {
+            logToFile(`[${handlerId} ${socketId}] Error in GetConferencesHandler: ${error.message}`);
+            // Emit error status if possible
+            onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during conference retrieval: ${error.message}`, timestamp: new Date().toISOString() });
+            // Return error message to the model
+            return { modelResponseContent: `Error executing getConferences: ${error.message}`, frontendAction: undefined };
+        }
     }
 }

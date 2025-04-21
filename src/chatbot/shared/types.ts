@@ -36,7 +36,7 @@ export interface StatusUpdate {
     message: string;
     details?: any; // Optional details relevant to the step (e.g., function name/args)
     thoughts?: ThoughtStep[]; // Add the thought process history
-
+    timestamp?: string;
 }
 
 export interface ChatUpdate {
@@ -108,13 +108,18 @@ import { Socket } from 'socket.io';
 /**
  * Input context provided to each function handler.
  */
+
 export interface FunctionHandlerInput {
-    args: any; // Arguments provided by the LLM for the function call
-    userToken: string | null; // Authentication token for the user
-    language: Language; // Current language context
-    handlerId: string; // Unique ID for the main request handler invocation
-    socketId: string; // Socket ID for logging/tracking
-    socket: Socket; // The Socket object for emitting status updates *during* execution
+    args: any;
+    userToken: string | null;
+    language: Language;
+    handlerId: string;
+    socketId: string; // Keep for logging
+    // ADD the callback
+    onStatusUpdate: (eventName: 'status_update', data: StatusUpdate) => boolean;
+    // REMOVE socket if ONLY used for status, otherwise keep it for other potential uses.
+    // Let's assume for now it might be needed elsewhere, so we keep it.
+    socket: Socket;
 }
 
 /**

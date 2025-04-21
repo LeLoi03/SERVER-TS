@@ -1,61 +1,73 @@
-// src/chatbot/handlers/getJournals.handler.ts
-import { executeGetJournals } from '../services/getJournals.service'; // Corrected path
-import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types';
-import logToFile from '../utils/logger';
-
+// src/handlers/getJournals.handler.ts
+import { executeGetJournals } from '../services/getJournals.service'; // Adjust path if needed
+import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
+import logToFile from '../utils/logger'; // Adjust path if needed
 
 export class GetJournalsHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, socket } = context;
-        const searchQuery = args?.searchQuery as string ;
+        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        const searchQuery = args?.searchQuery as string | undefined;
         const dataType = "journal";
 
         logToFile(`[${handlerId} ${socketId}] Handler: GetJournals, Args: ${JSON.stringify(args)}`);
 
-        const safeEmitStatus = (step: string, message: string, details?: any): boolean => {
-            if (!socket.connected) return false;
-            try {
-                socket.emit('status_update', { type: 'status', step, message, details, timestamp: new Date().toISOString() }); // Added timestamp
-                return true;
-            } catch (error: any) { return false; }
-        };
+        // REMOVED internal safeEmitStatus definition
 
-        // 1. Validation (Optional but good practice)
-        safeEmitStatus('validating_function_args', 'Validating arguments for getJournals...', { args });
-        // Add any specific validation for searchQuery if needed here
+        try {
+            // --- Start Detailed Emits using context.onStatusUpdate ---
 
-        // 2. Prepare & Execute API Call
-        if (!safeEmitStatus('retrieving_info', `Retrieving ${dataType} data...`, { dataType, searchQuery: searchQuery || 'N/A' })) {
-            return { modelResponseContent: "Error: Disconnected during function execution.", frontendAction: undefined };
-        }
+            // 1. Validation
+             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating arguments for getJournals...', details: { args }, timestamp: new Date().toISOString() })) {
+                 if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
+             }
+             // Add specific validation if needed
 
-        const apiResult = await executeGetJournals(searchQuery);
+            // 2. Prepare & Execute API Call
+            if (!onStatusUpdate('status_update', { type: 'status', step: 'retrieving_info', message: `Retrieving ${dataType} data...`, details: { dataType, searchQuery: searchQuery || 'N/A' }, timestamp: new Date().toISOString() })) {
+                if (!socket?.connected) throw new Error(`Client disconnected before retrieving ${dataType} data.`);
+                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'retrieving_info' status via callback, but continuing...`);
+            }
 
-        logToFile(`[${handlerId} ${socketId}] API result for getJournals('${searchQuery}'): Success=${apiResult.success}, FormattedData=${apiResult.formattedData !== null}, ErrorMsg=${apiResult.errorMessage}`);
+            // --- KIỂM TRA SỰ TỒN TẠI VÀ TRẢ VỀ SỚM ---
+            if (!searchQuery) {
+                const errorMsg = "Missing search query.";
+                logToFile(`[${handlerId} ${socketId}] getJournals: Failed: ${errorMsg}`);
+                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Missing search query.', details: { error: errorMsg, args }, timestamp: new Date().toISOString() });
+                return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined };
+            }
 
-        // 3. Process Result
-        let modelResponseContent: string;
-        if (apiResult.success) {
-            modelResponseContent = apiResult.formattedData ?? apiResult.rawData;
-            if (apiResult.formattedData === null) {
-                logToFile(`[${handlerId} ${socketId}] Warning: Formatted data is null for ${dataType}. Sending raw data/error back to model.`);
-                safeEmitStatus('function_warning', `Data formatting issue for ${dataType}. The structure might be unexpected.`, { rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 50) + '...' : '[object]' }); // Send warning
-                if (apiResult.errorMessage) { // Prefer specific error message if transformation failed
-                    modelResponseContent = apiResult.errorMessage;
+            const apiResult = await executeGetJournals(searchQuery);
+            logToFile(`[${handlerId} ${socketId}] API result: Success=${apiResult.success}`);
+
+            // 3. Process Result & Emit Detailed Status via callback
+            let modelResponseContent: string;
+            if (apiResult.success) {
+                modelResponseContent = apiResult.formattedData ?? apiResult.rawData;
+                 if (apiResult.formattedData === null) {
+                    onStatusUpdate('status_update', { type: 'status', step: 'function_warning', message: `Data formatting issue for ${dataType}. The structure might be unexpected.`, details: { rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 50) + '...' : '[object]' }, timestamp: new Date().toISOString() });
+                    logToFile(`[${handlerId} ${socketId}] Warning: Formatted data is null for ${dataType}.`);
+                    if (apiResult.errorMessage) {
+                        modelResponseContent = apiResult.errorMessage;
+                    }
+                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Retrieved ${dataType} data, but formatting issue occurred.`, details: { success: true, formattingIssue: true }, timestamp: new Date().toISOString() });
+                } else {
+                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Successfully retrieved and processed ${dataType} data.`, details: { success: true }, timestamp: new Date().toISOString() });
                 }
             } else {
-                 safeEmitStatus('data_found', `Successfully retrieved and processed ${dataType} data.`, { success: true }); // Success step
+                modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data.`;
+                onStatusUpdate('status_update', { type: 'status', step: 'api_call_failed', message: `API call failed for ${dataType}.`, details: { error: apiResult.errorMessage, success: false }, timestamp: new Date().toISOString() });
             }
-        } else {
-            // API call failed
-            modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data.`;
-            safeEmitStatus('api_call_failed', `API call failed for ${dataType}.`, { error: apiResult.errorMessage, success: false }); // Failure step
-        }
+            // --- End Detailed Emits ---
 
-        return {
-            modelResponseContent,
-            frontendAction: undefined // No frontend action for this function
-        };
+            return {
+                modelResponseContent,
+                frontendAction: undefined
+            };
+        } catch (error: any) {
+             logToFile(`[${handlerId} ${socketId}] Error in GetJournalsHandler: ${error.message}`);
+             onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during journal retrieval: ${error.message}`, timestamp: new Date().toISOString() });
+             return { modelResponseContent: `Error executing getJournals: ${error.message}`, frontendAction: undefined };
+        }
     }
 }

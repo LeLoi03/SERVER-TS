@@ -1,5 +1,6 @@
 // src/chatbot/services/getWebsiteInfo.service.ts
 import logToFile from "../utils/logger";
+import { CONFERENCE_WEBSITE_DESCRIPTION } from "../../config";
 
 // Define the return type structure (you might want a shared types file)
 interface WebsiteInfoResult {
@@ -11,7 +12,7 @@ interface WebsiteInfoResult {
 export async function executeGetWebsiteInfo(): Promise<WebsiteInfoResult> {
     const functionName = "executeGetWebsiteInfo"; // For logging context
     try {
-        const description = process.env.CONFERENCE_WEBSITE_DESCRIPTION;
+        const description = CONFERENCE_WEBSITE_DESCRIPTION;
 
         if (!description) {
             const errorMsg = "Configuration error: CONFERENCE_WEBSITE_DESCRIPTION environment variable is not set.";

@@ -87,6 +87,13 @@ export const UNWANTED_DOMAINS: string[] = parseEnvKeywords("UNWANTED_DOMAINS");
 
 // --- API Configuration ---
 export const GEMINI_API_KEY: string | undefined = process.env.GEMINI_API_KEY;
+export const CHATBOT_MODEL_NAME: string | undefined = process.env.CHATBOT_MODEL_NAME;
+export const CHATBOT_TEMPERATURE: string | undefined = process.env.CHATBOT_TEMPERATURE || "1";
+export const CHATBOT_TOP_P: string | undefined = process.env.CHATBOT_TOP_P || "0.95";
+export const CHATBOT_TOP_K: string | undefined = process.env.CHATBOT_TOP_K || "40";
+export const CHATBOT_MAX_OUTPUT_TOKENS: string | undefined = process.env.CHATBOT_MAX_OUTPUT_TOKENS || "8192";
+export const CHATBOT_RESPONSE_MIME_TYPE: string | undefined = process.env.CHATBOT_RESPONSE_MIME_TYPE
+export const CONFERENCE_WEBSITE_DESCRIPTION: string | undefined = process.env.CONFERENCE_WEBSITE_DESCRIPTION;
 
 // --- Validate Essential Config ---
 if (!GEMINI_API_KEY) {

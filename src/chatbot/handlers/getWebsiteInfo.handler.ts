@@ -1,49 +1,54 @@
-// src/chatbot/handlers/getWebsiteInfo.handler.ts
-import { executeGetWebsiteInfo } from '../services/getWebsiteInfo.service'; // Corrected path
-import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types';
-import logToFile from '../utils/logger';
-
-
+// src/handlers/getWebsiteInfo.handler.ts
+import { executeGetWebsiteInfo} from '../services/getWebsiteInfo.service'; // Adjust path if needed
+import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
+import logToFile from '../utils/logger'; // Adjust path if needed
 
 export class GetWebsiteInfoHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { handlerId, socketId, socket } = context;
+        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
 
-        logToFile(`[${handlerId} ${socketId}] Handler: GetWebsiteInfo, Args: {}`); // No specific args expected
+        logToFile(`[${handlerId} ${socketId}] Handler: GetWebsiteInfo, Args: ${JSON.stringify(args)}`);
 
-        const safeEmitStatus = (step: string, message: string, details?: any): boolean => {
-            if (!socket.connected) return false;
-            try {
-                socket.emit('status_update', { type: 'status', step, message, details, timestamp: new Date().toISOString() });
-                return true;
-            } catch (error: any) { return false; }
-        };
+        // REMOVED internal safeEmitStatus definition
 
-        // 1. Prepare & Execute Call
-        if (!safeEmitStatus('retrieving_info', 'Retrieving general website information...', { target: 'general website info' })) {
-             return { modelResponseContent: "Error: Disconnected during function execution.", frontendAction: undefined };
-        }
+        try {
+            // --- Start Detailed Emits using context.onStatusUpdate ---
 
-        // Assuming executeGetWebsiteInformation now returns { success: boolean, data?: string, errorMessage?: string }
-        const result = await executeGetWebsiteInfo();
+            // 1. Validation
+             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating arguments for getWebsiteInformation...', details: { args }, timestamp: new Date().toISOString() })) {
+                 if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
+             }
 
-        logToFile(`[${handlerId} ${socketId}] API result for getWebsiteInformation: Success=${result.success}`);
+            // 2. Prepare & Execute Call
+            if (!onStatusUpdate('status_update', { type: 'status', step: 'retrieving_info', message: 'Retrieving general website information...', details: { target: 'general website info' }, timestamp: new Date().toISOString() })) {
+                 if (!socket?.connected) throw new Error("Client disconnected before retrieving website info.");
+                 logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'retrieving_info' status via callback, but continuing...`);
+            }
 
+            // Assuming executeGetWebsiteInformation returns structured result { success: boolean, data?: string, errorMessage?: string }
+            const result = await executeGetWebsiteInfo();
+            logToFile(`[${handlerId} ${socketId}] API result: Success=${result.success}`);
 
-        // 2. Process Result
-        if (result.success && result.data) {
-             safeEmitStatus('data_found', 'Successfully retrieved website information.', { success: true, infoLength: result.data.length });
-            return {
-                modelResponseContent: result.data,
-                frontendAction: undefined,
-            };
-        } else {
-            safeEmitStatus('api_call_failed', 'Failed to retrieve website information.', { error: result.errorMessage || 'Unknown error', success: false });
-            return {
-                modelResponseContent: result.errorMessage || 'Error: Could not retrieve website information.',
-                frontendAction: undefined,
-            };
+            // 3. Process Result & Emit Detailed Status via callback
+            if (result.success && result.data) {
+                onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: 'Successfully retrieved website information.', details: { success: true, infoLength: result.data.length }, timestamp: new Date().toISOString() });
+                return {
+                    modelResponseContent: result.data,
+                    frontendAction: undefined,
+                };
+            } else {
+                onStatusUpdate('status_update', { type: 'status', step: 'api_call_failed', message: 'Failed to retrieve website information.', details: { error: result.errorMessage || 'Unknown error', success: false }, timestamp: new Date().toISOString() });
+                return {
+                    modelResponseContent: result.errorMessage || 'Error: Could not retrieve website information.',
+                    frontendAction: undefined,
+                };
+            }
+            // --- End Detailed Emits ---
+        } catch (error: any) {
+             logToFile(`[${handlerId} ${socketId}] Error in GetWebsiteInfoHandler: ${error.message}`);
+             onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during website info retrieval: ${error.message}`, timestamp: new Date().toISOString() });
+             return { modelResponseContent: `Error executing getWebsiteInformation: ${error.message}`, frontendAction: undefined };
         }
     }
 }
