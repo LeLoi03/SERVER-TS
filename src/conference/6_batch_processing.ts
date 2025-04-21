@@ -1,12 +1,12 @@
 
 // playwright_utils.ts
+import { addAcronymSafely, logger } from './11_utils';
 import fs from 'fs';
 import { Page, BrowserContext } from 'playwright'; // Import Playwright types
 
 import { cleanDOM, traverseNodes, removeExtraEmptyLines } from './2_dom_processing';
 import { extract_information_api, determine_links_api } from './7_gemini_api_utils';
 import { init } from './8_data_manager';
-import { addAcronymSafely, logger } from './11_utils';
 import { YEAR2 } from '../config';
 
 import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData, ProcessedResponseData } from './types';

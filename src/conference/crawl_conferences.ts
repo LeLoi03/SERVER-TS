@@ -1,13 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-
+import { cleanupTempFiles, logger } from './11_utils';
 
 import { searchGoogleCSE } from './1_google_search';
 import { filterSearchResults } from './4_link_filtering';
 import { saveHTMLContent, updateHTMLContent } from './6_batch_processing';
 import { setupPlaywright } from './12_playwright_setup';
 import { writeCSVStream } from './10_response_processing';
-import { cleanupTempFiles, logger } from './11_utils';
 
 // Import config chung
 import {

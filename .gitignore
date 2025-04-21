@@ -45,3 +45,6 @@ src/chat_history.txt
 
 /.clinic
 /dist
+
+
+/logs

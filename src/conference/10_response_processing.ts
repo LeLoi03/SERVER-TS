@@ -1,3 +1,4 @@
+import { logger } from './11_utils';
 import fs from 'fs';
 import readline from 'readline';
 import { ParserOptions, Transform as Json2CsvTransform } from '@json2csv/node';
@@ -5,7 +6,6 @@ import { Readable, Transform as NodeTransform, TransformOptions } from 'stream';
 import { pipeline as streamPipeline } from 'stream/promises';
 import path from 'path';
 
-import { logger } from './11_utils';
 import { ProcessedResponseData, InputRowData, ProcessedRowData } from './types';
 import { readContentFromFile } from './11_utils';
 

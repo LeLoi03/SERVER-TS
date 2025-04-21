@@ -1,9 +1,7 @@
 import { Request, Response } from 'express';
-
 import 'dotenv/config';
 import path from 'path';
 import fs from 'fs';
-
 import { logger } from '../conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from '../conference/3_core_portal_scraping';
 import { crawlConferences } from '../conference/crawl_conferences';
@@ -12,8 +10,6 @@ import { ConferenceData } from '../conference/types';
 import { ProcessedResponseData } from '../conference/types';
 
 
-export const OUTPUT_JSON: string = path.join(__dirname, './journal/data/all_journal_data.json');
-// Định nghĩa đường dẫn file output (nên lấy từ config hoặc nơi tập trung)
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');
 const EVALUATE_CSV_PATH = path.join(__dirname, '../conference/data/evaluate.csv');
 
@@ -99,6 +95,15 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
             outputCsv: EVALUATE_CSV_PATH
         }, "Conference processing finished. Returning any available update results.");
 
+        // *** Luôn trả về cấu trúc response này ***
+        res.status(200).json({
+            message: `Conference processing completed. ${processedUpdateResults.length} conference(s) yielded update data. All processing results (updates/saves) are reflected in server files.`,
+            runtime: `${runTimeSeconds} s`,
+            data: processedUpdateResults, // Trả về mảng kết quả update (có thể rỗng)
+            outputJsonlPath: FINAL_OUTPUT_PATH,
+            outputCsvPath: EVALUATE_CSV_PATH
+        });
+        routeLogger.info({ statusCode: 200, updateResultsCount: processedUpdateResults.length }, "Sent successful response");
 
 
         // *** Luôn trả về cấu trúc response này **
