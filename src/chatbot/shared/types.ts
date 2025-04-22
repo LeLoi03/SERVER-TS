@@ -1,4 +1,4 @@
-// src/shared/types.ts
+// src/chatbot/shared/types.ts
 import { FunctionCall, Part } from "@google/generative-ai"; // Import necessary types
 // Ensure HistoryItem part can hold various types
 export interface HistoryItem {
@@ -44,27 +44,12 @@ export interface ChatUpdate {
     textChunk: string;
 
 }
-// --- Define Action Types ---
-export interface NavigationAction {
-    type: 'navigate';
-    url: string; // The URL (internal path or full external URL)
-}
-
-// <<< NEW: Define OpenMapAction >>>
-export interface OpenMapAction {
-    type: 'openMap';
-    location: string; // The location string to search on Google Maps
-}
-
-// --- Update ChatAction Union Type ---
-export type ChatAction = NavigationAction | OpenMapAction; // <<< ADDED OpenMapAction
-
 // --- ResultUpdate (No change needed here, already has optional 'action') ---
 export interface ResultUpdate {
     type: 'result';
     message: string; // The text message to display
     thoughts?: ThoughtStep[];
-    action?: ChatAction; // Now includes NavigationAction or OpenMapAction
+    action?: FrontendAction; // Now includes NavigationAction or OpenMapAction
 }
 
 
@@ -122,12 +107,34 @@ export interface FunctionHandlerInput {
     socket: Socket;
 }
 
+
+
+// Define the payload structure for the email confirmation action
+export interface ConfirmSendEmailAction {
+    confirmationId: string; // Unique ID for this confirmation request
+    subject: string;
+    requestType: 'contact' | 'report';
+    message: string;
+    timeoutMs: number; // Timeout duration in milliseconds
+}
+
+
+
+// Add the new action type to your FrontendAction union type
+export type FrontendAction =
+    | { type: 'navigate'; url: string }
+    | { type: 'openMap'; location: string }
+    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // <-- Add this
+    // | { type: 'otherAction'; ... } // Add other existing actions
+    | undefined; // Keep undefined if it's used
+
+
 /**
  * Standardized output structure for all function handlers.
  */
 export interface FunctionHandlerOutput {
     modelResponseContent: string; // Content to be sent back to the LLM in the function response
-    frontendAction?: ChatAction; // Optional action to be executed by the frontend
+    frontendAction?: FrontendAction; // Optional action to be executed by the frontend
 }
 
 
@@ -144,4 +151,32 @@ export interface ApiCallResult {
 export interface FollowItem {
     id: string; // Can be conferenceId or journalId depending on context
     // Add other fields if your API returns them (like title, acronym)
+}
+
+
+// --- Agent Card Protocol V1 ---
+export interface AgentCardRequest {
+    taskId: string;             // ID duy nhất cho nhiệm vụ này
+    conversationId: string;     // ID của cuộc hội thoại chung
+    senderAgentId: 'HostAgent' | string; // ID của agent gửi (string cho các sub agent sau này)
+    receiverAgentId: string;   // ID của agent nhận (ví dụ: 'ConferenceAgent')
+    timestamp: string;          // ISO Timestamp
+    taskDescription: string;    // Mô tả nhiệm vụ bằng ngôn ngữ tự nhiên
+    inputData?: any;            // Dữ liệu đầu vào cấu trúc cho nhiệm vụ (ví dụ: args cho function call)
+    context?: {                 // Ngữ cảnh tùy chọn
+        history?: HistoryItem[]; // Vài tin nhắn cuối
+        userToken?: string | null;
+    };
+}
+
+export interface AgentCardResponse {
+    taskId: string;             // ID của nhiệm vụ gốc
+    conversationId: string;
+    senderAgentId: string;      // ID của agent gửi phản hồi
+    receiverAgentId: 'HostAgent' | string;
+    timestamp: string;
+    status: 'success' | 'error' | 'in_progress'; // Trạng thái kết quả
+    resultData?: any;           // Dữ liệu kết quả (ví dụ: JSON string, text)
+    errorMessage?: string;      // Thông báo lỗi nếu status='error'
+    frontendAction?: FrontendAction; // Cho phép Sub Agent trả về action nếu cần (ví dụ: confirmEmailSend)
 }

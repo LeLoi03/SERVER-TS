@@ -1,4 +1,4 @@
-// src/function-calling/functionRegistry.ts
+// src/chatbot/gemini/functionRegistry.ts
 import { Socket } from 'socket.io';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, Language } from '../shared/types';
@@ -12,6 +12,7 @@ import { GetWebsiteInfoHandler } from '../handlers/getWebsiteInfo.handler';
 import { NavigationHandler } from '../handlers/navigation.handler';
 import { OpenGoogleMapHandler } from '../handlers/openGoogleMap.handler';
 import { FollowUnfollowItemHandler } from '../handlers/followUnfollowItem.handler';
+import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
 // ... import other handlers as they are created
 
 // Simple handler for unknown functions
@@ -30,10 +31,11 @@ class UnknownFunctionHandler implements IFunctionHandler {
 const functionRegistry: Record<string, IFunctionHandler> = {
     getConferences: new GetConferencesHandler(),
     getJournals: new GetJournalsHandler(),
-    getWebsiteInformation: new GetWebsiteInfoHandler(),
+    getWebsiteInfo: new GetWebsiteInfoHandler(),
     navigation: new NavigationHandler(),
     openGoogleMap: new OpenGoogleMapHandler(),
     followUnfollowItem: new FollowUnfollowItemHandler(),
+    sendEmailToAdmin: new SendEmailToAdminHandler(),
     // Add other function names and their corresponding handlers here
     __unknown__: new UnknownFunctionHandler(), // Fallback handler
 };

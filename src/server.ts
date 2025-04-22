@@ -11,12 +11,13 @@ import { handleCrawlConferences, handleCrawlJournals } from './crawl/crawl';
 import { performLogAnalysis } from './client/service/logAnalysisService';
 import { LogAnalysisResult } from './client/types/logAnalysis';
 import { handleNonStreaming, handleStreaming } from './chatbot/handlers/intentHandler'; // Chỉ cần handleStreaming nếu chỉ dùng socket
-import { HistoryItem, ErrorUpdate } from './chatbot/shared/types';
+import { HistoryItem, ErrorUpdate, ConfirmSendEmailAction } from './chatbot/shared/types';
 import { createLogAnalysisRouter } from './client/route/logAnalysisRoutes'; // <<< Import hàm tạo router
 import { Language } from './chatbot/shared/types';
 import jwt from 'jsonwebtoken'; // <<< Import JWT
+import { handleUserEmailCancellation, handleUserEmailConfirmation, stageEmailConfirmation } from './chatbot/utils/confirmationManager';
+import { FrontendAction } from './chatbot/shared/types';
 
-// --- Interface for Decoded Token Payload ---
 // --- Interface for Decoded Token Payload (Optional but good practice) ---
 // We might not use its content directly here, but it's good for verify structure
 interface DecodedToken {
@@ -133,15 +134,13 @@ io.use((socket: Socket, next) => {
 // --- End Socket.IO Authentication Middleware ---
 
 
-// --- Socket.IO Connection Handling (REVISED - Token Only) ---
+// --- Socket.IO Connection Handling ---
 io.on('connection', (socket: Socket) => {
     const socketId = socket.id;
-    const authenticatedToken = socket.data.token as string | null; // Get token attached by middleware
+    const authenticatedToken = socket.data.token as string | null; // Attached by middleware
 
-    // Log connection status based on token presence
     if (authenticatedToken) {
         logToFile(`[Socket.IO] Client connected: ${socketId} (Authenticated via Token)`);
-        // No need to manage connectedUsers map here based on token alone usually
     } else {
         logToFile(`[Socket.IO] Client connected: ${socketId} (Anonymous)`);
     }
@@ -149,107 +148,151 @@ io.on('connection', (socket: Socket) => {
     sessionHistories.set(socketId, []);
     logToFile(`[Socket.IO ${socketId}] Initialized empty chat history.`);
 
-    // --- Disconnect Handling (REVISED) ---
     socket.on('disconnect', (reason: string) => {
         const token = socket.data.token as string | null;
         logToFile(`[Socket.IO] Client disconnected: ${socketId}. Reason: ${reason}`);
-        if (token) {
-            logToFile(`[Socket.IO ${socketId}] Authenticated user (identified by token) disconnected.`);
-            // Remove from connectedUsers if you were tracking by token, but likely not needed
-        } else {
-            logToFile(`[Socket.IO ${socketId}] Anonymous user disconnected.`);
-        }
+        if (token) logToFile(`[Socket.IO ${socketId}] Authenticated user disconnected.`);
+        else logToFile(`[Socket.IO ${socketId}] Anonymous user disconnected.`);
         sessionHistories.delete(socketId);
         logToFile(`[Socket.IO ${socketId}] Removed chat history.`);
+        // Clean up any pending confirmations specifically for this socket?
+        // Might be complex if user reconnects quickly. Timeout handles cleanup eventually.
     });
 
-    // --- Error Handling (Keep as is) ---
     socket.on('error', (err: Error) => { logToFile(`[Socket.IO ${socketId}] Socket Error: ${err.message}`); });
 
-    // --- Handle 'send_message' (Keep as is - it calls intentHandler) ---
+    // --- Handle 'send_message' ---
     socket.on('send_message', async (data: { userInput: string; isStreaming?: boolean; language: Language }) => {
         const { userInput, isStreaming = true, language } = data;
-        // <<< IMPORTANT: Add Auth Check before calling handlers that require it >>>
-        // Example: Check if the requested action requires auth
-        // if (actionRequiresAuth(userInput) && !socket.data.user) {
-        //      logToFile(`[Socket.IO ${socketId}] Blocked unauthorized attempt for input: ${userInput}`);
-        //      return socket.emit('chat_error', { type: 'error', message: 'You must be logged in to perform this action.', step: 'authorization' } as ErrorUpdate);
-        // }
-        // For follow/unfollow, the check happens *inside* executeFunctionCall
+        const handlerId = `MsgHandler-${Date.now()}`; // Unique ID for this message handling
+        logToFile(`[Socket.IO ${socketId}] Received 'send_message': UserInput = "${userInput}", Streaming = ${isStreaming}, Language = ${language}, HandlerId: ${handlerId}`);
 
-
-        logToFile(`[Socket.IO ${socketId}] Received 'send_message': UserInput = "${userInput}", Streaming = ${isStreaming}, Language = ${language}`);
         const currentHistory = sessionHistories.get(socketId);
         if (currentHistory === undefined) {
             logToFile(`[Socket.IO ${socketId}] CRITICAL Error: History not found. Re-initializing.`);
             sessionHistories.set(socketId, []);
             return socket.emit('chat_error', { type: 'error', message: 'Internal server error: Session history lost. Please refresh.', step: 'history_missing' } as ErrorUpdate);
         }
-        logToFile(`[Socket.IO ${socketId}] Retrieved history with ${currentHistory.length} items.`);
-
 
         try {
-            let updatedHistory;
+            let updatedHistory: HistoryItem[] | void;
+            let resultAction: FrontendAction | undefined = undefined; // Variable to capture action from handlers
+
+            // --- Define a callback to potentially receive action from handlers ---
+            // This part is tricky, how intentHandler returns the action needs adjustment
+            // For non-streaming, it's easier as it returns the final state.
+            // For streaming, the action might come with the *final* chunk.
+            // Let's assume for now handleNonStreaming can return { history: updatedHistory, action: resultAction }
+            // And handleStreaming might emit a final event containing the action.
 
             if (isStreaming) {
-                // --- Gọi Handler Streaming ---
-                logToFile(`[Socket.IO ${socketId}] Calling handleStreaming...`);
-                // handleStreaming sẽ tự emit 'status_update', 'chat_update', 'chat_result'/'chat_error'
-                // Nó cũng nên trả về lịch sử đã cập nhật (bao gồm cả phản hồi cuối cùng của assistant)
+                logToFile(`[Socket.IO ${socketId} ${handlerId}] Calling handleStreaming...`);
+                // NOTE: handleStreaming needs modification to potentially emit the frontendAction
+                // with its *final* 'chat_result' or a separate 'final_action' event.
+                // For now, we assume it handles emits internally, including potential action staging.
+                // We might need a more complex structure if handleStreaming needs to return the action
+                // *before* finishing streaming the text.
                 updatedHistory = await handleStreaming(
-                    userInput, // userInput thực ra không cần nữa nếu đã thêm vào historyForHandler? Xem lại logic handleStreaming
-                    currentHistory, // <<< Truyền lịch sử đã bao gồm input của user
-                    socket,
-                    language // <<< Pass language
-
-                );
-                logToFile(`[Socket.IO ${socketId}] handleStreaming finished.`);
-
-            } else {
-                // --- Gọi Handler Non-Streaming ---
-                logToFile(`[Socket.IO ${socketId}] Calling handleNonStreaming...`);
-                // Giả sử handleNonStreaming trả về một object chứa kết quả cuối cùng
-                // Nó KHÔNG emit gì cả.
-                updatedHistory = await handleNonStreaming(
                     userInput,
-                    currentHistory, // Pass the retrieved history
-                    socket, // Pass the socket object for emitting
-                    language // <<< Pass language
-
+                    currentHistory,
+                    socket,
+                    language,
+                    handlerId, // Pass handlerId
+                    (action) => { // A callback passed into handleStreaming to receive the action
+                        if (action?.type === 'confirmEmailSend') {
+                            stageEmailConfirmation(
+                                action.payload as ConfirmSendEmailAction, // Type assertion
+                                socket.data.token,
+                                socketId,
+                                handlerId, // Use the message handler ID
+                                io // Pass io instance
+                            );
+                        }
+                    }
                 );
-            }
 
-            // --- Store the updated history back ---
-            if (updatedHistory) {
-                sessionHistories.set(socketId, updatedHistory);
-                logToFile(`[Socket.IO ${socketId}] Updated history stored (${updatedHistory.length} items).`);
+                // If handleStreaming returned the history directly
+                if (updatedHistory) {
+                    sessionHistories.set(socketId, updatedHistory);
+                    logToFile(`[Socket.IO ${socketId} ${handlerId}] Updated history from Streaming Handler stored (${updatedHistory.length} items).`);
+                } else {
+                    logToFile(`[Socket.IO ${socketId} ${handlerId}] Streaming Handler finished, history managed internally or failed.`);
+                }
+
             } else {
-                // Handler might return void/undefined on critical internal error where history state is uncertain
-                logToFile(`[Socket.IO ${socketId}] Warning: handleUserInputStreaming did not return updated history. History might be unchanged or invalid.`);
-                // Decide if you want to clear history here or leave it as is
-                // sessionHistories.set(socketId, []); // Example: Clear history
+                logToFile(`[Socket.IO ${socketId} ${handlerId}] Calling handleNonStreaming...`);
+                // Modify handleNonStreaming to return an object if needed
+                const handlerResult = await handleNonStreaming(
+                    userInput,
+                    currentHistory,
+                    socket,
+                    language,
+                    handlerId // Pass handlerId
+                );
+
+                // Assuming handleNonStreaming now returns { history: HistoryItem[], action?: FrontendAction }
+                if (handlerResult) {
+                    updatedHistory = handlerResult.history;
+                    resultAction = handlerResult.action; // Capture action returned by non-streaming handler
+                    sessionHistories.set(socketId, updatedHistory);
+                    logToFile(`[Socket.IO ${socketId} ${handlerId}] Updated history from NonStreaming Handler stored (${updatedHistory.length} items).`);
+
+                    // --- STAGE CONFIRMATION IF ACTION RECEIVED ---
+                    if (resultAction?.type === 'confirmEmailSend') {
+                        stageEmailConfirmation(
+                            resultAction.payload as ConfirmSendEmailAction, // Type assertion
+                            socket.data.token, // Get token associated with the socket
+                            socketId,
+                            handlerId, // Use the message handler ID
+                            io // Pass io instance
+                        );
+                        // Action already sent to frontend by intentHandler's safeEmit
+                    }
+                } else {
+                    logToFile(`[Socket.IO ${socketId} ${handlerId}] NonStreaming Handler did not return updated history.`);
+                    // Decide how to handle this - maybe keep old history?
+                }
+
             }
 
         } catch (error: any) {
-            logToFile(`[Socket.IO ${socketId}] CRITICAL Error during handler execution: ${error.message}\nStack: ${error.stack}`);
+            logToFile(`[Socket.IO ${socketId} ${handlerId}] CRITICAL Error during handler execution: ${error.message}\nStack: ${error.stack}`);
             try {
                 if (socket.connected) {
                     socket.emit('chat_error', {
                         type: 'error',
-                        message: error.message || 'An unexpected server error occurred during processing.',
+                        message: error.message || 'An unexpected server error occurred.',
                         step: 'handler_exception',
-                        // thoughts: error.thoughts // Nếu lỗi có chứa thoughts
                     } as ErrorUpdate);
                 }
             } catch (emitError: any) {
-                logToFile(`[Socket.IO ${socketId}] FAILED to emit critical error to client: ${emitError.message}`);
+                logToFile(`[Socket.IO ${socketId}] FAILED to emit critical error: ${emitError.message}`);
             }
-            // Khi có lỗi, có thể reset history về trạng thái trước khi xử lý
-            sessionHistories.set(socketId, []);
+            sessionHistories.set(socketId, []); // Reset history on error
         }
     });
 
-});
+
+    // --- LISTEN FOR USER CONFIRMATION/CANCELLATION EVENTS ---
+    socket.on('user_confirm_email', (data: { confirmationId: string }) => {
+        if (data && data.confirmationId) {
+            logToFile(`[Socket.IO ${socketId}] Received 'user_confirm_email' for ID: ${data.confirmationId}`);
+            handleUserEmailConfirmation(data.confirmationId, socket); // Pass socket for reply
+        } else {
+            logToFile(`[Socket.IO ${socketId}] Received invalid 'user_confirm_email' event data: ${JSON.stringify(data)}`);
+        }
+    });
+
+    socket.on('user_cancel_email', (data: { confirmationId: string }) => {
+        if (data && data.confirmationId) {
+            logToFile(`[Socket.IO ${socketId}] Received 'user_cancel_email' for ID: ${data.confirmationId}`);
+            handleUserEmailCancellation(data.confirmationId, socket); // Pass socket for reply
+        } else {
+            logToFile(`[Socket.IO ${socketId}] Received invalid 'user_cancel_email' event data: ${JSON.stringify(data)}`);
+        }
+    });
+
+}); // End io.on('connection')
 
 
 

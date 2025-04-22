@@ -1,4 +1,4 @@
-// src/handlers/intentHandler.ts
+// src/chatbot/handlers/intentHandler.ts
 import {
     GenerationConfig,
     Tool,
@@ -14,7 +14,7 @@ import {
     ResultUpdate,
     ErrorUpdate,
     ThoughtStep,
-    ChatAction,
+    FrontendAction,
     ChatUpdate,
     Language,
 
@@ -29,30 +29,31 @@ import { GEMINI_API_KEY, CHATBOT_MODEL_NAME } from "../../config";
 const chatbotService = new Gemini(GEMINI_API_KEY!, CHATBOT_MODEL_NAME || "gemini-2.0-flash");
 const chatbotConfigPrefix = "CHATBOT"; // Assuming a config prefix for chatbot settings
 const chatbotGenerationConfig: GenerationConfig = loadModelConfig(chatbotConfigPrefix);
+// Define return type for handleNonStreaming
+interface NonStreamingHandlerResult {
+    history: HistoryItem[];
+    action?: FrontendAction;
+}
+
 
 export async function handleNonStreaming(
     userInput: string,
     historyForHandler: HistoryItem[],
     socket: Socket,
-    language: Language
-): Promise<HistoryItem[] | void> {
+    language: Language,
+    handlerId: string // Receive handlerId
+): Promise<NonStreamingHandlerResult | void> { // Update return type
 
-    const handlerId = `Handler-NS-${Date.now()}`;
+    // const handlerId = `Handler-NS-${Date.now()}`; // handlerId is now passed in
     const socketId = socket.id;
     logToFile(`--- [${handlerId} Socket ${socketId}] Handling NON-STREAMING input: "${userInput}", Lang: ${language} ---`);
 
     const { systemInstructions, functionDeclarations } = getLanguageConfig(language);
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
-
-    logToFile(`[${handlerId}] Using System Instructions (Lang: ${language}): ${systemInstructions.substring(0, 100)}...`);
-    logToFile(`[${handlerId}] Using Tools (Lang: ${language}): ${functionDeclarations.map((f: any) => f.name).join(', ') || 'None'}`);
-
     const userTurn: HistoryItem = { role: 'user', parts: [{ text: userInput }] };
     let history: HistoryItem[] = [...historyForHandler, userTurn];
-    logToFile(`[${handlerId} History Check - Start] Initialized working history with ${history.length} items.`);
-
     const thoughts: ThoughtStep[] = [];
-    let frontendActionToSend: ChatAction | undefined = undefined;
+    let finalFrontendAction: FrontendAction | undefined = undefined; // Store the final action
     let currentTurn = 1;
     const MAX_TURNS = 5;
 
@@ -67,19 +68,19 @@ export async function handleNonStreaming(
                 thoughts.push({ step: data.step, message: data.message, timestamp: new Date().toISOString(), details: (data as StatusUpdate).details });
             }
 
-            let dataToSend: any = data; // Use 'any' temporarily for flexibility
+            let dataToSend: any = data;
 
-            // Always attach thoughts to final events
+            // Attach thoughts and action to the *final* chat_result or chat_error
             if (eventName === 'chat_result' || eventName === 'chat_error') {
-                dataToSend = { ...data, thoughts: thoughts }; // Clone and add thoughts
-                // Attach frontendAction *only* to the final result event if it exists
-                if (eventName === 'chat_result' && frontendActionToSend) {
-                    (dataToSend as ResultUpdate).action = frontendActionToSend; // Type assertion
-                    logToFile(`[${handlerId} ${socketId}] Attaching frontendAction to final event: ${JSON.stringify(frontendActionToSend)}`);
+                dataToSend = { ...data, thoughts: thoughts };
+                // Only attach the action if it's the final result being emitted by this handler
+                if (eventName === 'chat_result' && finalFrontendAction) {
+                    (dataToSend as ResultUpdate).action = finalFrontendAction;
+                    logToFile(`[${handlerId} ${socketId}] Attaching frontendAction to final event: ${JSON.stringify(finalFrontendAction)}`);
                 }
             }
 
-            socket.emit(eventName, dataToSend); // Send the potentially modified data
+            socket.emit(eventName, dataToSend);
             logToFile(`[${handlerId} Socket Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}`);
             return true;
         } catch (error: any) {
@@ -91,135 +92,125 @@ export async function handleNonStreaming(
     try {
         if (!safeEmit('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return;
 
-        // --- Loop for potential multi-turn function calls ---
         while (currentTurn <= MAX_TURNS) {
             logToFile(`--- [${handlerId} Socket ${socketId}] Turn ${currentTurn}: Sending to Model (History size: ${history.length}) ---`);
             if (!safeEmit('status_update', { type: 'status', step: 'thinking', message: currentTurn > 1 ? 'Thinking based on previous results...' : 'Thinking...' })) return;
-
             if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected before Model call in Turn ${currentTurn}.`); return; }
 
-            // --- Call the Model ---
             const modelResult: GeminiInteractionResult = await chatbotService.generateTurn(
                 [], history, chatbotGenerationConfig, systemInstructions, tools
             );
 
             if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected during/after Model call in Turn ${currentTurn}.`); return; }
 
-            // --- Process Model Response ---
             if (modelResult.status === "final_text") {
                 logToFile(`[${handlerId} Socket ${socketId}] Turn ${currentTurn}: Received final_text.`);
                 safeEmit('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
-                const finalModelResponseText = modelResult.text || (frontendActionToSend ? "Okay, action complete." : "Okay.");
+                const finalModelResponseText = modelResult.text || (finalFrontendAction ? "Please follow the instructions on screen." : "Okay."); // Adjust message if action exists
                 const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: finalModelResponseText }] };
                 history.push(finalModelTurn);
                 logToFile(`[${handlerId} History Check - Final] Appended final model response. History size: ${history.length}`);
-                safeEmit('chat_result', { type: 'result', message: finalModelResponseText }); // safeEmit handles adding action/thoughts
-                return history; // <<< EXIT LOOP: Interaction successful
+                safeEmit('chat_result', { type: 'result', message: finalModelResponseText }); // safeEmit handles attaching action/thoughts
+
+                // --- Return final state ---
+                return { history: history, action: finalFrontendAction }; // <<< RETURN RESULT OBJECT
 
             } else if (modelResult.status === "error") {
                 logToFile(`[${handlerId} Socket ${socketId}] Turn ${currentTurn}: Received error from model: ${modelResult.errorMessage}`);
-                safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `An error occurred during processing (Turn ${currentTurn}).`, step: 'thinking' });
-                // Return current history, including the user input that caused the error maybe?
-                // Or just return void/undefined to signal failure? Let's return history for now.
-                return history; // <<< EXIT LOOP: Interaction failed
+                safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `An error occurred (Turn ${currentTurn}).`, step: 'thinking' });
+                return { history: history }; // Return history up to the error point
 
             } else if (modelResult.status === "requires_function_call" && modelResult.functionCall) {
                 logToFile(`[${handlerId} Socket ${socketId}] Turn ${currentTurn}: Received requires_function_call: ${modelResult.functionCall.name}`);
                 const functionCall = modelResult.functionCall;
-
-                // Append model's request to history
                 const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
                 history.push(modelFunctionCallTurn);
                 logToFile(`[${handlerId} History Check - FC Prep ${currentTurn}] Appended model FC request. History size: ${history.length}`);
 
-                // --- Execute the Function Call using the Registry --- <<< REFACRORED PART
-                // The registry's executeFunction now handles logging, status emits, and error handling internally
-                // Create a specific callback for status updates to pass down
                 const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-                    // Directly use the main handler's safeEmit, ensuring type safety
                     return safeEmit(eventName, data);
                 };
 
-
-                // Pass the callback to executeFunction
-                const { modelResponseContent, frontendAction } = await executeFunction(
+                // --- Execute Function ---
+                const functionResult = await executeFunction(
                     functionCall,
-                    // socket, // Pass socket separately if needed by handlers
-                    handlerId,
+                    handlerId, // Pass handlerId
                     language,
-                    statusUpdateCallback, // Pass the callback function
-                    socket // Pass socket separately
+                    statusUpdateCallback,
+                    socket // Pass socket
                 );
-                // ---
+                // functionResult is { modelResponseContent: string, frontendAction?: FrontendAction }
 
-                // Store the frontendAction *if* it was returned by the handler.
-                // The logic within the specific handlers determines if an action is needed.
-                if (frontendAction) {
-                    frontendActionToSend = frontendAction; // Store it to be sent with the *final* message
-                    logToFile(`[${handlerId} ${socketId}] Stored frontendAction from '${functionCall.name}' result.`);
+                // --- Store potential action ---
+                // We only store the *last* action generated in a multi-turn sequence
+                // If a text response comes after an action, the action is still sent.
+                if (functionResult.frontendAction) {
+                    finalFrontendAction = functionResult.frontendAction; // Store/overwrite action
+                    logToFile(`[${handlerId} ${socketId}] Stored/Updated frontendAction from '${functionCall.name}' result.`);
                 }
 
                 if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected after function execution in Turn ${currentTurn}.`); return; }
 
-                // --- Prepare Function Response for next Model call ---
                 const functionResponsePart: FunctionResponsePart = {
-                    functionResponse: { name: functionCall.name, response: { content: modelResponseContent } }
+                    functionResponse: { name: functionCall.name, response: { content: functionResult.modelResponseContent } }
                 };
                 const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
                 history.push(functionTurn);
                 logToFile(`[${handlerId} History Check - FC Done ${currentTurn}] Appended function response. History size: ${history.length}`);
 
-                // Continue to the next iteration
                 currentTurn++;
                 continue; // <<< CONTINUE LOOP
 
             } else {
-                // Unexpected status
                 logToFile(`[${handlerId} Socket ${socketId}] Turn ${currentTurn}: Received unexpected model status: ${modelResult.status}`);
                 safeEmit('chat_error', { type: 'error', message: `An unexpected internal error occurred (Turn ${currentTurn}).`, step: 'unknown_model_status' });
-                return history; // <<< EXIT LOOP: Unexpected state
+                return { history: history }; // Return history up to the error point
             }
         } // End while loop
 
-        // If loop finishes due to MAX_TURNS
         if (currentTurn > MAX_TURNS) {
             logToFile(`[${handlerId} Socket ${socketId}] Error: Exceeded maximum interaction turns (${MAX_TURNS}).`);
-            safeEmit('chat_error', { type: 'error', message: 'The request seems too complex or is stuck in a loop. Please try rephrasing.', step: 'max_turns_exceeded' });
-            return history;
+            safeEmit('chat_error', { type: 'error', message: 'Request too complex or stuck in a loop.', step: 'max_turns_exceeded' });
+            return { history: history };
         }
 
     } catch (error: any) {
         logToFile(`[${handlerId} Socket ${socketId} Lang: ${language}] CRITICAL Error in handleNonStreaming: ${error.message}\nStack: ${error.stack}`);
         safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'unknown_handler_error' });
-        return history; // Return history state before the crash
+        return { history: history }; // Return history state before the crash
     } finally {
         logToFile(`--- [${handlerId} Socket ${socketId} Lang: ${language}] NON-STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
     }
-    // Ensure a return path if the loop somehow exits without returning (shouldn't happen with current logic)
-    return history;
+    // Should be unreachable if logic is correct, but satisfies TS
+    return { history: history };
 }
 
+
+// --- handleStreaming function ---
 export async function handleStreaming(
     userInput: string,
     currentHistoryFromSocket: HistoryItem[],
     socket: Socket,
-    language: Language
+    language: Language,
+    handlerId: string, // <<< Added handlerId parameter
+    onActionGenerated?: (action: FrontendAction) => void // <<< Added callback parameter
 ): Promise<HistoryItem[] | void> { // Return type remains the same
 
-    const handlerId = `Handler-S-${Date.now()}`;
+    // <<< Use the passed handlerId >>>
+    // const handlerId = `Handler-S-${Date.now()}`; // Remove this line
     const socketId = socket.id;
     logToFile(`--- [${handlerId} Socket ${socketId}] Handling STREAMING input: "${userInput}", Lang: ${language} ---`);
 
-    // --- Get Language Config ---
+    // --- Get Language Config --- (No changes)
     const { systemInstructions, functionDeclarations } = getLanguageConfig(language);
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
     logToFile(`[${handlerId}] Using System Instructions (Lang: ${language}): ${systemInstructions.substring(0, 100)}...`);
     logToFile(`[${handlerId}] Using Tools (Lang: ${language}): ${functionDeclarations.map((f: any) => f.name).join(', ') || 'None'}`);
 
-    // --- State Variables ---
+    // --- State Variables --- (No changes)
     let history: HistoryItem[] = [...currentHistoryFromSocket];
     const thoughts: ThoughtStep[] = [];
-    let frontendActionToSend: ChatAction | undefined = undefined; // To store action from executeFunction
+    let frontendActionToSend: FrontendAction | undefined = undefined; // To store action from executeFunction
 
     // --- Safe Emit Helper (Collects Thoughts, Adds Context to Final Events) ---
     const safeEmit = (eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
@@ -337,133 +328,120 @@ export async function handleStreaming(
             return history; // Return history up to the point of error
 
         } else if (initialResult.functionCalls) {
-            // --- Function Call Required (Instead of Initial Stream) ---
+            // --- Function Call Required ---
             logToFile(`--- [${handlerId} Turn 2 Start - ${socketId}] Function Call Required: ${initialResult.functionCalls.name} ---`);
-            const functionCall = initialResult.functionCalls; // Extract the function call object
-
-            // Append Model's FC Request to History
+            const functionCall = initialResult.functionCalls;
             const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
             history.push(modelFunctionCallTurn);
             logToFile(`[${handlerId} History T2 Prep - ${socketId}] Added model FC request. Size: ${history.length}`);
 
-            // Execute Function Call using the REFACTORED REGISTRY
-            // Status updates for 'function_call' and 'processing_function_result' are handled within executeFunction
             if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected before function execution.`); return; }
 
-            // <<< CALL THE REFACTORED FUNCTION EXECUTOR >>>
-            // Create a specific callback for status updates to pass down
+            // Execute Function Call using the Registry
             const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-                // Directly use the main handler's safeEmit
                 return safeEmit(eventName, data);
             };
 
-            // Pass the callback to executeFunction
-            const { modelResponseContent, frontendAction } = await executeFunction(
+            const functionResult = await executeFunction( // <<< Get the full result object
                 functionCall,
-                // socket, // Pass socket separately if needed
                 handlerId,
                 language,
-                statusUpdateCallback, // Pass the callback
-                socket // Pass socket separately
+                statusUpdateCallback,
+                socket
             );
-            // <<< --- >>>
+            // functionResult is { modelResponseContent: string, frontendAction?: FrontendAction }
 
-            // STORE POTENTIAL ACTION to be sent with the *final* result
-            if (frontendAction) {
-                frontendActionToSend = frontendAction;
+            // <<< --- MODIFICATION START --- >>>
+            // STORE POTENTIAL ACTION and NOTIFY SERVER
+            if (functionResult.frontendAction) {
+                frontendActionToSend = functionResult.frontendAction; // Store it for final emit
                 logToFile(`[${handlerId} ${socketId}] Stored frontendAction from '${functionCall.name}' execution.`);
+                // --- CALL THE CALLBACK passed from server.ts ---
+                if (onActionGenerated) {
+                    onActionGenerated(frontendActionToSend);
+                    logToFile(`[${handlerId} ${socketId}] Notified caller (server.ts) about generated action.`);
+                } else {
+                    logToFile(`[${handlerId} ${socketId}] Warning: onActionGenerated callback was not provided.`);
+                }
+                // ---------------------------------------------
             }
+            // <<< --- MODIFICATION END --- >>>
+
+
 
             if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected after function execution completed.`); return; }
 
-            // Append Function Response to History
-            const functionResponsePart: FunctionResponsePart = { functionResponse: { name: functionCall.name, response: { content: modelResponseContent } } };
+            // Append Function Response to History (Use modelResponseContent from functionResult)
+            const functionResponsePart: FunctionResponsePart = { functionResponse: { name: functionCall.name, response: { content: functionResult.modelResponseContent } } };
             const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
             history.push(functionTurn);
             logToFile(`[${handlerId} History T2 Done - ${socketId}] Added function response. Size: ${history.length}`);
 
-            // --- Turn 3: Second Model Call (Request Final Stream) ---
+
+            // --- Turn 3: Second Model Call (Request Final Stream) --- (No changes in this block's logic)
             logToFile(`--- [${handlerId} Turn 3 Start - ${socketId}] Requesting final stream after function call ---`);
             if (!safeEmit('status_update', { type: 'status', step: 'thinking', message: 'Thinking based on function results...' })) return;
             if (!socket.connected) { logToFile(`[${handlerId} Abort T3 - ${socketId}] Disconnected before final model call.`); return; }
-
-            logToFile(`[${handlerId} History T3 Send - ${socketId}] Size: ${history.length}`);
-            // Request the final stream response from the model
             const finalResult = await chatbotService.generateStream([], history, chatbotGenerationConfig, systemInstructions, tools);
-
             if (!socket.connected) { logToFile(`[${handlerId} Abort T3 - ${socketId}] Disconnected after final model call response received.`); return; }
 
-            // --- Process Final Result ---
+            // --- Process Final Result --- (No changes in this block's logic)
             if (finalResult.error) {
                 logToFile(`[${handlerId} Error T3 - ${socketId}] Model returned error on final call: ${finalResult.error}`);
                 safeEmit('chat_error', { type: 'error', message: finalResult.error, step: 'thinking' });
-                return history; // Return history up to this point
-
-            } else if (finalResult.functionCalls) {
-                // This is generally unexpected after providing a function result. Handle as an error.
-                logToFile(`[${handlerId} Error T3 - ${socketId}] Unexpected second function call requested after providing result.`);
-                safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response: Another action was requested instead of a final answer.', step: 'thinking' });
-                const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
-                history.push(unexpectedTurn); // Add the unexpected request to history for context
                 return history;
-
+            } else if (finalResult.functionCalls) {
+                logToFile(`[${handlerId} Error T3 - ${socketId}] Unexpected second function call requested.`);
+                safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response.', step: 'thinking' });
+                const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
+                history.push(unexpectedTurn);
+                return history;
             } else if (finalResult.stream) {
-                // --- Process Final Stream ---
                 logToFile(`[${handlerId} Stream T3 - ${socketId}] Processing final stream...`);
-                // Process the stream AND emit the final result ('chat_result')
-                const streamOutput = await processAndEmitStream(finalResult.stream, true); // emitFinalResult = true
-
+                // processAndEmitStream will emit the final chat_result *including the stored frontendActionToSend*
+                const streamOutput = await processAndEmitStream(finalResult.stream, true);
                 if (streamOutput) {
-                    // Stream processed successfully, add final model response to history
                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                     history.push(finalModelTurn);
                     logToFile(`[${handlerId} History T3 Done - ${socketId}] Appended final model response. Size: ${history.length}`);
                     return history; // <<< SUCCESSFUL COMPLETION (MULTI-TURN STREAM)
                 } else {
-                    // Stream processing failed (error already emitted by helper)
                     logToFile(`[${handlerId} Error T3 - ${socketId}] Final stream processing failed.`);
-                    return history; // Return history up to the point of failure
+                    return history;
                 }
-
             } else {
-                // Neither error, function call, nor stream - unexpected state
                 logToFile(`[${handlerId} Error T3 - ${socketId}] Unexpected empty state from final model call.`);
-                safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response state from AI.', step: 'thinking' });
+                safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response.', step: 'thinking' });
                 return history;
             }
             // --- End Turn 3 Logic ---
 
         } else if (initialResult.stream) {
-            // --- Initial Result is a Stream (No Function Call Needed) ---
+            // --- Initial Result is a Stream --- (No changes needed, no action expected here)
             logToFile(`[${handlerId} Stream T1 - ${socketId}] Processing initial stream directly...`);
-            // Process the stream AND emit the final result ('chat_result')
-            const streamOutput = await processAndEmitStream(initialResult.stream, true); // emitFinalResult = true
-
+            // processAndEmitStream will emit the final chat_result (no action expected here)
+            const streamOutput = await processAndEmitStream(initialResult.stream, true);
             if (streamOutput) {
-                // Stream processed successfully, add model response to history
                 const modelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                 history.push(modelTurn);
                 logToFile(`[${handlerId} History T1 Done - ${socketId}] Appended initial model response. Size: ${history.length}`);
                 return history; // <<< SUCCESSFUL COMPLETION (SINGLE-TURN STREAM)
             } else {
-                // Initial stream processing failed (error already emitted by helper)
                 logToFile(`[${handlerId} Error T1 - ${socketId}] Initial stream processing failed.`);
-                return history; // Return history up to the point of failure
+                return history;
             }
 
-        } else {
-            // Should not happen if error/functionCall/stream are exhaustive possibilities
+        } else { // (No changes)
             logToFile(`[${handlerId} Error T1 - ${socketId}] Unexpected empty state from initial model call.`);
-            safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response state from AI.', step: 'thinking' });
+            safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response.', step: 'thinking' });
             return history;
         }
 
-    } catch (error: any) {
+    } catch (error: any) { // (No changes)
         logToFile(`[${handlerId} CRITICAL Error - ${socketId} Lang: ${language}] ${error.message}\nStack: ${error.stack}`);
-        // safeEmit will add thoughts
         safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'handler_exception' });
-        return history; // Return history state before the crash
-    } finally {
+        return history;
+    } finally { // (No changes)
         logToFile(`--- [${handlerId} ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
     }
 }

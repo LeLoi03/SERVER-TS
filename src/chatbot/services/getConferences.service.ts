@@ -1,3 +1,5 @@
+// src/chatbot/service/getConferences.service.ts
+
 import { executeApiCall } from './backendService';
 import { ApiCallResult } from '../shared/types';
 

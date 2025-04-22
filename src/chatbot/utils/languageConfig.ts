@@ -1,16 +1,17 @@
-// src/handlers/languageConfig.ts (New File or add to intentHandler.ts)
+// src/chatbot/utils/languageConfig.ts 
 
 import { FunctionDeclaration } from "@google/generative-ai";
-import { Language } from '../shared/types'; // Adjust path
-import logToFile from '../utils/logger'; // Adjust path
+import { Language } from '../shared/types'; 
+import logToFile from '../utils/logger'; 
 
-// Import all language-specific declarations and instructions
+
 import {
     englishSystemInstructions, english_getConferencesDeclaration, english_getJournalsDeclaration, english_getWebsiteInformationDeclaration, 
     english_navigationDeclaration, english_openGoogleMapDeclaration, english_followUnfollowItemDeclaration,
     vietnameseSystemInstructions, vietnam_getConferencesDeclaration, vietnam_getJournalsDeclaration, vietnam_getWebsiteInformationDeclaration, 
-    chineseSystemInstructions, china_getConferencesDeclaration, china_getJournalsDeclaration, china_getWebsiteInformationDeclaration, china_drawChartDeclaration // Make sure this one is imported if used
-} from "../gemini/functionDeclarations"; // Adjust path
+    chineseSystemInstructions, china_getConferencesDeclaration, china_getJournalsDeclaration, china_getWebsiteInformationDeclaration, china_drawChartDeclaration, 
+    english_sendEmailToAdminDeclaration
+} from "../gemini/functionDeclarations";
 
 // --- Define the structure for language-specific configuration ---
 interface LanguageConfig {
@@ -28,7 +29,8 @@ const languageConfigurations: Record<Language, LanguageConfig> = {
             english_getWebsiteInformationDeclaration,
             english_navigationDeclaration,
             english_openGoogleMapDeclaration,
-            english_followUnfollowItemDeclaration
+            english_followUnfollowItemDeclaration,
+            english_sendEmailToAdminDeclaration
 
         ],
     },

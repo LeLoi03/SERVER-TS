@@ -1,4 +1,4 @@
-// src/function-calling/functionHandler.interface.ts
+// src/chatbot/interface/functionHandler.interface.ts
 import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types';
 
 /**
