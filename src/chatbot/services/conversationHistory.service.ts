@@ -230,4 +230,77 @@ export class ConversationHistoryService {
     }
 
 
+      // --- NEW: DELETE CONVERSATION ---
+    /**
+     * Deletes a specific conversation belonging to a user.
+     * @param conversationId The ID of the conversation to delete.
+     * @param userId The ID of the user requesting the deletion (for authorization).
+     * @returns Promise<boolean> True if deletion was successful, false otherwise.
+     */
+    async deleteConversation(conversationId: string, userId: string): Promise<boolean> {
+        logToFile(`[History Service] Attempting to delete conversationId: ${conversationId} for userId: ${userId}`);
+        try {
+            const result = await this.model.deleteOne({
+                _id: conversationId,
+                userId: userId // <<< CRITICAL: Ensure only the owner can delete
+            }).exec();
+
+            if (result.deletedCount === 1) {
+                logToFile(`[History Service] Successfully deleted conversationId: ${conversationId}`);
+                return true;
+            } else {
+                logToFile(`[History Service] Delete failed: Conversation not found or not authorized for id: ${conversationId}, userId: ${userId}`);
+                return false;
+            }
+        } catch (error: any) {
+            if (error instanceof mongoose.Error.CastError) {
+                logToFile(`[History Service] Invalid conversationId format for delete: ${conversationId}`);
+                return false;
+            }
+            logToFile(`[History Service] Error deleting conversationId ${conversationId}: ${error.message}`);
+            // Depending on policy, you might want to throw or just return false
+            // Returning false is often safer for the caller.
+            return false;
+            // throw new Error(`Database error while deleting conversation: ${error.message}`);
+        }
+    }
+
+    // --- NEW: CLEAR CONVERSATION MESSAGES ---
+    /**
+     * Clears all messages from a specific conversation, keeping the conversation entry.
+     * @param conversationId The ID of the conversation to clear.
+     * @param userId The ID of the user requesting the clear operation (for authorization).
+     * @returns Promise<boolean> True if clearing was successful, false otherwise.
+     */
+    async clearConversationMessages(conversationId: string, userId: string): Promise<boolean> {
+        logToFile(`[History Service] Attempting to clear messages for conversationId: ${conversationId} for userId: ${userId}`);
+        try {
+            const result = await this.model.updateOne(
+                { _id: conversationId, userId: userId }, // <<< CRITICAL: Ensure only the owner can clear
+                {
+                    $set: {
+                        messages: [], // Set messages to an empty array
+                        lastActivity: new Date() // Update last activity timestamp
+                    }
+                }
+            ).exec();
+
+            if (result.matchedCount === 1) {
+                logToFile(`[History Service] Successfully cleared messages for conversationId: ${conversationId}. Modified: ${result.modifiedCount > 0}`);
+                // Return true even if modifiedCount is 0 (already empty), as the operation target was found.
+                return true;
+            } else {
+                logToFile(`[History Service] Clear messages failed: Conversation not found or not authorized for id: ${conversationId}, userId: ${userId}`);
+                return false;
+            }
+        } catch (error: any) {
+            if (error instanceof mongoose.Error.CastError) {
+                logToFile(`[History Service] Invalid conversationId format for clear: ${conversationId}`);
+                return false;
+            }
+            logToFile(`[History Service] Error clearing messages for conversationId ${conversationId}: ${error.message}`);
+            return false;
+            // throw new Error(`Database error while clearing conversation messages: ${error.message}`);
+        }
+    }
 }

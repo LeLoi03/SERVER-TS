@@ -3,13 +3,11 @@ import {
     GenerationConfig,
     Tool,
     FunctionResponsePart,
-    FunctionCall, // Import FunctionCall
     EnhancedGenerateContentResponse,
     Part,
-    Content
 } from "@google/generative-ai";
 import { Socket } from 'socket.io';
-import { v4 as uuidv4 } from 'uuid'; // For generating task IDs
+import { v4 as uuidv4 } from 'uuid';
 import logToFile from '../../utils/logger';
 import {
     HistoryItem,
@@ -21,7 +19,7 @@ import {
     FrontendAction,
     ChatUpdate,
     Language,
-    AgentCardRequest, // Import Agent Card types
+    AgentCardRequest, 
     AgentCardResponse
 } from '../shared/types';
 import { Gemini } from '../gemini/gemini';
@@ -31,7 +29,7 @@ import { getAgentLanguageConfig, AgentId } from '../utils/languageConfig';
 import { executeFunction } from '../gemini/functionRegistry';
 import { GEMINI_API_KEY, CHATBOT_MODEL_NAME } from "../../config";
 
-const chatbotService = new Gemini(GEMINI_API_KEY!, CHATBOT_MODEL_NAME || "gemini-2.0-flash"); // Maybe use 1.5 for better routing
+const chatbotService = new Gemini(GEMINI_API_KEY!, CHATBOT_MODEL_NAME || "gemini-2.0-flash"); 
 const chatbotConfigPrefix = "CHATBOT";
 const chatbotGenerationConfig: GenerationConfig = loadModelConfig(chatbotConfigPrefix);
 
@@ -47,7 +45,6 @@ interface RouteToAgentArgs {
     taskDescription: string;
     inputData: any; // Hoặc một kiểu cụ thể hơn nếu bạn biết rõ inputData
 }
-
 
 
 // --- Function to handle calling a Sub Agent ---
@@ -380,269 +377,6 @@ export async function handleNonStreaming(
     return { history: history }; // Should be unreachable
 }
 
-
-
-// // --- handleStreaming function ---
-// export async function handleStreaming(
-//     userInput: string,
-//     currentHistoryFromSocket: HistoryItem[],
-//     socket: Socket,
-//     language: Language,
-//     handlerId: string, // <<< Added handlerId parameter
-//     onActionGenerated?: (action: FrontendAction) => void // <<< Added callback parameter
-// ): Promise<HistoryItem[] | void> { // Return type remains the same
-
-//     // <<< Use the passed handlerId >>>
-//     // const handlerId = `Handler-S-${Date.now()}`; // Remove this line
-//     const socketId = socket.id;
-//     logToFile(`--- [${handlerId} Socket ${socketId}] Handling STREAMING input: "${userInput}", Lang: ${language} ---`);
-
-//     // --- Get Language Config --- (No changes)
-//     const { systemInstructions, functionDeclarations } = getLanguageConfig(language);
-//     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
-//     logToFile(`[${handlerId}] Using System Instructions (Lang: ${language}): ${systemInstructions.substring(0, 100)}...`);
-//     logToFile(`[${handlerId}] Using Tools (Lang: ${language}): ${functionDeclarations.map((f: any) => f.name).join(', ') || 'None'}`);
-
-//     // --- State Variables --- (No changes)
-//     let history: HistoryItem[] = [...currentHistoryFromSocket];
-//     const thoughts: ThoughtStep[] = [];
-//     let frontendActionToSend: FrontendAction | undefined = undefined; // To store action from executeFunction
-
-//     // --- Safe Emit Helper (Collects Thoughts, Adds Context to Final Events) ---
-//     const safeEmit = (eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
-//         if (!socket.connected) { logToFile(`[${handlerId} Emit SKIPPED - ${socketId}] Client disconnected. Event: ${eventName}`); return false; }
-//         try {
-//             // Collect thoughts from status updates
-//             if (eventName === 'status_update' && data.type === 'status') {
-//                 thoughts.push({ step: data.step, message: data.message, timestamp: new Date().toISOString(), details: (data as StatusUpdate).details });
-//             }
-
-//             let dataToSend: any = data; // Use 'any' temporarily
-
-//             // Add collected thoughts and potential action to final result/error
-//             if ((eventName === 'chat_result' || eventName === 'chat_error')) {
-//                 // Clone and add context
-//                 dataToSend = { ...data, thoughts: thoughts };
-//                 if (eventName === 'chat_result' && frontendActionToSend) {
-//                     (dataToSend as ResultUpdate).action = frontendActionToSend; // Type assertion
-//                     logToFile(`[${handlerId} ${socketId}] Attaching frontendAction to final stream event: ${JSON.stringify(frontendActionToSend)}`);
-//                 }
-//             }
-
-//             socket.emit(eventName, dataToSend); // Emit potentially modified data
-//             logToFile(`[${handlerId} Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}`); return true;
-//         } catch (error: any) { logToFile(`[${handlerId} Emit FAILED - ${socketId}] Error: ${error.message}. Event: ${eventName}`); return false; }
-//     };
-
-
-//     // --- Helper to Process Stream Chunks ---
-//     // (This helper remains largely unchanged, focused on stream consumption and partial updates)
-//     async function processAndEmitStream(
-//         stream: AsyncGenerator<EnhancedGenerateContentResponse>,
-//         emitFinalResult: boolean = true // Controls if this helper sends the 'chat_result'
-//     ): Promise<{ fullText: string } | null> {
-//         let accumulatedText = "";
-//         let streamFinished = false;
-//         logToFile(`[${handlerId} Stream Processing - ${socketId}] Starting... (Emit final: ${emitFinalResult})`);
-
-//         // Emit initial streaming status *once* before the loop
-//         if (!safeEmit('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) {
-//             logToFile(`[${handlerId} Stream Processing Abort - ${socketId}] Failed initial status emit (disconnected?).`);
-//             return null; // Can't proceed if disconnected
-//         }
-
-
-//         try {
-//             for await (const chunk of stream) {
-//                 if (!socket.connected) { logToFile(`[${handlerId} Stream Abort - ${socketId}] Disconnected during stream.`); return null; }
-
-//                 // We expect potential function calls *before* the stream starts,
-//                 // or text chunks during the stream. The Gemini API generally doesn't
-//                 // embed function calls *within* text chunks in a streaming response.
-//                 // Therefore, we only need to process text here.
-//                 const chunkText = chunk.text();
-//                 if (chunkText) {
-//                     accumulatedText += chunkText;
-//                     // Use the safeEmit helper
-//                     if (!safeEmit('chat_update', { type: 'partial_result', textChunk: chunkText })) {
-//                         // If emitting fails, likely disconnected, abort stream processing
-//                         logToFile(`[${handlerId} Stream Abort - ${socketId}] Failed to emit chat_update.`);
-//                         return null;
-//                     }
-//                 }
-//             }
-//             streamFinished = true;
-//             logToFile(`[${handlerId} Stream Processing - ${socketId}] Finished. Length: ${accumulatedText.length}`);
-
-//             // --- Conditional Final Emit ---
-//             if (emitFinalResult) {
-//                 logToFile(`[${handlerId} Stream Processing - ${socketId}] Emitting final chat_result via safeEmit.`);
-//                 // safeEmit will automatically add thoughts and frontendActionToSend if available
-//                 if (!safeEmit('chat_result', { type: 'result', message: accumulatedText })) {
-//                     logToFile(`[${handlerId} Stream Processing Warning - ${socketId}] Failed to emit final chat_result.`);
-//                     // Don't return null here, as text was processed, but signal potential issue.
-//                     // The main handler will still return the history.
-//                 }
-//             }
-//             return { fullText: accumulatedText }; // Return the accumulated text regardless of final emit success
-
-//         } catch (error: any) {
-//             logToFile(`[${handlerId} Stream Processing Error - ${socketId}] ${error.message}`);
-//             // safeEmit will add thoughts automatically
-//             safeEmit('chat_error', { type: 'error', message: `Error processing stream: ${error.message}`, step: 'streaming_response' });
-//             return null; // Indicate failure to process stream
-//         } finally {
-//             // Log if the loop finished unexpectedly (e.g., break/return without setting flag)
-//             if (!streamFinished) logToFile(`[${handlerId} Stream Processing Warning - ${socketId}] Stream loop exited unexpectedly.`);
-//         }
-//     }
-
-
-//     // --- Main Streaming Logic ---
-//     try {
-//         // 0. Initial Status & Append User Input
-//         if (!safeEmit('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return; // Check connection early
-//         const userTurn: HistoryItem = { role: 'user', parts: [{ text: userInput }] };
-//         history.push(userTurn);
-//         logToFile(`[${handlerId} History Init - ${socketId}] Added user turn. Size: ${history.length}`);
-
-//         // --- Turn 1: Initial Model Call ---
-//         logToFile(`--- [${handlerId} Turn 1 Start - ${socketId}] Requesting initial stream ---`);
-//         if (!safeEmit('status_update', { type: 'status', step: 'thinking', message: 'Thinking...' })) return;
-//         if (!socket.connected) { logToFile(`[${handlerId} Abort T1 - ${socketId}] Disconnected before model call.`); return; }
-
-//         logToFile(`[${handlerId} History T1 Send - ${socketId}] Size: ${history.length}`);
-//         // Call Gemini Service (assuming generateStream handles potential non-stream responses like errors/FCs)
-//         const initialResult = await chatbotService.generateStream([], history, chatbotGenerationConfig, systemInstructions, tools);
-
-//         if (!socket.connected) { logToFile(`[${handlerId} Abort T1 - ${socketId}] Disconnected after model call response received.`); return; }
-
-//         // --- Process Initial Result ---
-//         if (initialResult.error) {
-//             logToFile(`[${handlerId} Error T1 - ${socketId}] Model returned error: ${initialResult.error}`);
-//             safeEmit('chat_error', { type: 'error', message: initialResult.error, step: 'thinking' });
-//             return history; // Return history up to the point of error
-
-//         } else if (initialResult.functionCalls) {
-//             // --- Function Call Required ---
-//             logToFile(`--- [${handlerId} Turn 2 Start - ${socketId}] Function Call Required: ${initialResult.functionCalls.name} ---`);
-//             const functionCall = initialResult.functionCalls;
-//             const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
-//             history.push(modelFunctionCallTurn);
-//             logToFile(`[${handlerId} History T2 Prep - ${socketId}] Added model FC request. Size: ${history.length}`);
-
-//             if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected before function execution.`); return; }
-
-//             // Execute Function Call using the Registry
-//             const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-//                 return safeEmit(eventName, data);
-//             };
-
-//             const functionResult = await executeFunction( // <<< Get the full result object
-//                 functionCall,
-//                 handlerId,
-//                 language,
-//                 statusUpdateCallback,
-//                 socket
-//             );
-//             // functionResult is { modelResponseContent: string, frontendAction?: FrontendAction }
-
-//             // <<< --- MODIFICATION START --- >>>
-//             // STORE POTENTIAL ACTION and NOTIFY SERVER
-//             if (functionResult.frontendAction) {
-//                 frontendActionToSend = functionResult.frontendAction; // Store it for final emit
-//                 logToFile(`[${handlerId} ${socketId}] Stored frontendAction from '${functionCall.name}' execution.`);
-//                 // --- CALL THE CALLBACK passed from server.ts ---
-//                 if (onActionGenerated) {
-//                     onActionGenerated(frontendActionToSend);
-//                     logToFile(`[${handlerId} ${socketId}] Notified caller (server.ts) about generated action.`);
-//                 } else {
-//                     logToFile(`[${handlerId} ${socketId}] Warning: onActionGenerated callback was not provided.`);
-//                 }
-//                 // ---------------------------------------------
-//             }
-//             // <<< --- MODIFICATION END --- >>>
-
-
-
-//             if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected after function execution completed.`); return; }
-
-//             // Append Function Response to History (Use modelResponseContent from functionResult)
-//             const functionResponsePart: FunctionResponsePart = { functionResponse: { name: functionCall.name, response: { content: functionResult.modelResponseContent } } };
-//             const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
-//             history.push(functionTurn);
-//             logToFile(`[${handlerId} History T2 Done - ${socketId}] Added function response. Size: ${history.length}`);
-
-
-//             // --- Turn 3: Second Model Call (Request Final Stream) --- (No changes in this block's logic)
-//             logToFile(`--- [${handlerId} Turn 3 Start - ${socketId}] Requesting final stream after function call ---`);
-//             if (!safeEmit('status_update', { type: 'status', step: 'thinking', message: 'Thinking based on function results...' })) return;
-//             if (!socket.connected) { logToFile(`[${handlerId} Abort T3 - ${socketId}] Disconnected before final model call.`); return; }
-//             const finalResult = await chatbotService.generateStream([], history, chatbotGenerationConfig, systemInstructions, tools);
-//             if (!socket.connected) { logToFile(`[${handlerId} Abort T3 - ${socketId}] Disconnected after final model call response received.`); return; }
-
-//             // --- Process Final Result --- (No changes in this block's logic)
-//             if (finalResult.error) {
-//                 logToFile(`[${handlerId} Error T3 - ${socketId}] Model returned error on final call: ${finalResult.error}`);
-//                 safeEmit('chat_error', { type: 'error', message: finalResult.error, step: 'thinking' });
-//                 return history;
-//             } else if (finalResult.functionCalls) {
-//                 logToFile(`[${handlerId} Error T3 - ${socketId}] Unexpected second function call requested.`);
-//                 safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response.', step: 'thinking' });
-//                 const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
-//                 history.push(unexpectedTurn);
-//                 return history;
-//             } else if (finalResult.stream) {
-//                 logToFile(`[${handlerId} Stream T3 - ${socketId}] Processing final stream...`);
-//                 // processAndEmitStream will emit the final chat_result *including the stored frontendActionToSend*
-//                 const streamOutput = await processAndEmitStream(finalResult.stream, true);
-//                 if (streamOutput) {
-//                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
-//                     history.push(finalModelTurn);
-//                     logToFile(`[${handlerId} History T3 Done - ${socketId}] Appended final model response. Size: ${history.length}`);
-//                     return history; // <<< SUCCESSFUL COMPLETION (MULTI-TURN STREAM)
-//                 } else {
-//                     logToFile(`[${handlerId} Error T3 - ${socketId}] Final stream processing failed.`);
-//                     return history;
-//                 }
-//             } else {
-//                 logToFile(`[${handlerId} Error T3 - ${socketId}] Unexpected empty state from final model call.`);
-//                 safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response.', step: 'thinking' });
-//                 return history;
-//             }
-//             // --- End Turn 3 Logic ---
-
-//         } else if (initialResult.stream) {
-//             // --- Initial Result is a Stream --- (No changes needed, no action expected here)
-//             logToFile(`[${handlerId} Stream T1 - ${socketId}] Processing initial stream directly...`);
-//             // processAndEmitStream will emit the final chat_result (no action expected here)
-//             const streamOutput = await processAndEmitStream(initialResult.stream, true);
-//             if (streamOutput) {
-//                 const modelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
-//                 history.push(modelTurn);
-//                 logToFile(`[${handlerId} History T1 Done - ${socketId}] Appended initial model response. Size: ${history.length}`);
-//                 return history; // <<< SUCCESSFUL COMPLETION (SINGLE-TURN STREAM)
-//             } else {
-//                 logToFile(`[${handlerId} Error T1 - ${socketId}] Initial stream processing failed.`);
-//                 return history;
-//             }
-
-//         } else { // (No changes)
-//             logToFile(`[${handlerId} Error T1 - ${socketId}] Unexpected empty state from initial model call.`);
-//             safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response.', step: 'thinking' });
-//             return history;
-//         }
-
-//     } catch (error: any) { // (No changes)
-//         logToFile(`[${handlerId} CRITICAL Error - ${socketId} Lang: ${language}] ${error.message}\nStack: ${error.stack}`);
-//         safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'handler_exception' });
-//         return history;
-//     } finally { // (No changes)
-//         logToFile(`--- [${handlerId} ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
-//     }
-// }
-
-
 // --- handleStreaming function - Updated with A2A Logic ---
 export async function handleStreaming(
     userInput: string,
@@ -669,7 +403,7 @@ export async function handleStreaming(
     let finalFrontendAction: FrontendAction | undefined = undefined; // <<< Changed name for clarity
 
     // --- Safe Emit Helper (Remains the same) ---
-    const safeEmit = ( eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
+    const safeEmit = (eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
         if (!socket.connected) { logToFile(`[${handlerId} Emit SKIPPED - ${socketId}] Client disconnected. Event: ${eventName}`); return false; }
         try {
             // Collect thoughts from status updates
@@ -710,7 +444,7 @@ export async function handleStreaming(
         logToFile(`[${handlerId} Stream Processing - ${socketId}] Starting... (Emit final: ${emitFinalResult})`);
 
         if (!statusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) {
-             logToFile(`[${handlerId} Stream Processing Abort - ${socketId}] Failed initial status emit (disconnected?).`);
+            logToFile(`[${handlerId} Stream Processing Abort - ${socketId}] Failed initial status emit (disconnected?).`);
             return null;
         }
 
@@ -720,8 +454,8 @@ export async function handleStreaming(
                 const chunkText = chunk.text();
                 if (chunkText) {
                     accumulatedText += chunkText;
-                     if (!safeEmit('chat_update', { type: 'partial_result', textChunk: chunkText })) {
-                         logToFile(`[${handlerId} Stream Abort - ${socketId}] Failed to emit chat_update.`);
+                    if (!safeEmit('chat_update', { type: 'partial_result', textChunk: chunkText })) {
+                        logToFile(`[${handlerId} Stream Abort - ${socketId}] Failed to emit chat_update.`);
                         return null;
                     }
                 }
@@ -865,7 +599,7 @@ export async function handleStreaming(
 
             logToFile(`[${handlerId} History T2 Send - ${socketId}] Host History Size: ${history.length}`);
             const finalResult = await chatbotService.generateStream(
-                 [], history, chatbotGenerationConfig, systemInstructions, tools // Still Host Agent config
+                [], history, chatbotGenerationConfig, systemInstructions, tools // Still Host Agent config
             );
 
             if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected after final HostAgent model call response received.`); return; }
@@ -874,7 +608,7 @@ export async function handleStreaming(
             if (finalResult.error) {
                 logToFile(`[${handlerId} Error T2 - ${socketId}] HostAgent model returned error on final call: ${finalResult.error}`);
                 safeEmit('chat_error', { type: 'error', message: finalResult.error, step: 'thinking' });
-                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                 return history;
             } else if (finalResult.functionCalls) {
                 // Should not happen ideally, Host should provide text now
@@ -882,7 +616,7 @@ export async function handleStreaming(
                 safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response during final synthesis.', step: 'thinking' });
                 const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
                 history.push(unexpectedTurn);
-                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                 return history;
             } else if (finalResult.stream) {
                 logToFile(`[${handlerId} Stream T2 - ${socketId}] Processing final stream from HostAgent...`);
@@ -892,18 +626,18 @@ export async function handleStreaming(
                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                     history.push(finalModelTurn);
                     logToFile(`[${handlerId} History T2 Done - ${socketId}] Appended final HostAgent response. Size: ${history.length}`);
-                    logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                     return history; // <<< SUCCESSFUL COMPLETION (A2A STREAM)
                 } else {
                     logToFile(`[${handlerId} Error T2 - ${socketId}] Final stream processing failed.`);
                     // safeEmit for error was likely called inside processAndEmitStream
-                    logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                     return history;
                 }
             } else {
                 logToFile(`[${handlerId} Error T2 - ${socketId}] Unexpected empty state from final HostAgent model call.`);
                 safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response.', step: 'thinking' });
-                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                 return history;
             }
             // --- End Turn 2 Logic ---
@@ -917,25 +651,25 @@ export async function handleStreaming(
                 const modelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                 history.push(modelTurn);
                 logToFile(`[${handlerId} History T1 Direct Done - ${socketId}] Appended initial HostAgent response. Size: ${history.length}`);
-                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                 return history; // <<< SUCCESSFUL COMPLETION (DIRECT STREAM)
             } else {
                 logToFile(`[${handlerId} Error T1 Direct - ${socketId}] Initial stream processing failed.`);
-                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
                 return history;
             }
 
         } else {
             logToFile(`[${handlerId} Error T1 - ${socketId}] Unexpected empty state from initial HostAgent model call.`);
             safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response.', step: 'thinking' });
-            logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
             return history;
         }
 
     } catch (error: any) {
         logToFile(`[${handlerId} CRITICAL Error - ${socketId} Lang: ${language}] ${error.message}\nStack: ${error.stack}`);
         safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'handler_exception' });
-        logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
+
         return history;
     } finally {
         logToFile(`--- [${handlerId} ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
