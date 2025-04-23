@@ -1,7 +1,7 @@
 import * as fs from 'fs'; // Use the synchronous version for CommonJS
 import * as path from 'path';
 
-const logFilePath: string = path.join(__dirname, 'app.log'); // Log file in the same directory
+const logFilePath: string = path.join(__dirname, '../app.log'); // Log file in the same directory
 
 function logToFile(message: string): void {
     try {

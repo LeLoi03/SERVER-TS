@@ -1,5 +1,5 @@
 // src/handlers/backendService.ts
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import 'dotenv/config';
 import { transformConferenceData } from '../utils/transformData'; // Ensure this is correctly imported
 import { DATABASE_URL } from '../../config';

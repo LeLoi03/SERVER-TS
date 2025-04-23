@@ -5,11 +5,12 @@ import {
     FunctionResponsePart,
     FunctionCall, // Import FunctionCall
     EnhancedGenerateContentResponse,
-    Part, // Import Part
+    Part,
+    Content
 } from "@google/generative-ai";
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid'; // For generating task IDs
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import {
     HistoryItem,
     GeminiInteractionResult,
@@ -46,6 +47,7 @@ interface RouteToAgentArgs {
     taskDescription: string;
     inputData: any; // Hoặc một kiểu cụ thể hơn nếu bạn biết rõ inputData
 }
+
 
 
 // --- Function to handle calling a Sub Agent ---
@@ -872,6 +874,7 @@ export async function handleStreaming(
             if (finalResult.error) {
                 logToFile(`[${handlerId} Error T2 - ${socketId}] HostAgent model returned error on final call: ${finalResult.error}`);
                 safeEmit('chat_error', { type: 'error', message: finalResult.error, step: 'thinking' });
+                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                 return history;
             } else if (finalResult.functionCalls) {
                 // Should not happen ideally, Host should provide text now
@@ -879,6 +882,7 @@ export async function handleStreaming(
                 safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response during final synthesis.', step: 'thinking' });
                 const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
                 history.push(unexpectedTurn);
+                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                 return history;
             } else if (finalResult.stream) {
                 logToFile(`[${handlerId} Stream T2 - ${socketId}] Processing final stream from HostAgent...`);
@@ -888,15 +892,18 @@ export async function handleStreaming(
                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                     history.push(finalModelTurn);
                     logToFile(`[${handlerId} History T2 Done - ${socketId}] Appended final HostAgent response. Size: ${history.length}`);
+                    logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                     return history; // <<< SUCCESSFUL COMPLETION (A2A STREAM)
                 } else {
                     logToFile(`[${handlerId} Error T2 - ${socketId}] Final stream processing failed.`);
                     // safeEmit for error was likely called inside processAndEmitStream
+                    logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                     return history;
                 }
             } else {
                 logToFile(`[${handlerId} Error T2 - ${socketId}] Unexpected empty state from final HostAgent model call.`);
                 safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response.', step: 'thinking' });
+                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                 return history;
             }
             // --- End Turn 2 Logic ---
@@ -910,21 +917,25 @@ export async function handleStreaming(
                 const modelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                 history.push(modelTurn);
                 logToFile(`[${handlerId} History T1 Direct Done - ${socketId}] Appended initial HostAgent response. Size: ${history.length}`);
+                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                 return history; // <<< SUCCESSFUL COMPLETION (DIRECT STREAM)
             } else {
                 logToFile(`[${handlerId} Error T1 Direct - ${socketId}] Initial stream processing failed.`);
+                logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
                 return history;
             }
 
         } else {
             logToFile(`[${handlerId} Error T1 - ${socketId}] Unexpected empty state from initial HostAgent model call.`);
             safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response.', step: 'thinking' });
+            logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
             return history;
         }
 
     } catch (error: any) {
         logToFile(`[${handlerId} CRITICAL Error - ${socketId} Lang: ${language}] ${error.message}\nStack: ${error.stack}`);
         safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'handler_exception' });
+        logToFile(`[${handlerId} Return History Check] Returning history. Size: ${history.length}. Content: ${JSON.stringify(history, null, 2)}`);
         return history;
     } finally {
         logToFile(`--- [${handlerId} ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);

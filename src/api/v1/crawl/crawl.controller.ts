@@ -2,12 +2,12 @@ import { Request, Response } from 'express';
 import 'dotenv/config';
 import path from 'path';
 import fs from 'fs';
-import { logger } from '../conference/11_utils';
-import { getConferenceList as getConferenceListFromCrawl } from '../conference/3_core_portal_scraping';
-import { crawlConferences } from '../conference/crawl_conferences';
-import { crawlJournals } from '../journal/crawl_journals';
-import { ConferenceData } from '../conference/types';
-import { ProcessedResponseData } from '../conference/types';
+import { logger } from '../../../conference/11_utils';
+import { getConferenceList as getConferenceListFromCrawl } from '../../../conference/3_core_portal_scraping';
+import { crawlConferences } from '../../../conference/crawl_conferences';
+import { crawlJournals } from '../../../journal/crawl_journals';
+import { ConferenceData } from '../../../conference/types';
+import { ProcessedResponseData } from '../../../conference/types';
 
 
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');

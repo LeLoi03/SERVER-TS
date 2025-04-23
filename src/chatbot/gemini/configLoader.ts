@@ -1,7 +1,7 @@
 // src/gemini/configLoader.ts
 import dotenv from 'dotenv';
 dotenv.config();
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 
 export interface ModelConfig {
     temperature: number;

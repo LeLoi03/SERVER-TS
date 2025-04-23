@@ -2,7 +2,7 @@
 import { executeGetWebsiteInfo} from '../services/getWebsiteInfo.service'; // Adjust path if needed
 import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
-import logToFile from '../utils/logger'; // Adjust path if needed
+import logToFile from '../../utils/logger'; // Adjust path if needed
 
 export class GetWebsiteInfoHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {

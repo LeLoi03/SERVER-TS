@@ -1,5 +1,5 @@
 // src/chatbot/services/sendEmailToAdmin.service.ts
-import logToFile from '../utils/logger'; // Adjust path if needed
+import logToFile from '../../utils/logger'; // Adjust path if needed
 // Import necessary libraries for your actual email sending (e.g., nodemailer, @sendgrid/mail)
 // import nodemailer from 'nodemailer';
 // import { mailTransport } from '../../config/mail'; // Example: your mail config

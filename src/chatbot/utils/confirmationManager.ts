@@ -1,6 +1,6 @@
-// src/managers/confirmationManager.ts
+// src/chatbot/utils/confirmationManager.ts
 import { Socket } from 'socket.io';
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import { ConfirmSendEmailAction } from '../shared/types'; // Assuming types are in shared/types
 import { executeSendEmailToAdmin } from '../services/sendEmailToAdmin.service'; // Adjust path
 

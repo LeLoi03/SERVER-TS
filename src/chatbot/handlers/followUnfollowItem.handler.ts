@@ -7,7 +7,7 @@ import {
 } from '../services/followUnfollowItem.service'; // Điều chỉnh đường dẫn nếu cần
 import { IFunctionHandler } from '../interface/functionHandler.interface'; // Điều chỉnh đường dẫn nếu cần
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Điều chỉnh đường dẫn nếu cần
-import logToFile from '../utils/logger'; // Điều chỉnh đường dẫn nếu cần
+import logToFile from '../../utils/logger'; // Điều chỉnh đường dẫn nếu cần
 
 export class FollowUnfollowItemHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {

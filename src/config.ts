@@ -299,3 +299,7 @@ if (GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
 }
 
 export const DATABASE_URL = process.env.DATABASE_URL || "http://confhub.engineer/api/v1"; // Use your actual base URL
+
+export const MONGODB_URI = process.env.MONGODB_URI;
+
+// export const logFilePath = path.join(__dirname, '../logs/app.log'); // !!! DOUBLE-CHECK THIS PATH !!!

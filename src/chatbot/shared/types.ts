@@ -4,7 +4,7 @@ import { FunctionCall, Part } from "@google/generative-ai"; // Import necessary 
 export interface HistoryItem {
     role: "user" | "model" | "function"; // Add 'function' role
     parts: Part[]; // Use the SDK's Part type directly
-    // Removed 'type' field if it was specific to your old structure
+    timestamp?: string;
 }
 
 // ChatResponse might just return the final outcome
@@ -179,4 +179,49 @@ export interface AgentCardResponse {
     resultData?: any;           // Dữ liệu kết quả (ví dụ: JSON string, text)
     errorMessage?: string;      // Thông báo lỗi nếu status='error'
     frontendAction?: FrontendAction; // Cho phép Sub Agent trả về action nếu cần (ví dụ: confirmEmailSend)
+}
+
+
+
+export type MessageType = 'text' | 'error' | 'warning' | 'map' | undefined; // <<< Add 'map'
+
+export interface ChatMessageType {
+    id: string;
+    message: string; // Can be used as a label for the map or fallback text
+    isUser: boolean;
+    type: MessageType; // <<< Use the updated type
+    thoughts?: ThoughtStep[];
+    location?: string; // <<< ADDED: Optional location for map messages
+    // Add other potential properties if needed
+}
+
+
+
+
+// Payload for the confirmation action from backend
+export interface ConfirmSendEmailAction {
+    confirmationId: string;
+    subject: string;
+    requestType: 'contact' | 'report';
+    message: string;
+    timeoutMs: number;
+}
+
+
+/**
+ * Payload for the result of a confirmation action (sent FROM backend TO frontend).
+ * Informs the client about the outcome of a 'confirmEmailSend' or similar action.
+ */
+export interface ConfirmationResultPayload {
+    confirmationId: string; // The ID of the original confirmation request
+    status:
+        | 'confirmed'      // User confirmed, action likely succeeded (e.g., email sent)
+        | 'cancelled'      // User cancelled the action
+        | 'timeout'        // The confirmation request timed out before user interaction
+        | 'not_found'      // The confirmation ID was not found (already processed or invalid)
+        | 'failed'         // User confirmed, but the action failed (e.g., email sending error)
+        | 'unauthorized'   // The user trying to confirm/cancel was not the original requester
+        | 'error';         // Generic error processing the confirmation/cancellation
+    message: string;       // A user-friendly message describing the outcome
+    details?: any;         // Optional: Additional details (e.g., error specifics if status is 'failed' or 'error')
 }

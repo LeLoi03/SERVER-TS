@@ -1,7 +1,7 @@
 // src/handlers/sendEmailToAdmin.handler.ts
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, ConfirmSendEmailAction, FrontendAction } from '../shared/types'; // Make sure ConfirmEmailSendPayload is imported
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 // NOTE: We DO NOT import executeSendEmailToAdmin here anymore, as the handler doesn't call it directly.
 import { v4 as uuidv4 } from 'uuid'; // Import a UUID generator
 

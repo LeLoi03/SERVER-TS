@@ -1,7 +1,7 @@
 // src/handlers/openGoogleMap.handler.ts
 import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
-import logToFile from '../utils/logger'; // Adjust path if needed
+import logToFile from '../../utils/logger'; // Adjust path if needed
 
 export class OpenGoogleMapHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {

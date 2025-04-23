@@ -1,6 +1,6 @@
 // src/chatbot/service/followUnfollowItem.ts
 import { ApiCallResult } from '../shared/types';
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import { DATABASE_URL } from '../../config';
 import { executeGetConferences } from './getConferences.service';
 import { executeGetJournals } from './getJournals.service';

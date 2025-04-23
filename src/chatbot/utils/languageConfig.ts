@@ -1,7 +1,7 @@
 // src/chatbot/utils/languageConfig.ts 
 import { FunctionDeclaration } from '@google/generative-ai';
 import { Language } from '../shared/types';
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 
 
 import {

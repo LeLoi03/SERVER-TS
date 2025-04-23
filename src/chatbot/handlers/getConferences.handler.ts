@@ -2,7 +2,7 @@
 import { executeGetConferences } from '../services/getConferences.service'; // Adjust path if needed
 import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
-import logToFile from '../utils/logger'; // Adjust path if needed
+import logToFile from '../../utils/logger'; // Adjust path if needed
 
 export class GetConferencesHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {

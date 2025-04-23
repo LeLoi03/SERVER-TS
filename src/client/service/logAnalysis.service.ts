@@ -1,3 +1,4 @@
+// src/client/service/logAnalysis.service.ts
 import path from 'path';
 import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis';
 import { initializeLogAnalysisResult } from '../utils/helpers';

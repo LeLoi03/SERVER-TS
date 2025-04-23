@@ -1,5 +1,5 @@
 // src/chatbot/services/getWebsiteInfo.service.ts
-import logToFile from "../utils/logger";
+import logToFile from "../../utils/logger";
 import { CONFERENCE_WEBSITE_DESCRIPTION } from "../../config";
 
 // Define the return type structure (you might want a shared types file)

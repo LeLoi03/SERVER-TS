@@ -1,7 +1,7 @@
-// src/routes/logAnalysisRoutes.ts
+// src/client/route/logAnalysisRoutes.ts
 
 import express, { Request, Response, Router } from 'express';
-import { performLogAnalysis } from '../service/logAnalysisService'; // Điều chỉnh đường dẫn nếu cần
+import { performLogAnalysis } from '../service/logAnalysis.service'; // Điều chỉnh đường dẫn nếu cần
 import { logger } from '../../conference/11_utils'; // Hoặc logger bạn muốn dùng cho route này
 // Bỏ import logToFile nếu không dùng trong route này nữa
 // import logToFile from '../chatbot/utils/logger';

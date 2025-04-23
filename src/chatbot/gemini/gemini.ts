@@ -11,7 +11,7 @@ import {
     FinishReason,
     FunctionCall
 } from "@google/generative-ai";
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import { HistoryItem } from '../shared/types';
 import { GeminiInteractionResult } from '../shared/types';
 

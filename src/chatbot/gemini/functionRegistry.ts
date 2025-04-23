@@ -2,7 +2,7 @@
 import { Socket } from 'socket.io';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, Language } from '../shared/types';
-import logToFile from '../utils/logger';
+import logToFile from '../../utils/logger';
 import { StatusUpdate } from '../shared/types';
 
 // Import all handlers
