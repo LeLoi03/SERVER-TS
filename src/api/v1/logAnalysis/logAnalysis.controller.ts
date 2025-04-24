@@ -1,40 +1,40 @@
+// src/api/v1/logAnalysis/controller.ts
 import { Request, Response, NextFunction } from 'express';
 import logToFile from '../../../utils/logger';
 import { LogAnalysisService } from '../../../services/logAnalysis.service';
 
-// Giả định LogAnalysisService được inject hoặc tạo instance ở đâu đó
-// Trong ví dụ này, chúng ta sẽ tạo một instance mới, nhưng tốt hơn là inject từ loader
-const logAnalysisService = new LogAnalysisService(); // << Nên được inject
+// <<< Bỏ dòng tạo instance mới ở đây
 
-export const getLatestAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+// <<< Nhận service làm tham số cuối
+export const getLatestAnalysis = async (req: Request, res: Response, next: NextFunction, logAnalysisService: LogAnalysisService): Promise<void> => {
     logToFile('[LogAnalysis Controller] Request received for latest analysis results.');
     try {
-        const results = logAnalysisService.getLatestAnalysisResult(); // Lấy từ service
+        // <<< Sử dụng service được truyền vào
+        const results = logAnalysisService.getLatestAnalysisResult();
         if (results) {
             logToFile('[LogAnalysis Controller] Returning latest cached analysis results.');
             res.status(200).json(results);
         } else {
             logToFile('[LogAnalysis Controller] No analysis results available yet.');
-            res.status(404).json({ message: 'Log analysis results not available yet. Please try again later.' });
+            // Có thể cân nhắc trả về 200 với message thay vì 404 nếu việc chưa có kết quả không phải lỗi
+            res.status(404).json({ message: 'Log analysis results not available yet. Please try again later or trigger analysis.' });
         }
     } catch (error) {
         logToFile('[LogAnalysis Controller] Error retrieving latest analysis results.');
-        next(error);
+        next(error); // Chuyển lỗi cho error handler
     }
 };
 
-export const triggerAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-
-    logToFile('[LogAnalysis Controller] Received POST /trigger'); // Ví dụ path
+// <<< Nhận service làm tham số cuối
+export const triggerAnalysis = async (req: Request, res: Response, next: NextFunction, logAnalysisService: LogAnalysisService): Promise<void> => {
+    logToFile('[LogAnalysis Controller] Received POST /trigger');
     try {
-        // Gọi service để thực hiện phân tích (có thể bất đồng bộ)
-        // Service này cũng nên emit kết quả qua Socket.IO nếu cần
+        // <<< Sử dụng service được truyền vào
         const results = await logAnalysisService.performAnalysisAndUpdate();
-
+        // Cân nhắc việc emit qua socket IO từ service hoặc tại đây nếu cần
         res.status(200).json({ message: 'Log analysis triggered successfully.', results });
     } catch (error) {
-
         logToFile(`[LogAnalysis Controller] Error POST /trigger: ${error instanceof Error ? error.message : String(error)}`);
-        next(error);
+        next(error); // Chuyển lỗi cho error handler
     }
 };

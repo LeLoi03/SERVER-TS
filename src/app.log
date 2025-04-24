@@ -1,109 +1,15 @@
-[2025-04-23T08:51:31.209Z] [Socket.IO B8VZGKY_AvOvNlfiAAAD] Client disconnected. Reason: transport close. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82. ActiveConvID: N/A
-[2025-04-23T08:51:34.355Z] [Socket Auth MW] Attempting auth for socket TmBOMs2KoYYgpcEIAAAH. Token provided: true
-[2025-04-23T08:51:34.359Z] [Socket Auth MW] Token validation failed for socket TmBOMs2KoYYgpcEIAAAH. Reason: jwt expired
-[2025-04-23T08:52:06.559Z] [Socket Auth MW] Attempting auth for socket boUcaf9zIKV5nMn6AAAK. Token provided: false
-[2025-04-23T08:52:06.560Z] [Socket Auth MW] No token provided for socket boUcaf9zIKV5nMn6AAAK. Treating as anonymous.
-[2025-04-23T08:52:06.560Z] [Socket.IO boUcaf9zIKV5nMn6AAAK] Client connected. Token present: false
-[2025-04-23T08:52:06.561Z] [Socket.IO boUcaf9zIKV5nMn6AAAK] Anonymous user connected.
-[2025-04-23T08:52:06.561Z] [Socket boUcaf9zIKV5nMn6AAAK] Registering core event handlers. UserID: Anonymous
-[2025-04-23T08:52:06.561Z] [Socket boUcaf9zIKV5nMn6AAAK] Core event handlers registered.
-[2025-04-23T08:52:06.569Z] [Socket.IO boUcaf9zIKV5nMn6AAAK] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
-[2025-04-23T08:52:06.586Z] [Socket Auth MW] Attempting auth for socket wNt-9wnch872xIGGAAAM. Token provided: true
-[2025-04-23T08:52:06.590Z] [Socket Auth MW] Token signature validated successfully for socket wNt-9wnch872xIGGAAAM.
-[2025-04-23T08:52:06.591Z] [Socket.IO wNt-9wnch872xIGGAAAM] Client connected. Token present: true
-[2025-04-23T08:52:06.591Z] [Socket.IO wNt-9wnch872xIGGAAAM] Attempting to fetch user info using token...
-[2025-04-23T08:52:06.591Z] [API Client] Fetching user info from: http://confhub.engineer/api/v1/user/me
-[2025-04-23T08:52:06.708Z] [API Client] Successfully fetched user info for ID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:52:06.709Z] [Socket.IO wNt-9wnch872xIGGAAAM] User info fetched successfully. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82, Email: loicute5fps@gmail.com, Role: user
-[2025-04-23T08:52:06.709Z] [Socket.IO wNt-9wnch872xIGGAAAM] Fetching initial conversation list for user c0d9d488-3fee-4dda-98f3-5df278ed0e82...
-[2025-04-23T08:52:06.709Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:52:06.899Z] [History Service] Found 20 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:52:06.900Z] [Socket.IO wNt-9wnch872xIGGAAAM] Sent initial conversation list (20 items) to user c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:52:06.900Z] [Socket.IO wNt-9wnch872xIGGAAAM] Authenticated user c0d9d488-3fee-4dda-98f3-5df278ed0e82 session ready.
-[2025-04-23T08:52:06.901Z] [Socket wNt-9wnch872xIGGAAAM] Registering core event handlers. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:52:06.901Z] [Socket wNt-9wnch872xIGGAAAM] Core event handlers registered.
-[2025-04-23T08:52:30.538Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807a725cb754c21c6ccbc76, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:52:30.538Z] [History Service] Attempting to delete conversationId: 6807a725cb754c21c6ccbc76 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:52:30.611Z] [History Service] Successfully deleted conversationId: 6807a725cb754c21c6ccbc76
-[2025-04-23T08:52:30.611Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807a725cb754c21c6ccbc76.
-[2025-04-23T08:52:30.612Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:52:30.800Z] [History Service] Found 19 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:52:30.801Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807a725cb754c21c6ccbc76.
-[2025-04-23T08:54:16.563Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807a753cb754c21c6ccbc78, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:16.564Z] [History Service] Attempting to delete conversationId: 6807a753cb754c21c6ccbc78 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:16.617Z] [History Service] Successfully deleted conversationId: 6807a753cb754c21c6ccbc78
-[2025-04-23T08:54:16.617Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807a753cb754c21c6ccbc78.
-[2025-04-23T08:54:16.618Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:16.810Z] [History Service] Found 18 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:16.811Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807a753cb754c21c6ccbc78.
-[2025-04-23T08:54:23.293Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807a82dcb754c21c6ccbc7f, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:23.293Z] [History Service] Attempting to delete conversationId: 6807a82dcb754c21c6ccbc7f for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:23.345Z] [History Service] Successfully deleted conversationId: 6807a82dcb754c21c6ccbc7f
-[2025-04-23T08:54:23.345Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807a82dcb754c21c6ccbc7f.
-[2025-04-23T08:54:23.346Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:23.545Z] [History Service] Found 17 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:23.546Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807a82dcb754c21c6ccbc7f.
-[2025-04-23T08:54:25.535Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807aa5bcb754c21c6ccbc86, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:25.535Z] [History Service] Attempting to delete conversationId: 6807aa5bcb754c21c6ccbc86 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:25.586Z] [History Service] Successfully deleted conversationId: 6807aa5bcb754c21c6ccbc86
-[2025-04-23T08:54:25.587Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807aa5bcb754c21c6ccbc86.
-[2025-04-23T08:54:25.587Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:25.772Z] [History Service] Found 16 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:25.773Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807aa5bcb754c21c6ccbc86.
-[2025-04-23T08:54:27.683Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807a876cb754c21c6ccbc84, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:27.684Z] [History Service] Attempting to delete conversationId: 6807a876cb754c21c6ccbc84 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:27.734Z] [History Service] Successfully deleted conversationId: 6807a876cb754c21c6ccbc84
-[2025-04-23T08:54:27.735Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807a876cb754c21c6ccbc84.
-[2025-04-23T08:54:27.735Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:27.929Z] [History Service] Found 15 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:27.930Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807a876cb754c21c6ccbc84.
-[2025-04-23T08:54:30.341Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807abd3cb754c21c6ccbc88, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:30.342Z] [History Service] Attempting to delete conversationId: 6807abd3cb754c21c6ccbc88 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:30.391Z] [History Service] Successfully deleted conversationId: 6807abd3cb754c21c6ccbc88
-[2025-04-23T08:54:30.391Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807abd3cb754c21c6ccbc88.
-[2025-04-23T08:54:30.392Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:30.584Z] [History Service] Found 14 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:30.585Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807abd3cb754c21c6ccbc88.
-[2025-04-23T08:54:32.233Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807ae34cb754c21c6ccbc8e, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:32.233Z] [History Service] Attempting to delete conversationId: 6807ae34cb754c21c6ccbc8e for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:32.285Z] [History Service] Successfully deleted conversationId: 6807ae34cb754c21c6ccbc8e
-[2025-04-23T08:54:32.285Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807ae34cb754c21c6ccbc8e.
-[2025-04-23T08:54:32.285Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:32.483Z] [History Service] Found 13 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:32.484Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807ae34cb754c21c6ccbc8e.
-[2025-04-23T08:54:34.475Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807ae01cb754c21c6ccbc8a, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:34.475Z] [History Service] Attempting to delete conversationId: 6807ae01cb754c21c6ccbc8a for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:34.529Z] [History Service] Successfully deleted conversationId: 6807ae01cb754c21c6ccbc8a
-[2025-04-23T08:54:34.529Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807ae01cb754c21c6ccbc8a.
-[2025-04-23T08:54:34.531Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:34.717Z] [History Service] Found 12 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:34.718Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807ae01cb754c21c6ccbc8a.
-[2025-04-23T08:54:36.832Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807af56cb754c21c6ccbc91, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:36.833Z] [History Service] Attempting to delete conversationId: 6807af56cb754c21c6ccbc91 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:36.883Z] [History Service] Successfully deleted conversationId: 6807af56cb754c21c6ccbc91
-[2025-04-23T08:54:36.884Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807af56cb754c21c6ccbc91.
-[2025-04-23T08:54:36.884Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:37.084Z] [History Service] Found 11 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:37.085Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807af56cb754c21c6ccbc91.
-[2025-04-23T08:54:40.965Z] [Socket wNt-9wnch872xIGGAAAM] Event 'delete_conversation' received for ID: 6807bcfbcb754c21c6ccbc96, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
-[2025-04-23T08:54:40.965Z] [History Service] Attempting to delete conversationId: 6807bcfbcb754c21c6ccbc96 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:41.017Z] [History Service] Successfully deleted conversationId: 6807bcfbcb754c21c6ccbc96
-[2025-04-23T08:54:41.017Z] [Socket wNt-9wnch872xIGGAAAM] Successfully processed deletion for conversation 6807bcfbcb754c21c6ccbc96.
-[2025-04-23T08:54:41.018Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
-[2025-04-23T08:54:41.202Z] [History Service] Found 10 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
-[2025-04-23T08:54:41.202Z] [Socket wNt-9wnch872xIGGAAAM] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after deletion of 6807bcfbcb754c21c6ccbc96.
-[2025-04-23T08:55:08.948Z] [Socket.IO wNt-9wnch872xIGGAAAM] Client disconnected. Reason: transport close. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82. ActiveConvID: N/A
-[2025-04-23T08:56:39.856Z] [Socket Auth MW] Attempting auth for socket MwbYbCrdGOLDSUU3AAAQ. Token provided: true
-[2025-04-23T08:56:39.859Z] [Socket Auth MW] Token signature validated successfully for socket MwbYbCrdGOLDSUU3AAAQ.
-[2025-04-23T08:56:39.859Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] Client connected. Token present: true
-[2025-04-23T08:56:39.860Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] Attempting to fetch user info using token...
-[2025-04-23T08:56:39.860Z] [API Client] Fetching user info from: http://confhub.engineer/api/v1/user/me
-[2025-04-23T08:56:39.981Z] [API Client] Successfully fetched user info for ID: 7649b33b-1ae3-4503-af65-dcea216daaf1
-[2025-04-23T08:56:39.981Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] User info fetched successfully. UserID: 7649b33b-1ae3-4503-af65-dcea216daaf1, Email: prexifrovessu-2423@yopmail.com, Role: user
-[2025-04-23T08:56:39.982Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] Fetching initial conversation list for user 7649b33b-1ae3-4503-af65-dcea216daaf1...
-[2025-04-23T08:56:39.982Z] [History Service] Getting conversation list for userId: 7649b33b-1ae3-4503-af65-dcea216daaf1, limit: 20
-[2025-04-23T08:56:40.028Z] [History Service] Found 0 conversations for userId: 7649b33b-1ae3-4503-af65-dcea216daaf1
-[2025-04-23T08:56:40.029Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] Sent initial conversation list (0 items) to user 7649b33b-1ae3-4503-af65-dcea216daaf1.
-[2025-04-23T08:56:40.029Z] [Socket.IO MwbYbCrdGOLDSUU3AAAQ] Authenticated user 7649b33b-1ae3-4503-af65-dcea216daaf1 session ready.
-[2025-04-23T08:56:40.030Z] [Socket MwbYbCrdGOLDSUU3AAAQ] Registering core event handlers. UserID: 7649b33b-1ae3-4503-af65-dcea216daaf1
-[2025-04-23T08:56:40.030Z] [Socket MwbYbCrdGOLDSUU3AAAQ] Core event handlers registered.
+[2025-04-24T07:47:03.878Z] [Socket.IO 9Sqw9E9fyr0xUI_WAAAB] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-24T07:47:11.054Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T07:47:11.054Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T07:47:11.055Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T07:47:11.056Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T07:47:11.088Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T07:47:11.089Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T07:47:11.089Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T07:47:11.091Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T07:47:11.191Z] [Socket Auth MW] Attempting auth for socket QE8Tvo22vR1Ton_aAAAE. Token provided: false
+[2025-04-24T07:47:11.191Z] [Socket Auth MW] No token provided for socket QE8Tvo22vR1Ton_aAAAE. Treating as anonymous.
+[2025-04-24T07:47:11.192Z] [Socket.IO QE8Tvo22vR1Ton_aAAAE] Client connected. Token present: false
+[2025-04-24T07:47:11.192Z] [Socket.IO QE8Tvo22vR1Ton_aAAAE] Anonymous user connected.
+[2025-04-24T07:47:11.193Z] [Socket QE8Tvo22vR1Ton_aAAAE] Registering core event handlers. UserID: Anonymous
+[2025-04-24T07:47:11.193Z] [Socket QE8Tvo22vR1Ton_aAAAE] Core event handlers registered.

@@ -1,15 +1,26 @@
+// src/api/v1/logAnalysis/logAnalysis.routes.ts
 import { Router } from 'express';
 import { getLatestAnalysis, triggerAnalysis } from './logAnalysis.controller';
-// Có thể thêm middleware validation hoặc auth tại đây nếu cần
+import { LogAnalysisService } from '../../../services/logAnalysis.service'; // <<< Import service
 
-const router = Router();
+// <<< Hàm tạo router nhận service
+const createLogAnalysisRouter = (logAnalysisService: LogAnalysisService): Router => {
+    const router = Router();
 
-// GET /api/v1/logs/analysis - Lấy kết quả phân tích mới nhất (cached)
-router.get('/', getLatestAnalysis);
+    // Truyền service vào controller thông qua closure hoặc middleware
+    // Cách 1: Closure (đơn giản cho trường hợp này)
+    router.get('/latest', (req, res, next) => getLatestAnalysis(req, res, next, logAnalysisService));
+    router.post('/trigger', (req, res, next) => triggerAnalysis(req, res, next, logAnalysisService));
 
-// POST /api/v1/logs/analysis/trigger - Kích hoạt chạy phân tích mới (ví dụ)
-router.post('/trigger', triggerAnalysis);
+    // Cách 2: Middleware (phù hợp hơn nếu nhiều route cần service)
+    // const injectService = (req, res, next) => {
+    //     req.logAnalysisService = logAnalysisService;
+    //     next();
+    // };
+    // router.get('/latest', injectService, getLatestAnalysisController); // Controller cần sửa để đọc từ req.logAnalysisService
+    // router.post('/trigger', injectService, triggerAnalysisController);
 
-// Các route khác liên quan đến log analysis (ví dụ: lấy theo khoảng thời gian,...)
+    return router;
+}
 
-export default router;
+export default createLogAnalysisRouter; // <<< Export hàm tạo

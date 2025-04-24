@@ -1,15 +1,23 @@
+// src/api/v1/index.ts
 import { Router } from 'express';
 import crawlRouter from './crawl/crawl.routes';
 import logAnalysisRouter from './logAnalysis/logAnalysis.routes';
-// Import các router khác của v1 nếu có
+import { LogAnalysisService } from '../../services/logAnalysis.service'; // <<< Import service
 
-const router = Router();
+// <<< Hàm tạo router nhận service
+const createV1Router = (logAnalysisService: LogAnalysisService): Router => {
+    const router = Router();
 
-router.use('/crawl', crawlRouter);
-router.use('/logs/analysis', logAnalysisRouter); // Giữ nguyên base path này
+    router.use('/crawl', crawlRouter); // crawl router không cần service này (trừ khi logic thay đổi)
 
-// Gắn các router khác
-// router.use('/users', userRouter);
-// router.use('/auth', authRouter);
+    // <<< Truyền service vào log analysis router
+    router.use('/logs/analysis', logAnalysisRouter(logAnalysisService));
 
-export default router;
+    // Gắn các router khác nếu cần và truyền service nếu chúng cần
+    // router.use('/users', userRouter(someOtherService));
+
+    return router;
+};
+
+
+export default createV1Router; // <<< Export hàm tạo
