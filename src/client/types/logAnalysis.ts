@@ -73,6 +73,15 @@ export interface ValidationStats {
 export interface LogAnalysisResult {
     analysisTimestamp: string;
     logFilePath: string;
+
+     // +++ ADDED PROPERTIES +++
+    /** The overall status of the analysis execution itself. */
+    status?: 'Completed' | 'Failed' | 'Processing'; // Added 'Processing' as a potential intermediate state
+    /** A top-level error message if the analysis failed catastrophically (e.g., file not found, fatal error). */
+    errorMessage?: string;
+    // ++++++++++++++++++++++++
+
+    
     totalLogEntries: number;
     parsedLogEntries: number;
     parseErrors: number;

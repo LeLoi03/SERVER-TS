@@ -1,58 +1,224 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"International Conference on Advanced Communications and Computation","INFOCOMP","https://www.iaria.org/conferences2025/INFOCOMP25.html","https://www.iaria.org/conferences2025/CfPINFOCOMP25.html","https://www.iaria.org/conferences2025/INFOCOMP25.html","Conference dates: April 06 - 10, 2025
+"National Conference of the American Association for Artificial Intelligence","AAAI","https://aaai.org/conference/aaai/aaai-25/","https://aaai.org/conference/aaai/aaai-25/aaai-25-main-technical-call-for-papers/","None","Conference dates: February 25 - March 4, 2025
 Year: 2025
-Location: Valencia, Spain
-City-State-Province: Valencia
-Country: Spain
-Continent: Europe
-Type: Hybrid
-Submission: January 20, 2025
-Notification: February 16, 2025
-Camera ready: March 05, 2025
-Registration: February 28, 2025
-Topics: Intensive computing, Big Data, Performance portability, Complex multi-physics models, Multiscale methods, Emerging programming models, Hybrid parallel programming, APGAS, Resiliency, Elasticity, Petascale, Extreme scale technologies, Task characterization, Data analytics, Visualization, HPC, IoT, Observational data, Simulations, Complex scientific data sets, Massively scalable task parallelism, Routing-aware tasks, Multi-tenant cloud workloads, Soft error resiliency, Urban Simulations, Scalable cortical computing, Molecular dynamics supercomputing, Petascale biomolecular simulations, Data-centric parallel systems, Lithospheric dynamics, Graph computation, Genome-scale gene networks, Scale free graphs, Migratable objects, Quantum simulations, Metascalable quantum molecular dynamics simulations, Real-time data analytics, Uncertain execution scales, Sharing in IaaS clouds, Large-scale visualization, Distributed NoSQL data stores, Developments in information and computing systems, Grid computing, Cloud computing, Pervasive computing, Ubiquitous computing, Services computing, Opportunistic computing, High Performance Computing, Fast data processing, Real-time processing, Fast switching, Routing protocols, Parallelization of algorithms, Energy-efficient High Performance Computing, Large scale data visualization, Tools for parallelization, High performance codes, Optimization, Innovative architectures, Distributed systems, Dynamical systems, Future architectures, Integrated systems, Beyond cloud, Reaching exaflop, Supercomputing architectures, Operation, Management, Petascale, Exascale, Big data, dCache, HPC centers, Data centers, Benchmarking, Green computing, Cooling techniques, Programming languages, Parallel algorithms, Message Passing Interface, OpenMP, Massively Parallel Processing, Symmetric Multi-Processing, PGAS, GASPI, CAF, UPC, X10, Chapel, CUDA, OpenCL, OpenACC, OpenHMPP, Lime, OmpSs, OpenStream, Parallel Virtual Machine, Programming paradigms, Manycore, Multicore, CPU, GPU, FPGA, Accelerators, Chip design, Architectures, Programming, Fault tolerance, Troubleshooting, Debugging, High end issues, Latency, Concurrency, Cross-layer design, Optimization, Cyber-physical systems, Data centers, Virtualization, Cloud networks, Delay-tolerant networks, Disruption tolerant networks, Future Internet broadband services, Software Defined Networks, Fast networks, InfiniBand architectures, Sensor networks, Embedded systems, Ad hoc mobile networks, Access technologies, P2P networks, Optical networks, Cellular networks, Broadband wireless networks, Mobility models, Mobile networks, Multicast, Broadcast, Anycast, Multimedia protocols, Networking, Software defined radio, Cognitive radio networking, Content-based network service, Certification, Public key infrastructures, Data integrity, Privacy, Anonymity, Networks measurement, Simulation, Emulation, Network-management, System-management, Application-management, Congestion control, Capacity planning, Dynamic spectrum management, Addressing, Location management, Quality of Service, Quality of Experience, Quality of Data, Quality of Context, e-Commerce, Accounting, Pricing, Billing, Highly parallel file systems, Lustre, GPFS, Interconnects, High speed ethernet, Use of distributed compute, Storage resources, Energy-aware mechanisms, Configuration, Reuse of software components, Resource allocation, Management, Denial of service mitigation, Prevention, System security, Data security, Communication visualization, Fundamental turbulence, Complex flows, Turbulence modeling, Environmental turbulence, Simulation of solid-liquid systems, Heat transfer modeling, Cooling transfer modeling, Transitional flows models, Flows simulation, Particle simulations, Turbulent multi-phase flows, Oscillations, Stability, Instability, Turbulent air-water flows, Liquid/Liquid interface turbulence, Aeroacoustics, Advanced applications, Scientific applications, Theoretical contributions, Methodological contributions, Practical contributions, Technical contributions, Advanced scientific computing, Simulation, Modeling, Engineering applications, Industry applications, Mathematical algorithms, Numerical algorithms, Mathematical methods, Numerical methods, Molecular dynamics simulation, Genetic algorithms, Physics applications, Chemistry applications, Multi-dimensional data visualization, Search engines, Scientific discovery, Scientific data processing, Database applications, Database development, Knowledge discovery, Documentation, Classification, Data intensive computing, Data science, Methodology, Case studies, Small and Medium Enterprises applications, Computer Aided Engineering applications, Computer science, Geoinformatics, e-Energy, Geosciences, Prospection, Exploration, Oil, Gas, Information systems, Mobility services, Logistic services, Geoscientific Information Systems, Remote sensing, Satellite imaging, Cartography, Hydrology, Climatology, Environmental sciences, Medicine, Genetics, Epidemiology, Medical geology, Online social networking, Vehicular networks, Underground networks, Underwater networks, Education, e-Learning, e-Science, ICT business evaluation, Management, Earth sciences, Planetary sciences, Archaeology, Cultural heritage, Computation frameworks, Computation tools, Mathematica, SAGE, Maple, Matlab, Scilab, Gromacs, ANSYS, Fluent, Legal informatics, Science, information technology, Copyright, Open access, License models, Legal aspects of open source, Legal aspects of collaborative software development, Ownership, Information technology, Digital rights, Patents, Toll access, Accounting, Energy-aware networks, Energy-efficient networks, Implementation, Experimental testbeds, Traffic measurement, Traffic patterns, Characterization of topology dynamics, Access technologies, Biometric technologies, Performance prediction, Cost prediction, Web services, Performance measurement, Benchmarking, Energy-aware High Performance Computing, Energy-efficient High Performance Computing, Usability studies, Social consequences, Ethic consequences, Biometry, Data security, Standards, Benchmarks, Protocols, Technologies, Advances in biometric algorithms, Technologies, Advances in biometric interfaces, Gait recognition, Electrocardiography, Iris recognition, Image recognition, Fingerprint recognition, Palm veins recognition, Multi-modality, Biometric systems, Integration of biometrics, Challenge response, Simplified enrollment, NFC support, Spoofing, Countermeasures, Single sign on, Adaptive trust, Template protection, Large biometric systems, Scalable biometric systems, Cloud services, Deployed solutions, Applications, Experience reports, Systems, Description in physical access control, Description in logical access control, Information system access, Immigration control, Border control, Law enforcement, Entertainment, Finance, Life science, Healthcare, Forensics, Distributed devices, Mobile devices, Public Key Infrastructures, Digital Forensics, Quantum cryptography
-Publisher: IARIA Press","April 06 - 10, 2025","2025","Valencia, Spain","Valencia","Spain","Europe","Hybrid","{""Submission"":""January 20, 2025""}","{""Notification"":""February 16, 2025""}","{""Camera ready"":""March 05, 2025""}","{""Registration"":""February 28, 2025""}","{}","Intensive computing, Big Data, Performance portability, Complex multi-physics models, Multiscale methods, Emerging programming models, Hybrid parallel programming, APGAS, Resiliency, Elasticity, Petascale, Extreme scale technologies, Task characterization, Data analytics, Visualization, HPC, IoT, Observational data, Simulations, Complex scientific data sets, Massively scalable task parallelism, Routing-aware tasks, Multi-tenant cloud workloads, Soft error resiliency, Urban Simulations, Scalable cortical computing, Molecular dynamics supercomputing, Petascale biomolecular simulations, Data-centric parallel systems, Lithospheric dynamics, Graph computation, Genome-scale gene networks, Scale free graphs, Migratable objects, Quantum simulations, Metascalable quantum molecular dynamics simulations, Real-time data analytics, Uncertain execution scales, Sharing in IaaS clouds, Large-scale visualization, Distributed NoSQL data stores, Developments in information and computing systems, Grid computing, Cloud computing, Pervasive computing, Ubiquitous computing, Services computing, Opportunistic computing, High Performance Computing, Fast data processing, Real-time processing, Fast switching, Routing protocols, Parallelization of algorithms, Energy-efficient High Performance Computing, Large scale data visualization, Tools for parallelization, High performance codes, Optimization, Innovative architectures, Distributed systems, Dynamical systems, Future architectures, Integrated systems, Beyond cloud, Reaching exaflop, Supercomputing architectures, Operation, Management, Petascale, Exascale, Big data, dCache, HPC centers, Data centers, Benchmarking, Green computing, Cooling techniques, Programming languages, Parallel algorithms, Message Passing Interface, OpenMP, Massively Parallel Processing, Symmetric Multi-Processing, PGAS, GASPI, CAF, UPC, X10, Chapel, CUDA, OpenCL, OpenACC, OpenHMPP, Lime, OmpSs, OpenStream, Parallel Virtual Machine, Programming paradigms, Manycore, Multicore, CPU, GPU, FPGA, Accelerators, Chip design, Architectures, Programming, Fault tolerance, Troubleshooting, Debugging, High end issues, Latency, Concurrency, Cross-layer design, Optimization, Cyber-physical systems, Data centers, Virtualization, Cloud networks, Delay-tolerant networks, Disruption tolerant networks, Future Internet broadband services, Software Defined Networks, Fast networks, InfiniBand architectures, Sensor networks, Embedded systems, Ad hoc mobile networks, Access technologies, P2P networks, Optical networks, Cellular networks, Broadband wireless networks, Mobility models, Mobile networks, Multicast, Broadcast, Anycast, Multimedia protocols, Networking, Software defined radio, Cognitive radio networking, Content-based network service, Certification, Public key infrastructures, Data integrity, Privacy, Anonymity, Networks measurement, Simulation, Emulation, Network-management, System-management, Application-management, Congestion control, Capacity planning, Dynamic spectrum management, Addressing, Location management, Quality of Service, Quality of Experience, Quality of Data, Quality of Context, e-Commerce, Accounting, Pricing, Billing, Highly parallel file systems, Lustre, GPFS, Interconnects, High speed ethernet, Use of distributed compute, Storage resources, Energy-aware mechanisms, Configuration, Reuse of software components, Resource allocation, Management, Denial of service mitigation, Prevention, System security, Data security, Communication visualization, Fundamental turbulence, Complex flows, Turbulence modeling, Environmental turbulence, Simulation of solid-liquid systems, Heat transfer modeling, Cooling transfer modeling, Transitional flows models, Flows simulation, Particle simulations, Turbulent multi-phase flows, Oscillations, Stability, Instability, Turbulent air-water flows, Liquid/Liquid interface turbulence, Aeroacoustics, Advanced applications, Scientific applications, Theoretical contributions, Methodological contributions, Practical contributions, Technical contributions, Advanced scientific computing, Simulation, Modeling, Engineering applications, Industry applications, Mathematical algorithms, Numerical algorithms, Mathematical methods, Numerical methods, Molecular dynamics simulation, Genetic algorithms, Physics applications, Chemistry applications, Multi-dimensional data visualization, Search engines, Scientific discovery, Scientific data processing, Database applications, Database development, Knowledge discovery, Documentation, Classification, Data intensive computing, Data science, Methodology, Case studies, Small and Medium Enterprises applications, Computer Aided Engineering applications, Computer science, Geoinformatics, e-Energy, Geosciences, Prospection, Exploration, Oil, Gas, Information systems, Mobility services, Logistic services, Geoscientific Information Systems, Remote sensing, Satellite imaging, Cartography, Hydrology, Climatology, Environmental sciences, Medicine, Genetics, Epidemiology, Medical geology, Online social networking, Vehicular networks, Underground networks, Underwater networks, Education, e-Learning, e-Science, ICT business evaluation, Management, Earth sciences, Planetary sciences, Archaeology, Cultural heritage, Computation frameworks, Computation tools, Mathematica, SAGE, Maple, Matlab, Scilab, Gromacs, ANSYS, Fluent, Legal informatics, Science, information technology, Copyright, Open access, License models, Legal aspects of open source, Legal aspects of collaborative software development, Ownership, Information technology, Digital rights, Patents, Toll access, Accounting, Energy-aware networks, Energy-efficient networks, Implementation, Experimental testbeds, Traffic measurement, Traffic patterns, Characterization of topology dynamics, Access technologies, Biometric technologies, Performance prediction, Cost prediction, Web services, Performance measurement, Benchmarking, Energy-aware High Performance Computing, Energy-efficient High Performance Computing, Usability studies, Social consequences, Ethic consequences, Biometry, Data security, Standards, Benchmarks, Protocols, Technologies, Advances in biometric algorithms, Technologies, Advances in biometric interfaces, Gait recognition, Electrocardiography, Iris recognition, Image recognition, Fingerprint recognition, Palm veins recognition, Multi-modality, Biometric systems, Integration of biometrics, Challenge response, Simplified enrollment, NFC support, Spoofing, Countermeasures, Single sign on, Adaptive trust, Template protection, Large biometric systems, Scalable biometric systems, Cloud services, Deployed solutions, Applications, Experience reports, Systems, Description in physical access control, Description in logical access control, Information system access, Immigration control, Border control, Law enforcement, Entertainment, Finance, Life science, Healthcare, Forensics, Distributed devices, Mobile devices, Public Key Infrastructures, Digital Forensics, Quantum cryptography","IARIA Press","The Fifteenth International Conference on Advanced Communications and Computation (INFOCOMP 2025) will be held in Valencia, Spain, from April 06, 2025 to April 10, 2025. It's dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions.","# INFOCOMP 2025: Call for Papers
+Location: Philadelphia, Pennsylvania, USA
+City-State-Province: Philadelphia, Pennsylvania
+Country: United States
+Continent: North America
+Type: Offline
+Abstracts due: August 7, 2024
+Full papers due: August 15, 2024
+Supplementary material and code due: August 19, 2024
+Notification of Phase 1 rejections: October 14, 2024
+Notification of final acceptance or rejection (Main Technical Track): December 9, 2024
+Submission of camera-ready files (Main Technical Track): December 19, 2024
+Topics: Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, Data Mining, Multiagent Systems, Knowledge Representation, Human-in-the-loop AI, Search, Planning, Reasoning, Robotics and Perception, Ethics
+Publisher: AAAI","February 25 - March 4, 2025","2025","Philadelphia, Pennsylvania, USA","Philadelphia, Pennsylvania","United States","North America","Offline","{""Abstracts due"":""August 7, 2024"",""Full papers due"":""August 15, 2024"",""Supplementary material and code due"":""August 19, 2024""}","{""Notification of Phase 1 rejections"":""October 14, 2024"",""Notification of final acceptance or rejection (Main Technical Track)"":""December 9, 2024""}","{""Submission of camera-ready files (Main Technical Track)"":""December 19, 2024""}","{}","{}","Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, Data Mining, Multiagent Systems, Knowledge Representation, Human-in-the-loop AI, Search, Planning, Reasoning, Robotics and Perception, Ethics","AAAI","The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in Philadelphia, Pennsylvania at the Pennsylvania Convention Center from February 25 to March 4, 2025. The purpose of the AAAI conference series is to promote research in Artificial Intelligence (AI) and foster scientific exchange between researchers, practitioners, scientists, students, and engineers across the entirety of AI and its affiliated disciplines.","# AAAI 2025: Call for Papers
 
-The Fifteenth International Conference on Advanced Communications and Computation (INFOCOMP 2025) will be held in **Valencia, Spain, from April 06, 2025 to April 10, 2025**.
+The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in **Philadelphia, Pennsylvania at the Pennsylvania Convention Center from February 25 to March 4, 2025**.
 
-INFOCOMP 2025 continues a series of events dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions.
+## Goal
 
-## Onsite and Online Options
+The purpose of the AAAI conference series is to promote research in Artificial Intelligence (AI) and foster scientific exchange between researchers, practitioners, scientists, students, and engineers across the entirety of AI and its affiliated disciplines.
 
-In order to accommodate various situations, the conference offers the option for either physical presence or virtual participation (pdf slides or pre-recorded videos).
+## Timeline for Authors
 
-## Scope
+*   July 8, 2024: AAAI-25 website open for paper submission
+*   August 7, 2024: Abstracts due at 11:59 PM UTC-12
+*   August 15, 2024: Full papers due at 11:59 PM UTC-12
+*   August 19, 2024: Supplementary material and code due by 11:59 PM UTC-12
+*   October 14, 2024: Notification of Phase 1 rejections
+*   November 4-8, 2024: Author feedback window
+*   December 9, 2024: Notification of final acceptance or rejection (Main Technical Track)
+*   December 19, 2024: Submission of camera-ready files (Main Technical Track)
+*   February 27 – March 4, 2025: AAAI-25 Conference
 
-The conference solicits academic, research, and industrial contributions. We welcome technical papers presenting research and practical results, position papers addressing the pros and cons of specific proposals, such as those being discussed in the standard fora or in industry consortia, survey papers addressing the key problems and solutions on any of the above topics short papers on work in progress, and panel proposals.
+## Topics
 
-Industrial presentations are not subject to the format and content constraints of regular submissions. We expect short and long presentations that express industrial position and status.
+AAAI-25 welcomes submissions reporting research that advances artificial intelligence, broadly conceived. The conference scope includes machine learning, natural language processing, computer vision, data mining, multiagent systems, knowledge representation, human-in-the-loop AI, search, planning, reasoning, robotics and perception, and ethics.
 
-Tutorials on specific related topics and panels on challenging areas are encouraged.
+In addition to fundamental work focused on any one of these areas, we expressly encourage work that cuts across technical areas of AI (e.g., machine learning and computer vision; computer vision and natural language processing; or machine learning and planning), bridges between AI and a related research area (e.g., neuroscience; cognitive science), or develops AI techniques in the context of important application domains, such as healthcare, sustainability, transportation, and commerce.
 
-## Conference Tracks
+## Tracks
 
-*   Trends and advances on architecture/methods
-*   Trends and advances on disciplines/applications
-*   Large scale and fast computation
-*   Programming models
-*   Networks/systems communications
-*   Networks/systems measurement, control and management
-*   Turbulence modeling and simulation
-*   Advanced applications
-    *   Computation
-    *   Systems
-*   Legal context, economic use and re-use
-*   Evaluation context
-*   Biometry, security, access technologies, algorithms, and applications
+*   Main Technical Track
+*   Special Track on AI for Social Impact
+*   Special Track on AI Alignment
 
-## Submission Details
+## Submission Site
 
-*   Only .pdf or .doc files will be accepted for paper submission.
-*   Final author manuscripts will be 8.5"" x 11"", not exceeding 6 pages; max 4 extra pages allowed at additional cost.
+AAAI-25 author registration and paper submissions will be accepted via OpenReview ([https://openreview.net/](https://openreview.net/))."
+"Conference on Algorithmic Aspects in Information and Management","AAIM","https://www.aaim2025.org/","https://www.aaim2025.org/submission","https://www.aaim2025.org/submission","","","","No location","No city/state/province","No country","No continent","Offline","{}","{}","{}","{}","{}","No topics","No publisher","No summary available","No call for papers available"
+"International Joint Conference on Autonomous Agents and Multiagent Systems","AAMAS","https://aamas2025.org/","https://aamas2025.org/index.php/conference/calls/call-for-papers-main-technical-track/","https://aamas2025.org/","Conference dates: May 19 - 23, 2025
+Year: 2025
+Location: Detroit, Michigan, USA
+City-State-Province: Detroit, Michigan
+Country: United States
+Continent: North America
+Type: Offline
+Abstract: October 9, 2024
+Paper: October 16, 2024
+Author notification: December 23, 2024
+Camera-ready: February 21, 2025
+Rebuttal period: November 27 – December 4, 2024
+May 19–20: Tutorials & Workshops
+May 21–23: Main Conference
+Camera-ready: February 7, 2025
+Topics: Autonomous Agents, Multiagent Systems, Learning and Adaptation, Game Theory and Economic Paradigms, Coordination, Organizations, Institutions, Norms, and Ethics, Search, Optimization, Planning, and Scheduling, Representation, Perception, and Reasoning, Engineering and Analysis of Multiagent Systems, Modeling and Simulation of Societies, Human-Agent Interaction, Robotics and Control, Innovative Applications
+Publisher: IFAAMAS","May 19 - 23, 2025","2025","Detroit, Michigan, USA","Detroit, Michigan","United States","North America","Offline","{""Abstract"":""October 9, 2024"",""Paper"":""October 16, 2024""}","{""Author notification"":""December 23, 2024""}","{""Camera-ready"":""February 21, 2025""}","{}","{""Rebuttal period"":""November 27 – December 4, 2024"",""May 19–20"":""Tutorials & Workshops"",""May 21–23"":""Main Conference"",""Camera-ready"":""February 7, 2025""}","Autonomous Agents, Multiagent Systems, Learning and Adaptation, Game Theory and Economic Paradigms, Coordination, Organizations, Institutions, Norms, and Ethics, Search, Optimization, Planning, and Scheduling, Representation, Perception, and Reasoning, Engineering and Analysis of Multiagent Systems, Modeling and Simulation of Societies, Human-Agent Interaction, Robotics and Control, Innovative Applications","IFAAMAS","The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025) will be held May 19–23, 2025 in Detroit, Michigan, USA. AAMAS is the largest and most influential conference in the area of agents and multiagent systems, bringing together researchers and practitioners in all areas of agent technology.","# AAMAS 2025: Call for Papers (Main Technical Track)
+
+The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025) will be held **May 19–23, 2025 in Detroit, Michigan, USA**.
+
+AAMAS is the largest and most influential conference in the area of agents and multiagent systems, bringing together researchers and practitioners in all areas of agent technology.
 
 ## Important Dates
 
-*   **Submission:** January 20, 2025
-*   **Notification:** February 16, 2025
-*   **Registration:** February 28, 2025
-*   **Camera ready:** March 05, 2025"
+*   **Abstract:** Oct 9, 2024
+*   **Paper:** Oct 16, 2024
+*   **Rebuttal period:** Nov 27 – Dec 4, 2024
+*   **Author notification:** Dec 23, 2024
+*   **Camera-ready:** Feb 7, Feb 21, 2025
+*   **Conference:** May 19-23, 2025
+
+**NOTE: All deadlines are End of Day Anywhere on Earth (UTC-12)**
+
+## Areas of Interest
+
+We welcome the submission of technical papers describing significant and original research on all aspects of the theory and practice of autonomous agents and multiagent systems. At the time of submission, you will be asked to associate your paper with one of the following areas of interest:
+
+*   Learning and Adaptation (LEARN)
+*   Game Theory and Economic Paradigms (GTEP)
+*   Coordination, Organizations, Institutions, Norms, and Ethics (COINE)
+*   Search, Optimization, Planning, and Scheduling (SOPS)
+*   Representation, Perception, and Reasoning (RPR)
+*   Engineering and Analysis of Multiagent Systems (EMAS)
+*   Modeling and Simulation of Societies (SIM)
+*   Human-Agent Interaction (HAI)
+*   Robotics and Control (ROBOT)
+*   Innovative Applications (IA)
+
+## Special Tracks
+
+In addition to the main track, AAMAS 2025 will feature four special tracks: the [AAAI Resubmissions Track](https://aamas2025.org/index.php/conference/calls/aaai-track/), the [Blue Sky Ideas Track](https://aamas2025.org/index.php/conference/calls/call-for-blue-sky-ideas/), the [JAAMAS Track](https://aamas2025.org/index.php/conference/calls/jaamas-track/), and the [Demo Track](https://aamas2025.org/index.php/conference/calls/call-for-demos/).
+
+## Organizing Committee
+
+*   **AAMAS 2025 General Chairs:**
+    *   Ann Nowé (Vrije Universiteit Brussel, Belgium)
+    *   Sanmay Das (George Mason University, USA)
+*   **AAMAS 2025 Program Chairs:**
+    *   Amal El Fallah Seghrouchni (Sorbonne University, France)
+    *   Yevgeniy Vorobeychik (Washington University in Saint Louis, USA)
+*   **AAMAS 2025 Workflow Chairs:**
+    *   Tao Zhang (Washington University in Saint Louis, USA)
+    *   Ayan Mukhopahdyay (Vanderbilt University, USA)
+*   **AAMAS 2025 Local Chair:**
+    *   Michael Wellman (University of Michigan, Ann Arbor, USA)
+
+## Contact
+
+If you have additional questions, please contact the program and workflow chairs using [aamas2025pcchairs@googlegroups.com](mailto:aamas2025pcchairs@googlegroups.com)."
+"International Conference Abstract State Machines, Alloy, B, TLA, VDM, and Z","ABZ","https://abz-conf.org/site/2025/","https://abz-conf.org/site/2025/calls","https://abz-conf.org/site/2025/importantdates","Conference dates: June 10 - 13, 2025
+Year: 2025
+Location: Tribe Hotel, Düsseldorf, Germany
+City-State-Province: Düsseldorf
+Country: Germany
+Continent: Europe
+Type: Offline
+(Case Study Track) Abstract submission: March 1, 2025
+(Case Study Track) Paper submission: March 2, 2025
+(Main Track) Abstract submission: March 1, 2025
+(Main Track) Paper submission (including research/short/industry/journal-first papers): March 2, 2025
+(Doctoral Symposium) Paper submission: March 2, 2025
+(Case Study Track) Notification: March 29, 2025
+(Main Track) Notification: March 29, 2025
+(Doctoral Symposium) Notification: March 29, 2025
+(Case Study Track) Final version: April 9, 2025
+(Main Track) Final version: April 9, 2025
+(Doctoral Symposium) Final version: April 9, 2025
+Workshops and Tutorials (Düsseldorf, Germany): June 10, 2025
+Topics: Formal Methods, Abstract State Machines (ASM), Alloy, B, TLA, VDM, Z, State-based methods, Machine-based formal methods, Hardware and software systems design and analysis
+Publisher: Springer","June 10 - 13, 2025","2025","Tribe Hotel, Düsseldorf, Germany","Düsseldorf","Germany","Europe","Offline","{""(Case Study Track) Abstract submission"":""March 1, 2025"",""(Case Study Track) Paper submission"":""March 2, 2025"",""(Main Track) Abstract submission"":""March 1, 2025"",""(Main Track) Paper submission (including research/short/industry/journal-first papers)"":""March 2, 2025"",""(Doctoral Symposium) Paper submission"":""March 2, 2025""}","{""(Case Study Track) Notification"":""March 29, 2025"",""(Main Track) Notification"":""March 29, 2025"",""(Doctoral Symposium) Notification"":""March 29, 2025""}","{""(Case Study Track) Final version"":""April 9, 2025"",""(Main Track) Final version"":""April 9, 2025"",""(Doctoral Symposium) Final version"":""April 9, 2025""}","{}","{""Workshops and Tutorials (Düsseldorf, Germany)"":""June 10, 2025""}","Formal Methods, Abstract State Machines (ASM), Alloy, B, TLA, VDM, Z, State-based methods, Machine-based formal methods, Hardware and software systems design and analysis","Springer","The ABZ conference is dedicated to the cross-fertilization of state-based and machine-based formal methods. The 11th instalment of the ABZ conference will be held at the Tribe hotel in Düsseldorf, Germany from June 10-13, 2025.","# ABZ 2025: Call for Papers and Participation
+
+The 11th International Conference on Rigorous State Based Methods (ABZ 2025) will be held in **Düsseldorf, Germany, from June 10-13, 2025**.
+
+The ABZ conference is dedicated to the cross-fertilization of state-based and machine-based formal methods, such as Abstract State Machines (ASM), Alloy, B, TLA, VDM, and Z.
+
+## Conference Tracks
+
+ABZ 2025 will have a main conference track, a case study track, a doctoral symposium, tutorials, and workshops.
+
+*   Main Conference
+*   Case Study
+*   Doctoral Symposium
+*   Tutorials and Workshops
+
+## Submission Process
+
+Authors should consult [Springer’s authors' guidelines](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19242230/data/v11) and use their proceedings templates (LaTeX or Word). Springer encourages authors to include their [ORCIDs](https://www.springer.com/gp/authors-editors/orcid) in their papers.  The corresponding author must complete and sign a Consent-to-Publish form.  Once files are sent to Springer, authorship changes cannot be made.
+
+Authors interested in Open Access or Open Choice should refer to the corresponding [EasyChair submission page](https://easychair.org/conferences/?conf=abz2025).
+
+## Important Dates
+
+All deadlines are Anywhere on Earth (AoE). Deadlines have been extended!
+
+### Workshops/Tutorials
+
+Contact organizers directly for workshop or tutorial proposals.  There is no special call for workshops or tutorials this year.
+
+### Case Study Track
+
+*   Abstract submission: March 1, 2025 AoE
+*   Paper submission: March 2, 2025 AoE
+*   Notification: March 29, 2025
+*   Final version: April 9, 2025
+
+### Main Track
+
+*   Abstract submission: March 1, 2025 AoE
+*   Paper submission (including research/short/industry/journal-first papers): March 2, 2025 AoE
+*   Notification: March 29, 2025
+*   Final version: April 9, 2025
+
+### Doctoral Symposium
+
+*   Paper submission: March 2, 2025 AoE
+*   Notification: March 29, 2025
+*   Final version: April 9, 2025
+
+### Conference
+
+*   Workshops and Tutorials (Düsseldorf, Germany): June 10, 2025
+*   ABZ 2025 Conference (Düsseldorf, Germany): June 11-13, 2025
+
+## Contact
+
+[abz2025@hhu.de](mailto:abz2025@hhu.de)"
+"Symposium of Asian Association for Algorithms and Computation","AAAC","https://conference.cs.cityu.edu.hk/aaac2025/","https://easychair.org/conferences?conf=aaac2025","http://www.aa-ac.org/","Conference dates: May 31 - June 1, 2025
+Year: 2025
+Location: City University of Hong Kong, Hong Kong, China
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Submission due: February 28, 2025
+Notification: March 28, 2025
+Camera-ready version due: April 18, 2025
+Early Registration due: April 25, 2025
+Topics: Theoretical Computer Science, Algorithms, Complexity Theory
+Keynote Speakers: Yossi Azar (Tel-Aviv University),Eunjung Kim (Korea Advanced Institute of Science & Technology)
+Program Committees: Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH)),Sang Won Bae (Kyonggi University),Ho-Lin Chen (National Taiwan University),Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair),Minming Li (City University of Hong Kong),Chung-Shou Liao (National Tsing Hua University),Pinyan Lu (Shanghai University of Finance and Economics),Heejin Park (Hanyang University),Kunihiko Sadakane (The University of Tokyo),Xiaoming Sun (Chinese Academy of Sciences),Takeshi Tokuyama (Tohoku University),Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST)),Guochuan Zhang (Zhejiang University),Shengyu Zhang (The Chinese University of Hong Kong)
+Accepted Papers: Ke Yi. Instance Optimality in Differential Privacy,Moshe Babaioff, Yiding Feng and Noam Manaker Morag. On the Efficiency of Fair and Truthful Trade Mechanisms,Subhash Suri, Jie Xue, Xiongxin Yang and Jiumu Zhu. Dynamic Maximum Depth of Geometric Objects,Yiding Feng and Wei Tang. Confusion Matrix Design for Downstream Decision-making,Lin Chen, Yuchen Mao and Guochuan Zhang. Long Arithmetic Progressions in Sumsets and Subset Sums: Constructive Proofs and Efficient Witnesses,Wan-Ting Huang and Hsu-Chun Yen. Crossing Minimization in Ortho-Radial Drawings of Column Trees,Siu-Wing Cheng, Haoqiang Huang and Shuo Zhang. Constant Approximation of Fréchet Distance in Strongly Subquadratic Time,Tetsuo Asano, Risa Ishikawa, Naoki Katoh and Takeshi Tokuyama. Near-unit Distance Embedding of Points in the Plane and Space,Siu-Wing Cheng, Haoqiang Huang and Le Jiang. Simplification of Trajectory Streams,Taekang Eom, Taehoon Ahn, Minju Song and Hee-Kap Ahn. Shortcutting the Diameter of a Polygon,Rin Saito and Takehiro Ito. Complexity of Reconfiguring Vertex-Disjoint Shortest Paths,Daiki Okayama, Yuya Higashikawa and Shuichi Miyazaki. Online Exploration of Grid Graphs with Multiple Searchers,Ren Kimura, Sankardeep Chakraborty, Roberto Grossi, Giulia Punzi, Kunihiko Sadakane and Wiktor Zuba. Space-efficient Representations for a Set of k-mers,Yuki Seto, Kunihiko Sadakane and Kazunari Tozawa. Private-Preserving Encoding and Decoding Using Variable-Length Coding Schemes,Genjie Qin, Wenjing Liu and Qizhi Fang. Mechanism Design for Locating a Bridge Between Regions with Prelocated Facilities,Daigo Oitaira. Space-Efficient Data Structure for (k...21)-avoiding Involutions,Chih-Chung Chen and Chung-Shou Liao. Learning-Augmented Algorithms for Online Time-Window TSP,Riki Muto and Yasuhiko Takenaga. Yavalath is PSPACE-Complete,Yi-Fang Lee and Chung-Shou Liao. Learning-augmented Algorithms for Density Peaks Clustering,Byeonguk Kang, Hwi Kim and Hee-Kap Ahn. Guarding Terrains with Guards on a Line,Felix Hommelsheim, Zhenwei Liu, Nicole Megow and Guochuan Zhang. Protecting the Connectivity of a Graph Under Non-Uniform Edge Failures,Chaeyoon Chung, Jaegun Lee and Hee-Kap Ahn. Improved Algorithms for Finding the Smallest Color-Spanning Two Squares,I-Fan Chan, Ya-Chun Liang and Chung-Shou Liao. The Public University Secretary Problem with Predictions,Minming Li, Biaoshuai Tao, Houyu Zhou and Tianze Wei. Fair Allocation of Items in Multiple Regions,Bo Li. Approximate Maximin Share with Subjective Divisibility,Yi-Ting Hsieh, Cheng-Yu Ma and Chung-Shou Liao. Topological Features for Graph Representations,Fei Wu, Jannik Matuschke and Erik Demeulemeester. Interdiction Game on Machine Scheduling under Budgeted Unavailability Patterns,Jaegun Lee, Hyojeong An, Hwi Kim and Hee-Kap Ahn. Monotone Partitions of Simple Polygons","May 31 - June 1, 2025","2025","City University of Hong Kong, Hong Kong, China","Hong Kong","China","Asia","Offline","{""Submission due"":""February 28, 2025""}","{""Notification"":""March 28, 2025""}","{""Camera-ready version due"":""April 18, 2025""}","{""Early Registration due"":""April 25, 2025""}","{}","Theoretical Computer Science, Algorithms, Complexity Theory","No publisher","The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on May 31 and June 1, 2025, at City University of Hong Kong.  The meeting invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. It is a face-to-face event, and at least one author of each submission is expected to register and give a talk.","# AAAC 2025 Call for Papers
+
+The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on **May 31 and June 1, 2025**, at the **City University of Hong Kong, Hong Kong, China.**
+
+We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.
+
+## Topics
+
+All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.
+
+## Submissions
+
+Authors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System: [https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025)."

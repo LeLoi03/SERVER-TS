@@ -103,7 +103,7 @@ export class LogAnalysisService {
             this.latestResult = results;
             // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
             // Truy cập requestsAnalyzed (Sẽ hoạt động sau khi sửa type)
-            logToFile(`[LogAnalysis Service] Analysis completed successfully. Requests: ${results.overall.requestsAnalyzed}, Errors: ${results.errorLogCount}`);
+            logToFile(`[LogAnalysis Service] Analysis completed successfully. Requests: ${results.overall.processedConferencesCount}, Errors: ${results.errorLogCount}`);
             // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             return results;
