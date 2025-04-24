@@ -8,7 +8,7 @@ import { LogAnalysisService } from '../../services/logAnalysis.service'; // <<< 
 const createV1Router = (logAnalysisService: LogAnalysisService): Router => {
     const router = Router();
 
-    router.use('/crawl', crawlRouter); // crawl router không cần service này (trừ khi logic thay đổi)
+    router.use('/', crawlRouter); // crawl router không cần service này (trừ khi logic thay đổi)
 
     // <<< Truyền service vào log analysis router
     router.use('/logs/analysis', logAnalysisRouter(logAnalysisService));

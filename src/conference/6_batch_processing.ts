@@ -9,8 +9,7 @@ import { extract_information_api, determine_links_api } from './7_gemini_api_uti
 import { init } from './8_data_manager';
 import { YEAR2 } from '../config';
 
-import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData, ProcessedResponseData } from './types';
-import { processResponse } from './10_response_processing';
+import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData } from './types';
 import path from 'path';
 
 const ERROR_ACCESS_LINK_LOG_PATH: string = path.join(__dirname, "./data/error_access_link_log.txt");
@@ -29,13 +28,14 @@ export const saveBatchToFile = async (
     adjustedAcronym: string, // không còn cần thiết trực tiếp ở đây nếu thông tin có trong batch
     browserContext: BrowserContext,
     parentLogger: typeof logger
-): Promise<void> => { // <--- Thay đổi kiểu trả về thành Promise<void>
+): Promise<boolean> => { // <--- Thay đổi kiểu trả về
     const baseLogContext = { batchIndex, function: 'saveBatchToFile' };
     parentLogger.info({ ...baseLogContext, event: 'save_batch_start', entryCount: batch.length }, "Starting saveBatchToFile");
 
     let conferenceAcronym = 'unknown';
     let conferenceTitle = 'unknown';
     let safeConferenceAcronym = 'unknown';
+    // let processedDataResult: boolean = null; // <<<--- Biến lưu kết quả xử lý
 
     try {
         await init(); // Khởi tạo API client nếu cần
@@ -43,7 +43,7 @@ export const saveBatchToFile = async (
         if (!batch || batch.length === 0 || !batch[0]?.conferenceAcronym || !batch[0]?.conferenceTitle) {
             parentLogger.warn({ ...baseLogContext, event: 'save_batch_invalid_input' }, "Called with invalid or empty batch. Skipping.");
             // Không cần làm gì thêm, promise sẽ resolve (không reject)
-            return;
+            return false; // <--- Trả về null nếu input không hợp lệ
         }
 
         // Lấy thông tin cơ bản từ entry đầu tiên (giả định tất cả entry trong batch là của cùng 1 conference)
@@ -174,8 +174,8 @@ export const saveBatchToFile = async (
          if (!mainLinkBatch || mainLinkBatch.length === 0 || !mainLinkBatch[0] || mainLinkBatch[0].conferenceLink === "None" || !mainLinkBatch[0].conferenceTextPath) {
              parentLogger.error({ ...processDetermineContext, mainLinkResult: mainLinkBatch?.[0]?.conferenceLink, mainTextPath: mainLinkBatch?.[0]?.conferenceTextPath, event: 'save_batch_process_determine_failed_invalid' }, "Main link/text path is invalid.");
              await fileFullLinksPromise; // Đợi ghi file log
-             return; // Kết thúc thành công (không có lỗi), nhưng không ghi gì vào output cuối cùng
-         }
+             return false; // <--- Trả về null vì không có kết quả hợp lệ để tiếp tục
+            }
          const foundMainLink = mainLinkBatch[0].conferenceLink;
          parentLogger.info({ ...processDetermineContext, finalMainLink: foundMainLink, event: 'save_batch_process_determine_success' }, "Successfully processed determine_links_api response");
          // --- Hết xử lý determine ---
@@ -229,10 +229,12 @@ export const saveBatchToFile = async (
          let extractResponseTextPath: string | undefined;
          let extractInformationResponse: any;
          const extractApiContext = { ...logContext, apiType: 'extract', title: titleForExtract, acronym: acronymForExtract };
+         let extractResponseText: string | ""; // <<<--- Biến để lưu response text
+
          try {
              parentLogger.info({ ...extractApiContext, inputLength: contentSendToAPI.length, event: 'save_batch_extract_api_start' }, "Calling extract_information_api");
              extractInformationResponse = await extract_information_api(contentSendToAPI, batchIndex, titleForExtract, acronymForExtract, parentLogger);
-             const extractResponseText = extractInformationResponse.responseText || "";
+             extractResponseText = extractInformationResponse.responseText || ""; // <<<--- Lấy response text
              extractResponseTextPath = await writeTempFile(extractResponseText, `${safeConferenceAcronym}_extract_response_${batchIndex}`);
              // Cập nhật thông tin vào mainEntry
              mainEntry.extractResponseTextPath = extractResponseTextPath;
@@ -246,6 +248,35 @@ export const saveBatchToFile = async (
          // --- Hết extract_information_api ---
  
  
+        //  // *** BƯỚC MỚI: Xử lý response API ***
+        // const processExtractContext = { ...logContext, event_group: 'process_extract_in_save_batch' };
+        // if (extractResponseText && extractResponseText.trim()) {
+        //     try {
+        //         parentLogger.info({ ...processExtractContext, event: 'save_batch_process_extract_start' }, 'Processing extract API response text');
+        //         // Loại bỏ các ký tự không hợp lệ trước khi parse
+        //         const cleanedResponseText = extractResponseText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+        //         const parsedResponse = JSON.parse(cleanedResponseText); // Parse JSON
+
+        //         if (typeof parsedResponse === 'object' && parsedResponse !== null) {
+        //              processedDataResult = processResponse(parsedResponse); // Gọi hàm xử lý
+        //              parentLogger.info({ ...processExtractContext, event: 'save_batch_process_extract_success' }, 'Successfully processed extract API response');
+        //         } else {
+        //             parentLogger.warn({ ...processExtractContext, event: 'save_batch_process_extract_invalid_json' }, 'Parsed extract API response is not a valid object');
+        //              processedDataResult = null; // Đặt là null nếu JSON không hợp lệ
+        //         }
+
+        //     } catch (processError: any) {
+        //         parentLogger.error({ ...processExtractContext, err: processError, event: 'save_batch_process_extract_failed' }, 'Error parsing or processing extract API response text');
+        //          processedDataResult = null; // Đặt là null nếu có lỗi xử lý
+        //          // Không throw lỗi ở đây, cho phép ghi file JSONL nhưng trả về null
+        //     }
+        // } else {
+        //      parentLogger.warn({ ...processExtractContext, event: 'save_batch_process_extract_skipped_empty' }, 'Skipping extract response processing as API response text was empty');
+        //      processedDataResult = null; // Đặt là null nếu response rỗng
+        // }
+        // // *** KẾT THÚC BƯỚC MỚI ***
+
+
          // --- Chờ các file trung gian ghi xong (không bắt buộc, nhưng đảm bảo chúng hoàn tất trước khi ghi final) ---
          const intermediateWrites = await Promise.allSettled([fileFullLinksPromise, fileMainLinkPromise]);
          intermediateWrites.forEach((result, index) => {
@@ -292,7 +323,7 @@ export const saveBatchToFile = async (
         // --- Hết ghi bản ghi cuối cùng ---
 
         // parentLogger.info({ ...logContext, event: 'save_batch_finish_success' }, "Finishing saveBatchToFile successfully");
-        return; // <--- Kết thúc thành công (Promise<void>)
+        return true; // <--- Trả về kết quả đã xử lý (hoặc null)
 
     } catch (error: any) {
         // Bắt các lỗi được ném từ các bước trước (API calls, file read/write errors, append error)
@@ -310,10 +341,10 @@ export const saveHTMLContent = async (
     links: string[],
     batchIndexRef: { current: number },
     existingAcronyms: Set<string>,
-    batchPromises: Promise<void>[],
+    batchPromises: Promise<boolean>[],
     year: number,
     parentLogger: typeof logger
-): Promise<void> => {
+): Promise<boolean> => {
     // Context kế thừa từ taskLogger của crawlConferences, thêm function name
     const baseLogContext = { conferenceAcronym: conference.Acronym, conferenceTitle: conference.Title, function: 'saveHTMLContent' };
     parentLogger.info({ ...baseLogContext, linkCount: links.length, event: 'save_html_start' }, "Starting saveHTMLContent");
@@ -323,7 +354,7 @@ export const saveHTMLContent = async (
         if (!links || links.length === 0) {
             parentLogger.error({ ...baseLogContext, event: 'save_html_skipped_no_links' }, "Called with empty or null links array, skipping.");
             parentLogger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent (no links)"); // Log kết thúc
-            return;
+            return false;
         }
 
         let finalAdjustedAcronym = "";
@@ -563,13 +594,13 @@ export const saveHTMLContent = async (
         }
 
         parentLogger.info({ ...baseLogContext, event: 'save_html_finish' }, "Finishing saveHTMLContent"); // Log kết thúc hàm
-        return;
+        return true;
 
     } catch (error: any) {
         parentLogger.error({ ...baseLogContext, err: error, event: 'save_html_unhandled_error' }, "Unhandled error in saveHTMLContent main try block");
         // Không re-throw để không làm dừng toàn bộ crawlConferences nếu không cần thiết
         parentLogger.info({ ...baseLogContext, event: 'save_html_finish_failed' }, "Finishing saveHTMLContent due to unhandled error");
-        return;
+        return false;
     }
 };
 
@@ -579,9 +610,8 @@ export const updateHTMLContent = async (
     browserContext: BrowserContext,
     conference: ConferenceUpdateData,
     batchIndexRef: { current: number },
-    // batchPromises: Promise<void>[], // <<<--- Không cần batchPromises nữa cho luồng này
     parentLogger: typeof logger
-): Promise<ProcessedResponseData | null> => { // <<<--- Đổi kiểu trả về
+): Promise<boolean> => { // <<<--- Đổi kiểu trả về
     const taskLogger = parentLogger.child({ title: conference.Title, acronym: conference.Acronym, function: 'updateHTMLContent' });
     let page: Page | null = null;
 
@@ -598,7 +628,7 @@ export const updateHTMLContent = async (
         const mainLink = conference.mainLink;
         if (!mainLink) {
             taskLogger.error({ event: 'update_missing_main_link' }, "Main link is missing.");
-            return null; // <<<--- return null
+            return false; // <<<--- return null
         }
         try {
             // ... (logic goto, fetch, clean, traverse, writeTempFile như cũ) ...
@@ -628,7 +658,7 @@ export const updateHTMLContent = async (
         // Chỉ tiếp tục nếu có mainTextPath (như cũ)
         if (!mainTextPath) {
             taskLogger.error({ event: 'update_abort_no_main_text' }, `Skipping update as main content failed.`);
-            return null; // <<<--- return null
+            return false; // <<<--- return null
         }
 
         // 2. Process CFP Link (như cũ)
@@ -668,11 +698,11 @@ export const updateHTMLContent = async (
         const batchResult = await updateBatchToFile(batchData, currentBatchIndex, parentLogger);
 
         taskLogger.info({ event: 'update_finish_success', hasResult: batchResult !== null }, `Finishing updateHTMLContent.`);
-        return batchResult; // <<<--- Trả về kết quả từ updateBatchToFile
+        return true; // <<<--- Trả về kết quả từ updateBatchToFile
 
     } catch (error: any) {
         taskLogger.error({ err: error, event: 'update_unhandled_error' }, "Unhandled error in updateHTMLContent");
-        return null; // <<<--- Trả về null nếu có lỗi không mong muốn
+        return false; // <<<--- Trả về null nếu có lỗi không mong muốn
     } finally {
         if (page && !page.isClosed()) {
             taskLogger.debug("Closing page instance.");
@@ -686,18 +716,18 @@ export const updateBatchToFile = async (
     batchInput: BatchUpdateEntry,
     batchIndex: number,
     parentLogger: typeof logger
-): Promise<ProcessedResponseData | null> => { // <<<--- Đổi kiểu trả về thành ProcessedResponseData | null
+): Promise<boolean> => { // <<<--- Đổi kiểu trả về thành boolean
     const baseLogContext = { batchIndex, function: 'updateBatchToFile' };
     let taskLogger = parentLogger.child(baseLogContext);
 
-    let processedDataResult: ProcessedResponseData | null = null; // Biến để lưu kết quả xử lý
+    // let processedDataResult: boolean = null; // Biến để lưu kết quả xử lý
 
     try {
         await init();
 
         if (!batchInput || !batchInput.conferenceAcronym || !batchInput.conferenceTitle || !batchInput.conferenceTextPath) {
             taskLogger.warn({ event: 'update_batch_invalid_input', batchInput }, "Called with invalid batch data. Skipping.");
-            return null; // <<<--- Trả về null nếu input không hợp lệ
+            return false; // <<<--- Trả về null nếu input không hợp lệ
         }
 
         taskLogger = parentLogger.child({ ...baseLogContext, acronym: batchInput.conferenceAcronym, title: batchInput.conferenceTitle });
@@ -771,30 +801,30 @@ export const updateBatchToFile = async (
 
         await fileUpdatePromise; // Đảm bảo file trung gian ghi xong
 
-        // *** BƯỚC MỚI: Xử lý response API ***
-        if (extractResponseText && extractResponseText.trim()) {
-            try {
-                taskLogger.info({ event: 'update_batch_process_response_start' }, 'Processing API response text');
-                // Loại bỏ các ký tự không hợp lệ trước khi parse
-                const cleanedResponseText = extractResponseText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                const parsedResponse = JSON.parse(cleanedResponseText); // Parse JSON
-                if (typeof parsedResponse === 'object' && parsedResponse !== null) {
-                     processedDataResult = processResponse(parsedResponse); // Gọi hàm xử lý
-                     taskLogger.info({ event: 'update_batch_process_response_success' }, 'Successfully processed API response');
-                } else {
-                    taskLogger.warn({ event: 'update_batch_process_response_invalid_json' }, 'Parsed API response is not a valid object');
-                     processedDataResult = null; // Đặt là null nếu JSON không hợp lệ
-                }
+        // // *** BƯỚC MỚI: Xử lý response API ***
+        // if (extractResponseText && extractResponseText.trim()) {
+        //     try {
+        //         taskLogger.info({ event: 'update_batch_process_response_start' }, 'Processing API response text');
+        //         // Loại bỏ các ký tự không hợp lệ trước khi parse
+        //         const cleanedResponseText = extractResponseText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+        //         const parsedResponse = JSON.parse(cleanedResponseText); // Parse JSON
+        //         if (typeof parsedResponse === 'object' && parsedResponse !== null) {
+        //              processedDataResult = processResponse(parsedResponse); // Gọi hàm xử lý
+        //              taskLogger.info({ event: 'update_batch_process_response_success' }, 'Successfully processed API response');
+        //         } else {
+        //             taskLogger.warn({ event: 'update_batch_process_response_invalid_json' }, 'Parsed API response is not a valid object');
+        //              processedDataResult = null; // Đặt là null nếu JSON không hợp lệ
+        //         }
 
-            } catch (processError: any) {
-                taskLogger.error({ err: processError, event: 'update_batch_process_response_failed' }, 'Error parsing or processing API response text');
-                 processedDataResult = null; // Đặt là null nếu có lỗi xử lý
-            }
-        } else {
-             taskLogger.warn({ event: 'update_batch_process_response_skipped_empty' }, 'Skipping response processing as API response text was empty');
-             processedDataResult = null; // Đặt là null nếu response rỗng
-        }
-        // *** KẾT THÚC BƯỚC MỚI ***
+        //     } catch (processError: any) {
+        //         taskLogger.error({ err: processError, event: 'update_batch_process_response_failed' }, 'Error parsing or processing API response text');
+        //          processedDataResult = null; // Đặt là null nếu có lỗi xử lý
+        //     }
+        // } else {
+        //      taskLogger.warn({ event: 'update_batch_process_response_skipped_empty' }, 'Skipping response processing as API response text was empty');
+        //      processedDataResult = null; // Đặt là null nếu response rỗng
+        // }
+        // // *** KẾT THÚC BƯỚC MỚI ***
 
 
         // Ghi bản ghi cuối cùng vào FINAL_OUTPUT_PATH (vẫn cần làm điều này)
@@ -826,11 +856,11 @@ export const updateBatchToFile = async (
 
         taskLogger.info({ event: 'update_batch_finish_success' }, "Finishing updateBatchToFile successfully");
         // *** TRẢ VỀ KẾT QUẢ ĐÃ XỬ LÝ ***
-        return processedDataResult; // Trả về ProcessedResponseData hoặc null
+        return true; // Trả về ProcessedResponseData hoặc null
 
     } catch (error: any) {
         const finalAcronym = batchInput?.conferenceAcronym || 'unknown';
         taskLogger.error({ err: error, finalAcronym, event: 'update_batch_unhandled_error_or_rethrown' }, "Error occurred during updateBatchToFile execution");
-        return null; // <<<--- Trả về null nếu có lỗi bị bắt ở đây
+        return false; // <<<--- Trả về null nếu có lỗi bị bắt ở đây
     }
 };

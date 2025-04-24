@@ -339,23 +339,41 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
 }
 
 
-// --- Hàm chính để ghi CSV bằng Stream (unchanged) ---
-export const writeCSVStream = async (
+// --- Hàm chính để ghi CSV bằng Stream và trả về dữ liệu ---
+export const writeCSVAndCollectData = async ( // <<< Đổi tên hàm
     jsonlFilePath: string,
     csvFilePath: string,
     parentLogger: typeof logger,
-): Promise<void> => {
-    const logContext = { jsonlInput: jsonlFilePath, csvOutput: csvFilePath, function: 'writeCSVStream' };
-    parentLogger.info({ ...logContext, event: 'csv_stream_start' }, 'Starting CSV writing stream');
+): Promise<ProcessedRowData[]> => { // <<< Thay đổi kiểu trả về
+    const logContext = { jsonlInput: jsonlFilePath, csvOutput: csvFilePath, function: 'writeCSVAndCollectData' };
+    parentLogger.info({ ...logContext, event: 'csv_stream_collect_start' }, 'Starting CSV writing stream and data collection');
 
-    const processorGenerator = processJsonlStream; // Use the updated generator
+    const collectedData: ProcessedRowData[] = []; // <<< Mảng để thu thập dữ liệu
+    const processorGenerator = processJsonlStream; // Generator xử lý JSONL
 
     let rowObjectStream: Readable | null = null;
-    let filterAndLogTransform: NodeTransform | null = null;
+    let filterLogCollectTransform: NodeTransform | null = null; // <<< Đổi tên transform
     let csvTransform: Json2CsvTransform<ProcessedRowData, ProcessedRowData> | null = null;
     let csvWriteStream: fs.WriteStream | null = null;
     let recordsProcessed = 0;
-    let recordsWritten = 0;
+    let recordsWrittenToCsv = 0;
+
+    // --- Kiểm tra file JSONL tồn tại và không rỗng trước khi bắt đầu ---
+    try {
+        if (!fs.existsSync(jsonlFilePath)) {
+            parentLogger.warn({ ...logContext, event: 'csv_stream_collect_skip_no_file' }, 'JSONL file does not exist. Returning empty array.');
+            return []; // Trả về mảng rỗng
+        }
+        const stats = await fs.promises.stat(jsonlFilePath);
+        if (stats.size === 0) {
+            parentLogger.warn({ ...logContext, event: 'csv_stream_collect_skip_empty_file' }, 'JSONL file is empty. Returning empty array.');
+            return []; // Trả về mảng rỗng
+        }
+    } catch (statError: any) {
+        parentLogger.error({ ...logContext, err: statError, event: 'csv_stream_collect_stat_error' }, 'Error checking JSONL file status.');
+        return []; // Trả về mảng rỗng khi không kiểm tra được file
+    }
+    // --- Hết kiểm tra file ---
 
     try {
         // 1. Create source stream
@@ -365,7 +383,7 @@ export const writeCSVStream = async (
         }
 
         // 2. Create a transform stream to filter out nulls AND log success
-        filterAndLogTransform = new NodeTransform({
+        filterLogCollectTransform = new NodeTransform({
             objectMode: true,
             transform(chunk: ProcessedRowData | null, encoding, callback) {
                 recordsProcessed++;
@@ -377,7 +395,12 @@ export const writeCSVStream = async (
                         title: chunk.title,
                         // Optional: Add line number if you track it through transforms
                     }, `Successfully processed and validated record for CSV`);
-                    recordsWritten++;
+
+                    // <<<--- Thu thập dữ liệu ---
+                    collectedData.push(chunk);
+                    // <<<----------------------
+
+                    recordsWrittenToCsv++;
                     this.push(chunk); // Pass the valid chunk downstream
                 } else {
                     // Error was already logged in processJsonlStream or chunk was invalid
@@ -385,7 +408,7 @@ export const writeCSVStream = async (
                 callback();
             }
         });
-        if (!filterAndLogTransform || typeof filterAndLogTransform.pipe !== 'function') throw new Error('Invalid filterAndLogTransform');
+        if (!filterLogCollectTransform || typeof filterLogCollectTransform.pipe !== 'function') throw new Error('Invalid filterLogCollectTransform');
 
 
         // 3. Set up CSV parser options
@@ -408,36 +431,41 @@ export const writeCSVStream = async (
         parentLogger.info({ ...logContext, event: 'pipeline_starting' }, 'Calling streamPipeline...');
         await streamPipeline(
             rowObjectStream,
-            filterAndLogTransform,
+            filterLogCollectTransform,
             csvTransform,
             csvWriteStream
         );
 
         parentLogger.info({
             ...logContext,
-            event: 'csv_stream_success',
+            event: 'csv_stream_collect_success',
             recordsProcessed,
-            recordsWritten
-        }, 'CSV writing stream finished successfully.');
+            recordsWrittenToCsv,
+            recordsCollected: collectedData.length // Log số lượng thu thập được
+        }, 'CSV writing stream and data collection finished successfully.');
+
+        // <<<--- Trả về dữ liệu đã thu thập ---
+        return collectedData;
+        // <<<---------------------------------
+
 
     } catch (error: any) {
         parentLogger.error({
             ...logContext,
             streamStatus: {
                 rowObjectStreamExists: !!rowObjectStream,
-                filterTransformExists: !!filterAndLogTransform,
+                filterTransformExists: !!filterLogCollectTransform,
                 csvTransformInstanceExists: !!csvTransform,
                 csvWriteStreamExists: !!csvWriteStream,
             },
             recordsProcessed,
-            recordsWritten,
-            err: { message: error.message, stack: error.stack, code: error.code, type: error.constructor.name },
-            event: 'csv_stream_failed'
-        }, 'Error during CSV writing stream pipeline');
+            recordsCollected: collectedData.length, // Log số lượng đã thu thập được khi lỗi
+            event: 'csv_stream_collect_failed'
+        }, 'Error during CSV writing stream and data collection pipeline');
 
         // Attempt to clean up streams
         rowObjectStream?.destroy();
-        filterAndLogTransform?.destroy();
+        filterLogCollectTransform?.destroy();
         csvTransform?.destroy();
         if (csvWriteStream && !csvWriteStream.destroyed) {
             csvWriteStream.destroy(error instanceof Error ? error : new Error(String(error)));

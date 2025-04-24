@@ -6,7 +6,8 @@ import { searchGoogleCSE } from './1_google_search';
 import { filterSearchResults } from './4_link_filtering';
 import { saveHTMLContent, updateHTMLContent } from './6_batch_processing';
 import { setupPlaywright } from './12_playwright_setup';
-import { writeCSVStream } from './10_response_processing';
+import { writeCSVAndCollectData } from './10_response_processing';
+import { ProcessedRowData } from './types';
 
 // Import config chung
 import {
@@ -176,10 +177,10 @@ class ApiKeyManager {
 export const crawlConferences = async (
     conferenceList: ConferenceData[],
     parentLogger: typeof logger
-): Promise<(ProcessedResponseData | null)[]> => {
+): Promise<ProcessedRowData[]> => { // <<< Kiểu trả về là ProcessedRowData[]
     const QUEUE = await queuePromise;
 
-    const finalResults: (ProcessedResponseData | null)[] = new Array(conferenceList.length).fill(null);
+    let allProcessedData: ProcessedRowData[] = []; // Khởi tạo mảng kết quả
 
     const operationStartTime = Date.now();
     parentLogger.info({
@@ -218,7 +219,7 @@ export const crawlConferences = async (
     }
     // ---
 
-    const batchPromises: Promise<void>[] = []; // Chỉ chứa promise từ saveBatchToFile
+    const batchPromises: Promise<boolean>[] = []; // NEW
 
     try {
         parentLogger.info({ event: 'playwright_setup_start' }, "Setting up Playwright...");
@@ -273,22 +274,40 @@ export const crawlConferences = async (
                 const confTitle = conference?.Title || `Unknown-${index}`;
                 const taskLogger = parentLogger.child({ title: confTitle, acronym: confAcronym, taskIndex: index + 1, event_group: 'conference_task' });
                 taskLogger.info({ event: 'task_start' }, `Processing conference`);
-                let taskResult: ProcessedResponseData | null = null;
+                let taskResult: boolean | undefined;
 
                 try {
+                    // --- Kiểm tra sự tồn tại của cả 3 key ---
+                    // Sử dụng toán tử `in` để kiểm tra xem các key có tồn tại trong object hay không,
+                    // bất kể giá trị của chúng là gì (string, "", null, undefined).
+                    const hasAllRequiredKeys = 'mainLink' in conference &&
+                        'cfpLink' in conference &&
+                        'impLink' in conference;
+
                     // --- Luồng UPDATE ---
-                    if (conference.mainLink && conference.cfpLink && conference.impLink) {
-                        taskLogger.info({ event: 'process_predefined_links_start' }, `Processing with pre-defined links (UPDATE flow)`);
-                        const conferenceUpdateData: ConferenceUpdateData = { Acronym: conference.Acronym, Title: conference.Title, mainLink: conference.mainLink || "", cfpLink: conference.cfpLink || "", impLink: conference.impLink || "" };
+                    if (hasAllRequiredKeys) {
+                        taskLogger.info({ event: 'process_predefined_links_start' }, `Processing with pre-defined keys (UPDATE flow)`);
+                        // Vẫn cần xử lý trường hợp giá trị là null/undefined khi gán vào ConferenceUpdateData nếu cần thiết
+                        // Ví dụ: đảm bảo nó luôn là string "" nếu là null/undefined
+                        const conferenceUpdateData: ConferenceUpdateData = {
+                            Acronym: conference.Acronym,
+                            Title: conference.Title,
+                            mainLink: conference.mainLink ?? "", // Sử dụng ?? để thay thế null/undefined bằng ""
+                            cfpLink: conference.cfpLink ?? "",   // Sử dụng ?? để thay thế null/undefined bằng ""
+                            impLink: conference.impLink ?? ""    // Sử dụng ?? để thay thế null/undefined bằng ""
+                        };
                         try {
                             taskResult = await updateHTMLContent(browserCtx, conferenceUpdateData, batchIndexRef, taskLogger); // Truyền taskLogger
-                            taskLogger.info({ event: 'process_predefined_links_success', hasResult: taskResult !== null }, "Predefined links processing step completed.");
+                            taskLogger.info({ event: 'process_predefined_links_success', hasResult: taskResult !== false }, "Predefined keys processing step completed.");
                         } catch (updateError: any) {
-                            taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined links processing.");
-                            taskResult = null;
+                            taskLogger.error({ err: updateError, event: 'process_predefined_links_failed' }, "Error during predefined keys processing.");
+                            taskResult = false;
                         }
-                        // --- Luồng SAVE (Search) ---
-                    } else {
+
+                    }
+
+                    // --- Luồng SAVE (Search) ---
+                    else {
                         taskLogger.info({ event: 'search_and_process_start' }, `Searching and processing (SAVE flow)`);
                         let searchResults: GoogleSearchResult[] = [];
                         let searchResultsLinks: string[] = [];
@@ -426,17 +445,14 @@ export const crawlConferences = async (
                             taskLogger.warn({ event: 'save_html_skipped_no_links' }, "Skipping save HTML step as no valid search links were found or processed.")
                         }
                         // Luồng SAVE không trả về dữ liệu trực tiếp cho finalResults
-                        taskResult = null;
+                        taskResult = true;
                     } // End else (SAVE flow)
 
                 } catch (taskError: any) {
                     taskLogger.error({ err: taskError, stack: taskError.stack, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
-                    taskResult = null; // Đảm bảo null nếu có lỗi không mong muốn
+                    taskResult = false; // Đảm bảo null nếu có lỗi không mong muốn
                 } finally {
-                    taskLogger.info({ event: 'task_finish', hasResult: taskResult !== null }, `Finished processing queue item for ${confAcronym}`);
-                    // Gán kết quả vào mảng finalResults tại đúng vị trí index (chỉ có ý nghĩa cho luồng UPDATE)
-                    finalResults[index] = taskResult;
-                    // Không cần return taskResult vì Promise.all không dùng giá trị trả về trực tiếp ở đây
+                    taskLogger.info({ event: 'task_finish', hasResult: taskResult !== false }, `Finished processing queue item for ${confAcronym}`);
 
                 }
 
@@ -476,30 +492,25 @@ export const crawlConferences = async (
         }
         // ---
 
-        // --- Final Output Processing (CSV Streaming) ---
-        parentLogger.info({ event: 'final_output_processing_start' }, "Processing final outputs (Streaming JSONL to CSV)...");
-        if (fs.existsSync(FINAL_OUTPUT_PATH)) {
-            try {
-                const fileStat = await fs.promises.stat(FINAL_OUTPUT_PATH);
-                if (fileStat.size > 0) {
-                    parentLogger.info({ jsonlPath: FINAL_OUTPUT_PATH, csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_start' }, 'Starting CSV streaming from JSONL file.');
-                    await writeCSVStream(FINAL_OUTPUT_PATH, EVALUATE_CSV_PATH, parentLogger); // Truyền parentLogger
-                    parentLogger.info({ csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_call_success' }, 'CSV streaming completed.');
-                } else {
-                    parentLogger.warn({ path: FINAL_OUTPUT_PATH, event: 'csv_stream_skipped_empty_jsonl' }, 'Skipping CSV generation: Final output file is empty.');
-                }
-            } catch (csvStreamError: any) {
-                parentLogger.error({ err: csvStreamError, event: 'csv_stream_call_failed' }, `CSV streaming process failed`);
-            }
-        } else {
-            parentLogger.warn({ path: FINAL_OUTPUT_PATH, event: 'csv_stream_skipped_no_jsonl' }, 'Skipping CSV generation: Final output file does not exist.');
+        // --- Final Output Processing (CSV Streaming VÀ Thu thập dữ liệu) ---
+        parentLogger.info({ event: 'final_output_processing_start' }, "Processing final outputs (Streaming JSONL to CSV and collecting data)...");
+
+        try {
+            parentLogger.info({ jsonlPath: FINAL_OUTPUT_PATH, csvPath: EVALUATE_CSV_PATH, event: 'csv_stream_collect_call_start' }, 'Starting CSV streaming and data collection from JSONL file.');
+            // Gọi hàm mới và nhận kết quả trực tiếp
+            allProcessedData = await writeCSVAndCollectData(FINAL_OUTPUT_PATH, EVALUATE_CSV_PATH, parentLogger); // <<< Gọi hàm mới
+            parentLogger.info({ csvPath: EVALUATE_CSV_PATH, collectedCount: allProcessedData.length, event: 'csv_stream_collect_call_success' }, 'CSV streaming and data collection completed.');
+        } catch (streamCollectError: any) {
+            // Lỗi này chỉ xảy ra nếu writeCSVAndCollectData throw error (ít khả năng nếu nó trả về [] khi lỗi)
+            parentLogger.error({ err: streamCollectError, event: 'csv_stream_collect_call_failed' }, `CSV streaming and data collection process failed`);
+            // allProcessedData sẽ vẫn là mảng rỗng đã khởi tạo
         }
         // ---
 
-        // --- TRẢ VỀ MẢNG KẾT QUẢ (Chủ yếu từ luồng UPDATE) ---
-        const validResultsCount = finalResults.filter(r => r !== null).length;
-        parentLogger.info({ event: 'crawl_return_results', resultsCount: validResultsCount }, `Returning ${validResultsCount} processed results (primarily from UPDATE flow).`);
-        return finalResults; // Trả về mảng chứa kết quả từ updateHTMLContent hoặc null
+        parentLogger.info({ event: 'crawl_return_results', resultsCount: allProcessedData.length }, `Returning ${allProcessedData.length} processed records collected during CSV streaming.`);
+
+        console.log("All processed data", allProcessedData)
+        return allProcessedData; // <<< Trả về dữ liệu đã thu thập
 
     } catch (error: any) {
         parentLogger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error' }, "Fatal error during crawling process");
@@ -546,7 +557,7 @@ export const crawlConferences = async (
             failedSaveBatchOps: failedBatchOperations,
             totalSaveBatchOpsAttempted: batchPromises.length, // Tổng số batch save đã được tạo
             finalRecordsInJsonl: finalRecordCount, // Số dòng trong file JSONL cuối (từ save)
-            resultsReturned: finalResults.filter(r => r !== null).length, // Số kết quả không null trả về (từ update)
+            resultsReturned: allProcessedData.length,
             totalGoogleApiRequests: apiKeyManager.getTotalRequests(), // Lấy tổng request từ manager
             keysExhausted: apiKeyManager.areAllKeysExhausted(), // Trạng thái cuối cùng của keys
             durationSeconds,

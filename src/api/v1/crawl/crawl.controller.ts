@@ -1,3 +1,5 @@
+// src/api/v1/crawl/crawl.controller.ts
+
 import { Request, Response } from 'express';
 import 'dotenv/config';
 import path from 'path';
@@ -83,27 +85,27 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
 
         // --- Xử lý và gửi Response (Logic này áp dụng cho cả hai dataSource) ---
 
-        // Lọc ra các kết quả không null (chỉ những kết quả từ luồng update thành công)
-        const processedUpdateResults = crawlResults.filter(result => result !== null) as ProcessedResponseData[];
+        // Lọc ra các kết quả không null 
+        const processedResults = crawlResults.filter(result => result !== null) as ProcessedResponseData[];
 
         routeLogger.info({
             runtimeSeconds: runTimeSeconds,
             totalProcessed: conferenceList.length, // Tổng số conf được yêu cầu xử lý
-            updateResultsReturned: processedUpdateResults.length, // Số kết quả từ luồng update trả về
+            results: processedResults, // Số kết quả từ luồng trả về
             event: 'processing_finished_successfully',
             outputJsonl: FINAL_OUTPUT_PATH,
             outputCsv: EVALUATE_CSV_PATH
-        }, "Conference processing finished. Returning any available update results.");
+        }, "Conference processing finished. Returning any available results.");
 
         // *** Luôn trả về cấu trúc response này ***
         res.status(200).json({
-            message: `Conference processing completed. ${processedUpdateResults.length} conference(s) yielded update data. All processing results (updates/saves) are reflected in server files.`,
+            message: `Conference processing completed. ${processedResults.length} conference(s) yielded data. All processing results are reflected in server files.`,
             runtime: `${runTimeSeconds} s`,
-            data: processedUpdateResults, // Trả về mảng kết quả update (có thể rỗng)
+            data: processedResults, // Trả về mảng kết quả (có thể rỗng)
             outputJsonlPath: FINAL_OUTPUT_PATH,
             outputCsvPath: EVALUATE_CSV_PATH
         });
-        routeLogger.info({ statusCode: 200, updateResultsCount: processedUpdateResults.length }, "Sent successful response");
+        routeLogger.info({ statusCode: 200, resultsCount: processedResults.length }, "Sent successful response");
 
 
     } catch (error: any) {

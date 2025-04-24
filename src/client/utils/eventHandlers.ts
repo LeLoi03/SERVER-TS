@@ -456,36 +456,37 @@ const handleCrawlStart: LogEventHandler = (logEntry, results, confDetail, entryT
 };
 
 // Section 6: Final Result Preview Logging
-const handleCrawlConferenceResult: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
-    if (logEntry.route === '/crawl-conferences' && logEntry.event === 'crawl_conference_result' && logEntry.context?.results && Array.isArray(logEntry.context.results) && logEntry.context.results.length > 0) {
-        const result = logEntry.context.results[0];
-        const resultAcronym = result?.acronym;
-        const resultTitle = result?.title;
-        const resultCompositeKey = createConferenceKey(resultAcronym, resultTitle);
+// const handleCrawlConferenceResult: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+//     if (logEntry.route === '/crawl-conferences' && logEntry.event === 'processing_finished_successfully' && logEntry.results && Array.isArray(logEntry.results) && logEntry.results.length > 0) {
+//         const result = logEntry.results[0];
+//         const resultAcronym = result?.acronym;
+//         const resultTitle = result?.title;
+//         const resultCompositeKey = createConferenceKey(resultAcronym, resultTitle);
 
-        if (resultCompositeKey && results.conferenceAnalysis[resultCompositeKey]) {
-            results.conferenceAnalysis[resultCompositeKey].finalResultPreview = result;
-            logger.trace({ ...logContext, event: 'capture_result_preview', compositeKey: resultCompositeKey }, 'Captured final result preview from crawl_conference_result');
-        } else if (resultAcronym || resultTitle) {
-            logger.warn({ ...logContext, event: 'capture_result_preview_miss', resultAcronym, resultTitle }, "Found crawl_conference_result but no matching analysis entry OR missing info for composite key");
-        }
-    }
-};
+//         if (resultCompositeKey && results.conferenceAnalysis[resultCompositeKey]) {
+//             results.conferenceAnalysis[resultCompositeKey].finalResultPreview = result;
+//             logger.trace({ ...logContext, event: 'capture_result_preview', compositeKey: resultCompositeKey }, 'Captured final result preview from crawl_conference_result');
+//         } else if (resultAcronym || resultTitle) {
+//             logger.warn({ ...logContext, event: 'capture_result_preview_miss', resultAcronym, resultTitle }, "Found crawl_conference_result but no matching analysis entry OR missing info for composite key");
+//         }
+//     }
+// };
 
-const handleCrawlEndSuccessPreview: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
-    if (logEntry.route === '/crawl-conferences' && logEntry.event === 'crawl_end_success' && logEntry.context?.resultsPreview && Array.isArray(logEntry.context.resultsPreview)) {
-        logEntry.context.resultsPreview.forEach((preview: any) => {
-            const previewAcronym = preview?.acronym;
-            const previewTitle = preview?.title;
-            const previewCompositeKey = createConferenceKey(previewAcronym, previewTitle);
+const handleCrawlEndSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+    if (logEntry.route === '/crawl-conferences' && logEntry.event === 'processing_finished_successfully' && logEntry.results && Array.isArray(logEntry.results) && logEntry.results.length > 0) {
 
-            if (previewCompositeKey && results.conferenceAnalysis[previewCompositeKey]) {
-                if (!results.conferenceAnalysis[previewCompositeKey].finalResultPreview) {
-                    results.conferenceAnalysis[previewCompositeKey].finalResultPreview = preview;
-                    logger.trace({ ...logContext, event: 'capture_result_preview_end', compositeKey: previewCompositeKey }, 'Captured final result preview from crawl_end_success');
+        logEntry.results.forEach((result: any) => {
+            const acronym = result?.acronym;
+            const title = result?.title;
+            const compositeKey = createConferenceKey(acronym, title);
+
+            if (compositeKey && results.conferenceAnalysis[compositeKey]) {
+                if (!results.conferenceAnalysis[compositeKey].finalResult) {
+                    results.conferenceAnalysis[compositeKey].finalResult = result;
+                    logger.trace({ ...logContext, event: 'capture_result__end', compositeKey: compositeKey }, 'Captured final result from processing_finished_successfully');
                 }
-            } else if (previewAcronym || previewTitle) {
-                logger.warn({ ...logContext, event: 'capture_result_preview_end_miss', previewAcronym, previewTitle }, "Found preview in crawl_end_success but no matching analysis entry OR missing info for composite key");
+            } else if (acronym || title) {
+                logger.warn({ ...logContext, event: 'capture_result_end_miss', acronym, title }, "Found result in processing_finished_successfully but no matching analysis entry OR missing info for composite key");
             }
         });
     }
@@ -647,9 +648,8 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
     // Overall Process
     'crawl_start': handleCrawlStart,
 
-    // Final Result Preview Logging
-    'crawl_conference_result': handleCrawlConferenceResult,
-    'crawl_end_success': handleCrawlEndSuccessPreview,
+    // Final Result  Logging
+    'processing_finished_successfully': handleCrawlEndSuccess,
 
     // Validation/Normalization
     'validation_warning': handleValidationWarning,

@@ -1,4 +1,4 @@
-// src/client/types/logAnalysis.ts
+// ../types/logAnalysis.ts
 
 export interface RequestLogData {
     logs: any[];
@@ -56,7 +56,7 @@ export interface ConferenceAnalysisDetail {
     validationIssues?: { field: string; value: any; action: string; timestamp: string }[];
 
     
-    finalResultPreview?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
+    finalResult?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
 }
 
 
@@ -71,33 +71,25 @@ export interface ValidationStats {
 
 /** Cấu trúc kết quả phân tích log tổng thể và chi tiết theo conference */
 export interface LogAnalysisResult {
-    // --- THÊM CÁC TRƯỜNG BỊ THIẾU Ở CẤP CAO NHẤT ---
-    status: 'Pending' | 'Running' | 'Completed' | 'Failed'; // Trạng thái của quá trình phân tích
-    errorMessage?: string; // Thông báo lỗi nếu status là 'Failed' (optional)
-    // ----------------------------------------------
-
-    analysisTimestamp: string; // Đổi tên từ analysisStartTime để rõ nghĩa hơn là thời điểm BẮT ĐẦU phân tích
+    analysisTimestamp: string;
     logFilePath: string;
     totalLogEntries: number;
     parsedLogEntries: number;
     parseErrors: number;
-    errorLogCount: number;
-    fatalLogCount: number;
+    errorLogCount: number; // Tổng số log >= ERROR
+    fatalLogCount: number; // Tổng số log >= FATAL
 
-    // --- Tổng hợp chung ---
+    // --- Tổng hợp chung (vẫn giữ để có cái nhìn tổng quan) ---
     overall: {
-        // --- THÊM TRƯỜNG BỊ THIẾU TRONG OVERALL ---
-        requestsAnalyzed: number; // Tổng số request được đưa vào phân tích sau khi lọc
-        // -----------------------------------------
-        startTime: string | null; // Thời gian bắt đầu của log sớm nhất trong khoảng phân tích
-        endTime: string | null; // Thời gian kết thúc của log muộn nhất trong khoảng phân tích
+        startTime: string | null;
+        endTime: string | null;
         durationSeconds: number | null;
-        totalConferencesInput: number; // Có thể bỏ nếu không còn dùng? Hoặc tính toán lại
-        processedConferencesCount: number;
-        completedTasks: number;
-        failedOrCrashedTasks: number;
-        processingTasks: number;
-        successfulExtractions: number;
+        totalConferencesInput: number;
+        processedConferencesCount: number; // Conferences touched within the analysis window
+        completedTasks: number;           // Status = 'completed'
+        failedOrCrashedTasks: number;     // Status = 'failed'
+        processingTasks: number;          // Status = 'processing' or 'unknown' but started
+        successfulExtractions: number;    // Based on gemini_extract_success = true
     };
     googleSearch: {
         totalRequests: number;
@@ -158,23 +150,4 @@ export interface LogAnalysisResult {
     validationStats: ValidationStats;
     // -----------------------
 
-}
-
-
-
-// --- Thêm các type/interface khác từ file gốc nếu cần ---
-export interface LogEntry {
-    timestamp: number; // Use number (milliseconds) internally
-    level: string; // e.g., 'info', 'warn', 'error'
-    message: string;
-    requestId: string;
-    // Add other common fields from your logs
-    [key: string]: any; // Allow other arbitrary fields
-}
-
-// Type for RequestInfo (used in readAndGroupLogs and filterRequestsByTime)
-export interface RequestInfo {
-    logs: LogEntry[];
-    startTime: number;
-    endTime: number;
 }

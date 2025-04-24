@@ -13,3 +13,449 @@
 [2025-04-24T07:47:11.192Z] [Socket.IO QE8Tvo22vR1Ton_aAAAE] Anonymous user connected.
 [2025-04-24T07:47:11.193Z] [Socket QE8Tvo22vR1Ton_aAAAE] Registering core event handlers. UserID: Anonymous
 [2025-04-24T07:47:11.193Z] [Socket QE8Tvo22vR1Ton_aAAAE] Core event handlers registered.
+[2025-04-24T08:53:42.066Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T08:53:42.068Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T08:53:42.070Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T08:53:42.071Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T08:53:42.072Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T08:53:45.782Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T08:53:45.783Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T08:53:45.783Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T08:53:45.784Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T08:53:45.784Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T08:53:56.919Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T08:53:56.925Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T08:53:58.015Z] [Server Start] Initializing loaders...
+[2025-04-24T08:53:58.018Z] [Loader] Starting application loading process...
+[2025-04-24T08:53:58.018Z] [Loader DB] Attempting database connection...
+[2025-04-24T08:53:58.020Z] [Database] Attempting MongoDB connection...
+[2025-04-24T08:53:58.972Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T08:53:58.973Z] [Loader DB] Database connection successful.
+[2025-04-24T08:53:58.973Z] [Loader] Database loaded.
+[2025-04-24T08:53:58.974Z] [History Service] Initialized.
+[2025-04-24T08:53:58.974Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T08:53:58.974Z] [Loader] Services initialized.
+[2025-04-24T08:53:58.980Z] [Express] Mounted API routes at /api
+[2025-04-24T08:53:58.981Z] [Express] Registered Not Found handler.
+[2025-04-24T08:53:58.981Z] [Express] Registered Global Error handler.
+[2025-04-24T08:53:58.981Z] [Express] Express app configured.
+[2025-04-24T08:53:58.983Z] [Loader] Express loaded.
+[2025-04-24T08:53:58.983Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T08:53:58.988Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T08:53:58.989Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T08:53:58.989Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T08:53:58.989Z] [Loader] Socket.IO loaded.
+[2025-04-24T08:53:58.990Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T08:53:58.990Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T08:53:59.053Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T08:53:59.054Z] [Loader] Jobs scheduled.
+[2025-04-24T08:53:59.061Z] [Loader] Performing initial log analysis...
+[2025-04-24T08:53:59.064Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T08:53:59.102Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T08:53:59.103Z] [Loader] Initial log analysis completed.
+[2025-04-24T08:53:59.104Z] [Loader] All loaders completed successfully.
+[2025-04-24T08:53:59.115Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T08:53:59.116Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T08:53:59.118Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T08:53:59.119Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T08:53:59.287Z] [Socket Auth MW] Attempting auth for socket AKExdsgqV86XuKe7AAAB. Token provided: false
+[2025-04-24T08:53:59.287Z] [Socket Auth MW] No token provided for socket AKExdsgqV86XuKe7AAAB. Treating as anonymous.
+[2025-04-24T08:53:59.291Z] [Socket.IO AKExdsgqV86XuKe7AAAB] Client connected. Token present: false
+[2025-04-24T08:53:59.291Z] [Socket.IO AKExdsgqV86XuKe7AAAB] Anonymous user connected.
+[2025-04-24T08:53:59.293Z] [Socket AKExdsgqV86XuKe7AAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T08:53:59.293Z] [Socket AKExdsgqV86XuKe7AAAB] Core event handlers registered.
+[2025-04-24T08:54:22.462Z] [Socket.IO AKExdsgqV86XuKe7AAAB] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-24T08:54:25.345Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T08:54:25.346Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T08:54:25.347Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T08:54:25.356Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 12ms
+[2025-04-24T08:54:25.386Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T08:54:25.387Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T08:54:25.388Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T08:54:25.390Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 4ms
+[2025-04-24T08:54:25.407Z] [Socket Auth MW] Attempting auth for socket ht-PozgLMgX2FewWAAAE. Token provided: false
+[2025-04-24T08:54:25.407Z] [Socket Auth MW] No token provided for socket ht-PozgLMgX2FewWAAAE. Treating as anonymous.
+[2025-04-24T08:54:25.408Z] [Socket.IO ht-PozgLMgX2FewWAAAE] Client connected. Token present: false
+[2025-04-24T08:54:25.409Z] [Socket.IO ht-PozgLMgX2FewWAAAE] Anonymous user connected.
+[2025-04-24T08:54:25.409Z] [Socket ht-PozgLMgX2FewWAAAE] Registering core event handlers. UserID: Anonymous
+[2025-04-24T08:54:25.409Z] [Socket ht-PozgLMgX2FewWAAAE] Core event handlers registered.
+[2025-04-24T09:06:50.129Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:06:50.130Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:06:50.130Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:06:50.131Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:06:50.930Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:06:50.930Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:06:50.930Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:06:50.931Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:07:41.616Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:07:41.616Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:07:41.617Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:07:41.618Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:07:46.114Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:07:46.115Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:07:46.115Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:07:46.117Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:07:46.659Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:07:46.659Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:07:46.659Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:07:46.661Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:07:53.225Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:07:53.226Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:07:53.226Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:07:53.228Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:08:13.726Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:13.727Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:13.727Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:13.729Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:08:17.273Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:17.274Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:17.274Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:17.276Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:08:21.314Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:21.315Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:21.315Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:21.316Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:08:21.801Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:21.802Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:21.802Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:21.804Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:08:22.411Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:22.412Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:22.412Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:22.413Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:08:35.327Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:35.328Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:35.328Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:35.330Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:08:36.885Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:08:36.885Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:08:36.886Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:08:36.887Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 2ms
+[2025-04-24T09:08:42.640Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:08:42.642Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:08:42.642Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:08:42.642Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:08:42.643Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:08:48.509Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T09:08:48.509Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T09:08:48.931Z] [Server Start] Initializing loaders...
+[2025-04-24T09:08:48.931Z] [Loader] Starting application loading process...
+[2025-04-24T09:08:48.932Z] [Loader DB] Attempting database connection...
+[2025-04-24T09:08:48.932Z] [Database] Attempting MongoDB connection...
+[2025-04-24T09:08:49.695Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T09:08:49.695Z] [Loader DB] Database connection successful.
+[2025-04-24T09:08:49.696Z] [Loader] Database loaded.
+[2025-04-24T09:08:49.696Z] [History Service] Initialized.
+[2025-04-24T09:08:49.697Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:08:49.698Z] [Loader] Services initialized.
+[2025-04-24T09:08:49.703Z] [Express] Mounted API routes at /api
+[2025-04-24T09:08:49.704Z] [Express] Registered Not Found handler.
+[2025-04-24T09:08:49.704Z] [Express] Registered Global Error handler.
+[2025-04-24T09:08:49.705Z] [Express] Express app configured.
+[2025-04-24T09:08:49.706Z] [Loader] Express loaded.
+[2025-04-24T09:08:49.706Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T09:08:49.711Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T09:08:49.711Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T09:08:49.711Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T09:08:49.712Z] [Loader] Socket.IO loaded.
+[2025-04-24T09:08:49.712Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T09:08:49.713Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T09:08:49.744Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T09:08:49.744Z] [Loader] Jobs scheduled.
+[2025-04-24T09:08:49.745Z] [Loader] Performing initial log analysis...
+[2025-04-24T09:08:49.746Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:08:49.755Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:08:49.755Z] [Loader] Initial log analysis completed.
+[2025-04-24T09:08:49.755Z] [Loader] All loaders completed successfully.
+[2025-04-24T09:08:49.759Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T09:08:49.759Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T09:08:49.760Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:08:49.760Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T09:08:49.883Z] [Socket Auth MW] Attempting auth for socket fF70sBD58c92N8wGAAAB. Token provided: false
+[2025-04-24T09:08:49.883Z] [Socket Auth MW] No token provided for socket fF70sBD58c92N8wGAAAB. Treating as anonymous.
+[2025-04-24T09:08:49.885Z] [Socket.IO fF70sBD58c92N8wGAAAB] Client connected. Token present: false
+[2025-04-24T09:08:49.886Z] [Socket.IO fF70sBD58c92N8wGAAAB] Anonymous user connected.
+[2025-04-24T09:08:49.888Z] [Socket fF70sBD58c92N8wGAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T09:08:49.888Z] [Socket fF70sBD58c92N8wGAAAB] Core event handlers registered.
+[2025-04-24T09:09:01.549Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:09:01.551Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:09:01.551Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:09:01.560Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 12ms
+[2025-04-24T09:09:07.313Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:09:07.314Z] [LogAnalysis Controller] Request received for latest analysis results.
+[2025-04-24T09:09:07.315Z] [LogAnalysis Controller] Returning latest cached analysis results.
+[2025-04-24T09:09:07.316Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 304 3ms
+[2025-04-24T09:15:09.051Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:15:09.054Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:15:09.054Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:15:09.055Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:15:09.055Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:15:16.098Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T09:15:16.098Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T09:15:16.645Z] [Server Start] Initializing loaders...
+[2025-04-24T09:15:16.646Z] [Loader] Starting application loading process...
+[2025-04-24T09:15:16.646Z] [Loader DB] Attempting database connection...
+[2025-04-24T09:15:16.647Z] [Database] Attempting MongoDB connection...
+[2025-04-24T09:15:17.411Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T09:15:17.412Z] [Loader DB] Database connection successful.
+[2025-04-24T09:15:17.412Z] [Loader] Database loaded.
+[2025-04-24T09:15:17.412Z] [History Service] Initialized.
+[2025-04-24T09:15:17.413Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:15:17.413Z] [Loader] Services initialized.
+[2025-04-24T09:15:17.419Z] [Express] Mounted API routes at /api
+[2025-04-24T09:15:17.420Z] [Express] Registered Not Found handler.
+[2025-04-24T09:15:17.420Z] [Express] Registered Global Error handler.
+[2025-04-24T09:15:17.420Z] [Express] Express app configured.
+[2025-04-24T09:15:17.422Z] [Loader] Express loaded.
+[2025-04-24T09:15:17.422Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T09:15:17.427Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T09:15:17.427Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T09:15:17.428Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T09:15:17.428Z] [Loader] Socket.IO loaded.
+[2025-04-24T09:15:17.428Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T09:15:17.428Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T09:15:17.462Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T09:15:17.463Z] [Loader] Jobs scheduled.
+[2025-04-24T09:15:17.463Z] [Loader] Performing initial log analysis...
+[2025-04-24T09:15:17.464Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:15:17.475Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:15:17.475Z] [Loader] Initial log analysis completed.
+[2025-04-24T09:15:17.475Z] [Loader] All loaders completed successfully.
+[2025-04-24T09:15:17.480Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T09:15:17.480Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T09:15:17.480Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:15:17.481Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T09:15:17.685Z] [Socket Auth MW] Attempting auth for socket U-P9VIzKCUnhRZNIAAAB. Token provided: false
+[2025-04-24T09:15:17.685Z] [Socket Auth MW] No token provided for socket U-P9VIzKCUnhRZNIAAAB. Treating as anonymous.
+[2025-04-24T09:15:17.688Z] [Socket.IO U-P9VIzKCUnhRZNIAAAB] Client connected. Token present: false
+[2025-04-24T09:15:17.688Z] [Socket.IO U-P9VIzKCUnhRZNIAAAB] Anonymous user connected.
+[2025-04-24T09:15:17.690Z] [Socket U-P9VIzKCUnhRZNIAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T09:15:17.691Z] [Socket U-P9VIzKCUnhRZNIAAAB] Core event handlers registered.
+[2025-04-24T09:16:44.691Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:16:44.693Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-24T09:16:44.693Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:16:44.711Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:16:44.712Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:16:44.713Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-24T09:16:44.722Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 31ms
+[2025-04-24T09:17:08.343Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:17:08.344Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-24T09:17:08.345Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:17:08.375Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:17:08.376Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-24T09:17:08.383Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 40ms
+[2025-04-24T09:17:21.682Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:17:21.683Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-24T09:17:21.683Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:17:21.687Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:17:21.687Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-24T09:17:21.688Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 6ms
+[2025-04-24T09:19:38.978Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:19:38.979Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-24T09:19:38.979Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:19:38.982Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:19:38.983Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:19:38.983Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-24T09:19:38.984Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 6ms
+[2025-04-24T09:30:00.682Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:30:00.684Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:30:00.686Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:30:00.686Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:30:00.687Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:30:03.841Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:30:03.848Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:30:03.849Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:30:03.849Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:30:03.851Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:30:11.942Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T09:30:11.943Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T09:30:12.376Z] [Server Start] Initializing loaders...
+[2025-04-24T09:30:12.377Z] [Loader] Starting application loading process...
+[2025-04-24T09:30:12.377Z] [Loader DB] Attempting database connection...
+[2025-04-24T09:30:12.378Z] [Database] Attempting MongoDB connection...
+[2025-04-24T09:30:13.145Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T09:30:13.146Z] [Loader DB] Database connection successful.
+[2025-04-24T09:30:13.146Z] [Loader] Database loaded.
+[2025-04-24T09:30:13.146Z] [History Service] Initialized.
+[2025-04-24T09:30:13.147Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:30:13.147Z] [Loader] Services initialized.
+[2025-04-24T09:30:13.154Z] [Express] Mounted API routes at /api
+[2025-04-24T09:30:13.155Z] [Express] Registered Not Found handler.
+[2025-04-24T09:30:13.155Z] [Express] Registered Global Error handler.
+[2025-04-24T09:30:13.155Z] [Express] Express app configured.
+[2025-04-24T09:30:13.156Z] [Loader] Express loaded.
+[2025-04-24T09:30:13.157Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T09:30:13.162Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T09:30:13.162Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T09:30:13.162Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T09:30:13.163Z] [Loader] Socket.IO loaded.
+[2025-04-24T09:30:13.163Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T09:30:13.163Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T09:30:13.199Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T09:30:13.199Z] [Loader] Jobs scheduled.
+[2025-04-24T09:30:13.199Z] [Loader] Performing initial log analysis...
+[2025-04-24T09:30:13.200Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:30:13.212Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:30:13.214Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:30:13.214Z] [Loader] Initial log analysis completed.
+[2025-04-24T09:30:13.214Z] [Loader] All loaders completed successfully.
+[2025-04-24T09:30:13.219Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T09:30:13.220Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T09:30:13.221Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:30:13.221Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T09:30:14.342Z] [Socket Auth MW] Attempting auth for socket M5CU0a8WAbJKyXUKAAAB. Token provided: false
+[2025-04-24T09:30:14.342Z] [Socket Auth MW] No token provided for socket M5CU0a8WAbJKyXUKAAAB. Treating as anonymous.
+[2025-04-24T09:30:14.344Z] [Socket.IO M5CU0a8WAbJKyXUKAAAB] Client connected. Token present: false
+[2025-04-24T09:30:14.345Z] [Socket.IO M5CU0a8WAbJKyXUKAAAB] Anonymous user connected.
+[2025-04-24T09:30:14.347Z] [Socket M5CU0a8WAbJKyXUKAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T09:30:14.347Z] [Socket M5CU0a8WAbJKyXUKAAAB] Core event handlers registered.
+[2025-04-24T09:31:20.080Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:31:20.082Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-24T09:31:20.082Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:31:20.087Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:31:20.088Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:31:20.088Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-24T09:31:20.096Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 16ms
+[2025-04-24T09:31:31.073Z] [HTTP Request] --> POST /crawl-conferences?dataSource=client from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:31:31.083Z] [Error Handler] [WARN] 404 POST /crawl-conferences?dataSource=client - Not Found - /crawl-conferences?dataSource=client
+Stack: Error: Not Found - /crawl-conferences?dataSource=client
+    at notFoundHandler (D:\NEW-SERVER-TS\src\socket\middleware\errorHandler.middleware.ts:42:30)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:280:10)
+    at requestLoggerMiddleware (D:\NEW-SERVER-TS\src\socket\middleware\logging.middleware.ts:37:5)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+[2025-04-24T09:31:31.084Z] [HTTP Response] <-- POST /crawl-conferences?dataSource=client 404 12ms - WARN
+[2025-04-24T09:34:14.481Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:34:14.483Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:34:14.483Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:34:14.483Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:34:14.484Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:34:21.184Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T09:34:21.185Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T09:34:21.620Z] [Server Start] Initializing loaders...
+[2025-04-24T09:34:21.621Z] [Loader] Starting application loading process...
+[2025-04-24T09:34:21.621Z] [Loader DB] Attempting database connection...
+[2025-04-24T09:34:21.622Z] [Database] Attempting MongoDB connection...
+[2025-04-24T09:34:22.315Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T09:34:22.315Z] [Loader DB] Database connection successful.
+[2025-04-24T09:34:22.315Z] [Loader] Database loaded.
+[2025-04-24T09:34:22.316Z] [History Service] Initialized.
+[2025-04-24T09:34:22.316Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:34:22.317Z] [Loader] Services initialized.
+[2025-04-24T09:34:22.322Z] [Express] Mounted API routes at /api
+[2025-04-24T09:34:22.323Z] [Express] Registered Not Found handler.
+[2025-04-24T09:34:22.323Z] [Express] Registered Global Error handler.
+[2025-04-24T09:34:22.324Z] [Express] Express app configured.
+[2025-04-24T09:34:22.325Z] [Loader] Express loaded.
+[2025-04-24T09:34:22.326Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T09:34:22.330Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T09:34:22.331Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T09:34:22.331Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T09:34:22.331Z] [Loader] Socket.IO loaded.
+[2025-04-24T09:34:22.331Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T09:34:22.332Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T09:34:22.366Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T09:34:22.366Z] [Loader] Jobs scheduled.
+[2025-04-24T09:34:22.367Z] [Loader] Performing initial log analysis...
+[2025-04-24T09:34:22.368Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:34:22.380Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:34:22.382Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:34:22.382Z] [Loader] Initial log analysis completed.
+[2025-04-24T09:34:22.382Z] [Loader] All loaders completed successfully.
+[2025-04-24T09:34:22.386Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T09:34:22.386Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T09:34:22.386Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:34:22.387Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T09:34:26.736Z] [Socket Auth MW] Attempting auth for socket dy38IaXejUX1egmVAAAB. Token provided: false
+[2025-04-24T09:34:26.736Z] [Socket Auth MW] No token provided for socket dy38IaXejUX1egmVAAAB. Treating as anonymous.
+[2025-04-24T09:34:26.739Z] [Socket.IO dy38IaXejUX1egmVAAAB] Client connected. Token present: false
+[2025-04-24T09:34:26.739Z] [Socket.IO dy38IaXejUX1egmVAAAB] Anonymous user connected.
+[2025-04-24T09:34:26.741Z] [Socket dy38IaXejUX1egmVAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T09:34:26.742Z] [Socket dy38IaXejUX1egmVAAAB] Core event handlers registered.
+[2025-04-24T09:34:31.394Z] [HTTP Request] --> POST /crawl-conferences?dataSource=client from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-24T09:34:31.402Z] [Error Handler] [WARN] 404 POST /crawl-conferences?dataSource=client - Not Found - /crawl-conferences?dataSource=client
+Stack: Error: Not Found - /crawl-conferences?dataSource=client
+    at notFoundHandler (D:\NEW-SERVER-TS\src\socket\middleware\errorHandler.middleware.ts:42:30)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:280:10)
+    at requestLoggerMiddleware (D:\NEW-SERVER-TS\src\socket\middleware\logging.middleware.ts:37:5)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+[2025-04-24T09:34:31.408Z] [HTTP Response] <-- POST /crawl-conferences?dataSource=client 404 14ms - WARN
+[2025-04-24T09:35:45.062Z] [HTTP Request] --> POST /crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-24T09:35:45.064Z] [Error Handler] [WARN] 404 POST /crawl-conferences?dataSource=client - Not Found - /crawl-conferences?dataSource=client
+Stack: Error: Not Found - /crawl-conferences?dataSource=client
+    at notFoundHandler (D:\NEW-SERVER-TS\src\socket\middleware\errorHandler.middleware.ts:42:30)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:280:10)
+    at requestLoggerMiddleware (D:\NEW-SERVER-TS\src\socket\middleware\logging.middleware.ts:37:5)
+    at Layer.handle [as handle_request] (D:\NEW-SERVER-TS\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:328:13)
+    at D:\NEW-SERVER-TS\node_modules\express\lib\router\index.js:286:9
+[2025-04-24T09:35:45.066Z] [HTTP Response] <-- POST /crawl-conferences?dataSource=client 404 4ms - WARN
+[2025-04-24T09:44:43.395Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:44:43.397Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:44:43.397Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:44:43.404Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:44:43.404Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:44:46.703Z] [Server Config] Loaded PORT: 3001
+[2025-04-24T09:44:46.704Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-24T09:44:46.704Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-24T09:44:46.705Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:44:46.706Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:44:56.628Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-24T09:44:56.629Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-24T09:44:57.060Z] [Server Start] Initializing loaders...
+[2025-04-24T09:44:57.060Z] [Loader] Starting application loading process...
+[2025-04-24T09:44:57.061Z] [Loader DB] Attempting database connection...
+[2025-04-24T09:44:57.062Z] [Database] Attempting MongoDB connection...
+[2025-04-24T09:44:57.791Z] [Database] MongoDB Connected Successfully.
+[2025-04-24T09:44:57.791Z] [Loader DB] Database connection successful.
+[2025-04-24T09:44:57.792Z] [Loader] Database loaded.
+[2025-04-24T09:44:57.792Z] [History Service] Initialized.
+[2025-04-24T09:44:57.792Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-24T09:44:57.793Z] [Loader] Services initialized.
+[2025-04-24T09:44:57.799Z] [Express] Mounted API routes at /api
+[2025-04-24T09:44:57.799Z] [Express] Registered Not Found handler.
+[2025-04-24T09:44:57.800Z] [Express] Registered Global Error handler.
+[2025-04-24T09:44:57.800Z] [Express] Express app configured.
+[2025-04-24T09:44:57.801Z] [Loader] Express loaded.
+[2025-04-24T09:44:57.802Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-24T09:44:57.807Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-24T09:44:57.807Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-24T09:44:57.807Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-24T09:44:57.807Z] [Loader] Socket.IO loaded.
+[2025-04-24T09:44:57.808Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-24T09:44:57.808Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-24T09:44:57.846Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-24T09:44:57.846Z] [Loader] Jobs scheduled.
+[2025-04-24T09:44:57.846Z] [Loader] Performing initial log analysis...
+[2025-04-24T09:44:57.847Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-24T09:44:57.858Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-24T09:44:57.860Z] [LogAnalysis Service] Analysis completed successfully. Requests: undefined, Errors: 0
+[2025-04-24T09:44:57.860Z] [Loader] Initial log analysis completed.
+[2025-04-24T09:44:57.861Z] [Loader] All loaders completed successfully.
+[2025-04-24T09:44:57.865Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-24T09:44:57.865Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-24T09:44:57.866Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-24T09:44:57.866Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-24T09:44:58.181Z] [Socket Auth MW] Attempting auth for socket wuVQBTB62Ibm_AYjAAAB. Token provided: false
+[2025-04-24T09:44:58.182Z] [Socket Auth MW] No token provided for socket wuVQBTB62Ibm_AYjAAAB. Treating as anonymous.
+[2025-04-24T09:44:58.184Z] [Socket.IO wuVQBTB62Ibm_AYjAAAB] Client connected. Token present: false
+[2025-04-24T09:44:58.184Z] [Socket.IO wuVQBTB62Ibm_AYjAAAB] Anonymous user connected.
+[2025-04-24T09:44:58.186Z] [Socket wuVQBTB62Ibm_AYjAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-24T09:44:58.186Z] [Socket wuVQBTB62Ibm_AYjAAAB] Core event handlers registered.
+[2025-04-24T09:45:06.831Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-24T09:46:01.255Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 54425ms

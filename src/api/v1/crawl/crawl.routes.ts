@@ -1,10 +1,11 @@
+// src/api/v1/crawl/crawl.routes.ts
 import { Router } from 'express';
 import { handleCrawlConferences, handleCrawlJournals } from './crawl.controller';
 
 const router = Router();
 
 // Định nghĩa routes cho crawl
-router.post('/conferences', handleCrawlConferences);
-router.post('/journals', handleCrawlJournals);
+router.post('/crawl-conferences', handleCrawlConferences);
+router.post('/crawl-journals', handleCrawlJournals);
 
 export default router;
