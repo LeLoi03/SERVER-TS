@@ -16,6 +16,7 @@ export const loadExpress = (logAnalysisService: LogAnalysisService): Express => 
     app.use(cors(corsOptions));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use(express.text({ type: ['text/plain', 'text/csv'] })); // Specify types it should handle
     app.use(requestLoggerMiddleware);
 
     // --- Basic Root Route ---

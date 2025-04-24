@@ -1,6 +1,7 @@
 import fs from 'fs';
-import { parse } from 'csv-parse/sync'; // Import thư viện csv-parse/sync
 import path from 'path';
+import { parse, Parser } from 'csv-parse'; // Use specific import if possible
+import { CSVRecord } from './types'; // Assuming CSVRecord type definition
 
 
 import { JournalDetails } from './types'; // Assuming you have this interface defined
@@ -324,47 +325,86 @@ export const retryAsync = async <T>(
 };
 
 
-interface CSVRecord {
-  [key: string]: string;
-}
+/**
+ * Parses CSV content provided as a string.
+ * Handles semicolon delimiters and standard CSV parsing options.
+ * @param csvContent The raw CSV content as a string.
+ * @param parentLogger Optional logger instance to use.
+ * @returns A promise resolving to an array of parsed CSV records (objects).
+ * @throws Error if parsing fails.
+ */
+export const parseCSVString = async (csvContent: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
+    const csvLogger = parentLogger.child({ service: 'parseCSVString' });
+    csvLogger.info({ event: 'parse_start', inputLength: csvContent.length }, `Attempting to parse CSV string content.`);
+    console.log(`[parseCSVString][parse_start] Attempting to parse CSV string content (Length: ${csvContent.length}).`); // CONSOLE ADDED
+
+    return new Promise((resolve, reject) => {
+        const records: CSVRecord[] = [];
+        const parser: Parser = parse(csvContent, {
+            columns: true, // Use the first line as headers
+            skip_empty_lines: true,
+            delimiter: ';', // Specify the semicolon delimiter
+            trim: true,     // Trim whitespace from headers and fields
+            // relax_column_count: true, // Consider if needed based on data quality
+        });
+
+        parser.on('readable', () => {
+            let record;
+            while ((record = parser.read()) !== null) {
+                records.push(record);
+            }
+        });
+
+        parser.on('error', (err) => {
+            csvLogger.error({ err: err, stack: err.stack, event: 'parse_failed' }, `Error parsing CSV string.`);
+            console.error(`[parseCSVString][parse_failed] Error parsing CSV string:`, err.message || err); // CONSOLE ADDED
+            console.error(`[parseCSVString][parse_failed] Stack trace:`, err.stack); // CONSOLE ADDED
+            reject(new Error(`Failed to parse CSV string: ${err.message}`)); // Reject the promise on error
+        });
+
+        parser.on('end', () => {
+            csvLogger.info({ event: 'parse_success', recordCount: records.length }, `Successfully parsed ${records.length} records from CSV string.`);
+            console.log(`[parseCSVString][parse_success] Successfully parsed ${records.length} records from CSV string.`); // CONSOLE ADDED
+            resolve(records); // Resolve the promise with the parsed records
+        });
+
+        // Error handling for the stream itself (though parser 'error' usually catches it)
+        parser.on('error', (streamError) => {
+             if (!parser.destroyed) { // Prevent double rejection if 'error' event already fired
+                 csvLogger.error({ err: streamError, event: 'parse_stream_error' }, `CSV parsing stream error.`);
+                 reject(new Error(`CSV parsing stream error: ${streamError.message}`));
+             }
+        });
+    });
+};
+
 
 /**
- * Reads a CSV file and parses its content.
+ * Reads a CSV file and parses its content using parseCSVString.
  * Handles semicolon delimiters.
  * @param filePath Path to the CSV file.
  * @param parentLogger Optional logger instance to use.
- * @returns An array of parsed CSV records (objects).
+ * @returns A promise resolving to an array of parsed CSV records (objects). Returns empty array on file read error.
  */
 export const readCSV = async (filePath: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
-  const csvLogger = parentLogger.child({ service: 'readCSV', filePath });
-  csvLogger.info({ event: 'read_start' }, `Attempting to read CSV file.`);
-  console.log(`[readCSV][read_start] Attempting to read CSV file: ${filePath}`); // CONSOLE ADDED
+    const fileReadLogger = parentLogger.child({ service: 'readCSV', filePath });
+    fileReadLogger.info({ event: 'read_start' }, `Attempting to read CSV file.`);
+    console.log(`[readCSV][read_start] Attempting to read CSV file: ${filePath}`); // CONSOLE ADDED
 
-  try {
-    const fileContent = await fs.promises.readFile(filePath, { encoding: 'utf8' });
-    csvLogger.debug({ event: 'read_success', fileSize: fileContent.length }, `Successfully read file content.`);
-    console.log(`[readCSV][read_success] Successfully read file content (Size: ${fileContent.length} bytes).`); // CONSOLE ADDED
+    try {
+        const fileContent = await fs.promises.readFile(filePath, { encoding: 'utf8' });
+        fileReadLogger.debug({ event: 'read_success', fileSize: fileContent.length }, `Successfully read file content.`);
+        console.log(`[readCSV][read_success] Successfully read file content (Size: ${fileContent.length} bytes).`); // CONSOLE ADDED
 
-    // Use sync parse for simplicity within async function, or use async parser if preferred
-    const records: CSVRecord[] = parse(fileContent, {
-      columns: true, // Use the first line as headers
-      skip_empty_lines: true,
-      delimiter: ';', // Specify the semicolon delimiter <--- SOLUTION
-      trim: true,     // Trim whitespace from headers and fields
-      // relax_column_count: true, // Might be useful if some rows have different numbers of columns
-    });
+        // Delegate parsing to the dedicated string parsing function
+        return await parseCSVString(fileContent, fileReadLogger); // Pass logger down
 
-    csvLogger.info({ event: 'parse_success', recordCount: records.length }, `Successfully parsed ${records.length} records from CSV.`);
-    console.log(`[readCSV][parse_success] Successfully parsed ${records.length} records from CSV.`); // CONSOLE ADDED
-
-    return records;
-  } catch (error: any) {
-    csvLogger.error({ err: error, stack: error.stack, event: 'read_parse_failed' }, `Error reading or parsing CSV file.`);
-    // Log the error message specifically
-    console.error(`[readCSV][read_parse_failed] Error reading or parsing CSV file ${filePath}:`, error.message || error); // CONSOLE ADDED
-    console.error(`[readCSV][read_parse_failed] Stack trace:`, error.stack); // CONSOLE ADDED
-    return []; // Return empty array on failure
-  }
+    } catch (error: any) {
+        fileReadLogger.error({ err: error, stack: error.stack, event: 'read_failed' }, `Error reading CSV file.`);
+        console.error(`[readCSV][read_failed] Error reading CSV file ${filePath}:`, error.message || error); // CONSOLE ADDED
+        console.error(`[readCSV][read_failed] Stack trace:`, error.stack); // CONSOLE ADDED
+        return []; // Return empty array on file reading failure
+    }
 };
 
 

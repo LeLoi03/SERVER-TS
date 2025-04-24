@@ -137,6 +137,7 @@ import { fetchBioxbioData } from './bioxbio';
 import { createURLList, readCSV, appendJournalToFile } from './utils';
 // Import Types
 import { TableRowData, JournalDetails, CSVRow } from './types';
+import { parseCSVString } from './utils';
 
 // --- Paths ---
 export const INPUT_CSV: string = path.join(__dirname, './csv/import_journal.csv');
@@ -147,12 +148,13 @@ const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl');
 // Hàm Crawl Chính cho Journals
 // ============================================
 export const crawlJournals = async (
-  parentLogger: typeof rootLogger // Use the specific logger type
+  dataSource: 'scimago' | 'client', // Input: Source type
+  clientData: string | null,       // Input: Raw CSV string if dataSource is 'client'
+  parentLogger: typeof rootLogger  // Input: Logger instance
 ): Promise<void> => {
 
-  // Use parentLogger directly or create a child
-  const journalLogger = parentLogger.child({ service: 'crawlJournals' });
-  journalLogger.info({ event: 'init_start', mode: JOURNAL_CRAWL_MODE, outputFile: OUTPUT_JSON }, "Initializing journal crawl...");
+  const journalLogger = parentLogger.child({ service: 'crawlJournals', dataSource });
+  journalLogger.info({ event: 'init_start', outputFile: OUTPUT_JSON }, "Initializing journal crawl...");
 
   // --- Khởi tạo API Key Manager ---
   const apiKeyManager = new ApiKeyManager(
@@ -165,18 +167,19 @@ export const crawlJournals = async (
   let browser: Browser | null = null;
   const operationStartTime = Date.now();
   let processedCount = 0;
-  let failedImageSearchCount = 0;
-  let skippedImageSearchCount = 0;
-  let completedTasks = 0;
-  let totalTasks = 0;
+  let failedImageSearchCount = 0; // Ensure these are updated in performImageSearch
+  let skippedImageSearchCount = 0; // Ensure these are updated in performImageSearch
+  let totalTasks = 0; // Total items to process (URLs or CSV rows)
 
   try {
     // --- Ensure Output Directory Exists and Clear/Initialize Output File ---
+    // (Keep existing logic for output directory/file preparation)
     journalLogger.info({ event: 'prepare_output_start', path: OUTPUT_DIR }, `Ensuring output directory exists: ${OUTPUT_DIR}`);
     try {
       await fs.promises.mkdir(OUTPUT_DIR, { recursive: true });
       journalLogger.info({ event: 'prepare_output_dir_success', path: OUTPUT_DIR }, "Output directory ensured.");
       journalLogger.info({ event: 'prepare_output_file_start', path: OUTPUT_JSON }, `Initializing output file: ${OUTPUT_JSON}`);
+      // Initialize or clear the file
       await fs.promises.writeFile(OUTPUT_JSON, '', 'utf8');
       journalLogger.info({ event: 'prepare_output_file_success', path: OUTPUT_JSON }, "Output file initialized.");
     } catch (outputPrepError: any) {
@@ -303,19 +306,19 @@ export const crawlJournals = async (
 
         // Populate data from CSV row string within the TableRowData
         try {
-            const csvRowArray = row.csvRow.split(',');
-            const headers = JOURNAL_CSV_HEADERS.trim().split(',');
-            headers.forEach((header, index) => {
-              const cleanHeader = header.trim();
-              if (csvRowArray[index] !== undefined) {
-                // Assign directly to journalData using the header as key
-                (journalData as any)[cleanHeader] = csvRowArray[index].trim();
-              }
-            });
-            taskLogger.debug({ event: 'csv_data_parsed', headers: headers.length }, "Parsed CSV data from row string.");
-          } catch (parseError: any) {
-            taskLogger.warn({ err: parseError, event: 'csv_data_parse_failed', rawCsv: row.csvRow }, "Could not parse CSV data from row string.");
-          }
+          const csvRowArray = row.csvRow.split(',');
+          const headers = JOURNAL_CSV_HEADERS.trim().split(',');
+          headers.forEach((header, index) => {
+            const cleanHeader = header.trim();
+            if (csvRowArray[index] !== undefined) {
+              // Assign directly to journalData using the header as key
+              (journalData as any)[cleanHeader] = csvRowArray[index].trim();
+            }
+          });
+          taskLogger.debug({ event: 'csv_data_parsed', headers: headers.length }, "Parsed CSV data from row string.");
+        } catch (parseError: any) {
+          taskLogger.warn({ err: parseError, event: 'csv_data_parse_failed', rawCsv: row.csvRow }, "Could not parse CSV data from row string.");
+        }
 
 
         try {
@@ -341,8 +344,8 @@ export const crawlJournals = async (
               await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
             }
           } else {
-             // Still perform image search even if details aren't fetched, using row data
-             await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
+            // Still perform image search even if details aren't fetched, using row data
+            await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
           }
 
           // ===> Pass logger to appendJournalToFile <===
@@ -414,12 +417,12 @@ export const crawlJournals = async (
             await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
           }
         } else if (!journalLink) {
-           taskLogger.warn({ event: 'details_fetch_skipped', reason: 'No valid Scimago link' });
-           // Still attempt image search even if no details link
-           await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
+          taskLogger.warn({ event: 'details_fetch_skipped', reason: 'No valid Scimago link' });
+          // Still attempt image search even if no details link
+          await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
         } else {
-            // Details not enabled, but link exists. Perform image search using CSV data.
-            await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
+          // Details not enabled, but link exists. Perform image search using CSV data.
+          await performImageSearch(taskLogger, null, row, journalData); // Pass taskLogger
         }
 
         // ===> Pass logger to appendJournalToFile <===
@@ -433,8 +436,8 @@ export const crawlJournals = async (
       }
     };
 
-    // --- Logic chạy chính (MODE scimago hoặc csv) ---
-    if (JOURNAL_CRAWL_MODE === 'scimago') {
+    // --- Main Execution Logic based on dataSource ---
+    if (dataSource === 'scimago') {
       journalLogger.info({ event: 'mode_scimago_start' }, "Starting crawl in Scimago mode.");
       const firstPage = pages[0];
       let lastPageNumber = 1;
@@ -444,73 +447,72 @@ export const crawlJournals = async (
         lastPageNumber = await getLastPageNumber(firstPage, BASE_URL, journalLogger);
         journalLogger.info({ event: 'scimago_last_page_found', lastPage: lastPageNumber }, `Total Scimago pages estimated: ${lastPageNumber}`);
         urls = createURLList(BASE_URL, lastPageNumber);
-        totalTasks = urls.length;
+        totalTasks = urls.length; // Total URLs to process
 
         journalLogger.info({ event: 'scimago_processing_start', urlCount: totalTasks }, `Starting processing ${totalTasks} Scimago URLs.`);
+        // Batch processing loop for Scimago URLs
         for (let i = 0; i < urls.length; i += MAX_TABS) {
           const batchUrls = urls.slice(i, i + MAX_TABS);
           const batchIndex = Math.floor(i / MAX_TABS) + 1;
           journalLogger.info({ event: 'scimago_batch_start', batchIndex, batchSize: batchUrls.length, startIndex: i });
           await Promise.all(
-            batchUrls.map(async (url, idx) => {
-              const pageIndex = idx % pages.length; // Cycle through available pages
-              if (pages[pageIndex]) {
-                await processTabScimago(pages[pageIndex], url, pageIndex);
-                // Update completed tasks inside the map might lead to race conditions if not careful
-                // It's safer to update based on batch completion or just use processedCount
-              } else {
-                journalLogger.warn({ event: 'scimago_batch_skip_page', url, pageIndex }, "Skipping URL, page not available (unexpected).")
-              }
+            batchUrls.map((url, idx) => {
+              const pageIndex = idx % pages.length;
+              return processTabScimago(pages[pageIndex], url, pageIndex); // Return promise
             })
           );
-          // Use processedCount for a more accurate reflection of completed items
           journalLogger.info({ event: 'scimago_batch_finish', batchIndex, urlsInBatch: batchUrls.length, totalProcessed: processedCount });
-          completedTasks = Math.min(i + batchUrls.length, urls.length); // Update progress estimate
         }
       } catch (error: any) {
         journalLogger.error({ err: error, event: 'scimago_processing_error' }, `Failed during Scimago page processing loop.`);
+        // Decide if error is fatal or if processing can continue partially
       }
 
-    } else if (JOURNAL_CRAWL_MODE === 'csv') {
-      journalLogger.info({ event: 'mode_csv_start', inputFile: INPUT_CSV }, "Starting crawl in CSV mode.");
+    } else if (dataSource === 'client') {
+      journalLogger.info({ event: 'mode_client_start' }, "Starting crawl using client-provided data.");
+      if (!clientData) {
+        // This should ideally be caught by the controller, but double-check
+        journalLogger.error({ event: 'client_data_missing' }, "Client data source selected, but no data provided to crawlJournals function.");
+        throw new Error("Client data source selected, but no data provided.");
+      }
       try {
-        // ===> Pass logger to readCSV <===
-        // **ASSUMPTION**: readCSV is updated to accept logger
-        const csvData: CSVRow[] = await readCSV(INPUT_CSV, journalLogger);
-        totalTasks = csvData.length;
-        journalLogger.info({ event: 'csv_read_success', rowCount: totalTasks }, `Total journals to process from CSV: ${totalTasks}`);
+        // Use the new parseCSVString function
+        const csvData: CSVRow[] = await parseCSVString(clientData, journalLogger); // Pass logger
+        totalTasks = csvData.length; // Total rows to process
+        journalLogger.info({ event: 'client_data_parse_success', rowCount: totalTasks }, `Total journals to process from client data: ${totalTasks}`);
 
-        for (let i = 0; i < csvData.length; i += MAX_TABS) {
-          const batchRows = csvData.slice(i, i + MAX_TABS);
-          const batchIndex = Math.floor(i / MAX_TABS) + 1;
-          journalLogger.info({ event: 'csv_batch_start', batchIndex, batchSize: batchRows.length, startIndex: i });
-          await Promise.all(
-            batchRows.map(async (row, idx) => {
-              const pageIndex = idx % pages.length; // Cycle through available pages
-              if (pages[pageIndex]) {
-                await processTabCSV(pages[pageIndex], row, pageIndex, i + idx);
-              } else {
-                journalLogger.warn({ event: 'csv_batch_skip_page', rowIndex: i + idx, pageIndex }, "Skipping CSV row, page not available (unexpected).")
-              }
-            })
-          );
-           // Use processedCount for a more accurate reflection of completed items
-           journalLogger.info({ event: 'csv_batch_finish', batchIndex, rowsInBatch: batchRows.length, totalProcessed: processedCount });
-           completedTasks = Math.min(i + batchRows.length, csvData.length); // Update progress estimate
+        if (totalTasks === 0) {
+          journalLogger.warn({ event: 'client_data_empty' }, "Client data parsed successfully but resulted in zero records.");
+          // No further processing needed
+        } else {
+          // Batch processing loop for CSV rows
+          for (let i = 0; i < csvData.length; i += MAX_TABS) {
+            const batchRows = csvData.slice(i, i + MAX_TABS);
+            const batchIndex = Math.floor(i / MAX_TABS) + 1;
+            journalLogger.info({ event: 'client_batch_start', batchIndex, batchSize: batchRows.length, startIndex: i });
+            await Promise.all(
+              batchRows.map((row, idx) => {
+                const pageIndex = idx % pages.length;
+                // Pass row, page index, and original row index (i + idx)
+                return processTabCSV(pages[pageIndex], row, pageIndex, i + idx); // Return promise
+              })
+            );
+            journalLogger.info({ event: 'client_batch_finish', batchIndex, rowsInBatch: batchRows.length, totalProcessed: processedCount });
+          }
         }
       } catch (error: any) {
-        journalLogger.error({ err: error, event: 'csv_processing_error' }, `Failed to read or process CSV file ${INPUT_CSV}`);
+        // Error could be from parseCSVString or during the processing loop
+        journalLogger.error({ err: error, event: 'client_data_processing_error' }, `Failed to parse or process client-provided data`);
+        throw error; // Re-throw to be caught by the main try/catch and handled by the controller
       }
-    } else {
-      journalLogger.error({ event: 'invalid_mode', mode: JOURNAL_CRAWL_MODE }, `Invalid JOURNAL_CRAWL_MODE.`);
-      // Cleanup is handled in finally block
     }
+    // Removed the 'else' block for invalid mode as dataSource is now strictly 'scimago' or 'client'
 
-    journalLogger.info({ event: 'crawl_loops_completed' }, "Finished processing all tasks.");
+    journalLogger.info({ event: 'crawl_loops_completed' }, "Finished processing all designated tasks.");
 
   } catch (error: any) {
     journalLogger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error' }, "Fatal error during journal crawling process");
-    throw error; // Re-throw for upstream handling
+    throw error; // Re-throw for upstream handling (controller)
   } finally {
     journalLogger.info({ event: 'cleanup_start' }, "Performing final cleanup...");
     if (browser) {
@@ -525,9 +527,9 @@ export const crawlJournals = async (
 
     journalLogger.info({
       event: 'crawl_summary',
-      mode: JOURNAL_CRAWL_MODE,
-      totalTasksDefined: totalTasks, // Total tasks identified at start
-      journalsProcessedAndSaved: processedCount, // Actual items successfully saved
+      dataSource: dataSource, // Log the actual data source used
+      totalTasksDefined: totalTasks,
+      journalsProcessedAndSaved: processedCount,
       imageSearchesFailed: failedImageSearchCount,
       imageSearchesSkipped: skippedImageSearchCount,
       totalGoogleApiRequests: apiKeyManager.getTotalRequests(),
