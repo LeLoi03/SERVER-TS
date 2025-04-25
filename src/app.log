@@ -981,3 +981,194 @@ Stack: Error: Not Found - /api/v1/conference/save-to-json
 [2025-04-25T20:14:11.326Z] [Socket.IO zdISOFF9xtgUmnCVAAAB] Anonymous user connected.
 [2025-04-25T20:14:11.326Z] [Socket zdISOFF9xtgUmnCVAAAB] Registering core event handlers. UserID: Anonymous
 [2025-04-25T20:14:11.326Z] [Socket zdISOFF9xtgUmnCVAAAB] Core event handlers registered.
+[2025-04-25T20:18:16.646Z] [Server Config] Loaded PORT: 3001
+[2025-04-25T20:18:16.647Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-25T20:18:16.647Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-25T20:18:16.647Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:18:16.647Z] [Server Config] Loaded LOG_FILE_PATH: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:18:17.944Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-25T20:18:17.945Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-25T20:18:18.014Z] [Server Start] Initializing loaders...
+[2025-04-25T20:18:18.014Z] [Loader] Starting application loading process...
+[2025-04-25T20:18:18.014Z] [Loader DB] Attempting database connection...
+[2025-04-25T20:18:18.014Z] [Database] Attempting MongoDB connection...
+[2025-04-25T20:18:18.538Z] [Database] MongoDB Connected Successfully.
+[2025-04-25T20:18:18.538Z] [Loader DB] Database connection successful.
+[2025-04-25T20:18:18.539Z] [Loader] Database loaded.
+[2025-04-25T20:18:18.539Z] [History Service] Initialized.
+[2025-04-25T20:18:18.539Z] [LogAnalysis Service] Initialized. Log file path: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:18:18.539Z] [Loader] Services initialized.
+[2025-04-25T20:18:18.540Z] [Express] Mounted API routes at /api
+[2025-04-25T20:18:18.540Z] [Express] Registered Not Found handler.
+[2025-04-25T20:18:18.540Z] [Express] Registered Global Error handler.
+[2025-04-25T20:18:18.540Z] [Express] Express app configured.
+[2025-04-25T20:18:18.540Z] [Loader] Express loaded.
+[2025-04-25T20:18:18.540Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-25T20:18:18.541Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-25T20:18:18.541Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-25T20:18:18.541Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-25T20:18:18.541Z] [Loader] Socket.IO loaded.
+[2025-04-25T20:18:18.541Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-25T20:18:18.541Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-25T20:18:18.551Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-25T20:18:18.551Z] [Loader] Jobs scheduled.
+[2025-04-25T20:18:18.551Z] [Loader] Performing initial log analysis...
+[2025-04-25T20:18:18.551Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-25T20:18:18.570Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-25T20:18:18.570Z] [Loader] Initial log analysis completed.
+[2025-04-25T20:18:18.570Z] [Loader] All loaders completed successfully.
+[2025-04-25T20:18:18.570Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-25T20:18:18.570Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-25T20:18:18.570Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:18:18.570Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-25T20:18:19.329Z] [Socket Auth MW] Attempting auth for socket -y4vU3emmCcvPO5RAAAB. Token provided: false
+[2025-04-25T20:18:19.329Z] [Socket Auth MW] No token provided for socket -y4vU3emmCcvPO5RAAAB. Treating as anonymous.
+[2025-04-25T20:18:19.329Z] [Socket.IO -y4vU3emmCcvPO5RAAAB] Client connected. Token present: false
+[2025-04-25T20:18:19.329Z] [Socket.IO -y4vU3emmCcvPO5RAAAB] Anonymous user connected.
+[2025-04-25T20:18:19.330Z] [Socket -y4vU3emmCcvPO5RAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-25T20:18:19.330Z] [Socket -y4vU3emmCcvPO5RAAAB] Core event handlers registered.
+[2025-04-25T20:18:26.983Z] [HTTP Request] --> POST /api/v1/save-conference from ::1 (User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36)
+[2025-04-25T20:19:36.013Z] [Server Config] Loaded PORT: 3001
+[2025-04-25T20:19:36.014Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-25T20:19:36.014Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-25T20:19:36.014Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:19:36.014Z] [Server Config] Loaded LOG_FILE_PATH: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:19:37.371Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-25T20:19:37.371Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-25T20:19:37.436Z] [Server Start] Initializing loaders...
+[2025-04-25T20:19:37.436Z] [Loader] Starting application loading process...
+[2025-04-25T20:19:37.436Z] [Loader DB] Attempting database connection...
+[2025-04-25T20:19:37.436Z] [Database] Attempting MongoDB connection...
+[2025-04-25T20:19:38.046Z] [Database] MongoDB Connected Successfully.
+[2025-04-25T20:19:38.046Z] [Loader DB] Database connection successful.
+[2025-04-25T20:19:38.046Z] [Loader] Database loaded.
+[2025-04-25T20:19:38.047Z] [History Service] Initialized.
+[2025-04-25T20:19:38.047Z] [LogAnalysis Service] Initialized. Log file path: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:19:38.047Z] [Loader] Services initialized.
+[2025-04-25T20:19:38.047Z] [Express] Mounted API routes at /api
+[2025-04-25T20:19:38.048Z] [Express] Registered Not Found handler.
+[2025-04-25T20:19:38.048Z] [Express] Registered Global Error handler.
+[2025-04-25T20:19:38.048Z] [Express] Express app configured.
+[2025-04-25T20:19:38.048Z] [Loader] Express loaded.
+[2025-04-25T20:19:38.048Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-25T20:19:38.048Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-25T20:19:38.048Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-25T20:19:38.048Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-25T20:19:38.048Z] [Loader] Socket.IO loaded.
+[2025-04-25T20:19:38.048Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-25T20:19:38.048Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-25T20:19:38.059Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-25T20:19:38.059Z] [Loader] Jobs scheduled.
+[2025-04-25T20:19:38.059Z] [Loader] Performing initial log analysis...
+[2025-04-25T20:19:38.059Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-25T20:19:38.077Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-25T20:19:38.077Z] [Loader] Initial log analysis completed.
+[2025-04-25T20:19:38.077Z] [Loader] All loaders completed successfully.
+[2025-04-25T20:19:38.077Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-25T20:19:38.078Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-25T20:19:38.078Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:19:38.078Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-25T20:19:38.832Z] [Socket Auth MW] Attempting auth for socket zEKdvp2NX5QCE5r-AAAB. Token provided: false
+[2025-04-25T20:19:38.832Z] [Socket Auth MW] No token provided for socket zEKdvp2NX5QCE5r-AAAB. Treating as anonymous.
+[2025-04-25T20:19:38.832Z] [Socket.IO zEKdvp2NX5QCE5r-AAAB] Client connected. Token present: false
+[2025-04-25T20:19:38.832Z] [Socket.IO zEKdvp2NX5QCE5r-AAAB] Anonymous user connected.
+[2025-04-25T20:19:38.833Z] [Socket zEKdvp2NX5QCE5r-AAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-25T20:19:38.833Z] [Socket zEKdvp2NX5QCE5r-AAAB] Core event handlers registered.
+[2025-04-25T20:19:40.137Z] [HTTP Request] --> POST /api/v1/save-conference from ::1 (User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36)
+[2025-04-25T20:21:16.856Z] [Server Config] Loaded PORT: 3001
+[2025-04-25T20:21:16.857Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-25T20:21:16.857Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-25T20:21:16.857Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:21:16.857Z] [Server Config] Loaded LOG_FILE_PATH: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:21:17.897Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-25T20:21:17.898Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-25T20:21:17.962Z] [Server Start] Initializing loaders...
+[2025-04-25T20:21:17.963Z] [Loader] Starting application loading process...
+[2025-04-25T20:21:17.963Z] [Loader DB] Attempting database connection...
+[2025-04-25T20:21:17.963Z] [Database] Attempting MongoDB connection...
+[2025-04-25T20:21:18.460Z] [Database] MongoDB Connected Successfully.
+[2025-04-25T20:21:18.460Z] [Loader DB] Database connection successful.
+[2025-04-25T20:21:18.460Z] [Loader] Database loaded.
+[2025-04-25T20:21:18.460Z] [History Service] Initialized.
+[2025-04-25T20:21:18.460Z] [LogAnalysis Service] Initialized. Log file path: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:21:18.460Z] [Loader] Services initialized.
+[2025-04-25T20:21:18.461Z] [Express] Mounted API routes at /api
+[2025-04-25T20:21:18.461Z] [Express] Registered Not Found handler.
+[2025-04-25T20:21:18.461Z] [Express] Registered Global Error handler.
+[2025-04-25T20:21:18.461Z] [Express] Express app configured.
+[2025-04-25T20:21:18.462Z] [Loader] Express loaded.
+[2025-04-25T20:21:18.462Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-25T20:21:18.462Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-25T20:21:18.462Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-25T20:21:18.462Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-25T20:21:18.462Z] [Loader] Socket.IO loaded.
+[2025-04-25T20:21:18.462Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-25T20:21:18.462Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-25T20:21:18.473Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-25T20:21:18.473Z] [Loader] Jobs scheduled.
+[2025-04-25T20:21:18.473Z] [Loader] Performing initial log analysis...
+[2025-04-25T20:21:18.473Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-25T20:21:18.491Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-25T20:21:18.491Z] [Loader] Initial log analysis completed.
+[2025-04-25T20:21:18.491Z] [Loader] All loaders completed successfully.
+[2025-04-25T20:21:18.491Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-25T20:21:18.491Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-25T20:21:18.491Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:21:18.491Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-25T20:21:19.293Z] [Socket Auth MW] Attempting auth for socket Mgtc4PIN6an6MA2rAAAB. Token provided: false
+[2025-04-25T20:21:19.293Z] [Socket Auth MW] No token provided for socket Mgtc4PIN6an6MA2rAAAB. Treating as anonymous.
+[2025-04-25T20:21:19.294Z] [Socket.IO Mgtc4PIN6an6MA2rAAAB] Client connected. Token present: false
+[2025-04-25T20:21:19.294Z] [Socket.IO Mgtc4PIN6an6MA2rAAAB] Anonymous user connected.
+[2025-04-25T20:21:19.294Z] [Socket Mgtc4PIN6an6MA2rAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-25T20:21:19.294Z] [Socket Mgtc4PIN6an6MA2rAAAB] Core event handlers registered.
+[2025-04-25T20:21:21.605Z] [HTTP Request] --> POST /api/v1/save-conference from ::1 (User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36)
+[2025-04-25T20:21:21.664Z] [HTTP Response] <-- POST /api/v1/save-conference 200 59ms
+[2025-04-25T20:22:38.737Z] [Server Shutdown] Received SIGTERM. Starting graceful shutdown...
+[2025-04-25T20:22:39.084Z] [Server Config] Loaded PORT: 3001
+[2025-04-25T20:22:39.084Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-25T20:22:39.084Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-25T20:22:39.084Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:22:39.084Z] [Server Config] Loaded LOG_FILE_PATH: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:22:40.244Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-25T20:22:40.244Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-25T20:22:40.314Z] [Server Start] Initializing loaders...
+[2025-04-25T20:22:40.314Z] [Loader] Starting application loading process...
+[2025-04-25T20:22:40.314Z] [Loader DB] Attempting database connection...
+[2025-04-25T20:22:40.314Z] [Database] Attempting MongoDB connection...
+[2025-04-25T20:22:40.882Z] [Database] MongoDB Connected Successfully.
+[2025-04-25T20:22:40.882Z] [Loader DB] Database connection successful.
+[2025-04-25T20:22:40.883Z] [Loader] Database loaded.
+[2025-04-25T20:22:40.883Z] [History Service] Initialized.
+[2025-04-25T20:22:40.883Z] [LogAnalysis Service] Initialized. Log file path: /Users/sieunguyen/Desktop/sieu-works/confhub-2/all the sources of conhuf/SERVER-TS/logs/app.log
+[2025-04-25T20:22:40.883Z] [Loader] Services initialized.
+[2025-04-25T20:22:40.884Z] [Express] Mounted API routes at /api
+[2025-04-25T20:22:40.884Z] [Express] Registered Not Found handler.
+[2025-04-25T20:22:40.884Z] [Express] Registered Global Error handler.
+[2025-04-25T20:22:40.884Z] [Express] Express app configured.
+[2025-04-25T20:22:40.885Z] [Loader] Express loaded.
+[2025-04-25T20:22:40.885Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-25T20:22:40.885Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-25T20:22:40.885Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-25T20:22:40.885Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-25T20:22:40.885Z] [Loader] Socket.IO loaded.
+[2025-04-25T20:22:40.885Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-25T20:22:40.885Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-25T20:22:40.896Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-25T20:22:40.897Z] [Loader] Jobs scheduled.
+[2025-04-25T20:22:40.897Z] [Loader] Performing initial log analysis...
+[2025-04-25T20:22:40.897Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-25T20:22:40.916Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-25T20:22:40.916Z] [Loader] Initial log analysis completed.
+[2025-04-25T20:22:40.916Z] [Loader] All loaders completed successfully.
+[2025-04-25T20:22:40.916Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-25T20:22:40.916Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-25T20:22:40.916Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-25T20:22:40.916Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-25T20:22:42.357Z] [Socket Auth MW] Attempting auth for socket _nRM55kyfqJHXoSBAAAB. Token provided: false
+[2025-04-25T20:22:42.357Z] [Socket Auth MW] No token provided for socket _nRM55kyfqJHXoSBAAAB. Treating as anonymous.
+[2025-04-25T20:22:42.358Z] [Socket.IO _nRM55kyfqJHXoSBAAAB] Client connected. Token present: false
+[2025-04-25T20:22:42.358Z] [Socket.IO _nRM55kyfqJHXoSBAAAB] Anonymous user connected.
+[2025-04-25T20:22:42.358Z] [Socket _nRM55kyfqJHXoSBAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-25T20:22:42.358Z] [Socket _nRM55kyfqJHXoSBAAAB] Core event handlers registered.
+[2025-04-25T20:22:52.039Z] [HTTP Request] --> POST /api/v1/save-conference from ::1 (User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36)
+[2025-04-25T20:22:52.722Z] [HTTP Response] <-- POST /api/v1/save-conference 200 683ms

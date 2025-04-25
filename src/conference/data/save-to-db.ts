@@ -2,12 +2,12 @@ import axios, { toFormData } from "axios";
 import { createReadStream } from "fs";
 
 export async function saveToDatabase(): Promise<void> {
-    const file = createReadStream(__dirname + "./evaluate.csv");
+    const file = createReadStream(__dirname + "/evaluate.csv");
     const body  = toFormData({
         file : file
     })
 
-    const url = "http://localhost:3000/api/v1/admin-conference/import-evaluate";
+    const url = process.env.DATABASE_URL+"/admin-conference/import-evaluate";
 
     const data = await axios.post(url, body ,
         {
