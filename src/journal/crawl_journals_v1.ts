@@ -147,7 +147,7 @@ const OUTPUT_JSON = path.join(OUTPUT_DIR, 'journal_data.jsonl');
 // ============================================
 // Hàm Crawl Chính cho Journals
 // ============================================
-export const crawlJournals = async (
+export const crawlJournals_v1 = async (
   dataSource: 'scimago' | 'client', // Input: Source type
   clientData: string | null,       // Input: Raw CSV string if dataSource is 'client'
   parentLogger: typeof rootLogger  // Input: Logger instance

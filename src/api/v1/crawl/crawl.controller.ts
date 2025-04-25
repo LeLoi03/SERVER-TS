@@ -7,7 +7,7 @@ import fs from 'fs';
 import { logger } from '../../../conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from '../../../conference/3_core_portal_scraping';
 import { crawlConferences } from '../../../conference/crawl_conferences';
-import { crawlJournals } from '../../../journal/crawl_journals';
+import { crawlJournals } from '../../../journal/crawl_journals_v1';
 import { ConferenceData } from '../../../conference/types';
 import { ProcessedResponseData } from '../../../conference/types';
 

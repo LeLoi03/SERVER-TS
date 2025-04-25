@@ -326,8 +326,74 @@ export const retryAsync = async <T>(
 
 
 /**
+ * Pre-processes a CSV string to correctly escape double quotes within quoted fields.
+ * Assumes semicolon delimiter and standard quoting rules, but fixes cases
+ * where inner quotes are not properly doubled (e.g., "a"b" -> "a""b""").
+ * Also refines the logic for detecting the start of a quoted field.
+ *
+ * @param {string} csvString The raw CSV string.
+ * @param {string} delimiter The delimiter character (default: ';').
+ * @returns {string} The processed CSV string with inner quotes properly escaped.
+ */
+const escapeQuotesInQuotedFields = (csvString: string, delimiter = ';') => {
+    let result = '';
+    let inQuotes = false;
+    const len = csvString.length;
+
+    for (let i = 0; i < len; i++) {
+        const char = csvString[i];
+        const nextChar = i < len - 1 ? csvString[i + 1] : null;
+        const prevChar = i > 0 ? csvString[i - 1] : null; // Get previous character from original string
+
+        if (!inQuotes) {
+            // --- Outside of a quoted field ---
+            result += char;
+            // Check if this character starts a quoted field
+            if (char === '"') {
+                // A quote starts a field if it's at the beginning of the string OR follows a delimiter or newline
+                if (i === 0 || prevChar === delimiter || prevChar === '\n' || prevChar === '\r') {
+                    inQuotes = true;
+                }
+                // Else: It's a quote within an unquoted field, treat it literally (already added to result)
+            }
+        } else {
+            // --- Inside a quoted field ---
+            if (char === '"') {
+                if (nextChar === '"') {
+                    // This is a correctly escaped quote ("")
+                    result += '""';
+                    i++; // Skip the next quote as we've already processed it
+                } else if (nextChar === delimiter || nextChar === '\n' || nextChar === '\r' || nextChar === null || i === len - 1) {
+                    // This is the closing quote of the field
+                    result += '"';
+                    inQuotes = false;
+                } else {
+                    // This is an unescaped quote *inside* the field. Escape it.
+                    result += '""'; // Add the escaped version
+                }
+            } else {
+                // Any other character inside the quotes
+                result += char;
+            }
+        }
+    }
+
+    // Optional: Check for unterminated quotes
+    if (inQuotes) {
+        logger.warn("[escapeQuotesInQuotedFields] Warning: CSV string potentially ended with an unterminated quoted field.");
+        // Consider adding a closing quote if recovery is desired, though this might hide data issues.
+        // result += '"';
+    }
+
+    return result;
+};
+
+
+
+/**
  * Parses CSV content provided as a string.
  * Handles semicolon delimiters and standard CSV parsing options.
+ * Includes pre-processing to fix unescaped double quotes within quoted fields.
  * @param csvContent The raw CSV content as a string.
  * @param parentLogger Optional logger instance to use.
  * @returns A promise resolving to an array of parsed CSV records (objects).
@@ -336,16 +402,38 @@ export const retryAsync = async <T>(
 export const parseCSVString = async (csvContent: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
     const csvLogger = parentLogger.child({ service: 'parseCSVString' });
     csvLogger.info({ event: 'parse_start', inputLength: csvContent.length }, `Attempting to parse CSV string content.`);
-    console.log(`[parseCSVString][parse_start] Attempting to parse CSV string content (Length: ${csvContent.length}).`); // CONSOLE ADDED
+    console.log(`[parseCSVString][parse_start] Attempting to parse CSV string content (Length: ${csvContent.length}).`);
+
+    // --- BEGIN PRE-PROCESSING ---
+    let processedCsvContent: string;
+    try {
+        csvLogger.info({ event: 'preprocess_start' }, `Starting pre-processing to escape inner quotes.`);
+        console.log(`[parseCSVString][preprocess_start] Starting pre-processing to escape inner quotes.`); // CONSOLE ADDED
+        processedCsvContent = escapeQuotesInQuotedFields(csvContent, ';');
+        csvLogger.info({ event: 'preprocess_success', outputLength: processedCsvContent.length }, `Finished pre-processing.`);
+        console.log(`[parseCSVString][preprocess_success] Finished pre-processing (New Length: ${processedCsvContent.length}).`); // CONSOLE ADDED
+        // Optional: Log diff if significant changes occurred (for debugging)
+        // if (processedCsvContent !== csvContent) {
+        //     csvLogger.debug({ event: 'preprocess_diff' }, `CSV content modified by pre-processing.`);
+        // }
+    } catch (preProcessError: any) {
+        csvLogger.error({ err: preProcessError, stack: preProcessError?.stack, event: 'preprocess_failed' }, `Error during CSV pre-processing.`);
+        console.error(`[parseCSVString][preprocess_failed] Error during CSV pre-processing:`, preProcessError.message || preProcessError); // CONSOLE ADDED
+        return Promise.reject(new Error(`Failed during CSV pre-processing: ${preProcessError.message}`));
+    }
+    // --- END PRE-PROCESSING ---
 
     return new Promise((resolve, reject) => {
         const records: CSVRecord[] = [];
-        const parser: Parser = parse(csvContent, {
+        // Use the processed content here
+        const parser: Parser = parse(processedCsvContent, {
             columns: true, // Use the first line as headers
             skip_empty_lines: true,
             delimiter: ';', // Specify the semicolon delimiter
             trim: true,     // Trim whitespace from headers and fields
             // relax_column_count: true, // Consider if needed based on data quality
+            // relax_quotes: false, // Keep this false or default. We want strict quotes *after* our pre-processing.
+            // escape: '"', // Default is already '"'
         });
 
         parser.on('readable', () => {
@@ -356,10 +444,11 @@ export const parseCSVString = async (csvContent: string, parentLogger: typeof lo
         });
 
         parser.on('error', (err) => {
-            csvLogger.error({ err: err, stack: err.stack, event: 'parse_failed' }, `Error parsing CSV string.`);
-            console.error(`[parseCSVString][parse_failed] Error parsing CSV string:`, err.message || err); // CONSOLE ADDED
+            csvLogger.error({ err: err, stack: err.stack, event: 'parse_failed' }, `Error parsing pre-processed CSV string.`);
+            console.error(`[parseCSVString][parse_failed] Error parsing pre-processed CSV string:`, err.message || err); // CONSOLE ADDED
             console.error(`[parseCSVString][parse_failed] Stack trace:`, err.stack); // CONSOLE ADDED
-            reject(new Error(`Failed to parse CSV string: ${err.message}`)); // Reject the promise on error
+            // Provide context about pre-processing
+            reject(new Error(`Failed to parse CSV string (after pre-processing): ${err.message}`));
         });
 
         parser.on('end', () => {
@@ -368,16 +457,15 @@ export const parseCSVString = async (csvContent: string, parentLogger: typeof lo
             resolve(records); // Resolve the promise with the parsed records
         });
 
-        // Error handling for the stream itself (though parser 'error' usually catches it)
+        // Error handling for the stream itself
         parser.on('error', (streamError) => {
-             if (!parser.destroyed) { // Prevent double rejection if 'error' event already fired
+             if (!parser.destroyed) {
                  csvLogger.error({ err: streamError, event: 'parse_stream_error' }, `CSV parsing stream error.`);
                  reject(new Error(`CSV parsing stream error: ${streamError.message}`));
              }
         });
     });
 };
-
 
 /**
  * Reads a CSV file and parses its content using parseCSVString.
