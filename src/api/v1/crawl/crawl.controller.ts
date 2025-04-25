@@ -7,9 +7,10 @@ import fs from 'fs';
 import { logger } from '../../../conference/11_utils';
 import { getConferenceList as getConferenceListFromCrawl } from '../../../conference/3_core_portal_scraping';
 import { crawlConferences } from '../../../conference/crawl_conferences';
-import { crawlJournals } from '../../../journal/crawl_journals_v1';
+import { crawlJournals_v1 } from '../../../journal/crawl_journals_v1';
 import { ConferenceData } from '../../../conference/types';
 import { ProcessedResponseData } from '../../../conference/types';
+import { saveToDatabase } from '../../../conference/data/save-to-db';
 
 
 const FINAL_OUTPUT_PATH = path.join(__dirname, './data/final_output.jsonl');
@@ -25,7 +26,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
 
     const startTime = Date.now();
-    const dataSource = (req.query.dataSource as string) || 'api'; // Mặc định là 'api'
+    const dataSource = (req.query.dataSource as string) || 'client'; // Mặc định là 'api'
 
     try {
         let conferenceList: ConferenceData[];
@@ -34,6 +35,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
 
         // --- Lấy danh sách conference (Logic này giữ nguyên) ---
         if (dataSource === 'client') {
+            console.log("Call client")
             conferenceList = req.body;
             if (!Array.isArray(conferenceList)) { // Chỉ cần kiểm tra là mảng
                 routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
@@ -216,7 +218,7 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
         routeLogger.info({ dataSource }, "Calling crawlJournals core function...");
 
         // Pass dataSource, clientData (if applicable), apiKeyManager, and logger
-        await crawlJournals(dataSource, clientData, routeLogger);
+        await crawlJournals_v1(dataSource, clientData, routeLogger);
 
         routeLogger.info("Journal crawling process initiated by crawlJournals completed its synchronous part (actual crawling might be async internally).");
 
@@ -266,4 +268,8 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
             routeLogger.error("Headers already sent, could not send error response.");
         }
     }
+}
+
+export async function handleSaveConference() {
+    saveToDatabase();
 }

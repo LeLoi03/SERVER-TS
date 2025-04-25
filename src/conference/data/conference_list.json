@@ -1,22 +1,10 @@
 [
   {
-    "Title": "Symposium of Asian Association for Algorithms and Computation",
-    "Acronym": "AAAC"
+    "Title": "ACM Symposium on Access Control Models and Technologies",
+    "Acronym": "SACMAT"
   },
   {
-    "Title": "National Conference of the American Association for Artificial Intelligence",
-    "Acronym": "AAAI"
-  },
-  {
-    "Title": "Conference on Algorithmic Aspects in Information and Management",
-    "Acronym": "AAIM"
-  },
-  {
-    "Title": "International Joint Conference on Autonomous Agents and Multiagent Systems",
-    "Acronym": "AAMAS"
-  },
-  {
-    "Title": "International Conference Abstract State Machines, Alloy, B, TLA, VDM, and Z",
-    "Acronym": "ABZ"
+    "Title": "Knowledge Domain Visualisation",
+    "Acronym": "KDViz"
   }
 ]
