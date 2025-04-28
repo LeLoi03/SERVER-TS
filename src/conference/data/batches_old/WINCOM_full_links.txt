@@ -1,0 +1,333 @@
+Conference full name: International Conference on Wireless Networks and Mobile Communications (WINCOM)
+
+1. Website of WINCOM_3: http://wincom-conf.org/WINCOM_2025/
+Website information of WINCOM_3:
+
+The 12thInternational 
+ Conference on Wireless Networks and Mobile Communications 
+ 25-27 November 2025 //Arab Open University, Riyadh, Saudi Arabia 
+ “Global smart connectivity" 
+ Technically Co-Sponsored by the IEEE Communications Society 
+ IEEE Conference Record Number #65874 
+ Home 
+ Committees 
+ href="?page=submission" - Submission 
+ href="?page=cfp" - CFP 
+ Demo-Hackathon 
+ Keynotes 
+ Special Session 
+ Registration 
+ Venue 
+ Contact 
+ SCOPE: 
+ The 12 th International Conference on Wireless Networks and Mobile Communications (WINCOM 2025) is scheduled to be hosted in the city of Riyadh, Saudi Arabia, at the Arab Open University from November 25-27, 2025. This conference stands as a premier platform for the exchange of innovative ideas in-depth discussions on solutions, and the sharing of invaluable experiences among esteemed researchers and professionals hailing from both academia and industry, all deeply invested in the realms of wireless networks and mobile communications. WINCOM, as the flagship conference of the MobiTic Association will be thematically anchored in "Global smart connectivity" for its upcoming edition. The scholarly contributions presented at WINCOM 2025 will undergo rigorous scrutiny for submission to IEEExplore, with the aim of securing indexation within the esteemed digital library. Furthermore, these submissions will be presented to renowned indexing services such as SCOPUS, ISI, DBLP, and other leading platforms. Papers demonstrating outstanding merit may be singled out for recommendation towards inclusion in a special issue of select international journals. Ongoing discussions are actively pursued with various international journals for the prospective publication of the selected papers. 
+ Demo-Hackathon: 
+ WINCOM 2025 will consider this year proposals for demonstrations of research prototypes and novel applications. The conference will provide forum for PhD students and early career researchers to showcase their prototypes. We will also encourage submission of ideas for running hackathons collocated with event. Best demo and hackathon winner will also be presented in the WINCOM'2025 in closing ceremony. 
+ Organizers and Sponsors 
+ Technical Sponsors 
+ News- 2025 12th International Conference on Wireless Networks and Mobile Communications (WINCOM) is now approved under #65874.href=" https://conferences.ieee.org/conferences_events/conferences/conferencedetails/65874 " - IEEE Conference Search/Call for Papers.
+- Proceedings of 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM) has been posted to the Scopus, DBLP, and IEEE Xplore digital libraries.href=" https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&contentType=conferences&queryText=WINCOM%202024 " - Proceedings is available on IEEE Xplore Data Base
+Important Dates 
+ Paper Submissions | 01 June 2025 
+ Notification | 05 August 2025 
+ Camera Ready & Registration | 15 September 2025 
+ Demo and Hackathon (Submission) | 15 September 2025 
+ Call for Special Sessions and workshops (Send your proposal to Pr. Meriyem Chergui- chergui.meriyem@gmail.com ): | 15 March 2025 
+ Previous Editions 
+ href="http://wincom-conf.org/WINCOM_2024/" - WINCOM '24 | 23-25 July 2024 // University of Leeds, England 
+ href="http://wincom-conf.org/WINCOM_2023/" - WINCOM '23 | October 26-28, 2023 // Istanbul, Turkey 
+ href="http://wincom-conf.org/WINCOM_2022/" - WINCOM '22 | October 26-28, 2022 // Rabat, Morocco 
+ href="http://wincom-conf.org/WINCOM_2020/" - WINCOM '20 | October 27-29, 2020 // Reims, France 
+ href="http://wincom-conf.org/WINCOM_2019/" - WINCOM '19 | October 29 – November 01, 2019 // Fez, Morocco 
+ href="http://wincom-conf.org/WINCOM_2018/" - WINCOM '18 | October 16-19, 2018 // Marrakesh, Morocco 
+ href="http://wincom-conf.org/WINCOM_2017/" - WINCOM '17 | November 01-04, 2017 // Rabat, Morocco 
+ href="http://wincom-conf.org/WINCOM_2016/" - WINCOM '16 | October 26-29, 2016 // Fez, Morocco 
+ href="http://wincom-conf.org/WINCOM_2015/" - WINCOM '15 | October 20-23, 2015 // Marrakesh, Morocco 
+ href="http://www.fsr.ac.ma/wincom2014/" - WINCOM '14 | December 18, 2014 // Rabat, Morocco 
+ href="http://www.fsdmfes.ac.ma/WINCOM/" - WINCOM '13 | December 25, 2013 // Fez, Morocco 
+ WINCOM Conference © 2025
+
+2. Website of WINCOM_3: https://eprints.whiterose.ac.uk/id/eprint/212945/
+Website information of WINCOM_3:
+
+Toggle navigationhref="/" - White Rose Research Online
+Home 
+ Search 
+ Browse 
+ Contact 
+ Hyperledger Fabric Platform for Secure and Efficient Data Sharing in Autonomous Vehicles 
+ Alhabib, ReemandYadav, Poonamorcid.org/0000-0003-0169-0704(2024)Hyperledger Fabric Platform for Secure and Efficient Data Sharing in Autonomous Vehicles.In:Zaidi, Syed Ali Raza,Ibrahimi, Khalil,El Kamili, Mohamed,Kobbane, AbdellatifandAslam, Nauman, (eds.) Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024.11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024, 23-25 Jul 2024 Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024 . IEEE Communications Society , GBRAbstract 
+ Advancements in wireless communication, encompassing cellular and non-terrestrial networks, are empowering Autonomous Vehicles (AVs) to revolutionize transportation. The achievement of real-time data exchange and seamless communication with infrastructure promises a future of safer and more efficient travel. However, the significant challenge of efficiently managing the extensive data generated by AVs persists. This data includes sensor readings, information about the surrounding environment, and potentially user data. Consequently, addressing concerns related to data processing, sharing among various stakeholders, privacy, integrity, and security is of utmost importance. This paper tackles the data sharing challenge by proposing and evaluating a platform built on Hyperledger Fabric, a blockchain technology. This platform aims to facilitate secure and efficient data sharing between all parties involved with AVs. Our initial testing reveals that the number of simulated users (virtual user count) and the amount of data processed (data load) can negatively impact the system’s performance. This highlights the need for further optimization to ensure the platform can handle large-scale data sharing effectively. 
+ Metadata 
+  
+ Item Type: | Proceedings Paper 
+ Authors/Creators: | Alhabib, Reem 
+ Yadav, Poonam | https://orcid.org/0000-0003-0169-0704 
+ Editors: | Zaidi, Syed Ali Raza 
+ Ibrahimi, Khalil 
+ El Kamili, Mohamed 
+ Kobbane, Abdellatif 
+ Aslam, Nauman 
+ Copyright, Publisher and Additional Information: | Publisher Copyright: © 2024 IEEE. 
+ Keywords: | Autonomous Vehicle,Blockchain,Data sharing,Hyperledger,Privacy,Security 
+ Dates: | Published: 2024 
+ Accepted: 28 May 2024 
+ Institution: | The University of York 
+ Academic Units: | The University of York>Faculty of Sciences (York)>Computer Science (York) 
+ Funding Information: | Funder 
+ Grant number 
+ EPSRC 
+ EP/Y019229/1 
+ EPSRC 
+ EP/X040518/1 
+ Depositing User: | Pure (York) 
+ Date Deposited: | 31 May 2024 13:40 
+ Last Modified: | 05 Jan 2025 00:46 
+ Published Version: | href="https://doi.org/10.1109/WINCOM62286.2024.10657518" - https://doi.org/10.1109/WINCOM62286.2024.10657518 
+ Status: | Published 
+ Publisher: | IEEE Communications Society 
+ Series Name: | Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024 
+ Identification Number: | href="https://doi.org/10.1109/WINCOM62286.2024.10657518" - 10.1109/WINCOM62286.2024.10657518 
+ Related URLs: | http://www.scopus.com/inward/record.url?... 
+ Open Archives Initiative ID (OAI ID): | oai:eprints.whiterose.ac.uk:212945 
+ Download 
+ Accepted VersionFilename:href="https://eprints.whiterose.ac.uk/id/eprint/212945/1/wincom24Authorscopy.pdf" - wincom24Authorscopy.pdf
+Description:Hyperledger Fabric Platform for Secure and Efficient Data Sharing in Autonomous Vehicles 
+ Licence:CC-BY 2.5 
+ href="https://eprints.whiterose.ac.uk/id/eprint/212945/1/wincom24Authorscopy.pdf" - CLICK TO DOWNLOAD
+href="https://eprints.whiterose.ac.uk/id/eprint/212945/1/wincom24Authorscopy.pdf" - 
+Export 
+ Statistics 
+  
+ AdminCORE (COnnecting REpositories) 
+ CORE (COnnecting REpositories) 
+ CORE (COnnecting REpositories) 
+ About Research Online 
+ About 
+ Takedown policy 
+ Privacy and data protection 
+ Copyright, Licence and Reuse information 
+ Information for depositors 
+ Contact 
+ Accessibility 
+ Tools 
+ Search 
+ Browse 
+ Latest additions 
+ Statistics 
+ Guide to statistics 
+ Admin 
+ Create account 
+ Login 
+ White Rose Etheses Online 
+ White Rose University Press 
+ White Rose Research Online supports OAI 2.0 with a base URL ofhttps://eprints.whiterose.ac.uk/cgi/oai2 
+ White Rose Research Online is powered byEPrints 3which is developed by theSchool of Electronics and Computer Scienceat the University of Southampton.More information and software credits. 
+ Supported byWe use cookies to ensure you have the best browsing experience, and to help us improve our website. By continuing to browse the site you are agreeing to our use of cookies.Find out more about how we use cookiesClose
+
+3. Website of WINCOM_3: https://eprints.whiterose.ac.uk/id/eprint/212995/
+Website information of WINCOM_3:
+
+Toggle navigationhref="/" - White Rose Research Online
+Home 
+ Search 
+ Browse 
+ Contact 
+ HIFFR:Hybrid Intelligent Fast Failure Recovery Framework for Enhanced Resilience in Software Defined Networks 
+ Alawadh, Rehab,Yadav, Poonamorcid.org/0000-0003-0169-0704andAhmadi, Hamedorcid.org/0000-0001-5508-8757(2024)HIFFR:Hybrid Intelligent Fast Failure Recovery Framework for Enhanced Resilience in Software Defined Networks.In:Zaidi, Syed Ali Raza,Ibrahimi, Khalil,El Kamili, Mohamed,Kobbane, AbdellatifandAslam, Nauman, (eds.) Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024.11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024, 23-25 Jul 2024 Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024 . Institute of Electrical and Electronics Engineers Inc. , GBRAbstract 
+ Deploying new optimised routing policies on routers in the event of link failure is difficult due to the strong coupling between the data and control planes and the absence of topology information about the network. Because of the distributed architecture of traditional Internet protocol networks, policies and routing rules are spread in a decentralised way, resulting in looping and congestion problems. Software-defined networking (SDN) enables centralised network programmability. As a result, data plane devices just focus on packet forwarding, leaving the control plane's complexities to be managed by the controller. Thus, the controller centrally installs the policies and rules. Considering the controller's knowledge of the global network architecture, central control enhances the flexibility of link failure identification and restoration. Therefore, this paper uses SDN architecture to enhance network resilience against link failures by introducing the Hybrid Intelligent Fast Failure Recovery (HIFFR) framework, which aims to improve the speed and effectiveness of network failure recovery. 
+ Metadata 
+  
+ Item Type: | Proceedings Paper 
+ Authors/Creators: | Alawadh, Rehab 
+ Yadav, Poonam | https://orcid.org/0000-0003-0169-0704 
+ Ahmadi, Hamed | https://orcid.org/0000-0001-5508-8757 
+ Editors: | Zaidi, Syed Ali Raza 
+ Ibrahimi, Khalil 
+ El Kamili, Mohamed 
+ Kobbane, Abdellatif 
+ Aslam, Nauman 
+ Copyright, Publisher and Additional Information: | Publisher Copyright: © 2024 IEEE. 
+ Keywords: | Graph Neural Network (GNN),Link Failure,Re-silience,Routing Protocols,Software-Defined Networking (SDN) 
+ Dates: | Published: 2024 
+ Accepted: 30 May 2024 
+ Institution: | The University of York 
+ Academic Units: | The University of York>Faculty of Sciences (York)>Computer Science (York) 
+ The University of York>Faculty of Sciences (York)>Electronic Engineering (York) 
+ Funding Information: | Funder 
+ Grant number 
+ EPSRC 
+ EP/X040518/1 
+ EPSRC 
+ EP/X525856/1 
+ EPSRC 
+ EP/Y019229/1 
+ DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY 
+ TS/Y008952/1 
+ Depositing User: | Pure (York) 
+ Date Deposited: | 31 May 2024 09:00 
+ Last Modified: | 26 Feb 2025 21:30 
+ Published Version: | href="https://doi.org/10.1109/WINCOM62286.2024.10657343" - https://doi.org/10.1109/WINCOM62286.2024.10657343 
+ Status: | Published 
+ Publisher: | Institute of Electrical and Electronics Engineers Inc. 
+ Series Name: | Proceedings - 11th International Conference on Wireless Networks and Mobile Communications, WINCOM 2024 
+ Identification Number: | href="https://doi.org/10.1109/WINCOM62286.2024.10657343" - 10.1109/WINCOM62286.2024.10657343 
+ Related URLs: | http://www.scopus.com/inward/record.url?... 
+ Open Archives Initiative ID (OAI ID): | oai:eprints.whiterose.ac.uk:212995 
+ Download 
+ Accepted VersionFilename:href="https://eprints.whiterose.ac.uk/id/eprint/212995/1/Wincom_Research_paper_Rehab_arxiv.pdf" - Wincom_Research_paper_Rehab_arxiv.pdf
+Description:Wincom___Research_paper___Rehab arxiv 
+ Licence:CC-BY-ND 2.5 
+ href="https://eprints.whiterose.ac.uk/id/eprint/212995/1/Wincom_Research_paper_Rehab_arxiv.pdf" - CLICK TO DOWNLOAD
+href="https://eprints.whiterose.ac.uk/id/eprint/212995/1/Wincom_Research_paper_Rehab_arxiv.pdf" - 
+Export 
+ Statistics 
+ Oops - something went wrong! Please contact our helpdesk, help@jisc.ac.uk, mentioning IRUS in the subject and including any error message shown below. 
+ TypeError: Failed to fetch 
+  
+ AdminCORE (COnnecting REpositories) 
+ CORE (COnnecting REpositories) 
+ CORE (COnnecting REpositories) 
+ About Research Online 
+ About 
+ Takedown policy 
+ Privacy and data protection 
+ Copyright, Licence and Reuse information 
+ Information for depositors 
+ Contact 
+ Accessibility 
+ Tools 
+ Search 
+ Browse 
+ Latest additions 
+ Statistics 
+ Guide to statistics 
+ Admin 
+ Create account 
+ Login 
+ White Rose Etheses Online 
+ White Rose University Press 
+ White Rose Research Online supports OAI 2.0 with a base URL ofhttps://eprints.whiterose.ac.uk/cgi/oai2 
+ White Rose Research Online is powered byEPrints 3which is developed by theSchool of Electronics and Computer Scienceat the University of Southampton.More information and software credits. 
+ Supported byWe use cookies to ensure you have the best browsing experience, and to help us improve our website. By continuing to browse the site you are agreeing to our use of cookies.Find out more about how we use cookiesClose
+
+4. Website of WINCOM_3: https://research.manchester.ac.uk/en/publications/computation-energy-efficiency-maximization-of-swipt-assisted-fd-n
+Website information of WINCOM_3:
+
+Skip to main navigation 
+ Skip to search 
+ Skip to main content 
+ href="/en/" - Research Explorer The University of Manchester Home
+Home 
+ Profiles 
+ href="/en/organisations/" - Research units 
+ href="/en/publications/" - Research output 
+ Projects 
+ Impacts 
+ Activities 
+ 0More | Press/Media 
+ Prizes 
+ Equipment 
+ Datasets 
+ Student theses 
+ Search by expertise, name or affiliationComputation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems 
+ href="https://research.manchester.ac.uk/en/persons/muhammedburak.goktas" - Muhammed Burak Goktas
+,href="https://research.manchester.ac.uk/en/persons/zhiguo.ding" - Zhiguo Ding
+href="https://research.manchester.ac.uk/en/organisations/department-of-electrical-electronic-engineering" - Department of Electrical & Electronic Engineering 
+ href="https://research.manchester.ac.uk/en/organisations/eee-academic-research" - EEE - Academic & Research 
+ Research output:Contribution to conference›Paper›peer-review 
+ href="https://plu.mx/plum/a/?doi=10.1109/WINCOM62286.2024.10657021" - 
+Overview 
+ Fingerprint 
+ Abstract 
+ In this work, a simultaneous wireless information and power transmission (SWIPT) assisted full-duplex (FD) non-orthogonal multiple access (NOMA) mobile edge computing (MEC) transmission scheme is proposed for next-generation wireless networks. SWIPT, FD, NOMA, and MEC are used to help computational and energy-constrained IoT devices in next-generation wireless networks efficiently cope with their computational requirements. The computation energy efficiency (CEE) maximization of the SWIPT-assisted IoT devices performing par-tial offloading with the existence of a downlink user is considered in the proposed scheme. Accordingly, an optimization problem, optimizing power, time and frequency coefficients to maximize the CEE, is formulated, and an effective algorithm is proposed to optimize the coefficients jointly. The provided numerical studies demonstrate the significantly better performance of the proposed scheme over the benchmark schemes. 
+  
+ Original language | English 
+ Pages | 1-6 
+ DOIs | href="https://doi.org/10.1109/WINCOM62286.2024.10657021" - https://doi.org/10.1109/WINCOM62286.2024.10657021 
+ Publication status | E-pub ahead of print -5 Sept 2024 
+ Event | href="#" - 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM)
+- Leeds, United Kingdom 
+ Duration:23 Jul 2024→25 Jul 2024 
+ Conference 
+  
+ Conference | 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM) 
+ Period | 23/07/24→25/07/24 
+ Keywords 
+ Non-orthogonal multiple access (NOMA) 
+ full-duplex communications 
+ mobile edge computing (MEC) 
+ simultaneous wireless information and power transfer (SWIFT) ss information 
+ 6G 
+ UN SDGs 
+ This output contributes to the following UNSustainable Development Goals (SDGs) 
+ Access to Document 
+ href="https://doi.org/10.1109/WINCOM62286.2024.10657021" - 10.1109/WINCOM62286.2024.10657021 
+ https://ieeexplore.ieee.org/document/10657021/ 
+ FingerprintDive into the research topics of 'Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems'. Together they form a unique fingerprint.Power TransmissionEngineering100% 
+ Full-DuplexEngineering100% 
+ Mobile Edge ComputingEngineering100% 
+ Energy EfficiencyEngineering100% 
+ MaximizationEngineering100% 
+ NomaEngineering100% 
+ Transmission PowerComputer Science100% 
+ Full DuplexComputer Science100% 
+ View full fingerprintCite this 
+ APA 
+ Author 
+ BIBTEX 
+ Harvard 
+ Standard 
+ RIS 
+ Vancouver 
+ Goktas, M. B., & Ding, Z.(2024).Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems. 1-6. Paper presented at 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM). Advance online publication.https://doi.org/10.1109/WINCOM62286.2024.10657021 
+ Goktas, Muhammed Burak; Ding, Zhiguo. /Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems. Paper presented at 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM). 
+ @conference{877ccd21ed0e4a3cbeff6d650dcaaf65, 
+ title = "Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems", 
+ abstract = "In this work, a simultaneous wireless information and power transmission (SWIPT) assisted full-duplex (FD) non-orthogonal multiple access (NOMA) mobile edge computing (MEC) transmission scheme is proposed for next-generation wireless networks. SWIPT, FD, NOMA, and MEC are used to help computational and energy-constrained IoT devices in next-generation wireless networks efficiently cope with their computational requirements. The computation energy efficiency (CEE) maximization of the SWIPT-assisted IoT devices performing par-tial offloading with the existence of a downlink user is considered in the proposed scheme. Accordingly, an optimization problem, optimizing power, time and frequency coefficients to maximize the CEE, is formulated, and an effective algorithm is proposed to optimize the coefficients jointly. The provided numerical studies demonstrate the significantly better performance of the proposed scheme over the benchmark schemes.", 
+ keywords = "Non-orthogonal multiple access (NOMA), full-duplex communications, mobile edge computing (MEC), simultaneous wireless information and power transfer (SWIFT) ss information, 6G", 
+ author = "Goktas, {Muhammed Burak} and Zhiguo Ding", 
+ year = "2024", 
+ month = sep, 
+ day = "5", 
+ doi = "10.1109/WINCOM62286.2024.10657021", 
+ language = "English", 
+ pages = "1--6", 
+ note = "2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM) ; Conference date: 23-07-2024 Through 25-07-2024", 
+ } 
+ Goktas, MB& Ding, Z2024, 'Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems', Paper presented at 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM),23/07/24-25/07/24pp. 1-6.https://doi.org/10.1109/WINCOM62286.2024.10657021 
+ Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems./Goktas, Muhammed Burak; Ding, Zhiguo. 
+ 2024. 1-6 Paper presented at 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM).Research output:Contribution to conference›Paper›peer-review 
+ TY - CONF 
+ T1 - Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems 
+ AU - Goktas, Muhammed Burak 
+ AU - Ding, Zhiguo 
+ PY - 2024/9/5 
+ Y1 - 2024/9/5 
+ N2 - In this work, a simultaneous wireless information and power transmission (SWIPT) assisted full-duplex (FD) non-orthogonal multiple access (NOMA) mobile edge computing (MEC) transmission scheme is proposed for next-generation wireless networks. SWIPT, FD, NOMA, and MEC are used to help computational and energy-constrained IoT devices in next-generation wireless networks efficiently cope with their computational requirements. The computation energy efficiency (CEE) maximization of the SWIPT-assisted IoT devices performing par-tial offloading with the existence of a downlink user is considered in the proposed scheme. Accordingly, an optimization problem, optimizing power, time and frequency coefficients to maximize the CEE, is formulated, and an effective algorithm is proposed to optimize the coefficients jointly. The provided numerical studies demonstrate the significantly better performance of the proposed scheme over the benchmark schemes. 
+ AB - In this work, a simultaneous wireless information and power transmission (SWIPT) assisted full-duplex (FD) non-orthogonal multiple access (NOMA) mobile edge computing (MEC) transmission scheme is proposed for next-generation wireless networks. SWIPT, FD, NOMA, and MEC are used to help computational and energy-constrained IoT devices in next-generation wireless networks efficiently cope with their computational requirements. The computation energy efficiency (CEE) maximization of the SWIPT-assisted IoT devices performing par-tial offloading with the existence of a downlink user is considered in the proposed scheme. Accordingly, an optimization problem, optimizing power, time and frequency coefficients to maximize the CEE, is formulated, and an effective algorithm is proposed to optimize the coefficients jointly. The provided numerical studies demonstrate the significantly better performance of the proposed scheme over the benchmark schemes. 
+ KW - Non-orthogonal multiple access (NOMA) 
+ KW - full-duplex communications 
+ KW - mobile edge computing (MEC) 
+ KW - simultaneous wireless information and power transfer (SWIFT) ss information 
+ KW - 6G 
+ U2 - 10.1109/WINCOM62286.2024.10657021 
+ DO - 10.1109/WINCOM62286.2024.10657021 
+ M3 - Paper 
+ SP - 1 
+ EP - 6 
+ T2 - 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM) 
+ Y2 - 23 July 2024 through 25 July 2024 
+ ER - 
+ Goktas MB, Ding Z.Computation Energy Efficiency Maximization of SWIPT-Assisted FD-NOMA MEC Systems. 2024. Paper presented at 2024 11th International Conference on Wireless Networks and Mobile Communications (WINCOM). Epub 2024 Sept 5. doi: 10.1109/WINCOM62286.2024.10657021 
+ href="https://www.facebook.com/sharer.php?u=https://research.manchester.ac.uk/en/publications/computation-energy-efficiency-maximization-of-swipt-assisted-fd-n%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1109%2FWINCOM62286.2024.10657021&p[summary]=Check+out+this+research+output+at+Research+Explorer+The+University+of+Manchester%3A+Computation+Energy+Efficiency+Maximization+of+SWIPT-Assisted+FD-NOMA+MEC+Systems" - 
+ href="https://twitter.com/intent/tweet?url=https://research.manchester.ac.uk/en/publications/computation-energy-efficiency-maximization-of-swipt-assisted-fd-n%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1109%2FWINCOM62286.2024.10657021&text=Check+out+this+research+output+at+Research+Explorer+The+University+of+Manchester%3A+Computation+Energy+Efficiency+Maximization+of+SWIPT-Assisted+FD-NOMA+MEC+Systems" - 
+ href="https://www.linkedin.com/shareArticle?mini=true&url=https://research.manchester.ac.uk/en/publications/computation-energy-efficiency-maximization-of-swipt-assisted-fd-n%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1109%2FWINCOM62286.2024.10657021&summary=Check+out+this+research+output+at+Research+Explorer+The+University+of+Manchester%3A+Computation+Energy+Efficiency+Maximization+of+SWIPT-Assisted+FD-NOMA+MEC+Systems" - 
+ href="mailto:?subject=Computation%20Energy%20Efficiency%20Maximization%20of%20SWIPT-Assisted%20FD-NOMA%20MEC%20Systems&body=Check%20out%20this%20research%20output%20at%20Research%20Explorer%20The%20University%20of%20Manchester%3A%20Computation%20Energy%20Efficiency%20Maximization%20of%20SWIPT-Assisted%20FD-NOMA%20MEC%20Systems | https://research.manchester.ac.uk/en/publications/computation-energy-efficiency-maximization-of-swipt-assisted-fd-n?utm_source=email&utm_medium=email&utm_campaign=sharelink" - 
+ Powered byhref="http://www.elsevier.com/online-tools/research-intelligence/products-and-services/pure" - Pure
+,Scopus&Elsevier Fingerprint Engine™All content on this site: Copyright © 2025 Research Explorer The University of Manchester, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply 
+ We use cookies to help provide and enhance our service and tailor content. By continuing you agree to theuse of cookies 
+ href="https://www.manchester.ac.uk/discover/privacy-information/data-protection/" - Research Explorer The University of Manchester data protection policy
+About web accessibility 
+ Report vulnerability
+

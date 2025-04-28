@@ -1,0 +1,932 @@
+Conference full name: International Workshop on Formal Methods for interactive Systems (FMIS)
+
+1. Website of FMIS_3: https://conf.researchr.org/home/Formalise-2025
+Website information of FMIS_3:
+
+href="https://2025.formalise.org" - FormaliSE 2025
+Sun 27 - Mon 28 April 2025href="https://2025.formalise.org/venue/icse-2025-venue" - Ottawa, Ontario, Canada
+co-located withhref="https://conf.researchr.org/home/icse-2025" - ICSE 2025
+Toggle navigation 
+ Attending | href="https://2025.formalise.org/venue/icse-2025-venue" - Venue: Rogers Centre, Ottawa (formerly Shaw Centre) 
+ href="https://2025.formalise.org/venue/offsite-special-venue" - Venue: Offsite Special Venue 
+ href="https://2025.formalise.org/venue/icse-2025-nac" - Reception venue: National Arts Centre 
+ ICSE 2025 
+ href="https://2025.formalise.org/attending/registration" - Registration 
+ href="https://2025.formalise.org/attending/food" - Food at ICSE2025 
+ href="https://2025.formalise.org/attending/fun+activities" - Fun Activities 
+ href="https://2025.formalise.org/attending/social-media" - Social media 
+ href="https://2025.formalise.org/attending/Hotels" - Hotels 
+ href="https://2025.formalise.org/attending/gettingAroundOttawa" - Getting Around Ottawa 
+ href="https://2025.formalise.org/attending/visa-and-travel-authorization" - Visa and Travel Authorization 
+ href="https://2025.formalise.org/attending/Travelling" - Travelling to Ottawa 
+ href="https://2025.formalise.org/attending/travel-support" - Travel Support 
+ href="https://2025.formalise.org/attending/Code+of+Conduct" - Code of Conduct 
+ href="https://2025.formalise.org/attending/Diversity+and+Inclusion+Plan" - Equity, Diversity, and Inclusion Plan 
+ href="https://2025.formalise.org/attending/Sustainability" - Sustainability 
+ href="https://2025.formalise.org/attending/faq" - FAQ 
+ Program | href="https://2025.formalise.org/program/program-Formalise-2025/" - FormaliSE Program 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Your Program 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Sun 27 Apr 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Mon 28 Apr 
+ href="#" - Tracks | FormaliSE 2025 
+ href="https://2025.formalise.org" - Research Track 
+ href="https://2025.formalise.org/track/Formalise-2025-artifact-track" - Artifact Track 
+ Organization | FormaliSE 2025 Committees 
+ Track Committees 
+ Research TrackOrganization Committee 
+ Research TrackProgram Committee 
+ href="https://2025.formalise.org/committee/Formalise-2025-artifact-track-artifact-evaluation-committee" - Artifact Track 
+ Contributors 
+ href="https://2025.formalise.org/people-index" - People Index 
+ href="https://2025.formalise.org/search//all" - Search 
+ Series | href="https://conf.researchr.org/series/Formalise" - Series 
+ FormaliSE 2025 
+ href="https://conf.researchr.org/home/Formalise-2024" - FormaliSE 2024 
+ href="https://conf.researchr.org/home/Formalise-2023" - FormaliSE 2023 
+ href="https://conf.researchr.org/home/icse-2022/Formalise-2022" - FormaliSE 2022 
+ href="https://conf.researchr.org/home/Formalise-2021" - FormaliSE 2021 
+ FormaliSE 2020 
+ href="https://2019.icse-conferences.org/track/Formalise-2019-papers" - FormaliSE 2019 
+ href="https://conf.researchr.org/track/icse-2018/Formalise-2018-papers" - FormaliSE 2018 
+ href="https://conf.researchr.org/signin/Formalise-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5EsFormalise-2025" - Sign in 
+ href="https://2025.formalise.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icse-2025" - ICSE 2025
+(href="https://conf.researchr.org/series/icse" - series
+) /FormaliSE 2025 (href="https://conf.researchr.org/series/Formalise" - series
+) /Research TrackFormaliSE 2025 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Keynotes 
+ href="#Call-for-Papers" - Call for Papers 
+ Historically, formal methods academic research and practical software development have had limited mutual interactions — except possibly in specialized domains such as safety-critical software. In recent times, the outlook has considerably improved: on the one hand, formal methods research has delivered more flexible techniques and tools that can support various aspects of the software development process — from user requirements elicitation, to design, implementation, verification and validation, as well as the creation of documentation. On the other hand, software engineering has developed a growing interest in rigorous techniques applied at scale. 
+ The FormaliSE conference series promotes work at the intersection of the formal methods and software engineering communities, providing a venue to exchange ideas, experiences, techniques, and results. We believe more collaboration between these two communities can be mutually beneficial by fostering the creation of formal methods that are practically useful and by helping develop higher-quality software. 
+ Originally a workshop event, since 2018 FormaliSE has been organized as a conference co-located with ICSE. The 13th edition of FormaliSE will also take place as a co-located conference of ICSE 2025. 
+ Area of interest include: 
+ requirements formalization and formal specification; 
+ approaches, methods and tools for verification and validation; 
+ formal approaches to safety and security related issues; 
+ analysis of performance and other non-functional properties based on formal approaches; 
+ scalability of formal method applications 
+ integration of formal methods within the software development lifecycle (e.g., change -management, continuous integration, regression testing, and deployment) 
+ model-based engineering approaches; 
+ correctness-by-construction approaches for software and systems engineering; 
+ application of formal methods to specific domains, e.g., autonomous, cyber-physical, intelligent, and IoT systems; 
+ formal methods for AI-based systems (FM4AI), and AI applied in formal method approaches (AI4FM); 
+ formal methods in a certification context 
+ case studies developed/analyzed with formal approaches 
+ experience reports on the application of formal methods to real-world problems; 
+ guidelines to use formal methods in practice; 
+ usability of formal methods. 
+ Dates 
+ Sun 27 Apr 2025 
+ Mon 28 Apr 2025 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-04:00) Eastern Time (US & Canada).Use conference time zone: (GMT-04:00) Eastern Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Sun 27 Apr 
+ Displayed time zone:Eastern Time (US & Canada)change 
+  
+ 07:00 - 19:00 | Ready Room Sundayhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-209" - 209
+ 
+ The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed. 
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays. 
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people. 
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time. 
+ The Ready Room will also have some poster boards. 
+  
+ 09:00 - 12:30 | Child Care Sunday AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-102-child-care" - 102 Child Care
+ 
+ Child Care at ICSE is free, but you must have registered for child care when you registered for the conference. 
+ If you need to add child care to your registration, please contact the registration desk. 
+  
+ 09:00 - 10:30 | Invited Speaker 1href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/gwensalayn" - Gwen Salaün
+University of Grenoble Alpes 
+ 09:00 
+ 90m 
+ Keynote | Assuring AI in Autonomous Driving: Challenges and Emerging ApproachesResearch Track 
+ K:href="https://2025.formalise.org/profile/krzysztofczarnecki" - Krzysztof Czarnecki
+University of Waterloo, Canada 
+  
+ 10:30 - 11:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 10:30 
+ 30m 
+ Coffee break | Sunday Morning BreakICSE Catering 
+  
+ 11:00 - 12:30 | Session 1 - Formal Methods and Autonomous Systemshref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/divyagopinath" - Divya Gopinath
+NASA Ames (KBR Inc.) 
+ 11:00 
+ 30m 
+ Talk | CPS Falsification using Autoencoded Input ModelsResearch Track 
+ href="https://2025.formalise.org/profile/youssefzahar" - Youssef Zahar
+University of Minnesota,href="https://2025.formalise.org/profile/sanjairayadurgam" - Sanjai Rayadurgam
+University of Minnesota 
+ 11:30 
+ 30m 
+ Talk | Modeling Language for Scenario Development of Autonomous Driving SystemsResearch Track 
+ href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+JAIST,href="https://2025.formalise.org/profile/takashitomita" - Takashi Tomita
+JAIST,href="https://2025.formalise.org/profile/tatsujikawai" - Tatsuji Kawai
+Kochi University,href="https://2025.formalise.org/profile/daisukekawakami" - Daisuke Kawakami
+Mitsubishi Electric Corporation,href="https://2025.formalise.org/profile/nobuochida" - Nobuo Chida
+Mitsubishi Electric Corporation 
+ 12:00 
+ 30m 
+ Talk | Robustness Verification of Video Classification Neural NetworksResearch Track 
+ href="https://2025.formalise.org/profile/samuelsasaki" - Samuel Sasaki
+Vanderbilt University,href="https://2025.formalise.org/profile/prestonkrobinette" - Preston K. Robinette
+Vanderbilt University,href="https://2025.formalise.org/profile/diegomanzanaslopez" - Diego Manzanas Lopez
+Vanderbilt University,href="https://2025.formalise.org/profile/taylortjohnson" - Taylor T Johnson
+Vanderbilt University 
+  
+ 12:30 - 14:00 | Lunchhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 12:30 
+ 90m 
+ Lunch | Sunday LunchICSE Catering 
+  
+ 14:00 - 15:30 | Session 2 – Theorem Proving and Probabilistic Model Checkinghref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/nancyday" - Nancy Day
+University of Waterloo, Canada 
+ 14:00 
+ 30m 
+ Talk | The Burden of Proof: Automated Tooling for Rapid Iteration on Large Mechanised ProofsResearch Track 
+ href="https://2025.formalise.org/profile/chengsongtan" - Chengsong Tan
+Imperial College London, Kaihong,href="https://2025.formalise.org/profile/alastairdonaldson" - Alastair F. Donaldson
+Imperial College London,href="https://2025.formalise.org/profile/jonathanjulianhuertaymunive" - Jonathan Julian Huerta y Munive
+Czech Technical University,href="https://2025.formalise.org/profile/johnwickerson" - John Wickerson
+Imperial College London 
+ 14:30 
+ 30m 
+ Talk | A proof-based ground algebraic meta-model for reasoning on ASTD in Event-BResearch Track 
+ href="https://2025.formalise.org/profile/christophechen" - Christophe Chen
+INPT-ENSEEIHT/IRIT,href="https://2025.formalise.org/profile/peterriviere" - Peter Rivière
+INPT-ENSEEIHT / IRIT, University of Toulouse, France,href="https://2025.formalise.org/profile/neerajkumarsingh" - Neeraj Kumar Singh
+INPT-ENSEEIHT/IRIT,href="https://2025.formalise.org/profile/guillaumedupont" - Guillaume Dupont
+INPT–ENSEEIHT,href="https://2025.formalise.org/profile/yamineaitameur" - Yamine Ait Ameur
+IRIT/INPT-ENSEEIHT,href="https://2025.formalise.org/profile/marcfrappier" - Marc Frappier
+Université de Sherbrooke, Canada 
+ 15:00 
+ 30m 
+ Talk | Probabilistic Model Checking of Disaster Resource Distribution StrategiesResearch Track 
+ href="https://2025.formalise.org/profile/kennethjohnson" - Kenneth Johnson
+Auckland University of Technology,href="https://2025.formalise.org/profile/meenakumari" - Meena Kumari
+Auckland University of Technology 
+  
+ 15:30 - 16:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 15:30 
+ 30m 
+ Break | Sunday Afternoon BreakICSE Catering 
+  
+ 16:00 - 17:30 | Session 3 - Temporal Logic and Contractshref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/domenicobianculli" - Domenico Bianculli
+University of Luxembourg 
+ 16:00 
+ 30m 
+ Talk | Specifying Distributed Hash Tables with Allen Temporal LogicResearch Track 
+ href="https://2025.formalise.org/profile/nunopolicarpo" - Nuno Policarpo
+Instituto Superior Técnico, University of Lisbon,href="https://2025.formalise.org/profile/josesantos" - José Fragoso Santos
+INESC-ID/Instituto Superior Técnico, Portugal,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+University of Minho; INESC TEC,href="https://2025.formalise.org/profile/joaoleitao" - João Leitão
+NOVA LINCS & FCT, NOVA University of Lisbon,href="https://2025.formalise.org/profile/pedroakoscosta" - Pedro Ákos Costa
+NOVA LINCS & DI-FCT-UNL 
+ 16:30 
+ 30m 
+ Talk | Temporal Logics Meet Real-World Software Requirements: A Reality CheckResearch Track 
+ href="https://2025.formalise.org/profile/romanbogli" - Roman Bögli
+University of Bern,href="https://2025.formalise.org/profile/atefehrohani" - Atefeh Rohani
+University of Bern,href="https://2025.formalise.org/profile/thomasstuder" - Thomas Studer
+University of Bern,href="https://2025.formalise.org/profile/christostsigkanos" - Christos Tsigkanos
+University of Athens, Greece,href="https://2025.formalise.org/profile/timokehrer" - Timo Kehrer
+University of Bern 
+ 17:00 
+ 30m 
+ Talk | Detecting Redundant PreconditionsResearch Track 
+ href="https://2025.formalise.org/profile/nicolathoben" - Nicola Thoben
+University of Oldenburg,href="https://2025.formalise.org/profile/heikewehrheim" - Heike Wehrheim
+Carl von Ossietzky Universität Oldenburg / University of Oldenburg 
+ Mon 28 Apr 
+ Displayed time zone:Eastern Time (US & Canada)change 
+  
+ 07:00 - 19:00 | Ready Room Mondayhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-209" - 209
+ 
+ The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed. 
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays. 
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people. 
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time. 
+ The Ready Room will also have some poster boards. 
+  
+ 09:00 - 10:30 | Quiet Room Monday 9AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 09:00 - 10:30 | Invited Speaker 2href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/anastasiamavridou" - Anastasia Mavridou
+KBR / NASA Ames Research Center 
+ 09:00 
+ 90m 
+ Keynote | Adversarial Perturbations and Self-Defenses for Large Language Models on Coding TaskResearch Track 
+ K:href="https://2025.formalise.org/profile/corinaspasareanu" - Corina S. Pasareanu
+Carnegie Mellon University Silicon Valley, NASA Ames Research Center 
+  
+ 10:30 - 11:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 10:30 
+ 30m 
+ Break | Monday Morning BreakICSE Catering 
+  
+ 11:00 - 12:30 | Quiet Room Monday 11AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 11:00 - 12:30 | Session 4 – Generative AI and Fuzzy Logichref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/linamarsso" - Lina Marsso
+École Polytechnique de Montréal 
+ 11:00 
+ 30m 
+ Talk | LLM-based Generation of Weakest Preconditions and Precise Array InvariantsResearch Track 
+ href="https://2025.formalise.org/profile/daraghking" - Daragh King
+Trinity College Dublin,href="https://2025.formalise.org/profile/vasileioskoutavas1" - Vasileios Koutavas
+Trinity College Dublin,href="https://2025.formalise.org/profile/laurakovacs1" - Laura Kovács
+TU Wien 
+ 11:30 
+ 30m 
+ Talk | VeCoGen: Automating Generation of Formally Verified C Code with Large Language ModelsResearch Track 
+ href="https://2025.formalise.org/profile/merlijnsevenhuijsen1" - Merlijn Sevenhuijsen
+Scania CV, AB & KTH Royal Institute of Technology,href="https://2025.formalise.org/profile/khashayaretemadi" - Khashayar Etemadi
+KTH Royal Institute of Technology,href="https://2025.formalise.org/profile/mattiasnyberg" - Mattias Nyberg
+Scania CV, AB & KTH Royal Institute of Technology 
+ 12:00 
+ 30m 
+ Talk | Embracing Uncertainty: A Fuzzy Theoretical Model for Goal Fulfillment AssessmentResearch Track 
+ href="https://2025.formalise.org/profile/vincenzograssi" - Vincenzo Grassi
+University of Roma "Tor Vergata",href="https://2025.formalise.org/profile/raffaelamirandola" - Raffaela Mirandola
+Karlsruhe Institute of Technology (KIT),href="https://2025.formalise.org/profile/diegoperezpalacin" - Diego Perez-Palacin
+Linnaeus University 
+  
+ 12:30 - 14:00 | Lunchhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 12:30 
+ 90m 
+ Lunch | Monday LunchICSE Catering 
+  
+ 14:00 - 15:30 | Quiet Room Monday 2PMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 14:00 - 15:30 | Session 5 - Formal Specification and Verification:href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+JAIST 
+ 14:00 
+ 30m 
+ Talk | Refining Alloy-Based Mutation Operators to Reflect Common MistakesResearch Track 
+ href="https://2025.formalise.org/profile/anajovanovic" - Ana Jovanovic
+The University of Texas at Arlington,href="https://2025.formalise.org/profile/mohammadnurullahpatwary" - Mohammad Nurullah Patwary
+The University of Texas at Arlington,href="https://2025.formalise.org/profile/allisonsullivan1" - Allison Sullivan
+University of Texas at Arlington 
+ 14:30 
+ 30m 
+ Talk | Verifying Multiple TLA+ Configurations with BlastResearch Track 
+ href="https://2025.formalise.org/profile/paulsomson" - Paul Somson
+INESC TEC,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+University of Minho; INESC TEC 
+ Pre-print 
+ 15:00 
+ 30m 
+ Talk | Typestates Specification and Verification in Frama-CResearch Track 
+ href="https://2025.formalise.org/profile/sebastienpatte" - Sébastien Patte
+Université Paris-Saclay, CEA, List,href="https://2025.formalise.org/profile/virgileprevosto" - Virgile Prevosto
+Université Paris-Saclay, CEA, List 
+  
+ 15:30 - 16:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 15:30 
+ 30m 
+ Break | Monday Afternoon BreakICSE Catering 
+  
+ 16:00 - 17:30 | Quiet Room Monday 4PMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+ Accepted Papers 
+  
+ Title 
+ A proof-based ground algebraic meta-model for reasoning on ASTD in Event-BResearch Track 
+ href="https://2025.formalise.org/profile/christophechen" - Christophe Chen
+,href="https://2025.formalise.org/profile/peterriviere" - Peter Rivière
+,href="https://2025.formalise.org/profile/neerajkumarsingh" - Neeraj Kumar Singh
+,href="https://2025.formalise.org/profile/guillaumedupont" - Guillaume Dupont
+,href="https://2025.formalise.org/profile/yamineaitameur" - Yamine Ait Ameur
+,href="https://2025.formalise.org/profile/marcfrappier" - Marc Frappier 
+ CPS Falsification using Autoencoded Input ModelsResearch Track 
+ href="https://2025.formalise.org/profile/youssefzahar" - Youssef Zahar
+,href="https://2025.formalise.org/profile/sanjairayadurgam" - Sanjai Rayadurgam 
+ Detecting Redundant PreconditionsResearch Track 
+ href="https://2025.formalise.org/profile/nicolathoben" - Nicola Thoben
+,href="https://2025.formalise.org/profile/heikewehrheim" - Heike Wehrheim 
+ Embracing Uncertainty: A Fuzzy Theoretical Model for Goal Fulfillment AssessmentResearch Track 
+ href="https://2025.formalise.org/profile/vincenzograssi" - Vincenzo Grassi
+,href="https://2025.formalise.org/profile/raffaelamirandola" - Raffaela Mirandola
+,href="https://2025.formalise.org/profile/diegoperezpalacin" - Diego Perez-Palacin 
+ LLM-based Generation of Weakest Preconditions and Precise Array InvariantsResearch Track 
+ href="https://2025.formalise.org/profile/daraghking" - Daragh King
+,href="https://2025.formalise.org/profile/vasileioskoutavas1" - Vasileios Koutavas
+,href="https://2025.formalise.org/profile/laurakovacs1" - Laura Kovács 
+ Modeling Language for Scenario Development of Autonomous Driving SystemsResearch Track 
+ href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+,href="https://2025.formalise.org/profile/takashitomita" - Takashi Tomita
+,href="https://2025.formalise.org/profile/tatsujikawai" - Tatsuji Kawai
+,href="https://2025.formalise.org/profile/daisukekawakami" - Daisuke Kawakami
+,href="https://2025.formalise.org/profile/nobuochida" - Nobuo Chida 
+ Probabilistic Model Checking of Disaster Resource Distribution StrategiesResearch Track 
+ href="https://2025.formalise.org/profile/kennethjohnson" - Kenneth Johnson
+,href="https://2025.formalise.org/profile/meenakumari" - Meena Kumari 
+ Refining Alloy-Based Mutation Operators to Reflect Common MistakesResearch Track 
+ href="https://2025.formalise.org/profile/anajovanovic" - Ana Jovanovic
+,href="https://2025.formalise.org/profile/mohammadnurullahpatwary" - Mohammad Nurullah Patwary
+,href="https://2025.formalise.org/profile/allisonsullivan1" - Allison Sullivan 
+ Robustness Verification of Video Classification Neural NetworksResearch Track 
+ href="https://2025.formalise.org/profile/samuelsasaki" - Samuel Sasaki
+,href="https://2025.formalise.org/profile/prestonkrobinette" - Preston K. Robinette
+,href="https://2025.formalise.org/profile/diegomanzanaslopez" - Diego Manzanas Lopez
+,href="https://2025.formalise.org/profile/taylortjohnson" - Taylor T Johnson 
+ Specifying Distributed Hash Tables with Allen Temporal LogicResearch Track 
+ href="https://2025.formalise.org/profile/nunopolicarpo" - Nuno Policarpo
+,href="https://2025.formalise.org/profile/josesantos" - José Fragoso Santos
+,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+,href="https://2025.formalise.org/profile/joaoleitao" - João Leitão
+,href="https://2025.formalise.org/profile/pedroakoscosta" - Pedro Ákos Costa 
+ Temporal Logics Meet Real-World Software Requirements: A Reality CheckResearch Track 
+ href="https://2025.formalise.org/profile/romanbogli" - Roman Bögli
+,href="https://2025.formalise.org/profile/atefehrohani" - Atefeh Rohani
+,href="https://2025.formalise.org/profile/thomasstuder" - Thomas Studer
+,href="https://2025.formalise.org/profile/christostsigkanos" - Christos Tsigkanos
+,href="https://2025.formalise.org/profile/timokehrer" - Timo Kehrer 
+ The Burden of Proof: Automated Tooling for Rapid Iteration on Large Mechanised ProofsResearch Track 
+ href="https://2025.formalise.org/profile/chengsongtan" - Chengsong Tan
+,href="https://2025.formalise.org/profile/alastairdonaldson" - Alastair F. Donaldson
+,href="https://2025.formalise.org/profile/jonathanjulianhuertaymunive" - Jonathan Julian Huerta y Munive
+,href="https://2025.formalise.org/profile/johnwickerson" - John Wickerson 
+ Typestates Specification and Verification in Frama-CResearch Track 
+ href="https://2025.formalise.org/profile/sebastienpatte" - Sébastien Patte
+,href="https://2025.formalise.org/profile/virgileprevosto" - Virgile Prevosto 
+ VeCoGen: Automating Generation of Formally Verified C Code with Large Language ModelsResearch Track 
+ href="https://2025.formalise.org/profile/merlijnsevenhuijsen1" - Merlijn Sevenhuijsen
+,href="https://2025.formalise.org/profile/khashayaretemadi" - Khashayar Etemadi
+,href="https://2025.formalise.org/profile/mattiasnyberg" - Mattias Nyberg 
+ Verifying Multiple TLA+ Configurations with BlastResearch Track 
+ href="https://2025.formalise.org/profile/paulsomson" - Paul Somson
+,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+Pre-print 
+ Call for Papers 
+ We accept papers in three categories: 
+ Full research papers | describing original research work and results. We encourage authors to include validation of their contributions by means of a case study or experiments. We also welcome research papers focusing on tools and tool development. 
+ Case study papers | discussing a significant application that suggests general lessons learned and motivates further research, or empirically validates theoretical results (such as a technique’s scalability). 
+ Research ideas papers | describing new ideas in preliminary form, in a way that can stimulate interesting discussions at the conference, and suggest future work. 
+ All papers submitted to the FormaliSE 2025 conference must be written in English, must be unpublished original work, and must not be under review or submitted elsewhere at the time of submission. Submissions must comply with the FormaliSE’s lightweight double-anonymous review process (see below). 
+ Full research papers and case study papers can take up to 10 pages including all text, figures, tables and appendices, but excluding references. Research ideas papers can take up to 4 pages, plus up to 1 additional page solely for references. 
+ To avoid that authors waste time fitting their papers into the stated limit at the expense of presentation clarity, paper lengths slightly exceeding the stated limit will still be considered, provided that the reviewers find that the presentation is of high quality. 
+ All submissions must be in PDF format and must conform to theIEEE conference proceedings template, specified in the IEEE Conference Proceedings Formatting Guidelines (i.e., title in 24pt font and full text in 10pt type). In LaTeX, use\documentclass[10pt,conference]{IEEEtran}without including thecompsocorcompsocconfoptions. Note that IEEE format is being used this year, whereas last year it was ACM format, hence the appearance will differ from year to year. 
+ To submit a paper to FormaliSE 2025 usethe following HotCRP link. 
+ href="#lightweight-double-anonymous-review-process-for-papers" - Lightweight Double-Anonymous Review Process for Papers
+As in recent editions, FormaliSE 2025 will use a lightweight double-anonymous process. Authors must omit their names and institutions from the title page, cite their own work in the third person, and omit acknowledgments that may reveal their identity or affiliation. The purpose is reducing chances of reviewer bias influenced by the authors’ identities. The double-anonymous process is, however, lightweight, which means that it should not pose a heavy burden for authors, nor should make a paper’s presentation weaker or more difficult to review. Also, advertising the paper as part of your usual research activities (for example, on your personal web-page, in a pre-print archive, by email, in talks or discussions with colleagues) is permitted without penalties. 
+ PAPER SELECTION 
+ Each paper will be reviewed by at least three program committee members that will judge its overall quality in terms of its soundness, significance, novelty, verifiability, and presentation clarity. 
+ FormaliSE 2025 will adopt a lightweight response process: if all the reviewers of a given paper agree that a clarification from the authors regarding a specific question could move the paper from “borderline” to “accept”, the chairs will relay the reviewers’ questions to the authors by email, and then share their reply with the reviewers in HotCRP. The goal of lightweight responses is reducing the chance of random decisions on borderline papers. Hence, they will only be used for a minority of submissions; most papers will not require such an author response. Nevertheless, we would ask the corresponding authors of all submissions to make sure that they are available to answer questions by email upon request. 
+ PUBLICATION 
+ All accepted papers are published as part of the ICSE 2025 Proceedings in the ACM and IEEE Digital Libraries. 
+ At least one author of each accepted paper is required to register for the conference and present the paper at the conference — physically or, if the circumstances do not allow so, virtually. Failure to register an author will result in a paper being removed from the proceedings. 
+ Keynotes 
+ Adversarial Perturbations and Self-Defenses for Large Language Models on Coding Task 
+ Abstract:Large language models (LLMs) have demonstrated impressive capabilities for coding tasks including writing and reasoning about code. They improve upon previous neural network models of code that already demonstrated competitive results when performing tasks such as code summarization and identifying code vulnerabilities . However, it is known that these pre-LLM code models are vulnerable to adversarial examples, i.e. small syntactic perturbations that do not change the program’s semantics, such as the inclusion of “dead code” through false conditions, the addition of inconsequential print statements, or change in control flow, designed to “fool” the models. LLMs can also be vulnerable to the same adversarial perturbations. In this talk we discuss the effect of adversarial perturbations on coding tasks with LLMs and propose effective defenses against such adversaries. The coding tasks we’ll consider include both classification (e.g., use LLMs for summarization, vulnerability detection) and code generation (e.g., use LLMs for code completion, based on prompts plus code snippets). 
+  
+ Corina Pasareanuis an ACM Fellow and an IEEE ASE Fellow, working at NASA Ames. She is affiliated with KBR and Carnegie Mellon University's CyLab. Her research interests include model checking, symbolic execution, compositional verification, probabilistic software analysis, autonomy, and security. She is the recipient of several awards, including ETAPS Test of Time Award (2021), ASE Most Influential Paper Award (2018), ESEC/FSE Test of Time Award (2018), ISSTA Retrospective Impact Paper Award (2018), ACM Impact Paper Award (2010), and ICSE 2010 Most Influential Paper Award (2010). 
+
+Assuring AI in Autonomous Driving: Challenges and Emerging Approaches 
+ Abstract:Artificial intelligence plays a critical role in autonomous driving, yet it introduces significant assurance challenges. Unlike traditional software, AI lacks explicit specifications and is applied to inherently uncertain, complex, and open problems such as road environment perception. Furthermore, modern AI systems are often opaque, making interpretability and verification difficult. These issues complicate the development of assurance methods that can ensure safety and reliability. 
+ In this talk, I will review current approaches and industry standards for AI assurance in autonomous driving, including scenario-based testing and uncertainty estimation. I will discuss assurance methods for both hybrid systems — where AI functions as a component within a classical software stack — and end-to-end AI-driven systems. Finally, I will explore emerging directions for handling edge-case scenarios, including the use of foundation models and dual-processing architectures as potential solutions for enhancing the safety and robustness of end-to-end AI systems. 
+
+Krzysztof Czarneckiis a Professor of Electrical and Computer Engineering and a University Research Chair at the University of Waterloo, where he leads the Waterloo Intelligent Systems Engineering (WISE) Laboratory. He currently also serves as an Associate Director of the Waterloo Centre for Automotive Research (WatCAR). His research focuses on assuring the safety of AI systems and driving behavior. In 2018, he co-led the development of the first autonomous vehicle tested on public roads in Canada. He has made significant contributions to automotive AI and software safety standards, including SAE J3164 and ISO 8800. Before joining the University of Waterloo, he worked at DaimlerChrysler Research in Germany (1995-2002), where he advanced software development practices and technologies for enterprise, automotive, and aerospace sectors. His work has been recognized with numerous awards, including the Premier's Research Excellence Award (2004) and the British Computing Society’s Upper Canada Award for Outstanding Contributions to the IT Industry (2008). He has also received twelve Best Paper Awards, two ACM Distinguished Paper Awards, and five Most Influential Paper Awards. 
+ Questions? Use thehref="https://2025.formalise.org/contact2/Formalise-2025-papers" - FormaliSE Research Track contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Sun 27 - Mon 28 Apr 2025 
+ FormaliSE 2025 
+ Tue 18 Feb 2025 
+ Early registration deadline 
+ Wed 5 Feb 2025 
+ Camera-ready papers due 
+ Mon 13 Jan 2025 
+ Notifications 
+ Mon 25 Nov 2024 
+ Paper submission deadline 
+ Mon 18 Nov 2024 
+ Abstract submissions 
+ Organization Committee 
+ href="https://2025.formalise.org/profile/nicoplat" - Nico PlatGeneral Co-ChairNetherlands 
+ href="https://2025.formalise.org/profile/stefaniagnesi" - Stefania GnesiGeneral Co-ChairIstituto di Scienza e Tecnologie dell'Informazione "Alessandro Faedo" Italy 
+ href="https://2025.formalise.org/profile/quentinnivon" - Quentin NivonWeb ChairUniversity Grenoble AlpesFrance 
+ Program Committee 
+ href="https://2025.formalise.org/profile/anastasiamavridou" - Anastasia MavridouPC Co-ChairKBR / NASA Ames Research CenterUnited States 
+ href="https://2025.formalise.org/profile/gwensalayn" - Gwen SalaünPC Co-ChairUniversity of Grenoble AlpesFrance 
+ Bernhard AichernigCommittee Member 
+ Graz University of Technology 
+ Austria 
+ Toshiaki AokiCommittee Member 
+ JAIST 
+ Japan 
+ Kyungmin BaeCommittee Member 
+ POSTECH 
+ South Korea 
+ Domenico BianculliCommittee Member 
+ University of Luxembourg 
+ Luxembourg 
+ Simon BliudzeCommittee Member 
+ Inria Center at the University of Lillle 
+ France 
+ Giovanna BrocciaCommittee Member 
+ ISTI-CNR, FMT Lab 
+ Italy 
+ Radu CalinescuCommittee Member 
+ University of York, UK 
+ United Kingdom 
+ Pablo CastroCommittee Member 
+ Dept. of Computer Science FCEFQyN, University of Rio Cuarto 
+ Argentina 
+ Zhenbang ChenCommittee Member 
+ College of Computer, National University of Defense Technology 
+ China 
+ Nancy DayCommittee Member 
+ University of Waterloo, Canada 
+ Canada 
+ Francisco DuránCommittee Member 
+ University of Málaga, Spain 
+ Spain 
+ Marie FarrellCommittee Member 
+ The University of Manchester 
+ United Kingdom 
+ Carlo A. FuriaCommittee Member 
+ Università della Svizzera italiana (USI) 
+ Switzerland 
+ Fatemeh GhassemiCommittee Member 
+ University of Tehran 
+ Iran 
+ Divya GopinathCommittee Member 
+ NASA Ames (KBR Inc.) 
+ Yann-Gaël GuéhéneucCommittee Member 
+ Concordia University and Polytechnique Montréal 
+ Canada 
+ Paula HerberCommittee Member 
+ University of Munster, Germany 
+ Germany 
+ Marieke HuismanCommittee Member 
+ University of Twente 
+ Netherlands 
+ Fuyuki IshikawaCommittee Member 
+ National Institute of Informatics 
+ Japan 
+ Xiaoqing JinCommittee Member 
+ Apple 
+ United States 
+ Oleksandr KolchynCommittee Member 
+ Glushkov Institute of Cybernetics 
+ Ukraine 
+ Antónia LopesCommittee Member 
+ University of Lisbon 
+ Portugal 
+ Larissa A. MeinickeCommittee Member 
+ Violet Ka I PunCommittee Member 
+ Western Norway University of Applied Sciences 
+ Norway 
+ Camilo RochaCommittee Member 
+ Pontificia Universidad Javeriana 
+ Colombia 
+ Cristina SeceleanuCommittee Member 
+ Mälardalen University 
+ Sweden 
+ Arpit SharmaCommittee Member 
+ Indian Institute of Science Education and Research Bhopal 
+ India 
+ Allison SullivanCommittee Member 
+ The University of Texas at Arlington 
+ Heike WehrheimCommittee Member 
+ Carl von Ossietzky Universität Oldenburg / University of Oldenburg 
+ Germany 
+ xWed 9 Apr 10:55 
+ href="https://2025.formalise.org" - FormaliSE 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.formalise.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.formalise.org" - Research Track
+ 
+ href="https://2025.formalise.org/track/Formalise-2025-artifact-track" - Artifact Track
+Attending 
+ href="https://2025.formalise.org/venue/icse-2025-venue" - Venue: Rogers Centre, Ottawa (formerly Shaw Centre)
+ 
+ href="https://2025.formalise.org/venue/offsite-special-venue" - Venue: Offsite Special Venue
+ 
+ href="https://2025.formalise.org/venue/icse-2025-nac" - Reception venue: National Arts Centre
+ 
+ href="https://2025.formalise.org/attending/registration" - Registration
+ 
+ href="https://2025.formalise.org/attending/food" - Food at ICSE2025
+ 
+ href="https://2025.formalise.org/attending/fun+activities" - Fun Activities
+ 
+ href="https://2025.formalise.org/attending/social-media" - Social media
+ 
+ href="https://2025.formalise.org/attending/Hotels" - Hotels
+ 
+ href="https://2025.formalise.org/attending/gettingAroundOttawa" - Getting Around Ottawa
+ 
+ href="https://2025.formalise.org/attending/visa-and-travel-authorization" - Visa and Travel Authorization Information for ICSE 2025 and its Co-Located Events
+ 
+ href="https://2025.formalise.org/attending/Travelling" - Travelling to Ottawa
+ 
+ href="https://2025.formalise.org/attending/travel-support" - Travel Support
+ 
+ href="https://2025.formalise.org/attending/Code+of+Conduct" - Code of Conduct for ICSE 2025 and its Co-Located Events
+ 
+ href="https://2025.formalise.org/attending/Diversity+and+Inclusion+Plan" - Equity, Diversity, and Inclusion Plan for ICSE 2025
+ 
+ href="https://2025.formalise.org/attending/Sustainability" - Sustainability
+ 
+ href="https://2025.formalise.org/attending/faq" - FAQ
+href="https://2025.formalise.org/signup" - Sign Up
+: 
+ :
+
+2. Website of FMIS_3: https://www.irit.fr/recherches/ICS/people/palanque/communityservices.html
+Website information of FMIS_3:
+
+interactive critical systemsPhilippe Palanque 
+ Professor of Computer Science (Head of Department Reliability Systems and Software) 
+ Permanent member 
+ In the ICS group since2010-10-19 
+ +33 561556965 
+ Philippe.Palanque@irit.fr 
+ ICS group 
+ People 
+ Publications 
+ Projects 
+ Teaching & student supervision 
+ Community services 
+ Administration 
+ Tools 
+ Overview 
+ My Publications 
+ My Projects 
+ My Teaching & student supervision 
+ My Community services 
+ People I work with 
+ My stuff 
+ 2025 
+ Senior Program Committee | IUI 2025 (30th International Conference on Intelligent User Interfaces) | 2025-03-24to2025-03-27 | Cagliary, Italy 
+ Program Committee Member | ACII 2025 (13th International Conference on Affective Computing and Intelligent Interaction) | 2025-10-08to2025-10-11 | Canberra, Australia | ECCE'2025 (Annual conference of the European Association of Cognitive Ergonomics) | 2025-10-07to2025-10-10 | Tallinn, Estonia | JIHCI2024 (XI Jornadas Iberoamericanas de Interacción Humano-Computadora JIHCI2024) | 2025-05-07to2025-05-09 | Universidad Autónoma de Zacatecas, México 
+ 2024 
+ Senior Program Committee | IUI 2024 (29th International Conference on Intelligent User Interfaces) | 2024-03-18to2024-03-21 | Greenville, USA 
+ Program Committee Member | ACII 2024 (12th International Conference on Affective Computing and Intelligent Interaction) | 2024-09-15to2024-09-18 | Glasgow, UK | HWID 2024 (Human Work Interaction Design 2024) | 2024-09-05to2024-09-06 | Milan, Italy | JIHCI2024 (X Jornadas Iberoamericanas de Interacción Humano-Computadora JIHCI2024) | 2024-06-04to2024-06-07 | Universidad Tecnológica de Pereira, Colombia | CoPDA 2024 (8th International Workshop on Cultures of Participation in the Digital Age: AI for Humans or Humans for AI?) at AVI 2024 | 2024-06-03to2024-06-04 | Arenzano (Genoa), Italy 
+ 2023 
+ Senior Program Committee | IUI 2023 (28th International Conference on Intelligent User Interfaces) | 2023-03-27to2023-03-31 | Sydney Australia 
+ Program Committee Member | CISETC 2023 (International Congress on Education and Technology in Sciences (CISETC) 2023) | 2023-12-04to2023-12-06 | Zacatecas, Mexico | EUSPN-2023 (14th International Conference on Emerging Ubiquitous Systems and Pervasive Networks) | 2023-11-07to2023-11-09 | Almaty, Kazakhstan | RoCHI 2023 (International Conference on Human-Computer Interaction 2023) | 2023-09-21to2023-09-22 | TBA, Romania | SAFECOMP 2023 (42st International Conference on Computer Safety, Reliability and Security) | 2023-09-19to2023-09-21 | Toulouse, France | Decisioning 2023 (Collaboration in knowledge discovery and decision making.) | 2023-06-21to2023-06-23 | Popayán, Columbia | CoPDA 2023 (Workshop on Cultures of Participation in the Digital Age) at IS-EUD 2023 | 2023-06-07to2023-06-07 | Cagliari, Italy 
+ 2022 
+ Program Committee Member | ICMI 2022 (24th ACM International Conference on Multimodal Interaction) | 2022-11-07to2022-11-11 | Bengaluru, India | EUSPN-2022 (13th International Conference on Emerging Ubiquitous Systems and Pervasive Networks) | 2022-10-26to2022-10-28 | Leuven, Belgium | HuFaMo'22 (Sixth International Workshop on Human Factors in Modeling / Modeling of Human Factors) at MODELS 2022 | 2022-10-23to2022-10-28 | Montreal, Canada | HCI 2022 (VIII Iberoamerican Conference of Human-Computer Interaction) | 2022-10-13to2022-10-15 | La Habana, Cuba | ECCE'2022 (33rd annual conference of the European Association of Cognitive Ergonomics) | 2022-10-04to2022-10-07 | Kaiserslautern, Germany | RoCHI 2022 (International Conference on Human-Computer Interaction 2022) | 2022-10-06to2022-10-07 | Craiova, Romania | VLHCC 2022 (Symposium on Visual Languages and Human-Centric Computing (VL/HCC)) | 2022-09-12to2022-09-16 | Rome, Italy | INTERACCIÓN 2022 (XXII Congreso Internacional de Interacción Persona-Ordenador) | 2022-09-07to2022-09-09 | Teruel, Spain | SAFECOMP 2022 (41st International Conference on Computer Safety, Reliability and Security) | 2022-09-06to2022-09-09 | Munich, Germany | CompAuto 2022/ (2nd International Conference on Computers and Automation) | 2022-08-18to2022-08-20 | Paris, France | Decisioning 2022 (Collaboration in knowledge discovery and decision making: Applications to sustainable agriculture) | 2022-06-30to2022-07-01 | La Plata, Argentina | CoPDA 2022 (6th International Workshop on Cultures of Participation in the Digital Age: AI for Humans or Humans for AI?) at AVI 2022 | 2022-06-07to2022-06-07 | Roma, Italy | AHMIS 2022/ (3rd Asia Human-Computer Interaction Symposium) | 2022-05-26to2022-05-28 | Beijing, China | IUI 2022 (27th International Conference on Intelligent User Interfaces) | 2022-03-22to2022-03-25 | Helsinki, Finland 
+ 2021 
+ Co-chair for Full Papers | INCOSE HSI 2021/ (INCOSE Human Systems Integration Conference) | 2021-11-17to2021-11-19 | San Diego, USA 
+ Technical program chair 
+ Full Paper Chair | EICS 2021 (13th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2021-06-01to2021-06-30 | Eindhoven, Netherlands 
+ Chair for legacy | HWID 2021 (Human Work Interaction Design 2021) | 2021-05-15to2021-05-16 | Beijin, China 
+ associate chair | CHI 2021 (ACM SIGCHI Conference on Human Factors in Computing Systems) | 2021-05-08to2021-05-13 | Yokohama, Japon 
+ Program Committee Member | CLIHC 2021 (10th Latin American Conference on Human-computer Interaction) | 2021-11-22to2021-11-23 | Antigua, Guatemala | EUSPN-2021 (12th International Conference on Emerging Ubiquitous Systems and Pervasive Networks) | 2021-11-01to2021-11-04 | Leuven, Belgium | INTERACCIÓN 2020/2021 (XXI Congreso Internacional de Interacción Persona-Ordenador (Postponed)) | 2021-09-22to2021-09-24 | Málaga, Spain | RoCHI 2021 (International Conference on Human-Computer Interaction 2021) | 2021-09-16to2021-09-17 | Bucharest, Romania | SAFECOMP 2021 (40th International Conference on Computer Safety, Reliability and Security) | 2021-09-07to2021-09-10 | York, UK | HCI 2021 (VII Iberoamerican Conference of Human-Computer Interaction) | 2021-09-08to2021-09-10 | São Paulo, Brazil | HCIEE 2021 (IFIP WG 2.7/13.4 and WG 13.1 joint workshop HCI-Engineering Education 2021) at INTERACT 2021 | 2021-08-30to2021-08-31 | Bari, Italy | HCSE 2021 (International Workshop on Human-Centered Software Engineering for Changing Contexts of Use) at INTERACT 2021 | 2021-08-31to2021-08-31 | Bari, Italy | HSI 2021/ (14th International Conference on Human System Interaction) | 2021-07-08to2021-07-10 | Gdansk, Poland | ANTYCOVID 2021/ (Computer science protecting human society against epidemics ) | 2021-06-28to2021-06-29 | Online | ECCE'2021 (32nd annual conference of the European Association of Cognitive Ergonomics) | 2021-04-26to2021-04-29 | Siena, Italy | IUI 2021 (26th International Conference on Intelligent User Interfaces) | 2021-04-14to2021-04-17 | College Station (Texas), United States 
+ 2020 
+ Program Committee Member | HCSE 2020 (8th Conference on Human-Centered Software Engineering) | 2020-11-30to2020-12-02 | Eindhoven, The Netherlands | ESREL 2020 (30th European Safety and Reliability Conference) | 2020-11-01to2020-11-06 | Venice, Italy | EUSPN-2020 (11th International Conference on Emerging Ubiquitous Systems and Pervasive Networks) | 2020-11-02to2020-11-05 | Maderia, Portugal | RoCHI 2020 (International Conference on Human-Computer Interaction 2020) | 2020-10-22to2020-10-23 | Bucharest, Romania | ECCE'2020 (32nd annual conference of the European Association of Cognitive Ergonomics) | 2020-10-06to2020-10-09 | Siena, Italy | SAFECOMP 2020 (39th International Conference on Computer Safety, Reliability and Security) | 2020-09-15to2020-09-19 | Lisbon, Portugal | HCSE 2022 (9th Conference on Human-Centered Software Engineering) | 2022-08-24to2020-08-26 | Eindhoven, The Netherlands | IUI 2020 (25th International Conference on Intelligent User Interfaces) | 2020-03-17to2020-03-20 | Cagliari, Italy | ERTS 2020 (European Congress on Embedded Real-Time Software) | 2020-01-29to2020-01-31 | Toulouse, France 
+ 2019 
+ Co-Chairs Full Research papers | HSI2019 (Human Systems Integration 2019) | 2019-09-11to2019-09-13 | Biarritz, France 
+ Program Committee Member | UCAml 2019 (13th International Conference on Ubiquitous Computing & Ambient Intelligence) | 2019-12-02to2019-12-05 | Toledo, Spain | EUSPN-2019 (10th International Conference on Emerging Ubiquitous Systems and Pervasive Networks) | 2019-11-04to2019-11-07 | Coimbra, Portugal | RoCHI 2019 (International Conference on Human-Computer Interaction 2019) | 2019-10-17to2019-10-18 | Bucharest, Romania | SAFECOMP 2019 (38th International Conference on Computer Safety, Reliability and Security) | 2019-09-10to2019-09-13 | Turku, Finland | INTERACT 2019 (17th IFIP TC13 International Conference on Human-Computer Interaction) | 2019-09-02to2019-09-06 | Paphos, Cyprus | SEW-39 (Joint 39th IEEE Software Engineering Workshop) | 2019-09-01to2019-09-04 | Leipzig, Germany | INTERACCIÓN 2019 (XX Congreso Internacional de Interacción Persona-Ordenador) | 2019-06-25to2019-06-28 | Donostia-San Sebastián, Spain 
+ 2018 
+ Academic Committee Member | ILA-18 (Interaction Latin America 2018) | 2018-11-15to2018-11-17 | Rio de Janeiro, Brasil 
+ pmc | FMIS 2019 (8th International Workshop on Formal Methods for Interactive Systems) | 2019-10-07to2018-10-07 | Porto, Portugal 
+ Co-chair for Technical Program | HCSE 2018 (7th Conference on Human-Centred Software Engineering) | 2018-09-03to2018-09-05 | Nice, France 
+ General Chair | FMIS 2018 (7th International Workshop on Formal Methods for Interactive Systems) | 2018-06-25to2018-06-26 | Toulouse, France 
+ Associate Chair | EICS 2018 (9th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2018-06-19to2018-06-22 | Paris, France 
+ CHI Steering Committee Liaison | CHI 2018 (ACM SIGCHI Conference on Human Factors in Computing Systems) | 2018-04-21to2018-04-26 | Montréal, Canada 
+ Program Committee Member | CPPS-2018 (Cyber Physical Production Systems: Theory and Practices) | 2018-10-12to2018-10-12 | Leuven, Belgium | SAFECOMP 2018 (37th International Conference on Computer Safety, Reliability and Security) | 2018-09-18to2018-09-21 | Västerås, Sweden | INTERACCIÓN 2018 (XVIX Congreso Internacional de Interacción Persona-Ordenador) | 2018-09-12to2018-09-14 | Palma, Spain | SEW-38 (Joint 38th IEEE Software Engineering Workshop) | 2018-09-09to2018-09-12 | Poznań, Poland 
+ 2017 
+ Chair for Keynotes and Invited Talks 
+ associate chair | INTERACT 2017 (16th IFIP TC13 International Conference on Human-Computer Interaction) | 2017-09-25to2017-09-29 | Mumbai, India 
+ Program Committee Member | CLIHC 2017 (8th Latin American Conference on Human-computer Interaction) | 2017-11-08to2017-11-10 | Antigua, Guatemala | UCAml 2017 (11th International Conference on Ubiquitous Computing & Ambient Intelligence) | 2017-11-10to2017-11-10 | Philadelphia, United States | INTERACCIÓN 2017 (XVIII Congreso Internacional de Interacción Persona-Ordenador) | 2017-09-25to2017-09-27 | Cancun, Mexico | ECCE'2017 (35th Annual European Conference on Cognitive Ergonomics) | 2017-09-20to2017-09-22 | Umeå, Sweden | 12 CCC (12 Computation Colombian Conference ) | 2017-09-19to2017-09-22 | Cali, Colombia | SAFECOMP 2017 (36th International Conference on Computer Safety, Reliability and Security) | 2017-09-13to2017-09-15 | Trento, Italy | HCI International 2017 (19th International Conference on Human-Computer Interaction) | 2017-07-09to2017-07-14 | Vancouver, Canada | ICEIS 2017 (19th International Conference on Entreprise Information Systems) | 2017-04-26to2017-04-29 | Porto, Portugal 
+ 2016 
+ Chair for paper | VEHICULAR 16 (The Fifth International Conference on Advances in Vehicular Systems, Technologies and Applications) | 2016-11-13to2016-11-17 | Barcelona, Spain 
+ Chair for Full paper | IHM 2016 (28ème Conférence Francophone sur l'Interaction Homme-Machine) | 2016-10-25to2016-10-28 | Fribourg, Suisse 
+ Co-chair for Technical papers | HESSD 2016 (8th International Working Conference on Human Error, Safety, and System Development) at HCSE + HESSD 2016 | 2016-08-29to2016-08-31 | Stockholm, Sweden 
+ General Conference Co-Chair | EICS 2016 (8th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2016-06-21to2016-06-24 | Brussels, Belgium 
+ Program Committee Member | SETIT 2016 (7th International Conference SETIT 2016) | 2016-12-18to2016-12-20 | Hammamet, Tunisia | UCAml IWAAL AmIHEALTH 2016 (UCAmI 2016 10th International Conference on Ubiquitous Computing and Ambient Intelligence & ( IWAAL & AmIHEALTH included) ) | 2016-11-29to2016-12-02 | Canary Island, Spain | WD-HCI 2016 (Workshop on Dependability and Human-Computer Interaction) at LADC 2016 | 2016-10-19to2016-10-19 | Cali, Colombia | IHC 2016 (XV Simpósio de Fatores Humanos em Sistemas Computacionais) | 2016-10-04to2016-10-07 | São Paulo, Brazil | INTERACCIÓN 2016 (XVII Congreso Internacional de Interacción Persona-Ordenador) | 2016-09-13to2016-09-15 | Salamanca, Spain | SEW 2016 (36th IEEE Software Engineering Workshop) | 2016-09-11to2016-09-14 | Gdansk, Poland | RoCHI 2016 (International Conference on Human-Computer Interaction 2016) | 2016-09-08to2016-09-09 | Lasi, Romania | i-USEr 2016 (4th International Conference on User Science and Engineering ) | 2016-08-23to2016-08-25 | Melaka, Malaysia | BCS HCI 2016 (30th British Computer Society Conference on Human-Computer Interaction) | works in progress | 2016-07-11to2016-07-15 | Bournemouth, United Kingdom | CNIA 2016 (Conférence Nationale en Intelligence Artificielle 2016) | 2016-06-27to2016-07-01 | Clermont Ferrand, France | CTS 2016 (International Symposium on Collaborative Technologies and Systems) | 2016-06-06to2016-06-10 | Orlando, United States | EATIS 2016 (8th Euro American Association on Telematics and Information Systems) | 2016-02-26to2016-02-28 | Cartagena, Columbia | ERTS 2016 (European Congress on Embedded Real-Time Software) | 2016-01-27to2016-01-29 | Toulouse, France 
+ 2015 
+ Co-chair for Technical program | ATACCS'2015 (5th International Conference on Application and Theory of Automation in Command and Control Systems) | 2015-09-30to2015-10-02 | Toulouse, France 
+ Co-chair for Full Papers | INTERACT 2015 (15th IFIP TC13 International Conference on Human-Computer Interaction) | 2015-09-14to2015-09-18 | Bamberg, Germany 
+ Program Committee Member | ICOSST 2015 (9th IEEE International Conference on Open Source Systems & Technologies) | 2015-12-17to2015-12-19 | Lahore, Pakistan | HCIK 2015 (HCI Korea 2015) | doctorial consortium | 2015-12-10to2015-12-12 | Seoul, Korea | UCAml IWAAL AmIHEALTH 2015 (UCAmI 2015 9th International Conference on Ubiquitous Computing and Ambient Intelligence & IWAAL 2015 7th International Work-conference on Ambient Assisted Living & AmIHEALTH 2015 1st International Conference on Ambient Intelligence for Health) | 2015-12-01to2015-12-04 | Puerto Varas, Chile | SOCA 2015 (8th IEEE International Conference on Service Oriented Computing & Applications) | 2015-10-19to2015-10-21 | Roma, Italy | VEHICULAR 15 (The Fourth International Conference on Advances in Vehicular Systems, Technologies and Applications) | 2015-10-11to2015-10-16 | St. Julians, Malta | RoCHI 2015 (Conferinta Nationala de Interactiune Om-Calculator) | 2015-09-24to2015-09-25 | Bucaresti, Romania | SAFECOMP 2015 (34th International Conference on Computer Safety, Reliability and Security) | 2015-09-22to2015-09-25 | Delft, Netherlands | INTERACT 2015 (15th IFIP TC13 International Conference on Human-Computer Interaction) | 2015-09-14to2015-09-18 | Bamberg, Germany | INTERACCIÓN 2015 (XVI Congreso Internacional de Interacción Persona-Ordenador) | 2015-09-07to2015-09-09 | Vilanova i la Geltrú, Spain | HCI International 2015 (17th International Conference on Human-Computer Interaction) | 2015-08-02to2015-08-07 | Los Angeles, United States | AMBIENT 15 (The Fifth International Conference on Ambient Computing, Applications, Services and Technologies) | 2015-07-19to2015-07-24 | Nice, France | MODIQUITOUS 2015 (Model-based Interactive Ubiquitous Systems) at EICS 2015 | 2015-06-23to2015-06-26 | Duisburg, Germany | FoMHCI 2015 (Formal Methods in Human Computer Interaction) at EICS 2015 | 2015-06-23to2015-06-26 | Duisburg, Germany | DSN 2015 (45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks ) | 2015-06-22to2015-06-25 | Rio de Janeiro, Brazil 
+ 2014 
+ General Co-Chair | ECCE'2014 (32nd Annual European Conference on Cognitive Ergonomics) | 2014-09-01to2014-09-03 | Toulouse, France 
+ General Conference Co-Chair | CHI 2014 (ACM SIGCHI Conference on Human Factors in Computing Systems) | 2014-04-26to2014-05-01 | Toronto, Canada 
+ Program Committee Member | UCAml IWAAL 2014 (UCAmI 2014 8th International Conference on Ubiquitous Computing and Ambient Intelligence & IWAAL 2014 6th International Work-conference on Ambient Assisted Living) | 2014-12-02to2014-12-05 | Belfast, Ireland | IHC 2014 (XIII Simpósio de Fatores Humanos em Sistemas Computacionais) | 2014-10-27to2014-10-31 | Manaus, Brazil | IHM 2014 (26ème Conférence Francophone sur l'Interaction Homme-Machine) | 2014-10-28to2014-10-31 | Lille, France | IESD 2014 (Intelligent Exploration of Semantic Data) | 2014-10-20to2014-10-20 | Riva del Garda, Italy | SAICSIT 2014 (Annual Research Conference of the South African Institute for Computer Scientists and Information Technologists) | 2014-09-28to2014-10-01 | Gautend, South Africa | INTERACCIÓN 2014 (XV Congreso Internacional de Interacción Persona-Ordenador) | 2014-09-10to2014-09-12 | Tenerife, Spain | i-USEr 2014 (3rd International Conference on User Science and Engineering ) | 2014-09-02to2014-09-05 | Shah Alam, Malaysia | ECCE'2014 (32nd Annual European Conference on Cognitive Ergonomics) | 2014-09-01to2014-09-03 | Toulouse, France | HCI-Aero 2014 (International Conference on Human-Computer Interaction in Aeronautics) | 2014-07-30to2014-08-01 | Silicon Valley, United State | HCI International 2011 (16th International Conference on Human-Computer Interaction) | 2014-06-22to2014-06-27 | Hareklion, Greece | DSN 2014 (44th Annual IEEE/IFIP International Conference on Dependable Systems and Networks ) | 2014-06-23to2014-06-26 | Atlanta, United States | SACLA 2014 (43rd SACLA Conference) | 2014-06-24to2014-06-26 | Port Elizabeth, South Africa | MIDI 2014 (9th International Conference on Multimedia-Interaction-Design-Innovation) | 2014-06-24to2014-06-25 | Warsaw, Poland | EICS 2014 (6th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2014-06-17to2014-06-20 | Roma, Italy | HFIV 2014 (Workshop on Human Factors for Intelligent Vehicles) at IV'14 | 2014-06-08to2014-06-11 | Deaborn Michigan, United State | CTS 2014 (International Symposium on Collaborative Technologies and Systems) | 2014-05-19to2014-05-23 | Minneapolis, United States | HMI 2014 (3rd Workshop on HCI) | 2014-04-15to2014-04-18 | Jeju Island, Korea | EATIS 2014 (7th Euro American Association on Telematics and Information Systems) | 2014-04-02to2014-04-04 | Valparaíso, Chile | SAC 2014 (29th Symposium On Applied Computing) | 2014-03-24to2014-03-28 | Gyeongju, Korea | ERTS 2014 (European Congress on Embedded Real-Time Software) | 2014-02-05to2014-02-07 | Toulouse, France 
+ Reviewer | ACE 2014 (11th International Conference on Advances in Computer Entertainment Technology) | 2014-11-11to2014-11-14 | Funchal, Madeira 
+ 2013 
+ Co-chair for Tutorial | EICS 2013 (5th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2013-06-24to2013-06-27 | London, United Kingdom 
+ Co-chair for Research Papers | ATACCS'2013 (3rd International Conference on Application and Theory of Automation in Command and Control Systems) | 2013-05-28to2013-05-28 | Naples, Italy 
+ Co-chair for Engineering Community | CHI 2013 (31st ACM SIGCHI International Conference on Human Factors in Computing Systems) | 2013-04-28to2013-04-28 | Paris, France 
+ Co-chair | HFSSCS 2013 (Workshop on Human Factors in the Safety and Security of Critical Systems ) | 2013-03-18to2013-03-18 | Glasgow, Scotland 
+ Program Committee Member | CLIHC 2013 (6th Latin American Conference on Human-computer Interaction) | 2013-12-05to2013-12-06 | Guanacaste, Costa Rica | AmI 2013 (5th International Joint Conference on Ambient Intelligence) | 2013-12-03to2013-12-05 | Dublin, Ireland | ACE 2013 (10th International Conference on Advances in Computer Entertainment Technology) | 2013-11-12to2013-11-15 | University of Twente, Netherlands | JCC 2013 (Jornadas Chilenas de Computación) | 2013-11-11to2013-11-15 | Temuco, Chile | HUDEP 2013 (3rd edition of Human Dependability Workshop) | 2013-11-13to2013-11-14 | Oberpfaffenhofen, Germany | ICEC 2013 (12th International Conference on Entertainment Computing) | 2013-10-16to2013-10-18 | São Paulo, Brazil | SAICSIT 2013 (Annual Research Conference of the South African Institute for Computer Scientists and Information Technologists) | 2013-10-07to2013-10-09 | East London, South Africa | IHC 2013 (XII Simpósio de Fatores Humanos em Sistemas Computacionais) | 2013-10-08to2013-10-08 | Manaus, Brazil | SAFECOMP 2013 (32nd International Conference on Computer Safety, Reliability and Security) | 2013-09-24to2013-09-27 | Toulouse, France | VLHCC 2013 (2nd Workshop on HCI) | 2013-09-15to2013-09-19 | San Jose, United State | INTERACCIÓN 2013 (XIV Congreso Internacional de Interacción Persona-Ordenador) | 2013-09-17to2013-09-17 | Madrid, Spain | INTERACT 2013 (14th IFIP TC13 International Conference on Human-Computer Interaction) | 2013-09-08to2013-09-08 | Cape Town, South Africa | ECCE'2013 (31st Annual European Conference on Cognitive Ergonomics) | 2013-08-26to2013-08-28 | Toulouse, France | AAAI-13 (Workshop on Activity Context-aware System Architectures) | 2013-08-14to2013-08-15 | Beijing, China | HCI International 2011 (15th International Conference on Human-Computer Interaction) | 2013-07-21to2013-07-26 | Las Vegas, United States | EICS 2013 (5th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2013-06-24to2013-06-27 | London, United Kingdom | COLLA 2013 (3rd International Conference on Advanced Collaborative Networks, Systems and Applications) | 2013-06-21to2013-06-26 | Venice, Italy | HFIV 2013 (Workshop on Human Factors for Intelligent Vehicles) | 2013-06-23to2013-06-26 | Gold Coast, Australia | MIDI 2013 (8th International Conference on Multimedia-Interaction-Design-Innovation) | 2013-06-24to2013-06-25 | Warsaw, Poland | FMIS 2013 (5th International Workshop on Formal Methods for Interactive Systems) | 2013-06-24to2013-06-24 | London, United Kindom | WORCS 2013 (2nd Workshop on Open Resilient human-aware Cyber-physical Systems) | 2013-06-24to2013-06-24 | Budapest, Hungary | CTS 2013 (International Symposium on Collaborative Technologies and Systems) | 2013-05-20to2013-05-24 | San Diego, United States | ArtsIT 2013 (3rd International Conference on Arts and Technology) | 2013-03-21to2013-03-23 | Milano, Italy 
+ 2012 
+ Chair for doctoral consortium | Ergo'IHM 2012 (IHM 2012 24ème Conférence Francophone sur l'Interaction Homme-Machine & ErgoIA 2012) | 2012-10-17to2012-10-17 | Biarritz, France 
+ Chair for Fun and Food | FnG 2012 (4th International Conference on Fun and Games) | 2012-09-04to2012-09-04 | Toulouse, France 
+ Chair for Track | ESREL 2012 (Safety and Reliability for managing Risk) | 2012-06-25to2012-06-29 | Helsinki, Finland 
+ Co-chair for Full paper | EICS 2012 (4th ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2012-06-25to2012-06-25 | Copenhagen, Denmark 
+ Co-chair for Papers | ATACCS'2012 (2nd International Conference on Application and Theory of Automation in Command and Control Systems) | 2012-05-29to2012-05-29 | London, United Kingdom 
+ Associated chair | IUI 2012 (17th International Conference on Intelligent User Interfaces) | 2012-02-14to2012-02-17 | Lisbon, Portugal 
+ Program Committee Member | HCSE 2012 (4th Conference on Human-Centred Software Engineering) | 2012-10-29to2012-10-29 | Toulouse, France | CARI 2012 (11th African Conference on Research in Computer Science and Applied Mathematics) | 2012-10-13to2012-10-16 | Algiers, Algeria | SEW 2012 (35th IEEE Software Engineering Workshop) | 2012-10-12to2012-10-13 | Heraclion, Greece | INTERACCIÓN 2012 (XIII Congreso Internacional de Interacción Persona-Ordenador) | 2012-10-03to2012-10-05 | Elche, Spain | SAICSIT 2012 (Annual Research Conference of the South African Institute for Computer Scientists and Information Technologists) | 2012-10-01to2012-10-03 | Centurion, South Africa | ICEC 2012 (11th International Conference on Entertainment Computing) | 2012-09-26to2012-09-29 | Bremen, Germany | HCI-Aero 2012 (International Conference on Human-Computer Interaction in Aeronautics) | 2012-09-12to2012-09-12 | Brussels, Belgium | ECCE'2012 (30th Annual European Conference on Cognitive Ergonomics) | 2012-08-28to2012-08-28 | Edinburgh, United Kingdom | COLLA 2012 (2nd International Conference on Advanced Collaborative Networks, Systems and Applications) | 2012-06-24to2012-06-29 | Venice, Italy | SETIT 2012 (International Workshop IHM 2012) | 2012-06-15to2012-06-18 | Sousse, Tunisia | HFIV 2012 (Workshop on Human Factors for Intelligent Vehicles) | 2012-06-03to2012-06-03 | Alcalá de Henares, Spain | CTS 2012 (International Symposium on Collaborative Technologies and Systems) | 2012-05-21to2012-05-25 | Denver, United States | AVI 2012 (11st International Working Conference on Advanced Visual Interfaces) | 2012-05-21to2012-05-21 | Naples, Italy | ERTS 2012 (European Congress on Embedded Real-Time Software) | 2012-02-01to2012-02-01 | Toulouse, France 
+ 2011 
+ General co-chair | INTERACT 2011 (13th IFIP TC13 International Conference on Human-Computer Interaction) | 2011-09-05to2011-09-09 | Lisbon, Portugal 
+ Co-chair for Papers | ATACCS'2011 (1st International Conference on Application and Theory of Automation in Command and Control Systems) | 2011-05-26to2011-05-26 | Barcelona, Spain 
+ Program Committee Member | HPGC-11 (2011 FTRA International Workshop on Human centric computing, P2P, Grid and Cloud computing) | 2011-12-12to2011-12-15 | Jeju, South Korea | ArtsIT 2011 (2nd International Conference on Arts and Technology) | 2011-12-07to2011-12-08 | Esbjerg, Denmark | USAB 2011 (7th Conference of the Austrian Computer Society Workgroup: Human-Computer Interaction) | 2011-11-25to2011-11-26 | Graz, Austria | ACE 2011 (8th International Conference on Advances in Computer Entertainment Technology) | 2011-11-08to2011-11-11 | Lisbon, Portugal | IHC 2011 (X Simpósio de Fatores Humanos em Sistemas Computacionais) | 2011-10-25to2011-10-28 | Porto de Galinhas, Brazil | SMC 2011 (IEEE International Conference on Systems, Man and Cybernetics) | 2011-10-09to2011-10-09 | Anchorage, United States | ICEC 2011 (10th International Conference on Entertainment Computing) | 2011-10-05to2011-10-08 | Vancouver, Canada | CHItaly2011 (9th biannual conference of the Italian chapter of ACM SIGCHI) | 2011-09-13to2011-09-16 | Alghero, Italy | ComDeisMoto 2011 (IFIP WG 2.7/13.4 Workshop on Combining Models and Design for interactive systems) at INTERACT 2011 | 2011-09-06to2011-09-06 | Lisbon, Portugal | PUX 2011 (IFIP's Working Group 13.2 Workshop on Software and Usability Engineering Cross-Pollination: Pattrns, Usability and User Experience) at INTERACT 2011 | 2011-09-06to2011-09-06 | Lisbon, Portugal | INTERACCIÓN 2011 (XII Congreso Internacional de Interacción Persona-Ordenador) | 2011-09-02to2011-09-05 | Lisbon, Portugal | MobileHCI 2011 (13th International Conference on Human-Computer Interaction with Mobile Devices and Services) | 2011-08-30to2011-09-02 | Stockholm, Sweden | ECCE'2011 (29th Annual European Conference on Cognitive Ergonomics) | 2011-08-24to2011-08-24 | Rostock, Germany | AAAI-11 (Workshop on Activity Context-aware System Architectures) | 2011-08-07to2011-08-08 | San Francisco, United States | HCI International 2011 (14th International Conference on Human-Computer Interaction) | 2011-07-09to2011-07-14 | Orlando, United States | BCS HCI 2010 (24th British Computer Society Conference on Human-Computer Interaction) | 2011-07-04to2011-07-08 | Newcastle-upon-Tyne, United Kingdom | HCI Ed 2011 (HCI Educators Workshop) | 2011-07-04to2011-07-05 | Newcastle-upon-Tyne, United Kingdom | FMIS 2011 (4th International Workshop on Formal Methods for Interactive Systems) | 2011-06-21to2011-06-21 | Limerick, Ireland | SEW 2011 (34th IEEE Software Engineering Workshop) | 2011-06-20to2011-06-21 | Limerick, Ireland | EICS 2011 (3rd ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2011-06-13to2011-06-13 | Pisa, Italy | IS-EUD 2011 (3rd International Symposium on End-User Development) | 2011-06-07to2011-06-10 | Torre Canne, Italy | CTS 2011 (International Symposium on Collaborative Technologies and Systems) | 2011-05-23to2011-05-27 | Philadelphia, United States 
+ 2010 
+ General co-chair | HCI-Aero 2010 (International Conference on Human-Computer Interaction in Aeronautics) | 2010-11-03to2010-11-03 | Cape Canaveral, United States 
+ Co-chair for Publicity | EICS 2010 (2nd ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2010-06-19to2010-06-19 | Berlin, Germany 
+ Program Committee Member | USAB 2010 (6th Conference of the Austrian Computer Society Workgroup: Human-Computer Interaction) | 2010-11-04to2010-11-05 | Klagenfurt, Austria | CARI 2010 (10th African Conference on Research in Computer Science and Applied Mathematics) | 2010-10-18to2010-10-21 | Yamoussoukro, Ivory Coast | ErgoIA 2010 (Ergonomie et Informatique Avancée) | 2010-10-13to2010-10-15 | Biarritz, France | HCSE 2010 (3rd Conference on Human-Centred Software Engineering) | 2010-10-14to2010-10-15 | Reykjavik, Iceland | SAICSIT 2010 (Annual Research Conference of the South African Institute for Computer Scientists and Information Technologists) | 2010-10-11to2010-10-13 | Bela Bela, South Africa | IHC 2010 (IX Simpósio de Fatores Humanos em Sistemas Computacionais) | 2010-10-05to2010-10-05 | Belo Horizonte, Brazil | SIGDOC 2010 (28th ACM International Conference on Design of Communication) | 2010-09-26to2010-09-26 | São Paulo, Brazil | IHM 2010 (22ème Conférence Francophone sur l'Interaction Homme-Machine) | 2010-09-20to2010-09-23 | Luxembourg, Luxembourg | FnG 2010 (3rd International Conference on Fun and Games) | 2010-09-15to2010-09-17 | Leuven, Belgium | MobileHCI 2010 (12th International Conference on Human-Computer Interaction with Mobile Devices and Services) | 2010-09-07to2010-09-10 | Lisbon, Portugal | CEDI 2010 (Congreso Internacional de Interaccion Persona-Ordenador) | 2010-09-07to2010-09-10 | Valencia, Spain | ESREL 2020 (Safety and Reliability for managing Risk) | 2010-09-05to2010-09-09 | Rhodes, Greece | DeSE 2010 (Developments in eSystems Engineering) | 2010-09-06to2010-09-08 | London, United Kingdom | ECCE'2010 (28th Annual European Conference on Cognitive Ergonomics) | 2010-08-25to2010-08-27 | Delft, Netherlands | LUDOVIA 2010 (7ème édition de l'Université d'été de la e-éducation et des applications Multimédia Ludiques et Pédagogiques) | 2010-08-24to2010-08-27 | Ax-les-Thermes, France | AVI 2010 (10th International Working Conference on Advanced Visual Interfaces) | 2010-05-25to2010-05-25 | Rome, Italy | CTS 2010 (International Symposium on Collaborative Technologies and Systems) | 2010-05-17to2010-05-21 | Chicago, United States | HUMOUS 2010 (Humans Operating Unmanned Systems) | 2010-04-26to2010-04-26 | Toulouse, France | MDDAUI 2010 (5th International Workshop on Model-Driven Development of Advanced User Interfaces) at CHI 2010 | 2010-04-10to2010-04-10 | Atlanta (Georgia), United States 
+ 2009 
+ Co-chair for conferences | IHM 2009 (21ème Conférence Francophone sur l'Interaction Homme-Machine) | 2009-10-13to2009-10-16 | Grenoble, France 
+ Chair for Program | HESSD 2009 (7th IFIP WG 13.5 Working Conference Human Error, Safety and Systems Development) | 2009-09-23to2009-09-23 | Brussels, Belgium 
+ Co-chair for Short papers | INTERACT 2009 (12th IFIP TC13 International Conference on Human-Computer Interaction) | 2009-08-24to2009-08-28 | Uppsala, Sweden 
+ Co-chair for Publicity | EICS 2009 (1st ACM SIGCHI Symposium on Engineering Interactive Computing Systems) | 2009-07-14to2009-07-14 | Pittsburgh, United States 
+ Program Committee Member | MobileHCI 2009 (11th International Conference on Human-Computer Interaction with Mobile Devices and Services) | 2009-09-15to2009-09-18 | Bonn, Germany | HCI International 2009 (13th International Conference on Human-Computer Interaction) | 2009-07-19to2009-07-19 | San Diego, United States | CTS 2009 (International Symposium on Collaborative Technologies and Systems) | 2009-05-18to2009-05-22 | Baltimore, United States | ARES 2009 (4th International Conference on Availability, Reliability and Security) | 2009-03-16to2009-03-19 | Fukuoka, Japan | SecUSAB 2009 (1st International Workshop on Security and Usability) at ARES 2009 | 2009-03-16to2009-03-19 | Fukuoka, Japan | SAC 2009 (24th Symposium On Applied Computing) | 2009-03-09to2009-03-12 | Honolulu, United States | IS-EUD 2009 (2nd International Symposium on End-User Development) | 2009-03-02to2009-03-04 | Siegen, Germany | MDDAUI 2009 (4th International Workshop on Model-Driven Development of Advanced User Interfaces) | 2009-02-08to2009-02-08 | Sanibel, United States 
+ 2008 
+ Co-chair for doctoral consortium | IHM 2008 (20ème Conférence Francophone sur l'Interaction Homme-Machine) | 2008-09-02to2008-09-05 | Metz, France 
+ General co-chair | DSV-IS 2008 (15th International Workshop on the Design, Verification and Specification of Interactive Systems) | 2008-07-16to2008-07-18 | Kingston, Canada 
+ Co-chair for Workshop | CHI 2008 (26th ACM SIGCHI International Conference on Human Factors in Computer Systems) | 2008-04-05to2008-04-10 | Florence, Italy 
+ Program Committee Member | ISVC 2008 (4th International Symposium on Visual Computing) | 2008-12-01to2008-12-03 | Las Vegas, United States | USAB 2008 (4th Conference of the Austrian Computer Society Workgroup: Human-Computer Interaction) | 2008-11-20to2008-11-21 | Graz, Austria | SEFM 2008 (6th IEEE International Conferences on Software Engineering and Formal Methods) | 2008-11-10to2008-11-14 | Cape Town, South Africa | CARI 2008 (9th African Conference on Research in Computer Science and Applied Mathematics) | 2008-10-27to2008-10-30 | Rabat, Morocco | IHC 2008 (VIII Simpósio Brasileiro de Fatores Humanos em Sistemas Computacionais) | 2008-10-21to2008-10-21 | Porto Alegre, Brazil | ErgoIA 2008 (Ergonomie et Informatique Avancée) | 2008-10-15to2008-10-17 | Biarritz, France | SAICSIT 2008 (Annual Research Conference of the South African Institute for Computer Scientists and Information Technologists) | 2008-10-06to2008-10-08 | Wilderness, South Africa | HCI-Aero 2008 (International Conference on Human-Computer Interaction in Aeronautics) | 2008-10-01to2008-10-03 | Toulouse, France | HCSE 2008 (2nd Conference on Human-Centred Software Engineering) at EIS 2008 | 2008-09-25to2008-09-26 | Pisa, Italy | TAMODIA'2008 (7th International workshop on TAsk MOdels and DIAgrams) at EIS 2008 | 2008-09-25to2008-09-26 | Pisa, Italy | I-USED 2008 (International Workshop on the Interplay between Usability Evaluation and Software Development) | 2008-09-24to2008-09-24 | Pisa, Italy | SAFECOMP 2008 (27th International Conference on Computer Safety, Reliability and Security) | 2008-09-22to2008-09-22 | Newcastle-upon-Tyne, United Kingdom | ECCE08 (15th European Conference on Cognitive Ergonomics) | 2008-09-16to2008-09-19 | Funchal, Portugal | WCC 2008 (20th IFIP World Computer Congress) | 2008-09-07to2008-09-10 | Milan, Italy | HCI4MED 2008 (1st Workshop Human-Computer Interaction for Medicine and Health Care) | 2008-09-02to2008-09-02 | Liverpool, United Kingdom | CADUI 2008 (7th International Conference on Computer-Aided Design of User Interfaces) | 2008-06-11to2008-06-13 | Albacete, Spain | INTERACCIÓN 2008 (IX Congreso Internacional de Interacción Persona-Ordenador) | 2008-06-09to2008-06-11 | Albacete, Spain | AVI 2008 (9th International Working Conference on Advanced Visual Interfaces) | 2008-05-28to2008-05-30 | Naples, Italy | Sociotech-ID 2008 (Workshop on New Sociotechnical Insights in Interaction Design) | 2008-05-30to2008-05-30 | London, United Kingdom | CTS 2008 (International Symposium on Collaborative Technologies and Systems) | 2008-05-19to2008-05-23 | Irvine (California), United States | ISCRAM 2008 (5th International Conference on Information Systems for Crisis Response and Management) | 2008-05-04to2008-05-07 | Washington, D.C., United States | MOMPES 2008 (5th International Workshop on Model-based Methodologies for Pervasive and Embedded Software) | 2008-04-05to2008-04-05 | Budapest, Hungary 
+ 2006 
+ Co-chair for doctoral consortium | IHM 2006 (18ème Conférence Francophone sur l'Interaction Homme-Machine) | 2006-04-18to2006-04-18 | Montréal, Canada 
+ Program Committee Member | IHC 2006 (VII Simpósio sobre Fatores Humanos em Sistemas Computacionais) | 2006-11-19to2006-11-19 | Natal, Brazil | ISVC 2006 (2nd International Symposium on Visual Computing) | 2006-11-06to2006-11-08 | Lake Tahoe, United States | FMIS 2006 (1st International Workshop on Formal Methods for Interactive Systems) | 2006-10-31to2006-10-31 | Macau, China | InSciT 2006 (International Conference on Multidisciplinary Sciences & Technologies) | 2006-10-25to2006-10-28 | Mérida, Spain | TAMODIA'2006 (5th International workshop on TAsk MOdels and DIAgrams) | 2006-10-23to2006-10-24 | Hasselt, Belgium | ErgoIA 2006 (Ergonomie et Informatique Avancée) | 2006-10-11to2006-10-13 | Biarritz, France | HCI-Aero 2008 (International Conference on Human-Computer Interaction in Aeronautics) | 2006-09-20to2006-09-20 | Seattle, United States | CiDE.9 (9th International Conference on Electronic Document) | 2006-09-18to2006-09-20 | Fribourg, Switzerland | ESREL 2006 (Safety and Reliability for managing Risk) | 2006-09-18to2006-09-18 | Estoril, Portugal | DSV-IS 2006 (13rd International Workshop on the Design, Verification and Specification of Interactive Systems) | 2006-07-26to2006-07-26 | Trinity College (Dublin, Ireland) | CADUI 2006 (6th International Conference on Computer-Aided Design of User Interfaces) | 2006-06-06to2006-06-08 | Bucharest, Romania | AVI 2006 (8th International Working Conference on Advanced Visual Interfaces)) | 2006-05-23to2006-05-26 | Venice, Italy | CTS 2006 (International Symposium on Collaborative Technologies and Systems) | 2006-05-14to2006-05-17 | Las Vegas, United States 
+ 2005 
+ Chair for conferences | IHM 2005 (17ème Conférence Francophone sur l'Interaction Homme-Machine) | 2005-09-27to2005-09-30 | Toulouse, France 
+ Co-chair for Tutorials | INTERACT 2005 (10th IFIP TC13 International Conference on Human-Computer Interaction) | 2005-09-12to2005-09-16 | Rome, Italy 
+ Program Committee Member | ISVC 2005 (1st International Symposium on Visual Computing) | 2005-12-05to2005-12-07 | Lake Tahoe, United States | IASTED-HCI 2005 (IASTED International Conference on Human Computer Interaction) | 2005-11-14to2005-11-16 | Phoenix (Arizona), United States | MDDAUI 2005 (1st International Workshop on Model-Driven Development of Advanced User Interfaces) | 2005-10-02to2005-10-02 | Montego Bay, Jamaica | TAMODIA'2005 (4th International workshop on TAsk MOdels and DIAgrams) | 2005-09-26to2005-09-27 | Gdansk, Poland | ECSCW 2005 (9th European Conference on Computer-Supported Cooperative Work) | 2005-09-18to2005-09-22 | Paris, France | UIQM 2005 (International COST 294 Workshop on User Interface Quality Models) at INTERACT 2005 | 2005-09-12to2005-09-13 | Rome, Italy | SNI 2005 (Workshop on Safeguarding National Infrastructures: Integrated Approaches to Failure in Complex Networks) | 2005-08-25to2005-08-27 | Glasgow, United Kingdom | DSV-IS 2005 (12nd International Workshop on the Design, Verification and Specification of Interactive Systems) | 2005-07-13to2005-07-13 | Newcastle-upon-Tyne, United Kingdom | CiD 2005 (2nd Workshop on Complexity in Design and Engineering) | 2005-03-10to2005-03-10 | Glasgow, United Kingdom 
+ 2004 
+ Chair for Program committee | TAMODIA'2004 (3rd International workshop on TAsk MOdels and DIAgrams) | 2004-11-15to2004-11-16 | Prague, Czech Republic 
+ Co-chair for conferences | HESSD 2004 (6th IFIP 13.5 Working Conference on Human Error,Safety and Systems Development) | 2004-08-22to2004-08-27 | Toulouse, France 
+ Co-chair for conferences | EHCI-DSVIS 2004 (Engineering Human Computer Interaction and Interactive Systems EHCI 2004 9th IFIP Working Conference on Engineering for Human-Computer Interaction & DSV-IS 2004 11th International Workshop on the Design, Verification and Specification of Interactive Systems ) | 2004-07-11to2004-07-13 | Hamburg, Germany 
+ Co-chair for European research track | CHI 2004 (22th ACM SIGCHI International Conference on Human Factors in Computing Systems) | 2004-04-24to2004-04-29 | Vienna, Austria 
+ Program Committee Member | HCI-Aero 2004 (International Conference on Human-Computer Interaction in Aeronautics) | 2004-09-29to2004-09-29 | Toulouse, France | ECCE-12 (12th European Conference on Cognitive Ergonomics) | 2004-09-12to2004-09-15 | York, United Kingdom | WCC 2004 (18th IFIP World Computer Congress) | 2004-08-22to2004-08-27 | Toulouse, France | AVI 2004 (7th International Working Conference on Advanced Visual Interfaces) | 2004-05-25to2004-05-28 | Gallipoli, Italy | CADUI 2004 (5th International Conference on Computer-Aided Design of User Interfaces) | 2004-01-13to2004-01-16 | Funchal, Portugal 
+ 2003 
+ Co-chair for Full paper | BCS HCI 2003 (17th British Computer Society Conference on Human-Computer Interaction) | 2003-09-08to2003-09-12 | Bath, United Kingdom 
+ Co-chair for Workshop | WSEH 2003 (Workshop on Software Engineering and HCI) at INTERACT 2003 | 2003-09-01to2003-09-01 | Zurich, Switzerland 
+ French speaking Europe Liaison | CHI 2003 (21th ACM SIGCHI International Conference on Human Factors in Computing Systems) | 2003-04-05to2003-04-10 | Fort Lauderdale, United States 
+ Program Committee Member | ECSCW 2003 (8th European Conference on Computer-Supported Cooperative Work) | 2003-09-14to2003-09-18 | Helsinki, Finland | ALCAA 2003 (Agents Logiciels, Coopération, Apprentissage et Activité humaine) | 2003-09-04to2003-09-05 | Bayonne, France | DSV-IS 2003 (10th International Workshop on the Design, Verification and Specification of Interactive Systems) | 2003-06-11to2003-06-11 | Funchal, Portugal | ICSE 2003 (1st International Workshop on the Relationships between Software Engineering and Human-Computer Interaction) | 2003-05-03to2003-05-04 | Portland (Oregon), United States | WEUD 2003 (Workshop on End-User Development) at CHI 2003 | 2003-04-06to2003-04-06 | Fort Lauderdale, United States 
+ 2002 
+ Co-chair for Full paper | IHM 2002 (14ème Conférence Francophone sur l'Interaction Homme-Machine) | 2002-11-26to2002-11-26 | Poitiers, France 
+ Associated chair for Papers | CHI 2002 (20th ACM SIGCHI International Conference on Human Factors in Computing Systems) | 2002-04-20to2002-04-20 | Minneapolis, United States 
+ Program Committee Member | HCI-Aero 2002 (International Conference on Human-Computer Interaction in Aerospace) | 2002-10-23to2002-10-23 | Cambridge, United States | TAMODIA'2002 (1st International Workshop in Task Models and Diagrams for User Interface Design) | 2002-07-18to2002-07-18 | Bucharest, Romania | EAM 2002 (21st European Annual Conference on Human Decision Making and Manual Control) | 2002-07-15to2002-07-16 | Glasgow, United Kingdom | DSV-IS 2002 (9th International Workshop, Design Specification and Verification of Interactive Systems) | 2002-06-12to2002-06-12 | Rostock, Germany | CADUI 2002 (4th International Conference on Computer-Aided Design of User Interfaces) | 2002-05-15to2002-05-17 | Valenciennes, France 
+ 2001 
+ Co-chair for Short papers | IHM-HCI 2001 (Joint BCS HCI and IHM Annual conferences BCS HCI 2001 15th British Computer Society Conference on Human-Computer Interaction & IHM 2001 13ème Conférence Francophone sur l'Interaction Homme-Machine) | 2001-09-10to2001-09-10 | Lille, France 
+ Co-chair for Program | EHCI 2001 (8th IFIP Working Conference on Engineering for Human-Computer Interaction) | 2001-05-11to2001-05-13 | Toronto, Canada 
+ Program Committee Member | ICINASTe 2001 (7th International Conference on Information Networks and System Technologies) | 2001-10-16to2001-10-18 | Minsk, Belarus | ALCAA 2001 (Agents Logiciels, Coopération, Apprentissage et Activité humaine) | 2001-09-06to2001-09-08 | Bayonne, France | DSV-IS 2001 (8th International Workshop on Design, Specification and Verification of Interactive Systems) | 2001-06-13to2001-06-13 | Glasgow, United Kingdom 
+ 2000 
+ Co-chair for doctoral consortium | Ergo'IHM 2000 (IHM 2000 12ème Conférence Francophone sur l'Interaction Homme-Machine & ErgoIA 2000) | 2000-10-03to2000-10-06 | Biarritz, France 
+ European liaison | BCS HCI 2000 (14th British Computer Society Conference on Human-Computer Interaction) | 2000-09-05to2000-09-08 | Sunderland, United Kingdom 
+ Co-chair for Program | DSV-IS 2000 (7th International Workshop on Design, Specification and Verification of Interactive Systems) | 2000-06-05to2000-06-06 | Limerick, Ireland 
+ Co-chair for Special Interest Groups | CHI 2000 (19th ACM SIGCHI International Conference on Human Factors in Computing Systems) | 2000-04-01to2000-04-06 | The Hague, Netherlands 
+ Program Committee Member | WSUCA (IFIP WG 13.5 Workshop on Safety and Usability Concerns in Aeronautics) at HCI-Aero 2000 | 2000-09-27to2000-09-27 | Toulouse, France 
+ 1999 
+ Program Committee Member | IHM 1999 (11ème Conférence Francophone sur l'Interaction Homme-Machine) | 1999-11-22to1999-11-26 | Montpellier, France | CADUI 1999 (3rd International Conference on Computer-Aided Design of User Interfaces) | 1999-10-21to1999-10-23 | Leuven, Belgium | FM 99 (Mini-track on Formal Methods and Human Computer Interaction) | 1999-09-20to1999-09-24 | Toulouse, France | INTERACT 1999 (7th IFIP TC13 International Conference on Human-Computer Interaction) | 1999-08-30to1999-09-03 | Edinburgh, United Kingdom | DSV-IS 1999 (6th International Workshop on Design, Specification and Verification of Interactive Systems) | 1999-06-02to1999-06-04 | Braga, Portugal 
+ 1998 
+ Organizing committee member 
+ European liaison | BCS HCI 1998 (13th British Computer Society Conference on Human-Computer Interaction) | 1998-09-01to1998-09-04 | Sheffield, United Kingdom 
+ Organizing committee member | WSCHI 98 (Workshop on Designing User Interfaces for Safety Critical Systems) at CHI 1998 | 1998-04-18to1998-04-23 | Los Angeles, United States 
+ Program Committee Member | EHCI 1998 (7th IFIP Working Conference on Engineering for Human-Computer Interaction) | 1998-09-14to1998-09-18 | Heraclion, Greece | IHM 1998 (10ème Conférence Francophone sur l'Interaction Homme-Machine) | 1998-09-02to1998-09-04 | Nantes, France | DSV-IS 1998 (5th International Workshop on Design, Specification and Verification of Interactive Systems) | 1998-06-03to1998-06-05 | Abingdon, United Kingdom | WSCHI 98 (Workshop on Designing User Interfaces for Safety Critical Systems) at CHI 1998 | 1998-04-18to1998-04-23 | Los Angeles, United States 
+ 1997 
+ Program Committee Member | IHM 1997 (9ème Conférence Francophone sur l'Interaction Homme-Machine) | 1997-09-10to1997-09-12 | Poitiers, France | DSV-IS 1997 (4th International Workshop on Design, Specification and Verification of Interactive Systems) | 1997-06-04to1997-06-06 | Granada, Spain 
+ 1996 
+ Organizing committee member | BCS HCI 1996 (11th British Computer Society Conference on Human-Computer Interaction) | 1996-08-20to1996-08-23 | London, United Kingdom 
+ Organizing committee member | WSCHI 96 (Workshop on Designing User Interfaces for Safety Critical Systems) at CHI 1996 | 1996-04-13to1996-04-18 | Vancouver, Canada 
+ Program Committee Member | IHM 1996 (8ème Conférence Francophone sur l'Interaction Homme-Machine) | 1996-09-16to1996-09-18 | Grenoble, France | BCS-FACS 1996 (Workshop on Formal Aspects of the Human Computer Interface) | 1996-09-10to1996-09-12 | Sheffield, United Kingdom | BCS HCI 1996 (11th British Computer Society Conference on Human-Computer Interaction) | 1996-08-20to1996-08-23 | London, United Kingdom | CADUI 1996 (2nd International Conference on Computer-Aided Design of User Interfaces) | 1996-06-05to1996-06-07 | Namur, Belgium | DSV-IS 1996 (3rd International Workshop on Design, Specification and Verification of Interactive Systems) | 1996-06-05to1996-06-07 | Namur, Belgium | WSCHI 96 (Workshop on Designing User Interfaces for Safety Critical Systems) at CHI 1996 | 1996-04-13to1996-04-18 | Vancouver, Canada 
+ 1995 
+ Organizing committee member | IHM 1995 (7ème Conférence Francophone sur l'Interaction Homme-Machine) | 1995-10-11to1995-10-13 | Toulouse, France 
+ Organizing committee member | DSV-IS 1995 (2nd International Workshop on the Design, Verification and Specification of Interactive Systems) | 1995-06-07to1995-06-09 | Bonas, France 
+ Program Committee Member | IHM 1995 (7ème Conférence Francophone sur l'Interaction Homme-Machine) | 1995-10-11to1995-10-13 | Toulouse, France | BCS HCI 1995 (10th British Computer Society Conference on Human-Computer Interaction) | 1995-09-01to1995-09-01 | Huddersfield, United Kingdom | DSV-IS 1995 (2nd International Workshop on the Design, Verification and Specification of Interactive Systems) | 1995-06-07to1995-06-09 | Bonas, France
+
+3. Website of FMIS_3: http://www1.isti.cnr.it/~Massink/
+Website information of FMIS_3:
+
+Dr. Mieke Massink 
+ Senior Researcher 
+ Consiglio Nazionale delle Ricerche 
+ Istituto ISTI (former CNUCE) 
+ Formal Methods && Tools Group 
+ Area della Ricerca CNR 
+ Via Moruzzi 1 
+ I-56124 Pisa (PI) 
+ ITALYphone: +39 0503152981 
+ fax : +39 0503138091 or +39 0503138092 
+ email: mieke.massinkisti.cnr.it 
+ http://www1.isti.cnr.it/~Massink 
+ http://www.isti.cnr.it/People/M.MassinkLast update: December 2023 by Mieke Massink 
+ Brief Biography 
+ Mieke Massink studied Computer Science at theUniversity of Nijmegen(now Radboud University Nijmegen) where she 
+ graduated in 1988 in Computer Science. In 1989 she was research assistant at theUniversity of Twenteand teaching assistant 
+ at theUniversity of Nijmegen. From 1989 to 1995 she was employed by thehref="http://www.nwo.nl" - Dutch Organisation for Scientific Research
+(NWO) 
+ in the research group on declarative formalisms at theUniversity of Nijmegenwere she received her 
+ Ph. D. degree in 1996 supervised byProf. dr. ir. R. T. Boute. The topic of her thesis concerned a study on a Functional Approach to Concurrency Theory 
+ combining declarative specification techniques with those of process algebra. 
+ During her Ph. D. studies she spent several times a few months atC.N.R.-Ist. CNUCE, 
+ Pisa, Italy as Visiting Researcher. From 1996 to 1997 she was Visiting Researcher atCNUCEin thecontext of the 
+ European Human Capital and Mobility (HCM) programme for the IRIS project (Interactionally Rich Immersive Systems) 
+ in the IRS Research Network (Interactively Rich Systems). Her scientific activity within that network was to apply and develop 
+ formal methods for the specification, design and verification of Human Computer Interfaces. 
+ In 1997 and 1998 she has been teaching a course on Social Responsibility of Computer Scientists at theUniversity of Pisa. 
+ In 1998 she was Visiting Researcher at theUniversity of York, U.K., in the context of the European TMR research 
+ networkTACIT(Theory and Application of Continuous Interaction Techniques) were she was hosted by the 
+ Human Computer Interaction group. She continued her TMRTACITfellowship from 1998 to June 2000 atCNUCE. 
+ In June 2000 she joinedCNUCEas a researcher. In 2002 CNUCE and IEI joined to form the research instituteISTIwhere 
+ she continued her research in theFormal Methods and Tools Group. She is currently Senior Researcher in the same group. 
+ Present Research Interests 
+ My current main research interests are in formal specification and verification of semantic models and the design of related tools for concurrent systems, in particular: 
+ Semantic models for process algebras and automata and their quantitative extensions; 
+ Collective adaptive systems; 
+ Spatial and Spatio-temporal model checking; 
+ Formal techniques and tools for the specification, design and verification of Human Computer Interaction. 
+ Computers and computer technology can be used in many ways and have often quite some impact on the way society is being 
+ shaped. I'm interested in studying the issues at stake and involve a wider public in discussion and decision making on these issues.Selected recent presentations 
+ Invited presentations: 
+ Keynote on "Verification of Data in Space and Time" at the 8th International Symposium "From Data to Models and Back" ( | DataMod 2019) | . Related | slides | . 
+ Invited presentation on "Mean Field Model Checking of Population Models" at | "Swarm Robotics: Pushing the State of the Art" | , Rome, Italy, October 25-26, 2018. Related | slides | . 
+ Conferences and Workshops: 
+ TBD 
+ Membership of Programme Committees 
+ COORDINATION 2024 | , 26th International Conference on Coordination Models and Languages, Groningen, The Netherlands, June 17-21, 2024. | Coordination: PC member and SC chair | . A main conference of | DisCoTec 2024 | . | DisCoTec: SC member | . 
+ FM 2024 | , 26th International Symposium on Formal Methods (FM 2024), September 9-13, Milan, Italy 
+ COORDINATION 2023 | , 25th International Conference on Coordination Models and Languages, Lisbon, Portugal, June 19-23, 2023. | Coordination: PC member and SC chair | . A main conference of | DisCoTec 2023 | . | DisCoTec: SC member | . 
+ FormaliSE 2023 | , 11th International Conference on Formal Methods in Software Engineering, Melbourne, Victoria, Australia, 14-15 May, 2023. Co-located with | href="https://conf.researchr.org/home/icse-2023" - ICSE 2023 | . 
+ FM 2023 | , 25th International Symposium on Formal Methods (FM 2023), March 7-9, Leubeck, Germany 
+ FSEN 2023 | , 10th IPM International Conference on Fundamentals of Software Engineering (FSEN 2023), May 3-5, Tehran, Iran. 
+ href="https://conf.researchr.org/home/icse-2022/Formalise-2022/" - FormaliSE 2022 | , 10th International Conference on Formal Methods in Software Engineering, Pittsburgh, PA, USA, 21-29 May, 2022. Co-located with | href="https://conf.researchr.org/home/icse-2022" - ICSE 2022 | . 
+ COORDINATION 2022 | , 24st International Conference on Coordination Models and Languages, Lucca, Italy, June 13-17, 2022. | Coordination: PC member and SC chair | . A main conference of | DisCoTec 2022 | . | DisCoTec: SC member | . 
+ CIFMA 2021 | , Cognition: Interdisciplinary Foundations, Models and Applications, Virtual Event hosted by Nazarbayev University, Nur-Sultan, Kazakhstan and the University of York, UK, Monday 6 December, 2021. Co-located with | SEFM 2021 | . 
+ FACS 2021 | , 17th International Formal Aspects of Component Software (FACS 2021), October 28-29, Virtual Conference (originally Grenoble, France). 
+ QAVS2021 Workshop | , Second Workshop on Quntitative Aspects of Variant-rich Systems, virtual, 28 March 2021. Co-located with | ETAPS 2021 | . 
+ COORDINATION 2021 | , 23st International Conference on Coordination Models and Languages, Valletta, Malta, June 14-18, 2021. | Coordination: PC member and SC chair | . A main conference of | DisCoTec 2021 | . | DisCoTec: SC member | . 
+ TACAS 2021 Conference | , 27th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, Luxembourg, Luxembourg, March 27 to April 1, 2021. A main conference of | ETAPS 2021 | . 
+ FormaliSE 2021 | , 9th International Conference on Formal Methods in Software Engineering, Madrid, Spain, 23-24 May, 2021. Co-located with | href="https://conf.researchr.org/home/icse-2021" - ICSE 2021 | . 
+ FSEN 2021 | , 9th IPM International Conference on Fundamentals of Software Engineering (FSEN 2021), May 19-21, Tehran, Iran. | PC Co-Chair | . 
+ QAVS2020 Workshop | , First Workshop on Quntitative Aspects of Variant-rich Systems, Vienna, Austria, August 31, 2020. Co-located with | QONFEST 2020 | . 
+ SEFM 2020 Workshops | , 18th International Conference on Software Engineering and Formal Methods, Amsterdam, The Netherlands, September 14-18, 2020. | Workshop PC Co-Chair | . 
+ COORDINATION 2020 | , 22st International Conference on Coordination Models and Languages, Valletta, Malta, June 15-19, 2020. | PC member and SC member | . A main conference of | DisCoTec 2020 | . 
+ href="https://conf.researchr.org/committee/icse-2020/Formalise-2020-papers-program-committee" - FormaliSE 2020 | , 8th International Conference on Formal Methods in Software Engineering, Seoul, South-Korea, 23-29 May, 2020. Co-located with | href="https://conf.researchr.org/home/icse-2020" - ICSE 2020 | . 
+ ADAPTIVE 2020 | , The Twelfth International Conference on Adaptive and Self-Adaptive Systems and Applications (ADAPTIVE), April 26-30, Nice, France. 
+ href="https://sites.google.com
+/view/fmis2019/" - FMIS 2019 | , 8th International Workshop on Formal Methods for Interactive Systems, Porto, October 7, 2019. Co-located with | FM 2019 | . 
+ FACS 2019 | , 16th International Formal Aspects of Component Software (FACS 2019), October 23-25, Amsterdam, The Netherlands. 
+ ADAPTIVE 2019 | , The Eleventh International Conference on Adaptive and Self-Adaptive Systems and Applications (ADAPTIVE), May 5-9, Venice, Italy. 
+ eCAS2019 | , 4th Workshop on Engineering Collective Adaptive Systems. In conjunction with the 16th IEEE International Conference on Autonomic Computing (ICAC 2019) and the 13th IEEE International Conference on Self-Adaptive and Self-Organizing Systems (SASO 2019), June 16-20, Umea, Sweden. 
+ COORDINATION 2019 | , 21st International Conference on Coordination Models and Languages, Copenhaghen, Denmark, June 18-21, 2019. | PC member and SC member | . A main conference of | DisCoTec 2019 | . 
+ FSEN 2019 | , 8th IPM International Conference on Fundamentals of Software Engineering (FSEN 2019), May 1-3, Tehran, Iran. | PC Co-Chair | . 
+ eCAS2018 | , 3rd Workshop on Engineering Collective Adaptive Systems. In conjunction with the 15th IEEE International Conference on Autonomic Computing (ICAC 2018) and the 12th IEEE International Conference on Self-Adaptive and Self-Organizing Systems (SASO 2018) | FAS* | , September 3-7, Trento, Italy. 
+ FM 2018 | , 23st International Symposium on Formal Methods (FM 2018), July 15-17, Oxford, U.K. 
+ href="http://2018.discotec.org/calls/coordination-2018" - COORDINATION 2018 | , 20th International Conference on Coordination Models and Languages, Madrid, Spain, June 18-21, 2018. | PC member and SC member | . A main conference of | DisCoTec 2018 | . 
+ ADAPTIVE 2018 | , The Tenth International Conference on Adaptive and Self-Adaptive Systems and Applications (ADAPTIVE), February 18-22, Barcelona, Spain. 
+ href="https://fmis2018.sciencesconf.org/" - FMIS 2018 | , 7th International Workshop on Formal Methods for Interactive Systems, Toulouse, June 25-26, 2018. Co-located with | STAF 2018 | . 
+ VALID 2018 | , The Tenth International Conference on Advances in System Testing and Validation Lifecycle (VALID), October 14-18, Nice, France. 
+ FACS 2017 | , 14th International Formal Aspects of Component Software (FACS 2017), October 10-13, Braga, Portugal. 
+ FSEN 2017 | , 7th IPM International Conference on Fundamentals of Software Engineering (FSEN 2017), April 26-28, Tehran, Iran. 
+ href="http://2017.discotec.org/calls/coordination-2017" - COORDINATION 2017 | , 19th International Conference on Coordination Models and Languages, Neuchatel, Switzerland, June 19-22, 2017. | PC Co-Chair | . A main conference of | DisCoTec 2017 | . 
+ QAPL 2017 | , 15th Workshop on Quantitative Aspects of Programming Languages, Eindhoven, NL, April 23, 2017. Satellite WS of | ETAPS2017 | . 
+ ADAPTIVE 2017 | , The Ninth International Conference on Adaptive and Self-Adaptive Systems and Applications (ADAPTIVE), February 19-23, Athens, Greece. 
+ FORECAST 2016 | , FORmal methods for the quantitative Evaluation of Collective Adaptive SysTems (FORECAST), July 8, 2016, Vienna, Austria. 
+ GAM 2016 | , Workshop on Graphs as Models Eindhoven, NL, April 2-3, 2016. Satellite WS of | ETAPS2016 | . 
+ QAPL 2016 | , 14th Workshop on Quantitative Aspects of Programming Languages, Eindhoven, NL, April 2-3, 2016. Satellite WS of | ETAPS2016 | . 
+ FM 2016 | , 21st International Symposium on Formal Methods (FM 2016), November 7-11, Limassol, Cyprus. 
+ ECAS 2016 | , 1st eCAS Workshop on Engineering Collective Adaptive Systems (eCAS 2016), co-located with | SASO 2016 | , Augsburg, Germany, 12-16 September 2016. 
+ ADAPTIVE 2016 | , The Eighth International Conference on Adaptive and Self-Adaptive Systems and Applications (ADAPTIVE), March 20-24, Rome, Italy. 
+ COORDINATION 2016 | , 18th IFIP International Conference on Coordination Models and Languages (COORDINATION), co-located with | DISCOTEC 2016 | , Heraklion, Crete, Greece, June 6-9, 2016. 
+ SCOPES 2015 | , First International Workshop on Spatial and COllective PErvasive Computing Systems (SCOPES), co-located with | IEEE SASO 2015 | , MIT, Cambridge, USA, September 21, 2015. 
+ FoMHCI 2015 | , 1st Workshop on Formal Methods in Human Computer Interaction, co-located with | EICS2015 | , Duisburg, Germany, June 23-26, 2015. 
+ QAPL 2015 | , 13th Workshop on Quantitative Aspects of Programming Languages, London, UK, April 11-12, 2015. Satellite WS of | ETAPS2015 | . 
+ QAPL 2014 | , 12th Workshop on Quantitative Aspects of Programming Languages, Grenoble, France, April 12-13, 2014. Satellite WS of | ETAPS2014 | . 
+ GRAPHITE 2014 | , 3rd Workshop on GRAPH inspection and Traversal Engineering, Grenoble, France, April, 2014. Satellite WS of | ETAPS2014 | . 
+ EICS 2013 | , 5th ACM SIGCHI Symposium on Engineering Interactive Computing Systems, City University, London, U.K., June 24-27, 2013. 
+ href="http://www.cs.waikato.ac.nz/~jbowen/FMIS/fmis.html/" - FMIS 2013 | , 5th International Workshop on Formal Methods for Interactive Systems, City University, London, U.K., June 24, 2013. Co-located with | EICS 2013 | . 
+ COORDINATION 2013 | , 15th International Conference on Coordination Models and Languages, Florence, Italy, June 3-6, 2013. A main conference of | DisCoTec 2013 | . 
+ QAPL 2013 | , 11th Workshop on Quantitative Aspects of Programming Languages, Rome, Italy, March 23-24, 2013. Satellite WS of | ETAPS2013 | . 
+ QAPL 2012 | , 10th Workshop on Quantitative Aspects of Programming Languages, Tallinn Estonia, March 31 - April 1, 2012. | PC Co-Chair | . Satellite WS of | ETAPS2012 | . 
+ ICTAC 2011 | , 8th International Colloquium on Theoretical Aspects of Computing Johannesburg, South Africa, 31 August -2 September, 2011. 
+ href="http://www.cs.waikato.ac.nz/%7Ejbowen/FMIS/fmis.html" - FMIS 2011 | , 4th International Workshop on Formal Methods for Interactive Systems Limerick, U.K., June 2011. Satellite of | FM2011 | . 
+ QAPL 2011 | , 9th Workshop on Quantitative Aspects of Programming Languages, Saarbruecken Germany, April 1-3, 2011. | PC Co-Chair | . Satellite WS of | ETAPS2011 | . 
+ EICS 2010 | , 2nd ACM Symposium on Engineering Interactive Computing Systems, Berlin, June 20-23, 2010. 
+ QAPL 2010 | , 8th Workshop on Quantitative Aspects of Programming Languages, Paphos, Cyprus, March 27-28, 2010. Satellite WS of | ETAPS 2010 | . 
+ href="http://homepages.cs.ncl.ac.uk/michael.harrison/fmis/" - FMIS 2009 | , 3rd International Workshop on Formal Methods for Interactive Systems Eindhoven, The Netherlands, November 2, 2009, | PC Co-Chair | . Satellite of | FM 2009 | . 
+ TAMODIA 09 | , 8th International Workshop on TAsk MOdels and DIAgrams, Brussels, September 23-25, 2009. 
+ QAPL 2009 | , 7th Workshop on Quantitative Aspects of Programming Languages, York, U.K., March 28-29, 2009. Satellite WS of | ETAPS 2009 | . 
+ SEFM 2008 | , Special Track on | href="http://www.fokus.fraunhofer.de/ngni/auf_einen_blick/documents/SEFM-2008-ST-SEFM-in-NGN-CFP.pdf" - Service Engineering for Next Generation Networks and
+Converged Telecom and Web 2.0 Services | , Cape Town, South Africa, 10-14 Nov. 2008 | . 
+ DSVIS 2008 | , Design Specification and Verification of Interactive Systems, July 16-18 2008, Kingston, Ontario, Canada. 
+ QAPL 08 | , Sixth Workshop on Quantitative Aspects of Programming Languages, March 29-30 2008, Budapest, Hungary, satellite WS of | ETAPS2008 
+ TAMODIA 07 | , 6th International Workshop on TAsk MOdels and DIAgrams, Toulouse, France November 7-9, 2007, 
+ EIS 07(DSVIS07) | , Engineering Interactive Systems, Salamanca, Spain, March 22-24, 2007 
+ QAPL 07 | , 4th Workshop on Quantitative Aspects of Programming Languages. 
+ FASE 2007 | , 10th International Conference on Fundamental Approaches to Software Engineering 
+ QAPL 2006 | , 4th Workshop on Quantitative Aspects of Programming. 
+ DSVIS 2006 | , Design Specification and Verification of Interactive Systems. 
+ PDS 2006 | , Performance and Dependability Symposium. 
+ FMICS 2005 | Formal Methods for Industrial Critical Systems, | PC Co-Chair | . 
+ PDS 2005 | (@DSN2005), Performance and Dependability Symposium. 
+ DSVIS 2005 | , Design, Specification and Verification of Interactive Systems. 
+ Participation in Projects 
+ Stendhal | , EU-NG MUR-PRIN 2022 project Stendhal: Spatio-Temporal Enhancement of neural Nets for Deeply Hierarchical Automatised Logic, 01/10/2023 - 30/09/2025. 
+ THE - Tuscany Health Ecosystem, | MUR - PNRR Italy, 01/07/2022-30/06/2025. 
+ Model Checking for Polyhedral Logic | , 2022 Bilateral Collaboration between CNR and SRNSF, 01/01/2023 - 31/12/2024. 
+ Participation to Previous Projects 
+ IT MaTTerS | , MIUR-PRIN 2017 project IT MaTTerS: Methods and Tools for Trustworthy Smart Systems, 29/08/2019-28/08/2022 extended to 28/02/2023. 
+ QUANTICOL | , EU-IST-FET-Proactive-STREP project (n. 600708) on a Quantitative Approach to Management and Design of Collective and Adaptive Behaviours, 01/04/2013-31/03/2017 (WP leader). 
+ CINA | , Compositionality, Interaction, Negotiation and Autonomicity for the future ICT society. Italian national PRIN 2010 project, 2013-2016. 
+ ASCENS | , Third-party in EU-IST-FET-IP project (n. 257414) on Autonomic Service-component Ensembles, 2010-2015. 
+ XXL | , CNR-RSTL (Ricerca Spontanea a Tema Libero) project on Advanced Tools and Techniques for the Specification and Verification of Systems with Elevated Granularity, 2008-2010 (coordinator). 
+ PaCo | : Performability-Aware Computing: Logics, Models, and Languages. Italian National Scientific Research Programme. Call published with D.M. 1175 del 18/09/2007 (PRIN 2007). Approved with nota 95 of 23/07/2008. September 2008 - August 2010. 
+ SENSORIA | , EU-IST-FET project on Software Engineering for Service-Oriented Overlay Computers, 2005-2010. 
+ TOCAI.IT | , Italian national basic research project (FIRB) on Knowlegde Based Tecnologies for the Aggregation of Industries in Internet, 2006-2010. 
+ FAERUS | , International Mini-project in the context of the EU-project | RESIST | Network of Excellence 2008 (coordinator). 
+ AGILE | , EU-IST project on Architectures for Mobility, 2002-2005 
+ Architetture Software ad Alta Qualita' di Servizio per Global Computing su Cooperative Wide Area Networks. High-Quality Service Software Architecture for Global Computing on Co-operative Wide Area Networks (MURST 5%), 2002-2004 
+ AMSD, EU-AM, Accompanying Measures System Dependability 2002-2003 
+ DimmiBene | , Agenzia 2000 project on Supports to Interactive and Multimedia Self-illustration of Consumer Electronics, 2001-2003 
+ PRIDE, ASI (Italian Space Agency) project on an Integrated Design Environment for Dependable Systems, 2002-2003 
+ TACIT | , EU-TMR project on Theory and Application of Continuous Interaction, 1998-2002 
+ IRS, EU-HCM project on Interactionally Rich Systems, 1994-1997 
+ Teaching 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2022-2023 
+ Previous Courses and Tutorials 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2020-2021 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2019-2020 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2018-2019 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2017-2018 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2016-2017 
+ 16th International School on Formal Methods for the Design of Computer, Communication and Software Systems: Quantitative Evaluation of Collective Adaptive Systems Laurea, University Residential Center of Bertinoro, 20-24 June, 2016, Bertinoro, Italy | SFM-school 
+ Stochastic Model Checking (SMC), | PhD Program in Smart Computing | Universities of Florence, Pisa and Siena, 2015-2016 
+ Formal Methods and System Verification (MFVS), Corso di Laurea Magistrale in Informatica, Univ. of Florence, 2014-2015 
+ Formal Methods and System Verification (MFVS), Corso di Laurea Magistrale in Informatica, Univ. of Florence, 2013-2014 
+ Formal Methods and System Verification (MFVS), Corso di Laurea Magistrale in Informatica, Univ. of Florence, 2012-2013 
+ System Verification and Evaluation Techniques (TVVS), Corso di Laurea Specialistica in Scienze e Tecnologie dell'Informazione, Univ. of Florence, 2010-2011 
+ Methods and Tools for Analysis and Verification, Corso di Laurea Specialistica in Scienze e Tecnologie dell'Informazione, Univ. of Florence, 2009-2010 
+ Methods and Tools for Analysis and Verification, Corso di Laurea Specialistica in Scienze e Tecnologie dell'Informazione, Univ. of Florence, 2008-2009 
+ Risks and opportunities of Electronic Voting and e-Democracy Corso di Laurea in Scienze per la Pace, University of Pisa, 2008-2009 
+ Methods and Tools for Analysis and Verification, Corso di Laurea Specialistica in Scienze e Tecnologie dell'Informazione, Univ. of Florence, 2007-2008 
+ Risks and opportunities of Electronic Voting and e-Democracy Corso di Laurea in Scienze per la Pace, University of Pisa, 2007-2008 
+ Methods and Tools for Analysis and Verification, Corso di Laurea Specialistica in Scienze e Tecnologie dell'Informazione Univ. of Florence, 2006-2007 
+ Electronic Voting, Integrated course on Election Procedures Corso di Laurea in Scienze per la Pace, University of Pisa, 2006-2007 
+ Modelling and Verification of Distributed Systems, Integrated course on Stochastic Model Checking, 2005-2006, Univ. of Florence 
+ Electronic Voting, Integrated course on Election Procedures University of Pisa, 2005-2006 
+ Tools for Automatic verification of Concurrent Systems 2001-2002, integrated course, Univ. of Florence. 
+ Model-checking of timed and hybrid automata. Tutorial at the Dept. of Mathematics of the Univ. of Siena and Florence, 2001 
+ Social Responsability of Computer Professionals. Integrated course at the Univ. of Pisa, 1997 and 1998 
+ Computer Science and Society. Teaching assistant Univ. of Nijmegen, 1987-1989 
+ Programming Methods in Functional Languages. Teaching assistant Univ. of Nijmegen, 1988-1989 
+ Networks. Teaching assistant Univ. of Nijmegen, 1986 
+ Introduction to programming for non-computer scientists. Teaching assistant Univ. of Nijmegen, 1986 
+ Publications 
+ Over 80 published papers in the areas of formal verification methods, large scale formal verification of Collective Adaptive Systems Spatial and Spatio-temporal Model Checking, Global Computing, formal verification in HCI, continuous interaction, formal semantics of UML, testing theory, computer science and society. A selection of these papers can be downloaded frommy list of publications at the ISTI publications site (upto 2016)and frommy list of publications via the ISTI Open Portal. See also the list onhref="http://www.dblp.org/search/index.php#query=author:mieke_massink" - DBLP
+. 
+ e/html>
+
+4. Website of FMIS_3: https://arxiv.org/pdf/2402.00218
+Website information of FMIS_3:
+
+
+

@@ -1,0 +1,36 @@
+output:
+{
+  "Conference dates": "July 4 - 6, 2025",
+  "Year": "2025",
+  "Location": "Xiangtan, China",
+  "City-State-Province": "Xiangtan",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Main Track) Full Paper Submission deadline": "March 1, 2025",
+    "(Late Track) Full Paper Submission deadline": "April 10, 2025",
+    "(Posters & Demos Track) Full Paper Submission deadline": "May 1, 2025",
+    "(Workshops) Workshop Proposals deadline": "March 15, 2025",
+    "(Tutorial Proposals) Tutorials Proposal Submission Deadline": "May 15, 2025",
+    "(Phd Forum and Posters) Paper proposals due": "June 30, 2025"
+  },
+  "Notification Date": {
+    "(Main Track) Notification deadline": "April 15, 2025",
+    "(Late Track) Notification deadline": "May 10, 2025",
+    "(Posters & Demos Track) Notification deadline": "May 15, 2025"
+  },
+  "Camera-ready Date": {
+    "(Main Track) Camera-ready deadline": "June 1, 2025",
+    "(Late Track) Camera-ready deadline": "June 1, 2025",
+    "(Posters & Demos Track) Camera-ready deadline": "June 1, 2025"
+  },
+  "Other Date": {
+    "Early Registration deadline": "April 10, 2025"
+  },
+  "Topics": "Cybersecurity, 5G Security, IoT Security, Cloud Computing Security, Blockchain, Cryptocurrencies, Decentralized Applications, Secure Routing, Remote Authentication, Network Management, Jamming, GPS Spoofing, DDoS, MitM, Malware, Botnets, Side-Channel Attacks, Phishing, Pharming, Cybersquatting, Network Intrusion Detection, Prevention, Firewalls, Packet Filters, Moving Target Defence, Cryptography, Cryptographic Protocols, Malware Analysis, Automated Security Analysis, Program Analysis, Fraud Measurement, Malware Measurement, Spam Measurement, Human Behavior Measurement, Cybercrime Investigation, Cyber Threat Intelligence, Incident Response, Tor, Darknet, Internet Censorship, Circumvention, Industry 4.0 Security, Energy Security, Transportation Security, Smart Cities Security, Quantum Key Distribution, Quantum-Based Secure Communications, Visualization of Secure Communications, Privacy-Preserving Machine Learning, Resilience of Computer Networks, Critical Infrastructures, Web Security, Mobile Security and Privacy, Misinformation, Disinformation, Malinformation, Usability, Human Behaviors, Legal Issues, Cybercrime Economics, Contact Tracing Security, Telecommunications Security, Networking Security",
+  "Publisher": "Springer",
+  "Summary": "The 21st EAI International Conference on Security and Privacy in Communication Networks (SecureComm 2025) will be held as a hybrid conference in Xiangtan, China from July 4-6, 2025. SecureComm brings together researchers and practitioners in academic, industry, and government to explore important research directions in the field of secure communications and networking.",
+  "Call for Papers": "# SecureComm 2025: Call for Papers\n\nThe 21st EAI International Conference on Security and Privacy in Communication Networks (SecureComm 2025) will be held as a **hybrid conference** in **Xiangtan, China, from July 4-6, 2025**.\n\nSecureComm brings together researchers and practitioners in academic, industry, and government to explore important research directions in the field of secure communications and networking. The conference seeks submissions of high-quality research contributions. Topics of interest encompass all areas of secure communications and networking. Topics in less related areas will be considered if a clear connection to secure communication and networking is demonstrated. Topics addressing interdisciplinary challenges in different application domains are welcome.\n\n## Topics\n\n*   Security and privacy in computer networks (e.g., wired, wireless, mobile, hybrid, sensor, vehicular, satellite, 5G, 6G, ad hoc, peer-to-peer, and software-defined networks)\n*   Security and privacy in systems with strong secure communication and networking elements (e.g., security in the cloud, IoT, cyber-physical systems, edge and fog computing, and teleconferencing)\n*   Security and privacy in Web3.0 and metaverse\n*   Distributed ledger technologies (e.g., blockchain, smart contracts, and cryptocurrencies) and decentralized applications (e.g., DeFi)\n*   Security protocols at all network layers and for different applications (e.g., for secure routing, naming/addressing, network management, remote authentication and attestation)\n*   Physical layer security (e.g., jamming, GPS spoofing)\n*   Network attacks and forensics (e.g., DDoS, MitM, malware, botnets, side-channel attacks, phishing/pharming, cybersquatting), defenses (e.g., network intrusion detection and prevention, firewalls, packet filters, moving target defence)\n*   Applications of cryptography (e.g., Analysis of deployed cryptography and cryptographic protocols, Cryptographic implementation analysis, New cryptographic protocols with real-world applications)\n*   Security analysis (e.g., Malware analysis, Automated security analysis of source code and binaries, Program analysis)\n*   Data-driven security and measurement studies (e.g., Measurements of fraud, malware or spam; Measurements of human behavior and security)\n*   Cybercrime investigation and attribution\n*   Cyber threat intelligence and cyber incident responses\n*   Anonymous and privacy-aware communications (e.g., Tor, darknet)\n*   Internet censorship and circumvention\n*   Secure communication and networking applications (e.g., industry 4.0, energy, transportation, smart cities)\n*   Quantum key distribution and other quantum-based secure communications\n*   Visualization of secure communications and networking\n*   Privacy-preserving computing in secure communication and networking (e.g., privacy-preserving machine learning)\n*   The resilience of computer networks and critical infrastructures\n*   Web and mobile security and privacy\n*   Defending false information online (e.g., mis-, dis- and mal-information)\n*   Socio-technical aspects of secure communications and networking (e.g., usability, human behaviors, legal issues, cybercrime, economics)\n*   Security and privacy of contact tracing and other COVID-19 related digital interventions with a core element on telecommunications or networking\n\n## Publication\n\nAll registered papers will be submitted for publishing by Springer –LNICST series and made available through [SpringerLink Digital Library](https://link.springer.com/conference/securecomm).\n\n## Important Dates\n\n*   **Early Registration deadline:** April 10, 2025\n*   **Main Track Full Paper Submission deadline:** March 1, 2025\n*   **Main Track Notification deadline:** April 15, 2025\n*   **Main Track Camera-ready deadline:** June 1, 2025\n*   **Late Track Full Paper Submission deadline:** April 10, 2025\n*   **Late Track Notification deadline:** May 10, 2025\n*   **Late Track Camera-ready deadline:** June 1, 2025\n*   **Posters & Demos Track Full Paper Submission deadline:** May 1, 2025\n*   **Posters & Demos Track Notification deadline:** May 15, 2025\n*   **Posters & Demos Track Camera-ready deadline:** June 1, 2025\n*   **Workshop Proposals deadline:** March 15, 2025\n*   **Tutorials Proposal Submission Deadline:** May 15, 2025\n*   **Conference dates:** July 4-6, 2025"
+}
+

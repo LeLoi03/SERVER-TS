@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "October 25 - 30, 2025",
+  "Year": "2025",
+  "Location": "Bologna, Italy",
+  "City-State-Province": "Bologna",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission site opening": "April 10, 2025",
+    "Abstract deadline": "April 29, 2025",
+    "Paper deadline": "May 6, 2025"
+  },
+  "Notification Date": {
+    "Author notification": "July 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "August 26, 2025"
+  },
+  "Other Date": {
+    "Rebuttal period": "June 23 - 25, 2025",
+    "Early registration deadline": "TBC"
+  },
+  "Topics": "Artificial Intelligence, Computer Vision, Constraints and Satisfiability, Data Mining, Fairness, Ethics, and Trust, Game Theory and Economic Paradigms, Humans and AI, Intelligent Robotics, Knowledge Representation and Reasoning, Machine Learning, Multiagent Systems, Natural Language Processing, Planning and Search, Uncertainty in AI, Multidisciplinary Topics",
+  "Summary": "The 28th European Conference on Artificial Intelligence (ECAI 2025) will take place in Bologna, Italy, from October 25-30, 2025.  The conference welcomes submissions on all aspects of AI and will be supported by the European Association for Artificial Intelligence (EurAI) and the Italian Association for Artificial Intelligence (AIxIA).",
+  "Call for Papers": "# ECAI 2025: Call for Main Track Papers\n\nThe 28th European Conference on Artificial Intelligence (ECAI 2025) will take place in **Bologna, Italy, from October 25 to 30, 2025**.\n\n## Submission Guidelines\n\nWe welcome submissions on all aspects of AI. Submissions will be subject to double-blind peer review by the programme committee. They will be evaluated based on relevance, clarity, significance, originality, soundness, reproducibility, scholarship, and quality of presentation.\n\nThe conference is planned as an in-person event. Each accepted paper will get assigned either an oral presentation slot or a combined poster/spotlight presentation slot.\n\n## Topics\n\nSubmissions on all aspects of AI are welcome. This includes in particular:\n\n*   Computer Vision\n*   Constraints and Satisfiability\n*   Data Mining\n*   Fairness, Ethics, and Trust\n*   Game Theory and Economic Paradigms\n*   Humans and AI\n*   Intelligent Robotics\n*   Knowledge Representation and Reasoning\n*   Machine Learning\n*   Multiagent Systems\n*   Natural Language Processing\n*   Planning and Search\n*   Uncertainty in AI\n*   Multidisciplinary Topics\n\n## Ethics Statement\n\nResearch reported at ECAI should avoid harm, be honest and trustworthy, fair and non-discriminatory, and respect privacy and intellectual property. Where relevant, authors can include in the main body of their paper, or on the reference page, a short ethics statement that addresses ethical issues regarding the research being reported and the broader ethical impact of the work.\n\n## Submission Instructions\n\nPapers must be written in English, be prepared for double-blind review using the ECAI LaTeX template, and not exceed 7 pages (plus at most 1 extra page for references).  The [ECAI LaTeX Template](https://ecai2025.org/wp-content/uploads/2025/04/ecai-template.zip) is available for download.\n\nRegistering an abstract of your paper (of around 100-300 words in plain text) is required in advance of the paper submission deadline.\n\nThe submission website is: [https://easychair.org/conferences/?conf=ecai20250](https://easychair.org/conferences/?conf=ecai20250).\n\n## Supplementary Material\n\nYou have the option to accompany your submission with supplementary material, such as a technical appendix or code and data (up to 50MB).\n\n## Resubmission from Other Conferences\n\nIf an earlier version of your paper was rejected from another conference with archival proceedings and double-blind reviewing during the 12 months preceding the submission deadline, you can supplement your submission with a document detailing how you have taken the reviews received into account to improve your paper.\n\n## Policies\n\nECAI subscribes to the [European Code of Conduct for Research Integrity](https://allea.org/code-of-conduct/).\n\n## Important Dates\n\nAll deadlines are at the end of the day specified, anywhere on Earth (UTC-12).\n\n*   Submission site opening: April 10, 2025\n*   Abstract deadline: April 29, 2025\n*   Paper deadline: May 6, 2025\n*   Rebuttal period: June 23-25, 2025 (72 hours)\n*   Author notification: July 10, 2025\n*   Early registration deadline: TBC\n*   Camera-ready deadline: August 26, 2025\n\n## Contact\n\nFor questions, please contact the program chairs, Inês Lynce (Lisbon) and Aniello Murano (Naples), at [program-chairs@ecai2025.org](mailto:program-chairs@ecai2025.org) or consult the FAQ: [https://sites.google.com/view/ecai-2025-faq/home](https://sites.google.com/view/ecai-2025-faq/home)."
+}
+

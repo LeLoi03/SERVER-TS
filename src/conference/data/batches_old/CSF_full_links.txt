@@ -1,0 +1,206 @@
+Conference full name: IEEE Computer Security Foundations Symposium (CSF)
+
+1. Website of CSF_3: https://csf2025.ieee-security.org/
+Website information of CSF_3:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+ Toggle navigationhref="/" - CSF 2025
+Submit | href="cfp.html" - Call for papers 
+ href="cfw.html" - Call for workshops 
+ href="https://hotcrp.csf2025.ieee-security.org/" - Submission server 
+ Program | href="accepted.html" - Accepted Papers 
+ Workshops | href="https://fcs-workshop.github.io/fcs2025/" - Foundations of Computer Security (FCS 2025) 
+ Registration | Student Travel Grant 
+ Registration 
+ Local Information | Santa Cruz 
+ Venue 
+ Accommodation 
+ Committees 
+ Policies | IEEE Computer Security Foundations Symposium Code of Conduct 
+ IEEE Privacy Policy 
+ IEEE Event Terms and Conditions 
+ href="https://x.com/CSFSymposium" - 𝕏 
+ This image is byMatt314and is licensed underCC BY 2.5. 
+ CSF 2025 – 38thIEEE Computer Security Foundations Symposium 
+ June 16-20, 2025 - Santa Cruz, CA, USA 
+ The Computer Security Foundations Symposium (CSF) is an annual conference for researchers in computer security, to examine current theories of security, the formal models that provide a context for those theories, and techniques for verifying security. It was created in 1988 as a workshop of the IEEE Computer Society’s Technical Committee on Security and Privacy, in response to a 1986 essay by Don Good entitled “The Foundations of Computer Security—We Need Some.” The meeting became a “symposium” in 2007, along with a policy for open, increased attendance. Over the past two decades, many seminal papers and techniques have been presented first at CSF. For more details on the history of the symposium, visithref="http://www.ieee-security.org/CSFWweb/" - CSF’s home
+. 
+ The program includes papers, panels, and a poster session. Topics of interest include access control information flow, covert channels, cryptographic protocols, database security, language-based security, authorization and trust verification techniques, integrity and availability models, and broad discussions concerning the role of formal methods in computer security and the nature of foundational research in this area. 
+ Important DatesAoE (UTC-12h) 
+  
+ Spring cycle paper submission | May 28, 2024 
+ Spring cycle author notification | July 30, 2024 
+ Fall cycle paper submission | October 1, 2024 
+ Fall cycle author notification | December 3, 2024 
+ Winter cycle paper submission | February 4, 2025 
+ Winter cycle author notification | April 8, 2025 
+ CSF Symposium | June 16-20, 2025 
+ Sponsored byhref="http://www.ieee-security.org/" - IEEE
+  Computer Society's Technical Commitee on Security and Privacy
+. 
+ Contact:Owen Arden
+
+2. Website of CSF_3: https://www.ieee-security.org/CSFWweb/
+Website information of CSF_3:
+
+Toggle navigationhref="./index.html" - CSF
+href="./distinguished.html" - Awarded papers 
+ Past conferences 
+ Steering committee 
+ Charter 
+ IEEE TCSP 
+ href="https://twitter.com/CSFSymposium" - Twitter 
+ IEEE TCSP 
+ href="https://twitter.com/CSFSymposium" - Twitter 
+ IEEE Computer Security Foundations Symposium 
+ Next symposia: 
+ The | href="https://csf2025.ieee-security.org/" - 38th IEEE Computer Security Foundations Symposium | will be held in Santa Cruz, California, USA. 
+ The Computer Security Foundations Symposium (CSF) is an annual symposium for researchers in computer security and privacy, to develop and examine theories of security and privacy, to build the formal models that provide a context for those theories, and to study techniques for verifying, analyzing, and implementing security and privacy. It was created in 1988 as a workshop of theIEEE Computer Society's Technical Committee on Security and Privacy, in response to a 1986 essay by Don Good entitledThe Foundations of Computer Security—We Need Some. The meeting became a “symposium” in 2007, along with a policy for open, increased attendance. Over the past two decades, many seminal papers and techniques have been presented first at CSF. All topics relating to foundational security and privacy are in scope. 
+ href="https://twitter.com/CSFSymposium?ref_src=twsrc%5Etfw" - Tweets by CSFSymposium
+
+Contact:Matteo Maffei
+
+3. Website of CSF_3: https://csf2025.ieee-security.org/cfp.html
+Website information of CSF_3:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+ Toggle navigationhref="/" - CSF 2025
+Submit | href="cfp.html" - Call for papers 
+ href="cfw.html" - Call for workshops 
+ href="https://hotcrp.csf2025.ieee-security.org/" - Submission server 
+ Program | href="accepted.html" - Accepted Papers 
+ Workshops | href="https://fcs-workshop.github.io/fcs2025/" - Foundations of Computer Security (FCS 2025) 
+ Registration | Student Travel Grant 
+ Registration 
+ Local Information | Santa Cruz 
+ Venue 
+ Accommodation 
+ Committees 
+ Policies | IEEE Computer Security Foundations Symposium Code of Conduct 
+ IEEE Privacy Policy 
+ IEEE Event Terms and Conditions 
+ href="https://x.com/CSFSymposium" - 𝕏 
+ This image is byMatt314and is licensed underCC BY 2.5. 
+ CSF 2025 – 38thIEEE Computer Security Foundations Symposium 
+ June 16-20, 2025 - Santa Cruz, CA, USA 
+ CSF 2025 continues to have rolling deadlines. Starting from CSF 2020, CSF has started to invite submissions three times a year: Spring, Fall, and Winter. Dates and detailed submission instructions appear later in this document. 
+ Call for Papers 
+ The Computer Security Foundations Symposium (CSF) is an annual conference for researchers in computer security. CSF seeks papers on foundational aspects of computer security, such as formal security models relationships between security properties and defenses, principled techniques and tools for design and rigorous analysis of security mechanisms, as well as their application to practice. While CSF welcomes submissions beyond the topics listed below, the main focus of CSF is foundational security and privacy.Papers lacking foundational aspects risk desk rejection without further evaluation of their merits; contact the PC chairs when in doubt. 
+ CSF was created in 1988 as a workshop of the IEEE Computer Society’s Technical Committee on Security and Privacy, in response to a 1986 essay by Don Good entitled “The Foundations of Computer Security—We Need Some.” The meeting became a “symposium” in 2007, along with a policy for open increased attendance. Over the past two decades, many seminal papers and techniques have been presented first at CSF. For more details on the history of the symposium, visithref="http://www.ieee-security.org/CSFWweb/" - CSF’s home
+. 
+ Proceedings will be published by the IEEE Computer Society Press and will be available at the symposium. Some small number of papers will be selected by the Program Committee as "Distinguished Papers". 
+ Topics 
+ New results in security and privacy are welcome. We also encourage challenge/vision papers, which may describe open questions and raise fundamental concerns about security and privacy. Possible topics for all papers include, but are not limited to: 
+ access control 
+ accountability 
+ anonymity 
+ attack models 
+ authentication 
+ blockchains and smart contracts 
+ cloud security 
+ cryptography 
+ data provenance 
+ data and system integrity 
+ database security 
+ decidability and complexity 
+ decision theory 
+ distributed systems security 
+ electronic voting 
+ embedded systems security 
+ forensics 
+ formal methods and verification 
+ hardware-based security 
+ information flow control 
+ intrusion detection 
+ language-based security 
+ mobile security 
+ network security 
+ privacy 
+ security and privacy aspects of machine learning 
+ security and privacy for the Internet of Things 
+ security architecture 
+ security metrics 
+ security policies 
+ security protocols 
+ software security 
+ socio-technical security 
+ trust management 
+ usable security 
+ web security 
+ SoK papers: Systematization of Knowledge Papers 
+ CSF 2025 solicits systematization of knowledge (SoK) papers in foundational security and privacy research. These papers systematize, re-formulate, or evaluate existing work in one established and significant research topic. Such papers must provide new insights. Survey papers without new insights are not appropriate. Papers trying to identify robust foundations of research areas still lacking them are particularly welcome. Submissions will be distinguished by the prefix “SoK:” in the title and a checkbox on the submission form. 
+ Ethics 
+ We expect authors to carefully consider and address the potential harms associated with carrying out the research as well as the potential negative consequences that could stem from publishing their work. Failure to do so will result in summary rejection of a submission regardless of its quality and scientific value. 
+ Although causing controlled harm is sometimes a consequence of legitimate scientific research in computer security and privacy, authors are expected to document how they have addressed and mitigated the risks. This includes, but is not limited to, considering the impact of their research on deployed systems, understanding the costs and risks their research imposes on others, safely and appropriately collecting data, and following responsible disclosure. If the submitted research has the potential to cause harm, the paper should include a clear statement about why the benefit of the research outweighs the harms, and how the authors have taken measures and followed best practices to ensure safety and minimize the harms caused by their research. 
+ If the submitted research has potential to cause harm, and authors have access to an Institutional Review Board (IRB), we expect that this IRB is consulted and its approval and recommendations are documented in the paper. We note however that IRBs are not expected to understand computer security research well or to know about best practices and community norms in our field, so IRB approval does not absolve researchers from considering ethical aspects of their work. In particular IRB approval is not sufficient to guarantee that the PC will not have additional concerns with respect to harms associated with the research. 
+ We encourage the authors to consult with existing documentation, e.g.,Common Pitfalls in Writing about Security and Privacy Human Subjects Experiments, and How to Avoid Themor theMenlo Reportand existing Safety consultation entities, e.g., thehref="https://research.torproject.org/safetyboard/" - Tor Safety Research Board
+. These can help in thinking about potential harms, and in designing the safest experiments and disclosure processes. 
+ Important DatesAoE (UTC-12h) 
+  
+ Spring cycle paper submission | May 28, 2024 
+ Spring cycle author notification | July 30, 2024 
+ Fall cycle paper submission | October 1, 2024 
+ Fall cycle author notification | December 3, 2024 
+ Winter cycle paper submission | February 4, 2025 
+ Winter cycle author notification | April 8, 2025 
+ CSF Symposium | June 16-20, 2025 
+ Paper Submission Instructions 
+ Submitted papers must not substantially overlap with papers that have been published or that are simultaneously submitted to a journal or a conference with published proceedings. 
+ Papers must be submitted using the two-column IEEE Proceedings style available for various document preparation systems at the IEEE Conference Publishing Services page. All papers should be at most 12 pages long, not counting bibliography and well-marked appendices. Anonymized supplementary material such as proof scripts can be uploaded as a tar ball on the submission site. Committee members are not required to read appendices, and so the paper must be intelligible without them. 
+ Papers failing to adhere to any of the instructions above will be rejected without consideration of their merits. 
+ At least one coauthor of each accepted paper is required to attend CSF to present the paper. In the event of difficulty in obtaining visas for travel exceptions can be made and will be discussed on a case-by-case basis. 
+ CSF 2025 will employ double-blind reviewing. Submitted papers must (a) omit any reference to the authors’ names or the names of their institutions, and (b) reference the authors’ own related work in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”). Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult (e.g., important background references should not be omitted or anonymized).href="https://www.cs.ox.ac.uk/conferences/csf2018/faq.html" - Please see our
+    frequently asked questions (FAQ)
+that address many common concerns. When in doubt, contact the program chairs. 
+ Decisions 
+ The outcome of the review process can be one of the following three: accept, reject, major revision. In some occasions, accepted papers are shepherded for minor modifications. 
+ Major revisions 
+ Papers with “major revision” decision must be re-submitted within the following two cycles, accompanied by a writeup explaining how the revision meets reviewers’ revision requirements. These papers will be reviewed by the same reviewers as those for the initial submission. They may use 16 pages in the usual IEEE template, but the 16 pages should contain everything, in particular bibliography and appendix (if any). In other words, revisions should be prepared as if they were camera-ready papers; although they should still be anonymized. For additional material authors may point to technical reports or supply additional material when submitting the paper. Such material should also be anonymized. Reviewers are, however, not obliged to read this material. 
+ Authors should submit their revision as a new paper (rather than updating the previous submission) and mark it as “major revision”. For major revision papers the submission system will ask authors to provide additional information in a textbox, such as the cycle and the submission number of the previous submission. 
+ The possible decisions for such resubmitted revised papers are the following: accept (possibly with shepherding) or reject, i.e., a major revision decision is excluded. 
+ Like all papers, major revision papers can be withdrawn from the conference at any time. 
+ Major revision papers not re-submitted within the following two cycles will be considered new submissions, reviewed by serving PC members. A writeup explaining how the revision meets previous reviewers’ revision requirements is optional. The layout of these papers has to follow the guidelines for regular submissions, in particular, for these papers the limit of 12 pages applies. 
+ Resubmissions of rejected papers 
+ Rejected papers can be re-submitted at any time. If a rejected paper is re-submitted within 11 months of the last deadline they were submitted to (e.g., rejected submissions to Sep 2022 is resubmitted to May 2023 deadline), reviews and a writeup explaining how the current submission addresses concerns in the reviews must be submitted as supplementary material. The paper will be desk-rejected by the PC chairs if previous reviews or the explanation is missing. We may use a different set of reviewers for re-submissions. All resubmissions of rejected papers can optionally submit reviews from previous submissions and a writeup explaining how the current submission addresses concerns in the reviews as supplementary material. In any case, previously rejected papers should follow the paper submission instructions of regular submissions. In particular, the same page limit and format applies and submissions should be anonymized. 
+ Contact:Owen Arden
+
+4. Website of CSF_3: https://csf2025.ieee-security.org/
+Website information of CSF_3:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+ Toggle navigationhref="/" - CSF 2025
+Submit | href="cfp.html" - Call for papers 
+ href="cfw.html" - Call for workshops 
+ href="https://hotcrp.csf2025.ieee-security.org/" - Submission server 
+ Program | href="accepted.html" - Accepted Papers 
+ Workshops | href="https://fcs-workshop.github.io/fcs2025/" - Foundations of Computer Security (FCS 2025) 
+ Registration | Student Travel Grant 
+ Registration 
+ Local Information | Santa Cruz 
+ Venue 
+ Accommodation 
+ Committees 
+ Policies | IEEE Computer Security Foundations Symposium Code of Conduct 
+ IEEE Privacy Policy 
+ IEEE Event Terms and Conditions 
+ href="https://x.com/CSFSymposium" - 𝕏 
+ This image is byMatt314and is licensed underCC BY 2.5. 
+ CSF 2025 – 38thIEEE Computer Security Foundations Symposium 
+ June 16-20, 2025 - Santa Cruz, CA, USA 
+ The Computer Security Foundations Symposium (CSF) is an annual conference for researchers in computer security, to examine current theories of security, the formal models that provide a context for those theories, and techniques for verifying security. It was created in 1988 as a workshop of the IEEE Computer Society’s Technical Committee on Security and Privacy, in response to a 1986 essay by Don Good entitled “The Foundations of Computer Security—We Need Some.” The meeting became a “symposium” in 2007, along with a policy for open, increased attendance. Over the past two decades, many seminal papers and techniques have been presented first at CSF. For more details on the history of the symposium, visithref="http://www.ieee-security.org/CSFWweb/" - CSF’s home
+. 
+ The program includes papers, panels, and a poster session. Topics of interest include access control information flow, covert channels, cryptographic protocols, database security, language-based security, authorization and trust verification techniques, integrity and availability models, and broad discussions concerning the role of formal methods in computer security and the nature of foundational research in this area. 
+ Important DatesAoE (UTC-12h) 
+  
+ Spring cycle paper submission | May 28, 2024 
+ Spring cycle author notification | July 30, 2024 
+ Fall cycle paper submission | October 1, 2024 
+ Fall cycle author notification | December 3, 2024 
+ Winter cycle paper submission | February 4, 2025 
+ Winter cycle author notification | April 8, 2025 
+ CSF Symposium | June 16-20, 2025 
+ Sponsored byhref="http://www.ieee-security.org/" - IEEE
+  Computer Society's Technical Commitee on Security and Privacy
+. 
+ Contact:Owen Arden
+

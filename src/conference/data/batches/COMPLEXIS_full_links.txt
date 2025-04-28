@@ -1,0 +1,210 @@
+Conference full name: International Conference on Complexity, Future Information Systems and Risk (COMPLEXIS)
+
+1. Website of COMPLEXIS_2: https://complexis.scitevents.org/
+Website information of COMPLEXIS_2:
+
+HomeLog InContactsFAQsINSTICC Portalhref="https://www.scitepress.org/PublishedPapers/2024" - Documents
+InformationConference Detailshref="https://www.insticc.org/node/technicalprogram/COMPLEXIS/2024" - Technical Program
+Program CommitteeEvent ChairsKeynote LecturesBest Paper AwardsSatellite EventsWorkshopsSpecial SessionsTutorialsDemosPanelsDoctoral ConsortiumPartnersAcademic PartnersIndustrial PartnersInstitutional PartnersMedia PartnersPartner EventsPublication PartnersPrevious ConferencesAbstractsAwardsBooks PublishedSponsored by:Locally Organized and Hosted by:INSTICC is Member of:Logistics:COMPLEXIS 2024 will be held in conjunction withENASE 2024,ICEIS 2024,ICT4AWE 2024,IoTBDS 2024andFEMIB 2024. 
+ Registration to COMPLEXIS allows free access to the ENASE, ICEIS, ICT4AWE, IoTBDS and FEMIB conferences (as a non-speaker). 
+
+Although the conference is back to the normal mode (i.e., in-person) speakers are allowed to present remotely if unable to travel to the venue (hybrid support). 
+ href="mailto:complexis.secretariat@insticc.org" - 
+ href="	https://www.facebook.com/COMPLEXIS-Conference-1722251738009646/	" - 
+ The International Conference on Complexity, Future Information Systems and Risk, is a yearly meeting place for presenting and discussing innovative views on all aspects of Complex Information Systems, in different areas such as Informatics, Telecommunications, Computational Intelligence, Biology, Biomedical Engineering and Social Sciences. Information is pervasive in many areas of human activity – perhaps all – and complexity is a characteristic of current Exabyte-sized, highly connected and hyper dimensional, information systems. 
+ Conference Areas 
+ 1.href="CallForPapers.aspx#A1" - Complexity in Informatics and Networking
+ 
+ 2.href="CallForPapers.aspx#A2" - Complexity in Biology and Biomedical Engineering
+ 
+ 3.href="CallForPapers.aspx#A3" - Complexity in Social Sciences
+ 
+ 4.href="CallForPapers.aspx#A4" - Complexity in Risk and Predictive Modeling
+ 
+ 5.href="CallForPapers.aspx#A5" - Complexity in AI/Edge/Fog/High-Performance Computing
+
+href="/Documents/big_data_project_description_update.pdf" - Research Examples
+
+Conference ChairVictor Chang,Aston University, United Kingdom 
+ PROGRAM CO-CHAIRSAli Emrouznejad,Business Analytics, University of Surrey, United Kingdom 
+ Luigi Fortuna,University of Catania, Italy 
+ PUBLICITY CHAIRSDebashis Das Chakladar,Luleå University of Technology, Sweden 
+ Peng Liu,University of Kent, United Kingdom 
+ Keynote SpeakersLuigi Atzori,Universita degli Studi di Cagliari, Italy 
+
+Publications: 
+ All papers presented at the conference venue 
+ will be available at theSCITEPRESS Digital Library 
+ (consult SCITEPRESSEthics of Publication) 
+  
+ A short list of best papers will be invited 
+ for a post-conference special issue of the 
+ Springer Nature Computer Science Journal 
+  
+ A short list of papers presented at the conference 
+ venue will be selected for publication of extended 
+ and revised versions in a special issue ofJournal of 
+ Global Information Management 
+  
+ A short list of best papers will be invited for 
+ publication of extended and revised versions 
+ in a special issue ofIMA Journal of Management 
+ Mathematics. 
+  
+ A short list of best papers will be invited for 
+ publication of extended and revised versions 
+ in a special issue ofSocio-Economic Planning 
+ Sciencesjournal. 
+  
+ A short list of papers will be invited 
+ for a post-conference special issue of the 
+ Big Data Journal 
+  
+ Authors of the best papers focused on fusion can be selected 
+ to submit an extended version (at least 30% of new content) 
+ of their work to be appreciated for publication 
+ in theInternet of Things 
+ In Cooperation with:Proceedings will be submitted for evaluation for indexing by: 
+
+Web of Science/Conference Proceedings Citation Index 
+
+©2025INSTICC
+
+2. Website of COMPLEXIS_2: https://openresearch.surrey.ac.uk/esploro/outputs/conferenceProceeding/Proceedings-of-the-9th-International-Conference/99895765502346
+Website information of COMPLEXIS_2:
+
+href="https://clarivate.com/products/scientific-and-academic-research/research-funding-and-analytics/esploro/" - Powered by Esploro from Clarivate
+
+3. Website of COMPLEXIS_2: https://research.aston.ac.uk/en/publications/fars-a-high-performance-automorphism-aware-algorithm-for-graph-si
+Website information of COMPLEXIS_2:
+
+Skip to main navigation 
+ Skip to search 
+ Skip to main content 
+ href="/en/" - Aston Research Explorer Home
+href="https://www2.aston.ac.uk/research/supporting-our-researchers/" - Help & FAQ 
+ Home 
+ href="/en/organisations/" - Research units 
+ Profiles 
+ href="/en/publications/" - Research Outputs 
+ Datasets 
+ Student theses 
+ 0More | Activities 
+ Press/Media 
+ Prizes 
+ Equipment 
+ Search by expertise, name or affiliationFaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching 
+ Fan Wang, Weiren Yu,href="https://research.aston.ac.uk/en/persons/hai-wang" - Hai Wang
+,href="https://research.aston.ac.uk/en/persons/prof-victor-chang" - Victor Chang
+href="https://research.aston.ac.uk/en/organisations/software-engineering-cybersecurity" - Software Engineering & Cybersecurity 
+ href="https://research.aston.ac.uk/en/organisations/operations-information-management" - Operations & Information Management 
+ href="https://research.aston.ac.uk/en/organisations/aston-university" - Aston University 
+ Research output:Chapter in Book/Published conference output›Conference publication 
+ Overview 
+ Fingerprint 
+ Abstract 
+ Role-based similarity search, predicated on the topological structure of graphs, is a highly effective and widely applicable technique for various real-world information extraction applications. Although the prominent rolebased similarity algorithm, RoleSim, successfully provides the automorphic (role) equivalence of similarity between pairs of nodes, it does not effectively differentiate nodes that exhibit exact automorphic equivalence but differ in terms of structural equivalence within a given graph. This limitation arises from disregarding most adjacency similarity information between pairs of nodes during the RoleSim computation. To address this research gap, we propose a novel single-source role similarity search algorithm, named FaRS, which employs the top Γ maximum similarity matching technique to capture more information from the classes of neighboring nodes, ensuring both automorphic equivalence and structural equivalence of role similarity. Furthermore, we establi sh the convergence of FaRS and demonstrate its adherence to various axioms, including uniqueness, symmetry, boundedness, and triangular inequality. Additionally, we introduce the Opt FaRS algorithm, which optimizes the computation of FaRS through two acceleration components: path extraction tracking and precomputation (P-speedup and Out-speedup approach). Experimental results on real datasets demonstrate that FaRS and Opt FaRS outperform baseline algorithms in terms of both accuracy and efficiency. 
+  
+ Original language | English 
+ Title of host publication | Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024 
+ Editors | Ali Emrouznejad, Luigi Fortuna, Victor Chang 
+ Publisher | SciTePress 
+ Pages | 17-29 
+ Number of pages | 13 
+ ISBN (Electronic) | 9789897586989 
+ DOIs | https://doi.org/10.5220/0012724000003708 
+ Publication status | Published -Apr 2024 
+ Publication series 
+  
+ Name | International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings 
+ ISSN (Electronic) | 2184-5034 
+ Bibliographical note 
+ Publisher Copyright: 
+ Copyright © 2024 by SCITEPRESS - Science and Technology Publications, Lda. 
+ Keywords 
+ Link Analysis 
+ Similarity Search 
+ Web Search 
+ Access to Document 
+ 10.5220/0012724000003708Licence:CC BY-NC-ND 4.0 
+ Other files and links 
+ https://www.scitepress.org/Link.aspx?doi=10.5220/0012724000003708 
+ Link to publication in Scopus 
+ FingerprintDive into the research topics of 'FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching'. Together they form a unique fingerprint.High PerformanceKeyphrases100% 
+ Structural EquivalenceKeyphrases100% 
+ Similarity SearchKeyphrases100% 
+ Graph MatchingKeyphrases100% 
+ Similarity MatchingKeyphrases100% 
+ Automorphic EquivalenceKeyphrases100% 
+ Role SimilarityKeyphrases100% 
+ AutomorphismKeyphrases100% 
+ View full fingerprintCite this 
+ APA 
+ Author 
+ BIBTEX 
+ Harvard 
+ Standard 
+ RIS 
+ Vancouver 
+ Wang, F., Yu, W., Wang, H., & Chang, V.(2024).FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching. In A. Emrouznejad, L. Fortuna, & V. Chang (Eds.),Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024(pp. 17-29). (International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings). SciTePress.https://doi.org/10.5220/0012724000003708 
+ Wang, Fan ; Yu, Weiren; Wang, Haiet al. /FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching. Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024. editor / Ali Emrouznejad ; Luigi Fortuna ; Victor Chang. SciTePress, 2024. pp. 17-29 (International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings). 
+ @inproceedings{f527174e426c40f6ab075cbba28c5da8, 
+ title = "FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching", 
+ abstract = "Role-based similarity search, predicated on the topological structure of graphs, is a highly effective and widely applicable technique for various real-world information extraction applications. Although the prominent rolebased similarity algorithm, RoleSim, successfully provides the automorphic (role) equivalence of similarity between pairs of nodes, it does not effectively differentiate nodes that exhibit exact automorphic equivalence but differ in terms of structural equivalence within a given graph. This limitation arises from disregarding most adjacency similarity information between pairs of nodes during the RoleSim computation. To address this research gap, we propose a novel single-source role similarity search algorithm, named FaRS, which employs the top Γ maximum similarity matching technique to capture more information from the classes of neighboring nodes, ensuring both automorphic equivalence and structural equivalence of role similarity. Furthermore, we establi sh the convergence of FaRS and demonstrate its adherence to various axioms, including uniqueness, symmetry, boundedness, and triangular inequality. Additionally, we introduce the Opt FaRS algorithm, which optimizes the computation of FaRS through two acceleration components: path extraction tracking and precomputation (P-speedup and Out-speedup approach). Experimental results on real datasets demonstrate that FaRS and Opt FaRS outperform baseline algorithms in terms of both accuracy and efficiency. ", 
+ keywords = "Link Analysis, Similarity Search, Web Search", 
+ author = "Fan Wang and Weiren Yu and Hai Wang and Victor Chang", 
+ note = "Publisher Copyright: Copyright {\textcopyright} 2024 by SCITEPRESS - Science and Technology Publications, Lda.", 
+ year = "2024", 
+ month = apr, 
+ doi = "10.5220/0012724000003708", 
+ language = "English", 
+ series = "International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings", 
+ publisher = "SciTePress", 
+ pages = "17--29", 
+ editor = "Ali Emrouznejad and Luigi Fortuna and Victor Chang", 
+ booktitle = "Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024", 
+ } 
+ Wang, F, Yu, W, Wang, H& Chang, V2024,FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching. in A Emrouznejad, L Fortuna & V Chang (eds),Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024.International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings, SciTePress, pp. 17-29.https://doi.org/10.5220/0012724000003708 
+ FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching./ Wang, Fan; Yu, Weiren; Wang, Haiet al. 
+ Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024. ed. / Ali Emrouznejad; Luigi Fortuna; Victor Chang. SciTePress, 2024. p. 17-29 (International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings).Research output:Chapter in Book/Published conference output›Conference publication 
+ TY - GEN 
+ T1 - FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching 
+ AU - Wang, Fan 
+ AU - Yu, Weiren 
+ AU - Wang, Hai 
+ AU - Chang, Victor 
+ N1 - Publisher Copyright: Copyright © 2024 by SCITEPRESS - Science and Technology Publications, Lda. 
+ PY - 2024/4 
+ Y1 - 2024/4 
+ N2 - Role-based similarity search, predicated on the topological structure of graphs, is a highly effective and widely applicable technique for various real-world information extraction applications. Although the prominent rolebased similarity algorithm, RoleSim, successfully provides the automorphic (role) equivalence of similarity between pairs of nodes, it does not effectively differentiate nodes that exhibit exact automorphic equivalence but differ in terms of structural equivalence within a given graph. This limitation arises from disregarding most adjacency similarity information between pairs of nodes during the RoleSim computation. To address this research gap, we propose a novel single-source role similarity search algorithm, named FaRS, which employs the top Γ maximum similarity matching technique to capture more information from the classes of neighboring nodes, ensuring both automorphic equivalence and structural equivalence of role similarity. Furthermore, we establi sh the convergence of FaRS and demonstrate its adherence to various axioms, including uniqueness, symmetry, boundedness, and triangular inequality. Additionally, we introduce the Opt FaRS algorithm, which optimizes the computation of FaRS through two acceleration components: path extraction tracking and precomputation (P-speedup and Out-speedup approach). Experimental results on real datasets demonstrate that FaRS and Opt FaRS outperform baseline algorithms in terms of both accuracy and efficiency. 
+ AB - Role-based similarity search, predicated on the topological structure of graphs, is a highly effective and widely applicable technique for various real-world information extraction applications. Although the prominent rolebased similarity algorithm, RoleSim, successfully provides the automorphic (role) equivalence of similarity between pairs of nodes, it does not effectively differentiate nodes that exhibit exact automorphic equivalence but differ in terms of structural equivalence within a given graph. This limitation arises from disregarding most adjacency similarity information between pairs of nodes during the RoleSim computation. To address this research gap, we propose a novel single-source role similarity search algorithm, named FaRS, which employs the top Γ maximum similarity matching technique to capture more information from the classes of neighboring nodes, ensuring both automorphic equivalence and structural equivalence of role similarity. Furthermore, we establi sh the convergence of FaRS and demonstrate its adherence to various axioms, including uniqueness, symmetry, boundedness, and triangular inequality. Additionally, we introduce the Opt FaRS algorithm, which optimizes the computation of FaRS through two acceleration components: path extraction tracking and precomputation (P-speedup and Out-speedup approach). Experimental results on real datasets demonstrate that FaRS and Opt FaRS outperform baseline algorithms in terms of both accuracy and efficiency. 
+ KW - Link Analysis 
+ KW - Similarity Search 
+ KW - Web Search 
+ UR - https://www.scitepress.org/Link.aspx?doi=10.5220/0012724000003708 
+ UR - http://www.scopus.com/inward/record.url?scp=85194161184&partnerID=8YFLogxK 
+ U2 - 10.5220/0012724000003708 
+ DO - 10.5220/0012724000003708 
+ M3 - Conference publication 
+ T3 - International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings 
+ SP - 17 
+ EP - 29 
+ BT - Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024 
+ A2 - Emrouznejad, Ali 
+ A2 - Fortuna, Luigi 
+ A2 - Chang, Victor 
+ PB - SciTePress 
+ ER - 
+ Wang F, Yu W, Wang H, Chang V.FaRS: A High-Performance Automorphism-Aware Algorithm for Graph Similarity Matching. In Emrouznejad A, Fortuna L, Chang V, editors, Proceedings of the 9th International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS 2024. SciTePress. 2024. p. 17-29. (International Conference on Complexity, Future Information Systems and Risk, COMPLEXIS - Proceedings). Epub 2024 Apr 28. doi: 10.5220/0012724000003708 
+ href="https://www.facebook.com/sharer.php?u=https://research.aston.ac.uk/en/publications/fars-a-high-performance-automorphism-aware-algorithm-for-graph-si%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.5220%2F0012724000003708&p[summary]=Check+out+this+research+output+at+Aston+Research+Explorer%3A+FaRS%3A+A+High-Performance+Automorphism-Aware+Algorithm+for+Graph+Similarity+Matching" - 
+ href="https://twitter.com/intent/tweet?url=https://research.aston.ac.uk/en/publications/fars-a-high-performance-automorphism-aware-algorithm-for-graph-si%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.5220%2F0012724000003708&text=Check+out+this+research+output+at+Aston+Research+Explorer%3A+FaRS%3A+A+High-Performance+Automorphism-Aware+Algorithm+for+Graph+Similarity+Matching" - 
+ href="https://www.linkedin.com/shareArticle?mini=true&url=https://research.aston.ac.uk/en/publications/fars-a-high-performance-automorphism-aware-algorithm-for-graph-si%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.5220%2F0012724000003708&summary=Check+out+this+research+output+at+Aston+Research+Explorer%3A+FaRS%3A+A+High-Performance+Automorphism-Aware+Algorithm+for+Graph+Similarity+Matching" - 
+ href="mailto:?subject=FaRS%3A%20A%20High-Performance%20Automorphism-Aware%20Algorithm%20for%20Graph%20Similarity%20Matching&body=Check%20out%20this%20research%20output%20at%20Aston%20Research%20Explorer%3A%20FaRS%3A%20A%20High-Performance%20Automorphism-Aware%20Algorithm%20for%20Graph%20Similarity%20Matching | https://research.aston.ac.uk/en/publications/fars-a-high-performance-automorphism-aware-algorithm-for-graph-si?utm_source=email&utm_medium=email&utm_campaign=sharelink" - 
+ Powered byhref="http://www.elsevier.com/online-tools/research-intelligence/products-and-services/pure" - Pure
+,Scopus&Elsevier Fingerprint Engine™All content on this site: Copyright © 2025 Aston Research Explorer, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply 
+ We use cookies to help provide and enhance our service and tailor content. By continuing you agree to theuse of cookies 
+ Log in to Pure 
+ href="https://www2.aston.ac.uk/data-protection/documents-2019/Data%20Protection%20Policy%202019.pdf" - Aston Research Explorer data protection policy
+About web accessibility 
+ Report vulnerabilityContact us
+

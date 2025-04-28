@@ -1,0 +1,895 @@
+Conference FC:
+
+Home 
+ href="cfp.html" - Call for Papers
+Program 
+ Registration 
+ Workshops 
+ Travel 
+ Accommodation 
+ Student Grants 
+ Sponsorship 
+ Code of Conduct 
+
+Platinum Sponsors 
+  
+ Gold Sponsors 
+  
+ Silver Sponsors | Financial Cryptography and Data Security 2025 
+ Twenty-Ninth International Conference 
+ 14–18 April 2025 
+ Hotel Shigira Mirage 
+ Miyakojima, Japan 
+  
+ href="mailto:fc25chair@ifca.ai" - Program Chairs | Christina Garman 
+ Pedro Moreno-Sanchez 
+ href="mailto:fc25general@ifca.ai" - General Chairs | Rafael Hirschfeld 
+ Kazue Sako 
+ Local Sponsorship Chairs | Shin'ichiro Matsuo 
+ Masaki Shimaoka 
+  
+ This preliminary information is subject to change. 
+ Financial Cryptography and Data Security is a major international forum for research, advanced development, education, exploration, and debate regarding information assurance, with a specific focus on commercial contexts. The conference covers all aspects of securing transactions and systems. Original works focusing on both fundamental and applied real-world deployments on all aspects surrounding commerce security are solicited. Submissions need not be exclusively concerned with cryptography. Systems security and interdisciplinary works are particularly encouraged. 
+ The goal of the conference is to bring security and cryptography researchers and practitioners together with economists, bankers implementers and policy-makers. Intimate and colourful by tradition the FC program features invited talks, academic presentations technical demonstrations and panel discussions. In addition, severalworkshops will be held in conjunction with the FC conference. 
+ This conference is organized annually by thehref="http://ifca.ai" - International
+Financial Cryptography Association
+. | href="mailto:fc25chair@ifca.ai" - Program Chairs | Christina Garman 
+ Pedro Moreno-Sanchez | href="mailto:fc25general@ifca.ai" - General Chairs | Rafael Hirschfeld 
+ Kazue Sako | Local Sponsorship Chairs | Shin'ichiro Matsuo 
+ Masaki Shimaoka 
+ href="mailto:fc25chair@ifca.ai" - Program Chairs | Christina Garman 
+ Pedro Moreno-Sanchez 
+ href="mailto:fc25general@ifca.ai" - General Chairs | Rafael Hirschfeld 
+ Kazue Sako 
+ Local Sponsorship Chairs | Shin'ichiro Matsuo 
+ Masaki Shimaoka 
+  
+ Copyright © 2025 Stichting Financial Cryptography / International Financial Cryptography Association 
+
+Call for Papers information:
+Home 
+ Call for Papers 
+ Program 
+ Registration 
+ Workshops 
+ Travel 
+ Accommodation 
+ Student Grants 
+ Sponsorship 
+ Code of Conduct 
+
+Platinum Sponsors 
+  
+ Gold Sponsors 
+  
+ Silver Sponsors | Call for Papers 
+  
+ Financial Cryptography and Data Security 2025 
+ Twenty-Ninth International Conference 
+ 14–18 April 2025 
+ Hotel Shigira Mirage 
+ Miyakojima, Japan 
+ Important Dates 
+
+Paper submission | 8 October 2024 
+ Paper notification | 6 December 2024 
+ Final pre-proceedings papers | 14 February 2025 
+ Workshop and tutorial submission | 13 September 2024* 
+ Workshop and tutorial notification | 27 September 2024 
+ Conference | 14–18 April 2025 
+ All submissions are accepted until 23:59, AoE UTC-12. 
+ *Late workshop and tutorial submissions considered on a rolling basis, as space allows. 
+ Satoshi Grace Period 
+ On October 4th, 2024, we project that the Ethereum's Beacon Chain will publish a random number inslot 10100000denoted "RANDAO Reveal". Based on the last (least significant) hex character of this number, we will offer a possible extension to the paper deadline as follows: 
+  
+ Number | Paper submission deadline 
+ 0, 1 | 8 October (original deadline) 
+ 2, 3, 4 | 9 October 
+ 5, 6, 7, 8, 9 | 10 October 
+ A, B, C, D, E, F | 11 October 
+ The random number in slot 10100000 is0x8fbc79eb733d3fef8d218a0924bda4a0ff676317790dc58c278a462f7d9c03aed1618be49df1fd77e44f0c8ef260e0ea14c7bda670d0262cc473a6a87b67eb21dcef93e75dd29d98f1c3872432e9de58e2b20f602795baa551c082cea435d52eand the FC25 submission deadline is thus11 October 2024. 
+ Contact 
+ href="mailto:fc25chair@ifca.ai" - fc25chair@ifca.ai 
+ Topics 
+ Access control, authorization and trust management 
+ Anonymity and privacy enhancing technologies 
+ Applied cryptography 
+ Attacks, attack techniques, and attack case studies 
+ Auctions and incentive design 
+ Authentication, identity management and biometrics 
+ Behavioral aspects of security and privacy 
+ Blockchain applications 
+ Blockchain protocols, proof-of-work, -stake, -burn 
+ Censorship circumvention and resistance 
+ Central bank digital currency (CBDC) 
+ Certification and audits 
+ Cloud computing and data outsourcing security 
+ Cryptographic protocols 
+ Data security and privacy 
+ Decentralized finance (DeFi) 
+ Digital cash and payment systems 
+ Digital rights management 
+ Distributed consensus protocols 
+ Economic and monetary aspects of cryptocurrencies 
+ Economics of security and privacy 
+ Electronic crime and underground markets 
+ Electronic payments and ticketing systems 
+ Empirical studies, real-world measurements and metrics 
+ Forensics, monitoring and transaction graph analysis 
+ Fraud detection and management 
+ Game theory for security, privacy, and blockchain 
+ Language-based security and formal verification 
+ Legal and regulatory issues of blockchains, cryptocurrencies, and electronic payments 
+ Machine learning and AI security 
+ Malware and software security 
+ Mobile payments 
+ Network and distributed system security 
+ Phishing and social engineering 
+ Scalability and interoperability of cryptocurrencies 
+ Security of banking, financial services, and electronic commerce 
+ Security of peer-to-peer networks 
+ Smart contracts and financial instruments 
+ Smartcards, secure tokens, and secure hardware 
+ Surveillance and tracking 
+ System security 
+ Trusted execution environments (TEE), their security and applications 
+ Usability and security 
+ Web security 
+ Zero-knowledge proofs 
+ Remember! The "crypto" in financial cryptography covers more than just your digital cash—it's also the secret sauce behind keeping your spy-level messages safe! 
+ Submission 
+ Contributions are sought in the following categories: 
+ href="#regular" - Research papers | , | regular papers (15 pages + references and appendices), 
+ short papers (8 pages + references; no appendices), and 
+ systematization of knowledge (SoK) papers (20 pages + references and appendices) 
+ Workshop proposals | (2 pages) 
+ Tutorial proposals | (2 pages) 
+ Research paper submissions must be uploaded through thehref="https://crypto.unibe.ch/fc25/" - conference submission website
+.href="https://crypto.unibe.ch/fc25/" - 
+href="https://crypto.unibe.ch/fc25/" - Click here to submit a paper
+Workshop and tutorial proposals should be sent by email tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+,and should not be anonymized. For more details, see the corresponding sections below. 
+ General Information 
+ For each accepted paperthe conference requires at least one registration at the general or academic rate, and paper authors must sign thehref="http://ifca.ai/documents/copyright.html" - IFCA copyright
+form
+when submitting the final version. Alternatively, individual papers can be published as fully open access—the publisher charges authors a fee for this. 
+ Format 
+ Papers must be formatted in standard LNCS format (templates) and submitted as PDF files. Submissions in other formats will be rejected. All papers must be submitted electronically according to the instructions and forms found here and at the submission site. 
+ Anonymous Submission 
+ Regular and short research paper submissions as well as SoKs must be anonymized with no author names, affiliations, acknowledgments, or obvious references. Failure to properly anonymize submitted papers is grounds for a desk rejection without review. It is acceptable (but by no means required) for submitted papers to be published online in non-anonymous form (e.g., on authors' websites or archives like the Cryptology ePrint Archive or arXiv.org). Program committee members will be instructed not to actively seek to de-anonymize papers. 
+ Original Submissions 
+ Authors may submit only work that does not substantially overlap with work that is currently submitted or has been accepted for publication to any other peer-reviewed conference/workshop with proceedings or a journal. We consider double submission serious research fraud and will treat it as such. Note that it is acceptable for papers to appear in non-peer-reviewed formats (for example, as technical reports or in online archives such as ePrint). In case of doubt contact the program chairs for any clarifications. 
+ Ethics and Etiquette 
+ Authors are required to read and followthis informationon ethics and etiquette. 
+ Conflict of Interest 
+ Authors must report in the submission site any conflicts with program committee members. A conflict exists if an author has the same affiliation as a committee member, has ever acted as their PhD supervisor or been supervised by them, has a close personal relationship with them, or if they have been co-authors on a paper within the past two years. PC chairs are not allowed to submit papers where they appear as (co-)authors. 
+ PC members will not be able to review, read the reviews of, or participate in discussions of papers they are conflicted with. The review process for papers conflicted with both PC chairs will be managed by another PC member designated as the "conflict chair". 
+ Evaluation Criteria 
+ Regular Research Papers 
+ Research papers should describe novel, previously unpublished scientific contributions to the field, and they will be subject to rigorous peer review. Accepted submissions will be included in the conference proceedings to be published in the Springer-Verlag Lecture Notes in Computer Science (LNCS) series. Submissions are limited to 15 pages in standard LNCS format excluding references and appendices. A total page restriction may apply for the printed proceedings version. Committee members are not required to read the appendices so the full papers should be intelligible without them. 
+ Short Papers 
+ Short papers are also subject to peer review; however, the intention is to encourage authors to introduce work in progress, novel applications, and corporate/industrial experiences. Short papers will be evaluated with a focus on novelty and potential for sparking participants' interest and future research avenues. Short paper submissions are limited to 8 pages in standard LNCS format, excluding references. The title for short papers must begin with the text "Short Paper:". Accepted submissions will be included in the conference proceedings. The authors of some submissions not accepted as regular research papers may be offered the option of acceptance as a short paper. 
+ Systematization of Knowledge Papers 
+ We also solicit Systematization of Knowledge (SoK) papers. To be suitable for publication, SoK articles must provide an added value beyond a literature review, such as novel insights, identification of research gaps, or challenges to commonly held assumptions. SoK paper submissions are limited to 20 pages in standard LNCS format excluding references and appendices. Accepted submissions will be included in the conference proceedings. A total page restriction may apply for the printed proceedings version. Committee members are not required to read the appendices, so the full papers should be intelligible without them. The paper title for systematization of knowledge papers must begin with the text "SoK:". 
+ Workshop Proposals 
+ Proposals for workshops to be held in connection with the conference are solicited. A workshop can be a full day or half day in length. 
+ Workshop proposals should include: 
+ Title 
+ (Draft) Call for papers 
+ Brief summary and justification, including how it would fit into the greater FC scope 
+ (Tentative) Program Committee and its chair(s) 
+ One-paragraph biographies for key organizers, the expected (or previous, if the workshop has been held in previous years) number of submissions, participants and acceptance rates 
+ Workshop proposals must not be anonymous and should be sent tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+. Proposals received after the submission deadline will be considered on a rolling basis for any remaining slots. 
+ Tutorials 
+ Proposals for tutorials to be given in connection with the conference are solicited. A tutorial can be a full day or half day in length. 
+ Tutorial proposals should include: 
+ Title 
+ Description 
+ Name(s) of presenter(s) 
+ Brief biographies for all presenters 
+ Information about previous tutorials given by the presenter(s) 
+ Tutorial proposals must not be anonymous and should be sent tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+(the same address as for workshop proposals). Proposals received after the submission deadline will be considered on a rolling basis for any remaining slots. 
+ Rump Session 
+ The conference will also include the popular "rump session" held on one of the evenings in an informal, social atmosphere. The rump session is a program of short (5 minutes), informal presentations on works in progress, off-the-cuff ideas, and any other matters pertinent to the conference. Any conference attendee is welcome to submit a presentation to the Rump Session Chair (to be announced at the conference). This submission should consist of a talk title, the name of the presenter, and, if desired, a very brief abstract. Submissions may be sent via e-mail or submitted in person in the morning on the day of the session. 
+ Program Chairs 
+  
+ Christina Garman | Purdue University 
+ Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research 
+ Program Committee 
+  
+ Hamza Abusalah | IMDEA Software Institute 
+ Ghada Almashaqbeh | University of Connecticut 
+ Orestis Alpos | Common Prefix 
+ Jayamine Alupotha | University of Bern 
+ Ignacio Amores Sesar | University of Bern 
+ Lukas Aumayr | Common Prefix 
+ Zeta Avarikioti | TU Wien & Common Prefix 
+ Massimo Bartoletti | University of Cagliari 
+ Soumya Basu | Nuveaux Trading 
+ Don Beaver | Fierce Logic 
+ Adithya Bhat | Visa Research 
+ Alexander R. Block | University of Illinois Chicago 
+ Rainer Böhme | University of Innsbruck 
+ Joseph Bonneau | NYU & a16z crypto 
+ Stefanos Chaliasos | Imperial College London 
+ Panagiotis Chatzigiannis | Visa Research 
+ James Hsin-yu Chiang | Aarhus University 
+ Hao Chung | Carnegie Mellon University 
+ Michele Ciampi | The University of Edinburgh 
+ Jeremy Clark | Concordia University 
+ Bernardo David | IT University of Copenhagen & Common Prefix 
+ Rafael Dowsley | Monash University 
+ Sisi Duan | Tsinghua University 
+ Yue Duan | Singapore Management University 
+ Muhammed F. Esgin | Monash University 
+ Aleksander Essex | Western University 
+ Ittay Eyal | Technion 
+ Hanwen Feng | University of Sydney 
+ Matheus Xavier Ferreira | University of Virginia 
+ Arthur Gervais | University College London 
+ Noemi Glaeser | University of Maryland & MPI-SP 
+ Tiantian Gong | Purdue University 
+ Yue Guo | JP Morgan AI Research 
+ Suyash Gupta | University of Oregon 
+ Lucjan Hanzlik | CISPA Helmholtz Center for Information Security 
+ Hannes Hartenstein | Karlsruhe Institute of Technology 
+ Bernhard Haslhofer | Complexity Science Hub 
+ Ningyu He | The Hong Kong Polytechnic University 
+ Lioba Heimbach | ETH Zurich 
+ Jaap-Henk Hoepman | Radboud University / Karlstad University 
+ Yan Ji | Chainlink Labs 
+ Xiangkun Jia | Institute of Software Chinese Academy of Sciences 
+ Yanxue Jia | Purdue University 
+ Chenglu Jin | CWI Amsterdam 
+ Tushar Jois | City College of New York 
+ Ari Juels | Cornell Tech 
+ Ghassan Karame | Ruhr-University Bochum 
+ Harish Karthikeyan | JP Morgan AI Research 
+ Mahimna Kelkar | Cornell University 
+ Lucianna Kiffer | IMDEA Networks 
+ Jason Kim | Georgia Institute of Technology 
+ Lefteris Kokoris Kogias | Mysten Labs 
+ Yashvanth Kondi | Silence Laboratories (Deel) 
+ Kari Kostiainen | ETH Zurich 
+ Mario Larangeira | Tokyo Institute of Technology / IOG 
+ Duc V. Le | Visa Research 
+ Eysa Lee | Brown University 
+ Stefanos Leonardos | King's College London 
+ Jacob Leshno | University of Chicago 
+ Jiasun Li | George Mason University 
+ Orfeas Stefanos Thyfronitis Litos | Imperial College London 
+ Jing Liu | MPI-SP & UC Irvine 
+ Xiangyu Liu | Purdue University and Georgia Institute of Technology 
+ Zeyan Liu | University of Louisville 
+ Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation 
+ Donghang Lu | TikTok 
+ Yuan Lu | Institute of Software Chinese Academy of Sciences 
+ Varun Madathil | Yale University 
+ Akaki Mamageishvili | Offchain Labs 
+ Easwar Vivek Mangipudi | Supra Research 
+ Elisaweta Masserova | CMU 
+ Shin'ichiro Matsuo | Virginia Tech/Georgetown University 
+ Roman Matzutt | Fraunhofer FIT 
+ Patrick McCorry | Arbitrum Foundation 
+ Kelsey Melissaris | Aarhus University 
+ Johnnatan Messias | MPI-SWS 
+ Jason Milionis | Columbia University 
+ Pratyush Mishra | University of Pennsylvania 
+ Ciamac Moallemi | Columbia University 
+ Malte Möser | Chainalysis 
+ Neha Narula | MIT 
+ Georgios Palaiokrassas | Yale University 
+ Georgios Panagiotakos | IOG 
+ Dimitrios Papadopoulos | HKUST 
+ Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) 
+ Kaihua Qin | Yale University 
+ Alfredo Rial | Nym Technologies 
+ Pierre-Louis Roman 
+ Tim Roughgarden | Columbia University & a16z crypto 
+ Reihaneh Safavi-Naini | University of Calgary 
+ Giulia Scaffino | TU Wien & Common Prefix 
+ Nibesh Shrestha | Supra Research 
+ Pratik Soni | University of Utah 
+ Alberto Sonnino | Mysten Labs & University College London 
+ Alexander Spiegelman | Aptos Labs 
+ Srivatsan Sridhar | Stanford University 
+ Chrysoula Stathakopoulou | Chainlink Labs 
+ Erkan Tairi | ENS Paris 
+ Wenpin Tang | Columbia University 
+ Sri AravindaKrishnan Thyagarajan | University of Sydney 
+ Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) 
+ Daniel Tschudi | Concordium 
+ Taro Tsuchiya | Carnegie Mellon University 
+ Marie Vasek | UCL 
+ Friedhelm Victor | TRM Labs 
+ Yann Vonlanthen | ETH Zurich 
+ Anh V. Vu | University of Cambridge 
+ Jun Wan | Five Rings LLC 
+ Ding Wang | Nankai University 
+ Haoyu Wang | Huazhong University of Science and Technology 
+ Kanye Ye Wang | University of Macau 
+ Qin Wang | CSIRO Data61 
+ Shouqiao Wang | Columbia University 
+ Xuechao Wang | HKUST(GZ) 
+ Zhipeng Wang | Imperial College London 
+ Ke Wu | University of Michigan 
+ Zhuolun Xiang | Aptos Labs 
+ Guowen Xu | University of Electronic Science and Technology of China 
+ Jiahua Xu | University College London 
+ Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) 
+ Aviv Yaish | Yale University 
+ Zheng Yang | Southwest University 
+ Mengqian Zhang | Yale University 
+ Hong-Sheng Zhou | Virginia Commonwealth University 
+ Liyi Zhou | University of Sydney 
+ Yajin Zhou | Zhejiang University & BlockSec 
+ This conference is organized annually by thehref="https://ifca.ai/" - International
+Financial Cryptography Association
+. | Paper submission | 8 October 2024 | Paper notification | 6 December 2024 | Final pre-proceedings papers | 14 February 2025 | Workshop and tutorial submission | 13 September 2024* | Workshop and tutorial notification | 27 September 2024 | Conference | 14–18 April 2025 | All submissions are accepted until 23:59, AoE UTC-12. | *Late workshop and tutorial submissions considered on a rolling basis, as space allows. | Number | Paper submission deadline | 0, 1 | 8 October (original deadline) | 2, 3, 4 | 9 October | 5, 6, 7, 8, 9 | 10 October | A, B, C, D, E, F | 11 October | Christina Garman | Purdue University | Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research | Hamza Abusalah | IMDEA Software Institute | Ghada Almashaqbeh | University of Connecticut | Orestis Alpos | Common Prefix | Jayamine Alupotha | University of Bern | Ignacio Amores Sesar | University of Bern | Lukas Aumayr | Common Prefix | Zeta Avarikioti | TU Wien & Common Prefix | Massimo Bartoletti | University of Cagliari | Soumya Basu | Nuveaux Trading | Don Beaver | Fierce Logic | Adithya Bhat | Visa Research | Alexander R. Block | University of Illinois Chicago | Rainer Böhme | University of Innsbruck | Joseph Bonneau | NYU & a16z crypto | Stefanos Chaliasos | Imperial College London | Panagiotis Chatzigiannis | Visa Research | James Hsin-yu Chiang | Aarhus University | Hao Chung | Carnegie Mellon University | Michele Ciampi | The University of Edinburgh | Jeremy Clark | Concordia University | Bernardo David | IT University of Copenhagen & Common Prefix | Rafael Dowsley | Monash University | Sisi Duan | Tsinghua University | Yue Duan | Singapore Management University | Muhammed F. Esgin | Monash University | Aleksander Essex | Western University | Ittay Eyal | Technion | Hanwen Feng | University of Sydney | Matheus Xavier Ferreira | University of Virginia | Arthur Gervais | University College London | Noemi Glaeser | University of Maryland & MPI-SP | Tiantian Gong | Purdue University | Yue Guo | JP Morgan AI Research | Suyash Gupta | University of Oregon | Lucjan Hanzlik | CISPA Helmholtz Center for Information Security | Hannes Hartenstein | Karlsruhe Institute of Technology | Bernhard Haslhofer | Complexity Science Hub | Ningyu He | The Hong Kong Polytechnic University | Lioba Heimbach | ETH Zurich | Jaap-Henk Hoepman | Radboud University / Karlstad University | Yan Ji | Chainlink Labs | Xiangkun Jia | Institute of Software Chinese Academy of Sciences | Yanxue Jia | Purdue University | Chenglu Jin | CWI Amsterdam | Tushar Jois | City College of New York | Ari Juels | Cornell Tech | Ghassan Karame | Ruhr-University Bochum | Harish Karthikeyan | JP Morgan AI Research | Mahimna Kelkar | Cornell University | Lucianna Kiffer | IMDEA Networks | Jason Kim | Georgia Institute of Technology | Lefteris Kokoris Kogias | Mysten Labs | Yashvanth Kondi | Silence Laboratories (Deel) | Kari Kostiainen | ETH Zurich | Mario Larangeira | Tokyo Institute of Technology / IOG | Duc V. Le | Visa Research | Eysa Lee | Brown University | Stefanos Leonardos | King's College London | Jacob Leshno | University of Chicago | Jiasun Li | George Mason University | Orfeas Stefanos Thyfronitis Litos | Imperial College London | Jing Liu | MPI-SP & UC Irvine | Xiangyu Liu | Purdue University and Georgia Institute of Technology | Zeyan Liu | University of Louisville | Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation | Donghang Lu | TikTok | Yuan Lu | Institute of Software Chinese Academy of Sciences | Varun Madathil | Yale University | Akaki Mamageishvili | Offchain Labs | Easwar Vivek Mangipudi | Supra Research | Elisaweta Masserova | CMU | Shin'ichiro Matsuo | Virginia Tech/Georgetown University | Roman Matzutt | Fraunhofer FIT | Patrick McCorry | Arbitrum Foundation | Kelsey Melissaris | Aarhus University | Johnnatan Messias | MPI-SWS | Jason Milionis | Columbia University | Pratyush Mishra | University of Pennsylvania | Ciamac Moallemi | Columbia University | Malte Möser | Chainalysis | Neha Narula | MIT | Georgios Palaiokrassas | Yale University | Georgios Panagiotakos | IOG | Dimitrios Papadopoulos | HKUST | Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) | Kaihua Qin | Yale University | Alfredo Rial | Nym Technologies | Pierre-Louis Roman | Tim Roughgarden | Columbia University & a16z crypto | Reihaneh Safavi-Naini | University of Calgary | Giulia Scaffino | TU Wien & Common Prefix | Nibesh Shrestha | Supra Research | Pratik Soni | University of Utah | Alberto Sonnino | Mysten Labs & University College London | Alexander Spiegelman | Aptos Labs | Srivatsan Sridhar | Stanford University | Chrysoula Stathakopoulou | Chainlink Labs | Erkan Tairi | ENS Paris | Wenpin Tang | Columbia University | Sri AravindaKrishnan Thyagarajan | University of Sydney | Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) | Daniel Tschudi | Concordium | Taro Tsuchiya | Carnegie Mellon University | Marie Vasek | UCL | Friedhelm Victor | TRM Labs | Yann Vonlanthen | ETH Zurich | Anh V. Vu | University of Cambridge | Jun Wan | Five Rings LLC | Ding Wang | Nankai University | Haoyu Wang | Huazhong University of Science and Technology | Kanye Ye Wang | University of Macau | Qin Wang | CSIRO Data61 | Shouqiao Wang | Columbia University | Xuechao Wang | HKUST(GZ) | Zhipeng Wang | Imperial College London | Ke Wu | University of Michigan | Zhuolun Xiang | Aptos Labs | Guowen Xu | University of Electronic Science and Technology of China | Jiahua Xu | University College London | Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) | Aviv Yaish | Yale University | Zheng Yang | Southwest University | Mengqian Zhang | Yale University | Hong-Sheng Zhou | Virginia Commonwealth University | Liyi Zhou | University of Sydney | Yajin Zhou | Zhejiang University & BlockSec 
+ Paper submission | 8 October 2024 
+ Paper notification | 6 December 2024 
+ Final pre-proceedings papers | 14 February 2025 
+ Workshop and tutorial submission | 13 September 2024* 
+ Workshop and tutorial notification | 27 September 2024 
+ Conference | 14–18 April 2025 
+ All submissions are accepted until 23:59, AoE UTC-12. 
+ *Late workshop and tutorial submissions considered on a rolling basis, as space allows. 
+ Number | Paper submission deadline 
+ 0, 1 | 8 October (original deadline) 
+ 2, 3, 4 | 9 October 
+ 5, 6, 7, 8, 9 | 10 October 
+ A, B, C, D, E, F | 11 October 
+ Christina Garman | Purdue University 
+ Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research 
+ Hamza Abusalah | IMDEA Software Institute 
+ Ghada Almashaqbeh | University of Connecticut 
+ Orestis Alpos | Common Prefix 
+ Jayamine Alupotha | University of Bern 
+ Ignacio Amores Sesar | University of Bern 
+ Lukas Aumayr | Common Prefix 
+ Zeta Avarikioti | TU Wien & Common Prefix 
+ Massimo Bartoletti | University of Cagliari 
+ Soumya Basu | Nuveaux Trading 
+ Don Beaver | Fierce Logic 
+ Adithya Bhat | Visa Research 
+ Alexander R. Block | University of Illinois Chicago 
+ Rainer Böhme | University of Innsbruck 
+ Joseph Bonneau | NYU & a16z crypto 
+ Stefanos Chaliasos | Imperial College London 
+ Panagiotis Chatzigiannis | Visa Research 
+ James Hsin-yu Chiang | Aarhus University 
+ Hao Chung | Carnegie Mellon University 
+ Michele Ciampi | The University of Edinburgh 
+ Jeremy Clark | Concordia University 
+ Bernardo David | IT University of Copenhagen & Common Prefix 
+ Rafael Dowsley | Monash University 
+ Sisi Duan | Tsinghua University 
+ Yue Duan | Singapore Management University 
+ Muhammed F. Esgin | Monash University 
+ Aleksander Essex | Western University 
+ Ittay Eyal | Technion 
+ Hanwen Feng | University of Sydney 
+ Matheus Xavier Ferreira | University of Virginia 
+ Arthur Gervais | University College London 
+ Noemi Glaeser | University of Maryland & MPI-SP 
+ Tiantian Gong | Purdue University 
+ Yue Guo | JP Morgan AI Research 
+ Suyash Gupta | University of Oregon 
+ Lucjan Hanzlik | CISPA Helmholtz Center for Information Security 
+ Hannes Hartenstein | Karlsruhe Institute of Technology 
+ Bernhard Haslhofer | Complexity Science Hub 
+ Ningyu He | The Hong Kong Polytechnic University 
+ Lioba Heimbach | ETH Zurich 
+ Jaap-Henk Hoepman | Radboud University / Karlstad University 
+ Yan Ji | Chainlink Labs 
+ Xiangkun Jia | Institute of Software Chinese Academy of Sciences 
+ Yanxue Jia | Purdue University 
+ Chenglu Jin | CWI Amsterdam 
+ Tushar Jois | City College of New York 
+ Ari Juels | Cornell Tech 
+ Ghassan Karame | Ruhr-University Bochum 
+ Harish Karthikeyan | JP Morgan AI Research 
+ Mahimna Kelkar | Cornell University 
+ Lucianna Kiffer | IMDEA Networks 
+ Jason Kim | Georgia Institute of Technology 
+ Lefteris Kokoris Kogias | Mysten Labs 
+ Yashvanth Kondi | Silence Laboratories (Deel) 
+ Kari Kostiainen | ETH Zurich 
+ Mario Larangeira | Tokyo Institute of Technology / IOG 
+ Duc V. Le | Visa Research 
+ Eysa Lee | Brown University 
+ Stefanos Leonardos | King's College London 
+ Jacob Leshno | University of Chicago 
+ Jiasun Li | George Mason University 
+ Orfeas Stefanos Thyfronitis Litos | Imperial College London 
+ Jing Liu | MPI-SP & UC Irvine 
+ Xiangyu Liu | Purdue University and Georgia Institute of Technology 
+ Zeyan Liu | University of Louisville 
+ Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation 
+ Donghang Lu | TikTok 
+ Yuan Lu | Institute of Software Chinese Academy of Sciences 
+ Varun Madathil | Yale University 
+ Akaki Mamageishvili | Offchain Labs 
+ Easwar Vivek Mangipudi | Supra Research 
+ Elisaweta Masserova | CMU 
+ Shin'ichiro Matsuo | Virginia Tech/Georgetown University 
+ Roman Matzutt | Fraunhofer FIT 
+ Patrick McCorry | Arbitrum Foundation 
+ Kelsey Melissaris | Aarhus University 
+ Johnnatan Messias | MPI-SWS 
+ Jason Milionis | Columbia University 
+ Pratyush Mishra | University of Pennsylvania 
+ Ciamac Moallemi | Columbia University 
+ Malte Möser | Chainalysis 
+ Neha Narula | MIT 
+ Georgios Palaiokrassas | Yale University 
+ Georgios Panagiotakos | IOG 
+ Dimitrios Papadopoulos | HKUST 
+ Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) 
+ Kaihua Qin | Yale University 
+ Alfredo Rial | Nym Technologies 
+ Pierre-Louis Roman 
+ Tim Roughgarden | Columbia University & a16z crypto 
+ Reihaneh Safavi-Naini | University of Calgary 
+ Giulia Scaffino | TU Wien & Common Prefix 
+ Nibesh Shrestha | Supra Research 
+ Pratik Soni | University of Utah 
+ Alberto Sonnino | Mysten Labs & University College London 
+ Alexander Spiegelman | Aptos Labs 
+ Srivatsan Sridhar | Stanford University 
+ Chrysoula Stathakopoulou | Chainlink Labs 
+ Erkan Tairi | ENS Paris 
+ Wenpin Tang | Columbia University 
+ Sri AravindaKrishnan Thyagarajan | University of Sydney 
+ Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) 
+ Daniel Tschudi | Concordium 
+ Taro Tsuchiya | Carnegie Mellon University 
+ Marie Vasek | UCL 
+ Friedhelm Victor | TRM Labs 
+ Yann Vonlanthen | ETH Zurich 
+ Anh V. Vu | University of Cambridge 
+ Jun Wan | Five Rings LLC 
+ Ding Wang | Nankai University 
+ Haoyu Wang | Huazhong University of Science and Technology 
+ Kanye Ye Wang | University of Macau 
+ Qin Wang | CSIRO Data61 
+ Shouqiao Wang | Columbia University 
+ Xuechao Wang | HKUST(GZ) 
+ Zhipeng Wang | Imperial College London 
+ Ke Wu | University of Michigan 
+ Zhuolun Xiang | Aptos Labs 
+ Guowen Xu | University of Electronic Science and Technology of China 
+ Jiahua Xu | University College London 
+ Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) 
+ Aviv Yaish | Yale University 
+ Zheng Yang | Southwest University 
+ Mengqian Zhang | Yale University 
+ Hong-Sheng Zhou | Virginia Commonwealth University 
+ Liyi Zhou | University of Sydney 
+ Yajin Zhou | Zhejiang University & BlockSec 
+
+Important Dates information:
+Home 
+ Call for Papers 
+ Program 
+ Registration 
+ Workshops 
+ Travel 
+ Accommodation 
+ Student Grants 
+ Sponsorship 
+ Code of Conduct 
+
+Platinum Sponsors 
+  
+ Gold Sponsors 
+  
+ Silver Sponsors | Call for Papers 
+  
+ Financial Cryptography and Data Security 2025 
+ Twenty-Ninth International Conference 
+ 14–18 April 2025 
+ Hotel Shigira Mirage 
+ Miyakojima, Japan 
+ Important Dates 
+
+Paper submission | 8 October 2024 
+ Paper notification | 6 December 2024 
+ Final pre-proceedings papers | 14 February 2025 
+ Workshop and tutorial submission | 13 September 2024* 
+ Workshop and tutorial notification | 27 September 2024 
+ Conference | 14–18 April 2025 
+ All submissions are accepted until 23:59, AoE UTC-12. 
+ *Late workshop and tutorial submissions considered on a rolling basis, as space allows. 
+ Satoshi Grace Period 
+ On October 4th, 2024, we project that the Ethereum's Beacon Chain will publish a random number inslot 10100000denoted "RANDAO Reveal". Based on the last (least significant) hex character of this number, we will offer a possible extension to the paper deadline as follows: 
+  
+ Number | Paper submission deadline 
+ 0, 1 | 8 October (original deadline) 
+ 2, 3, 4 | 9 October 
+ 5, 6, 7, 8, 9 | 10 October 
+ A, B, C, D, E, F | 11 October 
+ The random number in slot 10100000 is0x8fbc79eb733d3fef8d218a0924bda4a0ff676317790dc58c278a462f7d9c03aed1618be49df1fd77e44f0c8ef260e0ea14c7bda670d0262cc473a6a87b67eb21dcef93e75dd29d98f1c3872432e9de58e2b20f602795baa551c082cea435d52eand the FC25 submission deadline is thus11 October 2024. 
+ Contact 
+ href="mailto:fc25chair@ifca.ai" - fc25chair@ifca.ai 
+ Topics 
+ Access control, authorization and trust management 
+ Anonymity and privacy enhancing technologies 
+ Applied cryptography 
+ Attacks, attack techniques, and attack case studies 
+ Auctions and incentive design 
+ Authentication, identity management and biometrics 
+ Behavioral aspects of security and privacy 
+ Blockchain applications 
+ Blockchain protocols, proof-of-work, -stake, -burn 
+ Censorship circumvention and resistance 
+ Central bank digital currency (CBDC) 
+ Certification and audits 
+ Cloud computing and data outsourcing security 
+ Cryptographic protocols 
+ Data security and privacy 
+ Decentralized finance (DeFi) 
+ Digital cash and payment systems 
+ Digital rights management 
+ Distributed consensus protocols 
+ Economic and monetary aspects of cryptocurrencies 
+ Economics of security and privacy 
+ Electronic crime and underground markets 
+ Electronic payments and ticketing systems 
+ Empirical studies, real-world measurements and metrics 
+ Forensics, monitoring and transaction graph analysis 
+ Fraud detection and management 
+ Game theory for security, privacy, and blockchain 
+ Language-based security and formal verification 
+ Legal and regulatory issues of blockchains, cryptocurrencies, and electronic payments 
+ Machine learning and AI security 
+ Malware and software security 
+ Mobile payments 
+ Network and distributed system security 
+ Phishing and social engineering 
+ Scalability and interoperability of cryptocurrencies 
+ Security of banking, financial services, and electronic commerce 
+ Security of peer-to-peer networks 
+ Smart contracts and financial instruments 
+ Smartcards, secure tokens, and secure hardware 
+ Surveillance and tracking 
+ System security 
+ Trusted execution environments (TEE), their security and applications 
+ Usability and security 
+ Web security 
+ Zero-knowledge proofs 
+ Remember! The "crypto" in financial cryptography covers more than just your digital cash—it's also the secret sauce behind keeping your spy-level messages safe! 
+ Submission 
+ Contributions are sought in the following categories: 
+ href="#regular" - Research papers | , | regular papers (15 pages + references and appendices), 
+ short papers (8 pages + references; no appendices), and 
+ systematization of knowledge (SoK) papers (20 pages + references and appendices) 
+ Workshop proposals | (2 pages) 
+ Tutorial proposals | (2 pages) 
+ Research paper submissions must be uploaded through thehref="https://crypto.unibe.ch/fc25/" - conference submission website
+.href="https://crypto.unibe.ch/fc25/" - 
+href="https://crypto.unibe.ch/fc25/" - Click here to submit a paper
+Workshop and tutorial proposals should be sent by email tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+,and should not be anonymized. For more details, see the corresponding sections below. 
+ General Information 
+ For each accepted paperthe conference requires at least one registration at the general or academic rate, and paper authors must sign thehref="http://ifca.ai/documents/copyright.html" - IFCA copyright
+form
+when submitting the final version. Alternatively, individual papers can be published as fully open access—the publisher charges authors a fee for this. 
+ Format 
+ Papers must be formatted in standard LNCS format (templates) and submitted as PDF files. Submissions in other formats will be rejected. All papers must be submitted electronically according to the instructions and forms found here and at the submission site. 
+ Anonymous Submission 
+ Regular and short research paper submissions as well as SoKs must be anonymized with no author names, affiliations, acknowledgments, or obvious references. Failure to properly anonymize submitted papers is grounds for a desk rejection without review. It is acceptable (but by no means required) for submitted papers to be published online in non-anonymous form (e.g., on authors' websites or archives like the Cryptology ePrint Archive or arXiv.org). Program committee members will be instructed not to actively seek to de-anonymize papers. 
+ Original Submissions 
+ Authors may submit only work that does not substantially overlap with work that is currently submitted or has been accepted for publication to any other peer-reviewed conference/workshop with proceedings or a journal. We consider double submission serious research fraud and will treat it as such. Note that it is acceptable for papers to appear in non-peer-reviewed formats (for example, as technical reports or in online archives such as ePrint). In case of doubt contact the program chairs for any clarifications. 
+ Ethics and Etiquette 
+ Authors are required to read and followthis informationon ethics and etiquette. 
+ Conflict of Interest 
+ Authors must report in the submission site any conflicts with program committee members. A conflict exists if an author has the same affiliation as a committee member, has ever acted as their PhD supervisor or been supervised by them, has a close personal relationship with them, or if they have been co-authors on a paper within the past two years. PC chairs are not allowed to submit papers where they appear as (co-)authors. 
+ PC members will not be able to review, read the reviews of, or participate in discussions of papers they are conflicted with. The review process for papers conflicted with both PC chairs will be managed by another PC member designated as the "conflict chair". 
+ Evaluation Criteria 
+ Regular Research Papers 
+ Research papers should describe novel, previously unpublished scientific contributions to the field, and they will be subject to rigorous peer review. Accepted submissions will be included in the conference proceedings to be published in the Springer-Verlag Lecture Notes in Computer Science (LNCS) series. Submissions are limited to 15 pages in standard LNCS format excluding references and appendices. A total page restriction may apply for the printed proceedings version. Committee members are not required to read the appendices so the full papers should be intelligible without them. 
+ Short Papers 
+ Short papers are also subject to peer review; however, the intention is to encourage authors to introduce work in progress, novel applications, and corporate/industrial experiences. Short papers will be evaluated with a focus on novelty and potential for sparking participants' interest and future research avenues. Short paper submissions are limited to 8 pages in standard LNCS format, excluding references. The title for short papers must begin with the text "Short Paper:". Accepted submissions will be included in the conference proceedings. The authors of some submissions not accepted as regular research papers may be offered the option of acceptance as a short paper. 
+ Systematization of Knowledge Papers 
+ We also solicit Systematization of Knowledge (SoK) papers. To be suitable for publication, SoK articles must provide an added value beyond a literature review, such as novel insights, identification of research gaps, or challenges to commonly held assumptions. SoK paper submissions are limited to 20 pages in standard LNCS format excluding references and appendices. Accepted submissions will be included in the conference proceedings. A total page restriction may apply for the printed proceedings version. Committee members are not required to read the appendices, so the full papers should be intelligible without them. The paper title for systematization of knowledge papers must begin with the text "SoK:". 
+ Workshop Proposals 
+ Proposals for workshops to be held in connection with the conference are solicited. A workshop can be a full day or half day in length. 
+ Workshop proposals should include: 
+ Title 
+ (Draft) Call for papers 
+ Brief summary and justification, including how it would fit into the greater FC scope 
+ (Tentative) Program Committee and its chair(s) 
+ One-paragraph biographies for key organizers, the expected (or previous, if the workshop has been held in previous years) number of submissions, participants and acceptance rates 
+ Workshop proposals must not be anonymous and should be sent tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+. Proposals received after the submission deadline will be considered on a rolling basis for any remaining slots. 
+ Tutorials 
+ Proposals for tutorials to be given in connection with the conference are solicited. A tutorial can be a full day or half day in length. 
+ Tutorial proposals should include: 
+ Title 
+ Description 
+ Name(s) of presenter(s) 
+ Brief biographies for all presenters 
+ Information about previous tutorials given by the presenter(s) 
+ Tutorial proposals must not be anonymous and should be sent tohref="mailto:fc25workshops@ifca.ai" - fc25workshops@ifca.ai
+(the same address as for workshop proposals). Proposals received after the submission deadline will be considered on a rolling basis for any remaining slots. 
+ Rump Session 
+ The conference will also include the popular "rump session" held on one of the evenings in an informal, social atmosphere. The rump session is a program of short (5 minutes), informal presentations on works in progress, off-the-cuff ideas, and any other matters pertinent to the conference. Any conference attendee is welcome to submit a presentation to the Rump Session Chair (to be announced at the conference). This submission should consist of a talk title, the name of the presenter, and, if desired, a very brief abstract. Submissions may be sent via e-mail or submitted in person in the morning on the day of the session. 
+ Program Chairs 
+  
+ Christina Garman | Purdue University 
+ Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research 
+ Program Committee 
+  
+ Hamza Abusalah | IMDEA Software Institute 
+ Ghada Almashaqbeh | University of Connecticut 
+ Orestis Alpos | Common Prefix 
+ Jayamine Alupotha | University of Bern 
+ Ignacio Amores Sesar | University of Bern 
+ Lukas Aumayr | Common Prefix 
+ Zeta Avarikioti | TU Wien & Common Prefix 
+ Massimo Bartoletti | University of Cagliari 
+ Soumya Basu | Nuveaux Trading 
+ Don Beaver | Fierce Logic 
+ Adithya Bhat | Visa Research 
+ Alexander R. Block | University of Illinois Chicago 
+ Rainer Böhme | University of Innsbruck 
+ Joseph Bonneau | NYU & a16z crypto 
+ Stefanos Chaliasos | Imperial College London 
+ Panagiotis Chatzigiannis | Visa Research 
+ James Hsin-yu Chiang | Aarhus University 
+ Hao Chung | Carnegie Mellon University 
+ Michele Ciampi | The University of Edinburgh 
+ Jeremy Clark | Concordia University 
+ Bernardo David | IT University of Copenhagen & Common Prefix 
+ Rafael Dowsley | Monash University 
+ Sisi Duan | Tsinghua University 
+ Yue Duan | Singapore Management University 
+ Muhammed F. Esgin | Monash University 
+ Aleksander Essex | Western University 
+ Ittay Eyal | Technion 
+ Hanwen Feng | University of Sydney 
+ Matheus Xavier Ferreira | University of Virginia 
+ Arthur Gervais | University College London 
+ Noemi Glaeser | University of Maryland & MPI-SP 
+ Tiantian Gong | Purdue University 
+ Yue Guo | JP Morgan AI Research 
+ Suyash Gupta | University of Oregon 
+ Lucjan Hanzlik | CISPA Helmholtz Center for Information Security 
+ Hannes Hartenstein | Karlsruhe Institute of Technology 
+ Bernhard Haslhofer | Complexity Science Hub 
+ Ningyu He | The Hong Kong Polytechnic University 
+ Lioba Heimbach | ETH Zurich 
+ Jaap-Henk Hoepman | Radboud University / Karlstad University 
+ Yan Ji | Chainlink Labs 
+ Xiangkun Jia | Institute of Software Chinese Academy of Sciences 
+ Yanxue Jia | Purdue University 
+ Chenglu Jin | CWI Amsterdam 
+ Tushar Jois | City College of New York 
+ Ari Juels | Cornell Tech 
+ Ghassan Karame | Ruhr-University Bochum 
+ Harish Karthikeyan | JP Morgan AI Research 
+ Mahimna Kelkar | Cornell University 
+ Lucianna Kiffer | IMDEA Networks 
+ Jason Kim | Georgia Institute of Technology 
+ Lefteris Kokoris Kogias | Mysten Labs 
+ Yashvanth Kondi | Silence Laboratories (Deel) 
+ Kari Kostiainen | ETH Zurich 
+ Mario Larangeira | Tokyo Institute of Technology / IOG 
+ Duc V. Le | Visa Research 
+ Eysa Lee | Brown University 
+ Stefanos Leonardos | King's College London 
+ Jacob Leshno | University of Chicago 
+ Jiasun Li | George Mason University 
+ Orfeas Stefanos Thyfronitis Litos | Imperial College London 
+ Jing Liu | MPI-SP & UC Irvine 
+ Xiangyu Liu | Purdue University and Georgia Institute of Technology 
+ Zeyan Liu | University of Louisville 
+ Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation 
+ Donghang Lu | TikTok 
+ Yuan Lu | Institute of Software Chinese Academy of Sciences 
+ Varun Madathil | Yale University 
+ Akaki Mamageishvili | Offchain Labs 
+ Easwar Vivek Mangipudi | Supra Research 
+ Elisaweta Masserova | CMU 
+ Shin'ichiro Matsuo | Virginia Tech/Georgetown University 
+ Roman Matzutt | Fraunhofer FIT 
+ Patrick McCorry | Arbitrum Foundation 
+ Kelsey Melissaris | Aarhus University 
+ Johnnatan Messias | MPI-SWS 
+ Jason Milionis | Columbia University 
+ Pratyush Mishra | University of Pennsylvania 
+ Ciamac Moallemi | Columbia University 
+ Malte Möser | Chainalysis 
+ Neha Narula | MIT 
+ Georgios Palaiokrassas | Yale University 
+ Georgios Panagiotakos | IOG 
+ Dimitrios Papadopoulos | HKUST 
+ Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) 
+ Kaihua Qin | Yale University 
+ Alfredo Rial | Nym Technologies 
+ Pierre-Louis Roman 
+ Tim Roughgarden | Columbia University & a16z crypto 
+ Reihaneh Safavi-Naini | University of Calgary 
+ Giulia Scaffino | TU Wien & Common Prefix 
+ Nibesh Shrestha | Supra Research 
+ Pratik Soni | University of Utah 
+ Alberto Sonnino | Mysten Labs & University College London 
+ Alexander Spiegelman | Aptos Labs 
+ Srivatsan Sridhar | Stanford University 
+ Chrysoula Stathakopoulou | Chainlink Labs 
+ Erkan Tairi | ENS Paris 
+ Wenpin Tang | Columbia University 
+ Sri AravindaKrishnan Thyagarajan | University of Sydney 
+ Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) 
+ Daniel Tschudi | Concordium 
+ Taro Tsuchiya | Carnegie Mellon University 
+ Marie Vasek | UCL 
+ Friedhelm Victor | TRM Labs 
+ Yann Vonlanthen | ETH Zurich 
+ Anh V. Vu | University of Cambridge 
+ Jun Wan | Five Rings LLC 
+ Ding Wang | Nankai University 
+ Haoyu Wang | Huazhong University of Science and Technology 
+ Kanye Ye Wang | University of Macau 
+ Qin Wang | CSIRO Data61 
+ Shouqiao Wang | Columbia University 
+ Xuechao Wang | HKUST(GZ) 
+ Zhipeng Wang | Imperial College London 
+ Ke Wu | University of Michigan 
+ Zhuolun Xiang | Aptos Labs 
+ Guowen Xu | University of Electronic Science and Technology of China 
+ Jiahua Xu | University College London 
+ Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) 
+ Aviv Yaish | Yale University 
+ Zheng Yang | Southwest University 
+ Mengqian Zhang | Yale University 
+ Hong-Sheng Zhou | Virginia Commonwealth University 
+ Liyi Zhou | University of Sydney 
+ Yajin Zhou | Zhejiang University & BlockSec 
+ This conference is organized annually by thehref="https://ifca.ai/" - International
+Financial Cryptography Association
+. | Paper submission | 8 October 2024 | Paper notification | 6 December 2024 | Final pre-proceedings papers | 14 February 2025 | Workshop and tutorial submission | 13 September 2024* | Workshop and tutorial notification | 27 September 2024 | Conference | 14–18 April 2025 | All submissions are accepted until 23:59, AoE UTC-12. | *Late workshop and tutorial submissions considered on a rolling basis, as space allows. | Number | Paper submission deadline | 0, 1 | 8 October (original deadline) | 2, 3, 4 | 9 October | 5, 6, 7, 8, 9 | 10 October | A, B, C, D, E, F | 11 October | Christina Garman | Purdue University | Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research | Hamza Abusalah | IMDEA Software Institute | Ghada Almashaqbeh | University of Connecticut | Orestis Alpos | Common Prefix | Jayamine Alupotha | University of Bern | Ignacio Amores Sesar | University of Bern | Lukas Aumayr | Common Prefix | Zeta Avarikioti | TU Wien & Common Prefix | Massimo Bartoletti | University of Cagliari | Soumya Basu | Nuveaux Trading | Don Beaver | Fierce Logic | Adithya Bhat | Visa Research | Alexander R. Block | University of Illinois Chicago | Rainer Böhme | University of Innsbruck | Joseph Bonneau | NYU & a16z crypto | Stefanos Chaliasos | Imperial College London | Panagiotis Chatzigiannis | Visa Research | James Hsin-yu Chiang | Aarhus University | Hao Chung | Carnegie Mellon University | Michele Ciampi | The University of Edinburgh | Jeremy Clark | Concordia University | Bernardo David | IT University of Copenhagen & Common Prefix | Rafael Dowsley | Monash University | Sisi Duan | Tsinghua University | Yue Duan | Singapore Management University | Muhammed F. Esgin | Monash University | Aleksander Essex | Western University | Ittay Eyal | Technion | Hanwen Feng | University of Sydney | Matheus Xavier Ferreira | University of Virginia | Arthur Gervais | University College London | Noemi Glaeser | University of Maryland & MPI-SP | Tiantian Gong | Purdue University | Yue Guo | JP Morgan AI Research | Suyash Gupta | University of Oregon | Lucjan Hanzlik | CISPA Helmholtz Center for Information Security | Hannes Hartenstein | Karlsruhe Institute of Technology | Bernhard Haslhofer | Complexity Science Hub | Ningyu He | The Hong Kong Polytechnic University | Lioba Heimbach | ETH Zurich | Jaap-Henk Hoepman | Radboud University / Karlstad University | Yan Ji | Chainlink Labs | Xiangkun Jia | Institute of Software Chinese Academy of Sciences | Yanxue Jia | Purdue University | Chenglu Jin | CWI Amsterdam | Tushar Jois | City College of New York | Ari Juels | Cornell Tech | Ghassan Karame | Ruhr-University Bochum | Harish Karthikeyan | JP Morgan AI Research | Mahimna Kelkar | Cornell University | Lucianna Kiffer | IMDEA Networks | Jason Kim | Georgia Institute of Technology | Lefteris Kokoris Kogias | Mysten Labs | Yashvanth Kondi | Silence Laboratories (Deel) | Kari Kostiainen | ETH Zurich | Mario Larangeira | Tokyo Institute of Technology / IOG | Duc V. Le | Visa Research | Eysa Lee | Brown University | Stefanos Leonardos | King's College London | Jacob Leshno | University of Chicago | Jiasun Li | George Mason University | Orfeas Stefanos Thyfronitis Litos | Imperial College London | Jing Liu | MPI-SP & UC Irvine | Xiangyu Liu | Purdue University and Georgia Institute of Technology | Zeyan Liu | University of Louisville | Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation | Donghang Lu | TikTok | Yuan Lu | Institute of Software Chinese Academy of Sciences | Varun Madathil | Yale University | Akaki Mamageishvili | Offchain Labs | Easwar Vivek Mangipudi | Supra Research | Elisaweta Masserova | CMU | Shin'ichiro Matsuo | Virginia Tech/Georgetown University | Roman Matzutt | Fraunhofer FIT | Patrick McCorry | Arbitrum Foundation | Kelsey Melissaris | Aarhus University | Johnnatan Messias | MPI-SWS | Jason Milionis | Columbia University | Pratyush Mishra | University of Pennsylvania | Ciamac Moallemi | Columbia University | Malte Möser | Chainalysis | Neha Narula | MIT | Georgios Palaiokrassas | Yale University | Georgios Panagiotakos | IOG | Dimitrios Papadopoulos | HKUST | Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) | Kaihua Qin | Yale University | Alfredo Rial | Nym Technologies | Pierre-Louis Roman | Tim Roughgarden | Columbia University & a16z crypto | Reihaneh Safavi-Naini | University of Calgary | Giulia Scaffino | TU Wien & Common Prefix | Nibesh Shrestha | Supra Research | Pratik Soni | University of Utah | Alberto Sonnino | Mysten Labs & University College London | Alexander Spiegelman | Aptos Labs | Srivatsan Sridhar | Stanford University | Chrysoula Stathakopoulou | Chainlink Labs | Erkan Tairi | ENS Paris | Wenpin Tang | Columbia University | Sri AravindaKrishnan Thyagarajan | University of Sydney | Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) | Daniel Tschudi | Concordium | Taro Tsuchiya | Carnegie Mellon University | Marie Vasek | UCL | Friedhelm Victor | TRM Labs | Yann Vonlanthen | ETH Zurich | Anh V. Vu | University of Cambridge | Jun Wan | Five Rings LLC | Ding Wang | Nankai University | Haoyu Wang | Huazhong University of Science and Technology | Kanye Ye Wang | University of Macau | Qin Wang | CSIRO Data61 | Shouqiao Wang | Columbia University | Xuechao Wang | HKUST(GZ) | Zhipeng Wang | Imperial College London | Ke Wu | University of Michigan | Zhuolun Xiang | Aptos Labs | Guowen Xu | University of Electronic Science and Technology of China | Jiahua Xu | University College London | Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) | Aviv Yaish | Yale University | Zheng Yang | Southwest University | Mengqian Zhang | Yale University | Hong-Sheng Zhou | Virginia Commonwealth University | Liyi Zhou | University of Sydney | Yajin Zhou | Zhejiang University & BlockSec 
+ Paper submission | 8 October 2024 
+ Paper notification | 6 December 2024 
+ Final pre-proceedings papers | 14 February 2025 
+ Workshop and tutorial submission | 13 September 2024* 
+ Workshop and tutorial notification | 27 September 2024 
+ Conference | 14–18 April 2025 
+ All submissions are accepted until 23:59, AoE UTC-12. 
+ *Late workshop and tutorial submissions considered on a rolling basis, as space allows. 
+ Number | Paper submission deadline 
+ 0, 1 | 8 October (original deadline) 
+ 2, 3, 4 | 9 October 
+ 5, 6, 7, 8, 9 | 10 October 
+ A, B, C, D, E, F | 11 October 
+ Christina Garman | Purdue University 
+ Pedro Moreno-Sanchez | IMDEA Software Institute, VISA Research 
+ Hamza Abusalah | IMDEA Software Institute 
+ Ghada Almashaqbeh | University of Connecticut 
+ Orestis Alpos | Common Prefix 
+ Jayamine Alupotha | University of Bern 
+ Ignacio Amores Sesar | University of Bern 
+ Lukas Aumayr | Common Prefix 
+ Zeta Avarikioti | TU Wien & Common Prefix 
+ Massimo Bartoletti | University of Cagliari 
+ Soumya Basu | Nuveaux Trading 
+ Don Beaver | Fierce Logic 
+ Adithya Bhat | Visa Research 
+ Alexander R. Block | University of Illinois Chicago 
+ Rainer Böhme | University of Innsbruck 
+ Joseph Bonneau | NYU & a16z crypto 
+ Stefanos Chaliasos | Imperial College London 
+ Panagiotis Chatzigiannis | Visa Research 
+ James Hsin-yu Chiang | Aarhus University 
+ Hao Chung | Carnegie Mellon University 
+ Michele Ciampi | The University of Edinburgh 
+ Jeremy Clark | Concordia University 
+ Bernardo David | IT University of Copenhagen & Common Prefix 
+ Rafael Dowsley | Monash University 
+ Sisi Duan | Tsinghua University 
+ Yue Duan | Singapore Management University 
+ Muhammed F. Esgin | Monash University 
+ Aleksander Essex | Western University 
+ Ittay Eyal | Technion 
+ Hanwen Feng | University of Sydney 
+ Matheus Xavier Ferreira | University of Virginia 
+ Arthur Gervais | University College London 
+ Noemi Glaeser | University of Maryland & MPI-SP 
+ Tiantian Gong | Purdue University 
+ Yue Guo | JP Morgan AI Research 
+ Suyash Gupta | University of Oregon 
+ Lucjan Hanzlik | CISPA Helmholtz Center for Information Security 
+ Hannes Hartenstein | Karlsruhe Institute of Technology 
+ Bernhard Haslhofer | Complexity Science Hub 
+ Ningyu He | The Hong Kong Polytechnic University 
+ Lioba Heimbach | ETH Zurich 
+ Jaap-Henk Hoepman | Radboud University / Karlstad University 
+ Yan Ji | Chainlink Labs 
+ Xiangkun Jia | Institute of Software Chinese Academy of Sciences 
+ Yanxue Jia | Purdue University 
+ Chenglu Jin | CWI Amsterdam 
+ Tushar Jois | City College of New York 
+ Ari Juels | Cornell Tech 
+ Ghassan Karame | Ruhr-University Bochum 
+ Harish Karthikeyan | JP Morgan AI Research 
+ Mahimna Kelkar | Cornell University 
+ Lucianna Kiffer | IMDEA Networks 
+ Jason Kim | Georgia Institute of Technology 
+ Lefteris Kokoris Kogias | Mysten Labs 
+ Yashvanth Kondi | Silence Laboratories (Deel) 
+ Kari Kostiainen | ETH Zurich 
+ Mario Larangeira | Tokyo Institute of Technology / IOG 
+ Duc V. Le | Visa Research 
+ Eysa Lee | Brown University 
+ Stefanos Leonardos | King's College London 
+ Jacob Leshno | University of Chicago 
+ Jiasun Li | George Mason University 
+ Orfeas Stefanos Thyfronitis Litos | Imperial College London 
+ Jing Liu | MPI-SP & UC Irvine 
+ Xiangyu Liu | Purdue University and Georgia Institute of Technology 
+ Zeyan Liu | University of Louisville 
+ Chen-Da Liu-Zhang | Lucerne University of Applied Sciences and Arts & Web3 Foundation 
+ Donghang Lu | TikTok 
+ Yuan Lu | Institute of Software Chinese Academy of Sciences 
+ Varun Madathil | Yale University 
+ Akaki Mamageishvili | Offchain Labs 
+ Easwar Vivek Mangipudi | Supra Research 
+ Elisaweta Masserova | CMU 
+ Shin'ichiro Matsuo | Virginia Tech/Georgetown University 
+ Roman Matzutt | Fraunhofer FIT 
+ Patrick McCorry | Arbitrum Foundation 
+ Kelsey Melissaris | Aarhus University 
+ Johnnatan Messias | MPI-SWS 
+ Jason Milionis | Columbia University 
+ Pratyush Mishra | University of Pennsylvania 
+ Ciamac Moallemi | Columbia University 
+ Malte Möser | Chainalysis 
+ Neha Narula | MIT 
+ Georgios Palaiokrassas | Yale University 
+ Georgios Panagiotakos | IOG 
+ Dimitrios Papadopoulos | HKUST 
+ Krzysztof Pietrzak | Institute of Science and Technology Austria (ISTA) 
+ Kaihua Qin | Yale University 
+ Alfredo Rial | Nym Technologies 
+ Pierre-Louis Roman 
+ Tim Roughgarden | Columbia University & a16z crypto 
+ Reihaneh Safavi-Naini | University of Calgary 
+ Giulia Scaffino | TU Wien & Common Prefix 
+ Nibesh Shrestha | Supra Research 
+ Pratik Soni | University of Utah 
+ Alberto Sonnino | Mysten Labs & University College London 
+ Alexander Spiegelman | Aptos Labs 
+ Srivatsan Sridhar | Stanford University 
+ Chrysoula Stathakopoulou | Chainlink Labs 
+ Erkan Tairi | ENS Paris 
+ Wenpin Tang | Columbia University 
+ Sri AravindaKrishnan Thyagarajan | University of Sydney 
+ Christof Ferreira Torres | INESC-ID / Instituto Superior Técnico (IST) 
+ Daniel Tschudi | Concordium 
+ Taro Tsuchiya | Carnegie Mellon University 
+ Marie Vasek | UCL 
+ Friedhelm Victor | TRM Labs 
+ Yann Vonlanthen | ETH Zurich 
+ Anh V. Vu | University of Cambridge 
+ Jun Wan | Five Rings LLC 
+ Ding Wang | Nankai University 
+ Haoyu Wang | Huazhong University of Science and Technology 
+ Kanye Ye Wang | University of Macau 
+ Qin Wang | CSIRO Data61 
+ Shouqiao Wang | Columbia University 
+ Xuechao Wang | HKUST(GZ) 
+ Zhipeng Wang | Imperial College London 
+ Ke Wu | University of Michigan 
+ Zhuolun Xiang | Aptos Labs 
+ Guowen Xu | University of Electronic Science and Technology of China 
+ Jiahua Xu | University College London 
+ Yingjie Xue | The Hong Kong University of Science and Technology (Guangzhou) 
+ Aviv Yaish | Yale University 
+ Zheng Yang | Southwest University 
+ Mengqian Zhang | Yale University 
+ Hong-Sheng Zhou | Virginia Commonwealth University 
+ Liyi Zhou | University of Sydney 
+ Yajin Zhou | Zhejiang University & BlockSec

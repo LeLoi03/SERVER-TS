@@ -1,0 +1,20 @@
+```json
+{
+  "Conference dates": "February 13, 2025",
+  "Year": "2025",
+  "Location": "Australasian Computer Science Week (ACSW 2025)",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "November 15, 2024"
+  },
+  "Notification Date": {
+    "Notification": "December 26, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready": "January 10, 2025"
+  },
+  "Topics": "Cyber security, digital forensics, cryptography, system security, network security, cryptology",
+  "Summary": "The Australasian Information Security Conference (AISC 2025) will be held as part of the Australasian Computer Science Week (ACSW 2025) on February 13, 2025. This conference aims at promoting research on all aspects of cyber security, digital forensics, and cryptography and increasing communication between academic and industrial researchers working in this area.",
+  "Call for Papers": "# AISC 2025: Call for Papers\n\nThe Australasian Information Security Conference (AISC 2025) will be held as part of the Australasian Computer Science Week (ACSW 2025) on **February 13, 2025**.\n\nThis conference aims at promoting research on all aspects of cyber security, digital forensics, and cryptography and increasing communication between academic and industrial researchers working in this area. AISC 2025 welcomes not only computer scientists and researchers but also educators, students, technicians, practitioners, and industry from across the world.\n\n## Areas of Interest\n\nAuthors are invited to submit original research papers on provable and practical security. Areas of interest include, but are not limited to:\n\n*   Provable security for asymmetric cryptography\n*   Provable security for symmetric cryptography\n*   Provable security for physical attacks\n*   Privacy and anonymity technologies\n*   Secure cryptographic protocols and applications\n*   Security notions, approaches, and paradigms\n*   Leakage-resilient cryptography\n*   Lattice-based cryptography and post-quantum cryptography\n*   Steganography and steganalysis\n*   Blockchain and cryptocurrency\n*   IoT security\n*   Cloud security\n*   Access control\n*   Privacy-enhancing technologies\n*   Database security\n*   Big data security and privacy\n*   Biometric security\n*   Network security\n*   Formal methods for security\n*   Embedded systems security\n*   Lightweight security\n*   Cyber-physical security\n*   ML security\n\n## Instructions for Authors\n\nAuthor instructions and LaTeX/Word templates for ACM publications can be found via the following link: [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)\n\nPapers should be submitted via EasyChair at [https://easychair.org/conferences/?conf=acsw2025](https://easychair.org/conferences/?conf=acsw2025)\n\nAll submissions must be original, unpublished, and not submitted to another conference or journal for consideration of publication. Submissions must be fully anonymous with no author names, affiliations, acknowledgements, or obvious references. Submissions must be written in English and have at most 20 pages including bibliography using ACM package with no changes to the style. Submissions can exceed 20 pages, but any content beyond 20 pages should be placed in the Appendix.\n\n## Important Dates\n\n*   **Paper Submission:** November 15, 2024\n*   **Notification:** December 26, 2024\n*   **Camera-ready:** January 10, 2025\n*   **Conference date:** February 13, 2025"
+}
+```

@@ -1,0 +1,39 @@
+output:
+{
+  "Conference dates": "September 16 - 19, 2025",
+  "Year": "2025",
+  "Location": "Berlin, Germany",
+  "City-State-Province": "Berlin",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Full papers) Preliminary Full Paper Abstract Submissions": "April 14, 2025",
+    "(Full papers) Full papers submission": "April 21, 2025",
+    "(Posters) Poster submission": "June 6, 2025",
+    "(Workshops) Workshop submission": "March 9, 2025",
+    "(Demos) Demo submission": "May 30, 2025",
+    "(Doctoral Consortium) DC paper submission": "June 23, 2025"
+  },
+  "Notification Date": {
+    "(Full papers) Review notification": "May 23, 2025",
+    "(Full papers) Notification of acceptance": "June 13, 2025",
+    "(Posters) Poster notification": "July 4, 2025",
+    "(Workshops) Workshop notification": "March 14, 2025",
+    "(Demos) Demo notification": "June 30, 2025",
+    "(Doctoral Consortium) DC paper notification": "July 7, 2025"
+  },
+  "Camera-ready Date": {
+    "(Full papers) Camera ready deadline": "July 14, 2025",
+    "(Posters) Camera ready deadline": "July 14, 2025"
+  },
+  "Other Date": {
+    "(Full papers) End of rebuttal": "May 30, 2025",
+    "Main Conference": "September 17 - 19",
+    "DC/Workshops/Tutorials": "September 16"
+  },
+  "Topics": "Intelligent Virtual Agents, Social Interaction, Human-like Qualities, Communication Modalities, Real-time Perception, Cognition, Emotion, Action, Dynamic Social Environments, Aesthetics, Culture, User Trust, Comfort, Engagement, Human-Machine Collaboration, Socially Interactive Agents",
+  "Summary": "The 25th ACM International Conference on Intelligent Virtual Agents (IVA 2025) will take place in Berlin, Germany, from September 16-19, 2025. The annual conference on Intelligent Virtual Agents (IVA) is the premier international event for interdisciplinary research on the design, application, and evaluation of Intelligent Virtual Agents (IVAs) with a specific focus on the ability to socially interact.",
+  "Call for Papers": "# IVA 2025: Call for Papers\n\nThe 25th ACM International Conference on Intelligent Virtual Agents (IVA 2025) will be held in **Berlin, Germany, from September 16-19, 2025**.\n\n## Theme\n\nThis year’s theme is **Aesthetics and Culture**.  It explores how aesthetic principles and cultural nuances for Socially Interactive Agents promote user trust, comfort, and willingness to engage.\n\n## Submission Tracks\n\nIVA 2025 offers the following submission tracks:\n\n*   **Full papers:** 4 to 8 pages (not including references) ([https://iva.acm.org/2025/call-for-papers](https://iva.acm.org/2025/call-for-papers))\n*   **Posters:** 2 to 3 pages (not including references) ([https://iva.acm.org/2025/call-for-scientific-and-artistic-posters-submissions-2/](https://iva.acm.org/2025/call-for-scientific-and-artistic-posters-submissions-2/))\n*   **Demo & Artwork:** 2 pages + visuals ([https://iva.acm.org/2025/call-for-demos/](https://iva.acm.org/2025/call-for-demos/))\n\nAll submissions will be double-blind peer-reviewed by expert reviewers. All accepted full-paper submissions will be presented orally and published in the proceedings.\n\n## Important Dates\n\nAll deadlines are anywhere on earth (23:59 UTC−12)\n\n### Full Papers\n\n*   **Preliminary Full Paper Abstract Submissions:** April 14, 2025\n*   **Full Paper Submissions:** April 21, 2025\n*   **Review Notification / Start of Rebuttal:** May 23, 2025\n*   **End of Rebuttal:** May 30, 2025\n*   **Notification of Acceptance:** June 13, 2025\n*   **Camera Ready Deadline:** July 14, 2025\n\n### Posters\n\n*   **Poster Submission:** June 6, 2025\n*   **Poster Notification:** July 4, 2025\n*   **Camera Ready Deadline:** July 14, 2025\n\n### Workshops\n\n*   **Workshop Submission:** March 9, 2025\n*   **Workshop Notification:** March 14, 2025\n\n### Demos\n\n*   **Demo Submission:** May 30, 2025\n*   **Demo Notification:** June 30, 2025\n\n### Doctoral Consortium\n\n*   **DC Paper Submission:** June 23, 2025\n*   **DC Paper Notification:** July 7, 2025\n\n### Conference Dates\n\n*   **Main Conference:** September 17 – 19\n*   **DC/Workshops/Tutorials:** September 16\n\n## Scope and List of Topics\n\nIVA invites submissions on a broad range of topics, including but not limited to:\n\n*   Agent design and modeling of:\n    *   Cognition\n    *   Emotion (including personality and cultural differences)\n    *   Socially communicative behavior\n    *   Conversational behavior\n    *   Social perception\n    *   Machine learning approaches to agent modeling\n    *   Approaches to realizing adaptive behavior\n    *   Models informed by theoretical and empirical research in psychology\n*   Multimodal interaction:\n    *   Verbal and nonverbal behavior coordination\n    *   Face-to-face communication skills\n    *   Engagement\n    *   Managing co-presence and interpersonal relation\n    *   Multi-party interaction\n    *   Data-driven multimodal modeling\n*   Social agent architectures:\n    *   Design criteria and design methodologies\n    *   Engineering of real-time human-agent interaction\n    *   Standards / measures to support interoperability\n    *   Portability and reuse\n    *   Specialized tools, toolkits and toolchains\n*   Evaluation methods and studies:\n    *   Evaluation methodologies and user studies\n    *   Ethical considerations and societal impact\n    *   Applicable lessons across fields (e.g., between robotics and virtual agents)\n    *   Social agents as a means to study and model human behavior\n*   Applications:\n    *   Applications in education, skills training, health, counseling, games, art, etc.\n    *   Virtual agents in games and simulations\n    *   Social agents as tools in psychology\n    *   Migration of agents between platforms\n\n## Instructions for Authors\n\nFull paper submissions should be anonymous and prepared in the “ACM Standard”/”SigConf” format.\n\nAll submissions should be in PDF-format and submitted via EasyChair: [https://easychair.org/conferences/?conf=iva25](https://easychair.org/conferences/?conf=iva25)\n\n## Review Process\n\nSubmissions will be reviewed in a double-blind fashion, by at least two reviewers. The possible outcomes are: Desk rejection, Rejection, Conditional Acceptance, Acceptance.\n\n## Large Language Model Policy\n\nLarge-scale language models (LLMs) such as ChatGPT can only be used by the authors to edit grammar of their own text. More information about the ACM publication policies can be found [here](https://www.acm.org/publications/policiesPLAGIARISM).\n\n## Contacts\n\nFor more information, please contact the Program Chairs:\n\n*   Beatrice Biancardi, CESI LINEACT, France\n*   Nicolas Sabouret, LISN, Université Paris-Saclay, France\n*   Michael Schmitz, HBK Saarbrücken, Germany\n*   Zerrin Yumak, Utrecht University, Netherlands\n\nat: [programmchairs@iva.acm.org](mailto:programmchairs@iva.acm.org)"
+}
+

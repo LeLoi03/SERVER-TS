@@ -1,0 +1,37 @@
+```json
+{
+  "Conference dates": "April 26 - May 1, 2025",
+  "Year": "2025",
+  "Location": "PACIFICO Yokohama, Yokohama, Japan",
+  "City-State-Province": "Yokohama, Kanagawa",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Submission": "September 12, 2024",
+    "Abstract/metadata deadline": "September 5, 2024",
+    "Full paper deadline": "September 12, 2024",
+    "Video figures and Supplementary Material deadline": "September 19, 2024"
+  },
+  "Notification Date": {
+    "Notification": "January 16, 2025",
+    "Reviews Released": "November 5, 2024",
+    "Decision Notification": "January 16, 2025",
+    "Reviews Released": "January 17, 2025"
+  },
+  "Camera-ready Date": {
+    "Resubmission deadline": "December 10, 2024",
+    "E-Rights Completion Deadline": "January 23, 2025",
+    "Publication-Ready deadline": "February 13, 2025",
+    "TAPS Closes": "February 20, 2025",
+    "Video Presentation Deadline": "March 13, 2025"
+  },
+  "Other Date": {
+    "PC Meeting": "January 14, 2025"
+  },
+  "Topics": "Human-Computer Interaction",
+  "Publisher": "ACM",
+  "Summary": "The ACM CHI conference on Human Factors in Computing Systems is the premier international conference of Human-Computer Interaction. CHI 2025 takes place in Yokohama, Japan, at the PACIFICO Yokohama from April 26 to May 1, 2025, while also supporting remote attendance. The conference embraces the theme of Ikigai, a Japanese concept referring to what gives a person a sense of purpose, a reason for living.",
+  "Call for Papers": "# CHI 2025: Call for Papers\n\nThe ACM CHI Conference on Human Factors in Computing Systems will be held in **Yokohama, Japan at the PACIFICO Yokohama from April 26 to May 1, 2025.**  The conference will support both in-person and remote attendance. \n\n## Theme\n\nThe conference theme is **Ikigai**, a Japanese concept referring to what gives a person a sense of purpose, a reason for living.\n\n## Important Dates\n\nAll times are in Anywhere on Earth (AoE) time zone. The submission site of each track will open approximately four weeks before its submission deadline.\n\n*   **Submission site open:** Thursday, August 1, 2024\n*   **Abstract/metadata deadline:** Thursday, September 5, 2024\n*   **Full paper deadline:** Thursday, September 12, 2024\n*   **Video figures and Supplementary Material deadline:** Thursday, September 19, 2024\n*   **Reviews Released:** Tuesday, November 5, 2024\n*   **Revise Papers:** Wednesday, November 6 – Tuesday, December 10, 2024\n*   **Resubmission deadline:** Tuesday, December 10, 2024\n*   **PC Meeting:** Tuesday, January 14, 2025\n*   **Decision Notification:** Thursday, January 16, 2025\n*   **Reviews Released:** Friday, January 17, 2025\n*   **E-Rights Completion Deadline:** Thursday, January 23, 2025\n*   **Publication-Ready deadline:** Thursday, February 13, 2025\n*   **TAPS Closes:** Thursday, February 20, 2025\n*   **Video Presentation Deadline (Mandatory):** Thursday, March 13, 2025\n\n## Submission Guidelines\n\n*   Your submission must be original; it cannot be published or under concurrent review elsewhere.\n*   Your submission must be anonymized.\n*   Concise and succinct writing is strongly encouraged.\n*   Your paper must be stand alone. \n*   If you have any concurrent submissions to CHI or other venues that are closely related, you must include an anonymized version of that submission to the concurrent submissions field. \n*   Research Quality: Papers must include enough detail that the research can be reviewed for research quality.\n*   Reproducibility: Where relevant, authors are strongly encouraged to provide supplementary materials to support practices around research reproducibility.\n*   Accessibility: Accessible submissions are essential for reviewers. Authors are expected to follow SIGCHI’s Guide to an Accessible Submission. \n*   Inclusivity: Authors should ensure their work and writing are as inclusive as possible.\n\n## Submission Process\n\n*   **Step 1. Write Your Paper:**  Use the correct template; a single-column format must be used for the reviewing phase.\n*   **Step 2. Prepare Supplementary Materials (Optional):** All video figures and supplementary material must be anonymized.\n*   **Step 3. Select a Subcommittee:** When you submit a paper, you can state a preference of up to two subcommittees.\n*   **Step 4. Complete Submission:** Make your submission via the Precision Conference Submission Portal.\n\n## Upon Acceptance of Your Paper\n\nContact authors of accepted papers will receive instructions on how to prepare and submit a final version by the Publication-Ready Deadline. \n\nAuthors will be required to assign either copyright or license to the ACM or to pay a fee to ACM for Open Access. \n\n## Video Presentations\n\nAll accepted authors are required to upload a video presentation by the video presentation deadline. \n\n## Your Paper at the Conference\n\nAuthors of accepted papers are required to present their work at CHI 2025, and the presenting author must register for their paper presentations. \n\n## Your Paper After the Conference\n\nAccepted papers will be distributed in the CHI Conference Proceedings available in the ACM Digital Library."
+}
+```

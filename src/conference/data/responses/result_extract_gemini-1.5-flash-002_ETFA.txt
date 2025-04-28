@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "September 9 - 12, 2025",
+  "Year": "2025",
+  "Location": "Porto, Portugal",
+  "City-State-Province": "Porto",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Special Session Proposal Deadline": "February 13, 2025",
+    "Deadline for Workshop proposals": "February 28, 2025",
+    "Deadline for regular and SS papers submission": "April 18, 2025",
+    "Deadline for Work-in-Progress and Workshops papers submission": "May 30, 2025",
+    "Deadline for submitting final versions": "July 4, 2025"
+  },
+  "Notification Date": {
+    "Notifications for proposed Special Sessions": "February 21, 2025",
+    "Notifications for proposed Workshop": "March 14, 2025",
+    "Notifications for submitted papers": "May 23, 2025",
+    "Notifications for submitted WiP and Workshops papers": "June 20, 2025"
+  },
+  "Topics": "Adaptive and Intelligent Control Systems, Advanced Motion Control, Autonomous Robotic Systems, Artificial Intelligence, Machine Learning, Automotive Control, Transportation Systems, Biomechatronics, Bioengineering Systems, Compliant and Soft Robotics, Haptics, Human-Robot Interaction, Industry Applications, Information Technology, Advanced Manufacturing, Micro-Electro-Mechanical Systems (MEMS), Nanotechnologies, Network-based Control Systems, Sensors, Actuators, Smart Materials, Structures, Visual Servo Systems, Machine Vision, Image Processing",
+  "Summary": "The 30th IEEE ETFA 2025, the flagship event of the IEEE IES Technical Committee on Factory Automation (TCFA), will be held in Porto, Portugal from September 9-12, 2025.  The conference aims to bring together the international community to present the latest research results, share new ideas and engineering breakthroughs, and discuss state-of-the-art challenges and future directions in technology and innovation in the broad domain of Automation with a focus on Industrial and Factory Automation.",
+  "Call for Papers": "# ETFA 2025: Call for Papers\n\nThe 30th IEEE International Conference on Emerging Technologies and Factory Automation (ETFA 2025) will take place in **Porto, Portugal, from September 9-12, 2025.**\n\nETFA 2025 is the flagship event of the IEEE IES Technical Committee on Factory Automation (TCFA) and a premier event sponsored by the IEEE Industrial Electronics Society.  It aims at bringing together the international community to present the latest research results, share new ideas and engineering breakthroughs, and discuss state-of-the-art challenges and future directions in technology and innovation in the broad domain of Automation with a focus on Industrial and Factory Automation.\n\n## Topics of Interest\n\nThe organizing committee cordially invites high-quality papers representing original work, including but not limited to the following topics:\n\n*   Adaptive and Intelligent Control Systems\n*   Advanced Motion Control\n*   Autonomous Robotic Systems, Artificial Intelligence, and Machine Learning\n*   Automotive Control and Transportation Systems\n*   Biomechatronics and Bioengineering Systems\n*   Compliant and Soft Robotics\n*   Haptics and Human-Robot Interaction\n*   Industry Applications, Information Technology, and Advanced Manufacturing\n*   Micro-Electro-Mechanical Systems (MEMS) and Nanotechnologies\n*   Network-based Control Systems and Applications\n*   Sensors and Actuators\n*   Smart Materials and Structures\n*   Visual Servo Systems, Machine Vision, and Image Processing\n\n## Manuscript Submission\n\nAuthors are invited to submit full regular papers (6-8 pages) of their work, reporting original research using the online submission system. The working language of the conference is English. Regular papers are typically 6-8 pages long, and are anyway limited to a maximum of eight (8) pages. Submissions of papers shorter than 5 pages may be automatically rejected.\n\nThe author must submit the draft version of the paper for review before the due submission deadline. Authors of accepted papers must submit the final paper version according to the deadline, register for the conference, and attend to present their paper(s). The maximum length for final papers is 8 pages without exceptions.\n\nIEEE is strict about the requirements for PDF files for inclusion in the IEEE Xplore® Digital Library. We strongly recommend using the templates in MS Word and LaTeX provided by IEEE. Please use them to create your paper, without modifying the style or format under any circumstances. A4 page size is preferred, and letter size can also be used.\n\n## Important Dates\n\n*   **Special Session Proposal Deadline:** February 13, 2025\n*   **Notifications for proposed Special Sessions:** February 21, 2025\n*   **Deadline for Workshop proposals:** February 28, 2025\n*   **Notifications for proposed Workshop:** March 14, 2025\n*   **Deadline for regular and SS papers submission:** April 18, 2025\n*   **Notifications for submitted papers:** May 23, 2025\n*   **Deadline for Work-in-Progress and Workshops papers submission:** May 30, 2025\n*   **Notifications for submitted WiP and Workshops papers:** June 20, 2025\n*   **Deadline for submitting final versions:** July 4, 2025\n\n## Contact\n\nLuis Almeida, Marina Indri\nGeneral Chairs ([etfa2025@fe.up.pt](mailto:etfa2025@fe.up.pt))"
+}
+```

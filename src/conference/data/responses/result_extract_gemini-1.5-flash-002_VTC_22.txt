@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "June 17 - 20, 2025",
+  "Year": "2025",
+  "Location": "Oslo, Norway",
+  "City-State-Province": "Oslo",
+  "Country": "Norway",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Submit Regular Papers Deadline": "December 16, 2024",
+    "Final Regular Paper Submission": "April 17, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance for Regular Papers - Extended": "March 20, 2025"
+  },
+  "Registration Date": {
+    "Regular Paper Author Registration Due": "May 4, 2025",
+    "Early Bird Registration Ends": "May 6, 2025",
+    "Regular Registration Due": "June 3, 2025"
+  },
+  "Topics": "Wireless Technology, Mobile Technology, Vehicular Technology",
+  "Summary": "The 2025 IEEE 101st Vehicular Technology Conference: VTC2025-Spring will be held in Oslo, Norway, from June 17-20, 2025. This semi-annual flagship conference of the IEEE Vehicular Technology Society will bring together individuals from academia, government, and industry to discuss and exchange ideas in the fields of wireless, mobile, and vehicular technology.",
+  "Call for Papers": "# VTC2025-Spring: Call for Recent Results\n\nThe 2025 IEEE 101st Vehicular Technology Conference: VTC2025-Spring will be held in **Oslo, Norway, from June 17-20, 2025**.\n\nThis semi-annual flagship conference of the IEEE Vehicular Technology Society will bring together individuals from academia, government, and industry to discuss and exchange ideas in the fields of wireless, mobile, and vehicular technology.\n\n## Recent Results Track\n\nAs an adjunct to the main conference, the Technical Program Committee is opening a Recent Results track that will offer the opportunity for rapid publication of emerging work by industry and academia. Authors have the option of seeking an oral or poster presentation accompanied by a paper in the proceedings, or a demo accompanied by a short paper.\n\nThe Recent Results track will accept submissions in all topics relevant to VTC. It differs from other tracks in that submission of 2-page abstracts (with results) will be considered as well as 5-page full papers. All abstracts submitted to the Recent Results track will undergo peer-review by subject matter experts, and the full paper version of accepted submissions will be submitted for publication in the conference proceedings and on IEEE Xplore® (conditional on presentation by one of the authors at the conference). All submissions should emphasize the novelty of the work and the results obtained.\n\n## Important Dates\n\n*   **Submission of full papers (EXTENDED):** March 13, 2025\n*   **Acceptance notification:** April 20, 2025\n*   **Final paper submission:** May 4, 2025\n\n## Submission\n\nTo submit a paper: [https://vtc2025s-rr-wks.trackchair.com/](https://vtc2025s-rr-wks.trackchair.com/)\n\n## Virtual Track\n\nThis conference will feature a virtual track; virtual presentations are available to those who cannot travel."
+}
+

@@ -1,0 +1,25 @@
+output:
+```json
+{
+  "Conference dates": "February 10 - 14, 2025",
+  "Year": "2025",
+  "Location": "University of Queensland, Brisbane, Australia",
+  "City-State-Province": "Brisbane, Queensland",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submissions for ACE2025 open": "October 4, 2024",
+    "submission deadline and bidding period begins": "November 2, 2024"
+  },
+  "Notification Date": {
+    "bidding period ends and reviewing begins": "November 5, 2024",
+    "reviewing period ends and discussion begins": "November 29, 2024",
+    "author notifications": "December 2, 2023"
+  },
+  "Topics": "computing education, technology, course content, curriculum structure, methods of assessment and evaluation, pedagogy and learning theories, mobile learning, flexible learning, online learning",
+  "Publisher": "ACM",
+  "Summary": "The Australasian Computing Education Conference (ACE) is a conference on research, teaching, and innovation in computing education. ACE 2025 will be held during the week of February 10, 2025, at the University of Queensland in Brisbane, Australia, in conjunction with Australasian Computer Science Week (ACSW). The ACE 2025 proceedings will be published in the ACM Digital Library.",
+  "Call for Papers": "# ACE 2025: Call for Participation\n\nThe 27th annual Australasian Computing Education Conference (ACE'2025) will be held during the week of **February 10, 2025** at the **University of Queensland in Brisbane, Australia** as part of Australasian Computer Science Week (ACSW).\n\nACE is a high-quality international conference, run in-cooperation with SIGCSE, that provides a forum for educators and researchers to share innovations and insights in computing education.\n\n## Topics of Interest\n\nTopics of interest for the conference include, but are not limited to:\n\n*   the use of technology in computing education;\n*   course content;\n*   curriculum structure;\n*   methods of assessment and evaluation;\n*   pedagogy and learning theories;\n*   mobile, flexible, online learning; and\n*   evaluations of alternative approaches\n\n## Submission Guidelines\n\n*   Both research papers and practitioner papers must be between **5 and 10 pages** in length (inclusive of any references).\n*   Submissions should be made via EasyChair at [https://easychair.org/conferences/?conf=acsw2025](https://easychair.org/conferences/?conf=acsw2025).\n*   Select \"Australasian Computing Education Conference 2025\" when starting a submission.\n*   Submissions should be in two-column format (i.e. use \"sigconf\" style in the documentclass for Latex) and should use the ACM SIG Proceedings template (available in Latex and Word).\n*   Submissions should be made to EasyChair in PDF format:\n    *   [LaTeX template](https://authors.acm.org/proceedings/production-information/preparing-your-article-with-microsoft-word)\n    *   [MS Word template](https://authors.acm.org/proceedings/production-information/preparing-your-article-with-microsoft-word)\n*   Authors are encouraged to review the points on authorship in the [Guidelines on Research Practice in Computer Science](https://www.core.edu.au/about/research-practice) by the Computer Research and Education Association (CORE).\n\n## Important Dates\n\nAll times Anywhere on Earth (AoE)\n\n*   Friday 4 October 2024: submissions for ACE2025 open\n*   Friday 25 October/2 November 2024: submission deadline and bidding period begins\n*   Tuesday 29 October/5 November 2024: bidding period ends and reviewing begins\n*   Friday 22 November/29 November 2024: reviewing period ends and discussion begins\n*   Monday 25 November/2 December 2023: author notifications\n\n## Review Process\n\nAll research and practitioner papers will be fully refereed, using a double-blind reviewing process, by a minimum of three members of the Program Committee.\n\n## Publication Cost\n\nAs the proceedings will be published in the ACM Digital Library, all authors need to be aware of the new cost structure for ICPS conferences (which include ACE).\n\nPlease look carefully at the guidance ([https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance)) to determine whether you will be required to pay the publishing cost, and if so, how much. It ranges from $US350 to $US1000.\n\nPlease note that any cost must be paid 45 days before the start of the conference and that there are serious consequences for non-payment. Given the potential for delays and absences over the holiday period, please ensure that payments are made no later than 28 December 2024.\n\n## Chairs\n\nTo contact the chairs, please use the conference EasyChair email address: [ace_2025@easychair.org](mailto:ACE_2025@easychair.org).\n\nAlternatively, you can contact them directly:\n\n*   Carolyn Seton, Southern Cross University\n*   Simon, Unaffiliated"
+}
+```

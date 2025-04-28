@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "August 25 - 27, 2025",
+  "Year": "2025",
+  "Location": "Osaka University, Nakanoshima center, Osaka, Japan",
+  "City-State-Province": "Osaka",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission (Research / Demo / Industry tracks)": "April 27, 2025",
+    "Paper submission deadline (Research / Demo / Industry tracks)": "May 4, 2025"
+  },
+  "Notification Date": {
+    "Notification date": "July 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready": "July 15, 2025"
+  },
+  "Topics": "Spatial Data Management, Temporal Data Management, Geospatial Computing, Spatio-temporal Analytics",
+  "Summary": "The International Symposium on Spatial and Temporal Data (SSTD) is a premier forum for researchers, practitioners, and industry leaders to present and discuss spatial and temporal data management innovations. The 19th edition of SSTD will be held in Osaka, Japan, from August 25-27, 2025.",
+  "Call for Papers": "# SSTD 2025: Call for Papers and Participation\n\nThe 19th International Symposium on Spatial and Temporal Data (SSTD 2025) will be held at **Osaka University, Nakanoshima center, Osaka, Japan, from August 25-27, 2025**.\n\nSSTD has a long and distinguished history as a premier forum for researchers, practitioners, and industry leaders to present and discuss spatial and temporal data management innovations.  The 19th edition continues this tradition while broadening its focus to explore the full lifecycle of spatial and temporal data, reflecting the growing importance of these data types in an era of big data, AI, and ubiquitous computing.\n\n## Tracks\n\nSSTD 2025 solicits submissions in the following tracks:\n\n*   Research Track\n*   Demo Track\n*   Industry Track\n*   Thesis and Dissertation Workshop Track\n*   Tutorial Proposals\n\n## Important Dates\n\nDeadlines refer to 23:59 in the AoE (Anywhere on Earth) time zone.\n\n*   **Abstract submission (Research / Demo / Industry tracks):** April 27, 2025\n*   **Paper submission deadline (Research / Demo / Industry tracks):** May 4, 2025\n*   **Notification date:** July 1, 2025\n*   **Camera-ready:** July 15, 2025\n*   **Conference dates:** August 25-27, 2025"
+}
+

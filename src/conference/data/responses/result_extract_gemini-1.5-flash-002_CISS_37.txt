@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "March 19 - 21, 2025",
+  "Year": "2025",
+  "Location": "Baltimore, MD, USA",
+  "City-State-Province": "Baltimore, Maryland",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "December 7, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "February 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Final manuscript due": "February 21, 2025"
+  },
+  "Topics": "Information Theory, Communications, Coding, Energy Systems, Signal and Image Processing, Systems and Control, Deep Learning, Networked Systems, Optimization, Quantum Systems, Machine Learning, Security and Privacy, Statistical Inference, Big Data Analytics, Biological Systems, Computer Vision, Cyber Physical Systems, Reinforcement Learning",
+  "Summary": "CISS 2025 is a forum for scientists, engineers, and academics to present their latest research results and developments in multiple areas of Information Sciences and Systems. Hosted by the Department of Electrical and Computer Engineering, Johns Hopkins University, and with technical co-sponsorship by the IEEE Information Theory Society, the conference will be held in Baltimore, Maryland, USA from March 19-21, 2025.",
+  "Call for Papers": "# CISS 2025: Call for Papers\n\nCISS 2025, hosted by the Department of Electrical and Computer Engineering, Johns Hopkins University, and with technical co-sponsorship by the IEEE Information Theory Society, is a forum for scientists, engineers, and academics to present their latest research results and developments in multiple areas of Information Sciences and Systems. The conference will be held in **Baltimore, Maryland, USA, from March 19-21, 2025**.\n\n## Topics\n\nAuthors will present unpublished papers describing theoretical advances, applications, and ideas in the fields of:\n\n*   Information Theory, Communications, and Coding\n*   Energy Systems\n*   Signal and Image Processing\n*   Systems and Control\n*   Deep Learning\n*   Networked Systems\n*   Optimization\n*   Quantum Systems\n*   Machine Learning\n*   Security and Privacy\n*   Statistical Inference\n*   Big Data Analytics\n*   Biological Systems\n*   Computer Vision\n*   Cyber Physical Systems\n*   Reinforcement Learning\n\n## Important Dates\n\n*   **Submission deadline:** December 7, 2024\n*   **Notification of acceptance:** February 10, 2025\n*   **Final manuscript due:** February 21, 2025\n\n## Submission Instructions\n\nPlease read the [information for authors](https://ciss.jhu.edu/author-information-2/) carefully before submitting.\n\nPlease submit your papers using the following link: [ciss2025.edas.info](https://ciss2025.edas.info)\n\nYou can use an already existing EDAS account or set up a new account for free."
+}
+

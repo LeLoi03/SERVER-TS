@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "June 5 - 7, 2024",
+  "Year": "2024",
+  "Location": "Nice, France",
+  "City-State-Province": "Nice",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "April 17, 2024"
+  },
+  "Notification Date": {
+    "Notification deadline": "May 14, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera ready deadline": "May 20, 2024"
+  },
+  "Topics": "Analog computation, Automata theory, Cellular automata, Classical computability and degree structures, Computability theoretic aspects of programs, Computable analysis and real computation, Computable structures and models, Continuous computing, Decidability of theories, DNA computing, self-assembly and tiling, Dynamical systems and computational models, Emerging and non-standard models of computation, Finite model theory, Generalized recursion theory, Higher type computability, Hyper-computational models, Infinite time Turing machines, Membrane computing, Molecular computation, Morphogenesis and developmental biology, Multi-agent systems, Natural computation and Hybrid systems, Neural nets and connectionist models, Physics and computability, Proof theory and computability, Randomness and Kolmogorov complexity, Relativistic computation, Swarm intelligence and self-organisation, Theory of Petri nets, Turing, Counter, Register, Signal machines, Universality of systems",
+  "Summary": "The 10th conference on Machines, Computations and Universality (MCU 2024) took place from June 5-7, 2024 in Nice, France. The International conference series MCU traces its roots back to the mid-1990s and has always been concerned with gaining a deeper understanding of computation and universality through the study of models of general-purpose computation.",
+  "Call for Papers": "No call for papers available"
+}
+

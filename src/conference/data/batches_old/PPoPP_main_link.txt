@@ -1,0 +1,1483 @@
+Conference PPoPP:
+
+href="https://ppopp25.sigplan.org" - PPoPP 2025
+Sat 1 - Wed 5 March 2025href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Las Vegas, Nevada, United States
+Toggle navigation 
+ Attending | href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct 
+ Program | href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - PPoPP Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Your Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sat 1 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sun 2 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Mon 3 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Tue 4 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Wed 5 Mar 
+ href="#" - Tracks | PPoPP 2025 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation 
+ Organization | PPoPP 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-Main-Conference-1-program-committee" - Main Conference 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-workshops-and-tutorials-workshop-and-tutorial-evaluation-committee" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ Contributors 
+ href="https://ppopp25.sigplan.org/people-index" - People Index 
+ href="https://ppopp25.sigplan.org/info/mailing-list" - PPoPP Mailing List 
+ href="https://ppopp25.sigplan.org/search//all" - Search 
+ Series | href="https://ppopp25.sigplan.org/series/PPoPP" - Series 
+ PPoPP 2025 
+ href="https://ppopp24.sigplan.org" - PPoPP 2024 
+ href="https://ppopp23.sigplan.org" - PPoPP 2023 
+ href="https://ppopp22.sigplan.org" - PPoPP 2022 
+ href="https://ppopp21.sigplan.org" - PPoPP 2021 
+ href="https://ppopp20.sigplan.org" - PPoPP  2020 
+ href="https://ppopp19.sigplan.org" - PPoPP 2019 
+ href="https://ppopp18.sigplan.org" - PPoPP 2018 
+ href="https://ppopp17.sigplan.org" - PPoPP 2017 
+ href="https://ppopp16.sigplan.org" - PPoPP 2016 
+ href="https://ppopp15.soe.ucsc.edu/" - PPoPP 2015 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 
+ href="http://dl.acm.org/citation.cfm?id=2442516" - PPoPP 2013 
+ href="http://dl.acm.org/citation.cfm?id=2145816&picked=prox" - PPoPP 2012 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 
+ href="http://dl.acm.org/citation.cfm?id=1693453" - PPoPP 2010 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 
+ href="https://conf.researchr.org/signin/PPoPP-2025/https%3A%5Es%5Esppopp25.sigplan.org%5Es" - Sign in 
+ href="https://ppopp25.sigplan.org/signup" - Sign up 
+ ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 2025 
+ href="#march-1st-march-5th-2025-las-vegas-nv" - March 1st – March 5th, 2025, Las Vegas, NV
+Co-located with CC, CGO and HPCA 
+ PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large-scale machines, and quantum computers). PPoPP is interested in all aspects related to improving the productivity of parallel programming on modern architectures. PPoPP is also interested in work that addresses new parallel workloads and issues that arise out of large-scale scientific or enterprise workloads. 
+ Proceedings are available in the ACM Digital Library:https://dl.acm.org/doi/proceedings/10.1145/3710848. 
+  
+ href="#distinguished-papers" - Distinguished Papers
+BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+ EVeREST: An Effective and Versatile Runtime Energy Saving Tool for GPUs 
+ Anna Yue (University of Minnesota at Twin Cities), Pen-Chung Yew (University of Minnesota at Twin Cities), Sanyam Mehta (HPE) 
+ Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data Structures 
+ Ajay Singh (FORTH ICS and University of Waterloo), Trevor Brown (University of Toronto) 
+ Best Artifact 
+ BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+  
+ Sponsors 
+ Platinum 
+ Gold 
+ Silver 
+ Bronze 
+ Loading... 
+ Powered ByWhova 
+ Best Event Apps 
+ PPoPP 2025 Tracks 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Posts 
+ href="https://twitter.com/PPoPPConf" - PPoPP Conference
+xSat 5 Apr 04:38 
+ href="https://ppopp25.sigplan.org" - PPoPP 2025
+href="https://ppopp25.sigplan.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://ppopp25.sigplan.org/support" - Support page
+ 
+ Tracks 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Attending 
+ href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa
+ 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration
+ 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options
+ 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants
+ 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa
+ 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct
+href="https://ppopp25.sigplan.org/signup" - Sign Up 
+
+Call for Papers information:
+href="https://ppopp25.sigplan.org" - PPoPP 2025
+Sat 1 - Wed 5 March 2025href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Las Vegas, Nevada, United States
+Toggle navigation 
+ Attending | href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct 
+ Program | href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - PPoPP Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Your Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sat 1 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sun 2 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Mon 3 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Tue 4 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Wed 5 Mar 
+ href="#" - Tracks | PPoPP 2025 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation 
+ Organization | PPoPP 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-Main-Conference-1-program-committee" - Main Conference 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-workshops-and-tutorials-workshop-and-tutorial-evaluation-committee" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ Contributors 
+ href="https://ppopp25.sigplan.org/people-index" - People Index 
+ href="https://ppopp25.sigplan.org/info/mailing-list" - PPoPP Mailing List 
+ href="https://ppopp25.sigplan.org/search//all" - Search 
+ Series | href="https://ppopp25.sigplan.org/series/PPoPP" - Series 
+ PPoPP 2025 
+ href="https://ppopp24.sigplan.org" - PPoPP 2024 
+ href="https://ppopp23.sigplan.org" - PPoPP 2023 
+ href="https://ppopp22.sigplan.org" - PPoPP 2022 
+ href="https://ppopp21.sigplan.org" - PPoPP 2021 
+ href="https://ppopp20.sigplan.org" - PPoPP  2020 
+ href="https://ppopp19.sigplan.org" - PPoPP 2019 
+ href="https://ppopp18.sigplan.org" - PPoPP 2018 
+ href="https://ppopp17.sigplan.org" - PPoPP 2017 
+ href="https://ppopp16.sigplan.org" - PPoPP 2016 
+ href="https://ppopp15.soe.ucsc.edu/" - PPoPP 2015 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 
+ href="http://dl.acm.org/citation.cfm?id=2442516" - PPoPP 2013 
+ href="http://dl.acm.org/citation.cfm?id=2145816&picked=prox" - PPoPP 2012 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 
+ href="http://dl.acm.org/citation.cfm?id=1693453" - PPoPP 2010 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 
+ href="https://conf.researchr.org/signin/PPoPP-2025/https%3A%5Es%5Esppopp25.sigplan.org%5Estrack%5EsPPoPP-2025-Main-Conference-1" - Sign in 
+ href="https://ppopp25.sigplan.org/signup" - Sign up 
+ href="https://ppopp25.sigplan.org" - PPoPP 2025
+(href="https://ppopp25.sigplan.org/series/PPoPP" - series
+) /Main ConferencePPoPP 2025 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ href="#Call-for-Papers" - Call for Papers 
+ PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds; and large scale machines). Given the rise of parallel architectures in the consumer market (desktops, laptops, and mobile devices) and data centers, PPoPP is particularly interested in work that addresses new parallel workloads and issues that arise out of extreme-scale applications or cloud platforms, as well as techniques and tools that improve the productivity of parallel programming or work towards improved synergy with such emerging architectures. 
+ Proceedings will be available in the ACM Digital Library. 
+ Dates 
+ Sat 1 Mar 2025 
+ Sun 2 Mar 2025 
+ Mon 3 Mar 2025 
+ Tue 4 Mar 2025 
+ Wed 5 Mar 2025 
+ Tracks 
+ PPoPP Catering 
+ PPoPP Keynotes 
+ PPoPP Main Conference 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-08:00) Pacific Time (US & Canada).Use conference time zone: (GMT-08:00) Pacific Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Sat 1 Mar 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 07:30 - 08:30 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-casuarina-ballroom" - Casuarina Ballroom 
+ 07:30 
+ 60m 
+ Break | BreakfastCatering 
+  
+ 10:00 - 10:30 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 10:00 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 15:00 - 15:30 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 15:00 
+ 30m 
+ Coffee break | BreakCatering 
+ Sun 2 Mar 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 07:30 - 08:30 | Breakfasthref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-casuarina-ballroom" - Casuarina Ballroom 
+ 07:30 
+ 60m 
+ Break | BreakfastCatering 
+  
+ 10:00 - 10:30 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 10:00 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 15:00 - 15:30 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 15:00 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 18:00 - 20:00 | Poster Sessionhref="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-c%26d" - Acacia C&D 
+ 18:00 
+ 2h 
+ Poster | POSTER: A General and Scalable GCN Training Framework on CPU SupercomputersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/chenzhuang" - Chen Zhuang
+Tokyo Institute of Technology, Riken Center for Computational Science,href="https://ppopp25.sigplan.org/profile/pengchen2" - Peng Chen
+National Institute of Advanced Industrial Science and Technology,href="https://ppopp25.sigplan.org/profile/xinliu5" - Xin Liu
+National Institute of Advanced Industrial Science & Technology,href="https://ppopp25.sigplan.org/profile/rioyokota" - Rio Yokota
+Tokyo Institute of Technology,href="https://ppopp25.sigplan.org/profile/nikolidryden1" - Nikoli Dryden
+Lawrence Livermore National Laboratory,href="https://ppopp25.sigplan.org/profile/toshioendo" - Toshio Endo
+Tokyo Institute of Technology,href="https://ppopp25.sigplan.org/profile/satoshimatsuoka1" - Satoshi Matsuoka
+RIKEN,href="https://ppopp25.sigplan.org/profile/mohamedwahib" - Mohamed Wahib
+RIKEN Center for Computational Science 
+ 18:00 
+ 2h 
+ Poster | POSTER: Triangle Counting on Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuangchen1" - YuAng Chen
+The Chinese University of Hong Kong,href="https://ppopp25.sigplan.org/profile/jeffreyxuyu" - Jeffrey Xu Yu
+The Chinese University of Hong Kong 
+ 18:00 
+ 2h 
+ Poster | POSTER: Minimizing speculation overhead in a parallel recognizer for regular textsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/angeloborsotti" - Angelo Borsotti
+Politecnico di Milano,href="https://ppopp25.sigplan.org/profile/lucabreveglieri" - Luca Breveglieri
+Politecnico di Milano,href="https://ppopp25.sigplan.org/profile/stefanocrespireghizzi" - Stefano Crespi Reghizzi
+Politecnico di Milano and CNR-EIIT,href="https://ppopp25.sigplan.org/profile/angelomorzenti" - Angelo Morzenti
+Politecnico di Milano 
+ 18:00 
+ 2h 
+ Poster | POSTER: Boost Lock-free Queue and Stack with BatchingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/aoli3" - Ao Li
+Wuhan University,href="https://ppopp25.sigplan.org/profile/wenhaili" - Wenhai Li
+Wuhan University,href="https://ppopp25.sigplan.org/profile/yuanchen" - Yuan Chen
+Wuhan University,href="https://ppopp25.sigplan.org/profile/lingfengdeng" - Lingfeng Deng
+Wuhan University 
+ 18:00 
+ 2h 
+ Poster | POSTER: Frontier-guided Graph ReorderingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xinmiaozhang" - Xinmiao Zhang
+SKLP, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/chengliu" - Cheng Liu
+ICT CAS,href="https://ppopp25.sigplan.org/profile/shengwenliang" - Shengwen Liang
+SKLP, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/chenweixiong" - Chenwei Xiong
+SKLP, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/yuzhang11" - Yu Zhang
+School of Computer Science and Technology, Huazhong University of Science and Technology,href="https://ppopp25.sigplan.org/profile/leizhang3" - Lei Zhang
+ICT CAS,href="https://ppopp25.sigplan.org/profile/huaweili" - Huawei Li
+SKLP, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/xiaoweili" - Xiaowei Li
+SKLP, Institute of Computing Technology, CAS 
+ 18:00 
+ 2h 
+ Poster | POSTER: Big Atomics and Fast Concurrent Hash TablesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/danielanderson" - Daniel Anderson
+Carnegie Mellon University,href="https://ppopp25.sigplan.org/profile/guyeblelloch" - Guy E. Blelloch
+Carnegie Mellon University, USA,href="https://ppopp25.sigplan.org/profile/siddharthajayanti" - Siddhartha Jayanti
+Google Research 
+ 18:00 
+ 2h 
+ Poster | POSTER: FastBWA: Practical and Cost-Efficient Genome Sequence Alignment PipelineMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhonghaizhang" - Zhonghai Zhang
+Institute of Computing Technology, Chinese Academy of Sciences / University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/yewenli" - Yewen Li
+Institute of Computing Technology, Chinese Academy of Sciences / University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/kemeng2" - Ke Meng
+Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/chunmingzhang" - Chunming Zhang
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+Chinese Academy of Sciences(CAS) 
+ 18:00 
+ 2h 
+ Poster | POSTER: Transactional Data Structures with Orthogonal MetadataMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yaodongsheng" - Yaodong Sheng
+Lehigh University,href="https://ppopp25.sigplan.org/profile/ahmedhassan1" - Ahmed Hassan
+Lehigh University,href="https://ppopp25.sigplan.org/profile/michaelspear" - Michael Spear
+Lehigh University 
+ 18:00 
+ 2h 
+ Poster | POSTER: High-performance Visual Semantics Compression for AI-Driven ScienceMain Conference 
+ href="https://ppopp25.sigplan.org/profile/boyuanzhang" - Boyuan Zhang
+Indiana University,href="https://ppopp25.sigplan.org/profile/luanzhengguo" - Luanzheng Guo
+Pacific Northwest National Laboratory,href="https://ppopp25.sigplan.org/profile/jiannantian1" - Jiannan Tian
+Indiana University,href="https://ppopp25.sigplan.org/profile/jinyangliu2" - Jinyang Liu
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/daocewang" - Daoce Wang
+Indiana University,href="https://ppopp25.sigplan.org/profile/fanjiangye" - Fanjiang Ye
+Indiana University,href="https://ppopp25.sigplan.org/profile/chengmingzhang" - Chengming Zhang
+University of Alabama,href="https://ppopp25.sigplan.org/profile/janstrube" - Jan Strube
+Pacific Northwest National Laboratory,href="https://ppopp25.sigplan.org/profile/nathanrtallent" - Nathan R. Tallent
+Pacific Northwest National Laboratory,href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao
+Institute of Computing Technology, Chinese Academy of Sciences 
+ 18:00 
+ 2h 
+ Poster | POSTER: Magneto: Accelerating Parallel Structures in DNNs via Co-Optimization of OperatorsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhanyuandi" - Zhanyuan Di
+State Key Lab of Processors, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/lepingwang" - Leping Wang
+State Key Lab of Processors, Institute of Computing Technology, CAS, Beijing,href="https://ppopp25.sigplan.org/profile/ziyiren" - Ziyi Ren
+State Key Lab of Processors, Institute of Computing Technology, CAS,href="https://ppopp25.sigplan.org/profile/enshao" - En Shao
+State Key Lab of Processors, Institute of Computing Technology, CAS, Beijing,href="https://ppopp25.sigplan.org/profile/jiezhao" - Jie Zhao
+Hunan University,href="https://ppopp25.sigplan.org/profile/siyuanfeng" - Siyuan Feng
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+Chinese Academy of Sciences(CAS),href="https://ppopp25.sigplan.org/profile/ninghuisun" - Ninghui Sun
+State Key Laboratory of Computer Architecture, Institute of Computing Technology, Chinese Academy of Sciences, University of Chinese Academy of Sciences 
+ 18:00 
+ 2h 
+ Poster | POSTER: TENSORMD: Molecular Dynamics Simulation with Ab Initio Accuracy of 50 Billion AtomsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuchengouyang" - Yucheng Ouyang
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/xinchen7" - Xin Chen
+Institute of Applied Physics and Computational Mathematics,href="https://ppopp25.sigplan.org/profile/yingliu2" - Ying Liu
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/xinchen4" - Xin Chen
+,href="https://ppopp25.sigplan.org/profile/honghuishang" - Honghui Shang
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/zhenchuanchen" - Zhenchuan Chen
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/rongfenlin1" - Rongfen Lin
+National Research Center of Parallel Computer Engineering and Technology,href="https://ppopp25.sigplan.org/profile/xingyugao" - Xingyu Gao
+Institute of Applied Physics and Computational Mathematics,href="https://ppopp25.sigplan.org/profile/lifangwang" - Lifang Wang
+Institute of Applied Physics and Computational Mathematics,href="https://ppopp25.sigplan.org/profile/fangli2" - Fang Li
+National Research Center of Parallel Computer Engineering and Technology,href="https://ppopp25.sigplan.org/profile/jiahaoshan" - Jiahao Shan
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/haifengsong" - Haifeng Song
+Institute of Applied Physics and Computational Mathematics,href="https://ppopp25.sigplan.org/profile/huimincui" - Huimin Cui
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/xiaobingfeng" - Xiaobing Feng
+ICT CAS 
+  
+ 18:00 - 20:00 | Receptionhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-c%26d" - Acacia C&D 
+ 18:00 
+ 2h 
+ Other | ReceptionCatering 
+ Mon 3 Mar 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 07:30 - 08:30 | Breakfasthref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-bristlecone-%26-cypress%2C-mesquite-1-5" - Bristlecone & Cypress, Mesquite 1-5 
+ 07:30 
+ 60m 
+ Break | BreakfastCatering 
+  
+ 08:30 - 09:30 | Keynote (Session Chair: Rezaul Chowdhury)href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-a%26b" - Acacia A&B 
+ 08:30 
+ 60m 
+ Keynote | Setting a Course for Post-Moore Software PerformanceKeynotes 
+ K:href="https://ppopp25.sigplan.org/profile/charleseleiserson" - Charles E. Leiserson
+MIT 
+  
+ 09:30 - 10:00 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 09:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 10:00 - 11:00 | Session 1: Graph Neural Networks (Session Chair: Miao Yin)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 10:00 
+ 20m 
+ Talk | Helios: Efficient Distributed Dynamic Graph Sampling for Online GNN InferenceMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jiesun1" - Jie Sun
+Zhejiang University,href="https://ppopp25.sigplan.org/profile/zuochengshi" - Zuocheng Shi
+Zhejiang University,href="https://ppopp25.sigplan.org/profile/lisu" - Li Su
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/wentingshen" - Wenting Shen
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/zekewang" - Zeke Wang
+Zhejiang University,href="https://ppopp25.sigplan.org/profile/yongli2" - Yong Li
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/wenyuanyu" - Wenyuan Yu
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/weilin1" - Wei Lin
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/feiwu" - Fei Wu
+College of Computer Science and Technology in Zhejiang University,href="https://ppopp25.sigplan.org/profile/jingrenzhou" - Jingren Zhou
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/bingshenghe" - Bingsheng He
+National University of Singapore 
+ 10:20 
+ 20m 
+ Talk | Accelerating GNNs on GPU Sparse Tensor Cores through N:M Sparsity-Oriented Graph ReorderingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jouanchen" - Jou-An Chen
+North Carolina State University,href="https://ppopp25.sigplan.org/profile/hsinhsuansung" - Hsin-Hsuan Sung
+North Carolina State University,href="https://ppopp25.sigplan.org/profile/ruifengzhang" - Ruifeng Zhang
+North Carolina State University,href="https://ppopp25.sigplan.org/profile/angli" - Ang Li
+Pacific Northwest National Laboratory,href="https://ppopp25.sigplan.org/profile/xipengshen" - Xipeng Shen
+North Carolina State University 
+ 10:40 
+ 20m 
+ Talk | Adaptive Parallel Training for Graph Neural NetworksMain Conference 
+ href="https://ppopp25.sigplan.org/profile/kaihaoma" - Kaihao Ma
+The Chinese University of Hong Kong,href="https://ppopp25.sigplan.org/profile/renjieliu" - Renjie Liu
+Southern University of Science and Technology,href="https://ppopp25.sigplan.org/profile/xiaoyan1" - Xiao Yan
+Centre for Perceptual and Interactive Intelligence (CPII),href="https://ppopp25.sigplan.org/profile/zhenkuncai1" - Zhenkun Cai
+Amazon,href="https://ppopp25.sigplan.org/profile/xiangsong" - Xiang Song
+Amazon Web Services,href="https://ppopp25.sigplan.org/profile/minjiewang1" - Minjie Wang
+Amazon Web Services,href="https://ppopp25.sigplan.org/profile/yichaoli" - Yichao Li
+The Chinese University of Hong Kong,href="https://ppopp25.sigplan.org/profile/jamescheng" - James Cheng
+The Chinese University of Hong Kong 
+  
+ 11:00 - 11:20 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 11:00 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 11:20 - 12:20 | Session 2: GPU I ​(Session Chair: Xipeng Shen)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 11:20 
+ 20m 
+ Talk | RT–BarnesHut: Accelerating Barnes–Hut Using Ray-Tracing HardwareMain Conference 
+ href="https://ppopp25.sigplan.org/profile/vaninagarajan" - Vani Nagarajan
+Purdue University,href="https://ppopp25.sigplan.org/profile/rohangangaraju" - Rohan Gangaraju
+Purdue University,href="https://ppopp25.sigplan.org/profile/kirshanthansundararajah" - Kirshanthan Sundararajah
+Virginia Tech,href="https://ppopp25.sigplan.org/profile/artempelenitsyn" - Artem Pelenitsyn
+Purdue University,href="https://ppopp25.sigplan.org/profile/milindkulkarni" - Milind Kulkarni
+Purdue University 
+ 11:40 
+ 20m 
+ Talk | EVeREST: An Effective and Versatile Runtime Energy Saving Tool for GPUsDistinguished Paper AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/annayue" - Anna Yue
+University of Minnesota at Twin Cities,href="https://ppopp25.sigplan.org/profile/penchungyew" - Pen-Chung Yew
+University of Minnesota at Twin Cities,href="https://ppopp25.sigplan.org/profile/sanyammehta1" - Sanyam Mehta
+HPE 
+ 12:00 
+ 20m 
+ Talk | TurboFFT: Co-Designed High-Performance and Fault-Tolerant Fast Fourier Transform on GPUsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/shixunwu" - Shixun Wu
+,href="https://ppopp25.sigplan.org/profile/yujiazhai" - Yujia Zhai
+NVIDIA Corporation,href="https://ppopp25.sigplan.org/profile/jinyangliu2" - Jinyang Liu
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/jiajunhuang1" - Jiajun Huang
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/zizhejian" - Zizhe Jian
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/huangliangdai" - Huangliang Dai
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/shengdi" - Sheng Di
+Argonne National Laboratory,href="https://ppopp25.sigplan.org/profile/franckcappello" - Franck Cappello
+Argonne National Laboratory,href="https://ppopp25.sigplan.org/profile/zizhongchen" - zizhong chen
+University of California, Riverside 
+  
+ 12:20 - 14:00 | Lunchhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-bristlecone-%26-cypress%2C-mesquite-1-5" - Bristlecone & Cypress, Mesquite 1-5 
+ 12:20 
+ 1h40m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:20 | Session 3: Concurrent Data Structures and Synchronization I (Session Chair: Yuanhao Wei)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 14:00 
+ 20m 
+ Talk | Reciprocating LocksMain Conference 
+ href="https://ppopp25.sigplan.org/profile/davedice" - Dave Dice
+Oracle Labs,href="https://ppopp25.sigplan.org/profile/alexkogan" - Alex Kogan
+Oracle Labs, USA 
+ 14:20 
+ 20m 
+ Talk | Aggregating Funnels for Faster Fetch&Add and QueuesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/younghunroh" - Younghun Roh
+MIT,href="https://ppopp25.sigplan.org/profile/yuanhaowei1" - Yuanhao Wei
+University of British Columbia,href="https://ppopp25.sigplan.org/profile/ericruppert" - Eric Ruppert
+York University,href="https://ppopp25.sigplan.org/profile/panagiotafatourou1" - Panagiota Fatourou
+FORTH ICS and University of Crete, Greece,href="https://ppopp25.sigplan.org/profile/siddharthajayanti" - Siddhartha Jayanti
+Google Research,href="https://ppopp25.sigplan.org/profile/julianshun" - Julian Shun
+MIT 
+ 14:40 
+ 20m 
+ Talk | Fairer and More Scalable Reader-Writer Locks by Optimizing Queue ManagementMain Conference 
+ href="https://ppopp25.sigplan.org/profile/takashihoshino" - Takashi Hoshino
+Cybozu Labs, Inc.,href="https://ppopp25.sigplan.org/profile/kenjirotaura" - Kenjiro Taura
+The University of Tokyo 
+ 15:00 
+ 20m 
+ Talk | Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data StructuresDistinguished Paper AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/ajaysingh1" - Ajay Singh
+FORTH ICS and University of Waterloo,href="https://ppopp25.sigplan.org/profile/trevorbrown" - Trevor Brown
+University of Toronto 
+  
+ 15:20 - 15:40 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 15:20 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 15:40 - 16:40 | Session 4: Memory (Session Chair: Dong Li)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 15:40 
+ 20m 
+ Talk | AC-Cache: A Memory-Efficient Caching System for Small Objects via Exploiting Access CorrelationsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/fulinnan" - Fulin Nan
+Xiamen Univeristy,href="https://ppopp25.sigplan.org/profile/zhirongshen" - Zhirong Shen
+Xiamen University 
+ 16:00 
+ 20m 
+ Talk | Effectively Virtual Page Prefetching via Spatial-Temporal Patterns for Memory-intensive Cloud ApplicationsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yunwang" - Yun Wang
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/liangchen2" - Liang Chen
+,href="https://ppopp25.sigplan.org/profile/tianmaideng" - Tianmai Deng
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/benluo" - Ben Luo
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/yibinshen1" - Yibin Shen
+Alibaba Cloud,href="https://ppopp25.sigplan.org/profile/zhixiangwei1" - Zhixiang Wei
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/yixiaoxu" - Yixiao Xu
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/minglanghuang" - Minglang Huang
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/zhengweiqi" - Zhengwei Qi
+Shanghai Jiao Tong University 
+ 16:20 
+ 20m 
+ Talk | Harnessing Inter-GPU Shared Memory for Seamless MoE Communication-Computation FusionMain Conference 
+ href="https://ppopp25.sigplan.org/profile/hulinwang2" - Hulin Wang
+,href="https://ppopp25.sigplan.org/profile/yaqixia" - Yaqi Xia
+Wuhan University,href="https://ppopp25.sigplan.org/profile/donglinyang" - Donglin Yang
+Nvidia Corporation,href="https://ppopp25.sigplan.org/profile/xiaobozhou" - Xiaobo Zhou
+University of Macau,href="https://ppopp25.sigplan.org/profile/dazhaocheng1" - Dazhao Cheng
+WuHan University 
+  
+ 16:40 - 17:00 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 16:40 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 17:00 - 18:00 | Session 5: Deep Neural Network​s (Session Chair: Wei Niu)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 17:00 
+ 20m 
+ Talk | FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor PropertyMain Conference 
+ href="https://ppopp25.sigplan.org/profile/runxinzhong" - Runxin Zhong
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/yuyangjin" - Yuyang Jin
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/chenzhang2" - Chen Zhang
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/kinmanlei1" - Kinman Lei
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/shuangyuli" - Shuangyu Li
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/jidongzhai" - Jidong Zhai
+Tsinghua University 
+ 17:20 
+ 20m 
+ Talk | Mario: Near Zero-cost Activation Checkpointing in Pipeline ParallelismMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weijianliu" - Weijian Liu
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/mingzhenli" - Mingzhen Li
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+Chinese Academy of Sciences(CAS),href="https://ppopp25.sigplan.org/profile/weilejia" - Weile Jia
+Institute of Computing Technology, Chinese Academy of Sciences 
+ 17:40 
+ 20m 
+ Talk | COMPSO: Optimizing Gradient Compression for Distributed Training with Second-Order OptimizersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/baixisun" - Baixi Sun
+Indiana University Bloomington,href="https://ppopp25.sigplan.org/profile/weijinliu" - Weijin Liu
+Stevens Institute of Technology,href="https://ppopp25.sigplan.org/profile/jgregorypauloski" - J. Gregory Pauloski
+University of Chicago,href="https://ppopp25.sigplan.org/profile/jiannantian1" - Jiannan Tian
+Indiana University,href="https://ppopp25.sigplan.org/profile/jindajia" - Jinda Jia
+Indiana University,href="https://ppopp25.sigplan.org/profile/daocewang" - Daoce Wang
+Indiana University,href="https://ppopp25.sigplan.org/profile/boyuanzhang" - Boyuan Zhang
+Indiana University,href="https://ppopp25.sigplan.org/profile/mingkaizheng" - Mingkai Zheng
+Department of Electrical and Computer Engineering at Rutgers University,href="https://ppopp25.sigplan.org/profile/shengdi" - Sheng Di
+Argonne National Laboratory,href="https://ppopp25.sigplan.org/profile/sianjin2" - Sian Jin
+Temple University,href="https://ppopp25.sigplan.org/profile/zhaozhang3" - Zhao Zhang
+,href="https://ppopp25.sigplan.org/profile/xiaodongyu" - Xiaodong Yu
+Stevens Institute of Technology,href="https://ppopp25.sigplan.org/profile/kamilaiskra" - Kamil A. Iskra
+Argonne National Laboratory,href="https://ppopp25.sigplan.org/profile/petebeckman" - Pete Beckman
+Northwestern University and Argonne National Laboratory,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+Chinese Academy of Sciences(CAS),href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao
+Institute of Computing Technology, Chinese Academy of Sciences 
+  
+ 18:00 - 19:00 | PPoPP Business Meetinghref="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 18:00 
+ 60m 
+ Meeting | href="#" - PPoPP Business Meeting
+Main Conference 
+ Tue 4 Mar 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 08:30 - 09:30 | Keynotehref="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-a%26b" - Acacia A&B 
+ 08:30 
+ 60m 
+ Keynote | Do We Really Want Correct Compilers?Keynotes 
+ K:href="https://ppopp25.sigplan.org/profile/johnregehr" - John Regehr
+University of Utah 
+  
+ 09:30 - 10:00 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 09:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 10:00 - 11:00 | Session 6: Large Language Models (Session Chair: Minjia Zhang)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 10:00 
+ 20m 
+ Talk | MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language ModelsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/eliasfrantar" - Elias Frantar
+ISTA,href="https://ppopp25.sigplan.org/profile/robertolopezcastro" - Roberto López Castro
+Universidade da Coruña,href="https://ppopp25.sigplan.org/profile/jialechen" - Jiale Chen
+ISTA,href="https://ppopp25.sigplan.org/profile/torstenhoefler" - Torsten Hoefler
+ETH Zurich,href="https://ppopp25.sigplan.org/profile/danalistarh1" - Dan Alistarh
+IST Austria 
+ 10:20 
+ 20m 
+ Talk | WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model TrainingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/junfenglin" - Junfeng Lin
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/zimingliu" - Ziming Liu
+National University of Singapore,href="https://ppopp25.sigplan.org/profile/yangyou1" - Yang You
+National University of Singapore,href="https://ppopp25.sigplan.org/profile/junwang7" - Jun Wang
+CETHIK Group Co. Ltd.,href="https://ppopp25.sigplan.org/profile/weihaozhang1" - Weihao Zhang
+Lynxi Technologies Co. Ltd,href="https://ppopp25.sigplan.org/profile/rongzhao1" - Rong Zhao
+Tsinghua University 
+ 10:40 
+ 20m 
+ Talk | ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model TrainingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuhangliang" - Yuhang Liang
+University of Oregon,href="https://ppopp25.sigplan.org/profile/xinyili2" - Xinyi Li
+Pacific Northwest National Laboratory(PNNL),href="https://ppopp25.sigplan.org/profile/jieren1" - Jie Ren
+William & Mary,href="https://ppopp25.sigplan.org/profile/angli" - Ang Li
+Pacific Northwest National Laboratory,href="https://ppopp25.sigplan.org/profile/bofang" - Bo Fang
+Pacific Northwest National Laboratory(PNNL),href="https://ppopp25.sigplan.org/profile/jieyangchen2" - Jieyang Chen
+University of Oregon 
+  
+ 11:00 - 11:20 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 11:00 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 11:20 - 12:20 | Session 7: Scheduling and Resource Management (Session Chair: Jie Ren)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 11:20 
+ 20m 
+ Talk | SGDRC: Software-Defined Dynamic Resource Control for Concurrent DNN Inference on NVIDIA GPUsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yongkangzhang" - Yongkang Zhang
+HKUST,href="https://ppopp25.sigplan.org/profile/haoxuanyu" - Haoxuan Yu
+HKUST,href="https://ppopp25.sigplan.org/profile/chenxiahan" - Chenxia Han
+CUHK,href="https://ppopp25.sigplan.org/profile/chengwang" - Cheng Wang
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/baotonglu" - Baotong Lu
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/yunzheli" - Yunzhe Li
+Shanghai Jiao Tong University,href="https://ppopp25.sigplan.org/profile/zhifengjiang" - Zhifeng Jiang
+HKUST,href="https://ppopp25.sigplan.org/profile/yangli2" - Yang Li
+China University of Geosciences,href="https://ppopp25.sigplan.org/profile/xiaowenchu1" - Xiaowen Chu
+Data Science and Analytics Thrust, HKUST(GZ),href="https://ppopp25.sigplan.org/profile/huaichengli" - Huaicheng Li
+Virginia Tech 
+ 11:40 
+ 20m 
+ Talk | DORADD: Deterministic Parallel Execution in the Era of Microsecond-Scale ComputingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhengqing" - Scofield Liu
+Imperial College London,href="https://ppopp25.sigplan.org/profile/musaunal" - Musa Unal
+EPFL,href="https://ppopp25.sigplan.org/profile/matthewparkinson" - Matthew J. Parkinson
+Microsoft Azure Research,href="https://ppopp25.sigplan.org/profile/marioskogias1" - Marios Kogias
+Imperial College London; Microsoft Research 
+ 12:00 
+ 20m 
+ Talk | WaterWise: Co-optimizing Carbon- and Water-Footprint Toward Environmentally Sustainable Cloud ComputingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yankaijiang" - Yankai Jiang
+Northeastern University,href="https://ppopp25.sigplan.org/profile/rohanbasuroy" - Rohan Basu Roy
+Northeastern University,href="https://ppopp25.sigplan.org/profile/raghavendrakanakagiri" - Raghavendra Kanakagiri
+Indian Institute of Technology Tirupati,href="https://ppopp25.sigplan.org/profile/deveshtiwari" - Devesh Tiwari
+Northeastern University 
+  
+ 12:20 - 12:30 | Awards Announcementhref="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 12:20 
+ 10m 
+ Awards | Awards AnnouncementMain Conference 
+  
+ 12:20 - 14:00 | Lunchhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-bristlecone-%26-cypress%2C-mesquite-1-5" - Bristlecone & Cypress, Mesquite 1-5 
+ 12:20 
+ 1h40m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:20 | Session 8: Tensor Cores (Session Chair: Jeffrey Vetter)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 14:00 
+ 20m 
+ Talk | FlashSparse: Minimizing Computation Redundancy for Fast Sparse Matrix Multiplications on Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jinliangshi" - Jinliang Shi
+Beijing University of Posts and Telecommunications,href="https://ppopp25.sigplan.org/profile/shigangli" - Shigang Li
+Beijing University of Posts and Telecommunications,href="https://ppopp25.sigplan.org/profile/youxuanxu1" - Youxuan Xu
+Beijing University of Posts and Telecommunications,href="https://ppopp25.sigplan.org/profile/rongtianfu" - Rongtian Fu
+Beijing University of Posts and Telecommunications,href="https://ppopp25.sigplan.org/profile/xueyingwang1" - Xueying Wang
+Beijing University of Posts and Telecommunications,href="https://ppopp25.sigplan.org/profile/tongwu2" - Tong Wu
+Beijing University of Posts and Telecommunications 
+ 14:20 
+ 20m 
+ Talk | Acc-SpMM: Accelerating General-purpose Sparse Matrix-Matrix Multiplication with GPU Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haishazhao" - Haisha Zhao
+Computer Network Information Center, Chinese Academy of Sciences,University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/lisan1" - Li San
+Computer Network Information Center, Chinese Academy of Sciences,University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/jiahengwang" - Jiaheng Wang
+Renmin University of China,href="https://ppopp25.sigplan.org/profile/chunbaozhou" - Chunbao Zhou
+Computer Network Information Center, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/juewang2" - Jue Wang
+Computer Network Information Center, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/zhikuangxin" - Zhikuang Xin
+Computer Network Information Center, Chinese Academy of Sciences,University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/lishunde" - lishunde
+Computer Network Information Center, Chinese Academy of Sciences,University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/zhiqiangliang" - ZhiQiang Liang
+Computer Network Information Center, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/zhijiepan" - Zhijie Pan
+Hangzhou Dianzi University,href="https://ppopp25.sigplan.org/profile/fangliu1" - Fang Liu
+Computer Network Information Center, Chinese Academy of Sciences,University of Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/yanzeng" - Yan Zeng
+Hangzhou Dianzi University,href="https://ppopp25.sigplan.org/profile/yangangwang" - Yangang Wang
+Computer Network Information Center, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/xuebinchi" - Xuebin Chi
+Computer Network Information Center, Chinese Academy of Sciences; University of Chinese Academy of Sciences 
+ 14:40 
+ 20m 
+ Talk | BerryBees: Breadth First Search by Bit-Tensor-CoresDistinguished Paper AwardBest Artifact AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuyaoniu1" - Yuyao Niu
+Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC),href="https://ppopp25.sigplan.org/profile/marccasas" - Marc Casas
+Barcelona Supercomputing Center 
+ 15:00 
+ 20m 
+ Talk | FlashFFTStencil: Bridging Fast Fourier Transforms to Memory-Efficient Stencil Computations on Tensor Core UnitsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haozhihan" - Haozhi Han
+Microsoft Research; Peking University,href="https://ppopp25.sigplan.org/profile/kunli" - Kun Li
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/weicui" - Wei Cui
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/donglinbai" - Donglin Bai
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/yiweizhang3" - Yiwei Zhang
+UCAS; Microsoft Research,href="https://ppopp25.sigplan.org/profile/liangyuan1" - Liang Yuan
+Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/yifengcheng" - Yifeng Cheng
+Peking University,href="https://ppopp25.sigplan.org/profile/yunquanzhang" - Yunquan Zhang
+Zhang,href="https://ppopp25.sigplan.org/profile/tingcao" - Ting Cao
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/maoyang" - Mao Yang
+Microsoft Research 
+  
+ 15:20 - 15:40 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 15:20 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 15:40 - 17:00 | Session 9: Concurrent Data Structures and Synchronization II (Session Chair: Pengfei Su)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 15:40 
+ 20m 
+ Talk | PANNS: Enhancing Graph-based Approximate Nearest Neighbor Search through Recency-aware Construction and Parameterized SearchMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xizheyin" - Xizhe Yin
+University of California, Riverside,href="https://ppopp25.sigplan.org/profile/chaogao" - Chao Gao
+University of California Riverside,href="https://ppopp25.sigplan.org/profile/zhijiazhao" - Zhijia Zhao
+University of California at Riverside,href="https://ppopp25.sigplan.org/profile/rajivgupta" - Rajiv Gupta
+University of California at Riverside (UCR) 
+ 16:00 
+ 20m 
+ Talk | Balanced Allocations over Efficient Queues: A Fast Relaxed FIFO QueueMain Conference 
+ href="https://ppopp25.sigplan.org/profile/karevongeijer" - Kåre von Geijer
+Chalmers University of Technology,href="https://ppopp25.sigplan.org/profile/philippastsigas" - Philippas Tsigas
+Chalmers University of Technology,href="https://ppopp25.sigplan.org/profile/eliasjohansson" - Elias Johansson
+Chalmers University of Technology,href="https://ppopp25.sigplan.org/profile/sebastianhermansson" - Sebastian Hermansson
+Chalmers University of Technology 
+ 16:20 
+ 20m 
+ Talk | LibRTS: A Spatial Indexing Library by Ray TracingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/lianggeng" - Liang Geng
+The Ohio State University, USA,href="https://ppopp25.sigplan.org/profile/rubaolee1" - Rubao Lee
+,href="https://ppopp25.sigplan.org/profile/xiaodongzhang" - Xiaodong Zhang
+The Ohio State University 
+ 16:40 
+ 20m 
+ Talk | Crystality: A Programming Model for Smart Contracts on Parallel EVMsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haowang5" - Hao Wang
+International Digital Economy Academy (IDEA), Shenzhen, China; and Fullnodes Labs,href="https://ppopp25.sigplan.org/profile/minghaopan" - Minghao Pan
+International Digital Economy Academy (IDEA), Shenzhen, China; and Fullnodes Labs,href="https://ppopp25.sigplan.org/profile/jiapingwang" - Jiaping Wang
+International Digital Economy Academy (IDEA), Shenzhen, China; and Fullnodes Labs 
+  
+ 17:00 - 20:00 | Excursionhref="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference 
+ 17:00 
+ 3h 
+ Social Event | ExcursionMain Conference 
+ Wed 5 Mar 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 07:30 - 08:30 | Breakfasthref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-bristlecone-%26-cypress%2C-mesquite-1-5" - Bristlecone & Cypress, Mesquite 1-5 
+ 07:30 
+ 60m 
+ Break | BreakfastCatering 
+  
+ 08:30 - 09:30 | Keynotehref="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-a%26b" - Acacia A&B 
+ 08:30 
+ 60m 
+ Keynote | ML Engineering in the Giant Model AgeKeynotes 
+  
+ 09:30 - 10:00 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 09:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 10:00 - 11:20 | Session 10: GPU II (Session Chair: Zhijia Zhao)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 10:00 
+ 20m 
+ Talk | Popcorn: Accelerating Kernel K-means on GPUs through Sparse Linear AlgebraMain Conference 
+ href="https://ppopp25.sigplan.org/profile/julianbellavita1" - Julian Bellavita
+Cornell University,href="https://ppopp25.sigplan.org/profile/thomaspasquali" - Thomas Pasquali
+University of Trento,href="https://ppopp25.sigplan.org/profile/lauradelrio" - Laura Del Rio
+University of Trento,href="https://ppopp25.sigplan.org/profile/flaviovella1" - Flavio Vella
+Free University of Bozen,href="https://ppopp25.sigplan.org/profile/giuliaguidi1" - Giulia Guidi
+Cornell University 
+ 10:20 
+ 20m 
+ Talk | Swift Unfolding of Communities: GPU-Accelerated Louvain AlgorithmMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhibinwang" - Zhibin Wang
+Nanjing University,href="https://ppopp25.sigplan.org/profile/xilin" - Xi Lin
+Nanjing University,href="https://ppopp25.sigplan.org/profile/xueli1" - Xue Li
+Alibaba Group,href="https://ppopp25.sigplan.org/profile/pinhuanwang" - Pinhuan Wang
+Rutgers, The State University of New Jersey,href="https://ppopp25.sigplan.org/profile/zihengmeng" - Ziheng Meng
+Nanjing University,href="https://ppopp25.sigplan.org/profile/hangliu3" - Hang Liu
+Rutgers, The State University of New Jersey,href="https://ppopp25.sigplan.org/profile/chentian1" - Chen Tian
+Nanjing University,href="https://ppopp25.sigplan.org/profile/shengzhong" - Sheng Zhong
+Nanjing University 
+ 10:40 
+ 20m 
+ Talk | GLUMIN: Fast Connectivity Check Based on LUTs For Efficient Graph Pattern MiningMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weichencao" - Weichen Cao
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/kemeng2" - Ke Meng
+Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/linzhiheng" - linzhiheng
+Institute of Computing Technology, Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+Chinese Academy of Sciences(CAS) 
+ 11:00 
+ 20m 
+ Talk | Improving Tridiagonalization Performance on GPU ArchitecturesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/wanghansheng" - WangHansheng
+University of Electronic Science and Technology of China,href="https://ppopp25.sigplan.org/profile/zhekaiduan" - Zhekai Duan
+University of Edinburgh,href="https://ppopp25.sigplan.org/profile/zitianzhao" - Zitian Zhao
+University of Electronic Science and Technology of China,href="https://ppopp25.sigplan.org/profile/siqiwu" - Siqi Wu
+University of Electronic Science and Technology of China,href="https://ppopp25.sigplan.org/profile/saiqizheng" - Saiqi Zheng
+Xi'an Jiaotong-Liverpool University,href="https://ppopp25.sigplan.org/profile/qiaoli" - Qiao Li
+University of Electronic Science and Technology of China,href="https://ppopp25.sigplan.org/profile/xujiang" - Xu Jiang
+University of Electronic Science and Technology of China,href="https://ppopp25.sigplan.org/profile/shaoshuaizhang1" - Shaoshuai Zhang 
+  
+ 11:20 - 11:40 | Breakhref="https://ppopp25.sigplan.org/track/PPoPP-2025-catering" - Catering
+/href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-pre-f" - Pre-F 
+ 11:20 
+ 20m 
+ Coffee break | BreakCatering 
+  
+ 11:40 - 13:00 | Session 11: Parallel Algorithms and Applications (Session Chair: Weicong Chen)href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 11:40 
+ 20m 
+ Talk | Jigsaw: Toward Conflict-free Vectorized Stencil Computation by Tessellating Swizzled RegistersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yiweizhang3" - Yiwei Zhang
+UCAS; Microsoft Research,href="https://ppopp25.sigplan.org/profile/kunli" - Kun Li
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/liangyuan1" - Liang Yuan
+Chinese Academy of Sciences,href="https://ppopp25.sigplan.org/profile/haozhihan" - Haozhi Han
+Microsoft Research; Peking University,href="https://ppopp25.sigplan.org/profile/yunquanzhang" - Yunquan Zhang
+Zhang,href="https://ppopp25.sigplan.org/profile/tingcao" - Ting Cao
+Microsoft Research,href="https://ppopp25.sigplan.org/profile/maoyang" - Mao Yang
+Microsoft Research 
+ 12:00 
+ 20m 
+ Talk | Semi-StructMG: A Fast and Scalable Semi-Structured Algebraic MultigridMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yizong" - Yi Zong
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/chensongzhang" - Chensong Zhang
+Academy of Mathematics and Systems Science,href="https://ppopp25.sigplan.org/profile/longjiangmu" - Longjiang Mu
+Laoshan Laboratory,href="https://ppopp25.sigplan.org/profile/jianchunwang" - Jianchun Wang
+China Ship Scientific Research Center,href="https://ppopp25.sigplan.org/profile/jiansun" - Jian Sun
+CMA Earth System Modeling and Prediction Center,href="https://ppopp25.sigplan.org/profile/xiaowenxu" - Xiaowen Xu
+Institute of Applied Physics and Computational Mathematics,href="https://ppopp25.sigplan.org/profile/xinliangwang" - Xinliang Wang
+Huawei Technologies Co., Ltd,href="https://ppopp25.sigplan.org/profile/peinanyu" - Peinan Yu
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/weixue1" - Wei Xue
+Tsinghua University 
+ 12:20 
+ 20m 
+ Talk | SBMGT: Scaling Bayesian Multinomial Group TestingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weicongchen" - Weicong Chen
+University of California, Merced,href="https://ppopp25.sigplan.org/profile/haoqi" - Hao Qi
+University of California, Merced,href="https://ppopp25.sigplan.org/profile/curtistatsuoka" - Curtis Tatsuoka
+University of Pittsburgh,href="https://ppopp25.sigplan.org/profile/xiaoyilu1" - Xiaoyi Lu
+UC Merced 
+ 12:40 
+ 20m 
+ Talk | An AI-Enhanced 1km-Resolution Seamless Global Weather and Climate Model to Achieve Year-Scale Simulation Speed using 34 Million CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xiaohuiduan" - Xiaohui Duan
+Shandong University,href="https://ppopp25.sigplan.org/profile/yizhang3" - Yi Zhang
+PIESAT Information Technology，Co. Ltd.,href="https://ppopp25.sigplan.org/profile/kaixu" - Kai Xu
+Laoshan Laboratory,href="https://ppopp25.sigplan.org/profile/haohuanfu" - Haohuan Fu
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/binyang" - Bin Yang
+Tianjin University,href="https://ppopp25.sigplan.org/profile/yimingwang" - Yiming Wang
+PIESAT Information Technology，Co. Ltd.,href="https://ppopp25.sigplan.org/profile/yilunhan" - Yilun Han
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/siyuanchen2" - Siyuan Chen
+PIESAT Information Technology，Co. Ltd.,href="https://ppopp25.sigplan.org/profile/zhuangzhuangzhou" - Zhuangzhuang Zhou
+National Supercomputing Center in Wuxi,href="https://ppopp25.sigplan.org/profile/chenyuwang4" - Chenyu Wang
+National Supercomputing Center in Wuxi,href="https://ppopp25.sigplan.org/profile/dongqianghuang" - Dongqiang Huang
+National Supercomputing Center in Wuxi,href="https://ppopp25.sigplan.org/profile/huihaian" - Huihai An
+Shandong University,href="https://ppopp25.sigplan.org/profile/xitingju" - Xiting Ju
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/haopenghuang" - Haopeng Huang
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/zhuangliu1" - Zhuang Liu
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/weixue" - Wei Xue
+Tsinghua,href="https://ppopp25.sigplan.org/profile/weiguoliu" - Weiguo Liu
+Shandong University,href="https://ppopp25.sigplan.org/profile/bowenyan" - Bowen Yan
+Tsinghua University,href="https://ppopp25.sigplan.org/profile/jianyehou" - Jianye Hou
+The Chinese University of Hong Kong,href="https://ppopp25.sigplan.org/profile/maoxueyu" - Maoxue Yu
+Laoshan Laboratory,href="https://ppopp25.sigplan.org/profile/wenguangchen" - Wenguang Chen
+Tsinghua University; Pengcheng Laboratory,href="https://ppopp25.sigplan.org/profile/jianli" - Jian Li
+Chinese Academy of Meteorological Sciences,href="https://ppopp25.sigplan.org/profile/zhaojing" - Zhao Jing
+Laoshan Laboratory,href="https://ppopp25.sigplan.org/profile/hailongliu" - Hailong Liu
+Laoshan Laboratory,href="https://ppopp25.sigplan.org/profile/lixinwu" - Lixin Wu
+Laoshan Laboratory 
+  
+ 13:00 - 13:10 | Closing remarkshref="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+athref="https://ppopp25.sigplan.org/room/PPoPP-2025-venue-acacia-d" - Acacia D 
+ 13:00 
+ 10m 
+ Day closing | Closing remarksMain Conference 
+ Accepted Papers 
+  
+ Title 
+ AC-Cache: A Memory-Efficient Caching System for Small Objects via Exploiting Access CorrelationsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/fulinnan" - Fulin Nan
+,href="https://ppopp25.sigplan.org/profile/zhirongshen" - Zhirong Shen 
+ Accelerating GNNs on GPU Sparse Tensor Cores through N:M Sparsity-Oriented Graph ReorderingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jouanchen" - Jou-An Chen
+,href="https://ppopp25.sigplan.org/profile/hsinhsuansung" - Hsin-Hsuan Sung
+,href="https://ppopp25.sigplan.org/profile/ruifengzhang" - Ruifeng Zhang
+,href="https://ppopp25.sigplan.org/profile/angli" - Ang Li
+,href="https://ppopp25.sigplan.org/profile/xipengshen" - Xipeng Shen 
+ Acc-SpMM: Accelerating General-purpose Sparse Matrix-Matrix Multiplication with GPU Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haishazhao" - Haisha Zhao
+,href="https://ppopp25.sigplan.org/profile/lisan1" - Li San
+,href="https://ppopp25.sigplan.org/profile/jiahengwang" - Jiaheng Wang
+,href="https://ppopp25.sigplan.org/profile/chunbaozhou" - Chunbao Zhou
+,href="https://ppopp25.sigplan.org/profile/juewang2" - Jue Wang
+,href="https://ppopp25.sigplan.org/profile/zhikuangxin" - Zhikuang Xin
+,href="https://ppopp25.sigplan.org/profile/lishunde" - lishunde
+,href="https://ppopp25.sigplan.org/profile/zhiqiangliang" - ZhiQiang Liang
+,href="https://ppopp25.sigplan.org/profile/zhijiepan" - Zhijie Pan
+,href="https://ppopp25.sigplan.org/profile/fangliu1" - Fang Liu
+,href="https://ppopp25.sigplan.org/profile/yanzeng" - Yan Zeng
+,href="https://ppopp25.sigplan.org/profile/yangangwang" - Yangang Wang
+,href="https://ppopp25.sigplan.org/profile/xuebinchi" - Xuebin Chi 
+ Adaptive Parallel Training for Graph Neural NetworksMain Conference 
+ href="https://ppopp25.sigplan.org/profile/kaihaoma" - Kaihao Ma
+,href="https://ppopp25.sigplan.org/profile/renjieliu" - Renjie Liu
+,href="https://ppopp25.sigplan.org/profile/xiaoyan1" - Xiao Yan
+,href="https://ppopp25.sigplan.org/profile/zhenkuncai1" - Zhenkun Cai
+,href="https://ppopp25.sigplan.org/profile/xiangsong" - Xiang Song
+,href="https://ppopp25.sigplan.org/profile/minjiewang1" - Minjie Wang
+,href="https://ppopp25.sigplan.org/profile/yichaoli" - Yichao Li
+,href="https://ppopp25.sigplan.org/profile/jamescheng" - James Cheng 
+ Aggregating Funnels for Faster Fetch&Add and QueuesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/younghunroh" - Younghun Roh
+,href="https://ppopp25.sigplan.org/profile/yuanhaowei1" - Yuanhao Wei
+,href="https://ppopp25.sigplan.org/profile/ericruppert" - Eric Ruppert
+,href="https://ppopp25.sigplan.org/profile/panagiotafatourou1" - Panagiota Fatourou
+,href="https://ppopp25.sigplan.org/profile/siddharthajayanti" - Siddhartha Jayanti
+,href="https://ppopp25.sigplan.org/profile/julianshun" - Julian Shun 
+ An AI-Enhanced 1km-Resolution Seamless Global Weather and Climate Model to Achieve Year-Scale Simulation Speed using 34 Million CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xiaohuiduan" - Xiaohui Duan
+,href="https://ppopp25.sigplan.org/profile/yizhang3" - Yi Zhang
+,href="https://ppopp25.sigplan.org/profile/kaixu" - Kai Xu
+,href="https://ppopp25.sigplan.org/profile/haohuanfu" - Haohuan Fu
+,href="https://ppopp25.sigplan.org/profile/binyang" - Bin Yang
+,href="https://ppopp25.sigplan.org/profile/yimingwang" - Yiming Wang
+,href="https://ppopp25.sigplan.org/profile/yilunhan" - Yilun Han
+,href="https://ppopp25.sigplan.org/profile/siyuanchen2" - Siyuan Chen
+,href="https://ppopp25.sigplan.org/profile/zhuangzhuangzhou" - Zhuangzhuang Zhou
+,href="https://ppopp25.sigplan.org/profile/chenyuwang4" - Chenyu Wang
+,href="https://ppopp25.sigplan.org/profile/dongqianghuang" - Dongqiang Huang
+,href="https://ppopp25.sigplan.org/profile/huihaian" - Huihai An
+,href="https://ppopp25.sigplan.org/profile/xitingju" - Xiting Ju
+,href="https://ppopp25.sigplan.org/profile/haopenghuang" - Haopeng Huang
+,href="https://ppopp25.sigplan.org/profile/zhuangliu1" - Zhuang Liu
+,href="https://ppopp25.sigplan.org/profile/weixue" - Wei Xue
+,href="https://ppopp25.sigplan.org/profile/weiguoliu" - Weiguo Liu
+,href="https://ppopp25.sigplan.org/profile/bowenyan" - Bowen Yan
+,href="https://ppopp25.sigplan.org/profile/jianyehou" - Jianye Hou
+,href="https://ppopp25.sigplan.org/profile/maoxueyu" - Maoxue Yu
+,href="https://ppopp25.sigplan.org/profile/wenguangchen" - Wenguang Chen
+,href="https://ppopp25.sigplan.org/profile/jianli" - Jian Li
+,href="https://ppopp25.sigplan.org/profile/zhaojing" - Zhao Jing
+,href="https://ppopp25.sigplan.org/profile/hailongliu" - Hailong Liu
+,href="https://ppopp25.sigplan.org/profile/lixinwu" - Lixin Wu 
+ ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model TrainingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuhangliang" - Yuhang Liang
+,href="https://ppopp25.sigplan.org/profile/xinyili2" - Xinyi Li
+,href="https://ppopp25.sigplan.org/profile/jieren1" - Jie Ren
+,href="https://ppopp25.sigplan.org/profile/angli" - Ang Li
+,href="https://ppopp25.sigplan.org/profile/bofang" - Bo Fang
+,href="https://ppopp25.sigplan.org/profile/jieyangchen2" - Jieyang Chen 
+ Balanced Allocations over Efficient Queues: A Fast Relaxed FIFO QueueMain Conference 
+ href="https://ppopp25.sigplan.org/profile/karevongeijer" - Kåre von Geijer
+,href="https://ppopp25.sigplan.org/profile/philippastsigas" - Philippas Tsigas
+,href="https://ppopp25.sigplan.org/profile/eliasjohansson" - Elias Johansson
+,href="https://ppopp25.sigplan.org/profile/sebastianhermansson" - Sebastian Hermansson 
+ BerryBees: Breadth First Search by Bit-Tensor-CoresDistinguished Paper AwardBest Artifact AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuyaoniu1" - Yuyao Niu
+,href="https://ppopp25.sigplan.org/profile/marccasas" - Marc Casas 
+ COMPSO: Optimizing Gradient Compression for Distributed Training with Second-Order OptimizersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/baixisun" - Baixi Sun
+,href="https://ppopp25.sigplan.org/profile/weijinliu" - Weijin Liu
+,href="https://ppopp25.sigplan.org/profile/jgregorypauloski" - J. Gregory Pauloski
+,href="https://ppopp25.sigplan.org/profile/jiannantian1" - Jiannan Tian
+,href="https://ppopp25.sigplan.org/profile/jindajia" - Jinda Jia
+,href="https://ppopp25.sigplan.org/profile/daocewang" - Daoce Wang
+,href="https://ppopp25.sigplan.org/profile/boyuanzhang" - Boyuan Zhang
+,href="https://ppopp25.sigplan.org/profile/mingkaizheng" - Mingkai Zheng
+,href="https://ppopp25.sigplan.org/profile/shengdi" - Sheng Di
+,href="https://ppopp25.sigplan.org/profile/sianjin2" - Sian Jin
+,href="https://ppopp25.sigplan.org/profile/zhaozhang3" - Zhao Zhang
+,href="https://ppopp25.sigplan.org/profile/xiaodongyu" - Xiaodong Yu
+,href="https://ppopp25.sigplan.org/profile/kamilaiskra" - Kamil A. Iskra
+,href="https://ppopp25.sigplan.org/profile/petebeckman" - Pete Beckman
+,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+,href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao 
+ Crystality: A Programming Model for Smart Contracts on Parallel EVMsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haowang5" - Hao Wang
+,href="https://ppopp25.sigplan.org/profile/minghaopan" - Minghao Pan
+,href="https://ppopp25.sigplan.org/profile/jiapingwang" - Jiaping Wang 
+ DORADD: Deterministic Parallel Execution in the Era of Microsecond-Scale ComputingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhengqing" - Scofield Liu
+,href="https://ppopp25.sigplan.org/profile/musaunal" - Musa Unal
+,href="https://ppopp25.sigplan.org/profile/matthewparkinson" - Matthew J. Parkinson
+,href="https://ppopp25.sigplan.org/profile/marioskogias1" - Marios Kogias 
+ Effectively Virtual Page Prefetching via Spatial-Temporal Patterns for Memory-intensive Cloud ApplicationsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yunwang" - Yun Wang
+,href="https://ppopp25.sigplan.org/profile/liangchen2" - Liang Chen
+,href="https://ppopp25.sigplan.org/profile/tianmaideng" - Tianmai Deng
+,href="https://ppopp25.sigplan.org/profile/benluo" - Ben Luo
+,href="https://ppopp25.sigplan.org/profile/yibinshen1" - Yibin Shen
+,href="https://ppopp25.sigplan.org/profile/zhixiangwei1" - Zhixiang Wei
+,href="https://ppopp25.sigplan.org/profile/yixiaoxu" - Yixiao Xu
+,href="https://ppopp25.sigplan.org/profile/minglanghuang" - Minglang Huang
+,href="https://ppopp25.sigplan.org/profile/zhengweiqi" - Zhengwei Qi 
+ EVeREST: An Effective and Versatile Runtime Energy Saving Tool for GPUsDistinguished Paper AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/annayue" - Anna Yue
+,href="https://ppopp25.sigplan.org/profile/penchungyew" - Pen-Chung Yew
+,href="https://ppopp25.sigplan.org/profile/sanyammehta1" - Sanyam Mehta 
+ Fairer and More Scalable Reader-Writer Locks by Optimizing Queue ManagementMain Conference 
+ href="https://ppopp25.sigplan.org/profile/takashihoshino" - Takashi Hoshino
+,href="https://ppopp25.sigplan.org/profile/kenjirotaura" - Kenjiro Taura 
+ FlashFFTStencil: Bridging Fast Fourier Transforms to Memory-Efficient Stencil Computations on Tensor Core UnitsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/haozhihan" - Haozhi Han
+,href="https://ppopp25.sigplan.org/profile/kunli" - Kun Li
+,href="https://ppopp25.sigplan.org/profile/weicui" - Wei Cui
+,href="https://ppopp25.sigplan.org/profile/donglinbai" - Donglin Bai
+,href="https://ppopp25.sigplan.org/profile/yiweizhang3" - Yiwei Zhang
+,href="https://ppopp25.sigplan.org/profile/liangyuan1" - Liang Yuan
+,href="https://ppopp25.sigplan.org/profile/yifengcheng" - Yifeng Cheng
+,href="https://ppopp25.sigplan.org/profile/yunquanzhang" - Yunquan Zhang
+,href="https://ppopp25.sigplan.org/profile/tingcao" - Ting Cao
+,href="https://ppopp25.sigplan.org/profile/maoyang" - Mao Yang 
+ FlashSparse: Minimizing Computation Redundancy for Fast Sparse Matrix Multiplications on Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jinliangshi" - Jinliang Shi
+,href="https://ppopp25.sigplan.org/profile/shigangli" - Shigang Li
+,href="https://ppopp25.sigplan.org/profile/youxuanxu1" - Youxuan Xu
+,href="https://ppopp25.sigplan.org/profile/rongtianfu" - Rongtian Fu
+,href="https://ppopp25.sigplan.org/profile/xueyingwang1" - Xueying Wang
+,href="https://ppopp25.sigplan.org/profile/tongwu2" - Tong Wu 
+ FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor PropertyMain Conference 
+ href="https://ppopp25.sigplan.org/profile/runxinzhong" - Runxin Zhong
+,href="https://ppopp25.sigplan.org/profile/yuyangjin" - Yuyang Jin
+,href="https://ppopp25.sigplan.org/profile/chenzhang2" - Chen Zhang
+,href="https://ppopp25.sigplan.org/profile/kinmanlei1" - Kinman Lei
+,href="https://ppopp25.sigplan.org/profile/shuangyuli" - Shuangyu Li
+,href="https://ppopp25.sigplan.org/profile/jidongzhai" - Jidong Zhai 
+ GLUMIN: Fast Connectivity Check Based on LUTs For Efficient Graph Pattern MiningMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weichencao" - Weichen Cao
+,href="https://ppopp25.sigplan.org/profile/kemeng2" - Ke Meng
+,href="https://ppopp25.sigplan.org/profile/linzhiheng" - linzhiheng
+,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan 
+ Harnessing Inter-GPU Shared Memory for Seamless MoE Communication-Computation FusionMain Conference 
+ href="https://ppopp25.sigplan.org/profile/hulinwang2" - Hulin Wang
+,href="https://ppopp25.sigplan.org/profile/yaqixia" - Yaqi Xia
+,href="https://ppopp25.sigplan.org/profile/donglinyang" - Donglin Yang
+,href="https://ppopp25.sigplan.org/profile/xiaobozhou" - Xiaobo Zhou
+,href="https://ppopp25.sigplan.org/profile/dazhaocheng1" - Dazhao Cheng 
+ Helios: Efficient Distributed Dynamic Graph Sampling for Online GNN InferenceMain Conference 
+ href="https://ppopp25.sigplan.org/profile/jiesun1" - Jie Sun
+,href="https://ppopp25.sigplan.org/profile/zuochengshi" - Zuocheng Shi
+,href="https://ppopp25.sigplan.org/profile/lisu" - Li Su
+,href="https://ppopp25.sigplan.org/profile/wentingshen" - Wenting Shen
+,href="https://ppopp25.sigplan.org/profile/zekewang" - Zeke Wang
+,href="https://ppopp25.sigplan.org/profile/yongli2" - Yong Li
+,href="https://ppopp25.sigplan.org/profile/wenyuanyu" - Wenyuan Yu
+,href="https://ppopp25.sigplan.org/profile/weilin1" - Wei Lin
+,href="https://ppopp25.sigplan.org/profile/feiwu" - Fei Wu
+,href="https://ppopp25.sigplan.org/profile/jingrenzhou" - Jingren Zhou
+,href="https://ppopp25.sigplan.org/profile/bingshenghe" - Bingsheng He 
+ Improving Tridiagonalization Performance on GPU ArchitecturesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/wanghansheng" - WangHansheng
+,href="https://ppopp25.sigplan.org/profile/zhekaiduan" - Zhekai Duan
+,href="https://ppopp25.sigplan.org/profile/zitianzhao" - Zitian Zhao
+,href="https://ppopp25.sigplan.org/profile/siqiwu" - Siqi Wu
+,href="https://ppopp25.sigplan.org/profile/saiqizheng" - Saiqi Zheng
+,href="https://ppopp25.sigplan.org/profile/qiaoli" - Qiao Li
+,href="https://ppopp25.sigplan.org/profile/xujiang" - Xu Jiang
+,href="https://ppopp25.sigplan.org/profile/shaoshuaizhang1" - Shaoshuai Zhang 
+ Jigsaw: Toward Conflict-free Vectorized Stencil Computation by Tessellating Swizzled RegistersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yiweizhang3" - Yiwei Zhang
+,href="https://ppopp25.sigplan.org/profile/kunli" - Kun Li
+,href="https://ppopp25.sigplan.org/profile/liangyuan1" - Liang Yuan
+,href="https://ppopp25.sigplan.org/profile/haozhihan" - Haozhi Han
+,href="https://ppopp25.sigplan.org/profile/yunquanzhang" - Yunquan Zhang
+,href="https://ppopp25.sigplan.org/profile/tingcao" - Ting Cao
+,href="https://ppopp25.sigplan.org/profile/maoyang" - Mao Yang 
+ LibRTS: A Spatial Indexing Library by Ray TracingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/lianggeng" - Liang Geng
+,href="https://ppopp25.sigplan.org/profile/rubaolee1" - Rubao Lee
+,href="https://ppopp25.sigplan.org/profile/xiaodongzhang" - Xiaodong Zhang 
+ Mario: Near Zero-cost Activation Checkpointing in Pipeline ParallelismMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weijianliu" - Weijian Liu
+,href="https://ppopp25.sigplan.org/profile/mingzhenli" - Mingzhen Li
+,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+,href="https://ppopp25.sigplan.org/profile/weilejia" - Weile Jia 
+ MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language ModelsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/eliasfrantar" - Elias Frantar
+,href="https://ppopp25.sigplan.org/profile/robertolopezcastro" - Roberto López Castro
+,href="https://ppopp25.sigplan.org/profile/jialechen" - Jiale Chen
+,href="https://ppopp25.sigplan.org/profile/torstenhoefler" - Torsten Hoefler
+,href="https://ppopp25.sigplan.org/profile/danalistarh1" - Dan Alistarh 
+ PANNS: Enhancing Graph-based Approximate Nearest Neighbor Search through Recency-aware Construction and Parameterized SearchMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xizheyin" - Xizhe Yin
+,href="https://ppopp25.sigplan.org/profile/chaogao" - Chao Gao
+,href="https://ppopp25.sigplan.org/profile/zhijiazhao" - Zhijia Zhao
+,href="https://ppopp25.sigplan.org/profile/rajivgupta" - Rajiv Gupta 
+ Popcorn: Accelerating Kernel K-means on GPUs through Sparse Linear AlgebraMain Conference 
+ href="https://ppopp25.sigplan.org/profile/julianbellavita1" - Julian Bellavita
+,href="https://ppopp25.sigplan.org/profile/thomaspasquali" - Thomas Pasquali
+,href="https://ppopp25.sigplan.org/profile/lauradelrio" - Laura Del Rio
+,href="https://ppopp25.sigplan.org/profile/flaviovella1" - Flavio Vella
+,href="https://ppopp25.sigplan.org/profile/giuliaguidi1" - Giulia Guidi 
+ POSTER: A General and Scalable GCN Training Framework on CPU SupercomputersMain Conference 
+ href="https://ppopp25.sigplan.org/profile/chenzhuang" - Chen Zhuang
+,href="https://ppopp25.sigplan.org/profile/pengchen2" - Peng Chen
+,href="https://ppopp25.sigplan.org/profile/xinliu5" - Xin Liu
+,href="https://ppopp25.sigplan.org/profile/rioyokota" - Rio Yokota
+,href="https://ppopp25.sigplan.org/profile/nikolidryden1" - Nikoli Dryden
+,href="https://ppopp25.sigplan.org/profile/toshioendo" - Toshio Endo
+,href="https://ppopp25.sigplan.org/profile/satoshimatsuoka1" - Satoshi Matsuoka
+,href="https://ppopp25.sigplan.org/profile/mohamedwahib" - Mohamed Wahib 
+ POSTER: Big Atomics and Fast Concurrent Hash TablesMain Conference 
+ href="https://ppopp25.sigplan.org/profile/danielanderson" - Daniel Anderson
+,href="https://ppopp25.sigplan.org/profile/guyeblelloch" - Guy E. Blelloch
+,href="https://ppopp25.sigplan.org/profile/siddharthajayanti" - Siddhartha Jayanti 
+ POSTER: Boost Lock-free Queue and Stack with BatchingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/aoli3" - Ao Li
+,href="https://ppopp25.sigplan.org/profile/wenhaili" - Wenhai Li
+,href="https://ppopp25.sigplan.org/profile/yuanchen" - Yuan Chen
+,href="https://ppopp25.sigplan.org/profile/lingfengdeng" - Lingfeng Deng 
+ POSTER: FastBWA: Practical and Cost-Efficient Genome Sequence Alignment PipelineMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhonghaizhang" - Zhonghai Zhang
+,href="https://ppopp25.sigplan.org/profile/yewenli" - Yewen Li
+,href="https://ppopp25.sigplan.org/profile/kemeng2" - Ke Meng
+,href="https://ppopp25.sigplan.org/profile/chunmingzhang" - Chunming Zhang
+,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan 
+ POSTER: Frontier-guided Graph ReorderingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/xinmiaozhang" - Xinmiao Zhang
+,href="https://ppopp25.sigplan.org/profile/chengliu" - Cheng Liu
+,href="https://ppopp25.sigplan.org/profile/shengwenliang" - Shengwen Liang
+,href="https://ppopp25.sigplan.org/profile/chenweixiong" - Chenwei Xiong
+,href="https://ppopp25.sigplan.org/profile/yuzhang11" - Yu Zhang
+,href="https://ppopp25.sigplan.org/profile/leizhang3" - Lei Zhang
+,href="https://ppopp25.sigplan.org/profile/huaweili" - Huawei Li
+,href="https://ppopp25.sigplan.org/profile/xiaoweili" - Xiaowei Li 
+ POSTER: High-performance Visual Semantics Compression for AI-Driven ScienceMain Conference 
+ href="https://ppopp25.sigplan.org/profile/boyuanzhang" - Boyuan Zhang
+,href="https://ppopp25.sigplan.org/profile/luanzhengguo" - Luanzheng Guo
+,href="https://ppopp25.sigplan.org/profile/jiannantian1" - Jiannan Tian
+,href="https://ppopp25.sigplan.org/profile/jinyangliu2" - Jinyang Liu
+,href="https://ppopp25.sigplan.org/profile/daocewang" - Daoce Wang
+,href="https://ppopp25.sigplan.org/profile/fanjiangye" - Fanjiang Ye
+,href="https://ppopp25.sigplan.org/profile/chengmingzhang" - Chengming Zhang
+,href="https://ppopp25.sigplan.org/profile/janstrube" - Jan Strube
+,href="https://ppopp25.sigplan.org/profile/nathanrtallent" - Nathan R. Tallent
+,href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao 
+ POSTER: Magneto: Accelerating Parallel Structures in DNNs via Co-Optimization of OperatorsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhanyuandi" - Zhanyuan Di
+,href="https://ppopp25.sigplan.org/profile/lepingwang" - Leping Wang
+,href="https://ppopp25.sigplan.org/profile/ziyiren" - Ziyi Ren
+,href="https://ppopp25.sigplan.org/profile/enshao" - En Shao
+,href="https://ppopp25.sigplan.org/profile/jiezhao" - Jie Zhao
+,href="https://ppopp25.sigplan.org/profile/siyuanfeng" - Siyuan Feng
+,href="https://ppopp25.sigplan.org/profile/dingwentao1" - Dingwen Tao
+,href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming Tan
+,href="https://ppopp25.sigplan.org/profile/ninghuisun" - Ninghui Sun 
+ POSTER: Minimizing speculation overhead in a parallel recognizer for regular textsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/angeloborsotti" - Angelo Borsotti
+,href="https://ppopp25.sigplan.org/profile/lucabreveglieri" - Luca Breveglieri
+,href="https://ppopp25.sigplan.org/profile/stefanocrespireghizzi" - Stefano Crespi Reghizzi
+,href="https://ppopp25.sigplan.org/profile/angelomorzenti" - Angelo Morzenti 
+ POSTER: TENSORMD: Molecular Dynamics Simulation with Ab Initio Accuracy of 50 Billion AtomsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuchengouyang" - Yucheng Ouyang
+,href="https://ppopp25.sigplan.org/profile/xinchen7" - Xin Chen
+,href="https://ppopp25.sigplan.org/profile/yingliu2" - Ying Liu
+,href="https://ppopp25.sigplan.org/profile/xinchen4" - Xin Chen
+,href="https://ppopp25.sigplan.org/profile/honghuishang" - Honghui Shang
+,href="https://ppopp25.sigplan.org/profile/zhenchuanchen" - Zhenchuan Chen
+,href="https://ppopp25.sigplan.org/profile/rongfenlin1" - Rongfen Lin
+,href="https://ppopp25.sigplan.org/profile/xingyugao" - Xingyu Gao
+,href="https://ppopp25.sigplan.org/profile/lifangwang" - Lifang Wang
+,href="https://ppopp25.sigplan.org/profile/fangli2" - Fang Li
+,href="https://ppopp25.sigplan.org/profile/jiahaoshan" - Jiahao Shan
+,href="https://ppopp25.sigplan.org/profile/haifengsong" - Haifeng Song
+,href="https://ppopp25.sigplan.org/profile/huimincui" - Huimin Cui
+,href="https://ppopp25.sigplan.org/profile/xiaobingfeng" - Xiaobing Feng 
+ POSTER: Transactional Data Structures with Orthogonal MetadataMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yaodongsheng" - Yaodong Sheng
+,href="https://ppopp25.sigplan.org/profile/ahmedhassan1" - Ahmed Hassan
+,href="https://ppopp25.sigplan.org/profile/michaelspear" - Michael Spear 
+ POSTER: Triangle Counting on Tensor CoresMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yuangchen1" - YuAng Chen
+,href="https://ppopp25.sigplan.org/profile/jeffreyxuyu" - Jeffrey Xu Yu 
+ Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data StructuresDistinguished Paper AwardMain Conference 
+ href="https://ppopp25.sigplan.org/profile/ajaysingh1" - Ajay Singh
+,href="https://ppopp25.sigplan.org/profile/trevorbrown" - Trevor Brown 
+ Reciprocating LocksMain Conference 
+ href="https://ppopp25.sigplan.org/profile/davedice" - Dave Dice
+,href="https://ppopp25.sigplan.org/profile/alexkogan" - Alex Kogan 
+ RT–BarnesHut: Accelerating Barnes–Hut Using Ray-Tracing HardwareMain Conference 
+ href="https://ppopp25.sigplan.org/profile/vaninagarajan" - Vani Nagarajan
+,href="https://ppopp25.sigplan.org/profile/rohangangaraju" - Rohan Gangaraju
+,href="https://ppopp25.sigplan.org/profile/kirshanthansundararajah" - Kirshanthan Sundararajah
+,href="https://ppopp25.sigplan.org/profile/artempelenitsyn" - Artem Pelenitsyn
+,href="https://ppopp25.sigplan.org/profile/milindkulkarni" - Milind Kulkarni 
+ SBMGT: Scaling Bayesian Multinomial Group TestingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/weicongchen" - Weicong Chen
+,href="https://ppopp25.sigplan.org/profile/haoqi" - Hao Qi
+,href="https://ppopp25.sigplan.org/profile/curtistatsuoka" - Curtis Tatsuoka
+,href="https://ppopp25.sigplan.org/profile/xiaoyilu1" - Xiaoyi Lu 
+ Semi-StructMG: A Fast and Scalable Semi-Structured Algebraic MultigridMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yizong" - Yi Zong
+,href="https://ppopp25.sigplan.org/profile/chensongzhang" - Chensong Zhang
+,href="https://ppopp25.sigplan.org/profile/longjiangmu" - Longjiang Mu
+,href="https://ppopp25.sigplan.org/profile/jianchunwang" - Jianchun Wang
+,href="https://ppopp25.sigplan.org/profile/jiansun" - Jian Sun
+,href="https://ppopp25.sigplan.org/profile/xiaowenxu" - Xiaowen Xu
+,href="https://ppopp25.sigplan.org/profile/xinliangwang" - Xinliang Wang
+,href="https://ppopp25.sigplan.org/profile/peinanyu" - Peinan Yu
+,href="https://ppopp25.sigplan.org/profile/weixue1" - Wei Xue 
+ SGDRC: Software-Defined Dynamic Resource Control for Concurrent DNN Inference on NVIDIA GPUsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yongkangzhang" - Yongkang Zhang
+,href="https://ppopp25.sigplan.org/profile/haoxuanyu" - Haoxuan Yu
+,href="https://ppopp25.sigplan.org/profile/chenxiahan" - Chenxia Han
+,href="https://ppopp25.sigplan.org/profile/chengwang" - Cheng Wang
+,href="https://ppopp25.sigplan.org/profile/baotonglu" - Baotong Lu
+,href="https://ppopp25.sigplan.org/profile/yunzheli" - Yunzhe Li
+,href="https://ppopp25.sigplan.org/profile/zhifengjiang" - Zhifeng Jiang
+,href="https://ppopp25.sigplan.org/profile/yangli2" - Yang Li
+,href="https://ppopp25.sigplan.org/profile/xiaowenchu1" - Xiaowen Chu
+,href="https://ppopp25.sigplan.org/profile/huaichengli" - Huaicheng Li 
+ Swift Unfolding of Communities: GPU-Accelerated Louvain AlgorithmMain Conference 
+ href="https://ppopp25.sigplan.org/profile/zhibinwang" - Zhibin Wang
+,href="https://ppopp25.sigplan.org/profile/xilin" - Xi Lin
+,href="https://ppopp25.sigplan.org/profile/xueli1" - Xue Li
+,href="https://ppopp25.sigplan.org/profile/pinhuanwang" - Pinhuan Wang
+,href="https://ppopp25.sigplan.org/profile/zihengmeng" - Ziheng Meng
+,href="https://ppopp25.sigplan.org/profile/hangliu3" - Hang Liu
+,href="https://ppopp25.sigplan.org/profile/chentian1" - Chen Tian
+,href="https://ppopp25.sigplan.org/profile/shengzhong" - Sheng Zhong 
+ TurboFFT: Co-Designed High-Performance and Fault-Tolerant Fast Fourier Transform on GPUsMain Conference 
+ href="https://ppopp25.sigplan.org/profile/shixunwu" - Shixun Wu
+,href="https://ppopp25.sigplan.org/profile/yujiazhai" - Yujia Zhai
+,href="https://ppopp25.sigplan.org/profile/jinyangliu2" - Jinyang Liu
+,href="https://ppopp25.sigplan.org/profile/jiajunhuang1" - Jiajun Huang
+,href="https://ppopp25.sigplan.org/profile/zizhejian" - Zizhe Jian
+,href="https://ppopp25.sigplan.org/profile/huangliangdai" - Huangliang Dai
+,href="https://ppopp25.sigplan.org/profile/shengdi" - Sheng Di
+,href="https://ppopp25.sigplan.org/profile/franckcappello" - Franck Cappello
+,href="https://ppopp25.sigplan.org/profile/zizhongchen" - zizhong chen 
+ WaterWise: Co-optimizing Carbon- and Water-Footprint Toward Environmentally Sustainable Cloud ComputingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/yankaijiang" - Yankai Jiang
+,href="https://ppopp25.sigplan.org/profile/rohanbasuroy" - Rohan Basu Roy
+,href="https://ppopp25.sigplan.org/profile/raghavendrakanakagiri" - Raghavendra Kanakagiri
+,href="https://ppopp25.sigplan.org/profile/deveshtiwari" - Devesh Tiwari 
+ WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model TrainingMain Conference 
+ href="https://ppopp25.sigplan.org/profile/junfenglin" - Junfeng Lin
+,href="https://ppopp25.sigplan.org/profile/zimingliu" - Ziming Liu
+,href="https://ppopp25.sigplan.org/profile/yangyou1" - Yang You
+,href="https://ppopp25.sigplan.org/profile/junwang7" - Jun Wang
+,href="https://ppopp25.sigplan.org/profile/weihaozhang1" - Weihao Zhang
+,href="https://ppopp25.sigplan.org/profile/rongzhao1" - Rong Zhao 
+ Call for Papers 
+ PPoPP 2025: 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ Location: Las Vegas, Nevada, USA (collocated with CC 2025, CGO 2025, and HPCA 2025). Dates: 01 March – 05 March, 2025. 
+ Submission URL:href="https://ppopp25.hotcrp.com" - https://ppopp25.hotcrp.com
+href="#important-dates" - Important dates:
+Full paper submission: Friday, August 16, 2024 
+ Author response period: Wednesday, October 23 – Friday, October 25, 2024 
+ Author notification: Monday, November 11, 2024 
+ Artifact submission to AE committee: Monday, November 18, 2024 
+ Artifact notification by AE committee: Monday, January 6, 2025 
+ Final paper due: Friday, January 10, 2025 
+ Scope: 
+ PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large scale machines, and quantum computers). PPoPP is interested in all aspects related to improving the productivity of parallel programming on modern architectures. PPoPP is also interested in work that addresses new parallel workloads and issues that arise out of large-scale scientific or enterprise workloads. 
+ Specific topics of interest include (but are not limited to): 
+ Languages, compilers, and runtime systems for parallel programs 
+ Concurrent data structures 
+ Development, analysis, or management tools 
+ Fault tolerance for parallel systems 
+ Formal analysis and verification 
+ High-performance libraries 
+ Middleware for parallel systems 
+ Machine learning for parallel systems 
+ Parallel algorithms 
+ Parallel applications including scientific computing (e.g., simulation and modeling) and enterprise workloads (e.g., web, search, analytics, cloud, and machine learning) 
+ Parallel frameworks 
+ Parallel programming for deep memory hierarchies including nonvolatile memory 
+ Parallel programming theory and models 
+ Performance analysis, debugging and optimization 
+ Productivity tools for parallel systems 
+ Software engineering for parallel programs 
+ Synchronization and concurrency control 
+ Papers should report on original research relevant to parallel programming and should contain enough background materials to make them accessible to the entire parallel programming research community. Papers describing experience should indicate how they illustrate general principles or lead to new insights; papers about parallel programming foundations should indicate how they relate to practice. PPoPP submissions will be evaluated based on their technical merit and accessibility. Submissions should clearly motivate the importance of the problem being addressed, compare to the existing body of work on the topic, and explicitly and precisely state the paper’s key contributions and results towards addressing the problem. Submissions should strive to be accessible both to a broad audience and to experts in the area. 
+ href="#paper-submission" - Paper Submission:
+Conference submission site:href="https://ppopp25.hotcrp.com" - https://ppopp25.hotcrp.com
+All submissions must be made electronically through the conference website and include an abstract (100–400 words), author contact information, the full list of authors and their affiliations. Full paper submissions must be in PDF format printable on both A4 and US letter-size paper. 
+ All papers must be prepared in ACM Conference Format using the2-columnhref="http://www.sigplan.org/Resources/Author/" - acmart
+format: use the SIGPLAN proceedings templateacmart-sigplanproc-template.texfor Latex, andinterim-layout.docxfor Word. You may also want to consult the official ACM information on theMaster Article Templateand related tools.Important note: The Word template (interim-layout.docx) on the ACM website uses 9pt font; you need to increase it to 10pt. 
+ Papers should contain a maximum of 10 pages of text (in a typeface no smaller than 10pt) or figures, NOT INCLUDING references. There is no page limit for references, and they must include the name of all authors (not {et al.}). Appendices are not allowed, but the authors may submit supplementary material, such as proofs or source code; all supplementary material must be in PDF or ZIP format. Looking at supplementary material is at the discretion of the reviewers. 
+ Submission is double-blind and authors will need to identify any potential conflicts of interest with PC and Extended Review Committee members, as defined here:http://www.sigplan.org/Resources/Policies/Review/(ACM SIGPLAN policy). 
+ PPoPP 2025 will employ a double-blind reviewing process. To facilitate this process, submissions should not reveal the identity of the authors in any way. Authors should leave out author names and affiliations from the body of their submission. They should also ensure that any references to authors’ own related work should be in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”). The purpose of this process is to help the PC and external reviewers come to an initial judgment about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult. In particular, important background references should not be omitted or anonymized. In addition, authors should feel free to disseminate their ideas or draft versions of their papers as they normally would. For instance, authors may post drafts of their papers on the web or give talks on their research ideas. Authors with further questions on double-blind reviewing are encouraged to contact the Program Chairs by email. 
+ To facilitate fair and unbiased reviews for all submissions, PPoPP 2025 may utilize theToronto Paper Matching System (TPMS)to assign papers to reviewers. From the authors’ perspective, this decision means that the submissions may be uploaded to the TPMS. 
+ Submissions should be in PDF and printable on both US Letter and A4 paper. Papers may be resubmitted to the submission site multiple times up until the deadline, but the last version submitted before the deadline will be the version reviewed. Papers that exceed the length requirement, which deviate from the expected format, or that are submitted late will be rejected. 
+ All submissions that are not accepted for regular presentations will be automatically considered for posters. Two-page summaries of accepted posters will be included in the conference proceedings. 
+ To allow reproducibility, we encourage authors of accepted papers to submit their papers for Artifact Evaluation (AE). The AE process begins after the acceptance notification and is run by a separate committee whose task is to assess how the artifacts support the work described in the papers. Artifact evaluation is voluntary and will not affect paper acceptance but will be taken into consideration when selecting papers for awards. Papers that go through the AE process successfully will receive at least one ACM reproducibility badge, printed on the papers themselves. More information will be posted on the AE website. 
+ Deadlines expire at midnight anywhere on earth. 
+ Publication Date: 
+ The titles of all accepted papers are typically announced shortly after the author notification date (late November 2024). Note, however, that this is not the official publication date. The official publication date is the date the proceedings are made available in the ACM Digital Library. ACM will make the proceedings available via the Digital Library, up to 2 weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ ACM Publications Policies: 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy."href="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects
+Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. We are committed to improving author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. Please follow thehref="https://dl.acm.org/journal/pacmcgit/author-guidelines" - https://dl.acm.org/journal/pacmcgit/author-guidelines
+link to see ACM’s ORCID requirements for authors. 
+ Important DatesAoE (UTC-12h) 
+  
+ Fri 10 Jan 2025 
+ Final paper due 
+ Mon 11 Nov 2024 
+ Author notification 
+ Wed 23 - Fri 25 Oct 2024 
+ Author response period 
+ Fri 16 Aug 2024 
+ Full paper submission 
+ Program Committee 
+ href="https://ppopp25.sigplan.org/profile/rezaulchowdhury" - Rezaul ChowdhuryProgram Co-ChairStony Brook UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/binren1" - Bin RenProgram Co-ChairWilliam & MaryUnited States 
+ href="https://ppopp25.sigplan.org/profile/gaganagrawal2" - Gagan AgrawalPC MemberUniversity of GeorgiaUnited States 
+ href="https://ppopp25.sigplan.org/profile/tekinbicer" - Tekin BicerPC MemberArgonne National LaboratoryUnited States 
+ href="https://ppopp25.sigplan.org/profile/quanchen2" - Quan ChenPC MemberShanghai Jiao Tong UniversityChina 
+ href="https://ppopp25.sigplan.org/profile/yuecheng1" - Yue ChengPC MemberUniversity of VirginiaUnited States 
+ href="https://ppopp25.sigplan.org/profile/kazemcheshmi" - Kazem CheshmiPC MemberMcMaster UniversityCanada 
+ href="https://ppopp25.sigplan.org/profile/florinaciorba" - Florina CiorbaPC MemberUniversity of BaselSwitzerland 
+ href="https://ppopp25.sigplan.org/profile/guojingcong" - Guojing CongPC MemberOak Ridge National LaboratoryUnited States 
+ href="https://ppopp25.sigplan.org/profile/huimincui" - Huimin CuiPC MemberInstitute of Computing Technology, Chinese Academy of SciencesChina 
+ href="https://ppopp25.sigplan.org/profile/rathishdas1" - Rathish DasPC MemberUniversity of HoustonUnited States 
+ href="https://ppopp25.sigplan.org/profile/roshandathathri1" - Roshan DathathriPC MemberMicrosoft ResearchUnited States 
+ href="https://ppopp25.sigplan.org/profile/frankdehne" - Frank DehnePC MemberCarleton University, Ottawa, CanadaCanada 
+ href="https://ppopp25.sigplan.org/profile/chending" - Chen DingPC MemberUniversity of RochesterUnited States 
+ href="https://ppopp25.sigplan.org/profile/basiliofraguela" - Basilio FraguelaPC MemberUniversidade da CoruñaSpain 
+ href="https://ppopp25.sigplan.org/profile/thomasgross" - Thomas GrossPC MemberETH ZurichSwitzerland 
+ href="https://ppopp25.sigplan.org/profile/pengjiang" - Peng JiangPC MemberThe University of IowaUnited States 
+ href="https://ppopp25.sigplan.org/profile/shoaibkamil" - Shoaib KamilPC MemberAdobe ResearchUnited States 
+ href="https://ppopp25.sigplan.org/profile/gokcenkestor" - Gokcen KestorPC MemberPacific Northwest National LaboratoryUnited States 
+ href="https://ppopp25.sigplan.org/profile/dongli" - Dong LiPC MemberUniversity of California, MercedUnited States 
+ href="https://ppopp25.sigplan.org/profile/jiajiali2" - Jiajia LiPC MemberNorth Carolina State UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/jingli2" - Jing LiPC MemberNew Jersey Institute of TechnologyUnited States 
+ href="https://ppopp25.sigplan.org/profile/ericliang" - Eric LiangPC MemberPeking UniversityChina 
+ href="https://ppopp25.sigplan.org/profile/leiliu5" - Lei LiuPC MemberBeihang UniversityChina 
+ href="https://ppopp25.sigplan.org/profile/weifengliu" - Weifeng LiuPC MemberChina University of Petroleum-BeijingChina 
+ href="https://ppopp25.sigplan.org/profile/quanquanliu1" - Quanquan LiuPC MemberYale UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/hatemltaief" - Hatem LtaiefPC MemberKAUSTSaudi Arabia 
+ href="https://ppopp25.sigplan.org/profile/xiaoyilu1" - Xiaoyi LuPC MemberUC MercedUnited States 
+ href="https://ppopp25.sigplan.org/profile/tengma" - Teng MaPC MemberAlibabaChina 
+ href="https://ppopp25.sigplan.org/profile/wenjingma" - Wenjing MaPC MemberChinese Academy of SciencesChina 
+ href="https://ppopp25.sigplan.org/profile/satoshimatsuoka1" - Satoshi MatsuokaPC MemberRIKENJapan 
+ href="https://ppopp25.sigplan.org/profile/gabrielemencagli" - Gabriele MencagliPC MemberUniversity of PisaItaly 
+ href="https://ppopp25.sigplan.org/profile/kemeng2" - Ke MengPC MemberChinese Academy of SciencesChina 
+ href="https://ppopp25.sigplan.org/profile/harshithamenon" - Harshitha MenonPC MemberLawrence Livermore National LabUnited States 
+ href="https://ppopp25.sigplan.org/profile/akimasamorihata" - Akimasa MorihataPC MemberUniversity of TokyoJapan 
+ href="https://ppopp25.sigplan.org/profile/williamsmoses" - William S. MosesPC MemberUIUCUnited States 
+ href="https://ppopp25.sigplan.org/profile/dimitriosnikolopoulos1" - Dimitrios NikolopoulosPC MemberVirginia TechUnited States 
+ href="https://ppopp25.sigplan.org/profile/weiniu1" - Wei NiuPC MemberUniversity of GeorgiaUnited States 
+ href="https://ppopp25.sigplan.org/profile/prashantpandey" - Prashant PandeyPC MemberUniversity of UtahUnited States 
+ href="https://ppopp25.sigplan.org/profile/ivybopeng" - Ivy Bo PengPC MemberKTH Royal Institute of TechnologySweden 
+ href="https://ppopp25.sigplan.org/profile/louisnoelpouchet" - Louis-Noël PouchetPC MemberColorado State UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/lawrencerauchwerger1" - Lawrence RauchwergerPC MemberUIUCUnited States 
+ href="https://ppopp25.sigplan.org/profile/jieren1" - Jie RenPC MemberWilliam & MaryUnited States 
+ href="https://ppopp25.sigplan.org/profile/psadayappan" - Saday SadayappanPC MemberUniversity of UtahUnited States 
+ href="https://ppopp25.sigplan.org/profile/francescosilvestri" - Francesco SilvestriPC MemberUniversity of PadovaItaly 
+ href="https://ppopp25.sigplan.org/profile/emanueledelsozzo" - Emanuele Del SozzoPC MemberMITUnited States 
+ href="https://ppopp25.sigplan.org/profile/michaelspear" - Michael SpearPC MemberLehigh UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/pengfeisu" - Pengfei SuPC MemberUniversity of California, MercedUnited States 
+ href="https://ppopp25.sigplan.org/profile/yihansun2" - Yihan SunPC MemberUniversity of California, RiversideUnited States 
+ href="https://ppopp25.sigplan.org/profile/kirshanthansundararajah" - Kirshanthan SundararajahPC MemberVirginia TechUnited States 
+ href="https://ppopp25.sigplan.org/profile/nathantallent" - Nathan TallentPC MemberPacific Northwest National LaboratoryUnited States 
+ href="https://ppopp25.sigplan.org/profile/guangmingtan" - Guangming TanPC MemberChinese Academy of Sciences(CAS)China 
+ href="https://ppopp25.sigplan.org/profile/jesperlarssontraff" - Jesper Larsson TräffPC MemberTU WienAustria 
+ href="https://ppopp25.sigplan.org/profile/jeffreyvetter" - Jeffrey VetterPC MemberOak Ridge National LaboratoryUnited States 
+ href="https://ppopp25.sigplan.org/profile/zwang" - Zheng WangPC MemberUniversity of LeedsUnited Kingdom 
+ href="https://ppopp25.sigplan.org/profile/yuanhaowei1" - Yuanhao WeiPC MemberUniversity of British ColumbiaCanada 
+ href="https://ppopp25.sigplan.org/profile/bingxie1" - Bing XiePC MemberMicrosoft AIUnited States 
+ href="https://ppopp25.sigplan.org/profile/helenxu1" - Helen XuPC MemberGeorgia TechUnited States 
+ href="https://ppopp25.sigplan.org/profile/yuanchaoxu1" - Yuanchao XuPC MemberUC Santa CruzUnited States 
+ href="https://ppopp25.sigplan.org/profile/jinglingxue" - Jingling XuePC MemberUNSW SydneyAustralia 
+ href="https://ppopp25.sigplan.org/profile/hailongyang" - Hailong YangPC MemberBeihang UniversityChina 
+ href="https://ppopp25.sigplan.org/profile/lishanyang1" - Lishan YangPC MemberGeorge Mason UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/youngminyi" - Youngmin YiPC MemberSogang UniversitySouth Korea 
+ href="https://ppopp25.sigplan.org/profile/miaoyin1" - Miao YinPC MemberUniversity of Texas at ArlingtonUnited States 
+ href="https://ppopp25.sigplan.org/profile/weikuanyu" - Weikuan YuPC MemberFlorida State University, USAUnited States 
+ href="https://ppopp25.sigplan.org/profile/jianpingzeng" - Jianping ZengPC MemberSamsung ElectronicsUnited States 
+ href="https://ppopp25.sigplan.org/profile/jidongzhai" - Jidong ZhaiPC MemberTsinghua UniversityChina 
+ href="https://ppopp25.sigplan.org/profile/xiaodongzhang" - Xiaodong ZhangPC MemberThe Ohio State UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/zhijiazhao" - Zhijia ZhaoPC MemberUniversity of California at RiversideUnited States 
+ href="https://ppopp25.sigplan.org/profile/alexandrobaldassin" - Alexandro BaldassinERC memberSão Paulo State UniversityBrazil 
+ href="https://ppopp25.sigplan.org/profile/anastasiabraginsky1" - Anastasia BraginskyERC memberRed Hat ResearchIsrael 
+ href="https://ppopp25.sigplan.org/profile/unnikrishnancheramangalath" - Unnikrishnan CheramangalathERC memberIndian Institute of Technology PalakkadIndia 
+ href="https://ppopp25.sigplan.org/profile/rajivgupta" - Rajiv GuptaERC memberUniversity of California at Riverside (UCR)United States 
+ href="https://ppopp25.sigplan.org/profile/nikhilhegde" - Nikhil HegdeERC memberIndian Institute of Technology, DharwadIndia 
+ href="https://ppopp25.sigplan.org/profile/frankmueller" - Frank MuellerERC memberNorth Carolina State University, USAUnited States 
+ href="https://ppopp25.sigplan.org/profile/cynthiaphillips" - Cynthia PhillipsERC memberSandia National LaboratoriesUnited States 
+ href="https://ppopp25.sigplan.org/profile/harshavardhansimhadri1" - Harsha Vardhan SimhadriERC memberMicrosoft AzureIndia 
+ href="https://ppopp25.sigplan.org/profile/xipengshen" - Xipeng ShenERC memberNorth Carolina State UniversityUnited States 
+ href="https://ppopp25.sigplan.org/profile/denistrystram1" - Denis TrystramERC memberGrenoble Institute of TechnologyFrance 
+ href="https://ppopp25.sigplan.org/profile/minjiazhang2" - Minjia ZhangERC memberUIUCUnited States 
+ xSat 5 Apr 04:38 
+ href="https://ppopp25.sigplan.org" - PPoPP 2025
+href="https://ppopp25.sigplan.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://ppopp25.sigplan.org/support" - Support page
+ 
+ Tracks 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Attending 
+ href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa
+ 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration
+ 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options
+ 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants
+ 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa
+ 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct
+href="https://ppopp25.sigplan.org/signup" - Sign Up
+: 
+ :

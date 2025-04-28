@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "October 28-30, 2024",
+  "Year": "2024",
+  "Location": "Leuven, Belgium",
+  "City-State-Province": "Leuven",
+  "Country": "Belgium",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Papers Submission Due": "August 16, 2024"
+  },
+  "Notification Date": {
+    "Authors Notifications": "September 8, 2024"
+  },
+  "Camera-ready Date": {
+    "Final Manuscript Due": "September 27, 2024"
+  },
+  "Other Date": {
+    "Workshop Proposals Due": "June 10, 2024"
+  },
+  "Topics": "Ubiquitous Systems, Pervasive Networks, Ad hoc Networks, Pervasive Networks, Adaptive Systems, Intelligent Computing, Big Data, Big Data Science, Cloud Computing, Cluster Computing, Grid Computing, Social Computing, Emerging Pervasive/Ubiquitous Technologies, Intelligent Traffic and Transportation Systems, Internet of Things, Mobile Computing, Wireless Communications, Security, Privacy, Trust, Semantic Web Technologies",
+  "Publisher": "Elsevier Science",
+  "Summary": "The 15th International Conference on Emerging Ubiquitous Systems and Pervasive Networks (EUSPN 2024) was held in Leuven, Belgium on October 28-30, 2024.  The conference is a leading international forum for researchers and industry practitioners to share new ideas, original research results, and practical development experiences in ubiquitous systems and pervasive networks.",
+  "Call for Papers": "# EUSPN 2024: Call for Papers\n\nThe 15th International Conference on Emerging Ubiquitous Systems and Pervasive Networks (EUSPN 2024) was a premier venue for bringing together multi-disciplinary researchers, professionals, and practitioners from both academia and industry, who are engaged in different facets of ubiquitous systems and pervasive networks.  The conference encouraged innovative research contributions providing recent significant developments and promising future trends of EUSPN-based applications, systems, tools, environments, and infrastructures in the fields of EUSPN and related areas.\n\n## Publication\n\nAll EUSPN 2024 accepted papers were included in the conference proceedings published by Elsevier Science in the open-access Procedia Computer Science series online. Procedia Computer Sciences is hosted on www.Elsevier.com and on Elsevier content platform ScienceDirect (www.sciencedirect.com), and was freely available worldwide. All papers in Procedia were indexed by Scopus (www.scopus.com) and Engineering Village (Ei) (www.engineeringvillage.com). This includes EI Compendex (www.ei.org/compendex). The papers contained linked references, XML versions, and citable DOI numbers. All accepted papers were also indexed in DBLP (http://dblp.uni-trier.de/). Selected papers were invited for publication in international journals special issues.\n\n## Topics of Interest\n\nPapers on either completed or ongoing research were invited in the following and related tracks:\n\n*   Ad hoc and Pervasive Networks\n*   Adaptive Systems, Intelligent Computing and Applications\n*   Big Data and Big Data Science\n*   Cloud, Cluster, Grid and Social Computing\n*   Emerging Pervasive/Ubiquitous Technologies\n*   Intelligent Traffic and Transportation Systems\n*   Internet of Things\n*   Mobile Computing and Wireless Communications\n*   Security, Privacy, and Trust\n*   Semantic Web Technologies\n\n## Important Dates\n\n*   **Workshop Proposals Due:** June 10, 2024\n*   **Papers Submission Due:** August 16, 2024 (Firm Deadline)\n*   **Authors Notifications:** September 8, 2024\n*   **Final Manuscript Due:** September 27, 2024\n*   **EUSPN 2024:** October 28, 2024 – October 30, 2024"
+}
+```

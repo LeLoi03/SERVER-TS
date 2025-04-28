@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "August 26 - 29, 2025",
+  "Year": "2025",
+  "Location": "Międzyzdroje, Poland",
+  "City-State-Province": "Międzyzdroje",
+  "Country": "Poland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Final deadline for full paper submission": "April 7, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "May 19, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Paper Submission": "June 20, 2025"
+  },
+  "Other Date": {
+    "Author Registration and Payment": "June 20, 2025",
+    "Deadline for Online Presentation Submission": "August 15, 2025"
+  },
+  "Topics": "Automatic control theory, technology and applications, Identification, modelling and simulation, Signal processing, Control and systems theory, Robotics, Intelligent systems and methods, Control systems",
+  "Summary": "The International Conference on Methods and Models in Automation and Robotics (MMAR 2025) is an annual conference that has been held since 1994. The 29th conference will take place in Międzyzdroje, Poland, between Tuesday, 26th August and Friday, 29th August 2025.",
+  "Call for Papers": "# MMAR 2025: Call for Papers\n\nThe 29th International Conference on Methods and Models in Automation and Robotics (MMAR 2025) will be held in **Międzyzdroje, Poland, from August 26-29, 2025**.\n\nThe conference aims to bring together engineers and scientists from academia, research institutes, and industry to discuss the latest developments and requirements in traditional and non-traditional areas of Automation and Robotics.\n\n## Topics of Interest\n\nThe main topics for the conference include, but are not limited to:\n\n*   **Identification, modelling and simulation:** Linear and nonlinear systems, Distributed parameter systems, Hybrid systems, Computer aided systems design, Uncertain systems, Stochastic systems\n*   **Signal processing:** Filtering, Sensor and signal fusion, Adaptive signal processing, Optimization in signal processing, Wavelets, Reconstruction of signals, Change detection problems, Time-frequency analysis, Image processing\n*   **Control and systems theory:** Linear and nonlinear systems and control, Fractional order systems, Cooperative, coordinated and decentralized control, Advanced process control, Chaotic systems\n*   **Robotics:** Fundamentals of robotics, Robotics applications, Human-robot interaction, Motion planning and algorithms, Advanced robotics, Kinematics and dynamics aspects of robots, Nonholonomic systems and control, Sensory and visual feedback in robots\n*   **Intelligent systems and methods:** Optimization algorithms, Fuzzy systems, Genetic algorithms, Neural networks, Decision support systems, Machine learning, Distributed control systems, Networked control systems, Software agents, Planning and scheduling problems, Fault detection and diagnosis\n*   **Control systems:** Adaptive control, Predictive control, Robust control, Optimal control, Control applications, Marine and aerospace guidance and control, Space control systems\n\n## Paper Submission\n\nPapers must be between **4 and 6 pages** long. Please use the correct template ([Epapers site](https://epapers.org/mmar2021/ESR/samples.php) and [Submissions tab](http://mmar.edu.pl/index.php/submission/submission-information/)).\n\nSubmissions are handled via [this portal](https://epapers2.org/mmar2025).\n\n## Important Dates\n\n*   **Final deadline for full paper submission:** April 7, 2025\n*   **Notification of Acceptance:** May 19, 2025\n*   **Author Registration and Payment:** June 20, 2025\n*   **Camera-Ready Paper Submission:** June 20, 2025\n*   **Deadline for Online Presentation Submission:** August 15, 2025\n*   **Conference:** August 26-29, 2025\n\n## Conference Proceedings\n\nThe conference program and abstracts will be published as a booklet with an ISBN. Full papers will be published on an accompanying USB. The proceedings will be submitted for review and approval for inclusion in the IEEE Xplore® Digital Library."
+}
+

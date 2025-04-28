@@ -1,0 +1,17 @@
+output:
+{
+  "Conference dates": "July 2 - 4, 2025",
+  "Year": "2025",
+  "Location": "Bizkaia Aretoa building, Bilbao, Spain",
+  "City-State-Province": "Bilbao",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Other Date": {
+    "Graduate School": "June 30 - July 1, 2025"
+  },
+  "Topics": "Geometry Processing, 3D Models, Shape Collections, Acquisition, Modeling, Analysis, Manipulation, Simulation",
+  "Summary": "SGP 2025, the premier venue for disseminating new research ideas and cutting-edge results in geometry processing, will be held in Bilbao, Spain, from July 2-4, 2025.  The conference will be located at the Bizkaia Aretoa building and will also offer a Graduate School for students and researchers new to the field.",
+  "Call for Papers": "No call for papers available"
+}
+

@@ -1,0 +1,40 @@
+```json
+{
+  "Conference dates": "February 26 - 28, 2025",
+  "Year": "2025",
+  "Location": "Vila Galé Porto hotel, Porto, Portugal",
+  "City-State-Province": "Porto",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Regular Papers) Paper Submission": "October 22, 2024",
+    "(Position Papers /Regular Papers) Paper Submission": "November 20, 2024",
+    "(Late-Breaking) Paper Submission": "December 16, 2024",
+    "(Workshops) Workshop Proposal": "October 17, 2024",
+    "(Workshops) Paper Submission": "January 6, 2025",
+    "(Special Sessions) Special Session Proposal": "October 17, 2024",
+    "(Tutorials) Tutorial Proposal": "January 17, 2025",
+    "(Demos) Demo Proposal": "January 17, 2025",
+    "(Panels) Panel Proposal": "January 17, 2025",
+    "(Abstracts) Abstract Submission": "January 7, 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Authors Notification": "December 4, 2024",
+    "(Position Papers /Regular Papers) Authors Notification": "December 20, 2024",
+    "(Late-Breaking) Authors Notification": "January 7, 2025",
+    "(Workshops) Authors Notification": "January 14, 2025",
+    "(Abstracts) Authors Notification": "January 14, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular Papers) Camera Ready and Registration": "December 20, 2024",
+    "(Position Papers /Regular Papers) Camera Ready and Registration": "January 13, 2025",
+    "(Late-Breaking) Camera Ready and Registration": "January 14, 2025",
+    "(Workshops) Camera Ready and Registration": "January 22, 2025",
+    "(Abstracts) Camera Ready and Registration": "January 22, 2025"
+  },
+  "Topics": "Methodologies, Processes and Platforms, Applications and System Development, Modeling Languages, Tools and Architectures",
+  "Summary": "The International Conference on Model-Based Software and Systems Engineering (MODELSWARD 2025) will be held from February 26-28, 2025, at the Vila Galé Porto hotel in Porto, Portugal.  The conference provides a platform for presenting research results and application experience in using model-based techniques for developing software and systems.",
+  "Call for Papers": "# MODELSWARD 2025: Call for Papers\n\nThe International Conference on Model-Based Software and Systems Engineering (MODELSWARD 2025) will take place from **February 26-28, 2025**, at the **Vila Galé Porto hotel in Porto, Portugal**.\n\n## Scope\n\nMODELSWARD is an opportunity for researchers and practitioners to come together and discuss the further development and application of model-based techniques for the construction and analysis of software and systems. Papers reporting on original work in any of the areas listed below are welcome. Papers describing advanced prototypes, systems, tools, and techniques and general survey papers indicating future directions are also encouraged.\n\n## Conference Areas\n\n1.  **Methodologies, Processes and Platforms:** Agile Model-Based Development, Business Process Management (Modeling, Enactment and Execution), Frameworks for Model-Based Development, Multi-level and Multi-view Modeling, Model Transformations and Generative Approaches, Artificial Intelligence (AI) for Modeling Support, Software and Systems Engineering\n2.  **Applications and System Development:** Model-Based Software Development, Model-Based Development of Cyber Physical Systems, Model-Based Engineering of Digital Twins, Enterprise Architecture Modeling, Model-Based Product Lines, Model Execution and Simulation, Model Quality Assessment, Model-Based Testing and Validation, Model Management, Modeling for AI Applications\n3.  **Modeling Languages, Tools and Architectures:** General-Purpose Modeling Languages and Standards, Domain-Specific Modeling, Modeling Language Engineering, Modeling Language Syntax and Semantics, Reasoning about Models, Model Transformation, Modeling Environments\n\n## Paper Submission\n\nAuthors can submit their work in the form of a complete paper or an abstract. Complete papers can be submitted as a Regular Paper, representing completed and validated research, or as a Position Paper, portraying a short report of work in progress or an arguable opinion about an issue.\n\n*   Submissions must be in English and address one or several of the conference areas or topics.\n*   To facilitate the double-blind paper evaluation method, authors are kindly requested to produce and provide the paper WITHOUT any reference to any of the authors.\n*   Only original papers should be submitted. Papers that contain any form of plagiarism will be rejected without reviews.\n*   All papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates.\n\n## Publications\n\nAll accepted complete papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI and Web of Science / Conference Proceedings Citation Index.\n\n## Important Dates\n\n*   **Conference Date:** February 26 - 28, 2025\n*   **Regular Papers - Paper Submission:** October 22, 2024 (expired)\n*   **Regular Papers - Authors Notification:** December 4, 2024 (expired)\n*   **Regular Papers - Camera Ready and Registration:** December 20, 2024 (expired)\n*   **Position Papers /Regular Papers - Paper Submission:** November 20, 2024 (expired)\n*   **Position Papers /Regular Papers - Authors Notification:** December 20, 2024 (expired)\n*   **Position Papers /Regular Papers - Camera Ready and Registration:** January 13, 2025 (expired)\n*   **Late-Breaking - Paper Submission:** December 16, 2024 (expired)\n*   **Late-Breaking - Authors Notification:** January 7, 2025 (expired)\n*   **Late-Breaking - Camera Ready and Registration:** January 14, 2025 (expired)\n*   **Workshops - Workshop Proposal:** October 17, 2024 (expired)\n*   **Workshops - Paper Submission:** January 6, 2025 (expired)\n*   **Workshops - Authors Notification:** January 14, 2025 (expired)\n*   **Workshops - Camera Ready and Registration:** January 22, 2025 (expired)\n*   **Special Sessions - Special Session Proposal:** October 17, 2024 (expired)\n*   **Tutorials - Tutorial Proposal:** January 17, 2025 (expired)\n*   **Demos - Demo Proposal:** January 17, 2025 (expired)\n*   **Panels - Panel Proposal:** January 17, 2025 (expired)\n*   **Abstracts - Abstract Submission:** January 7, 2025 (expired)\n*   **Abstracts - Authors Notification:** January 14, 2025 (expired)\n*   **Abstracts - Camera Ready and Registration:** January 22, 2025 (expired)\n\n## Conference Chair\n\nFrancis Bordeleau, École de Technologie Supérieure, Université du Québec, Canada\n\n## Program Co-Chairs\n\n*   Federico Ciccozzi, Mälardalen University, Sweden\n*   Luís Ferreira Pires, Faculty of Electrical Engineering, University of Twente, Netherlands\n\n## Keynote Speakers\n\n*   Øystein Haugen, Department of Computer Science and Communication, Ostfold University College, Norway\n*   Erik Herzog, Saab Aeronautics, Sweden\n*   Alfonso Pierantonio, Department of Computer Science, University of L'Aquila, Italy\n\n## Workshops\n\n[Model-based System Engineering and Artificial Intelligence - MBSE-AI Integration](https://modelsward.scitevents.org/MBSE-AI_Integration.aspx?y=2025)\n\n## Secretariat\n\nMODELSWARD Secretariat\n\n*   Address: Avenida de S. Francisco Xavier, Lote 7 Cv. C 2900-616 Setúbal - Portugal\n*   Tel.: +351 265 520 185\n*   Fax: +351 265 520 186\n*   e-mail: [modelsward.secretariat@insticc.org](mailto:modelsward.secretariat@insticc.org)\n*   Web: [https://modelsward.scitevents.org](https://modelsward.scitevents.org)"
+}
+```

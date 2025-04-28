@@ -1,0 +1,23 @@
+{
+  "Conference dates": "November 24 - 28, 2025",
+  "Year": "2025",
+  "Location": "Marrakech, Morocco",
+  "City-State-Province": "Marrakech",
+  "Country": "Morocco",
+  "Continent": "Africa",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission deadline": "June 14, 2025",
+    "Paper submission deadline": "June 21, 2025"
+  },
+  "Notification Date": {
+    "Accept/Reject notification": "August 30, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready submission": "September 15, 2025"
+  },
+  "Topics": "Formal languages and automata, Semantics of programming languages, Logic in computer science, Lambda calculus, type theory, and category theory, Domain-specific languages, Theories of concurrency and mobility, Theories of distributed computing, Models of objects and components, Coordination models, Security and privacy, Static analysis, Software verification, Timed, hybrid, and cyber-physical systems, Verification, analysis and control synthesis, Software testing, Program generation and transformation, Model checking and theorem-proving, Quantum computing, Trustworthy AI, Machine learning algorithms, Applications and experiences",
+  "Publisher": "Springer",
+  "Summary": "The ICTAC conference series aims at bringing together researchers and practitioners from academia, industry, and government to present research and exchange ideas and experiences within theoretical aspects of computing through methods and tools for system development. ICTAC 2025, the 22nd International Colloquium, will take place in Marrakech, Morocco, from November 24 to 28, 2025.",
+  "Call for Papers": "# ICTAC 2025: Call for Papers\n\nThe 22nd International Colloquium on Theoretical Aspects of Computing (ICTAC 2025) will take place in **Marrakech, Morocco, from November 24 to 28, 2025**.\n\n## Conference Aims\n\nThe ICTAC conference series aims at bringing together researchers and practitioners from academia, industry, and government to present research and exchange ideas and experiences within theoretical aspects of computing through methods and tools for system development. ICTAC also aims to promote research cooperation between developing and industrial countries.\n\n## Topics\n\nThe conference concerns all aspects of theoretical computer science, including, but not limited to:\n\n*   Formal languages and automata\n*   Semantics of programming languages\n*   Logic in computer science\n*   Lambda calculus, type theory, and category theory\n*   Domain-specific languages\n*   Theories of concurrency and mobility\n*   Theories of distributed computing\n*   Models of objects and components\n*   Coordination models\n*   Security and privacy\n*   Static analysis\n*   Software verification\n*   Timed, hybrid, and cyber-physical systems\n*   Verification, analysis and control synthesis\n*   Software testing\n*   Program generation and transformation\n*   Model checking and theorem-proving\n*   Quantum computing\n*   Trustworthy AI\n*   Machine learning algorithms\n*   Applications and experiences\n\n## Important Dates\n\nAll deadlines are at 23:59 AoE\n\n*   **Abstract submission:** June 14, 2025\n*   **Paper submission:** June 21, 2025\n*   **Notifications:** August 30, 2025\n*   **Camera-ready submission:** September 15, 2025\n*   **Conference dates:** November 24-28, 2025\n\n## Proceedings\n\nAll accepted papers will be published in Springer’s LNCS in on-site proceedings \"Lecture Notes in Computer Science\""
+}

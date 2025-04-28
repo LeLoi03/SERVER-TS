@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": "August 10 - 15, 2025",
+  "Year": "2025",
+  "Location": "University of Glasgow, Glasgow, Scotland",
+  "City-State-Province": "Glasgow",
+  "Country": "Scotland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract registration": "March 24, 2025",
+    "Paper submission": "April 3, 2025"
+  },
+  "Notification Date": {
+    "Author rebuttal": "May 8 - 12, 2025",
+    "Final notification": "May 29, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready": "June 9, 2025"
+  },
+  "Other Date": {
+    "Submissions open": "February 2025",
+    "Doctoral programme Paper submission": "June 8, 2025",
+    "Doctoral programme Reviewing deadline": "June 22, 2025",
+    "Doctoral programme Final notification": "June 25, 2025"
+  },
+  "Topics": "Constraint Programming, Theory, Algorithms, Models, Solvers, Machine Learning, Artificial Intelligence, Planning, Scheduling",
+  "Publisher": "LIPIcs",
+  "Summary": "The International Conference on Principles and Practice of Constraint Programming (CP) is the premier annual conference on all aspects of computing with constraints. CP 2025, the 31st conference in this series, will be held at the University of Glasgow, Scotland, from August 10-15, 2025.  This year, CP is co-located with the 28th International Conference on Theory and Applications of Satisfiability Testing (SAT 2025) and the 18th International Symposium on Combinatorial Search (SoCS 2025).",
+  "Call for Papers": "# CP 2025: Call for Papers\n\nThe 31st International Conference on Principles and Practice of Constraint Programming (CP 2025) will be held at the **University of Glasgow, Scotland, from August 10-15, 2025**.\n\nCP is the premier international event for presenting research in all aspects of computing with constraints, including theory, algorithms, environments, languages, models, systems, and applications.\n\n## Tracks and Primary Keywords\n\nCP 2025 will only have two tracks: **technical** and **application**. The application track is particularly interested in papers that demonstrate the effectiveness of CP in solving real-world problems, as well as those that offer generalizable insights on the challenges and benefits for both users and developers of applying CP to both academic and real-world problems.\n\nFormer specialized tracks are replaced this year by a set of optional primary keywords:\n\n*   Theory\n*   Constraint Propagation, Explanation & Inference\n*   Search (Complete & Heuristic)\n*   SAT, MaxSAT & Logic Programming\n*   Modelling & Modelling Languages\n*   Operations Research & Mathematical Optimisation\n*   Machine Learning & Generative AI\n*   Verification, Certification & Testing\n*   Hardware, Quantum, Security & Parallelism\n*   Model Counting\n*   Decision Diagrams & Dynamic Programming\n*   Symmetries/Dominance\n*   Model/Instance Explainability\n\n## Submission Instructions\n\nThe submission webpage for CP 2025 uses the OpenReview system: [https://openreview.net/group?id=a4cp.org/CP/2025/Conference](https://openreview.net/group?id=a4cp.org/CP/2025/Conference)\n\nPapers should be submitted in the form of a PDF file following LIPIcs guidelines: [http://submission.dagstuhl.de/series/details/5#author](http://submission.dagstuhl.de/series/details/5#author)\n\nTwo types of submissions are expected:\n\n*   **Full papers:** up to 15 pages (references and appendices excluded)\n*   **Short papers:** up to 8 pages (references and appendices excluded)\n\nAppendices can be included (up to 6 pages for full papers and up to 3 pages for short papers) and will not contribute towards the total page count. Supplemental material may be referenced, but only if this is done without revealing the authors' identities (for example, by using [https://anonymous.4open.science](https://anonymous.4open.science)).\n\n## Important Dates\n\nDates are intended as 11 pm Anywhere on Earth (AoE, also known as UTC-12).\n\n*   **Submissions open:** February 2025\n*   **Abstract registration:** March 24, 2025\n*   **Paper submission:** April 3, 2025\n*   **Author rebuttal:** May 8-12, 2025\n*   **Final notification:** May 29, 2025\n*   **Camera Ready:** June 9, 2025\n*   **Conference:** August 10-15, 2025\n\n## DEI Scholarship and Support\n\nCP 2025 is committed to supporting the participation of individuals from underrepresented groups and to fostering a more inclusive research community. CP 2025 offers DEI scholarships, which provide financial assistance to cover conference attendance costs.\n\n## Use of Generative AI\n\nCP 2025 is adopting the AAAI policy regarding the use of Generative AI systems such as ChatGPT. Papers that include text generated from an AI system are prohibited unless the produced text is presented as a part of the paper’s experimental setup.\n\n## Inclusive Description of Research Contributions\n\nPlease consider making your research contribution description inclusive in nature. For example, consider using gender-neutral pronouns, using examples that are ethnicity/culture-rich, engaging users from diverse backgrounds if your research involves a survey, etc.\n\n## Contact\n\nQuestions about the paper submission process may be addressed to the Program Chair, Maria Garcia de la Banda ([progchair.cp@gmail.com](mailto:progchair.cp@gmail.com))."
+}
+

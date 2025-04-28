@@ -1,0 +1,1059 @@
+Conference full name: International Symposium on Parameterized and Exact Computation (IPEC)
+
+1. Website of IPEC_3: https://algo-conference.org/2024/ipec/
+Website information of IPEC_3:
+
+Skip to contentALGO2024 
+ Home 
+ Local Info 
+ Social Program 
+ ESA 
+ href="https://algo-conference.org/2024/ipec/" - IPEC 
+ ATMOS 
+ ALGOCLOUD 
+ WABI 
+ ALGOWIN 
+ WAOA 
+ Registration 
+ Schedule 
+ IPEC 2024 
+ Scope 
+ TheInternational Symposium on Parameterized and Exact Computationhref="http://fpt.wikidot.com/ipec" - (IPEC)
+is an annual conference covering all aspects of parameterized and exact algorithms and complexity. Its 19th edition will be part ofALGO 2024, which also hostsESA 2024and other specialized conferences and workshops. 
+ Important Dates 
+ Abstract submission: 26 June 2024 (AoE) 
+ Paper submission: 30 June 2024 (AoE) 
+ Notification: 05 August 2024 
+ Conference: 04-06 September 2024 
+ Camera-ready version: early October 
+ Accepted papers 
+ Jonas Lill, Kalina Petrova, and Simon Weber: | Linear-Time MaxCut in Multigraphs Parameterized Above the Poljak-Turzík Bound 
+ Nicolas Bousquet, Kshitij Gajjar, Abhiruk Lahiri, and Amer Mouawad: | Parameterized Shortest Path Reconfiguration 
+ Jakub Balabán, Robert Ganian, and Mathis Rocton: | Twin-Width Meets Feedback Edges and Vertex Integrity 
+ Peter Strulo, M. S. Ramanujan, Václav Blažej, and Sushmita Gupta: | On Controlling Knockout Tournaments Without Perfect Information 
+ Ishay Haviv and Dror Rabinovich: | Kernelization for Orthogonality Dimension 
+ Peter Strulo, Václav Blažej, M. S. Ramanujan, and Satyabrata Jana: | On the Parameterized Complexity of Eulerian Strong Component Deletion 
+ Marvin Künnemann and Mirza Redzic: | Fine-Grained Complexity of Multiple Domination and Dominating Patterns in Sparse Graphs 
+ Foivos Fioravantes, Nikolaos Melissinos, and Theofilos Triommatis: | Parameterised distance to local irregularity 
+ Matthias Kaul, Matthias Mnich, and Hendrik Molter: | Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates 
+ Tomohiro Koana, Nidhi Purohit, and Kirill Simonov: | Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball Graphs 
+ Katrin Casel, Tobias Friedrich, Aikaterini Niklanovits, Kirill Simonov, and Ziena Zeif: | Combining Crown Structures for Vulnerability Measures 
+ Yuxi Liu and Mingyu Xiao: | Solving Co-Path/Cycle Packing and Co-Path Packing Faster Than 3^k 
+ Carla Groenland, Jesper Nederlof, and Tomohiro Koana: | A Polynomial Time Algorithm for Steiner Tree when Terminals Avoid a Rooted K_4-Minor 
+ Gaétan Berthe, Marin Bougeret, Daniel Gonçalves, and Jean-Florent Raymond: | Kick the cliques 
+ Paul Bastide and Carla Groenland: | Quasi-linear distance query reconstruction for graphs of bounded treelength 
+ Ilan Doron-Arad, Ariel Kulik and Fabrizio Grandoni: | Unsplittable Flow on a Short Path 
+ Matthias Bentert, Fedor V. Fomin, Fanny Hauser, and Saket Saurabh: | The Parameterized Complexity Landscape of Two-Sets Cut-Uncut 
+ Jakob Greilhuber and Roohani Sharma: | Component Order Connectivity admits no polynomial kernel parameterized by the feedback vertex set number 
+ Anna Zych-Pawlewicz and Marek Żochowski: | Dynamic Parameterized Feedback Problems in Tournaments 
+ Henning Fernau and Kevin Mann: | Roman Hitting Functions 
+ Karthik C. S., Euiwoong Lee, and Pasin Manurangsi: | On Equivalence of Parameterized Inapproximability of k-median, k-max-coverage, and 2-CSP 
+ Guilherme de Castro Mendes Gomes, Emanuel Juliano, Gabriel Martins, and Vinicius F. dos Santos: | Matching (Multi)Cut: Algorithms, Complexity, and Enumeration 
+ Bart M. P. Jansen, Yosuke Mizutani, Blair D. Sullivan, and Ruben F.A. Verhaegh: | Preprocessing to Reduce the Search Space for Odd Cycle Transversal 
+ Jaroslav Garvardt and Christian Komusiewicz: | Modularity Clustering parameterized by Max Leaf Number 
+ Satyabrata Jana, Lawqueen Kanesh, Madhumita Kundu, and Saket Saurabh: | Subset Feedback Vertex Set in Tournaments as Fast as Without the Subset 
+ Invited talks 
+ The invited tutorial will be given bySzymon Toruńczyk(University of Warsaw, Poland). 
+ Title: Structurally tractable graph classes 
+ Abstract:Sparsity theory, initiated by Ossona de Mendez and Nesetril, identifies those classes of sparse graphs that are tractable in various ways – algorithmically, combinatorially, and logically – as exactly the nowhere dense classes. An ongoing effort aims at generalizing sparsity theory to classes of graphs that are not necessarily sparse. The notion of twin-width, developed by Bonnet, Thomasse and co-authors, is a step in that direction. A theory unifying the two is anticipated. It is conjectured that the relevant notion characterising dense graph classes that are tractable, generalising nowhere denseness and bounded twin-width, is the notion of a monadically dependent class, introduced by Shelah in model theory. In this tutorial, I will discuss the fundamental notions and results in this quickly developing area. This development combines tools from structural graph theory, logic, and algorithms. 
+ Furthermore, IPEC will host an invited talk by one of the 2024 EATCS-IPEC Nerode Prize winners: Hans L. Bodlaender, Fedor V. Fomin, Daniel Lokshtanov, Eelko Penninkx,Saket Saurabh, and Dimitrios M. Thilikos. 
+ Title: (Meta) Kernelization 
+ Paper published at:J. ACM 63(5): 44:1-44:69 (2016), announced at Foundations of Computer Science (FOCS) 2010. 
+ Abstract:In a parameterized problem, every instanceIcomes with a positive integerk. The problem is said to admit a polynomial kernel if, in polynomial time, one can reduce the size of the instanceIto a polynomial ink, while preserving the answer. In this work we give two meta-theorems on kernelzation. The first theorem says that all problems expressible in Counting Monadic Second Order Logic and satisfying a coverability property admit a polynomial kernel on graphs of bounded genus. Our second result is that all problems that have finite integer index and satisfy a weaker coverability property admit a linear kernel on graphs of bounded genus. These theorems unify and extend all previously known kernelization results for planar graph problems. 
+ Submission Guidelines 
+ The papers are submitted viahref="https://easychair.org/conferences/?conf=ipec2024" - EasyChair
+. 
+ Each submission is required to be in the LIPIcs format. We welcome submissions of the full version of the paper, with title page containing only the title and abstract and the references placed at the very end of paper. However, the first 12 pages (excluding the title page) should be enough to assess the paper. In particular, PC members and potential subreviewers may treat these 12 pages as the short version (the rest being read at their discretion). PC members (outside the PC chairs) are allowed to author or coauthor submissions, but these submissions will not be eligible for the best student paper and the best paper. Besides this constraint, to be eligible for the best student paper, all the authors must be students at the time of the submission. 
+ When submitting a paper, please indicate Conflict of Interest with PC members. A CoI is limited to the following categories: 
+ Family member or close friend. 
+ Ph.D. advisor or advisee (no time limit), or postdoc or undergraduate mentor or mentee within the past 5 years. 
+ Same affiliation. 
+ Involved in an alleged incident of harassment. (It is not required that the incident be reported.) 
+ Reviewer owes author a favor (e.g., recently requested a reference letter). 
+ Frequent or recent collaborator whom you believe cannot objectively review your work. 
+ Double-blind reviewing 
+ As in previous years, IPEC employs a lightweight double-blind reviewing process. Submissions should not reveal the identity of the authors in any way. In particular, authors’ names, affiliations, and email addresses should not appear at the beginning or in the body of the submission. Authors should ensure that any references to their own related work is in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”). The purpose of the double-blind reviewing is to help PC members and external reviewers come to an initial judgement about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult. In particular, important references should not be omitted or anonymized. In addition, authors should feel free to disseminate their ideas or draft versions of their paper as they normally would. For example, authors may post drafts of their papers on the web, submit them toarXiv, and give talks on their research ideas. In case there exist publicly available versions of the submission online, the authors might mention this in their submission (without providing references/links), and briefly explain the differences if any. Alternatively, they might communicate the details to the chairs, who will keep them confidential unless revealing them to the PC is needed for a fair judgement. Authors with further questions on double-blind reviewing are encouraged to contact the PC chairs. 
+ PACE 2024 
+ The Parameterized Algorithms and Computational Experiments Challenge (PACE) was conceived in Fall 2015 to deepen the relationship between parameterized algorithms and practice. Topics from multivariate algorithms, exact algorithms, fine-grained complexity, and related fields are in scope. 
+ This year’s challenge is about the one-sided crossing minimization problem (OCM). This problem involves arranging the nodes of a bipartite graph on two layers (typically horizontal), with one of the layers fixed, aiming to minimize the number of edge crossings. OCM is one of the basic building block used for drawing hierarchical graphs. It is NP-hard, even for trees, but admits good heuristics, can be constant-factor approximated and solved in FPT time. 
+ For more details on the timeline and past challenges, please visit thePACE website. 
+ Committees 
+ Program Committee 
+ Édouard Bonnet (ENS Lyon, LIP, France) (co-chair) 
+ Nick Brettell (Victoria University of Wellington, New Zealand) 
+ David Eppstein (University of California, Irvine, USA) 
+ Piotr Faliszewski (AGH University, Kraków, Poland) 
+ Andreas Emil Feldmann (University of Sheffield, UK) 
+ Jacob Focke (CISPA Helmholtz Center for Information Security, Saarbrucken, Germany) 
+ Panos Giannopoulos (City, University of London, UK) 
+ Petr Hliněný (Masaryk University, Brno, Czech Republic) 
+ Lars Jaffke (University of Bergen, Norway) 
+ Petteri Kaski (Aalto University, Finland) 
+ Eunjung Kim (CNRS, France and KAIST, South Korea) 
+ Tuukka Korhonen (University of Bergen, Norway) 
+ Stephan Kreutzer (TU Berlin, Germany) 
+ Paloma T. Lima (IT University of Copenhagen, Denmark) 
+ Karolina Okrasa (Warsaw University of Technology, Poland) 
+ Anthony Perez (LIFO, University of Orléans, France) 
+ Paweł Rzążewski (Warsaw University of Technology and University of Warsaw, Poland) (co-chair) 
+ Ignasi Sau (LIRMM, CNRS, Université de Montpellier, France) 
+ Darren Strash (Hamilton College, Clinton, USA) 
+ Ryan Williams (Massachusetts Institute of Technology, Cambridge, USA) 
+ Steering Committee 
+ Édouard Bonnet | (2023-26) 
+ Holger Dell | (2021-24, chair) 
+ Fedor Fomin | (2021-24) 
+ Łukasz Kowalik | (2022-25) 
+ Neeldhara Misra | (2022-25) 
+ Jesper Nederlof | (2021-24) 
+ Paweł Rzążewski | (2023-26) 
+ Magnus Wahlstrom | (2022-25) 
+ Meirav Zehavi | (2020-23) 
+ Imprint 
+ Copyright © 2023 ALGO2024
+
+2. Website of IPEC_3: https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-321
+Website information of IPEC_3:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ href="https://drops.dagstuhl.de/entities/conference/IPEC" - IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ VolumeExport XML 
+ Export ACM-XML 
+ Export DOAJ-XML 
+ Export Schema.org 
+ Export HTML 
+ LIPIcs, Volume 321 
+ 19th International Symposium on Parameterized and Exact Computation (IPEC 2024) 
+ Part of: | Series: | Leibniz International Proceedings in Informatics (LIPIcs) | Part of: | Conference: | href="https://drops.dagstuhl.de/entities/conference/IPEC" - International Symposium on Parameterized and Exact Computation (IPEC) 
+ Event 
+ href="https://algo-conference.org/2024/ipec/" - IPEC 2024, September 4-6, 2024, Royal Holloway, University of London, Egham, United Kingdom
+Editors 
+ Édouard Bonnethref="https://drops.dagstuhl.de/search/documents?author=Bonnet, Édouard" - 
+LIP, ENS Lyon, France 
+ Paweł Rzążewskihref="https://drops.dagstuhl.de/search/documents?author=Rzążewski, Paweł" - 
+Warsaw University of Technology, Poland 
+ University of Warsaw, Poland 
+ Publication Details 
+ published at: 2024-12-05 
+ Publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ ISBN: 978-3-95977-353-9 
+ DBLP: | href="https://dblp.org/db/conf/iwpec/ipec2024" - db/conf/iwpec/ipec2024 
+  
+ Access Numbers 
+ Detailed Access Statistics available here 
+ Total Document Accesses (updated on a weekly basis): | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+ DocumentsNo documents found matching your filter selection. 
+ Document 
+ Complete Volume 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024" - DOI: 10.4230/LIPIcs.IPEC.2024
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024/LIPIcs.IPEC.2024.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024" - LIPIcs, Volume 321, IPEC 2024, Complete Volume
+Authors:Édouard Bonnet and Paweł Rzążewski 
+ AbstractLIPIcs, Volume 321, IPEC 2024, Complete Volume 
+ Cite as19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 1-516, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @Proceedings{bonnet_et_al:LIPIcs.IPEC.2024 title = {{LIPIcs, Volume 321, IPEC 2024, Complete Volume}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {1--516}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024}, URN = {urn:nbn:de:0030-drops-225835}, doi = {10.4230/LIPIcs.IPEC.2024}, annote = {Keywords: LIPIcs, Volume 321, IPEC 2024, Complete Volume} }@Proceedings{bonnet_et_al:LIPIcs.IPEC.2024 title = {{LIPIcs, Volume 321, IPEC 2024, Complete Volume}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {1--516}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024}, URN = {urn:nbn:de:0030-drops-225835}, doi = {10.4230/LIPIcs.IPEC.2024}, annote = {Keywords: LIPIcs, Volume 321, IPEC 2024, Complete Volume} }Document 
+ Front Matter 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.0" - DOI: 10.4230/LIPIcs.IPEC.2024.0
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.0/LIPIcs.IPEC.2024.0.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.0" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.0" - Front Matter, Table of Contents, Preface, Conference Organization
+Authors:Édouard Bonnet and Paweł Rzążewski 
+ AbstractFront Matter, Table of Contents, Preface, Conference Organization 
+ Cite as19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 0:i-0:xviii, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bonnet_et_al:LIPIcs.IPEC.2024.0 author = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {0:i--0:xviii}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.0}, URN = {urn:nbn:de:0030-drops-225828}, doi = {10.4230/LIPIcs.IPEC.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }@InProceedings{bonnet_et_al:LIPIcs.IPEC.2024.0 author = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {0:i--0:xviii}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.0}, URN = {urn:nbn:de:0030-drops-225828}, doi = {10.4230/LIPIcs.IPEC.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.1" - DOI: 10.4230/LIPIcs.IPEC.2024.1
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.1/LIPIcs.IPEC.2024.1.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.1" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.1" - Combining Crown Structures for Vulnerability Measures
+Authors:Katrin Casel, Tobias Friedrich, Aikaterini Niklanovits, Kirill Simonov, and Ziena Zeif 
+ AbstractOver the past decades, various metrics have emerged in graph theory to grasp the complex nature of network vulnerability. In this paper, we study two specific measures: (weighted) vertex integrity (wVI) and (weighted) component order connectivity (wCOC). These measures not only evaluate the number of vertices that need to be removed to decompose a graph into fragments, but also take into account the size of the largest remaining component. The main focus of our paper is on kernelization algorithms tailored to both measures. We capitalize on the structural attributes inherent in different crown decompositions, strategically combining them to introduce novel kernelization algorithms that advance the current state of the field. In particular, we extend the scope of the balanced crown decomposition provided by Casel et al. [Katrin Casel et al., 2021] and expand the applicability of crown decomposition techniques. In summary, we improve the vertex kernel of VI from p³ to 3p², and of wVI from p³ to 3(p² + p^{1.5} p_𝓁), where p_𝓁 < p represents the weight of the heaviest component after removing a solution. For wCOC we improve the vertex kernel from 𝒪(k²W + kW²) to 3μ(k + √{μ}W), where μ = max(k,W). We also give a combinatorial algorithm that provides a 2kW vertex kernel in fixed-parameter tractable time when parameterized by r, where r ≤ k is the size of a maximum (W+1)-packing. We further show that the algorithm computing the 2kW vertex kernel for COC can be transformed into a polynomial algorithm for two special cases, namely when W = 1, which corresponds to the well-known vertex cover problem, and for claw-free graphs. In particular, we show a new way to obtain a 2k vertex kernel (or to obtain a 2-approximation) for the vertex cover problem by only using crown structures. 
+ Cite asKatrin Casel, Tobias Friedrich, Aikaterini Niklanovits, Kirill Simonov, and Ziena Zeif. Combining Crown Structures for Vulnerability Measures. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 1:1-1:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{casel_et_al:LIPIcs.IPEC.2024.1 author = {Casel, Katrin and Friedrich, Tobias and Niklanovits, Aikaterini and Simonov, Kirill and Zeif, Ziena}, title = {{Combining Crown Structures for Vulnerability Measures}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {1:1--1:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.1}, URN = {urn:nbn:de:0030-drops-222270}, doi = {10.4230/LIPIcs.IPEC.2024.1}, annote = {Keywords: Crown Decomposition, Kernelization, Vertex Integrity, Component Order Connectivity} }@InProceedings{casel_et_al:LIPIcs.IPEC.2024.1 author = {Casel, Katrin and Friedrich, Tobias and Niklanovits, Aikaterini and Simonov, Kirill and Zeif, Ziena}, title = {{Combining Crown Structures for Vulnerability Measures}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {1:1--1:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.1}, URN = {urn:nbn:de:0030-drops-222270}, doi = {10.4230/LIPIcs.IPEC.2024.1}, annote = {Keywords: Crown Decomposition, Kernelization, Vertex Integrity, Component Order Connectivity} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.2" - DOI: 10.4230/LIPIcs.IPEC.2024.2
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.2/LIPIcs.IPEC.2024.2.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.2" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.2" - Linear-Time MaxCut in Multigraphs Parameterized Above the Poljak-Turzík Bound
+Authors:Jonas Lill, Kalina Petrova, and Simon Weber 
+ AbstractMaxCut is a classical NP-complete problem and a crucial building block in many combinatorial algorithms. The famous Edwards-Erdős bound states that any connected graph on n vertices with m edges contains a cut of size at least m/2+(n-1)/4. Crowston, Jones and Mnich [Algorithmica, 2015] showed that the MaxCut problem on simple connected graphs admits an FPT algorithm, where the parameter k is the difference between the desired cut size c and the lower bound given by the Edwards-Erdős bound. This was later improved by Etscheid and Mnich [Algorithmica, 2017] to run in parameterized linear time, i.e., f(k)⋅ O(m). We improve upon this result in two ways: Firstly, we extend the algorithm to work also for multigraphs (alternatively, graphs with positive integer weights). Secondly, we change the parameter; instead of the difference to the Edwards-Erdős bound, we use the difference to the Poljak-Turzík bound. The Poljak-Turzík bound states that any weighted graph G has a cut of size at least (w(G))/2+(w_MSF(G))/4, where w(G) denotes the total weight of G, and w_MSF(G) denotes the weight of its minimum spanning forest. In connected simple graphs the two bounds are equivalent, but for multigraphs the Poljak-Turzík bound can be larger and thus yield a smaller parameter k. Our algorithm also runs in parameterized linear time, i.e., f(k)⋅ O(m+n). 
+ Cite asJonas Lill, Kalina Petrova, and Simon Weber. Linear-Time MaxCut in Multigraphs Parameterized Above the Poljak-Turzík Bound. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 2:1-2:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{lill_et_al:LIPIcs.IPEC.2024.2 author = {Lill, Jonas and Petrova, Kalina and Weber, Simon}, title = {{Linear-Time MaxCut in Multigraphs Parameterized Above the Poljak-Turz{\'\i}k Bound}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {2:1--2:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.2}, URN = {urn:nbn:de:0030-drops-222282}, doi = {10.4230/LIPIcs.IPEC.2024.2}, annote = {Keywords: Fixed-parameter tractability, maximum cut, Edwards-Erd\H{o}s bound, Poljak-Turz{\'\i}k bound, multigraphs, integer-weighted graphs} }@InProceedings{lill_et_al:LIPIcs.IPEC.2024.2 author = {Lill, Jonas and Petrova, Kalina and Weber, Simon}, title = {{Linear-Time MaxCut in Multigraphs Parameterized Above the Poljak-Turz{\'\i}k Bound}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {2:1--2:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.2}, URN = {urn:nbn:de:0030-drops-222282}, doi = {10.4230/LIPIcs.IPEC.2024.2}, annote = {Keywords: Fixed-parameter tractability, maximum cut, Edwards-Erd\H{o}s bound, Poljak-Turz{\'\i}k bound, multigraphs, integer-weighted graphs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.3" - DOI: 10.4230/LIPIcs.IPEC.2024.3
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.3/LIPIcs.IPEC.2024.3.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.3" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.3" - Twin-Width Meets Feedback Edges and Vertex Integrity
+Authors:Jakub Balabán, Robert Ganian, and Mathis Rocton 
+ AbstractThe approximate computation of twin-width has attracted significant attention already since the moment the parameter was introduced. A recently proposed approach (STACS 2024) towards obtaining a better understanding of this question is to consider the approximability of twin-width via fixed-parameter algorithms whose running time depends not on twin-width itself, but rather on parameters which impose stronger restrictions on the input graph. The first step that article made in this direction is to establish the fixed-parameter approximability of twin-width (with an additive error of 1) when the runtime parameter is the feedback edge number. Here, we make several new steps in this research direction and obtain: - An asymptotically tight bound between twin-width and the feedback edge number; - A significantly improved fixed-parameter approximation algorithm for twin-width under the same runtime parameter (i.e., the feedback edge number) which circumvents many of the technicalities of the original result and simultaneously avoids its formerly non-elementary runtime dependency; - An entirely new fixed-parameter approximation algorithm for twin-width when the runtime parameter is the vertex integrity of the graph. 
+ Cite asJakub Balabán, Robert Ganian, and Mathis Rocton. Twin-Width Meets Feedback Edges and Vertex Integrity. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 3:1-3:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{balaban_et_al:LIPIcs.IPEC.2024.3 author = {Balab\'{a}n, Jakub and Ganian, Robert and Rocton, Mathis}, title = {{Twin-Width Meets Feedback Edges and Vertex Integrity}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {3:1--3:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.3}, URN = {urn:nbn:de:0030-drops-222293}, doi = {10.4230/LIPIcs.IPEC.2024.3}, annote = {Keywords: twin-width, fixed-parameter algorithms, feedback edge number, vertex integrity} }@InProceedings{balaban_et_al:LIPIcs.IPEC.2024.3 author = {Balab\'{a}n, Jakub and Ganian, Robert and Rocton, Mathis}, title = {{Twin-Width Meets Feedback Edges and Vertex Integrity}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {3:1--3:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.3}, URN = {urn:nbn:de:0030-drops-222293}, doi = {10.4230/LIPIcs.IPEC.2024.3}, annote = {Keywords: twin-width, fixed-parameter algorithms, feedback edge number, vertex integrity} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.4" - DOI: 10.4230/LIPIcs.IPEC.2024.4
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.4/LIPIcs.IPEC.2024.4.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.4" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.4" - On the Parameterized Complexity of Eulerian Strong Component Arc Deletion
+Authors:Václav Blažej, Satyabrata Jana, M. S. Ramanujan, and Peter Strulo 
+ AbstractIn this paper, we study the Eulerian Strong Component Arc Deletion problem, where the input is a directed multigraph and the goal is to delete the minimum number of arcs to ensure every strongly connected component of the resulting digraph is Eulerian. This problem is a natural extension of the Directed Feedback Arc Set problem and is also known to be motivated by certain scenarios arising in the study of housing markets. The complexity of the problem, when parameterized by solution size (i.e., size of the deletion set), has remained unresolved and has been highlighted in several papers. In this work, we answer this question by ruling out (subject to the usual complexity assumptions) a fixed-parameter tractable (FPT) algorithm for this parameter and conduct a broad analysis of the problem with respect to other natural parameterizations. We prove both positive and negative results. Among these, we demonstrate that the problem is also hard (W[1]-hard or even para-NP-hard) when parameterized by either treewidth or maximum degree alone. Complementing our lower bounds, we establish that the problem is in XP when parameterized by treewidth and FPT when parameterized either by both treewidth and maximum degree or by both treewidth and solution size. We show that these algorithms have near-optimal asymptotic dependence on the treewidth assuming the Exponential Time Hypothesis. 
+ Cite asVáclav Blažej, Satyabrata Jana, M. S. Ramanujan, and Peter Strulo. On the Parameterized Complexity of Eulerian Strong Component Arc Deletion. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 4:1-4:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{blazej_et_al:LIPIcs.IPEC.2024.4 author = {Bla\v{z}ej, V\'{a}clav and Jana, Satyabrata and Ramanujan, M. S. and Strulo, Peter}, title = {{On the Parameterized Complexity of Eulerian Strong Component Arc Deletion}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {4:1--4:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.4}, URN = {urn:nbn:de:0030-drops-222306}, doi = {10.4230/LIPIcs.IPEC.2024.4}, annote = {Keywords: Parameterized complexity, Eulerian graphs, Treewidth} }@InProceedings{blazej_et_al:LIPIcs.IPEC.2024.4 author = {Bla\v{z}ej, V\'{a}clav and Jana, Satyabrata and Ramanujan, M. S. and Strulo, Peter}, title = {{On the Parameterized Complexity of Eulerian Strong Component Arc Deletion}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {4:1--4:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.4}, URN = {urn:nbn:de:0030-drops-222306}, doi = {10.4230/LIPIcs.IPEC.2024.4}, annote = {Keywords: Parameterized complexity, Eulerian graphs, Treewidth} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.5" - DOI: 10.4230/LIPIcs.IPEC.2024.5
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.5/LIPIcs.IPEC.2024.5.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.5" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.5" - Unsplittable Flow on a Short Path
+Authors:Ilan Doron-Arad, Fabrizio Grandoni, and Ariel Kulik 
+ AbstractIn the Unsplittable Flow on a Path problem (UFP), we are given a path graph with edge capacities and a collection of tasks. Each task is characterized by a demand, a profit, and a subpath. Our goal is to select a maximum profit subset of tasks such that the total demand of the selected tasks that use each edge e is at most the capacity of e. BagUFP is the generalization of UFP where tasks are partitioned into bags, and we are allowed to select at most one task per bag. UFP admits a PTAS [Grandoni,Mömke,Wiese'22] but not an EPTAS [Wiese'17]. BagUFP is APX-hard [Spieksma'99] and the current best approximation is O(log n/log log n) [Grandoni,Ingala,Uniyal'15], where n is the number of tasks. In this paper, we study the mentioned two problems when parameterized by the number m of edges in the graph, with the goal of designing faster parameterized approximation algorithms. We present a parameterized EPTAS for BagUFP, and a substantially faster parameterized EPTAS for UFP (which is an FPTAS for m = O(1)). We also show that a parameterized FPTAS for UFP (hence for BagUFP) does not exist, therefore our results are qualitatively tight. 
+ Cite asIlan Doron-Arad, Fabrizio Grandoni, and Ariel Kulik. Unsplittable Flow on a Short Path. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 5:1-5:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{doronarad_et_al:LIPIcs.IPEC.2024.5 author = {Doron-Arad, Ilan and Grandoni, Fabrizio and Kulik, Ariel}, title = {{Unsplittable Flow on a Short Path}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {5:1--5:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.5}, URN = {urn:nbn:de:0030-drops-222310}, doi = {10.4230/LIPIcs.IPEC.2024.5}, annote = {Keywords: Knapsack, Approximation Schemes, Parameterized Approximations} }@InProceedings{doronarad_et_al:LIPIcs.IPEC.2024.5 author = {Doron-Arad, Ilan and Grandoni, Fabrizio and Kulik, Ariel}, title = {{Unsplittable Flow on a Short Path}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {5:1--5:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.5}, URN = {urn:nbn:de:0030-drops-222310}, doi = {10.4230/LIPIcs.IPEC.2024.5}, annote = {Keywords: Knapsack, Approximation Schemes, Parameterized Approximations} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.6" - DOI: 10.4230/LIPIcs.IPEC.2024.6
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.6/LIPIcs.IPEC.2024.6.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.6" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.6" - On Equivalence of Parameterized Inapproximability of k-Median, k-Max-Coverage, and 2-CSP
+Authors:Karthik C. S., Euiwoong Lee, and Pasin Manurangsi 
+ AbstractParameterized Inapproximability Hypothesis (PIH) is a central question in the field of parameterized complexity. PIH asserts that given as input a 2-CSP on k variables and alphabet size n, it is 𝖶[1]-hard parameterized by k to distinguish if the input is perfectly satisfiable or if every assignment to the input violates 1% of the constraints. An important implication of PIH is that it yields the tight parameterized inapproximability of the k-maxcoverage problem. In the k-maxcoverage problem, we are given as input a set system, a threshold τ > 0, and a parameter k and the goal is to determine if there exist k sets in the input whose union is at least τ fraction of the entire universe. PIH is known to imply that it is 𝖶[1]-hard parameterized by k to distinguish if there are k input sets whose union is at least τ fraction of the universe or if the union of every k input sets is not much larger than τ⋅ (1-1/e) fraction of the universe. In this work we present a gap preserving FPT reduction (in the reverse direction) from the k-maxcoverage problem to the aforementioned 2-CSP problem, thus showing that the assertion that approximating the k-maxcoverage problem to some constant factor is 𝖶[1]-hard implies PIH. In addition, we present a gap preserving FPT reduction from the k-median problem (in general metrics) to the k-maxcoverage problem, further highlighting the power of gap preserving FPT reductions over classical gap preserving polynomial time reductions. 
+ Cite asKarthik C. S., Euiwoong Lee, and Pasin Manurangsi. On Equivalence of Parameterized Inapproximability of k-Median, k-Max-Coverage, and 2-CSP. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 6:1-6:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{karthikc.s._et_al:LIPIcs.IPEC.2024.6 author = {Karthik C. S. and Lee, Euiwoong and Manurangsi, Pasin}, title = {{On Equivalence of Parameterized Inapproximability of k-Median, k-Max-Coverage, and 2-CSP}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {6:1--6:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.6}, URN = {urn:nbn:de:0030-drops-222322}, doi = {10.4230/LIPIcs.IPEC.2024.6}, annote = {Keywords: Parameterized complexity, Hardness of Approximation, Parameterized Inapproximability Hypothesis, max coverage, k-median} }@InProceedings{karthikc.s._et_al:LIPIcs.IPEC.2024.6 author = {Karthik C. S. and Lee, Euiwoong and Manurangsi, Pasin}, title = {{On Equivalence of Parameterized Inapproximability of k-Median, k-Max-Coverage, and 2-CSP}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {6:1--6:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.6}, URN = {urn:nbn:de:0030-drops-222322}, doi = {10.4230/LIPIcs.IPEC.2024.6}, annote = {Keywords: Parameterized complexity, Hardness of Approximation, Parameterized Inapproximability Hypothesis, max coverage, k-median} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.7" - DOI: 10.4230/LIPIcs.IPEC.2024.7
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.7/LIPIcs.IPEC.2024.7.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.7" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.7" - On Controlling Knockout Tournaments Without Perfect Information
+Authors:Václav Blažej, Sushmita Gupta, M. S. Ramanujan, and Peter Strulo 
+ AbstractOver the last decade, extensive research has been conducted on the algorithmic aspects of designing single-elimination (SE) tournaments. Addressing natural questions of algorithmic tractability, we identify key properties of input instances that enable the tournament designer to efficiently schedule the tournament in a way that maximizes the chances of a preferred player winning. Much of the prior algorithmic work on this topic focuses on the perfect (complete and deterministic) information scenario, especially in the context of fixed-parameter algorithm design. Our contributions constitute the first fixed-parameter tractability results applicable to more general settings of SE tournament design with potential imperfect information. 
+ Cite asVáclav Blažej, Sushmita Gupta, M. S. Ramanujan, and Peter Strulo. On Controlling Knockout Tournaments Without Perfect Information. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 7:1-7:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{blazej_et_al:LIPIcs.IPEC.2024.7 author = {Bla\v{z}ej, V\'{a}clav and Gupta, Sushmita and Ramanujan, M. S. and Strulo, Peter}, title = {{On Controlling Knockout Tournaments Without Perfect Information}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.7}, URN = {urn:nbn:de:0030-drops-222337}, doi = {10.4230/LIPIcs.IPEC.2024.7}, annote = {Keywords: Parameterized algorithms, Tournament design, Imperfect information} }@InProceedings{blazej_et_al:LIPIcs.IPEC.2024.7 author = {Bla\v{z}ej, V\'{a}clav and Gupta, Sushmita and Ramanujan, M. S. and Strulo, Peter}, title = {{On Controlling Knockout Tournaments Without Perfect Information}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.7}, URN = {urn:nbn:de:0030-drops-222337}, doi = {10.4230/LIPIcs.IPEC.2024.7}, annote = {Keywords: Parameterized algorithms, Tournament design, Imperfect information} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.8" - DOI: 10.4230/LIPIcs.IPEC.2024.8
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.8/LIPIcs.IPEC.2024.8.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.8" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.8" - Kernelization for Orthogonality Dimension
+Authors:Ishay Haviv and Dror Rabinovich 
+ AbstractThe orthogonality dimension of a graph over ℝ is the smallest integer d for which one can assign to every vertex a nonzero vector in ℝ^d such that every two adjacent vertices receive orthogonal vectors. For an integer d, the d-Ortho-Dim_ℝ problem asks to decide whether the orthogonality dimension of a given graph over ℝ is at most d. We prove that for every integer d ≥ 3, the d-Ortho-Dim_ℝ problem parameterized by the vertex cover number k admits a kernel with O(k^{d-1}) vertices and bit-size O(k^{d-1} ⋅ log k). We complement this result by a nearly matching lower bound, showing that for any ε > 0, the problem admits no kernel of bit-size O(k^{d-1-ε}) unless NP ⊆ coNP/poly. We further study the kernelizability of orthogonality dimension problems in additional settings, including over general fields and under various structural parameterizations. 
+ Cite asIshay Haviv and Dror Rabinovich. Kernelization for Orthogonality Dimension. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 8:1-8:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{haviv_et_al:LIPIcs.IPEC.2024.8 author = {Haviv, Ishay and Rabinovich, Dror}, title = {{Kernelization for Orthogonality Dimension}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {8:1--8:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.8}, URN = {urn:nbn:de:0030-drops-222341}, doi = {10.4230/LIPIcs.IPEC.2024.8}, annote = {Keywords: Orthogonality dimension, Fixed-parameter tractability, Kernelization, Graph coloring} }@InProceedings{haviv_et_al:LIPIcs.IPEC.2024.8 author = {Haviv, Ishay and Rabinovich, Dror}, title = {{Kernelization for Orthogonality Dimension}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {8:1--8:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.8}, URN = {urn:nbn:de:0030-drops-222341}, doi = {10.4230/LIPIcs.IPEC.2024.8}, annote = {Keywords: Orthogonality dimension, Fixed-parameter tractability, Kernelization, Graph coloring} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.9" - DOI: 10.4230/LIPIcs.IPEC.2024.9
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.9/LIPIcs.IPEC.2024.9.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.9" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.9" - Fine-Grained Complexity of Multiple Domination and Dominating Patterns in Sparse Graphs
+Authors:Marvin Künnemann and Mirza Redzic 
+ AbstractThe study of domination in graphs has led to a variety of dominating set problems studied in the literature. Most of these follow the following general framework: Given a graph G and an integer k, decide if there is a set S of k vertices such that (1) some inner connectivity property ϕ(S) (e.g., connectedness) is satisfied, and (2) each vertex v satisfies some domination property ρ(S, v) (e.g., there is some s ∈ S that is adjacent to v). Since many real-world graphs are sparse, we seek to determine the optimal running time of such problems in both the number n of vertices and the number m of edges in G. While the classic dominating set problem admits a rather limited improvement in sparse graphs (Fischer, Künnemann, Redzic SODA'24), we show that natural variants studied in the literature admit much larger speed-ups, with a diverse set of possible running times. Specifically, using fast matrix multiplication we devise efficient algorithms which in particular yield the following conditionally optimal running times if the matrix multiplication exponent ω is equal to 2: - r-Multiple k-Dominating Set (each vertex v must be adjacent to at least r vertices in S): If r ≤ k-2, we obtain a running time of (m/n)^{r} n^{k-r+o(1)} that is conditionally optimal assuming the 3-uniform hyperclique hypothesis. In sparse graphs, this fully interpolates between n^{k-1± o(1)} and n^{2± o(1)}, depending on r. Curiously, when r = k-1, we obtain a randomized algorithm beating (m/n)^{k-1} n^{1+o(1)} and we show that this algorithm is close to optimal under the k-clique hypothesis. - H-Dominating Set (S must induce a pattern H). We conditionally settle the complexity of three such problems: (a) Dominating Clique (H is a k-clique), (b) Maximal Independent Set of size k (H is an independent set on k vertices), (c) Dominating Induced Matching (H is a perfect matching on k vertices). For all sufficiently large k, we provide algorithms with running time (m/n)m^{(k-1)/2+o(1)} for (a) and (b), and m^{k/2+o(1)} for (c). We show that these algorithms are essentially optimal under the k-Orthogonal Vectors Hypothesis (k-OVH). This is in contrast to H being the k-Star, which is susceptible only to a very limited improvement, with the best algorithm running in time n^{k-1 ± o(1)} in sparse graphs under k-OVH. 
+ Cite asMarvin Künnemann and Mirza Redzic. Fine-Grained Complexity of Multiple Domination and Dominating Patterns in Sparse Graphs. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 9:1-9:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kunnemann_et_al:LIPIcs.IPEC.2024.9 author = {K\"{u}nnemann, Marvin and Redzic, Mirza}, title = {{Fine-Grained Complexity of Multiple Domination and Dominating Patterns in Sparse Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {9:1--9:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.9}, URN = {urn:nbn:de:0030-drops-222353}, doi = {10.4230/LIPIcs.IPEC.2024.9}, annote = {Keywords: Fine-grained complexity theory, Dominating set, Sparsity in graphs, Conditionally optimal algorithms} }@InProceedings{kunnemann_et_al:LIPIcs.IPEC.2024.9 author = {K\"{u}nnemann, Marvin and Redzic, Mirza}, title = {{Fine-Grained Complexity of Multiple Domination and Dominating Patterns in Sparse Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {9:1--9:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.9}, URN = {urn:nbn:de:0030-drops-222353}, doi = {10.4230/LIPIcs.IPEC.2024.9}, annote = {Keywords: Fine-grained complexity theory, Dominating set, Sparsity in graphs, Conditionally optimal algorithms} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.10" - DOI: 10.4230/LIPIcs.IPEC.2024.10
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.10/LIPIcs.IPEC.2024.10.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.10" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.10" - Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball Graphs
+Authors:Tomohiro Koana, Nidhi Purohit, and Kirill Simonov 
+ AbstractIn Clique Cover, given a graph G and an integer k, the task is to partition the vertices of G into k cliques. Clique Cover on unit ball graphs has a natural interpretation as a clustering problem, where the objective function is the maximum diameter of a cluster. Many classical NP-hard problems are known to admit 2^{O(n^{1 - 1/d})}-time algorithms on unit ball graphs in ℝ^d [de Berg et al., SIAM J. Comp 2018]. A notable exception is the Maximum Clique problem, which admits a polynomial-time algorithm on unit disk graphs and a subexponential algorithm on unit ball graphs in ℝ³, but no subexponential algorithm on unit ball graphs in dimensions 4 or larger, assuming the ETH [Bonamy et al., JACM 2021]. In this work, we show that Clique Cover also suffers from a "curse of dimensionality", albeit in a significantly different way compared to Maximum Clique. We present a 2^{O(√n)}-time algorithm for unit disk graphs and argue that it is tight under the ETH. On the other hand, we show that Clique Cover does not admit a 2^{o(n)}-time algorithm on unit ball graphs in dimension 5, unless the ETH fails. 
+ Cite asTomohiro Koana, Nidhi Purohit, and Kirill Simonov. Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball Graphs. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 10:1-10:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{koana_et_al:LIPIcs.IPEC.2024.10 author = {Koana, Tomohiro and Purohit, Nidhi and Simonov, Kirill}, title = {{Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {10:1--10:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.10}, URN = {urn:nbn:de:0030-drops-222369}, doi = {10.4230/LIPIcs.IPEC.2024.10}, annote = {Keywords: Clique cover, diameter clustering, subexponential algorithms, unit disk graphs} }@InProceedings{koana_et_al:LIPIcs.IPEC.2024.10 author = {Koana, Tomohiro and Purohit, Nidhi and Simonov, Kirill}, title = {{Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {10:1--10:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.10}, URN = {urn:nbn:de:0030-drops-222369}, doi = {10.4230/LIPIcs.IPEC.2024.10}, annote = {Keywords: Clique cover, diameter clustering, subexponential algorithms, unit disk graphs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.11" - DOI: 10.4230/LIPIcs.IPEC.2024.11
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.11/LIPIcs.IPEC.2024.11.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.11" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.11" - Solving Co-Path/Cycle Packing and Co-Path Packing Faster Than 3^k
+Authors:Yuxi Liu and Mingyu Xiao 
+ AbstractThe Co-Path/Cycle Packing problem (resp. The Co-Path Packing problem) asks whether we can delete at most k vertices from the input graph such that the remaining graph is a collection of induced paths and cycles (resp. induced paths). These two problems are fundamental graph problems that have important applications in bioinformatics. Although these two problems have been extensively studied in parameterized algorithms, it seems hard to break the running time bound 3^k. In 2015, Feng et al. provided an O^*(3^k)-time randomized algorithms for both of them. Recently, Tsur showed that they can be solved in O^*(3^k) time deterministically. In this paper, by combining several techniques such as path decomposition, dynamic programming, cut & count, and branch-and-search methods, we show that Co-Path/Cycle Packing can be solved in O^*(2.8192^k) time deterministically and Co-Path Packing can be solved in O^*(2.9241^{k}) time with failure probability ≤ 1/3. As a by-product, we also show that the Co-Path Packing problem can be solved in O^*(5^p) time with probability at least 2/3 if a path decomposition of width p is given. 
+ Cite asYuxi Liu and Mingyu Xiao. Solving Co-Path/Cycle Packing and Co-Path Packing Faster Than 3^k. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 11:1-11:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{liu_et_al:LIPIcs.IPEC.2024.11 author = {Liu, Yuxi and Xiao, Mingyu}, title = {{Solving Co-Path/Cycle Packing and Co-Path Packing Faster Than 3^k}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {11:1--11:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.11}, URN = {urn:nbn:de:0030-drops-222376}, doi = {10.4230/LIPIcs.IPEC.2024.11}, annote = {Keywords: Graph Algorithms, Parameterized Algorithms, Co-Path/Cycle Packing, Co-Path Packing, Cut \& Count, Path Decomposition} }@InProceedings{liu_et_al:LIPIcs.IPEC.2024.11 author = {Liu, Yuxi and Xiao, Mingyu}, title = {{Solving Co-Path/Cycle Packing and Co-Path Packing Faster Than 3^k}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {11:1--11:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.11}, URN = {urn:nbn:de:0030-drops-222376}, doi = {10.4230/LIPIcs.IPEC.2024.11}, annote = {Keywords: Graph Algorithms, Parameterized Algorithms, Co-Path/Cycle Packing, Co-Path Packing, Cut \& Count, Path Decomposition} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.12" - DOI: 10.4230/LIPIcs.IPEC.2024.12
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.12/LIPIcs.IPEC.2024.12.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.12" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.12" - A Polynomial Time Algorithm for Steiner Tree When Terminals Avoid a Rooted K₄-Minor
+Authors:Carla Groenland, Jesper Nederlof, and Tomohiro Koana 
+ AbstractWe study a special case of the Steiner Tree problem in which the input graph does not have a minor model of a complete graph on 4 vertices for which all branch sets contain a terminal. We show that this problem can be solved in O(n⁴) time, where n denotes the number of vertices in the input graph. This generalizes a seminal paper by Erickson et al. [Math. Oper. Res., 1987] that solves Steiner tree on planar graphs with all terminals on one face in polynomial time. 
+ Cite asCarla Groenland, Jesper Nederlof, and Tomohiro Koana. A Polynomial Time Algorithm for Steiner Tree When Terminals Avoid a Rooted K₄-Minor. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 12:1-12:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{groenland_et_al:LIPIcs.IPEC.2024.12 author = {Groenland, Carla and Nederlof, Jesper and Koana, Tomohiro}, title = {{A Polynomial Time Algorithm for Steiner Tree When Terminals Avoid a Rooted K₄-Minor}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {12:1--12:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.12}, URN = {urn:nbn:de:0030-drops-222387}, doi = {10.4230/LIPIcs.IPEC.2024.12}, annote = {Keywords: Steiner tree, rooted minor} }@InProceedings{groenland_et_al:LIPIcs.IPEC.2024.12 author = {Groenland, Carla and Nederlof, Jesper and Koana, Tomohiro}, title = {{A Polynomial Time Algorithm for Steiner Tree When Terminals Avoid a Rooted K₄-Minor}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {12:1--12:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.12}, URN = {urn:nbn:de:0030-drops-222387}, doi = {10.4230/LIPIcs.IPEC.2024.12}, annote = {Keywords: Steiner tree, rooted minor} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.13" - DOI: 10.4230/LIPIcs.IPEC.2024.13
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.13/LIPIcs.IPEC.2024.13.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.13" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.13" - Kick the Cliques
+Authors:Gaétan Berthe, Marin Bougeret, Daniel Gonçalves, and Jean-Florent Raymond 
+ AbstractIn the K_r-Hitting problem, given a graph G and an integer k one has to decide if there exists a set of at most k vertices whose removal destroys all r-cliques of G. In this paper we give an algorithm for K_r-Hitting that runs in subexponential FPT time on graph classes satisfying two simple conditions related to cliques and treewidth. As an application we show that our algorithm solves K_r-Hitting in time - 2^{O_r(k^{(r+1)/(r+2)}log k)} ⋅ n^{O_r(1)} in pseudo-disk graphs and map-graphs; - 2^{O_{t,r}(k^{2/3}log k)} ⋅ n^{O_r(1)} in K_{t,t}-subgraph-free string graphs; and - 2^{O_{H,r}(k^{2/3}log k)} ⋅ n^{O_r(1)} in H-minor-free graphs. 
+ Cite asGaétan Berthe, Marin Bougeret, Daniel Gonçalves, and Jean-Florent Raymond. Kick the Cliques. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 13:1-13:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{berthe_et_al:LIPIcs.IPEC.2024.13 author = {Berthe, Ga\'{e}tan and Bougeret, Marin and Gon\c{c}alves, Daniel and Raymond, Jean-Florent}, title = {{Kick the Cliques}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {13:1--13:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.13}, URN = {urn:nbn:de:0030-drops-222397}, doi = {10.4230/LIPIcs.IPEC.2024.13}, annote = {Keywords: Subexponential FPT algorithms, implicit hitting set problems, geometric intersection graphs} }@InProceedings{berthe_et_al:LIPIcs.IPEC.2024.13 author = {Berthe, Ga\'{e}tan and Bougeret, Marin and Gon\c{c}alves, Daniel and Raymond, Jean-Florent}, title = {{Kick the Cliques}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {13:1--13:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.13}, URN = {urn:nbn:de:0030-drops-222397}, doi = {10.4230/LIPIcs.IPEC.2024.13}, annote = {Keywords: Subexponential FPT algorithms, implicit hitting set problems, geometric intersection graphs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.14" - DOI: 10.4230/LIPIcs.IPEC.2024.14
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.14/LIPIcs.IPEC.2024.14.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.14" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.14" - The Parameterized Complexity Landscape of Two-Sets Cut-Uncut
+Authors:Matthias Bentert, Fedor V. Fomin, Fanny Hauser, and Saket Saurabh 
+ AbstractIn Two-Sets Cut-Uncut, we are given an undirected graph G = (V,E) and two terminal sets S and T. The task is to find a minimum cut C in G (if there is any) separating S from T under the following "uncut" condition. In the graph (V,E⧵C), the terminals in each terminal set remain in the same connected component. In spite of the superficial similarity to the classic problem Minimum s-t-Cut, Two-Sets Cut-Uncut is computationally challenging. In particular, even deciding whether such a cut of any size exists, is already NP-complete. We initiate a systematic study of Two-Sets Cut-Uncut within the context of parameterized complexity. By leveraging known relations between many well-studied graph parameters, we characterize the structural properties of input graphs that allow for polynomial kernels, fixed-parameter tractability (FPT), and slicewise polynomial algorithms (XP). Our main contribution is the near-complete establishment of the complexity of these algorithmic properties within the described hierarchy of graph parameters. On a technical level, our main results are fixed-parameter tractability for the (vertex-deletion) distance to cographs and an OR-cross composition excluding polynomial kernels for the vertex cover number of the input graph (under the standard complexity assumption NP ̸ ⊆ coNP/poly). 
+ Cite asMatthias Bentert, Fedor V. Fomin, Fanny Hauser, and Saket Saurabh. The Parameterized Complexity Landscape of Two-Sets Cut-Uncut. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 14:1-14:23, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bentert_et_al:LIPIcs.IPEC.2024.14 author = {Bentert, Matthias and Fomin, Fedor V. and Hauser, Fanny and Saurabh, Saket}, title = {{The Parameterized Complexity Landscape of Two-Sets Cut-Uncut}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {14:1--14:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.14}, URN = {urn:nbn:de:0030-drops-222400}, doi = {10.4230/LIPIcs.IPEC.2024.14}, annote = {Keywords: Fixed-parameter tractability, Polynomial Kernels, W\lbrack1\rbrack-hardness, XP, para-NP-Hardness} }@InProceedings{bentert_et_al:LIPIcs.IPEC.2024.14 author = {Bentert, Matthias and Fomin, Fedor V. and Hauser, Fanny and Saurabh, Saket}, title = {{The Parameterized Complexity Landscape of Two-Sets Cut-Uncut}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {14:1--14:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.14}, URN = {urn:nbn:de:0030-drops-222400}, doi = {10.4230/LIPIcs.IPEC.2024.14}, annote = {Keywords: Fixed-parameter tractability, Polynomial Kernels, W\lbrack1\rbrack-hardness, XP, para-NP-Hardness} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.15" - DOI: 10.4230/LIPIcs.IPEC.2024.15
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.15/LIPIcs.IPEC.2024.15.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.15" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.15" - Preprocessing to Reduce the Search Space for Odd Cycle Transversal
+Authors:Bart M. P. Jansen, Yosuke Mizutani, Blair D. Sullivan, and Ruben F. A. Verhaegh 
+ AbstractThe NP-hard Odd Cycle Transversal problem asks for a minimum vertex set whose removal from an undirected input graph G breaks all odd cycles, and thereby yields a bipartite graph. The problem is well-known to be fixed-parameter tractable when parameterized by the size k of the desired solution. It also admits a randomized kernelization of polynomial size, using the celebrated matroid toolkit by Kratsch and Wahlström. The kernelization guarantees a reduction in the total size of an input graph, but does not guarantee any decrease in the size of the solution to be sought; the latter governs the size of the search space for FPT algorithms parameterized by k. We investigate under which conditions an efficient algorithm can detect one or more vertices that belong to an optimal solution to Odd Cycle Transversal. By drawing inspiration from the popular crown reduction rule for Vertex Cover, and the notion of antler decompositions that was recently proposed for Feedback Vertex Set, we introduce a graph decomposition called tight odd cycle cut that can be used to certify that a vertex set is part of an optimal odd cycle transversal. While it is NP-hard to compute such a graph decomposition, we develop parameterized algorithms to find a set of at least k vertices that belong to an optimal odd cycle transversal when the input contains a tight odd cycle cut certifying the membership of k vertices in an optimal solution. The resulting algorithm formalizes when the search space for the solution-size parameterization of Odd Cycle Transversal can be reduced by preprocessing. To obtain our results, we develop a graph reduction step that can be used to simplify the graph to the point that the odd cycle cut can be detected via color coding. 
+ Cite asBart M. P. Jansen, Yosuke Mizutani, Blair D. Sullivan, and Ruben F. A. Verhaegh. Preprocessing to Reduce the Search Space for Odd Cycle Transversal. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 15:1-15:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{jansen_et_al:LIPIcs.IPEC.2024.15 author = {Jansen, Bart M. P. and Mizutani, Yosuke and Sullivan, Blair D. and Verhaegh, Ruben F. A.}, title = {{Preprocessing to Reduce the Search Space for Odd Cycle Transversal}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {15:1--15:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.15}, URN = {urn:nbn:de:0030-drops-222412}, doi = {10.4230/LIPIcs.IPEC.2024.15}, annote = {Keywords: odd cycle transversal, parameterized complexity, graph decomposition, search-space reduction, witness of optimality} }@InProceedings{jansen_et_al:LIPIcs.IPEC.2024.15 author = {Jansen, Bart M. P. and Mizutani, Yosuke and Sullivan, Blair D. and Verhaegh, Ruben F. A.}, title = {{Preprocessing to Reduce the Search Space for Odd Cycle Transversal}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {15:1--15:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.15}, URN = {urn:nbn:de:0030-drops-222412}, doi = {10.4230/LIPIcs.IPEC.2024.15}, annote = {Keywords: odd cycle transversal, parameterized complexity, graph decomposition, search-space reduction, witness of optimality} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.16" - DOI: 10.4230/LIPIcs.IPEC.2024.16
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.16/LIPIcs.IPEC.2024.16.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.16" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.16" - Modularity Clustering Parameterized by Max Leaf Number
+Authors:Jaroslav Garvardt and Christian Komusiewicz 
+ AbstractThe modularity score is one of the most important measures for assessing the quality of clusterings of undirected graphs. In the notoriously difficult Modularity problem, one is given an undirected graph G and the task is to find a clustering with maximum modularity. We show that Modularity is fixed-parameter tractable with respect to the max leaf number of G. This improves on a previous result by Meeks and Skerman [Algorithmica '20] who showed an XP-algorithm for this parameter. In addition, we strengthen previous hardness results for Modularity by showing W[1]-hardness for the parameter vertex deletion distance to disjoint union of stars. 
+ Cite asJaroslav Garvardt and Christian Komusiewicz. Modularity Clustering Parameterized by Max Leaf Number. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 16:1-16:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{garvardt_et_al:LIPIcs.IPEC.2024.16 author = {Garvardt, Jaroslav and Komusiewicz, Christian}, title = {{Modularity Clustering Parameterized by Max Leaf Number}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {16:1--16:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.16}, URN = {urn:nbn:de:0030-drops-222426}, doi = {10.4230/LIPIcs.IPEC.2024.16}, annote = {Keywords: Graph clustering, parameterized complexity} }@InProceedings{garvardt_et_al:LIPIcs.IPEC.2024.16 author = {Garvardt, Jaroslav and Komusiewicz, Christian}, title = {{Modularity Clustering Parameterized by Max Leaf Number}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {16:1--16:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.16}, URN = {urn:nbn:de:0030-drops-222426}, doi = {10.4230/LIPIcs.IPEC.2024.16}, annote = {Keywords: Graph clustering, parameterized complexity} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.17" - DOI: 10.4230/LIPIcs.IPEC.2024.17
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.17/LIPIcs.IPEC.2024.17.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.17" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.17" - Subset Feedback Vertex Set in Tournaments as Fast as Without the Subset
+Authors:Satyabrata Jana, Lawqueen Kanesh, Madhumita Kundu, and Saket Saurabh 
+ AbstractIn the Feedback Vertex Set in Tournaments (FVST) problem, we are given a tournament T and a positive integer k. The objective is to determine whether there exists a vertex set X ⊆ V(T) of size at most k such that T-X is a directed acyclic graph. This problem is known to be equivalent to the problem of hitting all directed triangles, thereby using the best-known algorithm for the 3-Hitting Set problem results in an algorithm for FVST with a running time of 2.076^k ⋅ n^{𝒪(1)} [Wahlström, Ph.D. Thesis]. Kumar and Lokshtanov [STACS 2016] designed a more efficient algorithm with a running time of 1.6181^k ⋅ n^{𝒪(1)}. A generalization of FVST, called Subset-FVST, includes an additional subset S ⊆ V(T) in the input. The goal for Subset-FVST is to find a vertex set X ⊆ V(T) of size at most k such that T-X contains no directed cycles that pass through any vertex in S. This generalized problem can also be represented as a 3-Hitting Set problem, leading to a running time of 2.076^k ⋅ n^{𝒪(1)}. Bai and Xiao [Theoretical Computer Science 2023] improved this and obtained an algorithm with running time 2^{k + o(k)} ⋅ n^{𝒪(1)}. In our work, we extend the algorithm of Kumar and Lokshtanov [STACS 2016] to solve Subset-FVST, obtaining an algorithm with a running time {𝒪}(1.6181^k + n^{{𝒪}(1)}), matching the running time for FVST. 
+ Cite asSatyabrata Jana, Lawqueen Kanesh, Madhumita Kundu, and Saket Saurabh. Subset Feedback Vertex Set in Tournaments as Fast as Without the Subset. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 17:1-17:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{jana_et_al:LIPIcs.IPEC.2024.17 author = {Jana, Satyabrata and Kanesh, Lawqueen and Kundu, Madhumita and Saurabh, Saket}, title = {{Subset Feedback Vertex Set in Tournaments as Fast as Without the Subset}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {17:1--17:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.17}, URN = {urn:nbn:de:0030-drops-222438}, doi = {10.4230/LIPIcs.IPEC.2024.17}, annote = {Keywords: Parameterized algorithms, Feedback vertex set, Tournaments, Fixed parameter tractable, Graph partitions} }@InProceedings{jana_et_al:LIPIcs.IPEC.2024.17 author = {Jana, Satyabrata and Kanesh, Lawqueen and Kundu, Madhumita and Saurabh, Saket}, title = {{Subset Feedback Vertex Set in Tournaments as Fast as Without the Subset}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {17:1--17:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.17}, URN = {urn:nbn:de:0030-drops-222438}, doi = {10.4230/LIPIcs.IPEC.2024.17}, annote = {Keywords: Parameterized algorithms, Feedback vertex set, Tournaments, Fixed parameter tractable, Graph partitions} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.18" - DOI: 10.4230/LIPIcs.IPEC.2024.18
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.18/LIPIcs.IPEC.2024.18.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.18" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.18" - Parameterised Distance to Local Irregularity
+Authors:Foivos Fioravantes, Nikolaos Melissinos, and Theofilos Triommatis 
+ AbstractA graph G is locally irregular if no two of its adjacent vertices have the same degree. The authors of [Fioravantes et al. Complexity of finding maximum locally irregular induced subgraph. SWAT, 2022] introduced and provided some initial algorithmic results on the problem of finding a locally irregular induced subgraph of a given graph G of maximum order, or, equivalently, computing a subset S of V(G) of minimum order, whose deletion from G results in a locally irregular graph; S is called an optimal vertex-irregulator of G. In this work we provide an in-depth analysis of the parameterised complexity of computing an optimal vertex-irregulator of a given graph G. Moreover, we introduce and study a variation of this problem, where S is a subset of the edges of G; in this case, S is denoted as an optimal edge-irregulator of G. We prove that computing an optimal vertex-irregulator of a graph G is in FPT when parameterised by various structural parameters of G, while it is W[1]-hard when parameterised by the feedback vertex set number or the treedepth of G. Moreover, computing an optimal edge-irregulator of a graph G is in FPT when parameterised by the vertex integrity of G, while it is NP-hard even if G is a planar bipartite graph of maximum degree 6, and W[1]-hard when parameterised by the size of the solution, the feedback vertex set or the treedepth of G. Our results paint a comprehensive picture of the tractability of both problems studied here. 
+ Cite asFoivos Fioravantes, Nikolaos Melissinos, and Theofilos Triommatis. Parameterised Distance to Local Irregularity. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 18:1-18:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{fioravantes_et_al:LIPIcs.IPEC.2024.18 author = {Fioravantes, Foivos and Melissinos, Nikolaos and Triommatis, Theofilos}, title = {{Parameterised Distance to Local Irregularity}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {18:1--18:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.18}, URN = {urn:nbn:de:0030-drops-222440}, doi = {10.4230/LIPIcs.IPEC.2024.18}, annote = {Keywords: Locally irregular, largest induced subgraph, FPT, W-hardness} }@InProceedings{fioravantes_et_al:LIPIcs.IPEC.2024.18 author = {Fioravantes, Foivos and Melissinos, Nikolaos and Triommatis, Theofilos}, title = {{Parameterised Distance to Local Irregularity}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {18:1--18:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.18}, URN = {urn:nbn:de:0030-drops-222440}, doi = {10.4230/LIPIcs.IPEC.2024.18}, annote = {Keywords: Locally irregular, largest induced subgraph, FPT, W-hardness} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.19" - DOI: 10.4230/LIPIcs.IPEC.2024.19
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.19/LIPIcs.IPEC.2024.19.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.19" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.19" - Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates
+Authors:Matthias Kaul, Matthias Mnich, and Hendrik Molter 
+ AbstractWe study the fundamental scheduling problem 1|r_j|∑ w_j U_j: schedule a set of n jobs with weights, processing times, release dates, and due dates on a single machine, such that each job starts after its release date and we maximize the weighted number of jobs that complete execution before their due date. Problem 1|r_j|∑ w_j U_j generalizes both Knapsack and Partition, and the simplified setting without release dates was studied by Hermelin et al. [Annals of Operations Research, 2021] from a parameterized complexity viewpoint. Our main contribution is a thorough complexity analysis of 1|r_j|∑ w_j U_j in terms of four key problem parameters: the number p_# of processing times, the number w_# of weights, the number d_# of due dates, and the number r_# of release dates of the jobs. 1|r_j|∑ w_j U_j is known to be weakly para-NP-hard even if w_#+d_#+r_# is constant, and Heeger and Hermelin [ESA, 2024] recently showed (weak) 𝖶[1]-hardness parameterized by p_# or w_# even if r_# is constant. Algorithmically, we show that 1|r_j|∑ w_j U_j is fixed-parameter tractable parameterized by p_# combined with any two of the remaining three parameters w_#, d_#, and r_#. We further provide pseudo-polynomial XP-time algorithms for parameter r_# and d_#. To complement these algorithms, we show that 1|r_j|∑ w_j U_j is (strongly) 𝖶[1]-hard when parameterized by d_#+r_# even if w_# is constant. Our results provide a nearly complete picture of the complexity of 1|r_j|∑ w_j U_j for p_#, w_#, d_#, and r_# as parameters, and extend those of Hermelin et al. [Annals of Operations Research, 2021] for the problem 1||∑ w_j U_j without release dates. 
+ Cite asMatthias Kaul, Matthias Mnich, and Hendrik Molter. Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 19:1-19:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kaul_et_al:LIPIcs.IPEC.2024.19 author = {Kaul, Matthias and Mnich, Matthias and Molter, Hendrik}, title = {{Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {19:1--19:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.19}, URN = {urn:nbn:de:0030-drops-222450}, doi = {10.4230/LIPIcs.IPEC.2024.19}, annote = {Keywords: Scheduling, Release Dates, Fixed-Parameter Tractability} }@InProceedings{kaul_et_al:LIPIcs.IPEC.2024.19 author = {Kaul, Matthias and Mnich, Matthias and Molter, Hendrik}, title = {{Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {19:1--19:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.19}, URN = {urn:nbn:de:0030-drops-222450}, doi = {10.4230/LIPIcs.IPEC.2024.19}, annote = {Keywords: Scheduling, Release Dates, Fixed-Parameter Tractability} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.20" - DOI: 10.4230/LIPIcs.IPEC.2024.20
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.20/LIPIcs.IPEC.2024.20.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.20" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.20" - Quasi-Linear Distance Query Reconstruction for Graphs of Bounded Treelength
+Authors:Paul Bastide and Carla Groenland 
+ AbstractIn distance query reconstruction, we wish to reconstruct the edge set of a hidden graph by asking as few distance queries as possible to an oracle. Given two vertices u and v, the oracle returns the shortest path distance between u and v in the graph. The length of a tree decomposition is the maximum distance between two vertices contained in the same bag. The treelength of a graph is defined as the minimum length of a tree decomposition of this graph. We present an algorithm to reconstruct an n-vertex connected graph G parameterized by maximum degree Δ and treelength k in O_{k,Δ}(n log² n) queries (in expectation). This is the first algorithm to achieve quasi-linear complexity for this class of graphs. The proof goes through a new lemma that could give independent insight on graphs of bounded treelength. 
+ Cite asPaul Bastide and Carla Groenland. Quasi-Linear Distance Query Reconstruction for Graphs of Bounded Treelength. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 20:1-20:11, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bastide_et_al:LIPIcs.IPEC.2024.20 author = {Bastide, Paul and Groenland, Carla}, title = {{Quasi-Linear Distance Query Reconstruction for Graphs of Bounded Treelength}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {20:1--20:11}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.20}, URN = {urn:nbn:de:0030-drops-222465}, doi = {10.4230/LIPIcs.IPEC.2024.20}, annote = {Keywords: Distance Reconstruction, Randomized Algorithm, Treelength} }@InProceedings{bastide_et_al:LIPIcs.IPEC.2024.20 author = {Bastide, Paul and Groenland, Carla}, title = {{Quasi-Linear Distance Query Reconstruction for Graphs of Bounded Treelength}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {20:1--20:11}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.20}, URN = {urn:nbn:de:0030-drops-222465}, doi = {10.4230/LIPIcs.IPEC.2024.20}, annote = {Keywords: Distance Reconstruction, Randomized Algorithm, Treelength} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.21" - DOI: 10.4230/LIPIcs.IPEC.2024.21
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.21/LIPIcs.IPEC.2024.21.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.21" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.21" - Component Order Connectivity Admits No Polynomial Kernel Parameterized by the Distance to Subdivided Comb Graphs
+Authors:Jakob Greilhuber and Roohani Sharma 
+ AbstractIn this paper we show that the d-Component Order Connectivity (d-COC) problem parameterized by the distance to subdivided comb graphs (dist-to-subdivided-combs) does not admit a polynomial kernel, unless NP ⊆ coNP/poly. The d-COC problem is a generalization of the classical Vertex Cover problem. An instance of the d-COC problem consists of an undirected graph G and a positive integer k, and the question is whether there exists a set S ⊆ V(G) of size at most k, such that each connected component of G-S contains at most d vertices. When d = 1, d-COC is the Vertex Cover problem. Vertex Cover is a ubiquitous problem in parameterized complexity, and it admits a kernel with O(k²) edges and O(k) vertices, which is tight [Dell & van Melkebeek, JACM 2014]. Our result is inspired by the work of Jansen & Bodlaender [TOCS 2013], who gave the first polynomial kernel for Vertex Cover where the parameter is provably smaller or equal to the standard parameter, solution size k. They used fvs, the feedback vertex set number, as the parameter. In this work, we show that unlike most other existing results or techniques for kernelization of Vertex Cover that generalize to d-COC, this is not the case when dist-to-subdivided-combs, which is at least as large as fvs, is the parameter. Our lower bound is achieved in two stages. In the first stage we extend the result of Hols, Kratsch & Pieterse [SIDMA 2022] where they show that if a graph family 𝒞, which is closed under taking disjoint unions, has unbounded "blocking set" size, then Vertex Cover does not admit a polynomial kernel parameterized by the size of a vertex modulator to 𝒞, unless NP ⊆ coNP/poly. We show that a similar sufficient condition for proving the non-existence of polynomial kernels also holds for d-COC. In the second stage, we show that when 𝒞 is the family of subdivided comb graphs, contrary to Vertex Cover, where the size of minimal blocking sets of graphs in 𝒞 is at most two [Jansen & Bodlaender, STACS 2011], the size of minimal blocking sets of graphs in 𝒞 for the d-COC problem can be arbitrarily large. This yields the desired lower bound. In addition to this we also show that when 𝒞 is a class of paths, then it still has blocking sets of size at most two for d-COC, indicating that polynomial kernels might be achievable when the parameter is the size of a vertex modulator to the class of disjoint unions of paths (linear forests). 
+ Cite asJakob Greilhuber and Roohani Sharma. Component Order Connectivity Admits No Polynomial Kernel Parameterized by the Distance to Subdivided Comb Graphs. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 21:1-21:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{greilhuber_et_al:LIPIcs.IPEC.2024.21 author = {Greilhuber, Jakob and Sharma, Roohani}, title = {{Component Order Connectivity Admits No Polynomial Kernel Parameterized by the Distance to Subdivided Comb Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.21}, URN = {urn:nbn:de:0030-drops-222471}, doi = {10.4230/LIPIcs.IPEC.2024.21}, annote = {Keywords: Component Order Connectivity, Kernelization, Structural Parameterizations, Feedback Vertex Set, Vertex Cover, Blocking Sets, Subdivided Comb Graphs} }@InProceedings{greilhuber_et_al:LIPIcs.IPEC.2024.21 author = {Greilhuber, Jakob and Sharma, Roohani}, title = {{Component Order Connectivity Admits No Polynomial Kernel Parameterized by the Distance to Subdivided Comb Graphs}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.21}, URN = {urn:nbn:de:0030-drops-222471}, doi = {10.4230/LIPIcs.IPEC.2024.21}, annote = {Keywords: Component Order Connectivity, Kernelization, Structural Parameterizations, Feedback Vertex Set, Vertex Cover, Blocking Sets, Subdivided Comb Graphs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.22" - DOI: 10.4230/LIPIcs.IPEC.2024.22
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.22/LIPIcs.IPEC.2024.22.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.22" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.22" - Dynamic Parameterized Feedback Problems in Tournaments
+Authors:Anna Zych-Pawlewicz and Marek Żochowski 
+ AbstractIn this paper we present the first dynamic algorithms for the problem of K-Feedback Arc Set in Tournaments (K-Fast) and the problem of K-Feedback Vertex Set in Tournaments (K-Fvst). Our algorithms maintain a dynamic tournament on n vertices altered by redirecting the arcs, and answer if the tournament admits a feedback arc set (or respectively feedback vertex set) of size at most K, for some chosen parameter K. For dynamic K-Fast we offer two algorithms. In the promise model, where we are guaranteed, that the size of the solution does not exceed g(K) for some computable function g, we give an O(√g(K)) update and O(3^K K √K) query algorithm. In the general setting without any promise, we offer an O(log² n) update and O(3^K K log² n) query time algorithm for dynamic K-Fast. For dynamic K-Fvst we offer an algorithm working in the promise model, which admits O(g⁵(K)) update and O(3^K K³ g(K)) query time. 
+ Cite asAnna Zych-Pawlewicz and Marek Żochowski. Dynamic Parameterized Feedback Problems in Tournaments. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 22:1-22:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{zychpawlewicz_et_al:LIPIcs.IPEC.2024.22 author = {Zych-Pawlewicz, Anna and \.{Z}ochowski, Marek}, title = {{Dynamic Parameterized Feedback Problems in Tournaments}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {22:1--22:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.22}, URN = {urn:nbn:de:0030-drops-222482}, doi = {10.4230/LIPIcs.IPEC.2024.22}, annote = {Keywords: dynamic algorithms, parameterized algorithms, feedback arc set, feedback vertex set, tournaments} }@InProceedings{zychpawlewicz_et_al:LIPIcs.IPEC.2024.22 author = {Zych-Pawlewicz, Anna and \.{Z}ochowski, Marek}, title = {{Dynamic Parameterized Feedback Problems in Tournaments}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {22:1--22:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.22}, URN = {urn:nbn:de:0030-drops-222482}, doi = {10.4230/LIPIcs.IPEC.2024.22}, annote = {Keywords: dynamic algorithms, parameterized algorithms, feedback arc set, feedback vertex set, tournaments} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.23" - DOI: 10.4230/LIPIcs.IPEC.2024.23
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.23/LIPIcs.IPEC.2024.23.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.23" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.23" - Parameterized Shortest Path Reconfiguration
+Authors:Nicolas Bousquet, Kshitij Gajjar, Abhiruk Lahiri, and Amer E. Mouawad 
+ AbstractAn st-shortest path, or st-path for short, in a graph G is a shortest (induced) path from s to t in G. Two st-paths are said to be adjacent if they differ on exactly one vertex. A reconfiguration sequence between two st-paths P and Q is a sequence of adjacent st-paths starting from P and ending at Q. Deciding whether there exists a reconfiguration sequence between two given st-paths is known to be PSPACE-complete, even on restricted classes of graphs such as graphs of bounded bandwidth (hence pathwidth). On the positive side, and rather surprisingly, the problem is polynomial-time solvable on planar graphs. In this paper, we study the parameterized complexity of the Shortest Path Reconfiguration (SPR) problem. We show that SPR is W[1]-hard parameterized by k + 𝓁, even when restricted to graphs of bounded (constant) degeneracy; here k denotes the number of edges on an st-path, and 𝓁 denotes the length of a reconfiguration sequence from P to Q. We complement our hardness result by establishing the fixed-parameter tractability of SPR parameterized by 𝓁 and restricted to nowhere-dense classes of graphs. Additionally, we establish fixed-parameter tractability of SPR when parameterized by the treedepth, by the cluster-deletion number, or by the modular-width of the input graph. 
+ Cite asNicolas Bousquet, Kshitij Gajjar, Abhiruk Lahiri, and Amer E. Mouawad. Parameterized Shortest Path Reconfiguration. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 23:1-23:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bousquet_et_al:LIPIcs.IPEC.2024.23 author = {Bousquet, Nicolas and Gajjar, Kshitij and Lahiri, Abhiruk and Mouawad, Amer E.}, title = {{Parameterized Shortest Path Reconfiguration}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {23:1--23:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.23}, URN = {urn:nbn:de:0030-drops-222491}, doi = {10.4230/LIPIcs.IPEC.2024.23}, annote = {Keywords: combinatorial reconfiguration, shortest path reconfiguration, parameterized complexity, structural parameters, treedepth, cluster deletion number, modular width} }@InProceedings{bousquet_et_al:LIPIcs.IPEC.2024.23 author = {Bousquet, Nicolas and Gajjar, Kshitij and Lahiri, Abhiruk and Mouawad, Amer E.}, title = {{Parameterized Shortest Path Reconfiguration}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {23:1--23:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.23}, URN = {urn:nbn:de:0030-drops-222491}, doi = {10.4230/LIPIcs.IPEC.2024.23}, annote = {Keywords: combinatorial reconfiguration, shortest path reconfiguration, parameterized complexity, structural parameters, treedepth, cluster deletion number, modular width} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.24" - DOI: 10.4230/LIPIcs.IPEC.2024.24
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.24/LIPIcs.IPEC.2024.24.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.24" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.24" - Roman Hitting Functions
+Authors:Henning Fernau and Kevin Mann 
+ AbstractRoman domination formalizes a military strategy going back to Constantine the Great. Here, armies are placed in different regions. A region is secured if there is at least one army in this region or there are two armies in one neighbored region. This simple strategy can be easily translated into a graph-theoretic question. The placement of armies is described by a function which maps each vertex to 0, 1 or 2. Such a function is called Roman dominating if each vertex with value 0 has a neighbor with value 2. Roman domination is one of few examples where the related (so-called) extension problem is polynomial-time solvable even if the original decision problem is NP-complete. This is interesting as it allows to establish polynomial-delay enumeration algorithms for listing minimal Roman dominating functions, while it is open for more than four decades if all minimal dominating sets of a graph or (equivalently) if all hitting sets of a hypergraph can be enumerated with polynomial delay, or even in output-polynomial time. To find the reason why this is the case, we combine the idea of hitting set with the idea of Roman domination. We hence obtain and study a new problem, called Roman Hitting Function, generalizing Roman Domination towards hypergraphs. This allows us to delineate the frontier of polynomial-delay enumerability. Our main focus is on the extension version of this problem, as this was the key problem when coping with Roman domination functions. While doing this, we find some conditions under which the Extension Roman Hitting Function problem is NP-complete. We then use parameterized complexity as a tool to get a better understanding of why Extension Roman Hitting Function behaves in this way. From an alternative perspective, we can say that we use the idea of parameterization to study the question what makes certain enumeration problems that difficult. Also, we discuss another generalization of Extension Roman Domination, where both a lower and an upper bound on the sought minimal Roman domination function is provided. The additional upper bound makes the problem hard (again), and the applied parameterized complexity analysis (only) provides hardness results. Also from the viewpoint of Parameterized Complexity, the studies on extension problems are quite interesting as they provide more and more examples of parameterized problems complete for W[3], a complexity class with only very few natural members known five years ago. 
+ Cite asHenning Fernau and Kevin Mann. Roman Hitting Functions. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 24:1-24:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{fernau_et_al:LIPIcs.IPEC.2024.24 author = {Fernau, Henning and Mann, Kevin}, title = {{Roman Hitting Functions}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {24:1--24:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.24}, URN = {urn:nbn:de:0030-drops-222504}, doi = {10.4230/LIPIcs.IPEC.2024.24}, annote = {Keywords: enumeration problems, polynomial delay, domination problems, hitting set, Roman domination} }@InProceedings{fernau_et_al:LIPIcs.IPEC.2024.24 author = {Fernau, Henning and Mann, Kevin}, title = {{Roman Hitting Functions}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {24:1--24:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.24}, URN = {urn:nbn:de:0030-drops-222504}, doi = {10.4230/LIPIcs.IPEC.2024.24}, annote = {Keywords: enumeration problems, polynomial delay, domination problems, hitting set, Roman domination} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.25" - DOI: 10.4230/LIPIcs.IPEC.2024.25
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.25/LIPIcs.IPEC.2024.25.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.25" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.25" - Matching (Multi)Cut: Algorithms, Complexity, and Enumeration
+Authors:Guilherme C. M. Gomes, Emanuel Juliano, Gabriel Martins, and Vinicius F. dos Santos 
+ AbstractA matching cut of a graph is a partition of its vertex set in two such that no vertex has more than one neighbor across the cut. The Matching Cut problem asks if a graph has a matching cut. This problem, and its generalization d-cut, has drawn considerable attention of the algorithms and complexity community in the last decade, becoming a canonical example for parameterized enumeration algorithms and kernelization. In this paper, we introduce and study a generalization of Matching Cut, which we have named Matching Multicut: can we partition the vertex set of a graph in at least 𝓁 parts such that no vertex has more than one neighbor outside its part? We investigate this question in several settings. We start by showing that, contrary to Matching Cut, it is NP-hard on cubic graphs but that, when 𝓁 is a parameter, it admits a quasi-linear kernel. We also show an 𝒪(𝓁^{n/2}) time exact exponential algorithm for general graphs and a 2^{𝒪(tlog t)}n^{𝒪(1)} time algorithm for graphs of treewidth at most t. We then turn our attention to parameterized enumeration aspects of matching multicuts. First, we generalize the quadratic kernel of Golovach et. al for Enum Matching Cut parameterized by vertex cover, then use it to design a quadratic kernel for Enum Matching (Multi)cut parameterized by vertex-deletion distance to co-cluster. Our final contributions are on the vertex-deletion distance to cluster parameterization, where we show an FPT-delay algorithm for Enum Matching Multicut but that no polynomial kernel exists unless NP ⊆ coNP/poly; we highlight that we have no such lower bound for Enum Matching Cut and consider it our main open question. 
+ Cite asGuilherme C. M. Gomes, Emanuel Juliano, Gabriel Martins, and Vinicius F. dos Santos. Matching (Multi)Cut: Algorithms, Complexity, and Enumeration. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 25:1-25:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{c.m.gomes_et_al:LIPIcs.IPEC.2024.25 author = {C. M. Gomes, Guilherme and Juliano, Emanuel and Martins, Gabriel and F. dos Santos, Vinicius}, title = {{Matching (Multi)Cut: Algorithms, Complexity, and Enumeration}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {25:1--25:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.25}, URN = {urn:nbn:de:0030-drops-222514}, doi = {10.4230/LIPIcs.IPEC.2024.25}, annote = {Keywords: Matching Cut, Matching Multicut, Enumeration, Parameterized Complexity, Exact exponential algorithms} }@InProceedings{c.m.gomes_et_al:LIPIcs.IPEC.2024.25 author = {C. M. Gomes, Guilherme and Juliano, Emanuel and Martins, Gabriel and F. dos Santos, Vinicius}, title = {{Matching (Multi)Cut: Algorithms, Complexity, and Enumeration}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {25:1--25:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.25}, URN = {urn:nbn:de:0030-drops-222514}, doi = {10.4230/LIPIcs.IPEC.2024.25}, annote = {Keywords: Matching Cut, Matching Multicut, Enumeration, Parameterized Complexity, Exact exponential algorithms} }Document 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.26" - DOI: 10.4230/LIPIcs.IPEC.2024.26
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.26/LIPIcs.IPEC.2024.26.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.26" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.26" - The PACE 2024 Parameterized Algorithms and Computational Experiments Challenge: One-Sided Crossing Minimization
+Authors:Philipp Kindermann, Fabian Klute, and Soeren Terziadis 
+ AbstractThis article is a report by the challenge organizers on the 9th Parameterized Algorithms and Computational Experiments Challenge (PACE 2024). As was common in previous iterations of the competition, this year’s iteration implemented an exact and heuristic track for a parameterized problem that has gained attention in the theory community. This year’s challenge is about the One-Sided Crossing Minimization Problem (OSCM). In the exact track, the competition participants were asked to develop an exact algorithm that can solve as many instances as possible from a benchmark set of 100 instances – with a time limit of 30 minutes per instance. In the heuristic track, the task must be accomplished within 5 minutes, however, the result in this track is not required to be optimal. New this year is the parameterized track, which has the same rules as the exact track, but instances are guaranteed to have small cutwidth. As in previous iterations, the organizers handed out awards to the best solutions in all tracks and to the best student submissions. 
+ Cite asPhilipp Kindermann, Fabian Klute, and Soeren Terziadis. The PACE 2024 Parameterized Algorithms and Computational Experiments Challenge: One-Sided Crossing Minimization. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 26:1-26:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kindermann_et_al:LIPIcs.IPEC.2024.26 author = {Kindermann, Philipp and Klute, Fabian and Terziadis, Soeren}, title = {{The PACE 2024 Parameterized Algorithms and Computational Experiments Challenge: One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {26:1--26:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.26}, URN = {urn:nbn:de:0030-drops-222521}, doi = {10.4230/LIPIcs.IPEC.2024.26}, annote = {Keywords: One-Sided Crossing Minimization, Algorithm Engineering, FPT, Heuristics} }@InProceedings{kindermann_et_al:LIPIcs.IPEC.2024.26 author = {Kindermann, Philipp and Klute, Fabian and Terziadis, Soeren}, title = {{The PACE 2024 Parameterized Algorithms and Computational Experiments Challenge: One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {26:1--26:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.26}, URN = {urn:nbn:de:0030-drops-222521}, doi = {10.4230/LIPIcs.IPEC.2024.26}, annote = {Keywords: One-Sided Crossing Minimization, Algorithm Engineering, FPT, Heuristics} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.27" - DOI: 10.4230/LIPIcs.IPEC.2024.27
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.27/LIPIcs.IPEC.2024.27.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.27" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.27" - PACE Solver Description: Exact Solution of the One-Sided Crossing Minimization Problem by the MPPEG Team
+Authors:Michael Jünger, Paul J. Jünger, Petra Mutzel, and Gerhard Reinelt 
+ AbstractThis is a short description of our solver oscm submitted by our team MPPEG to the PACE 2024 challenge both for the exact track and the parameterized track, available at https://github.com/pauljngr/PACE2024 [Jünger et al., 2024] and https://doi.org/10.5281/zenodo.11546972 [Jünger et al., 2024]. 
+ Cite asMichael Jünger, Paul J. Jünger, Petra Mutzel, and Gerhard Reinelt. PACE Solver Description: Exact Solution of the One-Sided Crossing Minimization Problem by the MPPEG Team. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 27:1-27:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{junger_et_al:LIPIcs.IPEC.2024.27 author = {J\"{u}nger, Michael and J\"{u}nger, Paul J. and Mutzel, Petra and Reinelt, Gerhard}, title = {{PACE Solver Description: Exact Solution of the One-Sided Crossing Minimization Problem by the MPPEG Team}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {27:1--27:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.27}, URN = {urn:nbn:de:0030-drops-222539}, doi = {10.4230/LIPIcs.IPEC.2024.27}, annote = {Keywords: Combinatorial Optimization, Linear Ordering, Crossing Minimization, Branch and Cut, Algorithm Engineering} }@InProceedings{junger_et_al:LIPIcs.IPEC.2024.27 author = {J\"{u}nger, Michael and J\"{u}nger, Paul J. and Mutzel, Petra and Reinelt, Gerhard}, title = {{PACE Solver Description: Exact Solution of the One-Sided Crossing Minimization Problem by the MPPEG Team}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {27:1--27:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.27}, URN = {urn:nbn:de:0030-drops-222539}, doi = {10.4230/LIPIcs.IPEC.2024.27}, annote = {Keywords: Combinatorial Optimization, Linear Ordering, Crossing Minimization, Branch and Cut, Algorithm Engineering} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.28" - DOI: 10.4230/LIPIcs.IPEC.2024.28
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.28/LIPIcs.IPEC.2024.28.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.28" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.28" - PACE Solver Description: UzL Exact Solver for One-Sided Crossing Minimization
+Authors:Max Bannach, Florian Chudigiewitsch, Kim-Manuel Klein, and Marcel Wienöbst 
+ AbstractThis document contains a short description of our solver pingpong for the one-sided crossing minimization problem that we submitted to the exact and parameterized track of the PACE challenge 2024. The solver is based on the well-known reduction to the weighted directed feedback arc set problem. This problem is tackled by an implicit hitting set formulation using an integer linear programming solver. Adding hitting set constraints is done iteratively by computing heuristic solutions to the current formulation and finding cycles that are not yet "hit." The procedure terminates if the exact hitting set solution covers all cycles. Thus, optimality of our solver is guaranteed. 
+ Cite asMax Bannach, Florian Chudigiewitsch, Kim-Manuel Klein, and Marcel Wienöbst. PACE Solver Description: UzL Exact Solver for One-Sided Crossing Minimization. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 28:1-28:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bannach_et_al:LIPIcs.IPEC.2024.28 author = {Bannach, Max and Chudigiewitsch, Florian and Klein, Kim-Manuel and Wien\"{o}bst, Marcel}, title = {{PACE Solver Description: UzL Exact Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {28:1--28:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.28}, URN = {urn:nbn:de:0030-drops-222548}, doi = {10.4230/LIPIcs.IPEC.2024.28}, annote = {Keywords: integer programming, exact algorithms, feedback arc set, crossing minimization} }@InProceedings{bannach_et_al:LIPIcs.IPEC.2024.28 author = {Bannach, Max and Chudigiewitsch, Florian and Klein, Kim-Manuel and Wien\"{o}bst, Marcel}, title = {{PACE Solver Description: UzL Exact Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {28:1--28:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.28}, URN = {urn:nbn:de:0030-drops-222548}, doi = {10.4230/LIPIcs.IPEC.2024.28}, annote = {Keywords: integer programming, exact algorithms, feedback arc set, crossing minimization} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.29" - DOI: 10.4230/LIPIcs.IPEC.2024.29
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.29/LIPIcs.IPEC.2024.29.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.29" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.29" - PACE Solver Description: CRGone
+Authors:Alexander Dobler 
+ AbstractWe describe CRGone, our solver for the exact and parameterized track of the Pace Challenge 2024. It solves the problem of one-sided crossing minimization, is based on an integer linear programming (ILP) formulation with additional reduction rules, and is implemented in C++ using the ILP solver SCIP with Soplex. 
+ Cite asAlexander Dobler. PACE Solver Description: CRGone. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 29:1-29:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{dobler:LIPIcs.IPEC.2024.29 author = {Dobler, Alexander}, title = {{PACE Solver Description: CRGone}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {29:1--29:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.29}, URN = {urn:nbn:de:0030-drops-222558}, doi = {10.4230/LIPIcs.IPEC.2024.29}, annote = {Keywords: Pace Challenge 2024, One-Layer Crossing Minimization, Exact Algorithm} }@InProceedings{dobler:LIPIcs.IPEC.2024.29 author = {Dobler, Alexander}, title = {{PACE Solver Description: CRGone}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {29:1--29:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.29}, URN = {urn:nbn:de:0030-drops-222558}, doi = {10.4230/LIPIcs.IPEC.2024.29}, annote = {Keywords: Pace Challenge 2024, One-Layer Crossing Minimization, Exact Algorithm} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.30" - DOI: 10.4230/LIPIcs.IPEC.2024.30
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.30/LIPIcs.IPEC.2024.30.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.30" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.30" - PACE Solver Description: Crossy - An Exact Solver for One-Sided Crossing Minimization
+Authors:Tobias Röhr and Kirill Simonov 
+ AbstractWe describe Crossy, an exact solver for One-sided Crossing Minimization (OSCM) that ranked 5th in the Parameterized Algorithms and Computational Experiments (PACE) Challenge 2024 (Exact and Parameterized Track). Crossy applies a series of reductions and subsequently transforms the input into an instance of Weighted Directed Feedback Arc Set (WDFAS), which is then formulated in incremental MaxSAT . We use the recently introduced concept of User Propagators for CDCL SAT solvers in order to dynamically add cycle constraints. 
+ Cite asTobias Röhr and Kirill Simonov. PACE Solver Description: Crossy - An Exact Solver for One-Sided Crossing Minimization. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 30:1-30:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{rohr_et_al:LIPIcs.IPEC.2024.30 author = {R\"{o}hr, Tobias and Simonov, Kirill}, title = {{PACE Solver Description: Crossy - An Exact Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {30:1--30:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.30}, URN = {urn:nbn:de:0030-drops-222562}, doi = {10.4230/LIPIcs.IPEC.2024.30}, annote = {Keywords: One-sided Crossing Minimization, Exact Algorithms, Graph Drawing, Incremental MaxSAT} }@InProceedings{rohr_et_al:LIPIcs.IPEC.2024.30 author = {R\"{o}hr, Tobias and Simonov, Kirill}, title = {{PACE Solver Description: Crossy - An Exact Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {30:1--30:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.30}, URN = {urn:nbn:de:0030-drops-222562}, doi = {10.4230/LIPIcs.IPEC.2024.30}, annote = {Keywords: One-sided Crossing Minimization, Exact Algorithms, Graph Drawing, Incremental MaxSAT} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.31" - DOI: 10.4230/LIPIcs.IPEC.2024.31
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.31/LIPIcs.IPEC.2024.31.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.31" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.31" - PACE Solver Description: CIMAT_Team
+Authors:Carlos Segura, Lázaro Lugo, Gara Miranda, and Edison David Serrano Cárdenas 
+ AbstractThis document describes MAEDM-OCM, a first generation memetic algorithm for the one-sided crossing minimization problem (OCM), which obtained the first position at the heuristic track of the Parameterized Algorithms and Computational Experiments Challenge 2024. In this variant of OCM, given a bipartite graph with vertices V = A ∪ B, only the nodes of the layer B can be moved. The main features of MAEDM-OCM are the following: the diversity is managed explicitly through the Best-Non-Penalized (BNP) survivor strategy, the intensification is based on Iterated Local Search (ILS), and the cycle crossover is applied. Regarding the intensification step, the neighborhood is based on shifts and only a subset of the neighbors in the local search are explored. The use of the BNP replacement was key to attain a robust optimizer. It was also important to incorporate low-level optimizations to efficiently calculate the number of crossings and to reduce the requirements of memory. In the case of the longest instances (|B| > 17000) the memetic approach is not applicable with the time constraints established in the challenge. In such cases, ILS is applied. The optimizer is not always applied to the original graph. In particular, twin nodes in B are grouped in a single node. 
+ Cite asCarlos Segura, Lázaro Lugo, Gara Miranda, and Edison David Serrano Cárdenas. PACE Solver Description: CIMAT_Team. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 31:1-31:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{segura_et_al:LIPIcs.IPEC.2024.31 author = {Segura, Carlos and Lugo, L\'{a}zaro and Miranda, Gara and Serrano C\'{a}rdenas, Edison David}, title = {{PACE Solver Description: CIMAT\underlineTeam}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {31:1--31:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.31}, URN = {urn:nbn:de:0030-drops-222577}, doi = {10.4230/LIPIcs.IPEC.2024.31}, annote = {Keywords: Memetic Algorithms, Diversity Management, One-sided Crossing Minimization} }@InProceedings{segura_et_al:LIPIcs.IPEC.2024.31 author = {Segura, Carlos and Lugo, L\'{a}zaro and Miranda, Gara and Serrano C\'{a}rdenas, Edison David}, title = {{PACE Solver Description: CIMAT\underlineTeam}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {31:1--31:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.31}, URN = {urn:nbn:de:0030-drops-222577}, doi = {10.4230/LIPIcs.IPEC.2024.31}, annote = {Keywords: Memetic Algorithms, Diversity Management, One-sided Crossing Minimization} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.32" - DOI: 10.4230/LIPIcs.IPEC.2024.32
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.32/LIPIcs.IPEC.2024.32.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.32" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.32" - PACE Solver Description: Martin_J_Geiger
+Authors:Martin Josef Geiger 
+ AbstractThis extended abstract outlines our contribution to the Parameterized Algorithms and Computational Experiments Challenge (PACE), which invited to work on the one-sided crossing minimization problem. Our ideas are primarily based on the principles of Iterated Local Search and Variable Neighborhood Search. For obvious reasons, the initial alternative stems from the barycenter heuristic. This first sequence (permutation) of nodes is then quickly altered/ improved by a set of operators, keeping the elite configuration while allowing for worsening moves and hence, escaping local optima. 
+ Cite asMartin Josef Geiger. PACE Solver Description: Martin_J_Geiger. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 32:1-32:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{geiger:LIPIcs.IPEC.2024.32 author = {Geiger, Martin Josef}, title = {{PACE Solver Description: Martin\underlineJ\underlineGeiger}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {32:1--32:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.32}, URN = {urn:nbn:de:0030-drops-222587}, doi = {10.4230/LIPIcs.IPEC.2024.32}, annote = {Keywords: PACE 2024, one-sided crossing minimization, Variable Neighborhood Search, Iterated Local Search} }@InProceedings{geiger:LIPIcs.IPEC.2024.32 author = {Geiger, Martin Josef}, title = {{PACE Solver Description: Martin\underlineJ\underlineGeiger}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {32:1--32:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.32}, URN = {urn:nbn:de:0030-drops-222587}, doi = {10.4230/LIPIcs.IPEC.2024.32}, annote = {Keywords: PACE 2024, one-sided crossing minimization, Variable Neighborhood Search, Iterated Local Search} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.33" - DOI: 10.4230/LIPIcs.IPEC.2024.33
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.33/LIPIcs.IPEC.2024.33.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.33" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.33" - PACE Solver Description: Arcee
+Authors:Kimon Boehmer, Lukas Lee George, Fanny Hauser, and Jesse Palarus 
+ AbstractThe 2024 PACE Challenge focused on the One-Sided Crossing Minimization (OCM) problem, which aims to minimize edge crossings in a bipartite graph with a fixed order in one partition and a free order in the other. We describe our OCM solver submission that utilizes various reduction rules for OCM and, for the heuristic track, employs local search approaches as well as techniques to escape local minima. The exact solver uses an ILP formulation and branch & bound to solve an equivalent Feedback Arc Set instance. 
+ Cite asKimon Boehmer, Lukas Lee George, Fanny Hauser, and Jesse Palarus. PACE Solver Description: Arcee. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 33:1-33:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{boehmer_et_al:LIPIcs.IPEC.2024.33 author = {Boehmer, Kimon and George, Lukas Lee and Hauser, Fanny and Palarus, Jesse}, title = {{PACE Solver Description: Arcee}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {33:1--33:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.33}, URN = {urn:nbn:de:0030-drops-222595}, doi = {10.4230/LIPIcs.IPEC.2024.33}, annote = {Keywords: PACE 2024, One-Sided Crossing Minimization, OCM} }@InProceedings{boehmer_et_al:LIPIcs.IPEC.2024.33 author = {Boehmer, Kimon and George, Lukas Lee and Hauser, Fanny and Palarus, Jesse}, title = {{PACE Solver Description: Arcee}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {33:1--33:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.33}, URN = {urn:nbn:de:0030-drops-222595}, doi = {10.4230/LIPIcs.IPEC.2024.33}, annote = {Keywords: PACE 2024, One-Sided Crossing Minimization, OCM} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.34" - DOI: 10.4230/LIPIcs.IPEC.2024.34
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.34/LIPIcs.IPEC.2024.34.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.34" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.34" - PACE Solver Description: LUNCH - Linear Uncrossing Heuristics
+Authors:Kenneth Langedal, Matthias Bentert, Thorgal Blanco, and Pål Grønås Drange 
+ AbstractThe 2024 PACE challenge is on One-Sided Crossing Minimization: Given a bipartite graph with one fixed and one free layer, compute an ordering of the vertices in the free layer that minimizes the number of edge crossings in a straight-line drawing of the graph. Here, we briefly describe our exact, parameterized, and heuristic submissions. The main contribution is an efficient reduction to a weighted version of Directed Feedback Arc Set, allowing us to detect subproblems that can be solved independently. 
+ Cite asKenneth Langedal, Matthias Bentert, Thorgal Blanco, and Pål Grønås Drange. PACE Solver Description: LUNCH - Linear Uncrossing Heuristics. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 34:1-34:4, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{langedal_et_al:LIPIcs.IPEC.2024.34 author = {Langedal, Kenneth and Bentert, Matthias and Blanco, Thorgal and Drange, P\r{a}l Gr{\o}n\r{a}s}, title = {{PACE Solver Description: LUNCH - Linear Uncrossing Heuristics}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {34:1--34:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.34}, URN = {urn:nbn:de:0030-drops-222608}, doi = {10.4230/LIPIcs.IPEC.2024.34}, annote = {Keywords: graph drawing, feedback arc set, algorithm engineering} }@InProceedings{langedal_et_al:LIPIcs.IPEC.2024.34 author = {Langedal, Kenneth and Bentert, Matthias and Blanco, Thorgal and Drange, P\r{a}l Gr{\o}n\r{a}s}, title = {{PACE Solver Description: LUNCH - Linear Uncrossing Heuristics}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {34:1--34:4}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.34}, URN = {urn:nbn:de:0030-drops-222608}, doi = {10.4230/LIPIcs.IPEC.2024.34}, annote = {Keywords: graph drawing, feedback arc set, algorithm engineering} }Document 
+ PACE Solver Description 
+ href="https://doi.org/10.4230/LIPIcs.IPEC.2024.35" - DOI: 10.4230/LIPIcs.IPEC.2024.35
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol321-ipec2024/LIPIcs.IPEC.2024.35/LIPIcs.IPEC.2024.35.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.35" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.35" - PACE Solver Description: OCMu64, a Solver for One-Sided Crossing Minimization
+Authors:Ragnar Groot Koerkamp and Mees de Vries 
+ AbstractGiven a bipartite graph (A,B), the one-sided crossing minimization (OCM) problem is to find an ordering of the vertices of B that minimizes the number of edge crossings when drawn in the plane. We introduce the novel strongly fixed, practically fixed, and practically glued reductions that maximally generalize some existing reductions. We apply these in our exact solver OCMu64, that directly uses branch-and-bound on the ordering of the vertices of B and does not depend on ILP or SAT solvers. 
+ Cite asRagnar Groot Koerkamp and Mees de Vries. PACE Solver Description: OCMu64, a Solver for One-Sided Crossing Minimization. In 19th International Symposium on Parameterized and Exact Computation (IPEC 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 321, pp. 35:1-35:5, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{grootkoerkamp_et_al:LIPIcs.IPEC.2024.35 author = {Groot Koerkamp, Ragnar and de Vries, Mees}, title = {{PACE Solver Description: OCMu64, a Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {35:1--35:5}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.35}, URN = {urn:nbn:de:0030-drops-222616}, doi = {10.4230/LIPIcs.IPEC.2024.35}, annote = {Keywords: Graph drawing, crossing number, branch and bound} }@InProceedings{grootkoerkamp_et_al:LIPIcs.IPEC.2024.35 author = {Groot Koerkamp, Ragnar and de Vries, Mees}, title = {{PACE Solver Description: OCMu64, a Solver for One-Sided Crossing Minimization}}, booktitle = {19th International Symposium on Parameterized and Exact Computation (IPEC 2024)}, pages = {35:1--35:5}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-353-9}, ISSN = {1868-8969}, year = {2024}, volume = {321}, editor = {Bonnet, \'{E}douard and Rz\k{a}\.{z}ewski, Pawe{\l}}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.35}, URN = {urn:nbn:de:0030-drops-222616}, doi = {10.4230/LIPIcs.IPEC.2024.35}, annote = {Keywords: Graph drawing, crossing number, branch and bound} }Filters 
+ 97Authors 
+ Show AllCollapse 
+ Show All 
+ B 
+ Balabán, Jakub 
+ Bannach, Max 
+ Bastide, Paul 
+ Bentert, Matthias 
+ Berthe, Gaétan 
+ Blanco, Thorgal 
+ Blažej, Václav 
+ Boehmer, Kimon 
+ Bonnet, Édouard 
+ Bougeret, Marin 
+ Bousquet, Nicolas 
+ C 
+ C. M. Gomes, Guilherme 
+ Casel, Katrin 
+ Chudigiewitsch, Florian 
+ D 
+ de Vries, Mees 
+ Dobler, Alexander 
+ Doron-Arad, Ilan 
+ Drange, Pål Grønås 
+ F 
+ F. dos Santos, Vinicius 
+ Fernau, Henning 
+ Fioravantes, Foivos 
+ Fomin, Fedor V. 
+ Friedrich, Tobias 
+ G 
+ Gajjar, Kshitij 
+ Ganian, Robert 
+ Garvardt, Jaroslav 
+ Geiger, Martin Josef 
+ George, Lukas Lee 
+ Gonçalves, Daniel 
+ Grandoni, Fabrizio 
+ Greilhuber, Jakob 
+ Groenland, Carla 
+ Groot Koerkamp, Ragnar 
+ Gupta, Sushmita 
+ H 
+ Hauser, Fanny 
+ Haviv, Ishay 
+ J 
+ Jana, Satyabrata 
+ Jansen, Bart M. P. 
+ Juliano, Emanuel 
+ Jünger, Michael 
+ Jünger, Paul J. 
+ K 
+ Kanesh, Lawqueen 
+ Karthik C. S. 
+ Kaul, Matthias 
+ Kindermann, Philipp 
+ Klein, Kim-Manuel 
+ Klute, Fabian 
+ Koana, Tomohiro 
+ Komusiewicz, Christian 
+ Kulik, Ariel 
+ Kundu, Madhumita 
+ Künnemann, Marvin 
+ L 
+ Lahiri, Abhiruk 
+ Langedal, Kenneth 
+ Lee, Euiwoong 
+ Lill, Jonas 
+ Liu, Yuxi 
+ Lugo, Lázaro 
+ M 
+ Mann, Kevin 
+ Manurangsi, Pasin 
+ Martins, Gabriel 
+ Melissinos, Nikolaos 
+ Miranda, Gara 
+ Mizutani, Yosuke 
+ Mnich, Matthias 
+ Molter, Hendrik 
+ Mouawad, Amer E. 
+ Mutzel, Petra 
+ N 
+ Nederlof, Jesper 
+ Niklanovits, Aikaterini 
+ P 
+ Palarus, Jesse 
+ Petrova, Kalina 
+ Purohit, Nidhi 
+ R 
+ Rabinovich, Dror 
+ Ramanujan, M. S. 
+ Raymond, Jean-Florent 
+ Redzic, Mirza 
+ Reinelt, Gerhard 
+ Rocton, Mathis 
+ Röhr, Tobias 
+ Rzążewski, Paweł 
+ S 
+ Saurabh, Saket 
+ Segura, Carlos 
+ Serrano Cárdenas, Edison David 
+ Sharma, Roohani 
+ Simonov, Kirill 
+ Strulo, Peter 
+ Sullivan, Blair D. 
+ T 
+ Terziadis, Soeren 
+ Triommatis, Theofilos 
+ V 
+ Verhaegh, Ruben F. A. 
+ W 
+ Weber, Simon 
+ Wienöbst, Marcel 
+ X 
+ Xiao, Mingyu 
+ Z 
+ Zeif, Ziena 
+ Żochowski, Marek 
+ Zych-Pawlewicz, Anna 
+  
+ 23Subjects 
+ Show AllCollapse 
+ Show All 
+ Computing methodologies 
+ Computing methodologies → Discrete space search 
+ Human-centered computing 
+ Human-centered computing → Graph drawings 
+ Mathematics of computing 
+ Mathematics of computing → Combinatorial algorithms 
+ Mathematics of computing → Combinatorial optimization 
+ Mathematics of computing → Graph algorithms 
+ Mathematics of computing → Graph coloring 
+ Mathematics of computing → Optimization with randomized search heuristics 
+ Mathematics of computing → Paths and connectivity problems 
+ Mathematics of computing → Permutations and combinations 
+ Theory of computation 
+ Theory of computation 
+ Theory of computation → Algorithm design techniques 
+ Theory of computation → Approximation algorithms analysis 
+ Theory of computation → Computational geometry 
+ Theory of computation → Data structures design and analysis 
+ Theory of computation → Design and analysis of algorithms 
+ Theory of computation → Fixed parameter tractability 
+ Theory of computation → Graph algorithms analysis 
+ Theory of computation → Integer programming 
+ Theory of computation → Mathematical optimization 
+ Theory of computation → Parameterized complexity and exact algorithms 
+ Theory of computation → Problems, reductions and completeness 
+ Theory of computation → Scheduling algorithms 
+ Theory of computation → W hierarchy 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2024Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+
+3. Website of IPEC_3: https://algo-conference.org/2025/
+Website information of IPEC_3:
+
+href="https://algo-conference.org/2025" - ALGO2025
+href="http://algo-conference.org/2025" - HomeHome 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 
+ href="https://algo-conference.org/2025/esa/" - ESA 
+ href="https://algo-conference.org/2025/local-info/" - Local Info 
+ September 15-19, 2025, Warsaw, Poland 
+ General information 
+ ALGO is an annual meeting combining the premier algorithmic conferencehref="https://algo-conference.org/2025/esa/" - European Symposium on Algorithms (ESA)
+and a number of other specialized conferences and workshops, all related to algorithms and their applications, making ALGO the major European event for researchers, students and practitioners in algorithms. 
+ ALGO 2025 will be held at theFaculty of Physics at the University of Warsawin Warsaw, Poland. 
+ This website is still in preparation. More information as well as the subpages of the conferences will become available at a later date. 
+ Program at a Glance: 
+ href="https://algo-conference.org/2025/schedule/#monday" - Monday15 Sep
+href="https://algo-conference.org/2025/schedule/#tuesday" - Tuesday16 Sep
+href="https://algo-conference.org/2025/schedule/#wednesday" - Wednesday17 Sep
+href="https://algo-conference.org/2025/schedule/#thursday" - Thursday18 Sep
+href="https://algo-conference.org/2025/schedule/#friday" - Friday19 Sep
+href="https://algo-conference.org/2025/esa/" - ESA
+href="https://algo-conference.org/2025/algowin" - ALGOWIN
+href="https://algo-conference.org/2025/algocloud" - ALGOCLOUD
+href="https://algo-conference.org/2025/ipec" - IPEC
+Reception 
+ Dinner 
+ href="https://algo-conference.org/2025/atmos" - ATMOS
+href="https://algo-conference.org/2025/waoa" - WAOA
+Co-Located Events: 
+ href="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD 2025 | : | International Symposium on Algorithmic Aspects of Cloud Computing | . Chairs: | Dimitris Chatzopoulos | , | Domenic Garlisi 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 2025 | : | International Symposium on Algorithmics of Wireless Networks | . Chairs: | Othon Michail | , | Giuseppe Prencipe 
+ href="https://algo-conference.org/2025/atmos/" - ATMOS 2025 | : | International Symposium on Algorithmic Approaches for Transportation Modelling, Optimization, and Systems | . | Marie Schmidt | , | Jonas Sauer 
+ href="https://algo-conference.org/2025/esa/" - ESA 2025 | : | European Symposium on Algorithms | . Chairs: | Anne Benoit | , | Haim Kaplan | , | Sebastian Wild 
+ href="https://algo-conference.org/2025/ipec/" - IPEC 2025 | : | International Symposium on Parameterized and Exact Computation | . Chairs: | Akanksha Agrawal | , | Erik Jan van Leeuwen 
+ href="https://algo-conference.org/2025/waoa/" - WAOA 2025 | : | Workshop on Approximation and Online Algorithms | . Chair: | Jose Verschae | , | Jannik Matuschke 
+ History: 
+ The webpages of previous editions of ALGO conference: 
+ ALGO 2024: Egham, United Kingdom, September 2-6, 2024 
+ ALGO 2023: Amsterdam, the Netherlands, September 4-8, 2023 
+ ALGO 2022: Potsdam, Germany (hybrid), September 5-9, 2022 
+ ALGO 2021: Lisboa, Portugal (online), September 6-10, 2021 
+ ALGO 2020: Pisa, Italy (online), September 7-10, 2020 
+ ALGO 2019: Munich, Germany, September 9-13, 2019 
+ ALGO 2018: Helsinki, Finland, August 20-24 2018 
+ ALGO 2017: Vienna, Austria, September 4-8, 2017 
+ ALGO 2016: Aarhus, Denmark, August 22-26, 2016 
+ ALGO 2015: Patras, Greece, September 14-18, 2015 
+ ALGO 2014: Wrocław, Poland, September 8-12, 2014 
+ ALGO 2013: Sophia Antipolis, France, September 02-06, 2013 
+ ALGO 2012: Ljubljana, Slovenia, September 9-14, 2012 
+ ALGO 2011: Saarbrücken, Germany September 5-7, 2011 
+ ALGO 2010: Liverpool, United Kingdom, September 6-10, 2010 
+ ALGO 2009: Copenhagen, Denmark, September 7-11, 2009 
+ ALGO 2008: Karlsruhe, Germany, September 15-19, 2008 
+ ALGO 2007: Eilat, Israel, October 8-12, 2007 
+ ALGO 2006: Zürich, Switzerland, September 11-15, 2006 
+ ALGO 2005: Palma de Mallorca, October 3-7, 2005 
+ ALGO 2004: Bergen, Norway, September 14-21, 2004 
+ ALGO 2003: Budapest, Hungary, September 15-20, 2003 
+ ALGO 2002: Rome, Italy, September 17-21, 2002 
+ ALGO 2001: Århus, Denmark, August 28-31, 2001 
+ href="https://algo-conference.org/2025" - ALGO2025
+Imprint 
+ href="https://algo-conference.org/2025/privacy-policy/" - Privacy Policy
+Powered byWordPress
+
+4. Website of IPEC_3: http://fpt.wikidot.com/ipec
+Website information of IPEC_3:
+
+Parameterized Complexity 
+ Did you say NP-hard? 
+ contact 
+ Create accountorSign inWELCOME PAGE 
+ 2015 Summary of PC/MVA 
+ Contents 
+ Archived News 
+ Applications | Access Control 
+ Algorithm Engineering 
+ Artificial Intelligence 
+ Environment 
+ href="/operations-research" - Operations Research 
+ Psychology and Cognitive Science 
+ Social Choice and Voting 
+ Books and Survey Articles 
+ Computer Science Popularization 
+ Conferences, Dagstuhl Seminars, and Workshops 
+ Courses in Parameterized Complexity 
+ href="/eatcs-ipec-nerode-prize" - EATCS-IPEC Nerode Prize 
+ FPT News: The Parameterized Complexity Newsletter 
+ href="/ipec" - IPEC 
+ JOBS: Positions Available and People Looking 
+ Open Problems 
+ Overview of the Field 2008 
+ href="/recent-papers" - Recent papers | href="/fpt-papers-in-conferences" - FPT papers in conferences 
+ href="/fpt-papers-on-arxiv" - FPT papers online 
+ Table of FPT races | Complexity Status of Edge Modification Problems 
+ Table of COMSOC FPT Races 
+ Techniques and Methodology 
+ Useful Links 
+ Editing 
+ How to edit pages? 
+ How to join this site? 
+ Site members 
+ Recent changes 
+ List all pages 
+ Page Tags 
+ Site Manager 
+ Page tags 
+ conferencesdagstuhlshref="/system:page-tags/tag/ipec" - ipec
+openproblemsupcomingworkshopsAdd a new page 
+ edit this panel 
+ IPEC 
+ Welcome» IPEC 
+ The International Symposium on Parameterized and Exact Computation (IPEC, formerly IWPEC) is a strongly peer-reviewed annual conference that covers research in all aspects of parameterized and exact algorithms and complexity. 
+  
+ FoldUnfold 
+ Table of Contents 
+ History 
+ Steering Committee 
+ Upcoming events 
+ Previous events 
+ Awards 
+ Steering Committee 
+ Links 
+ History 
+ The first International Workshop on Exact and Parameterized Computation (IWPEC) took place in Bergen in 2004. Since 2008, IWPEC has been held annually. In 2010, IWPEC changed its name to International Symposium on Parameterized and Exact Computation (IPEC). Since 2011, IPEC has often been co-located with the European Symposium on Algorithms (ESA) and other conference and workshops in the ALGO confederated conference, held in Europe in early September. The research contributions accepted for presentation at the conference appear in printed proceedings; the 2004–2014 conferences were published with Springer in the Lecture Notes in Computer Science series. Since 2015, the IPEC proceedings are published in the Leibniz International Proceedings in Informatics. 
+ Steering Committee 
+ Organization of the steering committee 
+ Membership: 
+ • for three years, rotates in September after IPEC 
+ • the two PC chairs of IPEC x+1 join SC after IPEC x 
+ • one additional member is elected by SC each year 
+ • thus SC consists of nine members 
+ How to join: 
+ •Express interest in being an IPEC PC chair or SC member 
+ • ultimately the SC decides by nomination plus vote 
+ • soft tradition of being PC chair only once, so afterwards can only join the SC through vote 
+ Upcoming events 
+ IPEC 2023 will be arranged as part of ALGO 2023 in Amsterdam (CWI), September 4-8 2023 
+ Previous events 
+ 17th IPEC (2022)Arranged at ALGO 2022, Potdsdam, Germany, September 5-9. 2-22.href="https://algo2022.eu/ipec/" - website
+16th IPEC (2021)virtual event, together with ALGO, September 8-10, 2021,href="http://algo2021.tecnico.ulisboa.pt/IPEC2021/" - website
+href="http://fpt.wikidot.com/local--files/ipec/2021PublicityReport.pdf" - Publicity Report
+15th IPEC (2020)virtual event, Hong Kong, together with ISAAC 2020, December 14–18, 2020,href="https://algo2020.comp.polyu.edu.hk/index.html" - IPEC 2020 website
+href="http://fpt.wikidot.com/local--files/ipec/BusinessMeeting2020.pdf" - Business Meeting
+14th IPEC (2019)Arranged at ALGO 2019, Munich, Germany, September 11–13, 2019.href="https://easychair.org/cfp/ipec2019" - call for papers
+.href="http://algo2019.hiit.fi/ipec/" - IPEC 2019 website
+href="http://fpt.wikidot.com/local--files/ipec/BusinessPublicity2019.pdf" - Business Meeting and Publicity Report
+13th IPEC (2018)Helsinki, Finland, August 20–24, 2018.href="http://algo2018.hiit.fi/ipec/" - IPEC 2018 website
+href="http://fpt.wikidot.com/local--files/ipec/BusinessMeeting2018.pdf" - Business Meeting Report
+href="http://fpt.wikidot.com/local--files/ipec/PCReport2018.pdf" - PC Report
+12th IPEC (2017)Vienna, Austria, September 4–8, 2017.href="https://algo2017.ac.tuwien.ac.at/ipec/" - IPEC 2017 website
+href="http://fpt.wdfiles.com/local--files/ipec/BusinessMeeting2017.pdf" - Business Meeting Report
+.href="http://fpt.wdfiles.com/local--files/ipec/PCReport2017.pdf" - PC Report
+.href="http://fpt.wdfiles.com/local--files/ipec/PublicityReport2017.pdf" - Publicity Report
+.11th IPEC (2016)Aarhus, Denmark, August 24–26, 2016.href="http://conferences.au.dk/algo16/ipec/" - IPEC 2016 website
+10th IPEC (2015)Patras, Greece, September 16-18, 2015.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2015.html" - proceedings contents
+href="http://algo2015.upatras.gr/ipec/" - IPEC 2015 website
+9th IPEC (2014)Wroclaw, Poland, September 10-12, 2014.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2014.html" - proceedings contents
+href="http://algo2014.ii.uni.wroc.pl/ipec/" - IPEC 2014 website
+8th IPEC (2013)Sophia Antipolis, France, September 4-6, 2013.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2013.html" - proceedings contents
+href="http://www.kr.tuwien.ac.at/events/ipec2013/" - IPEC 2013 website
+7th IPEC (2012)Ljubljana, Slovenia, September 12-14, 2012.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2012.html" - proceedings contents
+href="http://ipec2012.isoftcloud.gr/" - IPEC 2012 website
+6th IPEC (2011)Saarbrücken, Germany, September 6-8, 2011.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2011.html" - proceedings contents
+href="http://tcs.rwth-aachen.de/IPEC2011/" - IPEC 2011 website
+5th IPEC (2010)Chennai, India, December 13-15, 2010.href="http://dblp.uni-trier.de/db/conf/iwpec/ipec2010.html" - proceedings contents
+href="http://www.imsc.res.in/ipec/" - IPEC 2010 website
+4th IWPEC (2009)Copenhagen, Denmark, September 10-11, 2009.proceedings contentsIWPEC 2009 website3rd IWPEC (2008)Victoria, Canada, May 14-16, 2008.proceedings contentsIWPEC 2008 website (no longer available)2nd IWPEC (2006)Zürich, Switzerland, September 13-15, 2006.proceedings contentsIWPEC 2006 website1st IWPEC (2004)Bergen, Norway, September 14-17, 2004.proceedings contentsIWPEC 2004 websiteAwards 
+ Best paper award and Best student paper award 2020Łukasz Bożyk, Jan Derbisz, Tomasz Krawczyk, Jana Novotná and Karolina Okrasa, "Vertex Deletion into Bipartite Permutation Graphs", and Tuukka Korhonen "Finding Optimal Triangulations Parameterized by Edge Clique Cover."Best student paper 2019Gregory Rosenthal, "Beating Treewidth for Average-Case Subgraph Isomorphism."Best paper award 2019Giordano Da Lozzo, David Eppstein, Michael Goodrich and Siddharth Gupta, "C-Planarity Testing of Embedded Clustered Graphs with Bounded Dual Carving-Width."Best paper and best student paper award 2018Marc Roth and Johannes Schmitt, "Counting Induced Subgraphs: A Topological Approach to #W[1]-hardness."Excellent student paper 2017Bart M. P. Jansen, Astrid Pieterse, "Optimal Data Reduction for Graph Coloring Using Low-Degree Polynomials."Best paper award 2017Radu Curticapean, Holger Dell, Fedor V. Fomin, Leslie Ann Goldberg, John Lapinskas, "A Fixed-Parameter Perspective on #BIS."Best paper award 2016Kitty Meeks, “Randomised enumeration of small witnesses using a decision oracle,” Archontia Giannopoulou, Michał Pilipczuk Jean-Florent Raymond, Dimitrios Thilikos and Marcin Wrochna, “Cutwidth: obstructions and algorithmic aspects,” and Cornelius Brand, Holger Dell and Marc Roth, “Fine-grained dichotomies for the Tutte plane and Boolean #CSP.”Excellent student papers 2016Michal Wlodarczyk, “Clifford algebras meet tree decompositions,” R. Krithika, Abhishek Sahu and Prafullkumar Tale, “Dynamic Parameterized Problems.”Excellent student papers 2015Stefan Kratsch and Manuel Sorge, “On Kernelization and Approximation for the Vector Connectivity Problem.”Excellent student papers 2013Bart M.P. Jansen “On Sparsification for Treewidth Computations,” Lukas Mach and Tomas Toufar “Amalgam Width of Matroids,” and Mateus de Oliveira Oliveira “Subgraphs Satisfying MSO Properties on z-Topologically Orderable Digraphs.”Excellent student paper 2012Ivan Bliznets and Alexander Golovnev, “A New Algorithm for Parameterized MAX-SAT.”Excellent student paper 2011Yoichi Iwata, “A Faster Algorithm for Dominating Set Analyzed by the Potential Method.”Excellent student papers 2010Jesper Nederlof and Johan M. M. van Rooij, “Inclusion/Exclusion Branching for Partial Dominating Set Set Splitting,” and M. Praveen, “Small Vertex Cover Makes Petri Net Coverability and Boundedness Easier."Steering Committee 
+ Current Members 
+ The IPEC Steering Committee after IPEC 2018 has the following members: 
+ Daniel Marx (2020 - 2023) 
+ Meirav Zehavi (2020 - 2023) 
+ Petr Golovach (2020 - 2023) 
+ Fedor Fomin (2021 - 2024) 
+ Holger Dell (2021 - 2024, chair 2022-2023) 
+ Jesper Nederlof (2021 - 2024) 
+ Łukasz Kowalik (2022 - 2025) 
+ Neeldhara Misra (2022 - 2025) 
+ Magnus Wahlström (2022 - 2025) 
+ Publicity Chair 
+ Frances Rosamond 
+ Former Members 
+ Christophe Paul (2017 - 2020) 
+ Magnus Wahlström (2017 - 2020, chair 2019-2020) 
+ Michał Pilipczuk (2017 - 2020) 
+ Henning Fernau (2015–2019) (chair 2018) 
+ Daniel Lokshtanov (2016–2019) 
+ Naomi Nishimura (2016–2019) 
+ Hans Bodlaender 2012-2015 (chair 2015) 
+ Jianer Chen 2009-2012 
+ Marek Cygan 2013–2016 
+ Yixin Cao 2019-2022 
+ Frank Dehne 
+ Rod Downey 
+ Mike Fellows 2009-2012 
+ Fedor Fomin, 2009-2012 (chair 2012) 
+ Martin Grohe 
+ Jiong Guo (2015–2018) 
+ Gregory Gutin 2011-2014 
+ Pinar Heggernes 2013–2016 (chair 2015–2016) 
+ Danny Hermelin (2015–2018) 
+ Thore Husfeldt (2012–2017) 
+ Bart M. P. Jansen 2018-2021 
+ Iyad Kanj (2014–2017) 
+ Eun Jung Kim 2019-2022 
+ Stefan Kratsch (2015–2018, chair 2016-2018). 
+ Michael Langston 
+ Daniel Marx 2010-2013 
+ Rolf Niedermeier 2012–2015 
+ Marcin Pilipczuk 2019-2022. chair 2021-2022 
+ Venkatesh Raman 
+ Peter Rossmanith 2010-2013 
+ Saket Saurabh 2009-2012 and 2018-2021, chair 2020-2021 
+ Stefan Szeider 2011–2014 
+ Jan Arne Telle 2018-2021 
+ Dimitrios Thilikos 2011–2014 
+ Gerhard Woeginger (2011–2017) 
+ Links 
+ IPEC proceedings in theDBLPdatabase 
+ href="/system:page-tags/tag/ipec#pages" - ipec
+Help|Terms of Service|Privacy|Report a bug|Flag as objectionablePowered byWikidot.comUnless otherwise stated, the content of this page is licensed underCreative Commons Attribution-ShareAlike 3.0 LicenseClick here to edit contents of this page. 
+ Click here to toggle editing of individual sections of the page (if possible). Watch headings for an "edit" link when available. 
+ Append content without editing the whole page source. 
+ Check out how this page has evolved in the past. 
+ If you want to discuss contents of this page - this is the easiest way to do it. 
+ View and manage file attachments for this page. 
+ A few useful tools to manage this Site. 
+ See pages that link to and include this page. 
+ Change the name (also URL address, possibly the category) of the page. 
+ View wiki source for this page without editing. 
+ View/set parent page (used for creating breadcrumbs and structured layout). 
+ Notify administrators if there is objectionable content in this page. 
+ Something does not work as expected? Find out what you can do. 
+ General Wikidot.com documentation and help section. 
+ Wikidot.com Terms of Service - what you can, what you should not etc. 
+ Wikidot.com Privacy Policy.
+

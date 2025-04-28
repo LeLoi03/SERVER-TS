@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "November 21 - 23, 2025",
+  "Year": "2025",
+  "Location": "Austin, Texas, USA",
+  "City-State-Province": "Austin, Texas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Abstract Due": "July 1, 2025",
+    "All Paper/Poster Submissions Due": "July 14, 2025",
+    "Workshop Paper Submission Deadline": "TBD"
+  },
+  "Notification Date": {
+    "Regular Paper Acceptance Notification": "August 20, 2025",
+    "Workshop Paper Acceptance Notification": "August 27, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Manuscript Submitted and Fee Payment Deadline": "September 15, 2025"
+  },
+  "Topics": "Cloud Computing and Data Centers, Serverless Computing & Microservices, Edge & Fog Computing, Pervasive/Mobile Computing, High Performance Computing, Workload Characterization, Systems and Networking for AI, 5G/6G/NextG Networks, Wireless Communication and Networks, Mobility Management and Modeling, Smart and Mobile Applications, Localization, Positioning, and Tracking, Smart Sensing, Software Defined Networking, Internet and Network Management, Network Design and Protocols, Information Centric Networking, Performance Evaluation and Modeling, Network Measurement, Sustainable Systems and Networking, Emerging Computing and Networks, Metaverse, Augmented/Virtual/Mixed Reality, Digital Twins, Mobile AI and LLM, Quantum Computing and Networking, Internet of Things, Cyber Physical Systems, Parallel and Distributed Systems, Embedded Systems, Computer and Storage Systems, Smart Grid, Crowdsourcing Systems, Intelligent Mission Critical Operations, Smart Health Systems, Wearable, and Implantable Systems, Social Network Analysis, Security and Privacy, Network Information Assurance and Security, Blockchain, Distributed Ledger, Decentralized Trust, Fundamental Theory and Algorithms, Machine Learning and AI for Systems and Networking",
+  "Summary": "The International Performance, Computing, and Communications Conference (IPCCC) is a premier IEEE conference presenting research in the performance of computer and communication systems. IPCCC 2025 will be held in Austin, Texas, USA from November 21-23, 2025.  This year, IPCCC will be utilizing IEEE Open Preview to allow the conference proceedings to be available in the IEEE Xplore® Digital Library and conference mobile app (if applicable), free of charge to all IEEE Xplore® customers, prior to the conference start date.",
+  "Call for Papers": "# IPCCC 2025: Call for Papers\n\nThe 44th IEEE International Performance Computing and Communications Conference (IPCCC 2025) will be held in **Austin, Texas, USA from November 21-23, 2025.**\n\nIPCCC is a premier IEEE conference presenting research in the performance of computer and communication systems.\n\n## Paper Submission Types\n\nThe following types of papers are accepted for submission:\n\n*   **Regular Paper:** 8 pages without extra charge, and up to 2 extra pages at $100 per extra page.\n*   **Short Paper:** 6 pages without extra charge, and up to 2 extra pages at $100 per extra page.\n*   **Poster Abstract Paper:** 2 pages. No extra pages are available. Posters are encouraged from students to present their work in progress.\n\nAll papers should be submitted at [https://edas.info/N32297](https://edas.info/N32297).\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Cloud Computing and Data Centers\n*   Serverless Computing & Microservices\n*   Edge & Fog Computing\n*   Pervasive/Mobile Computing\n*   High Performance Computing\n*   Workload Characterization\n*   Systems and Networking for AI\n*   5G/6G/NextG Networks\n*   Wireless Communication and Networks\n*   Mobility Management and Modeling\n*   Smart and Mobile Applications\n*   Localization, Positioning, and Tracking\n*   Smart Sensing\n*   Software Defined Networking\n*   Internet and Network Management\n*   Network Design and Protocols\n*   Information Centric Networking\n*   Performance Evaluation and Modeling\n*   Network Measurement\n*   Sustainable Systems and Networking\n*   Emerging Computing and Networks\n*   Metaverse\n*   Augmented/Virtual/Mixed Reality\n*   Digital Twins\n*   Mobile AI and LLM\n*   Quantum Computing and Networking\n*   Internet of Things\n*   Cyber Physical Systems\n*   Parallel and Distributed Systems\n*   Embedded Systems\n*   Computer and Storage Systems\n*   Smart Grid\n*   Crowdsourcing Systems\n*   Intelligent Mission Critical Operations\n*   Smart Health Systems, Wearable, and Implantable Systems\n*   Social Network Analysis\n*   Security and Privacy\n*   Network Information Assurance and Security\n*   Blockchain, Distributed Ledger, Decentralized Trust\n*   Fundamental Theory and Algorithms\n*   Machine Learning and AI for Systems and Networking\n\n## Important Dates\n\n*   **Paper Abstract Due:** July 1st, 2025\n*   **All Paper/Poster Submissions Due:** July 14th, 2025\n*   **Workshop Paper Submission Deadline:** TBD\n*   **Regular Paper Acceptance Notification:** August 20th, 2025\n*   **Workshop Paper Acceptance Notification:** August 27th, 2025\n*   **Final Manuscript Submitted and Fee Payment Deadline:** September 15th, 2025\n*   **Conference:** November 21 – 23, 2025"
+}
+

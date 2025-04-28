@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "December 16 - 18, 2024",
+  "Year": "2024",
+  "Location": "Gold Coast, Australia & Tokyo, Japan",
+  "City-State-Province": "Gold Coast, Queensland",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Paper) Full Paper Deadline": "September 13, 2024",
+    "(Encore Paper) Submission Deadline": "September 30, 2024",
+    "(Shepherding Paper) Submission Deadline": "September 30, 2024"
+  },
+  "Notification Date": {
+    "(Research Paper) Author Notification": "October 7, 2024",
+    "(Encore Paper) Author Notification": "Within 14 days post-submission",
+    "(Shepherding Paper) Author Notification": "October 15, 2024"
+  },
+  "Camera-ready Date": {
+    "(Research Paper) Camera-Ready Deadline": "October 15, 2024",
+    "(Shepherding Paper) Camera-Ready Deadline": "October 27, 2024"
+  },
+  "Topics": "Database Systems, Data Management, Data Mining, Data Analytics",
+  "Summary": "The 35th Australasian Database Conference (ADC 2024) was held in Gold Coast, Australia, and Tokyo, Japan, from December 16-18, 2024.  The conference is an annual forum for sharing the latest research progresses and novel applications of database systems, data management, data mining, and data analytics.",
+  "Call for Papers": "No call for papers available"
+}
+```

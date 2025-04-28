@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "October 12 - 16, 2025",
+  "Year": "2025",
+  "Location": "Aalto University, Espoo, Finland",
+  "City-State-Province": "Espoo",
+  "Country": "Finland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(ISWC Notes and Briefs) Submission": "May 18, 2025",
+    "(Workshops) Proposal Submission": "March 28, 2025",
+    "(Tutorials) Proposal Submission": "April 30, 2025",
+    "(Posters & Demos) Submission": "May 23, 2025",
+    "(ISWC Design Exhibition) Submission": "June 7, 2025",
+    "(Doctoral Colloquium) Submission": "June 15, 2025",
+    "(Student Challenge) Idea Submission": "June 15, 2025",
+    "(IMWUT Videos) IMWUT Videos Due": "August 3, 2025"
+  },
+  "Notification Date": {
+    "(ISWC Notes and Briefs) Author Notification": "July 2, 2025",
+    "(Workshops) Author Notification": "April 13, 2025",
+    "(Posters & Demos) Author Notification": "June 13, 2025",
+    "(ISWC Design Exhibition) Author Notification": "July 7, 2025",
+    "(Doctoral Colloquium) Author Notification": "July 13, 2025",
+    "(Student Challenge) Author Notification": "June 29, 2025"
+  },
+  "Camera-ready Date": {
+    "(ISWC Design Exhibition) Camera Ready": "July 26, 2025"
+  },
+  "Other Date": {
+    "(Workshops) Paper Submission": "June 15, 2025",
+    "(Workshops) Acceptance Notification": "June 29, 2025",
+    "(Student Challenge) Deliverables Due": "October 5, 2025",
+    "Conference": "October 14-16, 2025",
+    "Pre-Conference (Workshops, Tutorials, Symposia, DC)": "October 12-13, 2025"
+  },
+  "Topics": "Ubiquitous Computing, Pervasive Computing, Wearable Computing",
+  "Summary": "UbiComp / ISWC 2025 will be held in Espoo, Finland, during October 2025 at Aalto University. This premier interdisciplinary venue brings together leading international researchers, designers, developers, and practitioners to present and discuss novel results in all aspects of ubiquitous, pervasive, and wearable computing.",
+  "Call for Papers": "# UbiComp / ISWC 2025: Call for Participation\n\nUbiComp / ISWC 2025 will be held in **Espoo, Finland, during October 2025 at Aalto University.**\n\nUbiComp / ISWC is a premier interdisciplinary venue in which leading international researchers, designers, developers, and practitioners in the field present and discuss novel results in all aspects of ubiquitous, pervasive, and wearable computing.\n\n## Submission Tracks\n\nUbiComp / ISWC offers authors a number of ways to publish and present work, interact, discuss, and learn, along with dedicated opportunities for students.  Each type of submission and its deadlines are described on the pages linked which follow:\n\n*   **Main conference track:** IMWUT Papers. Deadlines for New submissions: February 1, May 1, and November 1. After each of these deadlines, submissions will be handled according to the IMWUT review process.\n*   ISWC Notes & Briefs\n*   ISWC Design Exhibition\n*   Workshop Proposals\n*   Tutorial Proposals\n*   Posters & Demos\n*   Doctoral Colloquium\n*   Video Teasers\n*   Student Challenge\n\n## Submission Process\n\nAll submissions are made through the Precision Conference System (PCS 2.0). Please refer to each submission track for details about the specific submission process.\n\n## Templates and Formatting\n\nAll UbiComp/ISWC Publications (ISWC Notes and Briefs, Workshops Proposals, Workshop Papers, Posters and Demos, Doctoral Colloquium, ISWC Design Exhibition, Student Competitions), except the IMWUT Papers submissions, are required to use the templates linked below and to follow the formatting and process described in this page: [https://www.ubicomp.org/ubicomp-iswc-2025/authors/formatting/](https://www.ubicomp.org/ubicomp-iswc-2025/authors/formatting/)\n\nNote that IMWUT papers are published separately and should follow the description available under [the dedicated page](https://dl.acm.org/journal/imwut/author-guidelines).\n\n## Important Dates\n\n*   **Conference:** October 14-16, 2025\n*   **Pre-Conference (Workshops, Tutorials, Symposia, DC):** October 12-13, 2025\n\n### ISWC Notes and Briefs\n\n*   **Submission:** May 18, 2025\n*   **Author Notification:** July 2, 2025\n\n### Workshops\n\n*   **Proposal Submission:** March 28, 2025\n*   **Author Notification:** April 13, 2025\n*   **Paper Submission:** June 15, 2025\n*   **Acceptance Notification:** June 29, 2025\n\n### Tutorials\n\n*   **Proposal Submission:** April 30, 2025\n\n### Posters & Demos\n\n*   **Submission:** May 23, 2025\n*   **Author Notification:** June 13, 2025\n\n### ISWC Design Exhibition\n\n*   **Submission:** June 7, 2025\n*   **Author Notification:** July 7, 2025\n*   **Camera Ready:** July 26, 2025\n\n### Doctoral Colloquium\n\n*   **Submission:** June 15, 2025\n*   **Author Notification:** July 13, 2025\n\n### Student Challenge\n\n*   **Idea Submission:** June 15, 2025\n*   **Author Notification:** June 29, 2025\n*   **Deliverables Due:** October 5, 2025\n\n### Video Teasers\n\n*   **IMWUT Videos Due:** August 3, 2025\n*   **Other Tracks Due:** TBA"
+}
+

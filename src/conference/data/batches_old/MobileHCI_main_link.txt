@@ -1,0 +1,206 @@
+Conference MobileHCI:
+
+href="index.php" - MobileHCI 2025
+Home 
+ Theme 
+ href="" - Calls for Participation | href="callforpapers.php" - Papers 
+ href="callforworkshops.php" - Workshops 
+ href="callfortutorials.php" - Tutorials 
+ href="callfordemos.php" - Demos 
+ href="callforlatebreaking.php" - Late-Breaking Work 
+ href="callfordoctoralconsortium.php" - Doctoral
+                                Consortium 
+ Student Design Competition 
+ href="callforpanels.php" - Panels 
+ href="callforindustrialperspectives.php" - Industrial
+                                Perspectives 
+ Accessibility 
+ Organisers 
+ 22 September - 26 September 2025Welcome to MobileHCI 2025 
+ The ACM International Conference on Mobile Human-Computer Interaction 
+ Sharm El-Sheikh, Egypt 
+ The ACM International Conference on Mobile Human-Computer Interaction (MobileHCI) brings together people from diverse areas and provides a multidisciplinary forum for academics, hardware and software developers, designers and practitioners to discuss the challenges and potential solutions for effective interaction with and through mobile devices, applications, and services. The conference welcomes contributions that promote the exchange of ideas and rational discourse between academics, researchers, and industries all over the world. 
+  
+ MobileHCI'25 will be held in person fromSeptember 22th - September 26th, 2025 in Sharm El-Sheikh Egypt. 
+ Theme: Diving into Mobile AI 
+ Drawing on Egypt’s famous diving sites, this theme encourages deep exploration of how AI-driven mobile technologies can empower communities, from urban areas to rural regions to foster collective progress.Sponsors 
+ We would like to thank our fantastic sponsors for supporting the MobileHCI community! Your help shapes the conference and supports students, researchers, practitioners, and our joint research! 
+ If you would like to support this conference, pleaseget in touch! 
+ Supporters 
+ Important Dates 
+  
+ Jan 30, 2025Abstract Submission 
+ Feb 06, 2025Paper Submission 
+ Mar 22, 2025Workshops Proposals Submissionextended 
+ Jun 12, 2025Demos Submission 
+ Jun 12, 2025Late-Breaking Work Submission 
+ Jun 12, 2025Tutorials Submission 
+ Jun 12, 2025Panels Submission 
+ Jun 12, 2025Doctoral Consortium Submission 
+ Jun 12, 2025Industrial Perspectives Submission 
+ Sep 22, 2025 - Sep 26, 2025Conference 
+ News and Updates 
+  
+ TBA 
+  
+ Made by thehref="committee.php#web-chairs" - MobileHCI 2025 Web Chair
+. 
+
+Call for Papers information:
+href="index.php" - MobileHCI 2025
+Home 
+ Theme 
+ href="" - Calls for Participation | href="callforpapers.php" - Papers 
+ href="callforworkshops.php" - Workshops 
+ href="callfortutorials.php" - Tutorials 
+ href="callfordemos.php" - Demos 
+ href="callforlatebreaking.php" - Late-Breaking Work 
+ href="callfordoctoralconsortium.php" - Doctoral
+                                Consortium 
+ Student Design Competition 
+ href="callforpanels.php" - Panels 
+ href="callforindustrialperspectives.php" - Industrial
+                                Perspectives 
+ Accessibility 
+ Organisers 
+ Call for Papers 
+ The ACM International Conference on Mobile Human-Computer Interaction (MobileHCI) Conference Series has shaped research, development, and practice in services used on mobile or within mobile contexts for over two decades. We interpret mobility broadly and welcome contributions to any aspect of mobile HCI technology systems, devices, techniques, applications, experience, methods, tools, theories, models, and new perspectives. The MobileHCI full papers will be published as journal articles in a special issue in theProceedings of the ACM on Human-Computer Interaction(PACMHCI). 
+ The MobileHCI conference seeks submissions targeted toward this year’s conference theme: “Diving into Mobile AI,” and topics in the following key domains: 
+ Systems and Infrastructure: | The design, architecture, deployment, and evaluation of systems and infrastructures that support the development of or interaction with mobile technology. 
+ Interaction Devices and Techniques: | The design, construction, usage, and evaluation of devices and techniques that create valuable new interactive capabilities for mobile human-computer interaction. 
+ Applications and Experiences: | Descriptions of the design, empirical study of interactive applications, or analysis of usage trends that leverage mobile devices and systems. Application areas include health care, mobility, sustainability, social engagement, and civic engagement. 
+ Methods and Tools: | New methods and tools designed for, or applied to, studying or building mobile user interfaces, applications, and mobile users. 
+ Theories and Models: | Critical analysis or organizing theory with clearly motivated relevance to the design or study of mobile human-computer interaction; taxonomies of design or devices. 
+ New Perspectives: | Well-argued and well-supported visions of the future of mobile computing; non-traditional topics that bear on mobility; underrepresented viewpoints and perspectives that convincingly bring something new to mobile research and practice. 
+ Important Dates - Full Papers 
+  
+ *All deadlines are AoE 
+ Abstract Submission | January 30, 2025 
+ Paper Submission | February 6, 2025 
+ Revise and Resubmit Notifications | March 13, 2025 
+ Revised Submission | May 8, 2025 
+ Final Notifications | May 29, 2025 
+ Camera-ready | June 19, 2025 
+ Preparing the Submission 
+ Novelty 
+ The submission must be original work. It cannot have been published elsewhere nor be under concurrent review for publication by another conference or journal. Out-of-scope papers will be desk rejected. 
+ Length 
+ Typical page length is 4000 and 9000 words (excluding references and appendix), but any page length is allowed as long as the paper contribution is commensurate. If the paper is more than 12,000 words, we may reject it if no justification is provided. References and the appendix do not count toward the paper length. Reviewers will be instructed to weigh the contribution of a submission relative to its length, so papers with a length disproportionate to their contribution will likely be rejected. Shorter, more focused papers are encouraged and will be reviewed appropriately. The abstract has to be a paragraph of 150 words or less. 
+ Formatting 
+ Papers must be inEnglish. 
+ Authors are required to use the single-column ACM Manuscript template. Submission preparation is described on theACM Primary Template website. 
+ For LaTex, the correct templates (Overleaf or LaTeX templates) can be found on ACM’shref="https://authors.acm.org/proceedings/production-information/preparing-your-article-with-latex" - Preparing
+            your article for LaTeX
+page, using \documentclass[manuscript, screen, review]{acmart}. 
+ For Word, the correct submission template can be found on ACM’shref="https://authors.acm.org/proceedings/production-information/preparing-your-article-with-microsoft-word" - Preparing
+            your article for Word
+page, i.e., “submission template.” 
+ The TAPS workflow we use is described onhref="https://authors.acm.org/proceedings/production-information/taps-production-workflow" - ACM’s TAPS
+            workflow page
+. 
+ All references must be complete, accurate, accessible, and conform to the ACM Publication Format. 
+ Anonymity 
+ All submissions need to be fully anonymized. This includes any appendices or supplemental material as well as a potential acknowledgments section. Citations to the authors’ own previous work are NOT allowed to be anonymized. This allows reviewers to ensure all previous research has been taken into account. However authors should refer to their own prior work in the third person. For example, "Smith et al. [1] did ... " instead of "We did ... [1]". Papers that violate the anonymization policy, including within the supplemental materials or external links to datasets, code repositories, etc., will be desk rejected. 
+ Supplementary Materials 
+ All videos and supplementary material must be anonymized. Videos can be of any length and should include closed captions and audio descriptions; seeAccessible Presentation Guide. Other supplementary material may include, for example, survey text, experimental protocols, source code, and data, all of which can help others replicate the work. Authors should submit any non-video supplementary material as a single .zip file, including a README file with a description of the materials. Reviewers should be able to access the contribution of the paper solely based on the main PDF submission. That is, the paper submission must stand independently without the supplementary material. 
+ Accessibility 
+ Authors are required to followhref="https://sigchi.org/conferences/author-resources/accessibility-guide/" - SIGCHI’s Guide to an Accessible
+            Submission
+. If authors have questions or concerns about creating accessible submissions, please contact the Accessibility Chairs viahref="mailto:diversity2025@mobilehci.acm.org" - diversity2025@mobilehci.acm.org
+early in the writing process (the closer to the deadline, the less time the team will have to respond to individual requests). Papers flagged as inaccessible by a reviewer will be reassigned. Note that while we strive to match the best reviewer to each paper – the best reviewers for the work may not be able to review an inaccessible submission. 
+ href="https://sigchi.org/conferences/author-resources/accessibility-guide/" - Guide to an Accessible
+              Submission 
+ href="https://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-pdf-author-guide/" - Accessible
+              PDF Author Guide 
+ Accessible Presentation Guide 
+ href="https://chi2021.acm.org/for-authors/presenting/papers/guide-to-an-accessible-submission#:~:text=Add%20document%20tags.&text=You%20can%20check%20to%20see,menu%2C%20then%20click%20Full%20Check" - Adding
+              Document Tags 
+ PDF Accessibility Checker 
+ Use of Generative AI 
+ Authors must adhere to thehref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - ACM Policy on Authorship
+regarding the use of generative AI in submissions. Authors are responsible for all content produced (including plagiarism, misrepresentation, or fabrication) by these tools and must disclose their use. 
+ ACM Publications Policy 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM's
+            new Publications Policy on Research Involving
+            Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ ACM will investigate alleged violations of this policy or any ACM Publications Policy. They may result in a full retraction of the paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authorsobtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made ahref="https://authors.acm.org/author-resources/orcid-faqs" - commitment to
+            collect ORCID IDs from all of our published authors
+. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ Submitting 
+ Submission Platform 
+ Submissions are facilitated via thePrecision Conference System (PCS). Authors may submit and edit their materials until the submission deadline. Should authors encounter any difficulties, technical problems, or questions about this process, please contact the Papers Chairs viahref="mailto:papers2025@mobilehci.acm.org" - papers2025@mobilehci.acm.org
+. 
+ In PCS, first click "Submissions" at the top of the page. From the "Society" dropdown menu, select "SIGCHI." Then, from the "Conference/journal" dropdown menu, select "MobileHCI 2025." Finally, from the "Track" dropdown menu, select the "MobileHCI 2025 papers" option. After selecting all three dropdown options, press “Go.” In the table below, authors will see a new entry for MobileHCI with an “Edit submission” option; press this and enter all the required details. 
+ Metadata Integrity 
+ Changes inauthor namesarenot allowedafter the submission deadline; there areno exceptions. Changes to the order of authors are allowed only before the camera-ready deadline. The metadata is crucial to the integrity of the review process andhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - author representation
+.If any of the authors needs to be added or removed after the submission deadline, authors would need to withdraw their submissions/papers.Minor changes to the title and abstract are permitted during the revision period. 
+ Selection Process 
+ We use arefereed process, i.e., an editorial board and a set of external reviewers will review the submitted papers. The editorial board members will make decisions for any submitted papers as either accepted, minor revisions, major revisions, or rejected. These notifications will be sent to the corresponding authors. If the initial decision is "minor revisions" or "major revision," the paper authors will have time for the revision cycle to address the required changes. After resubmission, the final decision on the revised papers will be sent to the authors. Please note that for "major revision" submissions, the external reviewers may check all the required changes. Reviewing will be conducted in a double-anonymous fashion, i.e., reviewers and authors are anonymous to each other. 
+ Upon Acceptance 
+ Publication 
+ The paper publication is archival, i.e., accepted papers will be published in the ACM Digital Library as part of the Proceedings of ACM on Human-Computer Interaction (PACMHCI). ACM will send authors a copyright form which they have to complete. Once completed, authors will be provided with the ACM copyright information which authors of accepted papers are required to sign and put on their papers. Authors are required to submit their camera-ready version through the submission system and process it according to thehref="https://mobilehci.acm.org/2025/publicationinstructions.php" - publication instructions
+. 
+ The official publication date is the date the proceedings are made available in theACM Digital Library. This date may be up to two weeks before the first day of the conference. 
+ Presentation Format 
+ Upon acceptance, we will invite authors to present their papers at the conference. 
+ Conference Registration 
+ For each accepted paper, at least one author must register for the MobileHCI 2025 conference by the early bird registration deadline. 
+ Demo 
+ The Demo Chairs might invite authors of accepted papers to participate in the demo session. For this, authors have to submit an additional document describing the technical requirements for the demo. 
+ Contact Us 
+ Contact:href="mailto:papers2025@mobilehci.acm.org" - papers2025@mobilehci.acm.org
+Matt Jones 
+ Computational Foundry United Kingdom 
+ Sven Mayer 
+ LMU Munich, Germany 
+ Made by thehref="committee.php#web-chairs" - MobileHCI 2025 Web Chair
+. 
+
+Important Dates information:
+href="index.php" - MobileHCI 2025
+Home 
+ Theme 
+ href="" - Calls for Participation | href="callforpapers.php" - Papers 
+ href="callforworkshops.php" - Workshops 
+ href="callfortutorials.php" - Tutorials 
+ href="callfordemos.php" - Demos 
+ href="callforlatebreaking.php" - Late-Breaking Work 
+ href="callfordoctoralconsortium.php" - Doctoral
+                                Consortium 
+ Student Design Competition 
+ href="callforpanels.php" - Panels 
+ href="callforindustrialperspectives.php" - Industrial
+                                Perspectives 
+ Accessibility 
+ Organisers 
+ 22 September - 26 September 2025Welcome to MobileHCI 2025 
+ The ACM International Conference on Mobile Human-Computer Interaction 
+ Sharm El-Sheikh, Egypt 
+ The ACM International Conference on Mobile Human-Computer Interaction (MobileHCI) brings together people from diverse areas and provides a multidisciplinary forum for academics, hardware and software developers, designers and practitioners to discuss the challenges and potential solutions for effective interaction with and through mobile devices, applications, and services. The conference welcomes contributions that promote the exchange of ideas and rational discourse between academics, researchers, and industries all over the world. 
+  
+ MobileHCI'25 will be held in person fromSeptember 22th - September 26th, 2025 in Sharm El-Sheikh Egypt. 
+ Theme: Diving into Mobile AI 
+ Drawing on Egypt’s famous diving sites, this theme encourages deep exploration of how AI-driven mobile technologies can empower communities, from urban areas to rural regions to foster collective progress.Sponsors 
+ We would like to thank our fantastic sponsors for supporting the MobileHCI community! Your help shapes the conference and supports students, researchers, practitioners, and our joint research! 
+ If you would like to support this conference, pleaseget in touch! 
+ Supporters 
+ Important Dates 
+  
+ Jan 30, 2025Abstract Submission 
+ Feb 06, 2025Paper Submission 
+ Mar 22, 2025Workshops Proposals Submissionextended 
+ Jun 12, 2025Demos Submission 
+ Jun 12, 2025Late-Breaking Work Submission 
+ Jun 12, 2025Tutorials Submission 
+ Jun 12, 2025Panels Submission 
+ Jun 12, 2025Doctoral Consortium Submission 
+ Jun 12, 2025Industrial Perspectives Submission 
+ Sep 22, 2025 - Sep 26, 2025Conference 
+ News and Updates 
+  
+ TBA 
+  
+ Made by thehref="committee.php#web-chairs" - MobileHCI 2025 Web Chair
+.

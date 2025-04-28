@@ -1,0 +1,26 @@
+{
+  "Conference dates": "October 14-17, 2025",
+  "Year": "2025",
+  "Location": "Madrid, Spain",
+  "City-State-Province": "Madrid",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Early Paper Submission Due Date": "March 31, 2025",
+    "Regular Paper Submission Due Date": "April 30, 2025",
+    "Tutorial Session Proposals Due Date": "March 31, 2025",
+    "Special Session Proposals Due Date": "March 31, 2025",
+    "Panel Session Proposals Due Date": "June 5, 2025"
+  },
+  "Notification Date": {
+    "Early Acceptance Notification for Submissions by Due Date": "May 6, 2025",
+    "Regular Acceptance Notification for Submissions by Due Date": "June 5, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Submission and Registration Due Date": "September 1, 2025"
+  },
+  "Topics": "Robotics and Mechatronics, Power Electronics, Cybersecurity, Renewable Energy, Smart Grid, Digital Twins, AI for Industrial Processes, Industry 5.0, Power Systems and Smart Grid, Power Electronics and Energy Conversion, Electric Machines and Industrial Drives, Renewable Energy and Energy Storage Systems, Transportation Electrification and Automotive Technologies, Resilient Control Architectures for Energy Systems, Smart Building Technologies, Control Systems and Applications, Mechatronics and Robotics, AI Applications in Control, Mechatronics, and Robotics, Instrumentation, Sensors, Actuators, and Micro-Nano Technology, Cyber-Physical Systems and IoT in Industry, AI and Signal & Image Processing Methodologies, Industrial Informatics, Cloud Computing, and Big Data, Communications for Industrial and Factory Automation, Electronic System on Chip and Embedded Systems",
+  "Summary": "IEEE IECON is the flagship yearly conference of the IEEE Industrial Electronics Society, devoted to the dissemination of new ideas, research and works in progress in the fields of Robotics and Mechatronics, Power Electronics, Cybersecurity, Renewable Energy, Smart Grid, Digital Twins, AI for Industrial Processes, and Industry 5.0, among others. IECON 2025 will be held in Madrid, Spain, from October 14-17, 2025.",
+  "Call for Papers": "# IECON 2025: Call for Papers\n\nIEEE IECON is the flagship yearly conference of the IEEE Industrial Electronics Society, devoted to the dissemination of new ideas, research and works in progress in the fields of Robotics and Mechatronics, Power Electronics, Cybersecurity, Renewable Energy, Smart Grid, Digital Twins, AI for Industrial Processes, and Industry 5.0, among others.  IECON 2025 will be held in **Madrid, Spain, from October 14-17, 2025**.\n\n## IECON 2025 Program\n\nThe IECON 2025 program includes workshops, tutorials, panels, keynotes, and presentations of original research and industrial applications. IECON 2025 is organized into “IECON Green Tech”, “IECON ICT & AI in Industry”, and “IECON Integration, Control & Robotics”, covering the following technical areas:\n\n### IECON Green Tech\n\n*   Power Systems and Smart Grid\n*   Power Electronics and Energy Conversion\n*   Electric Machines and Industrial Drives\n*   Renewable Energy and Energy Storage Systems\n*   Transportation Electrification and Automotive Technologies\n*   Resilient Control Architectures for Energy Systems\n*   Smart Building Technologies\n\n### IECON ICT & AI in Industry\n\n*   Cyber-Physical Systems and IoT in Industry\n*   AI and Signal & Image Processing Methodologies\n*   Industrial Informatics, Cloud Computing, and Big Data\n*   Communications for Industrial and Factory Automation\n*   Electronic System on Chip and Embedded Systems\n\n### IECON Integration, Control & Robotics\n\n*   Control Systems and Applications\n*   Mechatronics and Robotics\n*   AI Applications in Control, Mechatronics, and Robotics\n*   Instrumentation, Sensors, Actuators, and Micro-Nano Technology\n\n## Submission Guidelines\n\nProspective authors are invited to submit their manuscript using the IEEE template and the submission system above, adhering to the following limitations:\n\n*   Up to 6 full pages, including paper title, authors and affiliations, figures and references (maximum size 2MB). Up to 2 additional pages are allowed for a fee.\n*   Only PDF files are allowed.\n\nFor accepted papers to be included in the conference proceedings and submitted for possible inclusion in the IEEE Xplore® Digital Library, the following requirements must be satisfied by the corresponding deadline:\n\n*   Submission of the final version of the paper\n*   Transfer copyright of the paper to IEEE\n*   At least one of the authors must pay full registration for the conference\n*   The paper must be presented at the conference\n\n## Important Dates\n\n*   **Early Paper Submission Due Date:** March 31, 2025\n*   **Regular Paper Submission Due Date:** April 30, 2025\n*   **Tutorial Session Proposals Due Date:** May 31, 2025\n*   **Special Session Proposals Due Date:** March 31, 2025\n*   **Panel Session Proposals Due Date:** June 5, 2025\n*   **Early Acceptance Notification for Submissions by Due Date:** May 6, 2025\n*   **Regular Acceptance Notification for Submissions by Due Date:** June 5, 2025\n*   **Final Submission and Registration Due Date:** September 1, 2025\n*   **Conference Dates:** October 14-17, 2025"
+}

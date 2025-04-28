@@ -1,0 +1,31 @@
+output:
+{
+  "Conference dates": "October 21 - 23, 2025",
+  "Year": "2025",
+  "Location": "Venue Available Soon",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Regular Papers) Paper Submission": "May 19, 2025",
+    "(Position Papers /Regular Papers) Paper Submission": "June 26, 2025",
+    "(Workshops) Workshop Proposal": "May 27, 2025",
+    "(Special Sessions) Special Session Proposal": "May 27, 2025",
+    "(Tutorials) Tutorial Proposal": "September 11, 2025",
+    "(Demos) Demo Proposal": "September 11, 2025",
+    "(Panels) Panel Proposal": "September 11, 2025",
+    "(Abstracts Track) Abstract Submission": "July 31, 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Authors Notification": "July 17, 2025",
+    "(Position Papers /Regular Papers) Authors Notification": "July 31, 2025",
+    "(Abstracts Track) Authors Notification": "September 8, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular Papers) Camera Ready and Registration": "July 31, 2025",
+    "(Position Papers /Regular Papers) Camera Ready and Registration": "September 5, 2025",
+    "(Abstracts Track) Camera Ready and Registration": "September 17, 2025"
+  },
+  "Topics": "Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, HCI in Mobile Systems and Web Interfaces",
+  "Summary": "The International Conference on Web Information Systems and Technologies (WEBIST 2025) will be held from October 21-23, 2025. WEBIST brings together researchers, engineers, and practitioners interested in the technological advances and business applications of web-based information systems.",
+  "Call for Papers": "# WEBIST 2025: Call for Papers\n\nThe International Conference on Web Information Systems and Technologies (WEBIST 2025) will be held from **October 21-23, 2025**.  The conference will be held in person, with hybrid support for remote presentations.\n\n## Scope\n\nWEBIST brings together researchers, engineers, and practitioners interested in the technological advances and business applications of web-based information systems. The conference has four main tracks, covering different aspects of Web Information Systems, namely Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, HCI in Mobile Systems and Web Interfaces.\n\nWEBIST focuses on real-world applications; therefore, authors should highlight the benefits of Web Information Systems and Technologies for industry and services, in addition to academic applications.\n\n## Conference Areas\n\n1.  **Internet Technology**\n2.  **Web Intelligence and Semantic Web**\n3.  **Social Network Analytics**\n4.  **HCI in Mobile Systems and Web Interfaces**\n\n## Paper Submission\n\nAuthors can submit their work in the form of a complete paper or an abstract. Complete papers can be submitted as a Regular Paper, representing completed and validated research, or as a Position Paper, portraying a short report of work in progress or an arguable opinion.\n\n*   Authors should submit a paper in English.\n*   To facilitate the double-blind paper evaluation method, authors are kindly requested to produce and provide the paper WITHOUT any reference to any of the authors.\n*   Only original papers should be submitted.  Submissions that contain any form of plagiarism will be rejected without reviews.\n*   All papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates.\n\n## Publications\n\nAll accepted complete papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science / Conference Proceedings Citation Index.\n\n## Important Dates\n\nAll dates refer to AOE time, i.e., \"Anywhere on Earth\"\n\n### Regular Papers\n\n*   **Paper Submission:** May 19, 2025\n*   **Authors Notification:** July 17, 2025\n*   **Camera Ready and Registration:** July 31, 2025\n\n### Position Papers / Regular Papers\n\n*   **Paper Submission:** June 26, 2025\n*   **Authors Notification:** July 31, 2025\n*   **Camera Ready and Registration:** September 5, 2025\n\n### Workshops\n\n*   **Workshop Proposal:** May 27, 2025\n\n### Special Sessions\n\n*   **Special Session Proposal:** May 27, 2025\n\n### Tutorials\n\n*   **Tutorial Proposal:** September 11, 2025\n\n### Demos\n\n*   **Demo Proposal:** September 11, 2025\n\n### Panels\n\n*   **Panel Proposal:** September 11, 2025\n\n### Abstracts Track\n\n*   **Abstract Submission:** July 31, 2025\n*   **Authors Notification:** September 8, 2025\n*   **Camera Ready and Registration:** September 17, 2025\n\n## Conference Chair\n\nMassimo Marchiori, University of Padua, Italy\n\n## Program Chair\n\nKarl Aberer, EPFL, Switzerland"
+}
+

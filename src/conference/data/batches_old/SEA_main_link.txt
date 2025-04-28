@@ -1,0 +1,177 @@
+Conference SEA:
+
+SEA 2025 
+ 23rdSymposium on Experimental Algorithms 
+ Venice, Italy, July 22-24, 2025 
+ Welcome to the website of the 23rdSymposium on Experimental Algorithm (SEA 2025) which will be held in Venice, Italy. 
+ Home 
+ Registration 
+  
+ href="call_for_papers.html" - Call for papers 
+ Program 
+ Invited speakers 
+ href="accepted_papers.html" - Accepted papers 
+ Committees 
+  
+ Venue 
+ Excursion and Dinner 
+ Accommodation 
+  
+ Workshop 
+ href="pastseas.html" - Past SEAs 
+ Important dates 
+ Paper Submission Deadline: | January 26th, 2025 | February 2nd, 2025, AoE (extended) 
+ Authors' notification: | March 24th, 2025 | March 31st, 2025 (extended) 
+ Early Registration: from April 7th, 2025 to May 31st, 2025 
+ Conference Dates: July 22-24, 2025 
+ Workshop Date: July 25, 2025 
+ Calendar 
+  
+ Contact 
+ You can contact us at:sea25-organization-grpunive[at]unive.it 
+  
+ Sponsors 
+
+REGINDEX: Compressed Indexes for Regular Languages with Applications to Computational Pan-genomics. 
+ Funded by ERC StG “REGINDEX: Compressed indexes for regular languages with applications to computational pan-genomics” grant nr 101039208. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council Executive Agency. Neither the European Union nor the granting authority can be held responsible for them. 
+ Ca' Foscari University of Venice. 
+ Pictures are provided bypexels.com 
+ href="mailto:sea25-organization-grpunive@unive.it" - Click here to contact us 
+
+Call for Papers information:
+SEA 2025 
+ 23rdSymposium on Experimental Algorithms 
+ Venice, Italy, July 22-24, 2025 
+ Home 
+ Registration 
+  
+ href="call_for_papers.html" - Call for papers 
+ Program 
+ Invited speakers 
+ href="accepted_papers.html" - Accepted papers 
+ Committees 
+  
+ Venue 
+ Excursion and Dinner 
+ Accommodation 
+  
+ Workshop 
+ href="pastseas.html" - Past SEAs 
+ Call For Papers 
+ SEA aims to attract papers from the Computer Science community, the Operations Research/Mathematical Programming community and any other scientific community that is concerned with the main theme of the symposium, namely the role of experimentation and of algorithm engineering techniques in the design and evaluation of algorithms and data structures. 
+  
+ Submissions should present significant contributions supported by experimental evaluation, methodological issues in the design and interpretation of experiments, the use of (meta-)heuristics, or application-driven case studies that deepen the understanding of the complexity of a problem. 
+  
+ Full papers must be submitted via EasyChair by:January 26th, 2025February 2nd, 2025, AoE (extended) 
+ Authors will be notified of acceptance status by:March 24th, 2025March 31st, 2025 (extended) 
+ Final version due: April 28th, 2025 
+ Topics of interest 
+ Contributions solicited cover a variety of topics including but not limited to:Algorithm Engineering 
+ Algorithmic Libraries and Software Repositories 
+ Algorithmic Cryptography and Security 
+ Algorithmic Natural Language Processing 
+ Algorithmics for Databases 
+ Analysis of Algorithms 
+ Approximation Algorithms 
+ Bioinformatics and Computational Biology 
+ Branch-and-Bound Algorithms 
+ Combinatorial Problems and Structures 
+ Communication Networks 
+ Computational Geometry 
+ Computational Optimization 
+ Compressed space algorithms and data structures 
+ Data Structures 
+ Distributed and Parallel Algorithms 
+ Graph Algorithms 
+ Heuristic Algorithms 
+ Integer Programming 
+ Logistics and Operations Management 
+ Machine Learning and Data Mining 
+ Mathematical Programming 
+ Multiple Criteria Decision Making 
+ Network Analysis 
+ Online Problems 
+ Randomized Algorithms 
+ Semidefinite Programming 
+ String Algorithms 
+ Streaming and External Memory Algorithms 
+  
+ Best Paper Award 
+ The program committee will identify a submission as the best paper. 
+  
+ Proceedings 
+ The conference proceedings will be published in the Leibniz International Proceedings in Informatics (LIPIcs), a series of high-quality conference proceedings across all fields in informatics established in cooperation with Schloss Dagstuhl Leibniz Center for Informatics. SEA Proceedings volumes are published according to the principle of OpenAccess, i.e., they are available online and free of charge. 
+  
+ Submission Guidelines 
+ The authors should submit a paper not exceeding 12 pages, excluding the bibliography, the front page (title, keywords, abstract, ...), and a brief appendix of up to 5 pages (figures and tables should be counted as part of the space occupied by the appendix). This year, for the first time in SEA,all papers have to be anonymizedso author names and affiliations cannot be included (see Double-Blind Reviewing section). Non-anonymized papers will be desk-rejected. 
+  
+ More precisely, you can see your paper as a set offour bins:front page (can only contain title, front matter, abstract, possibly the beginning of the introduction: its "bin capacity" is 1 page) 
+ main text (can contain text, tables, figures, pseudocodes: its "bin capacity" is 12 pages) 
+ bibliography pages (can only contain bibliographic references: its "bin capacity" is approximately 2 pages) 
+ additional pages (may contain text, tables, figures: its "bin capacity" is 5 pages) 
+ It is up to the authors to assign text, figures, tables, and other elements in such a way as to respect the bin capacities. 
+ Authors are required to use the LaTeX style file supplied for the LIPIcs style, without changing default values nor setting font size options in the "documentclass" statement (href="https://submission.dagstuhl.de/series/details/LIPIcs#author" - click here
+to access LIPICs instructions for authors anddownload the LaTex template). Final proceedings papers must be camera-ready in this format. We emphasize that a clearly marked Appendix of up to 5 pages, which will not count toward the 12 page submission limit, can be included and will be read at the referees' discretion. All submissions have to be made via theEasyChairsubmission page for the conference (href="https://easychair.org/conferences/?conf=sea2025" - click here
+to access the submission page). 
+  
+ Papers submitted for review should represent original, previously unpublished work or surveys of important results. At the time the paper is submitted to SEA, and for the entire review period, the paper (or essentially the same paper) should not be under review by any other conference with published proceedings or by a scientific journal.At least one authorof each accepted paper will be expected to attend the conference and present the paper. Specifically, no accepted paper will be published unless an author registers to participate in the conference. 
+  
+ Double-Blind Reviewing 
+ SEA will implement a double-blind review process for the first time. As such, submissions must not disclose the authors' identities in any way. In particular, names, affiliations, and email addresses must be excluded from the paper. Authors should reference their prior work in the third person (e.g., instead of writing "We build on our previous work...", they should write "This work builds on the research of..."). Authors should also take care of the anonymization of accompanying software and data. In particular, they cannot link software hosted on their own GitHub page, but they need to link it anonymously (for example, via DropBox). The authors can insert the public GitHub links back in the proceedings version of their papers. 
+ Authors are free to share their ideas and drafts as they usually would. For instance, they can submit to repositories like arXiv or give talks on their research. If there are publicly accessible versions of the submission, authors may mention this in the submission (without including links or citations). Alternatively, they can inform the chairs, who will keep these details confidential unless sharing them is necessary for a fair review. 
+  
+ Double-blind reviewing aims to allow program committee members and external reviewers to evaluate the paper impartially, without bias. However, it's not intended to make determining the authors' identity impossible through investigation. Authors should not compromise the submission's quality or hinder the review process in the name of anonymity; thus,key references must not be omitted or anonymized. Any authors with questions about the double-blind review process should contact the program committee chairs for clarification. All papers failing to meet anonymization requirements will be desk-rejected. 
+  
+ Large Language Models usage policy 
+ Papers containing content generated by large language models (LLMs) such as ChatGPT or images created using deep generative models (DGMs) such as StableDiffusion are not allowed, except for: 
+ Generating scientific plots displaying data that the authors obtained from experiments (for example: it is allowed to use an LLM for generating Python code that generates plots showing experimental results) 
+ Polishing the text that the authors have personally written. 
+ Despite using LLMs or DGMs, authors remain fully responsible for ensuring their submissions' accuracy, originality, and quality. We urge authors to maintain the integrity of the academic publishing process and avoid any actions that could be considered scientific misconduct, such as plagiarism and misrepresenting figures. 
+  
+ If a submission includes LLM-generated text or DGM-generated images, we require the authorsto disclose this information to the Program Chairs at the moment of submitting the paper, by checking a dedicated box on EasyChair (and providing details on how they used these models). If the Program Chairs should have concerns regarding potential scientific misconduct (which includes using such models and not declaring it, even for the allowed situations above listed), the submission may be subjected to checks for plagiarism or other violations. Any papers failing to meet these requirements will be desk-rejected, even after the review process. 
+  
+ Submission and deadlines 
+  
+ Full papers must be submitted via EasyChair by:January 26th, 2025February 2nd, 2025, AoE (extended) 
+ Authors will be notified of acceptance status by:March 24th, 2025March 31st, 2025 (extended) 
+ Final version due: April 28th, 2025 
+ Final versions of accepted papers will be submitted to Dagstuhl's Leibniz International Proceedings in Informatics (LIPIcs). Details about the submission server will be communicated to corresponding authors of accepted papers.href="mailto:sea25-organization-grpunive@unive.it" - Click here to contact us 
+
+Important Dates information:
+SEA 2025 
+ 23rdSymposium on Experimental Algorithms 
+ Venice, Italy, July 22-24, 2025 
+ Welcome to the website of the 23rdSymposium on Experimental Algorithm (SEA 2025) which will be held in Venice, Italy. 
+ Home 
+ Registration 
+  
+ href="call_for_papers.html" - Call for papers 
+ Program 
+ Invited speakers 
+ href="accepted_papers.html" - Accepted papers 
+ Committees 
+  
+ Venue 
+ Excursion and Dinner 
+ Accommodation 
+  
+ Workshop 
+ href="pastseas.html" - Past SEAs 
+ Important dates 
+ Paper Submission Deadline: | January 26th, 2025 | February 2nd, 2025, AoE (extended) 
+ Authors' notification: | March 24th, 2025 | March 31st, 2025 (extended) 
+ Early Registration: from April 7th, 2025 to May 31st, 2025 
+ Conference Dates: July 22-24, 2025 
+ Workshop Date: July 25, 2025 
+ Calendar 
+  
+ Contact 
+ You can contact us at:sea25-organization-grpunive[at]unive.it 
+  
+ Sponsors 
+
+REGINDEX: Compressed Indexes for Regular Languages with Applications to Computational Pan-genomics. 
+ Funded by ERC StG “REGINDEX: Compressed indexes for regular languages with applications to computational pan-genomics” grant nr 101039208. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council Executive Agency. Neither the European Union nor the granting authority can be held responsible for them. 
+ Ca' Foscari University of Venice. 
+ Pictures are provided bypexels.com 
+ href="mailto:sea25-organization-grpunive@unive.it" - Click here to contact us

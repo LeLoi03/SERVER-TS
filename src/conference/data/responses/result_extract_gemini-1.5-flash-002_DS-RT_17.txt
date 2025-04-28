@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "September 17 - 19, 2025",
+  "Year": "2025",
+  "Location": "Prague, Czech Republic",
+  "City-State-Province": "Prague",
+  "Country": "Czech Republic",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "May 20, 2025",
+    "special sessions": "July 20, 2025"
+  },
+  "Notification Date": {
+    "acceptance notification": "June 25, 2025"
+  },
+  "Camera-ready Date": {
+    "camera-ready": "tba"
+  },
+  "Registration Date": {
+    "author registration": "August 1, 2025"
+  },
+  "Topics": "Distributed Simulation, Real Time Applications, Metaverse, Collaborative Virtual Environments, Pervasive Applications, Ubiquitous Applications, Actuator Systems, Artificial Intelligence, Simulation Technologies, Digital Ecosystems",
+  "Publisher": "IEEE-CS press",
+  "Summary": "The 29th International Symposium on Distributed Simulation and Real Time Applications (DS-RT 2025) will be held in Prague, Czech Republic, from September 17-19, 2025.  The symposium focuses on the increasingly intersecting domains of extensive distributed simulations and real-time applications, encompassing areas like the metaverse, collaborative virtual environments, and the integration of artificial intelligence techniques.",
+  "Call for Papers": "# DS-RT 2025: Call for Papers\n\nThe 29th International Symposium on Distributed Simulation and Real Time Applications (DS-RT 2025) will be held in **Prague, Czech Republic, from September 17-19, 2025.**\n\nDS-RT provides an international forum for the discussion and presentation of original ideas, recent results, and achievements by researchers, research students, and systems developers on issues and challenges related to distributed simulation and real-time applications. Authors are encouraged to submit both theoretical and practical results of significance. Demonstration of new tools/applications is very encouraged.\n\n## Scope\n\nThe scope of the symposium includes, but is not limited to:\n\n*   Advanced Paradigms in Large Scale Distributed and Real-Time Simulations\n*   Large Scale Real-Time Systems and Concurrent Systems Design\n*   Innovative Modelling Techniques for Simulation\n*   Multi-Level, Multi-Scale, and Multi-Resolution Modeling\n*   Non-Functional Properties in Distributed Simulation and Real-Time Systems\n*   Theoretical Foundations of Real-Time and Simulation Models\n*   Large Scale Simulation Studies\n*   Performance and Validation in Large Scale Distributed Simulations\n*   Parallel and Distributed Simulation Algorithms and Methods\n*   Virtual Environments and Mixed Reality Systems in Simulation\n*   Collaborative Virtual and Augmented Reality\n*   Serious Gaming and MMOG in Simulation\n*   Human-Computer Interaction in Large Scale DS-RT Systems\n*   Artificial Intelligence and Machine Learning in Simulation\n*   Advances in Digital Twin Paradigms\n*   Intersection of Digital Twins and machine learning\n*   Role of Digital Twins in applications\n\n## Important Dates\n\n*   **Paper Submission:** May 20, 2025\n*   **acceptance notification:** June 25, 2025\n*   **camera-ready:** tba\n*   **author registration:** August 1, 2025\n*   **special sessions:** July 20, 2025\n\n## Submission\n\n[Click here to submit your paper to DS-RT 2025](https://edas.info/N33544)"
+}
+

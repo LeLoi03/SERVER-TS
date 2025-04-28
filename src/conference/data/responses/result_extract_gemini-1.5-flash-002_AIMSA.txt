@@ -1,0 +1,24 @@
+```json
+{
+  "Conference dates": "September 18 - 20, 2024",
+  "Year": "2024",
+  "Location": "Golden Sands resort, Varna, Bulgaria",
+  "City-State-Province": "Varna",
+  "Country": "Bulgaria",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Paper submission system is still opened": null
+  },
+  "Notification Date": {
+    "Deadline for acceptance is until": "August 20, 2024"
+  },
+  "Registration Date": {
+    "Deadline for registration (full papers)": "August 25, 2024",
+    "Deadline for registration (abstracts)": "August 31, 2024"
+  },
+  "Topics": "Artificial Intelligence, Intelligent Systems",
+  "Summary": "The 19th International Conference on Artificial Intelligence: Methodology, Systems, Applications (AIMSA 2024) was held in the Golden Sands resort near Varna, Bulgaria, from September 18th to 20th, 2024.  The conference is a forum for exchanging information and research results on AI theory, principles, and real-world applications of intelligent systems technology.",
+  "Call for Papers": "No call for papers available"
+}
+```

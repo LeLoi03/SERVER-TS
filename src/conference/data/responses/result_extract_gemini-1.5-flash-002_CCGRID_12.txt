@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "May 19 - 22, 2025",
+  "Year": "2025",
+  "Location": "Tromsø, Norway",
+  "City-State-Province": "Tromsø",
+  "Country": "Norway",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline paper abstract": "December 9, 2024",
+    "Deadline paper": "December 23, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "February 17, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready": "March 14, 2025"
+  },
+  "Other Date": {
+    "Workshop proposal open": "August 1, 2024",
+    "Workshop proposal due": "September 2, 2024",
+    "Workshop proposal acceptance": "October 1, 2024"
+  },
+  "Topics": "Cluster Computing, Cloud Computing, Internet Computing, Fog/Edge Computing, Internet of Things, Hardware Architecture, Networking of Data Centers, Virtualized Hardware, Open Hardware Architectures, Programming Models, Runtime Systems, Resource Management, Scheduling, Service-Oriented Architectures, IaaS, PaaS, SaaS, Monitoring and Evaluation Tools, Machine Learning, Artificial Intelligence, Workload Prediction, Application Scheduling, Resource Placement, Resilience, Internet Computing Frontiers, Future Internet, Osmotic Computing, Post- and Non-Von Neumann Computing, Quantum Computing, Sustainable IT Systems, Ultra-low Power Systems Architectures, Green Computing, Environment-Friendly Computing Ecosystems, Power, Cooling, Thermal Awareness, Green Edge, IoT, Cloud, Datacenter, Supercomputers, Data Science, Machine Learning Applications, Artificial Intelligence Applications, Cyber-physical Systems, e-Health, Internet of Things",
+  "Summary": "The IEEE International Symposium on Cluster, Cloud, and Internet Computing (CCGrid 2025) is a leading forum for disseminating and discussing research activities in distributed systems. The conference will be held in Tromsø, Norway, from May 19-22, 2025, and features keynotes, technical presentations, posters, workshops, and the SCALE challenge.",
+  "Call for Papers": "# CCGrid 2025: Call for Papers\n\nThe IEEE International Symposium on Cluster, Cloud, and Internet Computing (CCGrid 2025) will be held in **Tromsø, Norway from May 19-22, 2025**.\n\n## Topics of Interest\n\nTopics of interest range from computing Clusters to widely distributed clouds and Internet computing paradigms (like fog/edge computing for Internet of Things (IoT)), applied to societal challenges (like sustainability, security, and AI).\n\nSpecific topics of interest include, but are not limited to, the following:\n\n*   **Track 1: Hardware Systems and Networking:** hardware architecture, networking of data centers. Virtualized hardware, Open hardware architectures\n*   **Track 2: Software Systems and Platforms:** Programming models and runtime systems. Resource management and scheduling. Service-oriented architectures. IaaS, PaaS, SaaS. Monitoring and evaluation tools, analysis of system/application performance.\n*   **Track 3: Machine Learning (ML) for Systems and Systems for ML:** abstraction, architecture, design and implementation supporting machine learning and artificial intelligence applications. Use of ML/AI applications to enhance the performance of cluster, cloud and Internet-computing systems. ML/AI techniques for workload prediction. Application scheduling, resource placement, resilience in cluster, cloud and Internet-computing systems.\n*   **Track 4: Future Compute Continuum and Seamless Ecosystems:** Internet computing frontiers. Future Internet. Osmotic computing. Post- and Non-Von Neumann computing. Quantum computing.\n*   **Track 5: Sustainable IT Systems:** abstraction, architecture, design and implementation. Ultra-low power systems architectures. Optimization and analysis in green computing. Environment-friendly computing ecosystems. Power, cooling and thermal awareness. Green edge, IoT, Cloud, datacenter and supercomputers.\n*   **Track 6: Applications and Workflows:** Data science. Machine learning and artificial intelligence applications. Cyber-physical systems. e-Health. Internet of Things (IoT)-enabled smart systems and applications\n\n## Paper Submission\n\nAuthors are invited to submit papers electronically, following the links on the website.  All manuscripts will be peer-reviewed and will be evaluated on correctness, originality, technical strength, significance, quality of presentation, and relevance to the conference topics. Submissions need to be double-blinded. Authors should not reveal their identity in their submissions. References to past work need to be in a third-person form.\n\nSubmitted manuscripts should not exceed 10 letter size pages (8.5 x 11, IEEE format for conference proceedings), including figures, tables and references. Original unpublished research that is not currently under review for any other conference or journal is expected. Papers determined to be under active review elsewhere will be rejected without review. Submissions received after the due date, exceeding the length limit will not be considered.  The proceedings will be published through the IEEE Press and will be made available online through the IEEE Digital Library. When submitting the final accepted manuscript, authors may purchase up to two additional pages beyond the original 10 pages (excluding references) to address comments received from the reviewers.\n\n## Important Dates\n\nAll deadlines are Anywhere on Earth (AoE, UTC-12 timezone).\n\n*   Workshop proposal open: August 1, 2024\n*   Workshop proposal due: September 2, 2024\n*   Workshop proposal acceptance: October 1, 2024\n*   Deadline paper abstract: December 9, 2024\n*   Deadline paper: December 23, 2024\n*   Author notification: February 17, 2025\n*   Camera ready: March 14, 2025\n*   Conference date: May 19 to 22, 2025\n\n## Contact\n\n[ccgrid2025@uit.no](mailto:ccgrid2025@uit.no)"
+}
+

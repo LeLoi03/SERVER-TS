@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "May 4 - 7, 2025",
+  "Year": "2025",
+  "Location": "El Paso, TX, USA",
+  "City-State-Province": "El Paso, Texas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission deadline": "December 13, 2024",
+    "Paper submission deadline": "December 23, 2024"
+  },
+  "Notification Date": {
+    "Reviews completed and Authors notified": "February 14, 2025"
+  },
+  "Registration Date": {
+    "First day of registration": "February 17, 2025",
+    "Early registration until": "April 4, 2025",
+    "Late registration until": "May 3, 2025",
+    "Onsite registration": "May 4 - 7, 2025"
+  },
+  "Topics": "Computer Arithmetic, Integer Arithmetic, Fixed-Point Arithmetic, Floating-Point Arithmetic, Interval Arithmetic, Finite-Field Arithmetic, Novel Arithmetic Systems, Application-Specific Number Formats, Arithmetic Units, FPGA, Optical Computing, Quantum Computing, High-Performance Computing, Low-Power Computing, Fault-Tolerant Computing, Design Tools, Methodologies, Testing, Formal Verification, Computer Approximations, Elementary Functions, Special Functions, Arithmetic Algorithms, Numerical Software, Cryptography, Security, Artificial Intelligence, Machine Learning, Deep Learning, Signal Processing, Multimedia, Computer Graphics",
+  "Publisher": "IEEE",
+  "Summary": "The 32nd IEEE International Symposium on Computer Arithmetic (ARITH 2025) will be held in El Paso, TX, USA, from May 4-7, 2025. The conference serves as the flagship conference for presenting scientific work on the latest research in computer arithmetic.",
+  "Call for Papers": "# ARITH 2025: Call for Papers\n\nThe 32nd IEEE International Symposium on Computer Arithmetic (ARITH 2025) will be held in **El Paso, TX, USA, from May 4-7, 2025**.\n\nARITH 2025 welcomes submissions of conference papers describing recent scientific advances related to computer arithmetic. Papers under review elsewhere are not acceptable for submission.\n\n## Submission Guidelines\n\n*   Submissions must be in English and made through the EasyChair website: [https://easychair.org/conferences/?conf=arith2025](https://easychair.org/conferences/?conf=arith2025)\n*   Submissions for full papers should not exceed 8 pages (no extra pages) using the IEEE Computer Society Conference format (two columns), while short and industry papers should not exceed 4 pages (no extra pages). For review purposes, full papers may be submitted with up to 20 pages, and short/industry papers with up to 10 pages, using 12pt font size, single column, and double spacing.\n*   For formatting instructions, please refer to: [http://www.ieee.org/conferences_events/conferences/publishing/templates.html](http://www.ieee.org/conferences_events/conferences/publishing/templates.html)\n*   The review process is double-blind. Author names, affiliations, and grants must be anonymized in submitted papers and self-references should be handled as third-party references. Papers not complying with this policy will be administratively rejected.\n\n## Topics of Interest\n\nTopics of interest include, but are not restricted to:\n\n*   Arithmetic foundations, systems, and formats\n*   Novel arithmetic systems and application-specific number formats\n*   Implementation of arithmetic\n*   High-performance, low-power, and fault-tolerant designs and implementations\n*   Design tools and methodologies, including testing and formal verification\n*   Algorithms and numerics\n*   Application-specific arithmetic\n*   All topics that relate to intensive use of computer arithmetic are welcome\n\n## Important Dates\n\n*   **Abstract submission deadline:** December 13, 2024\n*   **Paper submission deadline:** December 23, 2024\n*   **Reviews completed and Authors notified:** February 14, 2025\n\n## Publication\n\nAccepted papers will be presented at the conference and included in the conference proceedings and in the IEEE Xplore Digital Library."
+}
+

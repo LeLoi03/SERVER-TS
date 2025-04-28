@@ -1,0 +1,43 @@
+output:
+{
+  "Conference dates": "March 3 - 7, 2025",
+  "Year": "2025",
+  "Location": "Dublin, Ireland",
+  "City-State-Province": "Dublin",
+  "Country": "Ireland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Track) Full / Short Submission Deadline": "September 23, 2024",
+    "(Practitioner Reports) Practitioner Submission Deadline": "October 7, 2024",
+    "(Poster / Demos) Poster/Demo Submission Deadline": "November 4, 2024",
+    "(Doctoral Consortium & Leadership Academy) DC & Leadership Academy Submission Deadline": "October 7, 2024",
+    "(Workshops / Tutorials) Workshop/Tutorial Submission Deadline": "September 9, 2024",
+    "(Workshops / Tutorials) Submission Deadline for papers to individual workshops": "December 4, 2024"
+  },
+  "Notification Date": {
+    "(Research Track) Notification of Acceptance": "November 22, 2024",
+    "(Practitioner Reports) Notification of Acceptance": "November 22, 2024",
+    "(Poster / Demos) Notification of Acceptance": "December 2, 2024",
+    "(Doctoral Consortium & Leadership Academy) Notification of Acceptance": "November 22, 2024",
+    "(Workshops / Tutorials) Notification of Acceptance for workshop organization": "September 30, 2024",
+    "(Workshops / Tutorials) Notification of Acceptance for papers submitted to individual workshops": "December 20, 2024"
+  },
+  "Camera-ready Date": {
+    "(Research Track) Deadline for camera ready": "December 13, 2024",
+    "(Practitioner Reports) Deadline for camera ready": "December 20, 2024",
+    "(Poster / Demos) Deadline for camera ready": "December 20, 2024",
+    "(Doctoral Consortium & Leadership Academy) Deadline for camera ready": "December 20, 2024",
+    "(Workshops / Tutorials) Deadline for camera ready (Workshop organizer proposal docs)": "January 8, 2025"
+  },
+  "Other Date": {
+    "(Research Track) Rebuttal submission open": "October 28, 2024",
+    "(Research Track) Deadline for rebuttals": "November 4, 2024",
+    "Early-bird registration closes at 11:59pm AOE": "January 20, 2025"
+  },
+  "Topics": "Learning Analytics, Teaching, Learning, Training, Development, Artificial Intelligence, Ethical Issues, Data Analysis, Data Visualization, Educational Data Mining, Data Fusion, Generative AI, Responsible Data Use, Analytics, Privacy Protection, Trustworthy Analytics,  Human-centered design",
+  "Publisher": "ACM",
+  "Summary": "The 2025 edition of the International Conference on Learning Analytics & Knowledge (LAK25) will take place in Dublin, Ireland, from March 3-7, 2025.  Organized by the Society for Learning Analytics Research (SoLAR) with Technological University Dublin (TU Dublin), LAK25 is a collaborative effort by researchers and practitioners to share the most rigorous cutting-edge work in learning analytics. The theme for the 15th annual LAK conference is \"Expanding the Horizons of Learning Analytics.\"",
+  "Call for Papers": "# LAK25: Call for Papers\n\nThe 2025 edition of the International Conference on Learning Analytics & Knowledge (LAK25) will take place **in-person in Dublin, Ireland, from March 3-7, 2025.**\n\n## Conference Theme\n\n**Expanding the Horizons of Learning Analytics**\n\n## Tracks\n\nLAK25 is accepting submissions to the following tracks:\n\n*   Research Track\n*   Practitioner Track\n*   Posters & Demos\n*   Workshops & Tutorials Track (Pre-Conference)\n*   Leadership Academy (Pre-Conference)\n*   Doctoral Consortium (Pre-Conference)\n\n## Research Track\n\nThe focus is on advancing scholarly knowledge in learning analytics through rigorous reports of research studies. Submission types include:\n\n*   **Full research papers:** (up to 16 pages in ACM 1-column format, including references)\n*   **Short research papers:** (up to 10 pages in ACM 1-column format, including references)\n\n## Practitioner Track\n\nThe practitioner track provides a way to share real-world learning analytics implementations. Submissions should reflect on the context and purpose of the initiative, discuss implementation, outcomes, impacts, and learning, and consider implications for others.  Submissions are encouraged from anyone regardless of institutional role.  The submission should be a 2-4 page document using the SoLAR companion proceedings template ([https://www.solaresearch.org/wp-content/uploads/2024/05/LAK25_Companion_Proceedings_Template.docx](https://www.solaresearch.org/wp-content/uploads/2024/05/LAK25_Companion_Proceedings_Template.docx)).\n\n## Posters & Demos\n\n*   **Posters:** (3 pages, SoLAR companion proceedings template)\n*   **Interactive demos:** (200 words abstract + 5 min video)\n\n## Workshops & Tutorials Track (Pre-Conference)\n\n*   **Workshops:** (4 pages, SoLAR companion proceedings template)\n*   **Tutorials:** (4 pages, SoLAR companion proceedings template)\n\n## Important Dates\n\nAll LAK25 deadlines are 11:59 pm AOE.\n\n### Research Track\n\n*   Full / Short Submission Deadline: September 23, 2024\n*   Rebuttal submission open: October 28, 2024\n*   Deadline for rebuttals: November 4, 2024\n*   Notification of Acceptance: November 22, 2024\n*   Deadline for camera ready: December 13, 2024\n\n### Practitioner Reports\n\n*   Practitioner Submission Deadline: October 7, 2024\n*   Notification of Acceptance: November 22, 2024\n*   Deadline for camera ready: December 20, 2024\n\n### Poster / Demos\n\n*   Poster/Demo Submission Deadline: November 4, 2024\n*   Notification of Acceptance: December 2, 2024\n*   Deadline for camera ready: December 20, 2024\n\n### Doctoral Consortium & Leadership Academy\n\n*   DC & Leadership Academy Submission Deadline: October 7, 2024\n*   Notification of Acceptance: November 22, 2024\n*   Deadline for camera ready: December 20, 2024\n\n### Workshops / Tutorials\n\n*   Workshop/Tutorial Submission Deadline: September 9, 2024\n*   Notification of Acceptance for workshop organization: September 30, 2024\n*   Submission Deadline for papers to individual workshops: December 4, 2024\n*   Notification of Acceptance for papers submitted to individual workshops: December 20, 2024\n*   Deadline for camera ready (Workshop organizer proposal docs): January 8, 2025\n\n### Conference and Registration Dates\n\n*   Early-bird registration closes at 11:59 pm AOE: January 20, 2025\n*   LAK25 conference, Dublin, Ireland: March 3-7, 2025"
+}
+

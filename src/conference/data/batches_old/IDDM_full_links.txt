@@ -1,0 +1,186 @@
+Conference full name: International Conference on Informatics & Data-Driven Medicine (IDDM)
+
+1. Website of IDDM_2: https://ceur-ws.org/Vol-3892/
+Website information of IDDM_2:
+
+Vol-3892 
+ urn:nbn:de:0074-3892-5Copyright © 2024 for the individual papers by the papers' authors. Copyright ©2024for the volume as a collection by its editors. This volume and its papers are published under the Creative Commons License Attribution 4.0 International(CC BY 4.0). 
+
+href="https://science.lpnu.ua/iddm-2024" - IDDM 2024
+ 
+ Informatics & Data-Driven Medicine 2024 
+  
+ Proceedings of the 7th International Conference on Informatics & Data-Driven Medicine 
+ Birmingham, United Kingdom, November 14-16, 2024. 
+  
+ Edited byNataliia Shakhovska* 
+ Jianbo Jiao** 
+ Ivan Izonin*** 
+ Stephane Chretien**** 
+ *Lviv Polytechnic National University, Institute of Computer Science and Information Technologies, 28a Bandery St., Building 5, Lviv, Ukraine 
+ **University of Birmingham, School of Computer Science, Edgbaston, Birmingham, B15 2TT, United Kingdom 
+ ***Lviv Polytechnic National University, Institute of Computer Science and Information Technologies, 28a Bandery St., Building 5, Lviv, Ukraine 
+ ****Université Lumiere Lyon 2, Faculty of Anthropology, Sociology and Political Science, 5 avenue Pierre Mendès-France Campus Porte des Alpes - Lyon 69676, France 
+
+Table of Contents 
+ Preface | Summary: There were | 82 | papers submitted for peer-review to this workshop. Out of these, | 31 | papers were accepted for this volume, | 23 | as regular papers and | 8 | as short papers. 
+  
+ Session 1 
+ Comparative Analysis of Convolutional Neural Networks and Rulebased Techniques for Epileptic Seizure Detection From Electroencephalograph Signals Using a Text Classification Approach | 1-10 | Temitayo Balogun | , | Olufemi Akinyede | , | Sanuel Faluyi 
+ A Hybrid Inductive Model for Gene Expression Data Processing Using Spectral Clustering | 11-19 | Sergii Babichev | , | Oleg Yarema | , | Ihor Liakh 
+ Improving Unsupervised Graph-Based Skull Stripping: Enhancements and Comparative Analysis With State-Of-The-Art Methods | 20-31 | Maria Popa | , | Anca Andreica 
+ The Method of Intelligent Classification Based on Deep Associative Neural Networks | 32-46 | Eugene Fedorov | , | Tetyana Utkina | , | Olga Nechyporenko | , | Maryna Leshchenko | , | Kostiantyn Rudakov | , | Ihor Zubko 
+ Learning With Small Data: What Can Be Inferred From Small Samples? | 47-56 | Serge Dolgikh | , | Oksana Mulesa | , | Volodymyr Sabadosh 
+ Multiresolution Analysis of Poor Remote Photoplethysmography Signal Using Wavelet Transform | 57-72 | Ihor Berezhnyi | , | Adrian Nakonechnyi 
+ Microservices-Based Architecture for Biomedical Image Processing Software | 73-80 | Oleh Berezsky | , | Oleh Pitsun | , | Grygory Melnyk | , | Hanna Poperechna 
+ Method of Patients’ Data Protection on the Instance of Chemotherapy Dosing Data for Ewing’s Sarcoma Treatment | 81-91 | Yurii Baryshev | , | Vladyslava Lanova 
+ Intelligent Advisory Innovative Framework of Enhanced Doctor‐Patient Interaction for Healthcare Providers | 92-101 | Oles Telikhovskyi | , | Roman Komarnytsky | , | Vasyl Koval | , | Khrystyna Lipianina‐Honcharenko | , | Vitaliy Dorosh | , | Mykola Telka 
+ Application of Explainable AI to Healthcare: A Review | 102-114 | Samuel Gbenga Faluyi | , | Yousra Chabchoub | , | Maurras Togbe | , | Jérémie Sublime 
+ Simulation of Influenza Dynamics With Lstm Deep Learning Model | 115-125 | Mykola Butkevych | , | Ievgen Meniailov | , | Kseniia Bazilevych | , | Yurii Parfeniuk | , | Dmytro Chumachenko 
+ Web-Based Melanoma Detection System Using Convolutional Neural Networks and Advanced Image Processing | 126-143 | Sebastian Górecki | , | Wiktoria Duszczyk | , | Zuzanna Huda | , | Andrzej Faryna | , | Aleksandra Tatka 
+ Automated Radiology Report Generation From Chest X-Ray Images Using Chexnet and Transformer-Lstm Architecture | 144-159 | Mohamed Adel | , | Mohamed Aborizka 
+ Software for Anomaly Detection in MRI Images | 160-170 | Yurii Oliinyk | , | Mariia Kapshuk | , | Leonid Oliinyk 
+ Resource-Efficient Solutions for Data Security at the Network Level of the Medical Internet of Things | 171-182 | Inna Rozlomii | , | Andrii Yarmilko | , | Serhii Naumenko 
+ Session 2 
+ A Self-Supervised Learning Approach for Detecting Brca Mutations in Breast Cancer Histopathological Images | 183-195 | Faycal Touazi | , | Djamel Gaceb | , | Chaima Belkadi | , | Besma Loubar 
+ Detection of Stress Using Photoplethysmography | 196-202 | Yaroslav Strelchuk | , | Alina Nechyporenko | , | Marcus Frohme | , | Vitaliy Gargin | , | Andrii Lupyr | , | Victoriia Alekseeva 
+ Ensemble Deep Learning of CNN vs Vision Transformers for Brain Lesion Classification on MRI Images | 203-219 | Norelhouda Laribi | , | Djamel Gaceb | , | Fayçal Touazi | , | Abdellah Rezoug | , | Abdelmoumen Sahad | , | Massine Omar Reggai 
+ Optimization of Medical Logistics With Bee Colony Algorithms in Emergency, Military Conflict and Post-war Remediation Settings | 220-235 | Tetiana Cherniavska | , | Bohdan Cherniavskyi | , | Tamar Sanikidze | , | Alexander Sharashenidze | , | Magda Tortladze | , | Maka Buleishvili 
+ Modeling and Numerical Analysis of the Effects of Chemotherapy on the State of a Cancerous Tumour Based on Fractional-Order Derivatives | 236-250 | Yaroslav Sokolovskyy | , | Olesia-Oksana Vilchynska | , | Andrii Mokrytskyi 
+ href="paper18.pdf" - Research of Algorithms Based on Fractional Differential Derivatives for Improving Medical Images | 251-267 | Yaroslav Sokolovskyy | , | Volodymyr Bereziuk | , | Mariana Levkovych | , | Mykhailo Paslavskyi 
+ Artificial Intelligence-Based Method for Face Skin Diagnostic | 268-278 | Olga Pavlova | , | Vitalii Alekseiko | , | Vladyslav Karabaieva | , | Andrii Kuzmin 
+ Cloud-Based Approach on Genetic Data Imputation Parameters Optimization | 279-286 | Pavlo Horun | , | Chirstine Strauss 
+ Internet of Robotic Things (IoRT) Approach to Lifelong Learning and Medical Education With Internet of Medical Things (IoMT) | 287-294 | Roman Hasko | , | Oleksandra Hasko | , | Hakan Kutucu 
+ Development and Analysis of a Parallel Method for Detecting Chromosomal Translocations and Inversions in DNA Sequences | 295-303 | Lesia Mochurad | , | Renata Vladyka 
+ MentSDet: Concept of Mobile-Oriented Multimodal Information System for Determining the Patient's Mental State | 304-318 | Tetiana Hovorushchenko | , | Olha Hovorushchenko | , | Anatolii Korol | , | Valentyna Hnenna | , | Artem Boyarchuk 
+ Architecture-Oriented Agent-Based Model (AOAM) for Optimizing Transport Evacuation Management and Emergency Medical Assistance in the Context of the War in Ukraine: Challenges and Prospects | 319-336 | Tetiana Cherniavska | , | Bohdan Cherniavskyi 
+ Graph-Based Approaches for Multimodal Medical Data Processing | 337-348 | Iryna Dymun | , | Oleh Basystiuk | , | Andriy Dumyn 
+ Synthesis of Biomedical Images Based on Generative Intelligence Tools | 349-362 | Oleh Berezsky | , | Petro Liashchynskyi | , | Grygoriy Melnyk | , | Maksym Dombrovskyi | , | Mykola Berezkyi 
+ Exploring the Role of Transformer-Based Language Models in Medical Transcript Summarization | 363-370 | Mariia Zimokha | , | Kyrylo Yemets 
+ Development and Modeling of Parameter Areas of an Information System for Rehabilitation | 371-378 | Solomiia Liaskovska | , | Yevgen Martyn | , | Andy Augousti | , | Svytoslav Kytsara 
+ Session 3 
+ Artificial Intelligence in Medicine: Small Data Approach | 379 | Ivan Izonin | , | Roman Tkachenko | , | Iryna Pliss | , | Yaroslav Tolstyak | , | Kyrylo Yemets | , | Olha Chala | , | Myroslav Havryliuk | , | Stephane Chretien 
+ 2024-11-17: submitted by Ivan Izonin, metadata incl. bibliographic data published underCreative Commons CC0 
+ 2025-01-07: published on CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073) |valid HTML5|
+
+2. Website of IDDM_2: https://science.lpnu.ua/iddm-2024
+Website information of IDDM_2:
+
+Skip to main contentAcademic Journals and ConferencesToggle navigationLogin 
+ href="/iddm-2024" - Eng 
+ Укр 
+ November 14 - 16, 2024 
+ 7th International Conference on Informatics & Data-Driven Medicine 
+ IDDM 2024 
+ University of Birmingham, Birmingham, United Kingdom 
+ 01.10.2024 (All day)Paper submission deadline 
+ 02.11.2024 (All day)Notification of acceptance 
+ 06.11.2024 (All day)Camera-ready submission 
+ 14.11.2024 - 10:00Official Opening IDDM 2024 
+ The 7thInternational Conference onInformatics & Data-Driven Medicine(IDDM 2024) will be held November 14-16, 2024 at the University of Birmingham, Birmingham, United Kingdom 
+ The conference is organized by: 
+ University of Birmingham, United Kingdom 
+ Lviv Polytechnic National University, Lviv, Ukraine 
+ University Lumière Lyon 2, Lyon, France 
+ National University "Zaporizhzhia Polytechnic", Zaporizhzhia, Ukraine 
+ Polytechnic University of Valencia, Valencia, Spain 
+ Linnaeus University, Växjö, Sweden 
+ Slovak University of Technology in Bratislava, Bratislava, Slovakia 
+ State Institution «Kundiiev Institute of Occupational Health of the National Academy of Medical Sciences of Ukraine» 
+ The IDDM focuses on all technical and practical aspects of the latest research and results of international academics, scientists, and medical practitioners related to intellectual medical data processing topics. This conference provides opportunities to exchange new ideas, establish business or research relations, and find global partners for future collaboration. We hope that the conference results significantly contribute to the development of Data-Driven Health Care in the world. 
+ Proceedings of the IDDM'2024 shall be submitted toCEUR-WS.orgfor online publication. 
+ Due to the COVID’2019 pandemic,theIDDM conference took the form of onlinepresentation by invited keynote speakers plus presentations of peer-reviewed individual papers. 
+ SPONSORS 
+ Blackthorn AI is recognized as a leading AI software development company by independent expert organizations. We specialize in full-cycle software product development in Life Sciences, Healthcare, and FinTech. 
+ href="http://twitter.com/share?url=https%3A//science.lpnu.ua/iddm-2024&count=horizontal&via=&text=7th%20International%20Conference%20on%20Informatics%20%26%20Data-Driven%20Medicine&counturl=science.lpnu.ua/iddm-2024" - Tweet Widget 
+ href="/iddm-2024/about-sonference" - About the Сonference 
+ href="/iddm-2024/conference-topics" - Conference Topics 
+ Program Committee 
+ Organizing Committee 
+ href="/iddm-2024/submission" - Submission 
+ href="/iddm-2024/registration" - Registration 
+ href="/iddm-2024/iddm-proceedings" - IDDM Proceedings 
+ href="/iddm-2024/journals" - Journals 
+ href="/iddm-2024/contact" - Contact 
+ Previous Conferences 
+ href="/iddm-2018" - IDDM 2018
+href="/iddm-2019" - IDDM 2019
+href="/iddm-2020" - IDDM 2020
+href="/iddm-2021" - IDDM 2021
+href="/iddm-2022" - IDDM 2022
+href="/iddm-2023" - IDDM 2023
+ORGANIZERS 
+ University of Birmingham 
+ (United Kingdom) 
+ Lviv Polytechnic National University 
+ (Lviv, Ukraine) 
+ University Lumière Lyon 2 
+ (Lyon, France) 
+ National University "Zaporizhzhia Polytechnic" 
+ (Zaporizhzhia, Ukraine) 
+ Polytechnic University of Valencia 
+ (Valencia, Spain) 
+ Linnaeus University 
+ (Växjö, Sweden) 
+ Slovak University of Technology in Bratislava 
+ (Bratislava, Slovakia) 
+ State Institution «Kundiiev Institute of Occupational Health of the National Academy of Medical Sciences of Ukraine» 
+ (Kyiv, Ukraine) 
+ © Academic Journals and Conferences, 2025.
+
+3. Website of IDDM_2: https://science.lpnu.ua/iddm-2023
+Website information of IDDM_2:
+
+Skip to main contentAcademic Journals and ConferencesToggle navigationLogin 
+ href="/iddm-2023" - Eng 
+ Укр 
+ November 17 - 19, 2023 
+ 6th International Conference on Informatics & Data-Driven Medicine 
+ IDDM 2023 
+ Bratislava, Slovakia 
+ 01.10.2023 (All day)Paper submission deadline 
+ 02.11.2023 (All day)Notification of acceptance 
+ 06.11.2023 (All day)Camera-ready submission 
+ 17.11.2023 - 10:00Official Opening IDDM 2023 
+ The 6thInternational Conference onInformatics & Data-Driven Medicine(IDDM 2023) will be held in Slovak University of Technology in Bratislava (STU), Bratislava, Slovakia. 
+ The conference is organized by: 
+ Slovak University of Technology in Bratislava, Bratislava, Slovakia 
+ Lviv Polytechnic National University, Lviv, Ukraine 
+ University Lumière Lyon 2, Lyon, France 
+ National University "Zaporizhzhia Polytechnic", Zaporizhzhia, Ukraine 
+ Polytechnic University of Valencia, Valencia, Spain 
+ Linnaeus University, Växjö, Sweden 
+ The IDDM focuses on all technical and practical aspects of the latest research and results of international academics, scientists and medical practitioners related to intellectual medical data processing topics. This conference provides opportunities to exchange new ideas, to establish business or research relations and to find global partners for future collaboration. We hope that the conference results make a significant contribution to the development of Data-Driven Health Care in the world. 
+ Proceedings of the IDDM'2023 shall be submitted toCEUR-WS.orgfor online publication. 
+ Due to the COVID’2019 pandemic, IDDM conference took the form of online-presentation by invited keynote speakers plus presentations of peer-reviewed individual papers. 
+ href="http://twitter.com/share?url=https%3A//science.lpnu.ua/iddm-2023&count=horizontal&via=&text=6th%20International%20Conference%20on%20Informatics%20%26%20Data-Driven%20Medicine&counturl=science.lpnu.ua/iddm-2023" - Tweet Widget 
+ href="/iddm-2023/about-sonference" - About the Сonference 
+ href="/iddm-2023/conference-topics" - Conference Topics 
+ Program Committee 
+ Organizing Committee 
+ href="/iddm-2023/submission" - Submission 
+ href="/iddm-2023/registration" - Registration 
+ href="/iddm-2023/iddm-proceedings" - IDDM Proceedings 
+ href="/iddm-2023/journals" - Journals 
+ href="/iddm-2023/contact" - Contact 
+ Previous Conferences 
+ href="/iddm-2018" - IDDM 2018
+href="/iddm-2019" - IDDM 2019
+href="/iddm-2020" - IDDM 2020
+href="/iddm-2021" - IDDM 2021
+href="/iddm-2022" - IDDM 2022
+Organizers 
+  
+ Slovak University of Technology in Bratislava 
+  
+ Lviv Polytechnic National University 
+  
+ University Lumière Lyon 2, Lyon, France 
+  
+ Polytechnic University of Valencia 
+  
+ National University "Zaporizhzhia Polytechnic", Lviv, Ukraine 
+  
+ Linnaeus University, Växjö, Sweden 
+ © Academic Journals and Conferences, 2025.
+

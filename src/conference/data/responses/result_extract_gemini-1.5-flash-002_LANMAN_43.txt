@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "July 7 - 8, 2025",
+  "Year": "2025",
+  "Location": "Lille, France",
+  "City-State-Province": "Lille",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "April 12, 2025"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "May 4, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Submission": "May 30, 2025"
+  },
+  "Topics": "Local and Metropolitan Area Networks, 5G and 6G cellular data networking, AI and machine learning for local and metropolitan area networking, Cloud computing, Edge computing, Fog computing, Datacenter networks, Energy efficiency for local and metropolitan area networking, Information-centric networking, Information security, Intelligent routing, Forwarding, Scheduling, Machine-to-machine communication, Networking designs for AI and ML, Networking for online education and entertainment, Networking protocols, Architectures for the IoTs, Network transport mechanisms for latency reduction, Network virtualization, Network Digital Twins (NDTs), AI/ML, Network verification using AI/ML, NetOps and AI/ML, Network security and AI/ML, Performance and reliability, Public safety networks, Self-learning network architectures, Software-defined networking, Wireless access technologies, Satellite networks",
+  "Publisher": "IEEE",
+  "Summary": "The IEEE International Symposium on Local and Metropolitan Area Networks (LANMAN 2025) will be held from July 7 to 8, 2025, in Lille, France. LANMAN is a forum for presenting and discussing the latest technical advances in local and metropolitan area networking. The theme for 2025 is “Networking and Computing under AI.”",
+  "Call for Papers": "# IEEE LANMAN 2025: Call for Papers\n\nThe 31st IEEE LANMAN (LANMAN 2025) will be held from **July 7 to 8, 2025, in Lille, France.**\n\nIEEE LANMAN has an established tradition as a forum for presenting and discussing the latest technical advances in local and metropolitan area networking. LANMAN 2025 invites cutting-edge papers spanning both theory and experimentation.\n\n## Theme\n\n**Networking and Computing under AI**\n\n## Topics of Interest\n\nPapers are solicited on any topic in networking, including, but not limited to:\n\n*   5G and 6G cellular data networking\n*   AI and machine learning for local and metropolitan area networking\n*   AI and machine learning for network measurement and traffic analysis\n*   Cloud, edge, and fog computing integration\n*   Co-existence and heterogeneity support at the edge (HetNets)\n*   Datacenter networks\n*   Energy efficiency for local and metropolitan area networking\n*   Information-centric networking in local and metropolitan areas\n*   Information security for local and metropolitan area networking\n*   Intelligent routing, forwarding, and scheduling\n*   Machine-to-machine communication\n*   Networking designs for AI and ML\n*   Networking for online education and entertainment\n*   Networking protocols and architectures for the IoTs\n*   Network and transport mechanisms for latency reduction\n*   Network virtualization in local and metropolitan areas\n*   Network Digital Twins (NDTs) and AI/ML\n*   Network verification using AI/ML\n*   NetOps and AI/ML\n*   Network security and AI/ML\n*   Performance and reliability of local and metropolitan area networks\n*   Public safety networks\n*   Self-learning network architectures\n*   Software-defined networking in local and metropolitan areas\n*   Wireless access technologies\n*   Satellite networks and their integration with terrestrial network infrastructure\n*   Network protocols and architectures\n\n## Submission Guidelines\n\nIEEE LANMAN 2025 solicits paper submissions of papers up to 6 pages. Short papers up to 2 pages are also solicited on work-in-progress ideas. Some regular paper submissions may be accepted as short papers (2 pages) by the TPC. The page limits include all figures, tables, and references. All papers must be electronically submitted in PDF according to the guidelines in the symposium website ([http://www.ieee-lanman.org](http://www.ieee-lanman.org)). The proceedings will be published in IEEE Xplore and will include both short and regular papers presented at the symposium. A best paper award will be awarded.\n\n## Important Dates\n\n*   **Paper Submission:** April 12, 2025 (23:59 EDT)\n*   **Acceptance Notification:** May 4, 2025\n*   **Camera-ready Submission:** May 30, 2025\n*   **Conference Dates:** July 7-8, 2025\n\n## Keynote Speakers\n\n*   Michalis Faloutsos, UC Riverside\n*   Edward W. Knightly, Rice University\n*   Stefano Secci, Conservatoire national des arts et métiers, France\n\n## Tutorial Speaker\n\n*   Kai-Kit Wong, University College London, UK"
+}
+

@@ -1,0 +1,60 @@
+output:
+{
+  "Conference dates": "September 1 - 5, 2025",
+  "Year": "2025",
+  "Location": "Valencia, Spain",
+  "City-State-Province": "Valencia",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(RE@Next! Papers) Full Paper Submission": "April 7, 2025",
+    "(Industrial Innovation Track) Paper Submission": "April 7, 2025",
+    "(Tutorials) Proposal": "April 28, 2025",
+    "(Journal-First) Submission": "April 28, 2025",
+    "(Student Volunteers) Application Submission": "May 2, 2025",
+    "(Doctoral Symposium) Submission": "June 5, 2025",
+    "(Posters and Tool Demos) Submission": "June 12, 2025",
+    "(Artifacts) Submission": "June 16, 2025",
+    "(Research Papers) Full Paper Submission": "March 10, 2025",
+    "(Workshops) Workshop papers due": "June 9, 2025",
+    "(RE@Next! Papers) Abstract Submission": "March 24, 2025",
+    "(Industrial Innovation Track) Abstract Submission": "March 24, 2025",
+    "(Workshops) Workshop CfP ready": "March 17, 2025",
+    "(Research Papers) Abstract submission": "March 3, 2025",
+    "(Workshops) Workshop summary (for website) sent to Workshop Co-chairs": "March 3, 2025",
+    "(Workshops) Notification of workshop submitters": "February 17, 2025",
+    "(Workshops) Workshop proposals": "January 22, 2025",
+    "(RE Open Data Initiative) Submission deadline": "December 17, 2024"
+  },
+  "Notification Date": {
+    "(Tutorials) Notification": "May 12, 2025",
+    "(Research Papers) Notification": "May 23, 2025",
+    "(Journal-First) Notification": "May 26, 2025",
+    "(Student Volunteers) Application Notification": "May 30, 2025",
+    "(RE@Next! Papers) Notification": "June 2, 2025",
+    "(Industrial Innovation Track) Notification": "June 2, 2025",
+    "(Workshops) Workshop paper notification": "July 7, 2025",
+    "(Artifacts) Notification": "July 7, 2025",
+    "(Posters and Tool Demos) Notification": "June 30, 2025",
+    "(Doctoral Symposium) Notification": "June 24, 2025",
+    "(RE Open Data Initiative) Author notification": "December 23, 2024"
+  },
+  "Camera-ready Date": {
+    "(Research Papers) Camera Ready": "June 23, 2025",
+    "(RE@Next! Papers) Camera Ready": "June 30, 2025",
+    "(Industrial Innovation Track) Camera Ready": "June 30, 2025",
+    "(Posters and Tool Demos) Camera Ready": "July 7, 2025",
+    "(Doctoral Symposium) Camera Ready": "July 7, 2025",
+    "(Workshops) Workshop paper camera-ready": "July 18, 2025",
+    "(Workshops) Workshop preface / extended keynote abstract camera-ready": "July 18, 2025"
+  },
+  "Other Date": {
+    "(Artifacts) Rebuttal period": "June 30 - July 4, 2025",
+    "(Workshops) Workshop Papers info to workshop chairs & web chairs": "July 10, 2025"
+  },
+  "Topics": "Requirements Engineering, Requirements Elicitation, Requirements Analysis, Requirements Prioritization, Requirements Documentation, Requirements Validation, Requirements Evolution, Requirements Maintenance, Software Engineering, AI, DevOps, Sustainability, Security, Personalization, Agile Practices",
+  "Summary": "Requirements Engineering 2025 (RE'25) will be held in Valencia, Spain, from September 1-5, 2025.  This premier conference brings together researchers, practitioners, students, and educators to present and discuss innovations, trends, experiences, and issues in requirements engineering.  The theme for RE'25 is “Future-proofing Requirements Engineering”.",
+  "Call for Papers": "# RE 2025: Call for Papers\n\nThe 33rd IEEE International Requirements Engineering 2025 conference (RE’25) will be held in **Valencia, Spain from September 1-5, 2025**.\n\n## Theme\n\nThis year’s theme is **“Future-proofing Requirements Engineering”**. This theme focuses on innovating requirements engineering by embracing AI, DevOps, sustainability, security, personalization, and agile practices. It aims to equip professionals with the tools and methodologies needed to address the evolving challenges and opportunities in software development, ensuring robust, user-centric, and adaptable systems. As we navigate an increasingly diverse world, we also encourage reflections on how requirements engineering can recognize and respond to the varying needs of a global and heterogeneous user base.\n\n## Research Track\n\nThe RE’25 Research Track is the main track of the conference. It welcomes original research papers focusing on traditional areas of requirements engineering, as well as new ideas which challenge the boundaries of the field.  This track invites original submissions of research papers in two categories:\n\n*   **Solution-focused Papers:** Present novel or significantly improved solutions for requirements-related problems.\n*   **Evaluation-focused Papers:** Empirically assess phenomena, theories, or real-world artifacts relevant to requirements engineering.\n\n## Submission Instructions\n\nPapers must be submitted electronically in PDF format via the RE’25 EasyChair system: [https://easychair.org/my/conference?conf=re25](https://easychair.org/my/conference?conf=re25).  Select the RE’25 Research Track for your submission.\n\nAll authors who intend to submit a paper must first submit the title and abstract. Abstracts should describe explicit coverage of context, objectives, methods, and results and conclusions, and should not exceed 200 words.\n\nPapers must not exceed 10 pages for the main body and up to 2 additional pages for the references. Submissions must be written in English and formatted according to the IEEE formatting instructions. Submissions must be double-blinded.\n\nPapers that exceed the length specification, are not formatted correctly, or are not properly double-blinded will be desk-rejected without review. Only full paper submissions will be peer-reviewed. Abstract-only submissions will be discarded without further notice after the submission deadline. Accepted papers may require editing for clarity prior to publication and presentation. They will appear in the IEEE Digital Library.\n\n## Important Dates\n\nAll deadlines are AoE (UTC-12h)\n\n*   **Research Papers:**\n    *   Abstract submission: March 3, 2025\n    *   Full Paper Submission: March 10, 2025\n    *   Notification: May 23, 2025\n    *   Camera Ready: June 23, 2025\n*   **RE@Next! Papers:**\n    *   Abstract Submission: March 24, 2025\n    *   Full Paper Submission: April 7, 2025\n    *   Notification: June 2, 2025\n    *   Camera Ready: June 30, 2025\n*   **Industrial Innovation Track:**\n    *   Abstract Submission: March 24, 2025\n    *   Paper Submission: April 7, 2025\n    *   Notification: June 2, 2025\n    *   Camera Ready: June 30, 2025\n*   **Workshops:**\n    *   Workshop proposals: January 22, 2025\n    *   Notification of workshop submitters: February 17, 2025\n    *   Workshop CfP ready: March 17, 2025\n    *   Workshop summary (for website): March 3, 2025\n    *   Workshop paper abstracts due (optional): June 2, 2025\n    *   Workshop papers due: June 9, 2025\n    *   Workshop paper notification: July 7, 2025\n    *   Workshop Papers info to workshop chairs & web chairs: July 10, 2025\n    *   Workshop paper camera-ready: July 18, 2025\n    *   Workshop preface / extended keynote abstract camera-ready: July 18, 2025\n*   **Tutorials:**\n    *   Proposal: April 28, 2025\n    *   Notification: May 12, 2025\n*   **Doctoral Symposium:**\n    *   Submission: June 5, 2025\n    *   Notification: June 24, 2025\n    *   Camera Ready: July 7, 2025\n*   **New Faculty Symposium:**\n    *   Submission: To be announced\n    *   Notification: To be announced\n    *   Camera Ready: To be announced\n*   **Artifacts:**\n    *   Submission: June 16, 2025\n    *   Rebuttal period: June 30 - July 4, 2025\n    *   Notification: July 7, 2025\n*   **Posters and Tool Demos:**\n    *   Submission: June 12, 2025\n    *   Notification: June 30, 2025\n    *   Camera Ready: July 7, 2025\n*   **RE Open Data Initiative:**\n    *   Submission deadline: December 17, 2024\n    *   Author notification: December 23, 2024\n*   **Student Volunteers:**\n    *   Application Submission: May 2, 2025\n    *   Application Notification: May 30, 2025\n\n## New from RE’25: RE Open Data Initiative\n\nRE’25 launches the RE Open Data Initiative.  Data will be released between December 2024 and the beginning of January 2025. For more information, click [here](https://conf.researchr.org/track/RE-2025/RE-2025-re-open-data-initiative).\n\n## Open Science Policy\n\nRE 2025 Research Track has an open science policy with the steering principle that all research results should be accessible to the public and, if possible, empirical studies should be reproducible. Sharing research data is not mandatory for submission or acceptance. However, sharing is expected to be the default, and non-sharing needs to be justified.\n\n## AI Generated Content\n\nConcerning AI-generated content, authors should adopt the IEEE Policy: [https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/](https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/)\n\n## Program Committee Co-Chairs\n\n*   Alessio Ferrari, CNR-ISTI, Italy\n*   Norbert Seyff, University of Applied Sciences and Arts Northwestern Switzerland FHNW, Switzerland"
+}
+

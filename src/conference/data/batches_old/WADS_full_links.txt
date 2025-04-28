@@ -1,0 +1,461 @@
+Conference full name: Algorithms and Data Structures Symposium (WADS)
+
+1. Website of WADS_3: https://www.wads.org/
+Website information of WADS_3:
+
+The Algorithms and Data Structures Symposium (WADS) which alternates with theScandinavian Symposium on Algorithm Theory (SWAT), is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. 
+ We invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas, including combinatorics, computational geometry, databases, graphics, and parallel and distributed computing. 
+ Upcoming Conference 
+  
+ href="https://cccg-wads-2025.eecs.yorku.ca/Home.html" - WADS 2025 - Toronto, ON 
+ Past Conferences 
+  
+ Conference | Proceedings Link 
+ href="https://wadscccg2023.encs.concordia.ca/" - WADS 2023 - Montreal, QC | LNCS 14079 
+ href="https://projects.cs.dal.ca/wads2021/" - WADS 2021 - Halifax, NS | LNCS 12808 
+ href="2019/Home/index.html" - WADS 2019 - Edmonton, AB | LNCS 11646 
+ href="2017/Home/index.html" - WADS 2017 - St. John's, NL | LNCS 10389 
+ href="https://wads2015.cs.uvic.ca/" - WADS 2015 - Victoria, BC | LNCS 9214 
+ WADS 2013 - London, ON | LNCS 8037 
+ WADS 2011 - New York, NY | LNCS 6844 
+ WADS 2009 - Banff, AB | LNCS 5664 
+ WADS 2007 - Halifax, NS | LNCS 4619 
+ WADS 2005 - Waterloo, ON | LNCS 3608 
+ WADS 2003 - Ottawa, ON | LNCS 2748 
+ WADS 2001 - Providence, RI | LNCS 2125 
+ WADS 1999 - Vancouver, BC | LNCS 1663 
+ WADS 1997 - Halifax, NS | LNCS 1272 
+ WADS 1995 - Kingston, ON | LNCS 955 
+ WADS 1993 - Montreal, QC | LNCS 709 
+ WADS 1991 - Ottawa, ON | LNCS 519 
+ WADS 1989 - Ottawa, ON | LNCS 382 
+ Steering Committee 
+ Sergio Cabello 
+ David Eppstein 
+ Magnús M. Halldórsson 
+ Anna Lubiw 
+ Pat Morin | , chair 
+ Denis Pankratov 
+ Mohammad R. Salavatipour 
+ Subhash Suri
+
+2. Website of WADS_3: https://projects.cs.dal.ca/wads2021/
+Website information of WADS_3:
+
+Skip to contenthref="https://projects.cs.dal.ca/wads2021/" - WADS 2021
+Main Menuhref="https://projects.cs.dal.ca/wads2021" - Home 
+ href="https://projects.cs.dal.ca/wads2021/submission/" - Submission 
+ href="https://projects.cs.dal.ca/wads2021/registration/" - Registration 
+ href="https://projects.cs.dal.ca/wads2021/program/" - Program 
+ href="https://projects.cs.dal.ca/wads2021/invited-speakers/" - Invited Speakers 
+ href="https://projects.cs.dal.ca/wads2021/proceedings/" - Proceedings 
+ href="https://projects.cs.dal.ca/wads2021/local-information/" - Local Information 
+ href="https://projects.cs.dal.ca/wads2021/code-of-conduct/" - Code of Conduct 
+ href="https://projects.cs.dal.ca/wads2021/category/news/" - Blog 
+ 17th Algorithms and Data Structures Symposium 
+ August 9-11, 2021, Halifax, Nova Scotia, Canada 
+ Welcome 
+ Thehref="http://www.wads.org/" - Algorithms and Data Structures Symposium
+, WADS, which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory, SWAT, is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. 
+ We invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas, including combinatorics, computational geometry, databases, graphics, and parallel and distributed computing. 
+ WADS participates inSafeToCand is committed to preventing and combatting harassment in the Theory of Computing community. The ToC advocates for WADS are Faith Ellen and Stephane Durocher. For further information see thehref="https://projects.cs.dal.ca/wads2021/code-of-conduct/" - Code of Conduct
+page. 
+ WADS 2021, the 17th Algorithm and Data Structures Symposium, is planned for August 9-11, 2021. The symposium willmost likelybe fully online.It may have an in-person component, which will be held atDalhousie University, Halifax, Nova Scotia, Canada. This depends on the covid-19 situation. In any case, authors of accepted papers who cannot attend in person will be able to give their talks online. 
+ CCCG 2021, the 33rd Canadian Conference on Computational Geometry, is planned for August 10-12 at the same location. 
+ Recent News 
+ href="https://projects.cs.dal.ca/wads2021/the-best-student-presentation-award/" - The Best Student Presentation Award | 20 August 2021 
+ href="https://projects.cs.dal.ca/wads2021/thanks-for-participation-and-the-access-codes-for-the-proceedings/" - Thanks for Participation and the Access Codes for the Proceedings | 13 August 2021 
+ href="https://projects.cs.dal.ca/wads2021/the-conference-proceedings-are-available/" - The Conference Proceedings are Available | 6 August 2021 
+ href="https://projects.cs.dal.ca/wads2021/the-conference-program-is-out/" - The Conference Program is Out | 18 July 2021 
+ href="https://projects.cs.dal.ca/wads2021/registration-open/" - Registration Open | 12 July 2021 
+ Important Dates 
+  
+ Paper submission deadline | February 20, 2021, 23:59 anywhere on earth (UTC -12) 
+ Acceptance/rejection notification | April 13, 2021 
+ Camera-ready version due | May 21, 2021 
+ Symposium | August 9-11, 2021 
+ Invited Speakers 
+ Vida Dujmović, University of Ottawa 
+ Ola Svensson, EPFL 
+ The abstracts of the invited talks arehref="https://projects.cs.dal.ca/wads2021/invited-speakers/" - available
+. 
+ Program Committee 
+ Chairs 
+ Meng He, Dalhousie University, Canada (local arrangements) 
+ Anna Lubiw, University of Waterloo, Canada 
+ Mohammad Salavatipour, University of Alberta, Canada 
+  
+ Mohammad Ali Abam, Sharif University of Technology, Iran 
+ Ahmad Biniaz, University of Windsor, Canada 
+ Anthony Bonato, Ryerson University, Canada 
+ Parinya Chalermsook, Aalto University, Finland 
+ Steven Chaplick, Maastricht University, Netherlands 
+ Giordano Da Lozzo, Roma Tre University, Italy 
+ Khaled Elbassioni, Khalifa University, Abu Dhabi, United Arab Emirates 
+ Ruy Fabila-Monroy, CINVESTAV, Mexico 
+ Moran Feldman, University of Haifa, Israel 
+ Travis Gagie, Dalhousie University, Canada 
+ Pinar Heggernes, University of Bergen, Norway 
+ Zhiyi Huang, University of Hong Kong, Hong Kong 
+ John Iacono, Université Libre de Bruxelles, Belgium 
+ Shahin Kamali, University of Manitoba, Canada 
+ Matya Katz, Ben-Gurion University of the Negev, Israel 
+ Guohui Lin, University of Alberta, Canada 
+ href="https://www.microsoft.com/en-us/research/people/brlucier/" - Brendan Lucier
+, Microsoft Research, USA 
+ Pat Morin, Carleton University, Canada 
+ Yakov Nekrich, Michigan Technological University, USA 
+ Yoshio Okamoto, University of Electro-Communications, Japan 
+ Denis Pankratov, Concordia University, Canada 
+ Venkatesh Raman, Institute of Mathematical Sciences, Chennai, India 
+ href="https://research.tue.nl/en/persons/laura-sanit%C3%A0" - Laura Sanita
+, Eindhoven University of Technology, Netherlands 
+ Jose Soto, University of Chile, Chile 
+ He Sun, University of Edinburgh, Scotland, UK 
+ Dimitrios Thilikos, Université de Montpellier, France 
+ Aravindan Vijayaraghavan, Northwestern University, USA 
+ Carola Wenk, Tulane University, USA 
+ Sponsors 
+ Copyright © 2025WADS 2021- the 17th Algorithm and Data Structures Symposium 
+ Thebanner image of Halifax harbor sunsetwas transformed from the photography work of Tony Webster. Both the original work and the banner are licensed under the terms of thecc-by-sa-2.0. 
+ Scroll to Top
+
+3. Website of WADS_3: https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html
+Website information of WADS_3:
+
+Skip to main content 
+ Skip to navigation 
+ href="Home.html" - CCCG/WADS 2025
+Home 
+ href="CCCG%202025.html" - CCCG 2025 | href="Call%20for%20Papers_1.html" - Call for Papers 
+ href="Dates.html" - Dates 
+ Program Committee 
+ href="Submission_1.html" - Submission 
+ PhD Dissertation Award 
+ href="WADS%202025.html" - WADS 2025 | href="Call%20for%20Papers.html" - Call for Papers 
+ href="Dates_1.html" - Dates 
+ Program Committee 
+ href="Submission.html" - Submission 
+ Registration 
+ Local Information 
+ href="Home.html" - CCCG/WADS 2025
+Home 
+ href="CCCG%202025.html" - CCCG 2025 | href="Call%20for%20Papers_1.html" - Call for Papers 
+ href="Dates.html" - Dates 
+ Program Committee 
+ href="Submission_1.html" - Submission 
+ PhD Dissertation Award 
+ href="WADS%202025.html" - WADS 2025 | href="Call%20for%20Papers.html" - Call for Papers 
+ href="Dates_1.html" - Dates 
+ Program Committee 
+ href="Submission.html" - Submission 
+ Registration 
+ Local Information 
+ More | Home 
+ href="CCCG%202025.html" - CCCG 2025 | href="Call%20for%20Papers_1.html" - Call for Papers 
+ href="Dates.html" - Dates 
+ Program Committee 
+ href="Submission_1.html" - Submission 
+ PhD Dissertation Award 
+ href="WADS%202025.html" - WADS 2025 | href="Call%20for%20Papers.html" - Call for Papers 
+ href="Dates_1.html" - Dates 
+ Program Committee 
+ href="Submission.html" - Submission 
+ Registration 
+ Local Information 
+ August 11 - 15, 2025 
+ WADS 2025 
+ York University, Toronto 
+  
+ WADS 2025 
+  
+ The Algorithms and Data Structures Symposium, WADS, which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory, SWAT, is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. 
+ We invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas including, but not limited to: approximation algorithms, parametrized algorithms, distributed algorithms, parallel algorithms, external-memory algorithms, data structures, computational geometry and topology, exponential time algorithms, online algorithms, randomized algorithms, streaming algorithms, sub-linear algorithms. The algorithmic problems considered may be motivated by applications, e.g. in optimization, graph analysis, bioinformatics, visualization, string processing, information retrieval, machine learning, algorithmic game theory, or mechanism design. 
+ A list of previous editions of WADS can be found athref="http://wads.org/" - http://wads.org/
+ 
+ href="Call%20for%20Papers.html" - Call for Papers 
+ href="Dates_1.html" - Important Dates 
+ Program Committee 
+ href="Submission.html" - Submission 
+ WADS 2025 - Call for Papers 
+  
+ The Algorithms and Data Structures Symposium, WADS, which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory, SWAT, is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. 
+ WADS 2025 will take place August 11-15, 2025 at York University in Toronto, Canada. CCCG 2025, the 37th Canadian Conference on Computational Geometry, is planned for August 11-15 at the same location. 
+ We invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas, including, but not limited to: approximation algorithms, parametrized algorithms, distributed algorithms, parallel algorithms, external-memory algorithms, data structures, computational geometry and topology, exponential time algorithms, online algorithms, randomized algorithms, streaming algorithms, sub-linear algorithms. The algorithmic problems considered may be motivated by applications, e.g. in optimization, graph analysis, bioinformatics, visualization, string processing, information retrieval, machine learning, algorithmic game theory, or mechanism design. 
+ WADS participates in SafeToC and is committed to preventing and combatting harassment in the Theory of Computing community. The ToC advocate for WADS is Pat Morin. Authors who submit papers will have an opportunity to declare a conflict of interest with potential reviewers. 
+ WADS 2025 will have a Best Paper award in memory of Alejandro Lopez-Ortiz and a Best Student Presentation award. The paper that receives the memorial award will be presented in a non-parallel time slot. The best student presentation will be chosen by a subset of the program committee with input from session chairs. 
+ Important Dates 
+ (All times are 23:59 Anywhere on Earth) 
+ Abstract registration deadline:February 21, 2025 
+ Submission deadline: February 21, 2025 
+ Notification date:April 15, 2025 
+ Submission 
+ All papers must be original and not simultaneously submitted to another journal or conference. Contributors are invited to submit a full paper in LIPIcs format. The title, abstract, and body of the paper may not exceed 12 pages, and the total length, including references, may not exceed 14 pages. An appendix beyond the 14 pages may be added and may be read at the reviewers’ discretion. Submissions will be handled through EasyChair 
+ All questions about submissions should be emailed to the program chairs,Pat MorinandEunjin Oh. 
+ href="https://easychair.org/conferences/?conf=wads2025" - https://easychair.org/conferences/?conf=wads2025 
+ Program Committee 
+  
+ Davide Bilò, University of L'Aquila 
+ Ahmad Biniaz, University of Windsor 
+ Gerth Stolting Brodal, Aarhus University 
+ Yixin Cao, Hong Kong Polytechnic University 
+ Jean Cardinal, Université libre de Bruxelles 
+ Leah Epstein, University of Haifa 
+ Zachary Friggstad, University of Alberta 
+ Paweł Gawrychowski, University of Wrocław 
+ Sandor Kisfaludi-Bak, Aalto University 
+ Hung Le, University of Massachusetts Amherst 
+ Pranabendu Misra, Chennai Mathematical Institute 
+ Joseph Mitchell, Stony Brook University 
+ Pat Morin, Carleton University (co-chair) 
+ Martin Nollenburg, Technische Universitat Wien 
+ Andre Nusser, Inria Center at Universite Cote dAzur 
+ Eunjin Oh, Pohang University of Science and Technology (co-chair) 
+ Denis Pankratov, Concordia University 
+ Eric Ruppert, York University 
+ Kunihiko Sadakane, University of Tokyo 
+ Rodrigo I. Silveira, Universitat Politècnica de Catalunya 
+ Michiel Smid, Carleton University 
+ Frank Staals, Utrecht University 
+ href="https://research.tue.nl/en/persons/leonidas-theocharous" - Leonidas Theocharous
+, Eindhoven University of Technology 
+ Csaba D. Toth, California State University Northridge 
+ Jie Xue, New York University Shanghai 
+ Sebastian Wiederrecht, KAIST 
+ Lena Yuditsky, Université libre de Bruxelles 
+ Organizing Committee 
+ Shahin Kamali, York University, Toronto, Canada 
+ Eric Ruppert, York University, Toronto, Canada 
+ ©2025 Shahin Kamali
+
+4. Website of WADS_3: https://research.com/conference/wads-2021-algorithms-and-data-structures-symposium
+Website information of WADS_3:
+
+Most Affordable CollegesMost Affordable CollegesAffordable PhD ProgramsAffordable Online Masters ProgramsAffordable Online Bachelor Degree ProgramsAffordable Online CollegesAffordable Online Colleges for MilitaryBusiness & ManagementAffordable Online MBA ProgramsAffordable Online Business DegreeAffordable Online Accounting Degree ProgramsAffordable Online Master's in AccountingAffordable Doctoral Programs in LeadershipTechnology ProgramsAffordable Online Computer Science DegreeAffordable Online Engineering DegreeAffordable Online Data Science MastersAffordable Online Cyber Security DegreeCheapest MLIS Degree OnlineEducation ProgramsAffordable Online Education DegreeAffordable Online Master's in TeachingAffordable Online Elementary Education DegreeAffordable Online Colleges for Early Childhood EducationHealthcare ProgramsCheapest Online MHA ProgramsAffordable Online MBA in Healthcare ManagementAffordable Online Healthcare Administration DegreeAffordable Online Public Health DegreeMore Affordable Online ProgramsAffordable Online Speech Pathology ProgramsAffordable Online MSW ProgramsAffordable MFA OnlineAffordable Online Criminal Justice DegreeNursing programsCheapest RN to BSN OnlineAffordable Online Nursing ProgramsAffordable Online Nurse Practitioner ProgramsAffordable Online FNP ProgramsMore Affordable Online ProgramsAffordable Online Psychology DegreeAffordable Online Counseling DegreeAffordable Online Substance Abuse Counseling DegreeAffordable Online MBA Programs No GMATCheapest Online Master's in Human ResourcesAffordable Online Executive MBA ProgramsCheapest BCBA Online ProgramsAffordable Online Master's Programs in CounselingAffordable Christian Counseling DegreeCollege RankingsOnline CollegesBest College MajorsOnline PhD ProgramsHighest Paying Bachelor DegreesEasy Degrees That Pay WellMasters DegreeComputer ScienceAccelerated Online Computer Science DegreeBest Online Computer Science DegreeBest Cyber Security Courses OnlineMIS DegreeIs a Computer Science Degree Worth It?PsychologyForensic Psychology DegreeBest Online Psychology DegreeOnline PsyD ProgramsOnline Masters in PsychologyDoctorate in PsychologySubstance Abuse Counselor DegreeMasters in Educational PsychologyIs a Psychology Degree Worth It?Criminal Psychology DegreeBest Accelerated Psychology Degree OnlineNursingBest Online LPN ProgramsBest Online Nursing ProgramsLPN to RN ProgramsADN to NP ProgramsAccelerated Nurse Practitioner ProgramsBest Online Nurse Practitioner ProgramsBusinessBest Business Masters DegreesOnline Business DegreeBest Online Construction Management DegreeOnline Masters in Finance1 Year Master's Programs OnlineTypes of Business Masters DegreesEducationBest Online Masters in EducationDoctorate Degree in EducationMaster's Degree in EducationEducational Leadership Doctoral Programs OnlineBest Online Physical Education DegreeSocial WorkAccelerated MSW ProgramsBest Online Social Work DegreeLCSW Online ProgramsOnline MSW Programs No GRE RequiredMasters Degree in Social Work OnlineBest Online MBA ProgramsBest Accelerated MBA ProgramsOnline MBA Programs CostBest MBA Acceptance RatesHow Hard is it to Get an MBAMBA in Information TechnologyIs an Online MBA Worth It?Best Accelerated MBA Programs OnlineBest Online Executive MBA ProgramsEasiest Online MBA ProgramsPopular Degree ProgramsBest Doctorate Degree Online no DissertationBest Degrees That Make the Most MoneyBest Online Certificate Programs That Pay WellBest Online Degree ProgramsAccelerated Online Degree Programs for Working AdultsAccredited Self-Paced Online Colleges?Easiest Online Degrees That Pay WellEasiest College MajorsBest Associate DegreesAdditional DegreesLibrary Science DegreeSupply Chain Management DegreeFinance DegreeAccredited Online Counseling ProgramsCyber Security DegreeBest Online Graphic Design DegreeHistory DegreeHuman Resources DegreeBest Online Nutrition DegreeNutrition DegreeLogistics DegreeBest Library Science Degree OnlineHuman Services DegreeBookkeeping CertificationMasters in Forensic AccountingCareer ResourcesCareer PlanningLogistics CareersDo You Need a Psychology Degree to Be a TherapistHighest Paying Psychology JobsCriminal Justice CareersLCSW Salary by StateNursingAccredited Online Medical Billing And Coding SchoolsBecome A Medical Assistant In 6 WeeksBest States For NursesForensic NurseHow Much Does Nursing School CostBusiness CareersAccounting CareersForensic Accounting CareersBusiness Administration CareersHealthcare Administration CareersBusiness Management CareersPsychology CareersCognitive Psychology CareersBehavioral Psychology CareersOrganizational Psychology CareersCareers in Addiction RecoveryChild and Adolescent PsychologyComputer Science CareersInformation Systems CareersSoftware Engineering Career PathBest Online Medical Coding CoursesLibrary Science CareersData Scientist Career PathCareers in EducationEducational Leadership CareersChild Development CareersCareers in Special EducationCareers in Higher EducationTeaching CareersMBA CareersMBA in Healthcare Management SalaryMBA Career Paths and SalariesWhat Can I Do With a Business Degree in HealthcareIs an MBA Worth It in 2024?Can I Get an MBA Without a Business DegreeCounseling CareersHow to Become a Christian CounselorHow to Become a Mental Health CounselorSocial Work vs. CounselingCareer In Substance Abuse And Addictions CounselingHow to Become a CounselorPopular CareersBiotechnology CareersSustainability CareersGerontology CareersCriminology CareersBiology CareersEKG TechnicianTrade School Programs That Pay WellSocial Work CareersHow to Become a School Social WorkerMacro Social Work CareersHow to Become a Medical Social WorkerHow to Become a Social WorkerSocial Worker Career PathColleges by StateBest Business SchoolsBusiness Schools in TexasBusiness Schools in CaliforniaBusiness Schools in FloridaBusiness Schools in GeorgiaBusiness Schools in OhioBest Online MBA ProgramsOnline MBA Programs in TexasOnline MBA Programs in CaliforniaOnline MBA Programs in FloridaOnline MBA Programs in MichiganOnline MBA Programs in OhioBest MSW ProgramsMSW Programs in TexasMSW Programs in CaliforniaMSW Programs in FloridaMSW Programs in New YorkMSW Programs in OhioBest Psychology SchoolsPsychology Schools in TexasPsychology Schools in CaliforniaPsychology Schools in FloridaPsychology Schools in GeorgiaPsychology Schools in OhioBest Online Psychology DegreesOnline Psychology Degree in TexasOnline Psychology Degree in CaliforniaOnline Psychology Degree in FloridaOnline Psychology Degree in GeorgiaOnline Psychology Degree in OhioHow to Become a PsychologistHow to Become a Psychologist in TexasHow to Become a Psychologist in CaliforniaHow to Become a Psychologist in FloridaHow to Become a Psychologist in GeorgiaHow to Become a Psychologist in OhioBest Nursing SchoolsNursing Schools in TexasNursing Schools in CaliforniaNursing Schools in FloridaNursing Schools in GeorgiaNursing Schools in OhioBest Online Nursing ProgramsOnline Nursing Programs in TexasOnline Nursing Programs in CaliforniaOnline Nursing Programs in FloridaOnline Nursing Programs in GeorgiaOnline Nursing Programs in OhioHow to Become a Social WorkerHow to Become a Social Worker in TexasHow to Become a Social Worker in CaliforniaHow to Become a Social Worker in FloridaHow to Become a Social Worker in New YorkHow to Become a Social Worker in MassachusettsBest Accounting SchoolsAccounting Schools in TexasAccounting Schools in CaliforniaAccounting Schools in FloridaAccounting Schools in GeorgiaAccounting Schools in OhioBest Nurse Practitioner ProgramsNurse Practitioner Programs in TexasNurse Practitioner Programs in CaliforniaNurse Practitioner Programs in FloridaNurse Practitioner Programs in GeorgiaNurse Practitioner Programs in OhioBest Online LPN/LVN ProgramsOnline LPN Programs in DelawareOnline LPN Programs in FloridaOnline LPN Programs in MissouriOnline LPN Programs in NCOnline LPN Programs in New JerseyOnline LPN Programs in NYOnline LPN Programs in OhioOnline LPN Programs in PAOnline LPN Programs in South CarolinaOnline LPN Programs in VirginiaOnline LVN Programs in CaliforniaOnline LVN Programs in TexasHow to Become a CounselorHow to Become a Counselor in TexasHow to Become a Counselor in CaliforniaHow to Become a Counselor in FloridaHow to Become a Counselor in GeorgiaHow to Become a Counselor in OhioHow to Become a Counselor in ArizonaHow to Become a Counselor in ColoradoHow to Become a Counselor in IndianaHow to Become a Counselor in MichiganHow to Become a Counselor in MissouriHow to Become a Counselor in NevadaHow to Become a Counselor in New JerseyHow to Become a Counselor in New MexicoHow to Become a Counselor in OregonHow to Become a Counselor in South CarolinaHow to Become a Counselor in UtahHow to Become a Counselor in WashingtonBest ScholarsBEST SCIENTISTS BY DISCIPLINEAnimal Science and VeterinaryBiology and BiochemistryBusiness and ManagementChemistryComputer ScienceEarth ScienceEcology and EvolutionEconomics and FinanceElectronics and Electrical EngineeringEngineering and TechnologyEnvironmental SciencesGeneticsImmunologyLawMaterials ScienceMathematicsMechanical and Aerospace EngineeringMedicineMicrobiologyMolecular BiologyNeurosciencePhysicsPlant Science and AgronomyPolitical SciencePsychologySocial Sciences and HumanitiesTOP GLOBALSBest Female ScientistsBest ScientistsRising StarsBest UniversitiesBEST UNIVERSITIES BY DISCIPLINEAnimal Science and VeterinaryBiology and BiochemistryBusiness and ManagementChemistryComputer ScienceEarth ScienceEcology and EvolutionEconomics and FinanceElectronics and Electrical EngineeringEngineering and TechnologyEnvironmental SciencesGeneticsImmunologyLawMaterials ScienceMathematicsMechanical and Aerospace EngineeringMedicineMicrobiologyMolecular BiologyNeurosciencePhysicsPlant Science and AgronomyPolitical SciencePsychologySocial Sciences and HumanitiesGLOBAL RANKINGSBest UniversitiesBest Universities in AustraliaBest Universities in CanadaBest Universities in GermanyBest Universities in JapanBest Universities in United KingdomBest Universities in FranceBest Universities in IndiaBest Universities in ChinaBest Universities in BrazilRanking & Metricshref="#tab-2" - Conference Call for Papers
+Home 
+ Best Conferences - Computer Science 
+ WADS 2021 : Algorithms and Data Structures Symposium 
+ WADS 2021 : Algorithms and Data Structures Symposium 
+ Halifax, Canada 
+ Submission Deadline:Saturday 20 Feb 2021Conference Dates:Aug 09, 2021 - Aug 09, 2021Research 
+ Impact Score13.30 
+ href="https://projects.cs.dal.ca/wads2021/" - OFFICIAL WEBSITE
+Conference Organizers: Deadline extended? 
+ Click here to editRanking & MetricsImpact Score is a novel metric devised to rank conferences based on the number of contributing the best scientists in addition to the h-index estimated from the scientific papers published by the best scientists. See more details onour methodology page.Research Impact Score:13.30Contributing Best Scientists:675H5-index:Papers published by Best Scientists1003Research Ranking(Computer Science)21Research Ranking(Computer Science)23Research Ranking(Computer Science)34Conference Call for Papers 
+ CALL FOR PAPERS 
+
+WADS 2021 
+
+Algorithms and Data Structures Symposium 
+
+August 9-11, 2021 
+  
+ Dalhousie University, Halifax, Nova Scotia, Canada 
+
+The Algorithms and Data Structures Symposium, WADS, which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory, SWAT, is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. 
+
+We invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas, including combinatorics, computational geometry, databases, graphics, and parallel and distributed computing. 
+
+Contributors are invited to submit a full paper in Springer LNCS format. The title, abstract, and body of the paper may not exceed 12 pages and the total length including references may not exceed 14 pages. An appendix, beyond the 14 pages, may be added and may be read at the reviewers' discretion. Please format your paper in the Springer Lecture Notes style available here: http://www.springer.de/comp/lncs/authors.html. 
+  
+ Submissions will be handled through EasyChair https://easychair.org/conferences/?conf=wads2021 
+  
+ For further information, see the WADS 2021 website https://projects.cs.dal.ca/wads2021/ 
+
+WADS participates in SafeToC http://safetoc.org and is committed to preventing and combatting harassment in the Theory of Computing community. The ToC advocates for WADS are Faith Ellen and Stephane Durocher. Authors who submit papers will have an opportunity to declare a conflict of interest with potential reviewers. See the WADS web page for further details on Conflict of Interest https://projects.cs.dal.ca/wads2021/code-of-conduct/. 
+
+WADS 2021 will have a best paper award in memory of Alejandro Lopez-Ortiz, and a best all-student paper award. The conference proceedings will be published in the Springer Verlag series Lecture Notes in Computer Science. Two special issues of papers selected from WADS are planned for the journals Algorithmica and Computational Geometry: Theory and Applications. 
+
+WADS 2021 is planned for August 9-11, 2021. The symposium will most likely be fully online. It may have an in-person component, which will be held at Dalhousie University, Halifax, Nova Scotia, Canada. This depends on the covid-19 situation. In any case, authors of accepted papers who cannot attend in person will be able to give their talks online. 
+
+CCCG 2021, the 33rd Canadian Conference on Computational Geometry, is planned for August 10-12 at the same location. 
+
+IMPORTANT DATES 
+
+Paper submission deadline February 20, 2021, 23:59 anywhere on earth (UTC -12) 
+  
+ Acceptance/rejection notification April 13, 2021 
+  
+ Camera-ready version due May 21, 2021 
+  
+ Symposium August 9-11, 2021 
+
+INVITED SPEAKERS 
+
+Vida Dujmović, University of Ottawa 
+  
+ Ola Svensson, EPFL 
+
+PROGRAM COMMITTEE 
+
+Chairs 
+  
+ Meng He, Dalhousie University, Canada (local arrangements) 
+  
+ Anna Lubiw, University of Waterloo, Canada 
+  
+ Mohammad Salavatipour, University of Alberta, Canada 
+
+Mohammad Ali Abam, Sharif University of Technology, Iran 
+  
+ Ahmad Biniaz, University of Windsor, Canada 
+  
+ Anthony Bonato, Ryerson University, Canada 
+  
+ Parinya Chalermsook, Aalto University, Finland 
+  
+ Steven Chaplick, Maastricht University, Netherlands 
+  
+ Giordano Da Lozzo, Roma Tre University, Italy 
+  
+ Khaled Elbassioni, Khalifa University, Abu Dhabi, United Arab Emirates 
+  
+ Ruy Fabila-Monroy, CINVESTAV, Mexico 
+  
+ Moran Feldman, University of Haifa, Israel 
+  
+ Travis Gagie, Dalhousie University, Canada 
+  
+ Pinar Heggernes, University of Bergen, Norway 
+  
+ Zhiyi Huang, University of Hong Kong, Hong Kong 
+  
+ John Iacono, Université Libre de Bruxelles, Belgium 
+  
+ Shahin Kamali, University of Manitoba, Canada 
+  
+ Matya Katz, Ben-Gurion University of the Negev, Israel 
+  
+ Guohui Lin, University of Alberta, Canada 
+  
+ Brendan Lucier, Microsoft Research, USA 
+  
+ Pat Morin, Carleton University, Canada 
+  
+ Yakov Nekrich, Michigan Technological University, USA 
+  
+ Yoshio Okamoto, University of Electro-Communications, Japan 
+  
+ Denis Pankratov, Concordia University, Canada 
+  
+ Venkatesh Raman, Institute of Mathematical Sciences, Chennai, India 
+  
+ Laura Sanita, Eindhoven University of Technology, Netherlands 
+  
+ Jose Soto, University of Chile, Chile 
+  
+ He Sun, University of Edinburgh, Scotland, UK 
+  
+ Dimitrios Thilikos, Université de Montpellier, France 
+  
+ Aravindan Vijayaraghavan, Northwestern University, USA 
+  
+ Carola Wenk, Tulane University, USA 
+ Overview 
+ Top Research Topics at Workshop on Algorithms and Data Structures? 
+ Combinatorics (55.41%) 
+ Discrete mathematics (25.58%) 
+ Algorithm (20.81%) 
+ The conference mainly deals with areas of study such as Combinatorics, Discrete mathematics, Algorithm, Time complexity and Set (abstract data type). It investigates Combinatorics research which frequently intersects with Upper and lower bounds. The study on Discrete mathematics presented is investigated in conjunction with research in Bounded function. 
+ Some problems in Algorithm that were presented in it overlapped with concepts under Mathematical optimization and Data structure. The research on Mathematical optimization discussed in Workshop on Algorithms and Data Structures draws on the closely related field of Competitive analysis. The work on Competitive analysis addressed in the event expands to the thematically related Online algorithm. 
+ Set (abstract data type) research discussed connects with the study of Plane (geometry). 
+ What are the most cited papers published at the conference? 
+ Secure Multi-party Computational Geometry (190 citations) 
+ Visibility-Based Pursuit-Evasion in a Polygonal Environment (177 citations) 
+ The buffer tree: A new technique for optimal I/O-algorithms (157 citations) 
+ Research areas of the most cited articles at Workshop on Algorithms and Data Structures: 
+ The conference papers are organized to reinforce research efforts on Combinatorics, Algorithm, Discrete mathematics, Time complexity and Approximation algorithm. The conference papers address concerns in Combinatorics which are intertwined with other disciplines, such as Set (abstract data type) and Constant (mathematics). Upper and lower bounds and Data structure are some topics wherein Algorithm research discussed in the conference articles has an impact. 
+ What topics the last edition of the conference is best known for? 
+ Operating system 
+ Algorithm 
+ Artificial intelligence 
+ The previous edition focused in particular on these issues: 
+ The conference focuses largely on the fields of Combinatorics, Discrete mathematics, Graph, Time complexity and Binary logarithm. Upper and lower bounds and Set (abstract data type) are some topics wherein Combinatorics research discussed in Workshop on Algorithms and Data Structures have an impact. The event focuses on Discrete mathematics but the discussions also offer insight into other areas such as Scheduling (computing), Job shop scheduling and Approximation algorithm. 
+ It explores the study of Time complexity to improve our understanding of the broader topic of Algorithm. While the event focused on Algorithm, it was also able to explore topics like Completion time, 3SUM, Data structure and Hamiltonian path. It explores topics in Binary logarithm which can be helpful for research in disciplines like Sink (computing), Sorting, Sorting algorithm, Path (graph theory) and Efficient algorithm. 
+ The most cited articles from the last conference are: 
+ The Complexity of Drawing Graphs on Few Lines and Few Planes (19 citations) 
+ Conditional Lower Bounds for Space/Time Tradeoffs (15 citations) 
+ Minimizing the Continuous Diameter When Augmenting a Tree with a Shortcut (15 citations) 
+ Papers citation over time 
+ A key indicator for each conference is its effectiveness in reaching other researchers with the papers published at that venue. 
+ The chart below presents the interquartile range (first quartile 25%, median 50% and third quartile 75%) of the number of citations of articles over time. 
+ Research.com 
+ Top authors and change over time 
+ The top authors publishing at Workshop on Algorithms and Data Structures (based on the number of publications) are: 
+ David Eppstein | (11 papers) | absent at the last edition, 
+ Maarten Löffler | (9 papers) | published 1 paper at the last edition, 
+ Erik D. Demaine | (8 papers) | published 1 paper at the last edition, 1 less than at the previous edition, 
+ Prosenjit Bose | (7 papers) | published 1 paper at the last edition, 
+ Haitao Wang | (6 papers) | published 2 papers at the last edition the same number as at the previous edition. 
+ The overall trend for top authors publishing at this conference is outlined below. The chart shows the number of publications at each edition of the conference for top authors. 
+ Research.com 
+ Top affiliations and change over time 
+ Only papers with recognized affiliations are considered 
+ The top affiliations publishing at Workshop on Algorithms and Data Structures (based on the number of publications) are: 
+ University of Waterloo | (22 papers) | published 5 papers at the last edition, 1 more than at the previous edition, 
+ Massachusetts Institute of Technology | (16 papers) | published 3 papers at the last edition the same number as at the previous edition, 
+ Carleton University | (15 papers) | published 3 papers at the last edition, 2 more than at the previous edition, 
+ Eindhoven University of Technology | (13 papers) | published 2 papers at the last edition, 1 more than at the previous edition, 
+ Karlsruhe Institute of Technology | (12 papers) | absent at the last edition. 
+ The overall trend for top affiliations publishing at this conference is outlined below. The chart shows the number of publications at each edition of the conference for top affiliations. 
+ Research.com 
+ Publication chance based on affiliation 
+ The publication chance index shows the ratio of articles published by the best research institutions at the conference edition to all articles published within that conference. The best research institutions were selected based on the largest number of articles published during all editions of the conference. 
+ The chart below presents the percentage ratio of articles from top institutions (based on their ranking of total papers).Top affiliations were grouped by their rank into the following tiers: top 1-10, top 11-20, top 21-50, and top 51+. Only articles with a recognized affiliation are considered. 
+ Research.com 
+ During the most recent 2017 edition,0.00%of publications had an unrecognized affiliation. Out of the publications with recognized affiliations,36.96%were posted by at least one author from the top 10 institutions publishing at the conference. Another21.74%included authors affiliated with research institutions from the top 11-20 affiliations. Institutions from the 21-50 range included23.91%of all publications and17.39%were from other institutions. 
+ Returning Authors Index 
+ A very common phenomenon observed among researchers publishing scientific articles is the intentional selection of conferences they have already attended in the past. In particular, it is worth analyzing the case when the authors participate in the same conference from year to year. 
+ The Returning Authors Index presented below illustrates the ratio of authors who participated in both a given as well as the previous edition of the conference in relation to all participants in a given year. 
+ Research.com 
+ Returning Institution Index 
+ The graph below shows the Returning Institution Index, illustrating the ratio of institutions that participated in both a given and the previous edition of the conference in relation to all affiliations present in a given year. 
+ Research.com 
+ The experience to innovation index 
+ Our experience to innovation index was created to show a cross-section of the experience level of authors publishing at a conference. The index includes the authors publishing at thelast edition of a conference, grouped by total number of publications throughout their academic career (P) and the total number of citations of these publications ever received (C). 
+ The group intervals were selected empirically to best show the diversity of the authors' experiences, their labels were selected as a convenience, not as judgment. The authors were divided into the following groups: 
+ Novice - P < 5 or C < 25 (the number of publications less than 5 or the number of citations less than 25), 
+ Competent - P < 10 or C < 100 (the number of publications less than 10 or the number of citations less than 100), 
+ Experienced - P < 25 or C < 625 (the number of publications less than 25 or the number of citations less than 625), 
+ Master - P < 50 or C < 2500 (the number of publications less than 50 or the number of citations less than 2500), 
+ Star - P ≥ 50 and C ≥ 2500 (both the number of publications greater than 50 and the number of citations greater than 2500). 
+ The chart below illustrates experience levels of first authors in cases of publications with multiple authors. 
+ Previous Editions 
+ href="/conference/wads-2021-algorithms-and-data-structures-symposium" - WADS 2021 : Algorithms and Data Structures Symposium
+href="https://projects.cs.dal.ca/wads2021/" - https://projects.cs.dal.ca/wads2021/
+Aug 09, 2021 - Aug 09, 2021 
+ Halifax, Canada 
+ Related Computer Science Rankings & Guides 
+ Online Master’s in Computer Science Programs for Non-CS Majors in 2024Industrial Engineering Degree in 2024: Requirements, Career, Cost & SalaryMost Affordable Master’s in Computer Science Online for 2024Best Online Computer Programming Degree Programs in 2024What Can You Do with a Data Analytics Degree: 2024 Costs & Job OpportunitiesBest Online Bachelor’s Degrees in Web Design: Guide to Online Programs for 2024Engineering Majors Explained: Cost, Requirements, Careers & Salary in 2024Automotive Technology Degree Guide: 2024 Costs, Requirements & Job OpportunitiesBest Online Computer Science Degree Programs in 2024Database Management Careers: 2024 Guide to Career Paths, Options & SalaryHow to Become a Data Scientist in 2024Most Affordable Online Master’s in Data Science Programs in 2024href="/degrees/fastest-online-technology-degree-programs" - Fastest Online Technology Degree Programs for 2025
+Software Engineering Careers: 2024 Guide to Career Paths, Options & SalaryBest Online Master’s Degree In Data Science: Guide to Online Programs for 2024Most Affordable Online Software Engineering Degrees for 2024href="/degrees/most-affordable-online-masters-degrees-in-engineering-management" - Most Affordable Online Master's Degrees in Engineering Management for 2025
+15 Best Coding Bootcamps in 2024Coding Job Requirements: Educational Paths, Skills & Work Experience in 2024Best Online Bachelor’s Software Engineering Degrees: Guide to Online Programs for 2024Best Online Software Engineering Degrees: Guide to Online Graduate Programs for 2024Engineering Degree Guide: 2024 Costs, Requirements & Job OpportunitiesBest Online Master’s in Software Engineering in 2024What Can You Do with an Information Technology Degree: 2024 Costs & Job OpportunitiesBest Online Computer Programming Bachelor’s Degree: Guide to Online Programs for 2024Student’s Guide to Jump-Starting a Software QA Engineer Career in 2024Best Online Associate Degrees in Computer Science: A Guide to Online Programs for 2024Recently Published Articles 
+ href="/education/easiest-nursing-schools-to-get-into" - Easiest Nursing Schools to Get Into for 2025
+href="/degrees/best-fast-track-accelerated-degree-programs-in-america" - 2025 15 Best Fast-Track Accelerated Degree Programs in America
+href="/degrees/best-nurse-practitioner-programs-in-vermont" - Best Nurse Practitioner Programs in Vermont 2025 – Accredited Schools Online & Campus
+href="/careers/how-to-become-a-licensed-counselor-lpc-in-idaho" - How to Become a Licensed Counselor (LPC) in Idaho for 2025
+href="/universities-colleges/best-online-colleges-that-accept-fafsa" - Best Online Colleges that Accept FAFSA for 2025
+href="/degrees/most-affordable-cacrep-accredited-counseling-programs-online" - Most Affordable CACREP Accredited Counseling Programs Online for 2025
+href="/careers/criminology-careers" - Criminology Careers: 2025 Guide to Career Paths, Options & Salary
+href="/degrees/best-online-bachelors-degrees-in-construction-management" - Best Online Construction Management Degree Programs for 2025
+href="/degrees/most-affordable-aba-approved-online-paralegal-programs" - Most Affordable ABA-Approved Online Paralegal Programs for 2025
+href="/degrees/most-affordable-online-psychiatric-nurse-practitioner-programs" - Most Affordable Online Psychiatric Nurse Practitioner Programs for 2025
+href="/careers/how-to-become-a-licensed-pharmacist-in-new-jersey" - How to Become a Licensed Pharmacist in New Jersey for 2025
+href="/careers/how-to-become-a-board-certified-behavior-analyst-bcba" - How to Become a Board Certified Behavior Analyst (BCBA) for 2025
+href="/careers/internal-auditor-careers" - Internal Auditor Careers: 2025 Guide to Career Paths, Options & Salary
+href="/degrees/become-a-medical-assistant-in-6-weeks-best-accelerated-programs" - Become A Medical Assistant In 6 Weeks - Best Accelerated Programs for 2025
+href="/universities-colleges/best-psychology-schools-in-florida" - Best Psychology Schools in Florida – 2025 Accredited Colleges & Programs
+href="/careers/how-to-become-a-licensed-counselor-lpc-in-tennessee" - How to Become a Licensed Counselor (LPC) in Tennessee for 2025
+href="/degrees/online-doctorate-degrees-in-psychology" - Best Online Doctorate Degrees in Psychology: Guide to Online Programs for 2025
+href="/degrees/best-accelerated-paralegal-programs-online" - Best Accelerated Paralegal Programs Online for 2025
+href="/careers/how-to-become-an-x-ray-technician" - How to Become an X-ray Technician for 2025
+href="/degrees/most-affordable-online-dnp-programs" - Most Affordable Online DNP Programs for 2025
+href="/degrees/best-environmental-policy-degree-programs" - Best Environmental Policy Degree Programs for 2025
+Edit Submission Deadline 
+ WADS 2021 : Algorithms and Data Structures Symposium 
+ Your email addressNew submission deadlineFurther informationSEND MESSAGEThank you for information! 
+ Something went wrong. Please try again later. 
+ href="https://www.facebook.com/guide2research/" - 
+href="https://twitter.com/guide2research" - 
+Copyright © 2025 Research.com. All rights reserved. 
+ Release: 14267625839RankingsMethodologyBlogAboutOur ExpertsContactPress RoomEditorial PolicyPrivacy Policy
+

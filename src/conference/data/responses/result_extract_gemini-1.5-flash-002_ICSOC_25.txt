@@ -1,0 +1,27 @@
+{
+  "Conference dates": "December 1 - 4, 2025",
+  "Year": "2025",
+  "Location": "Shenzhen, China",
+  "City-State-Province": "Shenzhen",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Early paper submissions due": "May 9, 2025",
+    "Regular paper abstract submissions due": "July 7, 2025",
+    "Regular paper submissions due": "July 14, 2025"
+  },
+  "Notification Date": {
+    "Final notification to authors": "September 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready manuscripts due": "October 1, 2025"
+  },
+  "Registration Date": {
+    "Author registration": "September 30, 2025"
+  },
+  "Topics": "Service-Oriented Computing, Services Science, Data Science, Management Science, Business-Process Management, Distributed Systems, Wireless and Mobile Computing, Cloud and Edge Computing, Cyber-Physical Systems, Internet-of-Things (IoT), Scientific Workflows, Artificial Intelligence, Machine Learning, Services and Software Engineering, AI, Machine Learning, Big Data Analytics, Quantum Computing",
+  "Publisher": "Springer Verlag",
+  "Summary": "ICSOC, the International Conference on Service-Oriented Computing, is the premier international forum for academics, industry researchers, developers, and practitioners to report and share groundbreaking work in service-oriented computing. The 23rd edition of the ICSOC conference series will be hosted by the Research Center of Intelligent Computing for Enterprises and Services (ICES), Faculty of Computing, Harbin Institute of Technology, from December 1st to December 4th, 2025.",
+  "Call for Papers": "# ICSOC 2025: Call for Research and Industry Papers\n\nICSOC, the International Conference on Service-Oriented Computing, is the premier international forum for academics, industry researchers, developers, and practitioners to report and share groundbreaking work in service-oriented computing. ICSOC 2025, the 23rd event in this series, will take place in **Shenzhen, China, from 1 to 4 December 2025**.\n\n## Submissions / Review Model\n\n### Early Submissions\n\nAuthors are invited to consider early submissions (deadline May 9, 2025). In the early submission round, only papers submitted as full/regular papers will be considered, and they will go through a full peer-review process. An early submitted paper that is accepted will be included in the proceedings. An early submitted paper that is rejected can be still revised and submitted to the normal submission round by the given deadline. If the authors of an early submitted paper that is rejected decide to resubmit their paper to the normal submission round, they will have to include an appendix (maximum 2 pages) describing how they have addressed the comments received by the reviewers from the early submission.\n\n### Regular Submissions\n\nAuthors are welcome to submit papers to the regular submission round by the given deadline. To do so, they need to submit an abstract by July 1, 2025. After the regular submission deadline, the papers resubmitted from the early submission round and those submitted only to the regular submission round will undergo the same review process as other submissions. The decisions made from this regular review procedure will be final, and no resubmission will be permitted afterwards.\n\n### Anonymous Submissions\n\nICSOC implements a double-blind reviewing process. Author names and affiliations should not appear in the paper. Submissions that violate these requirements will be desk rejected without review.\n\n## Important Dates\n\nAll deadlines are in Anywhere on Earth time (AOE = GMT - 12).\n\n*   **Early paper submissions due:** May 9, 2025\n*   **Regular paper abstract submissions due:** July 7, 2025 (MANDATORY)\n*   **Regular paper submissions due:** July 14, 2025\n*   **Final notification to authors:** September 15, 2025\n*   **Camera-ready manuscripts due:** October 1, 2025\n*   **Author registration:** September 30, 2025\n\n## Special Issues\n\nA selection of the top accepted papers will be invited for special issues in journals.\n\n## Areas of Interest\n\nICSOC is the premier international forum for presenting the most recent and significant research contributions in service-oriented computing. These are organized in four focus areas:\n\n*   Focus Area 1: Service-Oriented Technology Basics and Trends\n*   Focus Area 2: AI for Services and as-a-Service\n*   Focus Area 3: Novel Service Frameworks for Cloud Continuum and Smart Environments\n*   Focus Area 4: Emerging Technologies\n\n## Reproducibility Certification\n\nAt ICSOC, we promote rigorous evaluation and sharing of data, code, and methodologies to enhance the credibility and impact of scientific contributions. Authors are urged to publicly share all research artifacts such as datasets, source code, and supplementary materials as part of their submission.\n\n## Paper Submission\n\nPapers should be formatted according to Springer's LNCS Formatting Guidelines. Submissions must be in English and must not exceed 15 pages. All papers must be submitted electronically to the Conference Submission System: [https://easychair.org/conferences/?conf=icsoc2025](https://easychair.org/conferences/?conf=icsoc2025)."
+}

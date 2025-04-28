@@ -1,0 +1,35 @@
+```json
+{
+  "Conference dates": "May 4 - 7, 2025",
+  "Year": "2025",
+  "Location": "Fayetteville, Arkansas, USA",
+  "City-State-Province": "Fayetteville, Arkansas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstracts Due (All Papers)": "January 10, 2025",
+    "Submissions Due (All Papers)": "January 19, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance (All Papers)": "March 14, 2025",
+    "Notification of Acceptance (Demo Night)": "March 31, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Submission Due": "April 4, 2025"
+  },
+  "Registration Date": {
+    "Early Registration Deadline": "April 20, 2025",
+    "Hotel Rooms Reservation Deadline": "April 11, 2025"
+  },
+  "Other Date": {
+    "Workshop Proposals Due": "February 23, 2025",
+    "Rebuttal Period": "February 16 - 24, 2025",
+    "Artifact Form Deadline": "February 24, 2025",
+    "Demo Night Submissions Due": "March 24, 2025"
+  },
+  "Topics": "Reconfigurable Computing, FPGAs, Custom Computing Machines, Architectures, Tools, Programming Models, Applications, Run Time Reconfiguration, Large Language Models, High-level Synthesis, Software-defined Systems, CAD Tools, Mixed Analog/Digital Fabrics, Neuromorphic Emulation, Memory-centric Computing, IoT, Embedded Systems, Security",
+  "Summary": "The 33rd IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM 2025) will be held in Fayetteville, Arkansas, USA from May 4-7, 2025.  FCCM is the premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware.",
+  "Call for Papers": "# FCCM 2025: Call for Papers\n\nThe IEEE International Symposium on Field-Programmable Custom Computing Machines (FCCM 2025) will be held in **Fayetteville, Arkansas, USA, from May 4-7, 2025**.\n\nFCCM is the premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware. This year FCCM seeks to embrace its role as the venue where “firsts” are presented by encouraging submissions describing new forward-thinking research on emerging technologies with in-field reconfiguration capabilities for the upcoming post Moore’s Law era.\n\n## Topics of Interest\n\n*   **Custom Computing and Reconfigurable Architectures:**\n    *   Heterogeneous and mixed signal digital/analog field customizable accelerators\n    *   Neuromorphic emulation and accelerators\n    *   Memory centric computing architectures\n    *   Overlays, coarse grained reconfigurable architectures\n    *   Clusters, data centers, and large systems\n    *   IoT and Embedded SoC, MPSoC architectures with reconfigurable devices\n    *   Security enhancements for reconfigurable computing\n    *   Customizable soft processor systems\n*   **Abstractions, Programming Models, and Tools:**\n    *   Use of Large Language Models (LLMs) for FPGA design\n    *   Domain-specific languages, frameworks, and open-source hw/sw synthesis/compilation tools\n    *   Design tools, instrumentation, debug for designer productivity\n    *   High-level synthesis\n    *   Software-defined-systems (e.g., radio, networks, frameworks for new domains)\n    *   CAD tools, abstractions, and languages for mixed analog/digital fabrics\n*   **Run Time Reconfiguration:**\n    *   Run-time management and scheduling of reconfigurable hardware\n    *   System resilience/fault tolerance for reconfigurable hardware\n    *   Evolvable, adaptable, approximate, or autonomous reconfigurable computing systems\n    *   Security assessment and enhancement of run-time reconfiguration\n*   **Applications:**\n    *   Evaluations and analysis on custom computing architectures with GPUs, NPUs, or DSPs\n    *   Post Quantum Cryptography, Quantum control and emulation\n    *   Safety critical, reliable and high assurance\n    *   Security detection and prevention, and Side Channel analysis and Attack\n    *   Digital twin, modeling, and acceleration\n\n## Paper Types\n\n*   **Traditional technical long papers:** that introduce and evaluate new technologies. These papers must have strong empirical results and address significant challenges of the corresponding problem. Page length is 8 pages (excluding references).\n*   **Short papers:** intended for new projects, early results, late breaking, and work that can be presented concisely. Page length is 4 pages (excluding references).\n\n## Important Dates\n\nAll deadlines apply to the Anywhere on Earth (UTC – 12) timezone\n\n*   **Abstracts Due (All Papers):** January 10, 2025 (NO EXTENSIONS)\n*   **Submissions Due (All Papers):** January 19th at 11:59 PM PST\n*   **Workshop Proposals Due:** February 23, 2025\n*   **Rebuttal Period:** February 16 – 24, 2025\n*   **Artifact Form Deadline:** February 24, 2025\n*   **Notification of Acceptance (All Papers):** March 14, 2025\n*   **Demo Night Submissions Due:** March 24, 2025 (No Extensions)\n*   **Notification of Acceptance (Demo Night):** March 31, 2025\n*   **Camera-Ready Submission Due:** April 4, 2025\n*   **Early Registration Deadline:** April 20, 2025\n*   **Hotel Rooms Reservation Deadline:** April 11, 2025\n*   **Conference:** May 4 - 7, 2025\n\n## Submission Website\n\n[https://fccm2025.hotcrp.com/](https://fccm2025.hotcrp.com/)\n\n## Paper Formats\n\n*   Long papers are limited to 8 pages (excluding references).\n*   Short papers are limited to 4 pages (excluding references).\n*   Submissions accepted as posters will have a one-page extended abstract.\n*   Page restrictions for all formats exclude references.\n*   Submissions violating the formatting requirements may be automatically rejected.\n*   Do not submit the same work in more than one of the formats.\n*   Accepted papers will have the same page lengths as initial submissions.\n\n## Submission Guidelines\n\n*   All submissions should be written in English.\n*   Papers must conform to the US letter-sized IEEE conference proceedings format to be reviewed and published.\n*   A conformant LaTeX template is available [here](https://wp.fccm.org/templates/latex_template_fccm19.zip).\n*   A Microsoft Word template is available [here](https://www.fccm.org/past/2024/wp-content/uploads/2023/01/word_template_fccm23.doc).\n\n## Review Process\n\nFCCM uses a double-blind reviewing system. FCCM 2025 includes a rebuttal phase. Specific questions from reviewers will be made available by February 16, 2025. Authors have the option to provide an up to 500-word response by February 24, 2025. Reviewers will consider the responses during final paper deliberations.\n\n## Artifact Evaluation\n\nAuthors of accepted full-length papers can optionally participate in an artifact evaluation process. Details of artifact submission and the evaluation process will be forthcoming and described on the FCCM website."
+}
+```

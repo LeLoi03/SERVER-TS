@@ -1,0 +1,22 @@
+```json
+{
+  "Conference dates": "July 29 - 31, 2024",
+  "Year": "2024",
+  "Location": "The Hong Kong Polytechnic University, Hong Kong SAR, China",
+  "City-State-Province": "Hong Kong",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Normal Submission deadline": "April 8, 2024",
+    "Resubmission deadline": "April 20, 2024"
+  },
+  "Notification Date": {
+    "Notification": "May 15, 2024"
+  },
+  "Topics": "Theoretical Computer Science, Algorithm and Complexity, Algorithmic Game Theory, Automata Theory and Formal Languages, Blockchain, Computational Biology and Bioinformatics, Computational Geometry, Formal Methods and Verification, Graph Theory and Algorithms, Multi-agent Reinforcement Learning, Network Economics, Parallel and Distributed Algorithms, Quantum Computation, Theoretical Aspects of Artificial Intelligence, Theory of Machine Learning",
+  "Publisher": "Springer-Verlag",
+  "Summary": "The International Joint Conference on Theoretical Computer Science – Frontier of Algorithmic Wisdom (IJTCS-FAW 2024) was held on July 29–31, 2024, at The Hong Kong Polytechnic University.  The conference aimed to advance theoretical computer science and promote knowledge exchange. It was the 5th IJTCS and 18th FAW, with FAW joining IJTCS as the main track.",
+  "Call for Papers": "# IJTCS-FAW 2024: Call for Papers\n\nThe International Joint Conference on Theoretical Computer Science – Frontier of Algorithmic Wisdom (IJTCS-FAW 2024) was held on **July 29-31, 2024**, at **The Hong Kong Polytechnic University**.\n\n## Submission Tracks\n\nThe following tracks were open for submissions:\n\n*   Track A: The 18th Conference on Frontiers of Algorithmic Wisdom\n*   Track B: Blockchain Theory and Technology\n*   Track C: Computational Economics and Algorithmic Game Theory\n\n## Submission Guidelines\n\nAuthors were invited to submit an extended abstract of no more than 12 pages (excluding references and the front page(s)), presenting original research on the theory of computer science.  Technical details necessary for a proper scientific evaluation of a submission must be included in the 12-page submission or in a clearly labelled appendix.\n\nSubmissions must be formatted in the LNCS style. All submissions must be submitted via EasyChair: [https://easychair.org/conferences/?conf=ijtcsfaw2024](https://easychair.org/conferences/?conf=ijtcsfaw2024)\n\nThe proceedings of the conference were published by Springer-Verlag in the Lecture Notes in Computer Science (LNCS) series.\n\n## Resubmissions\n\nThis year, a special opportunity was introduced for authors whose submissions were previously rejected from sister conferences that sent out notification emails between January 1, 2024, and April 20, 2024 (such as EUROCRYPT 2024, ICALP 2024, IJCAI 2024, FUN 2024, SPAA 2024, WWW 2024, etc.).  Authors could resubmit their work to IJTCS-FAW with a later deadline (April 20, 2024) and a lighter review process.  All submitted material underwent a check with the sister conference and was reviewed by members of the IJTCS-FAW program committee.\n\n## Awards\n\n*   The Best Paper Award\n*   The Best Student Paper Award\n\n## Special Issue\n\nAfter the conference, selected papers were invited to special issues in: Theoretical Computer Science, Journal of Combinatorial Optimization, Blockchain Journal, and Theory of Computing Systems.\n\n## Copyright\n\nAll authors with accepted papers were required to sign and submit the copyright form.\n\n## Steering Committee\n\n*   Xiaotie Deng (Peking University)\n*   Jian Li (Tsinghua University)\n*   Pinyan Lu (Shanghai University of Finance and Economics)\n*   Jianwei Huang (Chinese University of Hong Kong Shenzhen)\n*   Lijun Zhang (Chinese Academy of Sciences)\n\n## Conference Chair\n\n*   John E. Hopcroft (Cornell University)\n\n## General Chair\n\n*   Qing Li (Hong Kong Polytechnic University)\n\n## Program Committee Chairs\n\n*   Bo Li (Hong Kong Polytechnic University)\n*   Minming Li (City University of Hong Kong)\n*   Xiaoming Sun (Chinese Academy of Sciences)\n\n## Contact\n\nGeneral Enquiry: [ijtcsfaw2024@gmail.com](mailto:ijtcsfaw2024@gmail.com)"
+}
+```

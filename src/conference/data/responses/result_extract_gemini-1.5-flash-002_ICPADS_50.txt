@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "October 10 - 14, 2024",
+  "Year": "2024",
+  "Location": "Belgrade, Serbia",
+  "City-State-Province": "Belgrade",
+  "Country": "Serbia",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "July 15, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "August 15, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready": "September 1, 2024"
+  },
+  "Topics": "Parallel and Distributed Systems, Ubiquitous Intelligence, Computing, Wireless Sensing, Mobile Computing, Theory, Protocols, Security, Blockchain, Sustainable Computer Systems, Internet of Things, Cyber-Physical Systems, High-Performance Computing, Architecture, Data Center, Serverless Computing, Cloud Computing, Edge Computing, Big Data, Machine Learning, Interdisciplinary Distributed Systems and Applications",
+  "Summary": "The 30th International Conference on Parallel and Distributed Systems (ICPADS 2024) will be held from October 10–14th, 2024, in Belgrade, Serbia. The conference provides an international forum for scientists, engineers, and users to exchange and share their experiences, new ideas, and latest research results on all aspects of parallel and distributed systems.",
+  "Call for Papers": "# ICPADS 2024: Call for Papers\n\nThe 30th International Conference on Parallel and Distributed Systems (ICPADS 2024) will be held from **October 10 – 14th, 2024, in Belgrade, Serbia**.\n\nThe conference provides an international forum for scientists, engineers, and users to exchange and share their experiences, new ideas, and latest research results on all aspects of parallel and distributed systems.\n\n## Topics of Interest\n\nContributions are solicited in all areas of parallel and distributed systems research and applications. Topics for submission include, but are not limited to:\n\n*   Wireless Sensing & Mobile Computing\n*   Theory and Protocols\n*   Security & Blockchain\n*   Sustainable Computer Systems\n*   Internet of Things & Cyber-Physical Systems\n*   High-Performance Computing & Architecture\n*   Data Center & Serverless Computing\n*   Cloud and Edge Computing\n*   Big Data & Machine Learning System\n*   Interdisciplinary Distributed Systems and Applications\n\n## Important Dates\n\n*   **Paper Submission:** July 15th, 2024\n*   **Author Notification:** August 15th, 2024\n*   **Camera-Ready:** September 1st, 2024"
+}
+

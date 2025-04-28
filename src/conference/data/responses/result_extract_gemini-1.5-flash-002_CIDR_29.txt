@@ -1,0 +1,20 @@
+output:
+{
+  "Conference dates": "January 19 - 22, 2025",
+  "Year": "2025",
+  "Location": "Amsterdam, The Netherlands",
+  "City-State-Province": "Amsterdam",
+  "Country": "Netherlands",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "submission deadline for all contributions": "August 2, 2024"
+  },
+  "Notification Date": {
+    "author notification for all contributions": "October 4, 2024"
+  },
+  "Topics": "Data Management Systems, Data Systems Architecture, Data Storage, Networking, Hardware Acceleration, Custom Processors, Memory Hierarchies, Processor Interconnects, ML/AI Technologies",
+  "Summary": "The Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference emphasizing the systems architecture perspective. CIDR 2025 will be held in Amsterdam. The CIDR program consists of single-track keynote, paper, and demo presentations. There are also evening sessions, including a lively gong show, and plenty of time for interaction among the delegates.",
+  "Call for Papers": "# CIDR 2025: Call for Papers\n\nThe Conference on Innovative Data Systems Research (CIDR 2025) will be held in **Amsterdam, The Netherlands, from January 19-22, 2025**.\n\nCIDR is a systems-oriented conference, complementary in its mission to the mainstream database conferences like SIGMOD and VLDB, emphasizing the systems architecture perspective. CIDR gathers researchers and practitioners from both academia and industry to discuss the latest innovative and visionary ideas in the field.\n\n## Call for Contributions\n\nCIDR 2025 invites two kinds of contributions:\n\n*   Papers (at most 6 pages). We invite both regular research papers and more visionary papers that promote interesting ideas and ongoing work.\n*   Demos (a video or a description of the demo in at most 6 pages).\n\nTo encourage authors to submit only their best work, each person can be an author or co-author of at most one submission of any kind. Authors who feel their work is best captured through a demo should submit a demo proposal. Demos and papers will be interweaved in a single-tracked program.\n\n## Submission Guidelines\n\n*   Papers should be electronically submitted in PDF format to [CMT](https://cmt3.research.microsoft.com/CIDR2025).\n*   Conference submissions must be formatted using the double-column ACM sigconf style (see the ACM Template), and must not exceed 6 pages in length including all references and appendices.\n*   Videos can be submitted in HTML or MPEG format.\n*   Submissions will be reviewed by the program committee, which will make acceptance and rejection decisions.\n*   Final versions of accepted submissions will be published in the electronic proceedings of the CIDR conference and by the VLDB Endowment.\n*   The final versions of accepted papers and demos have no page limit and can be significantly expanded from the submitted form.\n*   At least one author of an accepted paper or demo will be expected to attend the conference in person to present the paper.\n\n## Camera-Ready Guidelines\n\nCamera-ready papers need to follow the formatting instructions above. Additionally, they need to include the following copyright notice at the bottom left of the first page:\n\n> This paper is published under the Creative Commons Attribution 4.0 International (CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their personal and corporate Web sites with the appropriate attribution, provided that you attribute the original work to the authors and CIDR 2025. 15th Annual Conference on Innovative Data Systems Research (CIDR '25). January 19-22, 2025, Amsterdam, The Netherlands.\n\n[LaTeX style file](cidr-2025.cls) and [Word template file](pubform-CIDR2025.docx) include the copyright notice. We recommend that you use them. Both will display the copyright notice.\n\n## Important Dates\n\n(all deadlines are 11:59 pm Pacific Time)\n\n*   **Submission deadline for all contributions:** August 2, 2024\n*   **Author notification for all contributions:** October 4, 2024\n*   **Conference:** January 19-22, 2025"
+}
+

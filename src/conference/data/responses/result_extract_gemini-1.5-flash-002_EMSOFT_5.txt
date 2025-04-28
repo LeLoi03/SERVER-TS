@@ -1,0 +1,35 @@
+output:
+{
+  "Conference dates": "September 28 - October 3, 2025",
+  "Year": "2025",
+  "Location": "Taipei, Taiwan",
+  "City-State-Province": "Taipei",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Journal Track: Abstract Submission": "March 23, 2025",
+    "Journal Track: Full Paper Submission": "March 30, 2025",
+    "Late Breaking Tracks: Paper Submission": "June 1, 2025"
+  },
+  "Notification Date": {
+    "Journal track: First Round Notification": "May 18, 2025",
+    "Late Breaking Tracks: Notification": "July 13, 2025",
+    "Journal Track: Notification": "July 13, 2025"
+  },
+  "Camera-ready Date": {
+    "Journal track: Revised paper submission": "June 15, 2025",
+    "All tracks (full paper, LB, Special Session): Camera ready": "August 11, 2025"
+  },
+  "Other Date": {
+    "Special Session Proposals": "March 30, 2025",
+    "Tutorial Proposals": "March 30, 2025",
+    "Workshop Proposals": "March 30, 2025",
+    "Education Class Proposals": "March 30, 2025",
+    "Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition": "TBD"
+  },
+  "Topics": "Embedded Software, Embedded Distributed Systems, Networked Systems, Time-critical Embedded Systems, Multi-core Processors, Many-core Processors, Hardware Accelerators, Embedded Operating Systems, Middleware, Scheduling, Resource Allocation, Execution Time Analysis, QoS Management, Performance Analysis, Hardware and Software Co-design, Energy-efficient Embedded Software, Safety, Mixed-critical Embedded Software, Software Design, Software Analysis for Cyber-physical Systems, Embedded Software Architectures for Data-intensive Applications, Signal Processing, Cyber-security, Safety, Resilience, Fault-tolerance, Embedded Software Security and Privacy, Embedded Software Safety, Robust Implementation of Control Systems, Processes and Methods, Formal Modeling and Verification, Testing, Validation, Certification, Model-based Approaches, Component-based Approaches, Empirical Studies, Sustainability and Energy Optimization, Automotive Applications, Avionics Applications, Energy Applications, Healthcare Applications, Mobile Devices Applications, Multimedia Applications, Machine Learning Applications, Autonomous Systems Applications",
+  "Summary": "The ACM SIGBED International Conference on Embedded Software (EMSOFT) brings together researchers and developers from academia, industry, and government to advance the science, engineering, and technology of embedded software development. EMSOFT 2025 will be part of Embedded Systems Week and will be held in Taipei, Taiwan from September 28 - October 3, 2025.",
+  "Call for Papers": "# EMSOFT 2025: Call for Full-Length Papers\n\nThe ACM SIGBED International Conference on Embedded Software (EMSOFT) aims at advancing the science and engineering of embedded software. EMSOFT 2025 will be part of Embedded Systems Week and will be held in **Taipei, Taiwan, from September 28 - October 3, 2025**.\n\n## Topics of Interest\n\nWe invite submissions on all aspects of embedded software systems, including but not limited to:\n\n*   Embedded distributed, networked systems\n*   Time-critical embedded systems\n*   Multi-/many-core processors, hardware accelerators\n*   Embedded operating systems and middleware\n*   Scheduling, resource allocation, and execution time analysis\n*   QoS management and performance analysis\n*   Hardware and software co-design\n*   Embedded software design and analysis\n*   Energy-efficient embedded software\n*   Safety/Mixed-critical embedded software\n*   Software design and analysis for cyber-physical systems\n*   Embedded software architectures for data-intensive applications and signal processing\n*   Cyber-security, safety, resilience and fault-tolerance\n*   Embedded software security and privacy\n*   Embedded software safety\n*   Robust implementation of control systems\n*   Processes and methods\n*   Formal modeling and verification\n*   Testing, validation, and certification\n*   Model- and component-based approaches\n*   Empirical studies and their reproduction\n*   Sustainability and energy optimization\n*   Application areas including automotive, avionics, energy, health care, mobile devices, multimedia, machine learning, and autonomous systems\n\n## Submission Guidelines\n\nSubmitted manuscripts must be double-blind. Authors should not reveal their identity directly or indirectly (e.g., through references). The submitted work must be original, not formerly published or under review elsewhere.\n\n## Review Process\n\nThe EMSOFT 2025 journal track will follow a two-stage review process. Authors of papers that pass the first review stage will revise their work based on the received comments, within a short time frame (around two weeks). Papers accepted at the second stage will appear in ACM TECS (see below).\n\n## Journal-Integrated Publication Model\n\nAll full papers accepted in EMSOFT’25 will be published in ACM Transactions on Embedded Computing Systems (TECS). All late-breaking papers accepted in one of the three conferences will be published in IEEE Embedded Systems Letters (ESL).\n\n## Important Dates\n\n*   **Abstract Submission:** March 23, 2025 (AoE)\n*   **Full Paper Submission:** March 30, 2025 (AoE, firm)\n*   **First round reviews:** May 8, 2025\n*   **Revised Paper Submission:** June 15, 2025\n*   **Notification:** July 13, 2025\n*   **Camera-ready Submission:** August 11, 2025\n\n## Program Chairs\n\n*   Martina Maggio, Saarland University, DE\n*   Borzoo Bonakdarpour, Michigan State University, US"
+}
+

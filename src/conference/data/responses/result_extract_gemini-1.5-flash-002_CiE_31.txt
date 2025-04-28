@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "July 14 - 18, 2025",
+  "Year": "2025",
+  "Location": "Lisbon",
+  "City-State-Province": "Lisbon",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract": "January 26, 2025",
+    "Full paper": "February 2, 2025",
+    "Deadline for informal presentations submission": "April 22, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "April 6, 2025"
+  },
+  "Camera-ready Date": {
+    "Final versions due": "April 13, 2025"
+  },
+  "Registration Date": {
+    "Early registration": "May 6, 2025"
+  },
+  "Topics": "Computability, Foundations of Computer Science, Logic, Theoretical Computer Science, Quantum Computability, Cryptography, Information Theory, Computational Biology, Computational Linguistics, History and Philosophy of Computability",
+  "Summary": "Computability in Europe (CiE) is an interdisciplinary series of international conferences organized by the Association Computability in Europe (ACiE). CiE 2025 will take place in Lisbon from July 14-18, 2025 and welcomes research contributions on computability-related fields of science.",
+  "Call for Papers": "# CiE 2025: Call for Papers and Participation\n\nThe Computability in Europe (CiE) conference series brings together both basic and application-oriented research in computability-related areas of science. CiE 2025 will be held in **Lisbon from July 14-18, 2025**.\n\n## Conference Topics\n\nThe CiE conferences serve as an interdisciplinary forum for research in all aspects of computability, foundations of computer science, logic, and theoretical computer science, as well as the interplay of these areas with practical issues in computer science and with other disciplines such as biology, mathematics, philosophy, or physics.\n\n## Conference Proceedings\n\nPapers submitted to the conference proceedings should represent original work, not simultaneously submitted to another journal or conference with formal proceedings. The Program Committee will rigorously review and select submitted papers. Accepted papers will be published as a proceedings volume in the Lecture Notes in Computer Science (LNCS) series from Springer-Verlag.\n\n*   Papers must be submitted in PDF format, using the LNCS style ([https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines))\n*   Maximum of 15 pages, including references but excluding a possible appendix\n\n## Informal Presentations\n\nContinuing the tradition of past CiE conferences, researchers are invited to present informal presentations of their recent work. Results presented as informal presentations at CiE 2025 may appear or may have appeared in other conferences with formal proceedings and/or in journals.\n\n*   Proposals for informal presentations must be submitted via EasyChair: [https://easychair.org/my/conference?conf=cie2025](https://easychair.org/my/conference?conf=cie2025)\n*   1 page long using LNCS style\n\n## Important Dates\n\n*   **Abstract Submission Deadline:** January 26, 2025 (AOE) CLOSED\n*   **Full Paper Submission Deadline:** February 2, 2025 (AOE) CLOSED\n*   **Notification of Acceptance:** April 6, 2025\n*   **Final Versions Due:** April 13, 2025\n*   **Early Registration Deadline:** May 6, 2025"
+}
+

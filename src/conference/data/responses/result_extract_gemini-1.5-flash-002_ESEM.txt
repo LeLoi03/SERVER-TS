@@ -1,0 +1,46 @@
+```json
+{
+  "Conference dates": "September 29 - October 3, 2025",
+  "Year": "2025",
+  "Location": "Honolulu, Hawai, USA",
+  "City-State-Province": "Honolulu, Hawaii",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "IDoESE - Doctoral Symposium Submission": "April 1, 2025",
+    "ESEM - Registered Reports Track Initial report submission": "April 14, 2025",
+    "ESEM - Technical Track Abstract (mandatory)": "April 18, 2025",
+    "ESEM - Technical Track Submissions": "April 25, 2025",
+    "ESEM - Registered Reports Track Initial report submission": "May 5, 2025",
+    "ISERN - Annual Meeting Submission Deadline": "May 9, 2025",
+    "ESEM - Emerging Results and Vision Track Abstract": "May 16, 2025",
+    "ESEM - Industry, Government, and Community Track Abstract": "May 16, 2025",
+    "ESEM - Emerging Results and Vision Track Submission": "May 23, 2025",
+    "ESEM - Industry, Government, and Community Track Submission": "May 23, 2025",
+    "ESEM - Registered Reports Track Authors submit a response letter + revised report": "May 26, 2025",
+    "ESEM - Research Projects Track Abstracts": "June 6, 2025",
+    "ESEM - Research Projects Track Submission": "June 13, 2025",
+    "ESEM - Journal First Track Submissions": "July 1, 2025",
+    "ESEM - Registered Reports Track Full paper submission to EMSE": "April 13, 2026"
+  },
+  "Notification Date": {
+    "IDoESE - Doctoral Symposium Notifications": "May 9, 2025",
+    "ESEM - Technical Track Notification": "June 6, 2025",
+    "ESEM - Emerging Results and Vision Track Notification": "July 4, 2025",
+    "ESEM - Industry, Government, and Community Track Notifications": "July 4, 2025",
+    "ESEM - Research Projects Track Notifications": "July 11, 2025",
+    "ESEM - Registered Reports Track Notification of Stage 1": "June 23, 2025",
+    "ESEM - Journal First Track Notifications": "August 1, 2025"
+  },
+  "Camera-ready Date": {
+    "IDoESE - Doctoral Symposium Camera-Ready": "June 27, 2025",
+    "ESEM - Emerging Results and Vision Track Camera-ready": "July 25, 2025",
+    "ESEM - Industry, Government, and Community Track Camera-ready": "July 25, 2025",
+    "ESEM - Research Projects Track Camera-ready": "August 4, 2025"
+  },
+  "Topics": "Empirical Software Engineering, Software Measurement",
+  "Summary": "The Empirical Software Engineering International Week 2025 (ESEIW 2025) and the 19th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM 2025) will be held jointly from September 29 to October 3, 2025, in Honolulu, Hawai'i, USA. ESEM is the premier conference for presenting research results related to empirical software engineering.",
+  "Call for Papers": "# ESEM 2025: Call for Papers - Technical Track\n\nThe International Symposium on Empirical Software Engineering and Measurement (ESEM) technical papers track features submissions that describe original, unpublished work in software engineering and software measurement, with a strong empirical foundation.\n\n## General Scope of Submissions\n\nSubmissions should not be under consideration for publication or presentation elsewhere. Submissions may address any aspect of software engineering but must tackle the problem from an empirical perspective and using a rigorous empirical method, including:\n\n*   Empirical studies using qualitative, quantitative, and mixed methods\n*   Cross- and multi-disciplinary methods and studies\n*   Formal experiments and quasi-experiments\n*   Case studies, action research, ethnography, and field studies\n*   Survey research\n*   Simulation studies\n*   Artifact studies\n*   Data mining using statistical and machine learning approaches\n*   Secondary and tertiary studies, including:\n    *   Systematic literature reviews and rapid reviews\n    *   Meta-analyses\n    *   Replication of empirical studies and families of studies\n\n## Topics\n\nTopics commonly addressed using an empirical approach include, but are not limited to:\n\n*   Evaluation and comparison of software models, tools, techniques, and practices\n*   Modeling, measuring, and assessing product or process quality and productivity\n*   Continuous software engineering\n*   Software verification and validation, including analysis and testing\n*   Engineering of software systems which include machine learning components and data dependencies\n*   Applications of software engineering to different types of systems and domains (e.g., IoT, Industry 4.0, Context-awareness systems, Cyber-physical systems)\n*   Human factors, teamwork, and behavioral aspects of software engineering\n\n## Research Meta-Topics\n\n*   Development, evaluation, and comparison of empirical approaches and methods\n*   Infrastructure for conducting empirical studies\n*   Techniques and tools for supporting empirical studies\n*   Empirically-based decision making\n\n## Submissions Guidelines\n\n*   Submissions are limited to 10 pages excluding references, and 12 pages with references.\n*   Submissions must be written in English and submitted via EasyChair in PDF format.\n*   They must be formatted according to the standard IEEE template in conference mode ([https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)) or in Overleaf ([https://www.overleaf.com/gallery/tagged/ieee-official](https://www.overleaf.com/gallery/tagged/ieee-official)).\n*   A structured abstract is required with the headings: Background, Aims, Method, Results, and Conclusions.\n*   Submissions must comply with the IEEE ethics guidelines ([https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Author-Ethics-Guidelines.pdf](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Author-Ethics-Guidelines.pdf)).\n*   ESEM 2025 will employ a double-blind review process.\n\n## Open Science Policy\n\nWe expect authors to include a data availability statement in their submissions that either provides links to the open data/replication package or that explains why data cannot be disclosed.\n\n## Important Dates (All dates are end of the day, anywhere on earth)\n\n*   **Abstract (mandatory):** April 18th, 2025\n*   **Submission:** April 25th, 2025\n*   **Notification:** June 6th, 2025\n*   **Camera-ready:** June 27th, 2025\n\n## Submission Link\n\n[https://easychair.org/conferences/?conf=esem25](https://easychair.org/conferences/?conf=esem25)"
+}
+```

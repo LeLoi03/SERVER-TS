@@ -1,0 +1,953 @@
+Conference RecSys:
+
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:19th ACM Conference on Recommender Systems 
+ Prague, Czech Republic, 22nd–26th September 2025 
+ The ACM Conference on Recommender Systems (RecSys) is the premier international forum for presenting new research results, systems, and techniques in the broad field of recommender systems. RecSys brings together leading international research groups and industry experts, including many of the world’s top companies in e-commerce and related domains. It is the most important annual event for the discussion and advancement of recommender systems research. 
+ RecSys 2025, the nineteenth conference in this series, will be held in Prague, Czech Republic. It will bring together researchers and practitioners from academia and industry to present their latest findings and identify new trends and challenges in providing recommendation components across a range of innovative application contexts. In addition to the main technical track, the RecSys 2025 program will feature keynote and invited talks, tutorials on state-of-the-art topics, workshops, an industrial track, and a doctoral symposium. 
+ Statement on Inclusion and Safety 
+ As the organizers of RecSys 2025, we are committed to providing an inclusive, safe, and respectful conference environment for all attendees. As we increasingly realize the impact of our community’s work on society, we appreciate now more than ever the importance of providing an inclusive and accessible conference that brings together a diverse recommender systems community. 
+ As an ACM conference, RecSys and its organizers, speakers, and attendees are bound by theACM Policy Against Discrimination and Harassment, which applies to both the conference venue and social media. As organizers, this is a policy that we fully endorse. 
+ RecSys has made efforts over the last several years to be an accessible and inclusive community, across various perspectives, and we have sought throughout our planning of RecSys 2025 to continue and expand those efforts. The General Chairs (Maria Bielikova, Pavel Kordik, and Markus Schedl) welcome your input. 
+ Accessibility and Inclusion at RecSys.The RecSys conference values and cares about diversity, accessibility and inclusion. We have always been diverse in terms of disciplinary backgrounds (e.g. including both HCI- and data-focused work), professional affiliations (e.g. strong representation from both academia and industry), and application domains of our work. We are aware that members in our community may come from historically underrepresented groups, for which we wish to pro-actively encourage and support increased participation. To ensure the conference and its activities are accessible to all, we also explicitly seek to address the visible or invisible support needs members of our community may have. 
+ Publications and Presentations.RecSys hosts a variety of scientific discussions. Historically, we have prepared guidelines for accessible and inclusive presentations. We would like to emphasize that inclusive, safe and respectful addressing does not only apply to conference presentations, but also to the whole process leading towards these presentations, including the way in which research is presented and reviewed. We therefore would like to encourage our community members to already keep our best practice guidelines on inclusive language in mind, when preparing their manuscripts and peer reviewing. 
+ In-person Participation.RecSys 2025 is an in-person conference. Contributions to all tracks are expected to be presented in-person. At least one author from each contribution must attend the conference in person to present their work and address audience questions during the Q&A/poster session. No pre-recorded videos will be permitted. Contributions that are not presented in person by an author—whether on the main stage, during a poster session, or at co-located events—may be removed from the proceedings at the discretion of the respective chairs. 
+ Contact.Should you experience or witness a violation of the anti-harassment policy, or have any other concerns regarding your ability to fully and safely participate in the conference, please email the RecSys General Chairs; you can also directly reach them at the conference venue. 
+ We hope you have an amazing RecSys. 
+ Maria Bielikova, Pavel Kordik, and Markus Schedl 
+ RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys25/" - About the Conference 
+ href="https://recsys.acm.org/recsys25/call/" - Call for Contributions 
+ href="https://recsys.acm.org/recsys25/dates/" - Important Dates 
+ href="https://recsys.acm.org/recsys25/challenge/" - Challenge 
+ href="https://recsys.acm.org/recsys25/women-in-recsys/" - Women in RecSys 
+ Committees 
+ href="https://recsys.acm.org/recsys25/location/" - Location 
+ href="https://recsys.acm.org/recsys25/student-volunteers/" - Student Volunteers 
+ href="https://recsys.acm.org/recsys25/summer-school/" - Summer School 
+ href="/recsys25/sponsorship" - Become a sponsor!
+About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ © 2012-2025 
+ RecSys Community. All rights are reserved. 
+
+Call for Papers information:
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:Call for Contributions 
+ href="#content-tab-1-0-tab" - Full Papers 
+ href="#content-tab-1-1-tab" - Short Papers 
+ Reproducibility 
+ Doctoral Symposium 
+ Industry 
+ Tutorials 
+ Workshops 
+ Demos 
+ Late-Breaking Results 
+ Call for Full Papers 
+ The 19th ACM Conference on Recommender Systems (RecSys 2025), the leading conference for research on the foundations and applications of recommendation technologies, will take place from September 22 to 26, 2025, in Prague, Czech Republic. 
+ We look forward to receiving your contributions to the FULL research paper track for RecSys 2025. Below, you will find the “In-Brief” and “Important Dates” sections of the CFP, which discuss key points of attention for this call. In the rest of the CFP, we provide detailed information that authors should thoroughly review when preparing their submissions. 
+ For the full paper track, we welcome high-impact original papers that contribute to all aspects of recommender systems. CFPs for other RecSys 2025 tracks will be released separately: 
+ Short papers: contributions that typically discuss exciting work that is not yet mature enough for the full paper track, for example, due to limited experimental validation. 
+ Demo: implementations of novel, interesting, and important recommender systems’ concepts or applications. 
+ Reproducibility: contributions that discuss several aspects of reproducibility of empirical results, such as new resources or novel evaluation methodologies. 
+ Industry: papers that discuss field experiences, deployments, user studies and real-world challenges faced by industry practitioners. 
+ Late-breaking results: short presentations of preliminary work, mainly focused on fostering discussions with other members of the RecSys community. 
+ IN BRIEF 
+ The RecSys community values recommender systems’ human and economic impacts as much as the underlying algorithms. Therefore, we invite contributions to RecSys 2025 that cover the *full spectrum* of recommender system research. As always, we will prioritize the quality of the submitted work; however, this year, we will place even greater emphasis on the impact of each contribution.“A Guide to Writing the NeurIPS Impact Statement”provides non-binding guidance on some of the elements authors may wish to consider in assessing the impact of their work. 
+ Submissions will be handled electronically via EasyChair. The abstract is due by April 1st, 2025 (required), and the full paper is expected by April 8th, 2025. 
+ Submissions should be anonymous and will be reviewed by at least three members of the Program Committee and overseen by a Senior PC member. There will be a rebuttal phase during which authors can provide a brief narrative to clarify any misconceptions that may have arisen from the reviews and to address specific issues for which an answer is critical to the assessment of the paper. 
+ At the time of submission, information for all authors and authorship order must be established — no changes will be allowed after the review process begins. Moreover, authors must declare conflicts of interest with PC and SPC members before submitting the full paper. Failure to declare COI can result in desk-rejection. 
+ RecSys 2025 has a no dual submission policy, which means submitted manuscripts must not be under review at another publication venue, including other RecSys 2025 tracks. Submission of the paper to pre-print sites like arXiv is allowed as long as the title and abstract of your paper in the archival platform are distinct from your RecSys submission. 
+ Contributions must be self-contained, limited to 8 pages (using the ACM 2-column template), with up to 2 pages for references. Note that appendices also count towards the 8-page limit. No supplementary materials will be accepted; instead, we encourage authors to include a link to an anonymous repository for code, pre-registered studies, and dataset information within their paper. 
+ Contributions will be reviewed based on their relevance to the RecSys community, scientific rigor, and impact. 
+ At least one author from each accepted submission must attend the conference in person to present their work and participate in the Q&A session. Remote presentations or videos will not be permitted for accepted contributions. 
+ IMPORTANT DATES FOR FULL PAPERS 
+ Deadlines refer to 23:59 (11:59pm) in the AoE (Anywhere on Earth) time zone. 
+ Full paper abstracts due: April 1, 2025 
+ Full papers due: April 8, 2025 
+ Author rebuttal period for Full papers: May 20-26, 2025 
+ Full paper notifications: July 3, 2025 
+ Camera-ready due: July 21, 2025 (strict) 
+ IN-PERSON ATTENDANCE POLICY 
+ RecSys 2025 is an in-person conference. All accepted papers to the main conference are expected to be presented in-person. At least one author from each accepted paper must attend the conference in person to present the paper and address audience questions during the Q&A session. No pre-recorded videos will be permitted for Full papers. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the program chairs. 
+ SUBMISSION GUIDELINES 
+ Submitted contributions should focus on original and significant work that provides lasting value. The research should address the theory and/or practice of recommender systems. We welcome contributions that showcase innovative uses of algorithms, novel interfaces and explore the benefits and challenges of applying recommender system technology in real-world applications that impact a broad audience and environment. 
+ Evaluations of proposed solutions or applications must align with the claims made in the paper. Depending on the nature of the contribution, this could include simulation studies, offline evaluations, A/B tests, or controlled user experiments. 
+ Research methods and technical procedures should be detailed enough to allow for scrutiny and reproducibility. In other words, contributions should be self-contained. While we understand that user data may be proprietary or confidential, we encourage the sharing of anonymized and cleaned datasets, along with data collection procedures and code. Hence, to enhance reproducibility, we encourage authors to include in their manuscript, when pertinent, a link to an anonymous repository where they can include for example their code or data. Authors can also submit auxiliary material to enhance reproducibility (e.g., experiment details, proof details, appendixes, and study pre-registration). For this, the authors may refer tohttps://anonymous.4open.science/. 
+ Results should be communicated clearly, and the implications of the findings for RecSys and other fields should be explicitly discussed. 
+ Full research papers must describe original work that has not been previously published, not accepted for publication elsewhere, and not simultaneously submitted or currently under review in another journal or conference, including the other tracks of RecSys 2025. See thisbrief checklistto strengthen a RecSys paper, for authors and reviewers. 
+ Submissions of full research papers must be in English and be at most 8 pages in length including figures, tables, proofs, appendixes, acknowledgements, and any content except references, plus up to 2 pages of references. 
+ Each accepted long paper will be included in the conference proceedings and presented in the form of a talk or poster during the main conference program. 
+ Submissions must be anonymous and should be submitted as a PDF electronically viahref="https://easychair.org/conferences/?conf=recsys2025" - EasyChair
+by selecting the “RecSys 2025 Full Papers” track (link will be provided later). 
+ The review of manuscripts will be mutually anonymous, and submissions not properly anonymized will be desk-rejected without review. 
+ RELEVANT AREAS & TOPICS 
+ Human-centered recommendation approaches 
+ Adaptive algorithms that adjust recommendations dynamically based on user interactions 
+ Explanation methods and interfaces for recommender systems 
+ Human-in-the-loop model learning and validation 
+ Innovative user interfaces for recommender systems 
+ Novel interaction paradigms 
+ Novel methods for improving the explainability of recommendation models 
+ Novel methods for preference elicitation 
+ Novel perspectives on the role of transparency in recommender systems 
+ Studies that investigate how real-time events (e.g., trends and holidays) influence user preferences 
+ User control of RecSys 
+ User experiments and studies of recommendation applications 
+ Societal recommender systems 
+ Adapting recommendation algorithms to suit different cultural contexts and multilingual users 
+ Addressing global digital divides by exploring the design, development and deployment of systems for low-resource environments 
+ Bias, fairness, bubbles, and ethics of recommender systems 
+ Diversity and inclusion models 
+ Eco-aware recommendation models 
+ Ensuring equitable access to digital resources for understudied populations 
+ Implications of recommendation algorithms when the main stakeholders are understudied populations 
+ Recommendation models for sustainable tourism 
+ Studying the effects of recommendation systems on cultural and global diversity lenses 
+ Supporting understudied communities by elevating diverse and underrepresented content 
+ Sustainable Recommender Systems Development 
+ Computational innovations, evaluation, and real-world applications 
+ Building large-scale, standardized datasets for benchmarking algorithms 
+ Case studies of real-world implementations 
+ Conversational and natural language recommender systems 
+ Cross-domain recommendation 
+ Design of usability studies 
+ Economic models and consequences of recommender systems 
+ Generative models in recommender systems 
+ Legal and regulatory aspects of recommender systems 
+ Knowledge-based recommender systems 
+ Multimodal approaches for recommendation 
+ Multi-stakeholder recommendations 
+ Novel evaluation metrics beyond accuracy 
+ Privacy and security 
+ Recommendation models for education and learning-related technologies 
+ Studies that investigate the relationship between evaluation metrics and real-world outcomes 
+ Tailoring recommendations for applications beyond e-commerce 
+ FORMATTING 
+ ACM’s archival publication format separates content from presentation in the Digital Library to enhance accessibility and improve the flexibility and resiliency of our publications. All authors should submit manuscripts for review in adouble-column format. Instructions for Word and LaTeX authors are given below: 
+ Microsoft Word | : Write your paper using | ACM’s interim template | . Follow the embedded instructions to apply the paragraph styles to your various text elements. The text is in double-column format and no additional formatting is required at this stage. 
+ LaTeX | : Please use the latest version of the | Primary Article Template | – LaTeX to create your submission.Start the document with the | \documentclass[sigconf,anonymous]{acmart} | command to generate the output in a double-column format. Please see the | LaTeX documentation | and | ACM’s LaTeX best practices guide | for further instructions, | ignoring the single-column instructions | . Do not use the “manuscript” option, otherwise the document will not be compiled in double-column, as required. Check the sample-sigconf.tex file included in the template package for a formatting example. To ensure 100% | compatibility | with The ACM Publishing System (TAPS), please | restrict the use of packages | to the | whitelist of approved LaTeX packages | . 
+ Further instructions for camera-ready submission will be provided to authors of accepted contributions. 
+ Authors are strongly encouraged to provide“alt text” (alternative text) for floats(images, tables, etc.) in their content so that readers with disabilities can be given descriptive information for these floats that are important to the work. The descriptive text will be displayed in place of a float if the float cannot be loaded. This benefits the author as well as it broadens the reader base for the author’s work. Moreover, the alt text provides in-depth float descriptions to search engine crawlers, which helps to properly index these floats. Please check your template’s documentation for instructions on how to use “alt text”. Additionally, authors should follow thehref="https://authors.acm.org/journals/accessibility-recommendations-for-publishing-in-color" - ACM Accessibility Recommendations for Publishing in Color
+andSIG ACCESS guidelines on describing figures. 
+ Should you have any questions or issues going through the instructions above, please contact support atacmtexsupport@aptaracorp.comfor both LaTeX and Microsoft Word inquiries. 
+ Accepted papers will be later submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ REVIEW PROCESS 
+ RecSys follows amutually anonymousreview process. Papers will be reviewed by at least three members of the Program Committee and overseen by a Senior PC member, who will assess submissions based on their relevance, originality, rigor, and the impact of their contribution to the field. Reviewers are also asked to consider the replicability of reported research. Papers that are out of scope, incomplete, or lack sufficient evidence to support their main claims may be rejected without a full review. 
+ After the review phase, authors may produce an anonymous rebuttal, whose goal is to refute any factual errors in reviews or to supply additional information or clarifications requested by the reviewers. Rebuttals may include minor additional experiments or analysis requested by reviewers. They may also include figures, graphs or proofs to better illustrate your arguments. Rebuttals MUST NOT add new contributions (theorems, algorithms, experiments) that were absent in the original submission and were not specifically requested by the reviewers. Further information will be provided along with the reviews. 
+ AUTHORSHIP POLICY & CONFLICT of INTERESTS 
+ Authors are strongly encouraged to carefully reviewhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - ACM’s authorship policy
+before submitting their papers. All authors must be listed in the correct order in EasyChair by the submission deadline. Moreover, they should adhere to the ACM Conflict of Interest policy. CoI refers to close personal relationships, continuing collaborations in the past 3 years (e.g., co-author on paper, joint grant), past or current advisor/advisee relationship, and employment at the same institution in the past 3 years. For full details, please visit this site:https://www.acm.org/publications/policies/conflict-of-interest 
+ The complete author list must be provided by the abstract submission deadline to assist reviewers in identifying potential conflicts of interest. Therefore, no changes to authorship will be allowed for any reason after the abstract submission deadline, and no updates will be permitted for camera-ready versions. 
+ Please ensure that all authorsobtain an ORCID ID, to complete the publishing process for accepted contributions, since as an ACM conference, we havehref="https://authors.acm.org/author-resources/orcid-faqs"" - committed to collecting ORCID IDs from all of our published authors
+. This helps improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization. 
+ ANONYMITY 
+ The peer review process ismutually anonymous. This means that all submissions must not include any information that identifies the authors or their organizations. Specifically, authors should not include their names and affiliations and must refer to their previous work in the third person. For example, you could write, “de Gemmis and Pera (2025) stated that RecSys submissions should be anonymized, which can be accomplished by referring to the authors’ prior work in the third person.” It is also important to avoid providing any other information that could help reviewers identify the authors, such as acknowledgements of individuals and funding sources. 
+ It is acceptable to explicitly mention the companies or organizations that provided datasets, hosted experiments, or deployed solutions, as long as there is no implication that the authors are currently affiliated with those organizations. Reviewers are instructed not to search for technical reports, pre-prints, or other information about your research. Therefore, it is the authors’ responsibility to ensure that the manuscript submitted does not reveal their identity as the authors. 
+ PRE-PRINT POLICY 
+ Please carefully consider pre-print constraints. Any violation of this policy could cause your paper to be desk-rejected. 
+ An anonymous version of your RecSys submission can be submitted at any time to pre-print sites like arXiv. 
+ Non-anonymized work having significant overlap with your RecSys submission, posted on any online archival platform | before | the submission deadline, must be disclosed in the EasyChair submission form. The title and abstract of the RecSys submission must be distinct from your previous version. 
+ Any non-anonymized version of your RecSys paper cannot be posted to pre-print sites during the review period. 
+ USE of AI POLICY 
+ Authors must follow the ACM Policy onthe use of generative AI software tools. If a paper includes material generated by GenAI tools (such as text produced by large language models like ChatGPT), it is essential to disclose the extent and nature of this use in a section titled “Acknowledgments”. This allows reviewers to evaluate the overall rigor of the research methodology. However, the use of AI tools for editing and refining authors’ work—meaning tasks like grammar checks, word autocorrect, and other light editing—does not require disclosure. Authors who choose to utilize GenAI tools are fully responsible for any inaccuracies, biases, plagiarism, and other violations, just as if they had created the content themselves. Submissions that are primarily produced by GenAI without substantial contributions from the authors are prohibited and considered spam. Only humans are permitted to be authors of submitted papers. 
+ PLAGIARISM POLICY 
+ Plagiarism is a matter that as Program Chairs we take very seriously, thus, we check the plagiarism levels of all submitted papers to ensure content originality using an automated tool. 
+ If a contribution reuses non-original text from a previous publication (for example, the description of an algorithm or dataset), please ensure that the prior publication is cited as the source of that text. 
+ For questions regarding reusing text or simultaneous submissions, please contact the program chairs at least one week before the submission deadline. For further details, refer to theACM Publishing License Agreementandhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - Authorship Policy
+. Papers violating any of the above guidelines are subject to rejection without review and cases may be referred to the ACM Publications Ethics and Plagiarism committee for further action where warranted. 
+ ETHICAL REVIEW FOR HUMAN-SUBJECTS RESEARCH 
+ ACM RecSys expects all authors to comply with ethical and regulatory guidelines associated with human subjects research, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Papers reporting on such human subjects research must include a statement identifying any regulatory review the research is subject to (and identifying the form of approval provided), or explaining the lack of required review. Reviewers will be asked to consider whether the research was conducted in compliance with applicable ethical and regulatory guidelines. 
+ DESK REJECTION POLICY 
+ Submissions that do not meet the requirements for anonymity, length, or formatting; violate dual submission policy and/or any of ACM’s policies on use of AI or academic dishonesty—such as plagiarism, author misrepresentation, or falsification—may be rejected by the chairs without further consideration. 
+ To finalize their submission, authors will be requested to declare conflicts of interest with PC and SPC members. Missing declarations might result in desk rejection. 
+ TheACM Code of Ethicsgrants Program Chairs the authority to (desk) reject papers that perpetuate harmful stereotypes, employ unethical research practices, or uncritically present outcomes or implications that disadvantage marginalized communities. Additionally, reviewers will be explicitly asked to consider whether the research was conducted per professional ethical standards and applicable regulatory guidelines. Failure to adhere to these standards may result in a rejection. Some concrete examples of violations that may result in desk rejection are: 
+ Failures to declare conflicts of interest with PC or SPC members. 
+ Any other content after the maximum length of the submission. 
+ Wrong template or any attempt to format change to get around the page limit. 
+ Authors or their institutional affiliations are explicitly stated or easily discoverable. 
+ Links to source code repositories or datasets that reveal, explicitly or implicitly, the identity of one of the authors. 
+ Any change to the list of authors (both names and affiliations) after the abstract submission deadline. 
+ Double submission to another publication venue. 
+ PUBLICATION and OPEN ACCESS 
+ By submitting a manuscript to an ACM Publication, authors acknowledge that they are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of the manuscript paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ The official publication date is when the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. 
+ Authors of accepted papers will have the choice to publish the work either under the conventional ACM policy free of author fees, or under the ACM Open Access policy potentially subject to an article processing charge. 
+ PROGRAM CHAIRS 
+ For CFP-related questions, please reach out to the RecSys 2025 Program Chairs: 
+ Marco de Gemmis, University of Bari Aldo Moro, Italy 
+ Sole Pera, TU Delft, The Netherlands 
+ Contact information:href="javascript:;" - program2025@recsys.acm.org
+Call for Short Papers 
+ The 19th ACM Conference on Recommender Systems (RecSys 2025), the leading conference for research on the foundations and applications of recommendation technologies, will take place from September 22 to 26, 2025, in Prague, Czech Republic. 
+ We look forward to receiving your contributions to the SHORT research paper track for RecSys 2025. Below, you will find the “In-Brief” and “Important Dates” sections of the CFP, which discuss key points of attention for this call. In the rest of the CFP, we provide detailed information that authors should thoroughly review when preparing their submissions. 
+ For the short paper track, we welcome high-impact original papers that contribute to all aspects of recommender systems. CFPs for other RecSys 2025 tracks will be released separately: 
+ Full papers: contributions that describe substantial, high-impact contributions of lasting value that pertain to all aspects of recommender systems. 
+ Demo: implementations of novel, interesting, and important recommender systems’ concepts or applications. 
+ Reproducibility: contributions that discuss several aspects of reproducibility of empirical results, such as new resources or novel evaluation methodologies. 
+ Industry: papers that discuss field experiences, deployments, user studies and real-world challenges faced by industry practitioners. 
+ Late-breaking results: short presentations of preliminary work, mainly focused on fostering discussions with other members of the RecSys community. 
+ IN BRIEF 
+ The RecSys community values recommender systems’ human and economic impacts as much as the underlying algorithms. Therefore, we invite contributions to RecSys 2025 that cover the *full spectrum* of recommender system research. As always, we will prioritize the quality of the submitted work; however, this year, we will place even greater emphasis on the impact of each contribution.“A Guide to Writing the NeurIPS Impact Statement”provides non-binding guidance on some of the elements authors may wish to consider in assessing the impact of their work. 
+ Submissions will be handled electronically via EasyChair. The abstract is due by April 22nd, 2025 (required), and the paper is expected by April 29th, 2025. 
+ Submissions should be anonymous and will be reviewed by at least three members of the Program Committee and overseen by a Senior PC member. There will be a rebuttal phase during which authors can provide a brief narrative to clarify any misconceptions that may have arisen from the reviews and to address specific issues for which an answer is critical to the assessment of the paper. 
+ At the time of submission, information for all authors and authorship order must be established — no changes will be allowed after the review process begins. Moreover, authors must declare conflicts of interest with PC and SPC members before submitting the short paper. Failure to declare COI can result in desk-rejection. 
+ RecSys 2025 has a no dual submission policy, which means submitted manuscripts must not be under review at another publication venue, including other RecSys 2025 tracks. Submission of the paper to pre-print sites like arXiv is allowed as long as the title and abstract of your paper in the archival platform are distinct from your RecSys submission. 
+ Contributions must be self-contained, limited to 4 pages (using the ACM 2-column template), with up to 2 pages for references. Note that appendices also count towards the 4-page limit. No supplementary materials will be accepted; instead, we encourage authors to include a link to an anonymous repository for code, pre-registered studies, and dataset information within their paper. 
+ Contributions will be reviewed based on their relevance to the RecSys community, scientific rigor, and impact. 
+ At least one author from each accepted submission must attend the conference in person to present their work and participate in the Q&A session. Remote presentations or videos will not be permitted for accepted contributions. 
+ IMPORTANT DATES FOR SHORT PAPERS 
+ Deadlines refer to 23:59 (11:59pm) in the AoE (Anywhere on Earth) time zone. 
+ Short paper abstracts due: April 22, 2025 
+ Short papers due: April 29, 2025 
+ Author rebuttal period for Short papers: June 5-10, 2025 
+ Short paper notifications: July 3, 2025 
+ Camera-ready due: July 21, 2025 (strict) 
+ IN-PERSON ATTENDANCE POLICY 
+ RecSys 2025 is an in-person conference. All accepted papers to the main conference are expected to be presented in-person. At least one author from each accepted paper must attend the conference in person to present the paper and address audience questions during the Q&A session. No pre-recorded videos will be permitted for Short papers. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the program chairs. 
+ SUBMISSION GUIDELINES 
+ Submitted contributions should focus on original and significant work that provides lasting value. The research should address the theory and/or practice of recommender systems. We welcome contributions that showcase innovative uses of algorithms, novel interfaces and explore the benefits and challenges of applying recommender system technology in real-world applications that impact a broad audience and environment. 
+ Evaluations of proposed solutions or applications must align with the claims made in the paper. Depending on the nature of the contribution, this could include simulation studies, offline evaluations, A/B tests, or controlled user experiments. 
+ Research methods and technical procedures should be detailed enough to allow for scrutiny and reproducibility. In other words, contributions should be self-contained. While we understand that user data may be proprietary or confidential, we encourage the sharing of anonymized and cleaned datasets, along with data collection procedures and code. Hence, to enhance reproducibility, we encourage authors to include in their manuscript, when pertinent, a link to an anonymous repository where they can include for example their code or data. Authors can also submit auxiliary material to enhance reproducibility (e.g., experiment details, proof details, appendixes, and study pre-registration). For this, the authors may refer tohttps://anonymous.4open.science/. 
+ Results should be communicated clearly, and the implications of the findings for RecSys and other fields should be explicitly discussed. 
+ Short research papers must describe original work that has not been previously published, not accepted for publication elsewhere, and not simultaneously submitted or currently under review in another journal or conference, including the other tracks of RecSys 2025. See thisbrief checklistto strengthen a RecSys paper, for authors and reviewers. 
+ Submissions of short research papers must be in English and be at most 4 pages in length including figures, tables, proofs, appendixes, acknowledgements, and any content except references, plus up to 2 pages of references. 
+ Each accepted short paper will be included in the conference proceedings and presented in the form of a talk or poster during the main conference program. 
+ Submissions must be anonymous and should be submitted as a PDF electronically viahref="https://easychair.org/conferences/?conf=recsys2025" - EasyChair
+by selecting the “RecSys 2025 Short Papers” track. 
+ The review of manuscripts will be mutually anonymous, and submissions not properly anonymized will be desk-rejected without review. 
+ RELEVANT AREAS & TOPICS 
+ Human-centered recommendation approaches 
+ Adaptive algorithms that adjust recommendations dynamically based on user interactions 
+ Explanation methods and interfaces for recommender systems 
+ Human-in-the-loop model learning and validation 
+ Innovative user interfaces for recommender systems 
+ Novel interaction paradigms 
+ Novel methods for improving the explainability of recommendation models 
+ Novel methods for preference elicitation 
+ Novel perspectives on the role of transparency in recommender systems 
+ Studies that investigate how real-time events (e.g., trends and holidays) influence user preferences 
+ User control of RecSys 
+ User experiments and studies of recommendation applications 
+ Societal recommender systems 
+ Adapting recommendation algorithms to suit different cultural contexts and multilingual users 
+ Addressing global digital divides by exploring the design, development and deployment of systems for low-resource environments 
+ Bias, fairness, bubbles, and ethics of recommender systems 
+ Diversity and inclusion models 
+ Eco-aware recommendation models 
+ Ensuring equitable access to digital resources for understudied populations 
+ Implications of recommendation algorithms when the main stakeholders are understudied populations 
+ Recommendation models for sustainable tourism 
+ Studying the effects of recommendation systems on cultural and global diversity lenses 
+ Supporting understudied communities by elevating diverse and underrepresented content 
+ Sustainable Recommender Systems Development 
+ Computational innovations, evaluation, and real-world applications 
+ Building large-scale, standardized datasets for benchmarking algorithms 
+ Case studies of real-world implementations 
+ Conversational and natural language recommender systems 
+ Cross-domain recommendation 
+ Design of usability studies 
+ Economic models and consequences of recommender systems 
+ Generative models in recommender systems 
+ Legal and regulatory aspects of recommender systems 
+ Knowledge-based recommender systems 
+ Multimodal approaches for recommendation 
+ Multi-stakeholder recommendations 
+ Novel evaluation metrics beyond accuracy 
+ Privacy and security 
+ Recommendation models for education and learning-related technologies 
+ Studies that investigate the relationship between evaluation metrics and real-world outcomes 
+ Tailoring recommendations for applications beyond e-commerce 
+ FORMATTING 
+ ACM’s archival publication format separates content from presentation in the Digital Library to enhance accessibility and improve the flexibility and resiliency of our publications. All authors should submit manuscripts for review in adouble-column format. Instructions for Word and LaTeX authors are given below: 
+ Microsoft Word | : Write your paper using | ACM’s interim template | . Follow the embedded instructions to apply the paragraph styles to your various text elements. The text is in double-column format and no additional formatting is required at this stage. 
+ LaTeX | : Please use the latest version of the | Primary Article Template | – LaTeX to create your submission.Start the document with the | \documentclass[sigconf,anonymous]{acmart} | command to generate the output in a double-column format. Please see the | LaTeX documentation | and | ACM’s LaTeX best practices guide | for further instructions, | ignoring the single-column instructions | . Do not use the “manuscript” option, otherwise the document will not be compiled in double-column, as required. Check the sample-sigconf.tex file included in the template package for a formatting example. To ensure 100% | compatibility | with The ACM Publishing System (TAPS), please | restrict the use of packages | to the | whitelist of approved LaTeX packages | . 
+ Further instructions for camera-ready submission will be provided to authors of accepted contributions. 
+ Authors are strongly encouraged to provide“alt text” (alternative text) for floats(images, tables, etc.) in their content so that readers with disabilities can be given descriptive information for these floats that are important to the work. The descriptive text will be displayed in place of a float if the float cannot be loaded. This benefits the author as well as it broadens the reader base for the author’s work. Moreover, the alt text provides in-depth float descriptions to search engine crawlers, which helps to properly index these floats. Please check your template’s documentation for instructions on how to use “alt text”. Additionally, authors should follow thehref="https://authors.acm.org/journals/accessibility-recommendations-for-publishing-in-color" - ACM Accessibility Recommendations for Publishing in Color
+andSIG ACCESS guidelines on describing figures. 
+ Should you have any questions or issues going through the instructions above, please contact support atacmtexsupport@aptaracorp.comfor both LaTeX and Microsoft Word inquiries. 
+ Accepted papers will be later submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ REVIEW PROCESS 
+ RecSys follows amutually anonymousreview process. Papers will be reviewed by at least three members of the Program Committee and overseen by a Senior PC member, who will assess submissions based on their relevance, originality, rigor, and the impact of their contribution to the field. Reviewers are also asked to consider the replicability of reported research. Papers that are out of scope, incomplete, or lack sufficient evidence to support their main claims may be rejected without a full review. 
+ After the review phase, authors may produce an anonymous rebuttal, whose goal is to refute any factual errors in reviews or to supply additional information or clarifications requested by the reviewers. Rebuttals may include minor additional experiments or analysis requested by reviewers. They may also include figures, graphs or proofs to better illustrate your arguments. Rebuttals MUST NOT add new contributions (theorems, algorithms, experiments) that were absent in the original submission and were not specifically requested by the reviewers. Further information will be provided along with the reviews. 
+ AUTHORSHIP POLICY & CONFLICT of INTERESTS 
+ Authors are strongly encouraged to carefully reviewhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - ACM’s authorship policy
+before submitting their papers. All authors must be listed in the correct order in EasyChair by the submission deadline. Moreover, they should adhere to the ACM Conflict of Interest policy. CoI refers to close personal relationships, continuing collaborations in the past 3 years (e.g., co-author on paper, joint grant), past or current advisor/advisee relationship, and employment at the same institution in the past 3 years. For full details, please visit this site:https://www.acm.org/publications/policies/conflict-of-interest 
+ The complete author list must be provided by the abstract submission deadline to assist reviewers in identifying potential conflicts of interest. Therefore, no changes to authorship will be allowed for any reason after the abstract submission deadline, and no updates will be permitted for camera-ready versions. 
+ Please ensure that all authorsobtain an ORCID ID, to complete the publishing process for accepted contributions, since as an ACM conference, we havehref="https://authors.acm.org/author-resources/orcid-faqs"" - committed to collecting ORCID IDs from all of our published authors
+. This helps improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization. 
+ ANONYMITY 
+ The peer review process ismutually anonymous. This means that all submissions must not include any information that identifies the authors or their organizations. Specifically, authors should not include their names and affiliations and must refer to their previous work in the third person. For example, you could write, “de Gemmis and Pera (2025) stated that RecSys submissions should be anonymized, which can be accomplished by referring to the authors’ prior work in the third person.” It is also important to avoid providing any other information that could help reviewers identify the authors, such as acknowledgements of individuals and funding sources. 
+ It is acceptable to explicitly mention the companies or organizations that provided datasets, hosted experiments, or deployed solutions, as long as there is no implication that the authors are currently affiliated with those organizations. Reviewers are instructed not to search for technical reports, pre-prints, or other information about your research. Therefore, it is the authors’ responsibility to ensure that the manuscript submitted does not reveal their identity as the authors. 
+ PRE-PRINT POLICY 
+ Please carefully consider pre-print constraints. Any violation of this policy could cause your paper to be desk-rejected. 
+ An anonymous version of your RecSys submission can be submitted at any time to pre-print sites like arXiv. 
+ Non-anonymized work having significant overlap with your RecSys submission, posted on any online archival platform | before | the submission deadline, must be disclosed in the EasyChair submission form. The title and abstract of the RecSys submission must be distinct from your previous version. 
+ Any non-anonymized version of your RecSys paper cannot be posted to pre-print sites during the review period. 
+ USE of AI POLICY 
+ Authors must follow the ACM Policy onthe use of generative AI software tools. If a paper includes material generated by GenAI tools (such as text produced by large language models like ChatGPT), it is essential to disclose the extent and nature of this use in a section titled “Acknowledgments”. This allows reviewers to evaluate the overall rigor of the research methodology. However, the use of AI tools for editing and refining authors’ work—meaning tasks like grammar checks, word autocorrect, and other light editing—does not require disclosure. Authors who choose to utilize GenAI tools are fully responsible for any inaccuracies, biases, plagiarism, and other violations, just as if they had created the content themselves. Submissions that are primarily produced by GenAI without substantial contributions from the authors are prohibited and considered spam. Only humans are permitted to be authors of submitted papers. 
+ PLAGIARISM POLICY 
+ Plagiarism is a matter that as Program Chairs we take very seriously, thus, we check the plagiarism levels of all submitted papers to ensure content originality using an automated tool. 
+ If a contribution reuses non-original text from a previous publication (for example, the description of an algorithm or dataset), please ensure that the prior publication is cited as the source of that text. 
+ For questions regarding reusing text or simultaneous submissions, please contact the program chairs at least one week before the submission deadline. For further details, refer to theACM Publishing License Agreementandhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - Authorship Policy
+. Papers violating any of the above guidelines are subject to rejection without review and cases may be referred to the ACM Publications Ethics and Plagiarism committee for further action where warranted. 
+ ETHICAL REVIEW FOR HUMAN-SUBJECTS RESEARCH 
+ ACM RecSys expects all authors to comply with ethical and regulatory guidelines associated with human subjects research, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Papers reporting on such human subjects research must include a statement identifying any regulatory review the research is subject to (and identifying the form of approval provided), or explaining the lack of required review. Reviewers will be asked to consider whether the research was conducted in compliance with applicable ethical and regulatory guidelines. 
+ DESK REJECTION POLICY 
+ Submissions that do not meet the requirements for anonymity, length, or formatting; violate dual submission policy and/or any of ACM’s policies on use of AI or academic dishonesty—such as plagiarism, author misrepresentation, or falsification—may be rejected by the chairs without further consideration. 
+ To finalize their submission, authors will be requested to declare conflicts of interest with PC and SPC members. Missing declarations might result in desk rejection. 
+ TheACM Code of Ethicsgrants Program Chairs the authority to (desk) reject papers that perpetuate harmful stereotypes, employ unethical research practices, or uncritically present outcomes or implications that disadvantage marginalized communities. Additionally, reviewers will be explicitly asked to consider whether the research was conducted per professional ethical standards and applicable regulatory guidelines. Failure to adhere to these standards may result in a rejection. Some concrete examples of violations that may result in desk rejection are: 
+ Failures to declare conflicts of interest with PC or SPC members. 
+ Any other content after the maximum length of the submission. 
+ Wrong template or any attempt to format change to get around the page limit. 
+ Authors or their institutional affiliations are explicitly stated or easily discoverable. 
+ Links to source code repositories or datasets that reveal, explicitly or implicitly, the identity of one of the authors. 
+ Any change to the list of authors (both names and affiliations) after the abstract submission deadline. 
+ Double submission to another publication venue. 
+ PUBLICATION and OPEN ACCESS 
+ By submitting a manuscript to an ACM Publication, authors acknowledge that they are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of the manuscript paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ The official publication date is when the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. 
+ Authors of accepted papers will have the choice to publish the work either under the conventional ACM policy free of author fees, or under the ACM Open Access policy potentially subject to an article processing charge. 
+ PROGRAM CHAIRS 
+ For CFP-related questions, please reach out to the RecSys 2025 Program Chairs: 
+ Marco de Gemmis, University of Bari Aldo Moro, Italy 
+ Sole Pera, TU Delft, The Netherlands 
+ Contact information:href="javascript:;" - program2025@recsys.acm.org
+Call for Reproducibility Papers 
+ The reproducibility of empirical results is a cornerstone of scientific research and a prerequisite to ensure continuous progress in our field. ACM RecSys 2025 therefore strongly encourages submissions that replicate or analyze prior works in similar or alternative settings or contribute to an increased level of reproducibility in the future. 
+ TYPES OF CONTRIBUTIONS 
+ We encourage the submission of different types of papers, including: 
+ Reproducibility and Replicability papers, that analyze prior works in different contexts, such as across different domains, using different datasets, or comparing against alternative baselines. 
+ Resource papers that lay the foundation for future reproducibility, for example, by introducing new datasets or open-source software frameworks for evaluating recommender systems. 
+ Methodology papers that propose, for example, novel offline evaluation protocols for reproducibility tasks or provide validated measurement scales for user-centric evaluations of recommendations. 
+ Reflective works such as guidelines for reproducibility, surveys on reproducibility levels, or theoretical insights into research methodologies. 
+ We also welcome other types of submissions related to the broader topic of reproducibility in recommender systems. If you are unsure whether your work fits the reproducibility track, please contact the track chairs in advance athref="javascript:;" - reproducibility2025@recsys.acm.org
+. 
+ IN BRIEF 
+ Submissions will be handled electronically via | href="https://easychair.org/conferences/?conf=recsys2025" - EasyChair | . 
+ Submissions should be anonymous (apart from Resource papers) and will be reviewed by at least three members of the Program Committee and overseen by a Senior PC member. There will be a rebuttal phase focused on the paper artifacts (source code, data) during which authors can provide additional information or clarifications, related exclusively to the paper artifacts, which are deemed critical to the assessment of the paper. 
+ At the time of submission, information for all authors and authorship order must be estabilshed — no changes will be allowed after the review process begins. Moreover, authors must declare confilcts of interest with PC and SPC members before submitting the paper. Faliure to declare COI can result in desk-rejection. 
+ RecSys 2025 has a no dual submission liilcy, which means submitted manuscripts must not be under review at another pubilcation venue, including other RecSys 2025 tracks. Submission of the paper to pre-print sites ilke arXiv is allowed as long as the title and abstract of your paper in the archival platform are distinct from your RecSys submission. 
+ Contributions must be self-contained, within the number of pages allowed for the chosen type of paper (long or short). 
+ The paper must include all the relevant artifacts (source code, data etc.) and installation instructions which must be avaliable to the reviewers and meet the anonymity requirements. Faliure to provide the relevant artifacts will result in desk-rejection. Incomplete or non-executable artifacts will negatively affect the peer review outcome. 
+ Contributions will be reviewed based on their relevance to the RecSys community, scientific rigor, and impact. 
+ At least one author from each accepted submission must attend the conference in person to present their work and participate in the Q&A session. Remote presentations or videos will not be permitted for accepted contributions. 
+ IMPORTANT DATES 
+ Abstract submission deadline: May 6, 2025 
+ Paper submission deadline: May 13, 2025 
+ Author rebuttal period focused on the paper artifacts: June 5-10, 2025 
+ Author Notification: July 3, 2025 
+ Camera-ready version deadline: July 21, 2025 
+ Deadlines refer to 23:59 (11:59pm) in theAoE (Anywhere on Earth) time zone. 
+ IN-PERSON ATTENDENCE POLICY 
+ RecSys 2025 is an in-person conference. All accepted papers to the main conference are expected to be presented in-person. At least one author from each accepted paper must attend the conference in person to present the paper and address audience questions during the Q&A session. No pre-recorded videos will be permitted for Full papers. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the program chairs. 
+ SUBMISSION GUIDELINES 
+ Submitted contributions should focus on original and significant work that provides lasting value. 
+ We acceptlong papers of up to 8 pages(plus up to 2 pages for references) andshort papers of up to 4 pages(plus up to 1 page for references) in ACM’s double-column format. Note that appendices are included in the page limit. The length of a submission should be appropriate to the significance of its contribution. 
+ Note that for all types of papers, except for Resource papers, the review process is double-blind. Submissions therefore must not include the author’s names and affiliations, and the paper artifacts (source code/data etc.) should maintain anonymity as well. Further details are reported in the ANONIMITY sections below. To maintain anonymity, authors may refer tohttps://anonymous.4open.science/. 
+ At the time of submission,all relevant materials(artifacts) necessary to fully assess the validity of the work, including source code, data, and installation instructions required to reproduce the reported experiments,must be available to the reviewersunder reasonably liberal terms and be sufficiently well-documented. Submissions from the original authors of the reproduced experiments will not be accepted. Providing non-executable or poorly documented artifacts will negatively impact the peer review outcome, andfailure to provide the required materials will result in desk rejection. During the rebuttal phase, authors will have the opportunity to respond to reviewers’ requests for clarifications regarding the artifacts. 
+ To promote a fair evaluation of new algorithms and approaches with state-of-the-art baselines and allow other researchers to reproduce the results presented in RecSys papers, we suggest the authors refer to one of the frameworks listed inhref="https://github.com/ACMRecSys/recsys-evaluation-frameworks" - https://github.com/ACMRecSys/recsys-evaluation-frameworks
+. Note however that the correctness of third-party implementations should not be taken for granted. As for the datasets to use in experimental evaluations, authors may refer to the repositories available athref="https://github.com/ACMRecSys/recsys-datasets" - https://github.com/ACMRecSys/recsys-datasets
+. 
+ Each paper will be reviewed by members of the program committee of the track. The review criteria, among others, will include the following specific aspects: 
+ Novelty: What is new about the reported findings or insights? If the paper reiterates previous findings, what is new about the analysis or arguments, and are the conclusions relevant to the research practices currently adopted by the community? 
+ Impact: What is the expected impact of the reported findings or insights? 
+ Rigor: Is the work technically sound? Are the choices made justified? 
+ Artifacts Availability: Is the submitted work repeatable? Are the artifacts well-documented, consistent with the paper and executable? 
+ Each accepted paper will be included in the conference proceedings, and a selected number of papers will be presented in a plenary session as part of the main conference program. We encourage authors to create a companion website that hosts all relevant material. 
+ Anonymity for Resource Papers 
+ The resource papers arenot required to be anonymoustherefore theresource paper peer review process is single-blind. This means that submissions may include identifying information about the authors and their organization. Additionally, there is no need to anonymize the paper artifacts, such as code, notebooks, datasets, or any other external resources. 
+ Authors must ensure unrestricted access to the resource both during the review process and afterward by citing it at a permanent location. For example, datasets should be available in repositories such as FigShare, Zenodo, Datorium, Dataverse, or other dataset-sharing services or domain-specific repositories. Similarly, software code should be hosted in a public repository such as GitHub, Bitbucket, or an institutional open data repository. 
+ Anonymity for Reproducibility, Methodology, and Reflective Papers 
+ The peer review process ismutually anonymous (double-blind). This means that neither the submitted paper nor the paper artifacts (source code, data etc.) can include information identifying the authors or their organization. Specifically, do not include the authors’ names and affiliations, refer to your previous work in the third person (e.g., “Musto and Ferrari Dacrema (2025) recommended that RecSys submissions be anonymized by referring to the authors’ prior work in the third person.”), and avoid providing any other information that would allow reviewers to identify the authors, such as acknowledgments of individuals and funding sources. However, it is acceptable to explicitly refer in the paper to the companies or organizations that provided datasets, hosted experiments or deployed solutions if there is no implication that the authors are currently affiliated with the mentioned organization. Reviewers are instructed not to search for tech reports, pre-prints, and other information about your research. Your responsibility is focused on making sure that the paper submission itself does not reveal your identity as the author. 
+ To provide all relevant materials that are needed to fully assess the validity of the submission and keep the anonymity of their submission, the authors may refer tohttps://anonymous.4open.science/. 
+ FORMATTING 
+ ACM’s archival publication format separates content from presentation in the Digital Library to enhance accessibility and improve the flexibility and resiliency of our publications. All authors should submit manuscripts for review in adouble-column format. Instructions for Word and LaTeX authors are given below: 
+ Microsoft Word | : Write your paper using | ACM’s interim template | . Follow the embedded instructions to apply the paragraph styles to your various text elements. The text is in double-column format and no additional formatting is required at this stage. 
+ LaTeX | : Please use the latest version of the | Primary Article Template | – LaTeX to create your submission.Start the document with the | \documentclass[sigconf,anonymous]{acmart} | command to generate the output in a double-column format. Please see the | LaTeX documentation | and | ACM’s LaTeX best practices guide | for further instructions, | ignoring the single-column instructions | . Do not use the “manuscript” option, otherwise the document will not be compiled in double-column, as required. Check the sample-sigconf.tex file included in the template package for a formatting example. To ensure 100% | compatibility | with The ACM Publishing System (TAPS), please | restrict the use of packages | to the | whitelist of approved LaTeX packages | . 
+ Further instructions for camera-ready submission will be provided to authors of accepted contributions. 
+ Authors are strongly encouraged to provide“alt text” (alternative text) for floats(images, tables, etc.) in their content so that readers with disabilities can be given descriptive information for these floats that are important to the work. The descriptive text will be displayed in place of a float if the float cannot be loaded. This benefits the author as well as it broadens the reader base for the author’s work. Moreover, the alt text provides in-depth float descriptions to search engine crawlers, which helps to properly index these floats. Please check your template’s documentation for instructions on how to use “alt text”. Additionally, authors should follow thehref="https://authors.acm.org/journals/accessibility-recommendations-for-publishing-in-color" - ACM Accessibility Recommendations for Publishing in Color
+andSIG ACCESS guidelines on describing figures. 
+ Should you have any questions or issues going through the instructions above, please contact support atacmtexsupport@aptaracorp.comfor both LaTeX and Microsoft Word inquiries. 
+ Accepted papers will be later submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ REBUTTAL ON PAPER ARTIFACTS 
+ The review process will include a rebuttal phase, allowing authors to provide clarifications or explanationsregarding the artifacts(e.g., source code, data, or other materials) associated with the paper. Clarifications may include installation instructions, environment configurations, or missing materials. The rebuttal is not intended for discussing other aspects of the paper, and any comments beyond the scope of the artifacts will not be considered in the subsequent assessment. 
+ RebuttalsMUST NOTintroduce new contributions (e.g., theorems, algorithms, or experiments) that were absent in the original submission and were not explicitly requested by the reviewers. Further details will be provided along with the reviews. 
+ AUTHORSHIP POLICY & CONFLICT of INTERESTS 
+ Authors are strongly encouraged to carefully reviewhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - ACM’s authorship policy
+before submitting their papers. All authors must be listed in the correct order in EasyChair by the submission deadline. Moreover, they should adhere to the ACM Conflict of Interest policy. CoI refers to close personal relationships, continuing collaborations in the past 3 years (e.g., co-author on paper, joint grant), past or current advisor/advisee relationship, and employment at the same institution in the past 3 years. For full details, please visit this site:https://www.acm.org/publications/policies/conflict-of-interest 
+ The complete author list must be provided by the abstract submission deadline to assist reviewers in identifying potential conflicts of interest. Therefore, no changes to authorship will be allowed for any reason after the abstract submission deadline, and no updates will be permitted for camera-ready versions. 
+ Please ensure that all authorsobtain an ORCID ID, to complete the publishing process for accepted contributions, since as an ACM conference, we havehref="https://authors.acm.org/author-resources/orcid-faqs"" - committed to collecting ORCID IDs from all of our published authors
+. This helps improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization. 
+ PRE-PRINT POLICY 
+ Please carefully consider pre-print constraints. Any violation of this policy could cause your paper to be desk-rejected. 
+ An anonymous version of your RecSys submission can be submitted at any time to pre-print sites like arXiv. 
+ Non-anonymized work having significant overlap with your RecSys submission, posted on any online archival platform | before | the submission deadline, must be disclosed in the EasyChair submission form. The title and abstract of the RecSys submission must be distinct from your previous version. 
+ Any non-anonymized version of your RecSys paper cannot be posted to pre-print sites during the review period. 
+ USE of AI POLICY 
+ Authors must follow the ACM Policy onthe use of generative AI software tools. If a paper includes material generated by GenAI tools (such as text produced by large language models like ChatGPT), it is essential to disclose the extent and nature of this use in a section titled “Acknowledgments”. This allows reviewers to evaluate the overall rigor of the research methodology. However, the use of AI tools for editing and refining authors’ work—meaning tasks like grammar checks, word autocorrect, and other light editing—does not require disclosure. Authors who choose to utilize GenAI tools are fully responsible for any inaccuracies, biases, plagiarism, and other violations, just as if they had created the content themselves. Submissions that are primarily produced by GenAI without substantial contributions from the authors are prohibited and considered spam. Only humans are permitted to be authors of submitted papers. 
+ PLAGIARISM POLICY 
+ Plagiarism is a matter that as Program Chairs we take very seriously, thus, we check the plagiarism levels of all submitted papers to ensure content originality using an automated tool. 
+ If a contribution reuses non-original text from a previous publication (for example, the description of an algorithm or dataset), please ensure that the prior publication is cited as the source of that text. 
+ For questions regarding reusing text or simultaneous submissions, please contact the program chairs at least one week before the submission deadline. For further details, refer to theACM Publishing License Agreementandhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - Authorship Policy
+. Papers violating any of the above guidelines are subject to rejection without review and cases may be referred to the ACM Publications Ethics and Plagiarism committee for further action where warranted. 
+ ETHICAL REVIEW FOR HUMAN-SUBJECTS RESEARCH 
+ ACM RecSys expects all authors to comply with ethical and regulatory guidelines associated with human subjects research, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Papers reporting on such human subjects research must include a statement identifying any regulatory review the research is subject to (and identifying the form of approval provided), or explaining the lack of required review. Reviewers will be asked to consider whether the research was conducted in compliance with applicable ethical and regulatory guidelines. 
+ DESK REJECTION POLICY 
+ Submissions that do not meet the requirements for anonymity, length, or formatting; violate dual submission policy and/or any of ACM’s policies on use of AI or academic dishonesty—such as plagiarism, author misrepresentation, or falsification—may be rejected by the chairs without further consideration. 
+ To finalize their submission, authors will be requested to declare conflicts of interest with PC and SPC members. Missing declarations might result in desk rejection. 
+ TheACM Code of Ethicsgrants Program Chairs the authority to (desk) reject papers that perpetuate harmful stereotypes, employ unethical research practices, or uncritically present outcomes or implications that disadvantage marginalized communities. Additionally, reviewers will be explicitly asked to consider whether the research was conducted per professional ethical standards and applicable regulatory guidelines. Failure to adhere to these standards may result in a rejection. Some concrete examples of violations that may result in desk rejection are: 
+ Failures to declare conflicts of interest with PC or SPC members. 
+ Any other content after the maximum length of the submission. 
+ Wrong template or any attempt to format change to get around the page limit. 
+ Authors or their institutional affiliations are explicitly stated or easily discoverable. 
+ Links to source code repositories or datasets that reveal, explicitly or implicitly, the identity of one of the authors. 
+ Any change to the list of authors (both names and affiliations) after the abstract submission deadline. 
+ Double submission to another publication venue. 
+ PUBLICATION and OPEN ACCESS 
+ By submitting a manuscript to an ACM Publication, authors acknowledge that they are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of the manuscript paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ The official publication date is when the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. 
+ Authors of accepted papers will have the choice to publish the work either under the conventional ACM policy free of author fees, or under the ACM Open Access policy potentially subject to an article processing charge. 
+ REPRODUCIBILITY CHAIRS 
+ Maurizio Ferrari Dacrema, Politecnico di Milano, Italy 
+ Michal Kompan, Kempelen Institute of Intelligent Technologies, Slovakia 
+ Cataldo Musto, University of Bari Aldo Moro, Italy 
+ Marco Polignano, University of Bari Aldo Moro, Italy 
+ E-mail: E-mail:href="javascript:;" - reproducibility2025@recsys.acm.org
+Call for Doctoral Symposium Submissions 
+ The ACM RecSys 2025 Doctoral Symposium provides an opportunity for doctoral students to explore and develop their research interests under the guidance of a panel of distinguished researchers from both academia and industry. We invite students who feel that they would benefit from this kind of feedback on their work to apply for this unique opportunity, which will allow them to share their work with their peers as well as with senior researchers in the field. The strongest candidates will be those who have already made some research progress, but who are not so far along that they can no longer make changes in their research plans. Typically, this means that they have defined their topic and have completed some research, but still have at least a year of research remaining before completing a dissertation (in many universities this corresponds to the dissertation proposal stage). The feedback from attendees in previous years has been very positive, and the Doctoral Symposium has been considered very useful in providing research guidance. 
+ The symposium has the following objectives: 
+ Provide a supportive setting for feedback on students’ current research and guidance on future research directions. 
+ Offer each student feedback and fresh perspectives on their work from faculty and students outside their own institution. 
+ Promote the development of a supportive community of researchers and a spirit of collaborative research. 
+ Contribute to the conference goals through interaction with other researchers and conference events. 
+ Student participants will have their extended abstracts included in the conference proceedings. They will also present a poster of their work at the conference. 
+ SYMPOSIUM FORMAT AND PARTICIPATION EXPECTATIONS 
+ The RecSys 2025 doctoral symposium will feature both virtual and in-person participation options. In-person participants are expected to physically attend the entire symposium, and are also expected to attend the RecSys 2025 conference which will be held from September 22-26, 2025 in Prague (Czech Republic). 
+ We strongly encourage in-person attendance. Students attending in-person will have space during one of the poster sessions for a poster presenting their work and they will be able to get more feedback from the RecSys audience in addition to the good networking opportunities. 
+ Students with excellent submissions but who are unable to travel to Prague with a justification of their situation will have the opportunity to present their work to senior members of the community and receive feedback and guidance in a virtual symposium. Note that the dates of the virtual symposium may be different from the conference dates. The exact dates of the virtual symposium will be announced later. 
+ The format of the symposium will be primarily student presentations and Q&A opportunities with senior researchers in the field. The specific format details will be designed to provide maximum feedback to students. Being accepted into the symposium is an honor, and involves a commitment to both giving and receiving thoughtful commentary with an eye towards shaping the field and upcoming participants in the research area. 
+ SUBMISSION GUIDELINES 
+ Applications are invited from graduate students pursuing a PhD project who would benefit from detailed workshop discussions of their doctoral research by a panel of established researchers. All submissions and reviews will be handled electronically. 
+ Applications should include the following: 
+ An extended abstract (see below). 
+ A curriculum vitae or resumé. 
+ A one-paragraph statement of expected benefits of participation, including questions regarding your dissertation that you would like to ask your symposium mentors. 
+ A brief letter of recommendation from your doctoral advisor, focused on how your participation in the Doctoral Symposium will benefit your dissertation research. 
+ Indication of whether the student plans to attend in-person or participate in the virtual session, with an explanation of the situation preventing travel for students who need to present virtually. 
+ Submit these four items in a single PDF file tohref="https://easychair.org/conferences/?conf=recsys2025" - EasyChair
+by 23:59, AoE (Anywhere on Earth) on June 03, 2025 by selecting the “RecSys 2025 Doctoral Symposium” track. 
+ EXTENDED ABSTRACT 
+ In addition to these guidelines, the guidelines in thehref="https://recsys.acm.org/recsys25/call/" - main-track call for papers
+apply for Formatting, Ethical Review for Human-Subjects Research, Originality, Plagiarism, Patenting, Open Access, and Publication Date. Please note that,ANONYMITY does not apply to Doctoral Symposium Submissions. The sole author of the abstract is the student, who should appear explicitly in the submitted PDF file.Advisor(s) can be thanked in the acknowledgments, along with grants funding the student’s work and other appropriate credit. 
+ The maximum length for extended abstracts is 5 pages (plus up to 2 pages of references) in the double-column format. 
+ Please write your extended abstract to the same quality standards as a regular RecSys submission. The extended abstract must explain the doctoral work clearly. Please carefully read the selection criteria section below which states the important aspects that you should pay attention to. The chairs will be providing a recommended outline for the extended abstract in February. 
+ CONFINDENTIALITY 
+ Confidentiality of submissions is maintained during the review process, where only the DS Chairs will have access to the submissions. All rejected submissions will be kept confidential in perpetuity. All submitted materials for accepted submissions will be kept confidential until two weeks before the start of the conference. Submissions should contain no information or materials that are proprietary at publication time. 
+ SELECTION CRITERIA 
+ Your extended abstract will be evaluated by the DS Chairs with regard to: 
+ Originality of the work with respect to current concepts and techniques (provide relevant citations). 
+ Importance of the work with respect to fundamental issues in recommender systems (clearly identify the problems you are trying to solve). 
+ Rigor and validity of claims, argumentation, methodology, results, and interpretations. 
+ Clarity and persuasiveness of expression. 
+ To provide maximum feedback to each student, participation in the Doctoral Symposium is limited. Selection is based on two broad criteria: 
+ Value of the symposium to the student: | The degree to which the applicant is positioned to benefit from participation, including the student’s position in the doctoral process (the greatest benefit is for students with a developed research idea but much of the work yet undone). 
+ The degree to which the student may otherwise lack access to a diverse set of feedback and input on his or her research plans (e.g., availability of local experts and advisors). 
+ Value of the student’s participation to other students: | The quality of the extended abstract (as identified above), both as a model of excellent research and as an indication of the student’s potential in the field. 
+ Diversity of participation, including diversity by institution, country, research topic and approach, and demographics. In general, we will limit participation to one or two students per institution, depending on the number of applicants. 
+ Evidence that the student will be an effective and active participant, providing feedback to others and helping to build a research network (such as, e.g., prior experience in meetings, workshops, etc., or any feedback the advisor may provide on this). 
+ APPLICATION CHECKLIST 
+ Well in advance of the deadline: 
+ Write an extended abstract according to the formatting instructions above. | The maximum length for extended abstracts is 5 pages (+ up to 2 pages of references) in the double-column format. Note that the student is the sole author of the abstract. Advisor(s) can be thanked in the acknowledgments. 
+ Write a curriculum vitae. 
+ Write a one-paragraph statement of the expected benefits of participation. 
+ Obtain a letter of recommendation from your advisor. 
+ By the deadline (June 03, 2025, 23:59 AoE): Submit items 1-4 above in asingle PDF fileto EasyChair (link will follow). 
+ SUPPORT 
+ The chairs are working on identifying the specific support mechanisms for RecSys 2025 doctoral symposium students, further details will be posted here as available. 
+ Wevery strongly advisestudents to also apply for a spot as a student volunteer (SV). Student volunteers will receive free registration to RecSys 2025. Students accepted for the Doctoral Symposiumwill be prioritizedfor a student volunteer spot. The deadline for SV applications is planned to be after the notifications for the Doctoral Symposium. 
+ For travel support, students can also apply for Gary Marsden Travel Awards (GMTA) established by SIGCHI to get support for attending the conference. Eligible members can be undergraduate and graduate students, early-career researchers (such as those who are ≤ 5 years post-graduation), and those suffering from financial hardship or lacking institutional support. You canapply even before having an accepted submission(Still, GMTA “will prioritize first-time attendees and presenters”). We suggest applying no later than July. 
+ SIGCHI SUBMITTER AGREEMENT 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authorsobtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made ahref="https://authors.acm.org/author-resources/orcid-faqs" - commitment to collect ORCID IDs from all of our published authors
+. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ RecSys 2025 is a SIGCHI conference and making a submission to a SIGCHI conference is a serious matter. Submissions require time and effort by SIGCHI volunteers to organize and manage the reviewing process, and, if the submission is accepted, the publication and presentation process. Thus, anyone who submits to RecSys 2025 implicitly confirms the following statements: 
+ I confirm that this submission is the work of myself and my co-authors. 
+ I confirm that I or my co-authors hold copyright to the content, and have obtained appropriate permissions for any portions of the content that are copyrighted by others. 
+ I confirm that any research reported in this submission involving human subjects has gone through the appropriate approval process at my institution. 
+ I confirm that if this paper is accepted, I or one of my co-authors will present the paper at the conference in person. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the program chairs. 
+ IMPORTANT DATES 
+ Doctoral Symposium submission deadline: June 03, 2025 
+ Doctoral Symposium submission notification: July 03, 2025 
+ Deadline for the camera-ready version of the extended abstract: July 21, 2025 
+ Deadlines refer to 23:59 (11:59pm) in the AoE (Anywhere on Earth) time zone. 
+ DOCTORAL SYMPOSIUM CHAIRS 
+ Michael Ekstrand, Drexel University 
+ Özlem Özgöbek, Norwegian University of Science and Technology 
+ E-mail:href="javascript:;" - doctoral2025@recsys.acm.org
+Call for Industry Contributions 
+ The 19th ACM Conference on Recommender Systems (RecSys 2025), the leading conference for research on the foundations and applications of recommendation technologies, will take place from September 22 to 26, 2025, in Prague, Czech Republic. 
+ Industry practitioners are invited to submit their contribution to the RecSys industry track, to be included in the proceedings as an industry paper. Different from other tracks, the industry track is focused on challenges and practical solutions to significant real-world issues faced by industry practitioners. We encourage submissions that describe substantial real-world challenges and novel deployed systems that power recommendations in commercial settings. This includes design and interaction aspects of recommender systems. We also recognize that diverse speaker backgrounds and topics facilitate richer discussions at the conference, therefore we especially encourage colleagues from backgrounds that are under-represented in the conference series to submit their work. Please note that industry contributions are independent of sponsorship and are selected from the present call for submissions by a single-blind review process. 
+ All submissions will be reviewed for relevance to real-world challenges, novelty, and contribution to the community. Shared data sets and code are encouraged, as are insights into quantitative and/or qualitative evaluation results. However, industry-track submissions can focus on real, commercial data and proprietary results, and as such the level of detail, reproducibility and evaluation is not required to be as deep as the main research track. Real-world impact and ethical considerations of the systems described will also be taken into account. 
+ Note that submissions consisting solely of sales pitches for productswill not be considered. 
+ Examples of industry paper topics include, but are not limited to: 
+ Lessons learned from real-world deployment of recommender systems including case studies, retrospectives, and user studies; 
+ Societal impact, fairness and bias of recommender systems in the real world; 
+ Novel recommender system applications; 
+ Novel techniques that solve significant issues in production deployment; 
+ Online and offline metrics used to evaluate recommender systems and studies of their interaction in production settings; 
+ Design and human interaction aspects of recommender systems; 
+ System and algorithm design, scalability and performance; 
+ Holistic overviews or component deep dives of recommender system pipelines including ETL, candidate generation, research and production training, feature stores and inference; 
+ Privacy-preserving recommendation systems in production, e.g., using differential privacy and federated learning; 
+ Challenges faced by practitioners that are under-studied in the research community or novel to particular recommendation applications. 
+ All industry papers will be presented as posters and will be published in the conference proceedings, while a select number will be invited for oral presentations. 
+ IN-PERSON ATTENDANCE POLICY 
+ RecSys 2025 is an in-person conference. All accepted papers to the industry track are expected to be presented in-person. At least one author from each accepted paper must attend the conference in person to present the paper or poster and address audience questions during the Q&A session. No pre-recorded videos will be permitted for industry papers. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the industry chairs. 
+ Submission Guidelines 
+ All submissions and reviews will be handled electronically. Industry papers must be submitted viaEasyChair by 23:59 AoE (Anywhere on Earth) on May 15, 2025. 
+ To allow for preparation of the conference’s online presence, we might request audiovisual material, such as a recording of the talk, two weeks before the conference start date. 
+ FORMATTING 
+ ACM’s archival publication format separates content from presentation in the Digital Library to enhance accessibility and improve the flexibility and resiliency of our publications. Following the ACM publication workflow, all authors should submit contributions for review in adouble-column format. The maximum length for industry talk proposals is3 pages (excluding authors’ bios and references), plus up to 1 page of bios and references). Please note thatthe page limit and format requirements are strict. Non-complying submissions will be desk-rejected. 
+ Authors can also submit auxiliary material to enhance reproducibility (e.g., experiment details, proof details), but papers should be self-contained and reviewers are not required to review the auxiliary material. 
+ Instructions for Word and LaTeX authors are given below: 
+ Microsoft Word | : Write your paper using ACM’s interim template. Follow the embedded instructions to apply the paragraph styles to your various text elements. The text is in double-column format and no additional formatting is required at this stage. 
+ LaTeX | : Please use the latest version of the Primary Article Template – LaTeX to create your submission.Start the document with the \documentclass[sigconf]{acmart} command to generate the output in a | double-column format | . Please see the LaTeX documentation and ACM’s LaTeX best practices guide for further instructions, | ignoring the single-column instructions | . Do not use the “manuscript” option, otherwise the document will not be compiled in double-column, as required. Check the sample-sigconf.tex file included in the template package for a formatting example. To ensure 100% | compatibility | with The ACM Publishing System (TAPS), please | restrict the use of packages | to the whitelist of approved LaTeX packages. 
+ Authors are strongly encouraged to provide “alt text” (alternative text) for floats (images, tables, etc.) in their content so that readers with disabilities can be given descriptive information for these floats that are important to the work. The descriptive text will be displayed in place of a float if the float cannot be loaded. This benefits the author as well as it broadens the reader base for the author’s work. Moreover, the alt text provides in-depth float descriptions to search engine crawlers, which helps to properly index these floats. Additionally, authors should follow the ACM Accessibility Recommendations for Publishing in Color and SIG ACCESS guidelines on describing figures. 
+ Should you have any questions or issues going through the instructions above, please contact support atacmtexsupport@aptaracorp.comfor both LaTeX and Microsoft Word inquiries. 
+ Accepted papers will be later submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ CONTENTS 
+ Industry paper submissions must include the following: 
+ Title and a detailed outline of the contribution; 
+ Short bios of the presenter(s) (up to 300 words). 
+ The detailed outlinemustclearly describe the problem being addressed, its practical significance, and the proposed solution. When applicable, it is recommended to include a brief description of the methodology, techniques, or engineering innovations used, highlighting how they differ from existing approaches. The summary may also provide insights into real-world implementation, discussing deployment challenges, trade-offs, and business impact. Where appropriate, an empirical evaluation of the proposed solution should be included. Additionally, industry papers could briefly present key learnings, best practices and unexpected challenges encountered during deployment. 
+ ANONIMITY 
+ Submissions arenot anonymized. Please include information identifying the authors and their organization. 
+ USE OF AI POLICY 
+ Authors must follow the ACM Policy on the use of generative AI software tools. If a paper includes material generated by GenAI tools (such as text produced by large language models like ChatGPT), it is essential to disclose the extent and nature of this use in a section titled “Acknowledgments”. This allows reviewers to evaluate the overall rigor of the research methodology. However, the use of AI tools for editing and refining authors’ work—meaning tasks like grammar checks, word autocorrect, and other light editing—does not require disclosure. Authors who choose to utilize GenAI tools are fully responsible for any inaccuracies, biases, plagiarism, and other violations, just as if they had created the content themselves. Submissions that are primarily produced by GenAI without substantial contributions from the authors are prohibited and considered spam. Only humans are permitted to be authors of submitted papers. 
+ PLAGIARISM POLICY 
+ Plagiarism is a matter that as Industry Chairs we take very seriously, thus, we check the plagiarism levels of all submitted papers to ensure content originality using an automated tool. 
+ If a contribution reuses non-original text from a previous publication (for example, the description of an algorithm or dataset), please ensure that the prior publication is cited as the source of that text. For further details, refer to the ACM Publishing License Agreement and Authorship Policy. Papers violating any of the above guidelines are subject to rejection without review and cases may be referred to the ACM Publications Ethics and Plagiarism committee for further action where warranted. 
+ AUTHORSHIP POLICY 
+ Authors are strongly encouraged to carefully reviewhref="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" - ACM’s authorship policy
+before submitting their papers. All authors must be listed in the correct order in EasyChair by the submission deadline. Moreover, they should adhere to the ACM Conflict of Interest policy. CoI refers to close personal relationships, continuing collaborations in the past 3 years (e.g., co-author on paper, joint grant), past or current advisor/advisee relationship, and employment at the same institution in the past 3 years. For full details, please visit this site:https://www.acm.org/publications/policies/conflict-of-interest. 
+ All co-authors of submitted contributions are expected to have made a clear and independent contribution to the work under consideration, and author lists at submission time are expected to be final. 
+ Please ensure that all authorsobtain an ORCID, to complete the publishing process for accepted contributions, since as an ACM conference, we havehref="https://authors.acm.org/author-resources/orcid-faqs" - committed to collecting ORCIDs from all of our published authors
+. This helps improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization. 
+ Important Dates 
+ Industry Paper submission deadline: May 15, 2025 
+ Author notification: July 3, 2025 
+ Camera-ready version deadline: July 21, 2025 
+ Deadlines refer to23:59 (11:59pm) in the AoE (Anywhere on Earth)time zone. 
+ Industry Chairs 
+ Rodrigo Alves, Czech Technical University in Prague & Recombee Research, Czech Republic 
+ Olivier Jeunen, Aampe, Belgium 
+ Vito Ostuni, Netflix Research, USA 
+ E-mail:href="javascript:;" - industry2025@recsys.acm.org
+Call for Tutorial Proposals 
+ We are pleased to invite you to contribute to the 19th ACM Conference on Recommender Systems (RecSys 2025), the premier venue for research on the foundations and applications of recommendation technologies. The upcoming RecSys conference will be held from September 22nd to September 26th, 2025. The conference will be held in Prague, Czech Republic. The conference will continue RecSys’ practice of connecting the research and practitioner communities to exchange ideas, frame problems, and share solutions. 
+ We invite proposals for tutorials to be given in conjunction with the conference. The goal of the tutorials is to provide conference attendees, including early-career researchers and researchers crossing over from related disciplines, with an opportunity to learn about recommender system concepts and techniques. Tutorials also serve as a venue to share presenters’ expertise with the global community of recommender system researchers and practitioners. Each tutorial will provide in-depth coverage of an established recommender systems subtopic, introduce an emerging application of recommendation technologies, or update the recommender systems community on recent advances in related fields. 
+ Tutorials focus on specific topics including, but not limited to: 
+ Building and deploying recommender systems in specific domains (e.g., commerce, music, tourism, education, TV/video, jobs, enterprise, health, fashion, e-government, smart cities, energy, wellness etc.), as well as cross-domain recommendation; 
+ LLM-based models and applications for recommendation; 
+ Introductions to specific recommender systems techniques (e.g., deep learning, feature engineering, graph models, reinforcement learning, conversational recommender systems, intelligent interactive recommendation, large-scale recommender systems, stream-based recommendation, etc.); 
+ Using different types of data (semantic web, graphs) and media (e.g., text, images, video, speech) for building recommendations; 
+ Intersections of recommender systems with other domains (e.g., generative models, information retrieval, machine learning, human-computer interaction, databases, economics, psychology, etc); 
+ Designing user experiences and interactions with systems offering recommendation and intelligent interaction (e.g., virtual assistants, chatbots, robots, etc.); 
+ Eliciting and learning user preferences through interactions (e.g., clicks, conversations, multi-source personalization); 
+ Affective recommender systems that take into account users’ emotional state, physical state, personality, trust, level of expertise, and/or cognitive readiness into account; 
+ User modeling elicitation, creation, and update; hybrid AI models combining symbolic and sub-symbolic AI for recommender systems; 
+ Persuasive recommender systems, able to foster some behavior change in people; 
+ Recommendation for groups, tasks, or situations; 
+ Context-aware (including location-based) recommender systems; 
+ Recommender systems supporting complex decision making; 
+ User interfaces and user experience of recommender systems; 
+ Social, ethical and legal aspects of recommender systems (e.g., privacy, fairness, accountability, transparency, control of bias, long-term and social impacts, etc.); 
+ Evaluation of recommender systems (e.g., multi-modal evaluation, system-centric and user-centric evaluation, experimentation, LLM-based evaluation, etc.). 
+ The length of your proposed tutorial should be commensurate with the presented materials and the projected interest of the RecSys community in the tutorial topic. We expect tutorial slots of around 3 hours. We may work with accepted tutorial presenters to adjust the length of the tutorials for the available slots. Realize that you need to be flexible, since we may not be able to accommodate your favorite choice of date and time for the tutorial. 
+ We actively encourage both researchers and industry practitioners to submit tutorial proposals that target different levels of expertise and different interests. We also encourage the submission of hands-on tutorials, for instance through the use of notebooks that combine theoretical concepts with practical exercises. 
+ As a tutorial presenter, you are expected to write a short tutorial summary for the conference proceedings (detailed instructions will be provided), and provide a link to your tutorial materials before the tutorial so that it can be posted on the ACM RecSys 2025 website and serve as a resource to the community. 
+ If you submit a tutorial, please realize that you are expected to attend the physical conference and present your tutorial in person. 
+ Submission Guidelines 
+ All submissions and reviews will be handled electronically. Tutorial proposals must be submitted tohref="https://easychair.org/conferences/?conf=recsys2025" - EasyChair
+by23:59, AoE (Anywhere on Earth) on April 15, 2025by selecting the “Tutorial” track. 
+ The tutorial proposal should be organized as follows: 
+ Tutorial title; 
+ Tutorial length; 
+ Motivation for proposing this tutorial (why it is important for RecSys); 
+ Name, email address, and affiliation of tutorial instructors (each listed instructor must present in person at the conference); 
+ Detailed bulleted outline of the tutorial (this point should take the most space); 
+ Targeted audience (introductory, intermediate, advanced) and prerequisite knowledge or skills; 
+ Teaching experiences and history of prior tutorials by the presenters; 
+ List of relevant publications by the presenters; 
+ Main differences with tutorials on the same or similar topic (in past RecSys editions – please, specify the year – or other conferences). 
+ The submission should be a PDF file of about 2 pages in length (single column, no particular formatting required) excluding references. 
+ Evaluation Criteria 
+ Tutorial proposals will be reviewed according to: 
+ the ability of the tutorial to contribute to strengthening the foundations of recommender system research, or to broaden the field to look at important new challenges and technique; 
+ experience and skill of the presenters; 
+ the value of any materials released with the tutorial for the community. 
+ Important Dates 
+ Tutorial proposals due: April 15, 2025 
+ Tutorial proposals notifications: April 30, 2025 
+ Camera-ready tutorial session abstract: July 14, 2025 
+ Tutorial Chairs 
+ Bart Knijnenburg, Clemson University, USA 
+ Elisabeth Lex, Graz University of Technology, Austria 
+ Fedelucio Narducci, Polytechnic of Bari, Italy 
+ E-mail:href="javascript:;" - tutorials2025@recsys.acm.org
+Call for Workshop Proposals 
+ RecSys '25 has introduced a template withguidelines for proposal preparation, availablehref="https://recsys.acm.org/wp-content/uploads/2025/02/RecSys2025_Call_for_Workshops_Template_and_Guidelines.pdf" - here
+. 
+ We invite prospective organizers to carefully check the call and the template before submitting. 
+ Any inquiries can be directed tohref="javascript:;" - workshops2025@recsys.acm.org
+. 
+ We are pleased to invite you to contribute to the 19th ACM Conference on Recommender Systems (RecSys 2025), the premier venue for research on the foundations and applications of recommendation technologies. The upcoming RecSys conference will be held from 22nd to 26th September 2025, with workshops planned on the first and last day of the conference. The conference will continue RecSys’ practice of connecting the research and practitioner communities to exchange ideas, frame problems, and share solutions. RecSys 2025 is pleased to invite proposals for workshops to be held in conjunction with the conference, which will be held in Praque, Czech Republic. The goal of the workshops is to provide additional venues for discussing novel ideas as well as recent results of research in progress. 
+ In 2025, our goal is to have a balanced workshop program, which comprises workshop formats of different types and a combination of newly emerging, currently evolving, and historically understudied topics. Different full-day and half-day workshop formats are possible, for example: 
+ Workshops with novel interactive formats and a relatively small number of participants. Such workshop formats might for example target the exploration of a certain topic during the workshop through a moderated discussion or breakout sessions, resulting in a draft paper or report to be completed and published after the workshop. Or they might focus on datasets and benchmarking for a particular problem or domain. Particular priority will be given to these formats which require the active involvement of the participants. 
+ Workshops with the traditional workshop format on specialized topics. Such workshops typically have their own paper submission and review processes. Proposals for the continuation of an existing workshop series are welcome. However, please include a brief statement on the necessity for the new edition, including a description of the outcomes of previous years and the expected novelty of this edition. 
+ We encourage you to contact us by email athref="javascript:;" - workshops2025@recsys.acm.org
+up to two weeks before the deadline with workshop ideas. In particular, for workshop proposals with novel interactive formats, we are happy to assist you in further developing and implementing your ideas. We actively encourageboth researchers and industry practitionersto submit proposals. 
+ Submission Guidelines 
+ All submissions and reviews will be handled electronically. The maximum length is4 pages (excluding references)in thedouble-column format. Workshop proposals must be submitted tohref="https://easychair.org/conferences/?conf=recsys2025" - EasyChair
+by23:59, AoE (Anywhere on Earth) on 27th February, 2025. 
+ Please use our template to guide your workshop submission, availablehref="https://recsys.acm.org/wp-content/uploads/2025/02/RecSys2025_Call_for_Workshops_Template_and_Guidelines.pdf" - here
+. The template offers guidelines and tips to make sure your proposal provides all the required information. 
+ CONTENTS OF THE PROPOSAL 
+ The workshop proposal should be organized as follows: 
+ Workshop title. 
+ A short description of the workshop, including the rationale for the workshop and how and why it fits the audience of RecSys. This description should also include the topic and its relevance to the community as well as format, and details about what type of submission is requested from prospective attendees. Please also add an explanation on how the workshop complements, rather than duplicates, the topics of the main conference. 
+ Name, email address, and affiliation for workshop organizers and a brief description of their experience in organizing such events. Note that organizers are expected to be actively involved in its organization, including attending the workshop whenever possible. Please, indicate the contact point for us to communicate effectively. In the case of more than four organizers, please justify the need for each contribution. 
+ Requested duration (half day (default) or full day). As RecSys typically attracts a large number of workshops, we assume a default duration for workshops of half a day. If you plan for a full-day workshop, please provide a clear motivation for why a full day is needed. Please also indicate the expected number of participants. 
+ RecSys will be fully in-person, and this includes the workshops. At least one organizer needs to attend in-person to manage the workshop. 
+ Description of workshop activities. Outline how the workshop will be organized and how the time will be spent (i.e., a schedule). In particular, please sketch how you will engage participants to foster more interactivity and engagement during the workshop. 
+ For workshops involving paper submissions, an initial—and for the most part confirmed— Program Committee (or a clear justification why it is not needed) and how the peer-review process will be handled. 
+ For more interactive workshop formats, also outline the process of selecting or inviting the participants. 
+ Description of plans for promoting the workshop and disseminating the results, for instance, by organizing a journal special issue with extended versions of the workshop’s best papers. 
+ History of prior workshops on this topic (if available), including URLs, a brief statement on the development of the workshop series, e.g., in terms of topics, number of paper submissions and participants, post-workshop publications over the years, and acceptance statistics. 
+ Evaluation Criteria 
+ Ability of the topic to contribute to the continued development of the field of recommender systems. 
+ Level of complementarity of the topic to the main conference. 
+ Clear plan for attracting submissions, making the workshop itself productive, and disseminating results. Evidence that this plan will be successful. 
+ Experience of the organizers. 
+ After acceptance notification, organizers of accepted workshops are expected to (a) provide a link of their workshop website containing information about aims and scope, topics, their important dates, their paper submission instructions (if any), the committees, contacts, and so on, (b) be responsible for their own publicity, (c) write a short workshop summary to be included in the conference proceedings, (d) to be in contact with the organization of the conference, in particular, workshop chairs, and (e) chair the workshop at the conference. 
+ Workshop Summary 
+ The organizers of accepted workshops will be invited to write a camera-ready summary of the workshop. Workshop summaries will be later (see “Important dates” section) submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ FORMATTING 
+ ACM’s archival publication format separates content from presentation in the Digital Library to enhance accessibility and improve the flexibility and resiliency of our publications. Following theACM publication workflow, all authors should submit manuscripts for review in thedouble-column format. Instructions for Word and LaTeX authors are given below: 
+ Microsoft Word | : Write your paper using | ACM’s interim template | . Follow the embedded instructions to apply the paragraph styles to your various text elements. The text is in double-column format and no additional formatting is required at this stage. 
+ LaTeX | : Please use the latest version of the | Primary Article Template | – LaTeX to create your submission. Start the document with the | \documentclass[sigconf]{acmart} | command to generate the output in a double-column format. Please see the | LaTeX documentation | and | ACM’s LaTeX best practices guide | for further instructions, | ignoring the single-column instructions | . Do not use the “manuscript” option, otherwise the document will not be compiled in double-column, as required. Check the sample-sigconf.tex file included in the template package for a formatting example. To ensure 100% | compatibility | with The ACM Publishing System (TAPS), please | restrict the use of packages | to the | whitelist of approved LaTeX packages | . 
+ Authors are strongly encouraged toprovide “alt text” (alternative text) for floats(images, tables, etc.) in their content so that readers with disabilities can be given descriptive information for these floats that are important to the work. The descriptive text will be displayed in place of a float if the float cannot be loaded. This benefits the author as well as it broadens the reader base for the author’s work. Moreover, the alt text provides in-depth float descriptions to search engine crawlers, which helps to properly index these floats. Additionally, authors should follow thehref="https://authors.acm.org/journals/accessibility-recommendations-for-publishing-in-color" - ACM Accessibility Recommendations for Publishing in Color
+andSIG ACCESS guidelines on describing figures. 
+ Should you have any questions or issues going through the instructions above, please contact support atacmtexsupport@aptaracorp.comfor both LaTeX and Microsoft Word inquiries. The overview papers of accepted workshops will be later submitted to ACM’s new production platform where authors will be able to review PDF and HTML output formats before publication. 
+ Important Dates 
+ Workshop proposal submission deadline: February 27, 2025 
+ Workshop proposal notification: March 28, 2025 
+ Camera-ready workshop summary deadline: July 14, 2025 
+ Deadlines refer to23:59 (11:59pm) in the AoE (Anywhere on Earth)time zone. Submit your proposal toEasyChair(link will follow). 
+ Workshop Chairs 
+ Ludovico Boratto, University of Cagliari, Italy 
+ Martijn Willemsen, Eindhoven University of Technology and JADS, The Netherlands 
+ E-mail:href="javascript:;" - workshops2025@recsys.acm.org
+Call for Demonstrations 
+ We are pleased to invite you to contribute to the 19th ACM Conference on Recommender Systems (RecSys 2025), the premier venue for research on the foundations and applications of recommendation technologies. The upcoming RecSys conference will be held from 22nd–26th September in Prague, Czech Republic. 
+ The conference will continue RecSys’ practice of connecting researchers, practitioners, and students to exchange ideas, frame problems, and share solutions across a range of specialties concerned with recommendation. All accepted contributions will be published by ACM. 
+ Demos show implementations of novel, interesting, and important recommender systems’ concepts or applications. Allowing potential users to see and use a demo of a research work makes them excited about it – it makes the work real and tangible. Demos also allow researchers from academia and developers from small start-ups to large industries to present new recommender ideas and get valuable feedback from the recommender systems community. 
+ We welcome new demonstrations of recommendation technologies coming from diverse communities ranging from psychology to mathematics. In particular, we care as much about the human and economic impact of these systems as we care about their underlying algorithms. We also encourage authors to provide links to external materials in their reports, while ensuring anonymity during the review process. 
+ RecSys has an excellent history of being well-attended by industry representatives – past conferences have had attendees and presenters from Netflix, Amazon, Booking, Google, Facebook, LinkedIn, Criteo, Pandora, Spotify, etc. The blend of industry and academic attention provides an excellent environment to demonstrate and discuss the latest inventions or ideas. 
+ We invite demonstrations relevant to all aspects of recommender systems, including, but not limited to: 
+ Interaction techniques (preference elicitation interfaces, recommendation presentation, explanations, and more); 
+ Tools for development and analysis of recommender systems (design and analytics tools); 
+ Tools for evaluation (methods, frameworks, and metrics for assessing recommender systems); 
+ Innovative applications of recommender systems; 
+ Recommender user experiments; 
+ Recommender platforms; 
+ New code libraries for recommender systems. 
+ Accepted demonstrations will be published as extended abstracts in the ACM RecSys 2025 conference proceedings. Authors will also be required to present a poster of their work at the conference. 
+ Submission Guidelines 
+ A demo submission should report on a description of the demo. The maximum length is2 pages (up to 1 page of references) in the double-column format. Refer to the main track Formatting section for further details. 
+ Submissions must be anonymous and should be submitted as a PDF electronically viaEasyChairby selecting the “RecSys 2025 Demo” track (link will be provided later). 
+ The reviewing process will bedouble-blind. The submissions must not include any information that identifies the authors or their institutions. 
+ In addition to these guidelines, the following guidelines from thehref="https://recsys.acm.org/recsys25/call/" - main-track call for papers
+also apply for Demonstration submissions: Formatting, Authorship Policy, Anonymity, Pre-print Policy, Use of AI Policy, Plagiarism Policy, Ethical Review for Human-Subjects Research, Desk Rejection Policy, Publication and Open Access Policy. Please make sure that you have read and understood those. 
+ SIGCHI Submitter Agreement 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authorsobtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made ahref="https://authors.acm.org/author-resources/orcid-faqs" - commitment to collect ORCID IDs from all of our published authors
+. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ RecSys 2025 is a SIGCHI conference and making a submission to a SIGCHI conference is a serious matter. Submissions require time and effort by SIGCHI volunteers to organize and manage the reviewing process, and, if the submission is accepted, the publication and presentation process. Thus, anyone who submits to RecSys 2025 Demonstration implicitly confirms the following statements: 
+ I confirm that this submission is the work of myself and my co-authors. 
+ I confirm that I or my co-authors hold copyright to the content, and have obtained appropriate permissions for any portions of the content that are copyrighted by others. 
+ I confirm that any research reported in this submission involving human subjects has gone through the appropriate approval process at my institution. 
+ I confirm that if this paper is accepted, I or one of my co-authors will present the paper at the conference in person. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the Demonstration chairs. 
+ Important Dates 
+ Submission in the Demo track at RecSys’25 will require the submission of an abstract. 
+ Demo submission deadline: July 9, 2025 
+ Demo notifications: August 4, 2025 
+ Demo camera-ready paper: August 11, 2025 
+ Deadlines refer to23:59 (11:59pm) in the AoE (Anywhere on Earth) time zone. 
+ Demo Chairs 
+ href="https://recsys-lab.at/team/julia-neidhardt/" - Julia Neidhardt | , TU Wien, Austria 
+ Marko Tkalčič | , University of Primorska, Slovenia 
+ Adir Solomon | , University of Haifa, Israel 
+ E-mail:href="javascript:;" - demos_lbr2025@recsys.acm.org
+Call for Late-Breaking Results 
+ We are pleased to invite you to contribute to the 19th ACM Conference on Recommender Systems (RecSys 2025), the premier venue for research on the foundations and applications of recommendation technologies. The upcoming RecSys conference will be held from 22nd–26th September in Prague, Czech Republic. 
+ The conference will continue RecSys’ practice of connecting researchers, practitioners, and students to exchange ideas, frame problems, and share solutions across a range of specialties concerned with recommendation. All accepted contributions will be published by ACM. 
+ The Late-Breaking Results (LBR) track of RecSys offers an opportunity for presenting new, interesting, preliminary results and speculative or innovative work in progress. The track seeks novel contributions that should be published immediately, because they will influence the work of others. The topics listed in the main-track call for papers serve as a reference, but we also encourage submissions with clear relevance to recommender systems that extend this list. 
+ LBR papers should present innovative ideas that are still in development and have shown promising preliminary results. This track also serves as a platform for disseminating new research directions. In contrast, mature studies with fully validated experimental results are better suited for the general call, either as full or short papers. Therefore, papers rejected from the main track are unlikely to be suitable as LBR submissions unless they are substantially revised to align with the scope of this track. 
+ Accepted contributions for this track will be presented as posters, where the informal setting encourages presenters and participants to engage in lively discussions about the presented work. 
+ Each accepted contribution is expected to be presented in person. At least one author from each accepted submission must attend the conference in person to present their work and participate in the Q&A session. Remote presentations or videos will not be permitted for accepted contributions. 
+ Accepted submissions will be published as extended abstracts in the ACM RecSys 2025 conference proceedings. 
+ Submission Guidelines 
+ The maximum length is4 pages (plus up to 1 page of references) in the double-column format. Refer to the main track Formatting section for further details. 
+ Submissions must be anonymous and should be submitted as a PDF electronically viaEasyChairby selecting the “RecSys 2025 LBR” track (link will be provided later). 
+ The reviewing process will bedouble-blind. The submissions must not include any information that identifies the authors or their institutions. 
+ In addition to these guidelines, the following guidelines from thehref="https://recsys.acm.org/recsys25/call/" - main-track call for papers
+also apply for LBR submissions: Formatting, Authorship Policy, Anonymity, Pre-print Policy, Use of AI Policy, Plagiarism Policy, Ethical Review for Human-Subjects Research, Desk Rejection Policy, Publication and Open Access Policy. Please make sure that you have read and understood those. 
+ SIGCHI Submitter Agreement 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to allACM Publications Policies, includinghref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authorsobtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made ahref="https://authors.acm.org/author-resources/orcid-faqs" - commitment to collect ORCID IDs from all of our published authors
+. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ RecSys 2025 is a SIGCHI conference and making a submission to a SIGCHI conference is a serious matter. Submissions require time and effort by SIGCHI volunteers to organize and manage the reviewing process, and, if the submission is accepted, the publication and presentation process. Thus, anyone who submits to RecSys 2025 Demonstration implicitly confirms the following statements: 
+ I confirm that this submission is the work of myself and my co-authors. 
+ I confirm that I or my co-authors hold copyright to the content, and have obtained appropriate permissions for any portions of the content that are copyrighted by others. 
+ I confirm that any research reported in this submission involving human subjects has gone through the appropriate approval process at my institution. 
+ I confirm that if this paper is accepted, I or one of my co-authors will present the paper at the conference in person. Papers that are not presented at the conference by an author may be removed from the proceedings at the discretion of the Demonstration chairs. 
+ Important Dates 
+ Submission in the LBR track at RecSys’25 will require the submission of an abstract. 
+ LBR submission deadline: July 9, 2025 
+ LBR notifications: August 4, 2025 
+ LBR camera-ready paper: August 11, 2025 
+ Deadlines refer to23:59 (11:59pm) in the AoE (Anywhere on Earth) time zone. 
+ Late-Breaking Results Chairs 
+ href="https://recsys-lab.at/team/julia-neidhardt/" - Julia Neidhardt | , TU Wien, Austria 
+ Marko Tkalčič | , University of Primorska, Slovenia 
+ Adir Solomon | , University of Haifa, Israel 
+ E-mail:href="javascript:;" - demos_lbr2025@recsys.acm.org
+RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys25/" - About the Conference 
+ href="https://recsys.acm.org/recsys25/call/" - Call for Contributions 
+ href="https://recsys.acm.org/recsys25/dates/" - Important Dates 
+ href="https://recsys.acm.org/recsys25/challenge/" - Challenge 
+ href="https://recsys.acm.org/recsys25/women-in-recsys/" - Women in RecSys 
+ Committees 
+ href="https://recsys.acm.org/recsys25/location/" - Location 
+ href="https://recsys.acm.org/recsys25/student-volunteers/" - Student Volunteers 
+ href="https://recsys.acm.org/recsys25/summer-school/" - Summer School 
+ href="/recsys25/sponsorship" - Become a sponsor!
+About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ © 2012-2025 
+ RecSys Community. All rights are reserved. 
+
+Important Dates information:
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:Important Dates 
+ ACM RecSys 2025 will be held in Prague, Czech Republic, September 22-26, 2025. 
+ With regard to the research paper submission process, the most important dates are: 
+  
+ Submission | Rebuttal | Notification | Camera-ready 
+ Full papers | Abstr.: Apr 1, 2025 
+ Paper: Apr 8, 2025 | May 20-26, 2025 | Jul 3, 2025 | Jul 21, 2025 
+ Short papers | Abstr.: Apr 22, 2025 
+ Paper: Apr 29, 2025 | Jun 5-10, 2025 | Jul 3, 2025 | Jul 21, 2025 
+ Reproducibility papers | Abstr.: May 6, 2025 
+ Paper: May 13, 2025 | Jun 5-10, 2025 | Jul 3, 2025 | Jul 21, 2025 
+ Further dates for the other submissions: 
+  
+ Submission | Notification | Camera-ready 
+ DS papers | Jun 3, 2025 | Jul 3, 2025 | Jul 21, 2025 
+ Industry papers | May 15, 2025 | Jul 3, 2025 | Jul 21, 2025 
+ Demo&LBR papers | Jul 9, 2025 | Aug 4, 2025 | Aug 11, 2025 
+ Woman’s Journal paper of the Year | Apr 30, 2025 | Jun 15, 2025 | – 
+ Workshop proposals | Feb 27, 2025 | Mar 28, 2025 | Jul 14, 2025 
+ Tutorial proposals | Apr 15, 2025 | Apr 30, 2025 | Jul 14, 2025 
+ Deadlines refer to 23:59 (11:59pm) in theAoE (Anywhere on Earth)time zone. 
+ For further information, please have a look at thehref="https://recsys.acm.org/recsys25/call/" - call for contributions
+. 
+ RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys25/" - About the Conference 
+ href="https://recsys.acm.org/recsys25/call/" - Call for Contributions 
+ href="https://recsys.acm.org/recsys25/dates/" - Important Dates 
+ href="https://recsys.acm.org/recsys25/challenge/" - Challenge 
+ href="https://recsys.acm.org/recsys25/women-in-recsys/" - Women in RecSys 
+ Committees 
+ href="https://recsys.acm.org/recsys25/location/" - Location 
+ href="https://recsys.acm.org/recsys25/student-volunteers/" - Student Volunteers 
+ href="https://recsys.acm.org/recsys25/summer-school/" - Summer School 
+ href="/recsys25/sponsorship" - Become a sponsor!
+About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ © 2012-2025 
+ RecSys Community. All rights are reserved.

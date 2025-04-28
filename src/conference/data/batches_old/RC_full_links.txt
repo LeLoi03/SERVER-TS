@@ -1,0 +1,106 @@
+Conference full name: International Conference on Reversible Computation (RC)
+
+1. Website of RC_1: https://reversible-computation-2025.github.io/
+Website information of RC_1:
+
+RC2025 
+ 17th International Conference on 
+ Reversible Computation (RC) 
+ July 3 - July 4, 2025, Odense, DenmarkHome 
+ Venue 
+ href="cfp.html" - Call for Papers 
+ href="submission.html" - Paper Submission 
+ Program Committee 
+ Steering Committee 
+ Previous Editions 
+ Contact 
+ Home 
+ Welcome to the 
+ 17th Conference on Reversible Computation 
+ July 3 - July 4, 2025, Odense, Denmark 
+ The Conference on Reversible Computation will bring together researchers from computer science, mathematics, engineering, and physics to discuss new developments and directions for future research in the emerging area of Reversible Computation. This particularly includes applications of reversibility in quantum computation. Research papers, tool demonstrations and work-in-progress reports are within the scope of the conference. 
+ Previous editions of this event took place as workshops in York (2009), Bremen (2010), Gent (2011), Copenhagen (2012), and as conference in Victoria (2013), Kyoto (2014), Grenoble (2015), Bologna (2016), Kolkata (2017), Leicester (2018), Lausanne (2019), Oslo (2020), Nagoya (2021), Urbino (2022), Giessen (2023), and Toruń (2024). 
+ Important dates : 
+  
+ Abstract submission: 
+ February 7th, 2025 AOE 
+ February 21st, 2025 AOE 
+  
+ Submission deadline: 
+ February 13th, 2025 AOE 
+ February 28th, 2025 AOE 
+  
+ Notification to authors: 
+ April 11th, 2025 AOE 
+  
+ Final version: 
+ May 1st, 2025 AOE 
+  
+ Conference: 
+ July 3rd - July 4th, 2025 
+  
+ Organisers: 
+  
+ Robin Kaarsgaard 
+ University of Southern Denmark 
+ Odense, Denmark 
+  
+ Sponsors:Contact
+
+2. Website of RC_1: https://www.cs.unibo.it/~lanese/
+Website information of RC_1:
+
+Ivan Lanese's Home Page 
+  
+ Associate Professor in Computer Science 
+ University of Bologna/INRIA, ItalyE-mail address:ivan.lanese@gmail.comX:@IvanLanese | Address:Mura Anteo Zamboni, 7 
+ Bologna, Italy 
+ tel.: 339/5861783 | Associate Professor in Computer Science 
+ University of Bologna/INRIA, ItalyE-mail address:ivan.lanese@gmail.comX:@IvanLanese | Address:Mura Anteo Zamboni, 7 
+ Bologna, Italy 
+ tel.: 339/5861783 
+ Associate Professor in Computer Science 
+ University of Bologna/INRIA, ItalyE-mail address:ivan.lanese@gmail.comX:@IvanLanese | Address:Mura Anteo Zamboni, 7 
+ Bologna, Italy 
+ tel.: 339/5861783 
+ Research interests 
+ I am mainly interested in formal methods and programming languages for distributed and mobile systems, such as service oriented systems (including microservices and serverless), and for quantum systems. I aim at providing languages, analysis techniques and tools to support the programming of correct concurrent and distributed applications. I am currently active inreversible computing(see also ouroverview book), and in particularreversible debugging of Erlang programs,choreographic programming, and quantum computing.Upcoming events I am involved in 
+ href="https://reversible-computation-2025.github.io/index.html" - 17th Conference on Reversible Computation (RC 2025) 
+ href="http://www.discotec.org/2025/" - 20th International Federated Conference on Distributed Computing Techniques (DisCoTec 2025) 
+ and in particularhref="http://www.discotec.org/2025/forte.html" - 45th International Conference on Formal Techniques for Distributed Objects, Components, and Systems (FORTE 2025) 
+ href="http://www.discotec.org/2025/coordination.html" - 27th International Conference on Coordination Models and Languages (COORDINATION 2025) 
+ href="http://www.discotec.org/2025/dais.html" - 25th International Conference on Distributed Applications and Interoperable Systems (DAIS 2025) 
+ href="http://www.discotec.org/2025/ice.html" - 18th Interaction and Concurrency Experience (ICE 2025) 
+ href="https://waca-ws.github.io/2025/" - Workshop on Adaptable Cloud Architectures (WACA 2025) 
+ href="https://wpte2025.github.io/" - 11th International Workshop on Rewriting Techniques for Program Transformations and Evaluation  (WPTE 2025) 
+ href="https://cs-conferences.acadiau.ca/ant-25/" - Systems Software Engineering track of the 16th International Conference on Ambient Systems, Networks and Technologies (ANT 2025) 
+ Roles in scientific institutions 
+ I am currently chair of | IFIP | WG6.1 | on Architectures and Protocols for Distributed Systems 
+ Current projects and groups 
+ OLAS | : joint team between University of Bologna and | INRIA Sophia Antipolis Méditerranée | on Operational, Logical, and Algebraic foundations for Software systems 
+ SmartCloud | : French ANR project on Smart Dynamic Adaptivity for Cloud Computing Systems 
+ ReGraDe-CS | : European HEU Marie Skłodowska-Curie Postdoc Fellowship on Reversible Gray Debugging of Concurrent Systems, as supervisor 
+ href="https://rcr-group.github.io/index.html" - RCR | : Reversible Computing Research Group, which aims at coordinating the Italian research in the field of reversible computing 
+ MARVEL: Italian | GNCS | project on "Modelli composizionali per l'Analisi di sistemi ReVErsibiLi distribuiti" (Compositional Models for the Analysis of Reversible Distributed Systems) 
+ OVERLAY | : fOrmal VERification, Logic, Automata, and sYnthesis research group on Formal Methods for AI 
+ Collaboration with industry 
+ I am participating to theJolie project, aiming at developing Jolie, a language for programming service oriented applications.Joliehas born at theComputer Science Department of University of Bologna, inside theEuropean FET-GC2 project Sensoria. Jolie is currently developed by theComputer Science Department of University of Bolognaand by companyItalianaSoftware.Software development 
+ Besides participating to theJolie projectabove, I am contributing to the following projects:CauDEr | : a Causal-consistent Reversible Debugger for Erlang, and a | tracer | producing traces to be analyzed 
+ JIoT | : support for IoT protocols in the Jolie language 
+ AIOCJ | : a choreographic language for adaptive distributed applications 
+ Publications 
+ You can browse my publications in the following web pages:my publications page | (under construction - some old publications may not yet be available, contact me if you need them) 
+ DBLP 
+ ArnetMiner 
+ href="http://scholar.google.com/scholar?q=Ivan+Lanese&hl=en&btnG=Search&as_sdt=1%2C5&as_sdtp=on" - Google Scholar 
+ Awards 
+ Distinguished Reviewer Award | in the "31st European Symposium on Programming" (ESOP 2022), part of the European joint conferences on theory & practice of software (ETAPS) 
+ The paper | "Reversibility in the higher-order pi-calculus" | by myself, Claudio Antares Mezzina and Jean-Bernard Stefani in | Theoretical Computer Science | 625 is part of the list of | Most Cited Theoretical Computer Science Articles | published since 2015 by | Theoretical Computer Science Journal | . 
+ The paper | "The stream-based service-centred calculus: a foundation for service-oriented programming" | by Luís Cruz-Filipe, myself, Francisco Martins, António Ravara and Vasco Thudichum Vasconcelos in | Formal Aspects of Computing | 26(5) is part of the list of | Notable Books and Articles in Computing of 2014 | by | ACM Computing Reviews | . 
+ My PhD thesis has been awarded the prize for the best PhD theses in Theoretical Computer Science by the | Italian Chapter of EATCS | in 2007. 
+ Work 
+ You can find more detailed information about my work and my job history (talks, projects, event organization, teaching, ...)here.Teaching 
+ Office hours: by e-mail appointment, at my office (Mura Anteo Zamboni 7, second floor). 
+ I am currently teaching Computer Architecture (first cycle degree in Computer Science), Service-Oriented Software Engineering (second cycle degree in Computer Science) and Computational Methods for Bioinformatics (second cycle degree in Bioinformatics). Seeherefor more information. 
+ I will soon start teaching Introduction to Quantum Computing and Microservices Software Architectures.Qualcosa in più su di me (famiglia e hobby)Ivan Lanese (ivan.lanese@gmail.com)
+

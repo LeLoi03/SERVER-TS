@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "October 27 - 31, 2025",
+  "Year": "2025",
+  "Location": "International Institute of Information Technology, Bangalore, India",
+  "City-State-Province": "Bangalore",
+  "Country": "India",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract + Paper submission deadline": "April 25, 2025",
+    "Tool paper artifact submission deadline": "May 2, 2025",
+    "Regular paper artifact submission deadline": "July 8, 2025"
+  },
+  "Notification Date": {
+    "Paper notification": "July 4, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "August 1, 2025"
+  },
+  "Other Date": {
+    "Author response period": "June 17 - 20, 2025",
+    "Tutorials and Workshops": "October 27, 2025"
+  },
+  "Topics": "Automated analysis, verification, and synthesis of hardware and software systems, Formalisms for modeling hardware, software and embedded systems, Specification and verification of finite-state, infinite-state and parameterized systems, Program analysis and software verification, Analysis and verification of hardware circuits, systems-on-chip and embedded systems, Analysis of real-time, hybrid, priced, weighted and probabilistic systems, Deductive, algorithmic, compositional, and abstraction/refinement techniques for analysis and verification, Analytical techniques for safety, security, and dependability, Testing and runtime analysis based on verification technology, Analysis and verification of parallel and concurrent systems, Verification in industrial practice, Synthesis for hardware and software systems, Applications and case studies of verification, Automated tool support for verification, Testing and verification of neural networks, Testing and verification of autonomous systems",
+  "Summary": "ATVA 2025 is the 23rd edition of the International Symposium on Automated Technology for Verification and Analysis. The conference is dedicated to the promotion of research on theoretical and practical aspects of automated analysis, verification, and synthesis, by providing a forum for interaction between international research communities and industry in the field. ATVA 2025 will take place during October 27-31, 2025, in Bangalore, India.",
+  "Call for Papers": "# ATVA 2025: Call for Papers\n\nATVA 2025 is the 23rd in a series of symposia aimed at bringing together academics, industrial researchers, and practitioners in the area of theoretical and practical aspects of automated analysis, synthesis, and verification of hardware and software systems.  The conference will be held from **October 27-31, 2025 in Bangalore, India**.\n\n## Topics\n\nATVA solicits high-quality submissions in the following suggestive list of topics:\n\n*   Formalisms for modeling hardware, software and embedded systems\n*   Specification and verification of finite-state, infinite-state and parameterized systems\n*   Program analysis and software verification\n*   Analysis and verification of hardware circuits, systems-on-chip and embedded systems\n*   Analysis of real-time, hybrid, priced, weighted and probabilistic systems\n*   Deductive, algorithmic, compositional, and abstraction/refinement techniques for analysis and verification\n*   Analytical techniques for safety, security, and dependability\n*   Testing and runtime analysis based on verification technology\n*   Analysis and verification of parallel and concurrent systems\n*   Verification in industrial practice\n*   Synthesis for hardware and software systems\n*   Applications and case studies of verification\n*   Automated tool support for verification\n*   Testing and verification of neural networks\n*   Testing and verification of autonomous systems\n\n## Important Dates\n\n*   **Abstract + Paper submission deadline:** April 25, 2025 (AoE)\n*   **Author response period:** June 17 – 20, 2025 (AoE)\n*   **Paper notification:** July 4, 2025 (AoE)\n*   **Camera-ready deadline:** August 1, 2025 (AoE)\n*   **Tutorials and Workshops:** October 27, 2025\n*   **Conference:** October 28 – October 30, 2025\n\n## Submissions\n\nATVA welcomes submissions in the following two categories:\n\n*   **Regular research papers:** (18 pages, excluding references, must be anonymized)\n*   **Tool papers:** (10 pages, excluding references, not anonymized)\n\nSubmissions in both categories must be in Springer’s LNCS format.  Adding line numbers (LaTeX package lineno) is highly recommended. Submissions authored or co-authored by members of the program committee are allowed and encouraged. An artifact evaluation will be undertaken, which will be optional for regular papers and mandatory for tool papers.\n\nPapers must be submitted through EasyChair: [https://easychair.org/conferences/?conf=atva2025](https://easychair.org/conferences/?conf=atva2025)\n\n## Publication\n\nAccepted papers in both categories will be published in Springer’s Lecture Notes in Computer Science series. A few outstanding papers will be selected for a distinguished paper award. At least one author of each accepted paper is expected to register and present the paper at the conference."
+}
+

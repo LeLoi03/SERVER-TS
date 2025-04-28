@@ -1,0 +1,322 @@
+Conference full name: IEEE International Conference on Intelligent Computer Communication and Processing (ICCP)
+
+1. Website of ICCP_3: https://www.iccp.ro/
+Website information of ICCP_3:
+
+href="iccp2025" - ICCP 2025
+Homehref="/call-for-papers/" - General Information
+href="/call-for-papers/" - Call for papers
+href="/important-dates/" - Important Dates
+href="/technical-program/" - Technical Program
+Keynote SpeakersSpecial SessionsWorkshopshref="/submission/" - Author Area
+href="/submission/" - Submission
+Paper TemplateCamera ReadyRegistrationLocation and venueCommitteesOrganizing CommiteeProgram CommiteePrevious Conferences2025 IEEE 21st International Conference on Intelligent Computer Communication and Processing 
+ October 16-18, 2025, Cluj-Napoca, Romania. 
+ WELCOME TO 2025 IEEE ICCP 
+ You are cordially invited to participate to the 2025 IEEE 21th International Conference on Intelligent Computer Communication and Processing (ICCP 2025), to be held October 16-18, 2025 in Cluj-Napoca, Romania. 
+ At 2024 IEEE ICCP the acceptance rate of papers was of 59%. The accepted papers are available in IEEE Xplore digital library and will be submitted to be indexed in Web Of Science and Scopus. 
+ The goal of the 2025 IEEE 21st International Conference on Intelligent Computer Communication and Processing is to bring together researchers, engineers and practitioners working towards improving the power of both communication and processing software using the most advanced intelligent methods available today. 
+  
+ The growing toolkit of AI - computer vision, natural conversation, and machines that learn over time—has the potential to enhance almost the entire economic and social life. The driving forces of this development are the increased volumes of data, the continuously growing of communication, processing, storage capabilities and the new machine learning techniques especially deep learning and reinforcement learning algorithms. 
+  
+ The fast development of artificial intelligence and its applications implies more advanced but also more secure artifacts, which require the intelligent computer communication and processing technologies to improve at a high pace. 
+ Technical tracks include, but are not limited to: 
+ Intelligent Systems: 
+ Agent and Multi-agent based Systems; Knowledge Representation; Reasoning and Engineering; Ontology Modeling and Mediation; Natural Language Processing and Understanding; Web and Knowledge-based Information Systems; Multidisciplinary Topics and Applications. 
+  
+ Deep Learning: 
+ CNN; GNN, Transformers; Theoretical contributions to Supervised Learning, Semi-supervised Learning, Self-supervised Learning, Unsupervised Learning, Reinforcement Learning; Neuro-symbolic Processing; Continual Learning; Synthetic Data based Learning; Domain Adaptation; Explainable AI. 
+  
+ Deep Learning Based Computer Vision: 
+ Image Processing; Image Enhancement; Feature extraction; Semantic, Instance and Panoptic Segmentation; Optical Flow; Stereovision and 3D Reconstruction; Monocular Depth Estimation; Motion; 2D and 3D Object Detection, 3D Point Cloud Processing, Tracking and Recognition; Multi-sensor and temporal fusion; Environment Representation; Risk Assessment. 
+ Perception Applications: 
+ Video-based Question Answering, Driving Assistance Applications; Autonomous Vehicles; Autonomous Drones; Robotic Applications; Biomedical Image Analysis. 
+  
+ Intelligent Distributed Computing and Networking: 
+ Cloud Computing, Context Aware; Autonomic Computing; Resource Coordination and Management; Quality of Service; Queuing Network Models; Pervasive Computing; Grid Computing; Fault Tolerance; Cooperative Applications. 
+ Special Sessions 
+ Natural Language Understandingorganized by the Computer Science Department of Technical University of Cluj-Napoca in cooperation with National University of Science and Technology "Politehnica" Bucharest, RO. 
+  
+ Automated Drivingorganized by the Technical University of Cluj-Napoca, RO. 
+ Keynote Speakers 
+ Will be announced. 
+ Workshops 
+ Trusted Artificial Intelligence:supported bythe project "Romanian Hub for Artificial Intelligence -HRIA", Smart Growth, Digitization and Financial Instruments Program, MySMIS no. 334906 
+  
+ Intelligent and Autonomous Systems:supported by the project "Romanian Hub for Artificial Intelligence -HRIA", Smart Growth, Digitization and Financial Instruments Program, MySMIS no. 334906 
+ Organizers 
+ Computer Science Department, Technical University of Cluj-Napoca. 
+ Technical University of Cluj-Napoca. 
+ Academy of Technical Sciences of Romania 
+
+Sponsors: 
+ IEEERomania Section 
+ ComputerChapter 
+
+Supporters: 
+ Robert Bosch 
+  
+ Orange Romania
+
+2. Website of ICCP_3: https://iccp.ro/technical-program
+Website information of ICCP_3:
+
+href="general-information" - ICCP 2025
+Homehref="/call-for-papers/" - General Information
+href="/call-for-papers/" - Call for papers
+href="/important-dates/" - Important Dates
+href="/technical-program/" - Technical Program
+Keynote SpeakersSpecial SessionsWorkshopshref="/submission/" - Author Area
+href="/submission/" - Submission
+Paper TemplateCamera ReadyRegistrationLocation and venueCommitteesOrganizing CommiteeProgram CommiteePrevious ConferencesICCP 2025 Technical Program 
+  
+ Technical Program will be announced. 
+  
+ ICCP 2025 
+ Home 
+ href="/call-for-papers/" - General Information | href="/call-for-papers/" - Call for papers 
+ href="/important-dates/" - Important Dates 
+ href="/technical-program/" - Technical Program 
+ Keynote Speakers 
+ Special Sessions 
+ Workshops
+
+3. Website of ICCP_3: http://arxiv.org/abs/2411.09643
+Website information of ICCP_3:
+
+Skip to main contentWe gratefully acknowledge support from the Simons Foundation,member institutions, and all contributors.Donate>cs>arXiv:2411.09643 
+ Help|Advanced Search 
+ value="author" - Author
+value="author_id" - arXiv author ID
+Searchopen searchGOopen navigation menuquick links 
+ Login 
+ Help Pages 
+ About 
+ Computer Science > Robotics 
+ arXiv:2411.09643(cs) 
+ [Submitted on 14 Nov 2024] 
+ Title:Modular Fault Diagnosis Framework for Complex Autonomous Driving Systems 
+ Authors:href="https://arxiv.org/search/cs?searchtype=author&query=Orf,+S" - Stefan Orf
+,href="https://arxiv.org/search/cs?searchtype=author&query=Ochs,+S" - Sven Ochs
+,href="https://arxiv.org/search/cs?searchtype=author&query=Doll,+J" - Jens Doll
+,href="https://arxiv.org/search/cs?searchtype=author&query=Schotschneider,+A" - Albert Schotschneider
+,href="https://arxiv.org/search/cs?searchtype=author&query=Heinrich,+M" - Marc Heinrich
+,href="https://arxiv.org/search/cs?searchtype=author&query=Zofka,+M+R" - Marc René Zofka
+,href="https://arxiv.org/search/cs?searchtype=author&query=Z%C3%B6llner,+J+M" - J. Marius Zöllner
+View a PDF of the paper titled Modular Fault Diagnosis Framework for Complex Autonomous Driving Systems, by Stefan Orf and 6 other authors 
+ View PDFHTML (experimental)Abstract:Fault diagnosis is crucial for complex autonomous mobile systems, especially for modern-day autonomous driving (AD). Different actors, numerous use cases, and complex heterogeneous components motivate a fault diagnosis of the system and overall system integrity. AD systems are composed of many heterogeneous components, each with different functionality and possibly using a different algorithm (e.g., rule-based vs. AI components). In addition, these components are subject to the vehicle's driving state and are highly dependent. This paper, therefore, faces this problem by presenting the concept of a modular fault diagnosis framework for AD systems. The concept suggests modular state monitoring and diagnosis elements, together with a state- and dependency-aware aggregation method. Our proposed classification scheme allows for the categorization of the fault diagnosis modules. The concept is implemented on AD shuttle buses and evaluated to demonstrate its capabilities. 
+  
+ Comments: | Accepted at 2024 IEEE 20th International Conference on Intelligent Computer Communication and Processing (ICCP 2024) 
+ Subjects: | Robotics (cs.RO) 
+ Cite as: | arXiv:2411.09643[cs.RO] 
+ (orarXiv:2411.09643v1[cs.RO]for this version) 
+ https://doi.org/10.48550/arXiv.2411.09643Focus to learn morearXiv-issued DOI via DataCite 
+ Submission history 
+ From: Stefan Orf [view email] 
+ [v1]Thu, 14 Nov 2024 18:10:10 UTC (623 KB) 
+ Full-text links:Access Paper: 
+ View a PDF of the paper titled Modular Fault Diagnosis Framework for Complex Autonomous Driving Systems, by Stefan Orf and 6 other authors 
+ View PDF 
+ HTML (experimental) 
+ TeX Source 
+ Other Formats 
+ view license 
+ Current browse context:cs.RO 
+ < prev|next > 
+ new|recent|2024-11Change to browse by:cs 
+ References & Citations 
+ NASA ADS 
+ Google Scholar 
+ Semantic Scholar 
+ aexport BibTeX citationLoading...BibTeX formatted citation 
+ ×loading...Data provided by:Bookmark 
+ Bibliographic ToolsBibliographic and Citation Tools 
+ Bibliographic Explorer ToggleBibliographic Explorer(What is the Explorer?)Connected Papers ToggleConnected Papers(href="https://www.connectedpapers.com/about" - What is Connected Papers?
+)Litmaps ToggleLitmaps(What is Litmaps?)scite.ai Togglescite Smart Citations(What are Smart Citations?)Code, Data, MediaCode, Data and Media Associated with this Article 
+ alphaXiv TogglealphaXiv(What is alphaXiv?)Links to Code ToggleCatalyzeX Code Finder for Papers(What is CatalyzeX?)DagsHub ToggleDagsHub(What is DagsHub?)GotitPub ToggleGotit.pub(What is GotitPub?)Huggingface ToggleHugging Face(What is Huggingface?)Links to Code TogglePapers with Code(href="https://paperswithcode.com/" - What is Papers with Code?
+)ScienceCast ToggleScienceCast(What is ScienceCast?)DemosDemos 
+ Replicate ToggleReplicate(What is Replicate?)Spaces ToggleHugging Face Spaces(What is Spaces?)Spaces ToggleTXYZ.AI(What is TXYZ.AI?)Related PapersRecommenders and Search Tools 
+ Link to Influence FlowerInfluence Flower(What are Influence Flowers?)Core recommender toggleCORE Recommender(What is CORE?) 
+ href="" - Author 
+ Venue 
+ Institution 
+ Topic 
+ About arXivLabsarXivLabs: experimental projects with community collaborators 
+ arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. 
+ Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. 
+ Have an idea for a project that will add value for arXiv's community?Learn more about arXivLabs. 
+ href="/auth/show-endorsers/2411.09643" - Which authors of this paper are endorsers?
+|Disable MathJax(What is MathJax?)About 
+ Help 
+ contact arXivClick here to contact arXiv | Contact 
+ subscribe to arXiv mailingsClick here to subscribe | Subscribe 
+ Copyright 
+ Privacy Policy 
+ Web Accessibility Assistance 
+ arXiv Operational Status 
+ Get status notifications viaemailorslack
+
+4. Website of ICCP_3: https://tins.ro/publications/index.php
+Website information of ICCP_3:
+
+Transylvanian Institute of Neuroscience | TINS 
+ English|Română 
+ Home 
+ Scientific advisory board 
+ People 
+ Labs 
+ Publications 
+ Administration 
+ TENSS 
+ Donate 
+ Contact 
+ GEP 
+ Open access 
+ Procurements | TINS Publication Repository 
+ TINS Open Access Publications Policy Framework 
+ 2025 
+ Hernandez D.E., Ciuparu A., Garcia da Silva P., Velasquez C.M., Rebouillat B., Gross M.D., Davis M.B., Chae H., Muresan R.C., Albeanu D.F. (2025), Fast updating feedback from piriform cortex to the olfactory bulb relays multimodal identity and reward contingency signals during rule-reversal. Nature Commununications 16(1):937, doi: 10.1038/s41467-025-56023-5. 
+ href="https://tins.ro/publications/repository/Hernandez_et_al_Nature_Comm_2025.pdf" - [pdf]
+[Journal website link] 
+ 2024 
+ Ichim A.M., Barzan H., Moca V.V., Nagy-Dabacan A., Ciuparu A., Hapca A., Vervaeke K., Muresan R.C. (2024), The gamma rhythm as a guardian of brain health. eLife 13:e100238. 
+ [pdf][Journal website link] 
+ Molnár F., Horvát S., Ribeiro Gomes A.R., Armas J.G., Molnár B., Ercsey-Ravasz M., Knoblauch K., Kennedy H., Toroczkai Z. (2024), Predictability of cortico-cortical connections in the mammalian brain. Network Neuroscience 2024; 8 (1): 138–157. 
+ [pdf][Journal website link] 
+ Molnár B., Márton I.B., Horvát S., Ercsey-Ravasz M. (2024), Community detection in directed weighted networks using Voronoi partitioning. Scientific Reports 14, 8124. 
+ [pdf][Journal website link] 
+ Józsa M., Ercsey-Ravasz M., Lázár Z.I. (2024), Coarse-graining model reveals universal exponential scaling in axonal length distributions. Journal of Physics: Complexity, vol. 5, no. 3. 
+ [pdf][Journal website link] 
+ Park S.J., Son S.M., Barbosa A.D., Wrobel L., Stamatakou L., Squitieri F., Balmus G., Rubinsztein D.C. (2024), Nuclear proteasomes buffer cytoplasmic proteins during autophagy compromise. Nat Cell Biol (2024). https://doi.org/10.1038/s41556-024-01488-7Park, S.J., Son, S.M., Barbosa, A.D. et al. Nuclear proteasomes buffer cytoplasmic proteins during autophagy compromise. Nature Cell Biology. 
+ [pdf][Open access journal link] 
+ Bakouh N., Castaño-Martín R., Metais A., Dan E.L., Balducci E., Chhuon C., Lepicka J., Barcia G., Losito E., Lourdel S., Planelles G., Muresan R.C., Moca V.V., Kaminska A., Bourgeois M., Chemaly N., Rguez Y., Auvin S., Huberfeld G., Varlet P., Asnafi V., Guerrera I.C., Kabashi E., Nabbout R., Ciura S., Blauwblomme T. (2024), Chloride deregulation and GABA depolarization in MTOR related malformations of cortical development. Brain, In Press. 
+ [pdf][Open access journal link] 
+ Varga L., Moca V.V., Molnár B., Perez-Cervera L., Selim M.K., Díaz-Parra A., Moratal D., Péntek B., Sommer W.H., Muresan R.C., Canals S., Ercsey-Ravasz M. (2024), Brain dynamics supported by a hierarchy of complex correlation patterns defining a robust functional architecture, Cell Systems 15, 1-17. 
+ [pdf][Journal website link] 
+ Molnár B., Márton I.B., Horvát S., Ercsey-Ravasz M. (2024), Community detection in directed weighted networks using Voronoi partitioning. Scientific Reports 14, 8124. 
+ [pdf][Journal link] 
+ Adams D.J., Barlas B., McIntyre R.E.,..., Balmus G. (2024), Genetic determinants of micronucleus formation in vivo. Nature 627, 130–136. https://doi.org/10.1038/s41586-023-07009-0 
+ [pdf][Open access journal link] 
+ Peruzzotti-Jametti L., Willis C.M., Krzak G. et al. (2024), Mitochondrial complex I activity in microglia sustains neuroinflammation. Nature. https://doi.org/10.1038/s41586-024-07167-9 
+ [pdf][Open access journal link] 
+ Ciuparu A., Garvert A.C., Vervaeke K., Muresan R.C. (2024), Adapting supervised machine learning for analysis of neurobiological signals. Automation, Quality and Testing, Robotics (AQTR), 2024 IEEE International Conference on, pp. 1-6, https://doi.org/10.1109/AQTR61889.2024.10554180. 
+ [pdf][Journal link] 
+ Gal C., Tincas I., Moca V.V., Ciuparu A., Dan E.L., Smith M.L., Gliga T., Muresan R.C. (2024), Randomness impacts the building of specific priors, visual exploration, and perception in object recognition. Scientific Reports 14, 8527. 
+ [pdf][Open access journal link] 
+ 2023 
+ Fang TS.Z., Sun Y., Pearce A.C.,..., Balmus G., Simon D.K. (2023), Knockout or inhibition of USP30 protects dopaminergic neurons in a Parkinson’s disease mouse model. Nature Communications 14, 7295. 
+ [pdf][Open access journal link] 
+ Ardelean E.R., Barzan H., Ichim A.M., Muresan R.C., Moca V.V. (2023), Sharp detection of oscillation packets in rich time-frequency representations of neural signals. Frontiers in Human Neuroscience 17:1112415. 
+ [pdf][Open access journal link] 
+ Bilc M.I., Iacob A., Szekely-Copindean R.D., Kiss B., Stefan M.G., Muresan R.C., Pop C.F., Pitur S., Szentagotai-Tatar A., Vulturar R., MacLeod C., Miu A.C. (2023), Serotonin and emotion regulation: the impact of tryptophan depletion on emotional experience, neural and autonomic activity. Cognitive, Affective, & Behavioral Neuroscience 23, 1414–1427 (2023). 
+ [pdf][Link] 
+ Grosu G.F., Hopp A.V., Moca V.V., Barzan H., Ciuparu A., Ercsey-Ravasz M., Winkel M., Linde H., Muresan R.C. (2023), The fractal brain: scale-invariance in structure and dynamics. Cerebral Cortex 33(8):4574–4605. 
+ [pdf][Open access journal link] 
+ Ardelean E.R., Coporiie A., Ichim A.M., Dinsoreanu M., Muresan R.C. (2023), A study of autoencoders as a feature extraction technique for spike sorting. PLoS One 18(3):e0282810. 
+ [pdf][Open access journal link] 
+ Ardelean E.R., Ichim A.M., Dinsoreanu M., Muresan R.C. (2023), Improved space breakdown method – A robust clustering technique for spike sorting. Frontiers in Computational Neuroscience 17:1019637. 
+ [pdf][Open access journal link] 
+ Linde H. (2023), Does the Brain Infer Invariance Transformations from Graph Symmetries? IEEE Transactions on Cognitive and Developmental Systems, doi: 10.1109/TCDS.2023.3281406. 
+ [pdf][Journal link][arXiv link] 
+ Vučković A., Stock B., Hopp A.V., Winkel M., Linde H. (2023), Unsupervised Learning of Invariance Transformations. Preprint. 
+ [pdf][arXiv link] 
+ Petre L.M., Gheorghe D.A., Watson D., Mitrofan L. (2023), Romanian Inventory of Depression and Anxiety Symptoms (IDAS-II). Frontiers in Psychology 14:1159380, doi: 10.3389/fpsyg.2023.1159380. 
+ [pdf][Open access journal link] 
+ Ardelean A.I., Ardelean E.R., Moca V.V., Muresan R.C., Dinsoreanu M. (2023), Burst detection in neuronal activity. Intelligent Computer Communication and Processing (ICCP), 2023 19th IEEE International Conference on, pp. 349-356, https://doi.org/10.1109/ICCP60212.2023.10398703. 
+ href="https://tins.ro/publications/repository/Ardelean_et_al_ICCP_2023.pdf" - [pdf]
+href="https://doi.org/10.1109/ICCP60212.2023.10398703" - [Journal link] 
+ Ardelean E.R., Terec R.D., Maries C.M., Moca V.V., Muresan R.C., Dinsoreanu M. (2023), Spike sorting using Superlets: Identifying feature importance through perturbation. Intelligent Computer Communication and Processing (ICCP), 2023 19th IEEE International Conference on, pp. 357-362, https://doi.org/10.1109/ICCP60212.2023.10398655. 
+ href="https://tins.ro/publications/repository/Ardelean_ER_et_al_ICCP_2023.pdf" - [pdf]
+href="https://doi.org/10.1109/ICCP60212.2023.10398655" - [Journal link] 
+ Moisa O.M., Pop I., Ardelean E.R., Moca V.V., Muresan R.C., Dinsoreanu M. (2023), Symbolic Analysis Based Pipeline For EEG Data. Intelligent Computer Communication and Processing (ICCP), 2023 19th IEEE International Conference on, pp. 371-378, https://doi.org/10.1109/ICCP60212.2023.10398607. 
+ href="https://tins.ro/publications/repository/Moisa_et_al_ICCP_2023.pdf" - [pdf]
+href="https://doi.org/10.1109/ICCP60212.2023.10398607" - [Journal link] 
+ 2022 
+ Barzan H., Ichim A.M., Moca V.V., Muresan R.C. (2022), Time-Frequency Representations of Brain Oscillations: Which One Is Better? Frontiers in Neuroinformatics 16:871904, doi: 10.3389/fninf.2022.871904. 
+ [pdf][Open access journal link] 
+ Dumitru D.A., Ceuta E.B., Moca V.V., Muresan R.C., Dinsoreanu M. (2022), Extraction of Functional Brain Networks from EEG Signals in the Context of Visual Perception. Automation, Quality and Testing, Robotics (AQTR), 2022 IEEE International Conference on, pp. 1-6, doi: 10.1109/AQTR55203.2022.9801941. 
+ [pdf][Journal link] 
+ Muresan D.B., Ciure R.D., Ardelean E.R., Moca V.V., Muresan R.C., Dinsoreanu M. (2022), Spike sorting using Superlets: Evaluation of a novel feature space for the discrimination of neuronal spikes. Intelligent Computer Communication and Processing (ICCP), 2022 18th IEEE International Conference on, pp. 229-235, https://doi.org/10.1109/ICCP56966.2022.10053955. 
+ href="https://tins.ro/publications/repository/Muresan_et_al_ICCP_2022.pdf" - [pdf]
+href="https://doi.org/10.1109/ICCP56966.2022.10053955" - [Journal link] 
+ Salagean A., Pasc A.M., Ardelean E.R., Muresan R.C., Moca V.V., Dinsoreanu M., Potolea R., Lemnaru C. (2022), Local Field Potential Microstate Analysis. Intelligent Computer Communication and Processing (ICCP), 2022 18th IEEE International Conference on, pp. 221-227, https://doi.org/10.1109/ICCP56966.2022.10053960. 
+ href="https://tins.ro/publications/repository/Salagean_et_al_ICCP_2022.pdf" - [pdf]
+href="https://doi.org/10.1109/ICCP56966.2022.10053960" - [Journal link] 
+ Varady C., Volpi R., Malago L., Ay N. (2022), Natural Reweighted Wake–Sleep. Neural Networks 155:574-591. 
+ [pdf][Journal link] 
+ Künzi M., Gheorghe D.A., Kliegel M., Ballhausen N., Gallacher J., Bauermeister S. (2022), Cumulative life course adversity, mental health, and cognition in the UK biobank. Scientific Repports 12, 14700. 
+ [pdf][Open access journal link] 
+ 2021 
+ Moca V.V., Barzan H., Nagy-Dabacan A., Muresan R.C. (2021), Time-frequency super-resolution with superlets. Nature Communications 12, 337. 
+ [pdf][Open access journal link] 
+ Wandres M., Pfarr S., Molnar B., Schollkopf U., Ercsey-Ravasz M., Sommer W.H., Korber C. (2021), Alcohol and sweet reward are encoded by distinct meta-ensembles. Neuropharmacology, vol. 195, 108496. 
+ [pdf][Journal link] 
+ Sandor B., Schneider B., Lazar Z.I., Ercsey-Ravasz M. (2021), A Novel Measure Inspired by Lyapunov Exponents for the Characterization of Dynamics in State-Transition Networks. Entropy 23, 103. 
+ [pdf][Journal website link] 
+ Ciuparu A., Muresan R.C. (2021), Jittered sampling - a potential solution for detecting high frequencies in GCaMP recordings. Intelligent Computer Communication and Processing (ICCP), 2021 17th IEEE International Conference on, pp. 469-475. 
+ href="https://tins.ro/publications/repository/Ciuparu_ICCP_2021.pdf" - [pdf]
+[Journal link] 
+ Dodon A., Calugar M.A., Potolea R., Lemnaru C., Dinsoreanu M., Moca V.V., Muresan R.C. (2021), A generative adversarial approach for the detection of typical and drowned action potentials. Intelligent Computer Communication and Processing (ICCP), 2021 17th IEEE International Conference on, pp. 477-481. 
+ href="https://tins.ro/publications/repository/Dodon_ICCP_2021.pdf" - [pdf]
+[Journal link] 
+ Aldea R., Dinsoreanu M., Potolea R., Lemnaru C., Muresan R.C., Moca V.V. (2021), Weighted Principal Component Analysis based on statistical properties of features for spike sorting. Intelligent Computer Communication and Processing (ICCP), 2021 17th IEEE International Conference on, pp. 455-460. 
+ href="https://tins.ro/publications/repository/Aldea_ICCP_2021.pdf" - [pdf]
+[Journal link] 
+ Ravasz L., Kekesi K.A., Mittli D., Ivilinov Todorov M., Borhegy Z., Ercsey-Ravasz M., Tyukodi B., Wang J., Bartfai T., Eberwine J., Juhasz G., (2021), Cell Surface Protein mRNAs Show Differential Transcription in Pyramidal and Fast-Spiking Cells as Revealed by Single-Cell Sequencing. Cerebral Cortex, 31:731–745. 
+ [pdf][Open access journal link] 
+ Volpi R., Malagò L., (2021), Natural alpha embeddings. Information Geometry 4(1), 3-29. 
+ [pdf][pdf][Journal website link] 
+ Volpi R., Thakur U., Malagò L., (2021), Changing the geometry of representations: α-embeddings for nlp tasks. Entropy 23(3), 287. 
+ [pdf][Open access journal link] 
+ 2020 
+ Ciuparu A., Nagy-Dabacan A., Muresan R.C. (2020), Soft++, a multi-parametric non-saturating non-linearity that improves convergence in deep neural architectures. Neurocomputing, 384:376-388. 
+ [pdf][Open access journal link] 
+ de Calbiac H., Dabacan A., Muresan R., Kabashi E., Ciura S. (2020), Behavioral And Physiological Analysis In A Zebrafish Model Of Epilepsy. J. Vis. Exp. (Pending Publication), e58837, In-press. 
+ [Journal website link] 
+ Barzan H., Moca V.V., Ichim A.M., Muresan R.C. (2020), Fractional Superlets. EURASIP 28th European Signal Processing Conference (EUSIPCO), Amsterdam, 18-22 January, 2021, pages 2220-2224. 
+ [pdf] 
+ Palcu L.D., Supuran M., Lemnaru C., Dinsoreanu M., Potolea R., Muresan R.C. (2020), Discovering discriminative nodes for classification with deep graph convolutional methods. In M. Ceci et al. (Eds.): NFMCP 2019, Lecture Notes in Artificial Intelligence 11948, pp. 67–82, 2020, Springer Nature. 
+ [pdf][Link] 
+ Onofrei I., Salagean A., Sirca N., Moca V., Nagy-Dabacan A., Muresan R., Potolea R., Lemnaru C., Dinsoreanu M. (2020), Using Symbolic Analysis of Local Field Potentials for Anesthesia Depth Prediction. In 2020 IEEE 16th International Conference on Intelligent Computer Communication and Processing (ICCP), pp. 21-28. 
+ href="http://tins.ro/publications/repository/Onofrei_et_al_ICCP_2020.pdf" - [pdf]
+[Journal link] 
+ Petrutiu V., Palcu L.D., Lemnaru C., Dinsoreanu M., Potolea R., Muresan R.C., Moca V.V. (2020), Enhancing the Classification of EEG Signals using Wasserstein Generative Adversarial Networks. In 2020 IEEE 16th International Conference on Intelligent Computer Communication and Processing (ICCP), pp. 29-34. 
+ href="http://tins.ro/publications/repository/Petrutiu_et_al_ICCP_2020.pdf" - [pdf]
+[Journal link] 
+ Gheorghiu M., Ciuparu A., Mimica B., Whitlock J., Muresan R.C. (2020), A machine learning approach to investigate fronto-parietal neural ensemble dynamics during complex behavior. IEEE International Conference on Automation, Quality and Testing, Robotics (AQTR), doi:10.1109/AQTR49680.2020.9129986. 
+ [pdf][Journal link] 
+ Barzan H., Ichim A.M., Muresan R.C. (2020), Machine learning-assisted detection of action potentials in extracellular multi-unit recordings. IEEE International Conference on Automation, Quality and Testing, Robotics (AQTR), doi:10.1109/AQTR49680.2020.9130026. 
+ [pdf][Journal link] 
+ Dan L., Dinsoreanu M., Muresan R.C. (2020), Accuracy of six interpolation methods applied on pupil diameter data. IEEE International Conference on Automation, Quality and Testing, Robotics (AQTR), doi:10.1109/AQTR49680.2020.9129915. 
+ [pdf][Journal link] 
+ 2019 
+ Moca V.V., Nagy-Dăbâcan A., Bârzan H., Muresan R.C. (2019), Superlets: time-frequency super-resolution using wavelet sets. BioRxiv 583732; doi:10.1101/583732 
+ [pdf] 
+ Jurjut O.F., Gheorghiu M., Singer W., Nikolić D., Muresan R.C. (2019), Hold Your Methods! How Multineuronal Firing Ensembles Can Be Studied Using Classical Spike-Train Analysis Techniques, Frontiers in Systems Neuroscience 13:21, doi:10.3389/fnsys.2019.00021. 
+ [pdf] 
+ Lervåg A., Dolean D., Tincas I., Melby-Lervåg M. (2019), Socioeconomic background, nonverbal IQ and school absence affects the development of vocabulary and reading comprehension in children living in severe poverty. Developmental Science 00:e12858, https://doi.org/10.1111/desc.12858. 
+ [pdf][Journal website link] 
+ Ichim A.M., Nagy-Dabacan A., Muresan R.C. (2019), A method for the measurement and interpretation of neuronal interactions: improved fitting of cross-correlation histograms using 1D-Gabor Functions. 2019 IEEE 15th International Conference on Intelligent Computer Communication and Processing (ICCP), pp. 525-528, doi: 10.1109/ICCP48234.2019.8959531. 
+ href="https://tins.ro/publications/repository/Ichim_ICCP_2019.pdf" - [pdf]
+[Journal link] 
+ Gheorghiu M., Nagy-Dabacan A., Muresan R.C. (2019), Detecting non-redundant collective activity of neurons. 2019 IEEE 15th International Conference on Intelligent Computer Communication and Processing (ICCP), pp. 539-543, doi: 10.1109/ICCP48234.2019.8959815. 
+ href="https://tins.ro/publications/repository/Gheorghiu_ICCP_2019.pdf" - [pdf]
+[Journal link] 
+ Ardelean E-R., Stanciu A., Dinsoreanu M., Potolea R., Lemnaru C., Moca V.V. (2019), Space Breakdown Method. A new approach for density-based clustering. 2019 IEEE 15th International Conference on Intelligent Computer Communication and Processing (ICCP), pp. 419-425, doi: 10.1109/ICCP48234.2019.8959795. 
+ href="https://tins.ro/publications/repository/Ardelean_ICCP_2019.pdf" - [pdf]
+[Journal link] 
+ Palcu L-D., Supuran M., Lemnaru C., Dinsoreanu M., Potolea R., Muresan R.C. (2019), Breaking the interpretability barrier - a method for interpreting deep graph convolutional models. International Workshop NFMCP in conjunction with ECML-PKDD 2019, Wurzburg, Germany. 
+ [pdf][Workshop website link] 
+ 2018 
+ Molnár B., Molnár F., Varga M., Toroczkai Z., Ercsey-Ravasz M. (2018), A continuous-time MaxSAT solver with high analog performance. Nature Communications 9 (1), 4864. 
+ [pdf][Journal website link] 
+ de Calbiac H., Dabacan A., Marsan E., Tostivint H., Devienne G., Ishida S., Leguern E., Baulac S., Muresan R.C., Kabashi E., Ciura S. (2018), Depdc5 knockdown causes mTOR-dependent motor hyperactivity in zebrafish. Annals of Clinical and Translational Neurology, 5(5):510-523. 
+ [pdf] 
+ Dolean S., Dinsoreanu M., Muresan R.C., Geiszt A., Potolea R., Tincas I. (2018), A Scaled-Correlation Based Approach for Defining and Analyzing Functional Networks. In: Appice A., Loglisci C., Manco G., Masciari E., Ras Z. (eds) New Frontiers in Mining Complex Patterns. NFMCP 2017. Lecture Notes in Computer Science, vol 10785. Springer. 
+ [pdf][Journal website link] 
+  
+ All publications of TINS labs 
+ Applied Computational Intelligence Lab 
+ Experimental and Theoretical Neuroscience Lab 
+ Network Science Lab
+

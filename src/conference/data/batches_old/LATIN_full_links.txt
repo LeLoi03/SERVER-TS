@@ -1,0 +1,896 @@
+Conference full name: International Symposium on Latin American Theoretical Informatics (LATIN)
+
+1. Website of LATIN_2: https://www.lix.polytechnique.fr/~hermann/conf.php
+Website information of LATIN_2:
+
+Conferences in Theoretical Computer Science 
+ Main page 
+ Mirror 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+ WARNING 
+ If you wish | your conference | to be listed here … follow these | instructions 
+ All information on this page is given | without any warranty | . 
+ When there are two dealine dates, the first is for the abstract, the second for the full paper. 
+ All deadlines are 23:59 | Anywhere on Earth | ( | AoE | ) (UTC-12:00) if not stated otherwise. 
+ Be aware that some special deadline times, others than | AoE | , might be | one hour earlier | , because of daylight saving time, even if the conference organizers indicated the time without the daylight saving time shift. 
+ Be also aware, that the daylight saving time starts and ends on different days in Europe and North America. 
+ The | calendar | for the years | href="http://www.timeanddate.com/calendar/" - 2025 | and | 2026 | can help you to consider the deadlines and dates. 
+ Your time zone is | UTC+07:00 
+ Deadline ahead 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+  
+ Conference | City, Country | Deadline | Date | Notification | Submission format and comments 
+ SAT 
+ Theory and Applications of Satisfiability Testing | Glasgow, Scotland, UK | 24 March / 4 April 2025 | 11-15 August 2025 | 29 May 2025 | href="https://submission.dagstuhl.de/styles/download-tag/lipics/v2021.1.3/authors/zip/lipics-authors-v2021.1.3.zip" - LIPIcs
+, 15 pages long, 8 pages short, 8 pages tool, all excluding references; 
+ co-located withhref="https://cp2025.a4cp.org/" - CP
+andSoCS 
+ href="https://coalg.org/calco-mfps-2025/mfps/" - MFPS
+Mathematical Foundations of Programming Semantics | Glasgow, Scotland, UK | 8/9 April 2025 | 16-20 June 2025 | 15 May 2025 | own format, 15 pages excluding references 
+ ICLP 
+ International Conference on Logic Programming | Rende, Calabria, Italy | 13/18 April 2025 
+ 15 June 2025 | 12-19 September 2025 | 25 May 2025 
+ 6 July 2025 | TPLP, 14 pages regular,EPTCS, 12 pages technical communications; 
+ co-located withPPDPandhref="https://lopstr.github.io/2025/" - LOPSTR 
+ href="https://mfcs2025.mimuw.edu.pl/" - MFCS
+Mathematical Foundations of Computer Science | Warsaw, Poland | 18 April 2025 | 25-29 August 2025 | 20 June 2025 | href="https://submission.dagstuhl.de/styles/download-tag/lipics/v2021.1.3/authors/zip/lipics-authors-v2021.1.3.zip" - LIPIcs
+, 12 pages excluding references 
+ href="https://ki2025.gi.de/" - KI
+German Conference on Artificial Intelligence | Potsdam, Germany | 18/25 April 2025 | 16-19 September 2025 | 6 June 2025 | LNCS, 12 pages full, 6 pages communications, 3 pages extended abstracts (deadline 16 May 2025), 
+ all excluding references 
+ FMCADFormal Methods in Computer-Aided Design | Menlo Park, California, USA | 20/27 April 2025 | 6-10 October 2025 | 1 July 2025 | href="http://www.ieee.org/publications_standards/publications/authors/IEEEtran.tgz" - IEEE Transactions
+, 8 pages long, 4 pages short, both excluding references 
+ href="https://algo-conference.org/2025/esa/" - ESA
+European Symposium on Algorithms | Warsaw, Poland | 21 April 2025 | 15-17 September 2025 | 23 June 2025 | LIPIcs clone,double-blind, 500 lines excluding front matter and references; part ofhref="https://algo-conference.org/2025/" - ALGO 
+ href="https://esorics2025.sciencesconf.org/" - ESORICS
+European Symposium on Research in Computer Security | Toulouse, France | 22 April 2025 | 22-26 September 2025 | 13 June 2025 | LNCS, 16 pages + 4 pages references and appendix; second round of submission 
+ href="http://www.cicm-conference.org/2025" - CICM
+Conference on Intelligent Computer Mathematics | Brasilia, Brazil | 28 April / 5 May 2025 | 6-11 October 2025 | 4 July 2025 | LNCS, 15 pages regular, 15 pages project and survey, 5 pages system and dataset descriptions, 
+ all excluding references; co-located withhref="https://lsfa-workshop.github.io/2025/" - LSFA 
+ href="https://ecai2025.org/" - ECAI
+European Conference on Artificial Intelligence | Bologna, Italy | 29 April / 6 May 2025 | 25-30 October 2025 | 10 July 2025 | own format,double-blind, 7 pages + 1 page references 
+ href="https://lagos.mat.br/lagos2025/" - LAGOS
+Latin-American Algorithms, Graphs and Optimization Symposium | Buenos Aires, Argentina | 30 April 2025 | 10-14 November 2025 | 20 July 2025 | href="https://lagos.mat.br/lagos2025/ecrc-procs_LAGOS2025.zip" - own format
+, 8 pages 
+ href="https://cccg-wads-2025.eecs.yorku.ca/CCCG%202025.html" - CCCG
+Canadian Conference on Computational Geometry | Toronto, Ontario, Canada | 2 May 2025 | 11-15 August 2025 | 13 June 2025 | href="https://cccg-wads-2025.eecs.yorku.ca/CCCG2025-tex-template.zip" - own format
+,double-blind, 6 pages excluding references; co-located withhref="https://cccg-wads-2025.eecs.yorku.ca/" - WADS 
+ href="https://dsaa.ieee.org/2025/" - DSAA
+Data Science and Advanced Analytics | Birmingham, UK | 2 May 2025 | 9-13 October 2025 | 24 July 2025 | IEEE,double-blind, 10 pages 
+ href="https://lfmtp.github.io/lfmtp-page/workshops/2025/" - LFMTP
+Logical Frameworks and Meta Languages: Theory and Practice | Birmingham, UK | 2/9 May 2025 | 19 July 2025 | 6 June 2025 | EPTCS, 15 pages full, 8 pages work in progress; co-located withhref="https://fscd-conference.org/2025/" - FSCD 
+ href="https://viam.science.tsu.ge/jelia2025/" - JELIA
+European Conference on Logics in Artificial Intelligence | Kutaisi, Georgia | 2/9 May 2025 | 1-5 September 2025 | 1 July 2025 | LNCS, 13 pages long, 6 pages short, excluding references 
+ href="https://ciaa2025.unipa.it/" - CIAA
+Conference on Implementation and Application of Automata | Palermo, Italy | 3 May 2025 | 22-25 September 2025 | 20 June 2025 | LNCS, 12 pages excluding references 
+ href="https://lsfa-workshop.github.io/2025/" - LSFA
+Logical and Semantic Frameworks with Applications | Brasilia, Brazil | 5/12 May 2025 | 6-11 October 2025 | 27 June 2025 | EPTCS, 16 pages full, 6 pages short; co-located withhref="http://www.cicm-conference.org/2025" - CICM 
+ FroCoSFrontiers of Combining Systems | Reykjavik, Iceland | 5/12 May 2025 | 27 September - 3 October 2025 | 23 June 2025 | LNCS, 15 pages excluding references; co-located withITPandTABLEAUX 
+ href="https://www.pragmaticsofsat.org/2025/" - PoS
+Pragmatics of SAT | Glasgow, Scotland, UK | 5/12/30 May 2025 | 11 August 2025 | 20 June 2025 | CEURART, 15 pages long, 8 pages short; third deadline for SAT fast track; workshop ofSATandhref="https://cp2025.a4cp.org/" - CP 
+ href="https://fct2025.cs.uni.wroc.pl/" - FCT
+Fundamentals of Computation Theory | Wroclaw, Poland | 6 May 2025 | 15-17 September 2025 | 30 June 2025 | LNCS, 12 pages 
+ href="https://cs.newpaltz.edu/unif2025/" - UNIF
+Workshop on Unification | Birmingham, UK | 7 May 2025 | 14 July 2025 | 29 May 2025 | EasyChair style, 5 pages; co-located withhref="https://fscd-conference.org/2025/" - FSCD 
+ SC2Satisfiability Checking and Symbolic Computation | Stuttgart, Germany | 7 May 2025 | 2 August 2025 | 6 June 2025 | CEURART, 16 pages full, 4 pages extended abstracts, both excluding references; wotkshop ofCADE 
+ href="https://kr.org//KR2025/" - KR
+Principles of Knowledge Representation and Reasoning | Melbourne, Victoria, Australia | 7/12 May 2025 | 11-17 November 2025 | 10 July 2025 | href="https://kr.org//KR2025/files/KR25_authors_kit.zip" - own format
+,double-blind, 9 pages regular, 4 pages short; co-located withhref="https://sites.google.com/view/cpaior2025" - CPAIOR
+andICAPS 
+ href="https://wpte2025.github.io/" - WPTE
+Workshop on Rewriting Techniques for Program Transformations and Evaluation | Birmingham, UK | 9 May 2025 | 20 July 2025 | 13 June 2025 | EPTCS, 10 pages, post-proceedings; part ofhref="https://fscd-conference.org/2025/" - FSCD 
+ href="https://wabiconf.github.io/2025/" - WABI
+Workshop on Algorithms in Bioinformatics | College Park, Maryland, USA | 9/12 May 2025 | 20-22 August 2025 | 16 June 2025 
+ TABLEAUXAutomated Reasoning with Analytic Tableaux and Related Methods | Reykjavik, Iceland | 9/14 May 2025 | 27 September - 3 October 2025 | 9 July 2025 | LNCS, 15 pages regular, 9 pages short, both excluding references; co-located withFroCoS, andITP 
+ href="https://lopstr.github.io/2025/" - LOPSTR
+Logic-Based Program Synthesis and Transformation | Rende, Calabria, Italy | 9/16 May 2025 | 9-10 September 2025 | 27 June 2025 | LNCS, 15 pages regular, 8 pages short, both excluding references; co-located withICLPandPPDP 
+ href="https://sisap.org/2025/" - SISAP
+Similarity Search and Applications | Reykjavik, Iceland | 11/18 May 2025 | 1-3 October 2025 | 14 July 2025 | LNCS,double-blind, 14 pages regular, 8 pages short, demonstrations and doctoral symposium papers 
+ HCVSHorn Clauses for Verification and Synthesis | Zagreb, Croatia | 16 May 2025 | 22 July 2025 | mid June 2025 | EPTCS, 12 pages excluding references regular, 4 pages tools, 3 pages extended abstracts; co-located withhref="https://conferences.i-cav.org/2025/" - CAV 
+ DLDescription Logics | Opole, Poland | 16/23 May 2025 | 3-6 September 2025 | 27 June 2025 | href="https://unifdl.cs.uni.opole.pl/wp-content/uploads/2025/03/CEURART-DL.zip" - CEURART clone
+, 11 pages regular, 4 pages extended abstracts, both excluding references 
+ PPDP 
+ Principles and Practice of Declarative Programming | Rende, Calabria, Italy | 18/30 May 2025 | 10-11 September 2025 | 7 July 2025 | ACM, two column 12 pages regular, 10 pages system descriptions, both excluding references, 
+ 5 pages experience reports; co-located withICLPandhref="https://lopstr.github.io/2025/" - LOPSTR 
+ href="https://2025.fedcsis.org/" - FedCSIS
+Federated Conference on Computer Science and Information Systems | Kraków, Poland | 25 May 2025 | 14-17 September 2025 | 1 July 2025 | IEEE Transactionswithexample, 12 pages full, 6 pages short, 8 pages communication 
+ href="https://dali2025.web.ua.pt/" - DaLí
+Dynamic Logic: new trends and applications | Xi'an, China | 1/5 June 2025 | 20-21 October 2025 | 15 July 2025 | LNCS, 15 pages + 2 pages references regular, 8 pages + 1 pages references short 
+ JAFJournées sur les Arithmétiques Faibles | Prague, Czech Republic | 2 June 2025 | 8-10 September 2025 | 5 July 2025 | 3 pages PDF 
+ href="https://2025.declarativeai.net/events/ruleml-rr" - RuleML+RR
+International Joint Conference on Rules and Reasoning | İstanbul, Türkiye | 2/9 June 2025 | 22-24 September 2025 | 28 July 2025 | LNCS, 15 pages text + 2 pages references long, 8 pages text + 1 page references short 
+ href="https://graphdrawing.github.io/gd2025/" - GD
+Graph Drawing | Norrköping, Sweden | 3/10 June 2025 | 24-26 September 2025 | 23 July 2025 | href="https://graphdrawing.github.io/gd2025/assets/template/gd-lipics-v2.cls" - own format
+andhref="https://submission.dagstuhl.de/styles/download-tag/lipics/v2021.1.3/authors/zip/lipics-authors-v2021.1.3.zip" - LIPIcs
+,double-blind, 500 lines and 15 pages full, 225 lines and 7 pages short, 
+ 80 lines and 3 pages poster, all lines counted without front matter 
+ href="https://algo-conference.org/2025/algowin/" - ALGOWIN
+Algorithmic of Wireless Networks | Warsaw, Poland | 6 June 2025 | 18-19 September 2025 | 1 August 2025 | LNCS, 12 pages excluding references; part ofhref="https://algo-conference.org/2025/" - ALGO 
+ href="https://nmr.krportal.org/2025/" - NMR
+Non-Monotonic Reasoning | Melbourne, Australia | 10/17 July 2025 | 11-13 November 2025 | 21 August 2025 | CEURART, 10 pages full, 3 pages extended abstracts, excluding references for the latter; co-located withhref="https://kr.org//KR2025/" - KR 
+ href="https://conferences-website.github.io/prima2025/" - PRIMA
+Principles and Practice of Multi-Agent Systems | Modena, Italy | 15/22 July 2025 | 15-19 December 2025 | 29 September 2025 | LNCS,double-blind, 16 pages 
+ FoIKSFoundations of Information and Knowledge Systems | Hanover, Germany | 18/25 September 2025 | 23-26 March 2026 | 20 December 2025 | LNCS, 16 pages long, 10 pages short, both excluding references, both 15 pages appendix 
+ Conference | City, Country | Deadline | Date | Notification | Submission format and comments 
+ Running conferences 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+  
+ Conference | City, Country | Date | Remark 
+ Conference | City, Country | Date | Remark 
+ Future conferences with deadline over 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+  
+ Conference | City, Country | Date | Notification | Final version | Early registration | Remarks and other indications 
+ href="https://kam.mff.cuni.cz/conferences/eurocg2025/" - EuroCG
+European Workshop on Computational Geometry | Liblice Castle, Czech Republic | 9-11 April 2025 | 21 February 2025 | 7 March 2025 | 5 March 2025 
+ href="https://www.evostar.org/2025/" - EvoStar
+Evo* | Trieste, Italy | 23-25 April 2025 | 10 January 2025 | 24 January 2025 | 26 February 2025 
+ 19 March 2025 | first registration date for authors, second early; federated conference 
+ includinghref="https://www.evostar.org/2025/eurogp/" - EuroGP
+,href="https://www.evostar.org/2025/evoapps/" - EvoAPPS
+,href="https://www.evostar.org/2025/evocop/" - EvoCOP
+, andhref="https://www.evostar.org/2025/evomusart/" - EvoMUSART 
+ href="https://www.evostar.org/2025/eurogp/" - EuroGP
+European Conference on Genetic Programming | Trieste, Italy | 23-25 April 2025 | 10 January 2025 | 24 January 2025 | 26 February 2025 
+ 19 March 2025 | first registration date for authors, second early; 
+ part ofhref="https://www.evostar.org/2025/" - EvoStar 
+ href="https://www.evostar.org/2025/evoapps/" - EvoAPPS
+Applications of Evolutionary Computation | Trieste, Italy | 23-25 April 2025 | 10 January 2025 | 24 January 2025 | 26 February 2025 
+ 19 March 2025 | first registration date for authors, second early; 
+ part ofhref="https://www.evostar.org/2025/" - EvoStar 
+ href="https://www.evostar.org/2025/evocop/" - EvoCOP
+Evolutionary Computation in Combinatorial Optimisation | Trieste, Italy | 23-25 April 2025 | 10 January 2025 | 24 January 2025 | 26 February 2025 
+ 19 March 2025 | first registration date for authors, second early; 
+ part ofhref="https://www.evostar.org/2025/" - EvoStar 
+ href="https://www.evostar.org/2025/evomusart/" - EvoMUSART
+Artificial Intelligence in Music, Sound, Art and Design | Trieste, Italy | 23-25 April 2025 | 10 January 2025 | 24 January 2025 | 26 February 2025 
+ 19 March 2025 | first registration date for authors, second early; 
+ part ofhref="https://www.evostar.org/2025/" - EvoStar 
+ href="https://ola2025.sciencesconf.org/" - OLA
+Optimization and Learning | Dubai, UAE | 23-25 April 2025 | 28 February 2025 | 15 March 2025 
+ href="https://recomb.org/recomb2025/" - RECOMB
+Research in Computational Molecular Biology | Seoul, Korea | 26-29 April 2025 | 16 December 2024 | 24 January 2025 | 15 March 2025 
+ SDMData Mining | Alexandria, Virginia, USA | 1-3 May 2025 | late December 2024 | 3 April 2025 
+ href="https://etaps.org/2025/" - ETAPS
+European Joint Conferences on Theory & Practice of Software | Hamilton, Ontario, Canada | 3-8 May 2025 | 10 October 2025 | 30 January 2025 | 28 February 2025 | includinghref="https://etaps.org/2025/conferences/esop/" - ESOP
+,href="https://etaps.org/2025/conferences/fase/" - FASE
+,href="https://etaps.org/2025/conferences/fossacs/" - FoSSaCS
+, andhref="https://etaps.org/2025/cfp/" - TACAS 
+ href="https://etaps.org/2025/conferences/esop/" - ESOP
+European Symposium on Programming | Hamilton, Ontario, Canada | 3-8 May 2025 | 19 December 2024 | 30 January 2025 | 28 February 2025 | part ofhref="https://etaps.org/2025/" - ETAPS 
+ href="https://etaps.org/2025/conferences/fase/" - FASE
+Fundamental Approaches to Software Engineering | Hamilton, Ontario, Canada | 3-8 May 2025 | 20 December 2024 | 30 January 2025 | 28 February 2025 | part ofhref="https://etaps.org/2025/" - ETAPS 
+ href="https://etaps.org/2025/conferences/fossacs/" - FoSSaCS
+Foundations of Software Science and Computation Structures | Hamilton, Ontario, Canada | 3-8 May 2025 | 20 December 2024 | 30 January 2025 | 28 February 2025 | part ofhref="https://etaps.org/2025/" - ETAPS 
+ href="https://etaps.org/2025/cfp/" - TACAS
+Tools and Algorithms for the Construction and Analysis of Systems | Hamilton, Ontario, Canada | 3-8 May 2025 | 20 December 2024 | 30 January 2025 | 28 February 2025 | part ofhref="https://etaps.org/2025/" - ETAPS 
+ href="https://eurocrypt.iacr.org/2025/" - EUROCRYPT
+Theory and Applications of Cryptographic Techniques | Madrid, Spain | 4-8 May 2025 | 31 January 2025 
+ href="https://spin-web.github.io/SPIN2025/" - SPIN
+International Symposium on Model Checking Software | Hamilton, Ontario, Canada | 7-8 May 2025 | 24 March 2025 | co-located withhref="https://etaps.org/2025/" - ETAPS 
+ href="https://ecco2025.sciencesconf.org/" - ECCO
+European Chapter on Combinatorial Optimization | Marrakech, Morocco | 8-10 May 2025 | 22 March 2025 | 28 March 2025 
+ EXTRAAMASEXplainable, Trustworthy, and Responsible AI and Multi-Agent Systems | Detroit, Michigan, USA | 19-20 May 2025 | 25 March 2025 | 20 June 2025 | 30 April 2025 | post-proceedings 
+ href="https://aamas2025.org/" - AAMAS
+Autonomous Agents and Multiagent Systems | Detroit, Michigan, USA | 19-23 May 2025 | 23 December 2024 | 7 February 2025 | 31 March 2025 
+ FLAIRSFLorida Artificial Intelligence Research Society Conference | Daytona Beach, Florida, USA | 20-23 May 2025 | 10 March 2025 | 9 April 2025 | 2 April 2025 | poster abstracts 17 March 2025 
+ href="https://canadam.ca/2025" - CanaDAM
+Canadian Discrete and Algorithmic Mathematics Conference | Ottawa, Ontario, Canada | 20-23 May 2024 | 24 March 2024 | 31 March 2025 
+ href="https://www.torontomu.ca/sirocco-2025/" - SIROCCO
+Structural Information and Communication Complexity | Delphi, Greece | 2-4 June 2025 | 17 January 2025 
+ IPDPS 
+ International Parallel & Distributed Processing Symposium | Milan, Italy | 3-7 June 2025 | 19 December 2024 
+ 4 February 2025 | 27 February 2024 | 31 March 2025 
+ href="https://sand2025.csc.liv.ac.uk/" - SAND
+Algorithmic Foundations of Dynamic Networks | Liverpool, United Kingdom | 9-11 June 2025 | 28 March 2025 | 11 April 2025 
+ href="https://msp.cis.strath.ac.uk/types2025/" - TYPES
+Types for Proofs and Programs | Glasgow, Scotland, UK | 9-13 June 2025 | 11 April 2025 | 9 May 2025 | post-proceedingshref="https://submission.dagstuhl.de/styles/download-tag/lipics/v2021.1.3/authors/zip/lipics-authors-v2021.1.3.zip" - LIPIcs 
+ href="https://easyconferences.eu/ciac2025/" - CIAC
+International Conference on Algorithms and Complexity | Rome, Italy | 10-12 June 2025 | 31 January 2025 | 14 February 2025 
+ href="https://conf.researchr.org/home/staf-2025/ecmfa-2025" - ECMFA
+European Conference on Modelling Foundations and Applications | Koblenz, Germany | 10-13 June 2025 | 28 March 2025 
+ 2 May 2025 | 10 May 2025 | part ofhref="https://conf.researchr.org/home/staf-2025" - STAF 
+ href="https://conf.researchr.org/home/icgt-2025" - ICGT
+International Conference on Graph Transformation | Koblenz, Germany | 10-13 June 2025 | 25 March 2025 | 15 April 2025 | 10 May 2025 | part ofhref="https://conf.researchr.org/home/staf-2025" - STAF 
+ IPCOInteger Programming and Combinatorial Optimization | Baltimore, Maryland, USA | 11-13 June 2025 | 22 January 2025 | 25 March 2025 
+ href="https://shemesh.larc.nasa.gov/nfm2025/" - NFM
+NASA Formal Methods | Hampton Roads, Virginia, USA | 11-13 June 2025 | 14 February 2025 | 14 March 2025 
+ href="https://algo.uni-trier.de/wg2025/" - WG
+Graph-Theoretic Concepts in Computer Science | Otzenhausen, Germany | 11-13 June 2025 | 17 April 2025 | 4 July 2025 | post-proceedings 
+ href="https://www.zlaire.net/clar2025/" - CLAR
+International Conference on Logic and Argumentation | Taiyuan, China | 14-16 June 2025 | 29 March 2025 | 13 April 2025 
+ href="https://www.discotec.org/2025/" - DisCoTec
+Distributed Computing Techniques | Lille, France | 16-20 June 2025 | 28 March 2025 | 23 April 2025 | federated conference includinghref="https://www.discotec.org/2025/coordination" - COORDINATION
+,href="https://www.discotec.org/2025/dais" - DAIS
+, andhref="https://www.discotec.org/2025/forte" - FORTE 
+ href="https://www.discotec.org/2025/coordination" - COORDINATION
+Coordination Models and Languages | Lille, France | 16-20 June 2025 | 4 April 2025 | 23 April 2025 | part ofhref="https://www.discotec.org/2025/" - DISCOTEC 
+ href="https://www.discotec.org/2025/dais" - DAIS
+Distributed Applications and Interoperable Systems | Lille, France | 16-20 June 2025 | 4 April 2025 | 23 April 2025 | part ofhref="https://www.discotec.org/2025/" - DISCOTEC 
+ href="https://www.discotec.org/2025/forte" - FORTE
+Formal Techniques for Distributed Objects, Components, and Systems | Lille, France | 16-20 June 2025 | 4 April 2025 | 23 April 2025 | part ofhref="https://www.discotec.org/2025/" - DISCOTEC 
+ href="https://conferences.big.tuwien.ac.at/caise2025/" - CAiSE
+Advanced Information Systems Engineering | Vienna, Austria | 16-20 June 2025 | 28 February 2025 | 14 April 2025 | 14 April 2025 
+ href="https://coalg.org/calco-mfps-2025/calco/" - CALCO
+Conference on Algebra and Coalgebra in Computer Science | Glasgow, Scotland, UK | 16-20 June 2025 | 16 April 2025 | 30 May 2025 
+ href="https://www.podc.org/podc2025/" - PODC
+Principles of Distributed Computing | Huatulco, Mexico | 16-20 June 2025 | 17 April 2025 
+ href="https://cpm2025.pangenome.eu/" - CPM
+Combinatorial Pattern Matching | Milan, Italy | 17-19 June 2025 | 21 March 2025 | 20 May 2025 
+ href="https://2025.sigmod.org/" - SIGMOD
+International Conference on Management of Data | Berlin, Germany | 22-27 June 2025 | 28 November 2024 
+ 30 January 2025 | 18 May 2025 | co-located withhref="https://2025.sigmod.org/" - PODS 
+ href="https://2025.sigmod.org/" - PODS
+Principles of Database Systems | Berlin, Germany | 22-27 June 2025 | 14 February 2025 
+ 7 March 2025 | 18 May 2025 | co-located withhref="https://2025.sigmod.org/" - SIGMOD 
+ Petri Nets 
+ Petri Nets | Paris, France | 22-27 June 2025 | 10 March 2025 | 24 March 2025 | 13 April 2025 
+ 15 May 2025 | first registration deadline is for authors, second for early 
+ LICSLogic in Computer Science | Singapore | 23-26 June 2025 | 8 April 2025 
+ href="https://acm-stoc.org/stoc2025/" - STOC
+Symposium on Theory of Computing | Prague, Czech Republic | 23-27 June 2025 | 1 February 2025 | 31 March 2025 
+ SoCGSymposium on Computational Geometry | Kanazawa, Japan | 23-27 June 2025 | 6 February 2025 | 11 April 2025 
+ href="https://learningtheory.org/colt2025/" - COLT
+Conference on Learning Theory | Lyon, France | 30 June - 4 July 2025 | 2 May 2025 
+ EC 
+ Economics and Computation | Stanford, California, USA | 7-12 July 2025 | 27 March 2025 
+ 17 May 2025 
+ href="https://conferences.au.dk/icalp2025" - ICALP
+International Colloquium on Automata, Languages and Programming | Aarhus, Denmark | 8-11 July 2025 | 14 April 2025 | 28 April 2025 
+ ICMLInternational Conference on Machine Learning | Vancouver, British Columbia, Canada | 13-19 July 2025 | 1 May 2025 
+ href="https://cyprusconferences.org/tase2025/" - TASE
+Theoretical Aspects of Software Engineering | Limassol, Cyprus | 14-16 July 2025 | 5 April 2025 | 1 May 2025 | 1 May 2025 
+ href="https://wollic2025.github.io/" - WoLLIC
+Workshop on Logic, Language, Information and Computation | Porto, Portugal | 14-17 July 2025 | 12 May 2025 | 26 May 2025 
+ href="https://fscd-conference.org/2025/" - FSCD
+Formal Structures for Computation and Deduction | Birmingham, UK | 14-20 July 2025 | 30 April 2025 | 14 May 2025 
+ href="https://icdcs2025.icdcs.org/" - ICDCS
+International Conference on Distributed Computing Systems | Glasgow, Scotland, UK | 20-23 July 2025 | 2 April 2025 | 16 April 2025 
+ href="https://www.cs.montana.edu/bhz/iwoca2025/" - IWOCA
+International Workshop on Combinatorial Algorithms | Bozeman, Montana, USA | 21-24 July 2025 | 22 April 2025 | 30 April 2025 
+ href="https://conferences.i-cav.org/2025/" - CAV
+Computer-Aided Verification | Zagreb, Croatia | 21-25 July 2025 | 2 April 2025 
+ href="https://regindex.github.io/sea2025.github.io/" - SEA
+Symposium on Experimental Algorithms | Venice, Italy | 22-24 July 2025 | 31 March 2025 | 28 April 2025 | 1 April 2025 
+ href="https://www.issac-conference.org/2025/" - ISSAC
+International Symposium on Symbolic and Algebraic Computation | Guanajuato, Mexico | 28 July - 1 August 2025 | 23 April 2025 
+ 16 May 2025 | 10 June 2025 
+ SPAASymposium on Parallelism in Algorithms and Architectures | Portland, Oregon, USA | 28 July - 1 August 2025 | 20 May 2025 | 20 June 2025 
+ CADEConference on Automated Deduction | Stuttgart, Germany | 28 July - 2 August 2025 | 28 April 2025 | 30 May 2025 
+ href="https://kdd2025.kdd.org/" - KDD
+Knowledge Discovery and Data Mining | Toronto, Ontario, Canada | 3-7 August 2025 | 16 May 2025 | 18 June 2025 
+ CCCComputational Complexity Conference | Toronto, Ontario, Canada | 5-8 August 2025 | 2 May 2025 | end of May 2025 | athref="http://www.fields.utoronto.ca/activities/25-26/CCC2025" - Fields Institute 
+ href="https://cp2025.a4cp.org/" - CP
+Principles and Practice of Constraint Programming | Glasgow, Scotland, UK | 10-15 August 2025 | 29 May 2025 | 9 June 2025 | co-located withSATandSoCS 
+ href="https://cccg-wads-2025.eecs.yorku.ca/WADS%202025.html" - WADS
+Algorithms and Data Structures | Toronto, Canada | 11-15 August 2025 | 15 April 2025 | co-located withhref="https://cccg-wads-2025.eecs.yorku.ca/" - CCCG 
+ SoCSSymposium on Combinatorial Search | Glasgow, Scotland, UK | 12-15 August 2025 | 16 May 2025 | co-located withSATandhref="https://cp2025.a4cp.org/" - CP 
+ href="https://tcsuestc.com/cocoon2025" - COCOON
+Computing and Combinatorics Conference | Chengdu, China | 15-17 August 2025 | 5 May 2025 | 20 May 2025 
+ href="https://2025.ijcai.org/" - IJCAI
+International Joint Conference on Artificial Intelligence | Montreal, Canada | 16-22 August 2025 | 7 March 2025 
+ 28 April 2025 
+ href="https://cs.au.dk/~jaco/CONFEST2025.pdf" - CONFEST
+CONCUR & QEST & FORMATS | Aarhus, Denmark | 25-30 August 2025 | federated conference including CONCUR FMICS FORMATS and QEST 
+ href="https://events.illc.uva.nl/Tbilisi/Tbilisi2025/" - TbiLLC
+Tbilisi Symposium on Logic, Language and Computation | Kutaisi, Georgia | 8-12 September 2025 | 23 May 2025 | post-proceedingsLNCS 
+ href="https://safecomp2025.se/" - SAFECOMP
+Computer Safety, Reliability and Security | Stockholm, Sweden | 9-12 September 2025 | 12 April 2025 | 1 June 2025 
+ href="https://algo-conference.org/2025/" - ALGO
+Federated Conference on Algorithms | Warsaw, Poland | 15-19 September 2025 | federated conference 
+ including ESA ALGOWIN ALGOCLOUD IPEC ATMOS and WAOA 
+ href="https://esorics2025.sciencesconf.org/" - ESORICS
+European Symposium on Research in Computer Security | Toulouse, France | 22-26 September 2025 | 21 March 2025 | 14 April 2025 
+ ITPInteractive Theorem Proving | Reykjavik, Iceland | 27 September - 3 October 2025 | 23 May 2025 | 27 June 2025 | co-located withFroCoS, andTABLEAUX 
+ href="https://icfp25.sigplan.org/" - ICFP
+International Conference on Functional Programming | Singapore | 12-18 October 2025 | 23 May 2025 
+ ICAPSInternational Conference on Automated Planning and Scheduling | Melbourne, Victoria, Australia | 9-15 November 2025 | 28 February 2025 | co-located withhref="https://sites.google.com/view/cpaior2025" - CPAIOR
+andhref="https://kr.org//KR2025/" - KR 
+ href="https://sites.google.com/view/cpaior2025" - CPAIOR
+Integration of Constraint Programming, Artificial Intelligence, and Operations Research | Melbourne, Victoria, Australia | 10-13 November 2025 | 10 February 2025 | TBA | co-located withhref="https://kr.org//KR2025/" - KR
+andICAPS 
+ href="https://focs.computer.org/2025/" - FOCS
+Foundations of Computer Science | Sydney, Australia | 14-17 December 2025 | 8 July 2025 
+ Conference | City, Country | Date | Notification | Final version | Early registration | Remarks and other indications 
+ Conference planning 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+ This section serves 
+ for planning conferences in the future, 
+ to indicate the planned (tentative) dates for a conference, and 
+ to inform organizers of other conferences about these dates to avoid scheduling clashes. 
+ Thecalendarfor the yearshref="http://www.timeanddate.com/calendar/" - 2025
+and2026can help you to plan the conferences. 
+ If you wish the tentative schedule of your conference to be listed here send me an e-mail (change _at_ to @ and _dot_ twice to .) with the following template: 
+ href="mailto:hermann_at_lix_dot_polytechnique_dot_fr?Subject=[conf] New planned conference with tentative schedule&body=Please, include the following conference with the tentative dates into your planning.%0A
+%0A
+%09<tr>%0A
+%09%09<td class="confname"><a href="http://my-url" target="_blank">My Conference</a></td>%0A
+%09%09<td class="year">Planning year</td>%0A
+%09%09<td class="location">My city, My country</td>%0A
+%09%09<td class="starting-date">DD1 MONTH YYYY starting date</td>%0A
+%09%09<td class="ending-date">DD2 MONTH YYYY ending date</td>%0A
+%09%09<td class="remark"></td>%0A
+%09</tr>%0A
+%0A
+Thanks in advance.%0A
+Best regards,%0A
+%0A
+John Doe" - E-mail with a template for a planned conference
+ 
+ Conference | Year | City, Country | Starting date | Ending date | Remark 
+ href="http://www.fields.utoronto.ca/activities/24-25/AofA-2025" - AofA
+Probabilistic, Combinatorial, and Asymptotic Methods in theAnalysisofAlgorithms | 2025 | Toronto, Ontario, Canada | 5 May 2025 | 9 May 2025 | at Fields Institute 
+ FLoCFederated Logic Conference | 2026 | Lisbon, Portugal | 18 July 2026 | 29 July 2026 | summer school 13-17 July 2026; includes CAV, CP, CSF, FSCD, ICLP, IJCAR, ITP, KR, LICS, SAT 
+ Conference | Year | City, Country | Starting date | Ending date | Remark 
+ Instructions for listing your conference here 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+ If you wish your conference to be listed here send me an e-mail (change _at_ to @ and _dot_ twice to .) with one of the following templates: 
+ href="mailto:hermann_at_lix_dot_polytechnique_dot_fr?Subject=[conf] New conference with deadline ahead&body=Please, include the following conference in your list.%0A
+%0A
+%09<tr>%0A
+%09%09<td class="confname"><a href="http://my-url" target="_blank">My Conference</a></td>%0A
+%09%09<td class="location">My city, My country</td>%0A
+%09%09<td class="deadline">DD MONTH YYYY deadline</td>%0A
+%09%09<td class="date">DD1-DD2 MONTH YYYY date</td>%0A
+%09%09<td class="notification">DD MONTH YYYY notification of acceptance</td>%0A
+%09%09<td class="subformat">Submission format</td>%0A
+%09</tr>%0A
+%0A
+Thanks in advance.%0A
+Best regards,%0A
+%0A
+John Doe" - E-mail with a template for a conference with its deadline ahead
+
+E-mail with a template for afuture conference with deadline overThis webpage is updated regularly, at least once a day. Only serious conferences in connection with theoretical computer science will be listed. 
+ Following conferences are included in this list 
+ Home 
+ Deadline ahead 
+ Running conferences 
+ Future conferences (deadline over) 
+ Conference planning 
+ Instructions 
+ Included conferences 
+ Toggle list of included conferences with full namesshowBack to top of Included conferences 
+  
+ AAAI | Artificial Intelligence 
+ AAIM | Algorithmic Aspects in Information and Management 
+ AAMAS | Autonomous Agents and Multiagent Systems 
+ ACDA | Applied and Computational Discrete Algorithms 
+ ADEMAL | Automated Deduction for Machine Learning 
+ ADG | Automated Deduction in Geometry 
+ ADT | Algorithmic Decision Theory 
+ AISC | Australasian Information Security Conference 
+ AIxIA | Italian Association for Artificial Intelligence 
+ ALENEX | Algorithm Engineering and Experiments 
+ ALGO | Federated Conference on Algorithms 
+ ALGOCLOUD | Algorithms for Cloud-Based Systems 
+ ALGOWIN | Algorithmic of Wireless Networks 
+ ALT | Algorithmic Learning Theory 
+ ANALCO | Analytic Algorithmics and Combinatorics 
+ ANTS | Algorithmic Number Theory Symposium 
+ APLAS | Asian Symposium on Programming Languages and Systems 
+ APOCS | Algorithmic Principles of Computer Systems 
+ APPROX | Approximation Algorithms for Combinatorial Optimization Problems 
+ ARQNL | Automated Reasoning in Quantified Non-Classical Logics 
+ ASE | Automated Software Engineering 
+ ASPOCP | Answer Set Programming and Other Computing Paradigms 
+ ATMOS | Algorithmic Approaches for Transportation Modelling, Optimization, and Systems 
+ ATVA | Automated Technology for Verification and Analysis 
+ AUTOMATA | Cellular Automata and Discrete Complex Systems 
+ AiML | Advances in Modal Logic 
+ AlCoB | Algorithms for Computational Biology 
+ AofA | Probabilistic, Combinatorial, and Asymptotic Methods in theAnalysisofAlgorithms 
+ BICOB | Bioinformatics and Computational Biology 
+ BLAST | Boolean Algebras;Lattices, Algebraic Logic and Quantum Logic; UniversalAlgebra;Set Theory; Set-theoretic and Point-freeTopology 
+ CADE | Conference on Automated Deduction 
+ CALCO | Conference on Algebra and Coalgebra in Computer Science 
+ CALDAM | Conference on Algorithms and Discrete Applied Mathematics 
+ CAV | Computer-Aided Verification 
+ CAiSE | Advanced Information Systems Engineering 
+ CCA | Computability & Complexity in Analysis 
+ CCC | Computational Complexity Conference 
+ CCCG | Canadian Conference on Computational Geometry 
+ CCS | Computer and Communication Security 
+ CELT | Connections between Epistemic Logic and Topology 
+ CIAA | Conference on Implementation and Application of Automata 
+ CIAC | International Conference on Algorithms and Complexity 
+ CICM | Conference on Intelligent Computer Mathematics 
+ CILC | Italian Conference on Computational Logic 
+ CLAR | International Conference on Logic and Argumentation 
+ CLAS | Computational Logic Autumn Summit 
+ COCOA | Conference on Combinatorial Optimization and Applications 
+ COCOON | Computing and Combinatorics Conference 
+ COLT | Conference on Learning Theory 
+ CONCUR | Concurrency Theory 
+ CONFEST | CONCUR & QEST & FORMATS 
+ COORDINATION | Coordination Models and Languages 
+ CP | Principles and Practice of Constraint Programming 
+ CPAIOR | Integration of Constraint Programming, Artificial Intelligence, and Operations Research 
+ CPM | Combinatorial Pattern Matching 
+ CPML | Bridge on Constraint Programming and Machine Learning 
+ CPP | Certified Programs and Proofs 
+ CRYPTO | CRYPTO 
+ CSCML | Cyber Security, Cryptology and Machine Learning 
+ CSF | Computer Security Foundations 
+ CSL | Computer Science Logic 
+ CSR | Computer Science Symposium in Russia 
+ CTW | Cologne-Twente Workshop on Graphs and Combinatorial Optimization 
+ CanaDAM | Canadian Discrete and Algorithmic Mathematics Conference 
+ CiE | Computability in Europe 
+ CooPMAS | Cooperative Games and Multiagent Systems 
+ DAIS | Distributed Applications and Interoperable Systems 
+ DCC | Data Compression Conference 
+ DCFS | Descriptional Complexity of Formal Systems 
+ DCM | Developments in Computational Models 
+ DEBS | Distributed and Event-Based Systems 
+ DEON | Deontic Logic and Normative Systems 
+ DISC | Distributed Computing 
+ DL | Description Logics 
+ DLT | Developments in Language Theory 
+ DSAA | Data Science and Advanced Analytics 
+ DaLí | Dynamic Logic: new trends and applications 
+ Datalog 2.0 | Datalog 2.0 
+ DisCoTec | Distributed Computing Techniques 
+ EC | Economics and Computation 
+ ECAI | European Conference on Artificial Intelligence 
+ ECCO | European Chapter on Combinatorial Optimization 
+ ECMFA | European Conference on Modelling Foundations and Applications 
+ ECSQARU | European Conference on Symbolic and Quantitative Approaches to Reasoning with Uncertainty 
+ EDBT | Extending Database Technology 
+ EISA | Emerging Information Security and Applications 
+ EMAS | Engineering Multi-Agent Systems 
+ EML | Evolutionary Machine Learning 
+ EPIA | Portuguese Conference on Artificial Intelligence 
+ ESA | European Symposium on Algorithms 
+ ESOP | European Symposium on Programming 
+ ESORICS | European Symposium on Research in Computer Security 
+ ETAPS | European Joint Conferences on Theory & Practice of Software 
+ EUMAS | European Conference on Multi-Agent Systems 
+ EURO | EURO 
+ EUROCRYPT | Theory and Applications of Cryptographic Techniques 
+ EXTRAAMAS | EXplainable, Trustworthy, and Responsible AI and Multi-Agent Systems 
+ Euro-Par | European Conference on Parallel and Distributed Computing 
+ EuroCG | European Workshop on Computational Geometry 
+ EuroGP | European Conference on Genetic Programming 
+ Eurocomb | European Conference on Combinatorics, Graph Theory and Applications 
+ EvoAPPS | Applications of Evolutionary Computation 
+ EvoCOP | Evolutionary Computation in Combinatorial Optimisation 
+ EvoMUSART | Artificial Intelligence in Music, Sound, Art and Design 
+ EvoStar | Evo* 
+ FACS | Formal Aspects of Component Software 
+ FASE | Fundamental Approaches to Software Engineering 
+ FCDS | Financial Cryptography and Data Security 
+ FCRC | Federated Computing Research Conference 
+ FCT | Fundamentals of Computation Theory 
+ FLAIRS | FLorida Artificial Intelligence Research Society Conference 
+ FLOPS | Functional and Logic Programming 
+ FLoC | Federated Logic Conference 
+ FM | Formal Methods 
+ FMCAD | Formal Methods in Computer-Aided Design 
+ FMICS | Formal Methods for Industrial Critical Systems 
+ FOCS | Foundations of Computer Science 
+ FOIS | Formal Ontology in Information Systems 
+ FORMATS | Formal Modeling and Analysis of Timed Systems 
+ FORTE | Formal Techniques for Distributed Objects, Components, and Systems 
+ FROM | Working Formal Methods Symposium 
+ FSCD | Formal Structures for Computation and Deduction 
+ FSTTCS | Foundations of Software Technology and Theoretical Computer Science 
+ FTSCS | Formal Techniques for Safety-Critical Systems 
+ FUN | Fun With Algorithms 
+ FedCSIS | Federated Conference on Computer Science and Information Systems 
+ FoIKS | Foundations of Information and Knowledge Systems 
+ FoSSaCS | Foundations of Software Science and Computation Structures 
+ FroCoS | Frontiers of Combining Systems 
+ GD | Graph Drawing 
+ GECCO | Genetic and Evolutionary Computation Conference 
+ GETCO | Geometric and Topological Methods in Computer Science 
+ GandALF | Games, Automata, Logics, and Formal Verification 
+ HALG | Highlights of Algorithms 
+ HCVS | Horn Clauses for Verification and Synthesis 
+ HOR | Higher-Order Rewriting 
+ ICALP | International Colloquium on Automata, Languages and Programming 
+ ICAPS | International Conference on Automated Planning and Scheduling 
+ ICCS | International Conference on Conceptual Structures 
+ ICDCN | International Conference on Distributed Computing and Networking 
+ ICDCS | International Conference on Distributed Computing Systems 
+ ICDT | International Conference on Database Theory 
+ ICFCA | International Conference on Formal Concept Analysis 
+ ICFP | International Conference on Functional Programming 
+ ICGT | International Conference on Graph Transformation 
+ ICGraThe | International Conference on Graph Theory 
+ ICICS | International Conference on Information and Communications Security 
+ ICLA | Indian Conference on Logic and its Applications 
+ ICLP | International Conference on Logic Programming 
+ ICML | International Conference on Machine Learning 
+ ICTAC | International Colloquium on Theoretical Aspects of Computing 
+ ICTAI | International Conference on Tools with Artificial Intelligence 
+ ICTCS | Italian Conference on Theoretical Computer Science 
+ IDA | Intelligent Data Analysis 
+ IJCAI | International Joint Conference on Artificial Intelligence 
+ IJCAR | International Joint Conference on Automated Reasoning 
+ IJCKG | International Joint Conference on Knowledge Graphs 
+ ILP | Inductive Logic Programming 
+ IOTSMS | Internet of Things: Systems, Management and Security 
+ IPCO | Integer Programming and Combinatorial Optimization 
+ IPDPS | International Parallel & Distributed Processing Symposium 
+ IPEC | International Symposium on Parameterized and Exact Computation 
+ ISAAC | International Symposium on Algorithms and Computation 
+ ISCO | International Symposium on Combinatorial Optimization 
+ ISPDC | International Symposium on Parallel and Distributed Computing 
+ ISPEC | Information Security Practice and Experience 
+ ISSAC | International Symposium on Symbolic and Algebraic Computation 
+ ITCS | Innovations in Theoretical Computer Science 
+ ITP | Interactive Theorem Proving 
+ IWC | International Workshop on Confluence 
+ IWIL | International Workshop on the Implementation of Logics 
+ IWOCA | International Workshop on Combinatorial Algorithms 
+ JAF | Journées sur les Arithmétiques Faibles 
+ JELIA | European Conference on Logics in Artificial Intelligence 
+ K-CAP | International Conference on Knowledge Capture 
+ KDD | Knowledge Discovery and Data Mining 
+ KI | German Conference on Artificial Intelligence 
+ KR | Principles of Knowledge Representation and Reasoning 
+ LAGOS | Latin-American Algorithms, Graphs and Optimization Symposium 
+ LAP | Logic and Applications 
+ LATA | Language and Automata Theory and Applications 
+ LATIN | Latin American Theoretical Informatics Symposium 
+ LFMTP | Logical Frameworks and Meta Languages: Theory and Practice 
+ LICS | Logic in Computer Science 
+ LOD | MachineLearning,Optimization,Data Science 
+ LOFT | Logic and the Foundations of Game and Decision Theory 
+ LOPSTR | Logic-Based Program Synthesis and Transformation 
+ LORI | Logic, Rationality and Interaction 
+ LPAR | Logic for Programming, Artificial Intelligence and Reasoning 
+ LPNMR | Logic Programming and Non-Monotonic Reasoning 
+ LSFA | Logical and Semantic Frameworks with Applications 
+ LearnAut | Learning and Automata 
+ MATCH-UP | Matching Under Preferences 
+ MFCS | Mathematical Foundations of Computer Science 
+ MFPS | Mathematical Foundations of Programming Semantics 
+ MIWAI | Multi-Disciplinary International Conference on Artificial Intelligence 
+ MLCS | Machine Learning for Cybersecurity 
+ MLN | Machine Learning for Networking 
+ MPC | Mathematics of Program Construction 
+ NCL | Non-Classical Logics 
+ NFM | NASA Formal Methods 
+ NMR | Non-Monotonic Reasoning 
+ OLA | Optimization and Learning 
+ OPODIS | On Principles of Distributed Systems 
+ PAAR | Practical Aspects of Automated Reasoning 
+ PACT | Parallel Architectures and Compilation Techniques 
+ PADL | Practical Aspects of Declarative Languages 
+ PATAT | Practice and Theory of Automated Timetabling 
+ PC | Proof Complexity 
+ PKC | Public Key Cryptography 
+ PLP | Probabilistic Logic Programming 
+ PODC | Principles of Distributed Computing 
+ PODS | Principles of Database Systems 
+ POPL | Principles of Programming Languages 
+ PPDP | Principles and Practice of Declarative Programming 
+ PRICAI | Pacific Rim International Conference on Artificial Intelligence 
+ PRIMA | Principles and Practice of Multi-Agent Systems 
+ PST | Privacy, Security & Trust 
+ PaCT | Parallel Architectures and Compilation Techniques 
+ PetriNets | Petri Nets 
+ PoS | Pragmatics of SAT 
+ QBF | Quantified Boolean Formulas and Beyond 
+ QEST | Quantitative Evaluation of SysTems 
+ QUANTIFY | Workshop on Quantification 
+ RAMiCS | Relational and Algebraic Methods in Computer Science 
+ RANDOM | Randomization and Computation 
+ RECOMB | Research in Computational Molecular Biology 
+ RP | Reachability Problems 
+ ReacTS | Reconfigurable Transition Systems 
+ RuleML+RR | International Joint Conference on Rules and Reasoning 
+ SAC | Symposium On Applied Computing 
+ SAFECOMP | Computer Safety, Reliability and Security 
+ SAGT | Symposium on Algorithmic Game Theory 
+ SAND | Algorithmic Foundations of Dynamic Networks 
+ SAS | Static Analysis Symposium 
+ SAT | Theory and Applications of Satisfiability Testing 
+ SC2 | Satisfiability Checking and Symbolic Computation 
+ SCAI | Scandinavian Conference on AI 
+ SCN | Security and Cryptography for Networks 
+ SCSS | Symbolic Computation in Software Science 
+ SDM | Data Mining 
+ SEA | Symposium on Experimental Algorithms 
+ SEFM | Software Engineering and Formal Methods 
+ SEMANTICS | Semantic Systems 
+ SIGMOD | International Conference on Management of Data 
+ SIROCCO | Structural Information and Communication Complexity 
+ SISAP | Similarity Search and Applications 
+ SLSS | Scandinavian Logic Symposium 
+ SODA | Symposium on Discrete Algorithms 
+ SOFSEM | Current Trends in Theory and Practice of Computer Science 
+ SOSA | Symposium on Simplicity in Algorithms 
+ SPAA | Symposium on Parallelism in Algorithms and Architectures 
+ SPIN | International Symposium on Model Checking Software 
+ SPIRE | String Processing and Information Retrieval 
+ SPLASH | Systems, Programming, Languages, and Applications: Software for Humanity 
+ STACS | Symposium on Theoretical Aspects of Computer Science 
+ STAF | Software Technologies: Applications and Foundations 
+ STOC | Symposium on Theory of Computing 
+ SWAT | Scandinavian Symposium and Workshops on Algorithm Theory 
+ SYNASC | Symbolic and Numeric Algorithms for Scientific Computing 
+ SmartData | Smart Data 
+ SoCG | Symposium on Computational Geometry 
+ SoCS | Symposium on Combinatorial Search 
+ TABLEAUX | Automated Reasoning with Analytic Tableaux and Related Methods 
+ TACAS | Tools and Algorithms for the Construction and Analysis of Systems 
+ TACL | Topology, Algebra, and Categories in Logic 
+ TAMC | Theory and Applications of Models of Computation 
+ TAP | Tests and Proofs 
+ TASE | Theoretical Aspects of Software Engineering 
+ TERMGRAPH | Computing with Terms and Graphs 
+ TIME | Temporal Representation and Reasoning 
+ TPNC | Theory and Practice of Natural Computing 
+ TYPES | Types for Proofs and Programs 
+ TbiLLC | Tbilisi Symposium on Logic, Language and Computation 
+ ThEdu | Theorem proving components for Educational software 
+ UNIF | Workshop on Unification 
+ VMCAI | Verification, Model Checking, and Abstract Interpretation 
+ VSTTE | Verified Software: Theories, Tools, and Experiments 
+ WABCT | Workshop on Algorithms, Bioinformatics, and Computation Theory 
+ WABI | Workshop on Algorithms in Bioinformatics 
+ WADS | Algorithms and Data Structures 
+ WADT | Workshop on Algebraic Development Techniques 
+ WAIT | Workshop on Automated (Co)Inductive Theorem Proving 
+ WALCOM | International Conference and Workshops on Algorithms and Computation 
+ WAOA | Workshop on Approximation and Online Algorithms 
+ WFLP | Workshop on Functional and Logic Programming 
+ WG | Graph-Theoretic Concepts in Computer Science 
+ WINE | Web and Internet Economics 
+ WISE | Web Information Systems Engineering 
+ WORDS | Combinatorics on Words 
+ WPTE | Workshop on Rewriting Techniques for Program Transformations and Evaluation 
+ WRLA | Workshop on Rewriting Logic and its Applications 
+ WST | Workshop on Termination 
+ WTSC | Workshop on Trusted Smart Contracts 
+ WoLLIC | Workshop on Logic, Language, Information and Computation 
+ iFM | Integrated Formal Methods 
+ iPRA | Interpolation: From Proofs to Applications 
+ onto4FAIR | Ontologies for FAIR and FAIR Ontologies 
+ If you are an organizer of one of these conferences and you do not see that conference listed here. please send me a messsage using the aforementioned instructions. 
+ © Miki Hermann (LIX, Ecole Polytechnique), 2015-2025 
+ Last modified: Sat, 05 Apr 2025 07:54:02 CEST
+
+2. Website of LATIN_2: https://www.latintcs.org/
+Website information of LATIN_2:
+
+_____ 
+ ____ __ 
+ ______ _______ 
+ ____________________ 
+ _______________ 
+ _________________ 
+ ________________ 
+ ______________ 
+ ____________ 
+ __________ 
+ ________ 
+ _______ 
+ _____ 
+ _____ 
+ ___ 
+ ___ 
+ ___LATIN Symposium Website 
+ (Latin American Theoretical INformatics Symposium) 
+
+Home 
+ href="auth/index.html" - Author index
+Steering Committee 
+ Bylaws 
+ Imre Simon Award 
+ Alejandro López-Ortiz Award 
+
+Chairs 
+ » | PC 
+ » | Organizers 
+ » | Invited 
+ Speakers 
+ » | href="loct/index.html" - Location& CFP» | Proceedings 
+ » | href="papr/index.html" - Papers» | BibTeX | Sponsors 
+ » | Photos 
+ » | Stats 
+ » 
+ 2024 | » | » | » | » | » | » | » | » | » | » 
+ 2022 | » | » | » | » | » | » | » | » | » | » 
+ 2020 | » | » | » | » | » | » | » | » | » | » 
+ 2018 | » | » | » | » | » | » | » | » | » | » 
+ 2016 | » | » | » | » | » | » | » | » | » | » 
+ 2014 | » | » | » | » | » | » | » | » | » | » 
+ 2012 | » | » | » | » | » | » | » | » | » | » 
+ 2010 | » | » | » | » | » | » | » | » | » | » 
+ 2008 | » | » | » | » | » | » | » | » | » | » 
+ 2006 | » | » | » | » | » | » | » | » | » | » 
+ 2004 | » | » | » | » | » | » | » | » | » | » 
+ 2002 | » | » | » | » | » | » | » | » | » | » | » 
+ 2000 | » | » | » | » | » | » | » | » | » | » | » 
+ 1998 | » | » | » | » | » | » | » | » | » | » 
+ 1995 | » | » | » | » | » | » | » | » | » | » 
+ 1992 | » | » | » | » | » | » | » | » | » | » 
+ Site last modified — Thu Feb 20 07:53:17 2025 -0500
+
+3. Website of LATIN_2: https://dwest.web.illinois.edu/meetlist.html
+Website information of LATIN_2:
+
+Links to Combinatorial Conferences 
+ For posting of upcoming conferences to this list, send email to Douglas B. West atdwest|at|illinois.edu. Other conference lists:Combinatorics and related conferences(maintained by Keith Edwards);Graph Theory and Combinatorics(at the Conference Management System); Janos Pach'sConference ListOther links:Conference Series Archives,Open problems pages.Conferences in 2025 
+ Dec 9-12, Universidad Adolfo Ibáñez, Viña del Mar, Chile. | href="https://mixedinteger.org/MIPSouthAmerica/2025/" - Mixed Integer Programming Workshop South America 2025 
+ Dec 1-5, Victoria University of Wellington, Wellington, New Zealand, | 47th Australasian Combinatorics Conference (47ACC) 
+ Nov 10-14, Universidad de Buenos Aires, Buenos Aires, Argentina, | href="https://lagos.mat.br/lagos2025/" - XIII Latin American Algorithms,
+Graphs, and Optimization Symposium (LAGOS 2025) 
+ Oct 1 - Nov 28, Centre de Recerca Matemàtica (CRM), Barcelona, Spain, | Combinatorial Geometries and Geometric Combinatorics | (intensive research program: research school, projects, seminars, conference) 
+ Oct 28-31, Gramado, Rio Grande do Sul, Brazil, | href="http://www.mat.ufrgs.br/workshop_sgt2025/" - Workshop on Spectral Graph Theory 2025 
+ Sep 24-26, Norrköping, Sweden, | href="https://graphdrawing.github.io/gd2025/" - 33rd International Symposium on Graph Drawing and Network Visualization (GD
+2025) 
+ Sep 21-26, Szczawnica, Pieniny Mountains, Poland, | 10th Cracow Conference on Graph Theory 
+ Sep 15-19, TU Freiberg, Germany. | href="https://j-carmesin.github.io/summerschool25/" - Ukrainian Summer school in Combinatorics 2025 
+ Sep 8-11, City University of London, London, UK, | href="https://sites.google.com/view/spire-2025/home" - 32nd International Symposium on String Processing and Information Retrieval
+(SPIRE 2025) 
+ Sep 7-13, Poertschach, Austria, | href="https://sfbrandom.univie.ac.at/events/sfb-summer-school-2025/" - Summer school "Discrete Random Structures" (DRS 2025) 
+ Sep 7-13, University of Primorska, Koper, Slovenia, | 12th PhD Summer School in Discrete Mathematics 
+ Sep 2-5, University of Bath in Bath, U.K, | 18th International Symposium on Algorithmic Game Theory (SAGT) 
+ Sep 1-2, Nottingham Trent University, Nottingham, UK, | href="https://worsch25.github.io/" - Workshop on Random Simplicial Complexes and Hypergraphs (WoRSCH 2025) 
+ Aug 31 - Sep 5, Starý Smokovec, High Tatras, Slovakia, | href="https://candc.upjs.sk/" - 33rd Cycles and Colourings Workshop (C&C 2025) 
+ Aug 25-29, Budapest, Hungary, | European Conference on Combinatorics, Graph Theory and Applications (Eurocomb '25) 
+ Aug 25-27, hosted in Haifa, Israel, | href="http://ecajournal.haifa.ac.il/Conference/ICECA2025.html" - 4th International Conference on Enumerative Combinatorics and Applications
+(ICECA 2025) | (VIRTUAL) 
+ Aug 15-17, Chengdu, China, | href="https://tcsuestc.com/cocoon2025/index.html" - 31st International Computing and Combinatorics Conference (COCOON 2025) 
+ Aug 12-15, University of Glasgow, Glasgow, Scotland, United Kingdom, | href="https://socs25.search-conference.org/" - 18th International Symposium on Combinatorial Search (SoCS 2025) 
+ Aug 5-6, Bahçeşehir University, Istanbul, Turkey. | href="https://cg-istanbul.github.io/cgi2025/" - Combinatorics and Geometry in Istanbul (CGI 2025) 
+ Aug 4-8, TU Wien, Vienna, Austria, | href="https://dmg.tuwien.ac.at/rsa2025/" - 22nd International Conference on
+RANDOM STRUCTURES & ALGORITHMS (RS&A 2025) 
+ Aug 4-6, RWTH Aachen University, Aachen, Germany, | href="https://frico.rwth-aachen.de" - 28th Workshop on Future Research in Combinatorial Optimization (FRICO) 
+ Jul 30 - Aug 1, Montréal, Québec, Canada, | SIAM Conference on Applied and Computational Discrete Algorithms (ACDA25) 
+ Jul 21-25, Hokkaido University, Sapporo, Japan, | href="https://www.math.sci.hokudai.ac.jp/sympo/fpsac2025/" - 37th International Conference on Formal Power Series and Algebraic Combinatorics (FPSAC 2025) 
+ Jul 21-24, Montana State University, Bozeman, MT, | href="https://www.cs.montana.edu/bhz/iwoca2025/" - 36th International Workshop on Combinatorial Algorithms (IWOCA 2025) 
+ Jul 14-18, University of Queensland, St. Lucia (Brisbane), Australia, | Algebraic Combinatorics, Special Functions, and Representation Theory | (celebrating Ole Warnaar's 60th birthday) 
+ Jul 7-11, University of St. Andrews, St. Andrews (Scotland), United Kingdom, | href="https://sites.cs.st-andrews.ac.uk/pp25/" - Permutation Patterns 2025 
+ Jul 1-3, University of Clermont Auvergne, Clermont-Ferrand, France, | href="https://www.mixedinteger.org/EUROMIP/2025" - 2025 Mixed Integer Programming (MIP) European Workshop 
+ Jun 30 - Jul 4, LORIA, Nancy, France, | href="https://words2025.loria.fr/en/" - WORDS 2025 
+ Jun 30 - Jul 3, Universidad de Catabria, Santander, Spain, | href="https://egc2025.unican.es/" - XXI Spanish Meeting on Computational Geometry 
+ Jun 30 - Jul 3, Vilnius University, Vilnius, Lithuania, | href="https://math.torontomu.ca/waw2025/" - 20th Workshop on Modelling and Mining Networks (WAW 2025) 
+ Jun 23-28, Kranjska Gora, Slovenia, | Combinatorics around theq-Onsager Algebra (celebrating the 70th birthday of Paul Terwilliger) 
+ Jun 23-27, Rzeszów University of Technology, Rzeszów, Poland, | Rzeszów Workshop on Graph Theory 
+ Jun 23-27, Eötvös Loránd University, Budapest, Hungary, | Summer School on Algorithms 
+ Jun 23-27, Kanazawa, Japan, | href="https://socg25.github.io/socg.html" - 41st International Symposium on Computational Geometry (SoCG 2025) 
+ Jun 22-25, University of Leeds, Leeds, UK, | href="https://euro2025leeds.uk/" - 34th European Conference on Operational Research (EURO 2025) 
+ Jun 17-19, Milan, Italy, | href="https://cpm2025.pangenome.eu/" - 36th Annual Symposium on Combinatorial Pattern Matching (CPM 2025) 
+ Jun 16-18, Reykjavik, Iceland, | href="https://norcom2025.github.io/" - 15th Nordic Combinatorial Conference (NORCOM 2025) 
+ Jun 15-27, University of Vermont, Burlington, VT, | href="https://www.combinatoricsworkshop.org/workshop-locations/2025-burlington-vt" - Graduate Research Workshop in Combinatorics (GRWC 2025) 
+ Jun 11-13, Europäische Akademie Otzenhausen, Otzenhausen, Germany, | href="https://algo.uni-trier.de/wg2025/" - 51st International Workshop on Graph-Theoretic Concepts in Computer Science
+(WG2025) 
+ Jun 11-13, Johns Hopkins University, Baltimore, MD, | href="https://ipco25.cs.jhu.edu/" - 26th Conference on Integer Programming and Combinatorial Optimization
+(IPCO 2025) 
+ Jun 10-12, LUISS University, Rome, Italy, | href="https://easyconferences.eu/ciac2025/" - 14th International Symposium on Algorithms and Complexity (CIAC 2025) 
+ Jun 7-10, Cochin University of Science and Technology, Cochin, India, | href="https://sites.google.com/view/admaicdm2025/home" - Twenty First Annual Conference of the Academy of Discrete Mathematics and Its
+Applications (ADMA) and International Conference on Discrete Mathematics (ICDM)
+(ADMA-ICDM 2025) | (brochure here) 
+ Jun 4-6, ETH Zurich, Zurich, Switzerland, | href="https://kyng.inf.ethz.ch/halg2025/" - 10th IGAFIT Highlights of Algorithms conference (HALG 2025) 
+ Jun 3-6, University of Minnesota, Minneapolis, MN, | href="https://www.mixedinteger.org/2025/" - 22nd Mixed Integer Programming Workshop (MIP 2025) 
+ Jun 2-5, Georgia Tech, Atlanta, GA, | Summer School on Linear Program Solvers 
+ Jun 1-6, Kalamata, Greece, | 5th Pythagorean Conference 
+ May 31 - Jun 1, City University of Hong Kong, Hong Kong, China, | href="http://www.aa-ac.org/" - 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC
+2025) 
+ May 29-30, hosted by University of Waterloo, Waterloo, Canada, | 6th Algebraic Combinatorics Virtual Expedition (AlCoVE) | (VIRTUAL, via Zoom and gather.town) 
+ May 28-29, Shahid Rajaee Teacher Training University, Tehran, Iran, | 13th Graph Theory and Algebraic Combinatorics Conference (13GTACC) 
+ May 27-31, Iowa State University, Ames, IA, | Summer School on Topological Methods in Combinatorics 
+ May 26-30, Seville, Spain, | href="https://gestioneventos.us.es/hadamard2025" - 8th Workshop on Design Theory, Hadamard Matrices and Applications
+(Hadamard-2025) 
+ May 20-23, Ottawa, Ontario, Canada, | href="http://www.canadam.ca" - Canadian Discrete and Algorithmic Mathematics Conference (CanaDAM 2025) 
+ May 17-18, Auburn University, Auburn, AL, | 34th Cumberland Conference on Combinatorics, Graph Theory, and Computing 
+ May 14-17, University of Georgia, Athens, GA, | href="https://sites.google.com/view/integersconference2025" - Integers Conference 2025 | (honoring the 80th birthdays of Melvyn Nathanson and Carl Pomerance 
+ May 8-10, Marrakech, Morocco, | href="https://ecco2025.sciencesconf.org/" - 38th Conference of the European Chapter on Combinatorial Optimization
+(ECCO'2025) 
+ May 5-9, International Center for Theoretical Physics, Trieste, Italy, | Conference on Mixing times between Probability, Computer Science and Statistical Physics 
+ Apr 30 - May 2, Birmingham, UK, | href="https://ima.org.uk/24367/5th-ima-and-or-society-conference-on-mathematics-of-operational-research/" - 5th IMA-ORS Conference on the Mathematics of Operational Research 
+ Apr 28-29, University of Glasgow, Glasgow, UK, | href="https://www.dcs.gla.ac.uk/~kitty/scm/" - 2025 Scottish Combinatorics Meeting | (followed by | href="https://sites.google.com/view/pcc2025/home" - Postgraduate Combinatorics Conference (PCC 2025) | Apr 30 to May 2) 
+ Apr 25, hosted by Novosibirsk State University, Novosibirsk, Russia, | href="https://mca.nsu.ru/domination-theory/spring2025/" - 4th workshop on
+Domination Theory and its Applications | (VIRTUAL on Zoom) 
+ Apr 23-25, Trieste, Italy, | href="https://www.evostar.org/2025/evocop/" - 25th European Conference on Evolutionary Computation in Combinatorial
+Optimisation (EvoCOP 2025) 
+ Apr 21-25, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Detection, Estimation, and Reconstruction in Networks 
+ Apr 19, North Carolina State University, Raleigh, NC, | 26th Triangle Lectures in Combinatorics 
+ Apr 9-11, Liblice, Czech Republic, | href="https://kam.mff.cuni.cz/conferences/eurocg2025/" - 41st European Workshop on Computational Geometry (EuroCG 2025) 
+ Apr 7-9, University of Groningen, Netherlands, | href="https://sites.google.com/rug.nl/words2025/home" - Workshop On Randomness and Discrete Structures (WORDS 2025) 
+ Apr 5-6, University of Illinois, Chicago, IL, | href="https://marcusmichelen.org/LakeMichiganWorkshop2025.php" - 10th Lake Michigan Workshop on Combinatorics and Graph Theory 
+ Mar 29-30, hosted by Ahmedabad University, Ahmedabad, India, | href="https://sites.google.com/ahduni.edu.in/contact-iv/home" - COmbinatorial Number Theory And Connected Topics (CONTACT-IV) | (VIRTUAL) 
+ Mar 25-26, TU Delft, Delft, Netherlands, | href="https://sites.google.com/view/ddoc2025/" - Dutch Days of Combinatorics (DDoC 2025) 
+ Mar 17-21, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Algebraic and Analytic Methods in Combinatorics 
+ Mar 17-18, Magdalene College, Cambridge, United Kingdom, | href="https://gamenets.eai-conferences.org/2025/" - 13th EAI International Conference on Game Theory for Networks
+(GameNets 2025) 
+ Mar 10-14, IMPA, Rio de Janeiro, Brazil, | href="https://impa.br/en_US/eventos-do-impa/2025-2/ii-escola-brasileira-de-combinatoria/" - 2nd EBC - Brazilian School of Combinatorics 
+ Mar 6-7, Tilburg University, Tilburg, Netherlands, | 15th Day on Computational Game Theory (CGT) 
+ Mar 3-7, Florida Atlantic University, Boca Raton, FL, | 56th Southeastern International Conference on Combinatorics, Graph Theory, and Computing 
+ Feb 28 - Mar 2, Chengdu, China, | href="https://tcsuestc.com/walcom2025/" - 19th International Conference and Workshops on Algorithms and Computation
+(WALCOM 2025) 
+ Feb 24 - Mar 7, Indian Institute of Technology, Dharwad, India, | short course "Sparse graphs: treewidth, planarity, bounded expansion" 
+ Feb 24-28, University of Osnabrück, Osnabrück, Germany, | href="https://www.math-conf.uni-osnabrueck.de/winter-school-and-workshop-on-polytopes-2025/" - Winter School and Workshop on Polytopes 2025 
+ Feb 13-15, PSG College of Technology, Coimbatore, India, | href="https://caldam2025.psgtech.ac.in/" - 11th Annual International Conference on Algorithms and Discrete Applied
+Mathematics (CALDAM 2025) 
+ Feb 10-14, IPAM, UCLA, Los Angeles, CA, | href="https://www.ipam.ucla.edu/programs/workshops/computational-interactions-between-algebra-combinatorics-and-discrete-geometry/" - Computational Interactions between Algebra, Combinatorics, and Discrete
+Geometry (ACD2025) 
+ Feb 10-14, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Introductory Workshop: Graph Theory: Extremal, Probabilistic, and Structural 
+ Feb 6-7, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Connections Workshop: Extremal Combinatorics 
+ Feb 6-7, City, University of London, UK, | Sequences in London 
+ Feb 5, King's College, London, UK | 29th London Stringology Days & London Algorithmic Workshop (LSD & LAW) for Costas | (celebrating Costas Iliopoulos) 
+ Jan 27-31, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Introductory Workshop: Probability and Statistics of Discrete Structures 
+ Jan 23-24, Simons Laufer Mathematical Sciences Institute, Berkeley, CA, | Connections Workshop: Probability and Statistics of Discrete Structures 
+ Jan 12-15, New Orleans, LA, | ACM-SIAM Symposium on Discrete Algorithms (SODA25) 
+ Jan 8-10, Kolkata, India, | href="https://icaa2025.framer.website/" - International Conference on Applied Algorithms (ICAA) 
+ Jan 6-10, University of Chile, Viña del Mar, Chile | href="https://eventos.cmm.uchile.cl/discretas2025/" - XX Summer School in Discrete Mathematics 
+ Jan 6-10, Institute for Basic Science, Seoul, Korea, | href="https://www.ibs.re.kr/ecopro/winter-2025/" - Recent developments in probabilistic combinatorics: New synergies | (Winter School, streamed over Zoom) 
+ Archive 
+ This archive contains the pointers as they were when active. Pages for old conferences are likely to have expired, but the listing of dates and locations, etc., may be of use for historical purposes.Conferences in2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000-1997.Conference Series Archives 
+ Archive sites for conference series provide a valuable record. Links for several appear below. These also may have expired for conference series that are now defunct. Archives may include such things as lists of talks participants, and abstracts; even sometimes photos. If anyone knows of archive sites for other conference series in discrete mathematics, please let me know (send information todwest(at)illinois(dot)edu). There are many other conference series that would benefit from having archive sites; any volunteers?ACCOTA (Combinatorial and Computational Aspects of Optimization, Topology and Algebra) 
+ ACCMCC (Australasian Conferences in Combinatorial Mathematics and Combinatorial Computing) 
+ BADMath (Bay Area Discrete Mathematics Days) 
+ BCC (British Combinatorial Conferences) | (maintained by Keith Edwards) 
+ C&C (Workshop on Cycles & Colourings - High Tatras) 
+ CIG (Computational Intelligence and Games 
+ Clemson Mini-Conference on Discrete Mathematics and Algorithms 
+ COCOON (Combinatorics and Computing) | (maintained by Michael Ley) 
+ Cascadia Combinatorial Feast | (formerly Combinatorial Potlatch; Puget Sound area) 
+ href="https://www.mathstat.dal.ca/~faridi/research/inverse_systems/workshop.html" - CAAC (Combinatorial Algebra meets Algebraic Combinatorics) 
+ CoNE - Combinatorists of New England | (series ended after 45 meetings - archive by Ruth Haas) 
+ CombinaTexas | (maintained by Catherine Yan) 
+ DIMACS Reconnect Conferences 
+ DIMACS Special Years | , | all DIMACS Workshops 
+ Discrete Mathematics in New England | (maintained by Karen Collins) 
+ Discrete Mathematics Days in the Northeast | (maintained by Karen Collins) 
+ FPSAC (Formal Power Series and Algebraic Combinatorics) 
+ GD (Graph Drawing) | (maintained by Roberto Tamassia) 
+ International Conference on Permutation Patterns 
+ IWOCA (International Workshop on Combinatorial Algorithms) 
+ href="https://www.cos.ufrj.br/~celina/lagos/" - LAGOS (Latin and American Algorithms, Graphs and Optimization Symposium 
+ href="http://www.latintcs.org" - LATIN (Latin American Theoretical INformatics 
+ href="https://www.lawcg.mat.br/" - LAWCG (Latin American Workshop on Cliques in Graphs) 
+ MCCCC (Midwest Conference on Combinatorics, Cryptography and Computing) | (maintained by Ralucca Gera) 
+ MIGHTY (MIdwest GrapH TheorY) | (maintained by Jay Bagga) 
+ MOPTA (McMaster Optimization Conference) 
+ MSRI Workshops | (Mathematical Sciences Research Institute 
+ href="http://www.cbmsweb.org/NSF/index.htm" - NSF-CBMS Regional Research Conferences | (Conference Board of the Mathematical Sciences) 
+ Nordic Combinatorial Conference (NORCOM) 
+ One World Combinatorics on Words Seminar 
+ Séminaire Lotharingien de Combinatoire | (maintained by Christian Krattenthaler) 
+ SIAM Discrete Mathematics | , | SIAM Discrete Algorithms 
+ WADS (Workshop on Algorithms and Data Structures) 
+ WG (International Workshop on Graph-Theoretic Concepts in Computer Science)
+

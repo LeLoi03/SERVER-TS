@@ -1,0 +1,21 @@
+{
+  "Conference dates": "September 17 - 19, 2025",
+  "Year": "2025",
+  "Location": "Limassol, Cyprus",
+  "City-State-Province": "Limassol",
+  "Country": "Cyprus",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission of Papers": "May 19, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "June 30, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready and author registration": "July 14, 2025"
+  },
+  "Topics": "Software Testing, Systems Testing, Software Quality, Large Language Models, Machine Learning Systems, Quantum Systems, Test Derivation, Test Selection, Test Generation, Test Coverage, Test Concretization, Test Implementation, Test Execution, Test Result Analysis, Test Oracle, Verdict Computation, Test Management, Active Testing, Passive Testing, Monitoring, Runtime Verification, Formalisms, Automata, State Machines, Process Algebra, Logics, Markov Chains, Testing Frameworks, Compositionality, Refinement, Soundness, Completeness, Model-Based Testing, UML, MATLAB, Simulink, Modelica, Test Generation from Models, Model-Based Oracles, Scalability, Traceability, Quantification, Automated Testing, Test-Driven Development, Metrics, Measurements, Functional Testing, Interoperability Testing, Unit Testing, Integration Testing, Performance Testing, Load Testing, Conformance Testing, Non-Regression Testing, Reliability Testing, Robustness Testing, Security Testing, Continuous Security Assessment, Security Monitoring, Security Review, Penetration Testing, Certification Compliance, Cyber-Physical Systems, Systems of Systems, Embedded Systems, Web Services Systems, Smart Grids, Cloud Computing Systems, Business Information Systems, Real-Time Systems, Distributed Systems, Concurrent Systems, Case Studies, Industrial Applications",
+  "Summary": "The 37th International Conference on Testing Software and Systems (ICTSS 2025) will be held in Limassol, Cyprus, from September 17-19, 2025, co-located with ECSA 2025.  ICTSS is a well-established conference where researchers, developers, testers, and users from academia and industry get together to present and discuss the most recent innovations, experiences, and open challenges related to testing software and systems and measuring software quality.",
+  "Call for Papers": "# ICTSS 2025: Call for Papers\n\nThe 37th International Conference on Testing Software and Systems (ICTSS 2025) will be held in **Limassol, Cyprus, from September 17-19, 2025**, co-located with ECSA 2025.\n\nIFIP-ICTSS is a well-established conference where researchers, developers, testers, and users from academia and industry get together to present and discuss the most recent innovations, experiences, and open challenges related to testing software and systems and measuring software quality.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   AI for Software Testing and Testing of AI\n*   Aspects of testing\n*   Testing new technologies\n*   Diversity on testing\n*   Theoretical approaches\n*   Modeling languages\n*   Testing of quality aspects\n*   Security Testing\n*   Testing emerging technologies\n*   Human Aspects of Testing\n*   Cross domains and combination of techniques\n*   Application aspects and case studies\n\n## Call for Papers\n\nIFIP-ICTSS invites:\n\n*   Full papers\n*   Industry papers\n*   Short papers or work-in-progress papers\n*   Journal-First\n\n## Submission Link\n\n[https://easychair.org/conferences/?conf=ictss2025](https://easychair.org/conferences/?conf=ictss2025)\n\n## Important Dates\n\n*   **Submission of Papers:** May 19, 2025\n*   **Notification of Acceptance:** June 30, 2025\n*   **Camera-ready and author registration:** July 14, 2025"
+}

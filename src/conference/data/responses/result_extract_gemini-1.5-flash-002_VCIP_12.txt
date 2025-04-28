@@ -1,0 +1,34 @@
+output:
+{
+  "Conference dates": "December 1 - 4, 2025",
+  "Year": "2025",
+  "Location": "Klagenfurt, Austria",
+  "City-State-Province": "Klagenfurt",
+  "Country": "Austria",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "June 30, 2025",
+    "Grand Challenge Proposal Submission Deadline": "April 1, 2025",
+    "Submission of Special Session and Tutorial Proposals": "May 1, 2025",
+    "Grand Challenge Submission Deadline": "June 30, 2025",
+    "Demos, Open Source, and Datasets Submission Deadline": "June 30, 2025",
+    "Deadline for Nominations Submission": "August 30, 2025",
+    "Submission of Camera-Ready Papers": "October 15, 2025"
+  },
+  "Notification Date": {
+    "Grand Challenge Proposal Acceptance Notification": "April 15, 2025",
+    "Acceptance Notification of Special Sessions and Tutorials": "May 15, 2025",
+    "Paper Acceptance Notification": "September 15, 2025",
+    "Selection of Rising Star Candidates": "September 30, 2025",
+    "Invitation to the Rising Star Award Selected Candidates": "October 1, 2025"
+  },
+  "Other Date": {
+    "Call for Rising Star Nominations": "July 10, 2025",
+    "Appointment of the Rising Star Selection Committee": "July 31, 2025"
+  },
+  "Topics": "Visual Communications, Image Processing, Conventional image and video, Stereoscopic image and video, multi-view image and video, 360-degree image and video, Light fields, point clouds, meshes, holography, Multi-spectral imaging, hyper-spectral imaging, NeRF, Gaussian splatting-based scene representation, Sensing, acquisition, representation, modeling, registration, Restoration, denoising, enhancement, Detection, recognition, understanding, retrieval, classification, Computational vision modeling and processing, Perceptual-based processing, Synthesis, rendering, visualization, Source coding and transmission, Compressed domain processing, Adaptive streaming, low-latency streaming, Edge coding, network coding, cloud-based coding, Distributed visual information processing, Biometrics, forensics, trust, security, Content provenance, authenticity, Encryption, data hiding, Augmented reality, Virtual reality, Personal communications, social networks, Gaming, broadcasting, Drones, autonomous vehicles, Mobile visual applications, wireless visual applications, Cloud-based architectures, distributed architectures, services, systems, Internet of Things, Sustainability, green systems, Multimodal user interfaces, Human Computer Interfaces, Emerging applications, services, architectures, systems, Subjective quality assessment, objective quality assessment, Multimodal quality assessment, Quality of experience, Task-based performance assessment, Visual quality of life, Complexity assessment, delay assessment, error resilience assessment",
+  "Summary": "The 2025 edition of Visual Communications and Image Processing (VCIP 2025) Conference will be held in Klagenfurt, Austria, from December 1-4, 2025. VCIP is the oldest conference in the field and one of the flagship conferences of the CAS Visual Signal Processing and Communications Technical Committee. The theme for VCIP 2025 is Sustainable and Trustworthy Visual Communications in the Age of AI.",
+  "Call for Papers": "# VCIP 2025: Call for Papers\n\nThe 2025 edition of the Visual Communications and Image Processing (VCIP) Conference will be held in **Klagenfurt, Austria, from December 1-4, 2025**.\n\nVCIP is the oldest conference in the field and one of the flagship conferences of the CAS Visual Signal Processing and Communications Technical Committee. VCIP 2025 will cover new technology frontiers and new use cases in the visual signal processing and communication areas to discuss and envision the future of both technology and applications.\n\n## Theme\n\n**Sustainable and Trustworthy Visual Communications in the Age of AI**\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n### Modalities:\n\n*   Conventional image and video\n*   Stereoscopic, multi-view, and 360-degree image and video\n*   Light fields, point clouds, meshes, and holography\n*   Multi-spectral and hyper-spectral imaging\n*   NeRF and Gaussian splatting-based scene representation\n\n### Visual Processing and Communication (conventional & AI-based):\n\n*   Sensing, acquisition, representation, modeling, and registration\n*   Restoration, denoising, and enhancement\n*   Detection, recognition, understanding, retrieval, and classification\n*   Computational vision modeling and processing\n*   Perceptual-based processing\n*   Synthesis, rendering, and visualization\n*   Source coding and transmission, including standards\n*   Compressed domain processing\n*   Adaptive and low-latency streaming\n*   Edge, network and cloud-based coding\n*   Distributed visual information processing\n\n### Applications, services, architectures, and systems:\n\n*   Biometrics, forensics, trust, and security\n*   Content provenance and authenticity\n*   Encryption and data hiding for secure visual communications\n*   Augmented and virtual reality\n*   Personal communications and social networks\n*   Gaming and broadcasting\n*   Drones and autonomous vehicles\n*   Mobile and wireless visual applications and systems\n*   Cloud-based and distributed architectures, services and systems\n*   Internet of Things\n*   Sustainability and green systems\n*   Multimodal user interfaces and interaction models\n*   Human Computer Interfaces\n*   Emerging applications, services, architectures and systems\n\n### Performance assessment:\n\n*   Subjective and objective quality assessment methodologies\n*   Multimodal quality assessment\n*   Quality of experience, notably for real-time and streaming applications\n*   Task-based performance assessment\n*   Visual quality of life\n*   Complexity, delay and error resilience assessment\n*   Emerging performance assessment methods\n\n## Important Dates\n\n*   **Grand Challenge Proposal Submission Deadline:** April 1, 2025\n*   **Grand Challenge Proposal Acceptance Notification:** April 15, 2025\n*   **Submission of Special Session and Tutorial Proposals:** May 1, 2025\n*   **Acceptance Notification of Special Sessions and Tutorials:** May 15, 2025\n*   **Paper Submission Deadline:** June 30, 2025\n*   **Grand Challenge Submission Deadline:** June 30, 2025\n*   **Demos, Open Source, and Datasets Submission Deadline:** June 30, 2025\n*   **Call for Rising Star Nominations:** July 10, 2025\n*   **Appointment of the Rising Star Selection Committee:** July 31, 2025\n*   **Deadline for Nominations Submission:** August 30, 2025\n*   **Paper Acceptance Notification:** September 15, 2025\n*   **Selection of Rising Star Candidates:** September 30, 2025\n*   **Invitation to the Rising Star Award Selected Candidates:** October 1, 2025\n*   **Submission of Camera-Ready Papers:** October 15, 2025"
+}
+

@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "November 3 - 5, 2025",
+  "Year": "2025",
+  "Location": "Los Angeles, California, USA",
+  "City-State-Province": "Los Angeles, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "June 8, 2025",
+    "Abstract and Demo Submission Deadline": "June 8, 2025",
+    "Late Breaking Abstract Deadline": "August 10, 2025",
+    "Workshop Proposal Deadline": "June 1, 2025"
+  },
+  "Notification Date": {
+    "Paper Acceptance Notification": "August 1, 2025",
+    "Abstract Acceptance Notification": "August 1, 2025",
+    "Late Breaking Abstract Notification": "August 24, 2025",
+    "Workshop Acceptance Notification": "June 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Deadline": "September 1, 2025"
+  },
+  "Topics": "Body Sensor Networks, Digital Health, Sensors, Systems, Predictive Models, Data Analytics, Wearable Sensors, Implantable Sensors, Machine Learning, Deep Learning, Decision-Support Algorithms, Security, Privacy, Trust, Human-Centered Design, Agentic AI, LLMs, Computational Health",
+  "Publisher": "IEEE",
+  "Summary": "The IEEE-EMBS International Conference on Body Sensor Networks (BSN 2025) will be held in Los Angeles, California, USA, from November 3–5, 2025.  The theme is \"Computational Medicine: Expanding Health through Sensing and AI.\" The conference will accept regular technical papers, demo or poster abstracts, and clinical abstracts.  Excellent papers may be invited for publication in the IEEE Open Journal of Engineering in Medicine and Biology.",
+  "Call for Papers": "# IEEE-EMBS BSN 2025: Call for Papers\n\nThe IEEE-EMBS International Conference on Body Sensor Networks (BSN 2025) will be held in **Los Angeles, California, USA, from November 3–5, 2025**.\n\nThe theme of BSN 2025 is **Computational Medicine: Expanding Health through Sensing and AI.**\n\nBSN 2025 will bring together leaders and experts in academia, industry, healthcare, and non-profit organizations to provide a cross-disciplinary, highly selective, and single-track forum for cutting-edge research related to devices and sensors, hardware and software systems, predictive models, and data analytics in the healthcare/medical domains.\n\n## Call for Submissions\n\nIEEE-EMBS BSN 2025 will accept:\n\n*   Regular 4-page technical papers\n*   1-page demo or poster abstracts\n*   1-page clinical abstracts\n\nExcellent papers (e.g., Best Paper Award candidates) will be invited to extend their works for rapid review and publication in the partnering journal *IEEE Open Journal of Engineering in Medicine and Biology*.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Novel digital health solutions (i.e., sensors and algorithms) for diagnosis, disease progress tracking, and self-management.\n*   Sensors and systems for digital health, wellness, and athletics.\n*   Conformable decoders: unintrusive, comfortable, self-powered sensors and systems.\n*   Flexible, stretchable, and imperceptible electronics for sensors and systems.\n*   Contact-less solutions for human sensing.\n*   Power-optimization for implantable and wearable sensors and systems.\n*   Wearable robotics systems for digital healthcare.\n*   Signal processing, machine learning, deep learning, and decision-support algorithms.\n*   Adaptive, personalized intervention systems by closing the loop between technologies and humans.\n*   Security, privacy, and trust in digital health technologies.\n*   Optimization and personalization for digital health technologies and outcomes.\n*   Human-centered design for digital healthcare to address real-world stakeholder needs.\n*   Emerging topics such as Agentic AI and LLMs for computational health.\n\n## Important Dates\n\nAll deadlines are 11:59 pm AoE.\n\n*   **Workshop Proposal Deadline:** June 1, 2025\n*   **Workshop Acceptance Notification:** June 15, 2025\n*   **Paper Submission Deadline:** June 8, 2025\n*   **Abstract and Demo Submission Deadline:** June 8, 2025\n*   **Paper Acceptance Notification:** August 1, 2025\n*   **Abstract Acceptance Notification:** August 1, 2025\n*   **Late Breaking Abstract Deadline:** August 10, 2025\n*   **Late Breaking Abstract Notification:** August 24, 2025\n*   **Camera-Ready Deadline:** September 1, 2025\n*   **Conference:** November 3-5, 2025"
+}
+```

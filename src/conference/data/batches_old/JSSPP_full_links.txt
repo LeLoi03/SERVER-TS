@@ -1,0 +1,629 @@
+Conference full name: Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP)
+
+1. Website of JSSPP_3: https://jsspp.org/
+Website information of JSSPP_3:
+
+Toggle navigationhref="http://jsspp.org/index.php?page=about" - JSSPP
+href="http://jsspp.org/index.php?page=about" - About 
+ href="http://jsspp.org/index.php?page=cfp" - Call for Submissions 
+ href="http://jsspp.org/index.php?page=deadlines" - Deadlines 
+ href="http://jsspp.org/index.php?page=program" - Program 
+ href="http://jsspp.org/index.php?page=submission" - Submission 
+ Committees 
+ href="http://jsspp.org/index.php?page=registration" - Registration 
+ href="http://jsspp.org/workload" - Workloads 
+ href="http://jsspp.org/tools" - Tools 
+ JSSPP 2025 
+ 28thWorkshop on Job Scheduling Strategies for Parallel Processing (JSSPP 2025) 
+ In Conjunction with IPDPS 2025, Milan, Italy, June 3 - 4, 2025 
+ Welcome to JSSPP 2025 Workshop 
+ JSSPP 2025 is the 28thedition of the workshop onJob Scheduling Strategies for Parallel Processing. JSSPP 2025 will be held in conjunction with 39th IEEE International Parallel and Distributed Processing Symposium (IPDPS'2025), June 3 - 7, 2025 in Milan, Italy. 
+ This annual series of workshops has been held since 1995 in conjunction with various other conferences, includingIPDPS(formerly IPPS), the main parallel processing symposium sponsored by the IEEE, the ACMSIGMETRICSandICSconferences, andHPDC/GGF, the premier annual meeting of the Global Grid Forum. 
+ The proceedings of these workshops arehref="https://link.springer.com/conference/jsspp" - published by Springer-Verlag in the Lecture Notes in Computer Science Series
+. 
+ You candownload BibTeX file of all these workshop proceedings. 
+ JSSPP 2025 is planned as in-person meeting.JSSPP 2025 will be a TWO-DAY event.. 
+ Paper Submission Deadline 
+ February 24th, 2025(FINAL) 
+ Author Notification 
+ March 14th, 2025 (approximate, extended)Camera-Ready Paper 
+ July 27th, 2025News: 
+ href="./2024/Managing_Private_Clouds_with_Flex_ JSSPP_2024.pdf" - 
+JSSPP 2025 is planned as a TWO-DAY EVENT 
+ We are happy to announce that the JSSPP 2025 will be held in conjunction with 39th IEEE International Parallel and Distributed Processing Symposium (IPDPS'2025), June 3 - 4, 2025 in Milan, Italy.For the first time JSSPP will be a two-day event.JSSPP 2024 proceedings are AVAILABLE ONLINE 
+ We are happy to announce that the proceedings ofJSSPP 2024 - 27th Workshop on Job Scheduling Strategies for Parallel Processinghave been published in LNCS series by Springer:https://link.springer.com/book/10.1007/978-3-031-74430-3.Keynote Lecture is Online 
+ JSSPP Keynote was delivered byWalfredo Cirne (Google):href="./2024/Managing_Private_Clouds_with_Flex_ JSSPP_2024.pdf" - Managing Private Clouds
+. 
+ Abstract: This talk defines the Private Cloud Management program and presents Flex, Google’s solution for it. It covers how Flex makes Google’s easier to operate, as well as the key techniques used to make it more efficient. It also discusses how we preserve governance by charging internal users the resources they prompted Google to buy, in spite of aggressive resource sharing and on-demand allocation.JSSPP is on Slack 
+ href="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - 
+Feel free to join us athref="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - Slack
+. Slack is a perfect way to discuss and share ideas within JSSPP scheduling community.Quick Links 
+ href="index.php?page=cfp" - 2025 Call for Submissions 
+ Previous workshops 
+ href="https://jsspp.org/index.php?page=program24" - 2024 Program 
+ href="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - Slack Channel | [NEW] 
+ Workshop Organizers 
+ href="index.php?page=submission" - Paper Formatting Instructions 
+ Workloads Archive 
+ This workshop series has been ranked among the very good venues in Computer Science in terms of impact (CORE:B->C, LiveSHINE:A-, Microsoft Academic:A-, ERA:B, Qualis:B1). Latest results can be found at theGGS Conference Rating,CORE Conference Portalor at theConference Rankswebsites (using "jsspp" acronym). 
+  
+ Previous Workshops 
+ 1st Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '95, Santa Barbara, CA, 25 April 1995 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp95/" - Technical program | . 
+ Proceedings ordering information | . 
+ 2nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '96, Honolulu, Hawaii, 16 April 1996 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp96/" - Technical program | . 
+ Proceedings ordering information | . 
+ 3rd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '97, Geneva, Switzerland, 5 April 1997 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp97/" - Technical program | . 
+ Proceedings ordering information | . 
+ 4th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '98, Orlando, FL, 30 March 1998 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp98/" - Technical program | . 
+ Proceedings ordering information | . 
+ 5th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '99, San Juan, Puerto Rico, 16 April 1999 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp99/" - Technical program 
+ Proceedings ordering information | . 
+ 6th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2000, Cancun, Mexico, 1 May 2000 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp00/" - Technical program 
+ Proceedings ordering information | . 
+ 7th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with SIGMETRICS 2001, University Park Hotel at MIT, Cambridge, MA, 16 June 2001 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp01/" - Technical program | . 
+ Proceedings ordering information | . 
+ 8th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC11/GGF5, Edinburgh, Scotland, 24 July 2002 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp02/" - Technical program | . 
+ Proceedings ordering information | . 
+ 9th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC12/GGF8, Seattle, WA, 24 June 2003 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp03/" - Technical program | . 
+ Proceedings ordering information | . 
+ 10th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2004, New York, NY, 13 June 2004 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp04/" - Technical program | . 
+ Proceedings ordering information | . 
+ 11th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with ICS 2005, Boston, MA, 19 June 2005 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp05/" - Technical program | . 
+ Proceedings ordering information | . 
+ 12th workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2006, St. Malo, France, 26 June 2006 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp06/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 13th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with ICS 2007, Seattle, WA, 17 June 2007 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp07/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 14th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2009, Rome, Italy, 29 May 2009 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp09/" - Technical program | . 
+ Proceedings ordering information | . 
+ 15th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2010, Atlanta, GA, 23 April 2010 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp10/" - Technical program | . 
+ Proceedings ordering information | . 
+ 16th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2012 in Shanghai, China, 25 May 2012 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp12/" - Technical program | . 
+ Proceedings ordering information | . 
+ 17th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2013 in Boston, Massachusetts, 24 May 2013 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp13/" - Technical program | . 
+ Proceedings ordering information | . 
+ 18th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2014 in Phoenix, Arizona, on 23 May 2014 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp14/" - Technical program | . 
+ Proceedings ordering information | . 
+ 19th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2015 in Hyderabad, India, on 29 May 2015 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp15/" - Technical program | . 
+ Proceedings published by Springer-Verlag as LNCS 10353 (jointly with 2016 edition). | href="https://link.springer.com/book/10.1007%2F978-3-319-61756-5" - 19th and 20th International Workshops, JSSPP 2015, Hyderabad, India, May 26, 2015 and JSSPP 2016, Chicago, IL, USA, May 27, 2016, Revised Selected Papers | . 
+ 20th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2016 in Chicago, Illinois, on 27 May 2016 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp16/" - Technical program | . 
+ Proceedings published by Springer-Verlag as LNCS 10353 (jointly with 2015 edition). | href="https://link.springer.com/book/10.1007%2F978-3-319-61756-5" - 19th and 20th International Workshops, JSSPP 2015, Hyderabad, India, May 26, 2015 and JSSPP 2016, Chicago, IL, USA, May 27, 2016, Revised Selected Papers | . 
+ 21st Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2017 in Orlando, Florida, on 2 June 2017 | href="http://jsspp.org/index.php?page=program17" - Technical program | . 
+ Proceedings published by Springer as LNCS 10773. | href="https://link.springer.com/book/10.1007/978-3-319-77398-8" - 21st International Workshop, JSSPP 2017, Orlando, FL, USA, June 2, 2017, Revised Selected Papers | . 
+ 22nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2018 in Vancouver, Canada, on 25 May 2018 | href="http://jsspp.org/index.php?page=program18" - Technical program | . 
+ Proceedings published by Springer as LNCS 11332. | href="https://link.springer.com/book/10.1007/978-3-030-10632-4" - 22nd International Workshop, JSSPP 2018, Vancouver, Canada, May 25, 2018, Revised Selected Papers | . 
+ 23rd Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2020 on 22 May 2020 | href="http://jsspp.org/index.php?page=program20" - Technical program | . 
+ Proceedings published by Springer as LNCS 12326. | href="https://link.springer.com/book/10.1007/978-3-030-63171-0" - 23rd International Workshop, JSSPP 2020, New Orleans, LA, USA, May 22, 2020, Revised Selected Papers | . 
+ 24th Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2021 on 21 May 2021 | href="http://jsspp.org/index.php?page=program21" - Technical program | . 
+ Proceedings published by Springer as LNCS 12985. | href="https://link.springer.com/book/10.1007/978-3-030-88224-2" - 24th International Workshop, JSSPP 2021, May 21, 2021, Revised Selected Papers | . 
+ 25th Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2022 on 3 June 2022 | href="http://jsspp.org/index.php?page=program22" - Technical program | . 
+ Proceedings published by Springer as LNCS 13592. | href="https://link.springer.com/book/10.1007/978-3-031-22698-4" - 25th International Workshop, JSSPP 2022, June 3, 2022, Revised Selected Papers | . 
+ 26th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2023 on 19 May 2023 | href="http://jsspp.org/index.php?page=program23" - Technical program | . 
+ Proceedings published by Springer as LNCS 14283. | href="https://link.springer.com/book/10.1007/978-3-031-43943-8" - 26th International Workshop, JSSPP 2023, May 19, 2023, Revised Selected Papers | . 
+ 27th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2024 on 31 May 2024 | href="http://jsspp.org/index.php?page=program24" - Technical program | . 
+ Proceedings published by Springer as LNCS 14591. | href="https://link.springer.com/book/10.1007/978-3-031-74430-3" - 27th International Workshop, JSSPP 2024, May 31, 2024, Revised Selected Papers | . 
+ JSSPP 1995-2025 – the Workshop on Jobs Scheduling Strategies for Parallel Processing.Contact email:href="mailto:jssppw@gmail.com" - jssppw@gmail.com
+
+2. Website of JSSPP_3: https://www.cs.huji.ac.il/w~feit/parsched/
+Website information of JSSPP_3:
+
+Workshops on Job Scheduling Strategies for Parallel ProcessingWorkshops on Job Scheduling Strategies for Parallel Processing 
+ href="https://jsspp.org/" - Go to the new JSSPP page
+This annual series of workshops has been held since 1995 in conjunction with various other conferences, includingIPDPS(formerly IPPS), the main parallel processing symposium sponsored by the IEEE The ACMSIGMETRICSandICSconferences, andHPDC/GGF, the premier annual meeting of the Global Grid Forum. 
+ The proceedings of these workshops arepublished by Springer-Verlag in the Lecture Notes in Computer Science Series. 
+ Download BibTeX file of all these workshop proceedings. 
+  
+ Co-organizers: | Previous co-organizers: | Founding co-organizers: 
+ Dalibor Klusáček, CESNET a.l.e. | Eitan Frachtenberg, Facebook | Dror Feitelson, Hebrew University 
+ Julita Corbalán, BSC | Uwe Schwiegelshohn, University Dortmund | Larry Rudolph, MIT 
+ Gonzalo P. Rodrigo, Apple | Walfredo Cirne, Google/UFCG 
+ Narayan Desai, Google 
+ Next workshop: 
+ The 27th Workshop on Job Scheduling Strategies for Parallel Processing will be held in Conjunction with IPDPS 2024, San Fransisco, California, USA, on 31 May 2024.href="http://jsspp.org/" - Full details and call for papers | . | DEADLINE FOR SUBMISSIONS: 2 February 2024 
+ Previous workshops: 
+ 1st Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '95, Santa Barbara, CA, 25 April 1995 | href="jsspp95/" - Technical program | . 
+ Proceedings ordering information | . 
+ 2nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '96, Honolulu, Hawaii, 16 April 1996 | href="jsspp96/" - Technical program | . 
+ Proceedings ordering information | . 
+ 3rd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '97, Geneva, Switzerland, 5 April 1997 | href="jsspp97/" - Technical program | . 
+ Proceedings ordering information | . 
+ 4th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '98, Orlando, FL, 30 March 1998 | href="jsspp98/" - Technical program | . 
+ Proceedings ordering information | . 
+ 5th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '99, San Juan, Puerto Rico, 16 April 1999 | href="jsspp99/" - Technical program 
+ Proceedings ordering information | . 
+ 6th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2000, Cancun, Mexico, 1 May 2000 | href="jsspp00/" - Technical program 
+ Proceedings ordering information | . 
+ 7th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with SIGMETRICS 2001, University Park Hotel at MIT, Cambridge, MA, 16 June 2001 | href="jsspp01/" - Technical program | . 
+ Proceedings ordering information | . 
+ 8th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC11/GGF5, Edinburgh, Scotland, 24 July 2002 | href="jsspp02/" - Technical program | . 
+ Proceedings ordering information | . 
+ 9th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC12/GGF8, Seattle, WA, 24 June 2003 | href="jsspp03/" - Technical program | . 
+ Proceedings ordering information | . 
+ 10th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2004, New York, NY, 13 June 2004 | href="jsspp04/" - Technical program | . 
+ Proceedings ordering information | . 
+ 11th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with ICS 2005, Boston, MA, 19 June 2005 | href="jsspp05/" - Technical program | . 
+ Proceedings ordering information | . 
+ 12th workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2006, St. Malo, France, 26 June 2006 | href="jsspp06/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 13th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with ICS 2007, Seattle, WA, 17 June 2007 | href="jsspp07/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 14th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2009, Rome, Italy, 29 May 2009 | href="jsspp09/" - Technical program | . 
+ Proceedings ordering information | . 
+ 15th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2010, Atlanta, GA, 23 April 2010 | href="jsspp10/" - Technical program | . 
+ Proceedings ordering information | . 
+ 16th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2012 in Shanghai, China, 25 May 2012 | href="jsspp12/" - Technical program | . 
+ Proceedings ordering information | . 
+ 17th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2013 in Boston, Massachusetts, 24 May 2013 | href="jsspp13/" - Technical program | . 
+ Proceedings ordering information | . 
+ 18th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2014 in Phoenix, Arizona, on 23 May 2014 | href="jsspp14/" - Technical program | . 
+ Proceedings ordering information | . 
+ 19th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2015 in Hyderabad, India, on 29 May 2015 | href="jsspp15/" - Technical program | . 
+ Proceedings ordering information (joint with 2016) | . 
+ 20th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2016 in Chicago, IL, USA, on 27 May 2016 | href="jsspp16/" - Technical program | . 
+ Proceedings ordering information (joint with 2015) | . 
+ 21st Workshop on Job Scheduling Strategies for Parallel Processing | Held in Conjunction with IPDPS 2017 in Orlando FL, USA, on 2 June 2017. | href="http://jsspp.org/index.php?page=program17" - Technical program | . 
+ Proceedings ordering information | . 
+ 22nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in Conjunction with IPDPS 2018 in Vancouver, Canada, on 25 May 2018. | href="http://jsspp.org/index.php?page=program18" - Technical program | . 
+ Proceedings ordering information | . 
+ 23rd Workshop on Job Scheduling Strategies for Parallel Processing | Held in (virtually) Conjunction with IPDPS 2020, on 21 May 2020. | href="http://jsspp.org/index.php?page=program20" - Technical program | . 
+ Proceedings ordering information | . 
+ 24th Workshop on Job Scheduling Strategies for Parallel Processing | Held (virtually) in Conjunction with IPDPS 2021, on 21 May 2021. | href="http://jsspp.org/index.php?page=program21" - Technical program | . 
+ Proceedings ordering information | . 
+ 25th Workshop on Job Scheduling Strategies for Parallel Processing | Held (virtually) in Conjunction with IPDPS 2022, on 3 June 2022. | href="http://jsspp.org/index.php?page=program22" - Technical program | . 
+ Proceedings ordering information | . 
+ 26th Workshop on Job Scheduling Strategies for Parallel Processing | Held in Conjunction with IPDPS 2023, on 19 May 2023. | href="http://jsspp.org/index.php?page=program" - Technical program | . 
+ Proceedings ordering information | .
+
+3. Website of JSSPP_3: https://www.computer.org/csdl/proceedings-article/ipdpsw/2025/646000z802/1YTsvEGspJS
+Website information of JSSPP_3:
+
+Opens in a new windowOpens an external websiteOpens an external website in a new windowClose this dialogThis website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising.You may change your settings at any time or accept the default settings.You may close this banner to continue with only essential cookies.Privacy PolicyStorage PreferencesTargeted Advertising 
+ Personalization 
+ Analytics 
+ SaveAccept AllReject AllClose Cookie PreferencesJoin Us 
+ Sign In 
+ My Subscriptions 
+ Magazines 
+ Journals 
+ Video Library 
+ Conference Proceedings 
+ Individual CSDL Subscriptions 
+ Institutional CSDL Subscriptions 
+ Resources | Career Center 
+ Tech News 
+ Resource Center 
+ Press Room 
+ Advertising 
+ Librarian Resources 
+ IEEE.org 
+ Help 
+ About Us 
+ Career Center 
+ Cart 
+ Create Account 
+ Sign In 
+ Toggle navigation 
+ My Subscriptions 
+ Browse Content 
+ Resources 
+ Sign up for our newsletter. 
+ EMAIL ADDRESS 
+ IEEE COMPUTER SOCIETY 
+ About Us 
+ Board of Governors 
+ Newsletters 
+ Press Room 
+ IEEE Support Center 
+ Contact Us 
+ DIGITAL LIBRARY 
+ Magazines 
+ Journals 
+ Conference Proceedings 
+ Video Library 
+ COMPUTING RESOURCES 
+ Jobs Board 
+ Courses & Certifications 
+ Webinars 
+ Podcasts 
+ Tech News 
+ Membership 
+ COMMUNITY RESOURCES 
+ Conference Organizers 
+ href="https://www.computer.org/publications/author-resources" - Authors 
+ Chapters 
+ Communities 
+ BUSINESS SOLUTIONS 
+ Corporate Partnerships 
+ Conference Sponsorships & Exhibits 
+ Advertising 
+ Recruiting 
+ Digital Library Institution Subscriptions 
+ POLICIES 
+ Privacy 
+ Accessibility Statement 
+ IEEE Nondiscrimination Policy 
+ XML Sitemap 
+ ©IEEE — All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions. 
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+4. Website of JSSPP_3: https://www.ipdps.org/ipdps2025/2025-workshops.html
+Website information of JSSPP_3:
+
+IPDPS 2025 Conference 
+ Home 
+ href="/ipdps2025/2025-advance-program.html" - Advance Program 
+ href="/ipdps2025/2025-keynotes.html" - Keynotes 
+ href="/ipdps2025/2025-tutorials.html" - Tutorials 
+ href="/ipdps2025/2025-workshops.html" - Workshops 
+ href="/ipdps2025/2025-phd-forum.html" - PhD Forum 
+ href="/ipdps2025/2025-student-travel.html" - Student Travel 
+ href="/ipdps2025/2025-author-resources.html" - Author Resources 
+ href="/ipdps2025/2025-registration.html" - Registration 
+ href="/ipdps2025/2025-travel.html" - Travel 
+ href="/ipdps2025/2025-hotel.html" - Hotels 
+ Program Committee 
+ href="/ipdps2025/2025-organization.html" - Organization 
+ href="/ipdps2025/2025-call-for-papers.html" - Call for Papers | (CLOSED) 
+ General IPDPS Info 
+ About IPDPS 
+ Conference Archive 
+ Babbage Award 
+ Proceedings Library 
+ Steering Committee 
+ href="/future-hosts.html" - Call for Future Hosts 
+ Contact IPDPS 
+ Sponsor 
+  
+ IN COOPERATION WITH 
+ and 
+
+HOST | IPDPS 2025 Workshops 
+ TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | IPDPS 2025 Workshops | TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ IPDPS 2025 Workshops 
+ TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | IPDPS 2025 Workshops 
+ TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | IPDPS 2025 Workshops | TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop | 2025 REGISTRATION 
+
+Early DeadlineMarch 31st 
+ Extended to April 8th 
+ href="/ipdps2025/2025-registration.html" - Registration Details
+Search IPDPS 
+ Follow IPDPS 
+ IPDPS 2024 Report 
+
+38th IEEE International Parallel & Distributed Processing Symposium 
+ May 27-31, 2024 
+  
+ Hyatt Regency San Francisco 
+ Embarcadero Center 
+ San Francisco, California USA 
+ REPORT ON IPDPS 2024 
+ IPDPS 2025 Workshops 
+ TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | IPDPS 2025 Workshops | TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ IPDPS 2025 Workshops 
+ TWENTY WORKSHOPS PLANNED FOR IPDPS 2025 IN MILAN 
+ Below is the list of 20 workshops planned for 2025 in Milan, Italy. For the most up to date information on each workshop, follow the link from this page. By the end of April, all will be posting their programs including papers selected for presentation and invited speakers. 
+ IPDPS 2025 and all associated events including workshops are scheduled to be held in-person during the dates of June 3-7, 2025.This year, we will hold all workshops during the first two days: Tuesday, June 3rd and Wednesday, June 4th.The main conference events will be held on Thursday, Friday, and Saturday. 
+ Note that all workshops have their own Web sites which will list their full program including schedule, speakers, and paper presentations.IPDPS 2025 WORKSHOPS – To be held Tuesday 3 June 
+  
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ IPDPS 2025 WORKSHOPS – To be held Wednesday 4 June 
+  
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ IPDPS 2025 WORKSHOP – To be held Tuesday & Wednesday 
+  
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop | 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems | 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing | 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments | 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning | 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems | 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization | 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing | 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications | 9 | APDCM | Advances in Parallel and Distributed Computational Models | 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education | 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis | 12 | GrAPL | Graphs, Architectures, Programming, and Learning | 13 | HCW | Heterogeneity in Computing Workshop | 14 | HiCOMB | High Performance Computational Biology | 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science | 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services | 17 | PAISE | Parallel AI and Systems for the Edge | 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies | 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing | 20 | RAW | Reconfigurable Architectures Workshop 
+ 1 | AsHES | href="https://www.ashes-hpc.org/2025/" - Accelerators and Hybrid Emerging Systems 
+ 2 | CGRA4HPC | Coarse-Grained Reconfigurable Architectures for High-Performance Computing 
+ 3 | HIPS | href="https://hips2025.github.io/" - High-level Parallel Programming Models and Supportive    Environments 
+ 4 | iWAPT | href="http://iwapt.org/2025/" - International    Workshop on Automatic Performance Tuning 
+ 5 | ParSocial | Parallel and Distributed Processing for Computational Social Systems 
+ 6 | PDCO | href="https://pdco2025.sciencesconf.org/?lang=en" - Parallel / Distributed Combinatorics and Optimization 
+ 7 | PDSEC | href="http://www.ieee-tcsc.org/2025/pdsec/" - Parallel and Distributed Scientific and    Engineering Computing 
+ 8 | Q-CASA | Quantum Computing Algorithms, Systems, and Applications 
+ 9 | APDCM | Advances in Parallel and Distributed Computational Models 
+ 10 | EduPar | NSF/TCPP Workshop on Parallel and Distributed Computing Education 
+ 11 | ESSA | href="https://sites.google.com/view/essa-2025" - Extreme-Scale Storage and Analysis 
+ 12 | GrAPL | Graphs, Architectures, Programming, and Learning 
+ 13 | HCW | Heterogeneity in Computing Workshop 
+ 14 | HiCOMB | High Performance Computational Biology 
+ 15 | HPAI4S* | HPC for AI Foundation Models & LLMs for Science 
+ 16 | Intel4EC* | Intelligent and Adaptive Edge-Cloud Operations and Services 
+ 17 | PAISE | Parallel AI and Systems for the Edge 
+ 18 | Q-SCIENCE* | Advancing Scientific Computing through Quantum and HPC Synergies 
+ 19 | JSSPP | href="https://jsspp.org/" - Job Scheduling    Strategies for Parallel Processing 
+ 20 | RAW | Reconfigurable Architectures Workshop 
+ Copyright © IPDPS. All rights reserved.
+

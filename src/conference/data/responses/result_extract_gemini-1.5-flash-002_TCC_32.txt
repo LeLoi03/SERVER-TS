@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "December 2 - 5, 2025",
+  "Year": "2025",
+  "Location": "Aarhus, Denmark",
+  "City-State-Province": "Aarhus",
+  "Country": "Denmark",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "May 27, 2025"
+  },
+  "Notification Date": {
+    "Final notification": "August 28, 2025"
+  },
+  "Camera-ready Date": {
+    "Final versions due": "September 25, 2025"
+  },
+  "Topics": "Cryptography, Cryptographic Paradigms, Cryptographic Approaches, Cryptographic Techniques, Cryptographic Problems, Security Notions, Cryptographic Algorithms, Complexity Assumptions",
+  "Publisher": "Springer",
+  "Summary": "TCC 2025, the 23rd Theory of Cryptography Conference, will take place in Aarhus, Denmark, from December 2-5, 2025. Organized by the International Association for Cryptologic Research (IACR), the conference seeks papers presenting original research on foundational and theoretical aspects of cryptography.",
+  "Call for Papers": "# TCC 2025: Call for Papers\n\nThe 23rd Theory of Cryptography Conference (TCC 2025) will take place in **Aarhus, Denmark, from December 2-5, 2025**.\n\nTCC 2025 is organized by the **International Association for Cryptologic Research (IACR)**. The proceedings will be published by Springer in the LNCS series.\n\n## Scope\n\nPapers presenting original research on foundational and theoretical aspects of cryptography are sought.  The scope of the conference includes, but is not limited to:\n\n*   The study of known paradigms, approaches, and techniques, directed towards their better understanding and utilization\n*   The discovery of new paradigms, approaches, and techniques that overcome limitations of the existing ones\n*   The formulation and treatment of new cryptographic problems\n*   The study of notions of security and relations among them\n*   The modeling and analysis of cryptographic algorithms\n*   The study of the complexity assumptions used in cryptography\n\n## Important Dates\n\n*   **Submission deadline:** May 27, 2025, 23:59 anywhere on earth (AoE)\n*   **Final notification:** August 28, 2025\n*   **Final versions due:** September 25, 2025\n*   **Conference begins:** December 2, 2025\n\n## Proceedings\n\nProceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series. The online version will be available to all conference attendees. Physical books will be available after the conference for a separate fee.\n\n## Luca Trevisan Young Researcher Award\n\nThis prize is for the best paper authored solely by young researchers, where a young researcher is a person that at the time of the paper's submission is at most two years past their graduation from a PhD program. Eligibility must be indicated at the time of submission, using a checkbox in the submission form. The program committee may decline to make the award, or may split it among several papers.\n\n## Program Committee\n\n*   Divesh Aggarwal, National University of Singapore\n*   Prabhanjan Ananth, University of California Santa Barbara\n*   Marshall Ball, New York University\n*   James Bartusek, New York University\n*   Andrej Bogdanov, University of Ottawa\n*   Ran Canetti, Boston University\n*   Kai-Min Chung, Academia Sinica\n*   Ivan Damgård, Aarhus University\n*   Nico Döttling, Cispa Helmholtz Center (i.G.)\n*   Cody Freitag, Northeastern University\n*   Aarushi Goel, Purdue University\n*   Shai Halevi, AWS\n*   Aayush Jain, Carnegie Mellon University\n*   Abhishek Jain, NTT Research & Johns Hopkins University\n*   Zhengzhong Jin, Northeastern University\n*   Daniel Jost, New York University\n*   Wei-Kai Lin, University of Virginia\n*   Ji Luo, Boston University\n*   Hemanta K. Maji, Purdue University\n*   Peihan Miao, Brown University\n*   Tomoyuki Morimae, Kyoto University\n*   Varun Narayanan, University of California Los Angeles\n*   Ryo Nishimaki, NTT Social Informatics Labs\n*   Eran Omri, Ariel University\n*   Alexander Poremba, Massachusetts Institute of Technology\n*   Leonid Reyzin, Boston University\n*   João Ribeiro, University of Lisbon\n*   Lior Rotem, Stanford University\n*   Guy N. Rothblum, Apple\n*   Luisa Siniscalchi, Technical University of Denmark\n*   Yifan Song, Tsinghua University\n*   Katerina Sotiraki, Yale University\n*   Akshayaram Srinivasan, University of Toronto\n*   Prashant N. Vasudevan, National University of Singapore\n*   Brent Waters, NTT Research & University of Texas at Austin\n*   Hoeteck Wee, NTT Research & École Normale Supérieure\n*   Shota Yamada, AIST\n*   Takashi Yamakawa, NTT Social Informatics Labs & Kyoto University\n*   Vassilis Zikas, Georgia Institute of Technology\n\n## Program Co-chairs\n\n*   Benny Applebaum, Tel-Aviv University\n*   Rachel Lin, University of Washington\n\n## General Co-chairs\n\n*   Claudio Orlandi, Aarhus University\n*   Sophia Yakoubov, Aarhus University\n*   Peter Scholl, Aarhus University"
+}
+

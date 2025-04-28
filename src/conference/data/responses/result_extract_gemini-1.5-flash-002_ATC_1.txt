@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "December 2 - 7, 2024",
+  "Year": "2024",
+  "Location": "Denarau Island, Fiji",
+  "City-State-Province": "Denarau Island",
+  "Country": "Fiji",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Regular Paper Due": "August 4, 2024",
+    "Workshop/SS Paper Due": "August 20, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "September 15, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Submission": "October 25, 2024"
+  },
+  "Other Date": {
+    "Workshop/SS Proposal Due": "June 15, 2024"
+  },
+  "Topics": "Control & Decision, Fusion & Tracking, Trusted Computing, Autonomous Driving & Systems",
+  "Summary": "The 21st IEEE International Conference on Autonomous and Trusted Computing (ATC 2024) will be held on December 2-7, 2024, at Denarau Island, Fiji.  The conference serves as a preeminent forum for researchers and practitioners in the field of autonomous and trusted computing, focusing on novel computing concepts and their applications.",
+  "Call for Papers": "# ATC 2024: Call for Papers\n\nThe 21st IEEE International Conference on Autonomous and Trusted Computing (ATC 2024) will be held on **December 2-7, 2024 at Denarau Island, Fiji.**\n\nATC 2024 is a preeminent forum for researchers and practitioners in the field of autonomous and trusted computing.\n\n## Topics\n\nATC 2024 topics include, but are not limited to, the following:\n\n### Track 1: Control & Decision\n\n*   Distributed Control Theory and Applications\n*   Automation and Robotics\n*   Intelligent Control Systems\n*   Networked Control\n*   Cybersecurity\n*   Cyber Trust\n*   Fusion Decision\n*   Artificial Intelligence in Control and Decision\n*   Data-Driven Control and Decision\n*   Multi-Criteria Decision Making\n\n### Track 2: Fusion & Tracking\n\n*   Target Detection\n*   Multiple Target Tracking\n*   Distributed Target Tracking\n*   Optoelectronic/Infrared Target Tracking\n*   Extended/Group Target Tracking\n*   Tracking of Weak and Small Targets\n*   Multiple Target Data Association\n*   Multiple Sensor Information Fusion\n*   Belief Propagation/Message Passing Algorithm\n*   Random Finite Set Theory and Methods\n\n### Track 3: Trusted Computing\n\n*   Trust, Security, and Privacy\n*   Blockchain Technology and Applications\n*   Applied Cryptography\n*   Network Security\n*   Cloud Computing Security\n*   Economics of Security and Privacy\n*   Privacy-Enhancing Technologies\n*   Attacks with Novel Insights, and Techniques\n*   Machine Learning and Computer Security\n*   Systems Security\n\n### Track 4: Autonomous Driving & Systems\n\n*   Autonomous Computing\n*   Autonomous Robot\n*   Autonomous Intelligence\n*   Internet of Things\n*   Edge Computing\n*   Vehicle Sensor Fusion\n*   Vehicle Scheduling\n*   High-performance Embedded Computation\n*   Decision and Planning\n*   Target Tracking/Recognition\n\n## Important Dates\n\n*   **Workshop/SS Proposal Due:** June 15, 2024 (Extended)\n*   **Regular Paper Due:** August 4, 2024 (Extended)\n*   **Workshop/SS Paper Due:** August 20, 2024 (Extended)\n*   **Author Notification:** September 15, 2024\n*   **Camera-Ready Submission:** October 25, 2024\n*   **Conference Date:** December 02-07, 2024\n\n## Submission Guidelines\n\nThe use of artificial intelligence (AI)–generated text in an article shall be disclosed in the acknowledgements section of any paper submitted to an IEEE Conference or Periodical.  The sections of the paper that use AI-generated text shall have a citation to the AI system used to generate the text.\n\n## Co-located Conferences\n\n*   21th IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2024)\n*   2024 IEEE International Conference on Digital Twin (DigitalTwin 2024)\n*   2024 IEEE International Conference on Metaverse (Metaverse 2024)\n*   10th IEEE International Conference on Privacy Computing and Data Security (PCDS 2024)\n*   24th IEEE International Conference on Scalable Computing & Communications (ScalCom 2024)"
+}
+

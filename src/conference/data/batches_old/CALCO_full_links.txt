@@ -1,0 +1,487 @@
+Conference full name: Conference on Algebra and Coalgebra in Computer Science (CALCO)
+
+1. Website of CALCO_2: https://coalg.org/events/calco/
+Website information of CALCO_2:
+
+About 
+ Events | href="./" - CALCO 
+ CMCS 
+ Further Events 
+ Steering Committee | SC Members 
+ CMCS Business Rules 
+ Search 
+ CALCO 
+ Algebraic and coalgebraic methods and tools are a mainstay of computer science. From data types to development techniques and specification formalisms, both theoreticians and practitioners have benefited from the large body of research proposed and implemented since the pioneering works of the 1960s. TheConference on Algebra and Coalgebra in Computer Science(CALCO) aims to bring together researchers and practitioners with interests in foundational aspects, and both traditional and emerging uses of algebra and coalgebra in computer science. CALCO is a high-level, bi-annual conference formed by joining the forces and reputations of CMCS (the International Workshop on Coalgebraic Methods in Computer Science) and WADT (the Workshop on Algebraic Development Techniques). 
+ Usually, CALCO is co-located withMFPS. 
+ Previous editions of the Conference on Algebra and Coalgebra in Computer Science: 
+ href="https://www.coalg.org/calco-mfps-2025/" - CALCO and MFPS 2025 in Glasgow (Scotland) 
+ href="https://coalg.org/calco-mfps-2023/" - CALCO and MFPS 2023 in Bloomington (USA) 
+ href="https://coalg.org/calco-mfps2021" - CALCO and MFPS 2021 in Salzburg (Austria)/online 
+ href="https://coalg.org/calco-mfps-2019/" - CALCO and MFPS 2019 in London (UK) 
+ href="http://coalg.org/mfps-calco2017/" - CALCO 2017 in Ljubljana (Slovenia) 
+ href="https://coalg.org/calco15/" - Nijmegen (the Netherlands, 2015) 
+ Warsaw (Poland, 2013) (website available | href="http://web.archive.org/web/20191020061139/https://www.coalg.org/calco13/" - in the web archive | ) 
+ Winchester (UK, 2011) 
+ Udine (Italy, 2009) 
+ Bergen (Norway, 2007) 
+ Swansea (Wales, 2005) 
+ Built withMkDocs. 
+ Search 
+ From here you can search these documents. Enter your search terms below. 
+ Keyboard Shortcuts 
+  
+ Keys | Action 
+ ? | Open this help 
+ n | Next page 
+ p | Previous page 
+ s | Search
+
+2. Website of CALCO_2: https://www.coalg.org/calco-mfps-2025/calco/
+Website information of CALCO_2:
+
+About 
+ href="#" - CALCO | About 
+ href="cfp/" - Call for Papers 
+ MFPS | About 
+ href="../mfps/cfp/" - Call for Papers 
+ Practical Information 
+ Search 
+ 11th Conference on Algebra and Coalgebra in Computer Science | href="#important_dates" - Important Dates 
+ Invited Speakers 
+ Chairs 
+ Programme Committee 
+ Publicity Chair 
+ Local Organiser 
+ About 
+ 11th Conference on Algebra and Coalgebra in Computer Science 
+ CALCO aims to bring together researchers and practitioners with interests in foundational aspects, and both traditional and emerging uses of algebra and coalgebra in computer science. It is a high-level bi-annual conference formed by joining the forces and reputations ofCMCS(the International Workshop on Coalgebraic Methods in Computer Science), andWADT(the Workshop on Algebraic Development Techniques). Previous CALCO editions took place inhref="http://www.cs.swan.ac.uk/calco/" - Swansea
+(Wales, 2005),href="http://www.ii.uib.no/calco07/" - Bergen
+(Norway, 2007),href="http://calco09.dimi.uniud.it" - Udine
+(Italy, 2009),href="http://calco2011.ecs.soton.ac.uk" - Winchester
+(UK, 2011),href="http://web.archive.org/web/20191020061139/http://coalg.org/calco13/" - Warsaw
+(Poland, 2013),href="http://www.coalg.org/calco15/" - Nijmegen
+(The Netherlands, 2015),href="http://www.coalg.org/mfps-calco2017/" - Ljubljana
+(Slovenia, 2017),href="https://www.coalg.org/calco-mfps-2019/" - London
+(United Kingdom, 2019),href="https://www.coalg.org/calco-mfps2021/" - Salzburg
+(Austria, 2021),href="https://www.coalg.org/calco-mfps-2023/" - Bloomington
+(USA, 2023). The 11th edition will be held in Glasgow, UK, co-located with MFPS XLI. 
+ Important Dates 
+ Abstract submission: | href="https://time.is/2359_10_Mar_2025_in_Anywhere_on_Earth?CALCO%20Abstract%20Deadline" - March 10, 2025 | ( | extended | ; | was March 3 | ) 
+ Full Paper submission: | href="https://time.is/2359_13_Mar_2025_in_Anywhere_on_Earth?CALCO%20Full%20Paper%20Deadline" - March 13, 2025 | ( | extended | ; | was March 6 | ) 
+ Author notification: | href="https://time.is/2359_28_Apr_2025_in_Anywhere_on_Earth?CALCO%20Notification" - April 28, 2025 | ( | updated | ; | was April 16 | ) 
+ Final version due: | href="https://time.is/2359_30_May_2025_in_Anywhere_on_Earth?CALCO%20Final%20Version%20Due" - May 30, 2025 
+ All dates areAnywhere on Earth. 
+ Invited Speakers 
+ Ugo Dal Lago | (joint special session on Quantitative Semantics) 
+ href="https://www.research.ed.ac.uk/en/persons/gordon-plotkin" - Gordon Plotkin | (joint keynote speaker) 
+ Elena di Lavore 
+ Alexander Kurz 
+ Chairs 
+ Corina Cirstea | (University of Southampton) 
+ Alexander Knapp | (University of Augsburg) 
+ Programme Committee 
+ Andreas Abel | (Chalmers University of Technology) 
+ Guillermo Badia | (University of Queensland) 
+ Paolo Baldan | (University of Padova) 
+ href="https://www.ruisoaresbarbosa.com/research.html" - Rui Soares Barbosa | (International Iberian Nanotechnology Laboratory) 
+ Henning Basold | (Leiden University) 
+ Harsh Beohar | (University of Sheffield) 
+ href="https://www.irif.fr/~greta/author/filippo-bonchi/" - Filippo Bonchi | (University of Pisa) 
+ Thierry Boy de La Tour | (Laboratoire d'Informatique de Grenoble) 
+ Jim de Groot | (Australian National University) 
+ Valeria de Paiva | (Topos Institute) 
+ Jérémy Dubut | (École Polytechnique) 
+ Fabio Gadducci | (University of Pisa) 
+ Daniel Hausmann | (University of Liverpool) 
+ Sophia Knight | (Swenson College of Science and Engineering) 
+ Clemens Kupke | (University of Strathclyde) 
+ Carlos Gustavo Lopez Pombo | (University of Buenos Aires) 
+ Alexandre Madeira | (University of Aveiro) 
+ Larry Moss | (Indiana University) 
+ Koko Muroya | (Kyoto University) 
+ Peter Ölveczky | (University of Oslo) 
+ Jurriaan Rot | (Radboud University) 
+ Todd Schmid | (Bucknell University) 
+ Pawel Sobocinski | (Taltech) 
+ Ana Sokolova | (University of Salzburg) 
+ Henning Urbat | (Friedrich-Alexander-Universität Erlangen-Nürnberg) 
+ Tarmo Uustalu | (Reykjavik University) 
+ Maaike Zwart | (University of Copenhagen) 
+ Publicity Chair 
+ Website & CALCO Publicity Chair: | Thorsten Wißmann 
+ Local Organiser 
+ Clemens Kupke | (University of Strathclyde) 
+ Built withMkDocs. 
+ Search 
+ From here you can search these documents. Enter your search terms below. 
+ Keyboard Shortcuts 
+  
+ Keys | Action 
+ ? | Open this help 
+ n | Next page 
+ p | Previous page 
+ s | Search
+
+3. Website of CALCO_2: http://www.wikicfp.com/cfp/program?id=350
+Website information of CALCO_2:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ CALCO: Conference on Algebra and Coalgebra in Computer Science 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=350" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=350&text=CALCO: Conference on Algebra and Coalgebra in Computer Science" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=350" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=350" - | CALCO: Conference on Algebra and Coalgebra in Computer Science | href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=350" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=350&text=CALCO: Conference on Algebra and Coalgebra in Computer Science" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=350" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=350" - 
+ CALCO: Conference on Algebra and Coalgebra in Computer Science 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=350" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=350&text=CALCO: Conference on Algebra and Coalgebra in Computer Science" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=350" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=350" - 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/calco/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Conference on Algebra and Coalgebra in Computer Science&shortname=CALCO&year=2024&sid=350" - 2024 or later | Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/calco/index.html" - DBLP | Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Conference on Algebra and Coalgebra in Computer Science&shortname=CALCO&year=2024&sid=350" - 2024 or later 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/calco/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Conference on Algebra and Coalgebra in Computer Science&shortname=CALCO&year=2024&sid=350" - 2024 or later 
+ All CFPs on WikiCFP 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=170755&copyownerid=169137" - CALCO 2023 | Conference on Algebra and Coalgebra in Computer Science 
+ Jun 19, 2023 - Jun 24, 2023 | University of Indiana | Mar 8, 2023 
+ href="/cfp/servlet/event.showcfp?eventid=129215&copyownerid=106901" - CALCO 2021 | 9th International Conference on Algebra and Coalgebra in Computer Science 
+ Aug 31, 2021 - Sep 3, 2021 | Salzburg, Austria | Jun 3, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=42196&copyownerid=320" - CALCO 2015 | 6th International Conference on Algebra and Coalgebra in Computer Science 
+ Jun 24, 2015 - Jun 26, 2015 | Nijmegen, Netherlands | Apr 2, 2015 (Mar 22, 2015) 
+ href="/cfp/servlet/event.showcfp?eventid=28067&copyownerid=43625" - CALCO 2013 | 5th International Conference on Algebra and Coalgebra in Computer Science 
+ Sep 3, 2013 - Sep 6, 2013 | Warsaw, Poland | Mar 1, 2013 (Feb 22, 2013) 
+ href="/cfp/servlet/event.showcfp?eventid=4693&copyownerid=2" - CALCO 2009 | 3rd Conference on Algebra and Coalgebra in Computer Science 
+ Sep 6, 2009 - Sep 10, 2009 | Udine, Italy | Feb 15, 2009 (Feb 8, 2009) | Event | When | Where | Deadline | href="/cfp/servlet/event.showcfp?eventid=170755&copyownerid=169137" - CALCO 2023 | Conference on Algebra and Coalgebra in Computer Science | Jun 19, 2023 - Jun 24, 2023 | University of Indiana | Mar 8, 2023 | href="/cfp/servlet/event.showcfp?eventid=129215&copyownerid=106901" - CALCO 2021 | 9th International Conference on Algebra and Coalgebra in Computer Science | Aug 31, 2021 - Sep 3, 2021 | Salzburg, Austria | Jun 3, 2021 | href="/cfp/servlet/event.showcfp?eventid=42196&copyownerid=320" - CALCO 2015 | 6th International Conference on Algebra and Coalgebra in Computer Science | Jun 24, 2015 - Jun 26, 2015 | Nijmegen, Netherlands | Apr 2, 2015 (Mar 22, 2015) | href="/cfp/servlet/event.showcfp?eventid=28067&copyownerid=43625" - CALCO 2013 | 5th International Conference on Algebra and Coalgebra in Computer Science | Sep 3, 2013 - Sep 6, 2013 | Warsaw, Poland | Mar 1, 2013 (Feb 22, 2013) | href="/cfp/servlet/event.showcfp?eventid=4693&copyownerid=2" - CALCO 2009 | 3rd Conference on Algebra and Coalgebra in Computer Science | Sep 6, 2009 - Sep 10, 2009 | Udine, Italy | Feb 15, 2009 (Feb 8, 2009) 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=170755&copyownerid=169137" - CALCO 2023 | Conference on Algebra and Coalgebra in Computer Science 
+ Jun 19, 2023 - Jun 24, 2023 | University of Indiana | Mar 8, 2023 
+ href="/cfp/servlet/event.showcfp?eventid=129215&copyownerid=106901" - CALCO 2021 | 9th International Conference on Algebra and Coalgebra in Computer Science 
+ Aug 31, 2021 - Sep 3, 2021 | Salzburg, Austria | Jun 3, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=42196&copyownerid=320" - CALCO 2015 | 6th International Conference on Algebra and Coalgebra in Computer Science 
+ Jun 24, 2015 - Jun 26, 2015 | Nijmegen, Netherlands | Apr 2, 2015 (Mar 22, 2015) 
+ href="/cfp/servlet/event.showcfp?eventid=28067&copyownerid=43625" - CALCO 2013 | 5th International Conference on Algebra and Coalgebra in Computer Science 
+ Sep 3, 2013 - Sep 6, 2013 | Warsaw, Poland | Mar 1, 2013 (Feb 22, 2013) 
+ href="/cfp/servlet/event.showcfp?eventid=4693&copyownerid=2" - CALCO 2009 | 3rd Conference on Algebra and Coalgebra in Computer Science 
+ Sep 6, 2009 - Sep 10, 2009 | Udine, Italy | Feb 15, 2009 (Feb 8, 2009) 
+ Present CFP : 2023 
+ ========================================================= 
+  
+ CALL FOR PAPERS: CALCO 2023 
+  
+ 10th International Conference on 
+ Algebra and Coalgebra in Computer Science 
+  
+ June 19-22, 2023 
+  
+ Bloomington, Indiana (USA) and online 
+  
+ Co-located with MFPS XXXIX 
+  
+ https://coalg.org/calco-mfps-2023/ 
+  
+ ========================================================== 
+ Paper submission: March 8, 2023 (AoE) 
+ Author notification: Apr 28, 2023 (AoE) 
+ Final version due: May 19, 2023 
+ ========================================================== 
+
+Scope 
+ ----- 
+ Algebraic and coalgebraic methods and tools are a mainstay of computer 
+ science. From data types to development techniques and specification 
+ formalisms, both theoreticians and practitioners have benefited from 
+ the large body of research proposed and implemented since the 
+ pioneering works of the 1960s. 
+  
+ CALCO aims to bring together researchers with interests in both 
+ foundational and applicative uses of algebra and coalgebra in 
+ computer science, traditional as well as emerging ones 
+  
+ CALCO is a high-level, bi-annual conference formed by joining the 
+ forces and reputations of CMCS (the International Workshop on 
+ Coalgebraic Methods in Computer Science) and WADT (the Workshop on 
+ Algebraic Development Techniques). Previous CALCO editions took place 
+ in Salzburg (Austria, 2021), London (UK, 2019), Ljubljana 
+ (Slovenia,2017), Nijmegen (the Netherlands, 2015), Warsaw (Poland, 
+ 2013), Winchester (UK, 2011), Udine (Italy, 2009), Bergen (Norway, 
+ 2007), Swansea (Wales, 2005). 
+  
+ The 10th edition will be held in Bloomington, Indiana, co-located with 
+ MFPS XXXIX. It is planned as a physical, in-person event, with 
+ support for remote presence, both for speakers and for other 
+ participants who are unable or unwilling to travel. 
+
+Submission Categories 
+ --------------------- 
+ CALCO invites papers relating to all aspects of algebraic and 
+ coalgebraic theory and applications, and distinguishes between four 
+ categories of submissions. 
+  
+ 1. Regular papers that report 
+ * results on theoretical foundations 
+ * novel methods and techniques for software development 
+ * experiences with technology transfer to industry. 
+  
+ 2. (Co)Algebraic Pearls papers that 
+ * present possibly known material in a novel and enlightening way. 
+  
+ 3. Early ideas abstracts that lead to 
+ * presentations of work in progress 
+ * proposals for original venues of research. 
+  
+ 4. Tool presentation papers that 
+ * report on the features and uses of algebraic/coalgebraic tools. 
+
+Topics of Interests 
+ ------------------- 
+ All topics relating to algebraic and coalgebraic theory and applications 
+ are of interest for CALCO, and among them 
+  
+ * Models and logics 
+ - Automata and languages 
+ - Graph transformations and term rewriting 
+ - Modal logics 
+ - Proof systems 
+ - Relational systems 
+  
+ * Algebraic and coalgebraic semantics 
+ - Abstract data types 
+ - Re-engineering techniques (program transformations) 
+ - Semantics of conceptual modelling methods and techniques 
+ - Semantics of programming languages 
+  
+ * Methodologies in software and systems engineering 
+ - Development processes 
+ - Method integration 
+ - Usage guidelines 
+  
+ * Specialised models and calculi 
+ - Hybrid, probabilistic, and timed systems 
+ - Concurrent, distributed, mobile, cyber-physical, 
+ and context-aware computational paradigms 
+ - Systems theory and computational models (chemical, biological, etc.) 
+  
+ * System specification and verification 
+ - Formal testing and quality assurance 
+ - Generative programming and model-driven development 
+ - Integration of formal specification techniques 
+ - Model-driven development 
+ - Specification languages, methods, and environments 
+  
+ * Tools supporting algebraic and coalgebraic methods for 
+ - Advances in automated verification 
+ - Model checking 
+ - Theorem proving 
+ - Testing 
+  
+ * String diagrams and network theory 
+ - Theory of PROPs and operads 
+ - Rewriting problems and higher-dimensional approaches 
+ - Automated reasoning with string diagrams 
+ - Applications of string diagrams 
+  
+ * Quantum computing 
+ - Categorical semantics for quantum computing 
+ - Quantum calculi and programming languages 
+ - Foundational structures for quantum computing 
+ - Applications of quantum algebra 
+
+Submissions Guidelines 
+ ---------------------- 
+ All submissions will be handled via EasyChair: 
+ https://easychair.org/conferences/?conf=calco2023 
+  
+ The format for all submissions is specified by LIPIcs. Please use the 
+ latest version of the style: 
+ http://www.dagstuhl.de/en/publications/lipics/instructions-for-authors/ 
+  
+ It is recommended that submissions adhere to that format and length. 
+ Submissions that are clearly too long may be rejected immediately. 
+
+Regular papers 
+ -------------- 
+ Prospective authors are invited to submit full papers in English 
+ presenting original research. Submitted papers must be unpublished and 
+ not submitted for publication elsewhere. Regular papers should be 
+ maximum 15 pages long, excluding references. Proofs omitted due to space 
+ limitations may be included in a clearly marked appendix. 
+  
+ Proceedings will be published in the Dagstuhl LIPIcs Leibniz 
+ International Proceedings in Informatics series. 
+  
+ A special issue of the open access journal Logical Methods in Computer 
+ Science (http://www.lmcs-online.org), containing extended versions of 
+ selected papers, is planned. 
+
+(Co)algebraic pearls 
+ -------------------- 
+ This is a recent submission category. Explaining a known idea in a new 
+ way may make as strong a contribution as inventing a new idea. We 
+ encourage the submission of pearls: elegant essays that illustrate an 
+ idea in a beautiful or didactically clever way, perhaps by developing 
+ an application. Pearls are typically short and concise and so should 
+ not be longer than regular papers in the format specified by 
+ LIPIcs. Authors who feel they need a bit more space should consult 
+ with the PC co-chairs. The accepted papers will be included in the 
+ final proceedings of the conference. Each submission will be evaluated 
+ by at least two reviewers. 
+
+Early ideas abstracts 
+ --------------------- 
+ Submissions should not exceed 2 pages in the format specified by LIPIcs. 
+ The volume of selected abstracts will be made available on arXiv and on 
+ the CALCO pages. Authors will retain copyright, and are also encouraged 
+ to disseminate the results by subsequent publication elsewhere. Each 
+ submission will be evaluated by at least two reviewers. 
+
+Tool papers 
+ ----------- 
+ Submissions should not exceed 5 pages in the format specified by LIPIcs. 
+ The accepted tool papers will be included in the final proceedings of 
+ the conference. The tools should be made available on the web at the 
+ time of submission for download and evaluation. Each submission will be 
+ evaluated by at least three reviewers, and one or more of the reviewers 
+ will be asked to download and use the tool. 
+
+Best Paper and Best Presentation Awards 
+ --------------------------------------- 
+ This edition of CALCO will feature two awards: a Best Paper Award whose 
+ recipients will be selected by the PC before the conference and a 
+ Best Presentation Award, elected by the participants. 
+
+Programme Committee 
+ ------------------- 
+ * Carlos Gustavo Lopez Pombo (University of Buenos Aires) 
+ * Andreas Abel (Gothenburg University) 
+ * Vincenzo Ciancia (Consiglio Nazionale delle Ricerche, Pisa) 
+ * Patricia Johann (Appalachian State University) 
+ * Ionut Tutu (Simion Stoilow Institute of Mathematics of the Romanian Academy) 
+ * Martin Escardo (University of Birmingham) 
+ * Tarmo Uustalu (Reykjavik University) 
+ * Giorgio Bacci (Aalborg University) 
+ * Thorsten Wißmann (Radboud University Nijmegen) 
+ * Fabio Gadducci (University of Pisa) 
+ * Shin-Ya Katsumata (National Institute of Informatics, Tokyo) 
+ * Holger Giese (Hasso Plattner Institute at the University of Potsdam) 
+ * Peter Ölveczky (University of Oslo) 
+ * Michael Johnson (Macquarie University) 
+ * Nicolas Behr (CNRS Université Paris Cité) 
+ * Henning Urbat (FAU Erlangen-Nürnberg) 
+ * Valentina Castiglioni (Reykjavik University) 
+ * Fernando Orejas (Universitat Politècnica de Catalunya) 
+ * Mehrnoosh Sadrzadeh (University College London) 
+ * Georgiana Caltais (University of Twente) 
+ * Sławomir Lasota (University of Warsaw) 
+ * Aleks Kissinger (University of Oxford) 
+ * Thomas Colcombet (CNRS, IRIF, Université de Paris) 
+ * Sandra Kiefer (Max Planck Institute for Software Systems) 
+ * Peter Selinger (Dalhousie University) 
+ * Natasha Alechina (Utrecht University) 
+ * Sara Kalvala (University of Warwick) 
+
+Chairs 
+ ------ 
+ Paolo Baldan (University of Padua) 
+ Valeria de Paiva (Topos Institute, Berkeley) 
+
+Organiser 
+ --------- 
+ * Larry Moss (local) (Indiana University) 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=181564" - IJCSEIT 2025
+International Journal of Computer Science, Engineering and Information Technology 
+ href="/cfp/servlet/event.showcfp?eventid=181609" - IEEE-ADMIT 2025
+2025 IEEE 4th International Conference on Algorithms, Data Mining, and Information Technology (ADMIT 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186281" - TLISC 2025
+2° Taller Latinoamericano en Ingeniería y Software Cuántico 
+ href="/cfp/servlet/event.showcfp?eventid=186207" - CSPE 2026
+IEEE--2026 International Conference on Computational Science and Power Engineering (CSPE 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=186371" - AQMCSE 2025
+International Conference on Applied Quantum Methods in Computational Science and Engineering 
+ href="/cfp/servlet/event.showcfp?eventid=187820" - IEEE-DSIS 2025
+2025 International Conference on Data Science and Intelligent Systems (DSIS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185650" - FoIKS 2026
+International Symposium on Foundations of Information and Knowledge Systems 
+ href="/cfp/servlet/event.showcfp?eventid=187508" - IPMV--EI 2026
+2026 8th International Conference on Image Processing and Machine Vision (IPMV 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=187819" - DSIT 2025
+2025 IEEE 8th International Conference on Data Science and Information Technology (DSIT 2025) | href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing | href="/cfp/servlet/event.showcfp?eventid=181564" - IJCSEIT 2025
+International Journal of Computer Science, Engineering and Information Technology | href="/cfp/servlet/event.showcfp?eventid=181609" - IEEE-ADMIT 2025
+2025 IEEE 4th International Conference on Algorithms, Data Mining, and Information Technology (ADMIT 2025) | href="/cfp/servlet/event.showcfp?eventid=186281" - TLISC 2025
+2° Taller Latinoamericano en Ingeniería y Software Cuántico | href="/cfp/servlet/event.showcfp?eventid=186207" - CSPE 2026
+IEEE--2026 International Conference on Computational Science and Power Engineering (CSPE 2026) | href="/cfp/servlet/event.showcfp?eventid=186371" - AQMCSE 2025
+International Conference on Applied Quantum Methods in Computational Science and Engineering | href="/cfp/servlet/event.showcfp?eventid=187820" - IEEE-DSIS 2025
+2025 International Conference on Data Science and Intelligent Systems (DSIS 2025) | href="/cfp/servlet/event.showcfp?eventid=185650" - FoIKS 2026
+International Symposium on Foundations of Information and Knowledge Systems | href="/cfp/servlet/event.showcfp?eventid=187508" - IPMV--EI 2026
+2026 8th International Conference on Image Processing and Machine Vision (IPMV 2026) | href="/cfp/servlet/event.showcfp?eventid=187819" - DSIT 2025
+2025 IEEE 8th International Conference on Data Science and Information Technology (DSIT 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=181564" - IJCSEIT 2025
+International Journal of Computer Science, Engineering and Information Technology 
+ href="/cfp/servlet/event.showcfp?eventid=181609" - IEEE-ADMIT 2025
+2025 IEEE 4th International Conference on Algorithms, Data Mining, and Information Technology (ADMIT 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186281" - TLISC 2025
+2° Taller Latinoamericano en Ingeniería y Software Cuántico 
+ href="/cfp/servlet/event.showcfp?eventid=186207" - CSPE 2026
+IEEE--2026 International Conference on Computational Science and Power Engineering (CSPE 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=186371" - AQMCSE 2025
+International Conference on Applied Quantum Methods in Computational Science and Engineering 
+ href="/cfp/servlet/event.showcfp?eventid=187820" - IEEE-DSIS 2025
+2025 International Conference on Data Science and Intelligent Systems (DSIS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185650" - FoIKS 2026
+International Symposium on Foundations of Information and Knowledge Systems 
+ href="/cfp/servlet/event.showcfp?eventid=187508" - IPMV--EI 2026
+2026 8th International Conference on Image Processing and Machine Vision (IPMV 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=187819" - DSIT 2025
+2025 IEEE 8th International Conference on Data Science and Information Technology (DSIT 2025) 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+

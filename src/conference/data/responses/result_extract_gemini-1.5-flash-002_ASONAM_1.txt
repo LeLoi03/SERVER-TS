@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "August 25 - 28, 2025",
+  "Year": "2025",
+  "Location": "Niagara Falls, Ontario, Canada",
+  "City-State-Province": "Niagara Falls, Ontario",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission deadline": "May 4, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "June 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready papers and Author Registration": "July 1, 2025"
+  },
+  "Other Date": {
+    "Tutorials day": "August 25, 2025"
+  },
+  "Topics": "Social Network Analysis and Mining, Social and Media Analysis, Network Science, Machine Learning and AI applied to social networks, Technology and applications",
+  "Summary": "The 17th International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2025) will be held in Niagara Falls, Ontario, Canada from August 25-28, 2025.  The conference will provide an interdisciplinary venue that brings together practitioners and researchers from a variety of SNAM fields to promote collaborations and exchange of ideas and practices.",
+  "Call for Papers": "# ASONAM 2025: Call for Papers - Research Track\n\nThe 17th International Conference on Advances in Social Network Analysis and Mining (ASONAM 2025) will be held in **Niagara Falls, Ontario, Canada from August 25-28, 2025.**\n\nASONAM provides an interdisciplinary forum to bring together researchers and practitioners from all fields related to Social Networking Analysis and Mining. The conference is a venue for presenting original research results, as well as discussing and disseminating innovative and practical development experiences. ASONAM 2025 seeks to address important problems through the scientific investigation of socio-technical systems, the development of fundamental technologies, and the study of emerging applications associated with social networking analysis and mining.\n\n## General Areas of Interest\n\n*   Social and media analysis (e.g., data science, communications, economics, sociology, psychology, anthropology, applied linguistics, etc.)\n*   Network science (e.g., mathematical models, theory, algorithms, etc.)\n*   Machine Learning and AI applied to social networks (e.g., graph neural networks, representation learning, etc.)\n*   Technology and applications (e.g., systems, tools, crowdsourcing, etc.)\n\n## Submission Guidelines\n\nFull paper manuscripts must be in English with a maximum length of 15 pages or short paper 8 pages (using [Springer conference format](https://www.springer.com/in/authors-editors/conference-proceedings/conference-proceedings-guidelines?srsltid=AfmBOorN2naasHxUOm-O4QpL2rIrpAlWFWAQqk0kTrVhRj3VeDbhouTI)). Submissions should include the title, author(s), affiliation(s), e-mailaddress(es), tel/fax numbers, abstract, and postal address(es) on the first page.\n\nSubmissions should be made via EasyChair: [https://easychair.org/conferences/?conf=asonam20251](https://easychair.org/conferences/?conf=asonam20251)\n\n## Important Dates\n\n*   **Paper submission deadline:** May 4, 2025, 11:59 PM AoE\n*   **Notification of acceptance:** June 20, 2025, 11:59 PM AoE\n*   **Camera-ready papers and Author Registration:** July 1, 2025, 11:59 PM AoE\n*   **Conference and Tracks days:** August 25-28, 2025\n*   **Tutorials day:** August 25, 2025"
+}
+

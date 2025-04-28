@@ -1,0 +1,591 @@
+Conference FTfJP:
+
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5EsFTfJP-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /FTfJP 2025 (href="https://2025.ecoop.org/series/FTfJP" - series
+) /FTfJP 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Formal techniques can help analyse programs, precisely describe program behaviour, and verify program properties. Modern programming languages (such as C#, Java, Kotlin, Rust, or Scala) are interesting targets for formal techniques due to their ubiquity and wide user base, stable and well-defined interfaces and platforms, and powerful (but also complex) libraries. New languages and applications in this space are continually arising, resulting in new programming languages research challenges. 
+ Work on formal techniques and tools and on the formal underpinnings of programming languages themselves naturally complement each other. 
+ The Formal Techniques for Judicious Programming (FTfJP) workshop is an established workshop which has run annually since 1999 alongside ECOOP, with the goal of bringing together people working in both fields. 
+ In 2024 the name of the workshop was changed from “Formal Techniques for Java-like Programs” to “Formal Techniques for Judicious Programming” to properly reflect the broader scope of the workshop. 
+ In 2002 the name of the workshop was changed slightly - from “Formal Techniques for Java Programs” to “Formal Techniques for Java-like Programs” - to include not just work on Java, but also work on related languages such as C# or Scala. 
+ Example topics of interest include: 
+ Language design and semantics 
+ Type systems 
+ Concurrency and new application domains 
+ Specification and verification of program properties 
+ Program analysis (static or dynamic) 
+ Program synthesis 
+ Security 
+ Pearls (programs or proofs) 
+ FTfJP welcomes submissions on technical contributions, case studies, experience reports, challenge proposals, tools, and position papers. 
+ Call for Papers 
+ Paper Categories 
+ We solicit two categories of papers: 
+ Full Papers (12 pages, excluding references) present a technical contribution, case study, or detailed experience report. We welcome both complete and incomplete technical results; ongoing work is particularly welcome, provided it is substantial enough to stimulate interesting discussions. 
+ Short Papers (6 pages, excluding references) should advocate a promising research direction, or otherwise present a position likely to stimulate discussion at the workshop. We encourage e.g. established researchers to set out a personal vision, and beginning researchers to present a planned path to a PhD. 
+ Both types of contributions will benefit from feedback received at the workshop. Submissions will be peer reviewed and will be evaluated based on their clarity and their potential to generate interesting discussions. Reviewing will be single blind, i.e, submissions need not be anonymized. 
+ The format of the workshop encourages interaction. FTfJP is a forum in which a wide range of people share their expertise, from experienced researchers to beginning PhD students. 
+ href="#submission-guidelines" - Submission guidelines
+Papers must be formatted according tohref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - the guidelines for Springer LNCS papers
+. Submissions should be made via EasyChair:href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+. There is no need to indicate the paper category (long/short). 
+ We plan that accepted papers will be published as post-proceedings in JOT (Journal of Object Technology), though authors will be able to opt out of this publication, if desired. At least one author of an accepted paper must register to the workshop by the early registration date and attend the workshop to present the work and participate in the discussions. 
+ Important DatesAoE (UTC-12h) 
+  
+ Tue 15 Apr 2025 
+ Submission Deadline 
+ Wed 21 May 2025 
+ Notification 
+ Thu 3 Jul 2025 
+ Workshop Date 
+ Submission Link 
+ href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+Program Committee 
+ href="https://2025.ecoop.org/profile/crystalchangdin" - Crystal Chang DinPC ChairUniversity of BergenNorway 
+ href="https://2025.ecoop.org/profile/richardbubel" - Richard BubelPC MemberTechnische Universität DarmstadtGermany 
+ href="https://2025.ecoop.org/profile/syedaliasadullahbukhari" - Syed Ali Asadullah BukhariPC MemberMaynooth UniversityIreland 
+ href="https://2025.ecoop.org/profile/clairedross" - Claire DrossPC MemberAdaCoreFrance 
+ href="https://2025.ecoop.org/profile/erikernst" - Erik ErnstPC MemberGoogle Inc.Denmark 
+ href="https://2025.ecoop.org/profile/mariefarrell" - Marie FarrellPC MemberThe University of ManchesterUnited Kingdom 
+ href="https://2025.ecoop.org/profile/carloafuria" - Carlo A. FuriaPC MemberUniversità della Svizzera italiana (USI)Switzerland 
+ href="https://2025.ecoop.org/profile/atsushiigarashi" - Atsushi IgarashiPC MemberKyoto UniversityJapan 
+ href="https://2025.ecoop.org/profile/mariechristinejakobs" - Marie-Christine JakobsPC MemberLMU Munich, GermanyGermany 
+ href="https://2025.ecoop.org/profile/taylortjohnson" - Taylor T JohnsonPC MemberVanderbilt UniversityUnited States 
+ href="https://2025.ecoop.org/profile/matthewlutze1" - Matthew LutzePC MemberAarhus University 
+ href="https://2025.ecoop.org/profile/wojciechmostowski" - Wojciech MostowskiPC MemberHalmstad University 
+ href="https://2025.ecoop.org/profile/wytseoortwijn" - Wytse OortwijnPC MemberTNO-ESINetherlands 
+ href="https://2025.ecoop.org/profile/violetkaipun" - Violet Ka I PunPC MemberWestern Norway University of Applied SciencesNorway 
+ href="https://2025.ecoop.org/profile/antonwijs" - Anton WijsPC MemberEindhoven University of TechnologyNetherlands 
+ href="https://2025.ecoop.org/profile/elenazucca" - Elena ZuccaPC MemberUniversity of GenoaItaly 
+ Steering Committee 
+ Rosemary MonahanSteering Committee Chair 
+ National University of Ireland 
+ Ireland 
+ Werner DietlSteering Committee Member 
+ University of Waterloo 
+ Canada 
+ Radu GrigoreSteering Committee Member 
+ Facebook 
+ United Kingdom 
+ Gary T. LeavensSteering Committee Member 
+ University of Central Florida 
+ United States 
+ Alexander J. SummersSteering Committee Member 
+ University of British Columbia 
+ Canada 
+ xWed 2 Apr 05:42 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up 
+
+Call for Papers information:
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5EsFTfJP-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /FTfJP 2025 (href="https://2025.ecoop.org/series/FTfJP" - series
+) /FTfJP 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Formal techniques can help analyse programs, precisely describe program behaviour, and verify program properties. Modern programming languages (such as C#, Java, Kotlin, Rust, or Scala) are interesting targets for formal techniques due to their ubiquity and wide user base, stable and well-defined interfaces and platforms, and powerful (but also complex) libraries. New languages and applications in this space are continually arising, resulting in new programming languages research challenges. 
+ Work on formal techniques and tools and on the formal underpinnings of programming languages themselves naturally complement each other. 
+ The Formal Techniques for Judicious Programming (FTfJP) workshop is an established workshop which has run annually since 1999 alongside ECOOP, with the goal of bringing together people working in both fields. 
+ In 2024 the name of the workshop was changed from “Formal Techniques for Java-like Programs” to “Formal Techniques for Judicious Programming” to properly reflect the broader scope of the workshop. 
+ In 2002 the name of the workshop was changed slightly - from “Formal Techniques for Java Programs” to “Formal Techniques for Java-like Programs” - to include not just work on Java, but also work on related languages such as C# or Scala. 
+ Example topics of interest include: 
+ Language design and semantics 
+ Type systems 
+ Concurrency and new application domains 
+ Specification and verification of program properties 
+ Program analysis (static or dynamic) 
+ Program synthesis 
+ Security 
+ Pearls (programs or proofs) 
+ FTfJP welcomes submissions on technical contributions, case studies, experience reports, challenge proposals, tools, and position papers. 
+ Call for Papers 
+ Paper Categories 
+ We solicit two categories of papers: 
+ Full Papers (12 pages, excluding references) present a technical contribution, case study, or detailed experience report. We welcome both complete and incomplete technical results; ongoing work is particularly welcome, provided it is substantial enough to stimulate interesting discussions. 
+ Short Papers (6 pages, excluding references) should advocate a promising research direction, or otherwise present a position likely to stimulate discussion at the workshop. We encourage e.g. established researchers to set out a personal vision, and beginning researchers to present a planned path to a PhD. 
+ Both types of contributions will benefit from feedback received at the workshop. Submissions will be peer reviewed and will be evaluated based on their clarity and their potential to generate interesting discussions. Reviewing will be single blind, i.e, submissions need not be anonymized. 
+ The format of the workshop encourages interaction. FTfJP is a forum in which a wide range of people share their expertise, from experienced researchers to beginning PhD students. 
+ href="#submission-guidelines" - Submission guidelines
+Papers must be formatted according tohref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - the guidelines for Springer LNCS papers
+. Submissions should be made via EasyChair:href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+. There is no need to indicate the paper category (long/short). 
+ We plan that accepted papers will be published as post-proceedings in JOT (Journal of Object Technology), though authors will be able to opt out of this publication, if desired. At least one author of an accepted paper must register to the workshop by the early registration date and attend the workshop to present the work and participate in the discussions. 
+ Important DatesAoE (UTC-12h) 
+  
+ Tue 15 Apr 2025 
+ Submission Deadline 
+ Wed 21 May 2025 
+ Notification 
+ Thu 3 Jul 2025 
+ Workshop Date 
+ Submission Link 
+ href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+Program Committee 
+ href="https://2025.ecoop.org/profile/crystalchangdin" - Crystal Chang DinPC ChairUniversity of BergenNorway 
+ href="https://2025.ecoop.org/profile/richardbubel" - Richard BubelPC MemberTechnische Universität DarmstadtGermany 
+ href="https://2025.ecoop.org/profile/syedaliasadullahbukhari" - Syed Ali Asadullah BukhariPC MemberMaynooth UniversityIreland 
+ href="https://2025.ecoop.org/profile/clairedross" - Claire DrossPC MemberAdaCoreFrance 
+ href="https://2025.ecoop.org/profile/erikernst" - Erik ErnstPC MemberGoogle Inc.Denmark 
+ href="https://2025.ecoop.org/profile/mariefarrell" - Marie FarrellPC MemberThe University of ManchesterUnited Kingdom 
+ href="https://2025.ecoop.org/profile/carloafuria" - Carlo A. FuriaPC MemberUniversità della Svizzera italiana (USI)Switzerland 
+ href="https://2025.ecoop.org/profile/atsushiigarashi" - Atsushi IgarashiPC MemberKyoto UniversityJapan 
+ href="https://2025.ecoop.org/profile/mariechristinejakobs" - Marie-Christine JakobsPC MemberLMU Munich, GermanyGermany 
+ href="https://2025.ecoop.org/profile/taylortjohnson" - Taylor T JohnsonPC MemberVanderbilt UniversityUnited States 
+ href="https://2025.ecoop.org/profile/matthewlutze1" - Matthew LutzePC MemberAarhus University 
+ href="https://2025.ecoop.org/profile/wojciechmostowski" - Wojciech MostowskiPC MemberHalmstad University 
+ href="https://2025.ecoop.org/profile/wytseoortwijn" - Wytse OortwijnPC MemberTNO-ESINetherlands 
+ href="https://2025.ecoop.org/profile/violetkaipun" - Violet Ka I PunPC MemberWestern Norway University of Applied SciencesNorway 
+ href="https://2025.ecoop.org/profile/antonwijs" - Anton WijsPC MemberEindhoven University of TechnologyNetherlands 
+ href="https://2025.ecoop.org/profile/elenazucca" - Elena ZuccaPC MemberUniversity of GenoaItaly 
+ Steering Committee 
+ Rosemary MonahanSteering Committee Chair 
+ National University of Ireland 
+ Ireland 
+ Werner DietlSteering Committee Member 
+ University of Waterloo 
+ Canada 
+ Radu GrigoreSteering Committee Member 
+ Facebook 
+ United Kingdom 
+ Gary T. LeavensSteering Committee Member 
+ University of Central Florida 
+ United States 
+ Alexander J. SummersSteering Committee Member 
+ University of British Columbia 
+ Canada 
+ xWed 2 Apr 05:43 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up 
+
+Important Dates information:
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5EsFTfJP-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /FTfJP 2025 (href="https://2025.ecoop.org/series/FTfJP" - series
+) /FTfJP 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Formal techniques can help analyse programs, precisely describe program behaviour, and verify program properties. Modern programming languages (such as C#, Java, Kotlin, Rust, or Scala) are interesting targets for formal techniques due to their ubiquity and wide user base, stable and well-defined interfaces and platforms, and powerful (but also complex) libraries. New languages and applications in this space are continually arising, resulting in new programming languages research challenges. 
+ Work on formal techniques and tools and on the formal underpinnings of programming languages themselves naturally complement each other. 
+ The Formal Techniques for Judicious Programming (FTfJP) workshop is an established workshop which has run annually since 1999 alongside ECOOP, with the goal of bringing together people working in both fields. 
+ In 2024 the name of the workshop was changed from “Formal Techniques for Java-like Programs” to “Formal Techniques for Judicious Programming” to properly reflect the broader scope of the workshop. 
+ In 2002 the name of the workshop was changed slightly - from “Formal Techniques for Java Programs” to “Formal Techniques for Java-like Programs” - to include not just work on Java, but also work on related languages such as C# or Scala. 
+ Example topics of interest include: 
+ Language design and semantics 
+ Type systems 
+ Concurrency and new application domains 
+ Specification and verification of program properties 
+ Program analysis (static or dynamic) 
+ Program synthesis 
+ Security 
+ Pearls (programs or proofs) 
+ FTfJP welcomes submissions on technical contributions, case studies, experience reports, challenge proposals, tools, and position papers. 
+ Call for Papers 
+ Paper Categories 
+ We solicit two categories of papers: 
+ Full Papers (12 pages, excluding references) present a technical contribution, case study, or detailed experience report. We welcome both complete and incomplete technical results; ongoing work is particularly welcome, provided it is substantial enough to stimulate interesting discussions. 
+ Short Papers (6 pages, excluding references) should advocate a promising research direction, or otherwise present a position likely to stimulate discussion at the workshop. We encourage e.g. established researchers to set out a personal vision, and beginning researchers to present a planned path to a PhD. 
+ Both types of contributions will benefit from feedback received at the workshop. Submissions will be peer reviewed and will be evaluated based on their clarity and their potential to generate interesting discussions. Reviewing will be single blind, i.e, submissions need not be anonymized. 
+ The format of the workshop encourages interaction. FTfJP is a forum in which a wide range of people share their expertise, from experienced researchers to beginning PhD students. 
+ href="#submission-guidelines" - Submission guidelines
+Papers must be formatted according tohref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - the guidelines for Springer LNCS papers
+. Submissions should be made via EasyChair:href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+. There is no need to indicate the paper category (long/short). 
+ We plan that accepted papers will be published as post-proceedings in JOT (Journal of Object Technology), though authors will be able to opt out of this publication, if desired. At least one author of an accepted paper must register to the workshop by the early registration date and attend the workshop to present the work and participate in the discussions. 
+ Important DatesAoE (UTC-12h) 
+  
+ Tue 15 Apr 2025 
+ Submission Deadline 
+ Wed 21 May 2025 
+ Notification 
+ Thu 3 Jul 2025 
+ Workshop Date 
+ Submission Link 
+ href="https://easychair.org/conferences?conf=ftfjp2025" - https://easychair.org/conferences?conf=ftfjp2025
+Program Committee 
+ href="https://2025.ecoop.org/profile/crystalchangdin" - Crystal Chang DinPC ChairUniversity of BergenNorway 
+ href="https://2025.ecoop.org/profile/richardbubel" - Richard BubelPC MemberTechnische Universität DarmstadtGermany 
+ href="https://2025.ecoop.org/profile/syedaliasadullahbukhari" - Syed Ali Asadullah BukhariPC MemberMaynooth UniversityIreland 
+ href="https://2025.ecoop.org/profile/clairedross" - Claire DrossPC MemberAdaCoreFrance 
+ href="https://2025.ecoop.org/profile/erikernst" - Erik ErnstPC MemberGoogle Inc.Denmark 
+ href="https://2025.ecoop.org/profile/mariefarrell" - Marie FarrellPC MemberThe University of ManchesterUnited Kingdom 
+ href="https://2025.ecoop.org/profile/carloafuria" - Carlo A. FuriaPC MemberUniversità della Svizzera italiana (USI)Switzerland 
+ href="https://2025.ecoop.org/profile/atsushiigarashi" - Atsushi IgarashiPC MemberKyoto UniversityJapan 
+ href="https://2025.ecoop.org/profile/mariechristinejakobs" - Marie-Christine JakobsPC MemberLMU Munich, GermanyGermany 
+ href="https://2025.ecoop.org/profile/taylortjohnson" - Taylor T JohnsonPC MemberVanderbilt UniversityUnited States 
+ href="https://2025.ecoop.org/profile/matthewlutze1" - Matthew LutzePC MemberAarhus University 
+ href="https://2025.ecoop.org/profile/wojciechmostowski" - Wojciech MostowskiPC MemberHalmstad University 
+ href="https://2025.ecoop.org/profile/wytseoortwijn" - Wytse OortwijnPC MemberTNO-ESINetherlands 
+ href="https://2025.ecoop.org/profile/violetkaipun" - Violet Ka I PunPC MemberWestern Norway University of Applied SciencesNorway 
+ href="https://2025.ecoop.org/profile/antonwijs" - Anton WijsPC MemberEindhoven University of TechnologyNetherlands 
+ href="https://2025.ecoop.org/profile/elenazucca" - Elena ZuccaPC MemberUniversity of GenoaItaly 
+ Steering Committee 
+ Rosemary MonahanSteering Committee Chair 
+ National University of Ireland 
+ Ireland 
+ Werner DietlSteering Committee Member 
+ University of Waterloo 
+ Canada 
+ Radu GrigoreSteering Committee Member 
+ Facebook 
+ United Kingdom 
+ Gary T. LeavensSteering Committee Member 
+ University of Central Florida 
+ United States 
+ Alexander J. SummersSteering Committee Member 
+ University of British Columbia 
+ Canada 
+ xWed 2 Apr 05:43 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up

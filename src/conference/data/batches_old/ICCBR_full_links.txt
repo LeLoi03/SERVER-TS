@@ -1,0 +1,160 @@
+Conference full name: International Conference on Case-Based Reasoning (ICCBR)
+
+1. Website of ICCBR_1: https://ceur-ws.org/Vol-3708/
+Website information of ICCBR_1:
+
+Vol-3708 
+ urn:nbn:de:0074-3708-7Copyright © 2024 for the individual papers by the papers' authors. Copyright ©2024for the volume as a collection by its editors. This volume and its papers are published under the Creative Commons License Attribution 4.0 International(CC BY 4.0). 
+
+href="https://www.iccbr2024.org/" - ICCBR-WS 2024
+ 
+ ICCBR 2024 Workshop Proceedings 
+  
+ Proceedings of the Workshops at the 32nd International Conference on Case-Based Reasoning (ICCBR-WS 2024) 
+ co-located with the 32nd International Conference on Case-Based Reasoning (ICCBR 2024) 
+ Mérida, Mexico, July 1, 2024. 
+  
+ Edited byLukas Malburg* 
+ * University of Trier & German Research Center for Artificial Intelligence (DFKI), Artificial Intelligence and Intelligent Information Systems, Branch University of Trier, 54296 Trier, Germany 
+
+Table of Contents 
+ Preface and Table of Contents | 1 | Summary: There were 54 papers submitted for peer-reviews to the workshops and the doctoral consortium. Out of these, 14 regular papers and 8 short papers were accepted for this proceedings volume. 
+ CBR-LLM: Case-Based Reasoning and Large Language Model Synergies 
+ Preface | 2 
+ Large Language Models as Knowledge Engineers | 3-18 | Florian Brand | , | Lukas Malburg | , | Ralph Bergmann 
+ A Case-Based Persistent Memory for a Large Language Model (short paper) | 19-25 | Ian Watson 
+ Prompt Memoried LLMs with 'What, Why, and How' to Reason Implicit Emotions | 26-38 | Wei Cheng | , | Pengyu Li | , | Hejin Liu | , | Hailin Cheng | , | Zhenglin Cai | , | Juan Wen 
+ XCBR: Workshop on Case-Based Reasoning for the Explanation of Intelligent Systems 
+ Preface | 39 
+ Testing Most Distant Neighbor (MDN) Variants for Semi-Factual Explanations in XAI (short paper) | 40-48 | Saugat Aryal | , | Mark T. Keane 
+ Counterfactual Explanation of a Classification Model for Detecting SQL Injection Attacks | 49-64 | Brian A. Cumi-Guzman | , | Alejandro D. Espinosa-Chim | , | Mauricio Gabriel Orozco-del-Castillo | , | Juan A. Recio-García 
+ Explainable Classification System for Hip Fractures: A Hybrid CBR+LLM Surrogate Approach | 65-80 | Enrique Queipo-de-Llano | , | Marius Ciurcau | , | Alejandro Paz-Olalla | , | Belén Díaz-Agudo | , | Juan A. Recio-García 
+ AI Track: Special Track on AI for Socio-Ecological Welfare 
+ href="xaitrackpreface.pdf" - Preface | 81 
+ A Mental Health Picture of Young Students in Yucatán | 82-95 | Gandhi Samuel Hernández-Chan | , | Matilde Jiménez-Coello | , | Manuel Sosa-Correa | , | Sally Vanega-Romero | , | Marisol Villanueva-Escalante 
+ Optimizing Vehicle Trajectories and Ensuring Pedestrian Safety in Complex Traffic | 96-111 | Zhenwei Xu | , | Jiaqi Zeng | , | Yaoyong Zhou | , | Qing Yu | , | Wushouer Silamu 
+ Cognitive Behavioral Intervention for Depression through Digital Tools: Case Study in Adolescent (short paper) | 112-120 | Orlando Francisco Gil Llanes | , | Jesus Moo Estrella | , | Paulina Campos Romero | , | Maria Jose Campos Mota 
+ Classification of Dead Trees in Urban Parks Using Aerial Imagery and Convolutional Neural Networks | 121-130 | William Orozco-González | , | Juan C. Valdiviezo-Navarro | , | Mauricio G. Orozco-del-Castillo | , | Paola Andrea Mejía-Zuluaga | , | León Dozal 
+ Exploring Correlations between Navigational Behaviors and Psychological Responses in Self-Reported Questionnaires Using Classification Trees | 131-142 | Raúl A. Novelo-Cruz | , | Mauricio G. Orozco-del-Castillo | , | Esperanza C. Orozco-del-Castillo | , | Nora L. Cuevas-Cuevas | , | Pedro A. G. Ortiz-Sánchez | , | Jesús Sandoval-Gio 
+ Mental Health and Spirituality among Undergraduates in Yucatán: An Exploratory Data Analysis Approach | 143-156 | Nora L. Cuevas-Cuevas | , | Esperanza C. Orozco-del-Castillo | , | Mauricio G. Orozco-del-Castillo | , | Pedro A. G. Ortiz-Sánchez | , | Carlos Bermejo-Sabbagh | , | Jesús Sandoval-Gio 
+ Spatio-Temporal Graph Neural Network with Hidden Confounders for Causal Forecast | 157-169 | Xinxin Luo | , | Wei Yin | , | Zhuang Li 
+ Automated Detection of Type II Focal Cortical Dysplasia Guided by Low-Density Electroencephalogram | 170-180 | Ruifeng Zheng | , | Cong Chen | , | Lingqi Ye | , | Shuang Wang | , | Haibin Shen | , | Kejie Huang 
+ M-MNet for Cancer Classification by Constructing Somatic Mutation Map | 181-191 | Chenxu Quan | , | Xin Chen | , | Fenghui Liu | , | Lin Qi | , | Yun Tie 
+ A Conditional Generative Adversarial Networks-Augmented Case-Based Reasoning Framework for Crop Yield Predictions with Time-Series Remote Sensing Data | 192-205 | Yanbing Bai | , | Dong Chen | , | Ziyue Zhang 
+ A Case-Based Reasoning Framework Augmented with Causal Graph Bayesian Networks for Multi-Hazard Assessment of Earthquake Impacts | 206-219 | Yiding Dou | , | Jiaming Zhang | , | Yuxin Li | , | Ruyi Qi | , | Zimeng Yuan | , | Yanbing Bai | , | Erick Mas | , | Shunichi Koshimura 
+ Online Nigerian Languages Word-Level Character Recognition Using Deep Transfer Learning (short paper) | 220-227 | Afeez Adekunle Soladoye | , | Ibrahim Adepoju Adeyanju | , | Bolaji Abijail Omodunbi | , | Adedayo A. Sobowale 
+ ICCBR Doctoral Consortium 2024 
+ Preface and Table of Contents | 228-229 
+ Exploring a Hybrid Case-Based Reasoning Approach for Time Series Adaptation in Predictive Maintenance (short paper) | 230-235 | Alexander Schultheis 
+ Semi-Factual Explanations in AI (short paper) | 236-240 | Saugat Aryal 
+ LLM Reliability and CBR: How Case-Based Reasoning Can Improve the Performance of Large Language Models (short paper) | 241-245 | Kaitlynne Wilkerson 
+ Building Context Cases: Adding Contextual Information to Objects in Images (short paper) | 246-250 | Lawrence Gates 
+ 2024-06-14: submitted by Lukas Malburg, metadata incl. bibliographic data published underCreative Commons CC0 
+ 2024-06-19: published on CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073) |valid HTML5|
+
+2. Website of ICCBR_1: https://www.iccbr.org/
+Website information of ICCBR_1:
+
+Menu 
+ The International Conference on Case-Based Reasoning (ICCBR) 
+ Welcome to the International Conference on Case-Based Reasoning (ICCBR). On these pages you can find an overview of past and future conferences of the Case-Based Reasoning research community. 
+ Thehref="https://2025.iccbr.org" - next conference
+will take place in Biarritz, France between June 30 - July 3rd 2025. 
+ Past Conferences 
+ The proceedings from past conferences are available via our publisherhref="https://link.springer.com/conference/iccbr" - Springer
+. 
+ href="./iccbr24/" - ICCBR 2024
+										Merida, Mexico
+										
+											1 Jul - 4 Jul 2024
+href="https://www.iccbr2023.org" - ICCBR 2023
+										Aberdeen, Scotland
+										
+											17 Jul - 20 Jul 2023
+href="https://iccbr2022.loria.fr" - ICCBR 2022
+										Nancy, France
+										
+											12 Sep - 15 Sep 2022
+href="./iccbr21/" - ICCBR 2021
+										Salamanca, Spain/Online
+										
+											13 Sep - 16 Sep 2021
+href="https://iccbr20.org" - ICCBR 2020
+										Salamanca, Spain/Online
+										
+											8 Jun - 12 Jun 2020
+href="https://iccbr2019.com" - ICCBR 2019
+                                        Otzenhausen, Germany
+                                        
+                                            8 Sep - 12 Sep 2019
+href="http://iccbr18.com" - ICCBR 2018
+										Stockholm, Sweden
+										
+											10 Jul - 12 Jul 2018
+href="./iccbr17/" - ICCBR 2017
+										Trondheim, Norway
+										
+											26 Jun - 28 Jun 2017
+href="./iccbr16/drafts/v1/index.html" - ICCBR 2016
+										Atlanta, Georgia, USA
+										
+											31 Oct - 2 Nov 2016
+href="./iccbr15/" - ICCBR 2015
+										Frankfurt am Main, Germany
+										
+											28 Sep - 30 Sep 2015
+href="./iccbr14/" - ICCBR 2014
+										Cork, Ireland
+										
+											29 Sep - 1 Oct 2014
+href="./iccbr13/" - ICCBR 2013
+										Saragota Springs, NY, USA
+										
+											8 Jul - 11 Jul 2013
+href="./iccbr12/" - ICCBR 2012
+										Lyon, France
+										
+											3 Sep - 6 Sep 2012
+href="./iccbr11/" - ICCBR 2011
+										London, UK
+										
+											12 Sep - 15 Sep 2011
+href="./iccbr10/" - ICCBR 2010
+										Alessandria, Italy
+										
+											19 Jul - 22 Jul 2010
+href="./iccbr2009/welcome.htm" - ICCBR 2009
+										Seattle, WA, USA
+										
+											20 Jul - 23 Jul 2009
+href="./iccbr07/" - ICCBR 2007
+										Belfast, Ireland
+										
+											13 Aug - 16 Aug 2007
+href="#" - ICCBR 2005
+										Chicago, IL, USA
+										
+											23 Aug - 26 Aug 2005
+href="#" - ICCBR 2003
+										Trondheim, Norway
+										
+											23 Jun - 26 Jun 2003
+href="#" - ICCBR 2001
+										Vancouver, BC, Canada
+										
+											30 Jul - 2 Aug 2001
+href="#" - ICCBR 1999
+										Seeon Monastery, Germany
+										
+											27 Sep - 30 Oct 1999
+Follow | Subscribe 
+ Twitter 
+ href="https://www.facebook.com/ICCBR/" - Facebook 
+ href="https://lists.ansatt.ntnu.no/idi.ntnu.no/subscribe/iccbr" - Mailing List 
+ © ICCBR 2024. All rights reserved 
+ Design: | HTML5 UP 
+ Menu 
+ Home 
+ Contact 
+ Close
+

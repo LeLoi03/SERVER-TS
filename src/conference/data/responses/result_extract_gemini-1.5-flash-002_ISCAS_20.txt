@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "May 25 - 28, 2025",
+  "Year": "2025",
+  "Location": "London, United Kingdom",
+  "City-State-Province": "London",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline - Final Extension": "October 28, 2024"
+  },
+  "Notification Date": {
+    "Author Acceptance Notification": "January 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Manuscript Submission Deadline": "February 10, 2025"
+  },
+  "Topics": "Analog and Mixed Signal Circuits and Systems, Digital Integrated Circuits and Systems, Power and Energy Circuits and Systems, Sensory Circuits and Systems, Nonlinear Systems and Circuit Theory, Digital Signal Processing, Multimedia Systems and Applications, Communications Circuits and Systems, Biomedical Circuits and Systems, Neural Networks and Neuromorphic Engineering, Beyond CMOS: Nanoelectronics and Heterogeneous System Integration, Education in Circuits and Systems",
+  "Summary": "The IEEE International Symposium on Circuits and Systems (IEEE ISCAS 2025) is the flagship conference of the IEEE Circuits and Systems (CAS) Society and the world’s premiere forum for researchers in the active fields of theory, design and implementation of circuits and systems. ISCAS 2025 will be held in London, United Kingdom, from May 25-28, 2025, and will be driven by the theme “Technology Disruption and Society.”",
+  "Call for Papers": "# IEEE ISCAS 2025: Call for Papers\n\nThe IEEE International Symposium on Circuits and Systems (IEEE ISCAS 2025) is the flagship conference of the IEEE Circuits and Systems (CAS) Society and the world’s premiere forum for researchers in the active fields of theory, design, and implementation of circuits and systems.  ISCAS 2025 will be held in **London, United Kingdom from May 25-28, 2025** and will be driven by the theme **“Technology Disruption and Society.”**\n\n## Topics of Interest\n\nCollecting contributions in all areas of Circuits and Systems, including but not limited to:\n\n*   Analog and Mixed Signal Circuits and Systems\n*   Digital Integrated Circuits and Systems\n*   Power and Energy Circuits and Systems\n*   Sensory Circuits and Systems\n*   Nonlinear Systems and Circuit Theory\n*   Digital Signal Processing\n*   Multimedia Systems and Applications\n*   Communications Circuits and Systems\n*   Biomedical Circuits and Systems\n*   Neural Networks and Neuromorphic Engineering\n*   Beyond CMOS: Nanoelectronics and Heterogeneous System Integration\n*   Education in Circuits and Systems\n\n## Important Dates\n\n*   **Regular Paper Submission - Final Extension:** October 28, 2024\n*   **Author Notification:** January 20, 2025\n*   **Final Manuscript Submission:** February 10, 2025\n\n## Publication\n\nSelected papers will be invited for possible publication in the IEEE Transactions on Circuits and Systems – Part I, in the IEEE Transactions on Circuits and Systems – Part II, in the IEEE Transactions on Biomedical Circuits and Systems (TBioCAS), or in the IEEE Transactions on Very Large Scale Integration Systems (TVLSI)."
+}
+

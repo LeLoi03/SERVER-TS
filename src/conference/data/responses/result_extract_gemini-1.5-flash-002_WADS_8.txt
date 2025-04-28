@@ -1,0 +1,21 @@
+output:
+{
+  "Conference dates": "August 11 - 15, 2025",
+  "Year": "2025",
+  "Location": "York University, Toronto, Canada",
+  "City-State-Province": "Toronto, Ontario",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract registration deadline": "February 21, 2025",
+    "Submission deadline": "February 21, 2025"
+  },
+  "Notification Date": {
+    "Notification date": "April 15, 2025"
+  },
+  "Topics": "Design and analysis of algorithms, data structures, approximation algorithms, parametrized algorithms, distributed algorithms, parallel algorithms, external-memory algorithms, computational geometry and topology, exponential time algorithms, online algorithms, randomized algorithms, streaming algorithms, sub-linear algorithms, optimization, graph analysis, bioinformatics, visualization, string processing, information retrieval, machine learning, algorithmic game theory, mechanism design",
+  "Summary": "The Algorithms and Data Structures Symposium (WADS), which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory (SWAT), is intended as a forum for researchers in the area of design and analysis of algorithms and data structures. WADS 2025 will take place August 11-15, 2025 at York University in Toronto, Canada.",
+  "Call for Papers": "# WADS 2025: Call for Papers\n\nThe Algorithms and Data Structures Symposium (WADS), which alternates with the Scandinavian Symposium and Workshops on Algorithm Theory (SWAT), is intended as a forum for researchers in the area of design and analysis of algorithms and data structures.\n\nWADS 2025 will take place from **August 11-15, 2025 at York University in Toronto, Canada.**  CCCG 2025, the 37th Canadian Conference on Computational Geometry, is planned for August 11-15 at the same location.\n\n## Topics of Interest\n\nWe invite submissions of papers presenting original research on the theory and application of algorithms and data structures in all areas, including, but not limited to:\n\n*   Approximation algorithms\n*   Parametrized algorithms\n*   Distributed algorithms\n*   Parallel algorithms\n*   External-memory algorithms\n*   Data structures\n*   Computational geometry and topology\n*   Exponential time algorithms\n*   Online algorithms\n*   Randomized algorithms\n*   Streaming algorithms\n*   Sub-linear algorithms\n\nThe algorithmic problems considered may be motivated by applications, e.g. in optimization, graph analysis, bioinformatics, visualization, string processing, information retrieval, machine learning, algorithmic game theory, or mechanism design.\n\n## Important Dates\n\n(All times are 23:59 Anywhere on Earth)\n\n*   **Abstract registration deadline:** February 21, 2025\n*   **Submission deadline:** February 21, 2025\n*   **Notification date:** April 15, 2025\n\n## Submission Guidelines\n\nAll papers must be original and not simultaneously submitted to another journal or conference. Contributors are invited to submit a full paper in LIPIcs format. The title, abstract, and body of the paper may not exceed 12 pages, and the total length, including references, may not exceed 14 pages. An appendix beyond the 14 pages may be added and may be read at the reviewers’ discretion. Submissions will be handled through EasyChair: [https://easychair.org/conferences/?conf=wads2025](https://easychair.org/conferences/?conf=wads2025)\n\nAll questions about submissions should be emailed to the program chairs, Pat Morin and Eunjin Oh.\n\n## Awards\n\nWADS 2025 will have a Best Paper award in memory of Alejandro Lopez-Ortiz and a Best Student Presentation award. The paper that receives the memorial award will be presented in a non-parallel time slot. The best student presentation will be chosen by a subset of the program committee with input from session chairs."
+}
+

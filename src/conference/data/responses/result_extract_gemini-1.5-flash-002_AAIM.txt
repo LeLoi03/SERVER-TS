@@ -1,0 +1,22 @@
+```json
+{
+  "Conference dates": "September 21 - 23, 2024",
+  "Year": "2024",
+  "Location": "University of Texas at Dallas",
+  "Type": "Online",
+  "Submission Date": {
+    "Paper Submission Deadline": "June 10, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "July 1, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Version Due": "July 10, 2024"
+  },
+  "Registration Date": {
+    "Registration Due": "July 10, 2024"
+  },
+  "Summary": "The 18th International Conference on Algorithmic Aspects in Information and Management (AAIM 2024) was held online from September 21-23, 2024.  The conference was based at the University of Texas at Dallas and had no registration fee. The submission deadline was extended to June 10, 2024 due to a malfunction in the paper submission system.",
+  "Call for Papers": "No call for papers available"
+}
+```

@@ -1,0 +1,225 @@
+Conference SoCG:
+
+href="index.html" - CG Week 2025
+Home 
+ Program 
+ href="socg.html" - SoCG 
+ YRF 
+ Challenge 
+ Media 
+ Workshops 
+ Awards 
+ Registration 
+ Practicalities 
+ News 
+ March 28, 2025: | The list of accepted workshops | is announced. 
+ March 24, 2025: | Outstanding Reviewer Award | is announced. 
+ March 24, 2025: | The list of accepted Media Exposition contributions | is online. 
+ March 8, 2025: | The Best Paper Award and the Best Student Paper Award | are announced. 
+ March 2, 2025: | Registration | is open. 
+ February 8, 2025: | href="socg.html#accepted_list" - The list of SoCG accepted papers | is online. 
+ September 18, 2024: | href="socg.html" - SoCG 2025 CFP | is online. 
+ September 18, 2024: | CG Week 2025 website is online. 
+ General Information 
+ About | The Computational Geometry Week (CG Week) is the premier international forum for advances in computational geometry and its many applications. | CG Week combines a number of events, most notably the 41st International Symposium on Computational Geometry (SoCG 2025), the associated Media Exposition (CG:ME), workshops, the Young Researchers Forum (CG:YRF), and the CG Challenge (CG:SHOP). | The 2025 edition is planned to take place in Kanazawa, Japan, June Mon. 23 - Fri. 27, 2025. 
+ Note that the regular talks will start on Tuesday, June 24th. 
+ Invited Speakers 
+ Tomohiro Tachi 
+ (The University of Tokyo) 
+  
+ Title: TBA 
+ Abstract: TBA 
+ Meirav Zehavi 
+ (Ben-Gurion University of the Negev) 
+  
+ Title: TBA 
+ Abstract: TBA 
+ Code of Conduct 
+ CG Week is dedicated to providing an environment that is free from harassment, bullying, discrimination, and retaliation for all participants. Starting in 2025, CG Week will be organized as an event of theCG Society. All members of the Society are bound by itsCode of Conduct. Only members of the Society can give a presentation and hence at least one author of each accepted paper must become a member of the Society. Society membership is free. 
+ Local Organization 
+ Organizing Committee: | Tonan Kamata, JAIST, Japan 
+ Yoshio Okamoto, The University of Electro-Communications, Japan 
+ Yota Otachi, Nagoya University, Japan 
+ Toshiki Saitoh, Kyushu Institute of Technology, Japan 
+ Tomoko Taniguchi, JAIST, Japan 
+ Ryuhei Uehara, JAIST, Japan (chair) 
+ Giovanni Viglietta, University of Aizu, Japan 
+ Contact | The local organizing committee can be contacted athref="mailto:socg25@ml.jaist.ac.jp" - socg25@ml.jaist.ac.jp
+. 
+ href="" - CG Week 2025 
+
+Call for Papers information:
+Loading [MathJax]/jax/output/HTML-CSS/fonts/TeX/fontdata.js 
+ href="index.html" - CG Week 2025
+Home 
+ Program 
+ href="socg.html" - SoCG 
+ YRF 
+ Challenge 
+ Media 
+ Workshops 
+ Awards 
+ Registration 
+ Practicalities 
+ Call for Papers: The 41st SoCG - June 23-27, 2025 
+ The 41st International Symposium on Computational Geometry (SoCG 2025) is planned to be held in Kanazawa, Japan, June 23–27, 2025, as part of the Computational Geometry (CG) Week. We invite high quality submissions that describe original research on computational problems in a geometric and/or topological setting. Topics of interest include, but are not limited to: 
+ Design, analysis, and implementation of geometric algorithms and data structures; 
+ Computational complexity of geometric problems; 
+ Implementation and experimental evaluation of geometric algorithms and heuristics, including mathematical, numerical, and algebraic aspects; 
+ Discrete and combinatorial geometry; 
+ Computational topology, topological data analysis, and topological combinatorics; 
+ Applications of computational geometry or topology in any field. 
+ Important Dates 
+ November 26, 2024 (Tuesday): | Abstracts and paper registration due (23:59 AoE (anywhere on Earth)) 
+ December 3, 2024 (Tuesday): | Papers due (23:59 AoE (anywhere on Earth)) 
+ February 6, 2025 (Thursday): | Notification of acceptance/rejection 
+ April 11, 2025 (Friday)mid March 2025: | Final versions of accepted papers due 
+ June 23–27, 2025: | Symposium 
+ SoCG 2025 Conference Webpage 
+ href="http://socg25.github.io/" - http://socg25.github.io/
+SoCG 2025 HotCRP Submission Webpage 
+ href="https://socg25.hotcrp.com/" - https://socg25.hotcrp.com/
+Code of conduct 
+ SoCG is dedicated to providing an environment that is free from harassment, bullying, discrimination, and retaliation for all participants. Starting in 2025, CG Week including SoCG will be organized as an event of theCG Society. All members of the Society are bound by itsCode of Conduct. Only members of the Society can give a presentation and hence at least one author of each accepted paper must become a member of the Society. Society membership is free. 
+ Submission Guidelines 
+ Paper types | When writing or evaluating a SoCG paper, it is important to keep in mind that there are different types of contributions, each with its own strengths. To ensure that a submission is evaluated on its own merits, authors will need to identify the main strengths of their submission, as captured by four possible paper types. PC members and external reviewers will be asked to take into account these paper types together with their associated evaluation criteria when they evaluate a paper. There are no quotas for the paper types and submissions can be labeled with more than one paper type at the time of submission. | Mathematical Foundations: | A typical paper will contain theorems and proofs describing new results in discrete or combinatorial geometry, discrete differential geometry or topology, or in topological combinatorics. The paper will primarily be evaluated on its technical depth, the importance of the results, the elegance of the solution, the connection of the problem studied to computational geometry and topology, and the potential future impact on algorithm development. 
+ Algorithmic Complexity: | A typical paper will contain algorithms, data structures, theorems, proofs, or lower bound constructions describing new results on computational geometry problems. The paper will primarily be evaluated on the (mathematical or computational) relevance and importance of the problem studied, its technical depth, the elegance of the solution, and the potential future impact of the results or the proposed new methods and techniques. 
+ Experiments and Implementation: | A typical paper will make a clear contribution to the implementation and evaluationp of geometric algorithms, such as exact, approximate, or algebraic computation, algorithms engineering, or the experimental evaluation of competing algorithmic approaches. The paper will primarily be evaluated on the completeness and the expected impact of the proposed implementation, the soundness of the experiments, the quality and quantity of testing, and on the general amount of knowledge gained. 
+ Applications: | A typical paper will describe the modeling and algorithmic choices made when developing or adapting computational geometry techniques for an application area. The paper will be primarily evaluated on the soundness of the modeling decisions, the ingenuity of the solution, the effectiveness of the proposed method, and the expected impact in the application area. One might also consider the lesson learned regarding the applicability or suitability of computational geometry tools to the specific area. 
+ Double Blind and PC submissions | SoCG will employ a lightweight double-blind reviewing process, and will allow PC members (other than the PC chairs) to submit to the conference as well. Submissions should not reveal the identity of the authors in any way. In particular, authors' names, affiliations, funding information, and email addresses should not appear in the submission. Authors should ensure that any references to their own related work is in the third person (e.g., not "We build on our previous work ..." but rather "We build on the work of ..."). Particular care needs to be taken if there is any accompanying software or data, which needs to be linked anonymously (for example, via a DropBox anonymous folder orAnonymous GitHub, perhaps with a subset of synthetic data if the real data is not anonymized). Upon registering a submission, the authors will declare conflicts of interest with PC members, as well as listing email address or domain level conflicts (i.e. “Haitao Wang (University of Utah)”, “All (Graz University of Technology)”) of other professional or personal conflicts. This includes past advisors and students, people with the same affiliation, and any recent/frequent coauthors and collaborators. Please refer to thehref="https://docs.google.com/document/d/1QNR3JUe_DimGP79EbcmayUi7I3obiTdxAIzXMFxaCfI/pub" - SoCG 2025 Conflict of Interest Guidelines
+for a detailed discussion of possible conflicts of interest. | The purpose of lightweight double-blind reviewing is to help PC members and external reviewers come to an initial judgment about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Authors should feel free to disseminate their ideas or draft versions of their paper as they normally would. For example, authors may post drafts of their papers on the web, submit them to arXiv, and give talks on their research ideas. We encourage authors with further questions on double-blind reviewing to contact the PC chairs, or to see the more detailed discussion inthe proposalthat preceded the vote to move to double blind. 
+ Format | Submissions must be formatted in accordance with theLIPIcs proceedings guidelines. Authors are required to use the LaTeX class filehref="https://computational-geometry.org/documents/socg-lipics-v2021.cls" - socg-lipics-v2021.cls
+(V0.9, Sep 19, 2022), with the option “anonymous”; note that the class file is a wrapper around the standard LIPIcs class. The LIPIcs style and instructions are availablehref="https://submission.dagstuhl.de/series/details/5#author" - here
+; the SoCG class file is availablehref="https://computational-geometry.org/documents/socg-lipics-v2021.cls" - here
+, and instructions on how to use it are availablehere. Submissions must not exceed 500 lines, excluding front matter (title), references, and a clearly marked appendix (further described below), but including all other lines (in abstract, algorithms, tables, captions, etc.). The class files provide line counting which should be accurate in most cases. Authors should refrain from putting excessive amounts of text in parts in which lines are not counted automatically. If authors need constructs that contain uncounted lines of text, they should compensate for this by reducing the final line count accordingly. It is the sole responsibility of the authors not to exceed 500 lines even if some lines are not counted automatically. 
+ Contents of the submission | Papers should be submitted in the form of an extended abstract, which begins with the title of the paper, as well as a short abstract. This should be followed by the main body of the paper that begins with a precise statement of the problem considered, a succinct summary of the results obtained (emphasizing the significance, novelty, and potential impact of the research), and a clear comparison with related work. The remainder of the extended abstract should provide sufficient details to allow the program committee to evaluate the validity, quality, and relevance of the contribution. Clarity of presentation is very important; the entire extended abstract should be written carefully, taking into consideration that it will be read and evaluated by both experts and non-experts, often under tight time constraints. | In addition, authors are asked to avoid "et al." in citations in favor of an equal mention of all authors' surnames. For instance, if the number of authors is large, consider writing "The authors in [#] show" instead of "A et al. [#] show". 
+ Appendix and additional data | All details needed to verify the results must be provided. Supporting materials, including proofs of theoretical claims and experimental details, that do not fit in the 500-line limit should be given in an appendix. If more appropriate, the full version may be given as the appendix. In both cases, however, the authors should include in the main part specific pointers to the relevant locations in the appendix. The appendix will be read by the program committee members and subreviewers at their discretion and will not be published as part of the proceedings. Thus, the paper without the appendix should be able to stand on its own. Experimental and implementation results (independent of paper type) must be reproducible and verifiable. Authors of all types of papers are encouraged to put accompanying software and relevant data, if there is any, in a repository accessible to the reviewers. 
+ Previous or simultaneous submissions | Results previously published or accepted for publication in the proceedings of another conference cannot be submitted. Simultaneous submissions of the results to another conference with published proceedings are not allowed. Exempted are workshops and conferences without formal proceedings, but possibly with handouts containing short abstracts. In particular, submissions of papers that have appeared or will be submitted to EuroCG are allowed, since EuroCG does not publish formal proceedings, while submissions of papers that have appeared in CCCG are not allowed. Results that have already been accepted (with or without revision) for publication in a journal at the time of their submission to the symposium are not allowed. 
+ Strict guidelines | Submissions deviating from the above guidelines risk being rejected without further consideration. 
+ Guidelines for reviewers | The guidelines for reviewers are availablehref="https://computational-geometry.org/documents/socg-reviewing.pdf" - here
+. 
+ Accepted Papers 
+ Presentation | An author of each accepted paper is expected to attend the symposium and present the paper (approximately 20 minutes). Note that SoCG 2025 will be organized as an event of theCG Societyand hence the presenting author(s) must be a member of the Society. Society membership is free. 
+ Best paper award | An accepted paper may be selected as the best paper. All papers are eligible. | Best student paper award | An accepted paper may be selected as the best student paper. A paper is eligible if all authors are students at the time of submission. This must be indicated in the submission process. There is a box provided for this purpose on the submission server. | Best student presentation award | Based on the feedback from the audience, a presentation during the symposium by a student may be selected as the best student presentation. | In exceptional cases, each of these awards may be granted to more than one paper/presentation. 
+ Invited papers and special issues | Authors of the best paper will be invited to submit an extended version of their paper to theJournal of the ACM, and authors of one (or more) most highly ranked papers may be invited to submit their full paper to the journalTheoretiCS. Authors of a selection of accepted papers from the symposium will be invited to submit extended versions of their papers to special issues ofDiscrete & Computational GeometryandJournal of Computational Geometry. 
+ Format | Final proceedings versions of accepted papers must respect the same formatting constraints as the submissions (href="https://submission.dagstuhl.de/series/details/5#author" - LIPIcs proceedings format
+withhref="https://computational-geometry.org/documents/socg-lipics-v2021.cls" - socg-lipics-v2021
+; 500-line limit, excluding front matter and references), but must not comprise any appendix. If any supporting material (including complete proofs of theoretical claims and experimental details) does not fit in the specified limit, then the full version of the paper containing this information must be referenced in the conference version and made available at a public repository, such asarXiv, by the time the final version is submitted. Where applicable, we encourage the authors to make accompanying software and/or data publicly accessible, with proper references in the paper. 
+ Program Committee 
+ Mikkel Abrahamsen, University of Copenhagen 
+ Oswin Aichholzer, Graz University of Technology (co-chair) 
+ Hugo Akitaya, University of Massachusetts Lowell 
+ Mark de Berg, Eindhoven University of Technology 
+ Sujoy Bhore, Indian Institute of Technology Bombay 
+ Ahmad Biniaz, University of Windsor 
+ Håvard Bakke Bjerkevik, SUNY Albany 
+ Gerth Stølting Brodal, Aarhus University 
+ Hsien-Chih Chang, Dartmouth College 
+ Siu-Wing Cheng, Hong Kong University of Science and Technology 
+ Vida Dujmović, University of Ottawa 
+ David Eppstein, University of California, Irvine 
+ Emily Fox, University of Texas at Dallas 
+ Jie Gao, Rutgers University 
+ Dan Halperin, Tel Aviv University 
+ Tao Hou, University of Oregon 
+ Francis Lazarus, Université Grenoble Alpes 
+ Chih-Hung Liu, National Taiwan University 
+ Daniel Lokshtanov, University of California Santa Barbara 
+ Anna Lubiw, University of Waterloo 
+ Amir Nayyeri, Oregon State University 
+ Eunjin Oh, Pohang University of Science and Technology 
+ Tim Ophelders, Utrecht University and TU Eindhoven 
+ Irene Parada, UPC BarcelonaTech 
+ Rahul Saladi, Indian Institute of Science 
+ Patrick Schnider, University of Basel and ETH Zürich 
+ Raimund Seidel, Saarland University 
+ Don Sheehy, North Carolina State University 
+ Shakhar Smorodinsky, Ben-Gurion University 
+ Jonathan Spreer, University of Sydney 
+ Takeshi Tokuyama, Kwansei Gakuin University 
+ Torsten Ueckerdt, Karlsruhe Institute of Technology 
+ Pavel Valtr, Charles University 
+ Kasturi Varadarajan, University of Iowa 
+ Haitao Wang, University of Utah (co-chair) 
+ Jinhui Xu, University at Buffalo 
+ Jie Xue, New York University Shanghai 
+ List of Accepted Papers 
+ Rapid mixing of the flip chain over non-crossing spanning trees | Konrad Anand (School of Informatics, University of Edinburgh); Weiming Feng (ETH Zürich); Graham Freifeld, Heng Guo (School of Informatics, University of Edinburgh); Mark Jerrum (Queen Mary, University of London); Jiaheng Wang (University of Regensburg) 
+ An 11/6-Approximation Algorithm for Vertex Cover on String Graphs | Édouard Bonnet (CNRS); Paweł Rzążewski (Warsaw University of Technology) 
+ On the Twin-Width of Smooth Manifolds | Édouard Bonnet (CNRS, ENS de Lyon); Kristóf Huszár (Graz University of Technology) 
+ Certifying that a knot is composite | Alexander He (Oklahoma State University); Eric Sedgwick (DePaul University); Jonathan Spreer (The University of Sydney) 
+ When alpha-complexes collapse onto codimension-1 submanifolds | Dominique Attali (Gipsa lab and CNRS); Mattéo Clémot (LIRIS and CNRS); Bianca Boeira Dornelas (Graz University of Technology - TU Graz); André Lieutier 
+ Simplification of Trajectory Streams | Siu-Wing Cheng, Haoqiang Huang (Hong Kong University of Science and Technology); Le Jiang (University of Science and Technology of China) 
+ A PTAS for TSP with Neighbourhoods Over Parallel Line Segments | Benyamin Ghaseminia, Mohammad R. Salavatipour (University of Alberta) 
+ A Sparse Multicover Bifiltration of Linear Size | Ángel Javier Alonso (Graz University of Technology) 
+ On Spheres with k Points Inside | Herbert Edelsbrunner (Institute of Science and Technology Austria); Alexey Garber (University of Texas Rio Grande Valley); Morteza Saghafian (Institute of Science and Technology Austria) 
+ On Approximability ofℓ22Min-Sum Clustering | Karthik C. S. (Rutgers University); Euiwoong Lee (University of Michigan); Yuval Rabani (Hebrew University); Chris Schwiegelshohn (Aarhus University); Samson Zhou (Texas A&M University) 
+ Signotopes with few plus signs | Helena Bergold (FU Berlin); Lukas Egeling (ETH Zurich); Hung Hoang (TU Wien) 
+ Small triangulations of 4-manifolds: Introducing the 4-manifold census | Rhuaidi Antonio Burke, Benjamin Burton (The University of Queensland); Jonathan Spreer (The University of Sydney) 
+ Recognizing 2-Layer and Outer k-Planar Graphs | Yasuaki Kobayashi (Hokkaido University); Yuto Okada (Nagoya University); Alexander Wolff (Universität Würzburg) 
+ A Minor-Testing Approach for Coordinated Motion Planning with Sliding Robots | Eduard Eiben (Royal Holloway, University of London); Robert Ganian (TU Wien); Iyad Kanj (DePaul University); M. S. Ramanujan (University of Warwick) 
+ Reconfiguration of unit squares and disks: PSPACE-hardness in simple settings | Mikkel Abrahamsen (University of Copenhagen); Kevin Buchin (TU Dortmund); Maike Buchin (Ruhr University Bochum); Linda Kleist (Universität Potsdam); Maarten Löffler (Utrecht University); Lena Schlipf (Universität Tuebingen); Andre Schulz (University of Hagen); Jack Stade (University of Copenhagen) 
+ Snap Rounding: A Cautionary Tale | John Hershberger (Siemens) 
+ A Linear Time Algorithm for the Maximum Overlap of Two Convex Polygons Under Translation | Timothy M. Chan (UIUC); Isaac M. Hair (UCSB) 
+ Banana Trees for the Persistence in Time Series Experimentally | Lara Ost (University of Vienna); Sebastiano Cultrera di Montesano (Broad Institute of MIT and Harvard); Herbert Edelsbrunner (Institute of Science and Technology Austria) 
+ Finding a Shortest Curve that Separates Few Objects from Many | Therese Biedl (University of Waterloo); Éric Colin de Verdière (CNRS, Laboratoire d'Informatique Gaspard Monge, Marne-la-Vallée); Fabrizio Frati (Università di Roma Tre); Anna Lubiw (University of Waterloo); Günter Rote (Freie Universität Berlin) 
+ Uniform Bounds on Product Sylvester-Gallai Configurations | Abhibhav Garg, Rafael Oliveira, Akash Kumar Sengupta (University of Waterloo) 
+ Incremental Planar Nearest Neighbor Queries with Optimal Query Time | John Iacono (Université libre de Bruxelles); Yakov Nekrich (Michigan Technological University) 
+ Hard diagrams of split links | Corentin Lunel (Inria d'Université Côte d'Azur); Arnaud de Mesmay (CNRS, LIGM, Université Gustave Eiffel); Jonathan Spreer (The University of Sydney) 
+ The Fréchet Distance Unleashed: Approximating a Dog with a Frog | Sariel Har-Peled (University of Illinois at Urbana-Champaign); Benjamin Raichel (University of Texas at Dallas); Eliot Robson (University of Illinois Urbana-Champaign) 
+ Tracking the Persistence of Harmonic Chains: Barcode and Stability | Tao Hou (University of Oregon); Salman Parsa (DePaul University); Bei Wang (University of Utah) 
+ Tiling with Three Polygons is Undecidable | Erik Demaine (MIT); Stefan Langerman (Universite libre de Bruxelles (ULB)) 
+ On Zarankiewicz's Problem for Intersection Hypergraphs of Geometric Objects | Timothy M. Chan (UIUC); Chaya Keller (Ariel University); Shakhar Smorodinsky (Ben Gurion University of the NEGEV) 
+ Steinhaus Filtration and Stable Paths in the Mapper | Dustin L Arendt (Pacific Northwest National Laboratory); Matthew Broussard (TD Bank USA); Bala Krishnamoorthy (Washington State University); Nathaniel Saul (Stripe USA); Amber Thrall (Washington State University) 
+ The Erdős-Szekeres Conjecture revisited | Martin Balko (Charles University); Jineon Baek (University of Michigan) 
+ Lipschitz Decompositions of FiniteℓpMetrics | Robert Krauthgamer, Nir Petruschka (Weizmann Institute of Science) 
+ Single-Source Shortest Path Problem in Weighted Disk Graphs | Shinwoo An, Eunjin Oh (POSTECH); Jie Xue (NYU Shanghai) 
+ On Sparse Covers of Minor Free Graphs, Low Dimensional Metric Embeddings, and other applications | Arnold Filtser (Bar-Ilan University) 
+ Levels in arrangements: linear relations, the g-matrix, and applications to crossing numbers | Elizaveta Streltsova, Uli Wagner (Institute of Science and Technology Austria (ISTA)) 
+ When Distances Lie: Euclidean Embeddings in the Presence of Outliers and Distance Violations | Matthias Bentert, Fedor Fomin, Petr A. Golovach (University of Bergen); M. S. Ramanujan (University of Warwick); Saket Saurabh (IMSc) 
+ Range Counting Oracles for Geometric Problems | Anne Driemel (University of Bonn); Morteza Monemizadeh (Eindhoven University of Technology); Eunjin Oh (POSTECH); Frank Staals (Utrecht University); David P. Woodruff (Carnegie Mellon University) 
+ Sparsification of the Generalized Persistence Diagrams for Scalability through Gradient Descent | Mathieu Carrière (Centre Inria d´Universite Cote d´Azur); Seunghyun Kim, Woojin Kim (KAIST) 
+ Super-Polynomial Growth of the Generalized Persistence Diagram | Donghan Kim, Woojin Kim, Wonjun Lee (KAIST) 
+ The maximum number of digons formed by pairwise intersecting pseudocircles | Eyal Ackerman (University of Haifa); Gábor Damásdi, Balázs Keszegh (ELTE, Alfréd Rényi Institute of Mathematics); Rom Pinchasi (Technion - Israel Institute of Technology, EPFL); Rebeka Raffay (EPFL) 
+ Higher-Order Color Voronoi Diagrams and the Colorful Clarkson-Shor Framework | Sang Won Bae (Kyonggi University); Nicolau Oliver (Università della Svizzera italiana,); Evanthia Papadopoulou (Università della Svizzera italiana) 
+ The Point-Boundary Art Gallery Problem is ∃R-hard | Jack Stade (University of Copenhagen) 
+ Optimal Motion Planning for Two Square Robots in a Rectilinear Environment | Pankaj K Agarwal (Duke University); Mark de Berg (Department of Mathematics and Computer Science, Eindhoven University of Technology, Eindhoven, The Netherlands); Benjamin Holmgren, Alex Steiger (Department of Computer Science, Duke University); Martijn Struijs (TU Eindhoven) 
+ k-dimensional transversals for fat convex sets | Attila Jung, Dömötör Pálvölgyi (ELTE Eötvös Loránd University) 
+ A Subquadratic Algorithm for Computing theL1-distance between Two Terrains | Pankaj K Agarwal (Duke University); Boris Aronov (New York University); Olivier Devillers (Inria); Christian Knauer (University of Bayreuth); Guillaume Moroz (Inria) 
+ Sparse Bounded Hop-Spanners for Geometric Intersection Graphs | Timothy M. Chan, Zhengcheng Huang (University of Illinois at Urbana-Champaign); Shakhar Smorodinsky (Ben Gurion University of the NEGEV); Csaba D. Tóth (California State University Northridge); Sujoy Bhore (Indian Institute of Technology Bombay) 
+ Computing Geomorphologically Salient Networks via Discrete Morse Theory | Tim Ophelders (Utrecht University and TU Eindhoven); Anna Schenfisch, Willem Sonke, Bettina Speckmann (TU Eindhoven) 
+ An algorithm for Tambara-Yamagami quantum invariants of 3-manifolds, parameterized by the first Betti number | Colleen Delaney (Purdue University); Clément Maria (INRIA - Université Côte d'Azur); Eric Samperton (Purdue University) 
+ Persistent (Co)Homology in Matrix Multiplication Time | Dmitriy Morozov (Lawrence Berkeley National Laboratory); Primoz Skraba (Queen Mary University of London) 
+ Embedding Graphs as Euclidean kNN-Graphs | Thomas Schibler (University of California, Santa Barbara); Subhash Suri (University of California, Santa Barbara); Jie Xue (NYU Shanghai, China) 
+ Immersions and Albertson's conjecture | Jacob Fox (Stanford University); Janos Pach (EPFL, Lausanne and Renyi Institute); Andrew Suk (UCSD) 
+ A note on the no-(d+2)-on-a-sphere problem | Andrew Suk (UCSD); Ethan White (UIUC) 
+ Improved Approximation Algorithms for Three-Dimensional Knapsack | Klaus Jansen (Kiel University); Debajyoti Kar, Arindam Khan, K. V. N. Sreenivas (Indian Institute of Science, Bengaluru); Malte Tutas (Kiel University) 
+ Computing Betti tables and minimal presentations of zero-dimensional persistent homology | Luis Scoccola (Centre de Recherches Mathématiques); Dmitriy Morozov (Lawrence Berkeley National Laboratory) 
+ Apex Representatives | Tamal K. Dey (Purdue University); Tao Hou (University of Oregon); Dmitriy Morozov (Lawrence Berkeley National Laboratory) 
+ Shelling and Sinking Graphs on the Sphere | Jeff Erickson, Christian Howard (University of Illinois Urbana-Champaign) 
+ Non-Euclidean Erdős–Anning Theorems | David Eppstein (Univ. of California, Irvine) 
+ Polychromatic Coloring of Tuples in Hypergraphs | Ahmad Biniaz (University of Windsor); Jean-Lou De Carufel (University of Ottawa); Anil Maheshwari, Michiel Smid (Carleton University); Shakhar Smorodinsky (Ben Gurion University of the NEGEV); Milos Stojakovic (University of Novi Sad) 
+ Polynomial-Time Algorithms for Contiguous Art Gallery and Related Problems | Ahmad Biniaz (University of Windsor); Anil Maheshwari (Carleton University); Magnus Christian Ring Merrild (Aarhus University); Joseph Mitchell (Stony Brook University); Saeed Odak (University of Ottawa) ; Valentin Polishchuk (Linköping University); Eliot W. Robson (University of Illinois at Urbana-Champaign); Casper Moldrup Rysgaard (Aarhus University); Jens Kristian Refsgaard Schou (Aarhus University); Tom Shermer (Simon Fraser University); Rolf Svenning (Aarhus University); Jack Spalding-Jamieson (Independent); Da Wei Zheng (University of Illinois at Urbana-Champaign) 
+ Dynamic Maximum Depth of Geometric Objects | Subhash Suri (University of California, Santa Barbara); Jie Xue, Xiongxin Yang, Jiumu Zhu (New York University Shanghai) 
+ Sublinear Data Structure for Nearest Neighbor in Ultra High Dimensions | Zihang Wu, Martin G. Herold, Danupon Nanongkai (Max Planck Institute for Informatics, Saarland Informatics Campus); Joachim Spoerhase (University of Liverpool); Nithin Varma (University of Cologne) 
+ Structure and Independence in Hyperbolic Uniform Disk Graphs | Thomas Bläsius, Jean-Pierre von der Heydt (Karlsruhe Institute of Technology); Sándor Kisfaludi-Bak (Aalto University); Marcus Wilhelm (Karlsruhe Institute of Technology); Geert van Wordragen (Aalto University) 
+ Extremal Betti Numbers and Persistence in Flag Complexes | Magnus B. Botnan, Lies Beers (Vrije Universiteit Amsterdam) 
+ Efficient Greedy Discrete Subtrajectory Clustering | Ivor van der Hoog (Technical University of Denmark); Lara Ost (University of Vienna); Eva Rotenberg (Technical University of Denmark); Daniel Rutschmann (Technical University of Denmark) 
+ Geometric Realizations of Dichotomous Ordinal Graphs | Michael Hoffmann (Department of Computer Science, ETH Zürich, Switzerland); Patrizio Angelini (John Cabot University); Sabine Cornelsen (University of Konstanz); Carolina Haase (Trier University); Eleni Katsanou (NTU Athens); Fabrizio Montecchiani (University of Perugia); Raphael Steiner (ETH Zurich); Antonios Symvonis (NTU Athens) 
+ Exact Algorithms for Minimum Dilation Triangulation | Sándor Fekete, Phillip Keldenich, Michael Perk (TU Braunschweig) 
+ Approximating Klee’s Measure Problem and a Lower Bound for Union Volume Estimation | Karl Bringmann (Saarland University and Max Planck Institute for Informatics); Kasper Green Larsen (Aarhus University, Denmark); André Nusser (CNRS, Inria, Université Côte d'Azur, France); Eva Rotenberg (Technical University of Denmark, DTU); Yanheng Wang (Saarland University and Max Planck Institute for Informatics) 
+ Transforming Dogs on the Line: On the Fréchet Distance Under Translation or Scaling in 1D | Lotte Blank, Jacobus Conradi, Anne Driemel, Benedikt Kolbe (University of Bonn); André Nusser (CNRS, Inria, Université Côte d'Azur); Marena Richter (University of Bonn) 
+ Computing Oriented Spanners and their Dilation | Antonia Kalb, Kevin Buchin (TU Dortmund); Anil Maheshwari (Carleton University); Saeed Odak (University of Ottawa); Carolin Rehs (TU Dortmund); Michiel Smid (Carleton University); Sampson Wong (University of Copenhagen) 
+ Nearest Neighbor Searching in a Dynamic Simple Polygon | Sarita de Berg (Utrecht Utrecht); Frank Staals (Utrecht University) 
+ The Maximum Clique Problem in a Disk Graph Made Easy | J. Mark Keil, Debajyoti Mondal (University of Saskatchewan) 
+ Computation of toroidal Schnyder woods made simple and fast: from theory to practice | Luca Castelli Aleardi (LIX, Ecole Polytechnique); Eric Fusy (Laboratoire d'Informatique Gaspard Monge); Jyh-Chwen KO, Razvan Stefan Puscasu (LIX, Ecole Polytechnique) 
+ Higher Order Bipartiteness vs Bi-Partitioning in Simplicial Complexes | Marzieh Eidi (Max Planck Institute for Mathematics in the Sciences); Sayan Mukherjee (MPI MIS, Duke University) 
+ Faster Algorithms for Reverse Shortest Path in Unit-Disk Graphs and Related Geometric Optimization Problems: Improving the Shrink-and-Bifurcate Technique | Timothy M. Chan (UIUC); Zhengcheng Huang (University of Illinois at Urbana-Champaign) 
+ A Theory of Sub-Barcodes | Oliver Chubet (North Carolina State University); Kirk Gardner (AFRL); Donald Sheehy (North Carolina State University) 
+ Geometric spanners of bounded tree-width | Kevin Buchin, Carolin Rehs, Torben Scheele (TU Dortmund) 
+ Convexity Helps Iterated Search in 3D | Peyman Afshani (Aarhus University); Frank Staals (Utrecht University); Yakov Nekrich (Michigan Technological University) 
+ Geometric Bipartite Matching Based Exact Algorithms for Server Problems | Sharath Raghvendra (North Carolina State University); Pouyan Shirzadian (Virginia Tech); Rachita Sowle (Virginia Commonwealth University) 
+ Quantum Combine and Conquer and Its Applications to Sublinear Quantum Convex Hull and Maxima Set Construction | Shion Fukuzawa, Michael Goodrich, Sandy Irani (University of California, Irvine) 
+ Decomposing Multiparameter Persistence Modules | Tamal K. Dey (Purdue University); Jan Jendrysiak, Michael Kerber (TU Graz) 
+ Strongly sublinear separators and bounded asymptotic dimension for sphere intersection graphs | James Davies (University of Cambridge); Agelos Georgakopoulos (University of Warwick); Meike Hatzel (Institute of Basic Science); Rose McCarty (Georgia Institute of Technology) 
+ href="" - CG Week 2025

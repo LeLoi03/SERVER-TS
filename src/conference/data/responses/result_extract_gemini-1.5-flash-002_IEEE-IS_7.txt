@@ -1,0 +1,31 @@
+output:
+{
+  "Conference dates": "May 5 - 7, 2025",
+  "Year": "2025",
+  "Location": "Hyatt Regency Santa Clara, Santa Clara, California, USA",
+  "City-State-Province": "Santa Clara, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Research and Industry paper submission deadline": "January 25, 2025",
+    "Workshop Paper submission deadline": "March 10, 2025"
+  },
+  "Notification Date": {
+    "Acceptance notifications and reviewers’ comments": "March 1, 2025",
+    "Workshop Paper Acceptance Notification": "April 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Camera-Ready copy deadline": "March 7, 2025",
+    "Workshop Camera-Ready copy deadline": "April 10, 2025"
+  },
+  "Other Date": {
+    "Workshop proposal deadline": "October 20, 2024",
+    "Tutorial proposal deadline": "December 1, 2024",
+    "Panel proposal deadline": "January 6, 2025"
+  },
+  "Topics": "Artificial Intelligence, AI Applications, Healthcare, Life Sciences, Transportation, Aerospace, Engineering, Manufacturing, Sustainability, Business Intelligence, Human-Centered AI, Robotics, UAVs, Computer Vision, Security, Safety, AI Infrastructure, AI Testing, Automation",
+  "Summary": "The IEEE Conference on Artificial Intelligence (IEEE CAI) is an international conference and exhibition with an emphasis on the applications of AI and key AI verticals that impact industrial technology applications and innovations. IEEE CAI 2025 will take place in Santa Clara, CA, from May 5-7, 2025.",
+  "Call for Papers": "# IEEE CAI 2025: Call for Papers\n\nThe IEEE Conference on Artificial Intelligence (IEEE CAI) is an international conference and exhibition with an emphasis on the applications of AI and key AI verticals that impact industrial technology applications and innovations. IEEE CAI 2025 will take place from **May 5-7, 2025**, at the **Hyatt Regency Santa Clara in Santa Clara, CA.**\n\n## Vertical Tracks\n\nIEEE CAI seeks original, high-quality proposals describing research and results that contribute to advancements in the following AI applications and verticals:\n\n*   **VERTICAL 1: HEALTHCARE AND LIFE SCIENCE:** Explore the need for improved decision-making to assist medical practitioners, as well as additional medical issues including personnel allocation and scheduling, automated sensing, improved medical devices and manufacturing processes, and supply chain optimization.\n*   **VERTICAL 2: TRANSPORTATION/AEROSPACE:** Focus includes the optimal design of aerospace systems using AI; large- and small-scale transportation systems; deep learning for autonomous driving; and autonomous decision-making in long-term space flight management.\n*   **VERTICAL 3: ENGINEERING AND MANUFACTURING:** Explore cutting-edge AI applications revolutionizing engineering and manufacturing, from predictive maintenance to smart factory automation.\n*   **VERTICAL 4: SUSTAINABILITY:** Employ AI to optimize resource usage, reduce waste, and support renewable energy initiatives. It leverages AI's problem-solving capabilities to address environmental challenges and contribute to a sustainable future.\n*   **VERTICAL 5: BUSINESS INTELLIGENCE:** Uncover how AI is transforming business intelligence, from predictive analytics to automated reporting.\n*   **VERTICAL 6: HUMAN-CENTERED AI:** Learn about AI technologies designed with a human-centered approach, enhancing user experience and ethical considerations.\n*   **VERTICAL 7: ROBOTICS AND UAV:** Delve into the latest AI advancements in robotics and UAVs, from autonomous navigation to advanced task automation.\n*   **VERTICAL 8: COMPUTER VISION:** Investigate state-of-the-art AI applications in computer vision, from image recognition to real-time video analytics.\n*   **VERTICAL 9: SECURITY AND SAFETY:** Explore advanced AI technologies enhancing security and safety, ensuring explainability, and building trustworthiness in various applications, from threat detection to transparent decision-making.\n*   **VERTICAL 10: AI INFRASTRUCTURE:** Develop and optimize foundational AI infrastructures to support scalable, efficient, and robust AI systems. Explore innovations in computing architectures, cloud and edge deployments, and resource management to enable seamless AI integration across industries.\n*   **VERTICAL 11: AI, TESTING AND AUTOMATION:** Advance AI testing methodologies and automation techniques to ensure reliability, efficiency, and accuracy in AI-driven systems. Focus on streamlining development pipelines, improving system validation, and enhancing performance monitoring for autonomous operations.\n\n## Submission Instructions\n\nAuthors are invited to submit their original research work that has not previously been submitted or published in any other venue.\n\n*   At least one of the authors of any accepted paper is requested to register and present the paper at the conference.\n*   All submissions must conform to the IEEE paper formatting and submission instructions.\n*   Each research paper should have at most 6 pages, while each abstract and industry paper should have at most 2 pages, including figures, tables, and references. A maximum of two extra pages per paper is allowed (i.e., up to 8 pages for a research paper and 4 pages for an abstract and industry paper), but with an additional charge.\n*   IEEE CAI 2025 will pursue a double-blind review process. All submissions must be anonymized and may not contain any identifying information.\n\n## Important Dates\n\n*   **Workshop proposal deadline:** October 20, 2024\n*   **Tutorial proposal deadline:** December 1, 2024\n*   **Panel proposal deadline:** January 6, 2025\n*   **Research and Industry paper submission deadline:** January 25, 2025\n*   **Acceptance notifications and reviewers’ comments:** March 1, 2025\n*   **Final Camera-Ready copy deadline:** March 7, 2025\n*   **Workshop Paper submission deadline:** March 10, 2025\n*   **Workshop Paper Acceptance Notification:** April 1, 2025\n*   **Workshop Camera-Ready copy deadline:** April 10, 2025"
+}
+

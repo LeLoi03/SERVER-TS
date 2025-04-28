@@ -1,0 +1,50 @@
+output:
+{
+  "Conference dates": "April 14 - 17, 2025",
+  "Year": "2025",
+  "Location": "Hyatt Regency Houston Downtown, Houston, TX, USA",
+  "City-State-Province": "Houston, Texas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Live Demo Submission Deadline": "February 14, 2025",
+    "4-page Papers Camera Ready Submission": "February 14, 2025",
+    "SS Camera Ready Submission Deadline": "February 24, 2025",
+    "Challenge Papers Submission Deadline": "February 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 26, 2025",
+    "4-page Papers Camera Ready Submission": "January 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 7, 2025",
+    "4-page Papers Camera Ready Submission": "February 14, 2025",
+    "SS Camera Ready Submission Deadline": "February 24, 2025",
+    "Challenge Papers Submission Deadline": "February 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 26, 2025",
+    "4-page Papers Camera Ready Submission": "January 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 7, 2025",
+    "4-page Papers Camera Ready Submission": "February 14, 2025",
+    "SS Camera Ready Submission Deadline": "February 24, 2025",
+    "Challenge Papers Submission Deadline": "February 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 26, 2025",
+    "4-page Papers Camera Ready Submission": "January 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 7, 2025",
+    "4-page Papers Camera Ready Submission": "February 14, 2025",
+    "Demo proposals due": "February 24, 2025"
+
+  },
+  "Notification Date": {
+    "1-page Abstracts Decision Notification": "February 7, 2025",
+    "Special Session Decision Notification": "March 3, 2025",
+    "Accept/Reject notification": "February 28, 2025"
+  },
+  "Camera-ready Date": {
+    "Challenge Papers Camera Ready Submission": "March 3, 2025",
+    "Deadline to submit any update on requested materials needed": "March 7, 2025"
+  },
+  "Other Date": {
+    "Booking Deadline": "March 1, 2025"
+  },
+  "Topics": "Biomedical Imaging",
+  "Summary": "The International Symposium on Biomedical Imaging (ISBI 2025) will be held at the Hyatt Regency Houston Downtown in Houston, TX, USA, from April 14–17, 2025.  The symposium is a premier international conference dedicated to advancing research and applications in biomedical imaging.",
+  "Call for Papers": "# ISBI 2025: Call for Academic Software Demos\n\nThe International Symposium on Biomedical Imaging (ISBI 2025) will be held from **April 14–17, 2025 at the Hyatt Regency Houston Downtown in Houston, TX, USA**.\n\n## Call for Academic Software Demos\n\nWe welcome proposals for in-person demos of academic, open, free, and non-commercial software. The software may or may not be directly associated with accepted ISBI 2025 papers and abstracts, but should still have relevance to accepted ISBI 2025 work. The academic demo sessions of ISBI 2025 will aim to showcase recent developments in the field, software used in ISBI 2025 papers, all relevant to the ISBI community. This will be an opportunity for presenters to perform live demos of their code/software while interacting with conference attendees face-to-face. Note that these demos are separate from ISBI’s commercial booths.\n\n## Demo Guidelines\n\nDemos should focus on open science, reproducible research, clinically-translational work, and soft skills development. Demos should provide material for all levels of expertise, including students, early career scientists, professionals, and clinical users. Demos should primarily focus on the (relatively mature) tools developed by the presenters rather than results.\n\n### Demo Format\n\nAll accepted demos will be in-person in an assigned conference hall during the main conference. Each demo will be provided with a small table, power outlet, wireless (shared) Internet, and a monitor during its assigned time slot. Submissions should list all other supporting equipment that will be needed per demo, so the conference committee may do their best to arrange them. Demo presenters are expected to bring their own laptops/PCs as needed for their demo.\n\n### Demo Fee\n\nThere will be a $140 fee for the demo package (table, poster board, screen, power connection) to be paid upon registration. This fee must be paid by the presenter of the relevant paper the demo is attached to, who will be attending the conference, in addition to their conference attendee fee.\n\n### Demo Proposal\n\nProposals should be no more than one (1) page in 12-point font submitted as a single PDF file. Demo proposals should contain the following sections:\n\n*   Title, brief topic overview, and brief expected learning outcomes. All titles must have the prefix “Demo:”\n*   One “representative image”\n*   Relevance to ISBI community\n*   List any GitHub or otherwise public software related URLs\n*   Target audience\n*   Presenter information (not included in page limit)\n\n### Important Dates\n\nAll deadlines are 11:59 pm USA (PST)\n\n*   **Demo proposals due:** February 24, 2025\n*   **Accept/Reject notification:** February 28, 2025\n*   **Deadline to submit any update on requested materials needed:** March 7, 2025\n\n### Demo Submission\n\nAll demo proposals need to be submitted via Google Form. If you have any questions or concerns, please email: [SJSujit@mdanderson.org](mailto:SJSujit@mdanderson.org)"
+}
+

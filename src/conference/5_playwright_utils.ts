@@ -1,19 +1,13 @@
-// playwright_utils.ts
-import fs from 'fs';
+// 5_playwright_utils.ts
 import { Page, BrowserContext } from 'playwright'; // Import Playwright types
 
 import { cleanDOM, traverseNodes, removeExtraEmptyLines } from './2_dom_processing';
-import { extract_information_api, determine_links_api } from './7_gemini_api_utils';
-import { init } from './8_data_manager';
+import { determine_links_api } from './7_gemini_api_utils';
 import { extractTextFromPDF } from './9_pdf_utils';
-import { addAcronymSafely, logger } from './11_utils';
+import { logger } from './11_utils';
 import { MAIN_CONTENT_KEYWORDS, YEAR2 } from '../config';
 
-import { BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData, ProcessedResponseData } from './types';
-import { processResponse } from './10_response_processing';
-import path from 'path';
-
-const ERROR_ACCESS_LINK_LOG_PATH: string = path.join(__dirname, "./data/error_access_link_log.txt");
+import { BatchEntry} from './types';
 
 import { readContentFromFile, writeTempFile } from './11_utils';
 

@@ -1,0 +1,25 @@
+```json
+{
+  "Conference dates": "June 17 - 20, 2025",
+  "Year": "2025",
+  "Location": "Ponta Delgada, Azores, Portugal",
+  "City-State-Province": "Ponta Delgada",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Deadline": "March 15, 2025"
+  },
+  "Registration Date": {
+    "Registration Deadline": "April 1, 2025",
+    "Late Registration Deadline": "May 15, 2025"
+  },
+  "Other Date": {
+    "AIMMS-MOPTA Competition Deadline": "April 1, 2025",
+    "Tamas-70 Session and Dinner": "June 18, 2025"
+  },
+  "Topics": "Modeling, Optimization, Discrete Optimization, Continuous Optimization, Theoretical Optimization, Applied Optimization",
+  "Summary": "The Modeling and Optimization: Theory and Applications (MOPTA) 2025 Conference will take place in Ponta Delgada, Azores, Portugal, from June 17-20, 2025.  MOPTA aims at bringing together a diverse group of people from both discrete and continuous optimization, working on both theoretical and applied aspects.  The conference will celebrate the 70th birthday of Professor Tamás Terlaky and the Lehigh ISE 100th Anniversary.",
+  "Call for Papers": "# MOPTA 2025: Call for Abstracts and Session Proposals\n\nThe Modeling and Optimization: Theory and Applications (MOPTA) 2025 Conference will take place in **Ponta Delgada, Azores, Portugal from June 17-20, 2025.**\n\nMOPTA aims at bringing together a diverse group of people from both discrete and continuous optimization, working on both theoretical and applied aspects.  The conference will celebrate the 70th birthday of Professor Tamás Terlaky and the Lehigh ISE 100th Anniversary. There will be a **Tamas-70 Session and Dinner** on June 18, 2025.\n\n## Abstract Submission\n\nYou can submit your abstract through this link: [MOPTA 2025 Abstract Submission](https://coral.ise.lehigh.edu/~abstract/mopta-2025-abstract-submission/)\n\nAuthors are allowed to submit one abstract. The maximum allowed limit of words for each abstract is 250. When submitting an abstract, authors can include the name, email, and affiliation of co-authors in the Author Information box. Authors should write their own name and email in the Presenter Information box. Authors should specify the type of Abstract they are submitting (whether Contributed Talk or Invited Talk) in the Submission Type field within the Presenter Information box. Each talk is 22.5 minutes long (including questions).\n\n## Session Proposal Submission\n\nAttendees who wish to organize one or more sessions should fill out the form available at this link: [MOPTA 2025 Session Submission](https://forms.gle/uFQQEXaKksBF5jQr7)\n\nMOPTA 2025 sessions consist of four 22.5-minute presentations, including Q&A.\n\n## Important Dates\n\n*   **Abstract Submission Deadline:** March 15, 2025\n*   **Registration Deadline:** April 1, 2025\n*   **Late Registration Deadline:** May 15, 2025 (tours and dinners may not be guaranteed)\n*   **Competition Deadline:** April 1, 2025\n\n## Plenary Talks\n\n*   Serge Gratton, Institut National Polytechnique de Toulouse, France\n*   Oktay Günlük, Georgia Institute of Technology, USA\n*   Ojas D. Parekh, Sandia National Laboratories, USA\n*   Julie L. Swann, North Carolina State University, USA\n*   Jared Tanner, University of Oxford, UK\n*   Karen E. Willcox, University of Texas at Austin, USA\n\n## Tamas-70 Invited Talks\n\n*   Mohammadhossein Mohammadisiahroudi, Lehigh University, USA\n*   Etienne de Klerk, Tilburg University, The Netherlands\n*   Tibor Illés, Corvinus University of Budapest, Hungary\n*   Imre Pólik, FICO Xpress, USA\n\n## Contact Information\n\n*   Questions about the program and/or abstracts, please contact: Dr. Tommaso Giovannelli, [tog220(at)lehigh(dot)edu](mailto:tog220@lehigh.edu?subject=MOPTA%202024)\n*   Questions about the competition, please contact: Dr. Akwum Onwunta, [ako221(at)lehigh(dot)edu](mailto:ako221@lehigh.edu?subject=MOPTA%20Competition)"
+}
+```

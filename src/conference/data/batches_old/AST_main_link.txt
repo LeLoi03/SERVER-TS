@@ -1,0 +1,1180 @@
+Conference AST:
+
+AST 2025  Sat 26 April - Sun 4 May 2025 Ottawa, Ontario, Canada   
+ co-located with ICSE 2025   
+
+ Toggle navigation        
+ Attending | Venue: Rogers Centre, Ottawa (formerly Shaw Centre) 
+  Venue: Offsite Special Venue 
+  Reception venue: National Arts Centre 
+  ICSE 2025 
+  Registration 
+  Food at ICSE2025 
+  Fun Activities 
+  Social media 
+  Hotels 
+  Getting Around Ottawa 
+  Visa and Travel Authorization 
+  Travelling to Ottawa 
+  Travel Support 
+  Code of Conduct 
+  Equity, Diversity, and Inclusion Plan 
+  Sustainability 
+  FAQ 
+  Program | AST Program 
+  Your Program 
+   Filter by Day | Sat 26 Apr 
+  Sun 27 Apr 
+  Mon 28 Apr 
+  Tue 29 Apr 
+  Wed 30 Apr 
+  Thu 1 May 
+  Fri 2 May 
+  Sat 3 May 
+  Sun 4 May 
+  Track/Call 
+  Organization | AST 2025 Committees 
+  Track Committees 
+  Organizing Committee 
+  Program Committee 
+  Steering Committee 
+  Contributors 
+  People Index 
+  Search 
+  Series | Series 
+   AST 2025 
+  AST 2024 
+  AST 2023 
+  AST 2022 
+  AST 2021 
+  AST 2020 
+  Sign in 
+  Sign up 
+
+  ICSE 2025 ( series ) /  AST 2025 ( series ) /  AST 2025  
+   
+ About 
+  Program 
+  Accepted Papers 
+  Submission 
+  Keynotes 
+  Registration 
+  Previous Editions 
+  Awards 
+  Call for Papers 
+  The 6th ACM/IEEE International Conference on Automation of Software Test (AST 2025)  
+ Software pervasiveness in both industry and digital society, as well as the proliferation of Artificial Intelligence (AI) technologies are continuously leading to emerging needs from both software producers and consumers. Infrastructures, software components, and applications aim to hide their increasing complexity in order to appear more human-centric. However, the potential risk from design errors, poor integrations, and time-consuming engineering phases can result in unreliable solutions that can barely meet their intended objectives. In this context, Software Engineering processes keep demanding for the investigation of novel and further refined approaches to Software Quality Assurance (SQA). Software testing automation is a discipline that has produced noteworthy research in the last decade. The search for solutions to automatically test any concept of software is critical, and it encompasses several areas: from the generation of the test cases, test oracles, test stubs/mocks; through the definition of selection and prioritization criteria; up to the engineering of infrastructures governing the execution of testing sessions locally or remotely in the cloud.  
+ AST continues with a long record of international scientific forums on methods and solutions to automate software testing. This year AST is the 6th edition of a conference that was formerly organized as workshops since 2006. The conference promotes high quality research contributions on methods for software test automation, and original case studies reporting practices in this field. We invite contributions that focus on: i) lessons learned about experiments of automatic testing in practice; ii) experiences of the adoption of testing tools, methods and techniques; iii) best practices to follow in testing and their measurable consequences; and iv) theoretical approaches that are applicable to the industry in the context of AST.  
+ Authors of the best papers presented at AST 2025 will be invited to submit an extension of their work for possible inclusion in a special issue in Software Testing, Verification, and Reliability (STVR) journal   
+ Call for papers.  
+
+ Dates    
+ Mon 28 Apr 2025   
+ Tue 29 Apr 2025   
+
+ Plenary    
+ Hide plenary sessions   
+
+  This program is tentative and subject to change.  
+  Program Display Configuration  
+   
+   Time Zone   
+   
+ The program is currently displayed in (GMT-04:00) Eastern Time (US & Canada)  .   Use conference time zone: (GMT-04:00) Eastern Time (US & Canada)    Select other time zone   (GMT-12:00) AoE (Anywhere On Earth)  (GMT-11:00) Midway Island, Samoa  (GMT-09:00) Hawaii-Aleutian  (GMT-10:00) Hawaii  (GMT-09:30) Marquesas Islands  (GMT-09:00) Gambier Islands  (GMT-08:00) Alaska  (GMT-07:00) Tijuana, Baja California  (GMT-08:00) Pitcairn Islands  (GMT-07:00) Pacific Time (US & Canada)  (GMT-06:00) Mountain Time (US & Canada)  (GMT-06:00) Chihuahua, La Paz, Mazatlan  (GMT-07:00) Arizona  (GMT-06:00) Saskatchewan, Central America  (GMT-05:00) Guadalajara, Mexico City, Monterrey  (GMT-06:00) Easter Island  (GMT-05:00) Central Time (US & Canada)  (GMT-04:00) Eastern Time (US & Canada)  (GMT-04:00) Cuba  (GMT-05:00) Bogota, Lima, Quito, Rio Branco  (GMT-04:00) Caracas  (GMT-04:00) Santiago  (GMT-04:00) La Paz  (GMT-03:00) Faukland Islands  (GMT-04:00) Manaus, Amazonas, Brazil  (GMT-03:00) Atlantic Time (Goose Bay)  (GMT-03:00) Atlantic Time (Canada)  (GMT-02:30) Newfoundland  (GMT-03:00) UTC-3  (GMT-03:00) Montevideo  (GMT-02:00) Miquelon, St. Pierre  (GMT-02:00) Greenland  (GMT-03:00) Buenos Aires  (GMT-03:00) Brasilia, Distrito Federal, Brazil  (GMT-02:00) Mid-Atlantic  (GMT-01:00) Cape Verde Is.  (GMT) Azores  (UTC) Coordinated Universal Time  (GMT+01:00) Belfast  (GMT+01:00) Dublin  (GMT+01:00) Lisbon  (GMT+01:00) London  (GMT) Monrovia, Reykjavik  (GMT+02:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna  (GMT+02:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague  (GMT+02:00) Brussels, Copenhagen, Madrid, Paris  (GMT+01:00) West Central Africa  (GMT+02:00) Windhoek  (GMT+03:00) Athens  (GMT+03:00) Beirut  (GMT+02:00) Cairo  (GMT+03:00) Gaza  (GMT+02:00) Harare, Pretoria  (GMT+03:00) Jerusalem  (GMT+03:00) Minsk  (GMT+03:00) Syria  (GMT+03:00) Moscow, St. Petersburg, Volgograd  (GMT+03:00) Nairobi  (GMT+03:30) Tehran  (GMT+04:00) Abu Dhabi, Muscat  (GMT+04:00) Yerevan  (GMT+04:30) Kabul  (GMT+05:00) Ekaterinburg  (GMT+05:00) Tashkent  (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi  (GMT+05:45) Kathmandu  (GMT+06:00) Astana, Dhaka  (GMT+07:00) Novosibirsk  (GMT+06:30) Yangon (Rangoon)  (GMT+07:00) Bangkok, Hanoi, Jakarta  (GMT+07:00) Krasnoyarsk  (GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi  (GMT+08:00) Irkutsk, Ulaan Bataar  (GMT+08:00) Perth  (GMT+08:45) Eucla  (GMT+09:00) Osaka, Sapporo, Tokyo  (GMT+09:00) Seoul  (GMT+09:00) Yakutsk  (GMT+09:30) Adelaide  (GMT+09:30) Darwin  (GMT+10:00) Brisbane  (GMT+10:00) Hobart  (GMT+10:00) Vladivostok  (GMT+10:30) Lord Howe Island  (GMT+11:00) Solomon Is., New Caledonia  (GMT+11:00) Magadan  (GMT+11:00) Norfolk Island  (GMT+12:00) Anadyr, Kamchatka  (GMT+12:00) Auckland, Wellington  (GMT+12:00) Fiji, Kamchatka, Marshall Is.  (GMT+12:45) Chatham Islands  (GMT+13:00) Nuku'alofa  (GMT+14:00) Kiritimati     
+
+   The GMT offsets shown reflect the offsets at the moment of the conference  .     
+   
+ Time Band   
+   
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions).  
+  The time band will also limit the events that are included in the personal iCalendar subscription service.   Display full program    Specify a time band    -       
+
+  Save   
+
+  Close   
+
+ ×    You're viewing the program in a time zone which is different from your device's time zone change time zone    
+
+ Mon 28 Apr   
+  
+ Displayed time zone: Eastern Time (US & Canada)  change     
+
+ 07:00 - 19:00 | Ready Room Monday ICSE Social, Networking and Special Rooms  at 209  
+  The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed.  
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays.  
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people.  
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time.  
+ The Ready Room will also have some poster boards. 
+
+ 09:00 - 10:30 | Quiet Room Monday 9AM ICSE Social, Networking and Special Rooms  at 202 
+
+ 09:00 - 10:30 | Conference Opening & Keynote AST 2025  at 211 
+ 09:00   
+ 90m    
+ Keynote | Personalized Fuzzing  AST 2025   
+ Andreas Zeller CISPA Helmholtz Center for Information Security 
+
+ 10:30 - 11:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 10:30   
+ 30m    
+ Break | Monday Morning Break  ICSE Catering 
+
+ 11:00 - 12:30 | Quiet Room Monday 11AM ICSE Social, Networking and Special Rooms  at 202 
+
+ 11:00 - 12:30 | Session 1: LLM for Testing AST 2025  at 211 
+ 11:00   
+ 30m    
+ Full-paper | Acceptance Test Generation with Large Language Models: An Industrial Case Study  AST 2025   
+ Margarida Ferreira University of Porto and Critical TechWorks  , Luís Viegas University of Porto and Critical TechWorks  , João Pascoal Faria Faculty of Engineering, University of Porto and INESC TEC  , Bruno Lima Faculty of Engineering of the University of Porto & LIACC 
+ 11:30   
+ 30m    
+ Full-paper | AsserT5: Test Assertion Generation Using a Fine-Tuned Code Language Model  AST 2025   
+ Severin Primbs University of Passau  , Benedikt Fein University of Passau  , Gordon Fraser University of Passau    
+  Pre-print 
+ 12:00   
+ 30m    
+ Full-paper | Simulink Mutation Testing using CodeBERT  AST 2025   
+ Jingfan Zhang University of Ottawa  , Delaram Ghobari University of Ottawa  , Mehrdad Sabetzadeh University of Ottawa  , Shiva Nejati University of Ottawa    
+  Pre-print 
+
+ 12:30 - 14:00 | Lunch ICSE Catering  at Canada Hall 3 plus Foyer 
+ 12:30   
+ 90m    
+ Lunch | Monday Lunch  ICSE Catering 
+
+ 14:00 - 15:30 | Quiet Room Monday 2PM ICSE Social, Networking and Special Rooms  at 202 
+
+ 14:00 - 15:30 | Session 2: Test Generation AST 2025  at 211 
+ 14:00   
+ 30m    
+ Full-paper | Automated Test-Case Generation for REST APIs Using Model Inference Search Heuristic  AST 2025   
+ Clinton Cao Delft University of Technology  , Annibale Panichella Delft University of Technology  , Sicco Verwer TU Delft    
+  Pre-print 
+ 14:30   
+ 30m    
+ Full-paper | Automated Test Generation for Integration Testing  AST 2025   
+ Elson Kurian University of Milano Bicocca  , Luca Guglielmo Università degli Studi di Milano-Bicocca  , Pietro Braione University of Milano-Bicocca  , Giovanni Denaro University of Milano - Bicocca 
+ 15:00   
+ 30m    
+ Full-paper | Automated Test Generation from Program Documentation Encoded in Code Comments  AST 2025   
+ Giovanni Denaro University of Milano - Bicocca  , Luca Guglielmo Università degli Studi di Milano-Bicocca 
+
+ 15:30 - 16:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 15:30   
+ 30m    
+ Break | Monday Afternoon Break  ICSE Catering 
+
+ 16:00 - 17:30 | Quiet Room Monday 4PM ICSE Social, Networking and Special Rooms  at 202 
+
+ 16:00 - 17:30 | Session 3: Panel Discussion AST 2025  at 211 
+ 16:00   
+ 90m    
+ Panel | Automated Software Testing for Sustainability and Resource Efficiency  AST 2025   
+ Istvan David McMaster University / McMaster Centre for Software Certification (McSCert)  , Roberto Verdecchia University of Florence  , Bimpe Ayoola Dalhousie University  , Jari Porras LUT University  , Lina Marsso Polytechnique Montreal 
+
+ Tue 29 Apr   
+  
+ Displayed time zone: Eastern Time (US & Canada)  change     
+
+ 07:00 - 19:00 | Ready Room Tuesday ICSE Social, Networking and Special Rooms  at 209 
+
+ 09:00 - 10:30 | Conference Opening & Keynote 2 AST 2025  at 211 
+ 09:00   
+ 90m    
+ Keynote | Learning-Based Testing: The Ease, the Impact, the Future  AST 2025   
+ Tiziana Margaria University of Limerick and Lero - The Irish Software Research Centre 
+
+ 10:30 - 11:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 10:30   
+ 30m    
+ Break | Tuesday Morning Break  ICSE Catering 
+
+ 11:00 - 12:30 | Session 4: When and How to Test AST 2025  at 211 
+ 11:00   
+ 22m    
+ Full-paper | An Adaptive Testing Approach Based on Field Data  AST 2025   
+ Samira Santos da Silva Gran Sasso Science Institute (GSSI)  , Ricardo Caldas Gran Sasso Science Institute (GSSI)  , Patrizio Pelliccione Gran Sasso Science Institute, L'Aquila, Italy  , Antonia Bertolino National Research Council, Italy    
+  Pre-print 
+ 11:22   
+ 22m    
+ Full-paper | Exceptional Behaviors: How Frequently Are They Tested?  AST 2025   
+ Andre Hora UFMG  , Gordon Fraser University of Passau    
+  Pre-print 
+ 11:45   
+ 22m    
+ Full-paper | Improving Examples in Web API Specifications using Iterated-Calls In-Context Learning  AST 2025   
+ Kush Jain Carnegie Mellon University  , Kiran Kate IBM Research  , Jason Tsay IBM Research  , Claire Le Goues Carnegie Mellon University  , Martin Hirzel IBM Research 
+ 12:07   
+ 22m    
+ Full-paper | What Types of Automated Tests do Developers Write?  AST 2025   
+ Marko Ivanković University of Passau  , Luka Rimanić Google Switzerland GmbH  , Ivan Budiselic Google  , Goran Petrovic Google; Universität Passau  , Gordon Fraser University of Passau  , René Just University of Washington 
+
+ 12:30 - 14:00 | Lunch ICSE Catering  at Canada Hall 3 plus Foyer 
+ 12:30   
+ 90m    
+ Lunch | Tuesday Lunch  ICSE Catering 
+
+ 14:00 - 15:30 | Session 5: Testing of LLMs AST 2025  at 211 
+ 14:00   
+ 30m    
+ Full-paper | Adaptive Probabilistic Operational Testing for Large Language Models Evaluation  AST 2025   
+ Ali Asgari TU Delft  , Antonio Guerriero Università di Napoli Federico II  , Roberto Pietrantuono Università di Napoli Federico II  , Stefano Russo Università di Napoli Federico II 
+ 14:30   
+ 30m    
+ Full-paper | ASTRAL: Automated Safety Testing of Large Language Models  AST 2025   
+ Miriam Ugarte Mondragon University  , Pablo Valle Mondragon University  , José Antonio Parejo Maestre University of Seville  , Sergio Segura University of Seville  , Aitor Arrieta Mondragon University    
+  Pre-print 
+ 15:00   
+ 30m    
+ Full-paper | A Taxonomy of Failures in Tool-Augmented LLMs  AST 2025   
+ Cailin Winston University of Washington  , René Just University of Washington 
+
+ 15:30 - 16:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 15:30   
+ 30m    
+ Break | Tuesday Afternoon Break  ICSE Catering 
+
+ 16:00 - 17:30 | Session 6: Vulnerability Detection & Closing AST 2025  at 211 
+ 16:00   
+ 30m    
+ Full-paper | A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification  AST 2025   
+ Norbert Tihanyi Technology Innovation Institute  , Yiannis Charalambous The University of Manchester  , Ridhi Jain Technology Innovation Institute (TII), Abu Dhabi, UAE  , Mohamed Amine Ferrag Guelma University  , Lucas C. Cordeiro University of Manchester, UK and Federal University of Amazonas, Brazil 
+ 16:30   
+ 30m    
+ Full-paper | Bringing Light into the Darkness: Leveraging Hidden Markov Models for Blackbox Fuzzing  AST 2025   
+ Anne Borcherding Fraunhofer IOSB  , Mark Giraud Fraunhofer IOSB  , Johannes Häring Karlsruhe Institute of Technology 
+ 17:00   
+ 30m    
+ Full-paper | Incorporating Domain Knowledge into GNNs for Advanced Vulnerability Detection in Java  AST 2025   
+ ROSMAEL ZIDANE LEKEUFACK FOULEFACK Information Engineering and Computer Science (DISI)/University of Trento (UNITN)  , Alessandro Marchetto Università di Trento 
+
+ 19:00 - 22:00 | Quiet Room Tuesday Evening ICSE Social, Networking and Special Rooms  at 202 
+
+  Information for Participants  
+   
+ Tue 29 Apr 2025 19:00 - 22:00 at 202  - Quiet Room Tuesday Evening Info for session   
+ The Quiet Room (202) is for anyone who wants to get away from noise and be by themself.  
+ It will be available throughout ICSE week except for Sunday, Tuesday and Saturday (since we need need the room for workshops on those days).  
+ Please keep this room ‘library quiet’. If you want to listen to a stream or music., please wear headphones. Please do not talk to others or participate in a virtual event where you may have to talk.  
+ This room is especially designed to be helpful for the neurodiverse community, who may need to recharge their social battery, or simply get away from noise.  
+ Some people may choose to pray in this room. Please respect them when they do this. There is also Room 2A set aside for this purpose.  
+ Note that the Ready Room (209) is another room where you can hang out and talk to others or get work done.  
+
+  Close   
+
+ Accepted Papers  
+  
+ Title 
+ Acceptance Test Generation with Large Language Models: An Industrial Case Study AST 2025   
+ Margarida Ferreira , Luís Viegas , João Pascoal Faria , Bruno Lima 
+ Adaptive Probabilistic Operational Testing for Large Language Models Evaluation AST 2025   
+ Ali Asgari , Antonio Guerriero , Roberto Pietrantuono , Stefano Russo 
+ An Adaptive Testing Approach Based on Field Data AST 2025   
+ Samira Santos da Silva , Ricardo Caldas , Patrizio Pelliccione , Antonia Bertolino   
+  Pre-print 
+ A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification AST 2025   
+ Norbert Tihanyi , Yiannis Charalambous , Ridhi Jain , Mohamed Amine Ferrag , Lucas C. Cordeiro 
+ AsserT5: Test Assertion Generation Using a Fine-Tuned Code Language Model AST 2025   
+ Severin Primbs , Benedikt Fein , Gordon Fraser   
+  Pre-print 
+ ASTRAL: Automated Safety Testing of Large Language Models AST 2025   
+ Miriam Ugarte , Pablo Valle , José Antonio Parejo Maestre , Sergio Segura , Aitor Arrieta   
+  Pre-print 
+ A Taxonomy of Failures in Tool-Augmented LLMs AST 2025   
+ Cailin Winston , René Just 
+ Automated Software Testing for Sustainability and Resource Efficiency AST 2025   
+ Istvan David , Roberto Verdecchia , Bimpe Ayoola , Jari Porras , Lina Marsso 
+ Automated Test-Case Generation for REST APIs Using Model Inference Search Heuristic AST 2025   
+ Clinton Cao , Annibale Panichella , Sicco Verwer   
+  Pre-print 
+ Automated Test Generation for Integration Testing AST 2025   
+ Elson Kurian , Luca Guglielmo , Pietro Braione , Giovanni Denaro 
+ Automated Test Generation from Program Documentation Encoded in Code Comments AST 2025   
+ Giovanni Denaro , Luca Guglielmo 
+ Bringing Light into the Darkness: Leveraging Hidden Markov Models for Blackbox Fuzzing AST 2025   
+ Anne Borcherding , Mark Giraud , Johannes Häring 
+ Exceptional Behaviors: How Frequently Are They Tested? AST 2025   
+ Andre Hora , Gordon Fraser   
+  Pre-print 
+ Improving Examples in Web API Specifications using Iterated-Calls In-Context Learning AST 2025   
+ Kush Jain , Kiran Kate , Jason Tsay , Claire Le Goues , Martin Hirzel 
+ Incorporating Domain Knowledge into GNNs for Advanced Vulnerability Detection in Java AST 2025   
+ ROSMAEL ZIDANE LEKEUFACK FOULEFACK , Alessandro Marchetto 
+ Simulink Mutation Testing using CodeBERT AST 2025   
+ Jingfan Zhang , Delaram Ghobari , Mehrdad Sabetzadeh , Shiva Nejati   
+  Pre-print 
+ What Types of Automated Tests do Developers Write? AST 2025   
+ Marko Ivanković , Luka Rimanić , Ivan Budiselic , Goran Petrovic , Gordon Fraser , René Just 
+
+ Call for Papers  
+  
+ Scope  
+ Software pervasiveness in both industry and digital society, as well as the proliferation of Artificial Intelligence (AI) technologies are continuously leading to emerging needs from both software producers and consumers. Infrastructures, software components, and applications aim to hide their increasing complexity in order to appear more human-centric. However, the potential risk from design errors, poor integrations, and time-consuming engineering phases can result in unreliable solutions that can barely meet their intended objectives. In this context, Software Engineering processes and methods keep demanding for the investigation of novel and further refined approaches to Software Quality Assurance (SQA).  
+ Software testing automation is a discipline that has produced noteworthy research in the last decades. The search for solutions to automatically test any concept of software is critical, and it encompasses several areas: from the generation of the test cases, test oracles, test stubs/mocks; through the definition of selection and prioritization criteria; up to the engineering of infrastructures governing the execution of testing sessions locally or remotely in the cloud.  
+ The Automation of Software Test (AST) conference continues with a long record of international scientific forums on methods and solutions to automate software testing. In 2025, AST is in its 6th edition of a conference that was formerly organized as workshops since 2006. The conference promotes high-quality research contributions on methods for software test automation, and original case studies reporting practices in this field. We invite contributions that focus on: i) lessons learned about experiments of automatic testing in practice; ii) experiences of the adoption of testing tools, methods and techniques; iii) best practices to follow in testing and their measurable consequences; and iv) theoretical approaches that are applicable to the industry in the context of AST.  
+ Our theme for this year is “Adapting test automation to the AI era including sustainability and emerging challenges” with special sessions on test automation for AI, sustainability, and AI testing education and training.  
+ Topics of Interest  
+ Submissions on the AST 2025 theme are especially encouraged, but papers on other topics relevant to the automation of software tests are also welcome. Topics of interest include, but are not limited to the following:  
+ AI for Automated Software Testing 
+  Testing of AI-based systems 
+  Effective testing through explainable AI 
+  Education to software testing with the advent of AI-based technology 
+  Automated software testing for sustainability, resource efficiency, energy consumption 
+  Codeless and low code test automation 
+  Test Automation in Software Process and Evolution, DevOps, Agile, CI/CD flows 
+  Test-driven development 
+  Model-based testing 
+  Formal methods, model checking and theories for testing and test automation 
+  Test case generation based on formal, semi-formal and AI models 
+  Theoretical foundations and methods for test automation 
+  Standardization of test languages, processes and tools 
+  Security, performance, and robustness testing 
+  Functional, interoperability, and conformance testing 
+  Usability and user experience testing 
+  Software simulation and automated software testing 
+  Testing of embedded, reactive and object-oriented systems 
+  Test automation of large complex systems 
+  Testing cyber physical systems 
+  Testing cloud and web systems and services 
+  Product line testing 
+  Testing anomaly detectors 
+  Metrics for testing - test effectiveness, efficiency, test coverage 
+  Testing tools 
+  Testing in different industry domains including healthcare, energy, finance, etc. 
+  Important Dates  
+ Submission: 9 November 2024  
+ Notification: 12 January 2025 ( UPDATED  )  
+ Final version: 31 January 2025  
+ Conference: 28-29 April 2025  
+ Organizers  
+ Andy Zaidman, Delft University of Technology, The Netherlands (General Chair)  
+ Francesca Lonetti, ISTI-CNR, Italy (Program Co-Chair)  
+ Ina Schieferdecker, Technische Universität Berlin, Germany (Program Co-Chair)  
+ Rajesh Subramanyan, Stealth Startup & University of Washington, USA (Program Co-Chair)  
+
+ Submission  
+   
+ Submission Details  
+ Three types of submissions are invited for both research and industry:  
+ Regular Papers (up to 10 pages plus 2 additional pages of references) Research Paper Industrial Case Study 
+  Short Papers (up to 4 pages plus 1 additional page of references) Research Paper Industrial Case Study Doctoral Student Research 
+  Industrial Abstracts (up to 2 pages for all materials) 
+  The submission website is: https://ast2025.hotcrp.com/  
+ All submissions must adhere to the following requirements: The page limit is strict (10 pages plus 2 additional pages of references for full papers; 4 pages plus 1 additional page of references for short papers; 2 pages for all materials in case of industrial abstracts). It will not be possible to purchase additional pages at any point in the process (including after acceptance). Submissions must strictly conform to the IEEE conference proceedings template, specified in the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use \documentclass[10pt,conference]{IEEEtran} without including the compsoc or compsocconf options).  
+ IEEE Conference Proceedings Formatting Guidelines: https://www.ieee.org/conferences/publishing/templates.html  
+ Submissions must be unpublished original work and should not be under review or submitted elsewhere while being under consideration. AST 2025 will follow the double-blind review process. The accepted regular and short papers, case studies, and industrial abstracts will be published in the ICSE 2025 Co-located Event Proceedings and included in the IEEE and ACM Digital Libraries. The official publication date is the date the proceedings are made available in the ACM or IEEE Digital Libraries. This date may be up to two weeks prior to the first day of ICSE 2025. The official publication date affects the deadline for any patent filings related to published work. Purchases of additional pages in the proceedings are not allowed.  
+ Special Issue  
+ Authors of the best papers presented at AST 2025 will be invited to submit an extension of their work for possible inclusion in a special issue.  
+   
+ Keynotes  
+   
+ Keynote: Tiziana Margaria  Title: TBD  
+ Keynote: Andreas Zeller  Title: TBD  
+   
+ Registration  
+   
+ https://conf.researchr.org/attending/icse-2025/registration  
+   
+ Previous Editions  
+   
+ 2024 - Lisbon, Portugal 
+  2023 - Melbourne, Australia 
+  2022 - Pittsburgh, USA 
+  2021 - Virtual (originally in Madrid, Spain) 
+  2020 - Seoul - South Korea 
+  2019 - Montreal - Canada 
+  2018 - Gothenburg - Sweden 
+  2017 - Buenos Aires - Argentina 
+  2016 - Austin - Texas 
+  2015 - Firenze - Italy 
+  2014 - Hyderabad - India 
+  2013 - San Jose California - USA 
+  2012 - Zurich - Switzerland 
+  2011 - Waikiki - Hawaii 
+  2010 - Cape Town - South Africa 
+  2009 - Vancouver - Canada 
+  2008 - Leipzig - Germany 
+  2007 - Minneapolis - USA 
+  2006 - Shanghai - China 
+    
+ Awards  
+
+ Important Dates   AoE (UTC-12h)     
+
+ Mon 28 - Tue 29 Apr 2025  
+  Conference 
+ Wed 5 Feb 2025  
+  Camera ready deadline 
+ Sun 12 Jan 2025   
+  Notification of acceptance **UPDATED** 
+ Sat 30 Nov 2024   
+  Submission deadline (**EXTENDED**) 
+ Wed 27 Nov 2024   
+  Title and Abstract Submission 
+
+ Organizing Committee   
+   
+ Andy Zaidman General Chair    
+ Delft University of Technology   
+ Netherlands 
+  Francesca Lonetti Program Co-Chair    
+ CNR-ISTI   
+ Italy 
+  Rajesh Subramanyan Program Co-Chair    
+ University of Washington, USA   
+ United States 
+  Ina Schieferdecker Program Co-Chair    
+ TU Berlin   
+ Germany 
+  Baris Ardic Web Chair    
+ Delft University of Technology   
+ Netherlands 
+  Morena Barboni Proceedings Chair    
+ University of Camerino   
+ Italy 
+    
+ Program Committee   
+   
+ Andrea Polini    
+ University of Camerino 
+  Andreas Ulrich    
+ Siemens AG 
+  Boni Garcia    
+ Universidad Carlos III de Madrid   
+ Spain 
+  Breno Miranda    
+ Centro de Informática at Universidade Federal de Pernambuco   
+ Brazil 
+  Cyrille Artho    
+ KTH Royal Institute of Technology, Sweden 
+  Eduard Paul Enoiu    
+ Mälardalen University   
+ Sweden 
+  Eunkyoung Jee    
+ KAIST, South Korea   
+ South Korea 
+  Fitash Ul Haq    
+ Luxembourg Institute of Science and Technology   
+ Luxembourg 
+  Gilles Perrouin    
+ Fonds de la Recherche Scientifique - FNRS & University of Namur   
+ Belgium 
+  Gregory Gay    
+ Chalmers University of Technology and University of Gothenburg   
+ Sweden 
+  Guglielmo De Angelis    
+ CNR-IASI   
+ Italy 
+  Jens Grabowski    
+ University of Göttingen 
+  José Miguel Rojas    
+ University of Sheffield   
+ United Kingdom 
+  Mahshid Helali Moghadam    
+ Scania CV AB   
+ Sweden 
+  Marko Ivanković    
+ University of Passau   
+ Croatia 
+  Mika Mäntylä    
+ University of Helsinki and University of Oulu   
+ Finland 
+  Rubing Huang    
+ Macau University of Science and Technology (M.U.S.T.)   
+ China 
+  Rudolf Ramler    
+ Software Competence Center Hagenberg (SCCH)   
+ Austria 
+  Ruth Breu    
+ University of Innsbruck   
+ Austria 
+  Saurabh Tiwari    
+ DA-IICT Gandhinagar   
+ India 
+  Seung Yeob Shin    
+ SnT Centre/University of Luxembourg 
+  Shaukat Ali    
+ Simula Research Laboratory and Oslo Metropolitan University   
+ Norway 
+  Sinem Getir Yaman    
+ University of York, UK   
+ United Kingdom 
+  Vincent Cicirello    
+ Stockton University   
+ United States 
+  Wasif Afzal    
+ Mälardalen University   
+ Sweden 
+  Xavier Devroey    
+ University of Namur   
+ Belgium 
+  Ziyuan Wang    
+ Nanjing University of Posts and Telecommunications 
+  Rui Abreu Committee Member    
+ INESC-ID; University of Porto   
+ Portugal 
+  Antonio Guerriero Committee Member    
+ Università di Napoli Federico II 
+  Mike Papadakis Committee Member    
+ University of Luxembourg   
+ Luxembourg 
+  Porfirio Tramontana Committee Member    
+ Department of Electrical Engineering and Information Technologies, University of Naples Federico II, Italy   
+ Italy 
+  Thomas Vogel Committee Member    
+ Humboldt-Universtität zu Berlin   
+ Germany 
+  Kristian Wiklund Committee Member    
+ Ericsson AB 
+    
+ Steering Committee   
+   
+ Fevzi Belli    
+ Paderborn University, Germany   
+ Germany 
+  Antonia Bertolino    
+ National Research Council, Italy   
+ Italy 
+  Christof J. Budnik    
+ Siemens Corporation, Corporate Technology   
+ United States 
+  Jenny Li    
+ Kean University, USA 
+  Francesca Lonetti    
+ CNR-ISTI   
+ Italy 
+  Steve Masticola    
+ Siemens, USA 
+  Mehrdad Saadatmand    
+ RISE Research Institutes of Sweden   
+ Sweden 
+  W. Eric Wong    
+ University of Texas at Dallas   
+ United States 
+  Hong Zhu    
+ Oxford Brookes University   
+ United Kingdom 
+
+ x Tue 1 Apr 11:33    
+
+  AST 2025  
+  using conf.researchr.org ( v1.69.0 )  
+   Support page   
+     
+ Tracks  
+ AST 2025   
+
+ Attending  
+ Venue: Rogers Centre, Ottawa (formerly Shaw Centre)  
+  Venue: Offsite Special Venue  
+  Reception venue: National Arts Centre  
+  Registration  
+  Food at ICSE2025  
+  Fun Activities  
+  Social media  
+  Hotels  
+  Getting Around Ottawa  
+  Visa and Travel Authorization Information for ICSE 2025 and its Co-Located Events  
+  Travelling to Ottawa  
+  Travel Support  
+  Code of Conduct for ICSE 2025 and its Co-Located Events  
+  Equity, Diversity, and Inclusion Plan for ICSE 2025  
+  Sustainability  
+  FAQ   
+ Sign Up   
+
+ :       
+
+ : 
+
+Call for Papers information:
+AST 2025  Sat 26 April - Sun 4 May 2025 Ottawa, Ontario, Canada   
+ co-located with ICSE 2025   
+
+ Toggle navigation        
+ Attending | Venue: Rogers Centre, Ottawa (formerly Shaw Centre) 
+  Venue: Offsite Special Venue 
+  Reception venue: National Arts Centre 
+  ICSE 2025 
+  Registration 
+  Food at ICSE2025 
+  Fun Activities 
+  Social media 
+  Hotels 
+  Getting Around Ottawa 
+  Visa and Travel Authorization 
+  Travelling to Ottawa 
+  Travel Support 
+  Code of Conduct 
+  Equity, Diversity, and Inclusion Plan 
+  Sustainability 
+  FAQ 
+  Program | AST Program 
+  Your Program 
+   Filter by Day | Sat 26 Apr 
+  Sun 27 Apr 
+  Mon 28 Apr 
+  Tue 29 Apr 
+  Wed 30 Apr 
+  Thu 1 May 
+  Fri 2 May 
+  Sat 3 May 
+  Sun 4 May 
+  Track/Call 
+  Organization | AST 2025 Committees 
+  Track Committees 
+  Organizing Committee 
+  Program Committee 
+  Steering Committee 
+  Contributors 
+  People Index 
+  Search 
+  Series | Series 
+   AST 2025 
+  AST 2024 
+  AST 2023 
+  AST 2022 
+  AST 2021 
+  AST 2020 
+  Sign in 
+  Sign up 
+
+  ICSE 2025 ( series ) /  AST 2025 ( series ) /  AST 2025  
+   
+ About 
+  Program 
+  Accepted Papers 
+  Submission 
+  Keynotes 
+  Registration 
+  Previous Editions 
+  Awards 
+  Call for Papers 
+  The 6th ACM/IEEE International Conference on Automation of Software Test (AST 2025)  
+ Software pervasiveness in both industry and digital society, as well as the proliferation of Artificial Intelligence (AI) technologies are continuously leading to emerging needs from both software producers and consumers. Infrastructures, software components, and applications aim to hide their increasing complexity in order to appear more human-centric. However, the potential risk from design errors, poor integrations, and time-consuming engineering phases can result in unreliable solutions that can barely meet their intended objectives. In this context, Software Engineering processes keep demanding for the investigation of novel and further refined approaches to Software Quality Assurance (SQA). Software testing automation is a discipline that has produced noteworthy research in the last decade. The search for solutions to automatically test any concept of software is critical, and it encompasses several areas: from the generation of the test cases, test oracles, test stubs/mocks; through the definition of selection and prioritization criteria; up to the engineering of infrastructures governing the execution of testing sessions locally or remotely in the cloud.  
+ AST continues with a long record of international scientific forums on methods and solutions to automate software testing. This year AST is the 6th edition of a conference that was formerly organized as workshops since 2006. The conference promotes high quality research contributions on methods for software test automation, and original case studies reporting practices in this field. We invite contributions that focus on: i) lessons learned about experiments of automatic testing in practice; ii) experiences of the adoption of testing tools, methods and techniques; iii) best practices to follow in testing and their measurable consequences; and iv) theoretical approaches that are applicable to the industry in the context of AST.  
+ Authors of the best papers presented at AST 2025 will be invited to submit an extension of their work for possible inclusion in a special issue in Software Testing, Verification, and Reliability (STVR) journal   
+ Call for papers.  
+
+ Dates    
+ Mon 28 Apr 2025   
+ Tue 29 Apr 2025   
+
+ Plenary    
+ Hide plenary sessions   
+
+  This program is tentative and subject to change.  
+  Program Display Configuration  
+   
+   Time Zone   
+   
+ The program is currently displayed in (GMT-04:00) Eastern Time (US & Canada)  .   Use conference time zone: (GMT-04:00) Eastern Time (US & Canada)    Select other time zone   (GMT-12:00) AoE (Anywhere On Earth)  (GMT-11:00) Midway Island, Samoa  (GMT-09:00) Hawaii-Aleutian  (GMT-10:00) Hawaii  (GMT-09:30) Marquesas Islands  (GMT-09:00) Gambier Islands  (GMT-08:00) Alaska  (GMT-07:00) Tijuana, Baja California  (GMT-08:00) Pitcairn Islands  (GMT-07:00) Pacific Time (US & Canada)  (GMT-06:00) Mountain Time (US & Canada)  (GMT-06:00) Chihuahua, La Paz, Mazatlan  (GMT-07:00) Arizona  (GMT-06:00) Saskatchewan, Central America  (GMT-05:00) Guadalajara, Mexico City, Monterrey  (GMT-06:00) Easter Island  (GMT-05:00) Central Time (US & Canada)  (GMT-04:00) Eastern Time (US & Canada)  (GMT-04:00) Cuba  (GMT-05:00) Bogota, Lima, Quito, Rio Branco  (GMT-04:00) Caracas  (GMT-04:00) Santiago  (GMT-04:00) La Paz  (GMT-03:00) Faukland Islands  (GMT-04:00) Manaus, Amazonas, Brazil  (GMT-03:00) Atlantic Time (Goose Bay)  (GMT-03:00) Atlantic Time (Canada)  (GMT-02:30) Newfoundland  (GMT-03:00) UTC-3  (GMT-03:00) Montevideo  (GMT-02:00) Miquelon, St. Pierre  (GMT-02:00) Greenland  (GMT-03:00) Buenos Aires  (GMT-03:00) Brasilia, Distrito Federal, Brazil  (GMT-02:00) Mid-Atlantic  (GMT-01:00) Cape Verde Is.  (GMT) Azores  (UTC) Coordinated Universal Time  (GMT+01:00) Belfast  (GMT+01:00) Dublin  (GMT+01:00) Lisbon  (GMT+01:00) London  (GMT) Monrovia, Reykjavik  (GMT+02:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna  (GMT+02:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague  (GMT+02:00) Brussels, Copenhagen, Madrid, Paris  (GMT+01:00) West Central Africa  (GMT+02:00) Windhoek  (GMT+03:00) Athens  (GMT+03:00) Beirut  (GMT+02:00) Cairo  (GMT+03:00) Gaza  (GMT+02:00) Harare, Pretoria  (GMT+03:00) Jerusalem  (GMT+03:00) Minsk  (GMT+03:00) Syria  (GMT+03:00) Moscow, St. Petersburg, Volgograd  (GMT+03:00) Nairobi  (GMT+03:30) Tehran  (GMT+04:00) Abu Dhabi, Muscat  (GMT+04:00) Yerevan  (GMT+04:30) Kabul  (GMT+05:00) Ekaterinburg  (GMT+05:00) Tashkent  (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi  (GMT+05:45) Kathmandu  (GMT+06:00) Astana, Dhaka  (GMT+07:00) Novosibirsk  (GMT+06:30) Yangon (Rangoon)  (GMT+07:00) Bangkok, Hanoi, Jakarta  (GMT+07:00) Krasnoyarsk  (GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi  (GMT+08:00) Irkutsk, Ulaan Bataar  (GMT+08:00) Perth  (GMT+08:45) Eucla  (GMT+09:00) Osaka, Sapporo, Tokyo  (GMT+09:00) Seoul  (GMT+09:00) Yakutsk  (GMT+09:30) Adelaide  (GMT+09:30) Darwin  (GMT+10:00) Brisbane  (GMT+10:00) Hobart  (GMT+10:00) Vladivostok  (GMT+10:30) Lord Howe Island  (GMT+11:00) Solomon Is., New Caledonia  (GMT+11:00) Magadan  (GMT+11:00) Norfolk Island  (GMT+12:00) Anadyr, Kamchatka  (GMT+12:00) Auckland, Wellington  (GMT+12:00) Fiji, Kamchatka, Marshall Is.  (GMT+12:45) Chatham Islands  (GMT+13:00) Nuku'alofa  (GMT+14:00) Kiritimati     
+
+   The GMT offsets shown reflect the offsets at the moment of the conference  .     
+   
+ Time Band   
+   
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions).  
+  The time band will also limit the events that are included in the personal iCalendar subscription service.   Display full program    Specify a time band    -       
+
+  Save   
+
+  Close   
+
+ ×    You're viewing the program in a time zone which is different from your device's time zone change time zone    
+
+ Mon 28 Apr   
+  
+ Displayed time zone: Eastern Time (US & Canada)  change     
+
+ 07:00 - 19:00 | Ready Room Monday ICSE Social, Networking and Special Rooms  at 209  
+  The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed.  
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays.  
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people.  
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time.  
+ The Ready Room will also have some poster boards. 
+
+ 09:00 - 10:30 | Quiet Room Monday 9AM ICSE Social, Networking and Special Rooms  at 202 
+
+ 09:00 - 10:30 | Conference Opening & Keynote AST 2025  at 211 
+ 09:00   
+ 90m    
+ Keynote | Personalized Fuzzing  AST 2025   
+ Andreas Zeller CISPA Helmholtz Center for Information Security 
+
+ 10:30 - 11:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 10:30   
+ 30m    
+ Break | Monday Morning Break  ICSE Catering 
+
+ 11:00 - 12:30 | Quiet Room Monday 11AM ICSE Social, Networking and Special Rooms  at 202 
+
+ 11:00 - 12:30 | Session 1: LLM for Testing AST 2025  at 211 
+ 11:00   
+ 30m    
+ Full-paper | Acceptance Test Generation with Large Language Models: An Industrial Case Study  AST 2025   
+ Margarida Ferreira University of Porto and Critical TechWorks  , Luís Viegas University of Porto and Critical TechWorks  , João Pascoal Faria Faculty of Engineering, University of Porto and INESC TEC  , Bruno Lima Faculty of Engineering of the University of Porto & LIACC 
+ 11:30   
+ 30m    
+ Full-paper | AsserT5: Test Assertion Generation Using a Fine-Tuned Code Language Model  AST 2025   
+ Severin Primbs University of Passau  , Benedikt Fein University of Passau  , Gordon Fraser University of Passau    
+  Pre-print 
+ 12:00   
+ 30m    
+ Full-paper | Simulink Mutation Testing using CodeBERT  AST 2025   
+ Jingfan Zhang University of Ottawa  , Delaram Ghobari University of Ottawa  , Mehrdad Sabetzadeh University of Ottawa  , Shiva Nejati University of Ottawa    
+  Pre-print 
+
+ 12:30 - 14:00 | Lunch ICSE Catering  at Canada Hall 3 plus Foyer 
+ 12:30   
+ 90m    
+ Lunch | Monday Lunch  ICSE Catering 
+
+ 14:00 - 15:30 | Quiet Room Monday 2PM ICSE Social, Networking and Special Rooms  at 202 
+
+ 14:00 - 15:30 | Session 2: Test Generation AST 2025  at 211 
+ 14:00   
+ 30m    
+ Full-paper | Automated Test-Case Generation for REST APIs Using Model Inference Search Heuristic  AST 2025   
+ Clinton Cao Delft University of Technology  , Annibale Panichella Delft University of Technology  , Sicco Verwer TU Delft    
+  Pre-print 
+ 14:30   
+ 30m    
+ Full-paper | Automated Test Generation for Integration Testing  AST 2025   
+ Elson Kurian University of Milano Bicocca  , Luca Guglielmo Università degli Studi di Milano-Bicocca  , Pietro Braione University of Milano-Bicocca  , Giovanni Denaro University of Milano - Bicocca 
+ 15:00   
+ 30m    
+ Full-paper | Automated Test Generation from Program Documentation Encoded in Code Comments  AST 2025   
+ Giovanni Denaro University of Milano - Bicocca  , Luca Guglielmo Università degli Studi di Milano-Bicocca 
+
+ 15:30 - 16:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 15:30   
+ 30m    
+ Break | Monday Afternoon Break  ICSE Catering 
+
+ 16:00 - 17:30 | Quiet Room Monday 4PM ICSE Social, Networking and Special Rooms  at 202 
+
+ 16:00 - 17:30 | Session 3: Panel Discussion AST 2025  at 211 
+ 16:00   
+ 90m    
+ Panel | Automated Software Testing for Sustainability and Resource Efficiency  AST 2025   
+ Istvan David McMaster University / McMaster Centre for Software Certification (McSCert)  , Roberto Verdecchia University of Florence  , Bimpe Ayoola Dalhousie University  , Jari Porras LUT University  , Lina Marsso Polytechnique Montreal 
+
+ Tue 29 Apr   
+  
+ Displayed time zone: Eastern Time (US & Canada)  change     
+
+ 07:00 - 19:00 | Ready Room Tuesday ICSE Social, Networking and Special Rooms  at 209 
+
+ 09:00 - 10:30 | Conference Opening & Keynote 2 AST 2025  at 211 
+ 09:00   
+ 90m    
+ Keynote | Learning-Based Testing: The Ease, the Impact, the Future  AST 2025   
+ Tiziana Margaria University of Limerick and Lero - The Irish Software Research Centre 
+
+ 10:30 - 11:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 10:30   
+ 30m    
+ Break | Tuesday Morning Break  ICSE Catering 
+
+ 11:00 - 12:30 | Session 4: When and How to Test AST 2025  at 211 
+ 11:00   
+ 22m    
+ Full-paper | An Adaptive Testing Approach Based on Field Data  AST 2025   
+ Samira Santos da Silva Gran Sasso Science Institute (GSSI)  , Ricardo Caldas Gran Sasso Science Institute (GSSI)  , Patrizio Pelliccione Gran Sasso Science Institute, L'Aquila, Italy  , Antonia Bertolino National Research Council, Italy    
+  Pre-print 
+ 11:22   
+ 22m    
+ Full-paper | Exceptional Behaviors: How Frequently Are They Tested?  AST 2025   
+ Andre Hora UFMG  , Gordon Fraser University of Passau    
+  Pre-print 
+ 11:45   
+ 22m    
+ Full-paper | Improving Examples in Web API Specifications using Iterated-Calls In-Context Learning  AST 2025   
+ Kush Jain Carnegie Mellon University  , Kiran Kate IBM Research  , Jason Tsay IBM Research  , Claire Le Goues Carnegie Mellon University  , Martin Hirzel IBM Research 
+ 12:07   
+ 22m    
+ Full-paper | What Types of Automated Tests do Developers Write?  AST 2025   
+ Marko Ivanković University of Passau  , Luka Rimanić Google Switzerland GmbH  , Ivan Budiselic Google  , Goran Petrovic Google; Universität Passau  , Gordon Fraser University of Passau  , René Just University of Washington 
+
+ 12:30 - 14:00 | Lunch ICSE Catering  at Canada Hall 3 plus Foyer 
+ 12:30   
+ 90m    
+ Lunch | Tuesday Lunch  ICSE Catering 
+
+ 14:00 - 15:30 | Session 5: Testing of LLMs AST 2025  at 211 
+ 14:00   
+ 30m    
+ Full-paper | Adaptive Probabilistic Operational Testing for Large Language Models Evaluation  AST 2025   
+ Ali Asgari TU Delft  , Antonio Guerriero Università di Napoli Federico II  , Roberto Pietrantuono Università di Napoli Federico II  , Stefano Russo Università di Napoli Federico II 
+ 14:30   
+ 30m    
+ Full-paper | ASTRAL: Automated Safety Testing of Large Language Models  AST 2025   
+ Miriam Ugarte Mondragon University  , Pablo Valle Mondragon University  , José Antonio Parejo Maestre University of Seville  , Sergio Segura University of Seville  , Aitor Arrieta Mondragon University    
+  Pre-print 
+ 15:00   
+ 30m    
+ Full-paper | A Taxonomy of Failures in Tool-Augmented LLMs  AST 2025   
+ Cailin Winston University of Washington  , René Just University of Washington 
+
+ 15:30 - 16:00 | Break ICSE Catering  at Canada Hall 3 plus Foyer 
+ 15:30   
+ 30m    
+ Break | Tuesday Afternoon Break  ICSE Catering 
+
+ 16:00 - 17:30 | Session 6: Vulnerability Detection & Closing AST 2025  at 211 
+ 16:00   
+ 30m    
+ Full-paper | A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification  AST 2025   
+ Norbert Tihanyi Technology Innovation Institute  , Yiannis Charalambous The University of Manchester  , Ridhi Jain Technology Innovation Institute (TII), Abu Dhabi, UAE  , Mohamed Amine Ferrag Guelma University  , Lucas C. Cordeiro University of Manchester, UK and Federal University of Amazonas, Brazil 
+ 16:30   
+ 30m    
+ Full-paper | Bringing Light into the Darkness: Leveraging Hidden Markov Models for Blackbox Fuzzing  AST 2025   
+ Anne Borcherding Fraunhofer IOSB  , Mark Giraud Fraunhofer IOSB  , Johannes Häring Karlsruhe Institute of Technology 
+ 17:00   
+ 30m    
+ Full-paper | Incorporating Domain Knowledge into GNNs for Advanced Vulnerability Detection in Java  AST 2025   
+ ROSMAEL ZIDANE LEKEUFACK FOULEFACK Information Engineering and Computer Science (DISI)/University of Trento (UNITN)  , Alessandro Marchetto Università di Trento 
+
+ 19:00 - 22:00 | Quiet Room Tuesday Evening ICSE Social, Networking and Special Rooms  at 202 
+
+  Information for Participants  
+   
+ Tue 29 Apr 2025 19:00 - 22:00 at 202  - Quiet Room Tuesday Evening Info for session   
+ The Quiet Room (202) is for anyone who wants to get away from noise and be by themself.  
+ It will be available throughout ICSE week except for Sunday, Tuesday and Saturday (since we need need the room for workshops on those days).  
+ Please keep this room ‘library quiet’. If you want to listen to a stream or music., please wear headphones. Please do not talk to others or participate in a virtual event where you may have to talk.  
+ This room is especially designed to be helpful for the neurodiverse community, who may need to recharge their social battery, or simply get away from noise.  
+ Some people may choose to pray in this room. Please respect them when they do this. There is also Room 2A set aside for this purpose.  
+ Note that the Ready Room (209) is another room where you can hang out and talk to others or get work done.  
+
+  Close   
+
+ Accepted Papers  
+  
+ Title 
+ Acceptance Test Generation with Large Language Models: An Industrial Case Study AST 2025   
+ Margarida Ferreira , Luís Viegas , João Pascoal Faria , Bruno Lima 
+ Adaptive Probabilistic Operational Testing for Large Language Models Evaluation AST 2025   
+ Ali Asgari , Antonio Guerriero , Roberto Pietrantuono , Stefano Russo 
+ An Adaptive Testing Approach Based on Field Data AST 2025   
+ Samira Santos da Silva , Ricardo Caldas , Patrizio Pelliccione , Antonia Bertolino   
+  Pre-print 
+ A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification AST 2025   
+ Norbert Tihanyi , Yiannis Charalambous , Ridhi Jain , Mohamed Amine Ferrag , Lucas C. Cordeiro 
+ AsserT5: Test Assertion Generation Using a Fine-Tuned Code Language Model AST 2025   
+ Severin Primbs , Benedikt Fein , Gordon Fraser   
+  Pre-print 
+ ASTRAL: Automated Safety Testing of Large Language Models AST 2025   
+ Miriam Ugarte , Pablo Valle , José Antonio Parejo Maestre , Sergio Segura , Aitor Arrieta   
+  Pre-print 
+ A Taxonomy of Failures in Tool-Augmented LLMs AST 2025   
+ Cailin Winston , René Just 
+ Automated Software Testing for Sustainability and Resource Efficiency AST 2025   
+ Istvan David , Roberto Verdecchia , Bimpe Ayoola , Jari Porras , Lina Marsso 
+ Automated Test-Case Generation for REST APIs Using Model Inference Search Heuristic AST 2025   
+ Clinton Cao , Annibale Panichella , Sicco Verwer   
+  Pre-print 
+ Automated Test Generation for Integration Testing AST 2025   
+ Elson Kurian , Luca Guglielmo , Pietro Braione , Giovanni Denaro 
+ Automated Test Generation from Program Documentation Encoded in Code Comments AST 2025   
+ Giovanni Denaro , Luca Guglielmo 
+ Bringing Light into the Darkness: Leveraging Hidden Markov Models for Blackbox Fuzzing AST 2025   
+ Anne Borcherding , Mark Giraud , Johannes Häring 
+ Exceptional Behaviors: How Frequently Are They Tested? AST 2025   
+ Andre Hora , Gordon Fraser   
+  Pre-print 
+ Improving Examples in Web API Specifications using Iterated-Calls In-Context Learning AST 2025   
+ Kush Jain , Kiran Kate , Jason Tsay , Claire Le Goues , Martin Hirzel 
+ Incorporating Domain Knowledge into GNNs for Advanced Vulnerability Detection in Java AST 2025   
+ ROSMAEL ZIDANE LEKEUFACK FOULEFACK , Alessandro Marchetto 
+ Simulink Mutation Testing using CodeBERT AST 2025   
+ Jingfan Zhang , Delaram Ghobari , Mehrdad Sabetzadeh , Shiva Nejati   
+  Pre-print 
+ What Types of Automated Tests do Developers Write? AST 2025   
+ Marko Ivanković , Luka Rimanić , Ivan Budiselic , Goran Petrovic , Gordon Fraser , René Just 
+
+ Call for Papers  
+  
+ Scope  
+ Software pervasiveness in both industry and digital society, as well as the proliferation of Artificial Intelligence (AI) technologies are continuously leading to emerging needs from both software producers and consumers. Infrastructures, software components, and applications aim to hide their increasing complexity in order to appear more human-centric. However, the potential risk from design errors, poor integrations, and time-consuming engineering phases can result in unreliable solutions that can barely meet their intended objectives. In this context, Software Engineering processes and methods keep demanding for the investigation of novel and further refined approaches to Software Quality Assurance (SQA).  
+ Software testing automation is a discipline that has produced noteworthy research in the last decades. The search for solutions to automatically test any concept of software is critical, and it encompasses several areas: from the generation of the test cases, test oracles, test stubs/mocks; through the definition of selection and prioritization criteria; up to the engineering of infrastructures governing the execution of testing sessions locally or remotely in the cloud.  
+ The Automation of Software Test (AST) conference continues with a long record of international scientific forums on methods and solutions to automate software testing. In 2025, AST is in its 6th edition of a conference that was formerly organized as workshops since 2006. The conference promotes high-quality research contributions on methods for software test automation, and original case studies reporting practices in this field. We invite contributions that focus on: i) lessons learned about experiments of automatic testing in practice; ii) experiences of the adoption of testing tools, methods and techniques; iii) best practices to follow in testing and their measurable consequences; and iv) theoretical approaches that are applicable to the industry in the context of AST.  
+ Our theme for this year is “Adapting test automation to the AI era including sustainability and emerging challenges” with special sessions on test automation for AI, sustainability, and AI testing education and training.  
+ Topics of Interest  
+ Submissions on the AST 2025 theme are especially encouraged, but papers on other topics relevant to the automation of software tests are also welcome. Topics of interest include, but are not limited to the following:  
+ AI for Automated Software Testing 
+  Testing of AI-based systems 
+  Effective testing through explainable AI 
+  Education to software testing with the advent of AI-based technology 
+  Automated software testing for sustainability, resource efficiency, energy consumption 
+  Codeless and low code test automation 
+  Test Automation in Software Process and Evolution, DevOps, Agile, CI/CD flows 
+  Test-driven development 
+  Model-based testing 
+  Formal methods, model checking and theories for testing and test automation 
+  Test case generation based on formal, semi-formal and AI models 
+  Theoretical foundations and methods for test automation 
+  Standardization of test languages, processes and tools 
+  Security, performance, and robustness testing 
+  Functional, interoperability, and conformance testing 
+  Usability and user experience testing 
+  Software simulation and automated software testing 
+  Testing of embedded, reactive and object-oriented systems 
+  Test automation of large complex systems 
+  Testing cyber physical systems 
+  Testing cloud and web systems and services 
+  Product line testing 
+  Testing anomaly detectors 
+  Metrics for testing - test effectiveness, efficiency, test coverage 
+  Testing tools 
+  Testing in different industry domains including healthcare, energy, finance, etc. 
+  Important Dates  
+ Submission: 9 November 2024  
+ Notification: 12 January 2025 ( UPDATED  )  
+ Final version: 31 January 2025  
+ Conference: 28-29 April 2025  
+ Organizers  
+ Andy Zaidman, Delft University of Technology, The Netherlands (General Chair)  
+ Francesca Lonetti, ISTI-CNR, Italy (Program Co-Chair)  
+ Ina Schieferdecker, Technische Universität Berlin, Germany (Program Co-Chair)  
+ Rajesh Subramanyan, Stealth Startup & University of Washington, USA (Program Co-Chair)  
+
+ Submission  
+   
+ Submission Details  
+ Three types of submissions are invited for both research and industry:  
+ Regular Papers (up to 10 pages plus 2 additional pages of references) Research Paper Industrial Case Study 
+  Short Papers (up to 4 pages plus 1 additional page of references) Research Paper Industrial Case Study Doctoral Student Research 
+  Industrial Abstracts (up to 2 pages for all materials) 
+  The submission website is: https://ast2025.hotcrp.com/  
+ All submissions must adhere to the following requirements: The page limit is strict (10 pages plus 2 additional pages of references for full papers; 4 pages plus 1 additional page of references for short papers; 2 pages for all materials in case of industrial abstracts). It will not be possible to purchase additional pages at any point in the process (including after acceptance). Submissions must strictly conform to the IEEE conference proceedings template, specified in the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use \documentclass[10pt,conference]{IEEEtran} without including the compsoc or compsocconf options).  
+ IEEE Conference Proceedings Formatting Guidelines: https://www.ieee.org/conferences/publishing/templates.html  
+ Submissions must be unpublished original work and should not be under review or submitted elsewhere while being under consideration. AST 2025 will follow the double-blind review process. The accepted regular and short papers, case studies, and industrial abstracts will be published in the ICSE 2025 Co-located Event Proceedings and included in the IEEE and ACM Digital Libraries. The official publication date is the date the proceedings are made available in the ACM or IEEE Digital Libraries. This date may be up to two weeks prior to the first day of ICSE 2025. The official publication date affects the deadline for any patent filings related to published work. Purchases of additional pages in the proceedings are not allowed.  
+ Special Issue  
+ Authors of the best papers presented at AST 2025 will be invited to submit an extension of their work for possible inclusion in a special issue.  
+   
+ Keynotes  
+   
+ Keynote: Tiziana Margaria  Title: TBD  
+ Keynote: Andreas Zeller  Title: TBD  
+   
+ Registration  
+   
+ https://conf.researchr.org/attending/icse-2025/registration  
+   
+ Previous Editions  
+   
+ 2024 - Lisbon, Portugal 
+  2023 - Melbourne, Australia 
+  2022 - Pittsburgh, USA 
+  2021 - Virtual (originally in Madrid, Spain) 
+  2020 - Seoul - South Korea 
+  2019 - Montreal - Canada 
+  2018 - Gothenburg - Sweden 
+  2017 - Buenos Aires - Argentina 
+  2016 - Austin - Texas 
+  2015 - Firenze - Italy 
+  2014 - Hyderabad - India 
+  2013 - San Jose California - USA 
+  2012 - Zurich - Switzerland 
+  2011 - Waikiki - Hawaii 
+  2010 - Cape Town - South Africa 
+  2009 - Vancouver - Canada 
+  2008 - Leipzig - Germany 
+  2007 - Minneapolis - USA 
+  2006 - Shanghai - China 
+    
+ Awards  
+
+ Important Dates   AoE (UTC-12h)     
+
+ Mon 28 - Tue 29 Apr 2025  
+  Conference 
+ Wed 5 Feb 2025  
+  Camera ready deadline 
+ Sun 12 Jan 2025   
+  Notification of acceptance **UPDATED** 
+ Sat 30 Nov 2024   
+  Submission deadline (**EXTENDED**) 
+ Wed 27 Nov 2024   
+  Title and Abstract Submission 
+
+ Organizing Committee   
+   
+ Andy Zaidman General Chair    
+ Delft University of Technology   
+ Netherlands 
+  Francesca Lonetti Program Co-Chair    
+ CNR-ISTI   
+ Italy 
+  Rajesh Subramanyan Program Co-Chair    
+ University of Washington, USA   
+ United States 
+  Ina Schieferdecker Program Co-Chair    
+ TU Berlin   
+ Germany 
+  Baris Ardic Web Chair    
+ Delft University of Technology   
+ Netherlands 
+  Morena Barboni Proceedings Chair    
+ University of Camerino   
+ Italy 
+    
+ Program Committee   
+   
+ Andrea Polini    
+ University of Camerino 
+  Andreas Ulrich    
+ Siemens AG 
+  Boni Garcia    
+ Universidad Carlos III de Madrid   
+ Spain 
+  Breno Miranda    
+ Centro de Informática at Universidade Federal de Pernambuco   
+ Brazil 
+  Cyrille Artho    
+ KTH Royal Institute of Technology, Sweden 
+  Eduard Paul Enoiu    
+ Mälardalen University   
+ Sweden 
+  Eunkyoung Jee    
+ KAIST, South Korea   
+ South Korea 
+  Fitash Ul Haq    
+ Luxembourg Institute of Science and Technology   
+ Luxembourg 
+  Gilles Perrouin    
+ Fonds de la Recherche Scientifique - FNRS & University of Namur   
+ Belgium 
+  Gregory Gay    
+ Chalmers University of Technology and University of Gothenburg   
+ Sweden 
+  Guglielmo De Angelis    
+ CNR-IASI   
+ Italy 
+  Jens Grabowski    
+ University of Göttingen 
+  José Miguel Rojas    
+ University of Sheffield   
+ United Kingdom 
+  Mahshid Helali Moghadam    
+ Scania CV AB   
+ Sweden 
+  Marko Ivanković    
+ University of Passau   
+ Croatia 
+  Mika Mäntylä    
+ University of Helsinki and University of Oulu   
+ Finland 
+  Rubing Huang    
+ Macau University of Science and Technology (M.U.S.T.)   
+ China 
+  Rudolf Ramler    
+ Software Competence Center Hagenberg (SCCH)   
+ Austria 
+  Ruth Breu    
+ University of Innsbruck   
+ Austria 
+  Saurabh Tiwari    
+ DA-IICT Gandhinagar   
+ India 
+  Seung Yeob Shin    
+ SnT Centre/University of Luxembourg 
+  Shaukat Ali    
+ Simula Research Laboratory and Oslo Metropolitan University   
+ Norway 
+  Sinem Getir Yaman    
+ University of York, UK   
+ United Kingdom 
+  Vincent Cicirello    
+ Stockton University   
+ United States 
+  Wasif Afzal    
+ Mälardalen University   
+ Sweden 
+  Xavier Devroey    
+ University of Namur   
+ Belgium 
+  Ziyuan Wang    
+ Nanjing University of Posts and Telecommunications 
+  Rui Abreu Committee Member    
+ INESC-ID; University of Porto   
+ Portugal 
+  Antonio Guerriero Committee Member    
+ Università di Napoli Federico II 
+  Mike Papadakis Committee Member    
+ University of Luxembourg   
+ Luxembourg 
+  Porfirio Tramontana Committee Member    
+ Department of Electrical Engineering and Information Technologies, University of Naples Federico II, Italy   
+ Italy 
+  Thomas Vogel Committee Member    
+ Humboldt-Universtität zu Berlin   
+ Germany 
+  Kristian Wiklund Committee Member    
+ Ericsson AB 
+    
+ Steering Committee   
+   
+ Fevzi Belli    
+ Paderborn University, Germany   
+ Germany 
+  Antonia Bertolino    
+ National Research Council, Italy   
+ Italy 
+  Christof J. Budnik    
+ Siemens Corporation, Corporate Technology   
+ United States 
+  Jenny Li    
+ Kean University, USA 
+  Francesca Lonetti    
+ CNR-ISTI   
+ Italy 
+  Steve Masticola    
+ Siemens, USA 
+  Mehrdad Saadatmand    
+ RISE Research Institutes of Sweden   
+ Sweden 
+  W. Eric Wong    
+ University of Texas at Dallas   
+ United States 
+  Hong Zhu    
+ Oxford Brookes University   
+ United Kingdom 
+
+ x Tue 1 Apr 11:35    
+
+  AST 2025  
+  using conf.researchr.org ( v1.69.0 )  
+   Support page   
+     
+ Tracks  
+ AST 2025   
+
+ Attending  
+ Venue: Rogers Centre, Ottawa (formerly Shaw Centre)  
+  Venue: Offsite Special Venue  
+  Reception venue: National Arts Centre  
+  Registration  
+  Food at ICSE2025  
+  Fun Activities  
+  Social media  
+  Hotels  
+  Getting Around Ottawa  
+  Visa and Travel Authorization Information for ICSE 2025 and its Co-Located Events  
+  Travelling to Ottawa  
+  Travel Support  
+  Code of Conduct for ICSE 2025 and its Co-Located Events  
+  Equity, Diversity, and Inclusion Plan for ICSE 2025  
+  Sustainability  
+  FAQ   
+ Sign Up   
+
+ :       
+
+ :       
+
+   
+
+Important Dates information:

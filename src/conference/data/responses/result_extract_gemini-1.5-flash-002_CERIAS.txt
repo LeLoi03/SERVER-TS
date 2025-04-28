@@ -1,0 +1,16 @@
+```json
+{
+  "Conference dates": "April 1 - 2, 2025",
+  "Year": "2025",
+  "Location": "West Lafayette, IN",
+  "City-State-Province": "West Lafayette, Indiana",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Other Date": {
+    "Poster session": "April 1, 2025"
+  },
+  "Summary": "The CERIAS 2025 Annual Security Symposium will be held on April 1st and 2nd, 2025, in West Lafayette, Indiana.  A poster session will be held in the PMU Ballroom on Tuesday, April 1st from 6:30pm-9:00pm.",
+  "Call for Papers": "No call for papers available"
+}
+```

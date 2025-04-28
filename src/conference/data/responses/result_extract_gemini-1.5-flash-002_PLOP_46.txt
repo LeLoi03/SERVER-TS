@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "October 12 - 15, 2025",
+  "Year": "2025",
+  "Location": "Skamania Lodge, Columbia River Gorge, Washington, USA",
+  "City-State-Province": "Columbia River Gorge, Washington",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submissions": "May 15, 2025",
+    "Updated paper and Imagination Run Wild submissions": "July 15, 2025",
+    "Conference version of paper": "September 23, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance for shepherding": "June 5, 2025",
+    "Notification of acceptance sent for all submissions": "July 30, 2025"
+  },
+  "Camera-ready Date": {
+    "Proceedings version of paper and Imagination Run Wild reports": "January 15, 2026"
+  },
+  "Registration Date": {
+    "Early registration ends": "August 10, 2025"
+  },
+  "Topics": "Pattern Languages of Programs, People & Practices, Software Patterns, Design Patterns, Software Development, Built World Design",
+  "Summary": "The 32nd PLoP Conference: Pattern Languages of Programs, People & Practices will be held at Skamania Lodge in the Columbia River Gorge, Washington, USA from October 12-15, 2025.  PLoP welcomes paper authors and non-authors alike.  The conference focuses on improving the written expression of patterns and welcomes workshops and presentations on a wide range of topics related to patterns.",
+  "Call for Papers": "# PLoP 2025: Call for Submissions\n\nThe 32nd PLoP Conference: Pattern Languages of Programs, People & Practices will be held at **Skamania Lodge in the Columbia River Gorge, Washington, USA from October 12-15, 2025**.\n\n## Submission Types\n\nThere are two types of submissions:\n\n*   **Papers**\n*   **Imagination Run Wild**\n\n## Papers\n\nWe welcome papers describing patterns and pattern languages, experience reports, essays, empirical evaluations, reflections, etc.  After the initial screening by the program committee, you will get the opportunity to improve your paper under the guidance of a dedicated shepherd. If your paper is accepted at the conference, it will be discussed in a writers’ workshop session with other authors and participants. Based on what you learn at writers’ workshops, you will make final improvements to your paper after the conference and submit it for the proceedings.\n\n*   **Due Date:** May 15, 2025\n\n## Imagination Run Wild\n\nWe welcome proposals for hour-long presentations, 5-minute lightning talks, workshops/focus groups, open spaces, fishbowls, birds-of-a-feather sessions, etc.\n\n*   **Due Date:** July 15, 2025\n\n## Important Dates\n\n*All dates are AoE (Anytime on Earth)*\n\n*   **Paper submissions:** May 15, 2025\n*   **Notification of acceptance for shepherding:** June 5, 2025\n*   **Updated paper and Imagination Run Wild submissions:** July 15, 2025\n*   **Notification of acceptance sent for all submissions:** July 30, 2025\n*   **Early registration ends (registration fee increases on August 11 and lodging is subject to availability):** August 10, 2025\n*   **All paper authors and Imagination Run Wild facilitators must register by:** August 10, 2025\n*   **Conference version of paper:** September 23, 2025\n*   **Proceedings version of paper and Imagination Run Wild reports:** January 15, 2026\n\n## Contact\n\n*   For questions about paper submissions, contact [Hugo Ferreira](mailto:plop-papers@hillside.net), the papers program chair.\n*   For questions about Imagination Run Wild submissions, contact [Kiyoka Hayashi](mailto:plop-irw@hillside.net), the “Imagination Run Wild” program chair."
+}
+

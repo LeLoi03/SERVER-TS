@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "October 16 - 17, 2025",
+  "Year": "2025",
+  "Location": "Salamanca, Spain",
+  "City-State-Province": "Salamanca",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission deadline": "May 1, 2025",
+    "Special Sessions proposal deadline": "March 15, 2025"
+  },
+  "Notification Date": {
+    "Acceptance notification": "May 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Final version submission": "June 15, 2025"
+  },
+  "Other Date": {
+    "Submission of revised papers": "June 1, 2025",
+    "Payment deadline": "July 1, 2025"
+  },
+  "Topics": "Hybrid Artificial Intelligence Systems, Symbolic Techniques, Sub-symbolic Techniques, Problem Solving Models, Real World Complex Problems, Imprecision, Uncertainty, Vagueness, High-dimensionality",
+  "Publisher": "Springer",
+  "Summary": "The 20th International Conference on Hybrid Artificial Intelligence Systems (HAIS 2025) will be held in Salamanca, Spain on October 16-17, 2025.  HAIS combines symbolic and sub-symbolic techniques to construct more robust and reliable problem-solving models. The conference will be a joint event with SOCO-CISIS-ICEUTE-HAIS & Startup OLÉ.",
+  "Call for Papers": "# HAIS 2025: Call for Papers\n\nThe 20th International Conference on Hybrid Artificial Intelligence Systems (HAIS 2025) will be held in **Salamanca, Spain, from October 16-17, 2025**.\n\nHAIS combines symbolic and sub-symbolic techniques to construct more robust and reliable problem-solving models. Hybrid intelligent systems are popular due to their capabilities in handling many real-world complex problems, involving imprecision, uncertainty and vagueness, high-dimensionality.\n\n## Important Dates\n\n*   **Special Sessions proposal deadline:** March 15, 2025\n*   **Paper submission deadline:** May 1, 2025\n*   **Acceptance notification:** May 15, 2025\n*   **Submission of revised papers:** June 1, 2025\n*   **Final version submission:** June 15, 2025\n*   **Payment deadline:** July 1, 2025\n*   **Conference dates:** October 16-17, 2025\n\n## Submission System\n\nThe submission system is available at [https://easychair.org/conferences/?conf=hais2025](https://easychair.org/conferences/?conf=hais2025).\n\n## Publication\n\nHAIS’25 proceedings will be published by Springer in its series of Lecture Notes in Artificial Intelligence – LNAI (part of its prestigious Lecture Notes in Computer Science – LNCS series). All submissions will be refereed by experts in the field based on originality, significance, quality, and clarity. Every submitted paper to HAIS’25 will be reviewed by at least three members of the Program Committee.\n\nAll accepted papers must be presented by one of the authors who must register for the conference and pay the fee. Papers must be prepared according to the LNCS-LNAI style template ([http://www.springer.de/comp/lncs/authors.html](http://www.springer.de/comp/lncs/authors.html)) and must be no more than twelve (12) pages long, including figures and bibliography. Additional pages (over 12 pages) will be charged 150 euros for each page.\n\n## Special Issues\n\nAll the accepted papers of HAIS/SOCO/CISIS conference (submitted both to the general track and the special sessions) will be considered for its possible inclusion in a special issue of the following journals:\n\n*   Neurocomputing (ELSEVIER). 2024 JCR Impact Factor: 5.5 –Q1\n\n## Committees\n\n*   **General Chair:** Dr. Emilio Corchado | University of Salamanca, Spain\n*   **Co-Chairs:**\n    *   Dr. Alicia Troncoso Lora | Pablo de Olavide University, Spain\n    *   Dr. Hilde Pérez García | University of León, Spain\n    *   Dr. Esteban Jove | University of A Coruña, Spain\n    *   Dr. José Luis Calvo Rolle | University of A Coruña, Spain\n    *   Dr. Francisco Javier Martínez de Pisón | University of La Rioja, Spain\n    *   Dr. Pablo García Bringas | University of Deusto, Spain\n    *   Dr. Francisco Martínez Álvarez | Pablo de Olavide University, Spain\n    *   Dr. Alvaro Herrero Cosio | University of Burgos, Spain\n    *   Dr. Paolo Fosci | University of Bergamo, Italy\n    *   Dr. Héctor Quintián | University of A Coruña, Spain\n\n## Contact\n\nFor conference-related issues or doubts, please contact [hector.quintian@udc.es](mailto:hector.quintian@udc.es)"
+}
+

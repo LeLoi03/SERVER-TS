@@ -1,0 +1,14 @@
+```json
+{
+  "Conference dates": "September 23 - 26, 2025",
+  "Year": "2025",
+  "Location": "Tampere, Finland",
+  "City-State-Province": "Tampere",
+  "Country": "Finland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Topics": "Database Management Systems, Information Systems architectures and data services, Management and Mining of Heterogeneous Data Types, Big Data Management and Analytics, Scalable Data Science, Responsible Data Science",
+  "Summary": "The ADBIS series of conferences provide a forum for the dissemination of research accomplishments and promotes interaction and collaboration among the database, information systems, data science, artificial intelligence and machine learning communities from European countries and the rest of the world. ADBIS 2025 will consist of regular sessions with technical contributions reviewed and selected by an international program committee, as well as invited keynote and tutorial talks presented by leading scientists.",
+  "Call for Papers": "No call for papers available"
+}
+```

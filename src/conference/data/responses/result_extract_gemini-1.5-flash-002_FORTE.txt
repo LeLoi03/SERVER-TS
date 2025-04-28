@@ -1,0 +1,23 @@
+```json
+{
+  "Conference dates": "June 16 - 20, 2025",
+  "Year": "2025",
+  "Location": "Lille, France",
+  "City-State-Province": "Lille",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "February 12, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "April 2, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready paper due": "May 2, 2025"
+  },
+  "Topics": "Distributed systems, concurrent systems, formal methods, model checking, verification, testing, security analysis, software engineering",
+  "Summary": "DisCoTec 2025, the 20th International Federated Conference on Distributed Computing Techniques, will be held in Lille, France, from June 16 to 20, 2025.  It comprises three main conferences, including FORTE, focusing on fundamental research on theory, models, tools, and applications for distributed systems.",
+  "Call for Papers": "# DisCoTec 2025: Call for Papers\n\nDisCoTec 2025, the 20th International Federated Conference on Distributed Computing Techniques, will take place in **Lille, France, from June 16-20, 2025**, hosted by the **University of Lille**.\n\nDisCoTec is sponsored by the International Federation for Information Processing (IFIP) and the European Association for Programming Languages and Systems (EAPLS).\n\n## FORTE 2025\n\nFORTE 2025, the 45th International Conference on Formal Techniques for Distributed Objects, Components, and Systems, is one of the three main conferences within DisCoTec 2025.\n\n### Topics of Interest\n\nFORTE 2025 is a forum for fundamental research on theory, models, tools, and applications for distributed systems.  The main topics of interest include:\n\n*   Language concepts for concurrency and distribution\n*   Analysis techniques, methodologies, and algorithms for validating concurrent and distributed systems\n*   Principles for qualitative and quantitative security analysis of distributed systems\n*   Applications of formal methods for studying the quality, reliability, availability, and safety of concrete distributed systems\n*   Emerging challenges in distributed systems (software-defined networks, distributed ledgers, smart contracts, and blockchain technologies)\n\n### Submission Categories\n\nWe solicit papers in the following categories:\n\n*   **Regular papers:** (7-15 pages, not counting references) describing thorough and complete research results and experience reports.\n*   **Tool papers:** (7-15 pages, not counting references) describing technological artifacts.  The tool artifact must be submitted separately for evaluation. Acceptance of the tool artifact is mandatory for tool papers to be accepted.\n*   **Short papers:** (up to 6 pages, not counting references) describing innovative and promising ideas, possibly in an early form.\n\n### Artefact Submission\n\nWe invite you to also submit an associated artefact for evaluation. Artefacts such as ancillary data, tools, and software will be assessed for availability, functionality, and reusability badges. Instructions on how to upload artefacts can be found [here](FORTE_Artefact_Evaluation_Guidelines.pdf).\n\n*   Artefact submissions are mandatory for tool papers and optional for regular papers.\n*   Tool papers must submit an artefact that, at least, satisfies the requirements for the Functional badge.\n*   Choose the “FORTE 2025 Artefact Evaluation” track in EasyChair when submitting your artefact.\n\n### Submission Link\n\n[https://easychair.org/conferences/?conf=forte2025](https://easychair.org/conferences/?conf=forte2025)\n\n### Publication\n\nThe FORTE proceedings will be published by Springer as an LNCS-IFIP volume.\n\n### Special Issue\n\nSelected papers will be invited to a special issue of Logical Methods in Computer Science.\n\n### Program Committee Chairs\n\n*   Carla Ferreira (NOVA University of Lisbon, Portugal)\n*   Claudio A. Mezzina (University of Urbino, Italy)"
+}
+```

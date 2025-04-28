@@ -1,0 +1,41 @@
+output:
+{
+  "Conference dates": "November 3 - 6, 2025",
+  "Year": "2025",
+  "Location": "Minneapolis, MN, USA",
+  "City-State-Province": "Minneapolis, Minnesota",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Papers) Abstract": "May 23, 2025",
+    "(Research Papers) Paper": "May 30, 2025",
+    "(Vision Papers) Abstract": "May 23, 2025",
+    "(Vision Papers) Paper": "May 30, 2025",
+    "(Application Papers) Abstract": "May 23, 2025",
+    "(Application Papers) Paper": "May 30, 2025",
+    "(Industrial Papers) Abstract": "May 23, 2025",
+    "(Industrial Papers) Paper": "May 30, 2025",
+    "(Short Papers) Abstract": "May 23, 2025",
+    "(Short Papers) Paper": "May 30, 2025",
+    "(Demos) Paper": "May 30, 2025",
+    "(Tutorials) Proposal": "July 3, 2025",
+    "(PhD/Grad Workshop & SRC) Paper": "July 25, 2025",
+    "(Workshop Proposals) Proposal": "May 2, 2025"
+  },
+  "Notification Date": {
+    "(Research Papers) Decision": "July 31, 2025",
+    "(Vision Papers) Decision": "July 31, 2025",
+    "(Application Papers) Decision": "July 31, 2025",
+    "(Industrial Papers) Decision": "July 31, 2025",
+    "(Short Papers) Decision": "July 31, 2025",
+    "(Demos) Decision": "July 31, 2025",
+    "(Tutorials) Decision": "July 25, 2025",
+    "(PhD/Grad Workshop & SRC) Decision": "August 15, 2025",
+    "(Workshop Proposals) Decision": "June 2, 2025"
+  },
+  "Topics": "Geographic Information Systems, Geospatial Data, Spatial Computing, Spatial Data Management, Spatial Analysis, Spatiotemporal Data, Geospatial AI, Spatial Machine Learning, Geovisualization, Data Storage and Query Processing, Indexing, Internet of Spatial Things, Applications, User Interfaces, Visualization, Data Storage, Query Processing, Indexing",
+  "Summary": "The 33rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL 2025) will be held in Minneapolis, MN, USA from November 3-6, 2025. The conference brings together researchers, developers, users, and practitioners in relation to novel systems based on geospatial data and knowledge, and fosters interdisciplinary discussions and research in all aspects of geographic information systems.",
+  "Call for Papers": "# ACM SIGSPATIAL 2025: Call for Papers\n\nThe 33rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL 2025) will be held in **Minneapolis, MN, USA, from Monday, November 3 to Thursday, November 6, 2025**.\n\n## New Initiatives\n\nThis year, several new initiatives are being introduced at the conference:\n\n1.  Research Track: Experiment, benchmark, and experience papers\n2.  Application Track\n3.  Industrial Track\n4.  Short Papers Track\n5.  Tutorials\n6.  PhD and Graduate Studies Workshop with SRC\n7.  ACM TSAS Paper Presentations at ACM SIGSPATIAL\n\n## Research Track\n\nThere are three types of papers in the research track:\n\n1.  **Regular Research Papers:** Papers about theory, models, and algorithms; papers about systems\n2.  **Experiment, benchmark, and experience papers:** Papers about experiments; papers about benchmarks; papers about experiences\n3.  **Vision papers:** These papers present visionary propositions that anticipate future directions and highlight compelling research opportunities for the SIGSPATIAL community.\n\n## Topics of Interest\n\nSuggested topics of interest include, but are not limited to, the following:\n\n*   Spatial AI\n*   Generative AI for spatial reasoning and simulation\n*   Spatial foundation models\n*   Causal reasoning in space and time\n*   Spatial machine learning and explainability\n*   Privacy and ethics\n*   Spatial reasoning in robotics\n*   Big spatial data\n*   Spatial and spatio-temporal analysis\n*   Query processing and optimization\n*   Spatial data mining, pattern analysis and knowledge discovery\n*   Spatio-temporal data management\n*   Spatial decision support\n*   Spatial data quality and uncertainty\n*   Geo-entity linkage, geo-enrichment\n*   Distributed and parallel algorithms\n*   Geospatial architectures and middleware\n*   GPU and novel hardware solutions\n*   Pervasive computing and internet of spatial things\n*   Localization and tracking indoors/outdoors\n*   Contact tracing\n*   Location-based services\n*   Spatio-temporal sensor networks\n*   Traffic telematics\n*   Mobile systems and vehicular ad hoc networks\n*   Spatial data acquisition, integration, processing\n*   Standardization and interoperability\n*   Earth observation and satellite data processing\n*   Computational geometry and computer graphics\n*   Image and video understanding\n*   Spatial, geo-social and trajectory Simulation\n*   Spatio-temporal stream processing\n*   Spatial search\n*   Geographic information retrieval\n*   Human computer interaction and visualization\n*   Similarity searching\n*   Spatial data structures and algorithms\n*   Spatial modeling and reasoning\n*   Spatio-textual searching\n*   Spatial intelligence at work\n*   Intelligent transportation and sustainable mobility\n*   Autonomous vehicles\n*   Spatial knowledge graphs\n*   Epidemiology and health\n*   Cyber and physical security\n*   Smart cities and spaces\n*   Geospatial computer vision applications\n*   Location business intelligence\n*   Personalized geospatial recommendation systems\n\n## Submission\n\n### General Information\n\n*   Regular Research Papers: up to 10 pages excluding references\n*   Experiment, Benchmark & Experience Papers: up to 10 pages excluding references\n*   Vision Papers: up to 4 pages excluding references\n*   As for Regular Research Papers and Experiment, Benchmark & Experience papers: papers are limited to 10 pages (excluding references), with up to 2 additional pages after the references to be used for appendices. Submissions of Vision Papers should follow the same formatting but are limited to 4 pages with no appendix (excluding references).\n*   Submissions that do not follow the page limit requirements will be desk-rejected without technical reviews.\n\n### Paper Titles\n\nExperiment, Benchmark & Experience and Vision Papers should contain their type as a suffix in the title. The suffixes are [Experiment] and [Vision], respectively. For example: 'Spatial Intelligence on Mars [Vision]'; 'Evaluating spatial navigation systems on Mars [Experiment]'. If the paper is accepted, the suffix will not be part of the camera-ready copy.\n\n### Authors\n\nSIGSPATIAL 2025 is a single-blind conference, therefore the names and affiliations of the authors should be listed in the submitted version. The author list is considered to be final after the submission deadline and no changes, including the author order, to the author list are allowed for accepted papers.\n\n### Short Papers\n\nBased on the evaluations from the reviewers, the Program Committee may recommend that certain papers are accepted as 4-page (including references) short papers for poster presentation. Both full and short papers will appear in the conference proceedings. All those page numbers are based on the ACM two-column conference proceedings template.\n\n## Important Dates\n\n*   **Research Papers:**\n    *   Abstract: May 23rd, 2025\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Vision Papers:**\n    *   Abstract: May 23rd, 2025\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Application Papers:**\n    *   Abstract: May 23rd, 2025\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Industrial Papers:**\n    *   Abstract: May 23rd, 2025\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Short Papers:**\n    *   Abstract: May 23rd, 2025\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Demos:**\n    *   Paper: May 30th, 2025\n    *   Decision: July 31st, 2025\n*   **Tutorials:**\n    *   Proposal: July 3rd, 2025\n    *   Decision: July 25th, 2025\n*   **PhD/Grad Workshop & SRC:**\n    *   Paper: July 25th, 2025\n    *   Decision: August 15th, 2025\n*   **GIS Cup:**\n    *   Submission: TBD\n    *   Decision: TBD\n*   **Workshop Proposals:**\n    *   Proposal: May 2nd, 2025\n    *   Decision: June 2nd, 2025"
+}
+

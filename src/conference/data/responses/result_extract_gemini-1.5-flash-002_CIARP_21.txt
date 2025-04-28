@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": null,
+  "Year": "2024",
+  "Location": "Talca, Chile",
+  "City-State-Province": "Talca",
+  "Country": "Chile",
+  "Continent": "South America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "June 1, 2024"
+  },
+  "Notification Date": {
+    "Acceptance Decision": "July 1, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Submission": "August 1, 2024"
+  },
+  "Registration Date": {
+    "Early Registration": "August 15, 2024",
+    "Each accepted paper must be registered by one of the co-authors at the “Author Fee” (and not to a Student or an Other registration) no later than": "October 26, 2024"
+  },
+  "Other Date": {
+    "We invite researchers interested in chairing a workshop to submit proposals by": "May 31, 2024",
+    "Electronic CVs and endorsement letters should be submitted by": "June 15, 2024"
+  },
+  "Topics": "Artificial Intelligence, Biometrics, Clustering and Applications, Cognitive and Humanoid Vision, Computer Vision, Data Mining and Big Data, Deep Learning and Transfer Learning, Document Processing, Gesture Recognition, Fuzzy and Hybrid Methods, Image Processing and Analysis, Information Theory, Natural Language Processing, Neural Networks, Object Recognition, Parallel and Distributed PR, Pattern Recognition Principles, Remote Sensing Applications of PR, Signal Processing and Analysis, Soft Computing Techniques, Speech Recognition and Analysis, Statistical Pattern Recognition",
+  "Publisher": "Springer",
+  "Summary": "The Iberoamerican Congress on Pattern Recognition (CIARP) is a scientific event focusing on all aspects of pattern recognition, computer vision, artificial intelligence, data mining, and related areas. CIARP 2024 will be hosted by the Universidad Católica del Maule in Talca, Chile. Proceedings are expected to be published by Springer as LNCS.",
+  "Call for Papers": "# CIARP 2024: Call for Papers\n\nThe Iberoamerican Congress on Pattern Recognition (CIARP) is one of the most relevant scientific events focusing on all aspects of pattern recognition, computer vision, artificial intelligence, data mining, and related areas.  CIARP 2024 will be hosted by the **Universidad Católica del Maule (Talca, Chile)**, supported by the Chilean Association of Pattern Recognition (ACHIRP), and expected to be endorsed by the International Association for Pattern Recognition (IAPR).\n\n## Topics\n\nThe CIARP 2024 Program Committee invites authors to submit new theoretical results, techniques, and applications research in any aspect of pattern recognition, including but not limited to:\n\n*   Artificial Intelligence\n*   Biometrics\n*   Clustering and Applications\n*   Cognitive and Humanoid Vision\n*   Computer Vision\n*   Data Mining and Big Data\n*   Deep Learning and Transfer Learning\n*   Document Processing\n*   Gesture Recognition\n*   Fuzzy and Hybrid Methods\n*   Image Processing and Analysis\n*   Information Theory\n*   Natural Language Processing\n*   Neural Networks\n*   Object Recognition\n*   Parallel and Distributed PR\n*   Pattern Recognition Principles\n*   Remote Sensing Applications of PR\n*   Signal Processing and Analysis\n*   Soft Computing Techniques\n*   Speech Recognition and Analysis\n*   Statistical Pattern Recognition\n\n## Submission Guidelines\n\nAll papers will be reviewed according to the double-blind peer review model by at least two members of the CIARP Program Committee.  All papers will be checked by plagiarism-detecting software.\n\n*   Manuscripts should be a minimum of 4 and a maximum of 15 pages, written in English and formatted according to the Springer LNCS templates.\n*   Submissions that fail to meet the above requirements will not be reviewed.\n*   To submit a paper, please use the ConfTool System.\n*   There will be a special \"Student Papers\" category, where the first author must be a student (undergraduate or postgraduate).\n\n## Publication\n\nAll accepted and presented papers are expected to be published by Springer in the Lecture Notes in Computer Science (LNCS) series.\n\n## Awards\n\nThere will be special awards for Best Student Paper and Best Paper.\n\n## Important Dates\n\n*   **Paper Submission:** June 1, 2024\n*   **Acceptance Decision:** July 1, 2024\n*   **Camera-ready Submission:** August 1, 2024\n*   **Early Registration:** August 15, 2024\n\n## Workshops and Tutorials\n\nWe invite researchers interested in chairing a workshop to submit proposals by May 31, 2024.  We are glad to announce the 1st LATAM Workshop on Advanced Biometric Techniques, which will take place during the conference.\n\n## Awards Nomination\n\nWe welcome nominations for the Aurora Pons Porrata Award (APPA). This Iberoamerican annual prize is given to a living woman in recognition of an outstanding technical contribution to the field of pattern recognition and related areas.  Electronic CVs and endorsement letters should be submitted by June 15, 2024.\n\n## Committees\n\n*   **General Chair:** Ruber Hernández (CL)\n*   **Program Chairs:** Sergio Velastin (UK), Xaviera López (CL)\n*   **ACHIRP Chair:** César Astudillo (CL)\n*   **Workshops Chairs:** Marco Mora (CL), Cristian Martinez (AR)\n*   **Publication and Awards Chair:** Ricardo Barrientos (CL)\n*   **Finance Chairs:** Viviana Torres (CL), Juan Bekios (CL)\n*   **Publicity and Social Media Chair:** Ingrid M. Lopez (CL)\n*   **Technical Chairs:** Felipe Tirado (CL), Luis Morán (CL)\n*   **Local Organization Chairs:** Wladimir Soto (CL), Felipe Valencia (CL)\n*   **Steering Committee:** Hélder Oliveira (PT), Eduardo Bayro (MX), César Beltrán (PE), Joan A. Sánchez (ES), José Ruiz-Shulcloper (CU), Marta Mejail (AR), Joao Paulo Papa (BR), Álvaro Pardo (UR), María Trujillo (CO)"
+}
+

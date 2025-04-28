@@ -1,0 +1,31 @@
+output:
+{
+  "Conference dates": "November 19 - 21, 2025",
+  "Year": "2025",
+  "Location": "Inria Paris, France",
+  "City-State-Province": "Paris",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submission": "May 30, 2025",
+    "Paper Submission": "June 6, 2025",
+    "Artifact Registration": "August 15, 2025",
+    "Artifact Submission": "August 22, 2025"
+  },
+  "Notification Date": {
+    "Author Notification": "August 8, 2025",
+    "Artifact Notification": "September 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Papers": "September 26, 2025"
+  },
+  "Other Date": {
+    "Workshops": "November 17-18, 2025"
+  },
+  "Topics": "Formal Modelling, Formal Analysis, Software-intensive Systems, Language Design, Verification, Validation, Automated Tool Support",
+  "Publisher": "Springer",
+  "Summary": "The 20th International Conference on Integrated Formal Methods (iFM 2025) will take place on 19–21 November 2025 at Inria Paris, France, with co-located workshops scheduled for 17-18 November 2025.  The conference is a forum for discussing recent research advances in the development of integrated approaches to formal modelling and analysis.",
+  "Call for Papers": "# iFM 2025: Call for Papers\n\nThe 20th International Conference on Integrated Formal Methods (iFM 2025) will take place on **November 19-21, 2025 at Inria Paris, France**, with co-located workshops scheduled for **November 17-18, 2025**.\n\n## Objectives and Scope\n\nThe iFM conference series is a forum for discussing recent research advances in the development of integrated approaches to formal modelling and analysis. The conference covers all aspects of the design of integrated techniques, including language design, verification and validation, automated tool support and the use of such techniques in software engineering practice.\n\n## Areas of Interest\n\nAreas of interest include (but are not limited to):\n\n*   Formal and semi-formal modelling notations\n*   Combining formal methods with different performance, simulation, and system analysis techniques\n*   Program verification, model checking, and static analysis\n*   Theorem proving, decision procedures and SAT/SMT solving\n*   Runtime analysis, monitoring and testing\n*   Program synthesis\n*   Modelling, analysis and synthesis of cyber-physical, hybrid, embedded, probabilistic, distributed or concurrent systems\n*   Abstraction and refinement\n*   Model learning and inference\n*   Approaches to integrating formal methods into software engineering practice or industry\n*   Approaches to integrating formal methods into standardisation or certification processes\n*   Formal methods for artificial intelligence, including machine learning and data-based techniques\n*   Tools and case studies supporting the integration of formal methods\n\n## Paper Categories\n\niFM 2025 solicits high-quality papers reporting research results and/or experience reports related to the overall theme of formal methods integration. We solicit papers in the following categories:\n\n1.  **Regular papers** (limit 16 pages) presenting original scientific research results, tools, their foundation and evaluations, applications of formal methods, including rigorous evaluations and case studies.\n2.  **Short papers** (limit 6 pages) describing any work in the area of formal methods, including work-in-progress and preliminary results that are sufficiently interesting for the iFM community.\n\nAll page limits exclude the references. Appendices may be included, but they will only be read by a reviewer at their discretion. Regular and short papers must be original, unpublished, and not submitted for publication elsewhere. Papers will undergo a thorough review process. Submissions will be judged on the basis of significance, relevance, correctness, originality, and clarity.\n\n## Submission Guidelines\n\nSubmissions for all categories should be made using the iFM 2025 EasyChair site: [https://easychair.org/conferences/?conf=ifm2025](https://easychair.org/conferences/?conf=ifm2025)\n\nSubmissions must be in PDF format, using the Springer LNCS style files.  Springer requires that authors should consult Springer’s authors’ guidelines and use their proceedings templates, either for LaTeX or for Word, for the preparation of their papers. Springer encourages authors to include their ORCIDs in their papers. After a paper is accepted, the corresponding author of each paper, acting on behalf of all of the authors of that paper, must complete and sign a Consent-to-Publish form.\n\n## Important Dates (AoE)\n\n*   **Abstract Submission:** May 30, 2025\n*   **Paper Submission:** June 6, 2025\n*   **Author Notification:** August 8, 2025\n*   **Artifact Registration:** August 15, 2025\n*   **Artifact Submission:** August 22, 2025\n*   **Artifact Notification:** September 24, 2025\n*   **Camera-Ready Papers:** September 26, 2025\n\n## EAPLS Artifact Badging\n\nReproducibility of experiments is crucial to foster an atmosphere of open, reusable and trustworthy research. To improve and reward reproducibility and to give more visibility and credit to the effort of tool developers in our community, authors of accepted papers will be invited to submit possible artifacts associated with their paper for evaluation, and based on the level of reproducibility they will be awarded one or more badges. See [https://eapls.org/pages/artifact_badges/](https://eapls.org/pages/artifact_badges/).\n\nArtifact submission is optional and the result of the artifact evaluation will not alter the paper’s acceptance decision.\n\n## Best Paper\n\niFM 2025 will honor the best paper selected with respect to reviews, program committee discussions and conference presentations with an award.\n\n## Contact\n\nIn case of questions, please contact [ifm2025@easychair.org](mailto:ifm2025@easychair.org)."
+}
+

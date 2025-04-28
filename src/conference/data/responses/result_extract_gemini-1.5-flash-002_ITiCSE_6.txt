@@ -1,0 +1,46 @@
+output:
+{
+  "Conference dates": "June 30 - July 2, 2025",
+  "Year": "2025",
+  "Location": "Radboud University, Nijmegen, Netherlands",
+  "City-State-Province": "Nijmegen",
+  "Country": "Netherlands",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Papers) Mandatory abstract submission": "January 12, 2025",
+    "(Papers) Full paper submission": "January 19, 2025",
+    "(Panels) Submission": "March 9, 2025",
+    "(Posters) Submission": "March 9, 2025",
+    "(Tips, Techniques, & Courseware) Submission": "March 9, 2025",
+    "(Doctoral Consortium) Submission": "March 9, 2025",
+    "(Working Groups) Submission": "January 19, 2025",
+    "(Membership applications close #1)": "March 2, 2025",
+    "(Membership applications close #2)": "March 16, 2025"
+  },
+  "Notification Date": {
+    "(Papers) Author notification": "March 3, 2025",
+    "(Panels) Notification": "April 8, 2025",
+    "(Posters) Notification": "April 8, 2025",
+    "(Tips, Techniques, & Courseware) Notification": "April 8, 2025",
+    "(Doctoral Consortium) Notification": "April 8, 2025",
+    "(Working Groups) Notification of working groups to proceed": "February 3, 2025",
+    "(WG submit draft for external review)": "September 14, 2025",
+    "(Preliminary accept / reject notification)": "October 26, 2025",
+    "(Final accept / reject notification)": "November 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready deadline": "November 16, 2025"
+  },
+  "Other Date": {
+    "(Working Groups) June": "June 27 - 29, 2025",
+    "(Doctoral Consortium) June": "June 28 - 29, 2025",
+    "(Draft report submission to WG chairs)": "June 29, 2025",
+    "(Initial feedback from WG chairs)": "July 14, 2025",
+    "(Membership applications open)": "February 10, 2025"
+  },
+  "Topics": "Computing Education, Teaching and Learning of Computing",
+  "Summary": "The 30th annual ACM conference on Innovation and Technology in Computer Science Education (ITiCSE 2025) will take place at Radboud University, Nijmegen, Netherlands from June 30 to July 2, 2025.  The conference is sponsored by the ACM Special Interest Group on Computing Education (SIGCSE), in collaboration with the ACM Europe Council, and Informatics Europe.",
+  "Call for Papers": "# ITiCSE 2025: Call for Papers\n\nThe 30th annual ACM conference on Innovation and Technology in Computer Science Education (ITiCSE 2025) will take place at **Radboud University, Nijmegen, Netherlands, from June 30 to July 2, 2025.**\n\n## Paper Tracks\n\nPapers presented at ITiCSE address aspects of computing education, that is, the education of students who are studying computing.  A mandatory abstract submission is required for all papers.\n\n*   **Computing education research:** Papers that define research questions, describe the data gathering and the methods used to address the questions, present the results, and discuss the contribution to knowledge about the teaching and learning of computing.\n*   **Experience reports and tools:** Papers that describe computing education experiences, including tools that have been developed for use in computing education, in sufficient detail for others to see whether their use was beneficial and to be able to adopt them if required.\n*   **Position papers and proposals:** Papers articulating original and well-argued positions on aspects of computing education, or proposals for work that is in its early stages.\n\n## Submission Guidelines\n\n*   All papers should explicitly state their motivating questions, relate to relevant literature, and where there is an intervention contain an analysis of the effectiveness of the intervention.\n*   Initial submissions must be anonymous.\n*   The paper is limited to a maximum of six pages plus one page for references (if there is a seventh page, there must be nothing on it but references).\n*   If the paper includes figures and tables, the text in them must be readable at 100% magnification and in greyscale. Figures and tables must be readable if the paper is printed.\n*   The file to be submitted must be no more than 10MB in size.\n*   ITiCSE 2025 will be a face-to-face conference. Registration, attendance in person, presentation, and discussion are mandatory for at least one author.\n\n## Abstract Submission\n\nYour abstract can be up to 250 words and must be submitted by the paper abstract deadline ([see important dates](https://iticse.acm.org/2025/important-dates/)). The abstract will be plain text.\n\n## Anonymous Version for Review\n\nThe paper submitted for review must be a fully anonymous version. ALL identifying references to the authors must be removed.\n\n## Ethical Status of Data Collection\n\nAny submission that makes use of data from human participants must clearly indicate whether approval has been granted for the use of that data, by what authority, and what the approval covers.\n\n## Important Dates\n\nAll submission deadlines are 23:59 AoE – Anywhere on Earth (UTC-12)\n\n*   **Main Conference:** June 30 - July 2, 2025\n*   **Working Groups:** June 27 - 29, 2025\n*   **Doctoral Consortium:** June 28 - 29, 2025\n*   **Papers:**\n    *   Mandatory abstract submission: January 12, 2025\n    *   Full paper submission: January 19, 2025\n    *   Author notification: March 3, 2025\n*   **Panels:**\n    *   Submission: March 9, 2025\n    *   Notification: April 8, 2025\n*   **Posters:**\n    *   Submission: March 9, 2025\n    *   Notification: April 8, 2025\n*   **Tips, Techniques, & Courseware:**\n    *   Submission: March 9, 2025\n    *   Notification: April 8, 2025\n*   **Doctoral Consortium:**\n    *   Submission: March 9, 2025\n    *   Notification: April 8, 2025\n*   **Working Groups:**\n    *   Submission: January 19, 2025\n    *   Notification of working groups to proceed: February 3, 2025\n    *   Draft report submission to WG chairs: June 29, 2025, 8 pm CET\n    *   Initial feedback from WG chairs: July 14, 2025\n    *   WG submit draft for external review: September 14, 2025\n    *   Preliminary accept / reject notification: October 26, 2025\n    *   Camera ready deadline: November 16, 2025\n    *   Final accept / reject notification: November 24, 2025\n*   **Membership applications open:** February 10, 2025\n*   **Membership applications close #1:** March 2, 2025\n*   **Membership applications close #2:** March 16, 2025\n\n## Contact Addresses\n\n*   **Conference Chairs:** [conferencechairs@iticse.acm.org](mailto:conferencechairs@iticse.acm.org)\n*   **Organisation / Registrar:** [registrars@iticse.acm.org](mailto:registrars@iticse.acm.org)\n*   **Program Chairs (Papers):** [iticse2025papers@easychair.org](mailto:iticse2025papers@easychair.org)\n*   **Working Group Chairs:** [iticse2025wg@easychair.org](mailto:iticse2025wg@easychair.org)\n*   **Panels Chairs:** [iticse2025panels@easychair.org](mailto:iticse2025panels@easychair.org)\n*   **TTC Chairs:** [iticse2025ttc@easychair.org](mailto:iticse2025ttc@easychair.org)\n*   **Posters Chairs:** [iticse2025posters@easychair.org](mailto:iticse2025posters@easychair.org)\n*   **Doctoral Consortium Chairs:** [iticse2025dc@easychair.org](mailto:iticse2025dc@easychair.org)"
+}
+

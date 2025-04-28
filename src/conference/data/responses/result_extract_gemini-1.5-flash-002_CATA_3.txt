@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "March 17 - 18, 2025",
+  "Year": "2025",
+  "Location": "Crowne Plaza Hotel, San Francisco Airport CA, US",
+  "City-State-Province": "San Francisco, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full paper submission": "November 16, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "January 4, 2025"
+  },
+  "Camera-ready Date": {
+    "Word files, PDF's of final Camera-ready paper and License to publish due": "January 18, 2025"
+  },
+  "Registration Date": {
+    "Conference registration materials due": "February 7, 2025"
+  },
+  "Topics": "Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics",
+  "Summary": "The 40th International Conference on Computers and Their Applications (CATA) provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes the best paper award, given for a paper presented at the conference.",
+  "Call for Papers": "# CATA 2025: Call for Papers\n\nThe 40th International Conference on Computers and Their Applications (CATA 2025) will be held at the **Crowne Plaza Hotel, San Francisco Airport CA, US, from March 17-18, 2025.**  It is sponsored by the International Society for Computers and Their Applications (ISCA).\n\n## Conference Overview\n\nCATA provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes a best paper award, given for a paper presented at the conference.\n\n## Topics of Interest\n\nThe topics will include, but are not limited to, the following areas:\n\n*   Algorithms\n*   Artificial Intelligence\n*   Biomedical Engineering\n*   Bioinformatics and Geoinformatics\n*   Compilers\n*   Computer Aided Design\n*   Computer Aided Manufacturing\n*   Computer and Network Security\n*   Computer Architecture and VLSI\n*   Computer Graphics\n*   Computer Modeling\n*   Computer Networks\n*   Computer Simulation\n*   Computer Vision\n*   Computers and Education\n*   Computing Practice/Applications\n*   Control Systems\n*   Data Communications\n*   Databases\n*   Data Mining/Knowledge Discovery\n*   Digital Signal Processing\n*   Expert Systems\n*   Human-Computer Interface\n*   Human-Computer Visualization\n*   Image Processing\n*   Information Systems\n*   Multimedia Applications\n*   Neural Networks\n*   Operating and Distributed Systems\n*   Parallel Processing\n*   Pattern Recognition\n*   Programming Languages\n*   Real-Time Computing\n*   Robotics\n*   Software Engineering and CASE\n*   Text Processing\n\n## Keynote Speaker\n\n**Bilal Clarance**, Director of Engineering Graph Serving Team at Google: \"Knowledge for Search and AI\"\n\n## Submission Guidelines\n\nPapers will be accepted only by electronic submission (PDF only). A full paper, including title, author's name(s) and affiliation, mailing address, telephone, fax, and email of the principal author, should be submitted before **November 16, 2024** online via [this link](https://equinocs.springernature.com/service/cata2025).\n\nThe submitted manuscript should closely reflect the final paper as it will appear in the proceedings published by Springer Nature. Accepted papers will be published by Springer Nature and submitted for indexing to major online indexes, such as Google Scholar and Scopus. A single-blind peer review system will be used to evaluate all submissions.\n\n## Publication\n\nAccepted papers in CATA-2025 will be published (full text online) in Springer and will be indexed in Scopus, Google Scholar, EI, and INSPEC, and submitted to DBLP for indexing.\n\n## Important Dates\n\n*   **Full paper submission:** November 16, 2024\n*   **Notification of acceptance:** January 4, 2025\n*   **Word files, PDFs of final camera-ready paper and License to Publish due:** January 18, 2025\n*   **Conference registration materials due:** February 7, 2025\n*   **CATA 2025 in San Francisco, CA, USA:** March 17-18, 2025\n\n## Conference Chair\n\nDr. Ajay Bandi ([AJAY@nwmissouri.edu](mailto:AJAY@nwmissouri.edu)) (Northwest Missouri State University, USA)\n\n## Program Chair\n\nDr. Mohammad Hossain ([hossaim@iu.edu](mailto:hossaim@iu.edu)) (Indiana University Indianapolis, USA)"
+}
+```

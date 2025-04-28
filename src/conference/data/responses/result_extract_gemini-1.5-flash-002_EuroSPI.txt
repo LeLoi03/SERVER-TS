@@ -1,0 +1,25 @@
+```json
+{
+  "Conference dates": "September 17 - 19, 2025",
+  "Year": "2025",
+  "Location": "Riga Technical University, Riga, Latvia",
+  "City-State-Province": "Riga",
+  "Country": "Latvia",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "The EuroSPI 2025 Paper Submission Deadline": "April 11, 2025"
+  },
+  "Registration Date": {
+    "Early Registration": "August 9, 2025",
+    "Late Registration": "August 10, 2025"
+  },
+  "Other Date": {
+    "Conference TechDay": "September 15, 2025"
+  },
+  "Topics": "Software Process Improvement, Software Engineering, Functional Safety, Cybersecurity, Agile, Lean, Standards, Assessments, Team Skills, Diversity, Innovation, Sustainability, AI, Big Data, IT Systems",
+  "Publisher": "Springer, Wiley",
+  "Summary": "EuroSPI² 2025 will be held from September 17-19, 2025, at Riga Technical University in Riga, Latvia.  The conference will feature 10 international thematic workshop streams, integrating research and industry sessions, keynote presentations, and social events.  It will be a hybrid event, offering both onsite and online participation.",
+  "Call for Papers": "# EuroSPI² 2025: Call for Research and Thematic Papers\n\nEuroSPI² 2025 (September 17-19, 2025) will be held at **Riga Technical University in Riga, Latvia**, and will be a **hybrid event** offering both onsite and online participation.\n\nThe conference will feature **10 international thematic workshop streams**, each integrating research sessions and industry/applied science sessions.  Thematic streams will include pitch talks, full presentations, and panel discussions.\n\n## Paper Submission\n\nEuroSPI² 2025 and Springer allow for three types of submissions:\n\n*   **Full Paper:** ca. 12-15 pages, full elaborated case study, research study\n*   **Short Paper:** ca. 6-8 pages, addresses an important case study or research result\n*   **Key Statement/Poster:** ca. 4 pages, making a key experience/best practice statement\n\nPapers should address the topics in the call and reference the SPI Manifesto.  At least one author must present the paper at the conference.  Selected papers will be published in the annual EuroSPI Springer book (CCIS series) and the Wiley Journal of Software: Evolution and Process. Extended papers may also be submitted to cooperating journals. \n\n## Submission Guidelines\n\nFirst register as an author: [https://www.iscn.com/conferences/authorreg.php](https://www.iscn.com/conferences/authorreg.php) (Conference registration is a separate process).  Follow the Springer Verlag authoring guidelines and upload guidelines.\n\n## Important Dates\n\n*   **First Thematic Paper and Research Paper Submission:** April 11, 2025\n*   **Review and Notification of Acceptance:** May 9, 2025\n*   **Camera Ready Version of Paper for Book:** June 20, 2025\n*   **Early Registration Deadline:** August 9, 2025 (All presenters must register)\n*   **Upload of Powerpoint Conference Presentation:** September 5, 2025\n*   **Free Technology Day:** September 15, 2025\n*   **Conference:** September 17-19, 2025\n\n**Note:**  Authors have to sign a copyright form.  For submissions via email, contact tormess(at)iscn.com"
+}
+```

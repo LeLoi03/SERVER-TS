@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "August 25 - 29, 2025",
+  "Year": "2025",
+  "Location": "University of Warsaw Library, Warsaw, Poland",
+  "City-State-Province": "Warsaw",
+  "Country": "Poland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "April 18, 2025"
+  },
+  "Notification Date": {
+    "Author notification": "June 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version": "June 27, 2025"
+  },
+  "Other Date": {
+    "Rebuttal": "June 3 - 6, 2025",
+    "Early registration": "TBA",
+    "YRF Workshop": "August 24, 2025"
+  },
+  "Topics": "Algebraic and co-algebraic methods in computer science, Algorithms and data structures, Automata and formal languages, Bioinformatics, Combinatorics on words, trees, and other structures, Computational complexity (structural and model-related), Computational geometry, Computer-aided verification, Computer assisted reasoning, Concurrency theory, Cryptography and security, Cyber physical systems, databases and knowledge-based systems, Formal specifications and program development, Foundations of computing, Logics in computer science, Mobile computing, Models of computation, Networks, Parallel and distributed computing, Quantum computing, Semantics and verification of programs, Theoretical issues in artificial intelligence and machine learning, Types in computer science",
+  "Summary": "The MFCS conference series on Mathematical Foundations of Computer Science is a high-quality venue for original research in all branches of Theoretical Computer Science.  In 2025, at its 50th edition, MFCS will be held as a physical event in Warsaw, Poland.",
+  "Call for Papers": "# MFCS 2025: Call for Papers\n\nThe 50th International Symposium on Mathematical Foundations of Computer Science (MFCS 2025) will be held in **Warsaw, Poland from August 25-29, 2025.**\n\nMFCS is a high-quality venue for original research in all branches of Theoretical Computer Science.\n\n## Submission Guidelines\n\nPapers should be submitted electronically through EasyChair: [https://easychair.org/conferences/?conf=mfcs2025](https://easychair.org/conferences/?conf=mfcs2025)\n\n*   Submissions should be formatted using the LIPIcs style with length not exceeding 15 pages (excluding front page, references, and an optional appendix).\n*   It is mandatory to use the LIPIcs style for submissions.\n*   No prior publication or simultaneous submission to other conferences or journals are allowed (except preprint repositories such as arXiv or workshops without formal published proceedings).\n*   Submissions authored or co-authored by members of the program committee are allowed.\n*   Submissions should not be made anonymous. MFCS 2025 will use a single-blind reviewing process.\n\n## Important Dates\n\n*   **Submission Deadline:** April 18, 2025 (Anywhere on Earth)\n*   **Rebuttal:** June 3–6, 2025\n*   **Author notification:** June 20, 2025\n*   **Camera-ready version:** June 27, 2025\n*   **Early registration:** TBA\n*   **Conference:** August 25–29, 2025 (YRF Workshop on August 24)\n\n## Topics\n\nThe program committee encourages submission of original research papers in all areas of theoretical computer science, including (but not limited to) the following:\n\n*   algebraic and co-algebraic methods in computer science\n*   algorithms and data structures\n*   automata and formal languages\n*   bioinformatics\n*   combinatorics on words, trees, and other structures\n*   computational complexity (structural and model-related)\n*   computational geometry\n*   computer-aided verification\n*   computer assisted reasoning\n*   concurrency theory\n*   cryptography and security\n*   cyber physical systems, databases and knowledge-based systems\n*   formal specifications and program development\n*   foundations of computing\n*   logics in computer science\n*   mobile computing\n*   models of computation\n*   networks\n*   parallel and distributed computing\n*   quantum computing\n*   semantics and verification of programs\n*   theoretical issues in artificial intelligence and machine learning\n*   types in computer science\n\n## Invited Speakers\n\n*   Thomas Colcombet (Université Paris Cité)\n*   Giuseppe Italiano (LUISS Guido Carli, Rome)\n*   Rasmus Kyng (ETH Zurych)\n*   Filip Murlak (University of Warsaw)\n*   Anca Muscholl (Université de Bordeaux)\n\n## Program Committee\n\n[See the provided list of Program Committee members]\n\n## Conference Venue\n\nThe conference will take place at the University of Warsaw Library, Dobra 56/66, 00-312 Warsaw.\n\n## Conference Dinner\n\nThe conference dinner will take place in The Kubicki Arcades, plac Zamkowy 4, 00-307 Warsaw.\n\n## Travel Information\n\n[See the detailed travel information provided in the input]\n\n## Restaurants\n\n[See the information on restaurants provided in the input]\n\n## Local Organizers\n\n[See the list of local organizers provided in the input]\n\n## Contact\n\nFor any questions, please contact [mfcs2025@mimuw.edu.pl](mailto:mfcs2025@mimuw.edu.pl)"
+}
+```

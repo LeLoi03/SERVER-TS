@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "August 13 - 15, 2025",
+  "Year": "2025",
+  "Location": "Toronto Metropolitan University, Toronto, Ontario, Canada",
+  "City-State-Province": "Toronto, Ontario",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(cycle 1) Paper submission deadline": "January 27, 2025",
+    "(cycle 2) Paper submission deadline": "May 7, 2025"
+  },
+  "Notification Date": {
+    "(cycle 1) Notification": "March 13, 2025",
+    "(cycle 2) Notification": "June 20, 2025"
+  },
+  "Other Date": {
+    "SAC Summer School": "August 11 - 12, 2025"
+  },
+  "Topics": "Symmetric key primitives and cryptosystems, Block ciphers, Stream ciphers, Hash functions, MAC algorithms, Cryptographic permutations, Authenticated encryption schemes, Efficient implementations of symmetric and public key algorithms, Mathematical and algorithmic aspects of applied cryptology, Post-quantum cryptology, Machine learning and cryptography, Applications of machine learning to cryptography and cryptanalysis, Application of cryptanalytic techniques against machine learning algorithms",
+  "Summary": "Selected Areas in Cryptography (SAC) is Canada’s research conference on cryptography, held annually since 1994. The 32nd edition of SAC will take place at Toronto Metropolitan University in Toronto, Ontario, Canada from August 13–15, 2025, and will be preceded by the SAC Summer School on August 11–12, 2025.",
+  "Call for Papers": "# SAC 2025: Call for Papers\n\nThe 32nd edition of Selected Areas in Cryptography (SAC) will take place at **Toronto Metropolitan University in Toronto, Ontario, Canada from August 13–15, 2025**. It will be preceded by the **SAC Summer School on August 11–12, 2025**.\n\n## Topics of Interest\n\nSAC 2025 welcomes papers in the following areas:\n\n1.  Design and analysis of symmetric key primitives and cryptosystems, including block and stream ciphers, hash functions, MAC algorithms, and authenticated encryption schemes.\n2.  Efficient implementations of symmetric and public key algorithms.\n3.  Mathematical and algorithmic aspects of applied cryptology.\n4.  Machine learning and cryptography: applications of machine learning to cryptography and cryptanalysis, and application of cryptanalytic techniques against machine learning algorithms.\n\nSAC 2025 also welcomes papers in any of the areas above with a focus on post-quantum cryptography.\n\n## Important Dates\n\n*   **Paper submission deadline (cycle 1):** Monday, January 27, 2025 (AoE)\n*   **Notification (cycle 1):** Thursday, March 13, 2025\n*   **Paper submission deadline (cycle 2):** Wednesday, May 7, 2025 (AoE)\n*   **Notification (cycle 2):** Friday, June 20, 2025\n*   **SAC Summer School:** Monday, August 11 – Tuesday, August 12, 2025\n*   **Conference:** Wednesday, August 13 – Friday, August 15, 2025\n\n## Conference Co-Chairs\n\n*   Christina Boura, Institut de Recherche en Informatique Fondamentale (IRIF), Université Paris Cité, Paris, France\n*   Atefeh (Atty) Mashatan, Cybersecurity Research Lab, Toronto Metropolitan University, Toronto, Ontario, Canada\n*   Ali Miri, Department of Computer Science, Toronto Metropolitan University, Toronto, Ontario, Canada\n\n## Sponsors\n\n*   Springer LNCS\n*   Toronto Metropolitan University Faculty of Science\n*   Toronto Metropolitan University Department of Computer Science\n*   Rogers Cybersecurity Catalyst\n*   Office of the President\n*   Office of the Provost"
+}
+

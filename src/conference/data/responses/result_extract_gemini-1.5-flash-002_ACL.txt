@@ -1,0 +1,41 @@
+```json
+{
+  "Conference dates": "July 27 - August 1, 2025",
+  "Year": "2025",
+  "Location": "Vienna, Austria",
+  "City-State-Province": "Vienna",
+  "Country": "Austria",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline (all papers are submitted to ARR)": "February 15, 2025"
+  },
+  "Notification Date": {
+    "ARR reviews & meta-reviews available to authors of the February cycle": "April 15, 2025",
+    "Notification of acceptance": "May 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready papers due": "May 30, 2025"
+  },
+  "Other Date": {
+    "Author response period": "March 27 - April 3, 2025",
+    "Commitment deadline for ACL 2025": "April 20, 2025",
+    "Withdrawal deadline": "May 30, 2025",
+    "Visa information has been updated": "March 31, 2025",
+    "Call for Student Research Workshop is updated": "March 16, 2025",
+    "The list of ACL tutorials is out": "February 18, 2025",
+    "The list of ACL workshops is out": "February 18, 2025",
+    "Call for System Demonstrations is out": "January 26, 2025",
+    "Second call for papers is out": "January 20, 2025",
+    "Call for Industry Track is out": "December 3, 2024",
+    "First call for papers is out": "October 7, 2024",
+    "The ACL-NAACL-EMNLP joint call for tutorials is out": "September 12, 2024",
+    "Tutorials & Welcome Reception": "July 27, 2025",
+    "Main Conference Dates": "July 28 - 30, 2025",
+    "Workshops": "July 31 - August 1, 2025"
+  },
+  "Topics": "Computational Linguistics, Natural Language Processing",
+  "Summary": "The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025) will take place in Vienna, Austria from July 27 to August 1st, 2025.  The conference invites submissions of long and short papers featuring substantial, original, and unpublished research in all aspects of Computational Linguistics and Natural Language Processing. More information will be announced soon.",
+  "Call for Papers": "# ACL 2025: Call for Papers\n\nThe 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025) will take place from **July 27 to August 1st, 2025** in **Vienna, Austria.**\n\n## Important Dates\n\n*   **Submission deadline (all papers are submitted to ARR):** February 15, 2025\n*   **ARR reviews & meta-reviews available to authors of the February cycle:** April 15, 2025\n*   **Commitment deadline for ACL 2025:** April 20, 2025\n*   **Notification of acceptance:** May 15, 2025\n*   **Withdrawal deadline:** May 30, 2025\n*   **Camera-ready papers due:** May 30, 2025\n*   **Tutorials & Welcome Reception:** July 27, 2025\n*   **Main Conference Dates:** July 28-30, 2025\n*   **Workshops:** July 31-August 1, 2025\n\nAll deadlines are 11:59 pm UTC -12h (anywhere on earth).\n\n## Overview\n\nACL 2025 invites the submission of long and short papers featuring substantial, original, and unpublished research in all aspects of Computational Linguistics and Natural Language Processing.  Papers submitted to ACL 2025, but not selected for the main conference, will also automatically be considered for publication in the Findings of the Association of Computational Linguistics.\n\n## Submission Website\n\n[https://openreview.net/group?id=aclweb.org/ACL/ARR/2025/February](https://openreview.net/group?id=aclweb.org/ACL/ARR/2025/February)\n\n## Contact\n\n*   **General Chair:** Roberto Navigli\n*   **Program Chairs:** Wanxiang Che, Joyce Nabende, Mohammad Taher Pilehvar, Ekaterina Shutova\n*   For questions related to paper submission, email: editors@aclrollingreview.org\n*   For all other questions, email: acl2025pcs@gmail.com"
+}
+```

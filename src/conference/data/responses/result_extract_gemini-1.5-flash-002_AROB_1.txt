@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "January 22 - 24, 2025",
+  "Year": "2025",
+  "Location": "B-Con PLAZA, Beppu, JAPAN",
+  "City-State-Province": "Beppu",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for Abstract Submission for review": "October 28, 2024",
+    "Deadline for OS Proposal": "October 21, 2024",
+    "Deadline for Final Camera-Ready Papers": "December 23, 2024",
+    "Deadline for Early Registration": "December 16, 2024",
+    "Registration Deadline for Presenters": "December 16, 2024",
+    "Deadline of a full paper submission": "August 31, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "November 6, 2024",
+    "Notification of Acceptance": "November 29, 2024"
+  },
+  "Camera-ready Date": {
+    "Final paper submission": "December 16, 2024"
+  },
+  "Topics": "Artificial Life, Robotics, Computer Simulations, Hardware Designs, Artificial Intelligence, Virtual Reality, Computer Science, Adaptation, Agent-based modelling, Artificial brain, Artificial intelligence, Artificial life, Artificial living, Artificial mind, Bio-inspired robotics, Bio-mimetics, Bio-robot, Biocomplexity, Bioinformatics, Biological evolution, Biomedical database, Biomedical imaging, Brain science, Chaos, Cognitive science, Complexity, Control techniques, Data mining, Decentralized control, Disease models and mechanisms, Distributed system, DNA computing, Ethology, Evolution of cooperation, Evolutionary computations, Gene expression and regulation, Genome/Omics medicine, Human genome information, Human-machine interaction and collaboration, Identification and Estimation, In silico drug discovery, Intelligent control, Learning, Machine Learning, Manipulator, Medical big data, Medical informatics, Mobile robots, Model estimation, Modular robotics, Molecular biology, Molecular evolution, Molecular network, Motion planning and navigation, Multi-agent systems, Multivariate statistics, Nano-biology, Nano-robot, Neural networks, Neurocomputing technologies, Parallel and distributed computing, Phase polyphenism, Quantum computing, Quorum sensing, Regenerative medicine, Robot vision and image processing, Robotic Mechanism, Security, Self-organization, Sensor and multi-sensor data fusion, Social insects, Social physiology, Sociometry, Swarm intelligence, Swarm robot, Swarm robotics, Tele-operation, Walking robot",
+  "Publisher": "ISAROB",
+  "Summary": "The 30th International Symposium on Artificial Life and Robotics (AROB 2025) and the 10th International Symposium on BioComplexity (ISBC 2025) will be held in Beppu, Oita, Japan, from January 22-24, 2025. The symposium invites you to present original research and to discuss the development of new technologies concerning artificial life and robotics based on computer simulations and hardware designs of state-of-the-art technologies.",
+  "Call for Papers": "# AROB-ISBC 2025: Call for Papers\n\nThe Thirtieth International Symposium on Artificial Life and Robotics (AROB 2025) and the Tenth International Symposium on BioComplexity (ISBC 2025) will be held in **Beppu, Oita, Japan, from January 22-24, 2025**.\n\nThis symposium will bring together researchers to discuss the development of new technologies concerning artificial life and robotics based on computer simulations and hardware designs of state-of-the-art technologies, and to share findings on how advancements in artificial life and robotics technologies that relate to artificial intelligence, virtual reality, and computer science are creating the basis for exciting new research and applications.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Adaptation\n*   Agent-based modelling\n*   Artificial brain\n*   Artificial intelligence\n*   Artificial life\n*   Artificial living\n*   Artificial mind\n*   Bio-inspired robotics\n*   Bio-mimetics\n*   Bio-robot\n*   Biocomplexity\n*   Bioinformatics\n*   Biological evolution\n*   Biomedical database\n*   Biomedical imaging\n*   Brain science\n*   Chaos\n*   Cognitive science\n*   Complexity\n*   Control techniques\n*   Data mining\n*   Decentralized control\n*   Disease models and mechanisms\n*   Distributed system\n*   DNA computing\n*   Ethology\n*   Evolution of cooperation\n*   Evolutionary computations (Genetic algorithm)\n*   Gene expression and regulation\n*   Genome/Omics medicine\n*   Human genome information\n*   Human-machine interaction and collaboration\n*   Identification and Estimation\n*   In silico drug discovery\n*   Intelligent control\n*   Learning (Phenotypic plasticity)\n*   Machine Learning\n*   Manipulator\n*   Medical big data\n*   Medical informatics\n*   Mobile robots\n*   Model estimation\n*   Modular robotics\n*   Molecular biology\n*   Molecular evolution\n*   Molecular network\n*   Motion planning and navigation\n*   Multi-agent systems\n*   Multivariate statistics\n*   Nano-biology\n*   Nano-robot\n*   Neural networks\n*   Neurocomputing technologies and its application for hardware\n*   Parallel and distributed computing\n*   Phase polyphenism\n*   Quantum computing\n*   Quorum sensing\n*   Regenerative medicine\n*   Robot vision and image processing\n*   Robotic Mechanism\n*   Security\n*   Self-organization\n*   Sensor and multi-sensor data fusion\n*   Social insects\n*   Social physiology\n*   Sociometry\n*   Swarm intelligence\n*   Swarm robot\n*   Swarm robotics\n*   Tele-operation\n*   Walking robot\n\n## Important Dates\n\n*   **Deadline for Abstract Submission for review:** October 28, 2024 (24:00 UTC)\n*   **Deadline for OS Proposal:** October 21, 2024 (24:00 UTC)\n*   **Notification of acceptance:** November 6, 2024\n*   **Deadline for Final Camera-Ready Papers:** December 23, 2024 (24:00 UTC)\n*   **Deadline for Early Registration:** December 16, 2024 (24:00 UTC)\n*   **Registration Deadline for Presenters:** December 16, 2024 (24:00 UTC)"
+}
+

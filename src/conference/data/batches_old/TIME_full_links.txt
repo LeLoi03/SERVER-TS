@@ -1,0 +1,1175 @@
+Conference full name: International Symposium on Temporal Representation and Reasoning (TIME)
+
+1. Website of TIME_3: https://www.lirmm.fr/time2024/
+Website information of TIME_3:
+
+31stInternational Symposium on 
+ Temporal Representation 
+ and Reasoning 
+ Oct. 28–30, 2024 
+ Montpellier, France 
+  
+ href="#Dates" - Dates | Program | Registration | Organization | Venue 
+ Introduction 
+ TIME has been for more than twenty years the only yearly multidisciplinary international event dedicated to the topic of time in computer science. The purpose of the symposium is to bring together active researchers in different research areas involving temporal representation and reasoning. The symposium also welcomes research papers on the related topics of spatial and spatio-temporal representation and reasoning. In the early years, most contributions came from the Artificial Intelligence community, but the number of contributions from other areas such as Temporal Logic and Verification and partly from Temporal Databases has been increasing in the last years. 
+ More details about TIME and the previous editions of this symposium can be found via the following link:href="https://time-symposium.org/" - https://time-symposium.org/
+. 
+ Call For Papers 
+ Topics 
+ In this symposium, in addition to theoretical and practical work inArtificial Intelligence,Databases, andLogic and Reasoning, we invite submissions focusing on the development, deployment, and evaluation ofMachine Learning Systemsthat fall under the scope of the symposium. Such systems papers will be evaluated primarily on the quality of the empirical evaluation and reusability. Topics for TIME 2024 include (but are not limited to): 
+ Spatial and temporal reasoning 
+ Time in natural language processing 
+ Reasoning about action and change 
+ Complex event recognition and forecasting 
+ Planning and planning languages 
+ Ontologies of time and space-time 
+ Belief and uncertainty in temporal knowledge 
+ Temporal learning and discovery 
+ Temporal data models and query languages 
+ Temporal query processing and indexing 
+ Temporal data mining 
+ Stream data management 
+ Spatio-temporal data management, including moving objects 
+ Data currency and expiration 
+ Indeterminate and imprecise temporal data 
+ Temporal constraints 
+ Specification and verification of systems 
+ Verification of software and web applications 
+ Synthesis and execution 
+ Model checking algorithms and implementations 
+ Temporal logics for infinite-state systems 
+ Runtime verification of temporal properties 
+ Temporal aspects of agent- and policy-based systems 
+ Temporal networks 
+ Temporal argumentation frameworks 
+ Automata-theoretic techniques for temporal reasoning 
+ Temporal knowledge graphs 
+ Time-series data management 
+ Events and time series explanations in healthcare 
+ The list above is by no means exhaustive, as the aim is to foster the debate around all aspects of the suggested topics. 
+ Finally, the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Submission 
+ The submission link is available athref="https://cmt3.research.microsoft.com/TIME2024/" - cmt3.research.microsoft.com/TIME2024/
+. 
+ Guidelines 
+ TIME 2024 accepts submissions in PDF format, no longer than 12 pages excluding references and appendix. The appendix is limited to 5 pages, and the reviewers may or may not take it into account for their recommendation. Submissions must be formatted following thehref="https://submission.dagstuhl.de/series/details/LIPIcs#author" - LIPIcs instructions
+and preferably redacted in LaTeX. 
+ TIME policy is single blind, so the names of the authors need not be hidden in the submitted draft. Members of the program committee are allowed to submit papers. Submitted papers will be refereed for quality, correctness, originality, and relevance to the symposium. 
+ Submissions to TIME 2024 must be original; parallel submissions of the same material to other conferences or journals are not allowed. At least one author of each accepted paper must register at the symposium and present the paper. 
+ All questions about submissions should be emailed to the organizers. 
+ Important Dates 
+ Be mindful of the following dates: 
+ June 21, 2024 | , | July 5, 2024 | : Symposium paper submission deadline 
+ August 2, 2024 | , | August 14, 2024 | : Paper acceptance/rejection notification date 
+ August 13, 2024 | , | August 23, 2024 | , | August 28, 2024 | : Camera-ready submission deadline 
+ October 18, 2024 | : Registration deadline 
+ October 28–30, 2024 | : Symposium Date 
+ Note:all deadlines are AoE (Anywhere on Earth). 
+ Proceedings 
+ Accepted papers will be presented at the symposium and included in the proceedings, which will be published byLIPIcs-Leibniz International Proceedings in Informatics. This is a series of high-quality peer-reviewed conference proceedings, and published according to the principle of OpenAccess. 
+ The proceedings volume of TIME 2024 is now officially published as volume 318 of LIPIcs and available at:www.dagstuhl.de/dagpub/978-3-95977-349-2 
+ In addition, we note again that the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Go back to the top 
+ Symposium Program 
+ Keynotes 
+  
+ Sophie Pinchinat 
+ Inria-IRISA, Rennes, France 
+  
+ Prof.Sophie Pinchinatis a Full Professor with the Department of Electrical Engineering and Computer Science of the University of Rennes 1 in France, and the Head of theLogicAresearch team at Inria-IRISA. Her main research interests are formal methods, artificial intelligence, multi-agent systems, security, planning, mathematical logic, automata, dynamic epistemic reasoning, and multi-player games.This keynote will be aEurAI Talk. 
+ Guido Sciavicco 
+ University of Ferrara, Italy 
+  
+ Prof.Guido Sciaviccois an Associate Professor with the Department of Mathematics and Computer Science of the University of Ferrara in Italy, and the Head of theApplied Computational Logic and Artificial Intelligence (ACLAI)lab. His main research interests are symbolic machine learning, mathematical logic, applications of artificial intelligence, and intelligent data analysis. 
+ Przemysław Wałęga 
+ Queen Mary University of London & University of Oxford, UK 
+  
+ Dr.Przemysław Wałęgais a Senior Lecturer at Queen Mary University of London and Senior Researcher at the University of Oxford in UK. His main research is focused on formal methods for reasoning about time, including such areas as knowledge representation and reasoning, logics for temporal reasoning, stream reasoning, and computational complexity analysis. 
+ Schedule 
+ 28 October 
+  
+ 9:00 | Opening: Welcome and Agenda 
+ Keynote 
+  
+ 9:30 | Strategic Reasoning under Imperfect Information with synchronous semantics |href="files/StrategicReasoningTIME2024.pdf" - pdf 
+ Sophie Pinchinat (Inria-IRISA, Rennes, France) 
+  
+ 10:30 | Coffee & Tea Break 
+ Session: Time in Logic 
+  
+ 11:00 | Fitting's Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation |href="files/IntervalTemporalLogicTableauSystemTIME2024.pdf" - pdf 
+ Guillermo Badia (University of Queensland, Australia) 
+ Carles Noguera (University of Siena, Italy) 
+ Alberto Paparella (University of Ferrara, Italy) 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Eduard Ionel Stan (Free University of Bozen-Bolzano, Italy) 
+  
+ 11:30 | Full Characterisation of Extended CTL* |href="files/ExtendedCTLstarTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Laura Bozzelli (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+ Adriano Peron (University of Trieste, Italy) 
+  
+ 12:00 | Model Checking Linear Temporal Properties on Polyhedral Systems |href="files/ModelCheckingPolyhedralSystemsTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Marco Faella (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+  
+ 12:30 | Lunch Break 
+ Keynote 
+  
+ 14:00 | Rule-Based Temporal Reasoning: Exploring DatalogMTL 
+ Przemysław Wałęga (Queen Mary University of London & University of Oxford, UK) 
+ Session: Applications involving Time 
+  
+ 15:00 | Extending the Range of Temporal Specifications of the Run-Time Event Calculus |href="files/ExtendindRunTimeEventCalculusTIME2024.pdf" - pdf 
+ Periklis Mantenoglou (NCSR Demokritos, Greece) 
+ Alexander Artikis (University of Piraeus, Greece) 
+  
+ 15:30 | Coffee & Tea Break 
+  
+ 16:00 | Open the Chests: An environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic |href="files/OpenTheChestsTIME2024.pdf" - pdf 
+ Ivelina Stoyanova (Thales, France) 
+ Nicolas Museux (Thales, France) 
+ Sao Mai Nguyen (ENSTA Paris, France) 
+ David Filliat (ENSTA Paris, France) 
+  
+ 16:30 | Real-Time Higher-Order Recursion Schemes |href="files/RecursionSchemesTIME2024.pdf" - pdf 
+ Eric Alsmann (University of Kassel, Germany) 
+ Florian Bruse (University of Kassel, Germany) 
+  
+ 17:00 | Reception: Wine & Cheese 
+ 29 October 
+ Keynote 
+  
+ 9:00 | A General Logical Approach to Learning from Time Series |href="files/LearningFromTimeSeriesTIME2024.pdf" - pdf 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Session: Time in AI/ML 
+  
+ 10:00 | Learning Temporal Properties from Event Logs via Sequential Analysis |href="files/LearningFromEventLogsTIME2024.pdf" - pdf 
+ Francesco Chiariello (CNRS-IRIT, University of Toulouse, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN |href="files/TimeSeriesAnomalyDetectionTIME2024.pdf" - pdf 
+ İbrahim Delibaşoğlu (Linköping University, Sweden & Sakarya University, Turkey) 
+ Fredrik Heintz (Linköping University, Sweden) 
+  
+ 11:30 | A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty |href="files/NegativeCyclesInSTNsWithUncertaintyTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:00 | Faster Algorithm for Converting an STNU into Minimal Dispatchable Form |href="files/ConvertingSTNUsIntoMinimalDispatchableFormTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:30 | Lunch Break 
+  
+ 14:00 | Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-agent Temporal Planning |href="files/InterdepedentSTNUsForTemporalPlanningTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+ Andrea Micheli (Bruno Kessler Foundation, Italy) 
+ Alessandro Cimatti (Bruno Kessler Foundation, Italy) 
+  
+ 14:30 | A Framework for Assessing Inconsistency in Disjunctive Temporal Problems 
+ Jean-François Condotta (Artois University, Lens, France) 
+ Yakoub Salhi (Artois University, Lens, France) 
+  
+ 15:00 | Free Time to Explore the City 
+  
+ Must-sees in Montpellier! 
+  
+ Montpellier Tourist Map 
+  
+ 19:00 | Dinner 
+  
+ La Closerie Restaurant(location) 
+ 30 October 
+ Session: Time in KR 
+  
+ 9:00 | Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles |href="files/AgileControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Johann Eder (University of Klagenfurt, Austria) 
+ Roberto Posenato (University of Verona, Italy) 
+ Carlo Combi (University of Verona, Italy) 
+ Marco Franceschetti (University of St. Gallen, Switzerland) 
+ Franziska S. Hollauf (University of Klagenfurt, Austria) 
+  
+ 9:30 | A more efficient and informed algorithm to check Weak Controllability of Simple Temporal Networks |href="files/WeakControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+  
+ 10:00 | What killed the cat? Towards a logical formalization of curiosity (and suspense, and surprise) in Narratives |href="files/WhatKilledTheCatTIME2024.pdf" - pdf 
+ Florence Dupin de Saint-Cyr (Lab-STICC, France) 
+ Anne-Gwenn Bosser (Lab-STICC, France) 
+ Benjamin Callac (Lab-STICC, France) 
+ Éric Maisel (Lab-STICC, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Robust Execution of Probabilistic STNs |href="files/RobustExecutionOfProbabilisticSTNsTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 11:30 | FastMinTC+: a Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks |href="files/FastMinTCplusTIME2024.pptx" - pptx 
+ Giorgio Lazzarinetti (University of Milano-Bicocca, Italy) 
+ Riccardo Dondi (University of Bergamo, Italy) 
+ Italo Zoppis (University of Milano-Bicocca, Italy) 
+ Sara Manzoni (University of Milano-Bicocca, Italy) 
+ Wrap-Up 
+  
+ 12:00 | Discussion & Closing Remarks 
+  
+ 12:30 | Lunch & Farewell 
+ Go back to the top 
+ Registration 
+ Registration is now open athttps://um.azur-colloque.fr/inscription/en/47/inscription. 
+ At least one author of each accepted paper must register as aregularattendee (this option appears as Lecturers/researchers on Azur-Colloque) and attend the symposium to present their work. 
+ Registration fees are 330 euros and 220 euros including tax for regular and student attendees respectively, and they cover: 
+ Participation at the conference 
+ 4 Coffee and tea breaks 
+ 3 Lunches 
+ 1 Welcome Reception: Wine & Cheese 
+ 1 Guided city tour 
+ 1 Social dinner 
+ Proceedings 
+ Please register by 18 October at the latest. 
+ Go back to the top 
+ Organization 
+ Programme Committee Chairs 
+  
+ Prof.Michael Sioutisis a Junior Professor with the LIRMM UMR 5506 laboratory and the Department of Computer Science of the University of Montpellier in France. His general interests lie in Hybrid Artificial Intelligence, Spatio-Temporal Reasoning, Data Mining, Semantic Web, Constraint Programming, and Logic. | Prof.Pietro Salais an Associate Professor with the Department of Computer Science of the University of Verona in Italy. His general interests lie in Temporal Logics, Temporal Data-Mining and its application to Biomedical domains, and Modelling and checking temporal properties in Business Processes. | Prof.Fusheng Wangis a Professor with the Departments of Biomedical Informatics and Computer Science of Stony Brook University in the US. His general interests lie in Spatial and Temporal Data Management, Medical Imaging Informatics, AI in Healthcare, Population Health, and Assistive Technologies. 
+ Program Committee 
+ Spatio-temporal Representation and Reasoning 
+ Michael Sioutis | , University of Montpellier, France (co-chair) 
+ Anastasia Paparrizou | , CNRS-LIRMM, France | href="https://www.researchgate.net/profile/Anastasia-Paparrizou" - 
+ Esra Erdem | , Sabancı University, Istanbul, Turkey 
+ Farimah Poursafaei | , Mila, Quebec AI Institute & McGill University, Canada 
+ Kathleen Stewart | , University of Maryland, US 
+ LuoYi Fu | , Shanghai Jiao Tong University, China 
+ Maria Chiara Meo | , "G. d'Annunzio" University of Chieti-Pescara, Italy 
+ María Laura Cobo | , National University of the South, Argentina 
+ Ruizhe Ma | , University of Massachusetts Lowell, US 
+ Silvia García Méndez | , University of Vigo, Spain 
+ Zina Ibrahim | , King's College London, UK 
+ Zoe Falomir | , Umeå University, Sweden 
+ Alexandros Artikis | , NCSR Demokritos & University of Piraeus, Greece 
+ Luyi Bai | , Northeastern University, China & University of Leicester, UK | href="https://www.researchgate.net/profile/Luyi-Bai" - 
+ Nassim Belmecheri | , Simula Research Laboratory, Oslo, Norway 
+ Thomas Guyet | , Inria-AIstroSight, Lyon, France 
+ Victor Lagerkvist | , Linköping University, Sweden 
+ Yakoub Salhi | , Artois University, Lens, France 
+ Temporal Logic and Verification 
+ Pietro Sala | , University of Verona, Italy (co-chair) 
+ Béatrice Bérard | , Sorbonne University, Paris, France 
+ Munyque Mittelmann | , University of Naples Federico II, Italy 
+ Orna Kupferman | , Hebrew University, Jerusalem, Israel 
+ Shufang Zhu | , University of Oxford, UK 
+ Christopher Hahn | , Google LLC 
+ Davide Catta | , University of Naples Federico II, Italy | href="https://www.researchgate.net/profile/Davide-Catta" - 
+ Emilio Muñoz-Velasco | , University of Málaga, Spain 
+ Florian Bruse | , University of Kassel, Germany 
+ Jean-François Condotta | , Artois University, Lens, France 
+ Jianwen Li | , East China Normal University, Shanghai, China 
+ Martin Lange | , University of Kassel, Germany 
+ Nicola Gigante | , Free University of Bozen-Bolzano, Italy 
+ Philippe Balbiani | , CNRS-IRIT, France 
+ S Akshay | , Indian Institute of Technology Bombay, India 
+ Planning and Temporal Databases 
+ Fusheng Wang | , Stony Brook University, New York, US (co-chair) 
+ Alia Abdelmoty | , Cardiff University, Wales 
+ Beatrice Amico | , University of Verona, Italy 
+ Cindy Chen | , University of Massachusetts Lowell, US 
+ Federica Mandreoli | , University of Modena and Reggio Emilia, Italy 
+ Carlo Combi | , University of Verona, Italy 
+ Christian Molinaro | , University of Calabria, Arcavacata, Italy 
+ Enrico Scala | , University of Brescia, Italy 
+ Francesco Parisi | , University of Calabria, Italy 
+ Jaewook Byun | , Sejong University, Seoul, South Korea 
+ Johann Eder | , University of Klagenfurt, Austria 
+ John Grant | , University of Maryland, US 
+ Manolis Koubarakis | , National and Kapodistrian University of Athens, Greece 
+ Matteo Zavatteri | , University of Padua, Italy 
+ Peter Jonsson | , Linköping University, Sweden 
+ Roberto Posenato | , University of Verona, Italy 
+ Tomi Janhunen | , Tampere University, Finland 
+ Local Organizing Committee 
+ Amandine Sanchez | , University of Montpellier, France 
+ Elena Demchenko | , LIRMM UMR 5506, France 
+ Olena Tirefort | , LIRMM UMR 5506, France 
+ Virginie Fèche | , LIRMM UMR 5506, France (co-chair) 
+ Maximos Skandalis | , LIRMM UMR 5506, France (co-chair) 
+ Go back to the top 
+ Venue 
+ The symposium will take place at Amphithéâtre 1, Bâtiment 36, on theCampus Trioletof the University of Montpellier, in Montpellier, France. 
+ Further, on-site registration and coffee and tea breaks will take place at the hall just outside of the amphitheatre, and lunches will be offered at theRestaurant administratif Minerve (APUM)in the northwestern part of the campus (a 5-min walk from the amphitheatre). 
+ The Campus Triolet is located about 300m from tram station "Universités des Sciences et Lettres", served by (blue)line 1. 
+ A detailed guide forgetting to Montpellieris also available. 
+ View Larger Map 
+ Accommodation 
+ Some possible hotels for your stay at Montpellier are provided below: 
+ Grand Hôtel du Midi | (4 stars) 
+ Hôtel du Palais | (3 stars) 
+ Hotel Ulysse Montpellier Centre Corum | (3 stars) 
+ Best Western Hotel Le Guilhem | (3 stars) 
+ ibis Styles Montpellier Centre Comédie | (3 stars) 
+ Hôtel Les Troènes | (2 stars) 
+ Hôtel Lapeyronie | (2 stars) 
+ Go back to the top 
+ © Symposium Organizers | Design byMike Pierce| Banner photo byJorge Franganillo 
+
+Sponsored byLIRMM UMR 5506,Pôle MIPS, theUniversity of Verona, andEurAI
+
+2. Website of TIME_3: https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-318
+Website information of TIME_3:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ href="https://drops.dagstuhl.de/entities/conference/TIME" - TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ VolumeExport XML 
+ Export ACM-XML 
+ Export DOAJ-XML 
+ Export Schema.org 
+ Export HTML 
+ LIPIcs, Volume 318 
+ 31st International Symposium on Temporal Representation and Reasoning (TIME 2024) 
+ Part of: | Series: | Leibniz International Proceedings in Informatics (LIPIcs) | Part of: | Conference: | href="https://drops.dagstuhl.de/entities/conference/TIME" - International Symposium on Temporal Representation and Reasoning (TIME) 
+ Event 
+ href="https://www.lirmm.fr/time2024/" - TIME 2024, October 28-30, 2024, Montpellier, France
+Editors 
+ Pietro Salahref="https://drops.dagstuhl.de/search/documents?author=Sala, Pietro" - 
+University of Verona, Italy 
+ Michael Sioutishref="https://drops.dagstuhl.de/search/documents?author=Sioutis, Michael" - 
+LIRMM UMR 5506, Université de Montpellier & CNRS, France 
+ Fusheng Wanghref="https://drops.dagstuhl.de/search/documents?author=Wang, Fusheng" - 
+Stony Brook University, NY, USA 
+ Publication Details 
+ published at: 2024-10-22 
+ Publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ ISBN: 978-3-95977-349-2 
+ DBLP: | href="https://dblp.org/db/conf/time/time2024" - db/conf/time/time2024 
+  
+ Access Numbers 
+ Detailed Access Statistics available here 
+ Total Document Accesses (updated on a weekly basis): | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+ DocumentsNo documents found matching your filter selection. 
+ Document 
+ Complete Volume 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024" - DOI: 10.4230/LIPIcs.TIME.2024
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024/LIPIcs.TIME.2024.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024" - LIPIcs, Volume 318, TIME 2024, Complete Volume
+Authors:Pietro Sala, Michael Sioutis, and Fusheng Wang 
+ AbstractLIPIcs, Volume 318, TIME 2024, Complete Volume 
+ Cite as31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 1-308, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @Proceedings{sala_et_al:LIPIcs.TIME.2024 title = {{LIPIcs, Volume 318, TIME 2024, Complete Volume}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {1--308}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024}, URN = {urn:nbn:de:0030-drops-220682}, doi = {10.4230/LIPIcs.TIME.2024}, annote = {Keywords: LIPIcs, Volume 318, TIME 2024, Complete Volume} }@Proceedings{sala_et_al:LIPIcs.TIME.2024 title = {{LIPIcs, Volume 318, TIME 2024, Complete Volume}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {1--308}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024}, URN = {urn:nbn:de:0030-drops-220682}, doi = {10.4230/LIPIcs.TIME.2024}, annote = {Keywords: LIPIcs, Volume 318, TIME 2024, Complete Volume} }Document 
+ Front Matter 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.0" - DOI: 10.4230/LIPIcs.TIME.2024.0
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.0/LIPIcs.TIME.2024.0.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.0" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.0" - Front Matter, Table of Contents, Preface, Conference Organization
+Authors:Pietro Sala, Michael Sioutis, and Fusheng Wang 
+ AbstractFront Matter, Table of Contents, Preface, Conference Organization 
+ Cite as31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 0:i-0:xiv, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{sala_et_al:LIPIcs.TIME.2024.0 author = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {0:i--0:xiv}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.0}, URN = {urn:nbn:de:0030-drops-220672}, doi = {10.4230/LIPIcs.TIME.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }@InProceedings{sala_et_al:LIPIcs.TIME.2024.0 author = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {0:i--0:xiv}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.0}, URN = {urn:nbn:de:0030-drops-220672}, doi = {10.4230/LIPIcs.TIME.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.1" - DOI: 10.4230/LIPIcs.TIME.2024.1
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.1/LIPIcs.TIME.2024.1.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.1" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.1" - A General Logical Approach to Learning from Time Series (Invited Talk)
+Authors:Guido Sciavicco 
+ AbstractMachine learning from multivariate time series is a common task, and countless different approaches to typical learning problems have been proposed in recent years. In this talk, we review some basic ideas towards logic-based learning methods, and we sketch a general framework. 
+ Cite asGuido Sciavicco. A General Logical Approach to Learning from Time Series (Invited Talk). In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 1:1-1:2, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{sciavicco:LIPIcs.TIME.2024.1 author = {Sciavicco, Guido}, title = {{A General Logical Approach to Learning from Time Series}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {1:1--1:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.1}, URN = {urn:nbn:de:0030-drops-212088}, doi = {10.4230/LIPIcs.TIME.2024.1}, annote = {Keywords: Machine learning, temporal logic, general approach} }@InProceedings{sciavicco:LIPIcs.TIME.2024.1 author = {Sciavicco, Guido}, title = {{A General Logical Approach to Learning from Time Series}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {1:1--1:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.1}, URN = {urn:nbn:de:0030-drops-212088}, doi = {10.4230/LIPIcs.TIME.2024.1}, annote = {Keywords: Machine learning, temporal logic, general approach} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.2" - DOI: 10.4230/LIPIcs.TIME.2024.2
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.2/LIPIcs.TIME.2024.2.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.2" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.2" - Strategic Reasoning Under Imperfect Information with Synchronous Semantics (Invited Talk)
+Authors:Sophie Pinchinat 
+ AbstractDynamic Epistemic Logic is a modal logic dedicated to specifying epistemic property changes along the dynamic behavior of a multi-agent system. The models that underlie this logic are (epistemic) states together with transitions caused by events, the occurrence of which may modify the current state. We first develop a setting where the entire dynamics of the system starting from an initial state is captured by a single infinite tree, in a way similar to what has been considered for Epistemic Temporal Logic, and second go through the current state-of-the-art regarding strategic reasoning, with a focus on planning problems in this infinite structure. 
+ Cite asSophie Pinchinat. Strategic Reasoning Under Imperfect Information with Synchronous Semantics (Invited Talk). In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 2:1-2:2, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{pinchinat:LIPIcs.TIME.2024.2 author = {Pinchinat, Sophie}, title = {{Strategic Reasoning Under Imperfect Information with Synchronous Semantics}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {2:1--2:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.2}, URN = {urn:nbn:de:0030-drops-212093}, doi = {10.4230/LIPIcs.TIME.2024.2}, annote = {Keywords: Strategic reasoning, Imperfect information, chain-MSO, Automatic structures} }@InProceedings{pinchinat:LIPIcs.TIME.2024.2 author = {Pinchinat, Sophie}, title = {{Strategic Reasoning Under Imperfect Information with Synchronous Semantics}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {2:1--2:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.2}, URN = {urn:nbn:de:0030-drops-212093}, doi = {10.4230/LIPIcs.TIME.2024.2}, annote = {Keywords: Strategic reasoning, Imperfect information, chain-MSO, Automatic structures} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.3" - DOI: 10.4230/LIPIcs.TIME.2024.3
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.3/LIPIcs.TIME.2024.3.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.3" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.3" - Rule-Based Temporal Reasoning: Exploring DatalogMTL (Invited Talk)
+Authors:Przemysław Andrzej Wałęga 
+ AbstractI will introduce DatalogMTL - an extension of Datalog, augmenting it with operators known from metric temporal logic (MTL). DatalogMTL is an expressive language which allows us for complex temporal reasoning over a dense timeline and, at the same time, remains decidable. I will provide an overview of research on DatalogMTL by discussing its computational complexity, syntactic and semantic modifications, practical reasoning approaches, applications, and future research directions. 
+ Cite asPrzemysław Andrzej Wałęga. Rule-Based Temporal Reasoning: Exploring DatalogMTL (Invited Talk). In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 3:1-3:3, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{walega:LIPIcs.TIME.2024.3 author = {Wa{\l}\k{e}ga, Przemys{\l}aw Andrzej}, title = {{Rule-Based Temporal Reasoning: Exploring DatalogMTL}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {3:1--3:3}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.3}, URN = {urn:nbn:de:0030-drops-212106}, doi = {10.4230/LIPIcs.TIME.2024.3}, annote = {Keywords: Temporal Datalog, Temporal Logic Programming, Temporal Reasoning} }@InProceedings{walega:LIPIcs.TIME.2024.3 author = {Wa{\l}\k{e}ga, Przemys{\l}aw Andrzej}, title = {{Rule-Based Temporal Reasoning: Exploring DatalogMTL}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {3:1--3:3}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.3}, URN = {urn:nbn:de:0030-drops-212106}, doi = {10.4230/LIPIcs.TIME.2024.3}, annote = {Keywords: Temporal Datalog, Temporal Logic Programming, Temporal Reasoning} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.4" - DOI: 10.4230/LIPIcs.TIME.2024.4
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.4/LIPIcs.TIME.2024.4.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4" - Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles
+Authors:Johann Eder, Roberto Posenato, Carlo Combi, Marco Franceschetti, and Franziska S. Hollauf 
+ AbstractSimple temporal networks with uncertainty (STNUs) have achieved wide attention and are the basis of many applications requiring the representation of temporal constraints and checking whether they are conflicting. Dynamic controllability is currently the most relaxed notion to check whether a system can be controlled without violating temporal constraints despite uncertainties. However, dynamic controllability assumes that the actual duration of a contingent activity is only known when the end event of this activity takes place. The recently introduced notion of agile controllability considers when this duration is known earlier, leading to a more relaxed notion of temporal feasibility. We extend the definition of STNUs to STNUOs (Simple Temporal Networks with Uncertainty and Oracles) to represent the point in time at which information about a contingent duration is available. We formally define agile controllability as a generalization of dynamic controllability considering the timepoints of information availability. We propose a set of constraint propagation rules for STNUOs leading to an algorithm for checking agile controllability. 
+ Cite asJohann Eder, Roberto Posenato, Carlo Combi, Marco Franceschetti, and Franziska S. Hollauf. Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 4:1-4:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{eder_et_al:LIPIcs.TIME.2024.4 author = {Eder, Johann and Posenato, Roberto and Combi, Carlo and Franceschetti, Marco and Hollauf, Franziska S.}, title = {{Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {4:1--4:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4}, URN = {urn:nbn:de:0030-drops-212115}, doi = {10.4230/LIPIcs.TIME.2024.4}, annote = {Keywords: Temporal constraint networks, contingent durations, agile controllability} }@InProceedings{eder_et_al:LIPIcs.TIME.2024.4 author = {Eder, Johann and Posenato, Roberto and Combi, Carlo and Franceschetti, Marco and Hollauf, Franziska S.}, title = {{Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {4:1--4:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4}, URN = {urn:nbn:de:0030-drops-212115}, doi = {10.4230/LIPIcs.TIME.2024.4}, annote = {Keywords: Temporal constraint networks, contingent durations, agile controllability} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.5" - DOI: 10.4230/LIPIcs.TIME.2024.5
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.5/LIPIcs.TIME.2024.5.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.5" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.5" - Open the Chests: An Environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic
+Authors:Ivelina Stoyanova, Nicolas Museux, Sao Mai Nguyen, and David Filliat 
+ AbstractThis article presents Open the Chests, a novel benchmark environment designed for simulating and testing activity recognition and reactive decision-making algorithms. By leveraging temporal logic, Open the Chests offers a dynamic, event-driven simulation platform that illustrates the complexities of real-world systems. The environment contains multiple chests, each representing an activity pattern that an interacting agent must identify and respond to by pressing a corresponding button. The agent must analyze sequences of asynchronous events generated by the environment to recognize these patterns and make informed decisions. With the aim of theoretically grounding the environment, the Activity-Based Markov Decision Process (AB-MDP) is defined, allowing to model the context-dependent interaction with activities. Our goal is to propose a robust tool for the development, testing, and bench-marking of algorithms that is illustrative of realistic scenarios and allows for the isolation of specific complexities in event-driven environments. 
+ Cite asIvelina Stoyanova, Nicolas Museux, Sao Mai Nguyen, and David Filliat. Open the Chests: An Environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 5:1-5:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{stoyanova_et_al:LIPIcs.TIME.2024.5 author = {Stoyanova, Ivelina and Museux, Nicolas and Nguyen, Sao Mai and Filliat, David}, title = {{Open the Chests: An Environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {5:1--5:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.5}, URN = {urn:nbn:de:0030-drops-212128}, doi = {10.4230/LIPIcs.TIME.2024.5}, annote = {Keywords: Event-Based Decision Making, Activity Recognition, Temporal Logic, Reinforcement Learning, Dynamic Systems, Complex Event Processing, Benchmark Environment, Real-Time Simulation} }@InProceedings{stoyanova_et_al:LIPIcs.TIME.2024.5 author = {Stoyanova, Ivelina and Museux, Nicolas and Nguyen, Sao Mai and Filliat, David}, title = {{Open the Chests: An Environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {5:1--5:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.5}, URN = {urn:nbn:de:0030-drops-212128}, doi = {10.4230/LIPIcs.TIME.2024.5}, annote = {Keywords: Event-Based Decision Making, Activity Recognition, Temporal Logic, Reinforcement Learning, Dynamic Systems, Complex Event Processing, Benchmark Environment, Real-Time Simulation} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.6" - DOI: 10.4230/LIPIcs.TIME.2024.6
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.6/LIPIcs.TIME.2024.6.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.6" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.6" - Extending the Range of Temporal Specifications of the Run-Time Event Calculus
+Authors:Periklis Mantenoglou and Alexander Artikis 
+ AbstractComposite event recognition (CER) frameworks reason over streams of low-level, symbolic events in order to detect instances of spatio-temporal patterns defining high-level, composite activities. The Event Calculus is a temporal, logical formalism that has been used to define composite activities in CER, while RTEC_{∘} is a formal CER framework that detects composite activities based on their Event Calculus definitions. RTEC_{∘}, however, cannot handle every possible set of Event Calculus definitions for composite activities, limiting the range of CER applications supported by RTEC_{∘}. We propose RTEC_{fl}, an extension of RTEC_{∘} that supports arbitrary composite activity specifications in the Event Calculus. We present the syntax, semantics, reasoning algorithms and time complexity of RTEC_{fl}. Our analysis demonstrates that RTEC_{fl} extends the scope of RTEC_{∘}, supporting every possible set of Event Calculus definitions for composite activities, while maintaining the high reasoning efficiency of RTEC_{∘}. 
+ Cite asPeriklis Mantenoglou and Alexander Artikis. Extending the Range of Temporal Specifications of the Run-Time Event Calculus. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 6:1-6:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{mantenoglou_et_al:LIPIcs.TIME.2024.6 author = {Mantenoglou, Periklis and Artikis, Alexander}, title = {{Extending the Range of Temporal Specifications of the Run-Time Event Calculus}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {6:1--6:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.6}, URN = {urn:nbn:de:0030-drops-212135}, doi = {10.4230/LIPIcs.TIME.2024.6}, annote = {Keywords: Event Calculus, temporal pattern matching, composite event recognition} }@InProceedings{mantenoglou_et_al:LIPIcs.TIME.2024.6 author = {Mantenoglou, Periklis and Artikis, Alexander}, title = {{Extending the Range of Temporal Specifications of the Run-Time Event Calculus}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {6:1--6:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.6}, URN = {urn:nbn:de:0030-drops-212135}, doi = {10.4230/LIPIcs.TIME.2024.6}, annote = {Keywords: Event Calculus, temporal pattern matching, composite event recognition} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.7" - DOI: 10.4230/LIPIcs.TIME.2024.7
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.7/LIPIcs.TIME.2024.7.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.7" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.7" - Fitting’s Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation
+Authors:Guillermo Badia, Carles Noguera, Alberto Paparella, Guido Sciavicco, and Ionel Eduard Stan 
+ AbstractMany-valued logics, often referred to as fuzzy logics, are a fundamental tool for reasoning about uncertainty, and are based on truth value algebras that generalize the Boolean one; the same logic can be interpreted on algebras from different varieties, for different purposes and pose different challenges. Although temporal many-valued logics, that is, the many-valued counterpart of popular temporal logics, have received little attention in the literature, the many-valued generalization of Halpern and Shoham’s interval temporal logic has been recently introduced and studied, and a sound and complete tableau system for it has been presented for the case in which it is interpreted on some finite Heyting algebra. In this paper, we take a step further in this inquiry by exploring a tableau system for Halpern and Shoham’s interval temporal logic interpreted on some finite {FL_{ew}}-algebra, therefore generalizing the Heyting case, and by providing its open-source implementation. 
+ Cite asGuillermo Badia, Carles Noguera, Alberto Paparella, Guido Sciavicco, and Ionel Eduard Stan. Fitting’s Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 7:1-7:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{badia_et_al:LIPIcs.TIME.2024.7 author = {Badia, Guillermo and Noguera, Carles and Paparella, Alberto and Sciavicco, Guido and Stan, Ionel Eduard}, title = {{Fitting’s Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {7:1--7:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.7}, URN = {urn:nbn:de:0030-drops-212145}, doi = {10.4230/LIPIcs.TIME.2024.7}, annote = {Keywords: Interval temporal logic, many-valued logic, tableau system} }@InProceedings{badia_et_al:LIPIcs.TIME.2024.7 author = {Badia, Guillermo and Noguera, Carles and Paparella, Alberto and Sciavicco, Guido and Stan, Ionel Eduard}, title = {{Fitting’s Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {7:1--7:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.7}, URN = {urn:nbn:de:0030-drops-212145}, doi = {10.4230/LIPIcs.TIME.2024.7}, annote = {Keywords: Interval temporal logic, many-valued logic, tableau system} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.8" - DOI: 10.4230/LIPIcs.TIME.2024.8
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.8/LIPIcs.TIME.2024.8.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.8" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.8" - A More Efficient and Informed Algorithm to Check Weak Controllability of Simple Temporal Networks with Uncertainty
+Authors:Ajdin Sumic and Thierry Vidal 
+ AbstractSimple Temporal Networks with Uncertainty (STNU) are a well-known constraint-based model expressing sets of activities (e.g., a schedule or a plan) related by temporal constraints, each having possible durations in the form of convex intervals. Uncertainty comes from some of these durations being contingent, i.e., the agent executing the plan cannot decide the actual duration at execution time. To check that execution will satisfy all the constraints, three levels of controllability exist: the Strong and Dynamic Controllability (SC/DC) has proven both useful in practice and provable in polynomial time, while Weak Controllability (WC) is co-NP-complete and has been left aside. Moreover, controllability checking algorithms are propagation strategies, which have the usual drawback, in case of failure, to prove unable to locate the contingents that explain the source of non-controllability. This paper has three contributions: (1) it substantiates the usefulness of WC in multi-agent systems (MAS) where another agent controls a contingent, and agents agree just before execution on the durations; (2) it provides a new WC-checking algorithm whose performance in practice depends on the network structure and is faster in loosely connected ones; (3) it provides the failing cycles in the network that explain non-WC. 
+ Cite asAjdin Sumic and Thierry Vidal. A More Efficient and Informed Algorithm to Check Weak Controllability of Simple Temporal Networks with Uncertainty. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 8:1-8:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{sumic_et_al:LIPIcs.TIME.2024.8 author = {Sumic, Ajdin and Vidal, Thierry}, title = {{A More Efficient and Informed Algorithm to Check Weak Controllability of Simple Temporal Networks with Uncertainty}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {8:1--8:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.8}, URN = {urn:nbn:de:0030-drops-212151}, doi = {10.4230/LIPIcs.TIME.2024.8}, annote = {Keywords: Temporal constraints satisfaction, uncertainty, STNU, Controllability checking, Explainable inconsistency, Multi-agent planning} }@InProceedings{sumic_et_al:LIPIcs.TIME.2024.8 author = {Sumic, Ajdin and Vidal, Thierry}, title = {{A More Efficient and Informed Algorithm to Check Weak Controllability of Simple Temporal Networks with Uncertainty}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {8:1--8:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.8}, URN = {urn:nbn:de:0030-drops-212151}, doi = {10.4230/LIPIcs.TIME.2024.8}, annote = {Keywords: Temporal constraints satisfaction, uncertainty, STNU, Controllability checking, Explainable inconsistency, Multi-agent planning} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.9" - DOI: 10.4230/LIPIcs.TIME.2024.9
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.9/LIPIcs.TIME.2024.9.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.9" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.9" - A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty
+Authors:Luke Hunsberger and Roberto Posenato 
+ AbstractTemporal constraint networks are data structures for representing and reasoning about time (e.g., temporal constraints among actions in a plan). Finding and computing negative cycles in temporal networks is important for planning and scheduling applications since it is the first step toward resolving inconsistent networks. For Simple Temporal Networks (STNs), the problem reduces to finding simple negative cycles (i.e., no repeat nodes), resulting in numerous efficient algorithms. For Simple Temporal Networks with Uncertainty (STNUs), which accommodate actions with uncertain durations, the situation is more complex because the characteristic of a non-dynamically controllable (non-DC) network is a so-called semi-reducible negative (SRN) cycle, which can have repeat edges and, in the worst case, an exponential number of occurrences of such edges. Algorithms for computing SRN cycles in non-DC STNUs that have been presented so far are based on older, less efficient DC-checking algorithms. In addition, the issue of repeated edges has either been ignored or given scant attention. This paper presents a new, faster algorithm for identifying SRN cycles in non-DC STNUs. Its worst-case time complexity is O(mn + k²n + knlog n), where n is the number of timepoints, m is the number of constraints, and k is the number of actions with uncertain durations. This complexity is the same as that of the fastest DC-checking algorithm for STNUs. It avoids an exponential blow-up by efficiently dealing with repeated structures and outputting a compact representation of the SRN cycle it finds. The space required to compactly store accumulated path information while avoiding redundant storage of repeated edges is O(mk + k²n). An empirical evaluation demonstrates the effectiveness of the new algorithm on an existing benchmark. 
+ Cite asLuke Hunsberger and Roberto Posenato. A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 9:1-9:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.9 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {9:1--9:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.9}, URN = {urn:nbn:de:0030-drops-212160}, doi = {10.4230/LIPIcs.TIME.2024.9}, annote = {Keywords: Temporal constraint networks, overconstrained networks, negative cycles} }@InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.9 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {9:1--9:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.9}, URN = {urn:nbn:de:0030-drops-212160}, doi = {10.4230/LIPIcs.TIME.2024.9}, annote = {Keywords: Temporal constraint networks, overconstrained networks, negative cycles} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.10" - DOI: 10.4230/LIPIcs.TIME.2024.10
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.10/LIPIcs.TIME.2024.10.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.10" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.10" - What Killed the Cat? Towards a Logical Formalization of Curiosity (And Suspense, and Surprise) in Narratives
+Authors:Florence Dupin de Saint-Cyr, Anne-Gwenn Bosser, Benjamin Callac, and Eric Maisel 
+ AbstractWe provide a unified framework in which the three emotions at the heart of narrative tension (curiosity, suspense and surprise) are formalized. This framework is built on non-monotonic reasoning which allows us to compactly represent the default behavior of the world and to simulate the affective evolution of an agent receiving a story. After formalizing the notions of awareness, curiosity, surprise and suspense, we explore the properties induced by our definitions and study the computational complexity of detecting them. We finally propose means to evaluate these emotions’ intensity for a given agent listening to a story. 
+ Cite asFlorence Dupin de Saint-Cyr, Anne-Gwenn Bosser, Benjamin Callac, and Eric Maisel. What Killed the Cat? Towards a Logical Formalization of Curiosity (And Suspense, and Surprise) in Narratives. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 10:1-10:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{dupindesaintcyr_et_al:LIPIcs.TIME.2024.10 author = {Dupin de Saint-Cyr, Florence and Bosser, Anne-Gwenn and Callac, Benjamin and Maisel, Eric}, title = {{What Killed the Cat? Towards a Logical Formalization of Curiosity (And Suspense, and Surprise) in Narratives}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {10:1--10:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.10}, URN = {urn:nbn:de:0030-drops-212170}, doi = {10.4230/LIPIcs.TIME.2024.10}, annote = {Keywords: Knowledge Representation, Narration, Cognition} }@InProceedings{dupindesaintcyr_et_al:LIPIcs.TIME.2024.10 author = {Dupin de Saint-Cyr, Florence and Bosser, Anne-Gwenn and Callac, Benjamin and Maisel, Eric}, title = {{What Killed the Cat? Towards a Logical Formalization of Curiosity (And Suspense, and Surprise) in Narratives}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {10:1--10:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.10}, URN = {urn:nbn:de:0030-drops-212170}, doi = {10.4230/LIPIcs.TIME.2024.10}, annote = {Keywords: Knowledge Representation, Narration, Cognition} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.11" - DOI: 10.4230/LIPIcs.TIME.2024.11
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.11/LIPIcs.TIME.2024.11.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.11" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.11" - Faster Algorithm for Converting an STNU into Minimal Dispatchable Form
+Authors:Luke Hunsberger and Roberto Posenato 
+ AbstractA Simple Temporal Network with Uncertainty (STNU) is a data structure for representing and reasoning about temporal constraints on activities, including those with uncertain durations. An STNU is dispatchable if it can be flexibly and efficiently executed in real time while guaranteeing that all relevant constraints are satisfied. The number of edges in a dispatchable network affects the computational work that must be done during real-time execution. Recent work presented an O(k n³)-time algorithm for converting a dispatchable STNU into an equivalent dispatchable network having a minimal number of edges, where n is the number of timepoints and k is the number of actions with uncertain durations. This paper presents a modification of that algorithm, making it an order of magnitude faster, down to O(n³). Given that in typical applications k = O(n), this represents an effective order-of-magnitude reduction from O(n⁴) to O(n³). 
+ Cite asLuke Hunsberger and Roberto Posenato. Faster Algorithm for Converting an STNU into Minimal Dispatchable Form. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 11:1-11:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.11 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{Faster Algorithm for Converting an STNU into Minimal Dispatchable Form}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {11:1--11:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.11}, URN = {urn:nbn:de:0030-drops-212182}, doi = {10.4230/LIPIcs.TIME.2024.11}, annote = {Keywords: Temporal constraint networks, dispatchable networks} }@InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.11 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{Faster Algorithm for Converting an STNU into Minimal Dispatchable Form}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {11:1--11:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.11}, URN = {urn:nbn:de:0030-drops-212182}, doi = {10.4230/LIPIcs.TIME.2024.11}, annote = {Keywords: Temporal constraint networks, dispatchable networks} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.12" - DOI: 10.4230/LIPIcs.TIME.2024.12
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.12/LIPIcs.TIME.2024.12.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.12" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.12" - Robust Execution of Probabilistic STNs
+Authors:Luke Hunsberger and Roberto Posenato 
+ AbstractA Probabilistic Simple Temporal Network (PSTN) is a formalism for representing and reasoning about actions subject to temporal constraints, where some action durations may be uncontrollable, modeled using continuous probability density functions. Recent work aims to manage this kind of uncertainty during execution by approximating a PSTN by a Simple Temporal Network with Uncertainty (STNU) (for which well-known execution strategies exist) and using an STNU execution strategy to execute the PSTN, hoping that its probabilistic action durations will not cause any constraint violations. This paper presents significant improvements to the robust execution of PSTNs. Our approach is based on a recent, faster algorithm for finding negative cycles in non-DC STNUs. We also formally prove that many of the constraints included in others' work are unnecessary and that our algorithm can take advantage of a flexible real-time execution algorithm to react to observations of contingent durations that may fall outside the fixed STNU bounds. The paper presents an empirical evaluation of our approach that provides evidence of its effectiveness in robustly executing PSTNs derived from a publicly available benchmark. 
+ Cite asLuke Hunsberger and Roberto Posenato. Robust Execution of Probabilistic STNs. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 12:1-12:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.12 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{Robust Execution of Probabilistic STNs}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {12:1--12:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.12}, URN = {urn:nbn:de:0030-drops-212197}, doi = {10.4230/LIPIcs.TIME.2024.12}, annote = {Keywords: Temporal constraint networks, probabilistic durations, dispatchable networks} }@InProceedings{hunsberger_et_al:LIPIcs.TIME.2024.12 author = {Hunsberger, Luke and Posenato, Roberto}, title = {{Robust Execution of Probabilistic STNs}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {12:1--12:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.12}, URN = {urn:nbn:de:0030-drops-212197}, doi = {10.4230/LIPIcs.TIME.2024.12}, annote = {Keywords: Temporal constraint networks, probabilistic durations, dispatchable networks} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.13" - DOI: 10.4230/LIPIcs.TIME.2024.13
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.13/LIPIcs.TIME.2024.13.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.13" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.13" - Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-Agent Temporal Planning
+Authors:Ajdin Sumic, Thierry Vidal, Andrea Micheli, and Alessandro Cimatti 
+ AbstractSimple Temporal Networks with Uncertainty are a powerful and widely used formalism for representing and reasoning over convex temporal constraints in the presence of uncertainty called contingent constraints. Since their introduction, they have been used in planning and scheduling applications to model situations where the scheduling agent does not control some activity durations or event timings. What needs to be checked is then the controllability of the network, i.e., that there is a valid execution strategy whatever the values of the contingents. This paper considers a new type of multi-agent extension, where, as opposed to previous works, each agent manages its own separate STNU, and the control over activity durations is shared among the agents: what is called here a contract is a mutual constraint controllable for some agent and contingent for others. We will propose a semantically enriched version of STNUs that will be composed into a global Multi-agent Interdependent STNUs model. Then, controllability issues will be revisited, and we will focus on the repair problem, i.e., how to regain failed controllability by shrinking some of the shared contract durations, here in a centralized manner. 
+ Cite asAjdin Sumic, Thierry Vidal, Andrea Micheli, and Alessandro Cimatti. Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-Agent Temporal Planning. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 13:1-13:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{sumic_et_al:LIPIcs.TIME.2024.13 author = {Sumic, Ajdin and Vidal, Thierry and Micheli, Andrea and Cimatti, Alessandro}, title = {{Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-Agent Temporal Planning}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {13:1--13:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.13}, URN = {urn:nbn:de:0030-drops-212200}, doi = {10.4230/LIPIcs.TIME.2024.13}, annote = {Keywords: Temporal constraints satisfaction, uncertainty, STNU, Controllability checking, Explainable inconsistency, Multi-agent planning} }@InProceedings{sumic_et_al:LIPIcs.TIME.2024.13 author = {Sumic, Ajdin and Vidal, Thierry and Micheli, Andrea and Cimatti, Alessandro}, title = {{Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-Agent Temporal Planning}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {13:1--13:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.13}, URN = {urn:nbn:de:0030-drops-212200}, doi = {10.4230/LIPIcs.TIME.2024.13}, annote = {Keywords: Temporal constraints satisfaction, uncertainty, STNU, Controllability checking, Explainable inconsistency, Multi-agent planning} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.14" - DOI: 10.4230/LIPIcs.TIME.2024.14
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.14/LIPIcs.TIME.2024.14.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.14" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.14" - Learning Temporal Properties from Event Logs via Sequential Analysis
+Authors:Francesco Chiariello 
+ AbstractIn this work, we present a novel approach to learning Linear Temporal Logic (LTL) formulae from event logs by leveraging statistical techniques from sequential analysis. In particular, we employ the Sequential Probability Ratio Test (SPRT), using Trace Alignment to quantify the discrepancy between a trace and a candidate LTL formula. We then test the proposed approach in a controlled experimental setting and highlight its advantages, which include robustness to noise and data efficiency. 
+ Cite asFrancesco Chiariello. Learning Temporal Properties from Event Logs via Sequential Analysis. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 14:1-14:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{chiariello:LIPIcs.TIME.2024.14 author = {Chiariello, Francesco}, title = {{Learning Temporal Properties from Event Logs via Sequential Analysis}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {14:1--14:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.14}, URN = {urn:nbn:de:0030-drops-212217}, doi = {10.4230/LIPIcs.TIME.2024.14}, annote = {Keywords: Process Mining, Declarative Process Discovery, Trace Alignment, Sequential Analysis} }@InProceedings{chiariello:LIPIcs.TIME.2024.14 author = {Chiariello, Francesco}, title = {{Learning Temporal Properties from Event Logs via Sequential Analysis}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {14:1--14:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.14}, URN = {urn:nbn:de:0030-drops-212217}, doi = {10.4230/LIPIcs.TIME.2024.14}, annote = {Keywords: Process Mining, Declarative Process Discovery, Trace Alignment, Sequential Analysis} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.15" - DOI: 10.4230/LIPIcs.TIME.2024.15
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.15/LIPIcs.TIME.2024.15.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.15" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.15" - A Framework for Assessing Inconsistency in Disjunctive Temporal Problems
+Authors:Jean-François Condotta and Yakoub Salhi 
+ AbstractInconsistency measures serve to quantify the level of contradiction present within a knowledge base. They can be used for both consistency restoration and information extraction. In this article, we specifically explore inconsistency measures applicable to Disjunctive Temporal Problems (DTPs). We present a framework that extends traditional propositional logic approaches to DTPs, incorporating both new postulates and adaptations of existing ones. We identify and elaborate on various properties that establish relationships among these postulates. Furthermore, we introduce multiple inconsistency measures, adopting both a conventional approach that particularly leverages Minimal Inconsistent Subsets and a DTP-specific strategy based on constraint relaxation. Finally, we show the applicability of the inconsistency measures in DTPs through two real-world applications. 
+ Cite asJean-François Condotta and Yakoub Salhi. A Framework for Assessing Inconsistency in Disjunctive Temporal Problems. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 15:1-15:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{condotta_et_al:LIPIcs.TIME.2024.15 author = {Condotta, Jean-Fran\c{c}ois and Salhi, Yakoub}, title = {{A Framework for Assessing Inconsistency in Disjunctive Temporal Problems}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {15:1--15:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.15}, URN = {urn:nbn:de:0030-drops-212223}, doi = {10.4230/LIPIcs.TIME.2024.15}, annote = {Keywords: Disjunctive Temporal Problems, Inconsistency Measures, Temporal Reasoning} }@InProceedings{condotta_et_al:LIPIcs.TIME.2024.15 author = {Condotta, Jean-Fran\c{c}ois and Salhi, Yakoub}, title = {{A Framework for Assessing Inconsistency in Disjunctive Temporal Problems}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {15:1--15:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.15}, URN = {urn:nbn:de:0030-drops-212223}, doi = {10.4230/LIPIcs.TIME.2024.15}, annote = {Keywords: Disjunctive Temporal Problems, Inconsistency Measures, Temporal Reasoning} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.16" - DOI: 10.4230/LIPIcs.TIME.2024.16
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.16/LIPIcs.TIME.2024.16.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.16" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.16" - Real-Time Higher-Order Recursion Schemes
+Authors:Eric Alsmann and Florian Bruse 
+ AbstractHigher-Order Recursion Schemes (HORS) have long been studied as a tool to model functional programs. Model-checking the tree generated by a HORS of order k against a parity automaton is known to be k-EXPTIME-complete. This paper introduces timed HORS, a real-time version of HORS in the sense of Alur/Dill'90, to be model-checked against a pair of a parity automaton and a timed automaton. We show that adding dense linear time to the notion of recursion schemes adds one exponential to the cost of model-checking, i.e., model-checking a timed HORS of order k can be done in (k+1)-EXPTIME. This is shown by an adaption of the region-graph construction known from the model-checking of timed CTL. We also obtain a hardness result for k = 1, but we strongly conjecture that it holds for all k. This result is obtained by encoding runs of 2-EXPTIME Turing machines into the trees generated by timed HORS. 
+ Cite asEric Alsmann and Florian Bruse. Real-Time Higher-Order Recursion Schemes. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 16:1-16:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{alsmann_et_al:LIPIcs.TIME.2024.16 author = {Alsmann, Eric and Bruse, Florian}, title = {{Real-Time Higher-Order Recursion Schemes}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {16:1--16:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.16}, URN = {urn:nbn:de:0030-drops-212236}, doi = {10.4230/LIPIcs.TIME.2024.16}, annote = {Keywords: Timed Automata, Higher-Order Recursion Schemes, Tree Automata} }@InProceedings{alsmann_et_al:LIPIcs.TIME.2024.16 author = {Alsmann, Eric and Bruse, Florian}, title = {{Real-Time Higher-Order Recursion Schemes}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {16:1--16:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.16}, URN = {urn:nbn:de:0030-drops-212236}, doi = {10.4230/LIPIcs.TIME.2024.16}, annote = {Keywords: Timed Automata, Higher-Order Recursion Schemes, Tree Automata} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.17" - DOI: 10.4230/LIPIcs.TIME.2024.17
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.17/LIPIcs.TIME.2024.17.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.17" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.17" - Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN
+Authors:Ibrahim Delibasoglu and Fredrik Heintz 
+ AbstractAnomaly detection in time series data is a critical task in various domains, including finance, healthcare, cybersecurity and industry. Traditional methods, such as time series decomposition, clustering, and density estimation, have provided robust solutions for identifying anomalies that exhibit distinct patterns or significant deviations from normal data distributions. Recent advancements in machine learning and deep learning have further enhanced these capabilities. This paper introduces a novel method for anomaly detection that combines the strengths of autoencoders and recurrent neural networks (RNNs) with an reconstruction error feedback mechanism based on Mean Squared Error. We compare our method against classical techniques and recent approaches like OmniAnomaly, which leverages stochastic recurrent neural networks, and the Anomaly Transformer, which introduces association discrepancy to capture long-range dependencies and DCDetector using contrastive representation learning with multi-scale dual attention. Experimental results demonstrate that our method achieves superior overall performance in terms of precision, recall, and F1 score. The source code is available at http://github.com/mribrahim/AE-FAR 
+ Cite asIbrahim Delibasoglu and Fredrik Heintz. Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 17:1-17:12, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{delibasoglu_et_al:LIPIcs.TIME.2024.17 author = {Delibasoglu, Ibrahim and Heintz, Fredrik}, title = {{Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {17:1--17:12}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.17}, URN = {urn:nbn:de:0030-drops-212244}, doi = {10.4230/LIPIcs.TIME.2024.17}, annote = {Keywords: Time series, Anomaly, Neural networks} }@InProceedings{delibasoglu_et_al:LIPIcs.TIME.2024.17 author = {Delibasoglu, Ibrahim and Heintz, Fredrik}, title = {{Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {17:1--17:12}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.17}, URN = {urn:nbn:de:0030-drops-212244}, doi = {10.4230/LIPIcs.TIME.2024.17}, annote = {Keywords: Time series, Anomaly, Neural networks} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.18" - DOI: 10.4230/LIPIcs.TIME.2024.18
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.18/LIPIcs.TIME.2024.18.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.18" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.18" - Full Characterisation of Extended CTL*
+Authors:Massimo Benerecetti, Laura Bozzelli, Fabio Mogavero, and Adriano Peron 
+ AbstractThe precise identification of the expressive power of logic languages used in formal methods for specifying and verifying run-time properties of critical systems is a fundamental task and characterisation theorems play a crucial role as model-theoretic tools in this regard. While a clear picture of the expressive power of linear-time temporal logics in terms of word automata and predicate logics has long been established, a complete mapping of the corresponding relationships for branching-time temporal logics has proven to be a more elusive task over the past four decades with few scattered results. Only recently, an automata-theoretic characterisation of both CTL* and its full-ω-regular extension ECTL* has been provided in terms of Symmetric Hesitant Tree Automata (HTA), with and without a suitable counter-freeness restriction on their linear behaviours. These two temporal logics also correspond to the bisimulation-invariant semantic fragments of Monadic Path Logic (MPL) and Monadic Chain Logic (MCL), respectively. Additionally, it has been proven that the counting extensions of CTL* and ECTL*, namely CCTL* and CECTL*, enjoy equivalent graded versions of the HTAs for the corresponding non-counting logics. However, while Moller and Rabinovich have proved CCTL* to be equivalent to full MPL, thus filling the gap for the standard branching-time logic, no similar result has been given for CECTL*. This work completes the picture, by proving the expressive equivalence of CECTL* and full MCL, by means of a composition theorem for the latter logic. This also indirectly establishes the equivalence between HTAs and their first-order extensions HFTAs, as originally introduced by Walukiewicz. 
+ Cite asMassimo Benerecetti, Laura Bozzelli, Fabio Mogavero, and Adriano Peron. Full Characterisation of Extended CTL*. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 18:1-18:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{benerecetti_et_al:LIPIcs.TIME.2024.18 author = {Benerecetti, Massimo and Bozzelli, Laura and Mogavero, Fabio and Peron, Adriano}, title = {{Full Characterisation of Extended CTL*}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {18:1--18:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.18}, URN = {urn:nbn:de:0030-drops-212259}, doi = {10.4230/LIPIcs.TIME.2024.18}, annote = {Keywords: Branching-Time Temporal Logics, Monadic Chain Logic, Tree Automata} }@InProceedings{benerecetti_et_al:LIPIcs.TIME.2024.18 author = {Benerecetti, Massimo and Bozzelli, Laura and Mogavero, Fabio and Peron, Adriano}, title = {{Full Characterisation of Extended CTL*}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {18:1--18:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.18}, URN = {urn:nbn:de:0030-drops-212259}, doi = {10.4230/LIPIcs.TIME.2024.18}, annote = {Keywords: Branching-Time Temporal Logics, Monadic Chain Logic, Tree Automata} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.19" - DOI: 10.4230/LIPIcs.TIME.2024.19
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.19/LIPIcs.TIME.2024.19.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.19" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.19" - Model Checking Linear Temporal Properties on Polyhedral Systems
+Authors:Massimo Benerecetti, Marco Faella, and Fabio Mogavero 
+ AbstractWe study the problem of model checking linear temporal logic formulae on finite trajectories generated by polyhedral differential inclusions, thus enriching the landscape of models where such specifications can be effectively verified. Each model in the class comprises a static and a dynamic component. The static component features a finite set of observables represented by (non-necessarily convex) polyhedra. The dynamic one is given by a convex polyhedron constraining the dynamics of the system, by specifying the possible slopes of the trajectories in each time instant. We devise an exact algorithm that computes a symbolic representation of the region of points that existentially satisfy a given formula φ, i.e., the points from which there exists a trajectory satisfying φ. 
+ Cite asMassimo Benerecetti, Marco Faella, and Fabio Mogavero. Model Checking Linear Temporal Properties on Polyhedral Systems. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 19:1-19:23, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{benerecetti_et_al:LIPIcs.TIME.2024.19 author = {Benerecetti, Massimo and Faella, Marco and Mogavero, Fabio}, title = {{Model Checking Linear Temporal Properties on Polyhedral Systems}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {19:1--19:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.19}, URN = {urn:nbn:de:0030-drops-212267}, doi = {10.4230/LIPIcs.TIME.2024.19}, annote = {Keywords: Model Checking, Real-Time Systems, LTLf, RTLf} }@InProceedings{benerecetti_et_al:LIPIcs.TIME.2024.19 author = {Benerecetti, Massimo and Faella, Marco and Mogavero, Fabio}, title = {{Model Checking Linear Temporal Properties on Polyhedral Systems}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {19:1--19:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.19}, URN = {urn:nbn:de:0030-drops-212267}, doi = {10.4230/LIPIcs.TIME.2024.19}, annote = {Keywords: Model Checking, Real-Time Systems, LTLf, RTLf} }Document 
+ href="https://doi.org/10.4230/LIPIcs.TIME.2024.20" - DOI: 10.4230/LIPIcs.TIME.2024.20
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.20/LIPIcs.TIME.2024.20.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.20" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.20" - FastMinTC+: A Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks
+Authors:Giorgio Lazzarinetti, Sara Manzoni, Italo Zoppis, and Riccardo Dondi 
+ AbstractThe analysis and summarization of temporal networks are crucial for understanding complex interactions over time, yet pose significant computational challenges. This paper introduces FastMinTC+, an innovative heuristic approach designed to efficiently solve the Minimum Timeline Cover (MinTCover) problem in temporal networks. Our approach focuses on the optimization of activity timelines within temporal networks, aiming to provide both effective and computationally feasible solutions. By employing a low-complexity approach, FastMinTC+ adeptly handles massive temporal graphs, improving upon existing methods. Indeed, comparative evaluations on both synthetic and real-world datasets demonstrate that our algorithm outperforms established benchmarks with remarkable efficiency and accuracy. The results highlight the potential of heuristic approaches in the domain of temporal network analysis and open up new avenues for further research incorporating other computational techniques, for example deep learning, to enhance the adaptability and precision of such heuristics. 
+ Cite asGiorgio Lazzarinetti, Sara Manzoni, Italo Zoppis, and Riccardo Dondi. FastMinTC+: A Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 20:1-20:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{lazzarinetti_et_al:LIPIcs.TIME.2024.20 author = {Lazzarinetti, Giorgio and Manzoni, Sara and Zoppis, Italo and Dondi, Riccardo}, title = {{FastMinTC+: A Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {20:1--20:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.20}, URN = {urn:nbn:de:0030-drops-212275}, doi = {10.4230/LIPIcs.TIME.2024.20}, annote = {Keywords: Temporal Networks, Activity Timeline, Timeline Cover, Vertex Cover, Optimization, Heuristic} }@InProceedings{lazzarinetti_et_al:LIPIcs.TIME.2024.20 author = {Lazzarinetti, Giorgio and Manzoni, Sara and Zoppis, Italo and Dondi, Riccardo}, title = {{FastMinTC+: A Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {20:1--20:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.20}, URN = {urn:nbn:de:0030-drops-212275}, doi = {10.4230/LIPIcs.TIME.2024.20}, annote = {Keywords: Temporal Networks, Activity Timeline, Timeline Cover, Vertex Cover, Optimization, Heuristic} }Filters 
+ 46Authors 
+ Show AllCollapse 
+ Show All 
+ A 
+ Alsmann, Eric 
+ Artikis, Alexander 
+ B 
+ Badia, Guillermo 
+ Benerecetti, Massimo 
+ Bosser, Anne-Gwenn 
+ Bozzelli, Laura 
+ Bruse, Florian 
+ C 
+ Callac, Benjamin 
+ Chiariello, Francesco 
+ Cimatti, Alessandro 
+ Combi, Carlo 
+ Condotta, Jean-François 
+ D 
+ Delibasoglu, Ibrahim 
+ Dondi, Riccardo 
+ Dupin de Saint-Cyr, Florence 
+ E 
+ Eder, Johann 
+ F 
+ Faella, Marco 
+ Filliat, David 
+ Franceschetti, Marco 
+ H 
+ Heintz, Fredrik 
+ Hollauf, Franziska S. 
+ Hunsberger, Luke 
+ L 
+ Lazzarinetti, Giorgio 
+ M 
+ Maisel, Eric 
+ Mantenoglou, Periklis 
+ Manzoni, Sara 
+ Micheli, Andrea 
+ Mogavero, Fabio 
+ Museux, Nicolas 
+ N 
+ Nguyen, Sao Mai 
+ Noguera, Carles 
+ P 
+ Paparella, Alberto 
+ Peron, Adriano 
+ Pinchinat, Sophie 
+ Posenato, Roberto 
+ S 
+ Sala, Pietro 
+ Salhi, Yakoub 
+ Sciavicco, Guido 
+ Sioutis, Michael 
+ Stan, Ionel Eduard 
+ Stoyanova, Ivelina 
+ Sumic, Ajdin 
+ V 
+ Vidal, Thierry 
+ W 
+ Wałęga, Przemysław Andrzej 
+ Wang, Fusheng 
+ Z 
+ Zoppis, Italo 
+  
+ 22Subjects 
+ Show AllCollapse 
+ Show All 
+ Applied computing 
+ Applied computing 
+ Applied computing → Business process management 
+ Computing methodologies 
+ Computing methodologies 
+ Computing methodologies → Artificial intelligence 
+ Computing methodologies → Machine learning algorithms 
+ Computing methodologies → Simulation environments 
+ Computing methodologies → Temporal reasoning 
+ Information systems 
+ Information systems 
+ Mathematics of computing 
+ Mathematics of computing → Graph algorithms 
+ Theory of computation 
+ Theory of computation 
+ Theory of computation → Automata over infinite objects 
+ Theory of computation → Design and analysis of algorithms 
+ Theory of computation → Discrete optimization 
+ Theory of computation → Dynamic graph algorithms 
+ Theory of computation → Formal languages and automata theory 
+ Theory of computation → Logic and verification 
+ Theory of computation → Mathematical optimization 
+ Theory of computation → Modal and temporal logics 
+ Theory of computation → Theory and algorithms for application domains 
+ Theory of computation → Timed and hybrid models 
+ Theory of computation → Tree languages 
+ Theory of computation → Verification by model checking 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2024Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+
+3. Website of TIME_3: https://drops.dagstuhl.de/entities/conference/TIME
+Website information of TIME_3:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ href="https://drops.dagstuhl.de/entities/conference/TIME" - TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ ConferenceTIME 
+ International Symposium on Temporal Representation and Reasoning 
+ href="https://dblp.org/db/conf/time" - TIME in dblp
+href="https://time-symposium.org/" - Conference Website
+Volumes 
+ Volume 
+ LIPIcs, Volume 318 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-318" - 31st International Symposium on Temporal Representation and Reasoning (TIME 2024)
+TIME 2024, October 28-30, 2024, Montpellier, France 
+ Editors:Pietro Sala, Michael Sioutis, and Fusheng Wang 
+ Volume 
+ LIPIcs, Volume 278 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-278" - 30th International Symposium on Temporal Representation and Reasoning (TIME 2023)
+TIME 2023, September 25-26, 2023, NCSR Demokritos, Athens, Greece 
+ Editors:Alexander Artikis, Florian Bruse, and Luke Hunsberger 
+ Volume 
+ LIPIcs, Volume 247 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-247" - 29th International Symposium on Temporal Representation and Reasoning (TIME 2022)
+TIME 2022, November 7-9, 2022, Virtual Conference 
+ Editors:Alexander Artikis, Roberto Posenato, and Stefano Tonetta 
+ Volume 
+ LIPIcs, Volume 206 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-206" - 28th International Symposium on Temporal Representation and Reasoning (TIME 2021)
+TIME 2021, September 27-29, 2021, Klagenfurt, Austria 
+ Editors:Carlo Combi, Johann Eder, and Mark Reynolds 
+ Volume 
+ LIPIcs, Volume 178 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-178" - 27th International Symposium on Temporal Representation and Reasoning (TIME 2020)
+TIME 2020, September 23-25, 2020, Bozen-Bolzano, Italy 
+ Editors:Emilio Muñoz-Velasco, Ana Ozaki, and Martin Theobald 
+ Volume 
+ LIPIcs, Volume 147 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-147" - 26th International Symposium on Temporal Representation and Reasoning (TIME 2019)
+TIME 2019, October 16-19, 2019, Málaga, Spain 
+ Editors:Johann Gamper, Sophie Pinchinat, and Guido Sciavicco 
+ Volume 
+ LIPIcs, Volume 120 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-120" - 25th International Symposium on Temporal Representation and Reasoning (TIME 2018)
+TIME 2018, October 15-17, 2018, Warsaw, Poland 
+ Editors:Natasha Alechina, Kjetil Nørvåg, and Wojciech Penczek 
+ Volume 
+ LIPIcs, Volume 90 
+ href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-90" - 24th International Symposium on Temporal Representation and Reasoning (TIME 2017)
+TIME 2017, October 16-18, 2017, Mons, Belgium 
+ Editors:Sven Schewe, Thomas Schneider, and Jef Wijsen 
+ Access Numbers 
+ Detailed Access Statistics available here 
+ Total Document Accesses (updated on a weekly basis): | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+
+Authors 
+ 13 | href="https://drops.dagstuhl.de/search/documents?author=Posenato, Roberto" - Posenato, Roberto 
+ 13 | href="https://drops.dagstuhl.de/search/documents?author=Sciavicco, Guido" - Sciavicco, Guido 
+ 12 | href="https://drops.dagstuhl.de/search/documents?author=Hunsberger, Luke" - Hunsberger, Luke 
+ 9 | href="https://drops.dagstuhl.de/search/documents?author=Montanari, Angelo" - Montanari, Angelo 
+ 8 | href="https://drops.dagstuhl.de/search/documents?author=Combi, Carlo" - Combi, Carlo 
+ 8 | href="https://drops.dagstuhl.de/search/documents?author=Sioutis, Michael" - Sioutis, Michael 
+ 7 | href="https://drops.dagstuhl.de/search/documents?author=Bruse, Florian" - Bruse, Florian 
+ 7 | href="https://drops.dagstuhl.de/search/documents?author=Rizzi, Romeo" - Rizzi, Romeo 
+ 6 | href="https://drops.dagstuhl.de/search/documents?author=Artikis, Alexander" - Artikis, Alexander 
+ 6 | href="https://drops.dagstuhl.de/search/documents?author=Bozzelli, Laura" - Bozzelli, Laura 
+ 6 | href="https://drops.dagstuhl.de/search/documents?author=Eder, Johann" - Eder, Johann 
+ 6 | href="https://drops.dagstuhl.de/search/documents?author=Gigante, Nicola" - Gigante, Nicola 
+ 6 | href="https://drops.dagstuhl.de/search/documents?author=Lange, Martin" - Lange, Martin 
+ 5 | href="https://drops.dagstuhl.de/search/documents?author=Peron, Adriano" - Peron, Adriano 
+ 5 | href="https://drops.dagstuhl.de/search/documents?author=Reynolds, Mark" - Reynolds, Mark 
+ 5 | href="https://drops.dagstuhl.de/search/documents?author=Sala, Pietro" - Sala, Pietro 
+ Show More... 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2024Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+
+4. Website of TIME_3: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4
+Website information of TIME_3:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ href="https://drops.dagstuhl.de/entities/conference/TIME" - TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ Documenthttps://doi.org/10.4230/LIPIcs.TIME.2024.4href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.TIME.2024.4" - 
+href="https://www.reddit.com/submit?url=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.TIME.2024.4&title=Agile+Controllability+of+Simple+Temporal+Networks+with+Uncertainty+and+Oracles" - 
+href="https://twitter.com/intent/tweet/?text=Agile+Controllability+of+Simple+Temporal+Networks+with+Uncertainty+and+Oracles&url=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.TIME.2024.4" - 
+href="mailto:?subject=Agile+Controllability+of+Simple+Temporal+Networks+with+Uncertainty+and+Oracles&body=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.TIME.2024.4" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4/metadata/xml" - Export XML 
+ href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4/metadata/acm-xml" - Export ACM-XML 
+ href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4/metadata/doaj-xml" - Export DOAJ-XML 
+ href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4/metadata/schema-org" - Export Schema.org 
+ href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4/metadata/bibtex" - Export BibTeX 
+ Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles 
+ Authorshref="#author-details" - 
+href="https://drops.dagstuhl.de/search/documents?author=Eder, Johann" - Johann Eder
+,href="https://drops.dagstuhl.de/search/documents?author=Posenato, Roberto" - Roberto Posenato
+,href="https://drops.dagstuhl.de/search/documents?author=Combi, Carlo" - Carlo Combi
+,href="https://drops.dagstuhl.de/search/documents?author=Franceschetti, Marco" - Marco Franceschetti
+,href="https://drops.dagstuhl.de/search/documents?author=Hollauf, Franziska S." - Franziska S. Hollauf
+Part of: | Volume: | href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-318" - 31st International Symposium on Temporal Representation and Reasoning (TIME 2024) | Part of: | Series: | Leibniz International Proceedings in Informatics (LIPIcs) | Part of: | Conference: | href="https://drops.dagstuhl.de/entities/conference/TIME" - International Symposium on Temporal Representation and Reasoning (TIME) 
+ License: | Creative Commons Attribution 4.0 International license 
+ Publication Date: 2024-10-22 
+ href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.4/LIPIcs.TIME.2024.4.pdf" - PDF
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.4/LIPIcs.TIME.2024.4.pdf" - 
+File 
+ href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol318-time2024/LIPIcs.TIME.2024.4/LIPIcs.TIME.2024.4.pdf" - LIPIcs.TIME.2024.4.pdf
+Filesize: 0.86 MB 
+ 16 pages 
+ Document Identifiers 
+ DOI: | href="https://doi.org/10.4230/LIPIcs.TIME.2024.4" - 10.4230/LIPIcs.TIME.2024.4 
+ URN: | urn:nbn:de:0030-drops-212115 
+ Author Details 
+ Johann Ederhref="https://drops.dagstuhl.de/search/documents?author=Eder, Johann" - 
+University of Klagenfurt, Austria 
+ Roberto Posenatohref="https://drops.dagstuhl.de/search/documents?author=Posenato, Roberto" - 
+University of Verona, Italy 
+ Carlo Combihref="https://drops.dagstuhl.de/search/documents?author=Combi, Carlo" - 
+University of Verona, Italy 
+ Marco Franceschettihref="https://drops.dagstuhl.de/search/documents?author=Franceschetti, Marco" - 
+University of St. Gallen, Switzerland 
+ Franziska S. Hollaufhref="https://drops.dagstuhl.de/search/documents?author=Hollauf, Franziska S." - 
+University of Klagenfurt, Austria 
+ Cite AsGet BibTex 
+ Johann Eder, Roberto Posenato, Carlo Combi, Marco Franceschetti, and Franziska S. Hollauf. Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles. In 31st International Symposium on Temporal Representation and Reasoning (TIME 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 318, pp. 4:1-4:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024)href="https://doi.org/10.4230/LIPIcs.TIME.2024.4" - https://doi.org/10.4230/LIPIcs.TIME.2024.4
+BibTex 
+ @InProceedings{eder_et_al:LIPIcs.TIME.2024.4 author = {Eder, Johann and Posenato, Roberto and Combi, Carlo and Franceschetti, Marco and Hollauf, Franziska S.}, title = {{Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {4:1--4:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4}, URN = {urn:nbn:de:0030-drops-212115}, doi = {10.4230/LIPIcs.TIME.2024.4}, annote = {Keywords: Temporal constraint networks, contingent durations, agile controllability} }@InProceedings{eder_et_al:LIPIcs.TIME.2024.4 author = {Eder, Johann and Posenato, Roberto and Combi, Carlo and Franceschetti, Marco and Hollauf, Franziska S.}, title = {{Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles}}, booktitle = {31st International Symposium on Temporal Representation and Reasoning (TIME 2024)}, pages = {4:1--4:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-349-2}, ISSN = {1868-8969}, year = {2024}, volume = {318}, editor = {Sala, Pietro and Sioutis, Michael and Wang, Fusheng}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2024.4}, URN = {urn:nbn:de:0030-drops-212115}, doi = {10.4230/LIPIcs.TIME.2024.4}, annote = {Keywords: Temporal constraint networks, contingent durations, agile controllability} }CloseCopy BibTex To ClipboardAbstract 
+ Simple temporal networks with uncertainty (STNUs) have achieved wide attention and are the basis of many applications requiring the representation of temporal constraints and checking whether they are conflicting. Dynamic controllability is currently the most relaxed notion to check whether a system can be controlled without violating temporal constraints despite uncertainties. However, dynamic controllability assumes that the actual duration of a contingent activity is only known when the end event of this activity takes place. The recently introduced notion of agile controllability considers when this duration is known earlier, leading to a more relaxed notion of temporal feasibility. We extend the definition of STNUs to STNUOs (Simple Temporal Networks with Uncertainty and Oracles) to represent the point in time at which information about a contingent duration is available. We formally define agile controllability as a generalization of dynamic controllability considering the timepoints of information availability. We propose a set of constraint propagation rules for STNUOs leading to an algorithm for checking agile controllability.Subject Classification 
+ ACM Subject Classification 
+ Computing methodologies → Temporal reasoning 
+ Theory of computation → Dynamic graph algorithms 
+ Keywords 
+ Temporal constraint networks 
+ contingent durations 
+ agile controllability 
+ Metrics 
+ Access Statistics 
+ Total Accesses (updated on a weekly basis) | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+ Supplementary Materials 
+ Softwarehref="https://git-isys.aau.at/ics/Papers/stnuo.git" - https://git-isys.aau.at/ics/Papers/stnuo.git 
+ Datasethttps://profs.scienze.univr.it/~posenato/software/benchmarks/OSTNUBenchmarks2024.tgz 
+ References 
+ Shyan Akmal, Savana Ammons, Hemeng Li, Michael Gao, Lindsay Popowski, and James C. Boerkoel Jr. Quantifying controllability in temporal networks with uncertainty. Artif. Intell., 289:103384, 2020. URL:https://doi.org/10.1016/J.ARTINT.2020.103384. 
+ Arthur Bit-Monnot and Paul Morris. Dynamic Controllability of Temporal Plans in Uncertain and Partially Observable Environments. Journal of Artificial Intelligence Research, 77:1311-1369, August 2023. URL:https://doi.org/10.1613/jair.1.13065. 
+ Massimo Cairo, Luke Hunsberger, and Romeo Rizzi. Faster dynamic controllability checking for simple temporal networks with uncertainty. In 25th International Symposium on Temporal Representation and Reasoning (TIME 2018), volume 120 of LIPIcs, pages 8:1-8:16, 2018. ISBN: 9783959770897. URL:href="https://doi.org/10.4230/LIPIcs.TIME.2018.8" - https://doi.org/10.4230/LIPIcs.TIME.2018.8
+. 
+ Massimo Cairo and Romeo Rizzi. Dynamic controllability of simple temporal networks with uncertainty: Simple rules and fast real-time execution. Theoretical Computer Science, 797:2-16, 2019. URL:https://doi.org/10.1016/J.TCS.2018.11.005. 
+ Rina Dechter, Itay Meiri, and Judea Pearl. Temporal constraint networks. Artificial intelligence, 49(1-3):61-95, 1991. URL:https://doi.org/10.1016/0004-3702(91)90006-6. 
+ Johann Eder, Marco Franceschetti, and Julius Köpke. Controllability of business processes with temporal variables. In ACM SAC 2019, pages 40-47, 2019. URL:https://doi.org/10.1145/3297280.3297286. 
+ Johann Eder, Marco Franceschetti, and Josef Lubas. Time and processes: Towards engineering temporal requirements. In Proceedings of the 16th International Conference on Software Technologies, ICSOFT 2021, pages 9-16. SCITEPRESS, 2021. URL:https://doi.org/10.5220/0010625400090016. 
+ Marco Franceschetti and Johann Eder. Checking temporal service level agreements for web service compositions with temporal parameters. In 2019 IEEE International Conference on Web Services (ICWS), pages 443-445. IEEE, 2019. URL:https://doi.org/10.1109/ICWS.2019.00080. 
+ Marco Franceschetti and Johann Eder. Semi-contingent task durations: Characterization and controllability. In Marcello La Rosa, Shazia W. Sadiq, and Ernest Teniente, editors, Advanced Information Systems Engineering - 33rd International Conference, CAiSE 2021, Melbourne, VIC, Australia, June 28 - July 2, 2021, Proceedings, volume 12751 of Lecture Notes in Computer Science, pages 246-261. Springer, 2021. URL:https://doi.org/10.1007/978-3-030-79382-1_15. 
+ Marco Franceschetti, Roberto Posenato, Carlo Combi, and Johann Eder. Dynamic Controllability of Parameterized CSTNUs. In ACM SAC 2023, pages 965-973, 2023. URL:https://doi.org/10.1145/3555776.3577618. 
+ Luke Hunsberger. Efficient execution of dynamically controllable simple temporal networks with uncertainty. Acta Informatica, 53:89-147, 2016. URL:https://doi.org/10.1007/S00236-015-0227-0. 
+ Luke Hunsberger and Roberto Posenato. Speeding up the RUL¯ Dynamic-Controllability-Checking Algorithm for Simple Temporal Networks with Uncertainty. In Proceedings of the 36th AAAI Conference on Artificial Intelligence, volume 36, pages 9776-9785. AAAI Press, 2022. URL:https://doi.org/10.1609/aaai.v36i9.21213. 
+ Luke Hunsberger and Roberto Posenato. A Faster Algorithm for Converting Simple Temporal Networks with Uncertainty into Dispatchable Form. Information and Computation, 293, June 2023. URL:https://doi.org/10.1016/j.ic.2023.105063. 
+ Andreas Lanz, Roberto Posenato, Carlo Combi, and Manfred Reichert. Simple Temporal Networks with Partially Shrinkable Uncertainty. In Proceedings of the 6th International Conference on Agents and Artificial Intelligence (ICAART 2015), volume 2, 2015. URL:https://doi.org/10.5220/0005200903700381. 
+ Josef Lubas and Johann Eder. A time-aware model for legal smart contracts. In Han van der Aa, Dominik Bork, Henderik A. Proper, and Rainer Schmidt, editors, Enterprise, Business-Process and Information Systems Modeling, pages 121-135, Cham, 2023. Springer Nature Switzerland. URL:https://doi.org/10.1007/978-3-031-34241-7_9. 
+ Paul Morris. Dynamic controllability and dispatchability relationships. In CPAIOR 2014, volume 8451 of LNCS, 2014. URL:https://doi.org/10.1007/978-3-319-07046-9_33. 
+ Paul H. Morris and Nicola Muscettola. Temporal dynamic controllability revisited. In 20th National Conf. on Artificial Intelligence (AAAI-2005), 2005. URL:https://cdn.aaai.org/AAAI/2005/AAAI05-189.pdf. 
+ Roberto Posenato. CSTNU Tool: A Java library for checking temporal networks. SoftwareX, 17:100905, 2022. URL:https://doi.org/10.1016/j.softx.2021.100905. 
+ Roberto Posenato and Carlo Combi. Adding flexibility to uncertainty: Flexible simple temporal networks with uncertainty (FTNU). Inf. Sci., 584:784-807, 2022. URL:https://doi.org/10.1016/J.INS.2021.10.008. 
+ Roberto Posenato and Carlo Combi. Flexible temporal constraint management in modularized processes. Inf. Syst., 118:102257, 2023. URL:https://doi.org/10.1016/J.IS.2023.102257. 
+ Roberto Posenato, Marco Franceschetti, Carlo Combi, and Johann Eder. Some results and challenges Extending Dynamic Controllability to Agile Controllability in Simple Temporal Networks with Uncertainties. TechRep 1/2023, Dip. Informatica-Univ. di Verona, 2023. URL:https://iris.univr.it/handle/11562/1116013. 
+ Roberto Posenato, Marco Franceschetti, Carlo Combi, and Johann Eder. Introducing agile controllability in temporal business processes. In Enterprise, Business-Process and Information Systems Modeling - 25th International Conference, BPMDS 2024, and 29th International Conference, EMMSAD 2024, volume 511 of Lecture Notes in Business Information Processing, pages 87-99. Springer, 2024. URL:https://doi.org/10.1007/978-3-031-61007-3_8. 
+ Roberto Posenato, Andreas Lanz, Carlo Combi, and Manfred Reichert. Managing time-awareness in modularized processes. Softw. Syst. Model., 18(2):1135-1154, 2019. URL:https://doi.org/10.1007/S10270-017-0643-4. 
+ Michael Saint-Guillain, Tiago Vaquero, Steve A. Chien, Jagriti Agrawal, and Jordan R. Abrahams. Probabilistic temporal networks with ordinary distributions: Theory, robustness and expected utility. J. Artif. Intell. Res., 71:1091-1136, 2021. URL:https://doi.org/10.1613/JAIR.1.13019. 
+ Thierry Vidal and Hélène Fargier. Handling contingency in temporal constraint networks: from consistency to controllabilities. J. Exp. Theor. Artif. Intell., 11(1), 1999. URL:https://doi.org/10.1080/095281399146607. 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2024Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+

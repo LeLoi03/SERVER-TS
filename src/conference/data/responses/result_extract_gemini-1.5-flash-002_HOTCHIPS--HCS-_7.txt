@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "August 24 - 26, 2025",
+  "Year": "2025",
+  "Location": "Memorial Auditorium, Stanford, Palo Alto, CA",
+  "City-State-Province": "Palo Alto, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "April 16, 2025"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "May 9, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Version Due": "July 18, 2025"
+  },
+  "Topics": "General-Purpose Processor Chips, High-Performance, Low-Power Multi-Core and Highly-Reliable Systems, Domain-Specific Chips, AI Accelerators, Graphics Chips, Machine Learning Chips, Data Analytics and Big Data Processing, IoT and Always-On Functions, Custom Chips for Emerging Applications, Reconfigurable Chips, FPGAs and FPGA-Based Systems, Coarse-Grained Reconfigurable Arrays, Security, Secure Hardware, Hardware Support for Software Security, Mobile and Embedded Devices, Graphics/Multimedia/Gaming SoC, Security, and DSP Chips, Communications and Networking, Wireless LAN/WAN/PAN Network and I/O Processors, Emerging Computing Architectures, Neuromorphic Quantum Computing, Analog Computing, Photonic Chips, Memory Technologies, Emerging Memory Packaging, 3D, Stacked, Other Enabling Technologies, Power and Thermal Management, Sustainable Computing, Generative Tools, Packaging and Testing, Display Technologies, On-Chip Optics & Sensors, Novel Computing Technologies, Software and Systems for Emerging Hardware, Programming Models, Runtime Systems, Performance, Power, Debug, and Evaluation",
+  "Summary": "Hot Chips 2025 will be held from Sunday, August 24 - Tuesday, August 26, 2025 at Memorial Auditorium, Stanford, Palo Alto, CA.  The conference focuses on the presentation of new computer chips and related technologies.",
+  "Call for Papers": "# Hot Chips 2025: Call for Contributions\n\nHot Chips 2025 will be held from **Sunday, August 24 - Tuesday, August 26, 2025**, at **Memorial Auditorium, Stanford, Palo Alto, CA**.\n\n## Areas of Interest\n\n*   General-Purpose Processor Chips\n*   High-Performance, Low-Power Multi-Core and Highly-Reliable Systems\n*   Domain-Specific Chips\n*   AI Accelerators\n*   Graphics Chips\n*   Machine Learning Chips\n*   Data Analytics and Big Data Processing\n*   IoT and Always-On Functions\n*   Custom Chips for Emerging Applications\n*   Reconfigurable Chips\n*   FPGAs and FPGA-Based Systems\n*   Coarse-Grained Reconfigurable Arrays\n*   Security\n*   Secure Hardware\n*   Hardware Support for Software Security\n*   Mobile and Embedded Devices\n*   Graphics/Multimedia/Gaming SoC, Security, and DSP Chips\n*   Communications and Networking\n*   Wireless LAN/WAN/PAN Network and I/O Processors\n*   Emerging Computing Architectures\n*   Neuromorphic Quantum Computing\n*   Analog Computing, Photonic Chips\n*   Memory Technologies\n*   Emerging Memory Packaging, 3D, Stacked\n*   Other Enabling Technologies\n*   Power and Thermal Management\n*   Sustainable Computing\n*   Generative Tools\n*   Packaging and Testing\n*   Display Technologies\n*   On-Chip Optics & Sensors\n*   Novel Computing Technologies\n*   Software and Systems for Emerging Hardware\n*   Programming Models, Runtime Systems\n*   Performance, Power, Debug, and Evaluation\n\n## Submission Guidelines\n\nSubmissions must consist of the following:\n\n*   “Presentation” or “Poster”\n*   Title\n*   Extended abstract (two pages maximum)\n*   Presenter’s contact information (name, affiliation, job title, address, phone(s), and email)\n*   Indicate whether you have submitted, intend to submit, or have already presented or published a similar or overlapping submission to another conference or journal.\n*   Indication if you would like the submission to be held confidential.\n\n## Important Dates\n\n*   **Submission Deadline:** April 16, 2025\n*   **Acceptance Notification:** May 9, 2025\n*   **Final Version Due:** July 18, 2025\n*   **Conference Dates:** August 24-26, 2025\n\n## Evaluation Criteria\n\nRegular presentation and poster submissions are evaluated by the Program Committee on the basis of: performance of the device(s), degree of innovation, use of advanced technology, potential market significance, and anticipated interest to the audience. Both regular presentation slides and posters are published in the Hot Chips proceedings.\n\n## Contact\n\nPlease email our Program Committee Co-Chairs at [program@hotchips.org](mailto:program@hotchips.org). (For general inquiries, email [chair@hotchips.org](mailto:chair@hotchips.org))"
+}
+

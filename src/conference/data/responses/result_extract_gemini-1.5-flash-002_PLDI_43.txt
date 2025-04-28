@@ -1,0 +1,56 @@
+output:
+{
+  "Conference dates": "June 16 - 20, 2025",
+  "Year": "2025",
+  "Location": "The Westin Josun Seoul, Seoul, South Korea",
+  "City-State-Province": "Seoul",
+  "Country": "South Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(PLDI Research Papers) Submission Deadline": "November 14, 2024",
+    "(Research Artifacts) Artifact Registration Deadline": "March 13, 2025",
+    "(Research Artifacts) Artifact Submission Deadline": "March 18, 2025",
+    "(LCTES) Paper Submission (Extended Firm Deadline)": "March 21, 2025",
+    "(WQS) Submission Deadline": "April 1, 2025",
+    "(ARRAY) Submission Deadline": "April 1, 2025",
+    "(SOAP) Submission Deadline": "March 5, 2025",
+    "(Student Research Competition) Abstract submission deadline": "March 14, 2025",
+    "(EGRAPHS) Submission Deadline": "April 17, 2025",
+    "(Sparse) Talk Submission Deadline": "April 17, 2025"
+  },
+  "Notification Date": {
+    "(PLDI Research Papers) Notification to Authors": "March 6, 2025",
+    "(Student Research Competition) Author Notification": "April 24, 2025",
+    "(LCTES) Paper Notification": "April 21, 2025",
+    "(SOAP) Author Notification": "April 25, 2025",
+    "(WQS) Authors Notification": "April 27, 2025",
+    "(ARRAY) Acceptance Decisions": "April 19, 2025",
+    "(ISMM) Author notification": "May 3, 2025"
+  },
+  "Camera-ready Date": {
+    "(PLDI Research Papers) Camera-Ready Deadline": "April 10, 2025",
+    "(Student Research Competition) Camera-ready deadline": "May 16, 2025",
+    "(LCTES) Camera-Ready Submission": "May 12, 2025",
+    "(ISMM) Camera-ready papers due": "May 13, 2025",
+    "(SOAP) Camera-Ready Submission Deadline": "May 1, 2025",
+    "(ARRAY) Final version": "May 3, 2025"
+  },
+  "Other Date": {
+    "(PLDI Research Papers) Author Response Period": "February 18 - 22, 2025",
+    "(Research Artifacts) Response and Communication Period": "April 3 - 22, 2025",
+    "(ISMM) Author response period": "April 23 - 25, 2025",
+    "(LCTES) Abstract Submission (soft, open until March 21, 2025)": "March 14, 2025",
+    "(Research Artifacts) Reviewer Self-Nomination Deadline": "December 23, 2024",
+    "(Volunteering) Volunteer Application closes": "April 15, 2025",
+    "Early registration deadline": "May 17, 2025",
+    "(SOAP) Workshop": "June 16, 2025",
+    "(LCTES) Conference Dates": "June 16 - 17, 2025",
+    "(ISMM) Conference day": "June 17, 2025",
+    "(RPLS) Workshopnew": "June 17, 2025"
+  },
+  "Topics": "Programming Languages, Programming Systems, Design, Implementation, Theory, Applications, Performance",
+  "Summary": "PLDI 2025, the 46th ACM SIGPLAN Conference on Programming Language Design and Implementation, will be held in-person at the Westin Josun Seoul in Seoul, South Korea from June 16-20, 2025. PLDI is the premier forum in the field of programming languages and programming systems research.",
+  "Call for Papers": "# PLDI 2025: Call for Papers\n\nThe 46th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2025) will be held in **Seoul, South Korea from Monday, June 16 to Friday, June 20, 2025**.\n\nPLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.\n\n## Scope\n\nPLDI welcomes outstanding research that extends and/or applies programming-language concepts to advance the field of computing. Novel system designs, thorough empirical work, well-motivated theoretical results, and new application areas are all in scope for PLDI.\n\n## Evaluation Criteria and Process\n\nReviewers will evaluate submissions for accuracy, significance, originality, and clarity. The selection of papers will be made in two rounds of reviewing. In the first round, reviewers will assess the papers according to the quality criteria listed above. Authors will be given several days to compose a written response to the reviews received in the first round. At the end of the first round, the Review Committee will conditionally accept a subset of the submissions and all other submissions will be rejected. In the second round, authors of conditionally-accepted papers will be given an opportunity to improve specific aspects of the research and the paper, as identified by the reviewers.  The Review Committee will make final decisions regarding (conditional) acceptance and rejection.\n\n## Double-Blind Reviewing\n\nAuthor names and affiliations must be omitted from submissions. If a submission refers to prior work done by the authors, that reference should be made in the third person. Any supplementary material must also be anonymized.\n\n## Submission Site Information\n\nThe submission site will be at [https://pldi25.hotcrp.com/](https://pldi25.hotcrp.com/). Authors can submit multiple times prior to the deadline. Only the last submission will be reviewed. There is no deadline for submitting abstracts.\n\n## Declaring Conflicts\n\nWhen submitting a paper, you will need to declare potential conflicts. Conflicts should be declared between an adviser and an advisee (e.g., Ph.D., post-doc). Other conflicts include institutional conflicts, financial conflicts of interest, friends or relatives, or any recent co-authors on papers and proposals (last 2 years).\n\n## Formatting Requirements\n\nEach paper should have no more than 20 pages of text, excluding bibliography, using the ACM Proceedings format. Use of a different format is grounds for summary rejection. PACMPL templates for Microsoft Word and LaTeX can be found at the [SIGPLAN author information page](https://www.sigplan.org/Resources/Author/).\n\n## Supplementary Material\n\nAuthors are welcome to provide supplementary material if that material supports the claims in the paper. Such material may include proofs, experimental results, and/or data sets. This material should be uploaded at the same time as the submission. Reviewers are not required to examine the supplementary material but may refer to it if they would like to find further evidence supporting the claims in the paper.\n\nSupplemental material cannot be included in the main submission text. All appendices must be submitted as supplemental material, not as part of the main submission PDF.\n\n## Plagiarism and Concurrent Work\n\nPapers must describe unpublished work that is not currently submitted for publication elsewhere.\n\n## Artifact Evaluation for Accepted Papers\n\nAuthors of accepted papers will be invited to submit supporting materials to the Artifact Evaluation process. Artifact Evaluation is run by a separate committee whose task is to assess how well the artifacts support the work described in the papers.\n\n## Open Access and Copyright\n\nAs a Gold Open Access journal, PACMPL is committed to making peer-reviewed scientific research free of restrictions on both access and (re-)use. Authors are strongly encouraged to support liberal open access by licensing their work with the Creative Commons Attribution 4.0 International (CC BY) license.\n\n## Publication Date\n\nAll papers will be archived by the ACM Digital Library. Authors will have the option of including supplementary material with their paper. The official publication date is the date the proceedings are made available in the ACM Digital Library or the first day of the conference, whichever is sooner.\n\n## Presentations\n\nAuthors of accepted papers will be invited to present their work at PLDI. Authors who need financial assistance for travel to the conferences should apply for a grant from the SIGPLAN Professional Activities Committee (PAC) program.\n\n## Distinguished Paper Awards\n\nUp to 10% of the accepted papers may be designated as Distinguished Papers.\n\n## Important Dates\n\nAll deadlines are 11:59 PM AoE (UTC-12h)\n\n*   **Submission Deadline:** November 14, 2024\n*   **Author Response Period:** February 18 - 22, 2025\n*   **Notification to Authors:** March 6, 2025\n*   **Camera-Ready Deadline:** April 10, 2025\n\n[Submission Link](https://pldi25.hotcrp.com/)"
+}
+

@@ -1,0 +1,144 @@
+Conference FOGA:
+
+href="https://naco.liacs.nl/foga2025//" - 
+href="https://naco.liacs.nl/foga2025/" - Home 
+ href="https://naco.liacs.nl/foga2025//submission.html" - Paper Submission 
+ href="https://naco.liacs.nl/foga2025//registration.html" - Registration 
+ href="https://naco.liacs.nl/foga2025//roarnet.html" - ROAR-NET workshop 
+ href="https://naco.liacs.nl/foga2025//local.html" - Local Info 
+ href="https://naco.liacs.nl/foga2025/organizers.html" - Organizers 
+ 18th ACM/SIGEVO Conference on Foundations of Genetic Algorithms 
+ FOGA XVIII, Aug 27 – 29, 2025, Leiden, The Netherlands 
+ FOGA 2025 is a conference organized by ACM/SIGEVO and hosted by the Leiden Institute of Computer Science (LIACS) in Leiden, The Netherlands. The conference will this year take place on three days (Wed – Fri) 
+ Call for Papers 
+ The FOGA series aims at advancing our understanding of the working principles behind evolutionary algorithms and related randomized search heuristics, such as local search algorithms, differential evolution, ant colony optimization, particle swarm optimization, artificial immune systems, simulated annealing, and other Monte Carlo methods for search and optimization. Connections to related areas, such as Bayesian optimization and direct search, are of interest as well. FOGA is the premier event to discuss advances on the theoretical foundations of these algorithms, tools needed to analyze them, and different aspects of comparing algorithms’ performance. Topics of interest include, but are not limited to: 
+ Run time analysis 
+ Mathematical tools suitable for the analysis of search heuristics 
+ Fitness landscapes and problem difficulty 
+ (On- and offline) configuration and selection of algorithms, heuristics, operators, and parameters 
+ Stochastic and dynamic environments, noisy evaluations 
+ Constrained optimization 
+ Problem representation 
+ Complexity theory for search heuristics 
+ Multi-objective optimization 
+ Benchmarking aspects, including performance measures, the selection of meaningful benchmark problems, and statistical aspects 
+ Connection between black-box optimization and machine learning 
+ Submissions covering the entire spectrum of work, ranging from rigorously derived mathematical results to carefully crafted empirical studies, are invited. 
+ List of important dates (all times are “Anywhere on Earth”): 
+ Submission: May 2, 2025 
+ Notification of decision to authors: June 27, 2025 
+ Camera ready: July 10, 2025 
+ Early registration: July 10, 2025 
+ Conference: Aug 27 – 29, 2025 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ Keynote Speakers 
+ Joshua D. KnowlesSchlumberger Cambridge Research 
+ Stephanie WehnerDelft University of Technology, The Netherlands 
+ Tobias GlasmachersRuhr-Universität Bochum, Germany 
+ News 
+ January 27, 2025 | Young Researcher and Innovator Conference Grant 
+ Researchers attending FOGA 2025 may apply for financial travel support through thehref="https://roar-net.eu/calls/yri-cg-call-1/" - Young Researcher and Innovator Conference Grant Call
+. 
+ December 12, 2024 | After careful consideration the FOGA organizers have decided that there will be no rebuttal phase for FOGA 2025. 
+ August 01, 2024 | The FOGA 2025 website is under construction. 
+ href="https://naco.liacs.nl/foga2025//blog.html" - Older posts…
+Organizers 
+ Anna V. KononovaGeneral Chair 
+ Thomas BäckGeneral Chair 
+ Francisco ChicanoProgram Chair 
+ Jonathan FieldsendProgram Chair 
+ Niki van SteinProceedings Chair 
+ Elena RaponiLocal Chair 
+ Carola DoerrPublicity Chair 
+ Connect with us: 
+ href="https://bsky.app/profile/foga-conf.bsky.social" - BlueSky
+href="https://www.linkedin.com/company/foga2025/" - LinkedIn
+Leiden Institute of Advanced Computer Scienceat theUniversity of Leiden 
+
+Call for Papers information:
+href="https://naco.liacs.nl/foga2025//" - 
+href="https://naco.liacs.nl/foga2025/" - Home 
+ href="https://naco.liacs.nl/foga2025//submission.html" - Paper Submission 
+ href="https://naco.liacs.nl/foga2025//registration.html" - Registration 
+ href="https://naco.liacs.nl/foga2025//roarnet.html" - ROAR-NET workshop 
+ href="https://naco.liacs.nl/foga2025//local.html" - Local Info 
+ href="https://naco.liacs.nl/foga2025/organizers.html" - Organizers 
+ Paper submission 
+ Submission 
+ This year, FOGA will use the "linklings" submission management system. This system is also used by GECCO, but note that a separate account will be required to submit papers to FOGA. 
+ Link to the Linklings submission page:href="https://ssl.linklings.net/conferences/FOGA" - Linklings
+IMPORTANT:If you are developing an extended version of a recently accepted short paper (e.g. a GECCO poster), we recommend that you consider sending it to FOGA. 
+ Paper Format 
+ Authors should submit their papers consistent with the alternate 2-column ACM SIG style file "sigconf" by the submission deadline (May 2, 2025). Authors are required to submit their electronic papers in PDF format. The maximum number of pages is 12, including references. Over-length papers will be rejected without review. Supplementary material is welcome but should not be essential to understand the paper. 
+ The proceedings will be published by ACM Press. Instructions for the camera-ready papers will be made available in due time. 
+ Review Process 
+ The review process is double-blind. Authors must omit their names and affiliations from the paper and ensure their identity is not easily revealed. Refer to prior work in a neutral manner. Reviewers should not reveal their identities within the paper reviews. Selection criteria include originality of ideas, correctness, clarity, significance of results, and quality of presentation. The review process will include a rebuttal opportunity for authors before discussion within the Program Committee. 
+ The decision of the Program Committee will be final and cannot be appealed. 
+ Camera Ready Submission 
+ Formatting must comply with the ACM format requirements using the sigconf template. See the latest | ACM Primary Article Template | . 
+ Include the precise DOI and ISBN numbers received from ACM after completing the copyright process. 
+ Use Type 1/TrueType fonts for your submission. Type 3 fonts are not acceptable. 
+ Distill/Create an ACM compliant PDF and upload your PDF file at the linklings site. 
+ CCS Concepts and Keywords are mandatory to be included on the first page of your submission. 
+ Connect with us: 
+ href="https://bsky.app/profile/foga-conf.bsky.social" - BlueSky
+href="https://www.linkedin.com/company/foga2025/" - LinkedIn
+Leiden Institute of Advanced Computer Scienceat theUniversity of Leiden 
+
+Important Dates information:
+href="https://naco.liacs.nl/foga2025//" - 
+href="https://naco.liacs.nl/foga2025/" - Home 
+ href="https://naco.liacs.nl/foga2025//submission.html" - Paper Submission 
+ href="https://naco.liacs.nl/foga2025//registration.html" - Registration 
+ href="https://naco.liacs.nl/foga2025//roarnet.html" - ROAR-NET workshop 
+ href="https://naco.liacs.nl/foga2025//local.html" - Local Info 
+ href="https://naco.liacs.nl/foga2025/organizers.html" - Organizers 
+ 18th ACM/SIGEVO Conference on Foundations of Genetic Algorithms 
+ FOGA XVIII, Aug 27 – 29, 2025, Leiden, The Netherlands 
+ FOGA 2025 is a conference organized by ACM/SIGEVO and hosted by the Leiden Institute of Computer Science (LIACS) in Leiden, The Netherlands. The conference will this year take place on three days (Wed – Fri) 
+ Call for Papers 
+ The FOGA series aims at advancing our understanding of the working principles behind evolutionary algorithms and related randomized search heuristics, such as local search algorithms, differential evolution, ant colony optimization, particle swarm optimization, artificial immune systems, simulated annealing, and other Monte Carlo methods for search and optimization. Connections to related areas, such as Bayesian optimization and direct search, are of interest as well. FOGA is the premier event to discuss advances on the theoretical foundations of these algorithms, tools needed to analyze them, and different aspects of comparing algorithms’ performance. Topics of interest include, but are not limited to: 
+ Run time analysis 
+ Mathematical tools suitable for the analysis of search heuristics 
+ Fitness landscapes and problem difficulty 
+ (On- and offline) configuration and selection of algorithms, heuristics, operators, and parameters 
+ Stochastic and dynamic environments, noisy evaluations 
+ Constrained optimization 
+ Problem representation 
+ Complexity theory for search heuristics 
+ Multi-objective optimization 
+ Benchmarking aspects, including performance measures, the selection of meaningful benchmark problems, and statistical aspects 
+ Connection between black-box optimization and machine learning 
+ Submissions covering the entire spectrum of work, ranging from rigorously derived mathematical results to carefully crafted empirical studies, are invited. 
+ List of important dates (all times are “Anywhere on Earth”): 
+ Submission: May 2, 2025 
+ Notification of decision to authors: June 27, 2025 
+ Camera ready: July 10, 2025 
+ Early registration: July 10, 2025 
+ Conference: Aug 27 – 29, 2025 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ Keynote Speakers 
+ Joshua D. KnowlesSchlumberger Cambridge Research 
+ Stephanie WehnerDelft University of Technology, The Netherlands 
+ Tobias GlasmachersRuhr-Universität Bochum, Germany 
+ News 
+ January 27, 2025 | Young Researcher and Innovator Conference Grant 
+ Researchers attending FOGA 2025 may apply for financial travel support through thehref="https://roar-net.eu/calls/yri-cg-call-1/" - Young Researcher and Innovator Conference Grant Call
+. 
+ December 12, 2024 | After careful consideration the FOGA organizers have decided that there will be no rebuttal phase for FOGA 2025. 
+ August 01, 2024 | The FOGA 2025 website is under construction. 
+ href="https://naco.liacs.nl/foga2025//blog.html" - Older posts…
+Organizers 
+ Anna V. KononovaGeneral Chair 
+ Thomas BäckGeneral Chair 
+ Francisco ChicanoProgram Chair 
+ Jonathan FieldsendProgram Chair 
+ Niki van SteinProceedings Chair 
+ Elena RaponiLocal Chair 
+ Carola DoerrPublicity Chair 
+ Connect with us: 
+ href="https://bsky.app/profile/foga-conf.bsky.social" - BlueSky
+href="https://www.linkedin.com/company/foga2025/" - LinkedIn
+Leiden Institute of Advanced Computer Scienceat theUniversity of Leiden

@@ -1,0 +1,41 @@
+{
+  "Conference dates": "March 25 - 28, 2025",
+  "Year": "2025",
+  "Location": "Barcelona",
+  "City-State-Province": "Barcelona",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "EDBT Research Track - 1st round": "July 2024",
+    "EDBT Research Track - 2nd round": "December 2024",
+    "EDBT Research Track - 3rd round": "February 2025",
+    "ICDT 2025 - Cycle 1": "September 2024",
+    "ICDT 2025 - Cycle 2": "January 2025",
+    "EDBT Industrial & Application Papers": "April 2024",
+    "EDBT/ICDT Workshop proposals": "June 2024",
+    "EDBT PhD Workshop Papers": "June 2024",
+    "EDBT 2025 Demos": "August 2024",
+    "EDBT 2025 Tutorials": "August 2024",
+    "DEI Student Participation Award": "January 2025"
+  },
+  "Notification Date": {
+    "EDBT Research Track - 1st round": "July 2024",
+    "EDBT Research Track - 2nd round": "December 2024",
+    "EDBT Research Track - 3rd round": "February 2025",
+    "ICDT 2025 - Cycle 1": "September 2024",
+    "ICDT 2025 - Cycle 2": "January 2025",
+    "EDBT Industrial & Application Papers": "February 2025",
+    "EDBT/ICDT Workshop proposals": "February 2025",
+    "EDBT PhD Workshop Papers": "February 2025",
+    "EDBT 2025 Demos": "February 2025",
+    "EDBT 2025 Tutorials": "February 2025",
+    "DEI Student Participation Award": "February 2025"
+  },
+  "Camera-ready Date": {
+    "EDBT 2025 Camera Ready Instructions": "February 2025"
+  },
+  "Topics": "Data Management, Database Theory, Database Systems, Data Management and Information Technologies, Data Engineering, Analytics and Visualization",
+  "Summary": "The 2025 EDBT/ICDT Joint Conference will be held in Barcelona from March 25th to March 28th, 2025.  EDBT is an established forum for the exchange of the latest research results in data management. ICDT is an established series of international conferences on research in the foundations and theory of data management.",
+  "Call for Papers": "No call for papers available"
+}

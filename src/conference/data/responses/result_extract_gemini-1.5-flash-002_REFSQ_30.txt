@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "April 7 - 10, 2025",
+  "Year": "2025",
+  "Location": "Barcelona, Catalunya, Spain",
+  "City-State-Province": "Barcelona, Catalunya",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submissions": "November 1, 2024",
+    "Paper submissions": "November 8, 2024",
+    "End of Grace Period (for Paper updates)": "November 15, 2024",
+    "Open Science participation deadline": "November 15, 2024"
+  },
+  "Notification Date": {
+    "Authors notification": "January 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready submissions": "February 7, 2025"
+  },
+  "Topics": "Requirements Engineering, Software Quality",
+  "Summary": "The 31st International Working Conference on Requirements Engineering: Foundation for Software Quality (REFSQ 2025) will take place from April 7-10, 2025 in Barcelona, Catalunya, Spain. REFSQ is the leading European conference series on requirements engineering.  The special theme for 2025 is Social Responsibility.",
+  "Call for Papers": "# REFSQ 2025: Call for Papers\n\nThe 31st International Working Conference on Requirements Engineering: Foundation for Software Quality (REFSQ 2025) will take place from **April 7-10, 2025 in Barcelona, Catalunya, Spain**.\n\n## Special Theme: Social Responsibility\n\nThe special theme for REFSQ 2025 is Social Responsibility.  The technological progress, the increasing digitalization, and emerging trends offer great potential to positively support and facilitate our everyday life. Due to this tremendous influence that technology nowadays has on our society, it is increasingly important to carefully consider the impact that digital solutions have on our society during development activities.\n\n## Paper Categories\n\nWe invite submissions along the following categories:\n\n*   **Technical design papers (15 pages incl. references):** Describe the design of new artifacts, i.e., novel solutions for requirements-related problems or significant improvements of existing solutions. A preliminary evaluation of the artifacts is also expected.\n*   **Scientific evaluation papers (15 pages incl. references):** Investigate existing real-world problems, evaluate existing real-world implemented artifacts, or validate newly designed artifacts, e.g., by means of case studies, experiments, simulation, surveys, systematic literature reviews, mapping studies, or action research.\n*   **Experience report papers (12 pages incl. references):** Describe retrospective reports on experiences in applying RE techniques in practice, or addressing RE problems in real-world contexts.\n*   **Vision papers (8 pages incl. references):** State where research in the field should be heading.\n*   **Research previews (8 pages incl. references):** Describe well-defined research ideas at an early stage of investigation which may not be fully developed.\n\n## Submission, Reviewing, and Publication\n\nContributions must be submitted to EasyChair: [https://easychair.org/conferences/?conf=refsq2025](https://easychair.org/conferences/?conf=refsq2025)\n\nEach submission will undergo a single-blind review process involving at least three members of the program committee. The REFSQ 2025 proceedings will be published in Springer’s LNCS series.  Proceedings of previous editions can be found at [https://link.springer.com/conference/refsq](https://link.springer.com/conference/refsq).\n\n## Formatting\n\nAll submissions must be formatted according to the Springer LNCS/LNBIP conference proceedings template for LaTeX and Word, available at [https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).\n\n## Open Science Policy and Competition\n\nREFSQ 2025 encourages and supports authors in making their research and artifacts more accessible, reproducible, and verifiable by adhering to the [Open Science Policy](https://2025.refsq.org/track/refsq-2025-open-science#Open-Science-Policy).\n\nMoreover, REFSQ’25 and the Open Research Knowledge Graph (ORKG) organize the first [Open Science Competition](https://2025.refsq.org/track/refsq-2025-open-science#Open-Science-Competition) with two challenges to contribute to the promotion of Open Science in Requirements Engineering.\n\n## Important Dates\n\nAll dates are AoE.\n\n*   **Abstract submissions (optional):** November 1, 2024\n*   **Paper submissions:** November 8, 2024\n*   **End of Grace Period (for Paper updates):** November 15, 2024\n*   **Authors notification:** January 15, 2025\n*   **Camera-ready submissions:** February 7, 2025\n\n## Contact\n\nFor any questions and clarifications, please contact: [REFSQ25_RT@easychair.org](mailto:REFSQ25_RT@easychair.org)"
+}
+

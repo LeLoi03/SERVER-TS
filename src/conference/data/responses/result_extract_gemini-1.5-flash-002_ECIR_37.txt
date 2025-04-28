@@ -1,0 +1,41 @@
+output:
+{
+  "Conference dates": "April 6 - 10, 2025",
+  "Year": "2025",
+  "Location": "Lucca, Italy",
+  "City-State-Province": "Lucca",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Full Paper Track) Full paper abstract submission": "October 9, 2024",
+    "(Full Paper Track) Full paper submission": "October 16, 2024",
+    "(Short Paper Track) Abstract Submission": "October 23, 2024",
+    "(Short Paper Track) Short Paper Submission": "November 3, 2024",
+    "(Workshop Track) Proposals Submission": "September 20, 2024",
+    "(Demo Track) Demo Submission": "October 30, 2024",
+    "(Reproducibility Track) Abstract Submission": "October 23, 2024",
+    "(Reproducibility Track) Reproducibility Paper Submission": "October 30, 2024",
+    "(\“IR for Good” Track) Abstract Submission": "November 3, 2024",
+    "(\“IR for Good” Track) “IR for Good” Paper Submission": "November 10, 2024",
+    "(Tutorial Track) Tutorial Submission": "November 8, 2024",
+    "(Doctoral Consortium Track) Abstract Submission": "November 10, 2024",
+    "(Doctoral Consortium Track) Doctoral Consortium Paper Submission": "November 17, 2024",
+    "(Industry Day Track) Proposals Submission": "November 13, 2024"
+  },
+  "Notification Date": {
+    "(Full Paper Track) Acceptance/Rejection Notifications for Full Papers": "December 16, 2024",
+    "(Short Paper Track) Acceptance/Rejection Notifications for Short Papers": "December 16, 2024",
+    "(Workshop Track) Acceptance/Rejection Notifications for Workshop Proposals": "October 18, 2024",
+    "(Demo Track) Acceptance/Rejection Notifications for Demos": "December 16, 2024",
+    "(Reproducibility Track) Acceptance/Rejection Notifications for Reproducibility Papers": "December 16, 2024",
+    "(\“IR for Good” Track) Acceptance/Rejection Notifications for “IR for Good” Papers": "December 16, 2024",
+    "(Tutorial Track) Acceptance/Rejection Notifications for Tutorials": "December 16, 2024",
+    "(Doctoral Consortium Track) Acceptance/Rejection Notifications for Doctoral Consortium": "December 16, 2024",
+    "(Industry Day Track) Acceptance/Rejection Notifications for Industry Day Proposals": "December 16, 2024"
+  },
+  "Topics": "Information Retrieval, Search and ranking, User aspects in IR, System aspects, Conversational search and recommender systems, Explainability methods, Machine Learning and Large Language Models, Applications, Evaluation research, New social and technical challenges in IR",
+  "Summary": "The 47th European Conference on Information Retrieval (ECIR 2025) is the annual premier European forum for the presentation of new research results in the broadly conceived area of Information Retrieval. ECIR 2025 will be held as a physical (in-person) conference from April 6th to 10th, 2025, in Lucca, Italy.",
+  "Call for Papers": "# ECIR 2025: Call for Papers\n\nThe 47th European Conference on Information Retrieval (ECIR 2025) will be held as a physical (in-person) conference from **April 6th to 10th, 2025, in Lucca, Italy**.\n\nECIR is the prime European forum for the presentation of original research in the field of Information Retrieval.\n\n## Topics of Interest\n\nECIR 2025 invites the submission of high-quality and original papers in the broad field of Information Retrieval – this primarily includes textual or textual with multimodal information. Relevant topics include, but are not limited to:\n\n*   Search and ranking (including retrieval models and ranking, query and content analysis, web search, and theoretical aspects of Information Retrieval)\n*   User aspects in IR (including information interaction, contextualisation, personalisation, simulation, characterisation, and behaviours)\n*   System aspects (including retrieval and recommendation architectures, efficiency and scalability)\n*   Conversational search and recommender systems (focusing on natural language understanding and generation, dialogue management, multimodal interaction, and user engagement in search processes)\n*   Explainability methods (addressing the transparency, interpretability, and accountability of AI-driven systems, particularly for information retrieval, recommendation, and personalisation)\n*   Machine Learning and Large Language Models for information retrieval and recommendation\n*   Applications (such as web search, recommender systems, web and social media apps, professional and domain-specific search, novel interfaces to search tools, intelligent search, and conversational agents)\n*   Evaluation research (including new metrics and novel methods for the measurement and evaluation of retrieval and/or recommendation systems, users, and/or applications)\n*   New social and technical challenges in IR (such as bias, ethics, fake news, and hate speech, IR-focused trustworthy & explainable AI methodologies and techniques)\n\n### Full Paper Track\n\nThe Full Paper Track provides the opportunity for researchers to present their state-of-the-art research in Information Retrieval, which makes, or has the potential to make, a significant contribution to the field.\n\n*   Full papers are up to 12 pages in length plus additional pages for references. Appendices count toward the page limit. Please put appendices before the references for paper submission.\n*   Full papers will be refereed through double-blind peer review, with an initial first-stage review followed by a second stage of discussion led by a meta-reviewer.\n\n### Submission Guidelines\n\nAuthors should consult Springer’s authors’ guidelines and use their proceedings templates, either for LaTeX or for Word ([https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)), for the preparation of their papers. Springer encourages authors to include their ORCIDs in their papers ([https://www.springer.com/gp/authors-editors/orcid](https://www.springer.com/gp/authors-editors/orcid)).\n\nAll submissions must be written in English. All papers should be submitted electronically through the EasyChair submission system ([https://easychair.org/conferences/?conf=ecir2025](https://easychair.org/conferences/?conf=ecir2025)).\n\n## Important Dates\n\n*   **Conference:** April 6-10, 2025\n*   **Full Paper Track**\n    *   Abstract Submission: October 9, 2024\n    *   Full Paper Submission: October 16, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Short Paper Track**\n    *   Abstract Submission: October 23, 2024\n    *   Short Paper Submission: November 3, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Workshop Track**\n    *   Proposals Submission: September 20, 2024\n    *   Acceptance/Rejection Notifications: October 18, 2024\n*   **Demo Track**\n    *   Demo Submission: October 30, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Reproducibility Track**\n    *   Abstract Submission: October 23, 2024\n    *   Reproducibility Paper Submission: October 30, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **“IR for Good” Track**\n    *   Abstract Submission: November 3, 2024\n    *   “IR for Good” Paper Submission: November 10, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Tutorial Track**\n    *   Tutorial Submission: November 8, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Doctoral Consortium Track**\n    *   Abstract Submission: November 10, 2024\n    *   Doctoral Consortium Paper Submission: November 17, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024\n*   **Industry Day Track**\n    *   Proposals Submission: November 13, 2024\n    *   Acceptance/Rejection Notifications: December 16, 2024"
+}
+

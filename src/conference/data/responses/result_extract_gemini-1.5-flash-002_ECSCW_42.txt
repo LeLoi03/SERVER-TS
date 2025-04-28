@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "June 30 - July 4, 2025",
+  "Year": "2025",
+  "Location": "Newcastle upon Tyne, UK",
+  "City-State-Province": "Newcastle upon Tyne",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submissions due for Conference paper (23:59 AoE)": "February 25, 2025",
+    "Paper submission deadline": "February 28, 2025"
+  },
+  "Notification Date": {
+    "Notification to the authors": "March 25, 2025"
+  },
+  "Camera-ready Date": {
+    "Deadline for camera-ready version of accepted submissions": "April 14, 2025"
+  },
+  "Other Date": {
+    "System open for submissions": "January 15, 2025"
+  },
+  "Topics": "Computer-Supported Cooperative Work, Cooperation Technologies",
+  "Summary": "The 23rd edition of ECSCW, the EUSSET Conference on Computer-Supported Cooperative Work, will take place in Newcastle upon Tyne, UK from June 30th to July 4th, 2025. ECSCW is a single-track conference that contributes to developing an interdisciplinary and global community, supported by EUSSET, the European Society for Socially Embedded Technologies.",
+  "Call for Papers": "# ECSCW 2025: Call for Conference Papers\n\nThe 23rd EUSSET Conference on Computer-Supported Cooperative Work (ECSCW 2025) will take place from **June 30th to July 4th, 2025 in Newcastle upon Tyne, UK**.\n\nECSCW is a single-track conference that contributes to developing an interdisciplinary and global community, supported by EUSSET, the European Society for Socially Embedded Technologies. The conference format facilitates critical discussion across disciplinary and national borders in the field.\n\n## Call for Conference Papers\n\nWe invite researchers and practitioners to submit Conference Papers to the EUSSET CSCW 2025. With Conference Papers, authors have the opportunity to publish concise and focused empirical or conceptual studies to support progress in a specific sub-domain of CSCW. This category is similar to last year’s Notes category.\n\nThis could include, but is not limited to, the following:\n\n*   A new methodology for designing or examining CSCW technologies\n*   Insights from the implementation of an IT system supporting collaboration\n*   First experiences and insights from the use of a new system supporting collaboration\n*   A case study of collaborative technology in a domain not typically studied in CSCW research\n*   A discussion or unfolding of new CSCW theory\n\nWe look forward to previously unpublished, concise, and insightful submissions that make substantive progress in a field of CSCW and can benefit from presentation and discussion at the EUSSET CSCW conference. If you are submitting a Conference Paper on accessibility or assistive technology, please refer to the SIGACCESS guidelines on writing about disability. If you have a provocative, challenging idea that still needs more shaping and discussion, you might want to consider Exploratory Papers instead.\n\n## Submission Format and Process\n\nWhile the length of Conference Papers is flexible, we expect they will be no longer than 6,000 words without references. Longer versions should be justified (using the specific text field on EasyChair). All authors must follow the Conference Papers template available in [Latex](https://ecscw.eusset.eu/2025/wp-content/uploads/2024/12/ECSCW-2025-Submissions-Template.zip) (Overleaf template), [RTF](https://ecscw.eusset.eu/2025/wp-content/uploads/2024/12/ECSCW-2025_Template.rtf), or [MS Word](https://ecscw.eusset.eu/2025/wp-content/uploads/2024/12/ECSCW-2025_Template.doc) format. Submissions should be in PDF format and must be ANONYMIZED. Conference Papers submissions will undergo a double-blind, single-round peer review.\n\nSubmissions will be selected for presentation based on the opinions of the reviewers. No shepherding or additional rounds of reviews are planned.\n\n## Submission Link\n\nPlease use [this link](https://easychair.org/conferences/?conf=ecscw2025) to go to the submission page. After logging in (you might need to make a user if you don’t have one), select Author submission and in the overview of tracks, select “Conference Papers”.\n\n## Publication and Copyright Information\n\nAll accepted Conference Papers will be published in the European Society for Embedded Technologies (EUSSET) digital library ([http://www.eusset.eu/digital-library](http://www.eusset.eu/digital-library)) as an edited collection with an ISBN. Each paper will be assigned a DOI.\n\nThe EUSSET digital library (DL) is an open-access repository. The EUSSET DL does not ask for a full transfer of copyright from authors. Instead, it requires only sufficient rights that allow “readers to read, download, copy, distribute, print, search and link to the full texts of articles, or use them for any other lawful purpose except where otherwise noted”.\n\n## Important Dates\n\n*   **Paper submission deadline:** February 28, 2025\n*   **Notification to the authors:** March 25, 2025\n*   **Deadline for camera-ready version of accepted submissions:** April 14, 2025\n*   **EUSSET CSCW 2025 Conference:** July 2 – 4, 2025\n\n## Conference Papers Chairs\n\nFor any queries, please do not hesitate to contact the ECSCW 2025 Conference Papers Chairs at [ECSCW25_CP@easychair.org](mailto:ECSCW25_CP@easychair.org)\n\n*   Erik Grönvall, ITU, Denmark\n*   Gabriela Marcu, University of Michigan, USA"
+}
+```

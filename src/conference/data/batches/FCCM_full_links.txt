@@ -1,0 +1,312 @@
+Conference full name: IEEE Symposium on Field Programmable Custom Computing Machines (FCCM)
+
+1. Website of FCCM_2: https://www.fccm.org/call-for-papers-2025/
+Website information of FCCM_2:
+
+Skip to contenthref="https://www.fccm.org/" - 
+href="https://www.fccm.org/" - The 33rd IEEE International Symposium on  Field-Programmable Custom Computing Machines
+Menuhref="https://www.fccm.org/" - Home 
+ href="https://www.fccm.org/" - Program | Expand child menu | href="https://www.fccm.org/fccm-2025-program/" - FCCM 2025 Program 
+ href="https://www.fccm.org/fccm-madcap-2025-program/" - MADCAP 2025 Program 
+ href="https://www.fccm.org/workshop-tutorial-2025/" - Workshops and Tutorials 
+ href="https://www.fccm.org/poster-list-2025/" - Posters 
+ href="https://www.fccm.org/fccm-2025-ph-d-forum/" - Ph.D. Forum 
+ href="https://www.fccm.org/accepted-paper-list-2025/" - Accepted Paper List 
+ href="https://www.fccm.org/" - Attend | Expand child menu | href="https://www.fccm.org/registration-2025/" - Registration 
+ href="https://www.fccm.org/visa/" - Visa 
+ href="https://www.fccm.org/presenter-poster-guideline-2025/" - Presenter & Poster Guideline 
+ href="https://www.fccm.org/" - Venue | Expand child menu | href="https://www.fccm.org/venue-2025/" - Conference Venue 
+ href="https://www.fccm.org/about-fayetteville/" - About Fayetteville 
+ href="https://www.fccm.org/getting-to-fayetteville/" - Getting to Fayetteville 
+ href="https://www.fccm.org/explore-nwa-things-to-see/" - Explore NWA – Things to See 
+ href="https://www.fccm.org/" - Call for Contributions | Collapse child menu | href="https://www.fccm.org/call-for-papers-2025/" - Call for Papers 
+ href="https://www.fccm.org/fccm-2025-phd-forum/" - Call for PhD Forum 
+ href="https://www.fccm.org/fccm-2025-demo-night/" - Call for Demo Night 
+ href="https://www.fccm.org/artifact-evaluation-2025/" - Artifact Evaluation 
+ href="https://www.fccm.org/call-for-workshops-2025/" - Call for Workshops 
+ href="https://www.fccm.org/call-for-special-sessions-2025/" - Call for Special Sessions 
+ href="https://www.fccm.org/author-guidelines-2025/" - Author Guidelines 
+ Call for Sponsorship 
+ Committees 
+ href="https://www.fccm.org/diversity-2023/" - General Info | Expand child menu | href="https://www.fccm.org/code-of-conduct-2023/" - Code of Conduct 
+ href="https://www.fccm.org/diversity-2023/" - Diversity 
+ href="https://www.fccm.org/past-fccm-websites/" - Past FCCMs 
+ href="https://www.fccm.org/fccm-2024-event-photos/" - FCCM 2024 Event Photos 
+ Call for Papers 2025 
+ FCCM 2025 Deadline: 
+ January 10th, 2025 (abstract) 
+ January 19, 11:59 PM PST,2025 (full paper)Abstract deadline applies to theAnywhere on Earth (UTC – 12)timezone 
+ Submission Website:href="https://fccm2025.hotcrp.com/" - https://fccm2025.hotcrp.com
+The IEEE International Symposium on Field-Programmable Custom Computing Machines is the original and premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware. Over the past two decades, FCCM has been the place to present papers on architectures, tools, and programming models for field-programmable custom computing machines as well as applications that use such systems. This year FCCM seeks to embrace its role as the venue where “firsts” are presented by encouraging submissions describing new forward thinking research on emerging technologies with in-field reconfiguration capabilities for the upcoming post Moore’s Law era. Topics of interest include but are not limited to: 
+ Custom Computing and Reconfigurable Architectures: 
+ Heterogeneous and mixed signal digital/analog field customizable accelerators 
+ Neuromorphic emulation and accelerators 
+ Memory centric computing architectures 
+ Overlays, coarse grained reconfigurable architectures 
+ Clusters, data centers, and large systems 
+ IoT and Embedded SoC, MPSoC architectures with reconfigurable devices 
+ Security enhancements for reconfigurable computing 
+ Customizable soft processor systems 
+ Abstractions, Programming Models, and Tools: 
+ Use of Large Language Models (LLMs) for FPGA design 
+ Domain-specific languages, frameworks, and open-source hw/sw synthesis/compilation tools 
+ Design tools, instrumentation, debug for designer productivity 
+ High-level synthesis 
+ Software-defined-systems (e.g. radio, networks, frameworks for new domains) 
+ CAD tools, abstractions, and languages for mixed analog/digital fabrics 
+ Run Time Reconfiguration: 
+ Run-time management and scheduling of reconfigurable hardware 
+ System resilience/fault tolerance for reconfigurable hardware 
+ Evolvable, adaptable, approximate, or autonomous reconfigurable computing systems 
+ Security assessment and enhancement of run-time reconfiguration 
+ Applications 
+ Evaluations and analysis on custom computing architectures with GPUs, NPUs, or DSPs 
+ Post Quantum Cryptography, Quantum control and emulation 
+ Safety critical, reliable and high assurance 
+ Security detection and prevention, and Side Channel analysis and Attack 
+ Digital twin, modeling, and acceleration 
+ FCCM 2025 is an in-person event. At least one author will be required to register and attend. (Submissions that fail to meet this requirement will not appear in IEEE Xplore.) Please refer to the FCCM website (href="http://www.fccm.org/" - www.fccm.org
+) for updates and details. 
+ Paper Types: 
+ Submissions can be made for any of the two paper types: 
+ Traditional technical long papers | that introduce and evaluate new technologies. These papers must have strong empirical results and address significant challenges of the corresponding problem. Page length is 8 pages (excluding references). 
+ Short papers | intended for new projects, early results, late breaking, and work that can be presented concisely. Page length is 4 pages (excluding references). 
+ Important Dates – Direct Submission: 
+ All deadlines apply to theAnywhere on Earth (UTC – 12)timezone 
+  
+ Abstracts Due (All Papers) | January 10, 2025 (NO EXTENSIONS) 
+ Submissions Due (All Papers) | January 19th at 11:59 PM PST 
+ Workshop Proposals Due | February 23, 2025 
+ Rebuttal Period | February 16 – 24, 2025 
+ Artifact Form Deadline | February 24, 2025 
+ Notification of Acceptance (All Papers) | March 14, 2025 
+ Demo Night Submissions Due | March 24, 2025 (No Extensions) 
+ Notification of Acceptance (Demo Night) | March 31, 2025 
+ Camera-Ready Submission Due | April 4, 2025 
+ Early Registration Deadline | April 20, 2025 
+ Hotel Rooms Reservation Deadline | April 11, 2025 
+ Conference | May 4 - 7, 2025 
+ Paper Formats: 
+ Long papers are limited to 8 pages(excluding references). Short papers are limited to 4 pages (excluding references). This category is intended for new projects and early results or work that can be concisely presented in the 4-page budget. Submissions accepted as posters will have a one-page extended abstract. 
+ Page restrictions for all formats exclude references, which may use additional pages. 
+ Submissions violating the formatting requirements may be automatically rejected. Do not submit the same work in more than one of the formats. 
+ Accepted papers will have the same page lengths as initial submissions. Short papers will have short oral presentations, and long papers may have long or short presentations based on committee decisions on the time required to present the material. 
+ All submissions should be written in English. An online submission link will be available on the FCCM website. Papers must conform to the US letter-sized IEEE conference proceedings format to be reviewed and published. 
+ A conformant LaTeX template is availablehref="https://wp.fccm.org/templates/latex_template_fccm19.zip" - here
+. Overleaf users can find the LaTeX templatehere. A Microsoft Word template is availablehref="https://www.fccm.org/past/2024/wp-content/uploads/2023/01/word_template_fccm23.doc" - here
+. 
+ Paper Preparation: 
+ Across all topics (and especially for application papers), successful manuscripts will include sufficient details to reproduce the results presented (e.g., full part numbers, software versions). Application papers should not just be an implementation of an application on an FPGA but should show how reconfigurable technology is leveraged by the application and should ideally contain insights and lessons that can be carried forward into future designs. Additional suggestions and guidelines are available onhref="http://www.fccm.org/" - www.fccm.org
+. See the ACM/TCFPGA Hall-of-Fame (href="http://hof.tcfpga.org/hall-of-fame-nominations/hof-selection-committee/" - hof.tcfpga.org
+) and the set of previous FCCM Best Paper winners (href="http://wiki.tcfpga.org/FCCMBest" - wiki.tcfpga.org/FCCMBest
+) for outstanding examples of FCCM papers. 
+ Simultaneous Submissions: 
+ Papers must not be simultaneously under review or waiting to appear at another conference or in a journal and must not be essentially the same as any paper that has been previously published. If a paper contains text or technical content that is similar to a previously published or submitted paper, that other paper should be cited in the FCCM submission, and the differences should be made clear. 
+ Review Process: 
+ FCCM uses a double-blind reviewing system. Manuscripts must not identify authors or their affiliations. Authors are encouraged to cite their work but must not implicitly identify themselves. For example, references that clearly identify the authors (“We build on our previous work…”) should be written as “This work builds on XYZ [citation]”. Do not put a “deleted for double-blind” entry in the reference section. 
+ In the case of widely-available Open Source software, authors should cite the website(s) but not claim to own them. Authors should also remember to mask grant numbers and other government markings during the review process. Note that there are resources to blind open-source repositories for review, such ashttps://github.com/tdurieux/anonymous_github. Papers that attempt to identify authors or leverage prior work or institutional support for a competitive advantage in the peer review process will not be considered. Placing a preliminary version of the unpublished paper on arXiv is not disqualifying, but it is also not encouraged; just because a paper can be unblinded by active search will not undermine the spirit of the double-blind review. Artifacts, including open-source designs and tools, are encouraged; if there are questions about handling the blind-review process, contact the program chair. 
+ FCCM 2025 includes a rebuttal phase. Specific questions from reviewers will be made available by February 16, 2025. Authors have the option to provide an up to 500-word response by February 24, 2025. Reviewers will consider the responses during final paper deliberations. 
+ Artifact Evaluation: 
+ Authors ofacceptedfull lengthpapers can optionally participate in an artifact evaluation process. The inclusion of artifacts with a paper submission is not required for submission nor elevates the submission beyond those without. However, the goal of artifact evaluation is to encourage the availability and reproducibility of published results. 
+ Artifacts that are included with submission will be subjected to a separate and independent review process from their accompanying papers. Papers submitted with artifacts must preserve the double-blind nature of the review process and all relevant links should be removed for blind review. Artifacts will be disclosed in a separate form that will be evaluated after paper acceptance. Details of artifact submission and the evaluation process will be forthcoming and described on the FCCM website. 
+ IEEE Privacy Policy 
+ Powered by WordPress /WordPress Theme by WPSmart
+
+2. Website of FCCM_2: https://www.fccm.org/
+Website information of FCCM_2:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+ Skip to contenthref="https://www.fccm.org/" - 
+href="https://www.fccm.org/" - The 33rd IEEE International Symposium on  Field-Programmable Custom Computing Machines
+Menuhref="https://www.fccm.org/" - Home 
+ href="https://www.fccm.org/" - Program | Expand child menu | href="https://www.fccm.org/fccm-2025-program/" - FCCM 2025 Program 
+ href="https://www.fccm.org/fccm-madcap-2025-program/" - MADCAP 2025 Program 
+ href="https://www.fccm.org/workshop-tutorial-2025/" - Workshops and Tutorials 
+ href="https://www.fccm.org/poster-list-2025/" - Posters 
+ href="https://www.fccm.org/fccm-2025-ph-d-forum/" - Ph.D. Forum 
+ href="https://www.fccm.org/accepted-paper-list-2025/" - Accepted Paper List 
+ href="https://www.fccm.org/" - Attend | Expand child menu | href="https://www.fccm.org/registration-2025/" - Registration 
+ href="https://www.fccm.org/visa/" - Visa 
+ href="https://www.fccm.org/presenter-poster-guideline-2025/" - Presenter & Poster Guideline 
+ href="https://www.fccm.org/" - Venue | Expand child menu | href="https://www.fccm.org/venue-2025/" - Conference Venue 
+ href="https://www.fccm.org/about-fayetteville/" - About Fayetteville 
+ href="https://www.fccm.org/getting-to-fayetteville/" - Getting to Fayetteville 
+ href="https://www.fccm.org/explore-nwa-things-to-see/" - Explore NWA – Things to See 
+ href="https://www.fccm.org/" - Call for Contributions | Expand child menu | href="https://www.fccm.org/call-for-papers-2025/" - Call for Papers 
+ href="https://www.fccm.org/fccm-2025-phd-forum/" - Call for PhD Forum 
+ href="https://www.fccm.org/fccm-2025-demo-night/" - Call for Demo Night 
+ href="https://www.fccm.org/artifact-evaluation-2025/" - Artifact Evaluation 
+ href="https://www.fccm.org/call-for-workshops-2025/" - Call for Workshops 
+ href="https://www.fccm.org/call-for-special-sessions-2025/" - Call for Special Sessions 
+ href="https://www.fccm.org/author-guidelines-2025/" - Author Guidelines 
+ Call for Sponsorship 
+ Committees 
+ href="https://www.fccm.org/diversity-2023/" - General Info | Expand child menu | href="https://www.fccm.org/code-of-conduct-2023/" - Code of Conduct 
+ href="https://www.fccm.org/diversity-2023/" - Diversity 
+ href="https://www.fccm.org/past-fccm-websites/" - Past FCCMs 
+ href="https://www.fccm.org/fccm-2024-event-photos/" - FCCM 2024 Event Photos 
+ FCCM Main Page 
+  
+ May 4 – 7, 2025,Fayetteville, Arkansas, USA 
+ Venue 
+ Website:href="https://www.fccm.org/venue-2025/" - https://www.fccm.org/venue-2025/
+The IEEE Symposium on Field-Programmable Custom Computing Machines is the original and premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware. Over the past two decades, FCCM has been the place to present papers on architectures, tools, and programming models for field-programmable custom computing machines as well as applications that use such systems. 
+ News 
+ Apr. 4, 2025, FCCM 2025href="https://www.fccm.org/registration-2025/" - Registration Link
+is Open!! 
+ FCCM 2025 hotel rooms reservation deadline was extended till April 11th. 
+ Dec. 18, 2024, FCCM 2025 Submission Link Available. 
+ Oct. 1, 2024 – FCCM 2025 Call for Paper Available. 
+ July 22, 2024 – FCCM 2025 Organizing Committee Updated. 
+ July 9, 2024 – FCCM 2025 Website launched. 
+ Important DatesAll deadlines apply to theAnywhere on Earth (UTC – 12)timezone 
+  
+ Abstracts Due (All Papers) | January 10, 2025 (NO EXTENSIONS) 
+ Submissions Due (All Papers) | January 19th at 11:59 PM PST 
+ Workshop Proposals Due | February 23, 2025 
+ Rebuttal Period | February 16 – 24, 2025 
+ Artifact Form Deadline | February 24, 2025 
+ Notification of Acceptance (All Papers) | March 14, 2025 
+ Demo Night Submissions Due | March 24, 2025 (No Extensions) 
+ Notification of Acceptance (Demo Night) | March 31, 2025 
+ Camera-Ready Submission Due | April 4, 2025 
+ Early Registration Deadline | April 20, 2025 
+ Hotel Rooms Reservation Deadline | April 11, 2025 
+ Conference | May 4 - 7, 2025 
+ Organizing Committee 
+  
+ General Chair | David Andrews | University of Arkansas 
+ Program Chair | Andrew Schmidt | AMD 
+ Program Vice Chairs | Lana Josipovic | ETHZ 
+ Callie Hao | Georgia Tech 
+ Finance Chair | Grace Zgheib | Altera 
+ Publicity and Website Chair | Peipei Zhou | Brown University 
+ Sponsorship Chair | Jeff Goeders | BYU 
+ Artifacts Chairs | Miriam Leeser | Northeastern University 
+ Chris Lavin | AMD 
+ Workshops and Tutorials Chair | Jason Bakos | University of South Carolina 
+ Local Arrangements Chair | Chris Farnell | University of Arkansas 
+ Travel Grants Chair | Christophe Bobda | University of Florida 
+ Demo Night Chair | Estelle Kao | Silvus Technologies 
+ Ph.D. Forum Chair | Gabe Weisz | AMD 
+ Publications Chair | Rasha Karakchi | University of South Carolina 
+ Technical Sponsors 
+ Gold Sponsors 
+ Silver Sponsors 
+  
+ Chrome Sponsors 
+ IEEE Privacy Policy 
+ Powered by WordPress /WordPress Theme by WPSmart
+
+3. Website of FCCM_2: https://www.fccm.org/call-for-papers-2025/
+Website information of FCCM_2:
+
+Skip to contenthref="https://www.fccm.org/" - 
+href="https://www.fccm.org/" - The 33rd IEEE International Symposium on  Field-Programmable Custom Computing Machines
+Menuhref="https://www.fccm.org/" - Home 
+ href="https://www.fccm.org/" - Program | Expand child menu | href="https://www.fccm.org/fccm-2025-program/" - FCCM 2025 Program 
+ href="https://www.fccm.org/fccm-madcap-2025-program/" - MADCAP 2025 Program 
+ href="https://www.fccm.org/workshop-tutorial-2025/" - Workshops and Tutorials 
+ href="https://www.fccm.org/poster-list-2025/" - Posters 
+ href="https://www.fccm.org/fccm-2025-ph-d-forum/" - Ph.D. Forum 
+ href="https://www.fccm.org/accepted-paper-list-2025/" - Accepted Paper List 
+ href="https://www.fccm.org/" - Attend | Expand child menu | href="https://www.fccm.org/registration-2025/" - Registration 
+ href="https://www.fccm.org/visa/" - Visa 
+ href="https://www.fccm.org/presenter-poster-guideline-2025/" - Presenter & Poster Guideline 
+ href="https://www.fccm.org/" - Venue | Expand child menu | href="https://www.fccm.org/venue-2025/" - Conference Venue 
+ href="https://www.fccm.org/about-fayetteville/" - About Fayetteville 
+ href="https://www.fccm.org/getting-to-fayetteville/" - Getting to Fayetteville 
+ href="https://www.fccm.org/explore-nwa-things-to-see/" - Explore NWA – Things to See 
+ href="https://www.fccm.org/" - Call for Contributions | Collapse child menu | href="https://www.fccm.org/call-for-papers-2025/" - Call for Papers 
+ href="https://www.fccm.org/fccm-2025-phd-forum/" - Call for PhD Forum 
+ href="https://www.fccm.org/fccm-2025-demo-night/" - Call for Demo Night 
+ href="https://www.fccm.org/artifact-evaluation-2025/" - Artifact Evaluation 
+ href="https://www.fccm.org/call-for-workshops-2025/" - Call for Workshops 
+ href="https://www.fccm.org/call-for-special-sessions-2025/" - Call for Special Sessions 
+ href="https://www.fccm.org/author-guidelines-2025/" - Author Guidelines 
+ Call for Sponsorship 
+ Committees 
+ href="https://www.fccm.org/diversity-2023/" - General Info | Expand child menu | href="https://www.fccm.org/code-of-conduct-2023/" - Code of Conduct 
+ href="https://www.fccm.org/diversity-2023/" - Diversity 
+ href="https://www.fccm.org/past-fccm-websites/" - Past FCCMs 
+ href="https://www.fccm.org/fccm-2024-event-photos/" - FCCM 2024 Event Photos 
+ Call for Papers 2025 
+ FCCM 2025 Deadline: 
+ January 10th, 2025 (abstract) 
+ January 19, 11:59 PM PST,2025 (full paper)Abstract deadline applies to theAnywhere on Earth (UTC – 12)timezone 
+ Submission Website:href="https://fccm2025.hotcrp.com/" - https://fccm2025.hotcrp.com
+The IEEE International Symposium on Field-Programmable Custom Computing Machines is the original and premier forum for presenting and discussing new research related to computing that exploits the unique features and capabilities of FPGAs and other reconfigurable hardware. Over the past two decades, FCCM has been the place to present papers on architectures, tools, and programming models for field-programmable custom computing machines as well as applications that use such systems. This year FCCM seeks to embrace its role as the venue where “firsts” are presented by encouraging submissions describing new forward thinking research on emerging technologies with in-field reconfiguration capabilities for the upcoming post Moore’s Law era. Topics of interest include but are not limited to: 
+ Custom Computing and Reconfigurable Architectures: 
+ Heterogeneous and mixed signal digital/analog field customizable accelerators 
+ Neuromorphic emulation and accelerators 
+ Memory centric computing architectures 
+ Overlays, coarse grained reconfigurable architectures 
+ Clusters, data centers, and large systems 
+ IoT and Embedded SoC, MPSoC architectures with reconfigurable devices 
+ Security enhancements for reconfigurable computing 
+ Customizable soft processor systems 
+ Abstractions, Programming Models, and Tools: 
+ Use of Large Language Models (LLMs) for FPGA design 
+ Domain-specific languages, frameworks, and open-source hw/sw synthesis/compilation tools 
+ Design tools, instrumentation, debug for designer productivity 
+ High-level synthesis 
+ Software-defined-systems (e.g. radio, networks, frameworks for new domains) 
+ CAD tools, abstractions, and languages for mixed analog/digital fabrics 
+ Run Time Reconfiguration: 
+ Run-time management and scheduling of reconfigurable hardware 
+ System resilience/fault tolerance for reconfigurable hardware 
+ Evolvable, adaptable, approximate, or autonomous reconfigurable computing systems 
+ Security assessment and enhancement of run-time reconfiguration 
+ Applications 
+ Evaluations and analysis on custom computing architectures with GPUs, NPUs, or DSPs 
+ Post Quantum Cryptography, Quantum control and emulation 
+ Safety critical, reliable and high assurance 
+ Security detection and prevention, and Side Channel analysis and Attack 
+ Digital twin, modeling, and acceleration 
+ FCCM 2025 is an in-person event. At least one author will be required to register and attend. (Submissions that fail to meet this requirement will not appear in IEEE Xplore.) Please refer to the FCCM website (href="http://www.fccm.org/" - www.fccm.org
+) for updates and details. 
+ Paper Types: 
+ Submissions can be made for any of the two paper types: 
+ Traditional technical long papers | that introduce and evaluate new technologies. These papers must have strong empirical results and address significant challenges of the corresponding problem. Page length is 8 pages (excluding references). 
+ Short papers | intended for new projects, early results, late breaking, and work that can be presented concisely. Page length is 4 pages (excluding references). 
+ Important Dates – Direct Submission: 
+ All deadlines apply to theAnywhere on Earth (UTC – 12)timezone 
+  
+ Abstracts Due (All Papers) | January 10, 2025 (NO EXTENSIONS) 
+ Submissions Due (All Papers) | January 19th at 11:59 PM PST 
+ Workshop Proposals Due | February 23, 2025 
+ Rebuttal Period | February 16 – 24, 2025 
+ Artifact Form Deadline | February 24, 2025 
+ Notification of Acceptance (All Papers) | March 14, 2025 
+ Demo Night Submissions Due | March 24, 2025 (No Extensions) 
+ Notification of Acceptance (Demo Night) | March 31, 2025 
+ Camera-Ready Submission Due | April 4, 2025 
+ Early Registration Deadline | April 20, 2025 
+ Hotel Rooms Reservation Deadline | April 11, 2025 
+ Conference | May 4 - 7, 2025 
+ Paper Formats: 
+ Long papers are limited to 8 pages(excluding references). Short papers are limited to 4 pages (excluding references). This category is intended for new projects and early results or work that can be concisely presented in the 4-page budget. Submissions accepted as posters will have a one-page extended abstract. 
+ Page restrictions for all formats exclude references, which may use additional pages. 
+ Submissions violating the formatting requirements may be automatically rejected. Do not submit the same work in more than one of the formats. 
+ Accepted papers will have the same page lengths as initial submissions. Short papers will have short oral presentations, and long papers may have long or short presentations based on committee decisions on the time required to present the material. 
+ All submissions should be written in English. An online submission link will be available on the FCCM website. Papers must conform to the US letter-sized IEEE conference proceedings format to be reviewed and published. 
+ A conformant LaTeX template is availablehref="https://wp.fccm.org/templates/latex_template_fccm19.zip" - here
+. Overleaf users can find the LaTeX templatehere. A Microsoft Word template is availablehref="https://www.fccm.org/past/2024/wp-content/uploads/2023/01/word_template_fccm23.doc" - here
+. 
+ Paper Preparation: 
+ Across all topics (and especially for application papers), successful manuscripts will include sufficient details to reproduce the results presented (e.g., full part numbers, software versions). Application papers should not just be an implementation of an application on an FPGA but should show how reconfigurable technology is leveraged by the application and should ideally contain insights and lessons that can be carried forward into future designs. Additional suggestions and guidelines are available onhref="http://www.fccm.org/" - www.fccm.org
+. See the ACM/TCFPGA Hall-of-Fame (href="http://hof.tcfpga.org/hall-of-fame-nominations/hof-selection-committee/" - hof.tcfpga.org
+) and the set of previous FCCM Best Paper winners (href="http://wiki.tcfpga.org/FCCMBest" - wiki.tcfpga.org/FCCMBest
+) for outstanding examples of FCCM papers. 
+ Simultaneous Submissions: 
+ Papers must not be simultaneously under review or waiting to appear at another conference or in a journal and must not be essentially the same as any paper that has been previously published. If a paper contains text or technical content that is similar to a previously published or submitted paper, that other paper should be cited in the FCCM submission, and the differences should be made clear. 
+ Review Process: 
+ FCCM uses a double-blind reviewing system. Manuscripts must not identify authors or their affiliations. Authors are encouraged to cite their work but must not implicitly identify themselves. For example, references that clearly identify the authors (“We build on our previous work…”) should be written as “This work builds on XYZ [citation]”. Do not put a “deleted for double-blind” entry in the reference section. 
+ In the case of widely-available Open Source software, authors should cite the website(s) but not claim to own them. Authors should also remember to mask grant numbers and other government markings during the review process. Note that there are resources to blind open-source repositories for review, such ashttps://github.com/tdurieux/anonymous_github. Papers that attempt to identify authors or leverage prior work or institutional support for a competitive advantage in the peer review process will not be considered. Placing a preliminary version of the unpublished paper on arXiv is not disqualifying, but it is also not encouraged; just because a paper can be unblinded by active search will not undermine the spirit of the double-blind review. Artifacts, including open-source designs and tools, are encouraged; if there are questions about handling the blind-review process, contact the program chair. 
+ FCCM 2025 includes a rebuttal phase. Specific questions from reviewers will be made available by February 16, 2025. Authors have the option to provide an up to 500-word response by February 24, 2025. Reviewers will consider the responses during final paper deliberations. 
+ Artifact Evaluation: 
+ Authors ofacceptedfull lengthpapers can optionally participate in an artifact evaluation process. The inclusion of artifacts with a paper submission is not required for submission nor elevates the submission beyond those without. However, the goal of artifact evaluation is to encourage the availability and reproducibility of published results. 
+ Artifacts that are included with submission will be subjected to a separate and independent review process from their accompanying papers. Papers submitted with artifacts must preserve the double-blind nature of the review process and all relevant links should be removed for blind review. Artifacts will be disclosed in a separate form that will be evaluated after paper acceptance. Details of artifact submission and the evaluation process will be forthcoming and described on the FCCM website. 
+ IEEE Privacy Policy 
+ Powered by WordPress /WordPress Theme by WPSmart
+

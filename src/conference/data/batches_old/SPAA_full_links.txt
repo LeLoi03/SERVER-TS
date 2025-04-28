@@ -1,0 +1,223 @@
+Conference full name: Symposium on Parallelism in Algorithms and Architectures (SPAA)
+
+1. Website of SPAA_2: https://spaa.acm.org/
+Website information of SPAA_2:
+
+Skip to contenthref="https://spaa.acm.org/" - 
+href="https://spaa.acm.org/" - ACM Symposium on Parallelism in Algorithms and Architectures
+Portland, Oregon, July 28-August 1, 2025 
+ Menuhref="https://spaa.acm.org/organizations/" - Organizations 
+ href="https://spaa.acm.org/call-for-papers/" - Call For Papers 
+ href="https://spaa.acm.org/submission-guidelines/" - Submission Guidelines 
+ href="https://spaa.acm.org/awards/" - Awards | href="https://spaa.acm.org/best-paper-award/" - SPAA Best Paper Award 
+ href="https://spaa.acm.org/spaa-test-of-time-award/" - SPAA Test-of-Time Award 
+ href="https://spaa.acm.org/spaa-parallel-computing-award/" - SPAA Parallel Computing Award 
+ href="https://spaa.acm.org/prev-spaa/" - Previous SPAAs 
+ href="https://spaa.acm.org/spaa-mailing-list/" - SPAA Mailing List 
+ href="https://spaa.acm.org/workshops-and-tutorials/" - Workshops and Tutorials 
+ SPAA 2025 
+ The 37th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA ’25) is sponsored by the ACM Special Interest Groups on Algorithms and Computation Theory (SIGACT) and Computer Architecture (SIGARCH) and organized in cooperation with theEuropean Association for Theoretical Computer Science. 
+  
+ The conference will run July 28-August 1, 2025, in Portland, Oregon. 
+ SafeTOC: 
+ SPAA follows theACM anti-harassment policy. 
+ Sponsors: 
+ Proudly powered by WordPress~Theme: Penscratch 2 byWordPress.com.
+
+2. Website of SPAA_2: https://spaa.acm.org/call-for-papers/
+Website information of SPAA_2:
+
+Skip to contenthref="https://spaa.acm.org/" - 
+href="https://spaa.acm.org/" - ACM Symposium on Parallelism in Algorithms and Architectures
+Portland, Oregon, July 28-August 1, 2025 
+ Menuhref="https://spaa.acm.org/organizations/" - Organizations 
+ href="https://spaa.acm.org/call-for-papers/" - Call For Papers 
+ href="https://spaa.acm.org/submission-guidelines/" - Submission Guidelines 
+ href="https://spaa.acm.org/awards/" - Awards | href="https://spaa.acm.org/best-paper-award/" - SPAA Best Paper Award 
+ href="https://spaa.acm.org/spaa-test-of-time-award/" - SPAA Test-of-Time Award 
+ href="https://spaa.acm.org/spaa-parallel-computing-award/" - SPAA Parallel Computing Award 
+ href="https://spaa.acm.org/prev-spaa/" - Previous SPAAs 
+ href="https://spaa.acm.org/spaa-mailing-list/" - SPAA Mailing List 
+ href="https://spaa.acm.org/workshops-and-tutorials/" - Workshops and Tutorials 
+ Call For Papers 
+ Thehref="https://spaa.acm.org/" - 37th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA ’25)
+will run on July 28—August 1, 2025 in Portland, Oregon. 
+ Papers will be submitted through HotCRP on thehref="https://spaa25.hotcrp.com" - submission site
+. 
+ Submissions are sought in all areas of parallel and distributed computing, including algorithms, data structures, computational models, complexity theory, architectures, performance engineering, languages, runtime systems, compilers, programming systems, and networking systems. Papers that are purely theoretical, purely experimental, or contain both theory and experiments are welcome. Topics of interest include, but are not limited to: 
+ Parallel and Distributed Algorithms 
+ Parallel, Concurrent, and Distributed Data Structures 
+ Models for Parallel and Distributed Computing 
+ Parallel and Distributed Architectures 
+ Parallel Programming Languages 
+ System Software for Parallel and Concurrent Programming (including but not limited to Runtime, Compilers, and Tools) 
+ Parallel Programming Frameworks and Domain-Specific Languages 
+ Management of Massive Data Sets 
+ Transactional Memory Hardware and Software 
+ Supercomputer Architecture and Computing 
+ Routing and Information Dissemination 
+ Peer-to-Peer Systems 
+ Mobile, Ad-Hoc, and Sensor Networks 
+ Synergy of Parallelism in Algorithms, Programming and Architecture 
+ Memory or I/O-efficient algorithms 
+ Parallel Complexity Theory 
+ Green Computing & Power-Efficient Architectures 
+ Instruction Level Parallelism and VLSI 
+ Scheduling Algorithms for Parallel Machines 
+ Parallelism in Quantum Computing 
+ Important Deadlines: 
+  
+ Abstract registration: | February 21, 2025 11:59pm AoE 
+ Full papers submission: | February 28, 2025 11:59pm AoE 
+ Rebuttal Period: | April 22–29, 2025 11:59pm AoE 
+ Notification: | May 20, 2025 
+ Camera-ready: | June 20, 2025 
+ Program Committee 
+ Umut Acar (Carnegie Mellon University) 
+ Jatin Arora (Amazon) 
+ Ariful Azad (Texas A&M University) 
+ Jonathan Baker (University of Texas at Austin) 
+ George Biros (University of Texas at Austin) 
+ Guy Blelloch (Carnegie Mellon University) 
+ Aydin Buluc (Lawrence Berkeley National Lab)(Area Chair) 
+ Arthur Chargueraud (INRIA) 
+ Rezaul Chowdhury (Stony Brook University) 
+ Albert Cohen (Google) 
+ Laxman Dhulipala (University of Maryland) 
+ Peter Dinda (Northwestern University)(Area Chair) 
+ Yongshan Ding (Yale University)(Area Chair) 
+ Magdalen Dobson Manohar (Microsoft) 
+ Wu Feng (Virginia Tech) 
+ Jeremy Fineman (Georgetown University)(Area Chair) 
+ Matthew Fluet (Rochester Institute of Technology) 
+ Ian Foster (University of Chicago and Argonne National Laboratory) 
+ Pierre Fraigniaud (IRIF) 
+ Phil Gibbons (Carnegie Mellon University) 
+ Seth Gilbert (National University of Singapore) 
+ Mike Goodrich (University of California, Irvine) 
+ Giulia Guidi (Cornell University) 
+ MohammadTaghi Hajiaghayi (University of Maryland) 
+ Mert Hidayetoglu (Stanford University) 
+ Changwan Hong (Massachusetts Institute of Technology) 
+ Sungjin Im (University of California Santa Cruz) 
+ Zhihao Jia (Carnegie Mellon University)(Area Chair) 
+ Rob Johnson (VMware Research, USA) 
+ Temesghen Kahsai (Amazon) 
+ William Kuszmaul (Carnegie Mellon University) 
+ Doug Lea (State University of New York) 
+ Jaejin Lee (Seoul National University) 
+ Angelina Lee (Washington University in St. Louis)(Area Chair) 
+ Jiajia Li (North Carolina State University) 
+ Quanquan Liu (Yale University) 
+ Yuan Liu (North Carolina State University) 
+ John Martyn (Massachusetts Institute of Technology) 
+ Ben Moseley (Carnegie Mellon University) 
+ William Moses (University of Illinois Urbana-Champaign) 
+ Eda Oktay (Max Planck Institute for Dynamics of Complex Technical Systems) 
+ Ivy Peng (Lawrence Livermore National Laboratory) 
+ Ali Pinar (Lawrence Livermore National Laboratory) 
+ Vijaya Ramachandran (University of Texas at Austin) 
+ Bin Ren (William & Mary) 
+ Ponnuswamy Sadayappan (University of Utah) 
+ Nodari Sitchinava (University of Hawaii) 
+ Yihan Sun (University of California, Riverside) 
+ Sean Treichler (NVIDIA) 
+ Jeffrey Vetter (Oak Ridge National Laboratory) 
+ Michael Vollmer (University of Kent) 
+ Yuanhao Wei (University of British Columbia) 
+ Sam Westrick (New York University)(Area Chair) 
+ Helen Xu (Georgia Institute of Technology) 
+ Rohan Yadav (Stanford University) 
+ Gu Yan (University of California, Riverside) 
+ Jidong Zhai (Tsinghua University) 
+ Hengyun Zhou (Harvard University and QuEra Computing) 
+ Junior Program Committee 
+ Julian Bellavita (Cornell University) 
+ Vivek Bharadwaj (University of California Berkeley) 
+ Yuxin Chen (NVIDIA) 
+ Quinten De Man (University of Maryland) 
+ Kishen Nagaraj Gowda (University of Maryland) 
+ Peyman Jabbarzade (University of Maryland) 
+ Hongbo Kang (Tsinghua University) 
+ Zecheng Li (North Carolina State University) 
+ Pengyu Liu (Carnegie Mellon University) 
+ John Martyn (Massachusetts Institute of Technology) 
+ Jan Olkowski (University of Maryland) 
+ Tobias Rubel (University of Maryland) 
+ Sayam Sethi (University of Texas at Austin) 
+ Milan Shah (North Carolina State University) 
+ Zheqi Shen (University of California, Riverside) 
+ Alok Tripathy (University of California Berkeley) 
+ Letong Wang (University of California, Riverside) 
+ Dong Xiaojun (University of California, Riverside) 
+ Mingkuan Xu (Carnegie Mellon University) 
+ Rohan Yadav (Stanford University) 
+ Yanbo Zhao (North Carolina State University) 
+ Yiwei Zhao (Carnegie Mellon University) 
+ Submission Overview: 
+ Please indicate in the title of your submission whether this is a regular paper or a brief announcement. All regular rejected papers will automatically be considered for brief announcements. Titles of regular papers that should not be considered for this option should mention “full paper only” after the title. Submissions must use the final ACM “acmsmall” format fromhttps://www.acm.org/publications/proceedings-template. More details are athref="https://spaa.acm.org/submission-guidelines/" - https://spaa.acm.org/submission-guidelines/
+. 
+ Regular Papers: 
+ A regular paper submission must report on original research that has not been previously or concurrently published. 
+ Each paper should have no more than 20 pages of text, excluding bibliography, using the acmart LaTeX class with acmsmall option). It is a single-column page layout with a 10 pt font, 12 pt line spacing. In this format, the main text block is 5.478 in (13.91 cm) wide and 7.884 in (20.03 cm) tall. Use of a different format (e.g., smaller fonts or a larger text block) is grounds for summary rejection. 
+ All necessary details to substantiate the main claims of the paper should be included either in the body of the paper or in a supplementary material. However, the reviewers are not obligated to read the supplementary material. 
+ Brief Announcements: 
+ Examples of good brief announcements include: work in progress, announcement of tools/libraries, challenge problems posted to the community, and corrections to earlier results. Brief announcements may also include smaller results of interest. Submitted manuscripts may not exceed six single-column pages for brief announcements excluding the bibliography. 
+ Theory vs. Experiments 
+ A submission naturally falls into one of the following three categories. 
+ A.Theory (main contributions are theoretical) 
+ B.Experiments (main contributions are experimental) 
+ C.Theory and Experiments (main contributions are a mix of theory and experiments) 
+ To help assign suitable reviewers, please indicate which category the submission belongs to during the submission process. 
+ Double-Blind Policy: 
+ SPAA 2025 will employ a lightweight double-blind review process. That means, the submission should omit authors’ names, affiliations, and contact information. In addition, if the submission refers to prior work done by the authors, the reference should be made in the third person. Any supplemental materials, if applicable, should also be anonymized. However, authors are free to disseminate their ideas or draft versions of the paper as they normally would, such as submitting them to arXiv or giving talks on their research ideas. The reviewers will be asked to refrain from actively looking for the identity of the authors via web search. 
+ Conflict of Interest Policy: 
+ To ensure a fair and high-quality reviewing process we ask ALL authors of a submitted paper to register their conflicts with the PC members at the submission site. The following categories are considered as a conflict of interest: 
+ Academic advisor or advisee (with no time limit) 
+ Postdoctoral mentor or mentee (with no time limit) 
+ Collaborators within the past three years, including a joint research or development project, a joint paper, or a funding relationship 
+ Members of the same institution within the past 3 years 
+ Family members or close friends 
+ Someone involved in an alleged incident of harassment (not required that the incident be reported) 
+ Anyone whose relationship with an author would prevent the reviewer from being objective in his/her assessment 
+ Note that if the program chair has reason to doubt the validity of the claim of conflict of interest, then they may request that a ToC advocate confidentially verify the reason for the conflict. Falsely declared conflicts (i.e., do not satisfy one of the listed reasons) risk rejection without consideration of merit. If an author believes that he or she has a valid reason for a conflict of interest not listed above or if he or she is uncertain, the author is encouraged to contact the program chair. 
+ Proudly powered by WordPress~Theme: Penscratch 2 byWordPress.com.
+
+3. Website of SPAA_2: https://spaa.acm.org/spaa-2024-2/
+Website information of SPAA_2:
+
+Skip to contenthref="https://spaa.acm.org/" - 
+href="https://spaa.acm.org/" - ACM Symposium on Parallelism in Algorithms and Architectures
+Portland, Oregon, July 28-August 1, 2025 
+ Menuhref="https://spaa.acm.org/organizations/" - Organizations 
+ href="https://spaa.acm.org/call-for-papers/" - Call For Papers 
+ href="https://spaa.acm.org/submission-guidelines/" - Submission Guidelines 
+ href="https://spaa.acm.org/awards/" - Awards | href="https://spaa.acm.org/best-paper-award/" - SPAA Best Paper Award 
+ href="https://spaa.acm.org/spaa-test-of-time-award/" - SPAA Test-of-Time Award 
+ href="https://spaa.acm.org/spaa-parallel-computing-award/" - SPAA Parallel Computing Award 
+ href="https://spaa.acm.org/prev-spaa/" - Previous SPAAs 
+ href="https://spaa.acm.org/spaa-mailing-list/" - SPAA Mailing List 
+ href="https://spaa.acm.org/workshops-and-tutorials/" - Workshops and Tutorials 
+ SPAA 2024 
+ The 36th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA ’24) is sponsored by the ACM Special Interest Groups on Algorithms and Computation Theory (SIGACT) and Computer Architecture (SIGARCH) and organized in cooperation with theEuropean Association for Theoretical Computer Science. 
+  
+ The conference will run June 17—21, 2024, in Nantes, France, together with PODC 2024. 
+ Links to the pages 
+ href="https://spaa.acm.org/2024-call-for-papers/" - Call for papers 
+ href="https://spaa.acm.org/2024-submission-guidelines/" - Submission guidelines 
+ href="https://spaa.acm.org/2024-call-for-workshops-and-tutorials/" - Call for workshops and tutorials 
+ href="https://spaa.acm.org/2024-organization/" - Organizations 
+ href="https://spaa.acm.org/2024-program/" - Program 
+ href="https://spaa.acm.org/2024-local-information/" - Local Information 
+ href="https://spaa.acm.org/2024-nsf-student-travel-grant/" - NSF student travel grant 
+ Other News: 
+ The recorded videos for the data structure workshop: | [link] | . 
+ Prof. Peter Sanders provided the | href="https://www.cs.ucr.edu/~ygu/SPAA/2024/aeModels.pdf" - slides | and the | href="https://www.cs.ucr.edu/~ygu/SPAA/2024/presentation.pdf" - book chapter | for the tutorial talk. You can take a look before the tutorial! 
+ SafeTOC: 
+ SPAA follows theACM anti-harassment policy. 
+ Sponsors: 
+ Platinum: 
+ Gold: 
+ Silver: 
+ Proudly powered by WordPress~Theme: Penscratch 2 byWordPress.com.
+

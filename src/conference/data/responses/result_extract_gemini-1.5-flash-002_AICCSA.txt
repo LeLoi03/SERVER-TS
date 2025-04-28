@@ -1,0 +1,34 @@
+```json
+{
+  "Conference dates": "October 19 - 22, 2025",
+  "Year": "2025",
+  "Location": "Pullman Hotel, Doha, Qatar",
+  "City-State-Province": "Doha",
+  "Country": "Qatar",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Regular paper submission deadline": "May 19, 2025"
+  },
+  "Notification Date": {
+    "Notification to authors": "June 30, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready and copyright submission deadline": "September 1, 2025"
+  },
+  "Registration Date": {
+    "Authors registration deadline": "September 1, 2025"
+  },
+  "Other Date": {
+    "Workshop and Track proposals due": "April 7, 2025",
+    "Notification of acceptance": "April 10, 2025",
+    "Tutorial proposals due": "June 30, 2025",
+    "Notification of acceptance": "July 7, 2025",
+    "Paper proposals due": "June 30, 2025",
+    "Notification of acceptance": "July 28, 2025"
+  },
+  "Topics": "Computer Systems, Applications, Distributed Computing, Data Science, Security, Machine Learning, Ubiquitous Computing, Parallel Computing, Distributed Computing, Cloud Computing, IoT, Network Technologies, Sensor Technologies, Blockchain Technologies, Security, Privacy, Trust, Data Science, Knowledge Engineering, Ontologies, Information Retrieval, Big Data, Databases, Knowledge Systems, Artificial Intelligence, Cognitive Systems, Natural Language Processing, Multimedia, Computer Vision, Image Processing",
+  "Summary": "The ACS/IEEE 22nd International Conference on Computer Systems and Applications (AICCSA 2025) will be held from October 19–22, 2025, in Doha, Qatar.  This premier conference covers contemporary areas in computer systems and applications, providing an international forum for academics, industry researchers, developers, and practitioners to share groundbreaking contributions in various IT fields.",
+  "Call for Papers": "# AICCSA 2025: Call for Research Papers\n\nThe ACS/IEEE International Conference on Computer Systems and Applications (AICCSA) is the premier conference covering all contemporary areas in computer systems and applications. AICCSA 2025 will be held in **Doha, Qatar**.\n\n## Tracks\n\nSubmissions may include technical and experimental studies, theoretical studies, conceptual studies, or surveys. All submissions will be peer-reviewed on the basis of relevance, originality, importance, and clarity.  Submissions should be assigned to one of the following tracks:\n\n*   Track 1: Ubiquitous, Parallel, and Distributed Computing (including cloud, IoT, network, sensors, and blockchain technologies)\n*   Track 2: Security, Privacy, and Trust\n*   Track 3: Data Science, Knowledge Engineering, and Ontologies (including Information Retrieval, Big Data, Databases, and Knowledge Systems)\n*   Track 4: Artificial Intelligence & Cognitive Systems\n*   Track 5: Natural Language Processing\n*   Track 6: Multimedia, Computer Vision, and Image Processing\n\n## Submission Guidelines and Proceedings\n\nManuscripts must be prepared in 10-point font using the IEEE 8.5″ x 11″ two-column conference format. All papers must not exceed 8 pages and should be exported in PDF format and anonymous since IEEE AICCSA manages a double-blind review process. The official language for the conference is English.\n\nThe papers must be submitted electronically on EasyChair: [https://easychair.org/conferences/?conf=aiccsa2025](https://easychair.org/conferences/?conf=aiccsa2025)\n\n## Important Dates\n\n*   **Regular paper submission deadline:** May 19, 2025\n*   **Notification to authors:** June 30, 2025\n*   **Camera-ready and copyright submission deadline:** September 1, 2025\n*   **Authors registration deadline:** September 1, 2025\n\n### Workshops/Special Tracks\n\n*   **Workshop and Track proposals due:** April 7, 2025\n*   **Notification of acceptance:** April 10, 2025\n\n### Tutorial Proposals\n\n*   **Tutorial proposals due:** June 30, 2025\n*   **Notification of acceptance:** July 7, 2025\n\n### PhD Forum and Posters\n\n*   **Paper proposals due:** June 30, 2025\n*   **Notification of acceptance:** July 28, 2025"
+}
+```

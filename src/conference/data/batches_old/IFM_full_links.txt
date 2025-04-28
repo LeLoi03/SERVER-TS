@@ -1,0 +1,291 @@
+Conference full name: Integrated Formal Methods (IFM)
+
+1. Website of IFM_2: https://www.ifmconference.org/
+Website information of IFM_2:
+
+href="/" - iFM Conference
+Home 
+ href="https://ifm2025.ens.psl.eu/" - iFM 2025 
+ Organization 
+ History 
+ The International Conference on integrated Formal Methods 
+ href="/" - iFM Conference
+Applying formal methods may involve the usage of different formalisms and different analysis techniques to validate a system, either because individual components are most amenable to one formalism or technique, because one is interested in different properties of the system, or simply to cope with the sheer complexity of the system. 
+ The iFM conference series seeks to further research into hybrid approaches to formal modelling and analysis; i.e., the combination of (formal and semi-formal) methods for system development, regarding both modelling and analysis. The conference covers all aspects from language design through verification and analysis techniques to tools and their integration into software engineering practice. 
+ Scope 
+ Areas of interest include but are not limited to:Formal and semi-formal modelling notations 
+ Combining formal methods 
+ Integration of formal methods into software engineering practice 
+ Program verification, model checking, and static analysis 
+ Runtime analysis, monitoring, and testing 
+ Program synthesis 
+ Analysis and synthesis of hybrid, embedded, probabilistic, distributed, or concurrent systems 
+ Model learning 
+ Theorem proving, decision procedures, SAT and SMT solving 
+ Sponsors 
+ Home 
+ href="https://ifm2025.ens.psl.eu/" - iFM 2025 
+ Organization 
+ History
+
+2. Website of IFM_2: https://ifm2025.ens.psl.eu/
+Website information of IFM_2:
+
+href="/" - iFM 2025
+href="https://www.ifmconference.org" - iFM 
+ href="/call_for_papers/" - Call for Papers 
+ Venue 
+ Workshops 
+ Organization 
+ iFM 2025 
+ 17-21 November 2025, Paris, France 
+ The 20th International Conference on Integrated Formal Methods (iFM 2025) will take place on 19–21 November 2025 at Inria Paris, France, with co-located workshops scheduled for 17-18 November 2025. 
+ Important Dates (AoE) 
+  
+ Abstract Submission | 30 May 2025 
+ Paper Submission | 6 June 2025 
+ Author Notification | 08 Aug 2025 
+ Artifact Registration | 15 Aug 2025 
+ Artifact Submission | 22 Aug 2025 
+ Artifact Notification | 24 Sep 2025 
+ Camera-Ready Papers | 26 Sep 2025 
+ Submission Link 
+ href="https://easychair.org/conferences/?conf=ifm2025" - https://easychair.org/conferences/?conf=ifm2025
+Sponsors 
+  
+ href="/call_for_papers/" - Call for Papers
+Objectives and Scope 
+ In the last decades, we have witnessed a proliferation of approaches that 
+ integrate several modelling, verification and simulation techniques, 
+ facilitating more versatile and efficient analysis of software-intensive 
+ systems. These approaches provide powerful support for the analysis of 
+ different functional and non-functional properties of the systems, complex 
+ interaction of components of different nature as well as validation of 
+ diverse aspects of system behaviour. The iFM conference series is a forum 
+ for discussing recent research advances in the development of integrated 
+ approaches to formal modelling and analysis. The conference covers all 
+ aspects of the design of integrated techniques, including language design, 
+ verification and validation, automated tool support and the use of such 
+ techniques in software engineering practice. To credit the effort of tool 
+ developers, we use EAPLS artifact badging. 
+ href="/call_for_papers/" - read more
+OrganizationGeneral Chair 
+ Caterina Urban | , Inria & ENS | PSL, France 
+ Program Committee Chairs 
+ Ferruccio Damiani | , Università degli Studi di Torino, Italy 
+ Marie Farrell | , University of Manchester, UK 
+ Publicity Chair 
+ href="https://giorgio.audrito.info/#!/research" - Giorgio Audrito | , Università degli Studi di Torino, Italy 
+ read moreVenueThe conference will be hosted by theInria Paris Center, located at 
+ 48 Rue Barrault 
+ 75013 Paris 
+ France© Inria / Photo L. Moreno 
+ read moreMore 
+ Workshopshref="https://ifm2025.ens.psl.eu/" - ©  iFM 2025
+
+3. Website of IFM_2: https://fmasworkshop.github.io/FMAS2024/
+Website information of IFM_2:
+
+International Workshop on Formal Methods for Autonomous Systems 
+ WorkshopsFMAS 2024FMAS 2023FMAS 2022FMAS 2021FMAS 2020FMAS 2019Special IssuesAFMAS 2023ContactOrganisation 
+ Sixth International Workshop on Formal Methods for Autonomous Systems 
+ FMAS 2024 is a two-and-a-half day peer-reviewed international workshop that brings together researchers working on a range of techniques for the formal verification of autonomous systems, to present recent work in the area, discuss key challenges, and stimulate collaboration between autonomous systems and formal methods researchers. Previous editions are listed on DBLP:https://dblp.dagstuhl.de/db/conf/fmas/index.html. 
+ If you are on social media you can follow FMAS on: 
+ BlueSky: | https://bsky.app/profile/fmasworkshop.bsky.social 
+ Mastadon: | https://mastodon.acm.org/@FMASWorkshop 
+ Twitter: | https://twitter.com/FMASWorkshop 
+ You can find posts about year’s workshop using the tag #fmas2024, which you can use too in your own posts about FMAS. 
+ Autonomous systems present unique challenges for formal methods. They are often embodied in robotic systems that can interact with the real world, and they make independent decisions. Amongst other categories, they can be viewed as safety-critical, cyber-physical, hybrid, and real-time systems. 
+ Key challenges for applying formal methods to autonomous systems include: 
+ the system’s dynamic deployment environment; 
+ verifying the system’s decision making capabilities – including planning, ethical, and reconfiguration choices; and 
+ using formal methods results as evidence given to certification or regulatory organisations. 
+ FMAS welcomes submissions that use formal methods to specify, model, or verify autonomous systems; in whole or in part. We are especially interested in work using integrated formal methods, where multiple (formal or non-formal) methods are combined during the software engineering process. We encourage submissions that are advancing the applicability of formal methods for autonomous systems, for example improving integration or explainability, automation or knowledge transfer of these technique; a wider discussion of these principles can be found in‘A Manifesto for Applicable Formal Methods’. 
+ Autonomous systems are often embedded in robotic or cyber-physical systems, and they share many features (and verification challenges) with automated systems. FMAS welcomes submissions with applications to: 
+ automated systems, 
+ semi-autonomous systems, or 
+ fully-autonomous systems. 
+ Topics 
+ Topics of interest include (but are not limited to): 
+ Applicable, tool-supported Formal Methods that are suited to Autonomous Systems, 
+ Runtime Verification or other formal approaches to deal with the | reality gap | (the gap between models/simulations and the real world), 
+ Verification against safety assurance arguments or standards documents, 
+ Formal specification and requirements engineering approaches for autonomous systems, 
+ Case Studies that identify challenges when applying formal methods to autonomous systems, 
+ Experience Reports that provide guidance for tackling challenges with formal methods or tools, or 
+ Discussions of the future directions of the field. 
+ Because the above list is not exhaustive, if you are unsure if your paper is in scope for FMAS please feel free to email us (details below) to discuss it. 
+ Submission and Publication 
+ Submissions must be prepared using theEPTCS LaTeX style. 
+ There are four categories of submission: 
+ Vision papers | 6 pages (excluding references) | describe directions for research into Formal Methods for Autonomous Systems; 
+ Research previews | 6 pages (excluding references) | describe well-defined research ideas that are in their early stages, and my not be fully developed yet. Work from PhD students is particularly welcome; 
+ Experience report papers | 15 pages (excluding references) | report on practical experiences in applying Formal Methods to Autonomous Systems, focussing on the experience and lessons to be learnt; 
+ Regular papers | 15 pages (excluding references) | describe completed applications of Formal Methods to an Autonomous System, new or improved approaches, evaluations of existing approaches, and so on. 
+ You will need to select one of the four submission categories during submission. 
+ These categories are intended to help you show your intent for your paper, and to allow a fairer comparison of papers. For example, a Research Preview wont be judged as not developed enough for acceptance, just because it is being compared to a Standard Paper. The category descriptions are not exhaustive and should be interpreted broadly. If you are unsure if your paper clearly fits into one of these categories, please feel free to email us (details below) to discuss it. 
+ Please submit your paper via EasyChair:https://easychair.org/conferences/?conf=fmas2024. 
+ Best Paper 
+ For the first time, FMAS 2024 will honour the best paper selected with respect to reviews, program committee discussions, and conference presentations with an award. 
+ Special Issue 
+ We will organise a journal special issue to collect extensions of papers accepted in FMAS 2024. Look out for more details as we announce them. 
+ Important Dates 
+ Submission:9th August 2024Extended to 23rd of August 2024(AOE) 
+ Notification: | 26th September 2024 
+ Final Version due: | 10th of October 2024 
+ Workshop: 11th – 13th of November 2024 
+ Venue and Registration 
+ FMAS 2024 will be held on the 11th, 12th and 13th of November 2024, co-located with thehref="https://ifm2024.cs.manchester.ac.uk/" - International Conference on Integrated Formal Methods (iFM) 2024
+, hosted by the University of Manchester, UK. 
+ The two main days of FMAS 2024 (the 11th and 12th) will be held at theCore Technology Facilityon the corner of Grafton Street and Upper Brook Street. The shared invited talk and joint session (on the 13th) will be atThe Whitworth Galleryon Oxford Road. The iFM website gives some more details about thesehref="https://ifm2024.cs.manchester.ac.uk/venue.html" - venues
+. 
+ We will accept participation in-person and remotely: 
+ At least one author per paper must register and pay for | on-site | attendance at FMAS, even if the paper will be presented remotely – this is to ensure we cover the costs of running FMAS as a satellite workshop at iFM. Register | href="https://ifm2024.cs.manchester.ac.uk/registration.html" - here | for on-site attendance. 
+ Presenting or participating | online | will be free. Register | here | for online attendance. 
+ If you are presenting your remotely, please contact us at | FMASWorkshop@tutanota.com | to let us know so that we can make the necessary arrangements. 
+ Student Registration Fee Support 
+ We are pleased to be able to offer free registration (FMAS only) for a limited number of students attending the FMAS 2024. This is possible thanks to sponsorship by theFormal Methods Europeassociation. Details are still being decided and will be announced. Any questions can be directed atFMASWorkshop@tutanota.com. 
+ Programme Information 
+ Schedule 
+ (All times are inGrenwich Mean Time) 
+ Day One: 11th of November 2024 (Core Technology Facility) 
+ All sessions on Day One will be in the Innovation Suite at theCore Technology Facility 
+ 09:00 - 11:00: Refreshments and Registration11:00 - 11:15: Welcome by Matt Luckcuck (General Chair)11:15 - 12:30Invited Talk: 'Self-Adaptation in Autonomous Systems' - Dr Silvia Lizeth Tapia Tarifa from the University of Oslo 
+ Chair: Matt Luckcuck12:30 - 14:00: LunchSession 1: Hybrid Systems 
+ Chair: Angelo Ferrando14:00 - 14:30 : Autonomous System Safety Properties with Multi-Machine Hybrid Event-B - Richard Banach 
+ 14:30 - 15:00 : Formal simulation and visualisation of hybrid programs - Pedro Mendes, Ricardo Correia, Renato Neves, and José Proença 
+ 15:00 - 15:30: BREAKSession 2: Runtime Monitoring 
+ Chair: Mario Gleirscher15:30 - 16:00 : ROSMonitoring 2.0: Extending ROS Runtime Verification to Services and Ordered Topics - Maryam Ghaffari Saadat, Angelo Ferrando, Louise A. Dennis, and Michael Fisher 
+ 16:00 - 16:30 : Verification of Behavior Trees with Contingency Monitors - Serena Serbinowska, Nicholas Potteiger, Anne Tumlin, and Taylor T Johnson 
+ 16:30 - 17:00 : RV4Chatbot: Are Chatbots Allowed to Dream of Electric Sheep? - Andrea Gatti, Viviana Mascardi and Angelo Ferrando 
+ 17:00Day One CloseDay Two: 12th of November 2024 (Core Technology Facility) 
+ All sessions on Day Two will be in the Innovation Suite at theCore Technology Facility 
+ 08:45 - 09:00: WelcomeSession 3: Control Algorithms 
+ Chair: Youcheng Sun09:00 - 09:30 : Model checking and verification of synchronisation properties of cobot welding - Yvonne Murray, Henrik Nordlie, David A. Anisi, Pedro Ribeiro, and Ana Cavalcanti 
+ 09:30 - 10:00 : Synthesising Robust Controllers for Robot Collectives with Recurrent Tasks: A Case Study - Till Schnittka and Mario Gleirscher 
+ 10:00 - 10:30 : A Case Study on Numerical Analysis of a Path Computation Algorithm - Grégoire Boussu, Nikolai Kosmatov and Franck Vedrine 
+ 10:30 - 11:00: BREAKSession 4: Multi-Layerd Verification 
+ Chair: Rosemary Monahan11:00 - 11:15 : Cross-layer Formal Verification of Robotic Systems - Sylvain Raïs, Julien Brunel, David Doose, and Frédéric Herbreteau 
+ 11:15 - 11:30 : Using Formal Models, Safety Shields and Certified Control to Validate AI-Based Train Systems - Jan Gruteser, Jan Roßbach, Fabian Vu and Michael Leuschel 
+ Tutorial Session - Model-Checking Agent Programming Languages: The MCAPL Framework 
+ Delivered By: Louise A. Dennis, University of Manchester12:30 - 14:00: LunchSession 5: Formal Methods for Machine Learning 
+ Chair: Taylor Johnson14:00 - 14:30 : Model Checking for Reinforcement Learning in Autonomous Driving: One Can Do More Than You Think! - Rong Gu 
+ 14:30 - 15:00 : Creating a Formally Verified Neural Network for Autonomous Navigation: An Experience Report - Syed Ali Asadullah Bukhari, Thomas Flinkow, Medet Inkarbekov, Barak A. Pearlmutter, and Rosemary Monahan 
+ 15:00 - 15:30: BREAKSession 6: Open challenges and Discussion 
+ Chair: Akhila Bairy15:30 - 15:45 : Open Challenges in the Formal Verification of Autonomous Driving - Paolo Burgio, Angelo Ferrando and Marco Villani 
+ 15:45 - 17:00 : Discussion - Challenges and Solutions (Akhila Bairy, Maike Schwammberger, Simon Kolker) 
+ 17:00Day Two Close18:30 - Late: FMAS 2024 Social DinnerFMAS 2024 Social Dinner. More details to follow. 
+ Day Three: 13th of November 2024 (The Whitworth Gallery) 
+ Day Three is a half-day, shared with iFM, inThe Whitworth Gallery. For the full details of their schedule, please see thehref="https://ifm2024.cs.manchester.ac.uk/program.html" - iFM Program
+. 
+ 08:45 - 09:20: iFM Arrival and Registration09:20 - 09:30: iFM Opening09:30 - 10:30Joint iFM/FMAS Invited Talk: 'Proof for Industrial Systems using Neural Certificates' - Prof. Daniel Kröning from Amazon 
+ Chair: Laura Kovács10:30 - 11:00: BREAKJoint iFM/FMAS Session: iFM Practices and Verification 
+ Chair: Mengwei Xu11:00 : A Formal Tainting-Based Framework for Malware Analysis (iFM 2024 paper) - Andrei-Catalin Mogage and Dorel Lucanu 
+ 11:30 : Formalizing Stateful Behavior Trees (FMAS 2024 paper) - Serena Serbinowska, Preston Robinette, Gabor Karsai, and Taylor T Johnson 
+ 12:00 : A Systematic Literature Review on a Decade of Industrial TLA+ Practice (iFM 2024 paper) - Roman Bögli, Leandro Lerena, Christos Tsigkanos and Timo Kehrer 
+ 12:15 : Proving Termination via Measure Transfer in Equivalence Checking (iFM 2024 paper) - Dragana Milovančević, Carsten Fuhs, Mario Bucev and Viktor Kunčak 
+ 12:30 - 14:00: Lunch14:00: Rejoins iFM ProgramInvited Talks 
+ Dr Silvia Lizeth Tapia Tarifais an Associate Professor at the Department of Informatics, University of Oslo. Her main research area in formal methods for parallel and distributed systems. 
+ Title | : | Self-Adaptation in Autonomous Systems 
+ Abstract | : Self-adaptation is a crucial feature of autonomous systems that must cope with uncertainties in, e.g., their environment and their internal state. A self-adaptive system (SAS) can be realised as a multi-layered system, e.g., a two-layered systems that have a separation of concerns between the domain-specific functionalities of the system (the managed subsystem) and the adaptation logic (the managing subsystem), which introduces an external feedback loop for managing adaptation in the system; or as a three-layered system, where the third layer can implement a feedback loop for architectural self-adaptation, which is used to reconfigure the second layer (the adaptation logic of the managing subsystem). In this talk I will present techniques that can capture the SAS’s variability, concretely software product lines, where the managing subsystem of an SAS can be modelled as a control layer capable of dynamically switching between valid configurations of the managed subsystem; and declarative stages in a lifecycle of a system, where we do not require explicit modelling of the transitions between stages in the lifecycles of a system; however, characteristics on an stage can be observed, which after observation may trigger changes in the self-adaptation logic itself. 
+ Prof. Daniel Kröningis a Senior Principal Applied Scientist at Amazon, where he works on the correctness of the Neuron Compiler for distributed training and inference. Prior to joining Amazon, he worked as a Professor of Computer Science at the University of Oxford and is the co-founder of Diffblue Ltd., a University spinout that develops AI that targets code and code-like artefacts. He has received the Semiconductor Research Corporation (SRC) Inventor Recognition Award, an IBM Faculty Award, a Microsoft Research SEIF Award, and the Wolfson Research Merit Award. He serves on the CAV steering committee and was co-chair of FLOC 2018, EiC of Springer FMSD, and is co-author of the textbooks on Decision Procedures and Model Checking. 
+ Title | : | Proof for Industrial Systems using Neural Certificates 
+ Abstract | : We introduce a novel approach to model checking software and hardware that combines machine learning and symbolic reasoning by using neural networks as formal proof certificates. We train our neural certificates from randomly generated executions of the system and we then symbolically check their validity which, upon the affirmative answer, establishes that the system provably satisfies the specification. We leverage the expressive power of neural networks to represent proof certificates and the fact that checking a certificate is much simpler than finding one. As a result, our machine learning procedure is entirely unsupervised, formally sound, and practically effective. We implemented a prototype and compared the performance of our method with the state-of-the-art academic and commercial model checkers on a set of Java programs and hardware designs written in SystemVerilog. 
+ Invited Tutorials 
+ Louise Dennisis a Senior Lecturer at the University of Manchester. Her background is in artificial intelligence and more specifically in agent and autonomous systems and automated reasoning. She has worked on the development of several automated reasoning and theorem proving tools, most notably theAgent JPF model checkerfor BDI agent languages; thelambda-clam proof planning system(also archived at theTheorem Prover Museum); and the PROSPER Toolkit for integrating an interactive theorem prover (HOL) with automated reasoning tools (such as SAT solvers) and Case/CAD tools. More recently she has investigated rational agent programming languages and architectures for autonomous systems, with a particular emphasis on verifiable systems and ethical reasoning. 
+ Title | : | Model-Checking Agent Programming Languages: The MCAPL Framework 
+ Accepted Papers 
+ RV4Chatbot: Are Chatbots Allowed to Dream of Electric Sheep? 
+ Authors: | Andrea Gatti, Viviana Mascardi, and Angelo Ferrando 
+ Abstract: | Chatbots have become integral to various application domains, including those with safety-critical considerations. As a result, there is a pressing need for methods that ensure chatbots consistently adhere to expected, safe behaviours. In this paper, we introduce RV4Chatbot, a Runtime Verification framework designed to monitor deviations in chatbot behaviour. We formalise expected behaviours as interaction protocols between the user and the chatbot. We present the RV4Chatbot design and describe two implementations that instantiate it: RV4Rasa, for monitoring chatbots created with the Rasa framework, and RV4Dialogflow, for monitoring Dialogflow chatbots. Additionally, we detail experiments conducted in a factory automation scenario using both RV4Rasa and RV4Dialogflow. 
+ Autonomous System Safety Properties with Multi-Machine Hybrid Event-B 
+ Authors: | Richard Banach 
+ Abstract: | Event-B is a well known methodology for the verified design and development of systems that can be characterised as discrete transition systems. Hybrid Event-B is a conservative extension that interleaves the discrete transitions of Event-B (assumed to be temporally isolated) with episodes of continuously varying state change. While a single Hybrid Event-B machine is sufficient for applications with a single locus of control, it will not do for autonomous systems, which have several loci of control by default. Multi-machine Hybrid Event-B is designed to allow the specification of systems with several loci of control. The formalism is succinctly surveyed, pointing out the subtle semantic issues involved. The multi-machine formalism is then used to specify a relatively simple incident response system, involving a controller, two drones and three responders, working in a partly coordinated and partly independent fashion to manage a putative hazardous scenario. 
+ Model Checking for Reinforcement Learning in Autonomous Driving: One Can Do More Than You Think! 
+ Authors: | Rong Gu 
+ Abstract: | Most reinforcement learning (RL) platforms use high-level programming languages, such as OpenAI Gymnasium using Python. These frameworks provide various API and benchmarks for testing RL algorithms in different domains, such as autonomous driving (AD) and robotics. These platforms often emphasise the design of RL algorithms and the training performance but neglect the correctness of models and reward functions, which can be crucial for the successful application of RL. This paper proposes using formal methods to model AD systems and demonstrates how model checking (MC) can be used in RL for AD. Most studies combining MC and RL focus on safety, such as safety shields. However, this paper shows different facets where MC can strengthen RL. First, an MC-based model pre-analysis can reveal bugs with respect to sensor accuracy and learning step size. This step serves as a preparation of RL, which saves time if bugs exist and deepens users' understanding of the target system. Second, reward automata can greatly improve learning performance especially when the learning objectives are multiple. All these findings are supported by experiments. 
+ Open Challenges in the Formal Verification of Autonomous Driving 
+ Authors: | Paolo Burgio, Angelo Ferrando, and Marco Villani 
+ Abstract: | In the realm of autonomous driving, the development and integration of highly complex and heterogeneous systems are standard practice. Modern vehicles are not monolithic systems; instead, they are composed of diverse hardware components, each running its own software systems. An autonomous vehicle comprises numerous independent components, often developed by different and potentially competing companies. This diversity poses significant challenges for the certification process, as it necessitates certifying components that may not disclose their internal behaviour (black-boxes). In this paper, we present a real-world case study of an autonomous driving system, identify key open challenges associated with its development and integration, and explore how formal verification techniques can address these challenges to ensure system reliability and safety. 
+ ROSMonitoring 2.0: Extending ROS Runtime Verification to Services and Ordered Topics 
+ Authors: | Maryam Ghaffari Saadat, Angelo Ferrando, Louise A. Dennis, and Michael Fisher 
+ Abstract: | Formal verification of robotic applications presents challenges due to their hybrid nature and distributed architecture. This paper introduces ROSMonitoring 2.0, an extension of ROSMonitoring designed to facilitate the monitoring of both topics and services while considering the order in which messages are published and received. The framework has been enhanced to support these novel features for both ROS1 and ROS2 environments, offering improved real-time support, security, scalability, and interoperability. We discuss the modifications made to accommodate these advancements and present results obtained from a case study involving the runtime monitoring of specific components of a fire-fighting Uncrewed Aerial Vehicle (UAV). 
+ Cross-layer Formal Verification of Robotic Systems 
+ Authors: | Sylvain Raïs, Julien Brunel, David Doose, and Frédéric Herbreteau 
+ Abstract: | The design and verification of robotic systems are often divided into several layers for reasons of system modularity and complexity. However, some system properties can only be studied by considering several layers simultaneously. We propose a cross-layer verification method to check the expected properties of concrete robotic systems. Our method verifies a layer using abstractions of other layers. We propose two approaches: refining the models of the abstract layers and refining the property under verification. A combination of these two approaches seems the most promising to ensure model genericity and avoid the problem of state-space explosion. 
+ Using Formal Models, Safety Shields and Certified Control to Validate AI-Based Train Systems 
+ Authors: | Jan Gruteser, Jan Roßbach, Fabian Vu and Michael Leuschel 
+ Abstract: | The certification of autonomous systems is an important concern in science and industry. The KI- LOK project explores new methods for certifying and safely integrating AI components into autonomous trains. We pursued a two-layered approach: (1) ensuring the safety of the steering system by formal analysis using the B method, and (2) improving the reliability of the perception system with a runtime certificate checker. This work links both strategies within a demonstrator that runs simulations on the formal model, controlled by the real AI output and the real certificate checker. The demonstrator is integrated into the formal method tool PROB. This enables runtime monitoring, runtime verification, and statistical validation of formal safety properties using a formal B model. Consequently, one can detect and analyse potential vulnerabilities and weaknesses of the AI and the certificate checker. We apply these techniques to a signal detection case study, demonstrating the effectiveness and presenting initial findings. 
+ A Case Study on Numerical Analysis of a Path Computation Algorithm 
+ Authors: | Grégoire Boussu, Nikolai Kosmatov and Franck Vedrine 
+ Abstract: | Lack of numerical precision in control software --- in particular, related to trajectory computation --- can lead to incorrect results with costly or even catastrophic consequences. Various tools have been proposed to analyze the precision of program computations. This paper presents a case study on numerical analysis of an industrial implementation of the fast marching algorithm, a popular path computation algorithm frequently used for trajectory computation. We briefly describe the selected tools, present the applied methodology, highlight some attention points, summarize the results and outline future work directions. 
+ Synthesising Robust Controllers for Robot Collectives with Recurrent Tasks: A Case Study 
+ Authors: | Till Schnittka and Mario Gleirscher 
+ Abstract: | When designing correct-by-construction controllers for autonomous collectives, three key challenges are the task specification, the modelling, and its use at practical scale. In this paper, we focus on a simple yet useful abstraction for high-level controller synthesis for robot collectives with optimisation goals (e.g., maximum cleanliness, minimum energy consumption) as well as recurrence (e.g., maintain a contamination threshold, avoid running out of charge) and safety (e.g., mutually exclusive room occupation) constraints. Due to technical limitations (related to scalability and using constraints in the synthesis), we simplify a graph-based setting using stochastic two-player games into a single-player game on partially observable Markov decision processes (POMDPs). Robustness against environmental uncertainty is encoded via partial observability. Linear-time correctness properties are verified separately after synthesising the POMDP strategy. We contribute at-scale guidance on POMDP modelling and controller synthesis for tasked robot collectives exemplified by the scenario of battery-driven robots responsible for cleaning public buildings with utilisation constraints 
+ Model checking and verification of synchronisation properties of cobot welding 
+ Authors: | Yvonne Murray, Henrik Nordlie, David A. Anisi, Pedro Ribeiro and Ana Cavalcanti 
+ Abstract: | This work describes use of model checking to verify synchronisation properties of an industrial welding system consisting of a cobot arm and an external turntable. The robots move synchronously, but sometimes get out of synchronisation. This gives inadequate weld qualities in problem areas, such as around corners. These mistakes are costly, since time is lost both in the robotic welding and in manual repairs needed to improve the weld. Verification of the synchronisation properties showed that they were fulfilled as long as assumptions of correctness were made about parts outside the scope of the model, indicating limitations in the hardware. These results motivated a re-calibration of the real-life system, drastically improving the welding results. 
+ Formal simulation and visualisation of hybrid programs 
+ Authors: | Pedro Mendes, Ricardo Correia, Renato Neves and José Proença 
+ Abstract: | The design and analysis of systems that combine computational, discrete behaviour with physical processes' continuous dynamics – such as movement, velocity, and voltage – is a famous, challenging task. Several theoretical results from programming theory emerged in the last decades to tackle the issue; some of which are the basis of a proof-of-concept tool, called Lince, that aids in the analysis of such systems, by presenting simulations of their respective behaviours. Being a proof-of-concept, the tool is quite limited w.r.t. usability, and when attempting to apply it to a set of common, concrete problems, involving autonomous driving and others, it either simply cannot simulate them or fails to provide a satisfactory user-experience. This work thus complements the aforementioned theoretical approaches with a more practical perspective by improving Lince along several dimensions: to name a few, richer syntactic constructs, more operations, more informative plotting systems and errors messages, and a better performance overall. We illustrate our improvements via small different case-studies that involve both autonomous driving and electrical systems. 
+ Formalizing Stateful Behavior Trees 
+ Authors: | Serena Serbinowska, Preston Robinette, Gabor Karsai and Taylor T Johnson 
+ Abstract: | Behavior Trees (BTs) are high-level controllers that are useful in a variety of planning tasks and are gaining traction in robotic mission planning. As they gain popularity in safety-critical domains, it is important to formalize their syntax and semantics, as well as verify properties for them. In this paper, we formalize a class of BTs we call Stateful Behavior Trees (SBTs) that have auxiliary variables and operate in an environment that can change over time. SBTs have access to persistent shared memory—often known as a blackboard—that keeps track of these auxiliary variables. We demonstrate that SBTs are equivalent in computational power to Turing Machines when the blackboard can store mathematical (unbounded) integers. We also identify conditions where SBTs have computational power equivalent to finite state automata, specifically where the auxiliary variables are of finitary types. We present a domain specific language (DSL) for writing SBTs and adapt the tool BehaVerify for use with this DSL. This new DSL in BehaVerify supports interfacing with popular BT libraries in Python, and also provides generation of Haskell code and nuXmv models, the latter of which are used for model checking temporal logic specifications for the SBTs. We include examples and scalability results where BehaVerify outperforms another verification tool (MoVe4BT) by a factor of 100. 
+ Creating a Formally Verified Neural Network for Autonomous Navigation: An Experience Report 
+ Authors: | Syed Ali Asadullah Bukhari, Thomas Flinkow, Medet Inkarbekov, Barak A. Pearlmutter and Rosemary Monahan 
+ Abstract: | The increased reliance of self-driving vehicles on neural networks opens up the challenge of their verification. In this paper we present an experience report, describing a case study which we undertook to explore the design and training of a neural network on a custom dataset for vision-based autonomous navigation. We are particularly interested in the use of machine learning with differentiable logics to obtain networks satisfying basic safety properties by design, guaranteeing the behaviour of the neural network after training. We motivate the choice of a suitable neural network verifier for our purposes and report our observations on the use of neural network verifiers for self-driving systems. 
+ Verification of Behavior Trees with Contingency Monitors 
+ Authors: | Serena Serbinowska, Nicholas Potteiger, Anne Tumlin and Taylor T Johnson 
+ Abstract: | Behavior Trees (BTs) are high level controllers that have found use in a wide range of robotics tasks. As they grow in popularity and usage, it is crucial to ensure that the appropriate tools and methods are available for ensuring they work as intended. To that end, we created a new methodology by which to create Runtime Monitors for BTs. These monitors can be used by the BT to correct when undesirable behavior is detected and are capable of handling LTL specifications. We demonstrate that in terms of runtime, the generated monitors are on par with monitors generated by existing tools and highlight certain features that make our method more desirable in various situations. We note that our method allows for our monitors to be swapped out with alternate monitors with fairly minimal user effort. Finally, our method ties in with our existing tool, BehaVerify, allowing for the verification of BTs with monitors. 
+ Programme Committee 
+ Oana Andrei | University of Glasgow (UK) 
+ Marco Autili | Università dell'Aquila (Italy) 
+ Akhila Bairy | Karlsruhe Institute of Technology (Germany) 
+ Daniela Briola | Università degli Studi di Milano-Bicocca (Italy) 
+ Rafael C. Cardoso | University of Aberdeen (UK) 
+ Christian Colombo | University of Malta (Malta) 
+ Louise A. Dennis | University of Manchester (UK) 
+ Marie Farrell | University of Manchester (UK) 
+ Angelo Ferrando | University of Modena and Reggio Emilia (Italy) 
+ Michael Fisher | University of Manchester (UK) 
+ Thomas Flinkow | Maynooth University (Ireland) 
+ Mario Gleirscher | University of Bremen (Germany) 
+ Mallory S. Graydon | NASA Langley Research Center (USA) 
+ Jérémie Guiochet | University of Toulouse (France) 
+ Taylor T. Johnson | Vanderbilt University (USA) 
+ Verena Klös | Carl von Ossietzky University Oldenburg (Germany) 
+ Livia Lestingi | Politecnico di Milano (Italy) 
+ Sven Linker | Kernkonzept (Germany) 
+ Matt Luckcuck | University of Nottingham (UK) 
+ Anastasia Mavridou | KBR Wyle/NASA Ames Research Center (USA) 
+ Alice Miller | University of Glasgow (UK) 
+ Alvaro Miyazawa | University of York (UK) 
+ Rosemary Monahan | Maynooth University (Ireland) 
+ Yvonne Murray | University of Agder (Norway) 
+ Dominique Méry | Université de Lorraine (France) 
+ Natasha Neogi | NASA Langley Research Center (USA) 
+ Colin Paterson | University of York (UK) 
+ Baptiste Pelletier | ONERA - The French Aerospace Lab (France) 
+ Andrea Pferscher | University of Oslo (Norway) 
+ Juliane Päßler | University of Oslo (Norway) 
+ Maike Schwammberger | Karlsruhe Institute of Technology (Germany) 
+ Paulius Stankaitis | University of Stirling (UK) 
+ href="https://www.research.lancs.ac.uk/portal/en/people/james-stovold(dfe17609-ed4c-4578-95e5-4c41b5238bc9).html" - James Stovold | Lancaster University Leipzig (Germany) 
+ Silvia Lizeth Tapia Tarifa | University of Oslo (Norway) 
+ Elena Troubitsyna | KTH Royal Institute of Technology (Sweden) 
+ Gricel Vázquez | University of York (UK) 
+ Hao Wu | Maynooth University (Ireland) 
+ Mengwei Xu | University of Newcastle (UK) 
+ Organising Committee 
+ General Chair: | Dr Matt Luckcuck | University of Nottingham, UK 
+ Programme Committee Chair: | Dr Mengwei Xu | University of Newcastle, UK 
+ Dr Marie Farrell | University of Manchester, UK 
+ Jun.-Prof. Dr Maike Schwammberger | Karlsruhe Institute of Technology, Germany 
+ Dr Mario Gleirscher | University of Bremen, Germany 
+ Diana Carolina Benjumea Hernandez | University of Manchester, UK 
+ Akhila Bairy | Karlsruhe Institute of Technology, Germany 
+ International Workshop on Formal Methods for Autonomous Systems 
+ FMAS 
+ FMASWorkshop@tutanota.com 
+ A peer-reviewed, academic workshop that brings together researchers working on a range of techniques for the formal specification and verification of autonomous systems.
+

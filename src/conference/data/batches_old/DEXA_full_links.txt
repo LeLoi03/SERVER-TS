@@ -1,0 +1,342 @@
+Conference full name: International Conference on Database and Expert Systems Applications (DEXA)
+
+1. Website of DEXA_2: https://www.dexa.org/2025/dexa2025.html
+Website information of DEXA_2:
+
+MenuHome 
+ Conferences | href="./dexa2025.html" - DEXA 2025 
+ href="./dawak2025.html" - DAWAK 2025 
+ href="./egovis2025.html" - EGOVIS 2025 
+ Workshops | href="./ai4ip-2025.html" - AI4IP 2025 
+ href="./aisys-2025.html" - AISys 2025 
+ href="./diaai-2025.html" - DIAAI 2025 
+ Information for Authors | href="./important-dates-2.html" - Important Dates 
+ Formatting Guidelines 
+ href="./papers-submission.html" - Papers submissions 
+ Registration & Fees 
+ General Information | href="https://www.dexa.org/previous-dexa-conferences.html" - Past Conferences 
+ Registration & Fees 
+ Contact 
+ Welcome to DEXA 2025 
+ The 36th International Conference on Database and Expert Systems Applications 
+ 25 - 27 August, 2025 
+ Bangkok, Thailand 
+ Papers submission:href="https://dexa2025.iiwas.org" - https://dexa2025.iiwas.org
+Important Dates 
+ Paper submission:10 April 2025 (Sharp & Final) 
+ Notification of acceptance:14 May 2025 
+ Camera-ready copies due:14 June 2025 
+ Authors Registration deadline:14 June 2025 
+ Conference days:25-27 August 2025 
+ Publication 
+ All accepted DEXA2025 papers will be published by Springer in their Lecture Notes in Computer Science (LNCS). LNCS volumes are indexed in Scopus; EI Engineering Index; Google Scholar; DBLP; etc. and submitted for indexing in the Conference Proceedings Citation Index (CPCI), part of Clarivate Analytics’ Web of Science. Selected high-quality papers, after revision and extension, will be invited to be published, in a special issue of Knowledge and Information Systems (KAIS), Springer (IF=3.2), and Data & Knowledge Engineering (DKE), Elsevier (IF=2.7). 
+ Scope 
+ Data engineering and data analytics have been important R&D areas for years, with applications in multiple sectors (e.g., finance, energy, manufacturing, health care, security), but there still exist unsolved research and technological issues. Data engineering techniques are widely applied to store and manage data. New types of highly heterogeneous data of large volumes (referred to as big data) created every second, require a continuous development of new techniques to handle these new types of data. On the one hand, more and more frequently, these techniques need to be supported by Machine Learning (ML) algorithms, commonly called Artificial Intelligence (AI). These algorithms allow to provide solutions for difficult data management problems. Moreover, data science and data analytics rely on AI in the process of discovering dependency patterns, building complex prediction models, and processing natural language. On the other hand, data engineering techniques are indispensable for pre-processing data for AI. Thus, worlds of AI, data engineering, and data analytics are strongly interconnected. 
+  
+ Since 1990, DEXA has been an annual international conference which showcases state-of-the-art research activities in databases, data integration, advanced data anlytics, and knowledge systems. With the recent advances of big data and ML/AI DEXA covers these broad topics as well, to provide a forum to present research results and to examine advanced applications in the field. The conference and its associated workshops offer an opportunity for developers, scientists, and users to extensively discuss requirements, problems, and solutions in standard and just emerging research and technological topics on data and knowledge management. 
+ Topics of Interest 
+ DEXA 2025 invites submissions of original research papers as well as experience and survey papers on all topics related to database, information, and knowledge systems including, but not limited to: : 
+ Data privacy and security 
+ Cloud data management 
+ Data quality assurance, monitoring, and management 
+ Data governance techniques and architectures 
+ Data integration and interoperability 
+ Big data storage and search 
+ Distributed ledger technologies 
+ Data as a Service (DaaS) technologies 
+ Data pipeline automation 
+ Data Fabric and Data Mesh 
+ Data modeling 
+ Standard and non-standard databases 
+ Real-time data processing 
+ Artificial Intelligence (AI) for data management 
+ AI for data engineering 
+ Data engineering for AI 
+ Data science techniques 
+ Large Language Models 
+ AI model governance 
+ AutoML/AI solutions 
+ Machine Learning Operations (MLOps) 
+ Descriptive, predictive, and prescriptive analytics on standard and big data 
+ Text analytics 
+ Graph management and analytics 
+ AI powered data analytics 
+ Quantum technologies for data engineering and analytics 
+ Submission Guidelines 
+ DEXA 2025 follows asingle-blind reviewpolicy. Authors are invited to electronically submit original research contributions or experience reports in English. DEXA will accept submissions of both short (up to 6 pages) and full papers (up to 15 pages including references and appendixes). DEXA reserves the right to accept submitted full papers only as short papers, in which papers describe interesting and innovative ideas which still require further technical development. 
+ Any submission that significantly exceeds length limits or deviates from formatting requirements may be rejected without review. Please refer tohref="./papers-submission.html" - paper submission
+page. 
+ Submission Procedure 
+ Authors should first consulthref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - Springer’s authors’ instructions
+and use the proceedings templates, either for LaTeX or for Word, for the preparation of their papers. 
+ Papers submission will be managed usinghref="https://dexa2025.iiwas.org" - HotCRP
+. To submit a paper, create an account or sign in if you already have an account. To create an account, you only need to enter a valid email address. You will receive an email with a link to change the password and fill in your name, affiliation, etc., You can start the submission process by clicking on "new submission". 
+ Review Process 
+ Submitted papers will be carefully evaluated based on originality, significance, technical soundness, and clarity of exposition. Duplicate submissions are not allowed and will be rejected immediately without further review. Authors are expected to agree to the following terms: "I understand that the submission must not overlap substantially with any other paper that I am a co-author of or that is currently submitted elsewhere. Furthermore, previously published papers with any overlap are cited prominently in this submission." 
+ Questions about this policy or how it applies to a specific paper should be directed to the PC chairs. 
+ Accepted Papers 
+ All accepted conference papers will be published in a volume of "Lecture Notes in Computer Science" (LNCS) by Springer. Authors of all accepted papers must sign a Springer copyright release form. Papers are accepted with the understanding that at least one author will register for the conference to present the paper. Selected high-quality papers, after revision and extension, will be invited to be published, in a special issue of Knowledge and Information Systems (KAIS), Springer (IF=3.2), and Data & Knowledge Engineering (DKE), Elsevier (IF=2.7). 
+ Program Committee Chair 
+  
+ Robert Wrembel 
+ Poznan University of Technology, Interdisciplinary Centre for Artificial Intelligence and Cybersecurity, Poland 
+ Publicity Chairs 
+  
+ Aziz Nanthaamornphong 
+ Prince of Songkla University, Thailand | Putu Wuri Handayani 
+ University of Indonesia, Indonesia 
+ Programm Committee 
+ A Min Tjoa | , Vienna University of Technology, Austria 
+ Abdelkader Hameurlain | , IRIT, Toulouse University, France 
+ Abdessamad Imine | , Loria, France 
+ Adam Przybylek | , Gdansk University of Technology, Poland 
+ Adriana Marotta | , Universidad de la República, Uruguay 
+ Aida Omerovic | , SINTEF and NTNU, Norway 
+ Allel Hadjali | , LIAS/ENSMA, France 
+ Andreas Ekelhart | , Secure Business Austria, Austria 
+ Anne Kayem | , University of Exeter, UK 
+ Athman Bouguettaya | , The University of Sydney, Australia 
+ Bala Srinivasan | , Monash University, Australia 
+ Bartosz Bebel | , Poznan University of Technology, Poland 
+ Bettina Fazzinga | , DICES, University of Calabria, Italy 
+ Brahim Ouhbi | , ENSAM, Marocco 
+ Cedric Du Mouza | , CNAM, France 
+ Christian Thomsen | , Aalborg University, Denmark 
+ Dawid Wiśniewski, | Poznan University of Technology, Poland 
+ Debabrota Basu | , National Institute for Research in Digital Science and Technology, France 
+ Deborah Dahl | , Conversational Technologies, USA 
+ Ela Pustulka | , FHNW University of Applied Sciences and Arts, Switzerland 
+ Elio Masciari | , Federico II University, Italy 
+ Erich Neuhold | , University of Vienna, Austria 
+ Eunika Mercier-Laurent | , University of Reims Champagne Ardenne and IFIP, France 
+ Faiza Bukhsh | , University of Twente, The Netherlands 
+ Flavio Ferrarotti | , Software Competence Centre Hagenberg, Austria 
+ Flavius Frasincar | , Erasmus University Rotterdam, The Netherland 
+ Florence Sedes | , IRIT - University Toulouse III Paul Sabatier, France 
+ Franck Morvan | , IRIT - Universit Paul Sabatier, France 
+ Giovanna Guerrini | , DIBRIS - University of Genova, Italy 
+ Gheorghe Cosmin Silaghi | , Babes-Bolyai University, Romania 
+ Hamidah Ibrahim | , Universiti Putra Malaysia, Malaysia 
+ Hendrik Decker | , Ludwig Maximilian University of Munich, Germany 
+ Hiroyuki Toda | , Yokohama City University, Japan 
+ Idir Amine Amarouche | , USTHB, Algeria 
+ Ionut Iacob | , Georgia Southern University, USA 
+ Isao Echizen | , Univerisity of Tokyo, Japan 
+ Ismael Navas-Delgado | , University of Malaga, Spain 
+ Ivan Izonin | , Lviv Polytechnic National University, Ukraine 
+ Ivanna Dronyuk | , Jan Dlugosz University, Poland 
+ Javier Nieves | , Azterlan, Spain 
+ Jean-Paul Kasprzyk | , University of Liège, Belgium 
+ Jérôme Darmont | , Université Lyon 2, France 
+ Jianwei Zhang | , Iwate University, Japan 
+ Johann Gamper | , Free University of Bozen-Bolzano, Italy 
+ Jorge Lloret | , University of Zaragoza, Spain 
+ Josef Küng | , Johannes Kepler University Linz, Austria 
+ Jun Miyazaki | , Tokyo Institute of Technology. Japan 
+ Kamonluk Suksen | , Chulalongkorn University, Thailand 
+ Karim Benouaret | , Université Claude Bernard Lyon 1, France 
+ Lars Moench | , University of Hagen, Germany 
+ Laura Erhan | , Free University of Bozen-Bolzano, Italy 
+ Laurent d'Orazio | , IRISA, France 
+ Lenka Lhotska | , CVUT, Czech Republic 
+ Luca Caviglione | , IMATI-CNR, Italy 
+ Manfred Hauswirth | , TU Berlin, Germany 
+ Manolis Gergatsoulis | , Ionian University, Greece 
+ Marcin Paprzycki | , IBS PAN and WSM, Poland 
+ Marinette Savonnet | , University of Burgundy, France 
+ Markus Endres | , University of Applied Sciences Munich, Germany 
+ Massimo Guarascio | , ICAR-CNR, Italy 
+ Massimo Ruffolo | , ICAR-CNR, Italy 
+ Maude Manouvrier | , Université Paris Dauphine - PSL, France 
+ Michal Kratky | , VSB-Technical University of Ostrava, Czech Republic 
+ Michael Sheng | , Macquarie University, Australia 
+ Mizuho Iwaihara | , Waseda University, Japan 
+ Mustafa Atay | , Winston-Salem State University, USA 
+ Nazha Selmaoui | , University of New Caledonia, New Caledonia 
+ Noura Faci | , Université Lyon 1, France 
+ Olivier Teste | , IRIT, France 
+ Pavlo Radiuk | , Khmelnytskyi National University, Ukraine 
+ Paweł Misiorek | , Poznan University of Technology, Poland 
+ Peiquan Jin | , University of Science and Technology of China, China 
+ Petr Kremen | , Czech Technical University in Prague, Czech Republic 
+ Petra Asprion | , FHNW University of Applied Sciences and Arts, Switzerland 
+ Qiang Zhu | , University of Michigan - Dearborn, USA 
+ Rachid Anane | , Coventry University, UK 
+ Riad Mokadem | , Paul Sabatier University, France 
+ Riccardo Albertoni | , CNR-IMATI, Italy 
+ Samira Maghool, | Università degli Studi di Milano, Italy 
+ Sergio Ilarri, | University of Zaragoza, Spain 
+ Soon Chun | , City University of New York, USA 
+ Soumyava Das | , Oracle Inc, USA 
+ Srinath Srinivasa, | International Institute of Information Technology, India 
+ Stéphane Jean | , University of Poitiers, ISAE-ENSMA, LIAS, Poitiers, France 
+ Sven Groppe | , University of Luebeck, Germany 
+ Sven Hartmann | , Clausthal University of Technology, Germany 
+ Talel Abdessalem | , Telecom Paris, France 
+ Toshiyuki Amagasa | , University of Tsukuba, Japan 
+ Traian Marius Truta | , Northern Kentucky University, USA 
+ Vicenc Torra | , University Skövde, Sweden 
+ Vincenzo Deufemia | , University of Salerno, Italy 
+ Vitaliy Yakovyna | , University of Warmia and Mazury in Olsztyn, Poland 
+ Wojciech Macyna | , Wroclaw University of Technology, Poland 
+ Yan Zhu | , Southwest Jiaotong University, China 
+ Yang-Sae Moon | , Kangwon National University, South Korea 
+ Ziwei Xu | , National Institute of Advance Industrial Science and Technology, Japan 
+ For further inquiries, please contacthref="mailto:dexa2025@iiwas.org" - dexa2025@iiwas.org
+Powered byPubliiHome 
+ Conferences | href="./dexa2025.html" - DEXA 2025 
+ href="./dawak2025.html" - DAWAK 2025 
+ href="./egovis2025.html" - EGOVIS 2025 
+ Workshops | href="./ai4ip-2025.html" - AI4IP 2025 
+ href="./aisys-2025.html" - AISys 2025 
+ href="./diaai-2025.html" - DIAAI 2025 
+ Information for Authors | href="./important-dates-2.html" - Important Dates 
+ Formatting Guidelines 
+ href="./papers-submission.html" - Papers submissions 
+ Registration & Fees 
+ General Information | href="https://www.dexa.org/previous-dexa-conferences.html" - Past Conferences 
+ Registration & Fees 
+ Contact
+
+2. Website of DEXA_2: https://www.dexa.org/
+Website information of DEXA_2:
+
+MenuHome 
+ Conferences | href="https://www.dexa.org/2025/dexa2025.html" - DEXA 2025 
+ href="https://www.dexa.org/2025/dawak2025.html" - DAWAK 2025 
+ href="https://www.dexa.org/2025/egovis2025.html" - EGOVIS 2025 
+ Workshops | href="https://www.dexa.org/2025/aisys-2025.html" - AISys 2025 
+ href="https://www.dexa.org/2025/ai4ip-2025.html" - AI4IP 2025 
+ href="https://www.dexa.org/2025/diaai-2025.html" - DIAAI 2025 
+ href="./previous-dexa-conferences.html" - Past Conferences 
+ Publications | href="https://dblp.org/db/conf/dexa/index.html" - DEXA @ DBLP 
+ DAWAK @ DBLP 
+ EGOVIS @ DBLP 
+ href="https://link.springer.com/conference/dexa" - DEXA @ Springer 
+ DAWAK @ Springer 
+ EGOVIS @ Springer 
+ href="https://link.springer.com/conference/dexa" - DEXA Workshops @ Springer 
+ Steering Committee 
+ Contact 
+ Leading the Way in Information Technology for over 30 Years 
+ News 
+ href="https://www.dexa.org/2025/" - DEXA 2025 | conferences and workshops will be held in Bangkok, Thailand from 25 - 27 August 2025 
+ Over three decades ago,Prof. Dr. Roland WagnerandProf. Dr. A Min Tjoarecognized the need for an international platform to address the rapidly growing fields of Databases and Expert Systems Applications. This vision gave birth to DEXA, a conference that began as a small gathering of innovative minds in Austria. Today, DEXA has evolved into a global event, attracting more than 5,000 participants—including distinguished speakers, researchers, developers, and industry experts—from around the world. 
+ DEXA Organization 
+ DEXA is organized by thehref="https://www.facebook.com/people/DEXA-Society/100070957063727/" - DEXA Society
+, a non-profit association dedicated to advancing knowledge in the field of information technology. In 2019, the leadership of DEXA transitioned to a collaboration between theWeb Applications Society(@WAS), theInstitute of Telecooperationat Johannes Kepler University Linz, and theSoftware Competence Center Hagenberg(SCCH). This new partnership continues to uphold the founding vision, bringing cutting-edge research and technological advancements to the forefront. 
+ DEXA Conferences & Workshops 
+ DEXA and its associated conferences and workshops are internationally renowned events, serving as a hub for scientists, developers, and practitioners. Each year, they come together to exchange ideas, present groundbreaking research, and share practical development experiences. The events cover a wide range of advanced topics, including: Artificial Intelligence & Machine Learning, Big Data Analytics & Knowledge Discovery, E-Government & Cyber-Physical Systems and Advanced Information Technologies. 
+ Publications 
+ Proceedings from DEXA conferences and workshops are published by Springer in their prestigiousLecture Notes in Computer Science(LNCS) andCommunications in Computer and Information Science(CCIS) series. These publications provide a platform for the global scientific community to access the latest research and innovations presented at DEXA. 
+ Whether you are a researcher, developer, scientist, or industry practitioner, DEXA offers a unique opportunity to engage with thought leaders, network with peers, and stay ahead of the curve in the ever-evolving landscape of information technology. 
+ Be part of the future. Be part of DEXA 
+ Publication 
+ Endorsed and Sponsored by 
+  
+ Powered byPubliiHome 
+ Conferences | href="https://www.dexa.org/2025/dexa2025.html" - DEXA 2025 
+ href="https://www.dexa.org/2025/dawak2025.html" - DAWAK 2025 
+ href="https://www.dexa.org/2025/egovis2025.html" - EGOVIS 2025 
+ Workshops | href="https://www.dexa.org/2025/aisys-2025.html" - AISys 2025 
+ href="https://www.dexa.org/2025/ai4ip-2025.html" - AI4IP 2025 
+ href="https://www.dexa.org/2025/diaai-2025.html" - DIAAI 2025 
+ href="./previous-dexa-conferences.html" - Past Conferences 
+ Publications | href="https://dblp.org/db/conf/dexa/index.html" - DEXA @ DBLP 
+ DAWAK @ DBLP 
+ EGOVIS @ DBLP 
+ href="https://link.springer.com/conference/dexa" - DEXA @ Springer 
+ DAWAK @ Springer 
+ EGOVIS @ Springer 
+ href="https://link.springer.com/conference/dexa" - DEXA Workshops @ Springer 
+ Steering Committee 
+ Contact
+
+3. Website of DEXA_2: https://www.omilab.org/activities/events/dexa2024/
+Website information of DEXA_2:
+
+info@omilab.org 
+ Home 
+ OMILAB Nodes | OMiLAB NetworkOMiLAB NodesDesign ThinkingConceptual ModellingDigital Innovation 
+ Activities | NEMO Innovation CampOMiLAB Book SeriesLearning MaterialCommunity Activities/EventsNEMO Summer SchoolsADOxx Platform: TrainingsTool: MM-DSL ToolkitTool: Bee-UpTool: Scene2Model ToolkitCommunity Modelling ToolsProject: FAIRworkProject: CoDEMO 5.0Project: DigiFoFNodes Project: DeViLL 
+ Open Source Software | ADOxx ModulesPrediction Services 
+ Services | Open EA User-Centric Assessment 
+ About Us | About OMiLAB NPOOMiLAB Community of PracticeContact UsNewsletter 
+ Search OMILAB.org 
+ Search Results 
+ Search keywords:DEXA 2024 - Conference on Database and Expert Systems Applications 
+ Home 
+ Activities 
+ Events 
+ DEXA 2024 - Conference on Database and Expert Systems Applications 
+ href="https://www.dexa.org/PaperSubmission" - Registration
+35th International Conference 
+ DEXA 2024 - Conference on Database and Expert Systems Applications 
+ Organizer:href="mailto:dexa@iiwas.org" - DEXA2024
+href="https://www.dexa.org/dexa2024" - 
+Date/Time: August 26-28, 2024 
+ Location: Naples, Italy 
+ Conference Description 
+ Database, information, and knowledge systems have always been a core subject of computer science. The ever increasing need to distribute, exchange, and integrate data, information, and knowledge has added further importance to this subject. Advances in the field will help facilitate new avenues of communication, to proliferate interdisciplinary discovery, and to drive innovation and commercial opportunity. Since 1990, DEXA has been an annual international conference which showcases state-of-the-art research activities in database, information, and knowledge systems. DEXA provides a forum to present research results and to examine advanced applications in the field. The conference and its associated workshops offer an opportunity for developers, scientists, and users to extensively discuss requirements, problems, and solutions in database, information, and knowledge systems. 
+  
+ DEXA 2024 invites research submissions on all topics related to database, information, and knowledge systems including, but not limited to the points in the list below. We also welcome survey papers, provided that the survey fills a void or goes beyond existing overview papers.Relevant Topics 
+ Acquisition, Modelling, Management and Processing of Knowledge 
+ Constraint Modelling and Processing 
+ Cloud Computing and Database-as-a-Service 
+ Decision Support Systems and Their Applications 
+ Knowledge Representation and Knowledge Graphs 
+ Data Modelling, Automation and Optimisation of Processes 
+ Social Networks, Social Web, Graph, and Personal Information Management 
+ Visual Data Analytics, Data Mining, and Knowledge Discovery 
+ Program Committee Co-Chairs 
+ Christine Strauss, University of Vienna, Austria 
+ Toshiyuki Amagasa, University of Tsukuba, Japan 
+ Giuseppe Manco, Italian National Research Council (CNR), Italy 
+ Submission Guidelines 
+ Papers submission will be managed using HotCRP:href="https://dexa2024.iiwas.org" - https://dexa2024.iiwas.org
+
+Please checkhref="https://www.dexa.org/PaperSubmission" - https://www.dexa.org/PaperSubmission
+for more details. 
+  
+ All accepted conference papers will be published in a volume of Lecture Notes in Computer Science (LNCS) by Springer Verlag. Authors of selected papers presented at the conference will be invited to submit extended versions of their papers for publication in Knowledge and Information Systems (KAIS), Springer and Transactions of Large Scale Data and Knowledge Centered Systems (TLDKS), Springer. The submitted extended versions will undergo a further review process. 
+ Registration 
+ Please register via the organizer. 
+ href="https://www.dexa.org/PaperSubmission" - Registration (external)
+Important Dates 
+ href="https://www.dexa.org/PaperSubmission" - 07 March 2024
+                Submission Deadline
+href="https://www.dexa.org/dexa2024" - 10 May 2024
+                Decision Notification
+href="https://www.dexa.org/dexa2024" - 10 June 2024
+                Camera Ready Papers
+href="https://www.dexa.org/dexa2024" - 10 June 2024
+                Author Registration Deadline
+We support the conceptual modelling community of organizations and individuals with tools, knowledge and education. 
+ Activities 
+ NEMO Innovation Camp 
+ OMiLAB Book Series 
+ Learning Material 
+ Community Activities/Events 
+ NEMO Summer Schools 
+ ADOxx Platform: Trainings 
+ Tool: MM-DSL Toolkit 
+ Tool: Bee-Up 
+ Tool: Scene2Model Toolkit 
+ Community Modelling Tools 
+ Project: FAIRwork 
+ Project: CoDEMO 5.0 
+ Project: DigiFoF 
+ Nodes Project: DeViLL 
+ Quick Link 
+ Home 
+ OMiLAB Network 
+ OMiLAB Nodes 
+ About OMiLAB NPO 
+ OMiLAB Community of Practice 
+ Contact Us 
+ Newsletter 
+ Privacy Policy 
+ OMILAB NPO©2025 All Right Reserved 
+ Legal 
+ Privacy Policy
+

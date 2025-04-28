@@ -1,0 +1,28 @@
+{
+  "Conference dates": "February 19 - 21, 2025",
+  "Year": "2025",
+  "Location": "Hsinchu, Taiwan",
+  "City-State-Province": "Hsinchu",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Papers) Abstract Due": "November 3, 2024",
+    "(Papers) Submission Due": "November 10, 2024"
+  },
+  "Notification Date": {
+    "(Papers) Notice of Acceptance": "December 11, 2024"
+  },
+  "Camera-ready Date": {
+    "(Papers) Camera-ready Paper Due": "December 22, 2024"
+  },
+  "Other Date": {
+    "Call for Workshops Proposal Submission Due": "September 30, 2024",
+    "Call for Posters 1st round Submission Due": "November 10, 2024"
+  },
+  "Topics": "High-performance computing, algorithms, applications, systems, software, massively parallel and distributed computing systems, Big data processing and analytics, distributed and parallel file systems, storage architectures and systems, data visualization techniques, data provenance and traceability, high-performance I/O and storage optimization, visualization and image processing, Machine learning algorithms and applications, deep learning techniques and frameworks, AI integration in HPC, emerging technologies (quantum computing, neuromorphic computing, etc.), AI ethics and bias, AI-driven data analytics, real-world AI applications in various industries, future trends in AI and emerging technologies, Performance modeling and prediction, benchmarking and performance evaluation, scalability analysis, tools and methodologies for performance analysis, performance optimization techniques, case studies on performance improvements, power and energy efficiency in performance modeling, real-world application performance analysis, Processor architecture advancements, accelerator technologies (GPUs, FPGAs, ASICs), network architecture and interconnects, memory hierarchy and management, energy-efficient processor and accelerator design, dependable and fault-tolerant architectures, emerging processor and network technologies, integration of new technologies in processor and network design",
+  "Publisher": "ACM",
+  "Summary": "HPC Asia 2025, themed “Chip-based Exploration and Innovation for HPC,” will be held in Hsinchu, Taiwan from February 19-21, 2025. This conference is a premier forum for disseminating and discussing research and practice across all aspects of high-performance computing systems and applications.",
+  "Call for Papers": "# HPC Asia 2025: Call for Papers\n\nThe International Conference on High Performance Computing in the Asia-Pacific Region (HPC Asia 2025) will be held in **Hsinchu, Taiwan, from February 19-21, 2025.**\n\n## Theme\n\n“Chip-based Exploration and Innovation for HPC”\n\n## Tracks\n\nHPC Asia 2025 consists of 5 Tracks:\n\n1.  HPC Applications, Parallel Computing & Systems Software\n2.  Data, Storage, Visualization\n3.  Machine Learning, AI, and Emerging Technologies\n4.  Performance Modeling, Evaluation, and Analysis\n5.  Processor, Accelerator, Network Architecture\n\n## Submission Guidelines\n\nAuthors submitting papers for HPC Asia 2025 must do so via the Online Submission System: [Submit Your Paper](https://hpcasia2025.conf.tw/site/order/1307/login_ra.aspx?sid=1307&lang=en)\n\n*   Authors are invited to submit technical papers of no more than 18 pages in PDF format including figures and references. The papers should be formatted according to the ACM Proceedings Style.\n*   Submitted papers must contain original work that has not appeared in and is not under consideration for another conference or journal. The review process is double-blind. There will be no revision rebuttal process and the review will be one-pass.\n\n## Submission Format\n\nAll authors should submit manuscripts for review in a single-column format. Manuscripts must be at most 18 pages in PDF format including figures and references, formatted according to the ACM Proceedings Style.\n\n## ACM Templates\n\n*   [Word (docx) download](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)\n*   LaTex (zip) download | use a “manuscript” format option (Please refer to sample/sample-manuscript.tex).\n*   Overleaf | use a “manuscript” format option.\n\nFor more details, please visit the ACM Primary Article Templates page: [https://www.acm.org/publications/authors/submissions](https://www.acm.org/publications/authors/submissions)\n\n## Proceedings\n\nThe papers that have been accepted for HPC Asia 2025 will be published as proceedings, with ACM as the designated publisher. Authors of articles from conferences published Open Access (OA) in the ACM Digital Library will have to pay for paper processing charges (APC). Please check out [https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance) for details.  However, if your institution is a member of the ACM Open program, the paper will be published with no charge.\n\n## Important Dates\n\n*   **[Papers] Abstract Due:** November 3, 2024 (AoE)\n*   **[Papers] Submission Due:** November 10, 2024 (AoE) (firm)\n*   **[Papers] Notice of Acceptance:** December 11, 2024 (AoE)\n*   **[Papers] Camera-ready Paper Due:** December 22, 2024 (AoE)\n*   **Conference:** February 19 – 21, 2025\n\n## Contact\n\nPlease contact the Program Chairs at [hpcasia2025@narlabs.org.tw](mailto:hpcasia2025@narlabs.org.tw) for any questions/clarifications about the Call for Papers (CFP). For queries on Papers – please indicate “<PAPERS>” at the start of your Subject heading of your email."
+}
+

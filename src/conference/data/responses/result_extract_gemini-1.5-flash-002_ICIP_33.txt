@@ -1,0 +1,48 @@
+{
+  "Conference dates": "September 14 - 17, 2025",
+  "Year": "2025",
+  "Location": "Anchorage, Alaska, USA",
+  "City-State-Province": "Anchorage, Alaska",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Regular & Special Session Paper Submission Deadline (6 pages Inclusive)": "February 5, 2025",
+    "Open Journal of Signal Processing Paper Submission Deadline (9 Pages)": "February 5, 2025",
+    "Satellite Workshop Proposals Deadline": "February 5, 2025",
+    "Grand Challenge Session Proposal Deadline": "March 19, 2025",
+    "Author Rebuttal Deadline": "April 30, 2025",
+    "Satellite Workshop Paper Submission Deadline": "May 28, 2025",
+    "Journal Paper Presentation Request Deadline": "May 28, 2025",
+    "Final Regular Paper Submission Deadline": "May 28, 2025",
+    "Grand Challenge Paper Submission": "May 28, 2025",
+    "Industry Demo First Round Abstract Submission Deadline": "May 28, 2025",
+    "Industry Demo Second Round Video Submission Deadline": "June 25, 2025",
+    "Satellite Workshop Final Paper Submission Deadline": "July 2, 2025",
+    "Grand Challenge Final Paper Submission Deadline": "July 2, 2025"
+  },
+  "Notification Date": {
+    "Special Session Acceptance Notification": "January 6, 2025",
+    "Tutorial Acceptance Notification": "February 26, 2025",
+    "Satellite Workshop Acceptance Notification": "February 12, 2025",
+    "Grand Challenge Session Acceptance Notification": "May 20, 2025",
+    "Regular Paper Acceptance Notification (6 pages)": "May 20, 2025",
+    "Journal Track Paper Acceptance Notification (9 pages)": "May 20, 2025",
+    "Journal Paper Presentation Request Notification": "June 4, 2025",
+    "Industry Demo First Round Abstract Notification of Acceptance/Rejection": "June 11, 2025",
+    "Satellite Workshop Paper Acceptance Notification": "June 25, 2025",
+    "Grand Challenge Paper Acceptance Notification": "June 25, 2025",
+    "Final Industry Demo Notification of Acceptance/Rejection": "July 3, 2025"
+  },
+  "Other Date": {
+    "Special Session Proposal Deadline": "December 18, 2024",
+    "Tutorial Proposal Deadline": "January 8, 2025",
+    "Regular & Special Session Paper Submission Deadline (6 pages Inclusive)": "January 22, 2025",
+    "Open Journal of Signal Processing Paper Submission Deadline (9 Pages)": "January 22, 2025",
+    "Reviews Made Available to Authors": "April 23, 2025",
+    "All Author Registration Deadline": "July 16, 2025"
+  },
+  "Topics": "Sensing, Representation, Modeling, & Registration, Synthesis, Rendering, & Visualization, Texture Image Representation & Classification, Computational Imaging, Restoration & Enhancement, Filtering & Multi-resolution Processing, Compression, Coding, & Transmission, Color, Multi-spectral, & Hyper-spectral Imaging, Image & Video Interpretation & Understanding, Document Analysis & Processing, Stereoscopic, Multi-view, and 3D Processing, Image & Video Quality Models, Motion Estimation, Registration, & Fusion, Deep Learning for Images & Videos, Learning with Limited Labels, Image & Video Analysis, Detection, Recognition, Retrieval, & Classification, Biometrics, Forensics, & Security, Image Processing for Public Health & Safety, Biomedical & Biological Image Processing, Trustworthy AI, Explainable AI, AI-Powered Image & Video Processing, Emerging Applications & Systems, Datasets and Benchmarks",
+  "Summary": "The 2025 IEEE International Conference on Image Processing (ICIP) will take place in Anchorage, Alaska, USA, from September 14–17, 2025.  This flagship conference of the IEEE Signal Processing Society explores the latest technical innovations in image and video processing and covers cutting-edge topics involving computer vision.  The theme for this year’s IEEE ICIP conference is “Imaging in the Age of GenAI.”",
+  "Call for Papers": "# IEEE ICIP 2025: Call for Papers\n\nThe 2025 IEEE International Conference on Image Processing (ICIP) will take place in **Anchorage, Alaska, USA, from September 14-17, 2025.**\n\n## Theme\n\n\"Imaging in the Age of GenAI\"\n\n## Submission Options\n\nIEEE ICIP 2025 offers several ways for authors to present their latest research:\n\n1.  **Submit a conference paper:** Up to five pages for technical content and a sixth page containing only references. Top papers will be highlighted in Spotlight Oral Sessions, with an invitation to submit an extended version for expedited review in select SPS journals.\n2.  **Submit a journal paper to the IEEE Open Journal of Signal Processing (OJ-SP):** Submit up to eight pages of technical content and one page for references; for publication in the IEEE Open Journal of Signal Processing (OJ-SP), the completely open-access journal of the SPS, instead of in the conference proceedings. Papers submitted to OJ-SP prior to the advertised submission deadline that are designated as being intended for presentation at the conference will receive expedited review to ensure that a decision is available in time for inclusion in the conference program. The article processing charge (APC) for open-access publication is paid after acceptance.\n3.  **Present an accepted or published SPS journal paper:** Authors who have published or accepted a paper(s) in an eligible journal within the last year may submit an SPS Journal Paper Presentation Request to present the paper(s) at the conference. For eligibility requirements, visit the [IEEE Signal Processing Society](https://signalprocessingsociety.org/publications-resources/information-authors) website under the “Journal Paper Presentation at SPS Conferences and Workshops” section to view the criteria for eligibility.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Sensing, Representation, Modeling, & Registration\n*   Synthesis, Rendering, & Visualization\n*   Texture Image Representation & Classification\n*   Computational Imaging\n*   Restoration & Enhancement\n*   Filtering & Multi-resolution Processing\n*   Compression, Coding, & Transmission\n*   Color, Multi-spectral, & Hyper-spectral Imaging\n*   Image & Video Interpretation & Understanding\n*   Document Analysis & Processing\n*   Stereoscopic, Multi-view, and 3D Processing\n*   Image & Video Quality Models\n*   Motion Estimation, Registration, & Fusion\n*   Deep Learning for Images & Videos\n*   Learning with Limited Labels\n*   Image & Video Analysis\n*   Detection, Recognition, Retrieval, & Classification\n*   Biometrics, Forensics, & Security\n*   Image Processing for Public Health & Safety\n*   Biomedical & Biological Image Processing\n*   Trustworthy AI\n*   Explainable AI\n*   AI-Powered Image & Video Processing\n*   Emerging Applications & Systems\n*   Datasets and Benchmarks\n\n## Important Dates\n\n*   **Special Session Proposal Deadline:** December 18, 2024\n*   **Special Session Acceptance Notification:** January 6, 2025\n*   **Tutorial Proposal Deadline:** January 8, 2025\n*   **Regular & Special Session Paper Submission Deadline (6 pages Inclusive):** January 22, 2025\n*   **Open Journal of Signal Processing Paper Submission Deadline (9 Pages):** January 22, 2025\n*   **Satellite Workshop Proposals Deadline:** February 5, 2025\n*   **Satellite Workshop Acceptance Notification:** February 12, 2025\n*   **Tutorial Acceptance Notification:** February 26, 2025\n*   **Grand Challenge Session Proposal Deadline:** March 19, 2025\n*   **Reviews Made Available to Authors:** April 23, 2025\n*   **Grand Challenge Session Acceptance Notification:** May 20, 2025\n*   **Author Rebuttal Deadline:** April 30, 2025\n*   **Regular Paper Acceptance Notification (6 pages):** May 20, 2025\n*   **Journal Track Paper Acceptance Notification (9 pages):** May 20, 2025\n*   **Satellite Workshop Paper Submission Deadline:** May 28, 2025\n*   **Journal Paper Presentation Request Deadline:** May 28, 2025\n*   **Final Regular Paper Submission Deadline:** May 28, 2025\n*   **Grand Challenge Paper Submission:** May 28, 2025\n*   **Industry Demo First Round Abstract Submission Deadline:** May 28, 2025\n*   **Journal Paper Presentation Request Notification:** June 4, 2025\n*   **Industry Demo First Round Abstract Notification of Acceptance/Rejection:** June 11, 2025\n*   **Satellite Workshop Paper Acceptance Notification:** June 25, 2025\n*   **Grand Challenge Paper Acceptance Notification:** June 25, 2025\n*   **Industry Demo Second Round Video Submission Deadline:** June 25, 2025\n*   **Satellite Workshop Final Paper Submission Deadline:** July 2, 2025\n*   **Grand Challenge Final Paper Submission Deadline:** July 2, 2025\n*   **Final Industry Demo Notification of Acceptance/Rejection:** July 3, 2025\n*   **All Author Registration Deadline:** July 16, 2025\n\n*OJSP submissions received after the original OJSP deadline of January 22, 2025 are not guaranteed inclusion in the ICIP program.\n\n## Datasets and Benchmarks Track\n\nThe ICIP 2025 Datasets and Benchmarks Track aims to advance image processing research by providing a platform for high-quality, publicly available image and video datasets.  More information is available at [https://2025.ieeeicip.org/datasets-and-benchmarks/](https://2025.ieeeicip.org/datasets-and-benchmarks/).\n\n## Submission\n\nStart a Paper Submission: [https://cmsworkshops.com/ICIP2025/papers.php](https://cmsworkshops.com/ICIP2025/papers.php)"
+}

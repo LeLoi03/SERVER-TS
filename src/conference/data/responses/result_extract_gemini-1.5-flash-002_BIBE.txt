@@ -1,0 +1,19 @@
+```json
+{
+  "Conference dates": "August 11 - 13, 2025",
+  "Year": "2025",
+  "Location": "Guiyang, China",
+  "City-State-Province": "Guiyang",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Monthly Submission Due": "April 25, 2025",
+    "Final Submission Due": "July 10, 2025"
+  },
+  "Topics": "Bioinformatics, Biomedical Engineering, Genomics, Proteomics, DNA sequence analysis, Medical sensor, Digital signal processing, Medical image processing",
+  "Publisher": "VDE Verlag GmbH",
+  "Summary": "The 8th International Conference on Biological Information and Biomedical Engineering (BIBE 2025) will be held from August 11-13, 2025, in Guiyang, China. The conference focuses on the fields of bioinformatics and biomedical engineering, aiming to provide a platform for exchanging and sharing the latest research, technological innovations, and theoretical developments.",
+  "Call for Papers": "No call for papers available"
+}
+```

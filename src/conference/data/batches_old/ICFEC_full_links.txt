@@ -1,0 +1,609 @@
+Conference full name: IEEE International Conference on Fog and Edge Computing (ICFEC)
+
+1. Website of ICFEC_3: https://icfec2025.ontariotechu.ca/
+Website information of ICFEC_3:
+
+href="/" - IEEE ICFEC 2025
+Home 
+ About 
+ href="#event-slides" - Call for Papers 
+ href="#accepted" - Accepted Papers 
+ href="#submission" - Submission Instructions 
+ committees 
+ Registration 
+ Venue 
+ Sponsors 
+ Home 
+ About 
+ href="#event-slides" - Call for Papers 
+ Organization 
+ Sponsors 
+ 9th IEEE International Conference on Fog and Edge Computing 2025 
+  
+ In Conjunction withhref="https://ccgrid2025.uit.no/" - CCGrid 2025
+19-22 May, 2025 - Tromsø, Norway 
+  
+ Conference starts in 
+ 0Days 
+ 00Hours 
+ 00Minutes 
+ 00Seconds 
+ LOCATION: Tromsø 
+  
+ Norway 
+ Important Days 
+  
+ All deadlines are Anywhere on Earth (AoE, UTC-12 timezone). 
+  
+ Jan. 23, 2025: Paper submission deadline (Fixed!) 
+ Feb. 28, 2025: Author notification 
+ Mar 28, 2025: Camera-ready submission 
+ May 19-22, 2025: Conference (on-site in Tromsø, Norway) 
+ Registration 
+ href="https://site.uit.no/ccgrid2025/registration/" - Register Now
+About 
+ ICFEC 2025 
+ The 9th IEEE International Conference on Fog and Edge Computing (ICFEC 2025) is a leading forum to disseminate and discuss research activities and results on a broad range of topics in the fields of fog and edge computing. ICFEC 2025 will take place in conjunction with The 25th International Symposium on Cluster, Cloud and Internet Computing (CCGrid 2025). 
+  
+ Fog and edge computing have received much attention by both the research community and the industry in recent years, and are today seen as an alternative to the utilization of cloud-based computational resources. Especially, this is the case in scenarios where large amounts of data are produced in distributed settings, e.g., in the Internet of Things (IoT), where data needs to be processed in (near) real time, or where suboptimal network connectivity hampers the upload of very large amounts of data to the cloud. Use cases for fog and edge computing range from smart factories over smart grids to autonomous vehicles, to name just some examples. 
+  
+ While tremendous progress has already been made in the research fields of fog and edge computing, there are still numerous challenges which need to be solved. New abstractions and extensions to current programming and storage models are necessary to allow developers to design novel applications that can benefit from massively distributed fog and edge systems. Addressing security, privacy, and trust is of paramount importance while managing the resources and context of mobile, transient and hardware-constrained resources. Fog and edge computing can also help to process very large amounts of data, both for batch processing and data streams. The integration of novel communication protocols and communication patterns with fog and edge computing also brings both new opportunities and unique challenges. Recently, the utilization of fog and edge resources in order to realize distributed machine learning in the form of federated learning has also gained much traction, since it allows to learn from local data without sharing raw data with any centralized entity. 
+ Call for Papers 
+ The conference seeks to attract high-quality contributions covering both theory and practice over systems research and emerging domain-specific applications related to next-generation distributed systems that cover different parts of the cloud-edge compute continuum. This covers different computing models, including mist computing, edge computing, multi-access edge computing, fog computing, and mobile cloud computing. Some representative topics of interest include, but are not limited to: 
+ Topics 
+ Data centers and infrastructures along the compute continuum 
+ Mobility management along the compute continuum 
+ Federated learning and distributed machine learning in and for the compute continuum 
+ 5G/6G for the compute continuum 
+ Middleware and runtime systems for the compute continuum 
+ Programming models for the compute continuum 
+ Storage and data management platforms along the compute continuum 
+ Scheduling and resource management for the compute continuum 
+ Security, privacy, trust, and provenance issues for the compute continuum 
+ Distributed consensus and blockchains in the compute continuum 
+ Modeling and simulation for and in the compute continuum 
+ Performance monitoring and metering of infrastructures along the compute continuum 
+ (Big) Data processing in the compute continuum 
+ Energy-efficient computing in the compute continuum 
+ Accepted Papers and Preliminary Program 
+  
+ Thursday, May 22, 2025 
+  
+ [11:00-12:30] Session 1: Secure and Intelligent Edge Strategies 
+ Session Chair: TBD 
+  
+ 1. Optimising Intrusion Detection Systems in Cloud-Edge Continuum with Knowledge Distillation for Privacy-Preserving and Efficient Communication 
+ Authors: Soad Almabdy and Amjad Ullah 
+ 2. ADApt: Edge Device Anomaly Detection and Microservice Replica Prediction 
+ Authors: Narges Mehran, Nikolay Nikolov, Radu Prodan, Dumitru Roman, Dragi Kimovski, Frank Pallas and Peter Dorfinger 
+ 3. Umbilical Choir: Automated Live Testing for Edge-To-Cloud FaaS Applications 
+ Authors: Mohammadreza Malekabbasi, Tobias Pfandzelter and David Bermbach 
+  
+ [14:00-15:30] Session 2: Resilient and Optimized Edge-Fog-Cloud Solutions 
+ Session Chair: TBD 
+  
+ 1. FTFormer: Fault-Tolerant Layer Offloading in Edge-Fog-Cloud Federated Split Learning 
+ Authors: Jianbo Zhang, Bipul Thapa and Lena Mashayekhy 
+ 2. Neural Network-Enhanced Self-Organization for Efficient Resource Allocation in Distributed Edge Computing Environments 
+ Authors: Samira Hayat, Melanie Schranz and Loris Cannelli 
+ 3. Ant Colony Optimization for Data Search and Movement in the Edge-Fog-Cloud Continuum 
+ Authors: Oleksandr Chepizhko, Péter Forgács and Melanie Schranz 
+  
+ [16:00-18:00] Session 3: Innovations in Edge Orchestration and Learning 
+ Session Chair: TBD 
+  
+ 1. Towards a Decentralised Application-Centric Orchestration Framework in the Cloud-Edge Continuum 
+ Authors: Amjad Ullah, Andras Markus, Hacı İsmail Aslan, Tamas Kiss, Jozsef Kovacs, James Deslauriers, Amy L. Murphy, Yiming Wang and Odej Kao 
+ 2. Vehicle Density-Aware Adaptive Offloading for UAV-Based Road Traffic Monitoring 
+ Authors: Mohammad Dwipa Furqan, Fumio Machida and Ermeson Andrade 
+ 3. FedCCL: Federated Clustered Continual Learning Framework for Privacy-focused Energy Forecasting 
+ Authors: Michael A. Helcig and Stefan Nastic 
+ 4. Real-time Object Tracking on the Edge 
+ Authors: Mohna Kundurthi, Tamil Selvan Gurunathan, Md Azim Khan, Muhammad Shehrose Raza and Aryya Gangopadhyay 
+  
+ All accepted papers will be published by IEEE Computer Society Press (EI-Index) and included in the IEEE Digital Library. For publication, each accepted paper is required to be registered by one of its authors, and at least one author is required to attend and present the paper at the conference for the paper to be included in the final technical program and the IEEE Digital Library. 
+ Submission Instructions 
+ ICFEC 2025 
+ We invite original manuscripts that have neither been published elsewhere nor are under review at a different venue. Papers should follow the IEEE template for conference proceedings. Authors should submit papers, written in English, electronically in PDF format, and may not exceed 8 letter-size pages in length, including all figures, tables, and references. Apart from full papers, authors may also submit poster papers, which may not exceed 2 pages in length. All manuscripts will be reviewed and judged on originality, technical strength, significance, presentation, and relevance to the conference by at least three reviewers. Papers may be submitted online athref="https://easychair.org/conferences/?conf=icfec2025" - Easychair
+. Papers that are accepted for publication may be accepted as REGULAR papers (8 pages), SHORT papers (5 pages) or POSTER papers (2 pages), depending on the reviewers' recommendations. Accepted regular, short, and poster papers will be included in the conference proceedings that will be published through the IEEE Computer Society Conference Publishing Services. 
+  
+ Organization 
+ ICFEC 2025 Committees 
+ General Chairs: 
+ Khalid Elgazzar | , Ontario Tech University, Canada 
+ Lena Mashayekhy | , University of Delaware, USA 
+ Program Chairs: 
+ Cristina L. Abad | , Escuela Superior Politecnica del Litoral (ESPOL), Ecuador 
+ Stefan Schulte | , Hamburg University of Technology, Germany 
+ Subhajit Sidhanta | , Indian Institute of Technology (IIT), Bhilai, India 
+ Steering Committee: 
+ Rajkumar Buyya | , University of Melbourne, Australia 
+ href="https://stack-research-group.gitlabpages.inria.fr/web/pages/adrien-lebre.html" - Adrien Lèbre | , INRIA, France 
+ Omer Rana | , Cardiff University, UK 
+ Haiying Shen | , University of Virginia, USA 
+ Yogesh Simmhan | , Indian Institute of Science, India 
+ Anthony Simonet | , iExec Blockchain Tech, France 
+ Blesson Varghese | , University of St Andrews, UK 
+ Massimo Villari | , University of Messina, Italy 
+  
+ Local Arrangement Chairs: 
+ Svein Tore Jensen | , UiT the Arctic University of Norway 
+ Kai-Even Nilssen | , UiT the Arctic University of Norway 
+ Tina Rishaug | , UiT the Arctic University of Norway 
+ Finance Chairs: 
+ Shuhui Yang | , Purdue University Northwest, USA 
+ Sten-Are Johansen | , UiT the Arctic University of Norway 
+ Publication Chairs: 
+ Eddy Caron | , ISFA, Université Lyon 1, France 
+ Webmaster: 
+ Sifatul Mostafi | , Ontario Tech University, Ontario, Canada 
+ Program Committee: 
+ href="https://www.bell-labs.com/about/researcher-profiles/alexandre-da_silva_veith/#gref" - Alexandre da Silva Veith | , Nokia Bell Labs, Belgium 
+ Auday Al-Dulaimy | , Mälardalen University 
+ Atakan Aral | , University of Vienna, Austria 
+ Christian Becker | , University of Mannheim, Germany 
+ David Bermbach | , TU Berlin, Germany 
+ Luiz F. Bittencourt | , University of Campinas, Brazil 
+ Valeria Cardellini | , University of Roma "Tor Vergata", Italy 
+ Luca Davoli | , University of Parma, Italy 
+ Schahram Dustdar | , Vienna University of Technology, Austria 
+ href="https://ieeexplore.ieee.org/author/37085848362" - Janick Edinger | , University of Hamburg, Germany 
+ Maria Fazio | , Univerità degli Studi di Messina, Italy 
+ Antonino Galletta | , University of Messina, Italy 
+ Sukhpal Singh Gill | , Queen Mary University of London, UK 
+ Aniruddha Gokhale | , Vanderbilt University, USA 
+ Nirnay Ghosh | , IIEST Shibpur, India 
+ Daniel Grosu | , Wayne State University, USA 
+ Peizhen Guo | , Google, USA 
+ Odej Kao | , TU Berlin, Germany 
+ Dragi Kimovski | , Klagenfurt University 
+ Chandra Krintz | , University of California, Santa Barbara, USA 
+ Program Committee (continued): 
+ Vasileios Karagiannis | , Austrian Institute of Technology, Austria 
+ Laurent Lemarchand | , University of Brest, France 
+ href="https://stack-research-group.gitlabpages.inria.fr/web/pages/adrien-lebre.html" - Adrien Lèbre | , INRIA, France 
+ Zhuozhao Li | , Southern University of Science and Technology, China 
+ Narges Mehran | , University of Salzburg, Austria 
+ Zahra Najafabadi-Samani | , University of Innsbruck, Austria 
+ Kwangsung Oh | , University of Nebraska at Omaha, USA 
+ Alessandro Papadopoulos | , Mälardalen University, Sweden 
+ Padmanabhan Pillai | , Intel Labs, USA 
+ Guillaume Pierre | , University of Rennes 1, France 
+ Pierluigi Plebani | , Politecnico di Milano, Italy 
+ Radu Prodan | , University of Klagenfurt, Austria 
+ Chenxi Qiu | , University of North Texas, USA 
+ Ivan Rodero | , University of Utah, USA 
+ Hong-Linh Truong | , Aalto University, Finland 
+ Lin Wang | , University of Paderborn, Germany 
+ href="https://www.etsmtl.ca/en/research/professors/kzhang" - Kaiwen Zhang | , ETS Montreal, Canada 
+ Registration 
+ href="https://site.uit.no/ccgrid2025/registration/" - Click Here to Register Now!
+ICFEC 2025 is a physical event with the aim of bringing together the technical community in-person, and giving them the opportunity to network, communicate, share new ideas and learn new insights, ranging from research topics to diversity challenges. We do not offer a virtual option for attendance. 
+  
+ Registration Policy 
+  
+ • Author registration deadline isMarch 20, 2025. Non-author early registration deadline isApril 14, 2025. 
+ • At least one author of an accepted conference/workshop/ICFEC paper must register at theIEEE memberorNon-Memberprice byMarch 14, 2025. An author with multiple accepted conference papers may receive a discount ofNOK 2875for each additional paper registration. 
+ • Member registration rates are available for professional members of IEEE. 
+ • The conference paper page limit is 8. The short paper page limit is 5. 
+ • Registration can be canceled on or beforeApril 20, 2025. An administrative fee ofNOK 1000will be deducted from each refund. 
+ • Registration includes access to conference and workshop rooms, proceedings, food (lunches and breaks), gala dinner, social event, goodies, and one-week bus tickets. 
+ • A limited number of hotel rooms are available on the registration page. 
+ • For registration questions, please emailkai-even.nilssen@uit.noandtina.rishaug@uit.no. 
+ Conference Venue and Hotel 
+ ICFEC 2025 
+ The ICFEC 2025 will take place atUiT The Arctic University of Norwayin Tromsø. The university is located close to the city center of Tromsø and can easily be reached by bus or car. To navigate around campus, we recommend usingMazeMap. For details see the link:href="https://site.uit.no/ccgrid2025/venue-and-stay/" - https://site.uit.no/ccgrid2025/venue-and-stay/
+ 
+ Sponsors 
+ We thank our generous sponsors. 
+ ICFEC 2025 
+ CONTACT 
+ Khalid Elgazzar - khalid.elgazzar[at]ontariotechu.ca 
+ Stefan Schulte - stefan.schulte[at]tuhh.de 
+ SHARE ON SOCIAL MEDIA 
+ href="https://www.facebook.com/sharer/sharer.php?u=https://icfec2024.ontariotechu.ca/" - 
+ href="http://twitter.com/share?text=IEEE%20Int.%20Conf.%20on%20Fog%20and%20Edge%20Computing%202024&url=https://icfec2024.ontariotechu.ca/&hashtags=computing,edge,distributedsystems,cloud,computerscience,edgeai,edgecomputing,fogcomputing" - 
+ href="https://www.linkedin.com/sharing/share-offsite/?url=https://icfec2024.ontariotechu.ca/" - 
+ © Copyright:href="https://icfec2024.eecis.udel.edu/" - ICFEC 2025
+
+2. Website of ICFEC_3: https://icfec2025.ontariotechu.ca/
+Website information of ICFEC_3:
+
+Home 
+ About 
+ href="#event-slides" - Call for Papers 
+ Organization 
+ Sponsors 
+ href="/" - IEEE ICFEC 2025
+Home 
+ About 
+ href="#event-slides" - Call for Papers 
+ href="#accepted" - Accepted Papers 
+ href="#submission" - Submission Instructions 
+ committees 
+ Registration 
+ Venue 
+ Sponsors 
+ Home 
+ About 
+ href="#event-slides" - Call for Papers 
+ Organization 
+ Sponsors 
+ 9th IEEE International Conference on Fog and Edge Computing 2025 
+  
+ In Conjunction withhref="https://ccgrid2025.uit.no/" - CCGrid 2025
+19-22 May, 2025 - Tromsø, Norway 
+  
+ Conference starts in 
+ 0Days 
+ 00Hours 
+ 00Minutes 
+ 00Seconds 
+ LOCATION: Tromsø 
+  
+ Norway 
+ Important Days 
+  
+ All deadlines are Anywhere on Earth (AoE, UTC-12 timezone). 
+  
+ Jan. 23, 2025: Paper submission deadline (Fixed!) 
+ Feb. 28, 2025: Author notification 
+ Mar 28, 2025: Camera-ready submission 
+ May 19-22, 2025: Conference (on-site in Tromsø, Norway) 
+ Registration 
+ href="https://site.uit.no/ccgrid2025/registration/" - Register Now
+About 
+ ICFEC 2025 
+ The 9th IEEE International Conference on Fog and Edge Computing (ICFEC 2025) is a leading forum to disseminate and discuss research activities and results on a broad range of topics in the fields of fog and edge computing. ICFEC 2025 will take place in conjunction with The 25th International Symposium on Cluster, Cloud and Internet Computing (CCGrid 2025). 
+  
+ Fog and edge computing have received much attention by both the research community and the industry in recent years, and are today seen as an alternative to the utilization of cloud-based computational resources. Especially, this is the case in scenarios where large amounts of data are produced in distributed settings, e.g., in the Internet of Things (IoT), where data needs to be processed in (near) real time, or where suboptimal network connectivity hampers the upload of very large amounts of data to the cloud. Use cases for fog and edge computing range from smart factories over smart grids to autonomous vehicles, to name just some examples. 
+  
+ While tremendous progress has already been made in the research fields of fog and edge computing, there are still numerous challenges which need to be solved. New abstractions and extensions to current programming and storage models are necessary to allow developers to design novel applications that can benefit from massively distributed fog and edge systems. Addressing security, privacy, and trust is of paramount importance while managing the resources and context of mobile, transient and hardware-constrained resources. Fog and edge computing can also help to process very large amounts of data, both for batch processing and data streams. The integration of novel communication protocols and communication patterns with fog and edge computing also brings both new opportunities and unique challenges. Recently, the utilization of fog and edge resources in order to realize distributed machine learning in the form of federated learning has also gained much traction, since it allows to learn from local data without sharing raw data with any centralized entity. 
+ Call for Papers 
+ The conference seeks to attract high-quality contributions covering both theory and practice over systems research and emerging domain-specific applications related to next-generation distributed systems that cover different parts of the cloud-edge compute continuum. This covers different computing models, including mist computing, edge computing, multi-access edge computing, fog computing, and mobile cloud computing. Some representative topics of interest include, but are not limited to: 
+ Topics 
+ Data centers and infrastructures along the compute continuum 
+ Mobility management along the compute continuum 
+ Federated learning and distributed machine learning in and for the compute continuum 
+ 5G/6G for the compute continuum 
+ Middleware and runtime systems for the compute continuum 
+ Programming models for the compute continuum 
+ Storage and data management platforms along the compute continuum 
+ Scheduling and resource management for the compute continuum 
+ Security, privacy, trust, and provenance issues for the compute continuum 
+ Distributed consensus and blockchains in the compute continuum 
+ Modeling and simulation for and in the compute continuum 
+ Performance monitoring and metering of infrastructures along the compute continuum 
+ (Big) Data processing in the compute continuum 
+ Energy-efficient computing in the compute continuum 
+ Accepted Papers and Preliminary Program 
+  
+ Thursday, May 22, 2025 
+  
+ [11:00-12:30] Session 1: Secure and Intelligent Edge Strategies 
+ Session Chair: TBD 
+  
+ 1. Optimising Intrusion Detection Systems in Cloud-Edge Continuum with Knowledge Distillation for Privacy-Preserving and Efficient Communication 
+ Authors: Soad Almabdy and Amjad Ullah 
+ 2. ADApt: Edge Device Anomaly Detection and Microservice Replica Prediction 
+ Authors: Narges Mehran, Nikolay Nikolov, Radu Prodan, Dumitru Roman, Dragi Kimovski, Frank Pallas and Peter Dorfinger 
+ 3. Umbilical Choir: Automated Live Testing for Edge-To-Cloud FaaS Applications 
+ Authors: Mohammadreza Malekabbasi, Tobias Pfandzelter and David Bermbach 
+  
+ [14:00-15:30] Session 2: Resilient and Optimized Edge-Fog-Cloud Solutions 
+ Session Chair: TBD 
+  
+ 1. FTFormer: Fault-Tolerant Layer Offloading in Edge-Fog-Cloud Federated Split Learning 
+ Authors: Jianbo Zhang, Bipul Thapa and Lena Mashayekhy 
+ 2. Neural Network-Enhanced Self-Organization for Efficient Resource Allocation in Distributed Edge Computing Environments 
+ Authors: Samira Hayat, Melanie Schranz and Loris Cannelli 
+ 3. Ant Colony Optimization for Data Search and Movement in the Edge-Fog-Cloud Continuum 
+ Authors: Oleksandr Chepizhko, Péter Forgács and Melanie Schranz 
+  
+ [16:00-18:00] Session 3: Innovations in Edge Orchestration and Learning 
+ Session Chair: TBD 
+  
+ 1. Towards a Decentralised Application-Centric Orchestration Framework in the Cloud-Edge Continuum 
+ Authors: Amjad Ullah, Andras Markus, Hacı İsmail Aslan, Tamas Kiss, Jozsef Kovacs, James Deslauriers, Amy L. Murphy, Yiming Wang and Odej Kao 
+ 2. Vehicle Density-Aware Adaptive Offloading for UAV-Based Road Traffic Monitoring 
+ Authors: Mohammad Dwipa Furqan, Fumio Machida and Ermeson Andrade 
+ 3. FedCCL: Federated Clustered Continual Learning Framework for Privacy-focused Energy Forecasting 
+ Authors: Michael A. Helcig and Stefan Nastic 
+ 4. Real-time Object Tracking on the Edge 
+ Authors: Mohna Kundurthi, Tamil Selvan Gurunathan, Md Azim Khan, Muhammad Shehrose Raza and Aryya Gangopadhyay 
+  
+ All accepted papers will be published by IEEE Computer Society Press (EI-Index) and included in the IEEE Digital Library. For publication, each accepted paper is required to be registered by one of its authors, and at least one author is required to attend and present the paper at the conference for the paper to be included in the final technical program and the IEEE Digital Library. 
+ Submission Instructions 
+ ICFEC 2025 
+ We invite original manuscripts that have neither been published elsewhere nor are under review at a different venue. Papers should follow the IEEE template for conference proceedings. Authors should submit papers, written in English, electronically in PDF format, and may not exceed 8 letter-size pages in length, including all figures, tables, and references. Apart from full papers, authors may also submit poster papers, which may not exceed 2 pages in length. All manuscripts will be reviewed and judged on originality, technical strength, significance, presentation, and relevance to the conference by at least three reviewers. Papers may be submitted online athref="https://easychair.org/conferences/?conf=icfec2025" - Easychair
+. Papers that are accepted for publication may be accepted as REGULAR papers (8 pages), SHORT papers (5 pages) or POSTER papers (2 pages), depending on the reviewers' recommendations. Accepted regular, short, and poster papers will be included in the conference proceedings that will be published through the IEEE Computer Society Conference Publishing Services. 
+  
+ Organization 
+ ICFEC 2025 Committees 
+ General Chairs: 
+ Khalid Elgazzar | , Ontario Tech University, Canada 
+ Lena Mashayekhy | , University of Delaware, USA 
+ Program Chairs: 
+ Cristina L. Abad | , Escuela Superior Politecnica del Litoral (ESPOL), Ecuador 
+ Stefan Schulte | , Hamburg University of Technology, Germany 
+ Subhajit Sidhanta | , Indian Institute of Technology (IIT), Bhilai, India 
+ Steering Committee: 
+ Rajkumar Buyya | , University of Melbourne, Australia 
+ href="https://stack-research-group.gitlabpages.inria.fr/web/pages/adrien-lebre.html" - Adrien Lèbre | , INRIA, France 
+ Omer Rana | , Cardiff University, UK 
+ Haiying Shen | , University of Virginia, USA 
+ Yogesh Simmhan | , Indian Institute of Science, India 
+ Anthony Simonet | , iExec Blockchain Tech, France 
+ Blesson Varghese | , University of St Andrews, UK 
+ Massimo Villari | , University of Messina, Italy 
+  
+ Local Arrangement Chairs: 
+ Svein Tore Jensen | , UiT the Arctic University of Norway 
+ Kai-Even Nilssen | , UiT the Arctic University of Norway 
+ Tina Rishaug | , UiT the Arctic University of Norway 
+ Finance Chairs: 
+ Shuhui Yang | , Purdue University Northwest, USA 
+ Sten-Are Johansen | , UiT the Arctic University of Norway 
+ Publication Chairs: 
+ Eddy Caron | , ISFA, Université Lyon 1, France 
+ Webmaster: 
+ Sifatul Mostafi | , Ontario Tech University, Ontario, Canada 
+ Program Committee: 
+ href="https://www.bell-labs.com/about/researcher-profiles/alexandre-da_silva_veith/#gref" - Alexandre da Silva Veith | , Nokia Bell Labs, Belgium 
+ Auday Al-Dulaimy | , Mälardalen University 
+ Atakan Aral | , University of Vienna, Austria 
+ Christian Becker | , University of Mannheim, Germany 
+ David Bermbach | , TU Berlin, Germany 
+ Luiz F. Bittencourt | , University of Campinas, Brazil 
+ Valeria Cardellini | , University of Roma "Tor Vergata", Italy 
+ Luca Davoli | , University of Parma, Italy 
+ Schahram Dustdar | , Vienna University of Technology, Austria 
+ href="https://ieeexplore.ieee.org/author/37085848362" - Janick Edinger | , University of Hamburg, Germany 
+ Maria Fazio | , Univerità degli Studi di Messina, Italy 
+ Antonino Galletta | , University of Messina, Italy 
+ Sukhpal Singh Gill | , Queen Mary University of London, UK 
+ Aniruddha Gokhale | , Vanderbilt University, USA 
+ Nirnay Ghosh | , IIEST Shibpur, India 
+ Daniel Grosu | , Wayne State University, USA 
+ Peizhen Guo | , Google, USA 
+ Odej Kao | , TU Berlin, Germany 
+ Dragi Kimovski | , Klagenfurt University 
+ Chandra Krintz | , University of California, Santa Barbara, USA 
+ Program Committee (continued): 
+ Vasileios Karagiannis | , Austrian Institute of Technology, Austria 
+ Laurent Lemarchand | , University of Brest, France 
+ href="https://stack-research-group.gitlabpages.inria.fr/web/pages/adrien-lebre.html" - Adrien Lèbre | , INRIA, France 
+ Zhuozhao Li | , Southern University of Science and Technology, China 
+ Narges Mehran | , University of Salzburg, Austria 
+ Zahra Najafabadi-Samani | , University of Innsbruck, Austria 
+ Kwangsung Oh | , University of Nebraska at Omaha, USA 
+ Alessandro Papadopoulos | , Mälardalen University, Sweden 
+ Padmanabhan Pillai | , Intel Labs, USA 
+ Guillaume Pierre | , University of Rennes 1, France 
+ Pierluigi Plebani | , Politecnico di Milano, Italy 
+ Radu Prodan | , University of Klagenfurt, Austria 
+ Chenxi Qiu | , University of North Texas, USA 
+ Ivan Rodero | , University of Utah, USA 
+ Hong-Linh Truong | , Aalto University, Finland 
+ Lin Wang | , University of Paderborn, Germany 
+ href="https://www.etsmtl.ca/en/research/professors/kzhang" - Kaiwen Zhang | , ETS Montreal, Canada 
+ Registration 
+ href="https://site.uit.no/ccgrid2025/registration/" - Click Here to Register Now!
+ICFEC 2025 is a physical event with the aim of bringing together the technical community in-person, and giving them the opportunity to network, communicate, share new ideas and learn new insights, ranging from research topics to diversity challenges. We do not offer a virtual option for attendance. 
+  
+ Registration Policy 
+  
+ • Author registration deadline isMarch 20, 2025. Non-author early registration deadline isApril 14, 2025. 
+ • At least one author of an accepted conference/workshop/ICFEC paper must register at theIEEE memberorNon-Memberprice byMarch 14, 2025. An author with multiple accepted conference papers may receive a discount ofNOK 2875for each additional paper registration. 
+ • Member registration rates are available for professional members of IEEE. 
+ • The conference paper page limit is 8. The short paper page limit is 5. 
+ • Registration can be canceled on or beforeApril 20, 2025. An administrative fee ofNOK 1000will be deducted from each refund. 
+ • Registration includes access to conference and workshop rooms, proceedings, food (lunches and breaks), gala dinner, social event, goodies, and one-week bus tickets. 
+ • A limited number of hotel rooms are available on the registration page. 
+ • For registration questions, please emailkai-even.nilssen@uit.noandtina.rishaug@uit.no. 
+ Conference Venue and Hotel 
+ ICFEC 2025 
+ The ICFEC 2025 will take place atUiT The Arctic University of Norwayin Tromsø. The university is located close to the city center of Tromsø and can easily be reached by bus or car. To navigate around campus, we recommend usingMazeMap. For details see the link:href="https://site.uit.no/ccgrid2025/venue-and-stay/" - https://site.uit.no/ccgrid2025/venue-and-stay/
+ 
+ Sponsors 
+ We thank our generous sponsors. 
+ ICFEC 2025 
+ CONTACT 
+ Khalid Elgazzar - khalid.elgazzar[at]ontariotechu.ca 
+ Stefan Schulte - stefan.schulte[at]tuhh.de 
+ SHARE ON SOCIAL MEDIA 
+ href="https://www.facebook.com/sharer/sharer.php?u=https://icfec2024.ontariotechu.ca/" - 
+ href="http://twitter.com/share?text=IEEE%20Int.%20Conf.%20on%20Fog%20and%20Edge%20Computing%202024&url=https://icfec2024.ontariotechu.ca/&hashtags=computing,edge,distributedsystems,cloud,computerscience,edgeai,edgecomputing,fogcomputing" - 
+ href="https://www.linkedin.com/sharing/share-offsite/?url=https://icfec2024.ontariotechu.ca/" - 
+ © Copyright:href="https://icfec2024.eecis.udel.edu/" - ICFEC 2025
+
+3. Website of ICFEC_3: https://www.computer.org/csdl/proceedings/icfec/2025/20XfG9BWVA4
+Website information of ICFEC_3:
+
+Join Us 
+ Sign In 
+ My Subscriptions 
+ Magazines 
+ Journals 
+ Video Library 
+ Conference Proceedings 
+ Individual CSDL Subscriptions 
+ Institutional CSDL Subscriptions 
+ Resources | Career Center 
+ Tech News 
+ Resource Center 
+ Press Room 
+ Advertising 
+ Librarian Resources 
+ IEEE.org 
+ Help 
+ About Us 
+ Career Center 
+ Cart 
+ Create Account 
+ Sign In 
+ Toggle navigation 
+ My Subscriptions 
+ Browse Content 
+ Resources 
+ Sign up for our newsletter. 
+ EMAIL ADDRESS 
+ IEEE COMPUTER SOCIETY 
+ About Us 
+ Board of Governors 
+ Newsletters 
+ Press Room 
+ IEEE Support Center 
+ Contact Us 
+ DIGITAL LIBRARY 
+ Magazines 
+ Journals 
+ Conference Proceedings 
+ Video Library 
+ COMPUTING RESOURCES 
+ Jobs Board 
+ Courses & Certifications 
+ Webinars 
+ Podcasts 
+ Tech News 
+ Membership 
+ COMMUNITY RESOURCES 
+ Conference Organizers 
+ href="https://www.computer.org/publications/author-resources" - Authors 
+ Chapters 
+ Communities 
+ BUSINESS SOLUTIONS 
+ Corporate Partnerships 
+ Conference Sponsorships & Exhibits 
+ Advertising 
+ Recruiting 
+ Digital Library Institution Subscriptions 
+ POLICIES 
+ Privacy 
+ Accessibility Statement 
+ IEEE Nondiscrimination Policy 
+ XML Sitemap 
+ ©IEEE — All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions. 
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+4. Website of ICFEC_3: https://site.uit.no/ccgrid2025/
+Website information of ICFEC_3:
+
+Skip to contenthref="https://site.uit.no/ccgrid2025/" - CCGrid2025
+href="#" - For Authors | Menu Toggle | href="https://site.uit.no/ccgrid2025/camera-ready-instructions/" - Camera-Ready Instructions 
+ href="https://site.uit.no/ccgrid2025/paper-submission/" - Paper Submission 
+ For Attendees | Menu Toggle | href="https://site.uit.no/ccgrid2025/program/" - Early Program 
+ href="https://site.uit.no/ccgrid2025/venue-and-stay/" - Venue and Stay 
+ href="https://site.uit.no/ccgrid2025/get-to-know-tromso/" - Get to know Tromsø 
+ href="https://site.uit.no/ccgrid2025/registration/" - Registration 
+ Committees | Menu Toggle | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - Calls | Menu Toggle | href="https://site.uit.no/ccgrid2025/research-paper/" - Call For Papers 
+ href="https://site.uit.no/ccgrid2025/scale-challenge/" - SCALE 
+ href="https://site.uit.no/ccgrid2025/artifacts/" - Artifacts 
+ href="https://site.uit.no/ccgrid2025/posters/" - Posters 
+ href="https://site.uit.no/ccgrid2025/doctoral-symposium-and-early-career-track/" - Doctoral Symposium and Early Career track 
+ href="https://site.uit.no/ccgrid2025/workshop-proposals/" - Workshop Proposals (CLOSED) 
+ Keynotes | Menu Toggle | href="https://site.uit.no/ccgrid2025/prof-kai-li/" - Professor Kai Li 
+ href="https://site.uit.no/ccgrid2025/professor-anne-c-elster/" - Professor Anne C. Elster 
+ href="https://site.uit.no/ccgrid2025/nathalie-mitton/" - Senior Scientist Nathalie Mitton 
+ href="https://site.uit.no/ccgrid2025/workshops/" - Workshops 
+ href="https://site.uit.no/ccgrid2025/patrons/" - Patron 
+ Previous Editions | Menu Toggle | 2024 
+ 2023 
+ 2022 
+ 2021 
+ 2020 
+ href="https://site.uit.no/ccgrid2025/" - CCGrid2025
+Main MenuThe IEEE International Symposium on Cluster, Cloud, and Internet Computing is a leading forumfor disseminating and discussing research activities, resulting in a broad range of topics in distributedsystems.Topics of interest range from computing Clusters to widely distributed clouds and Internetcomputing paradigms (like fog/edge computing for Internet of Things (IoT)), applied to societal challenges(like sustainability, security and AI). The conference features keynotes, technical presentations, posters,workshops, the SCALE challenge featuring live demonstrations and collocates the ICFEC conference. 
+ Latest news 
+ 2025-03-27 
+ An early version of CCGrid2025 program is availablehref="https://site.uit.no/ccgrid2025/program/" - here
+. 
+ 2025-03-20 
+ Professor Kai Li’s keynote has been updated.href="https://site.uit.no/ccgrid2025/prof-kai-li/" - More details
+. 
+ 2025-03-15 
+ Deadline for author registration has been extended.href="https://site.uit.no/ccgrid2025/registration/" - More details
+. 
+ 2025-03-13 
+ Deadline for Camera ready submission has been extended for authorshref="https://site.uit.no/ccgrid2025/camera-ready-instructions/" - More details
+. 
+ 2025-02-19 
+ Call for Artifacts has an extended deadline.href="https://site.uit.no/ccgrid2025/artifacts/" - More details
+. 
+ 2025-02-18 
+ SCALE challenge has an extended deadline.href="https://site.uit.no/ccgrid2025/scale-challenge/" - More details
+. 
+ 2025-02-18 
+ All authors that submitted a paper to CCGrid2025 main tracks have received paper notifications. 
+ 2025-02-17 
+ Author notification for CCGrid2025 is now set to 17th of February 2025, AOE. 
+ 2025-02-15 
+ Due to a few late reviews, author notification for CCGrid2025 has been delayed. All authors will receive notification for their submitted papers in the following days. Apologies for the delays. 
+ 2025-02-05 
+ Registration is now available! Clickhref="https://site.uit.no/ccgrid2025/registration/" - here
+to register. 
+ 2025-01-16 
+ Call for Doctoral Symposium and Early Career track is available. Clickhref="https://site.uit.no/ccgrid2025/doctoral-symposium-and-early-career-track/" - here
+for more information. 
+ 2025-01-11 
+ Call for SCALE challenge is available. Seehref="https://site.uit.no/ccgrid2025/scale-challenge/" - here
+for more details. 
+ 2024-12-21 
+ Call for artifacts is now available. Clickhref="https://site.uit.no/ccgrid2025/artifacts/" - here
+. 
+ 2024-12-03 
+ Paper submission deadlines are updated! Seehref="https://site.uit.no/ccgrid2025/research-paper/" - here
+. 
+ 2024-11-19 
+ List of workshops is available!.href="https://site.uit.no/ccgrid2025/workshops/" - Click here for more information.
+2024-10-08 
+ Papers submission page available.href="https://site.uit.no/ccgrid2025/paper-submission/" - Click here for more information.
+2024-09-06 
+ New keynote speaker announced:href="https://site.uit.no/ccgrid2025/professor-anne-c-elster/" - Professor Anne C. Elster
+. 
+ 2024-09-04 
+ Call for Workshop Proposals updated! Seehref="https://site.uit.no/ccgrid2025/workshop-proposals/" - here
+. 
+ Deadline for Workshop Proposals extended to23rd of September, 2024. 
+ 2024-07-31 
+ Call for Workshop Proposals availablehref="https://site.uit.no/ccgrid2025/workshop-proposals/" - here
+. 
+ 2024-07-08 
+ Two first keynotes speakers announced:href="https://site.uit.no/ccgrid2025/nathalie-mitton/" - Senior Scientist Nathalie Mitton
+andhref="https://site.uit.no/ccgrid2025/prof-kai-li/" - Professor Kai Li
+. 
+ 2024-06-05 
+ CFP availablehref="https://site.uit.no/ccgrid2025/research-paper/" - here
+. 
+ href="#" - For Authors | Menu Toggle | href="https://site.uit.no/ccgrid2025/camera-ready-instructions/" - Camera-Ready Instructions 
+ href="https://site.uit.no/ccgrid2025/paper-submission/" - Paper Submission 
+ For Attendees | Menu Toggle | href="https://site.uit.no/ccgrid2025/program/" - Early Program 
+ href="https://site.uit.no/ccgrid2025/venue-and-stay/" - Venue and Stay 
+ href="https://site.uit.no/ccgrid2025/get-to-know-tromso/" - Get to know Tromsø 
+ href="https://site.uit.no/ccgrid2025/registration/" - Registration 
+ Committees | Menu Toggle | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - Calls | Menu Toggle | href="https://site.uit.no/ccgrid2025/research-paper/" - Call For Papers 
+ href="https://site.uit.no/ccgrid2025/scale-challenge/" - SCALE 
+ href="https://site.uit.no/ccgrid2025/artifacts/" - Artifacts 
+ href="https://site.uit.no/ccgrid2025/posters/" - Posters 
+ href="https://site.uit.no/ccgrid2025/doctoral-symposium-and-early-career-track/" - Doctoral Symposium and Early Career track 
+ href="https://site.uit.no/ccgrid2025/workshop-proposals/" - Workshop Proposals (CLOSED) 
+ Keynotes | Menu Toggle | href="https://site.uit.no/ccgrid2025/prof-kai-li/" - Professor Kai Li 
+ href="https://site.uit.no/ccgrid2025/professor-anne-c-elster/" - Professor Anne C. Elster 
+ href="https://site.uit.no/ccgrid2025/nathalie-mitton/" - Senior Scientist Nathalie Mitton 
+ href="https://site.uit.no/ccgrid2025/workshops/" - Workshops 
+ href="https://site.uit.no/ccgrid2025/patrons/" - Patron 
+ Previous Editions | Menu Toggle | 2024 
+ 2023 
+ 2022 
+ 2021 
+ 2020 
+ Contact email:href="mailto:ccgrid2025@uit.no" - ccgrid2025@uit.no
+Copyright © 2025 The 25th IEEE international Symposium on Cluster, Cloud and Internet Computing. 
+ Scroll to Top
+

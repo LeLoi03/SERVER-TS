@@ -1,0 +1,119 @@
+Conference International Workshop on Combinatorial Image Analysis: Theory and Applications (IWCIA):
+
+Skip to contenthref="https://iwcia2025.inf.u-szeged.hu/" - International Workshop on Combinatorial Image Analysis
+24-26 September 2025, Szeged (Hungary) 
+ Menuhref="https://iwcia2025.inf.u-szeged.hu/" - IWCIA 2025 
+ href="https://iwcia2025.inf.u-szeged.hu/keynote-speakers/" - Keynote Speakers 
+ href="https://iwcia2025.inf.u-szeged.hu/important-dates/" - Important Dates 
+ href="https://iwcia2025.inf.u-szeged.hu/paper-submissions/" - Paper Submissions 
+ href="https://iwcia2025.inf.u-szeged.hu/registration/" - Registration 
+ Committees 
+ href="https://iwcia2025.inf.u-szeged.hu/sponsors/" - Sponsors 
+ href="https://iwcia2025.inf.u-szeged.hu/travel-information/" - Travel Information 
+ href="https://iwcia2025.inf.u-szeged.hu/organizers-and-contact/" - Organizers and Contact 
+ Scroll down to contentIWCIA 2025 
+ IWCIA 2025 is the twenty-third in a series of International Workshops on Combinatorial Image Analysis. It will be held in hybrid mode with base in Szeged, Hungary, September 24-26, 2025. The scientific program of the workshop consists of keynote talks and contributed papers.The conference proceedings will be published by Springer in Lecture Notes in Computer Science (approved). 
+ Scope 
+ Image analysis is a scientific discipline providing theoretical foundations and methods for solving problems appearing in a wide range of areas, as diverse as medicine, robotics, defense, and security. As a rule, the processed data are discrete; therefore, the “discrete approach” to image analysis appears to be a natural one and has an increasing importance. It is based on studying combinatorial properties of the considered digital data sets. Combinatorial image analysis often features various advantages (in terms of efficiency and accuracy) over the more traditional approaches based on continuous models requiring numeric computation. 
+ The Workshop is a forum for current research on the following (or similar) research subjects which are directly or potentially applicable to image analysis: 
+ Combinatorial problems in the discrete plane and space 
+ Lattice polygons and polytopes 
+ Digital/combinatorial geometry and topology 
+ Digital manifolds 
+ Geometry of digital curves and surfaces 
+ Analysis and processing of digital surfaces with singularities (such as “pinched digital surfaces”) 
+ Homotopy of digital manifolds; thinning algorithms and skeletons 
+ Boundary tracking of digital solids; Geometric characteristics of object boundaries 
+ Multigrid convergence analysis of metric-based descriptors 
+ Tilings and patterns; Combinatorial pattern matching 
+ Computational geometry and imaging sciences 
+ Integer programming, linear programming, and graph theoretic models and approaches to problems of image analysis 
+ Image representation, segmentation, grouping, and reconstruction 
+ Processing “very large” digital pictures; Methods for image compression 
+ Parallel architectures and algorithms 
+ Fuzzy and stochastic image analysis 
+ Discrete tomography 
+ Grammars and models for image or scene analysis and recognition; cellular automata 
+ Mathematical morphology and image analysis 
+ Applications in medical imaging, biometrics, computer vision, image understanding, robotics, metrology, and others 
+ AI and machine learning in imaging and 
+ image analysis 
+ The submitted papers are expected to meet high standards satisfying serious evaluation criteria. Each paper will be reviewed thoroughly by at least two members of the Program Committee. Double-blind review process will be applied to ensure maximal objectiveness. 
+ Prof. Dr. Jovisa Zunic, a fellow of the Mathematical Institute of the Serbian Academy of Sciences and Arts (Belgrade, Serbia), was born in Serbia in 1961. He worked at the University of Novi Sad for more than a decade and held positions at Cardiff University (Cardiff, UK) and the Department of Computer Science at Exeter University (Exeter, UK) for almost two decades. 
+ His research interests included computer vision, image processing, digital and discrete geometry, shape representation and encoding of digital objects, discrete mathematics, combinatorial optimization, number theory, wireless networks, neural networks, and pattern recognition. He published more than 150 research papers, most of which appeared in leading journals in the fields of computer science and mathematics. His Erdos number is 2 (via Prof. Aleksandar Ivic). 
+ Prof. Zunic served as an editor or editorial board member for several high-ranking scientific journals. Under his supervision, numerous graduate students successfully developed as scientists. In 2004, alongside Prof. R. Klette, he organized the 10th edition of IWCIA in Auckland, New Zealand. 
+ He passed away on March 25, 2025. 
+ Past Editions 
+  
+ 2024 | Fort Luaderdale | USA 
+ 2022 | Messina | Italy 
+ 2020 | Novi Sad | Serbia 
+ 2018 | Porto | Portugal 
+ 2017 | Plovdiv | Bulgaria 
+ 2015 | Kolkata | India 
+ 2014 | Brno | Czech Republic 
+ 2012 | Austin | USA 
+ 2011 | Madrid | Spain 
+ 2009 | Playa del Carmen | Mexico 
+ 2008 | Buffalo, NY | USA 
+ 2006 | Berlin | Germany 
+ 2004 | Auckland | New Zealand 
+ 2003 | Palermo | Italy 
+ 2001 | Philadelphia | USA 
+ 2000 | Caen | France 
+ 1999 | Madras | India 
+ 1997 | Hiroshima | Japan 
+ 1995 | Lyon | France 
+ 1994 | Washington DC | USA 
+ 1992 | Ube | Japan 
+ 1991 | Paris | France 
+ Proudly powered by WordPress 
+
+Call for Papers information:
+Skip to contenthref="https://iwcia2025.inf.u-szeged.hu/" - International Workshop on Combinatorial Image Analysis
+24-26 September 2025, Szeged (Hungary) 
+ Menuhref="https://iwcia2025.inf.u-szeged.hu/" - IWCIA 2025 
+ href="https://iwcia2025.inf.u-szeged.hu/keynote-speakers/" - Keynote Speakers 
+ href="https://iwcia2025.inf.u-szeged.hu/important-dates/" - Important Dates 
+ href="https://iwcia2025.inf.u-szeged.hu/paper-submissions/" - Paper Submissions 
+ href="https://iwcia2025.inf.u-szeged.hu/registration/" - Registration 
+ Committees 
+ href="https://iwcia2025.inf.u-szeged.hu/sponsors/" - Sponsors 
+ href="https://iwcia2025.inf.u-szeged.hu/travel-information/" - Travel Information 
+ href="https://iwcia2025.inf.u-szeged.hu/organizers-and-contact/" - Organizers and Contact 
+ Paper Submissions 
+ Prospective authors are invited to submit a paper on some of the Workshop’s topics or a closely related topic. The submitted work should contain only results that areunpublishedand not included in other work considered for publication elsewhere. Thus by submitting a paper the author(s) warrant that neither it nor any other paper with essentially the same technical content has been published or submitted for publication anywhere else. 
+ All manuscripts must be prepared according the LNCS requirements and submitted electronically in PDF format using thehref="https://cmt3.research.microsoft.com/IWCIA2025" - Microsoft CMT
+.Thelength should be at least 10 pages. The manuscriptsmay not contain information revealing authors’ identity. 
+ Papers will be reviewed thoroughly with an emphasis on potential to contribute to the state-of-the-art in the field. Each paper will receive at leasttwo double-blind reviewsensuring maximal objectiveness. Selection criteria will include mathematical depth, accuracy and originality of the ideas, clarity and significance of the results, and presentation quality. 
+ Thenotification of acceptancewill be sentby email on a rolling basis (at most 4 weeks after the submission).The accepted papers should be revised according to the referees’ comments and submitted in camera-ready form bytogether with all the source files and the signed copyright form. The final version should be prepared strictly following requirements. 
+ The accepted papers will be publishedin a volume of theLecture Notes in Computer Science (Springer)series(approved). The volume will be published after the conference and the authors will receive electronic access to their papers. During the conference, they will have access to the abstracts.A special journal issue can be arranged after the conference. 
+ Authors should consulthref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - author’s guidelines
+for the preparation of their papers. In addition, the corresponding author of each paper, acting on behalf of all of the authors of that paper, must complete and sign a Consent-to-Publish form. The corresponding author signing the copyright form should match the corresponding author marked on the paper. 
+ A paper will beincluded in the proceedings only if at least one regular or online authorregistersand pays theregistration fee.The author takes on the obligation to attend the workshop and present the paper. 
+ CMT Acknowledgment 
+ The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including cost for Azure cloud services as well as for software development and support. 
+ Proudly powered by WordPress 
+
+Important Dates information:
+Skip to contenthref="https://iwcia2025.inf.u-szeged.hu/" - International Workshop on Combinatorial Image Analysis
+24-26 September 2025, Szeged (Hungary) 
+ Menuhref="https://iwcia2025.inf.u-szeged.hu/" - IWCIA 2025 
+ href="https://iwcia2025.inf.u-szeged.hu/keynote-speakers/" - Keynote Speakers 
+ href="https://iwcia2025.inf.u-szeged.hu/important-dates/" - Important Dates 
+ href="https://iwcia2025.inf.u-szeged.hu/paper-submissions/" - Paper Submissions 
+ href="https://iwcia2025.inf.u-szeged.hu/registration/" - Registration 
+ Committees 
+ href="https://iwcia2025.inf.u-szeged.hu/sponsors/" - Sponsors 
+ href="https://iwcia2025.inf.u-szeged.hu/travel-information/" - Travel Information 
+ href="https://iwcia2025.inf.u-szeged.hu/organizers-and-contact/" - Organizers and Contact 
+ Important Dates 
+  
+ Submission open | 30 April, 2025 
+ Submission deadline | 30 June, 2025 
+ Notification of acceptance (on a rolling basis; 4 weeks after submission) | at latest 17 August, 2025 
+ Revised submission deadline (camera-ready version) | 15 October, 2025 
+ Registration open | 30 May, 2025 
+ Registration deadline | 7 September, 2025 
+ IWCIA 2025, Szeged | 24-26, September 2025 
+ Proudly powered by WordPress

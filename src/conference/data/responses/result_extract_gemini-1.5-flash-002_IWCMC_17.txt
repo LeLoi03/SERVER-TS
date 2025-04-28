@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "May 12 - 16, 2025",
+  "Year": "2025",
+  "Location": "Marriott Hotel Downtown, Abu Dhabi, UAE",
+  "City-State-Province": "Abu Dhabi",
+  "Country": "UAE",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Paper Submission Deadline": "February 17, 2025"
+  },
+  "Notification Date": {
+    "Paper Acceptance Notification": "March 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Paper Submissions": "April 15, 2025"
+  },
+  "Registration Date": {
+    "Registration Deadline for Authors": "April 15, 2025"
+  },
+  "Topics": "Wireless Communications, Mobile Computing, Machine Learning, Communications Networks",
+  "Publisher": "IEEE",
+  "Summary": "The 21st International Wireless Communications & Mobile Computing Conference (IWCMC 2025) will be held as a hybrid event from May 12-16, 2025 at the Marriott Hotel Downtown in Abu Dhabi, UAE. The theme is \"Green and Intelligent Communications\".",
+  "Call for Papers": "# IWCMC 2025: Call for Papers\n\nThe 21st International Wireless Communications & Mobile Computing Conference (IWCMC 2025) will be held as a **hybrid event** from **May 12-16, 2025**, at the **Marriott Hotel Downtown in Abu Dhabi, UAE.**  The theme is **\"Green and Intelligent Communications\"**.\n\nIWCMC 2025 will target a wide spectrum of state-of-the-art and emerging topics pertaining to wireless communications, mobile computing, machine learning, and applications of communications and networks.\n\n## Submission Guidelines\n\nProspective authors are invited to submit original technical papers—up to 6 pages in length—using the EDAS link: [https://edas.info/newPaper.php?c=32919](https://edas.info/newPaper.php?c=32919)\n\nAccepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore’s scope and quality requirements. Selected papers will be further considered for possible publication in five special issues in the following journals:\n\n*   Wiley Journal of Wireless Communications and Mobile Computing (WCMC)\n*   The International Journal of Sensor Networks (IJSNet)\n*   The International Journal of Autonomous and Adaptive Communications Systems (IJAACS)\n*   KSII Transactions on Internet and Information Systems\n*   Peer-to-Peer Networking & Applications\n\nThere will also be best paper awards, one best symposium award, and one best workshop award.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** February 17, 2025 (Firm and Final)\n*   **Paper Acceptance Notification:** March 15, 2025\n*   **Camera-ready Paper Submissions:** April 15, 2025\n*   **Registration Deadline for Authors:** April 15, 2025"
+}
+

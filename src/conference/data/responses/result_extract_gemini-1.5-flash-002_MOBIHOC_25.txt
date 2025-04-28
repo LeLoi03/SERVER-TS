@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "October 27 - 30, 2025",
+  "Year": "2025",
+  "Location": "Houston, USA",
+  "City-State-Province": "Houston",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "April 6, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "July 26, 2025"
+  },
+  "Other Date": {
+    "Abstract Registration Deadline": "March 30, 2025",
+    "Rebuttal Start": "June 30, 2025",
+    "Rebuttal Deadline": "July 6, 2025"
+  },
+  "Topics": "Dynamic Networks, Mobile Networks, Mobile Computing, Next-Generation Networking, Communications, Wireless Networks, NextG Cellular Networks, Open-RAN, RAN Intelligent Control, Protocol Design, Mobile Computing, Interplanetary Networks, Non-Terrestrial Networks, Wireless Networks for Localization, Low-power Sensor Networks, Energy-harvesting Systems, Machine Learning, AI, Big-data Analytics, Networked Machine Learning, Federated Learning, Decentralized Learning, Large Language Models, Generative AI, Coded Computation, Coded Inference, Mobile Computing, Edge Computing, Fog Computing, Distributed Computing, Cloud Computing, Data Center Networks, Software Defined Networking, Network Function Virtualization, Virtual Radio Access Networks, Information-centric Networking, Network Caching, Coded Caching, Energy Efficiency, Sustainability, Trust, Security, Privacy, Incentive Mechanisms, Game Theory, Network Economics, Internet-of-Things, Networked Embedded Systems, Wearables, Mobile Health, Virtual Reality, Augmented Reality, Mixed Reality, Smart Spaces, Smart Cities, Smart Workspace, Smart Buildings, Networked and Mobile Unmanned/Autonomous Systems, Robotic Networks, Vehicular Networks, Drone Networks, Goal-oriented Semantic Communication",
+  "Summary": "MobiHoc 2025, the 26th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing, will be held in Houston, USA, from October 27-30, 2025.  The conference significantly expands its scope to include theory, algorithms, and systems research on next-generation networking, communications, and related applications.",
+  "Call for Papers": "# MobiHoc 2025: Call for Papers\n\nMobiHoc 2025, the 26th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing, will be held in **Houston, USA, from October 27-30, 2025**.\n\n## Scope\n\nACM MobiHoc is a premier conference with a highly selective single-track technical program dedicated to addressing the challenges emerging from networked systems that must operate in the face of dynamics ranging from changing user demands to connectivity and resource availability. Examples of such networked systems include next-generation cellular networks, multi-hop wireless networks, datacenter networks, Internet-of-Thing networks, mobile autonomous systems, cyber-physical systems, and online social networks. We encourage work that presents new modeling tools or performance evaluation methods, novel algorithms, or novel fundamental insights for these systems.\n\nWe are interested both in innovative works in unexplored and/or emerging topics broadly related to networked systems, and in novel findings and/or new insights that build on existing works. This year, we have significantly adapted the scope of the conference to suit the emerging challenges in networked systems.\n\n## Areas of Interest\n\nThe specific areas of interest include, but are not limited to:\n\n*   **Area 1: Modeling, Optimization, and Analysis**\n*   **Area 2: Mobile and Next-Generation Wireless Networks**\n*   **Area 3: Machine Learning/AI and Networking**\n*   **Area 4: Edge, Cloud, and Distributed Systems**\n*   **Area 5: Security, Trust, and Privacy**\n*   **Area 6: Emerging Applications and Systems**\n\n## Important Dates\n\n*   **Abstract Registration Deadline:** March 30, 2025 (11:59 pm EDT) (Final)\n*   **Paper Submission Deadline:** April 6, 2025 (11:59 pm EDT) (Final)\n*   **Rebuttal Start:** June 30, 2025\n*   **Rebuttal Deadline:** July 6, 2025\n*   **Notification of Acceptance:** July 26, 2025\n*   **Conference:** October 27 - 30, 2025\n\n## Submission Instructions\n\nAuthors can choose to either keep or omit their names on their submitted paper, i.e., submissions are not required to be double-blind. Authors can also prepare technical reports that are made available on their own websites and/or purely archiving websites such as arXiv.org. However, all submissions must comply with the dual submission policy. Each paper has a chance to submit a one-page rebuttal for the reviews. All submitted papers will be considered for a Best Paper Award. A selected set of papers will be chosen for fast-tracked publication in IEEE/ACM Transactions on Networking.\n\n**AUTHORS TAKE NOTE:** The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work."
+}
+

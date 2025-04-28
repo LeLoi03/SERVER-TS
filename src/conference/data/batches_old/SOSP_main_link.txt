@@ -1,0 +1,185 @@
+Conference SOSP:
+
+href="index.html" - SOSP 2025
+Home 
+ Participate | href="cfp.html" - Call for Papers 
+ Workshops | href="cfw.html" - Call for Workshops 
+ Organizers 
+ Sponsors 
+ Contact 
+  
+ SOSP 2025 
+ The 31stSymposium on Operating Systems Principles 
+ October 13 – 16, 2025 ·Lotte Hotel World, Seoul, Republic of Korea 
+ Abstract Registration: April 10, 2025; 23:59 PT 
+ Paper Submission: April 17, 2025; 23:59 PT 
+ Link:href="https://sosp25.hotcrp.com/" - HotCRP Submission Site
+Welcome to the SOSP 2025 Website 
+ TheannualACM Symposium on Operating Systems Principles is the world's premier forum for researchers, developers, programmers, and teachers of computer systems technology. Academic and industrial participants present research and experience papers that cover the full range of theory and practice of computer systems software. 
+ Where 
+ Lotte Hotel World, Seoul, Republic of Korea 
+ When 
+ Monday to Thursday 
+ October 13 – 16, 2025 
+  
+ Important Dates 
+  
+ Event Info | Date | Link 
+ Deadline to register abstracts | April 10, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Submission deadline (no extensions) | April 17, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Reviews available for author response | July 1, 2025 
+ Author response due | July 3, 2025 
+ Author notification | July 15, 2025 
+ Artifact intent registration | TBD 
+ Artifact submission | TBD 
+ Camera ready due | TBD | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Workshop/Tutorial Proposals Due | April 15, 2025 | href="https://sigops.org/s/conferences/sosp/2025/cfw.html" - Call For Workshops/Tutorials 
+ Workshop/Tutorial Notification of Acceptance | April 20, 2025 
+ Workshop | October 13, 2025 | href="https://sigops.org/s/conferences/sosp/2025/index.html" - Conference Site 
+ Conference | October 14 - 16, 2025 | href="https://sigops.org/s/conferences/sosp/2025/index.html" - Conference Site 
+ Sponsors 
+ Platinum Sponsors 
+ Gold Sponsors 
+ Silver Sponsors 
+ Bronze Sponsors 
+ Supporters 
+  
+ In cooperation with 
+ Additional Information 
+ href="http://www.sosp.org/" - Prior SOSPs 
+ Contact Us 
+ Any organizational questions about the conference can be emailed tohref="mailto:sosp25gc@kaist.ac.kr" - sosp25gc@kaist.ac.kr
+Design byBootstrapMade 
+
+Call for Papers information:
+href="index.html" - SOSP 2025
+Home 
+ Participate | href="cfp.html" - Call for Papers 
+ Workshops | href="cfw.html" - Call for Workshops 
+ Organizers 
+ Sponsors 
+ Contact 
+ SOSP 2025 Call for Papers 
+ The 31st ACM Symposium on Operating Systems Principles (SOSP) seeks to present innovative and exciting research related to the design, implementation, analysis, evaluation, and deployment of computer systems software. 
+  
+ Event Info | Date | Link 
+ Deadline to register abstracts | April 10, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Submission deadline (no extensions) | April 17, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Reviews available for author response | July 1, 2025 
+ Author response due | July 3, 2025 
+ Author notification | July 15, 2025 
+ Camera ready due | TBD | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Conference | October 13-16, 2025 | href="https://sigops.org/s/conferences/sosp/2025/" - Conference Site 
+ Topics 
+ SOSP takes a broad view of systems and solicits contributions from many fields of systems practice, including: operating systems, file and storage systems, distributed systems, cloud computing, mobile and edge systems, secure and reliable systems, systems aspects of big data and machine learning, embedded and real-time systems, virtualization, networking as it relates to operating systems, and management and troubleshooting of complex systems. We also welcome work that explores the interaction of computer systems with related areas such as computer architecture, networking, programming languages, analytics, verification, and databases. In keeping with SOSP tradition, we will favor work that explores new territory, continues a significant research dialogue, or reflects on experience with or measurements of state-of-the-art implementations. 
+ Submission Criteria 
+ Submissions will be judged on novelty, significance, interest, clarity, relevance, and correctness. A good paper will: 
+ Motivate a significant problem; 
+ Propose and implement an interesting, compelling solution; 
+ Demonstrate the practicality and benefits of the solution; 
+ Draw appropriate conclusions; 
+ Clearly describe the paper's contributions; 
+ Articulate the advances beyond previous work; and 
+ Be accessible to the broader systems community. 
+ We encourage submission of groundbreaking work in significant new directions, with the understanding that the evaluation criteria for papers addressing new problems may be different from those continuing a line of work in a more established area. 
+ Originality 
+ Submissions should contain original, unpublished material. Simultaneous submission of the same work to multiple venues, submission of previously published work, or plagiarism is not allowed. 
+ Submissions that extend the authors' previous work are welcome, but authors must explain the differences between the SOSP submission and the prior work, much in the same way that the authors are expected to articulate the contributions of their submission as they relate to prior work by others. 
+ Prior or concurrent workshop publication does not preclude publishing a related paper in SOSP. As long as there is significant additional content in the submission compared to the prior workshop publication, the PC will evaluate the submission's entire contribution, not just the delta. 
+ Prior or concurrent publication in non-peer-reviewed contexts, like arXiv.org, technical reports, talks, and social media posts, is explicitly permitted. 
+ Resubmissions 
+ Submitting a paper that had been previously submitted to and not accepted by another conference is permitted, although authors are expected to have improved the paper to address substantive issues raised in previous reviews. Authors should provide information regarding the previous submission(s) and a summary of the subsequent revisions to the paper. This description, which will be supplied to reviewers after they’ve completed their reviews, helps reviewers who may have reviewed a previous draft of the work to appreciate any improvements to the currently submitted work. Please try to limit the description of changes to one page. All information should be properly anonymized, as described below, and should be uploaded via the submission form. 
+ Anonymity 
+ SOSP will use double-blind reviewing. Please make a good faith attempt to anonymize your submission. Avoid identifying yourself or your institution explicitly or by implication (e.g., through the references or acknowledgments). The first page should use the paper ID assigned during registration in place of the author names. If the name of your project or system is already known to the community (e.g., through arXiv, technical reports, talks, social media posts, or other uses), your SOSP submission must use an anonymized name. 
+ Use care in referring to your own related work. Do not omit references to your prior work, as this would make it difficult for reviewers to place your submission in its proper context. Instead, reference your past work in the third person, just as you would any other piece of related work. For example, you might say "Our system modifies the XYZ operating system built by Lee et al. [Lee17]". 
+ For concurrent submissions on related topics, cite an anonymized version of the concurrent submission and discuss the relation between the submissions. Additionally, email the PC chairs (sosp2025@gmail.com) with a copy of your other concurrent submission. 
+ If your submission reports on experiences with a system at your institution or organization, you should refer to the system anonymously but describe the properties of the system that are needed to appreciate the work (e.g., size of the user base, volume of requests, etc.). We recognize that, in some cases, these properties may allow a reviewer to identify your institution or organization. 
+ Supplementary Material 
+ Authors may optionally include supplementary material as a separate document. Supplementary material is intended for items that are not critical for evaluating the paper but may be of interest to some readers. Examples include: formal proofs that are only sketched in the submission, additional analyses, and methodological details that aren’t essential for the PC’s assessment but are important for reproducibility. PC members are not required to read this optional supplementary material, so the submission must stand alone without it. 
+ Formatting 
+ Papers will be submitted electronically in PDF format. 
+ Submissions may have at most 12 pages of technical content, including all text, figures, tables, etc. Bibliographic references are not included in the 12-page limit. Use A4 or US letter paper size, with all text and figures fitting inside a 178 x 229 mm (7 x 9 in) block centered on the page, using two columns separated by 8 mm (0.33 in) of whitespace. Use 10-point font (typeface Times Roman, Linux Libertine, etc.) on 12-point (single-spaced) leading. Graphs and figures should be readable without magnification; they are encouraged to be in color, but should remain readable if printed in grayscale. All pages should be numbered, and references within the paper should be hyperlinked. 
+ Submissions violating these rules will not be considered for publication, and there will be no extensions for fixing violations. We encourage you to upload an early draft of the paper well before the deadline to check if the paper meets the formatting rules. 
+ Most of these rules are automatically applied when using thehref="https://www.acm.org/publications/authors/submissions" - official SIGPLAN LaTeX
+orhref="https://www.acm.org/publications/authors/submissions" - MS Word templates
+from the ACM. 
+ For Latex, we recommend you use: 
+ \documentclass[sigplan,10pt]{acmart} \renewcommand\footnotetextcopyrightpermission[1]{} \pagestyle{plain} ... \settopmatter{printfolios=true} \maketitle ...Confidentiality 
+ Reviewing will be done mostly by members of the program committee, with limited use of outside reviewers. Submissions will be treated as confidential; however, papers accompanied by nondisclosure agreement forms will not be considered for publication. 
+ Conflicts 
+ To avoid conflicts of interest in the review process, when you register and submit your paper, we ask that you provide information about conflicts between any of the authors of your submission and PC members. Use the following guidelines to determine conflicts: 
+ Institutional:You are currently employed at the same institution, have been previously employed at the same institution within the past two years (since April 2023), or are going to begin employment at the same institution. Former interns should list their internship supervisor(s) and collaborator(s) as conflicts, not the entire institution where they interned. 
+ Advisor:You have a past or present association as PhD thesis advisor or advisee. 
+ Collaborator:You have a collaboration on a project, publication, grant proposal, or editorship within the past two years (April 2023 or later). 
+ Personal:You are close family relatives (e.g., spouses, domestic partners, parents, children, or siblings). 
+ The PC chairs will review paper conflicts to ensure the integrity of the reviewing process, adding conflicts if necessary. You should not improperly identify a PC member as a conflict in an attempt to avoid having the individual review your paper. 
+ PC members will not be able to review, read the reviews of, or participate in discussions of papers they are conflicted with. The review process for papers conflicted with both PC chairs will be managed by another PC member designated as the "conflict chair". Any paper with a PC chair co-author will be held to a higher standard of being a “clear accept”. 
+ Author Response Period 
+ SOSP will provide an opportunity for authors to respond to reviews prior to final consideration of the papers at the program committee meeting. Authors must limit their responses to (a) correcting factual errors in the reviews or (b) directly addressing questions posed by reviewers. In particular, responses must not include new experiments or data, describe additional work completed since submission, or promise additional work to follow. As PC members are not required to review supplementary materials, responses must not rely on the existence of those materials. 
+ Submission of a response is optional. There is no explicit limit to the response, but authors are strongly encouraged to keep responses under 500 words; reviewers are neither required nor expected to read excessively long responses. 
+ Accepted Papers 
+ Papers selected by the program committee will receive conditional acceptance, with the final acceptance subject to revisions and approval by a program committee member acting as a shepherd. Authors of accepted papers will be expected to supply electronic versions of their papers and encouraged to supply source code and raw data to help others replicate and understand their results, as part of an artifact evaluation process. To facilitate broad technical discussion, all accepted papers will be made available online in advance of the conference. The official publication date will be the date the proceedings are made publicly accessible. For more information about the ACM OpenSurround Service, please go tohttps://www.acm.org/publications/policies/free-access. Papers of particular merit will be forwarded to the ACM Transactions on Computer Systems (TOCS) and the Communications of the ACM's Research Highlights (CACM RH) for possible publication. 
+ Submission Information 
+ Papers must be submitted electronically in PDF format via thehref="https://sosp25.hotcrp.com/" - web submission form
+. 
+ Questions 
+ Any questions about paper submissions can be emailed tososp2025@gmail.com. 
+  
+ In cooperation with 
+ Additional Information 
+ href="http://www.sosp.org/" - Prior SOSPs 
+ Contact Us 
+ Any organizational questions about the conference can be emailed tohref="mailto:sosp25gc@kaist.ac.kr" - sosp25gc@kaist.ac.kr
+Design byBootstrapMade 
+
+Important Dates information:
+href="index.html" - SOSP 2025
+Home 
+ Participate | href="cfp.html" - Call for Papers 
+ Workshops | href="cfw.html" - Call for Workshops 
+ Organizers 
+ Sponsors 
+ Contact 
+  
+ SOSP 2025 
+ The 31stSymposium on Operating Systems Principles 
+ October 13 – 16, 2025 ·Lotte Hotel World, Seoul, Republic of Korea 
+ Abstract Registration: April 10, 2025; 23:59 PT 
+ Paper Submission: April 17, 2025; 23:59 PT 
+ Link:href="https://sosp25.hotcrp.com/" - HotCRP Submission Site
+Welcome to the SOSP 2025 Website 
+ TheannualACM Symposium on Operating Systems Principles is the world's premier forum for researchers, developers, programmers, and teachers of computer systems technology. Academic and industrial participants present research and experience papers that cover the full range of theory and practice of computer systems software. 
+ Where 
+ Lotte Hotel World, Seoul, Republic of Korea 
+ When 
+ Monday to Thursday 
+ October 13 – 16, 2025 
+  
+ Important Dates 
+  
+ Event Info | Date | Link 
+ Deadline to register abstracts | April 10, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Submission deadline (no extensions) | April 17, 2025; 23:59 PT | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Reviews available for author response | July 1, 2025 
+ Author response due | July 3, 2025 
+ Author notification | July 15, 2025 
+ Artifact intent registration | TBD 
+ Artifact submission | TBD 
+ Camera ready due | TBD | href="https://sosp25.hotcrp.com/" - HotCRP Submission Site 
+ Workshop/Tutorial Proposals Due | April 15, 2025 | href="https://sigops.org/s/conferences/sosp/2025/cfw.html" - Call For Workshops/Tutorials 
+ Workshop/Tutorial Notification of Acceptance | April 20, 2025 
+ Workshop | October 13, 2025 | href="https://sigops.org/s/conferences/sosp/2025/index.html" - Conference Site 
+ Conference | October 14 - 16, 2025 | href="https://sigops.org/s/conferences/sosp/2025/index.html" - Conference Site 
+ Sponsors 
+ Platinum Sponsors 
+ Gold Sponsors 
+ Silver Sponsors 
+ Bronze Sponsors 
+ Supporters 
+  
+ In cooperation with 
+ Additional Information 
+ href="http://www.sosp.org/" - Prior SOSPs 
+ Contact Us 
+ Any organizational questions about the conference can be emailed tohref="mailto:sosp25gc@kaist.ac.kr" - sosp25gc@kaist.ac.kr
+Design byBootstrapMade

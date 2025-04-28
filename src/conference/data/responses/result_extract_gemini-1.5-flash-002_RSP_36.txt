@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "October 3, 2024",
+  "Year": "2024",
+  "Location": "Raleigh, NC, USA",
+  "City-State-Province": "Raleigh",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission (extended)": "July 22, 2024"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "August 13, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Manuscript due": "September 13, 2024"
+  },
+  "Topics": "Rapid System Prototyping, Embedded Systems, Hardware and Software Systems, Emerging Technologies, Internet of Things, Middleware for Embedded Systems, Model-driven Engineering, Formal Methods, Verification, Validation, Reliability, Failure Analysis, Embedded System Virtualization, Virtual Prototyping, Reconfigurable Computing, Application-Specific Processors, MPSoC, GPU-based System Design, Simulations Acceleration, Industrial Experiences",
+  "Summary": "The International Workshop on Rapid System Prototyping (RSP) emphasizes design experience sharing and collaborative approach between hardware and software research communities from industry and academy.  RSP'2024 will be held in conjunction with ESWEEK'24 on October 3, 2024, in Raleigh, NC, USA.",
+  "Call for Papers": "# RSP 2024: Call for Papers\n\nThe International Workshop on Rapid System Prototyping (RSP) emphasizes design experience sharing and a collaborative approach between hardware and software research communities from industry and academia.  The RSP series of workshops aims at bridging the gaps in embedded system design between applications, architectures, tools, and technologies to achieve rapid system prototyping of emerging software and hardware systems.\n\n## Topics of Interest\n\nSuggested topics cover both software and hardware domains and include, but are not limited to:\n\n*   Rapid prototyping and emulation methods and tools\n*   Specification models and methodologies for hardware/software systems\n*   Emerging technologies, devices, boards, and applications\n*   Prototyping experiences related to emerging technologies (memories, 3D integration, next generation wireless, Internet of Things)\n*   Prototyping of embedded systems for real-time, low power, and flexibility\n*   Hardware and software platforms for IoT systems\n*   Middleware for embedded systems\n*   Model-driven engineering and prototyping\n*   Formal methods and verification/validation of embedded systems\n*   Reliability and failure analysis for embedded systems\n*   Embedded system virtualization\n*   Virtual prototyping and platforms for embedded systems\n*   Prototyping methods and tools for reconfigurable computing\n*   Rapid design approaches for application-specific processors\n*   MPSoC and GPU-based system design and challenges\n*   Hardware platforms and approaches for simulations acceleration\n*   Industrial experiences in embedded system prototyping\n\n## Submission Instructions\n\nThe program committee invites authors to submit original unpublished full papers. Authors of selected papers will be requested to prepare a final camera-ready manuscript for the workshop proceedings and must register and attend the workshop for their paper to be published. Each technical paper must be associated with an author registration. Papers should not exceed 7 pages. Submission instructions as well as templates can be found on the RSP web site.\n\nAccepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements.\n\n## Submission Portal\n\nElectronically submit all papers using the following link:\n\n[https://easychair.org/conferences/?conf=rsp2024](https://easychair.org/conferences/?conf=rsp2024)\n\n## Important Dates\n\n*   **Paper Submission (extended):** July 22, 2024\n*   **Notification of Acceptance:** August 13, 2024\n*   **Camera-Ready Manuscript due:** September 13, 2024\n\n## Committees\n\n*   **General Chairs:**\n    *   Frédéric Rousseau, TIMA, University Grenoble-Alpes (France)\n    *   Amer Baghdadi, IMT Atlantique/Lab-STICC (France)\n*   **Program Chairs:**\n    *   Kenneth Kent, University of New Brunswick (Canada)\n    *   Georgiy Krylov, University of New Brunswick (Canada)\n*   **Publicity Chairs:** Sungjoo Yoo, Seoul National University (Korea)\n*   **Publication Chair:** Olivier Muller, TIMA, University Grenoble-Alpes (France)"
+}
+

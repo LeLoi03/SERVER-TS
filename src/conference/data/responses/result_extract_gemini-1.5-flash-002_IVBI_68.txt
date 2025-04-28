@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "April 14 - 17, 2025",
+  "Year": "2025",
+  "Location": "Hyatt Regency Houston Downtown, Houston, TX, USA",
+  "City-State-Province": "Houston, Texas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Live Demo Submission Deadline": "February 14, 2025",
+    "4-page Papers Camera Ready Submission": "February 14, 2025",
+    "SS Camera Ready Submission Deadline": "February 24, 2025",
+    "Challenge Papers Submission Deadline": "February 26, 2025",
+    "1-page Abstracts Submission Deadline": "February 26, 2025"
+  },
+  "Notification Date": {
+    "1-page Abstracts Decision Notification": "February 7, 2025",
+    "4-page Papers Camera Ready Submission": "February 7, 2025",
+    "Special Session Decision Notification": "March 3, 2025"
+  },
+  "Camera-ready Date": {
+    "4-page Papers Camera Ready Submission": "January 26, 2025",
+    "Challenge Papers Camera Ready Submission": "March 3, 2025"
+  },
+  "Topics": "Biomedical Imaging",
+  "Summary": "The International Symposium on Biomedical Imaging (ISBI) 2025 will be held at the Hyatt Regency Houston Downtown in Houston, TX, USA from April 14-17, 2025.  The symposium is a premier event for researchers and practitioners in biomedical imaging.",
+  "Call for Papers": "No call for papers available"
+}
+```

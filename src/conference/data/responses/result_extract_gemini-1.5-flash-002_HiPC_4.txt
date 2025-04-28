@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "December 17 - 20, 2025",
+  "Year": "2025",
+  "Location": "Hyderabad, India",
+  "City-State-Province": "Hyderabad",
+  "Country": "India",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submission Deadline": "June 18, 2025",
+    "Paper Submission Deadline": "June 25, 2025"
+  },
+  "Notification Date": {
+    "Reviews to Authors": "August 21, 2025",
+    "Author Notification": "September 12, 2025",
+    "Final Author Notification": "October 3, 2025"
+  },
+  "Camera-ready Date": {
+    "Shepherded Paper Submission": "September 26, 2025"
+  },
+  "Other Date": {
+    "Rebuttal Period": "August 21-26, 2025"
+  },
+  "Topics": "High Performance Computing, Scalable Data Science, Algorithms, Architecture, Applications, Systems Software, Machine Learning, Big Data Analytics",
+  "Summary": "HiPC 2025 is the 32nd edition of the IEEE International Conference on High Performance Computing, Data, and Analytics. It will be an in-person event in Hyderabad, India, from December 17 to December 20, 2025. The conference features a robust single-track technical program of peer-reviewed papers and invited keynote lectures.",
+  "Call for Papers": "# HiPC 2025: Call for Papers\n\nHiPC 2025 will be the 32nd edition of the IEEE International Conference on High Performance Computing, Data, Analytics, and Data Science. HiPC serves as a forum to present current work by researchers in the areas of high-performance computing and data science. The meeting focuses on all aspects of high-performance computing systems, data science, and analytics, and their scientific, engineering, and commercial applications.\n\n## Submission Guidelines\n\nAuthors are invited to submit original, unpublished research manuscripts that demonstrate current research in all areas of high-performance computing, and data science and analytics, covering all traditional areas and emerging topics including machine learning and big data analytics. Each submission should be submitted under the two broad themes of High Performance Computing and Data Science.\n\nUp to two best paper awards will be given for outstanding contributed papers.\n\n## Important Dates\n\n*All deadlines are Anywhere On Earth (AOE)*\n\n*   **Abstract Submission:** June 18, 2025 (Wednesday)\n*   **Paper Submission (double-blind):** June 25, 2025 (Wednesday)\n*   **Reviews to Authors:** August 21, 2025 (Thursday)\n*   **Rebuttal Period:** August 21-26, 2025 (Thursday to Tuesday)\n*   **Author Notification:** September 12, 2025 (Friday)\n*   **Shepherded Paper Submission:** September 26, 2025 (Friday)\n*   **Final Author Notification:** October 3, 2025 (Friday)\n\n## High Performance Computing\n\nTopics for papers include, but are not limited to:\n\n### Algorithms\n\n*   New parallel and distributed algorithms and design techniques\n*   Advances in enhancing algorithmic properties or providing guarantees\n*   Algorithmic techniques for resource allocation and optimization\n*   Provably efficient parallel and distributed algorithms for advanced scientific computing and irregular applications\n*   Classical and emerging computation models\n\n### Architecture\n\n*   High-performance processing architectures\n*   Networks for high-performance computing platforms\n*   Memory, cache, and storage architectures\n*   Approaches to improve architectural properties\n*   Emerging computational architectures\n\n### Applications\n\n*   Shared and distributed memory parallel applications\n*   Methods, algorithms, and optimizations for scaling applications on peta- and exa-scale platforms\n*   Hardware acceleration of parallel applications\n*   Application benchmarks and workloads for parallel and distributed platforms\n\n### Systems Software\n\n*   Scalable systems and software architectures for high-performance computing\n*   Techniques to enhance parallel performance\n*   Techniques to enhance parallel application development and productivity\n*   Techniques to deal with uncertainties, hardware/software resilience, and fault tolerance\n*   Software for cloud, data center, and exascale platforms\n*   Software and programming paradigms for heterogeneous platforms\n\n## Data Science and AI\n\nTopics for papers include, but are not limited to:\n\n### Scalable Data Science\n\n*   New scalable algorithms, systems, and software for fundamental data analysis tasks\n*   Scalable algorithms, systems, and software designed to address the characteristics of different data sources and settings\n*   Scalable algorithms and techniques to reduce the complexity of large-scale data\n*   Design of scalable system software to support various data-centric applications\n*   Architectures and systems software to support various operations in large data frameworks\n*   Systems software for distributed data frameworks\n*   Case studies, experimental studies, and benchmarks for scalable algorithms and analytics\n*   Standards and protocols for enhancing various aspects of data analytics\n\n### AI/ML for Systems and Systems for AI/ML\n\n*   AI/ML methods for system design and optimization\n*   AI/ML methods that benefit HPC applications or HPC system management\n*   Scaling and accelerating machine learning, deep learning, natural language processing, and computer vision applications\n*   Efficient model training, inference, and serving\n*   Fairness, interpretability, and explainability for AI/ML applications\n*   End-to-end machine learning pipeline optimization\n*   Compound AI systems and AI agent systems\n*   Machine learning benchmarks and datasets"
+}
+

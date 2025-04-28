@@ -1,0 +1,29 @@
+```json
+{
+  "Conference dates": "November 16 - 20, 2025",
+  "Year": "2025",
+  "Location": "Seoul, South Korea",
+  "City-State-Province": "Seoul",
+  "Country": "South Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "May 30, 2025",
+    "Workshop Proposal Submission": "April 4, 2025",
+    "NIER Track Paper Submission": "July 12, 2025",
+    "Tutorials Submission Deadline": "June 13, 2025"
+
+  },
+  "Notification Date": {
+    "Workshop Proposal Notification": "April 25, 2025",
+    "Tutorials Proposal Notification": "June 27, 2025"
+  },
+  "Other Date": {
+    "Tutorials Advertisement Material": "July 11, 2025",
+    "AIware Research Papers Intent Registration (Optional)": "July 15, 2025"
+  },
+  "Topics": "Automated Software Engineering",
+  "Summary": "The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025) will be held in Seoul, South Korea, from November 16-20, 2025.  The conference is the premier research forum for Automated Software Engineering, bringing together researchers and practitioners to discuss foundations, techniques, and tools for automating software development.",
+  "Call for Papers": "# ASE 2025: Call for Papers\n\nThe 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025) will be held in **Seoul, South Korea, from November 16-20, 2025** at the **Grand Walkerhill Seoul**.\n\n## Tracks\n\nASE 2025 includes the following tracks:\n\n*   Research Papers\n*   Journal-First Track\n*   Industry Showcase\n*   New Ideas and Emerging Results Track\n*   Tool Demonstration Track\n*   Workshops\n*   Doctoral Symposium\n*   Student Research Competition\n*   Tutorials\n\n## Important Dates\n\n*   **Workshop Proposal Submission:** April 4, 2025\n*   **Workshop Proposal Notification:** April 25, 2025\n*   **Paper Submission:** May 30, 2025\n*   **Tutorials Submission Deadline:** June 13, 2025\n*   **Tutorials Proposal Notification:** June 27, 2025\n*   **Tutorials Advertisement Material:** July 11, 2025\n*   **NIER Track Paper Submission:** July 12, 2025\n*   **AIware Research Papers Intent Registration (Optional):** July 15, 2025\n\nFor all important dates, please refer to the [All important dates](All important dates) page."
+}
+```

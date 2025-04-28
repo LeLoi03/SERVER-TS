@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "July 14 - 16, 2025",
+  "Year": "2025",
+  "Location": "Wollongong, Australia",
+  "City-State-Province": "Wollongong",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "1st Round Paper Submission Deadline": "November 6, 2024",
+    "2nd Round Paper Submission Deadline": "February 19, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "January 22, 2025",
+    "Notification of Acceptance": "April 8, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Copy": "April 29, 2025"
+  },
+  "Topics": "No topics available",
+  "Publisher": "Springer",
+  "Summary": "The 30th Australasian Conference on Information Security and Privacy (ACISP 2025) will be held in Wollongong, Australia on 14-16 July 2025. It will be organized by the University of Wollongong. The proceeding will be published by Springer as a volume of the Lecture Notes in Computer Science (LNCS) series.",
+  "Call for Papers": "No call for papers available"
+}
+```

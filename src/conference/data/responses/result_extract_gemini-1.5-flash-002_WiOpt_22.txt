@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "May 26 - 29, 2025",
+  "Year": "2025",
+  "Location": "Linköping University, Campus Valla, Linköping, Sweden",
+  "City-State-Province": "Linköping",
+  "Country": "Sweden",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Registration and Submission": "February 9, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "March 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready submission": "April 7, 2025"
+  },
+  "Other Date": {
+    "Author Registration": "April 7, 2025",
+    "Workshop Author Registration": "April 17, 2025",
+    "Workshop submission": "March 15, 2025",
+    "Early Registration": "April 17, 2025",
+    "Workshops": "May 26, 2025"
+  },
+  "Topics": "Modeling and Optimization in Mobile, Ad hoc, and Wireless Networks, Mobile Networks, Social Networks, Vehicular Networks, Content-Driven Networks, Cloud and Edge Computing Systems, Internet of Things, Modeling, Model Validation, Performance Analysis, Cross-Layer Design, Optimization, Control, Scaling Laws, Fundamental Limits, Network Architectures, Protocol Design, Resource Allocation, Management, Network Economics, Pricing, Game Theory for Networks, Quality of Service Solutions, Energy Efficiency, Harvesting, Power Control, Management, Security, Trust, Privacy, Network Resilience, Anomaly Detection, Reliability Analysis, Data Collection, Analytics for Networks, Edge and Fog Computing, Mobile and Cloud Computing, Content Distribution Networks, Wireless Caching, Reflective Intelligent Surface for Communication Networks, Machine Learning Techniques for Wireless Communications and Networking, UAV Communications in 5G and Beyond Networks, Integrated Sensing and Communication, Human-Centric Communication and Networking for Metaverse",
+  "Summary": "The 23rd International Symposium on Modeling and Optimization in Mobile, Ad hoc, and Wireless Networks (WiOpt 2025) will showcase state-of-the-art research contributions from different fields in networks. It welcomes original and high-quality submissions related to modeling, performance evaluation, and optimization of networks. The conference will take place at Linköping University, Campus Valla (main campus), in Linköping, Sweden.",
+  "Call for Papers": "# WiOpt 2025: Call for Papers\n\nThe 23rd International Symposium on Modeling and Optimization in Mobile, Ad hoc, and Wireless Networks (WiOpt 2025) will be held at **Linköping University, Campus Valla (main campus), in Linköping, Sweden, from May 26-29, 2025**.\n\nWiOpt 2025 aims to bring together state-of-the-art research contributions from different fields in networks. It welcomes original and high-quality submissions related to modeling, performance evaluation, and optimization of networks.\n\n## Areas of Interest\n\nThe areas of interest include, but are not limited to:\n\n*   Modeling, model validation, and performance analysis\n*   Cross-layer design and optimization/control\n*   Scaling laws and fundamental limits\n*   Network architectures and protocol design\n*   Resource allocation and management\n*   Network economics and pricing\n*   Game theory for networks\n*   Quality of service solutions\n*   Energy efficiency, harvesting, power control, and management\n*   Security, trust, and privacy\n*   Network resilience, anomaly detection, and reliability analysis\n*   Data collection and analytics for networks\n*   Edge and Fog computing\n*   Mobile and Cloud computing\n*   Content distribution networks and wireless caching\n*   Reflective intelligent surface for communication networks\n*   Machine learning techniques for wireless communications and networking\n*   UAV communications in 5G and Beyond Networks\n*   Integrated sensing and communication\n*   Human-centric communication and networking for Metaverse\n\n## Important Dates\n\n*   **Paper Registration and Submission:** February 9, 2025, 23:59 AoE (firm)\n*   **Notification of acceptance:** March 15, 2025, 23:59 AoE\n*   **Author Registration:** April 7, 2025, 23:59 AoE\n*   **Workshop Author Registration:** April 17, 2025, 23:59 AoE\n*   **Camera ready submission:** April 7, 2025, 23:59 AoE\n*   **Workshop submission:** March 15, 2025, 23:59 AoE\n*   **Early Registration:** April 17, 2025, 23:59 AoE\n*   **Workshops:** May 26, 2025\n*   **Conference:** May 26-29, 2025\n\n## Awards\n\nWiOpt 2025 will give one Best Paper Award and one Best Student Paper Award. For the Best Student Paper Award, the first author of the paper needs to be a full-time student at the time of paper submission.\n\n## Copyright\n\nThe copyright of published papers belongs to IFIP, which implements a free open access policy: authors effectively hold the copyright of their papers, and IFIP automatically grants authors permissions to reuse the material as they wish. The published papers will be available in the Digital Library of IFIP at no cost neither to authors nor to readers and will be considered for publication in IEEE Xplore."
+}
+

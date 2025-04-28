@@ -1,0 +1,163 @@
+Conference full name: International Natural Language Generation Conference (INLG)
+
+1. Website of INLG_3: https://2025.inlgmeeting.org/
+Website information of INLG_3:
+
+Home 
+ href="/calls.html" - Calls 
+ For Participants | RegistrationLocal InformationBanquet 
+ Organizers 
+ Program | ProgramWorkshops/TutorialsKeynoteshref="/accepted-papers.html" - Accepted Papers
+Awards 
+ FAQ 
+ INLG 2025 
+ October 29 - November 2, 2025@ Hanoi, VietnamWelcome to INLG 2025! 
+ The18th International Natural Language Generation Conferenceis scheduled to be held in Hanoi, Vietnam from October 29 to November 2, 2025. The event will take place atVietnam Institute for Advanced Study in Mathematics. 
+ INLG 2025 will be taking place before EMNLP 2025 (November 5-9) in Suzhou, China. 
+ All accepted papers must be presented in person, and remote presentations are not allowed without a compelling reason, such as visa or health problems, which is approved by the organizer. Submitted papers for review at INLG 2025 must not be published elsewhere until after the notification of acceptance. 
+ News 
+  
+ Important Dates 
+ All deadlines are Anywhere on Earth (UTC-12) 
+  
+ July 14 | START system regular paper submission deadline 
+ Aug 7 | ARR commitment ot INLG deadline via START system 
+ July 24 | START system demo paper submission deadline 
+ Aug 21 | Paper notification 
+ Sep 15 | Camera-ready submission deadline 
+ Oct 29 - Nov 2 | INLG 2025 Conference 
+ Supported by 
+ Organized by 
+ Sponsors 
+ Gold Sponsors 
+ TBASilver Sponsors 
+ TBABronze Sponsors 
+ TBA© INLG 2025 Organizers
+
+2. Website of INLG_3: https://aclanthology.org/2024.inlg-main.0/
+Website information of INLG_3:
+
+ACL AnthologyNews(current) 
+ FAQ(current) 
+ Corrections(current) 
+ href="/info/contrib/" - Submissions(current) 
+ Github 
+ href="https://aclanthology.org/2024.inlg-main.0.pdf" - Proceedings of the 17th International Natural Language Generation Conference
+Saad Mahamood,Nguyen Le Minh,Daphne Ippolito 
+ Correct Metadata for× 
+ Important: The Anthology treat PDFs as authoritative. Please use this form only to correct data that is out of line with the PDF. Seeour corrections guidelinesif you need to change the PDF. 
+ TitleAdjust the title. Retain tags such as <fixed-case>.AuthorsAdjust author names and order to match the PDF.Add AuthorAbstractCorrect abstract if needed. Retain XML formatting tags such as <tex-math>.Verification against PDFEnsure that the new title/authors match the snapshot below. (If there is no snapshot or it is too small, consultthe PDF.)Authors concatenated from the text boxes above: 
+ ALL author names match the snapshot above—including middle initials, hyphens, and accents. 
+ Submit 
+ Anthology ID:2024.inlg-main.0Volume:href="/volumes/2024.inlg-main/" - Proceedings of the 17th International Natural Language Generation Conference
+Month:SeptemberYear:2024Address:Tokyo, JapanVenue:href="/venues/inlg/" - INLG
+SIG:SIGGENPublisher:Association for Computational LinguisticsNote:Pages:Language:URL:href="https://aclanthology.org/2024.inlg-main.0/" - https://aclanthology.org/2024.inlg-main.0/
+DOI:Bibkey:inlg-2024-mainCite (ACL):Saad Mahamood, Nguyen Le Minh, and Daphne Ippolito. 2024.href="https://aclanthology.org/2024.inlg-main.0/" - Proceedings of the 17th International Natural Language Generation Conference
+. Association for Computational Linguistics, Tokyo, Japan.Cite (Informal):href="https://aclanthology.org/2024.inlg-main.0/" - Proceedings of the 17th International Natural Language Generation Conference
+(Mahamood et al., INLG 2024)Copy Citation:BibTeXMarkdownMODS XMLEndnoteMore options…PDF:href="https://aclanthology.org/2024.inlg-main.0.pdf" - https://aclanthology.org/2024.inlg-main.0.pdf
+href="https://aclanthology.org/2024.inlg-main.0.pdf" - PDF
+CiteSearchFix data 
+ Export citation 
+ × 
+ BibTeX 
+ MODS XML 
+ Endnote 
+ Preformatted 
+ @proceedings{inlg-2024-main title = "Proceedings of the 17th International Natural Language Generation Conference", editor = "Mahamood, Saad and Minh, Nguyen Le and Ippolito, Daphne", month = sep year = "2024", address = "Tokyo, Japan", publisher = "Association for Computational Linguistics", url = "https://aclanthology.org/2024.inlg-main.0/" }Download as FileCopy to Clipboard 
+ <?xml version="1.0" encoding="UTF-8"?> <modsCollection xmlns="http://www.loc.gov/mods/v3"> <mods ID="inlg-2024-main"> <titleInfo> <title>Proceedings of the 17th International Natural Language Generation Conference</title> </titleInfo> <name type="personal"> <namePart type="given">Saad</namePart> <namePart type="family">Mahamood</namePart> <role> <roleTerm authority="marcrelator" type="text">editor</roleTerm> </role> </name> <name type="personal"> <namePart type="given">Nguyen</namePart> <namePart type="given">Le</namePart> <namePart type="family">Minh</namePart> <role> <roleTerm authority="marcrelator" type="text">editor</roleTerm> </role> </name> <name type="personal"> <namePart type="given">Daphne</namePart> <namePart type="family">Ippolito</namePart> <role> <roleTerm authority="marcrelator" type="text">editor</roleTerm> </role> </name> <originInfo> <dateIssued>2024-09</dateIssued> <publisher>Association for Computational Linguistics</publisher> <place> <placeTerm type="text">Tokyo, Japan</placeTerm> </place> </originInfo> <typeOfResource>text</typeOfResource> <genre authority="marcgt">conference publication</genre> <identifier type="citekey">inlg-2024-main</identifier> <location> <url>https://aclanthology.org/2024.inlg-main.0/</url> </location> </mods> </modsCollection>Download as FileCopy to Clipboard 
+ %0 Conference Proceedings %T Proceedings of the 17th International Natural Language Generation Conference %E Mahamood, Saad %E Minh, Nguyen Le %E Ippolito, Daphne %D 2024 %8 September %I Association for Computational Linguistics %C Tokyo, Japan %F inlg-2024-main %U https://aclanthology.org/2024.inlg-main.0/Download as FileCopy to Clipboard 
+ Markdown (Informal) 
+ [Proceedings of the 17th International Natural Language Generation Conference](https://aclanthology.org/2024.inlg-main.0/) (Mahamood et al., INLG 2024) 
+ href="https://aclanthology.org/2024.inlg-main.0/" - Proceedings of the 17th International Natural Language Generation Conference | (Mahamood et al., INLG 2024) 
+ ACL 
+ Saad Mahamood, Nguyen Le Minh, and Daphne Ippolito. 2024. | href="https://aclanthology.org/2024.inlg-main.0/" - Proceedings of the 17th International Natural Language Generation Conference | . Association for Computational Linguistics, Tokyo, Japan. 
+ Copy Markdown to ClipboardCopy ACL to Clipboard 
+ ACL materials are Copyright © 1963–2025 ACL; other materials are copyrighted by their respective copyright holders. Materials prior to 2016 here are licensed under theCreative Commons Attribution-NonCommercial-ShareAlike 3.0 International License. Permission is granted to make copies for the purposes of teaching and research. Materials published in or after 2016 are licensed on aCreative Commons Attribution 4.0 International License. 
+ The ACL Anthology is managed and built by theACL Anthology teamof volunteers. 
+ Site last built on 04 April 2025 at 03:38 UTC withcommit 32e5872.
+
+3. Website of INLG_3: https://aclanthology.org/venues/inlg/
+Website information of INLG_3:
+
+ACL AnthologyNews(current) 
+ FAQ(current) 
+ Corrections(current) 
+ href="/info/contrib/" - Submissions(current) 
+ Github 
+ International Natural Language Generation Conference (INLG) 
+ Acronym:INLGVenue ID:inlg 
+ href="/events/inlg-2024/" - 2024
+href="/volumes/2024.inlg-main/" - Proceedings of the 17th International Natural Language Generation Conference | 54 papers 
+ href="/volumes/2024.inlg-demos/" - Proceedings of the 17th International Natural Language Generation Conference: System Demonstrations | 7 papers 
+ href="/volumes/2024.inlg-tutorials/" - Proceedings of the 17th International Natural Language Generation Conference: Tutorial Abstract | 2 papers 
+ href="/volumes/2024.inlg-genchal/" - Proceedings of the 17th International Natural Language Generation Conference: Generation Challenges | 15 papers 
+ href="/events/inlg-2023/" - 2023
+href="/volumes/2023.inlg-main/" - Proceedings of the 16th International Natural Language Generation Conference | 37 papers 
+ href="/volumes/2023.inlg-demos/" - Proceedings of the 16th International Natural Language Generation Conference: System Demonstrations | 5 papers 
+ href="/volumes/2023.inlg-genchal/" - Proceedings of the 16th International Natural Language Generation Conference: Generation Challenges | 20 papers 
+ href="/events/inlg-2022/" - 2022
+href="/volumes/2022.inlg-main/" - Proceedings of the 15th International Conference on Natural Language Generation | 26 papers 
+ href="/volumes/2022.inlg-demos/" - Proceedings of the 15th International Conference on Natural Language Generation: System Demonstrations | 5 papers 
+ href="/volumes/2022.inlg-genchal/" - Proceedings of the 15th International Conference on Natural Language Generation: Generation Challenges | 18 papers 
+ href="/events/inlg-2021/" - 2021
+href="/volumes/2021.inlg-1/" - Proceedings of the 14th International Conference on Natural Language Generation | 46 papers 
+ href="/events/inlg-2020/" - 2020
+href="/volumes/2020.inlg-1/" - Proceedings of the 13th International Conference on Natural Language Generation | 47 papers 
+ href="/events/inlg-2019/" - 2019
+Proceedings of the 1st Workshop on Discourse Structure in Neural NLG | 5 papers 
+ Proceedings of the 1st International Workshop of AI Werewolf and Dialog System (AIWolfDial2019) | 6 papers 
+ Proceedings of the 1st Workshop on Interactive Natural Language Technology for Explainable Artificial Intelligence (NL4XAI 2019) | 8 papers 
+ Proceedings of the 12th International Conference on Natural Language Generation | 74 papers 
+ href="/events/inlg-2018/" - 2018
+Proceedings of the 11th International Conference on Natural Language Generation | 64 papers 
+ Proceedings of the Workshop on Intelligent Interactive Systems and Language Generation (2IS&NLG) | 11 papers 
+ Proceedings of the Workshop on NLG for Human–Robot Interaction | 7 papers 
+ Proceedings of the 1st Workshop on Automatic Text Adaptation (ATA) | 7 papers 
+ href="/events/inlg-2017/" - 2017
+Proceedings of the 10th International Conference on Natural Language Generation | 43 papers 
+ href="/events/inlg-2016/" - 2016
+Proceedings of the 9th International Natural Language Generation conference | 45 papers 
+ href="/events/inlg-2014/" - 2014
+href="/volumes/W14-44/" - Proceedings of the 8th International Natural Language Generation Conference (INLG) | 26 papers 
+ href="/volumes/W14-50/" - Proceedings of the INLG and SIGDIAL 2014 Joint Session | 4 papers 
+ href="/events/inlg-2012/" - 2012
+href="/volumes/W12-15/" - INLG 2012 Proceedings of the Seventh International Natural Language Generation Conference | 29 papers 
+ href="/events/inlg-2010/" - 2010
+Proceedings of the 6th International Natural Language Generation Conference | 39 papers 
+ href="/events/inlg-2008/" - 2008
+Proceedings of the Fifth International Natural Language Generation Conference | 42 papers 
+ href="/events/inlg-2006/" - 2006
+Proceedings of the Fourth International Natural Language Generation Conference | 23 papers 
+ href="/events/inlg-2002/" - 2002
+Proceedings of the International Natural Language Generation Conference | 26 papers 
+ href="/events/inlg-2000/" - 2000
+href="/volumes/W00-14/" - INLG’2000 Proceedings of the First International Conference on Natural Language Generation | 41 papers 
+ href="/events/inlg-1996/" - 1996
+Eighth International Natural Language Generation Workshop | 20 papers 
+ Eighth International Natural Language Generation Workshop (Posters and Demonstrations) | 16 papers 
+ href="/events/inlg-1994/" - 1994
+Proceedings of the Seventh International Workshop on Natural Language Generation | 34 papers 
+ href="/events/inlg-1990/" - 1990
+Proceedings of the Fifth International Workshop on Natural Language Generation | 26 papers 
+ ACL materials are Copyright © 1963–2025 ACL; other materials are copyrighted by their respective copyright holders. Materials prior to 2016 here are licensed under theCreative Commons Attribution-NonCommercial-ShareAlike 3.0 International License. Permission is granted to make copies for the purposes of teaching and research. Materials published in or after 2016 are licensed on aCreative Commons Attribution 4.0 International License. 
+ The ACL Anthology is managed and built by theACL Anthology teamof volunteers. 
+ Site last built on 04 April 2025 at 03:38 UTC withcommit 32e5872.
+
+4. Website of INLG_3: https://softconf.com/n/inlg2024/
+Website information of INLG_3:
+
+The International Conference on Natural Language Generation 
+ href="https://inlg2024.github.io/" - INLG 2024
+Tokyo, Japan 
+ September 23 - 27 2024 
+
+Please login to access to the submission website: 
+  
+ Enter Username: 
+ Enter Password: 
+ New user? please register first by clickingHERE. 
+ If you lost or forgot your password, clickHERE. | Enter Username: | Enter Password: 
+ Enter Username: 
+ Enter Password: 
+ STARTConference Manager (V2.61.0 - Rev. 7176)
+

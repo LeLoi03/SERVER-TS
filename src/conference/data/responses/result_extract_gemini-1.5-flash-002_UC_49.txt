@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "September 1 - 5, 2025",
+  "Year": "2025",
+  "Location": "Université Côte d'Azur, Valrose Campus, Nice, France",
+  "City-State-Province": "Nice",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Regular & short papers) Submission": "May 15, 2025",
+    "(Late-breaking abstracts & posters) Submission": "May 15, 2025"
+  },
+  "Notification Date": {
+    "(Regular & short papers) Notification": "June 15, 2025",
+    "(Late-breaking abstracts & posters) Notification": "June 1, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular & short papers) Camera ready": "July 1, 2025"
+  },
+  "Topics": "Molecular computing, Quantum computing, Optical computing, Chaos computing, Physarum computing, Collision-based computing, Self-assembling and self-organizing systems, Super-Turing computation, Cellular automata, Neural computation, Evolutionary computation, Swarm intelligence, Ant algorithms, Artificial immune systems, Artificial life, Membrane computing, Amorphous computing, Computational systems biology, Computational neuroscience, Synthetic biology, Cellular (in-vivo) computing",
+  "Publisher": "Springer Verlag",
+  "Summary": "The 22nd International Conference on Unconventional Computation and Natural Computation (UCNC 2025) will be held at the Université Côte d'Azur, Valrose Campus, Nice, France, from September 1-5, 2025. UCNC is a forum bringing together scientists from many different backgrounds who are united in their interest in novel forms of computation, human-designed computation inspired by nature, and computational aspects of natural processes.",
+  "Call for Papers": "# UCNC 2025: Call for Papers\n\nThe 22nd International Conference on Unconventional Computation and Natural Computation (UCNC 2025) will be held at the **Université Côte d'Azur, Valrose Campus, Nice, France, from September 1-5, 2025**.\n\n## Paper Categories\n\nThere are four submission categories:\n\n*   **Regular papers:** They contain original research not yet communicated to other conferences or any journal. Regular papers should not exceed 15 pages.\n*   **Short papers:** They are intended for communicating fresh new original research which is not yet complete or still needs some development. Short papers should not exceed 6 pages.\n*   **Late-breaking abstract:** They are informal presentations of new research and/or research direction proposals. They should not exceed 3 pages.\n*   **Posters:** Posters should be one page in A0 format (plus 1 page abstract).\n\nOnly accepted regular and short papers will appear in the LNCS proceedings. All paper categories will go through a review process suitable for the given category.\n\n## Authors Guidelines\n\nSubmitted papers must describe work not previously published, and they must neither be accepted nor under review at a journal or at another conference with refereed proceedings.\n\n## Paper Preparation\n\nAuthors are required to submit their manuscripts electronically in PDF using the LNCS style.  Papers should respect the page limits announced above; full proofs may appear in a clearly marked technical appendix which can be read by the reviewers.\n\nThe submission process is completely managed via the EasyChair website: [https://easychair.org/conferences/?conf=ucnc2025](https://easychair.org/conferences/?conf=ucnc2025)\n\n## Preparing the Final Version for the Proceedings\n\nThe final versions of accepted papers must be formatted in LaTeX using Springer-Verlag's Lecture Notes style.  Please also consult the [Instructions for Authors](https://www.springer.com/gp/computer-science/lncs/editor-guidelines-for-springer-proceedings) provided by Springer. The final version should be uploaded on the Easychair website in zipped format containing the following:\n\n*   The final source files, including bib files, images, non-standard LaTeX packages, etc.\n*   A final PDF file corresponding exactly to the final source files.\n*   A license-to-publish agreement, signed by hand by the corresponding author on behalf of all of the authors of the paper.\n\nPlease make sure that you follow the standards set out in [Springer's code of conduct](https://www.springer.com/us/authors-editors/book-authors-editors/your-publication-journey/publishing-integrity).\n\n## Important Dates\n\n*   **Conference:** September 1-5, 2025\n*   **Regular & short papers deadlines:**\n    *   Submission: May 15th, 2025\n    *   Notification: June 15th, 2025\n    *   Camera ready: July 1st, 2025\n*   **Late-breaking abstracts & posters deadlines:**\n    *   Submission: May 15th, 2025\n    *   Notification: June 1st, 2025"
+}
+

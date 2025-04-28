@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "August 11 - 14, 2025",
+  "Year": "2025",
+  "Location": "Ghent, Belgium",
+  "City-State-Province": "Ghent",
+  "Country": "Belgium",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Extended Submission Deadline": "May 10, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "June 2, 2024"
+  },
+  "Camera-ready Date": {
+    "Proceedings Version": "June 18, 2024"
+  },
+  "Other Date": {
+    "Conference": "July 30 - August 2, 2024"
+  },
+  "Topics": "Trust, Privacy, Security, Digital Society, Anonymity, Pseudonymity, Access Control, Authentication, Cryptography, Cloud Computing, Cyber-Physical Systems, Big Data, P2P Transactions, E-commerce, Metaverse, AI, Blockchain, 5G/6G, Explainable AI, Federated Learning, Implantable Medical Devices, Open Source Software, GDPR Compliance",
+  "Summary": "The 21st International Workshop on Trust, Privacy and Security in the Digital Society (TrustBus 2025) will be held in Ghent, Belgium, from August 11-14, 2025.  The workshop will provide an international forum for researchers and practitioners to exchange information regarding advancements in the state of the art and practice of trust and privacy in the digital society.",
+  "Call for Papers": "No call for papers available"
+}
+

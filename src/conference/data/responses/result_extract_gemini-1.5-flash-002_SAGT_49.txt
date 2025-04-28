@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "September 3 - 6, 2024",
+  "Year": "2024",
+  "Location": "Amsterdam Science Park Congress Centre, Amsterdam, The Netherlands",
+  "City-State-Province": "Amsterdam",
+  "Country": "Netherlands",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "May 26, 2024",
+    "Abstract submission deadline": "May 22, 2024"
+  },
+  "Notification Date": {
+    "Notification": "July 5, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera ready deadline": "July 15, 2024"
+  },
+  "Topics": "Algorithms, Game Theory, Solution Concepts in Game Theory, Efficiency of Equilibria and Price of Anarchy, Computational Aspects of Equilibria, Learning and Dynamics in Games, Game-Theoretic Aspects of Networks, Auction Design and Analysis, Algorithmic Contract Design, Mechanism Design and Pricing, Internet Economics and Computational Advertising, Reputation, Recommendation and Trust Systems, Economic Aspects of Distributed Computing, Blockchain and Cryptocurrencies, Decision Theory and Information Design, Computational Social Choice and Fair Division, Market Design and Matching Markets, Cooperative Game Theory",
+  "Publisher": "Springer",
+  "Summary": "The 17th International Symposium on Algorithmic Game Theory (SAGT 2024) was held at Centrum Wiskunde & Informatica (CWI) in Amsterdam, The Netherlands, from September 3–6, 2024.  SAGT brings together researchers from various disciplines to present and discuss original research at the intersection of Algorithms and Game Theory.",
+  "Call for Papers": "No call for papers available"
+}
+

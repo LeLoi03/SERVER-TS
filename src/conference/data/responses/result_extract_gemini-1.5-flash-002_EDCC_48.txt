@@ -1,0 +1,51 @@
+output:
+{
+  "Conference dates": "April 8 - 11, 2025",
+  "Year": "2025",
+  "Location": "Lisbon, Portugal",
+  "City-State-Province": "Lisbon",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submission": "October 7, 2024",
+    "Full Paper Submission": "October 21, 2024",
+    "(Workshop) Workshop proposal submission window": "October 4, 2024",
+    "(Call for Posters) Submission deadline": "February 27, 2025",
+    "(Student Forum) Paper Submission": "February 17, 2025",
+    "(Fast Abstracts) Fast Abstract Submission": "February 17, 2025"
+  },
+  "Notification Date": {
+    "Author Notification": "December 9, 2024",
+    "(Workshop) Workshop acceptance notification": "October 10, 2024",
+    "(Call for Posters) Author notification": "March 2, 2025",
+    "(Student Forum) Paper Notification": "February 24, 2025",
+    "(Fast Abstracts) Fast Abstract Notification": "February 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready paper": "January 17, 2025",
+    "(Workshop) Camera-ready paper (HARD deadline)": "March 5, 2025",
+    "(Student Forum) Camera-ready paper (HARD deadline)": "March 5, 2025",
+    "(Fast Abstracts) Camera-ready papers (HARD deadline)": "March 5, 2025"
+  },
+  "Registration Date": {
+    "Opening registrations": "December 18, 2024",
+    "Author registration deadline for main conference authors": "January 20, 2025",
+    "Author registration deadline for other type of paper authors": "March 5, 2025",
+    "Early bird registrations deadline": "March 11, 2025",
+    "Closing registrations": "April 11, 2025"
+  },
+  "Other Date": {
+    "(Workshop) Paper submission opening date": "December 20, 2024",
+    "(Workshop) Paper submission closing date": "January 31, 2025",
+    "(Workshop) Author notification": "February 14, 2025",
+    "(Workshop) Workshop day": "April 8, 2025",
+    "(Extended Fast Abstracts) submissions are open until": "February 13, 2025",
+    "(2-Pages Fast Abstracts and Student Forum) Submissions were extended until": "February 13, 2025",
+    "Program of the conference is already available.": "February 28, 2025"
+  },
+  "Topics": "Dependable Computing, Secure Computing, Hardware and software architecture of dependable systems, Dependability and security modelling, evaluation, benchmarking, and tools, Safety-critical systems design and analysis, Artificial Intelligence for dependability and security, Fault-tolerant networks, protocols and systems, Time-sensitive networks and ultra-reliable low-latency communication, Mixed-criticality systems design and evaluation, Testing and validation methods",
+  "Summary": "The 20th European Dependable Computing Conference (EDCC 2025) will be held in Lisbon, Portugal, from April 8-11, 2025. EDCC is a leading venue for presenting and discussing the latest research, industrial practice and innovations in dependable and secure computing.",
+  "Call for Papers": "# EDCC 2025: Call for Papers\n\nThe 20th European Dependable Computing Conference (EDCC 2025) will be held in **Lisbon, Portugal, from April 8-11, 2025.**\n\nEDCC serves as a unique forum for researchers and practitioners to present and discuss their latest research results on theory, techniques, systems, and tools for the design, validation, operation, and evaluation of dependable and secure computing systems. In addition to original research papers, EDCC welcomes contributions on dependability and security in practice and their application to industrial domains.\n\n## Topics\n\nThe conference covers a broad perspective on dependability and security, which includes, but is not limited to:\n\n*   Hardware and software architecture of dependable systems\n*   Dependability and security modeling, evaluation, benchmarking, and tools\n*   Safety-critical systems design and analysis\n*   Artificial Intelligence for dependability and security\n*   Fault-tolerant networks, protocols, and systems\n*   Time-sensitive networks and ultra-reliable low-latency communication\n*   Mixed-criticality systems design and evaluation\n*   Testing and validation methods\n*   Dependability and security of:\n    *   Artificial Intelligence systems\n    *   Cyber-physical systems\n    *   Cloud, fog, and edge computing systems\n    *   Data analytics applications\n    *   Databases and distributed ledgers (including blockchains)\n    *   Data protection and data privacy\n\n## Paper Categories\n\nThe conference invites submissions in the following categories:\n\n*   **Regular papers:** (up to 8 pages) solicited on theory, techniques, systems, and tools for designing, validating, operating, and evaluating dependable and secure computing systems.\n*   **Practical experience reports:** (up to 6 pages) dedicated to dependability and security in practice, applying tools and techniques to new challenging problems or domains.\n*   **Industry papers:** (from 4 up to 6 pages) directly related to industrial use cases, applicability and scalability issues of recent techniques, novel technological challenges, and novel applications of practical aspects of dependability.\n*   **Short papers:** (up to 4 pages) describing preliminary research work (position papers) or a description outlining the design or implementation of a tool or the prototyping of an operational system.\n\nReferences are included in the page limit for papers submitted to any category. However, after the paper's acceptance, references will not be included in the page limit to enable authors to better address the reviewers' comments.\n\n## Paper Submission\n\nAll contributions must be electronically submitted through the dedicated EasyChair submission web page (EDCC 2025): [https://easychair.org/my/conference?conf=edcc2025](https://easychair.org/my/conference?conf=edcc2025).\n\nSubmitted papers must be written in English and follow the two-column format. The submission category must be clearly stated on the first page. Pages must be numbered.\n\n## Important Dates\n\nAll dates refer to AoE time (Anywhere on Earth)\n\n*   **Abstract Submission:** October 7, 2024\n*   **Full Paper Submission:** October 21, 2024\n*   **Author Notification:** December 9, 2024\n*   **Camera-ready paper:** January 17, 2025\n\n## Workshops\n\n*   **Workshop proposal submission window:** October 4, 2024\n*   **Workshop acceptance notification:** October 10, 2024\n*   **Schedule for accepted workshops:**\n    *   Workshop website setup and spread the call: October 25, 2024\n    *   Paper submission opening date: December 20, 2024\n    *   Paper submission closing date: January 31, 2025\n    *   Author notification: February 14, 2025\n    *   Camera-ready paper (HARD deadline): March 5, 2025\n    *   Workshop day: April 8, 2025\n\n## Call for Posters\n\n*   **Submission deadline:** February 27, 2025\n*   **Author notification:** March 2, 2025\n\n## Student Forum\n\n*   **Paper Submission:** February 17, 2025\n*   **Paper Notification:** February 24, 2025\n*   **Camera-ready paper (HARD deadline):** March 5, 2025\n\n## Fast Abstracts\n\n*   **Fast Abstract Submission:** February 17, 2025\n*   **Fast Abstract Notification:** February 24, 2025\n*   **Camera-ready papers (HARD deadline):** March 5, 2025"
+}
+

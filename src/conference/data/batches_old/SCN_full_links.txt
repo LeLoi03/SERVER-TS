@@ -1,0 +1,579 @@
+Conference full name: Conference on Security and Cryptography for Networks (SCN)
+
+1. Website of SCN_2: https://scn.unisa.it/scn22/
+Website information of SCN_2:
+
+Salta al contenutohref="https://scn.unisa.it/scn22/" - 
+href="https://scn.unisa.it/scn22/" - 13th International Conference on Security and Cryptography for Networks – SCN 2022
+Organized in cooperation with IACR 
+ Menuhref="http://scn.unisa.it/" - Home 
+ href="https://scn.unisa.it/scn22/?taxonomy=nav_menu&term=conference" - Conference | Espandi il menu figlio | href="https://scn.unisa.it/scn22/index.php/call-for-papers/" - Call for Papers 
+ Committees 
+ href="https://scn.unisa.it/scn22/index.php/accepted-papers-2/" - Accepted Papers 
+ href="https://scn.unisa.it/scn22/index.php/conference-program/" - Program at a glance 
+ href="https://scn.unisa.it/scn22/index.php/final-program/" - Final program 
+ href="https://scn.unisa.it/scn22/index.php/submission-instructions-for-accepted-papers/" - Submission Instructions for Accepted Papers 
+ href="https://scn.unisa.it/scn22/index.php/dates-and-deadlines/" - Dates and Deadlines 
+ href="https://scn.unisa.it/scn22/index.php/invited-speakers/" - Invited Speakers 
+ href="https://scn.unisa.it/scn22/index.php/proceedings/" - Proceedings and Special Issue 
+ href="https://scn.unisa.it/scn22/index.php/submission/" - Submission Instructions 
+ href="https://scn.unisa.it/scn22/index.php/venue/" - Venue 
+ href="https://scn.unisa.it/scn22/index.php/contact-2/" - Contact 
+ href="https://scn.unisa.it/scn22/?taxonomy=nav_menu&term=amalfi" - Amalfi | Espandi il menu figlio | href="https://scn.unisa.it/scn22/index.php/history/" - History 
+ href="https://scn.unisa.it/scn22/index.php/how-to-reach/" - How to reach 
+ href="https://scn.unisa.it/scn22/index.php/hotels-in-amalfi/" - Hotels in Amalfi 
+ href="https://scn.unisa.it/scn22/index.php/climate/" - Climate 
+ href="https://scn.unisa.it/scn22/?taxonomy=nav_menu&term=previous-editions" - Previous Editions | Espandi il menu figlio | href="https://scn.unisa.it/scn20" - SCN 2020 
+ href="http://scn.di.unisa.it" - SCN 2018 
+ href="http://scn16.di.unisa.it" - SCN 2016 
+ href="http://scn14.di.unisa.it" - SCN 2014 
+ href="http://www.springeronline.com/978-3-642-32927-2" - SCN 2012 (Proceedings) 
+ href="http://www.springeronline.com/978-3-642-15316-7" - SCN 2010 (Proceedings) 
+ href="http://www.springeronline.com/978-3-642-15316-7" - SCN 2008 (Prooceedings) 
+ href="http://www.springeronline.com/978-3-540-38080-1" - SCN 2006 (Prooceedings) 
+ href="http://www.springeronline.com/978-3-540-24301-4" - SCN 2004 (Prooceedings) 
+ href="http://www.springeronline.com/978-3-540-00420-2" - SCN 2002 (Prooceedings) 
+ Vai al contenuto13th International Conference on Security and Cryptography for Networks 
+ Amalfi (SA) Italy. September 12-14, 2022 
+ NEWS 
+ The Conference is over. 
+ href="https://scn.unisa.it/scn24" - SCN 2024 Webpage is now Online
+Free access toConference Proceedings(Sept. 7 – Oct. 7) 
+ href="https://scn.unisa.it/scn22/index.php/final-program/" - Final program now available
+Amalfi is a popular place for vacation. Hotels are filling up quickly.We strongly suggest to book your hotel soon. 
+ SCN aims to bring together researchers in the field of cryptography and information security, practitioners, developers, and users to foster cooperation, exchange techniques, tools, experiences and ideas. 
+ Covid-19 disclaimer: Our intention is to organize a safe event in presence in Amalfi. We will, of course, implement all possible safety measures required by national or local governments. At the same time, we are arranging a flexible plan in order to allow remote participation to authors who will not feel comfortable in traveling at the time of the conference. Stay safe and submit good papers to SCN! 
+ SCN is organised in cooperation withhref="https://www.iacr.org" - International Association for Cryptologic Research
+NEWS 
+ 02/09/22: | href="https://scn.unisa.it/scn22/index.php/final-program/" - Final program | now online! 
+ 19/07/22: | href="https://scn.unisa.it/scn22/index.php/preliminary-program/" - Preliminary program | is now online! 
+ 08/07/22: Titles and Abstracts of | href="https://scn.unisa.it/scn22/index.php/invited-speakers/" - invited talks | have been published! 
+ 19/06/22: The list of | href="https://scn.unisa.it/scn22/index.php/accepted-papers-2/" - accepted papers | is available 
+ 10/06/22: Eli Ben-Sasson and Marshall Ball are the | href="https://scn.unisa.it/scn22/index.php/invited-speakers/" - invited speakers | for SCN22! 
+ 30/05/22: Notification deadline postponed to June 17th 
+ 02/05/22: Submission server closed! 
+ 21/04/22: Submission deadline extended to May 1st (firm!) 
+ 06/04/22: Papers can be submitted via | href="https://easychair.org/conferences/?conf=scn2022" - Easychair | . Check submission instructions 
+ 25/01/22: A special issue of Information and Computation will be devoted to selected papers from SCN 22! 
+ 12/01/22. SCN Proceedings will be published by Springer! 
+ 04/01/22. SCN obtains the | IACR-ICW | status. 
+ 22/12/21. Website is up 
+  
+ Proudly powered by WordPress
+
+2. Website of SCN_2: https://cryptobib.di.ens.fr/
+Website information of SCN_2:
+
+Toggle navigationCryptoBibManual 
+ Custom 
+ Crypto Team 
+ About 
+ CryptoBib 
+ CryptoBib is a BibTeX database containing papers related to Cryptography, with manually checked entries and uniform BibTeX data. CryptoBib can be used as a classical BibTeX database. BibTeX keys are short and easy to remember. 
+ URL fieldNew2017-04-06:URLs are now indicated in theurlfield instead of in the fieldnote. If you were usingsplncs.bstorbiblatex / biber, you should not need to change anything. But if you are still using oldbibtexstyles, such asalpha.bstorplain.bst, you may want to move toalphaurl.bstorplainurl.bst, otherwise URLs will not be displayed anymore. 
+ Get started 
+ Download 
+ Downloadone of these files: | abbrev0.bib | (most detailed) 
+ abbrev1.bib | (w/o conf. days) 
+ abbrev2.bib | (short names) 
+ abbrev3.bib | (least detailed) 
+ and one of those: | crypto.bib 
+ crypto_crossref.bib 
+ crypto_custom.bib 
+ GitHub 
+ The code is now open source, and you can now add cryptobib files as an SVN external project or a Git submodule to always stay up to date: 
+ Add the submodule to your paper's project: | git submodule add https://github.com/cryptobib/export cryptobib 
+ Update cryptobib: | ( cd cryptobib && git pull origin master ) 
+ Retrieve cryptobib after | git clone | or | git pull | : | git submodule update --init 
+ See manualGitHub 
+ Help us improve it 
+ CryptoBib entries are imported fromDBLPand manually checked to make sure titles and authors are correctly rendered in LaTeX. 
+ If you find any error, pleasecontactus 
+ Changes 
+ 2025-01-07 | : AC 2024, DCC 2024 
+ 2024-12-16 | : ACM CCS 2024, TCC 2024, FOCS 2024, ISC 2024 
+ 2024-12-09 | : CiC vol 1, nr 2 + 3 
+ 2024-10-21 | : CANS 2024, ICALP 2024 
+ 2024-10-05 | : ITC 2021 – 2024, AFRICACRYPT 2024, ACISP 2024, ASIACCS 2024, CSF 2024, ESORICS 2024, IWSEC 2024, NDSS 2024, SCN 2024, SODA 2022 - 2024, S&P 2024, EuroS&P 2016 – 2024, PoPETS 2024 
+ 2024-09-17 | : FOCS 2023, ITCS 2022-2024, JC 2024, JCEng 2024, NDSS 2022-2023, PODC24, STOC 2024 
+ 2024-09-09 | : CRYPTO 2024 
+ 2024-07-08 | : FCW 2022-2023, FC 2023 
+ 2024-07-07 | : ICISC 2021-2023, ICITS 2017, IMA 23, INDOCRYPT 2021–2023, ISC 2021–2023, IWSEC 2021–2023, LATIN 2021–2024, PROVSEC 2021–2023, SAC 2022-2023, SCN 2022, TRUSTBUS 2021–2022, WISA 2023, PQCRYPT 2022–2024 
+ 2024-06-30 | : CiC vol 1, nr 1 
+ 2024-06-30 | : Added correct publisher cities for conference proceedings published by Springer. 
+ 2024-06-12 | : ACNS 2024, COSADE 2024, DCC 2024, CT-RSA 2024, ESORICS 2024, EUROCRYPT 2024 
+ 2024-05-03 | : ACM CCS 2023, JC 2024, JCEng 2023, STOC 2022-2023, TCHES 2024 (Issues 1-2), ToSC 2023, ToSC 2024 (Issue 1) 
+ 2024-05-03 | : TCC 2023, PKC 2024 
+ 2024-04-04 | : PODC 2021-2023 
+ 2024-03-07 | : ASIACRYPT 2023 
+ 2024-01-31 | : LATINCRYPT 2023 
+ 2024-01-03 | : DCC 1997-2023 
+ 2023-11-20 | : ACISP 2023, ACNS 2023, AFRICACRYPT 2023, ASIACCS 2023, CANS 2023, COSADE 2021-2023, CSF 2023, CT-RSA 2023, ICALP 2023, ICICS 2021-2023, IEEE S&P 2023, JC 2023 (Issues 3-4) 
+ 2023-10-31 | : CRYPTO 2023, DCC 1991-1996, TCHES 2023 (Issues 3-4) 
+ 2023-05-23 | : EUROCRYPT 2023, PKC 2023 
+ 2023-04-12 | : ICALP 2021-2022 
+ 2023-04-04 | : ToSC 2021 (Issue 4), ToSC 2022 (Issues 1-4), TCHES 2022 (Issues 1-4), TCHES 2023 (Issues 1-2), PoPETS 2018 (Issue 4), PoPETS 2022 (Issue 4), PoPETS 2023 (Issue 1), JC 2023 (Numbers 1-2) 
+ 2023-03-23 | : CSF 2022, FCW 2021, FC 2021-2022 
+ 2023-03-16 | : EPRINT (up to 2023/381) 
+ 2023-02-22 | : FOCS 2021-2022 
+ 2023-02-21 | : ACISP 2022, AFRICACRYPT 2022, ASIACRYPT 2022, CANS 2021-2022 
+ 2023-02-14 | : EPRINT (up to 2023/135); STOC 2021; IEEE S&P 2022; JC 2022 (Numbers 2-4); PKC 2022; TCC 2022; USENIX 2022; WISA 2021-2022 
+ 2023-01-02 | : CCS 2022 
+ 2022-10-31 | : CRYPTO 2022 
+ 2022-10-17 | : EPRINT 2022 (up to 2022/1396) 
+ 2022-10-06 | : ACNS 2022 
+ 2022-09-29 | : ESORICS 2022, JCEng 2021--2022 (Sept) 
+ 2022-09-08 | : SAC 2020, SAC 2021 
+ 2022-08-20 | : PoPETS 2022 (Issue 2-3) 
+ 2022-08-11 | : EPRINT up to 2022/1039, NIST PQC Selected Algorithms and Round 4 Algorithms 
+ 2022-07-14 | : IMACC 2021, NDSS 1996, NDSS 2021 
+ 2022-06-14 | : ACISP 2021, ACNS 2021, ASIACCS 2021-2022 
+ 2022-06-09 | : ASIACRYPT 2021, TCC 2021, EUROCRYPT 2022 
+ 2022-05-16 | : EPRINT up to 2022/568 
+ 2022-04-26 | : ESORICS 2021, LATINCRYPT 2021 
+ 2022-02-20 | : CSF 2021, PoPETS 2022 (Issue 1), USENIX 2021, CCS 2021, IEEE S&P 2021 
+ 2022-01-26 | : JC 2020 (Number 4), JC 2021 (Numbers 3-4), JC 2022 (Number 1) 
+ 2022-01-21 | : EPRINT 2020, EPRINT 2021, EPRINT 2022 (up to 2022/079) 
+ 2021-10-07 | : ToSC 2021 (Issues 1-3) 
+ 2021-09-29 | : TCHES 2021 (Issue 4) 
+ 2021-08-24 | : PoPETS 2021 (Numbers 2-4) 
+ 2021-08-16 | : CRYPTO 2021, EUROCRYPT 2021 
+ 2021-06-22 | : ToSC 2020 (Issues 3-4) 
+ 2021-05-21 | : PKC 2021, RSA 2021 
+ 2021-03-16 | : SODA 2021 
+ 2021-03-02 | : ICISC 2020, TCHES 2021 (Issue 2), JC 2021 (Number 2) 
+ 2021-02-08 | : COSADE 2020, ITCS 2021 
+ 2021-02-01 | : FOCS 2020, JC 2021 (Number 1), PoPETS 2021 (Number 1) 
+ 2020-07-15 | : TCHES 2021 (Issue 3) 
+ Conferences and Journals in CryptoBib 
+ Conferences 
+  
+ Acronym | Conference/Journal Name | Entries 
+ ACISP | Australasian Conference on Information Security and Privacy | 1996 - 2024 
+ ACM CCS | ACM Conference on Computer and Communications Security | 1993 - 2024 
+ ACNS | International Conference on Applied Cryptography and Network Security | 2003 - 2024 
+ AFRICACRYPT | International Conference on Cryptology in Africa | 2008 - 2024 
+ ASIACCS | ACM Symposium on Information, Computer and Communications Security | 2006 - 2024 
+ ASIACRYPT | International Conference on the Theory and Application of Cryptology and Information Security | 1990 - 2024 
+ CANS | International Conference on Cryptology and Network Security | 2005 - 2024 
+ CHES | Workshop on Cryptographic Hardware and Embedded Systems | 1999 - 2017 
+ COSADE | International Workshop on Constructive Side-Channel Analysis and Secure Design | 2012 - 2024 
+ CQRE | International Exhibition and Congress on Network Security | 1999 - 1999 
+ CRYPTO | International Cryptology Conference | 1981 - 2024 
+ CSF | IEEE Computer Security Foundations Symposium | 2007 - 2024 
+ CT-RSA | RSA Conference, Cryptographers' Track | 2001 - 2024 
+ ESORICS | European Symposium on Research in Computer Security | 1990 - 2024 
+ EUROCRYPT | International Conference on the Theory and Applications of Cryptographic Techniques | 1982 - 2024 
+ FC | Financial Cryptography and Data Security | 1997 - 2023 
+ FCW | Financial Cryptography and Data Security Workshops | 2010 - 2023 
+ FOCS | Symposium on Foundations of Computer Science | 1980 - 2024 
+ FSE | International Workshop on Fast Software Encryption | 1993 - 2016 
+ ICALP | International Colloquium on Automata, Languages and Programming | 1994 - 2024 
+ ICICS | International Conference on Information and Communications Security | 1997 - 2023 
+ ICISC | International Conference on Information Security and Cryptology | 1998 - 2023 
+ ICITS | International Conference on Information Theoretic Security | 2007 - 2017 
+ IEEE EuroSP | IEEE European Symposium on Security and Privacy | 2016 - 2024 
+ IEEE SP | IEEE Symposium on Security and Privacy | 1992 - 2024 
+ IMA | IMA Conference on Cryptography and Coding | 1995 - 2023 
+ INDOCRYPT | International Conference on Cryptology in India | 2000 - 2023 
+ ISC | Information Security Conference | 1997 - 2024 
+ ITC | Information-Theoretic Cryptography | 2020 - 2024 
+ ITCS | Innovations in Theoretical Computer Science | 2010 - 2024 
+ IWSEC | International Workshop on Security | 2006 - 2024 
+ LATIN | Latin American Theoretical Informatics Symposium | 1992 - 2024 
+ LATINCRYPT | International Conference on Cryptology and Information Security in Latin America | 2010 - 2023 
+ NDSS | Network and Distributed System Security Symposium | 1996 - 2024 
+ PAIRING | International Conference on Pairing-based Cryptography | 2007 - 2013 
+ PETS | International Symposium on Privacy Enhancing Technologies | 2002 - 2014 
+ PKC | International Conference on Practice and Theory in Public Key Cryptography | 1998 - 2024 
+ PODC | ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing | 1982 - 2024 
+ PQCRYPTO | International Conference on Post-Quantum Cryptography | 2008 - 2024 
+ PROVSEC | International Conference on Provable Security | 2007 - 2023 
+ SAC | Workshop on Selected Areas in Cryptography | 1998 - 2023 
+ SCN | Conference on Security and Cryptography for Networks | 2002 - 2024 
+ SODA | ACM-SIAM Symposium on Discrete Algorithms | 1991 - 2024 
+ STOC | ACM Symposium on Theory of Computing | 1980 - 2024 
+ TCC | Theory of Cryptography Conference | 2004 - 2024 
+ TRUSTBUS | International Conference on Trust, Privacy &amp; Security in Digital Business | 2004 - 2022 
+ USENIX | USENIX Security Symposium | 1993 - 2024 
+ VIETCRYPT | International Conference on Cryptology in Vietnam | 2006 - 2006 
+ WISA | International Workshop on Information Security Applications | 2003 - 2023 
+ Journals 
+  
+ Acronym | Conference/Journal Name | Entries 
+ CiC | IACR Communications in Cryptology | 2024 - 2024 
+ DCC | Designs, Codes and Cryptography | 1991 - 2024 
+ JC | Journal of Cryptology | 1988 - 2024 
+ JCEng | Journal of Cryptographic Engineering | 2011 - 2024 
+ PoPETS | Proceedings on Privacy Enhancing Technologies | 2015 - 2024 
+ TCHES | Transactions on Cryptographic Hardware and Embedded Systems | 2018 - 2024 
+ ToSC | Transactions on Symmetric Cryptology | 2016 - 2024 
+ Misc 
+  
+ Acronym | Conference/Journal Name | Entries 
+ EPRINT | Cryptology ePrint Archive | 1996 - 2024 
+ Powered byweb2py. Usebootstrap 3andglyphicons.
+
+3. Website of SCN_2: https://www.iacr.org/events/
+Website information of SCN_2:
+
+International Association for Cryptologic Research 
+ International Association 
+ for Cryptologic Research 
+ IACREvents | All IACR eventsAsiacryptCryptoEurocryptCHESFSEPKCTCCRWCCryptology SchoolsIn cooperation with IACR 
+ Publications | All IACR PublicationsJournal of CryptologyTransactions on Symmetric CryptologyTransactions on CHESCommunications in CryptologyCryptology ePrint ArchiveArtifact ArchiveAccess IACR Publicationshref="/museum/" - Museum of Historic Papers
+Publication Statistics 
+ News | All NewsAwardsElectionsPetitions & Statements 
+ Services | JobsCryptoDBCalendar of EventsVideos 
+ Members | How to JoinUpdate Membership InformationAccess IACR Publicationshref="/news/subscribe" - Subscribe to News Updates 
+ About | About IACRBoard of DirectorsCommitteesDocumentsPrivacy Policy 
+ Suggestions fromlocal searchas you type. Hit enter to search with Google. 
+ Search 
+ Suggestions fromlocal searchas you type. Hit enter to search with Google. 
+ Calendar of Events in Cryptology 
+ Submit an eventAs a service to our members, IACR maintains a calendar of events related to research in cryptology. The accuracy of the contributed events is the responsibility of the submitters. No endorsement by IACR should be assumed, unless explicitly indicated.Events on this page are sorted by event start date. Options are: 
+ href="?order=submission" - View by submission date | (includes journal issues with no associated event) 
+ View by event start date | (excludes journal issues) 
+ View archived past events 
+ Map view of events 
+ icalendar feed | (ordered by date of conference) 
+ href="icalbysubmission.php" - icalendar feed | (ordered by date of submission) 
+ April 2025 
+ href="https://aicrypt2025.aisylab.com/" - 5th Workshop on Artificial Intelligence and Cryptography
+                        (AICrypt)
+Madrid, Spain 
+ Event: Apr 3 - May 3, 2025 
+ Submission deadline:14 March 2025 
+ href="https://pqcrypto2025.iis.sinica.edu.tw/" - 16th International Conference on Post-Quantum Cryptography
+                        (PQCrypto 2025)
+Taipei, Taiwan 
+ Event: Apr 8 - Apr 10, 2025 
+ Submission deadline:25 October 2024 
+ Notification date: 6 January 2025 
+ href="https://fc25.ifca.ai" - Financial Cryptography and Data Security
+                        (FC2025)
+Miyako Island, Japan 
+ Event: Apr 13 - Apr 18, 2025 
+ New England Hardware Security Day (NEHWS'25)Cambridge, USA 
+ Event: Apr 18 - Apr 18, 2025 
+ Submission deadline:10 February 2025 
+ href="https://fc25.ifca.ai/codecfin/cfp.html" - The 6th Workshop on Coordination of Decentralized Finance (CoDecFin) 2025
+                        (CoDecFin 25)
+Miyakojima, Japan 
+ Event: Apr 18 - Apr 18, 2025 
+ Submission deadline:31 December 2024 
+ Notification date: 31 January 2025 
+ href="https://ct-rsa-2025.csa.iisc.ac.in" - The Cryptographers' Track at RSA Conference 2025
+                        (CT-RSA 2025)
+San Francisco, USA 
+ Event: Apr 28 - May 1, 2025 
+ May 2025 
+ href="https://informatik.rub.de/symcrypt/lle2025/" - 2nd Workshop on Low-Latency Encryption
+                        (LLE 2025)
+Madrid, Spain 
+ Event: May 3 - May 3, 2025 
+ Workshop on Proofs and Proof Techniques for Cryptographic Security (ProTeCS)Madrid, España 
+ Event: May 3 - May 3, 2025 
+ Submission deadline:20 February 2025 
+ Notification date: 7 March 2025 
+ 6th International Workshop on Code-Based Cryptography (CBCrypto)Madrid, Spain 
+ Event: May 3 - May 4, 2025 
+ Submission deadline:7 February 2025 
+ href="https://caw.cryptanalysis.fun/" - Cryptographic Applications Workshop 2025
+                        (CAW '25)
+Madrid, Spain 
+ Event: May 4 - 
+ Submission deadline:7 February 2025 
+ href="https://permutationbasedcrypto.org/2025" - Permutation-based Crypto 2025
+                        (PBC 2025)
+Madrid, Spain 
+ Event: May 4 - May 4, 2025 
+ Submission deadline:28 February 2025 
+ Notification date: 15 March 2025 
+ Workshop on Quantum-Resistant Cryptography (QuRCry)Madrid, España 
+ Event: May 4 - May 4, 2025 
+ Submission deadline:20 February 2025 
+ Notification date: 17 March 2025 
+ href="https://eurocrypt.iacr.org/2025" - Eurocrypt 2025
+                        (Eurocrypt 2025)
+EUROCRYPT 
+ Madrid, Spain 
+ Event: May 4 - May 8, 2025 
+ IEEE International Symposium on Hardware Oriented Security and Trust (HOST) (HOST)San Jose, USA 
+ Event: May 5 - May 8, 2025 
+ Workshop on secret sharing schemesTarragona, Spain 
+ Event: May 12 - May 14, 2025 
+ href="https://pkc.iacr.org/2025" - The International Conference on Practice and Theory in Public Key Cryptography
+                        (PKC 2025)
+PKC 
+ Røros, Norway 
+ Event: May 12 - May 15, 2025 
+ Submission deadline:16 October 2024 
+ Notification date: 5 February 2025 
+ International Workshop on Network and Distributed Systems Security (WNDSS)Marburg, Slowenien 
+ Event: May 23 - May 23, 2025 
+ Submission deadline:31 January 2025 
+ Notification date: 28 February 2025 
+ href="https://sites.google.com/view/aisp2025/home" - First International Workshop on Artificial Intelligence Security and Privacy
+                        (AI Security & Privacy 2025)
+Osaka, Japan 
+ Event: May 26 - May 28, 2025 
+ Submission deadline:26 January 2025 
+ Notification date: 24 February 2025 
+ June 2025 
+ href="https://proact-school.cs.ru.nl/" - PROACT Training School 2025
+Chania, Greece 
+ Event: Jun 2 - Jun 5, 2025 
+ href="https://cecc2025.inf.elte.hu/en" - Central European Cryptology Conference
+                        (CECC 2025)
+Budapest, Hungary 
+ Event: Jun 19 - Jun 20, 2025 
+ Submission deadline:20 March 2025 
+ href="http://kmlabcw.iis.u-tokyo.ac.jp/weis/2025/" - The 24th Annual Workshop on the Economics of Information Security
+                        (WEIS 2025)
+Tokyo, Japan 
+ Event: Jun 23 - Jun 25, 2025 
+ Submission deadline:31 January 2025 
+ Notification date: 14 March 2025 
+ href="https://acns2025.fordaysec.de/" - 2025 International Conference on Applied Cryptography and Network Security 
+                        (ACNS'25)
+Munich, Germany 
+ Event: Jun 23 - Jun 26, 2025 
+ Submission deadline:9 September 2024 
+ Notification date: 11 November 2024 
+ 6th ACNS Workshop on Secure Cryptographic Implementation (SCI '25)München, Deutschland 
+ Event: Jun 23 - Jun 26, 2025 
+ Submission deadline:15 March 2025 
+ Notification date: 20 April 2025 
+ href="https://privcryptworkshop.github.io/cfp.html" - International Workshop on Foundations and Applications of Privacy-Enhancing Cryptography
+                        (PrivCrypt)
+Munich, Germany 
+ Event: Jun 24 - Jun 24, 2025 
+ Submission deadline:21 March 2025 
+ Notification date: 22 April 2025 
+ Workshop on Quantum-Safe Hybrid Cryptography (QSHC)Munich, Germany 
+ Event: Jun 25 - 
+ Submission deadline:31 March 2025 
+ Notification date: 30 April 2025 
+ href="https://aihws2025.aisylab.com/" - 6th Artificial Intelligence in Hardware Security (AIHWS) Workshop affiliated with ACNS2025
+Munich, Germany 
+ Event: Jun 25 - Jun 25, 2025 
+ Submission deadline:7 March 2025 
+ href="https://summerschool-croatia.cs.ru.nl/2025/index.html" - Croatia Summer School on real-world crypto and privacy 2025
+Dubrovnik, Croatia 
+ Event: Jun 29 - Jul 4, 2025 
+ Submission deadline:30 January 2025 
+ Notification date: 15 February 2025 
+ href="https://www.ieee-security.org/TC/EuroSP2025/" - IEEE European Symposium on Security and Privacy 2025
+                        (EuroS&P)
+Venice, Italy 
+ Event: Jun 30 - Jul 4, 2025 
+ Submission deadline:24 October 2024 
+ Notification date: 13 February 2025 
+ July 2025 
+ href="https://qubip.eu/qsns2025/" - 2nd Workshop on Quantum-Secure Networks and Systems
+                        (QSNS 2025)
+Bologna, Italy 
+ Event: Jul 2 - Jul 5, 2025 
+ Submission deadline:10 February 2025 
+ Notification date: 14 March 2025 
+ href="https://simula-uib.com/arcticcrypt2025/" - ArcticCrypt 2025
+Longyearbyen, Norge 
+ Event: Jul 6 - Jul 11, 2025 
+ Submission deadline:13 September 2024 
+ Notification date: 23 October 2024 
+ href="https://services.conferences.computer.org/2025/edge/" - IEEE International Conference on Edge Computing and Communications 
+                        (IEEE EDGE)
+Helsinki, Finland 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:3 March 2025 
+ Notification date: 6 May 2025 
+ href="https://services.conferences.computer.org/2025/qsw/" - IEEE International Conference On Qunatum Software 2025
+                        (IEEE QSW 2025)
+Helsinki, Finland 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:24 February 2025 
+ Notification date: 6 May 2025 
+ href="https://services.conferences.computer.org/2025/icws-2025/" - IEEE International Conference on Web Services (ICWS)
+                        (ICWS)
+Helsinki, Suomi 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:24 February 2024 
+ Notification date: 6 May 2025 
+ href="https://uow-ic2.github.io/acisp2025/" - 30th Australasian Conference on Information Security and Privacy
+                        (ACISP 2025)
+Wollongong, Australia 
+ Event: Jul 14 - Jul 16, 2025 
+ Submission deadline:6 November 2024 
+ Notification date: 22 January 2025 
+ href="https://africacrypt2025.sciencesconf.org/" - 16th International Conference on Cryptology, AFRICACRYPT 2025
+                        (AFRICACRYPT 2025)
+Rabat-Salé-Kénitra, Maroc 
+ Event: Jul 21 - Jul 23, 2025 
+ Submission deadline:10 March 2025 
+ Notification date: 1 May 2025 
+ August 2025 
+ href="https://www.ieee-csr.org/" - 2025 IEEE International Conference on Cyber Security and Resilience
+                        (IEEE CSR 2025)
+Plataniás, Greece 
+ Event: Aug 4 - Aug 6, 2025 
+ Submission deadline:10 February 2025 
+ Notification date: 10 March 2025 
+ href="https://2025.ares-conference.eu/" - 20th International Conference on Availability, Reliability and Security
+                        (ARES '25)
+Ghent, Belgium 
+ Event: Aug 11 - Aug 14, 2025 
+ Submission deadline:28 February 2025 
+ Notification date: 2 May 2025 
+ href="https://sacworkshop.org/SAC25/" - Selected Areas in Cryptography 2025 cycle 1
+                        (SAC 2025)
+Toronto, Canada 
+ Event: Aug 11 - Aug 15, 2025 
+ Submission deadline:27 January 2025 
+ Notification date: 13 March 2025 
+ href="https://sacworkshop.org/SAC25/" - Selected Areas in Cryptography 2025 cycle 2
+                        (SAC 2025)
+Toronto, Canada 
+ Event: Aug 11 - Aug 15, 2025 
+ Submission deadline:7 May 2025 
+ Notification date: 20 June 2025 
+ href="https://crypto.iacr.org/2025/" - Crypto 2025
+                        (Crypto 2025)
+CRYPTO 
+ Santa Barbara, USA 
+ Event: Aug 17 - Aug 21, 2025 
+ Submission deadline:13 February 2025 
+ Notification date: 3 May 2025 
+ href="https://asiajcis2024.web2.ncku.edu.tw/" - 20th Asia Joint Conference on Information Security
+                        (AsiaJCIS 2025)
+Seoul, Korea 
+ Event: Aug 19 - Aug 20, 2025 
+ Submission deadline:17 April 2025 
+ Notification date: 19 June 2025 
+ href="https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2025.html" - 12th ACM ASIA Public-Key Cryptography Workshop
+                        (APKC 2025)
+Hanoi, Vietnam 
+ Event: Aug 26 - Aug 26, 2025 
+ Submission deadline:17 February 2025 
+ Notification date: 17 March 2025 
+ September 2025 
+ href="https://www.encrypt-on.com/activities/conferences/lightsec-2025/" - 6th International Workshop on LIGHTWEIGHT CRYPTOGRAPHY FOR SECURITY & PRIVACY
+                        (LightSEC 2025)
+Istanbul, Türkiye 
+ Event: Sep 1 - Sep 3, 2025 
+ Submission deadline:29 March 2025 
+ Notification date: 29 May 2025 
+ href="https://www.encrypt-on.com/activities/conferences/lightsec-2025/" - 6th International Workshop on LIGHTWEIGHT CRYPTOGRAPHY FOR SECURITY & PRIVACY
+                        (LightSEC 2025)
+Fatih, Türkiye 
+ Event: Sep 1 - Sep 3, 2025 
+ Submission deadline:18 April 2025 
+ Notification date: 29 May 2025 
+ href="https://fdtc.deib.polimi.it/FDTC25/index.html" - workshop on Fault Diagnosis and Tolerance in Cryptography 2025
+                        (FDTC 2025)
+Kuala Lumpur, Malesia 
+ Event: Sep 14 - Sep 14, 2025 
+ href="https://ches.iacr.org/2025/" - Cryptographic Hardware and Embedded Systems
+                        (CHES 2025)
+CHES 
+ Kuala Lumpur, Malaysia 
+ Event: Sep 14 - Sep 18, 2025 
+ href="https://blocktea.eai-conferences.org/" - 4th EAI International Conference on Blockchain Technology and Emerging Applications
+                        (BlockTEA 2025)
+Virtual event, Anywhere on Earth 
+ Event: Sep 18 - Sep 19, 2025 
+ Submission deadline:15 May 2025 
+ Notification date: 8 July 2025 
+ Sixth PQC Standardization ConferenceGaithersburg, USA 
+ Event: Sep 24 - Sep 26, 2025 
+ October 2025 
+ href="https://www.decifris.it/fcir25" - First international conference of Financial Cryptography in Rome 2025
+                        (FCiR25)
+Rome, Italy 
+ Event: Oct 1 - Oct 1, 2025 
+ Submission deadline:28 April 2025 
+ Notification date: 1 July 2025 
+ href="https://ciencias.medellin.unal.edu.co/eventos/latincrypt/" - 9th International Conference on Cryptology and Information Security in Latin America
+                        (LATINCRYPT 2025)
+Medellín, Colombia 
+ Event: Oct 1 - Oct 3, 2025 
+ Submission deadline:18 April 2025 
+ Notification date: 4 July 2025 
+ href="https://sulab-sever.u-aizu.ac.jp/provsec2025/cfp.html" - The 19th International Conference on Provable and Practical Security
+Yokohama, Japan 
+ Event: Oct 10 - Oct 12, 2025 
+ Submission deadline:31 May 2025 
+ Notification date: 15 July 2025 
+ href="https://www.icics2025.org/" - The 27th International Conference on Information and Communications Security 
+                        (ICICS 2025)
+Nanjing, China 
+ Event: Oct 29 - Oct 31, 2025 
+ November 2025 
+ href="https://cy2sec.comm.eng.osaka-u.ac.jp/miyaji-lab/event/cans2025/index.html" - The 24th International Conference on Cryptology and Network Security
+                        (CANS 2025)
+Osaka, Japan 
+ Event: Nov 17 - Nov 20, 2025 
+ Submission deadline:17 April 2025 
+ Notification date: 10 July 2025 
+ href="https://www.iwsec.org/2025/index.html" - The 20th International Workshop on Security (IWSEC 2025) (1st round submission)
+Fukuoka, Japan 
+ Event: Nov 25 - Nov 27, 2025 
+ Submission deadline:3 April 2025 
+ Notification date: 2 June 2025 
+ href="https://www.iwsec.org/2025/index.html" - The 20th International Workshop on Security (IWSEC 2025) (2nd round submission)
+Fukuoka, Japan 
+ Event: Nov 25 - Nov 27, 2025 
+ Submission deadline:17 July 2025 
+ Notification date: 15 September 2025 
+ December 2025 
+ href="https://tcc.iacr.org/2025/" - Theory of Cryptography Conference
+                        (TCC 2025)
+TCC 
+ Aarhus, Denmark 
+ Event: Dec 2 - Dec 5, 2025 
+ href="https://asiacrypt.iacr.org/2025/" - Asiacrypt 2025
+                        (Asiacrypt 2025)
+ASIACRYPT 
+ Melbourne, Australia 
+ Event: Dec 8 - Dec 12, 2025 
+ href="https://event.iitg.ac.in/space2025/" - Fifteenth International Conference on Security, Privacy and Applied Cryptographic Engineering
+                        (SPACE 2025)
+Indian Institute of Technology Guwahati, India 
+ Event: Dec 16 - Dec 19, 2025 
+ href="https://event.iitg.ac.in/space2025/" - SPACE 2025: Fifteenth International Conference on Security, Privacy and Applied Cryptographic Engineering
+                        (SPACE 2025)
+Guwahati, India 
+ Event: Dec 16 - Dec 19, 2025 
+ Submission deadline:1 May 2025 
+ March 2026 
+ Real World Crypto Symposium (RWC 2026)RWC 
+ Taipei, Taiwan 
+ Event: Mar 7 - Mar 9, 2026 
+ Real World Crypto Symposium (RWC 2026)RWC 
+ Taipei, Taiwan 
+ Event: Mar 9 - Mar 11, 2026 
+ AboutThehref="/" - International Association for Cryptologic Research (IACR)
+is a non-profit scientific organization whose purpose is to further research in cryptology and related fields.Learn more...EventsAsiacrypt | • | Crypto | • | Eurocrypt 
+ CHES | • | FSE | • | PKC | • | TCC 
+ Real World Crypto 
+ Schools 
+ Calendar of events 
+ PublicationsAccess to Publications 
+ Journal of Cryptology 
+ Trans. on Symmetric Cryptology 
+ Trans. on CHES 
+ Communications in Cryptology 
+ Cryptology ePrint Archive 
+ Publication database 
+ ServicesNews 
+ Awards 
+ Jobs 
+ Update your information 
+ How to join 
+ About the IACR 
+ href="/copyright.html" - Copyright ©
+        2025
+          by the IACRInternational Association for Cryptologic Research
+• 
+ Privacy Policy
+

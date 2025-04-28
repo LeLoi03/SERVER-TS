@@ -1,0 +1,25 @@
+```json
+{
+  "Conference dates": "December 8 - 12, 2025",
+  "Year": "2025",
+  "Location": "Honolulu, Hawaii, USA",
+  "City-State-Province": "Honolulu, Hawaii",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submissions": "May 28, 2025"
+  },
+  "Notification Date": {
+    "Early Rejection Notification": "July 8, 2025",
+    "Acceptance Notification": "August 19, 2025"
+  },
+  "Other Date": {
+    "Authors Response Period": "August 2 - 7, 2025"
+  },
+  "Topics": "Access Control, Assurance, Audit, Anonymity, Privacy, Application Security, Big Data for Security, Cloud and Virtualization Security, Cyber-Physical Systems, Embedded Systems, IoT Security, Data Integrity and Protection, Denial of Service Attacks and Defenses, Deployable Trustworthy Systems, Digital Forensics, Distributed Systems Security, Enterprise Security Management and Incident Response, Hardware and Supply Chain Security, Identity Management, Intrusion Detection and Prevention, Machine Learning Security, Malware, Mobile/Wireless Security, Network Security, OS and Systems Security, Resilience, Security Applications of Generative AI, Software Security, Software-defined Programmable Security, Usability and Human-centered Security, Web Security",
+  "Publisher": "IEEE Computer Society",
+  "Summary": "The Annual Computer Security Applications Conference (ACSAC) brings together leading researchers and practitioners, along with a diverse group of security professionals drawn from academia, industry, and government, gathered to present and discuss the latest cybersecurity results and topics. ACSAC's first edition was held in 1985 and is now one of the oldest computer security conferences. ACSAC 2025 will be held near the infamous Waikiki Beach in Honolulu, Hawaii, from December 8-12, 2025.",
+  "Call for Papers": "# ACSAC 2025: Call for Papers\n\nThe Annual Computer Security Applications Conference (ACSAC) will be held in **Honolulu, Hawaii from December 8-12, 2025**.\n\nACSAC brings together leading researchers and practitioners, along with a diverse group of security professionals drawn from academia, industry, and government, gathered to present and discuss the latest cybersecurity results and topics.\n\n## Submission Types\n\n*   **Technical Papers:** We solicit papers offering novel contributions in any aspect of applied security. Papers are encouraged on results that have been demonstrated to be useful for improving information systems security and that address lessons learned from the actual application. Submitted papers must not substantially overlap papers that have been published or that are simultaneously submitted to a journal or a conference with proceedings.  Please ensure that your submission is a PDF file of a maximum of 10 pages, excluding well-marked references and appendices limited to 5 pages. Committee members are not required to read the appendices.\n*   **Case Studies:** The Case Studies in Applied Security Track is an opportunity for professionals to share information that is current without writing a detailed technical paper.  While the Case Studies will not be included in the Proceedings, a Best Case Study Award will be presented to one of the talks, and all Case Studies presentations will be posted to the ACSAC site following the conference. \n*   **Panels:** Panels should encourage audience participation and focus on the sharp edges of a topic where there is controversy or where there are widely varying positions. \n*   **Posters:** The poster session provides an opportunity for researchers and practitioners to present their new and innovative preliminary work in an informal, interactive setting.\n*   **Works in Progress:** The Works in Progress (WiP) session offers short presentations (5 minutes maximum) of ongoing work. \n*   **Workshops:** ACSAC workshops are on up to-date topics that provide a useful and exciting forum for information technology professionals to exchange ideas, concerns, and opinions.\n*   **Artifacts Competition:** This competition invites the submission of applied cybersecurity artifacts that have been published in previous years in academic or industry venues.\n*   **Student Conferenceships:** ACSAC offers conferenceships to enable students to attend the conference.\n\n## Important Dates\n\n*   **Paper Submissions:** May 28 (23:59 Anywhere on Earth) — firm deadline\n*   **Early Rejection Notification:** July 8, 2025\n*   **Authors Response Period:** August 2-7, 2025 (tentative)\n*   **Acceptance Notification:** August 19, 2025\n\n## Contact\n\nFor additional information regarding papers, please contact the Program Chairs."
+}
+```

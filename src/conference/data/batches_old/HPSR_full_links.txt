@@ -1,0 +1,699 @@
+Conference full name: IEEE Workshop on High Performance Switching and Routing (HPSR)
+
+1. Website of HPSR_3: https://hpsr2025.ieee-hpsr.org/
+Website information of HPSR_3:
+
+Skip to main contentIEEE.org 
+ IEEEXploreDigital Library 
+ IEEE Standards 
+ IEEE Spectrum Online 
+ More IEEE Sites 
+ IEEE International Conference on High Performance Switching and Routing 
+ 20–22 May 2025 // Suita, Osaka, Japan 
+ Toggle navigationHome 
+ About 
+ href="/authors/call-papers" - Authors | href="/author-instructions" - Author Instructions 
+ href="/authors/call-papers" - Call for papers 
+ href="/workshop/call-workshop-papers" - Call for workshop papers 
+ href="/authors/call-papers/call-workshop" - Call for Workshop 
+ href="/call-tutorials" - Call for Tutorials 
+ href="/call-posters-demos" - Call for Posters & Demos 
+ href="/authors/submission" - Submission 
+ Committees | Organizing Committee 
+ Technical Program Committee 
+ Program | Keynotes 
+ Registration | Student Travel Grant 
+ Event Conduct 
+ Patrons / Exhibitors 
+ Venue | Hotel / Travel 
+ Visa Letter Request 
+ Search 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ Previous 
+ Next 
+ Pause 
+ The 1st Annual IEEE Communications Society Demonstration Conference 
+ Welcome to the 2025 IEEE 26th International Conference on High Performance Switching and Routing (HPSR) 
+ High Performance Switching and Routing (HPSR) is an essential technology for today's high-speed, high-capacity data networks; HPSR has supported the wired and wireless network infrastructure of telecommunications carriers and Internet service providers. In these networks, new paradigms such as network virtualization, cloud edge computing, green networking, and the Internet of Things have emerged one after another, and HPSR has played an important role in each of them. In recent years, it has become especially important in data center networking. As artificial intelligence, especially large-scale language models, is expected to transform society, the need for switching and routing of huge amounts of traffic in data center networks has increased the importance of research and development of HPSR. The IEEE International Conference on HPSR has been held annually to date as a forum for the presentation of cutting-edge research results related to HPSR technology and the 26thedition will be held in Osaka, Japan from May 20 to May 22, 2025. We hope to contribute to the further development of the HPSR community through the presentation of cutting-edge research results on HPSR and heated discussions among participants. We are looking forward to receiving your contributions of cutting-edge research results on HPSR. 
+ Kohei Shiomoto and Guido Alberto Maier 
+ General Co-Chairs 
+ Eiji Oki, Bijoy Chand Chatterjee, and Roberto Rojas-Cessa 
+ TPC Co-Chairs 
+ Accepted Workshops for HPSR 2025 
+ We are pleased to announce the following workshops that will be held in conjunction with HPSR 2025: 
+ Workshop on Distributed In-Network Computing Technologies for Realizing Metaverse Societies (D-NetComp 2025) 
+ Workshop on Performance Evaluation of Wireless Networks (PEWiN 2025) 
+ Workshop on All-Photonics Network and Related Technologies (APN 2025) 
+ Workshop on Cutting-Edge Technologies in Network Switching and Routing for Modern Infrastructures (CTN-SRMI 2025) 
+ Important Dates 
+ Paper Submission Due: 
+ 15 January 2025 
+ 5 February 2025 (Extended) 
+ 20 February 2025 (FIRM) 
+ Acceptance Notifications: 
+ 20 March 2025 
+ Camera Ready Due: 
+ 15 April 2025 
+ Author Registration Deadline: 
+ 15 April 2025 
+ Final Version Submission Due: 
+ 15 April 2025 
+ Technical Sessions Dates: 
+ 20-22 May 2025 
+ Workshop (WS) 
+ WS Proposal Submission Deadline: 
+ 25 November 2024 
+ WS Proposal Acceptance Notification: 
+ 13 December 2024 
+ Web Posting of Call for WS Papers: 
+ 20 January 2025 
+ WS Paper Submission Deadline: 
+ 27 February 2025 
+ March 7, 2025 (Extended) 
+ March 23, 2025 (FIRM) 
+ WS Paper Acceptance Notification: 
+ 17 March 2025 
+ April 4, 2025 (Extended) 
+ WS Camera Ready: 
+ 15 April 2025 
+ WS Author Registration Deadline: 
+ 15 April 2025 
+ Patrons 
+ Technical Co-Sponsor 
+ © Copyright 2025 IEEE – All rights reserved. Use of this website signifies your agreement to theIEEE Terms & Conditions. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. 
+ Home 
+ Sitemap 
+ Contact & Support 
+ Accessibility 
+ Nondiscrimination Policy 
+ Privacy & Opting Out of Cookies
+
+2. Website of HPSR_3: https://hpsr2025.ieee-hpsr.org/
+Website information of HPSR_3:
+
+Skip to main contentIEEE.org 
+ IEEEXploreDigital Library 
+ IEEE Standards 
+ IEEE Spectrum Online 
+ More IEEE Sites 
+ IEEE International Conference on High Performance Switching and Routing 
+ 20–22 May 2025 // Suita, Osaka, Japan 
+ Toggle navigationHome 
+ About 
+ href="/authors/call-papers" - Authors | href="/author-instructions" - Author Instructions 
+ href="/authors/call-papers" - Call for papers 
+ href="/workshop/call-workshop-papers" - Call for workshop papers 
+ href="/authors/call-papers/call-workshop" - Call for Workshop 
+ href="/call-tutorials" - Call for Tutorials 
+ href="/call-posters-demos" - Call for Posters & Demos 
+ href="/authors/submission" - Submission 
+ Committees | Organizing Committee 
+ Technical Program Committee 
+ Program | Keynotes 
+ Registration | Student Travel Grant 
+ Event Conduct 
+ Patrons / Exhibitors 
+ Venue | Hotel / Travel 
+ Visa Letter Request 
+ Search 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ Previous 
+ Next 
+ Pause 
+ The 1st Annual IEEE Communications Society Demonstration Conference 
+ Welcome to the 2025 IEEE 26th International Conference on High Performance Switching and Routing (HPSR) 
+ High Performance Switching and Routing (HPSR) is an essential technology for today's high-speed, high-capacity data networks; HPSR has supported the wired and wireless network infrastructure of telecommunications carriers and Internet service providers. In these networks, new paradigms such as network virtualization, cloud edge computing, green networking, and the Internet of Things have emerged one after another, and HPSR has played an important role in each of them. In recent years, it has become especially important in data center networking. As artificial intelligence, especially large-scale language models, is expected to transform society, the need for switching and routing of huge amounts of traffic in data center networks has increased the importance of research and development of HPSR. The IEEE International Conference on HPSR has been held annually to date as a forum for the presentation of cutting-edge research results related to HPSR technology and the 26thedition will be held in Osaka, Japan from May 20 to May 22, 2025. We hope to contribute to the further development of the HPSR community through the presentation of cutting-edge research results on HPSR and heated discussions among participants. We are looking forward to receiving your contributions of cutting-edge research results on HPSR. 
+ Kohei Shiomoto and Guido Alberto Maier 
+ General Co-Chairs 
+ Eiji Oki, Bijoy Chand Chatterjee, and Roberto Rojas-Cessa 
+ TPC Co-Chairs 
+ Accepted Workshops for HPSR 2025 
+ We are pleased to announce the following workshops that will be held in conjunction with HPSR 2025: 
+ Workshop on Distributed In-Network Computing Technologies for Realizing Metaverse Societies (D-NetComp 2025) 
+ Workshop on Performance Evaluation of Wireless Networks (PEWiN 2025) 
+ Workshop on All-Photonics Network and Related Technologies (APN 2025) 
+ Workshop on Cutting-Edge Technologies in Network Switching and Routing for Modern Infrastructures (CTN-SRMI 2025) 
+ Important Dates 
+ Paper Submission Due: 
+ 15 January 2025 
+ 5 February 2025 (Extended) 
+ 20 February 2025 (FIRM) 
+ Acceptance Notifications: 
+ 20 March 2025 
+ Camera Ready Due: 
+ 15 April 2025 
+ Author Registration Deadline: 
+ 15 April 2025 
+ Final Version Submission Due: 
+ 15 April 2025 
+ Technical Sessions Dates: 
+ 20-22 May 2025 
+ Workshop (WS) 
+ WS Proposal Submission Deadline: 
+ 25 November 2024 
+ WS Proposal Acceptance Notification: 
+ 13 December 2024 
+ Web Posting of Call for WS Papers: 
+ 20 January 2025 
+ WS Paper Submission Deadline: 
+ 27 February 2025 
+ March 7, 2025 (Extended) 
+ March 23, 2025 (FIRM) 
+ WS Paper Acceptance Notification: 
+ 17 March 2025 
+ April 4, 2025 (Extended) 
+ WS Camera Ready: 
+ 15 April 2025 
+ WS Author Registration Deadline: 
+ 15 April 2025 
+ Patrons 
+ Technical Co-Sponsor 
+ © Copyright 2025 IEEE – All rights reserved. Use of this website signifies your agreement to theIEEE Terms & Conditions. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. 
+ Home 
+ Sitemap 
+ Contact & Support 
+ Accessibility 
+ Nondiscrimination Policy 
+ Privacy & Opting Out of Cookies
+
+3. Website of HPSR_3: https://hpsr2024.ieee-hpsr.org/authors/call-workshops
+Website information of HPSR_3:
+
+Skip to main contentIEEE.org 
+ IEEEXploreDigital Library 
+ IEEE Standards 
+ IEEE Spectrum Online 
+ More IEEE Sites 
+ IEEE International Conference on High Performance Switching and Routing 
+ 22–24 July 2024 // Pisa, Italy 
+ Toggle navigationHome 
+ About 
+ Committees | Organizing Committee 
+ Technical Program Committee 
+ href="/authors/call-papers" - Authors | href="/authors/call-papers/author-instructions" - Author Instructions 
+ href="/authors/call-papers" - Call For Papers 
+ href="/authors/call-workshops" - Call for Workshops 
+ href="/authors/call-papers/call-workshop-papers" - Call For Workshop Papers 
+ Program | Venue 
+ Program 
+ Tutorials 
+ Keynotes 
+ Workshops 
+ Registration | Event Conduct 
+ Hotel / Travel | Visa Letter Request 
+ Patrons / Exhibitors 
+ Search 
+ Call for Workshops 
+ The 2024 IEEE International Conference on High Performance Switching and Routing will be held in Pisa, Italy, July 22-25, 2024. The conference is a three-day meeting that showcases original research works, tutorials, workshops, industry program from the HPSR and computer networking community. The meeting program includes keynotes and panels from prominent academy, industry, business, and government leaders. In this call, we solicit proposals for half-day or full-day workshops, to be held during the conference. 
+ Objective of Workshop: 
+ The aim of the conference workshops is to highlight emerging research and technology topics that are not specifically covered in the main symposia. Each workshop may include a mix of regular papers, invited presentations, keynote, and panels that encourage active participation of attendees. 
+ Suggested Proposal Format: 
+ The proposal should concisely and clearly describe the content and objectives of the workshop, and must include (Up to 4 pages): 
+ Title of the workshop 
+ Description of the technical issues covered, emphasizing the timeliness of the proposed workshop topics not covered or specifically addressed by the main conference symposia ( | Up to 1 page | ) 
+ Workshop Organizers (names, affiliation, and contact information) 
+ A short biography of the organizers (up to 200 words), highlighting experience in organizing conferences/workshops. 
+ Names of potential participants, including program committee members and invited speakers (indication that speakers have accepted to participate is a plus) 
+ Proposed workshop format (unique, creative, and novel workshop formats are strongly encouraged), including: | Duration of the workshop (Half-day, Full-day and tentative schedule) 
+ Number of open-call and invited refereed papers, keynotes, panels (and panel formats) etc. 
+ Plan for the review of the refereed papers according to the IEEE and ComSoc's academic best-practices and requirements. 
+ Draft Call for Papers ( | 1 standing-alone page | ) 
+ A description of the publicity and promotion plan 
+ If applicable, a description of statistics in previously organized workshops including the number of submitted and accepted papers, number of attendees, etc. 
+ Proposal Submission Instructions: 
+ Workshop proposals should be submitted as a single PDF file by email to both Workshop Co-Chairs (see emails below). 
+ Proposals that address exciting topics within the scope of IEEE HPSR in creative formats and with potential to generate lively interactions among participants will be given priority. Papers will be peer-reviewed and those accepted will be added to the proceeding of the IEEE HPSR proceedings and archived in IEEE Xplore. 
+ Tentative Timeline: 
+ Proposal Submission Deadline: March 15, 2024 
+ Acceptance Notification: March 25, 2024 
+ Web Posting of Call for Papers: April 1, 2025 
+ Workshop Paper Submission Deadline: | May 5, 2024 | May 24 
+ Paper Acceptance Notification: | May 20, 2024 | June 12 
+ Camera Ready: | June 1, 2024 | June 18 
+ Additional instructions and important deadlines will be posted at https://hpsr2024.ieee-hpsr.org/. 
+ Workshops Co-Chairs and Contact Information 
+ Lotfi Mhamdi, Leeds University, UK (Email: L.Mhamdi@leeds.ac.uk) 
+ Roberto Rojas-Cessa, New Jersey Institute of Technology, USA (Email: rcessa@njit.edu) 
+ href="/authors/call-papers/author-instructions" - Author Instructions 
+ href="/authors/call-papers" - Call For Papers 
+ href="/authors/call-workshops" - Call for Workshops 
+ href="/authors/call-papers/call-workshop-papers" - Call For Workshop Papers 
+ Patrons 
+ Silver 
+ Silver 
+ Silver 
+ href="https://hpsr2024.ieee-hpsr.org/" - 
+Supporters 
+ href="https://hpsr2024.ieee-hpsr.org/" - 
+Supporters 
+ © Copyright 2025 IEEE – All rights reserved. Use of this website signifies your agreement to theIEEE Terms & Conditions. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. 
+ Home 
+ Sitemap 
+ Contact & Support 
+ Accessibility 
+ Nondiscrimination Policy 
+ Privacy & Opting Out of Cookies
+
+4. Website of HPSR_3: https://www.comsoc.org/conferences-events/ieee-international-conference-high-performance-switching-and-routing-2024
+Website information of HPSR_3:
+
+Skip to main contentIEEE MenuCloseIEEE Global Menu 
+ IEEE.org 
+ IEEE Xplore Digital Library 
+ IEEE Standards 
+ IEEE Spectrum 
+ More Sites 
+ Cart (0) 
+ Create Account 
+ Sign In 
+ Main navigation dropdown 
+ MenuCloseAbout | href="/about/board-governors-2025" - Board of Governors | Governance | BoG & OpCom Motions 
+ BoG Meeting Minutes 
+ Bylaws 
+ Constitution 
+ Council, Board, & Committee Meeting Minutes 
+ Five Year Review 
+ IEEE ComSoc Directory 
+ OpCom Meeting Minutes 
+ Policies & Procedures 
+ Publications MOU 
+ Strategic Plan 
+ Nominations & Elections | Current Election 
+ Past Election Results 
+ BoG Meetings 
+ Conflict of Interest 
+ Ombudsperson 
+ Past Board of Governors | Past ComSoc Presidents 
+ Awards | Career Awards | Education Award 
+ Edwin Howard Armstrong Achievement Award 
+ Excellence in Supporting Standardization for Communications Award 
+ Distinguished Industry Leader Award 
+ Industrial Innovation Award 
+ Award for Public Service in the Field of Telecommunications 
+ Walp Industry Humanitarian Award 
+ Paper Awards | Award for Advances in Communication 
+ Best Survey Paper Award 
+ Best Tutorial Paper Award 
+ Charles Kao Award for Best Optical Communications & Networking Paper 
+ Fred W. Ellersick Prize 
+ Heinrich Hertz Award for Best Communications Letter 
+ Leonard G. Abraham Prize 
+ Outstanding Paper Award 
+ Stephen O. Rice Prize 
+ William R. Bennett Prize 
+ href="/about/awards/paper-awards/ieee-communications-society-katherine-johnson-young-author-best-paper" - Katherine Johnson Young Author Best Paper Award 
+ IEEE Communications Society & Information Theory Society Joint Paper Award 
+ IEEE Marconi Prize Paper Award in Wireless Communications 
+ Service Awards | Donald W. McLellan Meritorious Service Award 
+ Gunther and Shirley Karger Chapter and Community Leadership Award 
+ Harold Sobol Award for Exemplary Service to Meetings & Conferences 
+ IEEE ComSoc/KICS Exemplary Global Service Award 
+ IEEE Communications Society Carole Swaim Award for Distinguished Staff Service 
+ Joseph LoCicero Award for Exemplary Service to Publications 
+ Councils | Conferences 
+ Member & Global Activities 
+ Publications 
+ href="/about/councils/technical-educational-activities-council" - Technical & Educational Activities 
+ Boards | Asia/Pacific Region 
+ Conference Development 
+ Conference Operations 
+ Educational Services 
+ Europe, Middle-East & Africa Region 
+ Industry Communities 
+ Industry Outreach 
+ Journals 
+ Latin America Region 
+ Magazines 
+ Member Services 
+ North America Region 
+ On-Line Content 
+ Standardization Programs Development 
+ Standards Development 
+ Technical Committees 
+ Committees | Technical Committees | href="/about/committees/technical-committees/big-data" - Big Data 
+ href="/about/committees/technical-committees/cognitive-networks" - Cognitive Networks 
+ href="/about/committees/technical-committees/communication-theory" - Communication Theory 
+ href="/about/committees/technical-committees/communications-information-security" - Communications & Information Security 
+ href="/about/committees/technical-committees/communications-quality-and-reliability" - Communications Quality and Reliability 
+ href="/about/committees/technical-committees/communications-software" - Communications Software 
+ href="/about/committees/technical-committees/communications-switching-routing" - Communications Switching & Routing 
+ href="/about/committees/technical-committees/communications-systems-integration-modeling" - Communications Systems Integration & Modeling 
+ href="/about/committees/technical-committees/green-communications-computing" - Green Communications & Computing 
+ href="/about/committees/technical-committees/information-infrastructure-networking" - Information Infrastructure & Networking 
+ href="/about/committees/technical-committees/internet" - Internet 
+ href="/about/committees/technical-committees/iot-ad-hoc-sensor-networks" - Internet of Things, Ad Hoc & Sensor Networks 
+ href="/about/committees/technical-committees/molecular-biological-and-multi-scale" - Molecular, Biological and Multi-Scale Communications 
+ href="/about/committees/technical-committees/multimedia-communications" - Multimedia Communications 
+ href="/about/committees/technical-committees/network-operations-management" - Network Operations & Management 
+ href="/about/committees/technical-committees/optical-networking" - Optical Networking 
+ href="/about/committees/technical-committees/radio-communications" - Radio Communications 
+ href="/about/committees/technical-committees/satellite-space-communications" - Satellite & Space Communications 
+ href="/about/committees/technical-committees/signal-processing-computing-communications" - Signal Processing and Computing for Communications 
+ href="/about/committees/technical-committees/smart-grid-communications" - Smart Grid Communications 
+ href="/about/committees/technical-committees/social-networks" - Social Networks 
+ href="/about/committees/technical-committees/tactile-internet" - Tactile Internet 
+ href="/about/committees/technical-committees/transmission-access-optical-systems" - Transmission, Access, & Optical Systems 
+ href="/about/committees/technical-committees/wireless-communications" - Wireless Communications 
+ href="/about/committees/technical-committees/e-health" - e-Health 
+ Ad Hoc Committees | Awards Policies 
+ ComSoc Loyalty Program 
+ ComSoc Standardization Activities 
+ Conference Best Paper Awards 
+ Fellow Search 
+ href="/about/committees/ad-hoc-committees/reorganization-comsoc-technical-communities-ad-hoc-committee" - Reorganization of ComSoc Technical Communities 
+ Review of Distinguished Lecturer Program 
+ Standing Committees | Awards 
+ Communications History | Communications History | Communications History Articles 
+ Distinguished Lecturers’ Selection 
+ Emerging Technologies 
+ Fellow Evaluation 
+ Finance 
+ GIMS 
+ href="/about/committees/standing-committees/globecomicc-technical-content-gitc" - GITC 
+ Governance 
+ Information Technology 
+ Marketing 
+ Nominations & Elections 
+ Operating 
+ Operations & Facilities 
+ Sister Societies 
+ Strategic Planning 
+ Technical Committee/Industry Community Recertification 
+ Technology Evolution and Initiatives | href="/about/committees/standing-committees/technology-evolution-and-initiatives/comsoc-sponsored-ieee" - ComSoc Sponsored IEEE Councils, Technical Communities, and Initiatives 
+ WICE 
+ Young Professionals 
+ Emerging Technologies Initiatives | Aerial Communications 
+ Backhaul/Fronthaul Networking & Communications 
+ Electromagnetic Signal and Information Theory 
+ Integrated Sensing and Communication 
+ Internet of Sounds 
+ Large Generative AI Models in Telecom (GenAINet) 
+ Machine Learning for Communications 
+ Next Generation Multiple Access 
+ Quantum Communications & Information Technology 
+ Reconfigurable Intelligent Surfaces 
+ News | Archive 
+ In Memoriams | Kaveh Pahlavan 
+ Jim K. Omura 
+ Michael R. Kincaid 
+ Janusz Filipiak 
+ Roberto Saracco 
+ Gerard (Jerry) Foschini 
+ Ahmed Kamal 
+ Subbarayan Pasupathy 
+ Lawrence Wong 
+ Raymond Pickholtz 
+ Desmond P. (Des) Taylor 
+ Robert W. (Bob) Lucky 
+ Hanan Potash 
+ Jane M. Simmons 
+ Artur Ziviani 
+ Charles Rubinstein 
+ Norman Abramson 
+ Malathi Veeraraghavan 
+ William H. (Bill) Tranter 
+ Charles Kao Kuen 
+ Larry Greenstein 
+ Robert M. (Bob) Walp 
+ ComSoc History 
+ Volunteer Opportunities 
+ Advertise and Sponsor | Print Ad Specifications 
+ Staff Listing 
+ Brand Experience | IEEE ComSoc Brand 
+ Guidelines | ComSoc Brand Identity Guidelines 
+ ComSoc Digital Content Guidelines 
+ ComSoc Conference Website Guidelines 
+ Resources 
+ Training 
+ Services 
+ Contact 
+ Corporate Program | Rewards 
+ Invest 
+ Participants 
+ Membership | Member Benefits | Membership Publications 
+ Membership Loyalty 
+ Chapters | Chapter Awards | Membership and Global Activities Contribution Award 
+ Chapter Resources 
+ Find a Chapter | North America Region 1-7 | Regional Awards 
+ Europe, Middle-East, & Africa Region 8 | Regional Awards 
+ Latin America Region 9 | Regional Awards 
+ Asia/Pacific Region 10 | Regional Awards 
+ Regional Chapter Chair Congress (RCCC) 
+ Sister Chapter Program 
+ Student Chapters 
+ Creating a New Chapter/Student Branch 
+ Membership Development Support Grant 
+ IEEE Fellow | IEEE Fellows 2020-Current 
+ IEEE Fellows 2010-2019 
+ IEEE Fellows 2000-2009 
+ IEEE Fellows 1990-1999 
+ IEEE Fellows 1980-1989 
+ IEEE Fellows 1974-1979 
+ Women in Communications Engineering (WICE) 
+ Distinguished Lecturers | Distinguished Lecturers FAQ 
+ Past Distinguished Lecturers 
+ Student Membership 
+ Student Ambassador 
+ Student Tech Leadership Conference 
+ Student Competition | Prizes 
+ Selection Committee 
+ Winners 
+ FAQs 
+ Internet for All | Criteria 
+ FAQs 
+ Selected Projects 
+ Legal 
+ Resources for Proposal Writing 
+ Young Professionals 
+ Sister Societies 
+ Publications | Magazines | IEEE Communications Magazine | Editorial Board 
+ href="/publications/magazines/ieee-communications-magazine/cfp" - Call for Papers 
+ href="/publications/magazines/ieee-communications-magazine/magazine-author-guidelines" - Author Guidelines | href="/publications/magazines/ieee-communications-magazine/author-guidelines/manuscript-submission-policy" - Manuscript Submission Policy 
+ href="/publications/magazines/ieee-communications-magazine/author-guidelines/manuscript-publishing" - Manuscript Publishing Guidelines 
+ Reviewer Guidelines 
+ Editors' Policy 
+ Guide to Proposing Special Issues 
+ Editor in Chief Reports 
+ The President's Page | href="/publications/magazines/ieee-communications-magazine/presidents-page/presidents-page-march-2025" - March 2025 
+ href="/publications/magazines/ieee-communications-magazine/presidents-page/presidents-page-february-2025" - February 2025 
+ href="/publications/magazines/ieee-communications-magazine/presidents-page/presidents-page-january-2025" - January 2025 
+ Global Communications Newsletter (GCN) | GCN Online Version 
+ GCN PDF Version 
+ IEEE Network | href="/publications/magazines/ieee-network/cfp" - Call for Papers 
+ Guest Editor Guidelines 
+ Reviewer Guidelines 
+ Editorial Board 
+ href="/publications/magazines/ieee-network/paper-submission-guidelines" - Paper Submission Guidelines 
+ href="/publications/magazines/ieee-network/author-guidelines" - Author Guidelines 
+ IEEE Communications Standards Magazine | href="/publications/magazines/ieee-communications-standards-magazine/cfp" - Call for Papers 
+ Guest Editor Guidelines 
+ Reviewer Guidelines 
+ href="/publications/magazines/ieee-communications-standards-magazine/paper-submission-guidelines" - Paper Submission Guidelines 
+ href="/publications/magazines/ieee-communications-standards-magazine/author-guidelines" - Author Guidelines 
+ Editorial Board 
+ IEEE Wireless Communications | href="/publications/magazines/ieee-wireless-communications/cfp" - Call for Papers 
+ Guest Editor Guidelines 
+ Reviewer Guidelines 
+ href="/publications/magazines/ieee-wireless-communications/paper-submission" - Paper Submission Guidelines 
+ href="/publications/magazines/ieee-wireless-communications/author-guidelines" - Author Guidelines 
+ Editorial Board 
+ IEEE Internet of Things Magazine | href="/publications/magazines/ieee-internet-things-magazine/author-guidelines" - Author Guidelines 
+ href="/publications/magazines/ieee-internet-things-magazine/cfp" - Call for Papers 
+ Editorial Board 
+ href="/publications/magazines/ieee-internet-things-magazine/paper-submission-guidelines" - Paper Submission Guidelines 
+ Reviewer Guidelines 
+ Guide to Proposing Special Issues 
+ Editor in Chief Reports 
+ Best Practices and Guidelines for Magazine Editorial Team 
+ Advertising Opportunities 
+ Journals | IEEE COMML | Current Issue 
+ Editorial Board 
+ Reviewer and Editor Appreciation 
+ Regular & Double-Anonymous Review Process 
+ Submit a Manuscript 
+ IEEE COMST | Current Issue 
+ Early Access 
+ Editorial Board 
+ Guidelines for Reviewers 
+ Submit a Manuscript 
+ href="/publications/journals/ieee-comst/call-for-papers" - Call for Papers 
+ Editor Appreciation 
+ IEEE JSAC | Current Issue 
+ href="/publications/journals/ieee-jsac/cfp" - Call for Papers 
+ Editorial Board | Responsibilities of Editorial Board 
+ Guest Editor Information | Checklist for Guest Editors 
+ Introduction 
+ href="/publications/journals/ieee-jsac/guest-editor-information/preparing-call-papers" - Preparing the Call for Papers 
+ href="/publications/journals/ieee-journal-selected-areas-communications/guest-editor-submissions" - Submissions by Guest Editors 
+ Reviewers Information | href="/publications/journals/ieee-journal-selected-areas-communications/reviewers-information/papers" - Reviewing Papers 
+ Selected Ideas in Communications Blog 
+ href="/publications/journals/ieee-jsac/call-proposals-issues" - Call for Proposals of JSAC Issues 
+ Submit a Manuscript | href="/publications/journals/ieee-journal-selected-areas-communication/submit-manuscript/paper-guidelines" - Paper Submission Guidelines 
+ Publishing Overview 
+ Rule of Thumb for Pagecount 
+ IEEE LNET | Current Issue 
+ href="/publications/journals/ieee-lnet/call-papers" - Call for Papers 
+ Editorial Board 
+ href="/publications/journals/ieee-lnet/ieee-networking-letters-author-guidelines" - Information for Authors 
+ IEEE OJCOMS | Editorial Board 
+ Guest Editor Information 
+ Submit a Manuscript 
+ href="/publications/journals/ieee-ojcoms/cfp" - Call for Papers 
+ Reviewer and Editor Appreciation 
+ IEEE TCCN | Current Issue 
+ href="/publications/journals/ieee-tccn/cfp" - Call for Papers 
+ Editorial Board 
+ Submit a Manuscript 
+ IEEE TCOM | Current Issue 
+ Editorial Board 
+ Exemplary Reviewers 
+ href="/publications/journals/ieee-tcom/ieee-transactions-communications-information-authors" - Information for Authors | href="/publications/journals/ieee-tcom/information-authors/conference-vs-journal-papers" - Conference vs Journal Papers 
+ Submit a Manuscript 
+ IEEE TGCN | Current Issue 
+ href="/publications/journals/ieee-tgcn/cfp" - Call for Papers 
+ Editor Guidelines 
+ Editorial Board 
+ href="/publications/journals/ieee-tgcn/information-authors" - Information for Authors 
+ Submit a Manuscript 
+ IEEE TMBMC | Current Issue 
+ href="/publications/journals/ieee-tmbmc/cfp" - Call for Papers 
+ Editorial Board 
+ href="/publications/journals/ieee-tmbmc/information-for-authors" - Information for Authors | IEEE Copyright Info 
+ href="http://ieeeauthorcenter.ieee.org/create-your-ieee-article/use-authoring-tools-and-ieee-article-templates/ieee-article-templates/" - IEEE Templates 
+ href="/publications/journals/ieee-tmbmc/information-authors/manuscript-submissions" - Manuscript Submissions 
+ href="/publications/journals/ieee-tmbmc/information-authors/letters-submissions" - Letters Submissions 
+ href="/publications/journals/ieee-tmbmc/information-authors/methods-data-submissions" - Methods and Data Submissions 
+ href="/publications/journals/ieee-tmbmc/information-authors/page-charges" - Page Charges 
+ Submit a Manuscript 
+ IEEE TMLCN | Current Issue 
+ Editorial Board 
+ href="/publications/journals/ieee-tmlcn/call-for-papers" - Call for Papers 
+ href="/publications/journals/ieee-tmlcn/ieee-transactions-machine-learning-communications-and-networking-information-authors" - Information for Authors 
+ IEEE TNSE | Current Issue 
+ Editorial Board 
+ Submit a Manuscript 
+ href="/publications/journals/ieee-tnse/cfp" - Call for Papers 
+ href="/publications/journals/ieee-tnse/ieee-transactions-network-science-and-engineering-information" - Information for Authors 
+ Best Paper Award 
+ Reviewer and Editor Appreciation 
+ Featured Articles 
+ IEEE TNSM | Current Issue 
+ href="/publications/journals/ieee-tnsm/cfp" - Call for Papers 
+ Editorial Board 
+ Journal Information 
+ Submit a Manuscript 
+ IEEE TWC | Current & Back Issues 
+ Editor Guidelines 
+ Editorial Board 
+ Exemplary Reviewers 
+ Reviewers Guidelines 
+ Submit a Manuscript | href="/publications/journals/ieee-transactions-wireless-communications/conference-vs-journal" - Conference vs. Journal Papers 
+ IEEE WCL | Current Issue 
+ Editorial Board 
+ Submit a Manuscript 
+ Reviewer Appreciation 
+ Best Editors 
+ Heinrich Hertz Award for Best Communications Letter 
+ IEEE TNET | Current Issue 
+ href="/publications/journals/ieee-tnet/ieee-transactions-networking-call-papers" - Call for Papers 
+ Editorial Board 
+ href="/publications/journals/ieee-tnet/ieee-transactions-networking-author-guidelines" - Author Guidelines 
+ Submit a Paper 
+ Best Practices and Guidelines for Journals Editorial Team 
+ Submit a Paper | Conference Paper Versus Journal Paper 
+ Ethics & Editing 
+ href="/publications/ieee-communications-society-policy-plagiarism-and-multiple-submissions" - Plagiarism & Multiple Submissions 
+ href="/publications/white-papers" - White Papers 
+ Publications Contents Digest 
+ Tech Focus 
+ Communications Technology News (CTN) | CTN Podcast 
+ Editorial Board 
+ CTN Mailing List 
+ 2024 CTN Archive 
+ 2023 CTN Archive 
+ 2022 CTN Archive 
+ 2021 CTN Archive 
+ 2020 CTN Archive 
+ 2019 CTN Archive 
+ 2018 CTN Archive 
+ 2017 CTN Archive 
+ 2016 CTN Archive 
+ 2015 CTN Archive 
+ 2014 CTN Archive 
+ 2013 CTN Archive 
+ 2012 CTN Archive 
+ Global Communications Newsletter 
+ IEEE ComSoc Technical Committees Newsletter | November 2019 
+ href="/publications/ieee-comsoc-technical-committees-newsletter/author-kit" - Author Kit 
+ Best Readings | Editorial Board 
+ Blogs | Selected Ideas in Communications 
+ Digital Library 
+ Conferences & Events | Future Conferences & Events 
+ Portfolio of Conferences & Events | Conferences & Events History 
+ Steering Committees 
+ Events Sponsorship | TCS FAQs 
+ Information for Organizers 
+ href="/conferences-events/information-authors-and-attendees" - Information for Authors & Attendees 
+ Education & Training | Continuing Education and Career Resources 
+ Training Courses | Online Courses 
+ Save on Courses | href="/training-ATW" - Advanced Topics in Wireless Course Series 
+ Intensive Wireless Communications Course Series 
+ Customized Training | Half Day Courses 
+ One to Multi-Day Courses 
+ Training Mailing List 
+ On-Demand Training | Free Tutorials Now 
+ IEEE ComSoc Webcasts 
+ IEEE ComSoc Webinars 
+ Advertising Opportunities 
+ Media Center 
+ Careers 
+ IEEE WCET Certification | Recertification 
+ University Students 
+ Four Minute Thesis (4MT) Competition | Winners 
+ Official Rules 
+ IEEE ComSoc School Series | href="/education-training/ieee-comsoc-school-series/2025-ieee-comsoc-school-series-jaffna-sri-lanka-event" - Jaffna, Sri Lanka Event 
+ href="/education-training/ieee-comsoc-school-series/2025-ieee-comsoc-school-series-medellin-colombia-event" - Medellin, Colombia Event 
+ href="/education-training/ieee-comsoc-school-series/call-proposals" - Call for Proposals 
+ Past Events 
+ Pre-University Education | Education Event Contest | Contest Details and Official Rules 
+ Resources 
+ ComSoc Excellence Camps 
+ Educational Activities Newsletter 
+ href="/technical-activities" - Technical Activities | href="/technical-activities/notable-achievements" - Notable Achievements | href="/technical-activities/notable-achievements/ieee-comsoc-quiet-heroes" - IEEE ComSoc Quiet Heroes 
+ href="/technical-activities/notable-achievements/celebrating-women-communications-engineering" - Celebrating Women in Communications Engineering 
+ Standards 
+ SearchConferences & Events 
+ Breadcrumb 
+ Home 
+ Conferences & Events 
+ IEEE International Conference on High Performance Switching and Routing 2024 
+ IEEE HPSR 2024: IEEE International Conference on High Performance Switching and Routing 2024 
+ IEEE ComSoc Portfolio Event 
+ Date 
+ 22 - 24 July 2024Call for Technical Papers Deadline 
+ 1 March 2024Location 
+ PI 
+ Italy 
+ IEEE HPSR 2024 - IEEE International Conference on High Performance Switching and Routing - The main focus of the HPSR 2024 – the 25th edition of HPSR conference – will be to assess how breakthrough changes occurring to networks and telecom are affecting areas related to switching and routing, and communication networks in general. We are soliciting original and thought-provoking works on big data, data analytics, cloud services, and machine-learning techniques applied to networking and switching and routing. Works on autonomous networks, 5G and beyond, IoT, Industry 4.0, social networks, network, cybersecurity, virtualization, and other advanced topics are also welcome. 
+ href="https://hpsr2024.ieee-hpsr.org/" - Visit the 2024 IEEE HPSR Website!
+Connect with us:Footer Menu 
+ Home 
+ Sitemap 
+ Contact & Support 
+ Accessibility 
+ Nondiscrimination Policy 
+ IEEE Ethics Reporting 
+ Terms 
+ IEEE Privacy Policy 
+ © 2025 IEEE Communications Society. All Rights Reserved. 
+ Use of this website signifies your agreement to theIEEE Terms and Conditions. 
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+

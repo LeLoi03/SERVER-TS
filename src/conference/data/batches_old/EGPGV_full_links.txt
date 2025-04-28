@@ -1,0 +1,292 @@
+Conference full name: Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)
+
+1. Website of EGPGV_3: https://www.egpgv.org/2025/
+Website information of EGPGV_3:
+
+href="/2025/" - EGPGV'25 
+ href="/2025/program/" - Program 
+ href="/2025/cfp/" - Call For Papers 
+ Committee 
+ href="/2025/submission/" - Submission 
+ href="/2025/legal/" - Legal Notice 
+ href="/2025/#timeline" - Timeline 
+ WELCOME TO EGPGV 2025 
+ Luxembourg City, Luxembourg, 2025-06-02 
+ EGPGV 2025 is co-located with EuroVis 2025. Please find information on the venue, accommodation, and registration onwww.eurovis.org 
+ EuroVis Webpage 
+ The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV) aims to foster the exchange of experiences and knowledge on leveraging and defining new trends in parallel graphics and visualization. This area is important due to the widespread availability of multi-core CPUs, GPUs, and cluster systems. Computationally demanding and data-intensive applications in graphics and visualization are strongly affected by this trend and require novel, efficient parallel solutions. 
+ Call for Papers 
+ Parallel Graphics 
+ Rendering of Very Large Data Sets 
+ Parallel Visualization and Analytics 
+ Processing of Large Data Sets for Visualization or Analytics 
+ href="./cfp/" - Know More
+Timeline 
+ All deadline times are in AOE 
+ Submission Deadlines 
+ 2025-02-17 
+ Abstract Deadline (extended!) 
+ 2025-02-24 
+ Paper Deadline (extended!) 
+ 2025-03-25 
+ Notification of Acceptance 
+ © 2025href="/committee/" - The EGPGV Team
+- For questions, please contacthref="mailto:papers@egpgv.org" - papers@egpgv.org
+Published withWowchemy— the free,open sourcewebsite builder that empowers creators.
+
+2. Website of EGPGV_3: https://diglib.eg.org/collections/bd38ad8f-a271-4f44-9005-37f7f9d606f2
+Website information of EGPGV_3:
+
+Communities & Collections 
+ All of DSpace 
+ Statistics 
+ English 
+ Čeština 
+ Deutsch 
+ Español 
+ Français 
+ Gàidhlig 
+ Latviešu 
+ Magyar 
+ Nederlands 
+ Português 
+ Português do Brasil 
+ Suomi 
+ Svenska 
+ Türkçe 
+ Қазақ 
+ বাংলা 
+ हिंदी 
+ Ελληνικά 
+ Log InEmail addressPasswordLog in 
+ or 
+ New user? Click here to register.Have you forgotten your password? 
+ Home 
+ Eurographics Workshops and Symposia 
+ href="/communities/51e0b05f-5280-4e23-be8b-28cf3b52272f" - EGPGV: Eurographics Workshop on Parallel Graphics and Visualization 
+ EGPGV24: Eurographics Symposium on Parallel Graphics and Visualization 
+ EGPGV24: Eurographics Symposium on Parallel Graphics and Visualization 
+ Permanent URI for this collection 
+ https://diglib.eg.org/handle/10.2312/3606992 
+ EG PGV 2024 colocated with EuroVis 2024 - 26th EG Conference on Visualization 
+ Odense, Denmark | May 27, 2024Table of ContentsPapers 
+ Efficient Adaptive Multiresolution Aggregations of Spatio-temporal Ensembles 
+ [full paper] [meta data] 
+ Gabriel Borrelli, Marina Evers, and Lars Linsen 
+ Fast Rendering of Parametric Objects on Modern GPUs 
+ [full paper] [meta data] 
+ Johannes Unterguggenberger, Lukas Lipp, Michael Wimmer, Bernhard Kerbl, and Markus Schütz 
+ An Accelerated Clip Algorithm for Unstructured Meshes: A Batch-Driven Approach 
+ [full paper] [meta data] 
+ Spiros Tsalikis, Will Schroeder, Daniel Szafir, and Kenneth Moreland 
+ Efficient Construction of Out-of-Core Octrees for Managing Large Point Sets 
+ [full paper] [meta data] 
+ Jonathan Fischer, Paul Rosenthal, and Lars Linsen 
+ BibTeX (EGPGV24: Eurographics Symposium on Parallel Graphics and Visualization) 
+ BibTeX (EGPGV24: Eurographics Symposium on Parallel Graphics and Visualization) 
+ @inproceedings{10.2312:pgv.20242012, 
+ booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}, 
+ editor = {Reina, Guidoand 
+ Rizzi, Silvio},title = {{PGV 2024: Frontmatter}}, 
+ author = {Reina, Guidoand 
+ Rizzi, Silvio},year = {2024}, 
+ publisher = {The Eurographics Association}, 
+ ISSN = {1727-348X}, 
+ ISBN = {978-3-03868-243-1}, 
+ DOI = {10.2312/pgv.20242012} 
+ } 
+ @inproceedings{10.2312:pgv.20241128, 
+ booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}, 
+ editor = {Reina, Guidoand 
+ Rizzi, Silvio},title = {{Efficient Adaptive Multiresolution Aggregations of Spatio-temporal Ensembles}}, 
+ author = {Borrelli, Gabrieland 
+ Evers, Marinaand 
+ Linsen, Lars},year = {2024}, 
+ publisher = {The Eurographics Association}, 
+ ISSN = {1727-348X}, 
+ ISBN = {978-3-03868-243-1}, 
+ DOI = {10.2312/pgv.20241128} 
+ } 
+ @inproceedings{10.2312:pgv.20241129, 
+ booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}, 
+ editor = {Reina, Guidoand 
+ Rizzi, Silvio},title = {{Fast Rendering of Parametric Objects on Modern GPUs}}, 
+ author = {Unterguggenberger, Johannesand 
+ Lipp, Lukasand 
+ Wimmer, Michaeland 
+ Kerbl, Bernhardand 
+ Schütz, Markus},year = {2024}, 
+ publisher = {The Eurographics Association}, 
+ ISSN = {1727-348X}, 
+ ISBN = {978-3-03868-243-1}, 
+ DOI = {10.2312/pgv.20241129} 
+ } 
+ @inproceedings{10.2312:pgv.20241130, 
+ booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}, 
+ editor = {Reina, Guidoand 
+ Rizzi, Silvio},title = {{An Accelerated Clip Algorithm for Unstructured Meshes: A Batch-Driven Approach}}, 
+ author = {Tsalikis, Spirosand 
+ Schroeder, Willand 
+ Szafir, Danieland 
+ Moreland, Kenneth},year = {2024}, 
+ publisher = {The Eurographics Association}, 
+ ISSN = {1727-348X}, 
+ ISBN = {978-3-03868-243-1}, 
+ DOI = {10.2312/pgv.20241130} 
+ } 
+ @inproceedings{10.2312:pgv.20241131, 
+ booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}, 
+ editor = {Reina, Guidoand 
+ Rizzi, Silvio},title = {{Efficient Construction of Out-of-Core Octrees for Managing Large Point Sets}}, 
+ author = {Fischer, Jonathanand 
+ Rosenthal, Pauland 
+ Linsen, Lars},year = {2024}, 
+ publisher = {The Eurographics Association}, 
+ ISSN = {1727-348X}, 
+ ISBN = {978-3-03868-243-1}, 
+ DOI = {10.2312/pgv.20241131} 
+ } 
+ Browse 
+ href="/collections/bd38ad8f-a271-4f44-9005-37f7f9d606f2" - Recent Submissions
+By Issue Datehref="/browse/author?scope=bd38ad8f-a271-4f44-9005-37f7f9d606f2" - By Author
+By TitleBy SubjectBy Subject Category 
+ value="0: bd38ad8f-a271-4f44-9005-37f7f9d606f2" - Recent Submissions
+value="2: author" - By Author
+Recent Submissions 
+ Now showing1 - 5 of 5 
+ Results Per Page 
+ 151020406080100Sort Options 
+ AscendingDescending 
+ No Thumbnail Available 
+ ItemPGV 2024: Frontmatter(The Eurographics Association,2024)Reina, Guido;Rizzi, Silvio;Reina, Guido;Rizzi, SilvioShow more 
+ No Thumbnail Available 
+ ItemEfficient Adaptive Multiresolution Aggregations of Spatio-temporal Ensembles(The Eurographics Association,2024)Borrelli, Gabriel;Evers, Marina;Linsen, Lars;Reina, Guido;Rizzi, SilvioShow moreSpatio-temporal ensemble data consist of several simulation runs with multiple spatial and a temporal dimension, where the runs are obtained using different parameter settings or initial conditions for the simulation. During analysis, one is interested in investigating the different facets of space, time, and parameter values. When globally analyzing some facet(s), others shall be aggregated to generate summary visualizations. Due to the large amount of data that an ensemble consists of, one may want to generate summary visualizations at multiple levels of detail. Wavelet transforms are a well-known concept for efficiently switching between multiple resolutions. We propose to extend this concept to ensemble data, where individual facets may be aggregated adaptively. We present how to apply the scheme for any data sizes to generate correct averages even when the number of samples is not a power of two in each dimension. We further develop an out-of-core strategy to handle large data sizes. Our scheme is coupled with common 1D, 2D, and 3D visualization methods for an interactive visual analysis of the ensemble data. 
+ Show more 
+ No Thumbnail Available 
+ ItemFast Rendering of Parametric Objects on Modern GPUs(The Eurographics Association,2024)Unterguggenberger, Johannes;Lipp, Lukas;Wimmer, Michael;Kerbl, Bernhard;Schütz, Markus;Reina, Guido;Rizzi, SilvioShow moreParametric functions are an extremely efficient representation for 3D geometry, capable of compactly modelling highly complex objects. Once specified, parametric 3D objects allow for visualization at arbitrary levels of detail, at no additional memory cost, limited only by the amount of evaluated samples. However, mapping the sample evaluation to the hardware rendering pipelines of modern graphics processing units (GPUs) is not trivial. This has given rise to several specialized solutions, each targeting interactive rendering of a constrained set of parametric functions. In this paper, we propose a general method for efficient rendering of parametrically defined 3D objects. Our solution is carefully designed around modern hardware architecture. Our method adaptively analyzes, allocates and evaluates parametric function samples to produce high-quality renderings. Geometric precision can be modulated from few pixels down to sub-pixel level, enabling real-time frame rates of several 100 frames per second (FPS) for various parametric functions. We propose a dedicated level-of-detail (LOD) stage, which outputs patches of similar geometric detail to a subsequent rendering stage that uses either a hardware tessellation-based approach or performs point-based softare rasterization. Our method requires neither preprocessing nor caching, and the proposed LOD mechanism is fast enough to run each frame. Hence, our approach also lends itself to animated parametric objects. We demonstrate the benefits of our method over a state-of-the-art spherical harmonics (SH) glyph rendering method, while showing its flexibility on a range of other demanding shapes. 
+ Show more 
+ No Thumbnail Available 
+ ItemAn Accelerated Clip Algorithm for Unstructured Meshes: A Batch-Driven Approach(The Eurographics Association,2024)Tsalikis, Spiros;Schroeder, Will;Szafir, Daniel;Moreland, Kenneth;Reina, Guido;Rizzi, SilvioShow moreThe clip technique is a popular method for visualizing complex structures and phenomena within 3D unstructured meshes. Meshes can be clipped by specifying a scalar isovalue to produce an output unstructured mesh with its external surface as the isovalue. Similar to isocontouring, the clipping process relies on scalar data associated with the mesh points, including scalar data generated by implicit functions such as planes, boxes, and spheres, which facilitates the visualization of results interior to the grid. In this paper, we introduce a novel batch-driven parallel algorithm based on a sequential clip algorithm designed for high-quality results in partial volume extraction. Our algorithm comprises five passes, each progressively processing data to generate the resulting clipped unstructured mesh. The novelty lies in the use of fixed-size batches of points and cells, which enable rapid workload trimming and parallel processing, leading to a significantly improved memory footprint and run-time performance compared to the original version. On a 32-core CPU, the proposed batch-driven parallel algorithm demonstrates a run-time speed-up of up to 32.6x and a memory footprint reduction of up to 4.37x compared to the existing sequential algorithm. The software is currently available under an open-source license in the VTK visualization system. 
+ Show more 
+ No Thumbnail Available 
+ ItemEfficient Construction of Out-of-Core Octrees for Managing Large Point Sets(The Eurographics Association,2024)Fischer, Jonathan;Rosenthal, Paul;Linsen, Lars;Reina, Guido;Rizzi, SilvioShow moreAmong various space partitioning approaches for managing point sets out-of-core, octrees are commonly used for being simple and effective. An efficient and adaptive out-of-core octree construction method has been proposed by Kontkanen et al. [KTO11], generating the octree data in a single sweep over the points sorted in Morton order, for a given maximum point count m per octree leaf. Their method keeps m+1 points in memory during the process, which may become an issue for large m. We present an extension to their algorithm that requires a minimum of two points to be held in memory in addition to a limited sequence of integers, thus adapting their method for use cases with large m. Moreover, we do not compute Morton codes explicitly but rather perform both the sorting and the octree generation directly on the point data, supporting coordinates of any finite precision. 
+ Show more 
+ Eurographics Association© 2013-2025 | System hosted atGraz University of Technology 
+ DSpace softwarecopyright © 2002-2025LYRASIS 
+ Cookie settings 
+ Privacy policy 
+ End User Agreement 
+ Send Feedback
+
+3. Website of EGPGV_3: https://www.egpgv.org/2025/
+Website information of EGPGV_3:
+
+href="/2025/" - EGPGV'25 
+ href="/2025/program/" - Program 
+ href="/2025/cfp/" - Call For Papers 
+ Committee 
+ href="/2025/submission/" - Submission 
+ href="/2025/legal/" - Legal Notice 
+ href="/2025/#timeline" - Timeline 
+ WELCOME TO EGPGV 2025 
+ Luxembourg City, Luxembourg, 2025-06-02 
+ EGPGV 2025 is co-located with EuroVis 2025. Please find information on the venue, accommodation, and registration onwww.eurovis.org 
+ EuroVis Webpage 
+ The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV) aims to foster the exchange of experiences and knowledge on leveraging and defining new trends in parallel graphics and visualization. This area is important due to the widespread availability of multi-core CPUs, GPUs, and cluster systems. Computationally demanding and data-intensive applications in graphics and visualization are strongly affected by this trend and require novel, efficient parallel solutions. 
+ Call for Papers 
+ Parallel Graphics 
+ Rendering of Very Large Data Sets 
+ Parallel Visualization and Analytics 
+ Processing of Large Data Sets for Visualization or Analytics 
+ href="./cfp/" - Know More
+Timeline 
+ All deadline times are in AOE 
+ Submission Deadlines 
+ 2025-02-17 
+ Abstract Deadline (extended!) 
+ 2025-02-24 
+ Paper Deadline (extended!) 
+ 2025-03-25 
+ Notification of Acceptance 
+ © 2025href="/committee/" - The EGPGV Team
+- For questions, please contacthref="mailto:papers@egpgv.org" - papers@egpgv.org
+Published withWowchemy— the free,open sourcewebsite builder that empowers creators.
+
+4. Website of EGPGV_3: https://hguo.github.io/services.html
+Website information of EGPGV_3:
+
+Hanqi GuoHome 
+ Team 
+ Calendar 
+ href="research.html" - Research 
+ Teaching 
+ Software 
+ Publications 
+ Services 
+ Journal Editorial Board 
+ [TVCG] | Associate Editor, Transactions on Visualization and Computer Graphics, IEEE, since 2025 
+ Conference Program Committee Members 
+ [VIS] | IEEE Visualization Conference, Full Papers (2015-2017 and 2020-2023) and Short Papers (2021-2022, 2024) 
+ [SC] | The International Conference for High Performance Computing, Networking, Storage and Analysis, Data Analytics, Visualization and Storage Committee, (2023 and 2025) 
+ [CLUSTER] | IEEE International Conference on Cluster Computing, Data, Storage, and Visualization Committee (2021) 
+ [IPDPS] | IEEE International Parallel and Distributed Processing Symposium, Multidisciplinary Program Committee (2023) and Algorithms for Computational Science Committee (2024) 
+ [PacificVis] | IEEE Pacific Visualization, Journal Track (2025), Conference Track (2024), Full Papers (2016-2017 and 2020-2022), Visualization Notes (2015-2021), and Visualization Meets AI Workshop (2023-2024) 
+ [LDAV] | IEEE Symposium on Large Data Analysis and Visualization, 2019, 2021-2023 
+ [TopoInVis] | IEEE Workshop on Topological Data Analysis and Visualization, 2023-2024 
+ [EGPGV] | EuroGraphics Symposium on Parallel Graphics and Visualization, 2017-2021 
+ [ISVC] | International Symposium on Visual Computing, 2018-2021 
+ [SAVIS] | SIGGRAPH Asia Symposium on Visualization, 2017 
+ [VDA] | IS&T Visualization and Data Analysis, 2020 
+ [ChinaVis] | China Visualization Conference (ChinaVis), 2014-2018 
+ [HPC China] | HPC China, 2014-2019 
+ [ISAV] | In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization, in conjunction with SC, 2016 
+ [IWBDR] | International Workshop on Big Data Reduction, in conjunction with IEEE BigData, 2020-2021 
+ [ATPESC] | Argonne Training Program on Extreme-Scale Computing, 2020-2022 
+ Conference Organizing Committee Members 
+ [PacificVis] | IEEE Pacific Visualization Symposium, Poster Co-Chair, 2023 
+ [ChinaVis] | China Visualization Conference, Paper Co-Chair, 2020-2021, Poster Co-Chair, 2017-2018 
+ [VIS] | IEEE VIS Conference, Fast Forward and Video Previews Co-Chair, 2017, Student Volunteer Co-Chair, 2015 
+ Conference Best Paper Committee Members 
+ [EGPGV] | Eurographics Symposium on Parallel Graphics and Visualization, 2018, 2021 
+ Journal Guest Editors 
+ [JOV] | Journal of Visualization, Springer, Special Issue on ChinaVis, 2020-2021 
+ [FDATA] | Review Editor for Data Science, Frontiers in Big Data, Frontiers Media S.A., since 2023 
+ Journal Paper Reviewers 
+ [TVCG] | Transactions on Visualization and Computer Graphics, IEEE, since 2014 
+ [TPDS] | Transactions on Parallel and Distributed Systems, IEEE, since 2018 
+ [TKDE] | Transactions on Knowledge and Data Engineering, IEEE, since 2025 
+ [TBD] | Transactions on Big Data, IEEE, since 2021 
+ [TPS] | Transactions on Plasma Science, IEEE, since 2019 
+ [TC] | Transactions on Computers, IEEE, since 2022 
+ [TiiS] | Transactions on Interactive Intelligent Systems, ACM, since 2021 
+ [CGF] | Computer Graphics Forum, Wiley, since 2015 
+ [PARCO] | Parallel Computing, Elsevier, since 2022 
+ [VC] | The Visual Computer, Springer, sinice 2017 
+ [JOV] | Journal of Visualization, Springer, since 2014 
+ [IV] | Information Visualization, SAGE Publications, since 2016 
+ [JVLC] | Journal of Visual Languages and Computing, Elsevier, since 2018 
+ [JIST] | Journal of Imaging Science and Technology, IS&T, since 2019 
+ [JCST] | Journal of Computer Science and Technology, Springer, since 2013 
+ [SP] | Scientific Programming, Hindawi, since 2019 
+ Conference Paper External Reviewers 
+ [VIS] | IEEE Visualization Conference, Full Papers (2012, 2014, 2016, 2018-2019, 2023) and Short Papers (2023) 
+ [EuroVis] | Eurographics/IEEE-VGTC Symposium on Visualization, 2015-2018, 2023, 2025, State-of-the-Art Reports (STARs), 2016-2017, 2023 
+ [PacificVis] | IEEE Pacific Visualization Symposium, 2014-2015, 2024 
+ [CLUSTER] | IEEE International Conference on Cluster Computing, 2020 
+ [CHI] | ACM CHI Conference, 2022 
+ [ICPP] | International Conference on Parallel Processing, 2023 
+ [BioVis] | IEEE Symposium on Biological Data Visualization, 2013 
+ [CADCG] | International Conference on Computer-Aided Design and Computer Graphics, 2013 
+ [IVAPP] | International Conference on Information Visualization Theory and Applications, 2014 
+ Proposal Reviewers 
+ NSF 
+ DOE SBIR/STTR 
+ Conference Session Chairs 
+ IEEE VIS, Scientific Visualization, Ensembles, and Accessibility, 2022 
+ IEEE VIS, Scalability and Rendering Session, 2021 
+ IEEE VIS, Deep Learning for Spatial Data Session, 2020 
+ IEEE LDAV, Uncertain Data Session, 2018 
+ IEEE VIS, Flow Visualization Session, 2017 
+ IEEE Pacific Visualization Symposium, Molecular Visualization Session, 2016 
+ Hanqi Guo
+

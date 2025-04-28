@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "September 14 - 17, 2025",
+  "Year": "2025",
+  "Location": "Kraków, Poland",
+  "City-State-Province": "Kraków",
+  "Country": "Poland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission (no extensions)": "May 25, 2025"
+  },
+  "Notification Date": {
+    "Author notification": "July 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Final paper submission, registration": "July 15, 2025"
+  },
+  "Other Date": {
+    "Thematic Session proposal submission": "November 26, 2025",
+    "Position paper submission": "June 10, 2025",
+    "Early registration discount": "TBA"
+  },
+  "Topics": "Advanced Artificial Intelligence in Applications, Computer Science & Systems, Network Systems and Applications, Information Technology for Business and Society, Software, System and Service Engineering, AI in Agriculture, AI in Digital Humanities, Computational Social Sciences and Economics Research, Advances in Programming Languages, Computer Aspects of Numerical Algorithms, Challenges for Natural Language Processing, Computational Optimization, Data Science in Health, Ecology and Commerce, Education & AI systems, Internet of Things – Enablers, Challenges and Applications, Information Systems Management, Model Driven Approaches in System Development, Multimedia Applications and Processing, Cyber Security, Privacy, and Trust, Self Learning and Self Adaptive Systems",
+  "Summary": "The 20th Conference on Computer Science and Intelligence Systems (FedCSIS 2025) will be held in Kraków, Poland, from September 14-17, 2025.  The conference's mission is to provide a presentation, discussion, and reputable publication forum in computer science and intelligence systems.",
+  "Call for Papers": "# FedCSIS 2025: Call for Papers\n\nThe 20th Conference on Computer Science and Intelligence Systems (FedCSIS 2025) will be held from **September 14-17, 2025 in Kraków, Poland.**\n\n## Mission\n\nThe mission of the FedCSIS Conference Series is to provide a presentation, discussion, and reputable publication forum in computer science and intelligence systems. The forum invites researchers and practitioners from around the world to contribute their research results focused on their scientific and professional interests in a chosen area.\n\n## Conference Structure\n\nThe FedCSIS conference consists of the Main Track and Thematic Sessions. Papers submitted to the Main Track can be assigned, by their authors, to Topical Areas, which are managed by Topical Area Curators. Besides the Main Track, the authors may prefer to submit their papers to Thematic Sessions, which announce their own Calls for Thematic Session Papers and are assisted by the FedCSIS Chairs in reaching out to the FedCSIS Community.\n\n## Topical Areas\n\n*   Topical Area 1: Advanced Artificial Intelligence in Applications\n*   Topical Area 2: Computer Science & Systems\n*   Topical Area 3: Network Systems and Applications\n*   Topical Area 4: Information Technology for Business and Society\n*   Topical Area 5: Software, System and Service Engineering\n\n## Thematic Sessions\n\n*   AgriAI – AI in Agriculture\n*   AI‑HuSo – AI in Digital Humanities, Computational Social Sciences and Economics Research\n*   APL – Advances in Programming Languages\n*   CANA – Computer Aspects of Numerical Algorithms\n*   CNLPS – Challenges for Natural Language Processing\n*   CO – Computational Optimization\n*   DSH – Data Science in Health, Ecology and Commerce\n*   EDUC‑AI‑TION – Education & AI systems\n*   IoT‑ECAW – Internet of Things – Enablers, Challenges and Applications\n*   ISM – Information Systems Management\n*   MDASD – Model Driven Approaches in System Development\n*   MMAP – Multimedia Applications and Processing\n*   NEMESIS – International Forum on Cyber Security, Privacy, and Trust\n*   SLSAS – Self Learning and Self Adaptive Systems\n\n## Important Dates\n\n*   **Thematic Session proposal submission:** November 26, 2025\n*   **Paper submission (no extensions):** May 25, 2025\n*   **Position paper submission:** June 10, 2025\n*   **Author notification:** July 1, 2025\n*   **Final paper submission, registration:** July 15, 2025\n*   **Early registration discount:** TBA\n*   **Conference date:** September 14-17, 2025\n\n## Submission\n\n[EasyChair](https://easychair.org/conferences/?conf=fedcsis2025)"
+}
+```

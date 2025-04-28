@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "July 19 - 20, 2025",
+  "Year": "2025",
+  "Location": "Toronto, Canada",
+  "City-State-Province": "Toronto",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Submission Deadline": "April 5, 2025"
+  },
+  "Notification Date": {
+    "Authors Notification": "May 3, 2025"
+  },
+  "Camera-ready Date": {
+    "Registration & camera - Ready Paper Due": "May 13, 2025"
+  },
+  "Topics": "Algorithms for Scheduling and Resource Allocation Problems, Algorithms for Topology Control and Power Assignment, Applications of Random Graph Theory in Ad Hoc Networks and Sensor Networks, Approximation Heuristics for NP-complete problems related to Ad Hoc Networks, Connectivity Analysis under Different Mobility Models, Data Gathering Algorithms and Protocols for Sensor Networks, Distributed extensions of centralized graph theoretic routing algorithms, Evacuation Routing Algorithms and Protocols for Vehicular Ad Hoc Networks, Secure Routing Algorithms and Protocols Based on Graph Theory",
+  "Publisher": "Computer Science Conference Proceedings",
+  "Summary": "The 17th International Conference on Applications of Graph Theory in Wireless Ad hoc Networks and Sensor Networks (GRAPH-HOC 2025) will be held in Toronto, Canada, from July 19-20, 2025.  The conference will be a hybrid event, allowing registered authors to present their work online or in person.",
+  "Call for Papers": "# GRAPH-HOC 2025: Call for Papers\n\nThe 17th International Conference on Applications of Graph Theory in Wireless Ad hoc Networks and Sensor Networks (GRAPH-HOC 2025) will provide an excellent international forum for sharing knowledge and results in theory, methodology, and applications of Graph Theory in Wireless Ad hoc Networks and Sensor Networks. The conference will be held as a **hybrid event** in **Toronto, Canada, from July 19-20, 2025**.\n\n## Topics of Interest\n\nAuthors are solicited to contribute to the conference by submitting articles that illustrate research results, projects, surveying works, and industrial experiences that describe significant advances in the following areas (but are not limited to):\n\n*   Algorithms for Scheduling and Resource Allocation Problems\n*   Algorithms for Topology Control and Power Assignment\n*   Applications of Random Graph Theory in Ad Hoc Networks and Sensor Networks\n*   Approximation Heuristics for NP-complete problems related to Ad Hoc Networks\n*   Connectivity Analysis under Different Mobility Models\n*   Data Gathering Algorithms and Protocols for Sensor Networks\n*   Distributed extensions of centralized graph theoretic routing algorithms\n*   Evacuation Routing Algorithms and Protocols for Vehicular Ad Hoc Networks\n*   Secure Routing Algorithms and Protocols Based on Graph Theory\n\n## Submission Guidelines\n\nAuthors are invited to submit papers through the conference [Submission System](../submission/index.php) by **April 05, 2025**. Submissions must be original and should not have been published previously or be under consideration for publication while being evaluated for this conference.\n\n*   Submit a full paper (CSCP format: 20 pages including figures and references).  You can confirm the CSCP Author Guidelines at the following web page: [URLCSCP Format](URLCSCP Format)\n*   [Latex Template](Latex Template)\n*   Accepted papers will be given guidelines in preparing and submitting the final manuscript(s) together with the notification of acceptance.\n\n## Publication\n\nAll accepted papers will be included in the conference proceedings published by CSCP (CS & IT). Authors of selected outstanding papers will be invited to submit extended versions of their papers for consideration of publication in the following journals:\n\n*   International Journal of Ad hoc, sensor & Ubiquitous Computing (IJASUC)\n*   International Journal of Advanced Smart Sensor Network Systems (IJASSN)\n*   International Journal on AdHoc Networking Systems (IJANS)\n*   Information Technology in Industry (ITII)\n\nAt least one author of accepted papers is required to register at the full registration rate.\n\n## Important Dates\n\n**(Second Batch: Submissions after March 23, 2025)**\n\n*   **Submission Deadline:** April 05, 2025\n*   **Authors Notification:** May 03, 2025\n*   **Registration & Camera-Ready Paper Due:** May 13, 2025\n\n## Contact\n\n[graphhoc@cseit2025.org](mailto:graphhoc@cseit2025.org)"
+}
+

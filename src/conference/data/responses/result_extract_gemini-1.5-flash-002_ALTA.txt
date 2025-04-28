@@ -1,0 +1,31 @@
+```json
+{
+  "Conference dates": "December 2 - 4, 2024",
+  "Year": "2024",
+  "Location": "Australian National University (ANU), Canberra, Australia",
+  "City-State-Province": "Canberra, Australian Capital Territory",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Call for Problems for the ALTA 2024 Shared Task closes": "June 7, 2024",
+    "Paper submission deadline (long/short papers, presentation abstracts, industry demonstrations)": "September 27, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "November 6, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "November 12, 2024"
+  },
+  "Other Date": {
+    "Paper review period (reviewing)": "September 28 - October 18, 2024",
+    "Paper review period (consolidate by co-chairs)": "October 19 - 26, 2024",
+    "Proceedings ready": "November 30, 2024",
+    "Conference (Tutorial)": "December 2, 2024",
+    "Main conference": "December 3 - 4, 2024"
+  },
+  "Topics": "Natural Language Processing (NLP), Computational Linguistics (CL), Commonsense Reasoning, Computational Social Science and Cultural Analytics, Dialogue and Interactive Systems, Discourse and Pragmatics, Efficient Methods for NLP, Ethics in NLP, Information Extraction, Information Retrieval and Text Mining, Interpretability, Interactivity and Analysis of Models for NLP, Language Grounding to Vision, Robotics and Beyond, Language Modeling and Analysis of Language Models, Linguistic Theories, Cognitive Modeling and Psycholinguistics, Machine Learning for NLP, Machine Translation, Multilinguality and Linguistic Diversity, Natural Language Generation, NLP Applications, Phonology, Morphology and Word Segmentation, Question Answering, Resources and Evaluation, Semantics, Sentiment Analysis, Stylistic Analysis, and Argument Mining, Speech and Multimodality, Summarisation, Syntax, Parsing and their Applications",
+  "Summary": "The 22nd Annual Workshop of the Australasian Language Technology Association (ALTA 2024) will take place at the Australian National University in Canberra, Australia, from December 2nd to 4th December, 2024. ALTA 2024 will largely operate as an offline conference this year, with limited online/hybrid capability. The workshop is the key local forum for socializing research results in Natural Language Processing (NLP) and Computational Linguistics (CL).",
+  "Call for Papers": "# ALTA 2024: Call for Papers\n\nThe 22nd Annual Workshop of the Australasian Language Technology Association (ALTA 2024) will be held in a hybrid format at the Australian National University, Canberra, from **December 2 to 4, 2024**.\n\n## Overview\n\nThe ALTA 2024 workshop is the key local forum for socializing research results in Natural Language Processing (NLP) and Computational Linguistics (CL). It will feature presentations, posters, and demonstrations from students, industry, and academic researchers.\n\n## Topics\n\nALTA invites the submission of papers and presentations on all aspects of NLP and CL, including, but not limited to:\n\n*   Commonsense Reasoning\n*   Computational Social Science and Cultural Analytics\n*   Dialogue and Interactive Systems\n*   Discourse and Pragmatics\n*   Efficient Methods for NLP\n*   Ethics in NLP\n*   Information Extraction\n*   Information Retrieval and Text Mining\n*   Interpretability, Interactivity and Analysis of Models for NLP\n*   Language Grounding to Vision, Robotics and Beyond\n*   Language Modeling and Analysis of Language Models\n*   Linguistic Theories, Cognitive Modeling and Psycholinguistics\n*   Machine Learning for NLP\n*   Machine Translation\n*   Multilinguality and Linguistic Diversity\n*   Natural Language Generation\n*   NLP Applications\n*   Phonology, Morphology and Word Segmentation\n*   Question Answering\n*   Resources and Evaluation\n*   Semantics: Lexical, Sentence level, Document Level, Textual Inference, etc.\n*   Sentiment Analysis, Stylistic Analysis, and Argument Mining\n*   Speech and Multimodality\n*   Summarisation\n*   Syntax, Parsing and their Applications\n\n## Submission Formats\n\nWe invite submissions of three different formats:\n\n1.  **Original Research Papers:**\n    *   Long papers: 7-8 pages of content, plus unlimited pages of references and appendices.\n    *   Short papers: 3-4 pages of content, plus unlimited pages of references and appendices.\n2.  **Abstract-based Presentations:** 1-2 pages.\n3.  **Industry Demonstrations:** 1-2 pages.\n\n## Important Dates\n\n*   **Submission deadline for short/long papers, presentation abstracts, and industry demonstrations:** September 27, 2024 (23:59 Anywhere On Earth UTC-12)\n*   **Author notification:** November 6, 2024\n*   **Camera-ready deadline:** November 12, 2024 (23:59 Anywhere On Earth UTC-12)\n*   **Tutorial:** December 2, 2024\n*   **Main conference:** December 3-4, 2024"
+}
+```

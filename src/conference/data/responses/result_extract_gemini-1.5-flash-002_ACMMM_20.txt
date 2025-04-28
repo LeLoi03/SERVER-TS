@@ -1,0 +1,49 @@
+```json
+{
+  "Conference dates": "October 27 - 31, 2025",
+  "Year": "2025",
+  "Location": "Dublin, Ireland",
+  "City-State-Province": "Dublin",
+  "Country": "Ireland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop/ Grand Challenge/ Tutorial Proposal": "February 14, 2025",
+    "Abstract submission for regular papers": "April 4, 2025",
+    "Regular paper submission": "April 11, 2025",
+    "Reproducibility companion paper submission": "April 18, 2025",
+    "Technical demo and video submission": "May 30, 2025",
+    "Brave new ideas (BNI) paper submission": "May 30, 2025",
+    "Interactive/digital art submission": "May 30, 2025",
+    "Dataset paper submission": "May 30, 2025",
+    "Doctoral symposium (DS) paper submission": "June 13, 2025",
+    "Open source (OS) software paper submission": "June 13, 2025",
+    "Industrial demo abstract submission (1st round)": "June 15, 2025",
+    "Industrial expert talk submission (1st round)": "June 15, 2025",
+    "Grand challenge solution submission": "June 30, 2025",
+    "Workshop paper submission": "July 11, 2025",
+    "Industrial demo abstract submission (2nd round)": "July 15, 2025",
+    "Industrial expert talk submission (2nd round)": "July 15, 2025"
+  },
+  "Notification Date": {
+    "Workshop/ Grand Challenge/ Tutorial Notification": "February 28, 2025",
+    "Notification (regular papers, demos and videos)": "July 4, 2025",
+    "Industrial demo notification (1st round)": "June 24, 2025",
+    "Industrial expert talk notification (1st round)": "June 24, 2025",
+    "Notification of workshop papers": "August 1, 2025",
+    "Notification (tutorials, OS, BNI, datasets, panels, grand challenge, industrial demo 2nd round, industrial expert talk 2nd round, DS, and reproducibility companion papers)": "July 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready (regular papers, demos, videos)": "August 3, 2025",
+    "Camera ready (workshop papers)": "August 11, 2025",
+    "Camera ready (tutorials, OS, BNI, datasets, panels, grand challenge, industry, DS, and reproducibility companion papers)": "August 26, 2025"
+  },
+  "Other Date": {
+    "Rebuttal start": "June 9 - 16, 2025",
+    "Workshops and tutorials": "October 27 - 28, 2025"
+  },
+  "Topics": "Multimedia, Video, Haptics, Virtual and Augmented Reality, Audio, Speech, Music, Sensor Data, Social Data, Artificial Intelligence, 3D & Metaverse, Vision and Languages, Human-Computer Interaction, Multimedia Signal Processing",
+  "Summary": "ACM Multimedia 2025, the premier international conference dedicated to advancing research and applications across diverse multimedia fields, will be held in Dublin, Ireland from October 27-31, 2025.  The conference will feature an extensive in-person program with technical sessions, tutorials, panels, exhibits, demonstrations, workshops, a doctoral symposium, a multimedia grand challenge, and an open source software competition.",
+  "Call for Papers": "# ACM Multimedia 2025: Call for Papers\n\nACM Multimedia 2025, the premier international conference dedicated to advancing research and applications across diverse multimedia fields, will be held in **Dublin, Ireland, from October 27-31, 2025.**\n\n## Call for Regular Papers\n\nACM Multimedia calls for research papers presenting novel theoretical and algorithmic solutions to address problems across multimedia and related application fields.  The conference also calls for papers presenting novel, thought-provoking ideas, and promising (preliminary) results in realizing these ideas, especially surrounding multimodal AI.\n\n## Submission Deadlines\n\nThe dates below are final deadlines. The time for all dates is 23:59 AoE (Anywhere-on-Earth).\n\n*   **Workshop/ Grand Challenge/ Tutorial Proposal:** February 14, 2025\n*   **Abstract submission for regular papers:** April 4, 2025\n*   **Regular paper submission:** April 11, 2025\n*   **Reproducibility companion paper submission:** April 18, 2025\n*   **Technical demo and video submission:** May 30, 2025\n*   **Brave new ideas (BNI) paper submission:** May 30, 2025\n*   **Interactive/digital art submission:** May 30, 2025\n*   **Dataset paper submission:** May 30, 2025\n*   **Rebuttal start:** June 9-16, 2025\n*   **Doctoral symposium (DS) paper submission:** June 13, 2025\n*   **Open source (OS) software paper submission:** June 13, 2025\n*   **Industrial demo abstract submission (1st round):** June 15, 2025\n*   **Industrial expert talk submission (1st round):** June 15, 2025\n*   **Grand challenge solution submission:** June 30, 2025\n*   **Notification (regular papers, demos and videos):** July 4, 2025\n*   **Workshop paper submission:** July 11, 2025\n*   **Industrial demo abstract submission (2nd round):** July 15, 2025\n*   **Industrial expert talk submission (2nd round):** July 15, 2025\n*   **Notification (tutorials, OS, BNI, datasets, panels, grand challenge, industrial demo 2nd round, industrial expert talk 2nd round, DS, and reproducibility companion papers):** July 24, 2025\n*   **Notification of workshop papers:** August 1, 2025\n*   **Camera ready (regular papers, demos, videos):** August 3, 2025\n*   **Camera ready (workshop papers):** August 11, 2025\n*   **Camera ready (tutorials, OS, BNI, datasets, panels, grand challenge, industry, DS, and reproducibility companion papers):** August 26, 2025\n*   **Conference:** October 27-31, 2025\n*   **Workshops and tutorials:** October 27-28, 2025\n\n## Submission Instructions\n\nSubmit your Regular Paper via OpenReview: [https://openreview.net/group?id=acmmm.org/ACMMM/2025/Conference](https://openreview.net/group?id=acmmm.org/ACMMM/2025/Conference)\n\n## Multimedia/Multimodality Policy\n\nThe SIGMM community seeks to distinguish itself from other communities such as NeurIPS, CVPR, and ECCV. Our focus lies in promoting research that is inherently multimedia or multimodal in nature. While papers that involve unimedia/unimodal processing will not necessarily be rejected, papers that make multimedia/multimodal research contributions will be preferred for publication in the conference proceedings. Out-of-scope submissions may be desk-rejected.\n\n## Paper Format\n\nSubmitted papers (.pdf format) must use the ACM Article Template ([https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)).\n\n## Policy on Authorship and Generative AI Tools\n\nGenerative AI tools and technologies, such as ChatGPT, may not be listed as authors of an ACM published Work. The use of generative AI tools and technologies to create content is permitted but must be fully disclosed in the Work.\n\n## Length\n\nSubmitted papers may consist of up to 8 pages. Up to two additional pages may be added for references. The reference pages must only contain references. Overlength papers will be rejected without review. Optionally, you may upload supplementary material that complements your submission (50Mb limit).\n\n## Blinding\n\nPaper submissions must conform with the “double-blind” review policy. This means that the authors should not know the names of the reviewers of their papers, and reviewers should not know the names of the authors.\n\n## Originality\n\nPapers submitted to ACM Multimedia must be the original work of the authors. They may not be simultaneously under review elsewhere.\n\n## Contact\n\nFor any questions, please contact the Technical Program Chairs: [tpc@acmmm2025.org](mailto:tpc@acmmm2025.org)"
+}
+```

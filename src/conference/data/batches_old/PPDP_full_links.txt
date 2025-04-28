@@ -1,0 +1,429 @@
+Conference full name: International Conference on Principles and Practice of Declarative Programming (PPDP)
+
+1. Website of PPDP_3: https://ppdp2024.github.io/
+Website information of PPDP_3:
+
+Skip to the content.PPDP 2024 
+ 26th International Symposium on Principles and Practice of Declarative Programming 
+ 10-11 September 2024 
+ Politecnico di Milano, Italy. 
+ The 26th International Symposium on Principles and Practice of Declarative Programming, PPDP 2024 
+ Co-located with FM 2024, held 10-11 September 2024 at the Politecnico di Milano, Italy. 
+ News 
+ Proceedings have been | published | in the ACM DL within the ACM International Conference Proceedings Series. 
+ The | program | has been finalized. 
+ Ningning Xie | (University of Toronto and Google DeepMind) is our joint LOPSTR/PPDP (and FM keynote) speaker. 
+ The paper “On the Preciseness of Subtyping in Session Types” by Tzu-Chun Chen, Mariangiola Dezani-Ciancaglini and Nobuko Yoshida has been chosen by the Steering Committee to receive the “10 Year Most Influential Paper Award”. Mariangiola will give the related invited talk. 
+ Ilaria Castellani(INRIA) is PPDP’s invited speaker. 
+ Registration is still open. Go to the | Registration | page. For PPDP, we suggest the 2-days pass. 
+ Program 
+ All research talks are held in room3.1.3 
+ Tuesday 
+  
+ Time | Details 
+ Session 1: Opening and Keynote(RoomO. De Donato) 
+ Chair:Alberto Momigliano 
+ 09:00 - 10:20 | Speaker:Ningning Xie 
+ Talk:Safe and Easy Compile-Time Generative Programming 
+ 10:20 - 11:00 | Coffee Break 
+ Session 2(11:00 - 12:30) 
+ Chair:Tarmo Uustalu 
+ 11:00 - 11:30 | Davide Fissore and Enrico Tassi 
+ Higher-Order unification for free! 
+ 11:30 - 12:00 | José Espírito Santo and Filipa Mendes 
+ The logical essence of call-by-name CPS translations 
+ 12:00 - 12:30 | Maribel Fernandez and Ian Mackie 
+ Hierarchical Higher-Order Port-Graphs: A Rewriting-Based Modelling Language 
+ 12:30 - 14:00 | Lunch Break 
+ Session 3(14:00 - 15:30) 
+ Chair:Roberto Casadei 
+ 14:00 - 14:30 | Zhengpu Shi and Gang Chen 
+ Formal Verification of Executable Matrix Inversion via Adjoint Matrix and Gaussian Elimination 
+ 14:30 - 15:00 | Naoki Yamamoto and Kazunori Ueda 
+ Grammar-based Pattern Matching and Type Checking for Difference Data Structures 
+ 15:00 - 15:30 | Luca Laboccetta, Elena Mastria, Francesco Calimeri, Nicola Leone, Simona Perri, and Giorgio Terracina 
+ Towards Effective ASP-based Stream Reasoning: Facilitate the Reasoning over Patterns of Events 
+ 15:30 - 16:00 | Coffee Break 
+ Session 4(16:00 - 17:30) 
+ Chair:Carlos Olarte 
+ 16:00 - 16:30 | Ian Kretz, Paul Rowe, Clare Parran, and John Ramsdell 
+ Evidence Tampering and Chain of Custody in Layered Attestations 
+ 16:30 - 17:00 | Christian Skalka and Joseph Near 
+ Language-Based Security for Low-Level MPC 
+ 17:00 - 17:30 | Cosimo Laneve 
+ Reachability Analysis in Micro-Stipula 
+ 19:00 | FM24 RECEPTION BUFFET 
+ Wednesday 
+  
+ Time | Details 
+ Session 5(09:00 - 10:30) 
+ Chair:Maribel Fernandez 
+ 09:00 - 09:30 | Francisco Durán, Steven Eker, Santiago Escobar, Narciso Marti-Oliet, Jose Meseguer, Rubén Rubio, and Carolyn Talcott 
+ Programming Open Distributed Systems in Maude 
+ 09:30 - 10:00 | Jaime Arias, Carlos Olarte, Wojciech Penczek, Laure Petrucci, and Teofil Sidoruk 
+ Model Checking and Synthesis for Strategic Timed CTL using Strategies in Rewriting Logic 
+ 10:00 - 10:30 | Francisco Durán, Santiago Escobar, Jose Meseguer, and Julia Sapiña 
+ NuITP: An Inductive Theorem Prover for Equational Program Verification 
+ 10:30 - 11:00 | Coffee Break 
+ Session 6(11:00 - 12:30) 
+ Chair:Mariangiola Dezani-Ciancaglini 
+ 11:00 - 12:00 | Ilaria Castellani 
+ PPDP Invited Talk: A simple view of multiparty session types 
+ 12:00 - 12:30 | Francesco Dagnino and Luca Padovani 
+ sMALL CaPS: An Infinitary Linear Logic for a Calculus of Pure Sessions 
+ 12:30 - 14:00 | Lunch Break 
+ Session 7(14:00 - 15:30) 
+ Chair:Franco Barbanera 
+ 14:00 - 15:00 | Mariangiola Dezani-Ciancaglini 
+ 10 Year Most Influential Paper Award: On the Preciseness of Subtyping in Session Types 
+ 15:00 - 15:30 | Ugo Dal Lago and Luca Padovani 
+ On the Almost-Sure Termination of Binary Sessions 
+ 15:30 - 16:00 | Coffee Break 
+ Session 8(16:00 - 17:30) 
+ Chair:Luca Padovani 
+ 16:00 - 16:30 | Franco Barbanera, Mariangiola Dezani-Ciancaglini, and Ugo de’Liguoro 
+ Un-projectable Global Types for Multiparty Sessions 
+ 16:30 - 17:00 | Exequiel Rivas and Tarmo Uustalu 
+ Concurrent Monads for Shared State 
+ 17:00 - 17:30 | Roberto Casadei and Mirko Viroli 
+ Declarative Macro-Programming of Collective Systems with Aggregate Computing: An Experience Report 
+ 17:30 | Closing 
+ Scope 
+ The PPDP 2024 symposium brings together researchers from the declarative programming communities, including those working in the functional, logic, answer-set, and constraint handling programming paradigms. The goal is to stimulate research in the use of logical formalisms and methods for analyzing, performing, specifying, and reasoning about computations, including mechanisms for concurrency security, static analysis, and verification. 
+ Submissions are invited on all topics related to declarative programming, from principles to practice, from foundations to applications. Topics of interest include, but are not limited to: 
+ Language Design: domain-specific languages; interoperability; concurrency, parallelism and distribution; modules; functional languages; reactive languages; languages with objects; languages for quantum computing; languages inspired by biological and chemical computation; metaprogramming. 
+ Declarative languages in artificial intelligence: logic programming; database languages; knowledge representation languages; probabilistic languages; differentiable languages. 
+ Implementations: abstract machines; interpreters; compilation; compile-time and run-time optimization; memory management. 
+ Foundations: types; logical frameworks; monads and effects; semantics. 
+ Analysis and Transformation: partial evaluation; abstract interpretation; control flow; data flow; information flow; termination analysis; resource analysis; type inference and type checking; verification; validation; debugging; testing. 
+ Tools and Applications: programming and proof environments; verification tools; case studies in proof assistants or interactive theorem provers; certification; novel applications of declarative programming inside and outside of CS; declarative programming pearls; practical experience reports and industrial application; education.PPDP will take place 10-11 September 2024 at the Politecnico di Milano Italy, co-located with the 34th Int’l Symp. on Logic-Based Program Synthesis and Transformation (LOPSTR 2024) within the umbrella ofFM 2024 
+ Submission Categories 
+ Submissions can be made in three categories: 
+ Regular Research Papers, 
+ System Descriptions, and 
+ Experience Reports. 
+ Proceedings 
+ The PPDP 2024 proceedings, ISBN 9-8-4007-0969-297, will be published in the ACM Digital Library within the ACM International Conference Proceedings Series. 
+ Important note to authors about the new ACM open access publishing model 
+ ACM has introduced a new open access publishing model for the International Conference Proceedings Series (ICPS). Authors based at institutions that are not yet part of the ACM Open program and do not qualify for a waiver will be required to pay an article processing charge (APC) to publish their ICPS article in the ACM Digital Library. To determine whether or not an APC will be applicable to your article, please follow the detailed guidancehref="https://www.acm.org/publications/icps/author-guidance" - here
+. 
+ Further information may be found on the ACM website, as follows: 
+ Full details of the new | ICPS publishing model 
+ Full details of the | ACM Open program | . Please direct all questions about the new model | here | . 
+ Format of a submission 
+ For each paper category, you must use the most recent version of theCurrent ACM Master Template, at the time of writing being 2.08. You must use the LaTeX sigconf proceedings template, as the conference organizers are unable to process final submissions in other formats. In case of problems with the templates, contactACM’s TeX support team at Aptara. 
+ Authors should notehref="http://authors.acm.org/" - ACM’s statement on author’s
+rights
+which apply to final papers. Submitted papers should meet the requirements ofACM’s plagiarism policy. 
+ Requirements for publication 
+ At least one author of each accepted submission will be expected to attend and present the work at the conference. The PC chair may retract a paper that is not presented. The PC chair may also retract a paper if complaints about the paper’s correctness are raised which cannot be resolved by the final paper deadline. 
+ Important dates 
+ Title and abstract registration:06 May 202415 May 2024 (AoE) 
+ Paper submission:13 May 202422 May 2024 (AoE) 
+ Rebuttal period (48 hours):22-23 June 202428-29 June 2024 (AoE) 
+ Author notification:3 July 20245 July 2024 
+ Final paper version: 24 July 2024 
+ Conference: 10-11 Sept 2024 
+ Organization 
+ Program committee chairs: Alessandro Bruni (IT-University of Copenhagen), Alberto Momigliano (Università degli Studi di Milano) 
+ General chairs: Matteo Pradella & Matteo Rossi (Politecnico di Milano) 
+ Steering committee chair: James Cheney (Edinburgh University) 
+ Program committee 
+ Małgorzata Biernacka, University of Wroclaw 
+ Roberto Casadei, University of Bologna 
+ Kaustuv Chaudhuri, INRIA 
+ Amy Felty, University of Ottawa 
+ Marco Gavanelli, University of Ferrara 
+ Paola Giannini, Universita’ del Piemonte Orientale 
+ Wen Kokke, University of Strathclyde 
+ Cristina Matache, University of Edinburgh 
+ Marino Miculan, University of Udine 
+ Carlos Olarte, Université Sorbonne Paris Nord 
+ Frank Pfenning, Carnegie Mellon University 
+ Paul Rowe, Two Six Technologies 
+ Anders Schlichtkrull, Aalborg University 
+ Gabriele Vanoni, Università di Bologna and INRIA Sophia Antipolis 
+ Niccolò Veltri, Tallinn University of Technology 
+ Yannick Zakowski, INRIA 
+ Xuejing Huang, University of Hong Kong 
+ This page was generated byGitHub Pages.
+
+2. Website of PPDP_3: https://sites.google.com/site/ppdpconf/ppdp
+Website information of PPDP_3:
+
+Search this site 
+ Embedded Files 
+ Skip to main content 
+ Skip to navigation 
+ href="/site/ppdpconf/ppdp" - PPDP
+href="/site/ppdpconf/ppdp" - PPDP | href="/site/ppdpconf/ppdp/bylaws" - Bylaws 
+ href="/site/ppdpconf/ppdp/past-conferences" - Past Conferences 
+ Steering Committee 
+ href="/site/ppdpconf/ppdp" - PPDP
+PPDP 
+ International Symposium on Principles and Practice of Declarative Programming 
+ OVERVIEW 
+ PPDP aims to provide a forum that brings together researchers from the declarative programming communities, including those working in the logic, constraint and functional programming paradigms, but also embracing a variety of other paradigms such as visual programming, executable specification languages, database languages, AI languages and knowledge representation languages used, for example, in the semantic web. 
+ The goal is to stimulate research in the use of logical formalisms and methods for specifying, performing, and analysing computations, including mechanisms for mobility, modularity, concurrency, object-orientation, security, and static analysis. Papers related to the use of declarative paradigms and tools in industry and education are especially solicited. 
+ href="/site/ppdpconf/ppdp/bylaws" - Click here for the bylaws governing PPDP.
+MOST INFLUENTIAL PAPER 10-YEAR AWARD 
+ Starting with the 13th edition of PPDP in 2011, each year the most influential paper from the conference 10 years ago is selected by theSteering Committeeand awarded to recognize the authors' contribution to PPDP's influence in the area of declarative programming. 
+ Award 2011 (for PPDP 2001): Olivier Danvy and Lasse R. Nielsen for "Defunctionalization at Work" 
+ Award 2012 (for PPDP 2002): Marcello P. Fiore for "Semantic analysis of normalisation by evaluation for typed lambda calculus" 
+ Award 2013 (for PPDP 2003):Maria J. García de la Banda, Peter J. Stuckey,Jeremy Waznyfor "Finding all minimal unsatisfiable subsets" 
+ Award 2014 (for PPDP 2004): Maribel Fernández, Murdoch Gabbay, Ian Mackie for "Nominal rewriting systems" 
+ Award 2015 (for PPDP 2005): Louis Mandel, Marc Pouzet for "ReactiveML: a reactive extension to ML" 
+ Award 2016 (for PPDP 2006): Andres Löh, Ralf Hinze for "Open data types and open functions" 
+ Award 2017 (for PPDP 2007): Leslie De Koninck, Tom Schrijvers, Bart Demoen for "User-definable rule priorities for CHR" 
+ Award 2018 (for PPDP 2008): Brigitte Pientka,JanaDunfield for "Programming with proofs and explicit contexts" 
+ Award 2019 (for PPDP 2009): Giuseppe Castagna, Mariangiola Dezani-Ciancaglini, Elena Giachino, Luca Padovani for "Foundations of Session Types" 
+ Award 2020 (for PPDP 2010): Franco Barbanera and Ugo de'Liguoro for "Two notions of sub-behaviour for session-based client/server systems" 
+ Award 2021 (for PPDP 2011):Bernardo Toninho, Luís Caires, and Frank Pfenning for"Dependent session types via intuitionistic linear type theory" 
+ Award 2022 (for PPDP 2012): Ornela Dardha, Elena Giachino, and Davide Sangiorgi for "Session Types Revisited" 
+ Award 2023 (for PPDP 2013): Andrew Kennedy, Nick Benton, Jonas B. Jensen, and Pierre-Evariste Dagand for "Coq: the world's best macro assembler?" 
+ Award 2024 (for PPDP 2014): Tzu-Chun Chen, Mariangiola Dezani-Ciancaglini, and Nobuko Yoshida for"On the Preciseness of Subtyping in Session Types" 
+ UPCOMING CONFERENCE 
+ href="https://ppdp25.github.io/site/" - 27th International Symposium on Principles and Practice of Declarative Programming (PPDP 2025)
+, co-located with ICLP, September 10-11 2025, Rende, Italy. PC chairs: Carlos Olarte and Malłgorzata Biernacka 
+ href="/site/ppdpconf/ppdp/past-conferences" - Click here for the full list of previous conferences.
+Page updated 
+ Google Sites 
+ Report abuse
+
+3. Website of PPDP_3: https://ppdp25.github.io/site/cfp/
+Website information of PPDP_3:
+
+href="/site/" - PPDP 2025
+Homehref="/site/cfp" - CFP
+ProgramPPDP 2025 
+ 10-11 September 2025 (University of Calabria, Rende, Italy) 
+ href="/site/cfp/cfp.txt" - TXT version
+The 27th International Symposium on Principles and Practice of Declarative Programming 
+ September 10-11, 2025 University of Calabria, Rende, Italy 
+ href="https://ppdp25.github.io/site/" - https://ppdp25.github.io/site/
+Collocated withhref="https://iclp25.demacs.unical.it/" - ICLP 2025
+Important dates 
+ Title and abstract registration: 18 May 2025 (AoE) 
+ Paper submission: 30 May 2025 (AoE) 
+ Author notification: 7 July 2025 
+ Final paper version: 21 July 2025 
+ Overview 
+ The PPDP 2025 symposium brings together researchers from the declarative programming communities, including those working in the functional, logic answer-set, and constraint handling programming paradigms. The goal is to stimulate research in the use of logical formalisms and methods for analyzing performing, specifying, and reasoning about computations, including mechanisms for concurrency, security, static analysis, and verification. 
+ PPDP 25 will be held at University of Calabria, Rende, Italy, as part ofhref="https://iclp25.demacs.unical.it/" - ICLP
+2025
+. At least one of the authors of an accepted paper is expected to attend the conference and present the paper. 
+ Submissions are invited on all topics related to declarative programming, from principles to practice, from foundations to applications. Topics of interest include, but are not limited to: 
+ Language Design: domain-specific languages; interoperability; concurrency parallelism and distribution; modules; functional languages; reactive languages; languages with objects; languages for quantum computing; languages inspired by biological and chemical computation; metaprogramming. 
+ Declarative languages in artificial intelligence: logic programming; database languages; knowledge representation languages; probabilistic languages; differentiable languages. 
+ Implementations: abstract machines; interpreters; compilation; compile-time and run-time optimization; memory management. 
+ Foundations: types; logical frameworks; monads and effects; semantics. 
+ Analysis and Transformation: partial evaluation; abstract interpretation; control flow; data flow; information flow; termination analysis; resource analysis; type inference and type checking; verification; validation; debugging; testing. 
+ Tools and Applications: programming and proof environments; verification tools; case studies in proof assistants or interactive theorem provers; certification; novel applications of declarative programming inside and outside of CS; declarative programming pearls; practical experience reports and industrial application; education. 
+ Paper Submission 
+ Submissions can be made in three categories: 
+ Regular Research Papers, 
+ System Descriptions, and 
+ Experience Reports. 
+ Submissions of Research Papers must present original research which is unpublished and not submitted elsewhere. They must not exceed 12 pages ACM style 2-column (including figures, but excluding bibliography). Work that already appeared in unpublished or informally published workshop proceedings may be submitted. Research papers will be judged on originality, significance correctness, clarity, and readability. 
+ Submission of System Descriptions must describe a working system whose description has not been published or submitted elsewhere. They must not exceed 10 pages and should contain a link to a working system. System Descriptions must be marked as such at the time of submission and will be judged on originality, significance, usefulness, clarity, and readability. 
+ Submissions of Experience Reports are meant to help create a body of published refereed, citable evidence where declarative programming such as functional logic, answer-set, constraint programming, etc., is used in practice. They must not exceed 5 pagesincluding references. Experience Reports must be marked as such at the time of submission and need not report original research results. They will be judged on significance, usefulness, clarity, and readability. 
+ Possible topics for an Experience Report include, but are not limited to: 
+ insights gained from real-world projects using declarative programming 
+ comparison of declarative programming with conventional programming in the context of an industrial project or a university curriculum 
+ curricular issues encountered when using declarative programming in education 
+ real-world constraints that created special challenges for an implementation of a declarative language or for declarative programming in general 
+ novel use of declarative programming in the classroom 
+ programming pearl that illustrates a nifty new data structure or programming technique. 
+ Supplementary material may be provided via a link to an extended version of the submission (recommended), or in a clearly marked appendix beyond the above mentioned page limits. Reviewers are not required to study extended versions or any material beyond the respective page limit. Material beyond the page limit will not be included in the final published version. 
+ Submission Guidelines 
+ Submissions will be made via EasyChair. The submission webpage for PPDP 25 ishttps://easychair.org/conferences/?conf=iclp25(select PPDP track). 
+ For each paper category, you must use the most recent version of theCurrent ACM Master Template. You must use the LaTeX sigconf proceedings template as the conference organizers are unable to process final submissions in other formats. 
+ Authors should notehref="http://authors.acm.org/" - ACM’s statement on author’s rights
+which apply to final papers. Submitted papers should meet the requirements ofACM’s plagiarism policy. 
+ Note About the New ACM Open Access Model 
+ ACM has introduced a new open access publishing model for the International Conference Proceedings Series (ICPS). Authors based at institutions that are not yet part of the ACM Open program and do not qualify for a waiver will be required to pay an article processing charge (APC) to publish their ICPS article in the ACM Digital Library. To determine whether or not an APC will be applicable to your article, please follow thehref="https://www.acm.org/publications/icps/author-guidance" - detailed guidance
+. 
+ Further information may be found on the ACM website, as follows: 
+ Full details of the new ICPS publishing model:https://www.acm.org/publications/icps/faq 
+ Full details of the ACM Open program:https://www.acm.org/publications/openaccess 
+ Please direct all questions about the new model to icps-info@acm.org. 
+ Program Chairs 
+ Małgorzata Biernacka (Institute of Computer Science, University of Wrocław, Poland) 
+ Carlos Olarte (LIPN and University Sorbonne Paris Nord, France). 
+ Program Committee 
+ Salvador Abreu (University of Évora, Portugal) 
+ Sandra Alves (University of Porto, Portugal) 
+ Roman Barták (Charles University, Czech Republic) 
+ Alessandro Bruni (IT-University of Copenhagen, Denmark) 
+ Moreno Falaschi (University of Siena, Italy) 
+ Fabio Gadducci (University of Pisa, Italy) 
+ Cinzia di Giusto (Université Côte d’Azur, France) 
+ Michael Hanus (University of Kiel, Germany) 
+ Thomas Hildebrandt (University of Copenhagen, Denmark) 
+ Yukiyoshi Kameyama (University of Tsukuba, Japan). 
+ Delia Kesner (University Paris Cité, France) 
+ Cosimo Laneve (University of Bologna, Italy) 
+ Alberto Momigliano (University of Milan, Italy) 
+ Ruben Rubio (Universidad Complutense de Madrid, Spain) 
+ Claudio Sacerdoti Coen (University of Bologna, Italy) 
+ Filip Sieczkowski (Heriot-Watt University, UK) 
+ Bernardo Toninho (NOVA FCT and NOVA LINCS, Portugal) 
+ Frank Valencia (LIX, École Polytechnique de Paris, France) 
+ Germán Vidal (Universitat Politecnica de Valencia, Spain)
+
+4. Website of PPDP_3: https://www.cs.cmu.edu/~fp/conferences.html
+Website information of PPDP_3:
+
+search ~fp 
+ Home 
+ Contact Information 
+ Curriculum Vitæ 
+ href="research.html" - Research Interests 
+ Publications 
+ DBLP 
+ Google Scholar Search 
+ Google Scholar Profile 
+ href="students.html" - Students & Co-authors 
+ Projects 
+ Session Types 
+ C0 
+ Courses 
+ HOT Compilation15-417/817 [Sp25] 
+ Software Foundations15-316 [Fa24] 
+ Substructural Logics15-836 [Fa23] 
+ Constructive Logic15-317 [Sp23] 
+ Par. & Seq. Algorithms15-210 [Fa22] 
+ Bug Catching15-414 [Sp22] 
+ Types & Prog. Langs.15-814 [Fa21] 
+ Bug Catching15-414 [Sp21] 
+ Types & Prog. Langs.15-814 [Fa20] 
+ Functional Prog.15-150 [Sp20] 
+ Types & Prog. Langs.15-814 [Fa19] 
+ Types & Prog. Langs.15-814 [Fa18] 
+ Constructive Logic15-317 [Fa17] 
+ Substructural Logics15-816 [Fa16] 
+ Princs. Imp. Comp.15-122 [Fa15] 
+ Compiler Design15-411 [Fa14] 
+ Summer School 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Pfenning" - Oregon'22 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer19/topics.php" - Oregon'19 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer17/topics.php" - Oregon'17 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html" - Oregon'15 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer13/curriculum.html" - Oregon'13 
+ Conferences 
+ TABLEAUX'23 PC 
+ CSF'24 PC 
+ ESOP'24 SC 
+ Organizations 
+ ACM SIGLOG 
+ ACM SIGPLAN 
+ Journals 
+ JFP 
+ Frank Pfenning | search ~fp | Home | Contact Information | Curriculum Vitæ | href="research.html" - Research Interests | Publications | DBLP | Google Scholar Search | Google Scholar Profile | href="students.html" - Students & Co-authors | Projects | Session Types | C0 | Courses | HOT Compilation15-417/817 [Sp25] | Software Foundations15-316 [Fa24] | Substructural Logics15-836 [Fa23] | Constructive Logic15-317 [Sp23] | Par. & Seq. Algorithms15-210 [Fa22] | Bug Catching15-414 [Sp22] | Types & Prog. Langs.15-814 [Fa21] | Bug Catching15-414 [Sp21] | Types & Prog. Langs.15-814 [Fa20] | Functional Prog.15-150 [Sp20] | Types & Prog. Langs.15-814 [Fa19] | Types & Prog. Langs.15-814 [Fa18] | Constructive Logic15-317 [Fa17] | Substructural Logics15-816 [Fa16] | Princs. Imp. Comp.15-122 [Fa15] | Compiler Design15-411 [Fa14] | Summer School | href="https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Pfenning" - Oregon'22 | href="https://www.cs.uoregon.edu/research/summerschool/summer19/topics.php" - Oregon'19 | href="https://www.cs.uoregon.edu/research/summerschool/summer17/topics.php" - Oregon'17 | href="https://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html" - Oregon'15 | href="https://www.cs.uoregon.edu/research/summerschool/summer13/curriculum.html" - Oregon'13 | Conferences | TABLEAUX'23 PC | CSF'24 PC | ESOP'24 SC | Organizations | ACM SIGLOG | ACM SIGPLAN | Journals | JFP | Frank Pfenning | Frank Pfenning 
+ Conferences 
+  
+ Contents | Current 
+ Conference Chair|Program Chair|Program Committee Member|Organizing Comittee Member 
+ Workshop Chair|Workshop Committee Member 
+ Elsewhere | Professional Organizations 
+ Current 
+ TABLEAUX 202332nd International Conference on Automated Reasoning with Analytic Tableaux and Related Methods, 
+ Prague, Czech Republic, September 18-21, 2023.CSF 202437th Computer Security Foundations Symposium, 
+ Enschede, The Netherlands, July 8-12, 2024.ESOP 202433rd European Symposium on Programming, 
+ Luxembourg City, Luxembourg, April 6-11, 2024.Conference Chair 
+ href="http://ppdp2002.cs.brown.edu/" - PPDP 2002
+4th International Conference on Principles and Practice of Declarative Programming 
+ Part ofPLI'02, Pittsburgh, Pennsylvania, October 6-8, 2002.CADE-1717th International Conference on Automated Deduction 
+ Pittsburgh, Pennsylvania, June 17-20, 2000Program Chair 
+ FoSSaCS 201316th International Conference on Foundations of Software Science and Computation Structures 
+ Rome, Italy, March 2013LICS 200823rd Annual Symposium on Logic in Computer Science 
+ Pittsburgh, Pennsylvania, June 24-27, 2008 
+ Workshops June 22-23, 2008 
+ Colocated with CSF 2008, June 23-25, 2008CADE-2121st International Conference on Automated Deduction 
+ Bremen, Germany, July 17-20 2007 
+ Workshops July 15-16, 2007RTA 2006 (PC Chair)17th International Conference on Rewriting Techniques and Applications 
+ Seattle, Washington, August 12-15, 2006 
+ Part ofhref="http://research.microsoft.com/floc06/" - FLoC'06
+GPCE 2003(PC Co-Chair with Yannis Smaragdakis)International Conference on Generative Programming and Component Engineering 
+ Erfurt, Germany, September 22-25, 2003 
+ href="http://www.cs.yorku.ca/ppdp-00/" - PPDP 2000
+(PC Co-Chair with Maurizio Gabbrielli)2nd International Conference on Principles and Practice of Declarative Programming 
+ Montreal, Canada, September 20-22, 2000LPAR'945th International Conference on Logic Programming and Automated Reasoning, 
+ Kiev, Ukraine, July 1994.Program Committee Member 
+ ESOP'24,CSF'24,TABLEAUX'23, TABLEAUX'21 POPL'21, IJCAR'20, ICFP'19, FSCD'19, LPAR'18, IJCAR'18, CSL'17 LPAR'17, POPL'17 (ERC), POPL'16, POPL'15 (ERC), LICS'15 CSL'13, CONCUR'13, ICALP'13, CSF'13, CADE'13, IJCAR'12, ICFP'11, CADE'11 LPAR'10, IJCAR'10, FLOPS'10, EPIA'09, TPHOLs'09, TLCA'09, POPL'09, VMCAI'08 LICS'07, LPAR'06, ICFP'05, TPHOLs'05, CADE'05, LICS'05, RTA'05 PEPM'04, TPHOLs'04, RTA'04, IJCAR'04, TPHOLs'03, CADE'03, LICS'03 RTA'03, MFPS'03, TPHOLs'02, CADE'02, CSL'02, LPAR'01, CSL'01 TPHOLs'01, LACL'01, IJCAR'01, LPAR'00, LICS'00, ASIAN'99 LPAR'99, CADE'99, TACS'97, CADE'97, POPL'97, LICS'96, RTA'96 CADE'96,, ALP'96, AIMSC'96, DISCO'96, CCL'94, LICS'94 ICLP'94, CADE'94, POPL'93, MFPS'93, LPAR'93, DISCO'93, JICSLP'92 MFPS'91 
+ Organizing Committee Member 
+ CADE-20 (Workshop Chair)20th International Conference on Automated Deduction, Tallinn, Estonia July 2005.PLI 2002(Organizing Committee)Principles, Logics, and Implementations of High-Level Programming Languages, 
+ consisting ofhref="http://icfp2002.cs.brown.edu/" - ICFP'02
+,href="http://ppdp2002.cs.brown.edu/" - PPDP'02
+,GPCE'02and affiliated workshops. 
+ Pittsburgh, Pennsylvania, October 3-8, 2002. 
+ Workshop Chair 
+ IMLA'05Intuitionistic Modal Logics and Applications 
+ Chicago, Illinois, June 30, 2005. 
+ LICS-affiliated workshop as part of LICS 2005LFM'02Logical Frameworks and Meta-Languages 
+ Copenhagen, Denmark, July 26, 2002. 
+ This is a LICS-affiliated workshop as part ofFLoC'02.Strategies in Automated Deduction(with Bernhard Gramlich and Hélène Kirchner) 
+ in conjunction with the 16th International Conference on Automated Deduction, 
+ Trento, Italy, July 1999.Strategies in Automated Deduction(with Bernhard Gramlich and Hélène Kirchner) 
+ in conjunction with the 15th International Conference on Automated Deduction, 
+ Lindau, Germany, June 1998.Proofs and Typesin conjunction with the Joint International Conference and Symposium on Logic Programming, 
+ Washington, D.C., November 1992.Types in Logic Programmingin conjunction with the North American Conference on Logic Programming 
+ Cleveland, Ohio, October 1989.Metalanguage and Tools for Formalizing Deductive TheoriesCarnegie Mellon University, Pittsburgh, Pennsylvania, November 1987.Workshop Committee Member 
+ ST30 (2023), TEASE'20, HLPP'20, PEPM'19, PEPM'18, TGC'13, LFMTP'12, LFMTP'11 WMM'10, FCS'05, LFM'04, ITRS'04, IMLA'02, SAVE'02 MERLIN'01, WESTAPP'01, PSTT'00, INDUCT'98, PSTT'98, PTP'97 PSTT'94 
+ [Home|Contact|href="research.html" - Research
+|Publications|CV|Students] 
+ [Projects|Courses|Conferences|Organizations|Journals] 
+ Frank Pfenning | Contents | Current 
+ Conference Chair|Program Chair|Program Committee Member|Organizing Comittee Member 
+ Workshop Chair|Workshop Committee Member | Elsewhere | Professional Organizations 
+ search ~fp 
+ Home 
+ Contact Information 
+ Curriculum Vitæ 
+ href="research.html" - Research Interests 
+ Publications 
+ DBLP 
+ Google Scholar Search 
+ Google Scholar Profile 
+ href="students.html" - Students & Co-authors 
+ Projects 
+ Session Types 
+ C0 
+ Courses 
+ HOT Compilation15-417/817 [Sp25] 
+ Software Foundations15-316 [Fa24] 
+ Substructural Logics15-836 [Fa23] 
+ Constructive Logic15-317 [Sp23] 
+ Par. & Seq. Algorithms15-210 [Fa22] 
+ Bug Catching15-414 [Sp22] 
+ Types & Prog. Langs.15-814 [Fa21] 
+ Bug Catching15-414 [Sp21] 
+ Types & Prog. Langs.15-814 [Fa20] 
+ Functional Prog.15-150 [Sp20] 
+ Types & Prog. Langs.15-814 [Fa19] 
+ Types & Prog. Langs.15-814 [Fa18] 
+ Constructive Logic15-317 [Fa17] 
+ Substructural Logics15-816 [Fa16] 
+ Princs. Imp. Comp.15-122 [Fa15] 
+ Compiler Design15-411 [Fa14] 
+ Summer School 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Pfenning" - Oregon'22 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer19/topics.php" - Oregon'19 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer17/topics.php" - Oregon'17 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html" - Oregon'15 
+ href="https://www.cs.uoregon.edu/research/summerschool/summer13/curriculum.html" - Oregon'13 
+ Conferences 
+ TABLEAUX'23 PC 
+ CSF'24 PC 
+ ESOP'24 SC 
+ Organizations 
+ ACM SIGLOG 
+ ACM SIGPLAN 
+ Journals 
+ JFP 
+ Frank Pfenning 
+ Contents | Current 
+ Conference Chair|Program Chair|Program Committee Member|Organizing Comittee Member 
+ Workshop Chair|Workshop Committee Member 
+ Elsewhere | Professional Organizations
+

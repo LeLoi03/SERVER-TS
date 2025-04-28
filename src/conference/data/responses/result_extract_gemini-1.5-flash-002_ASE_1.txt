@@ -1,0 +1,61 @@
+output:
+{
+  "Conference dates": "November 16 - 20, 2025",
+  "Year": "2025",
+  "Location": "Seoul, South Korea",
+  "City-State-Province": "Seoul",
+  "Country": "South Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Research Papers Paper Submission": "May 30, 2025",
+    "Tutorials Submission Deadline": "June 13, 2025",
+    "NIER Track Paper Submission": "July 12, 2025",
+    "Tool Demonstration Track Paper Submission Deadline": "July 23, 2025",
+    "AIware Research Papers Paper Submission": "July 25, 2025",
+    "Doctoral Symposium Deadline for submission": "July 31, 2025",
+    "Industry Showcase Submission Deadline": "August 1, 2025",
+    "Student Research Competition Paper submission deadline": "August 12, 2025",
+    "SSBSE Research Papers Submission Deadline": "August 21, 2025",
+    "Workshops Workshop Paper Submission": "August 26, 2025",
+    "Journal-First Track Paper Submission": "September 1, 2025",
+    "PC Self-nomination": "January 10, 2025"
+  },
+  "Notification Date": {
+    "Tutorials Proposal Notification": "June 27, 2025",
+    "Tutorials Final Notification": "July 18, 2025",
+    "NIER Track Author Notification": "August 7, 2025",
+    "Doctoral Symposium Author Notification": "August 13, 2025",
+    "Research Papers Initial Notification": "August 14, 2025",
+    "SSBSE Research Papers Notification of Acceptance": "September 25, 2025",
+    "Workshops Workshop Paper Notification": "September 26, 2025",
+    "Journal-First Track Author Notification": "September 29, 2025",
+    "Tool Demonstration Track Author Notification": "September 10, 2025",
+    "Student Research Competition Author notification": "September 12, 2025",
+    "Industry Showcase Author Notification": "September 12, 2025",
+    "AIware Research Papers Notification": "September 23, 2025",
+    "Research Papers Notification for Major Revisions": "September 25, 2025"
+  },
+  "Camera-ready Date": {
+    "Tutorials Advertisement Material": "July 11, 2025",
+    "NIER Track Camera Ready Submission": "September 4, 2025",
+    "Tool Demonstration Track Camera-ready Deadline": "October 3, 2025",
+    "Research Papers Camera Ready (all papers)": "October 3, 2025",
+    "SSBSE Research Papers Camera-Ready Deadline": "October 3, 2025",
+    "Industry Showcase Camera Ready Submission": "October 3, 2025",
+    "Doctoral Symposium Camera Ready Deadline": "October 3, 2025",
+    "Workshops Workshop Paper Camera Ready": "October 5, 2025",
+    "AIware Research Papers Camera Ready": "October 15, 2025"
+  },
+  "Other Date": {
+    "AIware Research Papers Intent Registration (Optional)": "July 15, 2025",
+    "Research Papers Author Response": "July 22 - 25, 2025",
+    "AIware Research Papers Author Response": "September 5 - 12, 2025",
+    "Workshops Workshop Proposal Submission": "April 4, 2025",
+    "Workshops Workshop Proposal Notification": "April 25, 2025"
+  },
+  "Topics": "Automated Software Engineering, Software Analysis, Software Design, Software Implementation, Software Testing, Software Maintenance, Requirements Engineering, Software Architecture, Model-Driven Engineering, Software Product Lines, Component-Based Systems, Service-Oriented Systems, Object-Oriented Systems, Aspect-Oriented Systems, Regression Testing, Mutation Testing, Model-Based Testing, System Testing, Unit Testing, Integration Testing, Fuzzing, Program Repair, Program Synthesis, Static Analysis, Dynamic Analysis, Empirical Program Analysis, Debugging, Fault Localization, Refactoring, Reverse Engineering, Software Reuse, API Design, Agile, DevOps, Green Technologies, Software Engineering Ethics, Software Economics, Code Review, Program Comprehension, Visualization, Crowd-based Software Engineering, Collaborative Software Engineering, Human-Computer Interaction, Autonomous Systems, Self-Adapting Systems, Search-Based Software Engineering, Recommender Systems, AI4SE, SE4AI, Software Repository Mining, Mobile App Analysis, App Store Analysis, Data-Driven User Experience, Data-Driven Decision Making, Software Metrics, Formal Methods, Model Checking, Programming Languages, Domain-Specific Languages, Specification Languages, Software Validation, Software Verification, Security, Privacy, Dependability, Safety, Reliability, Availability, Performance",
+  "Summary": "The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025) will be held in Seoul, South Korea, from November 16-20, 2025. The ASE conference is the premier research forum for automated software engineering.",
+  "Call for Papers": "# ASE 2025: Call for Papers\n\nThe 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025) will be held in **Seoul, South Korea from November 16-20, 2025** at the **Grand Walkerhill Seoul**.\n\nThe ASE conference is the premier research forum for automated software engineering. Each year, it brings together researchers and practitioners from academia and industry to discuss foundations, techniques, and tools for automating the analysis, design, implementation, testing, and maintenance of large software systems.\n\n## New This Year\n\n*   **PC Self-nomination:** We are inviting self-nominations to serve on our Program Committee. To contribute as a reviewer and help shape the technical program, please complete the PC self-nomination form: [https://forms.gle/uPZCVDeH4WzwvtmF6](https://forms.gle/uPZCVDeH4WzwvtmF6). We would greatly appreciate receiving your self-nomination by January 10th.\n*   **Major Revisions:** Instead of rejecting the paper, we provide reviewers with the opportunity to request changes that may require up to four weeks to accommodate. In case of a Revision outcome, reviewers specify concrete and actionable revision criteria and agree to accept the paper in principle if these criteria are met.\n*   **Auto-bidding:** To reduce reviewer workload in paper bidding and increase expertise for each paper, we will leverage the Toronto Paper Matching System (TPMS) to streamline and automate the paper bidding and assignment process.\n*   **Rapid Response Reviewers:** To handle cases where reviewers become unavailable unexpectedly, we invite a small percentage of interested PC members to become Rapid Response Reviewers.\n\n## Submission Link\n\n[https://ase25.hotcrp.com/](https://ase25.hotcrp.com/)\n\n## Template\n\n`\\documentclass[10pt,conference]{IEEEtran}`\n\n## Page Limit\n\n10 pages (excl. references) + 2 pages (only references).\n\n## Research Areas\n\nASE welcomes submissions addressing topics across the full spectrum of Automated Software Engineering. Topics of interest include the following and are grouped into the following nine research areas. Please note that these topics are by no means exhaustive. Each submission will need to indicate one primary and optionally a secondary area. Program chairs will ultimately assign a paper to an area chair (and at least three reviewers), considering the authors’ selection, the paper’s content, and other factors such as (if applicable) possible conflicts of interest.\n\n*   Requirements and Design\n*   Testing and Analysis\n*   Maintenance and Evolution\n*   Human and Social Aspects\n*   AI and Software Engineering\n*   Software Analytics\n*   Formal Aspects of Software Engineering\n*   Security and Other Non-Functional Properties\n*   Application Domains\n\n## Submission Categories\n\nWe solicit submissions in two categories:\n\n*   **Technical Research Papers:** which describe innovative research in automating software development or automating support to users engaged in software development activities.\n*   **Experience Papers:** which describe a significant experience in applying automated software engineering technology.\n\n## Review Criteria\n\n*   **Technical Research Papers:** Significance, Novelty, Soundness\n*   **Experience Papers:** Importance and Scope, Insights and Evidence, Perspective\n*   **Both Submission Categories:** Verifiability, Presentation\n\n## Originality\n\nPapers submitted to ASE 2025 must not have been published elsewhere and must not be under review or submitted for review elsewhere when being considered for ASE 2025.\n\n## Double Anonymous Review Process\n\nThe ASE 2025 Research Track will employ a double-anonymous review process. Thus, no submission may reveal its authors’ identities.\n\n## Artifact Availability and Supplementary Material\n\nWe actively support and encourage all contributing authors to disclose (anonymized and curated) data to increase reproducibility and replicability.\n\n## ACM Policy on Research Involving Humans\n\nIf work reported in the paper involves human subjects, authors will be required to affirm compliance with the ACM Policy on Research Involving Humans as part of the submission process: [https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects)\n\n## Formatting and Submission Guidelines\n\n*   Abstracts and papers must be submitted electronically through the ASE 2025 HotCRP submission site: [https://ase25.hotcrp.com/](https://ase25.hotcrp.com/)\n*   All submissions must be in English.\n*   All submissions must be in PDF format and conform to the IEEE Conference Proceedings Formatting Guidelines.\n*   Submissions must not exceed 10 pages for the main text, including all figures, tables, appendices, etc. Up to two additional pages containing ONLY references are permitted.\n\n## Accepted Papers\n\nAccepted papers will be permitted an additional page of content to allow authors to incorporate review feedback. The page limit for published papers will therefore be 11 pages (including all figures, tables, appendices) plus 2 pages containing only references. Note that all submitted papers must conform to the 10+2 requirement, described above.\n\n## Contact\n\nIf you have any further questions, please contact the PC chairs at [ase25.conf@gmail.com](mailto:ase25.conf@gmail.com)."
+}
+

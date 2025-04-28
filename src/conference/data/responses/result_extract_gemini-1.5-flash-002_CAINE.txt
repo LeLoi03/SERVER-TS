@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "October 20 - 21, 2025",
+  "Year": "2025",
+  "Location": "Holiday Inn Downtown Superdome, New Orleans, Louisiana, USA",
+  "City-State-Province": "New Orleans, Louisiana",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "May 30, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "July 15, 2025"
+  },
+  "Registration Date": {
+    "Registration due": "August 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Final Manuscript": "August 15, 2025"
+  },
+  "Topics": "Software Engineering, Data Engineering",
+  "Publisher": "Springer Nature",
+  "Summary": "The 34th SEDE Conference: Software & Data Engineering (SEDE 2025) will be held in New Orleans, Louisiana, USA, from October 20-21, 2025.  The conference aims to gather researchers and professionals in software and data engineering to present and discuss high-quality research results and outcomes, encouraging research integrating both domains. Accepted papers will be published by Springer Nature and indexed in various databases.",
+  "Call for Papers": "# SEDE 2025: Call for Papers\n\nThe 34th SEDE Conference: Software & Data Engineering (SEDE 2025) will be held in **New Orleans, Louisiana, USA, from October 20-21, 2025** at the **Holiday Inn Downtown Superdome**.\n\nSEDE 2025 aims at facilitating cross-fertilization of ideas in Software and Data Engineering, and hence especially encourages high-quality research integrating both domains.\n\n## Publication and Indexing\n\nAccepted papers in SEDE 2025 will be published by **Springer Nature**. Proceedings will be submitted to Web of Science and will be indexed in Scopus, EI Engineering, DBLP, Google Scholar, Conference Proceedings Citation Index (CPCI), ACM Digital Library, IO-Port, MathSciNet, and Zentralblatt MATH.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** May 30, 2025\n*   **Notification of Acceptance:** July 15, 2025\n*   **Registration due:** August 1, 2025\n*   **Camera-Ready Final Manuscript:** August 15, 2025\n\n## Conference Chair\n\nDr. Nick Rahimi, University of Southern Mississippi, USA, [nick.rahimi@usm.edu](mailto:nick.rahimi@usm.edu)\n\n## Program Chairs\n\n*   Dr. Venkatasivakumar Margapuri, Villanova University, USA, [vmargapu@villanova.edu](mailto:vmargapu@villanova.edu)\n*   Dr. Noor Amiri, University of Alabama, USA, [noor.amiri@ua.edu](mailto:noor.amiri@ua.edu)\n\n## Program Committee\n\n*   Abhay Paroha, Birla Institute of Tech.& Science\n*   Mirsalar Kamari, University of Southern Mississippi\n*   Karan Gupta, SunPower Corporation\n*   Saydul Akbar Murad, University of Southern Mississippi\n*   Takaaki Goto, Toyo University\n*   Tamer Aldwairi, Temple University\n*   Saleh Alnaeli, University of Wisconsin\n*   Maral Azizi, East Carolina University\n*   Silvia Cristea, Anglia Ruskin University\n*   Lei Yang, University of Nevada\n*   Xudong He, Florida International University\n*   Vic Grout, Glyndwr University\n*   Somenath Chakraborty, West Virginia University\n*   Antoine Bossard, Kanagawa University\n*   Xudong He, Southern Illinois University Carbondale\n*   Bingyang Wei, Texas Christian University\n*   Nic Herndon, East Carolina University\n*   Mejid Memari, Utah Valley University\n*   Ning Yang, Southern Illinois University Carbondale\n*   Chinmay Rajguru, GKN Aerospace\n*   Jose Martinez Cruz, University of Southern Mississippi\n*   Wei Dai, Purdue University Northwest\n*   Robert Stewart, Kansas State University\n*   Md. Saef Ullah Miah, American International University-Bangladesh"
+}
+```

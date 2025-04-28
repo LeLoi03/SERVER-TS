@@ -1,0 +1,35 @@
+output:
+{
+  "Conference dates": "October 26 - 29, 2025",
+  "Year": "2025",
+  "Location": "Denver, Colorado",
+  "City-State-Province": "Denver, Colorado",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Technical Papers) Submission Deadline": "April 16, 2025",
+    "(Posters and Demos) Submission Deadline": "June 25, 2025",
+    "(Workshops) Submission Deadline": "June 11, 2025",
+    "(Experience Reports) Submission Deadline": "June 11, 2025",
+    "(Mentoring) Late Deadline": "March 12, 2025",
+    "(Doctoral Consortium) Student's Cover Letter, Research Project Summary, and CV": "June 25, 2025",
+    "(Student Research Competition) Submission Deadline": "June 25, 2025"
+  },
+  "Notification Date": {
+    "initial reviews sent to authors, rebuttal phase opens": "May 28, 2025",
+    "rebuttal phase closes": "June 4, 2025",
+    "acceptance decisions sent to authors": "June 18, 2025"
+  },
+  "Camera-ready Date": {
+    "camera-ready deadline": "July 16, 2025"
+  },
+  "Other Date": {
+    "video presentation": "July 23, 2025"
+  },
+  "Topics": "Computing and Accessibility, Design, Evaluation, Use, Education, Enabling Technologies, Accessibility Education Methods",
+  "Publisher": "ACM Digital Library",
+  "Summary": "The ASSETS conference is the premier forum for presenting research on the design, evaluation, use, and education related to computing for people with disabilities and older adults. ASSETS 2025 will be held in Denver, Colorado from October 26-29, 2025. Accepted papers and the abstracts for posters and demonstrations, experience reports, and the student research competition will be archived in the ACM Digital Library.",
+  "Call for Papers": "# ASSETS 2025: Call for Papers\n\nThe 27th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS 2025) will be held in **Denver, Colorado from October 26—29, 2025**.\n\nASSETS is the premier forum for presenting research on the design, evaluation, use, and education related to computing for people with disabilities and older adults.\n\n## Call for Technical Papers\n\nWe invite high-quality original submissions on topics relevant to computing and accessibility. Submissions should present significant contributions to design, systems, tools, scientific understanding, methodology, or social issues. Relevant topics include (but are not limited to) new enabling technologies, studies of how technologies are used by people with disabilities, explorations of barriers to access, and evaluations of accessibility education methods.\n\n## Important Dates\n\nAll deadlines are 11:59 P.M. Anywhere on Earth (UTC -12:00).\n\n*   **Technical Papers:** Submission Deadline: April 16, 2025\n*   **Posters and Demos:** Submission Deadline: June 25, 2025\n*   **Workshops:** Submission Deadline: June 11, 2025\n*   **Experience Reports:** Submission Deadline: June 11, 2025\n*   **Mentoring:** Late Deadline: March 12, 2025\n*   **Doctoral Consortium:** Student's Cover Letter, Research Project Summary, and CV: June 25, 2025\n*   **Student Research Competition:** Submission Deadline: June 25, 2025\n*   **Initial reviews sent to authors, rebuttal phase opens:** May 28, 2025\n*   **Rebuttal phase closes:** June 4, 2025\n*   **Acceptance decisions sent to authors:** June 18, 2025\n*   **Camera-ready deadline:** July 16, 2025\n*   **Video presentation:** July 23, 2025\n\n## Submission Guidelines\n\n### Paper Format and Length\n\nASSETS uses the [ACM Publication System (TAPS)](https://authors.acm.org/proceedings/production-information/taps-production-workflow) process to generate final multi-format representations of accepted papers. The correct template for submission is single-column:\n\n*   [Word Submission Template](https://authors.acm.org/proceedings/production-information/preparing-your-article-with-microsoft-word)\n*   [LaTeX](https://authors.acm.org/proceedings/production-information/preparing-your-article-with-latex) (using “manuscript” style)\n*   [Overleaf](https://authors.acm.org/proceedings/production-information/overleaf)\n\nThe length of most accepted technical papers will be 7,500 to 10,000 words (4,000 to 5,000 for short technical papers); note that references do not count towards these word counts.\n\n### Accessible Submissions\n\nYour PDF submission must be accessible. Please refer to the [instructions on creating an accessible ACM conference paper](https://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-pdf-author-guide/) on how to accomplish this.\n\n### Optional Accessible Video Figures as Supplementary Material\n\nYou may include an optional video figure to accompany your paper submission as supplementary material, which may be up to five minutes long.\n\n### Anonymous Submissions\n\nASSETS will utilize a fully anonymous review process for Technical Papers. Authors must anonymize their paper submissions, all supplemental materials, and video figures.\n\n### Review Process\n\nSubmissions that do not meet formatting or accessibility guidelines, are not properly anonymized, are out of the topical scope of the conference, or are otherwise deemed non-competitive by the program chairs may be rejected without review.\n\n### Submission Site\n\nThe submission deadline is Wednesday, April 16, 2025, 11:59 P.M. Anywhere on Earth (UTC -12:00). Please submit via the [ASSETS 2025 technical papers submission site](https://new.precisionconference.com/assets).\n\n## Contact\n\nFor further information or any questions regarding technical paper submissions, please contact the Technical Program Chairs, Cynthia Bennett and Martez Mott, at [tpc-assets25@acm.org](mailto:tpc-assets25@acm.org)."
+}
+

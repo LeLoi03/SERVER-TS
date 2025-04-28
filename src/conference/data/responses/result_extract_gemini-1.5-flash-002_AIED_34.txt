@@ -1,0 +1,44 @@
+output:
+{
+  "Conference dates": "July 22 - 26, 2025",
+  "Year": "2025",
+  "Location": "Palermo, Italy",
+  "City-State-Province": "Palermo",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Full and short papers, main submission) Abstracts due": "February 12, 2025",
+    "(Full and short papers, main submission) Papers due": "February 19, 2025",
+    "(Doctoral Consortium Track) Submission deadline": "March 7, 2025",
+    "(Workshops and Tutorials Track) Submission deadline": "March 3, 2025",
+    "(WideAIED Track) Papers due": "March 17, 2025",
+    "(Practitioners, Industry and Policy (PIP) Track) Submission deadline": "March 17, 2025",
+    "(Interactive Events Track) Submission deadline": "May 5, 2025",
+    "(BlueSky Track) Abstracts due": "March 5, 2025",
+    "(BlueSky Track) Papers due": "March 12, 2025",
+    "(Late Breaking Results) Submission due": "April 5, 2025"
+  },
+  "Notification Date": {
+    "(Full and short papers, main submission) Notification of acceptance": "April 2, 2025",
+    "(Doctoral Consortium Track) Notification of acceptance": "April 2, 2025",
+    "(Workshops and Tutorials Track) Notification of acceptance": "March 20, 2025",
+    "(WideAIED Track) Notification of acceptance": "April 24, 2025",
+    "(Practitioners, Industry and Policy (PIP) Track) Notification of acceptance": "April 25, 2025",
+    "(Interactive Events Track) Notification of acceptance": "May 30, 2025",
+    "(BlueSky Track) Notification of acceptance": "April 21, 2025",
+    "(Late Breaking Results) Notification of acceptance": "April 30, 2025"
+  },
+  "Camera-ready Date": {
+    "(Full and short papers, main submission) Camera-ready paper due": "May 2, 2025",
+    "(Doctoral Consortium Track) Camera-ready paper due": "May 2, 2025",
+    "(WideAIED Track) Camera-ready paper due": "May 2, 2025",
+    "(Practitioners, Industry and Policy (PIP) Track) Camera-ready paper due": "May 2, 2025",
+    "(BlueSky Track) Camera-ready paper due": "May 2, 2025",
+    "(Late Breaking Results) Camera-ready paper due": "May 7, 2025"
+  },
+  "Topics": "Artificial Intelligence in Education, AI-assisted systems, cognitive science approaches for educational computing applications",
+  "Summary": "The 26th International Conference on Artificial Intelligence in Education (AIED 2025) will take place in Palermo, Italy, from July 22-26, 2025.  The theme is “AI as a Catalyst for Inclusive, Personalised, and Ethical Education: Empowering Teachers and Students for an Equitable Future”.",
+  "Call for Papers": "# AIED 2025: Call for Papers\n\nThe 26th International Conference on Artificial Intelligence in Education (AIED 2025) will take place in **Palermo, Italy, from July 22-26, 2025.**\n\n## Theme\n\n\"AI as a Catalyst for Inclusive, Personalised, and Ethical Education: Empowering Teachers and Students for an Equitable Future\"\n\n## Tracks\n\nAIED 2025 is implementing a track-based system for its main paper submissions.  The tracks are:\n\n*   Track 1 – AIED architectures and tools\n*   Track 2 – Machine learning and Generative AI\n*   Track 3 – Learning, teaching and pedagogy\n*   Track 4 – Human-centered design and design-based research\n*   Track 5 – Teaching AI\n*   Track 6 – Ethics, Equity, and AIED in Society\n*   Track 7 – Theoretical aspects of AIED and AI-based modelling for Education\n\n## Submission Instructions\n\nWe invite the following main submissions to the conference, to be submitted directly to one of the above research tracks:\n\n*   **Full paper submission:** Full papers should present integrative reviews or original reports of substantive new work: theoretical, empirical, and/or in the design, development and/or deployment of novel concepts, systems, and mechanisms. Full papers will be presented as long oral talks. Papers submitted as a full paper may be accepted as a short paper.\n*   **Short paper submission:** Short papers are expected to describe novel and interesting results to the overall community at large. Short papers will be presented as short oral talks.\n\nSubmissions must follow Springer policies on publication (including policies on the use of AI in the authoring process): [https://tinyurl.com/3rk3zj3v](https://tinyurl.com/3rk3zj3v).\n\n## Review Process\n\nAll submissions will be reviewed by three members of the program committee, followed by a metareview conducted by a senior member of the program committee (all double-masked).\n\n## Important Dates (full and short papers, main submission)\n\n*   **Submissions open:** December 20, 2024\n*   **Abstracts due:** February 5, 2025\n*   **Papers due:** February 19, 2025\n*   **Notification of acceptance:** April 2, 2025\n*   **Camera-ready paper due:** May 2, 2025\n\nOther submission types (Doctoral Consortium, Workshops and Tutorials, WideAIED, Practitioners, Industry and Policy, Interactive Events, BlueSky, Late Breaking Results) have different deadlines.  These will be announced in the corresponding CFPs."
+}
+

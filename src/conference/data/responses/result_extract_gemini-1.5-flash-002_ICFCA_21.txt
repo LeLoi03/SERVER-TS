@@ -1,0 +1,27 @@
+{
+  "Conference dates": "September 8 - 12, 2025",
+  "Year": "2025",
+  "Location": "Babeș-Bolyai University, Cluj-Napoca, România",
+  "City-State-Province": "Cluj-Napoca",
+  "Country": "Romania",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Journal-Track Submissions) Full paper submission": "March 23, 2025",
+    "(Regular and short papers) Abstract submission": "March 24, 2025",
+    "(Regular and short papers) Full paper submission": "April 7, 2025"
+  },
+  "Notification Date": {
+    "(Journal-Track Submissions) Paper reviews sent to authors": "May 9, 2025",
+    "(Journal-Track Submissions) Notification of acceptance": "July 6, 2025",
+    "(Regular and short papers) Notification of acceptance": "May 21, 2025"
+  },
+  "Camera-ready Date": {
+    "(Journal-Track Submissions) Revised submission": "June 2, 2025",
+    "(Regular and short papers) Camera-ready papers due": "June 5, 2025"
+  },
+  "Topics": "Formal Concept Analysis, Conceptual Structures, Concept Lattices, Data Mining, Information Retrieval, Knowledge Management, Knowledge Discovery, Ontologies, Semantic Web, Knowledge Graphs, Natural Language Processing, Linguistics, Digital Humanities, Cybersecurity, Biology, Medicine, Social Network Analysis, Psychology, Philosophy",
+  "Publisher": "Springer",
+  "Summary": "The International Joint Conference on Conceptual Knowledge Structures (CONCEPTS 2025) is a merger of three conferences: the International Conference on Formal Concept Analysis (ICFCA), Concept Lattices and Their Applications (CLA), and the International Conference on Conceptual Structures (ICCS).  CONCEPTS 2025 will be held in Cluj-Napoca, Romania from September 8th-12th, 2025.",
+  "Call for Papers": "# CONCEPTS 2025: Call for Papers\n\nThe 2nd International Joint Conference on Conceptual Knowledge Structures (CONCEPTS 2025) will be held in **Cluj-Napoca, Romania from September 8th-12th, 2025**.\n\nCONCEPTS is a merger of three conferences: CLA, ICCS, and ICFCA.\n\n## Topics and Scope\n\nMain topics include, but are not limited to:\n\n*   Fundamental aspects of Formal Concept Analysis (e.g., FCA theory, concept lattices, algorithms and computational complexity)\n*   Conceptual graphs, graph-based models for human reasoning\n*   Knowledge spaces and learning spaces\n*   Fuzzy, relational, and/or triadic conceptual structures\n*   Conceptual knowledge acquisition, management, exploration, analysis and/or visualization\n*   Probabilistic or approximative approaches to conceptual knowledge\n*   Bridging conceptual structures to information sciences, artificial intelligence, data mining, machine learning, information retrieval, database theory, software engineering, and other areas of computer science\n*   Ontologies, semantic web, knowledge graphs, in particular their relation to conceptual knowledge structures such as concept lattices and conceptual graphs.\n*   Conceptual structures in natural language processing and linguistics\n*   Understanding real-world data and modeling real-world phenomena with conceptual structures (e.g., applications in digital humanities, cybersecurity, biology, medicine, social network analysis)\n*   Psychology, philosophy, and conceptual structures\n\n## Submission Details\n\nSubmissions are invited on significant, original (previously unpublished) research on the topics of the conference:\n\n*   **Journal-track papers:** Up to 26 pages, to be published in a special issue of the International Journal of Approximate Reasoning (IJAR).\n*   **Regular papers:** Up to 16 pages\n*   **Short papers:** Up to 8 pages. Both regular and short papers will be published by Springer in the LNAI series as a proceedings volume.\n\nAll submissions will be subject to single-blind peer review. Accepted papers have to be presented at the conference on-site. Therefore, at least one author per paper has to register timely and attend the conference on-site.\n\n## Important Dates\n\n### Journal-Track Submissions\n\n*   **Full paper submission:** March 23, 2025 (AoE)\n*   **Paper reviews sent to authors:** May 9, 2025\n*   **Revised submission:** June 2, 2025\n*   **Notification of acceptance:** July 6, 2025\n\nManuscripts must be submitted via the International Journal of Approximate Reasoning online submission system (Editorial Manager®): [https://www.editorialmanager.com/ija/default2.aspx](https://www.editorialmanager.com/ija/default2.aspx). Please select the article type “VSI: CONCEPTS 2025” when submitting your manuscript online.\n\n### Regular and Short Papers\n\n*   **Abstract submission:** March 24, 2025 (AoE)\n*   **Full paper submission:** April 7, 2025 (AoE) Firm deadline\n*   **Notification of acceptance:** May 21, 2025\n*   **Camera-ready papers due:** June 5, 2025\n\nSubmission link: [https://equinocs.springernature.com/service/concepts2025](https://equinocs.springernature.com/service/concepts2025). Please select the appropriate category for your submitted manuscript, “regular paper” or “short paper.” Please visit the page [Information for authors](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) on Springer’s website for templates and formatting style."
+}

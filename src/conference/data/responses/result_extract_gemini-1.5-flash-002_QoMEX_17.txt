@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "September 30 - October 2, 2025",
+  "Year": "2025",
+  "Location": "Madrid, Spain",
+  "City-State-Province": "Madrid",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Special Session Proposal": "December 9, 2024",
+    "Full Paper Registration (title, abstract, and author list)": "March 26, 2025",
+    "Full Papers Submission": "April 1, 2025",
+    "Short and Demo Papers Submission": "June 13, 2025"
+  },
+  "Notification Date": {
+    "Special Session Proposal Notification": "December 12, 2024",
+    "Full Papers Notification": "May 28, 2025",
+    "Short and Demo Papers Notification": "July 11, 2025"
+  },
+  "Topics": "Multimedia Quality, Quality of Experience (QoE), User Experience (UX), Innovative Approaches and Paradigms in QoE Research, Foundations and Methodologies in QoE Research, Multimedia QoE and User eXperience, Technological Innovations and QoE, Human Factors and Interdisciplinary Connections, Specific Applications and Use Cases",
+  "Summary": "The 17th International Conference on Quality of Multimedia Experience (QoMEX’25) will take place in Madrid, Spain, from September 30 to October 2, 2025. This event will gather top experts from both academia and industry to showcase and discuss the latest research on multimedia quality, Quality of Experience (QoE), and User Experience (UX).",
+  "Call for Papers": "# QoMEX 2025: Call for Papers\n\nThe 17th International Conference on Quality of Multimedia Experience (QoMEX’25) will take place in **Madrid, Spain, from September 30 to October 2, 2025**.\n\n## Theme\n\nThinking of a QoE (r)evolution\n\nOn the edge of QoMEX “coming of age”, it is time to rethink the purpose and methods of QoE research: cross-fertilizing with adjacent fields, reaching more diverse populations, or exploring novel techniques and paradigms.\n\n## Call for Papers\n\nProspective authors are invited to submit **full papers** (up to 6 pages for technical content including figures and references, and one optional 7th page containing only references) or **short/demo papers** (3 + 1 page of references) to the general track, dataset and tools track, or to special sessions. Each paper will undergo a double-blind review process. Accepted and presented papers will be included in the conference proceedings and published in IEEE Xplore.\n\n## Topics of Interest\n\nThe conference will be held in the form of oral, poster, and plenary sessions. The QoMEX 2024 organizing committee solicits contributions including, but not limited to, the following topics:\n\n*   Innovative Approaches and Paradigms in QoE Research\n*   Revolutionary and disruptive approaches in QoE research\n*   Novel paradigms for QoE assessment\n*   Quality of sustainable experiences (QoSE)\n*   QoE and the value of services\n*   Foundations and Methodologies in QoE Research\n*   Multimedia QoE and User eXperience\n*   User assessment and evaluation methods\n*   Objective models for QoE and media quality\n*   Replicability and transparency in QoE research\n*   Databases for QoE research\n*   Technological Innovations and QoE\n*   QoE management in networks and systems\n*   QoE in the era of big data and deep learning\n*   User-centricity and key value indicators in 6G\n*   Human Factors and Interdisciplinary Connections\n*   QoE, Quality of Life (QoL), and well-being\n*   Diversity, inclusivity, ethics, and accessibility in QoE\n*   Human-Computer Interaction and novel interaction techniques\n*   Human factors in multimedia experiences\n*   Specific Applications and Use Cases\n*   User research and experience for specific applications: gaming, education, training, healthcare, culture, etc.\n*   Immersive experiences and technologies\n*   Quality of multimodal and multisensory perception\n\n## Important Dates\n\nAll deadlines are Anywhere on Earth Standard Time (AoE=UTC-12) at 23:59:59.\n\n*   **Special Session Proposal:** December 9th, 2024 (extended!)\n*   **Special Session Proposal Notification:** December 12, 2024\n*   **Full Paper Registration (title, abstract, and author list):** March 26, 2025\n*   **Full Papers Submission:** April 1, 2025\n*   **Full Papers Notification:** May 28, 2025\n*   **Short and Demo Papers Submission:** June 13, 2025\n*   **Short and Demo Papers Notification:** July 11, 2025\n\n## Submission System\n\n[EDAS paper submission system](https://edas.info/index.php?c=33681)\n\n*   [Full Paper](https://qomex2025.itec.aau.at/authors/full-paper-submission/)\n*   [Short Paper](https://qomex2025.itec.aau.at/authors/short-paper-submission/)\n*   [Dataset and Tools Paper](https://qomex2025.itec.aau.at/authors/dataset-and-tools-submission/)\n*   [Demo Paper](https://qomex2025.itec.aau.at/authors/demo-paper-submission/)\n\n## Travel Grants\n\n[https://qomex2025.itec.aau.at/participants/travel-grants/](https://qomex2025.itec.aau.at/participants/travel-grants/)"
+}
+

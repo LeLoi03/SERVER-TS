@@ -1,0 +1,125 @@
+Conference INLG:
+
+Home 
+ href="/calls.html" - Calls 
+ For Participants | RegistrationLocal InformationBanquet 
+ Organizers 
+ Program | ProgramWorkshops/TutorialsKeynoteshref="/accepted-papers.html" - Accepted Papers
+Awards 
+ FAQ 
+ INLG 2025 
+ October 29 - November 2, 2025@ Hanoi, VietnamWelcome to INLG 2025! 
+ The18th International Natural Language Generation Conferenceis scheduled to be held in Hanoi, Vietnam from October 29 to November 2, 2025. The event will take place atVietnam Institute for Advanced Study in Mathematics. 
+ INLG 2025 will be taking place before EMNLP 2025 (November 5-9) in Suzhou, China. 
+ All accepted papers must be presented in person, and remote presentations are not allowed without a compelling reason, such as visa or health problems, which is approved by the organizer. Submitted papers for review at INLG 2025 must not be published elsewhere until after the notification of acceptance. 
+ News 
+  
+ Important Dates 
+ All deadlines are Anywhere on Earth (UTC-12) 
+  
+ July 14 | START system regular paper submission deadline 
+ Aug 7 | ARR commitment ot INLG deadline via START system 
+ July 24 | START system demo paper submission deadline 
+ Aug 21 | Paper notification 
+ Sep 15 | Camera-ready submission deadline 
+ Oct 29 - Nov 2 | INLG 2025 Conference 
+ Supported by 
+ Organized by 
+ Sponsors 
+ Gold Sponsors 
+ TBASilver Sponsors 
+ TBABronze Sponsors 
+ TBA© INLG 2025 Organizers 
+
+Call for Papers information:
+Home 
+ href="/calls.html" - Calls 
+ For Participants | RegistrationLocal InformationBanquet 
+ Organizers 
+ Program | ProgramWorkshops/TutorialsKeynoteshref="/accepted-papers.html" - Accepted Papers
+Awards 
+ FAQ 
+ INLG 2025 
+ October 29 - November 2, 2025@ Hanoi, VietnamCalls 
+ href="#" - INLG 2025 Call for Papers
+First Call For Papers: 18th International Natural Language Generation Conference INLG 2025 
+ We invite the submission of long and short papers, as well as system demonstrations, related to all aspects of Natural Language Generation (NLG), including data-to-text, concept-to-text, text-to-text and vision-to-text approaches. Accepted papers will be presented as oral talks or posters. 
+ The event is organized under the auspices of the Special Interest Group on Natural Language Generation (SIGGEN) of the Association for Computational Linguistics (ACL). The event will be held from October 29 to November 2, 2025. INLG 2025 will be taking place in Vietnam Institute for Advanced Study in Mathematics, Hanoi, Vietnam. INLG 2025 will be taking place before EMNLP 2025 (November 5-9) in Suzhou, China. 
+ Important dates 
+ All deadlines are Anywhere on Earth (UTC-12) 
+ START system regular paper submission deadline: July 14, 2025 
+ ARR commitment to INLG deadline via START system: August 7, 2025 
+ START system demo paper submission deadline: July 24, 2025 
+ Notification: August 21, 2025 
+ Camera ready: September 15, 2025 
+ Conference: October 29 - November 2, 2025 
+ Topics 
+ INLG 2025 solicits papers on any topic related to NLG. General topics of interest include, but are not limited to: 
+ Large Language Models (LLMs) for NLG 
+ Evaluation and error analysis of NLG systems 
+ Explainability and Trustworthiness of NLG systems 
+ Generalizability of NLG systems 
+ Bias and fairness in NLG systems 
+ Thinking models for NLG 
+ Affect/emotion generation 
+ Analysis and detection of automatically generated text 
+ Cognitive modeling of language production 
+ Computational efficiency of NLG models 
+ Content and text planning 
+ Corpora and resources for NLG 
+ Ethical considerations of NLG 
+ Grounded language generation 
+ Lexicalisation 
+ Multimedia and multimodality in generation 
+ Natural language understanding techniques for NLG 
+ NLG and accessibility 
+ NLG in speech synthesis and spoken language models 
+ NLG in dialogue systems and chatbots 
+ NLG for human-robot interaction 
+ NLG for low-resourced languages 
+ NLG for real-world applications 
+ Paraphrasing, summarization and translation 
+ Personalisation and variation in text 
+ Referring expression generation 
+ Storytelling and narrative generation 
+ Surface realization 
+ System architectures 
+ Submissions & Format 
+ Three kinds of papers can be submitted: 
+ Long papersare most appropriate for presenting substantial research results and must not exceed eight (8) pages of content, plus unlimited pages of ethical considerations, supplementary material statements, and references. The supplementary material statement provides detailed descriptions to support the reproduction of the results presented in the paper (see below for details). The final versions of long papers will be given one additional page of content (up to 9 pages) so that reviewers' comments can be taken into account. 
+ Short papersare more appropriate for presenting an ongoing research effort and must not exceed four (4) pages, plus unlimited pages of ethical considerations, supplementary material statements, and references. The final versions of short papers will be given one additional page of content (up to 5 pages) so that reviewers' comments can be taken into account. 
+ Demo papersshould be no more than two (2) pages, including references, and should describe implemented systems relevant to the NLG community. It also should include a link to a short screencast of the working software. In addition, authors of demo papers must be willing to present a demo of their system during INLG 2025. 
+ Submissions should followhref="https://www.aclweb.org/adminwiki/index.php?title=ACL_Author_Guidelines" - ACL Author Guidelines
+and policies for submission, review and citation, and be anonymised for double blind reviewing. Please use ACL style files; LaTeX style files and Microsoft Word templates are available athttps://acl-org.github.io/ACLPUB/formatting.html. 
+ Authors must honor the ethical code set out in theACL Code of Ethics. If your work raises any ethical issues, you should include an explicit discussion of those issues. This will also be taken into account in the review process. You may findhref="https://aclrollingreview.org/responsibleNLPresearch/" - this checklist
+of use. 
+ Authors are strongly encouraged to ensure that their work is reproducible; see, e.g., the followinghref="https://2021.aclweb.org/calls/reproducibility-checklist/" - reproducibility checklist
+. Papers involving any kind of experimental results (human judgments, system outputs, etc) should incorporate a data availability statement into their paper. Authors are asked to indicate whether the data is made publicly available. If the data is not made available, authors should provide a brief explanation why. (E.g. because the data contains proprietary information.) Astatement guideis available on thehref="https://inlg2025.github.io/" - INLG 2025 website
+. 
+ To submit a long or short paper to INLG 2025, authors can either submit directly or commit a paper previously reviewed by ARR via thehref="https://softconf.com/p/inlg2025/" - same paper submission site
+. For direct submissions, the deadline for submitting papers isJuly 14, 2025, 11:59:59 AOE. If committing an ARR paper to INLG, the submission is also made through the INLG 2025 paper submission site, indicating the link of the paper on OpenReview. The deadline for committing an ARR paper to INLG isAugust 7, 2025, 11:59:59 AOE, and the last eligible ARR paper submission deadline for INLG 2025 isMay 19, 2025. It is important to note that when committing an ARR paper to INLG, it should be submitted through the INLG 2025 paper submission site, just like a direct submission paper, with the only difference being the need to provide the OpenReview link to the paper and to provide an optional author response to reviews. 
+ Demo papers should be submitted directly through the INLG 2025href="https://softconf.com/p/inlg2025/" - paper submission site
+byJuly 24, 2025, 11:59:59 PM AOE. 
+ All accepted papers will be published in the INLG 2025 proceedings and included in the ACL anthology. A paper accepted for presentation at INLG 2025 must not have been presented at any other meeting with publicly available proceedings. Dual submission to other conferences is permitted, provided that authors clearly indicate this in the submission form. If the paper is accepted at both venues, the authors will need to choose which venue to present at, since they can not present the same paper twice. Submitted papers for review at INLG 2025 must not be published elsewhere until after the notification of acceptance. Finally, at least one of the authors of an accepted paper must register to attend the conference. 
+ Awards 
+ INLG 2025 will present several awards to recognize outstanding achievements in the field. These awards are: 
+ Best Long Paper Award | : This award will be given to the best long paper submission based on its originality, impact, and contribution to the field of NLG. 
+ Best Short Paper Award | : This award will be given to the best short paper submission based on its originality, impact, and contribution to the field of NLG. 
+ Best Demo Paper Award | : This award will recognize the best demo paper submitted to the conference. This award considers not only the paper's quality but also the demonstration given at the conference. The demonstration will play a significant role in the judging process. 
+ Best Evaluation Award | : The award is a new addition to INLG 2025. This award is designed to honour authors who have demonstrated the most comprehensive and insightful analysis in evaluating their results. This award aims to highlight papers where the authors have gone the extra mile in providing a thorough and detailed analysis of their results, offering a nuanced understanding of their findings. 
+ Frequently asked questions about committing a paper from ACL Rolling Review are answered in theFAQtab. 
+ href="#" - INLG 2025 Call for Workshop & Tutorial Proposals
+TBA 
+ href="#" - INLG 2025 Call for Sponsors
+Call for Sponsors 
+ The 18th International Conference on Natural Language Generation (INLG) will be held in Hanoi, Vietnam from October 29 to November 2, 2025.We humbly invite sponsors to consider supporting the conference! 
+ About INLG 2025 
+ INLG is the leading specialist conference for natural language generation and has been held regularly since the late 1980s. 
+ Organized by theSpecial Interest Group in Generation (SIGGEN)of theAssociation for Computational Linguistics (ACL), it generally attracts around 200 attendees from universities and corporate research labs. 
+ Why Sponsor INLG 2025? 
+ By sponsoring INLG 2025, your organization gains visibility among top professionals and shows commitment to technological advancement in natural language generation. The conference will be an in-person event, ensuring maximum interaction and exposure. 
+ Sponsorship Tiers 
+ TBA 
+ href="#" - Call for Generation Challenges 2025
+TBA 
+ © INLG 2025 Organizers

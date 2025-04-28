@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "September 8 - 11, 2025",
+  "Year": "2025",
+  "Location": "São Francisco Convent, Coimbra, Portugal",
+  "City-State-Province": "Coimbra",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Main Track CFP: Paper submission": "January 31, 2025",
+    "Call for Posters, Demos: Paper submission": "May 18, 2025",
+    "Call for Workshop: Paper submission": "May 8, 2025"
+  },
+  "Notification Date": {
+    "Review results’ notification": "April 29, 2025",
+    "Revision results’ notification": "July 11, 2025"
+  },
+  "Other Date": {
+    "Main Track CFP: Abstract registration": "January 24, 2025",
+    "Call for Non-Paper Sessions: Proposal submission": "May 1, 2025",
+    "Call for Tutorial and Hackathon: Proposal submission": "April 20, 2025",
+    "Call for Workshop: Proposal submission": "February 18, 2025",
+    "One-shot revision deadline": "June 27, 2025"
+  },
+  "Topics": "Computer networks, Mobile networks, Wide-area networks, Data center networks, Embedded networks, Home networks, Enterprise networks, Wired technologies, Wireless technologies, Optics, Radio, Acoustic communication, Visible light communication, Network architecture, Packet-switched networks, Circuit-switched networks, Virtualization, Mobility, Resource management, Network performance, Energy consumption, Environmental impact, Network topology, Network robustness, Network security, Network diagnosis, Network verification, Network privacy, Network economics, Network evolution, Applications and networks",
+  "Summary": "ACM SIGCOMM 2025, the 39th edition of the conference series, will be held in Coimbra, Portugal, September 8 - 11, 2025. ACM SIGCOMM is the flagship annual conference of the ACM Special Interest Group on Data Communication (SIGCOMM). The conference seeks papers describing significant research contributions or significant deployment experiences in communication networks and networked systems.",
+  "Call for Papers": "# SIGCOMM 2025: Call for Papers\n\nThe ACM SIGCOMM 2025 conference seeks papers describing significant research contributions or significant deployment experiences in communication networks and networked systems. SIGCOMM 2025 will be held in **Coimbra, Portugal, from September 8-11, 2025**.\n\n## Scope\n\nSIGCOMM takes a broad view of networking which includes (but is not limited to):\n\n*   All types of computer networks\n*   All types of wired and wireless technologies\n*   All aspects of networks and networked systems\n*   All parts of the network life cycle\n*   All approaches and techniques\n\n## Tracks\n\nSIGCOMM 2025 will accept submissions in two tracks: research and experience.\n\n## Submission Guidelines\n\n*   All submissions must be anonymous.\n*   Submissions should be in two-column, 10-point format and can be up to 12 pages in length, with as many additional pages as necessary for references and optional appendices.\n*   Reviewers are not required to read appendices or consider them in their review.\n*   Accepted papers may be shepherded by a member of the program committee.\n*   Authors of every accepted paper are expected to arrange for an in-person attendee to present the paper and answer questions.\n\n## Important Dates\n\n*   **Abstract registration deadline:** Friday, January 24, 2025, 23:59 UTC\n*   **Paper submission deadline:** Friday, January 31, 2025, 23:59 UTC\n*   **Review results’ notification:** Tuesday, April 29, 2025\n*   **One-shot revision deadline:** Friday, June 27, 2025\n*   **Revision results’ notification:** Friday, July 11, 2025\n*   **Camera-ready deadline:** (To be announced)\n*   **Conference:** September 8 – 11, 2025\n\n## Submission Site\n\n[https://sigcomm25.hotcrp.com](https://sigcomm25.hotcrp.com)\n\n## New this year: SIGCOMM Shorts\n\nA small number of submissions will be invited to present a “lightning” talk at SIGCOMM’25 and a shorter version of the submission which will be included in the conference proceedings (up to two pages excluding references and appendices).\n\n## New this year: One-shot Revision\n\nA small number of submissions may be invited to a one-shot revision. This includes a summary of the paper's merits and a list of necessary changes that are required for the paper to be accepted at SIGCOMM. Authors will be given a deadline (approximately 1.5 months after the revision request is issued) to submit a version of their work addressing all revision instructions.\n\n## Ethics and Policy\n\nAll papers must include, in the main body of the paper, a statement or subsection about ethical issues raised by the work. Papers that do not include an ethics statement may be rejected.\n\n## Artifact Evaluation for Accepted Papers\n\nThe authors of accepted SIGCOMM 2025 papers will be invited to submit supporting materials to the Artifact Evaluation process. Participation in Artifact Evaluation is voluntary and has no influence on paper acceptance, but it is strongly encouraged.\n\n## Contact the PC Chairs\n\n[gmporter@cs.ucsd.edu;kandula@gmail.com?subject=[SIGCOMM2025]%20PC%20Chairs%20-%20Question%20about%20](mailto:gmporter@cs.ucsd.edu;kandula@gmail.com?subject=[SIGCOMM2025]%20PC%20Chairs%20-%20Question%20about%20)"
+}
+

@@ -1,0 +1,25 @@
+```json
+{
+  "Conference dates": "November 10 - 13, 2025",
+  "Year": "2025",
+  "Location": "Yokohama, Japan",
+  "City-State-Province": "Yokohama",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full paper submissions - Submission Deadline": "May 30, 2025",
+    "Poster paper submissions - Submission Deadline": "July 18, 2025",
+    "Workshop submissions - Submission Deadline": "May 30, 2025"
+  },
+  "Notification Date": {
+    "Full paper submissions - Notification of acceptance": "July 31, 2025",
+    "Poster paper submissions - Notification of acceptance": "July 31, 2025",
+    "Workshop submissions - Notification of acceptance": "June 15, 2025"
+  },
+  "Topics": "Human-Agent Interaction, Human-Robot Interaction, Affective Computing, Computer-Supported Cooperative Work, Games, Serious Games, Artificial Intelligence",
+  "Publisher": "ACM",
+  "Summary": "The 13th International Conference on Human-Agent Interaction (HAI 2025) will be held in Yokohama, Japan, from November 10-13, 2025.  The conference is an interdisciplinary forum for discussing and disseminating research on human-agent interaction, covering topics such as human-robot interaction, affective computing, and computer-supported cooperative work. The theme of HAI 2025 is “Interaction and Imagination”.",
+  "Call for Papers": "# HAI 2025: Call for Papers\n\nThe 13th International Conference on Human-Agent Interaction (HAI 2025) will be held in **Yokohama, Japan, from November 10-13, 2025**.\n\nHAI is a major interdisciplinary forum for discussing and disseminating the latest research and results in human-agent interaction, including robots, software agents, and human-to-human communication via digital media.\n\n## Theme\n\nThe theme of HAI 2025 is **“Interaction and Imagination”**.\n\n## Topics\n\nTopics include, but are not limited to:\n\n*   Studies of Human-Agent Interaction, with quantitative/qualitative results\n*   Theoretical models\n*   Technological advances\n*   Experimental methods\n*   Impacts of embodiment\n*   Character and avatar design\n*   Agents in applications (e.g., self-driving cars, social networks)\n*   Agents in business and marketing\n*   Experience design\n*   Autonomous and adaptive agents/systems\n\n## Important Dates\n\n### Full Paper Submissions\n\n*   **Submission Deadline:** May 30, 2025\n*   **Notification of acceptance:** July 31, 2025\n\n### Poster Paper Submissions\n\n*   **Submission Deadline:** July 18, 2025\n*   **Notification of acceptance:** July 31, 2025\n\n### Workshop Submissions\n\n*   **Submission Deadline:** May 30, 2025\n*   **Notification of acceptance:** June 15, 2025\n\n## Submission Instructions\n\n### Format\n\nHAI 2025 will accept only online submissions of PDF files. All submissions will be reviewed by three reviewers and will receive a meta-review for quality assurance.  All papers need to be in the ACM SIGCHI format. All accepted papers will be archived in the ACM Digital Library.\n\n### Anonymization\n\nAll submissions should be anonymized. Remove all author information, including references to your own work and institutions. If references must be made, make them in the third person. If a person appears in an image who may be recognized as an author, please blur their face. If possible, please list your paper number (assigned by the submission system) in your paper instead of your name. HAI2025 uses double-blind review.\n\n### Posters\n\nWe invite researchers to submit posters. Paper Length: up to 2 pages (excluding references). All papers MUST be in the ACM Conference Paper format. Authors of accepted posters are required to show their work as a poster during the poster session (either virtual or in person). Your poster must be no larger than an A0.\n\n### Workshops/Tutorials Submission Guidelines\n\nWe invite proposals for workshops and tutorials.  Topics include specific application areas for HAI, technological advances in HAI, experimental methods for the evaluation of HAI, impacts of embodiment, character and avatar design, agents in social networks, agents in computer games, affective computing, specific applications for agents in retail, business and marketing, experience design.\n\n## Contact\n\n[https://hai-conference.net/hai2025/organizers/](https://hai-conference.net/hai2025/organizers/)"
+}
+```

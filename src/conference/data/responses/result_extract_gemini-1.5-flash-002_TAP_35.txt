@@ -1,0 +1,29 @@
+```json
+{
+  "Conference dates": "September 9-10, 2024",
+  "Year": "2024",
+  "Location": "Milan, Italy",
+  "City-State-Province": "Milan",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission": "May 15, 2024"
+  },
+  "Notification Date": {
+    "Paper notification": "July 5, 2024",
+    "Artifact notification": "July 14, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready submission": "July 19, 2024"
+  },
+  "Other Date": {
+    "Abstract submission (optional)": "May 8, 2024",
+    "Artifact submission": "July 7, 2024"
+  },
+  "Topics": "Verification, Formal Methods, Static Analysis, Dynamic Analysis, Testing, Proving, Symbolic Execution, SAT/SMT-solving, Model Checking, Predicate Abstraction, Machine Learning, Tool Development, Empirical Research",
+  "Publisher": "Springer",
+  "Summary": "TAP 2024, the 18th International Conference on Tests and Proofs, promoted research in verification and formal methods that targets the interplay of static and dynamic analysis techniques with the ultimate goal of improving software and system dependability. The conference was part of FM 2024 and took place in Milan, Italy.",
+  "Call for Papers": "# TAP 2024: Call for Papers\n\nTAP 2024 was the 18th International Conference on Tests and Proofs. TAP promotes research in verification and formal methods that targets the interplay of static and dynamic analysis techniques with the ultimate goal of improving software and system dependability.\n\n## Scope\n\nResearch in verification has seen an increase in heterogeneous techniques and a synergy between the traditionally distinct areas of dynamic and static analysis. There is growing awareness that dynamic techniques such as testing and static techniques such as proving are complementary rather than mutually exclusive.\n\nTAP’s scope encompasses many aspects of verification technology including foundational work, tool development, and empirical research. Topics of interest center around the combination of static techniques such as proving and dynamic techniques such as testing.\n\n## Topics of Interest\n\nPapers were solicited on, but not limited to, the following topics:\n\n*   Verification and analysis techniques combining proofs and tests\n*   Static analysis of programs with the aid of dynamic techniques\n*   Deductive techniques supporting the automated generation of test vectors and oracles\n*   Deductive techniques supporting (novel) definitions of coverage criteria\n*   Specification inference by deductive or dynamic methods\n*   Testing and runtime analysis of formal specifications\n*   Search-based techniques for proving and testing\n*   Testing and Verification of systems based on machine learning\n*   Verification of verification tools and environments\n*   Applications of test and proof techniques in new domains\n*   Combined approaches of test and proof in the context of formal certifications (Common Criteria, CENELEC, …)\n*   Case studies, tool and framework descriptions, and experience reports\n\n## Artifact Evaluation\n\nAuthors were encouraged (but not required) to make the relevant artifacts available to the reviewers (and whenever possible publicly). Artifacts can be provided at submission time or after notification of acceptance and will go through a lightweight reviewing process, handing out availability badges.\n\n## Important Dates\n\n*   **Abstract submission (optional):** May 8, 2024\n*   **Paper submission:** May 15, 2024\n*   **Paper notification:** July 5, 2024\n*   **Artifact submission:** July 7, 2024\n*   **Artifact notification:** July 14, 2024\n*   **Camera-ready submission:** July 19, 2024\n*   **Conference:** September 9-10, 2024"
+}
+```

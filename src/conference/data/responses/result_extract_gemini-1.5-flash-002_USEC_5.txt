@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "February 24, 2025",
+  "Year": "2025",
+  "Location": "San Diego, California",
+  "City-State-Province": "San Diego, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "November 25, 2024"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "December 20, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Deadline": "January 28, 2025"
+  },
+  "Other Date": {
+    "Reviews Due": "December 16, 2024",
+    "Discussion Period": "December 16-19, 2024",
+    "Workshop Date": "February 24, 2025"
+  },
+  "Topics": "Usable Security, Privacy, Human Factors, Usability, Security Evaluations, Privacy Evaluations, Psychological Aspects of Security, Sociological Aspects of Security, Economic Aspects of Security, Research Methodologies, Replicating Studies, Systematization of Knowledge, Inclusive Security, Privacy Ethics, Workforce, Labels, Cyber-physical systems, Smart Manufacturing",
+  "Summary": "The Symposium on Usable Security and Privacy (USEC) 2025 serves as an international forum for research and discussion in the area of human factors in security and privacy. USEC 2025 will take place on February 24, 2025, in conjunction with the Network and Distributed System Security Symposium (NDSS) 2025 in San Diego, California.",
+  "Call for Papers": "# USEC 2025: Call for Papers\n\nThe Symposium on Usable Security and Privacy (USEC) 2025 invites submissions on all aspects of human factors and usability in the context of security and privacy. USEC ’25 aims to bring together researchers already engaged in this interdisciplinary effort with other researchers in relevant areas.\n\n## Call for Papers Information\n\nThe call for papers is now closed.\n\n## Test of Time Award\n\nTo honor significant contributions that have had a lasting impact on the field, USEC ’25 will also feature a Test of Time Award. This award will celebrate research demonstrating enduring relevance and influence in usable security and privacy over the past 14 years of USEC.\n\n## Submission Guidelines\n\nAll submissions must be original work; authors must clearly document any overlap with previously published or simultaneously submitted papers from any of the authors. All papers should be written in English. We will review longer papers on mature/completed work in a research track, as well as shorter papers on work in progress, or work that has yet to begin, in a vision track.\n\n### Research Track\n\nThe research track is intended to report on mature work that has been completed. Papers must not be more than 12 pages in length using the two-column submission format, excluding bibliography and well-marked appendices.\n\n### Meta-Science Track\n\nThe Meta-Science Track is intended to report on mature work and seeks to disseminate results that contribute to the broader understanding and improvement of research practices, including the replicability of studies and the systematization of existing knowledge. Submissions in this track may include comprehensive evaluations of research methodologies, studies that replicate and verify prior findings, meta-analyses that synthesize existing literature, and SoK papers that systematically organize and analyze research in a specific domain. Papers must not exceed 12 pages in length using the two-column submission format, excluding bibliography and well-marked appendices.\n\n### Vision Track\n\nThe vision track is intended to report on work in progress or concrete ideas for work that has yet to begin. Papers must be up to 5 pages in length using the two-column format, excluding bibliography and well-marked appendices.\n\n## Submission Portal\n\nThe submission portal for papers: [https://usec25.hotcrp.com/](https://usec25.hotcrp.com/)\n\n## Reviewing\n\nReviewing will be double-blind. Author names and affiliations should not appear in the paper.\n\n## Areas of Interest\n\nTopics include, but are not limited to:\n\n*   Innovative security or privacy functionality and design\n*   New applications of existing models or technology\n*   Usability evaluations of new or existing security or privacy features and lessons learned\n*   Security testing of new or existing usability features\n*   Psychological, sociological, and economic aspects of security and privacy\n*   Research and design methodologies for human-centric security and privacy research\n*   Reports of replicating previously published studies and experiments\n*   Reports of failed usable privacy/security studies or experiments, with the focus on the lessons learned from such experience\n*   Systematization of Knowledge\n*   Inclusive security and privacy\n*   Ethics in human-centric security and privacy research\n*   Workforce, labels, cyber-physical systems\n*   Usability in smart manufacturing\n\nAll submissions must clearly relate to the human aspects of security or privacy. Papers on security or privacy that do not address usability or human factors will not be considered. Likewise, papers on usability or human factors that do not address security or privacy will not be considered.\n\n## Important Dates\n\n*   **Submission Deadline:** November 25, 2024, 11:59 pm, Anywhere-on-earth (AOE)\n*   **Reviews Due:** December 16, 2024\n*   **Discussion Period:** December 16-19, 2024\n*   **Notification of Acceptance:** December 20, 2024\n*   **Camera Ready Deadline:** January 28, 2025\n*   **Workshop Date:** February 24, 2025\n\n## Conflicts of Interest\n\nAuthors and Program Committee members are required to indicate any conflict of interest and its nature."
+}
+

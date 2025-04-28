@@ -1,10 +1,802 @@
 [
   {
-    "Title": "ACM Symposium on Access Control Models and Technologies",
-    "Acronym": "SACMAT"
+    "Title": "Computer Algebra in Scientific Computing",
+    "Acronym": "CASC"
   },
   {
-    "Title": "Knowledge Domain Visualisation",
-    "Acronym": "KDViz"
+    "Title": "IEEE International Conference on Automation Science and Engineering",
+    "Acronym": "CASE"
+  },
+  {
+    "Title": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+    "Acronym": "CASES"
+  },
+  {
+    "Title": "International Conference on Computers and their Applications",
+    "Acronym": "CATA"
+  },
+  {
+    "Title": "Computer Aided Verification",
+    "Acronym": "CAV"
+  },
+  {
+    "Title": "International Conference on Compiler Construction",
+    "Acronym": "CC"
+  },
+  {
+    "Title": "International Conference on Computability and Complexity in Analysis",
+    "Acronym": "CCA"
+  },
+  {
+    "Title": "IEEE Conference on Computational Complexity",
+    "Acronym": "CCC"
+  },
+  {
+    "Title": "IEEE International Conference on Cloud Computing in Emerging Markets",
+    "Acronym": "CCEM"
+  },
+  {
+    "Title": "IEEE International Symposium on Cluster, Cloud and Grid Computing",
+    "Acronym": "CCGRID"
+  },
+  {
+    "Title": "ACM Conference on Computer and Communications Security",
+    "Acronym": "CCS"
+  },
+  {
+    "Title": "International Cross-Domain Conference for Machine Learning and Knowledge Extraction",
+    "Acronym": "CD-MAKE"
+  },
+  {
+    "Title": "Cooperative Design, Visualization, and Engineering",
+    "Acronym": "CDVE"
+  },
+  {
+    "Title": "IEEE Congress on Evolutionary Computation",
+    "Acronym": "CEC"
+  },
+  {
+    "Title": "Information Security Symposium",
+    "Acronym": "CERIAS"
+  },
+  {
+    "Title": "Computer Graphics International",
+    "Acronym": "CGI"
+  },
+  {
+    "Title": "International Symposium on Code Generation and Optimization",
+    "Acronym": "CGO"
+  },
+  {
+    "Title": "Workshop on Cryptographic Hardware and Embedded Systems",
+    "Acronym": "CHES"
+  },
+  {
+    "Title": "International Conference on Human Factors in Computing Systems",
+    "Acronym": "CHI"
+  },
+  {
+    "Title": "CHI PLAY: The Annual Symposium on Computer-Human Interaction in Play",
+    "Acronym": "CHI PLAY"
+  },
+  {
+    "Title": "International Conference on Computer-Human Interaction Research and Applications",
+    "Acronym": "CHIRA"
+  },
+  {
+    "Title": "International Conference on Implementation and Application of Automata",
+    "Acronym": "CIAA"
+  },
+  {
+    "Title": "International Conference on Algorithms and Complexity",
+    "Acronym": "CIAC"
+  },
+  {
+    "Title": "IberoAmerican Congress on Pattern Recognition",
+    "Acronym": "CIARP"
+  },
+  {
+    "Title": "IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology",
+    "Acronym": "CIBCB"
+  },
+  {
+    "Title": "International Conference on Intelligent Text Processing and Computational Linguistics",
+    "Acronym": "CICLING"
+  },
+  {
+    "Title": "Conference on Intelligent Computer Mathematics",
+    "Acronym": "CICM"
+  },
+  {
+    "Title": "IEEE Symposium on Computational Intelligence and Data Mining",
+    "Acronym": "CIDM"
+  },
+  {
+    "Title": "Conference on Innovative Data Systems Research",
+    "Acronym": "CIDR"
+  },
+  {
+    "Title": "Computability in Europe: Logic and Theory of Algorithms",
+    "Acronym": "CiE"
+  },
+  {
+    "Title": "ACM International Conference on Information and Knowledge Management",
+    "Acronym": "CIKM"
+  },
+  {
+    "Title": "International Workshop on Combinations of Intelligent Methods and Applications",
+    "Acronym": "CIMA"
+  },
+  {
+    "Title": "IEEE International Conference on Cybernetics and Intelligent Systems",
+    "Acronym": "CIS"
+  },
+  {
+    "Title": "International Conference on Computational Intelligence and Security",
+    "Acronym": "CIS"
+  },
+  {
+    "Title": "Computational Intelligence in Security for Information Systems",
+    "Acronym": "CISIS"
+  },
+  {
+    "Title": "International Conference on Complex, Intelligent and Software Intensive Systems",
+    "Acronym": "CISIS"
+  },
+  {
+    "Title": "Conference on Information Sciences and Systems",
+    "Acronym": "CISS"
+  },
+  {
+    "Title": "IEEE International Conference on Computer and Information Technology",
+    "Acronym": "CIT"
+  },
+  {
+    "Title": "Latin American Conference on Informatics",
+    "Acronym": "CLEI"
+  },
+  {
+    "Title": "International Conference on Cloud Computing and Services Science",
+    "Acronym": "CLOSER"
+  },
+  {
+    "Title": "IEEE International Conference on Cloud Computing",
+    "Acronym": "CLOUD"
+  },
+  {
+    "Title": "IEEE International Conference on Cloud Computing Technology and Science",
+    "Acronym": "CloudCom"
+  },
+  {
+    "Title": "IEEE International Conference on Cluster Computing",
+    "Acronym": "CLUSTER"
+  },
+  {
+    "Title": "International Conference on Network and Service Management",
+    "Acronym": "CNSM"
+  },
+  {
+    "Title": "Conference on Combinatorial Optimization and Applications",
+    "Acronym": "COCOA"
+  },
+  {
+    "Title": "International Conference on Computing and Combinatorics",
+    "Acronym": "COCOON"
+  },
+  {
+    "Title": "International Conference on Hardware/Software Codesign and System Synthesis",
+    "Acronym": "CODES+ISSS"
+  },
+  {
+    "Title": "International Conference on Control, Decision and Information Technologies",
+    "Acronym": "CoDIT"
+  },
+  {
+    "Title": "Conference on Games",
+    "Acronym": "COG"
+  },
+  {
+    "Title": "Annual Meeting of the Cognitive Science Society",
+    "Acronym": "CogSci"
+  },
+  {
+    "Title": "IEEE Conference on Cognitive and Computational Aspects of Situation Management",
+    "Acronym": "CogSIMA"
+  },
+  {
+    "Title": "International Workshop on Coordination, Organizations, Institutions, Norms and Ethics for Governance of Multi-Agent Systems",
+    "Acronym": "COINE"
+  },
+  {
+    "Title": "International Conference on Computational Linguistics",
+    "Acronym": "COLING"
+  },
+  {
+    "Title": "International Conference on Collaborative Computing: Networks, Applications and Worksharing",
+    "Acronym": "CollaborateCom"
+  },
+  {
+    "Title": "Conference on Learning Theory",
+    "Acronym": "COLT"
+  },
+  {
+    "Title": "International Conference on Management of Data",
+    "Acronym": "COMAD"
+  },
+  {
+    "Title": "International Conference on Complexity, Future Information Systems and Risk",
+    "Acronym": "COMPLEXIS"
+  },
+  {
+    "Title": "International Computer Software and Applications Conference",
+    "Acronym": "COMPSAC"
+  },
+  {
+    "Title": "International Conference on COMmunication Systems & NETworkS",
+    "Acronym": "COMSNETS"
+  },
+  {
+    "Title": "International Conference on Concurrency Theory",
+    "Acronym": "CONCUR"
+  },
+  {
+    "Title": "ACM International Conference on Emerging Networking Experiments and Technologies",
+    "Acronym": "CoNEXT"
+  },
+  {
+    "Title": "Conference on Computational Natural Language Learning",
+    "Acronym": "CoNLL"
+  },
+  {
+    "Title": "International Conference on Cooperative Information Systems",
+    "Acronym": "CoopIS"
+  },
+  {
+    "Title": "International Conference on Coordination Models and Languages",
+    "Acronym": "Coordination"
+  },
+  {
+    "Title": "Workshop on Constraint Satisfaction for Planning and Scheduling",
+    "Acronym": "COPLAS"
+  },
+  {
+    "Title": "Conference on Robot Learning",
+    "Acronym": "CoRL"
+  },
+  {
+    "Title": "International Conference on Principles and Practice of Constraint Programming",
+    "Acronym": "CP"
+  },
+  {
+    "Title": "International Conference on Integration of Artificial Intelligence and Operations Research Techniques in Constraint Programming for Combinatorial Optimization Problems",
+    "Acronym": "CPAIOR"
+  },
+  {
+    "Title": "Combinatorial Pattern Matching",
+    "Acronym": "CPM"
+  },
+  {
+    "Title": "International Conference on Risks and Security of Internet and Systems",
+    "Acronym": "CRiSIS"
+  },
+  {
+    "Title": "International Workshop on Critical Information Infrastructures Security",
+    "Acronym": "CRITIS"
+  },
+  {
+    "Title": "Advances in Cryptology",
+    "Acronym": "CRYPTO"
+  },
+  {
+    "Title": "ACM Conference on Computer Supported Cooperative Work",
+    "Acronym": "CSCW"
+  },
+  {
+    "Title": "International Conference on Computer Supported Cooperative Work in Design",
+    "Acronym": "CSCWD"
+  },
+  {
+    "Title": "International Conference on Computer Supported Education",
+    "Acronym": "CSEDU"
+  },
+  {
+    "Title": "Conference on Software Engineering Education and Training",
+    "Acronym": "CSEET"
+  },
+  {
+    "Title": "IEEE Computer Security Foundations Symposium",
+    "Acronym": "CSF"
+  },
+  {
+    "Title": "International CSI Computer Conference",
+    "Acronym": "CSICC"
+  },
+  {
+    "Title": "Computer Sciences and Information Technologies",
+    "Acronym": "CSIT"
+  },
+  {
+    "Title": "Annual Conference on Computer Science Logic",
+    "Acronym": "CSL"
+  },
+  {
+    "Title": "International Computer Science Symposium in Russia",
+    "Acronym": "CSR"
+  },
+  {
+    "Title": "Cryptographers Track at RSA Conference",
+    "Acronym": "CT-RSA"
+  },
+  {
+    "Title": "Cologne-Twente Workshop on Graphs and Combinatorial Optimization",
+    "Acronym": "CTW"
+  },
+  {
+    "Title": "IEEE Conference on Computer Vision and Pattern Recognition",
+    "Acronym": "CVPR"
+  },
+  {
+    "Title": "International Conference on Cyberworlds",
+    "Acronym": "CW"
+  },
+  {
+    "Title": "Design Automation Conf",
+    "Acronym": "DAC"
+  },
+  {
+    "Title": "Digital Audio Effects Conference",
+    "Acronym": "DAFX"
+  },
+  {
+    "Title": "IFIP International Conference on Distributed Applications and Interoperable Systems",
+    "Acronym": "DAIS"
+  },
+  {
+    "Title": "International Workshop on Data Management on New Hardware",
+    "Acronym": "DaMoN"
+  },
+  {
+    "Title": "International Workshop on Document Analysis Systems",
+    "Acronym": "DAS"
+  },
+  {
+    "Title": "International Conference on Dependable, Autonomic and Secure Computing",
+    "Acronym": "DASC"
+  },
+  {
+    "Title": "International Conference on Database Systems for Advanced Applications",
+    "Acronym": "DASFAA"
+  },
+  {
+    "Title": "International Conference on Data Science, Technology and Applications",
+    "Acronym": "DATA"
+  },
+  {
+    "Title": "Design, Automation and Test in Europe Conference",
+    "Acronym": "DATE"
+  },
+  {
+    "Title": "Data Warehousing and Knowledge Discovery",
+    "Acronym": "DaWaK"
+  },
+  {
+    "Title": "International Baltic Conference on Databases and Information Systems",
+    "Acronym": "DB&IS"
+  },
+  {
+    "Title": "IFIP WG 11.3 Working Conference on Data and Applications Security",
+    "Acronym": "DBSEC"
+  },
+  {
+    "Title": "International Conference on Dublin Core and Metadata Applications",
+    "Acronym": "DC"
+  },
+  {
+    "Title": "International Conference on Distributed Computing and Artificial Intelligence",
+    "Acronym": "DCAI"
+  },
+  {
+    "Title": "Data Compression Conference",
+    "Acronym": "DCC"
+  },
+  {
+    "Title": "IEEE International Conference on Distributed Computing in Sensor Systems",
+    "Acronym": "DCOSS"
+  },
+  {
+    "Title": "International Conference on Dependability of Computer Systems",
+    "Acronym": "DEPCoS"
+  },
+  {
+    "Title": "Developments in eSystems Engineering",
+    "Acronym": "DeSE"
+  },
+  {
+    "Title": "International Conference on Database and Expert Systems Applications",
+    "Acronym": "DEXA"
+  },
+  {
+    "Title": "The Theory and Application of Diagrams",
+    "Acronym": "DIAGRAMS"
+  },
+  {
+    "Title": "Digital Image Computing Techniques and Applications",
+    "Acronym": "DICTA"
+  },
+  {
+    "Title": "Digital Games Research Conference",
+    "Acronym": "DIGRA"
+  },
+  {
+    "Title": "GI International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment",
+    "Acronym": "DIMVA"
+  },
+  {
+    "Title": "Designing Interactive Systems",
+    "Acronym": "DIS"
+  },
+  {
+    "Title": "International Symposium on Distributed Computing",
+    "Acronym": "DISC"
+  },
+  {
+    "Title": "Dynamic Languages Symposium",
+    "Acronym": "DLS"
+  },
+  {
+    "Title": "Developments in Language Theory",
+    "Acronym": "DLT"
+  },
+  {
+    "Title": "SIAM Conference on Discrete Mathematics",
+    "Acronym": "DM"
+  },
+  {
+    "Title": "DNA Computing and Molecular Programming",
+    "Acronym": "DNA"
+  },
+  {
+    "Title": "ACM Symposium on Document Engineering",
+    "Acronym": "DocEng"
+  },
+  {
+    "Title": "International Workshop on Data Warehousing and OLAP",
+    "Acronym": "DOLAP"
+  },
+  {
+    "Title": "Discovery Science",
+    "Acronym": "DS"
+  },
+  {
+    "Title": "International Symposium on Distributed Simulation and Real Time Applications",
+    "Acronym": "DS-RT"
+  },
+  {
+    "Title": "IEEE International Conference on Data Science and Advanced Analytics",
+    "Acronym": "DSAA"
+  },
+  {
+    "Title": "Workshop on Domain Specific Modelling",
+    "Acronym": "DSM"
+  },
+  {
+    "Title": "IEEE/IFIP International Conference on Dependable Systems and Networks",
+    "Acronym": "DSN"
+  },
+  {
+    "Title": "International Workshop on Principles of Diagnosis",
+    "Acronym": "DX"
+  },
+  {
+    "Title": "IEEE International Conference on e-Science and Grid Computing",
+    "Acronym": "e-Science"
+  },
+  {
+    "Title": "European Association for Computational Linguistics",
+    "Acronym": "EACL"
+  },
+  {
+    "Title": "Conference of the European Association for Machine Translation",
+    "Acronym": "EAMT"
+  },
+  {
+    "Title": "International Conference on Engineering Applications of Neural Networks",
+    "Acronym": "EANN"
+  },
+  {
+    "Title": "International Conference on Evaluation and Assessment in Software Engineering",
+    "Acronym": "EASE"
+  },
+  {
+    "Title": "EURO AMERICAN CONFERENCE ON TELEMATICS AND INFORMATION SYSTEMS",
+    "Acronym": "EATIS"
+  },
+  {
+    "Title": "ACM Conference on Economics and Computation",
+    "Acronym": "EC"
+  },
+  {
+    "Title": "European Conference on Technology Enhanced Learning",
+    "Acronym": "EC-TEL"
+  },
+  {
+    "Title": "European Conference on Artificial Intelligence",
+    "Acronym": "ECAI"
+  },
+  {
+    "Title": "European Conference on Computational Biology",
+    "Acronym": "ECCB"
+  },
+  {
+    "Title": "European Chapter on Combinatorial Optimization",
+    "Acronym": "ECCO"
+  },
+  {
+    "Title": "European Conference on Computer Vision",
+    "Acronym": "ECCV"
+  },
+  {
+    "Title": "European Conference on Digital Government",
+    "Acronym": "ECDG"
+  },
+  {
+    "Title": "European Conference on Information Retrieval",
+    "Acronym": "ECIR"
+  },
+  {
+    "Title": "European Conference on Modelling Foundations and Applications",
+    "Acronym": "ECMFA"
+  },
+  {
+    "Title": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Database",
+    "Acronym": "ECML PKDD"
+  },
+  {
+    "Title": "International Conference on Modelling and Simulation",
+    "Acronym": "ECMS"
+  },
+  {
+    "Title": "European Conference on Object-Oriented Programming",
+    "Acronym": "ECOOP"
+  },
+  {
+    "Title": "Euromicro Conference on Real-Time Systems",
+    "Acronym": "ECRTS"
+  },
+  {
+    "Title": "European Conference on Software Architecture",
+    "Acronym": "ECSA"
+  },
+  {
+    "Title": "European Conference on Computer Supported Cooperative Work",
+    "Acronym": "ECSCW"
+  },
+  {
+    "Title": "European Conference on Symbolic and Quantitative Approaches to Reasoning with Uncertainty",
+    "Acronym": "ECSQARU"
+  },
+  {
+    "Title": "World Conference on Educational Multimedia, Hypermedia and Telecommunications",
+    "Acronym": "ED-MEDIA"
+  },
+  {
+    "Title": "Extending Database Technology",
+    "Acronym": "EDBT"
+  },
+  {
+    "Title": "European Dependable Computing Conference",
+    "Acronym": "EDCC"
+  },
+  {
+    "Title": "Educational Data Mining",
+    "Acronym": "EDM"
+  },
+  {
+    "Title": "IEEE International Enterprise Distributed Object Computing Conference",
+    "Acronym": "EDOC"
+  },
+  {
+    "Title": "Eurographics Symposium on Parallel Graphics and Visualization",
+    "Acronym": "EGPGV"
+  },
+  {
+    "Title": "International Conference on Artificial Reality and Telexistance & Eurographics Symposium on Virtual Environments",
+    "Acronym": "EGVE"
+  },
+  {
+    "Title": "Engineering Interactive Computing Systems",
+    "Acronym": "EICS"
+  },
+  {
+    "Title": "European-Japanese Conference on Information Modelling and Knowledge Bases",
+    "Acronym": "EJC"
+  },
+  {
+    "Title": "International Conference on Knowledge Engineering and Knowledge Management",
+    "Acronym": "EKAW"
+  },
+  {
+    "Title": "EMAS",
+    "Acronym": "EMAS"
+  },
+  {
+    "Title": "Exploring Modelling Methods in Systems Analysis and Design",
+    "Acronym": "EMMSAD"
+  },
+  {
+    "Title": "Empirical Methods in Natural Language Processing",
+    "Acronym": "EMNLP"
+  },
+  {
+    "Title": "ACM Conference on Embedded Software",
+    "Acronym": "EMSOFT"
+  },
+  {
+    "Title": "International Conference on Evaluation of Novel Approaches to Software Engineering",
+    "Acronym": "ENASE"
+  },
+  {
+    "Title": "International Conference on Information and Communication Technologies in Tourism",
+    "Acronym": "ENTER"
+  },
+  {
+    "Title": "International Workshop on Enterprise and Organizational Modelling and Simulation",
+    "Acronym": "EOMAS"
+  },
+  {
+    "Title": "Portuguese Conference on Artificial Intelligence",
+    "Acronym": "EPIA"
+  },
+  {
+    "Title": "International Conference on Conceptual Modelling",
+    "Acronym": "ER"
+  },
+  {
+    "Title": "European Symposium on Algorithms",
+    "Acronym": "ESA"
+  },
+  {
+    "Title": "European Symposium on Artificial Neural Networks",
+    "Acronym": "ESANN"
+  },
+  {
+    "Title": "International Symposium on Empirical Software Engineering and Measurement",
+    "Acronym": "ESEM"
+  },
+  {
+    "Title": "European Symposium on Programming",
+    "Acronym": "ESOP"
+  },
+  {
+    "Title": "European Symposium On Research In Computer Security",
+    "Acronym": "ESORICS"
+  },
+  {
+    "Title": "Extended Semantic Web Conference",
+    "Acronym": "ESWC"
+  },
+  {
+    "Title": "IEEE International Conference on Emerging Technologies and Factory Automation",
+    "Acronym": "ETFA"
+  },
+  {
+    "Title": "ETHICOMP Conference",
+    "Acronym": "ETHICOMP"
+  },
+  {
+    "Title": "Eye Tracking Research and Applications",
+    "Acronym": "ETRA"
+  },
+  {
+    "Title": "IEEE European Test Symposium",
+    "Acronym": "ETS"
+  },
+  {
+    "Title": "IEEE/IFIP International Conference on Embedded and Ubiquitous Computing",
+    "Acronym": "EUC"
+  },
+  {
+    "Title": "European Conference on Multi-Agent Systems",
+    "Acronym": "EUMAS"
+  },
+  {
+    "Title": "European Conference on Operations Research",
+    "Acronym": "EURO"
+  },
+  {
+    "Title": "Euro Virtual Reality",
+    "Acronym": "Euro VR"
+  },
+  {
+    "Title": "European Workshop on Computational Geometry",
+    "Acronym": "EuroCG"
+  },
+  {
+    "Title": "EuroConference on Combinatorics, Graph Theory and Applications",
+    "Acronym": "EUroComb"
+  },
+  {
+    "Title": "International Conference on the Theory and Application of Cryptographic Techniques",
+    "Acronym": "EuroCrypt"
+  },
+  {
+    "Title": "European Conference on Genetic Programming",
+    "Acronym": "EUROGP"
+  },
+  {
+    "Title": "European MPI Users' Group Conference",
+    "Acronym": "EuroMPI"
+  },
+  {
+    "Title": "International European Conference on Parallel and Distributed Computing",
+    "Acronym": "EuroPar"
+  },
+  {
+    "Title": "European Conference on Pattern Languages of Programs",
+    "Acronym": "EuroPLop"
+  },
+  {
+    "Title": "IEEE European Symposium on Security and Privacy",
+    "Acronym": "EuroS&P"
+  },
+  {
+    "Title": "European SPI",
+    "Acronym": "EuroSPI"
+  },
+  {
+    "Title": "Eurosys Conference",
+    "Acronym": "EuroSys"
+  },
+  {
+    "Title": "Visual Analytics",
+    "Acronym": "EuroVA"
+  },
+  {
+    "Title": "Eurographics/IEEE Symposium on Visualization",
+    "Acronym": "EuroVis"
+  },
+  {
+    "Title": "Conference of the European Society for Fuzzy Logic and Technologies",
+    "Acronym": "EUSFLAT"
+  },
+  {
+    "Title": "International Conference on Emerging Ubiquitous Systems and Pervasive Networks",
+    "Acronym": "EUSPN"
+  },
+  {
+    "Title": "International Conference on Applications of Evolutionary Computation",
+    "Acronym": "EvoApplications"
+  },
+  {
+    "Title": "European Conference on Evolutionary Computation in Combinatorial Optimisation",
+    "Acronym": "EvoCOP"
+  },
+  {
+    "Title": "International Conference on Artificial Intelligence in Music, Sound, Art and Design",
+    "Acronym": "EvoMUSART"
+  },
+  {
+    "Title": "International Conference on Embedded Wireless Systems and Networks",
+    "Acronym": "EWSN"
+  },
+  {
+    "Title": "Fundamental Approaches to Software Engineering",
+    "Acronym": "FASE"
+  },
+  {
+    "Title": "Conference on File and Storage Technologies",
+    "Acronym": "FAST"
+  },
+  {
+    "Title": "International Frontiers of Algorithmics Workshop",
+    "Acronym": "FAW"
+  },
+  {
+    "Title": "Financial Cryptography and Data Security Conference",
+    "Acronym": "FC"
+  },
+  {
+    "Title": "IEEE Symposium on Field Programmable Custom Computing Machines",
+    "Acronym": "FCCM"
   }
 ]

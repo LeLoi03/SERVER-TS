@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "July 8 - 11, 2025",
+  "Year": "2025",
+  "Location": "Rennes, France",
+  "City-State-Province": "Rennes",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstracts": "April 11, 2025",
+    "Papers": "April 18, 2025"
+  },
+  "Notification Date": {
+    "Notifications": "May 30, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready": "June 27, 2025"
+  },
+  "Topics": "Parallel and Distributed Computing, Big Data Analytics, Artificial Intelligence, Deep Learning, HPC Simulations, Compute Continuum, Edge Computing, IoT, Reproducibility, Explainability, Trustworthiness, Machine Learning, Federated Learning, Algorithms, Large Scale Applications, Architectures, Environments, Performance Modeling, Analysis, Evaluation, Security, Privacy, Blockchain, Distributed Ledgers, Mobile Computing, Embedded Computing",
+  "Summary": "The 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) will be hosted by Inria in Rennes, France, from July 8-11, 2025. The conference aims at presenting original and unpublished research that will target state-of-the-art as well as emerging topics pertaining to the field of Parallel and Distributed Computing paradigms and applications.",
+  "Call for Papers": "# ISPDC 2025: Call for Papers\n\nThe 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) will be held in **Rennes, France, from July 8-11, 2025.**\n\nThe conference aims at presenting original and unpublished research that will target state-of-the-art as well as emerging topics pertaining to the field of Parallel and Distributed Computing paradigms and applications.\n\n## Areas of Interest\n\nISPDC welcomes contributions focused on the efficient support for processing across a Computing Continuum, with a focus on approaches enabling the community to share repeatable digital artifacts, facilitating the replication of experiments, trustworthiness, and explainability of AI models and driving further innovation.  Areas of interest include (but are not limited to):\n\n*   Efficient Support for the Computing Continuum (combining HPC, Cloud and Edge Computing)\n*   Complex Workflows at the Intersection of HPC, Big Data, AI and Quantum Computing\n*   Reproducibility, Explainability, Trustworthiness of Complex Workflows\n*   Machine Learning (ML) for Systems and Systems for ML\n*   Efficient Support for Federated Learning\n*   Algorithms and Models for Large Scale Applications\n*   Architectures and Environments for Parallel and Distributed Computing\n*   Performance Modeling, Analysis and Evaluation for Parallel and Distributed Systems\n*   Security and Privacy in Parallel and Distributed Systems\n*   Blockchain and Distributed Ledgers\n*   Mobile and Embedded Computing\n*   Applications and Use-Cases in HPC, Big Data, AI and Quantum Computing\n\n## Submission Guidelines\n\nWe solicit two types of original research contributions: full papers and short / work in progress papers, which should be indicated in the paper title by [Full] or [Short].\n\nManuscripts must be submitted by the submission deadline; full paper manuscripts may not exceed eight (8) and short paper manuscripts may not exceed five (5) single-spaced double-column pages using 10-point size font on 8.5×11 inch pages (IEEE conference style), including figures, tables, and references. The submitted manuscripts should include author names and affiliations.  Files should be submitted by following the instructions above. All submissions are handled through the EasyChair platform.\n\nAccepted papers will be part of the ISPDC 2025 conference proceedings which will be submitted for inclusion into IEEE Xplore (pending application) subject to meeting IEEE Xplore’s scope and quality requirements. To be published in the ISPDC 2025 Conference Proceedings and to be eligible for publication in IEEE Xplore, an author of an accepted paper is required to register for the conference at the full rate and the paper must be presented by an author of that paper at the conference.\n\n## Important Dates\n\nAll deadlines are anywhere on earth (AoE):\n\n*   **Abstracts:** April 11, 2025\n*   **Papers:** April 18, 2025\n*   **Notifications:** May 30, 2025\n*   **Camera ready:** June 27, 2025\n*   **Conference:** July 8-11, 2025"
+}
+

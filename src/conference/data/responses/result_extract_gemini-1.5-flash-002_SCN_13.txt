@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "September 11 - 13, 2024",
+  "Year": "2024",
+  "Location": "Amalfi, Italy",
+  "City-State-Province": "Amalfi",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission": "April 24, 2024"
+  },
+  "Notification Date": {
+    "Notification to authors": "June 24, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Version/Author Registration": "July 17, 2024"
+  },
+  "Registration Date": {
+    "Early Registration": "July 31, 2024",
+    "Late Registration": "September 2, 2024"
+  },
+  "Topics": "Cryptography, Information Security, Anonymity, Privacy, Applied Cryptography, Implementations, Authentication, Identification, Access Control, Block and Stream Ciphers, Complexity-Theoretic Cryptography, Cryptanalysis, Cryptocurrencies, Blockchain, Cryptographic Hash Functions, Cryptographic Protocols, Digital Signatures, Message Authentication Codes, Distributed Systems Security, Elliptic-Curve Cryptography, Formal Security Methods, Information-Theoretic Security, Post-quantum Cryptography, Public-Key Encryption, Physical Cryptography",
+  "Publisher": "Springer",
+  "Summary": "The Fourteenth International Conference on Security and Cryptography for Networks (SCN 2024) aims to bring together researchers in the field of cryptography and information security, practitioners, developers, and users to foster cooperation, exchange techniques, tools, experiences, and ideas. The conference seeks submissions from academia, government, and industry presenting novel research on all practical and theoretical aspects of cryptography and information security.",
+  "Call for Papers": "# SCN 2024: Call for Papers\n\nThe Fourteenth International Conference on Security and Cryptography for Networks (SCN 2024) aims to bring together researchers in the field of cryptography and information security, practitioners, developers, and users to foster cooperation, exchange techniques, tools, experiences, and ideas. The conference seeks submissions from academia, government, and industry presenting novel research on all practical and theoretical aspects of cryptography and information security. The primary focus is on original, high-quality, unpublished research of theoretical and practical impact, including concepts, techniques, applications, and practical experiences. Submitted papers must not substantially overlap with papers that have been published or that are simultaneously submitted to a journal or a conference/workshop with proceedings.\n\n## Topics\n\nAll topic areas related to cryptography and information security are of interest and in scope. Suggested topics include, but are not restricted to:\n\n*   Anonymity and Privacy\n*   Applied Cryptography and Implementations\n*   Authentication, Identification, and Access Control\n*   Block and Stream Ciphers\n*   Complexity-Theoretic Cryptography\n*   Cryptanalysis\n*   Cryptocurrencies and Blockchain\n*   Cryptographic Hash Functions\n*   Cryptographic Protocols\n*   Digital Signatures and Message Authentication Codes\n*   Distributed Systems Security\n*   Elliptic-Curve Cryptography\n*   Formal Security Methods\n*   Information-Theoretic Security\n*   Post-quantum Cryptography\n*   Public-Key Encryption\n*   Physical Cryptography\n\n## Conference Proceedings\n\nConference Proceedings will be published by Springer in the Lecture Notes in Computer Science series.\n\n## Submissions\n\nAuthors are invited to submit electronically (PDF format) an anonymous extended abstract using EquinOCS: [https://equinocs.springernature.com/service/SCN2024](https://equinocs.springernature.com/service/SCN2024)\n\nWe strongly encourage typesetting the extended abstract using Springer’s LNCS LaTeX package with no changes to the style. Springer encourages authors to include their ORCIDs in the final published versions of their papers. See [Springer Lecture Notes in Computer Science instructions for authors](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).\n\n## Important Dates\n\n*   **Submission:** April 24, 2024 (Revisions possible until May 9, 2024)\n*   **Notification to authors:** June 24, 2024\n*   **Camera-Ready Version/Author Registration:** July 17, 2024\n*   **Early Registration:** July 31, 2024\n*   **Conference:** September 11-13, 2024\n\n## Program Chair\n\nDuong Hieu Phan, Telecom Paris, France\n\n## General Chair\n\nClemente Galdi, University of Salerno, Italy"
+}
+```

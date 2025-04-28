@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "November 7 - 9, 2025",
+  "Year": "2025",
+  "Location": "Heriot-Watt University Dubai, UAE",
+  "City-State-Province": "Dubai",
+  "Country": "United Arab Emirates",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission deadline": "June 1, 2025",
+    "Poster Track Full Paper Submission deadline": "July 10, 2024",
+    "Late Track Full Paper Submission deadline": "July 10, 2024"
+  },
+  "Notification Date": {
+    "Notification deadline": "August 15, 2025",
+    "Poster Track Notification deadline": "August 1, 2024",
+    "Late Track Notification deadline": "August 1, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "September 30, 2025",
+    "Poster Track Camera-ready deadline": "August 20, 2024",
+    "Late Track Camera-ready deadline": "August 20, 2024"
+  },
+  "Topics": "Digital Artworks and Cultural Heritage, Audio Art, Games and Gamification, Immersive Technologies, Interactive Art Installations, Virtualization, Artificial Intelligence, Big Data, Virtual Reality, Metaverse, Art and Technology, Digital Media, Sustainability, Responsibility, Human Dignity, Accessible Digital Music, Advancing Game Accessibility, Advancing Gender Equality, AI for Cross-Cultural Communication, Art and Design in the AI Era, Biofeedback Art Research, Co-creativity with Generative AI, Creating Digitally, Exploring Digital Innovation, Exploring the Horizons of Immersive Art, Express Connect Transform, Extended Reality Technologies, Gaming History and the Art of Play, Interactive Design in Intangible Heritage, Intelligent Technologies for Interactive Entertainment, Transcending Reality, Ubiquitous Music",
+  "Publisher": "Springer",
+  "Summary": "The 14th EAI International Conference: ArtsIT, Interactivity & Game Creation (EAI ArtsIT 2025) will be held in Dubai, UAE from November 7-9, 2025.  The conference brings together researchers, practitioners, artists, and academics to explore the intersection of arts, technology, and innovation.  The conference features a main track and several special tracks.",
+  "Call for Papers": "# ArtsIT 2025: Call for Papers\n\nThe 14th EAI International Conference: ArtsIT, Interactivity & Game Creation (EAI ArtsIT 2025) will be held in **Dubai, UAE, from November 7-9, 2025** at **Heriot-Watt University Dubai**.\n\n## Conference Overview\n\nArtsIT brings together a diverse international community of researchers, practitioners, artists, and academics from various disciplines to explore the dynamic relationship between art and information technology.\n\n## Tracks\n\nThe conference features a main track and several special tracks.  Special tracks include:\n\n*   Accessible Digital Music\n*   Advancing Game Accessibility\n*   Advancing Gender Equality (GENIE)\n*   AI for Cross-Cultural Communication\n*   Art and Design in the AI Era\n*   Biofeedback Art Research\n*   Co-creativity with Generative AI\n*   Creating Digitally\n*   Exploring Digital Innovation\n*   Exploring the Horizons of Immersive Art\n*   Express, Connect, Transform: The Role of Arts and Technology in Education\n*   Extended Reality (XR) Technologies\n*   Gaming History and the Art of Play\n*   Interactive Design in Intangible Heritage\n*   INTETAIN\n*   Transcending Reality\n*   Ubiquitous Music\n\n## Call for Special Track Proposals\n\nWe invite submissions for new Special Track proposals. Special Tracks allow for in-depth presentations and discussions during the physical event, as well as a dedicated section in the indexed proceedings.\n\n## Submission Guidelines\n\nPapers should be submitted through the EAI ‘Confy+’ system ([https://confyplus.eai.eu/app#conftrack-overview/cid/53407](https://confyplus.eai.eu/app#conftrack-overview/cid/53407)) and comply with Springer formatting guidelines.\n\n*   Regular papers should be up to 12-20 pages in length.\n*   Short papers should be 6-11 pages in length.\n\n## Important Dates\n\n*   **Full Paper Submission deadline:** June 1, 2025\n*   **Notification deadline:** August 15, 2025\n*   **Camera-ready deadline:** September 30, 2025\n*   **Conference dates:** November 7-9, 2025\n\n## Publication\n\nAll registered papers will be submitted for publishing by Springer – LNICST series and made available through SpringerLink Digital Library ([https://link.springer.com/conference/artsit](https://link.springer.com/conference/artsit)).\n\n## Available Journals\n\nAll accepted authors are eligible to submit an extended version in a fast track of:\n\n*   EAI Endorsed Transactions on Creative Technologies\n*   EAI Endorsed Transactions on AI and Robotics\n*   EAI Endorsed Transactions on Internet of Things (Scopus)"
+}
+```

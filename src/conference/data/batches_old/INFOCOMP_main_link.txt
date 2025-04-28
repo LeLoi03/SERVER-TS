@@ -1,0 +1,366 @@
+Conference International Conference on Advanced Communications and Computation (INFOCOMP):
+
+href="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+CommitteesParticipationhref="SubmitINFOCOMP25.html" - Submit a Paper
+href="CameraINFOCOMP25.html" - Camera Ready
+href="RegistrationINFOCOMP25.html" - Registration
+Venuehref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+Programhref="TutorialsINFOCOMP25.html" - Tutorials
+href="ProgramINFOCOMP25.html" - Event Program
+Post Conferencehref="StatsINFOCOMP25.html" - Statistics
+href="AwardsINFOCOMP25.html" - Awards
+href="PhotosINFOCOMP25.html" - Photos
+ContactThe Fifteenth International Conference on Advanced Communications and Computation 
+ INFOCOMP 2025 
+ April 06, 2025 to April 10, 2025 - Valencia, Spain 
+ href="SubmitINFOCOMP25.html" - Submit a Contribution
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+Deadlines 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ href="https://www.iaria.org/conferences/INFOCOMP.html" - Past Events
+SponsorsPublication 
+  
+ Published by IARIA Press (operated byXpert Publishing Services) 
+ Archived in the Open AccessIARIA ThinkMind Digital Library 
+ Prints available atCurran Associates, Inc. 
+ Authors of selected papers will be invited to submit extended versions to aIARIA Journal 
+ Indexing Procedure 
+ Affiliated Journals 
+ Menuhref="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+Committeeshref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+href="ProgramINFOCOMP25.html" - Event Program
+href="TutorialsINFOCOMP25.html" - Tutorials
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+href="SubmitINFOCOMP25.html" - Submit a Paper
+iaria.orgContactINFOCOMP 2025 - The Fifteenth International Conference on Advanced Communications and Computation 
+ April 06, 2025 - April 10, 2025 
+ INFOCOMP 2025 
+ Onsite and Online Options: In order to accommodate various situations, we are offering the option for either physical presence or virtual participation (pdf slides or pre-recorded videos). 
+ ISSN:2308-3484 
+ ISBN:978-1-68558-253-1 
+ Registered: with the Library of Congress of the United States of America (ISSN) 
+ Free Access: in | ThinkMind Digital Library 
+ INFOCOMP 2025 is colocated with the following events as part ofhref="DataSys25.html" - DataSys 2025 Congress
+: 
+ href="AICT25.html" - AICT 2025 | , The Twenty-First Advanced International Conference on Telecommunications 
+ href="ICIW25.html" - ICIW 2025 | , The Twentieth International Conference on Internet and Web Applications and Services 
+ href="ICIMP25.html" - ICIMP 2025 | , The Twentieth International Conference on Internet Monitoring and Protection 
+ href="SMART25.html" - SMART 2025 | , The Fourteenth International Conference on Smart Cities, Systems, Devices and Technologies 
+ href="IMMM25.html" - IMMM 2025 | , The Fifteenth International Conference on Advances in Information Mining and Management 
+ href="INFOCOMP25.html" - INFOCOMP 2025 | , The Fifteenth International Conference on Advanced Communications and Computation 
+ href="MOBILITY25.html" - MOBILITY 2025 | , The Fifteenth International Conference on Mobile Services, Resources, and Users 
+ href="SPWID25.html" - SPWID 2025 | , The Eleventh International Conference on Smart Portable, Wearable, Implantable and Disability-oriented Devices and Systems 
+ href="ACCSE25.html" - ACCSE 2025 | , The Tenth International Conference on Advances in Computation, Communications and Services 
+ INFOCOMP 2025 Steering Committee 
+  
+ Claus-Peter Rückemann 
+ Universität Münster / DIMF / Leibniz Universität Hannover, Germany | Nicola Calabretta 
+ Eindhoven University of Technology 
+ Netherlands 
+  
+ Claus-Peter Rückemann 
+ Universität Münster / DIMF / Leibniz Universität Hannover, Germany 
+ Nicola Calabretta 
+ Eindhoven University of Technology 
+ Netherlands 
+ INFOCOMP 2025 conference tracks: 
+ Trends and advances on architecture/methods 
+ Intensive computing and Big Data; Performance portability; Trading off locality and load balancing; Complex multi-physics models; Multiscale methods;Emerging programming models;Hybrid parallel programming; APGAS (Asynchronous Partitioned Global Address Space) programming model; Resiliency and elasticity approaches; Scalable petascale data-driven approach; Extreme scale technologies; Task characterization-driven scheduling; Data analytics and visualization; HPC in IoT (Internet of Things) systems; Observational data and simulations; Complex scientific data sets; Massively scalable task parallelism; Routing-aware tasks; Multi-tenant cloud workloads; Soft error resiliency 
+ Trends and advances on disciplines/applications 
+ Urban Simulations; Scalable cortical computing; Molecular dynamics supercomputing; Petascale biomolecular simulations; Data-centric parallel systems; Lithospheric dynamics; Graph computation; Genome-scale gene networks; Scale free graphs; Migratable objects; Quantum simulations; Metascalable quantum molecular dynamics simulations; Real-time data analytics; Uncertain execution scales; Sharing in IaaS clouds; Large-scale visualization; Distributed NoSQL data stores 
+ Large scale and fast computation 
+ Developments in information and computing systems; Grid computing; Cloud computing; Pervasive / ubiquitous computing; Services computing and Opportunistic computing; High Performance Computing (HPC); Fast data processing; Real-time processing; Fast switching and routing protocols; Parallelization of algorithms and applications; Energy-efficient High Performance Computing; Large scale data visualization; Tools for parallelization; High performance codes; Optimization; Innovative architectures; Distributed systems, dynamical systems; Future architectures, integrated systems, beyond cloud, reaching exaflop; Supercomputing architectures, operation, and management; Petascale, Exascale; Big data, dCache; HPC centers, data centers; Benchmarking; Green500, Graph500, Top500; Service provisioning; Green computing, cooling techniques 
+ Programming models 
+ Programming languages and parallel algorithms; Message Passing Interface (MPI), OpenMP; Massively Parallel Processing, Symmetric Multi-Processing; PGAS, GASPI, CAF (Co-array Fortran), UPC (Unified Parallel C); X10, Chapel, CUDA, OpenCL, OpenACC, OpenHMPP, Lime, OmpSs, OpenStream; Parallel Virtual Machine (PVM); Programming paradigms; Manycore, multicore; CPU, GPU, FPGA, accelerators; Chip design, architectures, and programming; Fault tolerance, troubleshooting, debugging; High end issues, latency, concurrency 
+ Networks/systems communications 
+ Cross-layer design and optimization; Cyber-physical systems and networks; Data centers, virtualization, and cloud networks; Delay/disruption tolerant networks; Future Internet broadband services; Software Defined Networks (SDN); Fast networks / InfiniBand architectures for future interactive multicore applications; Sensor networks and embedded systems; Ad hoc mobile networks; Access technologies; P2P networks; Optical networks; Cellular and broadband wireless networks; Mobility models and mobile networks; Multicast, broadcast and anycast; Multimedia protocols and networking; Software defined radio and cognitive radio networking; Content-based network service; Certification, public key infrastructures, data integrity; Privacy and anonymity 
+ Networks/systems measurement, control and management 
+ Networks/systems measurement, simulation and emulation; Network-, system-, and application-management; Congestion control and capacity planning; Dynamic spectrum management; Addressing and location management; Quality of Service (QoS) and Quality of Experience (QoE); Quality of Data (QoD) and Quality of Context (QoC); e-Commerce, accounting, pricing and billing; Highly parallel file systems, Lustre, GPFS; Interconnects, high speed ethernet; Use of distributed compute and storage resources; Energy-aware mechanisms for control and management; Configuration, reuse of software components; Resource allocation and management; Denial of service mitigation and prevention; System and data security; Communication visualization 
+ Turbulence modeling and simulation 
+ Fundamental turbulence; Complex flows; Turbulence modeling; Environmental turbulence; Simulation of solid-liquid systems; Heat/cooling transfer modeling; Transitional flows models; Flows simulation; Particle simulations; Turbulent multi-phase flows; Oscillations; Stability and instability; Turbulent air-water flows; Liquid/Liquid interface turbulence; Aeroacoustics 
+ Advanced applications 
+ Computation 
+ Advanced applications, scientific, theoretical, methodological, practical, and technical contributions; Advanced scientific computing; Simulation and modeling (scientific applications, engineering, industry); Mathematical and numerical algorithms and methods; Molecular dynamics simulation; Genetic algorithms; Physics and chemistry applications; Multi-dimensional data visualization; Search engines and scientific discovery; Scientific data processing; Database applications and development; Knowledge discovery, documentation, and classification; Data intensive computing, data science; Methodology and case studies regarding computing and communication scenarios; Small and Medium Enterprises (SME) applications; Computer Aided Engineering (CAE) applications 
+ Systems 
+ Computer science and geoinformatics; e-Energy, geosciences, prospection, exploration, oil and gas; Information and database systems; Mobility and logistic services; Geoscientific Information Systems (GIS); Remote sensing and satellite imaging; Cartography, hydrology; Climatology and environmental sciences; Medicine, genetics, epidemiology, medical geology; 
+ Online social networking; Vehicular, underground and underwater networks and applications; Education, e-Learning, and e-Science; ICT business evaluation and management; Earth and planetary sciences; Archaeology, cultural heritage; Computation frameworks and tools; Mathematica, SAGE, Maple, Matlab, Scilab, Gromacs, ANSYS, Fluent, etc.) 
+ Legal context, economic use and re-use 
+ Legal informatics; Science, information technology, and copyright; Open access, license models, legal aspects of open source; Legal aspects of collaborative software development; Ownership and information technology; Digital rights; Patents; Toll access; Accounting; billing; National and international legal regulations 
+ Evaluation context 
+ Energy-aware and energy-efficient networks; Implementation and experimental testbeds; Traffic measurement and traffic patterns; Characterization of topology dynamics; Access and biometric technologies, performance, and cost prediction; Web services and performance; Performance measurement and benchmarking; Energy-aware and energy-efficient High Performance Computing; Usability studies; Social and ethic consequences with biometry and data security; Standards, benchmarks, protocols 
+ Biometry, security, access technologies, algorithms, and applications 
+ Technologies and advances in biometric algorithms and interfaces (gait, electrocardiography, iris, image, fingerprint, palm veins, multi-modality); Biometric systems; Integration of biometrics with other technologies; Challenge response; Simplified enrollment; NFC support, spoofing, and countermeasures; Single sign on (SSO); Adaptive trust; Template protection (protection of reference data); Large and scalable biometric systems using cloud services; Deployed solutions and applications; Experience reports and systems; Description in physical and logical access control; information system access, immigration and border control, law enforcement, entertainment, finance, life science, healthcare, forensics); Distributed and mobile devices; Public Key Infrastructures; Digital Forensics; Quantum cryptography theory and application for commercial usage; topology of information (braid group approach) 
+ Deadlines: 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ Technical Co-Sponsors and Logistic Supporters 
+ href="" - Copyright (c) 2006-2025, IARIA 
+
+Call for Papers information:
+href="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+CommitteesParticipationhref="SubmitINFOCOMP25.html" - Submit a Paper
+href="CameraINFOCOMP25.html" - Camera Ready
+href="RegistrationINFOCOMP25.html" - Registration
+Venuehref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+Programhref="TutorialsINFOCOMP25.html" - Tutorials
+href="ProgramINFOCOMP25.html" - Event Program
+Post Conferencehref="StatsINFOCOMP25.html" - Statistics
+href="AwardsINFOCOMP25.html" - Awards
+href="PhotosINFOCOMP25.html" - Photos
+ContactThe Fifteenth International Conference on Advanced Communications and Computation 
+ INFOCOMP 2025 
+ April 06, 2025 to April 10, 2025 - Valencia, Spain 
+ href="SubmitINFOCOMP25.html" - Submit a Contribution
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+Deadlines 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ href="https://www.iaria.org/conferences/INFOCOMP.html" - Past Events
+SponsorsPublication 
+  
+ Published by IARIA Press (operated byXpert Publishing Services) 
+ Archived in the Open AccessIARIA ThinkMind Digital Library 
+ Prints available atCurran Associates, Inc. 
+ Authors of selected papers will be invited to submit extended versions to aIARIA Journal 
+ Indexing Procedure 
+ Affiliated Journals 
+ Menuhref="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+Committeeshref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+href="ProgramINFOCOMP25.html" - Event Program
+href="TutorialsINFOCOMP25.html" - Tutorials
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+href="SubmitINFOCOMP25.html" - Submit a Paper
+iaria.orgContactINFOCOMP 2025 - The Fifteenth International Conference on Advanced Communications and Computation 
+ April 06, 2025 - April 10, 2025 
+ INFOCOMP 2025: Call for Papers 
+ Onsite and Online Options: In order to accommodate various situations, we are offering the option for either physical presence or virtual participation (pdf slides or pre-recorded videos). 
+ The diversity of semantics of data, context gathering and processing led to complex mechanisms for applications requiring special communication and computation support in terms of volume of data, processing speed, context variety, etc. The new computation paradigms and communications technologies are now driven by the needs for fast processing and requirements from data-intensive applications and domain-oriented applications (medicine, geoinformatics, climatology, remote learning, education, large scale digital libraries, social networks, etc.). Mobility, ubiquity, multicast, multi-access networks, data centers, cloud computing are now forming the spectrum of de factor approaches in response to the diversity of user demands and applications. In parallel, measurements control and management (self-management) of such environments evolved to deal with new complex situations. 
+ INFOCOMP 2025 continues a series of events dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions. 
+ We solicit both academic, research, and industrial contributions. We welcome technical papers presenting research and practical results, position papers addressing the pros and cons of specific proposals, such as those being discussed in the standard fora or in industry consortia, survey papers addressing the key problems and solutions on any of the above topics short papers on work in progress, and panel proposals. 
+ Industrial presentations are not subject to the format and content constraints of regular submissions. We expect short and long presentations that express industrial position and status. 
+ Tutorials on specific related topics and panels on challenging areas are encouraged. 
+ The topics suggested by the conference can be discussed in term of concepts, state of the art, research, standards, implementations, running experiments, applications, and industrial case studies. Authors are invited to submit complete unpublished papers, which are not under review in any other conference or journal in the following, but not limited to, topic areas. 
+ All topics and submission formats are open to both research and industry contributions. 
+ INFOCOMP 2025 conference tracks: 
+ Trends and advances on architecture/methods 
+ Intensive computing and Big Data; Performance portability; Trading off locality and load balancing; Complex multi-physics models; Multiscale methods;Emerging programming models;Hybrid parallel programming; APGAS (Asynchronous Partitioned Global Address Space) programming model; Resiliency and elasticity approaches; Scalable petascale data-driven approach; Extreme scale technologies; Task characterization-driven scheduling; Data analytics and visualization; HPC in IoT (Internet of Things) systems; Observational data and simulations; Complex scientific data sets; Massively scalable task parallelism; Routing-aware tasks; Multi-tenant cloud workloads; Soft error resiliency 
+ Trends and advances on disciplines/applications 
+ Urban Simulations; Scalable cortical computing; Molecular dynamics supercomputing; Petascale biomolecular simulations; Data-centric parallel systems; Lithospheric dynamics; Graph computation; Genome-scale gene networks; Scale free graphs; Migratable objects; Quantum simulations; Metascalable quantum molecular dynamics simulations; Real-time data analytics; Uncertain execution scales; Sharing in IaaS clouds; Large-scale visualization; Distributed NoSQL data stores 
+ Large scale and fast computation 
+ Developments in information and computing systems; Grid computing; Cloud computing; Pervasive / ubiquitous computing; Services computing and Opportunistic computing; High Performance Computing (HPC); Fast data processing; Real-time processing; Fast switching and routing protocols; Parallelization of algorithms and applications; Energy-efficient High Performance Computing; Large scale data visualization; Tools for parallelization; High performance codes; Optimization; Innovative architectures; Distributed systems, dynamical systems; Future architectures, integrated systems, beyond cloud, reaching exaflop; Supercomputing architectures, operation, and management; Petascale, Exascale; Big data, dCache; HPC centers, data centers; Benchmarking; Green500, Graph500, Top500; Service provisioning; Green computing, cooling techniques 
+ Programming models 
+ Programming languages and parallel algorithms; Message Passing Interface (MPI), OpenMP; Massively Parallel Processing, Symmetric Multi-Processing; PGAS, GASPI, CAF (Co-array Fortran), UPC (Unified Parallel C); X10, Chapel, CUDA, OpenCL, OpenACC, OpenHMPP, Lime, OmpSs, OpenStream; Parallel Virtual Machine (PVM); Programming paradigms; Manycore, multicore; CPU, GPU, FPGA, accelerators; Chip design, architectures, and programming; Fault tolerance, troubleshooting, debugging; High end issues, latency, concurrency 
+ Networks/systems communications 
+ Cross-layer design and optimization; Cyber-physical systems and networks; Data centers, virtualization, and cloud networks; Delay/disruption tolerant networks; Future Internet broadband services; Software Defined Networks (SDN); Fast networks / InfiniBand architectures for future interactive multicore applications; Sensor networks and embedded systems; Ad hoc mobile networks; Access technologies; P2P networks; Optical networks; Cellular and broadband wireless networks; Mobility models and mobile networks; Multicast, broadcast and anycast; Multimedia protocols and networking; Software defined radio and cognitive radio networking; Content-based network service; Certification, public key infrastructures, data integrity; Privacy and anonymity 
+ Networks/systems measurement, control and management 
+ Networks/systems measurement, simulation and emulation; Network-, system-, and application-management; Congestion control and capacity planning; Dynamic spectrum management; Addressing and location management; Quality of Service (QoS) and Quality of Experience (QoE); Quality of Data (QoD) and Quality of Context (QoC); e-Commerce, accounting, pricing and billing; Highly parallel file systems, Lustre, GPFS; Interconnects, high speed ethernet; Use of distributed compute and storage resources; Energy-aware mechanisms for control and management; Configuration, reuse of software components; Resource allocation and management; Denial of service mitigation and prevention; System and data security; Communication visualization 
+ Turbulence modeling and simulation 
+ Fundamental turbulence; Complex flows; Turbulence modeling; Environmental turbulence; Simulation of solid-liquid systems; Heat/cooling transfer modeling; Transitional flows models; Flows simulation; Particle simulations; Turbulent multi-phase flows; Oscillations; Stability and instability; Turbulent air-water flows; Liquid/Liquid interface turbulence; Aeroacoustics 
+ Advanced applications 
+ Computation 
+ Advanced applications, scientific, theoretical, methodological, practical, and technical contributions; Advanced scientific computing; Simulation and modeling (scientific applications, engineering, industry); Mathematical and numerical algorithms and methods; Molecular dynamics simulation; Genetic algorithms; Physics and chemistry applications; Multi-dimensional data visualization; Search engines and scientific discovery; Scientific data processing; Database applications and development; Knowledge discovery, documentation, and classification; Data intensive computing, data science; Methodology and case studies regarding computing and communication scenarios; Small and Medium Enterprises (SME) applications; Computer Aided Engineering (CAE) applications 
+ Systems 
+ Computer science and geoinformatics; e-Energy, geosciences, prospection, exploration, oil and gas; Information and database systems; Mobility and logistic services; Geoscientific Information Systems (GIS); Remote sensing and satellite imaging; Cartography, hydrology; Climatology and environmental sciences; Medicine, genetics, epidemiology, medical geology; 
+ Online social networking; Vehicular, underground and underwater networks and applications; Education, e-Learning, and e-Science; ICT business evaluation and management; Earth and planetary sciences; Archaeology, cultural heritage; Computation frameworks and tools; Mathematica, SAGE, Maple, Matlab, Scilab, Gromacs, ANSYS, Fluent, etc.) 
+ Legal context, economic use and re-use 
+ Legal informatics; Science, information technology, and copyright; Open access, license models, legal aspects of open source; Legal aspects of collaborative software development; Ownership and information technology; Digital rights; Patents; Toll access; Accounting; billing; National and international legal regulations 
+ Evaluation context 
+ Energy-aware and energy-efficient networks; Implementation and experimental testbeds; Traffic measurement and traffic patterns; Characterization of topology dynamics; Access and biometric technologies, performance, and cost prediction; Web services and performance; Performance measurement and benchmarking; Energy-aware and energy-efficient High Performance Computing; Usability studies; Social and ethic consequences with biometry and data security; Standards, benchmarks, protocols 
+ Biometry, security, access technologies, algorithms, and applications 
+ Technologies and advances in biometric algorithms and interfaces (gait, electrocardiography, iris, image, fingerprint, palm veins, multi-modality); Biometric systems; Integration of biometrics with other technologies; Challenge response; Simplified enrollment; NFC support, spoofing, and countermeasures; Single sign on (SSO); Adaptive trust; Template protection (protection of reference data); Large and scalable biometric systems using cloud services; Deployed solutions and applications; Experience reports and systems; Description in physical and logical access control; information system access, immigration and border control, law enforcement, entertainment, finance, life science, healthcare, forensics); Distributed and mobile devices; Public Key Infrastructures; Digital Forensics; Quantum cryptography theory and application for commercial usage; topology of information (braid group approach) 
+ Deadlines: 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ INSTRUCTION FOR THE AUTHORS 
+ Authors of selected papers will be invited to submit extended versions to one of theIARIA Journals. 
+ Publisher:XPS (Xpert Publishing Services) 
+ Archived:ThinkMindTMDigital Library(free access) 
+ Prints available atCurran Associates, Inc. 
+ How to submit to appropriate indexes. 
+ Only .pdf or .doc files will be accepted for paper submission. All received submissions will be acknowledged via an automated system. 
+ Contribution types 
+ regular papers [in the proceedings, digital library] 
+ short papers (work in progress) [in the proceedings, digital library] 
+ ideas: two pages [in the proceedings, digital library] 
+ extended abstracts: two pages [in the proceedings, digital library] 
+ posters: two pages [in the proceedings, digital library] 
+ posters: slide only [slide-deck posted on | www.iaria.org | ] 
+ presentations: slide only [slide-deck posted on | www.iaria.org | ] 
+ demos: two pages [posted on | www.iaria.org | ] 
+ FORMATS 
+ Only .pdf or .doc files will be accepted for paper submission. All received submissions will be acknowledged via an automated system. 
+ Final author manuscripts will be 8.5" x 11", not exceeding 6 pages; max 4 extra pages allowed at additional cost. 
+ Helpful information for paper formatting for MS Word can be foundhere. 
+ There is a community providedLaTeX template: the CTAN packageiaria(with full IARIA formatting rules, including IARIA citation style, but for providing citation style it is tightly bound to pdflatex+biblatex+biber). In addition, there is alsoiaria-lite(not bound to pdflatex+biblatex+biber, but compatible with any TeX stack; thus, it cannot provide the IARIA citation formattings, but only the titlepage and content-related IARIA formatting rules). Based on the iaria package, there is a minimal working example asOverleaf template. When you are using the LaTeX templates, please still adhere to the additionaleditorial rules. 
+ Slides-based contributions can use the corporate/university format and style. 
+ Your paper should also comply with the additionaleditorial rules. 
+ Once you receive the notification of contribution acceptance, you will be provided by the publisher an online author kit with all the steps an author needs to follow to submit the final version. The author kits URL will be included in the letter of acceptance. 
+ We would recommend that you should not use too many extra pages, even if you can afford the extra fees. No more than 2 contributions per event are recommended, as each contribution must be separately registered and paid for. At least one author of each accepted paper must register to ensure that the paper will be included in the conference proceedings and in the digital library, or posted on the www.iaria.org (for slide-based contributions). 
+ CONTRIBUTION TYPE 
+ Regular Papers(up to 6-10 page article -6 pages covered the by regular registration; max 4 extra pages allowed at additional cost- ) (oral presentation) 
+ These contributions could be academic or industrial research, survey, white, implementation-oriented, architecture-oriented, white papers, etc. They will be included in the proceedings, posted in the free-accessThinkMind digital libraryand sent for indexing. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the appropriate contribution type. 12-14 presentation slides are suggested. 
+ Short papers(work in progress) (up to 4 pages long) (oral presentation) 
+ Work-in-progress contributions are welcome. These contributions represent partial achievements of longer-term projects. They could be academic or industrial research, survey, white, implementation-oriented, architecture-oriented, white papers, etc. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the contribution type as work in progress. Contributors must follow the conference deadlines, describing early research and novel skeleton ideas in the areas of the conference topics. The work will be published in the conference proceedings, posted in the free-accessThinkMind digital libraryand sent for indexing. For more details, see theWork in Progressexplanation page. 12-14 presentation slides are suggested. 
+ Ideas contributions(2 pages long) (oral presentation) 
+ This category is dedicated to new ideas in their very early stage. Idea contributions are expression of yet to be developed approaches, with pros/cons, not yet consolidated. Ideas contributions are intended for a debate and audience feedback. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the contribution type as Idea. Contributors must follow the conference deadlines, describing early research and novel skeleton ideas in the areas of the conference topics. The work will be published in the conference proceedings, posted in the free-accessThinkMind digital libraryand sent for indexing. For more details, see theIdeasexplanation page. 12-14 presentation slides are suggested. 
+ Extended abstracts(2 pages long) (oral presentation) 
+ Extended abstracts summarize a long potential publication with noticeable results. It is intended for sharing yet to be written, or further on intended for a journal publication. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the contribution type as Extended abstract. Contributors must follow the conference deadlines, describing early research and novel skeleton ideas in the areas of the conference topics. The work will be published in the conference proceedings, posted in the free-accessThinkMind digital libraryand sent for indexing. 12-14 presentation slides are suggested. 
+ Posters(paper-based, two pages long) (oral presentation) 
+ Posters are intended for ongoing research projects, concrete realizations, or industrial applications/projects presentations. The poster may be presented during sessions reserved for posters, or mixed with presentation of articles of similar topic. A two-page paper summarizes a presentation intended to be a POSTER. This allows an author to summarize a series of results and expose them via a big number of figures, graphics and tables. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the contribution type as Poster Two Pages. Contributors must follow the conference deadlines, describing early research and novel skeleton ideas in the areas of the conference topics. The work will be published in the conference proceedings, posted in the free-accessThinkMind digital libraryand sent for indexing. 8-10 presentation slides are suggested. Also a big Poster is suitable, used for live discussions with the attendees, in addition to the oral presentation. 
+ Posters(slide-based, only) (oral presentation) 
+ Posters are intended for ongoing research projects, concrete realizations, or industrial applications/projects presentations. The poster may be presented during sessions reserved for posters, or mixed with presentation of articles of similar topic. The slides must have comprehensive comments. This type of contribution only requires a 8-10 slide-deck. Please submit the contributions following the instructions for the regular submissions using the "Submit a Paper" button and selecting the contribution type as Poster (slide-only). The slide-deck will be posted, post-event, onwww.iaria.org. 
+ 8-10 presentation slides are suggested. Also a big Poster is suitable, used for live discussions with the attendees, additionally to the oral presentation. 
+ Presentations(slide-based, only) (oral presentation) 
+ These contributions represent technical marketing/industrial/business/positioning presentations. This type of contribution only requires a 12-14 slide-deck. Please submit the contributions following the submission instructions by using the "Submit a Paper" button and selecting the contribution type as Presentation (slide-only). The slide-deck will be posted, post-event, onwww.iaria.org. 
+ 12-14 presentation slides are suggested. 
+ Demos(two pages) [posted onwww.iaria.org] 
+ Demos represent special contributions where a tool, an implementation of an application, or a freshly implemented system is presented in its alfa/beta version. It might also be intended for thsoe new application to gather the attendee opinion. A two-page summary for a demo is intended to be. It would be scheduled in special time spots, to ensure a maximum attendance from the participants. Please submit the contributions following the submission instructions by using the "Submit a Paper" button and selecting the contribution type as Demos. The Demos paper will be posted, post-event, onwww.iaria.org. 
+ Tutorial proposals 
+ Tutorials provide overviews of current high interest topics. Proposals should be for 2-3 hour long. Proposals must contain the title, the summary of the content, and the biography of the presenter(s). The tutorial slide decks will be posted on theIARIAsite. 
+ Please send your proposals totutorial proposal 
+ Panel proposals 
+ The organizers encourage scientists and industry leaders to organize dedicated panels dealing with controversial and challenging topics and paradigms. Panel moderators are asked to identify their guests and manage that their appropriate talk supports timely reach our deadlines. Moderators must specifically submit an official proposal, indicating their background, panelist names, their affiliation, the topic of the panel, as well as short biographies. The panel slide deck will be posted on theIARIAsite. 
+ Please send your proposals topanel proposal 
+ Technical Co-Sponsors and Logistic Supporters 
+ href="" - Copyright (c) 2006-2025, IARIA 
+
+Important Dates information:
+href="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+CommitteesParticipationhref="SubmitINFOCOMP25.html" - Submit a Paper
+href="CameraINFOCOMP25.html" - Camera Ready
+href="RegistrationINFOCOMP25.html" - Registration
+Venuehref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+Programhref="TutorialsINFOCOMP25.html" - Tutorials
+href="ProgramINFOCOMP25.html" - Event Program
+Post Conferencehref="StatsINFOCOMP25.html" - Statistics
+href="AwardsINFOCOMP25.html" - Awards
+href="PhotosINFOCOMP25.html" - Photos
+ContactThe Fifteenth International Conference on Advanced Communications and Computation 
+ INFOCOMP 2025 
+ April 06, 2025 to April 10, 2025 - Valencia, Spain 
+ href="SubmitINFOCOMP25.html" - Submit a Contribution
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+Deadlines 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ href="https://www.iaria.org/conferences/INFOCOMP.html" - Past Events
+SponsorsPublication 
+  
+ Published by IARIA Press (operated byXpert Publishing Services) 
+ Archived in the Open AccessIARIA ThinkMind Digital Library 
+ Prints available atCurran Associates, Inc. 
+ Authors of selected papers will be invited to submit extended versions to aIARIA Journal 
+ Indexing Procedure 
+ Affiliated Journals 
+ Menuhref="INFOCOMP25.html" - HOME
+href="CfPINFOCOMP25.html" - Call for Papers
+Committeeshref="TouristINFOCOMP25.html" - Touristic Info
+href="HotelTravelINFOCOMP25.html" - Hotel and Travel
+href="ProgramINFOCOMP25.html" - Event Program
+href="TutorialsINFOCOMP25.html" - Tutorials
+href="RegistrationINFOCOMP25.html" - Registration
+href="CameraINFOCOMP25.html" - Camera Ready
+href="SubmitINFOCOMP25.html" - Submit a Paper
+iaria.orgContactINFOCOMP 2025 - The Fifteenth International Conference on Advanced Communications and Computation 
+ April 06, 2025 - April 10, 2025 
+ INFOCOMP 2025 
+ Onsite and Online Options: In order to accommodate various situations, we are offering the option for either physical presence or virtual participation (pdf slides or pre-recorded videos). 
+ ISSN:2308-3484 
+ ISBN:978-1-68558-253-1 
+ Registered: with the Library of Congress of the United States of America (ISSN) 
+ Free Access: in | ThinkMind Digital Library 
+ INFOCOMP 2025 is colocated with the following events as part ofhref="DataSys25.html" - DataSys 2025 Congress
+: 
+ href="AICT25.html" - AICT 2025 | , The Twenty-First Advanced International Conference on Telecommunications 
+ href="ICIW25.html" - ICIW 2025 | , The Twentieth International Conference on Internet and Web Applications and Services 
+ href="ICIMP25.html" - ICIMP 2025 | , The Twentieth International Conference on Internet Monitoring and Protection 
+ href="SMART25.html" - SMART 2025 | , The Fourteenth International Conference on Smart Cities, Systems, Devices and Technologies 
+ href="IMMM25.html" - IMMM 2025 | , The Fifteenth International Conference on Advances in Information Mining and Management 
+ href="INFOCOMP25.html" - INFOCOMP 2025 | , The Fifteenth International Conference on Advanced Communications and Computation 
+ href="MOBILITY25.html" - MOBILITY 2025 | , The Fifteenth International Conference on Mobile Services, Resources, and Users 
+ href="SPWID25.html" - SPWID 2025 | , The Eleventh International Conference on Smart Portable, Wearable, Implantable and Disability-oriented Devices and Systems 
+ href="ACCSE25.html" - ACCSE 2025 | , The Tenth International Conference on Advances in Computation, Communications and Services 
+ INFOCOMP 2025 Steering Committee 
+  
+ Claus-Peter Rückemann 
+ Universität Münster / DIMF / Leibniz Universität Hannover, Germany | Nicola Calabretta 
+ Eindhoven University of Technology 
+ Netherlands 
+  
+ Claus-Peter Rückemann 
+ Universität Münster / DIMF / Leibniz Universität Hannover, Germany 
+ Nicola Calabretta 
+ Eindhoven University of Technology 
+ Netherlands 
+ INFOCOMP 2025 conference tracks: 
+ Trends and advances on architecture/methods 
+ Intensive computing and Big Data; Performance portability; Trading off locality and load balancing; Complex multi-physics models; Multiscale methods;Emerging programming models;Hybrid parallel programming; APGAS (Asynchronous Partitioned Global Address Space) programming model; Resiliency and elasticity approaches; Scalable petascale data-driven approach; Extreme scale technologies; Task characterization-driven scheduling; Data analytics and visualization; HPC in IoT (Internet of Things) systems; Observational data and simulations; Complex scientific data sets; Massively scalable task parallelism; Routing-aware tasks; Multi-tenant cloud workloads; Soft error resiliency 
+ Trends and advances on disciplines/applications 
+ Urban Simulations; Scalable cortical computing; Molecular dynamics supercomputing; Petascale biomolecular simulations; Data-centric parallel systems; Lithospheric dynamics; Graph computation; Genome-scale gene networks; Scale free graphs; Migratable objects; Quantum simulations; Metascalable quantum molecular dynamics simulations; Real-time data analytics; Uncertain execution scales; Sharing in IaaS clouds; Large-scale visualization; Distributed NoSQL data stores 
+ Large scale and fast computation 
+ Developments in information and computing systems; Grid computing; Cloud computing; Pervasive / ubiquitous computing; Services computing and Opportunistic computing; High Performance Computing (HPC); Fast data processing; Real-time processing; Fast switching and routing protocols; Parallelization of algorithms and applications; Energy-efficient High Performance Computing; Large scale data visualization; Tools for parallelization; High performance codes; Optimization; Innovative architectures; Distributed systems, dynamical systems; Future architectures, integrated systems, beyond cloud, reaching exaflop; Supercomputing architectures, operation, and management; Petascale, Exascale; Big data, dCache; HPC centers, data centers; Benchmarking; Green500, Graph500, Top500; Service provisioning; Green computing, cooling techniques 
+ Programming models 
+ Programming languages and parallel algorithms; Message Passing Interface (MPI), OpenMP; Massively Parallel Processing, Symmetric Multi-Processing; PGAS, GASPI, CAF (Co-array Fortran), UPC (Unified Parallel C); X10, Chapel, CUDA, OpenCL, OpenACC, OpenHMPP, Lime, OmpSs, OpenStream; Parallel Virtual Machine (PVM); Programming paradigms; Manycore, multicore; CPU, GPU, FPGA, accelerators; Chip design, architectures, and programming; Fault tolerance, troubleshooting, debugging; High end issues, latency, concurrency 
+ Networks/systems communications 
+ Cross-layer design and optimization; Cyber-physical systems and networks; Data centers, virtualization, and cloud networks; Delay/disruption tolerant networks; Future Internet broadband services; Software Defined Networks (SDN); Fast networks / InfiniBand architectures for future interactive multicore applications; Sensor networks and embedded systems; Ad hoc mobile networks; Access technologies; P2P networks; Optical networks; Cellular and broadband wireless networks; Mobility models and mobile networks; Multicast, broadcast and anycast; Multimedia protocols and networking; Software defined radio and cognitive radio networking; Content-based network service; Certification, public key infrastructures, data integrity; Privacy and anonymity 
+ Networks/systems measurement, control and management 
+ Networks/systems measurement, simulation and emulation; Network-, system-, and application-management; Congestion control and capacity planning; Dynamic spectrum management; Addressing and location management; Quality of Service (QoS) and Quality of Experience (QoE); Quality of Data (QoD) and Quality of Context (QoC); e-Commerce, accounting, pricing and billing; Highly parallel file systems, Lustre, GPFS; Interconnects, high speed ethernet; Use of distributed compute and storage resources; Energy-aware mechanisms for control and management; Configuration, reuse of software components; Resource allocation and management; Denial of service mitigation and prevention; System and data security; Communication visualization 
+ Turbulence modeling and simulation 
+ Fundamental turbulence; Complex flows; Turbulence modeling; Environmental turbulence; Simulation of solid-liquid systems; Heat/cooling transfer modeling; Transitional flows models; Flows simulation; Particle simulations; Turbulent multi-phase flows; Oscillations; Stability and instability; Turbulent air-water flows; Liquid/Liquid interface turbulence; Aeroacoustics 
+ Advanced applications 
+ Computation 
+ Advanced applications, scientific, theoretical, methodological, practical, and technical contributions; Advanced scientific computing; Simulation and modeling (scientific applications, engineering, industry); Mathematical and numerical algorithms and methods; Molecular dynamics simulation; Genetic algorithms; Physics and chemistry applications; Multi-dimensional data visualization; Search engines and scientific discovery; Scientific data processing; Database applications and development; Knowledge discovery, documentation, and classification; Data intensive computing, data science; Methodology and case studies regarding computing and communication scenarios; Small and Medium Enterprises (SME) applications; Computer Aided Engineering (CAE) applications 
+ Systems 
+ Computer science and geoinformatics; e-Energy, geosciences, prospection, exploration, oil and gas; Information and database systems; Mobility and logistic services; Geoscientific Information Systems (GIS); Remote sensing and satellite imaging; Cartography, hydrology; Climatology and environmental sciences; Medicine, genetics, epidemiology, medical geology; 
+ Online social networking; Vehicular, underground and underwater networks and applications; Education, e-Learning, and e-Science; ICT business evaluation and management; Earth and planetary sciences; Archaeology, cultural heritage; Computation frameworks and tools; Mathematica, SAGE, Maple, Matlab, Scilab, Gromacs, ANSYS, Fluent, etc.) 
+ Legal context, economic use and re-use 
+ Legal informatics; Science, information technology, and copyright; Open access, license models, legal aspects of open source; Legal aspects of collaborative software development; Ownership and information technology; Digital rights; Patents; Toll access; Accounting; billing; National and international legal regulations 
+ Evaluation context 
+ Energy-aware and energy-efficient networks; Implementation and experimental testbeds; Traffic measurement and traffic patterns; Characterization of topology dynamics; Access and biometric technologies, performance, and cost prediction; Web services and performance; Performance measurement and benchmarking; Energy-aware and energy-efficient High Performance Computing; Usability studies; Social and ethic consequences with biometry and data security; Standards, benchmarks, protocols 
+ Biometry, security, access technologies, algorithms, and applications 
+ Technologies and advances in biometric algorithms and interfaces (gait, electrocardiography, iris, image, fingerprint, palm veins, multi-modality); Biometric systems; Integration of biometrics with other technologies; Challenge response; Simplified enrollment; NFC support, spoofing, and countermeasures; Single sign on (SSO); Adaptive trust; Template protection (protection of reference data); Large and scalable biometric systems using cloud services; Deployed solutions and applications; Experience reports and systems; Description in physical and logical access control; information system access, immigration and border control, law enforcement, entertainment, finance, life science, healthcare, forensics); Distributed and mobile devices; Public Key Infrastructures; Digital Forensics; Quantum cryptography theory and application for commercial usage; topology of information (braid group approach) 
+ Deadlines: 
+  
+ Submission | Jan 20, 2025 
+ Notification | Feb 16, 2025 
+ Registration | Feb 28, 2025 
+ Camera ready | Mar 05, 2025 
+ Deadlinesdiffer for special tracks. Please consult the conference home page for special tracks Call for Papers (if any). 
+ Technical Co-Sponsors and Logistic Supporters 
+ href="" - Copyright (c) 2006-2025, IARIA

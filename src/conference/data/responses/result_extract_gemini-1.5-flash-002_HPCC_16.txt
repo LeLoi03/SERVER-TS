@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "August 13 - 15, 2025",
+  "Year": "2025",
+  "Location": "Exeter, England, UK",
+  "City-State-Province": "Exeter",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "April 30, 2025"
+  },
+  "Notification Date": {
+    "Authors Notification": "June 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Manuscript Due": "July 15, 2025"
+  },
+  "Registration Date": {
+    "Registration Due": "July 15, 2025"
+  },
+  "Other Date": {
+    "Workshop Proposal": "March 1, 2025"
+  },
+  "Topics": "High Performance Computing, High Performance Computing Applications, Parallel and Distributed Computing, Parallel and Distributed Systems, Communications and Networking, Computing Power Network, Network for AI Computing",
+  "Publisher": "IEEE Computer Society Press",
+  "Summary": "The 27th IEEE International Conference on High Performance Computing and Communications (HPCC-2025) will be held in Exeter, England, UK from August 13-15, 2025.  This conference is a forum for engineers and scientists in academia, industry, and government to address the challenges and present their work on all aspects of high performance computing and communications.",
+  "Call for Papers": "# HPCC 2025: Call for Papers\n\nThe 27th IEEE International Conference on High Performance Computing and Communications (HPCC-2025) will be held in **Exeter, England, UK, from August 13-15, 2025.**\n\n## Introduction\n\nWith the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever-increasing demand for high-performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules.\n\nAmong a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2025 conference is the 27th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications, and experience on all aspects of high-performance computing and communications. IEEE HPCC-2025 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC).\n\n## Scope and Topics\n\nTopics of interest include, but are not limited to:\n\n**Track 1: High Performance Computing and Applications**\n\n*   High Performance Computing Theory\n*   High Performance Computing Architectures\n*   System Software and Middleware\n*   System Software Support for Scientific Workflows\n*   Storage and I/O Systems\n*   Resource Management\n*   Instruction-Level and Thread-Level Parallelism\n*   Performance Modeling and Evaluation\n*   Massively Multicore Systems\n*   Future Novel Computing Platforms\n*   Database Applications and Data Mining\n*   High Performance Computing for Bioinformatics\n*   High Performance Computing for Big Data\n*   High Performance Computing for AI\n*   High Performance Computing for Block Chains\n*   Green High Performance Computing\n\n**Track 2: Parallel and Distributed Computing and Systems**\n\n*   Parallel and Distributed System Architectures\n*   Parallel and Distributed Algorithms\n*   Data Center Architectures\n*   Resource Virtualization\n*   Web Services and Internet Computing\n*   Cloud Computing\n*   Grid and Cluster Computing\n*   Federated Learning\n*   Embedded Systems\n*   Distributed Systems and Applications\n*   Pervasive/Ubiquitous Computing & Intelligence\n*   Distributed Graphics and VR/AR/MR Systems\n*   Distributed AI and Soft/Natural Computing\n*   Power-Efficient and Green Computing Systems\n*   Parallel and Distributed Computing for Big Data\n*   Parallel and Distributed Computing for AI\n\n**Track 3: Communications and Networking**\n\n*   Network and Interconnect Architectures\n*   Computer Networks\n*   Internet Architectures and Protocols\n*   Telecommunications\n*   Trust, Security, and Privacy\n*   Energy-Aware Computing and Networking\n*   5G Network\n*   Software Defined Networking\n*   Network Functions Virtualization\n*   Machine Learning and Deep Learning\n*   Social Networking and Computing\n*   Performance Evaluation and Measurement\n\n**Track 4: Computing Power Network (CPN) and Network for AI Computing**\n\n*   Computing and network convergence technology for AI application\n*   Resource allocation and collaboration in CPN\n*   Computing power identification and measurement technology\n*   Lossless network design\n*   Technology for RDMA\n*   IPv6/SRv6-based hyperscale AI Datacenter\n\n## Paper Submission Guideline\n\nAll papers need to be submitted electronically through the conference submission website ([https://hpcn.exeter.ac.uk/hpcc/](https://hpcn.exeter.ac.uk/hpcc/)) with PDF format. The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with an over-length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts).\n\n## Important Dates\n\n*   **Workshop Proposal:** March 1, 2025\n*   **Submission Deadline:** April 30, 2025\n*   **Authors Notification:** June 15, 2025\n*   **Final Manuscript Due:** July 15, 2025\n*   **Registration Due:** July 15, 2025\n*   **Conference Date:** August 13-15, 2025"
+}
+

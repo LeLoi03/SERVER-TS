@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "July 20 - 28, 2025",
+  "Year": "2025",
+  "Location": "Hiroshima, Japan",
+  "City-State-Province": "Hiroshima",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Reviewing Starts": "December 15, 2024"
+  },
+  "Notification Date": {
+    "Authors notified of decision regarding submission": "February 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Final, revised, and camera-ready paper due": "March 15, 2025"
+  },
+  "Registration Date": {
+    "Last day to earn \"early payment\" discount by paying the conference registration fee": "March 15, 2025",
+    "For a paper to appear in the proceedings (web), at least one author must register and pay their registration fee by": "April 15, 2025",
+    "For a paper to appear in the schedule, at least one author must register and pay their registration fee by": "May 1, 2025",
+    "For paper to appear in printed conference book, at least one author must have paid registration by": "April 15, 2025",
+    "Hotel Expire Their Discounts": "May 1, 2025"
+  },
+  "Topics": "Resilience and Innovation, Global Collaboration, Teaching Diverse Populations of Students, Fake News, Bias, Misinformation, Disinformation, Propaganda, Transdisciplinarity, Knowledge Transfer, Case Method of Teaching, Mentoring Doctoral Students, Teach IT, Cyber Security, Accounting Education, Digital Excellence, Information Security, Informing Science, Student Research, Technology Enhanced Learning Environments, The Art and Science of Informing, Digitally Enhanced Learning and Teaching, Digitally Augmented Research and Methods, Virtual Connections for Teaching and Research, Practical tools & strategies to enhance teaching in virtual settings",
+  "Summary": "InSITE 2025, organized by the Informing Science Institute in collaboration with the Hiroshima Institute of Technology (HIT), will take place in Hiroshima, Japan, from July 20-28, 2025.  The theme is \"Resilience and Innovation: Shaping the Future through Global Collaboration.\"",
+  "Call for Papers": "No call for papers available"
+}

@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "October 12 - 16, 2025",
+  "Year": "2025",
+  "Location": "Aalto University, Espoo, Finland",
+  "City-State-Province": "Espoo",
+  "Country": "Finland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline for Notes and Briefs": "May 18, 2025"
+  },
+  "Notification Date": {
+    "Author Notification Date (all papers)": "July 2, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Deadline": "July 30, 2025"
+  },
+  "Other Date": {
+    "Conference Date": "October 12-16, 2025",
+    "Pre-Conference Workshops, Tutorials, Symposia, DC": "October 12-13, 2025"
+  },
+  "Topics": "Wearable Computing, Wearable Systems, Novel Devices, Form Factors, Smartphone-based systems, Smartwatch-based systems, Glasses, Earables, Rings, Gloves, Wearable equipment, Exoskeletons, Physical strength augmentation, Displays, Mobile augmented reality optics, Haptics, Actuators, Sensor technologies, Wearable sensor networks, Manufacturing of wearable technologies, Wearable technology toolkits, Power sources and management, Thermal management, E-textiles, Advanced textiles, Clothing-based wearables, Functional clothing, Materials for textiles and clothing, On-skin technology, Implantable technology, Unconventional materials, Biotechnology and HCI, Microfluidics, Research through design, Culturally-sensitive design processes, Design innovation, Machine learning, Artificial intelligence, Data augmentation, Big data, Crowd-sourcing, Individual activity recognition, Behavior analysis, Context recognition, Skill assessment, Social interaction, Social perception, Human augmentation, Human-robot interaction, Human/environmental/economic impacts, Ethics, Privacy",
+  "Summary": "UbiComp / ISWC 2025 will be held in Espoo, Finland, during October 2025 at Aalto University. UbiComp / ISWC is a premier interdisciplinary venue in which leading international researchers, designers, developers, and practitioners in the field present and discuss novel results in all aspects of ubiquitous, pervasive, and wearable computing.",
+  "Call for Papers": "# ISWC 2025: Call for ISWC Notes and Briefs\n\nISWC 2025, the 29th annual International Symposium on Wearable Computers, will be held in conjunction with UbiComp 2025 in **Espoo, Finland, from October 12-16, 2025**.\n\nISWC is the premier forum for research on wearable technology and topics related to on-body and worn mobile technologies. Contributions from a wide range of domains are encouraged.\n\n## Areas of Interest\n\nAreas of interest include (but are not limited to):\n\n*   Wearable Systems, Novel Devices and Form Factors\n*   Enabling Technologies\n*   Textiles and Clothing\n*   On-Skin and Implantable Interfaces\n*   Design Process for Wearables\n*   Information and Data\n*   Human/Device Interaction\n*   Applications\n\n## Submission Types and Procedures\n\nISWC accepts contributions of original, unpublished research in two lengths: Notes and Briefs. Papers are published and archived in the ACM Digital Library.\n\n### Notes\n\nNovel, rigorous research contributions of smaller scope than full papers submissions to IMWUT. Notes should reflect a more narrow research question, but not reflect early-stage research, or preliminary technological development without a robust evaluation.  Notes should not exceed 6 pages in the 2-column, ACM proceedings format (please refer to the UbiComp/ISWC templates and formatting).\n\n### Briefs\n\nNovel research contributions of a narrow scope. Briefs should include system or technology development with limited evaluation. Briefs should not exceed 3 pages in the 2-column, ACM proceedings format (please refer to the UbiComp/ISWC templates and formatting).\n\n### Former “Long Papers”\n\nSince ISWC and UbiComp have started co-hosting the conference, papers formerly known as “Long papers” must be submitted via the IMWUT journal system.\n\n## Template for Submission\n\nPlease refer to the [UbiComp/ISWC template and formatting](/ubicomp-iswc-2025/authors/formatting/).\n\n## Submission, Reviewing, and Camera-ready Procedures\n\nAll papers should be sent through the submission site available through the Precision Conference System (PCS).\n\n*   Double-blind review: ISWC follows a double-blind review process, and the [anonymization policy of ACM IMWUT](https://dl.acm.org/journal/imwut/author-policies#anonymization) should be observed.\n*   Accepted papers: Final edits will be prepared by the authors for submission on the Camera Ready Deadline.\n*   Shepherded papers: Those are papers which require very specific changes identified by reviewers and the program committee members. They are considered to be conditionally accepted, subject to the authors modifying their paper to address specific shepherding comments.\n*   Rejected papers: Some rejected papers may be invited for submission as posters or demonstrations at the UbiComp/ISWC 2025 Conference.\n*   Desk Rejects: Papers out of the scope of ISWC or without appropriate anonymization may be rejected without reviews.\n\n## Reviewing Criteria\n\nAll papers are reviewed based on their scientific merit and contribution to the scientific progress in the domain of wearable technology. Submissions should demonstrate novelty, impact, and rigor.\n\n## Important Dates\n\n*   **Submission Deadline:** May 18, 2025 [11.59 pm AoE]\n*   **Author Notification Date:** July 2, 2025\n*   **Camera-Ready Deadline:** July 30, 2025\n\n## Contact\n\n[iswc-2025@ubicomp.org](mailto:iswc-2025@ubicomp.org)"
+}
+

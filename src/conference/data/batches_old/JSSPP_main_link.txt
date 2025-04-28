@@ -1,0 +1,166 @@
+Conference JSSPP:
+
+Toggle navigationhref="http://jsspp.org/index.php?page=about" - JSSPP
+href="http://jsspp.org/index.php?page=about" - About 
+ href="http://jsspp.org/index.php?page=cfp" - Call for Submissions 
+ href="http://jsspp.org/index.php?page=deadlines" - Deadlines 
+ href="http://jsspp.org/index.php?page=program" - Program 
+ href="http://jsspp.org/index.php?page=submission" - Submission 
+ Committees 
+ href="http://jsspp.org/index.php?page=registration" - Registration 
+ href="http://jsspp.org/workload" - Workloads 
+ href="http://jsspp.org/tools" - Tools 
+ JSSPP 2025 
+ 28thWorkshop on Job Scheduling Strategies for Parallel Processing (JSSPP 2025) 
+ In Conjunction with IPDPS 2025, Milan, Italy, June 3 - 4, 2025 
+ Welcome to JSSPP 2025 Workshop 
+ JSSPP 2025 is the 28thedition of the workshop onJob Scheduling Strategies for Parallel Processing. JSSPP 2025 will be held in conjunction with 39th IEEE International Parallel and Distributed Processing Symposium (IPDPS'2025), June 3 - 7, 2025 in Milan, Italy. 
+ This annual series of workshops has been held since 1995 in conjunction with various other conferences, includingIPDPS(formerly IPPS), the main parallel processing symposium sponsored by the IEEE, the ACMSIGMETRICSandICSconferences, andHPDC/GGF, the premier annual meeting of the Global Grid Forum. 
+ The proceedings of these workshops arehref="https://link.springer.com/conference/jsspp" - published by Springer-Verlag in the Lecture Notes in Computer Science Series
+. 
+ You candownload BibTeX file of all these workshop proceedings. 
+ JSSPP 2025 is planned as in-person meeting.JSSPP 2025 will be a TWO-DAY event.. 
+ Paper Submission Deadline 
+ February 24th, 2025(FINAL) 
+ Author Notification 
+ March 14th, 2025 (approximate, extended)Camera-Ready Paper 
+ July 27th, 2025News: 
+ href="./2024/Managing_Private_Clouds_with_Flex_ JSSPP_2024.pdf" - 
+JSSPP 2025 is planned as a TWO-DAY EVENT 
+ We are happy to announce that the JSSPP 2025 will be held in conjunction with 39th IEEE International Parallel and Distributed Processing Symposium (IPDPS'2025), June 3 - 4, 2025 in Milan, Italy.For the first time JSSPP will be a two-day event.JSSPP 2024 proceedings are AVAILABLE ONLINE 
+ We are happy to announce that the proceedings ofJSSPP 2024 - 27th Workshop on Job Scheduling Strategies for Parallel Processinghave been published in LNCS series by Springer:https://link.springer.com/book/10.1007/978-3-031-74430-3.Keynote Lecture is Online 
+ JSSPP Keynote was delivered byWalfredo Cirne (Google):href="./2024/Managing_Private_Clouds_with_Flex_ JSSPP_2024.pdf" - Managing Private Clouds
+. 
+ Abstract: This talk defines the Private Cloud Management program and presents Flex, Google’s solution for it. It covers how Flex makes Google’s easier to operate, as well as the key techniques used to make it more efficient. It also discusses how we preserve governance by charging internal users the resources they prompted Google to buy, in spite of aggressive resource sharing and on-demand allocation.JSSPP is on Slack 
+ href="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - 
+Feel free to join us athref="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - Slack
+. Slack is a perfect way to discuss and share ideas within JSSPP scheduling community.Quick Links 
+ href="index.php?page=cfp" - 2025 Call for Submissions 
+ Previous workshops 
+ href="https://jsspp.org/index.php?page=program24" - 2024 Program 
+ href="https://join.slack.com/t/jsspp/shared_invite/zt-m3og21sj-RH8otKwzFST82stICr67xA" - Slack Channel | [NEW] 
+ Workshop Organizers 
+ href="index.php?page=submission" - Paper Formatting Instructions 
+ Workloads Archive 
+ This workshop series has been ranked among the very good venues in Computer Science in terms of impact (CORE:B->C, LiveSHINE:A-, Microsoft Academic:A-, ERA:B, Qualis:B1). Latest results can be found at theGGS Conference Rating,CORE Conference Portalor at theConference Rankswebsites (using "jsspp" acronym). 
+  
+ Previous Workshops 
+ 1st Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '95, Santa Barbara, CA, 25 April 1995 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp95/" - Technical program | . 
+ Proceedings ordering information | . 
+ 2nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '96, Honolulu, Hawaii, 16 April 1996 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp96/" - Technical program | . 
+ Proceedings ordering information | . 
+ 3rd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS '97, Geneva, Switzerland, 5 April 1997 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp97/" - Technical program | . 
+ Proceedings ordering information | . 
+ 4th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '98, Orlando, FL, 30 March 1998 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp98/" - Technical program | . 
+ Proceedings ordering information | . 
+ 5th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPPS/SPDP '99, San Juan, Puerto Rico, 16 April 1999 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp99/" - Technical program 
+ Proceedings ordering information | . 
+ 6th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2000, Cancun, Mexico, 1 May 2000 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp00/" - Technical program 
+ Proceedings ordering information | . 
+ 7th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with SIGMETRICS 2001, University Park Hotel at MIT, Cambridge, MA, 16 June 2001 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp01/" - Technical program | . 
+ Proceedings ordering information | . 
+ 8th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC11/GGF5, Edinburgh, Scotland, 24 July 2002 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp02/" - Technical program | . 
+ Proceedings ordering information | . 
+ 9th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with HPDC12/GGF8, Seattle, WA, 24 June 2003 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp03/" - Technical program | . 
+ Proceedings ordering information | . 
+ 10th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2004, New York, NY, 13 June 2004 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp04/" - Technical program | . 
+ Proceedings ordering information | . 
+ 11th Workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with ICS 2005, Boston, MA, 19 June 2005 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp05/" - Technical program | . 
+ Proceedings ordering information | . 
+ 12th workshop on Job Scheduling Strategies for Parallel processing | Held in conjunction with SIGMETRICS 2006, St. Malo, France, 26 June 2006 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp06/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 13th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with ICS 2007, Seattle, WA, 17 June 2007 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp07/" - Technical Program | . 
+ Proceedings ordering information | . 
+ 14th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2009, Rome, Italy, 29 May 2009 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp09/" - Technical program | . 
+ Proceedings ordering information | . 
+ 15th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2010, Atlanta, GA, 23 April 2010 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp10/" - Technical program | . 
+ Proceedings ordering information | . 
+ 16th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2012 in Shanghai, China, 25 May 2012 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp12/" - Technical program | . 
+ Proceedings ordering information | . 
+ 17th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2013 in Boston, Massachusetts, 24 May 2013 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp13/" - Technical program | . 
+ Proceedings ordering information | . 
+ 18th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2014 in Phoenix, Arizona, on 23 May 2014 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp14/" - Technical program | . 
+ Proceedings ordering information | . 
+ 19th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2015 in Hyderabad, India, on 29 May 2015 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp15/" - Technical program | . 
+ Proceedings published by Springer-Verlag as LNCS 10353 (jointly with 2016 edition). | href="https://link.springer.com/book/10.1007%2F978-3-319-61756-5" - 19th and 20th International Workshops, JSSPP 2015, Hyderabad, India, May 26, 2015 and JSSPP 2016, Chicago, IL, USA, May 27, 2016, Revised Selected Papers | . 
+ 20th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2016 in Chicago, Illinois, on 27 May 2016 | href="http://www.cs.huji.ac.il/~feit/parsched/jsspp16/" - Technical program | . 
+ Proceedings published by Springer-Verlag as LNCS 10353 (jointly with 2015 edition). | href="https://link.springer.com/book/10.1007%2F978-3-319-61756-5" - 19th and 20th International Workshops, JSSPP 2015, Hyderabad, India, May 26, 2015 and JSSPP 2016, Chicago, IL, USA, May 27, 2016, Revised Selected Papers | . 
+ 21st Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2017 in Orlando, Florida, on 2 June 2017 | href="http://jsspp.org/index.php?page=program17" - Technical program | . 
+ Proceedings published by Springer as LNCS 10773. | href="https://link.springer.com/book/10.1007/978-3-319-77398-8" - 21st International Workshop, JSSPP 2017, Orlando, FL, USA, June 2, 2017, Revised Selected Papers | . 
+ 22nd Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2018 in Vancouver, Canada, on 25 May 2018 | href="http://jsspp.org/index.php?page=program18" - Technical program | . 
+ Proceedings published by Springer as LNCS 11332. | href="https://link.springer.com/book/10.1007/978-3-030-10632-4" - 22nd International Workshop, JSSPP 2018, Vancouver, Canada, May 25, 2018, Revised Selected Papers | . 
+ 23rd Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2020 on 22 May 2020 | href="http://jsspp.org/index.php?page=program20" - Technical program | . 
+ Proceedings published by Springer as LNCS 12326. | href="https://link.springer.com/book/10.1007/978-3-030-63171-0" - 23rd International Workshop, JSSPP 2020, New Orleans, LA, USA, May 22, 2020, Revised Selected Papers | . 
+ 24th Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2021 on 21 May 2021 | href="http://jsspp.org/index.php?page=program21" - Technical program | . 
+ Proceedings published by Springer as LNCS 12985. | href="https://link.springer.com/book/10.1007/978-3-030-88224-2" - 24th International Workshop, JSSPP 2021, May 21, 2021, Revised Selected Papers | . 
+ 25th Workshop on Job Scheduling Strategies for Parallel Processing | Held online in conjunction with IPDPS 2022 on 3 June 2022 | href="http://jsspp.org/index.php?page=program22" - Technical program | . 
+ Proceedings published by Springer as LNCS 13592. | href="https://link.springer.com/book/10.1007/978-3-031-22698-4" - 25th International Workshop, JSSPP 2022, June 3, 2022, Revised Selected Papers | . 
+ 26th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2023 on 19 May 2023 | href="http://jsspp.org/index.php?page=program23" - Technical program | . 
+ Proceedings published by Springer as LNCS 14283. | href="https://link.springer.com/book/10.1007/978-3-031-43943-8" - 26th International Workshop, JSSPP 2023, May 19, 2023, Revised Selected Papers | . 
+ 27th Workshop on Job Scheduling Strategies for Parallel Processing | Held in conjunction with IPDPS 2024 on 31 May 2024 | href="http://jsspp.org/index.php?page=program24" - Technical program | . 
+ Proceedings published by Springer as LNCS 14591. | href="https://link.springer.com/book/10.1007/978-3-031-74430-3" - 27th International Workshop, JSSPP 2024, May 31, 2024, Revised Selected Papers | . 
+ JSSPP 1995-2025 – the Workshop on Jobs Scheduling Strategies for Parallel Processing.Contact email:href="mailto:jssppw@gmail.com" - jssppw@gmail.com 
+
+Call for Papers information:
+Toggle navigationhref="http://jsspp.org/index.php?page=about" - JSSPP
+href="http://jsspp.org/index.php?page=about" - About 
+ href="http://jsspp.org/index.php?page=cfp" - Call for Submissions 
+ href="http://jsspp.org/index.php?page=deadlines" - Deadlines 
+ href="http://jsspp.org/index.php?page=program" - Program 
+ href="http://jsspp.org/index.php?page=submission" - Submission 
+ Committees 
+ href="http://jsspp.org/index.php?page=registration" - Registration 
+ href="http://jsspp.org/workload" - Workloads 
+ href="http://jsspp.org/tools" - Tools 
+ Call for Papers 
+ JSSPP welcomesRegular Papers (RP)as well as descriptions ofOpen Scheduling Problems (OSP)andWorkload Traces (WT)coming from interesting scheduling domains (see below). Our goal with the OSP papers is to build a bridge between the production and research worlds, enhancing mutual understanding and reproducibility to facilitate direct collaborations and impact. Our goal with the WT papers is to tackle the lack of real-world data that often hampers the ability of the research community to engage with scheduling problems in a way that has a real-world impact. 
+ Call for Regular Papers (RP) 
+ JSSPP solicits regular papers that focus on challenges in parallel scheduling, including but not limited to:Design of new scheduling approaches. 
+ Performance evaluation of scheduling approaches, including methodology, benchmarks, and metrics. 
+ Fulfilling additional constraints in scheduling systems, like job priorities, price, energy requirements (Green Computing), accounting, load estimation, and quality of service guarantees. 
+ Impact of scheduling strategies on system utilization, application performance, user-friendliness, cost efficiency, and energy efficiency. 
+ Scaling and architecture of very large scheduling systems. 
+ Operational challenges: Capacity planning, service level assurance, reliability. 
+ Interaction between schedulers on different levels (e.g., processor vs cluster) and tenancy domains (single and multi-tenant) 
+ Interaction between applications/workloads, e.g., efficient batch job and container/Pod/VM co-scheduling within a single system, etc. 
+ Experience reports from large-scale compute production systems. 
+ GPU/Accelerator (co)scheduling. 
+ AI/ML-inspired scheduling approaches. 
+ Call for Workload Traces (WT) 
+ JSSPP welcomes papers introducing workload traces from workloads of real systems that offer challenges in the context of this workshop. These submissions should include:Anonymized (if needed) workload artifacts that describe a significant share of individual units of resource scheduling (jobs, pods, VMs, functions, etc.) during a period of life in a parallel computing system. 
+ A description of the parallel system running these workloads. 
+ An analysis of the traces, modeling key workload features and highlighting scheduling challenges in their hosting systems. 
+ We ask submitters to employ known workload description languages (e.g.,SWF) to represent their traces or to attach schemas that allow interpreting them. The submission of artifacts that model the workloads is also encouraged.Call for Open Scheduling Problems (OSP) 
+ JSSPP welcomes papers describing open problems in large-scale scheduling. We believe that clearly described real-world scheduling problems will help both the industry and the scientific communities to bridge the gap that often prevents the adoption of newly proposed scheduling techniques in practice. Effective scheduling approaches are predicated on three things:A concise understanding of scheduling goals, and how they relate to one another. 
+ Details of the workload (job arrival times, sizes, shareability, deadlines, etc.) 
+ Details of the system being managed (size, break/fix lifecycle, allocation constraints) 
+ Submissions must include a concise description of the key metrics of the system and how they are calculated, as well as anonymized data publication of the system workload and production schedule. Ideally, anonymized operational logs would also be published, though we understand this might be more difficult. We envision that OSP papers will stimulate the development of new scheduling approaches, which can be robustly compared with the schedules used in production facilities, and other approaches to solve the same problems.Submission Format 
+ Paper formatting requirements are the same for Regular Papers, Workload Traces, and OSP-related submissions. Papers should be no longer than20 single-spaced pages, 10pt font, including figures and references. All submissions must follow the LNCS format. See the instructions at Springer's website:http://www.springer.com/lncsor in thehref="index.php?page=submission" - Submission section
+. 
+ All papers in scope will be reviewed by at least three members of theprogram committee. 
+ Submissions are accepted byhref="https://easychair.org/conferences/?conf=jsspp2025" - EasyChair submission page
+. 
+ href="https://easychair.org/conferences/?conf=jsspp2025" - Submission is open
+Paper Submission Deadline 
+ February 24th, 2025(FINAL) 
+ Author Notification 
+ March 14th, 2025 (approximate, extended)Camera-Ready Paper 
+ July 27th, 2025JSSPP 1995-2025 – the Workshop on Jobs Scheduling Strategies for Parallel Processing.Contact email:href="mailto:jssppw@gmail.com" - jssppw@gmail.com 
+
+Important Dates information:
+Toggle navigationhref="http://jsspp.org/index.php?page=about" - JSSPP
+href="http://jsspp.org/index.php?page=about" - About 
+ href="http://jsspp.org/index.php?page=cfp" - Call for Submissions 
+ href="http://jsspp.org/index.php?page=deadlines" - Deadlines 
+ href="http://jsspp.org/index.php?page=program" - Program 
+ href="http://jsspp.org/index.php?page=submission" - Submission 
+ Committees 
+ href="http://jsspp.org/index.php?page=registration" - Registration 
+ href="http://jsspp.org/workload" - Workloads 
+ href="http://jsspp.org/tools" - Tools 
+ Important Dates 
+ Paper Submission Deadline 
+ February 24th, 2025(FINAL) 
+ Author Notification 
+ March 14th, 2025 (approximate, extended)Camera-Ready Paper 
+ July 27th, 2025JSSPP 1995-2025 – the Workshop on Jobs Scheduling Strategies for Parallel Processing.Contact email:href="mailto:jssppw@gmail.com" - jssppw@gmail.com

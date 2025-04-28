@@ -1,0 +1,23 @@
+```json
+{
+  "Conference dates": "September 5 - 6, 2024",
+  "Year": "2024",
+  "Location": "Royal Holloway, University of London, Egham, United Kingdom",
+  "City-State-Province": "Egham, Surrey",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "July 7, 2024"
+  },
+  "Notification Date": {
+    "Notification to authors": "August 7, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera ready submission": "August 14, 2024"
+  },
+  "Topics": "Congestion Modelling and Reduction, Crew and Duty Scheduling, Demand Forecasting, Delay Management, Design of Pricing Systems, Electromobility, Infrastructure Planning, Intelligent Transportation Systems, Models for User Behaviour, Line Planning, Mobile Applications for Transport, Mobility-as-a-Service, Multi-modal Transport Optimization, Route Planning in Road and Public Transit Networks, Rostering, Timetable Generation, Tourist Tour Planning, Traffic Guidance, Vehicle Routing, Vehicle Scheduling",
+  "Summary": "The 24th Symposium on Algorithmic Approaches for Transportation Modelling, Optimization, and Systems (ATMOS 2024) will be part of ALGO 2024, taking place at Royal Holloway, University of London from September 5-6, 2024. ATMOS brings together researchers and practitioners interested in algorithmic methods and models for transport optimization.",
+  "Call for Papers": "# ATMOS 2024: Call for Papers\n\nThe 24th Symposium on Algorithmic Approaches for Transportation Modelling, Optimization, and Systems (ATMOS 2024) will take place on **September 5-6, 2024**, at **Royal Holloway, University of London in Egham, United Kingdom**.\n\n## Topics\n\nThe symposium welcomes papers addressing the following topics:\n\n*   Congestion Modelling and Reduction\n*   Crew and Duty Scheduling\n*   Demand Forecasting\n*   Delay Management\n*   Design of Pricing Systems\n*   Electromobility\n*   Infrastructure Planning\n*   Intelligent Transportation Systems\n*   Models for User Behaviour\n*   Line Planning\n*   Mobile Applications for Transport\n*   Mobility-as-a-Service\n*   Multi-modal Transport Optimization\n*   Route Planning in Road and Public Transit Networks\n*   Rostering\n*   Timetable Generation\n*   Tourist Tour Planning\n*   Traffic Guidance\n*   Vehicle Routing\n*   Vehicle Scheduling\n\nThe symposium also welcomes papers applying and advancing the following techniques:\n\n*   Algorithmic Game Theory\n*   Approximation Algorithms\n*   Combinatorial Optimization\n*   Graph and Network Algorithms\n*   Heuristics and Meta-heuristics\n*   Mathematical Programming\n*   Methods for the Integration of Planning Stages\n*   Online and Real-time Algorithms\n*   Simulation Tools\n*   Stochastic and Robust Optimization\n\n## Submission Guidelines\n\nAuthors are invited to submit high-quality manuscripts reporting original unpublished research. Simultaneous submission to other journals or conferences with published proceedings is not allowed.\n\nSubmissions must be in the form of a single PDF file prepared using the LaTeX OASIcs style file and must be submitted electronically via the EasyChair submission system.\n\nATMOS 2024 accepts two types of submissions:\n\n### (a) Regular Paper Submissions\n\nA regular paper submission should not exceed 12 pages including title page and abstract, but excluding references and an optional appendix. Regular papers will be allotted up to 20 pages in the proceedings.\n\n### (b) Short Paper Submissions\n\nA short paper submission should have at least 4 and at most 6 pages. Short papers will be allotted up to 6 pages in the proceedings.\n\n## Proceedings\n\nThe proceedings will be published on the Dagstuhl Open Access Series in Informatics (OASIcs) publication service.\n\n## Important Dates\n\n*   **Submission deadline:** July 7, 2024 (AoE)\n*   **Notification to authors:** August 7, 2024\n*   **Camera ready submission:** August 14, 2024\n*   **Symposium:** September 5-6, 2024\n\n## Contact\n\nAll questions about submissions should be emailed to the PC co-chairs:\n\n*   Paul Bouman: bouman_A T_ese.eur.nl\n*   Spyros Kontogiannis: spyridon.kontogiannis_A T_upatras.gr"
+}
+```

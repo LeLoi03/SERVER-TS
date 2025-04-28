@@ -1,0 +1,892 @@
+Conference full name: International Conference on Management of Data (COMAD)
+
+1. Website of COMAD_3: https://ikdd.acm.org/cods-2025/
+Website information of COMAD_3:
+
+Home 
+ href="#" - For Authors | href="call-for-research-track-papers.php" - Call for Research Track Papers 
+ href="call-for-applied-data-science-track-papers.php" - Call for Applied Data Science Track Papers 
+ href="research-track-vs-applied-data-science-track.php" - Research Track vs Applied Data Science Track 
+ Common Instructions and Policies 
+ Committees | Steering Committee 
+ Organizing Committee 
+ Archives | href="https://cods-comad.in/dec-2024/" - Dec 2024 
+ href="https://cods-comad.in/2024/" - Jan 2024 
+ href="https://cods-comad.in/2023/" - 2023 
+ href="https://cods-comad.in/2022/" - 2022 
+ href="https://cods-comad.in/2021/" - 2021 
+ href="https://cods-comad.in/2020/index.html" - 2020 
+ href="https://cods-comad.in/2019/index.html" - 2019 
+ href="https://cods-comad.in/2018/index.html" - 2018 
+ CoDS 2017 
+ href="http://comad.in/" - COMAD 
+ href="mailto:comadcods@gmail.com" - Contact us 
+ Home 
+ href="#" - For Authors | href="call-for-research-track-papers.php" - Call for Research Track Papers 
+ href="call-for-applied-data-science-track-papers.php" - Call for Applied Data Science Track Papers 
+ href="research-track-vs-applied-data-science-track.php" - Research Track vs Applied Data Science Track 
+ Common Instructions and Policies 
+ Committees | Steering Committee 
+ Organizing Committee 
+ Archives | href="https://cods-comad.in/dec-2024/" - Dec 2024 
+ href="https://cods-comad.in/2024/" - Jan 2024 
+ href="https://cods-comad.in/2023/" - 2023 
+ href="https://cods-comad.in/2022/" - 2022 
+ href="https://cods-comad.in/2021/" - 2021 
+ href="https://cods-comad.in/2020/index.html" - 2020 
+ href="https://cods-comad.in/2019/index.html" - 2019 
+ href="https://cods-comad.in/2018/index.html" - 2018 
+ CoDS 2017 
+ href="http://comad.in/" - COMAD 
+ href="mailto:comadcods@gmail.com" - Contact us 
+ 251Days 
+ 08Hours 
+ 05Minutes 
+ 03Second 
+ ABOUT ConferenceWelcome to CODS 2025 
+ CODS (also known as CODS-COMAD between 2018 and 2024) is the premier data centric conference in India. The inaugural edition of CODS was held in Delhi in 2014. In 2018, the conference brought together - and continues to value and cherish, the name reversal notwithstanding - the Database community of the COMAD conference, which originated in 1989. Every year, passionate researchers and academics, from industry and academia, India and abroad, come together to organize the conference. The vibrant conference is marked by keynote talks from stalwarts, research and applied data science tracks, topical tutorials, poster sessions and system demonstrations. The Young Researchers Symposium has evolved as a valued forum for providing early feedback to young researchers. The conference has been consistently supported by sponsorship from top research labs, other data-centric companies, budding startups, and academic centers and institutes. We use this funding to provide travel assistance to students from across the country to attend the conference. In recent years, the conference has focused on Diversity, Equity and Inclusion and its relevance for the data science community in India. In summary, we have been striving to bring together and nurture the data science community in India, with support from participants and organizers from around the world. 
+ Plans are underway to significantly expand the horizons and breathe fresh life into the 2025 edition. Stay tuned! 
+ CODS 2025 will be hosted by Indian Institute of Science Education and Research (IISER), Pune 
+ during 17-20, December, 2025. 
+ Keynote Speakers 
+ Abhishek Singh 
+ MeitY, Govt. of IndiaDebjani Ghosh 
+ NASSCOM and Niti AayogDinesh Manocha 
+ University of MarylandPramod Varma 
+ EkStep Foundation & Ex- India StackVipin Kumar 
+ University of MinnesotaXin Luna Dong 
+ Meta Reality LabsIKDD Partners 
+ Founding PartnerPlatinum PartnerDiamond PartnersGold PartnersSilver PartnersStudent Networking Lunch PartnersAcademic PartnersUpdates 
+ 5 Jul 2024 : Abstract/Paper submissions dates in | href="https://cods-comad.in/call-for-research-track-papers.php" - Research | and | href="https://cods-comad.in/call-for-applied-data-science-track-papers.php" - ADS | Tracks are moved by 2 week. See the respective call for paper pages for more details. 
+ 4 July 2024 : See the new ACM Publication Policy and its implications to CODS-COMAD authors | href="https://cods-comad.in/publication-policy.php" - here 
+ Important Dates 
+  
+ Conference Dates: Dec 17-20, 2025 
+ Deadlines and other dates to be announced shortly. 
+ href="https://www.facebook.com/codscomad/" - 
+ href="https://twitter.com/codscomad" - 
+ href="mailto:comadcods@gmail.com" - 
+ © Copyright 2025 All Rights Reserved
+
+2. Website of COMAD_3: https://ikdd.acm.org/cods-2025/
+Website information of COMAD_3:
+
+Home 
+ href="#" - For Authors | href="call-for-research-track-papers.php" - Call for Research Track Papers 
+ href="call-for-applied-data-science-track-papers.php" - Call for Applied Data Science Track Papers 
+ href="research-track-vs-applied-data-science-track.php" - Research Track vs Applied Data Science Track 
+ Common Instructions and Policies 
+ Committees | Steering Committee 
+ Organizing Committee 
+ Archives | href="https://cods-comad.in/dec-2024/" - Dec 2024 
+ href="https://cods-comad.in/2024/" - Jan 2024 
+ href="https://cods-comad.in/2023/" - 2023 
+ href="https://cods-comad.in/2022/" - 2022 
+ href="https://cods-comad.in/2021/" - 2021 
+ href="https://cods-comad.in/2020/index.html" - 2020 
+ href="https://cods-comad.in/2019/index.html" - 2019 
+ href="https://cods-comad.in/2018/index.html" - 2018 
+ CoDS 2017 
+ href="http://comad.in/" - COMAD 
+ href="mailto:comadcods@gmail.com" - Contact us 
+ Home 
+ href="#" - For Authors | href="call-for-research-track-papers.php" - Call for Research Track Papers 
+ href="call-for-applied-data-science-track-papers.php" - Call for Applied Data Science Track Papers 
+ href="research-track-vs-applied-data-science-track.php" - Research Track vs Applied Data Science Track 
+ Common Instructions and Policies 
+ Committees | Steering Committee 
+ Organizing Committee 
+ Archives | href="https://cods-comad.in/dec-2024/" - Dec 2024 
+ href="https://cods-comad.in/2024/" - Jan 2024 
+ href="https://cods-comad.in/2023/" - 2023 
+ href="https://cods-comad.in/2022/" - 2022 
+ href="https://cods-comad.in/2021/" - 2021 
+ href="https://cods-comad.in/2020/index.html" - 2020 
+ href="https://cods-comad.in/2019/index.html" - 2019 
+ href="https://cods-comad.in/2018/index.html" - 2018 
+ CoDS 2017 
+ href="http://comad.in/" - COMAD 
+ href="mailto:comadcods@gmail.com" - Contact us 
+ 251Days 
+ 08Hours 
+ 04Minutes 
+ 59Second 
+ ABOUT ConferenceWelcome to CODS 2025 
+ CODS (also known as CODS-COMAD between 2018 and 2024) is the premier data centric conference in India. The inaugural edition of CODS was held in Delhi in 2014. In 2018, the conference brought together - and continues to value and cherish, the name reversal notwithstanding - the Database community of the COMAD conference, which originated in 1989. Every year, passionate researchers and academics, from industry and academia, India and abroad, come together to organize the conference. The vibrant conference is marked by keynote talks from stalwarts, research and applied data science tracks, topical tutorials, poster sessions and system demonstrations. The Young Researchers Symposium has evolved as a valued forum for providing early feedback to young researchers. The conference has been consistently supported by sponsorship from top research labs, other data-centric companies, budding startups, and academic centers and institutes. We use this funding to provide travel assistance to students from across the country to attend the conference. In recent years, the conference has focused on Diversity, Equity and Inclusion and its relevance for the data science community in India. In summary, we have been striving to bring together and nurture the data science community in India, with support from participants and organizers from around the world. 
+ Plans are underway to significantly expand the horizons and breathe fresh life into the 2025 edition. Stay tuned! 
+ CODS 2025 will be hosted by Indian Institute of Science Education and Research (IISER), Pune 
+ during 17-20, December, 2025. 
+ Keynote Speakers 
+ Abhishek Singh 
+ MeitY, Govt. of IndiaDebjani Ghosh 
+ NASSCOM and Niti AayogDinesh Manocha 
+ University of MarylandPramod Varma 
+ EkStep Foundation & Ex- India StackVipin Kumar 
+ University of MinnesotaXin Luna Dong 
+ Meta Reality LabsIKDD Partners 
+ Founding PartnerPlatinum PartnerDiamond PartnersGold PartnersSilver PartnersStudent Networking Lunch PartnersAcademic PartnersUpdates 
+ 5 Jul 2024 : Abstract/Paper submissions dates in | href="https://cods-comad.in/call-for-research-track-papers.php" - Research | and | href="https://cods-comad.in/call-for-applied-data-science-track-papers.php" - ADS | Tracks are moved by 2 week. See the respective call for paper pages for more details. 
+ 4 July 2024 : See the new ACM Publication Policy and its implications to CODS-COMAD authors | href="https://cods-comad.in/publication-policy.php" - here 
+ Important Dates 
+  
+ Conference Dates: Dec 17-20, 2025 
+ Deadlines and other dates to be announced shortly. 
+ href="https://www.facebook.com/codscomad/" - 
+ href="https://twitter.com/codscomad" - 
+ href="mailto:comadcods@gmail.com" - 
+ © Copyright 2025 All Rights Reserved
+
+3. Website of COMAD_3: http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=173203&copyownerid=13149
+Website information of COMAD_3:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+|| 4164 views || tracked by 2 users:[display]href="/cfp/servlet/event.showlist?lownerid=13149&ltype=w" - gonzo1453
+,href="/cfp/servlet/event.showlist?lownerid=138838&ltype=w" - gullenasatish
+[hide] 
+ CODS-COMAD 2024 : 7th Joint Conference on Data Science and Management of Datahref="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=173203&copyownerid=13149" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=173203&copyownerid=13149&text=CODS-COMAD 2024 : 7th Joint Conference on Data Science and Management of Data" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=173203&copyownerid=13149" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=173203&copyownerid=13149" - 
+ Link:href="https://cods-comad.in/" - https://cods-comad.in/ 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 | When | Jan 4, 2024 - Jan 7, 2024 | Where | IIIT Bangalore, Bengaluru, India | Abstract Registration Due | Jul 10, 2023 | Submission Deadline | Jul 17, 2023 | Notification Due | Sep 11, 2023 | Final Version Due | Nov 30, 2023 
+ When | Jan 4, 2024 - Jan 7, 2024 
+ Where | IIIT Bangalore, Bengaluru, India 
+ Abstract Registration Due | Jul 10, 2023 
+ Submission Deadline | Jul 17, 2023 
+ Notification Due | Sep 11, 2023 
+ Final Version Due | Nov 30, 2023 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning | href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ href="/cfp/allcat" - Categories
+href="../call?conference=data science" - data science
+href="../call?conference=data management" - data management
+href="../call?conference=data mining" - data mining
+href="../call?conference=machine learning" - machine learning 
+ Call For Papers 
+ Welcome to CODS-COMAD 2024 
+  
+ CODS-COMAD is a premier international conference focusing on scientific work in Databases, Data Sciences and their applications. Being held for the 7th time as a common conference bringing together the COMAD and the CODS communities, this conference invites researchers in the field of databases, data sciences and their applications to submit their original work. 
+  
+ The conference has a long and rich history. COMAD, primarily a data management conference, started in 1989. CODS started in 2014 with AI, Machine Learning and Data Science as its focus.These merged in 2018 to become the vibrant CODS-COMAD conference of today. The current conference is marked by keynote talks by stalwarts, research and applied data science tracks presenting original work of high quality, topical tutorials and demo tracks showcasing innovation in action. The Young Researchers Symposium has evolved as a valued forum for providing early feedback to budding and early career researchers. The conference consistently attracts funding from top research labs, and other data-centric companies and startups. This sponsorship enables providing support to students from across the country to attend the conference. Since 2021, the conference has been hosting a track on Diversity and Inclusion to promote this crucial aspect in the data science and databases community. In short, the conference has been striving to bring the data-centric community together, specially in India, and also more generally around the world. 
+  
+ CODS-COMAD 2024 will be hosted by IIIT Bangalore. 
+
+================= Research Track and Applied Data Science Track ================= 
+  
+ CODS-COMAD 2024 will accept research papers in two tracks: 1. Regular Research Track, and 2. Applied Data Sciences (ADS) Track. The latter is a new addition since 2021. Authors are invited to submit their research papers to one of these two tracks. 
+  
+ The Research Track solicits submissions that present original and innovative research challenges and solutions. Papers can range from theoretical contributions to systems and algorithms to experimental research. The Applied Data Science (ADS) Track is distinct from the Research Track in that submissions should focus on applied challenges addressing real-world problems and / or systems demonstrating tangible impact/value in their respective domains. The ADS Track submissions should highlight the target user needs and potential users. 
+  
+ For example, a research track paper may address some novel challenges around question-answering that may apply across many domains, languages, etc. An ADS Track paper may have a focus on a corpus from the bio-chemical domain, and may address problems that are specific to that domain. The target users may be bio-chemical engineers and researchers. As another example, a deployment of an app or website that helps farmers keep track of market prices of various products would be suitable for the ADS track, and farmers or agricultural traders may benefit from the solutions. 
+  
+ It is the authors’ responsibility to submit their paper into the appropriate track. Papers that do not satisfy the requirements of the track may be rejected without a review. For example, a paper that does not address a novel research problem or make generalizable contributions may not be suitable for the research track. On the other hand, a paper that does not target a specific real world user case and group of users may be rejected without review from the ADS Track. It is strongly recommended that authors read the Call for Papers for both tracks carefully before choosing a track. 
+
+================= Research Track ================= 
+  
+ We invite the submission of papers describing innovative and original research contributions in the areas of data science, data management, data mining, machine learning, and artificial intelligence. Papers can range from theoretical contributions to systems and algorithms to experimental research and benchmarking. The research track invites two type of submissions: 
+  
+ Full papers: 8 pages + (unlimited) references. 
+ Short papers: 4 pages + (unlimited) references. 
+  
+ The goal of the short papers is to provide a venue for innovative ideas such as engineered solutions, exciting work-in-progress or even negative results that would be interesting to the broader community. The review process will take place in two stages. 
+  
+ 1. In the first stage of the review, papers will be grouped as Accept, Major Revision or Reject. 
+ 2. In the second stage of the review, authors can revise and resubmit Major Revision papers. They will then be regrouped as Accept or Reject. 
+  
+ Authors of accepted full papers must present their work as both a talk and a poster at the conference; accepted short papers must present their work as a poster. All accepted papers will appear in the proceedings of the conference, which will be published in the ACM Digital Library (Approval pending). 
+ Topics of Interest include, but are not limited to, the following: 
+  
+ * AI, ML, and Data Mining: Classification and regression; Knowledge discovery; knowledge representation and knowledge-based systems; data preprocessing and wrangling; feature engineering; reinforcement learning; deep learning; Bayesian methods; time series analysis; optimization; graphical models; statistical relational learning; matrix and tensor methods; parallel and distributed learning; semi- and unsupervised learning; graph mining; network analytics; text analytics and NLP; information retrieval; learning-based computer vision; multimodal learning and analytics; human-in-the-loop learning; planning and reasoning; ML for mobiles and other resource-constrained environments; federated learning; AutoML; causality; fairness, accountability, transparency, and explainability in AI/ML; weak supervision and data augmentation; new benchmark tasks and datasets for AI/ML/data mining. 
+  
+ * Data Science-based Computing: Social network analysis; social computing; recommender systems; computational advertising; bioinformatics; computational neuroscience; multimedia processing; crowdsourcing; robotics and autonomous systems; analytics on sensor networks and IoT; surveillance/monitoring and anomaly detection in networked systems; urban computing; technology for emerging markets. 
+  
+ * Data Management: Data models and query languages; query processing and optimisation; indexing and storage systems; key-value and NoSQL stores; transaction processing; blockchains; distributed and cloud data systems; big data and dataflow systems; data warehousing and OLAP; spatio-temporal and graph data management; scientific and multimedia databases; data management for ML/AI workloads; ML/AI methods for data management; data cleaning and integration; data provenance; data streams; uncertain and probabilistic databases; data crowdsourcing; database usability and query interfaces; data visualisation and visual analytics; data management on modern hardware; data privacy, security, and ethics; performance tuning and benchmarking; new benchmark tasks and datasets for data management. 
+  
+ Sharing and Reproducibility 
+  
+ To enable reproducibility and data reuse, authors are encouraged to share artifacts including software, algorithms, protocols, code, datasets and other useful materials related to the research. 
+  
+ Additionally, please see this page to help you decide between the Research Track and Applied Data Science Track. 
+  
+ Please read the Dual submission, Plagiarism, and Conflict of Interest policies before finalising your submission. 
+  
+ Several technical awards are available for best paper, etc. Please see the Awards page for details. 
+  
+ Partial travel Grants will be available for students (both domestic and international) whose papers are accepted. Presenters will also have the option to present the papers virtually. 
+ Double Anonymity Requirement 
+  
+ CODS-COMAD 2024 will be using double-anonymous reviewing for Research Track papers (but not the ADS Track papers). Since this is the first time this requirement is being added, please review the instructions below carefully. 
+  
+ Authors’ names and affiliations must not appear on the title page or anywhere else in the submission. Funding sources must not be acknowledged anywhere in the submission. Research group members, or other colleagues or collaborators, must not be acknowledged anywhere in the submission. Only after acceptance at the camera ready stage should the author list, acknowledgments, and funding sources be added to the paper. 
+  
+ The file names of any documents submitted must not identify the authors of the submission. Source file naming must also be done with care, to avoid identifying the authors’ names in the submission’s associated metadata. 
+  
+ To avoid compromising the double-anonymity requirement, we request that the authors refrain from publicizing and uploading versions of their submitted manuscripts to pre-publication servers, such as arXiv, and other online forums during the reviewing period. If a version of a submission already resides on a pre-publication server, such as arXiv, the authors do not need to remove it before submitting to CODS-COMAD. 
+  
+ Be careful when referring to related past work, particularly your own, in the paper. Authors must refer to their own past work in the third person. This allows setting the context for your submission, while at the same time preserving anonymity. Do not omit referring to your own past related work because that could reveal your identity by negation. Limit self-references to only the essential ones. Extended versions of the submitted paper (e.g., technical reports or URLs for downloadable versions) must not be referenced. Many ACM conferences have successfully followed double anonymity for decades to offer more equity for all authors in the reviewing process. Common sense and careful writing can go a long way toward preserving double anonymity without diminishing the quality or impact of a paper. It is the responsibility of the authors to do their very best to preserve double anonymity. 
+  
+ Papers that do not follow the guidelines here, or otherwise potentially reveal the identity of the authors, are subject to Desk Rejection. No exceptions will be made for Research Track papers. If the authors of a submission feel that double anonymity needs to be violated, for example to reveal the identity of a publicly deployed system, they may consider submitting their work to the ADS Track that does not impose this double anonymity requirement. 
+ Important dates 
+  
+ All deadlines are Anywhere on Earth (AoE, UTC-1200) 
+  
+ July 10, 2023: Abstract submission 
+ July 17, 2023: Submission of papers 
+ September 11, 2023: First stage decision notifications (Accept/Reject/Revision) 
+ October 11, 2023: Submission of revised papers 
+ November 3, 2023: Final decision notifications (Accept/Reject) 
+ November 30, 2023: Camera ready due 
+
+================= Applied Data Sciences Track ================= 
+  
+ The Applied Data Sciences (ADS) track invites both full (8 pages + unlimited references) as well as short (4 pages + unlimited references) papers describing the design, implementation and results of solutions and systems for application of data science techniques to real-world problems. 
+  
+ The review process will take place in two stages. 
+  
+ 1. In the first stage of the review, papers will be grouped as Accept, Major Revision or Reject. 
+ 2. In the second stage of the review, authors can revise and resubmit Major Revision papers. They will then be regrouped as Accept or Reject. 
+  
+ Accepted papers will be given the opportunity to present their work as an oral presentation. Accepted papers will appear in the proceedings of the conference, which will be published in ACM Digital Library (Approval pending). 
+  
+ Topics of interest include, but are not limited to the following: 
+  
+ * Novel combination of data science applications in domains such as education, software engineering, cloud computing, agriculture, transportation, energy, real estate, manufacturing, finance, retail, healthcare, e-commerce, digital marketing, telecommunications, social media and computational advertising, public policy, bio-chemical engineering, pollution tracking and climate change, material science, AI for natural sciences, bioinformatics, etc. 
+  
+ * Deployed experience papers from industry, government agencies, startups and NGOs relating to the large-scale deployment of data science applications. Of particular interest are papers addressing issues relating to infrastructure for scale, ease of adoption, and new data science/management technologies. Papers should highlight pain points and new challenges emerging due to deployment of these new technologies. Verifiable evidence of business impact, social impact or other real-world impact from such deployments are encouraged. 
+  
+ * Data sets: Applied scientific work on handling large or complex data sets from specific domains (e.g., noisy/incomplete medical data, judicial records, etc.). 
+  
+ * Ethical issues in data science applications, fairness and bias, trust, data privacy, explainability, etc., especially when these issues are considered in relation to deployed systems. 
+  
+ Sharing and Reproducibility 
+  
+ Authors are strongly encouraged to make their code and data publicly accessible during the review process, unless there is an inevitable reason that prohibits sharing (e.g., it requires data from a specific company or it is medical data where there is no public alternative). Algorithms and resources used in a paper should be described as completely as possible to enable reproducibility. This includes model parameters, experimental methodology, hardware and software platforms used during empirical evaluations, and results. The reproducibility factor will play an important role in the assessment of each submission. In the case where data cannot be released publicly, authors are encouraged to include experiments on relevant public datasets and/or create simulated data with the same properties. 
+  
+ Additionally, please see this page to help you decide between the Research Track and Applied Data Science Track. 
+  
+ Please read the Dual submission, Plagiarism and Conflict of Interest policies before finalising your submission. 
+  
+ Several technical awards are available for best paper, etc. Please see the Awards page for details. 
+  
+ Partial travel Grants will be available for students (both domestic and international) whose papers are accepted. Note that each paper must be presented in-person. 
+ Important dates 
+  
+ All deadlines are Anywhere on Earth (AoE, UTC-1200) 
+  
+ July 10, 2023: Abstract submission 
+ July 17, 2023: Submission of papers 
+ September 11, 2023: First Stage Accept/Major Revision/ Reject decisions. 
+ October 11, 2023: Re-submission of revised papers 
+ November 3, 2023: Final notification of Accept/Reject decisions 
+ November 30, 2023: Camera ready due 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=127474" - IEEE-Ei/Scopus-ITCC 2025
+2025 5th International Conference on Information Technology and Cloud Computing (ITCC 2025)-EI Compendex 
+ href="/cfp/servlet/event.showcfp?eventid=172344" - Ei/Scopus-IPCML 2025
+2025 International Conference on Image Processing, Communications and Machine Learning (IPCML 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=172345" - Ei/Scopus- CCRIS 2025
+2025 IEEE 6th International Conference on Control, Robotics and Intelligent System (CCRIS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=180065" - AMLDS 2025
+IEEE--2025 International Conference on Advanced Machine Learning and Data Science 
+ href="/cfp/servlet/event.showcfp?eventid=175829" - IEEE CNCIT 2025
+2025 4th International Conference on Networks, Communications and Information Technology (CNCIT 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=174264" - Ei/Scopus-CVPRAI 2025
+2025 International Conference on Computer Vision, Pattern Recognition and Artificial Intelligence (CVPRAI 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=183391" - ISKE 2025
+The 20th International Conference on Intelligent Systems and Knowledge Engineering (ISKE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185656" - ICDM 2025
+The 25th IEEE International Conference on Data Mining 
+ href="/cfp/servlet/event.showcfp?eventid=181234" - Ei/Scopus-ITNLP 2025
+2025 5th International Conference on Information Technology and Natural Language Processing (ITNLP 2025) | href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing | href="/cfp/servlet/event.showcfp?eventid=127474" - IEEE-Ei/Scopus-ITCC 2025
+2025 5th International Conference on Information Technology and Cloud Computing (ITCC 2025)-EI Compendex | href="/cfp/servlet/event.showcfp?eventid=172344" - Ei/Scopus-IPCML 2025
+2025 International Conference on Image Processing, Communications and Machine Learning (IPCML 2025) | href="/cfp/servlet/event.showcfp?eventid=172345" - Ei/Scopus- CCRIS 2025
+2025 IEEE 6th International Conference on Control, Robotics and Intelligent System (CCRIS 2025) | href="/cfp/servlet/event.showcfp?eventid=180065" - AMLDS 2025
+IEEE--2025 International Conference on Advanced Machine Learning and Data Science | href="/cfp/servlet/event.showcfp?eventid=175829" - IEEE CNCIT 2025
+2025 4th International Conference on Networks, Communications and Information Technology (CNCIT 2025) | href="/cfp/servlet/event.showcfp?eventid=174264" - Ei/Scopus-CVPRAI 2025
+2025 International Conference on Computer Vision, Pattern Recognition and Artificial Intelligence (CVPRAI 2025) | href="/cfp/servlet/event.showcfp?eventid=183391" - ISKE 2025
+The 20th International Conference on Intelligent Systems and Knowledge Engineering (ISKE 2025) | href="/cfp/servlet/event.showcfp?eventid=185656" - ICDM 2025
+The 25th IEEE International Conference on Data Mining | href="/cfp/servlet/event.showcfp?eventid=181234" - Ei/Scopus-ITNLP 2025
+2025 5th International Conference on Information Technology and Natural Language Processing (ITNLP 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=127474" - IEEE-Ei/Scopus-ITCC 2025
+2025 5th International Conference on Information Technology and Cloud Computing (ITCC 2025)-EI Compendex 
+ href="/cfp/servlet/event.showcfp?eventid=172344" - Ei/Scopus-IPCML 2025
+2025 International Conference on Image Processing, Communications and Machine Learning (IPCML 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=172345" - Ei/Scopus- CCRIS 2025
+2025 IEEE 6th International Conference on Control, Robotics and Intelligent System (CCRIS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=180065" - AMLDS 2025
+IEEE--2025 International Conference on Advanced Machine Learning and Data Science 
+ href="/cfp/servlet/event.showcfp?eventid=175829" - IEEE CNCIT 2025
+2025 4th International Conference on Networks, Communications and Information Technology (CNCIT 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=174264" - Ei/Scopus-CVPRAI 2025
+2025 International Conference on Computer Vision, Pattern Recognition and Artificial Intelligence (CVPRAI 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=183391" - ISKE 2025
+The 20th International Conference on Intelligent Systems and Knowledge Engineering (ISKE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185656" - ICDM 2025
+The 25th IEEE International Conference on Data Mining 
+ href="/cfp/servlet/event.showcfp?eventid=181234" - Ei/Scopus-ITNLP 2025
+2025 5th International Conference on Information Technology and Natural Language Processing (ITNLP 2025) 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+
+4. Website of COMAD_3: https://www.acm.org/articles/acm-india-bulletins/2023/cods-comad-2024
+Website information of COMAD_3:
+
+skip to main content 
+ Digital Library 
+ CACM 
+ Queue 
+ TechNews 
+ Career Center 
+ Advancing Computing as a Science & ProfessionJoin 
+ Volunteer 
+ myACM 
+ Search InputSearch Submit 
+ JoinVolunteermyACMSearchAbout ACM | About Home | About ACM 
+ ACM's Mission, Vision, Core Values and Goals 
+ Governance 
+ ACM Council 
+ Boards and Committees 
+ Past Presidents 
+ ACM Constitution 
+ Bylaws 
+ Annual Reports 
+ History 
+ Code of Ethics 
+ Code of Ethics Enforcement Procedures 
+ Stop Harassment 
+ Report Unacceptable Behavior 
+ Policy on Complaint Process Disclosure 
+ ACM Statements 
+ ACM in the News 
+ href="/media-center/acm-updates" - ACM Updates 
+ Media Center 
+ Contact Us 
+ About ACM 
+ ACM, the world's largest educational and scientific computing society, delivers resources that advance computing as a science and a profession. ACM provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources. 
+ [Learn More about ACM...] 
+ ACM Regional Councils | ACM: Formed at the Dawn of Computing 
+ Membership | Membership Home | About Membership 
+ Membership Options 
+ Membership Benefits 
+ Ambassadors for ACM 
+ People of ACM 
+ Members in the News 
+ Join 
+ Renew 
+ Subscribe 
+ Manage your Account / myACM 
+ Distinguished Speakers 
+ Contact Us 
+ ACM Membership 
+ ACM offers the resources, access and tools to invent the future. No one has a larger global network of professional peers. No one has more exclusive content. No one presents more forward-looking events. Or confers more prestigious awards. Or provides a more comprehensive learning center. 
+ [Learn More about ACM Membership...] 
+ ACM Skills Bundle Add-On | Customer Service FAQs | Become an Ambassador for ACM 
+ Publications | Publications Home | About Publications 
+ Digital Library 
+ CACM 
+ Journals 
+ Magazines 
+ Books 
+ Conference Proceedings 
+ ICPS 
+ SIGs Newsletters 
+ Blue Diamond Newsletter 
+ href="/publications/papers-for-practitioners" - Applications-Oriented Content 
+ href="/publications/submit" - For Authors 
+ Primary Article Templates 
+ Open Access 
+ Artifacts and Reproducibility 
+ New ACM Journals 
+ Propose New Publications 
+ Policies 
+ Report a Potential Violation 
+ Ethics & Plagiarism 
+ Publications Board 
+ Subscribe 
+ Advertise 
+ Contact Us 
+ About ACM Publications 
+ For more than 60 years, the best and brightest minds in computing have come to ACM to meet, share ideas, publish their work and change the world. ACM's publications are among the most respected and highly cited in the field because of their longstanding focus on quality and their ability to attract pioneering thought leaders from both academia and industry. 
+ [Learn More about ACM Publications...] 
+ href="/publications/authors" - 
+href="/publications/authors" - Publish with ACM | href="/publications/papers-for-practitioners" - 
+href="/publications/papers-for-practitioners" - Select Application-Oriented Papers | Software and Data Artifacts in the ACM Digital Library 
+ SIGs | Special Interest Groups Home | About SIGs 
+ SIG Listing 
+ Emerging Interest Groups 
+ SIG Awards 
+ SIG Chapters 
+ Publications 
+ Conferences 
+ Join a SIG 
+ Volunteer Resources 
+ SIG Leaders 
+ Contact Us 
+ Special Interest Groups 
+ ACM's Special Interest Groups (SIGs) represent major areas of computing, addressing the interests of technical communities that drive innovation. SIGs offer a wealth of conferences, publications and activities focused on specific computing sub-disciplines. They enable members to share expertise, discovery and best practices. 
+ [Learn More about ACM's SIGs...] 
+ Join an ACM SIG | Virtual Conferences: A Guide to Best Practices 
+ Conferences | Conferences Home | About Conferences 
+ Conference Series 
+ Upcoming Conferences 
+ Get Conference Proceedings 
+ href="/conferences/upcoming-submission-deadlines" - Upcoming Submission Deadlines 
+ href="http://authors.acm.org/" - ACM Author Rights & Permissions 
+ Best Paper Awards 
+ Volunteer Resources 
+ Contact Us 
+ ACM and its Special Interest Groups Host More Than 170 Events Worldwide 
+ Our conferences, workshops and symposia unite innovators like you to push computing technology forward and to continue the legacy that unites us as like-minded thinkers and makers. 
+ [Learn More about ACM Conferences...] 
+ Find an ACM Conference | Virtual Conferences: A Guide to Best Practices 
+ Chapters | Chapters Home | About Chapters 
+ Professional Chapters 
+ Student Chapters 
+ Meetups 
+ Newsletter 
+ Calendar of Local Activities 
+ Distinguished Speakers 
+ Annual Reports 
+ Find a Chapter 
+ Start a Chapter 
+ Chapter Policies 
+ Chapter Administrative Interface 
+ Contact Us 
+ About ACM Chapters 
+ ACM’s Professional and Student chapters worldwide serve as hubs of activity for ACM members and the computing community at large. They provide seminars, lectures, learning forums and networking opportunities with peers and experts across the computing spectrum. 
+ [Learn More about ACM Chapters...] 
+ Chapter-in-a-Box: Everything You Need to Run and Grow Your ACM Chapter | Chapter Administrative Interface | Start an ACM Chapter 
+ Awards | Awards Home | About Awards 
+ Award Recipients 
+ ACM Fellows 
+ ACM Advanced Member Grades 
+ ACM Awards Committee 
+ Nominate 
+ Award Sponsors 
+ Establish a New Award 
+ Contact Us 
+ About ACM Awards 
+ ACM recognizes excellence through its eminent awards for technical and professional achievements and contributions in computer science and information technology. It also names as Fellows and Distinguished Members those members who, in addition to professional accomplishments, have made significant contributions to ACM's mission. 
+ More on ACM Awards 
+ Andrew Barto and Richard Sutton Receive 2024 ACM A.M. Turing Award | Torsten Hoefler Receives 2024 ACM Prize in Computing | Rachid Guerraoui Receives 2024 ACM Barroso Award 
+ Education | Education Home | About Education 
+ Curricula Recommendations 
+ Affiliated Organizations 
+ ACM Learning Center 
+ Resources for Educators 
+ Resources for Graduating Students 
+ Education Board and Advisory Committee 
+ Reports and Studies 
+ Contact Us 
+ Education 
+ ACM’s educational activities, conducted primarily through our Education Board and Advisory Committee, range from the K-12 space (CSTA) and two-year programs to undergraduate, graduate, and doctoral-level education, and professional development for computing practitioners at every stage of their career... 
+ [Learn More about Education…] 
+ ACM Education Advisory Committee Applications Open | Angelica Lo Duca TechTalk | ByteCast Ep67: Mary Lou Jepsen 
+ Learning Center | Learning Center Home | About the Learning Center 
+ E-Learning 
+ Member Offers 
+ TechTalks 
+ ByteCast 
+ Resources 
+ FAQs 
+ Practitioner Board 
+ Professional Development Committee 
+ About ACM Learning Center 
+ The ACM Learning Center offers ACM members access to lifelong learning tools and resources. Our E-Learning collections offer complimentary access to more than 80,000 online books, courses, and videos from top content publishers. The ACM TechTalk series brings leading computing luminaries and visionaries to your screen. Members enjoy exclusive offers and discounts on IT industry certifications and vendor-specific training. 
+ ByteCast Ep67: Mary Lou Jepsen | ByteCast Ep66: Travis S. Humble | ByteCast Ep65: Darja Smite 
+ Public Policy | Public Policy Home | About ACM's Public Policy Work 
+ Tech Policy Council 
+ Europe Tech Policy 
+ US Tech Policy 
+ href="/public-policy/ustpc/hottopics" - USTPC HotTopics Webinars 
+ ACM TechBriefs 
+ Policy Products 
+ Media Releases 
+ Contact Us 
+ Public Policy 
+ ACM provides independent, nonpartisan, and technology-neutral research and resources to policy leaders, stakeholders, and the public about public policy issues, drawn from the deep technical expertise of the computing community. 
+ [Learn More about ACM's Public Policy Work...] 
+ TechBrief on Tech Abuse | USTPC Issues Revised Statement on Remote Proctoring | ACM Europe TPC Statement on Digital Green Certificates 
+ Diversity, Equity & Inclusion | Diversity, Equity and Inclusion Home | About Diversity, Equity and Inclusion 
+ Forming Diverse Teams 
+ Words Matter 
+ ACM Celebrates Awareness Months 
+ ACM Code of Ethics 
+ Stop Harassment 
+ Contact Us 
+ Report Unacceptable Behavior 
+ ACM-W 
+ Diversity, Equity, and Inclusion 
+ Anyone, from any background, should feel encouraged to participate and contribute to ACM. ACM is committed to creating an environment that welcomes new ideas and perspectives, and where hostility or other antisocial behaviors are not tolerated. 
+ [Learn More about ACM's Commitment to Diversity, Equity, and Inclusion...] 
+ DEI Articles in CACM | DEI CE Webinars | How Diverse Is Your Team? 
+ Home 
+ Newsletters 
+ href="/articles/acm-india-bulletins/2023/cods-comad-2024" - CODS-COMAD 2024 
+ Call for Papers: CODS-COMAD 2024 
+ 11th ACM IKDD CODS and 29th COMAD 
+ 7th Joint International Conference on Data Science & Management of Data 
+ January 4-7, 2024 | IIIT Bangalore | Physical Conference 
+ href="https://cods-comad.in/" - https://cods-comad.in/
+---------------------------------------------------------------------------------------------------- 
+ We are pleased to announce The 7th Joint International Conference on Data Sciences and Management of Data to be held in Bangalore, India, on January 4-7, 2024 as a fully physical conference. 
+ CODS-COMAD is a premier international conference focusing on scientific work in Databases, Data Sciences and their applications. Being held for the 7th time as a common conference bringing together the COMAD and the CODS communities, the conference invites researchers in the field of databases, data sciences and their applications to submit their original work. 
+ - CALL FOR PAPERS - 
+ RESEARCH TRACK 
+ The research track invites full as well as short papers describing innovative and original research contributions in the areas of data science, data management, data mining, machine learning, and artificial intelligence. Papers can range from theoretical contributions to systems and algorithms to experimental research and benchmarking. The goal of the short papers is to provide a venue for innovative ideas such as engineered solutions, exciting work-in-progress or even negative results that would be interesting to the broader community. Accepted long papers will get an opportunity to showcase their work as oral and poster presentation while short papers will get a poster slot in the conference program. For more details visit:href="https://cods-comad.in/call-for-research-track-papers.php" - https://cods-comad.in/call-for-research-track-papers.php
+. 
+ APPLIED DATA SCIENCE TRACK 
+ The Applied Data Sciences (ADS) track invites both full as well as short papers describing the design, implementation and results of solutions and systems for application of data science techniques to real-world problems. Technical approaches can include data science, data mining, applied machine learning, testing and governance of data science models and solutions, and practical MLOps approaches. Accepted papers will be given the opportunity to present their work in the conference. For more details, visit:href="https://cods-comad.in/call-for-applied-data-science-track-papers.php" - https://cods-comad.in/call-for-applied-data-science-track-papers.php
+. 
+ TUTORIALS 
+ Tutorials at CODS-COMAD offer a platform to showcase state-of-the-art tools and technologies to support research, development and applications of data systems, data science, data management and platforms, data-driven applications, ethics of data science etc. We solicit tutorial proposals on all topics of interest to the CODS-COMAD conference. For more details, visit:href="https://cods-comad.in/call-for-tutorial-proposals.php" - https://cods-comad.in/call-for-tutorial-proposals.php
+. 
+ DEMO TRACK 
+ The demonstration (demo) track invites submissions from the academia and the industry where a live or pre-recorded demonstration of the proposed software system, prototype, conceptual design or library adds significant value to the dissemination potential of the work. The demo should be the result of original innovative work including solving novel technical or research problems and/or creating novel UI/UX. For more details, visit:href="https://cods-comad.in/call-for-demo-track-papers.php" - https://cods-comad.in/call-for-demo-track-papers.php
+. 
+ YOUNG RESEARCHERS' SYMPOSIUM 
+ The Young Researchers' Symposium invites submissions from students and postdoctoral fellows. This is a unique opportunity for young researchers to have fruitful peer-to-peer discussions and to get feedback from leading senior researchers about their current research work. The YRS forum this year also includes a PhD clinic session (see below) where young researchers will be paired with senior mentors to enable personalised mentoring. For more details, visit: 
+ href="https://cods-comad.in/call-for-young-researchers-symposium-papers.php" - https://cods-comad.in/call-for-young-researchers-symposium-papers.php
+. 
+ DIVERSITY AND INCLUSION TRACK - Data Science for Inclusivity 
+ Diversity and Inclusion track invites extended abstract for a participatory workshop where the intent is to increase awareness about the role of data science to ensure a better future. As data-driven decision making influences almost all spheres of our lives, it is imperative to focus on relevant data science problems and methods that address diversity and inclusion issues. For more details, visit:href="https://cods-comad.in/call-for-diversity-and-inclusion-track.php" - https://cods-comad.in/call-for-diversity-and-inclusion-track.php
+. 
+ DATA CHALLENGE PROPOSALS 
+ The conference invites individuals or industry/academic groups to send their proposals for the CODS-COMAD 2024 Data Challenge. This challenge aims to be a premier annual Data Sciences & Data Mining competition held as part of the annual CODS-COMAD conference. The Data Challenge is anticipated to last for three months. The winners will be announced before the CODS-COMAD 2024 conference and they will receive their awards at the conference award ceremony. For more details, visit:href="https://cods-comad.in/call-for-data-challenge-proposals.php" - https://cods-comad.in/call-for-data-challenge-proposals.php
+. 
+ DIFFERENCE BETWEEN RESEARCH AND APPLIED DATA SCIENCE TRACK 
+ Check the link below to help you decide which track to submit your paper to. It is the authors’ responsibility to submit their paper into the appropriate track. Papers that do not satisfy the requirements (e.g., a research track paper) might be rejected without a formal review. 
+ href="https://cods-comad.in/research-track-vs-applied-data-science-track.php" - https://cods-comad.in/research-track-vs-applied-data-science-track.php
+. 
+ IMPORTANT DATES 
+ Research and Applied Data Science Tracks 
+ July 10, 2023: Abstract submission deadline 
+ July 15, 2023 | : Proposal submission deadline for Data Challenge 
+ July 17, 2023: Paper submission deadline 
+ July 25, 2024 | : Decision notification for Data Challenge 
+ September 11, 2023: First stage decision notifications (Accept/Reject/Revision) 
+ September 15, 2023: Submission deadline in Demo and Young Researchers’ Symposium Tracks 
+ September 30, 2023: Abstract submission deadline in Diversity and Inclusion Track 
+ October 11, 2023: Submission of revised papers 
+ October 30, 2033: Notification of acceptance in Demo, Young Researchers’ Symposium and Diversity & Inclusion Tracks 
+ November 3, 2023: Final decision notifications (Accept/Reject) 
+ November 30, 2023: Camera ready due 
+ PAPER SUBMISSION LINK 
+ href="https://easychair.org/conferences/?conf=codscomad2024" - https://easychair.org/conferences/?conf=codscomad2024
+SUBMISSION INSTRUCTIONS AND POLICIES 
+ Detailed submission instructions, submission format, page limits, conflict of interest, dual submission, plagiarism and other policies are available at the link below. Do check them out before submitting your paper:href="https://cods-comad.in/common-instructions-policies.php" - https://cods-comad.in/common-instructions-policies.php
+. 
+ AWARDS 
+ Best paper in each track will be awarded. 
+ TRAVEL GRANTS 
+ Conference will provide travel assistance to a reasonable number of students whose papers are accepted. The travel grant includes free accommodation and monetary travel support partially covering the travel cost. Details of the grant will be made available at the conference website in due course. 
+ ORGANIZING COMMITTEE 
+ General Chairs 
+ Sriraam Natarajan (UT Dallas) 
+ Indrajit Bhattacharya (TCS Research)PC Chairs (Research Track) 
+ Richa Singh (IIT Jodhpur) 
+ Arun Kumar (University of California, San Diego) 
+ PC Chairs (Applied Data Science Track) 
+ Kalika Bali (Microsoft Research, India) 
+ Sayan Ranu (IIT Delhi) 
+ Tutorial Chairs 
+ Preethi Jyothi (IIT Bombay) 
+ Biplav Srivastava (University of Southern California) 
+ Young Researchers' Symposium (YRS) Chairs 
+ Ponnurangam Kumaraguru (IIIT Hyderabad) 
+ Janardhan Rao (Jana) Doppa (Washington State University) 
+ Demo Chairs 
+ Harshad Khadilkar (TCS Research) 
+ Mayukh Das (Microsoft Research) 
+ Diversity & Inclusion Chairs 
+ Sumeet Agarwal (IIT Delhi) 
+ Lipika Dey (TCS Research) 
+ Data Challenge Chair 
+ Atul Kumar (IBM Research, India) 
+ Proceedings Chair 
+ Abinaya K (Flipkart) 
+ Publicity Chair 
+ Raj Sharma (Walmart Global Tech) 
+ Student Travel Grants Chair 
+ Md. Shad Akhtar (IIIT Delhi) 
+ Sponsorship Chairs 
+ Shourya Roy (Flipkart) 
+ Mukesh Mohania (IIIT Delhi) 
+ Local Organizing Chairs 
+ Dinesh Babu Jayagopi (IIIT Bangalore) 
+ Raj Sharma (Walmart Global Tech) 
+ Registration Chairs 
+ Vinu EV (IIIT Bangalore) 
+ Raghuram Bharadwaj (IIIT Bangalore) 
+ Finance Chairs 
+ Chandrashekhar Sahasrabudhe (ACM India) 
+ Abhijat Vichare (ACM India) 
+ About ACM 
+ About ACM 
+ Volunteer 
+ Membership 
+ Join ACM 
+ Renew My Membership 
+ Membership Options 
+ Membership Benefits 
+ MyACM Sign In 
+ Publications 
+ About Publications 
+ Digital Library 
+ Submit a Paper 
+ Advertise with ACM 
+ Chapters 
+ Chapter Admin Interface 
+ Chapter Activities Calendar 
+ Start a Chapter 
+ Special Interest Groups 
+ SIGs Newsletter 
+ Awards 
+ About ACM's Awards 
+ Conferences 
+ ACM's Conferences 
+ Code of Ethics 
+ ACM's Code of Ethics 
+ Enforcement Procedures 
+ Media Center 
+ ACM Media Center 
+ Advertise with ACM 
+ Education 
+ Education Home 
+ Privacy Policy 
+ Privacy Policy Home 
+ Home 
+ Sitemap 
+ Contact Us 
+ Member Services 
+ Privacy Policy 
+ Social Media Policy 
+ Accessibility 
+ Cookie Declaration 
+ Copyright © 2025, ACM, Inc
+

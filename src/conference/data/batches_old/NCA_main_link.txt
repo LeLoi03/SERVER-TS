@@ -1,0 +1,245 @@
+Conference NCA:
+
+Welcome to NCA 2024 
+ The committee is proud to announce the NCA 2024, the International Symposium on Network Computing and Applications. 
+ About NCA 
+ NCA is a successful series of conferences that serves as a large international forum for presenting and sharing recent research results and technological developments in the fields of Network and Cloud Computing. NCA, sponsored by the PE7 SERICS project, reaches out to both researchers and practitioners, and to both academia and industry. 
+ All papers presented at the main conference will be submitted to IEEE Xplore for publication and indexing. 
+ Organization 
+ Steering Committee Chair: | Dimiter R. Avresky | , IRIANC, Boston/Munich, USA/Germany 
+ General Chair: | Mirco Marchetti | , University of Modena and Reggio Emilia, Italy 
+ Program Chair: | Dario Stabili | , Alma Mater Studiorum - University of Bologna, Italy 
+ Program Co-chair: | Giuseppe Tricomi | , Istituto di Calcolo e Reti ad alte prestazioni, ICAR CNR Napoli, Italy 
+ Further informations on the committees can be found at theOrganizationpage. 
+ For any questions please contact us at:href="mailto:nca2024@easychair.org" - nca2024@easychair.org
+Past Years Technical Programs 
+ href="https://www.nca-ieee.org/2022/conference_program.html" - NCA 2022 Technical Program 
+ href="https://www.nca-ieee.org/2021/conference_program.html" - NCA 2021 Technical Program 
+ href="https://www.nca-ieee.org/2020/conference_program.html" - NCA 2020 Technical Program 
+ href="https://www.nca-ieee.org/2019/conference_program.html" - NCA 2019 Technical Program 
+ href="https://www.nca-ieee.org/2018/conference_program.html" - NCA 2018 Technical Program 
+ href="https://www.nca-ieee.org/2017/conference_program.html" - NCA 2017 Technical Program 
+ href="https://nca-ieee.org/old/NCA16TechnicalProgram.pdf" - NCA 2016 Technical Program 
+ href="https://nca-ieee.org/old/NCA15TechnicalProgram.pdf" - NCA 2015 Technical Program 
+ href="https://nca-ieee.org/old/NCA14TechnicalProgram.pdf" - NCA 2014 Technical Program 
+ href="https://nca-ieee.org/old/NCA13TechnicalProgram.pdf" - NCA 2013 Technical Program 
+ href="https://nca-ieee.org/old/NCA12TechnicalProgram.pdf" - NCA 2012 Technical Program 
+ href="https://nca-ieee.org/old/NCA11TechnicalProgram.pdf" - NCA 2011 Technical Program 
+ href="https://nca-ieee.org/old/NCA10TechnicalProgram.pdf" - NCA 2010 Technical Program 
+ href="https://nca-ieee.org/old/NCA09TechnicalProgram.pdf" - NCA 2009 Technical Program 
+ href="https://nca-ieee.org/old/NCA08TechnicalProgram.pdf" - NCA 2008 Technical Program 
+ href="https://nca-ieee.org/old/NCA07TechnicalProgram.pdf" - NCA 2007 Technical Program 
+ href="https://nca-ieee.org/old/NCA06TechnicalProgram.pdf" - NCA 2006 Technical Program 
+ Previous Editions 
+ 2022 
+ 2021 
+ 2020 
+ 2019 
+ 2018 
+ 2017 
+ 2016 
+ 2006-2015 
+
+Call for Papers information:
+The 22nd International Symposium on Network Computing and Applications (NCA 2024) 
+ October 24-26, 2024 
+ CEUB, Bertinoro (FC) - Italy 
+ Main sponsor: 
+ SEcurity and RIghts In the CyberSpace - SERICS Foundation 
+
+Patrons: 
+  
+ Akamai Technologies, Inc. 
+  
+ href="https://www.irianc.com/" - International Research Institute on Autonomic Network Computing
+Main Menu 
+ Main Page 
+ href="./call_for_papers.html" - Call for Papers 
+ Organization 
+ Camera Ready Instructions 
+ Registration 
+ Conference venue and Directions 
+ Conference Program 
+ href="./nca_awards.html" - Awards 
+ Conference Gallery 
+ Important Dates 
+ Manuscript Due | : | August 4, 2024 | August 19th, 2024 AoE 
+ Author Notification | : | September 30, 2024 
+ Author Registration | : | October 9, 2024 
+ Camera Ready Papers | : | October 14, 2024 
+ Conference dates | : | October 24-26, 2024 
+ Call for Papers 
+ The author kit is provided on this page. 
+ LaTeX Template 
+ LaTeX Bibliography Style 
+ Tips: Be sure to use the template'sconferencemode. See template documentation for details. Accordingly, check that the bibliography is properly formatted according to IEEE specifications. It is possible, but discouraged, to use other systems for the preparation of papers, e.g. MS-Word. Author kits for these systems can be found onthis page. 
+ You can download the Call for Papers in PDF fromhref="./doc/CfP-flyer.pdf" - here
+. 
+ International Symposium on Network Computing and Applications (NCA):October 24-26, 2024 Sponsored by: SERICs foundation - SEcurity and RIghts In the CyberSpace 
+ The International Symposium on Network Computing and Applications (NCA) is seeking articles concerning fundamental research and practical experience reports. The topics of interest include, but are not limited to: 
+ Theory of Network Computing 
+ Autonomic Network Computing 
+ Content Delivery Network (CDN) 
+ High Speed Networks/Protocols and Middleware 
+ Routing Mechanisms 
+ Overlay Networks/Peer-to-Peer Systems 
+ System Area Networks (SAN)/Clusters 
+ Performance Modeling/Quality of Services (QoS) Issues 
+ Web Caching and Switching 
+ Dependable Wide, Local, and System Area Networks 
+ Network Security 
+ Intrusion-Tolerant Networked Systems 
+ Scalable and Dependable Servers and Data Centers 
+ Middleware for Dependable Network Computing 
+ Self* (Configuring, Healing, Optimizing, Protecting, Organizing, Aware) 
+ Platforms for Network Computing 
+ Network Protocols: Verification and Validation 
+ Autonomic Network Computing for Achieving Self* Properties and Applications Availability 
+ Seamless and Virtual Capabilities for Implementing Self* Properties 
+ Software Defined Networking (SDN): Principles and Implementation 
+ Designing Highly-Available and Secure SDN 
+ Network Functions Virtualization (NFV): Design and Optimization 
+ Network Cloud Computing 
+ Machine Learning Techniques for Cloud Resources Management 
+ Big Data in Clouds for IoT 
+ Future Internet and Communicating Objects 
+ Mobile Ad-Hoc Networks (MANET) 
+ Sensor Networks 
+ Fog/Edge Computing 
+ Energy-Efficient Computation and Communication 
+ Applications to Real and/or Complex Problems, Practical Experiences and Prototypes 
+ Programming Environments for Distributed Systems 
+ Blockchain 
+ Byzantine Fault Tolerance 
+ Web and Mobile Security 
+ Security of Networked Applications (including Automotive, Industrial and Cyber-physical Systems) 
+ Manuscript Submission 
+ Submission and Submission Requirements 
+ Paper submissions are managed through EasyChair. 
+ Please visit thehref="https://easychair.org/conferences/?conf=nca2024" - submission link
+to send your manuscript. 
+ Submitted manuscripts must not have been previously published or currently submitted for publication elsewhere and must be cleared for publication in the NCA Proceedings, which will be submitted to IEEE Xplore and CSDL. 
+ The manuscript must be written in English, and must not exceed 8 pages for regular papers or 4 pages for short papers. NCA follows a single-blind review methodology, but authors can freely choose to omit their names and affiliation in the submitted PDF. The full author list still has to be included in EasyChair during submission. 
+ Manuscript page limit 
+ Regular Papers: 8 pages, including all figures, tables, and references. 
+ Short Papers: 4 pages, including all figures, tables, and references. 
+ Purchasing extra pages 
+ Regular Papers: Up to 2 extra pages may be purchased at €100 (EUR) per extra page. 
+ Short Papers: Up to 1 extra page may be purchased at €100 (EUR). 
+ Authors can decide to submit full papers longer than 8 pages (up to 10 pages) before the reviewing process. This is an indication of their will to purchase extra pages during the registration process. Therefore,longer papers accepted as full papers cannot be shrunk when preparing camera ready versions. This is to respect the work made by reviewers and other authors which decided to stay in the limits. Authors who submitted papers as full papers and they were accepted to the conference as short papers, will need to reduce their size to 4 pages (or 5 pages by purchasing 1 extra page) in the camera ready version. 
+ Accepted papers and Publication Policies 
+ Every regular paper accepted must have attached to it at least one registration at the full rate. Thus, for a manuscript for which all authors are students, one student author will be required to register at the full registration rate. For manuscripts where at least one author is already registered at the full rate, this fulfills the obligation. 
+ No-show papersare defined as papers submitted by authors who subsequently did not present the paper at the technical meeting. This year, all presentations will be given in person at the conference venue. No-show papers that were not withdrawn and were published in the Proceedings must be identified as "No-Show" in the files submitted to the Conference Publishing Services (CPS) for further publication.No-shows will not be available on IEEE Xplore or other public access IEEE forums. IEEE CPS will maintain an archive of no-shows. 
+ The IEEE CPS strongly discourages changes and, in particular, withdrawals of papers once submitted and included in the program. 
+ If under any circumstances it becomes necessary for the author to withdraw or change a paper, IEEE CPS policy dictates that the request to do this must come directly from the author and not from any third party. IEEE CPS policy also states that in this case the author will be held liable for all costs that are incurred. It would then be up to the author to get reimbursed for the expense from any third party if he/she feels it is justified. The IEEE CPS cannot act as a policing entity on behalf of the author in this regard. 
+ Best Paper Awards 
+ The NCA2024 Program Committee will selectBest PaperandBest Student Paper. The first author of the Best Student Paper must be a BSc/MSc/PhD student. 
+ Important Dates 
+ Manuscript Due | : | August 4, 2024 | August 19th, 2024 AoE 
+ Author Notification | : | September 18, 2024 
+ Author Registration | : | September 25, 2024 
+ Camera Ready Papers | : | October 9, 2024 
+ Conference dates | : | October 24-26, 2024 
+ This event is sponsored by the project PE7 SERICS, part ofItalia Domani, the National Recovery and Resilience Plan, Next Generation EU. 
+
+Important Dates information:
+The 22nd International Symposium on Network Computing and Applications (NCA 2024) 
+ October 24-26, 2024 
+ CEUB, Bertinoro (FC) - Italy 
+ Main sponsor: 
+ SEcurity and RIghts In the CyberSpace - SERICS Foundation 
+
+Patrons: 
+  
+ Akamai Technologies, Inc. 
+  
+ href="https://www.irianc.com/" - International Research Institute on Autonomic Network Computing
+Main Menu 
+ Main Page 
+ href="./call_for_papers.html" - Call for Papers 
+ Organization 
+ Camera Ready Instructions 
+ Registration 
+ Conference venue and Directions 
+ Conference Program 
+ href="./nca_awards.html" - Awards 
+ Conference Gallery 
+ Important Dates 
+ Manuscript Due | : | August 4, 2024 | August 19th, 2024 AoE 
+ Author Notification | : | September 30, 2024 
+ Author Registration | : | October 9, 2024 
+ Camera Ready Papers | : | October 14, 2024 
+ Conference dates | : | October 24-26, 2024 
+ Call for Papers 
+ The author kit is provided on this page. 
+ LaTeX Template 
+ LaTeX Bibliography Style 
+ Tips: Be sure to use the template'sconferencemode. See template documentation for details. Accordingly, check that the bibliography is properly formatted according to IEEE specifications. It is possible, but discouraged, to use other systems for the preparation of papers, e.g. MS-Word. Author kits for these systems can be found onthis page. 
+ You can download the Call for Papers in PDF fromhref="./doc/CfP-flyer.pdf" - here
+. 
+ International Symposium on Network Computing and Applications (NCA):October 24-26, 2024 Sponsored by: SERICs foundation - SEcurity and RIghts In the CyberSpace 
+ The International Symposium on Network Computing and Applications (NCA) is seeking articles concerning fundamental research and practical experience reports. The topics of interest include, but are not limited to: 
+ Theory of Network Computing 
+ Autonomic Network Computing 
+ Content Delivery Network (CDN) 
+ High Speed Networks/Protocols and Middleware 
+ Routing Mechanisms 
+ Overlay Networks/Peer-to-Peer Systems 
+ System Area Networks (SAN)/Clusters 
+ Performance Modeling/Quality of Services (QoS) Issues 
+ Web Caching and Switching 
+ Dependable Wide, Local, and System Area Networks 
+ Network Security 
+ Intrusion-Tolerant Networked Systems 
+ Scalable and Dependable Servers and Data Centers 
+ Middleware for Dependable Network Computing 
+ Self* (Configuring, Healing, Optimizing, Protecting, Organizing, Aware) 
+ Platforms for Network Computing 
+ Network Protocols: Verification and Validation 
+ Autonomic Network Computing for Achieving Self* Properties and Applications Availability 
+ Seamless and Virtual Capabilities for Implementing Self* Properties 
+ Software Defined Networking (SDN): Principles and Implementation 
+ Designing Highly-Available and Secure SDN 
+ Network Functions Virtualization (NFV): Design and Optimization 
+ Network Cloud Computing 
+ Machine Learning Techniques for Cloud Resources Management 
+ Big Data in Clouds for IoT 
+ Future Internet and Communicating Objects 
+ Mobile Ad-Hoc Networks (MANET) 
+ Sensor Networks 
+ Fog/Edge Computing 
+ Energy-Efficient Computation and Communication 
+ Applications to Real and/or Complex Problems, Practical Experiences and Prototypes 
+ Programming Environments for Distributed Systems 
+ Blockchain 
+ Byzantine Fault Tolerance 
+ Web and Mobile Security 
+ Security of Networked Applications (including Automotive, Industrial and Cyber-physical Systems) 
+ Manuscript Submission 
+ Submission and Submission Requirements 
+ Paper submissions are managed through EasyChair. 
+ Please visit thehref="https://easychair.org/conferences/?conf=nca2024" - submission link
+to send your manuscript. 
+ Submitted manuscripts must not have been previously published or currently submitted for publication elsewhere and must be cleared for publication in the NCA Proceedings, which will be submitted to IEEE Xplore and CSDL. 
+ The manuscript must be written in English, and must not exceed 8 pages for regular papers or 4 pages for short papers. NCA follows a single-blind review methodology, but authors can freely choose to omit their names and affiliation in the submitted PDF. The full author list still has to be included in EasyChair during submission. 
+ Manuscript page limit 
+ Regular Papers: 8 pages, including all figures, tables, and references. 
+ Short Papers: 4 pages, including all figures, tables, and references. 
+ Purchasing extra pages 
+ Regular Papers: Up to 2 extra pages may be purchased at €100 (EUR) per extra page. 
+ Short Papers: Up to 1 extra page may be purchased at €100 (EUR). 
+ Authors can decide to submit full papers longer than 8 pages (up to 10 pages) before the reviewing process. This is an indication of their will to purchase extra pages during the registration process. Therefore,longer papers accepted as full papers cannot be shrunk when preparing camera ready versions. This is to respect the work made by reviewers and other authors which decided to stay in the limits. Authors who submitted papers as full papers and they were accepted to the conference as short papers, will need to reduce their size to 4 pages (or 5 pages by purchasing 1 extra page) in the camera ready version. 
+ Accepted papers and Publication Policies 
+ Every regular paper accepted must have attached to it at least one registration at the full rate. Thus, for a manuscript for which all authors are students, one student author will be required to register at the full registration rate. For manuscripts where at least one author is already registered at the full rate, this fulfills the obligation. 
+ No-show papersare defined as papers submitted by authors who subsequently did not present the paper at the technical meeting. This year, all presentations will be given in person at the conference venue. No-show papers that were not withdrawn and were published in the Proceedings must be identified as "No-Show" in the files submitted to the Conference Publishing Services (CPS) for further publication.No-shows will not be available on IEEE Xplore or other public access IEEE forums. IEEE CPS will maintain an archive of no-shows. 
+ The IEEE CPS strongly discourages changes and, in particular, withdrawals of papers once submitted and included in the program. 
+ If under any circumstances it becomes necessary for the author to withdraw or change a paper, IEEE CPS policy dictates that the request to do this must come directly from the author and not from any third party. IEEE CPS policy also states that in this case the author will be held liable for all costs that are incurred. It would then be up to the author to get reimbursed for the expense from any third party if he/she feels it is justified. The IEEE CPS cannot act as a policing entity on behalf of the author in this regard. 
+ Best Paper Awards 
+ The NCA2024 Program Committee will selectBest PaperandBest Student Paper. The first author of the Best Student Paper must be a BSc/MSc/PhD student. 
+ Important Dates 
+ Manuscript Due | : | August 4, 2024 | August 19th, 2024 AoE 
+ Author Notification | : | September 18, 2024 
+ Author Registration | : | September 25, 2024 
+ Camera Ready Papers | : | October 9, 2024 
+ Conference dates | : | October 24-26, 2024 
+ This event is sponsored by the project PE7 SERICS, part ofItalia Domani, the National Recovery and Resilience Plan, Next Generation EU.

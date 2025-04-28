@@ -1,0 +1,384 @@
+Conference full name: International Workshop on Data Management on New Hardware (DaMoN)
+
+1. Website of DaMoN_2: https://damon-db.org/
+Website information of DaMoN_2:
+
+Menuhref="#sec-ind-1" - Call For Papers 
+ Workshop Program 
+ Keynote & Invited Talks 
+ href="#sec-ind-4" - Accepted Papers 
+ Program Committee 
+ Steering Committee 
+ More | Previous Workshops 
+ 21st International Workshop on 
+ Data Management on New Hardware (DaMoN) 
+ Held withhref="https://2025.sigmod.org/" - ACM SIGMOD/PODS 2025, Berlin, Germany
+- Monday June 23, 2025 
+ SPONSORS 
+ News 
+ Paper submission | href="#important-dates" - deadline extended | by a week to: March 21st, 2025 (11:59pm AoE) 
+ href="https://twitter.com/intent/tweet?button_hashtag=DAMON2025&ref_src=twsrc%5Etfw" - Tweet #DAMON2024
+Call For Papers 
+ This one-day workshop aims to bring together researchers interested in optimizing database performance on modern computing infrastructure by designing new data management techniques and tools. 
+ Topics of Interest 
+ The continued evolution of computing hardware and infrastructure imposes new challenges and bottlenecks to program performance. As a result, traditional database architectures that focus solely on I/O optimization increasingly fail to utilize hardware resources efficiently. Multi-core CPUs, GPUs, FPGAs, new memory and storage technologies (such as flash and non-volatile memory), and low-power hardware imposes a significant challenge to optimizing database performance. Consequently, exploiting the characteristics of modern hardware has become an essential topic of database systems research. 
+ The goal is to make database systems adapt automatically to sophisticated hardware characteristics, thus maximizing performance transparently for applications. To achieve this goal, the data management community needs interdisciplinary collaboration with researchers from computer architecture, compilers, operating systems, and storage. This involves rethinking traditional data structures, query processing algorithms, and database software architectures to adapt to the advances in the underlying hardware infrastructure. 
+ We seek submissions bridging database systems to computer architecture, compilers, and operating systems. We also invite submissions to our call for papers on hardware/software co-design for modern data-intensive workloads, including but not limited to machine learning training and inference, graph analytics, and similar tasks. As these workloads continue to grow in scale and complexity, innovative co-design approaches that tightly integrate hardware architectures and software systems are crucial to achieving breakthroughs in performance, energy efficiency, and scalability. In particular, submissions covering topics from the following non-exclusive list are encouraged: 
+ database algorithms and data structures on modern hardware 
+ cost models and query optimization for novel hierarchical memory systems 
+ hardware systems for query processing 
+ data management using co-processors 
+ novel application of new storage technologies to data management 
+ query processing using computing power in storage systems 
+ database architectures for low-power computing and embedded devices 
+ database architectures on multi-threaded and chip multiprocessors 
+ performance analysis of database workloads on modern hardware 
+ compiler and operating systems advances to improve database performance 
+ new benchmarks for micro-architectural evaluation of database workloads 
+ taking advantage of modern network capabilities for data processing 
+ hardware/software co-design for modern data-intensive workloads (e.g., machine learning, graph analytics) 
+ Submission Tracks 
+ We invite submissions to two tracks: 
+ Full papers: A full paper must be no longer than six pages, excluding the bibliography. There is no limit on the length of the bibliography. Full papers describe a complete work in data management for new hardware. Accepted papers will be given 10 pages (plus a bibliography) for the camera-ready version and a long presentation slot during the workshop. 
+ Short Papers: Short papers must not exceed two pages, excluding the bibliography. Short papers describe very early-stage works or summaries of mature systems. Short papers will be included in the proceedings, given 4 pages (plus a bibliography) for the camera-ready version, and may be given a short presentation slot during the workshop. 
+ All accepted papers (full and short) will also be presented as posters during a workshop poster session 
+ Best of DaMoN 2025 
+ This year all accepted DaMoN papers will be considered for abest paper award. 
+ We intend to invite extended versions of a selection of DaMoN'25 papers for submission to the VLDB Journal. Extended papers that are accepted to the VLDB Journal will appear in a special section (“Best of DaMoN 2025”) within one of the regular VLDBJ issues. 
+ Important Dates 
+ Paper submission:March 14th, 2025March 21st, 2025 (11:59pm AoE) 
+ Notification of acceptance: April 28th, 2025 
+ Camera-ready copies: TBD 
+ Workshop: June 23rd, 2025 
+ Submission Instructions 
+ Authors are invited to submit original, unpublished research papers that are not being considered for publication in any other forum. Manuscripts should be submitted electronically as PDF files using the latestACM paper formatconsistent with thehref="https://2025.sigmod.org/calls_papers_sigmod_research.shtml" - ACM SIGMOD formatting guidelines
+to the DaMoN 2025 CMT site athref="https://cmt3.research.microsoft.com/DaMoN2025" - https://cmt3.research.microsoft.com/DaMoN2025
+(available from mid-February on). Submissions will be reviewed in a single-blind manner. Submissions that are two pages or shorter, excluding the bibliography, will be reviewed as short papers. Submissions that are six pages or shorter, excluding the bibliography, will be reviewed as full papers. Submissions that are longer than six pages, excluding the bibliography, will be desk-rejected. 
+ Accepted papers will be included in the informal online proceedings at the website. Additionally, all accepted papers will be published online in the ACM Digital Library. Therefore, the papers must include the standard ACM copyright notice on the first page. 
+ Workshop Program 
+ Program - Monday (June 23, 2025), Room: TBD 
+ TBD 
+ Keynote & Invited Talks 
+ TBD 
+ Accepted Papers 
+ TBD 
+ Program Committee 
+ Chairs 
+ Carsten Binnig 
+ TU Darmstadt, Germany 
+ carsten.binnig@cs.tu-darmstadt.de 
+ Eric Sedlar 
+ Oracle Labs 
+ eric.sedlar@oracle.com 
+ Members 
+ Anastasia Ailamaki, EPFL, Switzerland 
+ Yannis Chronis, Google, USA 
+ Muhammad El-Hindi, Technische Universität Darmstadt, Germany 
+ Jana Giceva, Technische Universität München, Germany 
+ Norman May, SAP SE, Germany 
+ Beng Chin Ooi, National University of Singapore, Singapore 
+ Orestis Polychroniou, Amazon Web Services, USA 
+ Danica Porobic, Oracle, Switzerland 
+ Tilmann Rabl, Hasso Plattner Institute/ University of Potsdam, Germany 
+ Kenneth Ross, Columbia University, USA 
+ Rathijit Sen, Microsoft, USA 
+ Utku Sirin, Harvard University, USA 
+ Rebecca Taft, Cockroach Labs, USA 
+ Pinar Tozun, IT University of Copenhagen, Denmark 
+ Tianzheng Wang, Simon Fraser University, Canada 
+ Huanchen Zhang, Tsinghua University, China 
+ Tobias Ziegler, Technische Universität München, Germany 
+ Steering Committee 
+ Anastasia Ailamaki 
+ EPFL, Switzerland 
+ anastasia.ailamaki@epfl.ch 
+ Peter Boncz 
+ CWI, Netherlands 
+ boncz@cwi.nl 
+ Stefan Manegold 
+ CWI, Netherlands 
+ stefan.manegold@cwi.nl 
+ Ken Ross 
+ Columbia University, USA 
+ kar@cs.columbia.edu 
+ href="https://twitter.com/DaMoN_workshop" - 
+Manage consent- Copyright © DaMoN Organizers 
+ Designed by Asma Awad &Muhammad El-Hindi 
+ We would like to usethird party codeto improve the functionality of this website.Manage preferencesDenyAllow 
+ Font awesome 
+ Used to display icons 
+ Twitter / X 
+ Used to show tweets 
+ Save preferencesAllow all
+
+2. Website of DaMoN_2: http://www.wikicfp.com/cfp/program?id=640
+Website information of DaMoN_2:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ DaMoN: Data Management on New Hardware 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=640" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=640&text=DaMoN: Data Management on New Hardware" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=640" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=640" - | DaMoN: Data Management on New Hardware | href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=640" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=640&text=DaMoN: Data Management on New Hardware" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=640" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=640" - 
+ DaMoN: Data Management on New Hardware 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=640" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=640&text=DaMoN: Data Management on New Hardware" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=640" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=640" - 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/damon/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Data Management on New Hardware&shortname=DaMoN&year=2025&sid=640" - 2025 or later | Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/damon/index.html" - DBLP | Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Data Management on New Hardware&shortname=DaMoN&year=2025&sid=640" - 2025 or later 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/damon/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Data Management on New Hardware&shortname=DaMoN&year=2025&sid=640" - 2025 or later 
+ All CFPs on WikiCFP 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=179354&copyownerid=13149" - DaMoN 2024 | 20th International Workshop on Data Management on New Hardware 
+ Jun 10, 2024 - Jun 10, 2024 | Santiago, Chile | Mar 15, 2024 
+ href="/cfp/servlet/event.showcfp?eventid=34439&copyownerid=2" - DaMoN 2014 | Tenth International Workshop on Data Management on New Hardware 
+ Jun 23, 2014 - Jun 23, 2014 | Snowbird, Utah, USA | Mar 24, 2014 
+ href="/cfp/servlet/event.showcfp?eventid=27223&copyownerid=2" - DaMoN 2013 | Ninth International Workshop on Data Management on New Hardware 
+ Jun 24, 2013 - Jun 24, 2013 | New York, NY, USA | Mar 21, 2013 (Mar 14, 2013) 
+ href="/cfp/servlet/event.showcfp?eventid=14533&copyownerid=21260" - DaMoN 2011 | Seventh International Workshop on Data Management on New Hardware 
+ Jun 13, 2011 - Jun 13, 2011 | Athens, Greece | Mar 30, 2011 
+ href="/cfp/servlet/event.showcfp?eventid=8906&copyownerid=10121" - DaMoN 2010 | Sixth International Workshop on Data Management on New Hardware 
+ Jun 7, 2010 - Jun 7, 2010 | Indianapolis, Indiana, USA | Mar 29, 2010 
+ href="/cfp/servlet/event.showcfp?eventid=5065&copyownerid=2" - DaMoN 2009 | Fifth International Workshop on Data Management on New Hardware 
+ Jun 28, 2009 - Jun 28, 2009 | Providence, Rhode Island, USA | Apr 17, 2009 | Event | When | Where | Deadline | href="/cfp/servlet/event.showcfp?eventid=179354&copyownerid=13149" - DaMoN 2024 | 20th International Workshop on Data Management on New Hardware | Jun 10, 2024 - Jun 10, 2024 | Santiago, Chile | Mar 15, 2024 | href="/cfp/servlet/event.showcfp?eventid=34439&copyownerid=2" - DaMoN 2014 | Tenth International Workshop on Data Management on New Hardware | Jun 23, 2014 - Jun 23, 2014 | Snowbird, Utah, USA | Mar 24, 2014 | href="/cfp/servlet/event.showcfp?eventid=27223&copyownerid=2" - DaMoN 2013 | Ninth International Workshop on Data Management on New Hardware | Jun 24, 2013 - Jun 24, 2013 | New York, NY, USA | Mar 21, 2013 (Mar 14, 2013) | href="/cfp/servlet/event.showcfp?eventid=14533&copyownerid=21260" - DaMoN 2011 | Seventh International Workshop on Data Management on New Hardware | Jun 13, 2011 - Jun 13, 2011 | Athens, Greece | Mar 30, 2011 | href="/cfp/servlet/event.showcfp?eventid=8906&copyownerid=10121" - DaMoN 2010 | Sixth International Workshop on Data Management on New Hardware | Jun 7, 2010 - Jun 7, 2010 | Indianapolis, Indiana, USA | Mar 29, 2010 | href="/cfp/servlet/event.showcfp?eventid=5065&copyownerid=2" - DaMoN 2009 | Fifth International Workshop on Data Management on New Hardware | Jun 28, 2009 - Jun 28, 2009 | Providence, Rhode Island, USA | Apr 17, 2009 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=179354&copyownerid=13149" - DaMoN 2024 | 20th International Workshop on Data Management on New Hardware 
+ Jun 10, 2024 - Jun 10, 2024 | Santiago, Chile | Mar 15, 2024 
+ href="/cfp/servlet/event.showcfp?eventid=34439&copyownerid=2" - DaMoN 2014 | Tenth International Workshop on Data Management on New Hardware 
+ Jun 23, 2014 - Jun 23, 2014 | Snowbird, Utah, USA | Mar 24, 2014 
+ href="/cfp/servlet/event.showcfp?eventid=27223&copyownerid=2" - DaMoN 2013 | Ninth International Workshop on Data Management on New Hardware 
+ Jun 24, 2013 - Jun 24, 2013 | New York, NY, USA | Mar 21, 2013 (Mar 14, 2013) 
+ href="/cfp/servlet/event.showcfp?eventid=14533&copyownerid=21260" - DaMoN 2011 | Seventh International Workshop on Data Management on New Hardware 
+ Jun 13, 2011 - Jun 13, 2011 | Athens, Greece | Mar 30, 2011 
+ href="/cfp/servlet/event.showcfp?eventid=8906&copyownerid=10121" - DaMoN 2010 | Sixth International Workshop on Data Management on New Hardware 
+ Jun 7, 2010 - Jun 7, 2010 | Indianapolis, Indiana, USA | Mar 29, 2010 
+ href="/cfp/servlet/event.showcfp?eventid=5065&copyownerid=2" - DaMoN 2009 | Fifth International Workshop on Data Management on New Hardware 
+ Jun 28, 2009 - Jun 28, 2009 | Providence, Rhode Island, USA | Apr 17, 2009 
+ Present CFP : 2024 
+ The focus of this workshop is to strengthen the communication between the database community and broader computer systems communities, specifically the computer architecture, compiler, operating systems, and storage communities. As all of these fields evolve independently, database software has proven to under-utilize the underlying hardware technology. 
+  
+ In the last two decades, DaMoN has established itself as the primary venue for researchers to exchange information, learn from each other, and improve the interaction between the database software and the underlying hardware and devices, as well as discovering and understanding hardware trends and building strong data management systems for the future. 
+  
+ This workshop aims at researchers from both data management, computer architecture, and storage systems who are interested in optimizing database performance on modern computing infrastructure by designing new data management techniques and tools. 
+  
+ Submission site is now open: https://cmt3.research.microsoft.com/DaMoN2024 
+  
+ Held with ACM SIGMOD/PODS 2024 in Santiago, Chile 
+ https://2024.sigmod.org/ 
+  
+ Topics of Interest 
+ The continued evolution of computing hardware and infrastructure imposes new challenges and bottlenecks to program performance. As a result, traditional database architectures that focus solely on I/O optimization increasingly fail to utilize hardware resources efficiently. Multi-core CPUs, GPUs, FPGAs, new memory and storage technologies (such as flash and non-volatile memory), and low-power hardware imposes a great challenge to optimizing database performance. Consequently, exploiting the characteristics of modern hardware has become an important topic of database systems research. 
+  
+ The goal is to make database systems adapt automatically to the sophisticated hardware characteristics, thus maximizing performance transparently to applications. To achieve this goal, the data management community needs interdisciplinary collaboration with computer architecture, compiler, operating systems and storage researchers. This involves rethinking traditional data structures, query processing algorithms, and database software architectures to adapt to the advances in the underlying hardware infrastructure. 
+  
+ We seek submissions bridging the area of database systems to computer architecture, compilers, and operating systems. In particular, submissions covering topics from the following non-exclusive list are encouraged: 
+  
+ database algorithms and data structures on modern hardware 
+  
+ cost models and query optimization for novel hierarchical memory systems 
+  
+ hardware systems for query processing 
+  
+ data management using co-processors 
+  
+ novel application of new storage technologies to data management 
+  
+ query processing using computing power in storage systems 
+  
+ database architectures for low-power computing and embedded devices 
+  
+ database architectures on multi-threaded and chip multiprocessors 
+  
+ performance analysis of database workloads on modern hardware 
+  
+ compiler and operating systems advances to improve database performance 
+  
+ new benchmarks for micro-architectural evaluation of database workloads 
+  
+ taking advantage of modern network capabilities for data processing 
+  
+ hardware/software co-design for modern data-intensive workloads (e.g., machine learning, graph analytics) 
+  
+ Submission Tracks 
+ We invite submissions to two tracks: 
+  
+ 1) Full Papers: A full paper must be no longer than 6 pages excluding the bibliography. There is no limit on the length of the bibliography. Full papers describe a complete work in the area of data management for new hardware. Accepted papers will be given 10 pages (plus bibliography) for the camera-ready version and a long presentation slot during the workshop. 
+  
+ 2) Short Papers: Short papers must not exceed 2 pages excluding the bibliography. Short papers describe very early stage works or summaries of mature systems. Short papers will be included in the proceedings, given 4 pages (plus bibliography) for the camera-ready version, and may be given a short presentation slot during the workshop. 
+  
+ All accepted papers (full and short) will also be presented as posters during a workshop poster session. 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=187646" - FRUCT38
+The 38th IEEE FRUCT Conference 
+ href="/cfp/servlet/event.showcfp?eventid=182253" - ICTC--SCI 2025
+2025 6th Information Communication Technologies Conference (ICTC 2025)--SCI 
+ href="/cfp/servlet/event.showcfp?eventid=184775" - ICBMEIS 2025
+International Conference On Business, Management, Economics, and Information Systems 
+ href="/cfp/servlet/event.showcfp?eventid=182788" - ICIME 2025
+IEEE--2025 13th International Conference on Information Management and Engineering (ICIME 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185389" - ICCNS 2025
+2025 15th International Conference on Communication and Network Security (ICCNS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=182591" - ICISPC 2025
+2025 Ninth International Conference on Imaging, Signal Processing and Communications (ICISPC 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=182786" - BDE--EI 2025
+2025 7th International Conference on Big Data Engineering (BDE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=182018" - NAACL 2025
+North American Chapter of the Association for Computational Linguistics 
+ href="/cfp/servlet/event.showcfp?eventid=118185" - CoUDP 2025
+2025 International Conference on Urban Design and Planning (CoUDP 2025) | href="/cfp/servlet/event.showcfp?eventid=187646" - FRUCT38
+The 38th IEEE FRUCT Conference | href="/cfp/servlet/event.showcfp?eventid=182253" - ICTC--SCI 2025
+2025 6th Information Communication Technologies Conference (ICTC 2025)--SCI | href="/cfp/servlet/event.showcfp?eventid=184775" - ICBMEIS 2025
+International Conference On Business, Management, Economics, and Information Systems | href="/cfp/servlet/event.showcfp?eventid=182788" - ICIME 2025
+IEEE--2025 13th International Conference on Information Management and Engineering (ICIME 2025) | href="/cfp/servlet/event.showcfp?eventid=185389" - ICCNS 2025
+2025 15th International Conference on Communication and Network Security (ICCNS 2025) | href="/cfp/servlet/event.showcfp?eventid=182591" - ICISPC 2025
+2025 Ninth International Conference on Imaging, Signal Processing and Communications (ICISPC 2025) | href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing | href="/cfp/servlet/event.showcfp?eventid=182786" - BDE--EI 2025
+2025 7th International Conference on Big Data Engineering (BDE 2025) | href="/cfp/servlet/event.showcfp?eventid=182018" - NAACL 2025
+North American Chapter of the Association for Computational Linguistics | href="/cfp/servlet/event.showcfp?eventid=118185" - CoUDP 2025
+2025 International Conference on Urban Design and Planning (CoUDP 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=187646" - FRUCT38
+The 38th IEEE FRUCT Conference 
+ href="/cfp/servlet/event.showcfp?eventid=182253" - ICTC--SCI 2025
+2025 6th Information Communication Technologies Conference (ICTC 2025)--SCI 
+ href="/cfp/servlet/event.showcfp?eventid=184775" - ICBMEIS 2025
+International Conference On Business, Management, Economics, and Information Systems 
+ href="/cfp/servlet/event.showcfp?eventid=182788" - ICIME 2025
+IEEE--2025 13th International Conference on Information Management and Engineering (ICIME 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185389" - ICCNS 2025
+2025 15th International Conference on Communication and Network Security (ICCNS 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=182591" - ICISPC 2025
+2025 Ninth International Conference on Imaging, Signal Processing and Communications (ICISPC 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=181913" - ACM SAC 2025
+40th ACM/SIGAPP Symposium On Applied Computing 
+ href="/cfp/servlet/event.showcfp?eventid=182786" - BDE--EI 2025
+2025 7th International Conference on Big Data Engineering (BDE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=182018" - NAACL 2025
+North American Chapter of the Association for Computational Linguistics 
+ href="/cfp/servlet/event.showcfp?eventid=118185" - CoUDP 2025
+2025 International Conference on Urban Design and Planning (CoUDP 2025) 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+
+3. Website of DaMoN_2: https://2025.sigmod.org/sigmod_workshops.shtml
+Website information of DaMoN_2:
+
+ACM SIGMOD/PODSInternational Conference on Management of Data, June 22-27, 2025Berlin, Germany 
+ Welcome 
+ Homepage 
+ Reproducibility 
+ href="calls_papers_inclusion_and_diversity.shtml" - Inclusion and Diversity 
+ Organization 
+ Organization 
+ SIGMOD PC 
+ PODS PC 
+ SIGMOD Industry PC 
+ SIGMOD Demo PC 
+ Sponsor Opportunities 
+ ACM SIGMOD Online 
+
+Participant Information 
+ Registration 
+ Conference Venue 
+ Accomodation 
+ Childcare 
+ Banquet 
+ Visa 
+ Travel to Berlin 
+ Tourism 
+ About Germany 
+ Student Travel Grants 
+ Program Overview 
+ Warmup 
+ Program Overview 
+ SIGMOD Program 
+ href="sigmod_papers.shtml" - Accepted Papers 
+ href="sigmod_demo_papers.shtml" - Accepted Demos 
+ Accepted Workshops 
+ Accepted Tutorials 
+ href="sigmod_industry_papers.shtml" - Accepted Industry Papers 
+ Keynotes 
+ Awards 
+ Panels 
+ PODS Program 
+ href="pods_papers.shtml" - Research Papers 
+ Keynote Talk 
+ Invited Tutorials 
+ Awards 
+ Gems of PODS 
+ Calls For Submissions 
+ href="calls_papers_important_dates.shtml" - Important Dates 
+ href="calls_papers_sigmod_research.shtml" - SIGMOD Call for Research Papers 
+ href="calls_papers_pods_research.shtml" - PODS Call for Research Papers 
+ href="calls_sigmod_tutorials.shtml" - SIGMOD Call for Tutorial Proposals 
+ href="calls_industrial_track_papers.shtml" - SIGMOD Call for Industrial Track Papers 
+ href="calls_workshops.shtml" - SIGMOD Call for Workshop Proposals 
+ href="calls_sigmod_demos.shtml" - SIGMOD Call for Demonstration Proposals 
+ href="call-for-nominations.pdf" - SIGMOD Call for Awards Nomination 
+ href="https://sigmod.org/sigmod-awards/doctoral-dissertation-award/" - SIGMOD call for Doctoral Dissertation Award 
+ href="https://sigmod-contest-2025.github.io/index.html" - SIGMOD Programming Contest 
+
+Accepted Workshops for SIGMOD 
+ HILDA - Workshop on Human-In-the-Loop Data Analytics 
+ DEEM - Workshop on Data Management for End-to-End Machine Learning 
+ href="https://sites.google.com/view/midas2025/home" - MIDAS: Connecting academia and industry on Modern Integrated Database and AI Systems 
+ GRADES-NDA - Workshop on Graph Data Management Experiences & Systems and Network Data Analytics 
+ NOVAS - Novel Optimizations for Visionary AI Systems 
+ Qdata - Workshop on Quantum Computing and Quantum-Inspired Technology for Data-Intensive Systems and Applications 
+ href="https://damon-db.org" - DaMoN - International Workshop on Data Management on New Hardware 
+ AIDM - International Workshop on Exploiting Artificial Intelligence Techniques for Data Management 
+ href="https://sites.google.com/view/dbpl2025/home" - DBPL - Database Programming Languages 
+ LLM-DPM - Workshop on Large Language Models for Data Process Management 
+ href="https://ucdbg.github.io/ProvenanceWeek2025/" - ProvenanceWeek 
+ DataEd - Workshop on Data Systems Education: Bridging Education Practice 
+  
+ Credits 
+ Follow our progress:
+

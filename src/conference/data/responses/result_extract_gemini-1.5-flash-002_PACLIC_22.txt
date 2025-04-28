@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "December 7 - 9, 2024",
+  "Year": "2024",
+  "Location": "Tokyo, Japan",
+  "City-State-Province": "Tokyo",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Deadline of Submission of Papers": "September 30, 2024"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "October 15, 2024"
+  },
+  "Camera-ready Date": {
+    "Deadline for Camera-Ready Papers": "October 31, 2024"
+  },
+  "Registration Date": {
+    "Deadline for Presenters' Registration": "October 31, 2024",
+    "Deadline for Participants' Registration": "November 30, 2024"
+  },
+  "Topics": "Language, Information, Computation",
+  "Summary": "The 38th Pacific Asia Conference on Language, Information and Computation (PACLIC 38) was held in hybrid mode on 7-9 December 2024 in Tokyo, Japan. This 3-day conference was hosted by the Tokyo University of Foreign Studies (TUFS).",
+  "Call for Papers": "No call for papers available"
+}
+

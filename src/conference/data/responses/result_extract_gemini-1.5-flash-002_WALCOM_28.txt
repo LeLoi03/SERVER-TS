@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "February 28 - March 2, 2025",
+  "Year": "2025",
+  "Location": "Chengdu, China",
+  "City-State-Province": "Chengdu",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission": "September 22, 2024"
+  },
+  "Notification Date": {
+    "Notification": "November 8, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready": "November 20, 2024"
+  },
+  "Topics": "Algorithms and Computation, Approximation Algorithms, Algorithmic Graph Theory and Combinatorics, Algorithmic and Combinatorial Aspects of Logic, Combinatorial Algorithms, Combinatorial Optimization, Combinatorial Reconfiguration, Computational Biology, Computational Complexity, Computational Geometry, Discrete Geometry, Data Structures, Experimental Algorithm Methodologies, Graph Algorithms, Graph Drawing, Parallel and Distributed Algorithms, Parameterized Algorithms, Parameterized Complexity, Network Optimization, Online Algorithms, Randomized Algorithms, String Algorithms",
+  "Publisher": "Springer-Verlag",
+  "Summary": "The 19th International Conference and Workshops on Algorithms and Computation (WALCOM 2025) will be held in Chengdu, China from February 28 - March 2, 2025. WALCOM is an annual conference series on all aspects of algorithms and computation.",
+  "Call for Papers": "# WALCOM 2025: Call for Papers\n\nThe 19th International Conference and Workshop on Algorithms and Computation (WALCOM 2025) will be held in **Chengdu, China, from February 28 - March 2, 2025**.\n\nWALCOM is an annual conference series on all aspects of algorithms and computation.\n\n## Topics\n\nThe range of topics within the scope of WALCOM includes, but is not limited to:\n\n*   Approximation Algorithms\n*   Algorithmic Graph Theory and Combinatorics\n*   Algorithmic and Combinatorial Aspects of Logic\n*   Combinatorial Algorithms\n*   Combinatorial Optimization\n*   Combinatorial Reconfiguration\n*   Computational Biology\n*   Computational Complexity\n*   Computational Geometry\n*   Discrete Geometry\n*   Data Structures\n*   Experimental Algorithm Methodologies\n*   Graph Algorithms\n*   Graph Drawing\n*   Parallel and Distributed Algorithms\n*   Parameterized Algorithms\n*   Parameterized Complexity\n*   Network Optimization\n*   Online Algorithms\n*   Randomized Algorithms\n*   String Algorithms\n\n## Submission Guidelines\n\nAuthors are invited to submit papers describing original research of theoretical or practical significance to algorithms and computation. Papers should not exceed 14 pages (including references, but excluding the optional appendix) in LNCS style.  If the authors feel that more details are essential to substantiate the main claim of the paper, they may include a clearly marked appendix that will be read at the discretion of the Program Committee.\n\nPapers submitted for review should represent original, previously unpublished work and surveys of important results. At the time the paper is submitted to WALCOM 2025, and for the entire review period, the paper (or essentially the same paper) should not be under review by any other conference with published proceedings or by a scientific journal. At least one author of each accepted paper will be expected to attend the conference and present the paper onsite.\n\nOnly electronic submissions via Easychair will be allowed. [Click here](https://easychair.org/conferences/?conf=walcom2025) to submit.\n\n## Important Dates\n\n*   **Submission:** September 22, 2024, 23:59 AoE\n*   **Notification:** November 8, 2024 AoE\n*   **Camera-ready:** November 20, 2024 AoE\n*   **Conference:** February 28 - March 2, 2025\n\n**AoE: Anywhere on Earth time, UTC -12 hours**\n\n## Publication\n\nThe proceedings of the conference will be published by Springer-Verlag in the Lecture Notes in Computer Science (LNCS) series, and will be available for distribution at the conference. Selected high-quality papers will be invited for submission to Information and Computation, Theoretical Computer Science, and Journal of Combinatorial Optimization."
+}
+

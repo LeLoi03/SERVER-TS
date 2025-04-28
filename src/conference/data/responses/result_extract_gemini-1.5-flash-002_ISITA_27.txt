@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "November 10 - 13, 2024",
+  "Year": "2024",
+  "Location": "National Taiwan University of Science and Technology, Taipei, TAIWAN",
+  "City-State-Province": "Taipei",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "May 7, 2024",
+    "Submission Deadline": "August 14, 2024"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "July 31, 2024",
+    "Acceptance Notification": "August 21, 2024"
+  },
+  "Camera-ready Date": {
+    "Final Paper Submission Deadline (for accepted papers)": "August 28, 2024"
+  },
+  "Topics": "Information Theory, Boolean Functions and Sequences, Information Inequalities, Coding for Storage, Integrated Circuit Design for Information Theory, Coding Theory, Multimedia Processing, Communication Theory, Network Coding and Information Theory, Computation and Complexity in Information Theory, Pattern Recognition and Machine Learning, Cryptography and Information-Theoretic Security, Quantum Information and Coding Theory, Data Privacy and Security, Deep Learning in Information Theory, Signal Processing, Distributed Coding and Computation, Estimation and Detection, Formalization of Information Theory, Group Testing, Information Hiding, Information Theory for Biology, Information Geometry, Shannon Theory, Source Coding and Data Compression, Sparsity and Compressed Sensing, Statistical Inference and Learning, Statistical Physics for Information Theory, Wireless Communications",
+  "Summary": "The International Symposium on Information Theory and Its Applications (ISITA) is a leading conference on information theory. ISITA 2024 was held on November 10–13 at National Taiwan University of Science and Technology (Taiwan Tech), Taipei, TAIWAN.  The conference creates a setting for international exchange to provide a place for individuals, especially young researchers including students, to know the joy of research, and to share new results in information theory and its applications with the world.",
+  "Call for Papers": "# ISITA 2024: Call for Papers\n\nThe International Symposium on Information Theory and Its Applications (ISITA) is a leading conference on information theory. ISITA 2024 was held from **November 10–13, 2024**, at the **National Taiwan University of Science and Technology (Taiwan Tech), Taipei, TAIWAN**.\n\n## Topics of Interest\n\nInterested authors were invited to submit papers describing novel and previously unpublished results on topics in information theory and its applications, including, but not limited to:\n\n*   Boolean Functions and Sequences\n*   Information Inequalities\n*   Coding for Storage\n*   Integrated Circuit Design for Information Theory\n*   Coding Theory\n*   Multimedia Processing\n*   Communication Theory\n*   Network Coding and Information Theory\n*   Computation and Complexity in Information Theory\n*   Pattern Recognition and Machine Learning\n*   Cryptography and Information-Theoretic Security\n*   Quantum Information and Coding Theory\n*   Data Privacy and Security\n*   Deep Learning in Information Theory\n*   Signal Processing\n*   Distributed Coding and Computation\n*   Estimation and Detection\n*   Formalization of Information Theory\n*   Group Testing\n*   Information Hiding\n*   Information Theory for Biology\n*   Information Geometry\n*   Shannon Theory\n*   Source Coding and Data Compression\n*   Sparsity and Compressed Sensing\n*   Statistical Inference and Learning\n*   Statistical Physics for Information Theory\n*   Wireless Communications\n\n## Important Dates\n\n*   **Paper Submission Deadline:** May 7, 2024\n*   **Acceptance Notification:** July 31, 2024\n*   **Final Paper Submission Deadline (for accepted papers):** August 28, 2024\n\n## Recent Results Posters\n\nSubmissions for the poster session were also welcome.  Please check [Recent Results Posters](https://isita.ieice.org/2024/recentresultsposters/) for details.\n\n*   **Submission Deadline:** August 14, 2024, 23:59, AoE\n*   **Acceptance Notification:** August 21, 2024"
+}
+

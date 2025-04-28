@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "August 28 - 30, 2025",
+  "Year": "2025",
+  "Location": "Shenyang, China",
+  "City-State-Province": "Shenyang",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "The 1st round of full paper submissions is due on": "March 2, 2025",
+    "The 2nd round follows with full paper submissions on": "May 4, 2025",
+    "Industry Papers and Demo Papers have full paper submissions due on": "May 11, 2025"
+  },
+  "Notification Date": {
+    "acceptance notifications by": "April 21, 2025",
+    "acceptance notifications by": "June 23, 2025",
+    "acceptance notifications by": "June 23, 2025"
+  },
+  "Camera-ready Date": {
+    "camera-ready versions required by": "May 4, 2025",
+    "camera-ready versions by": "July 6, 2025",
+    "camera-ready versions also due by": "July 6, 2025"
+  },
+  "Topics": "Web technologies, Data management, Web-based systems, Semantic web, Web mining, Social networks, Database systems, Big data, Data mining, Information retrieval, Artificial intelligence, Machine learning, Cloud computing, Distributed systems, Security and privacy",
+  "Publisher": "Springer",
+  "Summary": "The 9th APWeb-WAIM joint International Conference on Web and Big Data (APWeb-WAIM 2025) will be held in Shenyang, China, from August 28-30, 2025.  The conference merges APWeb and WAIM, providing a platform for researchers, practitioners, and industry professionals to exchange ideas and present research on web technologies, data management, and related areas.  The proceedings will be published by Springer.",
+  "Call for Papers": "No call for papers available"
+}
+```

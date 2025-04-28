@@ -1,0 +1,35 @@
+```json
+{
+  "Conference dates": "November 26 - 28, 2024",
+  "Year": "2024",
+  "Location": "Amsterdam, Netherlands",
+  "City-State-Province": "Amsterdam",
+  "Country": "Netherlands",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(W&T) Workshops/Tutorials Proposal Deadline": "June 14, 2024",
+    "(CfP) Abstract Submission Deadline": "July 1, 2024",
+    "(CfP) Full Paper Submission Deadline": "July 12, 2024",
+    "(P&D) Poster/Demo Submission Deadline": "September 17, 2024",
+    "(W&T) Workshop Papers Submission Deadline": "September 17, 2024"
+  },
+  "Notification Date": {
+    "(CfP) Notification of Acceptance": "September 10, 2024",
+    "(P&D) Posters/Demos Notification": "October 15, 2024",
+    "(W&T) Workshop Papers Notification": "October 15, 2024"
+  },
+  "Camera-ready Date": {
+    "(CfP) Camera Ready Deadline": "September 24, 2024",
+    "(P&D) Posters/Demos Camera Ready Deadline": "November 20, 2024",
+    "(W&T) Workshop Papers Camera Ready": "November 20, 2024"
+  },
+  "Registration Date": {
+    "Author Registration for Inclusion in Proceedings": "October 1, 2024",
+    "Early Bird Registration": "October 17, 2024"
+  },
+  "Topics": "Knowledge Engineering, Knowledge Management, Semantic Web, Knowledge Discovery, Information Integration, Natural Language Processing, Intelligent Systems, E-business, E-health, Humanities, Cultural Heritage",
+  "Summary": "EKAW (European Knowledge Acquisition Workshop) started in 1987 and became the International Conference on Knowledge Engineering and Knowledge Management in 2000. EKAW-24, the 24th International Conference on Knowledge Engineering and Knowledge Management, will be held in Amsterdam, Netherlands, from November 26-28, 2024.  The conference addresses the pivotal role of knowledge in constructing systems and services for the semantic web, knowledge management, knowledge discovery, information integration, natural language processing, intelligent systems, e-business, e-health, humanities, cultural heritage, and beyond.  This year's special theme is Knowledge in the Age of Language Models (LMs).",
+  "Call for Papers": "# EKAW 2024: Call for Papers\n\nThe 24th International Conference on Knowledge Engineering and Knowledge Management (EKAW-24) will be held in **Amsterdam, Netherlands, from November 26-28, 2024.**\n\n## Special Theme\n\nKnowledge in the Age of Language Models (LMs)\n\n## Topics of Interest\n\n*   Knowledge and (Small/Large) Language Models (LMs)\n*   LM-enhanced ontology and knowledge engineering methodologies and tools\n*   Ontology evaluation via LMs\n*   (Ontological) knowledge memorization in LMs\n*   Knowledge-based techniques for LMs (Retrieval Augmented Generation based approaches, fact-checking, and bias mitigation)\n*   Question answering over knowledge graphs via LMs\n*   Knowledge Engineering and Acquisition\n*   Knowledge Management and Governance\n*   Ethical and Trustworthy Knowledge Engineering\n*   Social and Cognitive Aspects of Knowledge Engineering\n*   Knowledge Discovery\n*   Domain-specific Applications\n\n## Contribution Types\n\nEKAW-24 distinguishes between research, in-use, and position papers.  Each paper type will be subject to its own evaluation criteria:\n\n*   **Research papers:**  These are standard papers presenting a novel method, technique, or analysis with appropriate empirical or other types of evaluation as a proof-of-concept. The main evaluation criteria here will be originality, technical soundness, and validation.\n*   **In-use papers:** These are papers describing knowledge management and engineering applications in real environments. The focus is less on the originality of the approach and more on presenting systems that solve a significant problem while addressing the particular challenges that come with the use of real-world data.\n*   **Position papers:** These are papers describing novel, innovative, and disruptive ideas. Position papers may also comprise an analysis of currently unsolved problems or review these problems from a new perspective to contribute to their better understanding within the research community.\n\n## Important Dates\n\nAll submission deadlines are 23:59:59 AoE.\n\n*   **Workshops/Tutorials Proposal Deadline:** June 14, 2024\n*   **Abstract Submission Deadline:** July 1, 2024\n*   **Full Paper Submission Deadline:** July 12, 2024\n*   **Notification of Acceptance:** September 10, 2024\n*   **Poster/Demo Submission Deadline:** September 17, 2024\n*   **Workshop Papers Submission Deadline:** September 17, 2024\n*   **Camera Ready Deadline:** September 24, 2024\n*   **Author Registration for Inclusion in Proceedings:** October 1, 2024\n*   **Posters/Demos Notification:** October 15, 2024\n*   **Workshop Papers Notification:** October 15, 2024\n*   **Early Bird Registration:** October 17, 2024\n*   **Posters/Demos Camera Ready Deadline:** November 20, 2024\n*   **Workshop Papers Camera Ready:** November 20, 2024\n*   **Conference Days:** November 26-28, 2024\n\n## Submission and Publications\n\nPre-submission of abstracts is a strict requirement. All papers and abstracts have to be submitted electronically via EasyChair: [https://easychair.org/conferences/?conf=ekaw2024](https://easychair.org/conferences/?conf=ekaw2024)\n\nAccepted papers will be published by Springer in an LNAI volume.  Submissions must be in PDF, formatted in the style of LNCS conference proceedings.\n\n*   Research and In-use papers: 15 pages (references excluded)\n*   Position papers: 8 pages (references excluded)\n\n## Large Language Models Policy\n\nPapers that include text generated from a Large Language Model (LLM), such as ChatGPT, are prohibited unless this generated text is presented as a part of the experimental analysis of the article. AI tools may be used to edit and polish authors' work, such as using LLMs for light editing of their text (e.g., automate grammar checks, word autocorrect, and other editing work), but the text \"produced entirely\" by AI is not allowed."
+}
+```

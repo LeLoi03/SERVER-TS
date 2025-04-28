@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "September 15 - 19, 2025",
+  "Year": "2025",
+  "Location": "Sapienza University of Rome, Rome, Italy",
+  "City-State-Province": "Rome, Lazio",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "First round: submission": "February 14, 2025",
+    "Second round: submission": "April 15, 2025"
+  },
+  "Notification Date": {
+    "First round: notification": "March 31, 2025",
+    "Second round: notification": "June 15, 2025"
+  },
+  "Other Date": {
+    "Workshops and Tutorials": "September 15 - 16, 2025",
+    "Main Conference": "September 17 - 19, 2025",
+    "Full Paper Registration": "TBD",
+    "Full Paper Evaluation Notification": "TBD",
+    "Camera Ready Submission": "TBD"
+  },
+  "Topics": "Video Analysis and Understanding, Pattern Recognition and Machine Learning, Deep Learning, Multiview Geometry and 3D Computer Vision, Image Analysis, Detection, and Recognition, Multimedia, Biomedical and Assistive Technology, Digital Forensics and Biometrics, Image Processing for Cultural Heritage, Robot and Vision, Brave New Ideas, AI and science, X-Realities, Embedded Vision",
+  "Publisher": "Springer",
+  "Summary": "ICIAP 2025, the 23rd International Conference on Image Analysis and Processing, will be held at Sapienza University of Rome from September 15-19, 2025.  The conference focuses on computer vision, pattern recognition, and image processing, covering both theoretical and application aspects.",
+  "Call for Papers": "# ICIAP 2025: Call for Papers\n\nICIAP 2025 is the 23rd edition of a series of conferences organized biennially by CVPL, the Italian Member Society of the International Association for Pattern Recognition (IAPR). The conference will take place in **Rome, Italy, from September 15-19, 2025**.\n\n## Topics\n\nThe conference will focus on both traditional and emerging trends in computer vision, pattern recognition, and image processing, addressing both theoretical and practical aspects. Special emphasis will be placed on the following topics:\n\n*   Video Analysis and Understanding\n*   Pattern Recognition and Machine Learning\n*   Deep Learning\n*   Multiview Geometry and 3D Computer Vision\n*   Image Analysis, Detection, and Recognition\n*   Multimedia\n*   Biomedical and Assistive Technology\n*   Digital Forensics and Biometrics\n*   Image Processing for Cultural Heritage\n*   Robot and Vision\n*   Brave New Ideas\n*   AI and science\n*   X-Realities\n*   Embedded Vision\n\n## Submission Instructions\n\nAll submissions will be handled electronically via the conference’s CMT Website at: [https://cmt3.research.microsoft.com/ICIAPconf2025](https://cmt3.research.microsoft.com/ICIAPconf2025)\n\n*   **Template Download:**  [Template Download](Template Download)\n*   **Overleaf Template:** [Overleaf Template](Overleaf Template)\n*   The maximum number of pages is 12 including references.\n*   Papers will be selected through a double-blind review process.\n*   Accepted papers will be included in the ICIAP 2025 Conference Proceedings, published by Springer in the Lecture Notes in Computer Science series (LNCS).\n\n## Additional Author Guidelines\n\n*   Double-blind review\n*   Dual submissions\n*   arXiv preprints\n\n## Important Dates\n\n### First Round\n\n*   **Submission:** February 14, 2025\n*   **Notification to Authors:** March 31, 2025\n\n### Second Round\n\n*   **Submission:** April 15, 2025\n*   **Notification to Authors:** June 15, 2025\n\n### Conference\n\n*   **Main conference:** September 17-19, 2025\n*   **Workshop and Tutorials:** September 15-16, 2025"
+}
+```

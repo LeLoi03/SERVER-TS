@@ -1,0 +1,637 @@
+Conference full name: International Conference on Dublin Core and Metadata Applications (DC)
+
+1. Website of DC_3: https://www.dublincore.org/
+Website information of DC_3:
+
+Dublin CoreOpen menuSpecificationsEventshref="/conferences/" - Annual Conferences
+
+Continuing an unbroken sequence of more than twenty years of
+                DCMI Annual Conferences.
+href="/webinars/" - Webinars & Tutorials
+
+Occasional webinars and online tutorials orgainized by the DCMI.
+href="/conferences/2025/" - DCMI 2025 Conference
+Communityhref="/themes/community/" - DCMI Community
+            
+              DCMI is defined by its community which is responsible for the
+              innovative developments and evolving good practices.
+DCMI Education Committee 
+ The DCMI Education Committee coordinates activities and publications that teach and inform users about current developments and technologies for metadata. 
+ href="/groups/lrmi/" - LRMI Working Group
+
+The LRMI™ Working Group is charged with defining and executing
+              DCMI work on the LRMI family of metadata specifications.
+Application Profiles Working Group 
+ Working Group for a revised framework to support application profiles, a revised abstract model, and core vocabulary of components and constraints. 
+ NewsResourceshref="https://dcpapers.dublincore.org/" - DCPapers
+            
+              The Dublin Core Papers repository is an open access resource for
+              scholarly articles and technical papers.
+href="/blog/" - DCMI Blog
+            
+              Occasional blog posts report on developments in metadata
+              innovation and practice.
+href="/resources/metadata-basics/" - Metadata Basics
+            
+              The DCMI approach to metadata aims at achieving pragmatic
+              interoperability among traditional and newer technologies on the
+              basis of knowledge graph design principles.
+href="/resources/userguide/" - Dublin Core™ User Guide
+
+A basic guide in the use of Dublin Core and other DCMI
+              vocabularies.
+href="/resources/glossary/" - Glossary
+            
+              A guide to terminology used in the DCMI community, past and
+              present, with reflections on how our language for talking about
+              metadata has evolved.
+LRMI Resources 
+ Archived LRMI resources including presentations, reports, and implementations. 
+ About DCMIhref="/about/" - About DCMI
+href="/themes/" - DCMI Themes
+href="/about/history/" - DCMI History
+About LRMI 
+ Organisation 
+ Members 
+ Governance 
+ By-laws 
+ Directorate 
+ Usage Board 
+ Collaborations 
+ Contact 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedClose menuSpecificationsConferencesWebinarsCommunityLearning Resourceshref="/about/" - About DCMI
+ThemesMembersGoverning BoardUsage BoardDirectoratehref="/conferences/2025/" - DCMI 2025 Conference
+BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS Feed2025 October 20thto 25thDCMI2025Barcelona, SpainDCMI 2025, the twenty-third International Conference on Dublin Core and Metadata Applications, will be hosted at the University of Barcelona, Spain, from Wednesday, October 22 to Saturday, October 25. Related events will be held by the Document Society (on Monday, October 20) and the Open Metadata Clinic event (on Tuesday, October 21). 
+ href="/conferences/2025/" - Conference Home
+href="/conferences/2025/" - View conference details
+DCMI Initiatives 
+ href="https://dcpapers.dublincore.org" - 
+href="https://www.dublincore.org/news/2025/03-18_dca-course-bibframe-2/" - 
+News 
+ href="https://www.dublincore.org/news/2025/03-18_dca-course-bibframe-2/" - Dublin Core Academy Announces BIBFRAME Part 2 Course
+
+Dublin Core Academy will offer BIBFRAME Part 2 on May 8, 2025, taught by Greta Heng from San Diego State University. This hands-on module will cover BIBFRAME implementation infrastructure, linked data workflows, and practical experience with BIBFRAME databases and editors. Registration is open with discounted rates for DCMI and ASIST members.
+March 16, 2025 
+ Webinars 
+ href="https://www.dublincore.org/webinars/2024/lgbtq-voices-catalog/" - Centering LGBTQ+ Voices in Catalog Research
+
+Libraries are addressing barriers faced by marginalized communities through improved catalog metadata. The Inclusive Catalog Use Lab (ICUL) focuses on user-based research to understand LGBTQ+ needs. Dr. Karen Snow and Dr. Brian Dobreski will share ICUL’s findings, highlighting user studies, focus groups, and solutions to support inclusive access for diverse communities.
+January 9, 2025 
+ Blog posts 
+ Announcing OpenWEMI 
+ In 1998, the International Federation of Library Associations introduced a new model for library catalog data, focusing on the bibliographic relationships within metadata. This model, known as the Library Reference Model (LRM), includes four main elements: Work, Expression, Manifestation, and Item (WEMI), each representing different aspects of created resources. To support the broader use of these WEMI concepts, OpenWEMI was developed by the Dublin Core Metadata Initiative, providing a general vocabulary with minimal constraints. OpenWEMI’s RDF vocabulary includes classes and properties designed to facilitate the creation of context-specific metadata vocabularies, allowing for the flexible integration of WEMI concepts in diverse applications. 
+ August 2, 2024 
+ Themes 
+ The activities of DCMI, its members and its communities are broadly characterised under four themes. 
+ StewardshipDCMI develops and curates open-standard metadata vocabularies such as the Dublin Core; hosts the Learning Resource Metadata Initiative (LRMI); and provides good-neighbor support for other related metadata activities.CommunityDCMI's international community of metadata practitioners and experts meet in working groups and at an annual conference to share implementation experience and reports on research and new developments.LearningTeachers and experts of metadata technologies from around the world hold tutorials, online meetings, and webinars to discuss and disseminate innovative metadata solutions.DevelopmentSince pioneering the Application Profile in the 1990s, DCMI continues to develop profiles and related vocabularies spanning practical techniques such as spreadsheets and modern technologies such as data shapes.Regional Members 
+ The National Library Board of Singapore 
+ The National Library of Finland 
+ The National Library of Korea 
+ Institutional Members 
+ Brandeis University 
+ Stanford University Libraries 
+ University of Porto 
+ hbz 
+ National Library of Sweden 
+ CEDIA 
+ Göttingen State and University Library 
+ Shanghai Library 
+ Simmons University 
+ The National Library of Portugal 
+ UNESP 
+ University of Edinburgh 
+ ZBW 
+ Footer 
+ DCMI is an organization supporting innovation in metadata design and best practices across the metadata ecology. 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedSpecifications 
+ href="/specifications/dublin-core/dcmi-terms/" - DCMI Metadata Terms 
+ href="/specifications/dublin-core/" - DCMI Specifications 
+ Dublin Core Schemas 
+ LRMI 
+ BIBO 
+ Outreach 
+ Conferences 
+ Webinars 
+ News 
+ href="/blog/" - DCMI Blog 
+ Resources 
+ Organisation 
+ href="/about/" - About DCMI 
+ Themes 
+ href="/themes/community/" - DCMI Community 
+ Members 
+ Governance 
+ Usage Board 
+ Website 
+ Service Status 
+ Privacy 
+ Legal 
+ Contact 
+ Unless indicated otherwise, DCMI documents are licensed under aCreative Commons Attribution 4.0 International License. Please see thehref="/about/copyright/#documentnotice" - DCMI Document Notice
+for further instructions. 
+ Copyright© 1995-2025href="/" - DCMI
+. DCMIliability,trademark/service mark,document use rulesapply. Your interactions with this site are in accordance with ourprivacystatements. 
+ The Dublin Core Metadata Initiative (DCMI) is a project of ASIS&T—a U.S. 501(c)(3) nonprofit under the U.S. Internal Revenue Code. Contributions to DCMI through ASIS&T are tax-deductible to the full extent of the law in the United States. 
+ Deployed withHugov0.145.0on03 Apr 25 13:58 UTC
+
+2. Website of DC_3: https://www.dublincore.org/conferences/
+Website information of DC_3:
+
+Dublin CoreOpen menuhref="https://www.dublincore.org/conferences/2025/" - DCMI-2025 Conference
+SpecificationsEventshref="/conferences/" - Annual Conferences
+
+Continuing an unbroken sequence of more than twenty years of
+                DCMI Annual Conferences.
+href="/webinars/" - Webinars & Tutorials
+
+Occasional webinars and online tutorials orgainized by the DCMI.
+href="/conferences/2025/" - DCMI 2025 Conference
+Communityhref="/themes/community/" - DCMI Community
+            
+              DCMI is defined by its community which is responsible for the
+              innovative developments and evolving good practices.
+DCMI Education Committee 
+ The DCMI Education Committee coordinates activities and publications that teach and inform users about current developments and technologies for metadata. 
+ href="/groups/lrmi/" - LRMI Working Group
+
+The LRMI™ Working Group is charged with defining and executing
+              DCMI work on the LRMI family of metadata specifications.
+Application Profiles Working Group 
+ Working Group for a revised framework to support application profiles, a revised abstract model, and core vocabulary of components and constraints. 
+ NewsResourceshref="https://dcpapers.dublincore.org/" - DCPapers
+            
+              The Dublin Core Papers repository is an open access resource for
+              scholarly articles and technical papers.
+href="/blog/" - DCMI Blog
+            
+              Occasional blog posts report on developments in metadata
+              innovation and practice.
+href="/resources/metadata-basics/" - Metadata Basics
+            
+              The DCMI approach to metadata aims at achieving pragmatic
+              interoperability among traditional and newer technologies on the
+              basis of knowledge graph design principles.
+href="/resources/userguide/" - Dublin Core™ User Guide
+
+A basic guide in the use of Dublin Core and other DCMI
+              vocabularies.
+href="/resources/glossary/" - Glossary
+            
+              A guide to terminology used in the DCMI community, past and
+              present, with reflections on how our language for talking about
+              metadata has evolved.
+LRMI Resources 
+ Archived LRMI resources including presentations, reports, and implementations. 
+ About DCMIhref="/about/" - About DCMI
+href="/themes/" - DCMI Themes
+href="/about/history/" - DCMI History
+About LRMI 
+ Organisation 
+ Members 
+ Governance 
+ By-laws 
+ Directorate 
+ Usage Board 
+ Collaborations 
+ Contact 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedClose menuSpecificationsConferencesWebinarsCommunityLearning Resourceshref="/about/" - About DCMI
+ThemesMembersGoverning BoardUsage BoardDirectoratehref="/conferences/2025/" - DCMI 2025 Conference
+BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedHome 
+ DCMI Annual Conferences 
+ DCMI Annual Conferences 
+ href="https://www.dublincore.org/conferences/2025/" - DCMI 2025 Barcelona
+href="https://www.dublincore.org/conferences/2025/" - 
+ 
+ DCMI 2025 Barcelona will be hosted by University of Barcelona and is scheduled to run from October 20, 2025 to October 25, 2025 
+ href="https://www.dublincore.org/conferences/2024/" - DCMI 2024 Toronto
+ 
+ DCMI 2024 Toronto was hosted by University of Toronto and ran from October 20, 2024 to October 23, 2024 
+ href="https://www.dublincore.org/conferences/2023/" - DCMI 2023 Daegu
+ 
+ DCMI 2023 Daegu was hosted by Kyungpook National University and ran from November 6, 2023 to November 11, 2023 
+ href="https://www.dublincore.org/conferences/2022/" - DCMI 2022
+ 
+ DCMI 2022 was hosted by DCMI and ran from October 3, 2022 to October 7, 2022 
+ href="https://www.dublincore.org/conferences/2021/" - DCMI Virtual 2021
+ 
+ DCMI Virtual 2021 was hosted by DCMI and ran from October 4, 2021 to October 15, 2021 
+ href="https://www.dublincore.org/conferences/2020/" - DCMI Virtual 2020
+ 
+ DCMI Virtual 2020 was hosted by DCMI and ran from September 14, 2020 to September 25, 2020 
+ href="https://www.dublincore.org/conferences/2019/" - DCMI 2019 Seoul
+ 
+ DCMI 2019 Seoul was hosted by National Library of Korea and ran from September 23, 2019 to September 26, 2019 
+ href="https://www.dublincore.org/conferences/2018/" - DC-2018: Porto
+ 
+ DC-2018: Porto was hosted by Faculty of Engineering of the University of Porto (FEUP) and ran from September 10, 2018 to September 13, 2018 
+ href="https://www.dublincore.org/conferences/2017/" - DC-2017: Washington DC
+ 
+ DC-2017: Washington DC ran from October 26, 2017 to October 29, 2017 
+ href="https://www.dublincore.org/conferences/2016/" - DC-2016: Copenhagen
+ 
+ DC-2016: Copenhagen ran from October 13, 2016 to October 16, 2016 
+ href="https://www.dublincore.org/conferences/2015/" - DC-2015: São Paolo
+ 
+ DC-2015: São Paolo was hosted by UNESP and ran from September 1, 2015 to September 4, 2015 
+ href="https://www.dublincore.org/conferences/2014/" - DC-2014: Austin, Texas
+ 
+ DC-2014: Austin, Texas ran from October 8, 2014 to October 11, 2014 
+ href="https://www.dublincore.org/conferences/2013/" - DC-2013: Lisbon
+ 
+ DC-2013: Lisbon was hosted by Engineering School of the Lisbon Technical University and ran from September 2, 2013 to September 6, 2013 
+ href="https://www.dublincore.org/conferences/2012/" - DC-2012: Kuching
+ 
+ DC-2012: Kuching ran from September 3, 2012 to September 7, 2012 
+ href="https://www.dublincore.org/conferences/2011/" - DC-2011: The Hague
+ 
+ DC-2011: The Hague was hosted by National Library of the Netherlands and ran from September 21, 2011 to September 23, 2011 
+ href="https://www.dublincore.org/conferences/2010/" - DC-2010: Pittsburgh
+ 
+ DC-2010: Pittsburgh ran from September 20, 2010 to September 22, 2010 
+ href="https://www.dublincore.org/conferences/2009/" - DC-2009: Seoul
+ 
+ DC-2009: Seoul was hosted by National Library of Korea; Korean Library Association (KLA); National Digital Library and ran from October 12, 2009 to October 16, 2009 
+ href="https://www.dublincore.org/conferences/2008/" - DC-2008: Berlin
+ 
+ DC-2008: Berlin was hosted by Competence Centre Interoperable Metadata (KIM); Max Planck Digital Library; Göttingen State and University Library; The German National Library; Humboldt-Universität zu Berlin and ran from September 22, 2008 to September 26, 2008 
+ href="https://www.dublincore.org/conferences/2007/" - DC-2007: Singapore
+ 
+ DC-2007: Singapore was hosted by National Library Board Singapore; Wee Kim Wee School of Communication and Information of Nanyang Technological University and ran from August 27, 2007 to August 31, 2007 
+ href="https://www.dublincore.org/conferences/2006/" - DC-2006: Manzanillo
+ 
+ DC-2006: Manzanillo ran from August 3, 2006 to August 6, 2006 
+ href="https://www.dublincore.org/conferences/2005/" - DC-2005: Madrid
+ 
+ DC-2005: Madrid was hosted by Universidad Carlos III de Madrid and ran from September 12, 2005 to September 15, 2005 
+ href="https://www.dublincore.org/conferences/2004/" - DC-2004: Shanghai
+ 
+ DC-2004: Shanghai was hosted by Shanghai Library; Library of the Chinese Academy of Sciences; National Science and Technology Library of China and ran from October 10, 2004 to October 14, 2004 
+ href="https://www.dublincore.org/conferences/2003/" - DC-2003: Seattle
+ 
+ DC-2003: Seattle was hosted by Information School of the University of Washington; University of Washington Libraries; Information Institute of Syracuse; Syracuse University and ran from September 28, 2003 to October 2, 2003 
+ href="https://www.dublincore.org/conferences/2002/" - DC-2002: Florence
+ 
+ DC-2002: Florence was hosted by Associazione Italiana Biblioteche; Biblioteca Nazionale Centrale Firenze; Istituto e Museo di Storia della Scienza; Istituto Universitario Europeo; Regione Toscana; Università di Firenze and ran from October 14, 2002 to October 17, 2002 
+ href="https://www.dublincore.org/conferences/2001/" - DC-2001: Tokyo
+ 
+ DC-2001: Tokyo was hosted by National Institute of Informatics (NII); Japan Science and Technology Corporation (JST) and ran from October 22, 2001 to October 26, 2001 
+ Footer 
+ DCMI is an organization supporting innovation in metadata design and best practices across the metadata ecology. 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedSpecifications 
+ href="/specifications/dublin-core/dcmi-terms/" - DCMI Metadata Terms 
+ href="/specifications/dublin-core/" - DCMI Specifications 
+ Dublin Core Schemas 
+ LRMI 
+ BIBO 
+ Outreach 
+ Conferences 
+ Webinars 
+ News 
+ href="/blog/" - DCMI Blog 
+ Resources 
+ Organisation 
+ href="/about/" - About DCMI 
+ Themes 
+ href="/themes/community/" - DCMI Community 
+ Members 
+ Governance 
+ Usage Board 
+ Website 
+ Service Status 
+ Privacy 
+ Legal 
+ Contact 
+ Unless indicated otherwise, DCMI documents are licensed under aCreative Commons Attribution 4.0 International License. Please see thehref="/about/copyright/#documentnotice" - DCMI Document Notice
+for further instructions. 
+ Copyright© 1995-2025href="/" - DCMI
+. DCMIliability,trademark/service mark,document use rulesapply. Your interactions with this site are in accordance with ourprivacystatements. 
+ The Dublin Core Metadata Initiative (DCMI) is a project of ASIS&T—a U.S. 501(c)(3) nonprofit under the U.S. Internal Revenue Code. Contributions to DCMI through ASIS&T are tax-deductible to the full extent of the law in the United States. 
+ Deployed withHugov0.145.0on03 Apr 25 13:58 UTC
+
+3. Website of DC_3: https://nkos.dublincore.org/
+Website information of DC_3:
+
+Networked Knowledge Organization 
+ Systems/Services/Structures 
+ N K O S 
+ Announcement|NKOS Application Profile|KOS Registries and Standards|Related Publications 
+ |NKOS Workshops|Archived early efforts|href="https://nkos.dublincore.org/Metadata-standards.html" - Metadata Standards Updates (2020s)
+NKOS is devoted to the discussion of the functional and data model for enabling knowledge organization systems/services (KOS), such as classification systems, thesauri, gazetteers, and ontologies, as networked interactive information services to support the description and retrieval of diverse information resources through the Internet. 
+ Knowledge Organization Systems/Services (KOS) model the underlying semantic structure of a domain. Embodied as Web-based services, they can facilitate resource discovery and retrieval. They act as semantic road maps and make possible a common orientation by indexers and future users (whether human or machine). -- Douglas Tudhope, Traugott Koch (2004).New Applications of Knowledge Organization Systems: introduction to a special issue.URL: https://nkos.dublincore.org/ [Previous URL: https://nkos.slis.kent.edu] 
+ Last updated: 2025-03-09 
+ Announcement 
+ CFP. | NKOS 2025 will be held in | href="https://tpdl2025.github.io/" - TPDL 2025 | , the 29th International Conference on Theory and Practice of Digital Libraries (TPDL), 23-26 September 2025, Tampere, Finland | href="https://tpdl2025.github.io/" - [https://tpdl2025.github.io/] | href="https://nkos.dublincore.org/2025NKOSworkshop/NKOS2025CFP.html" - CFP for NKOS 2025 | in TPDL 2025 
+ Submission deadline: 4 April 2025 
+ Notification of acceptance: 5 May 2025 
+ CFP for a special issue ofKnowledge Organization | (ISSN 0943-7444), with the theme | "KOS in AI and AI in KOS | ". | Important dates | : | -Opening date for paper submission: 1st November 2024 | -Closing date for paper submission: 31st January 2025 | -Notification of conditional acceptance: 31st March 2025 | -Closing date for revised paper submission: 30th April 2025 | [download the PDF: | href="CFP_KO_SpecialIIsue-KOS_in_AI_and_AI_in_KOS.pdf" - CFP: KO Special Issue: KOS in AI and AI in KOS | ] 
+ NKOS 2024 | has two events. Part 2 was held in | href="https://www.dublincore.org/conferences/2024/" - DCMI 2024 Toronto, | Oct.20-23; Part 1 was held in | ISKO 2024 | , the 18th ISKO Conference, March 20-22, Wuhan, China. The theme of the NKOS 2024 workshops is: | KOS in AI & AI in KOS 
+ href="https://www.emerald.com/insight/publication/issn/0264-0473/vol/41/iss/6" - Recent NKOS Research | , a Special Issue of | The Electronic Library(TEL) | Volume 41 Issue 6, 2023. | Guest editor(s): Joseph Busch, Maureen McClarnon 
+  
+ NKOS Dublin Core Application Profile(NKOS AP) 
+ NKOS Dublin Core Application Profile(version 0.2) 2015 
+ The DCMI/NKOS Task Group targets to develop a Dublin Core Application Profile for KOS resources based on the work the NKOS group members have already done during the last decade. The application profile will be further tested by professionals and researchers. 
+ Task Group official webpage: | http://dublincore.org/groups/nkos/ | Working wiki archive: | href="https://github.com/dcmi/repository/tree/master/wikis_pre2016/nkos/mediawiki" - https://github.com/dcmi/repository/tree/master/wikis_pre2016/nkos/mediawiki 
+ Specifications: 
+ NKOS Dublin Core Application Profile (version 0.2) | Namespace: http://w3id.org/nkos | html: | https://nkos.dublincore.org/nkos-ap.html 
+ RDF/XML: | https://nkos.dublincore.org/nkos.rdf 
+ NKOS Types Vocabulary | html: | https://nkos.dublincore.org/nkos-type.html 
+ RDF/XML: | https://nkos.dublincore.org/nkostype/nkostype.rdf 
+  
+ KOS Registries, Terminology Services, and Standard Development 
+  
+ BARTOC.org | | Basel Register of Thesauri, Ontologies & Classifications, developed by Basel University Library, Switzerland, 2013 -- 
+ Linked Open Vocabularies (LOV) | | Provides a choice of several hundreds of LOD vocabularies, based on quality requirements including URI stability and availability on the Web, use of standard formats and publication best practices, quality metadata and documentation, identifiable and trustable publication body, proper versioning policy. 2011 -- 
+ BioPortal | | the world's most comprehensive repository of biomedical ontologies 
+ *[new] | OntoPortal Alliance | | The ontology repositories include | BioPortal | , the primary and historical source of OntoPortal code, also | AgroPortal | , | EcoPortal | , | MatPortal | , | MedPortal | , | SIFR BioPortal | , | IndustryPortal | , and more... 
+ FINTO | | a Finnish thesaurus and ontology service, which enables both the publication and browsing of vocabularies. | | Wiki | about thesauri and ontology 
+ id.kb.se | | A linked data service maintained by National Library of Sweden. Publishes definitions and concepts coordinated with well-known controlled vocabularies and ontologies. 
+ Heritage Data | | Linked Data Vocabularies for Cultural Heritage 
+ *[new] | Conservation controlled vocabularies | | by Linked Conservation Data consortium 
+ Library of Congress Linked Data Services | – Authorities and Vocabularies 
+ EU Vocabularies | | Access to vocabularies managed by the EU institutions and bodies. This includes controlled vocabularies, schemas, ontologies, data models, etc. 
+ Getty Vocabularies LOD | | Provides multiple Getty vocabularies, (AAT, TGN, and ULAN), with a comprehensive list of query templates and documentation. 
+ Open Metadata Registry | | The Registry provides a means for to identify, declare and publish through registration their metadata schemas (element/property sets), schemes (controlled vocabularies) and Application Profiles (APs). 
+ Standards 
+ ISO 25964.Thesauri and interoperability with other vocabularies. 
+ Part 1: Thesauri for information retrieval (Published December 2011, updating in progress, 2024) 
+ Part 2: Interoperability with other vocabularies (Published March 2013) 
+ Official website for information about ISO 25964 | | | Data Model | | | XML schema | for data exchange | the | ISO 25964 Schema webpage | | a | set of correspondences | between components of the data models of ISO25964, SKOS-XL, and MADS/RDF. 
+ ISO 25964 SKOS extension (iso-thes) | 2015 | http://purl.org/iso25964/skos-thes 
+ Related article: "From ISO 2788 to ISO 25964: the evolution of thesaurus standards towards interoperability and data modeling". | Information Standards Quarterly | , 2012 Winter 24(1):20-26. | PDF | doi: http://dx.doi.org/10.3789/isqv24n1.2012.04 
+ Asset Description Metadata Schema (ADMS) Namespace Document 25 May 2012, W3C | The Asset Description Metadata Schema (ADMS) is a metadata vocabulary to describe semantic interoperability assets (such as data dictionaries, data models, code lists, XML schemas and RDF models) . Full specification: | http://joinup.ec.europa.eu/asset/adms/description | Namespace Doc: | http://www.w3.org/ns/adms 
+ NISO | TR-06-2017, Issues inVocabularyManagement 
+ ANSI/NISO Z39.19 - 2005 (R2010) Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies | . | ISBN: 1-880124-65-3. [pdf] 
+ Related Publications 
+ NKOS (European) Workshops archive (2000 - ) | https://nkos-eu.github.io/ 
+ Knowledge Organization | (ISSN 0943-7444), the official quarterly journal of ISKO ( | International Society for Knowledge Organization | ). | http://www.isko.org/ko.html 
+ Special Issues 
+ Knowledge Organization | href="https://www.nomos-elibrary.de/10.5771/0943-7444-2021-3-195/organizing-controversy-toward-cultural-hospitality-in-controlled-vocabularies-through-semantic-annotation-volume-48-2021-issue-3?page=1" - Special issue: Best papers from NKOS Consolidated Workshop 2020 | Part 1.Knowledge Organization48(3): | 195–230 
+ Part 2.Knowledge Organization48(4): | 267–290 
+ Guest Editors: Joseph Busch and Joe Tennis 
+ Journal of Data and Information Science | (JDIS) on NKOS. Volume 5 Issue 1, 2020. | Guest-Editors: Joseph Busch and Douglas Tudhope. | Online | . Download: | PDF | (288 KB) | Related NKOW Workshop | href="2019NKOSworkshop/NKOS-DCMI2019.html" - presentations | | 
+ International Journal on Digital Libraries. | 2018. 
+ Golub, K., Schmiede, R. & Tudhope, D. (2018). " | Recent applications of Knowledge Organization Systems: Introduction to a special issue | ." | International Journal on Digital Libraries. | doi.org/10.1007/s00799-018-0264-8 
+ International Journal on Digital Libraries. | 2015. | Mayr, P., Tudhope, D., Clarke, S. D., Zeng, M. L., & Lin, X. (2015). | "Recent applications of Knowledge Organization Systems: introduction to a special issue | ." | International Journal on Digital Libraries | . doi:10.1007/s00799-015-0167-x 
+ Journal of Library and Information Science | (JLIS). 2016. | Zeng, M.L. & Chen, S. (2018). | "Knowledge Organization and Cultural Heritage in the Semantic Web – A Review of a Conference and a Special Journal Issue of JLIS | " | Digital Humanities Quarterly | 12(2) 2018. | |The special issue of JLIS 43(2) 2016 is available at: | https://jlis.glis.ntnu.edu.tw/ojs/index.php/jlis/issue/view/89 
+ Knowledge Organization | . 2018. | "What is Knowledge Organization." | Preface and Table-of-Contents | (Kind permission of | Ergon-Verlag | ). | Knowledge Organization | 35(2-3) 2018. 
+ Journal of Digital Information | (JoDI) . 2004. | "New Applications of Knowledge Organization Systems." | (Journal of Digital Information4(4) 2004) | . Editors: Douglas Tudhope and Traugott Koch, available at: | https://journals.tdl.org/jodi/index.php/jodi/issue/view/20 
+ Journal of Digital Information | (JoDI). 2001. | "Networked Knowledge Organization Systems." ( | Journal of Digital Information1(8) 2001 | ), Editor: Traugott Koch, available at: | https://journals.tdl.org/jodi/index.php/jodi/issue/view/8 
+ New Review of Hypermedia and Multimedia | (NRHM). 2006. | "Knowledge Organization Systems and Services." | NRHM 12(1) 2006. | https://www.tandfonline.com/toc/tham20/12/1 | | | TOC | | | Introduction 
+ Proceedings online 
+ The | joint Networked Knowledge Organization Systems (NKOS) Workshop | , TPDL 2018 and DC-2018 | href="http://dcevents.dublincore.org/IntConf/dc-2018/index" - , | Porto, Portugal. | http://ceur-ws.org/Vol-2200/ 
+ The | 17th European NKOS workshop | , 21st September 2017, TPDL2017 Conference, Thessaloniki, Greece. | http://ceur-ws.org/Vol-1937/ 
+ More available at: | NKOS (European) Workshops archive (2000 - ) https://nkos-eu.github.io/ 
+ Other publications 
+ JISC Terminology Registry Scoping Study (TRSS) report. The report is published on JISC's | TRSS | project webpage. | http://www.jisc.ac.uk/media/documents/programmes/sharedservices/trss-report-final.pdf 
+ STERNA (Semantic Web-based Thematic European Reference Network Application) Technology Watch Report (2009-01): | href="http://www.salzburgresearch.at/wp-content/uploads/2010/10/sterna_tech_watch_report_layoutiert_web.pdf" - http://www.salzburgresearch.at/wp-content/uploads/2010/10/sterna_tech_watch_report_layoutiert_web.pdf 
+ JISC state-of-the-art review "Terminology Services and Technologies" (2006): | http://www.ukoln.ac.uk/terminology/JISC-review2006.html 
+ ARIST chapter: | "Semantics and Knowledge Organization" by | Birger Hjørland, Royal School of Library and Information Science, Copenhagen, Denmark. | Annual Review of Information Science and Technology (ARIST) | , Volume 41 (2007) | [pdf] 
+  
+ NKOS Workshops and Special Meetings 
+ Consolidated NKOS Workshops 
+ The | 2021 NKOS Consolidated Workshop | , Sept. | 22 and 23, 2021. 9:00-12:30 EDT. (Virtual) 
+ The | 2020 NKOS Consolidated Workshop | , Sept. 9 and 10, 2020. 9:00-12:30 EDT. (Virtual) 
+ NKOS Workshops atDCMI International Conferences on Dublin Core and Metadata Applications 
+ NKOS 2024 | has two events. One (Part 2) was held in | href="https://www.dublincore.org/conferences/2024/" - DCMI 2024 Toronto, | Oct.20-23. Another one (Part 1) was held in | ISKO 2024 | , the 18th ISKO Conference, March 20-22, Wuhan, China. The theme of the NKOS 2024 workshops is: | KOS in AI & AI in KOS 
+ NKOS 2023 Workshop | at | href="https://www.dublincore.org/conferences/2023/" - DCMI 2023
+, | Daegu, South Korea and Virtual, | Nov. 6, 2023. 
+ NKOS 2022 Workshop | at | href="https://www.dublincore.org/conferences/2022/" - DCMI 2022, | Virtual, October 6-7, 2022 
+ href="2019NKOSworkshop/NKOS-DCMI2019.html" - NKOS 2019 Workshop | at | href="http://dublincore.org/conferences/2019/" - DCMI 2019, | Seoul, South Korea, September 26, 2019 
+ The joint | 18thEuropean NKOSWorkshop | at | TPDL 2018 | and | href="http://dcevents.dublincore.org/IntConf/dc-2018/index" - DC-2018, | Porto, Portugal, September 13, 2018. (Also listed under European NKOS Workshops) 
+ The | href="http://dcevents.dublincore.org/IntConf/index/pages/view/nkosCall" - 11th U.S. NKOS Workshop | . October 28, 2017. as part of | href="https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fdcevents.dublincore.org%2Findex.php%2FIntConf%2Fdc-2017%2FschedConf%2F&data=01%7C01%7Cmzeng%40kent.edu%7Ca9a4c92b1c1741fb7bc408d48b1ab910%7Ce5a06f4a1ec44d018f73e7dd15f26134%7C1&sdata=9jqk%2BnR4ZiBcWaIPnimJZsotPsWvV5YWu4b7ZSjNzWU%3D&reserved=0" - DC-2017 | in Crystal City, VA (Washington, D.C.). [ | href="http://dcevents.dublincore.org/IntConf/index/pages/view/sp17-nkos" - Program | ] [ | href="http://dcevents.dublincore.org/IntConf/dc-2017/schedConf/presentations" - Presentations | ] 
+ The | href="https://nkos-eu.github.io/2016-DC/programme.html" - 16th European NKOS Workshop | at | href="http://dcevents.dublincore.org/IntConf/dc-2016/" - DC-2016 | , October 15, 2016, Copenhagen, Denmark. (Also listed under European NKOS Workshops 
+ NKOS Workshop at | href="http://dc2008.de/" - DC 2008,  Berlin | , Wed., September 24, 2008. The preliminary agenda is on the | preparation wiki | pag 
+ NKOS Special Session at | href="http://dcpapers.dublincore.org/pubs/issue/view/28" - DC-2005 | " | Enhancing the Understanding of Meaning: Practical Applications of Networked Knowledge Organization Systems (NKOS) | " (September 13, 2005). | Program 
+ Metadata Value Spaces, special session at | href="http://dcpapers.dublincore.org/pubs/issue/view/26" - DC2003, | Seattle from Sept. 28 - Oct. 2, 2003. 
+ US NKOS Workshops(held in USA; 1997- 2012, see also above, held at DCMI) 
+ The | 10th NKOS Workshop | , "Semantic Search: Magnet for the Needle in the Search Haystack", a Joint NKOS-CENDI Workshop, December 6, 2012, DOT Media Center, U.S. Department of Transportation, Washington DC. 
+ The | 9th NKOS Workshop | , " | Knowledge Organization Systems: Managing Toward the Future | ", a Joint CENDI/NKOS Workshop, October 22, 2009, The National Agricultural Library, Beltsville, MD. 
+ The | 8th NKOS Workshop | "New Dimensions in Knowledge Organization Systems", a Joint NKOS/CENDI Workshop, September 11, 2008, The World Bank, Washington, DC. 
+ The | 7th NKOS workshop | " | Next Generation Knowledge Organization Systems: Integration Challenges and Strategies | " at | JCDL 2005 | June 10 and 11, Denver. 
+ The | 6th NKOS Workshop | "Building a Meaningful Web: From Traditional Knowledge Organization Systems to New Semantic Tools" at | 2003 Joint Conference on Digital Libraries (JCDL) | , May 31, 2003, Houston, TX. | Workshop summary by Dagobert Soergel (ppt) | was presented at the ECDL02 NKOS Workshop. 
+ The | 5th NKOS Workshop | " | Digital gazetteers Integration into distributed digital library services | " at the 2002 Joint Conference on Digital Libraries, July 18th, Portland, Oregon. | Workshop Summary | (WORD file) 
+ The | 4th NKOS Workshop | " | Classification Crosswalks: Bringing Communities Together | " at the First ACM+IEEE Joint Conference on Digital Libraries (JCDL) on June 28th, 2001 in Roanoke, VA. 
+ The | 3rd NKOS Workshop | at the 2000 ACM Digital Libraries Conference in San Antonio, Wednesday June 7th. 
+ The | 2nd NKOS Workshop | at the 1999 ACM Digital Libraries Conference in Berkeley, Saturday August 14th 
+ NKOS Workshops | at the 1998 and 1997 ACM Digital Libraries Conferences: description of the workshop and notes from the workshop. 
+ href="http://hypermedia.research.southwales.ac.uk/kos/nkos/" - European NKOS Workshops
+(2000 - ) at Githubhttps://nkos-eu.github.io/2022 | - at JCDL, virtual 
+ 2019 | - at TPDL, Oslo, Norway. 
+ 2018 | – at TPDL/DCMI joint conference, Porto, Portugal. | Proceedings 
+ 2017 | – at TPDL, Thessaloniki, Greece. | Proceedings 
+ href="https://nkos-eu.github.io/2016-DC/" - 2016 | – at joint DC/ASIST, Copenhagen, Denmark. 
+ 2015 | – at TPDL, Poznań, Poland. 
+ 2014 | – at joint TPDL & JCDL, London, UK. 
+ 2013 | – at TPDL, Valletta, Malta. 
+ 2012 | – at TPDL, Paphos, Cyprus. 
+ 2011 | – at (renamed) TPDL (Theory and Practice of Digital Libraries), Berlin, Germany. 
+ 2010 | – at ECDL, Glasgow, Scotland. 
+ 2009 | – at ECDL, Corfu, Greece. 
+ href="https://nkos-eu.github.io/2008-DC/" - 2008 | – NKOS Special Session at DCMI 2008, Berlin, Germany 
+ 2008 | – at ECDL, Aarhus, Denmark. 
+ 2007 | – at ECDL, Budapest, Hungary. 
+ 2006 | – at ECDL, Alicante, Spain. 
+ href="https://nkos-eu.github.io/2005-DC/" - 2005 | – NKOS Special Session at DC-2005, Madrid, Spain 
+ 2005 | – at ECDL, Vienna, Austria. 
+ 2004 | – at ECDL, Bath, England. 
+ 2003 | – at ECDL, Trondheim, Norway. 
+ 2002 | – NetLab conference, Lund, Sweden 
+ 2000 | – at ECDL (European Conference on Digital Libraries), Lisbon, Portugal. 
+ ASIS&T Annual Meeting -- NKOS sessions 
+ "If You Build It, Will They Come? – A Discussion of Use Cases and Barriers of Using the Knowledge Organization Systems (KOS) Available as Linked Open Data (LOD)" (abstract) -- Panel presentations at ASIS&T 2015 
+ Marcia Lei Zeng (Kent State University): | New Functions of LOD KOS Beyond “Value Vocabularies” and Barriers in the Current Practices of Using Them | (ppt) 
+ Marjorie Hlava (Access Innovations, Albuquerque): | Implementing Linked Open Data in a Controlled Vocabulary | (ppt) 
+ Joseph A. Busch (Taxonomy Strategies, Washington, DC): | What’s Missing from SKOS, Why is It Missing, and What Should be Done About It? | (ppt) 
+ Olga Buchel (Counting Opinions, Canada): | Improving Usability of Geospatial LOD KOS with Map-based Visualizations | (ppt) 
+ Maja Žumer (University of Ljubljana, Slovenia) moderator 
+ "Knowledge Organization Systems (KOS) as Linked Data Services"(abstract) -- Panel presentations at ASIS&T 2014 
+ Joseph A Busch& Vivian Bliss (Taxonomy Strategies): | Changing from a Hierarchical Classification to a Linked Data Standard: American Physical Society (APS) Taxonomy Case Study | (ppt) 
+ Imma Subirats (FAO of UN) & Marcia Lei Zeng (Kent State University): | Using KOS as the Connectors of Linked Datasets | (ppt) 
+ Marjorie Hlava (Access Innovations): | How about Linked data and triples - making them a reality | (ppt) 
+ "Maximizing the Usage of Value Vocabularies in the Linked Data Ecosystem" (abstract) -- Panel presentations at ASIS&T 2013 
+ Ed O’Neill & Jeff Mixter, (OCLC Research): | (1) The Case for Faceting (2) FAST Linked Data Mechanics | (ppt) 
+ Marcia Lei Zeng (Kent State University) & Maja Zumer (University of Ljubljana): | Managing and Sharing KOS 
+ through Registries and RDFa/microdata Using a Metadata Application Profile | (ppt) 
+ Xia Lin (Drexel University): | Meaningful Concept Displays for KOS-­-based Searching and Browsing 
+ [Joseph A Busch (Taxonomy Strategies)]:: | Evaluating Taxonomies | (recorded ppt) 
+ "href="https://www.researchgate.net/publication/259540174_Panel_Semantic_metadata_as_Linked_Data_building_blocks" - Semantic Metadata as Linked Data Building Blocks
+" (abstract) -- Panel presentations at ASIS&T 2012 
+ Joseph Busch, [Marjorie Hlava], Marcia Zeng and [Gail Hodge] 
+ Joseph Busch: | Semantic Metadata, A Tale of Two Types of Vocabularies | (ppt) 
+ Marcia Lei Zeng:The state of KOS in the Linked Data movement - The publishing, management, and interoperating of KOS for the Semantic Web. (ppt) 
+ "Linked Data --Enabling Standards and Other Approaches" -- Panel presentations at ASIS&T- 2010 
+ Gail Hodge: | Introduction. | (ppt) 
+ Sam Oh: | Linked Data and Identifiers | . (ISO TC46/SC9 (Identification and Description activities updates; the second edition of Web Ontology Language (OWL2)) (ppt) 
+ Jon Phipps: | SKOS: A W3C Recommendation | . (ppt) 
+ Ed Summers: RDFa -- | Linked Data on the Web We Have | . (external link) 
+ Mark Needleman and | Jody DeRidder: NISO I2 (Institutional Identifiers) | (ppt) 
+ Marcia Zeng, Jon Phipps, and Ed Summers: | Introducing W3C Library Linked Data Incubator Group (LLD XG) | (ppt) 
+ "Knowledge Organization: Evaluating Foundation and Function in the Information Ecosystem" -- Panel presentations at ASIS- 2010 
+ Marjorie Hlava: | Introduction to the panel | . (ppt) 
+ Hollie White: Framing NKOS Evaluation: | HIVE’s Approach | . (ppt) 
+ Denise A. D. Bedford: | International Development Thesaurus – Moving Collaboration and Assessment Upstream | (ppt) 
+ Gail Hodge, Information International Associates (IIa): | Evaluating NKOS in the EPA Enterprise: Supporting Real Ecosystems | (ppt) 
+ Web Service-based Applications: Optimizing Indexing, Searching, and Terminology Services, ASIST 2008 (Link to program description). 
+ Rebecca Guenther. | A Registry for controlled vocabularies at the Library of Congress | ( | ppt | ) 
+ Diane Vizine-Goetz. | href="http://www.oclc.org/research/presentations/vizine-goetz/cendi-nkos-isko.ppt" - OCLC Terminology Services beta: Architecture & Standards | ( | href="http://www.oclc.org/research/presentations/vizine-goetz/cendi-nkos-isko.ppt" - link | ) 
+ Dongming Zhang. | Developing a Webservice-based MeSH indexing Tool for Health Science Repository System | ( | ppt | ) 
+ Other NKOS Workshops and Sessions 
+ Metadata Modeling, Deep Image Annotation, and KOS Vocabulary Development for Digital Collections of Cultural Objects | - NKOS Workshop at | ICADL 2018 | , the 20th International Conference on Asia-Pacific Digital Libraries. Nov. 19-22, University of Waikato, Hamilton, New Zealand. 
+ href="2016NKOSworkshop/NKOS-ICADL2016.html" - Metadata Modeling and Knowledge Representation for Research Data | , NKOS/DCMI workshop at | ICADL 2016, the 18th International Conference on Asia-Pacific Digital Libraries. | December 5-9, 2016, University of Tsukuba, Tsukuba, Ibaraki, Japan. 
+ Progress in NKOS, The First NKOS Workshop at ICADL | December 9, 2015, Yonsei University, Seoul, Korea 
+ The Challenge of the Electronic Environment to the Organization of Knowledge | : The Second International Seminar on Subject Access to Information, Helsinki, Finland, 29-30 November 2007 | Program (pdf) with links to abstracts. | http://www.terkko.helsinki.fi/STKS.KV.Ontologia%20Programme.261107.pdf 
+ NKOS Special Meeting at the NetLab conference, April 12, 2002, Lund University, Sweden | Discussion of standard developments regarding the use of thesauri, classification and other KO systems on the net . 
+ Digital Gazetteer Information Exchange (DGIE) workshop, funded by the NSF, October 1999. | http://legacy.alexandria.ucsb.edu/gazetteer/dgie/DGIE_website/DGIE_homepage.htm 
+ International Society for Knowledge Organization (ISKO) conferences 
+ ISKO international conferences | since 1990 
+ ISKO national and regional conferences 
+ Link to a list | of all past, current, and future KO-related events in the world. 
+ ISKO Encyclopedia of Knowledge Organization (IEKO) 
+ International UDC Seminars 
+ International UDC Seminars are biennial conferences devoted to advances in documentary/bibliographic classification research and their application in a networked environment. 
+ href="http://seminar.udcc.org/" - Link to a list | of all UDC Seminars 
+ Archived early efforts 
+ (See alsoNKOS Dublin Core Application Profile) 
+ NKOS Registry 
+ NKOS Draft Registry, Thesaurus Description Attributes 
+ Version 3 NKOS Draft Registry, with Reference Document for Data Elements - Draft, 14 June 2001 
+ Taxonomy of Knowledge Organization Systems 
+ Taxonomy of Knowledge Organization Systems (draft) 
+ Vocabulary Mark-up Language (Voc-ML) 
+ Vocabulary ML: Metacode strawman DTD draft (developed in 2000, superseded by other activities such as SKOS and some of the ISO standards work on terminologies) 
+ Research projectsfor terminlogy services(early pioneers) 
+ href="https://www.oclc.org/research/archive/projects/termservices.html" - OCLC Terminologies Service | (retired November 20,2015) | Provides access to multiple controlled vocabularies 
+ href="https://hypermedia.research.southwales.ac.uk/kos/star/" - STAR | (Semantic Technologies for Archaeological Resources) | Semantic | terminology services 
+ TRSS | (Terminology Registry Scoping Study) | | about (ppt) 
+ NKOS Listserv 
+ The NKOS list is hosted by OCLC. | To send messages FOR DELIVERY TO THE WHOLE LIST, email to: | NKOS-L@oclclists.org | To send your first message, you will need to get a new password: | 1. Go to http://listserv.oclc.org/archives/nkos-l.html . 
+ 2. Request a new password. 
+ 3. From a confirmation email, click the confirmation link to confirm. 
+ 4. Go back to http://listserv.oclc.org/archives/nkos-l.html, choose "Post to the list". 
+ 5. Use the form to compose and send your message. You may attach files. 
+ Archive of NKOS discussion list messages from 6/2001 to 5/2007 was hosted at | href="http://legacy.alexandria.ucsb.edu/research/dla/index.htm" - DLI2 server 
+ All NKOS discussion list messages' archive is now hosted at | OCLC | . | The owner is Inkyung Choichoii@oclc.org 
+  
+ This work is licensed under aCreative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License. 
+ Questions and suggestions should be sent to mzeng at kent dot edu
+
+4. Website of DC_3: https://www.dublincore.org/conferences/2022/
+Website information of DC_3:
+
+Dublin CoreOpen menuhref="https://www.dublincore.org/conferences/2025/" - DCMI-2025 Conference
+SpecificationsEventshref="/conferences/" - Annual Conferences
+
+Continuing an unbroken sequence of more than twenty years of
+                DCMI Annual Conferences.
+href="/webinars/" - Webinars & Tutorials
+
+Occasional webinars and online tutorials orgainized by the DCMI.
+href="/conferences/2025/" - DCMI 2025 Conference
+Communityhref="/themes/community/" - DCMI Community
+            
+              DCMI is defined by its community which is responsible for the
+              innovative developments and evolving good practices.
+DCMI Education Committee 
+ The DCMI Education Committee coordinates activities and publications that teach and inform users about current developments and technologies for metadata. 
+ href="/groups/lrmi/" - LRMI Working Group
+
+The LRMI™ Working Group is charged with defining and executing
+              DCMI work on the LRMI family of metadata specifications.
+Application Profiles Working Group 
+ Working Group for a revised framework to support application profiles, a revised abstract model, and core vocabulary of components and constraints. 
+ NewsResourceshref="https://dcpapers.dublincore.org/" - DCPapers
+            
+              The Dublin Core Papers repository is an open access resource for
+              scholarly articles and technical papers.
+href="/blog/" - DCMI Blog
+            
+              Occasional blog posts report on developments in metadata
+              innovation and practice.
+href="/resources/metadata-basics/" - Metadata Basics
+            
+              The DCMI approach to metadata aims at achieving pragmatic
+              interoperability among traditional and newer technologies on the
+              basis of knowledge graph design principles.
+href="/resources/userguide/" - Dublin Core™ User Guide
+
+A basic guide in the use of Dublin Core and other DCMI
+              vocabularies.
+href="/resources/glossary/" - Glossary
+            
+              A guide to terminology used in the DCMI community, past and
+              present, with reflections on how our language for talking about
+              metadata has evolved.
+LRMI Resources 
+ Archived LRMI resources including presentations, reports, and implementations. 
+ About DCMIhref="/about/" - About DCMI
+href="/themes/" - DCMI Themes
+href="/about/history/" - DCMI History
+About LRMI 
+ Organisation 
+ Members 
+ Governance 
+ By-laws 
+ Directorate 
+ Usage Board 
+ Collaborations 
+ Contact 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedClose menuSpecificationsConferencesWebinarsCommunityLearning Resourceshref="/about/" - About DCMI
+ThemesMembersGoverning BoardUsage BoardDirectoratehref="/conferences/2025/" - DCMI 2025 Conference
+BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS Feedvalue="https://www.dublincore.org/conferences/" - DCMI Annual Conferences
+Home 
+ href="https://www.dublincore.org/conferences/" - DCMI Annual Conferences 
+ DCMI 2022 
+ DCMI 2022 
+ Virtual,2022 October 3rdto October 7thhref="https://conference.dublincore.org/" - Click here to login to DCMI 2022 conference portal
+In 2022, the twentieth International Conference on Dublin Core and Metadata Applications (DCMI 2022) is expanding its scope to the whole spectrum of innovation in metadata design implementation and best practices, with a special focus on challenges and opportunities in a diverse and data-intensive world. 
+ Two years into the pandemic, the changes and rising needs for information justice and equity prompted the metadata community to reexamine how the metadata community address the biases and prejudice existed in the metadata tools and practices. Creating just, equitable representation of data and information resources and entities plays a significant role in promoting diversity and inclusion. These social and cultural changes coupled with the data-intensive, data-dependent, and data-driven environment demand metadata to be innovative, intelligent, interoperable, sharable, and reusable. Metadata as one of the underpinning dimensions for the digital data era has never been more critical than today. Fashionable fields such as linked (open) data, research data, artificial intelligence, machine learning, digital humanities and open science are dependent upon quality metadata to operate and perform effectively. Besides supporting information and data management, discovery, sharing, conservation, and reuse, metadata has become an invaluable source for analytics and knowledge discovery and make information more accessible for diverse communities. The parallel growth of data and metadata offers new challenges and opportunities for the metadata community to rethink and reposition metadata research and practice in order to stay ahead of the next wave of developments in data-driven environments and diverse cultures. 
+ href="/conferences/2022/" - DCMI 2022
+ 
+ Conference Portal 
+ Sessions 
+ Open Sessions 
+ Programme 
+ Organization Committee 
+ Enquiries/Contacthref="https://dcpapers.dublincore.org/issue/dcmi-2022" - Conference Proceedings 
+ Footer 
+ DCMI is an organization supporting innovation in metadata design and best practices across the metadata ecology. 
+ BlueskyTwitterYouTubehref="https://github.com/dcmi" - GitHub
+RSS FeedSpecifications 
+ href="/specifications/dublin-core/dcmi-terms/" - DCMI Metadata Terms 
+ href="/specifications/dublin-core/" - DCMI Specifications 
+ Dublin Core Schemas 
+ LRMI 
+ BIBO 
+ Outreach 
+ Conferences 
+ Webinars 
+ News 
+ href="/blog/" - DCMI Blog 
+ Resources 
+ Organisation 
+ href="/about/" - About DCMI 
+ Themes 
+ href="/themes/community/" - DCMI Community 
+ Members 
+ Governance 
+ Usage Board 
+ Website 
+ Service Status 
+ Privacy 
+ Legal 
+ Contact 
+ Unless indicated otherwise, DCMI documents are licensed under aCreative Commons Attribution 4.0 International License. Please see thehref="/about/copyright/#documentnotice" - DCMI Document Notice
+for further instructions. 
+ Copyright© 1995-2025href="/" - DCMI
+. DCMIliability,trademark/service mark,document use rulesapply. Your interactions with this site are in accordance with ourprivacystatements. 
+ The Dublin Core Metadata Initiative (DCMI) is a project of ASIS&T—a U.S. 501(c)(3) nonprofit under the U.S. Internal Revenue Code. Contributions to DCMI through ASIS&T are tax-deductible to the full extent of the law in the United States. 
+ Deployed withHugov0.145.0on03 Apr 25 13:58 UTC
+

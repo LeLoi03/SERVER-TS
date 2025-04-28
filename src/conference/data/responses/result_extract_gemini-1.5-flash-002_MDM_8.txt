@@ -1,0 +1,38 @@
+output:
+{
+  "Conference dates": "June 2 - 5, 2025",
+  "Year": "2025",
+  "Location": "Irvine, USA",
+  "City-State-Province": "Irvine, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Track Papers) Paper Submission Deadline": "February 12, 2025",
+    "(Industry and Application Track Papers) Paper Submission Deadline": "March 20, 2025",
+    "(Call for Workshop Proposals) Proposal Submission Deadline": "January 17, 2025",
+    "(Demo and Poster Track) Paper Submission Deadline": "March 20, 2025",
+    "(Doctoral Forum Papers) Paper Submission Deadline": "April 7, 2025",
+    "(PhD Dissertation Showcase) Submission Deadline": "March 28, 2025",
+    "(Advanced Seminar Proposals) Submission Deadline": "February 1, 2025"
+  },
+  "Notification Date": {
+    "(Research Track Papers) Notification of Paper Acceptance": "March 10, 2025",
+    "(Industry and Application Track Papers) Notification of Paper Acceptance": "April 10, 2025",
+    "(Call for Workshop Proposals) Notification of Acceptance": "January 20, 2025",
+    "(Demo and Poster Track) Authors Notification": "April 3, 2025",
+    "(Doctoral Forum Papers) Paper Author notification": "April 12, 2025",
+    "(PhD Dissertation Showcase) Notification of Acceptance": "April 10, 2025"
+  },
+  "Camera-ready Date": {
+    "(Research Track Papers) Camera-Ready Deadline": "April 25, 2025",
+    "(Industry and Application Track Papers) Camera-Ready Deadline": "April 25, 2025",
+    "(Demo and Poster Track) Camera-ready Deadline": "April 25, 2025",
+    "(PhD Dissertation Showcase) Camera-Ready Deadline": "April 25, 2025"
+  },
+  "Topics": "Mobile Data Management, Mobile Crowd-Sourcing, Crowd-Sensing, Mobility Simulation, Indexing, Optimization, Query Processing for Moving Objects/Users, Data Management for Internet of Things (IoT) and Sensor Systems, Data Quality, Security, Privacy, Theoretical Foundations of Data-intensive Mobile Computing, Middleware and Tools for Mobile and Pervasive Computing, Stream Processing in Mobile/Sensor Networks, Mobile Cloud Computing, Data Management in the Mobile Cloud, Context-Aware Computing for Intelligent Mobile Services, Edge Computing for Mobility Data, Mobile Recommender Systems, Location-Based Social Networks, Spatio-Temporal Analysis, Mobility-as-a-Service (MaaS) Analytics, Behavioral/Activity Sensing and Analytics, Mobile Data Knowledge Representation, Learned Indexing, Learned Query Optimisation for Mobile Data, Visual Analytics, Responsible AI for Mobile Data, Explainability (XAI), Privacy-Preserving AI, Ethical Use of AI, Fairness, Interpretability, Safety, Federated Learning over Mobile Edge Data Sources, Connected Cars, Intelligent Transportation Systems, Smart Spaces, Routing, Personalized Routing, Eco-Routing, Routing for Electrical Vehicles, Transportation-As-A-Service, Mobility-As-A-Service, Augmented Reality Systems, Data Economy, Incentive Mechanisms, Reputation Systems, Game-theoretic Approaches, Blockchain Technologies, Social Sciences, Digital Twins, Industrial Metaverses",
+  "Publisher": "IEEE",
+  "Summary": "The MDM series of conferences has established itself as a prestigious forum for the exchange of innovative and significant research results in mobile data management. MDM 2025, the 26th IEEE International Conference on Mobile Data Management, will be held in Irvine, USA from June 2nd - June 5th, 2025. The conference focuses on research contributions in data management in mobile, ubiquitous and pervasive computing.",
+  "Call for Papers": "# MDM 2025: Call for Papers\n\nThe 26th IEEE International Conference on Mobile Data Management (MDM 2025) will be held in **Irvine, USA, from June 2nd to June 5th, 2025**.\n\n## Call for Research Track Papers\n\nMDM 2025 seeks submissions of original research contributions in the intersection of mobile computing and data management.\n\n## Topics of Interest\n\nWe welcome papers on topics including, but not limited to:\n\n*   **Mobile Data Management**\n    *   Mobile Crowd-Sourcing and Crowd-Sensing\n    *   Mobility Simulation\n    *   Indexing, Optimization and Query Processing for Moving Objects/Users\n    *   Data Management for Internet of Things (IoT) and Sensor Systems\n    *   Data Quality: Methodologies, Metrics, Algorithms\n    *   Security and Privacy\n*   **Mobile Computing and Systems**\n    *   Theoretical Foundations of Data-intensive Mobile Computing\n    *   Middleware and Tools for Mobile and Pervasive Computing\n    *   Stream Processing in Mobile/Sensor Networks\n    *   Mobile Cloud Computing and Data Management in the Mobile Cloud\n    *   Context-Aware Computing for Intelligent Mobile Services\n    *   Edge Computing for Mobility Data\n    *   Mobile Recommender Systems and Location-Based Social Networks\n*   **Machine Learning and Analytics for Mobile Data**\n    *   Spatio-Temporal Analysis\n    *   Mobility-as-a-Service (MaaS) Analytics\n    *   Behavioral/Activity Sensing and Analytics\n    *   Mobile Data Knowledge Representation\n    *   Learned Indexing, Learned Query Optimisation for Mobile Data\n    *   Visual Analytics\n    *   Responsible AI for Mobile Data: Explainability (XAI), Privacy-Preserving AI, Ethical Use of AI, Fairness, Interpretability, Safety\n    *   Federated Learning over Mobile Edge Data Sources\n*   **Applications and Emerging Technologies**\n    *   Connected Cars, Intelligent Transportation Systems, Smart Spaces\n    *   Routing, Personalized Routing, Eco-Routing, Routing for Electrical Vehicles\n    *   Transportation-As-A-Service, Mobility-As-A-Service\n    *   Augmented Reality Systems\n    *   Data Economy, Incentive Mechanisms, Reputation Systems, and Game-theoretic Approaches\n    *   Connections to other Technologies (e.g., Blockchain) and Domains (e.g., Social Sciences)\n    *   Digital Twins and Industrial Metaverses\n\n## Submission Guidelines\n\nPlease use the following URL for paper submissions:\n\n[https://cmt3.research.microsoft.com/MDM2025](https://cmt3.research.microsoft.com/MDM2025)\n\nAll submissions need to follow IEEE Computer Society Proceedings Manuscript Formatting Guidelines. See templates here: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html).\n\n*   **Regular Papers:** 10 pages, including all figures, tables, and appendices.\n*   **Short Papers:** 6 pages, including all figures, tables, and appendices.\n\n**Notes:**\n\n*   References do not count towards the page limit.\n*   Papers exceeding the page limit may be rejected without review.\n*   Submission of a meaningful abstract by the abstract deadline is a precondition for paper submission.\n*   The Review Process will be single-blind.\n\n## Important Dates\n\nAll deadlines are at 23:59 AoE (Anywhere on Earth) Time Zone.\n\n*   **Paper Submission Deadline:** February 12, 2025\n*   **Notification of Paper Acceptance:** March 10, 2025\n*   **Camera-Ready Deadline:** April 25, 2025\n\n## Proceedings\n\nThe proceedings of MDM 2025 will be published by IEEE via CPS ([https://www.computer.org/conferences/cps](https://www.computer.org/conferences/cps)) and will be included in the IEEE Xplore® Digital Library. Selected best papers from MDM 2025 will be invited to submit to a high-ranked Journal (Journal details will be published shortly)."
+}
+

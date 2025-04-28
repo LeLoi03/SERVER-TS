@@ -1,0 +1,150 @@
+Conference ISAIM:
+
+ISAIM 2024 
+ International Symposium on Artificial Intelligence and Mathematics 
+ Fort Lauderdale, FL. January 8–10, 2024 
+ Main Pages 
+ href="index.html" - ISAIM Home 
+ IWCIA Home 
+ href="JMM-ISAIM2025.html" - ISAIM 35th Anniver-sary @ JMM 2025 
+ News 
+ Keynote Speakers 
+ Special Sessions 
+ href="cfps.html" - Call for Papers 
+ href="" - Paper Submissions | href="submissions.html" - Submit to ISAIM 
+ href="submissions_iwcia.html" - Submit to IWCIA 
+ Registration 
+ href="papers.html" - Accepted Papers 
+ Program 
+ Venue and Travel 
+ href="dates.html" - Important Dates 
+ Organization 
+ Committees 
+ Previous Meetings 
+ Sponsors 
+ Contact Us 
+ ISAIM 2024 
+ The International Symposium on Artificial Intelligence and Mathematics is a biennial meeting that fosters interactions between mathematics, theoretical computer science, and artificial intelligence. The series was started by Martin Golumbic, Peter L. Hammer and Frederick Hoffman in 1990, and the editorial board of the Annals of Mathematics and Artificial Intelligence serves as the permanent Advisory Committee. Traditionally, the Symposium attracts participants from a variety of disciplines, thereby providing a unique forum for scientific exchange. The three-day symposium includes invited speakers, presentations of technical papers, and special topic sessions. 
+ If you have a question about ISAIM 2024, please email athref="mailto:isaim-l@lists.ou.edu" - isaim-l@lists.ou.edu
+. Please note that due to retiring a mail server at the University of Oklahoma this fall, we had to change the initial email address isaim2024@cs.ou.edu that could be used for contacting the organizers, to this new email address, which is now an actual mailing list, hosted at a separate server. Our apologies for the inconvenience. 
+ Join thehref="http://groups.google.com/group/isaim" - Google group of ISAIM
+to receive major annoucements from the organizers of the symposium. 
+ ISAIM will be collocated with IWCIA 
+ ISAIM 2024 will be collocated with the International Workshop on Combinatorial Image Analysis (IWCIA'24). For more information on IWCIA'24, please see the webpage dedicated to this event that is available through the menu on the left under the nameIWCIA Home. 
+ Rooms for Sessions 
+ The sessions will be in theGrande ViewandHarbor Lightsrooms. 
+ PAPER SUBMISSION 
+ Please selecthref="submissions.html" - Paper Submissions
+from the sidebar for instructions on how to submit a paper to ISAIM. 
+ Deadline Extension 
+ The deadline for submitting papers to ISAIM has been extended toOctober 17 (11:59PM PDT). 
+ REGISTRATION 
+ Registration is now open. Please selectRegistrationfrom the sidebar for further information. 
+ IMPORTANT:Hotel Deadlineat Conference Discounted Ratehas been extended to December 26, 2023. Please see underVenue and Travelwebpage in order to make your reservation in a timely manner.ISAIM KEYNOTE SPEAKERS 
+ Keynote speakers will be listed here as they are confirmed. 
+  
+ Edith Elkind | University of Oxford 
+ Susan Schneider | Florida Atlantic University 
+ Geoff Sutcliffe | University of Miami 
+ For more information on the titles and summaries of the planned talks by the keynote speakers please have a look under theKeynote Speakerspage that is accessible from the menu on the left. 
+ ISAIM ORGANIZING COMMITTEE 
+  
+ General Chair | Martin Charles Golumbic | University of Haifa 
+ Conference Chair | Frederick Hoffman | Florida Atlantic University 
+ Program Co-Chair | Claudio Gentille | Google Research, New York 
+ Program Co-Chair | Aldo Pacchiano | Boston University 
+ Local Organizer | Maria Provost | Florida Atlantic University 
+ Publications & Publicity Chair | Dimitrios I. Diochnos | University of Oklahoma 
+ ISAIM SPECIAL SESSION CHAIRS 
+ Requests for organizing additional special sessions can be made until Nov. 1, 2023 by contacting Martin Golumbic <golumbic@gmail.com>. 
+  
+ Boolean and pseudo-Boolean Functions 
+ Endre Boros | Rutgers University 
+ Yves Crama | University of Liège 
+ Alternative Models for Fairness in AI 
+ John Hooker | Carnegie Mellon University 
+ Tae Wan Kim | Carnegie Mellon University 
+ Derek Leben | Carnegie Mellon University 
+ Deep Reinforcement Learning: Bridging Theory and Practice 
+ Abhishek Gupta | University of Washington 
+ Zhaoran Wang | Northwestern University 
+ IWCIA ORGANIZING COMMITTEE 
+  
+ Program Co-Chair | Reneta Barneva | State University of New York, Fredonia 
+ Program Co-Chair | Valentin E. Brimkov | State University of New York, Buffalo State University 
+ Local Organizer | Frederick Hoffman | Florida Atlantic University 
+ Local Organizer | Maria Provost | Florida Atlantic University 
+ Webmaster | Dimitrios I. Diochnos | University of Oklahoma 
+
+Call for Papers information:
+ISAIM 2024 
+ International Symposium on Artificial Intelligence and Mathematics 
+ Fort Lauderdale, FL. January 8–10, 2024 
+ Main Pages 
+ href="index.html" - ISAIM Home 
+ IWCIA Home 
+ href="JMM-ISAIM2025.html" - ISAIM 35th Anniver-sary @ JMM 2025 
+ News 
+ Keynote Speakers 
+ Special Sessions 
+ href="cfps.html" - Call for Papers 
+ href="" - Paper Submissions | href="submissions.html" - Submit to ISAIM 
+ href="submissions_iwcia.html" - Submit to IWCIA 
+ Registration 
+ href="papers.html" - Accepted Papers 
+ Program 
+ Venue and Travel 
+ href="dates.html" - Important Dates 
+ Organization 
+ Committees 
+ Previous Meetings 
+ Sponsors 
+ Contact Us 
+ Call for Papers 
+ ABOUT THE SYMPOSIUM 
+ The International Symposium on Artificial Intelligence and Mathematics (ISAIM) is a biennial meeting that fosters interactions between mathematics, theoretical computer science, and artificial intelligence (AI). This is the eighteenth Symposium in the series, which is sponsored byAnnals of Mathematics and Artificial Intelligence. 
+ We seek submissions of recent results with a particular emphasis on the foundations of AI and mathematical methods used in AI. Papers describing applications are also encouraged, but the focus should be on principled lessons learned from the development of the application. Traditionally, the Symposium attracts participants from a variety of disciplines, thereby providing a unique forum for scientific exchange. The three-day Symposium includes invited speakers, presentations of technical papers, and special topic sessions. 
+ Work that will have been published as of January 2024 should not be submitted to ISAIM unless it introduces a significant addition to the previously published work. However, the ISAIM web site proceedings are not archival, so papers submitted to ISAIM can be under review elsewhere at the time of submission and can be submitted elsewhere after ISAIM. 
+ Authors of a selected set of papers from the Symposium will be invited to submit full versions of their papers for inclusion in an archival special volume of theAnnals of Mathematics and Artificial Intelligence, published by Springer. Those invited submissions will be subject to refereeing at the usual standards of the journal, and authors will receive more details with the acceptance notice. Papers must of course be new and unpublished to be considered for the special volume. 
+ PAPER SUBMISSIONS 
+ Please selecthref="submissions.html" - Paper Submissions
+from the sidebar for instructions on how to submit a paper. 
+ Any questions regarding paper submissions should be sent to the Program Committee Chairs (Claudio Gentille and Aldo Pacchiano) atthe email addresshref="mailto:isaim-l@lists.ou.edu" - isaim-l@lists.ou.edu
+.IMPORTANT DATES 
+  
+ Paper submission | October 17 (extended from Oct 9), 2023 (11:59 PM PDT) 
+ Notification | November 15 (extended from Nov 8), 2023 (11:59 PM PDT) 
+ Final papers due | November 29, 2023 (11:59 PM PDT) 
+ Workshop | January 8-10, 2024, Ft. Lauderdale, Florida 
+
+Important Dates information:
+ISAIM 2024 
+ International Symposium on Artificial Intelligence and Mathematics 
+ Fort Lauderdale, FL. January 8–10, 2024 
+ Main Pages 
+ href="index.html" - ISAIM Home 
+ IWCIA Home 
+ href="JMM-ISAIM2025.html" - ISAIM 35th Anniver-sary @ JMM 2025 
+ News 
+ Keynote Speakers 
+ Special Sessions 
+ href="cfps.html" - Call for Papers 
+ href="" - Paper Submissions | href="submissions.html" - Submit to ISAIM 
+ href="submissions_iwcia.html" - Submit to IWCIA 
+ Registration 
+ href="papers.html" - Accepted Papers 
+ Program 
+ Venue and Travel 
+ href="dates.html" - Important Dates 
+ Organization 
+ Committees 
+ Previous Meetings 
+ Sponsors 
+ Contact Us 
+ Important Dates 
+ The Chairs of the special sessions are responsible for the internal deadlines regarding the papers that will be submitted to their sessions. 
+  
+ Paper submission | October 17 (extended from Oct 9), 2023 (11:59 PM PDT) 
+ Notification | November 15 (extended from Nov 8), 2023 (11:59 PM PDT) 
+ Final papers due | November 29, 2023 (11:59 PM PDT) 
+ Workshop | January 8-10, 2024, Ft. Lauderdale, Florida

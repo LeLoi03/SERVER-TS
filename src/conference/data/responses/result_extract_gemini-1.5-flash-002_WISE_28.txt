@@ -1,0 +1,17 @@
+output:
+{
+  "Conference dates": null,
+  "Year": null,
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": null,
+  "Submission Date": null,
+  "Notification Date": null,
+  "Camera-ready Date": null,
+  "Topics": "Web technologies, methodologies, and applications, big data techniques and applications, blockchain technologies, cloud computing, deep/hidden web, future internet architectures and protocols, human factors and social issues, integration of web and internet connected objects, linked open data, machine learning for the web, mobile web, peer-computing, search, text and media extraction, clustering and classification of the web, semantic web, social networks computing, social web and applications, social web models, analysis and mining, visualization for the web and rich web UI, web agents and web intelligence, web-based applications, web-based business processes and web services, web-based enterprise systems, web data integration and mashups, web data models, web engineering, metrics and performance, web information retrieval, web mining and web warehousing, web privacy management, web security and trust management, web tools and languages",
+  "Summary": "The WISE conference series on Web Information Systems Engineering provides an International forum for researchers, professionals, and industrial practitioners to share their knowledge and insights in the rapidly growing area of Web technologies, methodologies, and applications.",
+  "Call for Papers": "No call for papers available"
+}
+

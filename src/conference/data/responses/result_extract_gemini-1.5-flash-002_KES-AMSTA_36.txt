@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "June 25 - 27, 2025",
+  "Year": "2025",
+  "Location": "Not specified",
+  "Type": "Offline",
+  "Submission Date": {
+    "(General Track Papers) Submission of Papers": "February 24, 2025",
+    "(Invited Session and Workshops) Proposals deadline for Invited Sessions/Workshops": "December 31, 2024",
+    "(Late Papers and Abstracts) Submission of Papers": "May 1, 2025"
+  },
+  "Notification Date": {
+    "(General Track Papers) Notification of Acceptance": "March 15, 2025",
+    "(Invited Session and Workshops) Notification of Acceptance": "Session Chair Sets Deadlines",
+    "(Late Papers and Abstracts) Notification of Acceptance": "May 15, 2025"
+  },
+  "Camera-ready Date": {
+    "(General Track Papers) Upload Final Publication Files": "March 25, 2025",
+    "(Invited Session and Workshops) Upload of Final Publication Files": "March 25, 2025",
+    "(Late Papers and Abstracts) Upload of Final Publication Files": "June 1, 2025",
+    "Authors Registration Deadline": "March 25, 2025",
+    "Early Registration Deadline": "March 25, 2025"
+  },
+  "Topics": "Agent and Multi-agent systems, Intelligent systems, Social networks, Self-organisation, Trust",
+  "Publisher": "Springer",
+  "Summary": "KES-AMSTA-25 is an international scientific conference for research in the field of agent and multi-agent systems.  The conference will take place as part of the Smart Digital Futures 2025 multi-theme conference.  The Full Papers conference proceedings will be published by Springer as book chapters in a volume of the KES Smart Innovation Systems and Technologies series.",
+  "Call for Papers": "# KES-AMSTA 2025: Call for Papers\n\nThe 19th International KES Conference, KES-AMSTA-25, is an international scientific conference for research in the field of agent and multi-agent systems.  It will take place as part of the Smart Digital Futures 2025 multi-theme conference from **June 25-27, 2025**.\n\n## Conference Proceedings\n\nThe Full Papers conference proceedings will be published by Springer as book chapters in a volume of the KES Smart Innovation Systems and Technologies series, submitted for indexing in Scopus and Thomson-Reuters Conference Proceedings Citation Index (CPCI) and the Web of Science. (The Short Papers and Abstracts conference proceedings will be published online and will not appear in the Springer volume).\n\n## Submission Guidelines\n\nPapers are invited for the conference on topics lying within the scope of the conference. All contributions must be of high quality, original, should not have been published elsewhere, and should not be intended for publication elsewhere during the review period or time of the conference.\n\n### Proceedings Papers\n\nPapers submitted for the conference proceedings must be formatted according to the instructions which can be found on the Springer website ([https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines](https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines)). All papers should comply with a guide length of 10 pages in publisher format. Papers longer than this will be subject to an additional charge for each extra page. Submissions must be in PDF format for review purposes, but authors are required to upload editable word-processor files (LaTeX or MS Word) at the end of the review process. Submissions must be submitted in PDF form through the EasyChair online submission and review system ([easychair.php](easychair.php)).\n\n### Abstracts and Late Papers\n\nAuthors may choose to submit just an abstract of 1-2 pages and make a presentation of their work, but without providing a full or short paper. Full or short papers submitted too late to be included in the Springer proceedings may also be published under this category. Abstracts and late papers will be published in the online journal 'Advances in Smart Systems Research (ISSN:2050-8662)', but they will NOT be included in the Springer Proceedings.\n\n### Submission Conditions\n\nAll submissions must be presented by one of the authors who must register for the conference and pay the fee. Authors who submit multiple papers will be required to pay a separate fee for each. By submitting a paper for the conference you undertake that you will attend the conference, pay the fee and present the paper if it is accepted. By submitting a paper you also indicate that you accept the KES Terms and Conditions, available by request or on the conference web site, and that you agree to abide by them.\n\n## Important Dates & Deadlines\n\n### General Track and Invited Sessions (Springer Proceedings Papers)\n\n*   **General Track Papers**\n    *   Submission of Papers: February 24, 2025\n    *   Notification of Acceptance: March 15, 2025\n    *   Upload Final Publication Files: March 25, 2025\n*   **Invited Session and Workshops**\n    *   Proposals deadline for Invited Sessions/Workshops: December 31, 2024\n    *   Submission of Papers: Session Chair Sets Deadlines - see individual template\n    *   Notification of Acceptance: Session Chair Sets Deadlines - see individual template\n    *   Upload of Final Publication Files: March 25, 2025\n\n### Late Papers and Abstracts (Not Springer Proceedings Papers)\n\n*   Submission of Papers: May 1, 2025\n*   Notification of Acceptance: May 15, 2025\n*   Upload of Final Publication Files: June 1, 2025\n\n### Conference\n\n*   Conference Sessions: June 25, 26, 27, 2025\n*   Conference Gala Dinner: TBA\n*   Social Trip: TBA"
+}
+

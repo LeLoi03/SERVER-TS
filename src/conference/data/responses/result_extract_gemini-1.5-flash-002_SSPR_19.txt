@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "September 9 - 10, 2024",
+  "Year": "2024",
+  "Location": "Venice, Italy",
+  "City-State-Province": "Venice",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission (extended)": "July 7, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "July 22, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready (post conference)": "TBC"
+  },
+  "Topics": "Statistical Pattern Recognition, Structural Pattern Recognition, Syntactic Pattern Recognition, Classification, Prediction, Gaussian Processes, Randomized Algorithms, Multiple Classifiers, Ensemble Methods, Model Selection, Feature Selection, Dimensionality Reduction, Dissimilarity Representations, Metric Learning, Representation Learning, Multiple Instance Learning, Clustering, Semi Supervised learning, Weakly Supervised Learning, Active Learning, Novelty Detection, Deep Learning, Generative Models, Adversarial Learning, Reinforcement Learning, Transfer Learning, Domain Adaptation, Data Complexity, Data Modeling, Structural Matching, Structural Complexity, Syntactic Pattern Recognition, Graph-theoretic Methods, Graph Neural Networks, Graphical Models, Structural Kernels, Spectral Methods, Spatio-Temporal Pattern Recognition, Structured Text Analysis, Intelligent Sensing Systems, Multimedia Analysis, Multimedia Retrieval, Image Document Analysis, Image Understanding, Shape Analysis",
+  "Publisher": "Springer",
+  "Summary": "S+SSPR 2024 is a joint event organized by Technical Committee 1 (Statistical Pattern Recognition Technique) and Technical Committee 2 (Structural and Syntactical Pattern Recognition) of the International Association of Pattern Recognition (IAPR). The 20th edition of S+SSPR (15th edition of SPR and 20th edition of SSPR) will be hosted by Ca’ Foscari University of Venice from September 9-10, 2024.",
+  "Call for Papers": "# S+SSPR 2024: Call for Papers\n\nThe Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition and Structural and Syntactic Pattern Recognition (S+SSPR 2024) will be held in **Venice, Italy, from September 9-10, 2024**.\n\nThe 20th edition of S+SSPR (15th edition of SPR and 20th edition of SSPR) will be hosted by Ca’ Foscari University of Venice.\n\n## Topics of Interest\n\nAuthors are invited to submit papers addressing any topic in statistical, structural, or syntactic pattern recognition and their applications. Possible topics of interest include, but are not limited to:\n\n### SPR Topics\n\n*   Classification\n*   Prediction\n*   Gaussian Processes\n*   Randomized Algorithms\n*   Multiple Classifiers\n*   Ensemble Methods\n*   Model Selection\n*   Feature Selection\n*   Dimensionality Reduction\n*   Dissimilarity Representations\n*   Metric Learning\n*   Representation Learning\n*   Multiple Instance Learning\n*   Clustering\n*   Semi Supervised learning\n*   Weakly Supervised Learning\n*   Active Learning\n*   Novelty Detection\n*   Deep Learning\n*   Generative Models\n*   Adversarial Learning\n*   Reinforcement Learning\n*   Transfer Learning\n*   Domain Adaptation\n*   Data Complexity\n*   Data Modeling\n\n### SSPR Topics\n\n*   Structural Matching\n*   Structural Complexity\n*   Syntactic Pattern Recognition\n*   Graph-theoretic Methods\n*   Graph Neural Networks\n*   Graphical Models\n*   Structural Kernels\n*   Spectral Methods\n*   Spatio-Temporal Pattern Recognition\n*   Structured Text Analysis\n*   Intelligent Sensing Systems\n*   Multimedia Analysis\n*   Multimedia Retrieval\n*   Image Document Analysis\n*   Image Understanding\n*   Shape Analysis\n\n## Publication\n\nAccepted papers (not exceeding 10 pages) will be published in Springer’s Lecture Notes in Computer Science (LNCS) series, providing that at least one author will register to the workshop and present the paper.\n\n## Important Dates\n\n*   **Paper submission (extended):** July 7, 2024 [UTC+2]\n*   **Notification of acceptance:** July 22, 2024\n*   **Workshop:** September 9-10, 2024\n*   **Camera-ready (post conference):** TBC"
+}
+

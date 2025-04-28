@@ -1,0 +1,208 @@
+Conference Asian Conference on Machine Learning (ACML):
+
+Skip links 
+ Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ Home 
+ About us | href="about.htm" - About ACML 
+ Organizing Committee 
+ Program Committee 
+ News 
+ Registration 
+ href="javascript:void(0);" - Calls | Sponsors 
+ href="papers.htm" - Papers 
+ Award Nominations 
+ Workshops 
+ Tutorials 
+ Program | href="accepted-papers.htm" - Accepted Papers 
+ Conference Schedule 
+ Invited Speakers 
+ Workshops 
+ Tutorials 
+ Venues and Travel | Venues 
+ Visa 
+ Accommodation 
+ Explore Taiwan 
+ Dining Options 
+ Contacts 
+ Toggle menuThe 17th Asian Conference on Machine Learning 
+ ❮❯ABOUTACML 
+ The Asian Conference on Machine Learning (ACML) is an international conference in the area of machine learning. It aims at providing a leading international forum for researchers in Machine Learning and related fields to share their new ideas and achievements. 
+ WHAT IS NEW ABOUTACML2025? 
+ The 17th Asian Conference on Machine Learning (ACML 2025) will take place between December 09-12, 2025, in Taipei, Taiwan. The conference aims to provide a leading international forum for researchers in machine learning and related fields to share their new ideas, progress and achievements. Submissions from regions other than the Asia-Pacific are also highly encouraged. 
+ The conference calls for high-quality, original research papers in the theory and practice of machine learning. The conference also solicits proposals focusing on frontier research, new ideas and paradigms in machine learning. ACML has taken place annually since 2009 in locations throughout the Asia-Pacific region. This is the 17th Conference to be held in Taipei Taiwan, after previous conferences were held in Hanoi, Vietnam (2024), İstanbul, Turkey (2023), Hyderabad, India (2022), virtual mode (2021), Bangkok (converted to virtual mode), Thailand (2020), Nagoya, Japan (2019), Beijing, China (2018), Seoul, Korea (2017), Hamilton, New Zealand (2016), Hong Kong, China (2015), Nha Trang, Vietnam (2014), Canberra, Australia (2013), Singapore (2012), Taoyuan, Taiwan (2011), Tokyo, Japan (2010), and Nanjing, China (2009). 
+ Asian Conference on Machine Learning 
+ Contact Us 
+ Email:href="mailto:acml_2025@googlegroups.com" - acml_2025@googlegroups.com
+Tel:+886 2 2910 1782 
+ Address:Rm. B, 2F, No.157, Sec.1, Beixin Rd., Xindian Dist., New Taipei City 231 
+ Follow Us 
+ href="https://x.com/ACML2024" - 
+ href="https://www.linkedin.com/company/acml2024/posts/?feedView=all" - 
+
+Call for Papers information:
+Skip links 
+ Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ Home 
+ About us | href="about.htm" - About ACML 
+ Organizing Committee 
+ Program Committee 
+ News 
+ Registration 
+ href="javascript:void(0);" - Calls | Sponsors 
+ href="papers.htm" - Papers 
+ Award Nominations 
+ Workshops 
+ Tutorials 
+ Program | href="accepted-papers.htm" - Accepted Papers 
+ Conference Schedule 
+ Invited Speakers 
+ Workshops 
+ Tutorials 
+ Venues and Travel | Venues 
+ Visa 
+ Accommodation 
+ Explore Taiwan 
+ Dining Options 
+ Contacts 
+ Toggle menuToggle MenuCall For | Sponsors 
+ href="papers.htm" - Papers 
+ Award Nominations 
+ Workshops 
+ Tutorials 
+ On this page 
+ href="#submission-instructions" - Submission Instructions | href="#conference-track" - Conference Track 
+ href="#journal-track" - Journal Track 
+ href="#important-dates" - Important Dates | href="#conference-track-dates" - Conference Track Dates 
+ href="#journal-track-dates" - Journal Track Dates 
+ href="#topics" - Topics 
+ Call for Papers 
+ The 17th Asian Conference on Machine Learning (ACML 2025) will take place betweenDecember 9th - 12th, 2025, in Taipei, Taiwan. The conference aims to provide a leading international forum for researchers in machine learning and related fields to share their new ideas, progress, and achievements. 
+ The conference calls for high-quality, original research papers in the theory and practice of machine learning. The conference also solicits proposals focusing on frontier research, new ideas, and paradigms in machine learning. We encourage submissions from all parts of the world, not only confined to the Asia-Pacific region. 
+ Submission Instructionshref="#submission-instructions" - Permalink
+Similar to previous years, ACML 2025 offers two publication tracks: the conference track and the journal track.Please note that at least one author of each accepted paper (for both tracks) must present the paper at the conference. Failure to do so will result in the paper not being published.All deadlines will be at 23:59 AoE (Anywhere on Earth) unless otherwise specified. 
+ New in 2025 
+ To maintain high-quality peer review and support our growing community, each submission to ACML 2025 must nominate at least one author to serve as a reviewer, unless at least one author has served as an area chair. The nominated author should satisfy the below requirement: Published at least one first author paper and published at least one paper (not necessarily the first author) in top venues including but not limited to ICML, NeurIPS, ICLR, ACML, AAAI, CVPR, ECCV, ICCV, ACL, EMNLP, NAACL, or other equivalent venues. Submissions without at least one author serving as a reviewer or area chair will be desk rejected. If your submission cannot nominate any authors that satisfy the above requirement, please email the PCs before 23 June 2023 through the following email: acml_2025_programchairs@googlegroups.com. You need to include the OpenReview submission ID in the email so we can process your information. 
+ Conference Trackhref="#conference-track" - Permalink
+Conference Track: (16-page limit with references) for which the proceedings will be published as a volume of Proceedings of Machine Learning Research Workshop and Conference Proceedings (PMLR). 
+  
+ Submission Deadline: 16 July 2025 
+  
+ For the conference track, please submit your manuscript via OpenReview at: 
+ href="https://openreview.net/group?id=ACML.org/2025/Conference_Track" - https://openreview.net/group?id=ACML.org/2025/Conference_Track
+
+Manuscripts must be written in English, and should follow the Latex submission template and style file herehref="https://www.acml-conf.org/2025/download/acml2025.zip" - ACML2025_submission_template.zip
+with a 16-page limit, including references and appendix. Supplementary materials may be submitted as a separate file, but reviewers are not obliged to consider it. 
+ All conference track submissions must be anonymized for double-blinded review. Submissions that are not anonymized, over-length, or not in the correct format will be rejected without review. To anonymize, simply leave the author information empty in the Tex template. There is no separate format for anonymizing. 
+ It is not appropriate to submit papers that are substantially similar to versions that have been previously published, or accepted for publication, or that have been submitted in parallel to other conferences or journals (including our journal track). However, submission is permitted for papers presented or to be presented at conferences or workshops without proceedings, or with only abstracts published. Also, submission is permitted for papers that are available as a technical report (e.g., in arXiv) as long as it is not cited in the submission. 
+ Journal Trackhref="#journal-track" - Permalink
+Submission Deadline: 30 May 2025 
+ In addition to the conference track, this year’s ACML will run a journal track, similar to previous years.Papers that are accepted to the journal track must be presented at the conference in order to be published. 
+  
+ IMPORTANT: Similar to previous years, for the journal track, the abstract and the papermust be submitted to two different systems simultaneouslyfor the purpose of review management: 
+ 1) First, please submit the title, abstract, and the full manuscript via OpenReview athref="https://openreview.net/group?id=ACML.org/2025/Journal_Track#tab-your-consoles" - ACML 2025 Journal Track | OpenReview
+. 
+  
+ 2) Then, please submit the full manuscript via Springer Nature’s manuscript submission system at:TBD. When creating a new submission on Springer’s Editorial Manager, please make sure to choose “Special Issue for ACML 2025” as the article type. 
+ Failure to submit to both systems will result in desk-reject of the paper. 
+ For the journal track, manuscripts must be written in English with a maximum of 20 pages (including references, appendices, etc.). For the template and style files, please follow the instructions for authors on the journal website:https://www.springer.com/computer/ai/journal/10994. 
+ The journal track will follow the reviewing process of the Machine Learning journal. This includes allowing papers that require minor changes to be resubmitted after a first-round review. The journal track committee will aim to complete the reviewing process in time for this year’s conference. In the unlikely event that the reviewing process for a paper is not completed in time (for this year’s conference), the paper will not be considered for the conference and the review will be completed as a regular submission to the Machine Learning journal. 
+ The journal track review is single-blind, i.e., the authors’ identity will be visible to reviewers. It is not appropriate to submit papers that are substantially similar to versions that have been previously published, or accepted for publication, or that have been submitted in parallel to other conferences or journals. Submissions that are not in the correct format will be rejected without review. In addition, extended versions of published conference papers are not eligible for journal track submission. However, submission is permitted for papers presented or to be presented at conferences or workshops without proceedings, or with only abstracts published. Also, submission is permitted for papers that are available as a technical report (e.g., in arXiv). 
+ Important Dateshref="#important-dates" - Permalink
+Kindly note that all deadlines would be at 23:59 AoE (Anywhere on Earth) unless otherwise specified. 
+ Conference Track Dateshref="#conference-track-dates" - Permalink
+ 
+ Date | Event 
+ 16 June 2025 | Submission deadline 
+ 4 August 2025 | Reviews released to authors 
+ 11 August 2025 | Author rebuttal deadline 
+ 1 September 2025 | Acceptance notification 
+ 22 September 2025 | Camera-ready submission deadline 
+ Journal Track Dateshref="#journal-track-dates" - Permalink
+ 
+ Date | Event 
+ 30 May 2025 | Submission deadline 
+ 3 July 2025 | 1st round review results released to authors (accept, minor revision, or reject) 
+ 31 July 2025 | Revised manuscript submission deadline (for minor revision papers) 
+ 15 August 2025 | 2nd round review results released to authors 
+ 1 September 2025 | Acceptance notification 
+ 22 September 2025 | Conditional Camera-Ready Manuscript Submission Deadline (The manuscript will be published only if the authors present at the conference) 
+ 25 December 2025 | Final Camera-Ready Manuscript Submission Deadline (For manuscripts that were presented at ACML 2025) 
+ Topicshref="#topics" - Permalink
+Topics of interest include but are not limited to: 
+ General machine learning | Active learning 
+ Bayesian machine learning 
+ Clustering 
+ Imitation Learning 
+ Learning to Rank 
+ Meta-Learning 
+ Multi-objective learning 
+ Multiple instance learning 
+ Multi-task learning 
+ Neuro-symbolic methods 
+ Online learning 
+ Optimization 
+ Reinforcement learning 
+ Relational learning 
+ Self-supervised learning 
+ Semi-supervised learning 
+ Structured output learning 
+ Supervised learning 
+ Transfer learning 
+ Unsupervised learning 
+ Weakly-supervised learning 
+ Learning with noisy labels 
+ Other machine learning methodologies 
+ Deep learning | Architectures 
+ Deep reinforcement learning 
+ Generative models 
+ Multi-modality learning 
+ Large-language models and other foundation models 
+ Deep learning theory 
+ Other topics in deep learning 
+ Theory | Bandits 
+ Computational learning theory 
+ Game theory 
+ Optimization 
+ Statistical learning theory 
+ Other theories 
+ Datasets and reproducibility | Implementations, libraries 
+ ML datasets and benchmarks 
+ Other topics in reproducible ML research 
+ Trustworthy machine learning | Accountability, explainability, transparency 
+ Adversarial learning 
+ Causality 
+ Fairness 
+ Privacy 
+ Robustness 
+ AutoML 
+ Other topics in trustworthy ML 
+ Learning in knowledge-intensive systems | Knowledge refinement and theory revision 
+ Multi-strategy learning 
+ Other systems 
+ Applications | Bioinformatics 
+ Biomedical informatics 
+ Climate science 
+ Collaborative filtering 
+ Computer vision 
+ Healthcare 
+ Human activity recognition 
+ Information retrieval 
+ Natural language processing 
+ Social good 
+ Social networks 
+ Web search 
+ ML for science 
+ Other applications 
+ The Journey Track also welcomes overview or position papers. 
+ Asian Conference on Machine Learning 
+ Contact Us 
+ Email:href="mailto:acml_2025@googlegroups.com" - acml_2025@googlegroups.com
+Tel:+886 2 2910 1782 
+ Address:Rm. B, 2F, No.157, Sec.1, Beixin Rd., Xindian Dist., New Taipei City 231 
+ Follow Us 
+ href="https://x.com/ACML2024" - 
+ href="https://www.linkedin.com/company/acml2024/posts/?feedView=all" -

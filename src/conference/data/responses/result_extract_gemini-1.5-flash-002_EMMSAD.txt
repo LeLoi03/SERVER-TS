@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "June 16 - 17, 2025",
+  "Year": "2025",
+  "Location": "Vienna, Austria",
+  "City-State-Province": "Vienna",
+  "Country": "Austria",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submissions (recommended)": "March 13, 2025",
+    "Full paper submissions": "March 18, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "April 14, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready copies": "April 21, 2025"
+  },
+  "Registration Date": {
+    "Author registration": "April 21, 2025"
+  },
+  "Topics": "Modeling Methods for Systems Analysis and Development, Foundations of modeling & method engineering, Enterprise, business process & capability modeling, Information systems & requirements modeling, Domain-specific & knowledge modeling, Evaluation of models & modeling approaches",
+  "Summary": "EMMSAD 2025, the 30th event in the EMMSAD series, is a two-day international working conference on Exploring Modeling Methods for Systems Analysis and Development.  It will be held on June 16-17, 2025, co-located with CAiSE 2025 in Vienna, Austria. The conference aims to provide a forum for researchers and practitioners interested in modeling methods for Systems Analysis and Development.",
+  "Call for Papers": "# EMMSAD 2025: Call for Papers\n\nEMMSAD 2025, the 30th event, is a two-day international working conference on Exploring Modeling Methods for Systems Analysis and Development. The conference will be held on **June 16-17, 2025**, co-located with [CAiSE 2025](https://conferences.big.tuwien.ac.at/caise2025/) in **Vienna, Austria**.\n\nEMMSAD aims to provide a forum for researchers and practitioners interested in modeling methods for Systems Analysis and Development to meet and exchange research ideas and results.\n\n## Tracks\n\nThe focus will be on the development, evaluation, and application of modeling methods for Systems Analysis & Development with 5 major tracks:\n\n*   Foundations of modeling & method engineering\n*   Enterprise, business process & capability modeling\n*   Information systems & requirements modeling\n*   Domain-specific & knowledge modeling\n*   Evaluation of models & modeling approaches\n\n## Awards\n\nThe best paper will receive an award. Furthermore, all candidates for the best paper award will also be invited to submit enhanced versions for consideration in a special issue of Software and System Modelling (SoSyM) journal.\n\n## Important Dates\n\n*   **Abstract submissions (recommended):** March 13, 2025\n*   **Full paper submissions:** March 18, 2025\n*   **Notification of acceptance:** April 14, 2025\n*   **Author registration:** April 21, 2025\n*   **Camera-ready copies:** April 21, 2025\n*   **Conference:** June 16-17, 2025"
+}
+```

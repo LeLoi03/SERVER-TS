@@ -1,0 +1,286 @@
+Conference full name: IEEE Symposium on High-Performance Interconnects (HOTI)
+
+1. Website of HOTI_3: https://hoti.org/
+Website information of HOTI_3:
+
+Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ href="https://twitter.com/ieeehoti" - X (Twitter)
+href="https://www.youtube.com/@IEEEHOTI" - YouTube
+LinkedInhref="https://www.facebook.com/hoti.org" - Facebook
+href="/call-for-papers.html" - Call for Papers
+href="/call-for-tutorials.html" - Call for Tutorials
+HomeSponsorsCommitteesArchiveConference Date 
+ Aug. 20 - 22, 2025 
+ Thank you for 2025 Sponsors! 
+ Diamond 
+ Platinum 
+ Gold 
+ 2025 Conference Theme 
+ Interconnect Software: You can't touch it but you need itThe latest advancements in photonics, chips, parallel paths, and other cutting-edge interconnect technologies are dazzling. However, the picture is incomplete without the system software needed to exploit their full potential. This edition of Hot Interconnects will explore the underlying software ecosystems that empower interconnect fabrics to support a wide array of applications. 
+ Submissionshref="#submissions" - Permalink
+ 
+ Event | Date 
+ Paper abstract deadline | May 9, 2025 
+ Submission deadline | May 23, 2025 
+ Notification of acceptance | June 27, 2025 
+ HotI32 (2025) Overviewhref="#hoti32-2025-overview" - Permalink
+IEEE Hot Interconnects is the premier international forum for researchers and developers of state of the art hardware and software architectures and implementations for interconnection networks of all scales, ranging from multi-core on-chip interconnects to those within systems, clusters, and data centers. Leaders in industry and academia attend the conference to interact with individuals at the forefront of this field. 
+ Our objective is to address the data center networking and the supercomputing communities. We hope you can join us and benefit not only by the content but also by the prime networking opportunities this event always offers. 
+ Last Year’s Proceedings (HotI31 (2024))href="#last-years-proceedings-hoti31-2024" - Permalink
+Available atIEEE here. 
+ © 2025 Hot Interconnects.
+
+2. Website of HOTI_3: https://www.computer.org/csdl/proceedings/hoti/2025/207NQ5A9aoM
+Website information of HOTI_3:
+
+Opens in a new windowOpens an external websiteOpens an external website in a new windowClose this dialogThis website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising.You may change your settings at any time or accept the default settings.You may close this banner to continue with only essential cookies.Privacy PolicyStorage PreferencesTargeted Advertising 
+ Personalization 
+ Analytics 
+ SaveAccept AllReject AllClose Cookie PreferencesJoin Us 
+ Sign In 
+ My Subscriptions 
+ Magazines 
+ Journals 
+ Video Library 
+ Conference Proceedings 
+ Individual CSDL Subscriptions 
+ Institutional CSDL Subscriptions 
+ Resources | Career Center 
+ Tech News 
+ Resource Center 
+ Press Room 
+ Advertising 
+ Librarian Resources 
+ IEEE.org 
+ Help 
+ About Us 
+ Career Center 
+ Cart 
+ Create Account 
+ Sign In 
+ Toggle navigation 
+ My Subscriptions 
+ Browse Content 
+ Resources 
+ Sign up for our newsletter. 
+ EMAIL ADDRESS 
+ IEEE COMPUTER SOCIETY 
+ About Us 
+ Board of Governors 
+ Newsletters 
+ Press Room 
+ IEEE Support Center 
+ Contact Us 
+ DIGITAL LIBRARY 
+ Magazines 
+ Journals 
+ Conference Proceedings 
+ Video Library 
+ COMPUTING RESOURCES 
+ Jobs Board 
+ Courses & Certifications 
+ Webinars 
+ Podcasts 
+ Tech News 
+ Membership 
+ COMMUNITY RESOURCES 
+ Conference Organizers 
+ href="https://www.computer.org/publications/author-resources" - Authors 
+ Chapters 
+ Communities 
+ BUSINESS SOLUTIONS 
+ Corporate Partnerships 
+ Conference Sponsorships & Exhibits 
+ Advertising 
+ Recruiting 
+ Digital Library Institution Subscriptions 
+ POLICIES 
+ Privacy 
+ Accessibility Statement 
+ IEEE Nondiscrimination Policy 
+ XML Sitemap 
+ ©IEEE — All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions. 
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+3. Website of HOTI_3: https://www.computer.org/csdl/proceedings-article/hoti/2025/560100z009/207NRPXvFu0
+Website information of HOTI_3:
+
+Opens in a new windowOpens an external websiteOpens an external website in a new windowClose this dialogThis website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising.You may change your settings at any time or accept the default settings.You may close this banner to continue with only essential cookies.Privacy PolicyStorage PreferencesTargeted Advertising 
+ Personalization 
+ Analytics 
+ SaveAccept AllReject AllClose Cookie PreferencesJoin Us 
+ Sign In 
+ My Subscriptions 
+ Magazines 
+ Journals 
+ Video Library 
+ Conference Proceedings 
+ Individual CSDL Subscriptions 
+ Institutional CSDL Subscriptions 
+ Resources | Career Center 
+ Tech News 
+ Resource Center 
+ Press Room 
+ Advertising 
+ Librarian Resources 
+ IEEE.org 
+ Help 
+ About Us 
+ Career Center 
+ Cart 
+ Create Account 
+ Sign In 
+ Toggle navigation 
+ My Subscriptions 
+ Browse Content 
+ Resources 
+ All 
+ href="/csdl/proceedings-article/hoti/2024/560100z007/207NQO9JMMU" - Previous | href="/csdl/proceedings-article/hoti/2024/560100z010/207NQl2qXwA" - Next 
+ href="/csdl/proceedings/hoti/2024/207NQ5A9aoM" - Table of Contents 
+ Related Articles 
+ Home 
+ Proceedings 
+ href="/csdl/proceedings/1000326" - HOTI 
+ href="/csdl/proceedings/hoti/2024/207NQ5A9aoM" - HOTI 2024 
+ 2024 IEEE Symposium on High-Performance Interconnects (HOTI) 
+ Message from the TPC Chairs: HOTI 2024 
+ Year: 2024, Pages: ix-ixDOI Bookmark:href="https://doi.ieeecomputersociety.org/10.1109/HOTI63208.2024.00006" - 10.1109/HOTI63208.2024.00006
+Authors 
+ href="/csdl/search/default?type=author&givenName=Rohit&surname=Zambre" - Rohit Zambre
+,NVIDIA 
+ href="/csdl/search/default?type=author&givenName=Sayan&surname=Ghosh" - Sayan Ghosh
+,Pacific Northwest National Laboratory 
+ Download PDFSHARE ARTICLEGenerate Citation 
+ Abstract 
+ Welcome to the 2023 IEEE 30th Annual Symposium on High-Performance Interconnects. This conference brings together designers and architects of high-performance networks, with presentations from universities and industrial research laboratories that focus on the latest developments in leading-edge technologies. This year's conference is again entirely virtual due to the COVID-19 pandemic, representing unique challenges and opportunities for the conference program. 
+ Related Articles 
+ Message from the TPC chairs | 2011 IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks 
+ href="/csdl/proceedings-article/hoti/2022/867900z008/1HBKvZ5ShwY" - Message from the TPC Chairs HOTI 2022 | 2022 IEEE Symposium on High-Performance Interconnects (HOTI) 
+ IEEE VR 2023 Message from the Program Chairs and Guest Editors | IEEE Transactions on Visualization & Computer Graphics 
+ IEEE VR 2023 Message from the Program Chairs | 2023 IEEE Conference Virtual Reality and 3D User Interfaces (VR) 
+ Welcome Message from the TPC Chairs | 2023 IEEE International Conference on Smart Internet of Things (SmartIoT) 
+ Welcome Message from the ICNP 2023 TPC Chairs | 2023 IEEE 31st International Conference on Network Protocols (ICNP) 
+ Message from the General Chairs ICEI 2023 | 2023 IEEE International Conference on Energy Internet (ICEI) 
+ Message from the 2024 General Co-chairs | 2024 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW) 
+ href="/csdl/proceedings-article/hoti/2020/09188281/1mZ3pt3MeRy" - Message from the TPC Chairs - HOTI 2020 | 2020 IEEE Symposium on High-Performance Interconnects (HOTI) 
+ href="/csdl/proceedings-article/hoti/2021/324800z008/1xlA6b4BVAI" - Message from the TPC Chairs: HOTI 202 | 2021 IEEE Symposium on High-Performance Interconnects (HOTI) 
+ Sign up for our newsletter. 
+ EMAIL ADDRESS 
+ IEEE COMPUTER SOCIETY 
+ About Us 
+ Board of Governors 
+ Newsletters 
+ Press Room 
+ IEEE Support Center 
+ Contact Us 
+ DIGITAL LIBRARY 
+ Magazines 
+ Journals 
+ Conference Proceedings 
+ Video Library 
+ COMPUTING RESOURCES 
+ Jobs Board 
+ Courses & Certifications 
+ Webinars 
+ Podcasts 
+ Tech News 
+ Membership 
+ COMMUNITY RESOURCES 
+ Conference Organizers 
+ href="https://www.computer.org/publications/author-resources" - Authors 
+ Chapters 
+ Communities 
+ BUSINESS SOLUTIONS 
+ Corporate Partnerships 
+ Conference Sponsorships & Exhibits 
+ Advertising 
+ Recruiting 
+ Digital Library Institution Subscriptions 
+ POLICIES 
+ Privacy 
+ Accessibility Statement 
+ IEEE Nondiscrimination Policy 
+ XML Sitemap 
+ ©IEEE — All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions. 
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+4. Website of HOTI_3: https://old.hoti.org/2024/index.html
+Website information of HOTI_3:
+
+Home #3 
+ Program 
+ Registration 
+ Sponsors 
+ Committees 
+ href="./call-for-papers/index.html" - Calls | href="./call-for-papers/index.html" - Call for Papers 
+ href="./call-for-tutorials/index.html" - Call For Tutorials 
+ Hot Interconnects 2024 
+ August, 21st - 23rd 
+ href="https://www.youtube.com/@hoti-hotinterconnectssympo5358" - 
+href="https://www.facebook.com/hoti.org/" - 
+href="https://twitter.com/ieeehoti" - 
+Home 
+ Program 
+ href="./call-for-papers/index.html" - Calls | href="./call-for-papers/index.html" - Call for Papers 
+ href="./call-for-tutorials/index.html" - Call For Tutorials 
+ Sponsors 
+ Committees 
+ Registration 
+ Welcome to the 31st iteration of the IEEE Hot Interconnects symposium. HotI’2024 will be held virtually. 
+ href="https://www.youtube.com/@IEEEHOTI" - CONFERENCE VIDEOS UPLOADED ON HOTI YOUTUBE CHANNEL!
+CONFERENCE PROCEEDINGS ARE NOW AVAILABLE! 
+ IEEE Hot Interconnects is the premier international forum for researchers and developers of state-of-the-art hardware and software architectures and implementations for interconnection networks of all scales, ranging from multi-core on-chip interconnects to those within systems clusters, and data centers. Leaders in industry and academia attend the conference to interact with individuals at the forefront of this field. 
+ Our objective is to address the data center networking and the supercomputing communities. We hope you can join us and benefit not only from the content but also from the prime networking opportunities this event always offers. 
+ 2024 Conference Theme –Can Interconnects Keep up with AI? 
+ The explosion of AI and workloads related to machine learning and deep learning boggles the mind. Whether in massive data centers, edge locations, automobiles, or consumer appliances, AI stands to improve many tasks useful to people at work or at leisure. The demand for GPUs, DPUs, TPUs, and IPUs taxes the ability of their manufacturers to meet the market demand. Efficient utilization of these xPUs requires high speed and highly scalable interconnects. Whether between xPUs or between an xPU and memory, data transfer can easily become a bottleneck in computing efficiency. 
+ In this edition of IEEE Hot Interconnects, we explore advances in interconnection networks that alleviate this bottleneck. Solutions including optical circuit switching, dense photonic data paths, high-performance fabrics, and more will expand from the specialized applications of HPC to the pervasive applications of AI and in the process will become more affordable. This year’s HotI will thus be captivatingly relevant. 
+ KEYNOTES 
+ Connectivity for AI Everywhere: The Role of Chiplets 
+ Tony Chan Carusone 
+ CTO, Alphawave Semi and Professor of ECE, University of Toronto 
+ Powering Llama 3: A Sneak-peek into Meta's Massive Infrastructure for Generative AI 
+ Pavan Balaji 
+ Principal Research Scientist and Technical Lead, Meta 
+ Keeping Pace: Micro-Models, Large Language Models, and the Co-Evolution of Chip and Data Center Design in a Rapidly Shifting AI Landscape 
+ Mark Baciak 
+ CTO, NeuralFabric Corp 
+ PANEL 
+ Bandwidth Scaling for AI Interconnect - More Wavelengths versus More Fiber?With AI model size doubling every four months, the size of AI compute clusters is growing rapidly to keep up. Traditional data center front-end networks rely on optical interconnect for data movement with Terabits per second of connectivity and have been doubling data rate every 4 years. As the models grow it is also expected that the back-end GPU networks expand beyond the confines of the rack. Optical interconnects will be needed at distances of tens of meters with 10Tb/s data transfer rates and doubling every 2 years will be expected. How should optical interconnects best achieve this bandwidth increase and what is the best performance axis to push next? In this panel discussion we pose the question – “Is it better to scale with more wavelengths or by adding more fibers?” Join us to see if any of the panelists can convince you they have the right approach. 
+ Moderator: Dr. Katharine Schmidtke - Co-founder, Eribel SystemsDr. Dan Kuchta –Research Staff Member, IBM Research Yorktown 
+ Dr. Peter Winzer –Founder & CTO, Nubis Communications 
+ Dr. Rebecca Schaevitz– Co-founder & Chief Product Officer, MixxTech 
+ Dr. Amit Nagra– VP & GM, Silicon Photonics Product Division, Intel 
+ Dr. Alan Liu– Co-founder & CEO, Quintessent 
+ Dr. Bardia Pezeshki –Founder & CEO, Avicena 
+ IEEE Computer Society Open Conference Statement 
+ Equity, Diversity, and Inclusion are central to the goals of the IEEE Computer Society and all of its conferences. Equity at its heart is about removing barriers, biases, and obstacles that impede equal access and opportunity to succeed. Diversity is fundamentally about valuing human differences and recognizing diverse talents. Inclusion is the active engagement of Diversity and Equity. A goal of the IEEE Computer Society is to foster an environment in which all individuals are entitled to participate in any IEEE Computer Society activity free of discrimination. 
+ For this reason, the IEEE Computer Society is firmly committed to team compositions in all sponsored activities, including but not limited to, technical committees, steering committees, conference organizations, standards committees, and ad hoc committees that display Equity, Diversity, and Inclusion. 
+ IEEE Computer Society meetings, conferences and workshops must provide a welcoming, open and safe environment, that embraces the value of every person, regardless of race, color, sex, sexual orientation, gender identity or expression, age, marital status, religion, national origin, ancestry, or disability. All individuals are entitled to participate in any IEEE Computer Society activity free of discrimination, including harassment based on any of the above factors. 
+ IEEE Event Conduct and Safety Statement 
+ IEEE believes that science, technology, and engineering are fundamental human activities, for which openness, international collaboration, and the free flow of talent and ideas are essential. Its meetings, conferences, and other events seek to enable engaging, thought provoking conversations that support IEEE’s core mission of advancing technology for humanity. Accordingly, IEEE is committed to providing a safe, productive, and welcoming environment to all participants, including staff and vendors, at IEEE-related events. 
+ IEEE has no tolerance for discrimination, harassment, or bullying in any form at IEEE- related events. All participants have the right to pursue shared interests without harassment or discrimination in an environment that supports diversity and inclusion. Participants are expected to adhere to these principles and respect the rights of others. IEEE seeks to provide a secure environment at its events. Participants should report 
+ any behavior inconsistent with the principles outlined here, to on site staff, security or venue personnel, or toeventconduct@ieee.org 
+ 31st IEEE Hot Interconnects symposium. 
+ href="mailto:info@hoti.org" - info@hoti.org 
+ HotI 2024 
+ href="./index.html?page_id=8188" - Call for Papers 
+ href="./index.html?page_id=8190" - Call for Tutorials 
+ Sponsors 
+ Committees 
+ Archive 
+ Hoti 2023 |href="https://old.hoti.org/2023/" - Website
+|Proceedings 
+ Hoti 2021 |href="https://old.hoti.org/2021/" - Website
+|Proceedings 
+ Hoti 2020 |href="https://old.hoti.org/hoti27/" - Website
+|Proceedings 
+ href="http://old.hoti.org/hoti26/archives/" - More
+Online Conference 
+ August 21st - 23rd 
+ This site follows theIEEE Privacy Policy© Copyright 2022 by Gaviasthemes. Editions by Emilio Paolini and Timothy Stamler. Hot Interconnects 2024. 
+ href="https://twitter.com/ieeehoti" - Twitter
+href="https://www.facebook.com/hoti.org/" - Facebook-square
+Linkedinhref="https://www.youtube.com/@hoti-hotinterconnectssympo5358" - Youtube
+

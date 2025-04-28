@@ -1,0 +1,56 @@
+Quá token: từ trang 3: CCA, CGO,CIARP, 
+CIS (IEEE International Conference on Cybernetics and Intelligent Systems), 
+CISIS (Computational Intelligence in Security for Information Systems)
+
+
+
+
+AI: span trong thẻ a
+Lỗi acronym : .Website of
+
+
+
+Algosensors
+
+APBC cfp trong div
+
+ARES lỗi load được trang nhưng không lấy được data
+
+ASSETS, AusDm không lấy được cfp, thẻ a trong li
+
+AST
+
+BDCAT
+
+CAADRIA 
+
+CAINE pdf trong cfp
+CloudCom có 2025 nhưng chưa truy cập được
+COCOA
+
+
+Next Steps & Considerations
+Potential Enhancements:
+Event Schema Validation: Cân nhắc sử dụng thư viện như Zod hoặc io-ts để xác thực cấu trúc (schema) của logEntry.context cho từng loại sự kiện trong handler tương ứng. Điều này giúp bắt lỗi sớm nếu cấu trúc log thay đổi.
+State Machine: Đối với các quy trình phức tạp hơn (ví dụ: theo dõi trạng thái chi tiết hơn của một conference qua nhiều sự kiện), bạn có thể cân nhắc triển khai một state machine cho mỗi conference. Mỗi sự kiện sẽ kích hoạt một transition trong state machine đó.
+Error Categorization: Cải thiện việc phân loại lỗi trong các handler. Có thể tạo thêm các danh mục lỗi chi tiết hơn hoặc gắn cờ các lỗi quan trọng (critical vs. warning).
+Further Optimizations:
+Handler Loading: Nếu số lượng handler trở nên rất lớn, có thể xem xét các kỹ thuật tải động (dynamic loading), mặc dù với số lượng hiện tại, map tĩnh là rất hiệu quả và đơn giản.
+Object Pooling: Nếu việc tạo các đối tượng context/error lặp đi lặp lại trở thành nút thắt cổ chai (rất khó xảy ra trong kịch bản này), có thể xem xét object pooling, nhưng điều này thường làm tăng độ phức tạp không cần thiết.
+Alternative Approaches/Technologies:
+Class-Based Handlers: Thay vì các hàm riêng lẻ, bạn có thể tạo một lớp cơ sở EventHandler và các lớp con kế thừa cho từng loại sự kiện. eventHandlerMap sẽ ánh xạ tới các instance của các lớp này. Điều này có thể hữu ích nếu các handler cần chia sẻ trạng thái hoặc phương thức phức tạp.
+Event Bus/Emitter: Đối với các hệ thống phức tạp hơn, có thể sử dụng mẫu Event Bus/Emitter. processLogEntry sẽ chỉ phát ra (emit) sự kiện log, và các listener (handlers) đã đăng ký sẽ nhận và xử lý chúng. Điều này giúp giảm sự phụ thuộc trực tiếp.
+Testing Strategies:
+Unit Tests for Handlers: Viết unit test cho từng hàm trong eventHandlers.ts. Tạo các logEntry giả lập, results ban đầu và confDetail (nếu cần) để kiểm tra xem handler có cập nhật đúng trạng thái của results và confDetail hay không. Mock các helper functions nếu cần.
+Integration Tests for processLogEntry: Viết integration test cho processLogEntry để đảm bảo nó gọi đúng handler dựa trên sự kiện và xử lý lỗi handler đúng cách.
+End-to-End Tests: Kiểm tra toàn bộ quy trình phân tích log với các file log mẫu chứa nhiều loại sự kiện khác nhau để đảm bảo kết quả cuối cùng (LogAnalysisResult) là chính xác.
+Relevant Best Practices:
+Single Responsibility Principle (SRP): Mỗi handler nên chỉ chịu trách nhiệm xử lý logic cho một loại sự kiện hoặc một nhóm sự kiện rất liên quan.
+Dependency Injection: Thay vì import trực tiếp logger hay các helper trong eventHandlers.ts, bạn có thể truyền chúng vào như các tham số (tương tự results, confDetail). Điều này làm tăng khả năng kiểm thử và linh hoạt. Tuy nhiên, với cấu trúc hiện tại, import trực tiếp có thể chấp nhận được để giữ đơn giản.
+Immutability (Consideration): Mặc dù hiện tại code sửa đổi results và confDetail trực tiếp (mutates), một cách tiếp cận khác (phức tạp hơn) là các handler trả về các thay đổi cần áp dụng, và một lớp khác sẽ áp dụng chúng một cách bất biến (immutable). Điều này thường không cần thiết cho loại phân tích này nhưng là mộtแนวทาง trong functional programming.
+Clear Naming: Đảm bảo tên các hàm handler rõ ràng và phản ánh đúng sự kiện chúng xử lý.
+
+Xem lại HostAgent System Instructions: Đọc kỹ lại prompt của Host Agent sau khi thêm tất cả các Sub Agent. Đảm bảo nó rõ ràng, mạch lạc và hướng dẫn chính xác cách phân loại và định tuyến các loại yêu cầu khác nhau. Đặc biệt chú ý đến các trường hợp nhập nhằng.
+Xử lý Nhập Nhằng: Cân nhắc thêm hướng dẫn cho Host Agent về cách hỏi lại người dùng nếu không chắc chắn nên định tuyến đến đâu (ví dụ: "Follow item" -> "Which item? Conference or Journal?").
+Tổng Hợp Phản Hồi: Hiện tại, Host Agent đang nhận kết quả thô từ Sub Agent (dưới dạng JSON string hoặc text trong functionResponse). Xem xét liệu có cần thêm hướng dẫn cho Host Agent để "diễn giải" kết quả này một cách tự nhiên hơn không, thay vì chỉ trả về kết quả thô cho LLM xử lý ở lượt tiếp theo. Tạm thời giữ nguyên để đơn giản.
+Xử lý Lỗi Sub Agent: Khi callSubAgent trả về status: 'error', Host Agent hiện tại chỉ nhận errorMessage. Cần hướng dẫn Host Agent cách thông báo lỗi này cho người dùng một cách thân thiện (ví dụ: "Sorry, I couldn't process the request regarding [topic] due to an internal error.").

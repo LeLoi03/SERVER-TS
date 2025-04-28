@@ -1,0 +1,14 @@
+output:
+{
+  "Conference dates": "November 16, 2025",
+  "Year": "2025",
+  "Location": "Seoul, South Korea",
+  "City-State-Province": "Seoul",
+  "Country": "South Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Topics": "Search-Based Software Engineering, Automated Optimization Techniques, AI, Machine Learning, Software Engineering, Test Generation, Design Refactoring, Process Organization",
+  "Summary": "The 17th Symposium on Search-Based Software Engineering 2025 (SSBSE 2025) will take place on November 16th in Seoul, Republic of Korea, co-located with ASE 2025. Search-based Software Engineering (SBSE) is a research area focused on the formulation of software engineering problems as search problems, and the subsequent use of complex heuristic techniques to attain optimal solutions to such problems.",
+  "Call for Papers": "No call for papers available"
+}
+

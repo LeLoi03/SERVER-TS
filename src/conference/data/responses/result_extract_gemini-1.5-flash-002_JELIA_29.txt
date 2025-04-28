@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "September 1 - 5, 2025",
+  "Year": "2025",
+  "Location": "Kutaisi, Georgia",
+  "City-State-Province": "Kutaisi",
+  "Country": "Georgia",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission": "May 2, 2025",
+    "Paper submission": "May 9, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "July 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready due": "July 10, 2025"
+  },
+  "Topics": "Logics in Artificial Intelligence, Abductive and inductive reasoning, Applications of logic-based AI systems, Argumentation, Automated reasoning, Causality and logics, Computational complexity and expressiveness, Deontic logic and normative systems, Description logics, Knowledge representation, reasoning, and compilation, Learning and reasoning, Logic programming, Non-classical logics, Nonmonotonic logics, Planning and diagnosis based on logic, Preferences and optimization, Reasoning about actions, Updates, belief revision and nonmonotonic reasoning",
+  "Publisher": "Springer",
+  "Summary": "JELIA 2025, the 19th edition of the European Conference on Logics in Artificial Intelligence, will be held in Kutaisi, Georgia, from September 1-5, 2025.  The conference aims to bring together active researchers interested in the use of logics in Artificial Intelligence to discuss current research, results, problems, and applications.",
+  "Call for Papers": "# JELIA 2025: Call for Papers\n\nThe Program Committee of the 19th European Conference on Logics in Artificial Intelligence (JELIA 2025) invites the submission of technical papers for the conference that will be held in **Kutaisi, Georgia, from September 1st to 5th, 2025**.\n\n## Aim and Scope\n\nThe aim of JELIA 2025 is to bring together active researchers interested in the use of logics in Artificial Intelligence, in order to discuss current research, results, problems, and applications of both theoretical and practical nature. JELIA strives to foster links and facilitate cross-fertilization of ideas among researchers from various disciplines, among researchers from academia and industry, and between theoreticians and practitioners.\n\n## Topics\n\nAuthors are invited to submit papers presenting original and unpublished research in all areas related to the use of logics in Artificial Intelligence, including, but not limited to:\n\n*   Abductive and inductive reasoning\n*   Applications of logic-based AI systems\n*   Argumentation\n*   Automated reasoning\n*   Causality and logics\n*   Computational complexity and expressiveness\n*   Deontic logic and normative systems\n*   Description logics and other logical approaches to ontologies\n*   Knowledge representation, reasoning, and compilation\n*   Learning and reasoning\n*   Logic programming\n*   Logics for uncertain and probabilistic reasoning\n*   Logics in machine learning\n*   Logics in multi-agent systems, games, and social choice\n*   Neural networks and logic rules\n*   Non-classical logics\n*   Nonmonotonic logics\n*   Planning and diagnosis based on logic\n*   Preferences and optimization\n*   Reasoning about actions\n*   Updates, belief revision and nonmonotonic reasoning\n\nSubmissions describing implemented systems/applications and their application area(s) are also welcome.\n\n## Special Track: Logics for Explainable and Trustworthy AI\n\nJELIA 2025 will include a Special Track on Logics for Explainable and Trustworthy AI. Contributions describing logic-based approaches to making AI more transparent, safer, or more trustable are welcome.\n\n## Awards\n\nJELIA 2025 will offer a Best Paper Prize and a Best Student Paper Prize, each a cash prize amounting to EUR 500, sponsored by Springer.\n\n## Submission Details\n\nJELIA 2025 welcomes submissions of long or short papers. All submissions should contain original research and sufficient detail to assess the merits and relevance of the contribution. Submissions must not have been previously published or be simultaneously submitted for publication elsewhere.\n\n*   All submissions should not exceed 13 pages for long papers and 6 pages for short papers (excluding references and acknowledgements).\n*   Papers must be self-contained; appendices will only be considered at the reviewers' discretion and will not be published.\n*   Submissions must be formatted according to the standard Springer LNCS style ([https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)).\n*   Submissions are handled via EasyChair: [https://easychair.org/conferences/?conf=jelia2025](https://easychair.org/conferences/?conf=jelia2025)\n\n## Important Dates\n\n*   **Abstract submission:** May 2, 2025 (AoE)\n*   **Paper submission:** May 9, 2025 (AoE)\n*   **Notification of acceptance:** July 1, 2025\n*   **Camera-ready due:** July 10, 2025 (AoE)\n*   **Conference starts:** September 1, 2025\n*   **Conference ends:** September 5, 2025"
+}
+

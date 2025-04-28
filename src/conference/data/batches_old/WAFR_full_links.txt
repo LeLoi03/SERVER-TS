@@ -1,0 +1,569 @@
+Conference full name: International Workshop on the Algorithmic Foundations of Robotics (WAFR)
+
+1. Website of WAFR_3: https://www.algorithmic-robotics.org/
+Website information of WAFR_3:
+
+2024 | The 16th International Workshop on the Algorithmic Foundations of Robotics 
+ Chicago, USA, October 7-9 2024 
+  
+ Navigation 
+  
+ Home 
+ Committee 
+ Program 
+ Invited Speakers 
+ Registration 
+ Travel and Local Information 
+ Student Travel Grants 
+ href="cfp.php" - Call For Papers
+ 
+ href="authors.php" - Information for Authors
+Committee 
+  
+ Co-Chairs: 
+ Nancy Amato 
+ Katie Driggs-Campbell 
+ Chinwe Ekenna 
+ Marco Morales 
+ Jason O'KaneNews Updates 
+  
+ Registrationis open 
+ Programhas been published 
+ 91 submissions, 47 papers accepted 
+ Student Travel Grantawards have been notified 
+ Contribute to thehref="https://docs.google.com/forms/d/e/1FAIpQLSdTJdC9RbC7F_3sqGpVwzr_3_0lYUe24DaxmSKzgjGq64RMoA/viewform?usp=sf_link" - history of WAFR
+Important Dates 
+  
+ June 13, 2024: Paper submission 
+ August 17, 2024: Acceptance notification 
+ September 18, 2024: Final manuscript submission for website 
+ September 23:Early Registration 
+ September 23 (preference): Travel Grants Applications 
+ Oct 7-9: WAFR 2024 
+ December 9, 2024: Camera-ready manuscript for SPAR book 
+ Sponsors 
+  
+ UIUC Center for Autonomy 
+ Siebel School of Computing and Data Science 
+ Parasol LabContact 
+  
+ href="mailto:wafr2024@gmail.com" - wafr2024@gmail.com
+Previous WAFRs 
+  
+ href="https://wafr2022.github.io" - WAFR 2022, College Park, USA
+ 
+ href="http://robotics.cs.rutgers.edu/wafr2020/" - WAFR 2020, Oulu, Finland
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2018/" - WAFR 2018, Mérida, México
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2016/" - WAFR 2016, San Francisco, USA
+ 
+ WAFR 2014, Istanbul, Turkey 
+ WAFR 2012, Cambridge, MA, USA 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2010/" - WAFR 2010, Singapore
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2008/" - WAFR 2008, Guanajuato, México
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2006/" - WAFR 2006, New York City, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2004" - WAFR 2004, Zeist, The Netherlands
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2002/" - WAFR 2002, Nice, France
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2000/" - WAFR 2000, Hanover, NH, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr1998/" - WAFR 1998, Houston, TX, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr1996/" - WAFR 1996, Toulouse, France
+ 
+ WAFR 1994, Stanford, CA, USA | Announcements 
+ href="https://apply2.org/illinois/apps/wafr_tg/" - Applications for student travel grants | are being accepted now thanks to the generous sponsorship of the UIUC Center for Autonomy. Priority will be given to applications received by September 23. We encourage students who are applying for a registration grant to NOT register until they have heard back about their travel grant application - if they are not awarded a travel grant we will enable them to receive the early registration rate. Applicants whose grant was approved after paying the registration fee will be refunded. 
+ WAFR 2024 | program | is now available . 
+ Registration | is now open. Early registration price is available until (including) September 23. 
+ Contribute to the | href="https://docs.google.com/forms/d/e/1FAIpQLSdTJdC9RbC7F_3sqGpVwzr_3_0lYUe24DaxmSKzgjGq64RMoA/viewform?usp=sf_link" - HISTORY OF WAFR | initiative! Upload pictures and stories from past WAFRs. 
+ WAFR 2024 - 30 years of WAFR 
+ Algorithms are a fundamental component of robotic systems: they control or reason about motion and perception in the physical world. They receive input from noisy sensors, consider geometric and physical constraints, and operate on the world through imprecise actuators. The design and analysis of robot algorithms therefore raises a unique combination of questions in control theory, computational and differential geometry, and computer science. 
+ The Workshop on the Algorithmic Foundations of Robotics (WAFR) is a multi-disciplinary single-track workshop with submitted and invited papers on advances on algorithmic problems in robotics. WAFR was created in 1994 as a small-size workshop. It has been held every other year since 1994 and while it spans a relatively small community, it has an established reputation as one, if not the most, important venue for presenting algorithmic work related to robotics. The workshop proceedings will be published in theSpringer Proceedings in Advanced Robotics (SPAR)series. 
+ The topics of interest are very broad since the focus of WAFR is on algorithm development and analysis rather than specific problems or applications. Increasingly, robotics algorithms are finding use in areas far beyond the traditional scope of robots. Therefore, while we encourage submissions on fundamental topics such as complexity completeness, and computational geometry, we also welcome papers in applications such as computational biology, virtual environments sensor networks, manufacturing, and medical robotics. Papers on algorithmic developments in traditional areas of robotics, such as motion planning, manipulation, sensing, and mobile robotics, as well as papers in newer areas such as distributed robotics and simultaneous localization and mapping, are also encouraged. 
+  
+ Contact:href="mailto:wafr2024@gmail.com" - wafr2024@gmail.com 
+ UIUC Grainger College of EngineeringCenter for Autonomy
+
+2. Website of WAFR_3: http://ifrr.org/wafr
+Website information of WAFR_3:
+
+General Information 
+ Welcome 
+ About IFRR 
+ IFRR Board 
+ href="/technical-activity-board" - Technical Activity Board 
+ Contact Us 
+ IFRR Symposia 
+ ISRR 
+ ISER 
+ href="/wafr" - WAFR 
+ RSS 
+ FSR 
+ CoRL 
+ IFRR Colloquia 
+ Global Robotics Colloquia 
+ Fundamental Challenges in Robotics 
+ Flying on Mars 
+ Task and Motion Planning 
+ The Future of Robotic Manipulation 
+ 10 Years with the iCub 
+ 10 Years After Fukushima 
+ Human-Robot Integration 
+ Soft Robotics 
+ Autonomous Driving 
+ Human Robot Interaction 
+ Quadruped Robotics 
+ Robotics and COVID 
+ Neuroengineering 
+ Robotics and Neuroscience 
+ Robotics and Agriculture 
+ Robotics and Society 
+ Bio-Inspired Robotics 
+ Cognitive Robotics 
+ Tactile Robots 
+ Art and Robots 
+ Perceiving, Acting and Collaborating 
+ Physics-Based and Data-Driven Robotics 
+ Aerial Robotics 
+ Field Robotics 
+ Creative Design 
+ Surgical Robotics 
+ IFRR Partners 
+ Publications 
+ IEEE RAS 
+ Robotics Today 
+ IFRR Logos 
+ Archive 
+ Summer School 
+ href="/" - International Foundation of Robotics Research
+Slider14 
+ test 
+ PrevNext 
+ Slider5 
+ test 
+ NewSlider2 
+ Slider6 
+ test 
+ NewSlider3 
+ Slider7 
+ test 
+ NewSlider1 
+ Slider14 
+ test 
+ WAFR 
+ Workshop on the Algorithmic Foundations of Robotics 
+ Robot algorithms are abstractions of computational processes that control or reason about motion and perception in the physical world. Because actions in the physical world are subject to physical laws and geometric constraints, the design and analysis of robot algorithms raises a unique combination of questions in control theory, computational and differential geometry, and computer science. Algorithms serve as a unifying theme in the multi-disciplinary field of robotics. 
+ The Workshop on the Algorithmic Foundations aims to bring together a group of about sixty researchers to discuss recent trends and important future directions of research on the algorithmic issues related to robotics and automation. 
+ Website:http://www.algorithmic-robotics.org/ 
+ Locations 
+  
+ Chicago, IL, USA, 2024 
+  
+ href="https://wafr2022.github.io/" - College Park, MD, 2022
+ 
+ href="http://robotics.cs.rutgers.edu/wafr2020/" - Virtual, 2020
+ 
+ Merida, Mexico, 2018 
+ San Francisco, CA, USA, 2016 
+ Istanbul, Turkey, 2014 
+ Cambridge, MA, USA, 2012 
+ Singapore, 2010 
+ Guanajuato, Mexico, 2008 
+ New York City, USA, 2006 
+ Zeist, The Netherlands, 2004 
+ Nice, France, 2002 
+ Hanover, NH, USA, 2000 
+ Houston, TX, USA, 1998 
+  
+ Toulouse, France, 1996 
+  
+ Stanford, CA, USA, 1994 
+ Copyright © 2025 ifrr.org All Rights Reserved.
+
+3. Website of WAFR_3: https://www.ieee-ras.org/publications/t-ase/special-issues-t-ase/workshop-on-algorithmic-foundations-of-robotics-wafr
+Website information of WAFR_3:
+
+Join IEEE|Sign InIEEE.org 
+ IEEEXploreDigital Library 
+ IEEE Standards 
+ IEEE Spectrum 
+ More Sites | More SitesIEEEXploreDigital Library 
+ IEEE Standards 
+ IEEE Spectrum 
+ More Sites 
+ IEEE Robotics and Automation SocietySearch IEEE RASSearchResource CenterRobotics HistoryJoin IEEE RAS 
+ Toggle navigationHome 
+ About RAS | Commitment to Diversity | IEEE RAS CARES 
+ IEEE RAS Code of Conduct 
+ Governance | Executive Committee 
+ Administrative Committee 
+ Conference Activities Board 
+ Financial Activities Board 
+ Educational Activities Board 
+ Industrial Activities Board 
+ Media Services Board 
+ Member Activities Board 
+ Publication Activities Board 
+ Science and Technology Watch Board 
+ href="/about-ras/governance/technical-activities-board" - Technical Activities Board 
+ Ad Hoc Committees 
+ Standing Committees 
+ IEEE Council Representatives 
+ Volunteer Resources | Volunteer Reimbursement Procedures 
+ History of the Society | Past Officers 
+ Latest News | E-News 
+ Archival Newsletters 
+ Submit News 
+ RAS Calendar | List View of Upcoming RAS Events 
+ Contact RAS 
+ Membership | Member Communities | Membership Grades 
+ Member Statistics 
+ DEI Committee | About the DEI committee 
+ DEI Committee Governance 
+ Support Program to foster Academic Relationships and eXchange 
+ IDEA Travel Support 
+ IDEA winners 
+ Chapters 
+ Students 
+ Life Member Committee 
+ Young Professionals 
+ Women in Engineering 
+ Member Support Program 
+ Distinguished Lecturer Program | Distinguished Lecturers by Name 
+ Distinguished Lecturers by TC 
+ Support Program to foster Academic Relationships and eXchange 
+ Conferences & Workshops | Upcoming Conferences 
+ Fully Sponsored Conferences | CASE 
+ ICRA 
+ Financially Co-sponsored Conferences | IROS 
+ href="/conferences-workshops/technically-co-sponsored" - Technically Co-sponsored Conferences 
+ ICRA 
+ IROS 
+ CASE 
+ Young Reviewers Program 
+ Conference Policies 
+ Resources for Conference Organizers | Requesting RAS Sponsorship 
+ ICRA Proposal Guidelines 
+ Resources for Workshop and Tutorial Organizers | Guidelines for Workshop and Tutorial Organizers 
+ href="http://www.ieee-ras.org/conferences-workshops/resources-for-workshop-organizers#workshop" - Workshop and Tutorial Submission 
+ LaTeX Template 
+ Conference Workshop Oversight Committee 
+ Conference Activities Board | Conference Finance Committee (CAB-F) 
+ Conference Publications Committee (CAB-P) 
+ Conference Technical Programs Committee (CAB-T) 
+ Conference Operations Committee (CAB-O) 
+ Competitions Committee 
+ Publications | Subscription Information 
+ href="/publications/video-submission-guidelines" - Video Submission Guidelines 
+ RA-L | FAQ 
+ href="/publications/ra-l/information-for-authors-ra-l" - Information for Authors 
+ href="/publications/ra-l/submission-procedures" - Submission Procedures 
+ Special Issues 
+ Keywords 
+ href="/publications/ra-l/final-submission-checklist" - Final Submission Checklist 
+ Information for Reviewers 
+ Information for Associate Editors 
+ Information for Editors 
+ Information for Conference Organizers 
+ Editorial Board 
+ Steering Committee 
+ RA-L Paper Awards 
+ RA-L Distinguished Service 
+ List of Reviewers 
+ Former Senior Editors 
+ RA Magazine | href="/publications/ram/information-for-authors-ram" - Information for Authors 
+ href="/publications/ram/ram-submission-procedures-ra-magazine" - Submission Procedures 
+ Tutorials 
+ Special Issues 
+ Information for Reviewers 
+ Advertising 
+ Editorial Board 
+ T-ASE | href="/publications/t-ase/information-for-authors-t-ase" - Information for Authors 
+ href="http://mc.manuscriptcentral.com/t-ase" - Submission Procedures 
+ Special Issues 
+ Information for Reviewers 
+ Editorial Board 
+ ToH | href="/publications/toh/information-for-authors-toh" - Information for Authors 
+ href="/publications/toh/submission-procedures-toh" - Submission Procedures 
+ Special Issues 
+ Keywords 
+ Editorial Board 
+ Management Committee 
+ T-MRB | href="/publications/t-mrb/information-for-authors" - Information for Authors 
+ Information for Reviewers 
+ Steering Committee 
+ Editorial Board 
+ T-RO | href="/publications/t-ro/information-for-authors" - Information for Authors 
+ href="/publications/t-ro/submission-procedures" - Submission Procedures 
+ Special Collections 
+ Information for Reviewers 
+ List of Reviewers 
+ Editorial Board 
+ Information for Associate Editors 
+ Information for Editors 
+ href="/publications/t-ro/t-ro-list-of-conference-papers" - T-RO Papers Presented at Conferences 
+ T-FR | href="/publications/t-fr/information-for-authors" - Information for Authors 
+ href="/publications/t-fr/submission-procedures" - Submission Procedures 
+ Editorial Board 
+ href="/publications/t-fr/special-issues/cfp-ieee-transactions-on-field-robotics-special-issue-on-space-robotics" - Special Issue on Space Robotics 
+ RA-P | href="/publications/ra-p/information-for-authors" - Information for Authors 
+ href="/publications/ra-p/submission-procedures" - Submission Procedures 
+ Information for Reviewers 
+ Information for Editors 
+ Keywords 
+ Special Collections 
+ Editorial Board 
+ Advisory Board 
+ Background Information 
+ Tips for Making a Good Robot Video 
+ href="/publications/ieee-author-center" - IEEE Author Center 
+ Plagiarism & Ethical Issues 
+ Young Reviewers Program 
+ Guidelines for Generative AI Usage 
+ Rules for the double-anonymous review process 
+ Technical Committees | href="/technical-committees/technical-activities-board" - Technical Activities Board 
+ Technical Committees 
+ How to Join an IEEE RAS Technical Committee 
+ Technical Committee Clusters | href="/technical-committees/technical-committee-clusters/automation-cluster-forum" - Automation Cluster Forum 
+ href="/technical-committees/technical-committee-clusters/robotics-foundation-cluster-forum" - Robotics Foundation Cluster Forum 
+ href="/technical-committees/technical-committee-clusters/human-centered-and-life-like-robotics-cluster-forum" - Human-Centered and Life-like Robotics Cluster Forum 
+ href="/technical-committees/technical-committee-clusters/robots-for-unstructured-environments-cluster-forum" - Robots for Unstructured Environments Cluster Forum 
+ href="/technical-committees/technical-committee-clusters/healthcare-and-medical-robotics-cluster-forum" - Healthcare and Medical Robotics Cluster Forum 
+ href="/technical-committees/tabxsac" - TEABxSAC 
+ href="/technical-committees/tab-news" - TAB News 
+ Education, Outreach and Career | href="/educational-resources-outreach/technical-education-programs" - Technical Education Programs | href="/educational-resources-outreach/technical-education-programs/hosting-guidelines" - TEP Hosting Guidelines 
+ Robotics History Project 
+ Robotics and Automation Learning Institute (RALI) | RALI Team Members 
+ Pre-College Resources | IEEE Spectrum Robots 
+ Webinars, Videos, & Podcasts 
+ Competitions 
+ Careers/Jobs 
+ RA Experts 
+ Educational Material in Robotics and Automation 
+ Awards & Recognition | Society Awards 
+ Publications Awards 
+ Conference Awards 
+ IEEE Awards 
+ Industry & Government | Standards | Approved Standards 
+ Active Projects 
+ International Robotics Standards Coordination Effort 
+ Students Participating in IEEE Robotic Standardization Efforts (SPIRSE) 
+ Industry Experience | Industry Support 
+ IEEE/IFR IERA Forum 
+ Entrepreneur Education | Startup Support 
+ Industry Data & Roadmaps | IAB Robotics Industry Report 
+ IAB News 
+ Join IAB 
+ Home 
+ Publications 
+ T-ASE 
+ Special Issues 
+ Workshop on Algorithmic Foundations of Robotics (WAFR) 
+ Special Issue on Workshop on Algorithmic Foundations of Robotics (WAFR) 
+ A special issue of the IEEE Transactions on Automation Science and Engineering. 
+ Introduction 
+ Papers from the WAFR 2012 Technical Program 
+ From the WAFR 2012 Website: 
+ The International Workshop on the Algorithmic Foundations of Robotics (WAFR) is a single-track workshop devoted to recent advances on algorithmic problems in robotics. The workshop proceedings will be published in a hardcover volume in the Springer STAR series, and selected papers will be invited for publication in a special issue of the International Journal of Robotics Research. Other selected papers will be invited for publication in this T-ASE Special Issue. 
+ Robot algorithms are a fundamental component of robotic systems. These algorithms process inputs from sensors that provide noisy and partial data, build geometric and physical models of the world, plan high-and low-level actions at different time horizons, and execute these actions on actuators with limited precision. The design and analysis of robot algorithms raise a unique combination of questions from many fields, including control theory, computational geometry and topology, geometrical and physical modeling, reasoning under uncertainty, probabilistic algorithms, game theory, and theoretical computer science. 
+ Robot algorithms are a fundamental component of robotic systems. These algorithms process inputs from sensors that provide noisy and partial data, build geometric and physical models of the world, plan high-and low-level actions at different time horizons, and execute these actions on actuators with limited precision. The design and analysis of robot algorithms raise a unique combination of questions from many fields, including control theory, computational geometry and topology, geometrical and physical modeling, reasoning under uncertainty, probabilistic algorithms, game theory, and theoretical computer science. 
+ Scope, Description, and More Information 
+ The focus of WAFR is on the design and analysis of robot algorithms from both theoretical and practical angles. The topics of interest are very broad. We encourage papers on fundamental algorithmic issues, such as complexity, completeness, machine learning, probabilistic reasoning, and new programming paradigms, to name a few. We also encourage papers on applications of robot algorithms to important or new domains, such as manufacturing, legged locomotion, distributed robotics, human-robot interaction, surgical robots, intelligent prosthetics, and brain-controlled robots. Furthermore, robot algorithms are being applied in domains beyond the traditional scope of robotics, e.g., computational biology, computer animation, sensor networks, etc. Papers on these topics are also welcomed. 
+ Submissions by Invitation Only 
+ Important Dates 
+  
+ Call for Papers | September 01, 2012 
+ Deadline for Paper Submission | December 01, 2012 
+ First Review | January 01, 2013 
+ Final Review | March 01, 2013 
+ Publication | October 2013 
+ Guest Editors 
+ Kevin Lynch 
+ Guest Editor 
+ Northwestern University, Mechanical Engineering Department 
+ Evanston, IL, United States 
+
+kmlynch@northwestern.edu 
+  
+ http://lims.mech.northwestern.edu/~lynch/ 
+ Publications 
+ Subscription Information 
+ href="/publications/video-submission-guidelines" - Video Submission Guidelines 
+ RA-L 
+ RA Magazine 
+ T-ASE | href="/publications/t-ase/information-for-authors-t-ase" - Information for Authors 
+ href="http://mc.manuscriptcentral.com/t-ase" - Submission Procedures 
+ Special Issues 
+ Information for Reviewers 
+ Editorial Board 
+ ToH 
+ T-MRB 
+ T-RO 
+ T-FR 
+ RA-P 
+ Tips for Making a Good Robot Video 
+ href="/publications/ieee-author-center" - IEEE Author Center 
+ Plagiarism & Ethical Issues 
+ Young Reviewers Program 
+ Guidelines for Generative AI Usage 
+ Rules for the double-anonymous review process 
+ Easy Links 
+ StudentsStudents are future of robotics and automation. 
+ Learn more 
+ CASE 2025IEEE International Conference on Automation Science and Engineering 
+ href="https://2025.ieeecase.org" - Learn more
+href="https://2025.ieeecase.org" - 
+IROS 2025IEEE/RSJ International Conference on Intelligent Robots and Systems 
+ Learn more 
+ ICRA@40Special 40th anniversary celebration of RAS and ICRA 
+ Learn more 
+ ICRA 2025 
+ IEEE International conference on Robotics and Automation 
+ Learn more 
+ Volunteer Resources 
+ Learn more 
+ Home 
+ Sitemap 
+ Contact IEEE RAS 
+ Feedback 
+ Accessibility 
+ Nondiscrimination Policy 
+ IEEE Ethics Reporting 
+ IEEE Privacy Policy 
+ Terms 
+ © Copyright 2025 IEEE - All rights reserved. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+4. Website of WAFR_3: http://algorithmic-robotics.org/authors.php
+Website information of WAFR_3:
+
+2024 | The 16th International Workshop on the Algorithmic Foundations of Robotics 
+ Chicago, USA, October 7-9 2024 
+  
+ Navigation 
+  
+ Home 
+ Committee 
+ Program 
+ Invited Speakers 
+ Registration 
+ Travel and Local Information 
+ Student Travel Grants 
+ href="cfp.php" - Call For Papers
+ 
+ href="authors.php" - Information for Authors
+Committee 
+  
+ Co-Chairs: 
+ Nancy Amato 
+ Katie Driggs-Campbell 
+ Chinwe Ekenna 
+ Marco Morales 
+ Jason O'KaneNews Updates 
+  
+ Registrationis open 
+ Programhas been published 
+ 91 submissions, 47 papers accepted 
+ Student Travel Grantawards have been notified 
+ Contribute to thehref="https://docs.google.com/forms/d/e/1FAIpQLSdTJdC9RbC7F_3sqGpVwzr_3_0lYUe24DaxmSKzgjGq64RMoA/viewform?usp=sf_link" - history of WAFR
+Important Dates 
+  
+ June 13, 2024: Paper submission 
+ August 17, 2024: Acceptance notification 
+ September 18, 2024: Final manuscript submission for website 
+ September 23:Early Registration 
+ September 23 (preference): Travel Grants Applications 
+ Oct 7-9: WAFR 2024 
+ December 9, 2024: Camera-ready manuscript for SPAR book 
+ Sponsors 
+  
+ UIUC Center for Autonomy 
+ Siebel School of Computing and Data Science 
+ Parasol LabContact 
+  
+ href="mailto:wafr2024@gmail.com" - wafr2024@gmail.com
+Previous WAFRs 
+  
+ href="https://wafr2022.github.io" - WAFR 2022, College Park, USA
+ 
+ href="http://robotics.cs.rutgers.edu/wafr2020/" - WAFR 2020, Oulu, Finland
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2018/" - WAFR 2018, Mérida, México
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2016/" - WAFR 2016, San Francisco, USA
+ 
+ WAFR 2014, Istanbul, Turkey 
+ WAFR 2012, Cambridge, MA, USA 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2010/" - WAFR 2010, Singapore
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2008/" - WAFR 2008, Guanajuato, México
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2006/" - WAFR 2006, New York City, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2004" - WAFR 2004, Zeist, The Netherlands
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2002/" - WAFR 2002, Nice, France
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr2000/" - WAFR 2000, Hanover, NH, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr1998/" - WAFR 1998, Houston, TX, USA
+ 
+ href="https://parasollab.web.illinois.edu/events/wafr/wafr1996/" - WAFR 1996, Toulouse, France
+ 
+ WAFR 1994, Stanford, CA, USA | Information for Authors 
+ Manuscript submission 
+ Papers must be submitted in Portable Document Format (PDF) at ourhref="https://openreview.net/group?id=algorithmic-robotics.org/WAFR/2024/Conference" - Submission Site in OpenReview
+according to the following deadlines (UTC-12 or Anywhere on Earth): 
+ June 13, 2024 | : Paper submission deadline 
+ August 17, 2024 | : Acceptance notification 
+ September 18, 2024 | : Final manuscript for website 
+ October 7-9, 2024: WAFR 2024 
+ December 9, 2024: Camera-ready manuscript for SPAR book 
+ Manuscript preparation 
+ Manuscripts should be prepared using thehref="https://www.springernature.com/gp/authors" - Springer Proceedings in Advanced Robotics (SPAR)
+format. You can download the style/template files below: 
+ Proceedings LaTeX2e package | (preferred) 
+ MS Word 
+ Submissions should not exceed 16 pages + references in this format (references do not count towards this page limit.) 
+ As usual for WAFR, submissions are single blind (authors are listed on the manuscript) and there will be no rebuttal phase. 
+ Detailed information on manuscript preparation can be foundhere. 
+ Guidelines Regarding the Use and Disclosure of AI Tools for Authors 
+ Generative AI tools and technologies, such as ChatGPT, may not be listed as authors of a paper submitted to WAFR. The use of content generated by AI in an article (including but not limited to text, figures, images, and code) must be disclosed in the acknowledgments section. The AI system used must be identified, and specific sections of the article that use AI-generated content should be specified and accompanied by a brief explanation regarding the manner in which the AI system was used to generate the content. The use of AI systems for editing and grammar enhancement is common practice and, as such, is generally outside the intent of the above policy. Even so, in this case, disclosure is still recommended as the lines between these uses can be difficult to distinguish. 
+ Supplementary Material 
+ In the submissions before the conference, you can submit supplementary material together with the main manuscript in a separate PDF or ZIP file (50MB max file size). Please note that the program committee members are not required to check the supplementary material when preparing their reviews and we encourage you to make sure your paper is self-contained. No supplementary material will be included in the book. 
+ Keywords 
+ When submitting your manuscript, please use at least one of the following suggested keywords: 
+ Algorithmic Completeness and Complexity 
+ Algorithms for Novel Robot Mechanisms and Sensors 
+ Automation, Manufacturing & Logistics 
+ Collision Avoidance 
+ Computational Biology 
+ Computational Geometry 
+ Computer Animation & Simulation 
+ Control Theory and Optimization 
+ Dynamics 
+ Field Robotics 
+ Human-Robot Interaction 
+ Humanoids and Legged Systems 
+ Kinematics 
+ Localization and Mapping 
+ Formal Methods 
+ Machine Learning in Robotics 
+ Manipulation & Grasping 
+ Medical & Surgical Robots 
+ Micro/Nano Robots 
+ Mobile Robots 
+ Motion and Path Planning 
+ Multi-Agent Systems and Distributed Robotics 
+ Perception 
+ Service Robots 
+ Task Planning 
+ Vision and Sensor-based Control 
+  
+ Contact:href="mailto:wafr2024@gmail.com" - wafr2024@gmail.com 
+ UIUC Grainger College of EngineeringCenter for Autonomy
+

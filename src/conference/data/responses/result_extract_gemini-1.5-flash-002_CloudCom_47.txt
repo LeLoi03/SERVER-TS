@@ -1,0 +1,29 @@
+```json
+{
+  "Conference dates": "December 9 - 11, 2024",
+  "Year": "2024",
+  "Location": "Abu Dhabi, UAE",
+  "City-State-Province": "Abu Dhabi",
+  "Country": "United Arab Emirates",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop proposal": "September 6, 2024",
+    "Paper submission": "September 6, 2024"
+  },
+  "Notification Date": {
+    "Special Session/Workshop proposal notification": "September 6, 2024",
+    "Paper acceptance notification": "October 4, 2024",
+    "Author Notification": "October 4, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready": "October 30, 2024"
+  },
+  "Registration Date": {
+    "Author Registration": "October 30, 2024"
+  },
+  "Topics": "Cloud Computing, Edge Computing, Virtualization, Security, Privacy, Big Data, Systems Architecture, Service-Oriented Architecture, High-Performance Computing",
+  "Summary": "CloudCom is a premier international conference on Cloud Computing, attracting academia and industrial researchers, practitioners, engineers, and students from the fields of cloud computing, edge computing, virtualization, security and privacy, big data, systems architecture, service-oriented architecture, and high-performance computing. The 15th CloudCom in 2024 will be held in Abu Dhabi, UAE, from December 9 to December 11, 2024.",
+  "Call for Papers": "# CloudCom 2024: Call for Papers\n\nThe 15th IEEE International Conference on Cloud Computing Technology and Science (CloudCom 2024) will be held in **Abu Dhabi, UAE from December 9 to December 11, 2024**.\n\nCloudCom is a premier international conference on Cloud Computing, attracting academia and industrial researchers, practitioners, engineers, and students from various fields.\n\n## Submission Details\n\nOriginal and unpublished work must be submitted through the online submission system at: [https://easychair.org/conferences/?conf=cloudcom2024](https://easychair.org/conferences/?conf=cloudcom2024).\n\nSubmissions should not exceed 8 pages, including tables, figures, and references in IEEE CS format. The template files for LATEX or WORD can be downloaded from the IEEE site [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html). Submission must be made in PDF format only with savable text and embedded fonts. The review process will be doubly blind and so a submission should not include any information that may identify the authors of the manuscripts. Technical content of the camera-ready manuscript must be identical to the submitted version except for changes made to address TPC review comments. For each accepted submission, at least one of the co-authors must have a full conference registration and present the work in person.\n\n## Conference Tracks\n\n*   Track 1: Architecture, Storage and Virtualization\n*   Track 2: Cloud Services and Applications\n*   Track 3: Security, Privacy and Trust\n*   Track 4: Edge Computing, IoT and Distributed Cloud\n\n## Important Dates\n\n*   **Workshop proposal:** September 6, 2024\n*   **Special Session/Workshop proposal notification:** September 6, 2024\n*   **Paper submission:** September 6, 2024\n*   **Paper acceptance notification:** October 4, 2024\n*   **Author Notification:** October 4, 2024\n*   **Camera-Ready:** October 30, 2024\n*   **Author Registration:** October 30, 2024\n*   **Conference:** December 9–11, 2024\n\n## Publication\n\nAccepted and presented papers will be included into the conference proceedings. Distinguished papers presented at the conference, after further revision, will be published in special issues of selected journals to be announced."
+}
+```

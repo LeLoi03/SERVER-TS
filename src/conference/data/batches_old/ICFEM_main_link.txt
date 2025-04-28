@@ -1,0 +1,405 @@
+Conference ICFEM:
+
+Home 
+ Scope 
+ Register 
+ Venue 
+ Program 
+ href="#dates" - Important Dates 
+ Sponsors 
+ Committee 
+ The 26thInternational Conference on Formal Engineering Methods 
+ 10 - 13 November 2025 - Hangzhou, China 
+ Welcome to the website of the 26thInternational Conference on Formal Engineering Methods (ICFEM 2025) 
+ ICFEM is an international leading conference series in formal methods and software engineering. Since 1997 ICFEM has been serving as an international forum for researchers and practitioners who have been seriously applying formal methods to practical applications. Researchers and practitioners, from industry, academia and government, are encouraged to attend, present their research, and help advance the state of the art. ICFEM is interested in work that has been incorporated into real production systems, and in theoretical work that promises to bring practical and tangible benefit. ICFEM has been hosted in many countries around the world. 
+ Scope and Topics 
+ Authors are invited to submit high-quality technical papers describing original and unpublished work in all theoretical aspects of software engineering. Topics of interest include, but are not limited to: 
+ Formal specification and modeling 
+ Formal approaches to fault prevention and detection 
+ Abstraction, refinement, and evolution 
+ Formal verification and validation 
+ Integration of formal methods and testing 
+ Integration of formal methods and review 
+ SAT/SMT solvers for software analysis and testing 
+ Practical formal methods 
+ Applications of formal methods 
+ Formal approaches to software maintenance 
+ Formal approaches to safety-critical system development 
+ Supporting tools for formal methods 
+ Formal methods for agile development 
+ Formal methods for human-machine pair programming 
+ Formal methods for and with AI 
+ Formal methods for Cyber-physical systems and IoT 
+ Formal certification of products 
+ Industrial case studies 
+ Registration 
+ TBD 
+ Venue and Accomodation 
+ The 25th International Conference on Formal Engineering Methods (ICFEM 2025) will be held atHangzhou Xixi Hotel. 
+ Xixi Hotel Hangzhou is renowned for its elegant design that seamlessly integrates Chinese cultural elements with the natural beauty of the Xixi Wetland. The hotel features 281 well-appointed guest rooms, including options in the main building lakeside villas, and the exclusive State Guest area. Each room is designed with comfort in mind offering spacious layouts, private balconies, and breathtaking views of the surrounding wetlands. 
+ Booking & discount message: TBD 
+ Keynote Speakers 
+
+Jifeng Heis an Academician of the Chinese Academy of Sciences. His research focuses on formal methods, concurrent programming theory, embedded system design, and the co-design of software and hardware. He has led major national projects, including serving as Chief Scientist for the National Basic Research Program on Trustworthy Software and the 973 Program on theories and practices for massive information coordination and survivability. His work has contributed significantly to real-time embedded systems, cyber-physical systems, and the Internet of Things. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Yongwang Zhaois a Professor at Zhejiang University and a Ph.D. supervisor. He serves as a member of the ARINC653 International Operating System Standards Committee and the Common Criteria Operating System Kernel Technology Committee. His research focuses on operating system security, formal verification, and programming language principles. He has contributed to several international and national standards and has led major projects, including those for China's manned space program. His work has been recognized by Boeing, Airbus, and leading real-time operating system communities, influencing both standards and open-source projects. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Jim Woodcockis a Professor of Software Engineering at the University of York and a Fellow of the Royal Academy of Engineering. His research focuses on formal methods, software engineering, and system verification, with contributions to Z notation, CSP, and unifying theories of programming. He played a key role in the formalization of IBM's CICS transaction processing system, which won the Queen's Award for Technological Achievement, and the Mondex electronic payment system, achieving the highest ITSEC classification. He has held academic positions at Oxford, Kent, and York and is the Editor-in-Chief of Formal Aspects of Computing. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+
+Attractions 
+ Welcome to Hangzhou, a charming city in China. It combines natural allure with rich history and modern charm. Verdant mountains and serene waters offer tranquility, while ancient heritages tell tales of the past. Hi-tech zones and trendy malls reveal its dynamic present, captivating all who visit. 
+ West Lake, the crown jewel of Hangzhou, enchants visitors with its idyllic landscapes. It encompasses famed sites like the Broken Bridge, Su Causeway, Leifeng Pagoda, and Three Pools Mirroring the Moon. These spots, with their own stories and allure, draw countless eyes and make West Lake an ever-charming destination. 
+ Lingyin Temple, a time-honored Buddhist sanctuary, dates back centuries. Tucked away in verdant mountains, it features imposing architecture like the majestic Main Hall. The temple complex is filled with an air of solemnity, and the nearby Feilai Peak is adorned with exquisitely carved stone statues, a testament to ancient artistry. 
+ Xixi National Wetland Parkis a nature lover's paradise. It's a labyrinth of waterways marshes, and reed beds. Here, you can paddle a boat through tranquil canals, observe diverse bird species in their natural habitats, and soak up the fresh air, far from the city's din. 
+ Hefang Street, one of the most representative historical blocks in old Hangzhou, retains the charm of the late Qing and early Republic. Here, a dazzling array of snacks like DingSheng Cake Pian’erchuan Noodles, Stinky Tofu and Small Steamed Buns awaits. Every bite is filled with the unique flavor of Hangzhou. 
+ Hangzhou Song Cityresurrects the glory of the Song Dynasty. Entering, you're transported to an era of prosperity. Streets are lined with quaint shops selling handicrafts and traditional snacks. The nightly "Song City Romance" show is a dazzling display of lights, music, and dance, retelling historical tales and captivating audiences. 
+ The Zhejiang Provincial Museumholds over 100,000 artifacts, spanning from the Neolithic to modern times. With treasures like Hemudu and Liangzhu relics, celadon, and Buddhist items, plus ancient mirrors, coins from the Southern Song Dynasty, calligraphy and rubbings, it unveils rich regional history. 
+ Important Dates 
+ Abstract Submission: May 25, 2025 
+ Full Paper Submission: June 1, 2025 
+ Author Notification: August 1, 2025 
+ Camera-ready versions: August 20, 2025 
+ Conference dates:November 10-13,2025 
+ Conference Paper Submission and Publication 
+ Submission should be done through the ICFEM 2025 submission page(the web page is under construction). 
+ As in previous years, the proceedings will be published in the Springer Lecture Notes in Computer Science series. 
+ Papers should be written in English and should not exceed 16 pages (excluding references and appendix) in the Springer's LNCS format. Each submission will undergo a rigoroussingle-blind pear-review process by at least three experts. Extended versions of selected papers will berecommended to special issues of Formal Aspects of Computing after the conference proceedings. Formatting style files and further guidelines for formatting can be found at the Springer website (more detailshere). 
+ We suggest, though it is not obligatory, that authors include line numbers in their submissions to facilitate the review process. Additionally, authors are encouraged to mention if there are any available artifacts related to their research, such as datasets, software, or supplementary materials, which could enhance the understanding and reproducibility of their work. 
+ Journal-First Presentations 
+ ICFEM 2025 is inviting journal-first presentations of papers published recently in the following journals: 
+ ACM Transactions on Programming Languages and Systems 
+ ACM Transactions on Software Engineering and Methodology 
+ Formal Aspects of Computing 
+ Formal Methods in System Design 
+ IEEE Transactions on Software Engineering 
+ Theoretical Computer Science 
+ The presentations will offer the authors an opportunity to speak directly to their peers in the community and also enrich the ICFEM program. The journal-first presentation will be listed in the conference program yet the corresponding papers will not be part of the ICFEM proceedings as they have been published through the journals. At least one author of each accepted journal-first presentation must register for and attend the ICFEM conference to present the paper. 
+ Evaluation and Selection 
+ Detailed criteria on journal-first presentation submitted to ICFEM is TBD. 
+ How to Submit 
+ Interested authors should submit a short presentation proposal consisting of the paper title, abstract, a short statement on how the work satisfies the above criteria, and the PDF of the original journal paper. Please submit a single PDF file and list all authors of the original journal paper as authors in EasyChair. No special formatting is required. 
+ Doctoral Symposium Paper Submission 
+ The ICFEM Doctoral Symposium is an international forum for PhD students studying all areas related to formal methods for software, hardware and system development. This forum is an excellent opportunity bringing together PhD students and well-known established researchers from the formal methods community. It will also provide PhD students with fruitful feedback and advice on their research approach and enable them to interact with other PhD students in order to stimulate the exchange of ideas and the sharing of experiences among participants. In summary, the PhD forum will provide PhD students with an ideal opportunity to present, share and discuss their research in a constructive and critical scientific atmosphere. 
+ We seek submissions from PhD students who have either determined the direction of their thesis research (probably with some preliminary results already published), but who still have substantial work to complete; or PhD student participants who are in the early stages of their dissertations. It is not required to have a paper accepted at the main conference in order to participate in the ICFEM Doctoral Symposium. 
+ Submissions to the Doctoral Symposium should include: Title of the research, the author name (single name) and affiliation; Context and motivation; Problem statement and related work; Proposed solutions and current research efforts, their significance, methodology, results and analysis, and future work. The paper should be prepared using theLNCS formatand submitted in PDF format via EasyChair. 
+ We accept two types of submissions:(a)2-page extended abstracts which will not be included in the ICFEM proceedings; and(b)6-page papers which will be published in the LNCS volume of Springer as part of the main ICFEM proceedings. 
+ Authors with accepted submissions are expected to attend the Doctoral Symposium in person to present their work. A discounted registration fee for Doctoral Symposium participants will be announced later. 
+ Official Sponsors 
+ TBD 
+  
+ ICFEM'25 is an outstanding opportunity for you to reach the "thought leaders" in this industry with your message, and for your Software Engineering team to network and exchange ideas with their peers in this unique and innovative forum. 
+ Sponsors are offered the opportunity to reach over 100 software engineering experts, including researchers and industry practitioners such as developers, QA and engineering managers. 
+ New sponsorship are welcome and any entity wishing to become an official sponsor may contact the sponsorship chair. 
+ Conference Organizing Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Jifeng He, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan (Chair) 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Teesside University, UK 
+ Conference Co-Chairs 
+ Xinyu Wang, Zhejiang University, China 
+ Wenhai Wang, Zhejiang University, China 
+ Program Co-Chairs 
+ Étienne André, Université Sorbonne Paris Nord,France 
+ Naijun Zhan, Peking University, China 
+ Jingyi Wang, Zhejiang University, China 
+ Honorable Chairs 
+ Jifeng He, Tongji University, China 
+ Huimin LIN, Chinese Academy of Sciences, China 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Tutorial Chair 
+ Dongxia Wang, Zhejiang University, China 
+ Finance Chair 
+ Ling Shi, Nanyang Technological University, Singapore 
+ Publicity Chair 
+ Jie An, Chinese Academy of Sciences, China 
+ Yamine Aït-Ameur, University of Toulouse, France 
+ Workshop Chair 
+ href="https://fiction-zju.github.io/author/mingshuai-chen/" - Mingshuai Chen
+, Zhejiang University, China 
+ Program Committee 
+ TBD 
+
+Call for Papers information:
+Home 
+ Scope 
+ Register 
+ Venue 
+ Program 
+ href="#dates" - Important Dates 
+ Sponsors 
+ Committee 
+ The 26thInternational Conference on Formal Engineering Methods 
+ 10 - 13 November 2025 - Hangzhou, China 
+ Welcome to the website of the 26thInternational Conference on Formal Engineering Methods (ICFEM 2025) 
+ ICFEM is an international leading conference series in formal methods and software engineering. Since 1997 ICFEM has been serving as an international forum for researchers and practitioners who have been seriously applying formal methods to practical applications. Researchers and practitioners, from industry, academia and government, are encouraged to attend, present their research, and help advance the state of the art. ICFEM is interested in work that has been incorporated into real production systems, and in theoretical work that promises to bring practical and tangible benefit. ICFEM has been hosted in many countries around the world. 
+ Scope and Topics 
+ Authors are invited to submit high-quality technical papers describing original and unpublished work in all theoretical aspects of software engineering. Topics of interest include, but are not limited to: 
+ Formal specification and modeling 
+ Formal approaches to fault prevention and detection 
+ Abstraction, refinement, and evolution 
+ Formal verification and validation 
+ Integration of formal methods and testing 
+ Integration of formal methods and review 
+ SAT/SMT solvers for software analysis and testing 
+ Practical formal methods 
+ Applications of formal methods 
+ Formal approaches to software maintenance 
+ Formal approaches to safety-critical system development 
+ Supporting tools for formal methods 
+ Formal methods for agile development 
+ Formal methods for human-machine pair programming 
+ Formal methods for and with AI 
+ Formal methods for Cyber-physical systems and IoT 
+ Formal certification of products 
+ Industrial case studies 
+ Registration 
+ TBD 
+ Venue and Accomodation 
+ The 25th International Conference on Formal Engineering Methods (ICFEM 2025) will be held atHangzhou Xixi Hotel. 
+ Xixi Hotel Hangzhou is renowned for its elegant design that seamlessly integrates Chinese cultural elements with the natural beauty of the Xixi Wetland. The hotel features 281 well-appointed guest rooms, including options in the main building lakeside villas, and the exclusive State Guest area. Each room is designed with comfort in mind offering spacious layouts, private balconies, and breathtaking views of the surrounding wetlands. 
+ Booking & discount message: TBD 
+ Keynote Speakers 
+
+Jifeng Heis an Academician of the Chinese Academy of Sciences. His research focuses on formal methods, concurrent programming theory, embedded system design, and the co-design of software and hardware. He has led major national projects, including serving as Chief Scientist for the National Basic Research Program on Trustworthy Software and the 973 Program on theories and practices for massive information coordination and survivability. His work has contributed significantly to real-time embedded systems, cyber-physical systems, and the Internet of Things. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Yongwang Zhaois a Professor at Zhejiang University and a Ph.D. supervisor. He serves as a member of the ARINC653 International Operating System Standards Committee and the Common Criteria Operating System Kernel Technology Committee. His research focuses on operating system security, formal verification, and programming language principles. He has contributed to several international and national standards and has led major projects, including those for China's manned space program. His work has been recognized by Boeing, Airbus, and leading real-time operating system communities, influencing both standards and open-source projects. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Jim Woodcockis a Professor of Software Engineering at the University of York and a Fellow of the Royal Academy of Engineering. His research focuses on formal methods, software engineering, and system verification, with contributions to Z notation, CSP, and unifying theories of programming. He played a key role in the formalization of IBM's CICS transaction processing system, which won the Queen's Award for Technological Achievement, and the Mondex electronic payment system, achieving the highest ITSEC classification. He has held academic positions at Oxford, Kent, and York and is the Editor-in-Chief of Formal Aspects of Computing. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+
+Attractions 
+ Welcome to Hangzhou, a charming city in China. It combines natural allure with rich history and modern charm. Verdant mountains and serene waters offer tranquility, while ancient heritages tell tales of the past. Hi-tech zones and trendy malls reveal its dynamic present, captivating all who visit. 
+ West Lake, the crown jewel of Hangzhou, enchants visitors with its idyllic landscapes. It encompasses famed sites like the Broken Bridge, Su Causeway, Leifeng Pagoda, and Three Pools Mirroring the Moon. These spots, with their own stories and allure, draw countless eyes and make West Lake an ever-charming destination. 
+ Lingyin Temple, a time-honored Buddhist sanctuary, dates back centuries. Tucked away in verdant mountains, it features imposing architecture like the majestic Main Hall. The temple complex is filled with an air of solemnity, and the nearby Feilai Peak is adorned with exquisitely carved stone statues, a testament to ancient artistry. 
+ Xixi National Wetland Parkis a nature lover's paradise. It's a labyrinth of waterways marshes, and reed beds. Here, you can paddle a boat through tranquil canals, observe diverse bird species in their natural habitats, and soak up the fresh air, far from the city's din. 
+ Hefang Street, one of the most representative historical blocks in old Hangzhou, retains the charm of the late Qing and early Republic. Here, a dazzling array of snacks like DingSheng Cake Pian’erchuan Noodles, Stinky Tofu and Small Steamed Buns awaits. Every bite is filled with the unique flavor of Hangzhou. 
+ Hangzhou Song Cityresurrects the glory of the Song Dynasty. Entering, you're transported to an era of prosperity. Streets are lined with quaint shops selling handicrafts and traditional snacks. The nightly "Song City Romance" show is a dazzling display of lights, music, and dance, retelling historical tales and captivating audiences. 
+ The Zhejiang Provincial Museumholds over 100,000 artifacts, spanning from the Neolithic to modern times. With treasures like Hemudu and Liangzhu relics, celadon, and Buddhist items, plus ancient mirrors, coins from the Southern Song Dynasty, calligraphy and rubbings, it unveils rich regional history. 
+ Important Dates 
+ Abstract Submission: May 25, 2025 
+ Full Paper Submission: June 1, 2025 
+ Author Notification: August 1, 2025 
+ Camera-ready versions: August 20, 2025 
+ Conference dates:November 10-13,2025 
+ Conference Paper Submission and Publication 
+ Submission should be done through the ICFEM 2025 submission page(the web page is under construction). 
+ As in previous years, the proceedings will be published in the Springer Lecture Notes in Computer Science series. 
+ Papers should be written in English and should not exceed 16 pages (excluding references and appendix) in the Springer's LNCS format. Each submission will undergo a rigoroussingle-blind pear-review process by at least three experts. Extended versions of selected papers will berecommended to special issues of Formal Aspects of Computing after the conference proceedings. Formatting style files and further guidelines for formatting can be found at the Springer website (more detailshere). 
+ We suggest, though it is not obligatory, that authors include line numbers in their submissions to facilitate the review process. Additionally, authors are encouraged to mention if there are any available artifacts related to their research, such as datasets, software, or supplementary materials, which could enhance the understanding and reproducibility of their work. 
+ Journal-First Presentations 
+ ICFEM 2025 is inviting journal-first presentations of papers published recently in the following journals: 
+ ACM Transactions on Programming Languages and Systems 
+ ACM Transactions on Software Engineering and Methodology 
+ Formal Aspects of Computing 
+ Formal Methods in System Design 
+ IEEE Transactions on Software Engineering 
+ Theoretical Computer Science 
+ The presentations will offer the authors an opportunity to speak directly to their peers in the community and also enrich the ICFEM program. The journal-first presentation will be listed in the conference program yet the corresponding papers will not be part of the ICFEM proceedings as they have been published through the journals. At least one author of each accepted journal-first presentation must register for and attend the ICFEM conference to present the paper. 
+ Evaluation and Selection 
+ Detailed criteria on journal-first presentation submitted to ICFEM is TBD. 
+ How to Submit 
+ Interested authors should submit a short presentation proposal consisting of the paper title, abstract, a short statement on how the work satisfies the above criteria, and the PDF of the original journal paper. Please submit a single PDF file and list all authors of the original journal paper as authors in EasyChair. No special formatting is required. 
+ Doctoral Symposium Paper Submission 
+ The ICFEM Doctoral Symposium is an international forum for PhD students studying all areas related to formal methods for software, hardware and system development. This forum is an excellent opportunity bringing together PhD students and well-known established researchers from the formal methods community. It will also provide PhD students with fruitful feedback and advice on their research approach and enable them to interact with other PhD students in order to stimulate the exchange of ideas and the sharing of experiences among participants. In summary, the PhD forum will provide PhD students with an ideal opportunity to present, share and discuss their research in a constructive and critical scientific atmosphere. 
+ We seek submissions from PhD students who have either determined the direction of their thesis research (probably with some preliminary results already published), but who still have substantial work to complete; or PhD student participants who are in the early stages of their dissertations. It is not required to have a paper accepted at the main conference in order to participate in the ICFEM Doctoral Symposium. 
+ Submissions to the Doctoral Symposium should include: Title of the research, the author name (single name) and affiliation; Context and motivation; Problem statement and related work; Proposed solutions and current research efforts, their significance, methodology, results and analysis, and future work. The paper should be prepared using theLNCS formatand submitted in PDF format via EasyChair. 
+ We accept two types of submissions:(a)2-page extended abstracts which will not be included in the ICFEM proceedings; and(b)6-page papers which will be published in the LNCS volume of Springer as part of the main ICFEM proceedings. 
+ Authors with accepted submissions are expected to attend the Doctoral Symposium in person to present their work. A discounted registration fee for Doctoral Symposium participants will be announced later. 
+ Official Sponsors 
+ TBD 
+  
+ ICFEM'25 is an outstanding opportunity for you to reach the "thought leaders" in this industry with your message, and for your Software Engineering team to network and exchange ideas with their peers in this unique and innovative forum. 
+ Sponsors are offered the opportunity to reach over 100 software engineering experts, including researchers and industry practitioners such as developers, QA and engineering managers. 
+ New sponsorship are welcome and any entity wishing to become an official sponsor may contact the sponsorship chair. 
+ Conference Organizing Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Jifeng He, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan (Chair) 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Teesside University, UK 
+ Conference Co-Chairs 
+ Xinyu Wang, Zhejiang University, China 
+ Wenhai Wang, Zhejiang University, China 
+ Program Co-Chairs 
+ Étienne André, Université Sorbonne Paris Nord,France 
+ Naijun Zhan, Peking University, China 
+ Jingyi Wang, Zhejiang University, China 
+ Honorable Chairs 
+ Jifeng He, Tongji University, China 
+ Huimin LIN, Chinese Academy of Sciences, China 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Tutorial Chair 
+ Dongxia Wang, Zhejiang University, China 
+ Finance Chair 
+ Ling Shi, Nanyang Technological University, Singapore 
+ Publicity Chair 
+ Jie An, Chinese Academy of Sciences, China 
+ Yamine Aït-Ameur, University of Toulouse, France 
+ Workshop Chair 
+ href="https://fiction-zju.github.io/author/mingshuai-chen/" - Mingshuai Chen
+, Zhejiang University, China 
+ Program Committee 
+ TBD 
+
+Important Dates information:
+Home 
+ Scope 
+ Register 
+ Venue 
+ Program 
+ href="#dates" - Important Dates 
+ Sponsors 
+ Committee 
+ The 26thInternational Conference on Formal Engineering Methods 
+ 10 - 13 November 2025 - Hangzhou, China 
+ Welcome to the website of the 26thInternational Conference on Formal Engineering Methods (ICFEM 2025) 
+ ICFEM is an international leading conference series in formal methods and software engineering. Since 1997 ICFEM has been serving as an international forum for researchers and practitioners who have been seriously applying formal methods to practical applications. Researchers and practitioners, from industry, academia and government, are encouraged to attend, present their research, and help advance the state of the art. ICFEM is interested in work that has been incorporated into real production systems, and in theoretical work that promises to bring practical and tangible benefit. ICFEM has been hosted in many countries around the world. 
+ Scope and Topics 
+ Authors are invited to submit high-quality technical papers describing original and unpublished work in all theoretical aspects of software engineering. Topics of interest include, but are not limited to: 
+ Formal specification and modeling 
+ Formal approaches to fault prevention and detection 
+ Abstraction, refinement, and evolution 
+ Formal verification and validation 
+ Integration of formal methods and testing 
+ Integration of formal methods and review 
+ SAT/SMT solvers for software analysis and testing 
+ Practical formal methods 
+ Applications of formal methods 
+ Formal approaches to software maintenance 
+ Formal approaches to safety-critical system development 
+ Supporting tools for formal methods 
+ Formal methods for agile development 
+ Formal methods for human-machine pair programming 
+ Formal methods for and with AI 
+ Formal methods for Cyber-physical systems and IoT 
+ Formal certification of products 
+ Industrial case studies 
+ Registration 
+ TBD 
+ Venue and Accomodation 
+ The 25th International Conference on Formal Engineering Methods (ICFEM 2025) will be held atHangzhou Xixi Hotel. 
+ Xixi Hotel Hangzhou is renowned for its elegant design that seamlessly integrates Chinese cultural elements with the natural beauty of the Xixi Wetland. The hotel features 281 well-appointed guest rooms, including options in the main building lakeside villas, and the exclusive State Guest area. Each room is designed with comfort in mind offering spacious layouts, private balconies, and breathtaking views of the surrounding wetlands. 
+ Booking & discount message: TBD 
+ Keynote Speakers 
+
+Jifeng Heis an Academician of the Chinese Academy of Sciences. His research focuses on formal methods, concurrent programming theory, embedded system design, and the co-design of software and hardware. He has led major national projects, including serving as Chief Scientist for the National Basic Research Program on Trustworthy Software and the 973 Program on theories and practices for massive information coordination and survivability. His work has contributed significantly to real-time embedded systems, cyber-physical systems, and the Internet of Things. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Yongwang Zhaois a Professor at Zhejiang University and a Ph.D. supervisor. He serves as a member of the ARINC653 International Operating System Standards Committee and the Common Criteria Operating System Kernel Technology Committee. His research focuses on operating system security, formal verification, and programming language principles. He has contributed to several international and national standards and has led major projects, including those for China's manned space program. His work has been recognized by Boeing, Airbus, and leading real-time operating system communities, influencing both standards and open-source projects. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Jim Woodcockis a Professor of Software Engineering at the University of York and a Fellow of the Royal Academy of Engineering. His research focuses on formal methods, software engineering, and system verification, with contributions to Z notation, CSP, and unifying theories of programming. He played a key role in the formalization of IBM's CICS transaction processing system, which won the Queen's Award for Technological Achievement, and the Mondex electronic payment system, achieving the highest ITSEC classification. He has held academic positions at Oxford, Kent, and York and is the Editor-in-Chief of Formal Aspects of Computing. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+
+Attractions 
+ Welcome to Hangzhou, a charming city in China. It combines natural allure with rich history and modern charm. Verdant mountains and serene waters offer tranquility, while ancient heritages tell tales of the past. Hi-tech zones and trendy malls reveal its dynamic present, captivating all who visit. 
+ West Lake, the crown jewel of Hangzhou, enchants visitors with its idyllic landscapes. It encompasses famed sites like the Broken Bridge, Su Causeway, Leifeng Pagoda, and Three Pools Mirroring the Moon. These spots, with their own stories and allure, draw countless eyes and make West Lake an ever-charming destination. 
+ Lingyin Temple, a time-honored Buddhist sanctuary, dates back centuries. Tucked away in verdant mountains, it features imposing architecture like the majestic Main Hall. The temple complex is filled with an air of solemnity, and the nearby Feilai Peak is adorned with exquisitely carved stone statues, a testament to ancient artistry. 
+ Xixi National Wetland Parkis a nature lover's paradise. It's a labyrinth of waterways marshes, and reed beds. Here, you can paddle a boat through tranquil canals, observe diverse bird species in their natural habitats, and soak up the fresh air, far from the city's din. 
+ Hefang Street, one of the most representative historical blocks in old Hangzhou, retains the charm of the late Qing and early Republic. Here, a dazzling array of snacks like DingSheng Cake Pian’erchuan Noodles, Stinky Tofu and Small Steamed Buns awaits. Every bite is filled with the unique flavor of Hangzhou. 
+ Hangzhou Song Cityresurrects the glory of the Song Dynasty. Entering, you're transported to an era of prosperity. Streets are lined with quaint shops selling handicrafts and traditional snacks. The nightly "Song City Romance" show is a dazzling display of lights, music, and dance, retelling historical tales and captivating audiences. 
+ The Zhejiang Provincial Museumholds over 100,000 artifacts, spanning from the Neolithic to modern times. With treasures like Hemudu and Liangzhu relics, celadon, and Buddhist items, plus ancient mirrors, coins from the Southern Song Dynasty, calligraphy and rubbings, it unveils rich regional history. 
+ Important Dates 
+ Abstract Submission: May 25, 2025 
+ Full Paper Submission: June 1, 2025 
+ Author Notification: August 1, 2025 
+ Camera-ready versions: August 20, 2025 
+ Conference dates:November 10-13,2025 
+ Conference Paper Submission and Publication 
+ Submission should be done through the ICFEM 2025 submission page(the web page is under construction). 
+ As in previous years, the proceedings will be published in the Springer Lecture Notes in Computer Science series. 
+ Papers should be written in English and should not exceed 16 pages (excluding references and appendix) in the Springer's LNCS format. Each submission will undergo a rigoroussingle-blind pear-review process by at least three experts. Extended versions of selected papers will berecommended to special issues of Formal Aspects of Computing after the conference proceedings. Formatting style files and further guidelines for formatting can be found at the Springer website (more detailshere). 
+ We suggest, though it is not obligatory, that authors include line numbers in their submissions to facilitate the review process. Additionally, authors are encouraged to mention if there are any available artifacts related to their research, such as datasets, software, or supplementary materials, which could enhance the understanding and reproducibility of their work. 
+ Journal-First Presentations 
+ ICFEM 2025 is inviting journal-first presentations of papers published recently in the following journals: 
+ ACM Transactions on Programming Languages and Systems 
+ ACM Transactions on Software Engineering and Methodology 
+ Formal Aspects of Computing 
+ Formal Methods in System Design 
+ IEEE Transactions on Software Engineering 
+ Theoretical Computer Science 
+ The presentations will offer the authors an opportunity to speak directly to their peers in the community and also enrich the ICFEM program. The journal-first presentation will be listed in the conference program yet the corresponding papers will not be part of the ICFEM proceedings as they have been published through the journals. At least one author of each accepted journal-first presentation must register for and attend the ICFEM conference to present the paper. 
+ Evaluation and Selection 
+ Detailed criteria on journal-first presentation submitted to ICFEM is TBD. 
+ How to Submit 
+ Interested authors should submit a short presentation proposal consisting of the paper title, abstract, a short statement on how the work satisfies the above criteria, and the PDF of the original journal paper. Please submit a single PDF file and list all authors of the original journal paper as authors in EasyChair. No special formatting is required. 
+ Doctoral Symposium Paper Submission 
+ The ICFEM Doctoral Symposium is an international forum for PhD students studying all areas related to formal methods for software, hardware and system development. This forum is an excellent opportunity bringing together PhD students and well-known established researchers from the formal methods community. It will also provide PhD students with fruitful feedback and advice on their research approach and enable them to interact with other PhD students in order to stimulate the exchange of ideas and the sharing of experiences among participants. In summary, the PhD forum will provide PhD students with an ideal opportunity to present, share and discuss their research in a constructive and critical scientific atmosphere. 
+ We seek submissions from PhD students who have either determined the direction of their thesis research (probably with some preliminary results already published), but who still have substantial work to complete; or PhD student participants who are in the early stages of their dissertations. It is not required to have a paper accepted at the main conference in order to participate in the ICFEM Doctoral Symposium. 
+ Submissions to the Doctoral Symposium should include: Title of the research, the author name (single name) and affiliation; Context and motivation; Problem statement and related work; Proposed solutions and current research efforts, their significance, methodology, results and analysis, and future work. The paper should be prepared using theLNCS formatand submitted in PDF format via EasyChair. 
+ We accept two types of submissions:(a)2-page extended abstracts which will not be included in the ICFEM proceedings; and(b)6-page papers which will be published in the LNCS volume of Springer as part of the main ICFEM proceedings. 
+ Authors with accepted submissions are expected to attend the Doctoral Symposium in person to present their work. A discounted registration fee for Doctoral Symposium participants will be announced later. 
+ Official Sponsors 
+ TBD 
+  
+ ICFEM'25 is an outstanding opportunity for you to reach the "thought leaders" in this industry with your message, and for your Software Engineering team to network and exchange ideas with their peers in this unique and innovative forum. 
+ Sponsors are offered the opportunity to reach over 100 software engineering experts, including researchers and industry practitioners such as developers, QA and engineering managers. 
+ New sponsorship are welcome and any entity wishing to become an official sponsor may contact the sponsorship chair. 
+ Conference Organizing Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Jifeng He, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan (Chair) 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Teesside University, UK 
+ Conference Co-Chairs 
+ Xinyu Wang, Zhejiang University, China 
+ Wenhai Wang, Zhejiang University, China 
+ Program Co-Chairs 
+ Étienne André, Université Sorbonne Paris Nord,France 
+ Naijun Zhan, Peking University, China 
+ Jingyi Wang, Zhejiang University, China 
+ Honorable Chairs 
+ Jifeng He, Tongji University, China 
+ Huimin LIN, Chinese Academy of Sciences, China 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Tutorial Chair 
+ Dongxia Wang, Zhejiang University, China 
+ Finance Chair 
+ Ling Shi, Nanyang Technological University, Singapore 
+ Publicity Chair 
+ Jie An, Chinese Academy of Sciences, China 
+ Yamine Aït-Ameur, University of Toulouse, France 
+ Workshop Chair 
+ href="https://fiction-zju.github.io/author/mingshuai-chen/" - Mingshuai Chen
+, Zhejiang University, China 
+ Program Committee 
+ TBD

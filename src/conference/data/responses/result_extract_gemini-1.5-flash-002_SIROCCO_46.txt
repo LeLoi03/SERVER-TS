@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "June 2 - 4, 2025",
+  "Year": "2025",
+  "Location": "Delphi, Greece",
+  "City-State-Province": "Delphi",
+  "Country": "Greece",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Original Abstract submission Duedate": "November 2, 2024",
+    "Full paper submission": "November 8, 2024"
+  },
+  "Notification Date": {
+    "Notification": "January 31, 2025"
+  },
+  "Registration Date": {
+    "Early registration": "April 25, 2025",
+    "Late registration": "May 10, 2025"
+  },
+  "Other Date": {
+    "Conference": "June 2-4, 2025",
+    "Welcome reception": "June 1st, 2025"
+  },
+  "Topics": "Distributed algorithms and computability, Distributed graph algorithms, Shared-memory algorithms, Network modeling and analysis, Fault tolerance, Self-stabilization, Security in distributed computing, Structural and communication complexity analysis, Epistemic modeling and analysis of distributed systems, Game theory in distributed computing, Topology in distributed computing, Wireless, ad-hoc, and peer-to-peer networks, Mobile agents and autonomous distributed systems, Blockchains and related distributed paradigms, Digital circuits and systems on chip, Biological and nature-inspired distributed algorithms",
+  "Summary": "The 32nd International Colloquium On Structural Information and Communication Complexity (SIROCCO 2025) will take place on June 2-4, 2025, in Delphi, Greece. SIROCCO is devoted to the study of the interplay between structural knowledge, communication, and computing in decentralized systems of multiple communicating entities.",
+  "Call for Papers": "# SIROCCO 2025: Call for Papers\n\nThe 32nd International Colloquium On Structural Information and Communication Complexity (SIROCCO 2025) will take place on **June 2-4, 2025, in Delphi, Greece**.\n\nSIROCCO is devoted to the study of the interplay between structural knowledge, communication, and computing in decentralized systems of multiple communicating entities. Special emphasis is given to innovative methodological and solution approaches leading to a better understanding of the relationship between computing and communication.\n\n## Keynote Speakers\n\n*   Hagit Attiya, Technion\n*   Joseph Y. Halpern, Cornell University\n*   Christos Papadimitriou, Columbia University and Archimedes AI\n\n## Topics of Interest\n\nOriginal papers are solicited from all areas of study of local structural knowledge and global communication and computational complexities, in particular:\n\n*   Distributed algorithms and computability\n*   Distributed graph algorithms\n*   Shared-memory algorithms\n*   Network modeling and analysis\n*   Fault tolerance\n*   Self-stabilization\n*   Security in distributed computing\n*   Structural and communication complexity analysis\n*   Epistemic modeling and analysis of distributed systems\n*   Game theory in distributed computing\n*   Topology in distributed computing\n*   Wireless, ad-hoc, and peer-to-peer networks\n*   Mobile agents and autonomous distributed systems\n*   Blockchains and related distributed paradigms\n*   Digital circuits and systems on chip\n*   Biological and nature-inspired distributed algorithms\n\nNew areas are also welcome.\n\n## Important Dates\n\n*   **Original Abstract submission Duedate:** November 2, 2024 (AoE)\n*   **Full paper submission:** November 8, 2024 (AoE)\n*   **Notification:** January 31, 2025\n*   **Early registration:** Up to April 25, 2025\n*   **Late registration:** Up to May 10, 2025\n*   **Conference:** June 2-4, 2025 (with welcome reception on June 1st)\n\n## Submission Instructions\n\nA submission must report on original research and contain results that have not appeared previously in a regular conference paper and have not been concurrently submitted to or previously appeared in a journal or a conference with published proceedings.\n\nThe papers must be submitted in PDF format using [EasyChair](https://easychair.org/conferences/?conf=sirocco2025). Submissions must be written in English and formatted in a single column on US letter-size or A4 size paper, use at least 11-point font, and have at least 2.5 cm margins.\n\nAll submissions must start with the paper’s title, author names, and a short abstract. There is no page limit, but it is mandatory that the paper contains, within the first 14 pages, a concise and clear presentation of the primary content and merits of the paper. Everything beyond 14 pages will be read at the discretion of the reviewers only.\n\n## Proceedings\n\nThe proceedings of SIROCCO 2025 will be published by Springer in the Lecture Notes in Computer Science (LNCS) series. Note carefully that inclusion in the proceedings requires a presentation by one of the authors at the conference site and at least one full registration for every full paper.\n\n## Special Issue\n\nSelected papers from SIROCCO 2025 will be invited to a special issue of the journal Theoretical Computer Science.\n\n## Best Paper Awards\n\nAll regular papers are eligible for the best paper award. All regular papers that have at least one student author, and these student authors have done most of the work, are also eligible for the best student paper award. If a submission is eligible for the best student paper award, please state that on the first page."
+}
+

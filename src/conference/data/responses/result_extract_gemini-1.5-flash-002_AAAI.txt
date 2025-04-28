@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "February 25 - March 4, 2025",
+  "Year": "2025",
+  "Location": "Pennsylvania Convention Center, Philadelphia, Pennsylvania, USA",
+  "City-State-Province": "Philadelphia, Pennsylvania",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "AAAI-25 web site open for paper submission": "July 8, 2024",
+    "Abstracts due": "August 7, 2024",
+    "Full papers due": "August 15, 2024",
+    "Supplementary material and code due": "August 19, 2024"
+  },
+  "Notification Date": {
+    "Notification of Phase 1 rejections": "October 14, 2024",
+    "Notification of final acceptance or rejection (Main Technical Track)": "December 9, 2024"
+  },
+  "Camera-ready Date": {
+    "Submission of camera-ready files (Main Technical Track)": "December 19, 2024"
+  },
+  "Other Date": {
+    "Author feedback window": "November 4-8, 2024"
+  },
+  "Topics": "Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, Data Mining, Multiagent Systems, Knowledge Representation, Human-in-the-loop AI, Search, Planning, Reasoning, Robotics and Perception, Ethics",
+  "Summary": "The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in Philadelphia, Pennsylvania, at the Pennsylvania Convention Center from February 25 to March 4, 2025.  The conference promotes research in Artificial Intelligence and fosters scientific exchange between researchers, practitioners, scientists, students, and engineers.",
+  "Call for Papers": "# AAAI-25: Main Technical Track Call for Papers\n\nThe Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25) will be held in **Philadelphia, Pennsylvania, at the Pennsylvania Convention Center from February 25 to March 4, 2025.**\n\n## Theme\n\nThe theme of this conference is to create collaborative bridges within and beyond AI.  We also emphasize the importance of AI for social impact and responsible AI.\n\n## Tracks\n\nAAAI-25 will feature three technical tracks:\n\n1.  Main Track\n2.  Special Track on AI for Social Impact\n3.  Special Track on AI Alignment\n\n## Submission Guidelines\n\n*   Two-phase reviewing: two reviews in Phase 1, additional reviews in Phase 2 for papers not rejected in Phase 1. Author response after Phase 2, only for papers not rejected in Phase 1.\n*   Three kinds of supplementary material may be submitted alongside all papers: (1) technical appendix; (2) multimedia; (3) code and data. Supplementary material deadline is 3 days after the paper submission deadline.\n*   Additional pages for references only.\n*   All authors must complete a reproducibility checklist.\n*   All authors are expected to be available to review (light load), unless extenuating circumstances apply.\n\n## Important Dates\n\nNote: all deadlines are “anywhere on earth” (UTC-12)\n\n*   **AAAI-25 web site open for paper submission:** July 8, 2024\n*   **Abstracts due:** August 7, 2024\n*   **Full papers due:** August 15, 2024\n*   **Supplementary material and code due:** August 19, 2024\n*   **Notification of Phase 1 rejections:** October 14, 2024\n*   **Author feedback window:** November 4-8, 2024\n*   **Notification of final acceptance or rejection (Main Technical Track):** December 9, 2024\n*   **Submission of camera-ready files (Main Technical Track):** December 19, 2024\n*   **AAAI-25 Conference:** February 27 – March 4, 2025\n\nNote: Deadlines are track-specific and may differ from those listed above. Track-specific deadlines are listed on their respective CFP.\n\n## Submission Site\n\nAAAI-25 author registration and paper submissions will be accepted via OpenReview ([https://openreview.net/](https://openreview.net/)).\n\n## Plagiarism & Use of ChatGPT or similar LLMs Policy\n\nPapers that include text generated from a large-scale language model (LLM) such as ChatGPT are prohibited unless the produced text is presented as a part of the paper’s experimental analysis. This policy does not prohibit authors from using LLMs for editing or polishing author-written text.\n\n## Contact\n\nDirect inquiries about the submission process and the technical program to [workflowchairs25@aaai.zendesk.com](mailto:workflowchairs25@aaai.zendesk.com) and [pcchairs25@aaai.zendesk.com](mailto:pcchairs25@aaai.zendesk.com) respectively.  Other general inquiries to the AAAI-25 General and Program Co-chairs can be directed to [aaai25chairs@aaai.org](mailto:aaai25chairs@aaai.org)."
+}
+```

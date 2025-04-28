@@ -1,0 +1,914 @@
+Conference International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward):
+
+href="https://2025.splashcon.org" - SPLASH 2025
+Sun 12 - Sat 18 October 2025href="https://2025.splashcon.org/venue/splash-2025-venue" - Singapore
+co-located withhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+Toggle navigation 
+ Attending | href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct 
+ Call for Sponsorship 
+ href="#" - Tracks | SPLASH 2025 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops 
+ Co-hosted Conferences 
+ href="#" - ICFP | href="https://icfp25.sigplan.org" - ICFP 
+ href="https://icfp25.sigplan.org/track/icfp-2025-artifacts" - ICFP  Artifacts 
+ href="https://icfp25.sigplan.org/track/icfp-2025-papers" - ICFP  Papers 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop  @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 
+ SAS | href="https://2025.splashcon.org/home/sas-2025" - SAS 
+ href="https://2025.splashcon.org/track/sas-2025-sas-artifact" - SAS  Artifact 
+ Organization | SPLASH 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | OOPSLA Review Committee 
+ External Review / Artifact Evaluation Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-oopsla-artifacts-artifact-evaluation-committee" - OOPSLA Artifacts 
+ href="#" - Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-Posters-organizing-committee" - Posters 
+ href="#" - Student Research Competition | href="https://2025.splashcon.org/committee/splash-2025-SRC-organizers" - Organizers 
+ href="https://2025.splashcon.org/committee/splash-2025-SRC-reviewers" - Reviewers 
+ ICFP/SPLASH 
+ href="https://conf.researchr.org/committee/icfp-splash-2025/icfp-splash-2025-workshops-workshop-selection-committee" - Workshops 
+ Contributors 
+ href="https://2025.splashcon.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - ICFP | Organizing Committee 
+ Steering Committee 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe" - ICFP Artifacts 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-papers-icfp-papers-and-events" - ICFP Papers 
+ MPLR | Program Committee 
+ Steering Committee 
+ Workshops 
+ Erlang | Organizing Committee 
+ Program Committee 
+ FProPer | Program Committee 
+ FUNARCH | Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ HOPE | Program Committee 
+ LMPL | Organizing Committee 
+ Program Committee 
+ ML Family Workshop | Program Committee 
+ OCaml | Program Committee 
+ PAINT | Program Committee 
+ href="#" - PLMW @ ICFP/SPLASH | Program Committee 
+ PROPL | href="https://conf.researchr.org/committee/icfp-splash-2025/propl-2025-papers-chairs" - Chairs 
+ Program Committee 
+ Scheme | Organizing Committee 
+ Program Committee 
+ The Scala Workshop | Organizing Committee 
+ Program Committee 
+ TyDe | Organising Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ WebAssembly Workshop | href="https://conf.researchr.org/committee/icfp-splash-2025/webassembly-ws-2025-papers-program-committee" - Organizers 
+ miniKanren and Relational Programming Workshop | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ Haskell | Program Committee 
+ SAS | SAS 2025Organizing Committee 
+ SAS 2025Program Committee 
+ SAS 2025Steering Committee 
+ href="https://2025.splashcon.org/committee/sas-2025-sas-artifact-sas-artifact-evaluation-committee" - SAS Artifact 
+ href="https://2025.splashcon.org/search//all" - Search 
+ Series | href="https://2025.splashcon.org/series/splash" - Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2025/https%3A%5Es%5Es2025.splashcon.org%5Es" - Sign in 
+ href="https://2025.splashcon.org/signup" - Sign up 
+ SPLASH 2025 
+ Singapore 
+ Gardens by the Bay 
+ Marina Bay and Merlion 
+ Lau Pa Sat 
+ Hawker Centre 
+ ArtScience Museum 
+ Singapore Botanic Gardens 
+ The Rain Vortex at Jewel Changi Airport 
+ Little India 
+ Flower Dome 
+ Resorts World Sentosa 
+ National University of Singapore 
+ SPLASH 2025 
+ Welcome to the website of the SPLASH 2025 conference. 
+ The ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH) embraces all aspects of software construction and delivery, to make it the premier conference on the applications of programming languages - at the intersection of programming languages and software engineering. 
+ This year, for the first time in history, SPLASH will be co-located withhref="https://icfp25.sigplan.org/" - ICFP
+and its satellite events as a part of the jointhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+conference. 
+ We are working hard to fill the website with all related information. Please check back soon! 
+ SPLASH 2025 Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+|href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+|href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+|href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+|href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+|href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+|href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops and Co-located Events
+ 
+ href="javascript:var btn=$('#tracks-in-navbar:not(.open)>a'); if(btn){ if(!btn.is(':visible')){$('.navbar-toggle').click();} } btn.click(); $('html, body').animate({scrollTop: $(btn).offset().top}, 200); void(0);" - Show all tracks
+href="https://2025.splashcon.org/dates" - Important Dates
+up till Thu 29 May 2025 
+  
+ Thu 24 Apr 2025 
+ Onward! EssaysSubmission Deadline 
+ Thu 24 Apr 2025 
+ Onward! PapersSubmission deadline 
+ Sun 4 May 2025 
+ SASPaper Submission 
+ Thu 8 May 2025 
+ ICFP/SPLASH WorkshopsTutorials Proposal Submission 
+ Sun 11 May 2025 
+ SAS ArtifactArtifact Submission 
+ Sun 11 May 2025 
+ SASArtifact Submission 
+ Fri 23 May 2025 
+ ICFP PapersNotification of Conditional Acceptance 
+ Mon 26 - Thu 29 May 2025 
+ OOPSLAAuthor Response R2 
+ Thu 29 May 2025 
+ HOPESubmission Deadline 
+ Thu 29 May 2025 
+ ICFP ArtifactsArtifact registration 
+ All important dates 
+ Supporters 
+  
+ In-kind Supporter 
+ In-kind Supporter 
+ Posts 
+ Facebook 
+ xWed 9 Apr 11:00 
+ href="https://2025.splashcon.org" - SPLASH 2025
+href="https://2025.splashcon.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.splashcon.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+ 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+ 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+
+ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops
+Co-hosted Conferences 
+ href="https://icfp25.sigplan.org" - ICFP 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 2025
+ 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 2025
+ 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 2025
+ 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 2025
+ 
+ href="https://2025.splashcon.org/home/sas-2025" - SAS 2025
+Attending 
+ href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing
+ 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre
+ 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct
+ 
+ Call for Sponsorship 
+ href="https://2025.splashcon.org/signup" - Sign Up 
+
+Call for Papers information:
+href="https://2025.splashcon.org" - SPLASH 2025
+Sun 12 - Sat 18 October 2025href="https://2025.splashcon.org/venue/splash-2025-venue" - Singapore
+co-located withhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+Toggle navigation 
+ Attending | href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct 
+ Call for Sponsorship 
+ href="#" - Tracks | SPLASH 2025 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops 
+ Co-hosted Conferences 
+ href="#" - ICFP | href="https://icfp25.sigplan.org" - ICFP 
+ href="https://icfp25.sigplan.org/track/icfp-2025-artifacts" - ICFP  Artifacts 
+ href="https://icfp25.sigplan.org/track/icfp-2025-papers" - ICFP  Papers 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop  @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 
+ SAS | href="https://2025.splashcon.org/home/sas-2025" - SAS 
+ href="https://2025.splashcon.org/track/sas-2025-sas-artifact" - SAS  Artifact 
+ Organization | SPLASH 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | OOPSLA Review Committee 
+ External Review / Artifact Evaluation Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-oopsla-artifacts-artifact-evaluation-committee" - OOPSLA Artifacts 
+ href="#" - Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-Posters-organizing-committee" - Posters 
+ href="#" - Student Research Competition | href="https://2025.splashcon.org/committee/splash-2025-SRC-organizers" - Organizers 
+ href="https://2025.splashcon.org/committee/splash-2025-SRC-reviewers" - Reviewers 
+ ICFP/SPLASH 
+ href="https://conf.researchr.org/committee/icfp-splash-2025/icfp-splash-2025-workshops-workshop-selection-committee" - Workshops 
+ Contributors 
+ href="https://2025.splashcon.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - ICFP | Organizing Committee 
+ Steering Committee 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe" - ICFP Artifacts 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-papers-icfp-papers-and-events" - ICFP Papers 
+ MPLR | Program Committee 
+ Steering Committee 
+ Workshops 
+ Erlang | Organizing Committee 
+ Program Committee 
+ FProPer | Program Committee 
+ FUNARCH | Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ HOPE | Program Committee 
+ LMPL | Organizing Committee 
+ Program Committee 
+ ML Family Workshop | Program Committee 
+ OCaml | Program Committee 
+ PAINT | Program Committee 
+ href="#" - PLMW @ ICFP/SPLASH | Program Committee 
+ PROPL | href="https://conf.researchr.org/committee/icfp-splash-2025/propl-2025-papers-chairs" - Chairs 
+ Program Committee 
+ Scheme | Organizing Committee 
+ Program Committee 
+ The Scala Workshop | Organizing Committee 
+ Program Committee 
+ TyDe | Organising Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ WebAssembly Workshop | href="https://conf.researchr.org/committee/icfp-splash-2025/webassembly-ws-2025-papers-program-committee" - Organizers 
+ miniKanren and Relational Programming Workshop | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ Haskell | Program Committee 
+ SAS | SAS 2025Organizing Committee 
+ SAS 2025Program Committee 
+ SAS 2025Steering Committee 
+ href="https://2025.splashcon.org/committee/sas-2025-sas-artifact-sas-artifact-evaluation-committee" - SAS Artifact 
+ href="https://2025.splashcon.org/search//all" - Search 
+ Series | href="https://2025.splashcon.org/series/splash" - Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2025/https%3A%5Es%5Es2025.splashcon.org%5Estrack%5Essplash-2025-Onward-papers" - Sign in 
+ href="https://2025.splashcon.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+(href="https://2025.splashcon.org/series/icfp-splash" - series
+) /href="https://2025.splashcon.org" - SPLASH 2025
+(href="https://2025.splashcon.org/series/splash" - series
+) /Onward! PapersSPLASH 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ - 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Call for Papers 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Selection Process 
+ Onward! papers are peer-reviewed in a double blind manner. Accepted papers will appear in the Onward! Proceedings in the ACM Digital Library. Submissions will be judged on the potential impact of the ideas and the quality of the presentation. 
+ Onward! Papers follows a two-phase review process. This enables us to welcome papers that contain promising ideas and have the potential to meet the conference’s standards, but which may fall short of this in the initial submission. At the end of the first phase, all papers will be either: accepted normally; or asked to perform certain required revisions; or rejected outright. The authors of papers asked to perform revisions will get one month to complete the revisions, at which point the original reviewers decide on the final acceptance of the paper. All papers will thus remain under submission until the authors receive notification of acceptance or rejection. 
+ We expect the typical strong submission to be accepted normally, with authors expected—as is conventional—to revise the paper using the program committee’s feedback. 
+ The program committee may identify certain papers with promising ideas as needing important revisions. These papers will be handled in one of two ways. They may be assigned a shepherd, in the tradition followed by numerous conferences. Otherwise, they will be given a concrete set of goals to accomplish in the revision. In the latter case, the second submission must then be accompanied by a cover letter mapping the revision requests to specific parts of the paper; the program committee will use the cover letter and revised submission to arrive at a final decision. 
+ The second phase will only be used to elevate promising papers to the conference’s standard, not to require additional work of papers already deemed up-to-standard. Now submissions are not allowed for the second phase deadline. 
+ href="#instructions-for-authors" - Instructions for Authors
+For fairness reasons, all submitted papers should conform to the formatting instructions (see below). Submissions that violate these instructions may be rejected without review, at the discretion of the Program Chair. 
+ Authors of accepted papers are strongly encouraged to present their work in person at the conference but that is not required. There will be a remote participation option, the details of which are to be decided. 
+ href="#submission-site" - Submission Site
+href="https://onward2025papers.hotcrp.com/" - https://onward2025papers.hotcrp.com/
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described by SIGPLAN’s Republication Policy. Submitters should also be aware of ACM’s Policy and Procedures on Plagiarism. 
+ Policy on Double Blind Review 
+ Onward! 2025 is using a double-blind submission process. This means that authors will not know who reviewed their papers, and reviewers will not know who authored the papers they review. The aim of double-blind is to treat all papers with minimal bias. Authors must take the following actions to prepare their papers for double-blind reviewing: 
+ Remove identifying information (names, institutions, etc) from the author block of the first page of the paper. 
+ To the extent possible, when authors cite their own work, they should refer to it in the third person. 
+ To the extent possible, authors should remove any other potentially identifying information, such as acknowledgements. 
+ After submitting their review, reviewers will be able to see author identities. When the paper is accepted for publication, the camera-ready copy must not be blinded. 
+ See OOPSLA’s FAQ on double-blind reviewing for more information. Please contact the PC chair if you have any questions. 
+ href="#policy-on-authorship-changes" - Policy on Authorship Changes
+Any addition of authors after initial submission of a paper must be cleared with the PC chair. Authors are very strongly advised to list all authors prior to initial submission as the addition of authors may create new conflicts with the PC. In all cases, the PC chair must be provided with a rationale. The PC chair has the authority to reject any requested change. 
+ Format 
+ Submissions should usehref="http://www.sigplan.org/Resources/Author/" - ACM SIGPLAN Conference acmart Format, sigplan sub-format
+and 10 point font. All submissions should be in PDF format. 
+ If you are formatting your paper using LaTeX, you will need to use the sigplan, anonymous and review options. Note that by default the SIGPLAN template produces two-column, 9 point papers, but you will need to you will need to set the 10pt option in the \documentclass command. If you are formatting your paper using Word, you may wish to use the provided Word template that supports this font size. Please include page numbers in your submission. Setting the review option in the LaTeX \documentclass command generates page numbers, and the anonymous option hides author names. Please also ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes are legible. 
+ Page Limit 
+ To ensure that papers stay focused on their core contributions, the main part of the paper (excluding bibliographic references) should be no longer than 13 pages. There is no page limit for bibliographic references and appendices, and, therefore, for the overall submission. However, reviewers are not obligated to read the appendices, so the main part of the paper should be self contained. If the paper is accepted, the final submission will be limited to 17 pages. (The 13-page limit for the main body of the paper no longer applies.) 
+ Publication (Digital Library Early Access Warning) 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ More Information 
+ For additional information, clarification, or answers to questions please contact the Program Chair viahref="mailto:onward@splashcon.org" - onward@splashcon.org
+Important DatesAoE (UTC-12h) 
+  
+ Thu 24 Apr 2025 
+ Submission deadline 
+ Fri 6 Jun 2025 
+ First-round notification 
+ Thu 17 Jul 2025 
+ Revised submission deadline 
+ Mon 11 Aug 2025 
+ Final notification 
+ Mon 25 Aug 2025 
+ Camera-ready deadline 
+ Submission Link 
+ href="https://onward2025papers.hotcrp.com" - https://onward2025papers.hotcrp.com
+Program Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaCo-chairUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseCo-chairAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/antranigbasman" - Antranig BasmanRaising the Floor - InternationalUnited Kingdom 
+ href="https://2025.splashcon.org/profile/jacquescarette" - Jacques CaretteMcMaster UniversityCanada 
+ href="https://2025.splashcon.org/profile/lukechurch" - Luke ChurchUniversity of Cambridge | Candela IncUnited Kingdom 
+ href="https://2025.splashcon.org/profile/siobhanclarke" - Siobhán ClarkeTrinity College Dublin, IrelandIreland 
+ href="https://2025.splashcon.org/profile/stephaneducasse" - Stéphane DucasseInria; University of Lille; CNRS; Centrale Lille; CRIStALFrance 
+ href="https://2025.splashcon.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/philipphaller" - Philipp HallerKTH Royal Institute of TechnologySweden 
+ href="https://2025.splashcon.org/profile/reidholmes" - Reid HolmesUniversity of British ColumbiaCanada 
+ href="https://2025.splashcon.org/profile/joeljakubovic" - Joel JakubovicCharles University in PragueCzechia 
+ href="https://2025.splashcon.org/profile/junkato" - Jun KatoNational Institute of Advanced Industrial Science and Technology (AIST)Japan 
+ href="https://2025.splashcon.org/profile/raffikhatchadourian" - Raffi KhatchadourianCUNY Hunter CollegeUnited States 
+ href="https://2025.splashcon.org/profile/patricklam" - Patrick LamUniversity of Waterloo 
+ href="https://2025.splashcon.org/profile/daanleijen" - Daan LeijenMicrosoft ResearchUnited States 
+ href="https://2025.splashcon.org/profile/sorinlerner" - Sorin LernerUniversity of California at San DiegoUnited States 
+ href="https://2025.splashcon.org/profile/magnusmadsen" - Magnus MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/olelehrmannmadsen" - Ole Lehrmann MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/steveoney" - Steve OneyUniversity of Michigan 
+ href="https://2025.splashcon.org/profile/rolyperera" - Roly PereraUniversity of Cambridge/University of BristolUnited Kingdom 
+ href="https://2025.splashcon.org/profile/guillermopolito" - Guillermo PolitoUniv. Lille, Inria, CNRS, Centrale Lille, UMR 9189 CRIStALFrance 
+ href="https://2025.splashcon.org/profile/alexanderrepenning" - Alexander RepenningUniversity of Colorado, BoulderUnited States 
+ href="https://2025.splashcon.org/profile/andrearosa" - Andrea RosàUSI LuganoSwitzerland 
+ href="https://2025.splashcon.org/profile/giancarlosucci1" - Giancarlo Succi 
+ href="https://2025.splashcon.org/profile/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/wolfgangdemeuter" - Wolfgang De MeuterVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/jonathanedwards" - Jonathan EdwardsIndependentUnited States 
+ href="https://2025.splashcon.org/profile/colingordon" - Colin GordonDrexel UniversityUnited States 
+ href="https://2025.splashcon.org/profile/roberthirschfeld" - Robert HirschfeldHasso Plattner Institute; University of PotsdamGermany 
+ href="https://2025.splashcon.org/profile/stephenkell" - Stephen KellKing's College LondonUnited Kingdom 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/tomaspetricek" - Tomas PetricekCharles UniversityCzechia 
+ href="https://2025.splashcon.org/profile/manusridharan" - Manu SridharanUniversity of California at RiversideUnited States 
+ href="https://2025.splashcon.org/profile/marceltaeumel" - Marcel TaeumelUniversity of Potsdam; Hasso Plattner InstituteGermany 
+ href="https://2025.splashcon.org/profile/vascotvasconcelos" - Vasco T. VasconcelosLASIGE, University of LisbonPortugal 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ xWed 9 Apr 11:03 
+ href="https://2025.splashcon.org" - SPLASH 2025
+href="https://2025.splashcon.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.splashcon.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+ 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+ 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+
+ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops
+Co-hosted Conferences 
+ href="https://icfp25.sigplan.org" - ICFP 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 2025
+ 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 2025
+ 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 2025
+ 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 2025
+ 
+ href="https://2025.splashcon.org/home/sas-2025" - SAS 2025
+Attending 
+ href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing
+ 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre
+ 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct
+ 
+ Call for Sponsorship 
+ href="https://2025.splashcon.org/signup" - Sign Up 
+
+Important Dates information:
+href="https://2025.splashcon.org" - SPLASH 2025
+Sun 12 - Sat 18 October 2025href="https://2025.splashcon.org/venue/splash-2025-venue" - Singapore
+co-located withhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+Toggle navigation 
+ Attending | href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct 
+ Call for Sponsorship 
+ href="#" - Tracks | SPLASH 2025 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops 
+ Co-hosted Conferences 
+ href="#" - ICFP | href="https://icfp25.sigplan.org" - ICFP 
+ href="https://icfp25.sigplan.org/track/icfp-2025-artifacts" - ICFP  Artifacts 
+ href="https://icfp25.sigplan.org/track/icfp-2025-papers" - ICFP  Papers 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop  @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 
+ SAS | href="https://2025.splashcon.org/home/sas-2025" - SAS 
+ href="https://2025.splashcon.org/track/sas-2025-sas-artifact" - SAS  Artifact 
+ Organization | SPLASH 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | OOPSLA Review Committee 
+ External Review / Artifact Evaluation Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-oopsla-artifacts-artifact-evaluation-committee" - OOPSLA Artifacts 
+ href="#" - Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-Posters-organizing-committee" - Posters 
+ href="#" - Student Research Competition | href="https://2025.splashcon.org/committee/splash-2025-SRC-organizers" - Organizers 
+ href="https://2025.splashcon.org/committee/splash-2025-SRC-reviewers" - Reviewers 
+ ICFP/SPLASH 
+ href="https://conf.researchr.org/committee/icfp-splash-2025/icfp-splash-2025-workshops-workshop-selection-committee" - Workshops 
+ Contributors 
+ href="https://2025.splashcon.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - ICFP | Organizing Committee 
+ Steering Committee 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe" - ICFP Artifacts 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-papers-icfp-papers-and-events" - ICFP Papers 
+ MPLR | Program Committee 
+ Steering Committee 
+ Workshops 
+ Erlang | Organizing Committee 
+ Program Committee 
+ FProPer | Program Committee 
+ FUNARCH | Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ HOPE | Program Committee 
+ LMPL | Organizing Committee 
+ Program Committee 
+ ML Family Workshop | Program Committee 
+ OCaml | Program Committee 
+ PAINT | Program Committee 
+ href="#" - PLMW @ ICFP/SPLASH | Program Committee 
+ PROPL | href="https://conf.researchr.org/committee/icfp-splash-2025/propl-2025-papers-chairs" - Chairs 
+ Program Committee 
+ Scheme | Organizing Committee 
+ Program Committee 
+ The Scala Workshop | Organizing Committee 
+ Program Committee 
+ TyDe | Organising Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ WebAssembly Workshop | href="https://conf.researchr.org/committee/icfp-splash-2025/webassembly-ws-2025-papers-program-committee" - Organizers 
+ miniKanren and Relational Programming Workshop | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ Haskell | Program Committee 
+ SAS | SAS 2025Organizing Committee 
+ SAS 2025Program Committee 
+ SAS 2025Steering Committee 
+ href="https://2025.splashcon.org/committee/sas-2025-sas-artifact-sas-artifact-evaluation-committee" - SAS Artifact 
+ href="https://2025.splashcon.org/search//all" - Search 
+ Series | href="https://2025.splashcon.org/series/splash" - Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2025/https%3A%5Es%5Es2025.splashcon.org%5Esdates" - Sign in 
+ href="https://2025.splashcon.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+(href="https://2025.splashcon.org/series/icfp-splash" - series
+) /href="https://2025.splashcon.org" - SPLASH 2025
+(href="https://2025.splashcon.org/series/splash" - series
+) /Important Dates 
+  
+ When | Track | What 
+ Thu 24 Apr 2025 | Onward! Essays | Submission Deadline 
+ Thu 24 Apr 2025 | Onward! Papers | Submission deadline 
+ Mon 28 Apr - Thu 1 May 2025 | ICFP Papers | Author Response 
+ Sun 4 May 2025 | SAS | Paper Submission 
+ Thu 8 May 2025 | ICFP/SPLASH Workshops | Tutorials Proposal Submission 
+ Sun 11 May 2025 | SAS Artifact | Artifact Submission 
+ Sun 11 May 2025 | SAS | Artifact Submission 
+ Fri 23 May 2025 | ICFP Papers | Notification of Conditional Acceptance 
+ Mon 26 - Thu 29 May 2025 | OOPSLA | Author Response R2 
+ Thu 29 May 2025 | HOPE | Submission Deadline 
+ Thu 29 May 2025 | ICFP Artifacts | Artifact registration 
+ Sat 31 May 2025 | FProPer | Abstract for full papers 
+ Fri 6 Jun 2025 | Onward! Papers | First-round notification 
+ Fri 6 Jun 2025 | Erlang | Submission Deadline 
+ Fri 6 Jun 2025 | Onward! Essays | First-round Notification 
+ Mon 9 Jun 2025 | Haskell | Paper submission deadline 
+ Mon 9 Jun 2025 | TyDe | Submission deadlinenew 
+ Wed 11 Jun 2025 | MPLR | Submission Deadline 
+ Thu 12 Jun 2025 | ICFP Papers | Deadline for Submitting Revisions 
+ Fri 13 Jun 2025 | ICFP Artifacts | Artifact submission 
+ Sat 14 Jun 2025 | FProPer | Full paper submission 
+ Mon 16 Jun 2025 | FUNARCH | Submission Deadline 
+ Mon 16 Jun - Wed 18 Jun 2025 | SAS | Author Response 
+ Mon 16 - Wed 18 Jun 2025 | SAS Artifact | Author Response 
+ Wed 18 Jun 2025 | OOPSLA | Author Notification R2 
+ Thu 19 Jun 2025 | ML Family Workshop | Submission Deadline 
+ Fri 27 Jun 2025 | OOPSLA Artifacts | Submission Round 2 
+ Fri 27 Jun 2025 | ICFP Papers | Final Decision Notification 
+ Mon 30 Jun 2025 | LMPL | Paper Submission 
+ Wed 2 Jul 2025 | PAINT | Submission deadlinenew 
+ Wed 2 Jul 2025 | HATRA | Submission deadlinenew 
+ Thu 3 Jul 2025 | PROPL | Submission deadlinenew 
+ Thu 3 Jul 2025 | OCaml | Submission deadline 
+ Fri 4 Jul 2025 | Erlang | Notification 
+ Tue 8 Jul 2025 | Student Research Competition | Submission deadline 
+ Thu 10 Jul 2025 | miniKanren and Relational Programming Workshop | Submission deadlinenew 
+ Thu 10 Jul 2025 | The Scala Workshop | Talk Proposal Submission 
+ Mon 30 Jun 12:00 - Fri 11 Jul 12:00 2025 | OOPSLA Artifacts | Kick-the-Tires Round 2 
+ Fri 11 Jul 2025 | SAS | Notification 
+ Fri 11 Jul 2025 | SAS Artifact | Notification 
+ Fri 11 Jul 2025 | ICFP Papers | Camera-Ready Deadline 
+ Mon 14 Jul 2025 | VMIL | Abstract Submission (Research papers) 
+ Wed 16 Jul 2025 | TyDe | Notification of acceptancenew 
+ Thu 17 Jul 2025 | Onward! Papers | Revised submission deadline 
+ Thu 17 Jul 2025 | PAINT | Authors notificationnew 
+ Thu 17 Jul 2025 | Scheme | Submission deadline 
+ Thu 17 Jul 2025 | Onward! Essays | Revision Deadline 
+ Thu 17 Jul 2025 | Haskell | Author Notification 
+ Fri 18 Jul 2025 | ICFP Artifacts | Final decision 
+ Mon 21 Jul 2025 | FUNARCH | Author Notification 
+ Mon 21 Jul 2025 | VMIL | Submission Deadline (Research papers) 
+ Mon 28 Jul 2025 | MPLR | Author Notification 
+ Tue 29 Jul 2025 | OOPSLA | Submission of Revisions R2 
+ Wed 30 Jul 2025 | TyDe | Submission of camera-ready papersnew 
+ Wed 30 Jul 2025 | PAINT | Resubmission of conditional acceptsnew 
+ Thu 31 Jul 2025 | ML Family Workshop | Initial Author Notification (most cases) 
+ Thu 31 Jul 2025 | SAS | Camera-Ready 
+ Fri 1 Aug 2025 | LMPL | Author Notification 
+ Fri 1 Aug 2025 | HATRA | Author notification (tentative)new 
+ Sat 2 Aug 2025 | FProPer | Two page abstract submission (presentation only) 
+ Mon 4 Aug 2025 | VMIL | Author Notification (Research papers) 
+ Mon 4 Aug 2025 | The Scala Workshop | Author Notification 
+ Wed 6 Aug 2025 | PAINT | Notifications for revisionsnew 
+ Thu 7 Aug 2025 | ML Family Workshop | Final Author Notification (if needed) 
+ Thu 7 Aug 2025 | PROPL | Notificationnew 
+ Thu 7 Aug 2025 | OCaml | Author/speaker notification 
+ Mon 11 Aug 2025 | Onward! Papers | Final notification 
+ Mon 11 Aug 2025 | Scheme | Author notification 
+ Mon 11 Aug 2025 | Onward! Essays | Final Notification 
+ Tue 12 Aug 2025 | Student Research Competition | Notification 
+ Tue 12 Aug 2025 | miniKanren and Relational Programming Workshop | Author notificationnew 
+ Tue 12 Aug 2025 | VMIL | Submission Deadline (Work-in-Progress papers) 
+ Tue 12 Aug 2025 | OOPSLA | Author Notification of Revisions R2 
+ Fri 15 Aug 2025 | OOPSLA Artifacts | Notification Round 2 
+ Fri 22 Aug 2025 | Student Research Competition | Camera ready 
+ Fri 22 Aug 2025 | PROPL | Camera readynew 
+ Fri 22 Aug 2025 | OOPSLA | Camera Ready R2 
+ Sun 24 Aug 2025 | LMPL | Camera Ready 
+ Mon 25 Aug 2025 | Onward! Essays | Camera-Ready Deadline 
+ Mon 25 Aug 2025 | Erlang | Camera ready 
+ Mon 25 Aug 2025 | Onward! Papers | Camera-ready deadline 
+ Mon 25 Aug 2025 | FUNARCH | Camera-ready Deadline 
+ Mon 25 Aug 2025 | VMIL | Camera Ready (Research papers) 
+ Mon 25 Aug 2025 | PAINT | Camera readynew 
+ Mon 25 Aug 2025 | Scheme | Camera-ready deadline 
+ Mon 25 Aug 2025 | miniKanren and Relational Programming Workshop | Camera-ready deadlinenew 
+ Mon 25 Aug 2025 | The Scala Workshop | Camera-Ready Submission 
+ Wed 27 Aug 2025 | VMIL | Author Notification (Work-in-Progress papers) 
+ Sun 12 Oct 2025 | Erlang | Workshop 
+ Sun 12 Oct 2025 | TyDe | Workshopnew 
+ Mon 13 Oct 2025 | PROPL | Workshop 
+ Tue 14 Oct 2025 | MPLR | Conference 
+ Tue 14 Oct 2025 | HATRA | Workshopnew 
+ Mon 13 - Wed 15 Oct 2025 | SAS | Conference Date 
+ Wed 15 Oct 2025 | VMIL | Workshop 
+ Thu 16 Oct 2025 | ML Family Workshop | Workshop 
+ Thu 16 Oct 2025 | Scheme | Workshop 
+ Thu 16 Oct 2025 | FProPer | Workshopnew 
+ Thu 16 - Fri 17 Oct 2025 | Haskell | Symposium 
+ Fri 17 Oct 2025 | OCaml | Workshop 
+ Fri 17 Oct 2025 | FUNARCH | Workshop 
+ Fri 17 Oct 2025 | miniKanren and Relational Programming Workshop | Workshop 
+ Tue 25 Mar 2025 | OOPSLA | Submission R2 
+ Thu 27 Feb 2025 | ICFP Papers | Submission Deadline 
+ Fri 21 Feb 2025 | OOPSLA Artifacts | Notification Round 1 
+ Mon 6 - Fri 17 Jan 2025 | OOPSLA Artifacts | Kick-the-Tires Round 1 
+ Thu 16 Jan 2025 | ICFP/SPLASH Workshops | Workshop Proposal Submission 
+ Fri 3 Jan 2025 | OOPSLA Artifacts | Submission Round 1 
+ xWed 9 Apr 11:03 
+ href="https://2025.splashcon.org" - SPLASH 2025
+href="https://2025.splashcon.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.splashcon.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+ 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+ 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+
+ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops
+Co-hosted Conferences 
+ href="https://icfp25.sigplan.org" - ICFP 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 2025
+ 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 2025
+ 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 2025
+ 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 2025
+ 
+ href="https://2025.splashcon.org/home/sas-2025" - SAS 2025
+Attending 
+ href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing
+ 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre
+ 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct
+ 
+ Call for Sponsorship 
+ href="https://2025.splashcon.org/signup" - Sign Up

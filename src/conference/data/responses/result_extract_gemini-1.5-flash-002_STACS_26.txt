@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "March 4 - 7, 2025",
+  "Year": "2025",
+  "Location": "Jena, Germany",
+  "City-State-Province": "Jena",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "September 26, 2024"
+  },
+  "Notification Date": {
+    "Feedback to authors": "November 15, 2024",
+    "Author Notification": "December 16, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version": "Mid-January 2025"
+  },
+  "Other Date": {
+    "Rebuttal": "November 15-21, 2024",
+    "Pre-conference workshop": "March 3-4, 2025"
+  },
+  "Topics": "Algorithms, Data Structures, Complexity, Automata, Logic, Semantics, Theory of Programming",
+  "Publisher": "Schloss Dagstuhl",
+  "Summary": "The 42nd International Symposium on Theoretical Aspects of Computer Science (STACS 2025) took place from March 4 to March 7, 2025 in Jena, Germany.  The symposium consisted of two tracks: Track A focused on algorithms, data structures, and complexity; Track B focused on automata, logic, semantics, and theory of programming.",
+  "Call for Papers": "# STACS 2025: Call for Papers\n\nThe 42nd International Symposium on Theoretical Aspects of Computer Science (STACS 2025) took place from **March 4th to March 7th, 2025 in Jena, Germany.**\n\nSTACS 2025 consisted of two tracks, A and B. Track A focused on algorithms, data structures, and complexity, while track B focused on automata, logic, semantics, and theory of programming.\n\n## Topics\n\nAuthors were invited to submit papers presenting original and unpublished research on theoretical aspects of computer science. Topics covered by the tracks included, but were not limited to, the following:\n\n### Track A: Algorithms, Data Structures and Complexity\n\n*   Design of parallel algorithms\n*   Distributed algorithms\n*   Approximation algorithms\n*   Parameterized algorithms\n*   Randomized algorithms\n*   Analysis of algorithms\n*   Combinatorics of data structures\n*   Computational geometry\n*   Cryptography\n*   Algorithms for machine learning\n*   Algorithmic game theory\n*   Quantum algorithms\n*   Computational and structural complexity theory\n*   Parameterised complexity\n*   Randomness in computation\n\n### Track B: Automata, Logic, Semantics and Theory of Programming\n\n*   Automata theory\n*   Games and multi-agent systems\n*   Algebraic and categorical methods\n*   Models of computation\n*   Concurrency\n*   Timed systems\n*   Finite model theory\n*   Database theory\n*   Semantics\n*   Type systems\n*   Program analysis\n*   Specification and verification\n*   Rewriting and deduction\n*   Learning theory\n*   Logical aspects of computability and complexity\n\n## Important Dates\n\nAll times are Anywhere on Earth (AoE, UTC-12).\n\n*   **Submission deadline:** September 26, 2024\n*   **Rebuttal:** November 15-21, 2024\n*   **Author Notification:** December 16, 2024\n*   **Camera-ready version:** Mid-January 2025\n*   **Conference:** March 4-7, 2025\n\n## Submission Guidelines\n\nSubmissions should be made through EasyChair, using [this submission link](https://easychair.org/conferences/?conf=stacs2025).\n\nAuthors were invited to submit an extended abstract or a full paper with at most 15 pages; this page limit excluded the title page, the references section, and a possible appendix. The usage of the LIPIcs style file was mandatory; no changes to font size, page geometry, etc. were permitted. Please refer to [LIPIcs author instructions](https://submission.dagstuhl.de/series/details/LIPIcs#author).\n\n## Review Process\n\nSTACS 2025 employed a lightweight double-blind reviewing process: submissions should not reveal the identity of the authors in any way.\n\n## Conflicts of Interest\n\nAuthors were invited to give a list of persons with a Conflict of Interest (COI). A Conflict of Interest was limited to the following categories:\n\n1.  Family member or close friend.\n2.  Ph.D. advisor or advisee (no time limit), or postdoctoral or undergraduate mentor or mentee within the past five years.\n3.  Person with the same affiliation.\n4.  Involved in an alleged incident of harassment.\n5.  Reviewer owes the author a favor (e.g., recently requested a reference letter).\n6.  Frequent or recent collaborator (within last 3 years) who cannot objectively review your work.\n\n## Rebuttal\n\nThere was a rebuttal period for authors. Authors received the reviews of their submissions and had a few days to prepare and submit rebuttals. These rebuttals became part of the PC discussions, but entailed no specific responses.\n\n## Proceedings\n\nAccepted papers were published in the proceedings of the symposium in the Leibniz International Proceedings in Informatics ([LIPIcs](https://submission.dagstuhl.de/series/details/LIPIcs)) series, based at Schloss Dagstuhl."
+}
+

@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "June 22-25, 2025",
+  "Year": "2025",
+  "Location": "Moscone Center West, San Francisco, CA",
+  "City-State-Province": "San Francisco, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submission Deadline": "November 12, 2024",
+    "Manuscript Submission Deadline": "November 20, 2024",
+    "Workshop Proposals Deadline": "November 20, 2024",
+    "Tutorial Proposals Deadline": "November 20, 2024",
+    "Research Special Session Proposals Deadline": "November 20, 2024",
+    "Research Panel Proposals Deadline": "November 20, 2024",
+    "DAC Pavilion Proposals Deadline": "January 16, 2025",
+    "Exhibitor Forum Proposals Deadline": "January 23, 2025",
+    "Front-End Design Track Submission Deadline": "January 23, 2025",
+    "Back-End Design Track Submission Deadline": "January 23, 2025",
+    "IP Track Submission Deadline": "January 23, 2025",
+    "Systems and Software Track Submission Deadline": "January 23, 2025",
+    "Engineering Tracks Special Sessions Submission Deadline": "January 23, 2025",
+    "Late Breaking Results Papers Deadline": "January 9, 2025"
+  },
+  "Topics": "Artificial Intelligence, Design, Electronic Design Automation, Security, Systems",
+  "Summary": "The Design Automation Conference (DAC) is the premier conference for the design and automation of electronic circuits and systems.  DAC 2025 will be held June 22-25, 2025 at Moscone Center West in San Francisco, CA.  The conference features research papers, technical presentations, and sessions selected by a committee of electronic design experts.",
+  "Call for Papers": "# DAC 2025: Call for Contributions\n\nFor the past 61 years, DAC has been the premier conference for the design and automation of electronic circuits and systems. Research papers, technical presentations, and sessions are selected by a committee of electronic design experts that offer the latest information on recent developments, trends, management practices, new products, technologies, and methodologies.  DAC 2025 will be held **June 22-25, 2025 at Moscone Center West in San Francisco, CA**.\n\n## Call for Papers - Research Manuscript Submissions\n\nFor research details, click here: [Link to Research details](/Conference/Call-for-Contributions/Research-Manuscript-Research-Submissions)\n\n## Call for Proposals\n\nView proposal information for:\n\n*   [Workshops](/Conference/Call-for-Contributions/Workshop-Call-for-Proposals)\n*   [Tutorials](/Conference/Call-for-Contributions/Tutorials-Call-for-Proposals)\n*   [Special Sessions](/Conference/2025-Call-for-Contributions/Research-Special-Session-Call-for-Proposals)\n*   [Panels](/Conference/2025-Call-for-Contributions/Research-Panels-Call-for-Proposals)\n\n## Call for Presentation Submissions\n\n*   [Back-End Design Track Presentations](/Conference/2025-Call-for-Contributions/Back-End-Design-Track-Presentation-Submissions)\n*   [Front-End Design Track Presentations](/Conference/2025-Call-for-Contributions/Front-End-Design-Track-Presentation-Submissions)\n*   [IP Track Presentations](/Conference/2025-Call-for-Contributions/IP-Track-Presentation-Submissions)\n*   [Systems and Software Track Presentations](/Conference/2025-Call-for-Contributions/Systems-and-Software-Track-Presentation-Submissions)\n\n## Call for Special Session Proposals\n\n*   [Engineering Tracks Special Sessions](/Conference/2025-Call-for-Contributions/Engineering-Tracks-Special-Session-Call-for-Proposals)\n\n## Other Calls\n\n*   [DAC Pavilion Call for Proposals](/Conference/2025-Call-for-Contributions/DAC-Pavilion-Call-for-Proposals)\n*   [Exhibitor Forum Call for Proposals](/Conference/2025-Call-for-Contributions/Exhibitor-Forum-Call-for-Proposals)\n*   [Late Breaking Results](/Conference/2025-Call-for-Contributions/Late-Breaking-Results)\n\n## Important Deadlines\n\n*   **Research Papers**\n    *   Abstract Submission Deadline: November 12, 2024 5:00 PM (PST)\n    *   Manuscript Submission Deadline: November 20, 2024 5:00 PM (PST)\n*   **Workshop Proposals:** November 20, 2024 5:00 PM (PST)\n*   **Tutorial Proposals:** November 20, 2024 5:00 PM (PST)\n*   **Research Special Session Proposals:** November 20, 2024 5:00 PM (PST)\n*   **Research Panel Proposals:** November 20, 2024 5:00 PM (PST)\n*   **DAC Pavilion Proposals:** January 16, 2025 5:00 PM (PST)\n*   **Exhibitor Forum Proposals:** January 23, 2025 5:00 PM (PST)\n*   **Engineering Tracks:** January 23, 2025 5:00 PM (PST)\n*   **Late Breaking Results Papers:** Submissions will be accepted starting January 9, 2025"
+}
+```

@@ -1,0 +1,576 @@
+Conference SLE:
+
+href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+Thu 12 - Fri 13 June 2025href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Koblenz, Germany
+co-located withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Venue: University of Koblenz 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-location" - Location: Koblenz 
+ href="https://conf.researchr.org/home/sle-2025" - Track/Call 
+ Organization | SLE 2025 Committees 
+ Track Committees 
+ Organising Committee 
+ Programme Committee 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/sle-2025" - People Index 
+ href="https://conf.researchr.org/search/sle-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/sle" - Series 
+ SLE 2025 
+ href="https://2024.splashcon.org/track/sle-2024" - SLE 2024 
+ href="https://2023.splashcon.org/home/sle-2023" - SLE 2023 
+ href="https://2022.splashcon.org/home/sle-2022" - SLE 2022 
+ href="https://conf.researchr.org/home/sle-2021" - SLE 2021 
+ href="https://conf.researchr.org/home/sle-2020" - SLE 2020 
+ href="https://conf.researchr.org/home/sle-2019" - SLE 2019 
+ href="https://conf.researchr.org/track/sle-2018/papers" - SLE 2018 
+ href="https://conf.researchr.org/track/sle-2017/sle-2017-papers" - SLE 2017 
+ href="https://conf.researchr.org/track/sle-2016/sle-2016-papers" - SLE 2016 
+ href="https://2015.splashcon.org/track/sle2015" - SLE 2015 
+ href="https://2013.splashcon.org/track/sle-2013-papers" - SLE 2013 
+ href="https://conf.researchr.org/signin/sle-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Essle-2025" - Sign in 
+ href="https://conf.researchr.org/signup/sle-2025" - Sign up 
+ href="https://conf.researchr.org/home/staf-2025" - STAF 2025
+(href="https://conf.researchr.org/series/staf" - series
+) /SLE 2025 (href="https://conf.researchr.org/series/sle" - series
+) /SLE 2025 
+ About 
+ href="#Call-for-Artifacts" - Call for Artifacts 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLANInternational Conference on Software Language Engineering (SLE)is devoted to the principles of software languages: their design, their implementation, and their evolution. 
+ With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its environment, and the languages driving its development process. Given that everything depends on software and that software depends on software languages, it seems fair to say that for many years to come, everything will depend on software languages. 
+ Software language engineering (SLE) is the discipline of engineering languages and their tools required for the creation of software. It abstracts from the differences between programming languages, modelling languages, and other software languages, and emphasises the engineering facet of the creation of such languages, that is, the establishment of the scientific methods and practices that enable the best results. While SLE is certainly driven by its metacircular character (software languages are engineered using software languages), SLE is not self-satisfying: its scope extends to the engineering of languages for all and everything. 
+ Like its predecessors, the 18th edition of the SLE conference, SLE 2025, will bring together researchers from different areas united by their common interest in the creation, capture, and tooling of software languages. It overlaps with traditional conferences on the design and implementation of programming languages, model-driven engineering, and compiler construction, and emphasises the fusion of their communities. To foster the latter, SLE traditionally fills a two-day program with a single track, with the only temporal overlap occurring between co-located events. 
+ SLE 2025 will be co-located withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+and take place in Koblenz, Germany. 
+ Community website: | href="https://www.sleconf.org/2025" - https://www.sleconf.org/2025 
+ Conference website: | href="https://conf.researchr.org/home/sle-2025" - https://conf.researchr.org/home/sle-2025 
+ Submission website: | href="https://sle25.hotcrp.com" - https://sle25.hotcrp.com 
+ Call for Papers 
+ href="#topics-of-interest" - Topics of Interest
+SLE covers software language engineering in general, rather than engineering a specific software language. Topics of interest include, but are not limited to: 
+ Software Language Design and Implementation | Approaches to and methods for language design 
+ Static semantics (e.g., design rules, well-formedness constraints) 
+ Techniques for specifying behavioral/executable semantics 
+ Generative approaches (incl. code synthesis, compilation) 
+ Meta-languages, meta-tools, language workbenches 
+ AI-assisted language design and optimisation 
+ Software Language Validation | Verification and formal methods for languages 
+ Testing techniques for languages 
+ Simulation techniques for languages 
+ Model-based testing 
+ AI-assisted validation 
+ Software Language Integration and Composition | Coordination of heterogeneous languages and tools 
+ Mappings between languages (incl. transformation languages) 
+ Traceability between languages 
+ Deployment of languages to different platforms 
+ AI-assisted refactoring 
+ Software Language Maintenance | Software language reuse 
+ Language evolution 
+ Language families and variability, language and software product lines 
+ Domain-specific approaches for any aspects of SLE (design, implementation, validation, maintenance) 
+ Empirical evaluation and experience reports of language engineering tools | User studies evaluating usability 
+ Performance benchmarks 
+ Industrial applications 
+ Synergies between Language Engineering and emerging/promising research areas | Generative AI in language engineering (e.g., AI-based language modelling, AI-driven code generation tools) 
+ AI and ML language engineering (e.g., ML compiler testing, code classification) 
+ Quantum language engineering (e.g., language design for quantum machines) 
+ Language engineering for physical systems (e.g., CPS, IoT, digital twins) 
+ Socio-technical systems and language engineering (e.g., language evolution to adapt to social requirements) 
+ href="#types-of-submissions" - Types of Submissions
+SLE accepts the following types of papers: 
+ Research papers: These are “traditional” papers detailing research contributions to SLE. Papers may range from 6 to 12 pages in length and may optionally include 2 further pages of bibliography/appendices. Papers will be reviewed with an understanding that some results do not need 12 full pages and may be fully described in fewer pages. 
+ New ideas/vision papers: These papers may describe new, unconventional software language engineering research positions or approaches that depart from standard practice. They can describe well-defined research ideas that are at an early stage of investigation. They could also provide new evidence to challenge common wisdom, present new unifying theories about existing SLE research that provides novel insight or that can lead to the development of new technologies or approaches, or apply SLE technology to radically new application areas. New ideas/vision papers must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. 
+ SLE Body of Knowledge: The SLE Body of Knowledge (SLEBoK) is a community-wide effort to provide a unique and comprehensive description of the concepts, best practices, tools, and methods developed by the SLE community. In this respect, the SLE conference will accept surveys, essays, open challenges, empirical observations, and case study papers on the SLE topics. These can focus on, but are not limited to, methods, techniques, best practices, and teaching approaches. Papers in this category can have up to 20 pages, including bibliography/appendices. 
+ Tool papers: These papers focus on the tooling aspects often forgotten or neglected in research papers. A good tool paper focuses on practical insights that will likely be useful to other implementers or users in the future. Any of the SLE topics of interest are appropriate areas for tool demonstrations. Submissions must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. They may optionally include an appendix with a demo outline/screenshots and/or a short video/screencast illustrating the tool. 
+ Workshops: Workshops will be organised by STAF. Please inform us and contact STAF 2025 organisers if you would like to organise a workshop of interest to the SLE audience. Information on how to submit workshops can be found on the STAF 2025 Website. 
+ href="#submission" - Submission
+SLE 2025 has a single submission round for papers, including a mandatory abstract registration and a rebuttal phase, where all authors of research papers will have the possibility of responding to the reviews on their submissions. 
+ Authors of accepted research papers will be invited to submit artefacts. 
+ Format 
+ Submissions have to use thehref="https://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+; please make sure that you always use the latest ACM SIGPLAN acmart LaTeX template, and that the document class definition is\documentclass[sigplan,anonymous,review]{acmart}. Do not make any changes to this format! 
+ Ensure that your submission is legible when printed on a black and white printer. In particular, please check that colours remain distinct and font sizes in figures and tables are legible. 
+ To increase fairness in reviewing, a double-blind review process has become standard across SIGPLAN conferences. Accordingly, SLE will follow the double-blind process. Author names and institutions must be omitted from submitted papers, and references to the authors’ own related work should be in the third person. No other changes are necessary, and authors will not be penalized if reviewers are able to infer their identities in implicit ways. 
+ All submissions must be in PDF format. The submission website is:href="https://sle25.hotcrp.com" - https://sle25.hotcrp.com
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described bySIGPLAN’s Republication Policy. Submitters should also be aware ofACM’s Policy and Procedures on Plagiarism. Submissions that violate these policies will be desk-rejected. 
+ href="#policy-on-human-participant-and-subject-research" - Policy on Human Participant and Subject Research
+Authors conducting research involving human participants and subjects must ensure that their research complies with their local governing laws and regulations and the ACM’s general principles, as stated in thehref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s Publications Policy on Research Involving Human Participants and Subjects
+. If submissions are found to be violating this policy, they will be rejected. 
+ Reviewing Process 
+ All submitted papers will be reviewed by at least three members of the program committee. Research papers and tool papers will be evaluated concerning soundness, relevance, novelty, presentation, and replicability. New ideas/vision papers will be evaluated primarily concerning soundness, relevance, novelty, and presentation. SLEBoK papers will be reviewed on their soundness, relevance, originality, and presentation. Tool papers will be evaluated concerning relevance, presentation, and replicability. 
+ For fairness reasons, all submitted papers must conform to the above instructions. Submissions that violate these instructions may be rejected without review at the discretion of the PC chairs. 
+ For research papers, authors will get a chance to respond to the reviews before a final decision is made. 
+ Artefact Evaluation 
+ SLE will use an evaluation process to assess the quality of artefacts on which papers are based to foster the culture of experimental reproducibility. Authors of accepted research papers are invited to submit artefacts. 
+ Awards 
+ Distinguished paper | : Award for the most notable paper, as determined by the PC chairs based on the recommendations of the program committee. 
+ Distinguished artefact | : Award for the artefact most significantly exceeding expectations, as determined by the AEC chairs based on the recommendations of the artefact evaluation committee. 
+ Distinguished reviewer | : Award for the programme committee member that produced the most useful reviews as assessed by paper authors. 
+ Most Influential Paper | : Award for the SLE 2015 paper with the greatest impact, as judged by the SLE Steering Committee. 
+ Publication 
+ All accepted papers will be published in the ACM Digital Library. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ Contact 
+ For additional information, clarification, or answers to any questions, please get in touch with the program co-chairs (regina.hebig@uni-rostock.deandvadim@grammarware.net). 
+ Call for Artifacts 
+ Artifact Evaluation 
+ SLE’25 implements a two-rounds review process that also evaluates the quality of the artifacts supporting accepted research papers. This is the Artifact Evaluation track. 
+ Authors of research and tools paper accepted for SLE 2025 will be invited to submit artifacts. 
+ In the context of the SLE community, an artifact refers to any digital object that supports, complements, or is a result of research in the field of software language engineering. 
+ This includes, but it is not limited to, tools, language grammars, metamodels, codebases, transformation scripts, formal proofs, benchmarks, datasets, statistical analyses, and surveys. 
+ The submitted artifacts will be reviewed by a dedicated Artifact Evaluation Committee. The approved artifacts will then be made first-class bibliographic objects, easy to find and cite. 
+ Depending on the quality of the artifact, the artifact might be awarded with different kinds of “badges” that are visible on the final paper. 
+ The submission is optional and it is additional to your already accepted paper at SLE’25. It will not have a negative impact. 
+ Artifacts provide tangible evidence of results, enable reproducibility, and encourage reuse and extension by the community. 
+ Artifact Review Process: 
+ Submitted artifacts will go through a two-phase evaluation. 
+ Kick-the-tires: 
+ Reviewers check the artifact integrity and look for any possible setup problems that may prevent it from being properly evaluated 
+ (e.g., corrupted or missing files, VM won’t start, immediate crashes on the simplest example, etc.). 
+ Authors are informed of the outcome and will be given a 5-day period to read and respond to the kick-the-tires reports of their artifacts. 
+ During the author response period, interactive discussions between reviewers and authors will be possible through HotCRP. 
+ Artifact assessment: 
+ Reviewers evaluate the artifacts, checking if they live up to the claims the authors make in the accompanying documentation. 
+ Artifact Preparation Guidelines 
+ At a high level, we are interested in artifacts that: 
+ Have no dependencies. Use of docker images is strongly recommended. Virtual machine images in OVF/OVA format containing the artifact can also be provided. 
+ Have a minimal number of setup steps. Ideally, it should just be importing the docker/VM image. 
+ Have a short run, so that reviewers can try first before carrying the full review (kick-the-tire). 
+ Have a push-button evaluation. Ideally, the evaluation can be run through a single script, which performs the computation and generates the relevant figures/experimental data presented in the paper. | The evaluation should either display progress messages or expected duration should be provided. | This fully automated approach may be a bit more costly to set up, but you won’t have any copy/pasting issues for your paper, and regenerating data is heavily simplified. 
+ Include some documentation on the code and layout of the artifact. 
+ Use widely supported open formats for documents, preferably CSV or JSON for data. 
+ Document which outputs are associated with which parts of your paper, if possible, please specify table, figure, or sub-sections. 
+ The artifact evaluated by the AEC and linked in the paper must be precisely the same. 
+ AEC Chairs will assure that DOIs point to the specific version evaluated. To create a DOI, you can use platforms likeZenodo,FigShareorOSF, which offer free DOI creation. 
+ PDF and artifact should NOT be anonymized anymore. 
+ href="#authors-are-strongly-discouraged-from" - Authors are strongly discouraged from:
+Downloading content over the internet during experiments or tests; 
+ Using closed-source software libraries, frameworks, operating systems, and container formats; and 
+ Providing experiments or tests that run for multiple days. If the artifact takes several days to run, we ask that you provide us with the full artifact and a reduced input set | (in addition to the full set) to only partially reproduce your results in a shorter time. | If the artifact requires special hardware, please get in touch with the AEC chairs, let us know of the issue, and provide us with (preferably SSH) access to a self-hosted platform for accessing the artifact. 
+ href="#artifact-submission-guidelines" - Artifact Submission Guidelines:
+Every submission must include the following. 
+ Authors must submit a single artifact for a paper (1-to-1 mapping, paper-to-artifact). 
+ A | DOI | for downloading the artifact. 
+ A | PDF version | of the accepted paper for evaluating the artifact-paper consistency. 
+ A | Markdown-formatted file | providing an overview of the artifact. | PLEASE USE THE AUTHORS TEMPLATE: | https://doi.org/10.5281/zenodo.14975264 
+ Artifact submissions will be handled through the HotCRP submission system at the following link: 
+ href="https://sle25ae.hotcrp.com/" - https://sle25ae.hotcrp.com/
+NOTE:The artifact can be associated with a different set of authors (different from the accepted paper). 
+ Quality Criteria 
+ Submitted artifacts will be evaluated by the AEC concerning the following criteria. 
+ Depending on the criteria, different Badges are assigned (we limit ourselves to the ‘Evaluated’ and ‘Available’ badges). 
+ Artifact Evaluated (Badges) 
+ There are two quality levels of the ‘Evaluated’ badge: 
+ Artifact Evaluated - Functional (Badge) 
+ “The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation." 
+ Documented | : At minimum, an inventory of artifacts is included, and sufficient description provided to enable the artifacts to be exercised. 
+ Consistent | : The artifacts are relevant to the associated paper and contribute in some inherent way to the generation of its main results. 
+ Complete | : To the extent possible, all components relevant to the paper in question are included. 
+ Exercisable | : Included scripts and/or software used to generate the results in the associated paper can be successfully executed. 
+ Artifact Evaluated - Reusable (Badge) 
+ “The artifacts associated with the paper are of a quality that significantly exceeds minimal functionality. 
+ That is, they have all the qualities of the Artifacts Evaluated – Functional level, but, in addition, they are very carefully documented and well-structured to the extent that reuse and repurposing is facilitated." 
+ Artifact Available (Badge) 
+ “Author-created artifacts relevant to this paper have been placed on a publicly accessible archival repository. 
+ A DOI or link to this repository along with a unique identifier for the object is provided.” 
+ href="#important-dates-authors" - Important Dates (Authors):
+Artifact submission Deadline | : 23.04.2025 (AoE) 
+ Start Kick-the-tires author response period | : 28.04.2025 (AoE) 
+ End Kick-the-tires author response period | : 02.05.2025 (AoE) 
+ Author artifact Notification | : 01.06.2025 (AoE) 
+ href="#important-dates-pc-members" - Important Dates (PC Members):
+Artifact submission deadline | : 23.04.2025 (AoE) 
+ Artifact bidding | : 24-26.04.2025 
+ Camera-ready deadline for SLE papers | : 01.05.2025 (AoE) 
+ Kick-the-tires review deadline & rebuttal phase | : 02.05.2025 (AoE) 
+ Final review deadline | : 24.05.2025 (AoE) 
+ Artifact discussion | : 25-31.05.2025 
+ Artifact notification | : 01.06.2025 (AoE) 
+ Awards 
+ TheDistinguished Artifactaward will be presented to the artifact that most significantly exceeds expectations. 
+ This recognition is determined by the AEC chairs based on the recommendations of the artifact evaluation committee. 
+ Any Questions? 
+ For further information on the artifact evaluation of SLE 2025, feel free to contact the artifact evaluation chairs. 
+ Best regards, 
+ Idriss Riouak and Jeff Smits 
+ Idriss Riouak | : | idriss.riouak@cs.lth.se 
+ Jeff Smits | : | j.smits-1@tudelft.nl 
+ Important DatesAoE (UTC-12h) 
+  
+ Fri 11 Apr 2025 
+ Author Response 
+ Tue 15 Apr 2025 
+ Paper Notification 
+ Wed 23 Apr 2025 
+ Artefact Submission Deadline 
+ Tue 4 Mar 2025 
+ Abstract and Paper Submission 
+ Fri 7 Feb 2025 
+ Initial Optional Abstract Submission 
+ Submission Link 
+ href="https://sle25.hotcrp.com/" - https://sle25.hotcrp.com/
+ 
+ href="https://sle25ae.hotcrp.com" - https://sle25ae.hotcrp.com
+Organising Committee 
+ href="https://conf.researchr.org/profile/sle-2025/gorelhedin1" - Görel HedinGeneral ChairLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/reginahebig" - Regina HebigProgram Co-ChairUniversität Rostock, Rostock, GermanyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/vadimzaytsev" - Vadim ZaytsevProgram Co-ChairUniversity of Twente, NetherlandsNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/idrissriouak" - Idriss RiouakArtifact Evaluation Co-ChairDepartment of Computer Science, Lund University, SwedenSweden 
+ href="https://conf.researchr.org/profile/sle-2025/jeffsmits" - Jeff SmitsArtifact Evaluation Co-ChairDelft University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/andreichis" - Andrei ChişPublicity Chairfeenk.comSwitzerland 
+ Programme Committee 
+ href="https://conf.researchr.org/profile/sle-2025/reginahebig" - Regina HebigProgram Co-ChairUniversität Rostock, Rostock, GermanyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/vadimzaytsev" - Vadim ZaytsevProgram Co-ChairUniversity of Twente, NetherlandsNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/vascoamaral" - Vasco AmaralNOVA-LINCS, FCT/UNL 
+ href="https://conf.researchr.org/profile/sle-2025/dominiqueblouin1" - Dominique BlouinLTCI Lab, Telecom Paris, Institute Politechnqie de ParisFrance 
+ href="https://conf.researchr.org/profile/sle-2025/einarbrochjohnsen" - Einar Broch JohnsenUniversity of OsloNorway 
+ href="https://conf.researchr.org/profile/sle-2025/federicociccozzi" - Federico CiccozziMälardalen UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/matteocimini" - Matteo CiminiUniversity of Massachusetts LowellUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/javierluiscanovasizquierdo" - Javier Luis Cánovas IzquierdoUniversitat Oberta de CatalunyaSpain 
+ href="https://conf.researchr.org/profile/sle-2025/juliendeantoni" - Julien DeAntoni 
+ href="https://conf.researchr.org/profile/sle-2025/juergendingel" - Juergen DingelQueen's University, Kingston, Ontario 
+ href="https://conf.researchr.org/profile/sle-2025/martinerwig" - Martin ErwigOregon State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/niklasfors" - Niklas ForsLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/jurriaanhage" - Jurriaan HageUtrecht University, Netherlands 
+ href="https://conf.researchr.org/profile/sle-2025/markhills" - Mark HillsAppalachian State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/thomaskuehne" - Thomas KuehneVictoria University of WellingtonNew Zealand 
+ href="https://conf.researchr.org/profile/sle-2025/vinaykulkarni" - Vinay KulkarniTata Consultancy Services ResearchIndia 
+ href="https://conf.researchr.org/profile/sle-2025/julialawall" - Julia LawallInriaFrance 
+ href="https://conf.researchr.org/profile/sle-2025/dimiracordon" - Dimi RacordonEPFL, LAMPSwitzerland 
+ href="https://conf.researchr.org/profile/sle-2025/moeketsiraselimo1" - Moeketsi RaselimoHumboldt-Universität zu Berlin 
+ href="https://conf.researchr.org/profile/sle-2025/danielratiu" - Daniel RatiuSiemens Corporate TechnologyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/martinaseidl" - Martina SeidlJohannes Kepler University LinzAustria 
+ href="https://conf.researchr.org/profile/sle-2025/jeffsmits" - Jeff SmitsDelft University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/friedrichsteimann" - Friedrich SteimannFernuniversität in HagenGermany 
+ href="https://conf.researchr.org/profile/sle-2025/gersonsunye" - Gerson SunyéIMT Atlantique; Nantes Université; École Centrale NantesFrance 
+ href="https://conf.researchr.org/profile/sle-2025/eugenesyriani" - Eugene SyrianiUniversité de MontréalCanada 
+ href="https://conf.researchr.org/profile/sle-2025/matthiastichy" - Matthias TichyUlm University, Germany 
+ href="https://conf.researchr.org/profile/sle-2025/ulyanatikhonova" - Ulyana TikhonovaF1RENetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/massimotisi2" - Massimo TisiIMT Atlantique, LS2N (UMR CNRS 6004)France 
+ href="https://conf.researchr.org/profile/sle-2025/danielvarro" - Daniel VarroLinköping University / McGill UniversitySweden 
+ Steering Committee 
+ Eric Van WykSteering Committee Chair 
+ Department of Computer Science and Engineering, University of Minnesota 
+ United States 
+ href="https://conf.researchr.org/profile/sle-2025/lolaburgueno" - Lola BurgueñoUniversity of MalagaSpain 
+ href="https://conf.researchr.org/profile/sle-2025/waltercazzola" - Walter Cazzola Università degli Studi di MilanoItaly 
+ href="https://conf.researchr.org/profile/sle-2025/benoitcombemale" - Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISAFrance 
+ href="https://conf.researchr.org/profile/sle-2025/thomasdegueule" - Thomas DegueuleCNRSFrance 
+ href="https://conf.researchr.org/profile/sle-2025/davidediruscio" - Davide Di RuscioUniversity of L'AquilaItaly 
+ href="https://conf.researchr.org/profile/sle-2025/martinerwig" - Martin ErwigOregon State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/berndfischer" - Bernd FischerStellenbosch UniversitySouth Africa 
+ href="https://conf.researchr.org/profile/sle-2025/jeffgray" - Jeff GrayUniversity of Alabama 
+ href="https://conf.researchr.org/profile/sle-2025/ralflammel1" - Ralf LämmelUniversität KoblenzGermany 
+ href="https://conf.researchr.org/profile/sle-2025/brunooliveira" - Bruno C. d. S. OliveiraUniversity of Hong KongChina 
+ href="https://conf.researchr.org/profile/sle-2025/richardpaige" - Richard PaigeMcMaster UniversityCanada 
+ href="https://conf.researchr.org/profile/sle-2025/davidpearce" - David J. PearceConsenSysUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/joaosaraiva" - João SaraivaHASLab/INESC TEC, University of MinhoPortugal 
+ href="https://conf.researchr.org/profile/sle-2025/friedrichsteimann" - Friedrich SteimannFernuniversität in HagenGermany 
+ href="https://conf.researchr.org/profile/sle-2025/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/jurgenvinju" - Jurgen VinjuCWI; Eindhoven University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/juandelara" - Juan de LaraAutonomous University of MadridSpain 
+ xThu 3 Apr 09:15 
+ href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/sle-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+Attending 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Venue: University of Koblenz
+ 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-location" - Location: Koblenz
+ 
+ href="https://conf.researchr.org/signup/sle-2025" - Sign Up 
+
+Call for Papers information:
+href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+Thu 12 - Fri 13 June 2025href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Koblenz, Germany
+co-located withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Venue: University of Koblenz 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-location" - Location: Koblenz 
+ href="https://conf.researchr.org/home/sle-2025" - Track/Call 
+ Organization | SLE 2025 Committees 
+ Track Committees 
+ Organising Committee 
+ Programme Committee 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/sle-2025" - People Index 
+ href="https://conf.researchr.org/search/sle-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/sle" - Series 
+ SLE 2025 
+ href="https://2024.splashcon.org/track/sle-2024" - SLE 2024 
+ href="https://2023.splashcon.org/home/sle-2023" - SLE 2023 
+ href="https://2022.splashcon.org/home/sle-2022" - SLE 2022 
+ href="https://conf.researchr.org/home/sle-2021" - SLE 2021 
+ href="https://conf.researchr.org/home/sle-2020" - SLE 2020 
+ href="https://conf.researchr.org/home/sle-2019" - SLE 2019 
+ href="https://conf.researchr.org/track/sle-2018/papers" - SLE 2018 
+ href="https://conf.researchr.org/track/sle-2017/sle-2017-papers" - SLE 2017 
+ href="https://conf.researchr.org/track/sle-2016/sle-2016-papers" - SLE 2016 
+ href="https://2015.splashcon.org/track/sle2015" - SLE 2015 
+ href="https://2013.splashcon.org/track/sle-2013-papers" - SLE 2013 
+ href="https://conf.researchr.org/signin/sle-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Essle-2025" - Sign in 
+ href="https://conf.researchr.org/signup/sle-2025" - Sign up 
+ href="https://conf.researchr.org/home/staf-2025" - STAF 2025
+(href="https://conf.researchr.org/series/staf" - series
+) /SLE 2025 (href="https://conf.researchr.org/series/sle" - series
+) /SLE 2025 
+ About 
+ href="#Call-for-Artifacts" - Call for Artifacts 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLANInternational Conference on Software Language Engineering (SLE)is devoted to the principles of software languages: their design, their implementation, and their evolution. 
+ With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its environment, and the languages driving its development process. Given that everything depends on software and that software depends on software languages, it seems fair to say that for many years to come, everything will depend on software languages. 
+ Software language engineering (SLE) is the discipline of engineering languages and their tools required for the creation of software. It abstracts from the differences between programming languages, modelling languages, and other software languages, and emphasises the engineering facet of the creation of such languages, that is, the establishment of the scientific methods and practices that enable the best results. While SLE is certainly driven by its metacircular character (software languages are engineered using software languages), SLE is not self-satisfying: its scope extends to the engineering of languages for all and everything. 
+ Like its predecessors, the 18th edition of the SLE conference, SLE 2025, will bring together researchers from different areas united by their common interest in the creation, capture, and tooling of software languages. It overlaps with traditional conferences on the design and implementation of programming languages, model-driven engineering, and compiler construction, and emphasises the fusion of their communities. To foster the latter, SLE traditionally fills a two-day program with a single track, with the only temporal overlap occurring between co-located events. 
+ SLE 2025 will be co-located withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+and take place in Koblenz, Germany. 
+ Community website: | href="https://www.sleconf.org/2025" - https://www.sleconf.org/2025 
+ Conference website: | href="https://conf.researchr.org/home/sle-2025" - https://conf.researchr.org/home/sle-2025 
+ Submission website: | href="https://sle25.hotcrp.com" - https://sle25.hotcrp.com 
+ Call for Papers 
+ href="#topics-of-interest" - Topics of Interest
+SLE covers software language engineering in general, rather than engineering a specific software language. Topics of interest include, but are not limited to: 
+ Software Language Design and Implementation | Approaches to and methods for language design 
+ Static semantics (e.g., design rules, well-formedness constraints) 
+ Techniques for specifying behavioral/executable semantics 
+ Generative approaches (incl. code synthesis, compilation) 
+ Meta-languages, meta-tools, language workbenches 
+ AI-assisted language design and optimisation 
+ Software Language Validation | Verification and formal methods for languages 
+ Testing techniques for languages 
+ Simulation techniques for languages 
+ Model-based testing 
+ AI-assisted validation 
+ Software Language Integration and Composition | Coordination of heterogeneous languages and tools 
+ Mappings between languages (incl. transformation languages) 
+ Traceability between languages 
+ Deployment of languages to different platforms 
+ AI-assisted refactoring 
+ Software Language Maintenance | Software language reuse 
+ Language evolution 
+ Language families and variability, language and software product lines 
+ Domain-specific approaches for any aspects of SLE (design, implementation, validation, maintenance) 
+ Empirical evaluation and experience reports of language engineering tools | User studies evaluating usability 
+ Performance benchmarks 
+ Industrial applications 
+ Synergies between Language Engineering and emerging/promising research areas | Generative AI in language engineering (e.g., AI-based language modelling, AI-driven code generation tools) 
+ AI and ML language engineering (e.g., ML compiler testing, code classification) 
+ Quantum language engineering (e.g., language design for quantum machines) 
+ Language engineering for physical systems (e.g., CPS, IoT, digital twins) 
+ Socio-technical systems and language engineering (e.g., language evolution to adapt to social requirements) 
+ href="#types-of-submissions" - Types of Submissions
+SLE accepts the following types of papers: 
+ Research papers: These are “traditional” papers detailing research contributions to SLE. Papers may range from 6 to 12 pages in length and may optionally include 2 further pages of bibliography/appendices. Papers will be reviewed with an understanding that some results do not need 12 full pages and may be fully described in fewer pages. 
+ New ideas/vision papers: These papers may describe new, unconventional software language engineering research positions or approaches that depart from standard practice. They can describe well-defined research ideas that are at an early stage of investigation. They could also provide new evidence to challenge common wisdom, present new unifying theories about existing SLE research that provides novel insight or that can lead to the development of new technologies or approaches, or apply SLE technology to radically new application areas. New ideas/vision papers must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. 
+ SLE Body of Knowledge: The SLE Body of Knowledge (SLEBoK) is a community-wide effort to provide a unique and comprehensive description of the concepts, best practices, tools, and methods developed by the SLE community. In this respect, the SLE conference will accept surveys, essays, open challenges, empirical observations, and case study papers on the SLE topics. These can focus on, but are not limited to, methods, techniques, best practices, and teaching approaches. Papers in this category can have up to 20 pages, including bibliography/appendices. 
+ Tool papers: These papers focus on the tooling aspects often forgotten or neglected in research papers. A good tool paper focuses on practical insights that will likely be useful to other implementers or users in the future. Any of the SLE topics of interest are appropriate areas for tool demonstrations. Submissions must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. They may optionally include an appendix with a demo outline/screenshots and/or a short video/screencast illustrating the tool. 
+ Workshops: Workshops will be organised by STAF. Please inform us and contact STAF 2025 organisers if you would like to organise a workshop of interest to the SLE audience. Information on how to submit workshops can be found on the STAF 2025 Website. 
+ href="#submission" - Submission
+SLE 2025 has a single submission round for papers, including a mandatory abstract registration and a rebuttal phase, where all authors of research papers will have the possibility of responding to the reviews on their submissions. 
+ Authors of accepted research papers will be invited to submit artefacts. 
+ Format 
+ Submissions have to use thehref="https://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+; please make sure that you always use the latest ACM SIGPLAN acmart LaTeX template, and that the document class definition is\documentclass[sigplan,anonymous,review]{acmart}. Do not make any changes to this format! 
+ Ensure that your submission is legible when printed on a black and white printer. In particular, please check that colours remain distinct and font sizes in figures and tables are legible. 
+ To increase fairness in reviewing, a double-blind review process has become standard across SIGPLAN conferences. Accordingly, SLE will follow the double-blind process. Author names and institutions must be omitted from submitted papers, and references to the authors’ own related work should be in the third person. No other changes are necessary, and authors will not be penalized if reviewers are able to infer their identities in implicit ways. 
+ All submissions must be in PDF format. The submission website is:href="https://sle25.hotcrp.com" - https://sle25.hotcrp.com
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described bySIGPLAN’s Republication Policy. Submitters should also be aware ofACM’s Policy and Procedures on Plagiarism. Submissions that violate these policies will be desk-rejected. 
+ href="#policy-on-human-participant-and-subject-research" - Policy on Human Participant and Subject Research
+Authors conducting research involving human participants and subjects must ensure that their research complies with their local governing laws and regulations and the ACM’s general principles, as stated in thehref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s Publications Policy on Research Involving Human Participants and Subjects
+. If submissions are found to be violating this policy, they will be rejected. 
+ Reviewing Process 
+ All submitted papers will be reviewed by at least three members of the program committee. Research papers and tool papers will be evaluated concerning soundness, relevance, novelty, presentation, and replicability. New ideas/vision papers will be evaluated primarily concerning soundness, relevance, novelty, and presentation. SLEBoK papers will be reviewed on their soundness, relevance, originality, and presentation. Tool papers will be evaluated concerning relevance, presentation, and replicability. 
+ For fairness reasons, all submitted papers must conform to the above instructions. Submissions that violate these instructions may be rejected without review at the discretion of the PC chairs. 
+ For research papers, authors will get a chance to respond to the reviews before a final decision is made. 
+ Artefact Evaluation 
+ SLE will use an evaluation process to assess the quality of artefacts on which papers are based to foster the culture of experimental reproducibility. Authors of accepted research papers are invited to submit artefacts. 
+ Awards 
+ Distinguished paper | : Award for the most notable paper, as determined by the PC chairs based on the recommendations of the program committee. 
+ Distinguished artefact | : Award for the artefact most significantly exceeding expectations, as determined by the AEC chairs based on the recommendations of the artefact evaluation committee. 
+ Distinguished reviewer | : Award for the programme committee member that produced the most useful reviews as assessed by paper authors. 
+ Most Influential Paper | : Award for the SLE 2015 paper with the greatest impact, as judged by the SLE Steering Committee. 
+ Publication 
+ All accepted papers will be published in the ACM Digital Library. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ Contact 
+ For additional information, clarification, or answers to any questions, please get in touch with the program co-chairs (regina.hebig@uni-rostock.deandvadim@grammarware.net). 
+ Call for Artifacts 
+ Artifact Evaluation 
+ SLE’25 implements a two-rounds review process that also evaluates the quality of the artifacts supporting accepted research papers. This is the Artifact Evaluation track. 
+ Authors of research and tools paper accepted for SLE 2025 will be invited to submit artifacts. 
+ In the context of the SLE community, an artifact refers to any digital object that supports, complements, or is a result of research in the field of software language engineering. 
+ This includes, but it is not limited to, tools, language grammars, metamodels, codebases, transformation scripts, formal proofs, benchmarks, datasets, statistical analyses, and surveys. 
+ The submitted artifacts will be reviewed by a dedicated Artifact Evaluation Committee. The approved artifacts will then be made first-class bibliographic objects, easy to find and cite. 
+ Depending on the quality of the artifact, the artifact might be awarded with different kinds of “badges” that are visible on the final paper. 
+ The submission is optional and it is additional to your already accepted paper at SLE’25. It will not have a negative impact. 
+ Artifacts provide tangible evidence of results, enable reproducibility, and encourage reuse and extension by the community. 
+ Artifact Review Process: 
+ Submitted artifacts will go through a two-phase evaluation. 
+ Kick-the-tires: 
+ Reviewers check the artifact integrity and look for any possible setup problems that may prevent it from being properly evaluated 
+ (e.g., corrupted or missing files, VM won’t start, immediate crashes on the simplest example, etc.). 
+ Authors are informed of the outcome and will be given a 5-day period to read and respond to the kick-the-tires reports of their artifacts. 
+ During the author response period, interactive discussions between reviewers and authors will be possible through HotCRP. 
+ Artifact assessment: 
+ Reviewers evaluate the artifacts, checking if they live up to the claims the authors make in the accompanying documentation. 
+ Artifact Preparation Guidelines 
+ At a high level, we are interested in artifacts that: 
+ Have no dependencies. Use of docker images is strongly recommended. Virtual machine images in OVF/OVA format containing the artifact can also be provided. 
+ Have a minimal number of setup steps. Ideally, it should just be importing the docker/VM image. 
+ Have a short run, so that reviewers can try first before carrying the full review (kick-the-tire). 
+ Have a push-button evaluation. Ideally, the evaluation can be run through a single script, which performs the computation and generates the relevant figures/experimental data presented in the paper. | The evaluation should either display progress messages or expected duration should be provided. | This fully automated approach may be a bit more costly to set up, but you won’t have any copy/pasting issues for your paper, and regenerating data is heavily simplified. 
+ Include some documentation on the code and layout of the artifact. 
+ Use widely supported open formats for documents, preferably CSV or JSON for data. 
+ Document which outputs are associated with which parts of your paper, if possible, please specify table, figure, or sub-sections. 
+ The artifact evaluated by the AEC and linked in the paper must be precisely the same. 
+ AEC Chairs will assure that DOIs point to the specific version evaluated. To create a DOI, you can use platforms likeZenodo,FigShareorOSF, which offer free DOI creation. 
+ PDF and artifact should NOT be anonymized anymore. 
+ href="#authors-are-strongly-discouraged-from" - Authors are strongly discouraged from:
+Downloading content over the internet during experiments or tests; 
+ Using closed-source software libraries, frameworks, operating systems, and container formats; and 
+ Providing experiments or tests that run for multiple days. If the artifact takes several days to run, we ask that you provide us with the full artifact and a reduced input set | (in addition to the full set) to only partially reproduce your results in a shorter time. | If the artifact requires special hardware, please get in touch with the AEC chairs, let us know of the issue, and provide us with (preferably SSH) access to a self-hosted platform for accessing the artifact. 
+ href="#artifact-submission-guidelines" - Artifact Submission Guidelines:
+Every submission must include the following. 
+ Authors must submit a single artifact for a paper (1-to-1 mapping, paper-to-artifact). 
+ A | DOI | for downloading the artifact. 
+ A | PDF version | of the accepted paper for evaluating the artifact-paper consistency. 
+ A | Markdown-formatted file | providing an overview of the artifact. | PLEASE USE THE AUTHORS TEMPLATE: | https://doi.org/10.5281/zenodo.14975264 
+ Artifact submissions will be handled through the HotCRP submission system at the following link: 
+ href="https://sle25ae.hotcrp.com/" - https://sle25ae.hotcrp.com/
+NOTE:The artifact can be associated with a different set of authors (different from the accepted paper). 
+ Quality Criteria 
+ Submitted artifacts will be evaluated by the AEC concerning the following criteria. 
+ Depending on the criteria, different Badges are assigned (we limit ourselves to the ‘Evaluated’ and ‘Available’ badges). 
+ Artifact Evaluated (Badges) 
+ There are two quality levels of the ‘Evaluated’ badge: 
+ Artifact Evaluated - Functional (Badge) 
+ “The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation." 
+ Documented | : At minimum, an inventory of artifacts is included, and sufficient description provided to enable the artifacts to be exercised. 
+ Consistent | : The artifacts are relevant to the associated paper and contribute in some inherent way to the generation of its main results. 
+ Complete | : To the extent possible, all components relevant to the paper in question are included. 
+ Exercisable | : Included scripts and/or software used to generate the results in the associated paper can be successfully executed. 
+ Artifact Evaluated - Reusable (Badge) 
+ “The artifacts associated with the paper are of a quality that significantly exceeds minimal functionality. 
+ That is, they have all the qualities of the Artifacts Evaluated – Functional level, but, in addition, they are very carefully documented and well-structured to the extent that reuse and repurposing is facilitated." 
+ Artifact Available (Badge) 
+ “Author-created artifacts relevant to this paper have been placed on a publicly accessible archival repository. 
+ A DOI or link to this repository along with a unique identifier for the object is provided.” 
+ href="#important-dates-authors" - Important Dates (Authors):
+Artifact submission Deadline | : 23.04.2025 (AoE) 
+ Start Kick-the-tires author response period | : 28.04.2025 (AoE) 
+ End Kick-the-tires author response period | : 02.05.2025 (AoE) 
+ Author artifact Notification | : 01.06.2025 (AoE) 
+ href="#important-dates-pc-members" - Important Dates (PC Members):
+Artifact submission deadline | : 23.04.2025 (AoE) 
+ Artifact bidding | : 24-26.04.2025 
+ Camera-ready deadline for SLE papers | : 01.05.2025 (AoE) 
+ Kick-the-tires review deadline & rebuttal phase | : 02.05.2025 (AoE) 
+ Final review deadline | : 24.05.2025 (AoE) 
+ Artifact discussion | : 25-31.05.2025 
+ Artifact notification | : 01.06.2025 (AoE) 
+ Awards 
+ TheDistinguished Artifactaward will be presented to the artifact that most significantly exceeds expectations. 
+ This recognition is determined by the AEC chairs based on the recommendations of the artifact evaluation committee. 
+ Any Questions? 
+ For further information on the artifact evaluation of SLE 2025, feel free to contact the artifact evaluation chairs. 
+ Best regards, 
+ Idriss Riouak and Jeff Smits 
+ Idriss Riouak | : | idriss.riouak@cs.lth.se 
+ Jeff Smits | : | j.smits-1@tudelft.nl 
+ Important DatesAoE (UTC-12h) 
+  
+ Fri 11 Apr 2025 
+ Author Response 
+ Tue 15 Apr 2025 
+ Paper Notification 
+ Wed 23 Apr 2025 
+ Artefact Submission Deadline 
+ Tue 4 Mar 2025 
+ Abstract and Paper Submission 
+ Fri 7 Feb 2025 
+ Initial Optional Abstract Submission 
+ Submission Link 
+ href="https://sle25.hotcrp.com/" - https://sle25.hotcrp.com/
+ 
+ href="https://sle25ae.hotcrp.com" - https://sle25ae.hotcrp.com
+Organising Committee 
+ href="https://conf.researchr.org/profile/sle-2025/gorelhedin1" - Görel HedinGeneral ChairLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/reginahebig" - Regina HebigProgram Co-ChairUniversität Rostock, Rostock, GermanyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/vadimzaytsev" - Vadim ZaytsevProgram Co-ChairUniversity of Twente, NetherlandsNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/idrissriouak" - Idriss RiouakArtifact Evaluation Co-ChairDepartment of Computer Science, Lund University, SwedenSweden 
+ href="https://conf.researchr.org/profile/sle-2025/jeffsmits" - Jeff SmitsArtifact Evaluation Co-ChairDelft University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/andreichis" - Andrei ChişPublicity Chairfeenk.comSwitzerland 
+ Programme Committee 
+ href="https://conf.researchr.org/profile/sle-2025/reginahebig" - Regina HebigProgram Co-ChairUniversität Rostock, Rostock, GermanyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/vadimzaytsev" - Vadim ZaytsevProgram Co-ChairUniversity of Twente, NetherlandsNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/vascoamaral" - Vasco AmaralNOVA-LINCS, FCT/UNL 
+ href="https://conf.researchr.org/profile/sle-2025/dominiqueblouin1" - Dominique BlouinLTCI Lab, Telecom Paris, Institute Politechnqie de ParisFrance 
+ href="https://conf.researchr.org/profile/sle-2025/einarbrochjohnsen" - Einar Broch JohnsenUniversity of OsloNorway 
+ href="https://conf.researchr.org/profile/sle-2025/federicociccozzi" - Federico CiccozziMälardalen UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/matteocimini" - Matteo CiminiUniversity of Massachusetts LowellUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/javierluiscanovasizquierdo" - Javier Luis Cánovas IzquierdoUniversitat Oberta de CatalunyaSpain 
+ href="https://conf.researchr.org/profile/sle-2025/juliendeantoni" - Julien DeAntoni 
+ href="https://conf.researchr.org/profile/sle-2025/juergendingel" - Juergen DingelQueen's University, Kingston, Ontario 
+ href="https://conf.researchr.org/profile/sle-2025/martinerwig" - Martin ErwigOregon State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/niklasfors" - Niklas ForsLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/jurriaanhage" - Jurriaan HageUtrecht University, Netherlands 
+ href="https://conf.researchr.org/profile/sle-2025/markhills" - Mark HillsAppalachian State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/thomaskuehne" - Thomas KuehneVictoria University of WellingtonNew Zealand 
+ href="https://conf.researchr.org/profile/sle-2025/vinaykulkarni" - Vinay KulkarniTata Consultancy Services ResearchIndia 
+ href="https://conf.researchr.org/profile/sle-2025/julialawall" - Julia LawallInriaFrance 
+ href="https://conf.researchr.org/profile/sle-2025/dimiracordon" - Dimi RacordonEPFL, LAMPSwitzerland 
+ href="https://conf.researchr.org/profile/sle-2025/moeketsiraselimo1" - Moeketsi RaselimoHumboldt-Universität zu Berlin 
+ href="https://conf.researchr.org/profile/sle-2025/danielratiu" - Daniel RatiuSiemens Corporate TechnologyGermany 
+ href="https://conf.researchr.org/profile/sle-2025/martinaseidl" - Martina SeidlJohannes Kepler University LinzAustria 
+ href="https://conf.researchr.org/profile/sle-2025/jeffsmits" - Jeff SmitsDelft University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/friedrichsteimann" - Friedrich SteimannFernuniversität in HagenGermany 
+ href="https://conf.researchr.org/profile/sle-2025/gersonsunye" - Gerson SunyéIMT Atlantique; Nantes Université; École Centrale NantesFrance 
+ href="https://conf.researchr.org/profile/sle-2025/eugenesyriani" - Eugene SyrianiUniversité de MontréalCanada 
+ href="https://conf.researchr.org/profile/sle-2025/matthiastichy" - Matthias TichyUlm University, Germany 
+ href="https://conf.researchr.org/profile/sle-2025/ulyanatikhonova" - Ulyana TikhonovaF1RENetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/massimotisi2" - Massimo TisiIMT Atlantique, LS2N (UMR CNRS 6004)France 
+ href="https://conf.researchr.org/profile/sle-2025/danielvarro" - Daniel VarroLinköping University / McGill UniversitySweden 
+ Steering Committee 
+ Eric Van WykSteering Committee Chair 
+ Department of Computer Science and Engineering, University of Minnesota 
+ United States 
+ href="https://conf.researchr.org/profile/sle-2025/lolaburgueno" - Lola BurgueñoUniversity of MalagaSpain 
+ href="https://conf.researchr.org/profile/sle-2025/waltercazzola" - Walter Cazzola Università degli Studi di MilanoItaly 
+ href="https://conf.researchr.org/profile/sle-2025/benoitcombemale" - Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISAFrance 
+ href="https://conf.researchr.org/profile/sle-2025/thomasdegueule" - Thomas DegueuleCNRSFrance 
+ href="https://conf.researchr.org/profile/sle-2025/davidediruscio" - Davide Di RuscioUniversity of L'AquilaItaly 
+ href="https://conf.researchr.org/profile/sle-2025/martinerwig" - Martin ErwigOregon State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/berndfischer" - Bernd FischerStellenbosch UniversitySouth Africa 
+ href="https://conf.researchr.org/profile/sle-2025/jeffgray" - Jeff GrayUniversity of Alabama 
+ href="https://conf.researchr.org/profile/sle-2025/ralflammel1" - Ralf LämmelUniversität KoblenzGermany 
+ href="https://conf.researchr.org/profile/sle-2025/brunooliveira" - Bruno C. d. S. OliveiraUniversity of Hong KongChina 
+ href="https://conf.researchr.org/profile/sle-2025/richardpaige" - Richard PaigeMcMaster UniversityCanada 
+ href="https://conf.researchr.org/profile/sle-2025/davidpearce" - David J. PearceConsenSysUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/joaosaraiva" - João SaraivaHASLab/INESC TEC, University of MinhoPortugal 
+ href="https://conf.researchr.org/profile/sle-2025/friedrichsteimann" - Friedrich SteimannFernuniversität in HagenGermany 
+ href="https://conf.researchr.org/profile/sle-2025/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/jurgenvinju" - Jurgen VinjuCWI; Eindhoven University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/juandelara" - Juan de LaraAutonomous University of MadridSpain 
+ xThu 3 Apr 09:20 
+ href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/sle-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+Attending 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Venue: University of Koblenz
+ 
+ href="https://conf.researchr.org/venue/sle-2025/staf-2025-location" - Location: Koblenz
+ 
+ href="https://conf.researchr.org/signup/sle-2025" - Sign Up

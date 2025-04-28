@@ -1,0 +1,361 @@
+Conference full name: Tools and Algorithms for Construction and Analysis of Systems (TACAS)
+
+1. Website of TACAS_2: https://etaps.org/2025/conferences/tacas/
+Website information of TACAS_2:
+
+href="/2025/" - ETAPS 2025 | href="/2025/cfp" - Call for Papers 
+ href="/2025/important-dates" - Important Dates 
+ href="/2025/sat-events" - Satellite Events 
+ href="/2025/programme" - Programme 
+ href="/2025/programme/#accepted-papers" - Accepted Papers 
+ href="/2025/speakers" - Invited Speakers 
+ href="/2025/esop" - ESOP 2025 
+ href="/2025/fase" - FASE 2025 
+ href="/2025/fossacs" - FoSSaCS 2025 
+ href="/2025/tacas" - TACAS 2025 
+ href="/2025/industry-day" - Industry Day 
+ href="/2025/organizers/" - Organizers 
+ href="/2025/registration/" - Registration 
+ href="/2025/attending/" - Attending 
+ href="/2025/#sponsors" - Sponsors 
+ About | About ETAPS 
+ ETAPS Association 
+ Steering Committee 
+ Sustainability 
+ ETAPS-F 
+ Artifact Badges 
+ FoPSS Schools 
+ Anti-Harassment Policy 
+ DEI Policy 
+ Disclaimer 
+ Conferences | ESOP 
+ FASE 
+ FoSSaCS 
+ href="/about/tacas" - TACAS 
+ Proceedings 
+ Awards | Best Paper 
+ Test of Time 
+ Doctoral Dissertation 
+ Test-of-Time Tool 
+ Lifetime 
+ Past Editions 
+ ETAPS Blog 
+ Future Editions | ETAPS 2026 
+ Log in | Join us 
+ Log in | Join usTACAS 2025 
+ 31st International Conference on Tools and Algorithms for the Construction and Analysis of Systems 
+ Scope 
+ TACAS is a forum for researchers, developers and users interested in rigorously based tools and algorithms for the construction and analysis of systems. 
+ The conference aims to bridge the gaps between different communities with this common interest and to support them in their quest to improve the utility, reliability, flexibility and efficiency of tools and algorithms for building systems. 
+ Theoretical papers with clear relevance for tool construction and analysis as well as tool descriptions and case studies with a conceptual message are all encouraged. The topics covered by the conference include, but are not limited to: 
+ specification and verification techniques; 
+ software and hardware verification; 
+ analytical techniques for real-time, hybrid, or stochastic systems; 
+ analytical techniques for safety, security, or dependability; 
+ SAT and SMT solving; 
+ theorem proving; 
+ model checking; 
+ static and dynamic program analysis; 
+ testing; 
+ abstraction techniques for modeling and verification; 
+ compositional and refinement-based methodologies; 
+ system construction and transformation techniques; 
+ machine-learning techniques for synthesis and verification; 
+ tool environments and tool architectures; 
+ applications and case studies. 
+ Important Dates 
+ The important dates are available in thehref="/2025/cfp" - Joint Call for Papers
+. 
+ Submission Categories 
+ TACAS accepts four types of submissions: research papers, case-study papers, regular tool papers, and tool demonstration papers. 
+ Research Papersidentify and justify a principled advance to the theoretical foundations for the construction and analysis of systems. Where applicable, they are supported by experimental validation. Artifact evaluation for regular research papers is not mandatory but strongly encouraged. 
+ We do not discourage authors of regular research papers to put their submission on arXiv (or similar repos). Yet, we strongly encourage authors to not put the work on arXiv (or similar repos) around 2 weeks before and after the submission deadline, because potential reviewers may be subscribed to receive updates on recently posted papers. 
+ Case-Study Papersare full length case-studies that describe the application of techniques developed by the community to a single problem or a set of problems of practical importance, preferably in a real-world setting. Case-study papers must describe the problem of interest and its novelty. It must provide a detailed description of the case-study (or studies) and various related techniques to solve the problem of interest for the case-study application. Modeling aspects of the case-study must be discussed. The case-study paper must provide detailed results on the application of formal techniques and lead to a conclusion that could be of interest beyond TACAS (to the research community pertaining to the case study). Artifact evaluation is currently not mandatory for case-study papers but undergoing artifact evaluation is strongly encouraged. 
+ Regular Tool Papersare full length papers that describe a tool of interest to the community or a new version of the tool built using novel algorithmic and engineering techniques. Regular tool papers must describe tools of broad interest and utility to the TACAS community. The papers must clearly describe the problem to be solved, its importance, related work, the techniques used in the tool and their novelty, the construction of the tool, its unique features, discuss how the tool is used and present benchmarking of the tool including comparisons with other tools and previous versions of the tool. For tools from the industry, the description should be useful in allowing the community members to reproduce some of the key techniques or “tricks” in their own tools. All tool papers must undergo mandatory artifact evaluation. 
+ Tool-Demonstration Papersare short papers that demonstrate a new tool or application of existing tool on a significant and novel case-study. As such, tool demo papers will be accepted if the PC decides that they are sufficiently interesting and novel to the community. Artifact evaluation is mandatory for these papers. 
+ Paper Submission 
+ href="https://easychair.org/conferences/?conf=tacas25" - Submit paper
+Submissions must follow theformatting guidelines of Springer’s LNCS(use the llncs.cls class) and be submitted electronically in pdf through thehref="https://easychair.org/conferences/?conf=tacas25" - Easychair author interface of TACAS 2025
+. 
+ The review process of TACAS 2025 is: 
+ double-blind | for regular research papers. As such, authors of regular research papers must omit their names and institutions; refer to prior work in the third person, just as prior work by others; not to include acknowledgments that might identify them. 
+ single-blind | for case study papers, regular tool papers, and tool-demonstration papers. 
+ Thelengthof regular research papers, case study papers, and regular tool papers is limited to 16 pp llncs.cls (excluding the bibliography and appendices). The length of tool demonstration papers is limited to 6 pp llncs.cls (excluding the bibliography and appendices). Additional material can be placed in a clearly marked appendix, at the end of the paper. The reviewers are, however, not obliged to read such appendices. If the paper is accepted, a full version including the appendix should be made publicly available via arXiv or a similar platform. 
+ TACAS 2025 allows at most four submissions per author. 
+ Submissions not adhering to the formatting and length requirements specified above will be rejected immediately. 
+ Conflict of Interest 
+ Upon paper submission, authors are asked to declare their Conflict of Interest (COI) with TACAS 2025 PC members. A COI includes the following sources: 
+ Family member or close friend. 
+ Ph.D. advisor or advisee (no time limit), or postdoctoral or undergraduate mentor or mentee within the past five years. 
+ Person with the same affiliation. 
+ Involved in an alleged incident of harassment. (It is not required that the incident be reported.) 
+ Reviewer owes author a favour (e.g., recently requested a reference letter). 
+ Frequent or recent collaborator (within last 5 years) cannot objectively review your work. If an author believes that they have a valid reason for a COI not listed above, then the author can contact TACAS 2025 PC chairs. Falsely declared conflicts (i.e., do not satisfy one of the listed reasons) risk rejection without consideration of merit. If an author is uncertain of COI, the author is encouraged to email TACAS 2025 PC chairs. 
+ Paper Evaluation 
+ All papers will be evaluated by the program committee (PC), coordinated by the PC chairs and aided by the artifact evaluation chairs. All papers will be judged on novelty, significance, correctness, and clarity. 
+ Reproducibility of results is of the utmost importance for TACAS. Therefore, we encourage all authors to include support for replicating the results of their papers. For theorems, this would mean providing proofs; for algorithms, this would mean including evidence of correctness and acceptable performance, either by a theoretical analysis or by experimentation; and for experiments, one should provide access to the artifacts used to generate the experimental data. Material that does not fit into the paper page limit may be provided as appendix and/or on a supplementary website (without violating double-blind submission requirements of regular research papers), with access appropriately enabled and license rights made clear. For example, the supplemental material for reviewing case-study papers and papers with experimental results could be classified as reviewer-confidential if necessary (e.g. if proprietary data are investigated or software is not open source). 
+ TACAS 2025 will userebuttal for selected submissions(those in the grey zone). 
+ Artifact Evaluation 
+ TACAS 2025 implementsmandatory artifact evaluation for regular tool paper and tool demonstration paper submissions. Authors of these submissions must submit the respective artifacts by October 24, 2024 (AoE). The artifact will be evaluated, and the outcome will be considered in the paper’s acceptance decision. 
+ TACAS 2025 also implements avoluntary artifact evaluation for regular paper and case study paper submissions. Authors of these submissions are encouraged to submit their respective artifacts. The artifacts will be evaluated post-paper-acceptance, provided the submission has been accepted as a regular paper or case study paper at TACAS 2025. Authors of accepted regular/case-study papers may revise/submit their artifact for evaluation shortly (in one week time and not longer than January 9, 2025) after the paper has been accepted. The outcome of the voluntary artifact evaluation will not alter the paper acceptance decision. 
+ Details on artifacts and their evaluation criteriaare available on thehref="https://tacas.info/artifacts-25.php" - artifacts page
+. 
+ Artifact Submission 
+ Artifact submission is handled viahref="https://easychair.org/conferences/?conf=tacas25" - EasyChair
+. After the paper submission deadline, the paper submission will be copied by us from the main track to the artifact evaluation track. In this track, you should amend your submission’s abstract and upload a ZIP archive containing your artifact. Do not attempt to create a new submission, nor change your submission’s other details such as authors or title. Because of this copying process, you can upload or update your artefact either in the main track before the paper submission deadline or in the AE track during a window before the deadline. The TACAS PC or AEC chairs will inform authors when the AE track is open for different paper categories. 
+ Competition on Software Verification (SV-COMP) 
+ TACAS 2025 will host the 14th instance of thehref="https://sv-comp.sosy-lab.org/2025/" - Competition on Software Verification, SV-COMP
+. 
+ Program Committee 
+ PC Chairs 
+ Arie Gurfinkel 
+ Marijn Heule 
+ PC members 
+ Erika Ábrahám (RWTH Aachen University, Germany) 
+ Elvira Albert (Complutense University of Madrid, Spain) 
+ Cyrille Artho (KTH Royal Institute of Technology, Sweden) 
+ Haniel Barbosa (Universidade Federal de Minas Gerais, Brazil) 
+ Clark Barrett (Stanford, USA) 
+ Dirk Beyer (LMU Munich, Germany) 
+ Armin Biere (Freiburg University, Germany) 
+ Nikolaj Bjorner (Microsoft Research, USA) 
+ Roderick Bloem (TU Graz, Austria) 
+ Rose Bohrer (Worcester Polytechnic Institute, USA) 
+ Borzoo Bonakdarpour (Michigan State University, USA) 
+ Mingshuai Chen (Zhejiang University, China) 
+ Mila Dalla Preda (University of Verona, Italy) 
+ Rayna Dimitrova (CISPA, Germany) 
+ Grigory Fedyukovich (Florida State University, USA) 
+ Hadar Frenkel (CISPA – Helmholtz Center for Information Security, Germany) 
+ Alberto Griggio (Fondazione Bruno Kessler, Italy) 
+ Ichiro Hasuo (National Institute of Informatics, Japan) 
+ Holger Hermanns (Saarland University, Germany) 
+ Alan Hu (University of British Columbia, Canada) 
+ Sebastian Junges (Radboud University, Netherlands) 
+ Temesghen Kahsai (Amazon, USA) 
+ Joost-Pieter Katoen (RWTH Aachen University, Germany) 
+ Guy Katz (The Hebrew University of Jerusalem, Israel) 
+ Umang Mathur (National University of Singapore, Singapore) 
+ Anastasia Mavridou (KBR / NASA Ames Research Center, USA) 
+ Kuldeep Meel (University of Toronto, Canada) 
+ Magnus Myreen (Chalmers University of Technolog, Sweden) 
+ Nina Narodytska (VMware, USA) 
+ Jorge Navas (Certora, USA) 
+ Laura Nenzi (University of Trieste, Italy) 
+ Aina Niemetz (Stanford, USA) 
+ Andre Platzer (Karlsruhe Institute of Technology, Germany) 
+ Elizabeth Polgreen (University of Edinburgh, Scotland) 
+ Kristin Rozier (Iowa State, USA) 
+ Christian Schilling (Aalborg University, Denmark) 
+ Anne-Kathrin Schmuck (Max Planck Institute, Germany) 
+ Natasha Sharygina (USI, Switzerland) 
+ Sharon Shoham (Tel-Aviv University, Israel) 
+ Xujie Si (University of Toronto, Canada) 
+ Mihaela Sighireanu (ENS Paris-Saclay, France) 
+ Tanel Tammet (Tallinn University of Technology, Estonia) 
+ Yong Kiam Tan (Institute for Infocomm Research, A*STAR, Singapore) 
+ Silvia Lizeth Tapia Tarifa (University of Oslo, Norway) 
+ Cesare Tinelli (The University of Iowa, USA) 
+ Hazem Torfah (Chalmers University of Technology, Sweden) 
+ Yakir Vizel (Technion, Israel) 
+ Tomas Vojnar (Brno University of Technology, Czechia) 
+ Jingbo Wang (University of Southern California, USA) 
+ Georg Weissenbacher (TU Wien, Austria) 
+ Anton Wijs (Eindhoven University of Technology, Netherlands) 
+ Sarah Winkler (Free University Bolzano, Italy) 
+ Haoze Wu (Amherst College, USA) 
+ Artifact Evaluation Committee 
+ Artifact Evaluation Chairs 
+ Daniela Kaufmann | (TU Wien) 
+ Mark Santolucito | (Barnard College) 
+ Artifact Evaluation Committee (AEC) 
+ The complete list of the AEC is available | href="https://tacas.info/artifacts-25.php" - here | . 
+ ETAPS International Joint Conferences On Theory & Practice Of Software 
+ ETAPS Association 
+ Internal 
+ Responsible for these web pages: 
+  
+ Jan Kofroň 
+ Faculty of Mathematics and Physics 
+ Charles University, Czech Republic 
+ E-mail: firstname.lastname [at] d3s.mff.cuni.cz 
+ Phone: +420 951 554 285 
+ ETAPS Policies|Disclaimer© 2022–2025 ETAPS Association. All rights reserved.
+
+2. Website of TACAS_2: https://etaps.org/about/tacas/
+Website information of TACAS_2:
+
+href="/2025/" - ETAPS 2025 | href="/2025/cfp" - Call for Papers 
+ href="/2025/important-dates" - Important Dates 
+ href="/2025/sat-events" - Satellite Events 
+ href="/2025/programme" - Programme 
+ href="/2025/programme/#accepted-papers" - Accepted Papers 
+ href="/2025/speakers" - Invited Speakers 
+ href="/2025/esop" - ESOP 2025 
+ href="/2025/fase" - FASE 2025 
+ href="/2025/fossacs" - FoSSaCS 2025 
+ href="/2025/tacas" - TACAS 2025 
+ href="/2025/industry-day" - Industry Day 
+ href="/2025/organizers/" - Organizers 
+ href="/2025/registration/" - Registration 
+ href="/2025/attending/" - Attending 
+ href="/2025/#sponsors" - Sponsors 
+ About | About ETAPS 
+ ETAPS Association 
+ Steering Committee 
+ Sustainability 
+ ETAPS-F 
+ Artifact Badges 
+ FoPSS Schools 
+ Anti-Harassment Policy 
+ DEI Policy 
+ Disclaimer 
+ Conferences | ESOP 
+ FASE 
+ FoSSaCS 
+ href="/about/tacas" - TACAS 
+ Proceedings 
+ Awards | Best Paper 
+ Test of Time 
+ Doctoral Dissertation 
+ Test-of-Time Tool 
+ Lifetime 
+ Past Editions 
+ ETAPS Blog 
+ Future Editions | ETAPS 2026 
+ Log in | Join us 
+ Log in | Join usTACASInternational Conference on Tools and Algorithms for the Construction and Analysis of Systems 
+ Scope of Interest 
+ TACAS is a forum for researchers, developers and users interested in rigorously based tools and algorithms for the construction and analysis of systems. The conference aims to bridge the gaps between different communities with this common interest and to support them in their quest to improve the utility, reliability, flexibility and efficiency of tools and algorithms for building systems. 
+ The TACAS conference is a founding member of ETAPS. Its roots go back to 1995, when it was first held in Aalborg, Denmark. Since then the TACAS proceedings are published in the LNCS series of Springer-Verlag. 
+ 25 Anniversary Celebration 
+ In 2022, TACAS celebrated its 25 anniversary. Watch the talk of Kim G Larsen about the conference history! 
+ Sorry, your browser does not support the video tag.Links 
+ For more details please visit the current conference | href="https://etaps.org/2025/tacas/" - website | . 
+ For the past proceedings of TACAS visit | href="https://dblp.org/db/conf/tacas/index.html" - this page | . 
+ Steering Committee 
+ Dirk Beyer | (LMU Munich, Germany) 
+ Dana Fisman | (Ben-Gurion University, Israel) 
+ Holger Hermanns | (Universität des Saarlandes, Germany) 
+ Joost-Pieter Katoen | (RWTH Aachen, Germany)—chair 
+ Kim G. Larsen | (Aalborg Universitet, Denmark) 
+ Corina Păsăreanu | (NASA Ames, USA) 
+ Advisory Board 
+ Ed Brinksma | (University of Twente, Netherlands) 
+ Bernhard Steffen | (Technische Universität Dortmund, Germany) 
+ ETAPS International Joint Conferences On Theory & Practice Of Software 
+ ETAPS Association 
+ Internal 
+ Responsible for these web pages: 
+  
+ Jan Kofroň 
+ Faculty of Mathematics and Physics 
+ Charles University, Czech Republic 
+ E-mail: firstname.lastname [at] d3s.mff.cuni.cz 
+ Phone: +420 951 554 285 
+ ETAPS Policies|Disclaimer© 2022–2025 ETAPS Association. All rights reserved.
+
+3. Website of TACAS_2: https://library.oapen.org/handle/20.500.12657/89906?show=full
+Website information of TACAS_2:
+
+Toggle navigationSearch 
+ Join 
+ Deposit 
+ Toggle navigationToggle navigationFor Librarians 
+ For Publishers 
+ href="https://oapen.org/researchers" - For Researchers 
+ Funders 
+ Resources 
+ OAPEN 
+ For Librarians 
+ For Publishers 
+ href="https://oapen.org/researchers" - For Researchers 
+ Funders 
+ Resources 
+ OAPEN 
+ View ItemOAPEN Home 
+ View Item 
+ OAPEN Home 
+ View Item 
+ JavaScript is disabled for your browser. Some features of this site may not work without it. 
+ Show simple item recordTools and Algorithms for the Construction and Analysis of Systems 
+ 30th International Conference, TACAS 2024, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2024, Luxembourg City, Luxembourg, April 6–11, 2024, Proceedings, Part I 
+  
+ dc.contributor.editor | Finkbeiner, Bernd 
+ dc.contributor.editor | Kovács, Laura 
+ dc.date.accessioned | 2024-04-16T08:17:03Z 
+ dc.date.available | 2024-04-16T08:17:03Z 
+ dc.date.issued | 2024 
+ dc.identifier | ONIX_20240416_9783031572463_13 
+ dc.identifier | OCN: 1429288808 
+ dc.identifier.uri | https://library.oapen.org/handle/20.500.12657/89906 
+ dc.description.abstract | The open access book 3-volume set LNCS 14570-14573 constitutes the proceedings of the 30th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, TACAS 2024, which was held as part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2024, during April 6-11, 2024, in Luxembourg. The 53 full papers and 16 short SVComp contributions included in these proceedings were carefully reviewed and selected from 159 submissions. They were organized in topical sections as follows: Part I: STA and SMT solving; synthesis; logic and decidability; program analysis and proofs; proof checking; Part II: Model Checking; automata and learning; software verification; probabilistic systems; simulations; Part III: Neural networks; testing and verification; games; concurrency; SV-Comp 2024. 
+ dc.language | English 
+ dc.relation.ispartofseries | Lecture Notes in Computer Science 
+ dc.subject.classification | thema EDItEUR::U Computing and Information Technology::UY Computer science::UYA Mathematical theory of computation 
+ dc.subject.classification | thema EDItEUR::U Computing and Information Technology::UK Computer hardware 
+ dc.subject.classification | thema EDItEUR::U Computing and Information Technology::UK Computer hardware::UKN Network hardware 
+ dc.subject.classification | thema EDItEUR::U Computing and Information Technology::UY Computer science::UYM Computer modelling and simulation 
+ dc.subject.classification | thema EDItEUR::U Computing and Information Technology::UM Computer programming / software engineering::UMZ Software Engineering 
+ dc.subject.other | TACAS 
+ dc.subject.other | formal verification 
+ dc.subject.other | software systems 
+ dc.subject.other | hardware systems 
+ dc.subject.other | static analysis 
+ dc.subject.other | probabilistic programming 
+ dc.subject.other | program synthesis 
+ dc.subject.other | concurrency 
+ dc.subject.other | testing 
+ dc.subject.other | simulations 
+ dc.subject.other | verification of machine 
+ dc.title | Tools and Algorithms for the Construction and Analysis of Systems 
+ dc.title.alternative | 30th International Conference, TACAS 2024, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2024, Luxembourg City, Luxembourg, April 6–11, 2024, Proceedings, Part I 
+ dc.type | book 
+ oapen.identifier.doi | 10.1007/978-3-031-57246-3 
+ oapen.relation.isPublishedBy | 6c6992af-b843-4f46-859c-f6e9998e40d5 
+ oapen.relation.isFundedBy | 0b4856d5-f8d2-455f-b170-2752d142372c 
+ oapen.relation.isbn | 9783031572463 
+ oapen.relation.isbn | 9783031572456 
+ oapen.imprint | Springer Nature Switzerland 
+ oapen.series.number | 14570 
+ oapen.pages | 394 
+ oapen.place.publication | Cham 
+ oapen.grant.number | [...] 
+ Files in this item 
+ Name:978-3-031-57246-3.pdfSize:10.99MbFormat:PDFISBN:9783031572463License:http://creativecommons.org/lic ...Webshop link:https://link.springer.com/978- ...View/OpenThis item appears in the following Collection(s) 
+ href="/handle/20.500.12657/6" - Imported or submitted locally 
+ Show simple item recordSearch OAPENThis CollectionBrowse 
+ All of OAPENSubjectsPublishersLanguagesCollectionsMy Account 
+ LoginRegisterExport 
+ Repository metadataFor Librarians 
+ For Publishers 
+ href="https://oapen.org/researchers" - For Researchers 
+ Funders 
+ Resources 
+ OAPEN 
+ Newsletter 
+ Subscribe to our newsletter 
+ view our news archive 
+ Follow us on 
+ License 
+ If not noted otherwise all contents are available under Attribution 4.0 International ( | CC BY 4.0 | ) 
+ Credits 
+ This project received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 683680, 810640, 871069 and 964352. 
+ OAPEN is based in the Netherlands, with its registered office in the National Library in The Hague. 
+ Director: Niels Stern 
+ Address: 
+ OAPEN Foundation 
+ Prins Willem-Alexanderhof 5 
+ 2595 BE The HaguePostal address: 
+ OAPEN Foundation 
+ P.O. Box 90407 
+ 2509 LK The HagueWebsites: 
+ OAPEN Home:www.oapen.org 
+ OAPEN Library:library.oapen.org 
+ DOAB:www.doabooks.orgExport search results 
+ The export option will allow you to export the current search results of the entered query to a file. Differen formats are available for download. To export the items, click on the button corresponding with the preferred download format. 
+ A logged-in user can export up to 15000 items. If you're not logged in, you can export no more than 500 items. 
+ To select a subset of the search results, click "Selective Export" button and make a selection of the items you want to export. The amount of items that can be exported at once is similarly restricted as the full export. 
+ After making a selection, click one of the export format buttons. The amount of items that will be exported is indicated in the bubble next to export format. 
+ Close
+

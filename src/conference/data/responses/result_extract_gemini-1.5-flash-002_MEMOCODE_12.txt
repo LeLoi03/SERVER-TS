@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "October 2 - 3, 2025",
+  "Year": "2025",
+  "Location": "Taipei, Taiwan",
+  "City-State-Province": "Taipei",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submission": "April 28, 2025",
+    "Full Paper Submission": "May 5, 2025"
+  },
+  "Notification Date": {
+    "Notification": "July 8, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Versions": "August 30, 2025"
+  },
+  "Topics": "Formal Methods, Models for System Design, Hardware, Firmware, Middleware, Application Software, Cyber-Physical Systems, Internet of Things, Modeling Languages, Methods, Tools, Programming Languages, Software and System Modeling Languages, Architecture, High-Level Hardware Description Languages, Timing Models, Model and Program Synthesis Methods, Model Transformation Methods, Correct-by-Construction Methods, Contract-Based Design and Verification, Static Analysis, Dynamic Analysis, Type Theoretic Analysis, Verification, Validation, Probabilistic Model Checking, Test Generation, Refinement-Based and Compositional Approaches, Fault-Tolerant Systems, Security-Critical Systems, Safety-Critical Systems, Cyber-Physical Systems, Hybrid Systems, Autonomous Systems, Self-Adapting Systems, Systems that Merge Humans, Artificial Intelligence, and Cyber-Physical Systems, Societal-Scale Cyber-Physical Systems, Connected Vehicles, Smart Grids, Power/Performance/Cost/Latency Estimation Methods, System Models for Quantitative Design Space Exploration, Design Case Studies, Empirical Case Studies",
+  "Summary": "MEMOCODE is the ACM/IEEE International Symposium on Formal Methods and Models for System Design.  The symposium focuses on the foundations and applications of formal methods in the development of hardware, firmware, middleware, and application software for systems, ranging from single embedded devices to highly networked cyber-physical systems and the Internet of Things. MEMOCODE 2025 will be held in Taipei, Taiwan from October 2-3, 2025.",
+  "Call for Papers": "# MEMOCODE 2025: Call for Papers\n\nThe ACM/IEEE International Symposium on Formal Methods and Models for System Design (MEMOCODE 2025) will be held in **Taipei, Taiwan, from October 2-3, 2025** as part of Embedded Systems Week.\n\nMEMOCODE brings together researchers and practitioners interested in formal methods for system design and development to exchange ideas, research results, and lessons learned. The symposium focuses on the foundations and applications of formal methods in the development of hardware, firmware, middleware, and application software for systems, ranging from single embedded devices to highly networked cyber-physical systems and the Internet of Things.\n\n## Topics of Interest\n\nMEMOCODE solicits research papers on formal methods in system design that address the foundations, engineering methods, tools, or experimental case studies. Research areas of interest include, but are not limited to, the following:\n\n*   **Modeling Languages, Methods, and Tools:** Programming languages and models; software and system modeling languages; architecture and high-level hardware description languages; timing models; model and program synthesis methods; model transformation methods.\n*   **Formal Methods and Tools:** Correct-by-construction methods; contract-based design and verification; static, dynamic, and type theoretic analysis; verification; validation; probabilistic model checking; test generation; refinement-based and compositional approaches to design and verification.\n*   **Models and Methods for Developing Critical Systems:** Fault-tolerant systems; security-critical and safety-critical systems; cyber-physical systems; hybrid systems; autonomous systems; self-adapting systems; systems that merge humans, artificial intelligence, and cyber-physical systems; societal-scale cyber-physical systems, such as connected vehicles and smart grids.\n*   **Quantitative/Qualitative Reasoning:** Power/performance/cost/latency estimation methods; system models for quantitative design space exploration\n*   **Formal Methods/Models in Practice:** Design case studies; empirical case studies\n\n## Important Dates\n\n*   **Abstract submission deadline:** April 28, 2025\n*   **Paper submission deadline:** May 5, 2025\n*   **Notification of acceptance:** July 8, 2025\n*   **Final version of papers:** August 30, 2025\n*   **Conference:** October 2-3, 2025\n\n## MEMOCODE Program Chairs\n\n*   Sudipta Chattopadhyay, Singapore University of Technology and Design, SG\n*   Srinivas Pinisetty, IIT Bhubaneswar, IN"
+}
+

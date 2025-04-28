@@ -1,0 +1,17 @@
+output:
+{
+  "Conference dates": "No conference dates available",
+  "Year": "2025",
+  "Location": "No conference location available",
+  "City-State-Province": "No conference city available",
+  "Country": "No conference country available",
+  "Continent": "No conference continent available",
+  "Type": "No conference type available",
+  "Submission Date": "No submission dates available",
+  "Notification Date": "No notification dates available",
+  "Camera-ready Date": "No camera-ready dates available",
+  "Topics": "specification and verification techniques, software and hardware verification, analytical techniques for real-time, hybrid, or stochastic systems, analytical techniques for safety, security, or dependability, SAT and SMT solving, theorem proving, model checking, static and dynamic program analysis, testing, abstraction techniques for modeling and verification, compositional and refinement-based methodologies, system construction and transformation techniques, machine-learning techniques for synthesis and verification, tool environments and tool architectures, applications and case studies",
+  "Summary": "No summary available",
+  "Call for Papers": "No call for papers available"
+}
+

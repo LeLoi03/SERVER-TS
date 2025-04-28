@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "January 19 - 24, 2025",
+  "Year": "2025",
+  "Location": "Abu Dhabi, UAE",
+  "Type": "Offline",
+  "Submission Date": {
+    "Direct Submission Deadline": "September 16, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "November 29, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Deadline": "December 15, 2024"
+  },
+  "Other Date": {
+    "ARR Commitment Deadline": "October 20, 2024",
+    "Registration opens": "November 30, 2024",
+    "Arabic NLP Winter School": "January 18 - 19, 2025",
+    "Workshop and Tutorials": "January 19 - 20, 2025",
+    "Main Conference. including Industry Track and Demos (In-Person Only)": "January 21 - 24, 2025",
+    "Main Conference. including Industry Track and Demos (Virtual Only)": "January 27 - 28, 2025"
+  },
+  "Topics": "Computational Linguistics",
+  "Summary": "The 31st International Conference on Computational Linguistics (COLING 2025) took place in Abu Dhabi, UAE from January 19th to 24th, 2025.  The main conference was in-person only, but virtual presentation sessions for those unable to attend in person were held on January 27-28, 2025.",
+  "Call for Papers": "No call for papers available"
+}
+```

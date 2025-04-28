@@ -1,0 +1,31 @@
+output:
+{
+  "Conference dates": "October 28 - 31, 2025",
+  "Year": "2025",
+  "Location": "Madison, Wisconsin, USA",
+  "City-State-Province": "Madison, Wisconsin",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Cycle 1 Deadline) Paper registration (with abstract)": "November 14, 2024",
+    "(Cycle 1 Deadline) Paper submission": "November 21, 2024",
+    "(Cycle 2 Deadline) Expression of Interest (papers for the Replicability Track)": "March 5, 2025",
+    "(Cycle 2 Deadline) Paper registration (with abstract, including invited papers to Replicability Track)": "May 8, 2025",
+    "(Cycle 2 Deadline) Paper submission (including invited papers to Replicability Track)": "May 15, 2025",
+    "(Cycle 2 Deadline) Paper submission (one-shot review papers from Cycle 1 deadline)": "June 20, 2025"
+  },
+  "Notification Date": {
+    "(Cycle 1 Deadline) Notification": "March 26, 2025",
+    "(Cycle 2 Deadline) Notification for the Replicability Track Expression of Interest": "March 7, 2025",
+    "(Cycle 2 Deadline) Notification": "August 18, 2025"
+  },
+  "Camera-ready Date": {
+    "(Cycle 1 Deadline) Camera-ready due": "April 26, 2025",
+    "(Cycle 2 Deadline) Camera-ready due": "September 20, 2025"
+  },
+  "Topics": "Internet Measurement, Network Measurement, Network Structure, Network Performance, Application Behavior, End-User Behavior, Measurement-based Modeling, Network Monitoring, Network Visualization, Networked Systems, Data Collection, Data Analysis, Data Storage, Anonymization, Data Querying, Data Sharing",
+  "Summary": "The 2025 Internet Measurement Conference (IMC) is a three-and-a-half day event focusing on Internet measurement and analysis.  The conference will be held from October 28-31, 2025 in Madison, WI, USA. This is the first edition of IMC with two deadlines per year and an optional one-shot-revision process across deadlines.",
+  "Call for Papers": "# IMC 2025: Call for Papers\n\nThe ACM Internet Measurement Conference (IMC) 2025 will be held from **October 28-31, 2025, in Madison, WI, USA**.\n\nIMC 2025 is the 25th in a series of highly successful Internet Measurement Workshops and Conferences.\n\n## Call for Papers\n\nIMC 2025 will focus on advancing the state of the art in the collection, usage, analysis, and sharing of network measurements for the research community.  To encourage data sharing and reproducibility, authors will be required to make a declaration on artifact availability (full, partial, or no availability) for the submitted work.\n\n## Topics of Interest\n\nIMC takes a broad view of contributions that are considered in scope for improving the practice of network measurement, including, but not limited to:\n\n*   Collection and analysis of data that yield new insights about network structure and network performance\n*   Collection and analysis of data that yield new insights about application and end-user behavior\n*   Measurement-based modeling\n*   Methods and tools to monitor and visualize network-based phenomena\n*   Systems and algorithms that build on measurement-based findings\n*   Theoretical analysis and modeling of networked-systems and measurement techniques\n*   Novel methods for data collection, analysis, and storage\n*   Reappraisal of previous empirical network measurements and measurement-based conclusions\n*   Descriptions of challenges and future directions the measurement community should pursue\n\n### Networks of Interest Include:\n\n*   Internet transit networks\n*   Edge networks\n*   Data center networks and cloud computing infrastructure\n*   Peer-to-peer, overlay, and content distribution networks\n*   Software-defined networks\n*   Online social networks\n*   Online services, platforms, and content providers\n*   Experimental networks, prototype networks, and future internetworks\n\n## Replicability Track\n\nIMC 2025 will continue the Replicability Track for submissions that aim to reproduce or replicate Internet measurement results that have been previously published at IMC or other top-tier venues (e.g., SIGCOMM, SIGMETRICS, USENIX, CCS, etc.) on topics of interest for the IMC community.\n\nSubmissions to this track are two-phase. Prospective authors are invited to submit an Expression of Interest (EoI) via the submission system in the form of a 1-page abstract, which must explain:\n\n*   Which paper the authors aim to replicate\n*   Whether the paper will be replicated or reproduced\n*   What the IMC community stands to learn from the replication or reproduction\n*   The chosen approach, and why it will lead to new insights\n\n## Review Process and Criteria\n\nIMC 2025 invites two forms of submissions:\n\n*   Full papers (up to 13 pages for text and figures + unlimited pages for references and appendix)\n*   Short papers (up to 6 pages for text and figures + unlimited pages for references and appendix)\n\nAuthors should submit only original work that has not been published before and is not under submission to any other venue.\n\n## Important Dates\n\n### Cycle 1 Deadline\n\n*   Paper registration (with abstract): November 14, 2024\n*   Paper submission: November 21, 2024\n*   Early reject notification: TBD\n*   Notification: March 26, 2025\n*   Camera-ready due: April 26, 2025\n*   Conference: October 28-31, 2025\n\n### Cycle 2 Deadline\n\n*   Expression of Interest (papers for the Replicability Track): March 5, 2025\n*   Notification for the Replicability Track Expression of Interest: March 7, 2025\n*   Paper registration (with abstract, including invited papers to Replicability Track): May 8, 2025\n*   Paper submission (including invited papers to Replicability Track): May 15, 2025\n*   Paper submission (one-shot review papers from Cycle 1 deadline): June 20, 2025\n*   Early reject notification: TBD\n*   Notification: August 18, 2025\n*   Camera-ready due: September 20, 2025\n*   Conference: October 28-31, 2025\n\n## Submission Site\n\n*   Please submit your paper for the Cycle 1 (November 2024) deadline at [https://imc2025.hotcrp.com/](https://imc2025.hotcrp.com/).\n*   Please submit your Expression of Interest for the Replicability Track at [https://imc2025-repro.hotcrp.com](https://imc2025-repro.hotcrp.com)."
+}
+

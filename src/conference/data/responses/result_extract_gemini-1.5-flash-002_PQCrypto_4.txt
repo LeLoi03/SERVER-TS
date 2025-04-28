@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "April 8 - 10, 2025",
+  "Year": "2025",
+  "Location": "Taipei, Taiwan",
+  "City-State-Province": "Taipei",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Initial submission deadline": "October 25, 2024",
+    "Final submission deadline": "November 1, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "January 6, 2025"
+  },
+  "Camera-ready Date": {
+    "Final version due": "January 20, 2025"
+  },
+  "Topics": "Post-Quantum Cryptography, Cryptanalysis of post-quantum systems, Quantum cryptanalysis, Code-based cryptosystems, Hash-based cryptosystems, Isogeny-based cryptosystems, Lattice-based cryptosystems, Multivariate constructions, Implementations of post-quantum cryptosystems, Side-channel attacks on post-quantum cryptosystems, Integration of post-quantum cryptography, Migration to post-quantum cryptography, Security models for the post-quantum era",
+  "Publisher": "Springer",
+  "Summary": "PQCrypto 2025, the 16th International Conference on Post-Quantum Cryptography, will take place in Taipei, Taiwan, on April 8-10, 2025.  The conference serves as a forum for researchers to present results and exchange ideas on cryptography in an era with large-scale quantum computers.",
+  "Call for Papers": "# PQCrypto 2025: Call for Papers\n\nPQCrypto 2025, the 16th International Conference on Post-Quantum Cryptography, will take place in **Taipei, Taiwan, on April 8-10, 2025.**\n\nThe aim of PQCrypto is to serve as a forum for researchers to present results and exchange ideas on cryptography in an era with large-scale quantum computers. Original research papers on all technical aspects of cryptographic research related to post-quantum cryptography are solicited.\n\n## Topics of Interest\n\nTopics of interest include (but are not restricted to):\n\n*   Cryptanalysis of post-quantum systems, and quantum cryptanalysis.\n*   Cryptosystems that have the potential to be safe against quantum computers such as:\n    *   code-based,\n    *   hash-based,\n    *   isogeny-based,\n    *   lattice-based, and\n    *   multivariate constructions.\n*   Implementations of, and side-channel attacks on, post-quantum cryptosystems.\n*   Integration of and migration to post-quantum cryptography.\n*   Security models for the post-quantum era.\n\n## Important Dates (AoE)\n\n*   **Initial submission deadline:** October 25, 2024\n*   **Final submission deadline:** November 1, 2024\n*   **Notification of acceptance:** January 6, 2025\n*   **Final version due:** January 20, 2025\n\n## Paper Submission\n\nAccepted papers are planned to be published in Springer’s LNCS series. Submissions must not exceed 30 pages, excluding appendices and references, and must be in a single-column format in 10pt fonts using the default llncs class without adjustments. Additional material (datasets, code, long machine proofs, etc.) can be submitted as a separate file. Reviewers are not required to read appendices and additional material, and submissions are expected to be intelligible and complete without them.\n\nIf the submission is accepted, the length of the final version is at most 35 pages including references and appendices, in the llncs class format. The additional material will not be part of the conference proceedings. Submissions must not substantially duplicate work that any of the authors has published in a journal or a conference/workshop with proceedings, or has submitted/is planning to submit before the author notification deadline to a journal or other conferences/ workshops that have proceedings.\n\nThe review process is single-blinded. The submission should begin with a title, the authors' names and affiliations, a short abstract, and a list of keywords. Its introduction should summarize the contributions of the paper at a level appropriate for a non-specialist reader. Submissions ignoring these guidelines may be rejected without further consideration.\n\nAll papers must be submitted with a meaningful abstract by the initial submission deadline. This is a firm deadline. Papers not registered by this deadline will not be considered. Authors may update or withdraw their submission at any time between the initial and final submission deadline.\n\n## Submission Server\n\n[https://easychair.org/conferences/?conf=pqcrypto2025](https://easychair.org/conferences/?conf=pqcrypto2025)\n\n## Program Committee\n\n(List of program committee members omitted for brevity)\n\n## Program Co-Chairs\n\n*   Ruben Niederhagen, Academia Sinica and University of Southern Denmark\n*   Markku-Juhani O. Saarinen, Tampere University\n\n## General Co-Chairs\n\n*   Kai-Min Chung, Academia Sinica\n*   Matthias Kannwischer, Chelpis Quantum Corp.\n*   Bo-Yin Yang, Academia Sinica"
+}
+

@@ -1,0 +1,383 @@
+Conference full name: ACM International Conference on Recommender Systems (RecSys)
+
+1. Website of RecSys_3: https://recsys.acm.org/recsys24/
+Website information of RecSys_3:
+
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:18th ACM Conference on Recommender Systems 
+ Bari, Italy, 14–18 October 2024 
+ href="https://recsys.acm.org/wp-content/uploads/2024/10/RecSys_2024_Handbook_Bari_Italy_compressed.pdf" - QR Code RecSys 2024 Handbook
+The ACM Conference on Recommender Systems (RecSys) is the premier international forum for the presentation of new research results, systems and techniques in the broad field of recommender systems. RecSys brings together the major international research groups working on recommender systems, along with many of the world’s leading companies active in e-commerce and other adjacent domains. It has become the most important annual conference for the presentation and discussion of recommender systems research. RecSys 2024, the eighteenth conference in this series, will be held in Bari, Italy. It will bring together researchers and practitioners from academia and industry to present their latest results and identify new trends and challenges in providing recommendation components in a range of innovative application contexts. In addition to the main technical track, the RecSys 2024 program will feature keynote and invited talks, tutorials covering state-of-the-art in this domain, a workshop program, an industrial track and a doctoral symposium. 
+ Statement on Inclusion and Safety 
+ As the organizers of RecSys 2024, we are committed to providing an inclusive, safe, and respectful conference environment for all attendees. As we increasingly realize the impact of our community’s work on society, we appreciate now more than ever the importance of providing an inclusive and accessible conference that brings together a diverse recommender systems community. 
+ As an ACM conference, RecSys and its organizers, speakers, and attendees are bound by theACM Policy Against Discrimination and Harassment, which applies to both the conference venue and social media. As organizers, this is a policy that we fully endorse. 
+ RecSys has made efforts over the last several years to be an accessible and inclusive community, across various perspectives, and we have sought throughout our planning of RecSys 2024 to continue and expand those efforts. The General Chairs (Pasquale Lops and Tommaso Di Noia) welcome your input. 
+ Accessibility and Inclusion at RecSys.The RecSys conference values and cares about diversity, accessibility and inclusion. We have always been diverse in terms of disciplinary backgrounds (e.g. including both HCI- and data-focused work), professional affiliations (e.g. strong representation from both academia and industry), and application domains of our work. We are aware that members in our community may come from historically underrepresented groups, for which we wish to pro-actively encourage and support increased participation. To ensure the conference and its activities are accessible to all, we also explicitly seek to address the visible or invisible support needs members of our community may have. 
+ Publications and Presentations.RecSys hosts a variety of scientific discussions. Historically, we have prepared guidelines for accessible and inclusive presentations. We would like to emphasize that inclusive, safe and respectful addressing does not only apply to conference presentations, but also to the whole process leading towards these presentations, including the way in which research is presented and reviewed. We therefore would like to encourage our community members to already keep our best practice guidelines on inclusive language in mind, when preparing their manuscripts and peer reviewing. 
+ Contact.Should you experience or witness a violation of the anti-harassment policy, or have any other concerns regarding your ability to fully and safely participate in the conference, please email the RecSys General Chairs; you can also directly reach them at the conference venue. 
+ We hope you have an amazing RecSys. 
+ Pasquale Lops and Tommaso Di Noia 
+ RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys24/" - About the Conference 
+ href="https://recsys.acm.org/recsys24/program/" - Program 
+ href="https://recsys.acm.org/recsys24/registration/" - Registration 
+ href="https://recsys.acm.org/recsys24/call/" - Call for Contributions 
+ href="https://recsys.acm.org/recsys24/dates/" - Important Dates 
+ href="https://recsys.acm.org/recsys24/keynotes/" - Keynotes 
+ href="https://recsys.acm.org/recsys24/accepted-contributions/" - Accepted Contributions 
+ href="https://recsys.acm.org/recsys24/challenge/" - Challenge 
+ href="https://recsys.acm.org/recsys24/workshops/" - Workshops 
+ href="https://recsys.acm.org/recsys24/tutorials/" - Tutorials 
+ Committees 
+ href="https://recsys.acm.org/recsys24/location/" - Location 
+ href="https://recsys.acm.org/recsys24/inclusion/" - Inclusion 
+ href="https://recsys.acm.org/recsys24/grants/" - Grants 
+ href="https://recsys.acm.org/recsys24/volunteers/" - Student Volunteers 
+ href="https://recsys.acm.org/recsys24/summer-school/" - Summer School 
+ href="https://recsys.acm.org/recsys24/women-in-recsys/" - Women in RecSys 
+ Sapphire Supporter 
+ Diamond Supporter 
+ href="https://research.netflix.com/" - 
+Platinum Supporter 
+ Gold Supporter 
+ Silver Supporter 
+ Bronze Supporter 
+ Women in RecSys’s Event Supporter 
+ Challenge Sponsor 
+ Special Supporters 
+ href="https://future-ai-research.it/" - 
+href="/recsys24/sponsorship" - Become a sponsor!
+About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ About the photos on this siteTheimageof Bari used in several headers is courtesy of Domenico Lacava licensed underCC BY-SA 4.0and adapted to fit. 
+ © 2012-2025 
+ RecSys Community. All rights are reserved.
+
+2. Website of RecSys_3: https://recsys.acm.org/recsys25/
+Website information of RecSys_3:
+
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:19th ACM Conference on Recommender Systems 
+ Prague, Czech Republic, 22nd–26th September 2025 
+ The ACM Conference on Recommender Systems (RecSys) is the premier international forum for presenting new research results, systems, and techniques in the broad field of recommender systems. RecSys brings together leading international research groups and industry experts, including many of the world’s top companies in e-commerce and related domains. It is the most important annual event for the discussion and advancement of recommender systems research. 
+ RecSys 2025, the nineteenth conference in this series, will be held in Prague, Czech Republic. It will bring together researchers and practitioners from academia and industry to present their latest findings and identify new trends and challenges in providing recommendation components across a range of innovative application contexts. In addition to the main technical track, the RecSys 2025 program will feature keynote and invited talks, tutorials on state-of-the-art topics, workshops, an industrial track, and a doctoral symposium. 
+ Statement on Inclusion and Safety 
+ As the organizers of RecSys 2025, we are committed to providing an inclusive, safe, and respectful conference environment for all attendees. As we increasingly realize the impact of our community’s work on society, we appreciate now more than ever the importance of providing an inclusive and accessible conference that brings together a diverse recommender systems community. 
+ As an ACM conference, RecSys and its organizers, speakers, and attendees are bound by theACM Policy Against Discrimination and Harassment, which applies to both the conference venue and social media. As organizers, this is a policy that we fully endorse. 
+ RecSys has made efforts over the last several years to be an accessible and inclusive community, across various perspectives, and we have sought throughout our planning of RecSys 2025 to continue and expand those efforts. The General Chairs (Maria Bielikova, Pavel Kordik, and Markus Schedl) welcome your input. 
+ Accessibility and Inclusion at RecSys.The RecSys conference values and cares about diversity, accessibility and inclusion. We have always been diverse in terms of disciplinary backgrounds (e.g. including both HCI- and data-focused work), professional affiliations (e.g. strong representation from both academia and industry), and application domains of our work. We are aware that members in our community may come from historically underrepresented groups, for which we wish to pro-actively encourage and support increased participation. To ensure the conference and its activities are accessible to all, we also explicitly seek to address the visible or invisible support needs members of our community may have. 
+ Publications and Presentations.RecSys hosts a variety of scientific discussions. Historically, we have prepared guidelines for accessible and inclusive presentations. We would like to emphasize that inclusive, safe and respectful addressing does not only apply to conference presentations, but also to the whole process leading towards these presentations, including the way in which research is presented and reviewed. We therefore would like to encourage our community members to already keep our best practice guidelines on inclusive language in mind, when preparing their manuscripts and peer reviewing. 
+ In-person Participation.RecSys 2025 is an in-person conference. Contributions to all tracks are expected to be presented in-person. At least one author from each contribution must attend the conference in person to present their work and address audience questions during the Q&A/poster session. No pre-recorded videos will be permitted. Contributions that are not presented in person by an author—whether on the main stage, during a poster session, or at co-located events—may be removed from the proceedings at the discretion of the respective chairs. 
+ Contact.Should you experience or witness a violation of the anti-harassment policy, or have any other concerns regarding your ability to fully and safely participate in the conference, please email the RecSys General Chairs; you can also directly reach them at the conference venue. 
+ We hope you have an amazing RecSys. 
+ Maria Bielikova, Pavel Kordik, and Markus Schedl 
+ RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys25/" - About the Conference 
+ href="https://recsys.acm.org/recsys25/call/" - Call for Contributions 
+ href="https://recsys.acm.org/recsys25/dates/" - Important Dates 
+ href="https://recsys.acm.org/recsys25/challenge/" - Challenge 
+ href="https://recsys.acm.org/recsys25/women-in-recsys/" - Women in RecSys 
+ Committees 
+ href="https://recsys.acm.org/recsys25/location/" - Location 
+ href="https://recsys.acm.org/recsys25/student-volunteers/" - Student Volunteers 
+ href="https://recsys.acm.org/recsys25/summer-school/" - Summer School 
+ href="/recsys25/sponsorship" - Become a sponsor!
+About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ © 2012-2025 
+ RecSys Community. All rights are reserved.
+
+3. Website of RecSys_3: https://recsys.acm.org/
+Website information of RecSys_3:
+
+href="https://recsys.acm.org" - 
+Follow usto keep up to date with the latest calls for contributions and news from ACM RecSys! 
+ href="https://recsys.acm.org/slack-invite/" - 
+ href="https://bsky.app/profile/recsys.bsky.social" - 
+ href="https://twitter.com/ACMRecSys" - 
+ href="https://www.facebook.com/acmrecsys" - 
+ href="https://www.youtube.com/@acmrecsys" - 
+ href="https://recsys.acm.org/" - Home 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 
+ Past Conferences | href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ href="https://recsys.acm.org/best-papers/" - Honors 
+ href="https://recsys.acm.org/blog/" - Blog 
+ href="https://recsys.acm.org/contact/" - Contact 
+ Search:href="/recsys24/" - ACM RecSys 2025
+The 19th ACM Recommender Systems Conference will take place in Prague, Czech Republic, from Sep. 22–26, 2025. 
+ Latest News 
+ Oct. 18, 2024: RecSys ’24 has concluded. Hope to see you all in Prague for RecSys ’25! 
+ Feb. 3, 2025: Calls forResearch papers(Full and Short),Workshops, andTutorialshave been published! Take a look at thehref="https://recsys.acm.org/recsys25/call/" - call for contributions
+. 
+ Feb. 13, 2025: New Calls for contributions out! It is time forIndustry papers,Reproducibility papers, andDoctoral Symposium. 
+ Feb. 17, 2025: Call forDemosandLate-Breaking Resultshave been published. Check it out! 
+ ACM RecSys Conferences 
+ href="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ About this site 
+ This site contains information about the ACM Recommender Systems community, the annual ACM RecSys conferences, and more. 
+ RecSys 2025 
+ href="/recsys25" - About the Conference 
+ Shortcuts to Conferenceshref="https://recsys.acm.org/recsys25/" - RecSys 2025 (Prague) 
+ href="https://recsys.acm.org/recsys24/" - RecSys 2024 (Bari) 
+ href="https://recsys.acm.org/recsys23/" - RecSys 2023 (Singapore) 
+ href="https://recsys.acm.org/recsys22/" - RecSys 2022 (Seattle) 
+ href="https://recsys.acm.org/recsys21/" - RecSys 2021 (Amsterdam) 
+ href="https://recsys.acm.org/recsys20/" - RecSys 2020 (Online) 
+ href="https://recsys.acm.org/recsys19/" - RecSys 2019 (Copenhagen) 
+ href="https://recsys.acm.org/recsys18/" - RecSys 2018 (Vancouver) 
+ href="https://recsys.acm.org/recsys17/" - RecSys 2017 (Como) 
+ href="https://recsys.acm.org/recsys16/" - RecSys 2016 (Boston) 
+ href="https://recsys.acm.org/recsys15/" - RecSys 2015 (Vienna) 
+ href="https://recsys.acm.org/recsys14/" - RecSys 2014 (Silicon Valley) 
+ href="https://recsys.acm.org/recsys13/" - RecSys 2013 (Hong Kong) 
+ href="https://recsys.acm.org/recsys12/" - RecSys 2012 (Dublin) 
+ href="https://recsys.acm.org/recsys11/" - RecSys 2011 (Chicago) 
+ href="https://recsys.acm.org/recsys10/" - RecSys 2010 (Barcelona) 
+ href="https://recsys.acm.org/recsys09/" - RecSys 2009 (New York) 
+ href="https://recsys.acm.org/recsys08/" - RecSys 2008 (Lausanne) 
+ href="https://recsys.acm.org/recsys07/" - RecSys 2007 (Minnesota) 
+ href="https://recsys.acm.org/workshops/" - Workshops 
+ href="https://recsys.acm.org/statistics/" - Submission Statistics 
+ About the photos on this siteTheimageof Bari used in several headers is courtesy of Domenico Lacava licensed underCC BY-SA 4.0and adapted to fit. 
+ © 2012-2025 
+ RecSys Community. All rights are reserved.
+
+4. Website of RecSys_3: https://sigchi.org/events/recsys-2025/
+Website information of RecSys_3:
+
+About 
+ What is SIGCHI? 
+ Ethics and Conduct 
+ Policies 
+ CARES 
+ Voting History 
+ Contact Us 
+ People 
+ Membership 
+ Executive Committee 
+ All Committees 
+ Chapters 
+ Awards 
+ Volunteer History 
+ Conferences 
+ Upcoming Conferences 
+ Conference History 
+ Publications 
+ Resources 
+ href="https://sigchi.submittable.com/submit" - Open Calls
+Development Fund 
+ Gary Marsden Travel Awards 
+ href="/resources/guides-for-authors/" - Guides for Authors
+Guides for Organizers 
+ News 
+ Blog 
+ Meetings 
+ Announcements 
+ YouTube 
+ Join Us 
+ Menu 
+ About 
+ What is SIGCHI? 
+ Ethics and Conduct 
+ Policies 
+ CARES 
+ Voting History 
+ Contact Us 
+ People 
+ Membership 
+ Executive Committee 
+ All Committees 
+ Chapters 
+ Awards 
+ Volunteer History 
+ Conferences 
+ Upcoming Conferences 
+ Conference History 
+ Publications 
+ Resources 
+ href="https://sigchi.submittable.com/submit" - Open Calls
+Development Fund 
+ Gary Marsden Travel Awards 
+ href="/resources/guides-for-authors/" - Guides for Authors
+Guides for Organizers 
+ News 
+ Blog 
+ Meetings 
+ Announcements 
+ YouTube 
+ Home 
+ / 
+ Events 
+ / 
+ href="/events/recsys-2025/" - RecSys 2025
+RecSys 2025 
+ The ACM Conference on Recommender Systems (RecSys) is the premier international forum for the presentation of new research results, systems and techniques in the broad field of recommender systems. RecSys brings together the major international research groups working on recommender systems, along with many of the world’s leading companies active in e-commerce and other adjacent domains. It has become the most important annual conference for the presentation and discussion of recommender systems research 
+ Event type 
+ Conference 
+ Time 
+ Mon Sep 22 2025-Fri Sep 26 2025 
+ Venue 
+ Prague, Czech Republic 
+ href="https://recsys.acm.org/" - Event Link
+Home 
+ About 
+ Chapters 
+ Calendar 
+ href="/news/announcements/" - Updates
+SIGCHI Programs App 
+ SIGCHI on ACM Digital Library 
+ Application Forms 
+ Memberships 
+ Contact Us 
+ © ACM Special Interest Group on Computer-Human Interaction ·2025 
+ Powered by 
+ Privacy Policy 
+ Back to top
+

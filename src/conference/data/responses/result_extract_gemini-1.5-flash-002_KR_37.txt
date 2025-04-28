@@ -1,0 +1,38 @@
+output:
+{
+  "Conference dates": "November 11 - 17, 2025",
+  "Year": "2025",
+  "Location": "Melbourne, Australia",
+  "City-State-Province": "Melbourne",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission page opens": "March 31, 2025",
+    "Submission of title and abstract": "May 7, 2025",
+    "Paper submission deadline": "May 12, 2025",
+    "(Tutorial and Workshop Proposals) Proposal submission deadline": "March 24, 2025",
+    "(KR Early Career Award) Nomination deadline": "April 30, 2025",
+    "(KR Test of Time Award) Nomination deadline": "May 20, 2025",
+    "(KR Distinguished Service Award) Nomination deadline": "May 20, 2025",
+    "(Workshop paper submission) Workshop paper submission deadline": "July 17, 2025"
+
+  },
+  "Notification Date": {
+    "Author response period": "June 25 - July 1, 2025",
+    "Notification of acceptance": "July 10, 2025",
+    "(Tutorial and Workshop Proposals) Notification": "April 14, 2025",
+    "(Workshop paper submission) Workshop paper notification": "August 21, 2025",
+    "(KR Early Career Award) Award winner notification": "June 15, 2025",
+    "(KR Test of Time Award) Award winner notification": "June 30, 2025",
+    "(KR Distinguished Service Award) Award winner notification": "June 30, 2025"
+  },
+  "Other Date": {
+    "Workshop registration deadline": "September 11, 2025",
+    "Tutorial and workshop dates": "November 11-13, 2025"
+  },
+  "Topics": "Knowledge Representation and Reasoning, Artificial Intelligence, Agents, Automated Planning, Robotics, Natural Language Processing, Data Management, Semantic Web, Verification, Software Engineering, Computational Biology, Cybersecurity",
+  "Summary": "The 22nd International Conference on Principles of Knowledge Representation and Reasoning (KR 2025) will take place in Melbourne, Australia from November 11-17, 2025. KR is a well-established and vibrant field of research within Artificial Intelligence. The KR conference series is the leading forum for timely, in-depth presentation of progress in the theory and practice of the representation and computational management of knowledge.",
+  "Call for Papers": "# KR 2025: Call for Papers: Main Track\n\nThe 22nd International Conference on Principles of Knowledge Representation and Reasoning (KR 2025) will take place in **Melbourne, Australia, from November 11-17, 2025**.\n\n## Knowledge Representation and Reasoning\n\nKnowledge Representation and Reasoning (KR) is a well-established and vibrant field of research within Artificial Intelligence. KR builds on the fundamental thesis that knowledge can often be represented in an explicit declarative form, suitable for processing by dedicated symbolic reasoning engines. This enables the exploitation of knowledge that would otherwise be implicit through semantically grounded inference mechanisms. KR has contributed to the theory and practice of various areas of AI, including agents, automated planning, robotics, and natural language processing, and to fields beyond AI, including data management, semantic web, verification, software engineering, computational biology, and cybersecurity.\n\nThe KR conference series is the leading forum for timely, in-depth presentation of progress in the theory and practice of the representation and computational management of knowledge.\n\n## Call for Papers\n\nKR 2025 solicits papers presenting novel results on the principles of KR, which clearly contribute to the formal foundations of the field or show the applicability of KR techniques to implemented or implementable systems. We welcome papers from other areas that demonstrate clear use of, or contributions to, the principles or practice of KR. We also encourage \"reports from the field\" of applications, experiments, developments, and tests.\n\n## Important Dates\n\nAll deadlines are Anywhere on Earth (UTC-12).\n\n*   **Submission page opens:** March 31, 2025\n*   **Submission of title and abstract:** May 7, 2025\n*   **Paper submission deadline:** May 12, 2025\n*   **Author response period:** June 25 - July 1, 2025\n*   **Notification of acceptance:** July 10, 2025\n*   **Conference dates:** November 11-17, 2025\n\n## Submission Guidelines\n\nSubmissions should be anonymous and will be subject to double-blind peer review. Contributions may be regular papers (up to 9 pages) or short papers (up to 4 pages), including abstract, figures, and appendices (if any) but excluding references and acknowledgements. Papers must be written in English and formatted using the style files provided [here](files/KR25_authors_kit.zip).\n\nAccepted papers will be published in the KR 2025 proceedings. At least one author of each accepted paper is required to participate in the conference and present the work.\n\nTop papers from KR 2025 will be invited to the award-winning paper tracks of *Artificial Intelligence (AIJ)* and the *Journal of Artificial Intelligence Research (JAIR)*.\n\n## Awards\n\nCalls for nominations for the Early Career, Test of Time and Distinguished Service awards are open:\n\n*   **KR Early Career Award:** Nomination deadline: April 30, 2025. Award winner notification: June 15, 2025\n*   **KR Test of Time Award:** Nomination deadline: May 20, 2025. Award winner notification: June 30, 2025\n*   **KR Distinguished Service Award:** Nomination deadline: May 20, 2025. Award winner notification: June 30, 2025\n\n## Workshops and Tutorials\n\nCall for Tutorial and Workshop Proposals is now open!\n\n*   **Proposal submission deadline:** March 24, 2025\n*   **Notification:** April 14, 2025\n*   **Workshop paper submission deadline:** July 17, 2025\n*   **Workshop paper notification:** August 21, 2025\n*   **Workshop registration deadline:** September 11, 2025\n*   **Tutorial and workshop dates:** November 11-13, 2025"
+}
+

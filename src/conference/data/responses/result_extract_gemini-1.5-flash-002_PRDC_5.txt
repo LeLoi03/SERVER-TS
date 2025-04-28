@@ -1,0 +1,34 @@
+```json
+{
+  "Conference dates": "November 13 - 15, 2024",
+  "Year": "2024",
+  "Location": "Osaka, Japan",
+  "City-State-Province": "Osaka",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission": "July 24, 2024",
+    "Paper submission": "July 31, 2024",
+    "Paper submission": "September 3, 2024",
+    "Paper submission": "September 3, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "August 31, 2024",
+    "Author notification": "September 17, 2024",
+    "Author notification": "September 19, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version": "September 13, 2024",
+    "Camera-ready version": "September 20, 2024",
+    "Camera-ready version": "September 22, 2024"
+  },
+  "Other Date": {
+    "Dependable AI-Driven Software Systems Submission deadline": "January 15, 2025"
+  },
+  "Topics": "Software and hardware reliability, resilience, safety, security, testing, verification, and validation, Dependability measurement, modeling, evaluation, and tools, Self-healing, self-protecting, and fault-tolerant systems, Architecture and system design for dependability, Prognostics in Complex Systems, Reliability analysis of Complex Systems, Fault-tolerant algorithms and protocols, Cloud computing resiliency, security and privacy, Software defined networks architectures and protocols, Dependability issues in computing systems, Emerging technologies",
+  "Publisher": "IEEE Computer Society",
+  "Summary": "The IEEE Pacific Rim International Symposium on Dependable Computing (PRDC) is a yearly symposium devoted to dependable and fault-tolerant computing. PRDC 2024, the twenty-ninth event in the series, was held in Osaka, Japan from November 13-15, 2024.  It encompassed fundamental theoretical approaches, practical experimental projects, and commercial components and systems.",
+  "Call for Papers": "# PRDC 2024: Call for Papers\n\nThe 29th IEEE Pacific Rim International Symposium on Dependable Computing (PRDC 2024) was held in **Osaka, Japan from November 13-15, 2024**.\n\n## Topics of Interest\n\nTopics of interest included (but were not limited to):\n\n*   Software and hardware reliability, resilience, safety, security, testing, verification, and validation\n*   Dependability measurement, modeling, evaluation, and tools\n*   Self-healing, self-protecting, and fault-tolerant systems\n*   Architecture and system design for dependability\n*   Prognostics in Complex Systems\n*   Reliability analysis of Complex Systems\n*   Fault-tolerant algorithms and protocols\n*   Cloud computing resiliency, security and privacy\n*   Software defined networks architectures and protocols\n*   Dependability issues in computing systems (e.g., computer networks and communications, high-performance computing, real-time systems, storage and databases systems, cyber-physical systems, socio-technical systems, and blockchain and smart contracts)\n*   Emerging technologies (autonomous systems including autonomous vehicles, human machine teaming, smart devices/Internet of Things)\n\n## Submission and Publication Information\n\nManuscripts should use the IEEE double-column format in 10 pages for full papers and 6 pages for short papers. The references are not included in the page limit. Appendixes beyond the page limit are allowed in submission, but they are not expected to be reviewed. Regardless of full or short papers, the authors can choose either one of the following two submission categories: (i) Regular Research Papers and (ii) Practical Experience Reports.\n\n*   **Regular Research Papers:** should describe original research (not submitted or published elsewhere).\n*   **Practical Experience Reports:** should describe an experience or a case study, such as the design and deployment of a system or actual failure and recovery field data.\n\nAll submissions must be made electronically (in PDF format) on the submission website. Please note that all submissions will undergo a double-blind review. Papers will be reviewed internationally and selected based on their originality, significance, relevance, and clarity of presentation. All accepted papers will be published by the IEEE Computer Society Press (EI Indexed).\n\nThe submission website was: [HotCRP site](https://prdc24.hotcrp.com/)\n\n## Important Dates\n\n*   **Abstract submission:** July 24, 2024 (AoE)\n*   **Paper submission:** July 31, 2024 (AoE)\n*   **Author notification:** August 31, 2024 (AoE)\n*   **Camera-ready version:** September 13, 2024 (AoE)\n\n## Paper Award\n\nOne outstanding paper will be selected to receive the Best Paper Award, and one outstanding paper first-authored by a student will receive the Best Student Paper Award. A few excellent papers will be recommended to have their extended versions submitted to an international journal. \n\n## Special Issue\n\nA few excellent papers will be recommended to have their extended versions submitted to the special issue of the Practice and Experience (SPE). This special issue also seeks submissions of papers that present novel and innovative ideas.\n\n## Program Committee Co-Chairs\n\n*   Valerio Schiavoni, Universite de Neuchatel, Switzerland\n*   Fumio Machida, University of Tsukuba, Japan"
+}
+```

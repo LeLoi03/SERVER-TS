@@ -1,0 +1,243 @@
+Conference MT SUMMIT:
+
+Home 
+ About | href="about.html#theMTSummit" - The MT Summit 
+ Organising committee 
+ Code of conduct 
+ href="#" - Calls | href="calls.html#callForPapers" - Papers 
+ href="calls.html#callForWorkshops" - Workshops 
+ href="calls.html#callForTutorials" - Tutorials 
+ href="calls.html#informationForAuthors" - Information for authors 
+ Programme | Provisional programme 
+ Keynote speakers 
+ Workshops 
+ Tutorials 
+ Attending | Registration 
+ Venue 
+ Accommodation 
+ Visiting Geneva 
+ Visa information 
+ Sponsors 
+ 20th Machine Translation Summit 
+ Geneva, Switzerland, 23-27 June 2025 
+ Registration 
+ is now open! 
+ photo © Genève Tourisme, Loris von Siebenthal 
+  
+ href="https://bsky.app/profile/mtsummit2025.bsky.social" - mtsummit2025
+href="https://www.linkedin.com/showcase/mtsummit2025" - MT Summit 2025
+href="mailto:mtsummit2025@unige.ch" - mtsummit2025@unige.ch 
+
+Call for Papers information:
+Home 
+ About | href="about.html#theMTSummit" - The MT Summit 
+ Organising committee 
+ Code of conduct 
+ href="#" - Calls | href="calls.html#callForPapers" - Papers 
+ href="calls.html#callForWorkshops" - Workshops 
+ href="calls.html#callForTutorials" - Tutorials 
+ href="calls.html#informationForAuthors" - Information for authors 
+ Programme | Provisional programme 
+ Keynote speakers 
+ Workshops 
+ Tutorials 
+ Attending | Registration 
+ Venue 
+ Accommodation 
+ Visiting Geneva 
+ Visa information 
+ Sponsors 
+ Final Call for papers 
+ Important dates 
+ All deadlines are at 23:59 AoE (Anywhere on Earth). 
+ Submission deadline:3 February 2025NEW: 10 February 20251st Notification to authors:19 March 2025Rebuttal period:19 to 24 March 2025Final Notification to authors:31 March 2025Author registration:30 April 2025Camera ready deadlines:17 April 2025The European Association for Machine Translation (EAMT) invites everyone interested in machine translation and translation-related tools and resources ― developers, researchers, users, translation and localization professionals and managers ― to participate in the MT Summit 2025. 
+ Driven by the state of the art, the research community will demonstrate their cutting-edge research and results. Professional MT users will provide insights into successful implementation of MT in business scenarios as well as implementation scenarios involving large corporations, governments, or NGOs. Translation studies scholars and translation practitioners are also invited to share their experience with MT. 
+ Note that papers that have been archived in arXiv can be accepted for submission provided that they have not already been published elsewhere. 
+ We expect to receive manuscripts in these four categories: 
+ Research - TechnicalSubmissions (up to 10 pages, plus unlimited pages for references, appendices andsustainability statement) are invited for reports of significant research results in any aspect of machine translation and related areas. Such reports should include a substantial evaluation component, or have a strong theoretical and/or methodological contribution where results and in-depth evaluations may not be appropriate. Papers are welcome on all topics in the areas of machine translation and translation-related technologies, including, but not limited to: 
+ Latest advances in MT 
+ Model distillation, compression and on-device MT 
+ Efficiency improvement and MT with low computational resources 
+ Few-shots adaptation and pre-trained MT systems 
+ MT for low-resource languages and varieties (including historical languages) 
+ LLMs for translation, transcreation, and other cross-lingual use cases 
+ Augmenting MT with ML, NLP or generative AI 
+ Comparative evaluation of MT systems 
+ Interactive and real-time adaptive MT systems: including advanced approaches to leverage TM and end-user feedback 
+ Detecting and preventing catastrophic errors in output 
+ Measuring fairness, bias, and transparency in output 
+ Advanced MT fine-tuning and enhancement: including pre- and post-processing; controlling style, tone of voice, gender 
+ Technologies for MT deployment: quality estimation, domain adaptation, etc. 
+ MT for multiple modalities (speech, sign language, video, etc.) 
+ MT for real-time communication (chats, social networks, etc.) 
+ MT in production scenarios, robustness and deployment issues 
+ Linguistic resources for MT: corpora, terminologies, dictionaries, etc. 
+ MT quality estimation and evaluation techniques, metrics, and evaluation results 
+ Related multilingual technologies: natural language generation, information retrieval, text categorization, text summarization, information extraction, optical character recognition, etc. 
+ Source text improvement: improving the source content destined for MT through automatic tools such as grammar correction, guidelines, and NLP 
+ Papers should describe original work. They should emphasize completed work rather than intended work and should clearly indicate the state of completion of the reported results. Where appropriate, concrete evaluation results should be included. 
+ Papers should be written in English, anonymized, prepared according to thetemplates specified below, and be no longer than 10 pages (plus unlimited pages for references, appendices andsustainability statement) 
+ Submit the paper as a PDF to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Research Technical). 
+ Track chairs:Catarina Farinha (Unbabel) and Marco Gaido (Fondazione Bruno Kessler, Italy) 
+ Research - Translators and UsersSubmissions (up to 10 pages, plus unlimited pages for references, appendices andsustainability statement) are invited for academic research on all topics related to how professional translators and other types of MT users interact with, are affected by, or conceptualize machine translation. Papers should report significant research results with a strong theoretical and/or methodological contribution. 
+ Topics for the track include, but are not limited to: 
+ The impact of MT and post-editing: including studies on processes, effort, strategies, usability productivity, pricing, workflows, and post-editese 
+ Emerging areas for MT & post-editing: audiovisual, game localization, literary texts, creative texts, social media, health care communication, crisis translation 
+ Ethics, policy, and regulatory trends concerning the use of MT or generative AI for cross-lingual use cases 
+ The evaluation and reception of different modalities of translation: human translation, post-edited raw MT 
+ MT and interpreting 
+ Post-editing and human-in-the-loop methods: new approaches, successes and failures, applicability to different content-types, etc. 
+ Interaction of language professionals (translators and interpreters) with MT and generative AI tools and output 
+ MT and LLM integration in CAT environments and translation workflow 
+ MT for gisting and the impact of MT on users: use cases, expectations, perceptions, trust, views on acceptability 
+ MT and usability 
+ MT and education/language learning 
+ MT in the translation/interpreting classroom 
+ Papers should describe original work. They should emphasize completed work rather than intended work and should indicate clearly the state of completion of the reported results. 
+ Papers should be written in English, anonymized, prepared according to thetemplates specified below, and be no longer than 10 pages (plus unlimited pages for references, appendices andsustainability statement). 
+ Submit the paper as a PDF to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Research Translators and Users). 
+ Track chairs:Joke Daems (Ghent University, Belgium) and Dorothy Kenny (Dublin City University, Ireland) 
+ Implementations and Case StudiesSubmissions (4–6 pages) are invited for reports on case studies and implementation experience with MT in organizations of all types, including small businesses, large corporations, governments, NGOs, or language service providers. We also invite translation practitioners to share their views and observations based on their day-to-day experience working with MT in a variety of environments. 
+ Topics for the track include, but are not limited to: 
+ Integrating or optimizing MT and computer-assisted translation in translation production workflows (translation memory/MT thresholds, mixing online and offline tools, 
+ using interactive MT, dealing with MT confidence scores) 
+ Managing change when implementing and using MT (e.g. switching between multiple MT systems, limiting degradations when updating or upgrading an MT system) 
+ Implementing open-source MT (e.g. strategies to get support, reports on taking pilot results into full deployment, examples of advanced customization sought and obtained 
+ thanks to the open-source paradigm, collaboration within open-source MT projects) 
+ Evaluating MT in a real-world setting (e.g. error detection strategies, metrics, productivity or translation quality gains) 
+ Ethical and confidentiality issues when using MT, especially MT in the cloud 
+ Using MT in social networking or real-time communication (e.g. enterprise support chat, multilingual content for social media) 
+ MT and usability 
+ Implementing MT to process multilingual content for assimilation purposes (e.g. cross-lingual information retrieval, MT for e-discovery or spam detection, MT for highly dynamic content) 
+ MT in literary, audiovisual, game localization and creative texts 
+ Impact of MT and post-editing on translation practices and the profession: processes, effort compensation 
+ Psycho-social aspects of MT adoption (ergonomics, motivation, and social impact on the profession) 
+ Error analysis and post-editing strategies (including automatic post-editing and automation strategies) 
+ The use of translators’ metadata and user activity data in MT development 
+ Freelance translators’ independent use of MT 
+ MT and interpreting 
+ Generative AI and Large language models integration in translation workflows 
+ Papers should highlight real-world use scenarios, solutions, and problems in addition to describing MT integration processes and project settings. Where solutions do not exist, suggestions for MT researchers and developers should be clearly emphasized. For papers on implementations and case studies produced by academics, we require co-authorship with the actual organizations working with MT implementations. 
+ Papers (approximately 4–6 pages, with a maximum of 10 pages including references) should be written in English, formatted according to thetemplates specified belowand submitted as PDF files to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Implementations and Case studies). Anonymization is not required in the Implementations and Case Studies track submissions. 
+ Track chairs:Samuel Läubli (Textshuttle/Supertext, Switzerland) and Martin Volk (University of Zurich, Switzerland) 
+ Products and ProjectsSubmissions (2 pages, including references) are invited on either of the subtracks (Products or Projects). 
+ Products:Tools for MT, computer-aided translation, and other translation technologies (including commercial products and free/open-source software). Descriptions should include information about product availability and licensing, an indication of cost if applicable, basic functionality, (optionally) a comparison with other products, and a description of the technologies used. The authors should be ready to present the tools in the form of demos or posters during the conference. 
+ Projects:Research projects, funded through grants obtained in competitive public or private calls related to machine translation. Descriptions should contain: project title and acronym, funding agency, project reference, duration, list of partner institutions or companies in the consortium if there is one, project objectives, and a summary of partial results available or final results if the project has ended. The authors should be ready to present the projects in the form of posters during the conference. 
+ There will be a poster boaster session for this track, in which authors will have 120 seconds to attract attendees to their posters or demos with a two-slide presentation. 
+ Submissions should be written in English and formatted according to thetemplates specified below. Anonymization is not required. Submissions should be no longer than 2 pages (including references) and submitted as PDF files to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Products and Projects). 
+ Track chairs:Miquel Esplà-Gomis (University of Alicante, Spain) and Vincent Vandeghinste (KU Leuven, Belgium) 
+ Sustainability statement 
+ For all tracks, we strongly encourage work complying with the “Green AI” principles (Schwartz et al. 2020) and focusing on reducing the environmental cost of MT model training and usage by, among others, improving training and inference efficiency. Furthermore, we strongly encourage authors who carry out computational experiments to report average runtime for each model/algorithm, estimate energy cost and to add acarbon impact statementto their paper following the guidelines by Henderson et al. (2020). 
+ Below is a list of tools that can be used to estimate carbon emissions of an experiment: 
+ ML CO2 IMPACT (Lacoste et al. 2019) 
+ Green Algorithm (Lannelongue et al. 2021) 
+ References: 
+ Lacoste, A., Luccioni, A., Schmidt, V., Dandres, T. (2019),Quantifying the Carbon Emissions of Machine Learning. ArXiv preprint. 
+ Lannelongue, L., Grealey, J., Inouye, M. (2021),Green Algorithms: Quantifying the Carbon Footprint of Computation. Adv. Sci. 2021. 
+ Schwartz, R., Dodge, J., Smith, N., Etzioni, O. (2020),Green AI. Commun. ACM 63, 12 (December 2020), 54–63. 
+ Find out the meaning of these stripes on#ShowYourStripes,CC-BYEd Hawkins (University of Reading) 
+ Final Call for Workshop Proposals 
+ Important dates 
+ All deadlines are at 23:59 AoE (Anywhere on Earth). 
+ Submission deadline:25 November 2024NEW: 4 December 2024Notification of acceptance:13 December 2024Workshop date:23 or 24 June 2025The European Association for Machine Translation (EAMT) invites proposals for workshops to be held in conjunction with the MT Summit 2025 conference, taking place in Geneva, Switzerland. The workshops will take place before the main conference, on 23 and 24 June 2025. 
+ MT Summit workshops are intended to provide the opportunity for MT­-related communities of interest to spend focused time together advancing the state of thinking or the state of practice in their area of interest or endeavour. We seek proposals in all areas of machine translation, LLMs applied to translation, computer-assisted translation technologies, spoken language translation and related topics. 
+ Workshops may be scheduled as half-day or full-day events (up to 8 hours, including coffee and lunch breaks). Proponents need to explicitly state the duration of the workshop. 
+ Submission InformationProposals should not exceed 4 pages of content (plus unlimited pages for references), should be in PDF format, and should contain the following: 
+ The title of the workshop 
+ Authors' names, affiliations and contact information 
+ A brief description of the workshop topics and content and its relevance to the main conference 
+ A list of speakers whom you intend to invite to present at the workshop 
+ An estimate of the number of attendees 
+ A description of any shared tasks associated with the workshop (if any), and an estimate number of participants 
+ If the workshop has been held before, include relevant information about previous editions (location, number of attendees, number of accepted submissions, etc) 
+ A description of special requirements and technical needs 
+ An outline of the intended workshop timeline including dates for: | First call for workshop papers 
+ Second call for workshop papers 
+ Submission deadline for workshop papers 
+ Notification of acceptance 
+ Camery-ready version deadline 
+ Information about organisers and program committee, including: | A brief description (2-5 sentences) of the organisers’ research interests, areas of expertise and experience in organising workshops and related events 
+ A list of Programme Committee members, with an indication of which members have already agreed. | Workshops are expected to follow the timelines below, so please make sure the dates above fit into the schedule: | 1st Call: no later than Friday, 20 December 2024 
+ Deadline: no later than Monday, 10 March 2025 
+ Acceptance: no later than Monday, 31 March 2025 
+ Camera ready: no later than Monday, 7 April 2025 
+ Proceedings deadline: Monday, 2 June 2025 | Proposals should be submitted as PDF files to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Workshops). | Submissions should be formatted according to thetemplates specified below. Please also use these templates for camera-ready workshop contributions to comply with the format requirements for the workshop proceedings to be published in the ACL Anthology. | Anonymisation is not required. Submissions should be no longer than 4 pages (excluding references). If you have any questions, feel free to contact us at mtsummit2025@unige.ch with the subject “Workshop proposal”. 
+ Evaluation CriteriaThe workshop proposals will be evaluated according to their originality and impact, the experience of the organising team and the programme committee. 
+ Organiser ResponsibilitiesThe organisers will be responsible for publicising and running the workshop, including reviewing submissions, producing the camera-ready workshop proceedings and publishing them in the ACL Anthology as well as organising the schedule with local MT Summit organisers. Workshop organisers should cover any expenses for invited speakers, if applicable. 
+ For every accepted workshop, we offerfree registration to the main conference for one workshop organiser.Track chairs:Sheila Castilho (Dublin City University, Ireland) and François Yvon (Sorbonne University, France) 
+ Final Call for Tutorials 
+ Important dates 
+ All deadlines are at 23:59 AoE (Anywhere on Earth). 
+ Submission deadline:25 November 2024NEW: 4 December 2024Notification of acceptance:13 December 2024Abstract deadline:7 April 2025Tutorial materials:2 June 2025Tutorial date:23 or 24 June 2025The European Association for Machine Translation (EAMT) invites proposals for tutorials to be held in The European Association for Machine Translation (EAMT) invites proposals for tutorials to be held in conjunction with the MT Summit 2025 conference, taking place in Geneva, Switzerland. The tutorials will take place before the main conference, on 23 and 24 June 2025. 
+ We seek proposals in all areas of machine translation, LLMs applied to translation, computer-assisted translation technologies, spoken language translation and related topics. 
+ The aim of a tutorial is primarily to help the audience to develop understanding of specific technical applied, and business matters related to research, development, and use of MT and translation technology. 
+ Presentations of specific technological solutions or systems are welcome, provided that they serve as illustrations of broader scientific considerations. 
+ We recommend that the tutorial covers work by the presenters as well as by other researchers. The submission should explain that this breadth is ensured. Tutorials should not be “self-invited talks”. 
+ Tutorials are generally scheduled as half-day events (up to 3.5 hours, including coffee break). 
+ Submission InformationProposals should not exceed 4 pages of content (plus unlimited pages for references), should be in PDF format, and should contain the following: 
+ The title of the tutorial 
+ Authors' names, affiliations and contact information 
+ A brief description of the tutorial content and its relevance to the machine translation community 
+ Short description of the target audience and any expected prerequisite background the audience should be aware of 
+ An outline of the tutorial structure content and how it will be covered in a 3.5-hour slot (half-day). If you request a full-day slot it must be clearly motivated. 
+ Diversity considerations, e.g. use of multilingual data, indications of how the described methods scale up to various languages or domains, participation of both senior and junior instructors, plans for how to diversify audience participation, etc. 
+ Reading list. Work that you expect the audience to read before the tutorial can be indicated by an asterisk. The list should contain work by various authors (not just the tutorial organisers). Work from other disciplines is welcome if relevant. 
+ For each tutorial presenter, a short description of their research interests and areas of expertise for the tutorial topic, as well as experience in instructing an international audience. 
+ An estimate of the number of attendees. If this tutorial (or similar) has been given before, include information on previous edition (location, number of attendees, etc) 
+ A description of special requirements for technical equipment. 
+ Proposals should be submitted as PDF files to thehref="https://easychair.org/conferences/?conf=mtsummit2025" - EasyChair MT Summit 2025 page
+(submission type: MT Summit 2025 Tutorials). 
+ Submissions should be formatted according to thetemplates specified below. Anonymisation is not required. Submissions should be no longer than 4 pages (excluding references). If you have any questions, feel free to contact us at mtsummit2025@unige.ch with the subject “Tutorial proposal”. 
+ Evaluation CriteriaEach tutorial proposal will be evaluated according to its clarity and preparedness novelty or timely character of the topic, as well as instructors’ experience. 
+ Tutorial Instructor ResponsibilitiesAccepted tutorial presenters will be notified by Friday, 13 December 2024. They must then provide abstracts of their tutorials for inclusion in the conference registration material by the specific conference deadlines. The description should be in two formats: (a) an ASCII version that can be included in email announcements and published on the conference website, and (b) a PDF version for inclusion in the electronic proceedings (detailed instructions will be provided). Tutorial speakers must provide tutorial materials by Monday, 2 June 2025. The final submitted tutorial materials must include copies of the course slides and a bibliography for the material covered in the tutorial. 
+ For every accepted tutorial, we offer free registration to the main conference forone tutorial presenter. 
+ Track chairs:Sheila Castilho (Dublin City University, Ireland) and François Yvon (Sorbonne Université, France) 
+ Information for authors 
+ Templates 
+ Use one of the templates below to prepare your submission:LaTeX 
+ href="https://www.overleaf.com/latex/templates/instructions-for-machine-translation-summit-2025-proceedings/ssxcxzkyzyzd" - Cloneable Overleaf template 
+ href="assets/downloads/mtsummit2025_template_v2.docx" - Word | (updated April 2025) 
+ href="assets/downloads/mtsummit2025_template_v2.pdf" - PDF | (updated April 2025) 
+ Important information regarding Camera-ready versions 
+ Please follow the instructions below before submitting your final/camera-ready version. 
+ Overleaf/LaTeX 
+ De-anonymization & Line Number Removal: 
+ Replace | \usepackage[preprint]{mtsummit25} | with | \usepackage[final]{mtsummit25} | to remove line numbers and de-anonymize your paper. 
+ Insert CC-BY-ND Licence: 
+ Download the provided | copyright.sty | file. 
+ Upload it to your Overleaf/LaTeX project. 
+ Add the following command in your main | .tex | file: | \usepackage{copyright} | (make sure to place this command | after | \usepackage[final]{mtsummit25} | to avoid any errors). 
+ Recompile your document. The CC-BY-ND text should appear at the end of the first column. You can check the | href="assets/downloads/mtsummit2025_template_v2.pdf" - updated pdf template | to see what the final version should look like. 
+ Compliance check 
+ Use | aclpubcheck | to verify that your paper complies with ACL publication standards. 
+ Submission 
+ Submit your final version in pdf format via EasyChair before April 17 
+ Word 
+ De-anonymization & Line Number Removal: 
+ Make sure to de-anonymize your paper (if relevant) and go to | Layout > Line Numbers > None | to remove line numbers. 
+ Remove page numbers if you had inserted any. 
+ Insert CC-BY-ND licence 
+ Insert the following CC-BY-ND licence text under the | left column on the first page | of your paper (font: Times New Roman, size: 9): | © 2025 The authors. This article is licensed under a Creative 
+ Commons 4.0 licence, no derivative works, attribution, 
+ CC-BY-ND. 
+ If your paper has a footnote on the first page, insert the text just above the first footnote. 
+ If your paper has | no | footnotes on the first page, follow these steps: 
+ Download the | href="assets/downloads/mtsummit2025_template_v2.docx" - updated Word template | . 
+ Copy the license text box from the template. 
+ Paste it at the bottom of the left column on the first page, ensuring proper alignment. 
+ You can check the | href="assets/downloads/mtsummit2025_template_v2.pdf" - updated pdf template | to see what the final version should look like. 
+ Compliance check 
+ Use | aclpubcheck | to verify that your paper complies with ACL publication standards. 
+ Submission 
+ Submit your final version in pdf format via EasyChair before April 17 
+ If you encounter problems or if you need assistance to prepare your camera-ready version, please email us athref="mailto:mtsummit2025@unige.ch" - mtsummit2025@unige.ch
+with the subject PROCEEDINGS. 
+  
+ href="https://bsky.app/profile/mtsummit2025.bsky.social" - mtsummit2025
+href="https://www.linkedin.com/showcase/mtsummit2025" - MT Summit 2025
+href="mailto:mtsummit2025@unige.ch" - mtsummit2025@unige.ch

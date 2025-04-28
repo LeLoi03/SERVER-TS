@@ -1,0 +1,759 @@
+Conference full name: International Conference on Theory and Applications of Satisfiability Testing (SAT)
+
+1. Website of SAT_3: https://www.satisfiability.org/
+Website information of SAT_3:
+
+The International Conferences on 
+ Theory and Applications of Satisfiability Testing (SAT)[Next Conference] · [Past Meetings] · [Related Sites]The International Conferences on Theory and Applications of Satisfiability Testing are the primary annual meetings for researchers studying the propositional satisfiability problem (SAT), a prominent problem in both theoretical and applied computer science. SAT lies at the heart of the most important open problem in complexity theory (PvsNP) and underlies many applications in, among other examples, artificial intelligence, operations research, and electronic design engineering. The primary objective of the conferences is to bring together researchers from various areas and communities, including theoretical and experimental computer science as well as the many relevant application areas to promote collaboration and the communication of new theoretical and practical results in SAT-related research and its industrial applications. 
+ Next Meeting: 
+ href="http://satisfiability.org/SAT25/" - SAT 2025 | - 28th International Conference on Theory and Applications of Satisfiability Testing Glasgow, UK (2025) 
+ Past Meetings: 
+ href="http://satisfiability.org/SAT24/" - SAT 2024 | - 27th International Conference on Theory and Applications of Satisfiability Testing Pune, India (2024) 
+ href="http://satisfiability.org/SAT23/" - SAT 2023 | - 26th International Conference on Theory and Applications of Satisfiability Testing Alghero, Italy (2023) 
+ href="http://satisfiability.org/SAT22/" - SAT 2022 | - 25th International Conference on Theory and Applications of Satisfiability Testing Haifa, Israel (2022) 
+ href="https://www.iiia.csic.es/sat2021/" - SAT 2021 | - 24th International Conference on Theory and Applications of Satisfiability Testing Barcelona, Spain (2021) 
+ href="https://sat2020.idea-researchlab.org/" - SAT 2020 | - 23rd International Conference on Theory and Applications of Satisfiability Testing Alghero, Italy (2020) 
+ href="http://sat2019.tecnico.ulisboa.pt" - SAT 2019 | - 22nd International Conference on Theory and Applications of Satisfiability Testing Lisbon, Portugal (2019) 
+ href="http://sat2018.azurewebsites.net/" - SAT 2018 | - 21th International Conference on Theory and Applications of Satisfiability Testing Oxford, UK (2018) 
+ href="http://sat2017.gitlab.io" - SAT 2017 | - 20th International Conference on Theory and Applications of Satisfiability Testing 28. August - 1. September Melbourne, Australia (2017) 
+ href="http://sat2016.labri.fr" - SAT 2016 | - 19th International Conference on Theory and Applications of Satisfiability Testing Bordeaux, France (2016) 
+ href="http://www.cs.utexas.edu/~marijn/sat15" - SAT 2015 | - 18th International Conference on Theory and Applications of Satisfiability Testing, | Austin, Texas, USA (2015) 
+ href="http://baldur.iti.kit.edu/sat2014" - SAT 2014 | - 17th International Conference on Theory and Applications of Satisfiability Testing, 14-17 July 2014, Vienna, Austria 
+ href="http://sat2013.cs.helsinki.fi" - SAT 2013 | - 16th International Conference on Theory and Applications of Satisfiability Testing, 8-12 July 2013, Helsinki, Finland 
+ href="http://sat2012.fbk.eu/" - SAT 2012 | - 15th International Conference on Theory and Applications of Satisfiability Testing, Trento, Italy (2012) 
+ href="http://www.lri.fr/SAT2011/" - SAT 2011 | - 14th International Conference on Theory and Applications of Satisfiability Testing, Ann Arbor, USA (2011) 
+ href="http://www.satisfiability.org/SAT10" - SAT 2010 | - 13th International Conference on Theory and Applications of Satisfiability Testing, Edinburgh, Scotland, United Kingdom (2010) 
+ href="http://cs-svr1.swan.ac.uk/~csoliver/SAT2009/index.html" - SAT 2009 | - 12th International Conference on Theory and Applications of Satisfiability Testing, Swansea, Wales, United Kingdom (2009) 
+ href="http://satassociation.org/sat08/" - SAT 2008 | - 11th International Conference on Theory and Applications of Satisfiability Testing, Guangzhou, P. R. China (2008) 
+ href="http://satassociation.org/sat07/" - SAT 2007 | - 10th International Conference on Theory and Applications of Satisfiability Testing, Lisbon, Portugal (2007) 
+ href="http://www.satisfiability.org/SAT06" - SAT 2006 | - 9th International Conference on Theory and Applications of Satisfiability Testing, Seattle WA, USA (2006) 
+ href="http://www.satisfiability.org/SAT05" - SAT 2005 | - 8th International Conference on Theory and Applications of Satisfiability Testing, St. Andrews, Scottland (2005) 
+ href="http://www.satisfiability.org/SAT04" - SAT 2004 | - 7th International Conference on Theory and Applications of Satisfiability Testing, Vancouver (BC), Canada (2004) 
+ href="http://www.star.dist.unige.it/~tac/SAT2003" - SAT 2003 | - 6th International Conference on Theory and Applications of Satisfiability Testing, Santa Margherita Ligure, Italy (2003) 
+ href="https://satisfiability.org/SAT02/" - SAT 2002 | - 5th Symposium on Theory and Applications of Satisfiability Testing Cincinnati, USA (2002) 
+ href="http://www.cs.washington.edu/homes/kautz/sat2001/" - SAT 2001 | - 4th Workshop on Theory and Applications of Satisfiability Testing, Boston, USA (2001) 
+ href="https://satisfiability.org/SAT00/" - SAT 2000 | - 3rd Workshop on Satisfiability, Renesse, The Netherlands (2000) 
+ href="http://satassociation.org/sat98/" - SAT 1998 | - 2nd Workshop on Satisfiability, Schloß Eringerfeld, Germany (1998) 
+ href="http://satassociation.org/SAT96/sat96.html" - SAT 1996 | - 1st Workshop on Satisfiability, Siena, Italy (1996) 
+ href="" - Some SAT-related sites:
+href="http://satassociation.org/" - SAT Association 
+ href="http://jsatjournal.org/" - JSAT | - Journal on Satisfiability, Boolean Modeling and Computation 
+ href="http://www.satlive.org" - SAT Live! | - Up-to-date links for the Satisfiability Problem 
+ QBFLIB | - The Quantified Boolean Formulas Satisfiability Library 
+ For comments and corrections, please contactStefan Mengel. 
+ href="http://satassociation.org/privacy.html" - Imprint
+href="http://satassociation.org/privacy.html" - Privacy
+
+2. Website of SAT_3: https://satisfiability.org/SAT24/
+Website information of SAT_3:
+
+href="../SAT24/" - SAT 2024
+Dates and Calls 
+ href="dates.php" - Dates
+href="cfp.php" - CFP
+CFWFor Attendees 
+ Keynote SpeakersCompetitionsVenueAccommodation & TransportVisa InformationStudent GrantsRegistrationResources 
+ OrganizersSponsorshipPhD AwardOrganizersSponsorshipPhD AwardAwardsWorkshops & SchoolProgram ScheduleHighlightsCreditSAT 2024 
+ The 27th International Conference on Theory and Applications of Satisfiability Testing 
+ August 21-24, Pune, India 
+ href="https://www.dagstuhl.de/dagpub/978-3-95977-334-8" - SAT 2024 Proceedings
+href="https://www.easychair.org/smart-program/SAT2024/" - SAT 2024 Program Schedule
+The International Conference on Theory and Applications of Satisfiability Testing (SAT) is the premier annual meeting for researchers focusing on the theory and applications of the propositional satisfiability problem, broadly construed. In addition to plain propositional satisfiability, it also includes Boolean optimization (such as MaxSAT and Pseudo-Boolean (PB) constraints), Quantified Boolean Formulas (QBF), Satisfiability Modulo Theories (SMT), Model Counting, and Constraint Programming (CP) for problems with clear connections to Boolean-level reasoning. 
+  
+ Many hard combinatorial problems can be tackled using SAT-based techniques including problems that arise in Formal Verification, Artificial Intelligence, Operations Research, Computational Biology, Cryptography, Data Mining, Machine Learning, Mathematics, etc. Indeed, the theoretical and practical advances in SAT research over the past twenty years have contributed to making SAT technology an indispensable tool in a variety of domains. 
+  
+ SAT 2024 aims to further advance the field by soliciting original theoretical and practical contributions in these areas with a clear connection to satisfiability. Specifically, SAT 2024 invites scientific contributions addressing different aspects of SAT interpreted in a broad sense, including (but not restricted to) theoretical advances (such as exact algorithms, proof complexity, and other complexity issues), practical search algorithms, knowledge compilation, implementation-level details of SAT solvers and SAT-based systems, problem encodings and reformulations, applications (including both novel application domains and improvements to existing approaches), as well as case studies and reports on findings based on rigorous experimentation. 
+ Sponsors 
+  
+ href="https://www.tcs.com/what-we-do/research" - | Diamond 
+ href="https://aij.ijcai.org/funding-opportunities-for-promoting-ai-research/" - | Platinum 
+ Platinum 
+ Gold 
+ Gold 
+ Silver 
+ Bronze 
+ href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" - | Bronze 
+ SAT 2024 - August 21 - 24, 2024, Pune, India
+
+3. Website of SAT_3: https://satisfiability.org/SAT25/
+Website information of SAT_3:
+
+Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ href="/SAT25/" - SAT 2025
+href="/SAT25/cfp/" - Calls 
+ href="/SAT25/dates/" - Dates & Programme 
+ href="/SAT25/local/" - Local Information 
+ href="/SAT25/affiliated/" - Affiliated Events 
+ Committees 
+ href="/SAT25/talks/" - Invited Talks 
+ Toggle menuSAT 2025 
+ The 28th International Conference on Theory and Applications of Satisfiability Testing. 
+ August 11-15, Glasgow, Scotland 
+ Photo credit:Glasgow LifeDeadline Extension:The abstract registration deadline for SAT 2025 has been extended to March 24th 23:59 AoE.The paper submission deadline has been extended April 3 23:59 AoE. No further extensions will be possible. 
+ Notice:In 2025 the UK will be introducing an electronic travel authorisation (ETA) that will affect visitors who have previously travelled to the UK without needing prior authorisation. Please seehref="https://satisfiability.org/SAT25/local/#visa-and-electronic-travel-authorisation-information-important-changes" - the local information page
+for more information. 
+ The 28th International Conference on Theory and Applications of Satisfiability Testing (SAT 2025) will take place August 11-15 at theUniversity of Glasgow in Glasgow, Scotland. 
+ SAT 2025 will be colocated with the 31sthref="https://cp2025.a4cp.org/" - International Conference on Principles and Practice of Constraint Programming (CP)
+, the 18thInternational Symposium on Combinatorial Search (SoCS), and thehref="https://smt-workshop.cs.uiowa.edu/2025/index.shtml" - 23rd International Workshop on Satisfiability Modulo Theories (SMT)
+. 
+ Additionally, thehref="https://sat-smt-ar-school.gitlab.io/www/2025/" - SAT/SMT/AR summer school
+will take place August 6 - 8 in St. Andrews. 
+ These pages will collect all relevant information regarding the conference and will be regularly updated. 
+ Follow: 
+ href="/SAT25/feed.xml" - Feed 
+ © 2025href="https://satisfiability.org" - SAT 2025
+. Powered byJekyll&Minimal Mistakes.
+
+4. Website of SAT_3: https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-305
+Website information of SAT_3:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ href="https://drops.dagstuhl.de/entities/conference/SAT" - SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ VolumeExport XML 
+ Export ACM-XML 
+ Export DOAJ-XML 
+ Export Schema.org 
+ Export HTML 
+ LIPIcs, Volume 305 
+ 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024) 
+ Part of: | Series: | Leibniz International Proceedings in Informatics (LIPIcs) | Part of: | Conference: | href="https://drops.dagstuhl.de/entities/conference/SAT" - International Conference on Theory and Applications of Satisfiability Testing (SAT) 
+ Event 
+ href="http://satisfiability.org/SAT24/" - SAT 2024, August 21-24, 2024, Pune, India
+Editors 
+ Supratik Chakrabortyhref="https://drops.dagstuhl.de/search/documents?author=Chakraborty, Supratik" - 
+IIT Bombay, India 
+ Jie-Hong Roland Jianghref="https://drops.dagstuhl.de/search/documents?author=Jiang, Jie-Hong Roland" - 
+National Taiwan University, Taipei, Taiwan 
+ Publication Details 
+ published at: 2024-08-19 
+ Publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ ISBN: 978-3-95977-334-8 
+ DBLP: | href="https://dblp.org/db/conf/sat/sat2024" - db/conf/sat/sat2024 
+  
+ Access Numbers 
+ Detailed Access Statistics available here 
+ Total Document Accesses (updated on a weekly basis): | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+ DocumentsNo documents found matching your filter selection. 
+ Document 
+ Complete Volume 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024" - DOI: 10.4230/LIPIcs.SAT.2024
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024/LIPIcs.SAT.2024.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024" - LIPIcs, Volume 305, SAT 2024, Complete Volume
+Authors:Supratik Chakraborty and Jie-Hong Roland Jiang 
+ AbstractLIPIcs, Volume 305, SAT 2024, Complete Volume 
+ Cite as27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 1-578, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @Proceedings{chakraborty_et_al:LIPIcs.SAT.2024 title = {{LIPIcs, Volume 305, SAT 2024, Complete Volume}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {1--578}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024}, URN = {urn:nbn:de:0030-drops-205211}, doi = {10.4230/LIPIcs.SAT.2024}, annote = {Keywords: LIPIcs, Volume 305, SAT 2024, Complete Volume} }@Proceedings{chakraborty_et_al:LIPIcs.SAT.2024 title = {{LIPIcs, Volume 305, SAT 2024, Complete Volume}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {1--578}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024}, URN = {urn:nbn:de:0030-drops-205211}, doi = {10.4230/LIPIcs.SAT.2024}, annote = {Keywords: LIPIcs, Volume 305, SAT 2024, Complete Volume} }Document 
+ Front Matter 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.0" - DOI: 10.4230/LIPIcs.SAT.2024.0
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.0/LIPIcs.SAT.2024.0.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.0" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.0" - Front Matter, Table of Contents, Preface, Conference Organization
+Authors:Supratik Chakraborty and Jie-Hong Roland Jiang 
+ AbstractFront Matter, Table of Contents, Preface, Conference Organization 
+ Cite as27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 0:i-0:xviii, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{chakraborty_et_al:LIPIcs.SAT.2024.0 author = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {0:i--0:xviii}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.0}, URN = {urn:nbn:de:0030-drops-205222}, doi = {10.4230/LIPIcs.SAT.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }@InProceedings{chakraborty_et_al:LIPIcs.SAT.2024.0 author = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {0:i--0:xviii}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.0}, URN = {urn:nbn:de:0030-drops-205222}, doi = {10.4230/LIPIcs.SAT.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.1" - DOI: 10.4230/LIPIcs.SAT.2024.1
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.1/LIPIcs.SAT.2024.1.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.1" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.1" - Models and Counter-Models of Quantified Boolean Formulas (Invited Talk)
+Authors:Martina Seidl 
+ AbstractBecause of the duality of universal and existential quantification, quantified Boolean formulas (QBF), the extension of propositional logic with quantifiers over the Boolean variables, have not only solutions in terms of models for true formulas like in SAT. Also false QBFs have solutions in terms of counter-models. Both models and counter-models can be represented as certain binary trees or as sets of Boolean functions reflecting the dependencies among the variables of a formula. Such solutions encode the answers to application problems for which QBF solvers are employed like the plan for a planning problem or the error trace of a verification problem. Therefore, models and counter-models are at the core of theory and practice of QBF solving. In this invited talk, we survey approaches that deal with models and counter-models of QBFs and identify some open challenges. 
+ Cite asMartina Seidl. Models and Counter-Models of Quantified Boolean Formulas (Invited Talk). In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 1:1-1:7, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{seidl:LIPIcs.SAT.2024.1 author = {Seidl, Martina}, title = {{Models and Counter-Models of Quantified Boolean Formulas}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {1:1--1:7}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.1}, URN = {urn:nbn:de:0030-drops-205238}, doi = {10.4230/LIPIcs.SAT.2024.1}, annote = {Keywords: Quantified Boolean Formula, Solution Extraction, Solution Counting} }@InProceedings{seidl:LIPIcs.SAT.2024.1 author = {Seidl, Martina}, title = {{Models and Counter-Models of Quantified Boolean Formulas}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {1:1--1:7}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.1}, URN = {urn:nbn:de:0030-drops-205238}, doi = {10.4230/LIPIcs.SAT.2024.1}, annote = {Keywords: Quantified Boolean Formula, Solution Extraction, Solution Counting} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.2" - DOI: 10.4230/LIPIcs.SAT.2024.2
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.2/LIPIcs.SAT.2024.2.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.2" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.2" - Scalable Proof Production and Checking in SMT (Invited Talk)
+Authors:Cesare Tinelli 
+ AbstractSolvers for Satisfiability Modulo Theories (SMT) have become crucial components in safety- or mission-critical formal methods applications, in particular model checking, verification, and security analysis. Since state-of-the-art SMT solvers are large and complex systems, they are prohibitively difficult to prove correct. Hence, proof production is essential as a way to demonstrate instead the correctness of their responses, making those responses amenable to independent verification. Historically, the main challenges for proof production in SMT have been solver performance and proof coverage, often leading to the disabling of many sophisticated solving techniques when running in proof-production mode, or to coarse-grained, and harder to check, proofs. The first part of this talk presents a flexible proof-production architecture designed to handle the complexity of versatile, industrial-strength SMT solvers, and discusses how it has been leveraged to produce detailed proofs, even for sophisticated reasoning components. The architecture, implemented in the state-of-the-art SMT solver cvc5, allows proofs to be produced modularly, as needed, and with various safeguards for correctness. The architecture supports the generation of textual proof certificates in different formats, for offline proof checking by external tools, as well as a rich API, which is useful for online integration of the SMT solver into other reasoning tools such as, for instance, skeptical proof assistants. Extensive experimental evaluations with both SMT-LIB benchmarks and benchmarks provided by industrial partners have shown that the new architecture results in greater proof coverage than previous approaches, imposes a small runtime overhead, and supports fine-grained proofs in the great majority of cases. The second part of the talk gives an overview of a new generic language for expressing SMT proof certificates that builds on almost two decades of work and experience in proof generation and checking in SMT and combines the benefits of several previous efforts on the topic. While developed to express cvc5’s proof certificates, the language is meant to be useful to other SMT solvers as well. It is in fact a logical framework, based on the syntax and semantics of the upcoming Version 3 of the SMT-LIB standard, that can be customized, as in the case of cvc5, with the specific proof system used by the solver through the definition of new symbols, binders and proof rules. In addition, it features an intuitive syntax for representing natural-deduction-style proofs and the ability to integrate other proof formats (such as, for instance, those currently used by SAT solvers) via the use of oracles. The talk discusses an initial evaluation of the proof language, obtained with a companion checker for it and an instantiation to cvc5’s proof system. The evaluation shows the viability of high-performance, fine-grained proof production and checking for SMT. The talk concludes with a brief overview of future work and new potential applications enabled by scalable proof certificate production and checking. 
+ Cite asCesare Tinelli. Scalable Proof Production and Checking in SMT (Invited Talk). In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 2:1-2:2, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{tinelli:LIPIcs.SAT.2024.2 author = {Tinelli, Cesare}, title = {{Scalable Proof Production and Checking in SMT}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {2:1--2:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.2}, URN = {urn:nbn:de:0030-drops-205241}, doi = {10.4230/LIPIcs.SAT.2024.2}, annote = {Keywords: Satisfiability Modulo Theories, Proof generation and certification} }@InProceedings{tinelli:LIPIcs.SAT.2024.2 author = {Tinelli, Cesare}, title = {{Scalable Proof Production and Checking in SMT}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {2:1--2:2}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.2}, URN = {urn:nbn:de:0030-drops-205241}, doi = {10.4230/LIPIcs.SAT.2024.2}, annote = {Keywords: Satisfiability Modulo Theories, Proof generation and certification} }Document 
+ Invited Talk 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.3" - DOI: 10.4230/LIPIcs.SAT.2024.3
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.3/LIPIcs.SAT.2024.3.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.3" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.3" - Logical Algorithmics: From Relational Queries to Boolean Reasoning (Invited Talk)
+Authors:Moshe Y. Vardi 
+ AbstractThe standard approach to algorithm development is to focus on a specific problem and develop for it a specific algorithm. Codd’s introduction of the relational model in 1970 included two fundamental ideas: (1) relations provide a universal data representation formalism, and (2) relational databases can be queried using first-order logic. Realizing these ideas required the development of a meta-algorithm, which takes a declarative query and executes it with respect to a database. In this talk, I will describe this approach, which I call Logical Algorithmics, in detail, and trace a decades-long path from the comoutational complexity theory of relational queries to recent tools for Boolean reasoning. 
+ Cite asMoshe Y. Vardi. Logical Algorithmics: From Relational Queries to Boolean Reasoning (Invited Talk). In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, p. 3:1, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{vardi:LIPIcs.SAT.2024.3 author = {Vardi, Moshe Y.}, title = {{Logical Algorithmics: From Relational Queries to Boolean Reasoning}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {3:1--3:1}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.3}, URN = {urn:nbn:de:0030-drops-205253}, doi = {10.4230/LIPIcs.SAT.2024.3}, annote = {Keywords: Logic, Algorithms} }@InProceedings{vardi:LIPIcs.SAT.2024.3 author = {Vardi, Moshe Y.}, title = {{Logical Algorithmics: From Relational Queries to Boolean Reasoning}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {3:1--3:1}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.3}, URN = {urn:nbn:de:0030-drops-205253}, doi = {10.4230/LIPIcs.SAT.2024.3}, annote = {Keywords: Logic, Algorithms} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.4" - DOI: 10.4230/LIPIcs.SAT.2024.4
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.4/LIPIcs.SAT.2024.4.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.4" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.4" - Satsuma: Structure-Based Symmetry Breaking in SAT
+Authors:Markus Anders, Sofia Brenner, and Gaurav Rattan 
+ AbstractSymmetry reduction is crucial for solving many interesting SAT instances in practice. Numerous approaches have been proposed, which try to strike a balance between symmetry reduction and computational overhead. Arguably the most readily applicable method is the computation of static symmetry breaking constraints: a constraint restricting the search-space to non-symmetrical solutions is added to a given SAT instance. A distinct advantage of static symmetry breaking is that the SAT solver itself is not modified. A disadvantage is that the strength of symmetry reduction is usually limited. In order to boost symmetry reduction, the state-of-the-art tool BreakID [Devriendt et. al] pioneered the identification and tailored breaking of a particular substructure of symmetries, the so-called row interchangeability groups. In this paper, we propose a new symmetry breaking tool called satsuma. The core principle of our tool is to exploit more diverse but frequently occurring symmetry structures. This is enabled by new practical detection algorithms for row interchangeability, row-column symmetry, Johnson symmetry, and various combinations. Based on the resulting structural description, we then produce symmetry breaking constraints. We compare this new approach to BreakID on a range of instance families exhibiting symmetry. Our benchmarks suggest improved symmetry reduction in the presence of Johnson symmetry and comparable performance in the presence of row-column symmetry. Moreover, our implementation runs significantly faster, even though it identifies more diverse structures. 
+ Cite asMarkus Anders, Sofia Brenner, and Gaurav Rattan. Satsuma: Structure-Based Symmetry Breaking in SAT. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 4:1-4:23, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{anders_et_al:LIPIcs.SAT.2024.4 author = {Anders, Markus and Brenner, Sofia and Rattan, Gaurav}, title = {{Satsuma: Structure-Based Symmetry Breaking in SAT}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {4:1--4:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.4}, URN = {urn:nbn:de:0030-drops-205269}, doi = {10.4230/LIPIcs.SAT.2024.4}, annote = {Keywords: symmetry breaking, boolean satisfiability, graph isomorphism} }@InProceedings{anders_et_al:LIPIcs.SAT.2024.4 author = {Anders, Markus and Brenner, Sofia and Rattan, Gaurav}, title = {{Satsuma: Structure-Based Symmetry Breaking in SAT}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {4:1--4:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.4}, URN = {urn:nbn:de:0030-drops-205269}, doi = {10.4230/LIPIcs.SAT.2024.4}, annote = {Keywords: symmetry breaking, boolean satisfiability, graph isomorphism} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.5" - DOI: 10.4230/LIPIcs.SAT.2024.5
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.5/LIPIcs.SAT.2024.5.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.5" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.5" - The Relative Strength of #SAT Proof Systems
+Authors:Olaf Beyersdorff, Johannes K. Fichte, Markus Hecher, Tim Hoffmann, and Kaspar Kasche 
+ AbstractThe propositional model counting problem #SAT asks to compute the number of satisfying assignments for a given propositional formula. Recently, three #SAT proof systems kcps (knowledge compilation proof system), MICE (model counting induction by claim extension), and CPOG (certified partitioned-operation graphs) have been introduced with the aim to model #SAT solving and enable proof logging for solvers. Prior to this paper, the relations between these proof systems have been unclear and very few proof complexity results are known. We completely determine the simulation order of the three systems, establishing that CPOG simulates both MICE and kcps, while MICE and kcps are exponentially incomparable. This implies that CPOG is strictly stronger than the other two systems. 
+ Cite asOlaf Beyersdorff, Johannes K. Fichte, Markus Hecher, Tim Hoffmann, and Kaspar Kasche. The Relative Strength of #SAT Proof Systems. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 5:1-5:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{beyersdorff_et_al:LIPIcs.SAT.2024.5 author = {Beyersdorff, Olaf and Fichte, Johannes K. and Hecher, Markus and Hoffmann, Tim and Kasche, Kaspar}, title = {{The Relative Strength of #SAT Proof Systems}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {5:1--5:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.5}, URN = {urn:nbn:de:0030-drops-205276}, doi = {10.4230/LIPIcs.SAT.2024.5}, annote = {Keywords: Model Counting, #SAT, Proof Complexity, Proof Systems, Lower Bounds, Knowledge Compilation} }@InProceedings{beyersdorff_et_al:LIPIcs.SAT.2024.5 author = {Beyersdorff, Olaf and Fichte, Johannes K. and Hecher, Markus and Hoffmann, Tim and Kasche, Kaspar}, title = {{The Relative Strength of #SAT Proof Systems}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {5:1--5:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.5}, URN = {urn:nbn:de:0030-drops-205276}, doi = {10.4230/LIPIcs.SAT.2024.5}, annote = {Keywords: Model Counting, #SAT, Proof Complexity, Proof Systems, Lower Bounds, Knowledge Compilation} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.6" - DOI: 10.4230/LIPIcs.SAT.2024.6
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.6/LIPIcs.SAT.2024.6.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.6" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.6" - Clausal Congruence Closure
+Authors:Armin Biere, Katalin Fazekas, Mathias Fleury, and Nils Froleyks 
+ AbstractMany practical applications of satisfiability solving employ multiple steps to encode an original problem formulation into conjunctive normal form. Often circuits are used as intermediate representation before encoding those circuits into clausal form. These circuits however might contain redundant isomorphic sub-circuits. If blindly translated into clausal form, this redundancy is retained and increases solving time unless specific preprocessing algorithms are used. Furthermore, such redundant sub-formula structure might only emerge during solving and needs to be addressed by inprocessing. This paper presents a new approach which extracts gate information from the formula and applies congruence closure to match and eliminate redundant gates. Besides new algorithms for gate extraction, we also describe previous unpublished attempts to tackle this problem. Experiments focus on the important problem of combinational equivalence checking for hardware designs and show that our new approach yields a substantial gain in CNF solver performance. 
+ Cite asArmin Biere, Katalin Fazekas, Mathias Fleury, and Nils Froleyks. Clausal Congruence Closure. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 6:1-6:25, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{biere_et_al:LIPIcs.SAT.2024.6 author = {Biere, Armin and Fazekas, Katalin and Fleury, Mathias and Froleyks, Nils}, title = {{Clausal Congruence Closure}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {6:1--6:25}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.6}, URN = {urn:nbn:de:0030-drops-205287}, doi = {10.4230/LIPIcs.SAT.2024.6}, annote = {Keywords: Satisfiability Solving, Congruence Closure, Structural Hashing, SAT Sweeping, Conjunctive Normal Form, Combinational Equivalence Checking, Hardware Equivalence Checking} }@InProceedings{biere_et_al:LIPIcs.SAT.2024.6 author = {Biere, Armin and Fazekas, Katalin and Fleury, Mathias and Froleyks, Nils}, title = {{Clausal Congruence Closure}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {6:1--6:25}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.6}, URN = {urn:nbn:de:0030-drops-205287}, doi = {10.4230/LIPIcs.SAT.2024.6}, annote = {Keywords: Satisfiability Solving, Congruence Closure, Structural Hashing, SAT Sweeping, Conjunctive Normal Form, Combinational Equivalence Checking, Hardware Equivalence Checking} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.7" - DOI: 10.4230/LIPIcs.SAT.2024.7
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.7/LIPIcs.SAT.2024.7.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.7" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.7" - MaxSAT Resolution with Inclusion Redundancy
+Authors:Ilario Bonacina, Maria Luisa Bonet, and Massimo Lauria 
+ AbstractPopular redundancy rules for SAT are not necessarily sound for MaxSAT. The works of [Bonacina-Bonet-Buss-Lauria'24] and [Ihalainen-Berg-Järvisalo'22] proposed ways to adapt them, but required specific encodings and more sophisticated checks during proof verification. Here, we propose a different way to adapt redundancy rules from SAT to MaxSAT. Our rules do not require specific encodings, their correctness is simpler to check, but they are slightly less expressive. However, the proposed redundancy rules, when added to MaxSAT-Resolution, are already strong enough to capture Branch-and-bound algorithms, enable short proofs of the optimal cost of notable principles (e.g., the Pigeonhole Principle and the Parity Principle), and allow to break simple symmetries (e.g., XOR-ification does not make formulas harder). 
+ Cite asIlario Bonacina, Maria Luisa Bonet, and Massimo Lauria. MaxSAT Resolution with Inclusion Redundancy. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 7:1-7:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bonacina_et_al:LIPIcs.SAT.2024.7 author = {Bonacina, Ilario and Bonet, Maria Luisa and Lauria, Massimo}, title = {{MaxSAT Resolution with Inclusion Redundancy}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.7}, URN = {urn:nbn:de:0030-drops-205298}, doi = {10.4230/LIPIcs.SAT.2024.7}, annote = {Keywords: MaxSAT, Redundancy, MaxSAT resolution, Branch-and-bound, Pigeonhole principle, Parity Principle} }@InProceedings{bonacina_et_al:LIPIcs.SAT.2024.7 author = {Bonacina, Ilario and Bonet, Maria Luisa and Lauria, Massimo}, title = {{MaxSAT Resolution with Inclusion Redundancy}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.7}, URN = {urn:nbn:de:0030-drops-205298}, doi = {10.4230/LIPIcs.SAT.2024.7}, annote = {Keywords: MaxSAT, Redundancy, MaxSAT resolution, Branch-and-bound, Pigeonhole principle, Parity Principle} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.8" - DOI: 10.4230/LIPIcs.SAT.2024.8
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.8/LIPIcs.SAT.2024.8.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.8" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.8" - Enhancing MaxSAT Local Search via a Unified Soft Clause Weighting Scheme
+Authors:Yi Chu, Chu-Min Li, Furong Ye, and Shaowei Cai 
+ AbstractLocal search has been widely applied to solve the well-known (weighted) partial MaxSAT problem, significantly influencing many real-world applications. The main difficulty to overcome when designing a local search algorithm is that it can easily fall into local optima. Clause weighting is a beneficial technique that dynamically adjusts the landscape of search space to help the algorithm escape from local optima. Existing works tend to increase the weights of falsified clauses, and such strategies may result in an unpredictable landscape of search space during the optimization process. Therefore, in this paper, we propose a Unified Soft Clause Weighting Scheme called Unified-SW, which increases the weights of all soft clauses in feasible local optima, whether they are satisfied or not, while preserving the hierarchy among them. We implemented Unified-SW in a new local search solver called USW-LS. Experimental results demonstrate that USW-LS, outperforms the state-of-the-art local search solvers across benchmarks from anytime tracks of recent MaxSAT Evaluations. More promisingly, a hybrid solver combining USW-LS and TT-Open-WBO-Inc won all four categories in the anytime track of MaxSAT Evaluation 2023. 
+ Cite asYi Chu, Chu-Min Li, Furong Ye, and Shaowei Cai. Enhancing MaxSAT Local Search via a Unified Soft Clause Weighting Scheme. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 8:1-8:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{chu_et_al:LIPIcs.SAT.2024.8 author = {Chu, Yi and Li, Chu-Min and Ye, Furong and Cai, Shaowei}, title = {{Enhancing MaxSAT Local Search via a Unified Soft Clause Weighting Scheme}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {8:1--8:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.8}, URN = {urn:nbn:de:0030-drops-205301}, doi = {10.4230/LIPIcs.SAT.2024.8}, annote = {Keywords: Weighted Partial MaxSAT, Local Search Method, Weighting Scheme} }@InProceedings{chu_et_al:LIPIcs.SAT.2024.8 author = {Chu, Yi and Li, Chu-Min and Ye, Furong and Cai, Shaowei}, title = {{Enhancing MaxSAT Local Search via a Unified Soft Clause Weighting Scheme}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {8:1--8:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.8}, URN = {urn:nbn:de:0030-drops-205301}, doi = {10.4230/LIPIcs.SAT.2024.8}, annote = {Keywords: Weighted Partial MaxSAT, Local Search Method, Weighting Scheme} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.9" - DOI: 10.4230/LIPIcs.SAT.2024.9
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.9/LIPIcs.SAT.2024.9.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.9" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.9" - Lazy Reimplication in Chronological Backtracking
+Authors:Robin Coutelier, Mathias Fleury, and Laura Kovács 
+ AbstractChronological backtracking is an interesting SAT solving technique within CDCL reasoning, as it backtracks less aggressively upon conflicts. However, chronological backtracking is more difficult to maintain due to its weaker SAT solving invariants. This paper introduces a lazy reimplication procedure for missed lower implications in chronological backtracking. Our method saves propagations by reimplying literals on demand, rather than eagerly. Due to its modularity, our work can be replicated in other solvers, as shown by our results in the solvers CaDiCaL and Glucose. 
+ Cite asRobin Coutelier, Mathias Fleury, and Laura Kovács. Lazy Reimplication in Chronological Backtracking. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 9:1-9:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{coutelier_et_al:LIPIcs.SAT.2024.9 author = {Coutelier, Robin and Fleury, Mathias and Kov\'{a}cs, Laura}, title = {{Lazy Reimplication in Chronological Backtracking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {9:1--9:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.9}, URN = {urn:nbn:de:0030-drops-205313}, doi = {10.4230/LIPIcs.SAT.2024.9}, annote = {Keywords: Chronological Backtracking, CDCL, Invariants, Watcher Lists} }@InProceedings{coutelier_et_al:LIPIcs.SAT.2024.9 author = {Coutelier, Robin and Fleury, Mathias and Kov\'{a}cs, Laura}, title = {{Lazy Reimplication in Chronological Backtracking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {9:1--9:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.9}, URN = {urn:nbn:de:0030-drops-205313}, doi = {10.4230/LIPIcs.SAT.2024.9}, annote = {Keywords: Chronological Backtracking, CDCL, Invariants, Watcher Lists} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.10" - DOI: 10.4230/LIPIcs.SAT.2024.10
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.10/LIPIcs.SAT.2024.10.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.10" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.10" - New Lower Bounds for Polynomial Calculus over Non-Boolean Bases
+Authors:Yogesh Dahiya, Meena Mahajan, and Sasank Mouli 
+ AbstractIn this paper, we obtain new size lower bounds for proofs in the Polynomial Calculus (PC) proof system, in two different settings. - When the Boolean variables are encoded using ±1 (as opposed to 0,1): We establish a lifting theorem using an asymmetric gadget G, showing that for an unsatisfiable formula F, the lifted formula F∘G requires PC size 2^{Ω(d)}, where d is the degree required to refute F. Our lower bound does not depend on the number of variables n, and holds over every field. The only previously known size lower bounds in this setting were established quite recently in [Sokolov, STOC 2020] using lifting with another (symmetric) gadget. The size lower bound there is 2^{Ω((d-d₀)²/n)} (where d₀ is the degree of the initial equations arising from the formula), and is shown to hold only over the reals. - When the PC refutation proceeds over a finite field 𝔽_p and is allowed to use extension variables: We show that there is an unsatisfiable AC⁰[p] formula with N variables for which any PC refutation using N^{1+ε(1-δ)} extension variables, each of arity at most N^{1-ε} and size at most N^c, must have size exp(Ω(N^{εδ}/polylog N)). Our proof achieves these bounds by an XOR-ification of the generalised PHP^{m,r}_n formulas from [Razborov, CC 1998]. The only previously known lower bounds for PC in this setting are those obtained in [Impagliazzo-Mouli-Pitassi, CCC 2023]; in those bounds the number of extension variables is required to be sub-quadratic, and their arity is restricted to logarithmic in the number of original variables. Our result generalises these, and demonstrates a tradeoff between the number and the arity of extension variables. Since our tautology is represented by a small AC⁰[p] formula, our results imply lower bounds for a reasonably strong fragment of AC⁰[p]-Frege. 
+ Cite asYogesh Dahiya, Meena Mahajan, and Sasank Mouli. New Lower Bounds for Polynomial Calculus over Non-Boolean Bases. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 10:1-10:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{dahiya_et_al:LIPIcs.SAT.2024.10 author = {Dahiya, Yogesh and Mahajan, Meena and Mouli, Sasank}, title = {{New Lower Bounds for Polynomial Calculus over Non-Boolean Bases}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {10:1--10:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.10}, URN = {urn:nbn:de:0030-drops-205327}, doi = {10.4230/LIPIcs.SAT.2024.10}, annote = {Keywords: Proof Complexity, Polynomial Calculus, degree, Fourier basis, extension variables} }@InProceedings{dahiya_et_al:LIPIcs.SAT.2024.10 author = {Dahiya, Yogesh and Mahajan, Meena and Mouli, Sasank}, title = {{New Lower Bounds for Polynomial Calculus over Non-Boolean Bases}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {10:1--10:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.10}, URN = {urn:nbn:de:0030-drops-205327}, doi = {10.4230/LIPIcs.SAT.2024.10}, annote = {Keywords: Proof Complexity, Polynomial Calculus, degree, Fourier basis, extension variables} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.11" - DOI: 10.4230/LIPIcs.SAT.2024.11
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.11/LIPIcs.SAT.2024.11.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.11" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.11" - On the Relative Efficiency of Dynamic and Static Top-Down Compilation to Decision-DNNF
+Authors:Alexis de Colnet 
+ AbstractTop-down compilers of CNF formulas to circuits in decision-DNNF (Decomposable Negation Normal Form) have proved to be useful for model counting. These compilers rely on a common set of techniques including DPLL-style exploration of the set of models, caching of residual formulas, and connected components detection. Differences between compilers lie in the variable selection heuristics and in the additional processing techniques they may use. We investigate, from a theoretical perspective, the ability of top-down compilation algorithms to find small decision-DNNF circuits for two different variable selection strategies. Both strategies are guided by a graph of the CNF formula and are inspired by what is done in practice. The first uses a dynamic graph-partitioning approach while the second works with a static tree decomposition. We show that the dynamic approach performs significantly better than the static approach for some formulas, and that the opposite also holds for other formulas. Our lower bounds are proved despite loose settings where the compilation algorithm is only forced to follow its designed variable selection strategy and where everything else, including the many opportunities for tie-breaking, can be handled non-deterministically. 
+ Cite asAlexis de Colnet. On the Relative Efficiency of Dynamic and Static Top-Down Compilation to Decision-DNNF. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 11:1-11:21, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{decolnet:LIPIcs.SAT.2024.11 author = {de Colnet, Alexis}, title = {{On the Relative Efficiency of Dynamic and Static Top-Down Compilation to Decision-DNNF}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {11:1--11:21}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.11}, URN = {urn:nbn:de:0030-drops-205339}, doi = {10.4230/LIPIcs.SAT.2024.11}, annote = {Keywords: Knowledge compilation, top-down compilation, decision-DNNF Circuits} }@InProceedings{decolnet:LIPIcs.SAT.2024.11 author = {de Colnet, Alexis}, title = {{On the Relative Efficiency of Dynamic and Static Top-Down Compilation to Decision-DNNF}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {11:1--11:21}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.11}, URN = {urn:nbn:de:0030-drops-205339}, doi = {10.4230/LIPIcs.SAT.2024.11}, annote = {Keywords: Knowledge compilation, top-down compilation, decision-DNNF Circuits} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.12" - DOI: 10.4230/LIPIcs.SAT.2024.12
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.12/LIPIcs.SAT.2024.12.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.12" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.12" - SAT Encoding of Partial Ordering Models for Graph Coloring Problems
+Authors:Daniel Faber, Adalat Jabrayilov, and Petra Mutzel 
+ AbstractIn this paper, we revisit SAT encodings of the partial-ordering based ILP model for the graph coloring problem (GCP) and suggest a generalization for the bandwidth coloring problem (BCP). The GCP asks for the minimum number of colors that can be assigned to the vertices of a given graph such that each two adjacent vertices get different colors. The BCP is a generalization, where each edge has a weight that enforces a minimal "distance" between the assigned colors, and the goal is to minimize the "largest" color used. For the widely studied GCP, we experimentally compare the partial-ordering based SAT encoding to the state-of-the-art approaches on the DIMACS benchmark set. Our evaluation confirms that this SAT encoding is effective for sparse graphs and even outperforms the state-of-the-art on some DIMACS instances. For the BCP, our theoretical analysis shows that the partial-ordering based SAT and ILP formulations have an asymptotically smaller size than that of the classical assignment-based model. Our practical evaluation confirms not only a dominance compared to the assignment-based encodings but also to the state-of-the-art approaches on a set of benchmark instances. Up to our knowledge, we have solved several open instances of the BCP from the literature for the first time. 
+ Cite asDaniel Faber, Adalat Jabrayilov, and Petra Mutzel. SAT Encoding of Partial Ordering Models for Graph Coloring Problems. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 12:1-12:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{faber_et_al:LIPIcs.SAT.2024.12 author = {Faber, Daniel and Jabrayilov, Adalat and Mutzel, Petra}, title = {{SAT Encoding of Partial Ordering Models for Graph Coloring Problems}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {12:1--12:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.12}, URN = {urn:nbn:de:0030-drops-205340}, doi = {10.4230/LIPIcs.SAT.2024.12}, annote = {Keywords: Graph coloring, bandwidth coloring, SAT encodings, ILP formulations} }@InProceedings{faber_et_al:LIPIcs.SAT.2024.12 author = {Faber, Daniel and Jabrayilov, Adalat and Mutzel, Petra}, title = {{SAT Encoding of Partial Ordering Models for Graph Coloring Problems}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {12:1--12:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.12}, URN = {urn:nbn:de:0030-drops-205340}, doi = {10.4230/LIPIcs.SAT.2024.12}, annote = {Keywords: Graph coloring, bandwidth coloring, SAT encodings, ILP formulations} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.13" - DOI: 10.4230/LIPIcs.SAT.2024.13
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.13/LIPIcs.SAT.2024.13.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.13" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.13" - Entailing Generalization Boosts Enumeration
+Authors:Dror Fried, Alexander Nadel, Roberto Sebastiani, and Yogev Shalmon 
+ AbstractGiven a combinational circuit Γ with a single output o, AllSAT-CT is the problem of enumerating all solutions of Γ. Recently, we introduced several state-of-the-art AllSAT-CT algorithms based on satisfying generalization, which generalizes a given total Boolean solution to a smaller ternary solution that still satisfies the circuit. We implemented them in our open-source tool HALL. In this work we draw upon recent theoretical works suggesting that utilizing generalization algorithms, which can produce solutions that entail the circuit without satisfying it, may enhance enumeration. After considering the theory and adapting it to our needs, we enrich HALL’s AllSAT-CT algorithms by incorporating several newly implemented generalization schemes and additional SAT solvers. By conducting extensive experiments we show that entailing generalization substantially boosts HALL’s performance and quality (where quality corresponds to the number of reported generalized solutions per instance), with the best results achieved by combining satisfying and entailing generalization. 
+ Cite asDror Fried, Alexander Nadel, Roberto Sebastiani, and Yogev Shalmon. Entailing Generalization Boosts Enumeration. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 13:1-13:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{fried_et_al:LIPIcs.SAT.2024.13 author = {Fried, Dror and Nadel, Alexander and Sebastiani, Roberto and Shalmon, Yogev}, title = {{Entailing Generalization Boosts Enumeration}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {13:1--13:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.13}, URN = {urn:nbn:de:0030-drops-205351}, doi = {10.4230/LIPIcs.SAT.2024.13}, annote = {Keywords: Generalization, Minimization, Prime Implicant, AllSAT, SAT, Circuits} }@InProceedings{fried_et_al:LIPIcs.SAT.2024.13 author = {Fried, Dror and Nadel, Alexander and Sebastiani, Roberto and Shalmon, Yogev}, title = {{Entailing Generalization Boosts Enumeration}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {13:1--13:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.13}, URN = {urn:nbn:de:0030-drops-205351}, doi = {10.4230/LIPIcs.SAT.2024.13}, annote = {Keywords: Generalization, Minimization, Prime Implicant, AllSAT, SAT, Circuits} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.14" - DOI: 10.4230/LIPIcs.SAT.2024.14
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.14/LIPIcs.SAT.2024.14.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.14" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.14" - Cooking String-Integer Conversions with Noodles
+Authors:Vojtěch Havlena, Lukáš Holík, Ondřej Lengál, and Juraj Síč 
+ AbstractWe propose a method for efficient handling string constraints with string-integer conversions. It extends the recently introduced stabilization-based procedure for solving string (dis)equations with regular and length constraints. Our approach is to translate the conversions into a linear integer arithmetic formula, together with regular constraints and word equations. We have integrated it into the string solver Z3-Noodler, and our experiments show that it is competitive and on some established benchmarks even several orders of magnitude faster than the state of the art. 
+ Cite asVojtěch Havlena, Lukáš Holík, Ondřej Lengál, and Juraj Síč. Cooking String-Integer Conversions with Noodles. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 14:1-14:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{havlena_et_al:LIPIcs.SAT.2024.14 author = {Havlena, Vojt\v{e}ch and Hol{\'\i}k, Luk\'{a}\v{s} and Leng\'{a}l, Ond\v{r}ej and S{\'\i}\v{c}, Juraj}, title = {{Cooking String-Integer Conversions with Noodles}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {14:1--14:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.14}, URN = {urn:nbn:de:0030-drops-205365}, doi = {10.4230/LIPIcs.SAT.2024.14}, annote = {Keywords: string solving, string conversions, SMT solving} }@InProceedings{havlena_et_al:LIPIcs.SAT.2024.14 author = {Havlena, Vojt\v{e}ch and Hol{\'\i}k, Luk\'{a}\v{s} and Leng\'{a}l, Ond\v{r}ej and S{\'\i}\v{c}, Juraj}, title = {{Cooking String-Integer Conversions with Noodles}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {14:1--14:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.14}, URN = {urn:nbn:de:0030-drops-205365}, doi = {10.4230/LIPIcs.SAT.2024.14}, annote = {Keywords: string solving, string conversions, SMT solving} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.15" - DOI: 10.4230/LIPIcs.SAT.2024.15
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.15/LIPIcs.SAT.2024.15.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.15" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.15" - Antichain with SAT and Tries
+Authors:Lukáš Holík and Pavol Vargovčík 
+ AbstractWe introduce a SAT-enabled version of an antichain algorithm for checking language emptiness of alternating finite automata (AFA) with complex transition relations encoded as compact logical formulae. The SAT solver is used to compute predecessors of AFA configurations, and at the same time, to evaluate the subsumption of newly found configurations in the antichain of the previously found ones. The algorithm could be naively implemented by an incremental SAT solver where the growing antichain is represented by adding new clauses. To make it efficient, we 1) force the SAT solver to prioritize largest/subsumption-strongest predecessors (so that weaker configurations are not even generated), and 2) store the antichain clauses in a special variant of a trie that allows fast subsumption testing. The experimental results suggest that the resulting emptiness checker is very efficient compared to the state of the art and that our techniques improve the performance of the SAT solver. 
+ Cite asLukáš Holík and Pavol Vargovčík. Antichain with SAT and Tries. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 15:1-15:24, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{holik_et_al:LIPIcs.SAT.2024.15 author = {Hol{\'\i}k, Luk\'{a}\v{s} and Vargov\v{c}{\'\i}k, Pavol}, title = {{Antichain with SAT and Tries}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {15:1--15:24}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.15}, URN = {urn:nbn:de:0030-drops-205372}, doi = {10.4230/LIPIcs.SAT.2024.15}, annote = {Keywords: SAT, Trie, Antichain, Alternating automata, Subset query} }@InProceedings{holik_et_al:LIPIcs.SAT.2024.15 author = {Hol{\'\i}k, Luk\'{a}\v{s} and Vargov\v{c}{\'\i}k, Pavol}, title = {{Antichain with SAT and Tries}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {15:1--15:24}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.15}, URN = {urn:nbn:de:0030-drops-205372}, doi = {10.4230/LIPIcs.SAT.2024.15}, annote = {Keywords: SAT, Trie, Antichain, Alternating automata, Subset query} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.16" - DOI: 10.4230/LIPIcs.SAT.2024.16
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.16/LIPIcs.SAT.2024.16.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.16" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.16" - Towards Universally Accessible SAT Technology
+Authors:Alexey Ignatiev, Zi Li Tan, and Christos Karamanos 
+ AbstractBoolean satisfiability (SAT) solvers are a family of highly efficient reasoning engines, which are frequently used for solving a large and diverse variety of practical challenges. This applies to multidisciplinary problems belonging to the class NP but also those arising at higher levels of the polynomial hierarchy. Unfortunately, encoding a problem of user’s interest to a (series of) propositional formula(s) in conjunctive normal form (CNF), let alone dealing with a SAT solver, is rarely a simple task even for an experienced SAT practitioner. This situation gets aggravated further when the user has little to no knowledge on the operation of the modern SAT solving technology. In 2018, the PySAT framework was proposed to address the issue of fast and "painless" prototyping with SAT solvers in Python allowing researchers to get SAT-based solutions to their problems without investing substantial time in the development process and yet sacrificing only a little in terms of performance. Since then, PySAT has proved a useful instrument for solving a wide range of practical problems and is now a critical package for the PyPI infrastructure. In the meantime, there have been advances in SAT solving and enhancements to PySAT functionality to extend its modelling and solving capabilities in order to make modern SAT technology accessible and deployable on a massive scale. This paper provides a high-level overview of the current architecture of PySAT and some of its capabilities including arbitrary Boolean formula manipulation, CNF preprocessing, and support for external user-defined propagators. 
+ Cite asAlexey Ignatiev, Zi Li Tan, and Christos Karamanos. Towards Universally Accessible SAT Technology. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 16:1-16:11, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{ignatiev_et_al:LIPIcs.SAT.2024.16 author = {Ignatiev, Alexey and Tan, Zi Li and Karamanos, Christos}, title = {{Towards Universally Accessible SAT Technology}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {16:1--16:11}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.16}, URN = {urn:nbn:de:0030-drops-205382}, doi = {10.4230/LIPIcs.SAT.2024.16}, annote = {Keywords: PySAT, Python, Prototyping, Practical Applicability} }@InProceedings{ignatiev_et_al:LIPIcs.SAT.2024.16 author = {Ignatiev, Alexey and Tan, Zi Li and Karamanos, Christos}, title = {{Towards Universally Accessible SAT Technology}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {16:1--16:11}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.16}, URN = {urn:nbn:de:0030-drops-205382}, doi = {10.4230/LIPIcs.SAT.2024.16}, annote = {Keywords: PySAT, Python, Prototyping, Practical Applicability} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.17" - DOI: 10.4230/LIPIcs.SAT.2024.17
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.17/LIPIcs.SAT.2024.17.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.17" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.17" - Parallel Clause Sharing Strategy Based on Graph Structure of SAT Problem
+Authors:Yoichiro Iida, Tomohiro Sonobe, and Mary Inaba 
+ AbstractParallelization of SAT solvers is an important technique for improving solver performance. The selection of the learnt clauses to share among parallel workers is crucial for its efficiency. Literal block distance (LBD) is often used to evaluate the quality of clauses to select. We propose a new method, Parallel Clause sharing based on graph Structure (PaCS), to select good clauses for sharing. First, we conducted three preliminary experiments to assess the performance of LBD in parallel clause sharing: a performance comparison between the LBD and clause size, an analysis of the utilization of shared clauses, and a comparison of the LBD values of shared clauses at originating and receiving workers. These experiments indicate that the LBD may not be optimal for learnt clause sharing. We attribute the results to the LBD’s inherent dependency on decision trees. Each parallel worker has a unique decision tree; thus, a sharing clause that is good for its originating worker may not be good for others. Therefore, we propose PaCS, a search-independent method that uses the graph structure derived from the input CNF of SAT problems. PaCS evaluates clauses using their edges' weight in the variable incidence graph. Using the input CNF’s graph is effective for parallel clause sharing because it is the common input for all parallel workers. Furthermore, using edge weight can select clauses whose variables' Boolean values are more likely to be determined. Performance evaluation experiments demonstrate that our strategy outperforms LBD by 4% in the number of solved instances and by 12% in PAR-2. This study opens avenues for further improvements in parallel-solving strategies using the structure of SAT problems and reinterpretations of the quality of learnt clauses. 
+ Cite asYoichiro Iida, Tomohiro Sonobe, and Mary Inaba. Parallel Clause Sharing Strategy Based on Graph Structure of SAT Problem. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 17:1-17:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{iida_et_al:LIPIcs.SAT.2024.17 author = {Iida, Yoichiro and Sonobe, Tomohiro and Inaba, Mary}, title = {{Parallel Clause Sharing Strategy Based on Graph Structure of SAT Problem}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {17:1--17:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.17}, URN = {urn:nbn:de:0030-drops-205392}, doi = {10.4230/LIPIcs.SAT.2024.17}, annote = {Keywords: SAT Solver, Structure of SAT, Parallel application, Clause Learning} }@InProceedings{iida_et_al:LIPIcs.SAT.2024.17 author = {Iida, Yoichiro and Sonobe, Tomohiro and Inaba, Mary}, title = {{Parallel Clause Sharing Strategy Based on Graph Structure of SAT Problem}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {17:1--17:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.17}, URN = {urn:nbn:de:0030-drops-205392}, doi = {10.4230/LIPIcs.SAT.2024.17}, annote = {Keywords: SAT Solver, Structure of SAT, Parallel application, Clause Learning} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.18" - DOI: 10.4230/LIPIcs.SAT.2024.18
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.18/LIPIcs.SAT.2024.18.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.18" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.18" - Global Benchmark Database
+Authors:Markus Iser and Christoph Jabs 
+ AbstractThis paper presents Global Benchmark Database (GBD), a comprehensive suite of tools for provisioning and sustainably maintaining benchmark instances and their metadata. The availability of benchmark metadata is essential for many tasks in empirical research, e.g., for the data-driven compilation of benchmarks, the domain-specific analysis of runtime experiments, or the instance-specific selection of solvers. In this paper, we introduce the data model of GBD as well as its interfaces and provide examples of how to interact with them. We also demonstrate the integration of custom data sources and explain how to extend GBD with additional problem domains, instance formats and feature extractors. 
+ Cite asMarkus Iser and Christoph Jabs. Global Benchmark Database. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 18:1-18:10, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{iser_et_al:LIPIcs.SAT.2024.18 author = {Iser, Markus and Jabs, Christoph}, title = {{Global Benchmark Database}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {18:1--18:10}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.18}, URN = {urn:nbn:de:0030-drops-205405}, doi = {10.4230/LIPIcs.SAT.2024.18}, annote = {Keywords: Maintenance and Distribution of Benchmark Instances and their Features} }@InProceedings{iser_et_al:LIPIcs.SAT.2024.18 author = {Iser, Markus and Jabs, Christoph}, title = {{Global Benchmark Database}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {18:1--18:10}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.18}, URN = {urn:nbn:de:0030-drops-205405}, doi = {10.4230/LIPIcs.SAT.2024.18}, annote = {Keywords: Maintenance and Distribution of Benchmark Instances and their Features} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.19" - DOI: 10.4230/LIPIcs.SAT.2024.19
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.19/LIPIcs.SAT.2024.19.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.19" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.19" - On Limits of Symbolic Approach to SAT Solving
+Authors:Dmitry Itsykson and Sergei Ovcharov 
+ AbstractWe study the symbolic approach to the propositional satisfiability problem proposed by Aguirre and Vardi in 2001 based on OBDDs and symbolic quantifier elimination. We study the theoretical limitations of the most general version of this approach where it is allowed to dynamically change variable order in OBDD. We refer to algorithms based on this approach as OBDD(∧, ∃, reordering) algorithms. We prove the first exponential lower bound of OBDD(∧, ∃, reordering) algorithms on unsatisfiable formulas, and give an example of formulas having short tree-like resolution proofs that are exponentially hard for OBDD(∧, ∃, reordering) algorithms. We also present the first exponential lower bound for natural formulas with clear combinatorial meaning: every OBDD(∧, ∃, reordering) algorithm runs exponentially long on the binary pigeonhole principle BPHP^{n+1}_n. 
+ Cite asDmitry Itsykson and Sergei Ovcharov. On Limits of Symbolic Approach to SAT Solving. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 19:1-19:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{itsykson_et_al:LIPIcs.SAT.2024.19 author = {Itsykson, Dmitry and Ovcharov, Sergei}, title = {{On Limits of Symbolic Approach to SAT Solving}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {19:1--19:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.19}, URN = {urn:nbn:de:0030-drops-205415}, doi = {10.4230/LIPIcs.SAT.2024.19}, annote = {Keywords: Symbolic quantifier elimination, OBDD, lower bounds, tree-like resolution, proof complexity, error-correcting codes, binary pigeonhole principle} }@InProceedings{itsykson_et_al:LIPIcs.SAT.2024.19 author = {Itsykson, Dmitry and Ovcharov, Sergei}, title = {{On Limits of Symbolic Approach to SAT Solving}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {19:1--19:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.19}, URN = {urn:nbn:de:0030-drops-205415}, doi = {10.4230/LIPIcs.SAT.2024.19}, annote = {Keywords: Symbolic quantifier elimination, OBDD, lower bounds, tree-like resolution, proof complexity, error-correcting codes, binary pigeonhole principle} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.20" - DOI: 10.4230/LIPIcs.SAT.2024.20
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.20/LIPIcs.SAT.2024.20.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.20" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.20" - The Strength of the Dominance Rule
+Authors:Leszek Aleksander Kołodziejczyk and Neil Thapen 
+ AbstractIt has become standard that, when a SAT solver decides that a CNF Γ is unsatisfiable, it produces a certificate of unsatisfiability in the form of a refutation of Γ in some proof system. The system typically used is DRAT, which is equivalent to extended resolution (ER) - for example, until this year DRAT refutations were required in the annual SAT competition. Recently [Bogaerts et al. 2023] introduced a new proof system, associated with the tool VeriPB, which is at least as strong as DRAT and is further able to handle certain symmetry-breaking techniques. We show that this system simulates the proof system G₁, which allows limited reasoning with QBFs and forms the first level above ER in a natural hierarchy of proof systems. This hierarchy is not known to be strict, but nevertheless this is evidence that the system of [Bogaerts et al. 2023] is plausibly strictly stronger than ER and DRAT. In the other direction, we show that symmetry-breaking for a single symmetry can be handled inside ER. 
+ Cite asLeszek Aleksander Kołodziejczyk and Neil Thapen. The Strength of the Dominance Rule. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 20:1-20:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kolodziejczyk_et_al:LIPIcs.SAT.2024.20 author = {Ko{\l}odziejczyk, Leszek Aleksander and Thapen, Neil}, title = {{The Strength of the Dominance Rule}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {20:1--20:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.20}, URN = {urn:nbn:de:0030-drops-205421}, doi = {10.4230/LIPIcs.SAT.2024.20}, annote = {Keywords: proof complexity, DRAT, symmetry breaking, dominance} }@InProceedings{kolodziejczyk_et_al:LIPIcs.SAT.2024.20 author = {Ko{\l}odziejczyk, Leszek Aleksander and Thapen, Neil}, title = {{The Strength of the Dominance Rule}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {20:1--20:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.20}, URN = {urn:nbn:de:0030-drops-205421}, doi = {10.4230/LIPIcs.SAT.2024.20}, annote = {Keywords: proof complexity, DRAT, symmetry breaking, dominance} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.21" - DOI: 10.4230/LIPIcs.SAT.2024.21
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.21/LIPIcs.SAT.2024.21.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.21" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.21" - Dynamic Blocked Clause Elimination for Projected Model Counting
+Authors:Jean-Marie Lagniez, Pierre Marquis, and Armin Biere 
+ AbstractIn this paper, we explore the application of blocked clause elimination for projected model counting. This is the problem of determining the number of models ‖∃ X . Σ‖ of a propositional formula Σ after eliminating a given set X of variables existentially. Although blocked clause elimination is a well-known technique for SAT solving, its direct application to model counting is challenging as in general it changes the number of models. However, we demonstrate, by focusing on projected variables during the blocked clause search, that blocked clause elimination can be leveraged while preserving the correct model count. To take advantage of blocked clause elimination in an efficient way during model counting, a novel data structure and associated algorithms are introduced. Our proposed approach is implemented in the model counter d4. Our experiments demonstrate the computational benefits of our new method of blocked clause elimination for projected model counting. 
+ Cite asJean-Marie Lagniez, Pierre Marquis, and Armin Biere. Dynamic Blocked Clause Elimination for Projected Model Counting. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 21:1-21:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{lagniez_et_al:LIPIcs.SAT.2024.21 author = {Lagniez, Jean-Marie and Marquis, Pierre and Biere, Armin}, title = {{Dynamic Blocked Clause Elimination for Projected Model Counting}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.21}, URN = {urn:nbn:de:0030-drops-205430}, doi = {10.4230/LIPIcs.SAT.2024.21}, annote = {Keywords: Projected model counting, blocked clause elimination, propositional logic} }@InProceedings{lagniez_et_al:LIPIcs.SAT.2024.21 author = {Lagniez, Jean-Marie and Marquis, Pierre and Biere, Armin}, title = {{Dynamic Blocked Clause Elimination for Projected Model Counting}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.21}, URN = {urn:nbn:de:0030-drops-205430}, doi = {10.4230/LIPIcs.SAT.2024.21}, annote = {Keywords: Projected model counting, blocked clause elimination, propositional logic} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.22" - DOI: 10.4230/LIPIcs.SAT.2024.22
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.22/LIPIcs.SAT.2024.22.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.22" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.22" - Speeding up Pseudo-Boolean Propagation
+Authors:Robert Nieuwenhuis, Albert Oliveras, Enric Rodríguez-Carbonell, and Rui Zhao 
+ AbstractUnit propagation is known to be one of the most time-consuming procedures inside CDCL-based SAT solvers. Not surprisingly, it has been studied in depth and the two-watched-literal scheme, enhanced with implementation details boosting its performance, has emerged as the dominant method. In pseudo-Boolean solvers, the importance of unit propagation is similar, but no dominant method exists: counter propagation and watched-based extensions are efficient for different types of constraints, which has opened the door to hybrid methods. However, probably due to the higher complexity of implementing pseudo-Boolean solvers, research efforts have not focused much on concrete implementation details for unit propagation but rather on higher-level aspects of other procedures, such as conflict analysis. In this paper, we present (i) a novel methodology to precisely assess the performance of propagation mechanisms, (ii) an evaluation of implementation variants of the propagation methods present in {RoundingSat} and (iii) a detailed analysis showing that hybrid methods outperform the ones based on a single technique. Our final contribution is to show that a carefully implemented hybrid propagation method is considerably faster than the preferred propagation mechanism in {RoundingSat}, and that this improvement leads to a better overall performance of the solver. 
+ Cite asRobert Nieuwenhuis, Albert Oliveras, Enric Rodríguez-Carbonell, and Rui Zhao. Speeding up Pseudo-Boolean Propagation. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 22:1-22:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{nieuwenhuis_et_al:LIPIcs.SAT.2024.22 author = {Nieuwenhuis, Robert and Oliveras, Albert and Rodr{\'\i}guez-Carbonell, Enric and Zhao, Rui}, title = {{Speeding up Pseudo-Boolean Propagation}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {22:1--22:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.22}, URN = {urn:nbn:de:0030-drops-205449}, doi = {10.4230/LIPIcs.SAT.2024.22}, annote = {Keywords: SAT, Pseudo-Boolean Solving, Implementation-level Details} }@InProceedings{nieuwenhuis_et_al:LIPIcs.SAT.2024.22 author = {Nieuwenhuis, Robert and Oliveras, Albert and Rodr{\'\i}guez-Carbonell, Enric and Zhao, Rui}, title = {{Speeding up Pseudo-Boolean Propagation}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {22:1--22:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.22}, URN = {urn:nbn:de:0030-drops-205449}, doi = {10.4230/LIPIcs.SAT.2024.22}, annote = {Keywords: SAT, Pseudo-Boolean Solving, Implementation-level Details} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.23" - DOI: 10.4230/LIPIcs.SAT.2024.23
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.23/LIPIcs.SAT.2024.23.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.23" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.23" - eSLIM: Circuit Minimization with SAT Based Local Improvement
+Authors:Franz-Xaver Reichl, Friedrich Slivovsky, and Stefan Szeider 
+ AbstracteSLIM is a tool for circuit minimization that utilizes Exact Synthesis and the SAT-based local improvement method (SLIM) to locally improve circuits. eSLIM improves upon the earlier prototype CIOPS that uses Quantified Boolean Formulas (QBF) to succinctly encode resynthesis of multi-output subcircuits subject to don't cares. This paper describes two improvements. First, it presents a purely propositional encoding based on a Boolean relation characterizing the input-output behavior of the subcircuit under don't cares. This allows the use of a SAT solver for resynthesis, substantially reducing running times when applied to functions from the IWLS 2023 competition, where eSLIM placed second. Second, it proposes circuit partitioning techniques in which don't cares for a subcircuit are captured only with respect to an enclosing window, rather than the entire circuit. Circuit partitioning trades completeness for efficiency, and successfully enables the application of exact synthesis to some of the largest circuits in the EPFL suite, leading to improvements over the current best implementation for several instances. 
+ Cite asFranz-Xaver Reichl, Friedrich Slivovsky, and Stefan Szeider. eSLIM: Circuit Minimization with SAT Based Local Improvement. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 23:1-23:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{reichl_et_al:LIPIcs.SAT.2024.23 author = {Reichl, Franz-Xaver and Slivovsky, Friedrich and Szeider, Stefan}, title = {{eSLIM: Circuit Minimization with SAT Based Local Improvement}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {23:1--23:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.23}, URN = {urn:nbn:de:0030-drops-205458}, doi = {10.4230/LIPIcs.SAT.2024.23}, annote = {Keywords: QBF, Exact Synthesis, Circuit Minimization, SLIM} }@InProceedings{reichl_et_al:LIPIcs.SAT.2024.23 author = {Reichl, Franz-Xaver and Slivovsky, Friedrich and Szeider, Stefan}, title = {{eSLIM: Circuit Minimization with SAT Based Local Improvement}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {23:1--23:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.23}, URN = {urn:nbn:de:0030-drops-205458}, doi = {10.4230/LIPIcs.SAT.2024.23}, annote = {Keywords: QBF, Exact Synthesis, Circuit Minimization, SLIM} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.24" - DOI: 10.4230/LIPIcs.SAT.2024.24
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.24/LIPIcs.SAT.2024.24.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.24" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.24" - Hierarchical Stochastic SAT and Quality Assessment of Logic Locking
+Authors:Christoph Scholl, Tobias Seufert, and Fabian Siegwolf 
+ AbstractMotivated by the application of quality assessment of logic locking we introduce Hierarchical Stochastic SAT (HSSAT) which generalizes Stochastic SAT (SSAT). We look into the complexity of HSSAT and for solving HSSAT formulas we provide a prototype solver which computes exact evaluation results (i.e., without any approximation and without any imprecision caused by numerical rounding errors). Finally, we perform an intensive experimental evaluation of our HSSAT solver in the context of quality assessment of logic locking. 
+ Cite asChristoph Scholl, Tobias Seufert, and Fabian Siegwolf. Hierarchical Stochastic SAT and Quality Assessment of Logic Locking. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 24:1-24:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{scholl_et_al:LIPIcs.SAT.2024.24 author = {Scholl, Christoph and Seufert, Tobias and Siegwolf, Fabian}, title = {{Hierarchical Stochastic SAT and Quality Assessment of Logic Locking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {24:1--24:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.24}, URN = {urn:nbn:de:0030-drops-205462}, doi = {10.4230/LIPIcs.SAT.2024.24}, annote = {Keywords: Stochastic Boolean Satisfiability, Hierarchical Stochastic SAT, Binary Decision Diagrams, Decision Procedure} }@InProceedings{scholl_et_al:LIPIcs.SAT.2024.24 author = {Scholl, Christoph and Seufert, Tobias and Siegwolf, Fabian}, title = {{Hierarchical Stochastic SAT and Quality Assessment of Logic Locking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {24:1--24:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.24}, URN = {urn:nbn:de:0030-drops-205462}, doi = {10.4230/LIPIcs.SAT.2024.24}, annote = {Keywords: Stochastic Boolean Satisfiability, Hierarchical Stochastic SAT, Binary Decision Diagrams, Decision Procedure} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.25" - DOI: 10.4230/LIPIcs.SAT.2024.25
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.25/LIPIcs.SAT.2024.25.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.25" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.25" - Trusted Scalable SAT Solving with On-The-Fly LRAT Checking
+Authors:Dominik Schreiber 
+ AbstractRecent advances have enabled powerful distributed SAT solvers to emit proofs of unsatisfiability, which renders them as trustworthy as sequential solvers. However, this mode of operation is still lacking behind conventional distributed solving in terms of scalability. We argue that the core limiting factor of such approaches is the requirement of a single, persistent artifact at the end of solving that is then checked independently (and sequentially). As an alternative, we propose a bottleneck-free setup that exploits recent advancements in producing and processing LRAT information to immediately check all solvers' reasoning on-the-fly during solving. In terms of clause sharing, our approach transfers the guarantee of a derived clause’s soundness from the sending to the receiving side via cryptographic signatures. Experiments with up to 2432 cores (32 nodes) indicate that our approach reduces the running time overhead incurred by proof checking by an order of magnitude, down to a median overhead of ≤ 42% over non trusted solving. 
+ Cite asDominik Schreiber. Trusted Scalable SAT Solving with On-The-Fly LRAT Checking. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 25:1-25:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{schreiber:LIPIcs.SAT.2024.25 author = {Schreiber, Dominik}, title = {{Trusted Scalable SAT Solving with On-The-Fly LRAT Checking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {25:1--25:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.25}, URN = {urn:nbn:de:0030-drops-205477}, doi = {10.4230/LIPIcs.SAT.2024.25}, annote = {Keywords: SAT solving, distributed algorithms, proofs} }@InProceedings{schreiber:LIPIcs.SAT.2024.25 author = {Schreiber, Dominik}, title = {{Trusted Scalable SAT Solving with On-The-Fly LRAT Checking}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {25:1--25:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.25}, URN = {urn:nbn:de:0030-drops-205477}, doi = {10.4230/LIPIcs.SAT.2024.25}, annote = {Keywords: SAT solving, distributed algorithms, proofs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.26" - DOI: 10.4230/LIPIcs.SAT.2024.26
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.26/LIPIcs.SAT.2024.26.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.26" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.26" - Optimal Layout Synthesis for Deep Quantum Circuits on NISQ Processors with 100+ Qubits
+Authors:Irfansha Shaik and Jaco van de Pol 
+ AbstractLayout synthesis is mapping a quantum circuit to a quantum processor. SWAP gate insertions are needed for scheduling 2-qubit gates only on connected physical qubits. With the ever-increasing number of qubits in NISQ processors, scalable layout synthesis is of utmost importance. With large optimality gaps observed in heuristic approaches, scalable exact methods are needed. While recent exact and near-optimal approaches scale to moderate circuits, large deep circuits are still out of scope. In this work, we propose a SAT encoding based on parallel plans that apply 1 SWAP and a group of CNOTs at each time step. Using domain-specific information, we maintain optimality in parallel plans while scaling to large and deep circuits. From our results, we show the scalability of our approach which significantly outperforms leading exact and near-optimal approaches (up to 100x). For the first time, we can optimally map several 8, 14, and 16 qubit circuits onto 54, 80, and 127 qubit platforms with up to 17 SWAPs. While adding optimal SWAPs, we also report near-optimal depth in our mapped circuits. 
+ Cite asIrfansha Shaik and Jaco van de Pol. Optimal Layout Synthesis for Deep Quantum Circuits on NISQ Processors with 100+ Qubits. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 26:1-26:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{shaik_et_al:LIPIcs.SAT.2024.26 author = {Shaik, Irfansha and van de Pol, Jaco}, title = {{Optimal Layout Synthesis for Deep Quantum Circuits on NISQ Processors with 100+ Qubits}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {26:1--26:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.26}, URN = {urn:nbn:de:0030-drops-205487}, doi = {10.4230/LIPIcs.SAT.2024.26}, annote = {Keywords: Layout Synthesis, Transpiling, Qubit Mapping and Routing, Quantum Circuits, Propositional Satisfiability, Parallel Plans} }@InProceedings{shaik_et_al:LIPIcs.SAT.2024.26 author = {Shaik, Irfansha and van de Pol, Jaco}, title = {{Optimal Layout Synthesis for Deep Quantum Circuits on NISQ Processors with 100+ Qubits}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {26:1--26:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.26}, URN = {urn:nbn:de:0030-drops-205487}, doi = {10.4230/LIPIcs.SAT.2024.26}, annote = {Keywords: Layout Synthesis, Transpiling, Qubit Mapping and Routing, Quantum Circuits, Propositional Satisfiability, Parallel Plans} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.27" - DOI: 10.4230/LIPIcs.SAT.2024.27
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.27/LIPIcs.SAT.2024.27.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.27" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.27" - Revisiting SATZilla Features in 2024
+Authors:Hadar Shavit and Holger H. Hoos 
+ AbstractBoolean satisfiability (SAT) is an NP-complete problem with important applications, notably in hardware and software verification. Characterising a SAT instance by a set of features has shown great potential for various tasks, ranging from algorithm selection to benchmark generation. In this work, we revisit the widely used SATZilla features and introduce a new version of the tool used to compute them. In particular, we utilise a new preprocessor and SAT solvers, adjust the code to accommodate larger formulas, and determine better settings of the feature extraction time limits. We evaluate the extracted features on three downstream tasks: satisfiability prediction, running time prediction, and algorithm selection. We observe that our new tool is able to extract features from a broader range of instances than before. We show that the new version of the feature extractor produces features that achieve up to 26% lower RMSE for running time prediction, up to 3% higher accuracy for satisfiability prediction, and up to 15 times higher closed gap for algorithm selection on benchmarks from recent SAT competitions. 
+ Cite asHadar Shavit and Holger H. Hoos. Revisiting SATZilla Features in 2024. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 27:1-27:26, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{shavit_et_al:LIPIcs.SAT.2024.27 author = {Shavit, Hadar and Hoos, Holger H.}, title = {{Revisiting SATZilla Features in 2024}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {27:1--27:26}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.27}, URN = {urn:nbn:de:0030-drops-205496}, doi = {10.4230/LIPIcs.SAT.2024.27}, annote = {Keywords: Satisfiability, feature extraction, running time prediction, satisfiability prediction} }@InProceedings{shavit_et_al:LIPIcs.SAT.2024.27 author = {Shavit, Hadar and Hoos, Holger H.}, title = {{Revisiting SATZilla Features in 2024}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {27:1--27:26}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.27}, URN = {urn:nbn:de:0030-drops-205496}, doi = {10.4230/LIPIcs.SAT.2024.27}, annote = {Keywords: Satisfiability, feature extraction, running time prediction, satisfiability prediction} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.28" - DOI: 10.4230/LIPIcs.SAT.2024.28
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.28/LIPIcs.SAT.2024.28.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.28" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.28" - Strategy Extraction by Interpolation
+Authors:Friedrich Slivovsky 
+ AbstractIn applications, QBF solvers are often required to generate strategies. This typically involves a process known as strategy extraction, where a Boolean circuit encoding a strategy is computed from a proof. It has previously been observed that Craig interpolation in propositional logic can be seen as a special case of QBF strategy extraction. In this paper we explore this connection further and show that, conversely, any strategy for a false QBF corresponds to a sequence of interpolants in its complete (Herbrand) expansion. Inspired by this correspondence, we present a new strategy extraction algorithm for the expansion-based proof system Exp+Res. Its asymptotic running time matches the best known bound of O(mn) for a proof with m lines and n universally quantified variables. We report on experiments comparing this algorithm with a strategy extraction algorithm based on combining partial strategies, as well as with round-based strategy extraction. 
+ Cite asFriedrich Slivovsky. Strategy Extraction by Interpolation. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 28:1-28:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{slivovsky:LIPIcs.SAT.2024.28 author = {Slivovsky, Friedrich}, title = {{Strategy Extraction by Interpolation}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {28:1--28:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.28}, URN = {urn:nbn:de:0030-drops-205509}, doi = {10.4230/LIPIcs.SAT.2024.28}, annote = {Keywords: QBF, Expansion, Strategy Extraction, Interpolation} }@InProceedings{slivovsky:LIPIcs.SAT.2024.28 author = {Slivovsky, Friedrich}, title = {{Strategy Extraction by Interpolation}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {28:1--28:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.28}, URN = {urn:nbn:de:0030-drops-205509}, doi = {10.4230/LIPIcs.SAT.2024.28}, annote = {Keywords: QBF, Expansion, Strategy Extraction, Interpolation} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.29" - DOI: 10.4230/LIPIcs.SAT.2024.29
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.29/LIPIcs.SAT.2024.29.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.29" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.29" - Quantum Circuit Mapping Based on Incremental and Parallel SAT Solving
+Authors:Jiong Yang, Yaroslav A. Kharkov, Yunong Shi, Marijn J. H. Heule, and Bruno Dutertre 
+ AbstractQuantum Computing (QC) is a new computational paradigm that promises significant speedup over classical computing in various domains. However, near-term QC faces numerous challenges, including limited qubit connectivity and noisy quantum operations. To address the qubit connectivity constraint, circuit mapping is required for executing quantum circuits on quantum computers. This process involves performing initial qubit placement and using the quantum SWAP operations to relocate non-adjacent qubits for nearest-neighbor interaction. Reducing the SWAP count in circuit mapping is essential for improving the success rate of quantum circuit execution as SWAPs are costly and error-prone. In this work, we introduce a novel circuit mapping method by combining incremental and parallel solving for Boolean Satisfiability (SAT). We present an innovative SAT encoding for circuit mapping problems, which significantly improves solver-based mapping methods and provides a smooth trade-off between compilation quality and compilation time. Through comprehensive benchmarking of 78 instances covering 3 quantum algorithms on 2 distinct quantum computer topologies, we demonstrate that our method is 26× faster than state-of-the-art solver-based methods, reducing the compilation time from hours to minutes for important quantum applications. Our method also surpasses the existing heuristics algorithm by 26% in SWAP count. 
+ Cite asJiong Yang, Yaroslav A. Kharkov, Yunong Shi, Marijn J. H. Heule, and Bruno Dutertre. Quantum Circuit Mapping Based on Incremental and Parallel SAT Solving. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 29:1-29:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{yang_et_al:LIPIcs.SAT.2024.29 author = {Yang, Jiong and Kharkov, Yaroslav A. and Shi, Yunong and Heule, Marijn J. H. and Dutertre, Bruno}, title = {{Quantum Circuit Mapping Based on Incremental and Parallel SAT Solving}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {29:1--29:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.29}, URN = {urn:nbn:de:0030-drops-205517}, doi = {10.4230/LIPIcs.SAT.2024.29}, annote = {Keywords: Quantum computing, Quantum compilation, SAT solving, Incremental solving, Parallel solving} }@InProceedings{yang_et_al:LIPIcs.SAT.2024.29 author = {Yang, Jiong and Kharkov, Yaroslav A. and Shi, Yunong and Heule, Marijn J. H. and Dutertre, Bruno}, title = {{Quantum Circuit Mapping Based on Incremental and Parallel SAT Solving}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {29:1--29:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.29}, URN = {urn:nbn:de:0030-drops-205517}, doi = {10.4230/LIPIcs.SAT.2024.29}, annote = {Keywords: Quantum computing, Quantum compilation, SAT solving, Incremental solving, Parallel solving} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.30" - DOI: 10.4230/LIPIcs.SAT.2024.30
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.30/LIPIcs.SAT.2024.30.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.30" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.30" - Anytime Approximate Formal Feature Attribution
+Authors:Jinqiang Yu, Graham Farr, Alexey Ignatiev, and Peter J. Stuckey 
+ AbstractWidespread use of artificial intelligence (AI) algorithms and machine learning (ML) models on the one hand and a number of crucial issues pertaining to them warrant the need for explainable artificial intelligence (XAI). A key explainability question is: given this decision was made, what are the input features which contributed to the decision? Although a range of XAI approaches exist to tackle this problem, most of them have significant limitations. Heuristic XAI approaches suffer from the lack of quality guarantees, and often try to approximate Shapley values, which is not the same as explaining which features contribute to a decision. A recent alternative is so-called formal feature attribution (FFA), which defines feature importance as the fraction of formal abductive explanations (AXp’s) containing the given feature. This measures feature importance from the view of formally reasoning about the model’s behavior. Namely, given a system of constraints logically representing the ML model of interest, computing an AXp requires finding a minimal unsatisfiable subset (MUS) of the system. It is challenging to compute FFA using its definition because that involves counting over all AXp’s (equivalently, counting over MUSes), although one can approximate it. Based on these results, this paper makes several contributions. First, it gives compelling evidence that computing FFA is intractable, even if the set of contrastive formal explanations (CXp’s), which correspond to minimal correction subsets (MCSes) of the logical system, is provided, by proving that the problem is #P-hard. Second, by using the duality between MUSes and MCSes, it proposes an efficient heuristic to switch from MCS enumeration to MUS enumeration on-the-fly resulting in an adaptive explanation enumeration algorithm effectively approximating FFA in an anytime fashion. Finally, experimental results obtained on a range of widely used datasets demonstrate the effectiveness of the proposed FFA approximation approach in terms of the error of FFA approximation as well as the number of explanations computed and their diversity given a fixed time limit. 
+ Cite asJinqiang Yu, Graham Farr, Alexey Ignatiev, and Peter J. Stuckey. Anytime Approximate Formal Feature Attribution. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 30:1-30:23, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{yu_et_al:LIPIcs.SAT.2024.30 author = {Yu, Jinqiang and Farr, Graham and Ignatiev, Alexey and Stuckey, Peter J.}, title = {{Anytime Approximate Formal Feature Attribution}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {30:1--30:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.30}, URN = {urn:nbn:de:0030-drops-205526}, doi = {10.4230/LIPIcs.SAT.2024.30}, annote = {Keywords: Explainable AI, Formal Feature Attribution, Minimal Unsatisfiable Subsets, MUS Enumeration} }@InProceedings{yu_et_al:LIPIcs.SAT.2024.30 author = {Yu, Jinqiang and Farr, Graham and Ignatiev, Alexey and Stuckey, Peter J.}, title = {{Anytime Approximate Formal Feature Attribution}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {30:1--30:23}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.30}, URN = {urn:nbn:de:0030-drops-205526}, doi = {10.4230/LIPIcs.SAT.2024.30}, annote = {Keywords: Explainable AI, Formal Feature Attribution, Minimal Unsatisfiable Subsets, MUS Enumeration} }Document 
+ href="https://doi.org/10.4230/LIPIcs.SAT.2024.31" - DOI: 10.4230/LIPIcs.SAT.2024.31
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol305-sat2024/LIPIcs.SAT.2024.31/LIPIcs.SAT.2024.31.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.31" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.31" - Small Unsatisfiable k-CNFs with Bounded Literal Occurrence
+Authors:Tianwei Zhang, Tomáš Peitl, and Stefan Szeider 
+ AbstractWe obtain the smallest unsatisfiable formulas in subclasses of k-CNF (exactly k distinct literals per clause) with bounded variable or literal occurrences. Smaller unsatisfiable formulas of this type translate into stronger inapproximability results for MaxSAT in the considered formula class. Our results cover subclasses of 3-CNF and 4-CNF; in all subclasses of 3-CNF we considered we were able to determine the smallest size of an unsatisfiable formula; in the case of 4-CNF with at most 5 occurrences per variable we decreased the size of the smallest known unsatisfiable formula. Our methods combine theoretical arguments and symmetry-breaking exhaustive search based on SAT Modulo Symmetries (SMS), a recent framework for isomorph-free SAT-based graph generation. To this end, and as a standalone result of independent interest, we show how to encode formulas as graphs efficiently for SMS. 
+ Cite asTianwei Zhang, Tomáš Peitl, and Stefan Szeider. Small Unsatisfiable k-CNFs with Bounded Literal Occurrence. In 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 305, pp. 31:1-31:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{zhang_et_al:LIPIcs.SAT.2024.31 author = {Zhang, Tianwei and Peitl, Tom\'{a}\v{s} and Szeider, Stefan}, title = {{Small Unsatisfiable k-CNFs with Bounded Literal Occurrence}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {31:1--31:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.31}, URN = {urn:nbn:de:0030-drops-205531}, doi = {10.4230/LIPIcs.SAT.2024.31}, annote = {Keywords: k-CNF, (k,s)-SAT, minimally unsatisfiable formulas, symmetry breaking} }@InProceedings{zhang_et_al:LIPIcs.SAT.2024.31 author = {Zhang, Tianwei and Peitl, Tom\'{a}\v{s} and Szeider, Stefan}, title = {{Small Unsatisfiable k-CNFs with Bounded Literal Occurrence}}, booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024)}, pages = {31:1--31:22}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-334-8}, ISSN = {1868-8969}, year = {2024}, volume = {305}, editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2024.31}, URN = {urn:nbn:de:0030-drops-205531}, doi = {10.4230/LIPIcs.SAT.2024.31}, annote = {Keywords: k-CNF, (k,s)-SAT, minimally unsatisfiable formulas, symmetry breaking} }Filters 
+ 81Authors 
+ Show AllCollapse 
+ Show All 
+ A 
+ Anders, Markus 
+ B 
+ Beyersdorff, Olaf 
+ Biere, Armin 
+ Bonacina, Ilario 
+ Bonet, Maria Luisa 
+ Brenner, Sofia 
+ C 
+ Cai, Shaowei 
+ Chakraborty, Supratik 
+ Chu, Yi 
+ Coutelier, Robin 
+ D 
+ Dahiya, Yogesh 
+ de Colnet, Alexis 
+ Dutertre, Bruno 
+ F 
+ Faber, Daniel 
+ Farr, Graham 
+ Fazekas, Katalin 
+ Fichte, Johannes K. 
+ Fleury, Mathias 
+ Fried, Dror 
+ Froleyks, Nils 
+ H 
+ Havlena, Vojtěch 
+ Hecher, Markus 
+ Heule, Marijn J. H. 
+ Hoffmann, Tim 
+ Holík, Lukáš 
+ Hoos, Holger H. 
+ I 
+ Ignatiev, Alexey 
+ Iida, Yoichiro 
+ Inaba, Mary 
+ Iser, Markus 
+ Itsykson, Dmitry 
+ J 
+ Jabrayilov, Adalat 
+ Jabs, Christoph 
+ Jiang, Jie-Hong Roland 
+ K 
+ Karamanos, Christos 
+ Kasche, Kaspar 
+ Kharkov, Yaroslav A. 
+ Kołodziejczyk, Leszek Aleksander 
+ Kovács, Laura 
+ L 
+ Lagniez, Jean-Marie 
+ Lauria, Massimo 
+ Lengál, Ondřej 
+ Li, Chu-Min 
+ M 
+ Mahajan, Meena 
+ Marquis, Pierre 
+ Mouli, Sasank 
+ Mutzel, Petra 
+ N 
+ Nadel, Alexander 
+ Nieuwenhuis, Robert 
+ O 
+ Oliveras, Albert 
+ Ovcharov, Sergei 
+ P 
+ Peitl, Tomáš 
+ R 
+ Rattan, Gaurav 
+ Reichl, Franz-Xaver 
+ Rodríguez-Carbonell, Enric 
+ S 
+ Scholl, Christoph 
+ Schreiber, Dominik 
+ Sebastiani, Roberto 
+ Seidl, Martina 
+ Seufert, Tobias 
+ Shaik, Irfansha 
+ Shalmon, Yogev 
+ Shavit, Hadar 
+ Shi, Yunong 
+ Síč, Juraj 
+ Siegwolf, Fabian 
+ Slivovsky, Friedrich 
+ Sonobe, Tomohiro 
+ Stuckey, Peter J. 
+ Szeider, Stefan 
+ T 
+ Tan, Zi Li 
+ Thapen, Neil 
+ Tinelli, Cesare 
+ V 
+ van de Pol, Jaco 
+ Vardi, Moshe Y. 
+ Vargovčík, Pavol 
+ Y 
+ Yang, Jiong 
+ Ye, Furong 
+ Yu, Jinqiang 
+ Z 
+ Zhang, Tianwei 
+ Zhao, Rui 
+  
+ 31Subjects 
+ Show AllCollapse 
+ Show All 
+ Computer systems organization 
+ Computer systems organization → Quantum computing 
+ Computing methodologies 
+ Computing methodologies → Artificial intelligence 
+ Computing methodologies → Distributed algorithms 
+ Computing methodologies → Heuristic function construction 
+ Computing methodologies → Machine learning 
+ Computing methodologies → Planning for deterministic actions 
+ Hardware 
+ Hardware → Circuit optimization 
+ Hardware → Hardware validation 
+ Hardware → Quantum computation 
+ Hardware → Theorem proving and SAT solving 
+ Information systems 
+ Information systems → Information integration 
+ Mathematics of computing 
+ Mathematics of computing → Graph coloring 
+ Mathematics of computing → Graph enumeration 
+ Mathematics of computing → Solvers 
+ Software and its engineering 
+ Software and its engineering → Compilers 
+ Software and its engineering → Software libraries and repositories 
+ Theory of computation 
+ Theory of computation 
+ Theory of computation → Automated reasoning 
+ Theory of computation → Complexity theory and logic 
+ Theory of computation → Computational complexity and cryptography 
+ Theory of computation → Constraint and logic programming 
+ Theory of computation → Design and analysis of algorithms 
+ Theory of computation → Dynamic programming 
+ Theory of computation → Graph algorithms analysis 
+ Theory of computation → Logic 
+ Theory of computation → Logic and verification 
+ Theory of computation → Proof complexity 
+ Theory of computation → Proof theory 
+ Theory of computation → Randomized local search 
+ Theory of computation → Regular languages 
+ Theory of computation → Type theory 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2024Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+

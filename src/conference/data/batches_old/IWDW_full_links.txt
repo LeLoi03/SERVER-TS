@@ -1,0 +1,454 @@
+Conference full name: International Workshop on Digital Watermarking (IWDW)
+
+1. Website of IWDW_1: https://web.xidian.edu.cn/ldli/en/paper.html
+Website information of IWDW_1:
+
+Xidian MeetingXidian GuideAboutHelpSearchHomeLoginControl PanelAddBookMarkLeida Li's MessageBoardLeida Li's Homepage: 
+ Profile 
+ Publication 
+ Dataset 
+ Chinese 
+ Papers 
+ Journal Papers： 
+ Yipo Huang,Leida Li*, Pengfei Chen, Haoning Wu, Weisi Lin, Guangming Shi, Multi-modality Multi-attribute Contrastive Pre-training for Image Aesthetics Computing,IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024. 
+ Leida Li, Xiangfei Sheng, Pengfei Chen, Jinjian Wu, Weisheng Dong, Towards Explainable Image Aesthetics Assessment with Attribute-oriented Critiques Generation, | IEEE Transactions on Circuits and Systems for Video Technology | , 2024. 
+ Bo Hu, Wenzhi Chen, Jia Zheng,Leida Li, Wen Lu, Xinbo Gao, No-Reference Image Quality Assessment via Inter-Level Adaptive Knowledge Distillation,IEEE Transactions on Broadcasting, 2025. 
+ Leida Li, Hancheng Zhu, Sicheng Zhao, Guiguang Ding, Weisi Lin, "Personality-assisted Multi-task Learning for Generic and Personalized Image Aesthetics Assessment",IEEE Transactions on Image Processing, vol. 29, pp. 3898-3910, 2020. [CODE] 
+ Leida Li, Pengfei Chen, Weisi Lin, Mai Xu, Guangming Shi, "From Whole Video to Frames: Weakly-Supervised Domain Adaptive Continuous-Time QoE Evaluation",IEEE Transactions on Image Processing, 2022. 
+ Leida Li, Hao Cai, Yabin Zhang, Weisi Lin, Alex C. Kot, Xingming Sun, "Sparse Representation Based Image Quality Index with Adaptive Sub-dictionaries",IEEE Transactions on Image Processing, vol. 25, no. 8, pp. 3775-3786, 2016. 
+ Leida Li, Weisi Lin, Xuesong Wang, Gaobo Yang, Khosro Bahrami, Alex C. Kot,“No-reference Image Blur Assessment Based on Discrete Orthogonal Moments",IEEE Transactions on Cybernetics, vol. 46, no. 1, pp. 39-50, 2016. 
+ Leida Li, Yu Zhou, Ke Gu,Yuzhe Yang,Yuming Fang, "Blind Realistic Blur Assessment Based on Discrepancy Learning",IEEE Transactions on Circuits and Systems for Video Technology, vol. 30, no. 11, pp. 3859-3869, 2020. 
+ Leida Li, Dong Wu, Jinjian Wu, Haoliang Li, Weisi Lin, Alex C. Kot, "Image Sharpness Assessment by Sparse Representation",IEEE Transactions on Multimedia, vol. 18, no. 6, pp. 1085-1097, 2016. 
+ Leida Li, Wenhan Xia, Weisi Lin, Yuming Fang, Shiqi Wang, "No-reference and Robust Image Sharpness Evaluation Based on Multi-scale Spatial and Spectral Features",IEEE Transactions on Multimedia, vol. 19, no. 5, pp. 1030-1040, 2017. 
+ Leida Li, Yu Zhou, Ke Gu, Weisi Lin, Shiqi Wang, "Quality Assessment of DIBR-synthesized Images by Measuring Local Geometric Distortions and Global Sharpness",IEEE Transactions on Multimedia, vol. 20, no. 4, pp. 914-926, 2018. 
+ Leida Li, Yu Zhou, Jinjian Wu, Fu Li, Guangming Shi, "Quality Index for View Synthesis by Measuring Instance Degradation and Global Appearance",IEEE Transactions on Multimedia, vol. 23, pp. 320-332, 2021. 
+ Leida Li, Yixuan Li, Jijian Wu, Lin Ma, Yuming Fang, "Quality Evaluation for Image Retargeting with Instance Semantics",IEEE Transactions on Multimedia, vol. 23, pp. 2757-2769, 2021. 
+ Leida Li, Yipo Huang, Jinjian Wu, Ke Gu, Yuming Fang, "Predicting the Quality of View Synthesis With Color-Depth Image Fusion",IEEE Transactions on Circuits and Systems for Video Technology, vol. 31, no. 7, pp. 2509-2521, 2021. 
+ Leida Li, Tianshu Song, Jinjian Wu, Weisheng Dong, Jiansheng Qian, Guangming Shi, “Blind Image Quality Index for Authentic Distortions With Local and Global Deep Feature Aggregation”,IEEE Transactions on Circuits and Systems for Video Technology, Accepted, 2021. 
+ Leida Li, Yipo Huang, Jinjian Wu, Yuzhe Yang, Yaqian Li, Yandong Guo, Guangming Shi, "Theme-aware Visual Attribute Reasoning for Image Aesthetics Assessment",IEEE Transactions on Circuits and Systems for Video Technology, 2023. 
+ Leida Li, Tong Zhu, Pengfei Chen, Yuzhe Yang, Yaqian Li, Weisi Lin, "Image Aesthetics Assessment with Attribute-Assisted Multimodal Memory Network",IEEE Transactions on Circuits and Systems for Video Technology, 2023. 
+ Tianshu Song,Leida Li*, Jinjian Wu, Weisheng Dong, Deqiang Cheng, "Quality-aware Blind Image Motion Deblurring",Pattern Recognition, 2024. 
+ Tong Zhu,Leida Li*, Pengfei Chen, Jinjian Wu, Yuzhe Yang, Yaqian Li, "Emotion-aware Hierarchical Interaction Network for Multimodal Image Aesthetics Assessment",Pattern Recognition, 2024. 
+ Zhichao Yang,Leida Li*, Yuzhe Yang, Yaqian Li, Weisi Lin, "Multi-level Transitional Contrast Learning for Personalized Image Aesthetics Assessment",IEEE Transactions on Multimedia, 2023. 
+ Tianshu Song,Leida Li*, Jinjian Wu, Yuzhe Yang, Yaqian Li, Yandong Guo, Guangming Shi, "Knowledge-Guided Blind Image Quality Assessment with Few Training Samples",IEEE Transactions on Multimedia, 2022. 
+ Yipo Huang,Leida Li*, Yuzhe Yang, Yaqian Li, Yandong Guo, "Explainable and Generalizable Blind Image Quality Assessment via Semantic Attribute Reasoning",IEEE Transactions on Multimedia, 2022. 
+ Pengfei Chen,Leida Li*, Haoliang Li, Jinjian Wu, Weisheng Dong, Guangming Shi, "Dynamic Expert-Knowledge Ensemble for Generalizable Video Quality Assessment",IEEE Transactions on Circuits and Systems for Video Technology, 2022. 
+ Pengfei Chen,Leida Li*, Jinjian Wu, Yabin Zhang, Weisi Lin, "Temporal Reasoning Guided QoE Evaluation for Mobile Live Video Broadcasting",IEEE Transactions on Image Processing, vol. 30, pp. 3279-3292, 2021. 
+ Pengfei Chen,Leida Li*, Jinjian Wu, Weisheng Dong, Guangming Shi, "Contrastive Self-supervised Pre-training for Video Quality Assessment",IEEE Transactions on Image Processing, DOI: 10.1109/TIP.2021.3130536, 2021. 
+ Hancheng Zhu,Leida Li*, Jinjian Wu, Sicheng Zhao, Guiguang Ding, Guangming Shi, "Personalized Image Aesthetics Assessment via Meta-learning with Bi-level Gradient Optimization",IEEE Transactions on Cybernetics, 2020. 
+ Hancheng Zhu,Leida Li*, Jinjian Wu, Weisheng Dong, Guangming Shi, “Generalizable No-Reference Image Quality Assessment via Deep Meta-learning”,IEEE Transactions on Circuits and Systems for Video Technology, Accepted, 2021. 
+ Yu Zhou,Leida Li*, Shiqi Wang, Jinjian Wu, Yuming Fang, Xinbo Gao, "No-reference Quality Assessment for View Synthesis Using DoG-based Edge Statistics and Texture Naturalness",IEEE Transactions on Image Processing, vol. 28, no. 9, pp. 4566-4579, 2019. 
+ Yu Zhou,Leida Li*, Jinjian Wu, Ke Gu, Weisheng Dong, Guangming Shi,“Blind Quality Index for Multiply Distorted Images Using Biorder Structure Degradation and Nonlocal Statistics",IEEE Transactions on Multimedia, vol. 20, no. 11, pp. 3019-3032, 2018. 
+ Bo Hu,Leida Li*, Hantao Liu, Weisi Lin, and Jiansheng Qian, "Pairwise Comparison Based Rank Learning for Benchmarking Image Restoration Algorithms",IEEE Transactions on Multimedia, vol. 21, no. 8, pp. 2042-2056, 2019. 
+ Tong Zhu,Leida Li*, Jufeng Yang, Sicheng Zhao, Hantao Liu, and Jiansheng Qian,“Multimodal Sentiment Analysis With Image-Text Interaction Network”,IEEE Transactions on Multimedia, 2022. 
+ Tong Zhu,Leida Li*, Jufeng Yang, Sicheng Zhao, Xiao Xiao, "Multimodal Emotion Classification with Multi-level Semantic Reasoning Network",IEEE Transactions on Multimedia, 2022. 
+ Tianshu Song,Leida Li*, Pengfei Chen, Hantao Liu, Jiansheng Qian, "Blind Image Quality Assessment for Authentic Distortions by Intermediary Enhancement and Iterative Training",IEEE Transactions on Circuits and Systems for Video Technology, 2022. 
+ Hancheng Zhu, Yong Zhou,Leida Li*, Yaqian Li, Yandong Guo, "Learning Personalized Image Aesthetics from Subjective and Objective Attributes",IEEE Transactions on Multimedia, vol. 25, pp. 179-190, 2023. 
+ Yuming Fang, Jiebin Yan,Leida Li*, Jinjian Wu, Weisi Lin, "No Reference Quality Assessment for Screen Content Images with Both Local and Global Feature Representation",IEEE Transactions on Image Processing, vol. 27, no. 4, pp. 1600-1610, 2018. 
+ Yuming Fang, Rengang Du, Yifan Zuo, Wenying Wen,Leida Li*, "Perceptual Quality Assessment for Screen Content Images by Spatial Continuity",IEEE Transactions on Circuits and Systems for Video Technology, vol. 30, no. 11, pp. 4050-4063, 2020. 
+ Yuming Fang, Jiebin Yan, Rengang Du, Yifan Zuo, Wenying Wen, Yan Zeng,Leida Li*, "Blind Quality Assessment for Tone-Mapped Images by Analysis of Gradient and Chromatic Statistics",IEEE Transactions on Multimedia, 2020. 
+ Tianshu Song,Leida Li, Deqiang Cheng, Pengfei Chen, and Jinjian Wu, "Active Learning-Based Sample Selection for Label-Efficient Blind Image Quality Assessment",IEEE Transactions on Circuits and Systems for Video Technology, 2023. 
+ Ke Gu,Leida Li, Hong Lu, Xiongkuo Min, Weisi Lin, "A Fast Reliable Image Quality Predictor by Fusing Micro- and Macro-structures",IEEE Transactions on Industrial Electronics, vol. 64, no. 5, pp. 3903- 3912, 2017. 
+ Jinjian Wu,Leida Li, Weisheng Dong, Guangming Shi, Weisi Lin, C.-C. Jay Kuo, "Enhanced Just Noticeable Difference Model for Images with Pattern Complexity",IEEE Transactions on Image Processing, vol. 26, no. 6, pp. 2682-2693, 2017. 
+ Jingyuan Yang, Jie Li,Leida Li, Xiumei Wang, Yuxuan Ding, Xinbo Gao, "Seeking Subjectivity in Visual Emotion Distribution Learning",IEEE Transactions on Image Processing, 2022. 
+ Weisheng Dong, Jinjian Wu,Leida Li, Guangming Shi, Xin Li, “Bayesian Deep Learning for Image Reconstruction: From Structured Sparsity to Uncertainty Estimation”,IEEE Signal Processing Magazine, 2023. 
+ Xin Li, Weisheng Dong, Jinjian Wu,Leida Li, Guangming Shi, "Superresolution Image Reconstruction: Selective Milestones and Open Problems",IEEE Signal Processing Magazine, 2023. 
+ Bo Hu, Guang Zhu,Leida Li, Ji Gan, Weisheng Li, Xinbo Gao, "Blind Image Quality Index with Cross-domain Interaction and Cross-scale Integration",IEEE Transactions on Multimedia, 2023. 
+ Jingyuan Yang, Xinbo Gao,Leida Li, Xiumei Wang, Jinshan Ding, "SOLVER: Scene-Object Interrelated Visual Emotion Reasoning Network",IEEE Transactions on Image Processing, vol. 30, pp. 8686-8701, 2021. 
+ Guanghui Yue, Di Cheng,Leida Li, Tianwei Zhou, Hantao Liu, Tianfu Wang, "Semi-Supervised Authentically Distorted Image Quality Assessment with Consistency-Preserving Dual-Branch Convolutional Neural Network",IEEE Transactions on Multimedia, 2022. 
+ Yongxu Liu, Jinjian Wu,Leida Li, Weisheng Dong, Jinpeng Zhang, Guangming Shi, "Spatiotemporal Representation Learning for Blind Video Quality Assessment",IEEE Transactions on Circuits and Systems for Video Technology, DOI: 10.1109/TCSVT.2021.3114509, 2021. 
+ Yongxu Liu, Jinjian Wu,Leida Li, Weisheng Dong, Guangming Shi, "Quality Assessment of UGC Videos Based on Decomposition and Recomposition",IEEE Transactions on Circuits and Systems for Video Technology, 2022. 
+ Jupo Ma, Jinjian Wu,Leida Li, Weisheng Dong, Xuemei Xie, Guangming Shi, Weisi Lin, “Blind Image Quality Assessment With Active Inference”,IEEE Transactions on Image Processing, Accepted, 2021. 
+ Yu Zhou, Yanjing Sun,Leida Li, Ke Gu, Yuming Fang, "Omnidirectional Image Quality Assessment by Distortion Discrimination Assisted Multi-Stream Network",IEEE Transactions on Circuits and Systems for Video Technology, Accepted, 2021. 
+ Jinjian Wu, Chuanwei Ma,Leida Li, Weisheng Dong, and Guangming Shi, “Probabilistic Undirected Graph Based Denoising Method for Dynamic Vision Sensor”,IEEE Transactions on Multimedia, DOI: DOI 10.1109/TMM.2020.299395, 2020. 
+ Khosro Bahrami, Alex C. Kot,Leida Li, Haoliang Li, "Blurred Image Splicing Localization by Exposing Blur Type Inconsistency",IEEE Transactions on Information Forensics and Security, vol. 10, no. 5, pp. 999-1009, 2015. 
+ Xiangling Ding, Ningbo Zhu,Leida Li, Yue Li, Gaobo Yang, "Robust Localization of Interpolated Frames by Motion-compensated Frame-interpolation Based on Artifact Indicated Map and Tchebichef Moments",IEEE Transactions on Circuits and Systems for Video Technology, vol. 29, no. 7, pp. 1893-1906, 2019. 
+ Yu Zhou, Weikang Gong, Yanjing Sun,Leida Li, Ke Gu, Jinjian Wu, "Quality Assessment for Stitched Panoramic Images via Patch Registration and Bidimensional Feature Aggregation",IEEE Transactions on Multimedia, 2023. 
+ hiwen Chen, Jinjian Wu, Junhui Hou,Leida Li, Weisheng Dong, Guangming Shi, "ECSNet: Spatio-Temporal Feature Learning for Event Camera",IEEE Transactions on Circuits and Systems for Video Technology, DOI: 10.1109/TCSVT.2022.3202659, 2022. 
+ Wen Yang, Jinjian Wu, Shiwei Tian,Leida Li, Weisheng Dong, Guangming Shi, "Fine-grained Image Quality Caption with Hierarchical Semantics Degradation",IEEE Transactions on Image Processing, 2022. 
+ Ao-Xiang Zhang, Yuan-Gen Wang, Weixuan Tang,Leida Li, Sam Kwong, "A Spatial-Temporal Video Quality Assessment Method via Comprehensive HVS Simulation",IEEE Transactions on Cybernetics, 2023. 
+ Yongxu Liu, Jinjian Wu, Aobo Li,Leida Li, Weisheng Dong, Guangming Shi, Weisi Lin, "Video Quality Assessment with Serial Dependence Modeling",IEEE Transactions on Multimedia, accepted, 2021. 
+ Tao Huang, Weisheng Dong, Jinjian Wu,Leida Li, Xin Li, Guangming Shi, "Deep Hyperspectral Image Fusion Network with Iterative Spatio-Spectral Regularization",IEEE Transactions on Computational Imaging, 2022. 
+ Yu Zhou, Weikang Gong, Yanjing Sun,Leida Li, Jinjian Wu, Xinbo Gao, "Pyramid Feature Aggregation for Hierarchical Quality Prediction of Stitched Panoramic Images",IEEE Transactions on Multimedia, 2022. 
+ Yu Zhou, Yiyi Ding, Yanjing Sun,Leida Li, Jinjian Wu, Xinbo Gao, "Perceptual Information Completion based Siamese Omnidirectional Image Quality Assessment Network",IEEE Transactions on Instrumentation & Measurement, 2023. 
+ Xiaotong Lu , Weisheng Dong , Xin Li , Jinjian Wu ,Leida Li, Guangming Shi, "Adaptive Search-and-Training for Robust and Efficient Network Pruning",IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023. 
+ Lu Sun, Weisheng Dong, Xin Li, Jinjian Wu,Leida Li, Guangming Shi, “Deep Maximum a Posterior Estimator for Video Denoising”,International Journal of Computer Vision, DOI: 10.1007/s11263-021-01510-7, 2021. 
+ Qian Ning, Weisheng Dong, Guangming Shi,Leida Li, Xin Li, "Accurate and Lightweight Image Super-Resolution with Model-Guided Deep Unfolding Network",IEEE Journal of Selected Topics in Signal Processing, DOI: 10.1109/JSTSP.2020.3037516, 2020. 
+ Guangcheng Wang, Zhongyuan Wang, Ke Gu,Leida Li, Zhifang Xia, Lifang Wu, "Blind Quality Metric of DIBR-Synthesized Images in the Discrete Wavelet Transform Domain",IEEE Transactions on Image Processing, vol. 29, pp. 1802-1814, 2019. 
+ Yabin Zhang, Yuming Fang, Weisi Lin, Xinfeng Zhang,Leida Li,“Backward Registration Based Aspect Ratio Similarity for Image Retargeting Quality Assessment",IEEE Transactions on Image Processing, vol. 25, no. 9, pp. 4286-4297, 2016. 
+ Tuoxun Zhao, Jia Zheng, Bo Hu, Yan Zhang,Leida Li, Weisheng Li, Xinbo Gao, "Blind Image Quality Assessment withCoarse-grained Perception Construction ancFine-grained Interaction Learning",IEEE Transactions on Broadcasting, 2023. 
+ Xiaohan Yang, Fan Li,Leida Li, Ke Gu, Hantao Liu, "Study of Natural Scene Categories in Measurement of Perceived Image Quality",IEEE Transactions on Instrumentation and Measurement, 2022. 
+ Sadbhawna, Vinit Jakhetiya, Badri N. Subudhi, Sunil P. Jaiswal,Leida Li, Weisi Lin, “Context Region Identification based Quality Assessment of 3D Synthesized Views”,IEEE Transactions on Multimedia, DOI 10.1109/TMM.2022.3206660, 2022. 
+ Pengfei Guo, Hantao Liu, Delu Zeng, Tao Xiang,Leida Li, Ke Gu, "An Underwater Image Quality Assessment Metric",IEEE Transactions on Multimedia, DOI: 10.1109/TMM.2022.3187212, 2022. 
+ Miaohui Wang, Yijing Huang, Jiaxin Lin, Wuyuan Xie, Guanghui Yue, Shiqi Wang,Leida Li, “Quality Measurement of Screen Images via Foreground Perception and Background Suppression”,IEEE Transactions on Instrumentation and Measurement, vol. 70 , pp. 1-11, 2021. 
+ Leida Li, Xi Chen, Jinjian Wu, Shiqi Wang, Guangming Shi, “No-reference Quality Index of Depth Images Based on Statistics of Edge Profiles for View Synthesis”,Information Sciences, vol. 516, pp. 205-219, 2020. 
+ Leida Li, Shushang Li, Ajith Abraham, Jeng-Shyang Pan, “Geometrically Invariant Image Watermarking Using Polar Harmonic Transforms”,Information Sciences, vol. 199, pp. 1-19, 2012. [Code] 
+ Leida Li, Xiaoping Yuan, Zhaolin Lu, Jeng-Shyang Pan, “Rotation Invariant Watermark Embedding Based on Scale-adapted Characteristic Regions”,Information Sciences, vol. 180, no. 15, pp. 2875-2888, 2010. 
+ Leida Li, Tianwu Zhi, Guangming Shi, Yuzhe Yang, Liwu Xu, Yaqian Li, Yandong Guo, "Anchor-based Knowledge Embedding for Image Aesthetics Assessment",Neurocomputing, vol. 539, 126197, 2023. 
+ Leida Li, Yu Zhou, Weisi Lin, Jinjian Wu, Xinfeng Zhang, Beijing Chen, "No-reference quality assessment of deblocked images",Neurocomputing, vol. 177, pp. 572-584, 2016. 
+ Pengfei Chen,Leida Li*, Xinfeng Zhang, Shanshe Wang, Allen Tan, “Blind Quality Index for Tone-mapped Images Based on Luminance Partition”,Pattern Recognition, vol. 89, pp. 108-118, 2019. 
+ Leida Li, Hancheng Zhu, Gaobo Yang, Jiansheng Qian, “Referenceless Measure of Blocking Artifacts by Tchebichef Kernel Analysis”,IEEE Signal Processing Letters, vol. 21, no. 1, pp. 122-125, 2014. [Code] 
+ Leida Li, Weisi Lin, Hancheng Zhu, “Learning Structural Regularity for Evaluating Blocking Artifacts in JPEG Images”,IEEE Signal Processing Letters, vol. 21, no. 8, pp. 918-922, 2014. [Code] 
+ Tianshu Song,Leida Li*, Hancheng Zhu, Jiansheng Qian, "IE-IQA: Intelligibility Enriched Generalizable No-reference Image Quality Assessment",Frontiers in Neuroscience, 2021. 
+ Yipo Huang,Leida Li*, Hancheng Zhu, Bo Hu, "Blind Quality Index of Depth Images Based on Structural Statistics for View Synthesis",IEEE Signal Processing Letters, 2020. 
+ Pengfei Chen,Leida Li*, Qingbo Wu, Jinjian Wu, "SPIQ: A Self-supervised Pre-trained Model for Image Quality Assessment",IEEE Signal Processing Letters, 2022. 
+ Hancheng Zhu,Leida Li*, Sicheng Zhao, Hongyan Jiang, “Evaluating Attributed Personality Traits from Scene Perception Probability”,Pattern Recognition Letters, vol. 116, pp. 121-126, 2018. 
+ Hancheng Zhu,Leida Li*, Hongyan Jiang, Allen Tan, “Inferring Personality Traits from Attentive Regions of User Liked Images via Weakly Supervised Dual Convolutional Network”,Neural Processing Letters, DOI: 10.1007/s11063-019-09987-7, 2019. 
+ Yuanyang Wang, Yihua Huang, Xiumin Chen,Leida Li*, Guangming Shi, “Modeling Content-Attribute Preference for Personalized Image Aesthetics Assessment",Image and Vision Computing, 2022. 
+ Conference Papers： 
+ Hancheng Zhu,Leida Li*, Jinjian Wu, Weisheng Dong, Guangming Shi,“MetaIQA: Deep Meta-learning for No-Reference Image Quality Assessment",IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 14131-14140, 2020. [PDF] [CODE]（CCF A） 
+ Pengfei Chen,Leida Li*, Jinjian Wu, Weisheng Dong, Guangming Shi,“Unsupervised Curriculum Domain Adaptation for No-Reference Video Quality Assessment”,International Conference on Computer Vision (ICCV), pp. 5178-5187, Oct. 11-17, 2021.（CCF A） 
+ Pengfei Chen,Leida Li*, Lei Ma, Jinjian Wu, Guangming Shi, “RIRNet: Recurrent-In-Recurrent Network for Video Quality Assessment",ACM International Conference on Multimedia (ACM MM),pp. 834-842, 2020.（CCF A, Oral） 
+ Xiangfei Sheng,Leida Li*, Pengfei Chen, Jinjian Wu, Weisheng Dong, Yuzhe Yang, LiWu Xu, Yaqian Li, Guangming Shi, "AesCLIP: Multi-Attribute Contrastive Learning for Image Aesthetics Assessment",ACM International Conference on Multimedia (ACM MM), 2023.（CCF A） 
+ Zhichao Yang,Leida Li*, Pengfei Chen, Jinjian Wu, Weisheng Dong, "Semantics-Aware Image Aesthetics Assessment using Tag Matching and Contrastive Ranking",ACM International Conference on Multimedia (ACM MM), 2024.（CCF A） 
+ Yipo Huang, Xiangfei Sheng, Zhichao Yang, Quan Yuan, Zhichao Duan, Pengfei Chen,Leida Li*, Weisi Lin, Guangming Shi, "AesExpert: Towards Multi-modality Foundation Model for Image Aesthetics Perception",ACM International Conference on Multimedia (ACM MM), 2024.（CCF A） 
+ Hancheng Zhu, Ju Shi, Zhiwen Shao, Rui Yao, Yong Zhou, Jiaqi Zhao,Leida Li, "Attribute-Driven Multimodal Hierarchical Prompts for Image Aesthetic Quality Assessment",ACM International Conference on Multimedia (ACM MM), 2024.（CCF A） 
+ Wen Yang, Jinjian Wu, Jupo Ma,Leida Li, Guangming Shi, "Motion Deblurring via Spatial-Temporal Collaboration of Frames and Events",AAAI Conference on Artiﬁcial Intelligence (AAAI), 2024.（CCF A类） 
+ Wen Yang, Jinjian Wu,Leida Li, Weisheng Dong, Guangming Shi, "Event-based Motion Deblurring with Modality-Aware Decomposition and Recomposition",ACM International Conference on Multimedia (ACM MM), 2023.（CCF A） 
+ Xixi Nie, Bo Hu, Xinbo Gao,Leida Li, Xiaodan Zhang, Bin Xiao, "BMI-Net: A Brain-inspired Multimodal Interaction Network for Image Aesthetic Assessment",ACM International Conference on Multimedia (ACM MM), 2023.（CCF A） 
+ Hancheng Zhu, Zhiwen Shao, Yong Zhou, guangcheng wang, Pengfei Chen,Leida Li, "Personalized Image Aesthetics Assessment with Attribute-guided Fine-grained Feature Representation",ACM International Conference on Multimedia (ACM MM), 2023.（CCF A） 
+ Sicheng Zhao, Zizhou Jia, Hui Chen,Leida Li*, Guiguang Ding, Kurt Keutzer, “PDANet: Polarity-consistent Deep Attention Network for Fine-grained Visual Emotion Regression",ACM International Conference on Multimedia (ACM MM), pp. 192-201, Nice, France, October 21-25, 2019.（CCF A） 
+ Yuzhe Yang, Liwu Xu,Leida Li, Nan Qie, Yaqian Li, Peng Zhang, Yandong Guo, “Personalized Image Aesthetics Assessment with Rich Attributes”,IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022.（CCF A） 
+ Jingyuan Yang, Jie Li,Leida Li, Xiumei Wang, Xinbo Gao, "A Circular-Structured Representation for Visual Emotion Distribution Learning",IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021.（CCF A） 
+ Yufan Zhu, Weisheng Dong,Leida Li, Jinjian Wu, Xin Li, Guangming Shi, "Robust Depth Completion with Uncertainty-Driven Loss Functions",AAAI Conference on Artificial Intelligence (AAAI), 2022.（CCF A） 
+ Wen Yang, Jinjian Wu,Leida Li, Weisheng Dong, Guangming Shi, "Image Quality Caption with Attentive and Recurrent Semantic Attractor Network",ACM International Conference on Multimedia (ACM MM), Accepted, October 20-24, 2021.（CCF A） 
+ Jinjian Wu, Yongxu Liu,Leida Li, Weisheng Dong, Guangming Shi, "No-Reference Video Quality Assessment with Heterogeneous Knowledge Ensemble",ACM International Conference on Multimedia (ACM MM), Accepted, October 20-24, 2021.（CCF A） 
+ Huachen Fang, Jinjian Wu,Leida Li, Junhui Hou, Weisheng Dong, Guangming Shi, "AEDNet: Asynchronous Event Denoising with Spatial-Temporal Correlation among Irregular Data",ACM International Conference on Multimedia (ACM MM), 2022.（CCF A） 
+ Wen Yang, Jinjian Wu, Jupo Ma,Leida Li, Weisheng Dong, Guangming Shi, "Learning for Motion Deblurring with Hybrid Frames and Events",ACM International Conference on Multimedia (ACM MM), 2022.（CCF A） 
+ Zhou Yang, Weisheng Dong, Xin Li, Jinjian Wu,Leida Li, Guangming Shi, "Self-Feature Distillation with Uncertainty Modeling for Degraded Image Recognition",European Conference on Computer Vision (ECCV), 2022.（CCF A） 
+ Zhenxuan Fang, Weisheng Dong, Xin Li, Jinjian Wu,Leida Li, Guangming Shi, "Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution",European Conference on Computer Vision (ECCV),2022.（CCF A） 
+ Yaohui Li, Yuzhe Yang, Huaxiong Li, Haoxing Chen, Liwu Xu,Leida Li, Yaqian Li, Yandong Gu, "Transductive Aesthetic Preference Propagation for Personalized Image Aesthetics Assessment",ACM International Conference on Multimedia (ACM MM), 2022.（CCF A） 
+ Liuyu Xiang, Xiaoming Jin, Guiguang Ding, Jungong Han,Leida Li, “Incremental Few-shot Learning for Pedestrian Attribute Recognition”,International Joint Conference on Artificial Intelligence (IJCAI), pp. 3912-3918, Macao, China, August 10-16, 2019.（CCF A） 
+ Leida Li, Xi Chen, Yu Zhou, Jinjian Wu, Guangming Shi, “Depth Image Quality Assessment for View Synthesis Based on Weighted Edge Similarity”,IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, pp. 17-25, Long Beach, CA, USA, June 16-20, 2019. 
+ Leida Li, Yuzhe Yang, Hancheng Zhu,“Naturalness Preserved Image Aesthetic Enhancement with Perceptual Encoder Constraint”,ACM International Conference on Multimedia Retrieval (ICMR), pp. 364-372, Ottawa, Canada, June 10-13, 2019.（CCF B,Oral) 
+ Leida Li, Jiachen Duan, Yuzhe Yang, Liwu Xu, Yaqian Li, Yandong Guo, “Psychology Inspired Model for Hierarchical Image Aesthetic Attribute Prediction”,IEEE International Conference on Multimedia and Expo (ICME)，2022.（CCF B) 
+ Leida Li, Hancheng Zhu, Sicheng Zhao, Guiguang Ding, Hongyan Jiang, Allen Tan, “Personality Driven Multi-task Learning for Image Aesthetic Assessment”,IEEE International Conference on Multimedia and Expo (ICME), pp. 430-435, Shanghai, China, July 8-12, 2019.（CCF B,Oral) 
+ Tong Zhu,Leida Li*, Pengfei Chen, Jinjian Wu, Yuzhe Yang, Yaqian Li, Yandong Guo, “Attribute-assisted Multimodal Network for Image Aesthetics Assessment”,IEEE International Conference on Multimedia and Expo (ICME)，2023.（CCF B) 
+ Jupo Ma, Jinjian Wu,Leida Li, Weisheng Dong, Xuemei Xie, "Active Inference of GAN for No-Reference Image Quality Assessment",IEEE International Conference on Multimedia and Expo (ICME), 2020.Oral 
+ Pengfei Chen,Leida Li*, Yipo Huang, Allen Tan, Russell Chen, “QoE Evaluation for Live Broadcasting Video”,IEEE International Conference on Image Processing (ICIP), pp. 454-458, Taipei, Taiwan, September 22-25, 2019. 
+ Bo Hu,Leida Li*, Jiansheng Qian, “Internal Generative Mechanism Driven Blind Quality Index for Deblocked Images”,IEEE International Conference on Image Processing (ICIP), pp. 2476-2480, Athens, Greece, October7-10, 2018. 
+ Zhuo Chen, Weisi Lin, Shiqi Wang, Long Xu,Leida Li, “Image Quality Assessment Based Label Smoothing in Deep Neural Network Learning”,IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 6742-6746, Calgary, Canada, April 15-20, 2018. 
+ Guangcheng Wang,Leida Li*, Qiaohong Li, Ke Gu, Zhaolin Lu, Jiansheng Qian, “Perceptual Evaluation of Single-image Super-resolution Reconstruction”,IEEE International Conference on Image Processing (ICIP), pp. 3145-3149, Beijing, China, September 17-20, 2017. 
+ Yu Zhou,Leida Li, Ke Gu, Yuming Fang, Weisi Lin, “Quality Assessment of 3D Synthesized Images via Disoccluded Region Discovery”,IEEE International Conference on Image Processing (ICIP), pp. 1012-1016, Phoenix, USA, September 25-28, 2016.Oral 
+ Bo Hu,Leida Li, Jiansheng Qian, Yuming Fang, “Perceptual Evaluation of Compressive Sensing Image Recovery”,International Conference on Quality of Multimedia Experience (QoMEX), pp. 1-6, Lisbon, Portugal, June 6-8, 2016.Oral 
+ Haoliang Li, Alex C. Kot,Leida Li, “Color Space Identification from Single Images”,IEEE International Symposium on Circuits and Systems (ISCAS), pp. 1774-1777, Montréal, Canada, May 22-25, 2016. 
+ Shaode Yu, Fan Jiang, Leida Li, Yaoqin Xie, “CNN-GRNN for Image Sharpness Assessment”,Asian Conference on Computer Vision (ACCV) Workshops, pp. 50-61, Taipei, Taiwan, November 20-24, 2016. 
+ Yabin Zhang, Weisi Lin, Xinfeng Zhang, Yuming Fang,Leida Li, “Aspect Ratio Similarity (ARS) for Image Retargeting Auality Assessment”,IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), PP. 1080-1084, Shanghai, China, March 20-25, 2016. 
+ Leida Li, Xuewei Wang, Wei Zhang, Gaobo Yang, Guozhang Hu, “Detecting Removed Object from Video with Stationary Background”,International Workshop on Digital Watermarking (IWDW), pp. 242-252, Shanghai, China, October 31-November 3, 2012.Oral 
+ Leida Li, Jiansheng Qian, Jeng-Shyang Pan, “High Capacity Watermark Embedding Based on Local Invariant Features”,IEEE International Conference on Multimedia and Expo (ICME), pp. 1311-1314, Singapore, July 19-23, 2010.Oral 
+ Leida Li, Baolong Guo, Jeng-Shyang Pan, Liu Yang. “Scale-space Feature Based Image Watermarking in Contourlet Domain”,International Workshop on Digital Watermarking (IWDW), pp. 88-102, Busan, Korea, November 10-12, 2009.Oral 
+ 版权声明 
+ 未经西安电子科技大学以及个人主页教师本人许可，不得复制、转载和传播本页内容，禁止用于任何商业用途。如需转载请征得主页所有者同意，并附上主页链接！ 
+ 8 天前更新 
+ Leida Li's MessageBoard 
+ Copyright © 2011-2025 Xidian University ICP 021284(05016169) Powered byXIDIANNIC&SEENIC
+
+2. Website of IWDW_1: https://www.comp.nus.edu.sg/~changec/pub.html
+Website information of IWDW_1:
+
+PublicationsPublications 
+ 2025 
+ Han Fang, Keijiang Cheng, Zijin Yang, Bosen Cui, Weiming Zhang, Ee-Chien Chang, | CoSDA: Enhancing the Robustness of Inversion-based Generative Image Watermarking Framework | , | AAAI 2025. 
+  
+ Yongheng Zhang, Tingwen Du, Yunshan Ma, Xiang Wang, Yi Xie, Guozheng Yang, Yuliang Lu, Ee-Chien Chang, | AttacKG+: Boosting attack graph construction with Large Language Models | , | Computers & Security, 2025. 
+  
+ 2024 
+ Jiamin Shen, Yao Chen, Weng-Fai Wong and Ee-Chien Chang, | T-Edge: Trusted Heterogeneous Edge Computing | , | Annual Computer Security Applications Conference (ACSAC), 2024. 
+  
+ Jiyi Zhang, Han Fang, Ee-Chien Chang, | Finding Input Data Domains of Image Classification Models with Hard-Label Black-Box Access | , | ACM International Conference on Multimedia (ACMMM), 2024. ( | Presentation Slide | ). 
+  
+ Han Fang, Kejiang Chen, Yupeng Qiu, Zehua Ma, Weiming Zhang, Ee-Chien Chang, | DERO:Diffusion-Model-Erasure Robust Watermarking | , | ACM International Conference on Multimedia (ACMMM), 2024. 
+  
+ Siyuan Liang, Mingli Zhu, Aishan Liu, Baoyuan Wu, Xiaochun Cao, Ee-Chien Chang, | BadCLIP: Dual-embedding guided backdoor attack on multimodal contrastive learning | , | IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024. 
+  
+ Xiangfu Song, Yu Zheng, Jianli Bai, Changyu Dong, Zheli Liu, Ee-Chien Chang, | DISCO: Dynamic Searchable Encryption with Constant State | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2024. 
+  
+ Zhiang Li, Daisuke Mashima, Wen Shei Ong, Ertem Esiner, Zbigniew Kalbarczyk, Ee-Chien Chang, | On Practicality of Using ARM TrustZone Trusted Execution Environment for Securing Programmable Logic Controllers | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2024. 
+  
+ Xiangfu Song, Dong Yin, Jianli Bai, Chanyu Dong, Ee-Chien Chang, | Secret-Shared Shuffle with Malicious Security | , | Network and Distributed System Security Symposium (NDSS), 2024. | ( | presentation video | ). 
+  
+ 2023 
+ S. M. Suhail Hussain, Chen Yaohao, Muhammad M. Roomi, Daisuke Mashima, Ee-Chien Chang, | An open-source framework for publishing/subscribing IEC 61850 R-GOOSE and R-SV, | SoftwareX 23: 101415, 2023. 
+  
+ Muhammad M. Roomi, S. M. Suhail Hussain, Daisuke Mashima, Ee-Chien Chang, Taha Selim Ustun, | Analysis of False Data Injection Attacks Against Automated Control for Parallel Generators in IEC 61850-Based Smart Grid Systems, | IEEE Syst. J. 17(3): 4603-4614, 2023. 
+  
+ S. M. Suhail Hussain, Muhammad M. Roomi, Daisuke Mashima, Ee-Chien Chang, | End-to-End Performance Evaluation of R-SV / R-GOOSE Messages for Wide Area Protection and Control Applications, | IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT), 2023. 
+  
+ Daisuke Mashima, Muhammad M. Roomi, Bennet Ng, Zbigniew Kalberczyk, S. M. Suhail Hussain, Ee-Chien Chang, | Towards Automated Generation of Smart Grid Cyber Range for Cybersecurity Experiments and Training, | 53rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks-Supplemental Volume (DSN-S), 2023. 
+  
+ Han Fang, Kejiang Chen, Yupeng Qiu, Jiayang Liu, Ke Xu, Chengfang Fang, Weiming Zhang, Ee-Chien Chang, | DeNoL: A Few-Shot-Sample-Based Decoupling Noise Layer for Cross-channel Watermarking Robustness | , | ACM International Conference on Multimedia (ACMMM), 2023. 
+  
+ Jianli Bai, Xiangfu Song, Xiaowu Zhang, Qifan Wang, Shujie Cui, Ee-Chien Chang, Giovanni Russello, | Mostree: Malicious Secure Private Decision Tree Evaluation with Sublinear Communication | , | Annual Computer Security Applications Conference (ACSAC), 2023. 
+  
+ Han Fang, Jiyi Zhang, Yupeng Qiu, Ke Xu, Chengfang Fang, Ee-Chien Chang, | href="https://openaccess.thecvf.com/content/ICCV2023/papers/Fang_Tracing_the_Origin_of_Adversarial_Attack_for_Forensic_Investigation_and_ICCV_2023_paper.pdf" - Tracing the Origin of Adversarial Attack for Forensic Investigation and Deterrence | , | International Conference on Computer Vision (ICCV), 2023. ( | arXiv:2301.01218 | ) 
+  
+ Jiyi Zhang, Han Fang, Wesley Joon-Wie Tann, Ke Xu, Chengfang Fang, Ee-Chien Chang, | Mitigating Adversarial Attacks by Distributing Different Copies to Different Users | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2023. ( | arXiv:2111.15160 | ) 
+  
+ Wesley Joon-Wie Tann, Ee-Chien Chang, | Poisoning Online Learning Filters by Shifting on the Move | , | IEEE/IFIP International Conference on Dependable Systems and Network (DSN), 2023. ( | arXiv:2107.12612 | ) 
+  
+ Han Fang, Zhaoyang Jia, Yupeng Qiu, Jiyi Zhang, Weiming Zhang, Ee-Chien Chang, | De-END: Decoder-driven Watermarking Network | , | IEEE Transactions on Multimedia, 25: 7571-7581, 2023. 
+  
+ Han Fang, Yupeng Qiu, Kejiang Chen, Jiyi Zhang, Weiming Zhang, Ee-Chien Chang, | Flow-based Robust Watermarking with Invertible Noise Layer for Black-box Distortions | , | AAAI, 2023. (Code in | Github | ) 
+  
+ Ziqi Yang, Lijin Wang, Da Yang, Jie Wan, Ziming Zhao, Ee-Chien Chang, Fan Zhang, Kui Ren, | Purifier: Defending Data Inference Attacks via Transforming Confidence Scores | , | AAAI, 2023. ( | arXiv:2212.00612 | ) 
+  
+ 2022 
+ Han Fang, Zhaoyang Jia, Zehua Ma, Ee-Chien Chang, Weiming Zhang, | PIMoG: An Effective Screen-shooting Noise-Layer Simulation for Deep-Learning-Based Watermarking Network | ACM International Conference on Multimedia (ACMMM), 2022. (Code in | Github | ). 
+  
+ Sajal Sarkar, Yong Meng Teo, Ee-Chien Chang, | A cybersecurity assessment framework for virtual operational technology in power system automation, | Simulation Modelling Practice and Theory, 2022. 
+  
+ Han Fang, Yupeng Qiu, Guorui Qin, Jiyi Zhang, Kejiang Chen, Weiming Zhang, Ee-Chien Chang, | DP2: Dataset Protection by Data Poisoning, | IEEE Transaction on Dependable and Secure Computing (TDSC), 2022. 
+  
+ Sufatrio, Jan Vykopal, Ee-Chien Chang, | Collaborative Paradigm of Teaching Penetration Testing using Real-World University Applications | , | Australasian Computing Education Conference (ACE), 2022. 
+  
+ Jianli Bai, Xiangfu Song, Shujie Cui, Ee-Chien Chang, Giovanni Russello, | Scalable Private Decision Tree Evaluation with Sublinear Communication | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2022. 
+  
+ Jiyi Zhang, Ee-Chien Chang and Hwee Kuan Lee, | Confusing and Detecting ML Adversarial Attacks with injected Attractors | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2022. 
+  
+ Qin Jiang, Ee-Chien Chang, Yong Qi, Saiyu Qi, Pengfei Wu and Jianfeng Wang, | Rphx: Result Pattern Hiding Conjunctive Query over Private Compressed Index Using Intel SGX, | IEEE Trans. on Information Forensics and Security (TIFS), 2022. 
+  
+ Pengfei Wu, Jianting Ning, Jiamin Shen, Hongbing Wang and Ee-Chien Chang, | Hybrid Trust Multi-Party Computation with Trusted Execution Environment | , | Network and Distributed System Security Symposium (NDSS), 2022. 
+  
+ 2021 
+ Mingyuan Gao, Hung Dang and Ee-Chien Chang, | TEEKAP:Self-Expiring Data Capsule using Trusted Execution Environment | , | Annual Computer Security Applications Conference (ACSAC), 2021. ( | Presentation slides | ). 
+  
+ Jiyi Zhang, Wesley Joon-Wei Tann, Ee-Chien Chang and Hwee Kuan Lee, | Common Component in Black-Boxes is Prone to Attacks | , | European Symposium on Research in Computer Security (ESORICS), 2021. 
+  
+ Wesley Joon-Wei Tann, Jackie Tan Jin Wei, Joanna Purba, Ee-Chien Chang, | Filtering DDoS Attacks from Unlabeled Network Traffic Data Using Online Deep Learning | , 
+ ACM Asia Conference on Computer and Communications Security (ASIACCS) 2021. ( | video | ), (Code in | Github | ). 
+  
+ 2020 
+ Muhammad M Roomi, Rartha P Biswas, Daisuke Mashima, Yuting Fang, Ee-Chien Chang, | False Data Injection Cyber Range of Modernized Substation System | , | IEEE International Conference on Communications, Control and Computing Technologies for Smart Grids (SmartGridComm), 2020. 
+  
+ Jianting Nign, Geong Sen Poh, Xinyi Huang, Robert Deng, Shuwei Cao, Ee-Chien Chang, | href="https://ieeexplore.ieee.org/abstract/document/9165915" - Update Recovery Attacks on Encrypted Database within Two Updates using Range Queries Leakage | , | IEEE Trans. on Dependable and Secure Computing (TDSC), 2020. 
+  
+ Connie Kou, Hwee Kuan Lee, Ee-Chien Chang, Teck Khim Ng, | Enhancing Transformation-Based Defenses Against Adversarial Attacks with a Distribution Classifier | , | International Conference on Learning Representations (ICLR), 2020. 
+  
+ Jan Vykopal, Valdemar Svabensky, Ee-Chien Chang, | Benefits and Pitfalls of Using Capture The Flag Games in University Courses | ACM Technical Symposium on Computer Science Education (SIGCSE), 2020. 
+  
+ 2019 
+ Ziqi Yang, Jiyi Zhang, Ee-Chien Chang, Zhenkai Liang, | Neural Network Inversion in Adversarial Setting via Background Knowledge Alignment | ACM Conference on Computer and Communications Security (CCS), 2019. ( | Code in Github | ) 
+  
+ Jianting Ning, Geong Sen Poh, Jia-Ch'ng Loh, Jason Chia, and Ee-Chien Chang, | PrivDPI: Privacy-Preserving Encrypted Traffic Inspection with Reusable Obfuscated Rules | ACM Conference on Computer and Communications Security (CCS), 2019. 
+  
+ Hung Dang, Dat Le Tien, Ee-Chien Chang, | href="https://www.comp.nus.edu.sg/~hungdang/papers/Kosto.pdf" - Towards a Marketplace for Secure Outsourced Computations | , | European Symposium on Research in Computer Security (ESORICS), 2019. 
+  
+ Hung Dang, Anh Dinh, Dumitrel Loghin, Ee-Chien Chang, Qian Lin, Beng Chin Ooi, | href="https://www.comp.nus.edu.sg/~hungdang/papers/sharding.pdf" - Towards Scaling Blockchain Systems via Sharding | , | ACM SIGMOD International Conference on Management of Data (SIGMOD), 2019. 
+  
+ Jianting Ning, Jia Xu, Kaitai Liang, Fan Zhang and Ee-Chien Chang, | Passive Attacks Against Searchable Encryption | , | IEEE Transactions on Information Forensics and Security, 2019. 
+  
+ 2018 
+ Sajal Sarkar, Anand Agrawal, Yong Meng Teo, and Ee-Chien Chang, | href="https://www.informs-sim.org/wsc18papers/includes/files/208.pdf" - VOTNet: Hybrid Simulation of Virtual Operational Technology Network for Cybersecurity Assessment | , | Winter Simulation Conference, 2018. 
+  
+ Pravein Govindan Kannan, Ahmad Soltani, Mun Choon Chan, and Ee-Chien Chang, | BNV: Enabling Scalable Network Experimentation through Bare-metal Network Virtualization | , | 11th Usenix Workshop on Cyber Security Experimentation and Test (CSET), 2018. 
+  
+ 2017 
+ Hung Dang, Huang Yue, Ee-Chien Chang, | href="https://acmccs.github.io/papers/p119-dangA.pdf" - Evading Classifiers by Morphing in the Dark, | ACM Conference on Computer and Communications Security (CCS), 2017. | (presentation slides) | (video) 
+  
+ L. Ramapantulu, Y.M. Teo and E.C. Chang, | A Conceptual Framework to Federate Testbeds for Cybersecurity | , | Winter Simulation Conference (50th Anniversary), 2017. 
+  
+ T. Baluta, L. Ramapantulu, Y.M. Teo and E.C. Chang, | Modeling the Effects of Insider Threats on Cybersecurity of Complex Systems | , | Winter Simulation Conference (50th Anniversary), 2017. 
+  
+ Hung Dang, Ee-Chien Chang, | href="http://www.comp.nus.edu.sg/~hungdang/papers/PDeDup.pdf" - Privacy-Preserving Data Deduplication on Trusted Processors | , | IEEE CLOUD, 2017. 
+  
+ Pravein Govindan Kannan, Mun Choon Chan, Richard T.B. Ma and Ee-Chien Chang, | Raptor: Scalable Rule Placement over Multiple Path in Software Defined Networks | , | IFIP Networking, 2017. 
+  
+ Hung Dang, Erick Purwanto, Ee-Chien Chang, | Proofs of Data Residency: Checking whether Your Cloud Files Have Been Relocated, | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2017. | (presentation slides) 
+  
+ Hung Dang, Tien Tuan Anh Dinh, Ee-Chien Chang, Beng Chin Ooi, | Privacy-preserving computation with trusted computing via Scramble-then-Compute, | PETS, 2017. 
+  
+ 2016 
+ Hung Dang, Yun Long Chong, Francois Brun, Ee-Chien Chang, | Practical and Scalable Sharing of Encrypted Data in Cloud Storage with Key Aggregation, | Information Hiding and Multimedia Security (IH&MMSEC), 2016. | (presentation slides) 
+  
+ Minoru Kuribayashi, Ee-Chien Chang and Nobuo Funabiki, | Watermarking with Fixed Decoder for Aesthetic 2D Barcode | , | IWDW, 2016. 
+  
+ Paramasiven Appavoo, Mun Choon Chan, Anand Bhojan, Ee-Chien Chang, | Efficient and privacy-preserving access to sensor data for Internet of Things (IoT) based services | , | International Conference on Communication Systems and Networks (COMSNETS), 2016. 
+  
+ 2015 
+ Hung Dang and Ee-Chien Chang, | PrAd: Enabling Privacy-Aware Location based Advertising | , | Workshop on Privacy in Geographic Information Collection and Analysis, 2015. 
+  
+ Tien Tuan Anh Dinh, Prateek Saxena, Ee-Chien Chang, Beng Chin Ooi, Chunwang Zhang, | M2R: Enabling Stronger Privacy in MapReduce Computation, | USENIX Secuity, 2015, | (presentation slides). 
+  
+ 2014 
+ Chengfang fang and Ee-Chien Chang, | Optimal strategy of coupong subset collection when each package contains half of the coupons | , | Information Processing Letters, Volume 114, Issue 12, p703-705, December 2014. | Publisher link. 
+  
+ Chunwang Zhang and Ee-Chien Chang, | Processing of Mixed-Sensitivity Video Surveillance Streams on Hybrid Clouds | , | IEEE CLOUD, 2014, | (presentation slides). 
+  
+ Chengfang fang and Ee-Chien Chang, | Differential Privacy with delta-Neighbourhood for Spatial and Dynamic Datasets | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2014, | (presentation slides). 
+  
+ Chunwang Zhang, Ee-Chien Chang and Roland H.C. Yap, | Tagged-MapReduce: A General Framework for Secure Computing with Mixed-Sensitivity Data on Hybrid Clouds | , | IEEE/ACM International Sym. on Cluster, Cloud and Grid Computing (CCGrid), 2014. 
+  
+ Chengfang Fang, Chunwang Zhang and Ee-Chien Chang, | An optimization model for aesthetic two-dimensional barcodes, | International Conference on MultiMedia Modeling(MMM), 2014, | (presentation slides). 
+  
+ 2013 
+ Jia Xu, Ee-Chien Chang and Jianying Zhou, | Weak Leakage-Resilient Client-side Deduplication of Encrypted Data in Cloud Storage | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2013. 
+  
+ 2012 
+ Bhojan Anand, Lee Kee Chong, Ee-Chien Chang, Mun Choon Chan, Akhihebbal L. Ananda and Wei Tsang Ooi, | El-pincel - A Painter Cloud Service for Greener Web Pages | , | ACM Multimedia (ACMMM), 2012. 
+  
+ Bijit Hore, Ee-Chien Chang, Mamadou H. Diallo and Sharad Mehrotra, | Indexing Encrypted Documents for Supporting Efficient Keyword Search, | Secure Data Management Workshop (SDM), 2012. 
+  
+ Chunwang Zhang, Junjie Jin, Ee-Chien Chang and Sharad Mehrotra, | Secure Quasi-Realtime Collaborative Editing over Low-Cost Storage Services, | Secure Data Management Workshop (SDM), 2012, | (presentation slides). 
+  
+ Mamadou H. Diallo, Bijit Hore, Ee-Chien Chang, Sharad Mehrotra and Nalini Venkatasubramanian, | CloudProtect: Managing Data Privacy in Cloud Applications, | IEEE CLOUD 2012. 
+  
+ Chengfang Fang and Ee-Chien Chang, | Adaptive Differentially Private Histogram of Low-Dimensional Data | , | PETS, 2012. | (presentation slides). 
+  
+ Jia Xu and Ee-Chien Chang, | Towards Efficient Proofs of Retrievability | , | ACM Asia Conference on Computer and Communications Security (ASIACCS), 2012, | (presentation slides). 
+  
+ 2011 
+ Chengfang Fang, Qiming Li and Ee-Chien Chang, | Identity Leakage Mitigation in Asymmetric Secure Sketches, | International Joint Conference on Biometrics (IJCB), 2011. 
+  
+ Qiming Li, Bilgehan Sahin, Ee-Chien Chang and Vrizlynn L.L. Thing, | Content Based JPEG Fragmentation Point Detection, | ICME, 2011. 
+  
+ 2010 
+ Chengfang Fang and Ee-Chien Chang, 
+ Securing Interactive Sessions Using Mobile Device through Visual Channel and Visual Inspection | , | Annual Computer Security Applications Conference (ACSAC), 2010, | (presentation slides). 
+  
+ Ee-Chien Chang, Chenfang Fang and Jia Xu, | A Chameleon Encryption Scheme Resistant to Known-Plaintext Attack | , | ACM-DRM 2010. 
+  
+ Ee-Chien Chang, Liming Lu, Yongzheng Wu, Roland Hock Chuan Yap, and Jie Yu, | Enhancing Host Security using External Environment Sensors, | SecureComm, 2010. 
+  
+ Liming Lu, Ee-Chien Chang and Mun Choon Chan, | Website Fingerprinting and Identification using Ordered Feature Sequences, | ESORICS 2010. 
+  
+ Vrizlynn L.L. Thing, Kian-Yong Ng and Ee-Chien Chang, | Live Memory Forensics of Mobile Phones, | Digital Forensics Research Conference (DFRWS), 2010. 
+  
+ Chengfang Fang, Qiming Li and Ee-Chien Chang, | Secure Sketch for Multiple Secrets, | ACNS 2010. 
+  
+ Fai Cheong Choo, Mun Choon Chan and Ee-Chien Chang, | Robustness of DTN against Routing Attacks, | COMSNETS 2010. 
+  
+ 2009 
+ Jie Yu, Chengfang Fang, Jia Xu, Ee-Chien Chang and Zhoujun Li, | ID Repetition in Kad, | International Conference on Peer-to-Peer Computing (P2P'09), 2009. 
+  
+ Ee-Chien Chang, Chee Liang Lim and Jia Xu, | Short Redactable Signatures Using Random Trees, | CT-RSA, 2009 | (presentation slides) 
+  
+ Hang Yu, Ee-Chien Chang, Wei Tsang Ooi, Mun Choon Chan and Wei Chang, | Integrated Optimization of Video Server Resource and Streaming Quality over Best-effort Network, | IEEE trans. on Circuits and Systems for Video Technology, page 374-385, March 2009. 
+  
+ 2008 
+ Ee-Chien Chang and Jia Xu, | Remote Integrity Check with Dishonest Storage Server, | 13th European Symposium on Research in Computer Security (ESORICS), 2008. | Extended version in eprint. 
+  
+ Qiming Li, Muchuan Guo and Ee-Chien Chang, | Fuzzy Extractors for Asymmetric Biometric Representation, | IEEE Workshop on Biometrics (In association with CVPR), 2008. 
+  
+ Chengfang Fang and Ee-Chien Chang, | Information Leakage in Optimal Anonymized and Diversified Data, | Information Hiding 2008. 
+  
+ Nicholas Ho and Ee-Chien Chang, | Residual Information of Redacted Images Hidden in the Compression Artifacts, | Information Hiding 2008. | (presentation slides) 
+  
+ Liming Lu, Mun Choon Chan and Ee-Chien Chang, | A General Model of Probabilistic Packet Marking for IP traceback | ACM Sym on Information, Computer & Communication Security (ASIACCS), 2008. 
+  
+ 2007 
+ Ee-Chien Chang and Sujoy Roy, | Robust Extraction of Secret Bits from Minutiae, | International Conference on Biometrics (ICB), 2007, ( | Oral presentation. Acceptance rate: 33/303 | ), | (presentation slides) | . 
+  
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang, | Detecting Digital Image Forgeries by Measuring Inconsistencies of Blocking Artifact, | IEEE International Conference on Multimedia and Expo (ICME), 2007. 
+  
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang, | Statistics and Spatiality based Feature Distance Measure for Error Resilient Image Authentication, | LNCS Transactions on Data Hiding and Multimedia Security. 
+  
+ Ratna Dutta, Ee-Chien Chang and Sourav Mukhopadhyay, | Efficient Self-Healing Key Distribution with Revocation for Wireless Sensor Networks using One Way Key Chains, | Applied Cryptography and Netwrok Security (ACNS), 2007 ( | Acceptance rate: 31 / 260 | ). 
+  
+ 2006 
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang, | Error Resilient Image Authentication Using Feature Statistical and Spatial Properties | , | 5th International Workshop on Digital Watermarking, (IWDW), p461-472, 2006. 
+  
+ Qiming Li and Ee-Chien Chang, | Robust, Short and Sensitive Authentication Tags Using Secure Sketch | , | 8th ACM Multimedia and Security Workshop, Sep 2006. 
+  
+ Qiming Li and Ee-Chien Chang, | Zero-Knowledge Watermark Detection Resistant to Ambiguity Attacks | , | 8th ACM Multimedia and Security Workshop, Sep 2006. 
+  
+ Mun Choon Chan and Ee-Chien Chang and Liming Lu and Peng Song Ngiam, | Effect of Malicious Synchronization | , | 4th International Conference on Applied Cryptography and Network Security (ACNS), Jun 2006, ( | Acceptance rate: 33 / 218 | ). 
+  
+ Ee-Chien Chang, Qiming Li, | Hiding Secret Points Amidst Chaff | , | EUROCRYPT, 2006, ( | Acceptance rate: 33 / 198 | ). 
+  
+ Ee-Chien Chang, Ren Shen, and Francis Weijian Teo, | Finding the Original Point Set Hidden among Chaff | , | ACM Sym on Information, Computer and Communications Security (ASIACCS), 2006, ( | Acceptance rate: 33 / 186 | ), | (presentation slides). 
+  
+ 2005 
+ Sujoy Roy, Ee-Chien Chang, | A Unified Framework for Resolving Ambiguity in Copy Detection | , | 13th ACM Multimedia (MM 2005), 2005, ( | Acceptance rate: 49 / 312 | ). 
+  
+ Hang Yu, Ee-Chien Chang, Zhiyong Huang and Zhijian Zheng, | Fast Rendering of Foveated Volumes in Wavelet-based Representation, | 13th Pacific Conference on Computer Graphics and Applications, 2005, ( | Acceptance rate: 37 / 267 | ). 
+  
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang, | Error resilient content-based image authentication over wireless channel, | IEEE Intern. Sym. on Circuits and Systems (ISCAS), 2005. 
+  
+ Shuiming Ye, Ee-Chien Chang and Qibin Sun, | href="http://scholar.google.com/url?sa=U&q=http://www.ee.columbia.edu/%7Eqibin/papers/qibin2005_icme_5.pdf" - Watermarking based Image Authentication using Feature Amplification, | International Conference on Multimedia and Expo (ICME), 2005. 
+  
+ Hui Huang Lee, Ee-Chien Chang and Mun Choon Chan, | Pervasive Random Beacon in the Internet for Covert Coordination | , | 7th International Workshop on Information Hiding (IH 2005), 2005, ( | Acceptance rate: 28 / 90 | ). 
+  
+ Ee-Chien Chang, Sung Woo Chio, DoYong Kwon, Hyungju Park and Chee K. Yap, | Shortest Path amidst Disc Obstacles is Computable, | 21st Symposium on Computational Geometry, 2005, ( | Acceptance rate: 41 / 139 | ). | Journal Version appeared in the Internataionl Journal of Computational Geometry and Applications, volume 16, number 5-6, pg 567-590, Dec 2006. 
+  
+ Qiming Li, Ee-Chien Chang and Mun Choon Chan, | On the Effectiveness of DDoS Attacks on Statistical Filtering, | IEEE INFOCOM 2005, ( | Acceptance rate: 252 / 1400 | ). 
+  
+ 2004 
+ Hang Yu, Vu Thanh Nguyen and Ee-Chien Chang, | Rotation of foveated image in the wavelet domain, | IEEE International Conference on Image Processing, 2004. 
+  
+ Sujoy Roy and Ee-Chien Chang, | Watermarking Color Histogram, | IEEE International Conference on Image Processing (ICIP), 2004. 
+  
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang, | Edge directed filter based error concealment for Wavelet-based image, | IEEE International Conference on Image Processing (ICIP), 2004. 
+  
+ Qiming Li, Ee-Chien Chang, | On the Possibility of Non-Invertible Watermarking Schemes, | 6th International Workshop on Information Hiding (IH 2004), 2004, ( | Acceptance rate: 25 / 70 | ). 
+  
+ Vu Thanh Nguyen, Ee-Chien Chang and Wei Tsang Ooi, | Layered Coding with good allocation outperforms Multiple Description coding over multiple paths, | International Confernce on Multimedia and Expo (ICME), 2004. 
+  
+ Shuiming Ye, Qibin Sun and Ee-Chien Chang. | Error Concealment for JPEG2000 Images Based on Orthogonal Edge Directed Filters | International Confernce on Multimedia and Expo (ICME), 2004. 
+  
+ Sujoy Roy and Ee-Chien Chang, | Watermarking with Retrieval Systems, | ACM Multimedia Systems, volume 9, number 5, pp 433-440, March 2004. | ( | Short version | appeared in Workshop on Multimedia and Security at ACM MM 2002). 
+  
+ Xianfeng Yang, Qi Tian and Ee-Chien Chang, | A color fingerprint of video shot for content identification, | ACM Multimedia, page 276-279, 2004. 
+  
+ Pradeep K. Atrey, W. Yan, Ee-Chien Chang and Mohan S. Kankanhalli, | Hierarchical Signature Scheme for Robust Video Authentication using Secret Sharing, | 10th International Multimedia Modelling Conference (MMM2004), 5-7 January 2004. 
+  
+ 2003 
+ Qiming Li and Ee-Chien Chang, | Public Watermark Detection using Multiple Proxies and Secret Sharing, | 2nd International Workshop on Digital Watermarking (IWDW2003), pp. 558-569,2003. 
+  
+ Ping Gao, Ee-Chien Chang and Lonce Wyse, | Blind Separation of Fetal ECG from Singale Mixture using SVD and ICA | , | 4th Int. Conf. on Information, Communications & Signal Processing and 4th Pacific-Rim Conf. on Multimedia (ICICS-PCM 2003). | Presentation slides. 
+  
+ Hang Yu and Ee-Chien Chang, | Distributed Multivariate Regression Based on Influential Observations | , | 9th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2003, page 679-684. 
+  
+ Sujoy Roy and Ee-Chien Chang, | Watermarking with knowledge of images database, | IEEE International Conference on Image Processing (ICIP), 2003. 
+  
+ Ee-Chien Chang, Mohan S. Kankanhalli, Xin Guan, Zhiyong Huang and Yinghui Wu, | Image authentication using content based compression, | ACM Multimedia Systems, August 2003, page 121-130. 
+  
+ Shuming Ye, Zhicheng. Zhou, Qibin Sun, Ee-Chien Chang and Qi Tian, | A quantization-based image authentication system, | 4th Pacific Rim confernece on Multimedia (PCM), 2003. 
+  
+ 2002 and before 
+ Qiming Li, Ee-Chien Chang, | Security of public watermarking schemes for binary sequences, | 5th International Workshop on Information Hiding 2002, (IH 2002), pp 119-128. 
+  
+ Harold Stone, Michael Orchard, Ee-Chien Chang and Stephen Martucci, | A Fast Direct Fourier-Based Algorithm for Subpixel Registration of Images | , | IEEE Trans. on Geoscience and Remote Sensing, Volume 39,issue 10, Oct 2001, pages 2235-2243. 
+  
+ Mohan S.Kankanhalli, Ee-Chien Chang, Xin Guan, Zhiyong Huang and Yinghui Wu, | Authentication of Volume Data | IEEE Visualization 2001 (Work in Progress) . 
+  
+ M.S.Kankanhalli, E.C.Chang, X.Guan, Z. Huang and Y. Wu, | Authentication of Volume Data Using Wavelet-Based Foveation. | In J A Jorge, N M Correia, H Jones and M B Kamegai (eds.) Multimedia 2001, Springer-Verlag/Wien, ISBN 3-211-83769-9 page 119-130, 2002. | (also appear in EG Multimedia 2001 Workshop, 8-10 September 2001, Manchester, United Kingdom.) 
+  
+ Ee-Chien Chang and Chee Yap, | Competitive Online Scheduling with Level of Services | Journel of Scheduling. An | extended abstract | appeared in COCOON 2001, | (presentation slides). 
+  
+ Ee-Chien Chang, Stephane Mallat and Chee Yap, | Wavelet Foveation | , | J. Applied and Computational Harmonic Analysis, volume 9, number 3, October 2000, pages 312-335. 
+  
+ Ee-Chien Chang and Michael Orchard, | Geometric Properties of Watermarking Schemes, | IEEE International Conference on Image Processing, September 2000, vol 3 page 714. 
+  
+ Harold Stone, Michael Orchard and Ee-Chien Chang, | Subpixel Registration of Images | , | 33rd Asilomar Conference on Signals, Systems, and Computers, October 1999. 
+  
+ Ee-Chien Chang, and Chee Yap, | A simultaneous search problem | , | Algorithmica, 26:2, pages 255-262, February 2000. | href="http://link.springer.de/link/service/journals/00453/papers/0026002/00260255.pdf" - (link via Algorithmica) 
+  
+ Ee-Chien Chang, | Foveation Techniques and Scheduling Issues in Thinwire Visualization | , | PhD thesis, 1998, Courant Institute, New York University, May 1998, | Abstract | . 
+  
+ Ee-Chien Chang, Chee Yap, and T.-J Yen, | Realtime Visualization of Large Images over a Thinwire | , | IEEE Visualization '97 (Late Breaking Hot Topics). 
+  
+ Ee-Chien Chang, and Chee Yap, | A Wavelet Approach to Foveating Images | , | 13th ACM Symposium on Computational Geometry, 1997, (short communication). | Long version 
+  
+ Chee Yap, and Ee-Chien Chang, | Issues in the Metrology of Geometric Tolerancing | , | In J.-P.Laumond and M. Overmars, editor, Proc. 1996 Workshop on Algorithmic Robotics, edited by M.Overmars, A K Peters, 1997 
+  
+ Ee-Chien Chang, and Chee Yap, | Improved deterministic time simulation of nondeterministic space for small space: a note | , | Information Processing Letter, 55 (1995) 155-157. 
+  
+ W.Xu, E.C.Chang, L.K.Kwoh, H.Lim, and A.Heng, | Phase-unwrapping of SAR Interferogram with Multi-frequency or Multi-baseline | , | Proceed. Int. Geoscience and Remote Sensing Symposium, 1994, pp 730-732. 
+  
+ L.K.Kwoh, E.C.Chang, A.Heng, and H.Lim, | DTM Generation from 35-day Repeat Pass ERS-1 Interferometry | , | Proc. Int. Geoscience and Remote Sensing Symposium, 1994, pp 2288-2290. 
+  
+ E.C.Chang, W.Wang, and M.S.Kankanhalli, | Multidimensional on-line bin-packing: An algorithm and its average-case analysis | , | Information Processing Lette , 48 (1993) 121-12 . 
+  
+ Ee-Chien Chang, | Probabilistic analysis and parallelization of bin-packing algorithms | , | Master's thesis, Institute of Systems Science, National University of Singapore, 1993. 
+  
+ Patents 
+ Method for subpixel registration of images, Sep 2003, US patent number 6,628,845. 
+ Server apparatus for providing a realtime visualization of at least one image, Aug 2003, US patent number 6,606,655. 
+ Apparatus for providing a realtime visualization of at least one image, Jul 2003, US patent number 6,594,687. 
+ Apparatus and method for realtime visualization using user-defined dynmaic, multi-foveated images, Jan 2001 US patent number 6,182,114, (link to | US Patent Office | ). 
+ Misc Talk 
+ Ee-Chien Chang, | Enigma and Bombe: how they encrypt and how they decipher in WWII without computer | , | NUS Greyhats Security Wednesday, 2021. | Presented this in a few occasions | . 
+ Misc writeup 
+ E.C.Chang and C.Yap, | Range searching: reporting of all minimal points | . | Abstract | . 
+ E.C.Chang,Visualization of Large images across Thinwire (thesis proposal) | .
+

@@ -1,0 +1,33 @@
+```json
+{
+  "Conference dates": "April 23 - 25, 2025",
+  "Year": "2025",
+  "Location": "Trieste, Italy",
+  "City-State-Province": "Trieste",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "November 1, 2024",
+    "EvoApps Special Session Proposals": "September 8, 2024"
+  },
+  "Notification Date": {
+    "Notification to authors": "January 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready submission": "January 24, 2025"
+  },
+  "Registration Date": {
+    "Author's mandatory registration": "February 26, 2025",
+    "Early registration deadline": "March 19, 2025"
+  },
+  "Other Date": {
+    "Late-Breaking Abstracts submission": "April 13, 2025",
+    "EvoStar Conference": "April 23-25, 2025"
+  },
+  "Topics": "Genetic Programming, Algorithms, Representations, Operators for GP, Applications of GP, Tree-based GP, Linear GP, Graph-based GP, Grammar-based GP, Theoretical Developments, GP Performance, GP Behavior, Benchmarking, Multiple Populations, Coevolution, Modularity in GP, Multi-objective GP, Explainability and Interpretability in GP, Genetic Improvement Programming, GP for Software Engineering, GP for Continuous Control, Evolutionary Robotics, Evolutionary Design, Evolvable Hardware, Parallel GP, Unconventional GP, Hybridization of GP with Other Methods",
+  "Publisher": "Springer Nature",
+  "Summary": "The 28th European Conference on Genetic Programming (EuroGP 2025) will take place in Trieste, Italy, from April 23-25, 2025, as part of EvoStar. EuroGP is the premier annual conference on Genetic Programming (GP), attracting participants from all continents and offering excellent opportunities for networking and exchange of ideas.",
+  "Call for Papers": "# EuroGP 2025: Call for Papers\n\nThe 28th European Conference on Genetic Programming (EuroGP 2025) will take place in **Trieste, Italy, from April 23-25, 2025**, as part of EvoStar.\n\nEuroGP is the premier annual conference on Genetic Programming (GP).\n\n## Areas of Interest and Contributions\n\nTopics to be covered include, but are not limited to:\n\n*   Algorithms, representations, and operators for GP\n*   Innovative applications of GP\n*   Tree-based, linear, graph-based, and grammar-based GP\n*   Theoretical developments\n*   GP performance, behavior, and benchmarking\n*   Multiple populations, coevolution, and modularity in GP\n*   Multi-objective GP\n*   Explainability and interpretability in GP\n*   Genetic improvement programming\n*   GP for software engineering\n*   GP for continuous control and evolutionary robotics\n*   Evolutionary design\n*   Evolvable hardware\n*   Parallel GP\n*   Unconventional GP\n*   Hybridization of GP with other methods\n\n## Submission Details\n\nAccepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Submissions must be original and not published elsewhere. They will be peer-reviewed by at least three members of the program committee. The reviewing process will be double-blind, so please omit information about the authors in the submitted paper.\n\n## Important Dates\n\n*   **EvoApps Special Session Proposals:** September 8, 2024\n*   **Submission deadline:** November 15, 2024 AoE (extended)\n*   **Notification to authors:** January 10, 2025\n*   **Camera-ready submission:** January 24, 2025\n*   **Author's mandatory registration:** February 26, 2025\n*   **Early registration deadline:** March 19, 2025\n*   **Late-Breaking Abstracts submission deadline:** April 13, 2025\n*   **EvoStar Conference:** April 23-25, 2025\n\n## Conference Chairs\n\n*   Bing Xue | Victoria University of Wellington, New Zealand | bing.xue(at)vuw.ac.nz\n*   Luca Manzoni | Università degli studi di Trieste, Italy | lmanzoni(at)units.it\n\n## Publication Chair\n\n*   Illya Bakurov | Michigan State University, USA"
+}
+```

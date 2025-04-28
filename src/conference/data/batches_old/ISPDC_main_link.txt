@@ -1,0 +1,132 @@
+Conference ISPDC:
+
+Skip to contenthref="/" - ISPDC 2025
+
+        The 24th International Symposium on Parallel and Distributed Computing, Rennes, France 
+ Skip to content 
+ href="https://ispdc2025.inria.fr/" - ISPDC 2025 
+ href="https://ispdc2025.inria.fr/call-for-papers/" - Call For Papers 
+ href="https://ispdc2025.inria.fr/people/" - People 
+ href="https://ispdc2025.inria.fr/program/" - Program 
+ href="https://ispdc2025.inria.fr/keynote-speakers/" - Keynote Speakers 
+ href="https://ispdc2025.inria.fr/author-area/" - Author Area | href="https://ispdc2025.inria.fr/author-area/paper-submission/" - Paper Submission 
+ href="https://ispdc2025.inria.fr/author-area/camera-ready/" - Camera Ready 
+ href="https://ispdc2025.inria.fr/registration/" - Registration 
+ href="https://ispdc2025.inria.fr/venue/" - Venue | href="https://ispdc2025.inria.fr/venue/accomodation/" - Accomodation 
+ href="https://ispdc2025.inria.fr/venue/social-event/" - Social Event 
+ href="https://ispdc2025.inria.fr/venue/conference-dinner/" - Conference Dinner 
+ href="https://ispdc2025.inria.fr/past-editions/" - Past Editions 
+ The 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) 
+ July 08-11, 2025 
+ Rennes, France 
+ Nowadays applications generate enormous datasets that are continuously increasing exponentially in both complexity and volume, making their analysis, archival, and sharing one of the grand challenges of modern big data analytics. Supported by the rise of artificial intelligence and deep learning, such enormous datasets are becoming valuable resources even beyond their original scope, opening new opportunities to learn patterns and extract new knowledge at large scale, potentially without human intervention. However, this leads to an increasing complexity of the workflows that combine traditional HPC simulations with big data analytics and AI applications. Thus, modern scientific applications need to be integrated into an entire Compute Continuum from the edge all the way to supercomputers and large data-centers using flexible infrastructures and middlewares. In this context, the rise of new opportunities in AI, networking, edge computing, and IoT opens up new avenues for scientific exploration while simultaneously challenging our understanding of infrastructure’s role and structure. ISPDC welcomes contributions focused on the efficient support for processing across such a Computing Continuum, with a focus on approaches enabling the community to share repeatable digital artifacts, facilitating the replication of experiments, trustworthiness and explainability of AI models and driving further innovation. 
+ Following very successful previous editions held in different venues since 2002, the 24th ISPDC conference will be hosted by Inria in the city of Rennes, France. The ISPDC 2025 conference aims at presenting original and unpublished research that will target state-of-the-art as well as emerging topics pertaining to the field of Parallel and Distributed Computing paradigms and applications. Parallel and Distributed Computing is an important research area today and has a strong contribution to the advancements in science, engineering, and society at large. Its evolution is characterised by the continuous development of new approaches in the modeling, design, analysis, evaluation, and programming of parallel and distributed computing applications and systems. 
+ The goal of the 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) is to bring together researchers, engineers, and practitioners for the purpose of sharing their experiences in the development of new algorithms, applications, architectures for parallel and distributed computing, as well as modeling and simulation, visualisation, and data analytics. 
+ We cordially invite you to submit your contribution to the 24th ISPDC conference, considering (but not limited to) the following area of interests: 
+ Efficient Support for the Computing Continuum (combining HPC, Cloud and Edge Computing) 
+ Complex Workflows at the Intersection of HPC, Big Data, AI and Quantum Computing 
+ Reproducibility, Explainability, Trustworthiness of Complex Workflows 
+ Machine Learning (ML) for Systems and Systems for ML 
+ Efficient Support for Federated Learning 
+ Algorithms and Models for Large Scale Applications 
+ Architectures and Environments for Parallel and Distributed Computing 
+ Performance Modeling, Analysis and Evaluation for Parallel and Distributed Systems 
+ Security and Privacy in Parallel and Distributed Systems 
+ Blockchain and Distributed Ledgers 
+ Mobile and Embedded Computing 
+ Applications and Use-Cases in HPC, Big Data, AI and Quantum Computing 
+ Comments are closed. 
+ Important Dates | AbstractsApril 11, 2025PapersApril 18, 2025NotificationsMay 30, 2025Camera readyJune 27, 2025ConferenceJuly 8-11, 2025All deadlines are anywhere on earth (AoE). 
+ Search for:Search 
+ Powered byNirvana&WordPress.Mentions légales&CGU&Politique de confidentialité&CookiesNous utilisons des cookies pour vous offrir la meilleure expérience sur notre site. 
+ You can find out more about which cookies we are using or switch them off insettings. 
+ AcceptRejectSettingsChange Cookie settingsClose GDPR Cookie SettingsPrivacy Overview 
+ Strictly Necessary Cookies 
+ Powered byGDPR Cookie CompliancePrivacy OverviewThis website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful. 
+ Strictly Necessary CookiesStrictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings. 
+ Enable or Disable CookiesIf you disable this cookie, we will not be able to save your preferences. This means that every time you visit this website you will need to enable or disable cookies again. 
+ Enable AllSave Settings 
+
+Call for Papers information:
+Skip to contenthref="/" - ISPDC 2025
+
+        The 24th International Symposium on Parallel and Distributed Computing, Rennes, France 
+ Skip to content 
+ href="https://ispdc2025.inria.fr/" - ISPDC 2025 
+ href="https://ispdc2025.inria.fr/call-for-papers/" - Call For Papers 
+ href="https://ispdc2025.inria.fr/people/" - People 
+ href="https://ispdc2025.inria.fr/program/" - Program 
+ href="https://ispdc2025.inria.fr/keynote-speakers/" - Keynote Speakers 
+ href="https://ispdc2025.inria.fr/author-area/" - Author Area | href="https://ispdc2025.inria.fr/author-area/paper-submission/" - Paper Submission 
+ href="https://ispdc2025.inria.fr/author-area/camera-ready/" - Camera Ready 
+ href="https://ispdc2025.inria.fr/registration/" - Registration 
+ href="https://ispdc2025.inria.fr/venue/" - Venue | href="https://ispdc2025.inria.fr/venue/accomodation/" - Accomodation 
+ href="https://ispdc2025.inria.fr/venue/social-event/" - Social Event 
+ href="https://ispdc2025.inria.fr/venue/conference-dinner/" - Conference Dinner 
+ href="https://ispdc2025.inria.fr/past-editions/" - Past Editions 
+ href="https://ispdc2025.inria.fr" - Home
+Call For Papers 
+ Call For Papers 
+ We solicit two types of original research contributions: full papers and short / work in progress papers, which should be indicated in the paper title by [Full] or [Short]. All accepted papers (full and short) will be published in the conference proceedings (IEEE pending application). 
+ Manuscripts must be submitted by the submission deadline; full paper manuscripts may not exceed eight (8) and short paper manuscripts may not exceed five (5) single-spaced double-column pages using 10-point size font on 8.5×11 inch pages (IEEE conference style), including figures, tables, and references. The submitted manuscripts should include author names and affiliations. 
+ Files should be submitted by following the instructions above. All submissions are handled through the EasyChair platform. 
+ Accepted papers will be part of the ISPDC 2025 conference proceedings which will be submitted for inclusion into IEEE Xplore (pending application) subject to meeting IEEE Xplore’s scope and quality requirements. To be published in the ISPDC 2025 Conference Proceedings and to be eligible for publication in IEEE Xplore, an author of an accepted paper is required to register for the conference at the full rate and the paper must be presented by an author of that paper at the conference. 
+ Comments are closed. 
+ Important Dates | AbstractsApril 11, 2025PapersApril 18, 2025NotificationsMay 30, 2025Camera readyJune 27, 2025ConferenceJuly 8-11, 2025All deadlines are anywhere on earth (AoE). 
+ Search for:Search 
+ Powered byNirvana&WordPress.Mentions légales&CGU&Politique de confidentialité&CookiesNous utilisons des cookies pour vous offrir la meilleure expérience sur notre site. 
+ You can find out more about which cookies we are using or switch them off insettings. 
+ AcceptRejectSettingsChange Cookie settingsClose GDPR Cookie SettingsPrivacy Overview 
+ Strictly Necessary Cookies 
+ Powered byGDPR Cookie CompliancePrivacy OverviewThis website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful. 
+ Strictly Necessary CookiesStrictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings. 
+ Enable or Disable CookiesIf you disable this cookie, we will not be able to save your preferences. This means that every time you visit this website you will need to enable or disable cookies again. 
+ Enable AllSave Settings 
+
+Important Dates information:
+Skip to contenthref="/" - ISPDC 2025
+
+        The 24th International Symposium on Parallel and Distributed Computing, Rennes, France 
+ Skip to content 
+ href="https://ispdc2025.inria.fr/" - ISPDC 2025 
+ href="https://ispdc2025.inria.fr/call-for-papers/" - Call For Papers 
+ href="https://ispdc2025.inria.fr/people/" - People 
+ href="https://ispdc2025.inria.fr/program/" - Program 
+ href="https://ispdc2025.inria.fr/keynote-speakers/" - Keynote Speakers 
+ href="https://ispdc2025.inria.fr/author-area/" - Author Area | href="https://ispdc2025.inria.fr/author-area/paper-submission/" - Paper Submission 
+ href="https://ispdc2025.inria.fr/author-area/camera-ready/" - Camera Ready 
+ href="https://ispdc2025.inria.fr/registration/" - Registration 
+ href="https://ispdc2025.inria.fr/venue/" - Venue | href="https://ispdc2025.inria.fr/venue/accomodation/" - Accomodation 
+ href="https://ispdc2025.inria.fr/venue/social-event/" - Social Event 
+ href="https://ispdc2025.inria.fr/venue/conference-dinner/" - Conference Dinner 
+ href="https://ispdc2025.inria.fr/past-editions/" - Past Editions 
+ The 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) 
+ July 08-11, 2025 
+ Rennes, France 
+ Nowadays applications generate enormous datasets that are continuously increasing exponentially in both complexity and volume, making their analysis, archival, and sharing one of the grand challenges of modern big data analytics. Supported by the rise of artificial intelligence and deep learning, such enormous datasets are becoming valuable resources even beyond their original scope, opening new opportunities to learn patterns and extract new knowledge at large scale, potentially without human intervention. However, this leads to an increasing complexity of the workflows that combine traditional HPC simulations with big data analytics and AI applications. Thus, modern scientific applications need to be integrated into an entire Compute Continuum from the edge all the way to supercomputers and large data-centers using flexible infrastructures and middlewares. In this context, the rise of new opportunities in AI, networking, edge computing, and IoT opens up new avenues for scientific exploration while simultaneously challenging our understanding of infrastructure’s role and structure. ISPDC welcomes contributions focused on the efficient support for processing across such a Computing Continuum, with a focus on approaches enabling the community to share repeatable digital artifacts, facilitating the replication of experiments, trustworthiness and explainability of AI models and driving further innovation. 
+ Following very successful previous editions held in different venues since 2002, the 24th ISPDC conference will be hosted by Inria in the city of Rennes, France. The ISPDC 2025 conference aims at presenting original and unpublished research that will target state-of-the-art as well as emerging topics pertaining to the field of Parallel and Distributed Computing paradigms and applications. Parallel and Distributed Computing is an important research area today and has a strong contribution to the advancements in science, engineering, and society at large. Its evolution is characterised by the continuous development of new approaches in the modeling, design, analysis, evaluation, and programming of parallel and distributed computing applications and systems. 
+ The goal of the 24th International Symposium on Parallel and Distributed Computing (ISPDC 2025) is to bring together researchers, engineers, and practitioners for the purpose of sharing their experiences in the development of new algorithms, applications, architectures for parallel and distributed computing, as well as modeling and simulation, visualisation, and data analytics. 
+ We cordially invite you to submit your contribution to the 24th ISPDC conference, considering (but not limited to) the following area of interests: 
+ Efficient Support for the Computing Continuum (combining HPC, Cloud and Edge Computing) 
+ Complex Workflows at the Intersection of HPC, Big Data, AI and Quantum Computing 
+ Reproducibility, Explainability, Trustworthiness of Complex Workflows 
+ Machine Learning (ML) for Systems and Systems for ML 
+ Efficient Support for Federated Learning 
+ Algorithms and Models for Large Scale Applications 
+ Architectures and Environments for Parallel and Distributed Computing 
+ Performance Modeling, Analysis and Evaluation for Parallel and Distributed Systems 
+ Security and Privacy in Parallel and Distributed Systems 
+ Blockchain and Distributed Ledgers 
+ Mobile and Embedded Computing 
+ Applications and Use-Cases in HPC, Big Data, AI and Quantum Computing 
+ Comments are closed. 
+ Important Dates | AbstractsApril 11, 2025PapersApril 18, 2025NotificationsMay 30, 2025Camera readyJune 27, 2025ConferenceJuly 8-11, 2025All deadlines are anywhere on earth (AoE). 
+ Search for:Search 
+ Powered byNirvana&WordPress.Mentions légales&CGU&Politique de confidentialité&CookiesNous utilisons des cookies pour vous offrir la meilleure expérience sur notre site. 
+ You can find out more about which cookies we are using or switch them off insettings. 
+ AcceptRejectSettingsChange Cookie settingsClose GDPR Cookie SettingsPrivacy Overview 
+ Strictly Necessary Cookies 
+ Powered byGDPR Cookie CompliancePrivacy OverviewThis website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful. 
+ Strictly Necessary CookiesStrictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings. 
+ Enable or Disable CookiesIf you disable this cookie, we will not be able to save your preferences. This means that every time you visit this website you will need to enable or disable cookies again. 
+ Enable AllSave Settings

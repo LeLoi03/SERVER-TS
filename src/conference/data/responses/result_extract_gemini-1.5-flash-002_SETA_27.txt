@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "July 1-5, 2024",
+  "Year": "2024",
+  "Location": "Colchester, United Kingdom",
+  "City-State-Province": "Colchester",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for submission": "March 15, 2024",
+    "Submission of full Papers": "September 30, 2024"
+  },
+  "Notification Date": {
+    "Acceptance notification": "April 30, 2024"
+  },
+  "Camera-ready Date": {
+    "Final submission": "May 30, 2024"
+  },
+  "Registration Date": {
+    "Open for registration": "April 1, 2024"
+  },
+  "Topics": "Sequences, Signals, Waveforms, Cryptography, Coding Theory, Communication, Radar, Finite Fields, Rings, Shift Register Sequences, Boolean Functions, Zero/Low-Correlation Sequences, Low PAPR Sequences, Complementary Sequences, Combinatorial Aspects of Sequences, Number-Theoretic Aspects of Sequences, Multidimensional Sequences and Arrays, Costas Array, Stream Ciphers, Complexity Measures of Sequences, Randomness Properties of Sequences, Error-Correction Codes, Quantum Coding Theory, Frequency Hopping Sequences, Spectrum Spreading Sequences, Non-orthogonal Multiple Access, Cognitive Radio/Radar, Channel Estimation, Synchronization, Signal Detection Theory, Signal Processing, MIMO Communication/Radar, Deep Learning-aided design of waveforms, codebooks, and channel codes, Adaptive learning for channel estimation and signal detection, Integrated sensing and communication, Massive machine-type communication",
+  "Summary": "The SEquences and Their Applications (SETA) conference is an internationally leading conference aiming to foster fruitful interactions among sequences, signals, and waveforms designers, mathematicians, coding theorists, cryptographic researchers, and communications practitioners from all over the world. SETA 2024 was held in Colchester, United Kingdom, from July 1-5, 2024.",
+  "Call for Papers": "# SETA 2024: Call for Papers\n\nThe 12th International Conference on Sequences and Their Applications (SETA 2024) was held from **July 1-5, 2024, in Colchester, United Kingdom.**\n\n## Topics of Interest\n\nThe topics of the conference include, but are not limited to:\n\n*   Sequences in District Structure\n*   Sequences over finite fields/rings\n*   Shift register sequences\n*   Boolean functions and their cryptographic criteria\n*   Zero/Low-correlation sequences\n*   Low PAPR sequences\n*   Complementary sequences\n*   Combinatorial aspects of sequences\n*   Number-theoretic aspects of sequences\n*   Multidimensional sequences and arrays, Costas array\n*   Sequences for Cryptography and Coding\n*   Stream ciphers\n*   Complexity measures of sequences\n*   Randomness properties of sequences\n*   Design and decoding of error-correction codes\n*   Quantum coding theory\n*   Sequences and Waveforms Design for Communication and Radar\n*   Frequency Hopping Sequences\n*   Spectrum Spreading Sequences\n*   Non-orthogonal Multiple Access, e.g., code-domain NOMA\n*   Cognitive radio/radar\n*   Channel estimation\n*   Synchronization\n*   Signal Detection Theory\n*   Signal Processing\n*   MIMO communication/radar\n*   Next-generation Sequences Design\n*   Deep learning-aided design of waveforms, codebooks, and channel codes\n*   Adaptive learning for channel estimation and signal detection\n*   Integrated sensing and communication\n*   Massive machine-type communication\n\n## Submission Guidelines\n\nExtended abstracts of 6-12 pages should be submitted in PDF format.  [Download Template (LaTex)](files/SETA_2024_Template.tex) [Download Template (PDF)](files/SETA_2024_Template.pdf)\n\nSubmissions will be peer-reviewed, and accepted submissions will be presented at the conference. Accepted extended abstracts will be made available to the conference participants during the conference.\n\nAuthors of each accepted abstract will be invited to submit a full version to a special issue at the Springer journal Cryptography and Communications.\n\n## Important Dates\n\n*   **Deadline for submission:** March 15, 2024\n*   **Open for registration:** April 1, 2024\n*   **Acceptance notification:** April 30, 2024\n*   **Final submission:** May 30, 2024\n*   **Submission of full Papers:** September 30, 2024\n\n## Submission\n\n[Click to submit your paper using EasyChair](https://easychair.org/conferences/?conf=seta2024)"
+}
+```

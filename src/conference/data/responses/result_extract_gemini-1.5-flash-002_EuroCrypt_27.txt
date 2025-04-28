@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "May 4 - 8, 2025",
+  "Year": "2025",
+  "Location": "Madrid, Spain",
+  "City-State-Province": "Madrid",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "October 2, 2024"
+  },
+  "Notification Date": {
+    "Final notification": "January 31, 2025"
+  },
+  "Other Date": {
+    "Second submission deadline for affiliated events proposals": "December 6, 2024",
+    "Rebuttal period begins": "December 8, 2024",
+    "Rebuttal period ends": "December 12, 2024",
+    "Student stipend request deadline": "February 17, 2025",
+    "Conference begins": "May 4, 2025",
+    "Program is online": "March 21, 2025",
+    "Registration is open": "March 10, 2025",
+    "Accepted papers and preliminary schedule are online": "March 3, 2025",
+    "Information about hotels is online and Call for Stipends is open": "December 21, 2024",
+    "Final list of affiliated events and information about Student Stipends added": "November 7, 2024",
+    "1st round of affiliated events added": "October 31, 2024",
+    "Call for artifacts is online": "October 11, 2024",
+    "Second call for affiliated events is online": "September 6, 2024",
+    "Submission server open": "July 4, 2024",
+    "Call for papers is online": "July 4, 2024",
+    "Call for affiliated events is online": "July 4, 2024",
+    "Information on travel, venue, and visas is online": "May 28, 2024",
+    "Website launched": "May 28, 2024"
+
+
+  },
+  "Topics": "Cryptography, Cryptographic Techniques",
+  "Summary": "Eurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in Madrid, Spain on May 4-8, 2025. Eurocrypt 2025 is organized by the International Association for Cryptologic Research (IACR).",
+  "Call for Papers": "# Eurocrypt 2025: Call for Papers\n\nEurocrypt 2025, the 44th Annual International Conference on the Theory and Applications of Cryptographic Techniques, will take place in **Madrid, Spain on May 4-8, 2025.**  Eurocrypt 2025 is organized by the **International Association for Cryptologic Research (IACR)**. The proceedings will be published by Springer in the LNCS series.\n\n## General Information\n\nOriginal research papers are welcomed on any cryptographic topic, including but not limited to:\n\n*   Foundational theory and mathematics\n*   The design, proposal, and analysis of cryptographic primitives and protocols\n*   Secure implementation and optimization in hardware or software\n*   Applied aspects of cryptography\n\nAuthors of accepted papers are asked to present their work in person at the conference.\n\n## Submission Guidelines\n\nSubmissions must be at most 27 pages using the Springer LNCS format, including title page and figures, but excluding references. Optionally, any amount of clearly marked supplementary material may be supplied, following after the main body of the paper. However, reviewers are not required to read or review beyond the main body, and submissions are expected to be intelligible, and show sufficient scientific quality and depth, without the supplementary material.\n\nThe above in particular means that submissions are expected to present the core technical part of the result(s) in the main body. Thus, the main body should allow the reader to understand and verify what is at the heart of the contribution, conceptually and technically; the supplementary material should be used mainly for tying up the loose ends, spelling out the less innovative parts, providing extensions/generalizations, etc.\n\nThe final published version of an accepted paper will be limited to 30 pages including references and is expected to closely match the submission. For further details, consult the paper submission page.\n\n## Review Process\n\nEurocrypt 2025 will operate a two-round review system with a rebuttal phase.\n\n## Early Withdrawal\n\nUntil final decisions have been made, authors can only withdraw their paper with the express approval of the program chairs.\n\n## PC Member Submissions\n\nPC members and area chairs are restricted to submit either 1 single-author paper, up to 2 papers if at least one of them is with a co-author, or up to 3 papers if all are with co-authors and at least two are with student co-authors. The PC co-chairs are not allowed to submit any papers.\n\n## Awards\n\nThe Program Committee may choose one or more papers to receive an overall Best Paper Award. In a continuing effort to promote independent work by researchers at early stages of their careers, the Program Committee may also award a prize for the best paper(s) authored exclusively by early-career researchers. As usual, awards will only be given if deserving papers are identified.\n\n## Stipends\n\nStudents whose papers have been accepted and who present their talks at the conference will have their registration fees waived. Furthermore, a limited number of stipends are available to students that are unable to obtain funding to attend the conference. Students in under-represented groups are especially encouraged to apply. Application instructions will be posted together with other registration information.\n\n## Artifacts\n\nTo encourage open and reproducible research, authors of accepted papers will be invited to submit artifacts associated with their papers, such as software or datasets, for review. The artifact review will be a collaborative process between authors and the artifact review committee. The goal of the process is not just to evaluate artifacts, but also to improve them for reproduction and reusability by the scientific community. Artifacts that pass successfully through the artifact review process will be archived on the IACR's artifact archive at artifacts.iacr.org. Please see the detailed call for artifacts.\n\n## Important Dates\n\n*   **Submission deadline:** October 2, 2024 (AoE)\n*   **Second submission deadline for affiliated events proposals:** December 6, 2024 (AoE)\n*   **Rebuttal period begins:** December 8, 2024\n*   **Rebuttal period ends:** December 12, 2024\n*   **Final notification:** January 31, 2025\n*   **Student stipend request deadline:** February 17, 2025\n*   **Conference begins:** May 4, 2025\n\n## Program Committee\n\n*   **Program co-chairs:**\n    *   Serge Fehr, Centrum Wiskunde & Informatica (CWI) and Leiden University, The Netherlands\n    *   Pierre-Alain Fouque, University of Rennes, France\n*   **General co-chairs:**\n    *   Ignacio Cascudo, IMDEA Software Institute, Madrid, Spain\n    *   Dario Fiore, IMDEA Software Institute, Madrid, Spain\n    *   Maria Isabel Gonzalez Vasco, Universidad Carlos III de Madrid, Madrid, Spain"
+}
+

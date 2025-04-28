@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "October 13 - 15, 2025",
+  "Year": "2025",
+  "Location": "Marina Bay Sands Convention Centre, Singapore",
+  "City-State-Province": "Singapore",
+  "Country": "Singapore",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "May 4, 2025",
+    "Artifact Submission": "May 11, 2025"
+  },
+  "Notification Date": {
+    "Notification": "July 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready": "July 31, 2025"
+  },
+  "Other Date": {
+    "Author Response": "June 16 - 18, 2025"
+  },
+  "Topics": "Static Analysis, Program Verification, Bug Detection, Compiler Optimization, Program Understanding, Software Maintenance, Abstract Interpretation, Automated Deduction, Data Flow Analysis, Debugging Techniques, Deductive Methods, Emerging Applications, Model-Checking, Data Science, Program Optimizations, Program Transformations, Program Synthesis, Machine Learning and Verification, Security Analysis, Tool Environments and Architectures, Theoretical Frameworks, Type Checking, Distributed or Networked Systems, LLMs for Static Analysis, Static Analysis for LLMs",
+  "Publisher": "Springer",
+  "Summary": "The 32nd Static Analysis Symposium (SAS 2025) will be held from October 13-15, 2025, at the Marina Bay Sands Convention Centre in Singapore.  The symposium is the primary venue for the presentation of theoretical, practical, and application advances in static analysis.",
+  "Call for Papers": "# SAS 2025: Call for Papers\n\nThe 32nd Static Analysis Symposium (SAS 2025) will be held from **October 13-15, 2025, at the Marina Bay Sands Convention Centre in Singapore**.\n\nStatic analysis is widely recognized as a fundamental tool for program verification, bug detection, compiler optimization, program understanding, and software maintenance. The series of Static Analysis Symposia has served for over 30 years as the primary venue for the presentation of theoretical, practical, and application advances in the area.\n\n## Topics\n\nContributions are welcomed on all aspects of program analysis, including, but not limited to:\n\n*   Abstract interpretation\n*   Automated deduction\n*   Data flow analysis\n*   Debugging techniques\n*   Deductive methods\n*   Emerging applications\n*   Model-checking\n*   Data science\n*   Program optimizations and transformations\n*   Program synthesis\n*   Program verification\n*   Machine learning and verification\n*   Security analysis\n*   Tool environments and architectures\n*   Theoretical frameworks\n*   Type checking\n*   Distributed or networked systems\n*   LLM for static analysis and static analysis for LLM\n\nWe welcome regular papers as well as papers focusing on any of the following in the NEAT (New questions/areas, Experience, Announcement, Tool) category:\n\n*   Well-motivated discussion of new questions or new areas.\n*   Experience with static analysis tools, Industrial Reports, and Case Studies\n*   Brief announcements of work in progress\n*   Tool papers\n\nSubmissions can address any programming paradigm, including concurrent, constraint, functional, imperative, logic, object-oriented, aspect, multi-core, distributed, and GPU programming. We do not impose a page limit for submitted papers but we encourage brevity.\n\n## Submission Guidelines\n\nThe SAS 2025 proceedings will be published by Springer in their LNCS series. Authors should consult Springer’s authors’ guidelines and use their proceedings templates, for LaTeX, Overleaf, or Word, for the preparation of their papers.\n\n## Double-Blind Requirement\n\nAll regular papers will follow a double-blind process, where author names and affiliations are hidden for the review.\n\n## NEAT Papers Content\n\nNew problems papers are an opportunity to discuss visions, challenges, experiences, problems, and impactful solutions in the field of static analysis from both a research and applications perspective.\n\n## Important Dates\n\nAll deadlines are AoE (UTC-12h)\n\n*   **Paper Submission:** May 4, 2025\n*   **Artifact Submission:** May 11, 2025\n*   **Author Response:** June 16 - 18, 2025\n*   **Notification:** July 11, 2025\n*   **Camera-Ready:** July 31, 2025\n*   **Conference Date:** October 13 - 15, 2025\n\n## Submission Link\n\n[https://sas25.hotcrp.com](https://sas25.hotcrp.com)\n\n## Radhia Cousot Award\n\nThe program committee will select an accepted regular paper for the Radhia Cousot Young Researcher Best Paper Award.\n\n## Artifacts\n\nWe encourage authors to submit a virtual machine image containing any artifacts and evaluations presented in the paper. Artifact submission is optional. Artifact evaluation will be concurrent with paper review.\n\n## Special Issue Invitation\n\nAccepted papers will be invited to submit to a special issue of the Science of Computer Programming (SCP)."
+}
+

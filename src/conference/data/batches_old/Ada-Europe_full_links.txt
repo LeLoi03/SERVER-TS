@@ -1,0 +1,331 @@
+Conference full name: International Conference on Reliable Software Technologies (Ada-Europe)
+
+1. Website of Ada-Europe_3: https://www.ada-europe.org/conference2025/
+Website information of Ada-Europe_3:
+
+29thAda-Europe 
+ International Conference on 
+ Reliable Software Technologies 
+ (AEiC 2025) 
+ 10-13 June 2025, Paris, France 
+ Welcome | Latest News 
+ href="#title1" - Scope and Topics 
+ Conference Organization 
+ href="cfp.html" - Call for Contributions 
+ Chairs and Committees 
+ Previous Editions 
+ Tutorials 
+ Power of Ada Generics 
+ Tuning Programming Language 
+ Multiple Double Arithmetic 
+ Bare-metal in SPARK Ada 
+ Workshops 
+ ADEPT 
+ DeCPS 
+ Ada Developers 
+ Practical Information 
+ Venue 
+ Sponsorship and Exhibition 
+ The 29th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2025 aka Ada-Europe 2025) will take place in Paris, France. The conference schedule comprises invited talks, a journal track, an industrial track, a work-in-progress track, exhibition, parallel tutorials, and satellite workshops. 
+ Latest News 
+ 18 February 2025:Wip, industrial tracks, workshop and tutorial proposals deadline extended to7 March 2025 
+ 7 January 2025:Journal track deadline extended to7 February 2025 
+ 7 January 2025:href="https://www.sciencedirect.com/journal/journal-of-systems-architecture/about/call-for-papers#reliable-software-technologies-aeic2025" - Journal track submission available
+12 December 2024:Submission information available forhref="https://ada-europe.org/conference2025/cfp.html#cfpindus" - Industrial track
+,href="https://ada-europe.org/conference2025/cfp.html#cfpwip" - Work-In-Progress track
+,href="https://ada-europe.org/conference2025/cfp.html#cfptutorial" - Tutorial
+andhref="https://ada-europe.org/conference2025/cfp.html#cfpws" - Workshop proposals
+. 
+ 17 October 2024:Website online. 
+ Scope and Topics 
+ The conference is a leading international forum for providers, practitioners, and researchers in reliable software technologies. The conference presentations will illustrate current work in the theory and practice of the design, development, and maintenance of long-lived high-quality software systems for a challenging variety of application domains. The program will allow ample time for keynotes, Q&A sessions and discussions, and social events. Participants include practitioners and researchers from industry, academia, and government organizations active in the promotion and development of reliable software technologies. 
+ The topics of interest for the conference include but are not limited to: 
+ Formal and model-based engineering of critical systems | Formal specification; Formal verification; Integrated methods for engineering reliable software-intensive systems; Formal architectural patterns; Multi-aspect modelling and verification; Model-based engineering of safety-critical systems. 
+ High-Integrity Systems and Reliability | Theory and Practice of High-Integrity Systems: Medium to Large-Scale Distribution, Fault Tolerance Security, Reliability, Trust and Safety, Languages Vulnerabilities, Assurance Case; 
+ Software Architectures for Reliable Systems: Design Patterns, Frameworks, Architecture-Centered Development Component-based Design and Development; 
+ Methods and Techniques for Quality Software Development and Maintenance: Requirements Engineering, Re-engineering and Reverse Engineering Reuse, Software Management Issues, Compilers, Libraries, Support Tools. 
+ AI for High-Integrity Systems Engineering | AI for code generation, AI for test generation, AI for refactoring of code, AI for code comprehension, AI for program analysis; 
+ Evaluation of how well AI solutions for software engineering perform (efficiency, accuracy, etc.) 
+ Reliable/responsible/robust AI 
+ Real-Time Systems | Design and Implementation of Real-Time and Embedded Systems: Real-Time Scheduling, Design Methods and Techniques, Architecture Modelling HW/SW Co-Design, Reliability and Performance; 
+ Design and Implementation of Mixed-Criticality Systems: Scheduling Methods, Architectures, Design Methods, Analysis Methods 
+ Domain applications | Mainstream and Emerging Applications with Reliability Requirements: Manufacturing, Robotics, Avionics, Space, Health Care, Transportation Cloud Environments, Smart Energy Systems, Serious Games, etc; 
+ Experience Reports in Reliable System Development: Case Studies and Comparative Assessments, Management Approaches Qualitative and Quantitative Metrics. 
+ Ada Language | Ada Language and Technologies: Compilation Issues, Runtimes, Ravenscar Profiles, Distributed Systems, SPARK; 
+ Experiences with Ada: Reviews of the Ada 2012 or 2022 language features implementation and use issues, positioning in the market and in the software engineering curriculum, lessons learned on Ada Education and Training Activities with bearing on any of the conference topics. 
+ Important Dates 
+ 7 February 2025 
+ Submission deadline for journal track papers (extended) 
+ 7 March 2025 
+ Submission deadline for industrial track papers, work-in-progress papers, and tutorial and workshop proposals (extended) 
+ 28 March 2025 
+ First round notification for journal-track papers, and notification of acceptance for all other types of submissions10-13 June 2025 
+ Conference 
+ The conference is supported and sponsored byhref="http://www.ada-europe.org" - Ada-Europe
+,Ada-France,Embedded France,AdaCore,Emenda,Systerel,Scitools, andMines Parishref="http://www.ada-europe.org/" - 
+ 
+ The conference is in cooperation withACM,SIGPLANandAda User Society
+
+2. Website of Ada-Europe_3: http://www.ada-europe.org/
+Website information of Ada-Europe_3:
+
+Organization 
+ Ada User Journal 
+ Conferences 
+ Ada Resources 
+  
+ »Home 
+ Welcome 
+ Ada-Europe is an international organization, set up to promote the use of Ada. It aims to spread the use and the knowledge of Ada and to promote its introduction into academic and research establishments. Above all, Ada-Europe intends to represent European interests in Ada and Ada-related matters.Read more...If you are interested in Ada, why not become a member andjoinAda-Europe. 
+ Next Ada-Europe Conference 
+ href="http://www.ada-europe.org/conference2025" - 29th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2025) | 10-13 June 2025, Paris, France. 
+ What's New 
+  
+ 24 March 2025 | href="http://forum.ada-lang.io" - AEiC 2025 Ada Developers Workshop
+ 
+ The second edition of the Ada Developers Workshop, which will be taking place within the wider Ada-Europe international Conference on Reliable Software Technologies, Paris 10-13th of June. The Workshop will be taking place on the final day of the conference Friday the 13th. The deadline for submissions is08 April 2025. 
+ 18 February 2025 | href="http://www.ada-europe.org/conference2025/cfp.html" - AEiC 2025 Journal Track Deadline Extension
+ 
+ The 2025 Ada-Europe International Conference on Reliable Software Technologies (AEiC 2025) will take place in Paris, France over 10-13 June 2025. The deadline for Journal-track deadline has been extended to 7 February 2025. For all other submissions (an industrial track, a work-in-progress track, a vendor exhibition, parallel tutorials, and satellite workshops) the deadline is07 March 2025. 
+ 10 December 2024 | Programming in Ada 2022 by John Barnes 
+ The latest addition in the series of books by John Barnes has been released. Ada-Europe intends to bulk buy the book and provide members with a significant discount. The price will be of 61.19 GBP plus package and postage. You should have received an email from us about this. Please contact us if you would like to order a copy. 
+ 03 November 2024 | href="http://people.cs.kuleuven.be/~dirk.craeynest/ada-belgium/events/25/250202-fosdem.html" - Ada Developer Room at FOSDEM 2025
+ 
+ The 12th Ada Developer Room will take place on Sunday morning 2 February 2025. As before it is organized in cooperation with Ada-Belgium and Ada-Europe. The Call for Presentations is now open: deadline is Saturday 30 November 2024. 
+ 28 October 2024 | AUJ issue 45.2 
+ Ada-Europe announce that AUJ issue 45.2 (June 2024) is now available. All members are able to download this version from the Ada-Europe website. 
+ 17 October 2024 | href="http://www.ada-europe.org/conference2025/cfp.html" - AEiC 2025 Call for Contributions
+ 
+ The 2025 Ada-Europe International Conference on Reliable Software Technologies (AEiC 2025) will take place in Paris, France over 10-13 June 2025. The conference schedule comprises a journal track, an industrial track, a work-in-progress track, a vendor exhibition, parallel tutorials,and satellite workshops. You can also download ahref="http://www.ada-europe.org/conference2025/media/CFP_AEiC2025.pdf" - PDF
+version of the Call for Contributions. 
+ 24 July 2024 | Ada-Europe General Assembly 2024. 
+ The Ada-Europe GA will tke place on Tuesday 24 September 2024 at 18:30 CEST (16:30 UTC). The meeting will be held online. 
+ 14 June 2024 | href="http://www.ada-europe.org/conference2024" - 28th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2024).
+The conference ran from 11-14 June 2024, and was held in Barcelona, Spain. 
+ This year's conference has now concluded. It featured a strong programme of both technical content and social events, with extremely positive feedback from participants. 
+ 30 May 2024 | AUJ issue 44.4 (December 2023) Digital Version is available. 
+ . 
+ 16 May 2024 | href="http://www.ada-europe.org/conference2024" - AEiC 2024
+is open for registration. 
+ The 28thAda-Europe International Conference on Reliable Software Technologies has a full programme of technical sessions, tutorials and workshops. Early bird registration closes on 20 May 2024. 
+ 16 June 2023 | href="http://www.ada-europe.org/conference2023" - AEiC 2023
+has successfully concluded. 
+ The 27thAda-Europe International Conference on Reliable Software Technologies ran from the 13thto the 16thJune in Lisbon, Portugal. The conference hosted a wide range of papers and talks, with Artificial Intelligence being one of the key topics. A panel discussion on the impacts of AI on critical systems being a conference highlight. 
+ 14 June 2023 | Ada 2022 Language Standard to be Published by Springer. Read the relatedPress Releaseby Ada-Europe. 
+ 10 April 2023 | Registration for AEiC is open. This years conference takes place in Lisbon, Portugal. from 13th to 16th June. 
+ 07 January 2023 | The papers for the journal-track of the AEiC 2022 conference are available in a Special Issue of the Journal of Systems Architecture dedicated to the conference. A list of articles forming the special issue is available on ourhref="http://www.ada-europe.org/confs/ae" - conferences page
+. 
+ 20 October 2022 | href="http://www.ada-europe.org/conference2023/cfp.html" - 27th The Call for Contributuion for (AEiC 2023)
+. 
+ The Call for Contributions for the 2023 Conference in Lisbon has been made available. There are five tracks at next year’s conference: Journal track, Industrial track, Work in Progress track, along with Workshop and Tutorial submissions. 
+ 14 June 2022 | 26th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2022) has begun. This is our first in person conference since 2019 and we have convened in the city of Ghent in Belgium. 
+ 07 April 2022 | Ada-Europe General Assembly 2022:The Ada-Europe General Assembly is being held at 18:30 CEST (17:30 WEST) on Tuesday 07 June 2021, using the Zoom teleconferencing system. All members are invited to attend and contribute to the meeting. 
+ 01 April 2022 | href="http://www.ada-europe.org/conference2022" - 26th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2022), Ghent, Belgium, 14-17 June 2022.
+ 
+ Our in-person and virtual conference will take in a few months, registration is open. 
+ 15 December 2021 | The AEiC 2020 conference was cancelled owing to the COVID-19 pandemic. The journal-track of the conference, however, was supported, with publication in a Special Issue of the Journal of Systems Architecture dedicated to the conference. The Special Issue is now formally complete and available online. A full list of articles forming the special issue is available on ourhref="http://www.ada-europe.org/confs/ae" - conferences page
+. 
+ 15 April 2021 | Ada-Europe General Assembly 2021:The Ada-Europe General Assembly is being held at 18:30 CEST (17:30 WEST) on Tuesday 15 June 2021, using the Zoom teleconferencing system. All members are invited to attend and contribute to the meeting. Joining instructions will be sent out nearer the time. 
+ 13 October 2020 | This AUJ issue is once again being made publicly available online without any embargo period. We have taken this approach to minimize the impact of the delays in producing the journal and mailing the printed copies. Nevertheless, we want to assure that you will also receive the printed copies of both March and June issues. We are working to make this happen as soon as possible. The issue Volume 41 No.2 (June) is available at theAUJ online archive. 
+ 20 August 2020 | The Special Issue devoted to the scientific proceedings of AEiC 2019 is now formally complete, and theprefacefor the special issue is now available online. A full list of articles forming the special issue is available on ourhref="http://www.ada-europe.org/confs/ae" - conferences page
+. 
+ 22 June 2020 | The second and final batch of three papers presented at the 24th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2019) have been published with open access inThe Journal of Systems Architecture.Details of these papers are available here on ourhref="http://www.ada-europe.org/confs/ae" - conferences page
+. This posting completes the Special Issue devoted to the scientific proceedings of AEiC 2019. 
+ 01 June 2020 | Due to the COVID-19 pandemic Ada-Europe has been unable to print the Ada User Journal this year. The issue Volume 41 No.1 (March) is available at theAUJ online archive. 
+ 15 April 2020 | The Ada-Europe General Assembly 2020 will be held online at 18:30 CEST (17:30 WEST) on Tuesday 9th June 2020. We hope that many of you will take the opportunity to participate in the meeting. If you have not received an invitation please contact the secretary via email. 
+ 01 April 2020 | Postponement of20thInternational Real-Time Ada Workshop (IRTAW 2020)Benicàssim, Spain. Because of the COVID-19 pandemic this even may be help later in the year. 
+ 21 March 2020 | href="/press/AEiC2020_Cancel.pdf" - 25th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2020) has been postponed due to the COVID-19 pandemic.
+It will now take place during June 2021 in Santander, Spain. 
+ 16 March 2020 | Three papers presented at 24thInternational Conference on Reliable Software Technologies - Ada-Europe 2019 have been published with open access inThe Journal of Systems Architecture.Details of these papers arehref="http://www.ada-europe.org/confs/ae" - available here
+on our conferences page. There will be more papers published later in the volume, these will also be open access. The completed special issue is availablehere. 
+ 07 February 2020 | The Deadline for papers has been extended for the20thInternational Real-Time Ada Workshop (IRTAW 2020), Benicàssim, Spain, 1-3 April 2020. The new Deadline is now midnight on Sunday 16th February 2020. 
+ 28 November 2019 | Ada User Journal (AUJ) News Digests now available both at thehref="/auj/archive" - Ada-Europe
+andAdaICwebsites. AdaIC and Ada-Europe are happy to announce a new service, providing links to the AUJ News Digests as each becomes available on the Ada-Europe website. 
+ 07 November 2019 | Call for Papers for the20thInternational Real-Time Ada Workshop (IRTAW 2020), Benicàssim, Spain, 1-3 April 2020 
+ 16 October2019 | Call for Contributions for the25thInternational Conference on Reliable Software Technologies (AEiC2020), Santander, Spain, 8-12 June 2020 
+ 13 June 2019 | Thehref="/conference2019" - Ada-Europe 2019 conference
+has concluded. The best presentation award went to Julian Grand for 'Verification & Validation of (Ariane 6) launcher flight software'. 
+ 11 June 2019 | Thehref="/conference2019" - 24th Ada-Europe International Conference on Reliable Software Technologies
+in Warsaw, Poland has begun. We are looking forward to an excellent few days. 
+ 01 April 2019 | href="https://ae2019.edc.pl/workshops.html" - DeCPS 2019 - CfP Workshop Dependable & Cyber-Physical Systems Engineering.
+Ada-Europe is pleased to announce a new edition of the Workshop on Challenges and new Approaches for Dependable and Cyber-Physical Systems Engineering (DeCPS 2019), to be held on Friday 14 June 2019, co-located with the Ada-Europe 2019 conference in Warsaw, Poland. To foster visibility and interaction, participation in the workshop will be also open to conference participants (at no extra cost). 
+ 02 February 2019 | 9th Ada Developer Room at FOSDEM 2019:FOSDEM, the Free and Open source Software Developers' European Meeting, hosts an Ada Developers full day event. 
+ 09 January 2019 | ACM SIGAda announces 2018 award recipients.ACM's Special Interest Group on Ada (SIGAda) announced that it presented two prestigious awards to members of the Ada community. Brad Moore received the Robert Dewar Award for Outstanding Ada Community Contributions. John A. Hamilton received the ACM SIGAda Distinguished Service Award. The awards were presented during SIGAda's annual HILT Workshop held in Boston, MA, November 5-6, 2018. 
+ 18 September 2018 | Train control using Ada on a Raspberry Pi, by Julia Teissl.Interesting account about the programming of a control system for autonomous trains in Ada. 
+ 24 July 2018 | First edition of Ada Lovelace's pioneering algorithm sold for £95,000.An “extremely rare” leather-bound copy of Ada Lovelace’s pioneering computer program has been sold at auction for nearly £100,000. First published in 1843, the book contains Lovelace’s translation of paper from the Italian mathematician LF Menabrea discussing Charles Babbage’s plans for a computing machine. 
+ 23 June 2018 | Thehref="http://www.ada-europe.org/conference2018" - Ada-Europe Conference for 2018
+held in Lisbon has successfully concluded. All the slides from the talks should be available on the conference website shortly. 
+ 25 May 2018 | Ada adopted to build and test theCLARREO Pathfinderflight software. 
+ 01 February 2018 | href="http://ae2018.di.fc.ul.pt/index.html" - Ada-Europe 2018
+: The Ada-Europe Conference for 2018 will held in Lisbon from 18th to 22nd June 2018. 
+ 10 December 2017 | Reasons for Loving Ada: A good introductory article to explain the benefits of Ada, thenks Riccardo! 
+ 03 August 2017 | Community Input for Ada 2020: WG 9 requests the Ada community to submit enhancements to be considered for inclusion in the next revision of Ada. 
+ 16 June 2017 | href="https://www.auto.tuwien.ac.at/~blieb/AE2017/" - Ada-Europe 2017
+: The Ada-Europe Conference for 2017 held in Vienna has successfuly concluded. 
+ March 2017 | Ada for Automation: Article on 'Ada for Automation', this is a framework for designing industrial automation applications written in Ada. 
+ 19 July 2016 | Ada on Board ExoMars Spacecraft: AdaCore announce that its GNAT Pro Ada cross compilation environment has been successfully used by Thales Alenia Space to develop and verify the critical software embedded on the ExoMars program. 
+ 17 June 2016 | href="http://www.cister.isep.ipp.pt/ae2016/" - Ada-Europe 2016
+: The Ada-Europe Conference for 2016 held in Pisa has formally concluded. 
+ 23 February 2016 | Ada 2012 Language Standard Corrigendum Approved by ISO. Read the related jointhref="http://www.ada-europe.org/press/20160223-Ada2012-Corrigendum-TC1.pdf" - Press Release
+by the Ada Resource Association and Ada-Europe. 
+ 10 December 2015 | Ada Lovelace's 200thanniversary. On the occasion of Ada Lovelace's 200thbirthday, Ada-Europe wants to join the celebrations taking place these days around this remarkable date. The Ada User Journal is publishing valuable materials celebrating Ada's anniversary, including a reprint of "Lovelace & Babbage and the Creation of the 1843 Notes", by J. Fuegi and J. Francis, producers of the documentary "To Dream Tomorrow" (AUJ 36.2); and also a reprint of the original "Notes to the translation of the Sketch of The Analytical Engine" by Ada Lovelace, a thorough description of the machine (AUJ 36.3). A number of events are taking place these days to celebrate Ada's anniversary, with active presence of Ada-Europe members, such as the200th Birthday of Ada Lovelaceevent (Ada-Belgium and the KU Leuven University), or theAda Lovelace Symposiumorganised by Oxford University, with the presence of Ada-Europe's Honorary member John Barnes (John's slides available here). AdaCore has produced a "brief summary that highlights her life and career, as well as key milestones and resources for the language that bears her name" (available here). Happy Birthday Lady Ada! 
+ 30 June 2015 | In memory of Robert Dewar. With great sadness we have learned that Robert Dewar, a man of high education, vast culture, great heart, and enormous influence to the Ada programming language and the user and implementor community at large, passed away on 30 June 2015, his family by his side. Our thoughts at this sad time are with his family and friends. He will be warmly remembered. 
+ 12 May 2014 | Ada 2012 Reference Manual Published by Springer and as eBook by Ada-Europe.href="http://www.ada-europe.org/resources/online" - Available for download
+and also in paper asSpringer's LNCS 8339. Read thehref="http://www.ada-europe.org/press/20140512-Ada2012-LNCS-EBook.pdf" - Press Release
+by Ada-Europe. 
+ 12 November 2013 | Ada 2012 Language Rationale Published.Available for downloadand also in paper asSpringer's LNCS Vol. 8338. Read the related jointPress Releaseby ARA and Ada-Europe. 
+ Student Programming Contest - The Ada Way 
+ The Ada Wayis an annual student programming contest organized by Ada-Europe, the international organization that promotes the knowledge and use of Ada in European academia, research and industry. You can find more informationhere. 
+ Sponsors of Ada-Europe (in alphabetical order) 
+ For further contact details, see theSponsors section. 
+  
+ href="http://www.ada-europe.org/info/sponsors/#sponsors-list" - 
+ href="http://www.ada-europe.org/info/sponsors/" - Your company here? 
+ Webmaster
+
+3. Website of Ada-Europe_3: https://www.ada-europe.org/conference2025/
+Website information of Ada-Europe_3:
+
+29thAda-Europe 
+ International Conference on 
+ Reliable Software Technologies 
+ (AEiC 2025) 
+ 10-13 June 2025, Paris, France 
+ Welcome | Latest News 
+ href="#title1" - Scope and Topics 
+ Conference Organization 
+ href="cfp.html" - Call for Contributions 
+ Chairs and Committees 
+ Previous Editions 
+ Tutorials 
+ Power of Ada Generics 
+ Tuning Programming Language 
+ Multiple Double Arithmetic 
+ Bare-metal in SPARK Ada 
+ Workshops 
+ ADEPT 
+ DeCPS 
+ Ada Developers 
+ Practical Information 
+ Venue 
+ Sponsorship and Exhibition 
+ The 29th Ada-Europe International Conference on Reliable Software Technologies (AEiC 2025 aka Ada-Europe 2025) will take place in Paris, France. The conference schedule comprises invited talks, a journal track, an industrial track, a work-in-progress track, exhibition, parallel tutorials, and satellite workshops. 
+ Latest News 
+ 18 February 2025:Wip, industrial tracks, workshop and tutorial proposals deadline extended to7 March 2025 
+ 7 January 2025:Journal track deadline extended to7 February 2025 
+ 7 January 2025:href="https://www.sciencedirect.com/journal/journal-of-systems-architecture/about/call-for-papers#reliable-software-technologies-aeic2025" - Journal track submission available
+12 December 2024:Submission information available forhref="https://ada-europe.org/conference2025/cfp.html#cfpindus" - Industrial track
+,href="https://ada-europe.org/conference2025/cfp.html#cfpwip" - Work-In-Progress track
+,href="https://ada-europe.org/conference2025/cfp.html#cfptutorial" - Tutorial
+andhref="https://ada-europe.org/conference2025/cfp.html#cfpws" - Workshop proposals
+. 
+ 17 October 2024:Website online. 
+ Scope and Topics 
+ The conference is a leading international forum for providers, practitioners, and researchers in reliable software technologies. The conference presentations will illustrate current work in the theory and practice of the design, development, and maintenance of long-lived high-quality software systems for a challenging variety of application domains. The program will allow ample time for keynotes, Q&A sessions and discussions, and social events. Participants include practitioners and researchers from industry, academia, and government organizations active in the promotion and development of reliable software technologies. 
+ The topics of interest for the conference include but are not limited to: 
+ Formal and model-based engineering of critical systems | Formal specification; Formal verification; Integrated methods for engineering reliable software-intensive systems; Formal architectural patterns; Multi-aspect modelling and verification; Model-based engineering of safety-critical systems. 
+ High-Integrity Systems and Reliability | Theory and Practice of High-Integrity Systems: Medium to Large-Scale Distribution, Fault Tolerance Security, Reliability, Trust and Safety, Languages Vulnerabilities, Assurance Case; 
+ Software Architectures for Reliable Systems: Design Patterns, Frameworks, Architecture-Centered Development Component-based Design and Development; 
+ Methods and Techniques for Quality Software Development and Maintenance: Requirements Engineering, Re-engineering and Reverse Engineering Reuse, Software Management Issues, Compilers, Libraries, Support Tools. 
+ AI for High-Integrity Systems Engineering | AI for code generation, AI for test generation, AI for refactoring of code, AI for code comprehension, AI for program analysis; 
+ Evaluation of how well AI solutions for software engineering perform (efficiency, accuracy, etc.) 
+ Reliable/responsible/robust AI 
+ Real-Time Systems | Design and Implementation of Real-Time and Embedded Systems: Real-Time Scheduling, Design Methods and Techniques, Architecture Modelling HW/SW Co-Design, Reliability and Performance; 
+ Design and Implementation of Mixed-Criticality Systems: Scheduling Methods, Architectures, Design Methods, Analysis Methods 
+ Domain applications | Mainstream and Emerging Applications with Reliability Requirements: Manufacturing, Robotics, Avionics, Space, Health Care, Transportation Cloud Environments, Smart Energy Systems, Serious Games, etc; 
+ Experience Reports in Reliable System Development: Case Studies and Comparative Assessments, Management Approaches Qualitative and Quantitative Metrics. 
+ Ada Language | Ada Language and Technologies: Compilation Issues, Runtimes, Ravenscar Profiles, Distributed Systems, SPARK; 
+ Experiences with Ada: Reviews of the Ada 2012 or 2022 language features implementation and use issues, positioning in the market and in the software engineering curriculum, lessons learned on Ada Education and Training Activities with bearing on any of the conference topics. 
+ Important Dates 
+ 7 February 2025 
+ Submission deadline for journal track papers (extended) 
+ 7 March 2025 
+ Submission deadline for industrial track papers, work-in-progress papers, and tutorial and workshop proposals (extended) 
+ 28 March 2025 
+ First round notification for journal-track papers, and notification of acceptance for all other types of submissions10-13 June 2025 
+ Conference 
+ The conference is supported and sponsored byhref="http://www.ada-europe.org" - Ada-Europe
+,Ada-France,Embedded France,AdaCore,Emenda,Systerel,Scitools, andMines Parishref="http://www.ada-europe.org/" - 
+ 
+ The conference is in cooperation withACM,SIGPLANandAda User Society
+
+4. Website of Ada-Europe_3: https://easychair.org/cfp/AEiC2025
+Website information of Ada-Europe_3:
+
+EasyChair Smart CFP | Docs/Log in | EasyChair Smart CFP | Docs/Log in 
+ EasyChair Smart CFP | Docs/Log in 
+ Home | New CFP | My CFPs | Watchlist 
+ CFP 
+  
+ AEiC 2025: 29th Ada-Europe International Conference on Reliable Software Technologies 
+ Mines Paris 
+ Paris, France, June 10-13, 2025 
+  
+ Conference website | href="https://www.ada-europe.org/conference2025/" - https://www.ada-europe.org/conference2025/ 
+ Submission link | href="https://easychair.org/conferences/?conf=aeic2025" - https://easychair.org/conferences/?conf=aeic2025 
+ Submission deadline | January 20, 2025 
+ Topics:href="/cfp/topic.cgi?tid=2942" - real time systems
+href="/cfp/topic.cgi?tid=36945051" - mbd of critical systems
+href="/cfp/topic.cgi?tid=36945052" - high integrity systems and reliability
+href="/cfp/topic.cgi?tid=36945053" - ai for high integrity systems
+The289thAda-Europe InternationalConference on Reliable Software Technologies(AEiC 2025)is a leading international forum for providers, practitioners, and researchers in reliable software technologies. The conference presentations will illustrate current work in the theory and practice of the design, development, and maintenance of long-lived, high-quality software systems for a challenging variety of application domains. The program will allow ample time for keynotes, Q&A sessions and discussions, and social events. Participants include practitioners and researchers from industry, academia, and government organizations active in the promotion and development of reliable software technologies. 
+ The topics of interest for the conference include but are not limited to: 
+ Formal and model-based engineering of critical systems 
+ High-Integrity Systems and Reliability 
+ AI for High-Integrity Systems Engineering 
+ Real-Time Systems 
+ Ada Language 
+ Applications in relevant domains 
+ More specific topics are described on the conference web page, athref="http://www.ada-europe.org/conference2025" - http://www.ada-europe.org/conference2025
+. 
+ Guidelines 
+ The conference schedule comprises a journal track, an industrial track, a work-in-progress track, a vendor exhibition, parallel tutorials, and satellite workshops. 
+ Journal-track papers present research advances supported by solid theoretical foundation and thorough evaluation. 
+ Industrial-track contributions highlight the practitioners' side of a challenging case study or industrial project. 
+ Work-in-progress-track illustrates novel research ideas that are still at an initial stage, between conception and first prototype. 
+ Tutorials guide attenders through a hands-on familiarization with innovative developments or with useful features related to critical software. 
+ Workshops provide discussion forums on themes related to the conference topics. 
+ Important Dates 
+ Deadline for submission of journal-track papers: 20 January 2025 
+ Deadline for submission of industrial-track papers, work-in-progress papers, tutorial and workshop proposals: 24 February 2025 
+ First round notification for journal-track papers, and notification of acceptance for all other types of submissions: 28 March 2025 
+ Conference: 10-13 June 2025 
+ Committees 
+ Conference Chair 
+ Jean-Pierre Rosen,Adalog & Ada-France, rosen@adalog.fr 
+ Journal track Co-Chairs 
+ Laurent Pautet,Telecom Paris, laurent.pautet@telecom-paris.fr 
+ Sara Royuela,Barcelona Supercomputing Center, sara.royuela@bsc.es 
+ Industrial track Co-Chairs 
+ Daniela Cancila,CEA LIST, daniela.cancila@cea.fr 
+ Laurent Gouzenes,Pacte-Novation, lgouzenes@pactenovation.fr 
+ Work-In-Progress track Co-Chairs 
+ Hai Nam Tran,University of Brest, hai-nam.tran@univ-brest.fr 
+ Anish Bhobe,Telecom Paris, anish.bhobe@telecom-paris.fr 
+ Tutorial Chair 
+ Robert Cholay,Systerel, robert.cholay@systerel.fr 
+ Workshop Chair 
+ Anish Bhobe,Telecom Paris, anish.bhobe@telecom-paris.fr 
+ Exhibition & Sponsorship Chair 
+ Ahlan Marriott,White Elephant GmbH, ahlan@ada-switzerland.ch 
+ Finance Chair 
+ Paul Duquennoy,paul.duquennoy@free.fr 
+ Publicity Chair 
+ Dirk Craeynest,Ada-Belgium & KU Leuven, dirk.craeynest@cs.kuleuven.be 
+ Local Chair 
+ Pierre Jouvelot,Mines Paris, PSL University, pierre.jouvelot@minesparis.psl.eu 
+ Webmaster 
+ Hai Nam Tran,University of Brest, hai-nam.tran@univ-brest.fr 
+ Contact 
+ All questions about submissions should be emailed to the respective chairs. | Home | New CFP | My CFPs | Watchlist | AEiC 2025: 29th Ada-Europe International Conference on Reliable Software Technologies 
+ Mines Paris 
+ Paris, France, June 10-13, 2025 | Conference website | href="https://www.ada-europe.org/conference2025/" - https://www.ada-europe.org/conference2025/ | Submission link | href="https://easychair.org/conferences/?conf=aeic2025" - https://easychair.org/conferences/?conf=aeic2025 | Submission deadline | January 20, 2025 
+ Home | New CFP | My CFPs | Watchlist 
+ AEiC 2025: 29th Ada-Europe International Conference on Reliable Software Technologies 
+ Mines Paris 
+ Paris, France, June 10-13, 2025 
+ Conference website | href="https://www.ada-europe.org/conference2025/" - https://www.ada-europe.org/conference2025/ 
+ Submission link | href="https://easychair.org/conferences/?conf=aeic2025" - https://easychair.org/conferences/?conf=aeic2025 
+ Submission deadline | January 20, 2025 
+ Copyright © 2002 – 2025 EasyChair
+

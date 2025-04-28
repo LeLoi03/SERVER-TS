@@ -1,0 +1,136 @@
+Conference HCW:
+
+href="/" - Heterogeneity in Computing Workshop HCW 2025 | June 4, 2025 | Milan, Italy
+No results found. 
+ href="/" - Heterogeneity in Computing WorkshopHCW 2025 | June 4, 2025 | Milan, Italy
+Home 
+ href="/cfp.html" - Call for Papers 
+ href="/submissions.html" - Submissions 
+ Program 
+ People 
+ Previous 
+ href="/hcw2024.html" - HCW 2024 
+ href="/hcw2023.html" - HCW 2023 
+ UpdatedJan 30, 2025 
+ HCW 2025 
+ The thirty-fourth Heterogeneity in Computing Workshop (HCW) will be held at the Politecnico di Milano, Milan, Italy, onJune 4, 2025. HCW is annually organized in conjunction with the International Parallel and Distributed Processing Symposium (IPDPS). We are now inviting authors to submit original research in topics related to HCW 2025 by Sunday,February 9, 2025. Please see thehref="/cfp.html" - Call for Papers
+for more details. 
+ Heterogeneous computing systems comprise growing numbers of increasingly more diverse computing resources that can be local to one another or geographically distributed. The opportunity and need for effectively utilizing heterogeneous computing resources has given rise to the notions of cluster computing, grid computing, and cloud computing. HCW encourages paper submissions from both the research and industry communities presenting novel ideas on theoretical and practical aspects of computing in heterogeneous computing environments. 
+ The proceedings of HCW 2025 will be distributed at the conference and submitted for inclusion in the IEEE Xplore Digital Library after the conference. 
+ For location, registration, and accommodation details, please see thehref="https://www.ipdps.org/" - IPDPS 2025 website
+. 
+ Milan, Italy 
+ General Co-Chairs: DK Panda (panda.2 at osu dot edu) and Hari Subramoni (subramoni.1 at osu dot edu), The Ohio State University, USA 
+ Technical Program Committee Chair: Ali Akoglu (akoglu at arizona dot edu), University of Arizona, USA 
+ Contact Persons: Please contact the General Co-Chairs or the Technical Program Committee Chair. 
+ Manuscript submission deadline: February 9, 2025. 
+ Please join thehref="https://groups.google.com/g/hcw-announce/about" - HCW Announce Google Group
+to receive annual updates about the workshop (less than six emails a year). 
+ Sponsors 
+ IEEE IPDPS 2025 is sponsored by the IEEE Computer Society, through the Technical Committee on Parallel Processing (TCPP), and is held in cooperation with the IEEE Computer Society Technical Committees on Computer Architecture (TCCA) and Distributed Processing (TCDP). 
+ HCW 2025 is sponsored by IEEE IPDPS 2025. 
+ href="/cfp.html" - Call for Papers 
+
+Call for Papers information:
+href="/" - Heterogeneity in Computing Workshop HCW 2025 | June 4, 2025 | Milan, Italy
+No results found. 
+ href="/" - Heterogeneity in Computing WorkshopHCW 2025 | June 4, 2025 | Milan, Italy
+Home 
+ href="/cfp.html" - Call for Papers 
+ href="/submissions.html" - Submissions 
+ Program 
+ People 
+ Previous 
+ href="/hcw2024.html" - HCW 2024 
+ href="/hcw2023.html" - HCW 2023 
+ UpdatedJan 30, 2025 
+ HCW 2025 Call for Papers 
+ Heterogeneity in Computing Workshop 
+ June 4, 2025 
+ Milan, Italy 
+ In conjunction with the 39thIEEE International Parallel and Distributed Processing Symposium (href="https://www.ipdps.org/" - IPDPS 2025
+) 
+ Sponsored by the IEEE Computer Society 
+ through the Technical Committee on Parallel Processing (TCPP) 
+ Most modern computing systems areheterogeneous, either fororganic reasonsbecause components grew independently, as it is the case in desktop grids, orby designto leverage the strength of specific hardware, as it is the case in accelerated systems. In any case, all computing systems have some form ofhardware or software heterogeneitythat must be managed, leveraged, understood, and exploited. The Heterogeneity in Computing Workshop (HCW) is a venue to discuss and innovate in all theoretical and practical aspects of heterogeneous computing: design, programmability, efficient utilization, algorithms, modeling, applications, etc. HCW 2025 will be the thirty-fourth annual gathering of this workshop. 
+ Topics 
+ Topics of interest include but are not limited to the following areas: 
+ Heterogeneous multicore systems and architectures: Design, exploration, and experimental analysis of heterogeneous computing systems such as Graphics Processing Units, heterogeneous systems-on-chip, Artificial Intelligence chips, Field Programmable Gate Arrays, big.LITTLE, and application-specific architectures. 
+ Heterogeneous parallel and distributed systems: Design and analysis of computing grids, cloud systems, hybrid clusters, datacenters, geo-distributed computing systems, and supercomputers. 
+ Deep memory hierarchies: Design and analysis of memory hierarchies with SRAM, DRAM, Flash/SSD, and HDD technologies; NUMA architectures; cache coherence strategies; novel memory systems such as phase-change RAM, magnetic (e.g., STT) RAM, 3D Xpoint/crossbars, and memristors. 
+ On-chip, off-chip, and heterogeneous network architectures: Network-on-chip (NoC) architectures and protocols for heterogeneous multicore applications; energy, latency, reliability, and security optimizations for NoCs; off-chip (chip-to-chip) network architectures and optimizations; heterogeneous networks (combination of NoC and off-chip) design, evaluation, and optimizations; large-scale parallel and distributed heterogeneous network design, evaluation, and optimizations. 
+ Programming models and tools: Programming paradigms and tools for heterogeneous systems; middleware and runtime systems; performance-abstraction tradeoff; interoperability of heterogeneous software environments; workflows; dataflows. 
+ Resource management and algorithms for heterogeneous systems: Parallel algorithms for solving problems on heterogeneous systems (e.g., multicores, hybrid clusters, grids, or clouds); strategies for scheduling and allocation on heterogeneous 2D and 3D multicore architectures; static and dynamic scheduling and resource management for large-scale and parallel heterogeneous systems. 
+ Modeling, characterization, and optimizations: Performance models and their use in the design of parallel and distributed algorithms for heterogeneous platforms; characterizations and optimizations for improving the time to solve a problem (e.g., throughput, latency, runtime); modeling and optimizing electricity consumption (e.g., power, energy); modeling for failure management (e.g., fault tolerance, recovery, reliability); modeling for security in heterogeneous platforms. 
+ Applications on heterogeneous systems: Case studies; confluence of Big Data systems and heterogeneous systems; data-intensive computing; scientific computing. 
+ This year we wish to focus on and expand submissions and presentations in the following “hot topics” areas; therefore, we especially invite submissions in the following four areas: 
+ Heterogeneous Integration of Quantum Computing: Design, exploration, and analysis of architectures and software frameworks enabling heterogeneous integration of classical computing and quantum computing (e.g., heterogeneous quantum computers, error correction, heterogeneous applications that use both classical and quantum logic, benchmarks for heterogeneous quantum computers). 
+ Heterogeneity and Interoperability in Software & Data Systems: Design, exploration, and analysis of architectures and software frameworks for interoperability in software and data systems (e.g., semantic frameworks, interoperability for heterogeneous Internet-of-Things systems, model-driven frameworks). 
+ Heterogeneous Computing for Machine Learning (ML) and Deep Learning (DL): Design, exploration, benchmarking, and analysis of accelerators and software frameworks for ML and DL applications on heterogeneous computing systems. 
+ Closing the loop on the design of heterogeneous compilers, runtimes, and hardware: As the needs of heterogeneous hardware apply pressure on runtime designers to adjust for the complexities of heterogeneous resource management, runtimes are now applying pressure back towards compiler designers to include all relevant information – such as data flow and dependency analysis or hardware-specific representations of application tasks – in their binaries to enable resource management policies to arbitrate effectively. Advancements in machine understanding of code are critical in enabling progress here with a holistic view of compilers, runtimes and heterogeneous hardware. 
+ Important Dates 
+ Paper submission | : February 9, 2025 
+ Author notification | : February 24, 2025 
+ Camera-ready submission | : March 6, 2025 
+ Paper Submissions 
+ Manuscripts submitted to HCW 2025 should not have been previously published or be under review for a different workshop, conference, or journal. 
+ Submissions must use the latestIEEE manuscript templates for conference proceedings. Submissions may not exceed a total of ten single-spaced double-column pages using 10-point size font on 8.5x11 inch pages. The page limit includes figures, tables, and references. A single-blind review process will be followed. 
+ Files should be submitted by following the instructions at thehref="https://ssl.linklings.net/conferences/ipdps" - IPDPS 2025 submission site
+. 
+ New this year, we plan to recognize an outstanding HCW 2025 publication with a Best Paper Award. The Best Paper Award will be determined by taking into account the recommendations provided by the Technical Program Committee, along with detailed evaluations of the paper’s originality, significance, and overall quality. 
+ Workshop Organization 
+ General Co-Chairs: DK Panda and Hari Subramoni, The Ohio State University, USA 
+ Technical Program Committee Chair: Ali Akoglu, University of Arizona, USA 
+ Questions may be sent to the HCW 2025 General Co-Chairs (DK Panda: panda.1 at osu dot edu, Hari Subramoni: subramoni.1 at osu dot no) or the Technical Program Committee Chair (Ali Akoglu: akoglu at arizona dot edu). 
+ Technical Program Committee 
+ Shashank Adavally, Micron Technology, USA 
+ Mohsen Amini Salehi, University of North Texas, USA 
+ Mehmet Belviranli, Colorado School of Mines, USA 
+ Gonzalo Brito Gadeschi, NVIDIA Corporation, Germany 
+ Nick Brown, University of Edinburgh, Scotland 
+ Daniel Cordeiro, University of São Paulo, Brazil 
+ Matthias Diener, University of Illinois, USA 
+ Murali Emani, Argonne National Laboratory, USA 
+ Jiří Filipovič, Masaryk University, Czech Republic 
+ Abdou Guermouche, University of Bordeaux, France 
+ Yanfei Guo, Argonne National Laboratory, USA 
+ Diana Göhringer, Technische Universität Dresden, Germany 
+ Sahil Hassan, University of Arizona, USA 
+ Emmanuel Jeannot, INRIA, France 
+ Krishna Kavi, University of North Texas, USA 
+ Georgios Keramidas, Aristotle University, Greece 
+ Joongheon Kim, Korea University, Korea 
+ Joanna Kolodziej, Cracow University of Technology, Poland 
+ Alexey Lastovetsky, University College Dublin, Ireland 
+ Seyong Lee, Oak Ridge National Laboratory, USA 
+ Laércio Lima Pilla, CNRS, France 
+ Hatem Ltaief, King Abdullah University of Science and Technology, Saudi Arabia 
+ Joshua Mack, Praetorian, USA 
+ Joseph Manzano, Pacific Northwest National Laboratory, USA 
+ Matthias Mueller, Aachen University, Germany 
+ Sridhar Radhakrishnan, University of Oklahoma, USA 
+ José Rufino, Polytechnic Institute of Bragança, Portugal 
+ Marco Domenico Santambrogio, Politecnico di Milano, Italy 
+ Aamir Shafi, The Ohio State University, USA 
+ Sameer Shende, University of Oregon; ParaTools, Inc., USA 
+ Achim Streit, Karlsruhe Institute of Technology, Germany 
+ Shubbhi Taneja, Worcester Polytechnic Institute, USA 
+ Samuel Thibault, University of Bordeaux, France 
+ Claire Vishik, Intel, USA 
+ Logan Ward, Argonne National Laboratory, USA 
+ Steering Committee 
+ Kamesh Madduri, Pennsylvania State University, USA (Chair) 
+ Behrooz Shirazi, National Science Foundation, USA (Immediate Past Chair) 
+ H. J. Siegel, Colorado State University, USA (Past Chair) 
+ John Antonio, University of Oklahoma, USA 
+ David Bader, New Jersey Institute of Technology, USA 
+ Anne Benoit, École Normale Supérieure de Lyon, France 
+ Jack Dongarra, University of Tennessee, USA 
+ Alexey Lastovetsky, University College Dublin, UK 
+ Sudeep Pasricha, Colorado State University, USA 
+ Viktor K. Prasanna, University of Southern California, USA 
+ Yves Robert, École Normale Supérieure de Lyon, France 
+ Erik Saule, University of North Carolina at Charlotte, USA 
+ Uwe Schwiegelshohn, TU Dortmund University, Germany 
+ href="/submissions.html" - Submissions 
+ Home

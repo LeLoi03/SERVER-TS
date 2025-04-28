@@ -1,0 +1,17 @@
+```json
+{
+  "Conference dates": "December 6 - 10, 2025",
+  "Year": "2025",
+  "Location": "Honolulu, HI, USA",
+  "City-State-Province": "Honolulu, Hawaii",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Conference Paper Submission Deadline": "May 28, 2025"
+  },
+  "Topics": "Automatic Speech Recognition, Speech Understanding",
+  "Summary": "The 2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU 2025) will be held in Honolulu, HI, USA, from December 6-10, 2025.",
+  "Call for Papers": "No call for papers available"
+}
+```

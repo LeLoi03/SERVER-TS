@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": "November 29 - December 3, 2025",
+  "Year": "2025",
+  "Location": "The University of Sydney, Darlington NSW, Sydney, Australia",
+  "City-State-Province": "Sydney",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Long papers": "June 2, 2025",
+    "Provocations": "August 4, 2025",
+    "Late-Breaking Work": "August 4, 2025",
+    "Workshops": "July 9, 2025",
+    "Doctoral Consortium": "August 18, 2025",
+    "Demonstrations": "August 18, 2025",
+    "Student Design Challenge": "September 22, 2025"
+  },
+  "Notification Date": {
+    "Long papers": "July 23, 2025",
+    "Provocations": "August 25, 2025",
+    "Late-Breaking Work": "September 24, 2025",
+    "Workshops": "August 13, 2025",
+    "Doctoral Consortium": "September 17, 2025",
+    "Demonstrations": "September 17, 2025",
+    "Student Design Challenge": "October 10, 2025"
+  },
+  "Topics": "Human-Computer Interaction (HCI), Interaction Design, Interactive Technologies",
+  "Summary": "OzCHI 2025 is the 37th Australian Conference on Human-Computer Interaction. This annual non-profit event is for the Computer-Human Interaction Special Interest Group (CHISIG) and serves as a premier forum for the latest advancements in HCI research and practice. This year's event will be hosted in Sydney, Australia, from 29 November to 3 December 2025. The theme is Generative Intelligences, Planetary Futures.",
+  "Call for Papers": "# OzCHI 2025: Call for Papers\n\nOzCHI 2025 is the 37th Australian Conference on Human-Computer Interaction (HCI). The conference will be held from **November 29 to December 3, 2025 at The University of Sydney, Darlington NSW, Sydney, Australia.**\n\n## Theme\n\n**Generative Intelligences, Planetary Futures**\n\n## Call for Papers\n\nOzCHI 2025 invites original contributions on all topics related to human-computer interaction (HCI), interaction design, and interactive technologies. We welcome submissions from design, engineering, social science, creative industries, and other related disciplines.\n\n## Submission Categories\n\n*   **Long Papers:** Should present original research and mature work in HCI and interaction design.  Average length is approximately 7,000–8,000 words, excluding references, figure/table captions, and appendices. Submissions of 12,000 words or more will be considered excessively long and could be desk rejected.\n*   **Late-Breaking Work (LBW):** Present emerging ideas that would benefit from discussion with members of the HCI community. Contributions should be up to 5,000 words in the single-column ACM format and anonymized for peer review.\n\n## Submission Guidelines\n\n### Step 1: Download the ACM Master Template\n\n*   LaTeX users: Download the template [here](https://www.acm.org/publications/proceedings-template) or use the [Overleaf template](https://www.overleaf.com/latex/templates/acm-sig-proceedings/wvwzrqwvvzmb).\n*   Word users: Download the template [here](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx).\n\n### Step 2: Write Your Paper\n\n*   Clearly explain the research question addressed, research methods and tasks, findings or results, and contributions of the work.\n*   Your paper should consist of original work not previously published or concurrently under consideration for any other conference, workshop, journal, or other publication.\n*   Authors should ensure their work and writing are as inclusive as possible.\n*   Be anonymized for peer review. Authors must remove author and institutional identities throughout the paper.\n*   Authors should acknowledge the use of generative AI in the creation of their content.\n\n### Step 3: Complete Submission\n\nMake your submission via the Precision Conference system. Authors must submit the PDF of their paper before the submission deadline. No extensions will be granted.\n\n## Important Dates\n\n*   **Long Paper Submission deadline:** June 2, 2025\n*   **Long Paper Notification of acceptance:** July 23, 2025\n*   **LBW Submission deadline:** August 4, 2025\n*   **LBW Notification of acceptance:** September 23, 2025\n\nDates are given in Anywhere on Earth (AoE) time zone. The deadline for submission is 11:59 PM AoE on the specified date.\n\n## Selection Process\n\nAn international panel will double-anonymously review Long Papers and LBW. Based on the full text of the submission, the panel will evaluate them for significance, originality, and clarity of writing.\n\n## Awards\n\n*   Gitte Lindgaard Award (Best Paper)\n*   Steve Howard Award (Best Student Paper)\n*   Best Reviewer Award (for the top 3 reviewers)\n\n## Contact\n\n### Long Paper Chairs\n\n*   Nadia Pantidi (Victoria University of Wellington)\n*   Thuong Hoang (Deakin University)\n*   Marius Hoggenmueller (The University of Sydney)\n*   [longpapers.chair@ozchi.org](mailto:longpapers.chair@ozchi.org)\n\n### Late-Breaking Work Chairs\n\n*   Glenda Caldwell (Queensland University of Technology)\n*   Benjamin Tag (The University of New South Wales)\n*   Josh Andres (The Australian National University)\n*   [lbw.chair@ozchi.org](mailto:lbw.chair@ozchi.org)"
+}
+

@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "June 30 - July 3, 2025",
+  "Year": "2025",
+  "Location": "Arlington, Virginia, USA",
+  "City-State-Province": "Arlington, Virginia",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(First Cycle deadlines) Submission": "November 21, 2024",
+    "(Second Cycle deadlines) Submission": "March 16, 2025",
+    "(Posters/Demo deadlines) Submission": "April 28, 2025"
+  },
+  "Notification Date": {
+    "(First Cycle deadlines) Notification": "January 15, 2025",
+    "(Second Cycle deadlines) Notification": "April 25, 2025",
+    "(Posters/Demo deadlines) Notification": "May 8, 2025"
+  },
+  "Camera-ready Date": {
+    "(First Cycle deadlines) Camera-ready": "February 5, 2025",
+    "(Second Cycle deadlines) Camera-ready": "May 12, 2025",
+    "(Posters/Demo deadlines) Camera-ready": "May 12, 2025"
+  },
+  "Topics": "Security, Privacy, Wireless Networks, Mobile Networks, Internet of Things, Cyber-Physical Systems, Mobile Software Platforms, Usable Security and Privacy, Biometrics, Cryptography",
+  "Publisher": "ACM",
+  "Summary": "The 18th ACM Conference on Security and Privacy in Wireless and Mobile Networks (ACM WiSec 2025) will be held from June 30 to July 3, 2025, in Arlington, Virginia, USA. ACM WiSec is dedicated to all aspects of security and privacy in wireless and mobile networks and their applications.",
+  "Call for Papers": "# ACM WiSec 2025: Call for Papers\n\nThe 18th ACM Conference on Security and Privacy in Wireless and Mobile Networks (ACM WiSec 2025) will be held in person from **June 30 to July 3, 2025, in Arlington, Virginia, USA**.\n\nACM WiSec is the leading ACM and SIGSAC conference dedicated to all aspects of security and privacy in wireless and mobile networks and their applications.\n\n## Topics of Interest\n\nTopics of interest for WiSec include the following, concerning systems in the second list below:\n\n*   Confidentiality, integrity, availability\n*   Authentication, identity, authorization, access control models and policies, localization, key management (agreement or distribution)\n*   Privacy of systems, devices, users, their locations and other attributes\n*   Exploitation of systems, including through reverse engineering, fuzzing, hardware or software vulnerabilities, protocol vulnerabilities, side channels, fault injection, resource exhaustion, jamming, or other means.\n*   Abuse of and through systems, including messaging abuse (spam, robocalls, etc.), theft of service, and fraud\n*   Defenses for exploitation and abuse\n*   Experiences developing, testing, and deploying production-ready or large-scale secure wireless systems\n*   Formal analysis, formal verification, and proof-based security approaches\n*   Information theoretical approaches for security\n*   Usable security and privacy, human factors\n*   Application of Machine Learning, e.g., for attack detection or privacy violations\n*   Economic and social impacts to security and privacy\n\n### Wireless and Mobile Systems of Interest include:\n\n*   Wireless networking protocols\n*   Wireless physical layer technologies\n*   Wireless and mobile device hardware and software\n*   Wireless and mobile adjacent topics\n\n## Important Dates\n\nPlease note: WiSec will have two rounds of submissions. There will not be time for extensions this year and all deadlines are firm.\n\n*   **First Cycle deadlines**\n    *   Submission: November 21, 2024\n    *   Author Notification: January 15, 2025\n    *   Camera-ready: February 5, 2025\n*   **Second Cycle deadlines**\n    *   Submission: March 16, 2025 (AOE)\n    *   Author Notification: April 25, 2025\n    *   Camera-ready: May 12, 2025\n*   **Posters/Demo deadlines**\n    *   Submission: April 28, 2025\n    *   Author Notification: May 8, 2025\n    *   Camera-ready: May 12, 2025\n*   **Conference dates:** June 30 - July 3, 2025\n\n## Submission Guidelines\n\nAll papers for ACM WiSec 2025 must be submitted electronically. Only PDF files will be accepted. Submissions must be prepared using the ACM proceedings template and must use US Letter page size (215.9 x 279.4 mm / 8.5 x 11 inches).\n\n### Full, short, and SoK papers\n\n*   Full paper submissions must be at most 10 pages in double-column ACM format (use document option “sigconf”), excluding the bibliography and well-marked appendices, and up to 12 pages in total.\n*   ACM WiSec also encourages the submission of short papers with a length of up to 6 pages (including bibliography and appendices), which describe mature work of a more succinct nature.\n*   All papers must be thoroughly anonymized for double-blind review.\n\nIn addition to regular papers that present novel contributions in the field, WiSec solicits Systematization of Knowledge (SoK) papers. They can be up to 10 pages in the ACM conference style excluding the bibliography and well-marked appendices, and up to 15 pages overall.\n\n### Posters and demos\n\nWiSec will solicit the submission of posters and demos. The instructions to submit posters/demos will be made available on the WiSec 2025 website.\n\n### Artifact Evaluation label\n\nIn the spirit of open science, WiSec encourages authors of accepted papers to make software and data artifacts publicly available to the community.\n\n## Research Ethics\n\nThe ethical conduct of research is critical to ensuring the public’s trust and support of science. All submitted papers will be reviewed for ethical concerns, and if ethical practices are not followed a paper will be rejected regardless of any other merit.\n\n## Policy for Peer-Review Integrity\n\nAll SIGSAC-sponsored conferences and workshops are required to follow ACM policies against harassment activities and ACM Code of Ethics and Professional Conduct. Also, all authors, PC members, and non-PC reviewers are required to follow ACM Publications Policies."
+}
+```

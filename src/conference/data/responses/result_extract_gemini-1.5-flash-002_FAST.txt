@@ -1,0 +1,33 @@
+output:
+{
+  "Conference dates": "February 24 - 26, 2026",
+  "Year": "2026",
+  "Location": "Hyatt Regency Santa Clara, Santa Clara, CA, USA",
+  "City-State-Province": "Santa Clara, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Spring deadline) Paper submissions due": "March 18, 2025",
+    "(Fall deadline) Paper submissions due": "September 16, 2025"
+  },
+  "Notification Date": {
+    "(Spring deadline) Notification to authors": "June 5, 2025",
+    "(Fall deadline) Notification to authors": "December 8, 2025"
+  },
+  "Camera-ready Date": {
+    "(Spring deadline) Final paper files due": "July 29, 2025",
+    "(Fall deadline) Final paper files due": "January 27, 2026"
+  },
+  "Other Date": {
+    "(Spring deadline) Author response period begins": "May 20, 2025",
+    "(Spring deadline) Author response period ends": "May 22, 2025",
+    "(Fall deadline) Author response period begins": "November 18, 2025",
+    "(Fall deadline) Author response period ends": "November 20, 2025",
+    "Test of Time Award Nominations": "November 1, 2025"
+  },
+  "Topics": "Archival systems, AI for storage and storage for AI, Auditing and provenance, Big data, analytics, and data sciences, Caching, replication, and consistency, Cloud, multi- and hybrid-cloud environments, Data deduplication and compression, Database storage, Distributed and networked storage, Emerging memory hierarchy design, Empirical evaluation, Experience with deployed-systems, File system design, Hardware design and prototypes, HPC systems, Key-value and NoSQL storage, Memory-only storage systems, Mobile, personal, embedded, and home storage, Networking, Novel and emerging storage technologies, Performance and QoS, Power-aware storage architectures, RAID and erasure coding, Reliability, availability, and disaster tolerance, Search and data retrieval, Security, Storage Management",
+  "Summary": "The 24th USENIX Conference on File and Storage Technologies (FAST '26) will take place on February 24–26, 2026, in Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
+  "Call for Papers": "# FAST '26: Call for Papers\n\nThe 24th USENIX Conference on File and Storage Technologies (FAST '26) will take place on **February 24–26, 2026, at the Hyatt Regency Santa Clara in Santa Clara, CA, USA**.\n\n## Overview\n\nFAST brings together researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of systems related to storage. The program committee interprets storage-related systems broadly: submissions on low-level storage devices, distributed storage systems, information and data management, as well as other systems interconnected with storage are all of interest.\n\n## Topics\n\nThe topics of interest to FAST are various aspects of systems related to storage. These include and overlap with, but are not limited to, the following topics:\n\n*   Archival systems\n*   AI for storage and storage for AI\n*   Auditing and provenance\n*   Big data, analytics, and data sciences\n*   Caching, replication, and consistency\n*   Cloud, multi- and hybrid-cloud environments\n*   Data deduplication and compression\n*   Database storage\n*   Distributed and networked storage (wide-area, grid, peer-to-peer)\n*   Emerging memory hierarchy design\n*   Empirical evaluation\n*   Experience with deployed-systems\n*   File system design\n*   Hardware design and prototypes\n*   HPC systems, including parallel I/O\n*   Key-value and NoSQL storage\n*   Memory-only storage systems\n*   Mobile, personal, embedded, and home storage\n*   Networking\n*   Novel and emerging storage technologies (e.g., DNA and glass storage)\n*   Performance and QoS\n*   Power-aware storage architectures\n*   RAID and erasure coding\n*   Reliability, availability, and disaster tolerance\n*   Search and data retrieval\n*   Security\n*   Storage Management\n\n## Important Dates\n\nNew for FAST '26, we are offering authors the option to submit to one of two submission deadlines:\n\n### Spring Deadline\n\n*   Paper submissions due: March 18, 2025, 23:59 AoE\n*   Author response period begins: May 20, 2025\n*   Author response period ends: May 22, 2025, 23:59 AoE\n*   Notification to authors: June 5, 2025\n*   Final paper files due: July 29, 2025, 23:59 AoE\n\n### Fall Deadline\n\n*   Paper submissions due: September 16, 2025, 23:59 AoE\n*   Author response period begins: November 18, 2025\n*   Author response period ends: November 20, 2025, 23:59 AoE\n*   Notification to authors: December 8, 2025\n*   Final paper files due: January 27, 2026, 23:59 AoE\n\n## Submission Instructions\n\nPlease submit your short and long papers by one of the submission deadlines listed above, in PDF format via the [submission form](https://fast26spring.usenix.hotcrp.com/).\n\n*   The complete submission must be no longer than 12 pages for long papers and no longer than 6 pages for short papers, excluding references.\n*   Supplemental material is optional and may be added (if deemed really necessary) as a single separate PDF file without page limits. However, the reviewers are not required to read or consider such material.\n*   Papers must be typeset on U.S. letter-sized pages in two columns using 10-point Times Roman font on 12-point leading (single-spaced), within a text block 7\" wide by 9\" deep.\n*   Submissions that violate these requirements will not be reviewed. Limits will be enforced strictly. No extensions will be given for reformatting.\n*   A LaTeX template and style file are available on the [USENIX templates page](/conferences/author-resources/paper-templates).\n*   Papers must be anonymized for double-blind review.\n*   If a submission extends a prior workshop paper, please include an anonymized copy of the workshop paper as supplemental material.\n\n## Program Co-Chairs\n\n*   André Brinkmann, Johannes Gutenberg-Universität Mainz\n*   Philip Shilane, Dell Technologies"
+}
+

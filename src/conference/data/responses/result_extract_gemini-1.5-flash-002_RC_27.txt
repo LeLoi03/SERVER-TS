@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "July 3 - 4, 2025",
+  "Year": "2025",
+  "Location": "Odense, Denmark",
+  "City-State-Province": "Odense",
+  "Country": "Denmark",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission": "February 21, 2025",
+    "Submission deadline": "February 28, 2025"
+  },
+  "Notification Date": {
+    "Notification to authors": "April 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Final version": "May 1, 2025"
+  },
+  "Topics": "Reversible Computation, Quantum Computation, Low Power Design, Coding/Decoding, Debugging, Testing, Verification, Database Recovery, Discrete Event Simulation, Reversible Algorithms, Reversible Specification Formalisms, Reversible Programming Languages, Process Algebras, Modeling of Biochemical Systems, Reversible Logic, Cryptography, CMOS Technology",
+  "Summary": "The 17th International Conference on Reversible Computation (RC) will be held in Odense, Denmark, on July 3-4, 2025.  The conference will bring together researchers from computer science, mathematics, engineering, and physics to discuss new developments and directions for future research in the emerging area of Reversible Computation, including applications of reversibility in quantum computation.",
+  "Call for Papers": "# RC 2025: Call for Papers\n\nThe 17th International Conference on Reversible Computation (RC 2025) will be held in **Odense, Denmark, on July 3-4, 2025**.\n\nThe conference will bring together researchers from computer science, mathematics, engineering, and physics to discuss new developments and directions for future research in the emerging area of Reversible Computation. This includes applications of reversibility in quantum computation.\n\n## Topics of Interest\n\nContributions on all areas of Reversible Computation are welcome, including (but not limited to) the following topics:\n\n*   Applications\n*   Architectures\n*   Algorithms\n*   Bidirectional transformations\n*   Circuit Design\n*   Debugging\n*   Fault Tolerance and Error Correction\n*   Hardware\n*   Information Theory\n*   Physical Realizations\n*   Programming Languages\n*   Program Transformation and Optimization\n*   Quantum Computation\n*   Software\n*   Synthesis\n*   Theoretical Results\n*   Testing\n*   Verification\n\n## Submission Guidelines\n\nYou can submit:\n\n*   Full research papers (15 pages maximum, not including references)\n*   Tutorials (15 pages maximum, not including references)\n*   Work-in-progress or tool demonstration papers (6 pages maximum, not including references)\n\nPlease clearly indicate the type of your submission. Additional material intended for reviewers but not for publication in the final version may be placed in a clearly marked appendix that is not included in the page limit. Reviewers are at liberty to ignore appendices, and papers must be understandable without them.\n\nThe paper submission will be accepted as a PDF file using the LNCS style. Further information and templates are available [here](https://easychair.org/conferences/?conf=revcomp2025).\n\nAt least one author of an accepted paper is expected to register and present the paper at the conference. We would appreciate it if one person would not present more than two papers at the conference: if more than two papers are accepted by a group of authors, we kindly ask that the papers be presented by different co-authors, as far as possible.\n\nAll accepted papers will be included in the conference proceedings and published by Springer as a Lecture Notes in Computer Science (LNCS) volume.\n\n## Submission System\n\nPapers are to be submitted via [EasyChair](https://easychair.org/conferences/?conf=revcomp2025).\n\n## Important Dates\n\n*   **Abstract submission:** February 7th, 2025 AoE (this date seems to be missing from the provided text)\n*   **Abstract submission:** February 21st, 2025 AoE\n*   **Submission deadline:** February 13th, 2025 AoE (this date seems to be missing from the provided text)\n*   **Submission deadline:** February 28th, 2025 AoE\n*   **Notification to authors:** April 11th, 2025 AoE\n*   **Final version:** May 1st, 2025 AoE\n*   **Conference:** July 3rd - July 4th, 2025"
+}
+

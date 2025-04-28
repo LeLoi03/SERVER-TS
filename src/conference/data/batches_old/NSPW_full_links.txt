@@ -1,0 +1,352 @@
+Conference full name: New Security Paradigms Workshop (NSPW)
+
+1. Website of NSPW_3: https://www.nspw.org/
+Website information of NSPW_3:
+
+Skip to main contentNew Security Paradigms WorkshopIntroductionhref="2025/cfp" - NSPW 2025
+will be held on August 24-27, 2025 in Aerzen, Germany. Submissions are dueApril 11, 2025April 25, 2025. 
+ The New Security Paradigms Workshop (NSPW) is an annual, small invitation-only workshop for researchers in information security and related disciplines. NSPW's focus is on work that challenges the dominant approaches and perspectives in computer security. In the past, such challenges have taken the form of critiques of existing practice as well as novel, sometimes controversial, and often immature approaches to defending computer systems. By providing a forum for important security research that isn't suitable for mainstream security venues, NSPW aims to fosterparadigm shiftsin information security. 
+ In order to preserve the small, focused nature of the workshop, participation is limited to authors of accepted papers and conference organizers. As a computer security venue, NSPW is unique in format and highly interactive in nature. Each paper is typically the focus of 45 to 60 minutes of presentation and discussion. Authors are encouraged to present ideas that might be considered risky in some other forum, and all participants are charged with providing feedback in a constructive manner. The resulting intensive brainstorming has proven to be an excellent medium for furthering the development of these ideas. The final proceedings are published after the workshop, giving authors an opportunity to incorporate feedback from the workshop. 
+ NSPW is anACSAconference. The proceedings of NSPW are published by theACM. Full proceedingsare available. 
+ Main menu 
+ Show — Main menuHide — Main menuHome 
+ href="/2025" - NSPW 2025 | href="/2025/cfp" - Call for papers 
+ href="/2025/organizers" - Organizers 
+ Past Workshops 
+ Proceedings 
+ Code of Conduct 
+ Login
+
+2. Website of NSPW_3: https://www.nspw.org/2025/cfp
+Website information of NSPW_3:
+
+Skip to main contentNew Security Paradigms WorkshopNSPW 2025 CFPNSPW 2025 invites three types of submissions: 
+ Regular submissions present a new approach (paradigm) to a security problem or critique existing approaches. While regular submissions may present research results (mathematical or experimental), unlike papers submitted to most computer security venues, these results should not be the focus of the submission; instead, the change in approach should be the focus. 
+ Theme Submissions are focused on “Trusting” and should explain the connection with the theme in the justification statement (see below). They follow the format of a regular submission. 
+ Implementation Submissions explore implementing previous NSPW submissions. Historic NSPW submissions often propose new paradigms but do not extend to implementation. These submissions should clearly cite which previous work(s) is being referenced and how the current submission extends beyond the original scope. Original authors may be involved or not; if not, they will be offered the chance to comment on the submission. 
+ NSPW has an optional theme each year to encourage submissions in specific areas of interest or importance. The theme for NSPW 2025 isTrusting. 
+ Relevant topics for this theme include: 
+ Novel paradigms for conceptualising trust and trusting in computer security 
+ Trust decisions in a world of deepfakes and misinformation 
+ Detection of breach of trust, intrusion and misinformation 
+ Trust boundaries and threat modeling 
+ Trust in changing threat landscapes and technologies, such as Artificial Intelligence 
+ Trust evaluation 
+ Social configuration of trust and mistrust in organisations 
+ Trust and mistrust as methodological problems in studies of computer security 
+ The consequences of not trusting 
+ Audits and certifications 
+ Authentication and authorization 
+ Reputation systems and reviewer/recommender systems 
+ Anomaly detection 
+ Formal verification and testing 
+ Privacy 
+ Decentralized trust 
+ Zero trust architectures 
+ Human, social and organisational understandings of trust in technologies 
+ Other interpretations of trusting are welcome. 
+ Submission Instructions 
+ All submissions are treated as confidential as a matter of policy. NSPW does not accept previously published or concurrently submitted papers. 
+ Due Date: April 25, 2025 
+ Response Date: May 30, 2025 
+ Format : PDF format, 6-15 pages, ACM “sigconf” formatting 
+ Submit through EasyChairhref="https://easychair.org/conferences/?conf=nspw2025" - https://easychair.org/conferences/?conf=nspw2025
+Special Submission Instructions. Each paper requires two separate EasyChair submissions: 
+ Cover page with authors’ names, affiliation, and the participation statement 
+ Anonymous PDF paper with a justification statement 
+ The participation statement (on the cover page) must specify which author(s) will attend upon acceptance/invitation, that all authors will engage in good faith with the feedback given in the review and revision periods, and that all authors will abide by the NSPW code of conduct. 
+ The justification statement (clearly marked as part of the PDF submission) briefly explains why the submission is appropriate for NSPW and the chosen submission category. The justification statement will not appear in the final publication. 
+ To support double-blind reviewing, the cover page should not be part of the PDF submission but will be submitted separately on EasyChair. Submissions that do not include both statements risk rejection without review. In addition, submissions should blind author identity where possible. The LaTeX document option anonymous=true provides a minimum level of protection; however, authors should also avoid referencing their own work in the first person or other obvious de-anonymization in the submission. 
+ Organizers and Program Committee members are allowed to submit papers, but will not be involved in evaluating their papers. 
+ Publication 
+ Depending on publication venue, there may be open access publication fees, and we encourage authors to ensure their institution can cover these fees before submitting. Further details regarding publication will be forthcoming. 
+ Social contract and code of conduct 
+ Given the focus on the development and exploration of new ideas, the process for paper submission, revision, presentation, and publication at NSPW is different from many other security conferences. Accepted papers are shepherded and revised before the workshop; this revised version is then presented and discussed in an hour-long session. After the workshop, the final version is produced, incorporating the discussions and feedback. Acceptance to the workshop is conditional on engagement with this process. 
+ All participants must commit to a “social contract”: no one arrives late, no one leaves early, no electronic distractions (including laptops, tablets, and mobile devices), attend all sessions of the 2.5-day program, share meals in a group setting, and comply with the code of conduct. The workshop is preceded by an evening reception allowing attendees to meet each other beforehand. 
+ NSPW is making arrangements for (some) child care during the event. If any potential attendee wants to take advantage of this or has questions, please emailhref="mailto:general-chairs@nspw.org" - general-chairs@nspw.org
+now. We would like to get a general understanding of interest and capacity to assist with planning for the event. 
+ The submission, review, and workshop phases of NSPW are all governed by the NSPW code of conduct,href="https://www.nspw.org/conduct" - https://www.nspw.org/conduct
+. 
+ Main menu 
+ Show — Main menuHide — Main menuHome 
+ href="/2025" - NSPW 2025 | href="/2025/cfp" - Call for papers 
+ href="/2025/organizers" - Organizers 
+ Past Workshops 
+ Proceedings 
+ Code of Conduct 
+ Login
+
+3. Website of NSPW_3: https://www.nspw.org/2025/cfp
+Website information of NSPW_3:
+
+Skip to main contentNew Security Paradigms WorkshopNSPW 2025 CFPNSPW 2025 invites three types of submissions: 
+ Regular submissions present a new approach (paradigm) to a security problem or critique existing approaches. While regular submissions may present research results (mathematical or experimental), unlike papers submitted to most computer security venues, these results should not be the focus of the submission; instead, the change in approach should be the focus. 
+ Theme Submissions are focused on “Trusting” and should explain the connection with the theme in the justification statement (see below). They follow the format of a regular submission. 
+ Implementation Submissions explore implementing previous NSPW submissions. Historic NSPW submissions often propose new paradigms but do not extend to implementation. These submissions should clearly cite which previous work(s) is being referenced and how the current submission extends beyond the original scope. Original authors may be involved or not; if not, they will be offered the chance to comment on the submission. 
+ NSPW has an optional theme each year to encourage submissions in specific areas of interest or importance. The theme for NSPW 2025 isTrusting. 
+ Relevant topics for this theme include: 
+ Novel paradigms for conceptualising trust and trusting in computer security 
+ Trust decisions in a world of deepfakes and misinformation 
+ Detection of breach of trust, intrusion and misinformation 
+ Trust boundaries and threat modeling 
+ Trust in changing threat landscapes and technologies, such as Artificial Intelligence 
+ Trust evaluation 
+ Social configuration of trust and mistrust in organisations 
+ Trust and mistrust as methodological problems in studies of computer security 
+ The consequences of not trusting 
+ Audits and certifications 
+ Authentication and authorization 
+ Reputation systems and reviewer/recommender systems 
+ Anomaly detection 
+ Formal verification and testing 
+ Privacy 
+ Decentralized trust 
+ Zero trust architectures 
+ Human, social and organisational understandings of trust in technologies 
+ Other interpretations of trusting are welcome. 
+ Submission Instructions 
+ All submissions are treated as confidential as a matter of policy. NSPW does not accept previously published or concurrently submitted papers. 
+ Due Date: April 25, 2025 
+ Response Date: May 30, 2025 
+ Format : PDF format, 6-15 pages, ACM “sigconf” formatting 
+ Submit through EasyChairhref="https://easychair.org/conferences/?conf=nspw2025" - https://easychair.org/conferences/?conf=nspw2025
+Special Submission Instructions. Each paper requires two separate EasyChair submissions: 
+ Cover page with authors’ names, affiliation, and the participation statement 
+ Anonymous PDF paper with a justification statement 
+ The participation statement (on the cover page) must specify which author(s) will attend upon acceptance/invitation, that all authors will engage in good faith with the feedback given in the review and revision periods, and that all authors will abide by the NSPW code of conduct. 
+ The justification statement (clearly marked as part of the PDF submission) briefly explains why the submission is appropriate for NSPW and the chosen submission category. The justification statement will not appear in the final publication. 
+ To support double-blind reviewing, the cover page should not be part of the PDF submission but will be submitted separately on EasyChair. Submissions that do not include both statements risk rejection without review. In addition, submissions should blind author identity where possible. The LaTeX document option anonymous=true provides a minimum level of protection; however, authors should also avoid referencing their own work in the first person or other obvious de-anonymization in the submission. 
+ Organizers and Program Committee members are allowed to submit papers, but will not be involved in evaluating their papers. 
+ Publication 
+ Depending on publication venue, there may be open access publication fees, and we encourage authors to ensure their institution can cover these fees before submitting. Further details regarding publication will be forthcoming. 
+ Social contract and code of conduct 
+ Given the focus on the development and exploration of new ideas, the process for paper submission, revision, presentation, and publication at NSPW is different from many other security conferences. Accepted papers are shepherded and revised before the workshop; this revised version is then presented and discussed in an hour-long session. After the workshop, the final version is produced, incorporating the discussions and feedback. Acceptance to the workshop is conditional on engagement with this process. 
+ All participants must commit to a “social contract”: no one arrives late, no one leaves early, no electronic distractions (including laptops, tablets, and mobile devices), attend all sessions of the 2.5-day program, share meals in a group setting, and comply with the code of conduct. The workshop is preceded by an evening reception allowing attendees to meet each other beforehand. 
+ NSPW is making arrangements for (some) child care during the event. If any potential attendee wants to take advantage of this or has questions, please emailhref="mailto:general-chairs@nspw.org" - general-chairs@nspw.org
+now. We would like to get a general understanding of interest and capacity to assist with planning for the event. 
+ The submission, review, and workshop phases of NSPW are all governed by the NSPW code of conduct,href="https://www.nspw.org/conduct" - https://www.nspw.org/conduct
+. 
+ Main menu 
+ Show — Main menuHide — Main menuHome 
+ href="/2025" - NSPW 2025 | href="/2025/cfp" - Call for papers 
+ href="/2025/organizers" - Organizers 
+ Past Workshops 
+ Proceedings 
+ Code of Conduct 
+ Login
+
+4. Website of NSPW_3: https://www.cs.ucdavis.edu/~peisert/service.html
+Website information of NSPW_3:
+
+Sean Peisert 
+ ACM Distinguished Member 
+ Home Pagehref="papers.html" - Publications
+href="research.html" - Research Projects
+Software 
+ Talks and TutorialsProfessional ServiceTeachingStudents & PostdocsNewsBioLinks@peisert@infosec.exchange (Mastodon)Upcoming activities: 
+ IEEE Security & Privacy(ongoing)NSA SoS Best Paper Competition(annually, deadlines in April) 
+ IEEE Cybersecurity Award for Practice(annually, deadlines in July) 
+ NSF Cybersecurity Summit(Oct. 7–10 2024) 
+ IEEE S&P (Oakland)href="http://www.ieee-security.org/TC/SP2025/" - 2025
+(May 12–15, 2025) 
+ CSET2025 (Aug 2025) 
+ href="http://www.nspw.org" - NSPW
+2025 Aug–Oct, 2025) | Professional Service 
+ Selected Steering Committees and Editorial BoardsEditor-in-Chief | , | IEEE Security & Privacy | , 2021– | present 
+ Steering Committee, | IEEE Symposium on Security and Privacy | , 2020– | present 
+ Senior Fellow, | Applied Computer Security Associates (ACSA) | , 2022– | present 
+ Steering Committee, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2009– | present 
+ Steering Committee, | Workshop on Cyber Security Experimentation and Test (CSET) | , 2012– | present 
+ Fellow, | Applied Computer Security Associates (ACSA) | , 2020–2022 
+ Associate Editor-in-Chief | , | IEEE Security & Privacy | , 2018–2020 
+ Chair, | IEEE Computer Society Technical Committee on Security and Privacy | , 2018–2019 
+ Associate Editor | , | IEEE Security & Privacy | , 2013–2018 
+ Selected Conference Chair RolesProgram Chair, | href="http://2016.laser-workshop.org" - 2016 Workshop on Learning from Authoritative Security Experiment Results (LASER) | , 2016. 
+ General Chair, | 36th IEEE Symposium on Security & Privacy | , 2015. 
+ Co-Organizer, | Dagstuhl Seminar on Policies for Security-Sustainable Organizational Processes | , 2012. 
+ Program Co-Chair, | Fifth Workshop on Cyber Security Experimentation and Test (CSET) | , 2012. 
+ Program Co-Chair, | Fourth Workshop on Cyber Security Experimentation and Test (CSET) | , 2011. 
+ General Chair, | href="http://www.nspw.org/2011/" - 2011 New Security Paradigms Workshop (NSPW) | , 2011. 
+ Program Co-Chair, | Fourth International IEEE Workshop on Systematic Approaches to Digital Forensic Engineering (IEEE/SADFE) | , 2009. 
+ Selected Conference Organizing CommitteesTreasurer, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2012– | present | . 
+ Financial Aid Co-Chair, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2011– | present | . 
+ Award CommitteesAward Committee | , | 2024 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 12th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2024 
+ Chair | , | 2023 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 11th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2023 
+ Reviewer, | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 2) | , 2023 
+ Reviewer | , | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 1) | , 2022 
+ Distinguished Expert Reviewer | , | 10th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2022 
+ Award Committee | , | 2022 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 9th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2021 
+ Award Committee | , | 2021 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 8th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2020 
+ Selected Advisory Workshop Organization & ParticipationCo-Chair, "A Convening on Health Data Access and Sharing," | California Council on Science and Technology (CCST) | , Dec. 13, 2024. 
+ Invited Expert Panelist, Secure Methods for Sharing Health Data, | California Council on Science and Technology (CCST) | Legislative Staff Briefing, Sacramento, CA, Dec. 7, 2023. 
+ Invited Presenter, | NASEM Cyber Resilience Forum | Summer Meeting | , Aug. 31, 2023. 
+ Invited Participant, California Council on Science and Technology (CCST) | Workshop on Designing Operable Privacy Standards for Public Health Emergencies | , Oct. 13–14, 2022. [ | Report | ] 
+ Invited Participant and Presenter, AI@DOE Roundtable, Jan. 12–13, 2022. [ | Report | ] 
+ Facilitator / Co-Chair, | DOE/SETO | Working Group for Data Sharing Standards for Inverter-Based and Distributed Energy Resources, 2021–2022. [ | Report/Article | ] 
+ Invited Participant, | ASCR Workshop on the Science of Scientific-Software Development and Use | , Dec. 13–15, 2021. [ | Report | ] 
+ Invited Participant, | White House Office of Science & Technology Policy | Workshop on the Responsible Liberation of Federal Data, Eisenhower Administration Building, Washington. D.C., January 31, 2020. 
+ Invited Expert Presenter | , | National Academies of Sciences, Engineering, and Medicine Committee on Science, Engineering, Medicine, and Public Policy (COSEMPUP) Meeting | , National Academy of Sciences Building, Washington, D.C., November 8, 2018. 
+ Invited Briefing to | U.S. Department of Energy | Deputy Secretary Dr. Elizabeth Sherwood-Randall, August 1, 2016. 
+ Current and Recent Working GroupsU.S. Government / National Service Roles | Member, National Academies of Science, Engineering, and Medicine | Forum on Cyber Resilience | (2024– | present | ) 
+ Co-Chair, Health Data Working Group, | California Council on Science and Technology (CCST) | (2023– | present | ) 
+ Member, | DARPA | Information Science and Technology (ISAT) study group, 2021– | present 
+ Member, DOE | Securing Energy Infrastructure (SEI) Executive Task Force | Technical Project Team (TPT) on Developing a National Cyber-Informed Engineering (CIE) Strategy, 2021–2022. [ | DOE Press Release | ] [ | Report | ] 
+ Member, Advisory Board, NSF / IU | href="https://researchsoc.iu.edu" - Research Security Operations Center (ResearchSOC) | , 2018–2022 
+ Program Committee, | DOE ASCR Workshop on Cybersecurity and Privacy for Scientific Computing Ecosystems | , 2021. 
+ Lead, | DOE Integrated Joint Cybersecurity Coordination Center (iJC3) Cyber R&D Enterprise Cybersecurity Capability (ECC) | , 2016–2018 
+ Chair, | DOE ASCR Cybersecurity for Scientific Computing Integrity Workshop | , Gaithersburg, MD, June 2–3, 2015. 
+ Chair, | DOE ASCR Cybersecurity Workshop | , Rockville, MD, January 7–9, 2015. [ | Report | ] 
+ Community-Related and Other Professional Activities | Member, | U.S. ACM Technology Policy Committee | , 2021– | present 
+ Member, | Marin County Election Advisory Board | , 2010– | present 
+ Member, | Election Verification Network (EVN) | , 2009– | present 
+ Senior Fellow | , | Berkeley Institute for Data Science (BIDS) | , 2018–2020 
+ Selected University and Lab Committees | Member, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2015– | present | . 
+ Executive Committee, | UC Davis Graduate Group in Health Informatics | , 2013– | present | . 
+ Chair, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2019–2024. 
+ Professional OrganizationsDistinguished Member | , | ACM (Association for Computing Machinery) | ACM Special Interest Group on Security, Audit and Control (SIGSAC) 
+ Senior Member, | IEEE (Institute of Electrical and Electronic Engineers) | IEEE Computer Society 
+ IEEE Computer Society Technical Committee on Security and Privacy 
+ IEEE Engineering in Medicine and Biology Society 
+ IEEE Oceanic Engineering Society 
+ Member, | American Association for the Advancement of Science (AAAS) 
+ Member, | American Geophysical Union 
+ Member, | Marine Technology Society 
+ Member, | The Oceanography Society 
+ Member, | USENIX Association 
+ Last modified: Friday, 07-Feb-2025 11:11:55 PST© 2005–2025 Sean Peisert | Professional Service 
+ Selected Steering Committees and Editorial BoardsEditor-in-Chief | , | IEEE Security & Privacy | , 2021– | present 
+ Steering Committee, | IEEE Symposium on Security and Privacy | , 2020– | present 
+ Senior Fellow, | Applied Computer Security Associates (ACSA) | , 2022– | present 
+ Steering Committee, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2009– | present 
+ Steering Committee, | Workshop on Cyber Security Experimentation and Test (CSET) | , 2012– | present 
+ Fellow, | Applied Computer Security Associates (ACSA) | , 2020–2022 
+ Associate Editor-in-Chief | , | IEEE Security & Privacy | , 2018–2020 
+ Chair, | IEEE Computer Society Technical Committee on Security and Privacy | , 2018–2019 
+ Associate Editor | , | IEEE Security & Privacy | , 2013–2018 
+ Selected Conference Chair RolesProgram Chair, | href="http://2016.laser-workshop.org" - 2016 Workshop on Learning from Authoritative Security Experiment Results (LASER) | , 2016. 
+ General Chair, | 36th IEEE Symposium on Security & Privacy | , 2015. 
+ Co-Organizer, | Dagstuhl Seminar on Policies for Security-Sustainable Organizational Processes | , 2012. 
+ Program Co-Chair, | Fifth Workshop on Cyber Security Experimentation and Test (CSET) | , 2012. 
+ Program Co-Chair, | Fourth Workshop on Cyber Security Experimentation and Test (CSET) | , 2011. 
+ General Chair, | href="http://www.nspw.org/2011/" - 2011 New Security Paradigms Workshop (NSPW) | , 2011. 
+ Program Co-Chair, | Fourth International IEEE Workshop on Systematic Approaches to Digital Forensic Engineering (IEEE/SADFE) | , 2009. 
+ Selected Conference Organizing CommitteesTreasurer, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2012– | present | . 
+ Financial Aid Co-Chair, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2011– | present | . 
+ Award CommitteesAward Committee | , | 2024 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 12th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2024 
+ Chair | , | 2023 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 11th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2023 
+ Reviewer, | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 2) | , 2023 
+ Reviewer | , | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 1) | , 2022 
+ Distinguished Expert Reviewer | , | 10th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2022 
+ Award Committee | , | 2022 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 9th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2021 
+ Award Committee | , | 2021 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 8th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2020 
+ Selected Advisory Workshop Organization & ParticipationCo-Chair, "A Convening on Health Data Access and Sharing," | California Council on Science and Technology (CCST) | , Dec. 13, 2024. 
+ Invited Expert Panelist, Secure Methods for Sharing Health Data, | California Council on Science and Technology (CCST) | Legislative Staff Briefing, Sacramento, CA, Dec. 7, 2023. 
+ Invited Presenter, | NASEM Cyber Resilience Forum | Summer Meeting | , Aug. 31, 2023. 
+ Invited Participant, California Council on Science and Technology (CCST) | Workshop on Designing Operable Privacy Standards for Public Health Emergencies | , Oct. 13–14, 2022. [ | Report | ] 
+ Invited Participant and Presenter, AI@DOE Roundtable, Jan. 12–13, 2022. [ | Report | ] 
+ Facilitator / Co-Chair, | DOE/SETO | Working Group for Data Sharing Standards for Inverter-Based and Distributed Energy Resources, 2021–2022. [ | Report/Article | ] 
+ Invited Participant, | ASCR Workshop on the Science of Scientific-Software Development and Use | , Dec. 13–15, 2021. [ | Report | ] 
+ Invited Participant, | White House Office of Science & Technology Policy | Workshop on the Responsible Liberation of Federal Data, Eisenhower Administration Building, Washington. D.C., January 31, 2020. 
+ Invited Expert Presenter | , | National Academies of Sciences, Engineering, and Medicine Committee on Science, Engineering, Medicine, and Public Policy (COSEMPUP) Meeting | , National Academy of Sciences Building, Washington, D.C., November 8, 2018. 
+ Invited Briefing to | U.S. Department of Energy | Deputy Secretary Dr. Elizabeth Sherwood-Randall, August 1, 2016. 
+ Current and Recent Working GroupsU.S. Government / National Service Roles | Member, National Academies of Science, Engineering, and Medicine | Forum on Cyber Resilience | (2024– | present | ) 
+ Co-Chair, Health Data Working Group, | California Council on Science and Technology (CCST) | (2023– | present | ) 
+ Member, | DARPA | Information Science and Technology (ISAT) study group, 2021– | present 
+ Member, DOE | Securing Energy Infrastructure (SEI) Executive Task Force | Technical Project Team (TPT) on Developing a National Cyber-Informed Engineering (CIE) Strategy, 2021–2022. [ | DOE Press Release | ] [ | Report | ] 
+ Member, Advisory Board, NSF / IU | href="https://researchsoc.iu.edu" - Research Security Operations Center (ResearchSOC) | , 2018–2022 
+ Program Committee, | DOE ASCR Workshop on Cybersecurity and Privacy for Scientific Computing Ecosystems | , 2021. 
+ Lead, | DOE Integrated Joint Cybersecurity Coordination Center (iJC3) Cyber R&D Enterprise Cybersecurity Capability (ECC) | , 2016–2018 
+ Chair, | DOE ASCR Cybersecurity for Scientific Computing Integrity Workshop | , Gaithersburg, MD, June 2–3, 2015. 
+ Chair, | DOE ASCR Cybersecurity Workshop | , Rockville, MD, January 7–9, 2015. [ | Report | ] 
+ Community-Related and Other Professional Activities | Member, | U.S. ACM Technology Policy Committee | , 2021– | present 
+ Member, | Marin County Election Advisory Board | , 2010– | present 
+ Member, | Election Verification Network (EVN) | , 2009– | present 
+ Senior Fellow | , | Berkeley Institute for Data Science (BIDS) | , 2018–2020 
+ Selected University and Lab Committees | Member, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2015– | present | . 
+ Executive Committee, | UC Davis Graduate Group in Health Informatics | , 2013– | present | . 
+ Chair, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2019–2024. 
+ Professional OrganizationsDistinguished Member | , | ACM (Association for Computing Machinery) | ACM Special Interest Group on Security, Audit and Control (SIGSAC) 
+ Senior Member, | IEEE (Institute of Electrical and Electronic Engineers) | IEEE Computer Society 
+ IEEE Computer Society Technical Committee on Security and Privacy 
+ IEEE Engineering in Medicine and Biology Society 
+ IEEE Oceanic Engineering Society 
+ Member, | American Association for the Advancement of Science (AAAS) 
+ Member, | American Geophysical Union 
+ Member, | Marine Technology Society 
+ Member, | The Oceanography Society 
+ Member, | USENIX Association 
+ Professional Service 
+ Selected Steering Committees and Editorial BoardsEditor-in-Chief | , | IEEE Security & Privacy | , 2021– | present 
+ Steering Committee, | IEEE Symposium on Security and Privacy | , 2020– | present 
+ Senior Fellow, | Applied Computer Security Associates (ACSA) | , 2022– | present 
+ Steering Committee, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2009– | present 
+ Steering Committee, | Workshop on Cyber Security Experimentation and Test (CSET) | , 2012– | present 
+ Fellow, | Applied Computer Security Associates (ACSA) | , 2020–2022 
+ Associate Editor-in-Chief | , | IEEE Security & Privacy | , 2018–2020 
+ Chair, | IEEE Computer Society Technical Committee on Security and Privacy | , 2018–2019 
+ Associate Editor | , | IEEE Security & Privacy | , 2013–2018 
+ Selected Conference Chair RolesProgram Chair, | href="http://2016.laser-workshop.org" - 2016 Workshop on Learning from Authoritative Security Experiment Results (LASER) | , 2016. 
+ General Chair, | 36th IEEE Symposium on Security & Privacy | , 2015. 
+ Co-Organizer, | Dagstuhl Seminar on Policies for Security-Sustainable Organizational Processes | , 2012. 
+ Program Co-Chair, | Fifth Workshop on Cyber Security Experimentation and Test (CSET) | , 2012. 
+ Program Co-Chair, | Fourth Workshop on Cyber Security Experimentation and Test (CSET) | , 2011. 
+ General Chair, | href="http://www.nspw.org/2011/" - 2011 New Security Paradigms Workshop (NSPW) | , 2011. 
+ Program Co-Chair, | Fourth International IEEE Workshop on Systematic Approaches to Digital Forensic Engineering (IEEE/SADFE) | , 2009. 
+ Selected Conference Organizing CommitteesTreasurer, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2012– | present | . 
+ Financial Aid Co-Chair, | href="http://www.nspw.org/" - New Security Paradigms Workshop (NSPW) | , 2011– | present | . 
+ Award CommitteesAward Committee | , | 2024 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 12th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2024 
+ Chair | , | 2023 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 11th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2023 
+ Reviewer, | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 2) | , 2023 
+ Reviewer | , | NIST/NSF Privacy Enhancing Technologies (PETs) Prize Challenge (Phase 1) | , 2022 
+ Distinguished Expert Reviewer | , | 10th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2022 
+ Award Committee | , | 2022 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 9th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2021 
+ Award Committee | , | 2021 IEEE Cybersecurity Award for Practice 
+ Distinguished Expert Reviewer | , | 8th NSA Annual Best Scientific Cybersecurity Paper Competition | , 2020 
+ Selected Advisory Workshop Organization & ParticipationCo-Chair, "A Convening on Health Data Access and Sharing," | California Council on Science and Technology (CCST) | , Dec. 13, 2024. 
+ Invited Expert Panelist, Secure Methods for Sharing Health Data, | California Council on Science and Technology (CCST) | Legislative Staff Briefing, Sacramento, CA, Dec. 7, 2023. 
+ Invited Presenter, | NASEM Cyber Resilience Forum | Summer Meeting | , Aug. 31, 2023. 
+ Invited Participant, California Council on Science and Technology (CCST) | Workshop on Designing Operable Privacy Standards for Public Health Emergencies | , Oct. 13–14, 2022. [ | Report | ] 
+ Invited Participant and Presenter, AI@DOE Roundtable, Jan. 12–13, 2022. [ | Report | ] 
+ Facilitator / Co-Chair, | DOE/SETO | Working Group for Data Sharing Standards for Inverter-Based and Distributed Energy Resources, 2021–2022. [ | Report/Article | ] 
+ Invited Participant, | ASCR Workshop on the Science of Scientific-Software Development and Use | , Dec. 13–15, 2021. [ | Report | ] 
+ Invited Participant, | White House Office of Science & Technology Policy | Workshop on the Responsible Liberation of Federal Data, Eisenhower Administration Building, Washington. D.C., January 31, 2020. 
+ Invited Expert Presenter | , | National Academies of Sciences, Engineering, and Medicine Committee on Science, Engineering, Medicine, and Public Policy (COSEMPUP) Meeting | , National Academy of Sciences Building, Washington, D.C., November 8, 2018. 
+ Invited Briefing to | U.S. Department of Energy | Deputy Secretary Dr. Elizabeth Sherwood-Randall, August 1, 2016. 
+ Current and Recent Working GroupsU.S. Government / National Service Roles | Member, National Academies of Science, Engineering, and Medicine | Forum on Cyber Resilience | (2024– | present | ) 
+ Co-Chair, Health Data Working Group, | California Council on Science and Technology (CCST) | (2023– | present | ) 
+ Member, | DARPA | Information Science and Technology (ISAT) study group, 2021– | present 
+ Member, DOE | Securing Energy Infrastructure (SEI) Executive Task Force | Technical Project Team (TPT) on Developing a National Cyber-Informed Engineering (CIE) Strategy, 2021–2022. [ | DOE Press Release | ] [ | Report | ] 
+ Member, Advisory Board, NSF / IU | href="https://researchsoc.iu.edu" - Research Security Operations Center (ResearchSOC) | , 2018–2022 
+ Program Committee, | DOE ASCR Workshop on Cybersecurity and Privacy for Scientific Computing Ecosystems | , 2021. 
+ Lead, | DOE Integrated Joint Cybersecurity Coordination Center (iJC3) Cyber R&D Enterprise Cybersecurity Capability (ECC) | , 2016–2018 
+ Chair, | DOE ASCR Cybersecurity for Scientific Computing Integrity Workshop | , Gaithersburg, MD, June 2–3, 2015. 
+ Chair, | DOE ASCR Cybersecurity Workshop | , Rockville, MD, January 7–9, 2015. [ | Report | ] 
+ Community-Related and Other Professional Activities | Member, | U.S. ACM Technology Policy Committee | , 2021– | present 
+ Member, | Marin County Election Advisory Board | , 2010– | present 
+ Member, | Election Verification Network (EVN) | , 2009– | present 
+ Senior Fellow | , | Berkeley Institute for Data Science (BIDS) | , 2018–2020 
+ Selected University and Lab Committees | Member, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2015– | present | . 
+ Executive Committee, | UC Davis Graduate Group in Health Informatics | , 2013– | present | . 
+ Chair, Admissions Committee, | UC Davis Graduate Group in Health Informatics | , 2019–2024. 
+ Professional OrganizationsDistinguished Member | , | ACM (Association for Computing Machinery) | ACM Special Interest Group on Security, Audit and Control (SIGSAC) 
+ Senior Member, | IEEE (Institute of Electrical and Electronic Engineers) | IEEE Computer Society 
+ IEEE Computer Society Technical Committee on Security and Privacy 
+ IEEE Engineering in Medicine and Biology Society 
+ IEEE Oceanic Engineering Society 
+ Member, | American Association for the Advancement of Science (AAAS) 
+ Member, | American Geophysical Union 
+ Member, | Marine Technology Society 
+ Member, | The Oceanography Society 
+ Member, | USENIX Association
+

@@ -1,0 +1,23 @@
+{
+  "Conference dates": "April 06 - 10, 2025",
+  "Year": "2025",
+  "Location": "Valencia, Spain",
+  "City-State-Province": "Valencia",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Submission": "January 20, 2025"
+  },
+  "Notification Date": {
+    "Notification": "February 16, 2025"
+  },
+  "Camera-ready Date": {
+    "Registration": "February 28, 2025",
+    "Camera ready": "March 05, 2025"
+  },
+  "Topics": "data, context, communications, computing, data-intensive applications, domain-oriented applications, medicine, geoinformatics, climatology, remote learning, education, large scale digital libraries, social networks, Mobility, ubiquity, multicast, multi-access networks, data centers, cloud computing",
+  "Publisher": "IARIA Press",
+  "Summary": "The Fifteenth International Conference on Advanced Communications and Computation will be held in Valencia, Spain, from April 06, 2025 to April 10, 2025. INFOCOMP 2025 continues a series of events dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions.",
+  "Call for Papers": "# INFOCOMP 2025: Call for Papers\n\nThe Fifteenth International Conference on Advanced Communications and Computation (INFOCOMP 2025) will be held from **April 06, 2025 to April 10, 2025 in Valencia, Spain**.\n\nINFOCOMP 2025 offers both **onsite and online participation** options.\n\n## Scope\n\nINFOCOMP 2025 is dedicated to advanced communications and computing aspects, covering academic and industrial achievements and visions. The conference solicits academic, research, and industrial contributions.\n\nWe welcome technical papers presenting research and practical results, position papers addressing the pros and cons of specific proposals, such as those being discussed in the standard fora or in industry consortia, survey papers addressing the key problems and solutions on any of the above topics short papers on work in progress, and panel proposals.\n\n## Conference Tracks\n\n*   Trends and advances on architecture/methods\n*   Trends and advances on disciplines/applications\n*   Large scale and fast computation\n*   Programming models\n*   Networks/systems communications\n*   Networks/systems measurement, control and management\n*   Turbulence modeling and simulation\n*   Advanced applications\n*   Legal context, economic use and re-use\n*   Evaluation context\n*   Biometry, security, access technologies, algorithms, and applications\n\n## Contribution Types\n\n*   Regular papers\n*   Short papers (work in progress)\n*   Ideas contributions\n*   Extended abstracts\n*   Posters (paper-based)\n*   Posters (slide-based, only)\n*   Presentations (slide-based, only)\n*   Demos\n*   Tutorial proposals\n*   Panel proposals\n\n## Publication\n\nAuthors of selected papers will be invited to submit extended versions to one of the IARIA Journals.\n\n*   Publisher: XPS (Xpert Publishing Services)\n*   Archived: ThinkMind™ Digital Library (free access)\n*   Prints available at Curran Associates, Inc.\n\n## Submission Format\n\n*   Only .pdf or .doc files will be accepted for paper submission.\n*   Final author manuscripts will be 8.5\" x 11\", not exceeding 6 pages; max 4 extra pages allowed at additional cost.\n\n## Deadlines\n\n*   **Submission:** January 20, 2025\n*   **Notification:** February 16, 2025\n*   **Registration:** February 28, 2025\n*   **Camera ready:** March 05, 2025\n\nDeadlines differ for special tracks. Please consult the conference home page for special tracks Call for Papers (if any)."
+}

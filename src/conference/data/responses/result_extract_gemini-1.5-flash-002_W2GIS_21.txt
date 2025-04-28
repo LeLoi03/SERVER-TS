@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "September 8 - 9, 2025",
+  "Year": "2025",
+  "Location": "Mexico City, México",
+  "City-State-Province": "Mexico City",
+  "Country": "Mexico",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "March 23, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "May 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready copy due": "June 5, 2025"
+  },
+  "Registration Date": {
+    "Author registration deadline": "July 25, 2025",
+    "Early-bird registration": "May 25, 2025"
+  },
+  "Topics": "Web and Wireless Geographical Information Systems",
+  "Summary": "The 22nd International Symposium on Web and Wireless Geographical Information Systems (W2GIS 2025) will be held in Mexico City, Mexico, from September 8-9, 2025. This symposium provides an up-to-date review of advances in both theoretical and technical development of Web and Wireless Geographical Information Systems (W2GIS).",
+  "Call for Papers": "# W2GIS 2025: Call for Papers\n\nThe 22nd International Symposium on Web and Wireless Geographical Information Systems (W2GIS 2025) will be held in **Mexico City, Mexico, from September 8-9, 2025**.\n\nW2GIS 2025 invites high-quality submissions of three types of contributions: full papers, work in progress papers, and showcase papers. More details are available on the [Call for Papers](/view/w2gis-2025/call-for-papers) page.\n\n## Doctoral Symposium\n\nW2GIS 2025 will also feature a Doctoral Symposium, providing a valuable platform for Ph.D. students to receive feedback and guidance from well-known researchers and industry experts. More details are available on the [Doctoral Symposium](/view/w2gis-2025/doctoral-symposium) page.\n\n## Important Dates\n\n*   **Submission deadline:** March 23, 2025\n*   **Notification of acceptance:** May 20, 2025\n*   **Camera-Ready copy due:** June 5, 2025\n*   **Author registration deadline:** July 25, 2025\n*   **Early-bird registration:** May 25, 2025\n\n## Awards\n\nAt the conference, two 500 € prizes will be awarded for the best paper and the best presentation.\n\n## Grants\n\nW2GIS 2025 offers two grants for Ph.D. and master students, covering the conference registration fees.\n\n## Dissemination\n\nAll accepted papers will be published in the conference proceedings in the Springer Lecture Notes in Computer Science (LNCS) series, which is indexed on Clarivate Analytics’ Web of Science, Scopus, EI Engineering Index, Google Scholar, DBLP, and other platforms. The authors of selected papers will be invited to submit an extended version of their work for consideration in a dedicated Special Issue of the Cuadernos de Geografía: Revista Colombiana de Geografía journal (Q4 on Scopus)."
+}
+

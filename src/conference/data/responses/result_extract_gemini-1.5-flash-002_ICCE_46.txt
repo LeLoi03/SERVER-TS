@@ -1,0 +1,66 @@
+output:
+{
+  "Conference dates": "December 1 - 5, 2025",
+  "Year": "2025",
+  "Location": "Indian Institute of Technology Madras, Chennai, India",
+  "City-State-Province": "Chennai",
+  "Country": "India",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Main Conference) Paper submission Deadline": "May 12, 2025",
+    "(Workshop Proposals) Submission Due": "May 19, 2025",
+    "(Workshop Papers) Submission Due": "August 4, 2025",
+    "(Tutorials) Submission Due": "August 4, 2025",
+    "(Interactive Events) Submission Due": "August 4, 2025",
+    "(Work in Progress Posters) Submission Due": "August 4, 2025",
+    "(Doctoral Student Consortium) Submission Due": "August 4, 2025",
+    "(Early Career Workshop) Submission Due": "August 4, 2025",
+    "(Extended Summaries) Submission Due": "August 4, 2025",
+    "(SATULEC) Submission Due": "August 4, 2025",
+    "(Panels) Submission Due": "August 4, 2025"
+  },
+  "Notification Date": {
+    "(Main Conference) Notification of acceptance": "July 7, 2025",
+    "(Workshop Proposals) Notification of Acceptance": "May 29, 2025",
+    "(Workshop Papers) Notification of Acceptance": "August 18, 2025",
+    "(Tutorials) Notification of Acceptance": "August 18, 2025",
+    "(Interactive Events) Notification of Acceptance": "August 18, 2025",
+    "(Work in Progress Posters) Notification of Acceptance": "August 18, 2025",
+    "(Doctoral Student Consortium) Notification of Acceptance": "August 18, 2025",
+    "(Early Career Workshop) Notification of Acceptance": "August 18, 2025",
+    "(Extended Summaries) Notification of Acceptance": "August 18, 2025",
+    "(SATULEC) Notification of Acceptance": "August 18, 2025",
+    "(Panels) Notification of Acceptance": "August 18, 2025"
+  },
+  "Camera-ready Date": {
+    "(Main Conference) Camera-Ready paper Deadline": "August 4, 2025",
+    "(Workshop Papers) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Tutorials) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Interactive Events) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Work in Progress Posters) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Doctoral Student Consortium) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Early Career Workshop) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Extended Summaries) Camera-Ready paper Deadline": "September 1, 2025",
+    "(SATULEC) Camera-Ready paper Deadline": "September 1, 2025",
+    "(Panels) Camera-Ready paper Deadline": "September 1, 2025"
+  },
+  "Registration Date": {
+    "(Main Conference) Author Registration Deadline": "September 15, 2025",
+    "(Workshop Proposals) Author Registration Deadline": "September 15, 2025",
+    "(Workshop Papers) Author Registration Deadline": "September 15, 2025",
+    "(Tutorials) Author Registration Deadline": "September 15, 2025",
+    "(Interactive Events) Author Registration Deadline": "September 15, 2025",
+    "(Work in Progress Posters) Author Registration Deadline": "September 15, 2025",
+    "(Doctoral Student Consortium) Author Registration Deadline": "September 15, 2025",
+    "(Early Career Workshop) Author Registration Deadline": "September 15, 2025",
+    "(Extended Summaries) Author Registration Deadline": "September 15, 2025",
+    "(SATULEC) Author Registration Deadline": "September 15, 2025",
+    "(Panels) Author Registration Deadline": "September 15, 2025"
+  },
+  "Topics": "Computers in Education, Artificial Intelligence in Education, Intelligent Tutoring Systems, Computer-Supported Collaborative Learning, Learning Sciences, Advanced Learning Technologies, Learning Analytics, Digital Infrastructure, Technology Enhanced Learning, Mobility of Learners, Educational Gamification, Game-based Learning, Technology Enhanced Language Learning, Practice-driven Research, Teacher Professional Development, Policy of ICT in Education",
+  "Publisher": "Elsevier",
+  "Summary": "The 33rd International Conference on Computers in Education (ICCE 2025) will be held on 1-5 December 2025 at the Indian Institute of Technology Madras (IITM), Chennai, India.  Organized by the Asia-Pacific Society for Computers in Education (APSCE), ICCE 2025 will be a meta-conference comprising seven interrelated theme-based conferences.",
+  "Call for Papers": "# ICCE 2025: Call for Papers\n\nThe 33rd International Conference on Computers in Education (ICCE 2025) will be held from **December 1-5, 2025**, at the **Indian Institute of Technology Madras (IITM), Chennai, India**.\n\nICCE 2025 is a meta-conference comprising seven interrelated theme-based sub-conferences, each organized by a program committee appointed by the respective Special Interest Group (SIG).\n\n## Sub-Conferences\n\n*   C1: ICCE Sub-Conference on Artificial Intelligence in Education/Intelligent Tutoring System (AIED/ITS) and Adaptive Learning\n*   C2: ICCE Sub-Conference on Computer-supported Collaborative Learning (CSCL) and Learning Sciences\n*   C3: ICCE Sub-Conference on Advanced Learning Technologies (ALT), Learning Analytics and Digital Infrastructure\n*   C4: ICCE Sub-Conference on Technology Enhanced Learning for Mobility of Learners and Learning Experiences (TEML)\n*   C5: ICCE Sub-Conference on Educational Gamification and Game-based Learning (EGG)\n*   C6: ICCE Sub-Conference on Technology Enhanced Language Learning (TELL)\n*   C7: ICCE Sub-Conference on Practice-driven Research, Teacher Professional Development and Policy of ICT in Education (PTP)\n\n## Additional Events\n\n*   Keynote speakers\n*   Theme-based invited speakers\n*   Expert panels\n*   Pre-conference tutorials\n*   Workshops\n*   Doctoral Student Consortia (DSC)\n*   Early Career Workshop (ECW)\n*   Work-in-Progress Posters (WIPP)\n*   Extended Summaries (ES)\n*   Showcase of Advancements in Technology-Enhanced Learning in Underrepresented Countries (SATELUC)\n\n## Publication\n\nAccepted papers will be published in proceedings, submitted to Elsevier for inclusion in Scopus. Proceedings of the main conference will also be submitted to Thomson Reuters for inclusion in the Conference Proceedings Citation Index. Authors of accepted distinguished full papers will be invited to submit extended versions for publication in Research and Practice in Technology Enhanced Learning (RPTEL).\n\n## Paper Categories\n\n*   Full paper (8-10 pages)\n*   Short paper (5-6 pages)\n*   Poster paper (2-3 pages)\n\n## Submission Guidelines\n\nPlease refer to the submission guidelines before submitting your papers and download the latest version of the Paper Template file (Word version) in preparing your manuscript.  The conference practices a single-blind review process.\n\n## Awards\n\nAll accepted full papers are eligible for:\n\n*   Best Overall Paper Award\n*   Best Student Paper Award\n*   Best Technical Design Paper Award\n\nAll accepted poster papers are eligible for the Best Poster Design Award(s).\n\n## Important Dates\n\n*   **Main Conference:**\n    *   Submission Due: May 12, 2025\n    *   Notification of Acceptance: July 7, 2025\n    *   Camera-Ready Paper: August 4, 2025\n    *   Author Registration Deadline: September 15, 2025\n*   **Workshop Proposals:**\n    *   Submission Due: May 19, 2025\n    *   Notification of Acceptance: May 29, 2025\n    *   Author Registration Deadline: September 15, 2025\n*   **Workshop Papers, Tutorials, Interactive Events, Work in Progress Posters, Doctoral Student Consortium, Early Career Workshop, Extended Summaries, SATULEC, Panels:**\n    *   Submission Due: August 4, 2025\n    *   Notification of Acceptance: August 18, 2025\n    *   Camera-Ready Paper: September 1, 2025\n    *   Author Registration Deadline: September 15, 2025"
+}
+

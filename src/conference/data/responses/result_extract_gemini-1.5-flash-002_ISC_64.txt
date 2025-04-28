@@ -1,0 +1,44 @@
+output:
+{
+  "Conference dates": "June 10 - 12, 2025",
+  "Year": "2025",
+  "Location": "Hamburg, Germany",
+  "City-State-Province": "Hamburg",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Workshops with proceedings) Submission Deadline": "Closed",
+    "(Research Paper) Submission Deadline": "Closed",
+    "(Regular Workshops) Submission Deadline": "Closed",
+    "(Tutorials) Submission Deadline": "Closed",
+    "(Birds of a Feather) Submission Deadline": "Closed",
+    "(Research Poster) Submission Deadline": "Closed",
+    "(Project Poster) Submission Deadline": "Closed",
+    "(Women in HPC Poster) Submission Deadline": "Closed"
+  },
+  "Notification Date": {
+    "(Workshops with proceedings) Notification of Acceptance": "December 6, 2024",
+    "(Research Paper) Notification of Acceptance": "February 28, 2025",
+    "(Regular Workshops) Notification of Acceptance": "January 28, 2025",
+    "(Tutorials) Notification of Acceptance": "February 14, 2025",
+    "(Birds of a Feather) Notification of Acceptance": "February 27, 2025",
+    "(Research Poster) Notification of Acceptance": "March 5, 2025",
+    "(Project Poster) Notification of Acceptance": "March 5, 2025",
+    "(Women in HPC Poster) Notification of Acceptance": "March 5, 2025"
+  },
+  "Other Date": {
+    "(Research Paper) Author Rebuttals": "February 8-12, 2025",
+    "(Research Paper) Short pre-recorded Video due": "May 19, 2025",
+    "(Research Paper) Camera-Ready Submission": "March 31, 2025",
+    "(Birds of a Feather) Submission of Final List of Speakers Deadline": "May 16, 2025",
+    "(Tutorials) Working Materials for Tutorial Attendees due": "May 28, 2025",
+    "(Workshops) Submission Deadline Regular Workshops": "Closed",
+    "(Workshops) Submission Deadline Workshops with Proceedings": "Closed",
+    "(Workshops) All Dates": "To be announced on website"
+  },
+  "Topics": "High Performance Computing, AI, Data Analytics, Quantum Computing",
+  "Summary": "ISC High Performance 2025, the 40th anniversary of the world’s leading forum for advancing the application of high performance computing in academia, government, and the private sector, will be held in Hamburg, Germany, from June 10-13, 2025. The goal is to foster a global exchange of knowledge, innovation, and collaboration in the field.",
+  "Call for Papers": "# ISC High Performance 2025: Call for Papers and Participation\n\nISC High Performance 2025 will be held in **Hamburg, Germany from June 10-12, 2025** (Tutorials & Workshops on June 13th).\n\n## Theme\n\nConnecting the Dots\n\n## Call for Submissions\n\nISC 2025 provides a dynamic platform for scientists and engineers to showcase their work and engage with a community of over 3,500 HPC enthusiasts. Join us as a contributor!\n\n**Note:** All submission deadlines have passed.\n\n### Research Paper\n\nThe research papers sessions provide great opportunities for engineers and scientists from academia, industry, and government to come together and exchange ideas on significant topics, trends, and discoveries that shape the future of high-performance computing, machine learning, data analytics, and quantum computing. ([Read More](https://isc-hpc.com/submissions/research-paper/))\n\n### Poster Submission\n\nThe ISC poster sessions provide students, early-career researchers, and established researchers from around the world with the opportunity to present their latest findings, progress, and breakthroughs.\n\n*   **Research Poster:** ([Read More](https://isc-hpc.com/submissions/research-poster/))\n*   **Project Poster:** ([Read More](https://isc-hpc.com/submissions/project-poster/))\n*   **Women in HPC Poster:** ([Read More](https://isc-hpc.com/submissions/women-in-hpc-poster/))\n\n### Birds of a Feather (BoF)\n\nBirds of a Feather (BoF) sessions offer an informal platform for dynamic discussions among peers, experts, leaders, and anyone from the HPC community with shared interests. ([Read More](https://isc-hpc.com/submissions/bof/))\n\n### Tutorial Submission\n\nThe ISC tutorials are interactive courses and collaborative learning experiences focusing on key topics of high-performance computing, machine learning, data analytics, and quantum computing. ([Read More](https://isc-hpc.com/submissions/tutorial/))\n\n### Workshop Submission\n\nThe ISC workshops aim to offer attendees a concentrated and comprehensive forum for presentations, conversations, and engagement on a specific topic. ([Read More](https://isc-hpc.com/submissions/workshop/))\n\n## Keynote Speakers\n\n*   **Opening Keynote:** Mark Papermaster, AMD Chief Technology Officer & Executive Vice President, USA\n*   **Midweek Keynote:** Bjorn Stevens, Director of Climate Physics Department, Max Planck Institute for Meteorology Hamburg, Germany\n*   **Closing Keynote:** Yutong Lu, Director, National Supercomputing Center, Guangzhou & Shenzhen, China\n\n## Awards\n\n*   Jack Dongarra Early Career Award\n*   Hans Meuer Award\n*   Research Poster Award\n\n## Committees\n\n*   **Program Chair:** Torsten Hoefler, Professor of Computer Science, ETH Zurich, Switzerland\n*   **Program Deputy Chair:** Rosa Badia, Manager of the Workflows & Distributed Computing Research Group; Barcelona Supercomputing Center (BSC), Spain"
+}
+

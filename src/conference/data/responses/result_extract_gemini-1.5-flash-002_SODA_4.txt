@@ -1,0 +1,23 @@
+```json
+{
+  "Conference dates": "January 12 - 15, 2025",
+  "Year": "2025",
+  "Location": "New Orleans, Louisiana, U.S.",
+  "City-State-Province": "New Orleans, Louisiana",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline Passed: Submissions Due": "July 5, 2024"
+  },
+  "Registration Date": {
+    "Early Registration Deadline": "December 9, 2024"
+  },
+  "Other Date": {
+    "Reserve Now: Hotel Reservation Deadline Extended!": "December 13, 2024"
+  },
+  "Topics": "Discrete Algorithms, Data Structures, Algorithm Analysis, Experimental Algorithmics, Lower Bounds, Mathematical Programming, Combinatorial Structures, Discrete Optimization, Graph Theory, Random Structures, Algorithmic Fairness, Combinatorial Scientific Computing, Communication Networks, Internet, Computational Geometry, Topology, Computer Systems, Cryptography, Security, Privacy, Databases, Information Retrieval, Distributed and Parallel Computing, Game Theory, Mechanism Design, Machine Learning, Quantum Computing, Scheduling, Resource Allocation",
+  "Summary": "The ACM-SIAM Symposium on Discrete Algorithms (SODA25) was held in New Orleans, Louisiana, U.S., from January 12–15, 2025.  This symposium focuses on research topics related to the design and analysis of efficient algorithms and data structures for discrete problems.",
+  "Call for Papers": "No call for papers available"
+}
+```

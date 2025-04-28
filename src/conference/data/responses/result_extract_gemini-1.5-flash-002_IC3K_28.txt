@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": "October 22 - 24, 2025",
+  "Year": "2025",
+  "Location": "Available soon",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Regular Papers) Paper Submission": "May 19, 2025",
+    "(Position Papers /Regular Papers) Paper Submission": "June 26, 2025",
+    "Workshop Proposal": "May 27, 2025",
+    "Special Session Proposal": "May 27, 2025",
+    "Tutorial Proposal": "September 11, 2025",
+    "Demo Proposal": "September 11, 2025",
+    "Panel Proposal": "September 11, 2025",
+    "(Abstracts Track) Abstract Submission": "July 31, 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Authors Notification": "July 17, 2025",
+    "(Position Papers /Regular Papers) Authors Notification": "July 31, 2025",
+    "(Abstracts Track) Authors Notification": "September 8, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular Papers) Camera Ready and Registration": "July 31, 2025",
+    "(Position Papers /Regular Papers) Camera Ready and Registration": "September 5, 2025",
+    "(Abstracts Track) Camera Ready and Registration": "September 17, 2025"
+  },
+  "Topics": "Knowledge Discovery, Knowledge Engineering, Knowledge Management",
+  "Publisher": "SCITEPRESS",
+  "Summary": "The IC3K is composed of three co-located conferences: KDIR (Knowledge Discovery and Information Retrieval), KEOD (Knowledge Engineering and Ontology Development), and KMIS (Knowledge Management and Information Systems). IC3K 2025 will be held from October 22-24, 2025.  Although the conference is in-person, hybrid support is available for remote presentations.",
+  "Call for Papers": "# IC3K 2025: Call for Papers\n\nThe IC3K 2025 conference will be held from **October 22-24, 2025**.\n\nThe purpose of the IC3K is to bring together researchers, engineers, and practitioners in the areas of Knowledge Discovery, Knowledge Engineering, and Knowledge Management. IC3K is composed of three co-located conferences, each specialized in at least one of the aforementioned main knowledge areas.\n\n## Paper Submission\n\nAuthors should submit a paper in English, carefully checked for correct grammar and spelling, addressing one or several of the conference areas or topics. Each paper should clearly indicate the nature of its technical/scientific contribution, and the problems, domains, or environments to which it is applicable.\n\nTo facilitate the double-blind paper evaluation method, authors are kindly requested to produce and provide the paper WITHOUT any reference to any of the authors, including the authors’ personal details, the acknowledgments section of the paper, and any other reference that may disclose the authors’ identity. Only original papers should be submitted. Papers that contain any form of plagiarism will be rejected without reviews.\n\nAuthors can submit their work in the form of a Regular Paper, representing completed and validated research, or as a Position Paper, portraying a short report of work in progress or an arguable opinion about an issue.\n\nAll papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates.\n\n## Publications\n\nAll accepted papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. SCITEPRESS is a member of CrossRef and every paper on our digital library is given a DOI. The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science / Conference Proceedings Citation Index.\n\n## Important Dates\n\nAll dates refer to AOE time, i.e., \"Anywhere on Earth\"\n\n### Regular Papers\n\n*   **Paper Submission:** May 19, 2025\n*   **Authors Notification:** July 17, 2025\n*   **Camera Ready and Registration:** July 31, 2025\n\n### Position Papers / Regular Papers\n\n*   **Paper Submission:** June 26, 2025\n*   **Authors Notification:** July 31, 2025\n*   **Camera Ready and Registration:** September 5, 2025\n\n### Workshops\n\n*   **Workshop Proposal:** May 27, 2025\n\n### Special Sessions\n\n*   **Special Session Proposal:** May 27, 2025\n\n### Tutorials\n\n*   **Tutorial Proposal:** September 11, 2025\n\n### Demos\n\n*   **Demo Proposal:** September 11, 2025\n\n### Panels\n\n*   **Panel Proposal:** September 11, 2025\n\n### Abstracts Track\n\n*   **Abstract Submission:** July 31, 2025\n*   **Authors Notification:** September 8, 2025\n*   **Camera Ready and Registration:** September 17, 2025\n\n## Conference Co-chairs\n\n*   Jorge Bernardino, Polytechnic University of Coimbra, Portugal\n*   Ricardo da Silva Torres, Agricultural Biosystems Engineering and Wageningen Data Competence Center, Wageningen University & Research, Netherlands\n\n## Secretariat\n\nIC3K Secretariat\n\nAddress: Avenida de S. Francisco Xavier, Lote 7 Cv. C\n2900-616 Setúbal - Portugal\nTel.: +351 265 520 185\nFax: +351 265 520 186\ne-mail: [ic3k.secretariat@insticc.org](mailto:ic3k.secretariat@insticc.org)\nWeb: [https://ic3k.scitevents.org](https://ic3k.scitevents.org)"
+}
+

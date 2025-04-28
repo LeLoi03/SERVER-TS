@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "July 2 - 5, 2025",
+  "Year": "2025",
+  "Location": "Bologna, Italy",
+  "City-State-Province": "Bologna",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Main track paper submission deadline": "February 17, 2025"
+  },
+  "Notification Date": {
+    "Acceptance notification deadline": "April 7, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready upload and Early registration deadline": "April 18, 2025"
+  },
+  "Other Date": {
+    "Proposals for Special Sessions, Tutorials and Workshops": "November 30, 2024"
+  },
+  "Topics": "Computers and Communications",
+  "Publisher": "IEEE",
+  "Summary": "The 30th IEEE Symposium on Computers and Communications (ISCC 2025) will be held in Bologna, Italy, from July 2-5, 2025. ISCC takes place annually, usually in the Mediterranean region, and provides an international technical forum for experts from industry and academia to exchange ideas and present results of ongoing research in state-of-the-art areas of computers and communications.",
+  "Call for Papers": "# ISCC 2025: Call for Papers\n\nThe 30th IEEE Symposium on Computers and Communications (ISCC 2025) will be held in **Bologna, Italy, from July 2-5, 2025**.\n\nISCC provides an international technical forum for experts from industry and academia to exchange ideas and present results of ongoing research in state-of-the-art areas of computers and communications.\n\n## Submission Guidelines\n\nReview manuscripts should describe original work and should be no more than 7 pages in the IEEE double-column proceedings format, including tables, figures, and references.  Papers can be submitted directly to EDAS: [link](https://edas.info/newPaper.php?c=33132&track=127821)\n\n*   Accepted papers of up to 6 pages will be published with no additional charge. Exceeding pages will be charged an additional fee. Papers exceeding 7 pages will not be accepted.\n*   At least one author of each accepted paper is required to register to the conference and present the paper. Only registered and presented papers will be published in the conference proceedings.\n*   Accepted papers will be included in the ISCC 2025 proceedings and will be submitted for inclusion to IEEE Xplore.\n*   If you are using LaTeX, please analyze your article’s LaTeX files prior to submission to avoid delays in publishing. The IEEE LaTeX Analyzer will identify potential setbacks such as incomplete files or different versions of LaTeX.\n\n## Topics of Interest\n\n*   5th Generation Networks and Beyond\n*   Application domain / Framework / Architecture\n*   Artificial Intelligence (AI) in Computers and Communications\n*   Cloud and Edge Computing\n*   Cutting Edge Technologies\n*   Emerging Topics in AI and Machine Learning\n*   Emerging Topics in Security and Cryptography\n*   Internet of Things (IoT)\n*   Optical Networks\n*   Satellite and Space Communications\n*   Security in Computers and Communications\n*   Services and Protocols\n*   Software Defined Networks, Applications and Services\n*   Software Engineering\n*   Vehicular Networks\n*   Wireless Networks\n\n## Important Dates\n\n*   **Proposals for Special Sessions, Tutorials, and Workshops:** November 30, 2024\n*   **Main track paper submission deadline:** February 17, 2025\n*   **Acceptance notification deadline:** April 7, 2025\n*   **Camera-ready upload and Early registration deadline:** April 18, 2025\n*   **Conference dates:** July 2 – 5, 2025"
+}
+

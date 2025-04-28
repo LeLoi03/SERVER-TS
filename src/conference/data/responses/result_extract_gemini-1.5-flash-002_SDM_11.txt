@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "May 1 - 3, 2025",
+  "Year": "2025",
+  "Location": "Alexandria, Virginia, U.S.",
+  "City-State-Province": "Alexandria, Virginia",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Submissions": "September 27, 2024",
+    "Full Paper Submissions": "October 4, 2024",
+    "Workshop and Tutorial Proposals": "October 11, 2024",
+    "Blue Sky Idea Submissions Deadline": "October 25, 2024"
+  },
+  "Notification Date": {},
+  "Camera-ready Date": {},
+  "Registration Date": {
+    "Early Registration Deadline": "April 3, 2025",
+    "Hotel Reservation Deadline Extended": "April 7, 2025"
+  },
+  "Other Date": {
+    "Travel Support Application Deadline": "February 3, 2025",
+    "IBM Early Data Mining Research Award": "March 21, 2025"
+  },
+  "Topics": "Data Mining Algorithms, Applications, Anomaly Detection, Outlier Detection, Big Data, Large-Scale Systems, Causal Inference, Classification, Semi-Supervised Learning, Clustering, Unsupervised Learning, Data Cleaning, Data Integration, Deep Learning, Representation Learning, Feature Extraction, Feature Selection, Dimensionality Reduction, Data Streams, Graphs, Complex Data, Emerging Architectures, Data Clouds, Semi-Structured Data, Spatial Data, Temporal Data, Text Mining, Web Mining, Social Media Mining, Optimization Methods, Parallel Methods, Distributed Methods, Pattern Mining, Probabilistic Methods, Statistical Methods, Scalable Mining, High-Performance Mining, Business Applications, Marketing Applications, Healthcare Applications, Scientific Data Applications, Ethics of Data Mining, Intellectual Ownership, Privacy Models, Fairness Models, Privacy-Preserving Data Mining, Risk Analysis, Risk Management, Transparency, Algorithmic Bias, User Interfaces, Visual Analytics",
+  "Summary": "The SIAM International Conference on Data Mining (SDM25) invites submissions of high-quality research papers that present original results on data mining algorithms and their applications. SDM25 provides a venue for researchers to present their work in a peer-reviewed forum.  It will be held in Alexandria, Virginia, U.S. from May 1–3, 2025.",
+  "Call for Papers": "No call for papers available"
+}
+

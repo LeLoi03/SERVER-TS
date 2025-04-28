@@ -1,0 +1,34 @@
+```json
+{
+  "Conference dates": "December 2 - 4, 2024",
+  "Year": "2024",
+  "Location": "Phoenix, AZ, USA",
+  "City-State-Province": "Phoenix, Arizona",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Registration": "August 30, 2024",
+    "Paper Submission": "August 30, 2024",
+    "Demo/Poster Submission": "October 31, 2024"
+  },
+  "Notification Date": {
+    "Paper Acceptance Notification": "October 18, 2024",
+    "Demo/Poster Acceptance Notification": "November 7, 2024"
+  },
+  "Camera-ready Date": {
+    "Paper Camera Ready": "November 14, 2024",
+    "Demo/Poster Camera Ready": "November 14, 2024"
+  },
+  "Other Date": {
+    "Tutorials: Proposal Submission": "October 1, 2024",
+    "Tutorials: Acceptance Notification": "October 11, 2024",
+    "Workshops: Proposal Submission": "September 23, 2024",
+    "Workshops: Acceptance Notification": "September 27, 2024"
+  },
+  "Topics": "Sensing, Communication, Networking, Machine Intelligence, Data Analytics, Edge Computing, Social Networks, Rural Connectivity, Electromagnetic Fields, Biological Communication Networks, Unexplored Wireless Frequencies, Edge Intelligence, Social Media Data Analysis, 5G, 6G, Terahertz Communications, Optical Wireless Communications, Visible Light Communication, Acoustic Communication, Uncharted Wireless Bands, Reconfigurable Intelligent Surfaces, Molecular Communication Networks, Networks of Nano Things, Bio Nano Things, Low-Power Sensing, Energy Limited Sensing, Battery-Free Sensing, Battery-Free Communications, Internet of Things, Cyber-Physical Systems, Software Defined Networks, Programmable Networks, Unmanned Aerial Vehicle Sensing, UAV Communications, UAV Networking, Communication for AI, Networking for AI, Machine Learning for Sensing, Machine Learning for Communication, Machine Learning for Networking, Cloud Computing, Edge Computing, Fog Computing, Time and Location in Networks, Fairness and Socio-Technical Issues in Networks, Security, Privacy, Trustworthiness, Experimental Testbeds, Sensing Systems, Networking Systems, Measurement of Sensing Systems, Measurement of Networking Systems, Wearable Computing, Virtual Reality, Augmented Reality, Smart and Connected Communities, Sensing and Networking of Social Systems, IoT Applications, Integrated Sensing and Communications",
+  "Publisher": "IEEE",
+  "Summary": "The 21st Annual IEEE International Conference on Sensing, Communication, and Networking (IEEE SECON 2024) will be held in Phoenix, AZ, USA, from December 2-4, 2024.  The conference emphasizes pioneering cross-disciplinary work and offers full days of original paper presentations, workshops, keynotes, and demonstrations.",
+  "Call for Papers": "# IEEE SECON 2024: Call for Papers\n\nThe 21st annual IEEE International Conference on Sensing, Communication, and Networking (SECON) will provide a unique forum to exchange innovative research ideas, recent results, and share experiences among researchers and practitioners in wireless and mobile communication networks.\n\n## Topics of Interest\n\nExploring beyond current sensing, communication, and networking paradigms, IEEE SECON is committed to fostering innovative interdisciplinary research work.  With a focus on pioneering endeavors that bridge traditional sensing and networking with emerging fields such as machine intelligence, data analytics, edge computing, and social networks, SECON invites contributions spanning a diverse array of topics.  These may include, but are not limited to:\n\n*   New communication paradigms\n*   Cellular communications and data networks\n*   Molecular communication networks\n*   New platforms, techniques, and hardware designs for low-power, energy-limited and battery-free sensing and communications\n*   Internet of Things; cyber-physical systems, software defined and programmable networks\n*   Unmanned aerial vehicle (UAV)-based sensing/communications/networking\n*   Communication and networking for AI and machine learning\n*   Data analytics, AI, and machine learning for sensing, communication, and networking\n*   Cloud, edge, and fog computing for sensing and inference\n*   Time and location in sensing, communication, and networking\n*   Fairness and socio-technical issues in sensing, communication, and networking\n*   Security, privacy, and trustworthiness of mobile, wireless and sensor systems\n*   Novel experimental testbeds for sensing and networking systems, measurement of sensing and networking systems\n*   Deployment experiences in sensing, communication, and networking\n*   Sensing, communication, and networking in challenging scenarios\n*   Resilience, dependability, and sustainability of sensing systems\n*   Novel applications such as wearable computing, virtual/augmented reality, smart and connected communities, sensing and networking of social systems, and IoT/sensor applications using foundation models\n*   Integrated sensing and communications (ISAC)\n\n## Paper Submission and Publication\n\nPapers should neither have been published elsewhere nor be currently under review at another venue. All papers for IEEE SECON 2024 must be submitted via the conference submission system.  Each submission must be no longer than 9 pages (including all the figures, references, and appendices) and in font size of 10 points. Submissions that violate the formatting guidelines will be rejected without review.\n\nAll submitted papers will be judged based on their quality and relevance through double-blind reviewing.\n\nUse the standard IEEE Transactions templates for Microsoft Word or LaTeX formats at [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html). If the paper is typeset in LaTeX, please use an unmodified version of the LaTeX template IEEEtran.cls version 1.8, and use the preamble:  `\\documentclass[10pt, conference, letterpaper]{IEEEtran}`\n\nSubmit your papers via EDAS at: [https://edas.info/N32699](https://edas.info/N32699)\n\n## Important Dates\n\n*   **Abstract Registration:** August 30, 2024\n*   **Paper Submission:** August 30, 2024\n*   **Paper Acceptance Notification:** October 18, 2024\n*   **Paper Camera Ready:** November 14, 2024\n*   **Demo/Poster Submission:** October 31, 2024\n*   **Demo/Poster Acceptance Notification:** November 7, 2024\n*   **Demo/Poster Camera Ready:** November 14, 2024\n*   **Conference:** December 2-4, 2024 (Monday-Wednesday)"
+}
+```

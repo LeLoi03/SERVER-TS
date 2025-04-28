@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "October 20 - 22, 2025",
+  "Year": "2025",
+  "Location": "600 Years Anniversary Hall, Sungkyunkwan University (Humanities & Social Sciences Campus)",
+  "City-State-Province": null,
+  "Country": "South Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "June 4, 2025"
+  },
+  "Notification Date": {
+    "Notification": "July 29, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Deadline": "August 13, 2025"
+  },
+  "Other Date": {
+    "Rebuttal": "July 13-16, 2025"
+  },
+  "Topics": "Information Security, Cryptography, Privacy, Access Control, Anonymity, Applied Cryptography, Attribute-based Cryptography, Automated Security Analysis, Biometric Security, Blockchain, Certification, Cloud Computing, Containerization, Critical Infrastructures, Cryptanalysis, Cryptocurrency, Cybercrime, Database Security, Decentralized Systems, Downgrade Attacks, Embedded Platforms, Fault Attacks, Fingerprinting, Formal Methods, Functional Encryption, Hardness Assumptions, Homomorphic Encryption, Identity-based Cryptography, Identity Management, Indistinguishability Obfuscation, Internet Security, Intrusion Detection, Key Management, Malware, Mathematical Aspects, Micro-architectural Attacks, Mobile Security, Wireless Security, 5G Security, Multilinear Maps, Multi-party Computation, Networks Security, OS and Systems Security, Post-quantum Cryptography, Privacy-enhancing Technologies, Protocols, Public-key Cryptography, Real-world Cryptography, Reproducibility, Secure Messaging, Secure Voting, Security Proofs, Side-channel Attacks, Software Security, Standardization, Symmetric-key Cryptography, Threshold Cryptography, Trusted Execution, Unlinkability, Usability, Vulnerabilities, Web Security, Zero-knowledge Proofs",
+  "Publisher": "Springer",
+  "Summary": "The Information Security Conference (ISC) is an annual international conference covering research in theory and applications of Information Security. ISC 2025 will be held in-person at the 600 Years Anniversary Hall, Sungkyunkwan University (Humanities & Social Sciences Campus). The proceedings will be published as a separate LNCS volume by Springer.",
+  "Call for Papers": "# ISC 2025: Call for Papers\n\nThe Information Security Conference (ISC) is an annual international conference covering research in theory and applications of Information Security. The 28th edition of ISC will be held in-person at the **600 Years Anniversary Hall, Sungkyunkwan University (Humanities & Social Sciences Campus)**.\n\n## Topics of Interest\n\nPapers on all technical aspects of information security, cryptography, and privacy are solicited for submission. Areas of interest include, but are not limited to:\n\n*   access control\n*   anonymity\n*   applied cryptography\n*   attribute-based cryptography\n*   automated security analysis\n*   biometric security\n*   blockchain\n*   certification\n*   cloud computing\n*   containerization\n*   critical infrastructures\n*   cryptanalysis\n*   cryptocurrency\n*   cybercrime\n*   database/system security\n*   decentralized systems\n*   downgrade attacks\n*   embedded platforms\n*   fault attacks\n*   fingerprinting\n*   formal methods\n*   functional encryption\n*   hardness assumptions\n*   homomorphic encryption\n*   identity-based cryptography\n*   identity management\n*   indistinguishability obfuscation\n*   Internet security\n*   intrusion detection\n*   key management\n*   malware\n*   mathematical aspects\n*   micro-architectural attacks\n*   mobile/wireless/5G security\n*   multilinear maps\n*   multi-party computation\n*   networks security\n*   OS and systems security\n*   post-quantum cryptography\n*   privacy\n*   privacy-enhancing technologies\n*   protocols\n*   public-key cryptography\n*   real-world cryptography\n*   reproducibility\n*   secure messaging\n*   secure voting\n*   security proofs\n*   side-channel attacks\n*   software security\n*   standardization\n*   symmetric-key cryptography\n*   threshold cryptography\n*   trusted execution\n*   unlinkability\n*   usability\n*   vulnerabilities\n*   web security\n*   zero-knowledge proofs\n\n## Important Dates\n\n*   **Submission Deadline:** June 4, AoE\n*   **Rebuttal:** July 13-16, AoE\n*   **Notification:** July 29, AoE\n*   **Camera-Ready Deadline:** August 13, AoE\n*   **Conference:** October 20-22, KST\n\n## Submission Guidelines\n\nSubmissions must be original work and may not be under submission to another journal or conference with proceedings at the time of review. Submissions must be in the Springer Lecture Notes in Computer Science (LNCS) style, with the default margins and fonts, but with the addition of page numbers. They are limited to 16 pages excluding bibliography and appendices, and to 20 pages including bibliography and appendices.\n\n*   Authors should consult Springer’s authors’ guidelines and use their LaTeX proceedings template.\n*   Springer encourages authors to include their ORCIDs in their papers.\n*   Submitted papers must be in PDF format and submitted electronically via the [ISC 2025 submission system (HotCRP)](https://isc25.hotcrp.com/).\n*   The submission must be anonymous with no author names, affiliations, or obvious references."
+}
+```

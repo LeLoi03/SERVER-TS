@@ -1,0 +1,14 @@
+output:
+{
+  "Conference dates": "December 2025",
+  "Year": "2025",
+  "Location": "Iași, Romania",
+  "City-State-Province": "Iași",
+  "Country": "Romania",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Topics": "Distributed Computing, Distributed Computer Systems",
+  "Summary": "OPODIS is an open forum for the exchange of state-of-the-art knowledge concerning distributed computing and distributed computer systems. All aspects of distributed systems are within the scope of OPODIS, including theory, specification, design, performance, and system building.",
+  "Call for Papers": "No call for papers available"
+}
+

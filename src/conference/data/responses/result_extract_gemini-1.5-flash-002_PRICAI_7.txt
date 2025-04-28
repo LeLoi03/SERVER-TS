@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "November 17 - 21, 2025",
+  "Year": "2025",
+  "Location": "Wellington, New Zealand",
+  "City-State-Province": "Wellington",
+  "Country": "New Zealand",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "June 13, 2025"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "August 8, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Submission": "August 22, 2025"
+  },
+  "Topics": "Artificial Intelligence",
+  "Summary": "The Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) will take place in person in Wellington, New Zealand from November 17-21, 2025. The Program Committee invites original, substantial, and unpublished technical papers on all areas of Artificial Intelligence.",
+  "Call for Papers": "No call for papers available"
+}
+

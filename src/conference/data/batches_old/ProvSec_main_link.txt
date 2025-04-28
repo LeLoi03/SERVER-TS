@@ -1,0 +1,65 @@
+Conference ProvSec:
+
+ProvSec 2025ProvSec 2025 
+ Yokohama, Japan 
+ 10 — 12 October 2025 
+ Homehref="cfp.html" - Call For Papers
+CommitteesRegistrationhref="accepted-papers.html" - Accepted Papers
+ProgramVenueKeynotesThe 19th International Conference on Provable and Practical Security 
+ (ProvSec 2025) 
+ Yokohama, Japan 
+ Date: 
+ 10-12 Oct, 2025 
+ Location: 
+ Yokohama, Japan 
+ Important Dates 
+ Paper Submission: 31 May, 2025 
+ Notification: 15 July, 2025 
+ Camera Ready: 30 July, 2025 
+ © 2025 ProvSec. All rights reserved. 
+
+Call for Papers information:
+ProvSec 2025ProvSec 2025 
+ Yokohama, Japan 
+ 10 — 12 October 2025 
+ Homehref="cfp.html" - Call For Papers
+CommitteesRegistrationhref="accepted-papers.html" - Accepted Papers
+ProgramVenueKeynotesProvable security is a critical tool for analyzing the security of modern cryptographic primitives in order to achieve high assurance of trustworthy and secure cyber systems. Provable security methodology contributed greatly to the analysis of cryptographic schemes and protocols, as well as their implementations in trusted and secure systems. However, cryptographic primitives without a rigorous "proof" cannot be regarded as sound. Security flaws in many cryptographic schemes and protocols once considered secure without formal analysis have been discovered using Provable Security methodology. Although Provable Security provides confidence in using cryptographic schemes and protocols for various real-world applications, schemes with Provable Security are sometimes not efficient enough for practical purposes, and it may be difficult to verify the correctness of the proofs. 
+  
+ We will continue to promote "Practical Security" as the theme for ProvSec2025. The event convened researchers and practitioners to provide a confluence of new practical cyber security technologies, including their applications and integration with IT systems in various industrial sectors. 
+  
+ Authors are invited to submit original research papers on provable and practical security. Areas of interest include, but are not limited to: 
+ Provable security for asymmetric cryptography 
+ Provable security for symmetric cryptography 
+ Provable security for physical attacks 
+ Privacy and anonymity technologies 
+ Secure cryptographic protocols and applications 
+ Security notions, approaches, and paradigms 
+ Leakage-resilient cryptography 
+ Lattice-based cryptography and post-quantum cryptography 
+ Steganography and steganalysis 
+ Blockchain and cryptocurrency 
+ IoT security 
+ Cloud security 
+ Access control 
+ Privacy-enhancing technologies 
+ Database security 
+ Big data security and privacy 
+ Biometric security 
+ Network security 
+ Formal methods for security 
+ Embedded systems security 
+ Lightweight security 
+ Cyber-physical security 
+ Important Dates 
+ Paper Submission: 31 May, 2025 
+ Notification: 15 July, 2025 
+ Camera Ready: 30 July, 2025 
+ Conference: 10-12 Octomber, 2025 
+ Instructions for Authors 
+ All submissions should use the Springer LNCS format. Details on the Springer LNCS format can be obtained here. 
+ https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelinesAuthors should not change the font or the margins of the LNCS format. The main body for the submission should not exceed 16 pages but there is no page limit on the references, appendices and supplementary material. Note that reviewers are not required to read the appendices or any supplementary material. It is strongly encouraged that submissions are processed in LaTeX. All submissions must be anonymous and must have page numbers. All submissions will be blind-refereed and thus must be anonymous, with no author names, affiliations, acknowledgements, or obvious references. Submissions must be submitted electronically in PDF format. Submissions must not substantially duplicate work that any of the authors has published elsewhere or has submitted in parallel to a journal or any other conference/workshop that has proceedings. Accepted submissions may not appear in any other conference or workshop that has proceedings. Submissions not meeting these guidelines risk rejection without consideration of their merits. 
+ Authors should submit their paper using this link: 
+ href="https://easychair.org/conferences?conf=provsec2025" - https://easychair.org/my/conference?conf=provsec2025
+Proceedings including all accepted papers will be published in Springer LNCS and will be available at the conference. 
+ © 2025 ProvSec. All rights reserved.

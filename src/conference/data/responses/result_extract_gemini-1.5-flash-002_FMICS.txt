@@ -1,0 +1,21 @@
+```json
+{
+  "Conference dates": "August 25 - 30, 2025",
+  "Year": "2025",
+  "Location": null,
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission": "April 4, 2025",
+    "Paper submission": "April 11, 2025"
+  },
+  "Notification Date": {
+    "Notification": "May 16, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version": "June 6, 2025"
+  },
+  "Topics": null,
+  "Summary": "The 30th International Conference on Formal Methods for Industrial Critical Systems (FMICS 2025) will be held between August 25th and August 30th, 2025.  FMICS is the ERCIM Working Group conference on Formal Methods for Industrial Critical Systems, and it is the key conference in the intersection of industrial applications and Formal Methods.",
+  "Call for Papers": "# FMICS 2025: Call for Papers\n\nThis year's edition marks the 30th International Conference on Formal Methods for Industrial Critical Systems.\n\n## Submission\n\nSubmissions are welcome via the Springer system [Equinocs](https://equinocs.springernature.com/service/fmics2025).\n\n## General Information\n\n*   Papers must describe original research work and results.\n*   Submitted papers must not have previously appeared in a journal or conference with published proceedings and must not be concurrently submitted to any other peer-reviewed workshop, symposium, conference, or archival journal. Any partial overlap with any such published or concurrently submitted paper must be clearly indicated.\n*   Submissions should clearly motivate relevance to industrial applications. Case study papers should identify lessons learned, validate theoretical results (such as scalability of methods) or provide specific motivation for further research and development.\n*   Papers should not exceed 15 pages (excluding references) formatted according to the Springer author guidelines LNCS style. Any appendices (beyond the above page limit) might not be considered in the review process.\n*   All submissions will be reviewed by at least three members of the Programme Committee.\n*   Papers must be written in English and should be submitted as PDF files.\n\n## Best Paper Award\n\nA monetary award sponsored by Springer will be given to the authors of the submission selected by the Program Committee as the best paper of FMICS 2025.\n\n## Important Dates (AoE)\n\n*   **Abstract submission:** April 4, 2025 (extended)\n*   **Paper submission:** April 11, 2025 (extended)\n*   **Notification:** May 16, 2025\n*   **Camera-ready version:** June 6, 2025\n*   **Conference dates:** Between August 25th and August 30th"
+}
+```

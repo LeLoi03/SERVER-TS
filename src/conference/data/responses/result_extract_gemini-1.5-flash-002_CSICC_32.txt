@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "February 5 - 6, 2025",
+  "Year": "2025",
+  "Location": "Sharif University of Technology",
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "December 6, 2024"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "January 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Registration and Camera-Ready Deadline": "January 24, 2025"
+  },
+  "Other Date": {
+    "Call for Workshop Registration": "December 20, 2024",
+    "Workshop Registration": "February 2, 2025"
+  },
+  "Topics": null,
+  "Summary": "The Computer Society of Iran and Sharif University of Technology are holding the 29th International Computer Conference with the aim of developing computer knowledge and technology. The conference focuses on fundamental, strategic, and development aspects of computer science.",
+  "Call for Papers": "# CSICC 2025: Call for Papers\n\nThe Computer Society of Iran and Sharif University of Technology are holding the 29th International Computer Conference with the aim of developing computer knowledge and technology. The conference focuses on fundamental, strategic, and development aspects of computer science. All researchers, academics, and engineers are invited to submit papers and participate in the conference.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** December 6, 2024\n*   **Call for Workshop Registration:** December 20, 2024\n*   **Acceptance Notification:** January 15, 2025\n*   **Registration and Camera-Ready Deadline:** January 24, 2025\n*   **Workshop Registration:** February 2, 2025\n*   **Conference Date:** February 5-6, 2025"
+}
+

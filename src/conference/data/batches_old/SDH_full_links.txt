@@ -1,0 +1,738 @@
+Conference full name: International Symposium on Spatial Data Handling (SDH)
+
+1. Website of SDH_3: https://gis.stackexchange.com/questions/64791/seeking-top-tier-conference-in-giscience
+Website information of SDH_3:
+
+Join Geographic Information Systems 
+ By clicking “Sign up”, you agree to ourterms of serviceand acknowledge you have read ourprivacy policy.Sign up with Google 
+ OR 
+ EmailPasswordSign up 
+ Already have an account?Log in 
+ Skip to main contentStack Exchange Network 
+ Stack Exchange network consists of 183 Q&A communities includingStack Overflow, the largest, most trusted online community for developers to learn, share their knowledge, and build their careers. 
+ Visit Stack ExchangeLoading… 
+ TourStart here for a quick overview of the site 
+ Help CenterDetailed answers to any questions you might have 
+ MetaDiscuss the workings and policies of this site 
+ About UsLearn more about Stack Overflow the company, and our products 
+ current communityGeographic Information Systems | helpchat 
+ Geographic Information Systems Meta 
+ your communities 
+ Sign uporlog into customize your list. 
+ more stack exchange communitiescompany blog 
+ Log in 
+ Sign up 
+ Home 
+ Questions 
+ Unanswered 
+ Tags 
+ Users 
+ Teams | Ask questions, find answers and collaborate at work with Stack Overflow for Teams. 
+ Try Teams for freeExplore Teams 
+ Teams 
+ Ask questions, find answers and collaborate at work with Stack Overflow for Teams.Explore Teams 
+ Teams 
+ Q&A for work 
+ Connect and share knowledge within a single location that is structured and easy to search. 
+ Learn more about TeamsHang on, you can't upvote just yet.You'll need to complete a few actions and gain 15 reputation points before being able to upvote.Upvotingindicates when questions and answers are useful.What's reputation and how do I get it? 
+ Instead, you can save this post to reference later. 
+ Save this post for laterNot now 
+ Seeking top tier conference in GIScience? 
+ Ask QuestionAsked11 years, 9 months agoModified7 years, 2 months agoViewed6k times 
+ This question shows research effort; it is useful and clear44 
+ Save this question.Show activity on this post.This question's answers are acommunity effort. Edit existing answers to improve this post. It is not currently accepting new answers or interactions. 
+ In many fields, such as computer sciences, it seems to be quite clear which conferences are top tier and how a paper accepted to those conferences compares to journal publications in the same field. 
+ Is there a general agreement in GIScience about which conferences are considered top tier? And how do publications at those conferences compare to papers in, e.g. Transactions in GIS or the International Journal of Geographical Information Science? 
+ href="/questions/tagged/research" - research 
+ ShareShare a link to this question 
+ Copy linkCC BY-SA 3.0 
+ FollowFollow this question to receive notificationseditedJun 12, 2016 at 7:47community wiki 
+ 4 revs, 2 users 100% 
+ underdark0Comments disabled on deleted / locked posts / reviews|12 Answers12Sorted by:Reset to defaultThis answer is useful25 
+ Save this answer.+100 
+ This answer has been awarded bounties worth 100 reputation by underdarkShow activity on this post.These three conferences are influential in my academic GIScience circles. 
+ (stalwarts) (1) Conference on Spatial Information Theory;http://www.cosit.info/(2) International Conference on Geographic Information Science (GIScience);http://www.giscience.org/ 
+ (rising in importance) (3) ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems;http://www.sigspatial.org/sigspatial-conferences 
+ An accepted paper for COSIT or GIScience might be somewhat equivalent to publication in International Journal of Geographic Information Science or Transactions in GIS (IJGIS Impact Factor in 2012: 1.613 & TGIS Impact Factor in 2012: 0.906). 
+ Of course, the interdisciplinary spatial journals have the highest impact:http://www.aboutgis.com/gis-and-remote-sensing-journal-list-with-impact-factors/ 
+ Due to the specialized nature of GIScience, I expect the most-influential papers on geospatial information research will begin to be published in journals with a wider reach. That same gravity also will pull the work to higher impact conferences, such as one of the Association of Computing Machinery specialty meetings -- or perhaps to large conferences, like the American Geophysical Union Fall Meeting. 
+ Simultaneously, the Internet minimizes the need for singular important conferences and journals. In the longer term, I expect closed, expensive, or proprietary channels to be diminished in importance. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJul 8, 2013 at 18:32community wiki 
+ glennon0Add a comment|This answer is useful10 
+ Save this answer.Show activity on this post.BesidesGIScience, I would addSDH(Spatial Data Handling conference),GeoComputationand theAGILEconference, in Europe. More focused on cartography, there are also theICC(International Cartographic Conference) andAutoCartoconference. 
+ An excellent resource for GIS conferences traking isthis conference calendarmaintained by colleagues of the Zurich university. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJul 6, 2013 at 6:58community wiki 
+ julien22 | That is a very good calendar to follow.–glennonCommentedJul 2, 2013 at 20:20 
+ 1 | For another calendar for Europe, see theagile-online.orgevent calendar tooagile.gis.geo.tu-dresden.de/web/index.php/events–ThomasG77CommentedJul 2, 2013 at 20:26 
+ Add a comment|This answer is useful10 
+ Save this answer.Show activity on this post.My perspective is skewed toward the U.S., but both the AAG and AGU conferences heavily feature the bread and butter of GIS: spatial analysis, remote sensing, spatial statistics, cartographic methods, geographic demography and others. at AAG in particular it is a minority of sessions that do not feature GIS (the toolkit), and there are dozens of sessions on GIS (the science/perspective). 
+ GIScience publishing for maximum cred is fairly venue-agnostic. Conference papers have a fairly equal value with journal pubs when tenure is being considered. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJun 12, 2016 at 7:46community wiki 
+ 2 revs, 2 users 80% 
+ Bill Morris24 | But keep in mind AAG is a non-refereed conference that does not require full papers. So regarding the second part of the question, how does presenting at the conference compare with publishing in one of the top journals, the answer for AAG would be that it is not at all comparable.–Lee HachadoorianCommentedJul 2, 2013 at 23:00 
+ 1 | I am a long-term member of the AAG and think the annual AAG has many merits but being a strong GI Science annual conference is not one of them. Not at all may be harsh but I think it is not a good answer to the question.–user17614CommentedAug 4, 2013 at 21:41 
+ Add a comment|This answer is useful8 
+ Save this answer.Show activity on this post.The GI Forum in Salzburg is well-known and respected,http://www.gi-forum.org/. A publication/presentation at an event like this is a peer-reviewed, competitive event. Same as at COSIT. Much more valued than a presentation at AAG, for example, which has an open call for presentations. Presentations at ESRI's UC are somewhat peer-reviewed, but are not as rigorous as AGILE, GIForum, COSIT, etc. 
+ Transactions in GISnow has ahref="http://blogs.esri.com/esri/gisedcom/2012/09/29/call-for-presentations-special-giscience-research-session-2/" - special competition each year
+for papers that are presented at the UC. Such papers are also vetted highly. 
+ The University Consortium for Geographic Information Science (http://www.ucgis.org) holds an annual symposium at which research is shared, though the event is predominantly attended by affiliated members. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJan 30, 2018 at 16:51community wiki 
+ 3 revs, 2 users 87% 
+ dianamapsAdd a comment|This answer is useful6 
+ Save this answer.Show activity on this post.American Society of Photogrammetry and Remote Sensing (ASPRS): The imaging and geospatial information society. 
+ Founded in 1934, the American Society for Photogrammetry and Remote Sensing (ASPRS) is a scientific association serving more than 7,000 professionals worldwide. Our mission is to promote the ethical application of active and passive sensors, the disciplines of photogrammetry, remote sensing, geographic information systems, and other supporting geospatial technologies; to advance the understanding of the geospatial and related sciences; to expand public awareness of the profession; and to promote a balanced representation of the interests of government, academia, and private enterprise. We are The Imaging and Geospatial Information Society. 
+ ASPRS is a very well respected organization that hostsannual and specialty conferencesprimarily for the scientific and academic audiences. Photogrammetric Engineering & Remote Sensing, commonly referred to as PE&RS, is the official journal for imaging and geospatial information science and technology--also very well respected in the industry. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationsansweredJul 2, 2013 at 19:50community wiki 
+ AaronAdd a comment|This answer is useful5 
+ Save this answer.Show activity on this post.Open Source Geospatial Research and Education Symposium -http://2014.ogrs-community.org/ 
+ The Global Conference for Open Source Geospatial Software -http://2013.foss4g.org/ 
+ EDINA’s Geoforum in UK -http://edina.ac.uk/events/geoforum2013/however not sure that they publish any papers Quite a big event in the field of Geoinformation - InterGeo -http://www.intergeo.de/it's a fair trade and a conference, again I am not sure that it is what you asked for 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationsansweredJul 2, 2013 at 22:04community wiki 
+ NadiiaAdd a comment|This answer is useful5 
+ Save this answer.Show activity on this post.href="http://gis.geos.ed.ac.uk/gisruk/" - The GIS Research UK
+(GISRUK) has been running since 1993. 
+ Although with UK in the title it attracts researchers from all over the world. My subjective impression following the papers from last few years is, that the quality and variety of the topics covered is really impressive. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationsansweredJul 3, 2013 at 9:15community wiki 
+ user173Add a comment|This answer is useful4 
+ Save this answer.Show activity on this post.You won't find a generally agreed on list; but based on your industry or area of concern you most often will find where most of your peers tend to present. Property Tax/Appraisers have there own associations, as do the e911/NextGen911/NENA crowd. 
+  
+ For most used in the USA you will find the Regional/National URISA Conferences, as well as ESRI IUC are major points of interest. 
+  
+ Your State/Regional Users Groups such as NWGIS in my case as well. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationsansweredJul 2, 2013 at 19:31community wiki 
+ D.E.WrightAdd a comment|This answer is useful4 
+ Save this answer.Show activity on this post.Even though there have been already a couple of answers here my thoughts (being now 10 years in the research area). However, just before, I might say that locally there are important conferences - with fewer international participants, due to availability of travel budgets. Also it is probably important in what GIScience application field you work. E.g. if you are in cartography, ecology or transportation, etc. 
+ So from my experience, and where all the top researchers go is definitively 
+ (1) GIScience - which is every 2 years. 
+ (2) In every other year there is Conference on Spatial Information Theory - COSIT. So, lots of top people come there too. 
+ (3) ACM SIGSPATIAL (every year), with very technical audience (new algorithms - people from Oracle, Microsoft, Google, etc. may be there) 
+ => Placing some presentation in either of those conference is an achievement and can be counted like having a journal article. However, if you do not make it into GIScience, etc. with your submission: don't worry too much. I think there is always double the number of submissions than spots for presentations. Then, you could still look what workshops are there at the same time and perhaps present there. 
+ Then there come other conferences that have a long tradition and which I not may rank as either one being better: 
+ (4) Conference on Spatial Data Handling (SDH, every 2 years), AGILE (every year), GeoComputation (every 2 years) and AutoCarto (every two years?). 
+ (5) If publication is not so super important, but you want to see and learn something and make some contacts (I enjoyed it a lot as PhD student), then: go to GIS Research UK (GISRUK, every year). If you are interested in open source GIS then FOSS4G (every year) should also your choice to meet people with similar interest, or the other person that you talked to only via email for years. 
+ Newer conferences that could be of interest are: OpenSource GIS (OSGIS) UK and Open Source Geospatial Research and Education Symposium (OGRS). Participation is most likely worthy if you live around the area where it happens. 
+ Well, and if you are in Cartography, Mapping and GIS, then the Int. Cartographic Conference (ICC, every 4 years) should be on your plate as well. Similarly holds for Remote Sensing and GIS related work with the ISPRS Conference, which is also every 4 years. For Surveyors this may be FIG (though, I don't think publication is very important here) and for everyone in spatial data infrastructures this is the GSDI conference series. 
+ For people in North America the AAG (Association of American Geographers) Conference (twice a year?) is of interest. And if you are more into Remote Sensing then it is the ASPRS Conference (every year) that should attract you. Likewise for folks in Germany, Austria and Switzerland the AGIT could be a place to go and meet up. Canada has actually SKI (Spatial Knowledge and Information). 
+ I am sure I forgot some conference, but... well, this is why others can write here as well. At the end you can visit each year lots of conference and workshops. It all depends on your travel budget. Also, you may have a look at the workshops that are run together with the bigger conferences (i.e. some form of specialist meetings and an even better place to meet people from your subfield). They are a good indicator about how important a conference is - just check how many workshops are associate with the GIScience Conference and who organizes them. 
+ What is finally important: I was close once to submitting something to a conference or workshop that I was in doubt about the credibility (that may you just make you pay lots of cash - but are in locations your always wanted to go to: like Brazil or Dubai or so..). So in that case I looked up on who is on the board of the conference committee (for reviews of submission, etc) - but not part of the organizers - and if I knew a name of the list from some publication. Then I wrote to a person I had heard off or knew and asks if he/she would go. Then, depending on that persons response I would submit or not. 
+ === 
+ So, and if someone reminds me, I would also write in a bit about my impression of the journals to publish in. However, as someone mentioned above, I feel the most impact can be achieved if you publish in a journal of the area that your GIS work is related to: that is (a) check where your readership might be, and (b) how technical is your article. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedMay 25, 2014 at 17:51community wiki 
+ mentaerAdd a comment|This answer is useful3 
+ Save this answer.Show activity on this post.I have looked through different search results on a good list, and the best I've found so far was:http://www.gsdi.org/upcnf. 
+  
+ I have helped organise several GIS-related conferences myself, and have attended several, and since GIS is quite diverse as everybody knows here, it really depends on which crowd you are looking for, being that developers, analysts, or organisations and companies! It also depends on which discipline you are looking to investigate, being that geovisualisation (eg.Geomatik,Geoanalytics), opensource GIS (eg.FOSS4G), computational GIS (Geocomputation)or just general (eg.GISRUK,AAG). 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedOct 3, 2013 at 17:43community wiki 
+ adelpierro0Add a comment|This answer is useful1 
+ Save this answer.Show activity on this post.In the Austrian/Swiss/German biotope the AGIT - (german: Angewandte Geoinformatik in der Informationstechnologie, english: Applied Geoinformatics in IT) is very important due to its nature as an interface between users, data producers, business players, science/education and administration. Symposium and Expo can be found or will be organized in July of the year at the department for Geoinformatics in Salzburg (Austria). Follow the linkshttp://www.agit.at/andhttp://www.zgis.at/index.php/de/for further info's. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJun 12, 2016 at 7:43community wiki 
+ 4 revs, 2 users 75% 
+ huckfinnAdd a comment|This answer is useful1 
+ Save this answer.Show activity on this post.For US and Canada, the NACIS Annual Meeting has been around for 30+ years. Smaller gathering of around 250 people that allows for conversations and avoids thatlost in the crowdfeeling. 
+ Our enduring passion is to render our social, economic, political and natural world intelligible and actionable through visual story and cartographic design. 
+ We are a creative design-oriented group that for over thirty years has provided a forum spanning the diversity of the mapmaking, geospatial & data visualization communities. We are specialists from government, commercial, and not-for-profit fronts along with academics, scholars, map/GIS librarians, artists, and students. Be there for the dynamic discussions rich in techniques, theory, history, and the state of our art. 
+ We publish cartographic papers via ourCartographic Perspectivesopen journal. 
+ ShareShare a link to this answer 
+ Copy linkCC BY-SA 3.0 
+ Improve this answerFollowFollow this answer to receive notificationseditedJun 11, 2020 at 15:27community wiki 
+ 2 revs, 2 users 84% 
+ Nathaniel V. KELSO0Add a comment|Start asking to get answers 
+ Find the answer to your question by asking. 
+ Ask questionExplore related questions 
+ href="/questions/tagged/research" - research 
+ See similar questions with these tags. 
+ The Overflow Blog 
+ href="https://stackoverflow.blog/2025/04/07/open-source-ai-are-younger-developers-leading-the-way/?cb=1" - Open-source AI: Are younger developers leading the way? 
+ href="https://stackoverflow.blog/2025/04/08/bottom-of-the-first-a-veteran-vc-s-take-on-the-ai-landscape/?cb=1" - Bottom of the first: A veteran VC’s take on the AI landscape 
+ Featured on Meta 
+ Changes to reporting for the [status-review] escalation process 
+ Hot Network QuestionsProbability all integers to the left of n are less than n. 
+ An alternative proof that the reals are uncountably infinite. 
+ How can I prevent damage with a frozen spigot? 
+ Can pre-T-union Shenzhen Tong and Octopus cards be used in place of each other or in the T-union network? 
+ Have any country leaders pledged to cut their trade surplus with the US to zero? 
+ How "close" are genome-edited "de-extinct" animals to their extinct counterparts? 
+ In a series circuit, does the first component briefly receive full voltage before the electric field propagates? 
+ Can an Artificer with a prosthetic arm infusion cast spells with both hands full? 
+ A simple-looking inequality for orthogonal vectors 
+ Is Jesus Fully God, On His Own? 
+ I need just a word... 
+ Are there any security concerns with this authentication flow? 
+ What is an adversary type? 
+ Integer division - what to do when the number of groups to break the dividend into is negative? 
+ What is the spiritual significance of the treasure- finder buying the (entire) field in Mtt 13:44? 
+ Ideas for a group with great variability 
+ 80s novel. After the release of a bio weapon, any woman who was not already pregnant becomes infertile 
+ href="https://politics.stackexchange.com/questions/91309/whats-trumps-concern-with-vat-style-taxes-specifically" - What's Trump's concern with VAT-style taxes, specifically? 
+ Reported speech and "must" 
+ Should I confront my baby's grandmother about constantly saying that she loves my baby more than I do? 
+ Was refused US visa as a minor, but found out only after submitting new tourist application a decade later 
+ Why am I known as a user? 
+ Bring back cup stacking 
+ Place 1 through 7 into the circle to make equal sums 
+ Geographic Information Systems 
+ Tour 
+ Help 
+ Chat 
+ Contact 
+ Feedback 
+ Company 
+ Stack Overflow 
+ Teams 
+ Advertising 
+ Talent 
+ About 
+ Press 
+ Legal 
+ Privacy Policy 
+ Terms of Service 
+ Cookie Settings 
+ Cookie Policy 
+ Stack Exchange Network 
+ Technology 
+ Culture & recreation 
+ Life & arts 
+ Science 
+ Professional 
+ Business 
+ API 
+ Data 
+ Blog 
+ Facebook 
+ Twitter 
+ LinkedIn 
+ Instagram 
+ Site design / logo © 2025 Stack Exchange Inc;user contributions licensed underCC BY-SA.rev 2025.4.7.24866
+
+2. Website of SDH_3: http://geoanalytics.net/and/pub-conferences.html
+Website information of SDH_3:
+
+Selected refereed conference papers 
+ 2024 
+ Laleh Moussavi, Gennady Andrienko, Natalia Andrienko and Aidan Slingsby | Interplay of Visual Analytics and Topic Modeling in Gameplay Analysis | CGVC 2024: EG UK Computer Graphics & Visual Computing (2024) | published version: | https://doi.org/10.2312/cgvc.20241213 | (open access) 
+ Gennady Andrienko, Natalia Andrienko and Miguel Ponce-de-Leon | Mapping Time Lags in Epidemics | Abstracts of the International Cartographic Association, Vol.8, #2, 2024. 2024 ICA Workshop on AI, Geovisualization, and Analytical Reasoning – CartoVis24, 7 September 2024, University of Warsaw, Poland | published version: | https://doi.org/10.5194/ica-abs-8-2-2024 | (open access) 
+ Natalia Andrienko and Gennady Andrienko | Creating Quasi-Maps for Uncovering Space-Time Patterns | Abstracts of the International Cartographic Association, Vol.8, #3, 2024. 2024 ICA Workshop on AI, Geovisualization, and Analytical Reasoning – CartoVis24, 7 September 2024, University of Warsaw, Poland | published version: | https://doi.org/10.5194/ica-abs-8-3-2024 | (open access) 
+ Natalia Andrienko and Gennady Andrienko | Exploring Relationships between Events in Context | EuroVA 2024: Proceedings of EuroVis Workshop on Visual Analytics (EuroVA), The EuroGraphics Association 
+ Odense, Denmark — May 27-31, 2024 | published version: | https://doi.org/10.2312/eurova.20241114 | (open access) 
+ Andrienko, N., Andrienko, G., Artikis, A., Mantenoglou, P., Rinzivillo, S | Towards a Hybrid Human-Machine Discovery of Complex Movement Patterns | Meo, R., Silvestri, F. (eds)Machine Learning and Principles and Practice of Knowledge Discovery in Databases. ECML PKDD 2023.Communications in Computer and Information Science, vol 2134. Springer, Cham. | pre-print: | https://sml.disi.unitn.it/files/hldm23/HLDM23_41.pdf | published version: | https://doi.org/10.1007/978-3-031-74627-7_16 
+ 2023 
+ Gennady Andrienko, Natalia Andrienko, Dirk Hecker | Extracting Movement-based Topics for Analysis of Space Use | EuroVA 2023: Proceedings of EuroVis Workshop on Visual Analytics (EuroVA), The EuroGraphics Association 
+ Leipzig, Germany — June 12-16, 2023 | published version: | https://doi.org/10.2312/eurova.20231091 | (open access) 
+ 2022 
+ Laleh Moussavi, Aidan Slingsby, Gennady Andrienko | Impact of Temporally Downsampling Movement Data on Interpretation | Abstracts of the International Cartographics Association | , 5, 62, 2022, proceedings of | EuroCarto 2022 | . Vienna, September 2022 | published paper: | https://doi.org/10.5194/ica-abs-5-62-2022 | (open access) 
+ 2021 
+ Gota Shirato, Natalia Andrienko, Gennady Andrienko | What are the topics in football? Extracting time-series topics from game episodes | IEEE VIS 2021poster | pre-print: | href="papers/vis21poster.pdf" - vis21poster.pdf 
+ 2019 
+ Siming Chen, Gennady Andrienko, Natalia Andrienko, Christos Doulkeridis, Athanasios Koumparos | Contextualized Analysis of Movement Events(best paper award) | EuroVA 2019: Proceedings of EuroVis Workshop on Visual Analytics (EuroVA), The EuroGraphics Association 
+ Porto, Portugal — June 3-7, 2019 | pre-print: | http://simingchen.me/docs/eurova19_context.pdf | published version: | https://doi.org/10.2312/eurova.20191124 
+ J. Buchmüller, E. Cakmak, N. Andrienko, G. Andrienko, J. W. Jolles, D. A. Keim | Moving Together: Towards a Formalization of Collective Movement | EuroVA 2019: Proceedings of EuroVis Workshop on Visual Analytics (EuroVA), The EuroGraphics Association 
+ Porto, Portugal — June 3-7, 2019 | pre-print: | https://scibib.dbvis.de/uploadedFiles/2019-06-18docCollectivePositionPreprint.pdf | published version: | https://doi.org/10.2312/eurova.20191122 
+ 2018 
+ Gennady Andrienko, Natalia Andrienko, Georg Fuchs, Stefan Rueping, jose Manuel Cordero Garcia, David Scarlatti, George Vouros, Ricardo Herranz, Rodrigo Marcos | Visual Analytics of Flight Trajectories for Uncovering Decision Making Strategies | Eighth SESAR Innovation Days, 3rd – 7th December 2018, Salzburg AT | pre-print: | href="papers/sid18.pdf" - PDF | published version: | href="https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs_2018_paper_12.pdf" - https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs_2018_paper_12.pdf | slides: | https://www.sesarju.eu/sites/default/files/documents/sid/2018/pres/02%20Gennady%20Andrienko.pdf 
+ Panagiotis Tampakis, Nikos Pelekis Yannis Theodoridis, Natalia Andrienko Gennady Andrienko, Georg Fuchs | Time-aware Sub-Trajectory Clustering in Hermes@PostgreSQL | 2018 IEEE 34th International Conference on Data Engineering | pre-print: | href="papers/icde18.pdf" - PDF | published version: | http://dx.doi.org/10.1109/ICDE.2018.00181 
+ Siming Chen, Jie Li, Natalia Andrienko and Gennady Andrienko | TopicWave: Interactive Visual Analytics of Spatiotemporal Topics Distribution of People’s Reactions to Events from Geo-tagged Social Media(best poster award) | AGILE 2018: Proceedings of the 21th AGILE International Conference on Geographic Information Science 
+ Lund, Sweden — June 12-15, 2018 | pre-print: | http://simingchen.me/docs/agile18_topicwave.pdf | published version: | https://agile-online.org/conference_paper/cds/agile_2018/posters/99%20TopicWave_poster99_revision_final.pdf 
+ Jie Li, Siming Chen, Gennady Andrienko and Natalia Andrienko | Visual Exploration of Spatial and Temporal Variations of Tweet Topic Popularity(best paper award) | EuroVA 2018: Proceedings of EuroVis Workshop on Visual Analytics (EuroVA), The EuroGraphics Association 
+ Brno, Czech Republic — June 4-8, 2018 | pre-print: | http://vis.pku.edu.cn/people/simingchen/docs/eurova18_topic.pdf | published version: | http://dx.doi.org/10.2312/eurova.20181105 
+ Gennady Andrienko and Natalia Andrienko | Creating maps of artificial spaces to explore trajectories | AVI 2018: Proceedings of the 2018 International Conference on Advanced Visual Interfaces, ACM Press, Article No.53 
+ Castiglione della Pescaia, Grosseto, Italy — May 29 - June 01, 2018 | pre-print: | http://openaccess.city.ac.uk/20132/1/andrienko_demo_traj_spaces.pdf | published version: | https://doi.org/10.1145/3206505.3206557 
+ 2017 
+ Georgios M. Santipantakis, George A. Vouros, Christos Doulkeridis, Akrivi Vlachou Gennady Andrienko, Natalia Andrienko, Georg Fuchs, Jose Manuel Cordero Garcia, Miguel Garcia Martinez | Specification of Semantic Trajectories Supporting Data Transformations for Analytics: The datAcron Ontology | Semantics2017: Proceedings of the 13th International Conference on Semantic Systems, ACM Press, Pages 17-24 
+ Amsterdam, Netherlands — September 11 - 14, 2017 | published version: | https://doi.org/10.1145/3132218.3132225 
+ Phong Nguyen, Cagatay Turkay, Gennady Andrienko, Natalia Andrienko, Olivier Thonnard | A Visual Analytics Approach for User Behaviour Understanding through Action Sequence Analysis | EuroVis Workshop on Visual Analytics (EuroVA), June 12-13, 2017 - Barcelona, Spain | published version: | http://dx.doi.org/10.2312/eurova.20171122 
+ Christophe Claramunt, Cyril Ray, Loïc Salmon, Elena Camossi, Melita Hadzagic, Anne-Laure Jousselme, Gennady Andrienko, Natalia Andrienko, Yannis Theodoridis, George A. Vouros | Maritime Data Integration and Analysis: Recent Progress and Research Challenges (vision paper) | International Conference on Extending Database Technology (EDBT), March 21-24, 2017 - Venice, Italy | published version: | http://dx.doi.org/10.5441/002/edbt.2017.18 
+ A. MacFarlane, G. Buchanan, A. Al-Wabil, G. Andrienko, N. Andrienko | Visual Analysis of Dyslexia on Search | Proceedings of the 2017 ACM Conference on Conference Human Information Interaction and Retrieval (CHIIR'17), 
+ Oslo, Norway — March 07 - 11, 2017 | published version: | https://doi.org/10.1145/3020165.3022134 
+ 2016 
+ Rodrigo Marcos, David Toribio, Ricardo Herranz, Laia Garrigó, Núria Alsina, Natalia Adrienko, Gennady Andrienko, Luca Piovano, Thomas Blondiau | Visual Analytics and Machine Learning for Air Traffic Management Performance Modelling. Preliminary Findings of the INTUIT Project and Prospects for Future Research | 6th SESAR Innovation Days, 8-10 November 2016. Hosted by Technical University of Delft, the Netherlands | published version: | https://www.sesarju.eu/sites/default/files/documents/sid/2016/SIDs_2016_paper_36.pdf 
+ Pedro García, Ricardo Herranz, José Javier Ramasco, Gennady Andrienko, Nicole Adler, Carla Ciruelos | Big Data Analytics for a Passenger-Centric Air Traffic Management System | 6th SESAR Innovation Days, 8-10 November 2016. Hosted by Technical University of Delft, the Netherlands | published version: | https://www.sesarju.eu/sites/default/files/documents/sid/2016/SIDs_2016_paper_30.pdf 
+ Gennady Andrienko, Natalia Andrienko, Guido Budziak, Tatiana von Landesberger, and Hendrik Weber | Coordinate Transformations for Characterization and Cluster Analysis of Spatial Configurations in Football | ECML PKDD 2016, Part III, LNAI 9853, pp.27-31 | href="papers/pkdd16a.pdf" - pre-print | , published version: | http://dx.doi.org/10.1007/978-3-319-46131-1_6 
+ Natalia Andrienko, Gennady Andrienko, and Salvatore Rinzivillo | Leveraging Spatial Abstraction in Traffic Analysis and Forecasting with Visual Analytics | ECML PKDD 2016, Part III, LNAI 9853, pp.32-35 | href="papers/pkdd16b.pdf" - pre-print | , published version: | http://dx.doi.org/10.1007/978-3-319-46131-1_7 
+ Valentina Cerutti, Georg Fuchs, Gennady Andrienko, Natalia Andrienko, Frank Ostermann | Identification of disaster-affected areas using exploratory visual analysis of georeferenced Tweets: application to a flood event | AGILE 2016, short papers. | published version: | href="https://agile-online.org/conference_paper/cds/agile_2016/shortpapers/137_Paper_in_PDF.pdf" - https://agile-online.org/conference_paper/cds/agile_2016/shortpapers/137_Paper_in_PDF.pdf 
+ 2015 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs, Salvatore Rinzivillo, Hans-Dieter Betz | Detection, Tracking, and Visualization of Spatial Event Clusters for Real Time Monitoring | IEEE/ACM Data Science and Advanced Analytics (DSAA), pp.1-10 | href="papers/dsaa15.pdf" - pre-print | , published version: | http://dx.doi.org/10.1109/DSAA.2015.7344880 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs, Piotr Jankowski | Visual Analytics Methodology for Scalable and Privacy-Respectful Discovery of Place Semantics from Episodic Mobility Data | ECML PKDD 2015, Part III, LNAI 9286, pp.254-258 | href="papers/pkdd15a.pdf" - pre-print | , published version: | http://dx.doi.org/10.1007/978-3-319-23461-8_25 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs, Salvatore Rinzivillo, Hans-Dieter Betz | Real Time Detection and Tracking of Spatial Event Clusters | ECML PKDD 2015, Part III, LNAI 9286, pp.316-319 | href="papers/pkdd15b.pdf" - pre-print | , published version: | http://dx.doi.org/10.1007/978-3-319-23461-8_38 
+ Gennady Andrienko, Natalia Andrienko | Visualization Support to Interactive Cluster Analysis | ECML PKDD 2015, Part III, LNAI 9286, pp.337-340 | href="papers/pkdd15c.pdf" - pre-print | , published version: | http://dx.doi.org/10.1007/978-3-319-23461-8_43 
+ Antonia Saravanou, George Valkanas, Dimitrios Gunopulos, Gennady Andrienko | Twitter Floods when it Rains: A Case Study of the UK Floods in early 2014 | WWW (Companion Volume) 2015: 1233-1238 | pre-print | , published version: | http://dl.acm.org/citation.cfm?id=2741730 
+ 2014 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs | Analysis of Mobility Behaviors in Geographic and Semantic Spaces | VAST Challenge @ IEEE VAST 2014, | Award | for | Outstanding Scalable Analysis | href="papers/vast14b.pdf" - pre-print 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs, Hendrik Stange | Detecting and Tracking Dynamic Clusters of Spatial Events | IEEE VAST 2014, poster | , Proceedings | href="papers/vast14a.pdf" - pre-print 
+ Natalia Andrienko, Gennady Andrienko, Salvatore Rinzivillo | Experiences from Supporting Predictive Analytics of Vehicle Traffic | Workshop | Visualization for Predictive Analytics at IEEE VIS 2014 | , Proceedings | href="papers/vast14w.pdf" - pre-print | , workshop web site | predictive-workshop.github.io 
+ 2013 
+ Georg Fuchs, Natalia Andrienko, Gennady Andrienko, Sebastian Bothe, Hendrik Stange | Tracing the German Centennial Flood in the Stream of Tweets: First Lessons Learned | 2nd ACM SIGSPATIAL International Workshop on Crowdsourced and Volunteered Geographic Information (GEOCROWD) 2013 | , Proceedings | href="papers/geocrowd13.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko, Georg Fuchs, Ana-Maria Olteanu Raimond, Juergen Symanzik and Cezary Ziemlicki | Extracting semantics of individual places from movement data by analyzing temporal patterns of visits | ACM SIGSPATIAL Workshop on Computational Models of Place 2013 | , Proceedings | href="papers/comp13.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko | Exploring trajectory attributes in Brest harbor | MOVE COSTS AIS workshop, Brest (2013) | , Proceedings | href="papers/move_brest-attrs.pdf" - pre-print 
+ Natalia Andrienko, Gennady Andrienko | Exploring traffic in Brest harbor by trajectory aggregation | MOVE COSTS AIS workshop, Brest (2013) | , Proceedings | href="papers/move_brest-flows.pdf" - pre-print 
+ Natalia Andrienko, Gennady Andrienko, Georg Fuchs | Towards Privacy-Preserving Semantic Mobility Analysis | EuroVA, International Workshop on Visual Analytics (2013) | Proceedings, EuroGraphics | href="papers/eurova13.pdf" - pre-print | , | slides 
+ Anna Monreale, Wendy Hui Wang, Francesca Pratesi, Salvatore Rinzivillo, Dino Pedreschi Gennady Andrienko, Natalia Andrienko | Privacy-preserving Distributed Movement Data Aggregation | AGILE (2013) | Proceedings, Springer (accepted as full paper) | published version: | http://dx.doi.org/10.1007/978-3-319-00615-4_13 
+ Georg Fuchs, Natalia Andrienko, Gennady Andrienko | Extracting Personal Behavioral Patterns from Geo-Referenced Tweets | AGILE (2013) | Proceedings (accepted as short paper) | href="papers/agile13.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko | Spatio-temporal analysis of flows in CDC 2013 data | AGILE CDC workshop (2013) | , Proceedings | href="papers/cdc13.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko, Georg Fuchs | Multi-perspective analysis of D4D fine resolution data | Data for Development (D4D 2013) | , Proceedings | href="papers/d4d13.pdf" - pre-print 
+ Michael Burch, Gennady Andrienko, Natalia Andrienko, Markus Höferlin, Michael Raschke, Daniel Weiskopf | Visual Task Solution Strategies in Tree Diagrams | IEEE Pacific Visualization 2013 | Proceedings, IEEE Computer Society Press, pp.169-176 | published version: | http://doi.ieeecomputersociety.org/10.1109/PacificVis.2013.6596142 
+ 2012 
+ Tatiana von Landesberger, Sebastian Bremm, Natalia Andrienko, Gennady Andrienko, Maria Tekusova | Visual Analytics Methods for Categoric Spatio-Temporal Data | IEEE Visual Analytics Science and Technology (VAST 2012) | Proceedings, IEEE Computer Society Press, pp.183-192 | href="papers/vast12a.pdf" - pre-print 
+ Iulian Peca, Georg Fuchs, Katerina Vrotsou, Natalia Andrienko, Gennady Andrienko | Scalable Cluster Analysis of Spatial Events | EuroVA, International Workshop on Visual Analytics (2012) | Proceedings, EuroGraphics, pp.19-23 | href="papers/eurova12.pdf" - pre-print | , published version: | http://dx.doi.org/10.2312/PE/EuroVAST/EuroVA12/019-023 
+ Katerina Vrotsou, Haolin Zhi, Iulian Peca, Gennady Andrienko, Natalia Andrienko | Interactive Eexploration of Events and Presence of People in Space and Time through KD-photomap | AVI'12, Proceedings of the International Working Conference on Advanced Visual Interfaces | Proceedings, ACM Press, pp.804-805 | published version: | http://dx.doi.org/10.1145/2254556.2254723 
+ 2011 
+ Gennady Andrienko, Natalia Andrienko, Christophe Hurter, Salvatore Rinzivillo, Stefan Wrobel | From Movement Tracks through Events to Places: Extracting and Characterizing Significant Places from Mobility Data | IEEE Visual Analytics Science and Technology (VAST 2011) | Proceedings, IEEE Computer Society Press, pp.161-170 ( | best paper award | ) | href="papers/vast11.pdf" - published version 
+ Iulian Peca, Haolin Zhi, Katerina Vrotsou, Natalia Andrienko, Gennady Andrienko | KD-Photomap: Exploring Photographs in Space and Time | IEEE Visual Analytics Science and Technology (VAST 2011) | Proceedings, IEEE Computer Society Press, pp.291-292 | href="papers/vast11a.pdf" - published version 
+ Mahmoud Sakr, Thomas Behr, Ralf Hartmut Güting, Gennady Andrienko, Natalia Andrienko, Christophe Hurter | Exploring Spatiotemporal Patterns By Integrating Visual Analytics With A Moving Objects Database System | ACM GIS 2011 | - Proceedings of 19th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL GIS 2011) | Proceedings, pp.505-508 | href="papers/acmgis11.pdf" - pre-print | , published version: | http://doi.acm.org/10.1145/2093973.2094060 
+ Hendrik Stange, Thomas Liebig, Dirk Hecker, Gennady Andrienko, Natalia Andrienko | Analytical workflow of monitoring human mobility in big event settings using Bluetooth | ISA'11 | - Proceedings of the 3rd ACM SIGSPATIAL International Workshop on Indoor Spatial Awareness | pp.51-58 | published version: | http://doi.acm.org/10.1145/2077357.2077368 
+ Katerina Vrotsou, Natalia Andrienko, Gennady Andrienko, and Piotr Jankowski | Exploring City Structure from Georeferenced Photos Using Graph Centrality Measures | Machine Learning and Knowledge Discovery in Databases (PKDD 2011) | Proceedings, Lecture Notes in Computer Science 2011, Volume 6913, pp.654-657 | published version: | http://dx.doi.org/10.1007/978-3-642-23808-6_50 
+ Gennady Andrienko, Natalia Andrienko | Privacy Issues in Geospatial Visual Analytics | 8th Symposium on Location-Based Services (LBS 2011) | Proceedings, Springer, pp.239-246 | href="papers/lbs11.pdf" - pre-print | published version: | http://dx.doi.org/10.1007/978-3-642-24198-7_16 
+ Gennady Andrienko, Natalia Andrienko | Dynamic Time Transformations for Visualizing Multiple Trajectories in Interactive Space-Time Cube | International Cartographic Conference (ICC 2011) | Proceedings | href="papers/ica11.pdf" - published version 
+ S.Bremm, T. von Landesberger, G.Andrienko, N.Andrienko, and T.Schreck | Interactive Analysis of Object Group Changes over Time | International Workshop on Visual Analytics (EuroVA 2011) | Proceedings, EuroGraphics, pp.41-44 | published version: | http://dx.doi.org/10.2312/PE/EuroVAST/EuroVA11/041-044 
+ 2010 
+ Gennady Andrienko, Natalia Andrienko, Martin Mladenov, Michael Mock, Christian Poelitz | Discovering Bits of Place Histories from People's Activity Traces | IEEE Visual Analytics Science and Technology (VAST 2010) | Proceedings, IEEE Computer Society Press, pp.59-66 ( | honorable mention award | ) | href="papers/vast10.pdf" - published version 
+ Gennady Andrienko, Natalia Andrienko | Poster: Dynamic Time Transformation for Interpreting Clusters of Trajectories with Space-Time Cube | IEEE Visual Analytics Science and Technology (VAST 2010) | Proceedings, IEEE Computer Society Press, pp.213-214 | href="papers/vast10a.pdf" - published version 
+ Gennady Andrienko, Natalia Andrienko | Sammon’s Projection for Clustering Complex Geographical Objects | GIScience 2010 short papers | Proceedings | href="papers/giscience10.pdf" - published version 
+ Gennady Andrienko, Natalia Andrienko, Martin Mladenov, Michael Mock, Christian Poelitz | Extracting Events from Spatial Time Series | IV 2010. 14th International Conference on Information Visualization | Proceedings, 27-29 July, 2010, London, UK. IEEE Computer Society, Los Alamitos, California, 2010, pp.48-53. | href="papers/iv10.pdf" - published version 
+ Slava Kisilevich, Milos Krstajic, Daniel Keim, Natalia Andrienko, Gennady Andrienko | Event-based analysis of people's activities and behavior using Flickr and Panoramio geotagged photo collections | IV 2010. 14th International Conference on Information Visualization | Proceedings, 27-29 July, 2010, London, UK. IEEE Computer Society, Los Alamitos, California, 2010, pp.289-296. 
+ Christian Poelitz, Gennady Andrienko, Natalia Andrienko | Finding arbitrary shaped clusters with related extents in space and time | EuroVAST 2010, International Symposium on Visual Analytics Science and Technology | Proceedings, pp.19-25. ISBN: 978-3-905673-74-6 | href="papers/eurovast10.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko, Fosca Giannotti, Anna Monreale Dino Pedreschi, Salvatore Rinzivillo | A Generalisation-based Approach to Anonymising Movement Data | Marco Painho, Maribel Yasmina Santos and Hardy Pundt (eds.) | Geospatial Thinking, | AGILE 2010 proceedings, ISBN: 978-989-20-1953-6 | CD-ROM Proceedings, 2010, pp.1-10 | href="papers/agile10.pdf" - published version 
+ 2009 
+ Gennady Andrienko, Natalia Andrienko, Peter Bak, Slava Kisilevich, Daniel Keim | Analysis of community-contributed space- and time-referenced data by example of Panoramio photos | VMV | - Proceedings of Vision, Modeling, and Visualization Workshop 2009, 16-18 November 2009, Braunschweig, Germany | published version: | href="http://vmv09.tu-bs.de/downloads/papers/and09.pdf" - http://vmv09.tu-bs.de/downloads/papers/and09.pdf 
+ Gennady Andrienko, Natalia Andrienko, Fosca Giannotti, Anna Monreale and Dino Pedreschi | Movement Data Anonymity through Generalization | SPRINGL 2009 | - Proceedings of 2nd SIGSPATIAL ACM GIS 2009 International Workshop on Security and Privacy in GIS and LBS November 3, 2009, Seattle, WA, USA | href="papers/springl09.pdf" - pre-print | ; published version: | http://doi.acm.org/10.1145/1667502.1667510 
+ Gennady Andrienko, Natalia Andrienko, Peter Bak, Slava Kisilevich, Daniel Keim | Demo paper: Analysis of community-contributed space- and time-referenced data | ACM GIS | - Proceedings of 17th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL GIS 2009) November 4-6 2009 - Seattle, Washington | href="papers/acmgis09.pdf" - pre-print | ; published version: | http://doi.acm.org/10.1145/1653771.1653866 
+ Gennady Andrienko, Natalia Andrienko, Salvatore Rinzivillo, Mirco Nanni, Dino Pedreschi, Fosca Giannotti | Interactive Visual Clustering of Large Collections of Trajectories | IEEE Visual Analytics Science and Technology (VAST 2009) | Proceedings, IEEE Computer Society Press, 2009, pp.3-10 | href="papers/vast09.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1109/VAST.2009.5332584 
+ Gennady Andrienko, Natalia Andrienko, Peter Bak, Slava Kisilevich, Daniel Keim | Analysis of community-contributed space- and time-referenced data (example of flickr and panoramio photos) | IEEE Visual Analytics Science and Technology (VAST 2009) | Proceedings, IEEE Computer Society Press, 2009, pp.213-214 | href="papers/vast09a.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1109/VAST.2009.5333472 
+ Gennady Andrienko, Natalia Andrienko | Building Visual Summaries of Clusters of Trajectories | IEEE Information Visualization (InfoVis 2009) | Companion proceedings (poster) | href="papers/infovis09.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko | Interactive spatio-temporal cluster analysis of VAST challenge 2008 datasets | Integrating Automated Analysis with Interactive Exploration | Proceedings of the ACM SIGKDD Workshop on Visual Analytics and Knowledge Discovery | (Paris, France, July 28 - 28, 2009). VAKD '09. ACM, New York, pp.5-11 | href="papers/vakd09.pdf" - pre-print | ; published version: | http://doi.acm.org/10.1145/1562849.1562850 
+ Gennady Andrienko, Natalia Andrienko | Visual Analytics for Geographic Analysis, Exemplified by Different Types of Movement Data | Information Fusion and Geographic Information Systems | Proceedings of the Fourth International Workshop, 17-20 May 2009 (Sankt Petersburg). IF&GIS'09. | Lecture Notes in Geoinformation and Cartography, Springer, pp.3-17 | published version: | http://dx.doi.org/10.1007/978-3-642-00304-2_1 
+ Gennady Andrienko, Natalia Andrienko, Salvatore Rinzivillo, Mirco Nanni and Dino Pedreschi | A Visual Analytics Toolkit for Cluster-Based Classification of Mobility Data | Advances in Spatial and Temporal Databases | Proceedings 11th SSTD, Aalborg, July 2009, | Volume | 5188 | of LNCS, Springer 2009, pp.432-435 | href="papers/springer09.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1007/978-3-642-02982-0_34 
+ Orellana, Daniel; Wachowicz, Monica; Andrienko, Natalia; Andrienko, Gennady | Uncovering Interaction Patterns in Mobile Outdoor Gaming | Advanced Geographic Information Systems & Web Services, 2009. GEOWS '09 | Proceedings, IEEE Computer Society Press, 2008, pp.51-58 | published version: | http://doi.ieeecomputersociety.org/10.1109/GEOWS.2009.13 
+ 2008 
+ Gennady Andrienko, Natalia Andrienko | Spatio-temporal aggregation for visual analysis of movements | IEEE Visual Analytics Science and Technology (VAST 2008) | Proceedings, IEEE Computer Society Press, 2008, pp.51-58 | href="papers/vast08.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1109/VAST.2008.4677356 
+ Natalia Andrienko, Gennady Andrienko | Evacuation Trace Mini Challenge Award: Tool Integration. Analysis of Movements with Geospatial Visual Analytics Toolkit | IEEE Visual Analytics Science and Technology (VAST 2008) | Proceedings, IEEE Computer Society Press, 2008, pp.205-206 | href="papers/vast08a.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1109/VAST.2008.4677388 
+ Natalia Andrienko, Gennady Andrienko, Monica Wachowicz, Daniel Orellana | Uncovering Interactions between Moving Objects | Thomas J. Cova, Harvey J. Miller, Kate Beard Andrew U. Frank, Michael F. Goodchild (Eds.) | GIScience, 5th international conference | , Proceedings, pp.16-26 | href="papers/giscience08.pdf" - pre-print 
+ Gennady Andrienko and Natalia Andrienko | A Visual Analytics Approach to Exploration of Large Amounts of Movement Data | M. Sebillo, G. Vitiello, and G. Schaefer (Eds.) | Visual Information Systems, 10th International Conference, VISUAL 2008 | Volume | 5188 | of LNCS, | Springer, 2008, pp.1-4 | href="papers/springer08c.pdf" - pre-print | ; published version: | http://dx.doi.org/10.1007/978-3-540-85891-1_1 
+ Natalia Andrienko, Gennady Andrienko | Supporting Visual Exploration of Massive Movement Data | Working Conference on Advanced Visual Interfaces AVI 2008 | Proceedings, ACM Press, 2008, pp.474-475 | href="papers/avi08a.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko, Ulrich Bartling | Interactive Visual Interfaces for Evacuation Planning | Working Conference on Advanced Visual Interfaces AVI 2008 | Proceedings, ACM Press, 2008, pp.472-273 | href="papers/avi08b.pdf" - pre-print 
+ Gennady Andrienko, Natalia Andrienko | Exploration of Massive Movement Data: a Visual Analytics Approach | AGILE 2008 | CD-ROM Proceedings, 2008 | href="papers/agile08.pdf" - pre-print 
+ 2007 
+ Gennady Andrienko, Natalia Andrienko, Ulrich Bartling | Visual Analytics Approach to User-Controlled Evacuation Scheduling | IEEE Visual Analytics Science and Technology (VAST 2007) | Proceedings, IEEE Computer Society Press, 2007, pp.43-50 | href="papers/vast07.pdf" - pre-print | ; published version: | http://doi.ieeecomputersociety.org/10.1109/VAST.2007.4388995 | extended version: | http://dx.doi.org/10.1057/palgrave.ivs.9500174 
+ Andrienko, G. and Andrienko, N. | Extracting Patterns of Individual Movement Behaviour from a Massive Collection of Tracked Positions | Bjoern Gottfried (Ed.) | Workshop on Behaviour Modelling and Interpretation | Technical Report 42 TZI Technologie-Zentrum Informatik, Universitaet Bremen, 2007, pp.1-16 | href="papers/bmi07.pdf" - pre-print 
+ Gennady Andrienko and Natalia Andrienko | Implementing Visual Analytics Methods for Massive Collections of Movement Data | GeoComputation 2007 | CD-ROM Proceedings, 7 pages | href="papers/geocomp07.pdf" - pre-print 
+ Gennady Andrienko and Natalia Andrienko | Coordinated Multiple Views: a Critical View | Andrienko, Gennady; Roberts, Jonathan; Weaver, Chris (Eds.) | Coordinated & Multiple Views in Exploratory Visualization 2007 | Proceedings, IEEE Computer Society Press, 2007, pp. 72-74 | href="papers/cmv07.pdf" - pre-print | ; published version: | http://doi.ieeecomputersociety.org/10.1109/CMV.2007.4 
+ Andrienko, Gennady; Jern, Mikael; Dykes, Jason; Fabrikant, Sara Irina; Weaver, Chris | Geovisualization and synergies from InfoVis and Visual Analytics | 11th International Conference Information Visualization IV 2007 | Proceedings, IEEE Computer Society Press, 2007, pp. 485-488 | href="papers/iv07.pdf" - pre-print 
+ Pelekis, Nikos; Kopanakis, Ioannis; Marketos, Gerasimos; Ntoutsi, Irene; Andrienko, Gennady; Theodoridis, Yannis | Similarity Search in Trajectory Databases | 14th International Symposium on Temporal Representation and Reasoning (TIME 2007), | Proceedings, IEEE Computer Society Press, 2007, pp.129-140 | published version: | http://doi.ieeecomputersociety.org/10.1109/TIME.2007.59 
+ 2006 
+ N. Andrienko, G. Andrienko | The complexity challenge to creating useful and usable geovisualization tools | M.Raubal, H.J.Miller, A.U.Frank, M.F.Goodchild (Eds.) | GIScience, 4th international conference | , Proceedings, pp.23-27 | IFGI, Muenster (IFGI Prints, Vol. 28) ISBN 3-936616-25-6 | href="papers/giscience06.pdf" - pre-print 
+ M.Jern, E.Banissi, G. Andrienko, W.Mueller, D.Keim | Envisioning Research Challenges in Visual Analytics | Information Visualization | , Proceedings, pp.5-7 | IEEE Computer Society Press, Los Alamitos, California, 2006 ISBN 978-0-7695-2602-7 | href="papers/iv06.pdf" - pre-print 
+ N. Andrienko, G. Andrienko | Intelligent Visualisation and Information Presentation for Civil Crisis Management | Suares, J. and Markus, B. (Eds.) | AGILE 2006, 9th AGILE Conference on Geographical Information Science | , Proceedings, pp.291-298 | College of Geoinformatics, Unversity of West Hungary, ISBN 963-229-422-X | href="papers/agile06.pdf" - pre-print 
+ 2005 
+ N. Andrienko, G. Andrienko | A framework for decision-centred visualisation in civil crisis management | Gartner, G. (Ed.) | Location Based Services & TeleCartography | , Proceedings of the Symposium 2005 | Geowissenschaftliche Mitteilungen, Heft 74, 2005, pp.201-206 | Institute of Geoinformation and Cartography, Vienna University of Technology. ISSN 1811 8380 
+ G. Andrienko, N. Andrienko | Visual exploration of the spatial distribution of temporal behaviours | Banissi, E. et al (Eds.) | IV 2005. 9th International Conference on Information Visualization | , Proceedings, 6-8 July, 2005, London, UK. | IEEE Computer Society, Los Alamitos, California, 2005, | pp. 799-806. ISBN 0-7695-2397-8, ISSN 1550-6037 | href="papers/iv05.pdf" - pre-print | ; published version: | http://doi.ieeecomputersociety.org/10.1109/IV.2005.135 
+ G. Andrienko, N. Andrienko | Geo-visualisation support for environmental modelling and decision making | Komarov, A. (Ed.) | ECEM 2005. 5th European Conference on Ecological Modelling | , Proceedings, 19-23 September, 2005, Pushchino, Russia. | Russian Academy of Sciences, 2005, | pp. 17-20. | href="papers/ecem05.pdf" - pre-print 
+ 2004 
+ G. Andrienko, N. Andrienko, and P. Gatalsky | Visual Mining of Spatial Time Series Data | J.-F.Boulicaut, F.Esposito, F.Gianotti, D.Pedreschi (Eds.) | Knowledge Discovery in Databases: PKDD 2004 | , Proceedings, 20-24 September, 2004, Pisa, Italy | Springer, LNCS LNAI vol. | 3202 | , 2004, pp. 524-527. ISBN 3-540-23108-0 | href="papers/pkdd04.pdf" - published version 
+ P. Gatalsky, N. Andrienko, and G. Andrienko | Interactive Analysis of Event Data using Space-Time Cube | Banissi, E. et al (Eds.) | IV 2004. 8th International Conference on Information Visualization | , Proceedings, 14-16 July, 2004, London, UK. | IEEE Computer Society, Los Alamitos, California, 2004, | pp. 145-152. ISBN 0-7695-2177-0, ISSN 1093-9547 | href="papers/iv04.pdf" - published version 
+ Andrienko, G., Andrienko, N. | Parallel Coordinates for Exploring Porperties of Subsets | Roberts, J. (Ed.) | CMV 2004. Proceedings International Conference on Coordinated & Multiple Views in Exploratory Visualization | , July 13, 2004, London, England. | IEEE Computer Society, Los Alamitos, California, 2004, | pp. 93-104. ISBN 0-7695-2179-7 | href="papers/cmv04.pdf" - published version 
+ Andrienko, G. and Andrienko, N. | Geo-visualization support for multidimensional clustering | S. Anders Brandt (Ed.) | Geoinformatics 2004, 12th International Conference on Geoinformatics | , Proceedings | Gavle University Press, 2004, vol.1, pp.329-335 | ISBN 91-974948-1-X 
+ Andrienko, N., and Andrienko, G. | Interactive visual tools to explore spatio-temporal variation | M.F.Coastabile (Ed.) | Proceedings of the Working Conference on Advanced Visual Interfaces AVI 2004 | , Gallipoli, Italy, May 25-28, 2004 | ACM Press, 2004, pp.417-420. ISBN 1-58113-867-9 | href="papers/avi04.pdf" - published version 
+ Andrienko, G., Andrienko, N., and Denisovich, I. | Dynamic aggregation on grids for interactive analysis of multidimensional spatial information | F.Toppen, P.Prastacos (Eds.) | AGILE 2004, 7th Conference on Geographic Information Science | , Proceedings | Crete University Press, 2004, pp.207-212 | ISBN 9-60524-176-5 | href="papers/agile04.pdf" - pre-print 
+ Andrienko, G., Andrienko, N. | Bridging the Gap between LBS, GeoVisualisation, and Decision Support | Georg Gartner (Ed.) | Location Based Services and Telecartography | , Proceedings of the Symposium 2004 | Geowissenschaftliche Mitteilungen, Heft 66, 2004, pp.225-226 | Published by the Institute of Cartography and Geomedia Technique, Vienna University of Technology. | href="papers/lbs04.pdf" - pre-print 
+ 2003 
+ N. Andrienko, G. Andrienko, and P. Gatalsky | Tools for Visual Comparison of Spatial Development Scenarios | Banissi, E. et al (Eds.) | IV 2003. Seventh International Conference on Information Visualization | , Proceedings, 16-18 July, 2003, London, UK. | IEEE Computer Society, Los Alamitos, California, 2003, | pp. 237-244. ISBN 0-7695-1988-1, ISSN 1093-9547 | href="papers/iv03.pdf" - published version 
+ N. Andrienko, G. Andrienko, and P. Gatalsky | Visual Data Exploration using Space-Time Cube | Proceedings of the 21st International Cartographic Conference (ICC) | , Durban, South Africa, 10 - 16 August 2003 | International Cartographic Association | pp. 1981-1983. ISBN: 0-958-46093-0 | href="papers/ica03.pdf" - published version 
+ Andrienko, N., Andrienko, G. | Coordinated Views for Informed Spatial Decision Making | Roberts, J. (Ed.) | CMV 2003. Proceedings International Conference on Coordinated & Multiple Views in Exploratory Visualization | , July 15, 2003, London, England. | IEEE Computer Society, Los Alamitos, California, 2003, | pp. 44-54. ISBN 0-7695-2001-4 | href="papers/cmv03.pdf" - published version 
+ Natalia Andrienko and Gennady Andrienko | Usability Tests with Interactive Maps | Stephanidis, C., Jacko, J. (Eds.) | Human-Computer Interaction: Theory and Practice (Part II) | , | Volume 2 of the Proceedings of HCI International 2003 10 | th | International Conference on Human-Computer Interaction, 22-27 June, 2003, Crete, Greece. | Lawrence Erlbaum Associates, Publishers, Mahwah, New Jersey, 2003, | pp. 1153-1157. ISBN 0-8058-4931-9 
+ 2002 
+ Andrienko, G., Andrienko, N., Gitis, V., and Vainchtok, A. | Geoinformational Analysis of Seismological Data | CAI-2002 | , | Proceedings of the 8th National Conference on Artificial Intelligence CAI-2002 Kolomna City, Russia, October 7-11 2002, pp.78-86. (in Russian) 
+ Andrienko, G., Andrienko, N. | Grid Data Analysis in the CommonGIS System: an Example from Forestry | Georg Gartner (Ed.) | Maps and the Internet 2002 | , | Geowissenschaftliche Mitteilungen, Heft 60, 2002, pp.89-99. | Published by the Institute of Cartography and Geomedia Technique, Vienna University of Technology. 
+ Andrienko, G., Andrienko, N., and Jankowski, P. | Building Spatial Decision Support Tools for Individuals and Groups | F.Adam, P.Brézillon, P.Humphreys, J.-Ch.Pomerol (Eds.) | Decision Making and Decision Support in the Internet Age | , | Proceedings of DSIage2002, Cork, Ireland, 4-7 July 2002, pp.439-445. ISBN 1-86076-246-8 
+ Komarov, A., Chertov, O., Andrienko, G., Andrienko, N., Mikhailov, A., Gatalsky, P. | DESCARTES & EFIMOD: An Integrated System for Simulation Modelling and Exploration Data Analysis for Decision Support in Sustainable Forestry | A. Rizzoli and A. Jakeman (Eds.) | Integrated Assessment and Decision Support | , | Proceedings IEMSS 2002, 24-27 June 2002, Lugano, Switzerland Volume 1, pp.239-244. ISBN 88-900787-0-7 
+ Andrienko, G. and Andrienko, N. | Intelligent Support of Visual Data Analysis in Descartes | A.Butz, A.Krüger, P.Oliver, S.Schlechtweg, and M.Zhou (Eds.) | 2nd International Symposium on Smart Graphics | , Hawthorne, New York, USA, June 11-13, 2002 | ACM Press, 2002, pp.21-26 | href="papers/sg02.pdf" - published version 
+ Andrienko, N. and Andrienko, G. | Interactive Visual Tools for Spatial Multicriteria Decision Making | M. De Marsico, S. Levialdi, E. Panizzi (Eds.) | Proceedings of the Working Conference on Advanced Visual Interfaces AVI 2002 | , Trento, Italy, May 22-24, 2002 | ACM Press, 2002, pp.129-132. ISBN 1-58113-537-8 | href="papers/avi02.pdf" - published version 
+ Gennady Andrienko, Natalia Andrienko, and Hans Voss Faunhofer. | Computer cartography and cartographic knowledge | In | Proceedings of the International conference on GIS for Sustainable Development of Territories | , | St. Petersburg, Russia, 2002, pp.114-117. 
+ Andrienko, G., Andrienko, N., and Voss, H. | Organization of Mapping Services in the Internet: Possible Solutions | M.Ruiz, M.Gould, and J.Ramon (Eds.) | 5th AGILE Conference on Geographic Information Science | , April 25-27, 2002, Palma, Balearic Island, Spain, | pp.537-546. ISBN 84-7632-734-X 
+ 2001 
+ Andrienko, N. and Andrienko, G. | Intelligent Visual Data Analysis Service in the Internet | Web Information Systems Engineering WISE 2001 | , Conference and Workshop, Kyoto, Japan, 3-6.12.2001 | proceedings, pp.439-445. | Also published in: | Proceedings of the 2nd International Confrence on Web Information Systems Engineering | , | Volume 2 (Workshops), IEEE Computer Society, Los Alamitos, CA, 2002, pp.85-91. ISBN 0-7695-1393-X 
+ G.Andrienko, N.Andrienko, V.Gitis, and I.Denissovitch | "Interactive Maps for Visual Exploration of Grid Data" | International Archives of Photogrammetry and Remote Sensing, | Vol. | 34 | , Part 4/W5 "Challenges in Geospatial Analysis, Integration and Visualization", pp.6-9. 
+ Andrienko, G., Andrienko, N., and Savinov, A. | Choropleth Maps: Classification revisited | In Proceedings ICA 2001 | , Beijing,China, vol.2, pp.1209-1219 | href="papers/ica01.pdf" - pre-print 
+ Andrienko, G. and Andrienko, N. | Interactive Visual Tools to Support Spatial Multicriteria Decision Making | E.Kapitanios, H.Hinterberger (Eds.) | User Interfaces to Data Intensive Systems | , 2nd International Workshop, Zurich, Switzerland, 31.5.-1.6.2001 | IEEE Computer Society Press, Los Alamitos, CA, 2001, pp.127-131. ISBN 0-7695-0834-0 
+ Andrienko, G. and Andrienko, N. | Interactive Cumulative Curves as a Tool for Exploratory Classification | D.B.Kidner, G.Higgs (Eds.) | 9th annual conference GIS Research in the UK | , University of Glamorgan, Wales, April 18-20, 2001 | University of Glamorgan, 2001, pp.439-442. ISBN 1-840540-26-5 
+ Andrienko, G. and Andrienko, N. | Constructing Parallel Coordinates Plot for Problem Solving | A.Butz, A.Krüger, P.Oliver, and M.Zhou (Eds.) | 1st International Symposium on Smart Graphics | , Hawthorne, New York, USA, March 21-23, 2001 | ACM Press, 2001, pp.9-14 | href="papers/sg01.pdf" - published version 
+ Chertov, O., Komarov, A., Andrienko, G., Andrienko, N., and Gatalsky, P. | Integrating forest simulation models and spatio-temporal interactive visualisation for decision making in ecosystem management at landscape level | Kari-Matti Vuori, Jari Kouki (eds.) | 25thInternational Conference Ecosystem Management in Boreal Forest Landscapes | , Koli National Park, Finland, May 27-30, 2001. | North Karelia Regional Environment Centre, Joensuu, 2001, pp.56. ISBN 951-53-1583-2, ISSN 1238-9846 
+ Andrienko, G., Andrienko, N., and Savinov, A. | Intergration of GIS with data mining | D.Wilkinson, D.Murphy, Ph,Nanopoulos (Eds.) | ETK-99. Exchange of Technology and Know-How | Statistical Office of the European Communities, Luxembourg 2001, pp.221-225. ISBN 92-828-7883-X 
+ Voss, H., Rinner, C., Andrienko, G., and Schmidt, D. | dMaps for Internet publishing of statistical maps | D.Wilkinson, D.Murphy, Ph,Nanopoulos (Eds.) | ETK-99. Exchange of Technology and Know-How | Statistical Office of the European Communities, Luxembourg 2001, pp.217-220. ISBN 92-828-7883-X 
+ Andrienko, N., Andrienko, G., Peckham, R. and Voss, H. | CommonGIS - Common Access to Geographically Referenced Data | A.Munro (Ed.) | The Spatial Information Society: Shaping the Future. Proceedings of 6th EC-GI&GIS Workshop | Joint Research Center, Europen Commision, Ispra, Italy, 6pp (CD-ROM) | href="papers/ecgis00a.pdf" - pre-print 
+ Andrienko, N., Andrienko, G., Gatalsky, P., Voss, H., Schmidt, D., val Liedekerke, M., and Guittet, C. | EuroFigures - a digital portrait of the EU's General Statistics | A.Munro (Ed.) | The Spatial Information Society: Shaping the Future. Proceedings of 6th EC-GI&GIS Workshop | Joint Research Center, Europen Commision, Ispra, Italy, 3pp (CD-ROM) | href="papers/ecgis00b.pdf" - pre-print 
+ 2000 
+ Andrienko, G., Jankowski, P., Andrienko, N. | Data mining approach to reducing complexity of multiple criteria spatial decision problem. | P.Forer, A.G.O.Yeh, J.He (eds.) | Proceedings of 9th International Symposium on Spatial Data Handling | , Beijing, China, 10-12 August 2000 | International Geographical Union, 2000, pp.3a15-3a28. 
+ Andrienko, N., Andrienko, G., and Gatalsky, P. | Visualization of Spatio-Temporal Information in the Internet | A.M.Tjoa, R.R.Wagner, A.Al-Zobaidie (eds.) | Second International Workshop on Web-Based Information Visualization: WebVis 2000 | , Greenwich, London, UK, 4-8 September, 2000 | 11th International Workshop on Database and Expert Systems Applications, Proceedings | IEEE Computer Society, Los Alamitos, California 2000, pp.577-585. ISBN 0-7695-0680 
+ Andrienko, N., Andrienko, G., and Gatalsky, P. | Supporting Visual Exploration of Object Movement. | V. Di Gesù, S. Levialdi, L. Tarantino (eds.) | Proceedings of the Working Conference on Advanced Visual Interfaces AVI 2000 | , Palermo, Italy, May 23-26, 2000 | ACM Press, 2000, pp.217-220, 315 | href="papers/avi00.pdf" - published version 
+ Andrienko, G. and Andrienko, N. | Java Tools for Exploratory Cartographic Visualziation in the Internet | S.Klimenko (Ed.) | The 10th International Conference on Computer Graphics & Vision GRAPHICON'2000 | , Moscow, Russia, August 28 - September 2, 2000 | Moscow State University, 2000, pp.18-25. ISBN 5-317-00048-3 
+ Andrienko, N., Andrienko, G., and Gatalsky, P. | Towards Exploratory Visualization of Spatio-Temporal Data | 3rd AGILE Conference on Geographic Information Science | , Helsinki/Espoo, May 25-27, 2000 | pp.137-142 
+ Andrienko, G. and Andrienko, N. | Exploring Spatial Data with Dominant Attribute Map and Parallel Coordinates | GIS Research UK'2000 | , York, April 5-7, 2000 | pp.104-109 
+ Andrienko, N., Andrienko, G., Voss, H., and Tuijnman, F. | The Architecture of the CommonGIS System | K. Fullerton (ed.) | Proceedings of 5th EC-GIS Workshop | , Stresa, Italy 28-30 June, 1999 | report EUR 19018 EN, European Communities, 2000, pp. 416-426 | href="papers/ecgis99a.pdf" - pre-print 
+ Andrienko, N., Andrienko, G., and Gatalsky, P. | Spatio-temporal Visualization in Naturdetective and Beyond | K. Fullerton (ed.) | Proceedings of 5th EC-GIS Workshop | , Stresa, Italy 28-30 June, 1999 | report EUR 19018 EN, European Communities, 2000, pp. 499-507 | href="papers/ecgis99b.pdf" - pre-print 
+ 1999 
+ Andrienko, G. and Andrienko, N. | Knowledge Engineering for Automated Map Design in DESCARTES | C.B.Medeiros (ed.) | Advances in Geographic Information Systems. Proceedings of the 7th International Symposium ACM GIS'99 | , Kansas-City, November 5-6, 1999 | NY: ACM Press, pp.66-72. ISBN 1-58113-235-2 | href="papers/acmgis99.pdf" - published version 
+ Andrienko, G. and Andrienko, N. | Data Characterization Schema for Intelligent Support in Visual Data Analysis | Freksa, C., & Mark, D. M. (eds.) | Spatial information theory - Cognitive and computational foundations of geographic information science | COSIT'99, Lecture Notes in Computer Science, vol. | 1661 | . | Berlin: Springer, pp. 349-366. ISBN 3-540-66365-7 | href="papers/cosit99.pdf" - published version 
+ Andrienko, G. and Andrienko, N. | Knowledge-Based Visualization to Support Spatial Data Mining | Hand, D.J., Kok, J.N., and Berthold, M.R. (Eds.) | Advances in Intelligent Data Analysis | 3rd International Symposium, IDA-99 Amsterdam, The Netherlands, August 9-11, 1999, Proceedings. | Lecture Notes in Computer Science, vol. | 1642 | Berlin: Springer-verlag, pp. 149-160. ISBN 3-540-66332-0 | href="papers/ida99.pdf" - published version 
+ Andrienko, G. and Andrienko, N. | GIS Visualization Support to the C4.5 Classification Algorithm of KDD | C. Peter Keller (ed.) | 19th International Cartographic Conference | Proceedings, International Cartographic Association, Ottawa, 1999 pp. 747-755. ISBN 0-919088-54-6 | href="papers/ica99.pdf" - pre-print 
+ Andrienko, G. and Andrienko, N. | Data Mining with C4.5 and Cartographic Visualization | N.W.Paton and T.Griffiths (eds.) | User Interfaces to Data Intensive Systems | 1999, IEEE Computer Society Los Alamitos, CA, pp. 162-165. ISBN 0-7695-0262-8 | href="papers/uidis99.pdf" - pre-print 
+ Andrienko, G. and Andrienko, N. | Making a GIS Intelligent: CommonGIS Project View | AGILE'99Conference | , Rome, April 15-17, 1999, pp.19-24 | href="papers/agile99.pdf" - pre-print 
+ Andrienko, G., Andrienko, N., and Voss, H. | Thematic Internet Maps for Cities: Data Analysis and Publishing with Descartes | E.M.Fendel (Ed.) | Proceedings of21st UDMS'99 conference | (Venice, April 21-23 1999), Urban Data Management Society, Delft, pp.XII.1.1-XII.1.11 
+ Andrienko, G., Andrienko, N., and Carter, J. | Thematic Mapping in the Internet: Exploring Census Data with Descartes | R.Laurini (Ed.) | Proceedings ofTeleGeo'99conference | , Lyon, May 6-7, 1999, pp.138-145 
+ 1998 
+ Andrienko, G. and Andrienko, N. | Visual Data Exploration by Dynamic Manipulation of Maps | T.Poiker and N.Chrisman (eds.) | 8th International Symposium on Spatial Data Handling, SDH'98 | July 11-15, 1998, Vancouver, Canada, pp.533-542 
+ Andrienko, G. and Andrienko, N. | Intelligent Visualization and Dynamic Manipulation: Two Complementary Instruments to Support Data Exploration with GIS | Proceedings ofAVI'98: Advanced Visual Interfaces | Int. Working Conference (L'Aquila – Italy, May 24-27, 1998), ACM Press pp.66-75 
+ Andrienko, G. and Andrienko, N. | Interactive Visual Comparison for Data Exploration with Maps in IRIS | Peckham, R. (ed.) | Proceedings of the4th EC-GIS Workshop | Budapest, Hungary, 24-26 June 1998, JRC ISIS, European Communities EUR Report 18667, 1999 pp. 72-84. 
+ Andrienko, G. and Andrienko, N. | IRIS: Intelligent Visualization for Data Exploration Support in GIS | V.Scala (ed.) | Proceedings ofWSCG'98: the 6th Int. Conf. in Central Europe on Computer Graphics and Visualization | (Plzen, Czech Republic, February 9-13, 1998), pp.19-26. ISBN 80-7082-359-3 
+ 1997 
+ Andrienko, G. and Andrienko, N. | Knowledge-Based Support for Visual Exploration of Spatial Data | Extended Abstracts of | Int. Conf.CHI'97 | (Atlanta GA) | ACM Press, pp.16-17 | Full paper in HTML 
+ Andrienko, G. and Andrienko, N. | Research Issues in Intelligent Data Visualization for Exploration and Communication | Extended Abstracts of | Int. Conf.CHI'97 | (Atlanta GA) | ACM Press, pp.40-41 | Full paper in HTML 
+ Andrienko, G. and Andrienko, N. | IRIS: an Intelligent Tool Supporting Visual Exploration of Spatially Referenced Data | Proceedings of3rd ERCIM Workshop on User Interfaces for All | (Abernai France, 3-4 November 1997), ERCIM, pp 61-74 
+ 1995 
+ Andrienko, G. and Andrienko, N. | Knowledge base framework for retrieval of multimedia ecological information | Proc. of the Int. Conf. “ | INTERNET Applications and Electronic Information Resources in Forestry and Environmental Sciences | ” | European Forest Institute. Joensuu, Finland. 1-5 August 1995, EFI Proceedings No. | 10 | , 1996, pp.109-119 
+ 1994 
+ Andrienko, G. and Andrienko, N. | AFORIZM approach: creating situations to facilitate expertise transfer | L.Steels, G.Schreiber, W.Van de Velde (Eds.) | EKAW’94: A Future for Knowledge Acquisition | . | Lecture Notes in Artificial Intelligence, vol. | 867 | Berlin: Springer-verlag, 1994, pp.244-261 | published version: | http://dx.doi.org/10.1007/3-540-58487-0_13 
+ Last updated: July 12, 2012
+
+3. Website of SDH_3: https://profiles.ucalgary.ca/emmanuel-stefanakis
+Website information of SDH_3:
+
+This site uses cookies. By continuing, you're agreeing to the use of cookies outlined in ourWebsite Terms & Conditions. 
+ Close 
+ Skip to main contentSearchToggle ToolboxSearchMy UCalgary 
+ Webmail 
+ IT 
+ D2L 
+ IRISS 
+ ARCHIBUS 
+ People and Culture 
+ Library 
+ Go Dinos 
+ Class Schedule 
+ UCalgary Directory 
+ Continuing Education 
+ Careers 
+ Bookstore 
+ Active Living 
+ Academic Calendar 
+ UCalgary Maps 
+ Faculty Websites | Close Faculty Websites List | Viewing:Faculty Websites 
+ Cumming School of Medicine 
+ Faculty of Arts 
+ Faculty of Graduate Studies 
+ Faculty of Kinesiology 
+ Faculty of Law 
+ Faculty of Nursing 
+ Faculty of Nursing (Qatar) 
+ Faculty of Science 
+ Faculty of Social Work 
+ Faculty of Veterinary Medicine 
+ Haskayne School of Business 
+ School of Architecture, Planning and Landscape 
+ School of Public Policy 
+ Schulich School of Engineering 
+ Werklund School of Education 
+ Toggle NavigationUCalgary Profiles 
+ People Directory 
+ Business Directory 
+ Emergency Info 
+ Emmanuel Stefanakis 
+ PhD, PEng 
+ Are you the profile owner? 
+ Login to edit.On This Page 
+ Contact informationBackgroundCoursesProjectsPublicationsMore InformationPositions 
+ Department Head 
+ Schulich School of Engineering,Department of Geomatics Engineering 
+ Contact information 
+ Email 
+ Web presence 
+ LinkedIn 
+ Phone number 
+ Office:403 220 4113Location 
+ Office:ENE 226Background 
+ Educational Background 
+ PhD,Electrical and Computer Engineering,National Technical University of Athens,1997MScE,Geodesy and Geomatics Engineering,University of New Brunswick,1994Dipl.Eng,Rural and Surveying Engineering,National Technical University of Athens,1992Biography 
+ Since 1992, I have been involved in or led multiple research projects, primarily funded by Canadian agencies such as NSERC, NRCan, UNB, and UCalgary, as well as by the European Union (IST, COST, Telematics, Environment, TMR, ESPRIT) and the Greek government. I have served as an advisor or researcher at Hellenic Cadastre S.A., Intracom S.A., Hellenic Documentation Centre, and Fraunhofer Gesellschaft - AIS Institute in Germany. Since 1999, I have been a University Professor with extensive service records at multiple academic institutions in Canada and Europe. In September 2018, I began serving as theDepartment Head of Geomatics Engineering at the University of Calgary. My teaching portfolio includes a wide range of undergraduate and graduate courses in Geospatial Information Science at institutions such as the University of Calgary, University of New Brunswick, HU Athens, NTU Athens, University of Piraeus, University of Aegean, Hellenic Open University, TU Crete, BW Munich, and UN Lisbon. These courses span various programs in Engineering and Science and are delivered through classroom-based, online, and distance-learning modes. I received the2017 UNB President Teaching Scholar Awardand the2023 UCalgary Students' Union Teaching Excellence Award. Myresearchinterests include Geospatial Data Science, Digital Earth, Discrete Global Grid Systems, GeoAI, Geospatial Analytics, Geospatial Quantum Computing, Spatio-temporal Indexing, Optimization, Geovisualization, Cartography, Geospatial Web, Spatial Data Infrastructures, Interoperability of Geographic Data, Semantic Web, and applications of Geomatics in natural hazards, transportation, logistics, energy, and climate change, as well as education in Geomatics and Geomatics-Assisted Education. I have supervised over 140 students from all six continents and have authored or co-authored five textbooks and more than 150 articles published in international journals (e.g., IJGIS, IEEE TKDE, CEUS, IJGI, Transactions in GIS, CaGIS, Cartographica, Geomatica) and conference proceedings (e.g., IEEE KDE, COSIT, SDH, AGILE, ISPRS, ICA, GIScience). I have been a reviewer of research articles for international scientific journals and conferences and have served as a member of the Organizing, Program, and Scientific committees at international conferences in Geoinformatics. From January 2014 to March 2022, I served as theEditor-in-Chief of the Cartographica Journal. I was the recipient of the2023 Award of Distinction for Exceptional Scholarly Contributions to Cartographyfrom the Canadian Cartographic Association. I am a member of the Association of Professional Engineers and Geoscientists of Alberta (APEGA), the Canadian Institute of Geomatics (CIG), the Canadian Remote Sensing Society (CRSS), and the Canadian Cartographic Association (CCA). I have been actively involved with the Canadian Board of Examiners for Professional Surveyors (CBEPS), the Canadian Institute of Geomatics (CIG), the International Cartographic Association (ICA), and the International Society for Photogrammetry and Remote Sensing (ISPRS). 
+ Courses 
+ Show 5 of 6 entries 
+  
+ Course number | Course title | Semester 
+ ENGO 351 | Introduction to Geospatial Info Systems | Multiple terms 
+ ENGO 451/641 | Design and Implementation of Geospatial Information Systems | Multiple terms 
+ ENGG 200 (course coordinator) | Engineering Design and Communication | Fall 2019 
+ ENGO 645 | Spatial Databases and Data Mining | Winter 2020 
+ ENGO 601 | Graduate Project | Multiple terms 
+ 1 
+ 2 
+ Projects 
+ Ongoing Research Funding 
+ HALOS: Mapping Linear Features on Modern Geospatial Reference Frameworks (Funded by: | NSERC | Discovery Grant and the Discovery Accelerator Supplements Program, 2019-27) 
+ A Framework for Prioritization of Culvert Inspections (Funded by: | NSERC | Alliance Grants - Advantage; Industry partner: McElhanney Ltd, 2024-26) 
+ Geospatial Quantum Computing (Funded by: | href="https://research.ucalgary.ca/quantum-city" - Quantum City | and the Schulich School of Engineering, 2023-25) 
+ DOTS: Earth Observation to Decision Information Services; Scientific Committee (Funded by: | NSERC | Collaborative Research and Training Experience program - CREATE, 2020-25) 
+ Geospatial Data Science (Funded by: | Schulich School of Engineering | , Research Allowance 2023-28) 
+ Past Research Funding 
+ Geospatial Data Science (Funded by: | Schulich School of Engineering | , Research Allowance 2018-23) 
+ Data Preparation for Flood Susceptibility (Funded by: | NRCan | , 2021-22) 
+ On-the-Fly Flood Modelling (Funded by: | NRCan | , RAP Bursary Agreement, 2019-21) 
+ Jupyter Notebook to interact with the content of a Data Cube Platform (Funded by: | NRCan | , 2020-21) 
+ Jupyter Notebook for flood mapping practices and water data analysis in Canada (Funded by: | NRCan | , 2020) 
+ KNOT: KNOwledge discovery from Trajectory data (Funded by: | NSERC | Discovery Grant 2013-19) 
+ UTS: University Teaching Scholar Grant (Funded by: | UNB | UTS 2017-20) 
+ Development of a Data Warehouse for Riverine and Coastal Flood Risk Management (Funded by: | NRCan | , RAP Bursary Agreement, 2014-17) 
+ Intelligent Simplification of Linear Geographic Features for Mapping and Analysis (Funded by: | NSERC | USRA, 2017) 
+ Assessing the Quality of OpenStreetMap Data for New Brunswick (Funded by: | NSERC | USRA, 2017) 
+ Evaluation and Fusion of Elevation Web Services for Flood Mapping (Funded by: | NSERC | USRA, 2017) 
+ Impact of Flood Waters on Grand Lake Meadows Ecosystem - Past and Present (Funded by: Grand Lake Meadows Project Management Committee - | href="http://www.unb.ca/research/ors/grants_contracts/supporting_docs/GLM_Guidelines_ProjCriteria_04Dec12.pdf" - GLMF | , 2016-17) 
+ Contextual Line Simplification (CLS) for ArcGIS (Funded by: | NSERC, Engage Grant | , 2015; Industrial partner: | Esri Canada | ) 
+ Development and Delivery of a Course Module for Flood Hazard Risk Assessment(Funded by: UNB - | Teaching & Learning Priority Fund | ,2015-16) 
+ Study of Map Projections using Geospatial Web Tools (Funded by: UNB - | Teaching & Learning Priority Fund | , 2014-15) 
+ Development of the HAZUS Flood Mapping Tool for Canada: Data Integration and Database Development in a New Brunswick Municipality (Funded by: | NRCan | , Pilot Project, 2014) 
+ Historical Map Collections and Map Mashups: Enhance the Historical Significance of Grand Lake Meadows in New Brunswick (2013. Funded by: Grand Lake Meadows Project Management Committee - | href="http://www.unb.ca/research/ors/grants_contracts/supporting_docs/GLM_Guidelines_ProjCriteria_04Dec12.pdf" - GLMF | ) 
+ Knowledge Discovery from Moving Object Databases: Mining Vessel Trajectories (2012-14. Funded by: UNB/GGE GIS Research Funds) 
+ Web Mapping and Geospatial Web: Re-authoring the Lab Sessions and Tutorials (2013-14. Funded by: UNB - | Teaching & Learning Priority Fund | ) 
+ Historical Map Collections on the Web: Intelligent tools for Sharing and Searching their Content. (2010-13. Funded by: European Social Fund and the Hellenic Strategic Reference Framework - Heracleitus II Project) 
+ MOVE: Knowledge Discovery from Moving Objects. (2009-13; Funded by the European Science Foundation - Action of the COST Programme: European Cooperation in Science and Technology. | MOVE | Project. Member of the Working Group: Representation of Movement Data and Spatio-temporal Databases). 
+ Mining and Disseminating the Content of Historical Map Collections: Studying the NB Archives (2012-13. Funded by: UNB - | href="http://www.unb.ca/research/ors/grants_contracts/urfguide.php" - URF Grant | ) 
+ Map-Centered History Teaching. Case Study: Exploring the History of the City of Fredericton through Web Maps (2012-13. Funded by: | Then/Hier | : The History Education Network). 
+ An Advanced Storytelling Platform for the Battleship “G. Averof” (2009-10; Funded by DAAD: the German Academic Exchange Service - | IKYDA | : Programme for the Promotion of the Exchange and Scientific Cooperation between Greece and Germany. Project Leader. German Partner: Prof. Dr. M. Jarke, Info5, RWTH Aachen). 
+ Mashups@School | : The Use of Mashups and Web Mapping for History Teaching (2008-10; Project Leader. In cooperation with the National Archaeological Museum of Athens, the Arsakeion Schools of Athens, and the Museum Battleship “G. Averof”). 
+ COAST ATLAS: A GIS for Coastal Management (2006-08; Funded by the European Union and the Greek General Secretariat for Research and Technology). 
+ EDUGI: Reuse and Sharing of e-Learning Courses in GI Science Education (2006-07; Funded by the European Union. EC e-learning Programme: | eduGI | . Project Leader for Harokopio University). 
+ Publications 
+ href="https://scholar.google.com/scholar?hl=en&q=author%3A%22Emmanuel%20Stefanakis%22" - Google Scholar
+More Information 
+ Most recent articles... 
+ Liu, J., Li, J., Qiao, L., Li, M., Stefanakis, E., Zhao, X., Huang, Q., Wang, H., and Zhang, C., 2024. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. | Transactions in GIS | , Volume 28, Issue 1, Wiley. | https://onlinelibrary.wiley.com/doi/10.1111/tgis.13126 
+ Bowater, D., and Stefanakis, E., 2023.PageRank centrality with non-local random walk-based teleportation. | Journal of Complex Networks | , Volume 11, Issue 4, Oxford Academic. | https://doi.org/10.1093/comnet/cnad024 
+ Breunig, M., Kuper, P. , Reitze, F., Landgraf, S., Al-Doori, M., Stefanakis, E., Abdulmuttalib, H., and Kugler, Z., 2023. Improving Data Quality and Management for Remote Sensing Analysis - Use-Cases and Emerging Research Questions. ISPRS Annals - Advanced Data Preparation and Data Management for Geospatial and Remote Sensing Scenarios. ISPRS Press. 
+ Stefanakis, E., 2023. Why and how does geomatics engineering education need to change? | GIM International. | Jan. 2023. | https://www.gim-international.com/content/article/why-and-how-does-geomatics-engineering-education-need-to-change 
+ List of Selected Publications 
+ Books 
+ Stefanakis, E., 2024. | Geographic Databases and Information Systems | . 2nd Edition, CreateSpace Independent Publ. [In English], pp.484. 
+ Stefanakis, E., 2015. | Web Mapping and Geospatial Web Services | . CreateSpace Independent Publ. [In English], pp.168. 
+ Stefanakis, E., 2014 (revised 2020). | Geographic Databases and Information Systems | . CreateSpace Independent Publ. [In English], pp.386 (397). 
+ Stefanakis, E., 2010. Geographic Databases and Geographic Information Systems. 2nd Edition. Papasotiriou Publ., pp. 450 [In Greek]. (First Edition published in 2003). 
+ Stefanakis, E., 2010. Geographic Data: An Introduction to Collection Methodologies. New Technologies Publ., pp. 160 [In Greek]. 
+ Stefanakis, E., 2009. Web Mapping and Web Mapping Services. New Technologies Publ., pp. 220 [In Greek] 
+ Stefanakis, E., Peterson, M.P., Armenakis, C., Delis, V., (Eds), 2006. Geographic Hypermedia: Concepts and Systems. Springer, pp. 467. 
+ Zimányi, E., and Stefanakis, E., (Eds), 2005. Semantic-based Geographical Information Systems (SeBGIS'05). In On the Move to Meaningful Internet Systems 2005: OTM Workshops, Springer, LNCS 3762. 
+ Special Issues in Journals (Guest Editor) 
+ Stefanakis, E., 2021. Mapping the Pandemic. Special Issue. Cartographica, Vol. 56, No. 1. | https://www.utpjournals.press/toc/cart/56/1 
+ Stefanakis, E., 2019. Discrete Global Grid Systems. Special Issue. Cartographica, Vol. 54, No. 1. | https://www.utpjournals.press/toc/cart/54/1 
+ Stefanakis, E., Li, S., Dragicevic, S., 2015. Advances in Geospatial Statistical Modelling, Analysis, and Data Mining. Special Issue Geomatica Journal, Vol. 69, No. 3 | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig6903 
+ Stefanakis, E., Liu, Y., and Kyriakidis, P., 2015. Advances in Spatio-Temporal Data Analysis and Mining. Special Issue International Journal of Geo Information, ISPRS, | http://www.mdpi.com/journal/ijgi/special_issues/spatial_temporal_datadata 
+ Journal Papers 
+ Liu, J., Li, J., Qiao, L., Li, M., Stefanakis, E., Zhao, X., Huang, Q., Wang, H., and Zhang, C., 2024. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. | Transactions in GIS | , Volume 28, Issue 1, Wiley. | https://onlinelibrary.wiley.com/doi/10.1111/tgis.13126 
+ Bowater, D., and Stefanakis, E., 2023.PageRank centrality with non-local random walk-based teleportation. | Journal of Complex Networks | , Volume 11, Issue 4, Oxford Academic. | https://doi.org/10.1093/comnet/cnad024 
+ Stefanakis, E., 2023. Hierarchical Data Models. In Wilson, J. (Ed) | Geographic Information Science & Technology Body of Knowledge | . University Consortium of Geographic Information Science. 
+ Bowater, D., and Stefanakis, E., 2023. Extending the Adapted PageRank Algorithm centrality model for urban street networks using non-local random walks. | Applied Mathematics and Computation. | Vol. 446. Elsevier | https://doi.org/10.1016/j.amc.2023.127888 
+ Mori, K., Rock, M., McCormack, G., Liccioli, S., Giunchi, D., Marceau, D., Stefanakis, E., Massolo, A., 2023. Fecal contamination of urban parks by domestic dogs and tragedy of the commons. | Scientific Reports, | 13, 3462 (2023). Springer Nature. | https://doi.org/10.1038/s41598-023-30225-7 
+ Li., M., McGrath, H., and Stefanakis, E., 2022 Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. | International Journal of Geo-Information | (IJGI), ISPRS | 11 | (12), 627. | https://www.mdpi.com/2220-9964/11/12/627 
+ Mori, K., Massolo, A., Marceau, D., and Stefanakis, E., 2022 Modelling the epidemiology of zoonotic parasites transmitted through a predator-prey system in urban landscapes: The Calgary Echinococcus multilocularis Coyote Agent-based model (CEmCA). | Ecological Modelling | , Elsevier, Vol. 475. | https://doi.org/10.1016/j.ecolmodel.2022.110177 
+ Li., M., McGrath, H., and Stefanakis, E., 2022 Multi-resolution topographic analysis in hexagonal Discrete Global Grid Systems. | International Journal of Applied Earth Observation and Geoinformation | . Elsevier, Vol. 113; | https://doi.org/10.1016/j.jag.2022.102985 
+ Li., M., McGrath, H., and Stefanakis, E., 2022 Geovisualization of Hydrological Flow in Hexagonal Grid Systems. | Geographies | 2022, | 2 | (2), 227-244; | https://doi.org/10.3390/geographies2020016 
+ Li., M., McGrath, H., and Stefanakis, E., 2021 Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science (CaGIS). Taylor & Francis. | https://doi.org/10.1080/15230406.2021.1966648 
+ Scriven, B., McGrath, H., and Stefanakis, E., 2021 GIS Derived Synthetic Rating Curves and HAND Model to Support On-The-Fly Flood Mapping. Natural Hazards. Springer. | https://doi.org/10.1007/s11069-021-04892-6 
+ Li., M., and Stefanakis, E., 2020 Geospatial operations of Discrete Global Grid Systems – a comparison with traditional GIS. Journal of Geovisualization and Spatial Analysis, 4(26). Springer. | https://link.springer.com/article/10.1007/s41651-020-00066-3 
+ Li, M., and Stefanakis, E. 2020. Geo-feature modeling uncertainties in Discrete Global Grids: a case study of downtown Calgary, Canada. Geomatica Journal. CIG. In Press. 
+ Breunig, M., Jahn, M., Kuper, P., Mazroob, N., Rösch, N., Al-Doori, M., Stefanakis, E., Jadidi, M., 2020. Geospatial Data Management Research: Progress and Future Directions. International Journal of Geo-Information (IJGI), ISPRS. | http://www.mdpi.com/2220-9964/9/2/95/pdf 
+ Mah, C., Hong, D., Chen, V., Stefanakis, E., 2020. First-Year Engineering Students' Research Experience in Web Mapping. Cartographica Journal, Vol 55(1), pp. 53-62, University of Toronto Press. 
+ Bowater, D., and Stefanakis, E., 2019. On the isolatitude property of the rHEALPix Discrete Global Grid System. Big Earth Data Journal (TBED). Taylor & Francis. | https://doi.org/10.1080/20964471.2019.1658494 
+ Bowater, D., and Stefanakis, E., 2019. An open-source web service for creating quadrilateral grids based on the rHEALPix Discrete Global Grid System. International Journal of Digital Earth (TJDE), Taylor and Francis. | https://doi.org/10.1080/17538947.2019.1645893 
+ Padilla-Ruiz, M., Stefanakis, E., and Church, I., 2019. Development of a User-Centred Web-Mapping Application for Ocean Modellers. Marine Geodesy Journal (UMGD). Taylor & Francis. | https://doi.org/10.1080/01490419.2019.1666758 
+ McGrath, H., Nastev, M., Kotsollaris, M., and Stefanakis, E., 2019. Flood Damage Calculations via a RESTful API. International Journal of Disaster Risk Reduction. Elsevier. | https://doi.org/10.1016/j.ijdrr.2019.101071 
+ Zhao, D., and Stefanakis, E., 2018. Mining Massive Taxi Trajectories for Rapid Fastest Path Planning in Dynamic Multi-Level Landmark Network. Computers, Environment and Urban Systems. Elsevier. 72, 221-231. | https://doi.org/10.1016/j.compenvurbsys.2018.07.001 
+ Jiang, W., and Stefanakis, E., 2018. what3words Geocoding Extensions. Journal of Geovisualization and Spatial Analysis.Springer. 2:7 | https://doi.org/10.1007/s41651-018-0014-x | . | http://rdcu.be/G7fB 
+ Zhao, D., and Stefanakis, E., 2018. Integrated Compression of Vehicle Spatio-temporal Trajectories under the Road Stroke Network Constraint. Transactions in GIS. Wiley Online Library. 22 (4), 991-1007. | https://doi.org/10.1111/tgis.12464 
+ Padilla-Ruiz, M., Church, I., and Stefanakis, E., 2018. Competitive Analysis of Current Ocean Web-Mapping Applications. The International Hydrographic Review Journal. IHO, Nov. 2018, pp. 7-24. | http://www.iho.int/mtg_docs/IHReview/2018/IHR_November2018.pdf 
+ Bowater, D., and Stefanakis, E., 2018. The rHEALPix Discrete Global Grid System: Considerations for Canada. Geomatica Journal. 72(1) 27-37. | https://doi.org/10.1139/geomat-2018-0008 
+ Stefanakis, E., 2017. Web Mercator and Raster Tile Maps: Two Cornerstones of Online Map Service Providers. Geomatica Journal, Vol. 71, No. 2, pp. 100-109. | http://pubs.cig-acsg.ca/doi/10.5623/cig2017-203 
+ Tamilmani, R., and Stefanakis, E., 2017. Semantically Enriched Line Simplification for Static Linear Features. Geomatica Journal, Vol. 71, No. 1, pp. 1-19. | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig2017-101 
+ Stefanakis, E., 2016. mR-V: Line Simplification through Mnemonic Rasterization. Geomatica Journal, Vol. 70, No. 4, pp. 269-282. | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig2016-401 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2016. DEM Fusion of Elevation REST API Data in Support of Rapid Flood Modelling. Geomatica Journal. Vol. 70, No. 4, pp. 283-297. | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig2016-402 
+ Arapostathis, S.G., Parcharidis, I., Stefanakis E., Drakatos G., and Kalogeras I., 2016. A Method for Developing Seismic Intensity Maps from Twitter Data. Journal of Civil Engineering and Architecture, 10: 839-852 | doi: 10.17265/1934-7359/2016.07.013 
+ Garbanzo-Leon, J., Kingdon, R., Stefanakis, E., 2016. GEOWAPP: A Geospatial Web Application for Lab Exercises in Surveying. Geomatica Journal, Vol. 70, No. 1. pp. 31-42. | http://pubs.cig-acsg.ca/doi/abs/10.5623/cig2016-103 
+ Stefanakis, E., 2015. SELF - Semantically Enriched Line simpliFication. International Journal of Geographical Information Science (IJGIS). Vol. 29(10), pp. 1826-1844. Taylor & Francis. | http://dx.doi.org/10.1080/13658816.2015.1053092 
+ McGrath, H., and Stefanakis, E., Nastev, M., 2015. Sensitivity Analysis of Flood Damage Estimates: A Case Study in Fredericton, New Brunswick. International Journal of Disaster Risk Reduction. Elsevier. Vol.14(4), 379–387. | http://dx.doi.org/10.1016/j.ijdrr.2015.09.003 
+ Tienaah, T., Stefanakis, E., Coleman, D., 2015. Contextual Douglas-Peucker Simplification. Geomatica Journal, Vol. 69, No. 3. | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig2015-306 
+ Stefanakis, E., 2015. Education and Training on Web Mapping and the Geospatial Web. Geomatica Journal, Special Issue: Cartography in Canada 2011–2015, Vol. 69, No. 2, pp. 145-160. | http://pubs.cig-acsg.ca/doi/pdf/10.5623/cig2015-202 
+ Stefanakis, E., 2015. Trajectory Reconstruction from Anonymized Vessel Locations. Geomatica Journal, Vol. 69, No. 1, pp. 118-121. 
+ Nastev, M., Nollet, M., El Ezz, A.A., Smirnoff, A., Ploeger, S.K., McGrath, H., Sawada, M., Stefanakis, E., and Parent, M., 2015. Methods and tools for natural hazard risk analysis in Eastern Canada: Use of knowledge to understand vulnerability and implement mitigation measures. Natural Hazards Review. American Society of Civil Engineers (ASCE). 10.1061/(ASCE)NH.1527-6996.0000209. 
+ McGrath, H., and Stefanakis, E., 2014. Grand Lake Meadows Historical Mapping. Geomatica Journal, Vol. 68, No. 2, pp. 222-231. 
+ Gkadolou, E., Tomai, E., Stefanakis, E., and Kritikos, G., 2014. Documentation of the Spatio – Temporal Evolution of the Greek State: Ontological Standardization for the Historical Maps of a Web Portal. Geographies Journal, Vol. 23(1). 
+ Muthu, S.S., Gkadolou, E., and Stefanakis, E., 2013. Historical Map Collections on Geospatial Web. Geomatica Journal, Vol. 67, No. 3, pp. 279-290. 
+ Stefanakis, E., and Prastacos, P., 2008. Development of an Open Source Based Spatial Data Infrastructure. Applied GIS Journal, ISSN 1832-5505, Vol. 4, No. 4, pp. 1-26. 
+ Stefanakis, E., 2007. NET-DBSCAN: Clustering the nodes of a dynamic linear network. International Journal of Geographical Information Science.Taylor & Francis. Volume 21 Issue 4, 427-442. 
+ Stefanakis, Ε., 2006. Scheduling trajectories on a planar surface with moving obstacles. Informatica Journal, Lith, Acad. Sci., Vol. 17, No. 1, pp. 95-110. (part of it also in ACTA Universitatis Apulensis Journal, No. 8, 2004). 
+ Stefanakis, E., 2003. Modeling the History of Semi-Structured Geographic Entities. International Journal of Geographical Information Science. Vol. 17, No. 6, pp. 517-546..Taylor & Francis. 
+ Stefanakis, E., 2003. Representation of Generalized Map Series Using Semi-Structured Data Models. Cartography and Geographic Information Science (journal). Vol. 30. No. 1, pp. 51-68. American Congress on Surveying and Mapping. 
+ Stefanakis, E., and Kavouras, M., 2002. Navigating in Space Under Constraints. International Journal of Pure and Applied Mathematics (IJPAM), Vol. 1(1), pp. 71-93. Academic Publications. 
+ Theodoridis, Y., Stefanakis, E., and Sellis, T., 2000, Efficient Cost Models for Spatial Queries Using R-trees. IEEE Transactions on Knowledge and Data Engineering, IEEE CS Press. Vol. 12, No. 1, pp. 19-32. 
+ Stefanakis, E., Vazirgiannis, M., and Sellis, T., 1999, Incorporating fuzzy set methodologies in a DBMS repository for the application domain of GIS. International Journal of Geographical Information Science. Vol. 13, No. 7, pp. 657-675. Taylor & Francis. 
+ Stefanakis, E., and Sellis, T., 1998, Enhancing operations with spatial access methods in a database management system for GIS. Cartography and Geographic Information Systems. Vol. 25, No. 1, pp. 16-32. 
+ Theodoridis, Y., Papadias, D., Stefanakis, E., and Sellis, T., 1998, Direction relations and two-dimensional range queries: optimization techniques. Data and Knowledge Engineering. Vol. 27, No. 3, pp. 313-336. 
+ Stefanakis, E., Theodoridis, Y., Sellis, T., and Lee, Y.C., 1997, Point representation of spatial objects and query window extension: a new technique for spatial access methods. International Journal of Geographical Information Science. Vol. 11, No. 6, pp. 529-554. Taylor & Francis. 
+ Papadias, D., Theodoridis, Y., and Stefanakis, E., 1997, Multi-dimensional range query processing with spatial relations. Geographical Systems, Vol. 4, No. 4, pp. 343-365. 
+ Lymberopoulos, N., Papadopoulos, C., Stefanakis, E., Pantalos, N., and Lockwood, F., 1996, A GIS-based forest fire management information system. EARSel Journal - Advances in Remote Sensing. Special Issue: Remote sensing and GIS applications for forest fire management, Vol. 4, No. 4, pp. 68-75. 
+ Referred Book Chapters 
+ Bradley, P., Jahn, M., Breunig, M., Al-Doori, M., Stefanakis, E., Kuper, P., 2024. Geometry, Topology and p-Adic Numbers in Geospatial Data Modelling, Management and Processing: Review and Future Approaches. ISPRS Annals - Spatial Information to Empower the Metaverse. ISPRS Press. 
+ Breunig, M., Kuper, P. , Reitze, F., Landgraf, S., Al-Doori, M., Stefanakis, E., Abdulmuttalib, H., and Kugler, Z., 2023. Improving Data Quality and Management for Remote Sensing Analysis - Use-Cases and Emerging Research Questions. ISPRS Annals - Advanced Data Preparation and Data Management for Geospatial and Remote Sensing Scenarios. ISPRS Press. 
+ Huang, Y., and Stefanakis, E., 2022. Multi-resolution representation using graph database. ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Volume V-4-2022, ISPRS Press. 
+ Tamilmani, R., and Stefanakis, E., 2019. Modeling and Analysis of Semantically Enriched Simplified Trajectories using Graph Databases. Advances of the ICA. International Cartographic Association. ICA Press. 
+ Wen, J., and Stefanakis, E., 2018. A Restful API for the Extended what3words Encoding. ISPRS Annals of Photogrammetry, Remote Sensing and the Spatial Information Sciences (ISPRS-TCIV 2018). ISPRS Press. 
+ McGrath, H., and Stefanakis, E., and Nastev, M., 2016. Rapid Risk Evaluation (ER2) using MS Excel Spreadsheet: A Case Study of Fredericton (New Brunswick). ISPRS Annals of Photogrammetry, Remote Sensing and the Spatial Information Sciences (ISPRS 2016 Congress). ISPRS Press. 
+ Gkadolou, E., and Stefanakis, E., 2015. Historical Maps on the Semantic Web. In Sarris, A., (Ed.) Best Practices of GeoInformatic Technologies for the Mapping of Archaeolandscapes. Archaeopress Archaeology. pp.189-198. 
+ Stefanakis, E., 2012. Map Mashups and APIs in Education. In: Peterson, M. (Ed.). Online Maps with APIs and Map Services. Springer. 
+ Gadolou, E., Tomai, E., Stefanakis, E., and Kritikos, G., 2012. Ontological standardization for historical map collections: studying the Greek borderlines of 1881. ISPRS Annals of Photogrammetry, Remote Sensing and the Spatial Information Sciences (ISPRS 2012 Congress). ISPRS Press. 
+ Lonnqvist, M., and Stefanakis, E., 2009. Archaeology and GIS: Ancient human traces in automated space. In Madden, M. (Ed), 2009, ASPRS Manual of Geographic Information Systems, ASPRS Press. 
+ Stefanakis, E., 2008. DBSCAN-MO: Density-based Clustering among Moving Obstacles. In Bernard, L., Christensen, A.F, and Pundt, H. (Eds), 2008. The European Information Society – Taking Geoinformation Science One Step Further (11th AGILE Conference; Full paper), pp. 159 – 180. Lecture Notes in Geoinformation and Cartography, Springer. 
+ Stefanakis, E., and Patroumpas, K., 2008. Google Earth and XML: Advanced Visualization and Publishing of Geographic Information. In Peterson, M.P. (ed) International Perspectives on Maps and the Internet. Springer, pp. 151-160. 
+ Stefanakis, E., 2007. Google Earth. In Kemp, K., (ed), 2007, Encyclopaedia of Geographic Information Science. SAGE Publications. 
+ Stefanakis, E., and Peterson, M.P., 2006. Geographic hypermedia. In Stefanakis, E., Peterson, M.P., Armenakis, C., Delis, V., (Eds), 2006, Geographic Hypermedia: Concepts and Systems. Springer, pp. 1-21. 
+ Stefanakis, E., and Sellis, T., 2003. Interaction Issues and Decision Support in Intelligent GIS. Encyclopaedia of Life Support Systems. UNESCO. EOLSS Publishers Co Ltd. 
+ Stefanakis, E., 2002. Representation of Map Objects with Semi-structured Data Models. In Richardson, D., and van Oosterom, P. (Eds.) Advances in Spatial Data Handling (10th International Symposium on Spatial Data Handling - SDH2002), Ottawa, Canada, Springer, pp. 547-562. 
+ Stefanakis, E., and Sellis, T., 2001. Towards the design of a DBMS repository for temporal GIS. In Frank, A.U., Raper, J., and Cheylan, J.-P. (Eds.) Life & Motion of Socio-economic Units (ESF-GISDATA Series Book), Taylor & Francis, pp. 167-184. 
+ Stefanakis, E., and Sellis, T., 1996. Α DBMS repository for the application domain of Geographic Information Systems. In Kraak, M.J., and Molenaar, M. (Eds.), Advances in GIS Research II (7th Intern. Symposium on Spatial Data Handling), Delft, The Netherlands, Taylor & Francis, pp. 119-130. 
+ Theodoridis, Y., Papadias, D., and Stefanakis, E., 1996. Supporting direction relations in spatial database systems. In Kraak, M.J., and Molenaar, M. (Eds.), Advances in GIS Research II (7th Intern. Symposium on Spatial Data Handling), Delft, The Netherlands, Taylor & Francis, pp. 739-752. 
+ Stefanakis, E., and Kavouras, M., 1995. On the determination of the optimum path in space. In Frank A.U., and Kuhn, W. (Eds) Spatial Information Theory: A Theoretical Basis for GIS. (2nd International Conference on Spatial Information Theory - COSIT '95), Springer, LNCS 988, pp. 241-257. 
+ Referred Conference Papers 
+ Stefanakis, E., 2023. Enhancing Geomatics Engineering Education with Software Engineering Attributes. FIG Working Week 2023, Orlando, Florida. 
+ Scriven, B., McGrath, H., and Stefanakis, E., 2021. CERC-HAND-D: A tool for supporting on-the-fly flood mapping in Canada. IEEE International Geoscience and Remote Sensing Symposium. Brussels, Belgium. 
+ Li, E., Stefanakis, E., and McGrath, H., 2020. National Terrain Data Management on Discrete Global Grids in Canada. Proceedings of the 23rd International Research Symposium on cartography and GIScience (AutoCarto 2020). 
+ Kotsollaris, M., Liu, W., Stefanakis, E., and Zhang, Y., 2019. LevelFilesSet: An efficient Data Structure for Scalable Web Tiled Map Management Systems. In the Proceedings of the ICA. International Cartographic Conference 2019. Tokyo, Japan. ICA Press. 
+ Tamilmani, R., and Stefanakis, E., 2019. Semantically Enriched Simplification of Trajectories. In the Proceedings of the ICA. International Cartographic Conference 2019. Tokyo, Japan. ICA Press. 
+ Stefanakis, E., 2017. Semantically Enriched Trajectory Simplification through Mnemonic Rasterization. Proceedings of the International Cartographic Conference (ICC 2017), Washington DC, USA, July 2017. 
+ Tienaah, T., Stefanakis, E., Coleman, D., 2015. Contextual Line Generalization: Extending ArcGIS Generalization Toolbox. In the Proceedings of the 18th AGILE Conference on Geographic Information Science, Lisbon, Portugal. 
+ Tienaah, T., and Stefanakis, E., 2014. “Troy is ours – How on earth could Clytaemnestra know so fast?”. In the Proceedings of the 17th AGILE Conference on Geographic Information Science, Castellon, Spain. 
+ McGrath, H., Stefanakis, E., McCarthy, M., and Nastev, M., 2014. Data Preparation for Validation Study of Hazus Canada Flood Model. In the Proceedings of the 10th International Conference of the International Institute for Infrastructure Resilience and Reconstruction (I3R2). Purdue University, Indiana, USA. 
+ Stefanakis, E., 2013. Web mapping and geospatial web: an introductory course for geographers and geoscientists. In the Proceedings of the 16th AGILE Conference on Geographic Information Science, Leuven,Belgium. 
+ Stefanakis, E., 2013. Map-mashups in the study of cultural heritage. In the Proceedings of the 2nd Workshop on Integrating 4D, GIS and Cultural Heritage. Leuven, Belgium. 
+ Gadolou, E., and Stefanakis, E., 2013. A formal ontology for historical maps. In the Proceedings of the 26th Int. Cartographic Conference, Dresden, Germany. 
+ Sepehr, S., Fraser, D., and Stefanakis, E., 2013. A Geospatial Reference Framework for Student Training Survey Camps. In the Proceedings of the 26th Int. Cartographic Conference, Dresden, Germany. 
+ Stefanakis, E., 2012. Trajectory Generalization under Space Constraints. In the Proceedings of the 7th International Conference on Geographic Information Science (GIScience 2012). Columbus, Ohio, Sept. 18-21, 2012. 
+ Stefanakis, E., Van de Weghe, N., and Claramunt, C., 2012. Pre-processing, re-sampling and modelling moving objects. In the Proceedings of the 7th International Conference on Geographic Information Science (GIScience 2012). Columbus, Ohio, Sept. 18-21, 2012. 
+ Pelekis, N., Stefanakis, E., Kopanakis, I., Zotali, C., Vodas, M., and Theodoridis, Y., 2011. choroChronos.org: A GeoPortal for Movement Data and Processes. Conference on Spatial Information Theory (COSIT 2011), Belfast, Maine,USA, Sept.12-16, 2011. 
+ Stefanakis, E., 2010. Introducing map mashups in Primary School. In the Proceedings of the 6th International Conference on Geographic Information Science (GIScience 2010), Zurich, Sept. 14-17, 2010. 
+ Papadaki, H., Gadolou, E., Stefanakis, E., Kritikos, G., Cao, Y., Hannemann, A., Kovachev, D., Klamma, R., Pagomenos, G., 2010. The role of CMS in the education of GIS using storytelling. In the Proceedings of the 7th European GIS Education Seminar (EUGISES 2010), Serres, Greece, Sept. 9-12, 2010. 
+ Gadolou, E., Papadaki, H., Stefanakis, E., Kritikos, G., Cao, Y., Hannemann, A., Klamma, R., and Kovachev, D., 2010. Storytelling, Spatial Standards and Cultural Heritage Management. In the Proceedings of the 13th AGILE Conference, Guimaraes, Portugal, May 10-14, 2010. 
+ Papadaki, H., Gadolou, E., and Stefanakis, E. 2009. Collaborative GIS platforms for Storytelling – Case Study: Battleship Averof. In the Proceedings of the Second International Workshop on Story-Telling and Educational Games (STEG ‘09), Aachen, Germany, August 21st, 2009. 
+ Stefanakis, E., 2008. A journey to the ancient greek myths - An enhanced educational framework to story-telling with geo-visualization capabilities. In the Proceedings of the First International Workshop on Story-Telling and Educational Games (STEG ‘08), Maastricht, The Netherlands, September 16th, 2008. 
+ Stefanakis, E., and Prastacos, P., 2008. Development of a coastal SDI using GeoFOSS. In the Proceedings of the 11th AGILE Conference, Girona, Spain, May 5-8, 2008. 
+ Stefanakis, E., 2006. Building university campus maps on Google Earth. In the Proceedings of the 4th International Conference on Geographic Information Science (GIScience 2006), ifgi-Prints, Muenster, Germany, Sept. 20-23, 2004. 
+ Stefanakis, Ε., 2004. Navigating among moving obstacles. In the Proceedings of the 3rd International Conference on Geographic Information Science (GIScience 2004), Adelphi, MD, Oct. 20-23, 2004. 
+ Stefanakis, E., and Ratsiatou, I., 2001, Spatio-temporal multicriteria decision making under uncertainty. In Proceedings of the 1st International Symposium on Robust and Fuzzy Techniques in Geodesy and GIS, Zurich, Switzerland, March 2001. 
+ Theodoridis, Y., Stefanakis, E., and Sellis, T., 1998, Cost models for join queries in spatial databases. In Proceedings of the 14th IEEE International Conference on Data Engineering (ICDE '98), Orlando, Florida, pp. 476-483. IEEE CS Press. 
+ Lee, Y.C., Agi, B., and Stefanakis, E., 1997, An approach to multi-dimensional range search. In Proceedings of 1st International Workshop on Dynamic and Multi-Dimensional GIS. Eds. Y.C. Lee, Z.L.Li, Hong Kong, 25-26th August 1997, The Hong Kong Polytechnic University, pp. 128-142. 
+ Stefanakis, E., Vazirgiannis, M., and Sellis, T., 1996, Incorporating fuzzy logic methodologies into GIS operations. In Proceedings of the 1st International Symposium on Geographic Information Systems in Urban, Regional, and Environmental Planning, Samos, Greece, pp. 61-68. Also in Proceedings of the XVIII ISPRS Congress, Vienna, Austria. 
+ Lee, Y.C., and Stefanakis, E., 1994, A new approach to range searching based on the point representation of spatial objects. In Proceedings of the 6th International Conference on Geographic Information Systems, Ottawa, Canada, pp.1195-1208. 
+ Partially Referred Conference Papers and Abstracts 
+ Bowater, D, and Stefanakis, E., 2024. On PageRank, non-local random walk dynamics, and the effect of the teleportation rate. International School and Conference on Network Science (NetSci 2024), Quebec City, QC, Canada. 
+ Bowater, D., and Stefanakis, E., 2024. Combining local and non-local random walk dynamics via PageRank: theory, applications, and opportunities. 15th International Conference on Complex Networks (COMPLENET 2024), Exeter, U.K. 
+ Stefanakis, E., 2023. Geomatics Engineering Education in the Digital Reality. 2023 GIS in Education and Research Conference, Esri Canada, Toronto, March 1, 2023. 
+ Zhu, W., and Stefanakis, E., 2023. Agent based models for flood simulation. 2023 GIS in Education and Research Conference, Esri Canada, Toronto, March 1, 2023. 
+ Bowater, D, and Stefanakis, E., 2023. PageRank centrality with non-local random walk-based teleportation. International School and Conference on Network Science (NetSci 2023), Vienna, Austria. 
+ Ruiz, M.P, Barbeau, J., Schmitt, T., Peterson, P., and Stefanakis, E., 2022. Discrete Global Grid Systems (DGGS): Multi-resolution Bathymetry On-Demand. | International Hydrographic Conference (Hydro 2022) | , Grimaldi Forum, Monaco, Dec 5-8, 2022. 
+ Bowater, D., and Stefanakis, E., 2022. Non-local APA: An intuitive PageRank-based centrality model for urban street networks. SIAM Workshop on Network Science (NS22) September 13-15, 2022. | http://dyn.phys.northwestern.edu/ns22.html 
+ Bowater, D., and Stefanakis, E., 2019. Research directions for the rHEALPix Discrete Global Grid System. In the Proceedings of the Spatial Knowledge and Information - Canada (SKI 2019), Banff, AB, Canada. 
+ Nastev, M., Nollet, M.J., Abo-El-Ezz, A., Smirnoff, A., Ploeger, S.K., McGrath, H., Sawada, M., Stefanakis, E., and Parent, M., 2016. Interactive Web-based Application for Seismic and Flood Risk Assessment. World Engineering Conference on Disaster Risk Reduction (WECDRR2016), Lima, Peru. 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2016. Applicability of Elevation REST APIs and DEM Fusion in support of Flood Hazard Estimation. Geomatics Atlantic Conference (GA2016), Fredericton, NB, Canada. 
+ Nastev, M., Nollet, M.J., Abo-El-Ezz, A., Smirnoff, A., Ploeger, S.K., McGrath, H., Sawada, M., Stefanakis, E., and Parent, M., 2015. Use of knowledge to reduce vulnerability to seismic hazards. Proceedings of the Tenth Pacific Conference on Earthquake Engineering. Building an Earthquake-Resilient Pacific. 6-8 November 2015, Sydney, Australia. 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2015. Flood Risk Assessment using MS Excel Spreadsheet: A Case Study of Fredericton, NB. In the Proceedings of the 22nd Canadian Hydrotechnical Conference. Montreal, Canada. 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2015. Flood Inundation Maps using Reduced Complexity Models. In the Proceedings of the 22nd Canadian Hydrotechnical Conference. Montreal, Canada. 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2014. Sensitivity analysis of HAZUS Canada Flood Model: Case study from Fredericton, New Brunswick. In the Proceedings of the Canadian Risk and Hazards Network Symposium (CRHNet 2014). Toronto, Canada. 
+ Gkadolou, E., and Stefanakis, E., 2014. Historical Maps on Semantic Web based in Dublin Core. In the Proceedings of the 13th Hellenic Cartographic Association Conference. Patras, Greece 
+ Muthu, S.S., Stefanakis, E., and Lekkas, D., 2014. Discovery of Environmental Risk from Historical Vessel Trajectories. In the Proceedings of the Joint International Conference on Geospatial Theory, Processing, Modelling and Applications, Toronto, Canada. 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2014. Development of a Data Warehouse for Riverine and Coastal Flood Risk Management. In the Proceedings of the ISPRS Archives. Joint International Conference on Geospatial Theory, Processing, Modelling and Applications, Toronto, Canada. 
+ Gupta, S., Tienaah, T., and Stefanakis, E., 2014. Examining Map Projection Distortions using Geospatial Web Tools. In the Proceedings of the ISPRS Archives. Joint International Conference on Geospatial Theory, Processing, Modelling and Applications, Toronto, Canada. 
+ Allison, T., Fraser, D., and Stefanakis, E., 2014. Weighted Visibility Classification and Seating Plan for the Aitken University Centre. In the Proceedings of the ISPRS Archives. Joint International Conference on Geospatial Theory, Processing, Modelling and Applications, Toronto, Canada. 
+ Fraser, D, Sepehr, S, and Stefanakis, E., 2014. A Geospatial Reference Framework for a University Campus: A Case Study for Managing Student Surveyed Topographic Data. In the Proceedings of the ISPRS Archives. Joint International Conference on Geospatial Theory, Processing, Modelling and Applications, Toronto, Canada. 
+ Stefanakis, E., 2013. Introducing Geographers to Web Mapping and Geospatial Web. In the Proceedings of the Annual Canadian Institute of Geomatics Conference, Toronto, Canada. 
+ McGrath, H., and Stefanakis, E., 2013. Grand Lake Meadows since the 18th Century: A Mapping and Awareness Project. In the Proceedings of the Annual Canadian Institute of Geomatics Conference, Toronto, Canada. 
+ Gadolou, E., Tomai, E., Stefanakis, E., Kritikos, G., 2010. Generation of Ontology for the Spatio-Temporal Documentation of the Greek Historical Map Series. Research Paper. In the Proceedings of the 11th National Cartographic Conference: Cartography of the Greek State. Nafplion, December 8-10, 2010. 
+ Gadolou, E., Stefanakis, E., Kritikos, G., 2010. Web-based Historical Maps: The North Frontier of the Greek State in 1881. Research Paper. In the Proceedings of the 6th National Conference of the Hellenic Society in GI (HellasGIs), Athens, December 2-3, 2010. 
+ Kritikos, G., and Stefanakis, E., 2010. Sailing in Space and Time with the Navals of the Historical Battleship "G. Averof". In the Proceedings of the 9th Pan-Hellenic Geographical Conference. Athens, November 4-6, 2010. 
+ Stefanakis, E., and Kritikos, G., 2008. The battleship “G. Averof” promotion and enrichment of the museum archives. In Proceedings of the XXI ISPRS Congress, Commission IV, WG IV/1, pp. 67-72, Beijing, China, July 2008. 
+ Stefanakis, E., and Prastacos, P., 2007. Semantic-Based Spatial Information Infrastructures: Integrating Data and Services into a Single Collection. In Proceedings of the 23rd International Cartographic Conference, Moscow, Russia, August 2007. 
+ Stefanakis, E., and Prastacos, P., 2007. Development of Coastal Zone Metadata. Proceedings of the 8th Pan-Hellenic Geographical Conference. Athens, October 2007. [in Greek] 
+ Stefanakis, E., 2005. Clustering dynamic map objects based on density measures. In Proceedings of the 22nd International Cartographic Conference, A Coruna, Spain, July 2005. 
+ Stefanakis, E., and Stefanakis, K., 2003. Compiling a Recreational Map: A Case Study. In Proceedings of the 21st International Cartographic Conference, Durban, South Africa, August 2003. 
+ Stefanakis, E., 2002. Modeling Cadastral Data Using Semi-structured Data Models. In Proceedings of the 5th AGILE Conference on Geographic Information Science, Mallorca, Spain, April 2002. 
+ Chalkias, C., and Stefanakis, E., 2002. Modeling Insolation in the Application Domain of GIS. Proceedings of the 6th Pan-Hellenic Geographical Conference. Thessaloniki, October, 2002. 
+ Stefanakis, E., 2001, A unified framework for fuzzy spatio-temporal representation and reasoning. In Proceedings of the 20th International Cartographic Conference, pp. 2678-2687. Beijing, China, August 2001. 
+ Stefanakis, E., and Kavouras, M., 2000, Fuzzy logic based thematic mapping. Proceedings of the 6th Pan-Hellenic Cartographic Conference, Athens, November 2000 [in Greek]. 
+ Stefanakis, E., 2000, The synergy of GIS with other systems. In Proceedings of the XIX Congress of the International Society for Photogrammetry and Remote Sensing (ISPRS), Amsterdam, The Netherlands, July 2000. 
+ Tsivili, A., Fougiaxi, E., Stefanakis, E., and Tsiforos, I., 2000. Supervising the Cadastral Projects. Proceedings of the 1st Hellenic Cadastre Conference. Thessaloniki, May 2000 [in Greek]. 
+ Stefanakis, E., Vazirgiannis, M., and Voisard, A., 2000. Decision support under uncertainty on spatial contexts: The geological map creation case. In the Proceedings of the 1st International Conference on Geographic Information Science (GIScience 2000), Savannah, Georgia, Oct. 28-31, 2000. 
+ Stefanakis, E., and Sellis, T., 1999, Enhancing a database management system for GIS with fuzzy set methodologies. In Proceedings of the 19th International Cartographic Conference, Ottawa, Canada, August 1999, pp. 121-130. 
+ Stefanakis, E., and Sellis, T., 1997, Towards the design of a DBMS repository for the application domain of GIS: requirements of users and applications. In Proceedings of the 18th International Cartographic Conference, Stockholm, Sweden, pp. 2030-2037. 
+ Lymberopoulos, N., Papadopoulos, C., Stefanakis, E., Pantalos, N., and Lockwood, F., 1995, A GIS-based forest fire management information system. In Proceedings of the International Workshop of Remote Sensing and GIS applications for forest fire management, Alcala de Henares, Spain. 
+ Sellis, T., Diakonikolaou, K., and Stefanakis, E., 1995, Culture and information society: The role of databases and multimedia technologies in museums and archaeological sites. Proceedings of the 1st Information Society Conference, Athens, May 1995. 
+ Kavouras, M., and Stefanakis, E., 1995, Determination of the optimum path on the earth's surface. In Proceedings of the 17th International Cartographic Conference, Barcelona, Spain, pp. 2761-2765. 
+ Newsletters 
+ Stefanakis, E., 2023. Why and how does geomatics engineering education need to change? | GIM International. | Jan. 2023. | https://www.gim-international.com/content/article/why-and-how-does-geomatics-engineering-education-need-to-change 
+ Tamilmani, R., Stefanakis, E., 2017. Rediscovering the Journey of an Abandoned Child: A GIS Approach. Cartouche. Newsletter of the Canadian Cartographic Association. 
+ McGrath, H., McNeill, P., Stefanakis, E., 2017. Analysis of Flood History and Flood Progression in Grand Lake Meadows. Cartouche. Newsletter of the Canadian Cartographic Association. 
+ Stefanakis, E., 2017. | GeoPackage: A format with database capabilities. | GoGeomatics. Magazine of GoGeomatics Canada. May 2017. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_may_2017.pdf" - [pdf] 
+ Stefanakis, E., 2017. | Graph Databases – Recent development in Neo4j may help accommodate the Geospatial Community. | GoGeomatics. Magazine of GoGeomatics Canada. January 2017. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_january_2017.pdf" - [pdf] 
+ Stefanakis, E., 2016. | Geospatial Development – Enhancing GIS curricula with programming skills at UNB | . GoGeomatics. Magazine of GoGeomatics Canada. November 2016. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_november_2016.pdf" - [pdf] 
+ Stefanakis, E., 2016. | SaveTheMap Campaign: to encourage citizens and startups to use geospatial data and services | . GoGeomatics. Magazine of GoGeomatics Canada. June 2016. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_june_2016.pdf" - [pdf] 
+ Stefanakis, E., 2016. | NetCDF: a growing standard for encoding georeferenced data in binary form | . GoGeomatics. Magazine of GoGeomatics Canada. May 2016. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_may_2016.pdf" - [pdf] 
+ Stefanakis, E., 2016. | Location Encoding Systems – Could geographic coordinates be replaced and at what cost? | GoGeomatics. Magazine of GoGeomatics Canada. March 2016. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_march_2016.pdf" - [pdf] 
+ Stefanakis, E., 2016. | Discrete Global Grid Systems – A new OGC standard emerges | . | GoGeomatics. Magazine of GoGeomatics Canada. January 2016. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_january_2016.pdf" - [pdf] 
+ Stefanakis, E., 2015. | Map Tiles and Cached Map Services. | GoGeomatics. Magazine of GoGeomatics Canada. December 2015. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_december_2015.pdf" - [pdf] 
+ Stefanakis, E., 2015. | Elevation Web Services: Limitations and Prospects. | GoGeomatics. Magazine of GoGeomatics Canada. November 2015. [ | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_november_2015.pdf" - pdf] 
+ Stefanakis, E., 2015. | Web Mercator: the de facto standard, the controversy, and the opportunity. | GoGeomatics. Magazine of GoGeomatics Canada. October 2015. [ | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_october_2015.pdf" - pdf] 
+ Stefanakis, E., 2015. | 2005-2015: Ten Years with Google Maps. | GoGeomatics. Magazine of GoGeomatics Canada. September 2015. | href="http://www2.unb.ca/~estef/papers/go_geomatics_stefanakis_september_2015.pdf" - [pdf] 
+ McGrath, H., Stefanakis, E., and Nastev, M., 2015. Mapping Flood Risk and Flood Damage Estimates. Cartouche. Newsletter of the Canadian Cartographic Association, 90(1), pp. 10-11. 
+ Xue, X., and Stefanakis, E., 2014. Visualizing the Geography of Canadian Migration. Cartouche. Newsletter of the Canadian Cartographic Association, 89(2), pp. 11-14. 
+ International Tutorials and Invited Speeches 
+ Webinar: Peterson, P., Ruiz, M., Li., E., Bowater, D., and Stefanakis, E., 2022. Discrete Global Grid Systems for Geospatial Data Integration and Analysis. International Society for Photogrammetry and Remote Sensing (ISPRS) - WG IV/7. | YouTube 
+ Lecture: Stefanakis, E., 2020. Information Grids for Geospatial Data Integration, Analysis and Visualization. Honourable lecture series "Geodätisches Kolloquium" (Geodetic Colloquium)). Karlsruhe Institute of Technology (KIT), Germany. 
+ Speaker: Stefanakis, E., 2019. Geomatics Engineering at the University of Calgary. | North51 | , Banff, AB, Canada. | Slides 
+ Technical Session: Stefanakis, E., 2017. Web Mercator Projection and Raster Tile Maps: Two cornerstones of Online Map Service Providers. 42nd Canadian Cartographic Association Conference. Ottawa, Canada, June 2017. | href="http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf" - Slides 
+ Panel Session: Chrisman, N, Wachowicz, M, Stefanakis, E., 2017. Meet the Editors- Cartography Journals. AAG Annual Meeting. Boston, USA. April 5-9, 2017. 
+ Special Session: Stefanakis, E., and Liu, Y., 2015. ISPRS Session on Massive Mobility Data Analysis and Mining. In Conjunction with | DE2015: International Symposium on Digital Earth | , Halifax, Canada. October 5-9, 2015. 
+ Tutorial (half day): Stefanakis, E., 2008. Web Services for Mapping. Tutorial. The 3rd International Conference on Internet and Web Applications and Services (ICIW 2008). Athens, Greece. 
+ e-Learning Educational Package (4 ECTS Units Course): Stefanakis, E., and Patroumpas, K., 2007. Advanced Geographic Databases. eduGI: e-Learning Education in GI. 
+ Lecture (one week): Stefanakis, E., 2003. Geographic Database Systems, English Summer Semester, Muenster, Germany, May 5-9, 2003. 
+ Tutorial (full day): Stefanakis, E., 2002. Semi-structured Data and XML in Geographic Data Modeling and Handling. Join International Symposium on Geospatial Theory, Processing and Applications, Ottawa, Canada, July 8, 2002. 
+ Lecture (full day): Stefanakis, E., 2002. Geographic Databases and XML, 1st eduGI.net Summer School, Muenster, Germany, August 1st, 2002. 
+ Are you the profile owner? 
+ Login to edit.UCalgary Profiles 
+ System help 
+ Website Terms & Conditions 
+ Privacy Policy 
+ Website feedbackUniversity of Calgary 
+ 2500 University Drive NW 
+ Calgary AlbertaT2N 1N4 
+ CANADA 
+ Copyright © 2025 
+ The University of Calgary, located in the heart of Southern Alberta, both acknowledges and pays tribute to the traditional territories of the peoples of Treaty 7, which include the Blackfoot Confederacy (comprised of the Siksika, the Piikani, and the Kainai First Nations), the Tsuut’ina First Nation and the Stoney Nakoda (including Chiniki, Bearspaw, and Goodstoney First Nations). The City of Calgary is also home to the Métis Nation of Alberta (Districts 5 and 6). 
+ The University of Calgary is situated on land Northwest of where the Bow River meets the Elbow River a site traditionally known as Moh’kins’tsis to the Blackfoot, Wîchîspa to the Stoney Nakoda, and Guts’ists’i to the Tsuut’ina. On this land and in this place we strive to learn together, walk together, and grow together “in a good way.”
+
+4. Website of SDH_3: https://www.dizhu-gis.com/CVs/Di_Zhu_Curriculum_Vitae___Academia.pdf
+Website information of SDH_3:
+
+
+

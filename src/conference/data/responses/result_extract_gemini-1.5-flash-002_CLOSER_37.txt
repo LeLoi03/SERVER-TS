@@ -1,0 +1,38 @@
+output:
+{
+  "Conference dates": "April 1 - 3, 2025",
+  "Year": "2025",
+  "Location": "Vila Galé Porto hotel, Porto, Portugal",
+  "City-State-Province": "Porto",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Regular Papers) Paper Submission": "November 18, 2024",
+    "(Position Papers /Regular Papers) Paper Submission": "January 3, 2025",
+    "(Late-Breaking) Paper Submission": "January 23, 2025",
+    "(Workshops) Workshop Proposal": "November 27, 2024",
+    "(Special Sessions) Special Session Proposal": "November 27, 2024",
+    "(Tutorials) Tutorial Proposal": "February 18, 2025",
+    "(Demos) Demo Proposal": "February 18, 2025",
+    "(Panels) Panel Proposal": "February 18, 2025",
+    "(Abstracts Track) Abstract Submission": "January 30, 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Authors Notification": "January 6, 2025",
+    "(Position Papers /Regular Papers) Authors Notification": "January 30, 2025",
+    "(Late-Breaking) Authors Notification": "February 13, 2025",
+    "(Abstracts Track) Authors Notification": "February 13, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular Papers) Camera Ready and Registration": "January 23, 2025",
+    "(Position Papers /Regular Papers) Camera Ready and Registration": "February 12, 2025",
+    "(Late-Breaking) Camera Ready and Registration": "February 20, 2025",
+    "(Abstracts Track) Camera Ready and Registration": "February 28, 2025"
+  },
+  "Topics": "Cloud Computing, Services Science, API Management, Virtualization Technologies, Containers, Containerization, Microservices, Multi-Cloud Solutions, Cloud Quality, Cloud Optimization, Cloud Management, High Performance Cloud Computing, Cloud Migration, Service Monitoring, Service Ecosystems, Service Simulation, Service Performance Analytics, Business Process Management, Web Services, Service Innovation, Service Lifecycle Management, Service-Oriented Architecture, Service Management, Cloud Security, Privacy, Compliance Management, Access Control, Services Security, Reliability, Authorization, Privacy Assurance, Trust, Intrusion Detection",
+  "Publisher": "SCITEPRESS",
+  "Summary": "The International Conference on Cloud Computing and Services Science (CLOSER 2025) focuses on advances and applications concerning cloud infrastructure, operations, and available services. The conference will take place at the Vila Galé Porto hotel in Porto, Portugal, from April 1-3, 2025.",
+  "Call for Papers": "# CLOSER 2025: Call for Papers\n\nThe International Conference on Cloud Computing and Services Science (CLOSER 2025) will take place from **April 1-3, 2025, at the Vila Galé Porto hotel in Porto, Portugal.**\n\nCLOSER focuses on the highly important area of Cloud Computing, inspired by some latest advances that concern the infrastructure, operations, and available services through the global network. The conference also considers the link to Services Science, acknowledging the service-orientation in most current IT-driven collaborations.\n\n## Conference Areas\n\n*   **1. CLOUD COMPUTING ENABLING TECHNOLOGY**\n*   **2. CLOUD COMPUTING FUNDAMENTALS**\n*   **3. CLOUD COMPUTING PLATFORMS AND APPLICATIONS**\n*   **4. EDGE CLOUD AND FOG COMPUTING**\n*   **5. SERVICES**\n*   **6. CLOUD SECURITY AND PRIVACY**\n\n## Keynote Speakers\n\n*   Aaron Ding, TU Delft, Netherlands\n*   Sonia Ben Mokhtar, LIRIS CNRS, France\n*   Philipp Leitner, Chalmers University of Technology, Sweden\n\n## Panels\n\n*   Cybersecurity certification for the Computing Continuum: Future Challenges and opportunities\n*   Advancing Fog and Cloud Computing Continuums: Insights from the NebulOuS R&D Project\n\n## Paper Submission\n\nAuthors can submit their work in the form of a complete paper or an abstract. Complete papers can be submitted as a Regular Paper or a Position Paper.\n\nAll papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates.\n\n## Publications\n\nAll accepted complete papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science / Conference Proceedings Citation Index.\n\n## Important Dates\n\nAll dates refer to AoE time, i.e., \"Anywhere on Earth\".\n\n**Conference Date:** April 1-3, 2025\n\n*   **Regular Papers:**\n    *   Paper Submission: November 18, 2024 (expired)\n    *   Authors Notification: January 6, 2025 (expired)\n    *   Camera Ready and Registration: January 23, 2025 (expired)\n*   **Position Papers / Regular Papers:**\n    *   Paper Submission: January 3, 2025 (expired)\n    *   Authors Notification: January 30, 2025 (expired)\n    *   Camera Ready and Registration: February 12, 2025 (expired)\n*   **Late-Breaking:**\n    *   Paper Submission: January 23, 2025 (expired)\n    *   Authors Notification: February 13, 2025 (expired)\n    *   Camera Ready and Registration: February 20, 2025 (expired)\n*   **Workshops:**\n    *   Workshop Proposal: November 27, 2024 (expired)\n*   **Special Sessions:**\n    *   Special Session Proposal: November 27, 2024 (expired)\n*   **Tutorials:**\n    *   Tutorial Proposal: February 18, 2025 (expired)\n*   **Demos:**\n    *   Demo Proposal: February 18, 2025 (expired)\n*   **Panels:**\n    *   Panel Proposal: February 18, 2025 (expired)\n*   **Abstracts Track:**\n    *   Abstract Submission: January 30, 2025 (expired)\n    *   Authors Notification: February 13, 2025 (expired)\n    *   Camera Ready and Registration: February 28, 2025 (expired)\n\n## Conference Chair\n\nMaarten van Steen, Digital Society Institute, University of Twente, Netherlands\n\n## Program Chair\n\nValeria Cardellini, University of Rome Tor Vergata, Italy\n\n## Secretariat\n\nCLOSER Secretariat\n\n*   Address: Avenida de S. Francisco Xavier, Lote 7 Cv. C 2900-616 Setúbal - Portugal\n*   Tel.: +351 265 520 185\n*   Fax: +351 265 520 186\n*   Email: [closer.secretariat@insticc.org](mailto:closer.secretariat@insticc.org)\n*   Web: [https://closer.scitevents.org](https://closer.scitevents.org)"
+}
+

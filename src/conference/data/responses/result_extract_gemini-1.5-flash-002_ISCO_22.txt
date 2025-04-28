@@ -1,0 +1,16 @@
+output:
+{
+  "Conference dates": null,
+  "Year": null,
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": null,
+  "Submission Date": null,
+  "Notification Date": null,
+  "Camera-ready Date": null,
+  "Topics": "Approximation algorithms, Branch-and-bound algorithms, Branch-and-cut-and price algorithms, Computational biology, Computational complexity, Computational geometry, Constraint Programming, cutting plane algorithms, Exact and parameterized algorithms, Graph and network algorithms, Interior point methods, Linear and nonlinear integer programming, Local search algorithm, Metaheuristic, On-line algorithms, Polyhedral combinatorics, Randomized algorithms, Scheduling algorithms",
+  "Summary": "ISCO (International Symposium on Combinatorial Optimization) is a biannual symposium that brings together researchers from communities related to combinatorial optimization, including algorithms and complexity, mathematical programming, operations research, stochastic optimization, and graphs and combinatorics.",
+  "Call for Papers": "No call for papers available"
+}

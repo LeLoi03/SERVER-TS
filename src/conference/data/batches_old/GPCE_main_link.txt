@@ -1,0 +1,738 @@
+Conference GPCE:
+
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5Esgpce-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /GPCE 2025 (href="https://2025.ecoop.org/series/gpce" - series
+) /GPCE 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. This is the 24th edition of the conference. 
+ Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. 
+ href="#topics-of-interest" - Topics of Interest:
+GPCE seeks conceptual, theoretical, empirical, and technical contributions to its topics of interest, which include but are not limited to: 
+ program transformation, staging, 
+ macro systems, preprocessors, 
+ program synthesis, 
+ code-recommendation systems, 
+ domain-specific languages, 
+ generative language workbenches, 
+ language embedding, language design, 
+ domain engineering, 
+ software product lines, configurable software, 
+ feature interactions, 
+ applications and properties of code generation, 
+ language implementation, 
+ AI/ML techniques for generative programming, 
+ generative programming for AI/ML techniques, 
+ low code / no code approaches. 
+ GPCE promotes cross-fertilization between programming languages and software development and among different styles of generative programming in its broadest sense. 
+ Authors are welcome to check with the PC chair whether their planned papers are in scope. 
+ Paper Categories 
+ GPCE solicits four kinds of submissions: 
+ Full Papers: reporting original and unpublished results of research that contribute to scientific knowledge for any GPCE topic. Full paper submissions must not exceed 12 pages excluding the bibliography. 
+ Short Papers: presenting unconventional ideas or new visions in any GPCE topics. Short papers do not always contain complete results as in the case of full papers, but can introduce new ideas to the community and get early feedback. Note that short papers are not intended to be position statements. Accepted short papers are included in the proceedings and will be presented at the conference. Short paper submissions must not exceed 6 pages excluding the bibliography, and must have the text “(Short Paper)” appended to their titles. 
+ Tool Demonstrations: presenting tools for any GPCE topic. Tools must be available for use and must not be purely commercial. Submissions must provide a tool description not exceeding 6 pages excluding bibliography and a separate demonstration outline including screenshots also not exceeding 6 pages. Tool demonstration submissions must have the text “(Tool Demonstration)” appended to their titles. If they are accepted, tool descriptions will be included in the proceedings. The demonstration outline will only be used to evaluate the planned demonstration. 
+ Generative Pearl: is an elegant essay about generative programming. Examples include but are not limited to an interesting application of generative programming and an elegant presentation of a (new or old) data structure using generative programming (similar to Functional Pearl in ICFP and Pearl in ECOOP). Accepted Generative Pearl papers are included in the proceedings and will be presented at the conference. Generative Pearl submissions must not exceed 12 pages excluding the bibliography, and must have the text “(Generative Pearl)” appended to their titles. 
+ Paper Selection 
+ The GPCE program committee will evaluate each submission according to the following selection criteria: 
+ Novelty. Papers must present new ideas or evidence and place them appropriately within the context established by previous research in the field. 
+ Significance. The results in the paper must have the potential to add to the state of the art or practice in significant ways. 
+ Evidence. The paper must present evidence supporting its claims. Examples of evidence include formalizations and proofs, implemented systems, experimental results, statistical analyses, and case studies. 
+ Clarity. The paper must present its contributions and results clearly. 
+ Best Paper Award 
+ Following the tradition, the GPCE program committee will select the best paper among accepted papers. The authors of the best paper will be given the best paper award at the conference. 
+ href="#paper-submission" - Paper Submission
+The submission page will be announced soon. 
+ All submissions must use thehref="http://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+. Be sure to use thelatest LaTeX templates and class files, the SIGPLAN sub-format, and 10-point font. Consult thesample-sigplan.textemplate and use the document-class\documentclass[sigplan,anonymous,review]{acmart}. 
+ To increase fairness in reviewing, GPCE uses thedouble-blind review processwhich has become standard across SIGPLAN conferences: 
+ Author names, institutions, and acknowledgments should be omitted from submitted papers, and 
+ references to the authors’ own work should be in the third person. 
+ No other changes are necessary, and authors will not be penalized if reviewers are able to infer authors’ identities in implicit ways. 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference. The official publication date affects the deadline for any patent filings related to published work. 
+ For additional information, clarification, or answers to questions, contact the program chair. 
+ ACM Artifact Badges (New!) 
+ There as been quite some momentum in recent years to improve replication and reproducibility in software engineering. Starting the 2024 edition, we want to give authors the chance to apply for an ACM Artifact Badge. Even though the artifact submission is not mandatory, we recommend authors to submit their artifacts to reach a higher impact with their research. 
+ Authors that want to apply for an ACM Artifact Badge are asked to add a brief paragraph in the ACKs section of their submission. The paragraph should indicate which ACM Badge is the submission aiming for (see ACM page linked below) and what is part of the artifact. The paragraph may be removed for the final version of the paper, if it is clear from the manuscript what constitutes the artifact. 
+ The review of artifact badges will not be available during the author rebuttal period and received artifacts will be announced shortly before the camera ready version is due to by authors of accepted submissions only. Hence, artifacts for rejected submissions may not be reviewed at all. 
+ More information on ACM Artifact Badges:https://www.acm.org/publications/policies/artifact-review-and-badging-current 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 9 Apr 2025updated 
+ Paper Submission (Extended) 
+ Fri 9 May 2025 
+ Review Notification 
+ Mon 12 May 2025 
+ Author Response 
+ Mon 19 May 2025 
+ Final Notification 
+ Wed 26 Mar 2025updated 
+ Abstract Submission 
+ Submission Link 
+ href="https://gpce25.hotcrp.com/" - https://gpce25.hotcrp.com/
+Organizing Committee 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminProgram ChairHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaGeneral Co-ChairUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegGeneral Co-ChairJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ Program Committee 
+ href="https://2025.ecoop.org/profile/guillaumeallais" - Guillaume AllaisUniversity of StrathclydeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/zenaariola" - Zena M. AriolaUniversity of OregonUnited States 
+ href="https://2025.ecoop.org/profile/kenichiasai" - Kenichi AsaiOchanomizu UniversityJapan 
+ href="https://2025.ecoop.org/profile/parisaataei" - Parisa AtaeiOregon State University 
+ href="https://2025.ecoop.org/profile/casperbach" - Casper BachUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/walterbinder" - Walter BinderUSI LuganoSwitzerland 
+ href="https://2025.ecoop.org/profile/shengchen1" - Sheng ChenUniversity of Louisiana at Lafayette 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/maryammehridehnavi" - Maryam Mehri DehnaviUniversity of TorontoCanada 
+ href="https://2025.ecoop.org/profile/simonfowler" - Simon FowlerUniversity of GlasgowUnited Kingdom 
+ href="https://2025.ecoop.org/profile/robertgluck" - Robert GlückUniversity of CopenhagenDenmark 
+ href="https://2025.ecoop.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.ecoop.org/profile/vojinjovanovic" - Vojin JovanovicOracle LabsSwitzerland 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/shoaibkamil" - Shoaib KamilAdobe Research 
+ href="https://2025.ecoop.org/profile/julialawall" - Julia LawallInriaFrance 
+ href="https://2025.ecoop.org/profile/ondrejlhotak" - Ondřej LhotákUniversity of WaterlooCanada 
+ href="https://2025.ecoop.org/profile/maltelochau1" - Malte LochauUniversity of Siegen 
+ href="https://2025.ecoop.org/profile/geoffreymainland" - Geoffrey MainlandDrexel UniversityUnited States 
+ href="https://2025.ecoop.org/profile/judithmichael" - Judith MichaelUniversity of RegensburgGermany 
+ href="https://2025.ecoop.org/profile/georgofenbeck" - Georg OfenbeckETH Zurich, Switzerland 
+ href="https://2025.ecoop.org/profile/cyrusomar" - Cyrus OmarUniversity of MichiganUnited States 
+ href="https://2025.ecoop.org/profile/klausostermann" - Klaus OstermannUniversity of TübingenGermany 
+ href="https://2025.ecoop.org/profile/lionelparreaux" - Lionel ParreauxHKUST (The Hong Kong University of Science and Technology)Hong Kong SAR China 
+ href="https://2025.ecoop.org/profile/bernhardrumpe" - Bernhard RumpeRWTH Aachen UniversityGermany 
+ href="https://2025.ecoop.org/profile/ulrikschultz" - Ulrik Pagh SchultzUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/michelsteuwer" - Michel SteuwerTechnische Universität BerlinGermany 
+ href="https://2025.ecoop.org/profile/sandrostucki" - Sandro StuckiChalmers University of TechnologySweden 
+ href="https://2025.ecoop.org/profile/rubytahboub" - Ruby TahboubUniversity of Illinois, Urbana-ChampainUnited States 
+ href="https://2025.ecoop.org/profile/elitilevich" - Eli TilevichVirginia TechUnited States 
+ href="https://2025.ecoop.org/profile/philipwadler" - Philip WadlerUniversity of Edinburgh 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/vadimzaytsev" - Vadim ZaytsevUniversity of Twente, NetherlandsNetherlands 
+ href="https://2025.ecoop.org/profile/lthomasvanbinsbergen" - L. Thomas van BinsbergenUniversity of AmsterdamNetherlands 
+ href="https://2025.ecoop.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ Coen De RooverSteering Committee Chair 
+ Vrije Universiteit Brussel 
+ Belgium 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/thomasthum" - Thomas ThümPaderborn UniversityGermany 
+ href="https://2025.ecoop.org/profile/ericvanwyk" - Eric Van WykDepartment of Computer Science and Engineering, University of MinnesotaUnited States 
+ xWed 2 Apr 14:30 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up 
+
+Call for Papers information:
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5Esgpce-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /GPCE 2025 (href="https://2025.ecoop.org/series/gpce" - series
+) /GPCE 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. This is the 24th edition of the conference. 
+ Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. 
+ href="#topics-of-interest" - Topics of Interest:
+GPCE seeks conceptual, theoretical, empirical, and technical contributions to its topics of interest, which include but are not limited to: 
+ program transformation, staging, 
+ macro systems, preprocessors, 
+ program synthesis, 
+ code-recommendation systems, 
+ domain-specific languages, 
+ generative language workbenches, 
+ language embedding, language design, 
+ domain engineering, 
+ software product lines, configurable software, 
+ feature interactions, 
+ applications and properties of code generation, 
+ language implementation, 
+ AI/ML techniques for generative programming, 
+ generative programming for AI/ML techniques, 
+ low code / no code approaches. 
+ GPCE promotes cross-fertilization between programming languages and software development and among different styles of generative programming in its broadest sense. 
+ Authors are welcome to check with the PC chair whether their planned papers are in scope. 
+ Paper Categories 
+ GPCE solicits four kinds of submissions: 
+ Full Papers: reporting original and unpublished results of research that contribute to scientific knowledge for any GPCE topic. Full paper submissions must not exceed 12 pages excluding the bibliography. 
+ Short Papers: presenting unconventional ideas or new visions in any GPCE topics. Short papers do not always contain complete results as in the case of full papers, but can introduce new ideas to the community and get early feedback. Note that short papers are not intended to be position statements. Accepted short papers are included in the proceedings and will be presented at the conference. Short paper submissions must not exceed 6 pages excluding the bibliography, and must have the text “(Short Paper)” appended to their titles. 
+ Tool Demonstrations: presenting tools for any GPCE topic. Tools must be available for use and must not be purely commercial. Submissions must provide a tool description not exceeding 6 pages excluding bibliography and a separate demonstration outline including screenshots also not exceeding 6 pages. Tool demonstration submissions must have the text “(Tool Demonstration)” appended to their titles. If they are accepted, tool descriptions will be included in the proceedings. The demonstration outline will only be used to evaluate the planned demonstration. 
+ Generative Pearl: is an elegant essay about generative programming. Examples include but are not limited to an interesting application of generative programming and an elegant presentation of a (new or old) data structure using generative programming (similar to Functional Pearl in ICFP and Pearl in ECOOP). Accepted Generative Pearl papers are included in the proceedings and will be presented at the conference. Generative Pearl submissions must not exceed 12 pages excluding the bibliography, and must have the text “(Generative Pearl)” appended to their titles. 
+ Paper Selection 
+ The GPCE program committee will evaluate each submission according to the following selection criteria: 
+ Novelty. Papers must present new ideas or evidence and place them appropriately within the context established by previous research in the field. 
+ Significance. The results in the paper must have the potential to add to the state of the art or practice in significant ways. 
+ Evidence. The paper must present evidence supporting its claims. Examples of evidence include formalizations and proofs, implemented systems, experimental results, statistical analyses, and case studies. 
+ Clarity. The paper must present its contributions and results clearly. 
+ Best Paper Award 
+ Following the tradition, the GPCE program committee will select the best paper among accepted papers. The authors of the best paper will be given the best paper award at the conference. 
+ href="#paper-submission" - Paper Submission
+The submission page will be announced soon. 
+ All submissions must use thehref="http://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+. Be sure to use thelatest LaTeX templates and class files, the SIGPLAN sub-format, and 10-point font. Consult thesample-sigplan.textemplate and use the document-class\documentclass[sigplan,anonymous,review]{acmart}. 
+ To increase fairness in reviewing, GPCE uses thedouble-blind review processwhich has become standard across SIGPLAN conferences: 
+ Author names, institutions, and acknowledgments should be omitted from submitted papers, and 
+ references to the authors’ own work should be in the third person. 
+ No other changes are necessary, and authors will not be penalized if reviewers are able to infer authors’ identities in implicit ways. 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference. The official publication date affects the deadline for any patent filings related to published work. 
+ For additional information, clarification, or answers to questions, contact the program chair. 
+ ACM Artifact Badges (New!) 
+ There as been quite some momentum in recent years to improve replication and reproducibility in software engineering. Starting the 2024 edition, we want to give authors the chance to apply for an ACM Artifact Badge. Even though the artifact submission is not mandatory, we recommend authors to submit their artifacts to reach a higher impact with their research. 
+ Authors that want to apply for an ACM Artifact Badge are asked to add a brief paragraph in the ACKs section of their submission. The paragraph should indicate which ACM Badge is the submission aiming for (see ACM page linked below) and what is part of the artifact. The paragraph may be removed for the final version of the paper, if it is clear from the manuscript what constitutes the artifact. 
+ The review of artifact badges will not be available during the author rebuttal period and received artifacts will be announced shortly before the camera ready version is due to by authors of accepted submissions only. Hence, artifacts for rejected submissions may not be reviewed at all. 
+ More information on ACM Artifact Badges:https://www.acm.org/publications/policies/artifact-review-and-badging-current 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 9 Apr 2025updated 
+ Paper Submission (Extended) 
+ Fri 9 May 2025 
+ Review Notification 
+ Mon 12 May 2025 
+ Author Response 
+ Mon 19 May 2025 
+ Final Notification 
+ Wed 26 Mar 2025updated 
+ Abstract Submission 
+ Submission Link 
+ href="https://gpce25.hotcrp.com/" - https://gpce25.hotcrp.com/
+Organizing Committee 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminProgram ChairHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaGeneral Co-ChairUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegGeneral Co-ChairJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ Program Committee 
+ href="https://2025.ecoop.org/profile/guillaumeallais" - Guillaume AllaisUniversity of StrathclydeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/zenaariola" - Zena M. AriolaUniversity of OregonUnited States 
+ href="https://2025.ecoop.org/profile/kenichiasai" - Kenichi AsaiOchanomizu UniversityJapan 
+ href="https://2025.ecoop.org/profile/parisaataei" - Parisa AtaeiOregon State University 
+ href="https://2025.ecoop.org/profile/casperbach" - Casper BachUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/walterbinder" - Walter BinderUSI LuganoSwitzerland 
+ href="https://2025.ecoop.org/profile/shengchen1" - Sheng ChenUniversity of Louisiana at Lafayette 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/maryammehridehnavi" - Maryam Mehri DehnaviUniversity of TorontoCanada 
+ href="https://2025.ecoop.org/profile/simonfowler" - Simon FowlerUniversity of GlasgowUnited Kingdom 
+ href="https://2025.ecoop.org/profile/robertgluck" - Robert GlückUniversity of CopenhagenDenmark 
+ href="https://2025.ecoop.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.ecoop.org/profile/vojinjovanovic" - Vojin JovanovicOracle LabsSwitzerland 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/shoaibkamil" - Shoaib KamilAdobe Research 
+ href="https://2025.ecoop.org/profile/julialawall" - Julia LawallInriaFrance 
+ href="https://2025.ecoop.org/profile/ondrejlhotak" - Ondřej LhotákUniversity of WaterlooCanada 
+ href="https://2025.ecoop.org/profile/maltelochau1" - Malte LochauUniversity of Siegen 
+ href="https://2025.ecoop.org/profile/geoffreymainland" - Geoffrey MainlandDrexel UniversityUnited States 
+ href="https://2025.ecoop.org/profile/judithmichael" - Judith MichaelUniversity of RegensburgGermany 
+ href="https://2025.ecoop.org/profile/georgofenbeck" - Georg OfenbeckETH Zurich, Switzerland 
+ href="https://2025.ecoop.org/profile/cyrusomar" - Cyrus OmarUniversity of MichiganUnited States 
+ href="https://2025.ecoop.org/profile/klausostermann" - Klaus OstermannUniversity of TübingenGermany 
+ href="https://2025.ecoop.org/profile/lionelparreaux" - Lionel ParreauxHKUST (The Hong Kong University of Science and Technology)Hong Kong SAR China 
+ href="https://2025.ecoop.org/profile/bernhardrumpe" - Bernhard RumpeRWTH Aachen UniversityGermany 
+ href="https://2025.ecoop.org/profile/ulrikschultz" - Ulrik Pagh SchultzUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/michelsteuwer" - Michel SteuwerTechnische Universität BerlinGermany 
+ href="https://2025.ecoop.org/profile/sandrostucki" - Sandro StuckiChalmers University of TechnologySweden 
+ href="https://2025.ecoop.org/profile/rubytahboub" - Ruby TahboubUniversity of Illinois, Urbana-ChampainUnited States 
+ href="https://2025.ecoop.org/profile/elitilevich" - Eli TilevichVirginia TechUnited States 
+ href="https://2025.ecoop.org/profile/philipwadler" - Philip WadlerUniversity of Edinburgh 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/vadimzaytsev" - Vadim ZaytsevUniversity of Twente, NetherlandsNetherlands 
+ href="https://2025.ecoop.org/profile/lthomasvanbinsbergen" - L. Thomas van BinsbergenUniversity of AmsterdamNetherlands 
+ href="https://2025.ecoop.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ Coen De RooverSteering Committee Chair 
+ Vrije Universiteit Brussel 
+ Belgium 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/thomasthum" - Thomas ThümPaderborn UniversityGermany 
+ href="https://2025.ecoop.org/profile/ericvanwyk" - Eric Van WykDepartment of Computer Science and Engineering, University of MinnesotaUnited States 
+ xWed 2 Apr 14:30 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up 
+
+Important Dates information:
+href="https://2025.ecoop.org" - ECOOP 2025
+Mon 30 June - Fri 4 July 2025href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Bergen, Norway
+Toggle navigation 
+ Attending | href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away) 
+ href="https://2025.ecoop.org/attending/weather" - Weather 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters 
+ Sponsorship 
+ href="#" - Tracks | ECOOP 2025 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium 
+ Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 
+ Organization | ECOOP 2025 Committees 
+ Organizing Committee 
+ Track Committees 
+ href="https://2025.ecoop.org/committee/ecoop-2025-technical-papers-programme-committee" - Technical Papers 
+ href="https://2025.ecoop.org/committee/ecoop-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://2025.ecoop.org/committee/ecoop-2025-doctoral-symposium-doctoral-symposium-committee" - Doctoral Symposium 
+ Contributors 
+ href="https://2025.ecoop.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Workshops 
+ DEBT | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ FTfJP | Program Committee 
+ Steering Committee 
+ ICOOOLPS | Program Committee 
+ PLF+PLAID | Organizing Committee 
+ Program Committee 
+ PLSS | href="https://2025.ecoop.org/committee/plss-2025-papers-organizers" - Organizers 
+ Program Committee 
+ VORTEX | Organizing Committee 
+ Program Committee (to be finalized) 
+ href="https://2025.ecoop.org/search//all" - Search 
+ Series | href="https://2025.ecoop.org/series/ecoop" - Series 
+ ECOOP 2026 
+ ECOOP 2025 
+ ECOOP 2024 
+ ECOOP 2023 
+ ECOOP 2022 
+ ECOOP 2021 
+ ECOOP 2020 
+ ECOOP 2019 
+ ECOOP 2018 
+ ECOOP 2017 
+ ECOOP 2016 
+ ECOOP 2015 
+ 2014: Uppsala 
+ 2013: Montpellier 
+ 2012: Beijing 
+ 2011: Lancaster 
+ 2010: Maribor 
+ 2009: Genova 
+ 2008: Cyprus 
+ 2007: Berlin 
+ 2006: Nice 
+ 2005: Glasgow 
+ href="https://conf.researchr.org/signin/ecoop-2025/https%3A%5Es%5Es2025.ecoop.org%5Eshome%5Esgpce-2025" - Sign in 
+ href="https://2025.ecoop.org/signup" - Sign up 
+ href="https://2025.ecoop.org" - ECOOP 2025
+(href="https://2025.ecoop.org/series/ecoop" - series
+) /GPCE 2025 (href="https://2025.ecoop.org/series/gpce" - series
+) /GPCE 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. This is the 24th edition of the conference. 
+ Call for Papers 
+ The ACM SIGPLAN International Conference on Generative Programming: Concepts & Experiences (GPCE) is a programming languages conference focusing on techniques and tools for code generation, language implementation, and product-line development. 
+ href="#topics-of-interest" - Topics of Interest:
+GPCE seeks conceptual, theoretical, empirical, and technical contributions to its topics of interest, which include but are not limited to: 
+ program transformation, staging, 
+ macro systems, preprocessors, 
+ program synthesis, 
+ code-recommendation systems, 
+ domain-specific languages, 
+ generative language workbenches, 
+ language embedding, language design, 
+ domain engineering, 
+ software product lines, configurable software, 
+ feature interactions, 
+ applications and properties of code generation, 
+ language implementation, 
+ AI/ML techniques for generative programming, 
+ generative programming for AI/ML techniques, 
+ low code / no code approaches. 
+ GPCE promotes cross-fertilization between programming languages and software development and among different styles of generative programming in its broadest sense. 
+ Authors are welcome to check with the PC chair whether their planned papers are in scope. 
+ Paper Categories 
+ GPCE solicits four kinds of submissions: 
+ Full Papers: reporting original and unpublished results of research that contribute to scientific knowledge for any GPCE topic. Full paper submissions must not exceed 12 pages excluding the bibliography. 
+ Short Papers: presenting unconventional ideas or new visions in any GPCE topics. Short papers do not always contain complete results as in the case of full papers, but can introduce new ideas to the community and get early feedback. Note that short papers are not intended to be position statements. Accepted short papers are included in the proceedings and will be presented at the conference. Short paper submissions must not exceed 6 pages excluding the bibliography, and must have the text “(Short Paper)” appended to their titles. 
+ Tool Demonstrations: presenting tools for any GPCE topic. Tools must be available for use and must not be purely commercial. Submissions must provide a tool description not exceeding 6 pages excluding bibliography and a separate demonstration outline including screenshots also not exceeding 6 pages. Tool demonstration submissions must have the text “(Tool Demonstration)” appended to their titles. If they are accepted, tool descriptions will be included in the proceedings. The demonstration outline will only be used to evaluate the planned demonstration. 
+ Generative Pearl: is an elegant essay about generative programming. Examples include but are not limited to an interesting application of generative programming and an elegant presentation of a (new or old) data structure using generative programming (similar to Functional Pearl in ICFP and Pearl in ECOOP). Accepted Generative Pearl papers are included in the proceedings and will be presented at the conference. Generative Pearl submissions must not exceed 12 pages excluding the bibliography, and must have the text “(Generative Pearl)” appended to their titles. 
+ Paper Selection 
+ The GPCE program committee will evaluate each submission according to the following selection criteria: 
+ Novelty. Papers must present new ideas or evidence and place them appropriately within the context established by previous research in the field. 
+ Significance. The results in the paper must have the potential to add to the state of the art or practice in significant ways. 
+ Evidence. The paper must present evidence supporting its claims. Examples of evidence include formalizations and proofs, implemented systems, experimental results, statistical analyses, and case studies. 
+ Clarity. The paper must present its contributions and results clearly. 
+ Best Paper Award 
+ Following the tradition, the GPCE program committee will select the best paper among accepted papers. The authors of the best paper will be given the best paper award at the conference. 
+ href="#paper-submission" - Paper Submission
+The submission page will be announced soon. 
+ All submissions must use thehref="http://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+. Be sure to use thelatest LaTeX templates and class files, the SIGPLAN sub-format, and 10-point font. Consult thesample-sigplan.textemplate and use the document-class\documentclass[sigplan,anonymous,review]{acmart}. 
+ To increase fairness in reviewing, GPCE uses thedouble-blind review processwhich has become standard across SIGPLAN conferences: 
+ Author names, institutions, and acknowledgments should be omitted from submitted papers, and 
+ references to the authors’ own work should be in the third person. 
+ No other changes are necessary, and authors will not be penalized if reviewers are able to infer authors’ identities in implicit ways. 
+ By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference. The official publication date affects the deadline for any patent filings related to published work. 
+ For additional information, clarification, or answers to questions, contact the program chair. 
+ ACM Artifact Badges (New!) 
+ There as been quite some momentum in recent years to improve replication and reproducibility in software engineering. Starting the 2024 edition, we want to give authors the chance to apply for an ACM Artifact Badge. Even though the artifact submission is not mandatory, we recommend authors to submit their artifacts to reach a higher impact with their research. 
+ Authors that want to apply for an ACM Artifact Badge are asked to add a brief paragraph in the ACKs section of their submission. The paragraph should indicate which ACM Badge is the submission aiming for (see ACM page linked below) and what is part of the artifact. The paragraph may be removed for the final version of the paper, if it is clear from the manuscript what constitutes the artifact. 
+ The review of artifact badges will not be available during the author rebuttal period and received artifacts will be announced shortly before the camera ready version is due to by authors of accepted submissions only. Hence, artifacts for rejected submissions may not be reviewed at all. 
+ More information on ACM Artifact Badges:https://www.acm.org/publications/policies/artifact-review-and-badging-current 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 9 Apr 2025updated 
+ Paper Submission (Extended) 
+ Fri 9 May 2025 
+ Review Notification 
+ Mon 12 May 2025 
+ Author Response 
+ Mon 19 May 2025 
+ Final Notification 
+ Wed 26 Mar 2025updated 
+ Abstract Submission 
+ Submission Link 
+ href="https://gpce25.hotcrp.com/" - https://gpce25.hotcrp.com/
+Organizing Committee 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminProgram ChairHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaGeneral Co-ChairUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegGeneral Co-ChairJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ Program Committee 
+ href="https://2025.ecoop.org/profile/guillaumeallais" - Guillaume AllaisUniversity of StrathclydeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/zenaariola" - Zena M. AriolaUniversity of OregonUnited States 
+ href="https://2025.ecoop.org/profile/kenichiasai" - Kenichi AsaiOchanomizu UniversityJapan 
+ href="https://2025.ecoop.org/profile/parisaataei" - Parisa AtaeiOregon State University 
+ href="https://2025.ecoop.org/profile/casperbach" - Casper BachUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/walterbinder" - Walter BinderUSI LuganoSwitzerland 
+ href="https://2025.ecoop.org/profile/shengchen1" - Sheng ChenUniversity of Louisiana at Lafayette 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/maryammehridehnavi" - Maryam Mehri DehnaviUniversity of TorontoCanada 
+ href="https://2025.ecoop.org/profile/simonfowler" - Simon FowlerUniversity of GlasgowUnited Kingdom 
+ href="https://2025.ecoop.org/profile/robertgluck" - Robert GlückUniversity of CopenhagenDenmark 
+ href="https://2025.ecoop.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.ecoop.org/profile/vojinjovanovic" - Vojin JovanovicOracle LabsSwitzerland 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/shoaibkamil" - Shoaib KamilAdobe Research 
+ href="https://2025.ecoop.org/profile/julialawall" - Julia LawallInriaFrance 
+ href="https://2025.ecoop.org/profile/ondrejlhotak" - Ondřej LhotákUniversity of WaterlooCanada 
+ href="https://2025.ecoop.org/profile/maltelochau1" - Malte LochauUniversity of Siegen 
+ href="https://2025.ecoop.org/profile/geoffreymainland" - Geoffrey MainlandDrexel UniversityUnited States 
+ href="https://2025.ecoop.org/profile/judithmichael" - Judith MichaelUniversity of RegensburgGermany 
+ href="https://2025.ecoop.org/profile/georgofenbeck" - Georg OfenbeckETH Zurich, Switzerland 
+ href="https://2025.ecoop.org/profile/cyrusomar" - Cyrus OmarUniversity of MichiganUnited States 
+ href="https://2025.ecoop.org/profile/klausostermann" - Klaus OstermannUniversity of TübingenGermany 
+ href="https://2025.ecoop.org/profile/lionelparreaux" - Lionel ParreauxHKUST (The Hong Kong University of Science and Technology)Hong Kong SAR China 
+ href="https://2025.ecoop.org/profile/bernhardrumpe" - Bernhard RumpeRWTH Aachen UniversityGermany 
+ href="https://2025.ecoop.org/profile/ulrikschultz" - Ulrik Pagh SchultzUniversity of Southern DenmarkDenmark 
+ href="https://2025.ecoop.org/profile/michelsteuwer" - Michel SteuwerTechnische Universität BerlinGermany 
+ href="https://2025.ecoop.org/profile/sandrostucki" - Sandro StuckiChalmers University of TechnologySweden 
+ href="https://2025.ecoop.org/profile/rubytahboub" - Ruby TahboubUniversity of Illinois, Urbana-ChampainUnited States 
+ href="https://2025.ecoop.org/profile/elitilevich" - Eli TilevichVirginia TechUnited States 
+ href="https://2025.ecoop.org/profile/philipwadler" - Philip WadlerUniversity of Edinburgh 
+ href="https://2025.ecoop.org/profile/jeremyyallop" - Jeremy YallopUniversity of CambridgeUnited Kingdom 
+ href="https://2025.ecoop.org/profile/vadimzaytsev" - Vadim ZaytsevUniversity of Twente, NetherlandsNetherlands 
+ href="https://2025.ecoop.org/profile/lthomasvanbinsbergen" - L. Thomas van BinsbergenUniversity of AmsterdamNetherlands 
+ href="https://2025.ecoop.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ Coen De RooverSteering Committee Chair 
+ Vrije Universiteit Brussel 
+ Belgium 
+ href="https://2025.ecoop.org/profile/nadaamin" - Nada AminHarvard UniversityUnited States 
+ href="https://2025.ecoop.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.ecoop.org/profile/sebastianerdweg" - Sebastian ErdwegJGU MainzGermany 
+ href="https://2025.ecoop.org/profile/yukiyoshikameyama" - Yukiyoshi KameyamaUniversity of TsukubaJapan 
+ href="https://2025.ecoop.org/profile/amirshaikhha" - Amir ShaikhhaUniversity of EdinburghUnited Kingdom 
+ href="https://2025.ecoop.org/profile/thomasthum" - Thomas ThümPaderborn UniversityGermany 
+ href="https://2025.ecoop.org/profile/ericvanwyk" - Eric Van WykDepartment of Computer Science and Engineering, University of MinnesotaUnited States 
+ xWed 2 Apr 14:30 
+ href="https://2025.ecoop.org" - ECOOP 2025
+href="https://2025.ecoop.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.ecoop.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.ecoop.org/track/ecoop-2025-technical-papers" - Technical Papers
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-colocated" - Colocated Events & Workshops
+ 
+ href="https://2025.ecoop.org/track/ecoop-2025-doctoral-symposium" - Doctoral Symposium
+Co-hosted Conferences 
+ href="https://2025.ecoop.org/home/gpce-2025" - GPCE 2025
+ 
+ Workshops 
+ href="https://2025.ecoop.org/home/debt-2025" - DEBT 2025
+ 
+ href="https://2025.ecoop.org/home/FTfJP-2025" - FTfJP 2025
+ 
+ href="https://2025.ecoop.org/home/ICOOOLPS-2025" - ICOOOLPS 2025
+ 
+ href="https://2025.ecoop.org/home/plf-plaid-2025" - PLF+PLAID 2025
+ 
+ href="https://2025.ecoop.org/home/plss-2025" - PLSS 2025
+ 
+ href="https://2025.ecoop.org/home/vortex-2025" - VORTEX 2025
+Attending 
+ href="https://2025.ecoop.org/venue/ecoop-2025-venue" - Venue: Western Norway University of Applied Sciences
+ 
+ href="https://2025.ecoop.org/venue/ecoop-2025-haakonshallen" - Reception: Håkonshallen
+ 
+ href="https://2025.ecoop.org/attending/travel" - Getting There (And Away)
+ 
+ href="https://2025.ecoop.org/attending/weather" - Weather
+ 
+ href="https://2025.ecoop.org/attending/accommodation" - Accommodation
+ 
+ href="https://2025.ecoop.org/attending/attending%5Esvisa-letters" - Visa Letters
+href="https://2025.ecoop.org/signup" - Sign Up

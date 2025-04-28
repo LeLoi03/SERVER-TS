@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "July 8 - 10, 2024",
+  "Year": "2024",
+  "Location": "Concordia University, Montreal, QC, Canada",
+  "City-State-Province": "Montreal, Quebec",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract and full paper": "February 17, 2024"
+  },
+  "Notification Date": {
+    "First review notification": "March 21, 2024",
+    "Final notification": "May 5, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera ready papers": "May 19, 2024"
+  },
+  "Topics": "Geometric modeling, Physical modeling, Design, Analysis, Manufacturing, Biomedical applications, Geophysical applications, Digital entertainment",
+  "Publisher": "Computer-Aided Design (Elsevier)",
+  "Summary": "The Symposium on Solid and Physical Modeling (SPM) is an international conference series organized annually with the support of the Solid Modeling Association (SMA). SPM'24 was hosted at Concordia University from July 8-10, 2024. The conference aims at all aspects of geometric and physical modeling, and their application in design, analysis and manufacturing, as well as in biomedical, geophysical, digital entertainment, and other areas.",
+  "Call for Papers": "# SPM 2024: Call for Papers\n\nThe Symposium on Solid and Physical Modeling (SPM) is an international conference series organized annually with the support of the Solid Modeling Association (SMA).\n\n## Scope\n\nTopics of interest include, but are not limited to:\n\n*   3D fabrication/printing/manufacturing technologies\n*   Anisotropic/heterogeneous/composite materials\n*   Applied algebraic and differential geometry\n*   Applied computational geometry and topology\n*   Conceptual, collaborative, and distributed design\n*   Computational fabrication\n*   Curve, surface, and manifold modeling\n*   Dimensioning and tolerancing\n*   Feature modeling, recognition, and understanding\n*   Geometric algorithms\n*   Geometric and topological representations\n*   Geometric constraint solving and parametric modeling\n*   Geometric interpolation and smoothing\n*   Geometry generation and processing\n*   Geometry compression and transmission\n*   Isogeometric analysis\n*   Meshing and mesh optimization\n*   Multi-resolution modeling\n*   Numerical analysis of geometric algorithms\n*   Physically-based modeling and simulation\n*   Product data exchange, standards, and interoperability\n*   Reverse engineering/reconstruction of surfaces/solids\n*   Robustness and validity of geometric computations\n*   Shape modeling, synthesis and analysis\n\n## Paper Submissions\n\nAccepted full-length papers will be published in the journal of Computer-Aided Design (Elsevier) after a rigorous two-stage double-blind review process. Papers should be formatted according to the style guidelines for Computer-Aided Design and should not exceed 12 pages, including figures and references. We strongly recommend using the [LaTeX template](SPM2024_Template.zip) to format your paper, but we also accept papers formatted by MS Word according to the style guidelines for Computer-Aided Design (Elsevier). The file must be submitted in PDF format using the [EasyChair website](https://easychair.org/my/conference?conf=spm2024).\n\n## Important Dates\n\n*   **Abstract and full paper:** February 17, 2024\n*   **First review notification:** March 21, 2024\n*   **Revised papers due:** April 17, 2024\n*   **Final notification:** May 5, 2024\n*   **Camera ready papers:** May 19, 2024\n*   **Conference:** July 8-10, 2024"
+}
+

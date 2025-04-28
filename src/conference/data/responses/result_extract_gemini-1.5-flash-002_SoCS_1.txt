@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "August 12 - 15, 2025",
+  "Year": "2025",
+  "Location": "University of Glasgow, Scotland, United Kingdom",
+  "City-State-Province": "Glasgow",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper abstract submission deadline": "March 19, 2025"
+  },
+  "Notification Date": {
+    "Notification": "May 16, 2025"
+  },
+  "Other Date": {
+    "Paper submission deadline": "March 26, 2025",
+    "Author response": "May 2 - 5, 2025",
+    "SoCS 2025 conference": "August 12-15, 2025",
+    "Joint conference": "August 10-15, 2025",
+    "Doctoral Consortium submission deadline": "May 7, 2025"
+  },
+  "Topics": "Heuristic search, Combinatorial search, Combinatorial optimization, Constraint programming, Meta-reasoning, Navigation, Bioinformatics, Artificial intelligence, Robotics, Planning",
+  "Publisher": "AAAI Press",
+  "Summary": "The 18th International Symposium on Combinatorial Search (SoCS 2025) will be hosted at the University of Glasgow in Scotland, United Kingdom, from August 12-15, 2025.  SoCS is meant to bring researchers together to exchange ideas and cross-fertilize the field of heuristic search and combinatorial search and optimization.  The conference will be co-located with CP 2025 and SAT 2025.",
+  "Call for Papers": "# SoCS 2025: Call for Papers\n\nThe 18th International Symposium on Combinatorial Search (SoCS 2025) will be held at the **University of Glasgow in Scotland, United Kingdom, from August 12-15, 2025**. SoCS will be co-located with CP 2025 and SAT 2025.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Adversarial search\n*   Analysis of search algorithms\n*   Automated synthesis of lower bounds\n*   Bidirectional search\n*   Bounding and pruning techniques\n*   Combinatorial optimization\n*   Combinatorial puzzles\n*   Continuous problem solving\n*   Constraint search\n*   Deep learning in heuristics and search\n*   External-memory and parallel search\n*   Heuristics\n*   Incremental and active learning in search\n*   Machine learning for or in search algorithms\n*   Metareasoning and search\n*   Methodology and critiques of current practice\n*   Model-based search\n*   Multi-agent pathfinding\n*   Pathfinding\n*   Portfolios of search algorithms\n*   Problem compilation\n*   Problem solving using search\n*   Random vs. systematic search strategy selection\n*   Real-life applications\n*   Real-time search\n*   Reinforcement learning and search\n*   Search in goal-directed problem solving\n*   Search space discretization for continuous state-space problems\n*   Search-based diagnosis\n*   Search in boolean satisfiability\n*   Search in machine learning and big data analytics\n*   Search methods in robotics\n*   Self-configuring and self-tuning algorithms\n*   Symmetry handling\n*   Time, memory, and solution quality trade-offs\n\n## Types of Submissions\n\nSoCS encourages researchers to submit three categories of papers:\n\n*   **Technical papers:** Original long (up to 8 pages plus up to one page of references) and short (up to 4 pages plus up to one page of references) papers reporting substantial original research.\n*   **Position papers:** Original long and short position papers discussing ideas and concepts related to heuristic and combinatorial search.\n*   **Extended abstracts:** Up to 2 pages (including references) of original work, work-in-progress, or work that has recently appeared in or is under review at other venues.\n\n## Submission Instructions\n\n*   Submitted technical and position papers must be original and not submitted concurrently to a journal or another conference. Double-blind reviewing will be provided.\n*   The paper submission is a two-step process. First, the paper abstract needs to be registered in EasyChair by the Paper abstract submission deadline. Then, the full paper in PDF is due by the Paper submission deadline.\n*   Submissions may be accompanied by supplementary material (video, appendices), which must also be anonymized. Reviewers will not be required to consult such material.\n*   SoCS will not accept any technical or position paper that, at the time of submission, is under review for or has already been published or accepted for publication in a journal or another conference.\n\n## Important Dates\n\nAll deadlines are at 23:59 UTC-12.\n\n*   **Paper abstract submission deadline:** March 19, 2025 (now closed)\n*   **Paper submission deadline:** March 26, 2025 (now closed)\n*   **Author response:** May 2-5, 2025\n*   **Notification:** May 16, 2025\n*   **SoCS 2025 conference:** August 12-15, 2025\n*   **Joint conference:** August 10-15, 2025\n\n## Best Paper Awards\n\nTechnical papers will be considered for the best paper award. If the main authors, both in terms of work and writing, are students at the time of submission, the paper will be considered for a best student paper award."
+}
+```

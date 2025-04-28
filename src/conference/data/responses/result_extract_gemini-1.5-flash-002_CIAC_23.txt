@@ -1,0 +1,27 @@
+{
+  "Conference dates": "June 10 - 12, 2025",
+  "Year": "2025",
+  "Location": "LUISS University, Rome, Italy",
+  "City-State-Province": "Rome",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for submissions": "November 22, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "January 31, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready due": "February 14, 2025"
+  },
+  "Registration Date": {
+    "Author Registration": "April 3, 2025",
+    "Early Registration": "May 3, 2025"
+  },
+  "Topics": "Computational Complexity, Algorithm Design and Analysis, Sequential Algorithms, Parallel Algorithms, Distributed Algorithms, Data Structures, Computational Complexity, Structural Complexity, Lower Bounds, Limitations of Algorithms, Randomized Algorithms, Approximation Algorithms, Parameterized Algorithms, Parameterized Complexity Classes, Smoothed Analysis of Algorithms, Alternatives to Worst-Case Analysis, Online Computation, Competitive Analysis, Streaming Algorithms, Quantum Algorithms, Quantum Complexity, Algorithms in Algebra, Geometry, Number Theory, Combinatorics, Computational Geometry, Algorithmic Game Theory, Mechanism Design, Algorithmic Economics, Auctions, Contests, Computational Learning Theory, Computational Biology, Bioinformatics, Algorithmic Issues in Communication Networks, Algorithms for Discrete Optimization, Convex Optimization, Algorithm Engineering",
+  "Publisher": "Springer",
+  "Summary": "The 14th International Conference on Algorithms and Complexity (CIAC 2025) will take place at Luiss University in Rome, Italy, on June 10-12, 2025. The conference aims to provide a forum for researchers working in all aspects of computational complexity and the use, design, analysis, and experimentation of efficient algorithms and data structures.",
+  "Call for Papers": "# CIAC 2025: Call for Papers\n\nThe 14th International Conference on Algorithms and Complexity (CIAC 2025) will take place from **June 10 to June 12, 2025, at LUISS University in Rome, Italy**.\n\n## Aims and Scope\n\nCIAC aims to provide a forum for researchers working in all aspects of computational complexity and the use, design, analysis, and experimentation of efficient algorithms and data structures.\n\n## Topics\n\nAuthors are invited to submit papers presenting original and unpublished research on algorithms and complexity. Typical areas include:\n\n*   Algorithm design and analysis\n*   Sequential, parallel, and distributed algorithms\n*   Data structures\n*   Computational and structural complexity\n*   Lower bounds and limitations of algorithms\n*   Randomized and approximation algorithms\n*   Parameterized algorithms and parameterized complexity classes\n*   Smoothed analysis of algorithms\n*   Alternatives to the worst-case analysis of algorithms (e.g., algorithms with predictions)\n*   On-line computation and competitive analysis\n*   Streaming algorithms\n*   Quantum algorithms and complexity\n*   Algorithms in algebra, geometry, number theory, and combinatorics\n*   Computational geometry\n*   Algorithmic game theory and mechanism design\n*   Algorithmic economics (including auctions and contests)\n*   Computational learning theory\n*   Computational biology and bioinformatics\n*   Algorithmic issues in communication networks\n*   Algorithms for discrete optimization (including convex optimization)\n*   Algorithm engineering\n\n## Paper Submission and Proceedings\n\nAuthors are invited to submit an extended abstract or full paper with at most 15 pages, excluding the title page and the references. The title page consists of the title of the paper and the abstract. The first section of the paper should start on the next page.\n\n*   The usage of the LNCS style file is mandatory. LNCS templates are available here: [https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)\n*   No changes to font size, page geometry, etc. are permitted.\n*   Submissions should be anonymized according to the double-blind review policy.\n*   Late submissions and submissions not in the correct format will not be considered.\n\nSubmissions will be through EasyChair: [https://easychair.org/conferences/?conf=ciac2025](https://easychair.org/conferences/?conf=ciac2025)\n\n## Important Dates\n\n*   **Deadline for submissions:** November 22, 2024 (AoE)\n*   **Author notification:** January 31, 2025\n*   **Camera-ready due:** February 14, 2025\n*   **Author Registration:** April 03, 2025\n*   **Early Registration:** May 03, 2025\n\n## Contact Information\n\nAll questions about submissions should be emailed to Loukas Georgiadis at [loukas@uoi.gr](mailto:loukas@uoi.gr)"
+}
+

@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "May 25 - 28, 2025",
+  "Year": "2025",
+  "Location": "London",
+  "City-State-Province": "London",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "October 28, 2024"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "January 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Papers": "February 10, 2025"
+  },
+  "Topics": "Multisensor systems, Multimodal analysis, Crossmodal data analysis and clustering, Mixed-reality applications, Activity and object detection and recognition, Text and speech recognition, Multimedia labeling, semantic annotation and metadata, Multimodal indexing and searching in very large data-bases, Big and Linked Data, Search and mining Big Data, Large-scale recommendation systems, Multimedia and Multi-structured data, Cloud Optimization, Pervasive intelligence, Machine learning in multimedia understanding, Attention based approaches for multimedia understanding, Diffusion models for multi-modal data analysis, Multi-modal data analysis in compressed domain, Multi-modal data analysis for remote sensing applications, Semantic web and Linked data, Case studies",
+  "Publisher": "IEEE",
+  "Summary": "The International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM 2025) is the annual workshop organized by the working group MUSCLE of ERCIM. This year, IWCIM takes place as a special session in IEEE ISCAS 2025, to be held in London on May 25 - 28, 2025.  Multimedia understanding is an essential part of many intelligent applications in our social life.",
+  "Call for Papers": "# IWCIM 2025: Call for Papers\n\nThe International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM 2025) will take place as a special session in IEEE ISCAS 2025, to be held in **London on May 25 - 28, 2025**.\n\n## Scope\n\nMultimedia understanding is an essential part of many intelligent applications. Analyzing raw data to provide them with semantics is essential to exploit their full potential and help us manage our everyday tasks. The scope of IWCIM 2025 includes, but is not limited to, the following topics:\n\n*   Multisensor systems\n*   Multimodal analysis\n*   Crossmodal data analysis and clustering\n*   Mixed-reality applications\n*   Activity and object detection and recognition\n*   Text and speech recognition\n*   Multimedia labeling, semantic annotation and metadata\n*   Multimodal indexing and searching in very large data-bases\n*   Big and Linked Data\n*   Search and mining Big Data\n*   Large-scale recommendation systems\n*   Multimedia and Multi-structured data\n*   Cloud Optimization\n*   Pervasive intelligence\n*   Machine learning in multimedia understanding\n*   Attention based approaches for multimedia understanding\n*   Diffusion models for multi-modal data analysis\n*   Multi-modal data analysis in compressed domain\n*   Multi-modal data analysis for remote sensing applications\n*   Semantic web and Linked data\n*   Case studies\n\n## Submission\n\nSubmit your paper through [the ISCAS Conference Management System](https://epapers2.org/iscas2025/) by selecting **Track 16 - IWCIM Workshop**.\n\n## Important Dates\n\n*   **Submission deadline:** October 28, 2024\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Papers:** February 10, 2025\n*   **Author Registration:** TBA\n*   **Workshop date:** TBA\n\n## Publication\n\nThe conference proceedings will be published by IEEE (indexed by ISI CPCI-S, included in ISI Web of Science EI, ACM Digital Library, dblp, Google Scholar, Scopus etc.).\n\n## Contacts\n\n*   [maria.trocan@isep.fr](mailto:maria.trocan@isep.fr)\n*   [davide.moroni@isti.cnr.it](mailto:davide.moroni@isti.cnr.it)\n*   [toreyin@itu.edu.tr](mailto:toreyin@itu.edu.tr)"
+}
+

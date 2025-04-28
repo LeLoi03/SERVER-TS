@@ -1,0 +1,33 @@
+output:
+{
+  "Conference dates": "June 23 - 27, 2025",
+  "Year": "2025",
+  "Location": "Geneva, Switzerland",
+  "City-State-Province": "Geneva",
+  "Country": "Switzerland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Papers) Submission deadline": "February 10, 2025",
+    "(Workshops) Submission deadline": "December 4, 2024"
+  },
+  "Notification Date": {
+    "(Papers) 1st Notification to authors": "March 19, 2025",
+    "(Papers) Final Notification to authors": "March 31, 2025",
+    "(Workshops) Notification of acceptance": "December 13, 2024"
+  },
+  "Camera-ready Date": {
+    "(Papers) Camera ready deadlines": "April 17, 2025"
+  },
+  "Other Date": {
+    "(Papers) Author registration": "April 30, 2025",
+    "(Papers) Rebuttal period": "March 19 - 24, 2025",
+    "(Tutorials) Abstract deadline": "April 7, 2025",
+    "(Tutorials) Tutorial materials": "June 2, 2025",
+    "(Workshops) Workshop date": "June 23 or 24, 2025"
+  },
+  "Topics": "Machine Translation, Translation Technologies, LLMs for Translation, Computer-Assisted Translation, Spoken Language Translation, Multimodal Translation, MT Deployment Technologies, Linguistic Resources for MT, MT Quality Estimation and Evaluation, Multilingual Technologies, Source Text Improvement",
+  "Summary": "The 20th Machine Translation Summit (MT Summit 2025) will take place in Geneva, Switzerland, from June 23-27, 2025. The conference invites submissions from developers, researchers, users, translation and localization professionals and managers.",
+  "Call for Papers": "# MT Summit 2025: Call for Papers and Participation\n\nThe 20th Machine Translation Summit (MT Summit 2025) will take place in **Geneva, Switzerland, from 23-27 June 2025**.\n\nThe European Association for Machine Translation (EAMT) invites everyone interested in machine translation and translation-related tools and resources to participate.\n\n## Tracks\n\nWe expect to receive manuscripts in these four categories:\n\n*   **Research - Technical:** Submissions (up to 10 pages, plus unlimited pages for references, appendices, and sustainability statement) are invited for reports of significant research results in any aspect of machine translation and related areas.\n*   **Research - Translators and Users:** Submissions (up to 10 pages, plus unlimited pages for references, appendices, and sustainability statement) are invited for academic research on all topics related to how professional translators and other types of MT users interact with, are affected by, or conceptualize machine translation.\n*   **Implementations and Case Studies:** Submissions (4–6 pages) are invited for reports on case studies and implementation experience with MT in organizations of all types.\n*   **Products and Projects:** Submissions (2 pages, including references) are invited on either of the subtracks (Products or Projects).\n\n## Important Dates\n\nAll deadlines are at 23:59 AoE (Anywhere on Earth).\n\n### Papers\n\n*   **Submission deadline:** February 10, 2025\n*   **1st Notification to authors:** March 19, 2025\n*   **Rebuttal period:** March 19 to 24, 2025\n*   **Final Notification to authors:** March 31, 2025\n*   **Author registration:** April 30, 2025\n*   **Camera ready deadlines:** April 17, 2025\n\n### Workshops\n\n*   **Submission deadline:** December 4, 2024\n*   **Notification of acceptance:** December 13, 2024\n*   **Workshop date:** June 23 or 24, 2025\n\n### Tutorials\n\n*   **Submission deadline:** December 4, 2024\n*   **Notification of acceptance:** December 13, 2024\n*   **Abstract deadline:** April 7, 2025\n*   **Tutorial materials:** June 2, 2025\n*   **Tutorial date:** June 23 or 24, 2025\n\n## Submission Information\n\n**Research - Technical and Research - Translators and Users**\n\nPapers should describe original work. They should emphasize completed work rather than intended work and should clearly indicate the state of completion of the reported results. Where appropriate, concrete evaluation results should be included. Papers should be written in English, anonymized, prepared according to the templates specified below, and be no longer than 10 pages (plus unlimited pages for references, appendices, and sustainability statement).\n\nSubmit the paper as a PDF to the EasyChair MT Summit 2025 page ([https://easychair.org/conferences/?conf=mtsummit2025](https://easychair.org/conferences/?conf=mtsummit2025)).\n\n**Implementations and Case Studies**\n\nPapers should highlight real-world use scenarios, solutions, and problems in addition to describing MT integration processes and project settings. Where solutions do not exist, suggestions for MT researchers and developers should be clearly emphasized. For papers on implementations and case studies produced by academics, we require co-authorship with the actual organizations working with MT implementations.\n\nPapers (approximately 4–6 pages, with a maximum of 10 pages including references) should be written in English, formatted according to the templates specified below, and submitted as PDF files to the EasyChair MT Summit 2025 page ([https://easychair.org/conferences/?conf=mtsummit2025](https://easychair.org/conferences/?conf=mtsummit2025)). Anonymization is not required in the Implementations and Case Studies track submissions.\n\n**Products and Projects**\n\nSubmissions should be written in English and formatted according to the templates specified below. Anonymization is not required. Submissions should be no longer than 2 pages (including references) and submitted as PDF files to the EasyChair MT Summit 2025 page ([https://easychair.org/conferences/?conf=mtsummit2025](https://easychair.org/conferences/?conf=mtsummit2025)).\n\n## Templates\n\nUse one of the templates below to prepare your submission:\n\n*   **LaTeX:**\n    *   [Cloneable Overleaf template](https://www.overleaf.com/latex/templates/instructions-for-machine-translation-summit-2025-proceedings/ssxcxzkyzyzd)\n*   **Word:**\n    *   [Word template](assets/downloads/mtsummit2025_template_v2.docx) (updated April 2025)\n*   **PDF:**\n    *   [PDF template](assets/downloads/mtsummit2025_template_v2.pdf) (updated April 2025)"
+}
+

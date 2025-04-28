@@ -1,0 +1,36 @@
+{
+  "Conference dates": "May 3 - 5, 2025",
+  "Year": "2025",
+  "Location": "Splash Beach Resort in Mai Khao, Thailand",
+  "City-State-Province": "Mai Khao",
+  "Country": "Thailand",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission deadline": "October 3, 2024",
+    "Paper submission deadline": "October 10, 2024",
+    "Appendix submission deadline": "October 17, 2024"
+  },
+  "Notification Date": {
+    "Reviews released": "November 27, 2024",
+    "Paper decision notifications": "January 21, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready revision due": "March 10, 2025"
+  },
+  "Other Date": {
+    "Bidding Phase": "October 8 - 17, 2024",
+    "Paper assignment complete": "October 22, 2024",
+    "Review period": "October 22, 2024 - November 19, 2024",
+    "Checking and soliciting emergency reviews": "October 19, 2024 - November 27, 2024",
+    "Author-Reviewer discussion period": "November 27, 2024 - December 9, 2024",
+    "Author rebuttals due": "December 10, 2024",
+    "Reviewer-AC discussion period": "December 5, 2024 - December 20, 2024",
+    "AC meta reviews due": "December 20, 2024",
+    "SAC decisions": "January 7, 2025",
+    "Journal-to-Conference Track Request due": "March 15, 2025"
+  },
+  "Topics": "Machine learning methods and algorithms, Probabilistic methods, Theory of machine learning and statistics, Deep learning, Reinforcement learning, Ethical and trustworthy machine learning, Applications of machine learning and statistics",
+  "Summary": "The 28th International Conference on Artificial Intelligence and Statistics (AISTATS) will be held on May 3rd - May 5th, 2025 at Splash Beach Resort in Mai Khao, Thailand, as an in-person event. AISTATS is an interdisciplinary gathering of researchers at the intersection of computer science, artificial intelligence, machine learning, statistics, and related areas.",
+  "Call for Papers": "# AISTATS 2025: Call for Papers\n\nWe invite submissions to the 28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025), and welcome paper submissions on artificial intelligence, machine learning, statistics, and related areas. Accepted papers will be presented at the conference to be held in-person in Phuket, Thailand from May 3-5, 2025. At least one author of each accepted paper should register and present the work at the conference. Exceptions to in-person participation may be granted in case of travel emergencies or visa issues.\n\n## Solicited topics include, but are not limited to:\n\n*   Machine learning methods and algorithms (classification, regression unsupervised and semi-supervised learning, clustering, logic programming, …)\n*   Probabilistic methods (Bayesian methods, approximate inference, density estimation, tractable probabilistic models, probabilistic programming, …)\n*   Theory of machine learning and statistics (optimization, computational learning theory, decision theory, online learning and bandits, game theory frequentist statistics, information theory, …)\n*   Deep learning (theory, architectures, generative models, optimization for neural networks, …)\n*   Reinforcement learning (theory of RL, offline/online RL, deep RL, multi-agent RL, …)\n*   Ethical and trustworthy machine learning (causality, fairness interpretability, privacy, robustness, safety, …)\n*   Applications of machine learning and statistics (including natural language signal processing, computer vision, physical sciences, social sciences sustainability and climate, healthcare, …)\n\n## Key Dates\n\nDates may be subject to change. All dates are Anywhere on Earth (AoE), end of day.\n\n*   Abstract submission deadline: October 3, 2024\n*   Bidding Phase: October 8, 2024-October 17, 2024\n*   Paper submission deadline: October 10, 2024\n*   Appendix submission deadline: October 17, 2024\n*   Paper assignment complete: October 22, 2024\n*   Review period: October 22, 2024-November 19, 2024\n*   Checking and soliciting emergency reviews: October 19, 2024-November 27, 2024\n*   Reviews released: November 27, 2024\n*   Author-Reviewer discussion period: November 27, 2024-December 9, 2024\n*   Author rebuttals due: December 10, 2024\n*   Reviewer-AC discussion period: December 5, 2024-December 20, 2024\n*   AC meta reviews due: December 20, 2024\n*   SAC decisions: January 7, 2025\n*   Paper decision notifications: January 21, 2025\n*   Camera-Ready revision due: March 10, 2025\n*   Journal-to-Conference Track Request due: March 15, 2025\n*   Conference dates: May 3, 2025-May 5, 2025\n\n## Paper Submission (Proceedings Track)\n\nThe proceedings track is the standard AISTATS paper submission track. Papers will be selected via a rigorous double-blind peer-review process. All accepted papers will be presented at the Conference as contributed talks or as posters and will be published in the Proceedings.\n\n## Formatting and Supplementary Material\n\nSubmissions are limited to 8 pages excluding references using the LaTeX style file we provide below (the page limit will be 9 for camera-ready submissions). The number of pages containing only citations and the reproducibility checklist is not limited. You can also submit a single file of additional supplementary material which may be either a pdf file (such as proof details) or a zip file for other formats/more files (such as code or videos). Note that reviewers are under no obligation to examine the supplementary material.\n\n## Anonymization Requirements\n\nThe AISTATS review process is double-blind. All submissions must be anonymized and may not contain any information that can violate the double-blind reviewing policy, such as the author names or their affiliations, acknowledgements, or links that can infer any author’s identity or institution. Self-citations are allowed as long as anonymity is preserved.\n\n## Dual Submissions\n\nSubmitted manuscripts should not have been previously published in a journal or in the proceedings of a conference, and should not be under consideration for publication at another conference at any point during the AISTATS review process. Submissions as extended abstracts (4 pages or less), to workshops or non-archival venues (without a proceedings), or to arXiv, will not be considered a concurrent submission.\n\n## Use of Large Language Models and Image Deep Generative Models\n\nRegarding the use of Large Language Models (LLMs like GPT-4) and/or large image deep generative models (image DGMs such as StableDiffusion) for AISTATS submissions:\n\nLLMs and image DGMs are not allowed for the following use cases:\n\n*   Fully automatically generating text of more than one page, unless the produced text is presented as a part of the paper’s experimental analysis.\n*   Generating quantitative figures (such as learning curves), unless the produced images are presented as a part of the paper’s experimental analysis."
+}

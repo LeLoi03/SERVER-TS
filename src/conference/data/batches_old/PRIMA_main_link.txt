@@ -1,0 +1,552 @@
+Conference International Conference on Principles of Practice in Multi-Agent Systems (PRIMA):
+
+Welcome to The 26th International Conference on Principles and Practice of Multi-Agent Systemshref="index.html" - PRIMA 2025
+href="#section_2" - CALL FOR PAPERS 
+ href="#section_3" - IMPORTANT DATES 
+ ORGANIZERS 
+ PRIMA 2025 
+ href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FPRIMA2025%2FSubmission%2FIndex" - SUBMISSION
+16 - 19th, Dec 2025 
+ Modena, Italy 
+ Scope & background 
+ List of topics 
+ Information for authors 
+ Software systems are rapidly becoming more intelligent in the functionality they offer to users. They are also becoming more decentralized, with components that act autonomously and must communicate among themselves or with human users, to achieve their goals. Examples of such systems include those in healthcare, disaster management, e-business and smart grids. A multi-agent perspective is crucial to the proper conceptualization deployment, and governance of such systems. Rooted in solid computational and software engineering foundations, this perspective offers abstractions such as intelligent agents protocols, norms, organizations, trust and incentives, among others. As a large, but still growing research field of Computer Science, multi-agent systems today remain a unique enabler of interdisciplinary research. 
+ Logic and Reasoning 
+ Logics of Agency 
+ Logics of Multi-Agent Systems 
+ Logics of Belief and Knowledge 
+ Norms, Obligations, Deontic Logic 
+ Logics and Game Theory 
+ Uncertainty in Agent Systems 
+ Agent and Multi-Agent Learning 
+ Reinforcement Learning 
+ Evolutionary approaches 
+ Machine Learning Problems in Multi-Agent Systems 
+ Agents Embodied with Large Language Models 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Agent-Based Modeling and Simulation 
+ Simulation Languages and Platforms 
+ Artificial Societies 
+ Virtual Environments 
+ Emergent Behavior 
+ Modeling System Dynamics 
+ Application Case Studies 
+ Collaboration & Coordination 
+ Multi-Agent Planning 
+ Distributed Problem Solving and Optimization 
+ Teamwork 
+ Coalition Formation 
+ Negotiation 
+ Trust and Reputation 
+ Commitments 
+ Institutions and Organizations 
+ Normative Systems 
+ Algorithmic Game Theory 
+ Auctions and Mechanism Design 
+ Bargaining and Negotiation 
+ Behavioral Game Theory 
+ Cooperative Games: Theory, Analysis, Computation 
+ Game Theory for Practical Applications 
+ Noncooperative Games: Theory, Analysis, Computation 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Computational Social Choice 
+ Voting 
+ Fair Division and Resource Allocation 
+ Matching under Preferences 
+ Coalition Formation Games 
+ Aggregation of Beliefs, Opinions, Judgments 
+ Ethics and Computational Social Choice 
+ Participatory Budgeting 
+ Facility Location 
+ Communication Issues in Social Choice, Distortion 
+ Behavioral Social Choice 
+ Human-Agent Interaction 
+ Adaptive Personal Assistants 
+ Embodied Conversational Agents 
+ Virtual Characters 
+ Multimodal User Interfaces 
+ Mobile Agents 
+ Human-Robot Interaction 
+ Affective Computing 
+ Decentralized Paradigms 
+ Cloud Computing 
+ Service-Oriented Computing 
+ Data spaces 
+ Big data 
+ Cybersecurity 
+ Robotics and Multirobot Systems 
+ Ubiquitous Computing 
+ Social Computing 
+ Ubiquitous Computing 
+ Internet of Things 
+ Edge Computing 
+ Blockchain 
+ Ethics and Social Issues 
+ Explainable Artificial Intelligence 
+ Ethics of AI Systems 
+ Multi-Agent Systems for Social Good 
+ Application Domains for Multi-Agent Systems 
+ Healthcare, Pandemics Management 
+ Autonomous Systems 
+ Transport and Logistics 
+ Emergency and Disaster Management 
+ Energy and Utilities Management 
+ Sustainability and Resource Management 
+ Games and Entertainment 
+ e-Business, e-Government, and e-Learning 
+ Smart Cities 
+ Financial markets 
+ Legal applications 
+ Crowdsourcing 
+ PRIMA 2025 invites submissions of original, unpublished work strongly relevant to Multi- Agent Systems. Apart from theoretical work, we encourage the submission of reports on the development of applications or prototypes of deployed agent systems, and of experiments that demonstrate novel agent system capabilities. In addition to this, we also encourage the submission of position and review papers that are of particular relevance to the multi-agent community. 
+  
+ Type of submissions: 
+ Full papers, 16 pages plus references 
+ Short papers, 4 pages plus references 
+ Position papers, 2 pages plus references 
+  
+ The papers submitted must be in theLNCS format. All submitted papers must be in a form suitable fordouble-blindreview. Specifically, in order to make blind reviewing possible, authors must omit their names and affiliations from the paper. Also, while the references should include all published literature relevant to the paper, including previous work of the authors, it should not include unpublished works. When referring to one's own work, use the third person rather than the first person. For example, say"Previously, Foo and Bar [2] have shown that…", rather than "In our previous work [2], we have shown that…". Such identifying information can be added back to the final camera-ready version of accepted papers. 
+  
+ The papers can be submitted viahref="https://cmt3.research.microsoft.com/PRIMA2025/Submission/Index" - CMT
+. 
+  
+ All papers will be reviewed by at least 2-3 experts in the area following a detailed review form that will assess the paper based on the significance and novelty of the idea, the technical description of the proposal, clarity and organization, the evaluation methodology and any ethical considerations. 
+  
+ All accepted papers will be published in Springer's Lecture Notes in Artificial Intelligence series (LNCS/LNAI). 
+  
+ Thehref="https://cmt3.research.microsoft.com/" - Microsoft CMT
+service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.Important dates 
+ 15 July 2025 (AoE, UTC-12) 
+ Abstract Submission Deadline 
+ 22 July 2025 (AoE, UTC-12) 
+ Paper Submission Deadline 
+ 29 Sept. 2025 (AoE, UTC-12) 
+ Notification of Acceptance 
+ 13 Oct. 2025 (AoE, UTC-12) 
+ Camera Ready Submission 
+ Organizers 
+ General Chairs 
+ Angelo Ferrando 
+ UNIMORE 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Vadim Malvone 
+ Télécom Paris 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Program Chairs 
+ Federico Bergenti 
+ Università di Parma 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+Catalin Dima 
+ Université Paris-Est Créteil 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+PhD Day Chairs 
+ James Ortiz 
+ Télécom Paris 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Marija Slavkovik 
+ University of Bergen 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Sponsorship Chairs 
+ Paolo Burgio 
+ UNIMORE 
+ Filippo Muzzini 
+ UNIMORE 
+ Local Chairs 
+ Giacomo Cabri 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Stefania Monica 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Publicity Chair 
+ Vladana Perlić 
+ Télécom Paris 
+ PreviousNext 
+ Platinum Sponsor 
+ Silver Sponsor 
+ Location 
+ Modena, Italy 
+ Copyright © 2025 PRIMA 
+
+Call for Papers information:
+Welcome to The 26th International Conference on Principles and Practice of Multi-Agent Systemshref="index.html" - PRIMA 2025
+href="#section_2" - CALL FOR PAPERS 
+ href="#section_3" - IMPORTANT DATES 
+ ORGANIZERS 
+ PRIMA 2025 
+ href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FPRIMA2025%2FSubmission%2FIndex" - SUBMISSION
+16 - 19th, Dec 2025 
+ Modena, Italy 
+ Scope & background 
+ List of topics 
+ Information for authors 
+ Software systems are rapidly becoming more intelligent in the functionality they offer to users. They are also becoming more decentralized, with components that act autonomously and must communicate among themselves or with human users, to achieve their goals. Examples of such systems include those in healthcare, disaster management, e-business and smart grids. A multi-agent perspective is crucial to the proper conceptualization deployment, and governance of such systems. Rooted in solid computational and software engineering foundations, this perspective offers abstractions such as intelligent agents protocols, norms, organizations, trust and incentives, among others. As a large, but still growing research field of Computer Science, multi-agent systems today remain a unique enabler of interdisciplinary research. 
+ Logic and Reasoning 
+ Logics of Agency 
+ Logics of Multi-Agent Systems 
+ Logics of Belief and Knowledge 
+ Norms, Obligations, Deontic Logic 
+ Logics and Game Theory 
+ Uncertainty in Agent Systems 
+ Agent and Multi-Agent Learning 
+ Reinforcement Learning 
+ Evolutionary approaches 
+ Machine Learning Problems in Multi-Agent Systems 
+ Agents Embodied with Large Language Models 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Agent-Based Modeling and Simulation 
+ Simulation Languages and Platforms 
+ Artificial Societies 
+ Virtual Environments 
+ Emergent Behavior 
+ Modeling System Dynamics 
+ Application Case Studies 
+ Collaboration & Coordination 
+ Multi-Agent Planning 
+ Distributed Problem Solving and Optimization 
+ Teamwork 
+ Coalition Formation 
+ Negotiation 
+ Trust and Reputation 
+ Commitments 
+ Institutions and Organizations 
+ Normative Systems 
+ Algorithmic Game Theory 
+ Auctions and Mechanism Design 
+ Bargaining and Negotiation 
+ Behavioral Game Theory 
+ Cooperative Games: Theory, Analysis, Computation 
+ Game Theory for Practical Applications 
+ Noncooperative Games: Theory, Analysis, Computation 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Computational Social Choice 
+ Voting 
+ Fair Division and Resource Allocation 
+ Matching under Preferences 
+ Coalition Formation Games 
+ Aggregation of Beliefs, Opinions, Judgments 
+ Ethics and Computational Social Choice 
+ Participatory Budgeting 
+ Facility Location 
+ Communication Issues in Social Choice, Distortion 
+ Behavioral Social Choice 
+ Human-Agent Interaction 
+ Adaptive Personal Assistants 
+ Embodied Conversational Agents 
+ Virtual Characters 
+ Multimodal User Interfaces 
+ Mobile Agents 
+ Human-Robot Interaction 
+ Affective Computing 
+ Decentralized Paradigms 
+ Cloud Computing 
+ Service-Oriented Computing 
+ Data spaces 
+ Big data 
+ Cybersecurity 
+ Robotics and Multirobot Systems 
+ Ubiquitous Computing 
+ Social Computing 
+ Ubiquitous Computing 
+ Internet of Things 
+ Edge Computing 
+ Blockchain 
+ Ethics and Social Issues 
+ Explainable Artificial Intelligence 
+ Ethics of AI Systems 
+ Multi-Agent Systems for Social Good 
+ Application Domains for Multi-Agent Systems 
+ Healthcare, Pandemics Management 
+ Autonomous Systems 
+ Transport and Logistics 
+ Emergency and Disaster Management 
+ Energy and Utilities Management 
+ Sustainability and Resource Management 
+ Games and Entertainment 
+ e-Business, e-Government, and e-Learning 
+ Smart Cities 
+ Financial markets 
+ Legal applications 
+ Crowdsourcing 
+ PRIMA 2025 invites submissions of original, unpublished work strongly relevant to Multi- Agent Systems. Apart from theoretical work, we encourage the submission of reports on the development of applications or prototypes of deployed agent systems, and of experiments that demonstrate novel agent system capabilities. In addition to this, we also encourage the submission of position and review papers that are of particular relevance to the multi-agent community. 
+  
+ Type of submissions: 
+ Full papers, 16 pages plus references 
+ Short papers, 4 pages plus references 
+ Position papers, 2 pages plus references 
+  
+ The papers submitted must be in theLNCS format. All submitted papers must be in a form suitable fordouble-blindreview. Specifically, in order to make blind reviewing possible, authors must omit their names and affiliations from the paper. Also, while the references should include all published literature relevant to the paper, including previous work of the authors, it should not include unpublished works. When referring to one's own work, use the third person rather than the first person. For example, say"Previously, Foo and Bar [2] have shown that…", rather than "In our previous work [2], we have shown that…". Such identifying information can be added back to the final camera-ready version of accepted papers. 
+  
+ The papers can be submitted viahref="https://cmt3.research.microsoft.com/PRIMA2025/Submission/Index" - CMT
+. 
+  
+ All papers will be reviewed by at least 2-3 experts in the area following a detailed review form that will assess the paper based on the significance and novelty of the idea, the technical description of the proposal, clarity and organization, the evaluation methodology and any ethical considerations. 
+  
+ All accepted papers will be published in Springer's Lecture Notes in Artificial Intelligence series (LNCS/LNAI). 
+  
+ Thehref="https://cmt3.research.microsoft.com/" - Microsoft CMT
+service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.Important dates 
+ 15 July 2025 (AoE, UTC-12) 
+ Abstract Submission Deadline 
+ 22 July 2025 (AoE, UTC-12) 
+ Paper Submission Deadline 
+ 29 Sept. 2025 (AoE, UTC-12) 
+ Notification of Acceptance 
+ 13 Oct. 2025 (AoE, UTC-12) 
+ Camera Ready Submission 
+ Organizers 
+ General Chairs 
+ Angelo Ferrando 
+ UNIMORE 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Vadim Malvone 
+ Télécom Paris 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Program Chairs 
+ Federico Bergenti 
+ Università di Parma 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+Catalin Dima 
+ Université Paris-Est Créteil 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+PhD Day Chairs 
+ James Ortiz 
+ Télécom Paris 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Marija Slavkovik 
+ University of Bergen 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Sponsorship Chairs 
+ Paolo Burgio 
+ UNIMORE 
+ Filippo Muzzini 
+ UNIMORE 
+ Local Chairs 
+ Giacomo Cabri 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Stefania Monica 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Publicity Chair 
+ Vladana Perlić 
+ Télécom Paris 
+ PreviousNext 
+ Platinum Sponsor 
+ Silver Sponsor 
+ Location 
+ Modena, Italy 
+ Copyright © 2025 PRIMA 
+
+Important Dates information:
+Welcome to The 26th International Conference on Principles and Practice of Multi-Agent Systemshref="index.html" - PRIMA 2025
+href="#section_2" - CALL FOR PAPERS 
+ href="#section_3" - IMPORTANT DATES 
+ ORGANIZERS 
+ PRIMA 2025 
+ href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FPRIMA2025%2FSubmission%2FIndex" - SUBMISSION
+16 - 19th, Dec 2025 
+ Modena, Italy 
+ Scope & background 
+ List of topics 
+ Information for authors 
+ Software systems are rapidly becoming more intelligent in the functionality they offer to users. They are also becoming more decentralized, with components that act autonomously and must communicate among themselves or with human users, to achieve their goals. Examples of such systems include those in healthcare, disaster management, e-business and smart grids. A multi-agent perspective is crucial to the proper conceptualization deployment, and governance of such systems. Rooted in solid computational and software engineering foundations, this perspective offers abstractions such as intelligent agents protocols, norms, organizations, trust and incentives, among others. As a large, but still growing research field of Computer Science, multi-agent systems today remain a unique enabler of interdisciplinary research. 
+ Logic and Reasoning 
+ Logics of Agency 
+ Logics of Multi-Agent Systems 
+ Logics of Belief and Knowledge 
+ Norms, Obligations, Deontic Logic 
+ Logics and Game Theory 
+ Uncertainty in Agent Systems 
+ Agent and Multi-Agent Learning 
+ Reinforcement Learning 
+ Evolutionary approaches 
+ Machine Learning Problems in Multi-Agent Systems 
+ Agents Embodied with Large Language Models 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Agent-Based Modeling and Simulation 
+ Simulation Languages and Platforms 
+ Artificial Societies 
+ Virtual Environments 
+ Emergent Behavior 
+ Modeling System Dynamics 
+ Application Case Studies 
+ Collaboration & Coordination 
+ Multi-Agent Planning 
+ Distributed Problem Solving and Optimization 
+ Teamwork 
+ Coalition Formation 
+ Negotiation 
+ Trust and Reputation 
+ Commitments 
+ Institutions and Organizations 
+ Normative Systems 
+ Algorithmic Game Theory 
+ Auctions and Mechanism Design 
+ Bargaining and Negotiation 
+ Behavioral Game Theory 
+ Cooperative Games: Theory, Analysis, Computation 
+ Game Theory for Practical Applications 
+ Noncooperative Games: Theory, Analysis, Computation 
+ Engineering Multi-Agent Systems 
+ Agent-Oriented Software Engineering 
+ Interaction Protocols 
+ Formal Specification and Verification 
+ Agent Programming Languages 
+ Middleware and Platforms 
+ Testing, Debugging, and Evolution 
+ Deployed System Case Studies 
+ Computational Social Choice 
+ Voting 
+ Fair Division and Resource Allocation 
+ Matching under Preferences 
+ Coalition Formation Games 
+ Aggregation of Beliefs, Opinions, Judgments 
+ Ethics and Computational Social Choice 
+ Participatory Budgeting 
+ Facility Location 
+ Communication Issues in Social Choice, Distortion 
+ Behavioral Social Choice 
+ Human-Agent Interaction 
+ Adaptive Personal Assistants 
+ Embodied Conversational Agents 
+ Virtual Characters 
+ Multimodal User Interfaces 
+ Mobile Agents 
+ Human-Robot Interaction 
+ Affective Computing 
+ Decentralized Paradigms 
+ Cloud Computing 
+ Service-Oriented Computing 
+ Data spaces 
+ Big data 
+ Cybersecurity 
+ Robotics and Multirobot Systems 
+ Ubiquitous Computing 
+ Social Computing 
+ Ubiquitous Computing 
+ Internet of Things 
+ Edge Computing 
+ Blockchain 
+ Ethics and Social Issues 
+ Explainable Artificial Intelligence 
+ Ethics of AI Systems 
+ Multi-Agent Systems for Social Good 
+ Application Domains for Multi-Agent Systems 
+ Healthcare, Pandemics Management 
+ Autonomous Systems 
+ Transport and Logistics 
+ Emergency and Disaster Management 
+ Energy and Utilities Management 
+ Sustainability and Resource Management 
+ Games and Entertainment 
+ e-Business, e-Government, and e-Learning 
+ Smart Cities 
+ Financial markets 
+ Legal applications 
+ Crowdsourcing 
+ PRIMA 2025 invites submissions of original, unpublished work strongly relevant to Multi- Agent Systems. Apart from theoretical work, we encourage the submission of reports on the development of applications or prototypes of deployed agent systems, and of experiments that demonstrate novel agent system capabilities. In addition to this, we also encourage the submission of position and review papers that are of particular relevance to the multi-agent community. 
+  
+ Type of submissions: 
+ Full papers, 16 pages plus references 
+ Short papers, 4 pages plus references 
+ Position papers, 2 pages plus references 
+  
+ The papers submitted must be in theLNCS format. All submitted papers must be in a form suitable fordouble-blindreview. Specifically, in order to make blind reviewing possible, authors must omit their names and affiliations from the paper. Also, while the references should include all published literature relevant to the paper, including previous work of the authors, it should not include unpublished works. When referring to one's own work, use the third person rather than the first person. For example, say"Previously, Foo and Bar [2] have shown that…", rather than "In our previous work [2], we have shown that…". Such identifying information can be added back to the final camera-ready version of accepted papers. 
+  
+ The papers can be submitted viahref="https://cmt3.research.microsoft.com/PRIMA2025/Submission/Index" - CMT
+. 
+  
+ All papers will be reviewed by at least 2-3 experts in the area following a detailed review form that will assess the paper based on the significance and novelty of the idea, the technical description of the proposal, clarity and organization, the evaluation methodology and any ethical considerations. 
+  
+ All accepted papers will be published in Springer's Lecture Notes in Artificial Intelligence series (LNCS/LNAI). 
+  
+ Thehref="https://cmt3.research.microsoft.com/" - Microsoft CMT
+service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.Important dates 
+ 15 July 2025 (AoE, UTC-12) 
+ Abstract Submission Deadline 
+ 22 July 2025 (AoE, UTC-12) 
+ Paper Submission Deadline 
+ 29 Sept. 2025 (AoE, UTC-12) 
+ Notification of Acceptance 
+ 13 Oct. 2025 (AoE, UTC-12) 
+ Camera Ready Submission 
+ Organizers 
+ General Chairs 
+ Angelo Ferrando 
+ UNIMORE 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Vadim Malvone 
+ Télécom Paris 
+ href="mailto:prima2025.general.chairs@gmail.com" - 
+Program Chairs 
+ Federico Bergenti 
+ Università di Parma 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+Catalin Dima 
+ Université Paris-Est Créteil 
+ href="mailto:prima2025.program.chairs@gmail.com" - 
+PhD Day Chairs 
+ James Ortiz 
+ Télécom Paris 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Marija Slavkovik 
+ University of Bergen 
+ href="mailto:prima2025.phdday.chairs@gmail.com" - 
+Sponsorship Chairs 
+ Paolo Burgio 
+ UNIMORE 
+ Filippo Muzzini 
+ UNIMORE 
+ Local Chairs 
+ Giacomo Cabri 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Stefania Monica 
+ UNIMORE 
+ href="mailto:prima2025.local.chairs@gmail.com" - 
+Publicity Chair 
+ Vladana Perlić 
+ Télécom Paris 
+ PreviousNext 
+ Platinum Sponsor 
+ Silver Sponsor 
+ Location 
+ Modena, Italy 
+ Copyright © 2025 PRIMA

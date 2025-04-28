@@ -1,0 +1,29 @@
+```json
+{
+  "Conference dates": "January 22 - 24, 2025",
+  "Year": "2025",
+  "Location": "B-Con PLAZA, Beppu, JAPAN",
+  "City-State-Province": "Beppu",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for Abstract Submission for review": "October 28, 2024",
+    "Deadline for OS Proposal": "October 21, 2024",
+    "Deadline for Final Camera-Ready Papers": "December 23, 2024",
+    "Deadline for Early Registration": "December 16, 2024",
+    "Registration Deadline for Presenters": "December 16, 2024",
+    "Deadline of a full paper submission": "August 31, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "November 6, 2024",
+    "Notification of Acceptance": "November 29, 2024"
+  },
+  "Camera-ready Date": {
+    "Final paper submission": "December 16, 2024"
+  },
+  "Topics": "Artificial Life, Robotics, Computer Simulations, Hardware Designs",
+  "Summary": "The 30th International Symposium on Artificial Life and Robotics (AROB 30th 2025) and the 10th International Symposium on BioComplexity (ISBC 10th 2025) will be held from January 22-24, 2025, at B-Con PLAZA in Beppu, Japan.  The symposium invites original research and discussions on new technologies concerning artificial life and robotics.",
+  "Call for Papers": "# AROB-ISBC 2025: Call for Papers\n\nThe 30th International Symposium on Artificial Life and Robotics (AROB 30th 2025) and the 10th International Symposium on BioComplexity (ISBC 10th 2025) will be held from **January 22-24, 2025, at B-Con PLAZA, Beppu, JAPAN.**\n\nThis symposium invites you to present original research and discuss the development of new technologies concerning artificial life and robotics based on computer simulations and hardware designs of state-of-the-art technologies.\n\n## Important Dates\n\n*   **Deadline for Abstract Submission for review:** October 28, 2024 (24:00 UTC)\n*   **Deadline for OS Proposal:** October 21, 2024 (24:00 UTC)\n*   **Notification of acceptance:** November 6, 2024\n*   **Deadline for Final Camera-Ready Papers:** December 23, 2024 (24:00 UTC)\n*   **Deadline for Early Registration:** December 16, 2024 (24:00 UTC)\n*   **Registration Deadline for Presenters:** December 16, 2024 (24:00 UTC)\n\n## Journal Track\n\nA unique feature of the AROB Journal is the opportunity for authors to publish a full paper in a peer-reviewed journal and present the same paper at the conference.\n\n*   Papers for the General Sessions are eligible for this option.\n*   Regardless of the acceptance or rejection of the journal paper, in-person participation and presentation are required if the symposium paper is accepted.\n\n### Schedule\n\n*   **Full paper submission (Max. 12 pages):** August 31, 2024\n*   **Notification of Acceptance:** November 29, 2024\n*   **Final paper submission:** December 16, 2024\n\nThe accepted papers will be published in AROB Journal vol. 30, no. 1, 2025. If the final document is not sent to Springer by December 25, 2024, it will be published in another number. If the decision is not determined by November 29, 2024, the review process will continue as a usual paper of AROB Journal.\n\n## Sponsors\n\n*   The Society of Instrument and Control Engineers\n*   The Robotics Society of Japan\n*   The Institute of Electronics, Information and Communication Engineers\n*   The Institute of Systems, Control and Information Engineers\n*   Japan Society for Simulation Technology\n*   The Institute of Electrical Engineers of Japan\n*   IEEE Robotics and Automation Society Japan Chapter"
+}
+```

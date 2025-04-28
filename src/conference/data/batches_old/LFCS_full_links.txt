@@ -1,0 +1,711 @@
+Conference full name: Logical Foundations of Computer Science (LFCS)
+
+1. Website of LFCS_3: https://lfcs.ws.gc.cuny.edu/
+Website information of LFCS_3:
+
+Skip to the contentSearchhref="https://lfcs.ws.gc.cuny.edu/" - Logical Foundations Of Computer Science
+Menuhref="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ SearchSearch for:Close searchClose Menuhref="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ LFCS 2022 
+ Due to the current wave of the pandemic, LFCS 2022 was held in the online format.The list of talks with links to their videos is at the bottom of this page. 
+ The Springer LFCS 2022 volume, LNCS 13137, is now available online and can be accessed athttp://link.springer.com/openurl.asp?genre=issue&issn=0302-9743&volume=13137. 
+  
+ About LFCS 
+ The LFCS series provides an outlet for the fast-growing body of work in the logical foundations of computer science, e.g., areas of fundamental theoretical logic related to computer science. The LFCS series began with Logic at Botik, Pereslavl-Zalessky, 1989 and was co-organized by Albert R. Meyer (MIT) and Michael Taitslin (Tver), after which organization passed to Anil Nerode in 1992. LFCS has enjoyed support and endorsements from a number of bodies, including the US National Science Foundation (NSF), Association for Symbolic Logic (ASL), Cornell University, and the City University of New York Research Foundation. 
+ LFCS 2022, January 10-13, 2022 
+ Submission deadline:September 17, 2021, any time zone. 
+ LFCS General Chair: 
+ Anil Nerode, Ithaca, NY 
+ LFCS Steering Committee: 
+ Anil Nerode, Ithaca, NY (General Chair) 
+ Stephen Cook, Toronto 
+ Dirk van Dalen, Utrecht 
+ Yuri Matiyasevich, St. Petersburg, Russia 
+ Samuel Buss, San Diego 
+ Andre Scedrov, Philadelphia 
+ Dana Scott, Pittsburgh – Berkeley 
+ LFCS Topics: 
+ Topics of interest include, but are not limited to: 
+ constructive mathematics and type theory 
+ homotopy type theory 
+ logic, automata, and automatic structures 
+ computability and randomness 
+ logical foundations of programming 
+ logical aspects of computational complexity 
+ parameterized complexity 
+ logic programming and constraints 
+ automated deduction and interactive theorem proving 
+ logical methods in protocol and program verification 
+ logical methods in program specification and extraction 
+ domain theory logics 
+ logical foundations of database theory 
+ equational logic and term rewriting 
+ lambda and combinatory calculi 
+ categorical logic and topological semantics 
+ linear logic 
+ epistemic and temporal logics 
+ intelligent and multiple agent system logics 
+ logics of proof and justification 
+ nonmonotonic reasoning 
+ logic in game theory and social software 
+ logic of hybrid systems 
+ distributed system logics 
+ mathematical fuzzy logic 
+ system design logics 
+ other logics in computer science 
+ LFCS’22 Program Committee: 
+ Antonis Achilleos (Reykjavik) 
+ Evangelia Antonakos (New York) 
+ Sergei Artemov (New York) – PC Chair 
+ Steve Awodey (Pittsburgh) 
+ Matthias Baaz (Vienna) 
+ Lev Beklemishev (Moscow) 
+ Andreas Blass (Ann Arbor) 
+ Samuel Buss (San Diego) 
+ Thierry Coquand (Göteborg) 
+ Valeria de Paiva (Cupertino, CA) 
+ Ruy de Queiroz (Recife) 
+ Melvin Fitting (New York) 
+ Sergey Goncharov (Novosibirsk) 
+ Rosalie Iemhoff (Utrecht) 
+ Hajime Ishihara (JAIST – Kanazawa) 
+ Bakhadyr Khoussainov (Auckland) 
+ Roman Kuznets (Vienna) 
+ Stepan Kuznetsov (Moscow) 
+ Robert Lubarsky (Boca Raton) 
+ Lawrence Moss (Bloomington) 
+ Pavel Naumov (Southampton, UK) 
+ Anil Nerode (Ithaca, NY) – General LFCS Chair 
+ Elena Nogina (New York) 
+ Hiroakira Ono (JAIST – Kanazawa) 
+ Alessandra Palmigiano (Amsterdam) 
+ Ramaswamy Ramanujam (Chennai) 
+ Michael Rathjen (Leeds) 
+ Sebastiaan Terwijn (Nijmegen) 
+ Ren-June Wang (Chiayi City) 
+ Noson Yanofsky (New York) 
+ Junhua Yu (Beijing) 
+ Submission details: 
+ Proceedings will be published in the Springer LNCS series. There will be a post-conference volume of selected works published in Journal of Logic and Computation (Oxford Journals) in 2022. Submissions should be made electronically via easychair 
+ href="https://easychair.org/my/conference?conf=lfcs22#" - https://easychair.org/my/conference?conf=lfcs22#
+Submitted papers must be in pdf/12pt format and of no more than 15 pages, present work not previously published, and must not be submitted concurrently to another conference with refereed proceedings. 
+ LFCS issues the best student paper award named after John Barkley Rosser Sr. (1907-1989), a prominent American logician with fundamental contributions in both Mathematics and Computer Science. 
+ Important Dates: 
+ Submissions deadline: | September 17, 2021 | any time zone. 
+ Notification: October 10, 2021 
+ Symposium dates: January 10 – January 13, 2022 
+ Sponsorships: 
+ The US National Science Foundation (NSF) – expected 
+ Association for Symbolic Logic (ASL) 
+ The City University of New York Research Foundation 
+ Local Arrangements: 
+ The venue of LFCS 2022 will be the spectacular Wyndham Deerfield Beach Resort, 2096 NE 2nd Street, Deerfield Beach, Florida 33441. 
+ Website:https://www.wyndhamdeerfieldresort.com 
+ LFCS’22 Local Organizing Committee: Robert Lubarsky (Chair) – Florida Atlantic University. 
+ LFCS’22 hotel reservations:https://www.wyndhamhotels.com/wyndham/deerfield-beach-florida/wyndham-deerfield-beach-resort/rooms-rates?&checkInDate=01/09/2022&checkOutDate=01/13/2022&groupCode=010922FAUDue to the current wave of the pandemic, LFCS 2022 was held in the online format. 
+ The Rosser Prize 
+ The LFCS series has the best student paper award, The Rosser Prize, named after John Barkley Rosser Sr. (1907–1989), a prominent American logician with fundamental contributions in both Mathematics and Computer Science. 
+ The Rosser Prize from LFCS 2022 goes to two student authors 
+ Yannick Forster, Saarland University, Saarbrücken, Germany.“Parametric Church’s Thesis: Synthetic Computability Without Choice” 
+ Daniel Rogozin, Institute for Information Transmission Problems, Russian Academy of Sciences, Moscow, Russia.“Reducts of Relation Algebras: The Aspects of Axiomatisability And Finite Representability.” 
+ Both of these papers and their authors are declared the winners. Congratulations! 
+ Schedule 
+ LFCS 2022 Schedule, online, EST,write to<href="mailto:lfcs22@easychair.org" - lfcs22@easychair.org
+>to get a Zoom link. 
+ Monday, January 10 
+ 9:00 – 10:00 Invited Talk:Matthew Harrison Trainor, University of Michigan. “Extracting randomness and evenly distributed hypergraphs.”https://drive.google.com/file/d/1i7JjqsJKh-5M2RqI4TUxmEFZuAmNG0ef/view?usp=sharing 
+ 10:00 – 10:30 Rosser Prize Talk:Yannick Forster, Saarland University. “Parametric Church’s Thesis: Synthetic Computability Without Choice.” 
+ https://drive.google.com/file/d/1Jne62E_YNbJ72w07vGqoGKs0VGR9LJXj/view?usp=sharing 
+ 10:30 – 10:45 Break 
+ 10:45 – 11:15Rick Statman“Finite Generation and Presentation Problems for Lambda Calculus and Combinatory Logic.”https://drive.google.com/file/d/1n7LvnTsRHuFSUnfFZq-ZCZkA5AD8x9qH/view?usp=sharing 
+ 11:15 – 11:45Iosif Petrakis“Computability Models Over Categories and Presheaves.”https://drive.google.com/file/d/12jJf2xr6xVEzjAyOm8BzMzqqQJjd1PUm/view?usp=sharing 
+ 11:45 – 12:15K. Subramani and Piotr Wojciechowski“Exact and Parameterized Algorithms for Read-Once Refutations in Horn Constraint Systems.”https://drive.google.com/file/d/1DcDUh5r4tKofx28Fndu1AbXDp2oAJmzg/view?usp=sharing 
+ 12:15 – 12:30 Break 
+ 12:30 – 1:00Eoin Moore“Soundness and Completeness Results for LEA and Probability Semantics.”https://drive.google.com/file/d/1q05CwMQZyDCbE5ANBd7Ud3IKSdOlwVcB/view?usp=sharing 
+ 1:00 – 1:30Davide Trotta, Matteo Spadetto and Valeria de Paiva“Dialectica Logical Principles.”https://drive.google.com/file/d/1WQOyHWB50YXTSUqP9Pj8XeQDH62Z8LtB/view?usp=sharing 
+ Tuesday January 11 
+ 9:00 – 10:00 Invited Talk:Antonis Achilleos, Reykjavik University. “Adventures in Monitorability.”https://drive.google.com/file/d/19c5rLhnKuCzRheQVIqtNCPT_4t05QWdU/view?usp=sharing 
+ 10:00 – 10:30 Rosser Prize Talk:Daniel Rogozin, Institute for Information Transmission Problems, Russian Academy of Sciences. “Reducts of Relation Algebras: The Aspects of Axiomatisability and Finite Representability.”https://drive.google.com/file/d/1YT1_BauMOAZlE32MaMmzx9QF7dqdNwz5/view?usp=sharing 
+ 10:30 – 10:45 Break 
+ 10:45 – 11:15Juan Pablo Aguilera, Jan Bydzovsky and David Fernández-Duque.“A Non-Hyperarithmetical Gödel Logic.”https://drive.google.com/file/d/1QRpHis1ZOl3z27O4gs_64oiBJhia5RuG/view?usp=sharing 
+ 11:15 – 11:45Matthias Baaz and Anela Lolic.“Andrews Skolemization May Shorten Resolution Proofs Non-Elementarily.”https://drive.google.com/file/d/1-_dKswjGPFqNDPp_o44xOWAN715o2E06/view?usp=sharing 
+ 11:45 – 12:15David Lehnherr, Zoran Ognjanovic and Thomas Studer.“A Logic of Interactive Proofs.”https://drive.google.com/file/d/1gls3WeQKfqoKe5r3Tdh12sdql6wRLspY/view?usp=sharing 
+ 12:15 – 12:30 Break 
+ 12:30 – 1:00Douglas Cenzer and Richard Krogman.“The Isomorphism Problem for FST Injection Structures.”https://drive.google.com/file/d/1v8aKhI3GE-qE-m9bRVNUiThkMgvCAP9o/view?usp=sharing 
+ 1:00 – 1:30Yanhong A. Liu and Scott Stoller.“Recursive Rules With Aggregation: A Simple Unified Semantics.”https://drive.google.com/file/d/1_61djZDe64G3MoHSHdpI7KMZ9FP0vgCd/view?usp=sharing 
+ Wednesday January 12 
+ 9:00 – 9:30Shota Motoura and Shin-ya Katsumata.“On Inverse Operators in Dynamic Epistemic Logic.”https://drive.google.com/file/d/14gNaZmO1TF_pClhnvMdcLOe1Vez1j_YT/view?usp=sharing 
+ 9:30 – 10:00Christian Hagemeier and Dominik Kirst.“Constructive and Mechanised Meta-Theory of Intuitionistic Epistemic Logic.”https://drive.google.com/file/d/1MoOKnjxrntQPwyrblBKSk_7usRWJFfJm/view?usp=sharing 
+ 10:00 – 10:30David Fernández-Duque, Konstnatinos Papafilippou and Joost J. Joosten.“Hyperarithmetical Worm Battles.”https://drive.google.com/file/d/1yXTeGfbM2GA1UPcwosUUNRcd84Cd9t5v/view?usp=sharing 
+ 10:30 – 10:45 Break 
+ 10:45 – 11:15Bjørn Kjos-Hanssen, Saroj Niraula and Soowhan Yoon.“A Parametrized Family of Tversky Metrics Connecting the Jaccard Distance to an Analogue of the Normalized Information Distance.”https://drive.google.com/file/d/1qmiaaV26KFwCRRQFbsxj_Jt7Cg5a-qDl/view?usp=sharing 
+ 11:15 – 11:45Juha Kontinen, Arne Meier and Yasir Mahmood.“A Parameterized View on the Complexity of Dependence Logic.”https://drive.google.com/file/d/1CSz0P_WFHfhieC80Gtj8fY4YcxiyvJ3B/view?usp=sharing 
+ 11:45 – 12:15Sérgio Marcelino, Carlos Caleiro and Pedro Filipe.“Computational Properties of Partial Non-deterministic Matrices and Their Logics.”https://drive.google.com/file/d/1dvs9ckJDaF4O6SNNCCGH806WUe0VOx9P/view?usp=sharing 
+ 12:15 – 12:30 Break 
+ 12:30 – 1:00Neil J. DeBoer.“Justification Logic and Type Theory as Formalizations of Intuitionistic Propositional Logic.”https://drive.google.com/file/d/1wbBKr3oNzXZG7iMvPlggPH4VUlkDjyZj/view?usp=sharing 
+ 1:00 – 1:30Igor Sedlár.“Propositional Dynamic Logic With Quantification Over Regular Computation Sequences.”https://drive.google.com/file/d/1abYWSUAifzV3Npq_OykEo4TWK-UZSppO/view?usp=sharing 
+ 1:30 – 2:00Sam Sanders.“Between Turing and Kleene.”https://drive.google.com/file/d/1JHCY12XNhJMzWblDTP12LPV4a82oJHNI/view?usp=sharing 
+ Thursday January 13 
+ 9:00 – 9:30Dag Normann and Sam Sanders.“Betwixt Turing and Kleene.”https://drive.google.com/file/d/1Esab45j28qazavdpVoK46gtDxqzswUPw/view?usp=sharing 
+ 9:30 – 10:00Maciej Zielenkiewicz.“Small Model Property Reflects in Games and Automata.”https://drive.google.com/file/d/1FozOfaacvZiT4iv4GF9Snkf4ChVmVVPF/view?usp=sharing 
+ 10:00 – 10:15 Break 
+  
+ Discussion Session 
+ 10:15 – 10:45Ren-June Wang.“Logic of Gentzen-style proofs.”https://drive.google.com/file/d/1AhSdF0zY1kc8_1CRG4h1CRxuUxXJJUR4/view?usp=sharing 
+ 10:45 – 11:15Willem Hagemann.“The logic of epistemic hierarchies.”https://drive.google.com/file/d/18BXj6Vej__j37x5Eu8nJ1GXipc_62Rl3/view?usp=sharing 
+ 11:15 – 11:30 Break 
+ 11:30 – 12:00Noah Kaufmann.“Classifying All Transducer Degrees Below N^3.”https://drive.google.com/file/d/1VRpuolCpa-4HReu7mLqnNPWdSArME9HA/view?usp=sharing 
+ 12:00 – 12:30V. Alexis Peluce.“Justification Logic and the Paradoxes of Material Implication.”https://drive.google.com/file/d/1bCXdnGP_QzpO3WP3IwzNlAbdsaGJdcfA/view?usp=sharing 
+ href="http://lfcs.ws.gc.cuny.edu/" - http://lfcs.ws.gc.cuny.edu/lfcs-2022
+href="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ Search for: 
+ © 2025href="https://lfcs.ws.gc.cuny.edu/" - Logical Foundations Of Computer Science
+Powered by WordPressTo the top↑Up↑
+
+2. Website of LFCS_3: https://www.cis.upenn.edu/~scedrov/other.html
+Website information of LFCS_3:
+
+Web pages of interest 
+ Penn Computer and Information Science Department 
+ Penn Logic and Computation Group. 
+ IEEE Computer Security Foundations Symposium. 
+ ACM/IEEE Symposium on Logic in Computer Science. 
+ Workshop on Computer Security, Logic, and Programming Languages In Honor of John Mitchell's 60th Birthday, Stanford University, May 19-20, 2016. 
+ Dale Fest!60th. 
+ NII Shonan Meeting "Intensional and extensional aspects of computation: From computability and complexity to program analysis and security". 
+ Workshop on Lambek Calculus and Linear Logic, Keio University. 
+ 9th International Joint Conference on Automated Reasoning (IJCAR 2018). 
+ Federated Logic Conference (FLoC 2018). 
+ CPS-SPC 2018: ACM Workshop on Cyber-Physical Systems Security & Privacy. 
+ Joshua D. Guttman, Carl E. Landwehr, Jose Meseguer, and Dusko Pavlovic, eds.,Foundations of Security, Protocols, and Equational Reasoning. Essays Dedicated to Catherine A. Meadows.Festschrift, Springer LNCS Volume 11565, Springer-Verlag, 2019, xii + 239 pp. 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - Symposium on Logical Foundations of Computer Science (LFCS 2020)
+. 
+ 10th International Joint Conference on Automated Reasoning (IJCAR 2020). 
+ Mal'tsev Meeting 2020. 
+ 7th International Conference on Information Systems Security and Privacy (ICISSP 2021). 
+ Logical Perspectives 2021. 
+ Portuguese Mathematical Society National Meeting -- Encontro Nacional SPM (ENSPM 2021). 
+ Daniel Dougherty, José Meseguer, Sebastian Alexander Mödersheim, and Paul Rowe, eds.,Protocols, Strands, and Logic. Essays Dedicated to Joshua Guttman on the Occasion of his 66.66th Birthday.Festschrift, Springer LNCS Volume 13066, Springer-Verlag, 2021, x + 425 pp. 
+ href="https://lfcs.ws.gc.cuny.edu/tag/nerode-90/" - Nerode-90 Conference
+. 
+ 11th International Joint Conference on Automated Reasoning – IJCAR 2022. 
+ Logical Frameworks and Meta-Languages: Theory and Practice (LFMTP 2022). 
+ GuttmanFest2022. 
+ 19th International Colloquium on Theoretical Aspects of Computing (ICTAC 2022). 
+ 9th International Conference on Information Systems Security and Privacy (ICISSP 2023). 
+ 29th Workshop on Logic, Language, Information and Computation (WoLLIC 2023). 
+ 34th European Summer School in Logic, Language, and Information (ESSLLI 2023). 
+ Modalities in substructural logics: applications at the interfaces of logic, language and computation. 
+ 10th International Conference on Information Systems Security and Privacy (ICISSP 2024). 
+ Zagreb Logic Conference 2024 (ZLC24). 
+ The 15th International Workshop on Rewriting Logic and its Applications (WRLA 2024). 
+ 2nd Joint Meeting of the Unione Matematica Italiana (UMI) and the American Mathematical Society (AMS).Special Session on Proof Theory and Theoretical Computer Science. 
+ Science of Cyber Security: Modeling, Composition, and Measurement.[Project Concluded]. 
+ Project Presidio: Collaborative policies and assured information sharing [Project Concluded]. 
+ Home page forJohn Mitchellat Stanford. 
+ Home page forLuca Cardelliat Oxford. 
+ Association for Symbolic Logic. 
+ American Mathematical Society. 
+ Isaac Newton Institute for Mathematical Sciences. 
+ DIMACS -- Center for Discrete Mathematics and Theoretical Computer Science 
+ INRIA's home page. 
+ href="http://www.iacr.org/" - International Association
+for Cryptologic Research.
+ 
+ NIST Computer Security Resource Clearinghouse. 
+ Ron Rivest's Cryptography and Security Page. 
+ href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/language-people.html" - Researchers in programming language theory, design, and implementation.
+ 
+ Back toAndre Scedrov's Home Page
+
+3. Website of LFCS_3: https://lfcs.ws.gc.cuny.edu/lfcs-2020/
+Website information of LFCS_3:
+
+Skip to the contentSearchhref="https://lfcs.ws.gc.cuny.edu/" - Logical Foundations Of Computer Science
+Menuhref="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ SearchSearch for:Close searchClose Menuhref="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ LFCS 2020 
+  
+ January 4-7, 2020 
+ Deerfield Beach, Florida, U.S.A. 
+ https://link.springer.com/book/10.1007/978-3-030-36755-8 
+ Proceedings 
+ International Symposium, LFCS 2020, Deerfield Beach, FL, USA, January 4–7, 2020, Proceedings 
+ https://link.springer.com/book/10.1007/978-3-030-36755-8 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/call-for-papers/" - Call for Papers
+LFCS 2020 deadline has been extended till September 16 any time zone. 
+ LFCS General Chair: 
+ Anil Nerode, Ithaca, NY 
+ LFCS Steering Committee: 
+ Anil Nerode, Ithaca, NY (General Chair) 
+ Stephen Cook, Toronto 
+ Dirk van Dalen, Utrecht 
+ Yuri Matiyasevich, St. Petersburg, Russia 
+ Samuel Buss, San Diego 
+ Gerald Sacks, Cambridge, MA 
+ Andre Scedrov, Philadelphia 
+ Dana Scott, Pittsburgh, PA – Berkeley, CA 
+ LFCS Topics: 
+ Topics of interest include, but are not limited to: 
+ constructive mathematics and type theory 
+ homotopy type theory 
+ logic, automata, and automatic structures 
+ computability and randomness 
+ logical foundations of programming 
+ logical aspects of computational complexity 
+ parameterized complexity 
+ logic programming and constraints 
+ automated deduction and interactive theorem proving 
+ logical methods in protocol and program verification 
+ logical methods in program specification and extraction 
+ domain theory logics 
+ logical foundations of database theory 
+ equational logic and term rewriting 
+ lambda and combinatory calculi 
+ categorical logic and topological semantics 
+ linear logic 
+ epistemic and temporal logics 
+ intelligent and multiple agent system logics 
+ logics of proof and justification 
+ nonmonotonic reasoning 
+ logic in game theory and social software 
+ logic of hybrid systems 
+ distributed system logics 
+ mathematical fuzzy logic 
+ system design logics 
+ other logics in computer science 
+ LFCS’20 Program Committee: 
+ Sergei Artemov (New York, NY) – PC Chair 
+ Eugene Asarin (Paris) 
+ Steve Awodey (Pittsburgh, PA) 
+ Lev Beklemishev (Moscow) 
+ Andreas Blass (Ann Arbor, MI) 
+ Samuel Buss (San Diego, CA) 
+ Robert Constable (Ithaca, NY) 
+ Thierry Coquand (Göteborg) 
+ Valeria de Paiva (Cupertino, CA) 
+ Ruy de Queiroz (Recife) 
+ Nachum Dershowitz (Tel Aviv) 
+ Melvin Fitting (New York, NY) 
+ Sergey Goncharov (Novosibirsk) 
+ Denis Hirschfeldt (Chicago, IL) 
+ Rosalie Iemhoff (Utrecht) 
+ Hajime Ishihara (JAIST – Kanazawa) 
+ Bakhadyr Khoussainov (Auckland) 
+ Roman Kuznets (Vienna) 
+ Daniel Leivant (Bloomington, IN) 
+ Robert Lubarsky (Boca Raton, FL) 
+ Victor Marek (Lexington, KY) 
+ Lawrence Moss (Bloomington, IN) 
+ Anil Nerode (Ithaca, NY) – General LFCS Chair 
+ Hiroakira Ono (JAIST – Kanazawa) 
+ Alessandra Palmigiano (Delft) 
+ Ramaswamy Ramanujam (Chennai) 
+ Michael Rathjen (Leeds) 
+ Helmut Schwichtenberg (Munich) 
+ Sebastiaan Terwijn (Nijmegen) 
+ Submission details: 
+ Proceedings will be published in the Springer LNCS series. There will be a post-conference volume of selected works published. Submissions should be made electronically via easychair. Submitted papers must be in pdf/12pt format and of no more than 15 pages, present work not previously published, and must not be submitted concurrently to another conference with refereed proceedings. 
+ LFCS issues the best student paper award named after John Barkley Rosser Sr. (1907-1989), a prominent American logician with fundamental contributions in both Mathematics and Computer Science. 
+ Important Dates: 
+ Submissions deadline: | September 10, 2019 | , any time zone 
+ Notification: October 10, 2019 
+ Symposium dates: January 4 – January 7, 2020 
+ Expected sponsorships: 
+ The US National Science Foundation (NSF) 
+ Association for Symbolic Logic (ASL) 
+ The City University of New York Research Foundation 
+ Local Arrangements: 
+ The venue of LFCS 2020 will be the spectacular Wyndham Deerfield Beach Resort, 2096 NE 2nd Street, Deerfield Beach, Florida 33441. 
+ Website:https://www.wyndhamdeerfieldresort.com 
+ LFCS’20 Local Organizing Committee: Robert Lubarsky (Chair) – Florida Atlantic University. 
+ About LFCS 
+ The LFCS series provides an outlet for the fast-growing body of work in the logical foundations of computer science, e.g., areas of fundamental theoretical logic related to computer science. The LFCS series began with Logic at Botik, Pereslavl-Zalessky, 1989 and was co-organized by Albert R. Meyer (MIT) and Michael Taitslin (Tver), after which organization passed to Anil Nerode in 1992. LFCS has enjoyed support and endorsements from a number of bodies, including the US National Science Foundation (NSF), Association for Symbolic Logic (ASL), Cornell University, and the City University of New York Research Foundation. 
+ href="https://lfcs.ws.gc.cuny.edu/" - LFCS 2022 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2020/" - LFCS 2020 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2018/" - LFCS 2018 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2016/" - LFCS 2016 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2013/" - LFCS 2013 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2009/" - LFCS 2009 
+ href="https://lfcs.ws.gc.cuny.edu/lfcs-2007/" - LFCS 2007 
+ Search for: 
+ © 2025href="https://lfcs.ws.gc.cuny.edu/" - Logical Foundations Of Computer Science
+Powered by WordPressTo the top↑Up↑
+
+4. Website of LFCS_3: https://faculty.econ.ucdavis.edu/faculty/schipper/unaw.htm
+Website information of LFCS_3:
+
+The Unawareness Bibliography 
+ byBurkhard C. Schipper 
+ If you want to have your work included or something needs updating please email me (bcschipper@ucdavis.edu) 
+ Last update: February 23, 2025 
+
+Accorsi, R., Basin D., Vigano, L. (2003).Towards an awareness-based semantics for security protocol analysis, Electronic Notes in Theoretical Computer Science 55, 5-24. 
+ Agotnes, T., Alechina, N. (2014).A logic for reasoning about knowledge of unawareness, Journal of Logic, Language, and Information 23, 197-217. 
+ Agotnes, T., Alechina, N. (2007).Full and relative awareness: A decidable logic for reasoning about knowledge of unawareness, in: Samet, D. (Ed.), Proceedings of the 11th Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2007), Presses Universitaires De Louvain, 6-14. 
+ Araujo, F., Piermont, E. (2023).Unawareness and risk taking: The role of context, Journal of Economic Behavior and Organization 208, 61-79. 
+ Artemov, S. (2020).Justification awareness, Journal of Logic and Computation 30 1431-1446. 
+ Artemov, S. (2018).Justification awareness models, in: Artemov, S., Nerode, A. (eds.) Logical Foundations of Computer Science, LFCS 2018. Lecture Notes in Computer Science 10703. Springer, 22-36. 
+ Auster, S. (2013).Asymmetric awareness and moral hazard, Games and Economic Behavior 82, 503-521.Auster, S., Pavoni N. (2024).Optimal delegation and information transmission under limited awareness, Theoretical Economics 19, 245-284. 
+ Auster, S., Pavoni N. (2022).Limited awareness and financial intermediation, mimeo., University of Bonn. 
+ Becker, C.K., Melkonyan, T., Proto, E., Sofianos, A., Trautmann, S.T. (2024).Reverse Bayesianism: Revising beliefs in light of unforeseen events, Journal of the European Economic Association, forthcoming. 
+ Belardinelli, G., Rendsvig K.R. (2023).Awareness logic: Kripke lattices as a middle ground between syntactic and semantic models, Journal of Logic and Computation 33, 1186-1215. 
+ Belardinelli, G., Rendsvig, K.R. (2021).href="https://lamassr.github.io/editions/2021/papers/Awareness-Logic.pdf" - Awareness
+
+logic: A Kripke-based rendition of the
+            Heifetz-Meier-Schipper model and a dynamic extension
+, in: Logical Aspects in Multi-Agent Systems and Strategic Reasoning, LAMAS&SR 2021. 
+ Belardinelli, G., Rendsvig, K.R. (2020).Awareness logic: A Kripke-based rendition of the Heifetz-Meier-Schipper model, in: Martins, M.A., Sedlár I. (eds.), Dynamic Logic. New Trends and Applications. DaLi 2020, Lecture Notes in Computer Science 12569. Springer. 
+ Belardinelli, G., Schipper, B.C. (2024).Tacit knowledge, mimeo., University of California, Davis. 
+ Belardinelli, G., Schipper, B.C. (2024).Implicit knowledge in unawareness structures, Synthese 204, 141. 
+ Belardinelli, G., Schipper, B.C. (2023).Implicit knowledge in unawareness structures - Extended abstract, in: Theoretical Aspects of Rationality and Knowledge Proceedings of the Nineteens Conference (TARK 2023), Rineke Verbrugge (Ed.), Electronic Proceedings in Theoretical Computer Science 379, 93-112. 
+ van Benthem, J., Velazquez-Quesada F.R. (2010).The dynamic of awareness, Synthese 177, 5-27. 
+ van den Berg, L., Atencia, M., Euzenat J. (2023).Raising awareness without disclosing truth, Annals of Mathematics and Artificial Intelligence 91, 431-464. 
+ Blume, A., Gneezy U. (2010).Cognitive forward induction and coordination without common knowledge: theory and evidence, Games and Economic Behavior, 68 488-511. 
+ Board, O., Chung, K.S. (2022).href="https://e7ddd5a5-a-62cb3a1a-s-sites.googlegroups.com/site/ojboard/papers/obu2.pdf?attachauth=ANoY7crsOom0EVZY_SKwuu-g36Q2nigCHjy1_5qnfvi1RKUpR8dCFKIlxgjk6gYJ8jf9en3rmJltW1A6tBhmD6IsO7Axwrjty50VkHaYs2AcCdw6_869s_drltJlUx8i_m85HIVP1xYWuDNMhgw-VJ2hkT7vFbJRrMi_ZTdi2xBPPIm5J4nak2-wD2FIHx9q-BP_5pZfV_PqH2YDBhiD9mA6TVdbetix-Q%3D%3D&attredirects=0" - Object-based
+unawareness:
+
+Theory and applications
+, Journal of Mechanism and Institution Design 7, 1-43.Board, O., Chung K.S. (2021).Object-based unawareness: Axioms, Journal of Mechanism and Institution Design 6, 1-36. 
+ Board, O., Chung K.S., Schipper, B.C. (2011).Two models of unawareness: Comparing the object-based and subjective-state-space approaches, Synthese 179, 13-34.Free PDF 
+ Bryan, K, Ryall, M., Schipper, B.C. (2022).Value-capture in the face of known and unknown unknowns, Strategy Science 7, 157–189.Free PDF 
+ Burrieza, A., Fernandez-Fernandez C. (2015).Distributed explicit knowledge and collective awareness, Bulletin of the European Association for Theoretical Computer Science 116, 195-203. 
+ Chakravarty, S., Kelsey, D., Teitelbaum, J.C. (2022).Reverse Bayesianism and act independence, Journal of Economic Theory 203, 105495. 
+ Chang, C., Liu, S.H. (2011). Unawareness and the standard-state space models mimeo., National Tsing Hua University. 
+ Chen, Y.C., Ely, J., Luo, X. (2012).Note on unawareness: Negative introspection versus AU introspection (and KU introspection), International Journal of Game Theory 41, 325-329. 
+ Chen, Y.J., Zhao X.J. (2013).Solution concepts of principal-agent models with unawareness of actions, Games 4, 508-531. 
+ Chen, Y.J., Zhao X.J. (2009).Contractual traps, in: Heifetz, A. (Ed.), Proceedings of the 12th Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2009). 
+ Chen, Z.W., Zhao X.J. (2023).Strategic information suppression in borrowing and pre-lending cognition: Theory and evidence, Games 14, 1-24. 
+ Chung, K.S., Fortnow, L. (2016).Loopholes, Economic Journal 126, 1774–1797. 
+ Condie, S., Stentoft, L.,Vierø, M.-L. (2023).Unawareness premia, mimeo., Aarhus University. 
+ Copic, J., Galeotti A. (2007).Awareness equilibrium, mimeo., UCLA. 
+ Cozic, M. (2016).Probablistic unawareness, Games 7, 38. 
+ Dekel, E., Lipman B., Rustichini, A. (1998).Standard state-space models preclude unawareness, Econometrica 66, 159-173. 
+ Devanur, N.R., Fortnow, L. (2009).A computational theory of awareness and decision making, in: Heifetz, A. (Ed.), Proceedings of the 12th Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2009), 99-107. 
+ Diaye, M.A. and D. Schoch (2010).href="https://www.researchgate.net/publication/265113179_GENERALIZED_STATE_SPACE_FOR_UNAWARENESS" - A
+            generalized state space for unawareness
+, mimeo., Université de Paris 1 Panthéon-Sorbonne. 
+ Dietrich, F. (2018).Savage's theorem under changing awareness, Journal of Economic Theory 176, 1-54. 
+ van Ditmarsch, H., French, T. (2014).Semantics for knowledge and change of awareness, Journal for Logic, Language, and Information 23, 169-195. 
+ van Ditmarsch, H. and T. French (2011).On the interactions of awareness and certainty, in: D. Wang and M. Reynolds (Eds.), Proceedings of 24th Australasian Joint Conference on Artificial Intelligence (AI 11), LNCS 7106, Springer, 727-738. 
+ van Ditmarsch, H. and T. French (2011).Becoming aware of propositional variables, in: M. Banerjee and A. Seth (Eds.), ICLA 2011, LNAI 6521, Springer, 204-218. 
+ van Ditmarsch, H. and T. French (2009).Awareness and forgetting of facts and agents, in: P. Boldi and G. Vizzari and G. Pasi and R. Baeza-Yates (Eds.),Proceedings of WI-IAT Workshops 2009, IEEE Press, 478-483. (WorkshopWLIAMAS.) 
+ van Ditmarsch, H., French, T., Velazquez-Quesada, F. R., and Y. N. Wang (2018).Implicit explicit, and speculative knowledge, Artificial Intelligence 256, 35-67. 
+ van Ditmarsch, H., French, T., Velazquez-Quesada, F. R., and Y. N. Wang (2013).Knowledge awareness, and bisimulation, in: B.C. Schipper (Ed.), Proceedings of 14th Conference on Theoretical 
+ Aspects of Rationalityand Knowledge (TARK 2013), ACM, 61-70. 
+ van Ditmarsch, H., French, T., and F.R. Velazquez-Quesada (2012).Action models for knowledge and awareness. In Proceedings of the 11th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2012), 1091-1098. 
+ Dominiak, A., Tserenjigmid, G. (2022).Ambiguity under growing awareness, Journal of Economic Theory 199 105256. 
+  
+ Dominiak, A., Tserenjigmid, G. (2018).Belief consistency and invariant risk preferences, Journal of Mathematical Economics 79, 157–162. 
+  
+ Dubus, A. (2020).Asymmetric awareness and heterogeneous agents,Rationality and Society 32, 461-484. 
+  
+ Eichberger, J., Guerdjikova, A. (2023).Cases and states, University of Heidelberg. 
+  
+ Ewerhart, C. (2001). Heterogeneous awareness and the possibility of agreement, mimeo., University of Bonn. 
+  
+ Ewerhart, C. (2001). An example for a game involving unawareness: The tragedy of Romeo and Juliet, mimeo. 
+ Fagin, R., Halpern J. (1988).Belief, awareness, and limited reasoning, Artificial Intelligence 34, 39-76. 
+ Fang, Y.H. (2011). Games with and without unawareness, mimeo., University of Chicago. 
+ Feinberg, Y. (2021).Games with unawareness, B.E. Journal of Theoretical Economics 21, 433-488. 
+ Feinberg, Y. (2004).href="https://gsbapps.stanford.edu/researchpapers/library/RP1875.pdf" - Subjective
+reasoning
+
+- games with unawareness
+, mimeo., Stanford University. 
+ Feinberg, Y. (2005).href="https://gsbapps.stanford.edu/researchpapers/library/RP1894.pdf" - Games
+with
+
+incomplete awareness
+, mimeo., Stanford University. 
+ Feinberg, Y. (2011).Strategic communication, in: K.R. Apt (Ed.), Proceedings of the 13th Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2011), ACM, 1-11. 
+ Fernández-Fernández, C. (2021).Awareness in logic and epistemology, Springer-Verlag. 
+ Fernández-Fernández, C. (2019).Awareness Logic: an epistemological defense, Kairos. Journal of Philosophy & Science 22, 72-85. 
+ Fernández-Fernández C., Velázquez-Quesada, F.R. (2021).Awareness of and awareness that: their combination and dynamics,Logic Journal of the IGPL 28, 601-628. 
+ Fernández-Fernández C., Velázquez-Quesada, F.R. (2018).A formal model for explicit knowledge as awareness-of plus awareness-that,in: Sedlar, I., Bilcha, M. (Eds.), The Logica Yearbook 2018, 101-115. 
+ Filiz-Ozbay, E. (2012).Incorporating unawareness into contract theory, Games and Economic Behavior 76 181-194. 
+ Foo, K.V., Schipper B.C. (2025).Kuhn's Theorem for Games of the Extensive Form with Unawareness, mimeo., University of California Davis. 
+ Frackiewicz, P. (2019).Quantum penny flip game with unawareness, Quantum Information Processing 18, 15. 
+ Frackiewicz, P. (2018).Quantum games with unawareness, Entropy 20, 555. 
+ Frackiewicz, P.,Bilski, J. (2019).Quantum games with unawareness with duopoly problems in view, Entropy 21 1097. 
+ Francetich, A., Schipper, B.C. (2023).Rationalizable screening and disclosure under unawareness, University of California, Davis. 
+ Franke, M. (2014).Pragmatic reasoning about unawareness, Erkenntnis 79, 729-767. 
+ Franke, M. (2010).href="http://www.sfs.uni-tuebingen.de/~mfranke/Papers/Franke_2010_UnawareGames.pdf" - Modal
+
+models for games with unawareness
+, mimeo., University of Tuebingen. 
+ Franke, M., de Jager, T. (2011).Now that you mention it: Awareness Dynamics in Discourse and Decisions, in: Benz A., Ebert C., Jäger G., van Rooij R. (eds.) Language, Games, and Evolution. Lecture Notes in Computer Science, vol 6207. Springer, 60-91. 
+ Franke, M., de Jager, T. (2007).The relevance of awareness, in: Aloni, M., Dekker, P., Roelofsen, F. (Eds.), Proceedings of the 16th Amsterdam Colloqium, 97-102. 
+ Fritz, P., Lederman H. (2015).Standard state-space models of unawareness, in: Ramanujam, R. (Ed.), Proceedings of the 15. Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2015), Electronic Proceedings in Computer Science, Vol. 215. 
+ Fukuda, S. (2024).On the axiomatization of an unawareness structure from knowing-whether operators, Journal of Mathematical Economics115 103063. 
+ Fukuda, S. (2023).Strategic games with a possibility correspondence model of belief and unawareness, mimeo., Bocconi University. 
+ Fukuda, S. (2020).Unawareness without AU introspection, Journal of Mathematical Economics 94, 102456. 
+ Fukuda, S., Kamada Y. (2023).Unprecedented, mimeo., Bocconi University. 
+ Galanis, S. (2018).Speculation under unawareness, Games and Economic Behavior 109 598-615. 
+ Galanis, S. (2016).The value of information in risk-sharing environments with unawareness, Games and Economic Behavior 97, 1-18. 
+ Galanis, S. (2015).The value of information under unawareness, Journal of Economic Theory 157, 384-396. 
+ Galanis, S. (2013).Unawareness of theorems, Economic Theory 52, 41-73. 
+ Galanis, S. (2011).Syntactic foundation for unawareness of theorems, Theory and Decision 71, 593-614. 
+ Galanis, S., Kotronis, S. (2021).Updating awareness and information aggregation, B.E. Journal of Theoretical Economics 21, 613-635. 
+ Grant, S., Guerdjikova, A., Quiggin, J. (2021).Ambiguity and awareness: A coherent multiple priors model, B.E. Journal of Theoretical Economics 21, 571-612. 
+ Grant, S., Kline J., O’Callaghan, P., Quiggin, J. (2015).Sub-models for interactive unawareness, Theory and Decision 79 601-613. 
+ Grant, S., Kline J., Quiggin, J. (2012).Differential awareness and incomplete contracts: A model of contractual disputes, Journal of Economic Behavior and Organization 82, 494-504. 
+ Grant, S., Meneghel I., Tourky, R. (2022).Learning under unawareness, Economic Theory 74, 447-475. 
+ Grant, S., Quiggin J. (2017).The evolution of awareness, Journal of Economic Psychology 63, 86-92, 2017. 
+ Grant, S., Quiggin J. (2015).A preference model for choice subject to surprise, Theory and Decision 79, 167-180. 
+ Grant, S., Quiggin J. (2013).Inductive reasoning about unawareness, Economic Theory 54 717-755. 
+ Grant, S., Quiggin J. (2013).Bounded awareness, heuristics and the Precautionary Principle, Journal of Economic Behavior and Organization 93, 17-31. 
+ Grant, S., Quiggin J. (2008).Bounded rationality and small worlds, mimeo., Rice University. 
+ Grossi, D., Velazquez-Quesada, F.R. (2015).Syntactic awareness in logical dynamics, Synthese 192, 4071–4105. 
+ Grossi, D., Velazquez-Quesada, F.R. (2009).Twelve angry men: A study on the fine-gain of announcements, in: X. He, J. Horty, and E. Pacuit (Eds.), LORI 2009, LNAI 5834, Springer, 147-160. 
+ Guarino, P. (2020).An epistemic analysis of dynamic games with unawareness, Games and Economic Behavior 120, 257-288. 
+ Guerdjikova, A., Piermont, E., Quiggin, J. (2025). Do you know what I mean? A syntactic representation of differential bounded awareness, mimeo., University of Grenoble. 
+ Guerdjikova, A., Quiggin, J. (2021).Financial market equilibrium with bounded awareness, mimeo., University of Grenoble. 
+ Gui, Z.Q., Huang S., Zhao, X.J. (2024).Financial fraud and investor awareness, Journal of Economic Behavior and Organization 219, 104-123. 
+ Gui, Z.Q., Huang S., Zhao, X.J. (2021).Whom to educate? Financial literacy and investor awareness, China Economic Review 67, 101608. 
+ Guthman, R.R. (2023).href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3710809" - Imperfect
+
+competition as a result of unawareness
+, mimeo., Alberto Hurtado University. 
+ Halpern, J. (2001).Alternative semantics for unawareness, Games and Economic Behavior 37, 321-339. 
+ Halpern, J., Piermont E. (2020).Dynamic awareness, Proceedings of the 17th International Conference on Principles of Knowledge Representation and Reasoning (KR2020). 
+ Halpern, J., Piermont, E. (2019).The logic for partial awareness, Proceedings of the Thirty-Third AAAI Conference on Artificial Intelligence. 
+ Halpern, J., Rego L.C. (2014).Extensive games with possibly unaware players, Mathematical Social Sciences 70, 42-58. 
+ Halpern, J., Rego, L.C. (2013).Reasoning about knowledge of unawareness revisited, Mathematical Social Sciences 66, 73-84. 
+ Halpern, J., Rego L.C. (2009).Reasoning about knowledge of unawareness, Games and Economic Behavior 67, 503-525. 
+ Halpern, J., Rego L.C. (2008).Interactive unawareness revisited, Games and Economic Behavior 62, 232-262. 
+ Halpern, J., Rong N., Saxena, A. (2010).MDPs with unawareness,Proceedings of the 32nd Conference on Uncertainty in AI, 627-636. 
+ Hammarbaeck, K. (2018).Unawareness and communication in vertical relationships(Chapter 2), Dissertation Oxford University. 
+ Hayashi, T. (2012).Expanding state space and extension of beliefs, Theory and Decision 73, 591-604. 
+ Heifetz, A., Meier, M., Schipper, B.C. (2007/2021).Prudent rationalizability in generalized extensive-form games with unawareness, B.E. Journal of Theoretical Economics 21 525-556. 
+ Heifetz, A., Meier, M., Schipper B.C. (2013).Dynamic unawareness and rationalizable behavior, Games and Economic Behavior 81, 50-68. 
+ Heifetz, A., Meier M., Schipper, B.C. (2013).Unawareness, beliefs, and speculative trade, Games and Economic Behavior 77, 100-121.Free Prior PDF version with the universal type space 
+ Heifetz, A., Meier, M., Schipper, B.C. (2008).A canonical model of interactive unawareness, Games and Economic Behavior 62, 304-324.Free PDF 
+  
+ Heifetz, A., Meier, M., Schipper, B.C. (2007).A canonical model for interactive unawareness, in: Theoretical Aspects of Rationality and Knowledge, Proceedings of the 11th Conference (TARK 2007), Dov Samet (Ed.), Presses Universitaires De Louvain, 177-182. 
+  
+ Heifetz A., Meier, M., Schipper, B.C. (2007).Unawareness, beliefs and games,in: Theoretical Aspects of Rationality and Knowledge, Proceedings of the 11th Conference (TARK 2007), Dov Samet (Ed.), Presses Universitaires De Louvain 183-192. 
+ Heifetz, A., Meier M., Schipper, B.C. (2006).Interactive unawareness, Journal of Economic Theory 130, 78-94.Free PDF 
+ Heifetz, A., Meier M., Schipper, B.C. (2003).Multiperson unawareness, in: Halpern, J.Y. (Ed.), Proceedings of the 9th Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2003), 148-158. 
+ Heinsalu, S. (2014).Universal type structures with unawareness, Games and Economic Behavior 83, 255-266. 
+ Heinsalu, S. (2012).Equivalence of the information structure with unawareness to the logic of awareness, Journal of Economic Theory 147, 2453-2468. 
+ Hernandes, M. (2012).Players who are learning how to play: A Haskell implementation of awareness dynamics, In: Okumura, M., Bekki, D., Satoh, K. (Eds.), New Frontiers in Artificial Intelligence. JSAI-isAI 2011. Lecture Notes in Computer Science 7258 Springer, 
+ Herweg, F., Schmidt K. (2020).Procurement with unforeseen contingencies, Management Science 66 2194-2212. 
+ Hill, B. (2007). The logic of awareness change, Proceedings of ILCLI International Workshop on Logic and Philosophy of Knowledge, Communication and Action, University of the Basque Country Press.Hill, B. (2010).Awareness dynamics, Journal of Philosophical Logic 39, 113-137. 
+ Hill, B. (2013).Awareness and equilibrium, Synthese 190, 851-869. 
+ Holliday, W.H. (2022).A partial state-space model for unawareness, mimeo., University of California at Berkeley. 
+ Hoshi, T., Isaac, A. (2010).href="https://www.research.ed.ac.uk/files/14287052/AI_unawareness.pdf" - The
+
+strategic equivalence of games with unawareness
+, in: Grossi, D., Kurzen, L, Velazquez-Quesada, F.R. (Eds), Logic and the interactive rationality, Institute for Logic Language and Computation, 203-225. 
+ Huang, Z.S., Kwast K. (1991).Awareness negation and logical omniscience, in J. van Eijck (Ed.), Logics in AI, volume 478 of Lectures Notes in Computer Science, pages 282-300, Springer. 
+ Innes, C., Lacaradis, A. (2020).Learning factored Markov decision processes with unawareness, Proceedings of The 35th Uncertainty in Artificial Intelligence Conference, PMLR 115, 123-133. 
+ Karni, E. (2024).Decisions and discovery, mimeo., Johns Hopkins University. 
+  
+ Karni, E., Valenzuela-Stookey, Q., Vierø, M.-L. (2021).``Reverse Bayesianism'': A generalization, B.E. Journal of Theoretical Economics 21, 557--569. 
+  
+ Karni, E., Vierø, M.-L. (2025).href="http://www.econ2.jhu.edu/People/Karni/Comparative%20unawareness%20February%2012%202025.pdf" - Measurements
+
+of attitudes towards unawareness
+, mimeo., Johns Hopkins University and Aarhus University. 
+  
+ Karni, E., Vierø, M.-L. (2017).Awareness of unawareness: A theory of decision making in the face of ignorance, Journal of Economic Theory 168, 301--328. 
+ Karni, E., Vierø, M.-L. (2015).Probabilistic sophistication and reverse Bayesianism, Journal of Risk and Uncertainty 50, 189–208. 
+ Karni, E.,Vierø, M.-L. (2013)."Reverse Bayesianism": A choice-based theory of growing awareness, American Economic Review 103, 2790-2810. 
+ Kawamura, E. (2005).Competitive equilibrium with unawareness in economies with production, Journal of Economic Theory 121, 167-191. 
+ Kobayashi N., Sasaki, Y. (2024).Rationalizable self-confirming equilibrium in static games with unawareness, International Journal of Game Theory forthcoming. 
+ Kochov, A. (2018).A behavioral definition of unforeseen contingencies, Journal of Economic Theory 175, 265–290. 
+ Konolige K. (1986).What awareness isn't: A sentential view of implicit and explicit belief, in: J. Halpern (Ed.), Proceedings of the 1st Conference on Theoretical Aspects of Reasoning and Knowledge (TARK 1986), Morgan Kaufmann 241-250. 
+ Kubono, Y. (2024).Logic of awareness for nested knowledge, Shizuoka University. 
+ Kubono, Y., Racharak, T., Tojo, S. (2023).Logic of awareness in agent's reasoning, Proceedings of the 15th International Conference on Agents and Artificial Intelligence - Volume 1: ICAART. 
+ Lei, H.R., Zhao, X.J. (2021).Delegation and information disclosure with unforeseen contingencies, B.E. Journal of Theoretical Economics 21, 637-656. 
+ Lehrer, E., Teper, R. (2014).Extension rules or what would the sage do?, American Economic Journal: Microeconomics 6, 5-22. 
+ Li J. (2008a).Modeling unawareness with an arbitrary state space, mimeo., University of Pennsylvania. 
+ Li J. (2008b).A note on unawareness and zero probability, mimeo., University of Pennsylvania. 
+ Li J. (2008c).Interactive knowledge with unawareness, mimeo., University of Pennsylvania. 
+ Li J. (2006). Dynamic games of complete information with unawareness mimeo., University of Pennsylvania. 
+ Li J. (2003/2009).Information structures with unawareness, Journal of Economic Theory 144 977-993. 
+ Li S.X., Peitz, M., Zhao, X.J. (2016).Information disclosure and consumer awareness, Journal of Economic Behavior and Organization 128, 209-230. 
+ Li S.X., Peitz, M., Zhao, X.J. (2014).href="http://dx.doi.org/10.1016/j.mathsocsci.2012.11.001" - Vertically
+
+differentiated duopoly with unaware consumers
+, Mathematical Social Sciences 70, 59-67. 
+ Li Y.X., Schipper, B.C. (2025).Disclosure under unawareness: An experiment, mimeo., University of California, Davis. 
+ Li Y.X., Schipper, B.C. (2024).Raising bidders' awareness in second-price auctions,mimeo., University of California, Davis. 
+ Liu, Z. (2008/2017).Information acquisition in the era of fair disclosure: An application of asymmetric awareness, B.E. Journal of Theoretical Economics 17, 20160027. 
+ Liu, Z. (2016).Games with incomplete information when players are partially aware of others' signals, Journal of Mathematical Economics 65, 58-70. 
+ Liu, Z. (2008).The Dirty Face Problem with Unawareness, B.E. Journal of Theoretical Economics 8, Article 28. 
+ Liu, Z., Qiu, C. (2011).Consumer unawareness and competitive strategies, mimeo., University of Buffalo. 
+ Lorini, E., Song, P. (2023).A computational grounded logic of awareness, Journal of Logic and Computation 33, 1463-1496. 
+ Ma, W.J., Schipper B.C. (2017).Does exposure to unawareness affect risk preferences? A preliminary result, Theory and Decision 83, 245–257. 
+ Mace, N., Clifton J., Kollin, S. (2023).Open-minded updatelessness, AI Alignment Forum 
+ Mahtani, A. (2021).Awareness growth and dispositional attitudes, Synthese 198 8981--8997. 
+ Mandotto, M., Severino, F. (2023).Heterogeneous awareness in financial markets, Journal of Economic Behavior and Organization 216, 26-41. 
+ Meier, M., Schipper B.C. (2023).Conditional dominance in games with unawareness, mimeo., The University of California, Davis. 
+ Meier, M., Schipper B.C. (2014).Bayesian games with unawareness and unawareness perfection, Economic Theory 56, 219-249.Free PDF 
+ Meier, M., Schipper, B.C. (2014).Speculative trade under unawareness: The infinite case, Economic Theory Bulletin 2, 147-160.Free PDF 
+  
+ Mengel, F., Tsakas, E., Vostroknutov, A. (2016).Past experience of uncertainty affects risk aversion, Experimental Economics 19, 151–176. 
+  
+ Mengel, F., Tsakas, E., Vostroknukov, A. (2012).Decision making with imperfect knowledge of the state space, mimeo., Maastricht University. 
+  
+ Mengel, F., Tsakas, E., Vostroknukov, A. (2009).Awareness in repeated games, mimeo., Maastricht University. 
+  
+ Modica, S. (2008).Unawareness priors and posteriors, Decisions in Economics and Finance 31 81-94. 
+  
+ Modica, S., Rustichini, A. (1999).Unawareness and partitional information structures, Games and Economic Behavior 27, 265-298. 
+ Modica, S., Rustichini, A. (1994).Awareness and partitional information structures, Theory and Decision 37, 107-124. 
+ Modica, S., Rustichini, A., Tallon, J.-M. (1998).Unawareness and bankruptcy: A general equilibrium model, Economic Theory 12, 259-292. 
+ Montiel Olea, J.L. (2008).href="http://allman.rhon.itam.mx/%7Eddomingue/research/UnawarenessPepe.pdf" - A characterization of trivial
+            unawareness,
+mimeo., ITAM. 
+ Nielsen, C., Sebald, A. (2016).Simple unawareness in dynamic psychological games, B.E. Journal of Theoretical Economics 16, 1-29. 
+ Ozbay, E. (2008).Unawareness and strategic announcements in games with uncertainty, mimeo., University of Maryland. 
+ Park, M., Schipper B.C. (2025).Forward guidance in a New Keynesian model with unawareness, mimeo., University of California, Davis. 
+ Perea, A. (2022).Common belief in rationality in games with unawareness, Mathematical Social Sciences 119, 11-30. 
+ Pettigrew, R. (2024).How should your beliefs change when your awareness grows?, Episteme 21 733-757. 
+ Piermont, E. (2024).Iterated revelation: How to incentive experts to complete incomplete contracts, mimeo., Royal Holloway. 
+ Piermont, E. (2023).Algebraic semantics for relative truth, awareness, and possibility, Review of Symbolic Logic, forthcoming. 
+ Piermont, E. (2021).Unforeseen evidence, Journal of Economic Theory 193, 105235. 
+ Piermont, E. (2017).Introspective unawareness and observable choice, Games and Economic Behavior 106, 134--152. 
+ Pinter, M., Udvari Z. (2011).href="https://econpapers.repec.org/scripts/redir.pf?u=https%3A%2F%2Fmpra.ub.uni-muenchen.de%2F34107%2F1%2FMPRA_paper_34107.pdf;h=repec:pra:mprapa:34107" - Generalized type spaces
+, mimeo., Corvinus University. 
+ Pires, C. (1994/2021).Do I know Omega? An axiomatic model of awareness and knowledge, B.E. Journal of Theoretical Economics 21, 395-432. 
+ Pram, K., Schipper B.C. (2024).Efficient mechanisms under unawareness, mimeo., University of California, Davis. 
+ Proietti, C., Velazquez-Quesada, F.R., Yuste-Ginel, A. (2023).An abstract look at awareness models and their dynamics, in: Verbrugge, R. (Ed.), Theoretical Aspects of Rationality and Knowledge 2023 (TARK 2023), EPTCS 379, 455-469. 
+ Quiggin, J. (2017).Dynamic awareness and zero probability beliefs, Theory and Decision 83, 309-313. 
+ Quiggin, J. (2015).The value of information and the value of awareness,Theory and Decision 80, 167-185. 
+ Quiggin, J., Siddiqi, H. (2014).Differential awareness, financial innovation and financial crises, mimeo., University of Queensland. 
+ Rathke, A.A.T. (2025).Revisiting the state-space model of unawareness, Finance Research Letters 72, 106583. 
+ Rego, L.C., Halpern, J. (2012).Generalized solution concepts in games with possibly unaware players, International Journal of Game Theory 41, 131-155. 
+ Rego, L.C., Vieira, G.I.A. (2022).Interactive unawareness in the graph model for multilateral conflicts, Discrete Applied Mathematics 318, 31-46. 
+ Rego, L.C., Vieira, G.I.A. (2020).Interactive Unawareness in the graph model for conflict resolution, IEEE Transactions on Systems Man Cybernetics-Systems 50 829-839. 
+ Rong, N. (2016).Learning in the presence of unawareness, PhD Thesis, Cornell University, 
+ Rong, N., Halpern, J.Y., Saxena, A. (2016).MDPs with unawareness in robotics, Proceedings of the 32nd Conference on Uncertainty in AI, 627-636, 
+ Roussos, J. (2024).Awareness revision and belief extension, Australasian Journal of Philosophy 1-24. 
+ Sadzik, T. (2006/2021).Knowledge awareness and probabilistic beliefs, B.E. Journal of Theoretical Economics 21, 489-524. 
+  
+ Sasaki, Y. (2022).Unawareness of decision criteria in multicriteria games, Mathematical Social Sciences 119, 31–40. 
+  
+ Sasaki, Y. (2017).Generalized Nash equilibrium with stable belief hierarchies in static games with unawareness, Annals of Operations Research 256 271–284 
+  
+ Sasaki, Y. (2016).An equivalence result on the reduction of games with unawareness, International Game Theory Review 18, 1650009. 
+  
+ Sasaki, Y., Tada, Y. (2024).Revisiting introspection axioms for unawareness in standard state-space models, mimeo., Gakushuin University. 
+ Schipper, B.C. (2024).Predicting the unpredictable under subjective expected utility, mimeo., University of California, Davis. 
+ Schipper, B.C. (2021).Interactive awareness of unawareness, mimeo., University of California, Davis. 
+ Schipper, B.C. (2021).Discovery and equilibrium in games with unawareness,Journal of Economic Theory 198, 105365.Free PDF 
+ Schipper, B.C. (2017).Self-confirming games: Unawareness, discovery, and equilibrium, in: Theoretical Aspects of Rationality and Knowledge Proceedings of the Sixteens Conference (TARK 2017), Jerome Lang (Ed.), Electronic Proceedings in Theoretical Computer Science 251, 470–488. 
+ Schipper, B.C. (2016).Network formation in a society with fragmented knowledge and awareness,mimeo., University of California, Davis. 
+ Schipper, B.C. (2015).Awareness, in: Handbook of Epistemic Logic, Chapter 3, H. van Ditmarsch J.Y. Halpern, W. van der Hoek and B. Kooi (Eds.), College Publications, London, 77–146. 
+ Schipper, B.C. (2014).Preference-based unawareness, Mathematical Social Sciences 70, 34-41.Free PDF 
+ Schipper, B.C. (2014).Unawareness - A gentle introduction to both the literature and the special issue, Mathematical Social Sciences 70, 1-9.Free PDF 
+  
+ Schipper, B.C. (2013).Awareness-dependent subjective expected utility, International Journal of Game Theory 42, 725--753.Free PDF 
+  
+ Schipper, B.C., Woo, H.Y. (2019).Political Awareness, microtargeting of voters and negative electoral campaigning, Quarterly Journal of Political Science 14 41-88.Free PDF 
+  
+ Schipper, B.C., Zhang, T.D. (2025).Matching unanticipated experiences, divorce, flirting, rematching, etc., mimeo., University of California, Davis. 
+  
+ Schipper, B.C., Zhou H. (2023).Insiders trading on unknown unknowns, mimeo., University of California, Davis. 
+ Sedlar, I. (2013).Information awareness, and substructural logic, WoLLIC 2013: Proceedings of the 20th International Workshop on Logic Language, Information, and Computation - Volume 8071, 266–281. 
+ Sedlar, I. (2013).Justifications awareness and epistemic dynamics, in: Artemov, S., Nerode, A. (Eds.), Logical Foundations of Computer Science (LFCS 2013), 307–318. Lecture Notes 
+ in Computer Science 7734, Springer,307–318. 
+ Sedlar, I. (2011).Awareness and the preface paradox, mimeo., Comenius University Bratislava. 
+ Selten, R. (1979). Limited rationality and structural uncertainty, in: Wittgenstein, The Vienna Circle and Critical Rationalism Proceedings of the 3rd International Wittgenstein Symposium 476-483. 
+ Siddiqi, H., Quiggin, J. (2017).Differential awareness of rare disasters and the pricing kernel puzzle, mimeo., University of Queensland. 
+ Sillari, G. (2006).Models of awareness, in: G. Bonanno, W. van der Hoek, and M. Woolridge (Eds.), Proceedings of the 7th Conference on Logic and the Fundations of Game and Decision Theory (LOFT 2006), 209-218. 
+ Sillari, G. (2008).Quantified logic of awareness and impossible possible worlds, Review of Symbolic Logic 1 514-529. 
+ Silva, P. (2024). Awareness, in: Sylvan, K, Sosa, E., Dancy, J., Steup, M. (Eds.), The Blackwell Companion to Epistemology, 3rd edition. 
+ Silva, P. (2023). Awareness and the substructure of knowledge, Oxford University Press. 
+ Silva, P. (2022).Basic knowledge and the normativity of knowledge: The awareness‐first solution, Philosophy and Phenomenological Research 104 564-586. 
+ Silva, P., Siscoe R.W. (2024).Ignorance and awareness, Nous 58, 225-243. 
+ Sommer, S.C., Loch C.H. (2009).Incentive contracts in projects with unforeseeable uncertainty, Production and Operations Management 18, 185-196. 
+ Sommer, S.C., Loch C.H. (2004).Selectionism and learning in projects with complexity and unforeseeable uncertainty, Management Science 50, 1334-1347. 
+ Sommer, S.C., Loch C.H., Dong J. (2009).Managing complexity and unforeseen uncertainty in startup companies: An empirical study, Organization Science 20, 118-133. 
+ Song, P., Xiong, W. (2023).Awareness of potential for knowledge, Journal of Philosophical Logic 52, 669-703. 
+ Steele, K., Stefansson, H.O. (2021). Beyond uncertainty: Reasoning with unknown possibilities, Cambridge University Press. 
+ Tada, Y. (2024).AU introspection and symmetry under non-trivial unawareness, Theory & Decisions 97, 409-421. 
+ Tada, Y. (2022).Coordination and imitation under unawareness, mimeo., Chuo University. 
+ Tada, Y. (2022).Unawareness of actions and myopic discovery process in simultaneous-move games with unawareness, mimeo., Chuo University. 
+ Tada, Y. (2021).Unawareness and reverse symmetry: Aumann structure with complete lattice, mimeo., Chuo University. 
+ Tada, Y. (2021).Unawareness of actions and closedness under rational behavior in static games with unawareness, mimeo., Chuo University. 
+ Tada, Y. (2021).Discovery process in normal-form games with unawareness: Cognitive stability and closedness under rational behavior, mimeo., Chuo University. 
+ Tada, Y. (2021).Is “unawareness leads to ignorance” trivial?, mimeo., Chuo University. 
+ Talaei-khoei, A., Solvoll, T., Ray P., Parameswaran, N. (2011).Policy-based Awareness Management (PAM): Case study of a wireless communication system at a hospital, Journal of Systems and Software 84, 1791-1805. 
+ Talaei-khoei, A., Ray, P., Parameswaran, N., Beydoun, G. (2011).href="https://ro.uow.edu.au/cgi/viewcontent.cgi?article=9291&context=infopapers" - Modelling
+
+awareness of agents using policies
+, ICSOFT 2011 - Proceedings of the 6th International Conference on Software and Data Technologies, 353-358. 
+ Tashiro, M. (2024).Weak explicit belief, LOFT Bayreuth. 
+ Tashiro, M. (2022).Dynamic logic of learning and change of awareness, DaLi Haifa. 
+ Tashiro, M. (2022).Models of deliberation for a group with asymmetric awareness, LOFT Groningen. 
+ Teeple, K. (2023).Surprise and default in general equilibrium, Theoretical Economics 18 1547–1583. 
+ von Thadden, E.-L., Zhao X.J. (2014).Multitask agency with unawareness, Theory and Decision 77, 197-222. 
+ von Thadden, E.-L., Zhao X.J. (2012).Incentives for unaware agents, Review of Economic Studies 79, 1151-1174.Thijsse, E. (1991).On total awareness logic (with special attention to monotonicity constraints and exibility), in: M. De Rijke (Ed.), Diamond and defaults: Studies in Pure and Applied Intensional Logic, Kluwer, 309-347. 
+ Thijsse, E., Wansing, H. (1996).A fugue on the themes of awareness logic and correspondence, Journal of Applied Non-Classical Logics 6, 127-136. 
+ Velazquez-Quesada F.R. (2018).Bisimulation characterization and expressivity hierarchy of languages for epistemic awareness models, Journal of Logic and Computation 28, 1805-1832. 
+ Vierø, M.-L. (2023).href="https://econ.au.dk/fileadmin/site_files/filer_oekonomi/Working_Papers/Economics/2022/wp22_06.pdf" - Lost
+
+in translation: Awareness of unawareness when unknowns are
+            not simply unknowns
+, Aarhus University. 
+  
+ Vierø, M.-L. (2021).An intertemporal model of growing awareness, Journal of Economic Theory 197, 105351. 
+ Walker, O. (2014).Unawareness with "possible" possible worlds, Mathematical Social Sciences 70, 23-33. 
+ Walker, O., Dietz, S. (2018).A representation result for choice under conscious unawareness, mimeo., London School of Economics. 
+ Wansing, H. (1990).A general possible worlds framework for reasoning about knowledge and belief,Studia Logica 49, 523-539.Xiong, S.Y. (2007). Unawareness and the standard state space revised, mimeo., Northwestern University. 
+ Zhao, X.J. (2011).Framing contingencies in contracts, Mathematical Social Sciences 61, 31-40. 
+ Zhao, X.J. (2008).Moral hazard with unawareness,Rationality and Society, 20, 471-496. 
+ Related Work 
+ Ahn, D., Ergin, H. (2010).Framing contingencies, Econometrica, 78, 655-695. 
+ Al-Najjar, N., Anderlini, L., Felli, L. (2006).Undescribable events, Review of Economic Studies 73, 849-868. 
+  
+ Anderlini, L. and L. Felli (1994).Incomplete written contracts: Undescribable states of nature, Quarterly Journal of Economics 109, 1085-1124. 
+ Dekel, E., Lipman, B., Rustichini, A. (2001).Representing preferences with a unique subjective state space, Econometrica, 69, 891-934. 
+  
+ Dekel, E., Lipman B., Rustichini, A. (1998).Recent developments in modeling unforeseen contingencies, European Economic Review, 42, 523-542. 
+ Epstein, L., Marinacci, M., Seo, K. (2007).Coarse contingencies and ambiguity, Theoretical Economics 2, 355-394. 
+ Gennaioli, N., Shleifer, A. (2010).What comes to mind, Quarterly Journal of Economics 125, 1399-1433. 
+ Ghirardato, P. (2001).Coping with ignorance: Unforeseen contingencies and non-additive uncertainty, Economic Theory 17, 247-276. 
+ Kreps, D. M. (1992). Static choice in the presence of unforeseen contingencies, in: P. Dasgupta, D. Gale, O. Hart, and E. Maskin (Eds.), Economic Analysis of Markets and Games: Essays in Honor of Frank Hahn MIT Press: Cambridge, MA, 258–281. 
+ Kreps, D.M. (1979).A representation theorem for ‘preference for flexibility’, Econometrica 47, 565–577. 
+ Kunimoto, T. (2010).Indescribability and Its Irrelevance for Contractual Incompleteness, Review of Economic Design 14, 271-289.Kunimoto, T.(2008).Indescribability and Asymmetric Information at the Contracting Stage, Economics Letters 99, 367-370. 
+ Lee, J. (2008).Unforeseen contingencies and renegotiation with asymmetric information, Economic Journal 118, 678-694. 
+ Lleras, J.S.,Masatlioglu, Y., Nakajima, D., Ozbay, E. (2017).When more is less: Limited consideration, Journal of Economic Theory 170, 70-85. 
+ Masatlioglu Y., Nakajima, D., Ozbay, E. (2012).Revealed attention, American Economic Review 102, 2183-2205. 
+ Maskin, E. (2002).On indescribable contingencies and incomplete contracts, European Economic Review 46, 725-733. 
+ Maskin, E., Tirole J. (1999).Unforeseen contingencies and incomplete contracts, Review of Economic Studies 66 83-114. 
+ Tirole, J. (2009).Cognition and incomplete contracts, American Economic Review 99 265-294. 
+ Financial support via NSF Grant No. 0647811 and ARO Contract W911NF2210282 is gratefully acknowlegded.
+

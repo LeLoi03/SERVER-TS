@@ -1,0 +1,74 @@
+{
+  "Conference dates": "May 31 - June 1, 2025",
+  "Year": "2025",
+  "Location": "City University of Hong Kong, Hong Kong, China",
+  "City-State-Province": "Hong Kong",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission due": "February 28, 2025"
+  },
+  "Notification Date": {
+    "Notification": "March 28, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version due": "April 18, 2025"
+  },
+  "Registration Date": {
+    "Early Registration due": "April 25, 2025"
+  },
+  "Topics": "Theoretical Computer Science, Algorithms, Complexity Theory",
+  "Keynote Speakers": [
+    "Yossi Azar (Tel-Aviv University)",
+    "Eunjung Kim (Korea Advanced Institute of Science & Technology)"
+  ],
+  "Program Committees": [
+    "Hee-Kap Ahn (Pohang University of Science and Technology (POSTECH))",
+    "Sang Won Bae (Kyonggi University)",
+    "Ho-Lin Chen (National Taiwan University)",
+    "Siu-Wing Cheng (The Hong Kong University of Science and Technology, Chair)",
+    "Minming Li (City University of Hong Kong)",
+    "Chung-Shou Liao (National Tsing Hua University)",
+    "Pinyan Lu (Shanghai University of Finance and Economics)",
+    "Heejin Park (Hanyang University)",
+    "Kunihiko Sadakane (The University of Tokyo)",
+    "Xiaoming Sun (Chinese Academy of Sciences)",
+    "Takeshi Tokuyama (Tohoku University)",
+    "Ryuhei Uehara (Japan Advanced Institute of Science and Technology (JAIST))",
+    "Guochuan Zhang (Zhejiang University)",
+    "Shengyu Zhang (The Chinese University of Hong Kong)"
+  ],
+  "Accepted Papers": [
+    "Ke Yi. Instance Optimality in Differential Privacy",
+    "Moshe Babaioff, Yiding Feng and Noam Manaker Morag. On the Efficiency of Fair and Truthful Trade Mechanisms",
+    "Subhash Suri, Jie Xue, Xiongxin Yang and Jiumu Zhu. Dynamic Maximum Depth of Geometric Objects",
+    "Yiding Feng and Wei Tang. Confusion Matrix Design for Downstream Decision-making",
+    "Lin Chen, Yuchen Mao and Guochuan Zhang. Long Arithmetic Progressions in Sumsets and Subset Sums: Constructive Proofs and Efficient Witnesses",
+    "Wan-Ting Huang and Hsu-Chun Yen. Crossing Minimization in Ortho-Radial Drawings of Column Trees",
+    "Siu-Wing Cheng, Haoqiang Huang and Shuo Zhang. Constant Approximation of Fréchet Distance in Strongly Subquadratic Time",
+    "Tetsuo Asano, Risa Ishikawa, Naoki Katoh and Takeshi Tokuyama. Near-unit Distance Embedding of Points in the Plane and Space",
+    "Siu-Wing Cheng, Haoqiang Huang and Le Jiang. Simplification of Trajectory Streams",
+    "Taekang Eom, Taehoon Ahn, Minju Song and Hee-Kap Ahn. Shortcutting the Diameter of a Polygon",
+    "Rin Saito and Takehiro Ito. Complexity of Reconfiguring Vertex-Disjoint Shortest Paths",
+    "Daiki Okayama, Yuya Higashikawa and Shuichi Miyazaki. Online Exploration of Grid Graphs with Multiple Searchers",
+    "Ren Kimura, Sankardeep Chakraborty, Roberto Grossi, Giulia Punzi, Kunihiko Sadakane and Wiktor Zuba. Space-efficient Representations for a Set of k-mers",
+    "Yuki Seto, Kunihiko Sadakane and Kazunari Tozawa. Private-Preserving Encoding and Decoding Using Variable-Length Coding Schemes",
+    "Genjie Qin, Wenjing Liu and Qizhi Fang. Mechanism Design for Locating a Bridge Between Regions with Prelocated Facilities",
+    "Daigo Oitaira. Space-Efficient Data Structure for (k...21)-avoiding Involutions",
+    "Chih-Chung Chen and Chung-Shou Liao. Learning-Augmented Algorithms for Online Time-Window TSP",
+    "Riki Muto and Yasuhiko Takenaga. Yavalath is PSPACE-Complete",
+    "Yi-Fang Lee and Chung-Shou Liao. Learning-augmented Algorithms for Density Peaks Clustering",
+    "Byeonguk Kang, Hwi Kim and Hee-Kap Ahn. Guarding Terrains with Guards on a Line",
+    "Felix Hommelsheim, Zhenwei Liu, Nicole Megow and Guochuan Zhang. Protecting the Connectivity of a Graph Under Non-Uniform Edge Failures",
+    "Chaeyoon Chung, Jaegun Lee and Hee-Kap Ahn. Improved Algorithms for Finding the Smallest Color-Spanning Two Squares",
+    "I-Fan Chan, Ya-Chun Liang and Chung-Shou Liao. The Public University Secretary Problem with Predictions",
+    "Minming Li, Biaoshuai Tao, Houyu Zhou and Tianze Wei. Fair Allocation of Items in Multiple Regions",
+    "Bo Li. Approximate Maximin Share with Subjective Divisibility",
+    "Yi-Ting Hsieh, Cheng-Yu Ma and Chung-Shou Liao. Topological Features for Graph Representations",
+    "Fei Wu, Jannik Matuschke and Erik Demeulemeester. Interdiction Game on Machine Scheduling under Budgeted Unavailability Patterns",
+    "Jaegun Lee, Hyojeong An, Hwi Kim and Hee-Kap Ahn. Monotone Partitions of Simple Polygons"
+  ],
+  "Summary": "The 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on May 31 and June 1, 2025, at City University of Hong Kong.  The meeting invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. It is a face-to-face event, and at least one author of each submission is expected to register and give a talk.",
+  "Call for Papers": "# AAAC 2025 Call for Papers\n\nThe 16th Annual Meeting of the Asian Association for Algorithms and Computation (AAAC 2025) will take place on **May 31 and June 1, 2025**, at the **City University of Hong Kong, Hong Kong, China.**\n\nWe invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting is a face-to-face event, and at least one author of each submission is expected to register and give the talk at the venue.\n\n## Topics\n\nAll areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.\n\n## Submissions\n\nAuthors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results of authors. Informal working notes including the one-page abstracts will be distributed at the meeting, which does not prevent any form of future publication of the same work. All submissions should be made electronically through the EasyChair Conference System: [https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025)."
+}

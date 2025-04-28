@@ -1,0 +1,35 @@
+```json
+{
+  "Conference dates": "March 17 - 20, 2025",
+  "Year": "2025",
+  "Location": "Trondheim, Norway",
+  "City-State-Province": "Trondheim",
+  "Country": "Norway",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full papers": "November 15, 2024",
+    "Short papers": "November 15, 2024",
+    "Late-Breaking Papers": "February 15, 2025",
+    "Poster-Only Submissions": "February 15, 2025",
+    "Journal to Conference (J2C) Submissions": "February 15, 2025"
+  },
+  "Notification Date": {
+    "Full papers": "January 15, 2025",
+    "Short papers": "January 15, 2025",
+    "Late-Breaking Papers": "March 1, 2025",
+    "Poster-Only Submissions": "March 1, 2025",
+    "Journal to Conference (J2C) Submissions": "March 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Full papers": "February 28, 2025",
+    "Short papers": "February 28, 2025",
+    "Late-Breaking Papers": "March 15, 2025",
+    "Poster-Only Submissions": "March 15, 2025",
+    "Journal to Conference (J2C) Submissions": "March 15, 2025"
+  },
+  "Topics": "Computational Intelligence, Energy, Transport, Environmental Sustainability, Engineering, Cyber Physical Systems, Image Processing, Signal Processing, Synthetic Media, Artificial Life, Cooperative Intelligent Systems, Security, Defence, Biometrics, Health, Medicine, Financial Engineering, Economics, Natural Language Processing, Social Media, Trustworthy AI, Explainable AI, Responsible AI",
+  "Summary": "The 2025 IEEE Symposium Series on Computational Intelligence (IEEE SSCI 2025) will be held in Trondheim, Norway from March 17-20, 2025.  This event marks a significant milestone, launching a newly restructured biennial Symposia Series featuring ten dedicated Applied Computational Intelligence Symposia.",
+  "Call for Papers": "# IEEE SSCI 2025: Call for Papers and Other Submissions\n\nThe 2025 IEEE Symposium Series on Computational Intelligence (IEEE SSCI 2025) will be held in **Trondheim, Norway from March 17-20, 2025.** This event launches a newly restructured biennial Symposia Series featuring ten dedicated Applied Computational Intelligence Symposia.\n\n## Symposia\n\n*   2025 IEEE Symposia on CI for Energy, Transport and Environmental Sustainability (IEEE CIETES)\n*   2025 IEEE Symposia on CI in Engineering / Cyber Physical Systems (IEEE CIES)\n*   2025 IEEE Symposia on CI in Image, Signal Processing and Synthetic Media (IEEE CISM)\n*   2025 IEEE Symposia on CI in Artificial Life and Cooperative Intelligent Systems (IEEE ALIFE-CIS)\n*   2025 IEEE Symposia on CI in Security, Defence and Biometrics (IEEE CISDB)\n*   2025 IEEE Symposia on CI in Health and Medicine (IEEE CIHM)\n*   2025 IEEE Symposia on CI for Financial Engineering and Economics (IEEE CiFer)\n*   2025 IEEE Symposia on CI in Natural Language Processing and Social Media (IEEE CI-NLPSoMe)\n*   2025 IEEE Symposia on Trustworthy, Explainable and Responsible CI (IEEE CITREx)\n*   2025 IEEE Symposia for Multidisciplinary Computational Intelligence Incubators (IEEE MCII)\n\n## Paper Types\n\n*   **Full papers:** Complete papers describing your novel research in full. Up to 6 pages, plus 1 page for references. A maximum of two extra content pages per full paper is allowed (i.e., up to 8 pages plus 1 page for references), at an additional charge per extra page as specified in the registration page. Lightning talk + poster.\n*   **Short papers:** Papers with novel insights, approaches, or ideas which may not have been fully tested yet. Up to 4 pages, plus 1 page for references. Poster.\n*   **Late-breaking papers:** Extended abstracts with a \"prequel\" to provoke novel conversations for future work or ideas to emerge, or with a \"sequel\" to a prior research contribution, or with a discussion to alert the community of important topics that may not yet have received sufficient attention, or with an original discussion or critique of existing methodologies. Up to 2 pages, including references, if any. Poster.\n*   **Abstract (poster-only) submission:** Abstracts may involve, e.g., novel insights, or new ideas which may not have been fully tested yet, or presentation of challenges posed by a given domain that could benefit from computational intelligence. Up to 250 words. Poster.\n*   **Journal to conference (J2C):** Papers accepted at IEEE Transactions journals sponsored by CIS and first appeared in IEEEXplore within the past 2 years. Up to 1 page listing bullet points with the highlights of the paper, and an explanation on why you believe the paper to be relevant to SSCI. Lightning talk + poster.\n\n## Important Dates\n\n*   **Full papers and Short papers Submission Deadline:** November 15, 2024\n*   **Full papers and Short papers Notification of Acceptance:** January 15, 2025\n*   **Full papers and Short papers Camera-ready Submission Deadline:** February 28, 2025\n*   **Late-Breaking Papers, Poster-Only Submissions, and J2C Submissions Deadline:** February 15, 2025\n*   **Late-Breaking Papers, Poster-Only Submissions, and J2C Submissions Notification of Acceptance:** March 1, 2025\n*   **Late-Breaking Papers, Poster-Only Submissions, and J2C Submissions Camera-ready Submission Deadline:** March 15, 2025\n\n## Download Call for Papers and Abstracts\n\n[Download Call for Papers and Abstracts](./assets/files/SSCI-2025-call-4-papers.pdf)"
+}
+```

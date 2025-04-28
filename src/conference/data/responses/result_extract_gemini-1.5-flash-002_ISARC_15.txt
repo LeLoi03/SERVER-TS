@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": "July 28 - 31, 2025",
+  "Year": "2025",
+  "Location": "Montreal, Canada",
+  "City-State-Province": "Montreal",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission Deadline": "January 15, 2025",
+    "Revised Versions Due": "March 14, 2025"
+  },
+  "Notification Date": {
+    "Provisional Acceptance of Papers & Comments from Reviewers": "February 21, 2025",
+    "Final Notification": "March 25, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Papers Upload": "April 15, 2025"
+  },
+  "Registration Date": {
+    "Early Bird Registration Deadline": "April 21, 2025",
+    "Final Registration Deadline": "June 25, 2025"
+  },
+  "Other Date": {
+    "Rebuttal Period": "February 13 - March 14, 2025"
+  },
+  "Topics": "Automation tools and techniques, Application domains in the construction value chain, Sectors, Sensing systems & data infrastructures, Information modeling techniques, Human-machine interface, mixed realities, Automated/robotic devices, Construction management techniques, Services and business applications, Technology management, entrepreneurship, and innovation, Technologies and applications in developing countries, Developers and real estate, Architecture, planning, engineering, Construction execution management, Materials, components, off-site manufacturing, Supply chain and logistics, On-site construction, construction equipment, Building operation and maintenance, Renovation and circularity, Building construction, Infrastructure and civil construction, Industrial construction, Mining, energy/oil/gas industry, Smart, sustainable, and resilient cities, Space/maritime/etc. construction, Smart mobility and transportation",
+  "Summary": "The 42nd International Symposium on Automation and Robotics in Construction (ISARC 2025) will be held in Montreal, Canada, from July 28–31, 2025. Hosted by the Centre for Innovation in Construction and Infrastructure Engineering and Management (CICIEM), Concordia University, the conference theme is \"Decarbonizing the Construction Industry.\"",
+  "Call for Papers": "# ISARC 2025: Call for Papers\n\nThe 42nd International Symposium on Automation and Robotics in Construction (ISARC 2025) will be held in **Montreal, Canada, from July 28–31, 2025.**  Hosted by the **Centre for Innovation in Construction and Infrastructure Engineering and Management (CICIEM), Concordia University.**\n\n## Theme\n\nDecarbonizing the Construction Industry\n\n## Topics Framework\n\nThe technical areas summarize the paper topic areas of interest, which represents all the research themes that are relevant to ISARC/IAARC.  Based on the previous years’ ISARC, the technical areas are grouped into the following three Axes; upon submission of the full paper, authors need to select one and only one major Axis, and up to three areas (among all the Axes):\n\n**Axis 1: Automation tools and techniques**\n\n*   Sensing systems & data infrastructures\n*   Information modeling techniques\n*   Human-machine interface, mixed realities\n*   Automated/robotic devices\n*   Construction management techniques\n*   Services and business applications\n*   Technology management, entrepreneurship, and innovation\n*   Technologies and applications in developing countries\n*   Other topics\n\n**Axis 2: Application domains in the construction value chain**\n\n*   Developers and real estate\n*   Architecture, planning, engineering\n*   Construction execution management\n*   Materials, components, off-site manufacturing\n*   Supply chain and logistics\n*   On-site construction, construction equipment\n*   Building operation and maintenance\n*   Renovation and circularity\n*   Other topics\n\n**Axis 3: Sectors**\n\n*   Building construction\n*   Infrastructure and civil construction\n*   Industrial construction\n*   Mining, energy/oil/gas industry\n*   Smart, sustainable, and resilient cities\n*   Space/maritime/etc. construction\n*   Smart mobility and transportation\n*   Other topics\n\n## Important Dates\n\n*   **Full Paper Submission Deadline:** January 15, 2025\n*   **Provisional Acceptance of Papers & Comments from Reviewers:** February 21, 2025\n*   **Rebuttal Period:** February 13 – March 14, 2025 (authors to address comments and revise papers)\n*   **Revised Versions Due:** March 14, 2025\n*   **Final Notification:** March 25, 2025\n*   **Camera-ready Papers Upload:** April 15, 2025\n*   **Early Bird Registration Deadline:** April 21, 2025\n*   **Final Registration Deadline:** June 25, 2025\n*   **ISARC 2025:** July 28 – 31, 2025\n\n## Submission Guidelines\n\nAll authors of papers are required to follow the instructions given in either one of the following paper templates:\n\n*   [Microsoft Word (.DOCX)](https://www.iaarc.org/wp-content/uploads/2024/10/ISARC-Paper_Template_Revised-ver.-align-with-Latex-clean.docx)\n*   [LaTex (Overleaf)](https://www.overleaf.com/latex/templates/isarc-latex-paper-template/mkbhpjzmhchc)\n\nPlease make sure you also read the Topics, Paper and Presentation Types, and Review and Publication Process pages before the submission.\n\n## Paper Conference Management System\n\nPlease submit your paper via ConfTool: [https://www.conftool.pro/isarc2025/index.php](https://www.conftool.pro/isarc2025/index.php)\n\n## Copyright Transfer Agreement\n\nAll authors are required to accept the [Copyright Transfer Agreement Term and Licensing Policy](https://www.iaarc.org/wp-content/uploads/2022/05/ISARC-CopyrightTransferAgreementTermAndLicensingPolicy-2022.pdf) upon the submission of the final paper version.\n\n## Publication Ethics Statement\n\nUpon paper submission, all authors are required to familiarize themselves with the [ISARC Publication Ethics and Publication Malpractice Statement](https://www.iaarc.org/wp-content/uploads/2021/05/ISARC-Publication-Ethics-and-Publication-Malpractice-Statement.pdf)."
+}
+

@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "October 30 - November 02, 2024",
+  "Year": "2024",
+  "Location": "Kaifeng, China",
+  "City-State-Province": "Kaifeng",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "July 22, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "August 20, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Deadline": "September 15, 2024"
+  },
+  "Registration Date": {
+    "Registration Deadline": "October 01, 2024"
+  },
+  "Topics": "Parallel and Distributed Computing, Networking, Architecture, Compilers, Runtime Systems, Applications, Reliability, Security, Parallel Programming Models, Multicore Systems, Multithreaded Systems, Heterogeneous Systems, Clustered Systems, Distributed Systems, Grids, Clouds, Edge Computing, Large Scale Machines, Heterogeneous Computing, Accelerators, Mobile Computing, Approximate Computing",
+  "Summary": "The 22nd IEEE International Symposium on Parallel and Distributed Processing with Applications (IEEE ISPA 2024) is a forum for presenting leading work on parallel and distributed computing and networking.  The symposium will be hosted in Kaifeng, China and will feature sessions of regular presentations, workshops, tutorials and keynote speeches.",
+  "Call for Papers": "# IEEE ISPA 2024: Call for Papers\n\nThe 22nd IEEE International Symposium on Parallel and Distributed Processing with Applications (IEEE ISPA 2024) is a forum for presenting leading work on parallel and distributed computing and networking, including architecture, compilers, runtime systems, applications, reliability, security, parallel programming models and much more. The symposium will be hosted in **Kaifeng, China**.\n\n## Topics\n\nISPA 2024 topics include, but are not limited to, the following:\n\n**Track 1: Systems and Architectures**\n\n**Track 2: Technologies and Tools**\n\n*   Cloud computing and data center technology\n*   Parallel and distributed algorithms\n*   Migration of computations\n*   Novel parallel programming paradigms\n*   Multi-clouds environments, cloud federation, interoperability\n*   Programming models for cloud services\n*   Code generation and optimization\n*   Energy management and green computing\n*   Compilers for parallel computers\n*   Wireless and mobile networks\n*   Middleware and tools\n*   Systems and Architectures for artificial intelligence\n*   Scheduling and resource management\n*   Distributed/parallel algorithms and application\n*   Reliability, fault tolerance, and dependability\n*   Social networks, crowdsourcing, and P2P systems\n\n**Track 3: Applications and Services**\n\n**Track 4: Security and Block-chain**\n\n*   High-performance scientific and engineering computing\n*   Blockchain-based applications and services\n*   Blockchain security and privacy\n*   Grid and cluster computing\n*   Security of NFT\n*   Pervasive and ubiquitous computing\n*   Blockchain in cyber physical systems\n*   Databases, data mining, and data management\n*   Distributed database technology\n*   Big data and business analytics\n*   Scalability issues in blockchain\n*   Scientific cloud systems and services\n*   Blockchain in edge and cloud computing\n*   Internet computing and web services\n*   Blockchain-based applications and services\n*   Software Defined Network and its applications\n\n## Paper Submission\n\nAll papers need to be submitted electronically through the conference submission website (EDAS) in PDF format at [https://edas.info/N32470](https://edas.info/N32470). Each paper is limited to 8 pages (or 10 pages with an over-length charge) for a regular full paper, 6 pages (or 8 pages with an over-length charge) for a short paper, including figures and references using the IEEE Computer Society Proceedings manuscripts style (two columns, single-spaced, font size 10). Pages must be US letter size (8.5 by 11 inches) or A4 size (210 x 297 mm).\n\n## Paper Publication\n\nPapers accepted by ISPA 2024 conference will be published by the IEEE Computer Society Press. All accepted papers will be submitted to IEEE Xplore and EI. Distinguished papers presented at the conference, after further revision, will be invited for submission to a special issue.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** July 22, 2024\n*   **Author Notification:** August 20, 2024\n*   **Camera-Ready Deadline:** September 15, 2024\n*   **Registration Deadline:** October 1, 2024\n*   **Conference Date:** October 30 - November 02, 2024"
+}
+```

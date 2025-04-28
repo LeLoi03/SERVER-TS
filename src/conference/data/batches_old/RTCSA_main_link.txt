@@ -1,0 +1,219 @@
+Conference RTCSA:
+
+RTCSA 2025 
+ The 31st IEEE International Conference on 
+ Embedded and Real-Time Computing Systems and Applications 
+ Toggle navigationhref="./?index=cfp.html" - Home 
+ Program | Overview 
+ Keynotes 
+ href="./?page=accepted_papers.html" - Accepted Papers 
+ href="#" - Call for Papers | href="./?page=cfp.html" - Call for Papers 
+ href="./?page=submissions.html" - Submissions 
+ href="./?page=cfp_poster.html" - Posters and Demos 
+ Attending | Registration 
+ Venue & Accommodations 
+ Transportation 
+ Visa 
+ Committees 
+ Transparency 
+ TopRTCSA 2025. The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications. 
+
+Call for Papers information:
+RTCSA 2025 
+ The 31st IEEE International Conference on 
+ Embedded and Real-Time Computing Systems and Applications 
+ Toggle navigationhref="./?index=cfp.html" - Home 
+ Program | Overview 
+ Keynotes 
+ href="./?page=accepted_papers.html" - Accepted Papers 
+ href="#" - Call for Papers | href="./?page=cfp.html" - Call for Papers 
+ href="./?page=submissions.html" - Submissions 
+ href="./?page=cfp_poster.html" - Posters and Demos 
+ Attending | Registration 
+ Venue & Accommodations 
+ Transportation 
+ Visa 
+ Committees 
+ Transparency 
+ Call for Papers 
+ The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications 
+ Location:Singapore 
+ Date:August 20-22, 2025 
+ Important Dates: 
+ Abstract Submission Deadline: | March 28, 2025 | April 5, 2025 
+ Full Paper Submission Deadline: | March 31, 2025 | April 5, 2025 
+ Acceptance Notification: | May 7, 2025 
+ Camera-Ready Submission Deadline: | June 5, 2025 
+ Conference Date: | August 20-22, 2025 | (All times are UTC-12, or "anywhere on earth", unless otherwise stated.) 
+ The RTCSA conference (now in its 31st edition) serves as a pivotal platform for experts from both academia and industry, fostering advancements intechnologyandtheoryfortime-sensitiveapplications. The conference's scope encompasses all applications where temporal aspects need to be considered.Cyber-physical Systems (CPS), Internet of Things (IoT), embedded systems, fog/edge/cloud computingare just notable examples. RTCSA is especially open to new and emerging topics such as the application of machine learning in designing and analyzing embedded and real-time systems, strategies for achieving real-time machine learning, resource management in autonomous systems, and more. RTCSA welcomes both research and industrial papers that describe research or technical aspects in the area of embedded and real-time systems.Selected papers will be invited to submit an extended version to the SpringerReal-Time Systemsjournal. 
+ Submission of a paper should be regarded as a commitment that, should the paper be accepted, at least one of the authors will register and attend the conference to present the work in person. RTCSA 2025 reserves the right to exclude a paper from distribution after the conference (e.g., removal from the digital library and indexing services), if the paper is not presented at the conference. 
+ Topic of Interest 
+ The 31st edition of RTCSA will bring together researchers and developers from academia and industry to promote cross-fertilization and discuss advances and trends in the technology of embedded and real-time systems and their emerging applications, including the Internet of Things and Cyber-Physical Systems. RTCSA 2025 seeks papers that describe original research in the following areas, but are not limited to: 
+ *** REAL-TIME SYSTEMS TRACK *** 
+ Real-Time scheduling 
+ Timing analysis 
+ Workload models for real-time systems 
+ Temperature/Energy-aware scheduling 
+ Scheduling and resource management in heterogeneous architectures 
+ Scheduling over distributed architectures 
+ Formal methods for temporal guarantees 
+ Programming languages and run-time systems 
+ Analyzing, understanding, and improving timing predictability of middlewares (ROS, Ray, Kubernete, …) 
+ Communication networks and protocols for real-time systems 
+ Time-sensitive media processing and transmissions 
+ Latency and throughput in real-time databases 
+ Real-time machine learning 
+ Learning-enabled real-time systems 
+ Learning-assisted real-time systems 
+ *** IoT, CPS, AND EMERGING APPLICATIONS TRACK *** 
+ Systems, technology and foundations of IoT and CPS 
+ Applications and case studies of IoT and CPS 
+ Smart and connected health 
+ Industrial internet and industry 4.0 
+ Smart city technology and applications 
+ Smart transportation and infrastructure 
+ Cyber-physical co-design 
+ Cloud, middleware and networks for IoT and CPS 
+ Wireless sensor-actuator networks for IoT and CPS 
+ Low-Power Wide-Area Network (LPWAN) for IoT 
+ Emerging IoT protocols and network abstractions including 5G/6G 
+ Medical CPS 
+ CPS software/system engineering 
+ *** EMBEDDED SYSTEMS TRACK *** 
+ Multi-core embedded systems 
+ Operating systems 
+ Compiler and embedded software 
+ Embedded system design tools and methodologies 
+ Non-volatile memory and storage 
+ Power/Thermal aware design 
+ Fault tolerance, reliability and security 
+ Sensor-based systems and applications 
+ Embedded Systems for Machine-Learning 
+ Reconfigurable computing architectures and software support 
+ Ubiquitous and distributed embedded systems and networks 
+ ***New at RTCSA'25: Industry Session*** 
+ RTCSA 2025 introduces a dedicated Industry Session, providing a platform for contributions that focus on industrial applications and practices. Submissions to this session will follow the same single-blind review process as regular papers, with the following additional criteria: 
+ A paper is eligible for the Industry Session if 
+ It describes industrial applications and/or practices; 
+ At least one co-author has an industrial affiliation. 
+ Submissions to the Industry Session will be evaluated primarily on their practical significance. We look forward to showcasing impactful industry-driven work! 
+ Submission Guidelines 
+ Both research and industry papers are solicited. The submitted manuscript must describeoriginalworknot previously publishedand not concurrently submitted elsewhere.Abstract submission is a prerequisite for full paper submission.We welcome high quality papers, adhering to the following two formats: 
+ Full Paper format | : technical content must fit within 10 pages; references and acknowledgments can be arranged in 2 additional pages. 
+ Short Paper format | : technical content must fit within 6 pages; references and acknowledgements can be arranged in 2 additional pages. 
+ Both types of submission must be formatted according to theIEEE conference proceedings format(two-columns, single-space, 10pt). Submitted papers are subject to single-blind reviews. 
+ In some cases, the Program Committee may decide to accept a full paper submission as a short paper, in which case, the authors will be required to reduce its length for the final version. Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements. 
+ Submission site will be up soon. Please check the following web page later for detailed submission instructions:href="" - submission
+By submitting a paper, authors implicitly agree that at least one author will register at full registration rate to the conference and present the paper in person. 
+
+Organizing Team 
+ General chairs 
+  
+ Rui Tan | Nanyang Technological University, Singapore 
+ Xue (Steve) Liu | McGill University, Canada 
+ Program chairs 
+  
+ Mitra Nasri (Real-Time Systems Track) | Eindhoven University of Technology, The Netherlands 
+ Abusayeed Saifullah (IoT, CPS, and emerging applications Track Track) | Wayne State University, US 
+ Wei Zhang (Embedded Systems Track) | Hong Kong University of Science and Technology, Hong Kong SAR 
+ TopRTCSA 2025. The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications. 
+
+Important Dates information:
+RTCSA 2025 
+ The 31st IEEE International Conference on 
+ Embedded and Real-Time Computing Systems and Applications 
+ Toggle navigationhref="./?index=cfp.html" - Home 
+ Program | Overview 
+ Keynotes 
+ href="./?page=accepted_papers.html" - Accepted Papers 
+ href="#" - Call for Papers | href="./?page=cfp.html" - Call for Papers 
+ href="./?page=submissions.html" - Submissions 
+ href="./?page=cfp_poster.html" - Posters and Demos 
+ Attending | Registration 
+ Venue & Accommodations 
+ Transportation 
+ Visa 
+ Committees 
+ Transparency 
+ Call for Papers 
+ The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications 
+ Location:Singapore 
+ Date:August 20-22, 2025 
+ Important Dates: 
+ Abstract Submission Deadline: | March 28, 2025 | April 5, 2025 
+ Full Paper Submission Deadline: | March 31, 2025 | April 5, 2025 
+ Acceptance Notification: | May 7, 2025 
+ Camera-Ready Submission Deadline: | June 5, 2025 
+ Conference Date: | August 20-22, 2025 | (All times are UTC-12, or "anywhere on earth", unless otherwise stated.) 
+ The RTCSA conference (now in its 31st edition) serves as a pivotal platform for experts from both academia and industry, fostering advancements intechnologyandtheoryfortime-sensitiveapplications. The conference's scope encompasses all applications where temporal aspects need to be considered.Cyber-physical Systems (CPS), Internet of Things (IoT), embedded systems, fog/edge/cloud computingare just notable examples. RTCSA is especially open to new and emerging topics such as the application of machine learning in designing and analyzing embedded and real-time systems, strategies for achieving real-time machine learning, resource management in autonomous systems, and more. RTCSA welcomes both research and industrial papers that describe research or technical aspects in the area of embedded and real-time systems.Selected papers will be invited to submit an extended version to the SpringerReal-Time Systemsjournal. 
+ Submission of a paper should be regarded as a commitment that, should the paper be accepted, at least one of the authors will register and attend the conference to present the work in person. RTCSA 2025 reserves the right to exclude a paper from distribution after the conference (e.g., removal from the digital library and indexing services), if the paper is not presented at the conference. 
+ Topic of Interest 
+ The 31st edition of RTCSA will bring together researchers and developers from academia and industry to promote cross-fertilization and discuss advances and trends in the technology of embedded and real-time systems and their emerging applications, including the Internet of Things and Cyber-Physical Systems. RTCSA 2025 seeks papers that describe original research in the following areas, but are not limited to: 
+ *** REAL-TIME SYSTEMS TRACK *** 
+ Real-Time scheduling 
+ Timing analysis 
+ Workload models for real-time systems 
+ Temperature/Energy-aware scheduling 
+ Scheduling and resource management in heterogeneous architectures 
+ Scheduling over distributed architectures 
+ Formal methods for temporal guarantees 
+ Programming languages and run-time systems 
+ Analyzing, understanding, and improving timing predictability of middlewares (ROS, Ray, Kubernete, …) 
+ Communication networks and protocols for real-time systems 
+ Time-sensitive media processing and transmissions 
+ Latency and throughput in real-time databases 
+ Real-time machine learning 
+ Learning-enabled real-time systems 
+ Learning-assisted real-time systems 
+ *** IoT, CPS, AND EMERGING APPLICATIONS TRACK *** 
+ Systems, technology and foundations of IoT and CPS 
+ Applications and case studies of IoT and CPS 
+ Smart and connected health 
+ Industrial internet and industry 4.0 
+ Smart city technology and applications 
+ Smart transportation and infrastructure 
+ Cyber-physical co-design 
+ Cloud, middleware and networks for IoT and CPS 
+ Wireless sensor-actuator networks for IoT and CPS 
+ Low-Power Wide-Area Network (LPWAN) for IoT 
+ Emerging IoT protocols and network abstractions including 5G/6G 
+ Medical CPS 
+ CPS software/system engineering 
+ *** EMBEDDED SYSTEMS TRACK *** 
+ Multi-core embedded systems 
+ Operating systems 
+ Compiler and embedded software 
+ Embedded system design tools and methodologies 
+ Non-volatile memory and storage 
+ Power/Thermal aware design 
+ Fault tolerance, reliability and security 
+ Sensor-based systems and applications 
+ Embedded Systems for Machine-Learning 
+ Reconfigurable computing architectures and software support 
+ Ubiquitous and distributed embedded systems and networks 
+ ***New at RTCSA'25: Industry Session*** 
+ RTCSA 2025 introduces a dedicated Industry Session, providing a platform for contributions that focus on industrial applications and practices. Submissions to this session will follow the same single-blind review process as regular papers, with the following additional criteria: 
+ A paper is eligible for the Industry Session if 
+ It describes industrial applications and/or practices; 
+ At least one co-author has an industrial affiliation. 
+ Submissions to the Industry Session will be evaluated primarily on their practical significance. We look forward to showcasing impactful industry-driven work! 
+ Submission Guidelines 
+ Both research and industry papers are solicited. The submitted manuscript must describeoriginalworknot previously publishedand not concurrently submitted elsewhere.Abstract submission is a prerequisite for full paper submission.We welcome high quality papers, adhering to the following two formats: 
+ Full Paper format | : technical content must fit within 10 pages; references and acknowledgments can be arranged in 2 additional pages. 
+ Short Paper format | : technical content must fit within 6 pages; references and acknowledgements can be arranged in 2 additional pages. 
+ Both types of submission must be formatted according to theIEEE conference proceedings format(two-columns, single-space, 10pt). Submitted papers are subject to single-blind reviews. 
+ In some cases, the Program Committee may decide to accept a full paper submission as a short paper, in which case, the authors will be required to reduce its length for the final version. Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements. 
+ Submission site will be up soon. Please check the following web page later for detailed submission instructions:href="" - submission
+By submitting a paper, authors implicitly agree that at least one author will register at full registration rate to the conference and present the paper in person. 
+
+Organizing Team 
+ General chairs 
+  
+ Rui Tan | Nanyang Technological University, Singapore 
+ Xue (Steve) Liu | McGill University, Canada 
+ Program chairs 
+  
+ Mitra Nasri (Real-Time Systems Track) | Eindhoven University of Technology, The Netherlands 
+ Abusayeed Saifullah (IoT, CPS, and emerging applications Track Track) | Wayne State University, US 
+ Wei Zhang (Embedded Systems Track) | Hong Kong University of Science and Technology, Hong Kong SAR 
+ TopRTCSA 2025. The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.

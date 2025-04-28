@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "June 3 - 7, 2024",
+  "Year": "2024",
+  "Location": "Arenzano (Genoa), Italy",
+  "City-State-Province": "Arenzano, Genoa",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop proposals": "December 1, 2023",
+    "Abstract submission": "January 17, 2024",
+    "Paper submission": "January 24, 2024",
+    "Poster and Demo papers": "March 8, 2024",
+    "Doctoral Consortium papers": "March 15, 2024",
+    "Tutorial proposals": "March 15, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance of workshop proposals": "December 21, 2023",
+    "Long and Short paper notification": "March 5, 2024",
+    "Demo, Poster, DC paper notification": "April 5, 2024"
+  },
+  "Topics": "Adaptive and Context-Aware Interfaces, Affective Visual Interfaces, Computer Supported Cooperative Work, Conversational Interfaces, Full-body Interaction, Human-AI Interaction, Visual Interfaces for Human-Centered AI Systems, Information Visualization, Intelligent Interfaces, Creative AI for advanced visual interfaces, Engineering of Visual Interfaces and Interaction, Interaction Design Tools, Generative AI for the design and development of visual interfaces, Building Interactions: Hardware, Materials, and Fabrication, Interaction for the environment and environmental awareness, Interface Metaphors, Interfaces for Automotive, Interfaces for Big Data, Interfaces for e-Commerce and e-Branding, Interfaces for e-Culture and e-Tourism, Interfaces for End-User Development, Interfaces for i-TV, Interfaces for Recommender Systems, Interfaces for Social Interaction and Cooperation, Interfaces and Interactions for Inclusion, Accessibility and Aging, Interfaces for Children, Learning, Education, and Families, Mobile Interaction, Motion-based Interaction, Multimodal Interfaces, (Multi)Sensory Interfaces, (Multi)Touch Interaction, Search Interfaces, Shape-Changing Devices, User Interfaces for the Internet of Things, Usability and Accessibility, Usability and (Cyber)Security, Virtual and Augmented Reality, Visual Analytics",
+  "Publisher": "ACM",
+  "Summary": "The 17th International Conference on Advanced Visual Interfaces (AVI 2024) was held in Arenzano (Genoa), Italy, from June 3rd to 7th, 2024.  The conference has been a biennial appointment for a vast international community of experts, attracting leading researchers of Human-Computer Interaction (HCI) from all over the world.",
+  "Call for Papers": "# AVI 2024: Call for Contributions\n\nThe 17th International Conference on Advanced Visual Interfaces (AVI 2024) was held from **June 3rd to 7th, 2024, in Arenzano (Genoa), Italy.**\n\n## Call for Papers: Long and Short Research Papers\n\nAVI 2024 invited submissions of high-quality papers describing original and unpublished research contributions.  The maximum length of long papers is 8 pages (with one additional page for references), and the maximum length of short papers is 4 pages (with one additional page for references).\n\n## Topics of Interest\n\nTopics of interest included, but were not limited to:\n\n*   Adaptive and Context-Aware Interfaces\n*   Affective Visual Interfaces\n*   Computer Supported Cooperative Work\n*   Conversational Interfaces\n*   Full-body Interaction\n*   Human-AI Interaction\n*   Visual Interfaces for Human-Centered AI Systems\n*   Information Visualization\n*   Intelligent Interfaces\n*   Creative AI for advanced visual interfaces\n*   Engineering of Visual Interfaces and Interaction\n*   Interaction Design Tools\n*   Generative AI for the design and development of visual interfaces\n*   Building Interactions: Hardware, Materials, and Fabrication\n*   Interaction for the environment and environmental awareness\n*   Interface Metaphors\n*   Interfaces for Automotive\n*   Interfaces for Big Data\n*   Interfaces for e-Commerce and e-Branding\n*   Interfaces for e-Culture and e-Tourism\n*   Interfaces for End-User Development\n*   Interfaces for i-TV\n*   Interfaces for Recommender Systems\n*   Interfaces for Social Interaction and Cooperation\n*   Interfaces and Interactions for Inclusion, Accessibility and Aging\n*   Interfaces for Children\n*   Learning, Education, and Families\n*   Mobile Interaction\n*   Motion-based Interaction\n*   Multimodal Interfaces\n*   (Multi)Sensory Interfaces\n*   (Multi)Touch Interaction\n*   Search Interfaces\n*   Shape-Changing Devices\n*   User Interfaces for the Internet of Things\n*   Usability and Accessibility\n*   Usability and (Cyber)Security\n*   Virtual and Augmented Reality\n*   Visual Analytics\n\n## Submission Instructions\n\nThe submission process was managed through EasyChair ([https://easychair.org/conferences/?conf=avi2024](https://easychair.org/conferences/?conf=avi2024)).  A 250-word abstract was requested before submission. Submissions must be anonymized and formatted according to the ACM SIGCONF template.\n\n## Important Dates (23:59, AoE)\n\n*   **Long and short papers:**\n    *   Abstract submission: January 17, 2024\n    *   Paper submission: January 24, 2024\n*   **Posters and Demo papers:** March 8, 2024\n*   **Doctoral Consortium papers:** March 15, 2024\n*   **Tutorial proposals:** March 15, 2024\n*   **Workshop proposals:** December 1, 2023\n\n## Proceedings\n\nAccepted papers were published in the ACM International Conference Proceeding Series (ICPS) and were available in the ACM Digital Library. For each accepted paper, at least one author must register to AVI 2024 by the early registration deadline for authors and present the paper at the Conference."
+}
+```

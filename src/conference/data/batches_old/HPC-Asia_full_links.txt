@@ -1,0 +1,605 @@
+Conference full name: International Conference and Exhibition on High Performance Computing in the Asia-Pacific Region (HPC Asia)
+
+1. Website of HPC Asia_3: https://sighpc.ipsj.or.jp/HPCAsia2024/
+Website information of HPC Asia_3:
+
+The International Conference on High Performance Computing 
+ in Asia-Pacific Region (HPC Asia 2024) 
+ Jan 25-27, 2024 | Nagoya, JapanHPCAsia2o24 
+ Top 
+ href="#callfor" - Submission | href="#callforposters" - Call for Posters 
+ href="#callforpapers" - Call for Papers 
+ href="#callforworkshops" - Call for Workshops 
+ href="#callforssupporters" - Call for Supporters 
+ Awards 
+ Schedule 
+ Program 
+ Workshops 
+ Registration 
+ Venue 
+ Committees 
+ "Stepping forward to the Post Moore Era together" 
+ "Integration of HPC & AI & Quantum Computing" 
+ "Towards HPC Asia-Pacific/Pacific-Rim" 
+ Photo Credit: Nagoya Convention & Visitors Bureau 
+ HPC Asia 2024 
+ Welcome to HPC Asia 2024 
+ High performance computing (HPC) is a key technology to solve large problems in science, engineering, and business by utilizing computing power that has been continuously evolving. The International Conference on High Performance Computing in Asia-Pacific Region (HPC Asia) is an international conference series in the Asia Pacific region on HPC technologies, fostering exchange of ideas, research results and case studies related to all issues of high performance computing. 
+ The 7th edition, HPC Asia 2024 will be held with the motto"Stepping forward to the Post Moore Era together."Although we are now entering the Exascale era, the Post Moore era will soon follow, and HPC Asia 2024 will provide a unique opportunity to discuss the challenges towards the Post Moore era. In addition, we need to pay close attention to the integration of HPC and AI: while the "convergence" of HPC and AI has been broadly discussed, the intensive "integration" of those will be essential towards computing in the Post Moore era. 
+ Host Organizations 
+ Information Processing Society of Japan (IPSJ) 
+ In cooperation with 
+  
+ Information Processing Society of Japan (IPSJ) 
+ Information Technology Center, Nagoya University 
+ Association for Computing Machinery (ACM) 
+ SIGHPCContact 
+ hpcasia2024 [at] sighpc.ipsj.or.jp | (general information) 
+ hpcasia2024pc [at] cspp.cc.u-tokyo.ac.jp | (about CfP) 
+ Invited Speakers 
+  
+ How Are Scientific Workflows Helping Science and What Can We Do Better? 
+ Professor Ewa Deelman (USC Information Sciences Institute, USA)Abstract and Biography | Survey of Hybrid Computing of Quantum-Classic 
+ Professor Hideharu Amano (Keio University, Japan) 
+ Abstract and Biography | Digital Transformation of the Airborne Infection Risk Assessment and AI Supported Smart Design Realized on the Supercomputer “Fugaku” toward Society 5.0 
+ Professor Makoto Tsubokura (Kobe University / RIKEN R-CCS, Japan)Abstract and Biography 
+ Program & Proceedings 
+ Conference Program 
+ The conference program 
+ Accepted Papers 
+ href="papers.html" - The paper list 
+ Conference Proceedings 
+ Accepted Posters 
+ The poster list 
+ Workshop Proceedings 
+ Awards 
+ Best Paper Awards 
+ Non-Blocking GPU-CPU Notifications to Enable More GPU-CPU Parallelism 
+ Bengisu Elis, Olga Pearce, David Boehme, Jason Burmark, and Martin Schulz 
+ Parallelized Remapping Algorithms for km-scale Global Weather and Climate Simulations with Icosahedral Grid System 
+ Chihiro Kodama, Hisashi Yashiro, Takashi Arakawa, Daisuke Takasuka, Shuhei Matsugishi, and Hirofumi Tomita 
+ Best Student Poster Awards 
+ First authors of posters who were students enrolled in BS, MS, or Ph.D. programs were eligible for the best student poster awards. The poster award committee comprehensively evaluated the extended abstracts, poster drafts, poster blitz videos, and discussion during the poster session. 
+ 1st place: Kengo Suzuki (Hokkaido University) 
+ A New Matrix Reordering Method for GPU Acceleration of an ILU Preconditioner 
+ Kengo Suzuki (Hokkaido University), Takeshi Fukaya (Hokkaido University) and Takeshi Iwashita (Kyoto University)2nd place: Rostislav-Paul Wilhelm (RWTH Aachen) 
+ Performance comparison of the Numerical Flow Iteration to Lagrangian and Semi-Lagrangian approaches for solving the Vlasov equation in the six-dimensional phase-space 
+ Rostislav-Paul Wilhelm (RWTH Aachen) and Manuel Torrilhon (RWTH Aachen)3rd place: Ziheng Yuan (The University of Tokyo) 
+ Accelerating Lattice Boltzmann method with C++ standard language parallel algorithm 
+ Ziheng Yuan (The University of Tokyo) and Takashi Shimokawabe (The University of Tokyo)Workshops 
+ HPC Asia 2024 will hold four workshops: 
+ 3rd International workshop on Arm-based HPC: Practice and Experience (IWAHPCE 2024) 
+ International Workshop on Intel eXtreme Performance Users Group (IXPUG) 
+ Multi-scale, Multi-physics and Coupled Problems on highly parallel systems (MMCP) 
+ Third International Workshop on RISC-V for HPC (RVHPC) 
+ Supporters 
+ Platinum Supporters 
+  
+ DataDirect Networks, Inc. (DDN) 
+ Lenovo Enterprise Solutions LLCGold Supporters 
+  
+ HPE Japan 
+ Dell TechnologiesSilver Supporters 
+  
+ Supermicro 
+ xFusion 
+ Fujitsu Limited 
+ Oracle Corporation Japan 
+ Fixstars Amplify 
+ NEC Corporation 
+ 株式会社ジーデップ・アドバンス 
+ エヌビディア合同会社 
+ Intel Corporation 
+ Advanced Micro Devices, Inc. 
+ Pacific TeckBronze Supporters 
+ If you wish to be a supporter (Bronze) with only your company name on the web page and in the publication, please contact us at hpcasia2024 [at] sighpc.ipsj.or.jp. 
+ Submission 
+ Call for Posters 
+ href="cfposters.html" - Call for Posters 
+ Call for Papers 
+ href="cfp.html" - Call for Papers 
+ Call for Workshops 
+ href="cfws.html" - Call for Workshop Proposals | (Closed) 
+ Call for Supporters 
+ href="HPCAsia2024_Call_for_Supporters_R2.pdf" - application information 
+ Schedule 
+  
+ [Workshop] | Proposal Deadline: | CLOSED 
+ (31 July 2023, 
+ 30 June 2023) 
+ [Paper] | Submission of Paper: | Extended: 23 October 2023 (AoE) (firm) 
+ (25 September 2023 (AoE), 
+ 4 September 2023 (AoE)) 
+ [Poster] | Extended abstract deadline (1st round): | CLOSED (31 Oct 2023 (AoE)) 
+ [Poster] | Acceptance notification (1st round): | 7 Nov 2023 (AoE) 
+ [Paper] | Notice of Paper Acceptance: | 14 November 2023 (AoE) 
+ (21 November 2023 (AoE), 
+ 24 October 2023 (AoE), 
+ 9 October 2023 (AoE)) 
+ [Poster] | Extended abstract deadline (2nd round): | 5 Dec 2023 (AoE) 
+ The submission site will open on November 21st. 
+ [Paper] | Camera-ready Paper Due: | 12 December 2023 (AoE) 
+ (6 November 2023 (AoE), 
+ 16 October 2023 (AoE)) 
+ [Poster] | Acceptance notification (2nd round): | 12 Dec 2023 (AoE) 
+ [Poster] | Poster draft deadline: | 11 Jan 2024 (AoE) 
+ Conference | 25 January 2024 -- 27 January 2024 
+ Registration 
+ Registration fees (conference and workshop) 
+  
+ Early-bird 
+ (until Dec. 15 (Fri), 2023, JST) | Late 
+ (after Dec. 16 (Sat), 2023, JST) 
+ Member | 60,000 JPY | 80,000 JPY 
+ Non-Member | 70,000 JPY | 95,000 JPY 
+ Student | 30,000 JPY | 40,000 JPY 
+ *All registration fees are exempt from sales tax. 
+ Member: applicable to a member of IPSJ or ACM. 
+ For each accepted paper, at least one (co-)author is required to complete early-bird registration (Student Registration is acceptable) including the payment by its deadline (December 15, 2023, JST). 
+ All speakers should attend the conference on-site. No choice of online attendance is made for speakers. 
+ Registration deadline: January 27, 2024 (JST, UTC+9) 
+ On-site attendance fee is as same as the late registration fee. On-site registration should be done via this registration page during the conference. 
+ You can attend the conference online. 
+ Please note that registration is also required for online attendance. Participants will receive connection information prior to the conference. The online registration fee is as same as the above (in-person) registration fees. 
+ Registration Site 
+ https://hpcasia.confit.atlas.jp/login 
+ Visa Information 
+ Citizens of certain countries are required to obtain a visa to enter Japan. Please check the website of the Ministry of Foreign Affairs of Japan (MOFA) to know if you need to obtain a visa and visa application procedures. 
+ http://www.mofa.go.jp/j_info/visit/visa/index.html 
+ Important notice for Visa support 
+ We only provide the VISA support for individuals who have concrete interests in our event. 
+ Basically, we support speakers (main tack and workshops), poster presenters, exhibitors, committee members (PC, OC, WS), and researchers who continuously contribute the HPC community and their lab's students. We will not reply to inquires from companies and agencies. 
+ VISA support will be provided only after the completion of the registration payment. 
+ Venue 
+ Conference Venue 
+ Aichi Industry & Labor Center (WINC AICHI) 
+ 4-4-38 Meieki, Nakamura-ku, Nagoya, Aichi 450-0002, Japan 
+ Access Map from Nagoya Station: | here 
+ From Haneda Airport (Tokyo, HND) 
+ By trains (Keikyu and Shinkansen): 
+ Please take Keikyu Line trains carefully. Some trains do not stop at Shinagawa Station. 
+ Keikyu Line map. | KK01 is Shinagawa Station. KK16 and KK17 are Haneda Airport stations. 
+ From Nagoya Station: | venue's access map | . 
+ By domestic flights from Haneda: 
+ ANA and JAL operate domestic flights. 
+ μSKY and Limited Express | are recommended for travel from Chubu Airport to Nagoya Station. 
+ From Nagoya Station: | venue's access map | . 
+ From Narita Airport (Tokyo, NRT) 
+ By trains (JR and Shinkansen): 
+ Narita EXpress (NEX) | is recommended for travel from Narita Airport to Tokyo Station. 
+ From Nagoya Station: | venue's access map | . 
+ By domestic flights from Narita: 
+ ANA and JAL operate domestic flights. 
+ μSKY and Limited Express | are recommended for travel from Chubu Airport to Nagoya Station. 
+ From Kansai Airport (Osaka, KIX) 
+ By trains (JR and Shinkansen): 
+ Airport Express "HARUKA" | is recommended for travel from Kansai Airport to Shin-Osaka Station. 
+ From Nagoya Station: | venue's access map | . 
+ From Chubu Centrair Airport (Nagoya, NGO) 
+ By trains (Meitetsu): 
+ μSKY and Limited Express | are recommended for travel from Chubu Airport to Nagoya Station. 
+ From Nagoya Station: | venue's access map | . 
+ Nagoya, Japan 
+ Nagoya Castle 
+ Nagoya City Art Museum 
+ The Tokugawa Art Museum 
+ Nagoya City Science Museum 
+ Garden Pier in Port of Nagoya 
+ Osu Shopping Street 
+ Photo Credit: Nagoya Convention & Visitors Bureau 
+ Hotel and Travel Tips 
+ Hotel Information 
+  
+ Access to Venue | Accommodation Fee(Ref) 
+ Mitsui Garden Hotel | 2 min. walk | 13,500 yen 
+ Sotetsu Fresa Inn | 3 min. walk | 10,000 yen 
+ Hotel Resol Nagoya | 3 min. walk | 15,000 yen 
+ Ibis Styles Nagoya | 5 min. walk | 9,000 yen 
+ Meitetsu Grand Hotel | 5 min. walk | 12,500 yen 
+ Nagoya Marriott Associa Hotel | 6 min. walk | 27,500 yen 
+ Note : The registration fee does not include the accommodation fee. Hotel reservations are not supported. 
+ Travel Tips 
+ TBD 
+ Committees 
+ Organizing Committee 
+ General Chair: | Takahiro Katagiri (Nagoya University, Japan) 
+ Program Co-Chairs: | Hiroyuki Takizawa (Tohoku University, Japan) 
+ Program Co-Chairs: | Keita Teranishi (Oak Ridge National Laboratory, USA) 
+ Diversity Co-Chairs: | Neda Ebrahimi Pour (German Aerospace Center (DLR), Germany) 
+ Diversity Co-Chairs: | Li Luo (The University of Macau, China) 
+ Proceedings Chair: | Satoshi Ohshima (Kyushu University, Japan) 
+ Local Arrangement Chair: | Tetsuya Hoshino (Nagoya University, Japan) 
+ Logistics Chair: | Masatoshi Kawai (Nagoya University, Japan) 
+ Financial Chair: | Masahiro Nakao (RIKEN, Japan) 
+ Workshop Chair: | Takashi Shimokawabe (The University of Tokyo, Japan) 
+ Publicity Chair: | Norihisa Fujita (University of Tsukuba, Japan) 
+ Poster Chair: | Keichi Takahashi (Tohoku University, Japan) 
+ Exhibition Co-Chairs: | Keiichiro Fukazawa (Kyoto University, Japan) 
+ Exhibition Co-Chairs: | Rie Toh (NEC, Japan) 
+ Steering Committee 
+ Chair: | Taisuke Boku (University of Tsukuba, Japan) 
+ Bernd Mohr (Jülich Supercomputing Centre (JSC)) 
+ David Abramson (University of Queensland) 
+ David Kahaner (Asian Technology Information Program (ATIP)) 
+ Depei Qian (Beihang University) 
+ Fang Pang Lin (National Center for High-performance Computing (NCHC)) 
+ Jaejin Lee (Seoul National University (SNU)) 
+ Jeffrey Vetter (Oak Ridge National Laboratory (ORNL)) 
+ Mitsuhisa Sato (Juntendo University) 
+ Pavan Balaji (Facebook, Inc.) 
+ Satoshi Matsuoka (RIKEN Center for Computational Science (R-CCS)) 
+ Serge Petiton (Maison de la Simulation (MDLS)) 
+ Soonwook Hwang (Korea Institute of Science and Technology Information (KISTI)) 
+ Takeshi Iwasita (Hokkaido University) 
+ Wuchun Feng (Virginia Polytechnic Institute and State University (Virginia Tech)) 
+ Yutong Lu (National Supercomputing Center in Guangzhou (GZSC)) 
+ Track Chairs 
+ Application and Algorithms 
+ Hatem Ltaief (King Abdullah University of Science and Technology, Saudi Arabia) 
+ Jiajia Li (North Calorina State University, USA) 
+ Programming Models and System Software 
+ Seyong Lee (Oak Ridge National Laboratory, USA) 
+ Patrick McCormick (Los Alamos National Laboratory, USA) 
+ Data, Storage and Visualization 
+ Ana Gainaru (Oak Ridge National Laboratory, USA) 
+ Martin Schultz (Technical University Munich, Germany) 
+ Architectures and Network 
+ Michihiro Koibuchi (National Institute of Informatics, Japan) 
+ Simon McIntosh-Smith (University of Bristol, UK) 
+ Program Committee 
+ Application for Algorithms 
+ Aditya Devarakonda (Wake Forest University) 
+ Aniello Esposito (Hewlett Packard Enterprise) 
+ Asma Farjallah (NVIDIA) 
+ Bora Ucar (University of Lyon) 
+ Edgar Solomonik (University of Illinois Urbana-Champaign) 
+ Erin Claire Carson (Charles University) 
+ Florina Ciorba (University of Basel) 
+ James Lin (Shanghai Jiao Tong University) 
+ Jee Choi (University of Oregon) 
+ Krzysztof Rzadca (Google and University of Warsaw) 
+ Luka Stanisic (Huawei Technologies Germany) 
+ Mohamed Wahib (RIKEN-CCS) 
+ Piotr Luszczek (University of Tennessee) 
+ Piyush Sao (Oak Ridge National Laboratory) 
+ Ronald Kriemann (Max Planck Institute for Math. i.t.S.) 
+ Sameh Abdulah (King Abdullah University of Science and Technology) 
+ Sarah Knepper (Intel) 
+ Shigang Li (Beijing University of Posts and Telecommunications) 
+ Srinivas Eswar (Argonne National Laboratory) 
+ Sunita Chandrasekaran (University of Delaware) 
+ Ulrike Yang (Lawrence Livermore National Laboratory) 
+ Venkatesan Chakaravarthy (IBM Research) 
+ Weifeng Liu (China University of Petroleum) 
+ Zeyi Wen (Hong Kong University of Science and Technology (Guangzhou)) 
+ Programming Models and System Software 
+ Amelie Chi Zhou (Shenzhen University) 
+ Balazs Gerofi (RIKEN Advanced Institute For Computational Science) 
+ Didem Unat (Koç University) 
+ Elliott Slaughter (SLAC National Accelerator Laboratory) 
+ Hyojin Sung (Pohang University of Science and Technology) 
+ Jaejin Lee (Seoul National University) 
+ Jingling Xue (University of New South Wales) 
+ Joel E. Denny (Oak Ridge National Laboratory) 
+ Miquel Pericas (Chalmers University of Technology) 
+ Naoya Maruyama (NVIDIA) 
+ Nirmal Prajapati (Los Alamos National Lab) 
+ Yunquan Zhang (ICT, CAS) 
+ Data, Storage and Visualization 
+ Andre Brinkmann (Johannes Gutenberg University Mainz) 
+ Bing Xie (Microsoft Corp) 
+ David Pugmire (Oak Ridge National Laboratory) 
+ Francieli Zanon (University of Bordeaux) 
+ Kate Isaacs (The University of Utah) 
+ Kento Sato (RIKEN, R-CCS) 
+ Lipeng Wan (Georgia State University) 
+ Matthieu Dorier (Argonne National Laboratory) 
+ Osamu Tatebe (University of Tsukuba) 
+ Architectures and Network 
+ Hayato Yamaki (The University of Electro-Communications) 
+ Jose Flich (Technical University of Valencia) 
+ Kenji Mizutani (National Institute of Advanced Industrial Science and Technology (AIST)) 
+ Ryan Grant (Queen's University) 
+ Ryota Shioya (The University of Tokyo) 
+ Ryusuke Egawa (Tokyo Denki University, Tohoku University) 
+ Truong Thao Nguyen (National Institute of Advanced Industrial Science and Technology) 
+ Yujiro Ajima (Fujitsu Limited) 
+ Past HPC Asia 
+ href="http://sighpc.ipsj.or.jp/HPCAsia2018/" - HPC Asia 2018 | in Tokyo, Japan (Jan 29-31, 2018) 
+ href="https://hpcasia2019.net/" - HPC Asia 2019 | in Guangzhou, China (Jan 14-16, 2019) 
+ href="http://sighpc.ipsj.or.jp/HPCAsia2020/" - HPC Asia 2020 | in Fukuoka, Japan (Jan 15-17, 2020) 
+ href="http://hpc2021.ninh.co.kr/" - HPC Asia 2021 | in Jeju, South Korea (Jan 20-22, 2021) 
+ href="http://sighpc.ipsj.or.jp/HPCAsia2022/" - HPC Asia 2022 | in Online (Jan 12-14, 2022) 
+ href="https://www.sc-asia.org/2023/hpc-asia-2023/" - HPC Asia 2023 | in Singapore (Feb 28-Mar 2, 2023) 
+ HPC Asia 2024 Official Website. Copyright © HPC Asia 2024 Organizing Committee All Rights Reserved. 
+ Contact (general information): hpcasia2024 [at] sighpc.ipsj.or.jp
+
+2. Website of HPC Asia_3: https://event1.nchc.org.tw/hpcasia2025/
+Website information of HPC Asia_3:
+
+HOME 
+ href="#" - Submission | href="workshops.html" - Call for Workshops 
+ href="papers.html" - Call for Papers 
+ href="posters.html" - Call for Posters 
+ href="supporters.html" - Call for Supporters 
+ Schedule 
+ Registration 
+ Program | Conference Program 
+ Accepted List 
+ Awards 
+ Workshops 
+ Venue | Conference Venue 
+ Hotel 
+ Transportation 
+ Committees 
+ href="https://hpcasia2025.nchc.org.tw/" - Register now
+HPC ASIA 2025 
+ February 19-21,2025 
+ Hsinchu, Taiwan 
+ HPC Asia 2025 
+ February 19-21, 2025 in Hsinchu,Taiwan 
+ Join the Domestic Educational Program!Open especially to local students, NCHC users, partners, and government agencies. 
+ href="https://hpcasia2025.nchc.org.tw/" - 
+On behalf ofHPC Asia 2025committee and theNCHC-National Center for High-performance Computing (NCHC),it is our pleasure to welcome you to HPC Asia 2025, hosted in the vibrant city of Hsinchu, Taiwan. This year’s theme,“Chip-based Exploration and Innovation for HPC,”resonates deeply with Hsinchu's dual legacy of rich cultural heritage and cutting-edge technological advancements. 
+ Hsinchu, renowned for its traditional culture, offers a unique blend of historical charm and modern innovation. The Hsinchu Science Park, a cornerstone of global semiconductor design and manufacturing, stands as a testament to the city’s pivotal role in the advancement of high-performance computing technologies. 
+ We are thrilled to gather the world's leading HPC researchers and practitioners here, where tradition meets innovation, to explore and push the boundaries of chip-based technologies. We hope you will find this conference both inspiring and enriching, and that you enjoy the unique cultural and technological landscape that Hsinchu has to offer. 
+ Call for Workshops 
+ Proposal Submission Due: 
+ 30 September 2024 (AoE) 
+ href="workshops.html" - Call for Workshops
+Call for Papers 
+ Abstract Due: 
+ 3 November 2024 
+ 10 November 2024Submission Due: 
+ 10 November 2024 (AoE)href="papers.html" - Call for Papers
+Call for Posters 
+ 1st round Submission Due: 
+ 10 November 2024 (AoE) 
+ href="posters.html" - Call for Posters
+INVITED SPEAKERS 
+ Dr. Jack DongarraEmeritus Professor, University of Tennessee Department of Electrical Engineering and Computer Science. 
+ Read more...Dr. Alex Tuo-hung HouDirector General of the Taiwan Semiconductor Research Institute. 
+ Read more...Dr. Xian-He SunUniversity Distinguished Professor at Illinois Institute of Technology 
+ Read more...Host Organization 
+ In Cooperation With 
+ Supporters 
+ Platinum Supporter 
+ Gold Supporter 
+ Sliver Supporter 
+ Government Sponsor 
+ About Us 
+ On behalf of HPC Asia 2025 committee and the NCHC-National Center for High-performance Computing (NCHC), it is our pleasure to welcome you to HPC Asia 2025, hosted in the vibrant city of Hsinchu, Taiwan. This year’s theme,“Chip-based Exploration and Innovation for HPC,” resonates deeply with Hsinchu's dual legacy of rich cultural heritage and cutting-edge technological advancements. 
+ Useful Links 
+ Central Weather Administration 
+ Taiwan High Speed Rail 
+ Taiwan Railway Corporation 
+ Metro Taipei 
+ Hsinchu City Travel Net 
+ Contacts us 
+ HPC ASIA 2025 
+ +886-3-5776085#412 
+ href="mailto:hpcasia2025@narlabs.org.tw" - hpcasia2025@narlabs.org.tw
+ 
+ www.nchc.org.twHPC Asia 2025 Official Website. Copyright © HPC Asia 2025 Organizing Committee All Rights Reserved.
+
+3. Website of HPC Asia_3: https://www.niar.org.tw/en/xmdoc/cont?sid=0P065404307443500344&xsmsid=0I160457997407279810
+Website information of HPC Asia_3:
+
+For the term 
+ Home 
+ About Us 
+ href="https://www.niar.org.tw/en/xmdoc/cont?xsmsid=0I160799431865857206" - Research & Technology 
+ Science & Impacts 
+ International Collaboration 
+ Press room 
+ Language 
+ About Us 
+ NIAR Overview 
+ Organization 
+ Awards and Achievements 
+ Milestones 
+ Contact Us 
+ Organization 
+ Organization 
+ Chairperson 
+ President 
+ Vice President 
+ href="#mm-0" - Research & Technology 
+ Core Technology & Facilities 
+ Environment Technology 
+ Information and Communication Technology 
+ Biomedical Technology 
+ Science and Technology Policy 
+ Emerging Fields 
+ Environment Technology 
+ Earthquake Engineering 
+ Ocean Exploration 
+ Information and Communication Technology 
+ Semiconductor Development 
+ Instrument Technology 
+ Networking & Computing 
+ Science & Impacts 
+ Foster High-tech Talent 
+ Social Engagement 
+ International Collaboration 
+ Strategies & Mechanisms 
+ Global partners 
+ Talent Program 
+ Internship Program 
+ Press room 
+ News 
+ Events 
+ Publications 
+ Multimedia 
+ Language 
+ 繁體中文 
+ About Us | NIAR Overview 
+ Organization | Organization 
+ Chairperson 
+ President 
+ Vice President 
+ Awards and Achievements 
+ Milestones 
+ Contact Us 
+ href="https://www.niar.org.tw/en/xmdoc/cont?xsmsid=0I160799431865857206" - Research & Technology | Core Technology & Facilities 
+ Environment Technology | Earthquake Engineering 
+ Ocean Exploration 
+ Information and Communication Technology | Semiconductor Development 
+ Instrument Technology 
+ Networking & Computing 
+ Biomedical Technology 
+ Science and Technology Policy 
+ Emerging Fields 
+ Science & Impacts | Foster High-tech Talent 
+ Social Engagement 
+ International Collaboration | Strategies & Mechanisms 
+ Global partners 
+ Talent Program 
+ Internship Program 
+ Press room | News 
+ Events 
+ Publications 
+ Multimedia 
+ 繁體中文 
+ English 
+ ×Keyword : 
+ MRAM | ROV | COVID-19 
+ News 
+ Home 
+ Press room 
+ News 
+ href="/en/xmdoc/cont?sid=0P065404307443500344&xsmsid=0I160457997407279810" - NCHC of NARLabs Hosts HPC Asia 2025: Exploring HPC Innovation with Chip Technology 
+ Previous PagePrintFont size：SmallMediumLargeShare：Share to Facebook(opens new tab)Share to Twitter(opens new tab)NCHC of NARLabs Hosts HPC Asia 2025: Exploring HPC Innovation with Chip Technology 
+ 2025-02-21 
+ As the most influential high-performance computing (HPC) event in the Asia-Pacific region, (HPC Asia 2025)1was held from February 19 to 21, organized by the National Center for High-Performance Computing (NCHC) under the National Applied Research Laboratories (NARLabs), supervised by the National Science and Technology Council (NSTC). Themed “Chip-based Exploration and Innovation for HPC,” this year’s conference brought together over 200 leading experts and scholars from around the world in Hsinchu. Participants discussed the latest trends in HPC hardware and software, as well as the pivotal role of chip technology in the field. They also explored how these advancements integrate to drive future developments and promote breakthrough applications in real-world scenarios. 
+  
+ In addition, a series of international HPC professional exchange events took place before and after HPC Asia 2025, including the AI-NWP (Artificial Intelligence-Numerical Weather Prediction) Workshop on February 17 and CENTRA 8 on February 22-25. These activities further expanded HPC’s impact on interdisciplinary collaborations. 
+  
+ Taiwan Emerges as an HPC Hub: Chip Technology Driving Innovation 
+  
+ HPC Asia 2025 is not only a technological event but also an important platform for deepening international cooperation and showcasing technological advantages. With its robust expertise in the global semiconductor and high-performance computing sectors, Taiwan is hosting this year’s conference. Chau-Lyan Chang, Chairman of HPC Asia 2025 and Director General of NCHC, said, “HPC Asia 2025 is an important opportunity for Taiwan to engage with the international HPC community. Through this conference, we aim to connect global HPC experts, deepen Taiwan’s experience and strengths in semiconductor innovation, and extend these advantages to breakthroughs in high-performance computing as we work together to drive technological innovation.” Tzi-Dar Chiueh, Executive Director of the Chip Innovation Program Office, introduced the future development strategies and roadmap of the ‘Taiwan Chip-Based Industrial Innovation Program’, laying a solid foundation for Taiwan’s technological capabilities. 
+  
+ The conference invited several world-renowned experts as keynote speakers, including Dr. Jack Dongarra, Co-founder of TOP500 and Professor Emeritus at the University of Tennessee; Tuo-Hung Hou, Director General of Taiwan Semiconductor Research Institute (TSRI); and Dr. Xian-He Sun, Distinguished Professor at Illinois Institute of Technology. They shared the latest research findings and development trends, exploring the future of chip integration with HPC. 
+  
+ At the conference, Dr. Jack Dongarra analyzed global supercomputing trends, emphasizing, “Whether it’s hardware design or algorithms, both are continuously evolving to meet application demands. In recent years, with the rise of AI, mixed precision in high-performance computing has become particularly important. Its goal is to enhance computational efficiency without an excessive focus on absolute precision. High-performance computing plays a crucial role in scientific advancements and solving complex human challenges, yet it must continuously evolve to achieve faster and more precise solutions. Therefore, optimizing computing architectures to improve performance and energy efficiency, and maximizing hardware efficiency in rapidly evolving computing environments remain fundamental to HPC.” 
+  
+ TSRI Director General Tuo-Hung Hou said, “Chip technology and high-performance computing are deeply interconnected. With the development of chip miniaturization technologies and the emergence of new design architectures—such as application-specific integrated circuits (ASICs), high-bandwidth memory (HBM), and advanced 3D/5D packaging—the computational efficiency and energy performance of HPC will be significantly enhanced. However, the evolution of chip technology and high-performance computing forms a mutually reinforcing cycle. Advanced manufacturing processes and heterogeneous integration technologies will be key drivers in pushing HPC breakthroughs, while improvements in HPC will, in turn, benefit semiconductor process development, bolstering innovation and productivity in the semiconductor industry.” 
+  
+ Five Core Themes Showcase Cutting-edge HPC Technology and Application 
+  
+ HPC Asia 2025 features five core themes, including HPC systems and software, big data and visualization technologies, AI and emerging technologies, performance modeling and optimization, and processor and accelerator architecture innovation. The technology exhibition area featured presentations of the latest HPC technologies and applications by leading international organizations such as the National Supercomputing Centre (NSCC) of Singapore, the Institute of Physical and Chemical Research (RIKEN), and local companies, fostering academia-industry exchanges and international collaborations. 
+ In addition, the conference hosted several specialized workshops that delve into the Arm architecture, RISC-V instruction set, Intel IXPUG architecture, and the application of AI in the HPC field. These sessions offered attendees ample opportunities for learning and technological exchange, with academia and industry collaboratively building an HPC innovation ecosystem. 
+  
+ Strengthening Talent Capabilities and Nurturing the Future of HPC 
+  
+ NARLabs President Hung-Yin Tsai said, “Taiwan, leveraging its leadership in semiconductor manufacturing and chip design, is driving innovative developments in HPC technology. The fusion of advanced chip technology with continually refined HPC capabilities will generate exciting interdisciplinary synergies. NARLabs is committed to promoting scientific research and technological innovation through its seven major research institutes. We continuously build platforms and infrastructures to support the research community and actively foster international collaboration. We look forward to sharing these experiences and achievements with global partners. This conference is the perfect manifestation of our sustained efforts.” 
+  
+ HPC Asia 2025 is not only a platform for technological exchange but also a crucial event for deepening international cooperation and nurturing future talent. NCHC attaches great importance to HPC talent cultivation and education. Through a special program for domestic students, the center provides opportunities for students to participate in this international conference and experience firsthand the latest technologies and trends in high-performance computing applications. Additionally, the event features a dedicated exhibition area for the “HiPAC (High Performance Application Competition),” showcasing the competition outcomes and the remarkable achievements in nurturing HPC talent in Taiwan. NCHC will continue to play a significant role, connecting the global HPC community and partnering with international allies to usher in a new era of HPC innovation. 
+  
+ This conference has garnered support from numerous internationally renowned companies and institutions, including AMD, MediaTek, SambaNova Systems, WeiCloud, RIKEN, VAST Data, Intel, ITRI, Seagate Technology, WEKA, Neuchips, Quanta Cloud Technology (QCT), GIGABYTE, NVIDIA, Taiwan AI Service Corporation, and NSCC of Singapore. Together, they are working to drive HPC innovation and application. 
+  
+ 1HPC stands for high-performance computing. HPC Asia is the most influential international HPC conference in the Asia-Pacific region. Held annually in different Asian countries, it aims to advance HPC research and development in the region. Hosted by NCHC, the 2025 conference not only highlights Taiwan’s technological strengths in HPC but also fosters deeper international collaboration, contributing to global scientific and technological advancements. 
+ About Us | NIAR Overview 
+ Organization 
+ Awards and Achievements 
+ Milestones 
+ Contact Us 
+ href="https://www.niar.org.tw/en/xmdoc/cont?xsmsid=0I160799431865857206" - Research & Technology | Core Technology & Facilities 
+ Environment Technology 
+ Information and Communication Technology 
+ Biomedical Technology 
+ Science and Technology Policy 
+ Emerging Fields 
+ Science & Impacts | Foster High-tech Talent 
+ Social Engagement 
+ International Collaboration | Strategies & Mechanisms 
+ Global partners 
+ Talent Program 
+ Internship Program 
+ Press room | News 
+ Events 
+ Publications 
+ Multimedia 
+ Contact Us 
+ 3F., No. 106, Sec. 2, Heping E. Rd., Da’an Dist., Taipei City 106214, Taiwan (R.O.C.) 
+ Tel：02-2737-8000 
+ Fax：02-2737-8044 
+ E-mail：service@niar.org.tw 
+ Follow Us 
+ Privacy protection and website security policyCopyright © 2025 National Applied Research Laboratories. All rights reserved.
+
+4. Website of HPC Asia_3: https://www.sc-asia.org/
+Website information of HPC Asia_3:
+
+By visiting our site, you acknowledge and agree to our privacy policy regarding cookies, tracking statistics, etc. 
+ AcceptXSkip to contentMeSUPERCOMPUTINGASIA 
+ Gathering the best of HPC in Asia 
+ SupercomputingAsia 2025 
+ HPC and Quantum: Empowering AI, Science, and Innovation 
+ SCA25 is set to return to Singapore from March 10 to 13, 2025 after a successful year in Sydney, Australia. The upcoming SCA25 conference promises a wealth of engaging activities and discussions. 
+ Registration is now open! Visit theofficial SCA25 websiteto find out more. 
+ href="https://sca25.sc-asia.org/call-for-papers/" - Call for Papers
+:Closed 
+ Clickhref="https://sc-asia.org/sca25-call-for-papers/" - here
+to find out more. 
+ href="https://sca25.sc-asia.org/call-for-workshops/" - Call for Workshops & Tutorials
+:Closed 
+ Clickhref="https://sca25.sc-asia.org/call-for-workshops/" - here
+to find out more.href="https://sca25.sc-asia.org/call-for-posters/" - Call for Posters
+:Open on 4 November 2024 
+ Clickhref="https://sca25.sc-asia.org/call-for-posters/" - here
+to find out more. 
+ CHECK OUT OUR PAST EVENTSHistory 
+ Links to past 
+ conference proceedings 
+ REGISTER NOW!SCA25 
+ 10-13 March 2025 
+ SingaporeAbout SupercomputingAsia 
+ The SCA conference is an annual international HPC event that encompasses an umbrella of notable supercomputing and allied events in Asia. Established in 2018, the conference is co-organised by HPC centres from Australia, Japan, Singapore, and Thailand and has become a key networking and collaboration platform for the regional and global supercomputing community. The event attracts HPC thought leaders, decision-makers, academics, multinational corporations, commercial partners, and industry professionals. 
+ Since its inception in 2018, SCA has traditionally been held in Singapore, serving as a vital meeting point for the global supercomputing community in Asia. However, in a momentous move, the 2024 edition took place in Sydney, Australia, marking a significant expansion of its reach. Looking ahead, the co-organisers are committed to further broadening the event’s impact across Asia. 
+ SupercomputingAsia Awards 
+ Rebranded from the Supercomputing Frontiers (SCF) / National Supercomputing Centre (NSCC) Singapore Awards originating from the third annual SCF High-Performance Computing (HPC) conference in 2017, the SCA Awards was given its new name during the inception of SCA18. This prestigious accolade honours pioneers, trailblazers and thought leaders who have significantly shaped Asia’s HPC ecosystem. By celebrating their contributions, the SCA Awards not only acknowledges their achievements but also serves as a beacon of inspiration for emerging researchers and practitioners, catalysing continued innovation and excellence in the field. 
+ Data Mover Challenge 
+ The international Data Mover Challenge (DMC), a key event of the SCA conference series, is a competition that is run once every 2 years and it aims to bring together experts from industry and academia in a bid to test their software and solutions for transferring huge amounts of research data. DMC seeks to challenge international teams to come up with the most advanced and innovative solutions for data transfer across servers located in various countries that are connected by 100Gbps international research and education networks. 
+ SCA Call for Papers 
+ The technical conference is held in conjunction with the SCA conference. It provides a platform for thought leaders from both academia and industry to present their research as well as discuss visionary ideas, global trends and the latest innovations across Applications, Algorithms & Libraries, Architecture, Network / Communication & Management, Data, Storage & Visualization and Programming & System Software. 
+ Co-organisers 
+ The National Supercomputing Centre (NSCC) Singapore was established in 2015 to manage Singapore’s national petascale facilities and high-performance computing (HPC) resources. As a National Research Infrastructure funded by the National Research Foundation (NRF), the HPC resources that we provide helps support the research needs of the public and private sectors, including research institutes, institutes of higher learning, government agencies and companies. With the support of our stakeholders, NSCC catalyses national research and development initiatives, attracts industrial research collaborations and enhances Singapore’s research capabilities. 
+ For more information, please visithttps://www.nscc.sg/ 
+ The National Computational Infrastructure (NCI) is a collaborative hub at the centre of the Australian research ecosystem. We enable transformative science through big data and computing technologies, platforms and expertise. Through Extreme Computing and Data Analytics infrastructure – high-performance computing and data systems – tightly coupled with our internationally renowned expertise, NCI provides essential services that support the needs of research and industry today and into the future. 
+ https://nci.org.au 
+ As the leadership center of high-performance computing, the RIKEN Center for Computational Science (R-CCS) explores the "Science of computing, by computing, and for computing." The outcomes of the exploration – the technologies such as open-source software – are its core competence. The R-CCS strives to enhance the core competence and to promote the technologies throughout the world. 
+ https://www.r-ccs.riken.jp/en/ 
+ As Thailand's leading supercomputer center, NSTDA Supercomputer Center (ThaiSC) is dedicated to delivering cutting-edge HPC research and services to the R&D community. ThaiSC actively fosters HPC workforce development, shapes the national HPC roadmap, and builds strategic partnerships. The center's notable milestone is the LANTA supercomputer distinguished as the fastest in ASEAN. With a focus on frontier science, urgent issues, and large-scale AI research, ThaiSC drives innovation and advancement in the HPC ecosystem by utilizing the powerful LANTA supercomputer. 
+ https://thaisc.io/ 
+ The Research Organization for Information Science and Technology (RIST) contributes to the progress of science and technology through the following activities and services; 
+ 1) Promotion of effective use of the national flagship supercomputer Fugaku and the High Performance Computing Infrastructure (HPCI) in Japan, as the Registered Institution for Fugaku Use Promotion and the Representative for HPCI Operation, 
+ 2) Developments of advanced technologies in high-performance computing and information science, 
+ 3) Archiving and distribution of computer codes for nuclear science and engineering. 
+ RIST:https://www.rist.or.jp/ehome.html 
+ HPCI:https://www.hpci-office.jp/en 
+ The Pawsey Supercomputing Research Centre is a Tier-1 High Performance Computing facility in Australia, supporting scientific research for the nation. Pawsey’s expertise in supercomputing, data, cloud and visualisation services benefits various domains like astronomy, life sciences, medicine, energy, resources, and artificial intelligence. Pawsey offers support through seminars, symposia, training, internships, and workshops for students, industry personnel, researchers, academics, and scientists in data, visualization, supercomputing, and advanced computing research opportunities. 
+ www.pawsey.org.au/ 
+ Contact Details 
+ For general enquiries, please contact us at: 
+ secretariat@sc-asia.org 
+ Social Media: 
+ LinkedinFacebook-squareLoading...Loading...Contact Details 
+ For general enquiries, please contact us at: 
+ secretariat@sc-asia.org 
+ Social Media: 
+ LinkedinFacebook-square©SupercomputingAsia. Updated as of 8 June 2023. 
+ Privacy Policy|Terms & Conditions 
+ 10About SCA 
+ href="https://sc-asia.org/sca25-call-for-papers/" - SCA25 Call for Papers 
+ href="https://sc-asia.org/sca25-technical-conference-call-for-workshops-tutorials/" - SCA25 Call for Workshops & Tutorials 
+ href="https://sc-asia.org/sca25-technical-conference-call-for-posters/" - SCA25 Call for Posters 
+ Contact Us 
+ Past Events 
+ About SCA 
+ href="https://sc-asia.org/sca25-call-for-papers/" - SCA25 Call for Papers 
+ href="https://sc-asia.org/sca25-technical-conference-call-for-workshops-tutorials/" - SCA25 Call for Workshops & Tutorials 
+ href="https://sc-asia.org/sca25-technical-conference-call-for-posters/" - SCA25 Call for Posters 
+ Contact Us 
+ Past Events
+

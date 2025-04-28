@@ -1,0 +1,1557 @@
+Conference full name: Practical Aspects of Declarative Languages (PADL)
+
+1. Website of PADL_3: https://popl25.sigplan.org/home/PADL-2025
+Website information of PADL_3:
+
+href="https://popl25.sigplan.org" - POPL 2025
+Sun 19 - Sat 25 January 2025href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Denver, Colorado, United States
+Toggle navigation 
+ Attending | href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Program | href="https://popl25.sigplan.org/program/program-POPL-2025/" - POPL Program 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Your Program 
+ Filter by Day | href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sun 19 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Mon 20 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Tue 21 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Wed 22 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Thu 23 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Fri 24 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sat 25 Jan 
+ href="#" - Tracks | POPL 2025 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events 
+ Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 
+ Organization | POPL 2025 Committees 
+ Organizing Committee 
+ AV Committee 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-volunteers" - Student Volunteers 
+ Track Committees 
+ href="https://popl25.sigplan.org/committee/POPL-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/committee/POPL-2025-popl-research-papers-program-committee" - POPL 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-research-competition-selection-committee" - Student Research Competition 
+ Contributors 
+ People Index 
+ Co-hosted Conferences 
+ CPP | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ VMCAI | Organizing Committee 
+ Program Committee 
+ Artifact Evaluation Committee 
+ Workshops 
+ CoqPL | Program Committee 
+ Dafny | Program Committee Chairs 
+ Program Committee 
+ Steering Committee Chairs 
+ LAFI | Program Committee 
+ Steering Committee 
+ PEPM | href="https://popl25.sigplan.org/committee/pepm-2025-papers-organizing-committee" - Chairs 
+ Program Committee Members 
+ PLMW @ POPL | Organizing Committee 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-speakers" - Speakers 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-panelists" - Panelists 
+ PLanQC | Organizing Committee 
+ Program Committee 
+ PriSC | Program Committee 
+ Steering Committee 
+ TPSA | Organizing Committee 
+ Program Committee 
+ WAW | href="https://popl25.sigplan.org/committee/waw-2025-papers-organizer" - Organizers 
+ Program Committee 
+ WITS | Program Committee 
+ Co-hosted Symposia 
+ href="#" - PADL | href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs 
+ Program Committee 
+ Search 
+ Series | Series 
+ href="https://conf.researchr.org/home/POPL-2026" - POPL 2026 
+ POPL 2025 
+ POPL 2024 
+ POPL 2023 
+ POPL 2022 
+ POPL 2021 
+ POPL 2020 
+ POPL 2019 
+ POPL 2018 
+ POPL 2017 
+ POPL 2016 
+ href="https://conf.researchr.org/signin/POPL-2025/https%3A%5Es%5Espopl25.sigplan.org%5Eshome%5EsPADL-2025" - Sign in 
+ Sign up 
+ href="https://popl25.sigplan.org" - POPL 2025
+(series) /PADL 2025 (href="https://popl25.sigplan.org/series/PADL" - series
+) /PADL 2025: The 27th International Symposium on Practical Aspects of Declarative Languages 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Awards 
+ href="#Registration-for-PADL-2025" - Registration for PADL 2025 
+ href="#Call-for-Papers" - Call for Papers 
+ Proceedings 
+ href="https://gvidal.webs.upv.es/PADL2025/ProceedingsPADL2025.pdf" - Preliminary proceedings | are available (pwd protected) 
+ Final Proceedings | (Springer LNCS, volume | 15537 | ) 
+ Introduction 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real-world situations, ranging from database management to active networks to software engineering to decision support systems. 
+ New developments in theory and implementation fostered applications in new areas. At the same time, applications of declarative languages to novel and challenging problems raise many interesting research issues, including designing for scalability, language extensions for application deployment, and programming environments. Thus, applications drive the progress in the theory and implementation of declarative systems, and benefit from this progress as well. 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, database and constraint programming, and theorem proving. 
+ Student grants 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. You can apply by filling out the following form beforeDecember 25: 
+ https://forms.gle/Xr4HfxgNRxUAy7jv9 
+ The selection process will give preference to students who present their papers at the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ Venue 
+ PADL 2025 will take place at the Curtis Hotel Denver, 1405 Curtis Street, 80202 Denver, Colorado, United States. 
+ Sponsoring Institutions: 
+ href="https://aij.ijcai.org/funding-opportunities-for-promoting-ai-research/" - 
+Invited Talks 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementY. Annie Liu
+href="https://popl25.sigplan.org/details/PADL-2025-papers/18/Invited-Talk-Bridging-Safety-and-Performance" - Invited Talk: Bridging Safety and PerformanceUmut A. Acar
+Dates 
+ Mon 20 Jan 2025 
+ Tue 21 Jan 2025 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-07:00) Mountain Time (US & Canada).Use conference time zone: (GMT-07:00) Mountain Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Mon 20 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 1href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):German VidalUniversitat Politecnica de Valencia 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementPADL 
+ Y. Annie LiuStony Brook University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - File Attached 
+ 10:00 
+ 30m 
+ Talk | Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento TakyuWaseda University,Kazunori UedaWaseda University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 2href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Michael HanusKiel University 
+ 11:00 
+ 30m 
+ Talk | Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim NewtonEPITA / LRE https://www.lre.epita.fr 
+ 11:30 
+ 30m 
+ Talk | Haskell Based SpreadsheetsPADL 
+ Ignacio BallesterosIMDEA Software Institute and Universidad Politécnica de Madrid,Luis Eduardo Bueso de BarrioUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ 12:00 
+ 30m 
+ Talk | The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent RobinsonUniversity of Portland 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:30 | Session 3href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Kazunori UedaWaseda University 
+ 14:00 
+ 30m 
+ Talk | A practical approach to handling tabular data in logicPADL 
+ Robin De VogelaereKU Leuven,Kylian Van DesselLeuven.AI, Belgium,Joost VennekensKU Leuven 
+ 14:30 
+ 30m 
+ Talk | C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad ShakerinMicrosoft,Joaquín AriasUniversidad Rey Juan Carlos,Elmer SalazarThe University of Texas at Dallas,Gopal Gupta 
+ 15:00 
+ 30m 
+ Talk | On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos CostaUniversity of Porto, Portugal,Miguel AreiasUniversity of Porto, Portugal 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 16:00 - 17:30 | Session 4href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Vitor Santos CostaUniversity of Porto, Portugal 
+ 16:00 
+ 30m 
+ Talk | MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe GorostiagaIMDEA Software Institute,Martin CeresaIMDEA Software Institute,César SánchezIMDEA Software Institute 
+ 16:30 
+ 30m 
+ Talk | Checking Concurrency Coding RulesPADL 
+ Lars-Åke FredlundUniversidad Politécnica de Madrid,Ángel HerranzUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ 17:00 
+ 10m 
+ Talk | href="#" - Can Logic Programming Be Liberated from Predicates and Backtracking? (Lightning talk)
+PADL 
+ Michael HanusKiel University 
+ 17:10 
+ 10m 
+ Talk | Logic Programming with Extensible Types (Lightning talk)PADL 
+ Ivan PerezNASA Ames Research Center,Ángel HerranzUniversidad Politécnica de Madrid,P:Julio MariñoUniversidad Politécnica de Madrid 
+ Tue 21 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 5href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Esra ErdemSabanci University 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Bridging Safety and PerformancePADL 
+ Umut A. AcarCarnegie Mellon University 
+ 10:00 
+ 30m 
+ Talk | SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary HansenUniversity of Nebraska Omaha,Yuliya LierlerUniversity of Nebraska 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 6href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Fang LiOklahoma Christian University 
+ 11:00 
+ 30m 
+ Talk | ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela InclezanMiami University, USA,Hunter LockwoodMyaamia Center & Miami University,Anita BaralMiami University,Jitendra SharmaMiami University,Pratiksha ShresthaMiami University 
+ 11:30 
+ 30m 
+ Talk | A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan YanSoutheast University, Nanjing,Junru LiSoutheast University, Nanjing,Fangzhou LiuSoutheast University, Nanjing,Zerong WangSoutheast University, Nanjing,Zhizheng ZhangSoutheast University, Nanjing 
+ 12:00 
+ 30m 
+ Talk | Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan NguyenUniversity of Texas at Dallas, USA,Bryant HargreavesUniversity of Texas at Dallas, USA,Keegan KimbrellUniversity of Texas at Dallas, USA,Gopal Gupta 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 12:30 - 14:00 | SIGPLAN SC Meetinghref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-virtual-only" - Virtual Only 
+ 12:30 
+ 90m 
+ Meeting | SIGPLAN SC MeetingCatering 
+  
+ 14:00 - 15:30 | Session 7href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Daniela InclezanMiami University 
+ 14:00 
+ 30m 
+ Talk | Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang LiOklahoma Christian University,Fei ZuoUniversity of Central Oklahoma,Gopal Gupta 
+ 14:30 
+ 30m 
+ Talk | Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul TarauUniversity of North Texas 
+ 15:00 
+ 30m 
+ Talk | Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo WangTemple University, USA 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+ Accepted Papers 
+  
+ Title 
+ A practical approach to handling tabular data in logicPADL 
+ Robin De Vogelaere,Kylian Van Dessel,Joost Vennekens 
+ ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela Inclezan,Hunter Lockwood,Anita Baral,Jitendra Sharma,Pratiksha Shrestha 
+ Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan Nguyen,Bryant Hargreaves,Keegan Kimbrell,Gopal Gupta 
+ A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan Yan,Junru Li,Fangzhou Liu,Zerong Wang,Zhizheng Zhang 
+ C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad Shakerin,Joaquín Arias,Elmer Salazar,Gopal Gupta 
+ Checking Concurrency Coding RulesPADL 
+ Lars-Åke Fredlund,Ángel Herranz,Julio Mariño 
+ Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento Takyu,Kazunori Ueda 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+ Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo Wang 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+ Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang Li,Fei Zuo,Gopal Gupta 
+ Haskell Based SpreadsheetsPADL 
+ Ignacio Ballesteros,Luis Eduardo Bueso de Barrio,Julio Mariño 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul Tarau 
+ MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe Gorostiaga,Martin Ceresa,César Sánchez 
+ On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos Costa,Miguel Areias 
+ SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary Hansen,Yuliya Lierler 
+ The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent Robinson 
+ Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim Newton 
+ Call for Papers 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, databases and constraint programming, and theorem proving. 
+ Topics of interest include, but are not limited to: 
+ Innovative applications of declarative languages 
+ Declarative domain-specific languages and applications 
+ Practical applications of theoretical results 
+ New language developments and their impact on applications 
+ Declarative languages and software engineering 
+ Evaluation of implementation techniques on practical applications 
+ Practical experiences and industrial applications 
+ Novel uses of declarative languages in the classroom 
+ Practical extensions such as constraint-based, probabilistic, and reactive languages 
+ PADL 2025 especially welcomes new ideas and approaches related to applications, design, and implementation of declarative languages going beyond the scope of the past PADL symposia, for example, advanced database languages and contract languages, as well as verification and theorem-proving methods that rely on declarative languages. 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. The selection process will give preference to students who present their paper in the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ href="#submissions" - Submissions
+PADL 2025 welcomesregular papers (max. 15 pages, excluding references)andshort papers (max. 8 pages, excluding references)that describe original and previously unpublished research results on 
+ complex and/or real-world applications in industry or in other areas of research, that rely on an innovative use of declarative languages, 
+ tools and/or systems developed for such applications, and/or to improve practical aspects of declarative languages, 
+ technical results related to the practical aspects of declarative languages. 
+ Application and systems descriptions, engineering solutions, and real-world experiences (both positive and negative) are in particular solicited. Regular and short papers will be published in the formal proceedings. 
+ PADL 2025 also welcomesextended abstracts (max. 3 pages)on the topics above, that describe new ideas, a new perspective on already published work, or work-in-progress that is not yet ready for a full publication. Extended abstracts will be posted on the symposium website but will not be published in the formal proceedings. 
+ All page limits exclude references. Submissions must be written in English and formatted according to the standard Springer LNCS style, seehttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines 
+ The review process of PADL 2025 isdouble-anonymous. In your submission, please, omit your names and institutions; refer to your prior work in the third person, just as you refer to prior work by others; do not include acknowledgments that might identify you. 
+ Additional material intended for reviewers but not for publication in the final version - for example, details of proofs - may be placed in a clearly marked appendix that is not included in the page limit. Reviewers are at liberty to ignore appendices and papers must be understandable without them. 
+ Page numbers (and, if possible, line numbers) should appear on the manuscript to help the reviewers in writing their reports. So, for LaTeX, we recommend that authors use: 
+ \pagestyle{plain} \usepackage{lineno} \linenumbersThe conference proceedings of PADL 2025 will be published by Springer-Verlag in the Lecture Notes in Computer Science series. Work that already appeared in unpublished or informally published Workshop proceedings may be submitted but the authors should notify the program chairs where it has previously appeared.href="https://link.springer.com/conference/padl" - Previous PADL proceedings
+can be found onSpringerLink. 
+ Papers should be submitted electronically viahref="https://equinocs.springernature.com/service/padl2025" - EquinOCS
+(registration is required if you do not have an account). 
+ href="#distinguished-papers" - Distinguished Papers
+The authors of a small number of distinguished papers will be invited to submit a longer version for journal publication after the symposium. For papers related to logic programming, that will be in the journalTheory and Practice of Logic Programming (TPLP), and for papers related to functional programming, inJournal of Functional Programming (JFP). The extended journal submissions should be substantially (roughly 30%) extended: explanations for which there was no space, illuminating examples and proofs, additional definitions and theorems, further experimental results, implementational details and feedback from practical/engineering use, extended discussion of related work, and so on. These submissions will then be subject to the usual peer review process by the journal, although with the aim of a swifter review process by reusing original reviews from PADL. 
+ Awards 
+ Best Student Paper Award 
+ Zachary Hansen, Yuliya Lierler: “SM-based Semantics for Answer Set Programs Containing Conditional Literals and Arithmetic” 
+ Best Student Paper Honorable Mention 
+ Kento Takyu, Kazunori Ueda: “Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut Elimination” 
+ Registration for PADL 2025 
+ The registration for PADL 2025 is handled separately from POPL. Please note that at leastone author of each accepted paper must register specifically to PADL. 
+ Early registration deadline isDecember 29, 2024. 
+ Registration Rates for PADL 2025 
+ The registration rates are as follows: 
+
+Type of Registration | Early Rate (British pounds) | Regular Rate (British pounds) 
+ Student | £310 | £335 
+ Regular | £420 | £500 
+  
+ Registration rate includes the cost of venue, lunch, morning and afternoon coffee breaks. 
+ Steps for Registering 
+ You can wire a bank transfer to the following account number (transfer charges assumed by the payer): 
+ Bank: | Natwest (UK) 
+ Bank address: | NatWest Markets Plc is 36 St Andrew Square, Edinburgh, EH2 2YB 
+ Account name: | THE ASSOCIATION FOR LOGIC PROGRAMMING Ltd 
+ Account holders address: | The Association for Logic Programming, Care of Marina De Vos, Dept Computer Science, University of Bath, BA2 7AY 
+ Sort Code: | 60-02-05 
+ Account Number: | 66462738 
+ BIC: | NWBKGB2L 
+ IBAN: | GB74NWBK60020566462738 
+ Transfers usually take a week to complete. ContactMarina De Vosif you have any payment queries. 
+ Once the bank transfer has been made, send a copy of the receipt along with yourfirst name,last name,affiliation, andcountrytogvidal@dsic.upv.es(Cc:cssmdv@bath.ac.uk). 
+ Questions? Use thehref="https://popl25.sigplan.org/contact2/PADL-2025-papers" - PADL contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Mon 20 - Tue 21 Jan 2025 
+ Symposium 
+ Sun 24 Nov 2024 
+ Final version 
+ Thu 14 Nov 2024 
+ Notification to authors 
+ Fri 18 Oct 2024 
+ Paper submission 
+ Fri 11 Oct 2024 
+ Abstract submission 
+ Submission Link 
+ href="https://equinocs.springernature.com/service/padl2025" - https://equinocs.springernature.com/service/padl2025
+href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs
+Esra ErdemSabanci University 
+ Turkey 
+ German VidalUniversitat Politecnica de Valencia 
+ Spain 
+ Program Committee 
+ Ozgur AkgunUniversity of St Andrews, St Andrews, UK 
+ United Kingdom 
+ Nada AminHarvard University 
+ United States 
+ Marcello BalducciniSaint Joseph's University, USA 
+ Mutsunori BanbaraNagoya University 
+ Japan 
+ Clara Benac EarleUniversidad Politécnica de Madrid 
+ Spain 
+ Malgorzata BiernackaUniversity of Wrocław 
+ Manuel CarroIMDEA Software Institute and Universidad Politécnica de Madrid 
+ Spain 
+ Laura M. CastroUniversity of A Coruña 
+ Spain 
+ Martin GebserUniversity of Klagenfurt, Austria 
+ Austria 
+ Gopal Gupta 
+ Michael HanusKiel University 
+ Germany 
+ Daniela InclezanMiami University 
+ United States 
+ Yusuf IzmirliogluUnited Kingdom 
+ Tomi JanhunenTampere University 
+ Finland 
+ Ekaterina KomendantskayaHeriot-Watt University and Southampton University 
+ United Kingdom 
+ Ivan LaneseUniversity of Bologna/INRIA 
+ Michael LeuschelHHU 
+ Germany 
+ Naoki NishidaNagoya University 
+ Japan 
+ Alberto PardoUniversidad de la Republica, Uruguay 
+ Enrico PontelliNew Mexico State University 
+ United States 
+ Orkunt SabuncuTED University 
+ Turkey 
+ Zeynep G. SaribaturTU Wien 
+ Austria 
+ Tom SchrijversKU Leuven 
+ Belgium 
+ Paul TarauUniversity of North Texas 
+ United States 
+ Laura TitoloAMA/NASA LaRC 
+ United States 
+ Melinda TóthEötvös Loránd University, Faculty of Informatics, Department of Programming Languages and Compilers & ELTE-Soft Nonprofit Ltd. 
+ Hungary 
+ Joost VennekensKU Leuven 
+ Sam WestrickNew York University 
+ United States 
+ Jessica ZangariUniversità della Calabria 
+ Italy 
+ Neng-Fa ZhouCUNY Brooklyn College and Graduate Center 
+ xSat 5 Apr 13:23 
+ href="https://popl25.sigplan.org" - POPL 2025
+contact form 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ Support page 
+ Tracks 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events
+Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 2025
+ 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 2025
+ 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 2025
+ 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 2025
+ 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 2025
+ 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 2025
+ 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 2025
+ 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 2025
+ 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 2025
+ 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 2025
+ 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 2025
+ 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 2025
+ 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025
+Attending 
+ href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver
+ 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Sign Up 
+ : 
+ :
+
+2. Website of PADL_3: https://popl25.sigplan.org/home/PADL-2025
+Website information of PADL_3:
+
+href="https://popl25.sigplan.org" - POPL 2025
+Sun 19 - Sat 25 January 2025href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Denver, Colorado, United States
+Toggle navigation 
+ Attending | href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Program | href="https://popl25.sigplan.org/program/program-POPL-2025/" - POPL Program 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Your Program 
+ Filter by Day | href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sun 19 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Mon 20 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Tue 21 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Wed 22 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Thu 23 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Fri 24 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sat 25 Jan 
+ href="#" - Tracks | POPL 2025 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events 
+ Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 
+ Organization | POPL 2025 Committees 
+ Organizing Committee 
+ AV Committee 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-volunteers" - Student Volunteers 
+ Track Committees 
+ href="https://popl25.sigplan.org/committee/POPL-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/committee/POPL-2025-popl-research-papers-program-committee" - POPL 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-research-competition-selection-committee" - Student Research Competition 
+ Contributors 
+ People Index 
+ Co-hosted Conferences 
+ CPP | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ VMCAI | Organizing Committee 
+ Program Committee 
+ Artifact Evaluation Committee 
+ Workshops 
+ CoqPL | Program Committee 
+ Dafny | Program Committee Chairs 
+ Program Committee 
+ Steering Committee Chairs 
+ LAFI | Program Committee 
+ Steering Committee 
+ PEPM | href="https://popl25.sigplan.org/committee/pepm-2025-papers-organizing-committee" - Chairs 
+ Program Committee Members 
+ PLMW @ POPL | Organizing Committee 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-speakers" - Speakers 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-panelists" - Panelists 
+ PLanQC | Organizing Committee 
+ Program Committee 
+ PriSC | Program Committee 
+ Steering Committee 
+ TPSA | Organizing Committee 
+ Program Committee 
+ WAW | href="https://popl25.sigplan.org/committee/waw-2025-papers-organizer" - Organizers 
+ Program Committee 
+ WITS | Program Committee 
+ Co-hosted Symposia 
+ href="#" - PADL | href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs 
+ Program Committee 
+ Search 
+ Series | Series 
+ href="https://conf.researchr.org/home/POPL-2026" - POPL 2026 
+ POPL 2025 
+ POPL 2024 
+ POPL 2023 
+ POPL 2022 
+ POPL 2021 
+ POPL 2020 
+ POPL 2019 
+ POPL 2018 
+ POPL 2017 
+ POPL 2016 
+ href="https://conf.researchr.org/signin/POPL-2025/https%3A%5Es%5Espopl25.sigplan.org%5Eshome%5EsPADL-2025" - Sign in 
+ Sign up 
+ href="https://popl25.sigplan.org" - POPL 2025
+(series) /PADL 2025 (href="https://popl25.sigplan.org/series/PADL" - series
+) /PADL 2025: The 27th International Symposium on Practical Aspects of Declarative Languages 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Awards 
+ href="#Registration-for-PADL-2025" - Registration for PADL 2025 
+ href="#Call-for-Papers" - Call for Papers 
+ Proceedings 
+ href="https://gvidal.webs.upv.es/PADL2025/ProceedingsPADL2025.pdf" - Preliminary proceedings | are available (pwd protected) 
+ Final Proceedings | (Springer LNCS, volume | 15537 | ) 
+ Introduction 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real-world situations, ranging from database management to active networks to software engineering to decision support systems. 
+ New developments in theory and implementation fostered applications in new areas. At the same time, applications of declarative languages to novel and challenging problems raise many interesting research issues, including designing for scalability, language extensions for application deployment, and programming environments. Thus, applications drive the progress in the theory and implementation of declarative systems, and benefit from this progress as well. 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, database and constraint programming, and theorem proving. 
+ Student grants 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. You can apply by filling out the following form beforeDecember 25: 
+ https://forms.gle/Xr4HfxgNRxUAy7jv9 
+ The selection process will give preference to students who present their papers at the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ Venue 
+ PADL 2025 will take place at the Curtis Hotel Denver, 1405 Curtis Street, 80202 Denver, Colorado, United States. 
+ Sponsoring Institutions: 
+ href="https://aij.ijcai.org/funding-opportunities-for-promoting-ai-research/" - 
+Invited Talks 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementY. Annie Liu
+href="https://popl25.sigplan.org/details/PADL-2025-papers/18/Invited-Talk-Bridging-Safety-and-Performance" - Invited Talk: Bridging Safety and PerformanceUmut A. Acar
+Dates 
+ Mon 20 Jan 2025 
+ Tue 21 Jan 2025 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-07:00) Mountain Time (US & Canada).Use conference time zone: (GMT-07:00) Mountain Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Mon 20 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 1href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):German VidalUniversitat Politecnica de Valencia 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementPADL 
+ Y. Annie LiuStony Brook University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - File Attached 
+ 10:00 
+ 30m 
+ Talk | Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento TakyuWaseda University,Kazunori UedaWaseda University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 2href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Michael HanusKiel University 
+ 11:00 
+ 30m 
+ Talk | Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim NewtonEPITA / LRE https://www.lre.epita.fr 
+ 11:30 
+ 30m 
+ Talk | Haskell Based SpreadsheetsPADL 
+ Ignacio BallesterosIMDEA Software Institute and Universidad Politécnica de Madrid,Luis Eduardo Bueso de BarrioUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ 12:00 
+ 30m 
+ Talk | The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent RobinsonUniversity of Portland 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:30 | Session 3href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Kazunori UedaWaseda University 
+ 14:00 
+ 30m 
+ Talk | A practical approach to handling tabular data in logicPADL 
+ Robin De VogelaereKU Leuven,Kylian Van DesselLeuven.AI, Belgium,Joost VennekensKU Leuven 
+ 14:30 
+ 30m 
+ Talk | C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad ShakerinMicrosoft,Joaquín AriasUniversidad Rey Juan Carlos,Elmer SalazarThe University of Texas at Dallas,Gopal Gupta 
+ 15:00 
+ 30m 
+ Talk | On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos CostaUniversity of Porto, Portugal,Miguel AreiasUniversity of Porto, Portugal 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 16:00 - 17:30 | Session 4href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Vitor Santos CostaUniversity of Porto, Portugal 
+ 16:00 
+ 30m 
+ Talk | MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe GorostiagaIMDEA Software Institute,Martin CeresaIMDEA Software Institute,César SánchezIMDEA Software Institute 
+ 16:30 
+ 30m 
+ Talk | Checking Concurrency Coding RulesPADL 
+ Lars-Åke FredlundUniversidad Politécnica de Madrid,Ángel HerranzUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ 17:00 
+ 10m 
+ Talk | href="#" - Can Logic Programming Be Liberated from Predicates and Backtracking? (Lightning talk)
+PADL 
+ Michael HanusKiel University 
+ 17:10 
+ 10m 
+ Talk | Logic Programming with Extensible Types (Lightning talk)PADL 
+ Ivan PerezNASA Ames Research Center,Ángel HerranzUniversidad Politécnica de Madrid,P:Julio MariñoUniversidad Politécnica de Madrid 
+ Tue 21 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 5href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Esra ErdemSabanci University 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Bridging Safety and PerformancePADL 
+ Umut A. AcarCarnegie Mellon University 
+ 10:00 
+ 30m 
+ Talk | SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary HansenUniversity of Nebraska Omaha,Yuliya LierlerUniversity of Nebraska 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 6href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Fang LiOklahoma Christian University 
+ 11:00 
+ 30m 
+ Talk | ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela InclezanMiami University, USA,Hunter LockwoodMyaamia Center & Miami University,Anita BaralMiami University,Jitendra SharmaMiami University,Pratiksha ShresthaMiami University 
+ 11:30 
+ 30m 
+ Talk | A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan YanSoutheast University, Nanjing,Junru LiSoutheast University, Nanjing,Fangzhou LiuSoutheast University, Nanjing,Zerong WangSoutheast University, Nanjing,Zhizheng ZhangSoutheast University, Nanjing 
+ 12:00 
+ 30m 
+ Talk | Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan NguyenUniversity of Texas at Dallas, USA,Bryant HargreavesUniversity of Texas at Dallas, USA,Keegan KimbrellUniversity of Texas at Dallas, USA,Gopal Gupta 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 12:30 - 14:00 | SIGPLAN SC Meetinghref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-virtual-only" - Virtual Only 
+ 12:30 
+ 90m 
+ Meeting | SIGPLAN SC MeetingCatering 
+  
+ 14:00 - 15:30 | Session 7href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Daniela InclezanMiami University 
+ 14:00 
+ 30m 
+ Talk | Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang LiOklahoma Christian University,Fei ZuoUniversity of Central Oklahoma,Gopal Gupta 
+ 14:30 
+ 30m 
+ Talk | Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul TarauUniversity of North Texas 
+ 15:00 
+ 30m 
+ Talk | Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo WangTemple University, USA 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+ Accepted Papers 
+  
+ Title 
+ A practical approach to handling tabular data in logicPADL 
+ Robin De Vogelaere,Kylian Van Dessel,Joost Vennekens 
+ ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela Inclezan,Hunter Lockwood,Anita Baral,Jitendra Sharma,Pratiksha Shrestha 
+ Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan Nguyen,Bryant Hargreaves,Keegan Kimbrell,Gopal Gupta 
+ A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan Yan,Junru Li,Fangzhou Liu,Zerong Wang,Zhizheng Zhang 
+ C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad Shakerin,Joaquín Arias,Elmer Salazar,Gopal Gupta 
+ Checking Concurrency Coding RulesPADL 
+ Lars-Åke Fredlund,Ángel Herranz,Julio Mariño 
+ Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento Takyu,Kazunori Ueda 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+ Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo Wang 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+ Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang Li,Fei Zuo,Gopal Gupta 
+ Haskell Based SpreadsheetsPADL 
+ Ignacio Ballesteros,Luis Eduardo Bueso de Barrio,Julio Mariño 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul Tarau 
+ MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe Gorostiaga,Martin Ceresa,César Sánchez 
+ On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos Costa,Miguel Areias 
+ SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary Hansen,Yuliya Lierler 
+ The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent Robinson 
+ Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim Newton 
+ Call for Papers 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, databases and constraint programming, and theorem proving. 
+ Topics of interest include, but are not limited to: 
+ Innovative applications of declarative languages 
+ Declarative domain-specific languages and applications 
+ Practical applications of theoretical results 
+ New language developments and their impact on applications 
+ Declarative languages and software engineering 
+ Evaluation of implementation techniques on practical applications 
+ Practical experiences and industrial applications 
+ Novel uses of declarative languages in the classroom 
+ Practical extensions such as constraint-based, probabilistic, and reactive languages 
+ PADL 2025 especially welcomes new ideas and approaches related to applications, design, and implementation of declarative languages going beyond the scope of the past PADL symposia, for example, advanced database languages and contract languages, as well as verification and theorem-proving methods that rely on declarative languages. 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. The selection process will give preference to students who present their paper in the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ href="#submissions" - Submissions
+PADL 2025 welcomesregular papers (max. 15 pages, excluding references)andshort papers (max. 8 pages, excluding references)that describe original and previously unpublished research results on 
+ complex and/or real-world applications in industry or in other areas of research, that rely on an innovative use of declarative languages, 
+ tools and/or systems developed for such applications, and/or to improve practical aspects of declarative languages, 
+ technical results related to the practical aspects of declarative languages. 
+ Application and systems descriptions, engineering solutions, and real-world experiences (both positive and negative) are in particular solicited. Regular and short papers will be published in the formal proceedings. 
+ PADL 2025 also welcomesextended abstracts (max. 3 pages)on the topics above, that describe new ideas, a new perspective on already published work, or work-in-progress that is not yet ready for a full publication. Extended abstracts will be posted on the symposium website but will not be published in the formal proceedings. 
+ All page limits exclude references. Submissions must be written in English and formatted according to the standard Springer LNCS style, seehttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines 
+ The review process of PADL 2025 isdouble-anonymous. In your submission, please, omit your names and institutions; refer to your prior work in the third person, just as you refer to prior work by others; do not include acknowledgments that might identify you. 
+ Additional material intended for reviewers but not for publication in the final version - for example, details of proofs - may be placed in a clearly marked appendix that is not included in the page limit. Reviewers are at liberty to ignore appendices and papers must be understandable without them. 
+ Page numbers (and, if possible, line numbers) should appear on the manuscript to help the reviewers in writing their reports. So, for LaTeX, we recommend that authors use: 
+ \pagestyle{plain} \usepackage{lineno} \linenumbersThe conference proceedings of PADL 2025 will be published by Springer-Verlag in the Lecture Notes in Computer Science series. Work that already appeared in unpublished or informally published Workshop proceedings may be submitted but the authors should notify the program chairs where it has previously appeared.href="https://link.springer.com/conference/padl" - Previous PADL proceedings
+can be found onSpringerLink. 
+ Papers should be submitted electronically viahref="https://equinocs.springernature.com/service/padl2025" - EquinOCS
+(registration is required if you do not have an account). 
+ href="#distinguished-papers" - Distinguished Papers
+The authors of a small number of distinguished papers will be invited to submit a longer version for journal publication after the symposium. For papers related to logic programming, that will be in the journalTheory and Practice of Logic Programming (TPLP), and for papers related to functional programming, inJournal of Functional Programming (JFP). The extended journal submissions should be substantially (roughly 30%) extended: explanations for which there was no space, illuminating examples and proofs, additional definitions and theorems, further experimental results, implementational details and feedback from practical/engineering use, extended discussion of related work, and so on. These submissions will then be subject to the usual peer review process by the journal, although with the aim of a swifter review process by reusing original reviews from PADL. 
+ Awards 
+ Best Student Paper Award 
+ Zachary Hansen, Yuliya Lierler: “SM-based Semantics for Answer Set Programs Containing Conditional Literals and Arithmetic” 
+ Best Student Paper Honorable Mention 
+ Kento Takyu, Kazunori Ueda: “Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut Elimination” 
+ Registration for PADL 2025 
+ The registration for PADL 2025 is handled separately from POPL. Please note that at leastone author of each accepted paper must register specifically to PADL. 
+ Early registration deadline isDecember 29, 2024. 
+ Registration Rates for PADL 2025 
+ The registration rates are as follows: 
+
+Type of Registration | Early Rate (British pounds) | Regular Rate (British pounds) 
+ Student | £310 | £335 
+ Regular | £420 | £500 
+  
+ Registration rate includes the cost of venue, lunch, morning and afternoon coffee breaks. 
+ Steps for Registering 
+ You can wire a bank transfer to the following account number (transfer charges assumed by the payer): 
+ Bank: | Natwest (UK) 
+ Bank address: | NatWest Markets Plc is 36 St Andrew Square, Edinburgh, EH2 2YB 
+ Account name: | THE ASSOCIATION FOR LOGIC PROGRAMMING Ltd 
+ Account holders address: | The Association for Logic Programming, Care of Marina De Vos, Dept Computer Science, University of Bath, BA2 7AY 
+ Sort Code: | 60-02-05 
+ Account Number: | 66462738 
+ BIC: | NWBKGB2L 
+ IBAN: | GB74NWBK60020566462738 
+ Transfers usually take a week to complete. ContactMarina De Vosif you have any payment queries. 
+ Once the bank transfer has been made, send a copy of the receipt along with yourfirst name,last name,affiliation, andcountrytogvidal@dsic.upv.es(Cc:cssmdv@bath.ac.uk). 
+ Questions? Use thehref="https://popl25.sigplan.org/contact2/PADL-2025-papers" - PADL contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Mon 20 - Tue 21 Jan 2025 
+ Symposium 
+ Sun 24 Nov 2024 
+ Final version 
+ Thu 14 Nov 2024 
+ Notification to authors 
+ Fri 18 Oct 2024 
+ Paper submission 
+ Fri 11 Oct 2024 
+ Abstract submission 
+ Submission Link 
+ href="https://equinocs.springernature.com/service/padl2025" - https://equinocs.springernature.com/service/padl2025
+href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs
+Esra ErdemSabanci University 
+ Turkey 
+ German VidalUniversitat Politecnica de Valencia 
+ Spain 
+ Program Committee 
+ Ozgur AkgunUniversity of St Andrews, St Andrews, UK 
+ United Kingdom 
+ Nada AminHarvard University 
+ United States 
+ Marcello BalducciniSaint Joseph's University, USA 
+ Mutsunori BanbaraNagoya University 
+ Japan 
+ Clara Benac EarleUniversidad Politécnica de Madrid 
+ Spain 
+ Malgorzata BiernackaUniversity of Wrocław 
+ Manuel CarroIMDEA Software Institute and Universidad Politécnica de Madrid 
+ Spain 
+ Laura M. CastroUniversity of A Coruña 
+ Spain 
+ Martin GebserUniversity of Klagenfurt, Austria 
+ Austria 
+ Gopal Gupta 
+ Michael HanusKiel University 
+ Germany 
+ Daniela InclezanMiami University 
+ United States 
+ Yusuf IzmirliogluUnited Kingdom 
+ Tomi JanhunenTampere University 
+ Finland 
+ Ekaterina KomendantskayaHeriot-Watt University and Southampton University 
+ United Kingdom 
+ Ivan LaneseUniversity of Bologna/INRIA 
+ Michael LeuschelHHU 
+ Germany 
+ Naoki NishidaNagoya University 
+ Japan 
+ Alberto PardoUniversidad de la Republica, Uruguay 
+ Enrico PontelliNew Mexico State University 
+ United States 
+ Orkunt SabuncuTED University 
+ Turkey 
+ Zeynep G. SaribaturTU Wien 
+ Austria 
+ Tom SchrijversKU Leuven 
+ Belgium 
+ Paul TarauUniversity of North Texas 
+ United States 
+ Laura TitoloAMA/NASA LaRC 
+ United States 
+ Melinda TóthEötvös Loránd University, Faculty of Informatics, Department of Programming Languages and Compilers & ELTE-Soft Nonprofit Ltd. 
+ Hungary 
+ Joost VennekensKU Leuven 
+ Sam WestrickNew York University 
+ United States 
+ Jessica ZangariUniversità della Calabria 
+ Italy 
+ Neng-Fa ZhouCUNY Brooklyn College and Graduate Center 
+ xSat 5 Apr 13:23 
+ href="https://popl25.sigplan.org" - POPL 2025
+contact form 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ Support page 
+ Tracks 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events
+Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 2025
+ 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 2025
+ 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 2025
+ 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 2025
+ 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 2025
+ 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 2025
+ 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 2025
+ 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 2025
+ 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 2025
+ 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 2025
+ 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 2025
+ 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 2025
+ 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025
+Attending 
+ href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver
+ 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Sign Up 
+ : 
+ :
+
+3. Website of PADL_3: https://popl23.sigplan.org/series/PADL
+Website information of PADL_3:
+
+href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025
+Sun 19 - Sat 25 January 2025href="https://conf.researchr.org/venue/PADL-2025/POPL-2025-venue" - Denver, Colorado, United States
+co-located withhref="https://popl25.sigplan.org" - POPL 2025
+Toggle navigation 
+ href="https://popl23.sigplan.org/series/PADL" - Series 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025 
+ All Editions | PADL 2025 
+ href="https://popl24.sigplan.org/home/PADL-2024" - PADL 2024 
+ href="https://popl23.sigplan.org/home/PADL-2023" - PADL 2023 
+ href="https://popl22.sigplan.org/home/PADL-2022" - PADL 2022 
+ href="https://popl21.sigplan.org/home/PADL-2021" - PADL 2021 
+ href="https://popl20.sigplan.org/home/PADL-2020" - PADL 2020 
+ href="https://popl19.sigplan.org/track/PADL-2019" - PADL 2019 
+ href="https://popl18.sigplan.org/track/PADL-2018" - PADL 2018 
+ href="https://popl17.sigplan.org/track/PADL-2017" - PADL 2017 
+ href="https://conf.researchr.org/home/PADL-2016" - PADL 
+ href="https://conf.researchr.org/signin/PADL-2025/https%3A%5Es%5Espopl23.sigplan.org%5Esseries%5EsPADL" - Sign in 
+ href="https://conf.researchr.org/signup/PADL-2025" - Sign up 
+ Symposium on Practical Aspects of Declarative Languages 
+ All Editions 
+  
+ Sun 19 - Sat 25 January 2025 Denver, Colorado, United Stateshref="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025
+withhref="https://popl25.sigplan.org" - POPL 2025
+Proceedings Preliminary proceedings are available (pwd protected) Final Proceedings (Springer LNCS, volume 15537) Introduction Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have ... 
+ Dates to be announced London, United Kingdomhref="https://popl24.sigplan.org/home/PADL-2024" - PADL 2024
+withPOPL 2024 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, databases and constraint programming, and theorem proving. PADL’24 will take place during 15-16 January 2024 as a physical (in-person) event. For each accepted paper at least o ... 
+ Dates to be announced Boston, Massachusetts, United Stateshref="https://popl23.sigplan.org/home/PADL-2023" - PADL 2023
+withPOPL 2023 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real-world situations, ranging from database management to active networks to software ... 
+ Mon 17 - Tue 18 January 2022 Philadelphia, Pennsylvania, United Stateshref="https://popl22.sigplan.org/home/PADL-2022" - PADL 2022
+withPOPL 2022 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real-world situations, ranging from data base management to active networks to softwar ... 
+ Mon 18 - Tue 19 January 2021 Onlinehref="https://popl21.sigplan.org/home/PADL-2021" - PADL 2021
+withPOPL 2021 
+ Available now: Proceedings for PADL 2021 &nbsp;About The paradigm of declarative languages encompasses several well-established classes of programming languages, namely: functional, logic, and constraint programming languages.These languages have been successfully applied to many different real-world situations, ranging from database management to active networks to software engineering to decision support syst ... 
+ Mon 20 - Tue 21 January 2020 New Orleans, Louisiana, United Stateshref="https://popl20.sigplan.org/home/PADL-2020" - PADL 2020
+withPOPL 2020 
+ The 22nd International Symposium on Practical Aspects of Declarative Languages (PADL 2020) https://popl20.sigplan.org/home/PADL-2020 20-21 January 2020, New Orleans, Louisiana, United States Co-located with ACM POPL 2020 (https://popl20.sigplan.org/) Declarative languages is an umbrella term that include functional, logic, and constraint programming languages. These languages have been successfully applied ... 
+ Sun 13 - Sat 19 January 2019 Cascais, Portugalhref="https://popl19.sigplan.org/track/PADL-2019" - PADL 2019
+withPOPL 2019 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative concepts, including, functional, logic, constraints, etc. PADL 2019 will take place on 14-15 January. Declarative languages build on sound theoretical bases to provide attractive frameworks for application development. These languag ... 
+ Mon 8 - Sat 13 January 2018 Los Angeles, California, United Stateshref="https://popl18.sigplan.org/track/PADL-2018" - PADL 2018
+withPOPL 2018 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative concepts, including, functional, logic, constraints, etc. Declarative languages build on sound theoretical bases to provide attractive frameworks for application development. These languages have been successfully applied to many dif ... 
+ Mon 16 - Tue 17 January 2017href="https://popl17.sigplan.org/track/PADL-2017" - PADL 2017
+withPOPL 2017 
+ Nineteenth International Symposium on Practical Aspects of Declarative Languages Declarative languages build on sound theoretical bases to provide attractive frameworks for application development. These languages have been successfully applied to many different real-world situations, ranging from data base management to active networks to software engineering to decision support systems. New developments in th ... 
+ Mon 18 - Tue 19 January 2016 St. Petersburg, Florida, United Stateshref="https://conf.researchr.org/home/PADL-2016" - PADL
+withPOPL 2016 
+ Declarative languages build on sound theoretical bases to provide attractive frameworks for application development. These languages have been successfully applied to many different real-world situations, ranging from data base management to active networks to software engineering to decision support systems. New developments in theory and implementation have opened up new application areas. At the same time, ap ... 
+ xSat 5 Apr 13:23 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/conf" - Support page
+ 
+ href="https://conf.researchr.org/signup/conf" - Sign Up
+
+4. Website of PADL_3: https://logicprogramming.org/2024/09/cfp-practical-aspects-of-declarative-languages-padl-2025/
+Website information of PADL_3:
+
+Search for: 
+ Association for Logic Programming 
+ Main menu 
+ Skip to contentALP | Mission and Vision 
+ ALP History 
+ ALP Board 
+ ALP Newsletter 
+ ALP Awards 
+ ALP by laws | ALP Policies 
+ ALP EC Elections 
+ Diversity and Inclusion Policy 
+ ALP Sponsorship Guidelines 
+ Conference Policy 
+ For referees 
+ ICLP 
+ TPLP | href="https://logicprogramming.org/tplp/scope-and-submission/" - Scope and submission 
+ Content 
+ href="https://logicprogramming.org/tplp/tplp-accepted-papers/" - Accepted papers 
+ Book Reviews 
+ Alain Colmerauer Prize 
+ Theses and Dissertations | PhD Theses 
+ Master’s theses 
+ Systems and Links 
+ Prolog Community 
+ Asyncronous News,href="https://logicprogramming.org/category/asyncronous-news/callforpapers/" - Call for papers
+CFP: Practical Aspects of Declarative Languages (PADL 2025) 
+ byhref="https://logicprogramming.org/author/editors/" - Editors
+•September 2, 2024•href="https://logicprogramming.org/2024/09/cfp-practical-aspects-of-declarative-languages-padl-2025/#respond" - 0 Comments
+Call for Papers 
+ 27th International Symposium on Practical Aspects of Declarative Languages 
+ (PADL 2025) 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025 – : The 27th International Symposium on Practical Aspects of Declarative Languages – POPL 2025 (sigplan.org)
+Denver, Colorado, United States, January 20-21, 2025 
+ Co-located with ACM POPL 2025 
+ Conference Description 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. 
+ Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real world situations, ranging from database management to active networks to software engineering to decision support systems. 
+ New developments in theory and implementation fostered applications in new areas. At the same time, applications of declarative languages to novel and challenging problems raise many interesting research issues, including designing for scalability, language extensions for application deployment, and programming environments. Thus, applications drive the progress in the theory and implementation of declarative systems, and benefit from this progress as well. 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, database and constraint programming, and theorem proving. 
+ Topics of interest include, but are not limited to: 
+ Innovative applications of declarative languages 
+ Declarative domain-specific languages and applications 
+ Practical applications of theoretical results 
+ New language developments and their impact on applications 
+ Declarative languages and software engineering 
+ Evaluation of implementation techniques on practical applications 
+ Practical experiences and industrial applications 
+ Novel uses of declarative languages in the classroom 
+ Practical extensions such as constraint-based, probabilistic, and reactive languages 
+ PADL 2025 especially welcomes new ideas and approaches related to applications, design and implementation of declarative languages going beyond the scope of the past PADL symposia, for example, advanced database languages and contract languages, as well as verification and theorem proving methods that rely on declarative languages. 
+ PADL 2025 will take place on January 20th and 21st, 2025, as a physical (in-person) event. For each accepted paper at least one author is required to register for the conference and present the paper in person. 
+ Important Dates 
+ Abstract submission: October 4, 2024 (AoE) 
+ Paper submission: October 11, 2024 (AoE) 
+ Notification: November 11, 2024 
+ Symposium: January 20-21, 2025 
+ Submissions 
+ PADL 2025 welcomes regular papers (max. 15 pages) and short papers (max. 8 pages) that describe original and previously unpublished research results on 
+ complex and/or real-world applications in industry or in other areas of research, that rely on an innovative use of declarative languages, 
+ tools and/or systems developed for such applications, and/or to improve practical aspects of declarative languages, 
+ technical results related to the practical aspects of declarative languages. 
+ Application and systems descriptions, engineering solutions, and real-world experiences (both positive and negative) are in particular solicited. Regular and short papers will be published in the formal proceedings. 
+ PADL 2025 also welcomes extended abstracts (max. 3 pages) on the topics above, that describe new ideas, a new perspective on already published work, or work-in-progress that is not yet ready for a full publication. 
+ Extended abstracts will be posted on the symposium website but will not be published in the formal proceedings. 
+ All page limits exclude references. Submissions must be written in English and formatted according to the standard Springer LNCS style, see 
+ Conference Proceedings guidelines | Springer | Springer — International Publisher 
+ The review process of PADL 2025 is double-anonymous. In your submission, please, omit your names and institutions; refer to your prior work in the third person, just as you refer to prior work by others; do not include acknowledgments that might identify you. 
+ Additional material intended for reviewers but not for publication in the final version -for example, details of proofs- may be placed in a clearly marked appendix that is not included in the page limit. 
+ Reviewers are at liberty to ignore appendices and papers must be understandable without them. 
+ Page numbers (and, if possible, line numbers) should appear on the manuscript to help the reviewers in writing their reports. So, for LaTeX, we recommend that authors use: 
+ \pagestyle{plain} 
+ \usepackage{lineno} 
+ \linenumbers 
+ The conference proceedings of PADL 2025 will be published by Springer-Verlag in the Lecture Notes in Computer Science series. 
+ Work that already appeared in unpublished or informally published Workshop proceedings may be submitted but the authors should notify the program chairs where it has previously appeared. Previous PADL proceedings can be found on SpringerLink. 
+ Papers should be submitted electronically via EquinOCS (registration is required if you do not have an account):href="https://equinocs.springernature.com/service/padl2025" - EquinOCS (springernature.com)
+Distinguished Papers 
+ The authors of a small number of distinguished papers will be invited to submit a longer version for journal publication after the symposium. For papers related to logic programming, that will be in the journal Theory and Practice of Logic Programming (TPLP), and for papers related to functional programming, in Journal of Functional Programming (JFP). The extended journal submissions should be substantially (roughly 30%) extended: explanations for which there was no space, illuminating examples and proofs, additional definitions and theorems, further experimental results, implementational details and feedback from practical/engineering use, extended discussion of related work, and so on. These submissions will then be subject to the usual peer review process by the journal, although with the aim of a swifter review process by reusing original reviews from PADL. 
+ PADL 2025 PC Co-Chairs 
+ Esra Erdem, Sabanci University, Turkey 
+ German Vidal, Universitat Politecnica de Valencia, Spain 
+ Program Committee 
+ TBD 
+ Contact Addresses 
+ esraerdem _AT_ sabanciuniv.edu 
+ gvidal _AT_ dsic.upv.es 
+ Post navigation 
+ ← ALP Elections results 
+ href="https://logicprogramming.org/2025/03/call-for-papers-iclp-25/" - Call for Papers ICLP 25 →
+Search in our archives 
+ Search for: 
+ Categories 
+ ALP ISSUE | (271) | href="https://logicprogramming.org/category/issue/accepted-papers/" - Accepted Papers | (15) 
+ Conference reports | (42) 
+ Editorial | (37) 
+ Feature Articles | (82) 
+ In Memoriam | (18) 
+ Left Field | (3) 
+ LP Systems | (13) 
+ Personal perspectives on LP | (4) 
+ Positions in LP | (8) 
+ Programming Contest | (5) 
+ Regular columns | (39) | Book Announcement | (11) 
+ Community news | (13) 
+ Doctoral dissertations | (6) 
+ Games and Puzzles | (7) 
+ href="https://logicprogramming.org/category/issue/groups/" - Research Groups | (1) 
+ Asyncronous News | (188) | href="https://logicprogramming.org/category/asyncronous-news/callforpapers/" - Call for papers | (116) 
+ href="https://logicprogramming.org/category/asyncronous-news/call-for-participation/" - Call for Participation | (14) 
+ Community News | (19) 
+ Conferences News | (2) 
+ PhD positions | (10) 
+ Positions in LP | (12) 
+ Schools | (12) 
+ Uncategorized | (4) 
+ Archives per month 
+ Archives per monthvalue="https://logicprogramming.org/2025/03/" - March 2025  (1)
+The association for Logic Programming 
+ Diversity and Inclusion Policy 
+ ICLP 1993 
+ ICLP 1994 
+ ICLP 1995 
+ ICLP 2010 
+ ICLP 99 16th International Conference on Logic Programming 
+ ILPS 1993 
+ JICSLP 1996 
+ JICSLP’92 
+ Learning efficient constraints in answer set programming 
+ Learning efficient constraints in answer set programming 
+ The ALP Alain Colmerauer Prize 
+ The ALP Alain Colmerauer Prize | The 2024 Alain Colmerauer Prize 
+ TPLP Volume 22 
+ TPLP Volume 23, 2023 
+ TPLP Volume 24, 2024 
+ href="https://logicprogramming.org/tplp-volume-25-2025/" - tplp-volume-25-2025 
+ The Association for Logic Programming | ALP: Mission and Vision 
+ ALP History 
+ ALP Board 
+ ALP Newsletter 
+ ALP Awards 
+ ALP Policies 
+ ALP Sponsorship Guidelines 
+ ICLP Conferences | ICLP 1997 
+ ICLP 2003 
+ ICLP 2005 
+ ICLP 2006 
+ ICLP 2008 
+ ICLP 2009 
+ ICLP 2010 
+ ICLP 2011 
+ ICLP 2012 
+ ICLP 2012 
+ ICLP 2013 
+ ICLP 2014 
+ ICLP 2015 
+ ICLP 2015 
+ ICLP 2016 
+ ICLP 2017 
+ ICLP 2018 
+ Theory and Practice of Logic Programming | href="https://logicprogramming.org/tplp/scope-and-submission/" - Scope and submission 
+ TPLP Volume 20, 2020 
+ TPLP Volume 21 
+ Content | TPLP Volume 18, 2018 
+ Volume 19 
+ TPLP Volume 17, 2017 | 2015-03 
+ 2015-09 
+ 2016-07 
+ 2016-08 
+ 2016-09 
+ 2016-10 
+ 2016-11 
+ 2016-12 
+ 2016-13 
+ 2017-01 
+ 2017-02 
+ 2017-03 
+ 2017-04 
+ 2017-05 
+ 2017-07 
+ 2017-08 
+ 2017-09 
+ 2017-10 
+ TPLP Volume 16, 2016 | 2014-08 
+ 2014-10 
+ 2015-01 
+ 2015-02 
+ 2015-04 
+ 2015-05 
+ 2015-06 
+ 2015-07 
+ 2015-08 
+ 2016-01 
+ 2016-02 
+ 2016-03 
+ 2016-04 
+ 2016-05 
+ 2016-06 
+ TPLP Volume 15, 2015 | 15(1)1 
+ 15(1)2 
+ 15(1)3 
+ 15(1)4 
+ 15(1)5 
+ href="https://logicprogramming.org/tplp/content/tplp-volume-15-2015/tplp-accepted-paperstplp-2013-12/" - 15(2)1 
+ 15(2)2 
+ 15(2)3 
+ 15(2)4 
+ 15(2)5 
+ 15(3)1 
+ 15(3)2 
+ 15(3)3 
+ 15(3)4 
+ 2014-04 
+ 2014-05 
+ 2014-06 
+ 2014-07 
+ TPLP Volume 14, 2014 | 14(3)5 
+ 14(6)1 
+ 14(6)2 
+ 14(6)3 
+ 14(6)4 
+ TPLP Volume 13, 2013 | 13 (01) 1 
+ 13 (01) 2 
+ 13 (01) 3 
+ 13 (01) 4 
+ href="https://logicprogramming.org/tplp/tplp-accepted-papers/" - Accepted papers | href="https://logicprogramming.org/tplp/tplp-accepted-papers/2017-06/" - 2017-06 
+ href="https://logicprogramming.org/tplp/tplp-accepted-papers/2017-11/" - 2017-11 
+ href="https://logicprogramming.org/tplp/tplp-accepted-papers/2017-12/" - 2017-12 
+ Book Reviews | Book Review 2013-1 
+ Book Review 2014-1 
+ Book Review 2014-2 
+ Theses and Dissertations | PhD Theses | A Formal Framework for Modelling and Analysing Safety-Critical Human Multitasking 
+ href="https://logicprogramming.org/phd-theses/phdtheses/a-portable-approach-for-bidirectional-integration-between-a-logic-and-a-statically-typed-object-oriented-programming-language/" - A Portable Approach for Bidirectional Integration between a Logic and a Statically-Typed Object-Oriented Programming Language 
+ Abstraction for Reasoning about Agent Behavior with Answer Set Programming 
+ Algebraic Approach to Causal Logic Programs 
+ Automated Reasoning via a Multi-sorted Fragment of Computable Set Theory with Applications to Semantic Web 
+ Automatic Parallelisation for Mercury 
+ Bisimulation Techniques and Algorithms for Concurrent Constraint Programming 
+ Computable Set Theory and Logic Programming 
+ Computational tasks in answer set programming: algoritms and implementations 
+ Design and Implementation of a Modern ASP Grounder 
+ Dynamic Magic Sets 
+ Enhancing and Applying Answer Set Programming: Lazy Constraints, Partial Compilation and Question Answering 
+ Extending IDP with second order logic 
+ Extension and Efficient Evaluation of Disjunctive Logic Programs 
+ Extensions and Applications of Probabilistic Logic Programming 
+ Foundations of Communication-Centred Programming: Calculi, Logic & Types 
+ Freeness and related analyses of constraint logic programs using abstract interpretation 
+ From Logic Programming to Human Reasoning: How to be Artificially Human 
+ Inference and Learning Systems for Uncertain Relational Data 
+ Integrated HEX-Algorithms and Applications in Machine Learning 
+ Knowledge representation and reasoning in incomplete logic programming 
+ Logic Engineering. The Case of Description and Hybrid Logics 
+ Logic Programming in non-conventional environments 
+ Logic Programming with Preferences on Rules 
+ Logical Agents: Memory Management, Advanced Architectures and Applications 
+ Micro-Intelligence for the IoT: LP models and technologies 
+ Model Checking: the Interval Way 
+ Modeling and Verification of real-time and cyber-physical systems 
+ Ontology-driven Information Extraction 
+ Paracoherent Answer Set Programming 
+ Portfolio Approaches in Constraint Programming 
+ Probabilistic Reasoning and Learning for the Semantic Web 
+ Promoting Modular Nonmonotonic Logic Programs 
+ Proof Methods for Conditional and Preferential Logics 
+ Reasoning about coroutines 
+ Reasoning over Complex Temporal Specifications and Noisy Data Streams 
+ Sequent Calculi with Context Restrictions and Applications to Conditional Logic 
+ Specification and Verification of Declarative Open Interaction Models – A Logic-based framework 
+ Structured interactive scores: From a structural description of a multimedia scenario to a real-time capable implementation with formal semantics 
+ Timeline-based planning: Expressiveness and Complexity 
+ Towards Ethical Chatbots: Monitoring and Evaluation of the Ethical Behavior of Employees in Online Customer Service Chat 
+ Towards Ethical Chatbots: Monitoring and Evaluation of the Ethical Behavior of Employees in Online Customer Service Chat 
+ Translators for interoperating and porting object-relational knowledge 
+ Master’s theses | Deduzione automatica per logiche condizionali: analisi e sviluppo di un theorem prover 
+ Processing Narratives by Means of Action Languages 
+ Diversity and Inclusion Policy 
+ ALP Newsletter 
+ ALP ISSUE | href="https://logicprogramming.org/category/issue/accepted-papers/" - Accepted Papers 
+ Conference reports 
+ Editorial 
+ Feature Articles 
+ In Memoriam 
+ Left Field 
+ LP Systems 
+ Personal perspectives on LP 
+ Positions in LP 
+ Programming Contest 
+ Regular columns | Book Announcement 
+ Community news 
+ Doctoral dissertations 
+ Games and Puzzles 
+ href="https://logicprogramming.org/category/issue/groups/" - Research Groups 
+ Asyncronous News | href="https://logicprogramming.org/category/asyncronous-news/callforpapers/" - Call for papers 
+ href="https://logicprogramming.org/category/asyncronous-news/call-for-participation/" - Call for Participation 
+ Community News 
+ Conferences News 
+ PhD positions 
+ Positions in LP 
+ Schools 
+ Uncategorized 
+ Post History 
+ Click to unfold.Archives by Month 
+ href="https://logicprogramming.org/2025/03/" - March 2025 | (1) 
+ September 2024 | (1) 
+ August 2024 | (1) 
+ March 2024 | (1) 
+ January 2024 | (2) 
+ October 2023 | (1) 
+ September 2023 | (3) 
+ June 2023 | (3) 
+ May 2023 | (1) 
+ April 2023 | (1) 
+ February 2023 | (2) 
+ January 2023 | (2) 
+ November 2022 | (1) 
+ August 2022 | (5) 
+ May 2022 | (1) 
+ March 2022 | (2) 
+ February 2022 | (1) 
+ January 2022 | (1) 
+ October 2021 | (1) 
+ September 2021 | (2) 
+ August 2021 | (3) 
+ May 2021 | (1) 
+ April 2021 | (1) 
+ February 2021 | (1) 
+ January 2021 | (1) 
+ December 2020 | (5) 
+ October 2020 | (1) 
+ September 2020 | (3) 
+ August 2020 | (1) 
+ July 2020 | (1) 
+ June 2020 | (1) 
+ April 2020 | (2) 
+ February 2020 | (1) 
+ November 2019 | (1) 
+ October 2019 | (2) 
+ September 2019 | (2) 
+ August 2019 | (1) 
+ July 2019 | (2) 
+ June 2019 | (3) 
+ May 2019 | (1) 
+ April 2019 | (5) 
+ March 2019 | (1) 
+ February 2019 | (3) 
+ December 2018 | (2) 
+ October 2018 | (1) 
+ August 2018 | (6) 
+ July 2018 | (5) 
+ May 2018 | (2) 
+ April 2018 | (5) 
+ March 2018 | (2) 
+ February 2018 | (1) 
+ January 2018 | (1) 
+ December 2017 | (1) 
+ November 2017 | (4) 
+ October 2017 | (3) 
+ September 2017 | (1) 
+ August 2017 | (3) 
+ July 2017 | (6) 
+ June 2017 | (1) 
+ May 2017 | (3) 
+ April 2017 | (4) 
+ February 2017 | (2) 
+ January 2017 | (2) 
+ December 2016 | (4) 
+ November 2016 | (1) 
+ October 2016 | (2) 
+ September 2016 | (4) 
+ August 2016 | (3) 
+ July 2016 | (3) 
+ June 2016 | (4) 
+ May 2016 | (1) 
+ April 2016 | (1) 
+ March 2016 | (3) 
+ February 2016 | (2) 
+ January 2016 | (3) 
+ December 2015 | (7) 
+ October 2015 | (1) 
+ September 2015 | (6) 
+ August 2015 | (3) 
+ July 2015 | (3) 
+ June 2015 | (2) 
+ April 2015 | (4) 
+ March 2015 | (3) 
+ February 2015 | (2) 
+ January 2015 | (1) 
+ December 2014 | (6) 
+ November 2014 | (1) 
+ October 2014 | (2) 
+ September 2014 | (6) 
+ July 2014 | (3) 
+ June 2014 | (3) 
+ May 2014 | (1) 
+ April 2014 | (1) 
+ March 2014 | (5) 
+ February 2014 | (4) 
+ January 2014 | (2) 
+ December 2013 | (5) 
+ November 2013 | (1) 
+ October 2013 | (8) 
+ September 2013 | (3) 
+ Copyright © 2025Association for Logic Programming. All Rights Reserved.The Magazine Basic Theme bybavotasan.com.
+

@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "August 3 - 8, 2025",
+  "Year": "2025",
+  "Location": "Brisbane Convention & Exhibition Centre, Brisbane, Australia",
+  "City-State-Province": "Brisbane",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract/Manuscript Submission Open": "November 14, 2024",
+    "Abstract/Manuscript Submission Deadline": "January 17, 2025",
+    "Student Paper Competition Deadline": "January 17, 2025",
+    "Community Contributed Session Proposals Open": "August 30, 2024",
+    "Tutorial Proposals Open": "August 30, 2024"
+  },
+  "Notification Date": {
+    "Notifications of Acceptance to Authors": "March 20, 2025",
+    "Community Contributed Session Proposal Results": "November 1, 2024",
+    "Tutorial Proposal Results": "December 1, 2024",
+    "Notification of Travel Support Decision": "April 19, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Paper Submission for Accepted Full Manuscripts": "May 15, 2025"
+  },
+  "Registration Date": {
+    "Registration Opens": "April 11, 2025",
+    "Early Bird Registration Closes": "April 27, 2025",
+    "Tutorial Registration Deadline": "April 27, 2025",
+    "Accepted Paper Registration Deadline": "May 15, 2025"
+  },
+  "Other Date": {
+    "Community Contributed Session Proposal Deadline": "October 15, 2024",
+    "Tutorial Proposal Deadline": "November 15, 2024",
+    "Travel Support Application Deadline": "March 22, 2025",
+    "Sponsorship & Exhibition Application Deadline": "July 15, 2025"
+  },
+  "Topics": "Imaging and Processing Techniques, Remote Sensing Data Analysis, AI and Big Data, Electromagnetic Emission and Scattering Modeling, Remote Sensing Applications to Atmosphere, Cryosphere, Land, or Oceans, Remote Sensing of Planetary and other Celestial Bodies, Mission, Platforms and Calibration, Sensors, Instruments and Calibration, Education and Policy, Societal Engagement and Impacts",
+  "Summary": "The International Geoscience and Remote Sensing Symposium (IGARSS) is the flagship conference of the IEEE Geoscience and Remote Sensing Society (GRSS). IGARSS 2025, themed \"One Earth\", will be held in Brisbane, Australia, from August 3-8, 2025. The conference aims to foster international cooperation in developing global solutions to safeguard our planet.",
+  "Call for Papers": "# IGARSS 2025: Call for Papers\n\nThe 45th IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2025) will take place on **August 3-8, 2025, in Brisbane, Australia.**\n\n## Theme\n\n**One Earth** – highlighting the essential contribution of remote sensing in tackling global environmental issues.\n\n## Topics of Interest\n\nWe encourage submissions that cover a wide range of topics, including but not limited to:\n\n*   Imaging and Processing Techniques\n*   Remote Sensing Data Analysis\n*   AI and Big Data\n*   Electromagnetic Emission and Scattering Modeling\n*   Remote Sensing Applications to Atmosphere, Cryosphere, Land, or Oceans\n*   Remote Sensing of Planetary and other Celestial Bodies\n*   Mission, Platforms and Calibration\n*   Sensors, Instruments and Calibration\n*   Education and Policy\n*   Societal Engagement and Impacts\n\n## Submission Guidelines\n\nAuthors are invited to submit abstracts or papers in one of the three options below through the [IGARSS 2025 online submission portal](papers.php) by **January 17, 2025**.\n\n*   **Full paper:** 4-page limit, excluding references; required for inclusion in IEEE Xplore or consideration for the Student Paper Competition\n*   **Abstract:** 400-600 words, will not be published in IEEE Xplore\n*   **Recently Published Article:** Papers published as peer-reviewed articles after January 1, 2024, in relevant journals ranked within Q1 based on the current International Scientific Indexing (ISI) or Scientific Journal Ranking (SJR).\n\nAll submissions will undergo a peer-review process. Only the accepted full papers will be included in the conference proceedings and published in IEEE Xplore.\n\n## Important Dates\n\n*   **Abstract/Manuscript Submission Open:** November 14, 2024\n*   **Abstract/Manuscript Submission Deadline:** January 17, 2025\n*   **Student Paper Competition Deadline:** January 17, 2025\n*   **Notifications of Acceptance to Authors:** March 20, 2025\n*   **Final Paper Submission for Accepted Full Manuscripts:** May 15, 2025\n\n## Conference Chairs\n\n*   A/Professor Xiuping Jia, IEEE Fellow, General Co-Chair, University of New South Wales, Canberra, Australia\n*   Professor Jeffrey Walker, IEEE Fellow, General Co-Chair, Monash University, Melbourne, Australia\n*   Professor Jocelyn Chanussot, IEEE Fellow, General Co-Chair, Research Director, INRIA, Grenoble, France"
+}
+

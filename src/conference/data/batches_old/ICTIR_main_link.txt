@@ -1,0 +1,124 @@
+Conference ICTIR:
+
+href="https://ictir2025.cs.umass.edu" - ICTIR 2025
+href="https://ictir2025.cs.umass.edu/" - Home 
+ href="https://ictir2025.cs.umass.edu/?page_id=29" - Call for Papers 
+ href="https://ictir2025.cs.umass.edu/?page_id=40" - Reviewing 
+ Attending | href="https://ictir2025.cs.umass.edu/?page_id=48" - Registration 
+ href="https://ictir2025.cs.umass.edu/?page_id=53" - Venue 
+ href="https://ictir2025.cs.umass.edu/?page_id=44" - Organizers 
+ href="https://sigir2025.dei.unipd.it/" - SIGIR 2025 
+ ACM ICTIR 2025 
+ The 11th ACM SIGIR / The 15th International Conference onInnovativeConcepts andTheories inInformationRetrieval 
+ July 18, 2025 (Padua, Italy) 
+ Co-located withhref="https://sigir2025.dei.unipd.it/index.html" - ACM SIGIR 2025
+(July 13-17, 2025) 
+ A new chapter in the history of ICTIR:Ten years ago, ICTIR 2015 was established under the ACM SIGIR umbrella. Given the evolving nature of the Information Retrieval field and the needs of the SIGIR community and the conference, ACM ICTIR, formerly known as the “ACM SIGIR International Conference on the Theory of Information Retrieval”, is renamed to ACM SIGIR International Conference onInnovativeConcepts andTheories inInformationRetrieval. 
+ This new branding highlights and clarifies the focus of the conference for the authors, the reviewers, and the organizers. The conference aims to provide a forum for the presentation and discussion of research related to thefoundationalaspects of Information Retrieval (IR), including, for example, new or improved models of relevance, ranking, representation, information needs, and evaluation. The conference also welcomes interdisciplinary research that connects information retrieval with other research disciplines that are theoretically motivated. We use the definition of foundation used by ICTIR founders asa scientific result that others can build upon and use for their own research. While IR research traditionally relies heavily on rigorous experimentation, ICTIR does not see this as a must. 
+ ICTIR 2025 will be held onJuly 18 in Padua, Italyand invites submissions with substantial and original research oninnovative methodological contributionsto the field of Information Retrieval. This includes original research on the theoretical aspects of Information Retrieval, topics from neighboring fields with a strong and clear connection to Information Retrieval, and novel approaches and methods for developing, improving, and evaluating models related to the field of Information Retrieval. 
+ 📢Additionally, ICTIR 2025 considers the following theme and especially welcomes research papers related to the following theme:“LLMs + IR, what could possibly go wrong?” 
+ 📢New to ICTIR, ICTIR 2025 accepts bothregularandSIGIR Revise-and-Resubmit (SIGIR-RR)submissions. 
+ For more information, please read thehref="https://ictir2025.cs.umass.edu/?page_id=29" - Call for Paper
+. 
+ Co-Located with ACM SIGIR 2025 
+ ICTIR 2025 is co-located withhref="https://sigir2025.dei.unipd.it/" - SIGIR 2025
+. ICTIR 2025 is held one dayaftertheentireSIGIR 2025 program. This means that there isno overlapwith SIGIR 2025, thus attendance to ICTIR 2025 does not compete with any of the SIGIR tutorials, workshops or main program. 
+ ICTIR 2025 takes place in the same venue as SIGIR 2025: the Padova Congress Center, seethe following pagefor more information. 
+ Registration details will be provided soon. 
+ Key Dates 
+ Paper submission deadline:Thursday, April 24 2025 (or two weeks after the SIGIR 2025 full paper notification deadline, whichever is later) 
+ Notification of acceptance:Thursday, June 5 2025 
+ Camera-ready deadline:Thursday, June 26 2025 
+ Conference date:Friday, July 18 2025 
+ Time Zone: Anywhere on Earth (AoE) 
+ ICTIR 2025 | Padua, Italy | July 18, 2025 
+
+Call for Papers information:
+Skip to contenthref="https://ictir2025.cs.umass.edu" - ICTIR 2025
+href="https://ictir2025.cs.umass.edu/" - Home 
+ href="https://ictir2025.cs.umass.edu/?page_id=29" - Call for Papers 
+ href="https://ictir2025.cs.umass.edu/?page_id=40" - Reviewing 
+ Attending | href="https://ictir2025.cs.umass.edu/?page_id=48" - Registration 
+ href="https://ictir2025.cs.umass.edu/?page_id=53" - Venue 
+ href="https://ictir2025.cs.umass.edu/?page_id=44" - Organizers 
+ href="https://sigir2025.dei.unipd.it/" - SIGIR 2025 
+ Call for Papers 
+ ICTIR 2025 invites submissions with substantial and original research oninnovative and foundational contributionsto the field of Information Retrieval.foundationis defined as a scientific result that others can build upon and use for their own research. This includes original research on the theoretical aspects of Information Retrieval, topics from neighboring fields with a strong and clear connection to Information Retrieval, and novel approaches and methods for developing, improving, and evaluating models related to the field of Information Retrieval. 
+ The conference welcomes papers on all aspects of Information Retrieval. See thehref="https://sigir2025.dei.unipd.it/call-full-papers.html" - Call for Papers for SIGIR 2025
+for a list of included topics. Topics from neighboring fields are also in scope, as long as there is a clear and significant connection to Information Retrieval. 
+ 📢New to ICTIR, we welcome two types of submissions:regularandSIGIR-Revise-and-Resubmit (SIGIR-RR)submissions. 
+ Special Theme: “LLMs + IR, what could possibly go wrong?“ 
+ Even though ICTIR 2025 welcomes papers on all areas of Information Retrieval as detailed above, its program especially welcomes research papers related to the following theme: “LLMs + IR, what could possibly go wrong?” This theme stands on the long-term relationship between LLMs and IR.In order to foster a lively discussion on this theme, we are seeking both innovative and foundational technical research papers and discussion papers that methodologically studies this theme by providing impactful perspectives, opinions, or positions on the matter. 
+ If you think you can make a strong contribution to the panel on this theme, but are unable to submit a paper, please reach out to the PC chairs athref="mailto:pc-ictir2025@listes.isir.upmc.fr" - pc-ictir2025@listes.isir.upmc.fr
+, with one abstract (1 page), which articulate a talking point, and a short speaker bio. 
+ Double-blind Reviewing and Submissions to arXiv 
+ The conference will employ a lightweight double-blind reviewing process. 
+ On the one hand, a submission should not reveal the identity of the authors in any obvious way. In particular, the authors’ names, affiliations, or email addresses should be nowhere visible in the submission. Any reference to the authors’ own related work should be in the third person (that is, don’t say “our” when referring to such work). If sharing some code, make sure it is anonymous – e.g. usingAnonymous GitHuband making sure of removing author names in it. 
+ On the other hand, nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult. Important references should be neither omitted nor anonymized. Authors may post drafts of their papers on the web, submit them to arXiv, or give talks about them. 
+ The purpose of the double-blind reviewing is to help PC members come to an initial judgement about the paper without bias, not to make it impossible for them to discover the authors if they were to try. 
+ Submission Guidelines and Formal Requirements 
+ SIGIR-Revise-and-Resubmit (SIGIR-RR) Submissions: 
+ SIGIR-RR submissions are for revised manuscripts of papers that were submitted to but not accepted by the SIGIR 2025 conference (only full and short paper tracks). Authors can use this option to address the issues raised in the SIGIR 2025 reviews and revise the paper accordingly.In addition to the revised paper, the authors must attach the following information to the submitted PDF file: 
+ Explanation (1-3 pages with no style requirements): a text includes the SIGIR paper ID and responses to the SIGIR reviews, explaining how the issues raised by the SIGIR reviewers have been addressed in the revised paper. 
+ SIGIR submission: the original anonymized submission file to SIGIR 2025. 
+ All Submissions: 
+ We encourage authors to followthis brief checklistto strengthen an IR paper. 
+ Research papers must describe original work that has not been previously published, not accepted for publication elsewhere, and not simultaneously submitted or currently under review in another journal or conference (including any archival workshops at SIGIR 2025). 
+ The page limit is 9 pages in ACM SIGIR style, excluding the references and the optional appendix. If there is an appendix, it is up to the reviewers whether they consider it or even look at it. The paper must be self-contained and understandable without reading the appendix, if any. When published, the appendix will not be included. 
+ Shorter papers are equally welcome, as the9 pages is only an upper bound, not a target. Submissions will be evaluated based on the merits of their contents, not on the number of pages. 
+ By submitting your article to an ACM Publication, you are acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ Please ensure that you and your co-authors obtain an ORCID ID, as well as an OpenReview account (this might take up to one day), so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ Format Requirements: 
+ Submissions must be in English, in PDF format, and be at most 9 pages in length (including figures, tables, proofs, acknowledgments, and any content except references and optional appendices), with unrestricted space for references, in the current ACM two-column conference format. Suitable LaTeX, Word, and Overleaf templates are available from the ACM Website (use the “sigconf” proceedings template for LaTeX and the Interim Template for Word). ACM’s CCS concepts and keywords are required for review. 
+ For LaTeX, the following should be used when submitting the paper: 
+ \documentclass[sigconf,natbib=true,anonymous=true]{acmart} 
+ Submissions must be anonymous and should be submitted electronically viaOpenReviewthrough the following link:href="https://openreview.net/group?id=ACM.org/SIGIR/ICTIR/2025/Conference" - https://openreview.net/group?id=ACM.org/SIGIR/ICTIR/2025/Conference
+Note that after paper decisions, reviews and meta-reviews of accepted papers will be made public. Authors of rejected papers have the option to make the reviews public as well. Reviewer identities will remain anonymous. 
+ Presentation at the Conference 
+ At least one author of an accepted paper must register and present the work at ICTIR 2025. ICTIR 2025 will be a whole day and take place on the conference site just after SIGIR 2025. 
+ The works will be presented either as a long or short talk, with an optional poster presentation or invitation to the panel. The decision on the exact format of the accepted papers will be sent by email after the notification. 
+ Key Dates 
+ Paper submission deadline | : Thursday, April 24 2025 (or two weeks after the SIGIR 2025 full paper notification deadline, whichever is later) 
+ Notification of acceptance | : Thursday, June 5 2025 
+ Camera-ready deadline | : Thursday, June 26 2025 
+ Conference date | : Friday, July 18 2025 
+ Time zone for all deadlines: Anywhere on Earth (AoE) 
+ Contact information 
+ You can contact the PC chairs viahref="mailto:pc-ictir2025@listes.isir.upmc.fr" - pc-ictir2025@listes.isir.upmc.fr
+or the [SIGIR Slack] channel (http://acmsigir.slack.com) #ictir2025. For more information, please visit thehref="https://ictir2025.cs.umass.edu/?page_id=44" - Organizers page
+. 
+ ICTIR 2025 | Padua, Italy | July 18, 2025 
+
+Important Dates information:
+href="https://ictir2025.cs.umass.edu" - ICTIR 2025
+href="https://ictir2025.cs.umass.edu/" - Home 
+ href="https://ictir2025.cs.umass.edu/?page_id=29" - Call for Papers 
+ href="https://ictir2025.cs.umass.edu/?page_id=40" - Reviewing 
+ Attending | href="https://ictir2025.cs.umass.edu/?page_id=48" - Registration 
+ href="https://ictir2025.cs.umass.edu/?page_id=53" - Venue 
+ href="https://ictir2025.cs.umass.edu/?page_id=44" - Organizers 
+ href="https://sigir2025.dei.unipd.it/" - SIGIR 2025 
+ ACM ICTIR 2025 
+ The 11th ACM SIGIR / The 15th International Conference onInnovativeConcepts andTheories inInformationRetrieval 
+ July 18, 2025 (Padua, Italy) 
+ Co-located withhref="https://sigir2025.dei.unipd.it/index.html" - ACM SIGIR 2025
+(July 13-17, 2025) 
+ A new chapter in the history of ICTIR:Ten years ago, ICTIR 2015 was established under the ACM SIGIR umbrella. Given the evolving nature of the Information Retrieval field and the needs of the SIGIR community and the conference, ACM ICTIR, formerly known as the “ACM SIGIR International Conference on the Theory of Information Retrieval”, is renamed to ACM SIGIR International Conference onInnovativeConcepts andTheories inInformationRetrieval. 
+ This new branding highlights and clarifies the focus of the conference for the authors, the reviewers, and the organizers. The conference aims to provide a forum for the presentation and discussion of research related to thefoundationalaspects of Information Retrieval (IR), including, for example, new or improved models of relevance, ranking, representation, information needs, and evaluation. The conference also welcomes interdisciplinary research that connects information retrieval with other research disciplines that are theoretically motivated. We use the definition of foundation used by ICTIR founders asa scientific result that others can build upon and use for their own research. While IR research traditionally relies heavily on rigorous experimentation, ICTIR does not see this as a must. 
+ ICTIR 2025 will be held onJuly 18 in Padua, Italyand invites submissions with substantial and original research oninnovative methodological contributionsto the field of Information Retrieval. This includes original research on the theoretical aspects of Information Retrieval, topics from neighboring fields with a strong and clear connection to Information Retrieval, and novel approaches and methods for developing, improving, and evaluating models related to the field of Information Retrieval. 
+ Additionally, ICTIR 2025 considers the following theme and especially welcomes research papers related to the following theme:“LLMs + IR, what could possibly go wrong?” 
+ New to ICTIR, ICTIR 2025 accepts bothregularandSIGIR Revise-and-Resubmit (SIGIR-RR)submissions. 
+ For more information, please read thehref="https://ictir2025.cs.umass.edu/?page_id=29" - Call for Paper
+. 
+ Co-Located with ACM SIGIR 2025 
+ ICTIR 2025 is co-located withhref="https://sigir2025.dei.unipd.it/" - SIGIR 2025
+. ICTIR 2025 is held one dayaftertheentireSIGIR 2025 program. This means that there isno overlapwith SIGIR 2025, thus attendance to ICTIR 2025 does not compete with any of the SIGIR tutorials, workshops or main program. 
+ ICTIR 2025 takes place in the same venue as SIGIR 2025: the Padova Congress Center, seethe following pagefor more information. 
+ Registration details will be provided soon. 
+ Key Dates 
+ Paper submission deadline:Thursday, April 24 2025 (or two weeks after the SIGIR 2025 full paper notification deadline, whichever is later) 
+ Notification of acceptance:Thursday, June 5 2025 
+ Camera-ready deadline:Thursday, June 26 2025 
+ Conference date:Friday, July 18 2025 
+ Time Zone: Anywhere on Earth (AoE) 
+ ICTIR 2025 | Padua, Italy | July 18, 2025

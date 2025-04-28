@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "November 18 - 19, 2024",
+  "Year": "2024",
+  "Location": "Interdisciplinary Science and Engineering Building (ISEB), UC Irvine, Irvine, California, USA",
+  "City-State-Province": "Irvine, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission deadline": "June 27, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "September 13, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "October 22, 2024"
+  },
+  "Other Date": {
+    "Registration": "Now open",
+    "HotNets Lottery Deadline": "October 4, 2024"
+  },
+  "Topics": "Computer Networks, Network Systems, Networking Research",
+  "Summary": "The Twenty-third ACM Workshop on Hot Topics in Networks (HotNets 2024) will bring together researchers in computer networks and systems to engage in a lively debate on the theory and practice of networking. HotNets provides a venue for discussing innovative ideas and for debating future research agendas in networking.  The workshop will be held in person at UC Irvine, with a live Zoom Webinar broadcast for remote attendance.",
+  "Call for Papers": "# HotNets 2024: Call for Papers\n\nThe 23rd ACM Workshop on Hot Topics in Networks (HotNets 2024) will bring together researchers to engage in a lively debate on the theory and practice of computer networking and networked systems. HotNets provides a venue to discuss innovative ideas and debate future research agendas for the field.\n\n## Submission Guidelines\n\nWe invite researchers and practitioners to submit short position papers. We encourage submissions that:\n\n*   Identify fundamental open questions\n*   Advocate for new approaches\n*   Offer constructive critiques of the state of networking research\n*   Re-frame or debunk existing work\n*   Report unexpected early results from a deployment\n*   Report promising but unproven ideas\n*   Propose new evaluation methods\n\nAuthors need not support their ideas with full evaluations; we consider well-reasoned arguments or preliminary evaluations sufficient support for the possibility of the paper’s claims in HotNets.\n\nWe seek early-stage work, where the authors can benefit from community feedback. An ideal submission has the potential to open a line of inquiry for the community that results in multiple conference papers in related venues (SIGCOMM, NSDI, CoNEXT, SOSP, OSDI, MobiCom, MobiSys, etc.), rather than a single follow-on conference paper. We strongly discourage “conference papers in the miniature,” and the program committee will explicitly favor early work and papers likely to stimulate reflection and discussion over something that is ready for publication at a conference. Finished work that fits in a short paper is likely a better fit with the short-paper tracks at CoNEXT or IMC.\n\nHotNets takes a broad view of networking research. The scope includes new ideas that relate to (but not limited to) mobile, wide-area, data-center, home, and enterprise networks and that use a variety of link technologies (e.g., wired, wireless, optical, visual, and acoustic), as well as social networks and network architecture. HotNets encompasses all aspects of networks, which include (but is not limited to) packet-processing and transmission hardware and software, virtualization, mobility, provisioning and resource management, performance, energy consumption, sustainability, topology, robustness and security, measurement, diagnosis, verification, privacy, economics and evolution, theory, usability, machine learning, and interactions with applications.\n\n## Important Dates\n\n*   **Paper submission deadline:** June 27, 2024 (23:59 AoE)\n*   **Author notification:** September 13, 2024\n*   **Camera-ready deadline:** October 22, 2024\n\n## Submission and Formatting\n\nPapers should be formatted according to the two-column ACM proceedings format. Each paper should have no more than 6 pages, excluding references, in 10-point font. There is no limit on the page count for references; however, appendices are not allowed. Papers must contain novel ideas and must differ significantly in content from previously published papers.\n\nAll submissions must be blind: they must not indicate the names or affiliations of the authors in the paper. Only electronic submissions in PDF will be accepted. Submissions must be written in English, render without error using standard tools (e.g., Acrobat Reader), and print on US Letter paper. Each reference must list all authors of the paper (i.e., do not use \"et al.\"). The citations should be in numeric style, e.g., [52]. Please make sure that figures and tables are legible, even after the paper is printed in gray-scale. Papers that exceed the length requirement or deviate from the expected format will be rejected.\n\n[This archive](hotnets/2024/docs/hotnets24-template.zip) contains a LaTeX class file that follows the prescribed submission format. The `hotnets24-template.tex` included in the archive has the correct defaults for HotNets 2024 submissions. Specifically, the first two lines should be:\n\n```\n\\documentclass[sigconf, 10pt, anonymous, nonacm]{acmart}\n\\settopmatter{printfolios=true, printccs=false, printacmref=false}\n```\n\nThe default citation style is numeric. Please do not modify the `acmart.cls` file or settings to try to sneak in additional space.\n\nSubmit papers on the [HotCRP](https://hotnets24.hotcrp.com/)."
+}
+

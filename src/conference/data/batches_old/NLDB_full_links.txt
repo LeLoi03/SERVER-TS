@@ -1,0 +1,199 @@
+Conference full name: Applications of Natural Language to Data Bases (NLDB)
+
+1. Website of NLDB_1: https://aclweb.org/portal/content/nldb-2024-29th-international-conference-natural-language-information-systems
+Website information of NLDB_1:
+
+Skip to main contentMenu 
+ About the ACL | What is Computational Linguistics? 
+ Join the ACL 
+ Officers 
+ ACL LTA Winners 
+ ACL Fellows 
+ Best Paper Awards 
+ ACL Diversity Statistics 
+ ACL Publicity Information 
+ News | ACL News 
+ ACL Awards 
+ Members in the News 
+ News Archives 
+ Journals | Computational Linguistics 
+ Transactions of the ACL 
+ Conferences | Conference News 
+ ACL 
+ EACL 
+ EMNLP 
+ NAACL 
+ IJCNLP 
+ Events | Browse ACL Events 
+ Browse Non-ACL Events 
+ Add Event to the Website 
+ Browse Participants List 
+ ACL Fellows | Make Fellows Nominations and Recommendations 
+ SIGs 
+ Anthology | Anthology 
+ Network 
+ Wiki 
+ Education | NLP/CL Courses 
+ NACLO 
+ HSCLC 
+ Policies | ACL Policies 
+ Archives | Mirror of Past Conferences 
+ ACL HomeAssociation for 
+ Computational LinguisticsNLDB 2024 : The 29th International Conference on Natural Language & Information Systems 
+ November 23, 2023 | BY federico.torrielli 
+ Event Notification Type: 
+ Call for Papers 
+ Abbreviated Title: 
+ NLDB 2024 
+ Tuesday, 25 June 2024toThursday, 27 June 2024 
+ State: 
+ TO 
+ Country: 
+ Italy 
+ Contact Email: 
+ federico.torrielli@unito.it 
+ City: 
+ Turin 
+ Contact: 
+ Federico Torrielli 
+ Website: 
+ href="https://nldb2024.di.unito.it/" - https://nldb2024.di.unito.it/
+Submission Deadline: 
+ Friday, 5 April 2024 
+ For the online version of this Call, visit:href="https://nldb2024.di.unito.it/submissions/" - https://nldb2024.di.unito.it/submissions/
+=============== 
+ SUBMISSIONS ARE OPEN AThref="https://easychair.org/conferences/?conf=nldb2024" - https://easychair.org/conferences/?conf=nldb2024
+=============== 
+ NLDB 2024 
+ The 29th International Conference on Natural Language & Information Systems 
+ 25-27 June 2024, University of Turin, Italy. 
+ Website:href="https://nldb2024.di.unito.it/" - https://nldb2024.di.unito.it/
+ 
+ Submission deadline: 5 April, 2024 (Extended from 22 March) 
+ About NLDB 
+ The 29th International Conference on Natural Language & Information Systems will be held at the University of Turin, Italy, and will be a face to face event. Since 1995, the NLDB conference brings together researchers, industry practitioners, and potential users interested in various applications of Natural Language in the Database and Information Systems field. The term "Information Systems" has to be considered in the broader sense of Information and Communication Systems, including Big Data, Linked Data and Social Networks. 
+ The field of Natural Language Processing (NLP) has itself recently experienced several exciting developments. In research, these developments have been reflected in the emergence of Large Language Models and the importance of aspects such as transparency, bias and fairness, Large Multimodal Models and the connection of the NLP field with Computer Vision, chatbots and dialogue-based pipelines. 
+ Regarding applications, NLP systems have evolved to the point that they now offer real-life, tangible benefits to enterprises. Many of these NLP systems are now considered a de-facto offering in business intelligence suites, such as algorithms for recommender systems and opinion mining/sentiment analysis. Language models developed by the open-source community have become widespread and commonly used. Businesses are now readily adopting these technologies, thanks to the efforts of the open-source community. For example, fine-tuning a language model on a company's own dataset is now easy and convenient, using modules created by thousands of academic researchers and industry experts. 
+ It is against this backdrop of recent innovations in NLP and its applications in information systems that the 29th edition of the NLDB conference takes place. We welcome research and industrial contributions, describing novel, previously unpublished works on NLP and its applications across a plethora of topics as described in the Call for Papers. 
+ Call for Papers: 
+ NLDB 2024 invites authors to submit papers on unpublished research that addresses theoretical aspects, algorithms, applications, architectures for applied and integrated NLP, resources for applied NLP, and other aspects of NLP, as well as survey and discussion papers. This year's edition of NLDB continues with the Industry Track to foster fruitful interaction between the industry and the research community. 
+ Topics of interest include but are not limited to: 
+ * Large Language Models: training, applications, transfer learning, interpretability of large language models. 
+ * Multimodal Models: Integration of text with other modalities like images, video, and audio; multimodal representation learning; applications of multimodal models. 
+ * AI Safety and ethics: Safe and ethical use of Generative AI and NLP; avoiding and mitigating biases in NLP models and systems; explainability and transparency in AI. 
+ * Natural Language Interfaces and Interaction: design and implementation of Natural Language Interfaces, user studies with human participants on Conversational User Interfaces, chatbots and LLM-based chatbots and their interaction with users. 
+ * Social Media and Web Analytics: Opinion mining/sentiment analysis, irony/sarcasm detection; detection of fake reviews and deceptive language; detection of harmful information: fake news and hate speech; sexism and misogyny; detection of mental health disorders; identification of stereotypes and social biases; robust NLP methods for sparse, ill-formed texts; recommendation systems. 
+ * Deep Learning and eXplainable Artificial Intelligence (XAI): Deep learning architectures, word embeddings, transparency, interpretability, fairness, debiasing, ethics. 
+ * Argumentation Mining and Applications: Automatic detection of argumentation components and relationships; creation of resource (e.g. annotated corpora, treebanks and parsers); Integration of NLP techniques with formal, abstract argumentation structures; Argumentation Mining from legal texts and scientific articles. 
+ * Question Answering (QA): Natural language interfaces to databases, QA using web data, multi-lingual QA, non-factoid QA(how/why/opinion questions, lists), geographical QA, QA corpora and training sets, QA over linked data (QALD). 
+ * Corpus Analysis: multi-lingual, multi-cultural and multi-modal corpora; machine translation, text analysis, text classification and clustering; language identification; plagiarism detection; information extraction: named entity, extraction of events, terms and semantic relationships. 
+ * Semantic Web, Open Linked Data, and Ontologies: Ontology learning and alignment, ontology population, ontology evaluation, querying ontologies and linked data, semantic tagging and classification, ontology-driven NLP, ontology-driven systems integration. 
+ * Natural Language in Conceptual Modelling: Analysis of natural language descriptions, NLP in requirement engineering, terminological ontologies, consistency checking, metadata creation and harvesting. 
+ * Natural Language and Ubiquitous Computing: Pervasive computing, embedded, robotic and mobile applications; conversational agents; NLP techniques for Internet of Things (IoT); NLP techniques for ambient intelligence 
+ * Big Data and Business Intelligence: Identity detection, semantic data cleaning, summarisation, reporting, and data to text. 
+ Student Registration: 
+ We are committed to fostering the participation of young researchers and students in the NLDB 2024 conference. To accommodate as many young minds as possible, we have reduced the student registration fees. We believe that this will provide an excellent opportunity for students to engage with the latest research and industrial applications of Natural Language Processing across information systems. 
+ Important Dates: 
+ Full paper submission: 5 April, 2024 (Extended from 22 March) 
+ Paper notification: 3 May, 2024 
+ Camera-ready deadline: 10 May, 2024 
+ Conference: 25-27 June 2024 
+ Submission Guidelines: 
+ Authors should follow the LNCS format (https://www.springer.com/gp/computer-science/lncs/conference-proceedings...) and submit their manuscripts in PDF via Easychair (href="https://easychair.org/conferences/?conf=nldb2024" - https://easychair.org/conferences/?conf=nldb2024
+) 
+ Papers can be submitted to either the main conference or the industry track. 
+ Submissions can be full papers (up to 15 pages including references and appendices), short papers (up to 11 pages including references and appendices) or papers for a poster presentation or system demonstration (6 pages including references). The program committee may decide to accept some full papers as short papers or poster papers. 
+ All questions about submissions should be emailed tofederico.torrielli@unito.it(Web & Publicity Chair) 
+ General Chairs: 
+ Luigi Di Caro, University of Turin 
+ Farid Meziane, University of Derby 
+ Amon Rapp, University of Turin 
+ Vijayan Sugumaran, Oakland University 
+ User login 
+ Username*Password*Create New Member Account 
+ Request New Password 
+ Request Username Reminder 
+ lalaNo sign 
+ Latest Events 
+ href="/portal/content/call-papers-mar-19-4th-multimodal-algorithmic-reasoning-workshop-cvpr-2025" - Call for Papers (by Mar 19) – 4th Multimodal Algorithmic Reasoning Workshop (CVPR 2025)
+href="/portal/content/shared-task-pedagogical-ability-assessment-ai-powered-tutors-bea-2025" - Shared Task: Pedagogical Ability Assessment of AI-powered Tutors @ BEA 2025
+href="/portal/content/summer-institutes-computational-social-science-2025" - The Summer Institutes in Computational Social Science 2025
+The Association for Computational Linguistics 
+ 317 Sidney Baker Street S., Suite 400-134, Kerrville, TX 78028, USA 
+ acl@org.aclweb (unscramble me), Phone: (855) 225-1962
+
+2. Website of NLDB_1: https://nldb2020.sb.dfki.de/en_us/
+Website information of NLDB_1:
+
+Skip to contenthref="https://nldb2020.sb.dfki.de/en_us/" - 
+Toggle menuhref="https://nldb2020.sb.dfki.de/en_us/call-for-papers/" - Call for Papers 
+ href="https://nldb2020.sb.dfki.de/en_us/submission-guidelines/" - Submission Guidelines 
+ Programme Committee 
+ href="https://nldb2020.sb.dfki.de/en_us/data-protection/" - Data Protection 
+ href="https://nldb2020.sb.dfki.de/en_us/imprint/" - Legal Notice 
+ Home 
+ Visit NLDB2021 : 
+ href="http://nldb2021.sb.dfki.de/" - NLDB2021
+NLDB 2020 
+ June 24 - 26 
+ DFKI Saarbrücken, Germany 
+ 25th International Conference 
+ on Natural Language & Information Systems 
+ href="#Dates" - Important Dates
+href="http://nldb2020.sb.dfki.de/call-for-paper/" - Call for Papers
+The conference will take place as online-conference. 
+ The program schedule is now available for download: 
+ href="http://nldb2020.sb.dfki.de/wp-content/uploads/2020/06/NLDB-PROG.pdf" - Download Program Schedule
+Registered conference members get free access to: 
+ href="http://nldb2020.sb.dfki.de/springer-access/" - Springer Access
+Springer best paper award: 
+ Springer sponsors NLDB 2020 with 1,000,- Euros 
+ NLDB 2020 
+ Since 1995, the NLDB conference brings together researchers, industry practitioners, and potential users interested in various application of Natural Language in the Database and Information Systems fields. 
+ AboutContribute 
+ NLDB encourages submissions of novel and innovative papers focused on Natural Language and Information Systems. A detailed list of topics, can be found in the ‘Call for Papers’ section. 
+ href="http://nldb2020.sb.dfki.de/call-for-paper/" - Call for Papers
+href="http://nldb2020.sb.dfki.de/wp-content/uploads/2020/01/NLDB_Call_for_paper-1.pdf" - Call for Papers (pdf)
+Submissions 
+ Submissions can be full papers (12 pages), short papers (8 pages) or papers for a poster presentation (6 pages). Authors should follow the LNCS format and submit their manuscripts as pdf via Easychair. 
+ href="http://nldb2020.sb.dfki.de/submission-guidelines/" - Submission Guidelines
+Registration 
+ The registration page is now open. 
+ Registered users gain access to the online conference and the conference proceedings. 
+ href="http://nldb2020.sb.dfki.de/registration/" - Registration
+Visit NLDB2021 : 
+ href="http://nldb2021.sb.dfki.de/" - NLDB2021
+NLDB 2020 
+ Since 1995, the NLDB conference brings together researchers, industry practitioners, and potential users interested in various application of Natural Language in the Database and Information Systems fields. 
+ The term “Information Systems” has to be considered in the broader sense of Information and Communication Systems, including Big Data, Linked Data and Social Networks. 
+ The field of Natural Language Processing (NLP) has itself recently experienced several exciting developments. In research, these developments have been reflected in the emergence of neural language models (Deep Learning, Word2Vec) and a (renewed) interest in various linguistic phenomena, such as in discourse and argumentation theory (argumentation mining). Regarding applications, NLP systems have evolved to the point that they now offer real-life, tangible benefits to enterprises. Many of these NLP systems are now considered a de-facto offering in business intelligence suites, such as algorithms for recommender systems and opinion mining/sentiment analysis as well as question-answering systems. 
+ It is against this backdrop of recent innovations in NLP and its applications in information systems that the 25thedition of the NLDB conference – NLDB2020, takes place. We welcome research and industrial contributions, describing novel, previously unpublished works on NLP and its applications across a plethora of topics as described in the Call for Papers. 
+ NLDB 2020 is organized by the “Deutsches Forschungsinstitut für Künstliche Intelligenz” (DFKI) and the University of Saarland, Germany, from the 24st-26st June 2020. 
+ Committeehref="http://nldb2020.sb.dfki.de/invited-speakers/" - Invited Speakers
+01.03. 
+ Submission deadline 
+ 29.03. 
+ Notification of acceptance 
+ 10.04. 
+ Camera-ready 
+ due 
+ 24 -26.06. 
+ NLDB Conference 
+ Call for Paper 
+ href="http://nldb2020.sb.dfki.de/call-for-paper/" - Call for Paper
+Registered conference members get free access to: 
+ href="http://nldb2020.sb.dfki.de/springer-access/" - Springer Access
+Springer best paper award: 
+ Springer sponsors NLDB 2020 with 1,000,- Euros 
+ Conference Program 
+ href="http://nldb2020.sb.dfki.de/conference-program/" - Conference Program
+The program schedule is now available for download: 
+ href="http://nldb2020.sb.dfki.de/wp-content/uploads/2020/06/NLDB-PROG.pdf" - Download Program Schedule
+Contact 
+ For any inquiries please email 
+ helmut.horacek@dfki.de 
+ © 2025 NLDB2020. Proudly powered bySydney 
+ English (US)English (US)href="https://nldb2020.sb.dfki.de/#ETMLINKPROCESSED" - English (UK)
+href="https://nldb2020.sb.dfki.de/de/#ETMLINKPROCESSED" - German
+href="https://nldb2020.sb.dfki.de/es/#ETMLINKPROCESSED" - Spanish
+

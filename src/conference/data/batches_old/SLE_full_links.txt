@@ -1,0 +1,974 @@
+Conference full name: International Conference on Software Language Engineering (SLE)
+
+1. Website of SLE_3: https://www.sleconf.org/2025/
+Website information of SLE_3:
+
+href="/" - The SLE Series 
+ Previous Editions | href="/2008/" - SLE 2008 
+ href="/2009/" - SLE 2009 
+ href="/2010/" - SLE 2010 
+ href="/2011/" - SLE 2011 
+ href="/2012/" - SLE 2012 
+ href="/2013/" - SLE 2013 
+ href="/2014/" - SLE 2014 
+ href="/2015/" - SLE 2015 
+ href="/2016/" - SLE 2016 
+ href="/2017/" - SLE 2017 
+ href="/2018/" - SLE 2018 
+ href="/2019/" - SLE 2019 
+ href="/2020/" - SLE 2020 
+ href="/2021/" - SLE 2021 
+ href="/2022/" - SLE 2022 
+ href="/2023/" - SLE 2023 
+ href="/2024/" - SLE 2024 
+ href="/2025/" - SLE 2025 
+ Welcome 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. 
+ With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its environment, and the languages driving its development process. Given that everything depends on software and that software depends on software languages, it seems fair to say that for many years to come, everything will depend on software languages. 
+ Software language engineering(SLE) is the discipline of engineering languages and their tools required for the creation of software. It abstracts from the differences between programming languages, modelling languages, and other software languages, and emphasises the engineering facet of the creation of such languages, that is, the establishment of the scientific methods and practices that enable the best results. While SLE is certainly driven by its metacircular character (software languages are engineered using software languages), SLE is not self-satisfying: its scope extends to the engineering of languages for all and everything. 
+ Like its predecessors, the 18th edition of the SLE conference, SLE 2025, will bring together researchers from different areas united by their common interest in the creation, capture, and tooling of software languages. It overlaps with traditional conferences on the design and implementation of programming languages, model-driven engineering, and compiler construction, and emphasises the fusion of their communities. To foster the latter, SLE traditionally fills a two-day program with a single track, with the only temporal overlap occurring between co-located events. 
+ SLE 2025 will be co-located with STAF 2025 and take place in Koblenz, Germany. 
+ Community website: | href="https://www.sleconf.org/2025" - https://www.sleconf.org/2025 
+ Conference website: | href="https://conf.researchr.org/home/sle-2025" - https://conf.researchr.org/home/sle-2025 
+ Submission website: | href="https://sle25.hotcrp.com" - https://sle25.hotcrp.com 
+ SLE 2025 Home 
+ href="/2025/index.html" - Welcome 
+ href="/2025/CFP.html" - Call for Papers 
+ href="/2025/ArtifactEvaluation.html" - Artifact Evaluation 
+ href="/2025/Dates.html" - Important Dates 
+ Committees 
+  
+ href="http://prose.io/#sleconf/sleconf-www/edit/gh-pages/2025/index.md" - edit
+
+2. Website of SLE_3: https://2024.splashcon.org/track/sle-2024
+Website information of SLE_3:
+
+SPLASH 2024Sun 20 - Fri 25 October 2024Pasadena, California, United States 
+ Toggle navigation 
+ Attending | Venue: Hilton Pasadena 
+ Students 
+ Registration 
+ Visa Support Letters 
+ Sponsoring 
+ Code of conduct 
+ Instructions for Presenters 
+ Chair's Welcome 
+ How to SPLASH (Quick Attendee Guide) 
+ Mt. Baldy Bicycle Trip 
+ Attractions Around Pasadena 
+ Live Stream 
+ Program | SPLASH Program 
+ Your Program 
+ Sun 20 Oct 
+ Mon 21 Oct 
+ Tue 22 Oct 
+ Wed 23 Oct 
+ Thu 24 Oct 
+ Fri 25 Oct 
+ href="#" - Tracks | SPLASH 2024 
+ href="https://2024.splashcon.org/track/splash-2024-dei-activities" - DEI Activities 
+ href="https://2024.splashcon.org/track/splash-2024-Doctoral-Symposium" - Doctoral Symposium 
+ href="https://2024.splashcon.org/track/splash-2024-keynotes" - Keynotes 
+ href="https://2024.splashcon.org/track/splash-2024-oopsla" - OOPSLA 2024 
+ href="https://2024.splashcon.org/track/splash-2024-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-Essays" - Onward! Essays 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-papers" - Onward! Papers 
+ href="https://2024.splashcon.org/track/splash-2024-PLMW" - PLMW 
+ href="https://2024.splashcon.org/track/splash-2024-Posters" - Posters 
+ href="https://2024.splashcon.org/track/splash-2024-rebase" - REBASE 
+ href="https://2024.splashcon.org/track/splash-2024-SPLASH-E" - SPLASH-E 
+ href="https://2024.splashcon.org/track/splash-2024-SRC" - Student Research Competition 
+ href="https://2024.splashcon.org/track/splash-2024-Volunteers" - Volunteers 
+ href="https://2024.splashcon.org/track/splash-2024-Workshops" - Workshops 
+ Co-hosted Conferences 
+ GPCE 
+ href="https://2024.splashcon.org/track/sle-2024" - SLE 
+ Workshops 
+ HATRA 
+ IWACO 
+ JENSFEST 
+ LIVE 
+ NSAD 
+ PAINT 
+ ProLaLa 
+ UNSOUND 
+ VIVEKFEST 
+ VMIL | VMIL 
+ href="https://2024.splashcon.org/details/vmil-2024-papers/1/A-tour-of-CPython-s-runtime" - - A tour of CPython's runtime 
+ Co-hosted Symposia 
+ SAS | SAS 
+ href="https://2024.splashcon.org/track/sas-2024-artifacts" - SAS  Artifacts 
+ Organization | SPLASH 2024 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ Doctoral Symposium 
+ href="https://2024.splashcon.org/committee/splash-2024-papers-review-committee" - OOPSLA 2024 
+ OOPSLA Artifacts 
+ Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ PLMW | Organizing Committee 
+ Speakers & Panelists 
+ Mentors 
+ Posters 
+ REBASE 
+ SPLASH-E | Program Commitee 
+ Steering Committee 
+ href="#" - Student Research Competition | Organizers 
+ Reviewers 
+ Volunteers 
+ Workshops 
+ Contributors 
+ People Index 
+ Co-hosted Conferences 
+ GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ href="#" - SLE | Organizing Committee 
+ Program Committee 
+ Artifact Evaluation Committee 
+ Steering Committee 
+ Workshops 
+ HATRA | Organizing Committee 
+ Program Committee 
+ IWACO | Organizing Committee 
+ Program Committee 
+ JENSFEST | Organizing Committee 
+ Program Committee 
+ LIVE | Organizing Committee 
+ Program Committee 
+ NSAD | Organizing Committee 
+ Program Committee 
+ PAINT | Organizing Committee 
+ Program Committee 
+ ProLaLa | Organizing Committee 
+ Program Committee 
+ UNSOUND | Organizing Committee 
+ VIVEKFEST | Organizing Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ SAS | SAS 2024Organizing Committee 
+ SAS 2024Program Committee 
+ SAS Artifacts 
+ Search 
+ Series | Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ href="https://2025.splashcon.org" - SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2024/https%3A%5Es%5Es2024.splashcon.org%5Estrack%5Essle-2024" - Sign in 
+ Sign up 
+ SPLASH 2024(series) /SLE 2024 (href="https://2024.splashcon.org/series/sle" - series
+) /SLE (Software Language Engineering) 2024 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Artifact Evaluation 
+ href="#Call-for-Papers" - Call for Papers 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. 
+ With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its environment, and the languages driving its development process. Given that everything depends on software and that software depends on software languages, it seems fair to say that for many years to come, everything will depend on software languages. 
+ Software language engineering (SLE) is the discipline of engineering languages and their tools required for the creation of software. It abstracts from the differences between programming languages, modelling languages, and other software languages, and emphasizes the engineering facet of the creation of such languages, that is, the establishment of the scientific methods and practices that enable the best results. While SLE is certainly driven by its metacircular character (software languages are engineered using software languages), SLE is not self-satisfying: its scope extends to the engineering of languages for all and everything. 
+ Like its predecessors, the 17th edition of the SLE conference, SLE 2024, will bring together researchers from different areas united by their common interest in the creation, capture, and tooling of software languages. It overlaps with traditional conferences on the design and implementation of programming languages, model-driven engineering, and compiler construction, and emphasizes the fusion of their communities. To foster the latter, SLE traditionally fills a two-day program with a single track, with the only temporal overlap occurring between co-located events. 
+ SLE 2024 will be co-located withSPLASH 2024and take place in Pasadena, California, United States. 
+ Community website: | href="https://www.sleconf.org/2024" - https://www.sleconf.org/2024 
+ Conference website: | href="https://conf.researchr.org/home/sle-2024" - https://conf.researchr.org/home/sle-2024 
+ Submission website: | href="https://sle24.hotcrp.com" - https://sle24.hotcrp.com 
+ Dates 
+ Sun 20 Oct 2024 
+ Mon 21 Oct 2024 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-07:00) Pacific Time (US & Canada).Use conference time zone: (GMT-07:00) Pacific Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Sun 20 Oct 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 09:00 - 10:30 | SLE Welcome and Keynotehref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Peter D. MossesDelft University of Technology and Swansea University 
+ 09:00 
+ 15m 
+ Day opening | href="#" - SLE Welcome
+SLE 
+ G:Ralf LämmelUniversität Koblenz,P:Juliana Alves PereiraPUC-Rio,P:Peter D. MossesDelft University of Technology and Swansea University 
+ 09:15 
+ 75m 
+ Talk | There Is Only One Time in Software (Language) Engineering!SLE 
+ K:Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISA 
+ DOIhref="https://2024.splashcon.org/details/sle-2024/20/There-Is-Only-One-Time-in-Software-Language-Engineering-" - File Attached 
+  
+ 10:30 - 11:00 | Coffee Breakhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atFoyer 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Software Language Integration and Compositionhref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Juliana Alves PereiraPontifical Catholic University of Rio de Janeiro (PUC-Rio) 
+ 11:00 
+ 30m 
+ Talk | Cooperative Specification via Composition ControlSLE 
+ Christopher EsterhuyseUniversity of Amsterdam,L. Thomas van BinsbergenUniversity of Amsterdam 
+ DOIhref="https://ltvanbinsbergen.nl/files/papers/sle2024.pdf" - Pre-print 
+ 11:30 
+ 30m 
+ Talk | Aconite: Towards Generating Sirius-Based Graphical Editors from Annotated MetamodelsSLE 
+ Nathan RichardsonUniversity of York,Dimitris KolovosUniversity of York,Antonio Garcia-DominguezUniversity of York 
+ DOI 
+ 12:00 
+ 30m 
+ Talk | Towards an In-context LLM-based Approach for Automating the Definition of Model ViewsSLE 
+ James Pontes MirandaIMT Atlantique, LS2N (UMR CNRS 6004),Hugo BruneliereIMT Atlantique, LS2N (UMR CNRS 6004),Massimo TisiIMT Atlantique, LS2N (UMR CNRS 6004),Gerson SunyéNantes Université, LS2N (UMR CNRS 6004) 
+ DOI 
+  
+ 12:30 - 14:00 | Lunchhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atCalifornia 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:30 | Software Language Design and Implementation Ihref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):L. Thomas van BinsbergenUniversity of Amsterdam 
+ 14:00 
+ 30m 
+ Talk | Concrete Syntax MetapatternsSLE 
+ Luka MiljakDelft University of Technology,Casper BachUniversity of Southern Denmark,Rosilde CorvinoTNO-ESI 
+ DOI 
+ 14:30 
+ 30m 
+ Talk | Efficient Demand Evaluation of Fixed-Point Attributes Using Static AnalysisSLE 
+ Idriss RiouakDepartment of Computer Science, Lund University, Sweden,Niklas ForsLund University,Jesper ÖqvistCognibotics,Görel HedinLund University,Christoph ReichenbachLund University 
+ DOIhref="https://idrissrio.github.io//papers/dncpaper.pdf" - Pre-print 
+ 15:00 
+ 30m 
+ Talk | The Design of a Self-Compiling C Transpiler Targeting POSIX ShellSLE 
+ Laurent HuberdeauUniversité de Montréal,Cassandre HamelUniversité de Montréal,Stefan MonnierUniversité de Montréal,Marc FeeleyUniversité de Montréal 
+ DOI 
+  
+ 15:30 - 16:00 | Coffee Breakhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atFoyer 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 16:00 - 17:30 | SLE Body of Knowledge (SLEBoK)href="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Eric Van WykDepartment of Computer Science and Engineering, University of Minnesota 
+ 16:00 
+ 30m 
+ Talk | DSLs in Racket: You Want It How, Now?SLE 
+ Yunjeong LeeNational University of Singapore,Kiran GopinathanNational University of Singapore,Ziyi YangNational University of Singapore,Matthew FlattUniversity of Utah,Ilya SergeyNational University of Singapore 
+ DOI 
+ 16:30 
+ 30m 
+ Talk | Design of Software Representation Languages: a Historical PerspectiveSLE 
+ Anthony I. (Tony) WassermanSoftware Methods and Tools 
+ DOI 
+ 17:00 
+ 30m 
+ Talk | The Linguistic Theory Behind Blockly LanguagesSLE 
+ Friedrich SteimannFernuniversität in Hagen,Robin StunicFernuniversität in Hagen 
+ DOI 
+ Mon 21 Oct 
+ Displayed time zone:Pacific Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Empirical Studies and Experience Reportshref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISA 
+ 09:00 
+ 30m 
+ Talk | Trading Runtime for Energy EfficiencySLE 
+ Simão CunhaUniversity of Minho,Luís SilvaUniversity of Minho,João SaraivaUniversity of Minho,João Paulo FernandesLIACC, Universidade do Porto, Porto, Portugal 
+ DOI 
+ 09:30 
+ 30m 
+ Talk | Cloud Programming Languages and Infrastructure From Code: An Empirical StudySLE 
+ Georg SimhandlUniversity of Vienna,Uwe ZdunUniversity of Vienna 
+ DOI 
+ 10:00 
+ 30m 
+ Talk | href="#" - Statically and Dynamically Delayed Sampling for Typed Probabilistic Programming Languages
+SLE 
+ Gizem CaylakKTH Royal Institute of Technology,Daniel LundénOracle,Viktor SenderovInstitut de Biologie de l'École Normale Supérieure,David BromanKTH Royal Institute of Technology 
+ DOI 
+  
+ 10:30 - 11:00 | Coffee Breakhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atFoyer 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Software Language Design and Implementation IIhref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Jeff SmitsDelft University of Technology 
+ 11:00 
+ 30m 
+ Talk | Type Checking with Rewriting RulesSLE 
+ Dimi RacordonEPFL, LAMP 
+ DOI 
+ 11:30 
+ 30m 
+ Talk | Trieste: A C++ DSL for Flexible Tree Rewriting (Tool paper)SLE 
+ Sylvan ClebschMicrosoft Azure Research,Matilda BlomqvistUppsala University,Elias CastegrenUppsala University,Matthew JohnsonAzure Research, Microsoft,Matthew J. ParkinsonMicrosoft Azure Research 
+ DOI 
+ 12:00 
+ 30m 
+ Talk | Method Bundles (New Ideas/Vision paper)SLE 
+ Dimi RacordonEPFL, LAMP,Dave AbrahamsAdobe 
+ DOI 
+  
+ 12:30 - 14:00 | Lunchhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atCalifornia 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:30 | Analysis and Optimizationhref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Nico JansenSoftware Engineering, RWTH Aachen University 
+ 14:00 
+ 30m 
+ Talk | Trellis: A Domain-Specific Language for Hidden Markov Models with Sparse TransitionsSLE 
+ Lars HummelgrenKTH Royal Institute of Technology,Viktor PalmkvistKTH Royal Institute of Technology,Linnea StjernaKTH Royal Institute of Technology,Xuechun XuKTH Royal Institute of Technology,Joakim JaldenKTH Royal Institute of Technology,David BromanKTH Royal Institute of Technology 
+ DOI 
+ 14:30 
+ 30m 
+ Talk | Reducing Write Barrier Overheads for Orthogonal PersistenceSLE 
+ Yilin ZhangUniversity of Tokyo,Omkar Dilip DhawalIndian Institute of Technology Madras,V Krishna NandivadaIIT Madras,Shigeru ChibaUniversity of Tokyo,Tomoharu UgawaUniversity of Tokyo 
+ DOI 
+ 15:00 
+ 30m 
+ Talk | Bugfox: A Trace-based Analyzer for Localizing the Cause of Software Regression in JavaScriptSLE 
+ Yuefeng HuThe University of Tokyo,Hiromu IshibeThe University of Tokyo,Feng DaiThe University of Tokyo,Tetsuro YamazakiUniversity of Tokyo,Shigeru ChibaUniversity of Tokyo 
+ DOIhref="https://icefox99.github.io/publ/SLE2024-Bugfox.pdf" - Pre-print 
+  
+ 15:30 - 16:00 | Coffee Breakhref="https://2024.splashcon.org/track/splash-2024-catering" - Catering
+atFoyer 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 16:00 - 17:30 | Panel Discussion and Awardshref="https://2024.splashcon.org/track/sle-2024" - SLE
+atIBR East 
+ Chair(s):Ralf LämmelUniversität Koblenz 
+ 16:00 
+ 60m 
+ Panel | href="#" - AI Effects on Research and Education: A Programming and Software Language Perspective
+SLE 
+ O:Ralf LämmelUniversität Koblenz,P:Shigeru ChibaUniversity of Tokyo,P:Felienne HermansVrije Universiteit Amsterdam,P:Bernhard RumpeRWTH Aachen University,P:João SaraivaUniversity of Minho 
+ DOI 
+ 17:00 
+ 15m 
+ Awards | Award PresentationsSLE 
+ 17:15 
+ 15m 
+ Day closing | href="#" - SLE Closing
+SLE 
+ Accepted Papers 
+  
+ Title 
+ Aconite: Towards Generating Sirius-Based Graphical Editors from Annotated MetamodelsSLE 
+ Nathan Richardson,Dimitris Kolovos,Antonio Garcia-Dominguez 
+ DOI 
+ Bugfox: A Trace-based Analyzer for Localizing the Cause of Software Regression in JavaScriptSLE 
+ Yuefeng Hu,Hiromu Ishibe,Feng Dai,Tetsuro Yamazaki,Shigeru Chiba 
+ DOIhref="https://icefox99.github.io/publ/SLE2024-Bugfox.pdf" - Pre-print 
+ Cloud Programming Languages and Infrastructure From Code: An Empirical StudySLE 
+ Georg Simhandl,Uwe Zdun 
+ DOI 
+ Concrete Syntax MetapatternsSLE 
+ Luka Miljak,Casper Bach,Rosilde Corvino 
+ DOI 
+ Cooperative Specification via Composition ControlSLE 
+ Christopher Esterhuyse,L. Thomas van Binsbergen 
+ DOIhref="https://ltvanbinsbergen.nl/files/papers/sle2024.pdf" - Pre-print 
+ Design of Software Representation Languages: a Historical PerspectiveSLE 
+ Anthony I. (Tony) Wasserman 
+ DOI 
+ DSLs in Racket: You Want It How, Now?SLE 
+ Yunjeong Lee,Kiran Gopinathan,Ziyi Yang,Matthew Flatt,Ilya Sergey 
+ DOI 
+ Efficient Demand Evaluation of Fixed-Point Attributes Using Static AnalysisSLE 
+ Idriss Riouak,Niklas Fors,Jesper Öqvist,Görel Hedin,Christoph Reichenbach 
+ DOIhref="https://idrissrio.github.io//papers/dncpaper.pdf" - Pre-print 
+ Method Bundles (New Ideas/Vision paper)SLE 
+ Dimi Racordon,Dave Abrahams 
+ DOI 
+ Reducing Write Barrier Overheads for Orthogonal PersistenceSLE 
+ Yilin Zhang,Omkar Dilip Dhawal,V Krishna Nandivada,Shigeru Chiba,Tomoharu Ugawa 
+ DOI 
+ href="#" - Statically and Dynamically Delayed Sampling for Typed Probabilistic Programming Languages
+SLE 
+ Gizem Caylak,Daniel Lundén,Viktor Senderov,David Broman 
+ DOI 
+ The Design of a Self-Compiling C Transpiler Targeting POSIX ShellSLE 
+ Laurent Huberdeau,Cassandre Hamel,Stefan Monnier,Marc Feeley 
+ DOI 
+ The Linguistic Theory Behind Blockly LanguagesSLE 
+ Friedrich Steimann,Robin Stunic 
+ DOI 
+ Towards an In-context LLM-based Approach for Automating the Definition of Model ViewsSLE 
+ James Pontes Miranda,Hugo Bruneliere,Massimo Tisi,Gerson Sunyé 
+ DOI 
+ Trading Runtime for Energy EfficiencySLE 
+ Simão Cunha,Luís Silva,João Saraiva,João Paulo Fernandes 
+ DOI 
+ Trellis: A Domain-Specific Language for Hidden Markov Models with Sparse TransitionsSLE 
+ Lars Hummelgren,Viktor Palmkvist,Linnea Stjerna,Xuechun Xu,Joakim Jalden,David Broman 
+ DOI 
+ Trieste: A C++ DSL for Flexible Tree Rewriting (Tool paper)SLE 
+ Sylvan Clebsch,Matilda Blomqvist,Elias Castegren,Matthew Johnson,Matthew J. Parkinson 
+ DOI 
+ Type Checking with Rewriting RulesSLE 
+ Dimi Racordon 
+ DOI 
+ Call for Papers 
+ href="#topics-of-interest" - Topics of Interest
+SLE covers software language engineering in general, rather than engineering a specific software language. Topics of interest include, but are not limited to: 
+ Software Language Design and Implementation | Approaches to and methods for language design 
+ Static semantics (e.g., design rules, well-formedness constraints) 
+ Techniques for specifying behavioral/executable semantics 
+ Generative approaches (incl. code synthesis, compilation) 
+ Meta-languages, meta-tools, language workbenches 
+ Validation of Software Language Tools and Implementations | Verification and formal methods for language tools and implementations 
+ Testing techniques for language tools and implementations 
+ Simulation techniques for language tools and implementations 
+ Software Language Maintenance | Software language reuse 
+ Language evolution 
+ Language families and variability, language and software product lines 
+ Software Language Integration and Composition | Coordination of heterogeneous languages and tools 
+ Mappings between languages (incl. transformation languages) 
+ Traceability between languages 
+ Deployment of languages to different platforms 
+ Domain-Specific Approaches for Any Aspects of SLE (analysis, design, implementation, validation, maintenance) 
+ Empirical Studies and Experience Reports of Tools | User studies evaluating usability 
+ Performance benchmarks 
+ Industrial applications 
+ Synergies between Language Engineering and Emerging/Promising Research Areas | AI and ML language engineering (e.g., ML compiler testing, code classification) 
+ Quantum language engineering (e.g., language design for quantum machines) 
+ Language engineering for cyber-physical systems, IoT, digital twins, etc. 
+ Socio-technical systems and language engineering (e.g., language evolution to adapt to social requirements) 
+ Etc. 
+ href="#types-of-submissions" - Types of Submissions
+SLE accepts the following types of papers: 
+ Research papers: These are “traditional” papers detailing research contributions to SLE. Papers may range from 6 to 12 pages in length and may optionally include 2 further pages of bibliography/appendices. Papers will be reviewed with an understanding that some results do not need 12 full pages and may be fully described in fewer pages. 
+ New ideas/vision papers: These papers may describe new, unconventional software language engineering research positions or approaches that depart from standard practice. They can describe well-defined research ideas that are at an early stage of investigation. They could also provide new evidence to challenge common wisdom, present new unifying theories about existing SLE research that provides novel insight or that can lead to the development of new technologies or approaches, or apply SLE technology to radically new application areas. New ideas/vision papers must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. 
+ SLE Body of Knowledge: The SLE Body of Knowledge (SLEBoK) is a community-wide effort to provide a unique and comprehensive description of the concepts, best practices, tools, and methods developed by the SLE community. These papers can focus on, but are not limited to, methods, techniques, best practices, and teaching approaches. Papers in this category can have up to 20 pages, including bibliography/appendices. 
+ Tool papers: These papers focus on the tooling aspects often forgotten or neglected in research papers. A good tool paper focuses on practical insights that will likely be useful to other implementers or users in the future. Any of the SLE topics of interest are appropriate areas for tool demonstrations. Submissions must not exceed 5 pages and may optionally include 1 further page of bibliography/appendices. They may optionally include an appendix with a demo outline/screenshots and/or a short video/screencast illustrating the tool. 
+ Workshops: Workshops will be organized by SPLASH. Please inform us and contact the SPLASH organizers if you would like to organize a workshop of interest to the SLE audience. Information on how to submit workshops can be found on the SPLASH 2024 Website. 
+ href="#submission" - Submission
+SLE 2024 has a single submission round for papers, including a rebuttal phase, where all authors of research papers will have the possibility of responding to the reviews on their submissions. 
+ Authors of accepted research papers will be invited to submit artifacts. 
+ Format 
+ Submissions have to use thehref="https://sigplan.org/Resources/Author/#acmart-format" - ACM SIGPLAN Conference Format “acmart”
+; please make sure that you always use the latest ACM SIGPLAN acmart LaTeX template, and that the document class definition is\documentclass[sigplan,anonymous,review]{acmart}. Do not make any changes to this format! 
+ Ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes in figures and tables are legible. 
+ To increase fairness in reviewing, a double-blind review process has become standard across SIGPLAN conferences. Accordingly, SLE will follow the double-blind process. Author names and institutions must be omitted from submitted papers, and references to the authors’ own related work should be in the third person. No other changes are necessary, and authors will not be penalized if reviewers are able to infer their identities in implicit ways. 
+ All submissions must be in PDF format. The submission website is:href="https://sle24.hotcrp.com" - https://sle24.hotcrp.com
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described bySIGPLAN’s Republication Policy. Submitters should also be aware ofACM’s Policy and Procedures on Plagiarism. Submissions that violate these policies will be desk-rejected. 
+ href="#policy-on-human-participant-and-subject-research" - Policy on Human Participant and Subject Research
+Authors conducting research involving human participants and subjects must ensure that their research complies with their local governing laws and regulations and the ACM’s general principles, as stated in thehref="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects" - ACM’s Publications Policy on Research Involving Human Participants and Subjects
+. If submissions are found to be violating this policy, they will be rejected. 
+ Reviewing Process 
+ All submitted papers will be reviewed by at least three members of the program committee. Research papers and tool papers will be evaluated concerning soundness, relevance, novelty, presentation, and replicability. New ideas/vision papers will be evaluated primarily concerning soundness, relevance, novelty, and presentation. SLEBoK papers will be reviewed on their soundness, relevance, originality, and presentation. Tool papers will be evaluated concerning relevance, presentation, and replicability. 
+ For fairness reasons, all submitted papers must conform to the above instructions. Submissions that violate these instructions may be rejected without review at the discretion of the PC chairs. 
+ For research papers, authors will get a chance to respond to the reviews before a final decision is made. 
+ Artifact Evaluation 
+ SLE will use an evaluation process to assess the quality of artifacts on which papers are based to foster the culture of experimental reproducibility. Authors of accepted research papers are invited to submit artifacts. For more information, please see thehref="https://2024.splashcon.org/track/sle-2024#Artifact-Evaluation" - Artifact Evaluation
+page. 
+ Awards 
+ Distinguished paper | : Award for the most notable paper, as determined by the PC chairs based on the recommendations of the program committee. 
+ Distinguished artifact | : Award for the artifact most significantly exceeding expectations, as determined by the AEC chairs based on the recommendations of the artifact evaluation committee. 
+ Publication 
+ All accepted papers will be published in the ACM Digital Library. 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ href="#sle-and-doctoral-students" - SLE and Doctoral Students
+SLE encourages students to submit to the SPLASH doctoral symposium. Authors of accepted doctoral symposium papers on SLE topics will also have the chance to present their work to the SLE audience. 
+ Contact 
+ For additional information, clarification, or answers to questions, please get in touch with the program co-chairs (P.D.Mosses at tudelft.nl and Juliana at inf.puc-rio.br). 
+ Artifact Evaluation 
+ SLE’24 implements a two-rounds review process that also evaluates the quality of the artifacts supporting accepted research papers. This is the Artifact Evaluation track. 
+ Authors of research papers accepted for SLE 2024 will be invited (by mail) to submit artifacts. Any kind of artifact that is presented in the paper can be submitted (tools, grammars, metamodels, models, programs, algorithms, scripts, proofs, datasets, statistical tests, checklists, surveys, interview protocols, visualizations, annotated bibliographies, and tutorials). 
+ The submitted artifacts will be reviewed by a dedicated Artifact Evaluation Committee (AEC). The approved artifacts will then be made first-class bibliographic objects, easy to find and cite. Depending on the quality of the artifact, the artifact might be awarded with different kinds of “badges” that are visible on the final paper. 
+ The submission is additional to your already accepted paper at SLE24. It will not have a negative impact. 
+ The artifact evaluation process of SLE borrows heavily from processes described atwww.artifact-eval.org. 
+ href="#submission-and-reviewing-process" - Submission and Reviewing Process
+Authors of Artifacts need an accepted paper at SLE24. 
+ Authors use this submission page: | href="https://sle24ae.hotcrp.com/paper/new" - https://sle24ae.hotcrp.com/paper/new 
+ Authors need to submit a PDF version of the accepted paper for evaluating the artifact-paper consistency. 
+ The artifact can be associated with a | different | set of authors (different from the accepted paper). 
+ Authors must submit a single artifact for a paper (1-to-1 mapping, paper-to-artifact). 
+ Artifacts can be provided as zip or DOI. 
+ The artifact evaluated by the AEC and linked in the paper must be precisely the same. Chairs will assure that DOIs point to the specific version evaluated, or that the SHA is the same. 
+ PDF and artifact should NOT be anonymized anymore. 
+ The process includes a Kicking-the-tires stages (close to a rebuttal): Reviewers report on possible problems that may prevent artifacts from being properly evaluated. Authors will be given three days to read and respond to the kick-the-tires reports of their artifacts and solve the issues (potentially resubmitting artifacts). Thereafter, the actually reviewing takes place. 
+ Quality Criteria 
+ Submitted artifacts will be evaluated by the AEC concerning the following criteria. Depending on the criteria, different Badges are assigned (we limit us the ‘evaluated’ and ‘available’ badge). 
+ Artifacts ‘Evaluated’ (Badge) 
+ Documented: At minimum, an inventory of artifacts is included, and sufficient description provided to enable the artifacts to be exercised. 
+ Consistent: The artifacts are relevant to the associated paper, and contribute in some inherent way to the generation of its main results. 
+ Complete: To the extent possible, all components relevant to the paper in question are included. (Proprietary artifacts need not be included. If they are required to exercise the package, then this should be documented, along with instructions on how to obtain them. Proxies for proprietary data should be included to demonstrate the analysis.) 
+ Exercisable: Included scripts and/or software used to generate the results in the associated paper can be successfully executed, and included data can be accessed and appropriately manipulated. 
+ (These points are evaluated by the AEC.) 
+ There are two quality levels of the ‘Evaluated’ badge: 
+ ‘Evaluated | Functional | ’ assures the minimal functionality. 
+ ‘Evaluated | Reusable | ’ award artifact that exceeds the minimal functionality. 
+ (This distinction is decided on by the Chairs, based on the comments of the AEC.) 
+ Artifacts ‘Available’ (Badge) 
+ Identification: Using DOIs to identify published objects is standard. It is important to use a DOI that points to the specific version with which the results of the paper can be reproduced (for Zenodo: do not use the “always latest” DOI; for FigShare: use a DOI with a version suffix, e.g., “.v1”). 
+ Long-Term Availability: It is necessary that the artifacts are archived in an archive that hosts the artifacts on a long-term basis, such as in digital libraries of the ACM, Zenodo, etc. (version repositories do not fulfill this requirement, as the hosting company could decide at any time to discontinue the service, as done by Google, for example: Google Code). 
+ Immutability: It is necessary that the artifact cannot be changed after publication because the reader needs to use the material exactly as the authors did to obtain their result. 
+ Detailed definitions of these badges and the respective evaluation criteria may be found at theACM Artifact Review Badging site. 
+ (These points are assured by the Chairs.) 
+ href="#important-dates-authors-and-pc" - Important Dates (Authors and PC)
+Artifact submission Deadline: 9.09.2024 (AOE) 
+ Start Kick-the-tires author response period: 19.09.2024 
+ End Kick-the-tires author response period: 23.09.2024 (AOE) 
+ Author artifact Notification: 11.10.2024 
+ href="#important-dates-pc" - Important Dates (PC)
+Start bidding on artifacts: 10.09.2024 
+ End bidding on artifacts: 12.09.2024 (AOE) 
+ Start Kick-the-tires evaluation (assignment of artifacts to PC): 13.09.2024 
+ End Kick-the-tires evaluation: 18.09.2024 (AOE) 
+ Start artifact evaluation: 19.09.2024 
+ End artifact evaluation: 07.10.2024 (AOE) 
+ Discussion and decision: 08-10.10.2024 
+ Further Information 
+ For further information on the artifact evaluation of SLE 2024, feel free to contact the artifact evaluation chairs. 
+ Best regards, Sérgio Medeiros and Johannes Härtel SLE24 Artifact Evaluation Co-Chairs 
+ sqmedeiros@gmail.com 
+ johanneshrtel@googlemail.com 
+ Additional Hints 
+ If you are not certain how to submit your artifacts, these are some commonly known hints: 
+ Use an archive file (gz, xz, or zip) containing everything needed for supporting a full evaluation of the artifact. The archive file has to include at least the artifact itself and a text file named README.txt that contains the following information: ** An overview of the archive file, documenting the content of the archive. ** A setup/installation guide giving detailed instructions on how to setup or install the submitted artifact. ** Detailed step-by-step instructions on how to reproduce any experiments or other activities that support the conclusions given in the paper. 
+ When preparing your artifact, consider that your artifact should be as accessible to the AEC as possible. In particular, it should be possible for the AEC to quickly make progress in the investigation of your artifact. Please provide some simple scenarios describing concretely how the artifact is intended to be used. For a tool, this would include specific inputs to provide or actions to take, and expected output or behavior in response to this input. 
+ For artifacts that are tools, it is recommended to provide the tool installed and ready to use on a virtual machine for VirtualBox, VMware, SHARE, a Docker image, or a similar widely available platform. 
+ Please use widely supported open formats for documents (e.g., PDF, HTML) and data (e.g., CSV, JSON). 
+ Publication links 
+ Proceedings 
+ Important DatesAoE (UTC-12h) 
+  
+ Sun 20 - Mon 21 Oct 2024 
+ SLE24 Conference 
+ Sun 15 Sep 2024 
+ Camera-ready deadline 
+ Fri 30 Aug 2024 
+ Authors Notification 
+ Mon 12 - Sat 17 Aug 2024 
+ Authors Response Period (research papers) 
+ Mon 24 Jun 2024 
+ Paper Submission 
+ Fri 14 Jun 2024 
+ Abstract Submission 
+ Submission Link 
+ href="https://sle24.hotcrp.com" - https://sle24.hotcrp.com
+Organizing Committee 
+ Ralf LaemmelGeneral Chair 
+ University of Koblenz 
+ Juliana Alves PereiraProgram Co-Chair 
+ PUC-Rio 
+ Brazil 
+ Peter D. MossesProgram Co-Chair 
+ Delft University of Technology and Swansea University 
+ Netherlands 
+ Johannes HärtelArtifact Evaluation Co-Chair 
+ Vrije Universiteit (VU) Amsterdam 
+ Netherlands 
+ Sergio Queiroz de MedeirosArtifact Evaluation Co-Chair 
+ Universidade Federal do Rio Grande do Norte 
+ Brazil 
+ Andrei ChişPublicity Chair, Web Chair 
+ feenk.com 
+ Switzerland 
+ Program Committee 
+ Andrzej WąsowskiIT University of Copenhagen, Denmark 
+ Denmark 
+ Anthony AnjorinZühlke Engineering GmbH 
+ Germany 
+ Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISA 
+ France 
+ Bernd FischerStellenbosch University 
+ South Africa 
+ Di WangPeking University 
+ China 
+ Dimitris KolovosUniversity of York 
+ United Kingdom 
+ Elias CastegrenUppsala University 
+ Sweden 
+ Elizabeth ScottRoyal Holloway University of London 
+ Esther GuerraUniversidad Autónoma de Madrid 
+ Spain 
+ Faezeh KhorramHuawei Technologies 
+ France 
+ Fernando Magno Quintão PereiraFederal University of Minas Gerais 
+ Brazil 
+ Prof. Fiona PolackUniversity of Hull 
+ United Kingdom 
+ Görel HedinLund University 
+ Sweden 
+ Guido SalvaneschiUniversity of St. Gallen 
+ Switzerland 
+ João SaraivaUniversity of Minho 
+ Portugal 
+ Johannes HärtelVrije Universiteit (VU) Amsterdam 
+ Netherlands 
+ Judith MichaelRWTH Aachen University 
+ Germany 
+ Manuel WimmerJKU Linz 
+ Austria 
+ Marc FeeleyUniversité de Montréal 
+ Canada 
+ Michel SteuwerTechnische Universität Berlin 
+ Germany 
+ Paddy KrishnanOracle Labs, Australia 
+ Ragnar MogkTechnische Universität Darmstadt 
+ Germany 
+ Riemer van RozenCWI 
+ Netherlands 
+ Roberto IerusalimschyPUC-Rio 
+ Brazil 
+ Sergio Queiroz de MedeirosUniversidade Federal do Rio Grande do Norte 
+ Brazil 
+ Shigeru ChibaUniversity of Tokyo 
+ Japan 
+ Stefan MarrUniversity of Kent 
+ United Kingdom 
+ Stephen ChongHarvard University 
+ United States 
+ Tamás SzabóGitHub Next 
+ Austria 
+ Thomas DegueuleCNRS 
+ France 
+ Thomas KühnMartin-Luther-University Halle-Wittenberg 
+ Germany 
+ L. Thomas van BinsbergenUniversity of Amsterdam 
+ Netherlands 
+ Tijs van der StormCWI & University of Groningen 
+ Netherlands 
+ Walter CazzolaUniversità degli Studi di Milano 
+ Italy 
+ Artifact Evaluation Committee 
+ Gianluca AguzziAlma Mater Studiorum - Università di Bologna 
+ Italy 
+ Sharif AhmedBoise State University, USA 
+ Martina BaiardiUniversity of Bologna 
+ Italy 
+ Dominique BlouinLTCI Lab, Telecom Paris, Institute Politechnqie de Paris 
+ France 
+ Lázaro CostaFaculty of Engineering, University of Porto & HASLab/INESC 
+ Portugal 
+ Giordano d'AloisioUniversity of L'Aquila 
+ Italy 
+ Nicolas FarabegoliUniversity of Bologna 
+ Eduardo FernandesMackenzie Presbyterian University 
+ Brazil 
+ Pablo Gómez-AbajoUniversidad Autónoma de Madrid 
+ Spain 
+ João Helis BernardoFederal Institute of Education, Science and Technology of Rio Grande do Norte 
+ Brazil 
+ Md Mahir Asef KabirVirginia Tech 
+ Johannes KristanRobert Bosch GmbH 
+ Laaziz LahlouEcole de Technologie Superieure 
+ Salvador MartínezIMT Atlantique 
+ France 
+ Francisco RibeiroNew York University, Abu Dhabi 
+ Rui António Ramada RuaUniversity of Minho & INESC TEC 
+ Portugal 
+ Maximilian SchiedermeierUniversité du Québec à Montréal 
+ Canada 
+ Ted ShaowangUniversity of Chicago 
+ Gerson SunyéNantes Université, LS2N (UMR CNRS 6004) 
+ France 
+ Alicia JW TakaokaErasmus University Rotterdam 
+ Netherlands 
+ Skander TurkiPrince Sultan University, KSA 
+ Saudi Arabia 
+ Karthika VenkatesanCentre for development of advanced computing 
+ Zhaorui YangUniversity of California, Riverside 
+ Steering Committee 
+ Eric Van WykSteering Committee Chair 
+ Department of Computer Science and Engineering, University of Minnesota 
+ United States 
+ Lola BurgueñoUniversity of Malaga 
+ Spain 
+ Walter CazzolaUniversità degli Studi di Milano 
+ Italy 
+ Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISA 
+ France 
+ Thomas DegueuleCNRS 
+ France 
+ Davide Di RuscioUniversity of L'Aquila 
+ Italy 
+ Martin ErwigOregon State University 
+ United States 
+ Bernd FischerStellenbosch University 
+ South Africa 
+ Jeff GrayUniversity of Alabama 
+ Ralf LämmelUniversität Koblenz 
+ Germany 
+ Bruno C. d. S. OliveiraUniversity of Hong Kong 
+ China 
+ Richard PaigeMcMaster University 
+ Canada 
+ David J. PearceConsenSys 
+ United States 
+ João SaraivaUniversity of Minho 
+ Portugal 
+ Friedrich SteimannFernuniversität in Hagen 
+ Germany 
+ Emma SöderbergLund University 
+ Sweden 
+ Jurgen VinjuCWI; Eindhoven University of Technology 
+ Netherlands 
+ Juan de LaraAutonomous University of Madrid 
+ Spain 
+ xThu 3 Apr 09:10 
+ SPLASH 2024 
+ contact form 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ Support page 
+ Tracks 
+ href="https://2024.splashcon.org/track/splash-2024-dei-activities" - DEI Activities
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Doctoral-Symposium" - Doctoral Symposium
+ 
+ href="https://2024.splashcon.org/track/splash-2024-keynotes" - Keynotes
+ 
+ href="https://2024.splashcon.org/track/splash-2024-oopsla" - OOPSLA 2024
+ 
+ href="https://2024.splashcon.org/track/splash-2024-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-Essays" - Onward! Essays
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-papers" - Onward! Papers
+ 
+ href="https://2024.splashcon.org/track/splash-2024-PLMW" - PLMW
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Posters" - Posters
+ 
+ href="https://2024.splashcon.org/track/splash-2024-rebase" - REBASE
+ 
+ href="https://2024.splashcon.org/track/splash-2024-SPLASH-E" - SPLASH-E
+ 
+ href="https://2024.splashcon.org/track/splash-2024-SRC" - Student Research Competition
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Volunteers" - Volunteers
+ 
+ href="https://2024.splashcon.org/track/splash-2024-Workshops" - Workshops
+Co-hosted Conferences 
+ GPCE 2024 
+ href="https://2024.splashcon.org/track/sle-2024" - SLE 2024
+ 
+ Workshops 
+ HATRA 
+ IWACO 2024 
+ JENSFEST 2024 
+ LIVE 2024 
+ NSAD 2024 
+ PAINT 2024 
+ ProLaLa 2024 
+ UNSOUND 2024 
+ VIVEKFEST 
+ VMIL 2024 
+ Co-hosted Symposia 
+ SAS 2024 
+ Attending 
+ Venue: Hilton Pasadena 
+ Students 
+ Registration 
+ Visa Support Letters 
+ Sponsoring 
+ Code of conduct 
+ Instructions for Presenters 
+ Chair's Welcome 
+ How to SPLASH (Quick Attendee Guide) 
+ Mt. Baldy Bicycle Trip 
+ Attractions Around Pasadena 
+ Live Stream 
+ Sign Up 
+ : 
+ :
+
+3. Website of SLE_3: http://www.sleconf.org/
+Website information of SLE_3:
+
+href="http://www.sleconf.org" - 
+href="/" - The SLE Series 
+ Previous Editions | href="/2008/" - SLE 2008 
+ href="/2009/" - SLE 2009 
+ href="/2010/" - SLE 2010 
+ href="/2011/" - SLE 2011 
+ href="/2012/" - SLE 2012 
+ href="/2013/" - SLE 2013 
+ href="/2014/" - SLE 2014 
+ href="/2015/" - SLE 2015 
+ href="/2016/" - SLE 2016 
+ href="/2017/" - SLE 2017 
+ href="/2018/" - SLE 2018 
+ href="/2019/" - SLE 2019 
+ href="/2020/" - SLE 2020 
+ href="/2021/" - SLE 2021 
+ href="/2022/" - SLE 2022 
+ href="/2023/" - SLE 2023 
+ href="/2024/" - SLE 2024 
+ href="/2025/" - SLE 2025 
+ « We have been devastated to hear that our friend and colleague Eelco Visser (https://eelcovisser.org/) suddenly passed away. Eelco was highly influential in the SLE community, being both a role model and a leader in our community. His many scientific contributions about meta-languages and DSLs has been of high importance in both the scientific and industrial communities, and led to the well known and cutting-edge language workbench Spoofax. He will be deeply missed by the whole SLE community at large. All our heartfelt condolences go out to the family and friends. RIP Eelco. » 
+ This is the community website of the ACM SIGPLAN International Conference on Software Language Engineering (SLE). SLE is devoted to the engineering principles ofsoftware languages: their design, their implementation, and their evolution. 
+ Check out | href="2024" - SLE 2024 | (Conference website: | href="https://conf.researchr.org/home/sle-2024" - https://conf.researchr.org/home/sle-2024 | ) 
+ Upcoming edition | href="2025" - SLE 2025 
+ href="https://github.com/slebok/slebok" - SLEBoK 
+ Community blog 
+ href="http://www.informatik.uni-trier.de/~ley/db/conf/sle/index.html" - SLE at DBLP 
+ Most Influential Paper Award 
+ Steering Committee 
+ History 
+ href="http://www.sleconf.org/2023" - SLE 2023 | , Cascais, Portugal 
+ href="http://www.sleconf.org/2022" - SLE 2022 | , Auckland, New Zealand 
+ href="http://www.sleconf.org/2021" - SLE 2021 | , VIRTUAL event 
+ href="http://www.sleconf.org/2020" - SLE 2020 | , VIRTUAL event 
+ href="http://www.sleconf.org/2019" - SLE 2019 | , Athens, Greece 
+ href="http://www.sleconf.org/2018" - SLE 2018 | , Boston, Massachusetts, U.S.A. 
+ href="http://www.sleconf.org/2017" - SLE 2017 | , Vancouver, Canada 
+ href="http://www.sleconf.org/2016" - SLE 2016 | , Amsterdam, The Netherlands 
+ href="http://www.sleconf.org/2015" - SLE 2015 | , Pittsburg, USA 
+ href="http://www.sleconf.org/2014" - SLE 2014 | , Västerås, Sweden 
+ href="http://www.sleconf.org/2013" - SLE 2013 | , Indianapolis, Indiana, U.S.A. 
+ href="http://www.sleconf.org/2012" - SLE 2012 | , Dresden, Germany. 
+ href="http://www.sleconf.org/2011" - SLE 2011 | , Braga, Portugal. 
+ href="http://www.sleconf.org/2010" - SLE 2010 | , Eindhoven, The Netherlands. 
+ href="http://www.sleconf.org/2009" - SLE 2009 | , Denver, Colorado, U.S.A. 
+ href="http://www.sleconf.org/2008" - SLE 2008 | , Toulouse, France. 
+ href="http://prose.io/#sleconf/sleconf-www/edit/gh-pages/index.md" - edit
+
+4. Website of SLE_3: https://conf.researchr.org/series/sle
+Website information of SLE_3:
+
+href="https://conf.researchr.org/home/sle-2025" - SLE 2025
+Thu 12 - Fri 13 June 2025href="https://conf.researchr.org/venue/sle-2025/staf-2025-venue" - Koblenz, Germany
+co-located withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+Toggle navigation 
+ href="https://conf.researchr.org/series/sle" - Series 
+ href="https://conf.researchr.org/home/sle-2025" - SLE 2025 
+ All Editions | SLE 2025 
+ href="https://2024.splashcon.org/track/sle-2024" - SLE 2024 
+ href="https://2023.splashcon.org/home/sle-2023" - SLE 2023 
+ href="https://2022.splashcon.org/home/sle-2022" - SLE 2022 
+ href="https://conf.researchr.org/home/sle-2021" - SLE 2021 
+ href="https://conf.researchr.org/home/sle-2020" - SLE 2020 
+ href="https://conf.researchr.org/home/sle-2019" - SLE 2019 
+ href="https://conf.researchr.org/track/sle-2018/papers" - SLE 2018 
+ href="https://conf.researchr.org/track/sle-2017/sle-2017-papers" - SLE 2017 
+ href="https://conf.researchr.org/track/sle-2016/sle-2016-papers" - SLE 2016 
+ href="https://2015.splashcon.org/track/sle2015" - SLE 2015 
+ href="https://2013.splashcon.org/track/sle-2013-papers" - SLE 2013 
+ href="https://conf.researchr.org/signin/sle-2025/https%3A%5Es%5Esconf.researchr.org%5Esseries%5Essle" - Sign in 
+ href="https://conf.researchr.org/signup/sle-2025" - Sign up 
+ SLE 
+ All Editions 
+  
+ Thu 12 - Fri 13 June 2025 Koblenz, Germanyhref="https://conf.researchr.org/home/sle-2025" - SLE 2025
+withhref="https://conf.researchr.org/home/staf-2025" - STAF 2025
+The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 20 - Fri 25 October 2024 Pasadena, California, United Stateshref="https://2024.splashcon.org/track/sle-2024" - SLE 2024
+withSPLASH 2024 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 22 - Fri 27 October 2023 Cascais, Portugalhref="https://2023.splashcon.org/home/sle-2023" - SLE 2023
+withSPLASH 2023 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Mon 5 - Sat 10 December 2022 Auckland, New Zealandhref="https://2022.splashcon.org/home/sle-2022" - SLE 2022
+withSPLASH 2022 
+ No description available 
+ Sun 17 - Tue 19 October 2021 Chicago, Illinois, United Stateshref="https://conf.researchr.org/home/sle-2021" - SLE 2021
+withSPLASH 2021 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 15 - Fri 20 November 2020 Online Conferencehref="https://conf.researchr.org/home/sle-2020" - SLE 2020
+withSPLASH 2020 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 20 - Fri 25 October 2019 Athens, Greecehref="https://conf.researchr.org/home/sle-2019" - SLE 2019
+withSPLASH 2019 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 4 - Fri 9 November 2018 Boston, Massachusetts, United Stateshref="https://conf.researchr.org/track/sle-2018/papers" - SLE 2018
+withSPLASH 2018 
+ The ACM SIGPLAN International Conference on Software Language Engineering (SLE) is devoted to the principles of software languages: their design, their implementation, and their evolution. With the ubiquity of computers, software has become the dominating intellectual asset of our time. In turn, this software depends on software languages, namely the languages it is written in, the languages used to describe its ... 
+ Sun 22 - Fri 27 October 2017 Vancouver, Canadahref="https://conf.researchr.org/track/sle-2017/sle-2017-papers" - SLE 2017
+withSPLASH 2017 
+ Software Language Engineering (SLE) is the application of systematic, disciplined, and measurable approaches to the development, use, deployment, and maintenance of software languages. The term “software language” is used broadly, and includes: general-purpose programming languages; domain-specific languages (e.g. BPMN, Simulink, Modelica); modeling and metamodeling languages (e.g. SysML and UML); data models and ... 
+ Mon 31 October - Tue 1 November 2016 Amsterdam, Netherlandshref="https://conf.researchr.org/track/sle-2016/sle-2016-papers" - SLE 2016
+withSPLASH 2016 
+ Software Language Engineering (SLE) is the application of systematic, disciplined, and measurable approaches to the development, use, deployment, and maintenance of software languages. The term “software language” is used broadly, and includes: general-purpose programming languages; domain-specific languages (e.g. BPMN, Simulink, Modelica); modeling and metamodeling languages (e.g. SysML and UML); data models and ... 
+ Sun 25 - Tue 27 October 2015 Pittsburgh, Pennsylvania, United Stateshref="https://2015.splashcon.org/track/sle2015" - SLE 2015
+withSPLASH 2015 
+ Software Language Engineering (SLE) is the application of systematic, disciplined, and measurable approaches to the development, use, deployment, and maintenance of software languages. The term “software language” is used broadly, and includes: general-purpose programming languages; domain-specific languages (e.g. BPMN, Simulink, Modelica); modeling and metamodeling languages (e.g. SysML and UML); data models and ... 
+ Sat 26 - Thu 31 October 2013 Indianapolis, United Stateshref="https://2013.splashcon.org/track/sle-2013-papers" - SLE 2013
+withSPLASH 2013 
+ The 6th International Conference on Software Language Engineering (SLE) is devoted to topics related to artificial languages in software engineering. SLE’s mission is to encourage and organize communication among communities that have traditionally looked at software languages from different and yet complementary perspectives. Of particular relevance to SLE are technologies, methods, experiments, and case studies ... 
+ Steering Committee (SLE 2025) 
+ Eric Van WykSteering Committee Chair 
+ Department of Computer Science and Engineering, University of Minnesota 
+ United States 
+ href="https://conf.researchr.org/profile/sle-2025/lolaburgueno" - Lola BurgueñoUniversity of MalagaSpain 
+ href="https://conf.researchr.org/profile/sle-2025/waltercazzola" - Walter Cazzola Università degli Studi di MilanoItaly 
+ href="https://conf.researchr.org/profile/sle-2025/benoitcombemale" - Benoit CombemaleUniversity of Rennes, Inria, CNRS, IRISAFrance 
+ href="https://conf.researchr.org/profile/sle-2025/thomasdegueule" - Thomas DegueuleCNRSFrance 
+ href="https://conf.researchr.org/profile/sle-2025/davidediruscio" - Davide Di RuscioUniversity of L'AquilaItaly 
+ href="https://conf.researchr.org/profile/sle-2025/martinerwig" - Martin ErwigOregon State UniversityUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/berndfischer" - Bernd FischerStellenbosch UniversitySouth Africa 
+ href="https://conf.researchr.org/profile/sle-2025/jeffgray" - Jeff GrayUniversity of Alabama 
+ href="https://conf.researchr.org/profile/sle-2025/ralflammel1" - Ralf LämmelUniversität KoblenzGermany 
+ href="https://conf.researchr.org/profile/sle-2025/brunooliveira" - Bruno C. d. S. OliveiraUniversity of Hong KongChina 
+ href="https://conf.researchr.org/profile/sle-2025/richardpaige" - Richard PaigeMcMaster UniversityCanada 
+ href="https://conf.researchr.org/profile/sle-2025/davidpearce" - David J. PearceConsenSysUnited States 
+ href="https://conf.researchr.org/profile/sle-2025/joaosaraiva" - João SaraivaHASLab/INESC TEC, University of MinhoPortugal 
+ href="https://conf.researchr.org/profile/sle-2025/friedrichsteimann" - Friedrich SteimannFernuniversität in HagenGermany 
+ href="https://conf.researchr.org/profile/sle-2025/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://conf.researchr.org/profile/sle-2025/jurgenvinju" - Jurgen VinjuCWI; Eindhoven University of TechnologyNetherlands 
+ href="https://conf.researchr.org/profile/sle-2025/juandelara" - Juan de LaraAutonomous University of MadridSpain 
+ xThu 3 Apr 09:11 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support" - Support page
+ 
+ href="https://conf.researchr.org/signup" - Sign Up
+

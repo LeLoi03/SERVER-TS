@@ -1,0 +1,237 @@
+Conference IMACC:
+
+19th IMA International Conference on Cryptography and Coding - IMASearch for: 
+ MENUMENU 
+ About Us | Awards and Medals 
+ Business Affiliates 
+ Branches | East Midlands 
+ London 
+ North West 
+ Scottish 
+ South West and Wales 
+ West Midlands 
+ Yorkshire 
+ Equity, Diversity and Inclusion 
+ Education | Schools and Further Education 
+ Higher Education 
+ University Degree Course Accreditation 
+ Governance | Communications Committee 
+ Conferences Committee 
+ Council 
+ Early Career Mathematicians Committee 
+ Equity, Diversity and Inclusion Committee 
+ Executive Board 
+ Finance Committee 
+ Higher Education Committee 
+ Journals Board of Management 
+ Local Branches Committees | East Midlands Branch Committee 
+ Irish Branch Committee 
+ London Branch Committee 
+ North West Branch Committee 
+ Scottish Branch Committee 
+ West Midlands Branch Committee 
+ South West and Wales Branch Committee 
+ Yorkshire Branch Committee 
+ Mathematics Today Editorial Board 
+ MathsCareers Committee 
+ Membership Committee 
+ Nominating Committee 
+ Professional Affairs Committee 
+ Research Committee 
+ Schools and Further Education Committee 
+ History 
+ Professional | Continuing Professional Development (CPD) 
+ Academic Representatives 
+ Supporting the IMA 
+ Membership | Why Join the IMA? 
+ Membership Grades 
+ Membership Wizard 
+ How to Join the IMA 
+ Membership Rates 
+ Thinking of Rejoining the IMA? 
+ How to transfer Membership Grade 
+ Membership FAQ 
+ Student | Undergraduate Student Membership 
+ IMA Student Blog 
+ e16plus Newsletter 
+ Chartership | Chartered Mathematician Designation 
+ Chartered Scientist Designation 
+ Chartered Mathematics Teacher 
+ Publications | Council 
+ Governance 
+ IMA Journals 
+ Mathematics Today 
+ Mathematics Today Bulletin Archive 
+ Book Reviews 
+ Mathematics Matters 
+ Reports 
+ Proceedings 
+ Support | IMA Exponential Mentoring Scheme 
+ IMA Career Development Platform 
+ Careers 
+ Grants 
+ Lectures 
+ Levelling Up: Maths 
+ Mathematics Teacher Training Scholarships 
+ Events | Conferences 
+ Employers' Forum 
+ Talks 
+ Workshops 
+ Jobs | UK Jobs 
+ href="https://ima.org.uk/2592/job-listing-submission/" - Job Listing Submission 
+ Contact Us | IMA Staff 
+ myIMA 
+ 19th IMA International Conference on Cryptography and Coding 
+ Home»Events»Conferences»19th IMA International Conference on Cryptography and Coding 
+ Event 
+ Date:Tuesday December 12, 2023-Thursday December 14, 2023 
+ Time : 9:00 am - 5:00 pm 
+ Moore Auditorium , Royal Holloway 
+ Egham Hill, Egham, London, TW20 0EX, UK 
+ Tuesday December 12, 2023 9:00 amThursday December 14, 2023 5:00 pmEurope/London19th IMA International Conference on Cryptography and CodingMoore Auditorium , Royal Holloway , Egham Hill, Egham, London, TW20 0EX, UKProgramme Royal Holloway Final Information – Maps, Parking and Accommodation Abstract Padlet Springer Proceedings Online Springer Proceedings Book Request Feedback […] 
+ Warning: Undefined variable $eventpleasenote in/home/ima/www/www/wp/wp-content/themes/ima-s8/templates/content-single.phpon line129 
+  
+ Warning: Trying to access array offset on null in/home/ima/www/www/wp/wp-content/themes/ima-s8/templates/content-single.phpon line129 
+ Event Link: https://ima.org.uk/21435/19th-ima-international-conference-on-cryptography-and-coding/Add to CalendariCalendar 
+ Google Calendar 
+ Outlook 
+ Outlook Online 
+ Yahoo! Calendar 
+ 19th IMA International Conference on Cryptography and Coding 
+ Programme 
+ Royal Holloway Final Information – Maps, Parking and Accommodation 
+ Abstract 
+ Padlet 
+ Springer Proceedings Online 
+ Springer Proceedings Book Request 
+ FeedbackSurvey 
+ The mathematical theory and practice of both cryptography and coding underpins the provision of effective security and reliability for data communication, processing and storage. This nineteenth International Conference in an established and successful IMA series on the theme of “Cryptography and Coding” solicits original research papers on all technical aspects of cryptography and coding. 
+ Submissions are welcome on any cryptographic or coding-theoretic topic including, but not limited to: 
+ • Foundational theory and mathematics; 
+ • The design, proposal, and analysis of cryptographic or coding primitives and protocols 
+ • Secure implementation and optimisation in hardware or software; and 
+ • Applied aspects of cryptography and coding. 
+ Invited Speakers 
+ Carla Ràfols (Pompeu Fabra University) 
+ Amortization in zkSNARKs 
+ Prover complexity is one of the main bottlenecks in some of the best-known succinct, non-interactive arguments. Thus, many works “delay” or amortize parts of these proofs. In this talk, I will overview these techniques and the most recent constructions, and present new applications of these ideas. 
+ Dario Fiore (IMDEA Software Institute) 
+ Succinct and Functional Vector Commitments 
+ Vector commitments are a special class of commitment schemes in which one can commit to a long vector and open single positions of the vector with the crucial property that commitments and openings are short. Functional commitments generalize vector commitments so that one can open, in a succinct way, to functions of the committed vector. 
+ In this talk, I will present the notion of functional commitments and the recent constructions of this primitive that support the evaluation of arbitrary circuits, and I will discuss some of their applications. 
+ Accepted Papers 
+ An Upper-Bound on the Decoding Failure Probability of the LRPC Decoder,Étienne Burle and Ayoub Otmani 
+ Coset leaders of the first order Reed-Muller codes in the classes of Niho functions and Threshold functions,Serge Christian Feukoua Jonzo 
+ Revisiting Nearest-Neighbor-Based Information Set Decoding,Andre Esser 
+ Feistel Ciphers Based on A Single Primitive,Kento Tsuji and Tetsu Iwata 
+ Rectangle Attacks on Reduced Versions of the FBC Block Cipher, Wenchang Zhou and Jiqiang Lu 
+ zk-SNARKs from Codes with Rank Metrics,Xuan-Thanh Do, Dang-Truong Mac and Quoc-Huy Vu 
+ Zero-Knowledge Systems from MPC-in-the-Head and Oblivious Transfer,Cyprien Delpech de Saint Guilhem, Ehsan Ebrahimi and Barry van Leeuwen 
+ ZK-for-Z2K: MPC-in-the-Head Zero-Knowledge Proofs for Z2k,Lennart Braun, Cyprien Delpech de Saint Guilhem, Robin Jadoul, Emmanuela Orsini, Nigel P. Smart and Titouan Tanguy 
+ Efficient Secure Two Party ECDSA,Sermin Kocaman and Younes Talibi Alaou 
+ Selective Delegation of Attributes in Mercurial Signature Credentials,Colin Putman and Keith M. Martin 
+ Middle-Products of Skew Polynomials and Learning with Errors,Andrew Mendelsohn and Cong Ling 
+ Identity-Based Threshold Signatures from Isogenies,Shahla Atapoor 
+ Dynamic Security Aspects of Onion Routing,Alessandro Melloni, Martijn Stam and Øyvind Ytrehus 
+ Practical and Efficient FHE-based MPC,Nigel P. Smart 
+ https://link.springer.com/book/10.1007/978-3-031-47818-5 
+ Call for Posters – Open 
+ Come and present your latest original ideas and results on any cryptographic or coding-theoretic topic with a poster at IMACC23! 
+ Submit an abstract (max 300 words) by 12noon on the3rd November 2023. This should include your main ideas and results, their context and appropriate references. Abstracts should be submitted through yourMyIMAaccount. You do NOT have to be a member to submit a abstract, If you would like to submit a abstract then please register for FREE and upload your abstract to the event on the portal. 
+ Notification of acceptance will be on 10th November 2023. 
+ Important Dates 
+ – Submission Deadline: 12th July 2023 – CLOSED 
+ – Author Notification: 6th September 2023 
+ – Proceedings Version Deadline: 25th September 2023 
+ – Poster Abstract Deadline: 3rd November 2023 
+ – Registration Deadline- 7th December 2023 
+ – Conference: 12-14th December 2023 
+ Organising Committee 
+ Elizabeth A. Quaglia, RHUL (Chair) 
+ Angelo De Caro, IBM 
+ Maura Paterson, Birkbeck 
+ Chris Mitchell, RHUL 
+ Programme Committee 
+ Olivier Blazy, École polytechnique 
+ Xavier Bultel, INSA CVL 
+ Liqun Chen, University of Surrey 
+ Elizabeth Crites, University of Edinburgh 
+ Alex Davidson, Universidade Nova de Lisboa 
+ Gareth Davies, NXP 
+ Angelo De Caro, IBM 
+ Jean Paul Degabriele, TII 
+ Itai Dinur, Ben-Gurion University 
+ Benjamin Dowling, University of Sheffield 
+ Ashley Fraser, University of Surrey 
+ Lydia Garms, Keyless Technologies Limited 
+ Aurore Guillevic, INRIA 
+ Christian Janson, TU Darmstadt 
+ Siaw-Lynn Ng, Royal Holloway, University of London 
+ Martha Norberg Hovd, Simula UiB 
+ Maura Paterson, Birkbeck 
+ Thomas Preston, PQShield Ltd. 
+ Elizabeth A. Quaglia, Royal Holloway, University of London (chair) 
+ Benjamin Smith, Inria and École polytechnique 
+ Gaven J. Watson, Meta 
+ Registration Information 
+ Conference Fee – Non IMA Member £450 
+ Conference Fee – IMA Member £350 
+ Conference Fee – IMA Student £250 
+ Conference Fee – Non-Member Student £280 
+ Conference Fee – Includes your pass for the whole conference, refreshments and lunch. 
+ If you are an IMA Member or you have previously registered for an IMA conference, then you are already on our database. Please “request a new password” using the email address previously used, to log in.Register for the conference using this link 
+ Accommodation 
+ Use the link below to book local accommodation in the Reid Halls directly with Royal Holloway for £81 per night. 
+ http://venue-booking.royalholloway.ac.uk/BnB/IMA2023.bnb 
+ Conference Dinner 
+ 3 course dinner and drink for £45 to be held at Barley Mow Rd, Englefield Green, Egham, TW20 0NX. You have to register and pay for this dinner prior to arrival throughMyIMA. 
+ Travel Info & Maps 
+ For anyone driving the postcode for their sat-nav will be TW20 0EX and for those traveling by train, the closest station is Egham (around 20 minutes walk from the College). 
+ Campus map 
+ Code of Conduct 
+ We are committed to providing an experience free of harassment and discrimination at the IMA CC conference, respecting the dignity of every participant. 
+ If you experience harassment or discriminatory behaviour at IMA CC, we encourage you to reach out to the Conference Chair Elizabeth Quaglia. 
+ Participants who violate this code may be sanctioned and/or expelled from the event, at the discretion of the Conference Chair. Any action will only be taken with the consent of the complaining party. UK law applies. 
+ If you witness harassment or discriminatory behaviour, please consider intervening. 
+ Image Credit: Photo byCharles PostiauxonUnsplash/CC BY-NC 2.0 
+ LinkedIn 
+ Twitter 
+ Facebook 
+ Related Posts 
+ Employers Forum - AI, automation and mathematics in… 
+ Interview with Andrew Oliver – Making video games 
+ IMA Presidential Address – A Mathematical Eye 
+ Published1st February 2023 
+ Important Links 
+ IMA Statement on Behaviour at Events 
+ To list an event please | Contact Us | . 
+ Join the IMA 
+ Latest News 
+ IMA Statement on the Curriculum and Assessment Review Interim Report 
+ Unlocking Success: ONSIDE Mentoring for Early Career Mathematicians 
+ 2024 IMA Small Grant Awards 
+ Launch of the IMA's EDI Strategy 2024 - 2029 
+ Higher Education Teaching and Learning Workshop Series 2024/25 
+ Upcoming Events >> 
+ href="https://ima.org.uk/24367/5th-ima-and-or-society-conference-on-mathematics-of-operational-research/" - 30 Apr 2025 - 2 May 2025                    5th IMA and OR Society Conference on Mathematics of Operational Research
+href="https://ima.org.uk/26194/ima-lms-christopher-zeeman-lecture-and-medal-presentation-2025/" - 7 May 2025                    IMA-LMS Christopher Zeeman Lecture and Medal Presentation 2025
+href="https://ima.org.uk/26164/breaking-the-rules-the-role-of-creativity-in-the-mathematical-sciences/" - 8 May 2025                    Breaking the Rules: the Role of Creativity in the Mathematical Sciences
+Become A Member 
+ Mathematics Today subscription, member discounts and networking. 
+ Join Today 
+ Contact Us >> 
+ Institute of Mathematics & its ApplicationsCatherine Richards House, 16 Nelson Street,Southend-on-Sea,Essex,SS1 1EF+44 (0)1702 354020Branches details >> 
+ IMA Membership >> 
+ Membership Information 
+ Why Join? 
+ About Us >> 
+ T&Cs 
+ Support the IMA 
+ Purchases and Refunds 
+ Data Protection 
+ Upcoming Events >> 
+ href="https://ima.org.uk/24367/5th-ima-and-or-society-conference-on-mathematics-of-operational-research/" - 30 Apr 2025 - 2 May 2025                    5th IMA and OR Society Conference on Mathematics of Operational Research
+href="https://ima.org.uk/26194/ima-lms-christopher-zeeman-lecture-and-medal-presentation-2025/" - 7 May 2025                    IMA-LMS Christopher Zeeman Lecture and Medal Presentation 2025
+href="https://ima.org.uk/26164/breaking-the-rules-the-role-of-creativity-in-the-mathematical-sciences/" - 8 May 2025                    Breaking the Rules: the Role of Creativity in the Mathematical Sciences
+© 2025 IMA. All Rights Reserved. Site byMeasured Designs. 
+ The IMA uses cookies to help us follow browsing preferences on our site and enable more advanced features on our website. Please view our cookie policy.I acceptPrivacy policyThe IMA uses cookies to help us follow browsing preferences on our site and enable more advanced features on our website. Please view our cookie policy.I acceptPrivacy policy

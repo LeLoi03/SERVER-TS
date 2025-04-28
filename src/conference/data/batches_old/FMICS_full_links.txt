@@ -1,0 +1,489 @@
+Conference full name: Int. Workshop on Formal Methods for Industrial Critical Systems (FMICS)
+
+1. Website of FMICS_3: https://fmics.inria.fr/2024/
+Website information of FMICS_3:
+
+FMICS 2024 
+ 29th International Conference on Formal Methods for Industrial Critical Systems 
+ Co-located with FM 2024 in Milan, September 9-11, 2024 
+ The aim of the FMICS conference series is to provide a forum for researchers and practitioners who are interested in the development and application of formal methods in industry. FMICS brings together scientists and engineers who are active in the area of formal methods and interested in exchanging their experiences in the industrial usage of these methods. The FMICS conference series also strives to promote research and development for the improvement of formal methods and tools for industrial applications. 
+ PROGRAMME 
+ (href="FMICS_2024_Programme.pdf" - downloadable Progamme
+as a PDF file) 
+ The proceedings are accessible onhttps://link.springer.com/book/10.1007/978-3-031-68150-9(for conference participants, access is free until October 15, 2024). 
+ Monday September 9 
+ 9:00 – 10:20 | FM plenary keynote | , invited by | FACS | Comparing Reactive Models and Cyclic Components of Robotic Systems: The RoboStar Approach to Model-Based Testing | Ana Cavalcanti 
+ 10:20 – 10:50 | Coffee Break 
+ 10:50 – 12:30 | Real-Time Systems / Robotics | (Chair: Alessandro Cimatti) | Welcome | Anne Haxthausen and Wendelin Serwe 
+ Safe Linear Encoding of Vehicle Dynamics for the Instantiation of Abstract Scenarios | Jan Steffen Becker 
+ Evaluating the Effectiveness of Digital Twins through Statistical Model Checking with Feedbacks and Perturbations | Valentina Castiglioni, Ruggero Lanotte, Michele Loreti and Simone Tini 
+ UPPAAL-based Modeling and Verification of ROS 2 Multi-threaded Execution and Operating System Reservations | Lukas Dust, Rong Gu, Cristina Seceleanu, Mikael Ekström and Saad Mubeen 
+ 12:30 – 14:00 | Lunch 
+ 14:00 – 15:20 | FM plenary keynote | , invited by | TAP | Formalising Requirements for Systems Verification | Rosemary Monahan 
+ 15:20 – 15:50 | Coffee Break 
+ 15:50 – 17:20 | Semantics and Verification | (Chair: Laura Titolo) | Formalising the Industrial Language SMMT in mCRL2 | Jordi E. P. M. van Laarhoven, Olav Bunte, Louis C. M. van Gool and Tim A. C. Willemse 
+ Fault Tree inference using Multi-Objective Evolutionary Algorithms and Confusion Matrix-based Metrics | Lisandro Arturo Jimenez-Roa, Nicolae Rusnac, Matthias Volk and Mariëlle Stoelinga 
+ Logika: The Sireum Verification Framework | Robby, John Hatcliff and Jason Belt 
+ Tuesday September 10 
+ 9:00 – 10:20 | FM plenary keynote | , invited by | LOPSTR | / | PPDP | Safe and Easy Compile-Time Generative Programming | Ningning Xie 
+ 10:20 – 10:50 | Coffee Break 
+ 10:50 – 12:20 | Case Studies 1 | (Chair: Thierry Lecomte) | Fuzzing an Industrial Proprietary Protocol | Eduard Baranov, Axel Legay and Martin Vivian 
+ Modelling and Analysis of DTLS: Power Consumption and Attacks | Lise Bech Gehlert, Malthe Peter Højen Jørgensen, Christoffer Brejnholm Koch, Tobias Møller, Signe Kirstine Rusbjerg, Tobias Worm Bøgedal, Danny Bøgsted Poulsen, René Rydhof Hansen and Daniel Lux 
+ Verifying a Radio Telescope Pipeline using HaliVer: Solving Nonlinear and Quantifier Challenges | Lars B. van den Haak, Anton Wijs, Marieke Huisman and Mark van den Brand 
+ 12:30 – 14:00 | Lunch 
+ 14:00 – 15:20 | FM plenary keynote | , invited by | href="invited_speakers.html#thierry" - FMICS | B+ or how to model system properties in a formal software model | Thierry Lecomte 
+ 15:20 – 15:50 | Coffee Break 
+ 15:50 – 16:50 | Case Studies 2 | (Chair: Alessandro Fantechi) | Reconstructing the high-level structure of legacy code via software model checking: an experience report | Roberto Cavada, Alessandro Cimatti, Alberto Griggio, Stefano Tonetta, Federico Bonafini, Matteo Campidelli and Andrea Zasa 
+ Formal analysis and monitoring of legacy safety-critical interlocking systems with the use of certified industrial tools | Dalay Almeida, Florian Jamain and Thierry Lecomte 
+ 19:00 – 22:00 | Reception buffet 
+ Wednesday September 11 
+ 9:00 – 10:20 | FM opening and plenary keynote | Adversarial Robustness Certification for Bayesian Neural Networks | Marta Kwiatkowska 
+ 10:20 – 10:50 | Coffee Break 
+ 10:50 – 12:20 | Neural Networks | (Chair: Maurice ter Beek) | Unifying Syntactic and Semantic Abstractions for Deep Neural Networks | Sanaa Siddiqui, Diganta Mukhopadhyay, Mohammad Afzal, Hrishikesh Karmarkar and Kumar Madhukar 
+ Multimodal Model Predictive Runtime Verification for Safety of Autonomous Cyber-Physical Systems | Alexis Aurandt, Phillip H. Jones, Kristin Yvonne Rozier and Tichakorn Wongpiromsarn 
+ Surrogate Neural Networks Local Stability for Aircraft Predictive Maintenance | Mélanie Ducoffe, Guillaume Povéda, Audrey Galametz, Ryma Boumazouza, Marion-Cécile Martin, Julien Baris, Derk Daverschot and Eugene O'Higgins 
+ 12:30 – 14:00 | Lunch 
+ 14:00 – 15:20 | Plenary keynotes | , invited by FMICS/FM Industry Day | The Business of Proof | Byron Cook 
+ Industry partner pitches 
+ 15:20 – 15:50 | Coffee Break 
+ 15:50 – 17:50 | FM Industry Day Presentations 
+ IMPORTANT DATES (AoE) 
+ Abstract submission: | 25 April 2024 | 4 May 2024 
+ Paper submission: | 1 May 2024 | 8 May 2024 
+ Notification: 10 June 2024 
+ Camera-ready version: 23 June 2024 
+ Early bird registration: 30 July 2024 
+ Conference: 9-11 September 2024 
+ INVITED SPEAKERS 
+ Byron Cook (University College London, Amazon Web Services): | The Business of Proof 
+ Thierry Lecomte (CLEARSY): | B+ or how to model system properties in a formal software model 
+ More information about theinvited speakersis given on a separate page.AWARDS 
+ During the reception buffet on Tuesday September 10, 2024, the following Springer-sponsored awards were handed out:Best Methodology Paper: | Safe Linear Encoding of Vehicle Dynamics for the Instantiation of Abstract Scenarios | Jan Steffen Becker 
+ Best Tool Paper: | Logika: The Sireum Verification Framework | Robby, John Hatcliff, and Jason Belt 
+ TOPICS 
+ Topics of interest include (but are not limited to):Case studies and experience reports on industrial applications of formal methods, focusing on lessons learned or identification of new research directions. 
+ Methods, techniques, and tools to support automated analysis, certification, debugging, learning, optimization, and transformation of complex, distributed, real-time, embedded, mobile, and autonomous systems. 
+ Verification and validation methods (model checking, theorem proving, SAT/SMT constraint solving, abstract interpretation, etc.) that address shortcomings of existing methods with respect to their industrial applicability (e.g., scalability and usability issues, tool qualification, and certification). 
+ Transfer to industry and impact of adoption of formal methods on the development process and associated costs in industry. 
+ Application of formal methods in standardization and industrial forums. 
+ SUBMISSION 
+ Papers must describe original research work and results. Submitted papers must not have previously appeared in a journal or conference with published proceedings and must not be concurrently submitted to any other peer-reviewed workshop, symposium, conference, or archival journal. Any partial overlap with any such published or concurrently submitted paper must be clearly indicated. 
+ Submissions should clearly motivate relevance to industrial applications. Case study papers should identify lessons learned, validate theoretical results (such as scalability of methods) or provide specific motivation for further research and development. 
+ Papers should not exceed 15 pages (excluding references) formatted according to thehref="https://resource-cms.springernature.com/springer-cms/rest/v1/content/19242230/data/" - Springer author guidelines
+LNCS style. Any appendices (beyond the above page limit) might not be considered in the review process. All submissions will be reviewed by at least three members of theProgramme Committee, which will make a selection among the submissions based on the novelty, soundness, and applicability of the presented ideas and results. Papers must be written in English and should be submitted as PDF files using thehref="https://easychair.org/conferences/?conf=fmics2024" - EasyChair submission site (https://easychair.org/conferences/?conf=fmics2024)
+. 
+ PROCEEDINGS 
+ The conference proceedings will be published by Springer in theLNCS series. Previous FMICS proceedings can be found onhref="https://link.springer.com/conference/fmics" - SpringerLink
+. At least one author of each accepted paper is expected to present the paper at the conference as a registered participant. 
+ Authors should consult Springer's authors' guidelines and use their proceedings templates, either for LaTeX or for Word, for the preparation of their papers. Springer encourages authors to include theirORCIDs in their papers. 
+ BEST PAPER AWARD 
+ An monetary awardsponsoredby Springer will be given to the authors of the submission selected by the Program Committee as the best paper of FMICS 2024.SPECIAL ISSUE 
+ TheProgramme Committeeof FMICS 2024 will invite a selection of accepted papers to submit extended versions to a special issue of the International Journal onSoftware Tools for Technology Transfer.COMMITTEES 
+ PROGRAMME COMMITTEE CHAIRS 
+ Anne Haxthausen | (Technical University of Denmark) 
+ Wendelin Serwe | (INRIA Grenoble, France) 
+ PROGRAMME COMMITTEE 
+ href="https://www.tugraz.at/institute/ist/research/group-aichernig/people/bernhard-k-aichernig/" - Bernhard Aichernig | (TU Graz, Austria) 
+ Davide Basile | (ISTI CNR, Pisa, Italy) 
+ Alessandro Cimatti | (Fondazione Bruno Kessler, Italy) 
+ Pedro R. D'Argenio | (Universidad Nacional de Córdoba - CONICET, Argentina) 
+ Jennifer Davis | (Collins Aerospace, USA) 
+ Luca di Stefano | (University of Gothenburg and Chalmers, Sweden) 
+ Hugues Evrard (Google, France) 
+ Alessandro Fantechi | (DINFO - Universitá di Firenze, Italy) 
+ Wan Fokkink | (Vrije Universiteit Amsterdam, The Netherlands) 
+ Martin Fränzle | (Carl von Ossietzky Universität Oldenburg, Germany) 
+ Pierre-Loïc Garoche | (ENAC, France) 
+ Matthias Güdemann | (UAS Munich, Germany) 
+ Klaus Havelund | (Jet Propulsion Laboratory, California Institute of Technology, USA) 
+ Anne Haxthausen | (Technical University of Denmark, co-chair) 
+ Holger Hermanns | (Universität des Saarlandes, Saarbrücken, Germany) 
+ Peter Höfner | (Australian National University) 
+ Bertrand Jeannet (Dassault Systèmes, France) 
+ Joseph Kiniry | (Galois, Inc., USA) 
+ Jan Křetínský | (Masaryk University, Brno, Czech Republic) 
+ Kim Guldstrand Larsen | (Computer Science, Aalborg University, Denmark) 
+ Thierry Lecomte | (CLEARSY, France) 
+ David Monniaux | (CNRS, Verimag, France) 
+ Tiziana Margaria | (University of Limerick and LERO, Ireland) 
+ Lina Marsso | (University of Toronto, Canada) 
+ Stephan Merz | (Inria Nancy, France) 
+ Stefan Mitsch | (DePaul University, Chicago, USA) 
+ Charles Pecheur | (Université catholique de Louvain, Belgium) 
+ Cristina Seceleanu | (Mälardalen University, Sweden) 
+ Wendelin Serwe | (INRIA Grenoble, France, co-chair) 
+ Laura Titolo | (AMA Inc/NASA LaRC, USA) 
+ Jaco van de Pol | (Aarhus University, Denmark) 
+ Virginie Wiels | (ONERA, France) 
+ href="https://www.tue.nl/en/research/researchers/anton-wijs/" - Anton Wijs | (Eindhoven University of Technology, The Netherlands) 
+ Jim Woodcock | (University of York, United Kingdom) 
+ Zhen Zhang | (Utah State University, USA) 
+ FMICS STEERING COMMITTEE 
+ Maurice ter Beek (ISTI-CNR, IT) 
+ Alessandro Fantechi (University of Florence, IT) 
+ Hubert Garavel (INRIA, FR) 
+ Tiziana Margaria (University of Limerick and LERO, IE) 
+ Radu Mateescu (INRIA, FR) 
+ Jaco van de Pol (Aarhus University, DK) 
+ VENUE 
+ FMICS 2024 is co-located withFM 2024and will be held atPolitecnico di Milanoin Milan, Italy.SPONSORS 
+ CONTACT 
+ Anne Haxthausen 
+ Wendelin Serwe 
+  
+ Last updated on 2024/09/23 10:49:58
+
+2. Website of FMICS_3: https://fmics.inria.fr/
+Website information of FMICS_3:
+
+ERCIM Working Group on Formal Methods for Industrial Critical Systems (FMICS) 
+  
+ Home Page 
+  
+ Recent and Forthcoming Events (updated 2025/01/29) 
+ href="https://FMICS2025.uni-muenster.de" - FMICS 2025 - August 25-30, 2025 - Aarhus, Denmark 
+ href="https://ercim-news.ercim.eu/en139/jea/29th-international-conference-on-formal-methods-for-industrial-critical-systems" - Report on FMICS 2024 
+ Maurice ter Beek | elected as the new FMICS chair (Oct. 2022) 
+ The 2020 Expert Survey on Formal Methods 
+ ERCIM News 
+ ERCIM "Alain Bensoussan" Fellowship Programme 
+ Table of contents 
+ ERCIM's oldest active Working Group 
+ Background 
+ Objectives 
+ Scientific Activities 
+ Best Paper Awards 
+ href="#documents" - Official ERCIM Documents about FMICS 
+ Contacts 
+ Institutions and Participants 
+ 1.ERCIM's oldest active Working GroupFollowing an initial successful workshop bringing together ERCIM members interested in formal verification, held in Pisa in December 1992 Stefania Gnesi and Diego Latella, CNR, Pisa proposed to create an ERCIM working group dedicated to Formal Methods for Industrial Critical Systems (FMICS). Although at that time model checking was in its early days, the early ERCIM FMICS community was already aware of the great potential of formal verification techniques. 
+ Since then, the WG, chaired in succession by Diego Latella (ISTI-CNR), Hubert Garavel (INRIA), Stefania Gnesi (ISTI), Pedro Merino (SparCIM), Alessandro Fantechi (ISTI), Radu Mateescu (INRIA), and Tiziana Margaria (LERO), has kept pace with the development of formal verification techniques - and model checking in particular. The series of annual workshops, began in 1996 and sponsored by the WG, have promoted an ongoing scientific discussion focussed on identifying the most efficient verification techniques, with a keen eye to their industrial applicability. Most of the members of the FMICS community have strong links with industry and have thus contributed to the slow but constant introduction of formal methods in the development cycle of industrial critical systems witnessed in the last decade. The WG has also addressed other readily applicable verification techniques, such as static analysis by abstract interpretation. Similarly, the whole formal development lifecycle has been addressed, for example in the 2008 FMICS workshop where considerable attention was paid to the recent diffusion of Model Driven Development in industry. 
+ In 2008,issue number 75 of the ERCIM Newshosted a joint special session edited by Pedro Merino, coordinator of the WG, and Erwin Schoitsch, coordinator of the DES Dependable Embedded System WG, featuring almost 30 articles many of which reporting advances on the application of formal methods in industry. 
+ The FMICS workshop series has always been open to contributions from outside the ERCIM community and strong links have been maintained with other organizations, such as Formal Methods Europe. In November 2009, the FMICS workshop was held during the FM week, a special gathering of events organized this year by the FME association. 
+ 2.BackgroundFormal methods have been advocated as a means of increasing the reliability of systems, especially those which are safety or business critical, but the industrial uptake of such methods has been slow. This is due to the perceived difficulty of mathematical nature of these methods, the lack of tool support, and the lack of precedents where formal methods has been proven to be effective. It is even more difficult to develop automatic specification and verification tools due to limitations like state explosion, undecidability, etc. This working group will bring together researchers of the ERCIM consortium in order to promote the use of formal methods within industry. 
+ The behaviour of reactive systems is largely conditioned by the interaction with events of the external environment the sequentialization of which is not predictable. The complexity of the systems' behaviour increases considerably when the timing dependencies in the execution of events are taken into account. 
+ The above features are typical of a large class of systems including control systems, automation systems, and communication systems and results in the extreme difficulty of the verification of their correctness. 
+ In the industrial context correctness verification is usually performed by means of testing; the system is provided with input sequences drawn from a proper "coverage set" and its resulting behaviour is observed. 
+ Due to the multiplicity of possibilities both for inputs to a system and originating from more and more use of parallelism and concurrency this approach turns out to be very costly and in any case it does not allow for the exhaustive verification of the correctness of the system. It allows only to detect errors which take place during the execution sequences used for the test. 
+ In the last decade several theories have been developed which aim at coping with the problem of systems correctness by means of formal methodologies for the specification, design and verification of systems. These theories have been extended in order to deal with time, probability and stochastic aspects of behaviours. 
+ Also real-time models where time is a dense quantity and verification can be done algorithmically (automatically) has been developed. 
+ More recently, international standards for safety recommend the use of such methodologies, especially for critical systems. 
+ Nevertheless, the use of formal methods in the industry is still quite limited. Apparently, major reasons for that are the notational difficulty of most formal methods available nowdays and the lack of integration between them. Notational complexity is often a deterrent to the use of formal methods stronger than the advantages of such methods. This is reinforced by the lack of models which support all the activities of system development: 
+ requirements specification 
+ validation of the specification 
+ design 
+ verification of the final product against the requirements 
+ For each of the above activities different techniques have been developed independently. They are usually not at all integrated neither compatible and quite often they have been tried only on toy-examples, bringing to results which are rather difficult to compare. Finally, most of the automatic tools developed for supporting the use of formal methods lack of industrial strength and so turn out to be unpractical when used in the industrial context.3.ObjectivesThe main objectives of the WG are:To bring together scientists mainly of, but not only of institutions within ERCIM who are active in the field of formal methods and are willing to exchange their experience in the industrial usage of formal methods. 
+ To coordinate efforts in the transfer of the formal methods technology and knowledge to the industry. 
+ To promote research and development for the improvement of formal methods and tools with respect to their usage in the industry. 
+ The above objectives will be met by means of:Workshops where the participation of industrial professionals will be solicited. 
+ Development projects with industrial partners. 
+ Research projects and researchers mobility. 
+ 4.Scientific Activitieshref="workshop-1" - FMICS 1996: 1st International Workshop on Formal Methods for Industrial Critical Systems | St. Hugh's College, Oxford (UK), March 19, 1996 
+ Special issue of the journal "Formal Methods in System Design" | (Vol. 12, Nr. 2, March 1998) 
+ href="workshop-2" - FMICS 1997: 2nd International Workshop on Formal Methods for Industrial Critical Systems | Cesena (Italy), July 4-5, 1997 
+ Special issue of the journal "Formal Aspects of Computing" | (Vol. 10, Nr. 4, 1998) 
+ href="workshop-3" - FMICS 1998: 3rd International Workshop on Formal Methods for Industrial Critical Systems | Amsterdam (The Netherlands), May 25-26, 1998 
+ Special issue of the journal "Formal Aspects of Computing" | (Vol. 10, Nr. 5-6, 1998) 
+ href="workshop-4" - FMICS 1999: 4th International Workshop on Formal Methods for Industrial Critical Systems | Trento (Italy), July 11-12, 1999 
+ Special issue of the journal on "Science of Computer Programming" | (Vol. 36, Issue 1, January 2000) 
+ href="workshop-5" - FMICS 2000: 5th International Workshop on Formal Methods for Industrial Critical Systems | Berlin (Germany), April 3-4, 2000 
+ Special issue of the journal "Formal Methods in System Design" | (Vol. 19, Nr. 2, September 2001) 
+ href="workshop-6" - FMICS 2001: 6th International Workshop on Formal Methods for Industrial Critical Systems | Paris (France), 16-17 July 2001 
+ href="workshop-7" - FMICS 2002: 7th International Workshop on Formal Methods for Industrial Critical Systems | Málaga (Spain), 12-13 July 2002 
+ Special issue of the journal on "Science of Computer Programming" | (Vol. 46, Nr. 3, March 2003). 
+ href="workshop-8" - FMICS 2003: 8th International Workshop on Formal Methods for Industrial Critical Systems | Trondheim (Norway), 5-7 July 2003 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 5, Nr. 2-3, March 2004) 
+ href="workshop-9" - FMICS 2004: 9th International Workshop on Formal Methods for Industrial Critical Systems | Linz (Austria), 20-21 September 2004 
+ href="workshop-10" - FMICS 2005: 10th International Workshop on Formal Methods for Industrial Critical Systems | Lisbon (Portugal), 5-6 September 2005 
+ href="workshop-11" - FMICS 2006: 11th International Workshop on Formal Methods for Industrial Critical Systems | Bonn (Germany), 26-27 August 2006 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Formal Methods in System Design" | (Vol. 30, Nr. 3, June 2007) 
+ href="workshop-12" - FMICS 2007: 12th International Workshop on Formal Methods for Industrial Critical Systems | Berlin (Germany), 1-2 July 2007 ( | LNCS Proceedings | ) 
+ European project EC-MOAN | 2007-2009 
+ href="workshop-13" - FMICS 2008: 13th International Workshop on Formal Methods for Industrial Critical Systems | L'Aquila (Italy), 15-16 September 2008 ( | LNCS Proceedings | ) 
+ href="workshop-14" - FMICS 2009: 14th International Workshop on Formal Methods for Industrial Critical Systems | Eindhoven (The Netherlands), 2-3 November 2009 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 11, Nr. 5, Nov. 2009) 
+ href="workshop-15" - FMICS 2010: 15th International Workshop on Formal Methods for Industrial Critical Systems | Antwerp (Belgium), 20-21 September 2010 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Science of Computer Programming" | (Vol. 76, Nr. 2, Feb. 2011) 
+ href="workshop-16" - FMICS 2011: 16th International Workshop on Formal Methods for Industrial Critical Systems | Trento (Italy), 29-30 August 2011 ( | LNCS Proceedings | ) 
+ href="workshop-17" - FMICS 2012: 17th International Workshop on Formal Methods for Industrial Critical Systems | Paris (France), 27-28 August 2012 ( | LNCS Proceedings | ) 
+ European project SENSATION | 2012-2015 
+ Formal Methods for Industrial Critical Systems: A Survey of Applications | (Wiley, 2013) 
+ Special issue of the journal "Science of Computer Programming" | (Vol. 78, Nr. 7, Jul. 2013) 
+ href="http://lvl.info.ucl.ac.be/Fmics2013/" - FMICS 2013: 18th International Workshop on Formal Methods for Industrial Critical Systems | Madrid (Spain), 23-24 September 2013 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Science of Computer Programming" | (Vol. 80(A), Feb. 2014) 
+ href="http://fmics2014.unifi.it/" - FMICS 2014: 19th International Workshop on Formal Methods for Industrial Critical Systems | Florence (Italy), 11-12 September 2014 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 16, Nr. 6, Nov. 2014) 
+ href="workshop-20" - FMICS 2015: 20th International Workshop on Formal Methods for Industrial Critical Systems | Oslo (Norway), 22-23 June 2015 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Science of Computer Programming" | (Vol. 118, Mar. 2016) 
+ href="http://fmics-avocs.isti.cnr.it/" - FMICS-AVoCS 2016: Joint 21st International Workshop on Formal Methods for Industrial Critical Systems and Automated Verification of Critical Systems | Pisa (Italy), 26-29 September 2016 ( | LNCS Proceedings | ) 
+ href="http://www.es.mdh.se/conferences/fmics-avocs-2017/" - FMICS-AVoCS 2017: Joint 22nd International Workshop on Formal Methods for Industrial Critical Systems and Automated Verification of Critical Systems | Torino (Italy), 18-20 September 2017 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 20, Nr. 4, Aug. 2018) 
+ href="http://fmics2018.fi.muni.cz/" - FMICS 2018: 23rd International Conference on Formal Methods for Industrial Critical Systems | Maynooth University (Ireland), 3-4 September 2018 ( | LNCS Proceedings | ) 
+ href="https://fmics2019.fsa.win.tue.nl/" - FMICS 2019: 24th International Conference on Formal Methods for Industrial Critical Systems | Amsterdam (The Netherlands), 30-31 August 2019 ( | LNCS Proceedings | ) 
+ href="https://fmics20.ait.ac.at/" - FMICS 2020: 25th International Conference on Formal Methods for Industrial Critical Systems | Vienna (Austria), 2-3 September 2020 ( | LNCS Proceedings | ) 
+ href="https://qonfest2021.lacl.fr/fmics21.php" - FMICS 2021: 26th International Conference on Formal Methods for Industrial Critical Systems | Paris (France), August 24-26, 2021 ( | LNCS Proceedings | ) 
+ href="https://fmics2022.fsa.win.tue.nl" - FMICS 2022: 27th International Conference on Formal Methods for Industrial Critical Systems | Warsaw (Poland), September 14-16, 2022 ( | LNCS Proceedings | ) 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 24, Nr. 3, Aug. 2022) 
+ Special issue of the journal "Software Tools for Technology Transfer" | (Vol. 24, Nr. 6, Dec. 2022) 
+ href="2023/index.pdf" - FMICS 2023: 28th International Conference on Formal Methods for Industrial Critical Systems | Antwerp (Belgium), September 18-23, 2023 ( | LNCS Proceedings | ) 
+ href="2024/index.html" - FMICS 2024: 29th International Conference on Formal Methods for Industrial Critical Systems | Milan (Italy), September 9-11, 2024 ( | LNCS Proceedings | ) 
+ 5.Best Paper Awardshref="http://www.es.mdh.se/conferences/fmics-avocs-2017/best-paper-awards/" - FMICS-AVOCS 2017 best papers | Etienne André. | A unified formalism for monoprocessor schedulability analysis under uncertainty 
+ Rutger van Beusekom, Jan Friso Groote, Paul Hoogendijk, Rob Howe, Wieger Wesselink, Rob Wieringa, and Tim Willemse | Formalising the Dezyne Modelling Language in mCRL2 
+ href="https://ifm2018.cs.nuim.ie/awards" - FMICS 2018 best paper | Maarten Bartholomeus, Bas Luttik, and Tim Willemse | Modelling and Analysing ERTMS Hybrid Level 3 with the mCRL2 Toolset 
+ href="https://fmics2019.fsa.win.tue.nl/?p=161" - FMICS 2019 best paper | Matthias Volk, Norman Weik, Joost-Pieter Katoen, and Nils Nielssen | A DFT Modeling Approach for Infrastructure Reliability Analysis of Railway Station Areas 
+ href="https://www.ercim.eu/news/488-25th-international-conference-on-formal-methods-for-industrial-critical-systems-fmics-20" - FMICS 2020 best paper | Rong Gu, Eduard Enoiu, Cristina Seceleanu, and Kristina Lundqvist | Verifiable and Scalable Mission-Plan Synthesis for Multiple Autonomous Agents 
+ href="https://qonfest2021.lacl.fr/best-papers.php" - FMICS 2021 best paper | Cláudio Belo Lourenço, Denis Cousineau, Florian Faissole, Claude Marcé, David Mentré, and Hiroaki Inoue | Automated Verification of Temporal Properties of Ladder Programs 
+ href="https://fmics2022.fsa.win.tue.nl/?p=315" - FMICS 2022 best paper | Franck Cassez, Joanne Fuller and Horacio Mijail Anton Quiles | Deductive Verification of Smart Contracts with Dafny 
+ href="2023/papers.pdf" - FMICS 2023 best paper | Djurre van der Wal, Marcus Gerhold, and Mariëlle Stoelinga | Conformance in the Railway Industry: Single-Input-Change Testing a EULYNX Controller 
+ href="2024/index.html#awards" - FMICS 2024 best papers | Jan Steffen Becker | Safe Linear Encoding of Vehicle Dynamics for the Instantiation of Abstract Scenarios 
+ Robby, John Hatcliff, and Jason Belt | Logika: The Sireum Verification Framework 
+ 6.href="" - Official ERCIM Documents about FMICS
+Memorandum of Understanding for ERCIM working groups - August 1996 
+ Updated Memorandum of Understanding for ERCIM working groups - May 2001 
+ ERCIM News No. 25 - April 1996 | report by Diego Latella and Stefania Gnesi 
+ ERCIM News No. 26 - July 1996 | report by Diego Latella 
+ ERCIM News No. 31 - October 1997 | report by Stefania Gnesi and Diego Latella 
+ ERCIM News No. 34 - July 1998 | report by Diego Latella 
+ ERCIM News No. 39 - October 1999 | Towards Reliable Computer Systems? | by Diego Latella, Stefania Gnesi, and Hubert Garavel 
+ href="http://www.ercim.org/publication/Ercim_News/enw47/6FMICS.html" - ERCIM News No. 47 - October 2001 | report by Hubert Garavel 
+ ERCIM News No. 47 - October 2001 | How can I be sure that my DVD player understands my TV? | by Wan Fokkink, Izak van Langevelde, Bas Luttik and Yaroslav Usenko 
+ ERCIM News No. 54 - July 2003 | report by Thomas Arts and Wan Fokkink 
+ href="http://www.ercim.org/publication/Ercim_News/enw54/fokkink.html" - FMICS receives the ERCIM Working Group Award 2003 
+ href="http://www.ercim.eu/publication/Ercim_News/enw60/fmics.html" - ERCIM News No. 60 - January 2005 | report by Juan Bicarregui, Andrew Butterfield and Alvaro Arenas 
+ ERCIM News No. 77 - April 2009 | report by Alessandro Fantechi 
+ ERCIM News No. 91 - October 2012 | report by Radu Mateescu 
+ href="http://ercim-news.ercim.eu/en92/jea/formal-methods-for-intelligent-transportation-systems-a-track-at-isola12" - ERCIM News No. 92 - January 2013 | report by Alessandro Fantechi, Francesco Flammini, and Stefania Gnesi 
+ ERCIM News No. 108 - January 2017 | report by Maurice ter Beek 
+ ERCIM News No. 112 - January 2018 | report by Ana Cavalcanti, Laure Petrucci, and Cristina Seceleanu 
+ ERCIM News No. 123 - October 2020 | report by Maurice ter Beek 
+ ERCIM News No. 127 - July 2021 | report by Maurice ter Beek 
+ href="https://ercim-news.ercim.eu/en131/jea/27th-international-conference-on-formal-methods-for-industrial-critical-systems-fmics-22" - ERCIM News No. 131 - October 2022 | report by Maurice ter Beek 
+ href="https://ercim-news.ercim.eu/en135/joint-ercim-actions/fmics-23-28th-international-conference-on-formal-methods-for-industrial-critical-systems" - ERCIM News No. 135 - October 2023 | report by Maurice ter Beek 
+ ERCIM News No. 139 - October 2024 | report by Maurice ter Beek 
+ 7.ContactsAs of October 2022, the FMICS Working Group is being chaired by: 
+  
+ Maurice ter BeekFMT lab - ISTI-CNRPisa (Italy)The FMICS Chair is assisted by the FMICS Board, the members of which are: 
+ Alessandro Fantechi | (Univ. of Firenze) 
+ Hubert Garavel | (INRIA): Dissemination and Web site 
+ Tiziana Margaria | (CSIS, Univ. of Limerick, and LERO) 
+ Radu Mateescu | (INRIA) 
+ Jaco van de Pol | (Aarhus University and University of Twente) 
+ The former FMICS Chairs are: 
+ Diego Latella | (August 1996 - July 1999) 
+ Hubert Garavel | (July 1999 - July 2002) 
+ Stefania Gnesi | (July 2002 - November 2005) 
+ Pedro Merino | (November 2005 - October 2008) 
+ Alessandro Fantechi | (November 2008 - October 2011) 
+ Radu Mateescu | (November 2011 - October 2014) 
+ Tiziana Margaria | (November 2014 - November 2018) 
+ Jaco van de Pol | (November 2018 - October 2022) 
+ The former FMICS Board Members are: 
+ href="https://www.ie.edu/business-school/faculty-and-research/faculty/alvaro-arenas" - Alvaro Arenas | (STFC, 2007) 
+ Pedro Merino | (University of Malaga, until November 2017) 
+ Lubos Brim | (CRCIM, until July 2018) 
+ Stefania Gnesi | (ISTI-CNR, until August 2020) 
+ Diego Latella | (ISTI-CNR, until August 2020) 
+ As of September 2020, the working group initiators are now Honorary Members of FMICS: 
+ Stefania Gnesi | (ISTI-CNR) 
+ Diego Latella | (ISTI-CNR) 
+ 8.Institutions and Participants 
+ A legacy web page listing the FMICS members and institutions is availablehere. At present, participation to the FMICS working group essentially takes place by attending the annual FMICS conference.
+
+3. Website of FMICS_3: https://ercim-news.ercim.eu/en139/jea/29th-international-conference-on-formal-methods-for-industrial-critical-systems
+Website information of FMICS_3:
+
+Sidebar 
+ ×Special Theme | Software Security - Introduction to the Special Theme 
+ Next Generation Vulnerability Detection with LLMs 
+ Increased Software Security with Large Language Models 
+ AI-Driven Software Security: Vulnerability Detection, Patching, and Anti-Fuzzing 
+ A Proposal for Privacy-preserving Ransomware Detection by means of Federated Machine Learning 
+ Vulnerability of Software Package Repositories: PyPI, Maven and npm 
+ Uninstallable by Design: The Role of Pre-installed Apps in Android’s Security Landscape 
+ Towards Cyber Security Risk Analysis for Digital Products 
+ Challenges for the Secure Integration of Drones into Warehouse Logistics of SMEs 
+ Enhancing IoT Security Across the Supply Chain 
+ Towards Safer Software: Exploring Validation Techniques for Rust Binaries 
+ The Salto Project: Static Analysis of OCaml Programs by Abstract Interpretation 
+ Generating Mixed Boolean-Arithmetic Expressions through Equality Saturation 
+ GLITCH: Polyglot Code Smell Detection in Infrastructure as Code 
+ Comparability of Software Metrics and Estimating the Strength of Software Protections 
+ Interactive Fuzzing Reveals Zero-Day Vulnerabilities in Several MQTT Brokers 
+ Verifying Code Correctness of Protected Software through Translation Validation 
+ A Framework for the Analysis of Physical Unclonable Function Interfaces 
+ Enhancing Software Security in Hardware SoC Environments: A Heterogeneous Approach 
+ Side-Channel Resistant Applications through Co-designed Hardware/ Software: the SCRATCHS Project 
+ Protecting Cryptographic Material in Ethereum Blockchain Clients Using an Open-source Secure Element 
+ href="/en139/r-i" - Research and Innovation | Connected Aquaponics: Sustainable Agriculture through Industry 5.0 Technologies and Circular Economy Principles 
+ An Innovative Approach to Supporting Startups in Greece and Southern Europe 
+ Boosting MATE Security through Small Language Models 
+ Strengthening Cyber Defence through Cooperative Development and Shared Expertise in Incident Response Playbooks 
+ Unlocking the Future: A Cloud-Based Artificial Intelligence Access Control System 
+ href="/en139/r-i/engineering-secure-trustworthy-and-ethically-sound-ai-based-computer-systems" - Engineering Secure, Trustworthy, and Ethically Sound AI-Based Computer Systems 
+ href="/en139/r-i/advancing-research-the-role-of-the-eosc-and-eosc-support-office-austria" - Advancing Research: The Role of the EOSC and EOSC Support Office Austria 
+ Joint ERCIM Actions | Nicola Messina Winner of the 2024 Cor Baayen Award 
+ 29th International Conference on Formal Methods for Industrial Critical Systems 
+ 12th International Workshop on Computational Intelligence for Multimedia Understanding 
+ Announcements | In Memoriam: Prof. Dr. rer. pol. Matthias Jarke (1952–2024) 
+ href="/en139/announcements/dagstuhl-seminars-and-perspectives-workshops-call-for-proposals" - Dagstuhl Seminars and Perspectives Workshops - Call for Proposals 
+ Towards a Shared AI Strategy for European Digital Science Institutes and Organisations 
+ W3C@30 
+ href="/en139/announcements/acm-digital-threats-research-and-practice-call-for-papers" - ACM Digital Threats: Research and Practice - Call for Papers 
+ ERCIM NewsSearchSearch 
+ Subscription 
+ Back issues 
+ About 
+ href="/call" - Call for contributions 
+ Advertise 
+ Subscription 
+ Back issues 
+ About 
+ href="/call" - Call for contributions 
+ Advertise 
+ Home 
+ ERCIM News 139 
+ Joint ERCIM Actions 
+ 29th International Conference on Formal Methods for Industrial Critical Systems 
+ ERCIM News 139 
+ October 2024 
+ Special theme:Software Security 
+ Guest editors:Sebastian Schrittwieser (University of Vienna) and Michele Ianni (University of Calabria) 
+ This issue inpdf(52 pages) 
+ Back Issues Online 
+ Back Issues Online 
+ Back Issues Online 
+ Contents 
+ Special Theme 
+ href="/en139/r-i" - Research and Innovation 
+ Joint ERCIM Actions 
+ Announcements 
+ href="/en139/jea/29th-international-conference-on-formal-methods-for-industrial-critical-systems" - 29th International Conference on Formal Methods for Industrial Critical Systems (FMICS'24)
+DetailsJoint ERCIM Actions23 October 2024Last Updated: 23 October 2024Hits: 797by Maurice ter Beek (CNR-ISTI) 
+ The yearly conference of the ERCIM Working Group on Formal Methods for Industrial Critical Systems, FMICS [L1], the key conference at the intersection of industrial applications and formal methods, reached its 29th edition. This year the participants met in Milan, Italy, during 9-11 September 2024. 
+ The aim of the FMICS conference series is to provide a forum for researchers and practitioners interested in the development and application of formal methods in industry. It strives to promote research and development for improving formal methods and tools for industrial applications. 
+ FMICS 2024 [L2] was chaired by Anne Haxthausen (Technical University of Denmark, Lyngby) and Wendelin Serwe (Inria Grenoble, France) and organised by the general chairs Matteo Pradella and Matteo Rossi (Politecnico di Milano, Italy) and their team as a co-located event of FM 2024, the 26th International Symposium on Formal Methods. As part of this co-location, FM and FMICS organised a joint Industry Day on 11 September. This is one of the reasons for which FMICS 2024 overall attracted about 100 participants from many countries worldwide, from academia as well as industry, making this a very well attended edition. 
+ The international program committee, with 35 members from 15 different countries, received 22 submissions and decided to accept 14 papers after a rigorous reviewing process. The program moreover included two excellent invited keynote presentations, namely “The Business of Proof” by Byron Cook (Amazon Web Services, UK) and “B+ or how to model system properties in a formal software model” by Thierry Lecomte (Clearsy, France), both of which attracted many participants also from FM and from the other co-located conferences FACS, LOPSTR, PPDP and TAP. ERCIM and Inria generously sponsored the invited speakers (Figure 1). 
+  
+ Figure 1: FMICS 2024 PC chairs Anne Haxthausen and Wendelin Serwe acknowledged ERCIM sponsoring of the invited speakers during the conference opening presentation. 
+ Following a tradition established over the years, Springer sponsored the FMICS best paper awards. This year, the program committee selected the contributions “Safe Linear Encoding of Vehicle Dynamics for the Instantiation of Abstract Scenarios” by Jan Steffen Becker (German Aerospace Center, Oldenburg) as the FMICS 2024 Best Paper (Figure 2) and “Logika: The Sireum Verification Framework” by Robby, John Hatcliff and Jason Belt (Kansas State University, USA) as the FMICS 2024 Best Tool Paper (Figure 3). 
+  
+ Figure 2: Jan Steffen Becker received the FMICS 2024 Best Paper Award from the PC chairs Anne Haxthausen and Wendelin Serwe. 
+  
+ Figure 3: John Hatcliff received the FMICS 2024 Best Tool Paper Award from the PC chairs Anne Haxthausen and Wendelin Serwe. 
+ FMICS 2025 will take place in Aarhus, Denmark, under the CONFEST 2025 umbrella, alongside CONCUR, FORMATS and QEST, and organised by the general chairs Jaco van de Pol and Andreas Pavlogiannis (University of Aarhus, Denmark) and their team during 25-30 August 25-30. 
+ Links: 
+ [L1]href="https://fmics.inria.fr/" - https://fmics.inria.fr/
+ 
+ [L2]href="https://fmics.inria.fr/2024/" - https://fmics.inria.fr/2024/
+Reference: 
+ [1] A.E. Haxthausen and W. Serwe (eds.), Formal Methods for Industrial Critical Systems: Proceedings of the 29th International Conference on Formal Methods for Industrial Critical Systems (FMICS'24), Milan, Italy, 9-11 September 2024. Lecture Notes in Computer Science, volume 14952, Springer, Cham, 2024. DOI: https://link.springer.com/book/10.1007/978-3-031-68150-9 
+ Please contact: 
+ Maurice ter Beek, CNR-ISTI,maurice.terbeek@isti.cnr.it 
+ Next issue:April 2025 
+ Special theme: 
+ Cultural AI 
+ href="/call" - Call for the next issue
+ 
+ This issue inpdf 
+  
+ This issue inePub format 
+ Get the latest issue to your desktop 
+ ERCIM Newsis licensed under aCreative Commons Attribution 4.0 International License. You are free to share — copy and redistribute the material in any medium or format, as long as the author(s) and the source are credited. 
+ ERCIM articles (sections "special theme" and "research and innovation) are referenced byDBLP 
+ ERCIM News is a joint publication ofCNRCWIFraunhoferFNRFORTHINESCINRIAISIITIS-UMANTNURISESBASZTAKIUCYUWAW 
+ © ERCIM |legal information
+
+4. Website of FMICS_3: https://www.fm24.polimi.it/?page_id=63
+Website information of FMICS_3:
+
+Toggle navigationAttending | Registration 
+ Proceedings 
+ href="https://www.fm24.polimi.it/?page_id=612" - Accepted Papers 
+ Program 
+ Venue 
+ Social Events 
+ href="https://www.fm24.polimi.it/?page_id=59" - Calls | href="https://www.fm24.polimi.it/?page_id=200" - Call for Research Papers 
+ href="https://www.fm24.polimi.it/?page_id=310" - Call for Tutorial Papers 
+ href="https://www.fm24.polimi.it/?page_id=402" - Call for Industry Papers 
+ href="https://www.fm24.polimi.it/?page_id=423" - Call for Workshops 
+ href="https://www.fm24.polimi.it/?page_id=486" - Call for Artifact Evaluation 
+ Committees | Organizing Committee 
+ Program Committee 
+ Embedded Systems Track Committee 
+ Tutorial Track Committee 
+ Artifact Evaluation Committee 
+ Invited 
+ Speakers 
+ Doctoral 
+ Symposium 
+ Tutorials 
+ Industry 
+ Day 
+ Workshops 
+ Co-located 
+ Events | All Events 
+ TAP 2024 
+ href="https://www.fm24.polimi.it/?page_id=63#fmics2024" - FMICS 2024 
+ LOPSTR/PPDP 2024 
+ FACS 2024 
+ Skip to contentAttending | Registration 
+ Proceedings 
+ href="https://www.fm24.polimi.it/?page_id=612" - Accepted Papers 
+ Program 
+ Venue 
+ Social Events 
+ href="https://www.fm24.polimi.it/?page_id=59" - Calls | href="https://www.fm24.polimi.it/?page_id=200" - Call for Research Papers 
+ href="https://www.fm24.polimi.it/?page_id=310" - Call for Tutorial Papers 
+ href="https://www.fm24.polimi.it/?page_id=402" - Call for Industry Papers 
+ href="https://www.fm24.polimi.it/?page_id=423" - Call for Workshops 
+ href="https://www.fm24.polimi.it/?page_id=486" - Call for Artifact Evaluation 
+ Committees | Organizing Committee 
+ Program Committee 
+ Embedded Systems Track Committee 
+ Tutorial Track Committee 
+ Artifact Evaluation Committee 
+ Invited 
+ Speakers 
+ Doctoral 
+ Symposium 
+ Tutorials 
+ Industry 
+ Day 
+ Workshops 
+ Co-located 
+ Events | All Events 
+ TAP 2024 
+ href="https://www.fm24.polimi.it/?page_id=63#fmics2024" - FMICS 2024 
+ LOPSTR/PPDP 2024 
+ FACS 2024 
+ Search for:Toggle sidebar & navigationCo-located Events 
+ 18th International Conference on Tests and Proofs (TAP) 
+ TheTAP conferencepromotes research in verification and formal methods that targets the interplay of proofs and testing: the advancement of techniques of each kind and their combination, with the ultimate goal of improving software and system dependability. 
+ TAP 2024 will be held in conjunction with FM 2024, from September 9th to September 10th, 2024 
+ href="https://fmics.inria.fr/2024" - 29th International Conference on Formal Methods for Industrial Critical Systems (FMICS)
+href="https://fmics.inria.fr/" - FMICS
+is theERCIMWorking Group conference on Formal Methods for Industrial Critical Systems and is the key conference in the intersection of industrial applications and Formal Methods. 
+ The aim of the FMICS conference series is to provide a forum for researchers and practitioners who are interested in the development and application of formal methods in the industry. 
+ href="https://fmics.inria.fr/2024" - FMICS 2024
+will be held in conjunction with FM 2024, from September 9th to September 11th, 2024. 
+ 34th International Symposium on Logic-based Program Synthesis and Transformation (LOPSTR) 
+ 25th International Symposium on Principles and Practice of Declarative Programming (PPDP) 
+ The aim of theLOPSTRseries is to stimulate and promote international research and collaboration on logic-based program development.LOPSTRis open to contributions in logic-based program development in any language paradigm. 
+ PPDPaims to provide a forum that brings together researchers from the declarative programming communities, including those working in the logic, constraint and functional programming paradigms, but also embracing a variety of other paradigms such as visual programming, executable specification languages, database languages, AI languages and knowledge representation languages used, for example, in the semantic web. 
+ LOPSTRandPPDPwill be held in conjunction with FM 2024 from September 9 to September 11, 2024. 
+ 20th International Conference on Formal Aspects of Component Software (FACS)The Formal Aspects of Component Software (FACS) conference series targets research in formal approaches for distributed components and services. The conferences cover topics including models, languages, analysis, and verification techniques for component-based systems such as service-oriented architecture, cloud and edge computing, safety-critical, hybrid, and cyber-physical systems, etc. 
+ The 20th edition of FACS will be co-located with FM 2024. It will take place from September 9 to September 10, 2024. 
+ FM 2024 
+ Organized by 
+ Politecnico di Milano 
+ in collaboration with 
+ Fondazione Politecnico di Milano 
+ Piazza Leonardo da Vinci 32 
+ 20133 
+ Milano, Italy 
+ Useful Links 
+ Code of Conduct 
+ Privacy Policy and Cookies 
+ Copyright © 2025 fm24Inspiro ThemebyWPZOOM
+

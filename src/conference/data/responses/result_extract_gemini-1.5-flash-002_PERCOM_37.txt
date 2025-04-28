@@ -1,0 +1,43 @@
+output:
+{
+  "Conference dates": "March 17 - 21, 2025",
+  "Year": "2025",
+  "Location": "Walter E. Washington Convention Center, Washington DC, USA",
+  "City-State-Province": "Washington, District of Columbia",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Main Conference) Paper registration in EasyChair": "September 29, 2024",
+    "(Main Conference) Paper submission in EasyChair": "October 4, 2024",
+    "(Affiliated Events - Industry Track) Paper submission deadline": "November 17, 2024",
+    "(Affiliated Events - WIP, PhD Forum) Submission deadline": "December 15, 2024",
+    "(Affiliated Events - Demo) Submission deadline": "December 15, 2024",
+    "(Affiliated Events - Tutorial) Submission deadline": "January 3, 2025",
+    "(Affiliated Events - Artifacts) Registration of intent to submit an artifact": "January 21, 2025",
+    "(Affiliated Events - Artifacts) Initial artifact submission deadline": "January 28, 2025",
+    "(Workshops) Paper submission deadline": "December 1, 2024"
+  },
+  "Notification Date": {
+    "(Main Conference) Notification": "December 20, 2024",
+    "(Affiliated Events - Industry Track) Paper notification": "January 8, 2025",
+    "(Affiliated Events - WIP, PhD Forum) Notification of acceptance": "January 8, 2025",
+    "(Affiliated Events - Demo) Notification of acceptance": "January 15, 2025",
+    "(Affiliated Events - Tutorial) Notification of acceptance": "January 17, 2025",
+    "(Affiliated Events - Artifacts) Artifact evaluation notification": "February 12, 2025",
+    "(Workshops) Paper notification": "January 10, 2025"
+  },
+  "Camera-ready Date": {
+    "(Main Conference) Camera Ready deadline": "Early February 2025",
+    "(Affiliated Events - Industry Track) Camera Ready Deadline": "February 2, 2025",
+    "(Affiliated Events - WIP, PhD Forum) Camera-ready deadline": "February 2, 2025",
+    "(Affiliated Events - Demo) Camera-ready deadline": "February 2, 2025",
+    "(Affiliated Events - Tutorial) Camera-ready deadline": "February 2, 2025",
+    "(Affiliated Events - Artifacts) Artifact guide camera-ready deadline": "February 15, 2025",
+    "(Workshops) Camera Ready Deadline": "February 2, 2025"
+  },
+  "Topics": "Pervasive Computing, Communications, Middleware Systems and Services, Data Engineering, Cloud Computing, Fog Computing, Edge Computing, Smartphones, Wearables, Device-to-Device Coordination, Context Modeling, Reasoning, Adaptive Computing, Activity Recognition, Emotion Recognition, Programming Paradigms, Machine Learning, Causal Learning, Cognitive Computing, Resource-efficient AI, Complex Networks, Spatio-temporal Modeling, Urban Crowdsensing, Mobile Crowdsensing, Healthcare, Well-being, Cyber-physical Systems, Smart Homes, Virtual Assistants, Mixed Reality, Sports Analytics, Crime Prevention, Pervasive Nowcasting, Assistive Robotics, Collaborative Robotics, Pervasive AR/VR, Smart Vehicles, Disaster Sensing, Disaster Management, Interactive Agents, Education, Reskilling, IoT, Sensor Systems, RFID, Opportunistic Networks, Pervasive Data Science, Human-Machine Interaction, Cyber-physical Systems, 3D Networks, Embedded AI, Edge AI, Participatory Sensing, Social Sensing, Trust, Security, Privacy, Fairness, Ethics, User Interface, Interaction, Persuasion, Social Networking, Human-Machine Collaboration, Architectures, Protocols, Technologies, Energy-harvesting, Self-powered Systems, Battery-less Systems, Mobile Systems, Wearable Systems, Smart Devices, Natural Multimodal Interfaces, Positioning, Navigation, Timing, Tracking Technologies, Device-free Sensing",
+  "Summary": "The 23rd International Conference on Pervasive Computing and Communications (PerCom 2025) will be held in Washington, D.C., USA, from March 17–21, 2025, as a physical in-person conference. PerCom is the premier annual scholarly venue in pervasive computing and communications.",
+  "Call for Papers": "# PerCom 2025: Call for Papers\n\nThe 23rd International Conference on Pervasive Computing and Communications (PerCom 2025) will be held in **Washington, D.C., USA, from March 17-21, 2025** as a **physical, in-person conference** at the **Walter E. Washington Convention Center**.\n\nPerCom is the premier annual scholarly venue in pervasive computing and communications. Pervasive computing is constantly at the forefront of mobile and ubiquitous systems research and has found its way into many commercial applications due to tremendous advances in a broad spectrum of technologies and topics.\n\n## Scope\n\nPerCom 2025 solicits research contributions in all areas pertinent to pervasive computing and communications.  In particular, PerCom targets contributions in:\n\n*   Advances in pervasive systems and infrastructures\n*   Theories, models, and algorithms\n*   Domain-specific challenges and novel applications\n*   Intersections of PerCom with:\n    *   IoT and sensor systems\n    *   RFID\n    *   Opportunistic networks\n    *   Pervasive data science\n    *   Human-machine interaction and interfaces\n    *   Cyber-physical systems\n    *   3D networks, embedded and edge AI\n*   New techniques for user-level concerns\n*   Technological innovations\n\nContributions can be analytical, empirical, technological, methodological, or a combination. Papers reporting strong systems engineering contributions backed by solid and appropriate evaluations are strongly encouraged. The impact of the contributions should be demonstrated in the context of pervasive computing and communications applications.\n\n## Important Dates\n\n**(Revised)**\n\n*   **Main Conference**\n    *   Paper registration in EasyChair: September 29, 2024, 11:59 pm AOE\n    *   Paper submission in EasyChair: October 4, 2024, 11:59 pm AOE\n    *   Notification: December 20, 2024\n    *   Early registration deadline: TBD\n    *   Camera Ready deadline: TBD\n*   **Affiliated Events (Industry Track)**\n    *   Paper submission deadline: November 17, 2024\n    *   Paper notification: January 8, 2025\n    *   Camera Ready Deadline: February 2, 2025\n*   **Affiliated Events (WIP, PhD Forum)**\n    *   Submission deadline: December 15, 2024, 11:59 pm AOE\n    *   Notification of acceptance: January 8, 2025, 11:59 pm AOE\n    *   Camera-ready deadline: February 2, 2025, 11:59 pm AOE\n*   **Affiliated Events (Demo)**\n    *   Submission deadline: December 15, 2024, 11:59 pm AOE\n    *   Notification of acceptance: January 15, 2025, 11:59 pm AOE\n    *   Camera-ready deadline: February 2, 2025, 11:59 pm AOE\n*   **Affiliated Events (Tutorial)**\n    *   Submission deadline: January 3, 2025, 11:59 pm AOE\n    *   Notification of acceptance: January 17, 2025, 11:59 pm AOE\n    *   Camera-ready deadline: February 2, 2025, 11:59 pm AOE\n*   **Affiliated Events (Artifacts)**\n    *   Registration of intent to submit an artifact: January 21, 2025\n    *   Initial artifact submission deadline: January 28, 2025\n    *   Artifact feedback and revision period: January 30-February 12, 2025\n    *   Artifact evaluation notification (badge allotment): February 12, 2025\n    *   Artifact guide camera-ready deadline: February 15, 2025\n*   **Workshops**\n    *   Paper submission deadline: December 1, 2024\n    *   Paper notification: January 10, 2025\n    *   Camera Ready Deadline: February 2, 2025\n\n## Submission Details\n\nPaper submission must be done for the main conference and all associated events via EasyChair. The direct submission link for PerCom 2025 is [https://easychair.org/conferences/?conf=percom2025](https://easychair.org/conferences/?conf=percom2025).  Select “Research Track” from the list of tracks to submit papers to the main conference.\n\n## TPC Chair and Vice Chairs\n\n*   Archan Misra, Singapore Management University, Singapore\n*   Qin (Christine) Lv, University of Colorado Boulder, USA\n*   Tadashi Okoshi, Keio University, Japan\n*   Delphine Reinhardt, University of Gottingen, Germany\n\n## Contact\n\n[percom2025tpcchairs@easychair.org](mailto:percom2025tpcchairs@easychair.org)"
+}
+

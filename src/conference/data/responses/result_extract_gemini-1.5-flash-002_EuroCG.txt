@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "April 9 - 11, 2025",
+  "Year": "2025",
+  "Location": "Liblice Castle, Czech Republic",
+  "City-State-Province": "Liblice",
+  "Country": "Czech Republic",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "January 21, 2025"
+  },
+  "Notification Date": {
+    "Acceptance notification": "February 21, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version": "March 7, 2025"
+  },
+  "Registration Date": {
+    "Early registration ends": "March 5, 2025"
+  },
+  "Topics": "Computational Geometry, Discrete and Combinatorial Geometry and Topology, Design and Analysis of Geometric Algorithms and Data Structures, Implementation and Experimental Evaluation of Geometric Algorithms, Numerical and Algebraic Issues Arising from Implementations, Analysis of Geometric Configurations, Geometric Modeling, Visualization and Simulation, Combinatorial Optimization, Graph Drawing, Structural Molecular Biology, Geometric Puzzle Analysis, Applications of Computational Geometry, Geographic Information Systems, Robotics and Virtual Worlds, Computer-Aided Design and Manufacturing",
+  "Summary": "The 41st European Workshop on Computational Geometry (EuroCG 2025) will be held on April 9-11, 2025, at Liblice Castle in the Czech Republic.  EuroCG is an annual workshop combining a strong scientific tradition with a friendly and informal atmosphere, providing a forum for established researchers and students to meet, discuss their work, present results, and establish collaborations.",
+  "Call for Papers": "# EuroCG 2025: Call for Contributions\n\nThe 41st European Workshop on Computational Geometry (EuroCG 2025) will be held from **April 9-11, 2025, in Liblice, Czech Republic**.\n\nEuroCG is an annual workshop that combines a strong scientific tradition with a friendly and informal atmosphere. The workshop is a forum where established researchers and students can meet, discuss their work, present their results, and establish scientific collaborations.\n\n## Important Dates\n\nAll deadlines are 23:59 AoE.\n\n*   **Submission deadline:** January 21, 2025\n*   **Acceptance notification:** February 21, 2025\n*   **Early registration ends:** March 5, 2025\n*   **Camera-ready version:** March 7, 2025\n*   **EuroCG 2025:** April 9-11, 2025\n\n## Topics of Interest\n\nTopics of interest cover all aspects of computational geometry, including but not limited to the following:\n\n*   Discrete and combinatorial geometry and topology\n*   Design and analysis of geometric algorithms and data structures\n*   Implementation and experimental evaluation of geometric algorithms\n*   Numerical and algebraic issues arising from implementations\n*   Analysis of geometric configurations\n*   Geometric modeling, visualization and simulation\n*   Combinatorial optimization\n*   Graph drawing\n*   Structural molecular biology\n*   Geometric puzzle analysis\n*   Applications of computational geometry\n*   Geographic information systems\n*   Robotics and virtual worlds\n*   Computer-aided design and manufacturing\n\n## Submission\n\nWe invite authors to submit extended abstracts of their original research. Submissions must be formatted in LaTeX using a supplied class file (`euroCG25.cls` and `eurocg25-submission.cls`), and not be longer than 175 lines of text. Submissions will be handled through [EasyChair](https://easychair.org/conferences?conf=eurocg2025).\n\nA zip file containing an example of how to use the class file can be found [here](eurocg25-ex.zip).\n\n## Acceptance Policy\n\nEuroCG is a non-competitive forum. We will accept all submissions which are original, correct, well-presented, non-trivial, and in scope. The program committee judges submissions on these five criteria, each of which can lead to rejection. If a submission satisfies all criteria, then it will be accepted: there is no competition against other submissions.\n\n## Proceedings\n\nEuroCG does not have formally reviewed proceedings. A booklet of abstracts, without ISBN, will be accessible online on the website for the benefit of the community and must be regarded as a collection of preprints rather than a formally reviewed selection of papers. Results presented at EuroCG are expected to appear in other conferences with formal proceedings and/or in journals.\n\nAuthors of selected papers will be invited to submit extended versions to a special issue of the *Computing in Geometry and Topology (CGT)* journal.\n\nThere will also be a voting for the Best Student Presentation.\n\n## Attendance and Presentation of Papers\n\nEuroCG is fundamentally an in-person event and all presentations are expected to be given in person. Hence at least one author of an accepted contribution must become a member of the society and attend EuroCG. If no author of an accepted contribution is attending EuroCG, then the contribution may be removed from the program, the booklet of abstracts, and the conference website."
+}
+```

@@ -1,0 +1,51 @@
+```json
+{
+  "Conference dates": "August 6 - 8, 2025",
+  "Year": "2025",
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": "Hybrid",
+  "Submission Date": {
+    "The opening date for paper submissions": "September 23, 2024",
+    "Symposium submission deadline": "February 1, 2025",
+    "Digital Art Gallery D-ART2024 deadline": "March 1, 2025",
+    "The closing date for paper submissions": "May 15, 2025",
+    "Submission of tutorials": "May 15, 2025",
+    "Submission of posters": "May 15, 2025",
+    "Submission of Computer Animation deadline": "June 15, 2025",
+    "the closing date for submission of the Video / Poster display version": "June 30, 2025",
+    "the Doctoral Research Workshop- the closing date for abstract submission": "June 30, 2025",
+    "Researchers Link- the closing date for research proposal submission": "June 30, 2025",
+    "Submission deadline": "April 21, 2025",
+    "Abstracts due": "March 5, 2025",
+    "Papers due": "March 12, 2025",
+    "Submission due": "April 2, 2025"
+  },
+  "Notification Date": {
+    "Notification of Reviewing Result – acceptance or rejection": "June 15, 2025",
+    "Notification of acceptance": "April 21, 2025",
+    "Notification of acceptance": "April 30, 2025"
+
+  },
+  "Camera-ready Date": {
+    "Submission of camera-ready": "June 15, 2025",
+    "Camera-ready paper due": "May 2, 2025"
+  },
+  "Registration Date": {
+    "Early registration closes (reduced fee applies)": "June 15, 2025",
+    "Registration closing dates": "July 20, 2025",
+    "Pre-Registration date": "July 20, 2025",
+    "Tutorial Registration Cancellation & Refund date": "June 30, 2025"
+  },
+  "Other Date": {
+    "Tutorial Day and Doctoral Research Workshop": "August 5, 2025",
+    "Researcher Links Workshop": "August 6-8, 2025",
+    "Conference Days": "August 6-8, 2025"
+  },
+  "Topics": "Information Visualisation, Visual Analytics, Business Intelligence, Machine Learning, Data Science, Computer Animation, Digital Effects",
+  "Summary": "The International Conference on Information Visualisation (IV2025) will be a hybrid event (in-person and online) held from August 6-8, 2025.  The conference focuses on Information Visualisation, Visual Analytics, Business Intelligence, Machine Learning, and Data Science, and includes symposia, a digital art gallery, tutorials, and a doctoral research workshop. ",
+  "Call for Papers": "# IV2025: Call for Papers and Participation\n\nThe International Conference on Information Visualisation (IV2025) will be a **hybrid event (in-person and online)** held from **August 6-8, 2025**.\n\n## Call for Papers\n\nIn the present information era, most aspects of our lives depend on and are driven by data, information, knowledge, user experience, and culture. Information Visualization, Visual Analytics, Business Intelligence, Machine Learning, and Data Science are only a few research areas of the current state of the art, enabling to increase the comprehension of the information on which is based the infrastructure of our society. The International Conference on Information Visualization is concentrated on these hot topics.  As in the previous edition, this year there will be the opportunity to start international cooperation and European research projects and discuss with internationally relevant keynote speakers. The conference is articulated in symposia, with details and further information available on the [Symposia](https://iv.csites.fct.unl.pt/de/call-for-papers/symposium-cfp/) webpage. \n\nYour work may be submitted as:\n\n*   A full paper – (6 pages * IEEE format / per registration)\n*   A short paper – (4 pages * IEEE format /per registration)\n*   A [poster presentation](./call-for-papers/paper-poster-cfp/poster-presentation/) (displayed online or during the event) – Accepted poster contributions are presented as posters and accompanied by a 4-page paper in the proceedings.\n\n*4 more pages are possible, subject to Excess fee charges*\n\n*Paper format – IEEE format: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)\n\nThese submissions include but are not limited to the subject theme outlined within the Symposia description.\n\n## Awards\n\nThe “Best Paper Awards” will be given to the studies selected by the committee among the papers/posters presented in IV2025 and applied for the award.  The study’s relevance to the symposium’s scope, its scientific contribution, and its writing/presentation style will be considered in the evaluation process. \n\n## Selected Journal Publication\n\nAccepted and presented papers will be published in the IV 2025 Conference Proceedings and submitted to Conference Publishing Services, as well as other Abstracting and Indexing (A&I) databases such as EI Compendex, ScienceDirect, Scopus, Web of Knowledge, Thomson ISI, and IET Inspect. Also, extended versions of selected papers will be published as a special issue or edited books; for more information, see the [publication page](https://iv.csites.fct.unl.pt/de/call-for-papers/publication/).\n\n## Important Dates\n\nNOTE: This is a Hybrid _ in-person & Online – Conference\n\n*   **The opening date for paper submissions / Registration:** September 23, 2024 ([https://www.conftool.org/IV-cgiv-2025/](https://www.conftool.org/IV-cgiv-2025/))\n*   **Symposium submission deadline:** February 1, 2025\n*   **Digital Art Gallery D-ART2024 deadline:** March 1, 2025\n*   **The closing date for paper submissions:** May 15, 2025\n*   **Submission of tutorials:** May 15, 2025\n*   **Submission of posters:** May 15, 2025\n*   **Notification of Reviewing Result – acceptance or rejection:** June 15, 2025\n*   **Submission of camera-ready:** June 15, 2025\n*   **Early registration closes (reduced fee applies):** June 15, 2025\n*   **the closing date for submission of the Video / Poster display version:** June 30, 2025\n*   **the Doctoral Research Workshop- the closing date for abstract submission:** June 30, 2025\n*   **Researchers Link- the closing date for research proposal submission:** June 30, 2025\n*   **Tutorial Registration Cancellation & Refund date:** June 30, 2025\n*   **Registration closing dates:** July 20, 2025\n*   **Pre-Registration date:** July 20, 2025\n*   **Tutorial Day and Doctoral Research Workshop:** August 5, 2025\n*   **Conference Days:** August 6–8, 2025\n*   **Researcher Links Workshop:** August 6–8, 2025"
+}
+```

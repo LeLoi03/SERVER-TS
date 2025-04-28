@@ -1,0 +1,23 @@
+output:
+{
+  "Conference dates": "September 8 - 13, 2026",
+  "Year": "2026",
+  "Location": "Malmö, Sweden",
+  "City-State-Province": "Malmö",
+  "Country": "Sweden",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "March 6, 2026"
+  },
+  "Notification Date": {
+    "Rebuttals due": "April 2026",
+    "Final decision to authors": "May 2026"
+  },
+  "Camera-ready Date": {
+    "Camera ready deadline": "June 2026"
+  },
+  "Topics": "Computer Vision, Machine Learning",
+  "Summary": "The European Conference on Computer Vision (ECCV) is a biennial premier research conference in Computer Vision and Machine Learning, managed by the European Computer Vision Association (ECVA). ECCV 2026 will be held from September 8-13, 2026, in Malmö, Sweden. Paper proceedings are published by Springer Science+Business Media.",
+  "Call for Papers": "No call for papers available"
+}

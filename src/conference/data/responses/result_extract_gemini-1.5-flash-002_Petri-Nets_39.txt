@@ -1,0 +1,13 @@
+output:
+{
+  "Conference dates": "June 22 - 27, 2025",
+  "Year": "2025",
+  "Location": "Campus Condorcet, Paris-Aubervilliers, France",
+  "City-State-Province": "Paris-Aubervilliers",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Topics": "Petri Nets, Analysis and synthesis, structure and behavior of nets, System design and model-driven development using nets, Relationships between Petri nets and other approaches, Net-based semantical, logical and algebraic calculi, Higher-level net models, Stochastic net models, Verification and model checking using nets, Process discovery and conformance checking, Computer tools for nets, Standardization of nets, Application of concurrency to system design, Model checking and verification of distributed systems, Verification of infinite-state or parametric systems, Causality/partial order theory of concurrency, Educational issues related to concurrency, New developments in the theory of concurrency, Modeling of hardware and biological systems",
+  "Summary": "The 46th International Conference on Application and Theory of Petri Nets and Concurrency (Petri Nets 2025) will be held at the Campus Condorcet, Paris-Aubervilliers, France from June 22-27, 2025.  The conference is organized by the SAFER team from Laboratoire d’Informatique de Paris Nord (LIPN), Université Sorbonne Paris Nord jointly with members of the MeFoSyLoMa group.",
+  "Call for Papers": "No call for papers available"
+}

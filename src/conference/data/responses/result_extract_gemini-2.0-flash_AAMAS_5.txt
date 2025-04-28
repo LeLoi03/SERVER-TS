@@ -1,0 +1,29 @@
+{
+  "Conference dates": "May 19 - 23, 2025",
+  "Year": "2025",
+  "Location": "Detroit, Michigan, USA",
+  "City-State-Province": "Detroit, Michigan",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract": "October 9, 2024",
+    "Paper": "October 16, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "December 23, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-ready": "February 7, 2025",
+    "Camera-ready": "February 21, 2025"
+  },
+  "Other Date": {
+    "May 19–20": "Tutorials & Workshops",
+    "May 21–23": "Main Conference",
+    "Rebuttal period": "November 27 – December 4, 2024"
+  },
+  "Topics": "Autonomous Agents, Multiagent Systems, Agent Technology",
+  "Publisher": "IFAAMAS",
+  "Summary": "The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025) will be held from May 19–23, 2025, in Detroit, Michigan, USA. AAMAS is the largest and most influential conference in the area of agents and multiagent systems.",
+  "Call for Papers": "No call for papers available"
+}

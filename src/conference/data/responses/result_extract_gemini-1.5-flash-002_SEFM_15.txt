@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "November 10 - 14, 2025",
+  "Year": "2025",
+  "Location": "Spain",
+  "City-State-Province": null,
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission": "TO BE ANNOUNCED",
+    "Paper submission": "TO BE ANNOUNCED",
+    "Artifact submission": "TO BE ANNOUNCED"
+  },
+  "Notification Date": {
+    "Author notification": "TO BE ANNOUNCED"
+  },
+  "Other Date": {
+    "Workshops": "November 10-11, 2024",
+    "Conference": "November 12-14, 2024"
+  },
+  "Topics": "Software Engineering, Formal Methods, Software Development Methods, Formal modelling, specification, and design, Software evolution, maintenance, re-engineering, and reuse, Design Principles, Programming languages, Domain-specific languages, Type theory, Abstraction and refinement, Software Testing, Validation, and Verification, Model checking, theorem proving, and decision procedures, Testing and runtime verification, Statistical and probabilistic analysis, Synthesis, Performance estimation and analysis of other non-functional properties, Other light-weight and scalable formal methods, Security and Safety, Security, privacy, and trust, Safety-critical, fault-tolerant, and secure systems, Software certification, Applications and Technology Transfer, Service-oriented and cloud computing systems, Internet of Things, Component, object, multi-agent and self-adaptive systems, Real-time, hybrid, and cyber-physical systems, Intelligent systems and machine learning, Quantum systems, HCI, interactive systems, and human error analysis, Education, Case studies, best practices, and experience reports",
+  "Publisher": "TO BE ANNOUNCED",
+  "Summary": "The 23rd edition of the International Conference on Software Engineering and Formal Methods (SEFM 2025) will be held from November 10-14, 2025, in Spain. The conference aims to bring together researchers and practitioners from academia, industry, and government to advance the state of the art in formal methods and encourage their integration within practical software engineering methods and tools.",
+  "Call for Papers": "# SEFM 2025: Call for Papers\n\nThe 23rd edition of the International Conference on Software Engineering and Formal Methods (SEFM 2025) will be held from **November 10-14, 2025** in **Spain**.\n\n## Overview and Scope\n\nThe conference aims to bring together researchers and practitioners from academia, industry, and government to advance the state of the art in formal methods, to facilitate their uptake in the software industry, and to encourage their integration within practical software engineering methods and tools.\n\n## Topics of Interest\n\nThe topics of interest include, but are not limited to, the following aspects of software engineering and formal methods:\n\n*   **Software Development Methods:** Formal modelling, specification, and design; Software evolution, maintenance, re-engineering, and reuse\n*   **Design Principles:** Programming languages; Domain-specific languages; Type theory; Abstraction and refinement\n*   **Software Testing, Validation, and Verification:** Model checking, theorem proving, and decision procedures; Testing and runtime verification; Statistical and probabilistic analysis; Synthesis; Performance estimation and analysis of other non-functional properties; Other light-weight and scalable formal methods\n*   **Security and Safety:** Security, privacy, and trust; Safety-critical, fault-tolerant, and secure systems; Software certification\n*   **Applications and Technology Transfer:** Service-oriented and cloud computing systems, Internet of Things; Component, object, multi-agent and self-adaptive systems; Real-time, hybrid, and cyber-physical systems; Intelligent systems and machine learning; Quantum systems; HCI, interactive systems, and human error analysis; Education; Case studies, best practices, and experience reports\n\n## Paper Submission\n\nWe solicit two categories of papers:\n\n*   **Regular papers:** Describing original research results, case studies, or surveys, should not exceed 16 pages (excluding bibliography of at most two pages).\n*   **Short papers:** Describing original research results or case studies, maybe in an incubation phase, should not exceed 8 pages (excluding bibliography of at most one page).\n*   **Tool papers:** That describe an operational tool and its contributions should not exceed 8 pages.\n\nPapers must be formatted according to the [guidelines for Springer LNCS papers](https://www.springer.com/gp/computer-science/lncs). All submissions must be original, unpublished, and not submitted concurrently for publication elsewhere.\n\nPapers can be submitted through EasyChair: [https://cmt3.research.microsoft.com/SEFM2025](https://cmt3.research.microsoft.com/SEFM2025)\n\n## Important Dates\n\n*   **Abstract submission:** TO BE ANNOUNCED\n*   **Paper submission:** TO BE ANNOUNCED\n*   **Artifact submission:** TO BE ANNOUNCED\n*   **Author notification:** TO BE ANNOUNCED\n*   **Workshops:** November 10-11, 2024\n*   **Conference:** November 12-14, 2024"
+}
+

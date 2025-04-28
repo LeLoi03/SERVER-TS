@@ -1,0 +1,34 @@
+```json
+{
+  "Conference dates": "July 30 - August 2, 2025",
+  "Year": "2025",
+  "Location": "Marriott Marquis, San Francisco",
+  "City-State-Province": "San Francisco, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Submissions open": "December 2, 2024",
+    "Submissions Close": "February 3, 2025"
+  },
+  "Notification Date": {
+    "Notifications of Decision Sent": "April 5, 2025"
+  },
+  "Camera-ready Date": {
+    "Accepted Submissions Due in Final Form": "May 10, 2025"
+  },
+  "Other Date": {
+    "Meta-reviewers to Invite All Reviewers": "February 3-10, 2025",
+    "Reviews Due": "March 2, 2025",
+    "Meta-reviews Due": "March 15, 2025",
+    "Conference prize nominations open": "December 2, 2024",
+    "Awards announced": "April 2025",
+    "Conference registration opens": "April 2025",
+    "Last day to register at “early bird” conference rate": "May 2025",
+    "Last day to register at “regular” conference rate": "June 2025"
+  },
+  "Topics": "Cognitive Science",
+  "Summary": "CogSci 2025 will be held in San Francisco, CA from July 30 – August 2, 2025.  The conference will be fully hybrid with streaming of the entire program, except for workshops (which will all be in-person).",
+  "Call for Papers": "# CogSci 2025: Call for Submissions\n\nThe Cognitive Science Society invites members and non-members to submit their work for individual oral and poster presentations, as well as contributed symposia, for CogSci 2025. The conference will be held from **July 30 – August 2, 2025**, at the **Marriott Marquis in San Francisco, CA**.  CogSci 2025 will be fully hybrid.\n\n## Submission Categories\n\nThere are three categories of main conference submissions:\n\n*   Research papers (presented as talks or posters)\n*   Contributed symposia\n*   Member abstracts\n\n## Submission Guidelines\n\n*   All submissions (with the exception of abstract-only publications) must be made electronically as PDF files using the templates provided.\n*   All files must be uploaded via the PCS submission portal: [https://new.precisionconference.com/user/login?society=cogsci](https://new.precisionconference.com/user/login?society=cogsci)\n*   Abstracts may only be submitted as plain text.\n*   All authors, primary and secondary, must have a current PCS submission portal account.\n\n## Evaluation Criteria\n\n*   Initial paper submissions and member abstracts should follow the double-blind reviewing policy, or they will be rejected directly.\n*   Deviating from the submission templates will result in a desk rejection.\n*   All submissions must be uploaded via the PCS submission portal: [https://new.precisionconference.com/cogsci](https://new.precisionconference.com/cogsci)\n\n## Double-Blind Review Procedures\n\nAll submissions must be anonymized. No information that would reveal author identity should be included.  Submissions that do not conform to these requirements will be rejected.\n\n## Submission Formats\n\n### Paper Submissions\n\nSubmitted research papers may be no more than six pages long, with an unlimited number of pages for references, and must use the two-column format. Reviews of paper submissions will be double-blind; thus, the submissions must be anonymized. After the Notification of Decisions, authors of accepted papers will have the opportunity to revise their submissions prior to the Final Form (camera-ready) submissions deadline.  To facilitate revisions, authors will be allowed to update their six-page paper and add an unlimited amount of pages for acknowledgements and references.\n\n### Contributed Symposia\n\nA contributed symposium is allotted 90 minutes, sufficient for four 20-minute talks including questions, followed by a discussion.\n\n### Member Abstracts\n\nMembers of the Cognitive Science Society may submit a 150-word abstract.  Accepted abstracts will be included in the Proceedings, and presented at the conference as posters.\n\n## Pre-conference Workshops & Tutorials\n\nResearchers are encouraged to submit proposals for the tutorials and workshops to be offered on the day immediately preceding the main conference. Proposals must be submitted via the PCS submission portal ([https://precisionconference.com/~cogsci/](https://precisionconference.com/~cogsci/)) by the submission deadline.\n\n## Important Dates\n\n*All deadline times are UTC-11 by midnight.*\n\n*   **Call for Submissions Open:** December 2, 2024\n*   **Submissions Close:** February 3, 2025\n*   **Notifications of Decision Sent:** April 5, 2025\n*   **Accepted Submissions Due in Final Form:** May 10, 2025\n\n## Keynotes\n\n*   **Theme 1:** The Future of Foundational Ideas of Cognitive Science (Keynote: Susan Carey, Harvard University)\n*   **Theme 2:** The Role of AI in Theories of the Future (Keynote: Josh Tenenbaum, MIT)\n*   **Theme 3:** New Theoretical Horizons in Cognitive Science (Keynote: Lauren Ross, UC Irvine)\n\n## 2025 Recipient of the Rumelhart Prize\n\nNora Newcombe, Temple University\n\n## Submission Templates\n\nDownload Word & LaTeX versions for 6-page paper submissions:  [Link to templates](Link to templates)"
+}
+```

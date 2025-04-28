@@ -1,0 +1,39 @@
+output:
+{
+  "Conference dates": "November 9 - 14, 2025",
+  "Year": "2025",
+  "Location": "Melbourne, Victoria, Australia",
+  "City-State-Province": "Melbourne, Victoria",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstracts due": "October 25, 2024",
+    "Full papers due (electronic submission, PDF)": "November 1, 2024"
+  },
+  "Notification Date": {
+    "Desk reject notification": "November 15, 2024",
+    "Phase 1 author notification": "December 16, 2024",
+    "Phase 2 author notification": "February 28, 2025",
+    "Notifications are sent to authors": "March 1, 2025",
+    "Workshop acceptance notification": "March 31, 2025",
+    "Tutorial acceptance notification": "May 11, 2025"
+  },
+  "Other Date": {
+    "Submission site opens": "October 1, 2024",
+    "Author feedback period": "January 27 - 31, 2025",
+    "Discussion phase": "February 5 - 28, 2025",
+    "Workshop proposals due": "March 10 - 17, 2025",
+    "Workshops materials online": "April 15, 2025",
+    "Tutorial proposals due": "April 27, 2025",
+    "Proceedings are available online": "June/July 2025",
+    "Workshop accepted papers online": "July 21, 2025",
+    "ICAPS 2025 DC": "November 9, 2025",
+    "ICAPS 2025 Workshops/Tutorials": "November 10-11, 2025",
+    "ICAPS 2025 Main Conference": "November 12-14, 2025"
+  },
+  "Topics": "Automated Planning, Automated Scheduling, AI Planning, AI Scheduling",
+  "Summary": "The International Conference on Automated Planning and Scheduling (ICAPS) is the premier forum for exchanging news and research results on the theory and applications of intelligent and automated planning and scheduling technology. ICAPS 2025 is the 35th edition of the ICAPS conference series and will take place in Melbourne, Victoria, Australia in November 2025.",
+  "Call for Papers": "# ICAPS 2025: Call for Papers\n\nThe 35th International Conference on Automated Planning and Scheduling (ICAPS 2025) will be held in **Melbourne, Victoria, Australia, from November 9th to 14th, 2025**.\n\n## Call for Papers: ICAPS 2025\n\nPlanning and Scheduling are optimization problems which require finding a set of actions to complete a task, to achieve a goal, or to optimize one or more objectives. Effective solutions to planning and scheduling problems are critical for a variety of important application areas, including Industry 4.0, aerospace systems, supply chain management, software engineering, robotics, education, digital entertainment, and more.\n\nThe International Conference on Automated Planning and Scheduling ([ICAPS](https://icaps-conference.org)) is the premier forum for new research results on the theory and applications of planning and scheduling technology.\n\n## Submission Categories\n\nThe ICAPS 2025 program committee invites paper submissions on all aspects of automated planning and scheduling. Contributions are welcome in each of the following categories:\n\n*   Theoretical papers\n*   Algorithmic papers\n*   Modelling papers\n*   Position papers\n*   Tools papers\n\nAll submissions to the main technical track must be classified in terms of one or more high-level topics, and one or more relevant subject-matter keywords, which are within the scope of the conference. A list of relevant topics and subject-matter keywords are available from the [ICAPS 2025 homepage](/organisation/paper_classification_system).\n\n## Key Dates\n\nThe reference timezone for all deadlines is UTC-12.\n\n*   **Submission site opens:** October 1, 2024\n*   **Abstracts due:** October 25, 2024\n*   **Full papers due (electronic submission, PDF):** November 1, 2024\n*   **Desk reject notification:** November 15, 2024\n*   **Phase 1 author notification:** December 16, 2024\n*   **Author feedback period:** January 27-31, 2025\n*   **Phase 2 author notification:** February 28, 2025\n\n## Author Guidelines\n\nAll types of papers can be submitted as either long (8 pages AAAI style plus one page of references) or short (4 pages plus one page of references). Whether the paper is long or short must be indicated at submission time.\n\n*   Over-length papers will be rejected without review.\n*   All papers that satisfy length and formatting requirements will be reviewed against standard criteria such as relevance, originality, significance, clarity, and soundness.\n*   The review process has three possible outcomes: (1) acceptance for oral presentation and inclusion in the archival proceedings of the ICAPS conference series; (2) acceptance for poster presentation and non-archival extended abstract for dissemination via the ICAPS 2025 website; (3) rejection.\n*   Papers submitted to ICAPS 2025 may not be submitted to other conferences or journals during the ICAPS 2025 review period nor may they be already under review, accepted, or published in other conferences or journals.\n*   The format of ICAPS 2025 will be in-person. We expect at least one author of each accepted paper to register for the conference and present their work in person, unless exceptional circumstances prevent this.\n\n## Use of Generative AI\n\nICAPS 2025 continues the policy adopted in 2024 regarding using large-scale language models (LLMs) and other so-called “Generative AI” tools. Papers that include text generated from an LLM are prohibited unless the produced text is presented as a part of the paper’s experimental analysis.\n\n## Ethical / Societal Impact\n\nAuthors are encouraged to include a statement of the potential broader impact of their work, including its ethical aspects and future societal consequences.\n\n## Best Paper Awards and Journal Fast Track\n\nFollowing the ICAPS tradition, we will award the best non-student and student papers. These papers may also receive an invitation to submit an extended version to a top AI journal, such as the Journal of Artificial Intelligence Research (JAIR) or the Artificial Intelligence Journal (AIJ).\n\n## Submission Instructions\n\nAll submissions will be made electronically via [OpenReview](https://openreview.net/group?id=icaps-conference.org/ICAPS/2025/Conference).\n\n## Program Chairs and Contact\n\n*   Daniel Harabor, Monash University, Australia\n*   Miquel Ramirez, University of Melbourne, Australia\n\nFor inquiries, please contact us by email: [icaps25pc [at] googlegroups [dot] com](mailto:icaps25pc [at] googlegroups [dot] com)"
+}
+

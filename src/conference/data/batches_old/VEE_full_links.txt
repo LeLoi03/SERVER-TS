@@ -1,0 +1,1011 @@
+Conference full name: International Conference on Virtual Execution Environments (VEE)
+
+1. Website of VEE_2: https://conf.researchr.org/series/vee
+Website information of VEE_2:
+
+href="https://conf.researchr.org/home/vee-2022" - VEE 2022
+Tue 1 Mar 2022href="https://conf.researchr.org/venue/vee-2022/vee-2022-venue" - 
+Toggle navigation 
+ href="https://conf.researchr.org/series/vee" - Series 
+ href="https://conf.researchr.org/home/vee-2022" - VEE 2022 
+ All Editions | VEE 2022 
+ href="https://conf.researchr.org/home/vee-2021" - VEE 2021 
+ href="https://conf.researchr.org/home/vee-2020" - VEE 2020 
+ href="https://conf.researchr.org/home/vee-2019" - VEE 2019 
+ href="https://conf.researchr.org/home/vee-2018" - VEE 2018 
+ href="https://conf.researchr.org/home/vee-2017" - VEE 2017 
+ href="https://conf.researchr.org/home/vee-2016" - VEE 2016 
+ href="http://vee2014.cs.technion.ac.il/" - VEE 2014 
+ href="http://vee.sigops.org/vee15" - VEE 2015 
+ href="https://labs.vmware.com/vee2013/" - VEE 2013 
+ href="http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html" - VEE 2011 
+ href="http://vee2010.cs.princeton.edu/Home_Page.html" - VEE 2010 
+ href="https://conf.researchr.org/signin/vee-2022/https%3A%5Es%5Esconf.researchr.org%5Esseries%5Esvee" - Sign in 
+ href="https://conf.researchr.org/signup/vee-2022" - Sign up 
+ VEE 
+ All Editions 
+  
+ Tue 1 Mar 2022href="https://conf.researchr.org/home/vee-2022" - VEE 2022
+VEE will be held with ASPLOS 2022. More information of the papers can be accessed here: https://www.sigops.org/s/conferences/vee/2022/toc.html 
+ Fri 16 Apr 2021href="https://conf.researchr.org/home/vee-2021" - VEE 2021
+Welcome to the website of the VEE 2021 conference! Please note that the submission deadline for Research Papers has been extended to Jan 22, 2021! The 17th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’21) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualizatio ... 
+ Tue 17 Mar 2020 Lausanne, Switzerlandhref="https://conf.researchr.org/home/vee-2020" - VEE 2020
+The 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’20) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualization, systems programming and programming languages. VEE 2020 in Lausanne is canceled due to COVID-19 Sadly, the ASPLOS organisers have been forced to ... 
+ Sun 14 Apr 2019 Providence, Rhode Island, United Stateshref="https://conf.researchr.org/home/vee-2019" - VEE 2019
+Welcome to the VEE 2019 conference website. The 15th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’19) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualization, systems programming and programming languages. As usual (since 2008), VEE’19 is co-located with ASPL ... 
+ Sun 25 Mar 2018 Williamsburg, Virginia, United Stateshref="https://conf.researchr.org/home/vee-2018" - VEE 2018
+Welcome to the VEE 2018 conference website. The 14th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’18) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualization, systems programming and programming languages. As usual (since 2008), VEE’18 is co-located with ASPL ... 
+ Sat 8 - Sun 9 April 2017 Xi'an, Chinahref="https://conf.researchr.org/home/vee-2017" - VEE 2017
+The 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’17) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualization, systems programming and programming languages. As usual (since 2008), VEE’17 is co-located with ASPLOS 2017, which will take place in Xi’an, Chin ... 
+ Sat 2 - Sun 3 April 2016href="https://conf.researchr.org/home/vee-2016" - VEE 2016
+The 12th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’16) brings together researchers and practitioners from different computer systems domains to interact and share ideas in order to advance the state of the art of virtualization, systems programming and programming languages. Program, including full papers, available here Best Paper awarded to Building a KVM-based Hyperv ... 
+ March 2016VEE 2014 
+ More information on this edition athref="http://vee2014.cs.technion.ac.il/" - http://vee2014.cs.technion.ac.il/ 
+ March 2015VEE 2015 
+ More information on this edition athref="http://vee.sigops.org/vee15" - http://vee.sigops.org/vee15 
+ March 2013VEE 2013 
+ More information on this edition athref="https://labs.vmware.com/vee2013/" - https://labs.vmware.com/vee2013/ 
+ March 2011VEE 2011 
+ More information on this edition athref="http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html" - http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html 
+ March 2010VEE 2010 
+ More information on this edition athref="http://vee2010.cs.princeton.edu/Home_Page.html" - http://vee2010.cs.princeton.edu/Home_Page.html 
+ Steering Committee (VEE 2022 Research Papers) 
+ href="https://conf.researchr.org/profile/vee-2022/andrewbaumann" - Andrew BaumannMicrosoft Research 
+ href="https://conf.researchr.org/profile/vee-2022/johncriswell" - John CriswellGeneral ChairUniversity of Rochester, USAUnited States 
+ href="https://conf.researchr.org/profile/vee-2022/bariskasikci" - Baris KasikciUniversity of Michigan, USA 
+ href="https://conf.researchr.org/profile/vee-2022/santoshnagarakatte" - Santosh NagarakatteRutgers UniversityUnited States 
+ href="https://conf.researchr.org/profile/vee-2022/chrisrossbach" - Chris RossbachUniversity of Texas at Austin; Katana GraphUnited States 
+ href="https://conf.researchr.org/profile/vee-2022/jennifersartor" - Jennifer B. SartorGhent University, BelgiumBelgium 
+ href="https://conf.researchr.org/profile/vee-2022/benltitzer" - Ben L. TitzerCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/vee-2022/carlwaldspurger" - Carl Waldspurger 
+ href="https://conf.researchr.org/profile/vee-2022/robertwisniewski" - Robert WisniewskiIntel CorporationUnited States 
+ href="https://conf.researchr.org/profile/vee-2022/guoqingharryxu" - Harry XuUniversity of California, Los Angeles (UCLA)United States 
+ xSat 5 Apr 13:36 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support" - Support page
+ 
+ href="https://conf.researchr.org/signup" - Sign Up
+
+2. Website of VEE_2: https://www.ssrg.ece.vt.edu/papers.php
+Website information of VEE_2:
+
+Home 
+ People 
+ Projects 
+ News 
+ href="papers.php" - Publications 
+ Theses 
+ Positions 
+ Publications 
+ 2025 
+ href="papers/asplos25.pdf" - Stramash: A Fused-kernel Operating System for Cache-Coherent, Heterogeneous-ISA Platforms | , T. Xing, C. Xiong, T. Wei, A. Sanchez, B. Ravindran, J. Balkind, and A. Barbalace, ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2025), March 30-April 3, 2025, Rotterdam, The Netherlands ( | ACM Artifacts Evaluated - Functional | , | Available | ) 
+ Formally Verified Binary-level Pointer Analysis | , F. Verbeek, A. Shokri, D. Engel, and B. Ravindran, 47th IEEE/ACM International Conference on Software Engineering (ICSE 2025), April 27-May 3, 2025, Ottawa, Canada (author version available as an | arXiv report | ) 
+ href="papers/popl25.pdf" - On Extending Incorrectness Logic with Backwards Reasoning | , F. Verbeek, M. Sefat, Z. Fu, and B. Ravindran, 52nd ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2025), January 19-25, 2025, Denver, Colorado, USA 
+ HEXO: Offloading Long-Running Compute- and Memory-Intensive Workloads on Low-Cost, Low-Power Embedded Systems | , P. Olivier, A. Mehrab, S. Errabelly, S. Lankes, M. L. Karaoui, R. Lyerly, S-H. Kim, A. Barbalace, and B. Ravindran, IEEE Transactions on Cloud Computing, October-December, 2024 
+ 2024 
+ href="papers/systor24.pdf" - Offloading Datacenter Jobs to RISC-V Hardware for Improved Performance and Power Efficiency | , B. Heerekar, C. Philippidis, H-R. Chuang, P. Olivier, A. Barbalace, and B. Ravindran, 17th ACM International Systems and Storage Conference (Systor 2024), September 23-25, 2024, Virtual 
+ href="papers/ccs24.pdf" - Verifiably Correct Lifting of Position-Independent x86-64 Binaries to Symbolized Assembly | , F. Verbeek, N. Naus, and B. Ravindran, 31st ACM Conference on Computer and Communications Security (CCS 2024), October 14-18, 2024, Salt Lake City, USA ( | ACM Artifacts Evaluated - Functional | , | Reusable | , | Available | ) 
+ href="papers/oopsla24.pdf" - libLISA: Instruction Discovery and Analysis on x86-64 | , J. Craaijo, F. Verbeek, and B. Ravindran, 2024 ACM SIGPLAN Conference on Objected Oriented Programming, Systems, Languages and Applications (OOPSLA 2024), October 20-25, 2024, Pasadena, California, USA ( | ACM Artifacts Evaluated - Functional | , | Reusable | , | Reproduced | , | Available | , poster version of the paper is available | href="https://www.ssrg.ece.vt.edu/papers/oopsla24-poster.pdf" - here | ) 
+ href="papers/pldi24.pdf" - A Family of Fast and Memory Efficient Lock- and Wait-Free Reclamation | , R. Nikolaev and B. Ravindran, ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2024), June 24-28, 2024, Copenhagen, Denmark ( | ACM Artifacts Evaluated - Functional | , | Reusable | , | Available | ) 
+ href="papers/icdcs24.pdf" - Dapper: A Lightweight and Extensible Framework for Live Program State Rewriting | , A. Bapat, J. Shastri, X. Wang, A. Sundarasamy, and B. Ravindran, 44th IEEE International Conference on Distributed Computing Systems (ICDCS 2024), July 23-26, Jersey City, New Jersey, USA 
+ href="papers/tase24.pdf" - On the Decidability of Disassembling Binaries | , D. Engel, F. Verbeek, and B. Ravindran, 18th Theoretical Aspects of Software Engineering Conference (TASE 2024), July 29-August 1, 2024, Guiyang, China 
+ href="papers/middleware24-smvx.pdf" - sMVX: Multi-Variant Execution on Selected Code Paths | , S. Yeoh, X. Wang, J-W. Jang, and B. Ravindran, 25th ACM/IFIP International Middleware Conference (MIDDLEWARE 2024), December 2-6, 2024, Hong Kong, China 
+ href="papers/dimva24.pdf" - Exceptional Interprocedural Control Flow Graphs for x86-64 Binaries | , J. Bockenek, F. Verbeek, and B. Ravindran, 21st Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2024), July 17-19, 2024, Lausanne, Switzerland 
+ 2023 
+ href="papers/middleware23.pdf" - DynaCut: A Framework for Dynamic and Adaptive Program Customization | , A. Mahurkar, X. Wang, H. Zhang, and B. Ravindran, 24th ACM/IFIP International Middleware Conference (MIDDLEWARE 2023), December 11-15, 2023, Bologna, Italy 
+ href="papers/apsys23.pdf" - Understanding the Security of Linux eBPF Subsystem | , M. Husain, X. Wang, and B. Ravindran, 14th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2023), August 24-25, 2023, Seoul, South Korea 
+ href="papers/tap23-bird.pdf" - BIRD: A Binary Intermediate Representation for Formally Verified Decompilation of x86-64 Binaries | , D. Engel, F. Verbeek, and B. Ravindran, 17th International Conference on Tests and Proofs (TAP 2023), July 18-19, 2023, Leicester, United Kingdom 
+ href="papers/tap23-rt.pdf" - Low-level Reachability Analysis based on Formal Logic | , N. Naus, F. Verbeek, M. Schoolderman, B. Ravindran, 17th International Conference on Tests and Proofs (TAP 2023), July 18-19, 2023, Leicester, United Kingdom 
+ href="papers/eurosys23.pdf" - Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes? | , H. Chuang, K. Manaouil, T. Xing, A. Barbalace, P. Olivier, B. Heerekar, and B. Ravindran, 18th ACM European Conference on Computer Systems (EuroSys 2023), May 8-12, 2023, Rome, Italy 
+ 2022 
+ href="papers/vstte22.pdf" - A Formal Semantics for P-Code | , N. Naus, F. Verbeek, D. Walker, and B. Ravindran, 14th International Conference on Verified Software: Theories, Tools, and Experiments (VSTTE 2022), October 17-18, 2022, Trento, Italy 
+ href="papers/mtd22.pdf" - Rave: A Modular and Extensible Framework for Program State Re-Randomization | , C. Blackburn, X. Wang, and B. Ravindran, 9th ACM Workshop on Moving Target Defense (MTD 2022), Co-located with CCS 2022, November 7, 2022, Los Angeles, USA 
+ href="papers/spaa22.pdf" - wCQ: A Fast Wait-Free Queue with Bounded Memory Usage | , R. Nikolaev and B. Ravindran, 34th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2022), July 11-14, 2022, Philadelphia, PA 
+ href="papers/vldb22.pdf" - Scalable Byzantine Fault Tolerance via Partial Decentralization | , B. Arun and B. Ravindran, 48th International Conference on Very Large Data Bases (VLDB 2022), September 05-09, 2022, Sydney, Australia 
+ href="papers/nfm22.pdf" - DSV: Disassembly Soundness Validation without Assuming a Ground Truth | , X. An, F. Verbeek, and B. Ravindran, 14th NASA Formal Methods Symposium (NFM 2022), May 24-27, 2022, Pasadena, California, USA 
+ href="papers/pldi22.pdf" - Formally Verified Lifting of C-compiled x86-64 Binaries | , F. Verbeek, J. Bockenek, Z. Fu, and B. Ravindran, 43rd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2022), June 13-17, 2022, San Diego, California, USA ( | ACM Artifacts Evaluated - Functional | , | Reusable | , | Available | ) 
+ H-Container: Enabling Heterogeneous-ISA Container Migration in Edge Computing | , T. Xing, A. Barbalace, P. Olivier, M. Karaoui, W. Wang, B. Ravindran, ACM Transactions on Computer Systems, March 2022 
+ href="papers/systex22.pdf" - Transparent, Cross-ISA Enclave Offloading | , X. Wang, C. Bilbao, and B. Ravindran, 5th Workshop on System Software for Trusted Execution (SysTEX 2022), Co-located with ASPLOS 2022, March 1, 2022, Lausanne, Switzerland 
+ href="papers/eurosys22.pdf" - Kite: Lightweight Critical Service Domains | , A Mehrab, R. Nikolaev, and B. Ravindran, 17th ACM European Conference on Computer Systems (EuroSys 2022), April 5-8, 2022, Rennes, France ( | ACM Artifacts Evaluated - Functional | , | Reproduced | , | Available | ) 
+ href="papers/asplos22.pdf" - Adelie: Continuous Address Space Layout Re-Randomization for Linux Drivers | , R. Nikolaev, H. Nadeem, C. Stone, and B. Ravindran, 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2022), February 28-March 4, 2022, Lausanne, Switzerland ( | ACM Artifacts Evaluated - Functional | , | Reproduced | , | Available | , full version of paper is available as an | arXiv report | ) 
+ wCQ: A Fast Wait-Free Queue with Bounded Memory Usage | , R. Nikolaev and B. Ravindran, 27th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP 2022), Poster paper, February 12-16, 2022, Seoul, South Korea 
+ 2021 
+ An OpenMP Runtime for Transparent Work Sharing Across Cache-Incoherent Heterogeneous Nodes | , R. Lyerly, C. Bilbao, C. Min, C. Rossbach, and B. Ravindran, ACM Transactions on Computer Systems, December 2021 
+ href="papers/pldi21.pdf" - Snapshot-Free, Transparent, and Robust Memory Reclamation for Lock-Free Data Structures | , R. Nikolaev and B. Ravindran, ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021), Virtual, June 20-25, 2021 ( | ACM Artifacts Evaluated - Functional | , | Reusable | , | Available | , full version of paper is available as an | arXiv report | ) 
+ x86 Instruction Semantics and Basic Block Symbolic Execution | , F. Verbeek, A. Bharadwaj, J. Bockenek, I. Roessle, T. Weerwag, and B. Ravindran, Archive of Formal Proofs, October 2021, Formal proof development, ISSN: 2150-914x 
+ href="papers/tc21.pdf" - A Syscall-Level Binary-Compatible Unikernel | , P. Olivier, H. Lefeuvre, D. Chiba, S. Lankes, C. Min, and B. Ravindran, IEEE Transactions on Computers, pages: 1-12, October 2021, DOI: | 10.1109/TC.2021.3122896 
+ href="papers/middleware21.pdf" - Xar-Trek: Run-time Execution Migration among FPGAs and Heterogeneous-ISA CPUs | , E. Horta, H-R. Chuang, N. VSathish, C. Philippidis, A. Barbalace, P. Olivier, and B. Ravindran, 22nd ACM/IFIP International Middleware Conference (MIDDLEWARE 2021), Quebec, Canada, December 6-10, 2021 ( | ACM Artifacts Evaluated - Functional | , | Available | , full version of paper is available as an | arXiv report | ) 
+ href="papers/disc21.pdf" - Brief Announcement: Crystalline: Fast and Memory Efficient Wait-Free Reclamation | , R. Nikolaev and B. Ravindran, 35th International Symposium on Distributed Computing (DISC 2021), October 4-8, 2021, Freiburg, Germany (full version of paper is available as an | arXiv report | ) 
+ href="papers/nfm21.pdf" - Verification of Functional Correctness of Code Diversification Techniques | , J-W. Jang, F. Verbeek, and B. Ravindran, NASA Formal Methods Symposium (NFM 2021), Virtual, May 24-28, 2021 
+ 2020 
+ href="papers/middleware20.pdf" - An OpenMP Runtime for Transparent Work Sharing Across Cache-Incoherent Heterogeneous Nodes | , R. Lyerly, C. Min, C. Rossbach, and B. Ravindran, 21st ACM/IFIP International Middleware Conference (MIDDLEWARE 2020), Delft, The Netherlands, December 7-11, 2020 ( | ACM Artifacts Evaluated - Functional | , | Available | ) 
+ href="papers/sefm20.pdf" - Sound C Code Decompilation for a Subset of x86-64 Binaries | , F. Verbeek, P. Olivier, and B. Ravindran, 18th International Conference on Software Engineering and Formal Methods (SEFM 2020), Amsterdam, The Netherlands, September 14-18, 2020, | Best paper award 
+ href="papers/esorics20.pdf" - Dynamic and Secure Memory Transformation in Userspace | , R. Lyerly, X. Wang, and B. Ravindran, 25th European Symposium on Research in Computer Security (ESORICS 2020), Guildford, United Kingdom, September 14-18, 2020 
+ href="papers/raid20.pdf" - A Framework for Software Diversification with ISA Heterogeneity | , X. Wang, S. Yeoh, R. Lyerly, P. Olivier, S-H. Kim, and B. Ravindran, 23rd International Symposium on Research in Attacks, Intrusions and Defenses (RAID 2020), Donostia / San Sebastian, Spain, October 14-16, 2020 
+ href="papers/systor20.pdf" - Scaling Shared Memory Multiprocessing Applications in Non-cache-coherent Domains | , H-R. Chuang, R. Lyerly, S. Lankes, and B. Ravindran, The 13th ACM International Systems and Storage Conference (SYSTOR 2020), October 13-15, 2020, Haifa, Israel 
+ href="papers/nfm20.pdf" - A Validation Methodology for OCaml-to-PVS Translation | , X. An, A. Tahat, and B. Ravindran, 12th NASA Formal Methods Symposium (NFM 2020), May 11-15, 2020, NASA Ames Research Center, Moffett Field, CA, USA 
+ href="papers/eurosec20.pdf" - Secure and Efficient In-process Monitor (and Library) Protection with Intel MPK | , X. Wang, S. Yeoh, P. Olivier, and B. Ravindran, 13th European Workshop on Systems Security (EuroSec 2020), Co-located with EuroSys 2020, April 27, 2020, Heraklion, Crete, Greece 
+ href="papers/spma20.pdf" - The Case for Intra-Unikernel Isolation | , P. Olivier, A. Barbalace, and B. Ravindran, 10th Workshop on Systems for Post-Moore Architectures (SPMA 2020), Co-located with EuroSys 2020, April 27, 2020, Heraklion, Crete, Greece 
+ href="papers/icdcs20.pdf" - DEX: Scaling Applications Beyond Machine Boundaries | , S-H. Kim, H-R. Chuang, R. Lyerly, P. Olivier, C. Min, and B. Ravindran, 40th IEEE International Conference on Distributed Computing Systems (ICDCS 2020), July 8-10, 2020, Singapore 
+ href="papers/vee20-h-container.pdf" - Edge Compute -- the Case for Heterogeneous-ISA Container Migration | , A. Barbalace, M. Karaoui, W. Wang, T. Xing, P. Olivier, and B. Ravindran, 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE 2020), March 17, 2020, Lausanne, Switzerland 
+ href="papers/vee20-librettos.pdf" - LibrettOS: A Dynamically Adaptable Multiserver-Library OS | , R. Nikolaev, M. Sung, and B. Ravindran, 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE 2020), March 17, 2020, Lausanne, Switzerland (arXiv version of paper is available | here | ) 
+ href="papers/vee20-mpk.pdf" - Intra-Unikernel Isolation with Intel Memory Protection Keys | , M. Sung, P. Olivier, S. Lankes, and B. Ravindran, 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE 2020), March 17, 2020, Lausanne, Switzerland 
+ href="papers/tacas20.pdf" - Highly Automated Formal Proofs over Memory Usage of Assembly Code | , F. Verbeek, J. Bockenek, and B. Ravindran, 26th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2020), April 25-30, 2020, Dublin, Ireland ( | TACAS Artifact Evaluation: Artifact Accepted | ) 
+ href="papers/ppopp20.pdf" - Universal Wait-Free Memory Reclamation | , R. Nikolaev and B. Ravindran, 25th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP 2020), February 22-26, 2020, San Diego, CA, USA ( | ACM Artifacts Evaluated - Functional | , | Available | , | Results Replicated | , full version of paper is available as an | arXiv report | ) 
+ href="papers/tdsc20-author-version.pdf" - Taming the Contention in Consensus-based Distributed Systems | , B. Arun, S. Peluso, R. Palmieri, G. Losa, and B. Ravindran, IEEE Transactions on Dependable and Secure Computing, To appear, 2020 
+ For papers in the recent past, clickhref="allpapers.php" - here
+. 
+ Copyright © 2015href="index.php" - Systems Software Research Group
+
+Acknowledgements
+
+3. Website of VEE_2: https://www.sigplan.org/OpenTOC/
+Website information of VEE_2:
+
+ACM SIGPLANHome 
+ Conferences 
+ OpenTOC 
+ Awards 
+ href="/Highlights" - Research Highlights 
+ Membership 
+ OpenTOC 
+ ACM OpenTOC is a unique service that enables Special Interest Groups to generate and post Tables of Contents for proceedings of their conferences enabling visitors to download the definitive version of the contents from the ACM Digital Library at no charge. 
+ Downloads of these articles are captured in official ACM statistics improving the accuracy of usage and impact measurements. Consistently linking to definitive versions of ACM articles should reduce user confusion over article versioning. 
+ By Year∣By EventBy Year 
+ 2025 
+ CC’25: Proceedings of the 34th ACM SIGPLAN International Conference on Compiler Construction 
+ CPP’25: Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’25: Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ href="pepm25.html" - PEPM’25: Proceedings of the 2025 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ href="pepm25.html" - PEPM’25: Proceedings of the 2025 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PPoPP’25: Proceedings of the 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ 2024 
+ ARRAY’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ CC’24: Proceedings of the 33rd ACM SIGPLAN International Conference on Compiler Construction 
+ CPP’24: Proceedings of the 13th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ Erlang’24: Proceedings of the 23rd ACM SIGPLAN International Workshop on Erlang 
+ ExHET’24: Proceedings of the 3rd International Workshop on Extreme Heterogeneity Solutions 
+ FARM’24: Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design 
+ FProPer’24: Proceedings of the 1st ACM SIGPLAN International Workshop on Functional Programming for Productivity and Performance 
+ FUNARCH’24: Proceedings of the 2nd ACM SIGPLAN International Workshop on Functional Software Architecture 
+ GPCE’24: Proceedings of the 23rd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’24: Proceedings of the 23rd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’24: Proceedings of the 17th ACM SIGPLAN International Haskell Symposium 
+ Haskell’24: Proceedings of the 17th ACM SIGPLAN International Haskell Symposium 
+ href="icfp24.html" - ICFP’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. ICFP. 2024 
+ ISMM’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on Memory Management 
+ JENSFEST’24: Proceedings of the Workshop Dedicated to Jens Palsberg on the Occasion of His 60th Birthday 
+ JENSFEST’24: Proceedings of the Workshop Dedicated to Jens Palsberg on the Occasion of His 60th Birthday 
+ LCTES’24: Proceedings of the 25th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ NSAD’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ NSAD’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ OOPSLA’24: Proceedings of the 2024 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications, Volume 1 
+ OOPSLA’24: Proceedings of the 2024 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications, Volume 2 
+ Onward!’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PAINT’24: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PAINT’24: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PEPM’24: Proceedings of the 2024 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. PLDI. 2024 
+ PMAM’24: Proceedings of the 15th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. POPL. 2024 
+ href="popl24.html" - POPL’24: Proceedings of the ACM on Programming Languages: Vol. 9, No. POPL. 2025 
+ PPoPP’24: Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ SLE’24: Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’24: Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’24: Proceedings of the 13th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SPLASH Companion’24: Companion Proceedings of the 2024 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH-E’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on SPLASH-E 
+ TyDe’24: Proceedings of the 9th ACM SIGPLAN International Workshop on Type-Driven Development 
+ VMIL’24: Proceedings of the 16th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’24: Proceedings of the 16th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ 2023 
+ ARRAY’23: Proceedings of the 9th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3 
+ BID’23: Proceedings of the 5th International Workshop on Benchmarking in the Data Center 
+ CC’23: Proceedings of the 32nd ACM SIGPLAN International Conference on Compiler Construction 
+ CGO’23: Proceedings of the 21st ACM/IEEE International Symposium on Code Generation and Optimization 
+ CPP’23: Proceedings of the 12th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ DLS’23: Proceedings of the 19th ACM SIGPLAN International Symposium on Dynamic Languages 
+ Erlang’23: Proceedings of the 22nd ACM SIGPLAN International Workshop on Erlang 
+ ExHET’23: Proceedings of the 2nd International Workshop on Extreme Heterogeneity Solutions 
+ FARM’23: Proceedings of the 11th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design 
+ FHPNC’23: Proceedings of the 11th ACM SIGPLAN International Workshop on Functional High-Performance and Numerical Computing 
+ FTSCS’23: Proceedings of the 9th ACM SIGPLAN International Workshop on Formal Techniques for Safety-Critical Systems 
+ FUNARCH’23: Proceedings of the 1st ACM SIGPLAN International Workshop on Functional Software Architecture 
+ GPCE’23: Proceedings of the 22nd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’23: Proceedings of the 16th ACM SIGPLAN International Haskell Symposium 
+ ISMM’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’23: Proceedings of the 24th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ MPLR’23: Proceedings of the 20th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ Onward!’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PAINT’23: Proceedings of the 2nd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PEPM’23: Proceedings of the 2023 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’23: Proceedings of the ACM on Programming Languages: Vol. 7, No. PLDI. 2023 
+ PMAM’23: Proceedings of the 14th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’23: Proceedings of the 50th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’23: Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ REBLS’23: Proceedings of the 10th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ SLE’23: Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’23: Proceedings of the 12th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SPLASH’23: Companion Proceedings of the 2023 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH-E’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E 
+ TyDe’23: Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development 
+ VMIL’23: Proceedings of the 15th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ 2022 
+ ARRAY’22: Proceedings of the 8th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ BID’22: Benchmarking in the Data Center: Expanding to the Cloud 
+ CC’22: Proceedings of the 31st ACM SIGPLAN International Conference on Compiler Construction 
+ CPP’22: Proceedings of the 11th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ DLS’22: Proceedings of the 18th ACM SIGPLAN International Symposium on Dynamic Languages 
+ href="egraphs22.html" - EGRAPHS’22: Proceedings of the 1st ACM SIGPLAN International Symposium on E-Graph Research, Applications, Practices,  and Human-factors 
+ Erlang’22: Proceedings of the 21st ACM SIGPLAN International Workshop on Erlang 
+ ExHET’22: Proceedings of the 1st International Workshop on Extreme Heterogeneity Solutions 
+ FTSCS’22: Proceedings of the 8th ACM SIGPLAN International Workshop on Formal Techniques for Safety-Critical Systems 
+ GPCE’22: Proceedings of the 21st ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPGPU’22: Proceedings of the 14th Workshop on General Purpose Processing using Graphics Processing Units 
+ Haskell’22: Proceedings of the 15th ACM SIGPLAN International Haskell Symposium 
+ ISMM’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’22: Proceedings of the 23rd ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ MAPS’22: Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming 
+ OOPSLA’22: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PAINT’22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PEPM’22: Proceedings of the 2022 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’22: Proceedings of the 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation 
+ PMAM’22: Proceedings of the Thirteenth International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’22: Proceedings of the 49th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ REBLS’22: Proceedings of the 9th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ SLE’22: Proceedings of the 15th ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’22: Proceedings of the 11th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SPLASH Companion’22: Companion Proceedings of the 2022 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH-E’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on SPLASH-E 
+ Scala’22: Proceedings of the Scala Symposium 
+ TyDe’22: Proceedings of the 7th ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee22.html" - VEE’22: Proceedings of the 18th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’22: Proceedings of the 14th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ 2021 
+ AGERE!’21: Proceedings of the 11th ACM SIGPLAN International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’21: Proceedings of the 8th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ BCNC’21: Proceedings of the 1st ACM SIGPLAN International Workshop on Beyond Code: No Code 
+ CPP’21: Proceedings of the 10th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DLS’21: Proceedings of the 17th ACM SIGPLAN International Symposium on Dynamic Languages 
+ DSM’21: Proceedings of the 18th ACM SIGPLAN International Workshop on Domain-Specific Modeling 
+ Erlang’21: Proceedings of the 20th ACM SIGPLAN International Workshop on Erlang 
+ FARM’21: Proceedings of the 9th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPNC’21: Proceedings of the 9th ACM SIGPLAN Workshop on Functional High-Performance and Numerical Computing 
+ GPCE’21: Proceedings of the 20th ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’21: Proceedings of the 14th ACM SIGPLAN Symposium on Haskell 
+ ISMM’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’21: Proceedings of the 22nd ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPS’21: Proceedings of the 5th ACM SIGPLAN International Symposium on Machine Programming 
+ MPLR’21: Proceedings of the 18th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ OOPSLA’21: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’21: Proceedings of the 2021 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’21: Proceedings of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’21: Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation 
+ PMAM’21: Proceedings of the 12th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’21: Proceedings of the 12th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’21: Proceedings of the 48th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’21: Proceedings of the 26th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ REBLS’21: Proceedings of the 8th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA’21: Proceedings of the 12th ACM SIGPLAN International Symposium on Scala 
+ SLE’21: Proceedings of the 14th ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’21: Proceedings of the 10th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH Companion’21: Companion Proceedings of the 2021 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH-E’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on SPLASH-E 
+ TyDe’21: Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee21.html" - VEE’21: Proceedings of the 17th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’21: Proceedings of the 13th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ 2020 
+ AGERE!’20: Proceedings of the 10th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’20: Proceedings of the 7th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ BID’20: Proceedings of the 1st Workshop on Benchmarking in the Datacenter 
+ CC’20: Proceedings of the 29th International Conference on Compiler Construction 
+ CC’20: Proceedings of the 30th International Conference on Compiler Construction 
+ CPP’20: Proceedings of the 9th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DLS’20: Proceedings of the 15th Symposium on Dynamic Languages 
+ Erlang’20: Proceedings of the 18th ACM SIGPLAN International Workshop on Erlang 
+ GPCE’20: Proceedings of the 19th International Conference on Generative Programming: Concepts and Experiences 
+ GPGPU’20: Proceedings of the 13rd Workshop on General Purpose Processing using Graphics Processing Units 
+ HOPL’20: Proceedings of the 4th ACM SIGPLAN History of Programming Language Conference 
+ Haskell’20: Proceedings of the 13th ACM SIGPLAN Symposium on Haskell 
+ ISMM’20: Proceedings of the 2020 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’20: Proceedings of the 21st ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPL’20: Proceedings of the 4th ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ NSAD’20: Proceedings of the 9th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ OOPSLA’20: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’20: Proceedings of the 2020 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’20: Proceedings of the 2020 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’20: Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ POPL’20: Proceedings of the 47th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’20: Proceedings of the 25th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ REBLS’20: Proceedings of the 7th International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA’20: Proceedings of the 11th ACM SIGPLAN Symposium on Scala 
+ SLE’20: Proceedings of the 2020 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’20: Proceedings of the 9th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’20: Companion Proceedings of the 2020 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ TAPAS’20: Proceedings of the 11th ACM SIGPLAN International Workshop on Tools for Automatic Program Analysis 
+ TyDe’20: Proceedings of the 4th ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee20.html" - VEE’20: Proceedings of the 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’20: Proceedings of the 11th International Workshop on Virtual Machines and Intermediate Languages 
+ 2019 
+ AGERE!’19: Proceedings of the 9th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AI-SEPS’19: Proceedings of the 6th ACM SIGPLAN International Workshop on Artificial Intelligence and Empirical Methods for Software Engineering and Parallel Computing Systems 
+ ARRAY’19: Proceedings of the 6th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ CHIUW’19: Proceedings of the 6th ACM SIGPLAN Workshop on Chapel Implementers and Users 
+ CPP’19: Proceedings of the 8th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DBPL’19: Proceedings of the 17th Symposium on Database Programming Languages 
+ DLS’19: Proceedings of the 14th Symposium on Dynamic Languages 
+ DSM’19: Proceedings of the 19th Workshop on Domain-Specific Modeling 
+ Erlang’19: Proceedings of the 17th ACM SIGPLAN International Workshop on Erlang 
+ FARM’19: Proceedings of the 7th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’19: Proceedings of the 8th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ GPCE’19: Proceedings of the 18th International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’19: Proceedings of the 12th ACM SIGPLAN Symposium on Haskell 
+ href="https://dl.acm.org/citation.cfm?id=3352468" - ICFP’19: Proceedings of the 24th ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’19: Proceedings of the 2019 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’19: Proceedings of the 20th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPL’19: Proceedings of the 3nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ META’19: Proceedings of the 4th ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ MPLR’19: Proceedings of the 16th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ OOPSLA’19: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’19: Proceedings of the 2019 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’19: Proceedings of the 2019 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’19: Proceedings of the 40th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ POPL’19: Proceedings of the 46th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’19: Proceedings of the 24th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ REBLS’19: Proceedings of the 6th International Workshop on Reactive and Event-Based Languages and Systems 
+ SLE’19: Proceedings of the 2019 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’19: Proceedings of the 8th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’19: Companion Proceedings of the 2019 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH-E’19: Proceedings of the 2019 ACM SIGPLAN Workshop on SPLASH-E 
+ TyDe’19: Proceedings of the 3rd ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee19.html" - VEE’19: Proceedings of the 15th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’19: Proceedings of the 10th International Workshop on Virtual Machines and Intermediate Languages 
+ 2018 
+ AGERE!’18: Proceedings of the 8th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AI-SEPS’18: Proceedings of the 5th ACM SIGPLAN International Workshop on Artificial Intelligence and Empirical Methods for Software Engineering and Parallel Computing Systems 
+ ARRAY’18: Proceedings of the 5th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ CPP’18: Proceedings of the 7th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DLS’18: Proceedings of the 13th Symposium on Dynamic Languages 
+ Erlang’18: Proceedings of the 17th ACM SIGPLAN International Workshop on Erlang 
+ FARM’18: Proceedings of the 6th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’18: Proceedings of the 7th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FMS’18: Proceedings of the 2018 ACM SIGPLAN International Workshop on Formal Methods and Security 
+ GPCE’18: Proceedings of the 17th International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’18: Proceedings of the 11th ACM SIGPLAN Symposium on Haskell 
+ href="https://dl.acm.org/citation.cfm?id=3243631" - ICFP’18: Proceedings of the 23rd ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’18: Proceedings of the 2018 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’18: Proceedings of the 19th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPL’18: Proceedings of the 2nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ META’18: Proceedings of the 3rd ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ OOPSLA’18: Proceedings of the 2018 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’18: Proceedings of the 2018 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’18: Proceedings of the 2018 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’18: Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ POPL’18: Proceedings of the 45th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’18: Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ REBLS’18: Proceedings of the 5th International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA’18: Proceedings of the 9th ACM SIGPLAN Symposium on Scala 
+ SLE’18: Proceedings of the 2018 ACM SIGPLAN International Conference on Software Language Engineering 
+ SPLASH’18: Companion Proceedings of the 2018 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH-E’18: Proceedings of the 2018 ACM SIGPLAN Workshop on SPLASH-E 
+ TyDe’18: Proceedings of the 3rd ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee18.html" - VEE’18: Proceedings of the 14th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’18: Proceedings of the 10th International Workshop on Virtual Machines and Intermediate Languages 
+ 2017 
+ AGERE!’17: Proceedings of the 7th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’17: Proceedings of the 4th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ CPP’17: Proceedings of the 6th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CoCoS’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Comprehension of Complex Systems 
+ DLS’17: Proceedings of the 13th Symposium on Dynamic Languages 
+ Erlang’17: Proceedings of the 16th ACM SIGPLAN International Workshop on Erlang 
+ FARM’17: Proceedings of the 5th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’17: Proceedings of the 6th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FOSD’17: Proceedings of the 8th International Workshop on Feature-Oriented Software Development 
+ GPCE’17: Proceedings of the 16th International Conference on Generative Programming: Concepts and Experiences 
+ GPGPU’17: Proceedings of the 10th Workshop on General Purpose Processing using Graphics Processing Units 
+ Haskell’17: Proceedings of the 10th ACM SIGPLAN Symposium on Haskell 
+ href="https://dl.acm.org/citation.cfm?id=3136534" - ICFP’17: Proceedings of the 22nd ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’17: Proceedings of the 2017 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’17: Proceedings of the 18th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPL’17: Proceedings of the 1st ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ META’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ OOPSLA’17: Proceedings of the 2017 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’17: Proceedings of the 2017 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’17: Proceedings of the 2017 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLDI’17: Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PMAM’17: Proceedings of the 8th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’17: Proceedings of the 44th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’17: Proceedings of the 22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PX’17: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Experience 
+ REBLS’17: Proceedings of the 4th International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA’17: Proceedings of the 8th ACM SIGPLAN Symposium on Scala 
+ SEPS’17: Proceedings of the 4th International Workshop on Software Engineering for Parallel Systems 
+ SLE’17: Proceedings of the 2017 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’17: Proceedings of the 6th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’17: Companion Proceedings of the 2017 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ TyDe’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Type-Driven Development 
+ href="vee17.html" - VEE’17: Proceedings of the 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’17: Proceedings of the 9th International Workshop on Virtual Machines and Intermediate Languages 
+ 2016 
+ AGERE!’16: Proceedings of the 6th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’16: Proceedings of the 3rd ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ CC’16: Proceedings of the 25th International Conference on Compiler Construction 
+ CGO’16: Proceedings of the 14th Annual IEEE/ACM International Symposium on Code Generation and Optimization 
+ CPP’16: Proceedings of the 5th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DLS’16: Proceedings of the 12th Symposium on Dynamic Languages 
+ DSM’16: Proceedings of the 16th Workshop on Domain-Specific Modeling 
+ Erlang’16: Proceedings of the 15th International Workshop on Erlang 
+ FARM’16: Proceedings of the 4th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’16: Proceedings of the 5th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FOSD’16: Proceedings of the 7th International Workshop on Feature-Oriented Software Development 
+ GPCE’16: Proceedings of the 15th International Conference on Generative Programming: Concepts and Experiences 
+ GPGPU’16: Proceedings of the 9th Workshop on General Purpose Processing using Graphics Processing Units 
+ Haskell’16: Proceedings of the 9th ACM SIGPLAN Symposium on Haskell 
+ href="icfp16.html" - ICFP’16: Proceedings of the 21st ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’16: Proceedings of the 2016 ACM SIGPLAN International Symposium on Memory Management 
+ href="itsle16.html" - ITSLE’16: Proceedings of the 1st Industry Track on Software Language Engineering 
+ LCTES’16: Proceedings of the 17th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ Mobile!’16: Proceedings of the 1st International Workshop on Mobile Development 
+ OOPSLA’16: Proceedings of the 2016 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’16: Proceedings of the 2016 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’16: Proceedings of the 2016 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLATEAU’16: Proceedings of the 7th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLDI’16: Proceedings of the 37th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PMAM’16: Proceedings of the 7th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’16: Proceedings of the 43rd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPoPP’16: Proceedings of the 21st ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ REBLS’16: Proceedings of the 3rd International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA’16: Proceedings of the 7th ACM SIGPLAN Symposium on Scala 
+ SEPS’16: Proceedings of the 3rd International Workshop on Software Engineering for Parallel Systems 
+ SLE’16: Proceedings of the 2016 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’16: Proceedings of the 5th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’16: Companion Proceedings of the 2016 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ TyDe’16: Proceedings of the 1st International Workshop on Type-Driven Development 
+ href="vee16.html" - VEE’16: Proceedings of the 12th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL’16: Proceedings of the 8th International Workshop on Virtual Machines and Intermediate Languages 
+ X10’16: Proceedings of the 6th ACM SIGPLAN Workshop on X10 
+ 2015 
+ AGERE!’15: Proceedings of the 5th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’15: Proceedings of the 2nd ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ CPP’15: Proceedings of the 4th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ DBPL’15: Proceedings of the 15th Symposium on Database Programming Languages 
+ DLS’15: Proceedings of the 11th Symposium on Dynamic Languages 
+ DSM’15: Proceedings of the 15th Workshop on Domain-Specific Modeling 
+ ETX’15: Proceedings of the 2015 Workshop on Eclipse Technology eXchange 
+ Erlang’15: Proceedings of the 14th ACM SIGPLAN International Workshop on Erlang 
+ FARM’15: Proceedings of the 3rd ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’15: Proceedings of the 4th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FPW’15: Proceedings of the Workshop on Future Programming 
+ GPCE’15: Proceedings of the 14th International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’15: Proceedings of the 8th ACM SIGPLAN Symposium on Haskell 
+ href="icfp15.html" - ICFP’15: Proceedings of the 20th ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’15: Proceedings of the 2015 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’15: Proceedings of the 16th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MobileDeLi’15: Proceedings of the 3rd International Workshop on Mobile Development Lifecycle 
+ OOPSLA’15: Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’15: Proceedings of the 2015 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’15: Proceedings of the 2015 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLATEAU’15: Proceedings of the 6th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLDI’15: Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PMAM’15: Proceedings of the 6th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL’15: Proceedings of the 42nd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPAA’15: Proceedings of the 2nd Workshop on Parallel Programming for Analytics Applications 
+ PPoPP’15: Proceedings of the 20th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PROMOTO’15: Proceedings of the 3rd Workshop on Programming for Mobile and Touch 
+ SCALA’15: Proceedings of the 6th ACM SIGPLAN Symposium on Scala 
+ SEPS’15: Proceedings of the 2nd International Workshop on Software Engineering for Parallel Systems 
+ SLE’15: Proceedings of the 2015 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP’15: Proceedings of the 4th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’15: Companion Proceedings of the 2015 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ href="vee15.html" - VEE’15: Proceedings of the 11th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ WGP’15: Proceedings of the 11th ACM SIGPLAN Workshop on Generic Programming 
+ WODA’15: Proceedings of the 13th International Workshop on Dynamic Analysis 
+ X10’15: Proceedings of the 5th ACM SIGPLAN Workshop on X10 
+ 2014 
+ AGERE!’14: Proceedings of the 4th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ ARRAY’14: Proceedings of the ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ DLS’14: Proceedings of the 10th Symposium on Dynamic Languages 
+ DSM’14: Proceedings of the 14th Workshop on Domain-Specific Modeling 
+ DYLA’14: Proceedings of the 8th Workshop on Dynamic Languages and Applications 
+ ETX’14: Proceedings of the 2014 Workshop on Eclipse Technology eXchange 
+ Erlang’14: Proceedings of the 13th ACM SIGPLAN International Workshop on Erlang 
+ FARM’14: Proceedings of the 2nd ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC’14: Proceedings of the 3rd ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ GPCE’14: Proceedings of the 13th International Conference on Generative Programming: Concepts and Experiences 
+ Haskell’14: Proceedings of the 7th ACM SIGPLAN Symposium on Haskell 
+ href="icfp14.html" - ICFP’14: Proceedings of the 19th ACM SIGPLAN International Conference on Functional Programming 
+ ISMM’14: Proceedings of the 2014 ACM SIGPLAN International Symposium on Memory Management 
+ LCTES’14: Proceedings of the 15th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MSPC’14: Proceedings of the 2014 ACM SIGPLAN Workshop on Memory Systems Performance and Correctness 
+ MobileDeLi’14: Proceedings of the 2nd International Workshop on Mobile Development Lifecycle 
+ OOPSLA’14: Proceedings of the 2014 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward!’14: Proceedings of the 2014 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PEPM’14: Proceedings of the 2014 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLATEAU’14: Proceedings of the 5th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLDI’14: Proceedings of the 35th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLPV’14: Proceedings of the 8th ACM SIGPLAN Workshop on Programming Languages meets Program Verification 
+ POPL’14: Proceedings of the 41st Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPAA’14: Proceedings of the 1st Workshop on Parallel Programming for Analytics Applications 
+ PPREW’14: Proceedings of the 3rd ACM SIGPLAN Program Protection and Reverse Engineering Workshop 
+ PPoPP’14: Proceedings of the 19th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PROMOTO’14: Proceedings of the 2nd Workshop on Programming for Mobile and Touch 
+ PSP’14: Proceedings of the 2014 Workshop on Privacy and Security in Programming 
+ SOAP’14: Proceedings of the 3rd ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH’14: Companion Proceedings of the 2014 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ href="trust14.html" - TRUST’14: Proceedings of the 1st ACM SIGPLAN Workshop on Reproducible Research Methodologies and New Publication Models in Computer Engineering 
+ href="vee14.html" - VEE’14: Proceedings of the 10th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ WGP’14: Proceedings of the 10th ACM SIGPLAN Workshop on Generic Programming 
+ WOSC’14: Proceedings of the 2nd Workshop on Optimizing Stencil Computations 
+ WPMVP’14: Proceedings of the 1st Workshop on Programming Models for SIMD/Vector Processing 
+ By Event 
+ AGERE! 
+ AGERE!’21: Proceedings of the 11th ACM SIGPLAN International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’20: Proceedings of the 10th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’19: Proceedings of the 9th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’18: Proceedings of the 8th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’17: Proceedings of the 7th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’16: Proceedings of the 6th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’15: Proceedings of the 5th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AGERE!’14: Proceedings of the 4th International Workshop on Programming Based on Actors, Agents, and Decentralized Control 
+ AI-SEPS 
+ AI-SEPS’19: Proceedings of the 6th ACM SIGPLAN International Workshop on Artificial Intelligence and Empirical Methods for Software Engineering and Parallel Computing Systems 
+ AI-SEPS’18: Proceedings of the 5th ACM SIGPLAN International Workshop on Artificial Intelligence and Empirical Methods for Software Engineering and Parallel Computing Systems 
+ ARRAY 
+ ARRAY’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ ARRAY’23: Proceedings of the 9th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ ARRAY’22: Proceedings of the 8th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming 
+ ARRAY’21: Proceedings of the 8th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’20: Proceedings of the 7th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’19: Proceedings of the 6th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’18: Proceedings of the 5th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’17: Proceedings of the 4th ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’16: Proceedings of the 3rd ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’15: Proceedings of the 2nd ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ARRAY’14: Proceedings of the ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming 
+ ASPLOS 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 
+ ASPLOS’23: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1 
+ BCNC 
+ BCNC’21: Proceedings of the 1st ACM SIGPLAN International Workshop on Beyond Code: No Code 
+ BID 
+ BID’23: Proceedings of the 5th International Workshop on Benchmarking in the Data Center 
+ BID’22: Benchmarking in the Data Center: Expanding to the Cloud 
+ BID’20: Proceedings of the 1st Workshop on Benchmarking in the Datacenter 
+ CC 
+ CC’25: Proceedings of the 34th ACM SIGPLAN International Conference on Compiler Construction 
+ CC’24: Proceedings of the 33rd ACM SIGPLAN International Conference on Compiler Construction 
+ CC’23: Proceedings of the 32nd ACM SIGPLAN International Conference on Compiler Construction 
+ CC’22: Proceedings of the 31st ACM SIGPLAN International Conference on Compiler Construction 
+ CC’20: Proceedings of the 30th International Conference on Compiler Construction 
+ CC’20: Proceedings of the 29th International Conference on Compiler Construction 
+ CC’16: Proceedings of the 25th International Conference on Compiler Construction 
+ CGO 
+ CGO’23: Proceedings of the 21st ACM/IEEE International Symposium on Code Generation and Optimization 
+ CGO’16: Proceedings of the 14th Annual IEEE/ACM International Symposium on Code Generation and Optimization 
+ CHIUW 
+ CHIUW’19: Proceedings of the 6th ACM SIGPLAN Workshop on Chapel Implementers and Users 
+ CPP 
+ CPP’25: Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’25: Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’24: Proceedings of the 13th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’23: Proceedings of the 12th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’22: Proceedings of the 11th ACM SIGPLAN International Conference on Certified Programs and Proofs 
+ CPP’21: Proceedings of the 10th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’20: Proceedings of the 9th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’19: Proceedings of the 8th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’18: Proceedings of the 7th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’17: Proceedings of the 6th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’16: Proceedings of the 5th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CPP’15: Proceedings of the 4th ACM SIGPLAN Conference on Certified Programs and Proofs 
+ CoCoS 
+ CoCoS’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Comprehension of Complex Systems 
+ DBPL 
+ DBPL’19: Proceedings of the 17th Symposium on Database Programming Languages 
+ DBPL’15: Proceedings of the 15th Symposium on Database Programming Languages 
+ DLS 
+ DLS’23: Proceedings of the 19th ACM SIGPLAN International Symposium on Dynamic Languages 
+ DLS’22: Proceedings of the 18th ACM SIGPLAN International Symposium on Dynamic Languages 
+ DLS’21: Proceedings of the 17th ACM SIGPLAN International Symposium on Dynamic Languages 
+ DLS’20: Proceedings of the 15th Symposium on Dynamic Languages 
+ DLS’19: Proceedings of the 14th Symposium on Dynamic Languages 
+ DLS’18: Proceedings of the 13th Symposium on Dynamic Languages 
+ DLS’17: Proceedings of the 13th Symposium on Dynamic Languages 
+ DLS’16: Proceedings of the 12th Symposium on Dynamic Languages 
+ DLS’15: Proceedings of the 11th Symposium on Dynamic Languages 
+ DLS’14: Proceedings of the 10th Symposium on Dynamic Languages 
+ DSM 
+ DSM’21: Proceedings of the 18th ACM SIGPLAN International Workshop on Domain-Specific Modeling 
+ DSM’19: Proceedings of the 19th Workshop on Domain-Specific Modeling 
+ DSM’16: Proceedings of the 16th Workshop on Domain-Specific Modeling 
+ DSM’15: Proceedings of the 15th Workshop on Domain-Specific Modeling 
+ DSM’14: Proceedings of the 14th Workshop on Domain-Specific Modeling 
+ DYLA 
+ DYLA’14: Proceedings of the 8th Workshop on Dynamic Languages and Applications 
+ EGRAPHS 
+ href="egraphs22.html" - EGRAPHS’22: Proceedings of the 1st ACM SIGPLAN International Symposium on E-Graph Research, Applications, Practices,  and Human-factors 
+ ETX 
+ ETX’15: Proceedings of the 2015 Workshop on Eclipse Technology eXchange 
+ ETX’14: Proceedings of the 2014 Workshop on Eclipse Technology eXchange 
+ Erlang 
+ Erlang’24: Proceedings of the 23rd ACM SIGPLAN International Workshop on Erlang 
+ Erlang’23: Proceedings of the 22nd ACM SIGPLAN International Workshop on Erlang 
+ Erlang’22: Proceedings of the 21st ACM SIGPLAN International Workshop on Erlang 
+ Erlang’21: Proceedings of the 20th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’20: Proceedings of the 18th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’19: Proceedings of the 17th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’18: Proceedings of the 17th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’17: Proceedings of the 16th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’16: Proceedings of the 15th International Workshop on Erlang 
+ Erlang’15: Proceedings of the 14th ACM SIGPLAN International Workshop on Erlang 
+ Erlang’14: Proceedings of the 13th ACM SIGPLAN International Workshop on Erlang 
+ ExHET 
+ ExHET’24: Proceedings of the 3rd International Workshop on Extreme Heterogeneity Solutions 
+ ExHET’23: Proceedings of the 2nd International Workshop on Extreme Heterogeneity Solutions 
+ ExHET’22: Proceedings of the 1st International Workshop on Extreme Heterogeneity Solutions 
+ FARM 
+ FARM’24: Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design 
+ FARM’23: Proceedings of the 11th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design 
+ FARM’21: Proceedings of the 9th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’19: Proceedings of the 7th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’18: Proceedings of the 6th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’17: Proceedings of the 5th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’16: Proceedings of the 4th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’15: Proceedings of the 3rd ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FARM’14: Proceedings of the 2nd ACM SIGPLAN International Workshop on Functional Art, Music, Modeling and Design 
+ FHPC 
+ FHPC’19: Proceedings of the 8th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPC’18: Proceedings of the 7th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPC’17: Proceedings of the 6th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPC’16: Proceedings of the 5th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPC’15: Proceedings of the 4th ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPC’14: Proceedings of the 3rd ACM SIGPLAN Workshop on Functional High-Performance Computing 
+ FHPNC 
+ FHPNC’23: Proceedings of the 11th ACM SIGPLAN International Workshop on Functional High-Performance and Numerical Computing 
+ FHPNC’21: Proceedings of the 9th ACM SIGPLAN Workshop on Functional High-Performance and Numerical Computing 
+ FMS 
+ FMS’18: Proceedings of the 2018 ACM SIGPLAN International Workshop on Formal Methods and Security 
+ FOSD 
+ FOSD’17: Proceedings of the 8th International Workshop on Feature-Oriented Software Development 
+ FOSD’16: Proceedings of the 7th International Workshop on Feature-Oriented Software Development 
+ FPW 
+ FPW’15: Proceedings of the Workshop on Future Programming 
+ FProPer 
+ FProPer’24: Proceedings of the 1st ACM SIGPLAN International Workshop on Functional Programming for Productivity and Performance 
+ FTSCS 
+ FTSCS’23: Proceedings of the 9th ACM SIGPLAN International Workshop on Formal Techniques for Safety-Critical Systems 
+ FTSCS’22: Proceedings of the 8th ACM SIGPLAN International Workshop on Formal Techniques for Safety-Critical Systems 
+ FUNARCH 
+ FUNARCH’24: Proceedings of the 2nd ACM SIGPLAN International Workshop on Functional Software Architecture 
+ FUNARCH’23: Proceedings of the 1st ACM SIGPLAN International Workshop on Functional Software Architecture 
+ GPCE 
+ GPCE’24: Proceedings of the 23rd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’24: Proceedings of the 23rd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’23: Proceedings of the 22nd ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’22: Proceedings of the 21st ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’21: Proceedings of the 20th ACM SIGPLAN International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’20: Proceedings of the 19th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’19: Proceedings of the 18th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’18: Proceedings of the 17th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’17: Proceedings of the 16th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’16: Proceedings of the 15th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’15: Proceedings of the 14th International Conference on Generative Programming: Concepts and Experiences 
+ GPCE’14: Proceedings of the 13th International Conference on Generative Programming: Concepts and Experiences 
+ GPGPU 
+ GPGPU’22: Proceedings of the 14th Workshop on General Purpose Processing using Graphics Processing Units 
+ GPGPU’20: Proceedings of the 13rd Workshop on General Purpose Processing using Graphics Processing Units 
+ GPGPU’17: Proceedings of the 10th Workshop on General Purpose Processing using Graphics Processing Units 
+ GPGPU’16: Proceedings of the 9th Workshop on General Purpose Processing using Graphics Processing Units 
+ HOPL 
+ HOPL’20: Proceedings of the 4th ACM SIGPLAN History of Programming Language Conference 
+ Haskell 
+ Haskell’24: Proceedings of the 17th ACM SIGPLAN International Haskell Symposium 
+ Haskell’24: Proceedings of the 17th ACM SIGPLAN International Haskell Symposium 
+ Haskell’23: Proceedings of the 16th ACM SIGPLAN International Haskell Symposium 
+ Haskell’22: Proceedings of the 15th ACM SIGPLAN International Haskell Symposium 
+ Haskell’21: Proceedings of the 14th ACM SIGPLAN Symposium on Haskell 
+ Haskell’20: Proceedings of the 13th ACM SIGPLAN Symposium on Haskell 
+ Haskell’19: Proceedings of the 12th ACM SIGPLAN Symposium on Haskell 
+ Haskell’18: Proceedings of the 11th ACM SIGPLAN Symposium on Haskell 
+ Haskell’17: Proceedings of the 10th ACM SIGPLAN Symposium on Haskell 
+ Haskell’16: Proceedings of the 9th ACM SIGPLAN Symposium on Haskell 
+ Haskell’15: Proceedings of the 8th ACM SIGPLAN Symposium on Haskell 
+ Haskell’14: Proceedings of the 7th ACM SIGPLAN Symposium on Haskell 
+ ICFP 
+ href="icfp24.html" - ICFP’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. ICFP. 2024 
+ href="https://dl.acm.org/citation.cfm?id=3352468" - ICFP’19: Proceedings of the 24th ACM SIGPLAN International Conference on Functional Programming 
+ href="https://dl.acm.org/citation.cfm?id=3243631" - ICFP’18: Proceedings of the 23rd ACM SIGPLAN International Conference on Functional Programming 
+ href="https://dl.acm.org/citation.cfm?id=3136534" - ICFP’17: Proceedings of the 22nd ACM SIGPLAN International Conference on Functional Programming 
+ href="icfp16.html" - ICFP’16: Proceedings of the 21st ACM SIGPLAN International Conference on Functional Programming 
+ href="icfp15.html" - ICFP’15: Proceedings of the 20th ACM SIGPLAN International Conference on Functional Programming 
+ href="icfp14.html" - ICFP’14: Proceedings of the 19th ACM SIGPLAN International Conference on Functional Programming 
+ ISMM 
+ ISMM’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’20: Proceedings of the 2020 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’19: Proceedings of the 2019 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’18: Proceedings of the 2018 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’17: Proceedings of the 2017 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’16: Proceedings of the 2016 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’15: Proceedings of the 2015 ACM SIGPLAN International Symposium on Memory Management 
+ ISMM’14: Proceedings of the 2014 ACM SIGPLAN International Symposium on Memory Management 
+ ITSLE 
+ href="itsle16.html" - ITSLE’16: Proceedings of the 1st Industry Track on Software Language Engineering 
+ JENSFEST 
+ JENSFEST’24: Proceedings of the Workshop Dedicated to Jens Palsberg on the Occasion of His 60th Birthday 
+ JENSFEST’24: Proceedings of the Workshop Dedicated to Jens Palsberg on the Occasion of His 60th Birthday 
+ LCTES 
+ LCTES’24: Proceedings of the 25th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ LCTES’23: Proceedings of the 24th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ LCTES’22: Proceedings of the 23rd ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems 
+ LCTES’21: Proceedings of the 22nd ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’20: Proceedings of the 21st ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’19: Proceedings of the 20th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’18: Proceedings of the 19th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’17: Proceedings of the 18th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’16: Proceedings of the 17th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’15: Proceedings of the 16th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ LCTES’14: Proceedings of the 15th ACM SIGPLAN/SIGBED Conference on Languages, Compilers, Tools, and Theory for Embedded Systems 
+ MAPL 
+ MAPL’20: Proceedings of the 4th ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ MAPL’19: Proceedings of the 3nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ MAPL’18: Proceedings of the 2nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ MAPL’17: Proceedings of the 1st ACM SIGPLAN International Workshop on Machine Learning and Programming Languages 
+ MAPS 
+ MAPS’22: Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming 
+ MAPS’21: Proceedings of the 5th ACM SIGPLAN International Symposium on Machine Programming 
+ META 
+ META’19: Proceedings of the 4th ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ META’18: Proceedings of the 3rd ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ META’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Meta-Programming Techniques and Reflection 
+ MPLR 
+ MPLR’23: Proceedings of the 20th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ MPLR’21: Proceedings of the 18th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ MPLR’19: Proceedings of the 16th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes 
+ MSPC 
+ MSPC’14: Proceedings of the 2014 ACM SIGPLAN Workshop on Memory Systems Performance and Correctness 
+ Mobile! 
+ Mobile!’16: Proceedings of the 1st International Workshop on Mobile Development 
+ MobileDeLi 
+ MobileDeLi’15: Proceedings of the 3rd International Workshop on Mobile Development Lifecycle 
+ MobileDeLi’14: Proceedings of the 2nd International Workshop on Mobile Development Lifecycle 
+ NSAD 
+ NSAD’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ NSAD’24: Proceedings of the 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ NSAD’20: Proceedings of the 9th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains 
+ OOPSLA 
+ OOPSLA’24: Proceedings of the 2024 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications, Volume 2 
+ OOPSLA’24: Proceedings of the 2024 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications, Volume 1 
+ OOPSLA’22: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’21: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’20: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’19: Proceedings of the 2019 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’18: Proceedings of the 2018 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’17: Proceedings of the 2017 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’16: Proceedings of the 2016 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’15: Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ OOPSLA’14: Proceedings of the 2014 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications 
+ Onward! 
+ Onward!’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’20: Proceedings of the 2020 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’19: Proceedings of the 2019 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’18: Proceedings of the 2018 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’17: Proceedings of the 2017 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’16: Proceedings of the 2016 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’15: Proceedings of the 2015 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ Onward!’14: Proceedings of the 2014 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software 
+ PAINT 
+ PAINT’24: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PAINT’24: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PAINT’23: Proceedings of the 2nd ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PAINT’22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments 
+ PEPM 
+ href="pepm25.html" - PEPM’25: Proceedings of the 2025 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ href="pepm25.html" - PEPM’25: Proceedings of the 2025 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’24: Proceedings of the 2024 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’23: Proceedings of the 2023 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’22: Proceedings of the 2022 ACM SIGPLAN International Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’21: Proceedings of the 2021 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’20: Proceedings of the 2020 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’19: Proceedings of the 2019 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’18: Proceedings of the 2018 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’17: Proceedings of the 2017 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’16: Proceedings of the 2016 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’15: Proceedings of the 2015 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PEPM’14: Proceedings of the 2014 ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation 
+ PLATEAU 
+ PLATEAU’16: Proceedings of the 7th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLATEAU’15: Proceedings of the 6th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLATEAU’14: Proceedings of the 5th Workshop on Evaluation and Usability of Programming Languages and Tools 
+ PLDI 
+ PLDI’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. PLDI. 2024 
+ PLDI’23: Proceedings of the ACM on Programming Languages: Vol. 7, No. PLDI. 2023 
+ PLDI’22: Proceedings of the 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation 
+ PLDI’21: Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation 
+ PLDI’21: Proceedings of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’20: Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’19: Proceedings of the 40th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’18: Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’17: Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’16: Proceedings of the 37th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’15: Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLDI’14: Proceedings of the 35th ACM SIGPLAN Conference on Programming Language Design and Implementation 
+ PLPV 
+ PLPV’14: Proceedings of the 8th ACM SIGPLAN Workshop on Programming Languages meets Program Verification 
+ PMAM 
+ PMAM’24: Proceedings of the 15th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’23: Proceedings of the 14th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’22: Proceedings of the Thirteenth International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’21: Proceedings of the 12th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’21: Proceedings of the 12th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’17: Proceedings of the 8th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’16: Proceedings of the 7th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ PMAM’15: Proceedings of the 6th International Workshop on Programming Models and Applications for Multicores and Manycores 
+ POPL 
+ href="popl24.html" - POPL’24: Proceedings of the ACM on Programming Languages: Vol. 9, No. POPL. 2025 
+ POPL’24: Proceedings of the ACM on Programming Languages: Vol. 8, No. POPL. 2024 
+ POPL’23: Proceedings of the 50th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’22: Proceedings of the 49th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’21: Proceedings of the 48th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’20: Proceedings of the 47th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’19: Proceedings of the 46th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’18: Proceedings of the 45th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’17: Proceedings of the 44th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’16: Proceedings of the 43rd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’15: Proceedings of the 42nd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ POPL’14: Proceedings of the 41st Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages 
+ PPAA 
+ PPAA’15: Proceedings of the 2nd Workshop on Parallel Programming for Analytics Applications 
+ PPAA’14: Proceedings of the 1st Workshop on Parallel Programming for Analytics Applications 
+ PPREW 
+ PPREW’14: Proceedings of the 3rd ACM SIGPLAN Program Protection and Reverse Engineering Workshop 
+ PPoPP 
+ PPoPP’25: Proceedings of the 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’24: Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’23: Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’21: Proceedings of the 26th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’20: Proceedings of the 25th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’19: Proceedings of the 24th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’18: Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’17: Proceedings of the 22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’16: Proceedings of the 21st ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’15: Proceedings of the 20th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PPoPP’14: Proceedings of the 19th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 
+ PROMOTO 
+ PROMOTO’15: Proceedings of the 3rd Workshop on Programming for Mobile and Touch 
+ PROMOTO’14: Proceedings of the 2nd Workshop on Programming for Mobile and Touch 
+ PSP 
+ PSP’14: Proceedings of the 2014 Workshop on Privacy and Security in Programming 
+ PX 
+ PX’17: Proceedings of the 3rd ACM SIGPLAN International Workshop on Programming Experience 
+ REBLS 
+ REBLS’23: Proceedings of the 10th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’22: Proceedings of the 9th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’21: Proceedings of the 8th ACM SIGPLAN International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’20: Proceedings of the 7th International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’19: Proceedings of the 6th International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’18: Proceedings of the 5th International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’17: Proceedings of the 4th International Workshop on Reactive and Event-Based Languages and Systems 
+ REBLS’16: Proceedings of the 3rd International Workshop on Reactive and Event-Based Languages and Systems 
+ SCALA 
+ SCALA’21: Proceedings of the 12th ACM SIGPLAN International Symposium on Scala 
+ SCALA’20: Proceedings of the 11th ACM SIGPLAN Symposium on Scala 
+ SCALA’18: Proceedings of the 9th ACM SIGPLAN Symposium on Scala 
+ SCALA’17: Proceedings of the 8th ACM SIGPLAN Symposium on Scala 
+ SCALA’16: Proceedings of the 7th ACM SIGPLAN Symposium on Scala 
+ SCALA’15: Proceedings of the 6th ACM SIGPLAN Symposium on Scala 
+ SEPS 
+ SEPS’17: Proceedings of the 4th International Workshop on Software Engineering for Parallel Systems 
+ SEPS’16: Proceedings of the 3rd International Workshop on Software Engineering for Parallel Systems 
+ SEPS’15: Proceedings of the 2nd International Workshop on Software Engineering for Parallel Systems 
+ SLE 
+ SLE’24: Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’24: Proceedings of the 17th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’23: Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’22: Proceedings of the 15th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’21: Proceedings of the 14th ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’20: Proceedings of the 2020 ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’19: Proceedings of the 2019 ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’18: Proceedings of the 2018 ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’17: Proceedings of the 2017 ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’16: Proceedings of the 2016 ACM SIGPLAN International Conference on Software Language Engineering 
+ SLE’15: Proceedings of the 2015 ACM SIGPLAN International Conference on Software Language Engineering 
+ SOAP 
+ SOAP’24: Proceedings of the 13th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SOAP’23: Proceedings of the 12th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SOAP’22: Proceedings of the 11th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 
+ SOAP’21: Proceedings of the 10th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’20: Proceedings of the 9th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’19: Proceedings of the 8th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’17: Proceedings of the 6th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’16: Proceedings of the 5th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’15: Proceedings of the 4th ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SOAP’14: Proceedings of the 3rd ACM SIGPLAN International Workshop on State Of the Art in Program Analysis 
+ SPLASH 
+ SPLASH’23: Companion Proceedings of the 2023 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH’20: Companion Proceedings of the 2020 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’19: Companion Proceedings of the 2019 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’18: Companion Proceedings of the 2018 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’17: Companion Proceedings of the 2017 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’16: Companion Proceedings of the 2016 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’15: Companion Proceedings of the 2015 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH’14: Companion Proceedings of the 2014 ACM SIGPLAN International Conference on Systems, Programming, Languages and Applications: Software for Humanity 
+ SPLASH Companion 
+ SPLASH Companion’24: Companion Proceedings of the 2024 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH Companion’22: Companion Proceedings of the 2022 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH Companion’21: Companion Proceedings of the 2021 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ SPLASH-E 
+ SPLASH-E’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’24: Proceedings of the 2024 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’23: Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’22: Proceedings of the 2022 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’21: Proceedings of the 2021 ACM SIGPLAN International Symposium on SPLASH-E 
+ SPLASH-E’19: Proceedings of the 2019 ACM SIGPLAN Workshop on SPLASH-E 
+ SPLASH-E’18: Proceedings of the 2018 ACM SIGPLAN Workshop on SPLASH-E 
+ Scala 
+ Scala’22: Proceedings of the Scala Symposium 
+ TAPAS 
+ TAPAS’20: Proceedings of the 11th ACM SIGPLAN International Workshop on Tools for Automatic Program Analysis 
+ TRUST 
+ href="trust14.html" - TRUST’14: Proceedings of the 1st ACM SIGPLAN Workshop on Reproducible Research Methodologies and New Publication Models in Computer Engineering 
+ TyDe 
+ TyDe’24: Proceedings of the 9th ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’23: Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’22: Proceedings of the 7th ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’21: Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’20: Proceedings of the 4th ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’19: Proceedings of the 3rd ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’18: Proceedings of the 3rd ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’17: Proceedings of the 2nd ACM SIGPLAN International Workshop on Type-Driven Development 
+ TyDe’16: Proceedings of the 1st International Workshop on Type-Driven Development 
+ VEE 
+ href="vee22.html" - VEE’22: Proceedings of the 18th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee21.html" - VEE’21: Proceedings of the 17th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee20.html" - VEE’20: Proceedings of the 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee19.html" - VEE’19: Proceedings of the 15th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee18.html" - VEE’18: Proceedings of the 14th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee17.html" - VEE’17: Proceedings of the 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee16.html" - VEE’16: Proceedings of the 12th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee15.html" - VEE’15: Proceedings of the 11th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ href="vee14.html" - VEE’14: Proceedings of the 10th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments 
+ VMIL 
+ VMIL’24: Proceedings of the 16th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’24: Proceedings of the 16th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’23: Proceedings of the 15th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’22: Proceedings of the 14th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’21: Proceedings of the 13th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’20: Proceedings of the 11th International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’19: Proceedings of the 10th International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’18: Proceedings of the 10th International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’17: Proceedings of the 9th International Workshop on Virtual Machines and Intermediate Languages 
+ VMIL’16: Proceedings of the 8th International Workshop on Virtual Machines and Intermediate Languages 
+ WGP 
+ WGP’15: Proceedings of the 11th ACM SIGPLAN Workshop on Generic Programming 
+ WGP’14: Proceedings of the 10th ACM SIGPLAN Workshop on Generic Programming 
+ WODA 
+ WODA’15: Proceedings of the 13th International Workshop on Dynamic Analysis 
+ WOSC 
+ WOSC’14: Proceedings of the 2nd Workshop on Optimizing Stencil Computations 
+ WPMVP 
+ WPMVP’14: Proceedings of the 1st Workshop on Programming Models for SIMD/Vector Processing 
+ X10 
+ X10’16: Proceedings of the 6th ACM SIGPLAN Workshop on X10 
+ X10’15: Proceedings of the 5th ACM SIGPLAN Workshop on X10 
+
+Page generated Fri, 14 Mar 2025 00:11:07 +0000
+

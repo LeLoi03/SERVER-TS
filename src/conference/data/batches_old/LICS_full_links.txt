@@ -1,0 +1,181 @@
+Conference full name: IEEE Symposium on Logic in Computer Science (LICS)
+
+1. Website of LICS_3: https://lics.siglog.org/
+Website information of LICS_3:
+
+href="http://lics.siglog.org/index.html" - 
+href="http://lics.siglog.org/index.html" - ACM/IEEE Symposium on Logic in Computer Science
+href="http://lics.siglog.org/index.html" - LICS Home
+-href="http://lics.siglog.org/awards.html" - LICS Awards
+-href="http://lics.siglog.org/newsletters/index.html" - LICS Newsletters
+-href="http://lics.siglog.org/archive/conferences.html" - LICS Archive
+-href="http://lics.siglog.org/organization.html" - LICS Organization
+-href="http://lics.siglog.org/logic-confs/index.html" - Logic-Related Conferences
+The LICS Symposium is an annual international forum on theoretical and practical topics in computer science that relate to logic in a broad sense. 
+ Next LICS Conference: 
+ href="https://lics.siglog.org/lics25/" - LICS 2025
+will be held in Singapore (23 - 26 June 2025).Last LICS Conference: 
+ href="https://lics.siglog.org/lics24/" - LICS 2024
+was held in Tallinn (8 - 11 July 2024).Last FLoC Conference: 
+ The 7th Federated Logic Conference,FLoC 2022, was held in Haifa, Israel. 
+ Free access to LICS proceedings: 
+ href="https://lics.siglog.org/lics24/toc.html" - LICS 2024
+|href="https://lics.siglog.org/lics22/toc.html" - LICS 2022
+|href="https://lics.siglog.org/lics20/toc.html" - LICS 2020
+|href="https://lics.siglog.org/lics18/toc.html" - LICS 2018
+|href="https://lics.siglog.org/lics16/toc.html" - LICS 2016
+(via ACM OpenTOC).Past LICS and FLoC Conferences: 
+ href="http://lics.siglog.org/archive/conferences.html" - LICS Archive
+LICS Awards: 
+ LICS Test-of-Time Award: 
+ The IEEE Symposium on Logic in Computer Science established ahref="http://lics.siglog.org/archive/test-of-time-award.html" - Test-of-Time Award
+to recognize a small number of papers from the LICS proceedings from 20 years prior. 
+ Kleene Award for the Best Student Paper: 
+ In honour of the late S.C. Kleene, thehref="http://lics.siglog.org/archive/kleene-award.html" - Kleene Award
+is given for the best student paper accepted at LICS. 
+ LICS Policy against Discrimination and Harassment 
+ The open exchange of ideas and the freedom of thought and expression are central to the values and goals of LICS. For these reasons, LICS is committed to theACM Policy against Discrimination and Harassment. Harassment and discrimination in all forms listed in that policy are prohibited at LICS. Participants are urged to report incidents and promptly. Please see the policy document for information about how to report an incident.Navigation: 
+  
+ href="http://lics.siglog.org/awards.html" - LICS Awards
+href="http://lics.siglog.org/newsletters/index.html" - LICS Newsletters
+href="http://lics.siglog.org/archive/conferences.html" - LICS Archive | LICS Steering Committee 
+ href="http://lics.siglog.org/logic-confs/index.html" - List of Logic-Related Conferences
+href="http://lics.siglog.org/links.html" - Links to Logic-Related Webpages 
+ The LICS symposium is cosponsored byACM SIGLOGand theIEEE Computer Society'sTechnical Committee on Mathematical Foundations of Computingin cooperation with theAssociation for Symbolic Logic. 
+ Last modified: Mon Oct 21 15:49:33 BST 2024 
+ Sam Staton
+
+2. Website of LICS_3: https://lics.siglog.org/lics25/
+Website information of LICS_3:
+
+Toggle navigationHome 
+ href="cfp.php" - Call for Papers 
+ href="cfw.php" - Call for Workshops 
+ Fortieth Annual ACM/IEEE Symposium on 
+ Logic in Computer Science (LICS) 
+ Singapore • 23–26 June 2025 
+ Photo "Marina Bay, Financial District and Singapore River" by Ray in Manila (wikimedia). CC BY 2.0. 
+ The LICS Symposium is an annual international forum on theoretical and practical topics in computer science that relate to logic, broadly construed. LICS 2025 will be hosted in Singapore during 23–26 June 2025, with workshops 27 and 28 June.Submission-time rights statement information at [Plan S] forcOAlition Sparticipants. 
+  
+ Programme Chairs | Lars Birkedal and Barbara König 
+ Local Organizers | Frank Stephan and Luke Ong 
+ Titles and abstracts Due | 16 January 2025 
+ Full Papers Due | 23 January 2025 
+ Conference | 23 – 26 June 2025 
+ Workshops | 27 & 28 June 2025 
+ Invited speakers 
+ Anuj Dawar 
+ Hongseok Yang 
+ Rustan Leino | (tutorial) 
+ Christine Tasson | (tutorial) 
+ LICS Sponsorship 
+ The symposium is sponsored byACM SIGLOGand theIEEE Technical Committee on Mathematical Foundations of Computing.Website bySam Statonbased on abootstrapdesign byHartmut EilersandEric Koskinen.
+
+3. Website of LICS_3: https://lics.siglog.org/lics25/cfp.php
+Website information of LICS_3:
+
+Toggle navigationHome 
+ href="cfp.php" - Call for Papers 
+ href="cfw.php" - Call for Workshops 
+ Fortieth Annual ACM/IEEE Symposium on 
+ Logic in Computer Science (LICS) 
+ Singapore • 23–26 June 2025 
+ Call for Papers 
+ The 40th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2025) will be held in Singapore, from 23 – 26 June, with workshops 27 and 28 June.Thehref="http://lics.siglog.org" - LICS
+Symposium is an annual international forum on theoretical and practical topics in computer science that relate to logic, broadly construed. We invite submissions on topics that fit under that rubric. Suggested, but not exclusive, topics of interest include: 
+ automata theory, automated deduction, categorical models and logics, concurrency and distributed computation, constraint programming, constructive mathematics, database theory, decision procedures, description logics, domain theory finite model theory, formal aspects of program analysis, formal methods, foundations of computability, foundations of probabilistic, real-time and hybrid systems, games and logic, higher-order logic, knowledge representation and reasoning, lambda and combinatory calculi, linear logic, logic programming logical aspects of AI logical aspects of bioinformatics, logical aspects of computational complexity, logical aspects of quantum computation logical frameworks, logics of programs, modal and temporal logics, model checking, process calculi, programming language semantics, proof theory, reasoning about security and privacy, rewriting, type systems, type theory, and verification. 
+ Instructions to Authors 
+ Authors are required to submit a paper title and a short abstract of about 100 words in advance of submitting the full paper. The exact deadline time on these dates is given byanywhere on earth(AoE). 
+  
+ Titles and Short Abstracts Due | 16 January 2025 
+ Full Papers Due | 23 January 2025 
+ Author Response Period | 17–20 March 2025 
+ Author Notification | 8 April 2025 
+ Conference | 23 – 26 June 2025 
+ Workshops | 27 – 28 June 2025 
+ Submission deadlines are firm; late submissions will not be considered. All submissions will be electronic viahref="https://easychair.org/conferences/?conf=lics25" - https://easychair.org/conferences/?conf=lics25
+. 
+ Formatting instructions:Every full paper must be submitted in the IEEE Proceedings 2-column 10pt format and may be at most 12 pages, excluding references. Please use IEEEtran.cls version V1.8b, updated 2024, LaTeX style files are available atieee.org. 
+ The paper must be in English and provide sufficient detail to allow the program committee to assess the merits of the paper. It should begin with a succinct statement of the issues a summary of the main results, and a brief explanation of their significance and relevance to the conference and to computer science, all phrased for the non-specialist. Technical development directed to the specialist should follow. References and comparisons with related work must be included. (If necessary detailed proofs of technical results may be included in a clearly-labeled appendix, to be consulted at the discretion of program committee members.) Submissions not conforming to the above requirements will be rejected without further consideration. Papers authored or co-authored by members of the program committee are allowed, with at most one submission per PC member. 
+ Results must be unpublished and not submitted for publication elsewhere, including the proceedings of other symposia or workshops. The program chair must be informed, in advance of submission, of any closely related work submitted or about to be submitted to a conference or journal. Authors of accepted papers are expected to sign copyright release forms. One author of each accepted paper is expected to register and present the paper at the conference. Remote presentations can be organized for authors who are not to be able to attend the meeting. 
+ LICS 2025 will use a lightweight double-blind reviewing process. Following this process means that reviewers will not see the authors' names or affiliations as they initially review a paper. The authors' names will then be revealed to the reviewers only once their reviews have been submitted. 
+ To facilitate this process, submitted papers must adhere to the following: 
+ Author names and institutions must be omitted and 
+ References to the authors' own related work should be in the third person (e.g., not "We build on our previous work ..." but rather "We build on the work of ..."). 
+ The purpose of this process is to help the reviewers come to an initial judgment about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Nothing should be done in the name of anonymity that weakens the submission, makes the job of reviewing the paper more difficult, or interferes with the process of disseminating new ideas. For example, important background references (to papers or tools) should not be omitted or anonymized, even if they are written by the same authors and share common ideas, techniques, or infrastructure. Authors should feel free to disseminate their ideas or draft versions of their paper as they normally would. For instance, authors may post drafts of their papers on the web or give talks on their research ideas. 
+ Kleene Award, Distinguished Papers and Special Issues 
+ An award in honor of the late Stephen C. Kleene will be given for the best student paper(s), as judged by the program committee. 
+ Around 10% of accepted papers will be selected as distinguished papers. These are papers that, in the view of the LICS program committee, make exceptionally strong contribution to the field and should be read by a broad audience due their relevance, originality, significance and clarity. 
+ Full versions of up to three accepted papers, to be selected by the program committee, will be invited for submission to the Journal of the ACM. Additional selected papers will be invited to a special issue of Logical Methods in Computer Science. 
+ Publication 
+ The official publication date may differ from the first day of the conference. The official publication date may affect the deadline for any patent filings related to published work. We will clarify the official publication date in due course. 
+ Program Committee Chairs 
+ Lars Birkedal | , | Aarhus University 
+ Barbara König | , | University of Duisberg-Essen 
+ Program Committee 
+ Amal Ahmed | Northeastern University 
+ Thorsten Altenkirch | University of Nottingham 
+ Parosh Aziz Abdulla | Uppsala University 
+ Giorgio Bacci | Aalborg University 
+ Christel Baier | TU Dresden 
+ Stephanie Balzer | Carnegie Mellon University 
+ Mikołaj Bojańczyk | University of Warsaw 
+ Filippo Bonchi | University of Pisa 
+ Patricia Bouyer | CNRS 
+ Luis Caires | Técnico Lisboa and INESC-ID 
+ Hubie Chen | King's College London 
+ Agata Ciabattoni | TU Wien 
+ Thomas Ehrhard | Université Paris Cité, CNRS, Inria,CNRS 
+ Diego Figueira | CNRS & LaBRI, Université Bordeaux 
+ Wan Fokkink | Vrije Universiteit Amsterdam 
+ Daniel Gratzer | Aarhus University 
+ Chris Heunen | The University of Edinburgh 
+ Guilhem Jaber | Nantes Université 
+ Patricia Johann | Appalachian State University 
+ Robbert Krebbers | Radboud University Nijmegen 
+ Stephan Kreutzer | TU Berlin 
+ James Laird | University of Bath 
+ Stefan Milius | FAU Erlangen-Nürnberg 
+ Alexandre Miquel | Universidad de la República (Montevideo) 
+ Rasmus Ejlers Møgelberg | IT University of Copenhagen 
+ Anders Mörtberg | Stockholm University 
+ Gopalan Nadathur | University of Minnesota 
+ Frank Pfenning | Carnegie Mellon University 
+ André Platzer | Karlsruhe Institute of Technology 
+ Jakob Rehof | TU Dortmund 
+ Ana Sokolova | University of Salzburg 
+ Kristina Sojakova | Inria 
+ Sam Staton | University of Oxford 
+ Nicolas Tabareau | Inria 
+ Joseph Tassarotti | New York University 
+ Takeshi Tsukada | Chiba University 
+ Nikos Tzevelekos | Queen Mary University of London 
+ Publicity and Proceedings Chair 
+ Sam Staton | , | Univ. Oxford 
+ LICS Workshop Chair 
+ Valentin Blot | , | Inria and ENS Paris-Saclay, France 
+ Local Organizer 
+ Frank Stephan | , | NUS, Singapore 
+ Steering Committee 
+ C Baier L Birkedal V Blot U Dal Lago J Esparza D Fisman M Gaboardi M Grohe J-P Katoen N Kobayashi B König O Kupferman D Miller B Pientka A Silva P Sobocinski S Staton F Stephan A Tiu I Walukiewicz (chair). 
+ LICS Sponsorship 
+ The symposium is sponsored byACM SIGLOGand theIEEE Technical Committee on Mathematical Foundations of Computing.Website bySam Statonbased on abootstrapdesign byHartmut EilersandEric Koskinen.
+
+4. Website of LICS_3: https://lists.seas.upenn.edu/pipermail/types-announce/2024/011615.html
+Website information of LICS_3:
+
+[TYPES/announce] LICS 2025 Call for Papers and Call for Workshops 
+ Sam Statonhref="mailto:types-announce%40LISTS.SEAS.UPENN.EDU?Subject=Re:%20Re%3A%20%5BTYPES/announce%5D%20LICS%202025%20Call%20for%20Papers%20and%20Call%20for%20Workshops&In-Reply-To=%3CE788B364-5675-4038-82BA-AEA62D0EFFAA%40cs.ox.ac.uk%3E" - sam.staton at cs.ox.ac.uk
+ 
+ Fri Sep 27 12:03:55 EDT 2024Previous message (by thread): | href="011614.html" - [TYPES/announce] OOPSLA 2025 R1 Call For Papers 
+ Next message (by thread): | href="011616.html" - [TYPES/announce] PADL 2025: Second Call for Papers 
+ Messages sorted by: | [ date ] | [ thread ] | [ subject ] | href="author.html#11615" - [ author ] 
+ CALL FOR PAPERS and CALL FOR WORKSHOP PROPOSALS. Here is both a call for papers (deadline 16/23 Jan) and a call for workshop proposals (30 Nov) for LICS 2025 (June 2025). Fortieth Annual ACM/IEEE Symposium on LOGIC IN COMPUTER SCIENCE (LICS) Singapore, June 2025href="https://urldefense.com/v3/__https://lics.siglog.org/lics25__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dCvzbSlHQ$" - https://urldefense.com/v3/__https://lics.siglog.org/lics25__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dCvzbSlHQ$
+href="https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfp.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDe12f6cA$" - https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfp.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDe12f6cA$
+href="https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfw.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDfADNSdw$" - https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfw.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDfADNSdw$
+Conference: 23-26 June 2025. Workshops: 27 and 28 June 2025. SCOPE The LICS Symposium is an annual international forum on theoretical and practical topics in computer science that relate to logic, broadly construed. We invite submissions on topics that fit under that rubric. Suggested, but not exclusive, topics of interest include: automata theory, automated deduction, categorical models and logics, concurrency and distributed computation, constraint programming, constructive mathematics, database theory, decision procedures, description logics, domain theory, finite model theory, formal aspects of program analysis, formal methods, foundations of computability, foundations of probabilistic, real-time and hybrid systems, games and logic, higher-order logic, knowledge representation and reasoning, lambda and combinatory calculi, linear logic, logic programming, logical aspects of AI, logical aspects of bioinformatics, logical aspects of computational complexity, logical aspects of quantum computation, logical frameworks, logics of programs, modal and temporal logics, model checking, process calculi, programming language semantics, proof theory, reasoning about security and privacy, rewriting, type systems, type theory, and verification. -- LICS CALL FOR PAPERS IMPORTANT DATES FOR PAPERS Authors are required to submit a paper title and a short abstract of about 100 words in advance of submitting the full paper. The exact deadline time on these dates is anywhere on earth (AoE). Titles and Short Abstracts Due: 16 January 2025 AoE Full Papers Due: 23 January 2025 AoE Author Feedback/Rebuttal Period: 17-20 March 2025 Author Notification: 8 April 2025 Conference: 23-26 June 2025. Workshops: 27 and 28 June 2025. Submission deadlines are firm; late submissions will not be considered. All submissions will be electronic via easychair. PAPER SUBMISSION INSTRUCTIONS Submissions should use IEEE Proceedings 2-column 10pt format and may be at most 12 pages, excluding references. Formatting instructions, latex style files and further submission information is athref="https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfp.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDe12f6cA$" - https://urldefense.com/v3/__https://lics.siglog.org/lics25/cfp.php__;!!IBzWLUs!T0sU9JDzaETXRnTHlSiD29IJqwFO8D79tyWQYKYuR5K2csF5-QmCGK7LWzeMQqVY92USL9HiMIWvgLEOA4ebwFnR-pjO3dDe12f6cA$
+. LICS 2025 will use a lightweight double-blind reviewing process. Please see the website for further details and requirements from the double-blind process. The official publication date may differ from the first day of the conference. The official publication date may affect the deadline for any patent filings related to published work. We will clarify the official publication date in due course. Programme chairs: Lars Birkedal and Barbara König. -- LICS CALL FOR WORKSHOPS IMPORTANT DATES FOR WORKSHOPS: Submission of workshop proposals: November 30, 2024 Notification of the accepted workshops: December, 2024 Program of the workshops ready: May 26, 2025 LICS conference: June 23-26, 2025 Workshops: June 27-28, 2025 We invite proposals for workshops on topics of interest to the LICS conference. Typically, LICS workshops feature a number of invited speakers and a number of contributed presentations. LICS workshops do not usually produce formal proceedings. However, in the past there have been special issues of journals based in part on certain LICS workshops. The conference will provide a room, internet connection and help with some local organization. The workshops selection committee consists of the LICS Workshops Chair (Valentin Blot), the LICS General Chair, the LICS PC Chairs and the LICS Conference Chairs. Proposals must be limited to three pages, should be submitted to lics25-workshops at valentinblot.org and should include: - Workshop's name and URL if already available or from previous years - A short scientific summary and justification of the proposed topic; this should include a discussion of the particular benefits of the topic to the LICS community - A list of workshop organizers with contact information - Potential invited speakers (how many you would expect and, if possible, tentative names) - Procedures for selecting presentations (if you plan a call for contributed talks or papers followed by a selection procedure, the submission date should be scheduled after the conference's notification date - Apr 8, 2025 - and the notification should take place before the early registration deadline - late April / early May) - Plans for dissemination, if any (e.g. proceeding, journal special issue, etc.) - Proposed format and agenda (e.g. paper presentations, tutorials, demo sessions) - The proposed duration (e.g. 1/2, 1, 2 day(s)) - Expected number of participants, providing some data on previous years, if the workshop has already been organised in the past.Previous message (by thread): | href="011614.html" - [TYPES/announce] OOPSLA 2025 R1 Call For Papers 
+ Next message (by thread): | href="011616.html" - [TYPES/announce] PADL 2025: Second Call for Papers 
+ Messages sorted by: | [ date ] | [ thread ] | [ subject ] | href="author.html#11615" - [ author ] 
+ More information about the Types-announce mailing list
+

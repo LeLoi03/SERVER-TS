@@ -1,0 +1,31 @@
+{
+  "Conference dates": "June 30 - July 3, 2025",
+  "Year": "2025",
+  "Location": "Galatasaray University, Istanbul, Türkiye",
+  "City-State-Province": "Istanbul",
+  "Country": "Türkiye",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for abstract and paper submission to the General Tracks": "March 28, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "April 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Submission deadline for the final version of the Proceeding Paper": "May 8, 2025"
+  },
+  "Registration Date": {
+    "Registration and payment ends": "May 8, 2025"
+  },
+  "Other Date": {
+    "Start of Workshop proposal submission": "October 7, 2024",
+    "Deadline for Workshop proposal submission": "November 7, 2024",
+    "Start of Abstract and Paper Submission": "November 8, 2024",
+    "Deadline for reviewers": "April 15, 2025"
+  },
+  "Topics": "Computational Methods, Algorithms and Scientific Application, High-Performance Computing and Networks, Geometric Modelling, Graphics and Visualization, Advanced and Emerging Applications, Information Systems and Technologies, Urban and Regional Planning",
+  "Publisher": "Springer",
+  "Summary": "The 25th International Conference on Computational Science and Its Applications (ICCSA 2025) will be held on June 30-July 3, 2025, in collaboration with Galatasaray University, Istanbul, Türkiye. ICCSA offers an opportunity to discuss new issues, tackle complex problems, and find advanced solutions to enable shaping new trends in Computational Science.",
+  "Call for Papers": "# ICCSA 2025: Call for Papers\n\nThe 25th International Conference on Computational Science and Its Applications (ICCSA 2025) will be held from **June 30 - July 3, 2025 at Galatasaray University in Istanbul, Türkiye.**\n\n## Conference Themes\n\nThe ICCSA 2025 Conference themes, grouped in six tracks, are the following (but are not limited to):\n\n1.  **Track: Computational Methods, Algorithms and Scientific Application**\n2.  **Track: High-Performance Computing and Networks**\n3.  **Track: Geometric Modelling, Graphics and Visualization**\n4.  **Track: Advanced and Emerging Applications**\n5.  **Track: Information Systems and Technologies**\n6.  **Track: Urban and Regional Planning**\n\n## Paper Submission\n\nTo submit a paper, please connect to the Submission site: [https://ess.iccsa.org](https://ess.iccsa.org)\n\nOnly papers submitted through the electronic system and strictly adhering to the relevant format will be considered for reviewing and publication.\n\nThe submission may fall into the following categories:\n\n*   General Tracks and Workshops' Full Papers\n*   General Tracks and Workshops' Short Papers\n*   PhD Showcase Papers\n\n### General Tracks and Workshops' Full Papers\n\nThe submitted paper must be between 12 and 18 pages long for LNCS publication and should be formatted according to the LNCS rules. Please consult [https://iccsa.org/instructions-for-authors](https://iccsa.org/instructions-for-authors) for formatting information and templates.\n\n### Short Papers\n\nReporting preliminary results of ongoing research. The submitted paper must be between 8 and 11 pages long and formatted according to LNCS rules. The Short Papers will be presented during the conference and published by LNCS.\n\n### PhD Showcase Papers\n\nReporting ongoing research that has already achieved significant results, primarily by PhD students and junior researchers. The submitted paper must be between 10 to 18 pages long and formatted according to LNCS rules. The PhD Showcase Papers will be presented during the conference and will be published by LNCS.\n\nEach paper must deal with original and unpublished work, not submitted for publication elsewhere. Each paper will be reviewed by at least three experts in the relevant field according to the Single Blind review method, ensuring the publication of only top-quality contributions.\n\nWhen a paper is accepted, at least one of the authors must register for the conference and deliver the related talk. Failure to do so will result in the application being rejected to attend next year's conference and the paper being excluded from the current year's proceedings.\n\n## Important Dates\n\n*   **Start of Workshop proposal submission:** October 7, 2024\n*   **Deadline for Workshop proposal submission:** November 7, 2024\n*   **Start of Abstract and Paper Submission:** November 8, 2024\n*   **Deadline for abstract and paper submission to the General Tracks:** March 28, 2025\n*   **Deadline for reviewers:** April 15, 2025\n*   **Notification of Acceptance:** April 20, 2025\n*   **Submission deadline for the final version of the Proceeding Paper:** May 8, 2025\n*   **Registration and payment ends:** May 8, 2025\n*   **ICCSA 2025 Conference:** June 30 - July 3, 2025\n\n## Workshops\n\nRefer to the webpage [https://iccsa.org/workshops](https://iccsa.org/workshops) for the updated list of Workshops.\n\n## Proceedings\n\nThe proceedings of the Conference will be published by Springer (Lecture Notes in Computer Science series).\n\n## Contact Information\n\n*   **Yeliz Karaca**\n    *   UMass Chan Medical School, University of Massachusetts\n    *   Phone: +1 508-856-8989\n    *   Fax: + 1 508-856-6778\n    *   Email: yeliz.karaca@ieee.org (primary email address); yeliz.karaca@umassmemorial.org\n*   **Osvaldo Gervasi**\n    *   Department of Mathematics and Computer Science, University of Perugia\n    *   Phone: +39-075-5855048\n    *   Fax: +39-075-5855024\n    *   Email: osvaldo.gervasi@unipg.it\n    *   URL: https://ogervasi.unipg.it"
+}

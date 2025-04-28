@@ -1,0 +1,43 @@
+{
+"Conference dates": "March 31 - April 4, 2025",
+"Year": "2025",
+"Location": "Odense, Denmark",
+"City-State-Province": "Odense",
+"Country": "Denmark",
+"Continent": "Europe",
+"Type": "Offline",
+"Submission Date": {
+"Research Papers": "November 15, 2024",
+"Abstract Submission": "November 8, 2024",
+"Software Architecture in Practice": "December 20, 2024",
+"Artifacts Evaluation Track": "December 20, 2024",
+"Early Career Track": "December 20, 2024",
+"Journal First": "December 20, 2024",
+"New and Emerging Ideas": "December 20, 2024",
+"Workshops": "December 23, 2024",
+"Poster Track": "January 4, 2025",
+"Working Sessions": "January 22, 2025"
+},
+"Notification Date": {
+"Research Papers": "December 15, 2024",
+"Poster Track": "January 20, 2025",
+"Software Architecture in Practice": "January 20, 2025",
+"New and Emerging Ideas": "January 20, 2025",
+"Early Career Track": "January 20, 2025",
+"Artifacts Evaluation Track": "January 20, 2025",
+"Journal First": "January 20, 2025",
+"Workshops": "January 27, 2025"
+},
+"Camera-ready Date": {
+"Software Architecture in Practice": "January 27, 2025",
+"New and Emerging Ideas": "January 27, 2025",
+"Early Career Track": "January 27, 2025",
+"Journal First": "January 27, 2025",
+"Poster Track": "January 27, 2025",
+"Workshops": "January 27, 2025",
+"Research Papers": "January 27, 2025"
+},
+"Topics": "Software Architecture",
+"Summary": "The International Conference on Software Architecture (ICSA 2025), supported by IEEE, is the premier event for software architecture. ICSA 2025 will take place in Odense, Denmark, between March 31st and April 4th, 2025. The theme is \"Architecting for the next generation of intelligent systems\"",
+"Call for Papers": "# ICSA 2025: Call for Papers\n\nThe 22nd IEEE International Conference on Software Architecture (ICSA 2025) will take place in **Odense, Denmark, from March 31st to April 4th, 2025.**\n\nICSA is the premier event for software architecture, uniting researchers, practitioners, and educators to shape the future of software architecture.\n\n## Theme\n\nArchitecting for the next generation of intelligent systems\n\n## Tracks\n\nICSA 2025 will include the following tracks:\n\n*   Keynote\n*   Research Papers\n*   Working Sessions\n*   Software Architecture in Practice\n*   New and Emerging Ideas\n*   Artifacts Evaluation Track\n*   Early Career Track\n*   Journal First\n*   Poster Track\n*   Tutorials/Tech Briefings\n*   Workshops\n\n## Important Dates\n\nAll deadlines are 11:59 PM AoE (Anywhere on Earth) unless otherwise specified.\n\n### Research Papers\n\n*   **Abstract Submission:** November 8, 2024\n*   **Paper Submission:** November 15, 2024\n*   **Notification of Acceptance:** December 15, 2024\n*   **Camera-ready Submission:** January 27, 2025\n\n### Software Architecture in Practice\n\n*   **Paper Submission:** December 20, 2024\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### New and Emerging Ideas\n\n*   **Paper Submission:** December 20, 2024\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### Artifacts Evaluation Track\n\n*   **Artifact Registration:** December 16, 2024\n*   **Artifact Submission:** December 20, 2024\n*   **Notification of Acceptance:** January 20, 2025\n\n### Early Career Track\n\n*   **Paper Submission:** December 20, 2024\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### Journal First\n\n*   **Proposal Submission:** December 20, 2024\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### Poster Track\n\n*   **Paper Submission:** January 4, 2025\n*   **Notification of Acceptance:** January 20, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### Workshops\n\n*   **Workshop Proposal Submission:** September 23, 2024\n*   **Workshop Proposal Notification:** September 27, 2024\n*   **Paper Submission (extended deadline for some workshops):** January 4, 2025\n*   **Notification of Acceptance:** January 27, 2025\n*   **Camera-ready Submission:** January 27, 2025\n\n### Working Sessions\n\n*   **Submission Deadline:** January 22, 2025"
+}

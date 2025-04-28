@@ -1,0 +1,32 @@
+```json
+{
+  "Conference dates": "July 14-17, 2025",
+  "Year": "2025",
+  "Location": "Changhua, Taiwan",
+  "City-State-Province": "Changhua",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline for all papers (Full paper, Short paper, Discussion paper, and DC paper)": "January 12, 2025",
+    "Extended submission deadline for all papers (Full paper, Short paper, and Discussion paper)": "February 7, 2025",
+    "Extended submission deadline for DC paper": "February 21, 2025"
+  },
+  "Notification Date": {
+    "Authors’ Notification on the review process results": "April 4, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Camera-Ready Manuscript and IEEE Copyright Form submission": "May 2, 2025"
+  },
+  "Registration Date": {
+    "Author’s registration deadline": "May 2, 2025",
+    "Non-authors’ early bird registration deadline": "May 23, 2025",
+    "In-person non-author registration deadline": "June 13, 2025",
+    "Online non-author registration deadline": "June 27, 2025"
+  },
+  "Topics": "Advanced Learning Technologies, Technology-enhanced Learning, Open Learning, Adaptive Learning, Personalised Learning, Mobile Applications, Digital Games, Intelligent Toys, Computer Supported Collaborative Learning, Big Data in Education, Learning Analytics, Technology-Enhanced STEM Education, Technology-Enhanced Language Learning, Technology-supported education for people with disabilities, Artificial Intelligence, Smart Learning Environments, Augmented Reality, Virtual Worlds, Motivational Aspects, Affective Aspects, Technology-Enhanced Assessment",
+  "Publisher": "IEEE Computer Society Conference Publishing Services",
+  "Summary": "The 25th IEEE International Conference on Advanced Learning Technologies (ICALT 2025) will be held in Changhua, Taiwan from July 14-17, 2025.  The conference invites submissions reporting original academic or industrial research in the area of Advanced Learning Technologies and Technology-enhanced Learning.",
+  "Call for Papers": "# ICALT 2025: Call for Papers\n\nThe 25th IEEE International Conference on Advanced Learning Technologies (ICALT 2025) will be held in **Changhua, Taiwan, from July 14-17, 2025.**\n\nThe conference invites submissions of papers reporting original academic or industrial research in the area of Advanced Learning Technologies and Technology-enhanced Learning.\n\n## Tracks\n\nWe invite submission of papers according to the following tracks:\n\n*   Doctoral Consortium\n*   Track 1. Technologies for Open Learning and Education (i-OPENLearn)\n*   Track 2. Adaptive and Personalised Technology-Enhanced Learning (APTeL)\n*   Track 3. Mobile Applications of Learning Technologies for Education and Development (MALT)\n*   Track 4. Digital Game and Intelligent Toy Enhanced Learning (DIGITEL)\n*   Track 5. Computer Supported Collaborative Learning (CSCL)\n*   Track 6. Big Data in Education and Learning Analytics (BDELA)\n*   Track 7. Technology-Enhanced Science, Technology, Engineering and Math Education (TeSTEM)\n*   Track 8. Technology-Enhanced Language Learning (TELL)\n*   Track 10. Technology-supported education for people with disabilities (TeDISABLE)\n*   Track 11. Artificial Intelligence and Smart Learning Environments (AISLE)\n*   Track 12. Augmented Reality and Virtual Worlds in Education and Training (ARVWET)\n*   Track 13. Motivational and Affective Aspects in Technology-enhanced Learning (MA-TEL)\n*   Track 14. Technology-Enhanced Assessment in Formal and Informal Education (TeASSESS)\n\n## Submission Guidelines\n\nAll papers will be double-blindly peer-reviewed.  Complete papers are required to be reviewed. The expected types of submissions include:\n\n*   Full paper: 5 pages\n*   Short paper: 3 pages\n*   Discussion paper: 2 pages\n*   Doctoral Consortium paper: 3 pages\n\nImportant Note: These page limits include authors’ information, abstract (no more than 200 words), all tables, figures, references, etc.\n\nPlease submit your manuscript (in only PDF format) at: [https://easychair.org/conferences/?conf=icalt2025](https://easychair.org/conferences/?conf=icalt2025)\n\n## Important Dates\n\n(Dates are in Pacific Time and at 23:59, i.e., 11:59 PM in the night on the day)\n\n*   **Submission deadline for all papers:** January 12, 2025\n*   **Extended submission deadline for all papers (Full paper, Short paper, and Discussion paper):** February 7, 2025\n*   **Extended submission deadline for DC paper:** February 21, 2025\n*   **Authors’ Notification on the review process results:** April 4, 2025\n*   **Author’s registration deadline:** May 2, 2025\n*   **Final Camera-Ready Manuscript and IEEE Copyright Form submission:** May 2, 2025\n*   **Non-authors’ early bird registration deadline:** May 23, 2025\n*   **In-person non-author registration deadline:** June 13, 2025\n*   **Online non-author registration deadline:** June 27, 2025\n*   **ICALT 2025 Conference:** July 14-17, 2025\n\n## Keynote Speakers\n\n*   Wen-Lian HSU, Asia University, Taiwan\n*   KINSHUK, University of North Texas, United States\n*   Tanja MITROVIC, University of Canterbury, New Zealand"
+}
+```

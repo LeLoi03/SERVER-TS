@@ -1,0 +1,507 @@
+Conference full name: Workshop on Programming Languages and Operating Systems (PLOS)
+
+1. Website of PLOS_3: https://plos-workshop.org/
+Website information of PLOS_3:
+
+PLOS: Workshop on Programming Languages and Operating Systems 
+ This page should automatically redirect you to the latest PLOS workshop page. If HTML redirection does not work with your browser you could also click on the followinglink.
+
+2. Website of PLOS_3: https://sites.google.com/view/pierreolivier/publications
+Website information of PLOS_3:
+
+Search this site 
+ Embedded Files 
+ Skip to main content 
+ Skip to navigation 
+ Pierre OlivierHome 
+ Publications 
+ Software 
+ Teachings 
+ Curriculum Vitæ 
+ Contact & Location 
+ Pierre Olivier 
+ Publications 
+ My Google scholar profile is availablehere. 
+ Hugo Lefeuvre, Nathan Dautenhahn, David Chisnall, and Pierre Olivier,“SoK: Software Compartmentalization”,46th IEEE Symposium on Security and Privacy (S&P), 2025 [paper]. 
+ Jalil Boukhobza, Pierre Olivier, Wen Sheng Lim, Liang-Chi Chen, Yun-Shan Hsieh, Shin-Ting Wu, Chien-Chung Ho, Po-Chun Huang, and Yuan-Hao Chang,"A Survey on Flash-Memory Storage Systems: A Host-Side Perspective", ACM Transactions on Storage, 2025 [paper]. 
+ Hugo Lefeuvre, Gaulthier Gain, Vlad Bădoiu, Daniel Dinca, Vlad Schiller, Costin Raiciu, Felipe Huici, and Pierre Olivier,“Loupe: Driving the Development of OS Compatibility Layers”,29th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), 2024 [paper][website]. 
+ Stella Bitchebe, Yves Kone, Pierre Olivier, Jalil Boukhobza, Yérom-David Bromberg, Daniel Hagimont, and Alain Tchana,“GuaNary: Efficient Buffer Overflow Detection In Virtualized Clouds Using Intel EPT-based Sub-Page Write Protection Support”, 50th ACM Special Interest Group on Measurement and Evaluation Annual Conference (SIGMETRICS), 2024 [paper]. 
+ Gaspard Thévenon, Kevin Nguetchouang, Kahina Lazri, Alain Tchana, and Pierre Olivier, "B-Side: Binary-Level Static System Call Identification",25th ACM/IFIP International Middleware Conference (Middleware), 2024 [paper]. 
+ Pierre Olivier, A K M Fazla Mehrab, Sandeep Errabelly, Stefan Lankes, Mohamed Lamine Karaoui, Robert Lyerly, Sang-Hoon Kim, Antonio Barbalace, and Binoy Ravindran,“HEXO: Offloading Long-Running Compute- and Memory-Intensive Workloads on Low-Cost, Low-Power Embedded Systems”,IEEE Transactions on Cloud Computing, 2024 [paper]. 
+ Kevin Nguetchouang, Stella Bitchebe, Theophile Dubuc, Mar Callau-Zori, Christophe Hubert, Pierre Olivier, and Alain Tchana,"SVD: A Scalable Virtual Machine Disk Format",IEEE Transactions on Cloud Computing, 2024 [paper]. 
+ B. Heerekar, C. Philippidis, H-R. Chuang, P. Olivier, A. Barbalace, and B. Ravindran,“Offloading Datacenter Jobs to RISC-V Hardware for Improved Performance and Power Efficiency”,17th ACM International Conference on Systems and Storage (SYSTOR), 2024 [href="https://www.ssrg.ece.vt.edu/papers/systor24.pdf" - paper
+]. 
+ Théophile Dubuc, Pascale Vicat-Blanc, Pierre Olivier, Mar Callau-Zori, Christophe Hubert, Alain Tchana,"TrackIops : Real-Time NFS Performance Metrics Extractor",Workshop on Challenges and Opportunities of Efficient and Performant Storage Systems (CHEOPS), 2024 [href="https://perso.ens-lyon.fr/theophile.dubuc/files/CHEOPS24-TrackIOps.pdf" - paper
+]. 
+ Hugo Lefeuvre, Vlad-Andrei Bădoiu, Yi Chien, Felipe Huici, Nathan Dautenhahn, and Pierre Olivier, "Assessing the Impact of Interface Vulnerabilities in Compartmentalized Software",Network and Distributed System Security (NDSS), 2023 [paper][website]. 
+ Ho-Ren Chuang, Karim Manaouil, Tong Xing, Antonio Barbalace, Pierre Olivier, Balvansh Heerekar, and Binoy Ravindran, "Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes?",European Conference on Computer Systems (EuroSys), 2023 [href="https://www.ssrg.ece.vt.edu/papers/eurosys23.pdf" - paper
+] [website]. 
+ Hugo Lefeuvre, David Chisnall, Marios Kogias, and Pierre Olivier,"Towards (Really) Safe and Fast Confidential I/O",19th Workshop on Hot Topics in Operating Systems (HotOS), 2023 [paper]. 
+ John Alistair Kressel, Hugo Lefeuvre, and Pierre Olivier,“Software Compartmentalization Trade-Offs with Hardware Capabilities”,Workshop on Programming Languages and Operating Systems (PLOS), 2023 [paper][website]. 
+ Yi Chien, Vlad Bădoiu, Yudi Yang, Yuqian Huo, Kelly Kaoudis, Hugo Lefeuvre, Pierre Olivier, and Nathan Dautenhahn,“CIVSCOPE: Analyzing Potential Memory Corruption Bugs in Compartment Interfaces by Establishing Lower Bound and Upper Bound”,Workshop on Kernel Isolation, Safety and Verification (KISV), 2023 [paper]. 
+ (Distinguished artifacts award) Hugo Lefeuvre, Vlad-Andrei Bădoiu, Alexander Jung, Ștefan Lucian Teodorescu, Sebastian Rauch, Felipe Huici, Costin Raiciu, and Pierre Olivier,"FlexOS: Towards Flexible OS Isolation",27th Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS),2022 [paper] [website] [artifacts]. 
+ Tong Xing, Antonio Barbalace, Pierre Olivier, Mohamed L. Karaoui, Wei Wang, and Binoy Ravindran,"H-Container: Enabling Heterogeneous-ISA Container Migration in Edge Computing", ACM Transactions on Computer Systems, 2022 [paper] [website]. 
+ Kaled Alshmrany, Ahmed Bhayat, Franz Brauße, Lucas Cordeiro, Konstantin Korovin, Tom Melham, Mustafa A. Mustafa, Pierre Olivier, Giles Reger, and Fedor Shmarov, "Position Paper: Towards a Hybrid Approach to Protect Against Memory Safety Vulnerabilities", IEEE Secure Development Conference (SecDev), 2022 [paper]. 
+ Pierre Jacquot, Pierre Olivier, Christian Perez, and Abdulrahman Azab,"Analyzing Unikernel Support for HPC: Experimental Study of OpenMP",17th Workshop on Virtualization in High Performance Cloud Computing (VHPC), 2022 [paper]. 
+ Pierre Olivier, Hugo Lefeuvre, Daniel Chiba, Stefan Lankes, Changwoo Min, and Binoy Ravindran, "A Syscall-Level Binary-Compatible Unikernel",IEEE Transactions on Computers, 2021 [href="https://www.ssrg.ece.vt.edu/papers/tc21.pdf" - paper
+] [website]. 
+ Edson Horta, Ho-Ren. Chuang, Naarayanan Rao VSathish, Cesar Philippidis, Antonio Barbalace, Pierre Olivier, and Binoy Ravindran, "Xar-Trek: Run-time Execution Migration among FPGAs and Heterogeneous-ISA CPUs",22nd ACM/IFIP International Middleware Conference(MIDDLEWARE), 2021 [href="https://www.ssrg.ece.vt.edu/papers/middleware21.pdf" - paper
+]. 
+ Hugo Lefeuvre,Vlad-Andrei Bădoiu, Ștefan Teodorescu,Pierre Olivier,Tiberiu Mosnoi, Răzvan Deaconescu, Felipe Huici, andCostin Raiciu,“FlexOS: Making OS Isolation Flexible”,18th Workshop on Hot Topics in Operating Systems (HotOS), 2021 [href="https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s05-lefeuvre.pdf" - paper
+] [talk video] 
+ Hugo Lefeuvre, Gaulthier Gain, Daniel Dinca, Alexander Jung, Simon Kuenzer,Vlad-Andrei Bădoiu, Răzvan Deaconescu, Laurent Mathy, Costin Raiciu, Pierre Olivier, and Felipe Huici,"Unikraft and the Coming of Age of Unikernels",USENIX ;login:, 2021 [paper] 
+ Alexander Jung, Hugo Lefeuvre, Charalampos Rotsos, Pierre Olivier, Daniel Onoro-Rubio, Mathias Niepert, and Felipe Huici,“Wayfinder: Towards Automatically Deriving Optimal OS Configurations”,12th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys), 2021 [paper] [talk video] [website] 
+ Mohammed Islam Naas, François Trahay, Alexis Colin, Pierre Olivier, Stéphane Rubini, Frank Singhoff, and Jalil Boukhobza,“EZIOTracer: Unifying Kernel and User Space I/OTracing for Data-Intensive Applications”,Workshop on Challenges and Opportunities of Efficient and Performant Storage Systems (CHEOPS), 2021 [paper] [talk video] 
+ (Best paper award) Freek Verbeek, Pierre Olivier, and Binoy Ravindran, “Sound C Code Decompilation for a subset of x86-64 Binaries”,18th International Conference on Software Engineering and Formal Methods (SEFM), 2020 [href="https://www.ssrg.ece.vt.edu/papers/sefm20.pdf" - paper
+] 
+ Xiaoguang Wang, SengMing Yeoh, Robert Lyerly, Pierre Olivier, Sang-Hoon Kim, and Binoy Ravindran,"A Framework for Software Diversification with ISA Heterogeneity",The 23rd International Symposium on Research in Attacks, Intrusions and Defenses(RAID), 2020 [paper] 
+ Sang-Hoon Kim, Ho-Ren. Chuang, Rob Lyerly, Pierre Olivier, Changwoo Min, and Binoy Ravindran,"DEX: Scaling Applications Beyond Machine Boundaries",40th IEEE International Conference on Distributed Computing Systems(ICDCS) 2020 [href="https://www.ssrg.ece.vt.edu/papers/icdcs20.pdf" - paper
+] 
+ Antonio Barbalace, Mohamed Karaoui, Wei Wang, Tong Xing, Pierre Olivier, and Binoy Ravindran, "Edge Computing: the Case for Heterogeneous-ISA Container Migration",16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments(VEE),2020 [href="https://www.ssrg.ece.vt.edu/papers/vee20-h-container.pdf" - paper
+] 
+ Mincheol Sung, Pierre Olivier, Stefan Lankes, and Binoy Ravindran, "Intra-Unikernel Isolation with Intel Memory Protection Keys",16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments(VEE),2020 [href="https://www.ssrg.ece.vt.edu/papers/vee20-mpk.pdf" - paper
+] [website] 
+ Xiaoguang Wang, SengMing Yeoh, Pierre Olivier, and Binoy Ravindran,"Secure and Efficient In-process Monitor (and Library) Protection with Intel MPK",13th European Workshop on Systems Security (EuroSec), 2020 [paper]. 
+ Pierre Olivier, Antonio Barbalace, and Binoy Ravindran. "The Case for Intra-Unikernel Isolation",The 10th Workshop on Systems for Post-Moore Architectures (SPMA), 2020 [href="https://www.ssrg.ece.vt.edu/papers/spma20.pdf" - paper
+]. 
+ Antonio Barbalace, Pierre Olivier, and Binoy Ravindran. "Rethinking Communication in Multiple-kernel OSes for New Shared Memory Interconnects",Workshop on Programming Languages and Operating Systems (PLOS), 2019. [href="https://www.ssrg.ece.vt.edu/papers/plos19.pdf" - paper
+] 
+ Beichen Liu, Pierre Olivier, and Binoy Ravindran, "SlimGuard: A Secure and Memory-Efficient Heap Allocator", ACM/IFIP International Middleware Conference (MIDDLEWARE), 2019 (ACM Artifacts Evaluated,ACM Artifacts Available) [href="https://www.ssrg.ece.vt.edu/papers/middleware19-slimguard.pdf" - paper
+] [website] 
+ (Best paper award) Pierre Olivier, Daniel Chiba, Stefan Lankes, Changwoo Min, and Binoy Ravindran, "A Binary-Compatible Unikernel", inThe 15th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments(VEE), 2019. [href="https://www.ssrg.ece.vt.edu/papers/vee2019.pdf" - paper
+] [website] 
+ Pierre Olivier, A K M Fazla Mehrab, Stefan Lankes, Mohamed Karaoui, Rob Lyerly, and Binoy Ravindran, "HEXO: Offloading HPC Compute-Intensive Workloads on Low-Cost, Low-Power Embedded Systems", inThe 28th ACM International Symposium on High-Performance Parallel and Distributed Computing(HPDC), 2019 [href="https://www.ssrg.ece.vt.edu/papers/hpdc19.pdf" - paper
+] [website]. 
+ Sebastian Österlund, Koen Koning, Pierre Olivier, Antonio Barbalace, Herbert Bos, and Cristiano Giuffrida,"kMVX: Detecting Kernel Information Leaks with Multi-variant Execution",inThe 24th International Conference on Architectural Support for Programming Languages and Operating Systems(ASPLOS), 2019. [href="https://www.cs.vu.nl/~herbertb/download/papers/kmvx_asplos19.pdf" - link
+] 
+ Pierre Olivier, Binoy Ravindran and Antonio Barbalace, "The Multihype: Virtualizing Heterogeneous-ISA Architectures", inThe 9th Workshop on Systems for Multi-core and Heterogeneous Architectures(SFMA), 2019. [href="https://www.ssrg.ece.vt.edu/papers/sfma2019-multihype.pdf" - link
+] 
+ (Poster) Mohamed Karaoui, Anthony Carno, Rob Lyerly, Sang-Hoon Kim, Pierre Olivier, Changwoo Min, and Binoy Ravidran, "Scheduling HPC Workloads on Heterogeneous-ISA Architectures", inPrinciples and Practice of Parallel Programming(PPoPP), 2019. [href="https://www.ssrg.ece.vt.edu/papers/ppopp19.pdf" - link
+] 
+ Pierre Olivier, Sang-Hoon Kim, and Binoy Ravindran,“OS Support for Thread Migration and Distribution in the Fully Heterogeneous Datacenter”, inThe 16th Workshop on Hot Topics in Operating Systems(HotOS XVI), 2017. [link] 
+ Vlad Nitu, Pierre Olivier, Alain Tchana, Daniel Chiba, Antonio Barbalace, Daniel Hagimont, and Binoy Ravindran,“Swift Birth and Quick Death: Enabling Fast Parallel Guest Boot and Destruction in the Xen Hypervisor”, in13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments(VEE 2017), April 8-9, 2017, Xi’an China (link). 
+ (Book) Jalil Boukhobza, Pierre Olivier,“Flash Memory Integration”,ISTE Press/Elsevier, 2017. [link] 
+ (Talk) Pierre Olivier and Sang-Hoon Kim, "Popcorn Linux: Compiler & OS Support for Execution Migration in Heterogeneous ISA Environments",Linux Plumbers Conference, Los Angeles, USA, 2017. [slides] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn, Hamza Ouarnoughi,“A Methodology for Estimating Performance and Power Consumption of Embedded Flash File Systems”, inACM Transactions on Embedded Computing Systems (ACM TECS), 2016. [paper] 
+ (Poster) Pierre Olivier, Antonio Barbalace, and Binoy Ravindran,“Multi-Variant Execution atop a Decomposed Hypervisor on Emerging Heterogeneous-ISA Multicore”, inEuroSys Conference, London, UK, April 2016. [abstract] [poster] 
+ Jalil Boukhobza, Pierre Olivier, Stéphane Rubini, Laurent Lemarchand, Yassine Hadjadj-Aoul, Arezki Laga,“MaCACH: An Adaptive Cache-Aware Hybrid FTL Mapping Scheme Using Feedback Control for Efficient Page-Mapped Space Management”,Journal of Systems Architecture (JSA), Elsevier, 2015. [link] 
+ (Poster) Pierre Olivier, Jalil Boukhobza,“FFSMark: a Postmark Extension for Dedicated Flash File Systems”inIEEE Non-Volatile Memory System and Applications Symposium (NVMSA), Hong Kong, China, 2015. [paper] [poster] 
+ (Talk) Pierre Olivier,“A Fine-Grained Analysis of Embedded Flash Storage Performance and Power Consumption”, inI/O and Exascale Workshop, Bruyères-le-Chatel, France, 2015. [slides] 
+ Hamza Ouarnoughi, Jalil Boukhobza, Pierre Olivier, Loic Plassart, Ladjel Bellatreche, “Performance analysis and modeling of SQLite embedded databases on flash file systems”,Design Automation for Embedded Systems (DAES), Springer, October 2014. [link] 
+ Jalil Boukhobza, Pierre Olivier, Loic Plassart, Hamza Ouarnoughi, Ladjel Bellatreche,“Embedded Databases on Flash Memories: Performance and Lifetime Issues, the case of SQLite”, inProceedings of Embedded Real-time Software and Systems (ERTS)2014, Toulouse, France. [href="http://www.researchgate.net/publication/264929595_Embedded_Databases_on_Flash_Memories_Performance_and_Lifetime_Issues_the_case_of_SQLite" - link
+] 
+ Pierre Olivier, Jalil Boukhobza, Mathieu Soula, Michelle Le Grand, Ismat Chaib Draa and Eric Senn, “A Tracing Toolset for Embedded Linux Flash File Systems”, inProceedings of the 8th International Conference on Performance Evaluation Methodologies and Tools (VALUETOOLS), Bratislava, Slovakia, December 2014.[link] 
+ Pierre Olivier, Jalil Boukhobza and Eric Senn, “RevisitingRead-ahead Efficiency for Raw NAND Flash Storage in Embedded Linux”, inACM SIGBED Review vol. 11, issue 4, Special issue of the Embed With Linux (EWiLi) International workshop, Lisbon, Portugal, December 2014. [link] 
+ Jalil Boukhobza, Pierre Olivier, Stéphane Rubini,A Scalable and Highly Configurable Cache-Aware Hybrid Flash Translation Layer,Computers,3(1),36-57; doi:10.3390/computers301003, March 2014. [link] 
+ (Thesis) Pierre Olivier, Estimation de performances et de consommation énergétique de systèmes de stockage à base de mémoire flash dans les systèmes embarqués, 2014. [link] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn,“Flashmon v2: Monitoring Raw Flash memory Accesses on Embedded Linux”, inACM SIGBED Review vol. 11, issue 1, Special issue of the Embed With Linux (EWiLi) International workshop, Toulouse, France, 2013. [href="http://sigbed.seas.upenn.edu/archives/2014-02/ewili13_submission_4.pdf" - link
+] seehttp://sourceforge.net/projects/flashmon/to download the tool. 
+ (Poster) Pierre Olivier, Jalil Boukhobza, Eric Senn,“Toward a Unified Performance and Power Consumption NAND Flash Memory Model of Embedded and Solid State Secondary Storage Systems”, inproceedings of the SoC-SiP GDR Workshop, Lyon, France, June 2013. [abstract] [poster] 
+ Pierre Olivier, Jalil Boukhobza,“Un Système de Cache Hiérarchique pour les E/S Présentant des Motifs d’Accès Séquentiels pour les Mémoires Flash NAND”, (“A hierarchical cache system for I/O with sequential patterns in NAND flash memory”), inTechniques et Sciences Informatique(TSI)vol. 32, issue 2, pp. 203-228,April 2013. [link] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn,“Flash Based Storage in Embedded Systems”,inEncyclopedia of Embedded Computing Systems, IGI Global Editor, DOI: 10.4018/978-1-4666-3922-5, ISBN13: 9781466639225, April 2013. [link] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn,“Modeling Driver Level NAND Flash Memory I/O Performance and Power Consumption for Embedded Linux”,inProceedings of the IEEE 11th International Symposium on Programming and Systems (ISPS), Algiers, Algeria, April 2013. [link] 
+ Jalil Boukhobza, Pierre Olivier, Stéphane Rubini,“CACH-FTL: A Cache Aware Configurable Hybrid Flash Translation Layer”, inEUROMICRO International conference on Parallel, Distributed, and Network based processing (PDP), Belfast, February 2013. [link] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn,“Micro-benchmarking Flash Memory File-System Wear Leveling and Garbage Collection: a Focus on Initial State Impact”, inIEEE/IFIP International Conference on Embedded and Ubiquitous Computing (EUC), Paphos, Cyprus, December 2012. [link] 
+ Pierre Olivier, Jalil Boukhobza, Eric Senn,“On Benchmarking Embedded Linux Flash File Systems”, inACM SIGBED Review vol. 9, issue 2, Special issue of the Embed With Linux (EWiLi) International workshop, Lorient, France, 2012. [link] 
+ Pierre Olivier, Jalil Boukhobza,“A Hardware Time Manager Implementation for the Xenomai Real-Time Kernel of Embedded Linux”,inACM SIGBED Review vol. 9, issue 2, Special issue of the Embed With Linux (EWiLi) International workshop, Lorient, France, 2012. [link] 
+ (Poster) Pierre Olivier, Jalil Boukhobza, Eric Senn,“Performance Evaluation of Flash File-systems”, inproceedings of the GDR SoC-SiP Workshop, Paris, France, June 2012. [abstract] [poster] 
+ Jalil Boukhobza, Pierre Olivier,“An Efficient Hierarchical Dual Cache System for NAND Flash Memories”, inInternational Journal of Digital Information and Wireless Communications (IJDIWC)1(1): 175-194, The Society of Digital Information and Wireless Communications, 2011 (ISSN 2225-658X). [link] 
+ Jalil Boukhobza, Pierre Olivier, Ilyes Khetib,“Characterization of OLTP I/O Workloads for Dimensioning Embedded Write Cache for Flash Memories: A Case Study”, Inproceedings of the International conference on Model and Data Engineering (MEDI), Springer LNCS 6918, Obidos, Portugal, September 2011. [link] 
+ Jalil Boukhobza, Pierre Olivier,“C-lash: a Cache System for Optimizing NAND Flash Memory Performance and Lifetime”,inproceedings of the International Conference on Digital Information and Communication Technology and its Applications (DICTAP), Communications in Computer and Information Science (CCIS)167, Springer, 2011. [href="http://syst.univ-brest.fr/~boukhobza/images/stories/Documents/Research/UBO/2011/DICTAP_Boukhobza_Olivier_camera.pdf" - link
+] 
+ Jalil Boukhobza, Pierre Olivier, Stéphane Rubini,“A Cache Management Strategy to Replace Wear Leveling Techniques for Embedded Flash Memory”, inIEEE International Symposium on Performance Evaluation of Computer and Telecommunication Systems, The Hague, Netherlands, 2011.– This paper received the best paper award –[link] 
+ Google Sites 
+ Report abuse 
+ Google Sites 
+ Report abuse
+
+3. Website of PLOS_3: http://popcornlinux.org/index.php/publications
+Website information of PLOS_3:
+
+Skip to content 
+ Jump to main navigation and login 
+ Nav view search 
+ Navigation 
+ You are here:HomePublications 
+ Main Menu 
+ Home 
+ Overview 
+ Replicated-kernel Linux 
+ NetPopcorn 
+ Fault-Tolerant Linux 
+ Aparapi Java Vectorization 
+ AIRA CPU/GPU Resource Management 
+ HEXO - Heterogeneous-ISA EXecution Offloading of Unikernel VMs 
+ H-Container: Heterogeneous-ISA Container 
+ HeterSec - Software diversification using ISA heterogeneity 
+ Dapper: Cross-ISA Process Snapshot Rewriting 
+ Publications 
+ Download 
+ People 
+ News 
+ Contact Us 
+ Open Positions 
+ PublicationsPapers 
+ href="https://www.ssrg.ece.vt.edu/papers/asplos25.pdf" - Stramash: A Fused-kernel Operating System for Cache-Coherent, Heterogeneous-ISA Platforms
+, T. Xing, C. Xiong, T. Wei, A. Sanchez, B. Ravindran, J. Balkind, and A. Barbalace, ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2025), March 30-April 3, 2025, Rotterdam, The Netherlands 
+ HEXO: Offloading Long-Running Compute- and Memory-Intensive Workloads on Low-Cost, Low-Power Embedded Systems | , P. Olivier, A. Mehrab, S. Errabelly, S. Lankes, M. L. Karaoui, R. Lyerly, S-H. Kim, A. Barbalace, and B. Ravindran, IEEE Transactions on Cloud Computing, October-December, 2024 
+ href="https://www.ssrg.ece.vt.edu/papers/systor24.pdf" - On RISC-V as a Co-Processor to Offload Background Jobs for Improved Performance and Energy Efficiency in the Datacenter | , B. Heerekar, C. Philippidis, H-R. Chuang, P. Olivier, A. Barbalace, and B. Ravindran, 17th ACM International Systems and Storage Conference (Systor 2024), September 23-25, 2024, Virtual 
+ Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes? | H. Chuang, K. Manaouil, T. Xing, A. Barbalace, P. Olivier, B. Heerekar, and B. Ravindran, 18th ACM European Conference on Computer Systems (EuroSys 2023), May 8-12, 2023, Rome, Italy 
+ href="https://www.ssrg.ece.vt.edu/papers/mtd22.pdf" - Rave: A Modular and Extensible Framework for Program State Re-Randomization | , C. Blackburn, X. Wang, and B. Ravindran, 9th ACM Workshop on Moving Target Defense (MTD 2022), Co-located with CCS 2022, November 7, 2022, Los Angeles, USA 
+ H-Container: Enabling Heterogeneous-ISA Container Migration in Edge Computing | , T. Xing, A. Barbalace, P. Olivier, M. Karaoui, W. Wang, and B. Ravindran, ACM Transactions on Computer Systems, March 2022 
+ href="https://www.ssrg.ece.vt.edu/papers/systex22.pdf" - Transparent, Cross-ISA Enclave Offloading | , X. Wang, C. Bilbao, and B. Ravindran, 5th Workshop on System Software for Trusted Execution (SysTEX 2022), Co-located with ASPLOS 2022, March 1, 2022, Lausanne, Switzerland 
+ An OpenMP Runtime for Transparent Work Sharing Across Cache-Incoherent Heterogeneous Nodes | , R. Lyerly, C. Bilbao, C. Min, C. Rossbach, and B. Ravindran, ACM Transactions on Computer Systems, Accepted December 2021 
+ href="https://www.ssrg.ece.vt.edu/papers/middleware21.pdf" - Xar-Trek: Run-time Execution Migration among FPGAs and Heterogeneous-ISA CPUs | , E. Horta, H. Chuang, N. Rao VSathish, C. Philippidis, A. Barbalace, P. Olivier and B. Ravindran, 22st ACM/IFIP International Middleware Conference (MIDDLEWARE 2021), Online, December 6-10, 2021 (ACM Artifacts Evaluated - Functional | , ACM Artifacts Available | ) 
+ href="https://www.ssrg.ece.vt.edu/papers/middleware20.pdf" - An OpenMP Runtime for Transparent Work Sharing Across Cache-Incoherent Heterogeneous Nodes | , R. Lyerly, C. Min, C. Rossbach, and B. Ravindran, 21st ACM/IFIP International Middleware Conference (MIDDLEWARE 2020), Delft, The Netherlands, December 7-11, 2020 (ACM Artifacts Evaluated - Functional | , ACM Artifacts Available | ) 
+ href="https://www.ssrg.ece.vt.edu/papers/esorics20.pdf" - Dynamic and Secure Memory Transformation in Userspace | , R. Lyerly, X. Wang, and B. Ravindran, 25th European Symposium on Research in Computer Security (ESORICS 2020), Guildford, United Kingdom, September 14-18, 2020 [ | source code | ] 
+ href="https://www.ssrg.ece.vt.edu/papers/raid20.pdf" - A Framework for Software Diversification with ISA Heterogeneity | , X. Wang, S. Yeoh, R. Lyerly, P. Olivier, S-H. Kim, and B. Ravindran, 23rd International Symposium on Research in Attacks, Intrusions and Defenses (RAID 2020), Donostia / San Sebastian, Spain, October 14-16, 2020 
+ href="https://www.ssrg.ece.vt.edu/papers/systor20.pdf" - Scaling Shared Memory Multiprocessing Applications in Non-cache-coherent Domains | , H-R. Chuang, R. Lyerly, S. Lankes, and B. Ravindran, The 13th ACM International Systems and Storage Conference (SYSTOR 2020), October 13-15, 2020, Haifa, Israel 
+ href="https://www.ssrg.ece.vt.edu/papers/icdcs20.pdf" - DEX: Scaling Applications Beyond Machine Boundaries | , S-H. Kim, H-R. Chuang, R. Lyerly, P. Olivier, C. Min, and B. Ravindran, 40th IEEE International Conference on Distributed Computing Systems (ICDCS 2020), July 8-10, 2020, Singapore 
+ Edge Computing – the Case for Heterogeneous-ISA Container Migration | , Antonio Barbalace, Mohamed L. Karaoui, Wei Wang, Tong Xing, Pierre Olivier, Binoy Ravindran, In the 16th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE’20), March 17, 2020, Lausanne, Switzerland 
+ href="https://ess.cs.uni-osnabrueck.de/workshops/plos/2019/preprint/plos19-barbalace.pdf" - Rethinking Communication in Multiple-kernel OSes for New Shared Memory Interconnects, | Antonio Barbalace , Pierre Olivier, and Binoy Ravindran, | PLOS2019 | Workshop on Programming Languages and Operating Systems (PLOS'19), in SOSP 2019 The 27th ACM Symposium on Operating Systems Principles, | October 27, 2019, Huntsville, Ontario, Canada 
+ href="https://www.ssrg.ece.vt.edu/papers/systor19.pdf" - Cross-ISA Execution of SIMD Regions for Improved Performance | , Yihan Pang, Rob Lyerly, and Binoy Ravindran, 12th ACM International Systems and Storage Conference (SYSTOR'19), June 3-5, 2019, Haifa, Israel 
+ href="https://www.ssrg.ece.vt.edu/papers/hpdc19.pdf" - HEXO: Offloading HPC Compute-Intensive Workloads on Low-Cost, Low-Power Embedded Systems | , Pierre Olivier, A K M. Fazla Mehrab, Stefan Lankes, Mohamed Karaoui, Robert Lyerly, and Binoy Ravindran, The 28th ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC'19), June 24-28, 2019, Phoenix, AZ, USA 
+ href="https://www.ssrg.ece.vt.edu/papers/sfma2019-multihype.pdf" - The Multihype: Virtualizing Heterogeneous-ISA Architectures | , Pierre Olivier, Binoy Ravindran, and Antonio Barbalace. The 9th Workshop on Systems for Multi-core and Heterogeneous Architectures (SFMA 2019), March 25 -- 28, 2019, Dresden, Germany. 
+ A Framework to Secure Applications with ISA Heterogeneity | , Xiaoguang Wang, SengMing Yeoh, Robert Lyerly, Sang-Hoon Kim, and Binoy Ravindran. The 9th Workshop on Systems for Multi-core and Heterogeneous Architectures (SFMA 2019), March 25 -- 28, 2019, Dresden, Germany. 
+ libMPNode: An OpenMP Runtime For Parallel Processing Across Incoherent Domains | , Robert Lyerly, Sang-Hoon Kim, and Binoy Ravindran, The 10th International Workshop on Programming Models and Applications for Multicores and Manycores (PMAM 2019), February 16 -- 20, 2019, Washington DC, USA 
+ Scheduling HPC Workloads on Heterogenous-ISA Architectures | , Mohamed Karaoui, Anthony Carno, Robert Lyerly, Sang-Hoon Kim, Pierre Olivier, Changwoo Min, and Binoy Ravindran, 24th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP'19), Poster paper, February 16 -- 20, 2019, Washington DC, USA ( | Full paper is available here | ) 
+ AIRA: A Framework for Flexible Compute Kernel Execution in Heterogeneous Platforms | , Robert Lyerly, Alastair Murray, Antonio Barbalace, Binoy Ravindran, IEEE Transactions on Parallel and Distributed Systems (TPDS), 2017 (To Appear) 
+ OS Support for Thread Migration and Distribution in the Fully Heterogeneous Datacenter | , Pierre Olivier, Sang-Hoon Kim, Binoy Ravindran, The 16th Workshop on Hot Topics in Operating Systems (HotOS XVI), May 7-10 2017, Whistler, British Columbia, Canada (To Appear) 
+ Transparent Fault-Tolerance using Intra-Machine Full Software Stack Replication | , Giuliano Losa, Antonio Barbalace, Yuzhong Wen, Marina Sadini, Ho-Ren Chuang, and Binoy Ravindran, The 37th IEEE International Conference on Distributed Computing Systems (ICDCS 2017), | June 5-8, 2017 | , Atlanta, Georgia, USA (To Appear) 
+ A Distributed Operating System Network Stack and Device Driver for Multicores | , B. M. Saif Ansary, Antonio Barbalace, Binoy Ravindran, Thomas Lazor, and Ho-Ren Chuang, The 37th IEEE International Conference on Distributed Computing Systems (ICDCS 2017), Short paper, | June 5-8, 2017 | , Atlanta, Georgia, USA (To Appear) 
+ Antonio Barbalace, Robert Lyerly, Christopher Jelesnianski, Anthony Carno, Ho-Ren Chuang, Vincent Legout and Binoy Ravindran, | href="/images/publications/asplos2017.pdf" - "Breaking the Boundaries in Heterogeneous-ISA Datacenters" | . The 22nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS XXII), April 2017, Xi'an, China 
+ Giuliano Losa, Antonio Barbalace, Yuzhong Wen, Marina Sadini and Binoy Ravindran, | "Transparent Intra-machine Full-Software-Stack Replication for Fault Tolerance" | . Short Paper. The 6th Workshop on Cloud Data and Platforms (CloudDP '16). Co-located with the 2016 ACM European Conference on Computer Systems (EuroSys 2016), April 2016, London, United Kingdom 
+ Rob Lyerly, Antonio Barbalace, Christopher Jelesnianski, Vincent Legout, Anthony Carno and Binoy Ravindran, | "Operating System Process and Thread Migration in Heterogeneous Platforms" | . The 2016 Workshop on Multicore and Rack-Scale systems (MaRS '16). Co-located with the 2016 ACM European Conference on Computer Systems (EuroSys 2016), April 2016, London, United Kingdom 
+ Sharath K. Bhat, Ajithchandra Saya, Hemendra K. Rawat, Antonio Barbalace and Binoy Ravindran, | "Harnessing Energy Efficiency of Heterogeneous ISA Platforms" | . The 2015 USENIX Workshop on Power-Aware Computing and Systems (HotPower '15). Co-located with the 25th ACM SOSP, | October 4, 2015 | , Monterey, California, USA. Published in ACM SIGOPS Operating Systems Review (OSR), Volume 49 Issue 2, December 2015, Pages 65-69 | [acm link] 
+ David Katz, Antonio Barbalace, Saif B.M. Ansary, Akashay Ravichandran and Binoy Ravindran, | "Thread Migration in a Replicated-kernel OS" | . The 35th International Conference on Distributed Computing Systems (ICDCS XXXV), June 2015, Columbus, Ohio, USA 
+ Antonio Barbalace, Marina Sadini, Saif B.M. Ansary, Christopher Jelesnianski, Akshay Ravichandran, Cagil Kendir, Alastair Murray and Binoy Ravindran, | "Popcorn: Bridging the Programmability Gap in Heterogeneous-ISA Platforms" | . The 2015 ACM European Conference on Computer Systems (EuroSys 2015), April 2015, Bordeaux, France 
+ Curt Albert, Alastair Murray and Binoy Ravindran, | "Applying Source Level Auto-Vectorization to Aparapi Java" | . International Conference on Principles and Practices of Programming on Java Platform: Virtual Machines, Programming Languages, and Tools (PPPJ '14), September 2014, Cracow, Poland 
+ Antonio Barbalace, Binoy Ravindran and David Katz, | "Popcorn: a replicated-kernel OS based on Linux" | . The 2014 Ottawa Linux Symposium (OLS '14), July 2014, Ottawa, Canada | [dreamhosters link] 
+ Antonio Barbalace, Alastair Murray, Rob Lyerly and Binoy Ravindran, | "Towards Operating System Support for Heterogeneous-ISA Platforms" | . The 4th Workshop on Systems for Future Multicore Architectures (SFMA '14). Co-located with the 2014 ACM European Conference on Computer Systems (EuroSys 2014), April 2014, Amsterdam, Netherlands 
+ Marina Sadini, Antonio Barbalace, Binoy Ravindran and Francesco Quaglia, | "A Page Coherency Protocol for Popcorn Replicated-kernel Operating System" | . 2013 Many-Core Architecture Research Community (MARC '13) Symposium. Co-located with ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH), October 2013, Indianapolis, Indiana, USA 
+ Posters 
+ Robert Lyerly, Sergey Bratus and Binoy Ravindran, " | href="/images/publications/ARM_Research_Summit_2017_poster.pdf" - Secure Popcorn: Using Machine Boundaries to Harden Applications | ". | href="https://developer.arm.com/research/summit" - ARM Research Summit 2017 | , Cambridge, United Kingdom 
+ Robert Lyerly and Binoy Ravindran, " | Seamless POSIX/OpenMP Thread Migration Across ISA Boundaries | ". | href="http://pldi17.sigplan.org/track/pldi-2017-student-research-competition" - ACM Student Research Competition | , co-located with | ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2017) | , June 2017, Barcelona, Spain 
+ Giuliano Losa, Antonio Barbalace, Yuzhong Wen, Marina Sadini and Binoy Ravindran, "FT-Popcorn: Transparent Fault Tolerance on Multicore Processors for Cloud Applications". | The 2016 ACM European Conference on Computer Systems (EuroSys 2016) | , April 2016, London, United Kingdom 
+ Pierre Olivier, Antonio Barbalace and Binoy Ravindran, | "Multi-Variant Execution atop a DecomposedHypervisor on Emerging Heterogeneous-ISA Multicore | ". | The 2016 ACM European Conference on Computer Systems (EuroSys 2016) | , April 2016, London, United Kingdom 
+ Christopher Jelesnianski, Anthony Carno, Rob Lyerly, Antonio Barbalace and Binoy Ravindran, "Seamless Thread Migration in Heterogeneous-ISA Platforms". | The 25th ACM Symposium on Operating Systems Principles (SOSP 2015) | , | October 4-7, 2015 | , Monterey, California, USA 
+ Rob Lyerly, Christopher Jelesnianski, Antonio Barbalace and Binoy Ravindran, | "Compiler Support for Application Migration in Heterogeneous-ISA Platform" | . The 2015 ACM European Conference on Computer Systems (EuroSys 2015), April 2015, Bordeaux, France 
+ Saif B.M. Ansary, | href="/images/publications/asplos-src-v0.pdf" - "The Case for Resurrecting Distributed Virtual Shared Memory" | . | href="http://src.acm.org/submissions.html" - ACM Student Research Competition | , | href="http://asplos15.bilkent.edu.tr/" - 20th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS) | , March 2015, Istanbul, Turkey, POSTER FINALIST 
+ Antonio Barbalace, Alastair Murray, Robert Lyerly and Binoy Ravindran, | "Towards Operating System Support for Heterogeneous-ISA Platforms" | . | The 4th Workshop on Systems for Future Multicore Architectures (SFMA '14) | , April 2014, Amsterdam, Netherlands 
+ Marina Sadini, David Katz, Antonio Barbalace, Alastair Murray and Binoy Ravindran, | "Towards Replicated-kernel OS Support for Task Migration on Heterogeneous-ISA Platforms" | . | The 24th ACM Symposium on Operating Systems Principles (SOSP 2013) | . Farmington, Pennsylvania, USA, November 3-6, 2013 
+ Marina Sadini, Antonio Barbalace, Binoy Ravindran and Francesco Quaglia, | "A Page Coherency Protocol for Popcorn Replicated-kernel Operating System". | ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH), October 2013, Indianapolis, Indiana, USA 
+ Ben Shelton, Antonio Barbalace, David Katz, Alastair Murray and Binoy Ravindran, | "Towards Operating System Support for Heterogeneous-ISA Platforms" | . | 6th International Systems and Storage Conference (Systor 2013) | . Haifa, Isreal, June 30-July 2, 2013 
+ Robert Lyerly, Alastair Murray and Binoy Ravindran, | "Automatic Kernel Mapping for Functionally Heterogeneous Parallel Architectures" | . | href="https://www.usenix.org/conference/hotpar13/" - 5th USENIX Workshop on Hot Topics in Parallelism (HotPar '13) | . San Jose, CA, USA, June 2013 
+ Theses 
+ Sandeep Errabelly,Netswap: Network-based Swapping for Server-Embedded Board Clusters, May 2023 
+ Abhishek Bapat,HetMigrate: Secure and Efficient Cross-architecture Process Live Migration, December 2022 
+ Ho-Ren Chuang,On Optimizing and Leveraging Distributed Shared Memory for High Performance, Resource Aggregation, and Cache-coherent Heterogeneous-ISA Processors, May 2022 
+ Ashwin Krishnakumar,ZxOS: Zephyr-based Guest Operating System for Heterogeneous-ISA Machines, February 2022 
+ Balvansh Heerekar,Lowest-Slowdown-offloaded- | First Heterogeneous-ISA Scheduler, February 2022 
+ Naarayanan R. VSathish, | fDSM: An FPGA-Accelerated Distributed Shared Memory for Heterogeneous Instruction-Set-Architecture Hardware | , February 2022 
+ Chris Blackburn, " | rave: A Framework for Code and Memory Randomization of Linux Containers | ", July 2021 
+ SengMing Yeoh, " | Secure and Efficient In-Process Monitor and Multi-Variant Execution | ", December 2020 
+ Ho-Ren Chuang, " | On Optimizing and Leveraging Distributed Shared Memory: High-Performant Sequential Memory, Relaxed-consistent Memory, and Distributed Hypervisor for Resource Aggregation | ", PhD Dissertation Proposal, May 2020 
+ Yihan Pang, " | Leveraging Processor-diversity For Improved Performance In Heterogeneous-ISA Systems | ", September 2019 
+ Robert Lyerly, " | Popcorn Linux: A Compiler and Runtime for Execution Migration Between Heterogeneous-ISA Architectures | ", PhD Dissertation, March 2019 
+ A. K. M. Fazla Mehrab | , " | Cross-ISA Execution Migration of Unikernels: Build Toolchain, Memory Alignment, and VM State Transfer Techniques | ", November 2018 
+ Daniel Chiba, " | Optimizing Boot Times and Enhancing Binary Compatibility for Unikernels | ", May 2018 
+ Yuzhong Wen, | "Replication of Concurrent Applications in a Shared Memory Multikernel" | , June 2016 
+ Christopher Jelesnianski, | "A Compiler Framework to Support and Exploit Heterogeneous Overlapping-ISA Multiprocessor Platforms" | , October 2015 
+ B.M. Saif Ansary, " | High Performance Inter-kernel Communication and Networking in a Replicated-kernel Operating System | ", September 2015 
+ Ajithchandra Saya, | "Efficient Inter-Kernel Communication in a Heterogeneous Multikernel Operating System" | , MEng Report, June 2015 
+ Akshay G. Ravichandran, | "Single System Image in a Linux-based Replicated Operating System Kernel" | , February 2015 
+ David Katz, | "Popcorn Linux: Cross Kernel Process and Thread Migration in a Linux-Based Multikernel" | , September 2014 
+ Rob Lyerly, | "Automatic Scheduling of Compute Kernels Across Heterogeneous Architectures" | , May 2014 
+ Curt Albert, | "Applying Source Level Auto-Vectorization to Aparapi Java" | , May 2014 
+ Ben Shelton, | "Popcorn Linux: enabling efficient inter-core communication in a Linux-based multikernel operating system" | , May 2013 
+ Presentations 
+ Pierre Olivier and Sang-Hoon Kim, " | Popcorn Linux: Compiler & OS Support for Execution Migration in Heterogeneous ISA Environments | ", | Checkpoint-Restart session | , | Linux Plumbers Conference | , Los Angeles, USA, 2017. 
+ A. Barbalace, " | Popcorn Project: Replicated-kernel Linux | ", Virginia Tech Linux and Unix User Group Meeting, 2nd May 2013 
+ A. Barbalace | , | " | Popcorn Project: Starting with Popcorn OS | ", Virginia Tech Linux and Unix User Group Meeting, 2nd May 2013 
+ Tutorials 
+ H-Container Tutorial with Docker on AWS | details 
+ Popcorn Linux Tutorial @ SOSP 2019 | details | , | video | , | abstract 
+ "Video tutorial: booting Popcorn Linux on 64 cores", ECE Department, Virginia Tech, May 2013 (WMV encoding, | 512kbps | , | 8mbps | ) 
+ "Video tutorial: process migration between two kernels", ECE Department, Virginia Tech, May 2013 (WMV encoding, | 512kbps | , | 8mbps | )
+
+4. Website of PLOS_3: https://www.sigplan.org/announce/
+Website information of PLOS_3:
+
+ACM SIGPLANHome 
+ Conferences 
+ OpenTOC 
+ Awards 
+ href="/Highlights" - Research Highlights 
+ Membership 
+ Announcements 
+ These announcements are periodically emailed to thesigplan-announcelistserv maintained by ACM. To submit your announcement, pleasefill out this form. 
+ March 2025 
+ href="/announce/2025-03-11-lctes-2025/" - [Deadline Extended] LCTES 2025: Call for Papers 
+ href="/announce/2025-03-01-onward-2025/" - Onward! 2025 Joint Call for Papers and Essays 
+ href="/announce/2025-03-01-gpce-2025/" - Call for Papers, 24th International Conference on Generative Programming: Concepts & Experiences (GPCE 2025) 
+ February 2025 
+ href="/announce/2025-02-24-pact-2025/" - Call for Papers, PACT 2025 
+ href="/announce/2025-02-18-aeic-2025/" - CfC 29th Ada-Europe Intl.Conf.on Reliable Software Technologies (AEiC 2025) 
+ href="/announce/2025-02-12-lctes-2025/" - LCTES 2025: Call for Papers 
+ href="/announce/2025-02-07-sigmetrics-2025-src/" - ACM SIGMETRICS Student Research Competition (SRC) 
+ href="/announce/2025-02-05-mccsys-2025/" - Call for Presentations: Memory-Centric Computing Systems (MCCSys) workshop at ASPLOS 2025 
+ January 2025 
+ href="/announce/2025-01-12-oplss/" - Oregon Programming Languages Summer School (OPLSS) 
+ href="/announce/2025-01-09-latte-2025/" - CFP: LATTE 2025: Workshop on Languages, Tools, and Techniques for Accelerator Design 
+ href="/announce/2025-01-08-awards/" - Reminder: SIGPLAN Award Nominations 
+ December 2024 
+ href="/announce/2024-12-20-ismm-2025/" - Call for papers, 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) 
+ href="/announce/2024-12-13-sigmetrics-2025/" - 2025 ACM SIGMETRICS: Call for Papers (Winter Deadline) 
+ November 2024 
+ href="/announce/2024-11-26-asplos-eurosys-2025-contest/" - Call for Participation: The ASPLOS 2025 / EuroSys 2025 Contest Track 
+ href="/announce/2024-11-08-ictss-2025/" - 37th International Conference on Testing Software and Systems (ICTSS 2025): Call for Papers 
+ href="/announce/2024-11-07-stafsle-2025/" - STAF/SLE 2025: Call for Workshop Proposals 
+ href="/announce/2024-11-05-highlights/" - Call for Nominations: SIGPLAN Research Highlights 2021–2023 
+ SIGPLAN Award Nominations 
+ October 2024 
+ href="/announce/2024-10-30-sigmetrics-2025-tutorials/" - 2025 ACM SIGMETRICS: Call for Tutorial Proposals 
+ href="/announce/2024-10-21-prisc-2025/" - Principles of Secure Compilation: 2nd Call for Papers 
+ href="/announce/2024-10-10-sle-2025/" - 1st CfP: SLE 2025 - 18th ACM SIGPLAN International Conference on Software Language Engineering 
+ September 2024 
+ href="/announce/2024-09-24-pldi-2025-wt/" - Call for Workshops and Tutorials, PLDI 2025 
+ href="/announce/2024-09-22-tase-2025/" - 19th International Symposium on Theoretical Aspects of Software Engineering 
+ href="/announce/2024-09-21-pldi-2025/" - Call for Papers, 2025 ACM Conference on Programming Language Design and Implementation (PLDI 2025) 
+ href="/announce/2024-09-18-sigmetrics-2025/" - 2025 ACM SIGMETRICS: Call for Papers (Fall Deadline) 
+ href="/announce/2024-09-16-prisc-2025/" - Call for Presentation, 9th Workshop on Principles of Secure Compilation, co-located with POPL 2025 
+ href="/announce/2024-09-04-tfp-2025/" - [TFP 2025 Call for Papers] 25th International Symposium on Trends in Functional Programming (Oxford, UK) 
+ August 2024 
+ href="/announce/2024-08-21-topc/" - Call for Applications: Editor-in-Chief for the ACM Transactions on Parallel Computing (TOPC) 
+ July 2024 
+ href="/announce/2024-07-29-funarch-2024/" - Call for Participation, ACM SIGPLAN Workshop on Functional Software Architecture (FUNARCH 2024) 
+ href="/announce/2024-07-29-confest-2024/" - CONFEST 2024: CONCUR, QEST+FORMATS Call for Participation (Early Registration Deadline: Aug 15) 
+ href="/announce/2024-07-19-sigmetrics-2025/" - 2025 ACM SIGMETRICS: Call for Tutorials 
+ href="/announce/2024-07-03-sigmetrics-2025/" - 2025 ACM SIGMETRICS: Call for Papers (Summer Deadline) 
+ June 2024 
+ href="/announce/2024-06-26-cpp-2025/" - Call for papers, ACM SIGPLAN conference on Certified Programs and Proofs 
+ href="/announce/2024-06-24-splash-2024/" - Call for Volunteers, The ACM Conference on Systems, Programming, Languages, and Applications: Software for Humanity (SPLASH'24) 
+ href="/announce/2024-06-17-plmw-icfp24/" - PLMW@ICFP'24: Final call for Participation (travel funding application by June 21) 
+ href="/announce/2024-06-07-splash-2024-src/" - Call for Papers: SPLASH 2024 Student Research Competition 
+ href="/announce/2024-06-04-mccs/" - Call for Participation: Memory-Centric Computing Systems (MCCS) Tutorial at ISCA 2024 
+ May 2024 
+ MobiCom 24 WS 6G Programmable Deterministic Networking with AI (6GPDN), Deadline 19 July, 2024 
+ href="/announce/2024-05-13-teapacs-2024/" - Call for Participation: TeaPACS 2024 - International Workshop on Teaching Performance Analysis of Computer Systems 
+ 2024 ACM SIGMETRICS / IFIP Performance: Conference and Tutorial Programs 
+ href="/announce/2024-05-01-rtfm-2024/" - Call for Participation: First PLDI Workshop on Red-Hot Topics in Faculty Mentoring (RTFM) 
+ April 2024 
+ href="/announce/2024-04-29-sle-2024/" - 1st CfP: SLE 2024 - 17th ACM SIGPLAN International Conference on Software Language Engineering 
+ href="/announce/2024-04-18-aplas-2024/" - Call for Papers, APLAS 2024 -- The 22nd Asian Symposium on Programming Languages and Systems 
+ 28th Ada-Europe Conf. on Reliable Software Technologies (AEiC 2024) 
+ href="/announce/2024-04-10-lipari-ss/" - Call for Participation, Lipari Summer School on Abstract Interpretation 
+ 2024 ACM SIGMETRICS / IFIP Performance: Registration is Open 
+ href="/announce/2024-04-08-concur-2024/" - CONCUR 2024: Call for Papers (deadline April 26) 
+ href="/announce/2024-04-04-farm-2024/" - Call for Papers: ACM Workshop on Functional Art, Music, Modelling and Design (Deadline June 1) 
+ href="/announce/2024-04-03-pldi-2024/" - Call for Participation, ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2024) 
+ March 2024 
+ href="/announce/2024-03-25-mit-plr-2024/" - Call for Participation, MIT Programming Languages Review 2024 
+ href="/announce/2024-03-21-pact-2024/" - Extended Submission Deadline, The International Conference on Parallel Architectures and Compilation Techniques (PACT) 2024 
+ href="/announce/2024-03-17-smt-2024/" - Call for Papers, SMT 2024 
+ href="/announce/2024-03-15-oopsla-2024/" - Call for Papers -- Object-oriented Programming, Systems, Languages, and Applications 2024 
+ href="/announce/2024-03-13-funarch-2024/" - Call for Papers: Second ACM SIGPLAN Workshop on Functional Software Architecture - FP in the Large 
+ href="/announce/2024-03-08-sigmetrics-ifip-2024/" - 2024 ACM SIGMETRICS / IFIP Performance: Call for Participation 
+ href="/announce/2024-03-05-plmw-pldi-2024/" - Call for Scholarship Applications, Programming Language Mentoring Workshop (PLMW) @PLDI 2024 
+ February 2024 
+ href="/announce/2024-02-28-concur-2024/" - CONCUR 2024: Call for Papers 
+ href="/announce/2024-02-26-asplos-waci/" - Call for Contributions: ASPLOS Wild and Crazy Ideas 
+ href="/announce/2024-02-19-pact-2024/" - Call for Papers, The International Conference on Parallel Architectures and Compilation Techniques (PACT) 
+ 2024 Summer School on Formal Techniques, Atherton, California (May 25-31, 2024) + Formal Methods in the Field Bootcamp (June 1/2, 2024) 
+ LATTE: Workshop on Languages, Tools, and Techniques for Accelerator Design 
+ href="/announce/2024-02-11-asplos-2024/" - Call for Participation, ASPLOS 2024 
+ href="/announce/2024-02-11-acm-topml-si/" - Call for Papers, ACM TOPML Special Issue on Probabilistic Programming 
+ href="/announce/2024-02-09-soap-2024/" - OAP 2024 Call for Papers (co-located with PLDI'24, taking place in Copenhagen) 
+ January 2024 
+ href="/announce/2024-01-30-asplos-2025/" - Call for Papers, 30th ACM Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2025) 
+ Student Travel Grant, CGO/PPoPP/HPCA 2024 
+ href="/announce/2024-01-06-pldi-2024-src/" - Call for Submissions: PLDI 2024 Student Research Competition 
+ December 2023 
+ href="/announce/2023-12-08-cgo-2024-src/" - CGO'24 - Student Research Competition (SRC) and more 
+ November 2023 
+ href="/announce/2023-11-30-icfp-2024/" - ICFP 2024: Call for Papers 
+ ACM History Committee 2024 CFP - History and Archiving Fellowship Program 
+ CfC, 28th Ada-Europe Conf. on Reliable Software Technologies (AEiC 2024) 
+ href="/announce/2023-11-18-hlf/" - 2024 Heidelberg Laureate Forum Young Researchers - Applications now open! 
+ October 2023 
+ href="/announce/2023-10-25-prisc-2024/" - PriSC 2024: Call for Presentations 
+ href="/announce/2023-10-03-pldi-2024/" - Call for Papers, ACM Conference on Programming Language Design and Implementation (PLDI 2024) 
+ 21st International Conference on Software and Systems Reuse 
+ September 2023 
+ href="/announce/2023-09-11-oopsla-2024/" - Call for Papers, The Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA 2024) 
+ href="/announce/2023-09-08-sas-2023/" - SAS 2023 - Call for Participation - Early deadline: Sept 22 
+ August 2023 
+ href="/announce/2023-08-24-real-world-pim/" - Call for Participation:  Real-World PIM Tutorial @ MICRO 2023 
+ href="/announce/2023-08-08-tfpie-2024/" - [Call for submissions TFPiE 2024] Trends in Functional Programming in Education - January 9 2024, Seton Hall University, USA 
+ href="/announce/2023-08-07-farm-2023/" - Call for Participation: Functional Art, Music, Modeling and Design (FARM 2023) Sep 8 
+ Open PhD and Postdoc positions in Formal Analysis of Autonomous Systems at Chalmers University 
+ July 2023 
+ href="/announce/2023-07-27-flops-2024/" - Call For Papers: 17th International Symposium on Functional and Logic Programming (FLOPS 2024) 
+ href="/announce/2023-07-26-funarch-2023/" - Call for Participation, Functional Software Architecture (Sep 8, Seattle) 
+ href="/announce/2023-07-17-vmcai-2024/" - Call for Papers, 25th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI 2024) 
+ href="/announce/2023-07-12-tfp-2024/" - Call for Papers: 25th International Symposium on Trends in Functional Programming 
+ href="/announce/2023-07-06-cpp-2024/" - Call for Papers, CPP 2024 - Certified Programs and Proofs 
+ href="/announce/2023-07-03-plos-2023/" - Call for Papers, 12th Workshop on Programming Languages and Operating Systems (PLOS 2023) 
+ June 2023 
+ CRA-WP Early and Mid Career Mentoring Workshops 
+ href="/announce/2023-06-15-plmw-splash-2023/" - Call for Student Participation! PLMW@SPLASH 2023 
+ href="/announce/2023-06-12-splash-e-2023/" - Call for Contributions, 10th ACM SIGPLAN Symposium on SPLASH-E 
+ href="/announce/2023-06-06-mplr-2023/" - Call for Papers, 20th International Conference on Managed Programming Languages and Runtimes 
+ May 2023 
+ href="/announce/2023-05-31-lctes-2023/" - Call for Participation: LCTES 2023, June 18 (Orlando, Florida), co-located with PLDI and FCRC 
+ href="/announce/2023-05-10-ds-accel-23/" - Call for Participation, Tutorial on DSL-based Hardware Generation 
+ href="/announce/2023-05-04-mplr-2023/" - Call for Papers, 20th International Conference on Managed Programming Languages and Runtimes 
+ April 2023 
+ href="/announce/2023-04-20-sas-2023/" - SAS 2023 - Final CFP - Extended deadlines (updates until May 1st) 
+ href="/announce/2023-04-10-sas-2023/" - SAS 2023 - Second Call for Papers - Paper Deadline: April 24, 2023 
+ href="/announce/2023-04-10-pldi-2023/" - Call for Participation, the ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2023) 
+ href="/announce/2023-04-06-ctsta-2023/" - Call for Talks: CTSTA 2023: PLDI/FCRC Workshop on Compiler Techniques for Sparse Tensor Algebra 
+ href="/announce/2023-04-04-plarch-2023/" - Call for Participation: PLARCH 2023 
+ March 2023 
+ href="/announce/2023-03-28-ocaml-2023/" - Call for presentations, OCaml Users and Developers Workshop 
+ href="/announce/2023-03-28-ml-workshop-2023/" - Call for Papers: Higher-order, Typed, Inferred, Strict - ACM SIGPLAN ML Family Workshop 
+ href="/announce/2023-03-21-cgo-2024/" - Call for Papers, 22nd IEEE/ACM International Symposium on Code Generation and Optimization (CGO 2024) 
+ href="/announce/2023-03-18-sas-2023/" - SAS 2023 - First Call for Papers - Paper Deadline: April 24, 2023 
+ href="/announce/2023-03-16-funarch-2023/" - Call for Papers, Functional Software Architecture - FP in the Large 
+ href="/announce/2023-03-16-farm-2023/" - Call for Papers: ACM Workshop on Functional Art, Music, Modelling and Design (Deadline June 1) 
+ href="/announce/2023-03-13-pldi-2023-sv/" - Call for Volunteers, PLDI 2023 
+ href="/announce/2023-03-13-lopstr-2023/" - Call for Papers, 33rd International Symposium on Logic-based Program Synthesis and Transformation (LOPSTR 2023) Co-located with PPDP 2023 as part of SPLASH 2023 
+ href="/announce/2023-03-10-lctes-2023/" - LCTES 2023 Final CFP (Extended Submission Deadline: March 24), International Conference on Languages, Compilers, Tools and Theory of Embedded Systems 
+ href="/announce/2023-03-07-sle-2023/" - CfP: SLE 2023 - 16th ACM SIGPLAN International Conference on Software Language Engineering 
+ PLMW@PLDI23 application is open 
+ href="/announce/2023-03-02-dragsters-2023/" - Call for Talks:  DRAGSTERS 2023:  PLDI/FCRC Workshop on Distributions, Relational Algebra, Graphs, Semi-Rings, Tensors, and all that 
+ February 2023 
+ href="/announce/2023-02-26-besc-2023/" - Call for Papers and Special Session Proposals: 10th International Conference on Behavioural and Social Computing (BESC 2023) 
+ International Conference on Parallel Architectures and Compilation Techniques (PACT 2023) 
+ href="/announce/2023-02-20-real-world-pim/" - Call for Participation: Real-World PIM Tutorial at ASPLOS 2023 
+ Open assistant/associate prof positions at Toronto Metropolitan University 
+ href="/announce/2023-02-13-oopsla-2023/" - Call for Papers, OOPSLA 2023, The ACM Conference on Systems, Programming, Languages, and Applications: Software for Humanity (SPLASH 2023) 
+ href="/announce/2023-02-13-mplr-2023/" - Call for Papers, 20th International Conference on Managed Programming Languages and Runtimes (MPLR’23) 
+ SIGPLAN Software Award Extension of Nomination Period 
+ Extended Deadline for ACM SIGPLAN Distinguished Educator Award 
+ January 2023 
+ href="/announce/2023-01-31-asplos-2023/" - ASPLOS 2023 Call for Participation - Early Registration ends 24 February 2023 
+ LATTE: Workshop on Languages, Tools, and Techniques for Accelerator Design 
+ href="/announce/2023-01-27-lctes-2023/" - Call for Papers, 24th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, Tools and Theory of Embedded Systems (LCTES 2023) 
+ href="/announce/2023-01-18-cgo-2023/" - CGO 2023 - Call For Participation (early-bird registration by Jan 31) 
+ href="/announce/2023-01-13-jss-special-issue/" - CfP: Journal of Systems and Software - Special Issue on Software Language Engineering 
+ href="/announce/2023-01-12-mfps-2023/" - Call for papers, 39th conference on the Mathematical Foundations of Programming Semantics 
+ href="/announce/2023-01-12-ismm-2023/" - Call for papers, International Symposium on Memory Management (ISMM 2023) 
+ href="/announce/2023-01-11-icfp-2023/" - Call for Papers: 28th ACM SIGPLAN International Conference on Functional Programming (ICFP 2023) 
+ December 2022 
+ href="/announce/2022-12-12-pldi-2023-src/" - PLDI 2023 Student Research Competition (SRC) 
+ ACM History Committee 2023 CFP: History and Archiving Fellowships 
+ href="/announce/2022-12-03-tfpie-2023/" - TFPIE 2023: Call for Submissions 
+ href="/announce/2022-12-01-icfp-2023-workshops/" - 28th ACM SIGPLAN International Conference on Functional Programming (ICFP 2023): Call for Workshop and Co-Located Event Proposals 
+ November 2022 
+ href="/announce/2022-11-30-asplos-2023-wt/" - ASPLOS 2023 Call for Workshops and Tutorials 
+ href="/announce/2022-11-28-hlf-2023/" - 2023 Heidelberg Laureate Forum Young Researchers: Applications now open 
+ href="/announce/2022-11-16-iclp-2023/" - ICLP 2023: Logic Programming, London (UK), 9-15 July 2023 (CFP) 
+ New Editor-in-Chief for TOPLAS 
+ New Editor-in-Chief for PACMPL 
+ href="/announce/2022-11-09-euro-par-2023/" - 29th International European Conference on Parallel and Distributed Computing (Euro-Par 2023): Call for Papers 
+ href="/announce/2022-11-09-dahl-nygaard/" - Call for Nominations: Dahl-Nygaard Prize 
+ href="/announce/2022-11-08-euro-par-2023-pd/" - 29th International European Conference on Parallel and Distributed Computing (Euro-Par 2023): Call for Posters and Demos 
+ October 2022 
+ href="/announce/2022-10-31-pldi-2023/" - PLDI 2023 Second Call for Papers 
+ href="/announce/2022-10-30-euro-par-2023-w/" - 29th International European Conference on Parallel and Distributed Computing (Euro-Par 2023): Call for Workshops and Minisymposia 
+ PLDI 2023 Artifact Evaluation Committee Nominations 
+ href="/announce/2022-10-21-tfpie-2023/" - Trends of Functional Programming in Education 2023 call for submissions (deadline Dec 27th) 
+ href="/announce/2022-10-15-popl-2023/" - Call for Student Volunteers, 50th ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2023) 
+ href="/announce/2022-10-11-pldi-2023-wt/" - Call for Workshops and Tutorials, PLDI 2023 
+ Faculty positions at Oxford 
+ September 2022 
+ 44th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2023) 
+ href="/announce/2022-09-19-tfp-2023/" - Call for Papers: 24th International Symposium on Trends in Functional Programming (TFP 2023) 
+ New Leadership at SIGPLAN-M 
+ href="/announce/2022-09-12-oopsla-2023/" - OOPSLA 2023: Round 1 Call for Papers 
+ August 2022 
+ href="/announce/2022-08-24-cgo-2023/" - Final Call for Papers, ACM/IEEE International Symposium on Code Generation and Optimization (CGO 2023) 
+ href="/announce/2022-08-23-farm-2022/" - Functional Art, Music, Modeling and Design (FARM 2022) Sep 15: Call for Participation 
+ href="/announce/2022-08-20-pact-2022-src/" - Call for Posters: ACM Student Research Competition at PACT 2022 
+ href="/announce/2022-08-06-cgo-2023/" - ACM/IEEE International Symposium on Code Generation and Optimization (CGO 2023): Call for Papers 
+ July 2022 
+ href="/announce/2022-07-26-evcs/" - Call for Papers: Eelco Visser Commemorative Symposium 
+ href="/announce/2022-07-11-varse22/" - Call for Papers, The First International Workshop on Virtual and Augmented Reality Software Engineering, colocated with ASE'22 
+ href="/announce/2022-07-05-sle-2022/" - Call for Papers: 15th ACM SIGPLAN International Conference on Software Language Engineering (SLE 2022) 
+ June 2022 
+ href="/announce/2022-06-19-cgo-2023/" - ACM/IEEE International Symposium on Code Generation and Optimization (CGO): Call for Papers 
+ href="/announce/2022-06-14-cpp-2023/" - Certified Programs and Proofs (CPP) 2023 Call for Papers 
+ Call for nominations: institution-independent funding selection committee 
+ May 2022 
+ href="/announce/2022-05-17-ml-2022/" - ML Family Workshop 2022: Final Call for Presentations 
+ href="/announce/2022-05-14-farm-2022/" - CFP: ACM Workshop on Functional Art, Music, Modelling and Design 
+ href="/announce/2022-05-09-scheme-2022/" - [CFP] Scheme and Functional Programming Workshop 2022 
+ Ada-Europe Int.Conf. Reliable Software Technologies, AEiC 2022 
+ April 2022 
+ href="/announce/2022-04-10-farm-2022/" - 2nd CfP - ACM Workshop on Functional Art, Music, Modelling and Design - Deadline June 1 
+ href="/announce/2022-04-10-acm-pres-2022/" - Ask the Candidates for ACM President! 
+ March 2022 
+ href="/announce/2022-03-31-issre-2022-cfp/" - ISSRE 2022  - Call for Papers - Research 
+ href="/announce/2022-03-25-cgo-2022/" - Call for Participation, IEEE/ACM International Symposium on Code Generation and Optimization (CGO 2022) 
+ href="/announce/2022-03-21-pldi-2022/" - Call for Participation, PLDI 2022 
+ href="/announce/2022-03-14-mplr-2022/" - Call for Papers, 19th International Conference on Managed Programming Languages & Runtimes 
+ 18th Doctoral Consortium (DC) on Logic Programming 
+ href="/announce/2022-03-14-ecoop22-ds/" - ECOOP'22 Doctoral Symposium - Call for Contributions 
+ href="/announce/2022-03-13-farm-2022-demo/" - ACM Workshop on Functional Art, Music, Modelling and Design - Call for Papers, Demos, and Performances 
+ Trends in Functional Programming in Education 
+ href="/announce/2022-03-10-sas-2022/" - Call for Papers,  29th Static Analysis Symposium (SAS 2022) 
+ href="/announce/2022-03-04-pldi-2022-sv/" - PLDI 2022 Call for Student Volunteers 
+ February 2022 
+ Second International Conference on ICT for Health, Accessibility and Wellbeing (IHAW 2022) 
+ ACM History Committee: Call for Applications: 2022 History Fellowship Program 
+ href="/announce/2022-02-09-ismm-2022/" - Call for Papers, International Symposium on Memory Management 
+ 8th IEEE International Smart Cities Conference 
+ January 2022 
+ CfC 26th Ada-Europe Conf. on Reliable Software Technologies (AEiC 2022) 
+ href="/announce/2022-01-27-pldi-src-2022/" - PLDI 2022 Call for Student Research Competition Submissions 
+ href="/announce/2022-01-25-lctes-2022/" - LCTES 2022 Call for Papers 
+ href="/announce/2022-01-18-iclp-2022/" - [CfP] ICLP 2022 - The 38th International Conference on Logic Programming 
+ TFPIE 2022: moving to online and extension to Feb 7th 
+ href="/announce/2022-01-11-tfp-2022/" - [TFP'22] second call for papers: Trends in Functional Programming 2022 moved to March 17-18 online (together with TFPiE) 
+ Workshop on Languages, Tools, and Techniques for Accelerator Design 
+ December 2021 
+ href="/announce/2021-12-27-tfpie-2022/" - Trends in Functional Programming in Education 2022 3rd (last) call for submissions 
+ href="/announce/2021-12-21-iclp-2022/" - [2nd CfP] ICLP 2022 - The 38th International Conference on Logic Programming 
+ TVMcon: 2021 Apache TVM and Open Source ML Acceleration Conference 
+ href="/announce/2021-12-11-icsme-2022/" - 38th IEEE International Conference on Software Maintenance and Evolution (ICSME 2022): Call for Contributions 
+ PLDI 2022 Call for (Self-) Nomination to Artifact Evaluation Committee 
+ href="/announce/2021-12-01-popl-2022/" - Call for Participation: 49th ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2022) 
+ November 2021 
+ href="/announce/2021-11-08-mpc-2022/" - First Call for Papers, 14th International Conference on Mathematics of Program Construction 
+ ACM History Committee Fellowship Competition 
+ October 2021 
+ href="/announce/2021-10-26-tfpie-2022/" - Trends in Functional Programming in Education 2022 call for submissions 
+ href="/announce/2021-10-19-ppopp-2022/" - PPoPP 2022 Call for Workshop and Tutorial Proposals 
+ href="/announce/2021-10-13-iccq-2022/" - Call for Papers, 2nd International Conference on Code Quality (ICCQ 2022) in-coop with SIGPLAN 
+ href="/announce/2021-10-08-acm-goodit-2022/" - Call for Contributions -- ACM International Conference on Information Technology for Social Good (GoodIT 2022) 
+ Online Seminar Series on Tensor Computation 
+ href="/announce/2021-10-05-splash-2021/" - Call For Participation - SPLASH 2021: ACM SIGPLAN Conference on Systems, Programming, Languages, and Applications: Software for Humanity 
+ href="/announce/2021-10-05-ppopp-2022/" - PPoPP 2022: Call for Workshop & Tutorial Proposals (due 10/29) 
+ href="/announce/2021-10-04-cgo-2022-wt/" - CGO 2022 Call for Workshops and Tutorials 
+ September 2021 
+ href="/announce/2021-09-29-tfp-2022/" - [TFP'22] first call for papers: Trends in Functional Programming 2022, 10-11 February (with Lambda Days 2022 & TFPIE 2022) 
+ href="/announce/2021-09-21-pldi-2022/" - Call for Tutorials and Workshops, PLDI 2022 
+ Call for (Self-)Nominations for the ASPLOS 2022 Artifact Evaluation Committee 
+ Webinar: Getting Recognized by ACM Awards and Honors 
+ href="/announce/2021-09-10-pact-2021/" - Call for Participation: PACT'21 - The 30th International Conference on Parallel Architectures and Compilation Techniques 
+ href="/announce/2021-09-09-pldi-2022/" - Call for Papers, 43rd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2022) 
+ href="/announce/2021-09-09-ecoop-2022/" - ECOOP 2022: Call for Papers 
+ href="/announce/2021-09-05-esocc-2022/" - 9th European Conference on Service-Oriented and Cloud Computing (ESOCC 2022): Early Call for Contributions 
+ August 2021 
+ href="/announce/2021-08-17-mplr-2021/" - Call for Participation, 18th ACM SIGPLAN International Conference on Managed Programming Languages & Runtimes, MPLR'21 
+ href="/announce/2021-08-10-farm-2021/" - Functional Art, Music, Modeling and Design (FARM 2021) Aug 21: Call for Participation 
+ href="/announce/2021-08-05-icfp-2021/" - Call for Participation: ICFP 2021 
+ href="/announce/2021-08-02-eais-2022/" - 2022 IEEE International Conference on Evolving and Adaptive Intelligent Systems (IEEE EAIS 2022): Call for Papers and Special Sessions 
+ July 2021 
+ href="/announce/2021-07-14-plie-2021/" - Call for Papers, 1st Workshop on Programming Languages for Interactive Entertainment (PLIE) at AIIDE 2021 
+ href="/announce/2021-07-11-pact-2021-src/" - Call for Abstracts: ACM SRC @ PACT 2021 
+ href="/announce/2021-07-02-splash-e-2021/" - Call for Papers, 2021 ACM SPLASH-E Symposium 
+ 30th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA'21) and the 35th European Conference on Object-Oriented Programming (ECOOP'21) 
+ June 2021 
+ href="/announce/2021-06-20-ppopp-2021/" - Call for Papers, 27th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming 
+
+Page generated Fri, 14 Mar 2025 00:11:07 +0000
+

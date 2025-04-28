@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "April 15 - 17, 2025",
+  "Year": "2025",
+  "Location": "Majestic Palace Hotel, Florianópolis, Brazil",
+  "City-State-Province": "Florianópolis",
+  "Country": "Brazil",
+  "Continent": "South America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission": "December 5, 2024"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "January 5, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Submission": "January 15, 2025"
+  },
+  "Registration Date": {
+    "Registration": "January 15, 2025"
+  },
+  "Topics": "Information and Knowledge Management, Organizational Models and Information Systems, Software and Systems Modeling, Software Systems, Architectures, Applications and Tools, Multimedia Systems and Applications, Computer Networks, Mobility and Pervasive Systems, Intelligent and Decision Support Systems, Big Data Analytics and Applications, Human-Computer Interaction, Ethics, Computers & Security, Health Informatics, Information Technologies in Education, Information Technologies in Radiocommunications, Technologies for Biomedical Applications",
+  "Publisher": "Springer",
+  "Summary": "WorldCist'25, the 13th World Conference on Information Systems and Technologies, will be held in Florianópolis, Brazil, from April 15-17, 2025. The conference is a global forum for researchers and practitioners to present and discuss the most recent innovations, trends, results, experiences, and concerns in various aspects of Information Systems and Technologies.",
+  "Call for Papers": "# WorldCIST'25: Call for Papers\n\nThe WorldCist'25 - 13th World Conference on Information Systems and Technologies will be held in **Florianópolis, Brazil, from April 15-17, 2025**, at the **Federal University of Santa Catarina (UFSC)**.\n\n## Scope\n\nWorldCist'25 is a global forum for researchers and practitioners to present and discuss the most recent innovations, trends, results, experiences, and concerns in the several perspectives of Information Systems and Technologies.\n\n## Themes\n\nSubmitted papers should be related to one or more of the main themes proposed for the Conference:\n\nA) Information and Knowledge Management (IKM)\nB) Organizational Models and Information Systems (OMIS)\nC) Software and Systems Modeling (SSM)\nD) Software Systems, Architectures, Applications, and Tools (SSAAT)\nE) Multimedia Systems and Applications (MSA)\nF) Computer Networks, Mobility, and Pervasive Systems (CNMPS)\nG) Intelligent and Decision Support Systems (IDSS)\nH) Big Data Analytics and Applications (BDAA)\nI) Human-Computer Interaction (HCI)\nJ) Ethics, Computers, and Security (ECS)\nK) Health Informatics (HIS)\nL) Information Technologies in Education (ITE)\nM) Technologies for Biomedical Applications (TBA)\nN) Information Technologies in Radiocommunications (ITR)\n\n## Types of Submissions\n\nFour types of original papers can be submitted:\n\n*   **Full paper:** Finished or consolidated R&D works, to be included in one of the Conference themes. (12-page limit)\n*   **Short paper:** Ongoing works with relevant preliminary results, open to discussion. (8-page limit)\n*   **Poster paper:** Initial work with relevant ideas, open to discussion. (4-page limit)\n*   **Company paper:** Companies' papers that show practical experience, R&D, tools, etc., focused on some topics of the conference. (8-page limit)\n\n## Submission Guidelines\n\nSubmitted papers must comply with the format of the Lecture Notes in Networks and Systems series ([Instructions for Authors at Springer Website](https://www.springer.com/us/authors-editors/conference-proceedings/conference-proceedings-guidelines)), be written in English, must not have been published before, not be under review for any other conference or publication, and not include any information leading to the authors’ identification.  All papers will be subjected to a “double-blind review” by at least two members of the Program Committee.\n\n## Publication and Indexing\n\n*   To ensure publication and presentation, at least one author must be fully registered by January 15, 2025, and the paper must comply with the suggested layout and page limit.\n*   Full and Short papers will be published in Proceedings by Springer, in several books of the Lecture Notes in Networks and Systems series. Poster and company papers will not be published, just presented at the conference.\n*   Published Full and Short papers will be submitted for indexation by WoS, SCOPUS, DBLP, and Google Scholar, among others, and will be available in the SpringerLink Digital Library.\n\n## Important Dates\n\n*   **Paper Submission:** December 5, 2024\n*   **Notification of Acceptance:** January 5, 2025\n*   **Payment of Registration (to ensure the inclusion of an accepted paper in the conference proceedings):** January 15, 2025\n*   **Camera-ready Submission:** January 15, 2025\n\n## Keynote Speakers\n\n*   Gintautas Dzemyda, Doctor Honoris Causa of the University of Latvia. Director at Vilnius University Institute of Data Science and Digital Technologies, Lithuania. Editor-in-Chief of Informatica (JCR/Q1).\n*   Marjan Mernik, Full Professor, University of Maribor, Slovenia. Editor-in-Chief of the Journal of Computer Languages (JCR/Q3)."
+}
+

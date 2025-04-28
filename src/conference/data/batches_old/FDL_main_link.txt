@@ -1,0 +1,200 @@
+Conference FDL:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+ Updates 
+ ×Website FDL 2025 online from 15/01/2025 
+ CloseHome 
+ Organization | Organizing CommitteeProgram CommitteeSteering Committee 
+ href="#" - Call for Papers | href="submission.html#call4paper" - Submission and Author Guidelines
+Ph.D. Forum Extended Abstracts 
+ Important Deadlines 
+ Registration 
+ Venue | Conference locationTransportation 
+ Ph.D. School | School Details 
+ href="prevconf.html#prev" - Previous FDLs 
+ Contacts 
+ FDL 2025 
+ Forum on specification 
+ & Design Languages 
+ Schloß Rheinfels, St. Goar, Germany 
+ September 10-12, 2025 
+
+The28th Forum on specification and Design Languages (FDL)is an international event where academics and industrials exchange their experiences, advances, and new trends related to languages, tools, and techniques for developing software and hardware. Targeted systems encompass cyber-physical systems, distributed systems real-time systems, embedded systems, mechatronics, IoT, and reactive systems. 
+  
+ FDL stimulates scientific and controversial discussions within and between scientific topics at different maturity levels. More specific information can be found in thehref="submission.html#call4paper" - call for papers
+(href="doc/CFP_2025.pdf" - CFP Flyer
+). 
+  
+ Previous FDL Proceedings are available onIEEEXplore. 
+
+Important Deadlines (23:59 Anywhere on Earth) 
+ - Special Session proposals:April 18, 2025 
+ - Paper Deadline:May 2, 2025 
+ - Author Notification:June 20, 2025 
+ - Ph.D. Forum deadline:July 19, 2025 
+ - Camera-ready submission:July 19, 2025 
+
+Organizing Committee 
+
+General Chair 
+ Klaus Schneider 
+ RPTU Kaiserslautern 
+ klaus.schneider@rptu.de 
+  
+ Program Chair 
+ Hans Vangelhuwe 
+ University of Antwerp 
+ hans.vangheluwe@uantwerpen.be 
+  
+ Finance Chair 
+ Franco Fummi 
+ University of Verona 
+ franco.fummi@univr.it 
+  
+ PhD Forum Chair 
+ Michele Lora 
+ University of Verona 
+ michele.lora@univr.it 
+  
+ Publication Chair 
+ Hokeun Kim 
+ Arizona State University 
+ hokeun@asu.edu 
+  
+ Publicity Chair 
+ Johannes Koch 
+ RPTU Kaiserslautern 
+ johannes.koch@rptu.de 
+  
+ Web Chair 
+ Nicola Dall'Ora 
+ Guglielmo Marconi University, 
+ University of Verona 
+ n.dallora@unimarconi.it, 
+ nicola.dallora@univr.it 
+
+FDL2025is inSchloß Rheinfels, St. Goar,Germany 
+ PreviousNext 
+
+FDL2025-Schloß Rheinfels, St. Goar,Germany 
+ Contact: General chair 
+ Klaus Schneider 
+ klaus.schneider@rptu.de 
+ Contact: Program chair 
+ Hans Vangelhuwe 
+ hans.vangheluwe@uantwerpen.be 
+
+© FDL2025| All Right Reserved 
+
+Call for Papers information:
+Home 
+ Organization | Organizing CommitteeProgram CommitteeSteering Committee 
+ href="#" - Call for Papers | href="submission.html#call4paper" - Submission and Author Guidelines
+Ph.D. Forum Extended Abstracts 
+ Important Deadlines 
+ Registration 
+ Venue | Conference locationTransportation 
+ Ph.D. School | School Details 
+ href="prevconf.html#prev" - Previous FDLs 
+ Contacts 
+ FDL 2025 
+ Forum on specification 
+ & Design Languages 
+ Schloß Rheinfels, St. Goar, Germany 
+ September 10-12, 2025 
+
+Call for Papers 
+  
+ The28th Forum on specification and Design Languages (FDL)is an international event where academics and industrials exchange their results, experiences, advances, and new trends related to languages, tools, and techniques for developing software and hardware systems. Targeted systems encompass cyber-physical systems, distributed systems, real-time systems, embedded systems mechatronics, IoT, and reactive systems. 
+ FDL is based on the four following non-limiting scientific areas: 
+  
+ Languages | : Domain-specific languages for software, execution platforms, allocations environment, contracts, abstractions, and refinements are of interest, together with the associated design methods, frameworks, and tools. 
+ Semantics | : formal definitions, compilers, interpreters, typing, abstraction/refinement, are of interest, together with the underlying specification frameworks or new approaches for their specification, modeling, and model transformation. 
+ Verification and Analysis | : innovative static analysis, testing, debugging, model checking machine learning-based analysis, or design space exploration are of interest, together with the underlying models, tools and frameworks. 
+ Simulation | : innovative simulation techniques, virtual prototypes, digital twins collaborative simulation, hybrid simulations, or runtime abstraction/refinement are of interest with special attention on the efficiency and correctness of simulations and their underlying tools and frameworks. 
+  
+ Cross-fertilization between the above areas, in particular in the context of system engineering, is of great interest. Therefore, we welcome authors to submit manuscripts on topics including, but not limited to: 
+  
+ languages and formalisms in model-based system design for modeling, testing, verification, and simulation; 
+ languages for knowledge representation about system designs; 
+ models of computations considering concurrency and time like dataflow computing, synchronous and functional languages, event-based languages, etc; 
+ modeling languages and tools for modelling (cyber-)physical environments or networks; 
+ formal methods and languages for modeling, specification, and verification; 
+ system design for modern hardware architectures like multi/manycore processors, and heterogeneous platforms, accelerators including GPUs and FPGAs; 
+ high-level hardware and software synthesis, virtual prototyping, and design space exploration; 
+ modeling and programming languages for smart contracts and distributed ledger technologies; 
+ case studies from typical application areas like healthcare, automotive, Industry 4.0, etc. 
+  
+ FDL stimulates scientific and controversial discussions within and between scientific topics at different maturity levels. The following categories of papers are presented orally at the conference and will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements: 
+  
+ Research Papers | : original papers with clear research contributions and evaluation (8 pages plus references). 
+ Special Session Papers | : call for organizing special sessions on a specific topic (2-page session proposals). Papers within the special session follow the same peer reviewing and publishing process as for research papers (8 pages plus references). 
+ Wild-and-Crazy-Idea Papers | : papers with well-explained fundamentally new ideas without rigorous evaluation (4 pages plus references). 
+ Tool Papers | : papers about new tools, their methods and successful case studies (6 pages plus references). In contrast to research papers, tool papers may not describe new research ideas, and rather present on a solid implementation of existing methods that are made publically available to the community. 
+ Work-in-progress Extended Abstracts | : submission of 2-page papers (extended abstracts) describing ongoing work where final results are not yet available but where potential solutions are already mature enough to be discussed at the conference. 
+  
+ In addition to the above categories of papers, there will be a category of papers that are not published with IEEE but are instead presented orally and distributed informally at the conference: 
+  
+ Ph.D. Forum Extended Abstracts | : submission of 2-page papers (extended abstracts, single blind) about planned and ongoing work on Ph.D. thesis that can be discussed at the conference. 
+
+Formatting and Submission Guidelines 
+  
+ Authors should submit papers in double columns, IEEE format as PDF through the submission system (see IEEE templates websitehttps://www.ieee.org/conferences/publishing/templates.htmlfor required templates). All submitted papers must describe original, unpublished work, and must not be under consideration for publication elsewhere. 
+ Initial submissions are double-blind (to avoid initial bias), but author names become available to reviewers during discussion and before the final decision. Hence, note that you must not disclose your identity in the submitted paper. References to your own papers should still be included but referred to in the third person. 
+ Submissions must be clearly tagged to determine the submission category by using the \IEEEspecialpapernotice keyword: 
+  
+ \IEEEspecialpapernotice{REGULAR PAPER SUBMISSION} 
+ \IEEEspecialpapernotice{SPECIAL SESSION SUBMISSION} 
+ \IEEEspecialpapernotice{WILD-AND-CRAZY-IDEA SUBMISSION} 
+ \IEEEspecialpapernotice{TOOL PAPER SUBMISSION} 
+ \IEEEspecialpapernotice{WORK-IN-PROGRESS SUBMISSION} 
+ \IEEEspecialpapernotice{PHD FORUM SUBMISSION} 
+  
+ Please submit your paper via EasyChair using the following link:href="https://easychair.org/conferences/?conf=fdl2025" - https://easychair.org/conferences/?conf=fdl2025
+
+Camera Ready for IEEE Xplore Proceedings 
+  
+ The deadline for the submission of the final version of the paper isJuly 19, 2025. Final version manuscripts must satisfy the following requirements: 
+  
+ papers must be written in English using the available LaTeX or Microsoft Word templates for A4 format. Formatting may not be altered; 
+ for full research papers, 8 pages plus references; 
+ for wild-and-crazy-idea papers, 4 pages plus references; 
+ for tool papers, 6 pages plus references; 
+ for wild-and-crazy-idea papers and tool papers, an | italic 11pt paper type | must be included right below the paper title: | Wild-and-Crazy-Idea | or | Tool Paper | . If you are using Latex, you can simply use the Latex syntax like this: 
+ \IEEEspecialpapernotice{Wild-and-Crazy-Idea Paper} 
+ \IEEEspecialpapernotice{Tool Paper} 
+ confirmed IEEE Xplore compatibility by using IEEE PDF eXpress; 
+ included Copyright Information; 
+ final paper submitted via the "proceedings author (IEEE Proceedings)" menu on EasyChair. 
+  
+ Document Formatting 
+  
+ The paper should adopt the two-column IEEE format. Templates are provided for Microsoft Word and LaTeX; 
+ For more information, see: | link | ; 
+ Each paper should contain an abstract of 100 to 150 words and up to 5 keywords, which you may select from the IEEE keyword list; 
+ Do not put page numbers on your document, and make sure that all fonts are embedded. 
+  
+ Copyright Information 
+  
+ TBD. 
+  
+ Validation with PDF Express 
+  
+ TBD. 
+  
+ Electronic Copyright Form Submission 
+  
+ IEEE policy requires that prior to publication, all authors or their employers must transfer to the IEEE in writing any copyright they hold for their individual papers. ONE OF THE AUTHORS MUST NEED TO COMPLETE eCopyright. The corresponding authors of accepted paperswill receivean email from IEEE with a link and login credentials to log in to eCF and submit copyright forms for their papers. For any questions, please contact the Publication Chair, Dr.Hokeun Kim. 
+
+FDL2025is inSchloß Rheinfels, St. Goar,Germany 
+ PreviousNext 
+
+FDL2025-Schloß Rheinfels, St. Goar,Germany 
+ Contact: General chair 
+ Klaus Schneider 
+ klaus.schneider@rptu.de 
+ Contact: Program chair 
+ Hans Vangelhuwe 
+ hans.vangheluwe@uantwerpen.be 
+
+© FDL2025| All Right Reserved

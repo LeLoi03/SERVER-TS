@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "August 25 - 29, 2025",
+  "Year": "2025",
+  "Location": "Budapest",
+  "City-State-Province": "Budapest",
+  "Country": "Hungary",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Extended abstract submission deadline": "March 23, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "May 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Proceedings camera ready": "May 31, 2025"
+  },
+  "Registration Date": {
+    "Early registration deadline": "June 15, 2025",
+    "Late registration deadline": "August 19, 2025"
+  },
+  "Other Date": {
+    "Nominations for the European Prize in Combinatorics": "April 15, 2025"
+  },
+  "Topics": "Algebraic combinatorics, Combinatorial geometry, Combinatorial number theory, Combinatorial optimization, Designs and configurations, Enumerative combinatorics, Extremal combinatorics, Graph theory, Ordered sets, Random methods, Topological combinatorics",
+  "Summary": "Eurocomb, the European Conference on Combinatorics, Graph Theory and Applications, is an academic conference in the mathematical field of combinatorics. The conference will be held in Budapest, Hungary, from August 25-29, 2025.",
+  "Call for Papers": "# EUROCOMB'25: Call for Papers\n\nThe European Conference on Combinatorics, Graph Theory and Applications (EUROCOMB'25) will be held in **Budapest, Hungary, from August 25-29, 2025**.\n\n## Topics\n\nEUROCOMB'25 covers the full range of combinatorics and graph theory including applications in other areas of mathematics, computer science, and engineering. The scope includes, but is not limited to:\n\n*   Algebraic combinatorics\n*   Combinatorial algorithms\n*   Combinatorial geometry\n*   Combinatorial number theory\n*   Combinatorial optimization\n*   Designs and configurations\n*   Enumerative combinatorics\n*   Extremal combinatorics\n*   Graph theory\n*   Matroid theory\n*   Ordered sets\n*   Random methods\n*   Topological combinatorics\n\n## Submission Guidelines\n\nContributions should be submitted as PDF files through the EasyChair interface: [https://easychair.org/conferences/?conf=eurocomb25](https://easychair.org/conferences/?conf=eurocomb25)\n\nEach submission should consist of the title, the list of authors with affiliations, the abstract, and the main body describing recent original theoretical results or applications of Combinatorics and Graph Theory. The length of the submission is limited to 5 pages of A4 (excluding references). The results presented in a submission should not have been published (on-line or in print) in a journal or in peer-reviewed conference proceedings in 2024 or earlier. The extended abstracts of accepted submissions will be published in the proceedings of EUROCOMB'25.\n\nAfter paper acceptance, authors will be asked to format the paper according to the following style: [LaTeX template](https://iuuk.mff.cuni.cz/events/conferences/eurocomb23/template.zip)\n\n## Important Dates\n\n*   **Extended abstract submission deadline:** March 23, 2025\n*   **Notification of acceptance:** May 11, 2025\n*   **Proceedings camera ready:** May 31, 2025\n*   **Early registration deadline:** June 15, 2025\n*   **Late registration deadline:** August 19, 2025\n*   **Conference:** August 25-29, 2025\n*   **Nominations for the European Prize in Combinatorics:** April 15, 2025"
+}
+

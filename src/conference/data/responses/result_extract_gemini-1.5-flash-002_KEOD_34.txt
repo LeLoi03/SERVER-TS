@@ -1,0 +1,32 @@
+output:
+{
+  "Conference dates": "October 22 - 24, 2025",
+  "Year": "2025",
+  "Location": "Venue Available Soon",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Regular Papers) Paper Submission": "May 19, 2025",
+    "(Position Papers /Regular Papers) Paper Submission": "June 26, 2025",
+    "(Workshops) Workshop Proposal": "May 27, 2025",
+    "(Special Sessions) Special Session Proposal": "May 27, 2025",
+    "(Tutorials) Tutorial Proposal": "September 11, 2025",
+    "(Demos) Demo Proposal": "September 11, 2025",
+    "(Panels) Panel Proposal": "September 11, 2025",
+    "(Abstracts Track) Abstract Submission": "July 31, 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Authors Notification": "July 17, 2025",
+    "(Position Papers /Regular Papers) Authors Notification": "July 31, 2025",
+    "(Abstracts Track) Authors Notification": "September 8, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular Papers) Camera Ready and Registration": "July 31, 2025",
+    "(Position Papers /Regular Papers) Camera Ready and Registration": "September 5, 2025",
+    "(Abstracts Track) Camera Ready and Registration": "September 17, 2025"
+  },
+  "Topics": "Knowledge Engineering, Ontology Development, Applications and Case-Studies, Automated Ontology Learning and Evolution, Domain Analysis and Modeling, Domain Ontologies, Enterprise Engineering, Enterprise Ontology, Explainable Artificial Intelligence (XAI) in Ontology Development, Integration and Interoperability, Knowledge Acquisition, Knowledge Graphs and Graph Neural Networks (GNNs), Knowledge Representation, LLM-based Ontology Development, Natural Language Processing, Ontologies for Ethical AI and Bias Mitigation, Ontologies in Low-code and No-code Platforms, Ontology Engineering, Ontology Matching and Alignment, Ontology Sharing and Reuse, Ontology Tools, Ontology-based Cybersecurity Frameworks, Ontology-driven Digital Twins, Reference Models, Semantic Interoperability in IoT and Cyber-Physical Systems, Semantic Web, Sustainability and Green AI Ontologies",
+  "Publisher": "SCITEPRESS",
+  "Summary": "KEOD 2025, the 17th International Conference on Knowledge Engineering and Ontology Development, will be held from October 22-24, 2025.  KEOD is a key venue for researchers and practitioners to explore traditional and cutting-edge topics in Knowledge Engineering and Ontology Development, fostering innovation across academia and industry.  Registration to KEOD allows free access to all other IC3K conferences.",
+  "Call for Papers": "# KEOD 2025: Call for Papers\n\nThe 17th International Conference on Knowledge Engineering and Ontology Development (KEOD 2025) will be held from **October 22-24, 2025**.\n\nKEOD serves as a key venue for researchers and practitioners to explore traditional and cutting-edge topics like LLM-based Ontology Development, Ontology-driven Digital Twins, and Ontology-enhanced Low-code Platforms, fostering innovation in KE and OD across academia and industry.\n\n## Scope\n\nKnowledge Engineering (KE) refers to the technical, scientific, and social aspects involved in building, maintaining, and utilizing knowledge-based systems. Ontology Development (OD) focuses on building reusable semantic structures such as vocabularies, glossaries, and formal ontologies.\n\n## Conference Topics\n\n*   Applications and Case-Studies\n*   Automated Ontology Learning and Evolution\n*   Domain Analysis and Modeling\n*   Domain Ontologies\n*   Enterprise Engineering\n*   Enterprise Ontology\n*   Explainable Artificial Intelligence (XAI) in Ontology Development\n*   Integration and Interoperability\n*   Knowledge Acquisition\n*   Knowledge Engineering\n*   Knowledge Graphs and Graph Neural Networks (GNNs)\n*   Knowledge Representation\n*   LLM-based Ontology Development\n*   Natural Language Processing\n*   Ontologies for Ethical AI and Bias Mitigation\n*   Ontologies in Low-code and No-code Platforms\n*   Ontology Engineering\n*   Ontology Matching and Alignment\n*   Ontology Sharing and Reuse\n*   Ontology Tools\n*   Ontology-based Cybersecurity Frameworks\n*   Ontology-driven Digital Twins\n*   Reference Models\n*   Semantic Interoperability in IoT and Cyber-Physical Systems\n*   Semantic Web\n*   Sustainability and Green AI Ontologies\n\n## Paper Submission\n\nAuthors can submit their work in the form of a complete paper or an abstract. Complete papers can be submitted as a Regular Paper or a Position Paper.  All papers must be submitted through the online submission platform PRIMORIS and should follow the instructions and templates that can be found under Guidelines and Templates.\n\n## Publication\n\nAll accepted complete papers will be published in the conference proceedings, under an ISBN reference, on paper and on digital support. The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science / Conference Proceedings Citation Index.\n\n## Important Dates\n\n*   **Conference Date:** October 22 - 24, 2025\n*   **Regular Papers Paper Submission:** May 19, 2025\n*   **Regular Papers Authors Notification:** July 17, 2025\n*   **Regular Papers Camera Ready and Registration:** July 31, 2025\n*   **Position Papers /Regular Papers Paper Submission:** June 26, 2025\n*   **Position Papers /Regular Papers Authors Notification:** July 31, 2025\n*   **Position Papers /Regular Papers Camera Ready and Registration:** September 5, 2025\n*   **Workshops Workshop Proposal:** May 27, 2025\n*   **Special Sessions Special Session Proposal:** May 27, 2025\n*   **Tutorials Tutorial Proposal:** September 11, 2025\n*   **Demos Demo Proposal:** September 11, 2025\n*   **Panels Panel Proposal:** September 11, 2025\n*   **Abstracts Track Abstract Submission:** July 31, 2025\n*   **Abstracts Track Authors Notification:** September 8, 2025\n*   **Abstracts Track Camera Ready and Registration:** September 17, 2025\n\n**Note:** All dates refer to AOE time, i.e., \"Anywhere on Earth\"\n\n## Conference Co-chairs\n\n*   Jorge Bernardino, Polytechnic University of Coimbra, Portugal\n*   Ricardo da Silva Torres, Agricultural Biosystems Engineering and Wageningen Data Competence Center, Wageningen University & Research, Netherlands\n\n## Program Chair\n\n*   David Aveiro, University of Madeira, NOVA-LINCS and ARDITI, Portugal"
+}
+

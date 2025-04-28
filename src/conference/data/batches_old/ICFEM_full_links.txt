@@ -1,0 +1,1212 @@
+Conference full name: International Conference on Formal Engineering Methods (ICFEM)
+
+1. Website of ICFEM_3: https://icfem2024.info/
+Website information of ICFEM_3:
+
+HOME 
+ Photos 
+ Attending | Venue 
+ Accommodation 
+ Visa 
+ href="ICFEM2024Proceedings.pdf" - Proceedings 
+ Program 
+ Keynotes 
+ href="#dates" - Dates 
+ href="" - Tracks | Journal-First Presentations 
+ Doctoral Symposium 
+ Industrial Applications 
+ Workshop 
+ SPONSORS 
+ Committee 
+ href="ICFEM2024CallforPapers.pdf" - CFP 
+ The 25thInternational Conference on Formal Engineering Methods 
+ 2 ~ 6 December 2024 - Hiroshima, Japan 
+ Welcome to the website of the 25thInternational Conference on Formal Engineering Methods (ICFEM 2024) 
+ Since it was started in Hiroshima, Japan in 1997, ICFEM has provided a forum for both researchers and practitioners to discuss and exchange their experience and results in research on theories, methods, languages, and supporting tools for integrating formal methods into conventional software engineering technologies to provide more effective and efficient approaches to large-scale software engineering. The goal of this conference is to bring together industrial, academic, and government experts in both formal methods and software engineering to help advance the state of the art. 
+ At its first return to Hiroshima since 1997, ICFEM 2024 will celebrate the 25th anniversary of the ICFEM conference series. Researchers, practitioners, tool developers, and users are all welcome to submit papers and participate in the conference. We look forward to your contributions and participation. 
+ Scope and Topics 
+ Authors are invited to submit high quality technical papers describing original and unpublished work in all aspects of formal engineering methods for software development and maintenance. Topics of interest include, but are not limited to: 
+ Formal specification and modeling 
+ Formal approaches to fault prevention and detection 
+ Abstraction, refinement, and evolution 
+ Formal verification and validation 
+ Integration of formal methods and testing 
+ Integration of formal methods and review 
+ SAT/SMT solvers for software analysis and testing 
+ Practical formal methods 
+ Applications of formal methods 
+ Formal approaches to software maintenance 
+ Formal approaches to safety-critical system development 
+ Supporting tools for formal methods 
+ Formal methods for agile development 
+ Formal methods for human-machine pair programming 
+ Formal methods for AI Systems 
+ Formal methods for Cyber-physical systems and IoT 
+ Formal certification of products 
+ Industrial case studies 
+ Visa Application 
+ Visa InformationIf you require a visa to enter Japan, please consult with your local Japanese Embassy or Consulate (or visit their website) to determine the specific documents needed from the ICFEM 2024 organizing committee. For additional information about visa applications, you may find the following website helpful:https://www.mofa.go.jp/j_info/visit/visa/index.html. 
+ After receiving the above confirmation, please reach out to ICFEM 2024 General Chair Shaoying Liu atsliu@hiroshima-u.ac.jpwith the subject line “Visa Application Document Request.” In your email, please specify the exact documents you require and, if possible, attach any necessary forms that the conference organizer needs to complete. 
+ Invitation letterThe invitation letter will be sent by email after the successful registration. 
+ Your name must be listed exactly as it appears on your passport. Any differences between the name on your passport and the name on your invitation letter or other documentation could lead to a delay and/or denial of your visa. 
+ Please note that the ICFEM 2024 organizers are not responsible for assisting with your visa application. On your email request, we will provide you with an Invitation Letter, which you can use as part of your application process. 
+ It takes around one month for the Embassy to process the VISA application, please register as early as you can to make sure you have enough time for your visa application. 
+ Venue 
+ The 25th International Conference on Formal Engineering Methods (ICFEM 2024) will take place inInternational Conference Center Hiroshima. 
+ The International Conference Center Hiroshima (ICCH) is located within Peace Memorial Park with the purpose of promoting international exchange and improving civic culture. Equipped with a large hall that can accommodate up to 1,504 people, an international conference hall, and large, medium and small conference rooms, the venue is ideal for concerts, lectures, domestic and international conferences, as well as exhibitions and corporate and organizational meetings. It is widely used for various purposes. 
+ Accommodation 
+  
+ Distance from googlemap | Access from googlemap 
+ HOTEL MYSTAYS Hiroshima Peace Park | 450m | 7 minutes on foot 
+ THE KNOT HIROSHIOMA | 550m | 8 minutes on foot 
+ Dormy Inn Hiroshima | 650m | 10 minutes on foot 
+ ANA Crowne Plaza Hiroshima | 650m | 10 minutes on foot 
+ Comfort Hotel Hiroshima Otemachi | 800m | 11 minutes on foot 
+ Daiwa Roynet Hotel HIROSHIMA | 800m | 11 minutes on foot 
+ Mitsui Garden Hotel Hiroshima | 900m | 13 minutes on foot 
+ RIHGA Royal Hotel Hiroshima | 1.2km | 16 minutes on foot + train 
+ GRAND BASE Hiroshima Peace Memorial Park | 600m | 8 minutes on foot 
+ APA Hotel Hiroshima-Ekimae Ohashi | 2.5km | 20 minutes on foot + train 
+ Sightseeing 
+ Hiroshima, a symbol of resistance and rebirth, deserves to be at the top of your bucket list of places to visit in Japan. The City of Peace, which just welcomed the latest G7 Summit, is a must-see destination in Japan's south. With a rich historic past that extends well beyond the tragic 1945 events, a vibrant city life, wonderful local cuisine, and gorgeous surroundings as it lies by the blue waters of Hiroshima Bay, let’s take a look at everything Hiroshima has to offer! (more detailshere). 
+ Program 
+ Download the programhref="ICFEM2024_Formatted_Program_VeryFinal.pdf" - here
+. 
+ Keynote Speakers 
+ Mike Hincheyis Professor of Software Engineering at University of Limerick, Ireland, where he was previously Head of Department of Computer Science and Information Systems and Director of Lero-the Science Foundation Ireland Research Centre for Software, a national research centre headquartered at University of Limerick. He is Past President of IFIP, the International Federation for Information Processing (www.ifip.org) and Past Chair of the IEEE UK & Ireland Section. He is Director-elect of IEEE Region 8 (Europe, Middle East, Africa) and serves on IEEE Computer Society Board of Governors. Prior to joining University of Limerick, Professor Hinchey was the Director of the NASA Software Engineering Laboratory. In 2009, he was awarded NASA’s Kerley Award as Innovator of the Year and is one of only 36 people recognized in the NASA Inventors Hall of Fame. Professor Hinchey holds a B.Sc. in Computer Systems from University of Limerick, an M.Sc. in Computation (Mathematics) from University of Oxford and a PhD in Computer Science from University of Cambridge. Professor Hinchey is a Chartered Engineer, Chartered Engineering Professional, Chartered Mathematician and Chartered Information Technology Professional, as well as a Fellow of the IET, British Computer Society, Engineers Ireland, and Irish Computer Society, of which he is also Past President. He is Editor-in-Chief of Innovations in Systems and Software Engineering: a NASA Journal and Journal of the Brazilian Computer Society. In 2018, he became an Honorary Fellow of the Computer Society of India and was the SEARCC Global ICT Professional of the Year 2018. 
+ Title:Formal Specification of Autonomy Features with ARE and KnowLang 
+ Abstract: 
+ Autonomous systems, such as autonomous vehicles, extend upstream the regular software-intensive systems with special autonomy features. The identification of such features is not necessarily an easy task. Sometimes, those can be explicitly stated by stakeholders or in preliminary material available to requirements engineers. Often though, they are implicit, so a process of formal specification intended to capture the autonomy features has to be undertaken. This paper elaborates on a methodology for capturing and specification of autonomy features where autonomy requirements are captured with ARE (Autonomy Requirements Engineering) and then are specified with KnowLang. a framework for knowledge representation and reasoning. In this approach, autonomy features are detected as special self-* objectives backed up by different capabilities and quality characteristics. The self-* objectives provide the system’s ability to autonomously discover, diagnose, and cope with various problems. The captured autonomy requirements are formally specified with the KnowLang notation and then compiled to a knowledge base that is to be used by the KnowLang Reasoner. 
+ Naijun Zhanis a distinguished research professor of Institute of Software Chinese Academy of Sciences (ISCAS). He got his bachelor degree and master degree both from Nanjing University, and his PhD from ISCAS. Prior to join ISCAS, he worked at the Faculty of Mathematics and Informatics, Mannheim University, Germany as a research fellow. His research interests cover formal design of real-time, embedded and hybrid systems, program verification, modal and temporal logic, and so on. He is in the editorial boards of Journal of Automated Reasoning, Formal Aspects of Computing, Journal of Logical and Algebraic Methods in Programming, Journal of Software, Journal of Electronics, and Journal of Computer Research and Development, a member of the steering committees of SETTA and MEMOCODE, the pc co-chairs of FM 2021, SETTA 2016, the general co-chairs of MEMOCODE 2018, MEMOCODE2019 and ICESS 2019, and serves more than 100 international conferences program committees e.g., CAV, FM, TACAS, RTSS, HSCC, ICCPS, EMSOFT and so on. He published more than 100 papers in international leading journals and conferences, 2 books and 4 book chapters, and edited 4 conference proceedings and 4 journal special issues. 
+ Title:Synthesizing (Differential) Invariants by Reduction Non-Convex Programming to SDP 
+ Abstract: 
+ Invariant Generation plays a central role in the verification of programs and hybrid systems. As the constraint solving techniques advance rapidly in recent years, particularly optimization-based constraint solving, optimization based invariant generation becomes more and more promising and has been successfully applied to verification of programs and hybrid systems. However, how to deal with non-convex programming derived from invariant generation is still challenging. In this talk, I report our recent work on efficient invariant generation by reduction non-convex programming to SDP. 
+ Mark Lawfordis Chair and Professor of the Department of Computing and Software at McMaster University (Canada). He is a Co-Founder and a past Director of McMaster Centre for Software Certification (McSCert), the 2024 IEEE TCSE Synergy award recipient. He joined McMaster University in 1998, where he helped to develop the software engineering and mechatronics engineering programs. Throughout his career he has work with industry on the practical application of formal methods and model based software engineering to safety critical real-time software. After working with industry partners in the nuclear and medical domains earlier in his career, over the past decade he has increasingly focused on working with OEMs on assurance of automotive systems. 
+ Title:Challenges and Opportunities in Assurance of Software Defined Vehicle 
+ Abstract: 
+ Automotive innovation is increasingly software driven. As a result of the competitive environment requiring a yearly release of new automotive models featuring the latest driver assistance features and innovation in electrification, safety critical software is being developed at an unprecedented scale on extremely tight deadlines. To be competitive automotive manufacturers and parts suppliers need to change how they develop and assure software intensive systems. This presents a tremendous opportunity for researchers in the application of formal methods and model based software engineering to have a significant impact on industry practice. In this talk we highlight our recent work on model based software engineering, incremental assurance and the potential for applications of formal methods to help the automotive industry make the transition to the Software Defined vehicle. 
+ Important Dates 
+ Full Paper Submissions: 8 July, 2024(strict)Acceptance / Rejection Notification: 9 September, 2024Camera-ready Papers: 27 September, 2024Workshop/Tutorial Proposals: 5 July, 2024Workshop 
+ SFPVV2024Sponsors 
+ Murata Science and Education Foundation (公益財団法人 村田学術振興・教育財団) 
+ Huawei Technologies Co., Ltd. 
+ Supporters 
+ VenueInformation Processing Society of Japan 
+ Hiroshima University 
+ IEEE Japan Council 
+ Conference Organizing Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ href="https://formal-analysis.com/icfem/2023/#" - Jifeng He
+, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Xidian University, China(Chair) 
+ General Chair 
+ Shaoying Liu, Hiroshima University, Japan 
+ Program Chairs 
+ Kazuhiro Ogata, JAIST, Japan 
+ Meng Sun, Peking University, China 
+ Dominique Méry, LORIA, Telecom Nancy, University of Lorraine, France 
+ Financial Chair 
+ Fumiko Nagoya, Nihon University, Japan 
+ Publicity Chair 
+ Yuting Chen, Shanghai Jiao Tong University, China 
+ Yamine Ait-Ameur, IRIT-ENSEEIHT, Toulouse, France 
+ Track-Organizing Chair 
+ Weikai Miao, ECNU, China 
+ Workshop/Tutorial Chair 
+ Wuwei Shen, Western Michigan University, USA 
+ Web Chair 
+ Yuxiang Shang, Hiroshima University, Japan 
+ Local Arrangement Chairs 
+ Naoko Wakiya, Hiroshima Shudo University, Japan 
+ Yanzhao Xia, Hiroshima University, Japan 
+ Leadership Appreciation Chair 
+ Shengchao Qin, Xidian University, China 
+ Program Committee 
+ Yamine Ait Ameur, IRIT/INPT-ENSEEIHT, France 
+ Étienne André, Université de Lorraine, France 
+ Cyrille Valentin Artho, KTH Royal Institute of Technology, Sweden 
+ Guangdong Bai, The University of Queensland, Australia 
+ Christel Baier, TU Dresden, Germany 
+ Lei Bu, Nanjing University, China 
+ Ana Cavalcanti, University of York, United Kingdom 
+ Yean-Ru Chen, National Cheng Kung University, Taiwan 
+ Yuting Chen, Shanghai Jiao Tong University, China 
+ Zhenbang Chen, NUDT, China 
+ Ranald Clouston, Australian National University, Australia 
+ Florin Craciun, Babes-Bolyai University, Romania 
+ Ana De Melo, University of São Paulo, Brazil 
+ Canh Minh Do, JAIST, Japan 
+ Thi Thu Ha Doan, Freiburg University, Germany 
+ Naipeng Dong, National University of Singapore, Singapore 
+ Aaron Dutle, NASA Langley Research Center, United States 
+ Santiago Escobar, Universitat Politècnica de València, Spain 
+ Flavio Ferrarotti, Software Competence Centre Hagenberg, Austria 
+ Marc Frappier, Université de Sherbrooke, Canada 
+ Daniel Gaina, Kyushu University, Japan 
+ Lindsay Groves, Victoria University of Wellington, New Zealand 
+ Osman Hassan, National University of Sciences & Technology, Pakistan 
+ Xudong He, Florida International University, United States 
+ Zhe Hou, Griffith University, Australia 
+ Fuyuki Ishikawa, National Institute of Informatics, Japan 
+ Eun-Young Kang, University of Southern Denmark, Denmark 
+ Mark Lawford, McMaster University, Canada 
+ Jiaying Li, Microsoft, China 
+ Shang-Wei Lin, Nanyang Technological University, Singapore 
+ Guanjun Liu, Tongji University, China 
+ Si Liu, ETH Zurich, Swizerland 
+ Zhiming Liu, Southwest University, China 
+ Frederic Mallet, Universite Nice Sophia-Antipolis, France 
+ Heiko Mantel, TU Darmstadt, Germany 
+ Diego Marmsoler, University of Exeter, United Kingdom 
+ Narciso Martí-Oliet, Universidad Complutense de Madrid, Spain 
+ Stephan Merz, Inria Nancy, France 
+ Rosemary Monahan, Maynooth University, Ireland 
+ Shin Nakajima, National Institute of Informatics, Japan 
+ Masaki Nakamura, Toyama Prefectural University, Japan 
+ Peter Ölveczky, University of Oslo, Norway 
+ Jun Pang, University of Luxembourg, Luxembourg 
+ Yu Pei, The Hong Kong Polytechnic University, Hong Kong 
+ Shengchao Qin, Xidian University, China 
+ Silvio Ranise, University of Trento and Fondazione Bruno Kessler, Italy 
+ Elvinia Riccobene, University of Milan, Italy 
+ Adrian Riesco, Universidad Complutense de Madrid, Spain 
+ Markus Roggenbach, Swansee University, UK 
+ Subhajit Roy, Indian Institute of Technology Kanpur, India 
+ Rubén Rubio, Universidad Complutense de Madrid, Spain 
+ David Sanan, Singapore Institute of Technology, Singapore 
+ Jing Sun, The University of Auckland, New Zealand 
+ Sofiene Tahar, Concordia University, Canada 
+ Maurice ter Beek, ISTI CNR PISA, Italy 
+ Cong Tian, Xidian University, China 
+ Duong Dinh Tran, JAIST, Japan 
+ Elena Troubitsyna, KTH, Sweden 
+ Tatsuhiro Tsuchiya, Osaka University, Japan 
+ Ionut Tutu, Simion Stoilow Institute of Mathematics of the Romanian Academy, Romania 
+ Bow-Yaw Wang, Academia Sinica, Taiwan 
+ Hai H. Wang, University of Aston, United Kingdom 
+ Tomoyuki Yokogawa, Okayama Prefectural University, Japan 
+ Min Zhang, East China Normal University, China 
+ Xiyue Zhang, University of Oxford, United Kingdom 
+ Yongwang Zhao, Zhejiang University, China
+
+2. Website of ICFEM_3: https://formal-analysis.com/icfem/2023/
+Website information of ICFEM_3:
+
+href="https://icfem2024.info" - ICFEM 2024 
+ Scope 
+ Register 
+ Venue 
+ Program 
+ Affiliated Events 
+ href="#dates" - Important Dates 
+ Sponsors 
+ Committee 
+ The 24thInternational Conference on Formal Engineering Methods 
+ 21 - 24 November 2023 - Brisbane, Australia (Physical) 
+ Welcome to the website of the 24thInternational Conference on Formal Engineering Methods (ICFEM 2023) 
+ ICFEM is an international leading conference series in formal methods and software engineering. Since 1997, ICFEM has been serving as an international forum for researchers and practitioners who have been seriously applying formal methods to practical applications. Researchers and practitioners, from industry, academia, and government, are encouraged to attend, present their research, and help advance the state of the art. ICFEM is interested in work that has been incorporated into real production systems, and in theoretical work that promises to bring practical and tangible benefit. ICFEM has been hosted in many countries around the world. 
+ href="https://icfem2024.info/" - ICFEM 2024
+will be hosted in Hiroshima, Japan. 
+ Scope and Topics 
+ Authors are invited to submit high quality technical papers describing original and unpublished work in all theoretical aspects of software engineering. Topics of interest include, but are not limited to: 
+ Abstraction, refinement and evolution 
+ Formal specification and modelling 
+ Formal verification and analysis 
+ Model checking and equivalence checking 
+ Automated and interactive theorem proving 
+ Formal approaches to software testing and inspection 
+ Formal methods for self-adaptive systems 
+ Formal methods for object-oriented systems 
+ Formal methods for component-based systems 
+ Formal methods for concurrent and real-time systems 
+ Formal methods for cloud computing 
+ Formal methods for cyber-physical systems 
+ Formal methods for hardware and embedded systems 
+ Formal methods for software safety and security 
+ Formal methods for software reliability and dependability 
+ Development, integration and experiments involving verified systems 
+ Formal certification of products under international standards 
+ Formal model-based development and code generation 
+ Registration 
+  
+ Student Early 
+ (until 05 Oct) | General Early 
+ (until 05 Oct) | Student Standard 
+ (after 05 Oct) | General Standard 
+ (after 05 Oct) 
+ ICFEM All Package* | 1077 AUD (≈ 730 USD) | 1254 AUD (≈ 850 USD) | 1254 AUD (≈ 850 USD) | 1430 AUD (≈ 970 USD) 
+ ICFEM Only** | 960 AUD (≈ 650 USD) | 1150 AUD (≈ 780 USD) | 1150 AUD (≈ 780 USD) | 1327 AUD (≈ 900 USD) 
+ Workshops/Doc Symp*** | 192 AUD (≈ 130 USD) | 265 AUD (≈ 180 USD) | 265 AUD (≈ 180 USD) | 340 AUD (≈ 230 USD) 
+ Note that authors' registration deadline is the same as the early bird deadline (05 Oct 2023). 
+  
+ *ICFEM All Package includes ICFEM conference, all the workshops, doctoral symposium, morning tea, lunch, afternoon tea every day (4 days) and a conference dinner. 
+  
+ **ICFEM Only includes ICFEM conference, morning tea, lunch, afternoon tea every day (3 days) and a conference dinner. 
+  
+ ***Workshops/Doc Symp includes workshopsORthe doctoral symposium, morning tea, lunch, and afternoon tea (1 day). 
+  
+ The USD conversion is only for indication purposes. The attendants should use the AUD price for registration.Due to tax issues, residents in Australia will go through a different payment process, so please choose the following links accordingly. The fees are the same. 
+  
+ If you do not live in Australia, please use the following link to register. 
+ href="https://app.secure.griffith.edu.au/griffithpay/icfem-2023-international-registrants.html" - Overseas Delegates Register here
+ 
+ If you live in Australia, please use the following link to register. 
+ href="https://app.secure.griffith.edu.au/griffithpay/icfem-2023-australian-registrants.html" - Australian Delegates Register here
+Visa Application 
+ To help attendees prepare the visa letter, please emailmengyao.ma@uq.edu.au. 
+ General information for Australian visa applicants can be foundhere. Business conference visa information can be foundhere. Further information about the specific requirements of Visitor visas is available on theDepartment's website. 
+ Venue and Accomodation 
+ The 24th International Conference on Formal Engineering Methods (ICFEM 2023) will take place inNovotel Brisbane South Bank. 
+ Novotel Brisbane South Bank contemporary hotel is perfectly placed in the heart of the South Bank Parklands. Adjacent to the hotel is seven hectares of luscious grass at Musgrave Park, which hosts some of Brisbane's vibrant annual festivals and events. Take a short walk to the Brisbane Convention and Exhibition Centre. Beyond the Centre, you'll enjoy stunning views, lush parklands, superb dining experiences, vibrant art galleries, riverbank Streets Beach and world class shopping in the Brisbane CBD shopping district. 
+ Novotel Brisbane South Bank has provided ICFEM 2023 with up to 20% discount on accommodation.Book online with the link hereto get the discounted rate. The offer is valid until 6th Nov, and exclusive for 19th-24th Nov. If the you would like to extend booking further, please contact the hotel directly viaHA0X0@accor.comor call +61 (07) 3295 4100. 
+ Alternative Accommodations 
+ 40 Elizabeth Street, Brisbane City QLD 4000 
+ ibis Styles Brisbane Elizabeth Streethas provided ICFEM 2023 with about 15% discount on accommodation.Book online with the link hereto get the discounted rate. The offer is valid for stay from Friday, 17th November through to Monday, 27th November inclusive. 
+ Located in the heart of the Brisbane CBD, the 367 room ibis Styles Brisbane features uninterrupted views of Brisbane River and the South Bank cultural precinct. Vibrant colours and playful design extend through the lobby, to the Social Restaurant and Bar, while rooms blend comfort, connectivity and style. The best shopping and dining in Brisbane is at its doorstep with access to Queen Street Mall, Treasury Casino, Eagle Street Pier, Convention Centre and public transportation. 
+ 218 Vulture St, South Brisbane QLD 4101 
+ Courtyard Brisbane South Bankhas provided ICFEM 2023 with about 15% discount on accommodation.Book online with the link hereto get the discounted rate. The offer is valid for stay from Friday, 17th November through to Monday, 27th November inclusive. 
+ Set on the fringe of the Brisbane CBD, Courtyard Brisbane South Bank offers an ideal location near the South Bank Parklands in Brisbane, Australia. Experience everything the vibrant state of Queensland has to offer from this family friendly hotel. It is just steps away from public transport options for easy travel to world class eateries, shops, gardens and entertainment venues. Before you begin your day in South Brisbane energize with a workout in the 24-hr fitness centre or take a swim in the heated indoor pool. 
+ 267 Grey St, South Brisbane QLD 4101 
+ Emporium Hotel South Bankhas provided ICFEM 2023 with about 10-15% discount on accommodation. The discount is automatically applied when guests enter their dates on the website. 
+ A spectacular new standard in exquisite boutique luxury accommodation and award-winning service. 143 luxuriously appointed suites feature all the comforts you could ask for, while an abundance of premium food and beverage options will leave you spoilt for choice. On level 21 you will find a spectacular, 23m infinity edge pool and bar with magnificent views over South Bank Parklands, the Brisbane River, to the city and beyond. The coveted north easterly aspect will allow comfort and enjoyment morning to night, all year round. 
+ Program 
+ Download the programhref="ICFEM2023-Program.pdf" - here
+. 
+ Keynote Speakers 
+ Graeme Smithis an Associate Professor of Computer Science at The University of Queensland and Principal Scientist of the Defence Science and Technology Group (Australia). Prior to his current position he held research positions with the Software Verification Research Centre (Australia), GMD First (Germany), the Technical University of Berlin, and the Centre de Recherche en Informatique de Nancy (France). His research interests are in the application of formal techniques to functional correctness and security of concurrent systems. His most recent work focuses on how the effects of compiler and hardware optimisations on concurrent programs interact with information flow security. 
+ Title:Compositional reasoning at the software/hardware interface 
+ Abstract: 
+ Rely/guarantee reasoning provides a compositional approach to reasoning about multi-threaded programs. It is sound under the assumption that the individual threads execute in a sequentially consistent manner. However, this is not the case on modern multicore processors which routinely employ out-of-order execution for efficiency gains. This loss of sequential consistency has no effects on the functionality of high-level programs that are data-race free, and for those programs rely/guarantee reasoning remains sound. However, this is not the case for code developed to include data races for efficiency, such as operating system routines and programming library data structures - the code on which much of our software depends. 
+ In this talk, I will explain the effects of out-of-order execution on such code and how soundness of rely/guarantee reasoning can be restored by using additional checks. I will also look at how these checks apply to reasoning about low-level security vulnerabilities, such as Spectre. 
+ Yuxi Fuis a professor of the Department of Computer Science, Shanghai Jiao Tong University. His research interest is in theoretical computer science. His publications cover topics in type theory, semantics, concurrency theory, theory of interaction, equivalence checking. He developed theory of interaction as a general theory that gives a uniform account of both computation models and interaction models. The theory is based on Thesis on Interaction, which is an interactive version of Thesis on Computation (Church-Turing Thesis). The overall goal of the general model theory is to provide a model independent foundation for both the programming theory and the computing theory. In the area of equivalence checking, he has solved a number of open problems, including the decidability of branching bisimilarity for BPA, the decidability of the branching bisimilarity of the epsilon-pushing PDA and epsilon-popping PDA. Currently his main focus is on the complexity of VASS reachability. 
+ Title:A Theory for Interaction 
+ Abstract: 
+ A general theory for interaction is outlined. The theory features a model independent appraoch to concurrency and process models. Within the framework equality theory, expressiveness theory are studied. And a Thesis for Interaction is proposed as the foundation for interaction theory. 
+ Yamine AIT AMEURis Full Professor since 2000. Since Sept 2011, he is at Toulouse INP (National Polytechnique Institute) in Toulouse (France) and member of the Toulouse research institute in computing (IRIT-CNRS). Two main important aspects characterize his research activities. On the one hand the fundamental aspects through the development and use of state based formal modelling techniques based on refinement and proofs, in particular Event-B and explicit formalisation of the semantics of domain knowledge using formalised ontology models. On the other, hand, practical aspects, through the development of operational applications, allowing to validate the proposed approaches. Embedded systems in avionics, engineering, interactive systems, CO2 capture are some of the application domains targeted by this work 
+ Title:Separation of Concerns for Complexity Mitigation in System and Domain Formal Modelling – A Dive into Algebraic Event-B Theories 
+ Abstract: 
+ Formal methods have shown their ability and efficiency in the design, analysis and verification of safety critical complex software systems. A crucial challenge for formal methods nowadays is to make them reasonably accessible, as to foster a wider adoption across system engineering, and make their implementation and deployment more operational for non-expert engineers and researchers alike. From our point of view, promoting the reuse and sharing of explicitly formalised elements such as models, theories, proofs, etc. contributes, undoubtedly, to the dissemination of these methods. As a result, reuse mechanisms must be defined and integrated into development processes such as refinement, abstraction, composition/decomposition, etc. 
+ In this talk, we will discuss state -based formal methods, namely the Event-B method. We report on our findings about the definition of algebraic theories that are utilised within Event-B model refinement chains. In our method, Event-B models borrow operators, axioms, theorems, proof and rewrite rules from these theories. Relying on their well-definedness, these operators, axioms, theorems and proof and rewrite rules are useful to discharge the proof obligations generated for these models, and contribute to reducing development efforts, as theorems of the theories are proved once and for all. The approach is illustrated on the generation of new proof obligations and on system models conformance to engineering standards. 
+ Invited Talks 
+ Ian Hayes 
+ The University of Queensland, Australia 
+ Verifying Compiler Optimisations 
+ Toby Murray 
+ University of Melbourne, Australia 
+ Practical Verified Concurrent Program Security 
+ Dirk Pattinson 
+ The Australian National University, Australia 
+ Certified Proof and Non-Provability 
+ Subodh Sharma 
+ Indian Institute of Technology Delhi, India 
+ On Analysing Weak Memory Concurrency 
+ Proceedings 
+ Please refer to thehref="https://link.springer.com/book/10.1007/978-981-99-7584-6" - ICFEM 2023 proceedings
+. 
+ Affiliated Events 
+ The 2ndInternational Workshop on Formal Analysis and Verification of Post-Quantum Cryptographic Protocols(FAVPQC 2023), 21 November 2023 
+ The 7thSymposium on Distributed Ledger Technology(SDLT 2023),21 - 22 November30 November - 1 December 2023 
+ Attractions 
+ Welcome to Brisbane, Australia's thriving subtropical capital city situated in the heart of the Sunshine State, Queensland. As the third-largest city in Australia, Brisbane offers a dynamic fusion of urban sophistication, natural beauty, and a rich cultural scene. 
+ Queensland Art Gallery, located in Brisbane, is famous for its extensive collection of Australian and Indigenous art, diverse international exhibits, and striking modern architecture. It's a must-visit for art lovers, and its beautiful riverside setting offers a unique cultural experience in the heart of the city. 
+ The Brisbane Riveroffers endless adventure and leisure opportunities, from kayaking and paddleboarding to City Cat rides and picnics in riverside parks. You can enjoy stunning views from Kangaroo Point Cliffs, try rock climbing or abseiling with Riverlife Adventure Centre, and even explore the Story Bridge. 
+ The Queensland Museumshowcases Queensland's natural history, cultural heritage, and scientific achievements through a mix of permanent and rotating exhibitions that connect visitors to the state's rich history and global impact, making it a dynamic destination for learning and exploration. 
+ InLone Pine Koala Sanctuary, discover over 70 species of Australian native animals in a beautiful, natural bush setting at the world's first and largest koala sanctuary. Meet a koala, hand-feed kangaroos, marvel at the playful platypus, and enjoy a full daily schedule of keeper talks and activities, including Sheep Dog Show and Wild Lorikeet Feeding. 
+ Bank Parklandsis Brisbane's premier lifestyle and cultural destination. Located on the southern banks of the Brisbane River, its 17 hectares of lush parklands, world-class eateries, stunning river views and hundreds of delightful events all year round make it the perfect place to relax and unwind. 
+ Mt Coot-Thais a Brisbane icon forming a backdrop for the city and is Brisbane City Council's largest natural area, located just 15 minutes from the Brisbane CBD. The Mount Coot-Tha reserve contains more than 1600 hectares of open eucalypt forest, rainforest gullies, creek lines, waterfalls and spectacular views; offers a variety of walking tracks. 
+ Important Dates 
+ Abstract Submission:14 May21 May, 2023 (AoE) 
+ Full Paper Submission:21 May28 May, 2023 (AoE) 
+ Author Notification: 30 July, 2023 
+ Camera-ready versions:13 August20 August, 2023 
+ Journal First Submission Deadline: 1 September, 2023 (AoE) 
+ Journal First Acceptance Notification: 2 October, 2023 (AoE) 
+ Doctoral Symposium Submission Deadline: 25 August, 2023 (AoE) 
+ Doctoral Symposium Acceptance Notification: 2 September, 2023 (AoE) 
+ Doctoral Symposium Camera-ready Due:59 September, 2023 
+ Doctoral Symposium: 22 November, 2023 
+ Conference Paper Submission and Publication 
+ Submission should be done through the ICFEM 2023 submission page, handled by thehref="https://easychair.org/conferences/?conf=icfem2023" - EasyChair conference system
+. 
+ As in previous years, the proceedings will be published in the Springer Lecture Notes in Computer Science series. 
+ Papers should be written in English and should not exceed 16 pages (including references) in the Springer's LNCS format. Additional material may be placed in an appendix, to be read at the discretion of the reviewers and to be omitted in the final version. Formatting style files and further guidelines for formatting can be found at the Springer website (more detailshere). 
+ href="https://easychair.org/conferences/?conf=icfem2023" - Access submission portal
+Journal-First Presentations 
+ ICFEM 2023 is inviting journal-first presentations of papers published recently in the following journals: 
+ ACM Transactions on Programming Languages and Systems 
+ ACM Transactions on Software Engineering and Methodology 
+ Formal Aspects of Computing 
+ Formal Methods in System Design 
+ IEEE Transactions on Software Engineering 
+ Theoretical Computer Science 
+ The presentations will offer the authors an opportunity to speak directly to their peers in the community, and also enrich the ICFEM program. The journal-first presentation will be listed in the conference program, yet the corresponding papers will not be part of the ICFEM proceedings as they have been published through the journals. At least one author of each accepted journal-first presentation must register for and attend the ICFEM conference to present the paper. 
+ Evaluation and Selection 
+ A journal-first presentation submitted to ICFEM must adhere to the following criteria: 
+ The journal paper is in the scope of ICFEM 2023. 
+ The paper was accepted by one of the participating journals no earlier than January 1, 2022. 
+ The paper reports completely new research results or presents novel contributions that were not previously reported in prior work. 
+ The paper does not extend prior work solely with additional proofs or algorithms, additional empirical results, or minor enhancements or variants of the results presented in the prior work. 
+ The paper has not been presented at, and is not under consideration for, journal-first programs of other conferences. 
+ Each submission will be evaluated according to these criteria. In case that the number of submissions is higher than expected, eligible submissions may be selected to be presented at the conference, and priority will be given to the papers that best fit the conference program. 
+ How to Submit 
+ Interested authors should submit a short presentation proposal consisting of the paper title, abstract, a short statement on how the work satisfies the above criteria, and the PDF of the original journal paper. Please submit a single PDF file and list all authors of the original journal paper as authors in EasyChair. No special formatting is required. 
+ href="https://easychair.org/conferences/?conf=icfem2023" - Submission Link
+Doctoral Symposium Paper Submission 
+ The ICFEM Doctoral Symposium is an international forum for PhD students studying all areas related to formal methods for software, hardware and system development. This forum is an excellent opportunity bringing together PhD students and well-known established researchers from the formal methods community. It will also provide PhD students with fruitful feedback and advice on their research approach and enable them to interact with other PhD students in order to stimulate the exchange of ideas and the sharing of experiences among participants. In summary, the PhD forum will provide PhD students with an ideal opportunity to present, share and discuss their research in a constructive and critical scientific atmosphere. 
+ We seek submissions from PhD students who have either determined the direction of their thesis research (probably with some preliminary results already published), but who still have substantial work to complete; or PhD student participants who are in the early stages of their dissertations. It is not required to have a paper accepted at the main conference in order to participate in the ICFEM Doctoral Symposium. 
+ Submissions to the Doctoral Symposium should include: Title of the research, the author name (single name) and affiliation; Context and motivation; Problem statement and related work; Proposed solutions and current research efforts, their significance, methodology, results and analysis, and future work. The paper should be prepared using theLNCS formatand submitted in PDF format via EasyChair. 
+ We accept two types of submissions:(a)2-page extended abstracts which will not be included in the ICFEM proceedings; and(b)6-page papers which will be published in the LNCS volume of Springer as part of the main ICFEM proceedings. 
+ Authors with accepted submissions are expected to attend the Doctoral Symposium in person to present their work. A discounted registration fee for Doctoral Symposium participants will be announced later. 
+ href="https://easychair.org/conferences/?conf=icfem2023" - Submission Link
+Official Sponsors 
+  
+ ICFEM'23 is an outstanding opportunity for you to reach the "thought leaders" in this industry with your message, and for your Software Engineering team to network and exchange ideas with their peers in this unique and innovative forum. 
+ Sponsors are offered the opportunity to reach over 100 software engineering experts, including researchers and industry practitioners such as developers, QA and engineering managers. 
+ New sponsorship are welcome and any entity wishing to become an official sponsor may contact the sponsorship chair. 
+ Conference Organising Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Jifeng He, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Teesside University, UK (Chair) 
+ General Co-Chairs 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Guangdong Bai, The University of Queensland, Australia 
+ Program Co-Chairs 
+ Yi Li, Nanyang Technological University, Singapore 
+ Sofiene Tahar, Concordia University, Canada 
+ Finance Chair 
+ Zhe Hou, Griffith University, Australia 
+ Publicity Chair 
+ Cheng-Hao Cai, Monash University at Suzhou, China 
+ Neeraj Kumar Singh, IRIT-ENSEEIHT, Toulouse, France 
+ Xiaodong Qi, Nanyang Technological University, Singapore 
+ Journal First Co-Chairs 
+ Mark Utting, The University of Queensland, Australia 
+ Guowei Yang, The University of Queensland, Australia 
+ Doctoral Symposium Chair 
+ Yulei Sui, UNSW Sydney, Australia 
+ Workshop Chair 
+ Xiaofei Xie, Singapore Management University, Singapore 
+ Sponsorship Chair 
+ Kailong Wang, Huazhong University of Science and Technology, China 
+ Local Co-Chairs 
+ Naipeng Dong, The University of Queensland, Australia 
+ Guowei Yang, The University of Queensland, Australia 
+ Web Chair 
+ Hao Guan, The University of Queensland, Australia 
+ Program Committee 
+ Yamine Ait Ameur, IRIT/INPT-ENSEEIHT, France 
+ Behzad Akbarpour, NVIDIA, United States 
+ Étienne André, Université de Lorraine, CNRS, Inria, LORIA, Nancy, France, France 
+ Cyrille Valentin Artho, KTH Royal Institute of Technology, Sweden 
+ Guangdong Bai, The University of Queensland, Australia 
+ Christel Baier, TU Dresden, Germany 
+ Richard Banach, University of Manchester, United Kingdom 
+ Luís Soares Barbosa, University of Minho, Portugal 
+ Hadrien Bride, Institute for Integrated and Intelligent Systems, Griffith University, Australia 
+ Ana Cavalcanti, University of York, United Kingdom 
+ Marsha Chechik, University of Toronto, Canada 
+ Yuting Chen, Shanghai Jiao Tong University, China 
+ Yean-Ru Chen, National Cheng Kung University, Taiwan 
+ Yu-Fang Chen, Academia Sinica, Taiwan 
+ Ranald Clouston, Australian National University, Australia 
+ Florin Craciun, Babes-Bolyai University, Cluj, Romania 
+ Ana De Melo, University of São Paulo, Brazil 
+ Thi Thu Ha Doan, Freiburg University, Germany 
+ Naipeng Dong, National University of Singapore, Singapore 
+ Aaron Dutle, NASA Langley Research Center, United States 
+ Yasmeen Elderhalli, Synopsys, Canada 
+ Santiago Escobar, Universitat Politècnica de València, Spain 
+ Flavio Ferrarotti, Software Competence Centre Hagenberg, Austria 
+ Marc Frappier, Université de Sherbrooke, Canada 
+ Lindsay Groves, Victoria University of Wellington, New Zealand 
+ Osman Hassan, National University of Sciences & Technology, Pakistan 
+ Xudong He, Florida International University, United States 
+ Zhe Hou, Griffith University, Australia 
+ Fuyuki Ishikawa, National Institute of Informatics, Japan 
+ Eun-Young Kang, University of Southern Denmark, Denmark 
+ Tsutomu Kobayashi, Japan Aerospace Exploration Agency, Japan 
+ Mark Lawford, McMaster University, Canada 
+ Jiaying Li, Microsoft, China 
+ Shang-Wei Lin, Nanyang Technological University, Singapore 
+ Guanjun Liu, Tongji University, China 
+ Zhiming Liu, Southwest University, China 
+ Si Liu, ETH Zurich, Swizerland 
+ Brendan Mahony, DSTO, Australia 
+ Frederic Mallet, Universite Nice Sophia-Antipolis, France 
+ Panagiotis Manolios, Northeastern University, United States 
+ Heiko Mantel, TU Darmstadt, Germany 
+ Narciso Martí-Oliet, Universidad Complutense de Madrid, Spain 
+ Dominique Mery, Université de Lorraine, LORIA, France 
+ Stephan Merz, Inria Nancy, France 
+ Stefan Mitsch, Carnegie Mellon University, United States 
+ Magnus Myreen, Chalmers University, Sweden 
+ Shin Nakajima, National Institute of Informatics, Japan 
+ Masaki Nakamura, Toyama Prefectural University, Japan 
+ Michael Norrish, Australian National University, Australia 
+ Jun Pang, University of Luxembourg, Luxembourg 
+ Yu Pei, The Hong Kong Polytechnic University, Hong Kong 
+ Shengchao Qin, Teesside University, United Kingdom 
+ Silvio Ranise, University of Trento and Fondazione Bruno Kessler, Trento, Italy, Italy 
+ Elvinia Riccobene, Computer Science Dept., University of Milan, Italy 
+ Adrian Riesco, Universidad Complutense de Madrid, Spain 
+ Subhajit Roy, Indian Institute of Technology Kanpur, India 
+ Rubén Rubio, Universidad Complutense de Madrid, Spain 
+ David Sanan, Singapore Institute of Technology, Singapore 
+ Valdivino Santiago, Instituto Nacional de Pesquisas Espaciais, Brazil 
+ Meng Sun, Peking University, China 
+ Jing Sun, The University of Auckland, New Zealand 
+ Elena Troubitsyna, KTH, Sweden 
+ Ionut Tutu, Simion Stoilow Institute of Mathematics of the Romanian Academy, Romania 
+ Bow-Yaw Wang, Academia Sinica, Taiwan 
+ Hai H. Wang, University of Aston, United Kingdom 
+ Naijun Zhan, Institute of Software, Chinese Academy of Sciences, China 
+ Min Zhang, East China Normal University, China 
+ Yongwang Zhao, Zhejiang University, China 
+ Peter Ölveczky, University of Oslo, Norway 
+ Doctoral Symposium Program Committee 
+ Xiaoyu Sun, Australian National University, Australia 
+ Yuekang Li, UNSW Sydney, Australia 
+ Xiaoyi Zhang, University of Science and Technology Beijing, China 
+ Ruitao Feng, Singapore Management University, Singapore 
+ Dipankar Chaki, UNSW Sydney, Australia 
+ Hsu Myat Win, RMIT University, Australia 
+ Local Support Team 
+ Baiqi Chen, The University of Queensland, Australia 
+ Shuofeng Liu, The University of Queensland, Australia
+
+3. Website of ICFEM_3: https://conf.researchr.org/home/Formalise-2025
+Website information of ICFEM_3:
+
+href="https://2025.formalise.org" - FormaliSE 2025
+Sun 27 - Mon 28 April 2025href="https://2025.formalise.org/venue/icse-2025-venue" - Ottawa, Ontario, Canada
+co-located withhref="https://conf.researchr.org/home/icse-2025" - ICSE 2025
+Toggle navigation 
+ Attending | href="https://2025.formalise.org/venue/icse-2025-venue" - Venue: Rogers Centre, Ottawa (formerly Shaw Centre) 
+ href="https://2025.formalise.org/venue/offsite-special-venue" - Venue: Offsite Special Venue 
+ href="https://2025.formalise.org/venue/icse-2025-nac" - Reception venue: National Arts Centre 
+ ICSE 2025 
+ href="https://2025.formalise.org/attending/registration" - Registration 
+ href="https://2025.formalise.org/attending/food" - Food at ICSE2025 
+ href="https://2025.formalise.org/attending/fun+activities" - Fun Activities 
+ href="https://2025.formalise.org/attending/social-media" - Social media 
+ href="https://2025.formalise.org/attending/Hotels" - Hotels 
+ href="https://2025.formalise.org/attending/gettingAroundOttawa" - Getting Around Ottawa 
+ href="https://2025.formalise.org/attending/visa-and-travel-authorization" - Visa and Travel Authorization 
+ href="https://2025.formalise.org/attending/Travelling" - Travelling to Ottawa 
+ href="https://2025.formalise.org/attending/travel-support" - Travel Support 
+ href="https://2025.formalise.org/attending/Code+of+Conduct" - Code of Conduct 
+ href="https://2025.formalise.org/attending/Diversity+and+Inclusion+Plan" - Equity, Diversity, and Inclusion Plan 
+ href="https://2025.formalise.org/attending/Sustainability" - Sustainability 
+ href="https://2025.formalise.org/attending/faq" - FAQ 
+ Program | href="https://2025.formalise.org/program/program-Formalise-2025/" - FormaliSE Program 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Your Program 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Sun 27 Apr 
+ href="https://2025.formalise.org/program/program-Formalise-2025/" - Mon 28 Apr 
+ href="#" - Tracks | FormaliSE 2025 
+ href="https://2025.formalise.org" - Research Track 
+ href="https://2025.formalise.org/track/Formalise-2025-artifact-track" - Artifact Track 
+ Organization | FormaliSE 2025 Committees 
+ Track Committees 
+ Research TrackOrganization Committee 
+ Research TrackProgram Committee 
+ href="https://2025.formalise.org/committee/Formalise-2025-artifact-track-artifact-evaluation-committee" - Artifact Track 
+ Contributors 
+ href="https://2025.formalise.org/people-index" - People Index 
+ href="https://2025.formalise.org/search//all" - Search 
+ Series | href="https://conf.researchr.org/series/Formalise" - Series 
+ FormaliSE 2025 
+ href="https://conf.researchr.org/home/Formalise-2024" - FormaliSE 2024 
+ href="https://conf.researchr.org/home/Formalise-2023" - FormaliSE 2023 
+ href="https://conf.researchr.org/home/icse-2022/Formalise-2022" - FormaliSE 2022 
+ href="https://conf.researchr.org/home/Formalise-2021" - FormaliSE 2021 
+ FormaliSE 2020 
+ href="https://2019.icse-conferences.org/track/Formalise-2019-papers" - FormaliSE 2019 
+ href="https://conf.researchr.org/track/icse-2018/Formalise-2018-papers" - FormaliSE 2018 
+ href="https://conf.researchr.org/signin/Formalise-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5EsFormalise-2025" - Sign in 
+ href="https://2025.formalise.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icse-2025" - ICSE 2025
+(href="https://conf.researchr.org/series/icse" - series
+) /FormaliSE 2025 (href="https://conf.researchr.org/series/Formalise" - series
+) /Research TrackFormaliSE 2025 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Keynotes 
+ href="#Call-for-Papers" - Call for Papers 
+ Historically, formal methods academic research and practical software development have had limited mutual interactions — except possibly in specialized domains such as safety-critical software. In recent times, the outlook has considerably improved: on the one hand, formal methods research has delivered more flexible techniques and tools that can support various aspects of the software development process — from user requirements elicitation, to design, implementation, verification and validation, as well as the creation of documentation. On the other hand, software engineering has developed a growing interest in rigorous techniques applied at scale. 
+ The FormaliSE conference series promotes work at the intersection of the formal methods and software engineering communities, providing a venue to exchange ideas, experiences, techniques, and results. We believe more collaboration between these two communities can be mutually beneficial by fostering the creation of formal methods that are practically useful and by helping develop higher-quality software. 
+ Originally a workshop event, since 2018 FormaliSE has been organized as a conference co-located with ICSE. The 13th edition of FormaliSE will also take place as a co-located conference of ICSE 2025. 
+ Area of interest include: 
+ requirements formalization and formal specification; 
+ approaches, methods and tools for verification and validation; 
+ formal approaches to safety and security related issues; 
+ analysis of performance and other non-functional properties based on formal approaches; 
+ scalability of formal method applications 
+ integration of formal methods within the software development lifecycle (e.g., change -management, continuous integration, regression testing, and deployment) 
+ model-based engineering approaches; 
+ correctness-by-construction approaches for software and systems engineering; 
+ application of formal methods to specific domains, e.g., autonomous, cyber-physical, intelligent, and IoT systems; 
+ formal methods for AI-based systems (FM4AI), and AI applied in formal method approaches (AI4FM); 
+ formal methods in a certification context 
+ case studies developed/analyzed with formal approaches 
+ experience reports on the application of formal methods to real-world problems; 
+ guidelines to use formal methods in practice; 
+ usability of formal methods. 
+ Dates 
+ Sun 27 Apr 2025 
+ Mon 28 Apr 2025 
+ Plenary 
+ Hide plenary sessions 
+ This program is tentative and subject to change. 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-04:00) Eastern Time (US & Canada).Use conference time zone: (GMT-04:00) Eastern Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Sun 27 Apr 
+ Displayed time zone:Eastern Time (US & Canada)change 
+  
+ 07:00 - 19:00 | Ready Room Sundayhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-209" - 209
+ 
+ The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed. 
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays. 
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people. 
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time. 
+ The Ready Room will also have some poster boards. 
+  
+ 09:00 - 12:30 | Child Care Sunday AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-102-child-care" - 102 Child Care
+ 
+ Child Care at ICSE is free, but you must have registered for child care when you registered for the conference. 
+ If you need to add child care to your registration, please contact the registration desk. 
+  
+ 09:00 - 10:30 | Invited Speaker 1href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/gwensalayn" - Gwen Salaün
+University of Grenoble Alpes 
+ 09:00 
+ 90m 
+ Keynote | Assuring AI in Autonomous Driving: Challenges and Emerging ApproachesResearch Track 
+ K:href="https://2025.formalise.org/profile/krzysztofczarnecki" - Krzysztof Czarnecki
+University of Waterloo, Canada 
+  
+ 10:30 - 11:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 10:30 
+ 30m 
+ Coffee break | Sunday Morning BreakICSE Catering 
+  
+ 11:00 - 12:30 | Session 1 - Formal Methods and Autonomous Systemshref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/divyagopinath" - Divya Gopinath
+NASA Ames (KBR Inc.) 
+ 11:00 
+ 30m 
+ Talk | CPS Falsification using Autoencoded Input ModelsResearch Track 
+ href="https://2025.formalise.org/profile/youssefzahar" - Youssef Zahar
+University of Minnesota,href="https://2025.formalise.org/profile/sanjairayadurgam" - Sanjai Rayadurgam
+University of Minnesota 
+ 11:30 
+ 30m 
+ Talk | Modeling Language for Scenario Development of Autonomous Driving SystemsResearch Track 
+ href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+JAIST,href="https://2025.formalise.org/profile/takashitomita" - Takashi Tomita
+JAIST,href="https://2025.formalise.org/profile/tatsujikawai" - Tatsuji Kawai
+Kochi University,href="https://2025.formalise.org/profile/daisukekawakami" - Daisuke Kawakami
+Mitsubishi Electric Corporation,href="https://2025.formalise.org/profile/nobuochida" - Nobuo Chida
+Mitsubishi Electric Corporation 
+ 12:00 
+ 30m 
+ Talk | Robustness Verification of Video Classification Neural NetworksResearch Track 
+ href="https://2025.formalise.org/profile/samuelsasaki" - Samuel Sasaki
+Vanderbilt University,href="https://2025.formalise.org/profile/prestonkrobinette" - Preston K. Robinette
+Vanderbilt University,href="https://2025.formalise.org/profile/diegomanzanaslopez" - Diego Manzanas Lopez
+Vanderbilt University,href="https://2025.formalise.org/profile/taylortjohnson" - Taylor T Johnson
+Vanderbilt University 
+  
+ 12:30 - 14:00 | Lunchhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 12:30 
+ 90m 
+ Lunch | Sunday LunchICSE Catering 
+  
+ 14:00 - 15:30 | Session 2 – Theorem Proving and Probabilistic Model Checkinghref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/nancyday" - Nancy Day
+University of Waterloo, Canada 
+ 14:00 
+ 30m 
+ Talk | The Burden of Proof: Automated Tooling for Rapid Iteration on Large Mechanised ProofsResearch Track 
+ href="https://2025.formalise.org/profile/chengsongtan" - Chengsong Tan
+Imperial College London, Kaihong,href="https://2025.formalise.org/profile/alastairdonaldson" - Alastair F. Donaldson
+Imperial College London,href="https://2025.formalise.org/profile/jonathanjulianhuertaymunive" - Jonathan Julian Huerta y Munive
+Czech Technical University,href="https://2025.formalise.org/profile/johnwickerson" - John Wickerson
+Imperial College London 
+ 14:30 
+ 30m 
+ Talk | A proof-based ground algebraic meta-model for reasoning on ASTD in Event-BResearch Track 
+ href="https://2025.formalise.org/profile/christophechen" - Christophe Chen
+INPT-ENSEEIHT/IRIT,href="https://2025.formalise.org/profile/peterriviere" - Peter Rivière
+INPT-ENSEEIHT / IRIT, University of Toulouse, France,href="https://2025.formalise.org/profile/neerajkumarsingh" - Neeraj Kumar Singh
+INPT-ENSEEIHT/IRIT,href="https://2025.formalise.org/profile/guillaumedupont" - Guillaume Dupont
+INPT–ENSEEIHT,href="https://2025.formalise.org/profile/yamineaitameur" - Yamine Ait Ameur
+IRIT/INPT-ENSEEIHT,href="https://2025.formalise.org/profile/marcfrappier" - Marc Frappier
+Université de Sherbrooke, Canada 
+ 15:00 
+ 30m 
+ Talk | Probabilistic Model Checking of Disaster Resource Distribution StrategiesResearch Track 
+ href="https://2025.formalise.org/profile/kennethjohnson" - Kenneth Johnson
+Auckland University of Technology,href="https://2025.formalise.org/profile/meenakumari" - Meena Kumari
+Auckland University of Technology 
+  
+ 15:30 - 16:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 15:30 
+ 30m 
+ Break | Sunday Afternoon BreakICSE Catering 
+  
+ 16:00 - 17:30 | Session 3 - Temporal Logic and Contractshref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/domenicobianculli" - Domenico Bianculli
+University of Luxembourg 
+ 16:00 
+ 30m 
+ Talk | Specifying Distributed Hash Tables with Allen Temporal LogicResearch Track 
+ href="https://2025.formalise.org/profile/nunopolicarpo" - Nuno Policarpo
+Instituto Superior Técnico, University of Lisbon,href="https://2025.formalise.org/profile/josesantos" - José Fragoso Santos
+INESC-ID/Instituto Superior Técnico, Portugal,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+University of Minho; INESC TEC,href="https://2025.formalise.org/profile/joaoleitao" - João Leitão
+NOVA LINCS & FCT, NOVA University of Lisbon,href="https://2025.formalise.org/profile/pedroakoscosta" - Pedro Ákos Costa
+NOVA LINCS & DI-FCT-UNL 
+ 16:30 
+ 30m 
+ Talk | Temporal Logics Meet Real-World Software Requirements: A Reality CheckResearch Track 
+ href="https://2025.formalise.org/profile/romanbogli" - Roman Bögli
+University of Bern,href="https://2025.formalise.org/profile/atefehrohani" - Atefeh Rohani
+University of Bern,href="https://2025.formalise.org/profile/thomasstuder" - Thomas Studer
+University of Bern,href="https://2025.formalise.org/profile/christostsigkanos" - Christos Tsigkanos
+University of Athens, Greece,href="https://2025.formalise.org/profile/timokehrer" - Timo Kehrer
+University of Bern 
+ 17:00 
+ 30m 
+ Talk | Detecting Redundant PreconditionsResearch Track 
+ href="https://2025.formalise.org/profile/nicolathoben" - Nicola Thoben
+University of Oldenburg,href="https://2025.formalise.org/profile/heikewehrheim" - Heike Wehrheim
+Carl von Ossietzky Universität Oldenburg / University of Oldenburg 
+ Mon 28 Apr 
+ Displayed time zone:Eastern Time (US & Canada)change 
+  
+ 07:00 - 19:00 | Ready Room Mondayhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-209" - 209
+ 
+ The Ready Room will be available throughout the week. There will be some tables with computers where people can edit presentations (bring on a USB stick) and upload presentations to the presentation rooms through the Contact 1 website. There will also be AV technicians to help if needed. 
+ You do not need to use the Ready Room: You have several choices: You can upload your presentation from your own computer in advance of your session (days in advance even) at the Contact 1 website (you will be sent a link). Or you can plug your computer in using an HDMI cable when you are starting your presentation. This last option is available but not recommended, since it increases the chance of delays. 
+ There will be some tables and couches in the Ready Room where you can get work done, or have small get-togethers with people. 
+ This room will not be ‘quiet’. If you want a quiet place to work or chill out (library quiet, no talking) then Room 209 will be available much of the time. 
+ The Ready Room will also have some poster boards. 
+  
+ 09:00 - 10:30 | Quiet Room Monday 9AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 09:00 - 10:30 | Invited Speaker 2href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/anastasiamavridou" - Anastasia Mavridou
+KBR / NASA Ames Research Center 
+ 09:00 
+ 90m 
+ Keynote | Adversarial Perturbations and Self-Defenses for Large Language Models on Coding TaskResearch Track 
+ K:href="https://2025.formalise.org/profile/corinaspasareanu" - Corina S. Pasareanu
+Carnegie Mellon University Silicon Valley, NASA Ames Research Center 
+  
+ 10:30 - 11:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 10:30 
+ 30m 
+ Break | Monday Morning BreakICSE Catering 
+  
+ 11:00 - 12:30 | Quiet Room Monday 11AMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 11:00 - 12:30 | Session 4 – Generative AI and Fuzzy Logichref="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/linamarsso" - Lina Marsso
+École Polytechnique de Montréal 
+ 11:00 
+ 30m 
+ Talk | LLM-based Generation of Weakest Preconditions and Precise Array InvariantsResearch Track 
+ href="https://2025.formalise.org/profile/daraghking" - Daragh King
+Trinity College Dublin,href="https://2025.formalise.org/profile/vasileioskoutavas1" - Vasileios Koutavas
+Trinity College Dublin,href="https://2025.formalise.org/profile/laurakovacs1" - Laura Kovács
+TU Wien 
+ 11:30 
+ 30m 
+ Talk | VeCoGen: Automating Generation of Formally Verified C Code with Large Language ModelsResearch Track 
+ href="https://2025.formalise.org/profile/merlijnsevenhuijsen1" - Merlijn Sevenhuijsen
+Scania CV, AB & KTH Royal Institute of Technology,href="https://2025.formalise.org/profile/khashayaretemadi" - Khashayar Etemadi
+KTH Royal Institute of Technology,href="https://2025.formalise.org/profile/mattiasnyberg" - Mattias Nyberg
+Scania CV, AB & KTH Royal Institute of Technology 
+ 12:00 
+ 30m 
+ Talk | Embracing Uncertainty: A Fuzzy Theoretical Model for Goal Fulfillment AssessmentResearch Track 
+ href="https://2025.formalise.org/profile/vincenzograssi" - Vincenzo Grassi
+University of Roma "Tor Vergata",href="https://2025.formalise.org/profile/raffaelamirandola" - Raffaela Mirandola
+Karlsruhe Institute of Technology (KIT),href="https://2025.formalise.org/profile/diegoperezpalacin" - Diego Perez-Palacin
+Linnaeus University 
+  
+ 12:30 - 14:00 | Lunchhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 12:30 
+ 90m 
+ Lunch | Monday LunchICSE Catering 
+  
+ 14:00 - 15:30 | Quiet Room Monday 2PMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+  
+ 14:00 - 15:30 | Session 5 - Formal Specification and Verification:href="https://2025.formalise.org" - Research Track
+athref="https://2025.formalise.org/room/icse-2025-venue-203" - 203
+ 
+ Chair(s):href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+JAIST 
+ 14:00 
+ 30m 
+ Talk | Refining Alloy-Based Mutation Operators to Reflect Common MistakesResearch Track 
+ href="https://2025.formalise.org/profile/anajovanovic" - Ana Jovanovic
+The University of Texas at Arlington,href="https://2025.formalise.org/profile/mohammadnurullahpatwary" - Mohammad Nurullah Patwary
+The University of Texas at Arlington,href="https://2025.formalise.org/profile/allisonsullivan1" - Allison Sullivan
+University of Texas at Arlington 
+ 14:30 
+ 30m 
+ Talk | Verifying Multiple TLA+ Configurations with BlastResearch Track 
+ href="https://2025.formalise.org/profile/paulsomson" - Paul Somson
+INESC TEC,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+University of Minho; INESC TEC 
+ Pre-print 
+ 15:00 
+ 30m 
+ Talk | Typestates Specification and Verification in Frama-CResearch Track 
+ href="https://2025.formalise.org/profile/sebastienpatte" - Sébastien Patte
+Université Paris-Saclay, CEA, List,href="https://2025.formalise.org/profile/virgileprevosto" - Virgile Prevosto
+Université Paris-Saclay, CEA, List 
+  
+ 15:30 - 16:00 | Breakhref="https://2025.formalise.org/track/icse-2025-catering" - ICSE Catering
+athref="https://2025.formalise.org/room/icse-2025-venue-canada-hall-3-plus-foyer" - Canada Hall 3 plus Foyer 
+ 15:30 
+ 30m 
+ Break | Monday Afternoon BreakICSE Catering 
+  
+ 16:00 - 17:30 | Quiet Room Monday 4PMhref="https://conf.researchr.org/track/icse-2025/icse-2025-social-and-networking" - ICSE Social, Networking and Special Rooms
+athref="https://2025.formalise.org/room/icse-2025-venue-202" - 202 
+ Accepted Papers 
+  
+ Title 
+ A proof-based ground algebraic meta-model for reasoning on ASTD in Event-BResearch Track 
+ href="https://2025.formalise.org/profile/christophechen" - Christophe Chen
+,href="https://2025.formalise.org/profile/peterriviere" - Peter Rivière
+,href="https://2025.formalise.org/profile/neerajkumarsingh" - Neeraj Kumar Singh
+,href="https://2025.formalise.org/profile/guillaumedupont" - Guillaume Dupont
+,href="https://2025.formalise.org/profile/yamineaitameur" - Yamine Ait Ameur
+,href="https://2025.formalise.org/profile/marcfrappier" - Marc Frappier 
+ CPS Falsification using Autoencoded Input ModelsResearch Track 
+ href="https://2025.formalise.org/profile/youssefzahar" - Youssef Zahar
+,href="https://2025.formalise.org/profile/sanjairayadurgam" - Sanjai Rayadurgam 
+ Detecting Redundant PreconditionsResearch Track 
+ href="https://2025.formalise.org/profile/nicolathoben" - Nicola Thoben
+,href="https://2025.formalise.org/profile/heikewehrheim" - Heike Wehrheim 
+ Embracing Uncertainty: A Fuzzy Theoretical Model for Goal Fulfillment AssessmentResearch Track 
+ href="https://2025.formalise.org/profile/vincenzograssi" - Vincenzo Grassi
+,href="https://2025.formalise.org/profile/raffaelamirandola" - Raffaela Mirandola
+,href="https://2025.formalise.org/profile/diegoperezpalacin" - Diego Perez-Palacin 
+ LLM-based Generation of Weakest Preconditions and Precise Array InvariantsResearch Track 
+ href="https://2025.formalise.org/profile/daraghking" - Daragh King
+,href="https://2025.formalise.org/profile/vasileioskoutavas1" - Vasileios Koutavas
+,href="https://2025.formalise.org/profile/laurakovacs1" - Laura Kovács 
+ Modeling Language for Scenario Development of Autonomous Driving SystemsResearch Track 
+ href="https://2025.formalise.org/profile/toshiakiaoki" - Toshiaki Aoki
+,href="https://2025.formalise.org/profile/takashitomita" - Takashi Tomita
+,href="https://2025.formalise.org/profile/tatsujikawai" - Tatsuji Kawai
+,href="https://2025.formalise.org/profile/daisukekawakami" - Daisuke Kawakami
+,href="https://2025.formalise.org/profile/nobuochida" - Nobuo Chida 
+ Probabilistic Model Checking of Disaster Resource Distribution StrategiesResearch Track 
+ href="https://2025.formalise.org/profile/kennethjohnson" - Kenneth Johnson
+,href="https://2025.formalise.org/profile/meenakumari" - Meena Kumari 
+ Refining Alloy-Based Mutation Operators to Reflect Common MistakesResearch Track 
+ href="https://2025.formalise.org/profile/anajovanovic" - Ana Jovanovic
+,href="https://2025.formalise.org/profile/mohammadnurullahpatwary" - Mohammad Nurullah Patwary
+,href="https://2025.formalise.org/profile/allisonsullivan1" - Allison Sullivan 
+ Robustness Verification of Video Classification Neural NetworksResearch Track 
+ href="https://2025.formalise.org/profile/samuelsasaki" - Samuel Sasaki
+,href="https://2025.formalise.org/profile/prestonkrobinette" - Preston K. Robinette
+,href="https://2025.formalise.org/profile/diegomanzanaslopez" - Diego Manzanas Lopez
+,href="https://2025.formalise.org/profile/taylortjohnson" - Taylor T Johnson 
+ Specifying Distributed Hash Tables with Allen Temporal LogicResearch Track 
+ href="https://2025.formalise.org/profile/nunopolicarpo" - Nuno Policarpo
+,href="https://2025.formalise.org/profile/josesantos" - José Fragoso Santos
+,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+,href="https://2025.formalise.org/profile/joaoleitao" - João Leitão
+,href="https://2025.formalise.org/profile/pedroakoscosta" - Pedro Ákos Costa 
+ Temporal Logics Meet Real-World Software Requirements: A Reality CheckResearch Track 
+ href="https://2025.formalise.org/profile/romanbogli" - Roman Bögli
+,href="https://2025.formalise.org/profile/atefehrohani" - Atefeh Rohani
+,href="https://2025.formalise.org/profile/thomasstuder" - Thomas Studer
+,href="https://2025.formalise.org/profile/christostsigkanos" - Christos Tsigkanos
+,href="https://2025.formalise.org/profile/timokehrer" - Timo Kehrer 
+ The Burden of Proof: Automated Tooling for Rapid Iteration on Large Mechanised ProofsResearch Track 
+ href="https://2025.formalise.org/profile/chengsongtan" - Chengsong Tan
+,href="https://2025.formalise.org/profile/alastairdonaldson" - Alastair F. Donaldson
+,href="https://2025.formalise.org/profile/jonathanjulianhuertaymunive" - Jonathan Julian Huerta y Munive
+,href="https://2025.formalise.org/profile/johnwickerson" - John Wickerson 
+ Typestates Specification and Verification in Frama-CResearch Track 
+ href="https://2025.formalise.org/profile/sebastienpatte" - Sébastien Patte
+,href="https://2025.formalise.org/profile/virgileprevosto" - Virgile Prevosto 
+ VeCoGen: Automating Generation of Formally Verified C Code with Large Language ModelsResearch Track 
+ href="https://2025.formalise.org/profile/merlijnsevenhuijsen1" - Merlijn Sevenhuijsen
+,href="https://2025.formalise.org/profile/khashayaretemadi" - Khashayar Etemadi
+,href="https://2025.formalise.org/profile/mattiasnyberg" - Mattias Nyberg 
+ Verifying Multiple TLA+ Configurations with BlastResearch Track 
+ href="https://2025.formalise.org/profile/paulsomson" - Paul Somson
+,href="https://2025.formalise.org/profile/alcinocunha" - Alcino Cunha
+Pre-print 
+ Call for Papers 
+ We accept papers in three categories: 
+ Full research papers | describing original research work and results. We encourage authors to include validation of their contributions by means of a case study or experiments. We also welcome research papers focusing on tools and tool development. 
+ Case study papers | discussing a significant application that suggests general lessons learned and motivates further research, or empirically validates theoretical results (such as a technique’s scalability). 
+ Research ideas papers | describing new ideas in preliminary form, in a way that can stimulate interesting discussions at the conference, and suggest future work. 
+ All papers submitted to the FormaliSE 2025 conference must be written in English, must be unpublished original work, and must not be under review or submitted elsewhere at the time of submission. Submissions must comply with the FormaliSE’s lightweight double-anonymous review process (see below). 
+ Full research papers and case study papers can take up to 10 pages including all text, figures, tables and appendices, but excluding references. Research ideas papers can take up to 4 pages, plus up to 1 additional page solely for references. 
+ To avoid that authors waste time fitting their papers into the stated limit at the expense of presentation clarity, paper lengths slightly exceeding the stated limit will still be considered, provided that the reviewers find that the presentation is of high quality. 
+ All submissions must be in PDF format and must conform to theIEEE conference proceedings template, specified in the IEEE Conference Proceedings Formatting Guidelines (i.e., title in 24pt font and full text in 10pt type). In LaTeX, use\documentclass[10pt,conference]{IEEEtran}without including thecompsocorcompsocconfoptions. Note that IEEE format is being used this year, whereas last year it was ACM format, hence the appearance will differ from year to year. 
+ To submit a paper to FormaliSE 2025 usethe following HotCRP link. 
+ href="#lightweight-double-anonymous-review-process-for-papers" - Lightweight Double-Anonymous Review Process for Papers
+As in recent editions, FormaliSE 2025 will use a lightweight double-anonymous process. Authors must omit their names and institutions from the title page, cite their own work in the third person, and omit acknowledgments that may reveal their identity or affiliation. The purpose is reducing chances of reviewer bias influenced by the authors’ identities. The double-anonymous process is, however, lightweight, which means that it should not pose a heavy burden for authors, nor should make a paper’s presentation weaker or more difficult to review. Also, advertising the paper as part of your usual research activities (for example, on your personal web-page, in a pre-print archive, by email, in talks or discussions with colleagues) is permitted without penalties. 
+ PAPER SELECTION 
+ Each paper will be reviewed by at least three program committee members that will judge its overall quality in terms of its soundness, significance, novelty, verifiability, and presentation clarity. 
+ FormaliSE 2025 will adopt a lightweight response process: if all the reviewers of a given paper agree that a clarification from the authors regarding a specific question could move the paper from “borderline” to “accept”, the chairs will relay the reviewers’ questions to the authors by email, and then share their reply with the reviewers in HotCRP. The goal of lightweight responses is reducing the chance of random decisions on borderline papers. Hence, they will only be used for a minority of submissions; most papers will not require such an author response. Nevertheless, we would ask the corresponding authors of all submissions to make sure that they are available to answer questions by email upon request. 
+ PUBLICATION 
+ All accepted papers are published as part of the ICSE 2025 Proceedings in the ACM and IEEE Digital Libraries. 
+ At least one author of each accepted paper is required to register for the conference and present the paper at the conference — physically or, if the circumstances do not allow so, virtually. Failure to register an author will result in a paper being removed from the proceedings. 
+ Keynotes 
+ Adversarial Perturbations and Self-Defenses for Large Language Models on Coding Task 
+ Abstract:Large language models (LLMs) have demonstrated impressive capabilities for coding tasks including writing and reasoning about code. They improve upon previous neural network models of code that already demonstrated competitive results when performing tasks such as code summarization and identifying code vulnerabilities . However, it is known that these pre-LLM code models are vulnerable to adversarial examples, i.e. small syntactic perturbations that do not change the program’s semantics, such as the inclusion of “dead code” through false conditions, the addition of inconsequential print statements, or change in control flow, designed to “fool” the models. LLMs can also be vulnerable to the same adversarial perturbations. In this talk we discuss the effect of adversarial perturbations on coding tasks with LLMs and propose effective defenses against such adversaries. The coding tasks we’ll consider include both classification (e.g., use LLMs for summarization, vulnerability detection) and code generation (e.g., use LLMs for code completion, based on prompts plus code snippets). 
+  
+ Corina Pasareanuis an ACM Fellow and an IEEE ASE Fellow, working at NASA Ames. She is affiliated with KBR and Carnegie Mellon University's CyLab. Her research interests include model checking, symbolic execution, compositional verification, probabilistic software analysis, autonomy, and security. She is the recipient of several awards, including ETAPS Test of Time Award (2021), ASE Most Influential Paper Award (2018), ESEC/FSE Test of Time Award (2018), ISSTA Retrospective Impact Paper Award (2018), ACM Impact Paper Award (2010), and ICSE 2010 Most Influential Paper Award (2010). 
+
+Assuring AI in Autonomous Driving: Challenges and Emerging Approaches 
+ Abstract:Artificial intelligence plays a critical role in autonomous driving, yet it introduces significant assurance challenges. Unlike traditional software, AI lacks explicit specifications and is applied to inherently uncertain, complex, and open problems such as road environment perception. Furthermore, modern AI systems are often opaque, making interpretability and verification difficult. These issues complicate the development of assurance methods that can ensure safety and reliability. 
+ In this talk, I will review current approaches and industry standards for AI assurance in autonomous driving, including scenario-based testing and uncertainty estimation. I will discuss assurance methods for both hybrid systems — where AI functions as a component within a classical software stack — and end-to-end AI-driven systems. Finally, I will explore emerging directions for handling edge-case scenarios, including the use of foundation models and dual-processing architectures as potential solutions for enhancing the safety and robustness of end-to-end AI systems. 
+
+Krzysztof Czarneckiis a Professor of Electrical and Computer Engineering and a University Research Chair at the University of Waterloo, where he leads the Waterloo Intelligent Systems Engineering (WISE) Laboratory. He currently also serves as an Associate Director of the Waterloo Centre for Automotive Research (WatCAR). His research focuses on assuring the safety of AI systems and driving behavior. In 2018, he co-led the development of the first autonomous vehicle tested on public roads in Canada. He has made significant contributions to automotive AI and software safety standards, including SAE J3164 and ISO 8800. Before joining the University of Waterloo, he worked at DaimlerChrysler Research in Germany (1995-2002), where he advanced software development practices and technologies for enterprise, automotive, and aerospace sectors. His work has been recognized with numerous awards, including the Premier's Research Excellence Award (2004) and the British Computing Society’s Upper Canada Award for Outstanding Contributions to the IT Industry (2008). He has also received twelve Best Paper Awards, two ACM Distinguished Paper Awards, and five Most Influential Paper Awards. 
+ Questions? Use thehref="https://2025.formalise.org/contact2/Formalise-2025-papers" - FormaliSE Research Track contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Sun 27 - Mon 28 Apr 2025 
+ FormaliSE 2025 
+ Tue 18 Feb 2025 
+ Early registration deadline 
+ Wed 5 Feb 2025 
+ Camera-ready papers due 
+ Mon 13 Jan 2025 
+ Notifications 
+ Mon 25 Nov 2024 
+ Paper submission deadline 
+ Mon 18 Nov 2024 
+ Abstract submissions 
+ Organization Committee 
+ href="https://2025.formalise.org/profile/nicoplat" - Nico PlatGeneral Co-ChairNetherlands 
+ href="https://2025.formalise.org/profile/stefaniagnesi" - Stefania GnesiGeneral Co-ChairIstituto di Scienza e Tecnologie dell'Informazione "Alessandro Faedo" Italy 
+ href="https://2025.formalise.org/profile/quentinnivon" - Quentin NivonWeb ChairUniversity Grenoble AlpesFrance 
+ Program Committee 
+ href="https://2025.formalise.org/profile/anastasiamavridou" - Anastasia MavridouPC Co-ChairKBR / NASA Ames Research CenterUnited States 
+ href="https://2025.formalise.org/profile/gwensalayn" - Gwen SalaünPC Co-ChairUniversity of Grenoble AlpesFrance 
+ Bernhard AichernigCommittee Member 
+ Graz University of Technology 
+ Austria 
+ Toshiaki AokiCommittee Member 
+ JAIST 
+ Japan 
+ Kyungmin BaeCommittee Member 
+ POSTECH 
+ South Korea 
+ Domenico BianculliCommittee Member 
+ University of Luxembourg 
+ Luxembourg 
+ Simon BliudzeCommittee Member 
+ Inria Center at the University of Lillle 
+ France 
+ Giovanna BrocciaCommittee Member 
+ ISTI-CNR, FMT Lab 
+ Italy 
+ Radu CalinescuCommittee Member 
+ University of York, UK 
+ United Kingdom 
+ Pablo CastroCommittee Member 
+ Dept. of Computer Science FCEFQyN, University of Rio Cuarto 
+ Argentina 
+ Zhenbang ChenCommittee Member 
+ College of Computer, National University of Defense Technology 
+ China 
+ Nancy DayCommittee Member 
+ University of Waterloo, Canada 
+ Canada 
+ Francisco DuránCommittee Member 
+ University of Málaga, Spain 
+ Spain 
+ Marie FarrellCommittee Member 
+ The University of Manchester 
+ United Kingdom 
+ Carlo A. FuriaCommittee Member 
+ Università della Svizzera italiana (USI) 
+ Switzerland 
+ Fatemeh GhassemiCommittee Member 
+ University of Tehran 
+ Iran 
+ Divya GopinathCommittee Member 
+ NASA Ames (KBR Inc.) 
+ Yann-Gaël GuéhéneucCommittee Member 
+ Concordia University and Polytechnique Montréal 
+ Canada 
+ Paula HerberCommittee Member 
+ University of Munster, Germany 
+ Germany 
+ Marieke HuismanCommittee Member 
+ University of Twente 
+ Netherlands 
+ Fuyuki IshikawaCommittee Member 
+ National Institute of Informatics 
+ Japan 
+ Xiaoqing JinCommittee Member 
+ Apple 
+ United States 
+ Oleksandr KolchynCommittee Member 
+ Glushkov Institute of Cybernetics 
+ Ukraine 
+ Antónia LopesCommittee Member 
+ University of Lisbon 
+ Portugal 
+ Larissa A. MeinickeCommittee Member 
+ Violet Ka I PunCommittee Member 
+ Western Norway University of Applied Sciences 
+ Norway 
+ Camilo RochaCommittee Member 
+ Pontificia Universidad Javeriana 
+ Colombia 
+ Cristina SeceleanuCommittee Member 
+ Mälardalen University 
+ Sweden 
+ Arpit SharmaCommittee Member 
+ Indian Institute of Science Education and Research Bhopal 
+ India 
+ Allison SullivanCommittee Member 
+ The University of Texas at Arlington 
+ Heike WehrheimCommittee Member 
+ Carl von Ossietzky Universität Oldenburg / University of Oldenburg 
+ Germany 
+ xSat 5 Apr 11:08 
+ href="https://2025.formalise.org" - FormaliSE 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.formalise.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.formalise.org" - Research Track
+ 
+ href="https://2025.formalise.org/track/Formalise-2025-artifact-track" - Artifact Track
+Attending 
+ href="https://2025.formalise.org/venue/icse-2025-venue" - Venue: Rogers Centre, Ottawa (formerly Shaw Centre)
+ 
+ href="https://2025.formalise.org/venue/offsite-special-venue" - Venue: Offsite Special Venue
+ 
+ href="https://2025.formalise.org/venue/icse-2025-nac" - Reception venue: National Arts Centre
+ 
+ href="https://2025.formalise.org/attending/registration" - Registration
+ 
+ href="https://2025.formalise.org/attending/food" - Food at ICSE2025
+ 
+ href="https://2025.formalise.org/attending/fun+activities" - Fun Activities
+ 
+ href="https://2025.formalise.org/attending/social-media" - Social media
+ 
+ href="https://2025.formalise.org/attending/Hotels" - Hotels
+ 
+ href="https://2025.formalise.org/attending/gettingAroundOttawa" - Getting Around Ottawa
+ 
+ href="https://2025.formalise.org/attending/visa-and-travel-authorization" - Visa and Travel Authorization Information for ICSE 2025 and its Co-Located Events
+ 
+ href="https://2025.formalise.org/attending/Travelling" - Travelling to Ottawa
+ 
+ href="https://2025.formalise.org/attending/travel-support" - Travel Support
+ 
+ href="https://2025.formalise.org/attending/Code+of+Conduct" - Code of Conduct for ICSE 2025 and its Co-Located Events
+ 
+ href="https://2025.formalise.org/attending/Diversity+and+Inclusion+Plan" - Equity, Diversity, and Inclusion Plan for ICSE 2025
+ 
+ href="https://2025.formalise.org/attending/Sustainability" - Sustainability
+ 
+ href="https://2025.formalise.org/attending/faq" - FAQ
+href="https://2025.formalise.org/signup" - Sign Up
+: 
+ :
+
+4. Website of ICFEM_3: https://icfem2025.github.io/
+Website information of ICFEM_3:
+
+Home 
+ Scope 
+ Register 
+ Venue 
+ Program 
+ href="#dates" - Important Dates 
+ Sponsors 
+ Committee 
+ The 26thInternational Conference on Formal Engineering Methods 
+ 10 - 13 November 2025 - Hangzhou, China 
+ Welcome to the website of the 26thInternational Conference on Formal Engineering Methods (ICFEM 2025) 
+ ICFEM is an international leading conference series in formal methods and software engineering. Since 1997 ICFEM has been serving as an international forum for researchers and practitioners who have been seriously applying formal methods to practical applications. Researchers and practitioners, from industry, academia and government, are encouraged to attend, present their research, and help advance the state of the art. ICFEM is interested in work that has been incorporated into real production systems, and in theoretical work that promises to bring practical and tangible benefit. ICFEM has been hosted in many countries around the world. 
+ Scope and Topics 
+ Authors are invited to submit high-quality technical papers describing original and unpublished work in all theoretical aspects of software engineering. Topics of interest include, but are not limited to: 
+ Formal specification and modeling 
+ Formal approaches to fault prevention and detection 
+ Abstraction, refinement, and evolution 
+ Formal verification and validation 
+ Integration of formal methods and testing 
+ Integration of formal methods and review 
+ SAT/SMT solvers for software analysis and testing 
+ Practical formal methods 
+ Applications of formal methods 
+ Formal approaches to software maintenance 
+ Formal approaches to safety-critical system development 
+ Supporting tools for formal methods 
+ Formal methods for agile development 
+ Formal methods for human-machine pair programming 
+ Formal methods for and with AI 
+ Formal methods for Cyber-physical systems and IoT 
+ Formal certification of products 
+ Industrial case studies 
+ Registration 
+ TBD 
+ Venue and Accomodation 
+ The 25th International Conference on Formal Engineering Methods (ICFEM 2025) will be held atHangzhou Xixi Hotel. 
+ Xixi Hotel Hangzhou is renowned for its elegant design that seamlessly integrates Chinese cultural elements with the natural beauty of the Xixi Wetland. The hotel features 281 well-appointed guest rooms, including options in the main building lakeside villas, and the exclusive State Guest area. Each room is designed with comfort in mind offering spacious layouts, private balconies, and breathtaking views of the surrounding wetlands. 
+ Booking & discount message: TBD 
+ Keynote Speakers 
+
+Jifeng Heis an Academician of the Chinese Academy of Sciences. His research focuses on formal methods, concurrent programming theory, embedded system design, and the co-design of software and hardware. He has led major national projects, including serving as Chief Scientist for the National Basic Research Program on Trustworthy Software and the 973 Program on theories and practices for massive information coordination and survivability. His work has contributed significantly to real-time embedded systems, cyber-physical systems, and the Internet of Things. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Yongwang Zhaois a Professor at Zhejiang University and a Ph.D. supervisor. He serves as a member of the ARINC653 International Operating System Standards Committee and the Common Criteria Operating System Kernel Technology Committee. His research focuses on operating system security, formal verification, and programming language principles. He has contributed to several international and national standards and has led major projects, including those for China's manned space program. His work has been recognized by Boeing, Airbus, and leading real-time operating system communities, influencing both standards and open-source projects. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+ Jim Woodcockis a Professor of Software Engineering at the University of York and a Fellow of the Royal Academy of Engineering. His research focuses on formal methods, software engineering, and system verification, with contributions to Z notation, CSP, and unifying theories of programming. He played a key role in the formalization of IBM's CICS transaction processing system, which won the Queen's Award for Technological Achievement, and the Mondex electronic payment system, achieving the highest ITSEC classification. He has held academic positions at Oxford, Kent, and York and is the Editor-in-Chief of Formal Aspects of Computing. 
+ Title:XXXX 
+ Abstract: 
+ xxxx 
+ xxxx 
+
+Attractions 
+ Welcome to Hangzhou, a charming city in China. It combines natural allure with rich history and modern charm. Verdant mountains and serene waters offer tranquility, while ancient heritages tell tales of the past. Hi-tech zones and trendy malls reveal its dynamic present, captivating all who visit. 
+ West Lake, the crown jewel of Hangzhou, enchants visitors with its idyllic landscapes. It encompasses famed sites like the Broken Bridge, Su Causeway, Leifeng Pagoda, and Three Pools Mirroring the Moon. These spots, with their own stories and allure, draw countless eyes and make West Lake an ever-charming destination. 
+ Lingyin Temple, a time-honored Buddhist sanctuary, dates back centuries. Tucked away in verdant mountains, it features imposing architecture like the majestic Main Hall. The temple complex is filled with an air of solemnity, and the nearby Feilai Peak is adorned with exquisitely carved stone statues, a testament to ancient artistry. 
+ Xixi National Wetland Parkis a nature lover's paradise. It's a labyrinth of waterways marshes, and reed beds. Here, you can paddle a boat through tranquil canals, observe diverse bird species in their natural habitats, and soak up the fresh air, far from the city's din. 
+ Hefang Street, one of the most representative historical blocks in old Hangzhou, retains the charm of the late Qing and early Republic. Here, a dazzling array of snacks like DingSheng Cake Pian’erchuan Noodles, Stinky Tofu and Small Steamed Buns awaits. Every bite is filled with the unique flavor of Hangzhou. 
+ Hangzhou Song Cityresurrects the glory of the Song Dynasty. Entering, you're transported to an era of prosperity. Streets are lined with quaint shops selling handicrafts and traditional snacks. The nightly "Song City Romance" show is a dazzling display of lights, music, and dance, retelling historical tales and captivating audiences. 
+ The Zhejiang Provincial Museumholds over 100,000 artifacts, spanning from the Neolithic to modern times. With treasures like Hemudu and Liangzhu relics, celadon, and Buddhist items, plus ancient mirrors, coins from the Southern Song Dynasty, calligraphy and rubbings, it unveils rich regional history. 
+ Important Dates 
+ Abstract Submission: May 25, 2025 
+ Full Paper Submission: June 1, 2025 
+ Author Notification: August 1, 2025 
+ Camera-ready versions: August 20, 2025 
+ Conference dates:November 10-13,2025 
+ Conference Paper Submission and Publication 
+ Submission should be done through the ICFEM 2025 submission page(the web page is under construction). 
+ As in previous years, the proceedings will be published in the Springer Lecture Notes in Computer Science series. 
+ Papers should be written in English and should not exceed 16 pages (excluding references and appendix) in the Springer's LNCS format. Each submission will undergo a rigoroussingle-blind pear-review process by at least three experts. Extended versions of selected papers will berecommended to special issues of Formal Aspects of Computing after the conference proceedings. Formatting style files and further guidelines for formatting can be found at the Springer website (more detailshere). 
+ We suggest, though it is not obligatory, that authors include line numbers in their submissions to facilitate the review process. Additionally, authors are encouraged to mention if there are any available artifacts related to their research, such as datasets, software, or supplementary materials, which could enhance the understanding and reproducibility of their work. 
+ Journal-First Presentations 
+ ICFEM 2025 is inviting journal-first presentations of papers published recently in the following journals: 
+ ACM Transactions on Programming Languages and Systems 
+ ACM Transactions on Software Engineering and Methodology 
+ Formal Aspects of Computing 
+ Formal Methods in System Design 
+ IEEE Transactions on Software Engineering 
+ Theoretical Computer Science 
+ The presentations will offer the authors an opportunity to speak directly to their peers in the community and also enrich the ICFEM program. The journal-first presentation will be listed in the conference program yet the corresponding papers will not be part of the ICFEM proceedings as they have been published through the journals. At least one author of each accepted journal-first presentation must register for and attend the ICFEM conference to present the paper. 
+ Evaluation and Selection 
+ Detailed criteria on journal-first presentation submitted to ICFEM is TBD. 
+ How to Submit 
+ Interested authors should submit a short presentation proposal consisting of the paper title, abstract, a short statement on how the work satisfies the above criteria, and the PDF of the original journal paper. Please submit a single PDF file and list all authors of the original journal paper as authors in EasyChair. No special formatting is required. 
+ Doctoral Symposium Paper Submission 
+ The ICFEM Doctoral Symposium is an international forum for PhD students studying all areas related to formal methods for software, hardware and system development. This forum is an excellent opportunity bringing together PhD students and well-known established researchers from the formal methods community. It will also provide PhD students with fruitful feedback and advice on their research approach and enable them to interact with other PhD students in order to stimulate the exchange of ideas and the sharing of experiences among participants. In summary, the PhD forum will provide PhD students with an ideal opportunity to present, share and discuss their research in a constructive and critical scientific atmosphere. 
+ We seek submissions from PhD students who have either determined the direction of their thesis research (probably with some preliminary results already published), but who still have substantial work to complete; or PhD student participants who are in the early stages of their dissertations. It is not required to have a paper accepted at the main conference in order to participate in the ICFEM Doctoral Symposium. 
+ Submissions to the Doctoral Symposium should include: Title of the research, the author name (single name) and affiliation; Context and motivation; Problem statement and related work; Proposed solutions and current research efforts, their significance, methodology, results and analysis, and future work. The paper should be prepared using theLNCS formatand submitted in PDF format via EasyChair. 
+ We accept two types of submissions:(a)2-page extended abstracts which will not be included in the ICFEM proceedings; and(b)6-page papers which will be published in the LNCS volume of Springer as part of the main ICFEM proceedings. 
+ Authors with accepted submissions are expected to attend the Doctoral Symposium in person to present their work. A discounted registration fee for Doctoral Symposium participants will be announced later. 
+ Official Sponsors 
+ TBD 
+  
+ ICFEM'25 is an outstanding opportunity for you to reach the "thought leaders" in this industry with your message, and for your Software Engineering team to network and exchange ideas with their peers in this unique and innovative forum. 
+ Sponsors are offered the opportunity to reach over 100 software engineering experts, including researchers and industry practitioners such as developers, QA and engineering managers. 
+ New sponsorship are welcome and any entity wishing to become an official sponsor may contact the sponsorship chair. 
+ Conference Organizing Committee 
+ Steering Committee 
+ David Basin, ETH Zurich, Switzerland 
+ Michael Butler, University of Southampton, UK 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Jifeng He, Shanghai Academy of AI Industrial Technology, China 
+ Mike Hinchey, University of Limerick, Ireland 
+ Shaoying Liu, Hiroshima University, Japan (Chair) 
+ Kazuhiro Ogata, JAIST, Japan 
+ Shengchao Qin, Teesside University, UK 
+ Conference Co-Chairs 
+ Xinyu Wang, Zhejiang University, China 
+ Wenhai Wang, Zhejiang University, China 
+ Program Co-Chairs 
+ Étienne André, Université Sorbonne Paris Nord,France 
+ Naijun Zhan, Peking University, China 
+ Jingyi Wang, Zhejiang University, China 
+ Honorable Chairs 
+ Jifeng He, Tongji University, China 
+ Huimin LIN, Chinese Academy of Sciences, China 
+ Jin Song Dong, National University of Singapore, Singapore 
+ Tutorial Chair 
+ Dongxia Wang, Zhejiang University, China 
+ Finance Chair 
+ Ling Shi, Nanyang Technological University, Singapore 
+ Publicity Chair 
+ Jie An, Chinese Academy of Sciences, China 
+ Yamine Aït-Ameur, University of Toulouse, France 
+ Workshop Chair 
+ href="https://fiction-zju.github.io/author/mingshuai-chen/" - Mingshuai Chen
+, Zhejiang University, China 
+ Program Committee 
+ TBD
+

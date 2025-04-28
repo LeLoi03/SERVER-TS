@@ -1,0 +1,51 @@
+output:
+{
+  "Conference dates": "July 21 - 24, 2025",
+  "Year": "2025",
+  "Location": "Tucson, Arizona, United States",
+  "City-State-Province": "Tucson, Arizona",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "IEEE AITest 2025 Main Conference Paper": "April 8, 2025",
+    "IEEE ISADS 2025 Paper submission deadline": "April 10, 2025",
+    "IEEE SOSE 2025 Paper Submission Deadline": "April 15, 2025",
+    "IEEE JCC 2025 Full Paper Submission Deadline": "April 15, 2025",
+    "IEEE BigDataService 2025 Abstract": "April 15, 2025",
+    "IEEE BigDataService 2025 Full paper": "April 25, 2025",
+    "IEEE FITYR 2025 Submission Deadline": "April 30, 2025",
+    "IEEE IMC 2025 Paper/Poster Submission Deadline": "April 4, 2025",
+    "IEEE DAPPS 2025 Submission Deadline (FIRM)": "March 31, 2025",
+    "IEEE CISOSE SRC Track SRC Submissions Deadline": "May 10, 2025",
+    "IEEE CISOSE Industry Track Submission Deadline": "May 31, 2025",
+    "IEEE CISOSE SRC Track SRC Camera Ready": "May 31, 2025"
+  },
+  "Notification Date": {
+    "IEEE IMC 2025 Author Notification": "May 7, 2025",
+    "IEEE DAPPS 2025 Author notification": "May 8, 2025",
+    "IEEE AITest 2025 Author's Notification": "May 10, 2025",
+    "IEEE ISADS 2025 Author notification": "May 10, 2025",
+    "IEEE SOSE 2025 Author Notification": "May 15, 2025",
+    "IEEE JCC 2025 Author Notification": "May 15, 2025",
+    "IEEE FITYR 2025 Author notification": "May 22, 2025",
+    "IEEE CISOSE SRC Track SRC Acceptance Notification": "May 24, 2025",
+    "IEEE BigDataService 2025 Notification": "May 26, 2025",
+    "IEEE CISOSE Industry Track Author's Notifications": "June 20, 2025"
+  },
+  "Camera-ready Date": {
+    "IEEE DAPPS 2025 Final paper submission (camera-ready)": "May 18, 2025",
+    "IEEE ISADS 2025 Camera-ready copies due": "May 18, 2025",
+    "IEEE IMC 2025 Final paper submission (camera-ready)": "May 21, 2025",
+    "IEEE SOSE 2025 Camera Ready Submission": "May 22, 2025",
+    "IEEE JCC 2025 Camera Ready Submission": "May 22, 2025",
+    "IEEE FITYR 2025 Final paper submission (camera-ready)": "May 31, 2025",
+    "IEEE AITest 2025 Camera-ready and author’s registration": "June 1, 2025",
+    "IEEE BigDataService 2025 Final paper": "June 2, 2025",
+    "IEEE CISOSE Industry Track Camera-Ready": "June 27, 2025"
+  },
+  "Topics": "Autonomous Decentralized Systems, Service-Oriented Systems, Artificial Intelligence, Machine Learning, Smart Cities, Big Data, Blockchain Technologies, Internet of Things, Cyber-Physical Systems, Distributed Systems, Cloud Computing, Network Security",
+  "Summary": "The IEEE International Congress on Intelligent and Service-Oriented Systems Engineering (CISOSE) is a premier event on service-oriented systems and their practices. CISOSE 2025 will be held in Tucson, Arizona, from July 21-24, 2025, and will feature several co-located conferences, including the IEEE International Symposium on Autonomous Decentralized Systems (ISADS).",
+  "Call for Papers": "# IEEE ISADS 2025: Call for Papers\n\nThe International Symposium on Autonomous Decentralized Systems (ISADS 2025) is a co-located conference within the IEEE International Congress on Intelligent and Service-Oriented Systems Engineering (CISOSE 2025), to be held in **Tucson, Arizona, from July 21-24, 2025**.\n\nISADS 2025 aims to be the forum for advancements and innovations in ADS concepts, technologies, applications, strategic issues, and other related topics. This year, the special topic is “Sustainable Technology and Business for ESG” in multidisciplinary domains.\n\n## Topics of Interest\n\nWe invite research papers, student papers, workshop proposals, panel proposals, and tutorial proposals on, but not limited to, the following topics:\n\n*   Internet-of-Things, cyber-physical systems, reactive systems, distributed embedded systems\n*   Industry 4.0, internet plus, autonomous robotics, and transportation systems\n*   Intelligent, supervised and unsupervised machine learning, and deep-learning systems\n*   Ad-hoc networks, sensor networks, advanced network infrastructures, and internetworking\n*   Architecture-driven and model-driven development of distributed applications\n*   Assurance, fault tolerance, on-line expansion, on-line-maintenance, and resilience\n*   Autonomous and decentralized services, including service architecture, protocols, and collaboration\n*   Cloud computing, big data analysis, artificial intelligence, and augmented intelligence\n*   Distributed and collaborative development, and development infrastructure of high-quality software systems\n*   Heterogeneous distributed information/control systems, mobile agent/computer-supported cooperative works\n*   Modeling, simulation of autonomous services and service-oriented application composition\n*   Network and system security, safety, and blockchain applications\n*   Autonomous decentralized system applications in smart cities (energy, transportation, infrastructure)\n*   Autonomous decentralized system applications for sustainability (food systems, carbon neutral, quality of life)\n*   Novel applications, including e-business, e-commerce, and e-government; telecommunications; information service systems; manufacturing systems; real-time event management; office automation; railway systems; supply chains; environmental/emergency protection and disaster management; networked health and medical systems; intelligent home control; embedded systems for automotive and avionics applications; augmented reality\n\n## Important Dates (AoE)\n\n*   **Paper submission deadline:** April 10, 2025\n*   **Author notification:** May 10, 2025\n*   **Camera-ready copies due:** May 18, 2025\n\n## Submission Link\n\n[https://easychair.org/my/conference?conf=isads2025](https://easychair.org/my/conference?conf=isads2025)\n\n## Steering Committee\n\n*   Jie Xu, University of Leeds\n*   Yuichi Baba, East Japan Railway Company\n*   Mario Campolargo, DG Informatics, Europe, Portugal\n*   Yinong Chen\n*   Carlos Perez Leguizamo, Bank of Mexico, Mexico\n*   Wei-Tek Tsai, Arizona State University, United States\n*   Radu Popescu-Zeletin, ICAM GmbH, Germany\n*   Kinji Mori, Institute of Science Tokyo, Japan\n\n## General Chair\n\n*   Wei-Tek Tsai, Arizona State University, United States\n\n## Program Chairs\n\n*   Masaki Aida, Tokyo Metropolitan University, Japan\n*   Ulrich Meissen, Fraunhofer FOKUS, Germany\n*   Hiram Ponce, Universidad Panamericana, Mexico\n*   Guanqiu Qi, Buffalo State University, United States"
+}
+

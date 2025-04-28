@@ -1,0 +1,33 @@
+{
+  "Conference dates": "June 11 - 13, 2025",
+  "Year": "2025",
+  "Location": "Düsseldorf, Germany",
+  "City-State-Province": "Düsseldorf",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Case Study Track) Abstract submission": "March 1, 2025",
+    "(Case Study Track) Paper submission": "March 2, 2025",
+    "(Main Track) Abstract submission": "March 1, 2025",
+    "(Main Track) Paper submission (including research/short/industry/journal-first papers)": "March 2, 2025",
+    "(Doctoral Symposium) Paper submission": "March 2, 2025"
+  },
+  "Notification Date": {
+    "(Case Study Track) Notification": "March 29, 2025",
+    "(Main Track) Notification": "March 29, 2025",
+    "(Doctoral Symposium) Notification": "March 29, 2025"
+  },
+  "Camera-ready Date": {
+    "(Case Study Track) Final version": "April 9, 2025",
+    "(Main Track) Final version": "April 9, 2025",
+    "(Doctoral Symposium) Final version": "April 9, 2025"
+  },
+  "Other Date": {
+    "Workshops and Tutorials Düsseldorf, Germany": "June 10, 2025"
+  },
+  "Topics": "Rigorous State Based Methods, Abstract State Machines (ASM), Alloy, B, TLA, VDM and Z",
+  "Publisher": "Springer",
+  "Summary": "The ABZ conference is dedicated to the cross-fertilization of state-based and machine-based formal methods, like Abstract State Machines (ASM), Alloy, B, TLA, VDM and Z, that share a common conceptual foundation. The 11th instalment of the ABZ conference will be held at theTribe hotel, located in the centre of Düsseldorf from June 11-13, 2025.",
+  "Call for Papers": "# ABZ 2025: Call for Papers\n\nThe 11th International Conference on Rigorous State Based Methods (ABZ 2025) will be held in **Düsseldorf, Germany, from June 10-13, 2025**.\n\nThe ABZ conference is dedicated to the cross-fertilization of state-based and machine-based formal methods, like Abstract State Machines (ASM), Alloy, B, TLA, VDM and Z.\n\n## Conference Tracks\n\nABZ 2025 will have a main conference track, a case study track, a doctoral symposium, tutorials, and workshops.\n\n*   Main Conference\n*   Case Study\n*   Doctoral Symposium\n*   Tutorials and Workshops\n\n## Submission Process\n\nAuthors should consult [Springer’s authors' guidelines](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19242230/data/v11) and use their proceedings templates, either for LaTeX or for Word, for the preparation of their papers. Springer encourages authors to include their [ORCIDs](https://www.springer.com/gp/authors-editors/orcid) in their papers. In addition, the corresponding author of each paper, acting on behalf of all of the authors of that paper, must complete and sign a Consent-to-Publish form. The corresponding author signing the copyright form should match the corresponding author marked on the paper. Once the files have been sent to Springer, changes relating to the authorship of the papers cannot be made.\n\nAuthors interested in contributing to ABZ 2025 in Open Access or Open Choice should refer to the corresponding [Submit contributionvia easychair](https://easychair.org/conferences/?conf=abz2025) Springer webpage.\n\n## Important Dates\n\n**NOTE:** All submission dates are anywhere on earth. Submissions deadlines have been extended!\n\n### Workshops/Tutorials\n\nPlease contact the organisers directly as soon as possible for workshop or tutorial proposals. There is no special call for workshops or tutorials this year.\n\n### Case Study Track\n\n*   **Abstract submission:** March 1, 2025 AOE\n*   **Paper submission:** March 2, 2025 AOE\n*   **Notification:** March 29, 2025\n*   **Final version:** April 9, 2025\n\n### Main Track\n\n*   **Abstract submission:** March 1, 2025 AOE\n*   **Paper submission (including research/short/industry/journal-first papers):** March 2, 2025 AOE\n*   **Notification:** March 29, 2025\n*   **Final version:** April 9, 2025\n\n### Doctoral Symposium\n\n*   **Paper submission:** March 2, 2025 AOE\n*   **Notification:** March 29, 2025\n*   **Final version:** April 9, 2025\n\n### Conference\n\n*   **Workshops and Tutorials (Düsseldorf, Germany):** June 10, 2025\n*   **ABZ 2025 Conference (Düsseldorf, Germany):** June 11-13, 2025\n\n## Contact Us\n\n[abz2025@hhu.de](mailto:abz2025@hhu.de)"
+}

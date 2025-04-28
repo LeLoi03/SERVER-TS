@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "June 30 - July 3, 2025",
+  "Year": "2025",
+  "Location": "Poland",
+  "City-State-Province": null,
+  "Country": "Poland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full version of the paper": "Late submission still possible"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "March 17, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready papers": "March 25, 2025"
+  },
+  "Registration Date": {
+    "Conference payment": "March 25, 2025"
+  },
+  "Topics": "Dependability, Computer Aided Medicine, Cloud Technologies, Deep Learning, Intelligent & Soft Computing, Machine Vision, Smart Systems, Industry 4.0, Data Science, Business, Medicine, Dependability engineering in software, hardware & network systems, System modelling for threats, dependability & maintenance, Risk analysis, security and quality assurance, Efficiency analysis of systems and networks, Softcomputing for analysis and modelling of complex systems, Web Services and Performance, Secure Transactions, General aspects of smart systems, networks theory and communication technology, Dependability theory of networks, systems and its elements, Artificial Intelligence, Natural Language Processing, Human-computer interaction, Theory of information and IT systems, Medical data analysis & diagnosis, Smart Healthcare, AI in medicine, Computer Vision, Virtual / Augmented Reality, Planning & maintenance in systems and networks, Dependability and quality of service, Software dependability, testing, validation and verification, Industry 4.0, Smart Logistics & Smart Economy, Military systems and equipment; Unmanned Aerial Vehicles, Green energy, power systems and smart grids, e-learning & Web-based Learning, e-economic, e-commerce, e-business, e-management",
+  "Publisher": "Springer",
+  "Summary": "The 20th International Conference on Dependability of Computer Systems (DepCoS-RELCOMEX 2025) will be held in Poland from June 30 to July 3, 2025. The conference focuses on dependable and timely results from quantitative and qualitative data using precise and AI models and algorithms.",
+  "Call for Papers": "# DepCoS-RELCOMEX 2025: Call for Papers\n\nThe 20th International Conference on Dependability of Computer Systems (DepCoS-RELCOMEX 2025) will be held from **June 30 - July 3, 2025, in Poland**.\n\n## Topics\n\nThe conference covers a wide range of topics related to dependability in computer systems.  These include:\n\n*   **Theory and Practice of Dependability:** Computer Aided Medicine, Cloud Technologies, Deep Learning, Intelligent & Soft Computing, Machine Vision, Smart Systems & Industry 4.0, Data Science in Business & Medicine\n*   **Methodology and Tools:** Dependability engineering in software, hardware & network systems, System modelling for threats, dependability & maintenance, Risk analysis, security and quality assurance, Efficiency analysis of systems and networks, Softcomputing for analysis and modelling of complex systems, Web Services and Performance, Secure Transactions\n*   **General Problems:** General aspects of smart systems, networks theory and communication technology, Dependability theory of networks, systems and its elements, Artificial Intelligence, Natural Language Processing, Human-computer interaction, Theory of information and IT systems\n*   **Applications:** Medical data analysis & diagnosis, Smart Healthcare, AI in medicine, Computer Vision, Virtual / Augmented Reality, Planning & maintenance in systems and networks, Dependability and quality of service, Software dependability, testing, validation and verification, Industry 4.0, Smart Logistics & Smart Economy, Military systems and equipment; Unmanned Aerial Vehicles, Green energy, power systems and smart grids, e-learning & Web-based Learning, e-economic, e-commerce, e-business, e-management\n\n## Important Dates\n\n*   **Full version of the paper:** Late submission still possible. Please additionally send a notification to depcos@pwr.edu.pl.\n*   **Notification of acceptance:** March 17, 2025\n*   **Camera-ready papers:** March 25, 2025\n*   **Conference payment:** March 25, 2025\n\n## Submission\n\n[https://cmt3.research.microsoft.com/DEPCOS2025](https://cmt3.research.microsoft.com/DEPCOS2025)\n\n## Submission Guidelines\n\n*   The text should be 8-10 pages long after final formatting including all figures, tables, and bibliography positions; additional fee will apply for extra pages over the limit.\n*   [LaTeX Templates](https://cmt3.research.microsoft.com/DEPCOS2025)\n*   Word template: Create the Word document by modification of the splnproc1703.docm file included in the template, using \"Springer Proceedings Macros\" ribbon for all required formatting.\n*   [Overleaf](https://cmt3.research.microsoft.com/DEPCOS2025)\n\n## Payment\n\nThe registration fee is 850 EUR and will cover Monday to Thursday accommodation with full board, admission to all events, and one paper copy of the proceedings. We are sorry, but no discounts are available."
+}
+```

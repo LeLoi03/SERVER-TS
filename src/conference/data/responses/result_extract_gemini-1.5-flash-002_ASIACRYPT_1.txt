@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "December 8 - 12, 2025",
+  "Year": "2025",
+  "Location": "Melbourne, Australia",
+  "City-State-Province": "Melbourne",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "May 16, 2025"
+  },
+  "Notification Date": {
+    "First round notification": "July 13, 2025",
+    "Final notification": "August 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version due": "September 10, 2025"
+  },
+  "Other Date": {
+    "Rebuttals due": "July 18, 2025",
+    "End of interactive rebuttals": "July 25, 2025",
+    "Conference begins": "December 8, 2025"
+  },
+  "Topics": "Cryptology",
+  "Publisher": "Springer",
+  "Summary": "Asiacrypt 2025 will take place in Melbourne, Australia on December 8-12, 2025. Organized by the International Association for Cryptologic Research (IACR), the conference solicits original research papers on all aspects of cryptology.  The proceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series.",
+  "Call for Papers": "# Asiacrypt 2025: Call for Papers\n\nAsiacrypt 2025 will be held in **Melbourne, Australia, from December 8-12, 2025.**  The conference is organized by the **International Association for Cryptologic Research (IACR)** and chaired by Professor Joseph Liu.\n\n## General Information\n\nThe proceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series. We solicit all original research papers on all aspects of cryptology for submission.\n\nAs a general IACR conference, we would like to be as inclusive as possible; in particular, a topic for any IACR area conference is a topic for Asiacrypt, and PC members are no longer allowed to issue reviews such as “This topic is more suitable for [area conference]”.\n\n## Submission\n\nAuthor instructions for paper submission may be found on the submission page: [Submit a paper](papersubmission.php)\n\n## Important Dates\n\n*   **Submission deadline:** May 16, 2025 at 12:00 GMT\n*   **First round notification:** July 13, 2025\n*   **Rebuttals due:** July 18, 2025\n*   **End of interactive rebuttals:** July 25, 2025\n*   **Final notification:** August 10, 2025\n*   **Camera-ready version due:** September 10, 2025\n*   **Conference begins:** December 8, 2025\n\n## Review Process\n\nAsiacrypt 2025 will operate a two-round review system with a rebuttal phase. In the first round, the program committee selects a subset of submissions for further consideration in the second round, and the authors receive the first-round notification with review comments. The authors of the selected submissions are invited to submit a text-based rebuttal letter to the review comments.\n\nIn the second round, the program committee further reviews the selected submissions by taking into account their rebuttal letter, acting on all answers of questions issued as pertinent to the decision. The PC chairs make the final decision of acceptance or rejection in consultation with the area chairs and the reviewers.\n\n## Artifacts\n\nIn order to encourage open and reproducible research, authors of accepted papers will be invited to submit artifacts associated with their papers, such as software or datasets, for review. The artifact review will be a collaborative process between authors and the artifact review committee. The goal of the process is not just to evaluate artifacts, but also to improve them for reproduction and reusability by the scientific community.\n\nArtifacts that pass successfully through the artifact review process will be archived on IACR's artifact archive. With comparable merit priority will be given to papers with machine-verified proofs.\n\n## Stipends & Awards\n\nStudents whose papers have been accepted, who will present their talks at the conference, and contact the general chair in a timely fashion will have their registration waived. A limited number of stipends are available to those unable to obtain funding to attend the conference. Students, whose papers are accepted and who will present the paper themselves, or from groups who are underrepresented at Asiacrypt at least in the last decade are especially encouraged to apply. Requests for stipends should go to the general chair.\n\nThe program chairs may, in consultation with the PC, choose to bestow two best (theory and practical) paper awards, and a best early-career paper award.\n\n## Program Committee Chairs\n\n*   Goichiro Hanaoka, AIST, Japan\n*   Bo-Yin Yang, Academia Sinica, Taiwan\n    *   [asiacrypt2025programchairs@iacr.org](mailto:asiacrypt2025programchairs@iacr.org)\n\n## General Chair\n\n*   Joseph Liu, Monash University, Australia\n    *   [asiacrypt2025@iacr.org](mailto:asiacrypt2025@iacr.org)"
+}
+

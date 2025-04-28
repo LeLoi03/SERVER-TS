@@ -1,0 +1,24 @@
+```json
+{
+  "Conference dates": "October 22 - 24, 2025",
+  "Year": "2025",
+  "Location": "Kyoto, Japan",
+  "City-State-Province": "Kyoto",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline (All Tracks)": "May 8, 2025"
+  },
+  "Notification Date": {
+    "Paper Notification (All Tracks)": "July 27, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Submission Deadline (All Tracks)": "August 10, 2025"
+  },
+  "Topics": "Data Mining Theories and Technologies, Data Mining Applications",
+  "Publisher": "Springer",
+  "Summary": "The 21st International Conference on Advanced Data Mining and Applications (ADMA2025) will be held in Kyoto, Japan, from October 22 to 24, 2025. ADMA2025 aims to bring together experts on data mining from around the world and provide a leading international forum for disseminating original research findings in data mining, spanning applications, algorithms, software, and systems, as well as different applied disciplines with potential in data mining.",
+  "Call for Papers": "# ADMA 2025: Call for Research and Industry Papers\n\nThe 21st International Conference on Advanced Data Mining and Applications (ADMA 2025) will be held in **Kyoto, Japan, from October 22-24, 2025**.\n\n## Themes and Topics\n\nWe invite authors to submit papers relevant to the following topics:\n\n### Data Mining Theories and Technologies\n\n*   Data mining foundations and algorithms\n*   Grand challenges in big data mining\n*   Mining on data streams\n*   Graph mining\n*   Spatial and temporal data mining\n*   Text, video, multimedia data mining\n*   Web mining and social networks\n*   Correlation mining and causality analysis\n*   Recommender systems\n*   Generative data mining\n*   Deep learning models for data mining\n*   Trustworthy and responsible data mining\n*   Data mining security and privacy\n*   Federated and privacy-aware data mining\n*   Parallel and distributed data mining\n*   Interactive data mining and visualization\n*   Benchmarking and evaluations\n*   Trends in advanced data mining\n\n### Data Mining Applications\n\n*   Data mining for edge intelligence\n*   Data mining for bioinformatics\n*   Image mining & interpretations\n*   E-commerce data mining\n*   Healthcare informatics\n*   Disaster prediction and prevention\n*   Data Mining Applications with LLMs\n*   Financial market analysis\n*   Software analysis with data mining\n*   Data mining enhanced education\n*   Data mining for AgriTech\n*   Data mining in the Internet of Things\n*   Mining for database management\n*   Data mining for space science\n*   Data mining for cybersecurity\n*   Data mining for eScience\n*   Smart Cities applications\n*   Data mining for societal science\n\n## Submission Categories\n\nADMA 2025 has three submission tracks: Research Track, Industry Track, and Special Session Track. The following is information about the Research and Industry Tracks. For CFPs for Special Session Tracks, please refer to the corresponding webpages on the ADMA 2025 website.\n\n*   **Research Track:** This track focuses on original research in data mining, covering applications, algorithms, software, and systems. Submissions will undergo double-blind peer review.\n*   **Industry Track:** This track focuses on applied research and real-world implementations of data mining solutions. Submissions should highlight practical value, industrial significance, and innovative deployments. The single-blind review process allows authors to include identity and affiliation details.\n\n**Note:** ALL track submissions must follow the LNAI (Lecture Notes in Artificial Intelligence) format. Templates and formatting details are available in Springer's Author Instructions. Papers must not exceed 15 pages in LNAI format. Accepted papers will be published in Springer's LNAI and indexed in EI and DBLP. The ADMA is recognized as a C-level conference by CCF (China Computer Federation).\n\n## Important Dates (AoE Time)\n\n*   **Paper Submission Deadline (All Tracks):** May 8, 2025\n*   **Paper Notification (All Tracks):** July 27, 2025\n*   **Camera-Ready Submission Deadline (All Tracks):** August 10, 2025\n*   **Conference Dates:** October 22 to 24, 2025\n\n## Submission Guidelines\n\nThe paper should be in English and contain unpublished contributions to the data mining and related fields. Manuscripts must be prepared in accordance with the LNAI (Lecture Notes in Artificial Intelligence) format. For the template and details on the LNCS style, see Springer's Author Instructions. The paper should NOT exceed 15 pages in LNAI format. Submissions are reviewed in a double-blind manner.  Specific requirements for double-blind submissions are detailed in the full CFP.\n\n## Contact\n\nADMA2025 Organization Committee\n[adma2025-committee@googlegroups.com](mailto:adma2025-committee@googlegroups.com)\n[@ADMA2025](https://twitter.com/@ADMA2025)"
+}
+```

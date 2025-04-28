@@ -1,0 +1,32 @@
+```json
+{
+  "Conference dates": "May 14 - 16, 2025",
+  "Year": "2025",
+  "Location": "Banff, Alberta, Canada",
+  "City-State-Province": "Banff, Alberta",
+  "Country": "Canada",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper or Panel Proposal Submission Deadline": "January 15, 2025"
+  },
+  "Notification Date": {
+    "Author Notifications: accept/reject decisions": "April 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Deadline": "April 15, 2025"
+  },
+  "Registration Date": {
+    "First Round Registration Lottery Deadline": "February 3, 2025",
+    "Second Registration Lottery Deadline": "April 2, 2025",
+    "Early Registration Deadline": "April 7, 2025",
+    "Hotel Reservation Deadline": "April 7, 2025"
+  },
+  "Other Date": {
+    "Second Registration Lottery Notification": "April 4, 2025"
+  },
+  "Topics": "Operating Systems, Storage, Distributed Systems, Mobile and Embedded Systems, Virtualization, Programming Languages, Networking, Security, Dependability, Manageability",
+  "Summary": "The ACM SIGOPS 20th Workshop on Hot Topics in Operating Systems (HotOS XX) will be held in Banff, Alberta, Canada, from May 14–16, 2025. Participants will present and discuss new ideas in systems research and how technological advances and new applications are shaping our computational infrastructure.",
+  "Call for Papers": "# HotOS XX: Call for Papers and Panel Proposals\n\nThe 20th Workshop on Hot Topics in Operating Systems (HotOS XX) will be held from **May 14–16, 2025, in Banff, Alberta, Canada**.\n\n## Call for Papers and Discussions\n\nHotOS XX hopes to bring together researchers and practitioners in computer systems to engage in a lively discussion on the principles and practices of building systems software. Participants will present new ideas and debate future research agendas in systems research.\n\nWe solicit position papers that propose new directions of systems research, advocate innovative approaches to long-standing problems, or report on deep insights gained from experience with real-world systems. We seek early-stage work where the authors can benefit from community feedback. An ideal submission has the potential to open a line of inquiry that results in multiple conference papers by different authors in related venues, rather than a single follow-on conference paper. The program committee will explicitly favor papers likely to stimulate reflection and discussion.\n\nHotOS takes a broad view of systems research. This includes operating systems, storage, distributed systems, mobile and embedded systems, virtualization, programming languages, networking, security, dependability, and manageability, as well as new systems contributions influenced by other fields such as hardware design, training and serving machine learning, verification, economics, social organization, and biological or other nontraditional computing systems.\n\n## Submission Guidelines\n\n*   Research and position paper submissions must be no longer than 5 pages including figures and tables, plus as many pages as needed for references.\n*   Text should be formatted according to ACM's formatting conventions with 10-point font.\n*   Paper submissions will be double-blind.\n*   Submissions not meeting these criteria will be rejected without review, and no deadline extensions will be granted for reformatting. Please use the `acmart` style.\n\n## Call for Panels and Events\n\nHotOS XX will also feature panels and events with the aim of inspiring lively discussion and research direction-setting independent of any specific work. If you are interested in hosting or proposing an event, please submit a 1-page proposal (using the same format as above) describing topic, format, and length (up to 90 minutes), plus as many pages as necessary for references and supporting letters from planned participants. Unlike papers, panel and event proposals need not be anonymous.\n\nWe especially encourage panel topics including, but not limited to:\n\n*   Industry perspectives on systems research\n*   Diversity and inclusion in systems research\n*   Under-appreciated open source technologies\n*   Hardware trends and their implications for the future of systems research\n\n## Important Dates\n\n*   **Paper or Panel Proposal Submission Deadline:** January 15, 2025 (AoE)\n*   **Author notifications (accept/reject decisions):** April 1, 2025\n*   **Camera-ready deadline:** April 15, 2025\n*   **Workshop:** May 14–16, 2025\n\n## Submission Server\n\nPapers and proposals should be submitted as PDF files via [the web submission form](https://www.google.com/url?q=https://hotos25.hotcrp.com/&sa=D&source=editors&ust=1726851695132824&usg=AOvVaw3SrvjPqf9j2_vpsyLZn0NL)."
+}
+```

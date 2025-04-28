@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "August 6 - 8, 2025",
+  "Year": "2025",
+  "Location": "San Jose, CA, USA",
+  "City-State-Province": "San Jose, California",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop proposal submission": "March 6, 2025",
+    "Full paper submission": "April 14, 2025",
+    "Poster submission": "May 1, 2025"
+  },
+  "Notification Date": {
+    "Workshop acceptance notification": "March 13, 2025",
+    "Full paper acceptance notification": "May 15, 2025",
+    "Poster acceptance notification": "May 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready submission": "June 17, 2025"
+  },
+  "Registration Date": {
+    "Author registration due": "June 27, 2025"
+  },
+  "Topics": "Information Reuse, Information Integration, Reusable Systems, Data Science, Knowledge Representation, Data Mining, Machine Learning, AI, AI and Security, Heuristics, Explanation-Based Learning, Symbolic AI, Predictive Data Analysis, Statistical Analysis, Software Reuse, Software Sustainability, Software Maintenance, Software Reliability, Platforms and Tools, Applications (Autonomous Vehicles, Business, Education, Engineering, Healthcare, Medical Informatics, Internet of Things, Math, Military, Multimedia, NLP, Robotics, Science, Security, Social Networking, Space, Vision)",
+  "Summary": "The 26th edition of IEEE IRI will take place in San Jose, CA, from August 6-8, 2025. This conference explores three major tracks: information reuse, information integration, and reusable systems.  The conference is dedicated to the memory of Dr. Stuart Rubin.",
+  "Call for Papers": "# IEEE IRI 2025: Call for Papers\n\nThe 26th IEEE International Conference on Information Reuse and Integration for Data Science (IRI 2025) will take place from **August 6-8, 2025, in San Jose, CA, USA**.\n\nThis year's conference is dedicated to the memory of Dr. Stuart Rubin, our Honorary General Chair.  To honor Dr. Rubin, we are organizing a special track on \"Symbolic AI and Heuristics for Data Science\".\n\n## Topics\n\nThis conference presents excellent, novel, and contemporary papers covering all aspects of data—including scientific theory and technology-based applications.  The conference includes, but is certainly not limited to:\n\n*   **Information Reuse**\n*   **Data Science & Technologies - Heuristic Acquisition**\n*   **Evolutionary Computing**\n*   **Data & Knowledge Representation and Management**\n*   **Data Visualization**\n*   **Information Science & Theory**\n*   **Contemporary as well as Novel Data Mining Techniques**\n*   **Graph Models**\n*   **Recommender Systems**\n*   **Large Language Models**\n*   **Information Integration**\n*   **Machine Learning & AI**\n*   **AI and Security**\n*   **Heuristics, and Explanation-Based Learning vs. neural networks which are intractable**\n*   **Symbolic AI**\n*   **Evolutionary Techniques**\n*   **Predictive Data Analysis & Intelligence**\n*   **Statistical Analysis**\n*   **Reusable Systems**\n*   **Software and Systems Reuse and Reusability**\n*   **Software Sustainability and Reuse Economics**\n*   **Software Maintenance and Life-Cycle Management**\n*   **Software Reliability, Robustness, and Dependability**\n*   **Platforms and Tools**\n*   **Applications** (Autonomous Vehicles, Business, Education, Engineering, Healthcare and Medical Informatics, the Internet of Things, Math, Military, Multimedia, NLP, Robotics, Science, Security, Social Networking, Space, Vision, etc.)\n*   **Brain-Computer Interface: Applications and Algorithms**\n\n## Submission Instructions\n\nPapers reporting original and unpublished research results pertaining to the above and related topics are solicited. Full papers must be in English and up to 6 pages (using the IEEE two-column template instructions). Submissions should be double-blind and should not include the author(s), affiliation(s), e-mail address(es), tel/fax numbers, and postal address(es) in the paper.\n\nSubmissions should be made via EasyChair:\n\n[https://easychair.org/conferences/?conf=iri2025](https://easychair.org/conferences/?conf=iri2025)\n\nThe authors need to select if their submission is for the \"Full Paper\" track or for the \"Poster\" track. In addition, the authors can indicate if they would like to have their submission considered for the special track on \"Symbolic AI and Heuristics for Data Science\".\n\n## Important Dates\n\n*   **Workshop proposal submission:** March 6, 2025\n*   **Workshop acceptance notification:** March 13, 2025\n*   **Full paper submission:** April 14, 2025\n*   **Poster submission:** May 1, 2025\n*   **Full paper acceptance notification:** May 15, 2025\n*   **Poster acceptance notification:** May 15, 2025\n*   **Camera ready submission:** June 17, 2025\n*   **Author registration due:** June 27, 2025\n*   **Conference events (tentative):** August 6 - August 8, 2025\n\n## Awards\n\nIRI'25 will select and present a Best Paper Award, a Best Student Paper Award, and a Best Poster Award."
+}
+

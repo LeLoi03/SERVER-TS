@@ -1,0 +1,52 @@
+output:
+{
+  "Conference dates": "June 2 - 5, 2025",
+  "Year": "2025",
+  "Location": "Brugg-Windisch, Switzerland",
+  "City-State-Province": "Brugg-Windisch",
+  "Country": "Switzerland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Papers) Submission deadline *extended*": "January 29, 2025",
+    "(Experience Reports) Submission deadline": "January 26, 2025",
+    "(Agile Training and Education) Submission Deadline": "January 26, 2025",
+    "(Industry and Practice) Submission Deadline": "January 26, 2025",
+    "(Posters) Submission deadline": "March 19, 2025",
+    "(AIandAgile) Submissions Due": "March 10, 2025",
+    "(GoHyb) Submissions Due": "March 10, 2025",
+    "(AgileIS) Submissions Due": "March 10, 2025",
+    "(Research Workshops) Workshop Proposal Submission Deadline": "December 1, 2024",
+    "(Experience Reports) Submission of final Experience Report": "April 14, 2025"
+  },
+  "Notification Date": {
+    "(Research Papers) Author Notification **24h late**": "March 1, 2025",
+    "(Agile Training and Education) Notification of Acceptance": "March 1, 2025",
+    "(Industry and Practice) Acceptance notification": "March 1, 2025",
+    "(Experience Reports) Notification of Acceptance": "February 15, 2025",
+    "(Posters) Acceptance notification": "April 7, 2025",
+    "(Research Workshops) Notification of Acceptance": "December 15, 2024",
+    "(AIandAgile) Workshop paper notifications": "April 1, 2025",
+    "(GoHyb) Workshop paper notifications": "April 1, 2025",
+    "(AgileIS) Workshop paper notifications": "April 1, 2025"
+  },
+  "Camera-ready Date": {
+    "(Research Papers) Camera-ready submission": "March 31, 2025"
+  },
+  "Other Date": {
+    "(Experience Reports) Begin of Shepherding Process": "February 17, 2025",
+    "(Experience Reports) Progress Checkpoint": "March 10, 2025",
+    "(Research Workshops) Workshop Day": "June 2, 2025",
+    "(AIandAgile) Workshop day": "June 2, 2025",
+    "(GoHyb) Workshop day": "June 2, 2025",
+    "(AgileIS) Workshop day": "June 2, 2025",
+    "(AgileEAD) Workshop day": "June 2, 2025",
+    "(AgilePR) Workshop day": "June 2, 2025",
+    "Early Bird deadline is extended!": "March 26, 2025",
+    "Technical Coaching Kickstart by Emily Bache": "March 14, 2025"
+  },
+  "Topics": "Agile Software Development, eXtreme Programming, Agile Approaches, Agility, AI and Agile Software Development, Agile Enterprise Architecture and Delivery, Agile and InnerSource, Global and Hybrid Work in Software Engineering",
+  "Summary": "The 26th International Conference on Agile Software Development (XP 2025) will be held in Brugg-Windisch, Switzerland, from June 2-5, 2025. XP is the premier agile software development conference, combining research and practice. The overarching theme of XP 2025 is: “Adapt - Uncovering better ways to deliver valuable software products”.",
+  "Call for Papers": "# XP 2025: Call for Papers and Participation\n\nThe 26th International Conference on Agile Software Development (XP 2025) will be held from **June 2-5, 2025, in Brugg-Windisch, Switzerland**.\n\nXP is the premier agile software development conference, combining research and practice. The overarching theme of XP 2025 is: **“Adapt - Uncovering better ways to deliver valuable software products”.**\n\n## Tracks\n\nXP 2025 will feature the following tracks:\n\n*   Agile Training and Education\n*   Experience Reports\n*   Industry and Practice\n*   Industry and Practice Workshops\n*   Keynotes\n*   Open Space\n*   Posters\n*   Research Papers\n*   Research Workshops\n\n## Workshops\n\n*   AI and Agile Software Development: From Frustration to Success\n*   Agile Enterprise Architecture and Delivery\n*   Agile and InnerSource - a Match Made in Heaven\n*   The Third International Workshop on Global and Hybrid Work in Software Engineering (GoHyb)\n*   Towards a closer collaboration between practice and research in Agile Software Development – What we learnt; and what not?\n\n## Important Dates\n\n**NOTE:** All deadlines are anywhere-on-earth (AoE).\n\n*   **Research Workshops:**\n    *   Workshop Proposal Submission Deadline: December 1, 2024\n    *   Notification of Acceptance: December 15, 2024\n    *   Workshop Day: June 2, 2025\n*   **Research Papers:**\n    *   Abstract (recommended): January 19, 2025\n    *   Submission deadline *extended*: January 29, 2025\n    *   Author Notification **24h late**: March 1, 2025\n    *   Camera-ready submission: March 31, 2025\n*   **Experience Reports:**\n    *   Submission deadline: January 26, 2025\n    *   Notification of Acceptance: February 15, 2025\n    *   Begin of Shepherding Process: February 17, 2025\n    *   Progress Checkpoint: March 10, 2025\n    *   Submission of final Experience Report: April 14, 2025\n*   **Industry and Practice:**\n    *   Submission Deadline: January 26, 2025\n    *   Acceptance notification: March 1, 2025\n*   **Agile Training and Education:**\n    *   Submission Deadline: January 26, 2025\n    *   Notification of Acceptance: March 1, 2025\n*   **Posters:**\n    *   Submission deadline: March 19, 2025\n    *   Acceptance notification: April 7, 2025\n*   **(AIandAgile, GoHyb, AgileIS, AgileEAD, AgilePR):**\n    *   Submissions Due: March 10, 2025\n    *   Workshop paper notifications: April 1, 2025\n    *   Workshop Day: June 2, 2025\n*   **Early Bird deadline is extended!:** March 26, 2025\n*   **Technical Coaching Kickstart by Emily Bache:** March 14, 2025"
+}
+

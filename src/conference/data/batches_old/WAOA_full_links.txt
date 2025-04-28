@@ -1,0 +1,440 @@
+Conference full name: Workshop on Approximation and Online Algorithms (WAOA)
+
+1. Website of WAOA_3: https://algo-conference.org/2024/waoa/
+Website information of WAOA_3:
+
+Skip to contentALGO2024 
+ Home 
+ Local Info 
+ Social Program 
+ ESA 
+ IPEC 
+ ATMOS 
+ ALGOCLOUD 
+ WABI 
+ ALGOWIN 
+ href="https://algo-conference.org/2024/waoa/" - WAOA 
+ Registration 
+ Schedule 
+ WAOA 2024 
+ Scope 
+ Approximation and online algorithms are fundamental tools to deal with computationally hard problems and problems in which the input is gradually disclosed over time. Both kinds of problems arise from a large number of applications in a variety of fields. TheWorkshop on Approximation and Online Algorithms (WAOA)focuses on the design and analysis of approximation and online algorithms. It also covers experimental methods used to design and analyze efficient approximation and online algorithms. 
+ WAOA 2024 is co-located withALGO 2024, which also hostsESA,ALGOCLOUD,ALGOWIN,ATMOS,IPEC, andWABI. ALGO 2024 will take place atRoyal Holloway, University of Londonin Egham, United Kingdom. 
+ Proceedings 
+ Thehref="https://link.springer.com/book/10.1007/978-3-031-81396-2" - WAOA Proceedings
+have been published by Springer in the Lecture Notes in Computer Science (LNCS). 
+ Important Dates 
+ Paper submission deadline:3 July 2024, 23:59 AoE(href="https://easychair.org/conferences/?conf=waoa2024" - EasyChair submission system
+) 
+ Notification: 31 July 2024 
+ Camera-ready version: 9 August 2024 
+ Conference: 5-6 September 2024 
+ Invited Speaker 
+ Speaker: | Rico Zenklusen | , ETH Zürich 
+ Title: | Advances in Approximation Algorithms for Tree and Connectivity Augmentation 
+ Abstract: | Augmentation problems are a fundamental class of Network Design problems. The goal is to find a cheapest way to increase a graph’s (edge-)connectivity by adding edges from a given set of options. The Minimum Spanning Tree Problem is one of its most elementary examples, which can be interpreted as determining a cheapest way to increase the edge-connectivity of a graph from 0 to 1. The next step, to increase from 1 to 2, leads to the heavily studied Tree Augmentation Problem, and the more general problem of increasing the edge-connectivity by 1 of an arbitrary graph is known as Connectivity Augmentation. While these problems admit simple 2-approximations, obtaining approximation factors below 2 has proven challenging. This talk has several goals, namely: | Providing a brief introduction to Tree and Connectivity Augmentation. 
+ Discussing relevant algorithmic techniques that have recently led to better-than-2 approximations for these problems, including the Relative Greedy method and an interesting connection of it to local search procedures. 
+ Demonstrating how these techniques can be leveraged to obtain better-than-2 approximations for (weighted) augmentation problems. 
+ Accepted Papers 
+ Sander Aarts, Jacob Dentes, Manxi Wu and David B. Shmoys. | Bounding the price-of-fair-sharing using knapsack-cover constraints to guide near-optimal cost-recovery algorithms 
+ Aflatoun Amouzandeh and Rob van Stee. | Improved online scheduling with restarts on a single machine 
+ Sergio Cabello and Panos Giannopoulos. | Searching in Euclidean Spaces with Predictions 
+ Rajesh Chitnis, Samuel Thomas and Anthony Wirth. | Lower Bounds for Approximate (& Exact) k-Disjoint-Shortest-Paths 
+ Tim A. Hartmann and Tom Janßen. | Approximating delta-Covering 
+ Stefan Hougardy and Karolina Tammemaa. | Fast Approximation Algorithms for Euclidean Minimum Weight Perfect Matching 
+ Svein Høgemo. | Tight Approximation Bounds on a Simple Algorithm for Minimum Average Search Time in Trees 
+ Dylan Hyatt-Denesik, Danny Blom, Afrouz Jabal Ameli and Bart Smeulders. | Approximation Algorithms for k-Scenario Matching 
+ Tung-Wei Kuo. | Online Deterministic Minimum Cost Bipartite Matching with Delays on a Line 
+ Kefu Lu and Mason Marchetti. | Maximizing Throughput for Parallel Jobs with Speed-up Curves 
+ Zeev Nutov. | Improved approximation algorithms for covering pliable set families and flexible graph connectivity 
+ Richard Shapley and David Shmoys. | Small additive error for unsplittable multicommodity flow in outerplanar graphs 
+ Rene Sitters, Tim Oosterwijk and Steven Miltenburg. | Complexity of Fixed Order Routing 
+ Mihail Stoian. | Approximate Min-Sum Subset Convolution 
+ Philip Whittington. | Online String Attractors 
+ Program Committee 
+ Spyros Angelopoulos, CNRS and Sorbonne University, FR 
+ Antonios Antoniadis, University of Twente, NL 
+ Sujoy Bhore, IIT Bombay, IN 
+ Marcin Bieńkowski, University of Wrocław, PL | (co-chair) 
+ Hans-Joachim Böckenhauer, ETH Zürich, CH 
+ Maike Buchin, Ruhr University Bochum, DE 
+ Panagiotis Charalampopoulos, Birkbeck, University of London, UK 
+ Marek Chrobak, University of California, Riverside, US 
+ Christian Coester, University of Oxford, UK 
+ Matthias Englert, University of Warwick, UK | (co-chair) 
+ Naveen Garg, IIT Delhi, IN 
+ Meng He, Dalhousie University, CA 
+ Martin Hoefer, Goethe Universität, DE 
+ Jochen Koenemann, University of Waterloo, CA 
+ Shi Li, Nanjing University, CN 
+ Alantha Newman, Université Grenoble Alpes, FR 
+ Zeev Nutov, The Open University of Israel, IL 
+ Kevin Schewior, University of Southern Denmark, DK 
+ Chris Schwiegelshohn, Aarhus University, DK 
+ Hadas Shachnai, Technion, IL 
+ Joachim Spoerhase, University of Sheffield, UK 
+ David Wajc, Technion, IL 
+ Prudence Wong, University of Liverpool, UK 
+ Meirav Zehavi, Ben-Gurion University, IL 
+ Steering Committee 
+ Evripidis Bampis, Sorbonne Université, FR 
+ Thomas Erlebach, Durham University, UK 
+ Christos Kaklamanis, University of Patras, GR 
+ Nicole Megow, Universität Bremen, DE 
+ Laura Sanità, Bocconi University, IL 
+ Martin Skutella, Technische Universität Berlin, DE 
+ Roberto Solis-Oba, University of Western Ontario, CA 
+ Call for Papers 
+ Papers are solicited in all research areas related to approximation and online algorithms, including, but not limited to: 
+ Algorithmic game theory 
+ Algorithmic trading 
+ Coloring and partitioning 
+ Competitive analysis 
+ Computational advertising 
+ Computational finance 
+ Cuts and connectivity 
+ FPT-approximation algorithms 
+ Geometric problems 
+ Graph algorithms 
+ Inapproximability results 
+ Mechanism design 
+ Network design 
+ Packing and covering 
+ Paradigms for the design and analysis of approximation and online algorithms 
+ Resource augmentation 
+ Scheduling problems 
+ Submission guidelines 
+ Authors are invited to submit an extended abstract or full paper of at most 10 pages excluding the title page, references, and an optional appendix. The submission should be typeset using a 10-point or larger font in a single-column format with ample spacing throughout and 2cm margins all around on A4-size paper. Proofs omitted due to space constraints must be placed in an appendix. This appendix can even comprise an entire full version of the paper. The appendix will be read by the program committee members at their discretion. In particular, appendices of accepted papers are not going to be published in the proceedings. The main part of the submission should therefore contain a clear technical presentation of the merits of the paper, including a discussion of the paper’s importance within the context of prior work and a description of the key technical and conceptual ideas used to achieve its main claims. 
+ Results previously published (or scheduled for publication) in another conference proceedings or journal will not be accepted at WAOA. Simultaneous submission to journals or other conferences with published proceedings is not permitted. By submitting a paper the authors acknowledge that in case of acceptance at least one of the authors must register at ALGO 2024, attend the conference onsite and present the paper. The program committee may award a Best Paper Award to one of the accepted papers. 
+ Double-blind reviewing 
+ The conference will employ a lightweight double-blind reviewing process. Submissions should not reveal the identity of the authors in any way. In particular, authors’ names, affiliations, and email addresses should not appear at the beginning or in the body of the submission. Authors should ensure that any references to their own related work is in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”). The purpose of the double-blind reviewing is to help PC members and external reviewers come to an initial judgement about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult. In particular, important references should not be omitted or anonymized. In addition, authors should feel free to disseminate their ideas or draft versions of their paper as they normally would. For example, authors may post drafts of their papers on the web, submit them to arXiv, and give talks on their research ideas. 
+ COI with PC members 
+ When submitting a paper, authors will be asked to indicate Conflict of Interest (CoI) with PC members. A CoI is limited to the following categories: 
+ Family member or close friend. 
+ Ph.D. advisor or advisee (no time limit), or postdoc or undergraduate mentor or mentee within the past 5 years. 
+ Person with the same affiliation. 
+ Involved in an alleged incident of harassment. (It is not required that the incident be reported.) 
+ PC member owes author a favor (e.g., recently requested a reference letter). 
+ Frequent or recent collaborator (within last 5 years) who you believe cannot objectively review your work. 
+ PC Submissions 
+ Submissions authored or co-authored by members of the program committee are allowed, but will be subject to a stricter review process. 
+ Paper Submission and Proceedings 
+ Papers should be submitted electronically viahref="https://easychair.org/conferences/?conf=waoa2024" - the EasyChair submission system
+. Thehref="https://link.springer.com/conference/waoa" - WAOA 2024 proceedings
+will be published by Springer in theLecture Notes in Computer Science (LNCS). Selected papers presented at WAOA 2024 will be invited to a special issue ofTheory of Computing Systems. 
+ Imprint 
+ Copyright © 2023 ALGO2024
+
+2. Website of WAOA_3: https://algo-conference.org/2023/waoa/
+Website information of WAOA_3:
+
+Skip to contentALGO 2023 
+ HomeHome 
+ ALGOCLOUD 
+ ALGOWIN | (former ALGOSENSORS) 
+ ATMOS 
+ IPEC 
+ ESA 
+ href="https://algo-conference.org/2023/waoa/" - WAOA 
+ Local Info 
+ Registration 
+ Schedule 
+ Social Program 
+ WAOA 
+ 2023 
+ Scope 
+ Approximation and online algorithms are fundamental tools to deal with computationally hard problems and problems in which the input is gradually disclosed over time. Both kinds of problems arise from a large number of applications in a variety of fields. TheWorkshop on Approximation and Online Algorithms (WAOA)focuses on the design and analysis of approximation and online algorithms. It also covers experimental methods used to design and analyze efficient approximation and online algorithms. It is co-located withALGO 2023, which also hostsESA,ALGOCLOUD,ALGOWIN,ATMOSandIPEC.ALGO 2023will take place in the beautiful city of Amsterdam in the Netherlands. 
+ Important dates 
+ Paper Submission: June 29, 2023 (AOE) 
+ Notification of acceptance: July 31, 2023 
+ Camera-ready: August 31, 2023 
+ Conference dates: September 7-8, 2023 
+ Call for papers 
+ Papers are solicited in all research areas related to approximation and online algorithms, including, but not limited to: 
+ Algorithmic game theory 
+ Algorithmic trading 
+ Coloring and partitioning 
+ Competitive analysis 
+ Computational advertising 
+ Computational finance 
+ Cuts and connectivity 
+ FPT-approximation algorithms 
+ Geometric problems 
+ Graph algorithms 
+ Inapproximability results 
+ Mechanism design 
+ Network design 
+ Packing and covering 
+ Paradigms for the design and analysis of approximation and online algorithms 
+ Resource augmentation 
+ Scheduling problems 
+ Submission guidelines 
+ Authors are invited to submit an extended abstract or full paper of at most 10 pages excluding the title page, references, and an optional appendix. The submission should be typeset using a 10-point or larger font in a single-column format with ample spacing throughout and 2cm margins all around on A4-size paper. Proofs omitted due to space constraints must be placed in an appendix. This appendix can even comprise an entire full version of the paper. The appendix will be read by the program committee members at their discretion. In particular, appendices of accepted papers are not going to be published in the proceedings. The main part of the submission should therefore contain a clear technical presentation of the merits of the paper, including a discussion of the paper’s importance within the context of prior work and a description of the key technical and conceptual ideas used to achieve its main claims. 
+ The conference employs a lightweight double-blind reviewing process. Submissions should not reveal the identity of the authors in any way. In particular, authors’ names, affiliations, and email addresses should not appear at the beginning or in the body of the submission. Authors should ensure that any references to their own related work is in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”). Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult. In particular, references should not be omitted or anonymized. 
+ Papers should be submitted electronically via the EasyChair submission system:href="https://easychair.org/conferences/?conf=waoa2023" - https://easychair.org/conferences/?conf=waoa2023
+ 
+ By submitting a paper the authors acknowledge that in case of acceptance at least one of the authors must register at ALGO 2023, attend the conference onsite and present the paper. 
+ The program committee may award a Best Paper Award to one of the accepted papers. 
+ Invited speaker 
+ Nicole Megow, University of Bremen 
+ Accepted papers 
+ Bodo Manthey | and Jesse van Rhijn. | Approximation Ineffectiveness of a Tour-Untangling Heuristic 
+ William Evans and | David Kirkpatrick | . | A Frequency-Competitive Query Strategy for Maintaining Low Collision Potential Among Moving Entities 
+ Tobias Mömke | , | Alexandru Popa | , Aida Roshany Tabrizi, Michael Ruderer and Roland Vincze. | Approximating Maximum Edge 2-Coloring by Normalizing Graphs 
+ Allan Borodin | and Christodoulos Karavasilis. | Any-Order Online Interval Selection 
+ Eric Balkanski | , Tingting Ou, | Clifford Stein | and Hao-Ting Wei. | Scheduling with Speed Predictions 
+ Gunther Bidlingmaier | . | Greedy Minimum-Energy Scheduling 
+ Thomas Bosman, Martijn van Ee, Ekin Ergen, Csanad Imreh, Alberto Marchetti-Spaccamela, Martin Skutella and Leen Stougie. | Total completion time scheduling under scenarios 
+ Sander Aarts and | David Shmoys | . | Hitting Sets when the Shallow Cell Complexity is Small 
+ Michael Dinitz | , Ama Koranteng, | Guy Kortsarz | and | Zeev Nutov | . | Improved Approximations for Relative Survivable Network Design 
+ Lukas Drexler, Annika Hennes, | Abhiruk Lahiri | , | Melanie Schmidt | and Julian Wargalla. | Approximating Fair k-Min-Sum-Radii in R^d 
+ Mateusz Basiak, | Marcin Bienkowski | and Agnieszka Tatarczuk. | An Improved Deterministic Algorithm for the Online Min-Sum Set Cover Problem 
+ Philip Cervenjak, | Junhao Gan | and | Anthony Wirth | . | Fast Parallel Algorithms for Submodular p-Superseparable Maximization 
+ Vítor G. Chagas, Elisa Dell’Arriva and | Flavio K. Miyazawa | . | Approximation Schemes under Resource Augmentation for Knapsack and Packing Problems of Hyperspheres and Other Shapes 
+ Parinya Chalermsook, Ameet Gadekar, Kamyar Khodamoradi and Joachim Spoerhase. | Independent set in $k$-Claw-Free Graphs: Conditional $\chi$-boundedness and the Power of LP/SDP Relaxations 
+ Alison Hsiang-Hsuan Liu | , Fu-Hong Liu, Prudence W.H. Wong and Xiao-Ou Zhang. | The Power of Amortization on Scheduling with Explorable Uncertainty 
+ Mathieu Mari, Nima Khodaveisi and Shanli Alefkhani. | Online hitting set of d-dimensional fat objects 
+ Committees 
+ Program committee 
+ Marek Adamczyk (University of Wrocław) 
+ Karl Bringmann (Saarland University) 
+ Jarosław Byrka (University of Wrocław, co-chair) 
+ Sami Davies (Northwestern University) 
+ Guy Even (Tel-Aviv University) 
+ Andreas Emil Feldmann (University of Sheffield) 
+ Zachary Friggstad (University of Alberta) 
+ Arindam Khan (Indian Institute of Science, Bangalore) 
+ Kamyar Khodamoradi (University of British Columbia) 
+ Max Klimm (Technische Universität Berlin) 
+ Alexandra Lassota (EPFL) 
+ Ben Moseley (Carnegie Mellon University) 
+ Tim Oosterwijk (Vrije Universiteit Amsterdam) 
+ Kirk Pruhs (University of Pittsburgh) 
+ Erik Jan van Leeuwen (Utrecht University) 
+ Laura Vargas Koch (ETH Zürich) 
+ Andreas Wiese (Technical University of Munich, co-chair) 
+ Steering committee 
+ Evripidis Bampis, Sorbonne Université, Paris, France 
+ Thomas Erlebach, Durham University, UK 
+ Christos Kaklamanis, University of Patras, Greece 
+ Nicole Megow, Universität Bremen, Germany 
+ Laura Sanita, Eindhoven University of Technology, The Netherlands 
+ Martin Skutella, Technische Universität Berlin, Germany 
+ Roberto Solis-Oba, University of Western Ontario, USA 
+ Proceedings 
+ Proceedings will be published in the Springer series Lecture Notes in Computer Science after the workshop takes place. 
+ ALGO 2023 
+ Imprint 
+ Privacy Policy 
+ Powered byWordPress
+
+3. Website of WAOA_3: https://algo-conference.org/2025/
+Website information of WAOA_3:
+
+href="https://algo-conference.org/2025" - ALGO2025
+href="http://algo-conference.org/2025" - HomeHome 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 
+ href="https://algo-conference.org/2025/esa/" - ESA 
+ href="https://algo-conference.org/2025/local-info/" - Local Info 
+ September 15-19, 2025, Warsaw, Poland 
+ General information 
+ ALGO is an annual meeting combining the premier algorithmic conferencehref="https://algo-conference.org/2025/esa/" - European Symposium on Algorithms (ESA)
+and a number of other specialized conferences and workshops, all related to algorithms and their applications, making ALGO the major European event for researchers, students and practitioners in algorithms. 
+ ALGO 2025 will be held at theFaculty of Physics at the University of Warsawin Warsaw, Poland. 
+ This website is still in preparation. More information as well as the subpages of the conferences will become available at a later date. 
+ Program at a Glance: 
+ href="https://algo-conference.org/2025/schedule/#monday" - Monday15 Sep
+href="https://algo-conference.org/2025/schedule/#tuesday" - Tuesday16 Sep
+href="https://algo-conference.org/2025/schedule/#wednesday" - Wednesday17 Sep
+href="https://algo-conference.org/2025/schedule/#thursday" - Thursday18 Sep
+href="https://algo-conference.org/2025/schedule/#friday" - Friday19 Sep
+href="https://algo-conference.org/2025/esa/" - ESA
+href="https://algo-conference.org/2025/algowin" - ALGOWIN
+href="https://algo-conference.org/2025/algocloud" - ALGOCLOUD
+href="https://algo-conference.org/2025/ipec" - IPEC
+Reception 
+ Dinner 
+ href="https://algo-conference.org/2025/atmos" - ATMOS
+href="https://algo-conference.org/2025/waoa" - WAOA
+Co-Located Events: 
+ href="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD 2025 | : | International Symposium on Algorithmic Aspects of Cloud Computing | . Chairs: | Dimitris Chatzopoulos | , | Domenic Garlisi 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 2025 | : | International Symposium on Algorithmics of Wireless Networks | . Chairs: | Othon Michail | , | Giuseppe Prencipe 
+ href="https://algo-conference.org/2025/atmos/" - ATMOS 2025 | : | International Symposium on Algorithmic Approaches for Transportation Modelling, Optimization, and Systems | . | Marie Schmidt | , | Jonas Sauer 
+ href="https://algo-conference.org/2025/esa/" - ESA 2025 | : | European Symposium on Algorithms | . Chairs: | Anne Benoit | , | Haim Kaplan | , | Sebastian Wild 
+ href="https://algo-conference.org/2025/ipec/" - IPEC 2025 | : | International Symposium on Parameterized and Exact Computation | . Chairs: | Akanksha Agrawal | , | Erik Jan van Leeuwen 
+ href="https://algo-conference.org/2025/waoa/" - WAOA 2025 | : | Workshop on Approximation and Online Algorithms | . Chair: | Jose Verschae | , | Jannik Matuschke 
+ History: 
+ The webpages of previous editions of ALGO conference: 
+ ALGO 2024: Egham, United Kingdom, September 2-6, 2024 
+ ALGO 2023: Amsterdam, the Netherlands, September 4-8, 2023 
+ ALGO 2022: Potsdam, Germany (hybrid), September 5-9, 2022 
+ ALGO 2021: Lisboa, Portugal (online), September 6-10, 2021 
+ ALGO 2020: Pisa, Italy (online), September 7-10, 2020 
+ ALGO 2019: Munich, Germany, September 9-13, 2019 
+ ALGO 2018: Helsinki, Finland, August 20-24 2018 
+ ALGO 2017: Vienna, Austria, September 4-8, 2017 
+ ALGO 2016: Aarhus, Denmark, August 22-26, 2016 
+ ALGO 2015: Patras, Greece, September 14-18, 2015 
+ ALGO 2014: Wrocław, Poland, September 8-12, 2014 
+ ALGO 2013: Sophia Antipolis, France, September 02-06, 2013 
+ ALGO 2012: Ljubljana, Slovenia, September 9-14, 2012 
+ ALGO 2011: Saarbrücken, Germany September 5-7, 2011 
+ ALGO 2010: Liverpool, United Kingdom, September 6-10, 2010 
+ ALGO 2009: Copenhagen, Denmark, September 7-11, 2009 
+ ALGO 2008: Karlsruhe, Germany, September 15-19, 2008 
+ ALGO 2007: Eilat, Israel, October 8-12, 2007 
+ ALGO 2006: Zürich, Switzerland, September 11-15, 2006 
+ ALGO 2005: Palma de Mallorca, October 3-7, 2005 
+ ALGO 2004: Bergen, Norway, September 14-21, 2004 
+ ALGO 2003: Budapest, Hungary, September 15-20, 2003 
+ ALGO 2002: Rome, Italy, September 17-21, 2002 
+ ALGO 2001: Århus, Denmark, August 28-31, 2001 
+ href="https://algo-conference.org/2025" - ALGO2025
+Imprint 
+ href="https://algo-conference.org/2025/privacy-policy/" - Privacy Policy
+Powered byWordPress
+
+4. Website of WAOA_3: https://cispa.de/en/people/c01tiha
+Website information of WAOA_3:
+
+Send emailCopy Email Address⬤EN(current) 
+ DE 
+ Back to previous menu levelMenuHome 
+ Research | href="/en/research" - Overview 
+ href="/en/research/algorithmic-foundations-and-cryptography" - Algorithmic Foundations and Cryptography 
+ href="/en/research/trustworthy-information-processing" - Trustworthy Information Processing 
+ href="/en/research/reliable-security-guarantees" - Reliable Security Guarantees 
+ href="/en/research/threat-detection-and-defenses" - Threat Detection and Defenses 
+ href="/en/research/secure-connected-and-mobile-systems" - Secure Connected and Mobile Systems 
+ href="/en/research/empiricial-and-behavioral-security" - Empirical and Behavioral Security 
+ href="/en/research/publications" - Publications 
+ href="/en/research/funded-projects-and-collaborations" - Funded Projects & Collaborations 
+ href="/en/research/awards" - Awards 
+ About CISPA | Overview 
+ Organization 
+ Director's Page 
+ Procurement 
+ invoicing-e-invoice 
+ People 
+ Career | Overview 
+ FAQ 
+ Job Openings 
+ Excellence Program 
+ News & Events | Overview 
+ Podcast 
+ CISPA DLS 
+ zine 
+ Videos 
+ Glossary 
+ Media Relations 
+ Display 
+ href="/en/no-coffee-no-research" - No Coffee, No Research 
+ Technology Transfer | Overview 
+ Startups & Entrepreneurship 
+ Product Labs 
+ Contact 
+ Knowledge Transfer | Overview 
+ Cysec Lab 
+ Cysec Lab News 
+ Citizen Science 
+ Contact 
+ Home 
+ People 
+ Tim Hartmann 
+ Postdoc 
+ Tim Hartmann 
+ ProfilePublicationsEmail 
+ Address 
+ Kaiserstraße 21 
+ 66386 St. Ingbert (Germany) 
+ Member of Groups 
+ href="/en/research/groups/marx" - Marx 
+ Further Information 
+ Tim Hartmann on profiles.cispa 
+ Publicationsby Tim Hartmann 
+ Year 2025 
+ 2025-02-24 
+ href="/en/research/publications/84589-independence-and-domination-on-bounded-treewidth-graphs-integer-rational-and-irrational-distances" - Independence and Domination on Bounded-Treewidth Graphs: Integer, Rational, and Irrational Distances
+Conference / Medium 
+ 42nd International Symposium on Theoretical Aspects of Computer Science (STACS 2025) 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Tim Hartmann 
+ Dániel Marx 
+ href="http://doi.org/10.4230/LIPIcs.STACS.2025.44" - Full Paper
+href="/en/research/publications/84589-independence-and-domination-on-bounded-treewidth-graphs-integer-rational-and-irrational-distances" - Visit Detail Page
+Year 2024 
+ 2024-10-09 
+ href="/en/research/publications/84222-approximating-d-covering" - Approximating δ-Covering
+Conference / Medium 
+ Workshop on Approximation and Online Algorithms (WAOA) 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Tim Hartmann 
+ Tom Janßen 
+ Full Paperhref="/en/research/publications/84222-approximating-d-covering" - Visit Detail Page
+2024-10-09 
+ href="/en/research/publications/84223-from-chinese-postman-to-salesman-and-beyond-shortest-tour-d-covering-all-points-on-all-edges" - From Chinese Postman to Salesman and Beyond: Shortest Tour δ-Covering All Points on All Edges
+Conference / Medium 
+ International Symposium on Algorithms and Computation (ISAAC) 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Fabian Frei 
+ Ahmed Ghazy 
+ Tim Hartmann 
+ Florian Hörsch 
+ Dániel Marx 
+ Full Paperhref="/en/research/publications/84223-from-chinese-postman-to-salesman-and-beyond-shortest-tour-d-covering-all-points-on-all-edges" - Visit Detail Page
+2024-06-03 
+ href="/en/research/publications/84219-make-a-graph-singly-connected-by-edge-orientations" - Make a Graph Singly Connected by Edge Orientations
+Conference / Medium 
+ International Workshop on Combinatorial Algorithm (IWOCA) 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Tim Hartmann 
+ Komal Muluk 
+ Full Paperhref="/en/research/publications/84219-make-a-graph-singly-connected-by-edge-orientations" - Visit Detail Page
+2024-04-06 
+ href="/en/research/publications/79075-conflict-free-coloring-graphs-of-bounded-clique-width-and-intersection-graphs" - Conflict-Free Coloring: Graphs of Bounded Clique-Width and Intersection Graphs
+Article 
+ Algorithmica: an international journal in computer science 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Sriram Bhyravarapu 
+ Tim Hartmann 
+ Hung P Hoang 
+ Subrahmanyam Kalyanasundaram 
+ I Vinod Reddy 
+ Full Paperhref="/en/research/publications/79075-conflict-free-coloring-graphs-of-bounded-clique-width-and-intersection-graphs" - Visit Detail Page
+Year 2023 
+ 2023-08-21 
+ href="/en/research/publications/84221-recognizing-h-graphs---beyond-circular-arc-graphs" - Recognizing H-Graphs - Beyond Circular-Arc Graphs
+Conference / Medium 
+ MFCS International Symposium on Mathematical Foundations of Computer Science (MFCS) 
+ Tags 
+ Algorithmic Foundations and CryptographyAuthors 
+ Deniz Ağaoğlu Çağırıcı 
+ Onur Çağırıcı 
+ Jan Derbisz 
+ Tim Hartmann 
+ Petr Hliněný 
+ Jan Kratochvíl 
+ Tomasz Krawczyk 
+ Peter Zeman 
+ Full Paperhref="/en/research/publications/84221-recognizing-h-graphs---beyond-circular-arc-graphs" - Visit Detail Page
+href="/en/research" - Research 
+ About us 
+ Career 
+ News & Events 
+ The CISPA Helmholtz Center for Information Security is a national Big Science institution within the Helmholtz Association. It explores information security in all its facets in order to comprehensively and holistically address the pressing major challenges of cybersecurity and trustworthy artificial intelligence that our society faces in the digital age. CISPA holds a global leadership position in the field of cybersecurity, combining cutting-edge and often disruptive foundational research with innovative applied research, technology transfer, and societal discourse. Thematically, it aims to cover the entire spectrum from theory to empirical research. It is internationally recognized as a training ground for the next generation of cybersecurity experts and scientific leaders in the field. 
+ CISPA Helmholtz Center for Information Security 
+ Stuhlsatzenhaus 5 
+ 66123 Saarbrücken 
+ +49 681 / 87083 1001 
+ +49 681 / 87083 8801 
+ Imprint 
+ Data Privacy Policy 
+ Media Relations 
+ Sitemap 
+ Copyright CISPA 2025
+

@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "December 12 - 14, 2023",
+  "Year": "2023",
+  "Location": "Moore Auditorium, Royal Holloway, Egham Hill, Egham, London, UK",
+  "City-State-Province": "London",
+  "Country": "UK",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "July 12, 2023",
+    "Poster Abstract Deadline": "November 3, 2023"
+  },
+  "Notification Date": {
+    "Author Notification": "September 6, 2023",
+    "Notification of acceptance": "November 10, 2023"
+  },
+  "Camera-ready Date": {
+    "Proceedings Version Deadline": "September 25, 2023"
+  },
+  "Registration Date": {
+    "Registration Deadline": "December 7, 2023"
+  },
+  "Topics": "Cryptography, Coding Theory",
+  "Summary": "The 19th IMA International Conference on Cryptography and Coding will be held at Royal Holloway, University of London from December 12-14, 2023. This conference solicits original research papers on all technical aspects of cryptography and coding.",
+  "Call for Papers": "# 19th IMA International Conference on Cryptography and Coding: Call for Papers\n\nThe 19th IMA International Conference on Cryptography and Coding will be held at **Royal Holloway, University of London, from December 12-14, 2023**.\n\nThis conference solicits original research papers on all technical aspects of cryptography and coding.\n\n## Topics of Interest\n\nSubmissions are welcome on any cryptographic or coding-theoretic topic, including, but not limited to:\n\n*   Foundational theory and mathematics\n*   The design, proposal, and analysis of cryptographic or coding primitives and protocols\n*   Secure implementation and optimization in hardware or software\n*   Applied aspects of cryptography and coding\n\n## Invited Speakers\n\n*   **Carla Ràfols (Pompeu Fabra University):** Amortization in zkSNARKs\n*   **Dario Fiore (IMDEA Software Institute):** Succinct and Functional Vector Commitments\n\n## Accepted Papers\n\n*   An Upper-Bound on the Decoding Failure Probability of the LRPC Decoder, Étienne Burle and Ayoub Otmani\n*   Coset leaders of the first order Reed-Muller codes in the classes of Niho functions and Threshold functions, Serge Christian Feukoua Jonzo\n*   Revisiting Nearest-Neighbor-Based Information Set Decoding, Andre Esser\n*   Feistel Ciphers Based on A Single Primitive, Kento Tsuji and Tetsu Iwata\n*   Rectangle Attacks on Reduced Versions of the FBC Block Cipher, Wenchang Zhou and Jiqiang Lu\n*   zk-SNARKs from Codes with Rank Metrics, Xuan-Thanh Do, Dang-Truong Mac and Quoc-Huy Vu\n*   Zero-Knowledge Systems from MPC-in-the-Head and Oblivious Transfer, Cyprien Delpech de Saint Guilhem, Ehsan Ebrahimi and Barry van Leeuwen\n*   ZK-for-Z2K: MPC-in-the-Head Zero-Knowledge Proofs for Z2k, Lennart Braun, Cyprien Delpech de Saint Guilhem, Robin Jadoul, Emmanuela Orsini, Nigel P. Smart and Titouan Tanguy\n*   Efficient Secure Two Party ECDSA, Sermin Kocaman and Younes Talibi Alaou\n*   Selective Delegation of Attributes in Mercurial Signature Credentials, Colin Putman and Keith M. Martin\n*   Middle-Products of Skew Polynomials and Learning with Errors, Andrew Mendelsohn and Cong Ling\n*   Identity-Based Threshold Signatures from Isogenies, Shahla Atapoor\n*   Dynamic Security Aspects of Onion Routing, Alessandro Melloni, Martijn Stam and Øyvind Ytrehus\n*   Practical and Efficient FHE-based MPC, Nigel P. Smart\n\n[https://link.springer.com/book/10.1007/978-3-031-47818-5](https://link.springer.com/book/10.1007/978-3-031-47818-5)\n\n## Call for Posters\n\nCome and present your latest original ideas and results on any cryptographic or coding-theoretic topic with a poster at IMACC23!\n\n*   Submit an abstract (max 300 words) by 12 noon on November 3, 2023.\n*   Notification of acceptance will be on November 10, 2023.\n\n## Important Dates\n\n*   Submission Deadline: July 12, 2023 – CLOSED\n*   Author Notification: September 6, 2023\n*   Proceedings Version Deadline: September 25, 2023\n*   Poster Abstract Deadline: November 3, 2023\n*   Registration Deadline: December 7, 2023\n*   Conference: December 12-14, 2023\n\n## Organising Committee\n\n*   Elizabeth A. Quaglia, RHUL (Chair)\n*   Angelo De Caro, IBM\n*   Maura Paterson, Birkbeck\n*   Chris Mitchell, RHUL\n\n## Programme Committee\n\n*   Olivier Blazy, École polytechnique\n*   Xavier Bultel, INSA CVL\n*   Liqun Chen, University of Surrey\n*   Elizabeth Crites, University of Edinburgh\n*   Alex Davidson, Universidade Nova de Lisboa\n*   Gareth Davies, NXP\n*   Angelo De Caro, IBM\n*   Jean Paul Degabriele, TII\n*   Itai Dinur, Ben-Gurion University\n*   Benjamin Dowling, University of Sheffield\n*   Ashley Fraser, University of Surrey\n*   Lydia Garms, Keyless Technologies Limited\n*   Aurore Guillevic, INRIA\n*   Christian Janson, TU Darmstadt\n*   Siaw-Lynn Ng, Royal Holloway, University of London\n*   Martha Norberg Hovd, Simula UiB\n*   Maura Paterson, Birkbeck\n*   Thomas Preston, PQShield Ltd.\n*   Elizabeth A. Quaglia, Royal Holloway, University of London (chair)\n*   Benjamin Smith, Inria and École polytechnique\n*   Gaven J. Watson, Meta"
+}
+

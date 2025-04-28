@@ -1,0 +1,358 @@
+Conference DX:
+
+href="https://conf.researchr.org/home/dx-2025" - DX 2025
+Mon 22 - Wed 24 September 2025href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Nashville, Tennessee, United States
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Venue: Scarritt Bennett Center 
+ href="https://conf.researchr.org/home/dx-2025" - Track/Call 
+ Organization | DX 2025 Committees 
+ Track Committees 
+ Organizing Committee 
+ Program Committee (In Construction) 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/dx-2025" - People Index 
+ href="https://conf.researchr.org/search/dx-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/dx" - Series 
+ DX 2025 
+ href="https://conf.researchr.org/home/dx-2024" - DX 2024 
+ href="https://conf.researchr.org/signin/dx-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esdx-2025" - Sign in 
+ href="https://conf.researchr.org/signup/dx-2025" - Sign up 
+ DX 2025 (href="https://conf.researchr.org/series/dx" - series
+) /The 36th International Conference on Principles of Diagnosis and Resilient Systems (DX'25)DX 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Competition 
+ We are proud to announce that in 2025, the 36th International Conference on Principles of Diagnosis and Resilient Systems (DX’25) will take place in Nashville, TN. 
+ Until 2023, the focus of the DX workshop series has been on the principles and applications of diagnosis, i.e., identifying root causes for encountered issues and unexpected scenarios, as well as on related techniques, such as prognostics, planning, and control. Moving forward as a conference, we expanded our focus on diagnosis in 2024 to include particularly interesting topics related to resilience, which is the intrinsic ability of a system to sustain its required operations when impacted by expected and unexpected contingencies that were potentially not considered during the system design. We are interested in papers covering resilient design, operational resilience, and related approaches spanning monitoring, anomaly detection, diagnosis, control, planning, and verification of systems. 
+ The annual DX conference is a forum to present state-of-the-art research and experience reports, exchange and discuss emerging ideas, debate current issues, and envision future challenges. Relevant research areas include topics that relate to diagnosis, resilient design, and operational resilience, including but not limited to: 
+ Anomaly and fault detection, 
+ Fault and root cause isolation, 
+ Prognosis, 
+ Fault-tolerant, fault-adaptive, and resilient control, 
+ Reconfiguration, planning, and intelligent decision-making, 
+ Verification and debugging at design and run-time, 
+ Explanation, validation, and certification. 
+ We welcome evidence-driven position papers, theory papers, experience reports, and papers that span across multiple research and application domains that, in the context, cover digital, logical, analog, mechanical, cyber-physical, biological, ecological, ethical, economical, and social systems and processes. In the 2025 DX edition, we are particularly interested in model-driven and data-driven approaches (including deep learning and LLM-based algorithms) and submissions that combine and/or compare model- and data-driven approaches. 
+ DX Competition (DXC’25).In addition to our regular paper tracks, the DX’25 organization committee is proud to announce that there will be a DXC’25 competition [2]. The DXC’25 will feature challenges related to solving diagnosis problems in three application domains, where the participants may choose to tackle the challenges of one, two, or all three domains: 
+ a combustion engine, 
+ a steam line system, and 
+ a liquid propulsion rocket engine. 
+ Doctoral Consortium.All PhD students working on relevant topics are encouraged to submit a description of their research to be considered for a special session focusing on mentoring their PhD research. This is an opportunity for Ph.D. students to present their research to a knowledgeable audience and receive feedback from friendly experts on their research topics. This session will be organized as a panel or poster session depending on the number of submissions. Accepted entries will be included in our archival proceedings in a dedicated section. 
+ For more information about submitting papers to DX, we refer the interested reader tohref="https://conf.researchr.org/home/dx-2025#Call-for-Papers" - the Call for Papers
+. A more detailed summary of relevant topics can be found in the following list of topics that have been addressed at previous DX editions. 
+ Formal theories and computation methods for diagnosis and resilient systems, including monitoring, fault detection and isolation, testing, decision making, repair and therapy, (re-)planning, (re-)configuration, fault tolerance, diagnosability analysis, and system design. 
+ Models for diagnosis and resilient systems, including discrete, discrete-event, qualitative, continuous, hybrid, probabilistic, behavioral, and functional models, as well as models resulting from approximation, abstraction, refinement, and reformulation approaches. Modeling approaches that scale to large systems are of specific interest. 
+ Anomaly detection and Diagnosis algorithms and processes, including strategies for measurement selection, active diagnosis/testing, sensor placement, embedded diagnosis, preventive diagnosis, fault adaptive control, distributed diagnosis, as well as human interaction with the diagnosis engine and other usability issues. 
+ Technology supporting the design and operation of resilient systems, including strategies for making decisions, mission (re-)planning, system (re-)configuration, repair processes, active and passive knowledge acquisition, aggregating diagnostic information over time and space, exploiting diagnosis results over a system's entire lifetime (from development to decommissioning), exploiting diagnostic information for system design evolution, as well as the local and global exploitation of diagnosis results (local in time, space or a system-of-systems context) 
+ Solutions to and formulations of computational issues faced during diagnosis and in resilient systems, e.g., addressing combinatorial (and state) explosion, the exploitation of structural and hierarchical knowledge, focusing strategies and heuristics, resource-bounded reasoning, requirements and restrictions related to real-time environments, and pre-compilation/pre-processing techniques. 
+ Learning-based systems to support monitoring, fault diagnosis, resilient design, and operational resilience. Connections and interplay between data-driven and/or analytic AI-based diagnosis methods and methods from related areas or tasks like FDI, control theory, statistics, machine and deep learning, knowledge representation, concept extraction, planning, optimization, autonomous systems, safety, verification, software engineering, debugging, as well as hardware instrumentation and testing. 
+ (Real-world) applications of diagnosis and system resilience, including scenarios in space, transportation, aeronautics, robotics, manufacturing, process engineering, energy, networks and services, ethics, economy, biotechnology, medical domains, and social/societal contexts. Case studies concerning a successful or failed technology transfer to a specific application. 
+ Call for Papers 
+ We are proud to announce that in 2025, the 36th International Conference on Principles of Diagnosis and Resilient Systems (DX’25) will take place in Nashville, TN from September 22nd to 24th. 
+ Until 2023, the focus of the DX workshop series has been on the principles and applications of diagnosis, i.e., identifying root causes for encountered issues and unexpected scenarios, as well as on related techniques, such as prognostics, planning, and control. Moving forward as a conference, we expanded our focus on diagnosis in 2024 to include particularly interesting topics related to resilience, which is the intrinsic ability of a system to sustain its required operations when impacted by expected and unexpected contingencies that were potentially not considered during the system design. We are interested in papers covering resilient design, operational resilience, and related approaches spanning monitoring, anomaly detection, diagnosis, control, planning, and verification of systems. 
+ The annual DX conference is a forum to present state-of-the-art research and experience reports, exchange and discuss emerging ideas, debate current issues, and envision future challenges. Relevant research areas include topics that relate to diagnosis, resilient design, and operational resilience, including but not limited to: 
+ Anomaly and fault detection, 
+ Fault and root cause isolation, 
+ Prognosis, 
+ Fault-tolerant, fault-adaptive, and resilient control, 
+ Reconfiguration, planning, and intelligent decision-making, 
+ Verification and debugging at design and run-time, 
+ Explanation, validation, and certification. 
+ We welcome evidence-driven position papers, theory papers, experience reports, and papers that span across multiple research and application domains that, in the context, cover digital, logical, analog, mechanical, cyber-physical, biological, ecological, ethical, economical, and social systems and processes. In the 2025 DX edition, we are particularly interested in model-driven and data-driven approaches (including deep learning and LLM-based algorithms) and submissions that combine and/or compare model- and data-driven approaches. 
+ DX Competition (DXC’25).In addition to our regular paper tracks, the DX’25 organization committee is proud to announce that there will be ahref="https://conf.researchr.org/home/dx-2025#Competition" - DXC’25 competition
+. The DXC’25 will feature challenges related to solving diagnosis problems in three application domains, where the participants may choose to tackle the challenges of one, two, or all three domains: 
+ a combustion engine, 
+ a steam line system, and 
+ a liquid propulsion rocket engine. 
+ Doctoral Consortium.All PhD students working on relevant topics are encouraged to submit a description of their research to be considered for a special session focusing on mentoring their PhD research. This is an opportunity for Ph.D. students to present their research to a knowledgeable audience and receive feedback from friendly experts on their research topics. This session will be organized as a panel or poster session depending on the number of submissions. Accepted entries will be included in our archival proceedings in a dedicated section. 
+ Encore Papers.For recent publications in journals and major conferences (e.g., AAAI, IJCAI, ECAI, ISSRE, ICSE, and KR) relevant to DX (see list of topics above), we welcome the submission of extended abstracts related to the publication, which must also include a discussion of the connection to DX topics. 
+ Resubmissions.Papers from venues without archival proceedings (e.g., workshops, ArXiv, etc.) may be resubmitted to DX, but in addition to the requirements for the respective track (full/short/…), there are requirements specific to resubmissions that have to be adhered to. 
+ Paper Length and Submissions.Full papers are limited to 20 pages (including references and appendices) in the Dagstuhl Open Access Series in Informatics format, as referenced on the conference website. Short papers must be no longer than 14 pages. Doctoral Consortium submissions must be no longer than 16 pages. Papers describing DXC’25 challenge solutions may be submitted as long or short papers (14-20 pages). Extended abstracts corresponding to Encore Papers must be no longer than 6 pages. Industry-related submissions that do not fall into any other category are limited to 12 pages. 
+ All papers must be submitted electronically via EasyChair as PDF files and must adhere to the submission guidelines as advertised on this conference website. The submissions will be peer-reviewed, and accepted papers will be scheduled for oral or poster presentations. While the authors are encouraged to state their preference in the presentation format at submission time, the decision is at the discretion of the conference chairs. 
+ By submitting a paper, all authors agree that for each accepted paper, at least one of the authors will register for the conference and attend in person (attending the conference virtually is not acceptable). PhD candidates must attend the conference and present their accepted Doctoral Consortium entries. Please note that a registration accounts for one accepted paper only. Exceptions require the organizers’ consent, and for up to one additional paper, an additional fee will be applied to cover publication costs. Please note that the registration fees are not refundable. 
+ The program committee reserves the right to reject without review submissions that exceed the page limits, violate the specified submission guidelines on the conference website, or are submitted in formats other than PDF. All submissions must be made through the conference EasyChair site. 
+ Competition 
+ After a long hiatus the DX’25 organization committee is proud to announce that there will be a DX competition, where the contestants can enter their solutions for addressing diagnosis problems in three benchmarks. The evaluations will be provided before the DX paper submission deadline, so that the contestants can incorporate their results into corresponding papers (please see the submission page for more details such as the page limit). Each participant may tackle one, two, or all three benchmarks: 
+ The | LiU-ICE | benchmark covers some challenging problems of fault diagnosis of technical systems. The case study is an | internal combustion engine | , and the goal is to develop a diagnosis system that can diagnose under realistic operating conditions. A structural model of the system and operational data are provided where the data include both nominal and faulty operation. The challenges in the LiU-ICE benchmark include incomplete training data and limited model information. 
+ SLIDe (Steam Line Intrusion Detection) | benchmark is devoted to evaluating diagnostic algorithms performing the tasks of detection and isolation of process faults and detection of cybernetic attacks in the third and fourth stages of superheaters of the fluidized bed boiler steam line. It includes challenging scenarios of sensor, actuator and technological component faults and examples of cybernetic attacks. To reflect the industrial nature of the benchmark, the participants will only have access to a qualitative description of the process and several archival datasets representing different operating conditions, but only for fault-free and attack-free states. 
+ LUMEN (Liquid Upper stage demonstrator Engine) | is a modular pump-fed liquid oxygen (LOX) and liquid methane (LNG) rocket engine developed by the Institute of Space Propulsion of the German Aerospace Center (DLR). This benchmark focuses on the fuel turbopump subsystem of the rocket engine and addresses key challenges encountered in safety-critical systems, such as the lack of experimental data from faulty operation. The goal of this benchmark is to utilize information from a simulation model with uncertain parameters and limited experimental data from nominal operation to enable the diagnosis system to perform effectively under realistic operating conditions. 
+ For more information about the benchmark, we refer the interested reader to thehref="https://vehsys.gitlab-pages.liu.se/dx25benchmarks/" - DXC’25 repository
+, where we offer detailed information about the challenges and also about how to enter the competition. Please note that thesubmission deadlinewill beApril 21st (extended), and we aim to hold office hours where contestants may ask questions about the tracks periodically. Please do not hesitate to contact any of the individual benchmark chairs or the co-chairs for the competition to discuss questions that you might have about the competition.Feedbackwill be provided aroundMay 1st, so that it can be integrated into yourcomplementing paper submissionto the DX conference (deadline May 8th). We would appreciate if you would reach out to us by April 1st about your interest in participating in the competition. 
+ As extra motivation for your participation, we would like to let you know that we’re in contact with theAIJassociate editor Meir Kalech who is responsible for special issues dedicated to AI competitions. Depending on the submissions, the DXC competition might become part of such aspecial issue, so that we would invite contestants for extended versions of their DX competition papers. 
+ The DXC’25 organization team (in a.o.): 
+ Johan de Kleer (co-chair), Jan Deeken, Kai Dresia, Erik Frisk, Daniel Jung (chair LiU-ICE), Mattias Krysander, Eldin Kurudzija (chair Lumen), Ingo Pill (co-chair), Michal Syfert, Anna Sztyber-Betley (chair SLIDe), Tobias Traudt, Günther Waxenegger-Wilfling 
+ Important DatesAoE (UTC-12h) 
+  
+ Tue 8 Apr 2025 
+ Submission open 
+ Mon 21 Apr 2025 
+ DX competition submission deadline (extended) 
+ Thu 8 May 2025 
+ Submissions Deadline 
+ Tue 10 Jun 2025 
+ Acceptance notification 
+ Tue 1 Jul 2025 
+ Camera-ready 
+ Tue 1 Jul 2025 
+ Author registration deadline 
+ Fri 1 Aug 2025 
+ Final registration deadline 
+ Organizing Committee 
+ href="https://conf.researchr.org/profile/dx-2025/gautambiswas" - Gautam BiswasVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/marcosquinonesgrueiro" - Marcos Quinones-GrueiroVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/ingopill" - Ingo PillInstitute of Software Technology, Graz University of Technology	Austria 
+ href="https://conf.researchr.org/profile/dx-2025/gerilynnpearce" - Gerilynn PearceVanderbilt UniversityUnited States 
+ Program Committee (In Construction) 
+ href="https://conf.researchr.org/profile/dx-2025/carlosalonsogonzalezcarlos" - Carlos Alonso-Gonzálezcalonso@infor.uva.es 
+ href="https://conf.researchr.org/profile/dx-2025/gautambiswas" - Gautam BiswasPC ChairVanderbilt UniversityUnited States 
+ George BollasCommittee Member 
+ University of Connecticut 
+ United States 
+ href="https://conf.researchr.org/profile/dx-2025/elodiechantheryelodie" - Elodie Chantheryelodie.chanthery@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/alessandrocimattialessandro" - Alessandro Cimatticimatti@fbk.eu 
+ href="https://conf.researchr.org/profile/dx-2025/matthewdaigle" - Matthew DaigleNovity, Inc.United States 
+ href="https://conf.researchr.org/profile/dx-2025/alexanderdiedrichalexander" - Alexander Diedrichdiedrica@hsu-hh.de 
+ href="https://conf.researchr.org/profile/dx-2025/gerhardfriedrichgerhard" - Gerhard Friedrichgerhard.e.friedrich@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/danieljungdaniel" - Daniel Jungdaniel.jung@liu.se 
+ href="https://conf.researchr.org/profile/dx-2025/meirkalech" - Meir KalechBen Gurion University of the Negev, IsraelIsrael 
+ href="https://conf.researchr.org/profile/dx-2025/chetankulkarni" - Chetan KulkarniKBR / NASAUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/imadmakki" - Imad MakkiFord Motor CompanyUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/marinazanellamarina" - Marina Zanella Marinamarina.zanella@unibs.it 
+ href="https://conf.researchr.org/profile/dx-2025/angelomontanariangelo" - Angelo Montanariangelo.montanari@uniud.it 
+ href="https://conf.researchr.org/profile/dx-2025/avrahamnatan" - Avraham NatanBen-Gurion University of the NegevIsrael 
+ href="https://conf.researchr.org/profile/dx-2025/oliverniggemannoliver" - Oliver Niggemannoliver.niggemann@hsu-hh.de 
+ href="https://conf.researchr.org/profile/dx-2025/yannickpencoleyannick" - Yannick Pencoléyannick.pencole@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/ingopill" - Ingo PillPC ChairInstitute of Software Technology, Graz University of Technology	Austria 
+ href="https://conf.researchr.org/profile/dx-2025/gregoryprovangregory" - Gregory Provang.provan@cs.ucc.ie 
+ href="https://conf.researchr.org/profile/dx-2025/belarminopulidobelarmino" - Belarmino Pulidobelar@infor.uva.es 
+ href="https://conf.researchr.org/profile/dx-2025/marcosquinonesgrueiro" - Marcos Quinones-GrueiroPC ChairVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/paulineribotpauline" - Pauline Ribotpribot@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/indranilroychoudhuryindranil" - Indranil Roychoudhuryindranil.roychoudhury@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/martinsachenbachermartin" - Martin Sachenbachersachenba@googlemail.com 
+ href="https://conf.researchr.org/profile/dx-2025/anikaschumannanika" - Anika Schumannikh@zurich.ibm.com 
+ href="https://conf.researchr.org/profile/dx-2025/nealsnookeneal" - Neal Snookenns@aber.ac.uk 
+ href="https://conf.researchr.org/profile/dx-2025/geraldsteinbauerwagnergerald" - Gerald Steinbauer-Wagnersteinbauer@ist.tugraz.at 
+ href="https://conf.researchr.org/profile/dx-2025/peterstrusspeter" - Peter Strussstruss@in.tum.de 
+ href="https://conf.researchr.org/profile/dx-2025/markusstumptnermarkus" - Markus Stumptnermst@cs.unisa.edu.au 
+ href="https://conf.researchr.org/profile/dx-2025/annasztyberanna" - Anna Sztyberanna.sztyber@pw.edu.pl 
+ href="https://conf.researchr.org/profile/dx-2025/christeubert" - Chris TeubertNASA AmesUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/stefanotonettastefano" - Stefano Tonettatonettas@fbk.eu 
+ href="https://conf.researchr.org/profile/dx-2025/gianlucatortagianluca" - Gianluca Tortagiatorta@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/louisetravemassuyes" - Louise Travé-MassuyèsCNRSFrance 
+ href="https://conf.researchr.org/profile/dx-2025/franzwotawa" - Franz WotawaGraz University of TechnologyAustria 
+ href="https://conf.researchr.org/profile/dx-2025/johandekleer" - Johan de KleerUnited States 
+ Steering Committee 
+ Gautam BiswasSteering Committee Member 
+ Vanderbilt University 
+ United States 
+ Meir KalechSteering Committee Member 
+ Ben Gurion University of the Negev, Israel 
+ Israel 
+ Oliver NiggemannSteering Committee Member 
+ Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg 
+ Ingo PillSteering Committee Chair 
+ Institute of Software Technology, Graz University of Technology 
+ Austria 
+ Louise Travé-MassuyèsSteering Committee Member 
+ CNRS 
+ France 
+ Franz WotawaSteering Committee Member 
+ Graz University of Technology 
+ Austria 
+ Marina ZanellaSteering Committee Member 
+ Università di Brescia 
+ Johan de KleerSteering Committee Member 
+ United States 
+ xSat 5 Apr 10:23 
+ href="https://conf.researchr.org/home/dx-2025" - DX 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/dx-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/dx-2025" - DX'25
+Attending 
+ href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Venue: Scarritt Bennett Center
+ 
+ href="https://conf.researchr.org/signup/dx-2025" - Sign Up 
+
+Call for Papers information:
+href="https://conf.researchr.org/home/dx-2025" - DX 2025
+Mon 22 - Wed 24 September 2025href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Nashville, Tennessee, United States
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Venue: Scarritt Bennett Center 
+ href="https://conf.researchr.org/home/dx-2025" - Track/Call 
+ Organization | DX 2025 Committees 
+ Track Committees 
+ Organizing Committee 
+ Program Committee (In Construction) 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/dx-2025" - People Index 
+ href="https://conf.researchr.org/search/dx-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/dx" - Series 
+ DX 2025 
+ href="https://conf.researchr.org/home/dx-2024" - DX 2024 
+ href="https://conf.researchr.org/signin/dx-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esdx-2025" - Sign in 
+ href="https://conf.researchr.org/signup/dx-2025" - Sign up 
+ DX 2025 (href="https://conf.researchr.org/series/dx" - series
+) /The 36th International Conference on Principles of Diagnosis and Resilient Systems (DX'25)DX 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Competition 
+ We are proud to announce that in 2025, the 36th International Conference on Principles of Diagnosis and Resilient Systems (DX’25) will take place in Nashville, TN. 
+ Until 2023, the focus of the DX workshop series has been on the principles and applications of diagnosis, i.e., identifying root causes for encountered issues and unexpected scenarios, as well as on related techniques, such as prognostics, planning, and control. Moving forward as a conference, we expanded our focus on diagnosis in 2024 to include particularly interesting topics related to resilience, which is the intrinsic ability of a system to sustain its required operations when impacted by expected and unexpected contingencies that were potentially not considered during the system design. We are interested in papers covering resilient design, operational resilience, and related approaches spanning monitoring, anomaly detection, diagnosis, control, planning, and verification of systems. 
+ The annual DX conference is a forum to present state-of-the-art research and experience reports, exchange and discuss emerging ideas, debate current issues, and envision future challenges. Relevant research areas include topics that relate to diagnosis, resilient design, and operational resilience, including but not limited to: 
+ Anomaly and fault detection, 
+ Fault and root cause isolation, 
+ Prognosis, 
+ Fault-tolerant, fault-adaptive, and resilient control, 
+ Reconfiguration, planning, and intelligent decision-making, 
+ Verification and debugging at design and run-time, 
+ Explanation, validation, and certification. 
+ We welcome evidence-driven position papers, theory papers, experience reports, and papers that span across multiple research and application domains that, in the context, cover digital, logical, analog, mechanical, cyber-physical, biological, ecological, ethical, economical, and social systems and processes. In the 2025 DX edition, we are particularly interested in model-driven and data-driven approaches (including deep learning and LLM-based algorithms) and submissions that combine and/or compare model- and data-driven approaches. 
+ DX Competition (DXC’25).In addition to our regular paper tracks, the DX’25 organization committee is proud to announce that there will be a DXC’25 competition [2]. The DXC’25 will feature challenges related to solving diagnosis problems in three application domains, where the participants may choose to tackle the challenges of one, two, or all three domains: 
+ a combustion engine, 
+ a steam line system, and 
+ a liquid propulsion rocket engine. 
+ Doctoral Consortium.All PhD students working on relevant topics are encouraged to submit a description of their research to be considered for a special session focusing on mentoring their PhD research. This is an opportunity for Ph.D. students to present their research to a knowledgeable audience and receive feedback from friendly experts on their research topics. This session will be organized as a panel or poster session depending on the number of submissions. Accepted entries will be included in our archival proceedings in a dedicated section. 
+ For more information about submitting papers to DX, we refer the interested reader tohref="https://conf.researchr.org/home/dx-2025#Call-for-Papers" - the Call for Papers
+. A more detailed summary of relevant topics can be found in the following list of topics that have been addressed at previous DX editions. 
+ Formal theories and computation methods for diagnosis and resilient systems, including monitoring, fault detection and isolation, testing, decision making, repair and therapy, (re-)planning, (re-)configuration, fault tolerance, diagnosability analysis, and system design. 
+ Models for diagnosis and resilient systems, including discrete, discrete-event, qualitative, continuous, hybrid, probabilistic, behavioral, and functional models, as well as models resulting from approximation, abstraction, refinement, and reformulation approaches. Modeling approaches that scale to large systems are of specific interest. 
+ Anomaly detection and Diagnosis algorithms and processes, including strategies for measurement selection, active diagnosis/testing, sensor placement, embedded diagnosis, preventive diagnosis, fault adaptive control, distributed diagnosis, as well as human interaction with the diagnosis engine and other usability issues. 
+ Technology supporting the design and operation of resilient systems, including strategies for making decisions, mission (re-)planning, system (re-)configuration, repair processes, active and passive knowledge acquisition, aggregating diagnostic information over time and space, exploiting diagnosis results over a system's entire lifetime (from development to decommissioning), exploiting diagnostic information for system design evolution, as well as the local and global exploitation of diagnosis results (local in time, space or a system-of-systems context) 
+ Solutions to and formulations of computational issues faced during diagnosis and in resilient systems, e.g., addressing combinatorial (and state) explosion, the exploitation of structural and hierarchical knowledge, focusing strategies and heuristics, resource-bounded reasoning, requirements and restrictions related to real-time environments, and pre-compilation/pre-processing techniques. 
+ Learning-based systems to support monitoring, fault diagnosis, resilient design, and operational resilience. Connections and interplay between data-driven and/or analytic AI-based diagnosis methods and methods from related areas or tasks like FDI, control theory, statistics, machine and deep learning, knowledge representation, concept extraction, planning, optimization, autonomous systems, safety, verification, software engineering, debugging, as well as hardware instrumentation and testing. 
+ (Real-world) applications of diagnosis and system resilience, including scenarios in space, transportation, aeronautics, robotics, manufacturing, process engineering, energy, networks and services, ethics, economy, biotechnology, medical domains, and social/societal contexts. Case studies concerning a successful or failed technology transfer to a specific application. 
+ Call for Papers 
+ We are proud to announce that in 2025, the 36th International Conference on Principles of Diagnosis and Resilient Systems (DX’25) will take place in Nashville, TN from September 22nd to 24th. 
+ Until 2023, the focus of the DX workshop series has been on the principles and applications of diagnosis, i.e., identifying root causes for encountered issues and unexpected scenarios, as well as on related techniques, such as prognostics, planning, and control. Moving forward as a conference, we expanded our focus on diagnosis in 2024 to include particularly interesting topics related to resilience, which is the intrinsic ability of a system to sustain its required operations when impacted by expected and unexpected contingencies that were potentially not considered during the system design. We are interested in papers covering resilient design, operational resilience, and related approaches spanning monitoring, anomaly detection, diagnosis, control, planning, and verification of systems. 
+ The annual DX conference is a forum to present state-of-the-art research and experience reports, exchange and discuss emerging ideas, debate current issues, and envision future challenges. Relevant research areas include topics that relate to diagnosis, resilient design, and operational resilience, including but not limited to: 
+ Anomaly and fault detection, 
+ Fault and root cause isolation, 
+ Prognosis, 
+ Fault-tolerant, fault-adaptive, and resilient control, 
+ Reconfiguration, planning, and intelligent decision-making, 
+ Verification and debugging at design and run-time, 
+ Explanation, validation, and certification. 
+ We welcome evidence-driven position papers, theory papers, experience reports, and papers that span across multiple research and application domains that, in the context, cover digital, logical, analog, mechanical, cyber-physical, biological, ecological, ethical, economical, and social systems and processes. In the 2025 DX edition, we are particularly interested in model-driven and data-driven approaches (including deep learning and LLM-based algorithms) and submissions that combine and/or compare model- and data-driven approaches. 
+ DX Competition (DXC’25).In addition to our regular paper tracks, the DX’25 organization committee is proud to announce that there will be ahref="https://conf.researchr.org/home/dx-2025#Competition" - DXC’25 competition
+. The DXC’25 will feature challenges related to solving diagnosis problems in three application domains, where the participants may choose to tackle the challenges of one, two, or all three domains: 
+ a combustion engine, 
+ a steam line system, and 
+ a liquid propulsion rocket engine. 
+ Doctoral Consortium.All PhD students working on relevant topics are encouraged to submit a description of their research to be considered for a special session focusing on mentoring their PhD research. This is an opportunity for Ph.D. students to present their research to a knowledgeable audience and receive feedback from friendly experts on their research topics. This session will be organized as a panel or poster session depending on the number of submissions. Accepted entries will be included in our archival proceedings in a dedicated section. 
+ Encore Papers.For recent publications in journals and major conferences (e.g., AAAI, IJCAI, ECAI, ISSRE, ICSE, and KR) relevant to DX (see list of topics above), we welcome the submission of extended abstracts related to the publication, which must also include a discussion of the connection to DX topics. 
+ Resubmissions.Papers from venues without archival proceedings (e.g., workshops, ArXiv, etc.) may be resubmitted to DX, but in addition to the requirements for the respective track (full/short/…), there are requirements specific to resubmissions that have to be adhered to. 
+ Paper Length and Submissions.Full papers are limited to 20 pages (including references and appendices) in the Dagstuhl Open Access Series in Informatics format, as referenced on the conference website. Short papers must be no longer than 14 pages. Doctoral Consortium submissions must be no longer than 16 pages. Papers describing DXC’25 challenge solutions may be submitted as long or short papers (14-20 pages). Extended abstracts corresponding to Encore Papers must be no longer than 6 pages. Industry-related submissions that do not fall into any other category are limited to 12 pages. 
+ All papers must be submitted electronically via EasyChair as PDF files and must adhere to the submission guidelines as advertised on this conference website. The submissions will be peer-reviewed, and accepted papers will be scheduled for oral or poster presentations. While the authors are encouraged to state their preference in the presentation format at submission time, the decision is at the discretion of the conference chairs. 
+ By submitting a paper, all authors agree that for each accepted paper, at least one of the authors will register for the conference and attend in person (attending the conference virtually is not acceptable). PhD candidates must attend the conference and present their accepted Doctoral Consortium entries. Please note that a registration accounts for one accepted paper only. Exceptions require the organizers’ consent, and for up to one additional paper, an additional fee will be applied to cover publication costs. Please note that the registration fees are not refundable. 
+ The program committee reserves the right to reject without review submissions that exceed the page limits, violate the specified submission guidelines on the conference website, or are submitted in formats other than PDF. All submissions must be made through the conference EasyChair site. 
+ Competition 
+ After a long hiatus the DX’25 organization committee is proud to announce that there will be a DX competition, where the contestants can enter their solutions for addressing diagnosis problems in three benchmarks. The evaluations will be provided before the DX paper submission deadline, so that the contestants can incorporate their results into corresponding papers (please see the submission page for more details such as the page limit). Each participant may tackle one, two, or all three benchmarks: 
+ The | LiU-ICE | benchmark covers some challenging problems of fault diagnosis of technical systems. The case study is an | internal combustion engine | , and the goal is to develop a diagnosis system that can diagnose under realistic operating conditions. A structural model of the system and operational data are provided where the data include both nominal and faulty operation. The challenges in the LiU-ICE benchmark include incomplete training data and limited model information. 
+ SLIDe (Steam Line Intrusion Detection) | benchmark is devoted to evaluating diagnostic algorithms performing the tasks of detection and isolation of process faults and detection of cybernetic attacks in the third and fourth stages of superheaters of the fluidized bed boiler steam line. It includes challenging scenarios of sensor, actuator and technological component faults and examples of cybernetic attacks. To reflect the industrial nature of the benchmark, the participants will only have access to a qualitative description of the process and several archival datasets representing different operating conditions, but only for fault-free and attack-free states. 
+ LUMEN (Liquid Upper stage demonstrator Engine) | is a modular pump-fed liquid oxygen (LOX) and liquid methane (LNG) rocket engine developed by the Institute of Space Propulsion of the German Aerospace Center (DLR). This benchmark focuses on the fuel turbopump subsystem of the rocket engine and addresses key challenges encountered in safety-critical systems, such as the lack of experimental data from faulty operation. The goal of this benchmark is to utilize information from a simulation model with uncertain parameters and limited experimental data from nominal operation to enable the diagnosis system to perform effectively under realistic operating conditions. 
+ For more information about the benchmark, we refer the interested reader to thehref="https://vehsys.gitlab-pages.liu.se/dx25benchmarks/" - DXC’25 repository
+, where we offer detailed information about the challenges and also about how to enter the competition. Please note that thesubmission deadlinewill beApril 21st (extended), and we aim to hold office hours where contestants may ask questions about the tracks periodically. Please do not hesitate to contact any of the individual benchmark chairs or the co-chairs for the competition to discuss questions that you might have about the competition.Feedbackwill be provided aroundMay 1st, so that it can be integrated into yourcomplementing paper submissionto the DX conference (deadline May 8th). We would appreciate if you would reach out to us by April 1st about your interest in participating in the competition. 
+ As extra motivation for your participation, we would like to let you know that we’re in contact with theAIJassociate editor Meir Kalech who is responsible for special issues dedicated to AI competitions. Depending on the submissions, the DXC competition might become part of such aspecial issue, so that we would invite contestants for extended versions of their DX competition papers. 
+ The DXC’25 organization team (in a.o.): 
+ Johan de Kleer (co-chair), Jan Deeken, Kai Dresia, Erik Frisk, Daniel Jung (chair LiU-ICE), Mattias Krysander, Eldin Kurudzija (chair Lumen), Ingo Pill (co-chair), Michal Syfert, Anna Sztyber-Betley (chair SLIDe), Tobias Traudt, Günther Waxenegger-Wilfling 
+ Important DatesAoE (UTC-12h) 
+  
+ Tue 8 Apr 2025 
+ Submission open 
+ Mon 21 Apr 2025 
+ DX competition submission deadline (extended) 
+ Thu 8 May 2025 
+ Submissions Deadline 
+ Tue 10 Jun 2025 
+ Acceptance notification 
+ Tue 1 Jul 2025 
+ Camera-ready 
+ Tue 1 Jul 2025 
+ Author registration deadline 
+ Fri 1 Aug 2025 
+ Final registration deadline 
+ Organizing Committee 
+ href="https://conf.researchr.org/profile/dx-2025/gautambiswas" - Gautam BiswasVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/marcosquinonesgrueiro" - Marcos Quinones-GrueiroVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/ingopill" - Ingo PillInstitute of Software Technology, Graz University of Technology	Austria 
+ href="https://conf.researchr.org/profile/dx-2025/gerilynnpearce" - Gerilynn PearceVanderbilt UniversityUnited States 
+ Program Committee (In Construction) 
+ href="https://conf.researchr.org/profile/dx-2025/carlosalonsogonzalezcarlos" - Carlos Alonso-Gonzálezcalonso@infor.uva.es 
+ href="https://conf.researchr.org/profile/dx-2025/gautambiswas" - Gautam BiswasPC ChairVanderbilt UniversityUnited States 
+ George BollasCommittee Member 
+ University of Connecticut 
+ United States 
+ href="https://conf.researchr.org/profile/dx-2025/elodiechantheryelodie" - Elodie Chantheryelodie.chanthery@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/alessandrocimattialessandro" - Alessandro Cimatticimatti@fbk.eu 
+ href="https://conf.researchr.org/profile/dx-2025/matthewdaigle" - Matthew DaigleNovity, Inc.United States 
+ href="https://conf.researchr.org/profile/dx-2025/alexanderdiedrichalexander" - Alexander Diedrichdiedrica@hsu-hh.de 
+ href="https://conf.researchr.org/profile/dx-2025/gerhardfriedrichgerhard" - Gerhard Friedrichgerhard.e.friedrich@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/danieljungdaniel" - Daniel Jungdaniel.jung@liu.se 
+ href="https://conf.researchr.org/profile/dx-2025/meirkalech" - Meir KalechBen Gurion University of the Negev, IsraelIsrael 
+ href="https://conf.researchr.org/profile/dx-2025/chetankulkarni" - Chetan KulkarniKBR / NASAUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/imadmakki" - Imad MakkiFord Motor CompanyUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/marinazanellamarina" - Marina Zanella Marinamarina.zanella@unibs.it 
+ href="https://conf.researchr.org/profile/dx-2025/angelomontanariangelo" - Angelo Montanariangelo.montanari@uniud.it 
+ href="https://conf.researchr.org/profile/dx-2025/avrahamnatan" - Avraham NatanBen-Gurion University of the NegevIsrael 
+ href="https://conf.researchr.org/profile/dx-2025/oliverniggemannoliver" - Oliver Niggemannoliver.niggemann@hsu-hh.de 
+ href="https://conf.researchr.org/profile/dx-2025/yannickpencoleyannick" - Yannick Pencoléyannick.pencole@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/ingopill" - Ingo PillPC ChairInstitute of Software Technology, Graz University of Technology	Austria 
+ href="https://conf.researchr.org/profile/dx-2025/gregoryprovangregory" - Gregory Provang.provan@cs.ucc.ie 
+ href="https://conf.researchr.org/profile/dx-2025/belarminopulidobelarmino" - Belarmino Pulidobelar@infor.uva.es 
+ href="https://conf.researchr.org/profile/dx-2025/marcosquinonesgrueiro" - Marcos Quinones-GrueiroPC ChairVanderbilt UniversityUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/paulineribotpauline" - Pauline Ribotpribot@laas.fr 
+ href="https://conf.researchr.org/profile/dx-2025/indranilroychoudhuryindranil" - Indranil Roychoudhuryindranil.roychoudhury@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/martinsachenbachermartin" - Martin Sachenbachersachenba@googlemail.com 
+ href="https://conf.researchr.org/profile/dx-2025/anikaschumannanika" - Anika Schumannikh@zurich.ibm.com 
+ href="https://conf.researchr.org/profile/dx-2025/nealsnookeneal" - Neal Snookenns@aber.ac.uk 
+ href="https://conf.researchr.org/profile/dx-2025/geraldsteinbauerwagnergerald" - Gerald Steinbauer-Wagnersteinbauer@ist.tugraz.at 
+ href="https://conf.researchr.org/profile/dx-2025/peterstrusspeter" - Peter Strussstruss@in.tum.de 
+ href="https://conf.researchr.org/profile/dx-2025/markusstumptnermarkus" - Markus Stumptnermst@cs.unisa.edu.au 
+ href="https://conf.researchr.org/profile/dx-2025/annasztyberanna" - Anna Sztyberanna.sztyber@pw.edu.pl 
+ href="https://conf.researchr.org/profile/dx-2025/christeubert" - Chris TeubertNASA AmesUnited States 
+ href="https://conf.researchr.org/profile/dx-2025/stefanotonettastefano" - Stefano Tonettatonettas@fbk.eu 
+ href="https://conf.researchr.org/profile/dx-2025/gianlucatortagianluca" - Gianluca Tortagiatorta@gmail.com 
+ href="https://conf.researchr.org/profile/dx-2025/louisetravemassuyes" - Louise Travé-MassuyèsCNRSFrance 
+ href="https://conf.researchr.org/profile/dx-2025/franzwotawa" - Franz WotawaGraz University of TechnologyAustria 
+ href="https://conf.researchr.org/profile/dx-2025/johandekleer" - Johan de KleerUnited States 
+ Steering Committee 
+ Gautam BiswasSteering Committee Member 
+ Vanderbilt University 
+ United States 
+ Meir KalechSteering Committee Member 
+ Ben Gurion University of the Negev, Israel 
+ Israel 
+ Oliver NiggemannSteering Committee Member 
+ Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg 
+ Ingo PillSteering Committee Chair 
+ Institute of Software Technology, Graz University of Technology 
+ Austria 
+ Louise Travé-MassuyèsSteering Committee Member 
+ CNRS 
+ France 
+ Franz WotawaSteering Committee Member 
+ Graz University of Technology 
+ Austria 
+ Marina ZanellaSteering Committee Member 
+ Università di Brescia 
+ Johan de KleerSteering Committee Member 
+ United States 
+ xSat 5 Apr 10:25 
+ href="https://conf.researchr.org/home/dx-2025" - DX 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/dx-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/dx-2025" - DX'25
+Attending 
+ href="https://conf.researchr.org/venue/dx-2025/dx-2025-venue" - Venue: Scarritt Bennett Center
+ 
+ href="https://conf.researchr.org/signup/dx-2025" - Sign Up

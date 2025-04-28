@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "November 10 - 13, 2025",
+  "Year": "2025",
+  "Location": "Melbourne, Australia",
+  "City-State-Province": "Melbourne",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Regular Papers) Abstracts": "December 8, 2024",
+    "(Regular Papers) Full papers": "December 15, 2024",
+    "(Extended Abstracts) Abstract": "August 2025"
+  },
+  "Notification Date": {
+    "(Regular Papers) Notification": "February 10, 2025",
+    "(Extended Abstracts) Notification": "September 2025"
+  },
+  "Other Date": {
+    "(Regular Papers) Rebuttal Phase": "January 26 - 29, 2025",
+    "Master Class": "November 10, 2025"
+  },
+  "Topics": "Constraint Programming, Artificial Intelligence, Operations Research",
+  "Publisher": "Springer",
+  "Summary": "The 22nd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR 2025) will be held in Melbourne, Australia, from November 10 to November 13, 2025.  The conference aims to bring together researchers from Constraint Programming (CP), Artificial Intelligence (AI), and Operations Research (OR) to present new techniques, applications, and theoretical & practical insights.",
+  "Call for Papers": "# CPAIOR 2025: Call for Papers\n\nThe 22nd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR 2025) will be held in **Melbourne, Australia, from November 10 to November 13, 2025**. The conference will be co-located with [ICAPS 2025](https://icaps25.icaps-conference.org/home/).\n\n## Conference Aim\n\nThe aim of the conference is to promote a space where researchers from Constraint Programming (CP), Artificial Intelligence (AI), and Operations Research (OR) present innovative techniques, new applications, and original cutting-edge ideas, thereby encouraging researchers from one area to learn from the others. Of particular interest are papers that integrate concepts and methodologies from these different fields, either proposing interesting new techniques for complex/practical problems or expanding our theoretical insights and cross-field understanding. High-quality original papers from a single area are welcome when also relevant to the other communities involved. The conference also strongly encourages regular papers or experience reports showcasing CP/AI/OR techniques on challenging real-world applications.\n\n## Topics of Interest\n\nThe program committee invites submissions that include, but are far from limited to, the following topics:\n\n*   New methodologies in the interface between predictive and prescriptive pipelines\n*   Novel relaxation and inference methods\n*   New search perspectives\n*   Advanced integrated methods\n*   Innovative models and applications of CP/AI/OR techniques\n*   Implementation or evaluation of CP/AI/OR techniques and optimization systems\n\n## Submission Types\n\nSubmissions are of two types:\n\n*   Regular papers (submitted for publication and presentation)\n*   Extended abstracts (submitted for presentation only)\n\n## Instructions for Regular Papers\n\nRegular papers present original unpublished work and can be of two types:\n\n*   Long papers (at most 15 pages plus references)\n*   Short papers (at most 8 pages plus references)\n\nBoth long and short papers will undergo rigorous review and are subject to the same criteria of quality. Both types are also eligible for the distinguished paper or student paper award. Short papers are particularly encouraged for interesting and novel work in progress, for which the practical or theoretical relevance is not yet fully identified.\n\nSubmissions to CPAIOR are single blind. The conference proceedings will be published in the Springer Lecture Notes in Computer Science series. All regular papers should be prepared in the format used for that series (LNCS instructions).\n\n## Submission Schedule for Regular Papers\n\n*   **Abstracts:** December 8, 2024 (AoE: anywhere on Earth)\n*   **Full papers:** December 15, 2024 (AoE, no extension possible)\n*   **Rebuttal Phase:** January 26-29, 2025 (AoE)\n*   **Notification:** February 10, 2025\n*   **Camera ready:** TBA\n\n## Instructions for Extended Abstracts\n\nExtended abstracts should be one or two pages in length and may present preliminary work or work already published in other outlets. The extended abstracts are submitted for presentation only (if accepted), and will not be formally published in the LNCS conference volume. A collection of the accepted extended abstracts will be published on the conference website.\n\n## Submission Schedule for Extended Abstracts\n\n*   **Abstract:** August 2025 (TBA)\n*   **Notification:** September 2025 (TBA)\n\n## Submission Process\n\nWe will use OpenReview.net to manage the reviewing process. Please use the following link to submit your papers:\n\n[https://openreview.net/group?id=cpaior.org/CPAIOR/2025/Conference](https://openreview.net/group?id=cpaior.org/CPAIOR/2025/Conference)\n\n## Contact\n\nFor any queries on the submission process, please contact the Program Chair Guido Tack at [cpaior2025@gmail.com](mailto:cpaior2025@gmail.com)."
+}
+

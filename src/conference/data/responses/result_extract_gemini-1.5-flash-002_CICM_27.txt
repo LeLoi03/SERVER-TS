@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "October 6 - 11, 2025",
+  "Year": "2025",
+  "Location": "Brasilia, Brazil",
+  "City-State-Province": "Brasilia",
+  "Country": "Brazil",
+  "Continent": "South America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Formal submissions - Abstract deadline": "April 28, 2025",
+    "Formal submissions - Full paper deadline": "May 5, 2025",
+    "Workshop proposals": "March 31, 2025"
+  },
+  "Notification Date": {
+    "Formal submissions - Reviews sent to authors": "June 16, 2025",
+    "Formal submissions - Notification of acceptance": "July 4, 2025",
+    "Notification": "Until April 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Formal submissions - Camera-ready copies due": "July 18, 2025"
+  },
+  "Topics": "Automated deduction, Computer algebra, Mathematical publishing, Novel user interfaces, Theorem proving, Computer algebra, Mathematical knowledge management, Digital mathematical libraries",
+  "Publisher": "Springer",
+  "Summary": "The 18th Conference on Intelligent Computer Mathematics (CICM 2025) will take place in Brasilia, Brazil, from October 6–11, 2025.  The conference addresses research in automated deduction, computer algebra, mathematical publishing, and novel user interfaces, and their integration.",
+  "Call for Papers": "# CICM 2025: Call for Papers\n\nThe 18th Conference on Intelligent Computer Mathematics (CICM 2025) will take place from **October 6-11, 2025, in Brasilia, Brazil**.\n\nCICM brings together communities that have developed theoretical and practical solutions for mathematical applications such as computation, deduction, knowledge management, and user interfaces. It offers a venue for discussing problems and solutions in each of these areas and their integration.\n\n## Topics of Interest\n\nA comprehensive (but not exhaustive) list of topics of interest can be found on the conference website: [https://cicm-conference.org/2025/cicm.php?event=&menu=topics](https://cicm-conference.org/2025/cicm.php?event=&menu=topics)\n\n## Submission Categories\n\nFormal submissions in one of the following categories will be reviewed rigorously, and accepted papers will be published in a volume of Springer LNAI:\n\n*   **Regular papers (up to 15 pages + bibliography):** Present novel research results\n*   **Project and survey papers (up to 15 pages + bibliography):** Summarize existing results\n*   **System and dataset descriptions (4 to 5 pages + bibliography):** Present digital artifacts\n\n## Doctoral Symposium\n\nThe doctoral program provides PhD students a forum to present early results and receive constructive feedback and mentoring. To attend, submissions of two-page abstracts are expected in which the focus and research questions of the expected PhD theses are described; details on completed research tasks and remaining research plans should be given. In addition to these abstracts, a two-page CV of the applicant should also be submitted, detailing background information (name, university, supervisor), education (sought degree, previous degrees), employments, and relevant research experience (publications, attended conferences/workshops).\n\n## Important Dates\n\n*   **Formal submissions**\n    *   Abstract deadline: April 28, 2025\n    *   Full paper deadline: May 5, 2025\n    *   Reviews sent to authors: June 16, 2025\n    *   Rebuttals due: June 20, 2025\n    *   Notification of acceptance: July 4, 2025\n    *   Camera-ready copies due: July 18, 2025\n    *   Conference: October 6-11, 2025\n*   **Doctoral Programme Applications**\n    *   Submission deadline: TBA\n*   **Workshops**\n    *   Workshop proposals: March 31, 2025 (early submissions encouraged)\n    *   Notification: Until April 11, 2025\n\n## Submission Instructions\n\nAll submissions should be made via EasyChair: [https://easychair.org/conferences/?conf=cicm25](https://easychair.org/conferences/?conf=cicm25) using the Springer LNCS style files: [https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)\n\nIf software or data is relevant to a paper, a link that provides access to the software/data must be provided to enable reproduction of results.\n\n## Best Papers\n\nCICM 2025 honors the best paper and best student paper with an award.\n\n## Invited Speakers\n\n*   Fabian Huch, Technische Universität München (TUM)\n*   Assia Mahboubi, INRIA, Nantes\n*   Daniele Nantes Sobrinho, University of Brasilia (UnB)\n*   Josef Urban, Czech Institute of Informatics, Robotics and Cybernetics (CIIRC)\n*   Joint Invited Speaker with LFSA 2025: Temur Kutsia, Research Institute for Symbolic Computation (RISC), Johannes Kepler University\n\n## Organization\n\n*   Conference organization: Mauricio Ayala-Rincón (chair, University of Brasilia, UnB, Brazil)\n*   Programme co-chairs: Peter Koepke (University of Bonn, Germany), Valeria de Paiva (Topos Institute, Berkeley, USA)\n*   Doctoral Program chairs: Marcelo Finger (USP-Sao Paulo), Claudia Nalon (UnB, Brasilia)\n*   Workshop chairs: Edward Hermann Haeusler (PUC-Rio), Thaynara Arielly de Lima (Universidade Federal de Goiás)\n*   Publicity chair: Serge Autexier (DFKI Bremen, Germany)"
+}
+

@@ -1,0 +1,507 @@
+Conference ISMM:
+
+href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Tue 17 Jun 2025href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Seoul, South Korea
+co-located withhref="https://pldi25.sigplan.org" - PLDI 2025
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul 
+ PLDI 2025 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion 
+ href="https://conf.researchr.org/home/ismm-2025" - Track/Call 
+ Organization | ISMM 2025 Committees 
+ Track Committees 
+ Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/ismm-2025" - People Index 
+ href="https://conf.researchr.org/search/ismm-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/ismm" - Series 
+ ISMM 2025 
+ href="https://conf.researchr.org/home/ismm-2024" - ISMM 2024 
+ href="https://conf.researchr.org/home/ismm-2023" - ISMM 2023 
+ href="https://conf.researchr.org/home/ismm-2022" - ISMM 2022 
+ href="https://conf.researchr.org/home/ismm-2021" - ISMM 2021 
+ href="https://conf.researchr.org/home/ismm-2020" - ISMM 2020 
+ href="https://conf.researchr.org/home/ismm-2019" - ISMM 2019 
+ href="https://conf.researchr.org/home/ismm-2018" - ISMM 2018 
+ href="https://conf.researchr.org/home/ismm-2017" - ISMM 2017 
+ href="https://conf.researchr.org/home/ismm-2016" - ISMM 2016 
+ href="https://conf.researchr.org/home/ismm-2015" - ISMM 2015 
+ href="https://conf.researchr.org/signin/ismm-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esismm-2025" - Sign in 
+ href="https://conf.researchr.org/signup/ismm-2025" - Sign up 
+ href="https://pldi25.sigplan.org" - PLDI 2025
+(href="https://conf.researchr.org/series/pldi" - series
+) /ISMM 2025 (href="https://conf.researchr.org/series/ismm" - series
+) /International Symposium on Memory ManagementISMM 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Welcome to the home page of the 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025)! ISMM is the premier forum dedicated to research in memory management, covering the areas of memory performance, allocator design, garbage collection, architectural support for memory management, persistent memories, emerging memory technologies, and more. 
+ ISMM’25 will held in-person as part of PLDI’25, sharing the venue and activities. 
+ Code of Conduct 
+ ISMM follows theACM Policy Against Harassment at ACM Activities. Please familiarize yourself with thepolicyandguide for reporting unacceptable behavior. 
+ Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Continuing from ISMM 2024, we are excited to announce the continued expanded scope of ISMM this year to encourage submissions and participation from related fields such ascomputer architectureandcomputer systemsin addition to our core PL community! 
+ The 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) is soliciting full-length submissions covering new work on all memory management related topics in both software and hardware (and their cooperation), as well as papers presenting confirmations or refutations of important prior results. In addition to regular papers, traditionally submitted to ISMM, we also invite submissions of the following kinds: 
+ Surveys and comparative analyses that shed new light on previously published techniques. 
+ Practitioner reports, describing experience with memory management in production. Such papers are not expected to provide novel research contributions, but they should not have been previously published. 
+ Intellectual abstracts, where researchers share designs, algorithms, or theory that may be interesting to the memory management community, but not yet evaluated. 
+ Please indicate whether the paper is a regular paper, a survey, a practitioner report, or an intellectual abstract, by using a subtitle. For example, for a regular paper, include on of the following on the line below the title line:\subtitle{This submission is a regular paper},\subtitle{This submission is a survey},\subtitle{This submission is a practitioner report}, or\subtitle{This submission is an intellectual abstract}. 
+ ISMM 2025 will be colocated withhref="https://pldi25.sigplan.org/" - PLDI 2025
+. 
+ Areas of interest include but are not limited to (in no particular order): 
+ Garbage collection algorithms and implementations 
+ Memory allocation and de-allocation 
+ Memory system design and analysis (both software and hardware) 
+ Hardware support for memory management 
+ Memory management for large-scale data-intensive systems 
+ Memory management at datacenter and cloud scales 
+ Formal analysis and verification of memory management algorithms 
+ Compiler analyses to aid memory management 
+ Tools to analyze memory usage and characteristics of programs 
+ Empirical analysis of memory intensive programs 
+ Formal analysis and verification of memory intensive programs 
+ Memory management for machine learning systems 
+ Programming and management of emerging or persistent memories 
+ Caches, memory controllers, memory hierarchies and their management 
+ Cache coherence and memory consistency 
+ Processing in memory (including processing near and using memory) 
+ Memory technology and architecture (SRAM, DRAM, flash, NVM, emerging technologies) 
+ Security and privacy of memory systems 
+ Robustness of memory systems 
+ Low-latency and low-energy memory systems 
+ The symposium welcomes industry practitioners presenting their recent practice and findings in memory management related to real-world deployments. 
+ href="#submission-link" - Submission Link
+href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Formatting Instructions 
+ All papers must be submitted on-line in Portable Document Format (PDF). 
+ Papers should be formatted according to the two-column ACM proceedings format. Each paper should have no more than 12 pages, excluding bibliography, in 10pt font. There is no limit on the page count for references. Each reference must list all authors of the paper (do not use et al). The citations should be in numeric style, e.g.,[52]. Submissions should be in PDF format and printable on US Letter and A4 sized paper. These requirements are all the same as in the previous years. 
+ Papers that exceed the length requirement or deviate from the expected format will be rejected. 
+ Make sure that figures and tables are legible, even after the paper is printed in gray-scale. 
+ Appendices should not be part of the paper, but should be submitted as supplementary material. Supplementary material should also be anonymized, as described below. 
+ As explained in more detail athref="http://www.sigplan.org/Resources/Author" - http://www.sigplan.org/Resources/Author
+, authors should use the sigplan subformat of the acmart format. Please note the following: The first two lines should be: 
+ \documentclass[sigplan,10pt,review,anonymous]{acmart} \settopmatter{printfolios=true,printccs=false,printacmref=false}The default citation style is numeric. 
+ Do notmess with the class file or settings to try to sneak in additional space. (Conversely, you may toggle the printccs and printacmref flags if you wish, but these changes will consume space.) 
+ Do notuse the PACMPL files or format; ISMM is not using them. However, the template files were designed to make migrating a paper from one format to the other as simple as possible. 
+ Double-Blind Reviewing 
+ ISMM uses double-blind reviewing. This means that author names and affiliations must be omitted from the submission. Additionally, if the submission refers to prior work done by the authors, that reference should be made in third person. These are firm submission requirements. Any supplementary material must also be anonymized. 
+ An earlier FAQ on Double-Blind Reviewing clarifies the policy for the most common scenarios. But there are many gray areas and trade-offs –href="https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing" - https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing
+. If you have any doubts about how to interpret the double-blind rules, or any cases that are not fully covered by the FAQ, please contact the Program Chairs. In complex cases, it is better to get guidance from the Program Chairs than to risk summary rejection. 
+ Declaring Conflicts 
+ When submitting the paper, you will need to declare potential conflicts. Conflicts should be declared between an adviser and an advisee (e.g., Ph.D., post-doc). Other conflicts include institutional conflicts, financial conflicts of interest, friends or relatives, or any recent co-authors on papers and proposals (last 2 years). 
+ Please do not declare spurious conflicts: such incorrect conflicts are especially harmful if the aim is to exclude potential reviewers, so spurious conflicts can be grounds for rejection. If you are unsure about a conflict, please consult the Program Chair. 
+ Publication Date 
+ AUTHORS TAKE NOTE:The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference.The official publication date affects the deadline for any patent filings related to published work.(For those rare conferences whose proceedings are published in the ACM Digital Library after the conference is over, the official publication date remains the first day of the conference.) 
+ href="#author-response" - Author Response
+The author response process will occur in April 2025 (see Important Dates on thehref="https://conf.researchr.org/home/ismm-2025" - main page
+when published), and will give the authors an opportunity to respond to factual errors in reviews before the Program Committee meets to make its decisions. The committee may, but need not, respond to the author response or revise reviews at or after the committee meeting. 
+ Acknowledgements 
+ This call-for-papers is an adaptation and evolution of content from previous instances of ISMM and PLDI. We are grateful to prior organizers for their work, which is reused here. 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 23 - Fri 25 Apr 2025 
+ Author response period 
+ Sat 3 May 2025 
+ Author notification 
+ Tue 13 May 2025 
+ Camera-ready papers due 
+ Tue 17 Jun 2025 
+ Conference day 
+ Tue 18 Mar 2025 
+ Paper submission 
+ Submission Link 
+ href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Organizing Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/timharris" - Tim HarrisProgram Co-ChairMicrosoft, UKUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/martinmaas" - Martin MaasGeneral ChairGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/onurmutlu1" - Onur MutluProgram Co-ChairETH Zurich 
+ Program Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/baharasgari" - Bahar AsgariMaryland 
+ href="https://conf.researchr.org/profile/ismm-2025/benltitzer" - Ben L. TitzerCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/christoskotselidis" - Christos KotselidisUniversity of Manchester/Pierer InnovationUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/dimitriosskarlatos" - Dimitrios SkarlatosCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/douglea" - Doug LeaState University of New York (SUNY) OswegoUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/enginipek" - Engin IpekMicron 
+ href="https://conf.researchr.org/profile/ismm-2025/erikosterlund1" - Erik ÖsterlundOracleSweden 
+ href="https://conf.researchr.org/profile/ismm-2025/hansjboehm" - Hans-J. BoehmGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/jeehoonkang" - Jeehoon KangKAISTSouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/jianhuang" - Jian HuangUniversity of Illinois at Urbana-Champaign 
+ href="https://conf.researchr.org/profile/ismm-2025/lokeshgidra" - Lokesh GidraGoogleUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/manasthakur" - Manas ThakurIIT BombayIndia 
+ href="https://conf.researchr.org/profile/ismm-2025/maonistephens" - Maoni StephensMicrosoftUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/mariacarpenamarie" - Maria Carpen-AmarieHuawei Zurich Research Center, Switzerland 
+ href="https://conf.researchr.org/profile/ismm-2025/mattanerez" - Mattan ErezThe University of Texas at Austin 
+ href="https://conf.researchr.org/profile/ismm-2025/rachitagarwal1" - Rachit AgarwalCornell 
+ href="https://conf.researchr.org/profile/ismm-2025/shoaibakram" - Shoaib AkramAustralian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/sylvanclebsch1" - Sylvan ClebschMicrosoft Azure ResearchUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/tomoharuugawa" - Tomoharu UgawaUniversity of TokyoJapan 
+ href="https://conf.researchr.org/profile/ismm-2025/tonynowatzki" - Tony NowatzkiUniversity of California, Los Angeles 
+ href="https://conf.researchr.org/profile/ismm-2025/vinodgrover" - Vinod GroverNVIDIAUnited States 
+ Steering Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/steveblackburn" - Steve BlackburnGoogle and Australian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/michaelbond" - Michael D. BondOhio State University 
+ href="https://conf.researchr.org/profile/ismm-2025/davidchisnall" - David ChisnallSCI SemiconductorUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/jaewlee" - Jae W. LeeSeoul National UniversitySouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/michaellippautz" - Michael LippautzGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/hannespayer" - Hannes PayerGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/erezpetrank" - Erez PetrankTechnionIsrael 
+ xSat 5 Apr 11:54 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/ismm-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Attending 
+ href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul
+ 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration
+ 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion
+href="https://conf.researchr.org/signup/ismm-2025" - Sign Up 
+
+Call for Papers information:
+href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Tue 17 Jun 2025href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Seoul, South Korea
+co-located withhref="https://pldi25.sigplan.org" - PLDI 2025
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul 
+ PLDI 2025 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion 
+ href="https://conf.researchr.org/home/ismm-2025" - Track/Call 
+ Organization | ISMM 2025 Committees 
+ Track Committees 
+ Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/ismm-2025" - People Index 
+ href="https://conf.researchr.org/search/ismm-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/ismm" - Series 
+ ISMM 2025 
+ href="https://conf.researchr.org/home/ismm-2024" - ISMM 2024 
+ href="https://conf.researchr.org/home/ismm-2023" - ISMM 2023 
+ href="https://conf.researchr.org/home/ismm-2022" - ISMM 2022 
+ href="https://conf.researchr.org/home/ismm-2021" - ISMM 2021 
+ href="https://conf.researchr.org/home/ismm-2020" - ISMM 2020 
+ href="https://conf.researchr.org/home/ismm-2019" - ISMM 2019 
+ href="https://conf.researchr.org/home/ismm-2018" - ISMM 2018 
+ href="https://conf.researchr.org/home/ismm-2017" - ISMM 2017 
+ href="https://conf.researchr.org/home/ismm-2016" - ISMM 2016 
+ href="https://conf.researchr.org/home/ismm-2015" - ISMM 2015 
+ href="https://conf.researchr.org/signin/ismm-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esismm-2025" - Sign in 
+ href="https://conf.researchr.org/signup/ismm-2025" - Sign up 
+ href="https://pldi25.sigplan.org" - PLDI 2025
+(href="https://conf.researchr.org/series/pldi" - series
+) /ISMM 2025 (href="https://conf.researchr.org/series/ismm" - series
+) /International Symposium on Memory ManagementISMM 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Welcome to the home page of the 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025)! ISMM is the premier forum dedicated to research in memory management, covering the areas of memory performance, allocator design, garbage collection, architectural support for memory management, persistent memories, emerging memory technologies, and more. 
+ ISMM’25 will held in-person as part of PLDI’25, sharing the venue and activities. 
+ Code of Conduct 
+ ISMM follows theACM Policy Against Harassment at ACM Activities. Please familiarize yourself with thepolicyandguide for reporting unacceptable behavior. 
+ Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Continuing from ISMM 2024, we are excited to announce the continued expanded scope of ISMM this year to encourage submissions and participation from related fields such ascomputer architectureandcomputer systemsin addition to our core PL community! 
+ The 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) is soliciting full-length submissions covering new work on all memory management related topics in both software and hardware (and their cooperation), as well as papers presenting confirmations or refutations of important prior results. In addition to regular papers, traditionally submitted to ISMM, we also invite submissions of the following kinds: 
+ Surveys and comparative analyses that shed new light on previously published techniques. 
+ Practitioner reports, describing experience with memory management in production. Such papers are not expected to provide novel research contributions, but they should not have been previously published. 
+ Intellectual abstracts, where researchers share designs, algorithms, or theory that may be interesting to the memory management community, but not yet evaluated. 
+ Please indicate whether the paper is a regular paper, a survey, a practitioner report, or an intellectual abstract, by using a subtitle. For example, for a regular paper, include on of the following on the line below the title line:\subtitle{This submission is a regular paper},\subtitle{This submission is a survey},\subtitle{This submission is a practitioner report}, or\subtitle{This submission is an intellectual abstract}. 
+ ISMM 2025 will be colocated withhref="https://pldi25.sigplan.org/" - PLDI 2025
+. 
+ Areas of interest include but are not limited to (in no particular order): 
+ Garbage collection algorithms and implementations 
+ Memory allocation and de-allocation 
+ Memory system design and analysis (both software and hardware) 
+ Hardware support for memory management 
+ Memory management for large-scale data-intensive systems 
+ Memory management at datacenter and cloud scales 
+ Formal analysis and verification of memory management algorithms 
+ Compiler analyses to aid memory management 
+ Tools to analyze memory usage and characteristics of programs 
+ Empirical analysis of memory intensive programs 
+ Formal analysis and verification of memory intensive programs 
+ Memory management for machine learning systems 
+ Programming and management of emerging or persistent memories 
+ Caches, memory controllers, memory hierarchies and their management 
+ Cache coherence and memory consistency 
+ Processing in memory (including processing near and using memory) 
+ Memory technology and architecture (SRAM, DRAM, flash, NVM, emerging technologies) 
+ Security and privacy of memory systems 
+ Robustness of memory systems 
+ Low-latency and low-energy memory systems 
+ The symposium welcomes industry practitioners presenting their recent practice and findings in memory management related to real-world deployments. 
+ href="#submission-link" - Submission Link
+href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Formatting Instructions 
+ All papers must be submitted on-line in Portable Document Format (PDF). 
+ Papers should be formatted according to the two-column ACM proceedings format. Each paper should have no more than 12 pages, excluding bibliography, in 10pt font. There is no limit on the page count for references. Each reference must list all authors of the paper (do not use et al). The citations should be in numeric style, e.g.,[52]. Submissions should be in PDF format and printable on US Letter and A4 sized paper. These requirements are all the same as in the previous years. 
+ Papers that exceed the length requirement or deviate from the expected format will be rejected. 
+ Make sure that figures and tables are legible, even after the paper is printed in gray-scale. 
+ Appendices should not be part of the paper, but should be submitted as supplementary material. Supplementary material should also be anonymized, as described below. 
+ As explained in more detail athref="http://www.sigplan.org/Resources/Author" - http://www.sigplan.org/Resources/Author
+, authors should use the sigplan subformat of the acmart format. Please note the following: The first two lines should be: 
+ \documentclass[sigplan,10pt,review,anonymous]{acmart} \settopmatter{printfolios=true,printccs=false,printacmref=false}The default citation style is numeric. 
+ Do notmess with the class file or settings to try to sneak in additional space. (Conversely, you may toggle the printccs and printacmref flags if you wish, but these changes will consume space.) 
+ Do notuse the PACMPL files or format; ISMM is not using them. However, the template files were designed to make migrating a paper from one format to the other as simple as possible. 
+ Double-Blind Reviewing 
+ ISMM uses double-blind reviewing. This means that author names and affiliations must be omitted from the submission. Additionally, if the submission refers to prior work done by the authors, that reference should be made in third person. These are firm submission requirements. Any supplementary material must also be anonymized. 
+ An earlier FAQ on Double-Blind Reviewing clarifies the policy for the most common scenarios. But there are many gray areas and trade-offs –href="https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing" - https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing
+. If you have any doubts about how to interpret the double-blind rules, or any cases that are not fully covered by the FAQ, please contact the Program Chairs. In complex cases, it is better to get guidance from the Program Chairs than to risk summary rejection. 
+ Declaring Conflicts 
+ When submitting the paper, you will need to declare potential conflicts. Conflicts should be declared between an adviser and an advisee (e.g., Ph.D., post-doc). Other conflicts include institutional conflicts, financial conflicts of interest, friends or relatives, or any recent co-authors on papers and proposals (last 2 years). 
+ Please do not declare spurious conflicts: such incorrect conflicts are especially harmful if the aim is to exclude potential reviewers, so spurious conflicts can be grounds for rejection. If you are unsure about a conflict, please consult the Program Chair. 
+ Publication Date 
+ AUTHORS TAKE NOTE:The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference.The official publication date affects the deadline for any patent filings related to published work.(For those rare conferences whose proceedings are published in the ACM Digital Library after the conference is over, the official publication date remains the first day of the conference.) 
+ href="#author-response" - Author Response
+The author response process will occur in April 2025 (see Important Dates on thehref="https://conf.researchr.org/home/ismm-2025" - main page
+when published), and will give the authors an opportunity to respond to factual errors in reviews before the Program Committee meets to make its decisions. The committee may, but need not, respond to the author response or revise reviews at or after the committee meeting. 
+ Acknowledgements 
+ This call-for-papers is an adaptation and evolution of content from previous instances of ISMM and PLDI. We are grateful to prior organizers for their work, which is reused here. 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 23 - Fri 25 Apr 2025 
+ Author response period 
+ Sat 3 May 2025 
+ Author notification 
+ Tue 13 May 2025 
+ Camera-ready papers due 
+ Tue 17 Jun 2025 
+ Conference day 
+ Tue 18 Mar 2025 
+ Paper submission 
+ Submission Link 
+ href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Organizing Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/timharris" - Tim HarrisProgram Co-ChairMicrosoft, UKUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/martinmaas" - Martin MaasGeneral ChairGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/onurmutlu1" - Onur MutluProgram Co-ChairETH Zurich 
+ Program Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/baharasgari" - Bahar AsgariMaryland 
+ href="https://conf.researchr.org/profile/ismm-2025/benltitzer" - Ben L. TitzerCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/christoskotselidis" - Christos KotselidisUniversity of Manchester/Pierer InnovationUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/dimitriosskarlatos" - Dimitrios SkarlatosCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/douglea" - Doug LeaState University of New York (SUNY) OswegoUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/enginipek" - Engin IpekMicron 
+ href="https://conf.researchr.org/profile/ismm-2025/erikosterlund1" - Erik ÖsterlundOracleSweden 
+ href="https://conf.researchr.org/profile/ismm-2025/hansjboehm" - Hans-J. BoehmGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/jeehoonkang" - Jeehoon KangKAISTSouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/jianhuang" - Jian HuangUniversity of Illinois at Urbana-Champaign 
+ href="https://conf.researchr.org/profile/ismm-2025/lokeshgidra" - Lokesh GidraGoogleUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/manasthakur" - Manas ThakurIIT BombayIndia 
+ href="https://conf.researchr.org/profile/ismm-2025/maonistephens" - Maoni StephensMicrosoftUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/mariacarpenamarie" - Maria Carpen-AmarieHuawei Zurich Research Center, Switzerland 
+ href="https://conf.researchr.org/profile/ismm-2025/mattanerez" - Mattan ErezThe University of Texas at Austin 
+ href="https://conf.researchr.org/profile/ismm-2025/rachitagarwal1" - Rachit AgarwalCornell 
+ href="https://conf.researchr.org/profile/ismm-2025/shoaibakram" - Shoaib AkramAustralian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/sylvanclebsch1" - Sylvan ClebschMicrosoft Azure ResearchUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/tomoharuugawa" - Tomoharu UgawaUniversity of TokyoJapan 
+ href="https://conf.researchr.org/profile/ismm-2025/tonynowatzki" - Tony NowatzkiUniversity of California, Los Angeles 
+ href="https://conf.researchr.org/profile/ismm-2025/vinodgrover" - Vinod GroverNVIDIAUnited States 
+ Steering Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/steveblackburn" - Steve BlackburnGoogle and Australian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/michaelbond" - Michael D. BondOhio State University 
+ href="https://conf.researchr.org/profile/ismm-2025/davidchisnall" - David ChisnallSCI SemiconductorUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/jaewlee" - Jae W. LeeSeoul National UniversitySouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/michaellippautz" - Michael LippautzGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/hannespayer" - Hannes PayerGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/erezpetrank" - Erez PetrankTechnionIsrael 
+ xSat 5 Apr 11:55 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/ismm-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Attending 
+ href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul
+ 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration
+ 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion
+href="https://conf.researchr.org/signup/ismm-2025" - Sign Up 
+
+Important Dates information:
+href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Tue 17 Jun 2025href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Seoul, South Korea
+co-located withhref="https://pldi25.sigplan.org" - PLDI 2025
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul 
+ PLDI 2025 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion 
+ href="https://conf.researchr.org/home/ismm-2025" - Track/Call 
+ Organization | ISMM 2025 Committees 
+ Track Committees 
+ Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/ismm-2025" - People Index 
+ href="https://conf.researchr.org/search/ismm-2025//all" - Search 
+ Series | href="https://conf.researchr.org/series/ismm" - Series 
+ ISMM 2025 
+ href="https://conf.researchr.org/home/ismm-2024" - ISMM 2024 
+ href="https://conf.researchr.org/home/ismm-2023" - ISMM 2023 
+ href="https://conf.researchr.org/home/ismm-2022" - ISMM 2022 
+ href="https://conf.researchr.org/home/ismm-2021" - ISMM 2021 
+ href="https://conf.researchr.org/home/ismm-2020" - ISMM 2020 
+ href="https://conf.researchr.org/home/ismm-2019" - ISMM 2019 
+ href="https://conf.researchr.org/home/ismm-2018" - ISMM 2018 
+ href="https://conf.researchr.org/home/ismm-2017" - ISMM 2017 
+ href="https://conf.researchr.org/home/ismm-2016" - ISMM 2016 
+ href="https://conf.researchr.org/home/ismm-2015" - ISMM 2015 
+ href="https://conf.researchr.org/signin/ismm-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esismm-2025" - Sign in 
+ href="https://conf.researchr.org/signup/ismm-2025" - Sign up 
+ href="https://pldi25.sigplan.org" - PLDI 2025
+(href="https://conf.researchr.org/series/pldi" - series
+) /ISMM 2025 (href="https://conf.researchr.org/series/ismm" - series
+) /International Symposium on Memory ManagementISMM 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Welcome to the home page of the 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025)! ISMM is the premier forum dedicated to research in memory management, covering the areas of memory performance, allocator design, garbage collection, architectural support for memory management, persistent memories, emerging memory technologies, and more. 
+ ISMM’25 will held in-person as part of PLDI’25, sharing the venue and activities. 
+ Code of Conduct 
+ ISMM follows theACM Policy Against Harassment at ACM Activities. Please familiarize yourself with thepolicyandguide for reporting unacceptable behavior. 
+ Call for Papers 
+ Update 2025-03-06:One week submission extension, submissions now due 2025-03-18 (AoE UTC-12h) 
+ Continuing from ISMM 2024, we are excited to announce the continued expanded scope of ISMM this year to encourage submissions and participation from related fields such ascomputer architectureandcomputer systemsin addition to our core PL community! 
+ The 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) is soliciting full-length submissions covering new work on all memory management related topics in both software and hardware (and their cooperation), as well as papers presenting confirmations or refutations of important prior results. In addition to regular papers, traditionally submitted to ISMM, we also invite submissions of the following kinds: 
+ Surveys and comparative analyses that shed new light on previously published techniques. 
+ Practitioner reports, describing experience with memory management in production. Such papers are not expected to provide novel research contributions, but they should not have been previously published. 
+ Intellectual abstracts, where researchers share designs, algorithms, or theory that may be interesting to the memory management community, but not yet evaluated. 
+ Please indicate whether the paper is a regular paper, a survey, a practitioner report, or an intellectual abstract, by using a subtitle. For example, for a regular paper, include on of the following on the line below the title line:\subtitle{This submission is a regular paper},\subtitle{This submission is a survey},\subtitle{This submission is a practitioner report}, or\subtitle{This submission is an intellectual abstract}. 
+ ISMM 2025 will be colocated withhref="https://pldi25.sigplan.org/" - PLDI 2025
+. 
+ Areas of interest include but are not limited to (in no particular order): 
+ Garbage collection algorithms and implementations 
+ Memory allocation and de-allocation 
+ Memory system design and analysis (both software and hardware) 
+ Hardware support for memory management 
+ Memory management for large-scale data-intensive systems 
+ Memory management at datacenter and cloud scales 
+ Formal analysis and verification of memory management algorithms 
+ Compiler analyses to aid memory management 
+ Tools to analyze memory usage and characteristics of programs 
+ Empirical analysis of memory intensive programs 
+ Formal analysis and verification of memory intensive programs 
+ Memory management for machine learning systems 
+ Programming and management of emerging or persistent memories 
+ Caches, memory controllers, memory hierarchies and their management 
+ Cache coherence and memory consistency 
+ Processing in memory (including processing near and using memory) 
+ Memory technology and architecture (SRAM, DRAM, flash, NVM, emerging technologies) 
+ Security and privacy of memory systems 
+ Robustness of memory systems 
+ Low-latency and low-energy memory systems 
+ The symposium welcomes industry practitioners presenting their recent practice and findings in memory management related to real-world deployments. 
+ href="#submission-link" - Submission Link
+href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Formatting Instructions 
+ All papers must be submitted on-line in Portable Document Format (PDF). 
+ Papers should be formatted according to the two-column ACM proceedings format. Each paper should have no more than 12 pages, excluding bibliography, in 10pt font. There is no limit on the page count for references. Each reference must list all authors of the paper (do not use et al). The citations should be in numeric style, e.g.,[52]. Submissions should be in PDF format and printable on US Letter and A4 sized paper. These requirements are all the same as in the previous years. 
+ Papers that exceed the length requirement or deviate from the expected format will be rejected. 
+ Make sure that figures and tables are legible, even after the paper is printed in gray-scale. 
+ Appendices should not be part of the paper, but should be submitted as supplementary material. Supplementary material should also be anonymized, as described below. 
+ As explained in more detail athref="http://www.sigplan.org/Resources/Author" - http://www.sigplan.org/Resources/Author
+, authors should use the sigplan subformat of the acmart format. Please note the following: The first two lines should be: 
+ \documentclass[sigplan,10pt,review,anonymous]{acmart} \settopmatter{printfolios=true,printccs=false,printacmref=false}The default citation style is numeric. 
+ Do notmess with the class file or settings to try to sneak in additional space. (Conversely, you may toggle the printccs and printacmref flags if you wish, but these changes will consume space.) 
+ Do notuse the PACMPL files or format; ISMM is not using them. However, the template files were designed to make migrating a paper from one format to the other as simple as possible. 
+ Double-Blind Reviewing 
+ ISMM uses double-blind reviewing. This means that author names and affiliations must be omitted from the submission. Additionally, if the submission refers to prior work done by the authors, that reference should be made in third person. These are firm submission requirements. Any supplementary material must also be anonymized. 
+ An earlier FAQ on Double-Blind Reviewing clarifies the policy for the most common scenarios. But there are many gray areas and trade-offs –href="https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing" - https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing
+. If you have any doubts about how to interpret the double-blind rules, or any cases that are not fully covered by the FAQ, please contact the Program Chairs. In complex cases, it is better to get guidance from the Program Chairs than to risk summary rejection. 
+ Declaring Conflicts 
+ When submitting the paper, you will need to declare potential conflicts. Conflicts should be declared between an adviser and an advisee (e.g., Ph.D., post-doc). Other conflicts include institutional conflicts, financial conflicts of interest, friends or relatives, or any recent co-authors on papers and proposals (last 2 years). 
+ Please do not declare spurious conflicts: such incorrect conflicts are especially harmful if the aim is to exclude potential reviewers, so spurious conflicts can be grounds for rejection. If you are unsure about a conflict, please consult the Program Chair. 
+ Publication Date 
+ AUTHORS TAKE NOTE:The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference.The official publication date affects the deadline for any patent filings related to published work.(For those rare conferences whose proceedings are published in the ACM Digital Library after the conference is over, the official publication date remains the first day of the conference.) 
+ href="#author-response" - Author Response
+The author response process will occur in April 2025 (see Important Dates on thehref="https://conf.researchr.org/home/ismm-2025" - main page
+when published), and will give the authors an opportunity to respond to factual errors in reviews before the Program Committee meets to make its decisions. The committee may, but need not, respond to the author response or revise reviews at or after the committee meeting. 
+ Acknowledgements 
+ This call-for-papers is an adaptation and evolution of content from previous instances of ISMM and PLDI. We are grateful to prior organizers for their work, which is reused here. 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 23 - Fri 25 Apr 2025 
+ Author response period 
+ Sat 3 May 2025 
+ Author notification 
+ Tue 13 May 2025 
+ Camera-ready papers due 
+ Tue 17 Jun 2025 
+ Conference day 
+ Tue 18 Mar 2025 
+ Paper submission 
+ Submission Link 
+ href="https://ismm25.hotcrp.com" - https://ismm25.hotcrp.com
+Organizing Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/timharris" - Tim HarrisProgram Co-ChairMicrosoft, UKUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/martinmaas" - Martin MaasGeneral ChairGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/onurmutlu1" - Onur MutluProgram Co-ChairETH Zurich 
+ Program Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/baharasgari" - Bahar AsgariMaryland 
+ href="https://conf.researchr.org/profile/ismm-2025/benltitzer" - Ben L. TitzerCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/christoskotselidis" - Christos KotselidisUniversity of Manchester/Pierer InnovationUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/dimitriosskarlatos" - Dimitrios SkarlatosCarnegie Mellon UniversityUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/douglea" - Doug LeaState University of New York (SUNY) OswegoUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/enginipek" - Engin IpekMicron 
+ href="https://conf.researchr.org/profile/ismm-2025/erikosterlund1" - Erik ÖsterlundOracleSweden 
+ href="https://conf.researchr.org/profile/ismm-2025/hansjboehm" - Hans-J. BoehmGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/jeehoonkang" - Jeehoon KangKAISTSouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/jianhuang" - Jian HuangUniversity of Illinois at Urbana-Champaign 
+ href="https://conf.researchr.org/profile/ismm-2025/lokeshgidra" - Lokesh GidraGoogleUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/manasthakur" - Manas ThakurIIT BombayIndia 
+ href="https://conf.researchr.org/profile/ismm-2025/maonistephens" - Maoni StephensMicrosoftUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/mariacarpenamarie" - Maria Carpen-AmarieHuawei Zurich Research Center, Switzerland 
+ href="https://conf.researchr.org/profile/ismm-2025/mattanerez" - Mattan ErezThe University of Texas at Austin 
+ href="https://conf.researchr.org/profile/ismm-2025/rachitagarwal1" - Rachit AgarwalCornell 
+ href="https://conf.researchr.org/profile/ismm-2025/shoaibakram" - Shoaib AkramAustralian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/sylvanclebsch1" - Sylvan ClebschMicrosoft Azure ResearchUnited States 
+ href="https://conf.researchr.org/profile/ismm-2025/tomoharuugawa" - Tomoharu UgawaUniversity of TokyoJapan 
+ href="https://conf.researchr.org/profile/ismm-2025/tonynowatzki" - Tony NowatzkiUniversity of California, Los Angeles 
+ href="https://conf.researchr.org/profile/ismm-2025/vinodgrover" - Vinod GroverNVIDIAUnited States 
+ Steering Committee 
+ href="https://conf.researchr.org/profile/ismm-2025/steveblackburn" - Steve BlackburnGoogle and Australian National UniversityAustralia 
+ href="https://conf.researchr.org/profile/ismm-2025/michaelbond" - Michael D. BondOhio State University 
+ href="https://conf.researchr.org/profile/ismm-2025/davidchisnall" - David ChisnallSCI SemiconductorUnited Kingdom 
+ href="https://conf.researchr.org/profile/ismm-2025/jaewlee" - Jae W. LeeSeoul National UniversitySouth Korea 
+ href="https://conf.researchr.org/profile/ismm-2025/michaellippautz" - Michael LippautzGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/hannespayer" - Hannes PayerGoogle 
+ href="https://conf.researchr.org/profile/ismm-2025/erezpetrank" - Erez PetrankTechnionIsrael 
+ xSat 5 Apr 11:55 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/ismm-2025" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/ismm-2025" - ISMM 2025
+Attending 
+ href="https://conf.researchr.org/venue/ismm-2025/pldi-2025-venue" - Venue: The Westin Josun Seoul
+ 
+ href="https://conf.researchr.org/attending/ismm-2025/registration" - Registration
+ 
+ Sponsorship 
+ href="https://conf.researchr.org/attending/ismm-2025/Diversity%2C+Equity%2C+and+Inclusion" - Diversity, Equity, and Inclusion
+href="https://conf.researchr.org/signup/ismm-2025" - Sign Up

@@ -1,0 +1,41 @@
+```json
+{
+  "Conference dates": "April 15 - 18, 2025",
+  "Year": "2025",
+  "Location": "Graz, Austria, with a one-day excursion to Vienna on April 15",
+  "City-State-Province": "Graz, Vienna",
+  "Country": "Austria",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop, competition, and panel proposal submissions": "October 17, 2024",
+    "Abstract deadline (for Regular Papers)": "October 17, 2024",
+    "Regular Paper submission": "October 27, 2024",
+    "Games and Demos deadline": "January 16, 2025",
+    "Late-Breaking Short Papers deadline": "January 23, 2025",
+    "Doctoral Consortium deadline": "January 23, 2025"
+  },
+  "Notification Date": {
+    "Notifications for workshop, competition, and panel proposals": "October 31, 2024",
+    "Regular Paper notifications": "January 9, 2025",
+    "Notifications for Late-Breaking Papers, Games and Demos and Doctoral Consortium": "February 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready": "new date forthcoming"
+  },
+  "Registration Date": {
+    "Early registration deadline": "March 17, 2025",
+    "Regular registration deadline": "April 7, 2025"
+  },
+  "Other Date": {
+    "Regular Review deadline": "November 28, 2024",
+    "Meta-Review by Track Chair deadline": "December 5, 2024",
+    "Authors Receive Preliminary Reviews": "December 10, 2024",
+    "Author Response deadline": "December 17, 2024",
+    "Revised Review based on Author Response deadline": "January 7, 2025"
+  },
+  "Topics": "Digital Games, Game Design, Game Development, Game Studies, Inclusive Communities, Accessible Gaming Environments, Equitable Collaboration, Diversity, Equity, and Inclusivity in Gaming",
+  "Summary": "FDG 2025, themed \"Accessible Worlds, United Through Play,\" will be held in Graz, Austria, from April 15-18, 2025, with a one-day excursion to Vienna on April 15. The conference focuses on digital games and play, with an emphasis on inclusivity, accessibility, and equitable collaboration in game development and studies.",
+  "Call for Papers": "# FDG 2025: Call for Papers\n\nFDG 2025 will be held in **Graz, Austria, from April 15-18, 2025**, with a one-day excursion to Vienna on April 15th.\n\n## Theme: Accessible Worlds, United Through Play\n\nThis theme underscores the vital role of gaming in fostering inclusive communities, strengthening work of diverse groups, and making games and gaming accessible for all. Works addressing this theme could look at the creation of accessible gaming environments, enhancing connectivity among varied gaming communities, and promoting equitable, interdisciplinary and sustainable collaboration in game development, game design, and game studies. The conference theme extends to diversity, equity and inclusivity in both the gaming experience and its creation, and we encourage papers that investigate these aspects in broad terms.\n\n## Paper Submissions\n\nFDG invites authors to submit papers reporting new research. Authors may submit either full papers (typically up to ten pages in length, excluding references and appendices), or short papers (up to six pages, one column or four pages, two columns in length, including references).  The length of these submissions should be commensurate with contribution of the paper, in the judgment of reviewers; papers that are significantly longer than recommended page limits without clear justification (e.g., significant use of images) may be desk rejected. Note that reviewers are not required to read material in appendices during the peer-review process; full papers should not exceed 20 pages including appendices.\n\nThis year FDG is also providing the option for “Abstract Only” submissions. Accepted abstracts will not be published in the conference proceedings, but abstract authors will be given an opportunity to give an oral presentation of their work at the conference.\n\nSubmissions are handled using the FDG 2025 EasyChair system: [https://easychair.org/conferences/?conf=fdg2025](https://easychair.org/conferences/?conf=fdg2025).\n\n## ACM Open Access Fees\n\nThis year, ACM has implemented a new system whereby authors are required to pay open access fees (called an Article Processing Charge).  Many institutions have funding available to cover publication costs such as this. If your institution lacks such funding, and all paper authors also lack grant/gift funding to cover such fees, the Foundations of Digital Games conference can reimburse you for these fees.  For 2025 ACM is providing a subsidy on APC pricing for ICPS, as follows:\n\n*   The 2025 subsidized APC rate for ICPS papers will be $350.\n*   For papers where any of the authors is a member of ACM, the APC rate will be $250.\n*   For ICPS papers whose corresponding author is based in a lower-middle-income country, the APC rate will be $175.\n*   For ICPS papers whose corresponding author is based in a lower-middle-income country and where any of the authors is a member of ACM, the APC rate will be $125.\n*   For ICPS papers whose corresponding author is based in a low-income country, no APC is required.\n\nThe subsidized pricing will apply to all papers that are processed through the ACM eRights system from 12:00 noon (US Eastern time) on March 6, 2025.\n\n## Tracks\n\n*   Technical Game Development & Novel Game Controllers\n*   Game Design, Studio Practices, and Novel Player Experiences\n*   Game Analytics and Visualization\n*   Game Artificial Intelligence\n*   Game Criticism and Analysis\n*   Games Beyond Entertainment\n*   Games Pedagogy\n*   Lightning Talk Track\n*   Late Breaking Short Papers\n*   Games and Demos\n*   Doctoral Consortium\n\n## Important Dates\n\n*   **Workshop, competition, and panel proposal submissions:** October 17, 2024\n*   **Notifications for workshop, competition, and panel proposals:** October 31, 2024\n*   **Abstract deadline (for Regular Papers):** October 17, 2024\n*   **Regular Paper submission:** October 27, 2024\n*   **Regular Review deadline:** November 28, 2024\n*   **Meta-Review by Track Chair deadline:** December 5, 2024\n*   **Authors Receive Preliminary Reviews:** December 10, 2024\n*   **Author Response deadline:** December 17, 2024\n*   **Revised Review based on Author Response deadline:** January 7, 2025\n*   **Regular Paper notifications:** January 9, 2025\n*   **Games and Demos deadline:** January 16, 2025\n*   **Late-Breaking Short Papers deadline:** January 23, 2025\n*   **Doctoral Consortium deadline:** January 23, 2025\n*   **Notifications for Late-Breaking Papers, Games and Demos and Doctoral Consortium:** February 10, 2025\n*   **Camera Ready:** new date forthcoming\n*   **Early registration deadline:** March 17, 2025\n*   **Regular registration deadline:** April 7, 2025"
+}
+```

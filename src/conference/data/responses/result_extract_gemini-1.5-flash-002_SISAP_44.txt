@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "October 1-3, 2025",
+  "Year": "2025",
+  "Location": "Reykjavik University (RU), Reykjavik, Iceland",
+  "City-State-Province": "Reykjavik",
+  "Country": "Iceland",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Regular and Special Session Papers) Abstract submission deadline": "May 11, 2025",
+    "(Regular and Special Session Papers) Paper submission deadline": "May 18, 2025",
+    "(Demonstration and Doctoral Symposium Papers) Paper submission deadline": "June 6, 2025"
+  },
+  "Notification Date": {
+    "(Regular and Special Session Papers) Acceptance notification": "July 14, 2025",
+    "(Demonstration and Doctoral Symposium Papers) Acceptance notification": "July 14, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular and Special Session Papers) Camera-ready due": "July 31, 2025",
+    "(Demonstration and Doctoral Symposium Papers) Camera-ready due": "July 31, 2025"
+  },
+  "Topics": "Similarity Search, Data Mining, Information Retrieval, Multimedia Retrieval, Computer Vision, Pattern Recognition, Computational Biology, Geography, Biometrics, Machine Learning",
+  "Publisher": "Springer",
+  "Summary": "The 18th International Conference on Similarity Search and Applications (SISAP 2025) will be held at Reykjavik University in Reykjavik, Iceland, from October 1-3, 2025. SISAP is an annual forum for researchers and application developers in the area of similarity data management.",
+  "Call for Papers": "# SISAP 2025: Call for Papers\n\nThe 18th International Conference on Similarity Search and Applications (SISAP 2025) will be held at **Reykjavik University (RU), Reykjavik, Iceland, from October 1-3, 2025**.\n\n## Scope\n\nThe International Conference on Similarity Search and Applications (SISAP) is an annual forum for researchers and application developers in the area of similarity data management. It aims at the technological problems shared by numerous application domains, such as data mining, information retrieval, multimedia retrieval, computer vision, pattern recognition, computational biology, geography, biometrics, machine learning, and many others that make use of similarity search as a necessary supporting service. From its roots in metric indexing, SISAP has expanded to become the only international conference entirely devoted to all issues surrounding the theory, design, analysis, practice, and application of content-based and feature-based similarity search. Since 2021, SISAP has been a CORE Rank B conference.\n\n## Important Dates\n\n### Regular and Special Session Papers\n\n*   **Abstract submission deadline:** May 11, 2025 (AoE)\n*   **Paper submission deadline:** May 18, 2025 (AoE)\n*   **Acceptance notification:** July 14, 2025 (AoE)\n*   **Camera-ready due:** July 31, 2025 (AoE)\n\n### Demonstration and Doctoral Symposium Papers\n\n*   **Paper submission deadline:** June 6, 2025 (AoE)\n*   **Acceptance notification:** July 14, 2025 (AoE)\n*   **Camera-ready due:** July 31, 2025 (AoE)\n\n## Publication\n\nThe conference proceedings will be published by Springer as a volume in the Springer Lecture Notes in Computer Science (LNCS) series. A small selection of the best papers presented at the conference will be recommended for inclusion in a special issue of Elsevier Information Systems.\n\n## Call for Research Contributions\n\nThe organizers of SISAP 2025 call for novel and original research papers that address various topics of interest related to the conference. We encourage contributions both to theoretical aspects and applications.\n\n*   Full papers (from 9 to 14 pages) are expected to be descriptions of complete technical work.\n*   Short papers (of up to 8 pages) can describe innovative approaches or preliminary results.\n*   Vision papers and other position papers should be submitted as short research papers.\n*   Regular and special session research papers will be peer-reviewed in a double-blind review process. Thus, the submissions must be properly anonymized.\n\n## Special Sessions\n\nSpecial sessions are mini-venues, each focusing on one state-of-the-art research direction within the field of similarity search and applications.\n\n*   **IRMC:** Interactive Retrieval for Multimedia Collections (organized by Omar Shahbaz Khan, Rahel Arnold, Fabio Carrara, Ujjwal Sharma)\n*   **BRIDGES:** Bridging Past and Present: Similarity Search for Digital Cultural Heritage and GLAM Content (organized by Rahel Arnold, Dominik Bönisch, Fabrizio Falchi, Peter Fornaro, Luca Rossetto, Heiko Schuldt)\n\n## Demonstration Papers\n\nSISAP 2025 invites novel, impactful demonstrations aligned with its topics of interest. Submissions (up to 8 pages, including references) must include a mandatory 1-page PDF appendix describing how the demo will be conducted on-site.\n\n## Doctoral Symposium Papers\n\nSISAP 2025 Doctoral Symposium provides a forum for PhD students to present their research ideas and receive feedback from senior members of the research community.\n\n## Submissions\n\nPapers have to be submitted in PDF format through EasyChair: [https://easychair.org/conferences/?conf=sisap2025](https://easychair.org/conferences/?conf=sisap2025)"
+}
+```

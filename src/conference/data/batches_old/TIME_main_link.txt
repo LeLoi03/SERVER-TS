@@ -1,0 +1,645 @@
+Conference TIME:
+
+31stInternational Symposium on 
+ Temporal Representation 
+ and Reasoning 
+ Oct. 28–30, 2024 
+ Montpellier, France 
+  
+ href="#Dates" - Dates | Program | Registration | Organization | Venue 
+ Introduction 
+ TIME has been for more than twenty years the only yearly multidisciplinary international event dedicated to the topic of time in computer science. The purpose of the symposium is to bring together active researchers in different research areas involving temporal representation and reasoning. The symposium also welcomes research papers on the related topics of spatial and spatio-temporal representation and reasoning. In the early years, most contributions came from the Artificial Intelligence community, but the number of contributions from other areas such as Temporal Logic and Verification and partly from Temporal Databases has been increasing in the last years. 
+ More details about TIME and the previous editions of this symposium can be found via the following link:href="https://time-symposium.org/" - https://time-symposium.org/
+. 
+ Call For Papers 
+ Topics 
+ In this symposium, in addition to theoretical and practical work inArtificial Intelligence,Databases, andLogic and Reasoning, we invite submissions focusing on the development, deployment, and evaluation ofMachine Learning Systemsthat fall under the scope of the symposium. Such systems papers will be evaluated primarily on the quality of the empirical evaluation and reusability. Topics for TIME 2024 include (but are not limited to): 
+ Spatial and temporal reasoning 
+ Time in natural language processing 
+ Reasoning about action and change 
+ Complex event recognition and forecasting 
+ Planning and planning languages 
+ Ontologies of time and space-time 
+ Belief and uncertainty in temporal knowledge 
+ Temporal learning and discovery 
+ Temporal data models and query languages 
+ Temporal query processing and indexing 
+ Temporal data mining 
+ Stream data management 
+ Spatio-temporal data management, including moving objects 
+ Data currency and expiration 
+ Indeterminate and imprecise temporal data 
+ Temporal constraints 
+ Specification and verification of systems 
+ Verification of software and web applications 
+ Synthesis and execution 
+ Model checking algorithms and implementations 
+ Temporal logics for infinite-state systems 
+ Runtime verification of temporal properties 
+ Temporal aspects of agent- and policy-based systems 
+ Temporal networks 
+ Temporal argumentation frameworks 
+ Automata-theoretic techniques for temporal reasoning 
+ Temporal knowledge graphs 
+ Time-series data management 
+ Events and time series explanations in healthcare 
+ The list above is by no means exhaustive, as the aim is to foster the debate around all aspects of the suggested topics. 
+ Finally, the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Submission 
+ The submission link is available athref="https://cmt3.research.microsoft.com/TIME2024/" - cmt3.research.microsoft.com/TIME2024/
+. 
+ Guidelines 
+ TIME 2024 accepts submissions in PDF format, no longer than 12 pages excluding references and appendix. The appendix is limited to 5 pages, and the reviewers may or may not take it into account for their recommendation. Submissions must be formatted following thehref="https://submission.dagstuhl.de/series/details/LIPIcs#author" - LIPIcs instructions
+and preferably redacted in LaTeX. 
+ TIME policy is single blind, so the names of the authors need not be hidden in the submitted draft. Members of the program committee are allowed to submit papers. Submitted papers will be refereed for quality, correctness, originality, and relevance to the symposium. 
+ Submissions to TIME 2024 must be original; parallel submissions of the same material to other conferences or journals are not allowed. At least one author of each accepted paper must register at the symposium and present the paper. 
+ All questions about submissions should be emailed to the organizers. 
+ Important Dates 
+ Be mindful of the following dates: 
+ June 21, 2024 | , | July 5, 2024 | : Symposium paper submission deadline 
+ August 2, 2024 | , | August 14, 2024 | : Paper acceptance/rejection notification date 
+ August 13, 2024 | , | August 23, 2024 | , | August 28, 2024 | : Camera-ready submission deadline 
+ October 18, 2024 | : Registration deadline 
+ October 28–30, 2024 | : Symposium Date 
+ Note:all deadlines are AoE (Anywhere on Earth). 
+ Proceedings 
+ Accepted papers will be presented at the symposium and included in the proceedings, which will be published byLIPIcs-Leibniz International Proceedings in Informatics. This is a series of high-quality peer-reviewed conference proceedings, and published according to the principle of OpenAccess. 
+ The proceedings volume of TIME 2024 is now officially published as volume 318 of LIPIcs and available at:www.dagstuhl.de/dagpub/978-3-95977-349-2 
+ In addition, we note again that the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Go back to the top 
+ Symposium Program 
+ Keynotes 
+  
+ Sophie Pinchinat 
+ Inria-IRISA, Rennes, France 
+  
+ Prof.Sophie Pinchinatis a Full Professor with the Department of Electrical Engineering and Computer Science of the University of Rennes 1 in France, and the Head of theLogicAresearch team at Inria-IRISA. Her main research interests are formal methods, artificial intelligence, multi-agent systems, security, planning, mathematical logic, automata, dynamic epistemic reasoning, and multi-player games.This keynote will be aEurAI Talk. 
+ Guido Sciavicco 
+ University of Ferrara, Italy 
+  
+ Prof.Guido Sciaviccois an Associate Professor with the Department of Mathematics and Computer Science of the University of Ferrara in Italy, and the Head of theApplied Computational Logic and Artificial Intelligence (ACLAI)lab. His main research interests are symbolic machine learning, mathematical logic, applications of artificial intelligence, and intelligent data analysis. 
+ Przemysław Wałęga 
+ Queen Mary University of London & University of Oxford, UK 
+  
+ Dr.Przemysław Wałęgais a Senior Lecturer at Queen Mary University of London and Senior Researcher at the University of Oxford in UK. His main research is focused on formal methods for reasoning about time, including such areas as knowledge representation and reasoning, logics for temporal reasoning, stream reasoning, and computational complexity analysis. 
+ Schedule 
+ 28 October 
+  
+ 9:00 | Opening: Welcome and Agenda 
+ Keynote 
+  
+ 9:30 | Strategic Reasoning under Imperfect Information with synchronous semantics |href="files/StrategicReasoningTIME2024.pdf" - pdf 
+ Sophie Pinchinat (Inria-IRISA, Rennes, France) 
+  
+ 10:30 | Coffee & Tea Break 
+ Session: Time in Logic 
+  
+ 11:00 | Fitting's Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation |href="files/IntervalTemporalLogicTableauSystemTIME2024.pdf" - pdf 
+ Guillermo Badia (University of Queensland, Australia) 
+ Carles Noguera (University of Siena, Italy) 
+ Alberto Paparella (University of Ferrara, Italy) 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Eduard Ionel Stan (Free University of Bozen-Bolzano, Italy) 
+  
+ 11:30 | Full Characterisation of Extended CTL* |href="files/ExtendedCTLstarTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Laura Bozzelli (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+ Adriano Peron (University of Trieste, Italy) 
+  
+ 12:00 | Model Checking Linear Temporal Properties on Polyhedral Systems |href="files/ModelCheckingPolyhedralSystemsTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Marco Faella (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+  
+ 12:30 | Lunch Break 
+ Keynote 
+  
+ 14:00 | Rule-Based Temporal Reasoning: Exploring DatalogMTL 
+ Przemysław Wałęga (Queen Mary University of London & University of Oxford, UK) 
+ Session: Applications involving Time 
+  
+ 15:00 | Extending the Range of Temporal Specifications of the Run-Time Event Calculus |href="files/ExtendindRunTimeEventCalculusTIME2024.pdf" - pdf 
+ Periklis Mantenoglou (NCSR Demokritos, Greece) 
+ Alexander Artikis (University of Piraeus, Greece) 
+  
+ 15:30 | Coffee & Tea Break 
+  
+ 16:00 | Open the Chests: An environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic |href="files/OpenTheChestsTIME2024.pdf" - pdf 
+ Ivelina Stoyanova (Thales, France) 
+ Nicolas Museux (Thales, France) 
+ Sao Mai Nguyen (ENSTA Paris, France) 
+ David Filliat (ENSTA Paris, France) 
+  
+ 16:30 | Real-Time Higher-Order Recursion Schemes |href="files/RecursionSchemesTIME2024.pdf" - pdf 
+ Eric Alsmann (University of Kassel, Germany) 
+ Florian Bruse (University of Kassel, Germany) 
+  
+ 17:00 | Reception: Wine & Cheese 
+ 29 October 
+ Keynote 
+  
+ 9:00 | A General Logical Approach to Learning from Time Series |href="files/LearningFromTimeSeriesTIME2024.pdf" - pdf 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Session: Time in AI/ML 
+  
+ 10:00 | Learning Temporal Properties from Event Logs via Sequential Analysis |href="files/LearningFromEventLogsTIME2024.pdf" - pdf 
+ Francesco Chiariello (CNRS-IRIT, University of Toulouse, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN |href="files/TimeSeriesAnomalyDetectionTIME2024.pdf" - pdf 
+ İbrahim Delibaşoğlu (Linköping University, Sweden & Sakarya University, Turkey) 
+ Fredrik Heintz (Linköping University, Sweden) 
+  
+ 11:30 | A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty |href="files/NegativeCyclesInSTNsWithUncertaintyTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:00 | Faster Algorithm for Converting an STNU into Minimal Dispatchable Form |href="files/ConvertingSTNUsIntoMinimalDispatchableFormTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:30 | Lunch Break 
+  
+ 14:00 | Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-agent Temporal Planning |href="files/InterdepedentSTNUsForTemporalPlanningTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+ Andrea Micheli (Bruno Kessler Foundation, Italy) 
+ Alessandro Cimatti (Bruno Kessler Foundation, Italy) 
+  
+ 14:30 | A Framework for Assessing Inconsistency in Disjunctive Temporal Problems 
+ Jean-François Condotta (Artois University, Lens, France) 
+ Yakoub Salhi (Artois University, Lens, France) 
+  
+ 15:00 | Free Time to Explore the City 
+  
+ Must-sees in Montpellier! 
+  
+ Montpellier Tourist Map 
+  
+ 19:00 | Dinner 
+  
+ La Closerie Restaurant(location) 
+ 30 October 
+ Session: Time in KR 
+  
+ 9:00 | Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles |href="files/AgileControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Johann Eder (University of Klagenfurt, Austria) 
+ Roberto Posenato (University of Verona, Italy) 
+ Carlo Combi (University of Verona, Italy) 
+ Marco Franceschetti (University of St. Gallen, Switzerland) 
+ Franziska S. Hollauf (University of Klagenfurt, Austria) 
+  
+ 9:30 | A more efficient and informed algorithm to check Weak Controllability of Simple Temporal Networks |href="files/WeakControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+  
+ 10:00 | What killed the cat? Towards a logical formalization of curiosity (and suspense, and surprise) in Narratives |href="files/WhatKilledTheCatTIME2024.pdf" - pdf 
+ Florence Dupin de Saint-Cyr (Lab-STICC, France) 
+ Anne-Gwenn Bosser (Lab-STICC, France) 
+ Benjamin Callac (Lab-STICC, France) 
+ Éric Maisel (Lab-STICC, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Robust Execution of Probabilistic STNs |href="files/RobustExecutionOfProbabilisticSTNsTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 11:30 | FastMinTC+: a Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks |href="files/FastMinTCplusTIME2024.pptx" - pptx 
+ Giorgio Lazzarinetti (University of Milano-Bicocca, Italy) 
+ Riccardo Dondi (University of Bergamo, Italy) 
+ Italo Zoppis (University of Milano-Bicocca, Italy) 
+ Sara Manzoni (University of Milano-Bicocca, Italy) 
+ Wrap-Up 
+  
+ 12:00 | Discussion & Closing Remarks 
+  
+ 12:30 | Lunch & Farewell 
+ Go back to the top 
+ Registration 
+ Registration is now open athttps://um.azur-colloque.fr/inscription/en/47/inscription. 
+ At least one author of each accepted paper must register as aregularattendee (this option appears as Lecturers/researchers on Azur-Colloque) and attend the symposium to present their work. 
+ Registration fees are 330 euros and 220 euros including tax for regular and student attendees respectively, and they cover: 
+ Participation at the conference 
+ 4 Coffee and tea breaks 
+ 3 Lunches 
+ 1 Welcome Reception: Wine & Cheese 
+ 1 Guided city tour 
+ 1 Social dinner 
+ Proceedings 
+ Please register by 18 October at the latest. 
+ Go back to the top 
+ Organization 
+ Programme Committee Chairs 
+  
+ Prof.Michael Sioutisis a Junior Professor with the LIRMM UMR 5506 laboratory and the Department of Computer Science of the University of Montpellier in France. His general interests lie in Hybrid Artificial Intelligence, Spatio-Temporal Reasoning, Data Mining, Semantic Web, Constraint Programming, and Logic. | Prof.Pietro Salais an Associate Professor with the Department of Computer Science of the University of Verona in Italy. His general interests lie in Temporal Logics, Temporal Data-Mining and its application to Biomedical domains, and Modelling and checking temporal properties in Business Processes. | Prof.Fusheng Wangis a Professor with the Departments of Biomedical Informatics and Computer Science of Stony Brook University in the US. His general interests lie in Spatial and Temporal Data Management, Medical Imaging Informatics, AI in Healthcare, Population Health, and Assistive Technologies. 
+ Program Committee 
+ Spatio-temporal Representation and Reasoning 
+ Michael Sioutis | , University of Montpellier, France (co-chair) 
+ Anastasia Paparrizou | , CNRS-LIRMM, France | href="https://www.researchgate.net/profile/Anastasia-Paparrizou" - 
+ Esra Erdem | , Sabancı University, Istanbul, Turkey 
+ Farimah Poursafaei | , Mila, Quebec AI Institute & McGill University, Canada 
+ Kathleen Stewart | , University of Maryland, US 
+ LuoYi Fu | , Shanghai Jiao Tong University, China 
+ Maria Chiara Meo | , "G. d'Annunzio" University of Chieti-Pescara, Italy 
+ María Laura Cobo | , National University of the South, Argentina 
+ Ruizhe Ma | , University of Massachusetts Lowell, US 
+ Silvia García Méndez | , University of Vigo, Spain 
+ Zina Ibrahim | , King's College London, UK 
+ Zoe Falomir | , Umeå University, Sweden 
+ Alexandros Artikis | , NCSR Demokritos & University of Piraeus, Greece 
+ Luyi Bai | , Northeastern University, China & University of Leicester, UK | href="https://www.researchgate.net/profile/Luyi-Bai" - 
+ Nassim Belmecheri | , Simula Research Laboratory, Oslo, Norway 
+ Thomas Guyet | , Inria-AIstroSight, Lyon, France 
+ Victor Lagerkvist | , Linköping University, Sweden 
+ Yakoub Salhi | , Artois University, Lens, France 
+ Temporal Logic and Verification 
+ Pietro Sala | , University of Verona, Italy (co-chair) 
+ Béatrice Bérard | , Sorbonne University, Paris, France 
+ Munyque Mittelmann | , University of Naples Federico II, Italy 
+ Orna Kupferman | , Hebrew University, Jerusalem, Israel 
+ Shufang Zhu | , University of Oxford, UK 
+ Christopher Hahn | , Google LLC 
+ Davide Catta | , University of Naples Federico II, Italy | href="https://www.researchgate.net/profile/Davide-Catta" - 
+ Emilio Muñoz-Velasco | , University of Málaga, Spain 
+ Florian Bruse | , University of Kassel, Germany 
+ Jean-François Condotta | , Artois University, Lens, France 
+ Jianwen Li | , East China Normal University, Shanghai, China 
+ Martin Lange | , University of Kassel, Germany 
+ Nicola Gigante | , Free University of Bozen-Bolzano, Italy 
+ Philippe Balbiani | , CNRS-IRIT, France 
+ S Akshay | , Indian Institute of Technology Bombay, India 
+ Planning and Temporal Databases 
+ Fusheng Wang | , Stony Brook University, New York, US (co-chair) 
+ Alia Abdelmoty | , Cardiff University, Wales 
+ Beatrice Amico | , University of Verona, Italy 
+ Cindy Chen | , University of Massachusetts Lowell, US 
+ Federica Mandreoli | , University of Modena and Reggio Emilia, Italy 
+ Carlo Combi | , University of Verona, Italy 
+ Christian Molinaro | , University of Calabria, Arcavacata, Italy 
+ Enrico Scala | , University of Brescia, Italy 
+ Francesco Parisi | , University of Calabria, Italy 
+ Jaewook Byun | , Sejong University, Seoul, South Korea 
+ Johann Eder | , University of Klagenfurt, Austria 
+ John Grant | , University of Maryland, US 
+ Manolis Koubarakis | , National and Kapodistrian University of Athens, Greece 
+ Matteo Zavatteri | , University of Padua, Italy 
+ Peter Jonsson | , Linköping University, Sweden 
+ Roberto Posenato | , University of Verona, Italy 
+ Tomi Janhunen | , Tampere University, Finland 
+ Local Organizing Committee 
+ Amandine Sanchez | , University of Montpellier, France 
+ Elena Demchenko | , LIRMM UMR 5506, France 
+ Olena Tirefort | , LIRMM UMR 5506, France 
+ Virginie Fèche | , LIRMM UMR 5506, France (co-chair) 
+ Maximos Skandalis | , LIRMM UMR 5506, France (co-chair) 
+ Go back to the top 
+ Venue 
+ The symposium will take place at Amphithéâtre 1, Bâtiment 36, on theCampus Trioletof the University of Montpellier, in Montpellier, France. 
+ Further, on-site registration and coffee and tea breaks will take place at the hall just outside of the amphitheatre, and lunches will be offered at theRestaurant administratif Minerve (APUM)in the northwestern part of the campus (a 5-min walk from the amphitheatre). 
+ The Campus Triolet is located about 300m from tram station "Universités des Sciences et Lettres", served by (blue)line 1. 
+ A detailed guide forgetting to Montpellieris also available. 
+ View Larger Map 
+ Accommodation 
+ Some possible hotels for your stay at Montpellier are provided below: 
+ Grand Hôtel du Midi | (4 stars) 
+ Hôtel du Palais | (3 stars) 
+ Hotel Ulysse Montpellier Centre Corum | (3 stars) 
+ Best Western Hotel Le Guilhem | (3 stars) 
+ ibis Styles Montpellier Centre Comédie | (3 stars) 
+ Hôtel Les Troènes | (2 stars) 
+ Hôtel Lapeyronie | (2 stars) 
+ Go back to the top 
+ © Symposium Organizers | Design byMike Pierce| Banner photo byJorge Franganillo 
+
+Sponsored byLIRMM UMR 5506,Pôle MIPS, theUniversity of Verona, andEurAI 
+
+Call for Papers information:
+Skip to main contentAbout CMT 
+ href="https://cmt3.research.microsoft.com/docs/help/index.html" - Docs 
+ Microsoft CMT 
+ Login failed:Clickhref="/User/Verify?ReturnUrl=%2FTIME2024%2F" - here
+to verify your email.Email*Password*Log InForgot your password?New to CMT?href="/User/Register?ReturnUrl=%2FTIME2024%2F" - Register
+31st International Symposium on Temporal Representation and Reasoning 
+ © 2025 Microsoft Corporation 
+ About CMT|href="https://cmt3.research.microsoft.com/docs/help/index.html" - Docs
+|Terms of Use|Privacy & Cookies|Consumer Health Privacy|href="https://cmt3.research.microsoft.com/CMTSRM/" - Request Free Site 
+
+Important Dates information:
+31stInternational Symposium on 
+ Temporal Representation 
+ and Reasoning 
+ Oct. 28–30, 2024 
+ Montpellier, France 
+  
+ href="#Dates" - Dates | Program | Registration | Organization | Venue 
+ Introduction 
+ TIME has been for more than twenty years the only yearly multidisciplinary international event dedicated to the topic of time in computer science. The purpose of the symposium is to bring together active researchers in different research areas involving temporal representation and reasoning. The symposium also welcomes research papers on the related topics of spatial and spatio-temporal representation and reasoning. In the early years, most contributions came from the Artificial Intelligence community, but the number of contributions from other areas such as Temporal Logic and Verification and partly from Temporal Databases has been increasing in the last years. 
+ More details about TIME and the previous editions of this symposium can be found via the following link:href="https://time-symposium.org/" - https://time-symposium.org/
+. 
+ Call For Papers 
+ Topics 
+ In this symposium, in addition to theoretical and practical work inArtificial Intelligence,Databases, andLogic and Reasoning, we invite submissions focusing on the development, deployment, and evaluation ofMachine Learning Systemsthat fall under the scope of the symposium. Such systems papers will be evaluated primarily on the quality of the empirical evaluation and reusability. Topics for TIME 2024 include (but are not limited to): 
+ Spatial and temporal reasoning 
+ Time in natural language processing 
+ Reasoning about action and change 
+ Complex event recognition and forecasting 
+ Planning and planning languages 
+ Ontologies of time and space-time 
+ Belief and uncertainty in temporal knowledge 
+ Temporal learning and discovery 
+ Temporal data models and query languages 
+ Temporal query processing and indexing 
+ Temporal data mining 
+ Stream data management 
+ Spatio-temporal data management, including moving objects 
+ Data currency and expiration 
+ Indeterminate and imprecise temporal data 
+ Temporal constraints 
+ Specification and verification of systems 
+ Verification of software and web applications 
+ Synthesis and execution 
+ Model checking algorithms and implementations 
+ Temporal logics for infinite-state systems 
+ Runtime verification of temporal properties 
+ Temporal aspects of agent- and policy-based systems 
+ Temporal networks 
+ Temporal argumentation frameworks 
+ Automata-theoretic techniques for temporal reasoning 
+ Temporal knowledge graphs 
+ Time-series data management 
+ Events and time series explanations in healthcare 
+ The list above is by no means exhaustive, as the aim is to foster the debate around all aspects of the suggested topics. 
+ Finally, the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Submission 
+ The submission link is available athref="https://cmt3.research.microsoft.com/TIME2024/" - cmt3.research.microsoft.com/TIME2024/
+. 
+ Guidelines 
+ TIME 2024 accepts submissions in PDF format, no longer than 12 pages excluding references and appendix. The appendix is limited to 5 pages, and the reviewers may or may not take it into account for their recommendation. Submissions must be formatted following thehref="https://submission.dagstuhl.de/series/details/LIPIcs#author" - LIPIcs instructions
+and preferably redacted in LaTeX. 
+ TIME policy is single blind, so the names of the authors need not be hidden in the submitted draft. Members of the program committee are allowed to submit papers. Submitted papers will be refereed for quality, correctness, originality, and relevance to the symposium. 
+ Submissions to TIME 2024 must be original; parallel submissions of the same material to other conferences or journals are not allowed. At least one author of each accepted paper must register at the symposium and present the paper. 
+ All questions about submissions should be emailed to the organizers. 
+ Important Dates 
+ Be mindful of the following dates: 
+ June 21, 2024 | , | July 5, 2024 | : Symposium paper submission deadline 
+ August 2, 2024 | , | August 14, 2024 | : Paper acceptance/rejection notification date 
+ August 13, 2024 | , | August 23, 2024 | , | August 28, 2024 | : Camera-ready submission deadline 
+ October 18, 2024 | : Registration deadline 
+ October 28–30, 2024 | : Symposium Date 
+ Note:all deadlines are AoE (Anywhere on Earth). 
+ Proceedings 
+ Accepted papers will be presented at the symposium and included in the proceedings, which will be published byLIPIcs-Leibniz International Proceedings in Informatics. This is a series of high-quality peer-reviewed conference proceedings, and published according to the principle of OpenAccess. 
+ The proceedings volume of TIME 2024 is now officially published as volume 318 of LIPIcs and available at:www.dagstuhl.de/dagpub/978-3-95977-349-2 
+ In addition, we note again that the authors of the top-ranked papers will be invited to submit an extended version of their contribution to aspecial issuein the journal ofInformation and Computation; more details will be provided in due time. 
+ Go back to the top 
+ Symposium Program 
+ Keynotes 
+  
+ Sophie Pinchinat 
+ Inria-IRISA, Rennes, France 
+  
+ Prof.Sophie Pinchinatis a Full Professor with the Department of Electrical Engineering and Computer Science of the University of Rennes 1 in France, and the Head of theLogicAresearch team at Inria-IRISA. Her main research interests are formal methods, artificial intelligence, multi-agent systems, security, planning, mathematical logic, automata, dynamic epistemic reasoning, and multi-player games.This keynote will be aEurAI Talk. 
+ Guido Sciavicco 
+ University of Ferrara, Italy 
+  
+ Prof.Guido Sciaviccois an Associate Professor with the Department of Mathematics and Computer Science of the University of Ferrara in Italy, and the Head of theApplied Computational Logic and Artificial Intelligence (ACLAI)lab. His main research interests are symbolic machine learning, mathematical logic, applications of artificial intelligence, and intelligent data analysis. 
+ Przemysław Wałęga 
+ Queen Mary University of London & University of Oxford, UK 
+  
+ Dr.Przemysław Wałęgais a Senior Lecturer at Queen Mary University of London and Senior Researcher at the University of Oxford in UK. His main research is focused on formal methods for reasoning about time, including such areas as knowledge representation and reasoning, logics for temporal reasoning, stream reasoning, and computational complexity analysis. 
+ Schedule 
+ 28 October 
+  
+ 9:00 | Opening: Welcome and Agenda 
+ Keynote 
+  
+ 9:30 | Strategic Reasoning under Imperfect Information with synchronous semantics |href="files/StrategicReasoningTIME2024.pdf" - pdf 
+ Sophie Pinchinat (Inria-IRISA, Rennes, France) 
+  
+ 10:30 | Coffee & Tea Break 
+ Session: Time in Logic 
+  
+ 11:00 | Fitting's Style Many-Valued Interval Temporal Logic Tableau System: Theory and Implementation |href="files/IntervalTemporalLogicTableauSystemTIME2024.pdf" - pdf 
+ Guillermo Badia (University of Queensland, Australia) 
+ Carles Noguera (University of Siena, Italy) 
+ Alberto Paparella (University of Ferrara, Italy) 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Eduard Ionel Stan (Free University of Bozen-Bolzano, Italy) 
+  
+ 11:30 | Full Characterisation of Extended CTL* |href="files/ExtendedCTLstarTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Laura Bozzelli (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+ Adriano Peron (University of Trieste, Italy) 
+  
+ 12:00 | Model Checking Linear Temporal Properties on Polyhedral Systems |href="files/ModelCheckingPolyhedralSystemsTIME2024.pdf" - pdf 
+ Massimo Benerecetti (University of Naples Federico II, Italy) 
+ Marco Faella (University of Naples Federico II, Italy) 
+ Fabio Mogavero (University of Naples Federico II, Italy) 
+  
+ 12:30 | Lunch Break 
+ Keynote 
+  
+ 14:00 | Rule-Based Temporal Reasoning: Exploring DatalogMTL 
+ Przemysław Wałęga (Queen Mary University of London & University of Oxford, UK) 
+ Session: Applications involving Time 
+  
+ 15:00 | Extending the Range of Temporal Specifications of the Run-Time Event Calculus |href="files/ExtendindRunTimeEventCalculusTIME2024.pdf" - pdf 
+ Periklis Mantenoglou (NCSR Demokritos, Greece) 
+ Alexander Artikis (University of Piraeus, Greece) 
+  
+ 15:30 | Coffee & Tea Break 
+  
+ 16:00 | Open the Chests: An environment for Activity Recognition and Sequential Decision Problems Using Temporal Logic |href="files/OpenTheChestsTIME2024.pdf" - pdf 
+ Ivelina Stoyanova (Thales, France) 
+ Nicolas Museux (Thales, France) 
+ Sao Mai Nguyen (ENSTA Paris, France) 
+ David Filliat (ENSTA Paris, France) 
+  
+ 16:30 | Real-Time Higher-Order Recursion Schemes |href="files/RecursionSchemesTIME2024.pdf" - pdf 
+ Eric Alsmann (University of Kassel, Germany) 
+ Florian Bruse (University of Kassel, Germany) 
+  
+ 17:00 | Reception: Wine & Cheese 
+ 29 October 
+ Keynote 
+  
+ 9:00 | A General Logical Approach to Learning from Time Series |href="files/LearningFromTimeSeriesTIME2024.pdf" - pdf 
+ Guido Sciavicco (University of Ferrara, Italy) 
+ Session: Time in AI/ML 
+  
+ 10:00 | Learning Temporal Properties from Event Logs via Sequential Analysis |href="files/LearningFromEventLogsTIME2024.pdf" - pdf 
+ Francesco Chiariello (CNRS-IRIT, University of Toulouse, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Time Series Anomaly Detection Leveraging MSE Feedback with AutoEncoder and RNN |href="files/TimeSeriesAnomalyDetectionTIME2024.pdf" - pdf 
+ İbrahim Delibaşoğlu (Linköping University, Sweden & Sakarya University, Turkey) 
+ Fredrik Heintz (Linköping University, Sweden) 
+  
+ 11:30 | A Faster Algorithm for Finding Negative Cycles in Simple Temporal Networks with Uncertainty |href="files/NegativeCyclesInSTNsWithUncertaintyTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:00 | Faster Algorithm for Converting an STNU into Minimal Dispatchable Form |href="files/ConvertingSTNUsIntoMinimalDispatchableFormTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 12:30 | Lunch Break 
+  
+ 14:00 | Introducing Interdependent Simple Temporal Networks with Uncertainty for Multi-agent Temporal Planning |href="files/InterdepedentSTNUsForTemporalPlanningTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+ Andrea Micheli (Bruno Kessler Foundation, Italy) 
+ Alessandro Cimatti (Bruno Kessler Foundation, Italy) 
+  
+ 14:30 | A Framework for Assessing Inconsistency in Disjunctive Temporal Problems 
+ Jean-François Condotta (Artois University, Lens, France) 
+ Yakoub Salhi (Artois University, Lens, France) 
+  
+ 15:00 | Free Time to Explore the City 
+  
+ Must-sees in Montpellier! 
+  
+ Montpellier Tourist Map 
+  
+ 19:00 | Dinner 
+  
+ La Closerie Restaurant(location) 
+ 30 October 
+ Session: Time in KR 
+  
+ 9:00 | Agile Controllability of Simple Temporal Networks with Uncertainty and Oracles |href="files/AgileControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Johann Eder (University of Klagenfurt, Austria) 
+ Roberto Posenato (University of Verona, Italy) 
+ Carlo Combi (University of Verona, Italy) 
+ Marco Franceschetti (University of St. Gallen, Switzerland) 
+ Franziska S. Hollauf (University of Klagenfurt, Austria) 
+  
+ 9:30 | A more efficient and informed algorithm to check Weak Controllability of Simple Temporal Networks |href="files/WeakControllabilityOfSTNUsTIME2024.pdf" - pdf 
+ Ajdin Sumic (Technological University of Tarbes, France) 
+ Thierry Vidal (Technological University of Tarbes, France) 
+  
+ 10:00 | What killed the cat? Towards a logical formalization of curiosity (and suspense, and surprise) in Narratives |href="files/WhatKilledTheCatTIME2024.pdf" - pdf 
+ Florence Dupin de Saint-Cyr (Lab-STICC, France) 
+ Anne-Gwenn Bosser (Lab-STICC, France) 
+ Benjamin Callac (Lab-STICC, France) 
+ Éric Maisel (Lab-STICC, France) 
+  
+ 10:30 | Coffee & Tea Break 
+  
+ 11:00 | Robust Execution of Probabilistic STNs |href="files/RobustExecutionOfProbabilisticSTNsTIME2024.pdf" - pdf 
+ Luke Hunsberger (Vassar College, US) 
+ Roberto Posenato (University of Verona, Italy) 
+  
+ 11:30 | FastMinTC+: a Fast and Effective Heuristic for Minimum Timeline Cover on Temporal Networks |href="files/FastMinTCplusTIME2024.pptx" - pptx 
+ Giorgio Lazzarinetti (University of Milano-Bicocca, Italy) 
+ Riccardo Dondi (University of Bergamo, Italy) 
+ Italo Zoppis (University of Milano-Bicocca, Italy) 
+ Sara Manzoni (University of Milano-Bicocca, Italy) 
+ Wrap-Up 
+  
+ 12:00 | Discussion & Closing Remarks 
+  
+ 12:30 | Lunch & Farewell 
+ Go back to the top 
+ Registration 
+ Registration is now open athttps://um.azur-colloque.fr/inscription/en/47/inscription. 
+ At least one author of each accepted paper must register as aregularattendee (this option appears as Lecturers/researchers on Azur-Colloque) and attend the symposium to present their work. 
+ Registration fees are 330 euros and 220 euros including tax for regular and student attendees respectively, and they cover: 
+ Participation at the conference 
+ 4 Coffee and tea breaks 
+ 3 Lunches 
+ 1 Welcome Reception: Wine & Cheese 
+ 1 Guided city tour 
+ 1 Social dinner 
+ Proceedings 
+ Please register by 18 October at the latest. 
+ Go back to the top 
+ Organization 
+ Programme Committee Chairs 
+  
+ Prof.Michael Sioutisis a Junior Professor with the LIRMM UMR 5506 laboratory and the Department of Computer Science of the University of Montpellier in France. His general interests lie in Hybrid Artificial Intelligence, Spatio-Temporal Reasoning, Data Mining, Semantic Web, Constraint Programming, and Logic. | Prof.Pietro Salais an Associate Professor with the Department of Computer Science of the University of Verona in Italy. His general interests lie in Temporal Logics, Temporal Data-Mining and its application to Biomedical domains, and Modelling and checking temporal properties in Business Processes. | Prof.Fusheng Wangis a Professor with the Departments of Biomedical Informatics and Computer Science of Stony Brook University in the US. His general interests lie in Spatial and Temporal Data Management, Medical Imaging Informatics, AI in Healthcare, Population Health, and Assistive Technologies. 
+ Program Committee 
+ Spatio-temporal Representation and Reasoning 
+ Michael Sioutis | , University of Montpellier, France (co-chair) 
+ Anastasia Paparrizou | , CNRS-LIRMM, France | href="https://www.researchgate.net/profile/Anastasia-Paparrizou" - 
+ Esra Erdem | , Sabancı University, Istanbul, Turkey 
+ Farimah Poursafaei | , Mila, Quebec AI Institute & McGill University, Canada 
+ Kathleen Stewart | , University of Maryland, US 
+ LuoYi Fu | , Shanghai Jiao Tong University, China 
+ Maria Chiara Meo | , "G. d'Annunzio" University of Chieti-Pescara, Italy 
+ María Laura Cobo | , National University of the South, Argentina 
+ Ruizhe Ma | , University of Massachusetts Lowell, US 
+ Silvia García Méndez | , University of Vigo, Spain 
+ Zina Ibrahim | , King's College London, UK 
+ Zoe Falomir | , Umeå University, Sweden 
+ Alexandros Artikis | , NCSR Demokritos & University of Piraeus, Greece 
+ Luyi Bai | , Northeastern University, China & University of Leicester, UK | href="https://www.researchgate.net/profile/Luyi-Bai" - 
+ Nassim Belmecheri | , Simula Research Laboratory, Oslo, Norway 
+ Thomas Guyet | , Inria-AIstroSight, Lyon, France 
+ Victor Lagerkvist | , Linköping University, Sweden 
+ Yakoub Salhi | , Artois University, Lens, France 
+ Temporal Logic and Verification 
+ Pietro Sala | , University of Verona, Italy (co-chair) 
+ Béatrice Bérard | , Sorbonne University, Paris, France 
+ Munyque Mittelmann | , University of Naples Federico II, Italy 
+ Orna Kupferman | , Hebrew University, Jerusalem, Israel 
+ Shufang Zhu | , University of Oxford, UK 
+ Christopher Hahn | , Google LLC 
+ Davide Catta | , University of Naples Federico II, Italy | href="https://www.researchgate.net/profile/Davide-Catta" - 
+ Emilio Muñoz-Velasco | , University of Málaga, Spain 
+ Florian Bruse | , University of Kassel, Germany 
+ Jean-François Condotta | , Artois University, Lens, France 
+ Jianwen Li | , East China Normal University, Shanghai, China 
+ Martin Lange | , University of Kassel, Germany 
+ Nicola Gigante | , Free University of Bozen-Bolzano, Italy 
+ Philippe Balbiani | , CNRS-IRIT, France 
+ S Akshay | , Indian Institute of Technology Bombay, India 
+ Planning and Temporal Databases 
+ Fusheng Wang | , Stony Brook University, New York, US (co-chair) 
+ Alia Abdelmoty | , Cardiff University, Wales 
+ Beatrice Amico | , University of Verona, Italy 
+ Cindy Chen | , University of Massachusetts Lowell, US 
+ Federica Mandreoli | , University of Modena and Reggio Emilia, Italy 
+ Carlo Combi | , University of Verona, Italy 
+ Christian Molinaro | , University of Calabria, Arcavacata, Italy 
+ Enrico Scala | , University of Brescia, Italy 
+ Francesco Parisi | , University of Calabria, Italy 
+ Jaewook Byun | , Sejong University, Seoul, South Korea 
+ Johann Eder | , University of Klagenfurt, Austria 
+ John Grant | , University of Maryland, US 
+ Manolis Koubarakis | , National and Kapodistrian University of Athens, Greece 
+ Matteo Zavatteri | , University of Padua, Italy 
+ Peter Jonsson | , Linköping University, Sweden 
+ Roberto Posenato | , University of Verona, Italy 
+ Tomi Janhunen | , Tampere University, Finland 
+ Local Organizing Committee 
+ Amandine Sanchez | , University of Montpellier, France 
+ Elena Demchenko | , LIRMM UMR 5506, France 
+ Olena Tirefort | , LIRMM UMR 5506, France 
+ Virginie Fèche | , LIRMM UMR 5506, France (co-chair) 
+ Maximos Skandalis | , LIRMM UMR 5506, France (co-chair) 
+ Go back to the top 
+ Venue 
+ The symposium will take place at Amphithéâtre 1, Bâtiment 36, on theCampus Trioletof the University of Montpellier, in Montpellier, France. 
+ Further, on-site registration and coffee and tea breaks will take place at the hall just outside of the amphitheatre, and lunches will be offered at theRestaurant administratif Minerve (APUM)in the northwestern part of the campus (a 5-min walk from the amphitheatre). 
+ The Campus Triolet is located about 300m from tram station "Universités des Sciences et Lettres", served by (blue)line 1. 
+ A detailed guide forgetting to Montpellieris also available. 
+ View Larger Map 
+ Accommodation 
+ Some possible hotels for your stay at Montpellier are provided below: 
+ Grand Hôtel du Midi | (4 stars) 
+ Hôtel du Palais | (3 stars) 
+ Hotel Ulysse Montpellier Centre Corum | (3 stars) 
+ Best Western Hotel Le Guilhem | (3 stars) 
+ ibis Styles Montpellier Centre Comédie | (3 stars) 
+ Hôtel Les Troènes | (2 stars) 
+ Hôtel Lapeyronie | (2 stars) 
+ Go back to the top 
+ © Symposium Organizers | Design byMike Pierce| Banner photo byJorge Franganillo 
+
+Sponsored byLIRMM UMR 5506,Pôle MIPS, theUniversity of Verona, andEurAI

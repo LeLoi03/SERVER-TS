@@ -1,0 +1,500 @@
+Conference full name: ACM Workshop on Hot Topics in Networks (HOTNETS)
+
+1. Website of HOTNETS_3: https://conferences.sigcomm.org/hotnets/2024/
+Website information of HOTNETS_3:
+
+HotNets 2024: Twenty-Third ACM Workshop on Hot Topics in Networks 
+ November 18-19, 2024 — Irvine, California, USA 
+ Home 
+ Committees 
+ Policies 
+ href="cfp.html" - Call for Papers 
+ href="cfstudenttalks.html" - Call for Student Talks 
+ Program 
+ Airports and Hotels 
+ Venue and Parking 
+ Visa Information 
+ Overview 
+ The Twenty-third ACM Workshop on Hot Topics in Networks (HotNets 2024) will bring together researchers in computer networks and systems to engage in a lively debate on the theory and practice of networking. HotNets provides a venue for discussing innovative ideas and for debating future research agendas in networking. 
+ Location 
+ Interdisciplinary Science and Engineering Building (ISEB) at UC Irvine 
+ 419 S. Circle View Drive, Irvine, California, USA 92697 
+ Room 1010 (Auditorium) 
+ ISEB is building 419 on the UCI map 
+ Open in Google MapsRemote Attendance:HotNets 2024 will be broadcasted live through a Zoom Webinar. 
+ Attendees (View-Only Audience):If you want to attend the webinar, please registerhereto receive the Zoom link. 
+ Authors/Presenters:On Friday Nov. 15, you will receive a special Zoom link to join the webinar as presenter. Do NOT register or use the link for View-Only attendees above, as this could place you in the View-Only list and interfere with your ability to present. 
+ Event Information 
+ HotNets 2024 will be an in-person event. 
+ HotNets Lottery 
+ If you would like to register for the HotNets registration lottery, please fill outthis formbyFriday, October 4, 2024 (AoE). 
+ Important Dates 
+  
+ Paper submission deadline: | June 27, 2024 (23:59 AoE) 
+ Author notification: | September 13, 2024 
+ Camera-ready deadline: | October 22, 2024 
+ Registration: | Now open 
+ Workshop: | November 18-19, 2024 
+ Sponsored By 
+  
+ ACM SIGCOMM 
+ Corporate Supporters 
+  
+ href="https://research.google" - 
+ (Silver) | (Bronze) | (Bronze) | (Bronze)
+
+2. Website of HOTNETS_3: https://conferences.sigcomm.org/hotnets/2024/cfp.html
+Website information of HOTNETS_3:
+
+HotNets 2024: Twenty-Third ACM Workshop on Hot Topics in Networks 
+ November 18-19, 2024 — Irvine, California, USA 
+ Home 
+ Committees 
+ Policies 
+ href="cfp.html" - Call for Papers 
+ href="cfstudenttalks.html" - Call for Student Talks 
+ Program 
+ Airports and Hotels 
+ Venue and Parking 
+ Visa Information 
+ Call for Papers 
+ The 23rd ACM Workshop on Hot Topics in Networks (HotNets 2024) will bring together researchers to engage in a lively debate on the theory and practice of computer networking and networked systems. HotNets provides a venue to discuss innovative ideas and debate future research agendas for the field. 
+ We invite researchers and practitioners to submit short position papers. We encourage submissions that identify fundamental open questions, advocate for new approaches, offer constructive critiques of the state of networking research, re-frame or debunk existing work, report unexpected early results from a deployment, report promising but unproven ideas, or propose new evaluation methods. Authors need not support their ideas with full evaluations; we consider well-reasoned arguments or preliminary evaluations sufficient support for the possibility of the paper’s claims in HotNets. 
+ We seek early-stage work, where the authors can benefit from community feedback. An ideal submission has the potential to open a line of inquiry for the community that results in multiple conference papers in related venues (SIGCOMM, NSDI, CoNEXT, SOSP, OSDI, MobiCom, MobiSys, etc.), rather than a single follow-on conference paper. We strongly discourage “conference papers in the miniature,” and the program committee will explicitly favor early work and papers likely to stimulate reflection and discussion over something that is ready for publication at a conference. Finished work that fits in a short paper is likely a better fit with the short-paper tracks at CoNEXT or IMC. 
+ HotNets takes a broad view of networking research. The scope includes new ideas that relate to (but not limited to) mobile, wide-area, data-center, home, and enterprise networks and that use a variety of link technologies (e.g. wired, wireless, optical, visual, and acoustic), as well as social networks and network architecture. HotNets encompasses all aspects of networks, which include (but is not limited to) packet-processing and transmission hardware and software, virtualization, mobility, provisioning and resource management, performance, energy consumption, sustainability, topology, robustness and security, measurement, diagnosis, verification, privacy, economics and evolution, theory, usability, machine learning, and interactions with applications. 
+ The program committee will select position papers based on originality, likelihood to stimulate insightful discussion, and technical merit. Accepted papers will be posted online prior to the workshop and will be published in the ACM Digital Library to facilitate wide dissemination of the ideas discussed at the workshop. 
+ Policy on Concurrent Submissions 
+ Concurrent submissions to HotNets 2024 and any other peer-reviewed venue that cover the same work (differences in the degree of detail given the two venues’ length limits notwithstanding) are prohibited, and will result in the immediate rejection of the HotNets submission in question. “Concurrent” means any other peer-reviewed venue whose reviewing period (i.e., between submission and notification) overlaps with that of HotNets. The “same work” means, for example, a submission overlapping significantly in content with a conference submission. However, a position paper submitted to HotNets (e.g., that reflects broadly on the state of some aspect of the field, adopts a position as to how the field should move forward, or articulates a broad avenue of future work) will not be considered the “same work” as a conference-length paper on a specific system that addresses a point under the broad umbrella covered by the position paper. Authors with questions about this policy should contact the PC co-chairs before submitting. 
+ Ethical Concerns 
+ As part of the submission process, authors must attest that their work complies with all applicable ethical standards of their home institution(s), including, but not limited to privacy policies and policies on experiments involving humans. Note that submitting research for approval by one’s institution’s ethics review body is necessary, but not sufficient – in cases where the PC has concerns about the ethics of the work in a submission, the PC will have its own discussion of the ethics of that work. The PC takes a broad view of what constitutes an ethical concern, and authors agree to be available at any time during the review process to rapidly respond to queries from the PC chairs regarding ethical standards. 
+ Workshop Participation 
+ HotNets attendance is limited to roughly 90 people in person to facilitate a lively discussion (potentially with additional virtual participants). In-person invitations will be allocated first to one author of each paper, HotNets organizers and committee members, and conference sponsors. We require the paper presentations to be in-person (if authors have any concerns about this, they are welcome to contact the PC chairs). To promote an inclusive workshop, HotNets will also make a limited number of open registration slots for in-person attendance available to the community. 
+ Submission and Formatting 
+ Papers should be formatted according to the two-column ACM proceedings format. Each paper should have no more than 6 pages, excluding references, in 10 point font. There is no limit on the page count for references, however appendices are not allowed. Papers must contain novel ideas and must differ significantly in content from previously published papers. 
+ All submissions must be blind: they must not indicate the names or affiliations of the authors in the paper. Only electronic submissions in PDF will be accepted. Submissions must be written in English, render without error using standard tools (e.g., Acrobat Reader), and print on US Letter paper. Each reference must list all authors of the paper (i.e., do not use "et al."). The citations should be in numeric style, e.g., [52]. Please make sure that figures and tables are legible, even after the paper is printed in gray-scale. Papers that exceed the length requirement or deviate from the expected format will be rejected. Thishref="/hotnets/2024/docs/hotnets24-template.zip" - archive
+contains a LaTeX class file that follows the prescribed submission format. Thehotnets24-template.texincluded in the archive has the correct defaults for HotNets 2024 submissions. Specifically, the first two lines should be: 
+ \documentclass[sigconf, 10pt, anonymous, nonacm]{acmart}\settopmatter{printfolios=true, printccs=false, printacmref=false}The default citation style is numeric. Please do not modify theacmart.clsfile or settings to try to sneak in additional space. 
+ Submit papers on thehref="https://hotnets24.hotcrp.com/" - HotCRP
+. 
+ Important Dates 
+  
+ Paper submission deadline: | June 27, 2024 (23:59 AoE) 
+ Author notification: | September 13, 2024 
+ Camera-ready deadline: | October 22, 2024
+
+3. Website of HOTNETS_3: https://www.sigcomm.org/events/hotnets-workshop
+Website information of HOTNETS_3:
+
+Search this site 
+ Embedded Files 
+ Skip to main content 
+ Skip to navigation 
+ acm sigcommAbout Us 
+ Awards 
+ Changes 
+ Join | Become a Member 
+ Events | CoNEXT Conference | CoNEXT Planning: Site Proposal Instructions 
+ SIGCOMM Conference | Technical Steering Committee 
+ href="/events/hotnets-workshop" - HotNets Workshop 
+ IMC Conference 
+ Sensys Conference 
+ NSDI Conference 
+ Reading Group 
+ Networking Channel 
+ Other Publications | CCR 
+ Other Events 
+ Docs: Planning | SIGCOMM Site Proposal Instructions 
+ In-cooperation Conference Guidelines 
+ Docs: OpenTOC 
+ Committee 
+ News | September 2024 SIGCOMM Newsletter 
+ acm sigcomm 
+ About Us 
+ Awards 
+ Changes 
+ Join | Become a Member 
+ Events | CoNEXT Conference | CoNEXT Planning: Site Proposal Instructions 
+ SIGCOMM Conference | Technical Steering Committee 
+ href="/events/hotnets-workshop" - HotNets Workshop 
+ IMC Conference 
+ Sensys Conference 
+ NSDI Conference 
+ Reading Group 
+ Networking Channel 
+ Other Publications | CCR 
+ Other Events 
+ Docs: Planning | SIGCOMM Site Proposal Instructions 
+ In-cooperation Conference Guidelines 
+ Docs: OpenTOC 
+ Committee 
+ News | September 2024 SIGCOMM Newsletter 
+ More | About Us 
+ Awards 
+ Changes 
+ Join | Become a Member 
+ Events | CoNEXT Conference | CoNEXT Planning: Site Proposal Instructions 
+ SIGCOMM Conference | Technical Steering Committee 
+ href="/events/hotnets-workshop" - HotNets Workshop 
+ IMC Conference 
+ Sensys Conference 
+ NSDI Conference 
+ Reading Group 
+ Networking Channel 
+ Other Publications | CCR 
+ Other Events 
+ Docs: Planning | SIGCOMM Site Proposal Instructions 
+ In-cooperation Conference Guidelines 
+ Docs: OpenTOC 
+ Committee 
+ News | September 2024 SIGCOMM Newsletter 
+ HotNets 
+ HotNets Workshop 
+ Mission 
+ The Workshop on Hot Topics in Networks (HotNets) was created in 2002 to discuss early-stage, creative networking research and to debate positions that reflect on the research direction and needs of the broad networking community. Architecture, high-level design work, and positions that may shape long-term research direction are especially welcome. HotNets is structured to work in synergy with conferences such as SIGCOMM by providing a venue in which innovative work may receive feedback to help it mature into conference papers or otherwise have a long-term impact on the community. To fulfill these goals HotNets calls for short position papers that argue a thoughtful point-of-view rather than full-length conference papers, and maintains a broad and diverse scope. 
+ Scope and Summary 
+ Submission to the workshop is open and encouraged across a wide-ranging set of topics, including at least security, distributed systems, sensor networks, middleware, economics, and management, as well as more traditional core networking topics. Attendance is limited to around 60 participants, drawn mainly from the author pool, to help promote a welcoming atmosphere for discussions. In previous years, HotNets has received over 100 submissions and selected one in four of these for presentation at the workshop. 
+ href="#h.le1gcfpddk5y" - 
+Steering Committee 
+ Katerina Argyraki, EPFL (chair, 2020 - ) 
+ Keith Winstein (Stanford, 2022 - ) 
+ Nandita Dukkipati (Google, 2024 - ) 
+ Aurojit Panda (NYU, 2024 - ) 
+ Ellen Zegura, Georgia Tech (SIGCOMM liaison, 2022 - ) 
+ Upcoming Workshop 
+ href="https://conferences.sigcomm.org/hotnets/2024/" - HotNets 2024
+,Irvine, California,November 18-19, 2024 
+ Previous HotNets Workshops 
+ The proceedings of the following past HotNets workshops are available online: 
+ href="http://conferences.sigcomm.org/hotnets/2023" - HotNets 2023
+, Cambridge, Massachusetts, November 28-29, 2023 
+ href="http://conferences.sigcomm.org/hotnets/2022" - HotNets 2022
+, Austin, Texas, November 14-15, 2022 
+ href="http://conferences.sigcomm.org/hotnets/2021" - HotNets 2021
+, Online, November 10-12, 2021 
+ href="http://conferences.sigcomm.org/hotnets/2020" - HotNets 2020
+, Chicago, Illinois, November 4-6, 2020 
+ href="http://conferences.sigcomm.org/hotnets/2019" - HotNets 2019
+, Princeton, NJ, November 14-15, 2019 
+ href="http://conferences.sigcomm.org/hotnets/2018" - HotNets 2018
+, Redmond, WA, November 15-16, 2018 
+ href="http://conferences.sigcomm.org/hotnets/2017" - HotNets 2017
+, Palo Alto, CA, November 30-December 1, 2017 
+ href="http://conferences.sigcomm.org/hotnets/2016" - HotNets 2016
+, Atlanta, GA, November 9-10, 2016 
+ href="http://conferences.sigcomm.org/hotnets/2015" - HotNets-XIV
+, Philadelphia, PA, November 16-17, 2015. 
+ href="http://conferences.sigcomm.org/hotnets/2014" - HotNets-XIII
+, Los Angeles, CA, October 27-28, 2014. 
+ href="http://conferences.sigcomm.org/hotnets/2013" - HotNets-XII
+, College Park, MD, November 21-22, 2013. 
+ href="http://conferences.sigcomm.org/hotnets/2012" - HotNets-XI
+, Redmond, WA, October 29-30, 2012. 
+ href="http://conferences.sigcomm.org/hotnets/2011" - HotNets-X
+, Cambridge, MA, November 14-15, 2011. 
+ href="http://conferences.sigcomm.org/hotnets/2010/" - HotNets-IX
+, Monterey, CA, October 20-21, 2010. 
+ href="http://conferences.sigcomm.org/hotnets/2009/" - HotNets-VIII
+, New York City, NY, October 22-23, 2009. 
+ href="http://conferences.sigcomm.org/hotnets/2008/" - HotNets-VII
+, Calgary, Alberta, Canada, October 6-7, 2008. 
+ href="http://conferences.sigcomm.org/hotnets/2007/" - HotNets-VI
+, Atlanta, GA, November 14-15, 2007. 
+ href="http://conferences.sigcomm.org/hotnets/2006/" - HotNets-V
+, Irvine, CA, November 2006. 
+ href="http://conferences.sigcomm.org/hotnets/2005/" - HotNets-IV
+, College Park, MD, November 2005. 
+ href="http://conferences.sigcomm.org/hotnets/2004/" - HotNets-III
+, San Diego, CA, November 2004. 
+ href="http://conferences.sigcomm.org/hotnets/2003/" - HotNets-II
+, Boston, MA, November 2003. 
+ href="http://conferences.sigcomm.org/hotnets/2002/" - HotNets-I
+, Princeton, NJ, October 2002. 
+ Former Steering Committee Members 
+ Ben Zhao, University of Chicago (2020 - 2023) 
+ Sujata Banerjee, VMware (2018 - 2021) 
+ Aditya Akella, University of Wisconsin-Madison, (2018 - ) 
+ Dina Papagiannaki, Google (2018 - 2020) 
+ Ramesh Govindan, USC (2015 - 2019) 
+ Bruce Davie, VMware (2014-2017) 
+ Jeff Mogul, Google (2013-2015) 
+ S. Keshav, University of Waterloo (2013-2014) 
+ Nina Taft, Google (2010-2014) 
+ Brad Karp, University College London (2009-) 
+ Bruce Maggs, Duke (2008-2013) 
+ Craig Partridge, BBN (2008-2010) 
+ Alex Snoeren, UC San Diego (2004-2009) 
+ Greg Minshall (2008-2009) 
+ Scott Shenker, UC Berkeley/ICIR (2006-2007) 
+ John Wroclawski, ISI/MIT, (2002-2007) 
+ David Wetherall, University of Washington (2002-2004) 
+ Larry Peterson, Princeton University (2002-2006) 
+  
+ acm sigcomm 
+ Back to Home 
+ Report abuse 
+ Page details 
+ Page updated 
+ Report abuse
+
+4. Website of HOTNETS_3: https://pbg.cs.illinois.edu/papers/
+Website information of HOTNETS_3:
+
+Brighten Godfrey's Papers 
+  
+ 2025 
+ WarpLab: Evaluating Edge-Assisted Rendering Offload for Low Power Extended Reality Devices | BibTeX | @inproceedings{gao25warplab author = {Steven Gao and Jeffrey Liu and Qinjun Jiang and Finn Sinclair and William Sentosa and P. Brighten Godfrey and Sarita Adve}, title = {WarpLab: Evaluating Edge-Assisted Rendering Offload for Low Power Extended Reality Devices}, booktitle = {16th ACM Multimedia Systems Conference}, month = {April}, year = {2025}, } | Steven Gao, Jeffrey Liu, Qinjun Jiang, Finn Sinclair, William Sentosa, P. Brighten Godfrey, and Sarita Adve. 16th ACM Multimedia Systems Conference, April 2025. 
+  
+ CellReplay: Towards accurate record-and-replay for cellular networks | BibTeX | @inproceedings{sentosa25cellreplay author = {William Sentosa and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Haitham Hassanieh}, title = {CellReplay: Towards accurate record-and-replay for cellular networks}, booktitle = {22nd USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2025}, } | William Sentosa, Balakrishnan Chandrasekaran, P. Brighten Godfrey, and Haitham Hassanieh. | 22nd USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2025. 
+  
+ Offloading Head Tracking for Low Power XR: An End-to-End System and Evaluation | BibTeX | @inproceedings{jiang25RemoteVIO author = {Qinjun Jiang and Yihan Pang and William Sentosa and Steven Gao and Muhammad Huzaifa and Jeffrey Zhang and Javier Perez-Ramirez and Dibakar Das and Dave Cavalcanti and P. Brighten Godfrey and Sarita Adve}, title = {Offloading Head Tracking for Low Power XR: An End-to-End System and Evaluation}, booktitle = {16th ACM Multimedia Systems Conference}, month = {April}, year = {2025}, } | Qinjun Jiang, Yihan Pang, William Sentosa, Steven Gao, Muhammad Huzaifa, Jeffrey Zhang, Javier Perez-Ramirez, Dibakar Das, Dave Cavalcanti, P. Brighten Godfrey, and Sarita Adve. 16th ACM Multimedia Systems Conference, April 2025. 
+  
+ Is WTSN the missing piece for low latency in general-purpose Wi-Fi? | BibTeX | @inproceedings{vaddiraju25wtsn author = {Milind Kumar Vaddiraju and William Sentosa and Qinjun Jiang and Sarita Adve and Dave Cavalcanti and Dibakar Das and P. Brighten Godfrey and Javier Perez-Ramirez and Deepak Vasisht}, title = {Is WTSN the missing piece for low latency in general-purpose Wi-Fi?}, booktitle = {26th International Workshop on Mobile Computing Systems and Applications (HotMobile)}, month = {February}, year = {2025}, } | Milind Kumar Vaddiraju, William Sentosa, Qinjun Jiang, Sarita Adve, Dave Cavalcanti, Dibakar Das, P. Brighten Godfrey, Javier Perez-Ramirez, and Deepak Vasisht. 26th International Workshop on Mobile Computing Systems and Applications (HotMobile), February 2025. 
+  
+ 2024 
+ Opportunities and Challenges in Service Layer Traffic Engineering | BibTeX | @inproceedings{lim24slate author = {Gangmuk Lim and Aditya Prerepa and P. Brighten Godfrey and Radhika Mittal}, title = {Opportunities and Challenges in Service Layer Traffic Engineering}, booktitle = {Twenty-third ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2024}, } | Gangmuk Lim, Aditya Prerepa, P. Brighten Godfrey, and Radhika Mittal. Twenty-third ACM Workshop on Hot Topics in Networks (HotNets), November 2024. | Lim and Prerepa are co-first author 
+ EnvoyCon 2023 talk 
+  
+ Lightweight Automated Reasoning for Network Architectures | BibTeX | @inproceedings{bothra24archie author = {Rahul Bothra and Venkat Arun and P. Brighten Godfrey and Akshay Narayan and Ahmed Saeed}, title = {Lightweight Automated Reasoning for Network Architectures}, booktitle = {Twenty-third ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2024}, } | Rahul Bothra, Venkat Arun, P. Brighten Godfrey, Akshay Narayan, and Ahmed Saeed. Twenty-third ACM Workshop on Hot Topics in Networks (HotNets), November 2024. 
+  
+ TraceWeaver: Distributed Request Tracing for Microservices Without Application Modification | BibTeX | @inproceedings{ashok24traceweaver author = {Sachin Ashok and Vipul Harsh and P. Brighten Godfrey and Radhika Mittal and Srinivasan Parthasarathy and Larisa Shwartz}, title = {TraceWeaver: Distributed Request Tracing for Microservices Without Application Modification}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2024}, } | Sachin Ashok, Vipul Harsh, P. Brighten Godfrey, Radhika Mittal, Srinivasan Parthasarathy, and Larisa Shwartz. | ACM SIGCOMM | , August 2024. | SIGCOMM 2024 talk 
+ KubeCon 2022 talk 
+  
+ Kivi: Verifying Cluster Management Systems | BibTeX | @inproceedings{liu24kivi author = {Bingzhe Liu and Gangmuk Lim and Ryan Beckett and P. Brighten Godfrey}, title = {Kivi: Verifying Cluster Management Systems}, booktitle = {USENIX ATC}, month = {July}, year = {2024}, } | Bingzhe Liu, Gangmuk Lim, Ryan Beckett, and P. Brighten Godfrey. | USENIX ATC | , July 2024. | Talk video 
+  
+ CAPA: An Architecture For Operating Cluster Networks With High Availability | BibTeX | @inproceedings{liu24capa author = {Bingzhe Liu and Colin Scott and Mukarram Tariq and Andrew Ferguson and Phillipa Gill and Richard Alimi and Omid Alipourfard and Deepak Arulkannan and Virginia Jean Beauregard and Patrick Conner and P. Brighten Godfrey and Xander Lin and Joon Ong and Mayur Patel and Amr Sabaa and Arjun Singh and Alex Smirnov and Manish Verma and Prerepa V Viswanadham and Amin Vahdat}, title = {CAPA: An Architecture For Operating Cluster Networks With High Availability}, booktitle = {21st USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2024}, } | Bingzhe Liu, Colin Scott, Mukarram Tariq, Andrew Ferguson, Phillipa Gill, Richard Alimi, Omid Alipourfard, Deepak Arulkannan, Virginia Jean Beauregard, Patrick Conner, P. Brighten Godfrey, Xander Lin, Joon Ong, Mayur Patel, Amr Sabaa, Arjun Singh, Alex Smirnov, Manish Verma, Prerepa V Viswanadham, and Amin Vahdat. | 21st USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2024. 
+  
+ 2023 
+ Flock: Accurate network fault localization at scale | BibTeX | @inproceedings{harsh23flock author = {Vipul Harsh and Tong Meng and Kapil Agrawal and P. Brighten Godfrey}, title = {Flock: Accurate network fault localization at scale}, booktitle = {International Conference on emerging Networking EXperiments and Technologies (CoNEXT)}, month = {December}, year = {2023}, } | Vipul Harsh, Tong Meng, Kapil Agrawal, and P. Brighten Godfrey. International Conference on emerging Networking EXperiments and Technologies (CoNEXT), December 2023. 
+  
+ Expressive Policies For Microservice Networks | BibTeX | @inproceedings{grewal23microservice-policies author = {Karuna Grewal and P. Brighten Godfrey and Justin Hsu}, title = {Expressive Policies For Microservice Networks}, booktitle = {Twenty-second ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2023}, } | Karuna Grewal, P. Brighten Godfrey, and Justin Hsu. Twenty-second ACM Workshop on Hot Topics in Networks (HotNets), November 2023. 
+  
+ Boosting Application Performance using Heterogeneous Virtual Channels: Challenges and Opportunities | BibTeX | @inproceedings{touseef23hvc author = {Talal Touseef and William Sentosa and Milind Kumar Vaddiraju and Debopam Bhattacherjee and Bala Chandrasekaran and P. Brighten Godfrey and Shubham Tiwari}, title = {Boosting Application Performance using Heterogeneous Virtual Channels: Challenges and Opportunities}, booktitle = {Twenty-second ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2023}, } | Talal Touseef, William Sentosa, Milind Kumar Vaddiraju, Debopam Bhattacherjee, Bala Chandrasekaran, P. Brighten Godfrey, and Shubham Tiwari. Twenty-second ACM Workshop on Hot Topics in Networks (HotNets), November 2023. 
+  
+ Murphy: Performance Diagnosis of Distributed Cloud Applications | BibTeX | @inproceedings{harsh23murphy author = {Vipul Harsh and Wenxuan Zhou and Sachin Ashok and Radhika Niranjan Mysore and P. Brighten Godfrey and Sujata Banerjee}, title = {Murphy: Performance Diagnosis of Distributed Cloud Applications}, booktitle = {ACM SIGCOMM}, month = {September}, year = {2023}, } | Vipul Harsh, Wenxuan Zhou, Sachin Ashok, Radhika Niranjan Mysore, P. Brighten Godfrey, and Sujata Banerjee. | ACM SIGCOMM | , September 2023. 
+  
+ DChannel: Accelerating Mobile Applications With Parallel High-bandwidth and Low-latency Channels | BibTeX | @inproceedings{sentosa23dchannel author = {William Sentosa and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Haitham Hassanieh and Bruce Maggs}, title = {DChannel: Accelerating Mobile Applications With Parallel High-bandwidth and Low-latency Channels}, booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2023}, } | William Sentosa, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Haitham Hassanieh, and Bruce Maggs. | 20th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2023. 
+  
+ 2022 
+ On-Device CPU Scheduling for Robot Systems | BibTeX | @inproceedings{aditi22catan author = {Aditi Partap and Samuel Grayson and Muhammad Huzaifa and Sarita Adve and P. Brighten Godfrey and Saurabh Gupta and Kris Hauser and Radhika Mittal}, title = {On-Device CPU Scheduling for Robot Systems}, booktitle = {2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, month = {October}, year = {2022}, } | Aditi Partap, Samuel Grayson, Muhammad Huzaifa, Sarita Adve, P. Brighten Godfrey, Saurabh Gupta, Kris Hauser, and Radhika Mittal. | 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) | , October 2022. 
+  
+ cISP: A Speed-of-Light Internet Service Provider | BibTeX | @inproceedings{cisp author = {Debopam Bhattacherjee and Waqar Aqeel and Sangeetha Abdu Jyothi and Ilker Nadi Bozkurt and William Sentosa and Muhammad Tirmazi and Anthony Aguirre and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Gregory Laughlin and Bruce Maggs and Ankit Singla}, title = {cISP: A Speed-of-Light Internet Service Provider}, booktitle = {19th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2022}, } | Debopam Bhattacherjee, Waqar Aqeel, Sangeetha Abdu Jyothi, Ilker Nadi Bozkurt, William Sentosa, Muhammad Tirmazi, Anthony Aguirre, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Gregory Laughlin, Bruce Maggs, and Ankit Singla. | 19th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2022. 
+  
+ 2021 
+ Leveraging Service Meshes as a New Network Layer | BibTeX | @inproceedings{ashok21servicemeshes author = {Sachin Ashok and P. Brighten Godfrey and Radhika Mittal}, title = {Leveraging Service Meshes as a New Network Layer}, booktitle = {Twentieth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2021}, } | Sachin Ashok, P. Brighten Godfrey, and Radhika Mittal. Twentieth ACM Workshop on Hot Topics in Networks (HotNets), November 2021. | 10-minute talk video 
+  
+ Practical Automation for Management Planes of Service Provider Infrastructure | BibTeX | @inproceedings{liu21automation author = {Bingzhe Liu and Kuan-Yen Chou and Pramod Jamkhedkar and Bilal Anwer and Rakesh Sinha and Kostas Oikonomou and Matthew Caesar and P. Brighten Godfrey}, title = {Practical Automation for Management Planes of Service Provider Infrastructure}, booktitle = {ACM SIGCOMM FlexNets Workshop}, month = {August}, year = {2021}, } | Bingzhe Liu, Kuan-Yen Chou, Pramod Jamkhedkar, Bilal Anwer, Rakesh Sinha, Kostas Oikonomou, Matthew Caesar, and P. Brighten Godfrey. | ACM SIGCOMM FlexNets Workshop | , August 2021. 
+  
+ Toward Greater Scavenger Congestion Control Deployment: Implementations and Interfaces | BibTeX | @inproceedings{meng21scavenger author = {Tong Meng and Christopher Cai and P. Brighten Godfrey and Michael Schapira}, title = {Toward Greater Scavenger Congestion Control Deployment: Implementations and Interfaces}, booktitle = {ACM/IRTF Applied Networking Research Workshop (ANRW)}, month = {July}, year = {2021}, } | Tong Meng, Christopher Cai, P. Brighten Godfrey, and Michael Schapira. | href="https://irtf.org/anrw/2021/" - ACM/IRTF Applied Networking Research Workshop (ANRW) | , July 2021. | Talk video available at the | workshop site 
+  
+ Accelerating Mobile Applications With Parallel High-bandwidth and Low-latency Channels | BibTeX | @inproceedings{sentosa21parallelChannels author = {William Sentosa and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Haitham Hassanieh and Bruce Maggs and Ankit Singla}, title = {Accelerating Mobile Applications With Parallel High-bandwidth and Low-latency Channels}, booktitle = {22nd International Workshop on Mobile Computing Systems and Applications (HotMobile)}, month = {February}, year = {2021}, } | William Sentosa, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Haitham Hassanieh, Bruce Maggs, and Ankit Singla. | 22nd International Workshop on Mobile Computing Systems and Applications (HotMobile) | , February 2021. | Talk video 
+  
+ 2020 
+ Online Learning Multipath Transport | BibTeX | @inproceedings{gilad20mpcc author = {Tomer Gilad and Neta Rozen Schiff and P. Brighten Godfrey and Costin Raiciu and Michael Schapira}, title = {Online Learning Multipath Transport}, booktitle = {International Conference on emerging Networking EXperiments and Technologies (CoNEXT)}, month = {December}, year = {2020}, } | Tomer Gilad, Neta Rozen Schiff, P. Brighten Godfrey, Costin Raiciu, and Michael Schapira. International Conference on emerging Networking EXperiments and Technologies (CoNEXT), December 2020. 
+  
+ Spineless Data Centers | BibTeX | @inproceedings{harsh20spineless author = {Vipul Harsh and Sangeetha Abdu Jyothi and P. Brighten Godfrey}, title = {Spineless Data Centers}, booktitle = {Nineteenth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2020}, } | Vipul Harsh, Sangeetha Abdu Jyothi, and P. Brighten Godfrey. Nineteenth ACM Workshop on Hot Topics in Networks (HotNets), November 2020. 
+  
+ Towards Verified Self-Driving Infrastructure | BibTeX | @inproceedings{liu-kheradmand20selfdriving author = {Bingzhe Liu and Ali Kheradmand and Matthew Caesar and P. Brighten Godfrey}, title = {Towards Verified Self-Driving Infrastructure}, booktitle = {Nineteenth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2020}, } | Bingzhe Liu, Ali Kheradmand, Matthew Caesar, and P. Brighten Godfrey. Nineteenth ACM Workshop on Hot Topics in Networks (HotNets), November 2020. | The first two authors contributed equally. 
+  
+ Proteus: Scavenger Transport And Beyond | BibTeX | @inproceedings{meng20pcc-proteus author = {Tong Meng and Neta Rozen Schiff and P. Brighten Godfrey and Michael Schapira}, title = {Proteus: Scavenger Transport And Beyond}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2020}, } | Tong Meng, Neta Rozen Schiff, P. Brighten Godfrey, and Michael Schapira. | ACM SIGCOMM | , August 2020. 
+  
+ Towards An Application Objective-Aware Network Interface | BibTeX | @inproceedings{jyothi20cadentflow author = {Sangeetha Abdu Jyothi and Sayed Hadi Hashemi and Roy H. Campbell and P. Brighten Godfrey}, title = {Towards An Application Objective-Aware Network Interface}, booktitle = {12th USENIX Workshop on Hot Topics in Cloud Computing}, month = {July}, year = {2020}, } | Sangeetha Abdu Jyothi, Sayed Hadi Hashemi, Roy H. Campbell, and P. Brighten Godfrey. | href="https://www.usenix.org/conference/hotcloud20" - 12th USENIX Workshop on Hot Topics in Cloud Computing | , July 2020. 
+  
+ Untangling Header Bidding Lore | BibTeX | @inproceedings{aqeel20header author = {Waqar Aqeel and Debopam Bhattacherjee and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Gregory Laughlin and Bruce Maggs and Ankit Singla}, title = {Untangling Header Bidding Lore}, booktitle = {Passive and Active Measurement Conference (PAM)}, month = {March}, year = {2020}, } | Waqar Aqeel, Debopam Bhattacherjee, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Gregory Laughlin, Bruce Maggs, and Ankit Singla. | Passive and Active Measurement Conference (PAM) | , March 2020. | Best Dataset Award 
+ Dataset 
+  
+ Plankton: Scalable network configuration verification through model checking | BibTeX | @inproceedings{prabhu20plankton author = {Santhosh Prabhu and Kuan Yen Chou and Ali Kheradmand and P. Brighten Godfrey and Matthew Caesar}, title = {Plankton: Scalable network configuration verification through model checking}, booktitle = {17th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {February}, year = {2020}, } | Santhosh Prabhu, Kuan Yen Chou, Ali Kheradmand, P. Brighten Godfrey, and Matthew Caesar. | 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , February 2020. 
+  
+ 2019 
+ Robustifying Network Protocols with Adversarial Examples | BibTeX | @inproceedings{gilad19robustifying author = {Tomer Gilad and Nathan H. Jay and Michael Shnaiderman and P. Brighten Godfrey and Michael Schapira}, title = {Robustifying Network Protocols with Adversarial Examples}, booktitle = {Eighteenth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2019}, } | Tomer Gilad, Nathan H. Jay, Michael Shnaiderman, P. Brighten Godfrey, and Michael Schapira. Eighteenth ACM Workshop on Hot Topics in Networks (HotNets), November 2019. 
+  
+ A Deep Reinforcement Learning Perspective on Internet Congestion Control | BibTeX | @inproceedings{jay19aurora author = {Nathan Jay and Noga H. Rotman and P. Brighten Godfrey and Michael Schapira and Aviv Tamar}, title = {A Deep Reinforcement Learning Perspective on Internet Congestion Control}, booktitle = {Thirty-sixth International Conference on Machine Learning}, month = {June}, year = {2019}, } | Nathan Jay, Noga H. Rotman, P. Brighten Godfrey, Michael Schapira, and Aviv Tamar. | Thirty-sixth International Conference on Machine Learning | , June 2019. 
+  
+ 2018 
+ href="hotnets18-satnet.pdf" - Gearing up for the 21st century space race | BibTeX | @inproceedings{bhattacherjee18space author = {Debopam Bhattacherjee and Waqar Aqeel and Ilker Nadi Bozkurt and Anthony Aguirre and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Gregory P. Laughlin and Bruce M. Maggs and Ankit Singla}, title = {Gearing up for the 21st century space race}, booktitle = {Seventeeth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2018}, } | Debopam Bhattacherjee, Waqar Aqeel, Ilker Nadi Bozkurt, Anthony Aguirre, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Gregory P. Laughlin, Bruce M. Maggs, and Ankit Singla. Seventeeth ACM Workshop on Hot Topics in Networks (HotNets), November 2018. 
+  
+ cISP: A Speed-of-Light Internet Service Provider | BibTeX | @inproceedings{bhattacherjee18cISP author = {Debopam Bhattacherjee and Sangeetha Abdu Jyothi and Ilker Nadi Bozkurt and Muhammad Tirmazi and Waqar Aqeel and Anthony Aguirre and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Gregory P. Laughlin and Bruce M. Maggs and Ankit Singla}, title = {cISP: A Speed-of-Light Internet Service Provider}, booktitle = {arXiv:1809.10897}, month = {October}, year = {2018}, } | Debopam Bhattacherjee, Sangeetha Abdu Jyothi, Ilker Nadi Bozkurt, Muhammad Tirmazi, Waqar Aqeel, Anthony Aguirre, Balakrishnan Chandrasekaran, P. Brighten Godfrey, Gregory P. Laughlin, Bruce M. Maggs, and Ankit Singla. | arXiv:1809.10897 | , October 2018. 
+  
+ Congestion Control for Future Mobile Networks | BibTeX | @inproceedings{mangiante18morc author = {Simone Mangiante and Michael Schapira and Amit Navon and Marco Dias Silva and P. Brighten Godfrey and Weiguang Wang and Kevin Smith and Itzcak Pechtalt}, title = {Congestion Control for Future Mobile Networks}, booktitle = {Proceedings of the 13th Workshop on Challenged Networks}, month = {October}, year = {2018}, } | Simone Mangiante, Michael Schapira, Amit Navon, Marco Dias Silva, P. Brighten Godfrey, Weiguang Wang, Kevin Smith, and Itzcak Pechtalt. | Proceedings of the 13th Workshop on Challenged Networks | , October 2018. 
+  
+ Internet Congestion Control via Deep Reinforcement Learning | BibTeX | @inproceedings{jay18deepRL-cc author = {Nathan Jay and Noga H. Rotman and P. Brighten Godfrey and Michael Schapira and Aviv Tamar}, title = {Internet Congestion Control via Deep Reinforcement Learning}, booktitle = {NeurIPS Deep Reinforcement Learning Workshop}, month = {October}, year = {2018}, } | Nathan Jay, Noga H. Rotman, P. Brighten Godfrey, Michael Schapira, and Aviv Tamar. | NeurIPS Deep Reinforcement Learning Workshop | , October 2018. 
+  
+ High Coverage Testing of Softwarized Networks | BibTeX | @inproceedings{prabhu18plankton-neo author = {Santhosh Prabhu and Gohar Irfan Chaudhry and P. Brighten Godfrey and Matthew Caesar}, title = {High Coverage Testing of Softwarized Networks}, booktitle = {ACM SIGCOMM 2018 Workshop on Security in Softwarized Networks: Prospects and Challenges}, month = {August}, year = {2018}, } | Santhosh Prabhu, Gohar Irfan Chaudhry, P. Brighten Godfrey, and Matthew Caesar. | ACM SIGCOMM 2018 Workshop on Security in Softwarized Networks: Prospects and Challenges | , August 2018. 
+  
+ A PCC-Vivace Kernel Module for Congestion Control | BibTeX | @inproceedings{jay18pcc-kernel author = {Nathan Jay and Tong Meng and Tomer Gilad and P. Brighten Godfrey and Michael Schapira and Jamal Hadi Salim and Jae Won Chung and Vikram Siwach}, title = {A PCC-Vivace Kernel Module for Congestion Control}, booktitle = {Netdev 0x12: The Technical Conference on Linux Networking}, month = {July}, year = {2018}, } | Nathan Jay, Tong Meng, Tomer Gilad, P. Brighten Godfrey, Michael Schapira, Jamal Hadi Salim, Jae Won Chung, and Vikram Siwach. | href="https://netdevconf.org/0x12/session.html?a-pcc-vivace-kernel-module-for-congestion-control" - Netdev 0x12: The Technical Conference on Linux Networking | , July 2018. | Talk video 
+ Slides 
+  
+ PCC Vivace: Online-Learning Congestion Control | BibTeX | @inproceedings{dong18pcc-vivace author = {Mo Dong and Tong Meng and Doron Zarchy and Engin Arslan and Yossi Gilad and P. Brighten Godfrey and Michael Schapira}, title = {PCC Vivace: Online-Learning Congestion Control}, booktitle = {15th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2018}, } | Mo Dong, Tong Meng, Doron Zarchy, Engin Arslan, Yossi Gilad, P. Brighten Godfrey, and Michael Schapira. | 15th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2018. | Project site 
+  
+ 2017 
+ DRILL: Micro Load Balancing for Low-latency Data Center Neworks | BibTeX | @inproceedings{ghorbani17drill author = {Soudeh Ghorbani and Zibin Yang and P. Brighten Godfrey and Yashar Ganjali and Amin Firoozshahian}, title = {DRILL: Micro Load Balancing for Low-latency Data Center Neworks}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2017}, } | Soudeh Ghorbani, Zibin Yang, P. Brighten Godfrey, Yashar Ganjali, and Amin Firoozshahian. | ACM SIGCOMM | , August 2017. 
+  
+ Predicting Network Futures with Plankton | BibTeX | @inproceedings{prabhu17plankton author = {Santhosh Prabhu and Ali Kheradmand and P. Brighten Godfrey and Matthew Caesar}, title = {Predicting Network Futures with Plankton}, booktitle = {1st Asia-Pacific Workshop on Networking (APNet)}, month = {August}, year = {2017}, } | Santhosh Prabhu, Ali Kheradmand, P. Brighten Godfrey, and Matthew Caesar. | 1st Asia-Pacific Workshop on Networking (APNet) | , August 2017. 
+  
+ COCONUT: Seamless Scale-out of Network Elements | BibTeX | @inproceedings{ghorbani17coconut author = {Soudeh Ghorbani and P. Brighten Godfrey}, title = {COCONUT: Seamless Scale-out of Network Elements}, booktitle = {European Conference on Computer Systems (EuroSys)}, month = {April}, year = {2017}, } | Soudeh Ghorbani and P. Brighten Godfrey. | European Conference on Computer Systems (EuroSys) | , April 2017. 
+  
+ Let me rephrase that: Transparent optimization in SDNs | BibTeX | @inproceedings{prabhu17oreo author = {Santhosh Prabhu and Mo Dong and Tong Meng and P. Brighten Godfrey and Matthew Caesar}, title = {Let me rephrase that: Transparent optimization in SDNs}, booktitle = {ACM SIGCOMM Symposium on SDN Research (SOSR)}, month = {April}, year = {2017}, } | Santhosh Prabhu, Mo Dong, Tong Meng, P. Brighten Godfrey, and Matthew Caesar. | href="http://conferences.sigcomm.org/sosr/2017/" - ACM SIGCOMM Symposium on SDN Research (SOSR) | , April 2017. 
+  
+ Why is the Internet so slow?! | BibTeX | @inproceedings{bozkurt17why author = {Ilker Nadi Bozkurt and Balakrishnan Chandrasekaran and Anthony Aguirre and P. Brighten Godfrey and Gregory Laughlin and Bruce Maggs and Ankit Singla}, title = {Why is the Internet so slow?!}, booktitle = {Passive and Active Measurement Conference}, month = {March}, year = {2017}, } | Ilker Nadi Bozkurt, Balakrishnan Chandrasekaran, Anthony Aguirre, P. Brighten Godfrey, Gregory Laughlin, Bruce Maggs, and Ankit Singla. | href="https://research.csiro.au/pam2017/" - Passive and Active Measurement Conference | , March 2017. | Best Dataset Award 
+ Dataset 
+  
+ 2016 
+ Measuring and Understanding Throughput of Network Topologies | BibTeX | @inproceedings{jyothi16throughput author = {Sangeetha Abdu Jyothi and Ankit Singla and P. Brighten Godfrey and Alexandra Kolla}, title = {Measuring and Understanding Throughput of Network Topologies}, booktitle = {ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis (SC)}, month = {November}, year = {2016}, } | Sangeetha Abdu Jyothi, Ankit Singla, P. Brighten Godfrey, and Alexandra Kolla. | ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis (SC) | , November 2016. | href="https://arxiv.org/abs/1402.2531" - Technical Report 
+ Code 
+  
+ Ravel: A Database-Defined Network | BibTeX | @inproceedings{wang16ravel author = {Anduo Wang and Xueyuan Mei and Jason Croft and Matthew Caesar and P. Brighten Godfrey}, title = {Ravel: A Database-Defined Network}, booktitle = {ACM SIGCOMM Symposium on SDN Research (SOSR)}, month = {March}, year = {2016}, } | Anduo Wang, Xueyuan Mei, Jason Croft, Matthew Caesar, and P. Brighten Godfrey. | href="http://conferences.sigcomm.org/sosr/2016/" - ACM SIGCOMM Symposium on SDN Research (SOSR) | , March 2016. 
+  
+ 2015 
+ Halfback: Running Short Flows Quickly and Safely | BibTeX | @inproceedings{li15halfback author = {Qingxi Li and Mo Dong and P. Brighten Godfrey}, title = {Halfback: Running Short Flows Quickly and Safely}, booktitle = {International Conference on emerging Networking EXperiments and Technologies (CoNEXT)}, month = {December}, year = {2015}, } | Qingxi Li, Mo Dong, and P. Brighten Godfrey. International Conference on emerging Networking EXperiments and Technologies (CoNEXT), December 2015. 
+  
+ Micro Load Balancing in Data Centers with DRILL | BibTeX | @inproceedings{ghorbani15drill author = {Soudeh Ghorbani and P. Brighten Godfrey and Yashar Ganjali and Amin Firoozshahian}, title = {Micro Load Balancing in Data Centers with DRILL}, booktitle = {Fourteenth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {November}, year = {2015}, } | Soudeh Ghorbani, P. Brighten Godfrey, Yashar Ganjali, and Amin Firoozshahian. Fourteenth ACM Workshop on Hot Topics in Networks (HotNets), November 2015. 
+  
+ Report from Dagstuhl Seminar 15071: Formal Foundations for Networking | BibTeX | @inproceedings{bjorner15dagstuhl author = {Nikolaj Bjorner and Nate Foster and P. Brighten Godfrey and Pamela Zave}, title = {Report from Dagstuhl Seminar 15071: Formal Foundations for Networking}, booktitle = {Dagstuhl Reports}, month = {July}, year = {2015}, } | Nikolaj Bjorner, Nate Foster, P. Brighten Godfrey, and Pamela Zave. | Dagstuhl Reports | , July 2015. 
+  
+ Towards a Flexible Data Center Fabric with Source Routing | BibTeX | @inproceedings{jyothi15fabric author = {Sangeetha Abdu Jyothi and Mo Dong and P. Brighten Godfrey}, title = {Towards a Flexible Data Center Fabric with Source Routing}, booktitle = {ACM SIGCOMM Symposium on SDN Research (SOSR)}, month = {June}, year = {2015}, } | Sangeetha Abdu Jyothi, Mo Dong, and P. Brighten Godfrey. ACM SIGCOMM Symposium on SDN Research (SOSR), June 2015. 
+  
+ WANalytics: Geo-Distributed Analytics for a Data Intensive World | BibTeX | @inproceedings{vulimiri15wanalytics author = {Ashish Vulimiri and Carlo Curino and P. Brighten Godfrey and Thomas Jungblut and Konstantinos Karanasos and Jitu Padhye and George Varghese}, title = {WANalytics: Geo-Distributed Analytics for a Data Intensive World}, booktitle = {Demo at ACM SIGMOD International Conference on Management of Data (SIGMOD)}, month = {May}, year = {2015}, } | Ashish Vulimiri, Carlo Curino, P. Brighten Godfrey, Thomas Jungblut, Konstantinos Karanasos, Jitu Padhye, and George Varghese. | Demo at ACM SIGMOD International Conference on Management of Data (SIGMOD) | , May 2015. 
+  
+ PCC: Re-architecting Congestion Control for Consistent High Performance | BibTeX | @inproceedings{dong15pcc author = {Mo Dong and Qingxi Li and Doron Zarchy and P. Brighten Godfrey and Michael Schapira}, title = {PCC: Re-architecting Congestion Control for Consistent High Performance}, booktitle = {12th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2015}, } | Mo Dong, Qingxi Li, Doron Zarchy, P. Brighten Godfrey, and Michael Schapira. | 12th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2015. | Project site 
+ href="https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/dong" - Slides 
+  
+ Enforcing Customizable Consistency Properties in Software-Defined Networks | BibTeX | @inproceedings{zhou15ccg author = {Wenxuan Zhou and Dong Jin and Jason Croft and Matthew Caesar and P. Brighten Godfrey}, title = {Enforcing Customizable Consistency Properties in Software-Defined Networks}, booktitle = {12th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2015}, } | Wenxuan Zhou, Dong Jin, Jason Croft, Matthew Caesar, and P. Brighten Godfrey. | 12th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2015. | href="https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/zhou" - Slides 
+  
+ Global analytics in the face of bandwidth and regulatory constraints | BibTeX | @inproceedings{vulimiri15geode author = {Ashish Vulimiri and Carlo Curino and P. Brighten Godfrey and Thomas Jungblut and Jitu Padhye and George Varghese}, title = {Global analytics in the face of bandwidth and regulatory constraints}, booktitle = {12th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2015}, } | Ashish Vulimiri, Carlo Curino, P. Brighten Godfrey, Thomas Jungblut, Jitu Padhye, and George Varghese. | 12th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2015. | href="https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/vulimiri" - Slides 
+  
+ WANalytics: Analytics for a Geo-Distributed Data-Intensive World | BibTeX | @inproceedings{vulimiri15wanalytics author = {Ashish Vulimiri and Carlo Curino and P. Brighten Godfrey and Konstantinos Karanasos and George Varghese}, title = {WANalytics: Analytics for a Geo-Distributed Data-Intensive World}, booktitle = {Conference on Innovative Data Systems Research (CIDR 2015)}, month = {January}, year = {2015}, } | Ashish Vulimiri, Carlo Curino, P. Brighten Godfrey, Konstantinos Karanasos, and George Varghese. | href="http://www.cidrdb.org/cidr2015/" - Conference on Innovative Data Systems Research (CIDR 2015) | , January 2015. 
+  
+ 2014 
+ The Internet at the Speed of Light | BibTeX | @inproceedings{singla14cspeed author = {Ankit Singla and Balakrishnan Chandrasekaran and P. Brighten Godfrey and Bruce Maggs}, title = {The Internet at the Speed of Light}, booktitle = {Thirteenth ACM Workshop on Hot Topics in Networks (HotNets 2014)}, month = {October}, year = {2014}, } | Ankit Singla, Balakrishnan Chandrasekaran, P. Brighten Godfrey, and Bruce Maggs. | href="http://conferences.sigcomm.org/hotnets/2014/" - Thirteenth ACM Workshop on Hot Topics in Networks (HotNets 2014) | , October 2014. 
+  
+ Towards Correct Network Virtualization | BibTeX | @inproceedings{ghorbani14correct author = {Soudeh Ghorbani and P. Brighten Godfrey}, title = {Towards Correct Network Virtualization}, booktitle = {Workshop on Hot Topics in Software Defined Networking (HotSDN)}, month = {August}, year = {2014}, } | Soudeh Ghorbani and P. Brighten Godfrey. | href="http://conferences.sigcomm.org/sigcomm/2014/hotsdn.php" - Workshop on Hot Topics in Software Defined Networking (HotSDN) | , August 2014. | Best paper award 
+ Slides 
+  
+ High Throughput Data Center Topology Design | BibTeX | @inproceedings{singla14throughput author = {Ankit Singla and P. Brighten Godfrey and Alexandra Kolla}, title = {High Throughput Data Center Topology Design}, booktitle = {11th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2014}, } | Ankit Singla, P. Brighten Godfrey, and Alexandra Kolla. | 11th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2014. 
+  
+ Software Defined Transport: Flexible and Deployable Flow Rate Control | BibTeX | @inproceedings{hong14sdt author = {Chi-Yao Hong and Matthew Caesar and P. Brighten Godfrey}, title = {Software Defined Transport: Flexible and Deployable Flow Rate Control}, booktitle = {Open Networking Summit (ONS)}, month = {March}, year = {2014}, } | Chi-Yao Hong, Matthew Caesar, and P. Brighten Godfrey. | href="http://www.opennetsummit.org/research-track.html" - Open Networking Summit (ONS) | , March 2014. 
+  
+ Software-Defined Networks as Databases | BibTeX | @inproceedings{wang14sdndb author = {Anduo Wang and Wenchao Zhou and P. Brighten Godfrey and Matthew Caesar}, title = {Software-Defined Networks as Databases}, booktitle = {Open Networking Summit (ONS)}, month = {March}, year = {2014}, } | Anduo Wang, Wenchao Zhou, P. Brighten Godfrey, and Matthew Caesar. | href="http://www.opennetsummit.org/research-track.html" - Open Networking Summit (ONS) | , March 2014. 
+  
+ Measuring and Understanding Throughput of Network Topologies | BibTeX | @inproceedings{abdujyothi14throughput author = {Sangeetha Abdu Jyothi and Ankit Singla and P. Brighten Godfrey and Alexandra Kolla}, title = {Measuring and Understanding Throughput of Network Topologies}, booktitle = {arXiv:1402.2531}, month = {February}, year = {2014}, } | Sangeetha Abdu Jyothi, Ankit Singla, P. Brighten Godfrey, and Alexandra Kolla. | arXiv:1402.2531 | , February 2014. 
+  
+ Stabilizing Route Selection in BGP | BibTeX | @inproceedings{godfrey14srs author = {P. Brighten Godfrey and Matthew Caesar and Ian Haken and Yaron Singer and Scott Shenker and Ion Stoica}, title = {Stabilizing Route Selection in BGP}, booktitle = {IEEE/ACM Transactions on Networking}, month = {February}, year = {2014}, } | P. Brighten Godfrey, Matthew Caesar, Ian Haken, Yaron Singer, Scott Shenker, and Ion Stoica. IEEE/ACM Transactions on Networking, February 2014. 
+  
+ 2013 
+ Low Latency via Redundancy | BibTeX | @inproceedings{vulimiri13latency author = {Ashish Vulimiri and P. Brighten Godfrey and Radhika Mittal and Justine Sherry and Sylvia Ratnasamy and Scott Shenker}, title = {Low Latency via Redundancy}, booktitle = {9th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT)}, month = {December}, year = {2013}, } | Ashish Vulimiri, P. Brighten Godfrey, Radhika Mittal, Justine Sherry, Sylvia Ratnasamy, and Scott Shenker. | 9th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT) | , December 2013. 
+  
+ Shortest Paths in Microseconds | BibTeX | @inproceedings{agarwal13shortest author = {Rachit Agarwal and Matthew Caesar and P. Brighten Godfrey and Ben Y. Zhao}, title = {Shortest Paths in Microseconds}, booktitle = {arXiv:1309.0874}, month = {September}, year = {2013}, } | Rachit Agarwal, Matthew Caesar, P. Brighten Godfrey, and Ben Y. Zhao. | arXiv:1309.0874 | , September 2013. | Newer, faster, longer version of the | WOSN 2012 version 
+  
+ A Simple Stretch 2 Distance Oracle | BibTeX | @inproceedings{agarwal13stretch2 author = {Rachit Agarwal and P. Brighten Godfrey}, title = {A Simple Stretch 2 Distance Oracle}, booktitle = {Brief announcement, 32nd Annual ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing (PODC)}, month = {July}, year = {2013}, } | Rachit Agarwal and P. Brighten Godfrey. | Brief announcement, 32nd Annual ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing (PODC) | , July 2013. 
+  
+ VeriFlow: Verifying Network-Wide Invariants in Real Time | BibTeX | @inproceedings{khurshid13veriflow author = {Ahmed Khurshid and Xuan Zou and Wenxuan Zhou and Matthew Caesar and P. Brighten Godfrey}, title = {VeriFlow: Verifying Network-Wide Invariants in Real Time}, booktitle = {10th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2013}, } | Ahmed Khurshid, Xuan Zou, Wenxuan Zhou, Matthew Caesar, and P. Brighten Godfrey. | 10th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2013. 
+  
+ Ensuring Connectivity via Data Plane Mechanisms | BibTeX | @inproceedings{liu13ddc author = {Junda Liu and Aurojit Panda and Ankit Singla and P. Brighten Godfrey and Michael Schapira and Scott Shenker}, title = {Ensuring Connectivity via Data Plane Mechanisms}, booktitle = {10th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2013}, } | Junda Liu, Aurojit Panda, Ankit Singla, P. Brighten Godfrey, Michael Schapira, and Scott Shenker. | 10th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2013. 
+  
+ href="godfrey13hotnets.pdf" - HotNets 2012 Highlights | BibTeX | @inproceedings{godfrey13hotnets author = {P. Brighten Godfrey}, title = {HotNets 2012 Highlights}, booktitle = {ACM SIGCOMM Computer Communication Review, Vol. 43, No. 1}, month = {January}, year = {2013}, } | P. Brighten Godfrey. ACM SIGCOMM Computer Communication Review, Vol. 43, No. 1, January 2013. 
+  
+ Distance Oracles for Stretch Less Than 2 | BibTeX | @inproceedings{agarwal13distance author = {Rachit Agarwal and P. Brighten Godfrey}, title = {Distance Oracles for Stretch Less Than 2}, booktitle = {ACM-SIAM Symposium on Discrete Algorithms (SODA)}, month = {January}, year = {2013}, } | Rachit Agarwal and P. Brighten Godfrey. | ACM-SIAM Symposium on Discrete Algorithms (SODA) | , January 2013. 
+  
+ 2012 
+ More is Less: Reducing Latency via Redundancy | BibTeX | @inproceedings{vulimiri12latency author = {Ashish Vulimiri and Oliver Michel and P. Brighten Godfrey and Scott Shenker}, title = {More is Less: Reducing Latency via Redundancy}, booktitle = {Eleventh ACM Workshop on Hot Topics in Networks (HotNets-XI)}, month = {October}, year = {2012}, } | Ashish Vulimiri, Oliver Michel, P. Brighten Godfrey, and Scott Shenker. | href="http://conferences.sigcomm.org/hotnets/2012/" - Eleventh ACM Workshop on Hot Topics in Networks (HotNets-XI) | , October 2012. 
+  
+ VeriFlow: Verifying Network-Wide Invariants in Real Time | BibTeX | @inproceedings{khurshid12veriflow author = {Ahmed Khurshid and Wenxuan Zhou and Matthew Caesar and P. Brighten Godfrey}, title = {VeriFlow: Verifying Network-Wide Invariants in Real Time}, booktitle = {First Workshop on Hot Topics in Software Defined Networking (HotSDN)}, month = {August}, year = {2012}, } | Ahmed Khurshid, Wenxuan Zhou, Matthew Caesar, and P. Brighten Godfrey. | href="http://conferences.sigcomm.org/sigcomm/2012/hotsdn.php" - First Workshop on Hot Topics in Software Defined Networking (HotSDN) | , August 2012. | Best paper award; republished in ACM SIGCOMM Computer Communication Review, Volume 42, Number 4, October 2012 
+  
+ Finishing Flows Quickly with Preemptive Scheduling | BibTeX | @inproceedings{hong12pdq author = {Chi-Yao Hong and Matthew Caesar and P. Brighten Godfrey}, title = {Finishing Flows Quickly with Preemptive Scheduling}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2012}, } | Chi-Yao Hong, Matthew Caesar, and P. Brighten Godfrey. | ACM SIGCOMM | , August 2012. | Full version at | http://arxiv.org/abs/1206.2057 
+  
+ Shortest Paths in Less Than a Millisecond | BibTeX | @inproceedings{agarwal12shortest author = {Rachit Agarwal and Matthew Caesar and P. Brighten Godfrey and Ben Y. Zhao}, title = {Shortest Paths in Less Than a Millisecond}, booktitle = {Workshop on Online Social Networks (WOSN)}, month = {August}, year = {2012}, } | Rachit Agarwal, Matthew Caesar, P. Brighten Godfrey, and Ben Y. Zhao. | Workshop on Online Social Networks (WOSN) | , August 2012. | Newer, faster, longer version 
+  
+ On the Resilience of Routing Tables | BibTeX | @inproceedings{feigenbaum12resilience author = {Joan Feigenbaum and P. Brighten Godfrey and Aurojit Panda and Michael Schapira and Scott Shenker and Ankit Singla}, title = {On the Resilience of Routing Tables}, booktitle = {Brief announcement, 31st Annual ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing (PODC)}, month = {July}, year = {2012}, } | Joan Feigenbaum, P. Brighten Godfrey, Aurojit Panda, Michael Schapira, Scott Shenker, and Ankit Singla. | Brief announcement, 31st Annual ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing (PODC) | , July 2012. | Tech report with proofs 
+  
+ How well can congestion pricing neutralize denial-of-service attacks? | BibTeX | @inproceedings{vulimiri12congestion author = {Ashish Vulimiri and P. Brighten Godfrey and Karthik Lakshminarayanan and Gul Agha}, title = {How well can congestion pricing neutralize denial-of-service attacks?}, booktitle = {ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS)}, month = {June}, year = {2012}, } | Ashish Vulimiri, P. Brighten Godfrey, Karthik Lakshminarayanan, and Gul Agha. | ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS) | , June 2012. 
+  
+ Jellyfish: Networking Data Centers Randomly | BibTeX | @inproceedings{singla12jellyfish author = {Ankit Singla and Chi-Yao Hong and Lucian Popa and P. Brighten Godfrey}, title = {Jellyfish: Networking Data Centers Randomly}, booktitle = {9th USENIX Symposium on Networked Systems Design and Implementation (NSDI)}, month = {April}, year = {2012}, } | Ankit Singla, Chi-Yao Hong, Lucian Popa, and P. Brighten Godfrey. | 9th USENIX Symposium on Networked Systems Design and Implementation (NSDI) | , April 2012. | Blog post 
+ Video of talk at Caltech | , April 2013 
+ Presentation | at Cisco, September 2013 
+ Presentation | at | DIMACS Workshop on Systems and Networking Advances in Cloud Computing | , December 2011 (outdated results) 
+ Workshop version | in HotCloud 2011 
+ Also at | arXiv:1110.1687 
+  
+ 2011 
+ ASAP: A Low-Latency Transport Layer | BibTeX | @inproceedings{zhou11asap author = {Wenxuan Zhou and Qingxi Li and Matthew Caesar and P. Brighten Godfrey}, title = {ASAP: A Low-Latency Transport Layer}, booktitle = {7th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT)}, month = {December}, year = {2011}, } | Wenxuan Zhou, Qingxi Li, Matthew Caesar, and P. Brighten Godfrey. | 7th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT) | , December 2011. 
+  
+ Debugging the Data Plane with Anteater | BibTeX | @inproceedings{mai11anteater author = {Haohui Mai and Ahmed Khurshid and Rachit Agarwal and Matthew Caesar and P. Brighten Godfrey and Samuel T. King}, title = {Debugging the Data Plane with Anteater}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2011}, } | Haohui Mai, Ahmed Khurshid, Rachit Agarwal, Matthew Caesar, P. Brighten Godfrey, and Samuel T. King. | ACM SIGCOMM | , August 2011. | Code 
+  
+ BGP Stability is Precarious | BibTeX | @inproceedings{godfrey11precarious author = {P. Brighten Godfrey}, title = {BGP Stability is Precarious}, booktitle = {arXiv:1108.0192}, month = {August}, year = {2011}, } | P. Brighten Godfrey. | arXiv:1108.0192 | , August 2011. 
+  
+ Architecting for Innovation | BibTeX | @inproceedings{koponen11fii author = {Teemu Koponen and Scott Shenker and Hari Balakrishnan and Nick Feamster and Igor Ganichev and Ali Ghodsi and P. Brighten Godfrey and Nick McKeown and Guru Parulkar and Barath Raghavan and Jennifer Rexford and Somaya Arianfar and Dmitriy Kuptsov}, title = {Architecting for Innovation}, booktitle = {ACM SIGCOMM Computer Communication Review, Vol. 41, No. 2}, month = {July}, year = {2011}, } | Teemu Koponen, Scott Shenker, Hari Balakrishnan, Nick Feamster, Igor Ganichev, Ali Ghodsi, P. Brighten Godfrey, Nick McKeown, Guru Parulkar, Barath Raghavan, Jennifer Rexford, Somaya Arianfar, and Dmitriy Kuptsov. | ACM SIGCOMM Computer Communication Review, Vol. 41, No. 2 | , July 2011. 
+  
+ Jellyfish: Networking Data Centers Randomly | BibTeX | @inproceedings{singla11jellyfish author = {Ankit Singla and Chi-Yao Hong and Lucian Popa and P. Brighten Godfrey}, title = {Jellyfish: Networking Data Centers Randomly}, booktitle = {3rd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud)}, month = {June}, year = {2011}, } | Ankit Singla, Chi-Yao Hong, Lucian Popa, and P. Brighten Godfrey. | href="http://www.usenix.org/event/hotcloud11/" - 3rd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud) | , June 2011. | See the | conference version | in NSDI 2012 
+  
+ Slick Packets | BibTeX | @inproceedings{nguyen11slickpackets author = {Giang Nguyen and Rachit Agarwal and Junda Liu and Matthew Caesar and P. Brighten Godfrey and Scott Shenker}, title = {Slick Packets}, booktitle = {ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS)}, month = {June}, year = {2011}, } | Giang Nguyen, Rachit Agarwal, Junda Liu, Matthew Caesar, P. Brighten Godfrey, and Scott Shenker. | ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS) | , June 2011. | Full version: | arXiv:1201.1661 
+ Code 
+  
+ Approximate Distance Queries and Compact Routing in Sparse Graphs | BibTeX | @inproceedings{agarwal11sparse author = {Rachit Agarwal and P. Brighten Godfrey and Sariel Har-Peled}, title = {Approximate Distance Queries and Compact Routing in Sparse Graphs}, booktitle = {30th Annual IEEE Conference on Computer Communications (INFOCOM), Shanghai, China}, month = {April}, year = {2011}, } | Rachit Agarwal, P. Brighten Godfrey, and Sariel Har-Peled. | 30th Annual IEEE Conference on Computer Communications (INFOCOM), Shanghai, China | , April 2011. 
+  
+ 2010 
+ Scalable Routing on Flat Names | BibTeX | @inproceedings{singla10disco author = {Ankit Singla and P. Brighten Godfrey and Kevin Fall and Gianluca Iannaccone and Sylvia Ratnasamy}, title = {Scalable Routing on Flat Names}, booktitle = {6th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT)}, month = {December}, year = {2010}, } | Ankit Singla, P. Brighten Godfrey, Kevin Fall, Gianluca Iannaccone, and Sylvia Ratnasamy. | 6th ACM International Conference on emerging Networking Experiments and Technologies (CoNEXT) | , December 2010. 
+  
+ YAMR: Yet Another Multipath Routing Protocol | BibTeX | @inproceedings{ganichev10yamr author = {Igor Ganichev and Bin Dai and P. Brighten Godfrey and Scott Shenker}, title = {YAMR: Yet Another Multipath Routing Protocol}, booktitle = {ACM SIGCOMM Computer Communication Review, Vol. 40, No. 5}, month = {October}, year = {2010}, } | Igor Ganichev, Bin Dai, P. Brighten Godfrey, and Scott Shenker. | ACM SIGCOMM Computer Communication Review, Vol. 40, No. 5 | , October 2010. | Public review 
+ href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-150.html" - Technical report 
+  
+ RELICS: In-network Realization of Incentives to Combat Selfishness in DTNs | BibTeX | @inproceedings{uddin10relics author = {Md. Yusuf Sarwar Uddin and P. Brighten Godfrey and Tarek Abdelzaher}, title = {RELICS: In-network Realization of Incentives to Combat Selfishness in DTNs}, booktitle = {18th IEEE International Conference on Network Protocols (ICNP)}, month = {October}, year = {2010}, } | Md. Yusuf Sarwar Uddin, P. Brighten Godfrey, and Tarek Abdelzaher. | 18th IEEE International Conference on Network Protocols (ICNP) | , October 2010. 
+  
+ Network Coding for Distributed Storage Systems | BibTeX | @inproceedings{dimakis10coding author = {Alexandros G. Dimakis and P. Brighten Godfrey and Yunnan Wu and Martin J. Wainwright and Kannan Ramchandran}, title = {Network Coding for Distributed Storage Systems}, booktitle = {IEEE Transactions on Information Theory, vol. 56, no. 9}, month = {September}, year = {2010}, } | Alexandros G. Dimakis, P. Brighten Godfrey, Yunnan Wu, Martin J. Wainwright, and Kannan Ramchandran. | IEEE Transactions on Information Theory, vol. 56, no. 9 | , September 2010. | IEEE Communications Society & Information Theory Society Joint Paper Award, 2012 
+ IEEE Communications Society Data Storage Technical Committee 2010 | Best Paper Award | winner 
+  
+ Guaranteeing BGP Stability With a Few Extra Paths | BibTeX | @inproceedings{agarwal10stability author = {Rachit Agarwal and Virajith Jalaparti and Matthew Caesar and P. Brighten Godfrey}, title = {Guaranteeing BGP Stability With a Few Extra Paths}, booktitle = {30th IEEE International Conference on Distributed Computing Systems (ICDCS)}, month = {June}, year = {2010}, } | Rachit Agarwal, Virajith Jalaparti, Matthew Caesar, and P. Brighten Godfrey. | 30th IEEE International Conference on Distributed Computing Systems (ICDCS) | , June 2010. 
+  
+ Incentive Compatibility and Dynamics of Congestion Control | BibTeX | @inproceedings{schapira10incentive author = {P. Brighten Godfrey and Michael Schapira and Aviv Zohar and Scott Shenker}, title = {Incentive Compatibility and Dynamics of Congestion Control}, booktitle = {ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS)}, month = {June}, year = {2010}, } | P. Brighten Godfrey, Michael Schapira, Aviv Zohar, and Scott Shenker. | ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS) | , June 2010. 
+  
+ 2009 
+ href="hotnets2009-final156.pdf" - Routing Tables: Is Smaller Really Much Better? | BibTeX | @inproceedings{fall09routing author = {Kevin Fall and P. Brighten Godfrey and Gianluca Iannaccone and Sylvia Ratnasamy}, title = {Routing Tables: Is Smaller Really Much Better?}, booktitle = {Eighth ACM Workshop on Hot Topics in Networks (HotNets)}, month = {October}, year = {2009}, } | Kevin Fall, P. Brighten Godfrey, Gianluca Iannaccone, and Sylvia Ratnasamy. | href="http://conferences.sigcomm.org/hotnets/2009/" - Eighth ACM Workshop on Hot Topics in Networks (HotNets) | , October 2009. 
+  
+ Pathlet Routing | BibTeX | @inproceedings{godfrey09pathlet author = {P. Brighten Godfrey and Igor Ganichev and Scott Shenker and Ion Stoica}, title = {Pathlet Routing}, booktitle = {Proc. ACM SIGCOMM, Barcelona, Spain}, month = {August}, year = {2009}, } | P. Brighten Godfrey, Igor Ganichev, Scott Shenker, and Ion Stoica. | Proc. ACM SIGCOMM, Barcelona, Spain | , August 2009. | Project web site | (Presentations, FAQ, etc.) 
+ Workshop version | in HotNets 2008 
+  
+ On the Price of Heterogeneity in Parallel Systems | BibTeX | @inproceedings{godfrey09heterogeneity author = {P. Brighten Godfrey and Richard Karp}, title = {On the Price of Heterogeneity in Parallel Systems}, booktitle = {Theory of Computing Systems, Volume 45, Number 2, pps. 280-301}, month = {August}, year = {2009}, } | P. Brighten Godfrey and Richard Karp. | Theory of Computing Systems, Volume 45, Number 2, pps. 280-301 | , August 2009. | Conference version | in SPAA 2006; one of seven papers invited to special journal issue. 
+  
+ Designing Distributed Systems for Heterogeneity | BibTeX | @inproceedings{godfrey09phd author = {P. Brighten Godfrey}, title = {Designing Distributed Systems for Heterogeneity}, booktitle = {Ph.D. Thesis, EECS Department, University of California, Berkeley, Technical Report No. UCB/EECS-2009-82}, month = {May}, year = {2009}, } | P. Brighten Godfrey. Ph.D. Thesis, EECS Department, University of California, Berkeley, Technical Report No. UCB/EECS-2009-82, May 2009. 
+  
+ 2008 
+ href="../pathlets/pathlet_routing-hotnets08.pdf" - Pathlet Routing | BibTeX | @inproceedings{godfrey08pathlet author = {P. Brighten Godfrey and Scott Shenker and Ion Stoica}, title = {Pathlet Routing}, booktitle = {Seventh ACM Workshop on Hot Topics in Networks (HotNets)}, month = {October}, year = {2008}, } | P. Brighten Godfrey, Scott Shenker, and Ion Stoica. | href="http://conferences.sigcomm.org/hotnets/2008/" - Seventh ACM Workshop on Hot Topics in Networks (HotNets) | , October 2008. | Obsoleted by the | conference version 
+ Project web site | (Presentations, FAQ, etc.) 
+  
+ Balls and Bins with Structure: Balanced Allocations on Hypergraphs | BibTeX | @inproceedings{godfrey08balls author = {P. Brighten Godfrey}, title = {Balls and Bins with Structure: Balanced Allocations on Hypergraphs}, booktitle = {ACM-SIAM Symposium on Discrete Algorithms (SODA)}, month = {January}, year = {2008}, } | P. Brighten Godfrey. | ACM-SIAM Symposium on Discrete Algorithms (SODA) | , January 2008. | Talk | [ | pdf | | | keynote | ] 
+  
+ 2007 
+ Stable Internet Route Selection | BibTeX | @inproceedings{godfrey07srs author = {P. Brighten Godfrey and Matthew Caesar and Ian Haken and Scott Shenker and Ion Stoica}, title = {Stable Internet Route Selection}, booktitle = {NANOG 40}, month = {June}, year = {2007}, } | P. Brighten Godfrey, Matthew Caesar, Ian Haken, Scott Shenker, and Ion Stoica. | NANOG 40 | , June 2007. | Updated version in | the tech report 
+  
+ Network Coding for Distributed Storage Systems | BibTeX | @inproceedings{dimakis07coding author = {Alexandros G. Dimakis and P. Brighten Godfrey and Martin J. Wainwright and Kannan Ramchandran}, title = {Network Coding for Distributed Storage Systems}, booktitle = {26th Annual IEEE Conference on Computer Communications (INFOCOM), Anchorage, Alaska}, month = {May}, year = {2007}, } | Alexandros G. Dimakis, P. Brighten Godfrey, Martin J. Wainwright, and Kannan Ramchandran. | 26th Annual IEEE Conference on Computer Communications (INFOCOM), Anchorage, Alaska | , May 2007. | Obsoleted by the | journal version | . 
+  
+ The Benefits of Network Coding for Peer-to-Peer Storage Systems | BibTeX | @inproceedings{dimakis07benefits author = {Alexandros G. Dimakis and P. Brighten Godfrey and Martin J. Wainwright and Kannan Ramchandran}, title = {The Benefits of Network Coding for Peer-to-Peer Storage Systems}, booktitle = {Third Workshop on Network Coding, Theory, and Applications (NETCOD)}, month = {January}, year = {2007}, } | Alexandros G. Dimakis, P. Brighten Godfrey, Martin J. Wainwright, and Kannan Ramchandran. | Third Workshop on Network Coding, Theory, and Applications (NETCOD) | , January 2007. | Obsoleted by the | journal version | . 
+  
+ 2006 
+ Minimizing Churn in Distributed Systems | BibTeX | @inproceedings{godfrey06churn-thesis author = {P. Brighten Godfrey}, title = {Minimizing Churn in Distributed Systems}, booktitle = {M.S. Thesis, EECS Department, University of California, Berkeley}, month = {December}, year = {2006}, } | P. Brighten Godfrey. M.S. Thesis, EECS Department, University of California, Berkeley, December 2006. 
+  
+ Minimizing Churn in Distributed Systems | BibTeX | @inproceedings{godfrey06churn author = {P. Brighten Godfrey and Scott Shenker and Ion Stoica}, title = {Minimizing Churn in Distributed Systems}, booktitle = {ACM SIGCOMM}, month = {September}, year = {2006}, } | P. Brighten Godfrey, Scott Shenker, and Ion Stoica. | ACM SIGCOMM | , September 2006. | Complete version with proofs in | my dissertation 
+ Older tech report version | : Technical Report No. EECS-2006-25, EECS Department University of California, Berkeley, 2006. 
+ Talk | [ | pdf | | | keynote | ] 
+ Public review and comments 
+ Data sets 
+  
+ On the Price of Heterogeneity in Parallel Systems | BibTeX | @inproceedings{godfrey06heterogeneity author = {P. Brighten Godfrey and Richard Karp}, title = {On the Price of Heterogeneity in Parallel Systems}, booktitle = {18th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), Cambridge, MA}, month = {July}, year = {2006}, } | P. Brighten Godfrey and Richard Karp. | 18th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), Cambridge, MA | , July 2006. | Invited to | special journal issue 
+ Talk | [ | pdf | | | keynote | ] 
+  
+ Load Balancing in Dynamic Structured P2P Systems | BibTeX | @inproceedings{surana06load author = {Sonesh Surana and P. Brighten Godfrey and Karthik Lakshminarayanan and Richard Karp and Ion Stoica}, title = {Load Balancing in Dynamic Structured P2P Systems}, booktitle = {Performance Evaluation, Vol. 63, no. 6, pps. 217-240}, month = {March}, year = {2006}, } | Sonesh Surana, P. Brighten Godfrey, Karthik Lakshminarayanan, Richard Karp, and Ion Stoica. | Performance Evaluation, Vol. 63, no. 6, pps. 217-240 | , March 2006. | Conference version | in INFOCOM 2004 
+  
+ 2005 
+ OpenDHT: A Public DHT Service and Its Uses | BibTeX | @inproceedings{rhea05opendht author = {Sean Rhea and P. Brighten Godfrey and Brad Karp and John Kubiatowicz and Sylvia Ratnasamy and Scott Shenker and Ion Stoica and Harlan Yu}, title = {OpenDHT: A Public DHT Service and Its Uses}, booktitle = {ACM SIGCOMM}, month = {August}, year = {2005}, } | Sean Rhea, P. Brighten Godfrey, Brad Karp, John Kubiatowicz, Sylvia Ratnasamy, Scott Shenker, Ion Stoica, and Harlan Yu. | ACM SIGCOMM | , August 2005. 
+  
+ Heterogeneity and Load Balance in Distributed Hash Tables | BibTeX | @inproceedings{godfrey05y0 author = {P. Brighten Godfrey and Ion Stoica}, title = {Heterogeneity and Load Balance in Distributed Hash Tables}, booktitle = {24th Annual IEEE Conference on Computer Communications (INFOCOM), Miami, FL}, month = {March}, year = {2005}, } | P. Brighten Godfrey and Ion Stoica. | 24th Annual IEEE Conference on Computer Communications (INFOCOM), Miami, FL | , March 2005. | Complete version with proofs in | my dissertation 
+ Talk 
+  
+ 2004 
+ Naps: Scalable, Robust Topology Management in Wireless Ad Hoc Networks | BibTeX | @inproceedings{godfrey04naps author = {P. Brighten Godfrey and David Ratajczak}, title = {Naps: Scalable, Robust Topology Management in Wireless Ad Hoc Networks}, booktitle = {Third IEEE/ACM International Symposium on Information Processing in Sensor Networks (IPSN)}, month = {April}, year = {2004}, } | P. Brighten Godfrey and David Ratajczak. | Third IEEE/ACM International Symposium on Information Processing in Sensor Networks (IPSN) | , April 2004. | Talk 
+  
+ Load Balancing in Dynamic Structured P2P Systems | BibTeX | @inproceedings{surana04load author = {Sonesh Surana and P. Brighten Godfrey and Karthik Lakshminarayanan and Richard Karp and Ion Stoica}, title = {Load Balancing in Dynamic Structured P2P Systems}, booktitle = {23rd Annual IEEE Conference on Computer Communications (INFOCOM), Hong Kong}, month = {March}, year = {2004}, } | Sonesh Surana, P. Brighten Godfrey, Karthik Lakshminarayanan, Richard Karp, and Ion Stoica. | 23rd Annual IEEE Conference on Computer Communications (INFOCOM), Hong Kong | , March 2004. | Obsoleted by the | journal version 
+  
+ 2003 
+ Paths, Trees and Minimum Latency Tours | BibTeX | @inproceedings{chaudhuri03paths author = {Kamalika Chaudhuri and P. Brighten Godfrey and Satish Rao and Kunal Talwar}, title = {Paths, Trees and Minimum Latency Tours}, booktitle = {44th Annual IEEE Symposium on Foundations of Computer Science (FOCS)}, month = {October}, year = {2003}, } | Kamalika Chaudhuri, P. Brighten Godfrey, Satish Rao, and Kunal Talwar. | 44th Annual IEEE Symposium on Foundations of Computer Science (FOCS) | , October 2003. 
+  
+ On the Complexity of the Game of Set | BibTeX | @inproceedings{chaudhuri03set author = {Kamalika Chaudhuri and P. Brighten Godfrey and David Ratajczak and Hoeteck Wee}, title = {On the Complexity of the Game of Set}, booktitle = {Manuscript}, month = {June}, year = {2003}, } | Kamalika Chaudhuri, P. Brighten Godfrey, David Ratajczak, and Hoeteck Wee. Manuscript, June 2003.
+

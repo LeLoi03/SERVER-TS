@@ -1,0 +1,978 @@
+Conference full name: International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward)
+
+1. Website of Onward_3: https://www.sigplan.org/Conferences/Onward/
+Website information of Onward_3:
+
+ACM SIGPLANHome 
+ Conferences 
+ OpenTOC 
+ Awards 
+ href="/Highlights" - Research Highlights 
+ Membership 
+ Onward! 
+ Symposium on New Ideas in Programming and Reflections on Software (Onward!) is a forum for new ideas and paradigms for every aspect of programming. Welcomed are papers that propose and argue for new approaches to the creation of software as well as reflections on technology and ideas bearing on programming broadly construed. 
+ href="/Conferences/Onward_legacy/" - A Table of Contents
+for the years 2002–2010. 
+ Onward! 2024 
+ Pasadena, California, USA, October 23-25, 2024 
+ Co-located with SPLASH 2024 
+ Papers chair: Jonathan Edwards (unaffiliated) 
+ Essays chair: Marcel Taeumel (HPI and University of Potsdam) 
+ https://2024.splashcon.org 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-papers" - https://2024.splashcon.org/track/splash-2024-Onward-papers 
+ href="https://2024.splashcon.org/track/splash-2024-Onward-Essays" - https://2024.splashcon.org/track/splash-2024-Onward-Essays 
+ Awards 
+ Most Notable Paper Award 2024 (1) for 2011 | Recipients: Sean McDirmid 
+ Title: Coding at the Speed of Touch 
+ Conference: Onward! 2011 
+ Paper: | https://dl.acm.org/doi/10.1145/2048237.2048246 
+ Citation: This 2011 Onward! paper describes the design and implementation of YinYang, a graphical system providing a proficient programming experience for tablet devices with constrained screen space. YingYang’s tile-based approach sidestepped these devices’ limited text-editing capabilities and enabled an intuitive and effective form of direct manipulation. The work stands out as an emblematic Onward! contribution. It is notable for championing programmability on a class of traditionally “closed” devices, exploring many subtle design points of graphical and visual languages, and as a call to action for moving “beyond typewriters” and inspiring the next generation of programmers. 
+ Most Notable Paper Award 2024 (2) for 2012 | Recipients: Andrew P. Black, Kim B. Bruce, Michael Homer and James Noble 
+ Title: Grace: the Absence of (Inessential) Difficulty 
+ Conference: Onward! 2012 
+ Paper: | https://dl.acm.org/doi/pdf/10.1145/2384592.2384601 
+ Citation: In this Onward! 2012 paper, the authors distilled a tremendous effort to accommodate the needs of programming pedagogy in a new language design. The paper is a model of clarity, deftly justifying its choices while also situating Grace within the rich history of programming languages past and present. It has supported and inspired considerable follow-on work, not only on pedagogy but also in programming language research topics such as gradual typing and the semantics of object-orientation. 
+ Most Notable Paper Award 2023 for 2013 | Recipients: Sean McDirmid 
+ Title: Usable Live Programming 
+ Conference: Onward! 2013 
+ Paper: | https://dl.acm.org/doi/10.1145/2509578.2509585 
+ Citation: This paper revitalized the study of live programming, introducing mechanisms that are now standard techniques in the field. The paper epitomizes the spirit of Onward!, asking risky questions outside the current discourse. In its form the paper was a breath of fresh air, enlivened by the use of comic strips. The work marked the beginning of a rich seam of research that has been productively mined at the ongoing LIVE workshop series at SPLASH. 
+ Most Notable Paper Award 2020 for 2010 | Recipients: Lennart C. L. Kats, Eelco Visser, and Guido Wachsmuth 
+ Title: Pure and Declarative Syntax Definition: Paradise Lost and Regained 
+ Conference: Onward! 2010 
+ Paper: | https://dl.acm.org/doi/10.1145/1869459.1869535 
+ Citation: In a beautiful and compelling exposition, this essay lays out a research vision for realizing a declarative approach to syntax definition. Considering how we can best capture the syntactic structure of a programming language is a question near to the heart of both language design and implementation. The essay is technically interesting without getting lost in formality. Its argument for the declarative paradigm has been influential, impacting a chain of research on declarative syntax tools and helping to usher in the recent era of polyglot programming. 
+ Most Notable Paper Award 2019 for 2009 | Recipient: William R. Cook 
+ Title: On Understanding Data Abstraction, Revisited 
+ Conference: Onward! 2009 
+ Paper: | https://dl.acm.org/citation.cfm?id=1640133 
+ Citation: The 2009 Onward! essay “On Understanding Data Abstraction, Revisited” compares abstract data types and objects as two forms of data abstraction. In particular, the paper describes many points of differences and similarities between them clearly and comprehensively. The paper is not only most notable for summarizing a long history of discussions, but also for letting many programming language designers reflect on this topic again. 
+ Most Notable Paper Award 2018 for 2008 | Recipient: Richard P. Gabriel 
+ Title: Designed as Designer 
+ Conference: Onward! 2008 
+ Paper: | https://dl.acm.org/citation.cfm?id=1449813 
+ Citation: The 2008 Onward! essay “Designed as Designer” examines the nature of creativity and design, exploring poetry, architecture and software. In particular, the paper sets out to explore questions about our self-conception as computer scientists and programmers. This paper is notable for paving the way for a new track that became Essays at Onward!. 
+ Most Notable Paper Award 2017 for 2007 | Recipient: Sean McDirmid 
+ Title: Living it up with a Live Programming Language 
+ Conference: Onward! 2007 
+ Paper: | http://dl.acm.org/citation.cfm?id=1297073 
+ Citation: The 2007 Onward! paper “Living it up with a Live Programming Language” brought the idea of Live Programming into focus by examining the necessary mechanisms, developing a good running example, displaying a contrarian attitude, and explaining it all with admirably clear writing. 
+ Most Notable Paper Award 2016 for 2006 | Recipient: Friedrich Steimann 
+ Title: The Paradoxical Success of Aspect-Oriented Programming 
+ Conference: Onward! 2006 
+ Paper: | http://dl.acm.org/citation.cfm?id=1167514 
+ Citation: The 2006 Onward! Essay “The Paradoxical Success of Aspect-Oriented Programming” presents a considered and articulated exploration of the nature of aspect-oriented programming (AOP). In particular, the paper takes a hard look at the value proposed for AOP, together with an examination of what is achieved and what sacrifices appear to be necessary. The paper does not attack AOP, but rather takes a sober look at the hopes and the fears. In doing so, the paper provides a careful review that might also form the basis for progress, even if the form of progress might differ from the original promise. 
+ Most Notable Paper Award 2015 for 2005 | Recipient: Jonathan Edwards 
+ Title: Subtext—Uncovering the Simplicity of Programming 
+ Conference: Onward! 2005 
+ Paper: | http://dl.acm.org/citation.cfm?id=1094811.1094851 
+ Citation: The 2005 Onward! paper “Subtext—Uncovering the Simplicity of Programming” presented a new kind of programming, unifying programs and their execution, and which helped establish Onward! as a forum for high-end, lateral thinking about programming. 
+ Most Notable Paper Award 2014 for 2004 | Recipient: Tim Sheard 
+ Title: Languages of the Future 
+ Conference: Onward! 2004 
+ Paper: | http://dl.acm.org/citation.cfm?id=1052883.1052897 
+ Citation: The 2004 Onward! paper “Languages of the Future” pioneered the idea of lightweight dependently-typed programming, and idea that has since found its way into several languages, and continues to progress today. This paper is notable for bringing together complex ideas in a compelling way; pointing to how they could be incorporated into “ordinary” languages; and influencing the practical world of software development with this pearl of a design. 
+ Most Notable Paper Award 2013 for 2003 | Recipient: Martin Rinard 
+ Title: Acceptability-oriented Computing 
+ Conference: Onward! 2003 
+ Paper: | http://dl.acm.org/citation.cfm?doid=949344.949402 
+ Citation: The 2003 Onward! paper “Acceptability-Oriented Computing” introduced the approach of defining the boundaries of acceptable program behavior for a software system, and then augmenting the original system by layering components to enforce those boundaries—this instead of attempting to construct a completely error-free system. This paper led to a still-expanding series of papers exploring this approach, its capabilities and its benefits. 
+ Most Notable Paper Award 2012 for 2002 | Recipients: James Noble and Robert Biddle 
+ Title: Notes on Postmodern Programming 
+ Conference: Onward! 2002 
+ Paper: | href="http://www.sigplan.org/sites/default/files/Onward!Proceedings-2002.pdf" - http://www.sigplan.org/sites/default/files/Onward!Proceedings-2002.pdf 
+ Citation: The 2002 Onward! paper “Notes on Postmodern Programming” uses postmodern concepts to understand contemporary programming, especially as software grows in scale and design is dispersed to a diversity of stakeholders. This paper is notable because it triggered a storm of immediate responses and ongoing discussion on the Web; it introduced the essay genre to the programming community and cut the path that led to a new technical track at Onward! (Essays); and it stated for the first time the philosophical model of at-scale software development that dominates today. 
+ Past Events 
+ Onward! 2023 | Cascais, Portugal, October 25-27, 2023 
+ Co-located with SPLASH 2023 
+ Papers chair: Tijs van der Storm (CWI and University of Groningen) 
+ Essays chair: Robert Hirschfeld (HPI and University of Potsdam) 
+ https://2023.splashcon.org 
+ href="https://2023.splashcon.org/track/splash-2023-Onward-papers" - https://2023.splashcon.org/track/splash-2023-Onward-papers 
+ href="https://2023.splashcon.org/track/splash-2023-Onward-Essays" - https://2023.splashcon.org/track/splash-2023-Onward-Essays 
+ Onward! 2022 | Auckland, New Zealand, December 8-10, 2022 
+ Co-located with SPLASH 2022 
+ Papers chair: Christophe Scholliers (Universiteit Gent) 
+ Essays chair: Jeremy Singer (University of Glasgow) 
+ https://2022.splashcon.org 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-papers" - https://2022.splashcon.org/track/splash-2022-Onward-papers 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-Essays" - https://2022.splashcon.org/track/splash-2022-Onward-Essays 
+ Onward! 2021 | Chicago, Illinois, October 20-22, 2021 
+ Co-located with SPLASH 2021 
+ Papers chair: Wolfgang De Meuter (Vrije Universiteit Brussel) 
+ Essays chair: Elisa Baniassad (University of British Columbia) 
+ https://2021.splashcon.org 
+ href="https://2021.splashcon.org/track/splash-2021-Onward-papers" - https://2021.splashcon.org/track/splash-2021-Onward-papers 
+ href="https://2021.splashcon.org/track/splash-2021-Onward-Essays" - https://2021.splashcon.org/track/splash-2021-Onward-Essays 
+ Onward! 2020 | Online, November 15-21, 2020 
+ Co-located with SPLASH 2020 
+ Papers chair: Stephen Kell (University of Kent) 
+ Essays chair: Didier Verna (EPITA / LRDE) 
+ https://2020.splashcon.org/ 
+ href="https://2020.splashcon.org/track/splash-2020-Onward-papers" - https://2020.splashcon.org/track/splash-2020-Onward-papers 
+ href="https://2020.splashcon.org/track/splash-2020-Onward-Essays" - https://2020.splashcon.org/track/splash-2020-Onward-Essays 
+ Onward! 2019 | Athens, Greece, October 23-25, 2019 
+ Co-located with SPLASH 2019 
+ Papers chair: Hidehiko Masuhara (Tokyo Institute of Technology) 
+ Essays chair: Tomas Petricek (University of Kent) 
+ http://2019.splashcon.org 
+ href="https://2019.onward-conference.org/track/onward-2019-papers" - https://2019.onward-conference.org/track/onward-2019-papers 
+ href="https://2019.onward-conference.org/track/onward-2019-Onward-Essays" - https://2019.onward-conference.org/track/onward-2019-Onward-Essays 
+ Onward! 2018 | Boston, Massachusetts, USA, October 17-19, 2018 
+ Co-located with SPLASH 2018 
+ Papers chair: Elisa Gonzalez Boix 
+ Essays chair: Richard P. Gabriel 
+ Keynote speaker: Jenny Quillien 
+ http://2018.splashcon.org 
+ Richard P. Gabriel (Dreamsongs and Hasso Plattner Institute) 
+ href="https://2018.onward-conference.org/track/onward-2018-papers" - https://2018.onward-conference.org/track/onward-2018-papers 
+ href="https://2018.onward-conference.org/track/onward-2018-Onward-Essays" - https://2018.onward-conference.org/track/onward-2018-Onward-Essays 
+ Onward! 2017 | Vancouver, British Columbia, Canada, October) 25-27, 2017 
+ Co-located with SPLASH 2017 
+ Papers chair: Emina Torlak 
+ Papers co-chair: Tijs van der Storm 
+ Essays chair: Robert Biddle 
+ Keynote speaker: Lera Boroditsky 
+ http://2017.splashcon.org 
+ href="http://2017.onward-conference.org/track/onward-2017-Onward-Papers" - http://2017.onward-conference.org/track/onward-2017-Onward-Papers 
+ href="http://2017.onward-conference.org/track/onward-2017-essays-2017" - http://2017.onward-conference.org/track/onward-2017-essays-2017 
+ Onward! 2016 | Amsterdam, The Netherlands, November 2-4, 2016 
+ Co-located with SPLASH 2016 
+ Papers chair: Emerson Murphy-Hill 
+ Essays chair: Cristina Videira Lopes 
+ Keynote speaker: Andrew J. Ko 
+ href="http://2016.onward-conference.org" - http://2016.onward-conference.org 
+ href="http://2016.onward-conference.org/track/onward-2016-papers" - http://2016.onward-conference.org/track/onward-2016-papers 
+ href="http://2016.onward-conference.org/track/onward2016-essays" - http://2016.onward-conference.org/track/onward2016-essays 
+ Onward! 2015 | Pittsburgh, Pennsylvania, USA, October 28-30, 2015 
+ Co-located with SPLASH 2015 
+ Papers chair: Gail Murphy 
+ Essays chair: Guy L. Steele Jr. 
+ Keynote speaker: Rob DeLine 
+ href="http://2015.onward-conference.org" - http://2015.onward-conference.org 
+ href="http://2015.onward-conference.org/track/onward2015-papers" - http://2015.onward-conference.org/track/onward2015-papers 
+ href="http://2015.onward-conference.org/track/onward2015-essays" - http://2015.onward-conference.org/track/onward2015-essays 
+ Onward! 2014 | Portland, Oregon, USA, October 22-24, 2014 
+ Co-located with SPLASH 2014 
+ Papers chair: Shriram Krishnamurthi 
+ Essays chair: Bernd Bruegge 
+ Keynote speaker: Peter Norvig 
+ href="http://2014.onward-conference.org" - http://2014.onward-conference.org 
+ href="http://2014.onward-conference.org/track/onward2014-papers" - http://2014.onward-conference.org/track/onward2014-papers 
+ href="http://2014.onward-conference.org/track/onward2014-essays" - http://2014.onward-conference.org/track/onward2014-essays 
+ Onward! 2013 | Indianapolis, Indiana, USA, October 29-31, 2013 
+ Co-located with SPLASH 2013 
+ Papers chair: Robert Hirschfeld 
+ Essays chair: Bernd Bruegge 
+ Keynote speaker: Gilad Bracha 
+ href="http://onward-conference.org/2013/" - http://onward-conference.org/2013/ 
+ href="http://splashcon.org/2013/program/onward-research-papers/" - http://splashcon.org/2013/program/onward-research-papers/ 
+ href="http://splashcon.org/2013/program/onward-essays/" - http://splashcon.org/2013/program/onward-essays/ 
+ Onward! 2012 | Tucson, Arizona, USA, October 24-26, 2012 
+ Co-located with SPLASH 2012 
+ Papers chair: Jonathan Edwards 
+ Essays chair: Julie Steele 
+ href="http://onward-conference.org/2012/" - http://onward-conference.org/2012/ 
+ href="http://splashcon.org/2012/program/onward-papers/" - http://splashcon.org/2012/program/onward-papers/ 
+ href="http://splashcon.org/2012/program/onward-essays/" - http://splashcon.org/2012/program/onward-essays/ 
+ Onward! 2011 | Portland, Oregon, USA, October 25-27, 2011 
+ Co-located with SPLASH 2011 
+ General chair: Robert Hirschfeld 
+ General co-chair: Richard P. Gabriel 
+ Papers chair: Eelco Visser 
+ Essays chair: David West 
+ Keynote speaker: Markus Püschel 
+ href="http://onward-conference.org/2011/" - http://onward-conference.org/2011/ 
+ Onward! 2010 | Reno, Nevada, USA, October 19-21, 2010 
+ Co-located with SPLASH 2010 
+ General chair: Siobhán Clarke 
+ Papers chair: Kevin Sullivan 
+ Essays chair: Daniel Steinberg 
+ Keynote speaker: Benjamin C. Pierce 
+ href="http://onward-conference.org/2010/" - http://onward-conference.org/2010/ 
+ Onward! 2009 | Disney’s Contemporary Resort 
+ Orlando, Florida, USA, October 27-29, 2009 
+ Co-located with OOPSLA 2009 
+ General chair: Bernd Bruegge 
+ Papers chair: Yvonne Coady 
+ Essays chair: Simon Peyton-Jones 
+ Essays assistant chair: Richard P. Gabriel 
+ Keynote speaker: Thomas Malone 
+ href="http://onward-conference.org/2009/" - http://onward-conference.org/2009/ 
+ Onward! 2008 | Nashville, Tennessee, USA, October 21-23 
+ Co-located with OOPSLA 2008 
+ PC chair: Dirk Riehle 
+ Keynote speaker: Sonali Shah 
+ https://dl.acm.org/doi/proceedings/10.1145/1449814 
+ Onward! 2007 | Montréal, Quebec, Canada, October 23-25, 2007 
+ Co-located with OOPSLA 2007 
+ PC chair: Cristina Videira Lopes 
+ Keynote speakers: Jim Purbrick and Mark Lentczner 
+ href="http://www.oopsla.org/oopsla2007/index.php?page=program/onward/" - http://www.oopsla.org/oopsla2007/index.php?page=program/onward/ 
+ Onward! 2006 | Portland, Oregon, USA, October 24-26, 2006 
+ Co-located with OOPSLA 2006 
+ Chair: Robert Biddle 
+ Keynote speaker: Brenda Laurel 
+ href="http://www.oopsla.org/2006/submission/onward/introduction_to_onward.html" - http://www.oopsla.org/2006/submission/onward/introduction_to_onward.html 
+ Onward! 2005 | San Diego, California, USA, October 18-20, 2005 
+ Co-located with OOPSLA 2005 
+ Co-chairs: Elisa L. A. Baniassad and James Noble 
+ Essays chair: Brian Marick 
+ Keynote speaker: Mary Beth Rosson 
+ http://www.oopsla.org/2005/ShowEvent.do?id=809 
+ Onward! 2004 | Vancouver, British Columbia, Canada, October 26-28, 2004 
+ Co-located with OOPSLA 2004 
+ Chair: Geoff A. Cohen 
+ Keynote speaker: Jaron Lanier 
+ href="http://www.oopsla.org/2004/ShowEvent.do?id=onward" - http://www.oopsla.org/2004/ShowEvent.do?id=onward 
+ Onward! 2003 | Anaheim, California, USA, October 28-30, 2003 
+ Co-located with OOPSLA 2003 
+ Chair: Richard P. Gabriel 
+ Keynote speaker: Larry Lessig 
+ http://www.oopsla.org/oopsla2003/files/onw.html 
+ Onward! 2002 | Seattle, Washington, USA, November 6-8, 2002 
+ Co-located with OOPSLA 2002 
+ Chair: Richard P. Gabriel 
+ Keynote speaker: Jerry Michalski 
+ href="http://www.oopsla.org/2002/2n_onward.html" - http://www.oopsla.org/2002/2n_onward.html 
+ Proceedings: | href="http://www.sigplan.org/sites/default/files/Onward!Proceedings-2002.pdf" - http://www.sigplan.org/sites/default/files/Onward!Proceedings-2002.pdf 
+ Steering Committee Members 
+ Present 
+ Jonathan Aldrich, Carnegie Mellon University, USA (Past SC Chair 2021-2023, SC Chair 2018-2020, SPLASH General Chair 2015) 
+ Elisa Baniassad, University of British Columbia, Canada (Essays Chair 2021, SC Chair 2011-2013, Co-chair 2005) 
+ Wolfgang De Meuter, Vrije Universiteit Brussel, Belgium (Papers Chair 2021) 
+ Robert Hirschfeld, HPI and University of Potsdam, Germany (Essays Chair 2023, Past SC Chair 2018-2021, SC Chair 2015-2018, Papers Chair 2013, General Chair 2011) 
+ Ranjit Jhala, University of California at San Diego, USA (SIGPLAN 2021) 
+ Stephen Kell, University of Kent, United Kingdom (Papers Chair 2020) 
+ Hidehiko Masuhara, Tokyo Institute of Technology, Japan (Papers Chair 2019) 
+ Tomas Petricek, University of Kent, UK (Essays Chair 2019) 
+ Hridesh Rajan, Iowa State University, USA (SPLASH General Chair 2020-2021) 
+ Yannis Smaragdakis, University of Athens, Greece (SPLASH General Chair 2019) 
+ Tijs van der Storm, CWI and University of Groningen, Netherlands (Papers Chair 2023) 
+ Didier Verna, EPITA / LRDE, France (Essays Chair 2020) 
+ Past 
+ Robert Biddle, Carleton University, Canada (Essays Chair 2017, Chair 2006) 
+ Andrew Black (SPLASH General Chair 2014) 
+ Elisa Gonzalez Boix, Vrije Universiteit Brussel, Belgium (Papers Chair 2018) 
+ Bernd Bruegge (Essays Chair 2014, Essays Chair 2013, General Chair 2009) 
+ Siobhán Clarke (General Chair 2010) 
+ Yvonne Coady (Papers Chair 2009) 
+ Geoff A. Cohen (Chair 2004) 
+ Jonathan Edwards (Papers Chair 2012) 
+ Richard P. Gabriel, Dreamsongs and Hasso Plattner Institute, USA (Essays Chair 2018, General Co-chair 2011, Essays Assistant Chair 2009, Chair 2003, Chair 2002, Founding Chair) 
+ Jeremy Gibbons (SIGPLAN 2012-2015) 
+ Robert Hirschfeld, Hasso Plattner Institute and University of Potsdam, Germany (Past SC Chair 2018-2020, SC Chair 2015-2018, Papers Chair 2013, General Chair 2011) 
+ Antony Hosking (SPLASH 2013 General Chair) 
+ Shriram Krishnamurthi (Papers Chair 2014) 
+ Cristina Videira Lopes (Essays Chair 2016, PC Chair 2007) 
+ Brian Marick (Essays Chair 2005) 
+ Gail Murphy, University of British Columbia, Canada (SPLASH General Chair 2017, Papers Chair 2015) 
+ Emerson Murphy-Hill (Papers Chair 2016) 
+ James Noble (Co-chair 2005) 
+ Simon Peyton-Jones (Essays Chair 2009) 
+ Benjamin C. Pierce, University of Pennsylvania, USA (SIGPLAN 2018-2020) 
+ Dirk Riehle (PC Chair 2008) 
+ Julie Steele (Essays Chair 2012) 
+ Guy L. Steele Jr. (Essays Chair 2015) 
+ Daniel Steinberg (Essays Chair 2010) 
+ Tijs van der Storm (Papers Co-chair 2017) 
+ Kevin Sullivan (Past SC Chair 2015-2018, SC Chair 2013-2015, Papers Chair 2010) 
+ Peter Thiemann (SIGPLAN 2015-2018) 
+ Emina Torlak, University of Washington, USA (Papers Chair 2017) 
+ Eelco Visser (SPLASH General Chair 2016, Papers Chair 2011) 
+ Jan Vitek, Northeastern University, USA (SPLASH General Chair 2018) 
+ David West (Essays Chair 2011) 
+
+Page generated Mon, 07 Apr 2025 13:07:30 +0000
+
+2. Website of Onward_3: https://2025.splashcon.org/track/splash-2025-Onward-papers
+Website information of Onward_3:
+
+href="https://2025.splashcon.org" - SPLASH 2025
+Sun 12 - Sat 18 October 2025href="https://2025.splashcon.org/venue/splash-2025-venue" - Singapore
+co-located withhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+Toggle navigation 
+ Attending | href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct 
+ Call for Sponsorship 
+ href="#" - Tracks | SPLASH 2025 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops 
+ Co-hosted Conferences 
+ href="#" - ICFP | href="https://icfp25.sigplan.org" - ICFP 
+ href="https://icfp25.sigplan.org/track/icfp-2025-artifacts" - ICFP  Artifacts 
+ href="https://icfp25.sigplan.org/track/icfp-2025-papers" - ICFP  Papers 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop  @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 
+ SAS | href="https://2025.splashcon.org/home/sas-2025" - SAS 
+ href="https://2025.splashcon.org/track/sas-2025-sas-artifact" - SAS  Artifact 
+ Organization | SPLASH 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | OOPSLA Review Committee 
+ External Review / Artifact Evaluation Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-oopsla-artifacts-artifact-evaluation-committee" - OOPSLA Artifacts 
+ href="#" - Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-Posters-organizing-committee" - Posters 
+ href="#" - Student Research Competition | href="https://2025.splashcon.org/committee/splash-2025-SRC-organizers" - Organizers 
+ href="https://2025.splashcon.org/committee/splash-2025-SRC-reviewers" - Reviewers 
+ ICFP/SPLASH 
+ href="https://conf.researchr.org/committee/icfp-splash-2025/icfp-splash-2025-workshops-workshop-selection-committee" - Workshops 
+ Contributors 
+ href="https://2025.splashcon.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - ICFP | Organizing Committee 
+ Steering Committee 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe" - ICFP Artifacts 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-papers-icfp-papers-and-events" - ICFP Papers 
+ MPLR | Program Committee 
+ Steering Committee 
+ Workshops 
+ Erlang | Organizing Committee 
+ Program Committee 
+ FProPer | Program Committee 
+ FUNARCH | Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ HOPE | Program Committee 
+ LMPL | Organizing Committee 
+ Program Committee 
+ ML Family Workshop | Program Committee 
+ OCaml | Program Committee 
+ PAINT | Program Committee 
+ href="#" - PLMW @ ICFP/SPLASH | Program Committee 
+ PROPL | href="https://conf.researchr.org/committee/icfp-splash-2025/propl-2025-papers-chairs" - Chairs 
+ Program Committee 
+ Scheme | Organizing Committee 
+ Program Committee 
+ The Scala Workshop | Organizing Committee 
+ Program Committee 
+ TyDe | Organising Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ WebAssembly Workshop | href="https://conf.researchr.org/committee/icfp-splash-2025/webassembly-ws-2025-papers-program-committee" - Organizers 
+ miniKanren and Relational Programming Workshop | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ Haskell | Program Committee 
+ SAS | SAS 2025Organizing Committee 
+ SAS 2025Program Committee 
+ SAS 2025Steering Committee 
+ href="https://2025.splashcon.org/committee/sas-2025-sas-artifact-sas-artifact-evaluation-committee" - SAS Artifact 
+ href="https://2025.splashcon.org/search//all" - Search 
+ Series | href="https://2025.splashcon.org/series/splash" - Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2025/https%3A%5Es%5Es2025.splashcon.org%5Estrack%5Essplash-2025-Onward-papers" - Sign in 
+ href="https://2025.splashcon.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+(href="https://2025.splashcon.org/series/icfp-splash" - series
+) /href="https://2025.splashcon.org" - SPLASH 2025
+(href="https://2025.splashcon.org/series/splash" - series
+) /Onward! PapersSPLASH 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ - 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Call for Papers 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Selection Process 
+ Onward! papers are peer-reviewed in a double blind manner. Accepted papers will appear in the Onward! Proceedings in the ACM Digital Library. Submissions will be judged on the potential impact of the ideas and the quality of the presentation. 
+ Onward! Papers follows a two-phase review process. This enables us to welcome papers that contain promising ideas and have the potential to meet the conference’s standards, but which may fall short of this in the initial submission. At the end of the first phase, all papers will be either: accepted normally; or asked to perform certain required revisions; or rejected outright. The authors of papers asked to perform revisions will get one month to complete the revisions, at which point the original reviewers decide on the final acceptance of the paper. All papers will thus remain under submission until the authors receive notification of acceptance or rejection. 
+ We expect the typical strong submission to be accepted normally, with authors expected—as is conventional—to revise the paper using the program committee’s feedback. 
+ The program committee may identify certain papers with promising ideas as needing important revisions. These papers will be handled in one of two ways. They may be assigned a shepherd, in the tradition followed by numerous conferences. Otherwise, they will be given a concrete set of goals to accomplish in the revision. In the latter case, the second submission must then be accompanied by a cover letter mapping the revision requests to specific parts of the paper; the program committee will use the cover letter and revised submission to arrive at a final decision. 
+ The second phase will only be used to elevate promising papers to the conference’s standard, not to require additional work of papers already deemed up-to-standard. Now submissions are not allowed for the second phase deadline. 
+ href="#instructions-for-authors" - Instructions for Authors
+For fairness reasons, all submitted papers should conform to the formatting instructions (see below). Submissions that violate these instructions may be rejected without review, at the discretion of the Program Chair. 
+ Authors of accepted papers are strongly encouraged to present their work in person at the conference but that is not required. There will be a remote participation option, the details of which are to be decided. 
+ href="#submission-site" - Submission Site
+href="https://onward2025papers.hotcrp.com/" - https://onward2025papers.hotcrp.com/
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described by SIGPLAN’s Republication Policy. Submitters should also be aware of ACM’s Policy and Procedures on Plagiarism. 
+ Policy on Double Blind Review 
+ Onward! 2025 is using a double-blind submission process. This means that authors will not know who reviewed their papers, and reviewers will not know who authored the papers they review. The aim of double-blind is to treat all papers with minimal bias. Authors must take the following actions to prepare their papers for double-blind reviewing: 
+ Remove identifying information (names, institutions, etc) from the author block of the first page of the paper. 
+ To the extent possible, when authors cite their own work, they should refer to it in the third person. 
+ To the extent possible, authors should remove any other potentially identifying information, such as acknowledgements. 
+ After submitting their review, reviewers will be able to see author identities. When the paper is accepted for publication, the camera-ready copy must not be blinded. 
+ See OOPSLA’s FAQ on double-blind reviewing for more information. Please contact the PC chair if you have any questions. 
+ href="#policy-on-authorship-changes" - Policy on Authorship Changes
+Any addition of authors after initial submission of a paper must be cleared with the PC chair. Authors are very strongly advised to list all authors prior to initial submission as the addition of authors may create new conflicts with the PC. In all cases, the PC chair must be provided with a rationale. The PC chair has the authority to reject any requested change. 
+ Format 
+ Submissions should usehref="http://www.sigplan.org/Resources/Author/" - ACM SIGPLAN Conference acmart Format, sigplan sub-format
+and 10 point font. All submissions should be in PDF format. 
+ If you are formatting your paper using LaTeX, you will need to use the sigplan, anonymous and review options. Note that by default the SIGPLAN template produces two-column, 9 point papers, but you will need to you will need to set the 10pt option in the \documentclass command. If you are formatting your paper using Word, you may wish to use the provided Word template that supports this font size. Please include page numbers in your submission. Setting the review option in the LaTeX \documentclass command generates page numbers, and the anonymous option hides author names. Please also ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes are legible. 
+ Page Limit 
+ To ensure that papers stay focused on their core contributions, the main part of the paper (excluding bibliographic references) should be no longer than 13 pages. There is no page limit for bibliographic references and appendices, and, therefore, for the overall submission. However, reviewers are not obligated to read the appendices, so the main part of the paper should be self contained. If the paper is accepted, the final submission will be limited to 17 pages. (The 13-page limit for the main body of the paper no longer applies.) 
+ Publication (Digital Library Early Access Warning) 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ More Information 
+ For additional information, clarification, or answers to questions please contact the Program Chair viahref="mailto:onward@splashcon.org" - onward@splashcon.org
+Important DatesAoE (UTC-12h) 
+  
+ Thu 24 Apr 2025 
+ Submission deadline 
+ Fri 6 Jun 2025 
+ First-round notification 
+ Thu 17 Jul 2025 
+ Revised submission deadline 
+ Mon 11 Aug 2025 
+ Final notification 
+ Mon 25 Aug 2025 
+ Camera-ready deadline 
+ Submission Link 
+ href="https://onward2025papers.hotcrp.com" - https://onward2025papers.hotcrp.com
+Program Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaCo-chairUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseCo-chairAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/antranigbasman" - Antranig BasmanRaising the Floor - InternationalUnited Kingdom 
+ href="https://2025.splashcon.org/profile/jacquescarette" - Jacques CaretteMcMaster UniversityCanada 
+ href="https://2025.splashcon.org/profile/lukechurch" - Luke ChurchUniversity of Cambridge | Candela IncUnited Kingdom 
+ href="https://2025.splashcon.org/profile/siobhanclarke" - Siobhán ClarkeTrinity College Dublin, IrelandIreland 
+ href="https://2025.splashcon.org/profile/stephaneducasse" - Stéphane DucasseInria; University of Lille; CNRS; Centrale Lille; CRIStALFrance 
+ href="https://2025.splashcon.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/philipphaller" - Philipp HallerKTH Royal Institute of TechnologySweden 
+ href="https://2025.splashcon.org/profile/reidholmes" - Reid HolmesUniversity of British ColumbiaCanada 
+ href="https://2025.splashcon.org/profile/joeljakubovic" - Joel JakubovicCharles University in PragueCzechia 
+ href="https://2025.splashcon.org/profile/junkato" - Jun KatoNational Institute of Advanced Industrial Science and Technology (AIST)Japan 
+ href="https://2025.splashcon.org/profile/raffikhatchadourian" - Raffi KhatchadourianCUNY Hunter CollegeUnited States 
+ href="https://2025.splashcon.org/profile/patricklam" - Patrick LamUniversity of Waterloo 
+ href="https://2025.splashcon.org/profile/daanleijen" - Daan LeijenMicrosoft ResearchUnited States 
+ href="https://2025.splashcon.org/profile/sorinlerner" - Sorin LernerUniversity of California at San DiegoUnited States 
+ href="https://2025.splashcon.org/profile/magnusmadsen" - Magnus MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/olelehrmannmadsen" - Ole Lehrmann MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/steveoney" - Steve OneyUniversity of Michigan 
+ href="https://2025.splashcon.org/profile/rolyperera" - Roly PereraUniversity of Cambridge/University of BristolUnited Kingdom 
+ href="https://2025.splashcon.org/profile/guillermopolito" - Guillermo PolitoUniv. Lille, Inria, CNRS, Centrale Lille, UMR 9189 CRIStALFrance 
+ href="https://2025.splashcon.org/profile/alexanderrepenning" - Alexander RepenningUniversity of Colorado, BoulderUnited States 
+ href="https://2025.splashcon.org/profile/andrearosa" - Andrea RosàUSI LuganoSwitzerland 
+ href="https://2025.splashcon.org/profile/giancarlosucci1" - Giancarlo Succi 
+ href="https://2025.splashcon.org/profile/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/wolfgangdemeuter" - Wolfgang De MeuterVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/jonathanedwards" - Jonathan EdwardsIndependentUnited States 
+ href="https://2025.splashcon.org/profile/colingordon" - Colin GordonDrexel UniversityUnited States 
+ href="https://2025.splashcon.org/profile/roberthirschfeld" - Robert HirschfeldHasso Plattner Institute; University of PotsdamGermany 
+ href="https://2025.splashcon.org/profile/stephenkell" - Stephen KellKing's College LondonUnited Kingdom 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/tomaspetricek" - Tomas PetricekCharles UniversityCzechia 
+ href="https://2025.splashcon.org/profile/manusridharan" - Manu SridharanUniversity of California at RiversideUnited States 
+ href="https://2025.splashcon.org/profile/marceltaeumel" - Marcel TaeumelUniversity of Potsdam; Hasso Plattner InstituteGermany 
+ href="https://2025.splashcon.org/profile/vascotvasconcelos" - Vasco T. VasconcelosLASIGE, University of LisbonPortugal 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ xWed 9 Apr 10:59 
+ href="https://2025.splashcon.org" - SPLASH 2025
+href="https://2025.splashcon.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.splashcon.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+ 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+ 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+
+ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops
+Co-hosted Conferences 
+ href="https://icfp25.sigplan.org" - ICFP 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 2025
+ 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 2025
+ 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 2025
+ 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 2025
+ 
+ href="https://2025.splashcon.org/home/sas-2025" - SAS 2025
+Attending 
+ href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing
+ 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre
+ 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct
+ 
+ Call for Sponsorship 
+ href="https://2025.splashcon.org/signup" - Sign Up
+
+3. Website of Onward_3: https://2025.splashcon.org/track/splash-2025-Onward-papers
+Website information of Onward_3:
+
+href="https://2025.splashcon.org" - SPLASH 2025
+Sun 12 - Sat 18 October 2025href="https://2025.splashcon.org/venue/splash-2025-venue" - Singapore
+co-located withhref="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+Toggle navigation 
+ Attending | href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct 
+ Call for Sponsorship 
+ href="#" - Tracks | SPLASH 2025 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition 
+ ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops 
+ Co-hosted Conferences 
+ href="#" - ICFP | href="https://icfp25.sigplan.org" - ICFP 
+ href="https://icfp25.sigplan.org/track/icfp-2025-artifacts" - ICFP  Artifacts 
+ href="https://icfp25.sigplan.org/track/icfp-2025-papers" - ICFP  Papers 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop  @ ICFP/SPLASH 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 
+ SAS | href="https://2025.splashcon.org/home/sas-2025" - SAS 
+ href="https://2025.splashcon.org/track/sas-2025-sas-artifact" - SAS  Artifact 
+ Organization | SPLASH 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | OOPSLA Review Committee 
+ External Review / Artifact Evaluation Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-oopsla-artifacts-artifact-evaluation-committee" - OOPSLA Artifacts 
+ href="#" - Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Steering Committee 
+ href="https://2025.splashcon.org/committee/splash-2025-Posters-organizing-committee" - Posters 
+ href="#" - Student Research Competition | href="https://2025.splashcon.org/committee/splash-2025-SRC-organizers" - Organizers 
+ href="https://2025.splashcon.org/committee/splash-2025-SRC-reviewers" - Reviewers 
+ ICFP/SPLASH 
+ href="https://conf.researchr.org/committee/icfp-splash-2025/icfp-splash-2025-workshops-workshop-selection-committee" - Workshops 
+ Contributors 
+ href="https://2025.splashcon.org/people-index" - People Index 
+ Co-hosted Conferences 
+ href="#" - ICFP | Organizing Committee 
+ Steering Committee 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe" - ICFP Artifacts 
+ href="https://icfp25.sigplan.org/committee/icfp-2025-papers-icfp-papers-and-events" - ICFP Papers 
+ MPLR | Program Committee 
+ Steering Committee 
+ Workshops 
+ Erlang | Organizing Committee 
+ Program Committee 
+ FProPer | Program Committee 
+ FUNARCH | Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ HOPE | Program Committee 
+ LMPL | Organizing Committee 
+ Program Committee 
+ ML Family Workshop | Program Committee 
+ OCaml | Program Committee 
+ PAINT | Program Committee 
+ href="#" - PLMW @ ICFP/SPLASH | Program Committee 
+ PROPL | href="https://conf.researchr.org/committee/icfp-splash-2025/propl-2025-papers-chairs" - Chairs 
+ Program Committee 
+ Scheme | Organizing Committee 
+ Program Committee 
+ The Scala Workshop | Organizing Committee 
+ Program Committee 
+ TyDe | Organising Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Program Committee 
+ WebAssembly Workshop | href="https://conf.researchr.org/committee/icfp-splash-2025/webassembly-ws-2025-papers-program-committee" - Organizers 
+ miniKanren and Relational Programming Workshop | Organizing Committee 
+ Program Committee 
+ Co-hosted Symposia 
+ Haskell | Program Committee 
+ SAS | SAS 2025Organizing Committee 
+ SAS 2025Program Committee 
+ SAS 2025Steering Committee 
+ href="https://2025.splashcon.org/committee/sas-2025-sas-artifact-sas-artifact-evaluation-committee" - SAS Artifact 
+ href="https://2025.splashcon.org/search//all" - Search 
+ Series | href="https://2025.splashcon.org/series/splash" - Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2025/https%3A%5Es%5Es2025.splashcon.org%5Estrack%5Essplash-2025-Onward-papers" - Sign in 
+ href="https://2025.splashcon.org/signup" - Sign up 
+ href="https://conf.researchr.org/home/icfp-splash-2025" - ICFP/SPLASH 2025
+(href="https://2025.splashcon.org/series/icfp-splash" - series
+) /href="https://2025.splashcon.org" - SPLASH 2025
+(href="https://2025.splashcon.org/series/splash" - series
+) /Onward! PapersSPLASH 2025 
+ About 
+ href="#Call-for-Papers" - Call for Papers 
+ - 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Call for Papers 
+ Onward! is a premier multidisciplinary conference focused on everything to do with programming and software: including processes, methods, languages, communities and applications. Onward! is more radical, more visionary and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching and reporting on programming language and software engineering research. 
+ href="#the-character-of-onward-papers" - The Character of Onward! Papers
+Onward! Papers is looking for grand visions and new paradigms that could make a big difference in how we will one day build software. But it is not looking for research-as-usual papers—conferences like OOPSLA are the place for that. Those conferences require rigorous validation such as theorems or empirical experiments, which are necessary for scientific progress, but which typically preclude discussion of early-stage ideas. Onward! papers must also supply some degree of validation because mere speculation is not a good basis for progress. However, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged. 
+ Selection Process 
+ Onward! papers are peer-reviewed in a double blind manner. Accepted papers will appear in the Onward! Proceedings in the ACM Digital Library. Submissions will be judged on the potential impact of the ideas and the quality of the presentation. 
+ Onward! Papers follows a two-phase review process. This enables us to welcome papers that contain promising ideas and have the potential to meet the conference’s standards, but which may fall short of this in the initial submission. At the end of the first phase, all papers will be either: accepted normally; or asked to perform certain required revisions; or rejected outright. The authors of papers asked to perform revisions will get one month to complete the revisions, at which point the original reviewers decide on the final acceptance of the paper. All papers will thus remain under submission until the authors receive notification of acceptance or rejection. 
+ We expect the typical strong submission to be accepted normally, with authors expected—as is conventional—to revise the paper using the program committee’s feedback. 
+ The program committee may identify certain papers with promising ideas as needing important revisions. These papers will be handled in one of two ways. They may be assigned a shepherd, in the tradition followed by numerous conferences. Otherwise, they will be given a concrete set of goals to accomplish in the revision. In the latter case, the second submission must then be accompanied by a cover letter mapping the revision requests to specific parts of the paper; the program committee will use the cover letter and revised submission to arrive at a final decision. 
+ The second phase will only be used to elevate promising papers to the conference’s standard, not to require additional work of papers already deemed up-to-standard. Now submissions are not allowed for the second phase deadline. 
+ href="#instructions-for-authors" - Instructions for Authors
+For fairness reasons, all submitted papers should conform to the formatting instructions (see below). Submissions that violate these instructions may be rejected without review, at the discretion of the Program Chair. 
+ Authors of accepted papers are strongly encouraged to present their work in person at the conference but that is not required. There will be a remote participation option, the details of which are to be decided. 
+ href="#submission-site" - Submission Site
+href="https://onward2025papers.hotcrp.com/" - https://onward2025papers.hotcrp.com/
+href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described by SIGPLAN’s Republication Policy. Submitters should also be aware of ACM’s Policy and Procedures on Plagiarism. 
+ Policy on Double Blind Review 
+ Onward! 2025 is using a double-blind submission process. This means that authors will not know who reviewed their papers, and reviewers will not know who authored the papers they review. The aim of double-blind is to treat all papers with minimal bias. Authors must take the following actions to prepare their papers for double-blind reviewing: 
+ Remove identifying information (names, institutions, etc) from the author block of the first page of the paper. 
+ To the extent possible, when authors cite their own work, they should refer to it in the third person. 
+ To the extent possible, authors should remove any other potentially identifying information, such as acknowledgements. 
+ After submitting their review, reviewers will be able to see author identities. When the paper is accepted for publication, the camera-ready copy must not be blinded. 
+ See OOPSLA’s FAQ on double-blind reviewing for more information. Please contact the PC chair if you have any questions. 
+ href="#policy-on-authorship-changes" - Policy on Authorship Changes
+Any addition of authors after initial submission of a paper must be cleared with the PC chair. Authors are very strongly advised to list all authors prior to initial submission as the addition of authors may create new conflicts with the PC. In all cases, the PC chair must be provided with a rationale. The PC chair has the authority to reject any requested change. 
+ Format 
+ Submissions should usehref="http://www.sigplan.org/Resources/Author/" - ACM SIGPLAN Conference acmart Format, sigplan sub-format
+and 10 point font. All submissions should be in PDF format. 
+ If you are formatting your paper using LaTeX, you will need to use the sigplan, anonymous and review options. Note that by default the SIGPLAN template produces two-column, 9 point papers, but you will need to you will need to set the 10pt option in the \documentclass command. If you are formatting your paper using Word, you may wish to use the provided Word template that supports this font size. Please include page numbers in your submission. Setting the review option in the LaTeX \documentclass command generates page numbers, and the anonymous option hides author names. Please also ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes are legible. 
+ Page Limit 
+ To ensure that papers stay focused on their core contributions, the main part of the paper (excluding bibliographic references) should be no longer than 13 pages. There is no page limit for bibliographic references and appendices, and, therefore, for the overall submission. However, reviewers are not obligated to read the appendices, so the main part of the paper should be self contained. If the paper is accepted, the final submission will be limited to 17 pages. (The 13-page limit for the main body of the paper no longer applies.) 
+ Publication (Digital Library Early Access Warning) 
+ AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ More Information 
+ For additional information, clarification, or answers to questions please contact the Program Chair viahref="mailto:onward@splashcon.org" - onward@splashcon.org
+Important DatesAoE (UTC-12h) 
+  
+ Thu 24 Apr 2025 
+ Submission deadline 
+ Fri 6 Jun 2025 
+ First-round notification 
+ Thu 17 Jul 2025 
+ Revised submission deadline 
+ Mon 11 Aug 2025 
+ Final notification 
+ Mon 25 Aug 2025 
+ Camera-ready deadline 
+ Submission Link 
+ href="https://onward2025papers.hotcrp.com" - https://onward2025papers.hotcrp.com
+Program Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaCo-chairUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseCo-chairAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/antranigbasman" - Antranig BasmanRaising the Floor - InternationalUnited Kingdom 
+ href="https://2025.splashcon.org/profile/jacquescarette" - Jacques CaretteMcMaster UniversityCanada 
+ href="https://2025.splashcon.org/profile/lukechurch" - Luke ChurchUniversity of Cambridge | Candela IncUnited Kingdom 
+ href="https://2025.splashcon.org/profile/siobhanclarke" - Siobhán ClarkeTrinity College Dublin, IrelandIreland 
+ href="https://2025.splashcon.org/profile/stephaneducasse" - Stéphane DucasseInria; University of Lille; CNRS; Centrale Lille; CRIStALFrance 
+ href="https://2025.splashcon.org/profile/elisagonzalezboix" - Elisa Gonzalez BoixVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/philipphaller" - Philipp HallerKTH Royal Institute of TechnologySweden 
+ href="https://2025.splashcon.org/profile/reidholmes" - Reid HolmesUniversity of British ColumbiaCanada 
+ href="https://2025.splashcon.org/profile/joeljakubovic" - Joel JakubovicCharles University in PragueCzechia 
+ href="https://2025.splashcon.org/profile/junkato" - Jun KatoNational Institute of Advanced Industrial Science and Technology (AIST)Japan 
+ href="https://2025.splashcon.org/profile/raffikhatchadourian" - Raffi KhatchadourianCUNY Hunter CollegeUnited States 
+ href="https://2025.splashcon.org/profile/patricklam" - Patrick LamUniversity of Waterloo 
+ href="https://2025.splashcon.org/profile/daanleijen" - Daan LeijenMicrosoft ResearchUnited States 
+ href="https://2025.splashcon.org/profile/sorinlerner" - Sorin LernerUniversity of California at San DiegoUnited States 
+ href="https://2025.splashcon.org/profile/magnusmadsen" - Magnus MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/olelehrmannmadsen" - Ole Lehrmann MadsenAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/steveoney" - Steve OneyUniversity of Michigan 
+ href="https://2025.splashcon.org/profile/rolyperera" - Roly PereraUniversity of Cambridge/University of BristolUnited Kingdom 
+ href="https://2025.splashcon.org/profile/guillermopolito" - Guillermo PolitoUniv. Lille, Inria, CNRS, Centrale Lille, UMR 9189 CRIStALFrance 
+ href="https://2025.splashcon.org/profile/alexanderrepenning" - Alexander RepenningUniversity of Colorado, BoulderUnited States 
+ href="https://2025.splashcon.org/profile/andrearosa" - Andrea RosàUSI LuganoSwitzerland 
+ href="https://2025.splashcon.org/profile/giancarlosucci1" - Giancarlo Succi 
+ href="https://2025.splashcon.org/profile/emmasoderberg" - Emma SöderbergLund UniversitySweden 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ Steering Committee 
+ href="https://2025.splashcon.org/profile/shigeruchiba" - Shigeru ChibaUniversity of TokyoJapan 
+ href="https://2025.splashcon.org/profile/wolfgangdemeuter" - Wolfgang De MeuterVrije Universiteit BrusselBelgium 
+ href="https://2025.splashcon.org/profile/jonathanedwards" - Jonathan EdwardsIndependentUnited States 
+ href="https://2025.splashcon.org/profile/colingordon" - Colin GordonDrexel UniversityUnited States 
+ href="https://2025.splashcon.org/profile/roberthirschfeld" - Robert HirschfeldHasso Plattner Institute; University of PotsdamGermany 
+ href="https://2025.splashcon.org/profile/stephenkell" - Stephen KellKing's College LondonUnited Kingdom 
+ href="https://2025.splashcon.org/profile/hidehikomasuhara" - Hidehiko MasuharaInstitute of Science TokyoJapan 
+ href="https://2025.splashcon.org/profile/clemensnylandstedklokmose" - Clemens Nylandsted KlokmoseAarhus UniversityDenmark 
+ href="https://2025.splashcon.org/profile/tomaspetricek" - Tomas PetricekCharles UniversityCzechia 
+ href="https://2025.splashcon.org/profile/manusridharan" - Manu SridharanUniversity of California at RiversideUnited States 
+ href="https://2025.splashcon.org/profile/marceltaeumel" - Marcel TaeumelUniversity of Potsdam; Hasso Plattner InstituteGermany 
+ href="https://2025.splashcon.org/profile/vascotvasconcelos" - Vasco T. VasconcelosLASIGE, University of LisbonPortugal 
+ href="https://2025.splashcon.org/profile/tijsvanderstorm" - Tijs van der StormCWI & University of GroningenNetherlands 
+ xWed 9 Apr 10:59 
+ href="https://2025.splashcon.org" - SPLASH 2025
+href="https://2025.splashcon.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://2025.splashcon.org/support" - Support page
+ 
+ Tracks 
+ href="https://2025.splashcon.org/track/OOPSLA" - OOPSLA
+ 
+ href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts" - OOPSLA Artifacts
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-Essays" - Onward! Essays
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Onward-papers" - Onward! Papers
+ 
+ href="https://2025.splashcon.org/track/splash-2025-Posters" - Posters
+ 
+ href="https://2025.splashcon.org/track/splash-2025-SRC" - Student Research Competition
+
+ICFP/SPLASH 2025 
+ href="https://2025.splashcon.org/track/icfp-splash-2025-workshops" - Workshops
+Co-hosted Conferences 
+ href="https://icfp25.sigplan.org" - ICFP 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mplr-2025" - MPLR 2025
+ 
+ Workshops 
+ href="https://conf.researchr.org/home/icfp-splash-2025/erlang-2025" - Erlang 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/fproper-2025" - FProPer 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/funarch-2025" - FUNARCH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hatra-2025" - HATRA 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/hope-2025" - HOPE 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/lmpl-2025" - LMPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/mlsymposium-2025" - ML Family Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/ocaml-2025" - OCaml 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/paint-2025" - PAINT 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/PLMW-ICFP-SPLASH-2025" - PLMW @ ICFP/SPLASH 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/propl-2025" - PROPL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/scheme-2025" - Scheme 2025
+ 
+ href="https://2025.workshop.scala-lang.org" - The Scala Workshop 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/tyde-2025" - TyDe 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/vmil-2025" - VMIL 2025
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/webassembly-ws-2025" - WebAssembly Workshop
+ 
+ href="https://conf.researchr.org/home/icfp-splash-2025/minikanren-2025" - miniKanren and Relational Programming Workshop 2025
+ 
+ Co-hosted Symposia 
+ href="https://conf.researchr.org/home/icfp-splash-2025/haskellsymp-2025" - Haskell 2025
+ 
+ href="https://2025.splashcon.org/home/sas-2025" - SAS 2025
+Attending 
+ href="https://2025.splashcon.org/venue/splash-2025-venue1" - Venue (Sunday Workshops): NUS School of Computing
+ 
+ href="https://2025.splashcon.org/venue/splash-2025-venue" - Venue (Main Conference): Marina Bay Sands Convention Centre
+ 
+ href="https://2025.splashcon.org/attending/Code-of-Conduct" - Code of Conduct
+ 
+ Call for Sponsorship 
+ href="https://2025.splashcon.org/signup" - Sign Up
+
+4. Website of Onward_3: https://thakur.cs.ucdavis.edu/publications.html
+Website information of Onward_3:
+
+Aditya V. Thakurhref="/research.html" - Research
+PublicationsTeaching/ServiceStudentsBlogPublications 
+ Google Scholar/DBLP 
+ Provable Editing of Deep Neural Networks using Parametric Linear Relaxation | Advances in Neural Information Processing Systems : Annual Conference on Neural Information Processing Systems (NeurIPS), 2024 | PDF | Details 
+ Towards Verifying Exact Conditions of Density Functional Theory Approximations | Eighth International Workshop on Software Correctness for HPC Applications (Correctness 2024), 2024 | PDF | Details 
+ Interleaving Static Analysis and LLM Prompting | Proceedings of the 13th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis 2024 | PDF | ACM© | Details 
+ Provable Repair of Vision Transformers | International Symposium on AI Verification (SAIV), 2024 | PDF | Springer, Cham© | Details 
+ Architecture-Preserving Provable Repair of Deep Neural Networks | Proc. ACM Program. Lang. (PLDI) , 2023 | PDF | ACM© | Details 
+ SyReNN: A Tool for Analyzing Deep Neural Networks | International Journal on Software Tools for Technology Transfer (STTT), 2023 | PDF | Springer© | Details 
+ Provable Repair of Deep Neural Networks | 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI), 2021 | PDF | ACM© | Details 
+ DICE*: A Formally Verified Implementation of DICE Measured Boot | 30th USENIX Security Symposium (USENIX Security ’21 Fall), 2021 | PDF | Details 
+ SyReNN: A Tool for Analyzing Deep Neural Networks | 27th International Conference on Tools and Algorithms for the Construction and Analysis of Systems TACAS 2021 | PDF | Springer© | Details 
+ href="bibliography/Onward2020.html" - Analogy-Making as a Core Primitive in the Software Engineering Toolbox | 2020 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software Onward!, 2020 | href="assets/pubs/Onward2020.pdf" - PDF | ACM© | href="/bibliography/Onward2020.html" - Details 
+ Memory-efficient Fixpoint Computation | 27th Static Analysis Symposium (SAS), 2020 | Awarded the Radhia Cousot Young Researcher Best Paper Award | PDF | Springer© | Details 
+ Abstract Neural Networks | 27th Static Analysis Symposium (SAS), 2020 | PDF | Springer© | Details 
+ A Deep Deterministic Policy Gradient Based Network Scheduler For Deadline-Driven Data Transfer | 2020 IFIP Networking Conference 2020 | PDF | Details 
+ Deterministic Parallel Fixpoint Computation | Proc. ACM Program. Lang. (POPL) , 2020 | PDF | ACM© | Details 
+ Correcting Deep Neural Networks with Small, Generalizing Patches | NeurIPS 2019 Workshop on Safety and Robustness in Decision Making 2019 | PDF | Details 
+ Computing Linear Restrictions of Neural Networks | Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems (NeurIPS), 2019 | PDF | Details 
+ A Reinforcement Learning Based Network Scheduler For Deadline-Driven Data Transfers | IEEE Global Communications Conference (GLOBECOM), 2019 | PDF | Details 
+ An SMT Approach To A Multiparty Economic Scheduling Problem | 17th International Workshop on Satisfiability Modulo Theories (SMT’19), 2019 | PDF | Details 
+ Effective Error-Specification Inference via Domain-Knowledge Expansion | Proceedings of the 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE’19) , 2019 | PDF | ACM© | Details 
+ Path-Based Function Embedding and Its Application to Error-Handling Specification Mining | Proceedings of the 26th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE’18) , 2018 | PDF | ACM© | Details 
+ Path-Based Function Embeddings | Proceedings of the 40th International Conference on Software Engineering: Companion Proceeedings, ICSE 2018 2018 | PDF | ACM© | Details 
+ Scaling up Superoptimization | Proceedings of the Twenty-First International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), 2016 | PDF | ACM© | Details 
+ GreenThumb: superoptimizer construction framework | Proceedings of the 25th International Conference on Compiler Construction (CC), 2016 | PDF | ACM© | Details 
+ Automating Abstract Interpretation | 17th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI), 2016 | Invited paper | PDF | Springer© | Details 
+ PostHat and All That: Automating Abstract Interpretation | Electronic Notes in Theoretical Computer Science , 2015 | Fourth Workshop on Tools for Automatic Program Analysis (TAPAS 2013) | PDF | Elsevier© | Details 
+ Satisfiability modulo abstraction for separation logic with linked lists | 2014 International Symposium on Model Checking of Software (SPIN), 2014 | PDF | ACM© | Details 
+ Property-Directed Shape Analysis | 26th International Conference on Computer Aided Verification (CAV), 2014 | PDF | Springer© | Details 
+ Through the Lens of Abstraction | High Confidence Software and Systems Conference (HCSS), 2014 | PDF | Details 
+ A Generalization of Stålmarck’s Method | 19th International Symposium on Static Analysis (SAS), 2012 | PDF | Springer© | Details 
+ Bilateral Algorithms for Symbolic Abstraction | 19th International Symposium on Static Analysis (SAS), 2012 | PDF | Springer© | Details 
+ OpenNWA: A Nested-Word Automaton Library | 24th International Conference on Computer Aided Verification (CAV), 2012 | PDF | Springer© | Details 
+ A Method for Symbolic Computation of Abstract Operations | 24th International Conference on Computer Aided Verification (CAV), 2012 | PDF | Springer© | Details 
+ Instrumentation and sampling strategies for cooperative concurrency bug isolation | Proceedings of the 25th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA), 2010 | PDF | ACM© | Details 
+ There’s Plenty of Room at the Bottom: Analyzing and Verifying Machine Code | 22nd International Conference on Computer Aided Verification (CAV), 2010 | Invited paper | PDF | Springer© | Details 
+ Directed Proof Generation for Machine Code | 22nd International Conference on Computer Aided Verification (CAV), 2010 | PDF | Springer© | Details 
+ Proofs from Tests | IEEE Transactions on Software Engineering (TSE) (4) , 2010 | PDF | IEEE© | Details 
+ The Yogi Project: Software Property Checking via Static Analysis and Testing | 15th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS), 2009 | PDF | Springer© | Details 
+ Cooperative crug isolation | Seventh International Workshop on Dynamic Analysis (WODA), 2009 | PDF | ACM© | Details 
+ Comprehensive path-sensitive data-flow analysis | Sixth International Symposium on Code Generation and Optimization (CGO), 2008 | PDF | ACM© | Details 
+  
+ Theses 
+ Thakur, A. V. (2014, August).Symbolic Abstraction: Algorithms and Applications(Ph.D. dissertation). Computer Sciences Department, University of Wisconsin, Madison. | PDF | Details 
+ Thakur, A. V. (2008, August).Comprehensive Path-sensitive Data-flow Analysis(M.Sc.(Engg.) thesis). Indian Institute of Science, Bangalore. | PDF | Details 
+ Aditya V. Thakur 
+ University of California, Davis 
+ Department of Computer Science 
+ avthakur@ucdavis.edu 
+ (530) 754-0434 
+ 2073 Academic Surge 
+ In these days, a person who says a thing cannot be done is quite apt to be interrupted by some idiot doing it.
+

@@ -1,0 +1,14 @@
+output:
+{
+  "Conference dates": "November 1 - 3, 2025",
+  "Year": "2025",
+  "Location": "Zagreb",
+  "City-State-Province": "Zagreb",
+  "Country": "Croatia",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Topics": "eCommerce, ePayment, eLearning, eHealth, eSports, IT services, Mobile computing, Knowledge management, Algorithms, Databases, Data mining, Information Systems, Information sourcing, Programming languages, Security, Privacy, Automation of Services, Human-centred Computing, Multimedia, Visualization, User Interfacing, Personalization, Empathic systems, Virtual Reality, Distributed systems, Parallel systems, Cloud Computing, Intelligent systems, Large-scale applications, Local storage, Distributed storage, IoT, Industry 4.0, Mobile Systems, Networks, Protocols, Standards, Mark-up Languages, Sensor Networks, WWW Applications, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts, Wideband Information streaming",
+  "Summary": "The Applied Computing 2025 conference aims to address the main issues of concern within the applied computing area and related fields. This conference covers essentially technical aspects. The proceedings of the conference will be published in the form of a book and digital copy with ISBN.",
+  "Call for Papers": "No call for papers available"
+}
+

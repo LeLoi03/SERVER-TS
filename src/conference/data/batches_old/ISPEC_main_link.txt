@@ -1,0 +1,660 @@
+Conference ISPEC:
+
+ISPEC 2024 
+ 19th International Conference on Information Security Practice and Experience 
+ Wuhan, China 25-27 October 2024 
+ MENU - Home 
+ Home 
+ Keynotes 
+ href="#authors" - Authors 
+ Committees 
+ href="#papers" - Papers 
+ Program 
+ Registration 
+ Venue 
+ Visa 
+ About ISPEC 2024 
+ The 19th International Conference on Information Security Practice and Experience (ISPEC 2024) will be held on October 25-27, 2024 in Wuhan, organized by Wuhan University of Technology and Central China Normal University. The ISPEC conference is an established forum that brings together researchers and practitioners to provide a confluence of new information security technologies, including their applications and their integration with IT systems in various vertical sectors. The main goal of the conference is to promote research on new information security technologies, including their applications and their integration with IT systems in various vertical sectors. Previous ISPEC has taken place in Singapore (2005), Hangzhou, China (2006), Hong Kong (2007), Sydney, Australia (2008), Xi'an, China (2009), Seoul, Korea (2010), Guangzhou China (2011), Hangzhou, China (2012), Lanzhou, China (2013), Fuzhou, China (2014), Beijing, China (2015), Zhangjiajie China (2016), Melbourne, Australia (2017), Tokyo, Japan (2018), Kuala Lumpur, Malaysia (2019), Nanjing, China (2021) , Taiwan (2022) and Copenhagen, Denmark (2023) For all sessions, the conference proceedings were published by Springer in the Lecture Notes in Computer Science series. 
+ Organized by: 
+ Wuhan University of Technology, China 
+ Central China Normal University, China 
+ Sponsored by: 
+ Symmetry 
+ Supported by: 
+ 湖北省网络空间安全学会（Hubei Society for Cyberspace Security Research） 
+ 湖北省商用密码协会（Hubei Commercial Cryptography Industry Association 
+ Keynote Speakers 
+ Note: The order of speakers is sorted according to the alphabetical order of surname. 
+ Man Ho Allen Au Professor 
+ Affiliation:Hong Kong Polytechnic University, Hong Kong 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote3" - Learn More
+Abstract 
+ Dr Man Ho Allen Au is a Full Professor at the Department of Computing of The Hong Kong Polytechnic University. Before that he was an Associate Professor in the Department of Computer Science at the University of Hong Kong. Allen's research interests include Information Security Applied Cryptography, Blockchain Technology, and their applications. He has been ranked as HKU Scholar in the Top 1% (by Clarivate Analytics in the top 1% worldwide by citations) in 2020 - 2022. He is also listed as the World's Top 2% Scientists by single-year impact and by career-long impact in the list published by Stanford University in Oct 2022. His research has generated significant social and economic impact. In the past 5 years, he as the principal investigator has attracted over HK$30M in research and high-level consultancy projects. He is currently an associate editor of IEEE Transactions on Dependable and Secure Computing, Journal of Information Security and Applications, and an editorial board member of Journal of Cryptologic Research. 
+  
+ Atsuko Miyaji Professor 
+ Affiliation: Osaka University, Japan 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote2" - Learn More
+Abstract 
+ ATSUKO MIYAJI (Member, IEEE) received the B.Sc., M.Sc., and D.Sc. degrees in mathematics from Osaka University, in 1988, 1990, and 1997, respectively. She joined Panasonic Company Ltd., from 1990 to 1998, and engaged in research and development for secure communication. She was an Associate Professor with the Japan Advanced Institute of Science and Technology (JAIST), in 1998. She joined the Computer Science Department, University of California at Davis, from 2002 to 2003. She has been a Professor with the JAIST, since 2007. She has been a Professor with the Graduate School of Engineering Osaka University, since 2015. Her research interests include the application of number theory into cryptography and information security. She is a fellow of IPSJ. She is a member of the International Association for Cryptologic Research the Institute of Electronics, Information and Communication Engineers, the Information Processing Society of Japan and the Mathematical Society of Japan. She received the Young Paper Award of SCIS’93, in 1993, the Notable Invention Award of the Science and Technology Agency in 1997, the IPSJ Sakai Special Researcher Award, in 2002, the Standardization Contribution Award in 2003, the Award for the contribution to Culture of Security, in 2007 the Director-General of the Industrial Science and Technology Policy and Environment Bureau Award in 2007, the DoCoMo Mobile Science Award, in 2008, the Advanced Data Mining and Applications (ADMA 2010) Best Paper Award the Prizes for Science and Technology, the Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science and Technology the International Conference on Applications and Technologies in Information Security (ATIS 2016) Best Paper Award, the 16th IEEE Trustcom 2017 Best Paper Award, the IEICE Milestone Certification in 2017, the 14th Asia Joint Conference on Information Security (AsiaJCIS 2019) Best Paper Award the Information Security Applications-20th International Conference (WISA 2020) Best Paper Gold Award, and the Distinguished Educational Practitioners Award, in 2020. 
+  
+ Willy Susilo Professor 
+ Affiliation: University of Wollongong (UOW), Australia 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote1" - Learn More
+Abstract 
+ Willy Susilo is a Distinguished Professor at the School of Computing and Information Technology, Faculty of Engineering and Information Sciences at the University of Wollongong (UOW), Australia. He holds the most prestigious Australian Laureate Fellowship awarded by the Australian Research Council. He is the director of Institute of Cybersecurity and Cryptology, School of Computing and Information Technology UOW. He is an IEEE Fellow, an IET Fellow, an ACS Fellow and an AAIA Fellow. Previously, he was awarded the prestigious Australian Research Council Future Fellowship in 2009. He has published more than 500 papers in journals and conference proceedings in cryptography and network security. In 2016, he was awarded the ``Researcher of the Year” at UOW, due to his research excellence and contributions. He is the Editor-in-Chief of the Information journal and the Special Content Editor of the Elsevier’s Computer Standards and Interfaces. He is also serving as an Associate Editors in several international journals. He has also served as the program committee member of several international conferences. 
+  
+ Call For Papers 
+ Authors are invited to submit full papers presenting new research results related to information security technologies and applications. Areas of interest include, but are not limited to: 
+ Cryptology 
+ Applied cryptography 
+ Mobile security 
+ Cloud security 
+ Access control 
+ Privacy enhanced technology 
+ Viruses and malware 
+ Software security 
+ Database security 
+ Web security 
+ Operating system security 
+ Intrusion detection 
+ Big data security and privacy 
+ Biometric Security 
+ Implementation 
+ Network security 
+ Key management 
+ Security and privacy in ubiquitous computing 
+ Formal methods for security 
+ Digital forensics 
+ Security for critical infrastructures 
+ Embedded systems security 
+ Lightweight security 
+ Smart grid security 
+ Cyber security for urban transportation 
+ Cyber-physical security 
+ Cryptocurrency 
+ Important Dates 
+  
+ Paper submission | May 13, 2024，May 27, 2024 
+ Acceptance Notification | July 1, 2024 
+ Camera-ready Version | July 7, 2024 
+ Author Instructions 
+ Authors are invited to submit original papers: they must not substantially duplicate work that any of the authors have published elsewhere or have submitted in parallel to any other conferences that have proceedings or any journal.The submission must be anonymous, with no author names, affiliations, acknowledgements, or obvious references.Original contributions are invited up to16 pagesin length (single column) excluding appendices and bibliography and up to 20 pages in total, using at least 11-point fonts and with reasonable margins. Submissions not meeting the submission guidelines risk rejection without consideration of their merits. 
+ href="https://easychair.org/conferences/?conf=ispec2024" - ISPEC 2024 Submission Link
+Organising Committee 
+ General Co-Chairs 
+ Jianwen Xiang, Wuhan University of Technology 
+ Xingpeng Jiang, Central China Normal University 
+ Shitao Zuo, Topsec 
+ Program Co-Chairs 
+ Zhe Xia, Wuhan University of Technology 
+ Jiageng Chen, Central China Normal University 
+ Publication Co-chairs 
+ Weizhi Meng, Technical University of Denmark 
+ Pei Li, Central China Normal University 
+ Local co-chairs 
+ Liming Zhai, Central China Normal University 
+ Cheng Tan, Wuhan University of Technology 
+ Program Committee 
+ Joonsang Baek, UOW, Australia 
+ Aniello Castiglione, University of Salerno, Italy 
+ Jiageng Chen, CCNU, China 
+ Chi Cheng, China University of Geosciences, China 
+ Kim Kwang Raymond Choo, University of Texas at San Antonio, United States 
+ He Debiao, Wuhan University, China 
+ Feng Hao, The University of Warwick, United Kingdom 
+ Jinguang Han, Southeast University, China 
+ Shoichi Hirose, University of Fukui, Japan 
+ Albert Levi, Sabanci University, Turkey 
+ Zhe Liu, Nanjing University of Aeronautics and Astronautics, China 
+ Rongxing Lu, University of New Brunswick, Canada 
+ Weizhi Meng, Technical University of Denmark, Denmark 
+ Kazumasa Omote, University of Tsukuba, Japan 
+ Baodong Qin, Xi'an University of Posts and Telecommunications, China 
+ Jun Shao, School of Computer and Information Engineering, Zhejiang Gongshang University, China 
+ Chunhua Su, University of Aizu, Japan 
+ Yan Tong, Huazhong Agricultural University, China 
+ Yuntao Wang, The University of Electro-Communications, Japan 
+ Ding Wang, Nankai University, China 
+ Edgar Weippl, University of Vienna, Austria 
+ Xun Yi, RMIT University, Australia 
+ Zhe Xia, Wuhan University of Technology, China 
+ Zheng Yan, Xidian University, China 
+ Mingwu Zhang, Hubei University of Technology, China 
+ Yanwei Zhou, Shaanxi Normal University, China 
+ Conference Schedule 
+ Wuchang Hall, Westin Hotel 
+ Tencent Meeting: 552-390-536 
+  
+ ISPEC 2024 Schedule 
+ 25 Oct | 26 Oct | 27 Oct 
+ Registration 
+ 15:00-20:00 | Welcome Ceremony 
+ 09:00-09:30 
+ Keynote 1 
+ 9:30-10:15 | Session 5 
+ 9:30-10:30 
+ Keynote 2 
+ 10:15-11:00 | Morning Tea Break 
+ 10:30-11:00 
+ Morning Tea Break 
+ 11:00-11:15 | Session 6 
+ 11:00-12:00 
+ Session 1 
+ 11:15-12:00 | Closing Ceremony 
+ 12:00-12:30 
+ Welcome Dinner 
+ 18:00-20:00 | Lunch 
+ 12:00-14:00 | Lunch 
+ 12:30-14:00 
+ Keynote 3 
+ 14:00-14:45 
+ Session 2 
+ 14:45-15:45 
+ Afternoon Coffee Break 
+ 15:45-16:15 
+ Session 3 
+ 16:15-17:00 
+ Session 4 
+ 17:00-18:00 
+ Banquet 
+ 18:00-21:00 
+ Technical Program 
+  
+ Session 1: Cryptographic Schemes 
+ 11:15-12:00 (26 Oct) 
+ Yanhua Zhang, Willy Susilo, Yan Chen, Fuchun Guo, Jiaming Wen 
+ Lattice-Based Universal Designated Multi-Verifiers Signature Scheme 
+ Md Mashrur Arifin, Troy Tolman, Jyh-Haw Yeh 
+ Unveiling the Efficacy of BERT's Attention in Memory Obfuscated Malware Detection 
+ Zirui Qiao, Ran Xu, Yanwei Zhou 
+ A New Construction of Leakage-resilient Identity-based Encryption Scheme 
+
+Session 2: Encryption and Key Management 
+ 14:45-15:45 (26 Oct) 
+ Zhusen Liu, Jiafei Wu, Zhe Liu 
+ Efficient Large-Scale Multi-Party Computation Based on Garbled Circuit 
+ Liwei Liu, Zijian Liu, Na Ruan 
+ From the Perspective of Prototypes: A Privacy-Preserving Personalized Federated Learning Framework 
+ Hong Qin, Debiao He, Qi Feng, Xiaolin Yang, Qingcai Luo 
+ Outsourced and Robust Multi-Party Computation with Identifying Malicious Behavior and Application to Machine Learning 
+ Mengsi Wu, Pei Li, Jiageng Chen, Shixiong Yao 
+ Parallel Implementation of Sieving Algorithm on Heterogeneous CPU-GPU Computing Architectures 
+
+Session 3: Traffic & Network Security 
+ 16:15-17:00 (26 Oct) 
+ Long Teng, Qi Feng, Wei Zhao, Min Luo, Debiao He 
+ Secure Federated Distillation Framework for Encrypted Traffic Classification 
+ Yujing Liu, Jiangbin Chen, Shuhui Chen 
+ TriNT: A Framework for ROV Identification based on Triplet 
+ Changlong Yu, Bo Zhang, Boyu Kuang, Anmin Fu 
+ SNIPER: Detect Complex Attacks Accurately from Traffic 
+
+Session 4: Encryption and Key Management 
+ 17:00-18:00 (26 Oct) 
+ Yudi Zhang, Yumei Li, Mingwu Zhang, Willy Susilo 
+ OEIBS: A Secure Obfuscation for Encrypted Identity-Based Signatures Scheme in NB-IoT 
+ Kaiming Chen, Atsuko Miyaji, Jiageng Chen 
+ Generic CCA Secure Key Homomorphic KEM and Updatable Public Key Encryption 
+ Mingwu Zhang, Yulu Zhong, Yifei Wang, Yuntao Wang 
+ Controlled Multi-Client Functional Encryption for Flexible Access Control 
+ Congrong Peng, Cong Peng, Xiaolin Yang, Qingcai Luo, Min Luo 
+ Isogeny-based Password-Authenticated Key Exchange based on Shuffle Algorithm 
+
+Session 5: Cryptanalysis and Attacks 
+ 9:30-10:30 (27 Oct) 
+ Zheng Wu, Lin Ding, Zhengting Li, Xinhai Wang 
+ Breaking GEA-like Stream Ciphers with Lower Time Cost 
+ Peng Chen, Chi Cheng, Jinnuo Li, Tianqing Zhu 
+ Enhancing Portability in Deep Learning-based Side-Channel Attacks against Kyber 
+ Kangkang Shi, Jiongjiong Ren, Shaozhen Chen 
+ Related-Tweakey Boomerang and Rectangle Attacks on Reduced-Round Joltik-BC 
+ Hailong Zhang 
+ Differential Cryptanalysis against SIMECK Implementation in a Leakage Profiling Scenario 
+
+Session 6: Machine Learning and Security Applications 
+ 11:00-12:00 (27 Oct) 
+ Mingwu Zhang, Qi Zou, Bo Yang 
+ A Secure Incentive Mechanism in Blockchain-Based Mobile Crowdsensing 
+ Kanagaratnam Anojjan, Weizhi Meng, Brooke Kidmose, Yu Wang 
+ An eID-based Privacy-enhanced Public Transportation Ticket System 
+ Tuong Ngoc Nguyen, Willy Susilo, Dung Hoang Duong, Fuchun Guo, Kazuhide Fukushima, Shinsaku Kiyomoto 
+ Shrinkable Ring Signatures: It wasn't them! 
+ Rishikesh Sahay, Weizhi Meng, Wenjuan Li 
+ A Comparative Analysis of Phishing Tools 
+
+Keynote 1 
+ 9:30-10:15 Oct 26 
+ Willy Susilo, Professor 
+ Cloud Computing Security: Past, Present and Future 
+
+Keynote 2 
+ 10:15-11:00 Oct 26 
+ Man Ho Allen Au, Professor 
+ Privacy-Enhancing Technologies for Central Bank Digital Currency: A Technical Perspective 
+
+Keynote 3 
+ 10:15-11:00 Oct 26 
+ Atsuko Miyaji, Professor 
+ The Relationship Between Data Transformation and Machine Learning Performance Degradation 
+  
+ Accepted Papers 
+ Full paper: 
+ Secure Federated Distillation Framework for Encrypted Traffic Classification 
+ Long Teng, Qi Feng, Wei Zhao, Min Luo and Debiao He 
+ TriNT: A Framework for ROV Identification based on Triplet 
+ Yujing Liu, Jiangbin Chen and Shuhui Chen 
+ Lattice-Based Universal Designated Multi-Verifiers Signature Scheme 
+ Yanhua Zhang, Willy Susilo, Yan Chen, Fuchun Guo and Jiaming Wen 
+ Differential Cryptanalysis against SIMECK Implementation in a Leakage Profiling Scenario 
+ Hailong Zhang 
+ Shrinkable Ring Signatures: It wasn't them! 
+ Tuong Ngoc Nguyen, Willy Susilo, Dung Hoang Duong, Fuchun Guo, Kazuhide Fukushima and Shinsaku Kiyomoto 
+ Related-Tweakey Boomerang and Rectangle Attacks on Reduced-Round Joltik-BC 
+ Kangkang Shi, Jiongjiong Ren and Shaozhen Chen 
+ Isogeny-based Password-Authenticated Key Exchange based on Shuffle Algorithm 
+ Congrong Peng, Cong Peng, Xiaolin Yang, Qingcai Luo and Min Luo 
+ A New Construction of Leakage-resilient Identity-based Encryption Scheme 
+ Zirui Qiao, Ran Xu and Yanwei Zhou 
+ Enhancing Portability in Deep Learning-based Side-Channel Attacks against Kyber 
+ Peng Chen, Chi Cheng, Jinnuo Li and Tianqing Zhu 
+ Generic CCA Secure Key Homomorphic KEM and Updatable Public Key Encryption 
+ Kaiming Chen, Atsuko Miyaji and Jiageng Chen 
+ Breaking GEA-like Stream Ciphers with Lower Time Cost 
+ Zheng Wu, Lin Ding, Zhengting Li and Xinhai Wang 
+ SNIPER: Detect Complex Attacks Accurately from Traffic 
+ Changlong Yu, Bo Zhang, Boyu Kuang and Anmin Fu 
+ From the Perspective of Prototypes: A Privacy-Preserving Personalized Federated Learning Framework 
+ Liwei Liu, Zijian Liu and Na Ruan 
+ Efficient Large-Scale Multi-Party Computation Based on Garbled Circuit 
+ Zhusen Liu, Jiafei Wu and Zhe Liu 
+ Parallel Implementation of Sieving Algorithm on Heterogeneous CPU-GPU Computing Architectures 
+ Mengsi Wu, Pei Li, Jiageng Chen and Shixiong Yao 
+ Unveiling the Efficacy of BERT's Attention in Memory Obfuscated Malware Detection 
+ Md Mashrur Arifin, Troy Tolman and Jyh-Haw Yeh 
+ An eID-based Privacy-enhanced Public Transportation Ticket System 
+ Kanagaratnam Anojjan, Weizhi Meng, Brooke Kidmose and Yu Wang 
+ Outsourced and Robust Multi-Party Computation with Identifying Malicious Behavior and Application to Machine Learning 
+ Hong Qin, Debiao He, Qi Feng, Xiaolin Yang and Qingcai Luo 
+ Controlled Multi-Client Functional Encryption for Flexible Access Control 
+ Mingwu Zhang, Yulu Zhong, Yifei Wang and Yuntao Wang 
+ A Secure Incentive Mechanism in Blockchain-Based Mobile Crowdsensing 
+ Mingwu Zhang, Qi Zou and Bo Yang 
+ A Comparative Analysis of Phishing Tools 
+ Rishikesh Sahay, Weizhi Meng and Wenjuan Li 
+ OEIBS: A Secure Obfuscation for Encrypted Identity-Based Signatures Scheme in NB-IoT 
+ Yudi Zhang, Yumei Li, Mingwu Zhang, Willy Susilo 
+ to be announced 
+ Registration Information 
+ The early registration deadline is 5 September 2023.All authors must register before this date. Other attendees should try to complete registration before this date. 
+ Registration for the conference cannot be canceled. There is no refund of registration fees. 
+ Contactcheng_tan@whut.edu.cnwith subject "ISPEC Registration" if you have any registration problem. 
+ Registration 
+  
+ Type | Price 
+ Author Registration | 4000CNY/550USD 
+ Standard (Before 5 September) | 4000CNY/550USD 
+ Standard (After 5 September) | 4500CNY/650USD 
+ How to Register 
+ Fill out thehref="./ISPEC 2024, Wuhan_files/Registration_Form.xlsx" - registration form
+for foreign attendees orhref="./ISPEC 2024, Wuhan_files/Registration_Form.xlsx" - registration form
+for attendees from Mainland China with all required details and email the filled form tocheng_tan@whut.edu.cnwith the subject of your email" ISPEC 2024 Registration for #PAPER-ID(if applicable)#NAME"(where PAPER-ID is the submission number of your paper and NAME is the author name). In the email please include 1) a copy of the bank draft or bank wire receipt or Transaction ID of your registration fee payment, 2) Name of the author who will give presentation during the conference. 
+ International Payment: 
+ PAYMENT BY PAYPAL In USD 
+ Click here, Your payment will be made to the ISPEC Account (Yudi Zhang) 
+ For Author, Please provide yourPaper IDasPayment Message 
+ For Participants, Please provide yourFull NameasPayment MessageFor Chinese Residents: 
+ 开户银行名称：中国建设银行武汉杨园支行 
+ 帐号：4200 1237 0360 5300 2815 
+ 户名：武汉信合恒达会议服务有限公司 
+ 开户银行行号：854778 
+ 识别号: 914201116727889534 
+ 汇款备注信息："ISPEC#论文编号(如适用)#姓名" 
+ href="./ISPEC 2024, Wuhan_files/ISPEC2024.pdf" - 会议通知下载
+Overseas participants should check if they need to apply for a Chinese visa. 
+ In 2024, China has expanded its visa-free access to additional countries. Building on last year's inclusion of France, Germany, Italy, the Netherlands, Spain, and Malaysia the list now also includes Switzerland, Ireland, Hungary, Austria, Belgium, Luxembourg, New Zealand Australia, and Poland. 
+ Moreover, citizens of the following 54 countries and regions can enjoy a 144-hour visa-free transit policy when visiting Wuhan (via Tianhe Airport): Austria, Belgium, Czech Republic, Denmark, Estonia, Finland France Germany, Greece, Hungary, Iceland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands Poland Portugal, Slovakia, Slovenia, Spain, Sweden, Switzerland, Monaco, Russia, the United Kingdom, Ireland Cyprus Bulgaria, Romania, Ukraine, Serbia, Croatia, Albania, Belarus, Norway, the United States, Canada Brazil Mexico, Argentina, Chile, Australia, New Zealand, South Korea, Japan, Singapore, Brunei, the United Arab Emirates, and Qatar. 
+ To the best of our knowledge, to enjoy the 144-hour visa-free transit policy: 1) the passport must have a minimum validity of 3 months; 2) no previous record of being denied a Chinese visa; 3) the departure location before arriving in Wuhan and the destination after leaving Wuhan must be in different countries or regions (e.g. from Tokyo to Wuhan and from Wuhan to Hong Kong). 
+ Important:the above information only indicates that you may not need a Visa to visit Wuhan, but please double check the Visa policy from an official source before making your travel arrangement! 
+ If you need an invitation letter to support your visa application, please contact the Local ChairDr.Cheng Tan (cheng_tan@whut.edu.cn)Important:if you need a room during the conference, please contact the local organization team via Email: cheng_tan@whut.edu.cn. We have secured a number of rooms for the attendances who have registered. 
+ Hotel Name: 
+ The Westin (富力威斯汀酒店) 
+ Address: 
+ No. 96, Linjiang Avenue, Wuchang District, Wuhan (武汉市武昌区临江大道96号) 
+ Hotel Description: 
+ The Westin Hotel is located on the banks of the Yangtze River. Its prime location and comfortable, healthy living environment make it a favorite choice for travelers worldwide. 
+ The hotel's advantageous location allows easy access to desired destinations: it's about a 2-minute walk to Jiyuqiao Station （积玉桥站） on Metro Line 2 & Line 5, and a 8-minute drive to Chuhe Han Street（楚河汉街）, Yellow Crane Tower（黄鹤楼）, Yangtze River Bridge（长江大桥）. It's also about a 15-minute drive to East Lake Scenic Area （东湖） and the Hubei Provincial Museum （湖北省博物馆）. The hotel offers panoramic views of the Yangtze River. 
+ How to Reach: 
+ From Wuhan Tianhe International Airport: you can either take a taxi (about 80 CNY, 40 min) or you can take the Metro Line #2 to Jiyuqiao Station than walk to the hotel (about 8 CNY, 60 min). 
+ From Wuhan/Wuchang/Hankou Railway Station: you can either take a taxi (about 30 CNY, 20 min) or you can take the Metro to Jiyuqiao Station than walk to the hotel (about 5 CNY, 30 min). 
+ Hotel Map: 
+ Hotel Pictures: 
+
+Call for Papers information:
+ISPEC 2024 
+ 19th International Conference on Information Security Practice and Experience 
+ Wuhan, China 25-27 October 2024 
+ MENU - Home 
+ Home 
+ Keynotes 
+ href="#authors" - Authors 
+ Committees 
+ href="#papers" - Papers 
+ Program 
+ Registration 
+ Venue 
+ Visa 
+ About ISPEC 2024 
+ The 19th International Conference on Information Security Practice and Experience (ISPEC 2024) will be held on October 25-27, 2024 in Wuhan, organized by Wuhan University of Technology and Central China Normal University. The ISPEC conference is an established forum that brings together researchers and practitioners to provide a confluence of new information security technologies, including their applications and their integration with IT systems in various vertical sectors. The main goal of the conference is to promote research on new information security technologies, including their applications and their integration with IT systems in various vertical sectors. Previous ISPEC has taken place in Singapore (2005), Hangzhou, China (2006), Hong Kong (2007), Sydney, Australia (2008), Xi'an, China (2009), Seoul, Korea (2010), Guangzhou China (2011), Hangzhou, China (2012), Lanzhou, China (2013), Fuzhou, China (2014), Beijing, China (2015), Zhangjiajie China (2016), Melbourne, Australia (2017), Tokyo, Japan (2018), Kuala Lumpur, Malaysia (2019), Nanjing, China (2021) , Taiwan (2022) and Copenhagen, Denmark (2023) For all sessions, the conference proceedings were published by Springer in the Lecture Notes in Computer Science series. 
+ Organized by: 
+ Wuhan University of Technology, China 
+ Central China Normal University, China 
+ Sponsored by: 
+ Symmetry 
+ Supported by: 
+ 湖北省网络空间安全学会（Hubei Society for Cyberspace Security Research） 
+ 湖北省商用密码协会（Hubei Commercial Cryptography Industry Association 
+ Keynote Speakers 
+ Note: The order of speakers is sorted according to the alphabetical order of surname. 
+ Man Ho Allen Au Professor 
+ Affiliation:Hong Kong Polytechnic University, Hong Kong 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote3" - Learn More
+Abstract 
+ Dr Man Ho Allen Au is a Full Professor at the Department of Computing of The Hong Kong Polytechnic University. Before that he was an Associate Professor in the Department of Computer Science at the University of Hong Kong. Allen's research interests include Information Security Applied Cryptography, Blockchain Technology, and their applications. He has been ranked as HKU Scholar in the Top 1% (by Clarivate Analytics in the top 1% worldwide by citations) in 2020 - 2022. He is also listed as the World's Top 2% Scientists by single-year impact and by career-long impact in the list published by Stanford University in Oct 2022. His research has generated significant social and economic impact. In the past 5 years, he as the principal investigator has attracted over HK$30M in research and high-level consultancy projects. He is currently an associate editor of IEEE Transactions on Dependable and Secure Computing, Journal of Information Security and Applications, and an editorial board member of Journal of Cryptologic Research. 
+  
+ Atsuko Miyaji Professor 
+ Affiliation: Osaka University, Japan 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote2" - Learn More
+Abstract 
+ ATSUKO MIYAJI (Member, IEEE) received the B.Sc., M.Sc., and D.Sc. degrees in mathematics from Osaka University, in 1988, 1990, and 1997, respectively. She joined Panasonic Company Ltd., from 1990 to 1998, and engaged in research and development for secure communication. She was an Associate Professor with the Japan Advanced Institute of Science and Technology (JAIST), in 1998. She joined the Computer Science Department, University of California at Davis, from 2002 to 2003. She has been a Professor with the JAIST, since 2007. She has been a Professor with the Graduate School of Engineering Osaka University, since 2015. Her research interests include the application of number theory into cryptography and information security. She is a fellow of IPSJ. She is a member of the International Association for Cryptologic Research the Institute of Electronics, Information and Communication Engineers, the Information Processing Society of Japan and the Mathematical Society of Japan. She received the Young Paper Award of SCIS’93, in 1993, the Notable Invention Award of the Science and Technology Agency in 1997, the IPSJ Sakai Special Researcher Award, in 2002, the Standardization Contribution Award in 2003, the Award for the contribution to Culture of Security, in 2007 the Director-General of the Industrial Science and Technology Policy and Environment Bureau Award in 2007, the DoCoMo Mobile Science Award, in 2008, the Advanced Data Mining and Applications (ADMA 2010) Best Paper Award the Prizes for Science and Technology, the Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science and Technology the International Conference on Applications and Technologies in Information Security (ATIS 2016) Best Paper Award, the 16th IEEE Trustcom 2017 Best Paper Award, the IEICE Milestone Certification in 2017, the 14th Asia Joint Conference on Information Security (AsiaJCIS 2019) Best Paper Award the Information Security Applications-20th International Conference (WISA 2020) Best Paper Gold Award, and the Distinguished Educational Practitioners Award, in 2020. 
+  
+ Willy Susilo Professor 
+ Affiliation: University of Wollongong (UOW), Australia 
+ href="https://ispec2024.github.io/ISPEC2024/#more-keynote1" - Learn More
+Abstract 
+ Willy Susilo is a Distinguished Professor at the School of Computing and Information Technology, Faculty of Engineering and Information Sciences at the University of Wollongong (UOW), Australia. He holds the most prestigious Australian Laureate Fellowship awarded by the Australian Research Council. He is the director of Institute of Cybersecurity and Cryptology, School of Computing and Information Technology UOW. He is an IEEE Fellow, an IET Fellow, an ACS Fellow and an AAIA Fellow. Previously, he was awarded the prestigious Australian Research Council Future Fellowship in 2009. He has published more than 500 papers in journals and conference proceedings in cryptography and network security. In 2016, he was awarded the ``Researcher of the Year” at UOW, due to his research excellence and contributions. He is the Editor-in-Chief of the Information journal and the Special Content Editor of the Elsevier’s Computer Standards and Interfaces. He is also serving as an Associate Editors in several international journals. He has also served as the program committee member of several international conferences. 
+  
+ Call For Papers 
+ Authors are invited to submit full papers presenting new research results related to information security technologies and applications. Areas of interest include, but are not limited to: 
+ Cryptology 
+ Applied cryptography 
+ Mobile security 
+ Cloud security 
+ Access control 
+ Privacy enhanced technology 
+ Viruses and malware 
+ Software security 
+ Database security 
+ Web security 
+ Operating system security 
+ Intrusion detection 
+ Big data security and privacy 
+ Biometric Security 
+ Implementation 
+ Network security 
+ Key management 
+ Security and privacy in ubiquitous computing 
+ Formal methods for security 
+ Digital forensics 
+ Security for critical infrastructures 
+ Embedded systems security 
+ Lightweight security 
+ Smart grid security 
+ Cyber security for urban transportation 
+ Cyber-physical security 
+ Cryptocurrency 
+ Important Dates 
+  
+ Paper submission | May 13, 2024，May 27, 2024 
+ Acceptance Notification | July 1, 2024 
+ Camera-ready Version | July 7, 2024 
+ Author Instructions 
+ Authors are invited to submit original papers: they must not substantially duplicate work that any of the authors have published elsewhere or have submitted in parallel to any other conferences that have proceedings or any journal.The submission must be anonymous, with no author names, affiliations, acknowledgements, or obvious references.Original contributions are invited up to16 pagesin length (single column) excluding appendices and bibliography and up to 20 pages in total, using at least 11-point fonts and with reasonable margins. Submissions not meeting the submission guidelines risk rejection without consideration of their merits. 
+ href="https://easychair.org/conferences/?conf=ispec2024" - ISPEC 2024 Submission Link
+Organising Committee 
+ General Co-Chairs 
+ Jianwen Xiang, Wuhan University of Technology 
+ Xingpeng Jiang, Central China Normal University 
+ Shitao Zuo, Topsec 
+ Program Co-Chairs 
+ Zhe Xia, Wuhan University of Technology 
+ Jiageng Chen, Central China Normal University 
+ Publication Co-chairs 
+ Weizhi Meng, Technical University of Denmark 
+ Pei Li, Central China Normal University 
+ Local co-chairs 
+ Liming Zhai, Central China Normal University 
+ Cheng Tan, Wuhan University of Technology 
+ Program Committee 
+ Joonsang Baek, UOW, Australia 
+ Aniello Castiglione, University of Salerno, Italy 
+ Jiageng Chen, CCNU, China 
+ Chi Cheng, China University of Geosciences, China 
+ Kim Kwang Raymond Choo, University of Texas at San Antonio, United States 
+ He Debiao, Wuhan University, China 
+ Feng Hao, The University of Warwick, United Kingdom 
+ Jinguang Han, Southeast University, China 
+ Shoichi Hirose, University of Fukui, Japan 
+ Albert Levi, Sabanci University, Turkey 
+ Zhe Liu, Nanjing University of Aeronautics and Astronautics, China 
+ Rongxing Lu, University of New Brunswick, Canada 
+ Weizhi Meng, Technical University of Denmark, Denmark 
+ Kazumasa Omote, University of Tsukuba, Japan 
+ Baodong Qin, Xi'an University of Posts and Telecommunications, China 
+ Jun Shao, School of Computer and Information Engineering, Zhejiang Gongshang University, China 
+ Chunhua Su, University of Aizu, Japan 
+ Yan Tong, Huazhong Agricultural University, China 
+ Yuntao Wang, The University of Electro-Communications, Japan 
+ Ding Wang, Nankai University, China 
+ Edgar Weippl, University of Vienna, Austria 
+ Xun Yi, RMIT University, Australia 
+ Zhe Xia, Wuhan University of Technology, China 
+ Zheng Yan, Xidian University, China 
+ Mingwu Zhang, Hubei University of Technology, China 
+ Yanwei Zhou, Shaanxi Normal University, China 
+ Conference Schedule 
+ Wuchang Hall, Westin Hotel 
+ Tencent Meeting: 552-390-536 
+  
+ ISPEC 2024 Schedule 
+ 25 Oct | 26 Oct | 27 Oct 
+ Registration 
+ 15:00-20:00 | Welcome Ceremony 
+ 09:00-09:30 
+ Keynote 1 
+ 9:30-10:15 | Session 5 
+ 9:30-10:30 
+ Keynote 2 
+ 10:15-11:00 | Morning Tea Break 
+ 10:30-11:00 
+ Morning Tea Break 
+ 11:00-11:15 | Session 6 
+ 11:00-12:00 
+ Session 1 
+ 11:15-12:00 | Closing Ceremony 
+ 12:00-12:30 
+ Welcome Dinner 
+ 18:00-20:00 | Lunch 
+ 12:00-14:00 | Lunch 
+ 12:30-14:00 
+ Keynote 3 
+ 14:00-14:45 
+ Session 2 
+ 14:45-15:45 
+ Afternoon Coffee Break 
+ 15:45-16:15 
+ Session 3 
+ 16:15-17:00 
+ Session 4 
+ 17:00-18:00 
+ Banquet 
+ 18:00-21:00 
+ Technical Program 
+  
+ Session 1: Cryptographic Schemes 
+ 11:15-12:00 (26 Oct) 
+ Yanhua Zhang, Willy Susilo, Yan Chen, Fuchun Guo, Jiaming Wen 
+ Lattice-Based Universal Designated Multi-Verifiers Signature Scheme 
+ Md Mashrur Arifin, Troy Tolman, Jyh-Haw Yeh 
+ Unveiling the Efficacy of BERT's Attention in Memory Obfuscated Malware Detection 
+ Zirui Qiao, Ran Xu, Yanwei Zhou 
+ A New Construction of Leakage-resilient Identity-based Encryption Scheme 
+
+Session 2: Encryption and Key Management 
+ 14:45-15:45 (26 Oct) 
+ Zhusen Liu, Jiafei Wu, Zhe Liu 
+ Efficient Large-Scale Multi-Party Computation Based on Garbled Circuit 
+ Liwei Liu, Zijian Liu, Na Ruan 
+ From the Perspective of Prototypes: A Privacy-Preserving Personalized Federated Learning Framework 
+ Hong Qin, Debiao He, Qi Feng, Xiaolin Yang, Qingcai Luo 
+ Outsourced and Robust Multi-Party Computation with Identifying Malicious Behavior and Application to Machine Learning 
+ Mengsi Wu, Pei Li, Jiageng Chen, Shixiong Yao 
+ Parallel Implementation of Sieving Algorithm on Heterogeneous CPU-GPU Computing Architectures 
+
+Session 3: Traffic & Network Security 
+ 16:15-17:00 (26 Oct) 
+ Long Teng, Qi Feng, Wei Zhao, Min Luo, Debiao He 
+ Secure Federated Distillation Framework for Encrypted Traffic Classification 
+ Yujing Liu, Jiangbin Chen, Shuhui Chen 
+ TriNT: A Framework for ROV Identification based on Triplet 
+ Changlong Yu, Bo Zhang, Boyu Kuang, Anmin Fu 
+ SNIPER: Detect Complex Attacks Accurately from Traffic 
+
+Session 4: Encryption and Key Management 
+ 17:00-18:00 (26 Oct) 
+ Yudi Zhang, Yumei Li, Mingwu Zhang, Willy Susilo 
+ OEIBS: A Secure Obfuscation for Encrypted Identity-Based Signatures Scheme in NB-IoT 
+ Kaiming Chen, Atsuko Miyaji, Jiageng Chen 
+ Generic CCA Secure Key Homomorphic KEM and Updatable Public Key Encryption 
+ Mingwu Zhang, Yulu Zhong, Yifei Wang, Yuntao Wang 
+ Controlled Multi-Client Functional Encryption for Flexible Access Control 
+ Congrong Peng, Cong Peng, Xiaolin Yang, Qingcai Luo, Min Luo 
+ Isogeny-based Password-Authenticated Key Exchange based on Shuffle Algorithm 
+
+Session 5: Cryptanalysis and Attacks 
+ 9:30-10:30 (27 Oct) 
+ Zheng Wu, Lin Ding, Zhengting Li, Xinhai Wang 
+ Breaking GEA-like Stream Ciphers with Lower Time Cost 
+ Peng Chen, Chi Cheng, Jinnuo Li, Tianqing Zhu 
+ Enhancing Portability in Deep Learning-based Side-Channel Attacks against Kyber 
+ Kangkang Shi, Jiongjiong Ren, Shaozhen Chen 
+ Related-Tweakey Boomerang and Rectangle Attacks on Reduced-Round Joltik-BC 
+ Hailong Zhang 
+ Differential Cryptanalysis against SIMECK Implementation in a Leakage Profiling Scenario 
+
+Session 6: Machine Learning and Security Applications 
+ 11:00-12:00 (27 Oct) 
+ Mingwu Zhang, Qi Zou, Bo Yang 
+ A Secure Incentive Mechanism in Blockchain-Based Mobile Crowdsensing 
+ Kanagaratnam Anojjan, Weizhi Meng, Brooke Kidmose, Yu Wang 
+ An eID-based Privacy-enhanced Public Transportation Ticket System 
+ Tuong Ngoc Nguyen, Willy Susilo, Dung Hoang Duong, Fuchun Guo, Kazuhide Fukushima, Shinsaku Kiyomoto 
+ Shrinkable Ring Signatures: It wasn't them! 
+ Rishikesh Sahay, Weizhi Meng, Wenjuan Li 
+ A Comparative Analysis of Phishing Tools 
+
+Keynote 1 
+ 9:30-10:15 Oct 26 
+ Willy Susilo, Professor 
+ Cloud Computing Security: Past, Present and Future 
+
+Keynote 2 
+ 10:15-11:00 Oct 26 
+ Man Ho Allen Au, Professor 
+ Privacy-Enhancing Technologies for Central Bank Digital Currency: A Technical Perspective 
+
+Keynote 3 
+ 10:15-11:00 Oct 26 
+ Atsuko Miyaji, Professor 
+ The Relationship Between Data Transformation and Machine Learning Performance Degradation 
+  
+ Accepted Papers 
+ Full paper: 
+ Secure Federated Distillation Framework for Encrypted Traffic Classification 
+ Long Teng, Qi Feng, Wei Zhao, Min Luo and Debiao He 
+ TriNT: A Framework for ROV Identification based on Triplet 
+ Yujing Liu, Jiangbin Chen and Shuhui Chen 
+ Lattice-Based Universal Designated Multi-Verifiers Signature Scheme 
+ Yanhua Zhang, Willy Susilo, Yan Chen, Fuchun Guo and Jiaming Wen 
+ Differential Cryptanalysis against SIMECK Implementation in a Leakage Profiling Scenario 
+ Hailong Zhang 
+ Shrinkable Ring Signatures: It wasn't them! 
+ Tuong Ngoc Nguyen, Willy Susilo, Dung Hoang Duong, Fuchun Guo, Kazuhide Fukushima and Shinsaku Kiyomoto 
+ Related-Tweakey Boomerang and Rectangle Attacks on Reduced-Round Joltik-BC 
+ Kangkang Shi, Jiongjiong Ren and Shaozhen Chen 
+ Isogeny-based Password-Authenticated Key Exchange based on Shuffle Algorithm 
+ Congrong Peng, Cong Peng, Xiaolin Yang, Qingcai Luo and Min Luo 
+ A New Construction of Leakage-resilient Identity-based Encryption Scheme 
+ Zirui Qiao, Ran Xu and Yanwei Zhou 
+ Enhancing Portability in Deep Learning-based Side-Channel Attacks against Kyber 
+ Peng Chen, Chi Cheng, Jinnuo Li and Tianqing Zhu 
+ Generic CCA Secure Key Homomorphic KEM and Updatable Public Key Encryption 
+ Kaiming Chen, Atsuko Miyaji and Jiageng Chen 
+ Breaking GEA-like Stream Ciphers with Lower Time Cost 
+ Zheng Wu, Lin Ding, Zhengting Li and Xinhai Wang 
+ SNIPER: Detect Complex Attacks Accurately from Traffic 
+ Changlong Yu, Bo Zhang, Boyu Kuang and Anmin Fu 
+ From the Perspective of Prototypes: A Privacy-Preserving Personalized Federated Learning Framework 
+ Liwei Liu, Zijian Liu and Na Ruan 
+ Efficient Large-Scale Multi-Party Computation Based on Garbled Circuit 
+ Zhusen Liu, Jiafei Wu and Zhe Liu 
+ Parallel Implementation of Sieving Algorithm on Heterogeneous CPU-GPU Computing Architectures 
+ Mengsi Wu, Pei Li, Jiageng Chen and Shixiong Yao 
+ Unveiling the Efficacy of BERT's Attention in Memory Obfuscated Malware Detection 
+ Md Mashrur Arifin, Troy Tolman and Jyh-Haw Yeh 
+ An eID-based Privacy-enhanced Public Transportation Ticket System 
+ Kanagaratnam Anojjan, Weizhi Meng, Brooke Kidmose and Yu Wang 
+ Outsourced and Robust Multi-Party Computation with Identifying Malicious Behavior and Application to Machine Learning 
+ Hong Qin, Debiao He, Qi Feng, Xiaolin Yang and Qingcai Luo 
+ Controlled Multi-Client Functional Encryption for Flexible Access Control 
+ Mingwu Zhang, Yulu Zhong, Yifei Wang and Yuntao Wang 
+ A Secure Incentive Mechanism in Blockchain-Based Mobile Crowdsensing 
+ Mingwu Zhang, Qi Zou and Bo Yang 
+ A Comparative Analysis of Phishing Tools 
+ Rishikesh Sahay, Weizhi Meng and Wenjuan Li 
+ OEIBS: A Secure Obfuscation for Encrypted Identity-Based Signatures Scheme in NB-IoT 
+ Yudi Zhang, Yumei Li, Mingwu Zhang, Willy Susilo 
+ to be announced 
+ Registration Information 
+ The early registration deadline is 5 September 2023.All authors must register before this date. Other attendees should try to complete registration before this date. 
+ Registration for the conference cannot be canceled. There is no refund of registration fees. 
+ Contactcheng_tan@whut.edu.cnwith subject "ISPEC Registration" if you have any registration problem. 
+ Registration 
+  
+ Type | Price 
+ Author Registration | 4000CNY/550USD 
+ Standard (Before 5 September) | 4000CNY/550USD 
+ Standard (After 5 September) | 4500CNY/650USD 
+ How to Register 
+ Fill out thehref="./ISPEC 2024, Wuhan_files/Registration_Form.xlsx" - registration form
+for foreign attendees orhref="./ISPEC 2024, Wuhan_files/Registration_Form.xlsx" - registration form
+for attendees from Mainland China with all required details and email the filled form tocheng_tan@whut.edu.cnwith the subject of your email" ISPEC 2024 Registration for #PAPER-ID(if applicable)#NAME"(where PAPER-ID is the submission number of your paper and NAME is the author name). In the email please include 1) a copy of the bank draft or bank wire receipt or Transaction ID of your registration fee payment, 2) Name of the author who will give presentation during the conference. 
+ International Payment: 
+ PAYMENT BY PAYPAL In USD 
+ Click here, Your payment will be made to the ISPEC Account (Yudi Zhang) 
+ For Author, Please provide yourPaper IDasPayment Message 
+ For Participants, Please provide yourFull NameasPayment MessageFor Chinese Residents: 
+ 开户银行名称：中国建设银行武汉杨园支行 
+ 帐号：4200 1237 0360 5300 2815 
+ 户名：武汉信合恒达会议服务有限公司 
+ 开户银行行号：854778 
+ 识别号: 914201116727889534 
+ 汇款备注信息："ISPEC#论文编号(如适用)#姓名" 
+ href="./ISPEC 2024, Wuhan_files/ISPEC2024.pdf" - 会议通知下载
+Overseas participants should check if they need to apply for a Chinese visa. 
+ In 2024, China has expanded its visa-free access to additional countries. Building on last year's inclusion of France, Germany, Italy, the Netherlands, Spain, and Malaysia the list now also includes Switzerland, Ireland, Hungary, Austria, Belgium, Luxembourg, New Zealand Australia, and Poland. 
+ Moreover, citizens of the following 54 countries and regions can enjoy a 144-hour visa-free transit policy when visiting Wuhan (via Tianhe Airport): Austria, Belgium, Czech Republic, Denmark, Estonia, Finland France Germany, Greece, Hungary, Iceland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands Poland Portugal, Slovakia, Slovenia, Spain, Sweden, Switzerland, Monaco, Russia, the United Kingdom, Ireland Cyprus Bulgaria, Romania, Ukraine, Serbia, Croatia, Albania, Belarus, Norway, the United States, Canada Brazil Mexico, Argentina, Chile, Australia, New Zealand, South Korea, Japan, Singapore, Brunei, the United Arab Emirates, and Qatar. 
+ To the best of our knowledge, to enjoy the 144-hour visa-free transit policy: 1) the passport must have a minimum validity of 3 months; 2) no previous record of being denied a Chinese visa; 3) the departure location before arriving in Wuhan and the destination after leaving Wuhan must be in different countries or regions (e.g. from Tokyo to Wuhan and from Wuhan to Hong Kong). 
+ Important:the above information only indicates that you may not need a Visa to visit Wuhan, but please double check the Visa policy from an official source before making your travel arrangement! 
+ If you need an invitation letter to support your visa application, please contact the Local ChairDr.Cheng Tan (cheng_tan@whut.edu.cn)Important:if you need a room during the conference, please contact the local organization team via Email: cheng_tan@whut.edu.cn. We have secured a number of rooms for the attendances who have registered. 
+ Hotel Name: 
+ The Westin (富力威斯汀酒店) 
+ Address: 
+ No. 96, Linjiang Avenue, Wuchang District, Wuhan (武汉市武昌区临江大道96号) 
+ Hotel Description: 
+ The Westin Hotel is located on the banks of the Yangtze River. Its prime location and comfortable, healthy living environment make it a favorite choice for travelers worldwide. 
+ The hotel's advantageous location allows easy access to desired destinations: it's about a 2-minute walk to Jiyuqiao Station （积玉桥站） on Metro Line 2 & Line 5, and a 8-minute drive to Chuhe Han Street（楚河汉街）, Yellow Crane Tower（黄鹤楼）, Yangtze River Bridge（长江大桥）. It's also about a 15-minute drive to East Lake Scenic Area （东湖） and the Hubei Provincial Museum （湖北省博物馆）. The hotel offers panoramic views of the Yangtze River. 
+ How to Reach: 
+ From Wuhan Tianhe International Airport: you can either take a taxi (about 80 CNY, 40 min) or you can take the Metro Line #2 to Jiyuqiao Station than walk to the hotel (about 8 CNY, 60 min). 
+ From Wuhan/Wuchang/Hankou Railway Station: you can either take a taxi (about 30 CNY, 20 min) or you can take the Metro to Jiyuqiao Station than walk to the hotel (about 5 CNY, 30 min). 
+ Hotel Map: 
+ Hotel Pictures:

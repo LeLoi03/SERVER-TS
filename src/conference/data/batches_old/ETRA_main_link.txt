@@ -1,0 +1,122 @@
+Conference ETRA:
+
+Photo byFrank HuangonUnsplashTokyo - Japan, May 26 - May 29, 2025 
+ The 2025 ACM Symposium on Eye Tracking Research & Applications (ETRA) will be held in Tokyo, Japan from May 26 to May 29, 2025. The aim of ETRA is to bring together researchers and practitioners from across fields with the common goal of continuing to move eye tracking research forward. Join us in Tokyo for ETRA, attend co-located workshops, and participate in exciting discussions. 
+ General Chairs 
+ href="mailto:general.etra2025@acm.org" - general.etra2025@acm.org
+Yusuke Sugano 
+ The University of Tokyo, Japan 
+ Mohamed Khamis 
+ University of Glasgow , United Kingdom 
+ Aladine Chetouani 
+ University Sorbonne - Paris Nord, France 
+ Important Dates 
+ (Time Zone AoE/Anywhere on Earth) 
+  
+ Full Paper | Short Paper | Workshop | Tutorials | Late-Breaking Work | href="/2025/doctoralsymposium.html" - Doctoral Consortium 
+ Abstract submission (mandatory) | October 26, 2024 | January 14, 2025 | -- | -- | -- | -- 
+ Paper submission | November 1, 2024 | January 21, 2025 | January 6, 2025 | January 6, 2025 | href="/2025/lbw.html" - rolling deadline | March 17, 2025 
+ First round reviews and notifications | January 7, 2025 | March 8, 2025 | January 20, 2025 | January 24, 2025 | -- | March 24, 2025 
+ Revisions due | February 18, 2025 | -- | -- | -- | -- | -- 
+ Second round reviews and notifications | March 13, 2025 | -- | -- | -- | -- | -- 
+ Camera-ready deadline | March 31, 2025 | March 31, 2025 | January 31, 2025 | February 7, 2025 | March 31, 2025 | March 31, 2025 
+
+Call for Papers information:
+Call For Paper Submissions 
+ Long Papers 
+ The 2025 ACM Symposium on Eye Tracking Research & Applications (ETRA) will be held in Tokyo, Japan from May 26 to May 29, 2025. The aim of ETRA is to bring together researchers and practitioners from across fields with the common goal of continuing to move eye tracking research forward. Join us in Tokyo for ETRA, attend co-located workshops, and participate in exciting discussions. 
+  
+ The symposium presents advances and innovations in oculomotor research, gaze tracking systems, eye tracking applications, gaze-based interaction, and eye movement data analysis. We invite high-quality papers in all areas of eye tracking research and applications and welcome submissions from all domains, including visuomotor neuroscience, perception, and cognition. 
+  
+ Papers must be original and not accepted previously for publication or under review elsewhere. At least one author must register and present accepted work at the conference. 
+  
+ We are excited to announce that accepted full papers will be published as journal articles in special issues of either PACM CGIT or PACM HCI with the authors’ choice. 
+  
+ ACM ETRA 2025 is co-sponsored by the ACM Special Interest Group on Computer-Human Interaction (SIGCHI) and the ACM Special Interest Group on Computer Graphics and Interactive Techniques (SIGGRAPH). 
+  
+ Details on the submission process can be found here:href="https://etra.acm.org/2025/submissionprocess.html" - https://etra.acm.org/2025/submissionprocess.html
+
+Required this year:With burgeoning technological and social applications of eye-tracking research, we now require authors to discuss the potential societal risks that might result from its publication. Authors are required to include a privacy and ethics statement of two to three sentences related to their study findings or new advancements made possible by their developed methods. The privacy and ethics statement should clearly address the broader impacts of their work as it relates to the authors' interpretation of privacy, fairness, safety, human rights, data sovereignty, or future misuse and any benefit/risk trade-off resulting from this research. We acknowledge that some papers may have minimal societal risks beyond those considered by institutional review boards, and the dimensions considered by any review of the user study design or dataset licenses could be provided in this statement. 
+  
+ Short Papers 
+ Authors are also invited to submit original work in a shorter format (see details of the submission instructionshref="https://etra.acm.org/2025/submissionprocess.html" - here
+). A short paper should provide a focused and concise, yet significant, contribution to the current state of the art while not delving into broad discussion. 
+  
+ All short paper submissions will undergo a double-blind review process assessing the originality and technical quality of the work, as well as the relevance for eye-tracking research and applications. Accepted papers will be archived in the conference proceedings and will be available in the ACM Digital Library as "ETRA '25 Short Papers". Details about the presentation format will follow after the acceptance notification. 
+  
+ Short papers will go through a single-phase review process. Full reviews will be provided by three committee members. External reviewers will be invited on a case by case basis if specialized expertise is required. After the review process, based on the review summary provided by the primary committee member, the authors will receive the final acceptance or rejection notification. 
+  
+ Submissions may include supplementary material, such as videos, code, or datasets that will be archived together with the paper in the ACM DL. Authors should keep in mind that the final acceptance to the conference will be based on the quality of the paper and not the supplementary material. Video submissions are not required, but encouraged to help demonstrate interactive systems that are otherwise difficult to showcase using images or text. Videos should use the MP4 format with H.264 codec and file size should not exceed 100 MB. We recommend the standard 1920x1080 resolution (1280x720 as an alternative). Any supplementary materials, including the video, have to be anonymized for review. 
+  
+ Required this year:With burgeoning technological and social applications of eye-tracking research, we now require authors to discuss the potential societal risks that might result from its publication. Authors are required to include a privacy and ethics statement of two to three sentences related to their study findings or new advancements made possible by their developed methods. The privacy and ethics statement should clearly address the broader impacts of their work as it relates to the authors' interpretation of privacy, fairness, safety, human rights, data sovereignty, or future misuse and any benefit/risk trade-off resulting from this research. We acknowledge that some papers may have minimal societal risks beyond those considered by institutional review boards, and the dimensions considered by any review of the user study design or dataset licenses could be provided in this statement. 
+ Topic Areas 
+ The ACM Symposium on Eye Tracking Research & Applications (ETRA) solicits original full and short research papers on a diverse set of topics related to eye tracking. Research contributions are welcomed across a range of topics including, but not limited to: 
+  
+ Data Analysis : 
+ Novel methods such as deep learning and other machine learning-based methods 
+ Scanpath analysis and classification 
+ Clustering of gaze data 
+ Event detection 
+ Large-scale data processing 
+ Prediction methods : 
+ Gaze prediction 
+ Action, intent, or attribute prediction 
+ Visualization : 
+ Visual representation of gaze patterns and other eye tracking data 
+ Visual analytics and combination with machine learning 
+ Eye tracking devices : 
+ Head-mounted eye tracking 
+ Remote eye tracking 
+ Novel sensors and wearables 
+ Perception and cognition; Empirical studies : 
+ Perception, attention, and oculomotor control 
+ Visual search and scene perception 
+ Eye movements in reading and communication 
+ Eye-hand coordination 
+ Eye tracking in naturalistic tasks 
+ In-the-wild studies 
+ Gaze based interaction : 
+ Novel interaction methods 
+ Virtual and augmented reality 
+ Multi-modal interaction 
+ Security and privacy 
+ Applications : 
+ Education 
+ Driving 
+ Medical / Health 
+ Virtual/Augmented Reality 
+ Graphics and virtual avatars 
+ Media accessibility 
+ Important Dates 
+ (Time Zone AoE/Anywhere on Earth) 
+  
+ Long Paper | Short Paper 
+ Abstract submission (mandatory) | October 26, 2024 | January 14, 2025 
+ Paper submission | November 1, 2024 | January 21, 2025 
+ First round reviews and notifications | January 7, 2025 | March 8, 2025 
+ Revisions due | February 18, 2025 | - 
+ Second round reviews and notifications | March 13, 2025 | - 
+ Camera ready deadline | March 31, 2025 | March 31, 2025 
+ Conference date | May 26 - May 29, 2025 | May 26 - May 29, 2025 
+
+Important Dates information:
+Photo byFrank HuangonUnsplashTokyo - Japan, May 26 - May 29, 2025 
+ The 2025 ACM Symposium on Eye Tracking Research & Applications (ETRA) will be held in Tokyo, Japan from May 26 to May 29, 2025. The aim of ETRA is to bring together researchers and practitioners from across fields with the common goal of continuing to move eye tracking research forward. Join us in Tokyo for ETRA, attend co-located workshops, and participate in exciting discussions. 
+ General Chairs 
+ href="mailto:general.etra2025@acm.org" - general.etra2025@acm.org
+Yusuke Sugano 
+ The University of Tokyo, Japan 
+ Mohamed Khamis 
+ University of Glasgow , United Kingdom 
+ Aladine Chetouani 
+ University Sorbonne - Paris Nord, France 
+ Important Dates 
+ (Time Zone AoE/Anywhere on Earth) 
+  
+ Full Paper | Short Paper | Workshop | Tutorials | Late-Breaking Work | href="/2025/doctoralsymposium.html" - Doctoral Consortium 
+ Abstract submission (mandatory) | October 26, 2024 | January 14, 2025 | -- | -- | -- | -- 
+ Paper submission | November 1, 2024 | January 21, 2025 | January 6, 2025 | January 6, 2025 | href="/2025/lbw.html" - rolling deadline | March 17, 2025 
+ First round reviews and notifications | January 7, 2025 | March 8, 2025 | January 20, 2025 | January 24, 2025 | -- | March 24, 2025 
+ Revisions due | February 18, 2025 | -- | -- | -- | -- | -- 
+ Second round reviews and notifications | March 13, 2025 | -- | -- | -- | -- | -- 
+ Camera-ready deadline | March 31, 2025 | March 31, 2025 | January 31, 2025 | February 7, 2025 | March 31, 2025 | March 31, 2025

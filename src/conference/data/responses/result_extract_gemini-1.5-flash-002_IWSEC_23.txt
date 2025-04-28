@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "November 25 - 27, 2025",
+  "Year": "2025",
+  "Location": "ACROS Fukuoka, Fukuoka, Japan",
+  "City-State-Province": "Fukuoka",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(First Submission) Submission deadline": "April 10, 2025",
+    "(Second Submission) Submission deadline": "July 17, 2025"
+  },
+  "Notification Date": {
+    "(First Submission) Notification of decision": "June 2, 2025",
+    "(Second Submission) Notification of decision": "September 15, 2025"
+  },
+  "Camera-ready Date": {
+    "(First Submission) Camera-ready version due": "June 18, 2025",
+    "(Second Submission) Camera-ready version due": "October 1, 2025"
+  },
+  "Topics": "Security",
+  "Summary": "The 20th International Workshop on Security (IWSEC 2025) will be held at ACROS Fukuoka, Fukuoka, Japan, between November 25-27, 2025. IWSEC is an annual international workshop co-organized by ISEC of IEICE and CSEC of IPSJ. Original papers on the research and development of various security topics, as well as case studies and implementation experiments, are solicited for submission.",
+  "Call for Papers": "No call for papers available"
+}
+

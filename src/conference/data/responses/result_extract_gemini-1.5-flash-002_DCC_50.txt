@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "March 18 - 21, 2025",
+  "Year": "2025",
+  "Location": "Cliff Lodge convention center, Snowbird & Alta Ski areas, Utah, U.S.",
+  "City-State-Province": "Snowbird, Utah",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Manuscript submission deadline": "October 11, 2024"
+  },
+  "Notification Date": {
+    "Paper-Acceptance Notification": "November 24, 2024"
+  },
+  "Camera-ready Date": {
+    "Final Paper Submission Deadline": "December 11, 2024"
+  },
+  "Registration Date": {
+    "Author-Registration Deadline": "December 11, 2024"
+  },
+  "Topics": "Data Compression, Lossless Compression, Lossy Compression, Source Coding, Joint Source-Channel Coding, Rate-Distortion Coding, Quantization Theory, Vector Quantization, Transform-based Methods, Parallel Compression Algorithms, Error-Resilient Compression Techniques, Adaptive Compression Algorithms, Compressed Data Structures, Applications to Immersive Media, Inpainting-based Compression, Perceptual Coding, Visual Search, Object Recognition, Applications of Neural Networks and Deep Learning, String Searching and Manipulation, Fractal-based Compression Methods, Information Retrieval, Steganography, Minimal-Length Encoding, System Issues Relating to Data Compression, Bioinformatics, Mobile Computing, Networking, Communications, Storage",
+  "Summary": "The Data Compression Conference (DCC) is an international forum for current work on data compression and related applications.  The conference will take place March 18–21, 2025, at the Cliff Lodge convention center in the Snowbird & Alta Ski areas of Utah.",
+  "Call for Papers": "# DCC 2025: Call for Papers\n\nThe Data Compression Conference (DCC) is an international forum for current work on data compression and related applications. Both theoretical and experimental work are of interest.\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to:\n\n*   Lossless and lossy compression for storage and transmission of specific types of data (including text, gray scale and color photographs, multi-spectral and hyper-spectral images, palette images, video, movies, audio, music, maps, instrument and sensor data, space data, earth observation data, scientific data, weather data, medical data, graphics data, geometry data, 3D representations, animation, bi-level images / bit-maps, web content, web graphs, etc.)\n*   Source coding\n*   Source coding in multiple-access networks\n*   Joint source-channel coding\n*   Rate-distortion coding\n*   Rate allocation\n*   Multiple-description coding\n*   Quantization theory\n*   Vector quantization (VQ)\n*   Multiple description VQ\n*   Transform-based methods (including DCT and wavelet transforms)\n*   Parallel compression algorithms and hardware\n*   Error-resilient compression techniques\n*   Adaptive compression algorithms\n*   Browsing and searching compressed data\n*   Compressed data structures\n*   Applications to immersive media\n*   Inpainting-based compression\n*   Perceptual coding\n*   Visual search\n*   Object recognition\n*   Applications of neural networks and deep learning (e.g., CNNs) to compression\n*   String searching and manipulation used in compression applications\n*   Fractal-based compression methods\n*   Information retrieval employing compression techniques\n*   Steganography / hidden information with respect to compressed data\n*   Minimal-length encoding and applications to learning\n*   System issues relating to data compression (including error control, data security, indexing, and browsing)\n*   Compression applications and issues for computational biology and bioinformatics\n*   Compression applications and issues for the internet\n*   Compression applications and issues for mobile computing\n*   Applications of compression to file distribution and software updates\n*   Applications of compression to file storage and backup systems\n*   Applications of compression to data mining\n*   Applications of compression to image retrieval\n*   Applications of compression and information theory to human-computer interaction (HCI)\n*   Development of and extensions to compression standards (including the HEVC, JPEG, MPEG, H.xxx, and G.xxx families and including compression of specific image types such as plenoptic images, point cloud images, and light field images)\n*   Compressed sensing / compressive sampling\n*   The use of techniques from information theory and data compression in networking, communications, and storage of large data sets\n\n## Important Dates\n\n*   **Paper Submission Deadline:** October 11, 2024, 11:59 pm U.S. Pacific Time\n*   **Paper-Acceptance Notification:** November 24, 2024\n*   **Author-Registration Deadline:** December 11, 2024\n*   **Final Paper Submission Deadline:** December 11, 2024\n*   **Conference:** March 18–21, 2025\n\n## Contact Us\n\n[info@datacompressionconference.org](mailto:info@datacompressionconference.org)"
+}
+```

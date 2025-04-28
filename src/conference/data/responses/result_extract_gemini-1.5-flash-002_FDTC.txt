@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "September 14, 2025",
+  "Year": "2025",
+  "Location": "Kuala Lumpur, Malaysia",
+  "City-State-Province": "Kuala Lumpur",
+  "Country": "Malaysia",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "June 2, 2025"
+  },
+  "Notification Date": {
+    "Notification of final acceptance": "July 19, 2025"
+  },
+  "Camera-ready Date": {
+    "Final version deadline": "August 2, 2025"
+  },
+  "Other Date": {
+    "Workshop": "September 14, 2025"
+  },
+  "Topics": "Fault injection, fault attacks, countermeasures, cryptographic implementations, embedded devices, machine learning architectures, privacy-preserving technologies, photonic emission analysis, laser thermal imaging, laser-voltage imaging, detection countermeasures, HW/SW co-design countermeasures",
+  "Summary": "The Twenty-second Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC 2025) will be held on September 14, 2025, in Kuala Lumpur, Malaysia.  The workshop focuses on fault injection, fault attacks, and countermeasures in cryptographic implementations and embedded devices.  It is affiliated with CHES 2025.",
+  "Call for Papers": "# FDTC 2025: Call for Papers\n\nThe Twenty-second Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC 2025) will be held **on-site in Kuala Lumpur, Malaysia on September 14, 2025**, affiliated with CHES 2025.\n\nFDTC is the reference event in the field of fault injection appliances, fault attacks, and countermeasures.\n\n## Topics of Interest\n\n*   **Fault injection setups and praxis:** novel and improved mechanisms for fault injection; practical issues in fault injection setups and validation results; practical limitations of attacks and implications for security; fault injection in emerging technologies\n*   **Case studies:** attacks on cryptographic implementations; attacks on embedded devices; attacks on machine learning architectures; attacks on privacy-preserving technologies; attacks on remote targets\n*   **Related highly-invasive attacks on device security:** setups and practical results from invasive attacks; practical issues, limitations and potential\n*   **Countermeasures (detection, resistance and tolerance):** countermeasures for cryptographic implementations; countermeasures for firmware of embedded devices; detection countermeasures; HW/SW co-design countermeasures for CPU architectures\n*   **Design tools for analysis of fault attacks and countermeasures:** early estimation of fault attack robustness; automatic applications of fault countermeasures; formal methods and techniques for the verification of fault resiliency\n\n## Submission Guidelines\n\n*   Submissions must not substantially duplicate work published elsewhere or submitted in parallel to any other conference or workshop.\n*   Submissions should be anonymous, with no author names, affiliations, acknowledgments, or obvious references.\n*   Papers should be up to 12 pages (including bibliography and appendices), and formatted according to the provided template.\n*   FDTC encourages the submission of short papers (limited to 6 pages), whose title must include the text “Short Paper:”.\n*   All accepted papers (regular and short) will be published in an archival proceedings volume by CPS and will be distributed at the time of the workshop.\n*   At least one author of each accepted paper must register for the workshop and present the paper to be included in the proceedings.\n\n## Important Dates\n\n*   **Submission:** June 2, 2025\n*   **Notification of final acceptance:** July 19, 2025\n*   **Final version (camera-ready):** August 2, 2025\n*   **Workshop:** September 14, 2025"
+}
+```

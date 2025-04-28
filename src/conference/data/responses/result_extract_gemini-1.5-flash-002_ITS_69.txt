@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "June 2 - 6, 2025",
+  "Year": "2025",
+  "Location": "Alexandroupolis, Greece",
+  "City-State-Province": "Alexandroupolis",
+  "Country": "Greece",
+  "Continent": "Europe",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Full Papers (12 pages)": "March 1, 2025",
+    "Short Papers (8 pages)": "March 1, 2025",
+    "Posters (6 pages)": "March 1, 2025",
+    "Doctoral Consortium (6 pages)": "March 1, 2025",
+    "Workshop Proposals": "March 1, 2025",
+    "Tutorial Proposals": "March 1, 2025",
+    "Industry Track Proposals": "March 1, 2025"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "April 7, 2025"
+  },
+  "Camera-ready Date": {
+    "Final Version": "April 30, 2025"
+  },
+  "Topics": "Intelligent Tutoring Systems, Computer and Cognitive Sciences, Artificial Intelligence, Deep Learning, Generative AI, Generative Tutoring Systems, Generative Systems in Healthcare Informatics, Generative Systems in Human Interaction, Games and Virtual Reality, Neural Networks, Data Mining, Generative Systems and Metaverse, Security, Privacy, and Ethics in Generative Systems, Generative Systems for Applied Natural Language Processing, Generative Systems and Cognitive Robots",
+  "Publisher": "Springer",
+  "Summary": "ITS2025 is the upcoming conference of the Intelligent Tutoring Systems Conferences series on Computer and Cognitive Sciences, Artificial Intelligence, and Deep Learning in Tutoring and Education.  It will be held in Alexandroupolis, Greece, from June 2 to June 6, 2025, and will be co-hosted by Democritus University of Thrace. The conference will be hybrid, allowing online participation. The theme is \"Generative Systems\", focusing on Generative Intelligence to enhance human cognitive potential.",
+  "Call for Papers": "# ITS 2025: Call for Papers\n\nThe ITS2025 Conference will be held in **Alexandroupolis, Greece, from June 2 to June 6, 2025**. It will be a **hybrid conference**, allowing participants to attend online.\n\n## Theme\n\nThe theme of ITS2025 is **Generative Systems**, focusing on **Generative Intelligence**, a new concept of AI that enhances human intelligence, cognitive capacities, memory, and learning by generating texts, images, solutions, and environments.\n\n## Tracks\n\nThe conference supports the following tracks, each with its own list of topics of interest (see the CFP for details):\n\n*   T1: Generative Tutoring Systems\n*   T2: Generative Systems in Healthcare Informatics\n*   T3: Generative Systems in Human Interaction, Games, and Virtual Reality\n*   T4: Neural Networks and Data Mining\n*   T5: Generative Systems and Metaverse\n*   T6: Security, Privacy, and Ethics in Generative Systems\n*   T7: Generative Systems for Applied Natural Language Processing\n*   T8: Generative Systems and Cognitive Robots\n\n## Submission Instructions\n\nThe ITS2025 Conference invites submissions in the following categories:\n\n*   Full papers (12 pages)\n*   Short papers (8 pages)\n*   Posters (6 pages)\n\nAll paper submissions should be made through the **EasyChair platform**: [https://easychair.org/conferences/?conf=its20250](https://easychair.org/conferences/?conf=its20250). Paper submissions should be in PDF and in English. The evaluation process is double-blind.\n\n## Important Dates\n\n*   **Submission Deadline:** March 1, 2025 (11:59 pm Pacific Time)\n*   **Acceptance Notification:** April 7, 2025\n*   **Final Version Submission:** April 30, 2025\n\n## Proceedings\n\nThe ITS2025 Proceedings will be published in the Lecture Notes in Computer Science series (LNCS) by Springer.  Authors should consult Springer’s authors’ guidelines and use their proceedings templates.\n\n## Committees\n\n*   **Organisation Chair:** Kitty Panourgia, Neoanalysis Ltd, Greece\n*   **Program Advising Chairs:** Angelo Sifaleras, University of Macedonia, Greece; Angelos Markos, Democritus University\n*   **Program Committee Chairs:** Sabine Graf, Athabasca University; Oscar Lin, Athabasca University, Canada\n*   **General Conference Chair:** Antonios Gasteratos, Democritus University\n\n## Venue\n\nThe main conference will be held at the **Ramada Plaza Thraki Five Star Beach Hotel** in **Alexandroupolis, Greece**.\n\n## Registration Fees and Deadlines\n\nSee the conference website for details on registration fees and deadlines."
+}
+

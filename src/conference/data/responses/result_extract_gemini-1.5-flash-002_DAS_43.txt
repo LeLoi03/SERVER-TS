@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "August 30 - 31, 2024",
+  "Year": "2024",
+  "Location": "Athens, Greece",
+  "City-State-Province": "Athens",
+  "Country": "Greece",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission": "May 22, 2024"
+  },
+  "Notification Date": {
+    "Acceptance Notification": "June 7, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera Ready": "June 21, 2024"
+  },
+  "Topics": "Document Analysis and Recognition, System-level perspectives, Document image processing, Physical and logical layout analysis, Text and symbol recognition, Handwriting recognition, Document analysis systems, Document classification, Indexing and retrieval of documents, Document synthesis, Extracting document semantics, NLP for document understanding, Office automation, Graphics recognition, Human document interaction, Document Representation Modeling, Structured document generation, Multimedia document analysis, Mobile text recognition, Pen-based document analysis, Scene text detection and recognition, Recognition of tables and formulas, Historical document analysis, Signature verification, Document summarization and translation, Document forensics and provenance, Medical document analysis, Document analysis for social good, Document analysis for literature search, Gold-standard benchmarks and datasets",
+  "Publisher": "Springer",
+  "Summary": "DAS 2024, the premier satellite workshop of the International Conference on Document Analysis and Recognition (ICDAR), will be held in Athens, Greece, from August 30-31, 2024.  The workshop focuses on the intersection of system-level perspectives and challenges in document analysis and recognition.",
+  "Call for Papers": "# DAS 2024: Call for Papers\n\nDAS 2024, a satellite workshop of the International Conference on Document Analysis and Recognition (ICDAR), will be held in **Athens, Greece from August 30th to September 4th 2024**.\n\n## Topics of Interest\n\n*   Document image processing\n*   Physical and logical layout analysis\n*   Text and symbol recognition\n*   Handwriting recognition\n*   Document analysis systems\n*   Document classification\n*   Indexing and retrieval of documents\n*   Document synthesis\n*   Extracting document semantics\n*   NLP for document understanding\n*   Office automation\n*   Graphics recognition\n*   Human document interaction\n*   Document Representation Modeling\n*   Structured document generation\n*   Multimedia document analysis\n*   Mobile text recognition\n*   Pen-based document analysis\n*   Scene text detection and recognition\n*   Recognition of tables and formulas\n*   Historical document analysis\n*   Signature verification\n*   Document summarization and translation\n*   Document forensics and provenance\n*   Medical document analysis\n*   Document analysis for social good\n*   Document analysis for literature search\n*   Gold-standard benchmarks and datasets\n\n## Publication\n\nICDAR 2024 proceedings will be published under the Springer Lecture Notes in Computer Science (LNCS) series.  This provides the proceedings of the conference and the workshops with excellent online accessibility, including free access to SpringerLink via links on the conference website during one year after the publication and free access for everyone in SpringerLink four years after the publication.\n\n## Submission and Review\n\nICDAR 2024 conference papers will follow a single-blind review process. The Abstract submission deadline is on 1 February 2024. Full papers and edits may be submitted until 12 February 2024. Papers should be formatted according to the instructions and style files provided by Springer. The LaTeX template for LNCS can be downloaded [here](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines). It is also available on Overleaf.\n\nPapers accepted for the conference will be allocated up to 15 pages (usually not counting references) in the proceedings. Submissions are expected to be in the range of 10-15 pages.\n\n## Important Dates\n\n*   **1 February 2024:** Title and Abstract submission deadline\n*   **12 February 2024:** Full paper upload and editing closed\n*   **15 April 2024:** Paper acceptance notification\n*   **30 April 2024:** Camera-ready\n\n## Submission Guidelines & Enquiries\n\nThe accepted papers for ICDAR 2024 will be presented in Oral or Poster presentation forms. All proposals should be submitted electronically via the online submission form: [https://easychair.org/conferences/?conf=icdar2024](https://easychair.org/conferences/?conf=icdar2024). Enquiries should be sent to [pc-chairs@icdar2024.net](mailto:pc-chairs@icdar2024.net)."
+}
+

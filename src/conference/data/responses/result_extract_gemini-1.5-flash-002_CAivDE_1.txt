@@ -1,0 +1,41 @@
+```json
+{
+  "Conference dates": "August 6 - 8, 2025",
+  "Year": "2025",
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": "Hybrid",
+  "Submission Date": {
+    "The opening date for paper submissions / Registration": "September 23, 2024",
+    "Symposium submission deadline": "February 1, 2025",
+    "Digital Art Gallery D-ART2024 deadline": "March 1, 2025",
+    "The closing date for paper submissions": "May 15, 2025",
+    "Submission of tutorials": "May 15, 2025",
+    "Submission of posters": "May 15, 2025",
+    "Submission of Computer Animation deadline": "June 15, 2025",
+    "the closing date for submission of the Video / Poster display version": "June 30, 2025",
+    "the Doctoral Research Workshop- the closing date for abstract submission": "June 30, 2025",
+    "Researchers Link- the closing date for research proposal submission": "June 30, 2025"
+  },
+  "Notification Date": {
+    "Notification of Reviewing Result – acceptance or rejection": "June 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Submission of camera-ready": "June 15, 2025"
+  },
+  "Registration Date": {
+    "Early registration closes (reduced fee applies)": "June 15, 2025",
+    "Tutorial Registration Cancellation & Refund date": "June 30, 2025",
+    "Registration closing dates": "July 20, 2025"
+  },
+  "Other Date": {
+    "Tutorial Day and Doctoral Research Workshop": "August 5, 2025",
+    "Researcher Links Workshop": "August 6 - 8, 2025"
+  },
+  "Topics": "Computer Animation, Information Visualization, Digital Effects, Motion Synthesis, Motion Capture, Physics-based animation, Vision techniques in animation, Modelling in animation, Rendering and lighting techniques, Animation of deformable materials and characters, Modelling and animation of heads, faces, and hair, Animation of natural phenomena, Real-time simulation used for visualisation, Simulations for virtual reality, training, and online education, Forensic animation and its applications, Animation for Scientific and medical visualisation",
+  "Summary": "The Computer Animation, Information Visualisation, and Digital Effects (CAivDE) conference will be a hybrid event (in-person and online) held from August 6-8, 2025.  The conference will feature several tracks, including a Doctoral Research Workshop and a Researchers Link Workshop. The conference focuses on Computer Animation, Information Visualization, and Digital Effects.",
+  "Call for Papers": "# CAivDE 2025: Call for Papers\n\nThe Computer Animation, Information Visualisation, and Digital Effects (CAivDE) conference will be a hybrid event (in-person and online) held from **August 6-8, 2025**.\n\n## Important Dates\n\n**NOTE:** This is a Hybrid (in-person & Online) Conference\n\n*   **The opening date for paper submissions / Registration:** September 23, 2024 ([https://www.conftool.org/IV-cgiv-2025/](https://www.conftool.org/IV-cgiv-2025/))\n*   **Symposium submission deadline:** February 1, 2025\n*   **Digital Art Gallery D-ART2024 deadline:** March 1, 2025\n*   **The closing date for paper submissions:** May 15, 2025\n*   **Submission of tutorials:** May 15, 2025\n*   **Submission of posters:** May 15, 2025\n*   **Notification of Reviewing Result – acceptance or rejection:** June 15, 2025\n*   **Submission of camera-ready:** June 15, 2025\n*   **Early registration closes (reduced fee applies) – Registration Form –Submission of Computer Animation deadline:** June 15, 2025\n*   **the closing date for submission of the Video / Poster display version:** June 30, 2025\n*   **the Doctoral Research Workshop- the closing date for abstract submission:** June 30, 2025 ([https://iv.csites.fct.unl.pt/de/call-for-papers/doctoral-research-workshop-cfp/](https://iv.csites.fct.unl.pt/de/call-for-papers/doctoral-research-workshop-cfp/))\n*   **Researchers Link- the closing date for research proposal submission:** June 30, 2025\n*   **Tutorial Registration Cancellation & Refund date:** June 30, 2025\n*   **Registration closing dates:** July 20, 2025\n*   **Tutorial Day and Doctoral Research Workshop:** August 5, 2025\n*   **Researcher Links Workshop:** August 6 - 8, 2025 ([https://iv.csites.fct.unl.pt/de/symposia/researcherslink/](https://iv.csites.fct.unl.pt/de/symposia/researcherslink/))\n\n## Contact\n\nGeneral enquiries and submissions should be addressed to the Conference Coordinator. Symposium-Specific enquiries should be addressed to:\n\n*   Prof. Mark W. McK. Bannatyne\n    *   Purdue University, IUPUI campus, Indianapolis, USA\n    *   mbannaty (@) iupui.edu\n*   Prof. Jian J Zhang\n    *   National Centre for Computer Animation, The Media School, Bournemouth University, UK\n    *   jzhang (@) bournemouth.ac.uk"
+}
+```

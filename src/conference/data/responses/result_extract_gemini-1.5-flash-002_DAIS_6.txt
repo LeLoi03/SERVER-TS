@@ -1,0 +1,17 @@
+output:
+{
+  "Conference dates": null,
+  "Year": "2025",
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": null,
+  "Submission Date": null,
+  "Notification Date": null,
+  "Camera-ready Date": null,
+  "Topics": "Distributed Applications, Interoperable Systems, Middleware, Cloud Computing, Edge Computing, Fog Computing, Big Data Processing, Distributed Embedded Machine Learning, Streaming, Complex Event Processing, Distributed Social Networking, IoT, Cyber-Physical Systems, Mobile Computing, Advanced Networking, Micro-services, Service-Oriented Computing, Peer-to-Peer Systems, Data Center Systems, Internet-Scale Systems, Publish/Subscribe Systems, Epidemic Protocols, Language-Based Approaches, Virtualization, Resource Allocation, Distributed Storage, Trusted Execution Environments, Blockchains, Cryptocurrencies, Smart Contracts, Distributed Consensus Mechanisms, Interoperability, Adaptation, Self-* Properties, Security, Cryptography, Trust, Privacy, Cooperation Incentives, Fairness, Fault-Tolerance, Dependability, Scalability, Elasticity, Tail-Performance, Energy-Efficiency",
+  "Summary": "DAIS 2025 is one of the three conferences of DisCoTec 2025. The DAIS conference series addresses all practical and conceptual aspects of distributed applications, including their design, modeling, implementation and operation.",
+  "Call for Papers": "No call for papers available"
+}
+

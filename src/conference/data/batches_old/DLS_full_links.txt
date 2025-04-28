@@ -1,0 +1,1997 @@
+Conference full name: Dynamic Languages Symposium (DLS)
+
+1. Website of DLS_3: https://www.sigplan.org/Conferences/DLS/
+Website information of DLS_3:
+
+ACM SIGPLANHome 
+ Conferences 
+ OpenTOC 
+ Awards 
+ href="/Highlights" - Research Highlights 
+ Membership 
+ Dynamic Languages Symposium (DLS) 
+ The Dynamic Languages Symposium (DLS) is a forum for discussion of dynamic languages, their implementation and application. While mature dynamic languages including Smalltalk, Lisp, Scheme, Self, Prolog, and APL continue to grow and inspire new converts, a new generation of dynamic scripting languages such as JavaScript, Python, Ruby, PHP, Tcl Lua, and Clojure are successful in a wide range of applications. DLS provides a place for researchers and practitioners to come together and share their knowledge, experience, and ideas for future research and development. 
+ On Hiatus 
+ In 2023, we held a symposium focusing on the Future of Dynamic Languages. Since then, DLS is on a hiatus. 
+ For research on dynamic languages, their implementation, tooling, educational approaches analyses, empirical studies, and other research, please consider submitting for instance to theSIGPLAN conferences. 
+ Perhaps of most relevance for your work might be the following venues with a large overlap in community: 
+ ‹Programming› 
+ Managed Programming Languages & Runtimes (MPLR) 
+ For questions or suggestions, please contact theSteering Committee Chair. 
+ Awards 
+ Most Notable Paper Award 2024 for 2014 | Recipients: Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape, Robert Hirschfeld 
+ Title: SqueakJS: A Modern and Practical Smalltalk that Runs in Any Browser 
+ Conference: DLS 2014 
+ Paper: | https://doi.org/10.1145/2661088.2661100 
+ Citation: This paper reports on SqueakJS, a fully compatible Squeak/Smalltalk implemented in pure JavaScript. In 2014, it demonstrated that with thoughtful implementation techniques, browsers and their JavaScript VMs can enable applications as dynamic and interactive as Smalltalk environments. Furthermore, the paper details how powerful programming language features such as object enumeration, application snapshotting, custom graphics interfaces as well as basic file abstractions can be realized inside the browser environment. Today, SqueakJS continues to be used in education, for web applications and as environments to preserve important parts of Smalltalk’s history, and with it, computing history. 
+ Most Notable Paper Award 2023 for 2013 | Recipients: Esteban Allende, Johan Fabry, Éric Tanter 
+ Title: Cast Insertion Strategies for Gradually-Typed Objects 
+ Conference: DLS 2013 
+ Paper: | https://doi.org/10.1145/2508168.2508171 
+ Citation: This paper explored the costs, both at micro and macro scale of various strategies for protecting gradual types in a gradually-typed programming language, examining how different strategies affected untyped typed, or both components of code. It is a seminal contribution to understanding the performance of gradual typing, which since then has been an area of important research. The strategies used in gradually-typed languages today can trace their lineage back to the strategies described and proposed in this paper. In particular, the proposed hybrid approach has been adapted time and time again by many systems, giving this work a lasting impact beyond its original scope. 
+ Most Notable Paper Award 2022 for 2012 | Recipients: Thomas Würthinger, Andreas Wöß, Lukas Stadler, Gilles Duboscq, Doug Simon, and Christian Wimmer 
+ Title: Self-optimizing AST interpreters 
+ Conference: DLS 2012 
+ Paper: | https://dl.acm.org/doi/10.1145/2384577.2384587 
+ Citation: Over the past decade, the authors and their collaborators have taken the ideas from this paper and turned it into the Truffle and GraalVM system which has revolutionized how we implement languages on the JVM. Today, the GraalVM is a major product and Truffle is a language implementation technology producing high-performance implementations of everything from Ruby to C all built upon the ideas of AST rewriting in the interpreter. 
+ Most Notable Paper Award 2021 for 2011 | Recipients: Maxime Chevalier-Boisvert, Erick Lavoie, Marc Feeley, Bruno Dufour 
+ Title: Bootstrapping a Self-Hosted Research Virtual Machine for JavaScript: An Experience Report 
+ Conference: DLS 2011 
+ Paper: | https://dl.acm.org/doi/10.1145/2047849.2047858 
+ Citation: The 2011 DLS paper “Bootstrapping a Self-Hosted Research Virtual Machine for JavaScript: An Experience Report” is a great overview and source of ideas for virtual machine development. It represents a comprehensive guide to design choices to make in the space and for that it is still notable today. 
+ Most Notable Paper Award 2020 for 2010 | Recipients: Tom Van Cutsem and Mark S. Miller 
+ Title: Design Principles for Robust Object-oriented Intercession APIs 
+ Conference: DLS 2010 
+ Paper: | https://dl.acm.org/doi/10.1145/1869631.1869638 
+ Citation: The 2010 DLS paper “Proxies: Design Principles for Robust Object-oriented Intercession APIs” is a prime example of the object-capability model. In short order, it managed to bridge the gap from research to become an integral part of an important language today. 
+ Most Notable Paper Award 2019 for 2009 | Recipients: Alexander Yermolovich, Christian Wimmer, and Michael Franz 
+ Title: Optimization of Dynamic Languages Using Hierarchical Layering of Virtual Machines 
+ Conference: DLS 2009 
+ Paper: | https://dl.acm.org/citation.cfm?id=1408688 
+ Citation: This 2009 DLS paper is an important early paper in the area of meta virtual machines. It showed a simple and effective approach to VM construction that was simultaneously explored by multiple research groups at the time and which has since found further applications. 
+ Most Notable Paper Award 2018 for 2008 | Recipients: Jeremy G. Siek and Manish Vachharajani 
+ Title: Gradual Typing With Unification-based Inference 
+ Conference: DLS 2008 
+ Paper: | https://dl.acm.org/citation.cfm?doid=1408681.1408688 
+ Citation: The 2008 DLS paper “Gradual Typing With Unification-based Inference” showed that one can increase the static guarantees made in a program through an ingenious combination of gradual typing and unification-base type inference. The ideas underlying this paper have found their way into the design of many modern programming languages, and have had a strong impact on the research community. 
+ Most Notable Paper Award 2017 for 2007 | Recipients: Stijn Mostinckx, Tom Van Cutsem, Stijn Timbermont, and Éric Tanter 
+ Title: Mirages–Behavioral Intercession in a Mirror-based Architecture 
+ Conference: DLS 2007 
+ Paper: | http://dl.acm.org/citation.cfm?id=1297095 
+ Citation: The 2007 DLS paper “Mirages: Behavioral Intercession in a Mirror-based Architecture” combined the ideas of explicit mirrors for reflective introspection and modification with implicit mirrors for behavioral intercession. The work in this paper influenced and inspired the design of proxies in the JavaScript language, where it now has applications in areas such as security, testing, and virtualization of the DOM. 
+ Most Notable Paper Award 2016 for 2006 | Recipients: Armin Rigo and Samuele Pedroni 
+ Title: PyPy’s Approach to Virtual Machine Construction 
+ Conference: DLS 2006 
+ Paper: | http://dl.acm.org/citation.cfm?id=1176753 
+ Citation: The 2006 DLS paper “PyPy’s Approach to Virtual Machine Construction” introduced the PyPy Python interpreter and the RPython framework. Both are still highly relevant in various areas to this day and will continue to be influential for many years, thus demonstrating highly impressive long-term vision and impact. The paper laid the theoretical and practical foundations of constructing a virtual machine from a high-level description and was consequently built upon by numerous follow-up publications. The software, which continues to be developed by a large and active open source community proved extensively usable in multiple academic and industrial contexts. 
+ Most Notable Paper Award 2015 for 2005 | Recipients: Pascal Costanza and Robert Hirschfeld 
+ Title: Language Constructs for Context-oriented Programming–An Overview of ContextL 
+ Conference: DLS 2005 
+ Paper: | http://dl.acm.org/citation.cfm?id=1146842 
+ Citation: The 2005 DLS paper “Language Constructs for Context-oriented Programming: An Overview of ContextL” introduced a framework that enables programmers to modify the behavior of a program based on the context in which it is used, without requiring changes to the original program. This paper triggered a cascade of research on Context-oriented Programming and spawned a community with its own international workshop series, which is still going strong today. 
+ Past Events 
+ DLS 2023 | Cascais, Portugal, October 24, 2023 
+ Co-located with SPLASH 2023 
+ PC chairs: Stefan Marr, University of Kent, UK 
+ href="https://2023.splashcon.org/home/dls-2023" - https://2023.splashcon.org/home/dls-2023 
+ href="http://www.dynamic-languages-symposium.org/dls-23/" - http://www.dynamic-languages-symposium.org/dls-23/ 
+ DLS 2022 | Auckland, New Zealand, Dec 6, 2022 
+ Co-located with SPLASH 2022 
+ PC chairs: Arjun Guha, Northeastern University, USA; Wolfgang De Meuter, Vrije Universiteit Brussel, Belgium 
+ href="https://conf.researchr.org/home/dls-2022" - https://conf.researchr.org/home/dls-2022 
+ href="http://www.dynamic-languages-symposium.org/dls-22/" - http://www.dynamic-languages-symposium.org/dls-22/ 
+ DLS 2021 | Chicago, Illinois, United States, Oct 19, 2021 
+ Co-located with SPLASH 2021 
+ PC chair: Arjun Guha, Northeastern University, USA 
+ href="https://conf.researchr.org/home/dls-2021" - https://conf.researchr.org/home/dls-2021 
+ href="http://www.dynamic-languages-symposium.org/dls-21/" - http://www.dynamic-languages-symposium.org/dls-21/ 
+ DLS 2020 | Chicago, Illinois, USA | Everywhere, Nov 18, 2020 
+ Co-located with SPLASH 2020 
+ PC chair: Matthew Flatt 
+ Invited speaker: Vanessa Freudenberg 
+ href="https://conf.researchr.org/home/dls-2020" - https://conf.researchr.org/home/dls-2020 
+ href="http://www.dynamic-languages-symposium.org/dls-20/" - http://www.dynamic-languages-symposium.org/dls-20/ 
+ DLS 2019 | Athens, Greece, October 22, 2019 
+ Co-located with SPLASH 2019 
+ PC chair: Stefan Marr (University of Kent) 
+ Invited speaker: Saman P. Amarasinghe 
+ href="https://conf.researchr.org/home/dls-2019" - https://conf.researchr.org/home/dls-2019 
+ href="http://www.dynamic-languages-symposium.org/dls-19/" - http://www.dynamic-languages-symposium.org/dls-19/ 
+ DLS 2018 | Boston, Massachusetts, USA, November 6, 2018 
+ Co-located with SPLASH 2018 
+ PC chair: Tim Felgentreff 
+ Invited speaker: Saman P. Amarasinghe 
+ href="http://www.dynamic-languages-symposium.org/dls-18/" - http://www.dynamic-languages-symposium.org/dls-18/ 
+ DLS 2017 | Vancouver, British Columbia, Canada, October 24, 2017 
+ Co-located with SPLASH 2017 
+ PC chair: Davide Ancona 
+ Invited speaker: Filip Pizlo 
+ href="http://2017.splashcon.org/track/dls-2017-DLS-2017" - http://2017.splashcon.org/track/dls-2017-DLS-2017 
+ href="http://www.dynamic-languages-symposium.org/dls-17/" - http://www.dynamic-languages-symposium.org/dls-17/ 
+ DLS 2016 | Amsterdam, The Netherlands, November 1, 2016 
+ Co-located with SPLASH 2016 
+ PC chair: Roberto Ierusalimschy 
+ Invited speaker: Ross McIlroy 
+ href="http://2016.splashcon.org/track/dls-2016-papers" - http://2016.splashcon.org/track/dls-2016-papers 
+ href="http://www.dynamic-languages-symposium.org/dls-16/" - http://www.dynamic-languages-symposium.org/dls-16/ 
+ DLS 2015 | Pittsburgh, Pennsylvania, USA, October 27, 2015 
+ Co-located with SPLASH 2015 
+ PC chair: Manuel Serrano 
+ Invited speaker: Eelco Visser 
+ href="http://2015.splashcon.org/track/dls2015" - http://2015.splashcon.org/track/dls2015 
+ href="http://www.dynamic-languages-symposium.org/dls-15/" - http://www.dynamic-languages-symposium.org/dls-15/ 
+ DLS 2014 | Portland, Oregon, USA, 2014 
+ Co-located with SPLASH 2014 
+ PC chair: Laurence Tratt 
+ Invited speaker: Stefan Udo Hanenberg 
+ href="http://2014.splashcon.org/track/dls14-papers" - http://2014.splashcon.org/track/dls14-papers 
+ href="http://www.dynamic-languages-symposium.org/dls-14/" - http://www.dynamic-languages-symposium.org/dls-14/ 
+ DLS 2013 | Indianapolis, Indiana, USA, October 28, 2013 
+ Co-located with SPLASH 2013 
+ PC chair: Carl Friedrich Bolz 
+ Invited speaker: Mario Wolczko 
+ href="http://www.dynamic-languages-symposium.org/dls-13/" - http://www.dynamic-languages-symposium.org/dls-13/ 
+ DLS 2012 | Tucson, Arizona, USA, October 22, 2012 
+ Co-located with SPLASH 2012 
+ PC chair: Alessandro Warth 
+ Invited speaker: David A. Smith 
+ href="http://www.dynamic-languages-symposium.org/dls-12/" - http://www.dynamic-languages-symposium.org/dls-12/ 
+ DLS 2011 | Portland, Oregon, USA, October 24, 2011 
+ Co-located with SPLASH 2011 
+ PC chair: Theo D’Hondt 
+ Invited speakers: Gilad Bracha and David Ungar 
+ href="http://www.dynamic-languages-symposium.org/dls-11/" - http://www.dynamic-languages-symposium.org/dls-11/ 
+ DLS 2010 | Reno, Nevada, USA, October 18, 2010 
+ Co-located with SPLASH 2010 
+ PC chair: William D. Clinger 
+ Invited speaker: Allen Wirfs-Brock 
+ href="http://www.dynamic-languages-symposium.org/dls-10/" - http://www.dynamic-languages-symposium.org/dls-10/ 
+ DLS 2009 | Disney’s Contemporary Resort 
+ Orlando, Florida, USA, October 26, 2009 
+ Co-located with OOPSLA 2009 
+ PC chair: James Noble 
+ Invited speaker: Jan Vitek 
+ href="http://www.dynamic-languages-symposium.org/dls-09/" - http://www.dynamic-languages-symposium.org/dls-09/ 
+ DLS 2008 | Paphos, Cyprus, July 8, 2008 
+ Co-located with ECOOP 2008 
+ PC chair: Johan Brichau 
+ Invited speakers: Rich Hickey, Laurence Tratt, and Dan Ingalls 
+ href="http://www.dynamic-languages-symposium.org/dls-08/" - http://www.dynamic-languages-symposium.org/dls-08/ 
+ DLS 2007 | Montreal, Quebec, Canada, October 22, 2007 
+ Co-located with OOPSLA 2007 
+ PC chairs: Pascal Costanza and Robert Hirschfeld 
+ Invited speakers: Mark S. Miller and Jim Hugunin 
+ href="http://www.dynamic-languages-symposium.org/dls-07/" - http://www.dynamic-languages-symposium.org/dls-07/ 
+ DLS 2006 | Portland, Oregon, USA, October 23, 2006 
+ Co-located with OOPSLA 2006 
+ PC chair: Robert Hirschfeld 
+ Invited speakers: Ian Piumarta, Audrey Tang, and Avi Bryant 
+ href="http://www.dynamic-languages-symposium.org/dls-06/" - http://www.dynamic-languages-symposium.org/dls-06/ 
+ DLS 2005 | San Diego, California, USA, October 18, 2005 
+ Co-located with OOPSLA 2005 
+ PC chair: Roel Wuyts 
+ Invited speakers: Gerald Sussman, Gilad Bracha, Jans Aasman, and Brian Foote 
+ href="http://decomp.ulb.ac.be/events/dls05/" - http://decomp.ulb.ac.be/events/dls05/ 
+ Steering Committee Members 
+ Present 
+ Chair: Stefan Marr, University of Kent, UK (SC Chair 2022-2024, PC Chair 2019, 2023) 
+ Davide Ancona, Università degli studi di Genova, Italy (PC Chair 2017) 
+ Wolfgang De Meuter, Vrije Universiteit Brussel, Belgium (PC Chair 2022) 
+ Matthew Flatt (PC Chair 2020) 
+ Robert Hirschfeld, Hasso Plattner Institute and University of Potsdam, Germany (Member at Large 2018-2020, Past SC Chair 2015-2018, SC Chair 2007-2015, PC Chair 2007, PC Chair 2006) 
+ Anders Møller, Aarhus University, Denmark (SIGPLAN Observer, since 2021) 
+ Past 
+ Carl Friedrich Bolz-Tereick, Heinrich-Heine-Universität Düsseldorf, Germany (Past SC Chair 2018-2021, SC Chair 2015-2018, PC Chair 2013) 
+ Johan Brichau (PC Chair 2008) 
+ William D. Clinger (PC Chair 2010) 
+ Pascal Costanza (SC Chair 2007-2013, PC Chair 2007) 
+ Theo D’Hondt (PC Chair 2011) 
+ Tim Felgentreff, Oracle Labs, Germany (SC Chair 2018-2021, PC Chair 2018) 
+ Richard P. Gabriel (Member at Large 2007-2013) 
+ Jeremy Gibbons (SIGPLAN 2012-2015) 
+ Arjun Guha, Northeastern University, USA, (PC Chair 2021, 2022) 
+ Roberto Ierusalimschy (PC Chair 2016) 
+ James Noble (PC Chair 2009) 
+ Benjamin C. Pierce, University of Pennsylvania, USA (SIGPLAN 2018-2021) 
+ Manuel Serrano (PC Chair 2015) 
+ Peter Thiemann (SIGPLAN 2015-2018) 
+ Dave Thomas (Member at Large 2007-2013) 
+ Laurence Tratt, King’s College London, UK (Emeritus Member 2018-2020, Emeritus Member 2016-2018, PC Chair 2014) 
+ Alessandro Warth (PC Chair 2012) 
+ Roel Wuyts (PC Chair 2005) 
+
+Page generated Fri, 14 Mar 2025 00:11:07 +0000
+
+2. Website of DLS_3: https://2022.splashcon.org/track/dls-2022-papers
+Website information of DLS_3:
+
+SPLASH 2022Mon 5 - Sat 10 December 2022Auckland, New Zealand 
+ Toggle navigation 
+ Attending | Venue: University of Auckland 
+ How To SPLASH 
+ General Chair Welcome 
+ Keynotes 4 Industry 
+ Speaker Instructions 
+ Session Chair Instructions 
+ Virtual SPLASH 2022 
+ Awards 
+ Code of Conduct 
+ COVID 
+ Registration 
+ Accommodation 
+ Sponsoring 
+ Tourism NZ 
+ Visas for New Zealand 
+ Program | SPLASH Program 
+ Your Program 
+ Mon 5 Dec 
+ Tue 6 Dec 
+ Wed 7 Dec 
+ Thu 8 Dec 
+ Fri 9 Dec 
+ Sat 10 Dec 
+ href="#" - Tracks | SPLASH 2022 
+ href="https://2022.splashcon.org/track/splash-2022-oopsla" - OOPSLA 
+ href="https://2022.splashcon.org/track/splash-2022-opening-and-welcome" - Opening and Welcome 
+ href="https://2022.splashcon.org/track/splash-2022-v-oopsla" - V-OOPSLA 
+ href="https://2022.splashcon.org/track/splash-2022-Artifacts" - OOPSLA Artifacts 
+ href="https://2022.splashcon.org/track/splash-2022-sigplan-papers" - COVID Time Papers In Person 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-Essays" - Onward! Essays 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-papers" - Onward! Papers 
+ href="https://2022.splashcon.org/track/splash-2022-Workshops" - Workshops 
+ href="https://2022.splashcon.org/track/splash-2022-Posters" - Posters 
+ href="https://2022.splashcon.org/track/splash-2022-SRC" - Student Research Competition 
+ href="https://2022.splashcon.org/track/splash-2022-Doctoral-Symposium" - Doctoral Symposium 
+ href="https://2022.splashcon.org/track/splash-2022-panels" - Panels 
+ href="https://2022.splashcon.org/track/splash-2022-splash-keynotes" - Keynotes 
+ href="https://2022.splashcon.org/track/splash-2022-SPLASH-E" - SPLASH-E 
+ href="https://2022.splashcon.org/track/splash-2022-PLMW" - PLMW 
+ href="https://2022.splashcon.org/track/splash-2022-w-splash" - W@SPLASH 
+ href="https://2022.splashcon.org/track/splash-2022-Student-Volunteers" - Student Volunteers 
+ href="https://2022.splashcon.org/track/splash-2022-pltea" - PLTea 
+ href="https://2022.splashcon.org/track/splash-2022-awards" - Awards 
+ href="https://2022.splashcon.org/track/splash-2022-cares" - CARES 
+ Co-hosted Conferences 
+ APLAS | href="https://conf.researchr.org/home/aplas-2022" - APLAS 
+ href="https://conf.researchr.org/track/aplas-2022/aplas-2022-aec" - APLAS Research Artifacts 
+ href="https://conf.researchr.org/track/aplas-2022/aplas-2022-papers" - APLAS 
+ href="https://2022.splashcon.org/track/dls-2022-papers" - DLS 
+ GPCE | GPCE 
+ href="https://2022.splashcon.org/track/gpce-2022-gpce-keynote" - GPCE  Keynote 
+ SAS | href="https://conf.researchr.org/home/sas-2022" - SAS 
+ href="https://conf.researchr.org/track/sas-2022/sas-2022-papers" - SAS 
+ href="https://conf.researchr.org/track/sas-2022/sas-2022-artifacts" - SAS  Artifacts 
+ SLE | SLE 
+ href="https://2022.splashcon.org/track/sle-2022-sle-keynote" - SLE  Keynote 
+ Workshops 
+ FTSCSFormal Techniques for Safety-Critical Systems 
+ HATRAHuman Aspects of Types and Reasoning Assistants 
+ LIVELive Programming 
+ PAINTProgramming Abstractions and Interactive Notations, Tools, and Environments 
+ REBLSReactive and Event-Based Languages and Systems 
+ UnsoundSources of Unsoundness in Verification 
+ VMILVirtual Machines and Language Implementations 
+ Organization | SPLASH 2022 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ OOPSLA | Review Committee 
+ External Review / Artifact Evaluation Committee 
+ OOPSLA Artifacts 
+ href="https://2022.splashcon.org/committee/splash-2022-sigplan-papers-overview-committee" - COVID Time Papers In Person 
+ Onward! Essays | Program Committee 
+ Onward! Steering Committee 
+ href="#" - Onward! Papers | Program Committee 
+ Onward! Steering Committee 
+ Workshops 
+ Posters 
+ href="#" - Student Research Competition | Organizers 
+ Judges 
+ Reviewers 
+ Doctoral Symposium 
+ Panels 
+ SPLASH-E | Program Committee 
+ Steering Committee 
+ PLMW | Organizing Committee 
+ Speakers & Panelists 
+ Mentors 
+ Student Volunteers 
+ PLTea 
+ CARES 
+ Contributors 
+ People Index 
+ Co-hosted Conferences 
+ APLAS | Program Committee 
+ Artifact Evaluation Committee 
+ href="#" - DLS | Program Committee 
+ GPCE | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ SAS | href="https://conf.researchr.org/committee/sas-2022/sas-2022-keynote-speakers" - Invited Speakers 
+ Organizing Committee 
+ href="https://conf.researchr.org/committee/sas-2022/sas-2022-sas2022-program-committee" - SAS 
+ href="https://conf.researchr.org/committee/sas-2022/sas-2022-sas-2022-artifacts-program-committee" - SAS 2022 Artifacts 
+ SLE | Keynote Speaker 
+ Organising Committee 
+ Program Committee 
+ Artifact Evaluation Committee 
+ Workshops 
+ FTSCS | Organizing Committee 
+ Program Committee 
+ HATRA | Organizing Committee 
+ Program Committee 
+ LIVE | Organizing Committee 
+ Program Committee 
+ PAINT | Organizing Committee 
+ Program Committee 
+ REBLS | Organizing Committee 
+ Program Committee 
+ Unsound | Organizing Committee 
+ Program Committee 
+ VMIL | Organizing Committee 
+ Search 
+ Series | Series 
+ href="https://conf.researchr.org/home/splash-2026" - SPLASH 2026 
+ href="https://2025.splashcon.org" - SPLASH 2025 
+ SPLASH 2024 
+ SPLASH 2023 
+ SPLASH 2022 
+ SPLASH 2021 
+ SPLASH 2020 
+ SPLASH 2019 
+ SPLASH 2018 
+ SPLASH 2017 
+ SPLASH 2016 
+ SPLASH 2015 
+ SPLASH 2014 
+ SPLASH 2013 
+ SPLASH 2012 
+ SPLASH 2011 
+ SPLASH 2010 
+ OOPSLA 2009 
+ OOPSLA 2008 
+ OOPSLA 2007 
+ OOPSLA 2006 
+ OOPSLA 2005 
+ OOPSLA 2004 
+ OOPSLA 2003 
+ OOPSLA 2002 
+ OOPSLA 2001 
+ OOPSLA 2000 
+ href="https://conf.researchr.org/signin/splash-2022/https%3A%5Es%5Es2022.splashcon.org%5Estrack%5Esdls-2022-papers" - Sign in 
+ Sign up 
+ SPLASH 2022(series) /DLS 2022 (href="https://2022.splashcon.org/series/dls" - series
+) /Dynamic Languages SymposiumDLS 2022 
+ About 
+ Program 
+ href="#Instructions-for-Authors" - Instructions for Authors 
+ The 18th Dynamic Languages Symposium (DLS) at SPLASH 2022 is the premier forum for researchers and practitioners to share research and experience on all aspects on dynamic languages. 
+ Accepted Papers 
+  
+ Title 
+ Dynamic Pattern Matching with PythonDLS 
+ Tobias Kohn,Guido van Rossum,Brandt Bucher,Talin,Ivan Levkivskyi 
+ DOIhref="http://design.cs.iastate.edu/splash20/dls20/dls20main-p12-p.pdf" - Pre-print 
+ Execution vs. Parse-Based Language Servers: Tradeoffs and Opportunities for Language-Agnostic Tooling for Dynamic LanguagesDLS 
+ Stefan Marr,Humphrey Burchell,Fabio Niephaus 
+ DOIhref="https://stefan-marr.de/downloads/dls22-marr-et-al-execution-vs-parse-based-language-servers.pdf" - Pre-print 
+ href="#" - Who You Gonna Call: Analyzing the Run-time Call-Site Behavior of Ruby Applications
+DLS 
+ Sophie Kaleba,Octave Larose,Richard Jones,Stefan Marr 
+ DOIhref="https://stefan-marr.de/downloads/dls22-kaleba-et-al-analyzing-the-run-time-call-site-behavior-of-ruby-applications.pdf" - Pre-print 
+ Call for Contributions 
+ The 18th Dynamic Languages Symposium (DLS) at SPLASH 2022 is the premier forum for researchers and practitioners to share research and experience on all aspects of dynamic languages. 
+ DLS 2022 invites high quality papers reporting original research and experience related to the design, implementation, and applications of dynamic languages. Areas of interest include, but are not limited to: 
+ innovative language features 
+ innovative implementation techniques 
+ innovative applications 
+ development environments and tools 
+ experience reports and case studies 
+ domain-oriented programming 
+ late binding, dynamic composition, and run-time adaptation 
+ reflection and metaprogramming 
+ software evolution 
+ language symbiosis and multi-paradigm languages 
+ dynamic optimization 
+ interpretation 
+ just-in-time and ahead-of-time compilation 
+ soft/optional/gradual typing 
+ hardware support 
+ educational approaches and perspectives 
+ semantics of dynamic languages 
+ frameworks and languages for the Cloud and the IoT 
+ href="#submission-details" - Submission Details
+Submissions must neither be previously published nor under review at other events. DLS 2022 uses a lightweight double-blind, two-phase reviewing process. 
+ Papers are assumed to be in one of the following categories: 
+ Research Papers: describe work that advances the current state of the art 
+ Experience Papers: describe insights gained from substantive practical applications that should be of a broad interest 
+ Dynamic Pearls: describe a known idea in an appealing way to remind the community and capture a reader’s interest 
+ The program committee will evaluate each paper based on its relevance, significance, clarity, and originality. The paper category needs to be indicated during submission, and papers are judged accordingly. 
+ Papers must be submitted electronically in PDF format. Submissions must be in the ACM SIGPLAN conference acmart format, 10 point font, and should not exceed 12 pages. Please see full details in the Instructions for Authors. 
+ DLS 2022 will run a two-phase reviewing process to help authors make their final papers the best that they can be. Accepted papers will be published in the ACM Digital Library and will be freely available for one month, starting two weeks before the event. 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT+13:00) Auckland, Wellington.Use conference time zone: (GMT+13:00) Auckland, WellingtonSelect other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Wed 7 Dec 
+ Displayed time zone:Auckland, Wellingtonchange 
+  
+ 12:00 - 13:30 | Lunchhref="https://2022.splashcon.org/track/splash-2022-catering" - Catering and Social Events
+atCatering Area 
+ 12:00 
+ 90m 
+ Lunch | LunchCatering and Social Events 
+  
+ 13:30 - 15:00 | DLS Talks 1href="https://2022.splashcon.org/track/dls-2022-papers" - DLS
+atAMRF Auditorium 
+ Chair(s):Stefan MarrUniversity of Kent 
+ 13:30 
+ 10m 
+ Talk | Chair's Welcome and Most Notable Paper AwardDLS 
+ 13:40 
+ 40m 
+ Talk | Invited Talk: A decade of Self-Optimizing Interpreters in GraalVMVirtualDLS 
+ Christian WimmerOracle Labs 
+ 14:20 
+ 40m 
+ Talk | Invited Talk: Live Programming over TCP? Bringing Squeak/Smalltalk Liveness to Godot via React/SVirtualDLS 
+ Tom BeckmannUniversity of Potsdam; Hasso Plattner Institute,Leonard GeierUniversity of Potsdam; Hasso Plattner Institute,Robert HirschfeldUniversity of Potsdam; Hasso Plattner Institute 
+  
+ 15:00 - 15:30 | Coffee breakhref="https://2022.splashcon.org/track/splash-2022-catering" - Catering and Social Events
+atCatering Area 
+ 15:00 
+ 30m 
+ Coffee break | Coffee breakCatering and Social Events 
+  
+ 15:30 - 17:00 | DLS Talks 2href="https://2022.splashcon.org/track/dls-2022-papers" - DLS
+atAMRF Auditorium 
+ Chair(s):James NobleResearch & Programming 
+ 15:30 
+ 30m 
+ Talk | Execution vs. Parse-Based Language Servers: Tradeoffs and Opportunities for Language-Agnostic Tooling for Dynamic LanguagesDLS 
+ Stefan MarrUniversity of Kent,Humphrey BurchellUniversity of Kent,Fabio NiephausOracle Labs, Potsdam 
+ DOIhref="https://stefan-marr.de/downloads/dls22-marr-et-al-execution-vs-parse-based-language-servers.pdf" - Pre-print 
+ 16:00 
+ 30m 
+ Talk | href="#" - Who You Gonna Call: Analyzing the Run-time Call-Site Behavior of Ruby Applications
+DLS 
+ Sophie KalebaUniversity of Kent,Octave LaroseUniversity of Kent,Richard JonesUniversity of Kent,Stefan MarrUniversity of Kent 
+ DOIhref="https://stefan-marr.de/downloads/dls22-kaleba-et-al-analyzing-the-run-time-call-site-behavior-of-ruby-applications.pdf" - Pre-print 
+ 16:30 
+ 30m 
+ Talk | Dynamic Pattern Matching with PythonDLS 
+ Tobias KohnUniversity of Cambridge, UK,Guido van RossumPython Software Foundation,Brandt BucherResearch Affiliates, LLC,Talin,Ivan LevkivskyiDropbox Ireland 
+ DOIhref="http://design.cs.iastate.edu/splash20/dls20/dls20main-p12-p.pdf" - Pre-print 
+ Instructions for Authors 
+ Submitted papers need to conform to the formatting instructions. Submissions that violate these instructions may be rejected without review at the discretion of the Program Chair. 
+ DLS 2022 uses a lightweight double-blind review process. Authors must omit their names and affiliations in their paper submissions. 
+ href="#submission-site" - Submission Site
+Please take a moment to read the instructions below before using the submission site. After acceptance, the camera-ready versions will be collected by Conference Publishing Consulting. 
+ href="#concurrent-submissions" - Concurrent Submissions
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described bySIGPLAN’s Republication Policy. Submitters should also be aware ofACM’s Policy and Procedures on Plagiarism. 
+ Format 
+ Submissions should use thehref="http://www.sigplan.org/Resources/Author/" - ACM SIGPLAN Conference acmart format
+,sigplansub-format, 10 point font. All submissions should be in PDF format. If you use LaTeX or Word, please use the providedhref="http://www.sigplan.org/Resources/Author/" - ACM SIGPLAN acmart templates
+. Author–year and numeric citation styles are both acceptable. 
+ Note that by default the SIGPLAN Conference Format templates produce papers in 9 point font. If you are formatting your paper using LaTeX, you will need to set the10ptoption in the\documentclasscommand:\documentclass[10pt,sigplan]{acmart}. If you are formatting your paper using Word, you may wish to use the provided Word template that supports this font size. 
+ For reviewing, please include page numbers in your submission with the LaTeX\settopmatter{printfolios=true}command. 
+ Please also ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes are legible. 
+ Page Limit 
+ To ensure that papers stay focused on their core contributions, papers are limited to 12 pages and 10pt including bibliographic references and appendices. For the second phase, the page limit is 14 pages including bibliographic references. 
+ Second-Phase Revisions 
+ DLS 2022 uses a two-phase review system to provide authors with extra support and an opportunity to revise submissions. The extent of revisions is limited by the available time of about 4 weeks, so the program committee will use the two-phase process only for mandatory revisions that can be completed in that time. 
+ To facilitate reviewing, we ask that the revisions be accompanied with: 
+ Highlighted changes, either done manually or with a tool such as | latexdiff 
+ A brief, high-level description of changes, and how they address the concerns raised in the reviews 
+ For the second phase, the pagelimit is 14 pages, including bibliographic references. 
+ Publication (Digital Library Early Access Warning) 
+ AUTHORS TAKE NOTE:The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work. 
+ Questions? Use thehref="https://2022.splashcon.org/contact2/dls-2022-papers" - DLS contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 7 Dec 2022 
+ Symposium 
+ Fri 21 Oct 2022 
+ Camera ready deadline 
+ Fri 16 Sep 2022 
+ Final notification 
+ Fri 9 Sep 2022 
+ Revisions due 
+ Fri 19 Aug 2022 
+ Notification 
+ Fri 1 Jul 2022 
+ Paper Submission 
+ Submission Link 
+ href="https://dls22.hotcrp.com/" - https://dls22.hotcrp.com/
+Program Committee 
+ Engineer BainomugishaMakerere University 
+ Uganda 
+ Nicolás CardozoUniversidad de los Andes 
+ Colombia 
+ Sheng ChenUniversity of Louisiana at Lafayette 
+ Wolfgang De MeuterPC Co-Chair 
+ Vrije Universiteit Brussel 
+ Belgium 
+ Marc FeeleyUniversité de Montréal 
+ Canada 
+ Michael GreenbergStevens Institute of Technology 
+ United States 
+ Ben GreenmanBrown University 
+ United States 
+ href="https://2022.splashcon.org/profile/arjunguha" - Arjun GuhaPC Co-ChairNortheastern University and Roblox ResearchUnited States 
+ Robert HirschfeldUniversity of Potsdam; Hasso Plattner Institute 
+ Germany 
+ Daniel PattersonNortheastern University 
+ United States 
+ Joe Gibbs PolitzUniversity of California at San Diego 
+ United States 
+ Laurence TrattKing's College London 
+ United Kingdom 
+ xSat 5 Apr 10:23 
+ SPLASH 2022 
+ contact form 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ Support page 
+ Tracks 
+ href="https://2022.splashcon.org/track/splash-2022-oopsla" - OOPSLA
+ 
+ href="https://2022.splashcon.org/track/splash-2022-opening-and-welcome" - Opening and Welcome
+ 
+ href="https://2022.splashcon.org/track/splash-2022-v-oopsla" - V-OOPSLA
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Artifacts" - OOPSLA Artifacts
+ 
+ href="https://2022.splashcon.org/track/splash-2022-sigplan-papers" - COVID Time Papers In Person
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-Essays" - Onward! Essays
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Onward-papers" - Onward! Papers
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Workshops" - Workshops
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Posters" - Posters
+ 
+ href="https://2022.splashcon.org/track/splash-2022-SRC" - Student Research Competition
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Doctoral-Symposium" - Doctoral Symposium
+ 
+ href="https://2022.splashcon.org/track/splash-2022-panels" - Panels
+ 
+ href="https://2022.splashcon.org/track/splash-2022-splash-keynotes" - Keynotes
+ 
+ href="https://2022.splashcon.org/track/splash-2022-SPLASH-E" - SPLASH-E
+ 
+ href="https://2022.splashcon.org/track/splash-2022-PLMW" - PLMW
+ 
+ href="https://2022.splashcon.org/track/splash-2022-w-splash" - W@SPLASH
+ 
+ href="https://2022.splashcon.org/track/splash-2022-Student-Volunteers" - Student Volunteers
+ 
+ href="https://2022.splashcon.org/track/splash-2022-pltea" - PLTea
+ 
+ href="https://2022.splashcon.org/track/splash-2022-awards" - Awards
+ 
+ href="https://2022.splashcon.org/track/splash-2022-cares" - CARES
+Co-hosted Conferences 
+ href="https://conf.researchr.org/home/aplas-2022" - APLAS 2022
+ 
+ href="https://2022.splashcon.org/track/dls-2022-papers" - DLS 2022
+ 
+ GPCE 2022 
+ href="https://conf.researchr.org/home/sas-2022" - SAS 2022
+ 
+ SLE 2022 
+ Workshops 
+ FTSCS 2022 
+ HATRA 2022 
+ LIVE 2022 
+ PAINT 2022 
+ REBLS 2022 
+ Unsound 2022 
+ VMIL 2022 
+ Attending 
+ Venue: University of Auckland 
+ How To SPLASH 
+ General Chair Welcome 
+ Keynotes 4 Industry 
+ Speaker Instructions 
+ Session Chair Instructions 
+ Virtual SPLASH 2022 
+ Awards 
+ Code of Conduct 
+ COVID 
+ Registration 
+ Accommodation 
+ Sponsoring 
+ Tourism NZ 
+ Visas for New Zealand 
+ Sign Up 
+ : 
+ :
+
+3. Website of DLS_3: https://person.dibris.unige.it/ancona-davide/
+Website information of DLS_3:
+
+Davide Ancona 
+
+Contact Details 
+ DIBRIS - Dipartimento di Informatica, Bioingegneria, Robotica e Ingegneria dei Sistemi 
+ Via Dodecaneso, 35 
+ 16146 Genova - ITALY 
+ Office: Valletta Puggia, 328 
+ Phone: +39 (010) 3536636 
+ Email address:davide.ancona@unige.it 
+ X (Twitter):https://x.com/davideancona68 
+ GitHub:https://github.com/davideancona 
+
+National project T-LADIES (PRIN 2020TL3X8X, coordinator of the Genova unit) 
+  
+ Main links 
+  
+ Curriculum 
+ href="Papers.html" - Papers
+ 
+ Runtime Monitoring Language (RML) 
+ Conference and Workshop Organization 
+ Secure and Reliable Systems 
+ PhD program in Computer Science and Systems Engineering 
+ Projects 
+ Software 
+ Master (LM) thesis proposals 
+ Didattica 
+ EasyRoom 
+ Timetable 
+ U-GOV 
+ U-WEB 
+ IRIS 
+ AulaWeb DIBRIS 
+ CCS 
+ Useful Unige links 
+
+Activities and events 
+  
+ Co-chair ofhref="https://conf.researchr.org/home/ecoop-2025/vortex-2025" - VORTEX 2025 - International Workshop on Verification and Monitoring at Runtime Execution (co-located with ECOOP 2025, July 4, 2025)
+ 
+ href="https://2025.ecoop.org" - ECOOP 2025, Mon 30 June - Fri 4 July 2025 Bergen, Norway
+ 
+ PC member ofRuntime Verification 2024 
+ Co-chair ofhref="https://conf.researchr.org/home/ecoop-issta-2024/vortex-2024" - VORTEX 2024 - International Workshop on Verification and Monitoring at Runtime Execution
+ 
+ I am pleased to announce that theJOT special issueonVORTEX 2022is now available. 
+ PC member ofhref="https://2025.programming-conference.org/" - <Programming> 2025
+the 9th International Conference on the Art, Science, and Engineering of Programming 
+ President of the Executive Board ofAITO (Association Internationale pour les Technologies Objets) 
+ PC member ofICTAC 2024 (21st International Colloquium on Theoretical Aspects of Computing) 
+ PC member ofENASE 2024 (19th International Conference on Evaluation of Novel Approaches to Software Engineering) 
+ PC member ofhref="https://2023.splashcon.org/home/dls-2023" - Dynamic Languages Symposium 2023
+ 
+ Co-chair ofhref="https://conf.researchr.org/track/ecoop-issta-2023/vortex-2023" - VORTEX 2023 - International Workshop on Verification and Monitoring at Runtime Execution
+ 
+ Co-chair ofVORTEX 2022 - International Workshop on Verification and mOnitoring at Runtime EXecution 
+ Review Committee member ofThe Art, Science, and Engineering of Programming, Volume 7 
+ PC member ofhref="https://conf.researchr.org/home/flops-2022" - FLOPS 2022 - the 16th International Symposium on Functional and Logic Programming
+ 
+ Co-chair ofhref="https://conf.researchr.org/track/ecoop-issta-2021/ecoop-issta-2021-vortex" - VORTEX 2021 - International Workshop on Verification and mOnitoring at Runtime EXecution
+; see theJOT special issue 
+ Committee member for Most Influential Paper fromAOSD 2011 
+ Review Committee member ofhref="https://2021.splashcon.org/track/splash-2021-oopsla" - OOPSLA 2021
+ 
+ PC member ofhref="https://2020.ecoop.org/committee/ecoop-2020-papers-program-committee" - ECOOP 2020
+, the 34th European Conference on Object-Oriented Programming 
+ Member of the committee for thehref="https://www.sigplan.org/Conferences/DLS/" - Most Notable Paper Award 2019 for 2009,   Dynamic Languages Symposium (DLS 2009)
+ 
+ Co-chair ofVORTEX at ECOOP 2019the 3rd workshop on Verification of Objects at Runtime Execution 
+ PhD thesis opponent:Mauricio Chimento, Combined Static and Dynamic Verification of Object Oriented Software Through Partial Proofs, Chalmers University of Technology and Gothenburg University 
+ PC member ofIJCAI 2019, the 28th International Joint Conference on Artificial Intelligence 
+ Member of the committee for thehref="https://www.sigplan.org/Conferences/DLS/" - Most Notable Paper Award 2018 for 2008,   Dynamic Languages Symposium (DLS 2008)
+ 
+ Italian scientific qualification as full professor(August 2018) 
+ Track co-chair ofNGPS 2019(Next Generation Programming Paradigms and Systems) atGeneral chair of<Programming> 2019the 3rd International Conference on the Art, Science, and Engineering of Programming 
+ Chair of theECOOP 2018 Test of Time Award committee 
+ Co-chair ofhref="https://conf.researchr.org/track/ecoop-issta-2018/vortex-2018-papers" - VORTEX at ECOOP 2018
+the 2nd workshop on runtime verification for object-oriented languages, and systems 
+ Track chair ofOOPPS 2018(Object-Oriented and Parallel Programming Languages and Systems) atSAC 2018 
+ PC member of<Programming> 2018, the second edition of the International Conference on the Art, Science, and Engineering of Programming 
+ Member of the External Review Committee forhref="http://2017.splashcon.org/track/splash-2017-oopsla" - SPLASH 2017 OOPSLA
+ 
+ Program chair ofhref="http://dynamic-languages-symposium.org/dls-17/index.html" - Dynamic Languages Symposium 2017 (DLS 2017)
+ 
+ Invited speaker at theWorkshop on Coalgebra, Horn Clause Logic Programming and TypesEdinburgh, UK, 28 - 29 November 2016 
+ Track chair ofOOPS 2017(Object-Oriented Programming Languages and Systems) atSAC 2017 
+ Co-organizer ofhref="http://2016.ecoop.org/track/VORTEX-2016" - VORTEX 2016
+, the first workshop on runtime verification for object-oriented languages, and systems 
+ Member of the Program Committee ofhref="http://2016.ecoop.org/track/FTfJP-2016" - FTfJP 2016
+ 
+ Member of the External Review Committee forhref="http://2016.splashcon.org/track/splash-2016-oopsla" - SPLASH 2016 OOPSLA
+ 
+ Member of the Program Committee forTASE 2016 
+ Track chair ofOOPS 2016(Object-Oriented Programming Languages and Systems) atSAC 2016 
+ Invited to theNII Shonan Meeting su "Semantics and Verification of Object-Oriented Languages"September 21-25, 2015< 
+ PC member ofICTCS 2015, 16th Italian Conference on Theoretical Computer Science 
+ Co-chair ofCILC 2015, 30th Italian Conference on Computational Logic Genoa, July 1st-3rd 2015 
+ Track chair ofOOPS 2015(Object-Oriented Programming Languages and Systems) atSAC 2015 
+ Invited to the workshopReliability of Concurrent and Distributed Software, May 6-9, 2014, Lorentz Center, Leiden, The Netherlands 
+ Member of the External Reviewing Committee ofPOPL 2015(42nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages) 
+ PC member ofCMCS '14(12th International Workshop on Coalgebraic Methods in Computer Science) 
+ Invited toNII Shonan Meeting: Coinduction for computation structures and programming languagesShonan Village Center, Japan, October 6-10, 2013 
+ PC member ofECOOP 2014(European Conference on Object-Oriented Programming) 
+ Track chair ofOOPS 2014(Object-Oriented Programming Languages and Systems) atSAC 2014 
+ PC member ofhref="http://www.dynamic-languages-symposium.org/dls-13/index.html" - DLS
+2013
+(Dynamic Languages Symposium 2013, colocated with SPLASH/OOPSLA) 
+ PC member ofECOOP 2013(European Conference on Object-Oriented Programming) 
+ Track chair ofOOPS 2013(Object-Oriented Programming Languages and Systems) atSAC 2013 
+ PC member of the6th Workshop on Reachability Problems (RP'12) 
+ Track co-chair ofOOPS 2012(Object-Oriented Programming Languages and Systems) atSAC 2012 
+ PC member of the5th Workshop on Reachability Problems (RP'11) 
+ Track co-chair ofOOPS 2011(Object-Oriented Programming Languages and Systems) atSAC 2011 
+ PC member ofFOOL 2010(International Workshop on Foundations of Object-Oriented Languages 2010, colocated with SPLASH/OOPSLA) 
+ PC member ofhref="http://www.dynamic-languages-symposium.org/dls-10/index.html" - DLS
+2010
+(Dynamic Languages Symposium 2010, colocated with SPLASH/OOPSLA) 
+ Organizing chair ofECOOP 2009(23rd European Conference on Object-Oriented Programming) 
+ Track co-chair ofOOPS 2010(Object-Oriented Programming Languages and Systems) atSAC 2010 
+ PC member ofhref="http://www.hpi.uni-potsdam.de/swa/dls/dls-09/" - DLS
+2009
+(Dynamic Languages Symposium 2009, colocated with OOPSLA) 
+ Track co-chair ofOOPS 2009(Object-Oriented Programming Languages and Systems) atSAC 2009 
+ PC member ofIEEE IRI 2008(The 2008 IEEE International Conference on Information Reuse and Integration) 
+ PC member ofhref="http://research.microsoft.com/%7Elogozzo/Bytecode%202008/Bytecode08.htm" - Bytecode
+2008
+(satellite workshop ofETAPS 2008) 
+ PC member ofESOP 2008(17th European Symposium on Programming) atETAPS 2008 
+  
+ Please send suggestions and comments to:Davide Anconadavide.ancona@unige.itLast Updated: February 2025
+
+4. Website of DLS_3: https://pleiad.cl/people/etanter
+Website information of DLS_3:
+
+Home 
+ href="/research" - Research 
+ Teaching 
+ People 
+ Location 
+  
+ Éric Tanter 
+ Full Professor /Profesor Titular | etanter@dcc.uchile.cl 
+ University of Chile | Beauchef 851, of.310 
+ Computer Science Department (DCC) | Santiago, Chile 
+ PLEIAD Lab | phone: +56 2 2978 4953 
+ Associate Researcher,IMFD | fax: +56 2 2689 5531 
+ News 
+ I have been awared anInria International Chair(2025-2029) hosted by theGallinetteresearch team 
+ I'm on the PC ofhref="https://conf.researchr.org/home/POPL-2026" - POPL 2026 
+ href="javascript:bibtex('arquezAl-csf2025')" - Gradual Sensitivity Typing
+accepted athref="https://csf2025.ieee-security.org/" - CSF 2025 
+ href="javascript:bibtex('poiretAl-popl2025')" - All Your Base Are Belong to Us: Sort Polymorphism for Proof Assistants
+accepted athref="https://conf.researchr.org/home/POPL-2025" - POPL 2025 
+ href="javascript:bibtex('divincenzoAl-toplas2025')" - Gradual C0: Symbolic Execution for Gradual Verification
+accepted atTOPLAS, to be presented athref="https://conf.researchr.org/home/POPL-2025" - POPL 2025 
+ href="javascript:bibtex('yeAl-esop2025')" - Elucidating Type Conversions in SQL Engines
+accepted athref="https://etaps.org/2025/conferences/esop/" - ESOP 2025 
+ Academic Activities 
+ Program Committee Chair 
+ SPLASH 2019href="https://2019.splashcon.org/track/splash-2019-Doctoral-Symposium" - Doctoral Symposium 
+ 11th International Conference on Aspect-Oriented Software Development (AOSD 2012) 
+ 7th International Symposium on Software Composition 2008 (SC 2008) at ETAPS 2008 
+ XXVIth International Conference of the Chilean Computer Science Society (SCCC 2007) 
+ 1st Latin American Workshop on Aspect-Oriented Software Development (LA-WASP.07) 
+ Program Committee Member (Conferences) 
+ 53rd ACM SIGPLAN Conference on Principles of Programming Languages (href="https://conf.researchr.org/home/POPL-2026" - POPL 2026
+) 
+ 28th ACM SIGPLAN International Conference on Functional Programming (href="http://conf.researchr.org/home/icfp-2023" - ICFP 2023
+) 
+ 50th ACM SIGPLAN Conference on Principles of Programming Languages (href="http://conf.researchr.org/home/POPL-2023" - POPL 2023
+) 
+ 17th ACM Dynamic Languages Symposium (href="https://conf.researchr.org/home/dls-2021" - DLS 2021
+) 
+ 34th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (href="https://conf.researchr.org/track/splash-2019/splash-2019-oopsla" - OOPSLA 2019
+) 
+ 23rd ACM SIGPLAN International Conference on Functional Programming (href="http://conf.researchr.org/home/icfp-2018" - ICFP 2018
+) 
+ 45th ACM SIGPLAN Conference on Principles of Programming Languages (href="http://conf.researchr.org/home/POPL-2018" - POPL 2018
+) 
+ 27th European Symposium on Programming (ESOP 2018) 
+ 32nd ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (href="http://2017.splashcon.org/track/splash-2017-oopsla" - OOPSLA 2017
+) – External Program Committee 
+ 14th Asian Symposium on Programming Languages and Systems (APLAS 2016) 
+ 17th Symposium on Trends in Functional Programming (TFP 2016) 
+ 31st ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (href="http://2016.splashcon.org/track/splash-2016-oopsla" - OOPSLA 2016
+) – External Program Committee 
+ 30th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2015) 
+ 24th European Symposium on Programming (href="http://conf.researchr.org/home/esop-2015" - ESOP 2015
+) 
+ 14th International Conference on Modularity, External Review Committee (MODULARITY 2015) 
+ 13th International Conference on Generative Programming: Concepts & Experiences (href="http://program-transformation.org/GPCE14/CallForPapers" - GPCE 2014
+) 
+ 27th ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (href="http://splashcon.org/2012/cfp/378" - OOPSLA 2012
+) 
+ ACM Symposium on Applied Computing (SAC 2012), Track on (Programming for Separation of Concerns) 
+ 10th ACM International Conference on Generative Programming and Component Engineering (GPCE 2011) 
+ 10th ACM International Conference on Aspect-Oriented Software Development (AOSD 2011) 
+ 6th ACM Dynamic Languages Symposium (href="http://www.dynamic-languages-symposium.org/dls-10/index.html" - DLS 2010
+) 
+ 24th European Conference on Object-Oriented Programming (ECOOP 2010) 
+ 9th ACM International Conference on Aspect-Oriented Software Development (AOSD 2010) 
+ ACM Symposium on Applied Computing (SAC 2010), Track on (Programming for Separation of Concerns) 
+ IFIP International Conference on Distributed Applications and Interoperable Systems (href="http://discotec09.di.fc.ul.pt/index.php?title=DAIS/CFP" - DAIS 2009
+) 
+ 47th International Conference on Objects, Models, Components and Patterns (TOOLS-EUROPE 2009) 
+ 13th Brazilian Symposium on Programming Languages (SBLP 2009) 
+ 8th International Conference on Software Composition (SC 2009) 
+ ACM Symposium on Applied Computing (SAC 2009), Track on Programming for Separation of Concerns 
+ 5th International Conference on Autonomic and Autonomous Systems (ICAS 2009) 
+ XXVIIth International Conference of the Chilean Computer Science Society (SCCC 2008) 
+ 12th Brazilian Symposium on Programming Languages (SBLP 2008) 
+ IFIP International Conference on Distributed Applications and Interoperable Systems (DAIS 2008) 
+ ACM Symposium on Applied Computing (SAC 2008), Track on Programming Languages, and Track on Programming for Separation of Concerns 
+ International Conference on Trustworthy Global Computing (TGC 2007) 
+ IFIP International Conference on Distributed Applications and Interoperable Systems (DAIS 2007) 
+ International Symposium on Software Composition (SC 2007) 
+ ACM Symposium on Applied Computing (SAC 2007), Track on Programming for Separation of Concerns 
+ NODe 2006- Objects, Aspects, Services, the Web 
+ ACM Symposium on Applied Computing (SAC 2006), Track on Programming for Separation of Concerns 
+ Program Committee Member (Workshops) 
+ 1st ACM SIGPLAN Workshop on Gradual Typing (WGT 2020) 
+ 6th International Workshop on Coq for Programming Languages (CoqPL 2020) 
+ 4th Workshop on Meta-Programming Techniques and Reflection (META 2019) 
+ 9th Workshop on Evaluation and Usability of Programming Languages and Tools (href="https://2018.splashcon.org/track/plateau-2018-papers" - PLATEAU 2018
+) 
+ 2nd Workshop on Object-Capability Languages, Systems, and Applications (href="https://2018.splashcon.org/track/ocap-2018-papers" - OCAP 2018
+) 
+ 12th Coq Workshop 2018 (Coq 2018) 
+ 2nd Summit on Advances in Programming Languages (SNAPL 2017) 
+ 5th Workshop on Evaluation and Usability of Programming Languages and Tools (href="http://2014.splashcon.org/track/plateau2014" - PLATEAU 2014
+) 
+ 20th International Workshop on Foundations of Object-Oriented Languages (FOOL 2013) 
+ ACM SIGPLAN Workshop on Scheme and Functional Programming (SFP 2012) 
+ 11th Workshop on the Foundations of Aspect-Oriented Languages (FOAL 2012) 
+ 9th Workshop on the Foundations of Aspect-Oriented Languages (FOAL 2010) 
+ 3rd Latin American Workshop on Aspect-Oriented Software Development (LA-WASP.09) 
+ Workshop on Context-Aware Software Technology and Applications (CASTA 2009), co-located with ESEC/FSE 2009 
+ Workshop on Context-Oriented Programming (COP 2009), co-located with ECOOP 2009 
+ Workshop on Reflection, AOP and Meta-Data for Software Evolution (RAM-SE), co-located with ECOOP 2009 
+ 2nd Latin American Workshop on Aspect-Oriented Software Development (LA-WASP.08) 
+ International Workshop on Software Professional Engineering Education (SPEED 2007) 
+ International Workshop on Virtual Machines and Intermediate Languages for Emerging Modularization Mechanisms (VMIL 2007) 
+ Brazilian Workshop on Aspect-Oriented Software Development (WASP 2006) 
+ Editorial Boards, Committees, Evaluations 
+ Committee Member of thehref="https://www.sigplan.org/Awards/Milner/" - ACM Robin Milner Young Researcher Award
+(2021-2024) 
+ Editor of theJournal of Functional Programming, Cambridge (2018-2021) 
+ Associate Editor of theScience of Computer Programmingjournal, Elsevier (2018-2020) 
+ Associate Editor of theIEEE Transactions on Software Engineering(2014-2017) 
+ Member of the Steering Committee of theAspect-Oriented Software Assocation(7/2010-3/2015) 
+ Co-Editor-in-Chief of theLNCS Transactions on AOSD, Springer-Verlag (3/2013-3/2015) 
+ Reviewer for the following journals:ACM Transactions on Programming Languages,ACM Transactions on Database Systems,IEEE Software,IEEE Transactions on Software Engineering,Journal of Functional Programming(Cambridge),Software - Practice and Experience(Wiley),Science of Computer Programming(Elsevier),Theoretical Informatics and Applications(RAIRO, EDP Sciences),Mathematical Structures in Computer Science(Cambridge) 
+ External Reviewer forCSF 2021,POPL 2020,href="https://conf.researchr.org/track/etaps-2019/esop-2019-papers" - ESOP 2019
+,POPL 2014,PEPM 2008,PLDI 2007 
+ Evaluator for the following funding agencies: FONDECYT Regular National Research Competition, Chile; Swiss National Science Foundation, Switzerland; Netherlands Organisation for Scientific Research, Holland; Israel Science Foundation; FONCYT, Argentina; Research Foundation - Flanders (FWO), Belgium; Agence Nationale pour la Recherche (ANR), France; EU ECOS-Sud. 
+ Member of the Engineering Study Group (Ingeniería 2) of CONICYT, Chile (2011-2012). 
+ Organization of Events (Workshops, Conferences, Schools) 
+ Coq Andes Summer School 2020 
+ 6th Workshop on Domain-Specific Aspect Languages (DSAL 2011) at the ACM International Conference on AOSD (AOSD 2011) 
+ 3rd Summer School on Programming Languages (PL 2010) 
+ Tutorial committee ofCBSOFT 2010 
+ 5th Workshop on Domain-Specific Aspect Languages (DSAL 2010) at the ACM International Conference on AOSD (AOSD 2010) 
+ 8th International Conference on Aspect-Oriented Software Development (AOSD 2009), publicity co-chair 
+ 2nd Summer School on Programming Languages (PL 2009) 
+ 4th Workshop on Domain-Specific Aspect Languages (DSAL 2009) at the ACM International Conference on AOSD (AOSD 2009) 
+ Summer School on Programming Languages (PL 2008) 
+ 3rd Workshop on Domain-Specific Aspect Languages (DSAL 2008) at the ACM International Conference on AOSD (AOSD 2008) 
+ 2nd ISCV Thematic Workshop: Biologically-Inspired Computing 2007 (BIC 2007) 
+ 3rd Workshop on Object Technology for Ambient Intelligence and Pervasive Computing (OT4AmI 2007) at the European Conference on Object-Oriented Programming (ECOOP 2007) 
+ 2nd Workshop on Domain-Specific Aspect Languages (DSAL 2007) at the ACM International Conference on AOSD (AOSD 2007) 
+ 1st Workshop on Domain-Specific Aspect Languages (DSAL 2006) at the ACM International Conference on Generative Programming and Component Engineering (GPCE 2006) 
+ 2nd Workshop on Object Technology for Ambient Intelligence and Pervasive Computing (OT4AmI 2006) at the European Conference on Object-Oriented Programming (ECOOP 2006) 
+ 1st Workshop on Software Engineering of Pervasive Services (SEPS 2006) at the IEEE International Conference on Pervasive Services (ICPS 2006) 
+ 1st Workshop on Open and Dynamic Aspect Languages (ODAL 2006) at the ACM International Conference on AOSD (AOSD 2006) 
+ Outreach 
+ In June/July 2014, I was volunteering as a visitinglecturerat University of Cape Coast, Ghana, forAcademics without Borders. 
+ href="#folded_7db582c4e37064d3f5b6d4afe57ba354_7" - Research Projects
+Inria International Chair - Malleable Proof Assistants [2025-2029] 
+ ANID Project DFG220011 - Gradual Abstract Interpretation [2024-2026/co-investigator] 
+ INRIA Équipe Associée GRAPA [2023-2025/lead] 
+ Millenium Institute for Foundational Research on Data (IMFD), Associate Researcher [2023-2027] 
+ FONDECYT Project 1190058 - Gradual Reasoning About Programs: Typing, Analysis, and Verification [2019-2022/lead] 
+ Millenium Institute for Foundational Research on Data (IMFD), Associate Researcher [2018-2022] 
+ INRIA Équipe Associée GECO [2018-2022/lead] 
+ CONICYT REDES Project 170067 - CSEC: Certified Software Engineering in Coq [2018-2019/lead] 
+ FONDECYT Project 1150017 - Gradual Software Verification: Foundations and Applications [2015-2018/lead] 
+ INRIA Équipe Associée REAL [2013-2015/lead] 
+ FONDECYT Project 1110051 - Modular and Adaptable Software without Losing Control [2011-2014/lead] 
+ INRIA Équipe Associée RAPIDS [2010-2012/lead] 
+ FONDECYT Project 1090083 - Engineering and Composition of Domain-Specific Aspect Languages [2009-2012/researcher] 
+ STIC AmSud Project CoReA: Comprehension and Remodularization of Applications based on Aspects, Classboxes and Traits (09STIC02) [2009-2010/researcher] 
+ INRIA-CONICYT Project CORDIAL [2008-2009/lead] 
+ FONDECYT Project 11060493 - Modularization and Adaptation of Complex and Dynamic Software Systems [Oct.2006-Oct.2009/lead] 
+ Latin American Network on Aspect-Oriented Software Development [2007-2009/lead] 
+ Bilateral collaboration with the PROG lab of the Vrije Universiteit Brussel: ORION (Open Reflective Infrastructure for Open Networks) [2006-2007/lead] 
+ Center for Web Research (CWR) [PhD student 2002-2004, Postdoc 2005-2006, Young Researcher 2006-2007] 
+ European Network of Excellence CoreGRID (WP3) [2005-2007/researcher] 
+ Chile-Korea ITCC Project AOP for the Grid [2004-2006/lead] 
+ INRIA-CONICYT Project OSCAR [2004-2006/researcher] 
+ INRIA-CONICYT Project ProXiMoS [2002-2003/researcher] 
+ Administration 
+ Coordinator of Department Undergrad Graduation Projects in Industry [2024-] 
+ Member of the Department Graduate Committee [2020-] 
+ Member of the Academic Qualification Committee of the Engineering Faculty (FCFM) [2020-2024] 
+ Director of the Computer Science Department [2016-2018] 
+ Deputy Director of the Computer Science Department [2015-2016] 
+ Head of the Department Graduate Committee [2012-2016] 
+ Coordinator of the PhD Program in Computer Science [2012-2016] 
+ Elected Member of the Department Council [2012-2016] 
+ Member of the Department Academic Evaluation Committee [2011-2014] 
+ Library Coordinator [2009-2020] 
+ Substitute Member of the Department Council [2007-2008] 
+ Awards & Distinctions 
+ Inria International Chair2025-2029 
+ Best/distinguished paper awards:POPL 2019,OOPSLA 2018,href="javascript:bibtex('tabareauAl:icfp2018')" - ICFP 2018
+,href="javascript:bibtex('callauAl:msr2011')" - MSR 2011
+,AOSD 2010,SBLP 2008,DAIS 2006 
+ 10-year paper awards: Most notable paper award athref="https://dynamic-languages-symposium.org/index.html" - DLS
+2023 for ourhref="javascript:bibtex('allendeAl-dls2013')" - DLS 2013
+paper, Most influential paper award at <Programming> 2020 for myAOSD 2010 paper, Most influential paper award at <Programming> 2018 for myAOSD 2008 paper, Most notable paper award athref="https://conf.researchr.org/track/dls-2017/dls-2017#Most-Notable-Paper-Award" - DLS 2017
+for ourhref="javascript:bibtex('mostinckxAl:dls2007')" - DLS 2007 paper 
+ href="https://research.fb.com/announcing-the-winners-of-the-facebook-testing-and-verification-research-awards/" - Facebook Research Testing and Verification Award 2018
+– Incremental Verification, Gradually 
+ href="http://googleamericalatinablog.blogspot.cl/2015/09/ganadores-de-los-premios-de-investigacion-de-google-america-latina.html?m=1" - Google Faculty Research Award 2015
+andhref="http://static.googleusercontent.com/media/research.google.com/en//app/research-outreach/faculty-engagement/Google_Latin_America_Research_Award_Recipients.pdf" - 2016
+– Gradual Security Typing for the Web 
+ Best professor award(for undergrad teaching), Computer Science Dept, University of Chile, 2011 
+ Invited speaker:SBLP 2017,ELA-ES 2016,10CCC,VariComp 2013,GPCE 2012,LA-WASP 2010, SCCC 2005 
+ Grad students 
+ [PhD] Stefan Malewski 
+ [PhD] Damian Arquez [co-advised with Matías Toro] 
+ [PhD] Tomás Díaz 
+ [MSc] José Luis Romero [co-advised with Matías Toro] 
+ [MSc] Gaspar Ricci [co-advised with Matías Toro] 
+ Former PhD students: | Elizabeth Labrada:Gradual System F. [co-advised with Matías Toro]. Defended 21/12/2022. 
+ Raimil Cruz:Type Abstraction and Faceted Types for Declassification. Defended 15/01/2020. 
+ Matías Toro:Abstracting Gradual Typing: Metatheory and Applications. Defended 05/07/2019. 
+ Oscar Callaú:href="http://repositorio.uchile.cl/handle/2250/132889" - Empirically-Driven Design and Implementation of Gradualtalk
+. [co-advised with Romain Robbes]. Defended 27/01/2015. 
+ Esteban Allende:Improving the Efficiency and Reliability of Gradual Typing[co-advised with Johan Fabry]. Defended 08/01/2015. 
+ Rodolfo Toledo:Modular and Secure Access Control with Aspects. Defended 13/05/2014. 
+ Ismael Figueroa:Effective Aspects: A Typed Monadic Model to Control and Reason About Aspect Interference[co-advised with Nicolas Tabareau]. Defended 22/04/2014. 
+ Christophe Scholliers:Ambient Contracts(Vrije Universiteit Brussel) [co-advised with Wolfgang De Meuter]. Defended 07/02/2013. 
+ Paul Leger:Opening Up Trace-Based Mechanisms. Defended 05/10/2012. 
+ Guillaume Pothier:Towards Practical Omniscient Debugging. Defended 13/06/2011. 
+ Former MSc students: | Tomás Vallejos:A Coq formalization of RDF and its applications[co-advised with Aidan Hogan and Assia Mahboubi]. Defended 22/01/2024. 
+ Damián Árquez:Gradual Sensitivity Typing[co-advised with Matías Toro]. Defended 23/11/2021. 
+ Hans Fehrmann:A Reasonably Exceptional Type Theory[co-advised with Nicolas Tabareau]. Defended 29/12/2020. 
+ Fabian Mosso:Countable Polymorphic May-Must Effects[co-advised with Matías Toro]. Defended 12/06/2020. 
+ Nicolás Lehmann:Gradual Refinement Types. Defended 9/3/2017. 
+ Johannes Bader:Gradual Program Verification with Implicit Dynamic Frames(Karlsruhe Institute of Technology) [co-advised with Jonathan Aldrich (CMU) and Gregor Snelting (KIT)]. Defended 4/10/2016. 
+ Gustavo Soto:Modular Composition of Session Types. Defended 1/12/2015. 
+ Matías Toro:Customizable Gradual Effects for Scala. Defended 18/05/2015. 
+ Felipe Bañados:Gradual Typing for Generic Type-and-Effect Systems[co-advised with Ron Garcia]. Defended 08/08/2014. 
+ Milton Inostroza:Safe and Practical Decoupling of Aspects with Join Point Interfaces[co-advised with Eric Bodden]. Defended 12/04/2013. 
+ Victor Ramiro:An Open Proximity Model for Service Discovery in Pervasive Computing. Defended 2009. 
+ Publications 
+ Online profiles:Google Scholarhref="https://www.researchgate.net/profile/Eri
+c_Tanter" - ResearchGate
+Online libraries and indices:DBLPhref="http://portal.acm.org/author_page.cfm?id=81100346970" - ACM
+SpringerLinkThe following documents are included by the contributing authors as a means to ensure timely dissemination of scholarly and technical work on a non-commercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be reposted without the explicit permission of the copyright holder.2025 
+ [href="http://pleiad.cl/b2/client/all/poiretAl-popl2025.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2025/poiretAl-popl2025.pdf" - pdf
+] 
+ All Your Base Are Belong to Us: Sort Polymorphism for Proof Assistants 
+ Josselin Poiret, Gaëtan Gilbert, Kenji Maillard, Pierre-Marie Pédrot, Matthieu Sozeau, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 9, number POPL, pp.76:1-76:29, January 2025, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/yeAl-esop2025.bib" - bib
+] 
+ Elucidating Type Conversions in SQL Engines 
+ Wenjia Ye, Matías Toro, Claudio Gutierrez, Bruno C d S Oliveira, Éric Tanter 
+ Proceedings of the 34th European Symposium on Programming Languages and Systems (ESOP 2025), April 2025, Springer-Verlag 
+ To appear 
+ [href="http://pleiad.cl/b2/client/all/divincenzoAl-toplas2025.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2025/divincenzoAl-toplas2025.pdf" - pdf
+] 
+ Gradual C0: Symbolic Execution for Gradual Verification 
+ Jenna DiVincenzo, Ian McCormack, Hemant Gouni, Jacob Gorenburg, Jan-Paul Ramos-Dávila, Mona Zhang, Conrad Zimmerman, Joshua Sunshine, Éric Tanter, Jonathan Aldrich 
+ ACM Transactions on Programming Languages and Systems, volume 46, number 4, pp.14:1-14:58, 2025, ACM Press 
+ Presented at POPL 2025 
+ [href="http://pleiad.cl/b2/client/all/arquezAl-csf2025.bib" - bib
+] 
+ Gradual Sensitivity Typing 
+ Damián Árquez, Matías Toro, Éric Tanter 
+ Proceedings of the IEEE Computer Security Foundations Symposium, 2025 
+ To appear 
+ 2024 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2024/toroAl-cacm2024.pdf" - pdf
+] 
+ Gradual Differentially Private Programming 
+ Matías Toro, Federico Olmedo, Éric Tanter 
+ Communications of the ACM, volume 67, number 8, August 2024, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/malewskiAl-icfp2024.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2024/malewskiAl-icfp2024.pdf" - pdf
+] 
+ Gradual Indexed Inductive Types 
+ Mara Malewski, Kenji Maillard, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 8, number ICFP, pp.255:1-255:29, August 2024, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2024/andriciAl-popl2024.pdf" - pdf
+] 
+ Securing Verified IO Programs Against Unverified Code in F* 
+ Cezar Andrici, Ştefan Ciobâcă, Cătălin Hriţcu, Guido Martínez, Exequiel Rivas, Éric Tanter, Théo Winterhalter 
+ Proceedings of the ACM on Programming Languages, volume 8, number POPL, pp.74:1-74:34, January 2024, ACM Press 
+ 2023 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2023/toroAl-toplas2023.pdf" - pdf
+] 
+ Contextual Linear Types for Differential Privacy 
+ Matías Toro, David Darais, Chike Abuah, Joe Near, Damián Árquez, Federico Olmedo, Éric Tanter 
+ ACM Transactions on Programming Languages and Systems, volume 45, pp.8:1-8:69, 2023, ACM Press 
+ 2022 
+ [href="http://pleiad.cl/b2/client/all/maillardAl-icfp2022.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2022/maillardAl-icfp2022.pdf" - pdf
+] 
+ A Reasonably Gradual Type Theory 
+ Kenji Maillard, Meven Lennon-Bertrand, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 6, number ICFP, pp.931-959, August 2022, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2022/lennonAl-toplas2022.pdf" - pdf
+] 
+ Gradualizing the Calculus of Inductive Constructions 
+ Meven Lennon-Bertrand, Kenji Maillard, Nicolas Tabareau, Éric Tanter 
+ ACM Transactions on Programming Languages and Systems, volume 44, number 2, June 2022 
+ Presented at POPL 2022 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2022/labradaAl-jacm2022.pdf" - pdf
+] 
+ Gradual System F 
+ Elizabeth Labrada, Matías Toro, Éric Tanter 
+ Journal of the ACM, volume 69, pp.38:1-38:78, October 2022, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2022/labradaAl-oopsla2022.pdf" - pdf
+] 
+ Plausible Sealing for Gradual Parametricity 
+ Elizabeth Labrada, Matías Toro, Éric Tanter, Dominique Devriese 
+ Proceedings of the ACM on Programming Languages, volume 6, number OOPSLA1, pp.70:1-70:28, April 2022, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/eremondiAl-icfp2022.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2022/eremondiAl-icfp2022.pdf" - pdf
+] 
+ Propositional Equality for Gradual Dependently-Typed Programming 
+ Joseph Eremondi, Ronald Garcia, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 6, number ICFP, pp.165-193, August 2022, ACM Press 
+ 2021 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2021/abateAl-toplas2021.pdf" - pdf
+] 
+ An Extended Account of Trace-Relating Compiler Correctness and Secure Compilation 
+ Carmine Abate, Roberto Blanco, Ştefan Ciobâcă, Adrien Durier, Deepak Garg, Cătălin Hriţcu, Marco Patrignani, Éric Tanter, Jérémy Thibault 
+ ACM Transactions on Programming Languages and Systems, volume 43, number 4, pp.14:1-14:48, December 2021, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2021/malewskiAl-oopsla2021.pdf" - pdf
+] 
+ Gradually Structured Data 
+ Stefan Malewski, Michael Greenberg, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 5, number OOPSLA, pp.126:1-126:28, November 2021, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2021/estepAl-ecoop2021.pdf" - pdf
+] 
+ Gradual Program Analysis for Null Pointers 
+ Sam Estep, Jenna Wise, Jonathan Aldrich, Éric Tanter, Johannes Bader, Joshua Sunshine 
+ Proceedings of the 35th European Conference on Object-Oriented Programming (ECOOP 2021), Aarhus, Denmark, July 2021, Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2021/tabareauAl-jacm2021.pdf" - pdf
+] 
+ The Marriage of Univalence and Parametricity 
+ Nicolas Tabareau, Éric Tanter, Matthieu Sozeau 
+ Journal of the ACM, volume 68, number 1, pp.5:1-5:44, January 2021, ACM Press 
+ [bib,pdf] 
+ The Multiverse: Logical Modularity for Proof Assistants 
+ Kenji Maillard, Nicolas Margulies, Matthieu Sozeau, Nicolas Tabareau, Éric Tanter 
+ Draft on arXiv, 2021 
+ 2020 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2020/toroTanter-scp2020.pdf" - pdf
+] 
+ Abstracting Gradual References 
+ Matías Toro, Éric Tanter 
+ Science of Computer Programming, volume 197, pp.1-65, October 2020, Elsevier 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2020/diazAl-cpp2020.pdf" - pdf
+] 
+ A Mechanized Formalization of GraphQL 
+ Tomás Díaz, Federico Olmedo, Éric Tanter 
+ Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020), pp.201-214, New Orleans, Louisiana, USA, January 2020 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2020/wiseAl-oopsla2020.pdf" - pdf
+] 
+ Gradual Verification of Recursive Heap Data Structures 
+ Jenna Wise, Johannes Bader, Cameron Wong, Jonathan Aldrich, Éric Tanter, Joshua Sunshine 
+ Proceedings of the ACM on Programming Languages, volume 4, number OOPSLA, pp.228:1-228:28, November 2020, ACM Press 
+ [bib,pdf] 
+ Gradual Typing as if Types Mattered 
+ Ronald Garcia, Éric Tanter 
+ Informal Proceedings of the ACM SIGPLAN Workshop on Gradual Typing (WGT20), January 2020 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2020/abateAl-esop2020.pdf" - pdf
+] 
+ Trace-Relating Compiler Correctness and Secure Compilation 
+ Carmine Abate, Roberto Blanco, Ştefan Ciobâcă, Deepak Garg, Cătălin Hriţcu, Marco Patrignani, Éric Tanter, Jérémy Thibault 
+ Proceedings of the 29th European Symposium on Programming Languages and Systems (ESOP 2020), volume 12075, pp.1-28, Dublin, Ireland, April 2020, Springer-Verlag 
+ 2019 
+ [href="http://pleiad.cl/b2/client/all/pedrotAl-icfp2019.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/pedrotAl-icfp2019.pdf" - pdf
+] 
+ A Reasonably Exceptional Type Theory 
+ Pierre-Marie Pédrot, Nicolas Tabareau, Hans Fehrmann, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 3, number ICFP, pp.108:1-108:29, August 2019, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/eremondiAl-icfp2019.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/eremondiAl-icfp2019.pdf" - pdf
+] 
+ Approximate Normalization for Gradual Dependent Types 
+ Joseph Eremondi, Éric Tanter, Ronald Garcia 
+ Proceedings of the ACM on Programming Languages, volume 3, number ICFP, pp.88:1-88:30, August 2019, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/tabareauTanter-dist2019.pdf" - pdf
+] 
+ Chemical Foundations of Distributed Aspects 
+ Nicolas Tabareau, Éric Tanter 
+ Distributed Computing, volume 32, number 3, pp.193-216, June 2019, Springer-Verlag 
+ [href="http://pleiad.cl/b2/client/all/maillardAl-icfp2019.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/maillardAl-icfp2019.pdf" - pdf
+] 
+ Dijkstra Monads for All 
+ Kenji Maillard, Danel Ahman, Robert Atkey, Guido Martínez, Cătălin Hriţcu, Exequiel Rivas, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 3, number ICFP, pp.104:1-104:29, August 2019, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/cruzTanter-aplas2019.pdf" - pdf
+] 
+ Existential Types for Relaxed Noninterference 
+ Raimil Cruz, Éric Tanter 
+ Proceedings of the 17th Asian Symposium on Programming Languages and Systems (APLAS 2019), volume 11893, pp.73-92, Bali, Indonesia, December 2019, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/toroAl-popl2019.pdf" - pdf
+] 
+ Gradual Parametricity, Revisited 
+ Matías Toro, Elizabeth Labrada, Éric Tanter 
+ Proceedings of the ACM on Programming Languages, volume 3, number POPL, pp.17:1-17:30, January 2019, ACM Press 
+ Distinguished Paper Award - superseded by JACM article "Gradual System F" (2022) 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2019/cruzTanter-secdev2019.pdf" - pdf
+] 
+ Polymorphic Relaxed Noninterference 
+ Raimil Cruz, Éric Tanter 
+ Proceedings of the IEEE Secure Development Conference (SecDev 2019), pp.101-113, McLean, VA, USA, September 2019, IEEE Computer Society Press 
+ 2018 
+ [href="http://pleiad.cl/b2/client/all/bodinAl-dls2018.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/bodinAl-dls2018.pdf" - pdf
+] 
+ A Trustworthy Mechanized Formalization of R 
+ Martin Bodin, Tomás Diaz, Éric Tanter 
+ Proceedings of the 14th ACM Dynamic Languages Symposium (DLS 2018), pp.13-24, Boston, MA, USA, November 2018, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/tabareauAl-icfp2018.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/tabareauAl-icfp2018.pdf" - pdf
+] 
+ Equivalences for Free: Univalent Parametricity for Effective Transport 
+ Nicolas Tabareau, Éric Tanter, Matthieu Sozeau 
+ Proceedings of the ACM on Programming Languages, volume 2, number ICFP, pp.92:1-92:29, September 2018, ACM Press 
+ Distinguished Paper Award - superseded by JACM article "The Marriage of Univalence and Parametricity" (2021) 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/dagandAl-jfp2018.pdf" - pdf
+] 
+ Foundations of Dependent Interoperability 
+ Pierre-Évariste Dagand, Nicolas Tabareau, Éric Tanter 
+ Journal of Functional Programming, volume 28, pp.9:1-9:44, 2018, Cambridge University Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/vazouAl-oopsla2018.pdf" - pdf
+] 
+ Gradual Liquid Type Inference 
+ Niki Vazou, Éric Tanter, David Van Horn 
+ Proceedings of the ACM on Programming Languages, volume 2, number OOPSLA, pp.132:1-132:25, November 2018, ACM Press 
+ Distinguished Paper Award 
+ [bib,pdf] 
+ Gradual Parametricity, Revisited (with Appendix) 
+ Matías Toro, Elizabeth Labrada, Éric Tanter 
+ 2018 
+ arXiv:1807.04596 [cs.PL] 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/baderAl-vmcai2018.pdf" - pdf
+] 
+ Gradual Program Verification 
+ Johannes Bader, Jonathan Aldrich, Éric Tanter 
+ Proceedings of the 19th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI 2018), volume 10747, pp.25-46, Los Angeles, CA, USA, January 2018, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2018/toroAl-toplas2018.pdf" - pdf
+] 
+ Type-Driven Gradual Security with References 
+ Matías Toro, Ronald Garcia, Éric Tanter 
+ ACM Transactions on Programming Languages and Systems, volume 40, number 4, pp.16:1-16:55, November 2018, ACM Press 
+ Presented at POPL 2019 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2018/dagandAl-prisc2018.pdf" - pdf
+] 
+ Type-Theoretic Galois Connections 
+ Pierre-Évariste Dagand, Nicolas Tabareau, Éric Tanter 
+ Workshop on the Principles of Secure Compilation (PriSC 2018), Los Angeles, CA, USA, January 2018 
+ Extended abstract 
+ 2017 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2017/toroTanter-sas2017.pdf" - pdf
+] 
+ A Gradual Interpretation of Union Types 
+ Matías Toro, Éric Tanter 
+ Proceedings of the 24th Static Analysis Symposium (SAS 2017), volume 10422, pp.382-404, New York City, NY, USA, August 2017, Springer-Verlag 
+ [bib,doi,pdf] 
+ Foundations of Dependent Interoperability 
+ Pierre-Évariste Dagand, Nicolas Tabareau, Éric Tanter 
+ number HAL-01629909, November 2017, Inria 
+ [bib,pdf] 
+ Gradual Union Types---Complete Definition and Proofs 
+ Matías Toro, Éric Tanter 
+ number TR/DCC-2017-1, June 2017, University of Chile 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2017/lehmannTanter-popl2017.pdf" - pdf
+] 
+ Gradual Refinement Types 
+ Nico Lehmann, Éric Tanter 
+ Proceedings of the 44th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL 2017), pp.775-788, Paris, France, January 2017, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2017/cruzAl-ecoop2017.pdf" - pdf
+] 
+ Type Abstraction for Relaxed Noninterference 
+ Raimil Cruz, Tamara Rezk, Bernard Serpette, Éric Tanter 
+ Proceedings of the 31st European Conference on Object-Oriented Programming (ECOOP 2017), volume 74, pp.7:1-7:27, Barcelona, Spain, June 2017, Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik 
+ 2016 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2016/garciaAl-popl2016.pdf" - pdf
+] 
+ Abstracting Gradual Typing 
+ Ronald Garcia, Alison M Clark, Éric Tanter 
+ Proceedings of the 43rd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL 2016), pp.429-442, St Petersburg, FL, USA, January 2016, ACM Press 
+ See erratum: https://www.cs.ubc.ca/~rxg/agt-erratum.pdf 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2016/figueroaAl-scp2016.pdf" - pdf
+] 
+ Effect Capabilities for Haskell: Taming Effect Interference in Monadic Programming 
+ Ismael Figueroa, Nicolas Tabareau, Éric Tanter 
+ Science of Computer Programming, volume 119, pp.3-30, April 2016, Elsevier 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2016/lehmannTanter-coqpl2016.pdf" - pdf
+] 
+ Formalizing Simple Refinement Types in Coq 
+ Nico Lehmann, Éric Tanter 
+ 2nd International Workshop on Coq for Programming Languages (CoqPL'16), St. Petersburg, FL, USA, January 2016 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2016/lehmannTanter-tr2016.pdf" - pdf
+] 
+ Gradual Refinement Types---Extended Version with Proofs 
+ Nico Lehmann, Éric Tanter 
+ number TR/DCC-2016-1, November 2016, University of Chile 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2016/banadosAl-jfp2016.pdf" - pdf
+] 
+ Gradual Type-and-Effect Systems 
+ Felipe Bañados Schwerter, Ronald Garcia, Éric Tanter 
+ Journal of Functional Programming, volume 26, pp.19:1-19:69, September 2016, Cambridge University Press 
+ [href="http://pleiad.cl/b2/client/all/dagandAl-icfp2016.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2016/dagandAl-icfp2016.pdf" - pdf
+] 
+ Partial Type Equivalences for Verified Dependent Interoperability 
+ Pierre-Evariste Dagand, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the 21st ACM SIGPLAN Conference on Functional Programming (ICFP 2016), pp.298-310, Nara, Japan, September 2016, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2016/binderAl-spe2016.pdf" - pdf
+] 
+ Polymorphic Bytecode Instrumentation 
+ Walter Binder, Philippe Moret, Éric Tanter, Danilo Ansaloni 
+ Software---Practice and Experience, volume 46, pp.1351-1380, October 2016, Wiley & Sons 
+ 2015 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/nagappanAl-fse2015.pdf" - pdf
+] 
+ An Empirical Study of GOTO in C Code from GitHub Repositories 
+ Meiyappan Nagappan, Romain Robbes, Yasutaka Kamei, Éric Tanter, Shane Mcintosh, Audris Mockus, Ahmed E Hassan 
+ Proceedings of the 2015 10th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering (ESEC/FSE), pp.404-414, Bergamo, Italy, Aug-sep 2015, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/legerAl-scp2015.pdf" - pdf
+] 
+ An Expressive Stateful Aspect Language 
+ Paul Leger, Éric Tanter, Hiroaki Fukuda 
+ Science of Computer Programming, volume 102, number 1, pp.108-141, May 2015, Elsevier 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/fabryAl-csur2015.pdf" - pdf
+] 
+ A Taxonomy of Domain-Specific Aspect Languages 
+ Johan Fabry, Tom Dinkelaker, Jacques Noyé, Éric Tanter 
+ Computing Surveys, volume 47, number 3, pp.40:1-40:44, April 2015, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/toroTanter-oopsla2015.pdf" - pdf
+] 
+ Customizable Gradual Polymorphic Effects for Scala 
+ Matías Toro, Éric Tanter 
+ Proceedings of the 30th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2015), pp.935-953, Pittsburgh, PA, USA, October 2015, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/scholliersAl-scp2015.pdf" - pdf
+] 
+ Computational Contracts 
+ Christophe Scholliers, Éric Tanter, Wolfgang De Meuter 
+ Science of Computer Programming, volume 98, number 3, pp.360-375, February 2015, Elsevier 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/garciaTanter-arxiv2015.pdf" - pdf
+] 
+ Deriving a Simple Gradual Security Language 
+ Ronald Garcia, Éric Tanter 
+ November 2015 
+ eprint arXiv:1511.01399 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2015/toroTanter-trdcc20152.pdf" - pdf
+] 
+ Gradual Polymorphic Effects---Complete Definition and Soundness Proof 
+ Matías Toro, Éric Tanter 
+ number TR/DCC-2015-2, July 2015, University of Chile 
+ [href="http://pleiad.cl/b2/client/all/tanterTabareau-dls2015.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/tanterTabareau-dls2015.pdf" - pdf
+] 
+ Gradual Certified Programming in Coq 
+ Éric Tanter, Nicolas Tabareau 
+ Proceedings of the 11th ACM Dynamic Languages Symposium (DLS 2015), pp.26-40, Pittsburgh, PA, USA, October 2015, ACM Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2015/tanterTabareau-ml2015.pdf" - pdf
+] 
+ Lost in Extraction, Recovered 
+ Éric Tanter, Nicolas Tabareau 
+ Extended abstract, ACM SIGPLAN ML Family Workshop, Vancouver, Canada, September 2015 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2015/robbesAl-emse2015.pdf" - pdf
+] 
+ Object-Oriented Software Extensions in Practice 
+ Romain Robbes, David Röthlisberger, Éric Tanter 
+ Empirical Software Engineering, volume 20, number 3, pp.745-782, June 2015, Springer-Verlag 
+ 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/tabareauAl-modularity2014.pdf" - pdf
+] 
+ Aspectual Session Types 
+ Nicolas Tabareau, Mario Südholt, Éric Tanter 
+ Proceedings of the 13th International Conference on Modularity, pp.193-204, Lugano, Switzerland, April 2014, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/hanenbergAl-emse2014.pdf" - pdf
+] 
+ An Empirical Study on the Impact of Static Typing on Software Maintainability 
+ Stefan Hanenberg, Sebastian Kleinschmager, Romain Robbes, Éric Tanter, Andreas Stefik 
+ Empirical Software Engineering, volume 19, number 5, pp.1335-1382, October 2014 
+ [href="http://pleiad.cl/b2/client/all/banadosAl-icfp2014.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/banadosAl-icfp2014.pdf" - pdf
+] 
+ A Theory of Gradual Effect Systems 
+ Felipe Bañados Schwerter, Ronald Garcia, Éric Tanter 
+ Proceedings of the 19th ACM SIGPLAN Conference on Functional Programming (ICFP 2014), pp.283-295, Gothenburg, Sweden, September 2014, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/figueroaAl-modularity2014.pdf" - pdf
+] 
+ Compositional Reasoning about Aspect Interference 
+ Ismael Figueroa, Tom Schrijvers, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the 13th International Conference on Modularity, pp.133-144, Lugano, Switzerland, April 2014, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/allendeAl-oopsla2014.pdf" - pdf
+] 
+ Confined Gradual Typing 
+ Esteban Allende, Johan Fabry, Ronald Garcia, Éric Tanter 
+ Proceedings of the 29th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2014), pp.251-270, Portland, OR, USA, October 2014, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/tanterAl-scp2014.pdf" - pdf
+] 
+ Execution Levels for Aspect-Oriented Programming: Design, Semantics, Implementations and Applications 
+ Éric Tanter, Ismael Figueroa, Nicolas Tabareau 
+ Science of Computer Programming, volume 80, number 1, pp.311-342, February 2014, Elsevier 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/legerAl-relime2014.pdf" - pdf
+] 
+ ECOCAM, un sistema computacional adaptable al contexto para promover estrategias de cálculo mental: características de su diseño y resultados preliminares 
+ Paul Leger, Grecia Gálvez, Lino Cubillos, Diego Cosmelli, Milton Inostroza, Éric Tanter, Gina Luci, Jorge Soto Andrade 
+ Revista Latinoamericana de Investigación en Matemática Educativa, volume 17, number 1, pp.33-58, March 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/figueroaAl-taosd2014.pdf" - pdf
+] 
+ Effective Aspects: A Typed Monadic Embedding of Pointcut and Advice 
+ Ismael Figueroa, Nicolas Tabareau, Éric Tanter 
+ Transactions on Aspect-Oriented Software Development XI, Transactions on Aspect-Oriented Software Development, volume 8400, pp.145-192, 2014, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/figueroaAl-sblp2014.pdf" - pdf
+] 
+ Effect Capabilities for Haskell 
+ Ismael Figueroa, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the 18th Brazilian Symposium on Programming Languages (SBLP), volume 8771, pp.92-108, October 2014, Springer-Verlag 
+ Superseded by SCP 2016 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/garciaAl-toplas2014.pdf" - pdf
+] 
+ Foundations of Typestate-Oriented Programming 
+ Ronald Garcia, Éric Tanter, Roger Wolff, Jonathan Aldrich 
+ ACM Transactions on Programming Languages and Systems, volume 36, number 4, pp.12:1-12:44, October 2014, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/allendeAl-scp2014.pdf" - pdf
+] 
+ Gradual Typing for Smalltalk 
+ Esteban Allende, Oscar Callaú, Johan Fabry, Éric Tanter, Marcus Denker 
+ Science of Computer Programming, volume 96, number 1, pp.52-69, December 2014, Elsevier 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/boddenAl-tosem2014.pdf" - pdf
+] 
+ Join Point Interfaces for Safe and Flexible Decoupling of Aspects 
+ Eric Bodden, Éric Tanter, Milton Inostroza 
+ ACM Transactions on Software Engineering and Methodology, volume 23, number 1, pp.7:1-7:41, February 2014 
+ [href="http://pleiad.cl/b2/client/all/callauAl-dls2014.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/callauAl-dls2014.pdf" - pdf
+] 
+ On the Use of Type Predicates in Object-Oriented Software: The Case of Smalltalk 
+ Oscar Callaú, Romain Robbes, Éric Tanter, David Röthlisberger, Alexandre Bergel 
+ Proceedings of the 10th ACM Dynamic Languages Symposium (DLS 2014), pp.135-146, Portland, OR, USA, October 2014, ACM Press 
+ ACM SIGPLAN Notices , 50(2) 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2014/scholliersAl-scp2014.pdf" - pdf
+] 
+ Parallel Actor Monitors: Disentangling Task-Level Parallelism from Data Partitioning in the Actor Model 
+ Christophe Scholliers, Éric Tanter, Wolfgang De Meuter 
+ Science of Computer Programming, volume 80, number 1, pp.52-64, February 2014, Elsevier 
+ [bib,doi] 
+ Transactions on Aspect-Oriented Software Development XI 
+ Shigeru Chiba, Éric Tanter, Eric Bodden, Shahar Maoz, Jörg Kienzle 
+ Transactions on Aspect-Oriented Software Development XI, volume 8400, 2014, Springer-Verlag 
+ 2013 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2013/tabareauAl-jfla2013.pdf" - pdf
+] 
+ Anti-Unification with Type Classes 
+ Nicolas Tabareau, Éric Tanter, Ismael Figueroa 
+ Journées Francophones des Langages Applicatifs (JFLA 2013), Aussois, France, February 2013 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/tabareauAl-aosd2013.pdf" - pdf
+] 
+ A Typed Monadic Embedding of Aspects 
+ Nicolas Tabareau, Ismael Figueroa, Éric Tanter 
+ Proceedings of the 12th International Conference on Aspect-Oriented Software Development (AOSD 2013), pp.171-184, Fukuoka, Japan, March 2013, ACM Press 
+ Superseded by TAOSD 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/boddenAl-aosdc2013.pdf" - pdf
+] 
+ A Brief Tour of Join Point Interfaces 
+ Eric Bodden, Éric Tanter, Milton Inostroza 
+ Proceedings of the 12th International Conference Companion on Aspect-Oriented Software Development (AOSD 2013 Companion), pp.19-22, Fukuoka, Japan, March 2013, ACM Press 
+ [href="http://pleiad.cl/b2/client/all/allendeAl-dls2013.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/allendeAl-dls2013.pdf" - pdf
+] 
+ Cast Insertion Strategies for Gradually-Typed Objects 
+ Esteban Allende, Johan Fabry, Éric Tanter 
+ Proceedings of the 9th ACM Dynamic Languages Symposium (DLS 2013), pp.27-36, Indianapolis, IN, USA, October 2013, ACM Press 
+ ACM SIGPLAN Notices , 49(2) 
+ [href="http://pleiad.cl/b2/client/all/callauAl-emse2013.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/callauAl-emse2013.pdf" - pdf
+] 
+ How (and Why) Developers Use the Dynamic Features of Programming Languages: the Case of Smalltalk 
+ Oscar Callaú, Romain Robbes, Éric Tanter, David Röthlisberger 
+ Empirical Software Engineering, volume 18, number 6, pp.1156-1194, December 2013, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/legerAl-scp2013.pdf" - pdf
+] 
+ Modular and Flexible Causality Control on the Web 
+ Paul Leger, Éric Tanter, Rémi Douence 
+ Science of Computer Programming, volume 78, number 9, pp.1538-1558, September 2013, Elsevier 
+ [href="http://pleiad.cl/b2/client/all/callauTanter-software2013.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/callauTanter-software2013.pdf" - pdf
+] 
+ Programming with Ghosts 
+ Oscar Callaú, Éric Tanter 
+ IEEE Software, volume 30, number 1, pp.74-80, 2013, IEEE Computer Society Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/toledoTanter-aosd2013.pdf" - pdf
+] 
+ Secure and Modular Access Control with Aspects 
+ Rodolfo Toledo, Éric Tanter 
+ Proceedings of the 12th International Conference on Aspect-Oriented Software Development (AOSD 2013), pp.157-170, Fukuoka, Japan, March 2013, ACM Press 
+ [bib,doi] 
+ Transactions on Aspect-Oriented Software Development X 
+ Gary T Leavens, Shigeru Chiba, Éric Tanter 
+ Transactions on Aspect-Oriented Software Development X, volume 7800, 2013, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/tanter-varicomp2013.pdf" - pdf
+] 
+ Taming Aspects 
+ Éric Tanter 
+ Proceedings of the 4th International Workshop on Variability and Composition (VariComp 2013)---Keynote abstract, pp.19, 2013 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2013/tanter-bits2013.pdf" - pdf
+] 
+ Tipos: Garantías a Medida 
+ Éric Tanter 
+ Revista BITS de Ciencia, number 9, pp.38-45, 2013, DCC, Universidad de Chile 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2013/figueroaAl-foal2013.pdf" - pdf
+] 
+ Taming Aspects with Monads and Membranes 
+ Ismael Figueroa, Nicolas Tabareau, Éric Tanter 
+ Proceedings of the 12th Workshop on Foundations of Aspect-Oriented Languages (FOAL 2013), pp.1-6, Fukuoka, Japan, March 2013, ACM Press 
+ 2012 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/toledoAl-tse2012.pdf" - pdf
+] 
+ Aspectizing Java Access Control 
+ Rodolfo Toledo, Angel Núñez, Éric Tanter, Jacques Noyé 
+ IEEE Transactions on Software Engineering, volume 38, number 1, pp.101-117, Jan./Feb. 2012, IEEE Computer Society Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/mayerAl-oopsla2012.pdf" - pdf
+] 
+ An Empirical Study of the Influence of Static Type Systems on the Usability of Undocumented Software 
+ Clemens Mayer, Stefan Hanenberg, Romain Robbes, Éric Tanter, Andreas Stefik 
+ Proceedings of the 27th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2012), pp.683-702, Tucson, AZ, USA, October 2012, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/legerTanter-foal2012.pdf" - pdf
+] 
+ A Self-Replication Algorithm to Flexibly Match Execution Traces 
+ Paul Leger, Éric Tanter 
+ Proceedings of the 11th Workshop on Foundations of Aspect-Oriented Languages (FOAL 2012), pp.27-32, Potsdam, Germany, March 2012, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/figueroaAl-foal2012.pdf" - pdf
+] 
+ A Practical Monadic Aspect Weaver 
+ Ismael Figueroa, Éric Tanter, Nicolas Tabareau 
+ Proceedings of the 11th Workshop on Foundations of Aspect-Oriented Languages (FOAL 2012), pp.21-26, Potsdam, Germany, March 2012, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/kleinschmagerAl-icpc2012.pdf" - pdf
+] 
+ Do Static Type Systems Improve the Maintainability of Software Systems? An Empirical Study 
+ Sebastian Kleinschmager, Stefan Hanenberg, Romain Robbes, Éric Tanter, Andreas Stefik 
+ Proceedings of 20th IEEE International Conference on Program Comprehension (ICPC 2012), pp.153-162, 2012, IEEE Computer Society Press 
+ Superseded by EMSE 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/robbesAl-ecoop2012.pdf" - pdf
+] 
+ Extensions during Software Evolution: Do Objects Meet Their Promise? 
+ Romain Robbes, David Röthlisberger, Éric Tanter 
+ Proceedings of the 26th European Conference on Object-oriented Programming (ECOOP 2012), volume 7313, pp.28-52, Beijing, China, June 2012, Springer-Verlag 
+ Superseded by EMSE 2014 
+ [bib,doi] 
+ Proceedings of the 11th International Conference on Aspect-Oriented Software Development (AOSD 2012) 
+ Éric Tanter, Kevin J Sullivan 
+ Proceedings of the 11th International Conference on Aspect-Oriented Software Development (AOSD 2012), Potsdam, Germany, March 2012, ACM Press 
+ [bib,pdf] 
+ Safe and Practical Decoupling of Aspects with Join Point Interfaces 
+ Eric Bodden, Éric Tanter, Milton Inostroza 
+ number TUD-CS-2012-0106, May 2012, Technical University of Darmstadt 
+ Superseded by TOSEM 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2012/tanterAl-foal2012.pdf" - pdf
+] 
+ Taming Aspects with Membranes 
+ Éric Tanter, Nicolas Tabareau, Rémi Douence 
+ Proceedings of the 11th Workshop on Foundations of Aspect-Oriented Languages (FOAL 2012), pp.3-8, Potsdam, Germany, March 2012, ACM Press 
+ 2011 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/toledoTanter-software2011.pdf" - pdf
+] 
+ Access Control in JavaScript 
+ Rodolfo Toledo, Éric Tanter 
+ IEEE Software, volume 28, number 5, pp.76-84, Sept./Oct. 2011, IEEE Computer Society Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/scholliersAl-puc2011.pdf" - pdf
+] 
+ Ambient Contracts---Verifying and Enforcing Ambient Object Composition à la Carte 
+ Christophe Scholliers, Dries Harnie, Éric Tanter, Wolfgang De Meuter, Theo D'Hondt 
+ Personal and Ubiquitous Computing, volume 15, number 4, pp.341-351, 2011, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/figueroaTanter-foal2011.pdf" - pdf
+] 
+ A Semantics for Execution Levels with Exceptions 
+ Ismael Figueroa, Éric Tanter 
+ Proceedings of the 10th Workshop on Foundations of Aspect-Oriented Languages (FOAL 2011), pp.7-11, Porto de Galinhas, Brazil, March 2011, ACM Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2011/scholliersAl-scheme2011.pdf" - pdf
+] 
+ Computational contracts 
+ Christophe Scholliers, Éric Tanter, Wolfgang De Meuter 
+ Scheme and Functional Programming workshop, 2011 
+ Superseded by SCP 2013 
+ [bib,pdf] 
+ Exploring Membranes for Controlling Aspects 
+ Éric Tanter, Nicolas Tabareau, Rémi Douence 
+ number TR/DCC-2011-8, June 2011, University of Chile 
+ [bib] 
+ Estrategias Cognitivas para el Calculo Mental 
+ Grecia Gálvez, Diego Cosmelli, Lino Cubillos, Paul Leger, Arturo Mena, Éric Tanter, Ximena Flores, Gina Luci, Soledad Montoya, Jorge Soto Andrade 
+ Revista Latinoamericana de Investigación en Matemática Educativa, volume 14, number 1, pp.9-40, March 2011, Clame 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/sunshineAl-oopsla2011.pdf" - pdf
+] 
+ First-Class State Change in Plaid 
+ Joshua Sunshine, Karl Naden, Sven Stork, Jonathan Aldrich, Éric Tanter 
+ Proceedings of the 26th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2011), pp.713-732, Portland, Oregon, USA, October 2011, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/wolffAl-ecoop2011.pdf" - pdf
+] 
+ Gradual Typestate 
+ Roger Wolff, Ronald Garcia, Éric Tanter, Jonathan Aldrich 
+ Proceedings of the 25th European Conference on Object-oriented Programming (ECOOP 2011), volume 6813, pp.459-483, Lancaster, UK, July 2011, Springer-Verlag 
+ [bib] 
+ Higher-Order Contracts for Actor-Based Languages 
+ Christophe Scholliers, Wolfgang De Meuter, Éric Tanter 
+ Proceedings of the AGERE! (Actors and aGEnts REloaded) workshop, held at SPLASH 2011, Portland, USA, October 2011 
+ [href="http://pleiad.cl/b2/client/all/callauAl-msr2011.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/callauAl-msr2011.pdf" - pdf
+] 
+ How Developers Use the Dynamic Features of Programming Languages: the Case of Smalltalk 
+ Oscar Callaú, Romain Robbes, Éric Tanter, David Röthlisberger 
+ Proceedings of the 8th Working Conference on Mining Software Repositories (MSR 2011), pp.23-32, Honolulu, Hawaii, USA, May 2011, ACM Press 
+ Best Paper Award. Superseded by EMSE 2013 
+ [bib,href="http://dx.doi.org/10.1145/2025113.2025205" - doi
+,href="http://pleiad.dcc.uchile.cl/papers/2011/inostrozaAl-fseni2011.pdf" - pdf
+] 
+ Join Point Interfaces for Modular Reasoning in Aspect-Oriented Programs 
+ Milton Inostroza, Éric Tanter, Eric Bodden 
+ Proceedings of the 8th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering (ESEC/FSE 2011), New Ideas track, pp.508-511, Szeged, Hungary, September 2011, ACM Press 
+ Superseded by TOSEM 2014 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/moretAl-aosd2011.pdf" - pdf
+] 
+ Polymorphic Bytecode Instrumentation 
+ Philippe Moret, Walter Binder, Éric Tanter 
+ Proceedings of the 10th ACM International Conference on Aspect-Oriented Software Development (AOSD 2011), pp.129-140, Porto de Galinhas, Brazil, March 2011, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/aldrichAl-icsenier2011.pdf" - pdf
+] 
+ Permission-Based Programming Languages 
+ Jonathan Aldrich, Ronald Garcia, Mark Hannenberg, Manuel Mohr, Karl Naden, Darpan Saini, Sven Stork, Joshua Sunshine, Éric Tanter, Roger Wolff 
+ Proceedings of the 33rd ACM/IEEE International Conference on Software Engineering (ICSE 2011), New Ideas and Emerging Results track, pp.828-831, Honolulu, Hawaii, USA, May 2011, ACM Press 
+ [bib,pdf] 
+ Secure and Modular Access Control with Aspects 
+ Rodolfo Toledo, Éric Tanter 
+ number TR/DCC-2011-7, May 2011, University of Chile 
+ Superseded by AOSD 2013 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/pothierTanter-ecoop2011.pdf" - pdf
+] 
+ Summarized Trace Indexing and Querying for Scalable Back-in-Time Debugging 
+ Guillaume Pothier, Éric Tanter 
+ Proceedings of the 25th European Conference on Object-oriented Programming (ECOOP 2011), volume 6813, pp.558-582, Lancaster, UK, July 2011, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2011/binderAl-dsal2011.pdf" - pdf
+] 
+ Towards a Domain-Specific Aspect Language for Dynamic Program Analysis 
+ Walter Binder, Philippe Moret, Danilo Ansaloni, Aibek Sarimbekov, Éric Tanter 
+ Proceedings of the 6th workshop on Domain-Specific Aspect Languages (DSAL 2011), pp.9-11, Porto de Galinhas, Brazil, March 2011, ACM Press 
+ 2010 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2010/toledoAl-aosd2010.pdf" - pdf
+] 
+ AspectScript: Expressive Aspects for the Web 
+ Rodolfo Toledo, Paul Leger, Éric Tanter 
+ Proceedings of the 9th ACM International Conference on Aspect-Oriented Software Development (AOSD 2010), pp.13-24, Rennes and Saint Malo, France, March 2010, ACM Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2010/legerTanter-sblp2010.pdf" - pdf
+] 
+ An Open Trace-Based Mechanism 
+ Paul Leger, Éric Tanter 
+ Proceedings of the 14th Brazilian Symposium on Programming Languages (SBLP 2010), pp.123-138, Salvador - Bahia, Brazil, September 2010, SBC 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2010/tanterAl-gpce2010.pdf" - pdf
+] 
+ Composition of Dynamic Analysis Aspects 
+ Éric Tanter, Philippe Moret, Walter Binder, Danilo Ansaloni 
+ Proceedings of the 9th ACM SIGPLAN International Conference on Generative Programming and Component Engineering (GPCE 2010), pp.113-122, Eindhoven, The Netherlands, October 2010, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2010/tanter-aosd2010.pdf" - pdf
+] 
+ Execution Levels for Aspect-Oriented Programming 
+ Éric Tanter 
+ Proceedings of the 9th ACM International Conference on Aspect-Oriented Software Development (AOSD 2010), pp.37-48, Rennes and Saint Malo, France, March 2010, ACM Press 
+ Best Paper Award. Superseded by SCP 2014 
+ [bib,pdf] 
+ Featherweight Typestate 
+ Ronald Garcia, Roger Wolff, Éric Tanter, Jonathan Aldrich 
+ number CMU-ISR-10-115, July 2010, Carnegie Mellon University 
+ [bib,pdf] 
+ Gradual Featherweight Typestate 
+ Roger Wolff, Ronald Garcia, Éric Tanter, Jonathan Aldrich 
+ number CMU-ISR-10-116, July 2010, Carnegie Mellon University 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2010/aldrichAl-maspeghi2010.pdf" - pdf
+] 
+ Modular Composition and State Update in Plaid 
+ Jonathan Aldrich, Karl Naden, Éric Tanter 
+ Proceedings of the 4th Workshop on Mechanisms for Specialization, Generalization and Inheritance (MASPEGHI 2010), Maribor, Slovenia, June 2010, ACM Press 
+ [bib] 
+ Parallel Actor Monitors 
+ Christophe Scholliers, Éric Tanter, Wolfgang De Meuter 
+ Proceedings of the 14th Brazilian Symposium on Programming Languages (SBLP 2010), pp.83-96, Salvador - Bahia, Brazil, September 2010, SBC 
+ Superseded by SCP 2014 
+ [bib,doi] 
+ Scoping Strategies for Distributed Aspects 
+ Éric Tanter, Johan Fabry, Rémi Douence, Jacques Noyé, Mario Südholt 
+ Science of Computer Programming, volume 75, number 12, pp.1235-1261, December 2010, Elsevier 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2010/legerTanter-foal2010.pdf" - pdf
+] 
+ Towards An Open Trace-Baced Mechanism 
+ Paul Leger, Éric Tanter 
+ Proceedings of the Ninth Workshop on Foundations of Aspect-Oriented Languages (FOAL 2010), pp.25-30, Rennes and Saint Malo, France, March 2010, University of Central Florida 
+ 2009 
+ [href="http://pleiad.cl/b2/client/all/tanter-dls2009.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/tanter-dls2009.pdf" - pdf
+] 
+ Beyond Static and Dynamic Scope 
+ Éric Tanter 
+ Proceedings of the 5th ACM Dynamic Languages Symposium (DLS 2009), pp.3-14, Orlando, FL, USA, October 2009, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/pothierTanter-software2009.pdf" - pdf
+] 
+ Back to the Future: Omniscient Debugging 
+ Guillaume Pothier, Éric Tanter 
+ IEEE Software, volume 26, number 6, pp.78-95, November-December 2009, IEEE Computer Society Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/tanterAl-aosd2009.pdf" - pdf
+] 
+ Expressive Scoping of Distributed Aspects 
+ Éric Tanter, Johan Fabry, Rémi Douence, Jacques Noyé, Mario Südholt 
+ Proceedings of the 8th ACM International Conference on Aspect-Oriented Software Development (AOSD 2009), pp.27-38, Charlottesville, Virginia, USA, March 2009, ACM Press 
+ Superseded by SCP 2010 
+ [bib] 
+ Higher-Order Aspects in Order 
+ Éric Tanter 
+ Scheme and Functional Programming Workshop, Boston, MA, USA, August 2009 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/clarkeAl-cop2009.pdf" - pdf
+] 
+ How should context-escaping closures proceed? 
+ Dave Clarke, Pascal Costanza, Éric Tanter 
+ Workshop on Context-Oriented Programming, Genova, Italy, July 2009 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/fabryAl-iet2009.pdf" - pdf
+] 
+ Infrastructure for Domain-Specific Aspect Languages: the ReLAx case study 
+ Johan Fabry, Éric Tanter, Theo D'Hondt 
+ IET Software, volume 3, number 3, pp.238-254, June 2009 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/mostinckxAl-spe2009.pdf" - pdf
+] 
+ Mirror-based Reflection in AmbientTalk 
+ Stijn Mostinckx, Tom Van Cutsem, Stijn Timbermont, Elisa Gonzalez Boix, Éric Tanter, Wolfgang De Meuter 
+ Software---Practice and Experience, volume 39, number 7, pp.661-699, May 2009, Wiley & Sons 
+ [bib,doi] 
+ Proceedings of the 4th workshop on Domain-Specific Aspect Languages 
+ Thomas Cleenewerck, Johan Fabry, Anne-Francoise Lemeur, Jacques Noyé, Éric Tanter 
+ Proceedings of the 4th workshop on Domain-Specific Aspect Languages, Charlottesville, VA, USA, March 2009, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/bainomugishaAl-icps2009.pdf" - pdf
+] 
+ Resilient Actors: A Runtime Partitioning Model for Pervasive Computing Services 
+ Engineer Bainomugisha, Jorge Vallejos, Éric Tanter, Elisa Gonzalez Boix, Pascal Costanza, Wolfgang De Meuter, Theo D'Hondt 
+ Proceedings of the ACM International Conference on Pervasive Services (ICPS 2009), London, UK, July 2009, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2009/tanterFabry-jucs2009.pdf" - pdf
+] 
+ Supporting Composition of Structural Aspects in an AOP Kernel 
+ Éric Tanter, Johan Fabry 
+ Journal of Universal Computer Science, volume 15, number 3, pp.620-647, 2009 
+ 2008 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/toledoTanter-jucs2008.pdf" - pdf
+] 
+ A Lightweight and Extensible AspectJ Implementation 
+ Rodolfo Toledo, Éric Tanter 
+ Journal of Universal Computer Science, volume 14, number 21, pp.3517-3533, 2008 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/tanter-jucs2008.pdf" - pdf
+] 
+ Controlling Aspect Reentrancy 
+ Éric Tanter 
+ Journal of Universal Computer Science, volume 14, number 21, pp.3498-3516, 2008 
+ Best Paper Award of the Brazilian Symposium on Programming Languages (SBLP 2008) 
+ [href="http://pleiad.cl/b2/client/all/tanter-dls2008.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/tanter-dls2008.pdf" - pdf
+] 
+ Contextual Values 
+ Éric Tanter 
+ Proceedings of the 4th ACM Dynamic Languages Symposium (DLS 2008), Paphos, Cyprus, July 2008, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/tanter-aosd2008.pdf" - pdf
+] 
+ Expressive Scoping of Dynamically-Deployed Aspects 
+ Éric Tanter 
+ Proceedings of the 7th ACM International Conference on Aspect-Oriented Software Development (AOSD 2008), pp.168-179, Brussels, Belgium, April 2008, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/ramiroAl-eemmas2007.pdf" - pdf
+] 
+ Experimenting with Language Support for Proximity in Ambient-Oriented Programming 
+ Victor Ramiro, Jessie Dedecker, Éric Tanter, Peter Barron 
+ Engineering Environment-Mediated Multi-Agent Systems (EEMMAS 2007), volume 5049, pp.259-283, 2008, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/pothierTanter-sac2008.pdf" - pdf
+] 
+ Extending Omniscient Debugging to Support Aspect-Oriented Programming 
+ Guillaume Pothier, Éric Tanter 
+ Proceedings of the 23rd ACM Symposium on Applied Computing (SAC 2008), volume 1, pp.266-270, Fortaleza, Ceará, Brazil, March 2008 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/tanterAl-scp2008.pdf" - pdf
+] 
+ Flexible Metaprogramming and AOP in Java 
+ Éric Tanter, Rodolfo Toledo, Guillaume Pothier, Jacques Noyé 
+ Science of Computer Programming, volume 72, number 1-2, pp.22-30, June 2008, Elsevier 
+ Special Issue on Experimental Software and Toolkits 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/fabryAl-scp2008.pdf" - pdf
+] 
+ KALA: Kernel Aspect Language for Advanced Transactions 
+ Johan Fabry, Éric Tanter, Theo D'Hondt 
+ Science of Computer Programming, volume 71, number 3, pp.165-180, May 2008, Elsevier 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2008/ot4ami2007.pdf" - pdf
+] 
+ Object Technology for Ambient Intelligence and Pervasive Computing 
+ Jessie Dedecker, Éric Tanter, Holger Mügge, Cristina Videira Lopes, Pascal Cherrier 
+ Object-Oriented Technology, ECOOP 2007 Workshop Reader, volume 4906, pp.171-181, 2008, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/pautassoTanter-sc2008.pdf" - pdf
+] 
+ Proceedings of the 7th International Symposium on Software Composition (SC 2008) 
+ Cesare Pautasso, Éric Tanter 
+ Proceedings of the 7th International Symposium on Software Composition (SC 2008), volume 4954, Budapest, Hungary, March 2008, Springer-Verlag 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/pom-ccpe2008.pdf" - pdf
+] 
+ Parallel Object Monitors 
+ Denis Caromel, Luis Mateu, Guillaume Pothier, Éric Tanter 
+ Concurrency and Computation---Practice and Experience, volume 20, number 12, pp.1387-1417, August 2008, Wiley & Sons 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/dsal2008report.pdf" - pdf
+] 
+ Summary of the 3rd workshop on Domain-Specific Aspect Languages 
+ Thomas Cleenewerck, Jacques Noyé, Johan Fabry, Anne-Francoise Lemeur, Éric Tanter 
+ Summary of the 3rd workshop on Domain-Specific Aspect Languages, Brussels, Belgium, April 2008, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/vallejosAl-seps2008.pdf" - pdf
+] 
+ Towards Resilient Partitioning of Pervasive Computing Services 
+ Jorge Vallejos, Elisa Gonzalez Boix, Engineer Bainomugisha, Pascal Costanza, Wolfgang De Meuter, Éric Tanter 
+ Proceedings of the 3rd Workshop on Software Engineering for Pervasive Services (SEPS 2008), pp.15-20, Sorento, Italy, July 2008, ACM Press 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2008/geppetto-clss2008.pdf" - pdf
+] 
+ Unanticipated Partial Behavioral Reflection: Adapting Applications at Runtime 
+ David Röthlisberger, Marcus Denker, Éric Tanter 
+ Journal of Computer Languages, Systems and Structures, volume 34, number 2-3, pp.46-65, July-October 2008, Elsevier 
+ 2007 
+ [href="http://pleiad.cl/b2/client/all/mostinckxAl-dls2007.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2007/mostinckxAl-dls2007.pdf" - pdf
+] 
+ Mirages: Behavioral Intercession in a Mirror-based Architecture 
+ Stijn Mostinckx, Tom Van Cutsem, Stijn Timbermont, Éric Tanter 
+ Proceedings of the ACM Dynamic Languages Symposium (DLS 2007), pp.89-100, Montreal, Canada, October 2007, ACM Press 
+ Superseded by SPE 2009 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2007/tanter-sigplan2007.pdf" - pdf
+] 
+ On Dynamically-Scoped Crosscutting Mechanisms 
+ Éric Tanter 
+ ACM SIGPLAN Notices, volume 42, number 2, pp.27-33, February 2007, ACM Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2007/ot4ami2006.pdf" - pdf
+] 
+ Object Technology for Ambient Intelligence and Pervasive Computing: Language Constructs and Infrastructures 
+ Holger Mügge, Pascal Cherrier, Wolfgang De Meuter, Éric Tanter 
+ Object-Oriented Technology, ECOOP 2006 Workshop Reader, volume 4379, pp.130-140, 2007, Springer-Verlag 
+ [bib] 
+ Proceedings of the XXVI International Conference of the Chilean Computer Science Society 
+ Hernán Astudillo, Éric Tanter 
+ Proceedings of the XXVI International Conference of the Chilean Computer Science Society, Iquique, Chile, November 2007, IEEE Computer Society 
+ [bib] 
+ Proceedings of the 3rd ECOOP workshop on Object Technology for Ambient Intelligence and Pervasive Computing (OT4AmI 2007) 
+ Holger Mügge, Éric Tanter, Pascal Cherrier, Jessie Dedecker, Christina Lopes, Michael Cebulla 
+ Proceedings of the 3rd ECOOP workshop on Object Technology for Ambient Intelligence and Pervasive Computing (OT4AmI 2007), Berlin, Germany, July 2007, Technical Report 2007-12, Technische Universität Berlin 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2007/cosmelliSotoTanter-br2007.pdf" - pdf
+] 
+ Programming Paradigms and Mind Metaphors: Convergence and Cross-Fertilization in the Study of Cognition 
+ Diego Cosmelli, Jorge Soto-Andrade, Éric Tanter 
+ Biological Research, volume 40, number 4, pp.503-515, 2007 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2007/barronAl-ot4ami2007.pdf" - pdf
+] 
+ Proximity is in the Eye of the Beholder 
+ Peter Barron, Jessie Dedecker, Éric Tanter 
+ Proceedings of the 3rd ECOOP workshop on Object Technology for Ambient Intelligence and Pervasive Computing (OT4AmI 2007), pp.1-6, Berlin, Germany, July 2007, Technical Report 2007-12, Technische Universität Berlin 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2007/fabryAl-dsal2007.pdf" - pdf
+] 
+ ReLAx: Implementing KALA over the Reflex AOP Kernel 
+ Johan Fabry, Éric Tanter, Theo D'Hondt 
+ Summary of the 2nd workshop on Domain-Specific Aspect Languages, Vancouver, Canada, March 2007, ACM Press 
+ Superseded by IET Software 2009 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2007/pothierAl-oopsla2007.pdf" - pdf
+] 
+ Scalable Omniscient Debugging 
+ Guillaume Pothier, Éric Tanter, José Piquer 
+ Proceedings of the 22nd ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2007), pp.535-552, Montreal, Canada, October 2007, ACM Press 
+ ACM SIGPLAN Notices , 42(10) 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2007/dsal2007report.pdf" - pdf
+] 
+ Summary of the 2nd workshop on Domain-Specific Aspect Languages 
+ Johan Fabry, Damijan Rebernak, Thomas Cleenewerck, Anne-Francoise Lemeur, Jacques Noyé, Éric Tanter 
+ Summary of the 2nd workshop on Domain-Specific Aspect Languages, Vancouver, Canada, March 2007, ACM Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2007/geppetto-isc2006.pdf" - pdf
+] 
+ Unanticipated Partial Behavioral Reflection 
+ David Röthlisberger, Marcus Denker, Éric Tanter 
+ Advances in Smalltalk --- Proceedings of 14th International Smalltalk Conference (ISC 2006), volume 4406, pp.47-65, 2007, Springer-Verlag 
+ Superseded by CLSS 2008 
+ 2006 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/tanterAl-dais2006.pdf" - pdf
+] 
+ A Versatile Kernel for Distributed AOP 
+ Éric Tanter, Rodolfo Toledo 
+ Proceedings of the IFIP International Conference on Distributed Applications and Interoperable Systems (DAIS 2006), volume 4025, pp.316-331, Bologna, Italy, June 2006, Springer-Verlag 
+ Best Paper Award of the three DisCoTec 2006 Conferences 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/tanter-sc2006.pdf" - pdf
+] 
+ Aspects of Composition in the Reflex AOP Kernel 
+ Éric Tanter 
+ Proceedings of the 5th International Symposium on Software Composition (SC 2006), volume 4089, pp.98-113, Vienna, Austria, March 2006, Springer-Verlag 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/tanter-odal2006.pdf" - pdf
+] 
+ An Extensible Kernel Language for AOP 
+ Éric Tanter 
+ Proceedings of AOSD Workshop on Open and Dynamic Aspect Languages, Bonn, Germany, 2006 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/kesslerAl-adi2006.pdf" - pdf
+] 
+ Analyzing Interactions of Structural Aspects 
+ Benoit Kessler, Éric Tanter 
+ Proceedings of ECOOP Workshop on Aspects, Dependencies and Interactions, Nantes, France, July 2006 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/tanterAl-sc2006.pdf" - pdf
+] 
+ Context-Aware Aspects 
+ Éric Tanter, Kris Gybels, Marcus Denker, Alexandre Bergel 
+ Proceedings of the 5th International Symposium on Software Composition (SC 2006), volume 4089, pp.227-242, Vienna, Austria, March 2006, Springer-Verlag 
+ [bib] 
+ Declarative composition of structural aspects 
+ Éric Tanter 
+ number TR/DCC-2006-11, November 2006, University of Chile 
+ Superseded by JUCS 2009 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/standaertAl-ot4ami2006.pdf" - pdf
+] 
+ Design of a Multi-level Reflective Architecture for Ambient Actors 
+ Dieter Standaert, Éric Tanter, Tom Van Cutsem 
+ Proceedings of ECOOP Workshop on Object Technology for Ambient Intelligence and Pervasive Computing, Nantes, France, July 2006 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2006/bravenboerAl-oopsla06.pdf" - pdf
+] 
+ Declarative, Formal, and Extensible Syntax Definition for AspectJ -- A Case for Scannerless Generalized-LR Parsing 
+ Martin Bravenboer, Éric Tanter, Eelco Visser 
+ Proceedings of the 21st ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2006), pp.209-228, Portland, Oregon, USA, October 2006, ACM Press 
+ ACM SIGPLAN Notices , 41(10) 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2007/tanter-sigplan2007.pdf" - pdf
+] 
+ On Dynamically-Scoped Crosscutting Mechanisms 
+ Éric Tanter 
+ Proceedings of the European Workshop on Aspects in Software (EWAS 2006), pp.18-22, Twente, The Netherlands, September 2006, Technical Report IAI-TR-2006-6, University of Bonn, Germany, University of Bonn 
+ Superseded by ACM SIGPLAN Notices 2007 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2006/denkerAl-clss2006.pdf" - pdf
+] 
+ Runtime Bytecode Transformation for Smalltalk 
+ Marcus Denker, Stéphane Ducasse, Éric Tanter 
+ Journal of Computer Languages, Systems and Structures, volume 32, number 2-3, pp.125-139, July 2006, Elsevier 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2006/toledoAl-cgiw2006.pdf" - pdf
+] 
+ Using ReflexD for a Grid solution to the N-Queens Problem 
+ Rodolfo Toledo, Éric Tanter, José Piquer, Denis Caromel, Mario Leyton 
+ Proceedings of the CoreGRID Integration Workshop, pp.37-48, Cracow, Poland, October 2006 
+ 2005 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2005/tanterNoye-gpce2005.pdf" - pdf
+] 
+ A Versatile Kernel for Multi-Language AOP 
+ Éric Tanter, Jacques Noyé 
+ Proceedings of the 4th ACM SIGPLAN/SIGSOFT Conference on Generative Programming and Component Engineering (GPCE 2005), volume 3676, pp.173-188, Tallinn, Estonia, September 2005, Springer-Verlag 
+ [href="http://pleiad.cl/b2/client/all/demeuterAl-dls2005.bib" - bib
+,doi,href="http://pleiad.dcc.uchile.cl/papers/2005/demeuterAl-dls2005.pdf" - pdf
+] 
+ Flexible Object Encapsulation for Ambient-Oriented Programming 
+ Wolfgang De Meuter, Éric Tanter, Stijn Mostinckx, Tom Van Cutsem, Jessie Dedecker 
+ Proceedings of the ACM Dynamic Languages Symposium (DLS 2005), San Diego, CA, USA, October 2005 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2005/rodriguezTanterNoye-lobjet2005.pdf" - pdf
+] 
+ La réflexion comportementale partielle comme infrastructure de programmation par aspects - Étude du cas des coupes dynamiques 
+ Leonardo Rodríguez, Éric Tanter, Jacques Noyé 
+ RSTI L'Objet, Programmation par aspects, pp.31-52, November 2005 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2005/tanter-ot4ami2005.pdf" - pdf
+] 
+ Mirror Methods --- Reconciling Reflection and Extreme Encapsulation 
+ Éric Tanter 
+ ECOOP Workshop on Object Technology for Ambient Intelligence, Glasgow, UK, July 2005 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2005/tanter-eiwas2005.pdf" - pdf
+] 
+ Metalevel Facilities for Multi-Language AOP 
+ Éric Tanter 
+ 2nd European Interactive Workshop on Aspects in Software (EIWAS 2005), Brussels, Belgium, September 2005 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2005/denkerAl-esug2005.pdf" - pdf
+] 
+ Runtime Bytecode Manipulation in Smalltalk 
+ Marcus Denker, Stéphane Ducasse, Éric Tanter 
+ European Smalltalk User Group Research Conference, 2005 
+ Superseded by CLSS 2006 
+ 2004 
+ [bib] 
+ A Concern-based Approach to Software Evolution 
+ Peter Ebraert, Éric Tanter 
+ Proceedings of the AOSD Workshop on Dynamic Aspects (DAW 2004), Lancaster, UK, March 2004 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2004/etanter-phd.pdf.zip" - pdf
+] 
+ From Metaobject Protocols to Versatile Kernels for Aspect-Oriented Programming 
+ Éric Tanter 
+ November 2004, University of Nantes and University of Chile, (PhD Thesis) 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2004/tanter-noye_aopkernels_eiwas04.pdf" - pdf
+] 
+ Motivation and Requirements for a Versatile AOP Kernel 
+ Éric Tanter, Jacques Noyé 
+ 1st European Interactive Workshop on Aspects in Software (EIWAS 2004), Berlin, Germany, September 2004 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2004/som-ecoop2004.pdf" - pdf
+] 
+ Sequential Object Monitors 
+ Denis Caromel, Luis Mateu, Éric Tanter 
+ Proceedings of the 18th European Conference on Object-Oriented Programming (ECOOP 2004), number 3086, pp.316-340, Oslo, Norway, June 2004, Springer-Verlag 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2004/rodriguezTanterNoye-sccc04.pdf" - pdf
+] 
+ Supporting Dynamic Crosscutting with Partial Behavioral Reflection: a Case Study 
+ Leonardo Rodríguez, Éric Tanter, Jacques Noyé 
+ Proceedings of the XXIV International Conference of the Chilean Computer Science Society (SCCC 2004), pp.48-58, Arica, Chile, November 2004, IEEE Computer Society Press 
+ 2003 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2003/tanter-asarti03.pdf" - pdf
+] 
+ A Flexible Approach to Interactive Runtime Inspection 
+ Éric Tanter, Peter Ebraert 
+ Proceedings of the ECOOP Workshop on Advancing the State-of-the-Art in Runtime Inspection, Darmstadt, Germany, July 2003 
+ [bib,doi,href="http://pleiad.dcc.uchile.cl/papers/2003/tanter-oopsla03.pdf" - pdf
+] 
+ Partial Behavioral Reflection: Spatial and Temporal Selection of Reification 
+ Éric Tanter, Jacques Noyé, Denis Caromel, Pierre Cointe 
+ Proceedings of the 18th ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA 2003), pp.27-46, Anaheim, CA, USA, October 2003, ACM Press 
+ ACM SIGPLAN Notices , 38(11) 
+ 2002 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2002/tanter_al-Jinline-GPCE02.pdf" - pdf
+] 
+ Altering Java Semantics via Bytecode Manipulation 
+ Éric Tanter, Marc Ségura-Devillechaise, Jacques Noyé, José Piquer 
+ Proceedings of the 1st ACM SIGPLAN/SIGSOFT Conference on Generative Programming and Component Engineering (GPCE 2002), volume 2487, pp.283-298, Pittsburgh, PA, USA, October 2002, Springer-Verlag 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2002/tanter-phdoos02.pdf" - pdf
+] 
+ Runtime Metaobject Protocols: the Quest for their Holy Application 
+ Éric Tanter 
+ 12th ECOOP Workshop of PhD Students in Object-Oriented Systems (PhDOOS 2002), Málaga, Spain, June 2002 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2002/tanter_al-ewmos02.pdf" - pdf
+] 
+ Towards Transparent Adaptation of Migration Policies 
+ Éric Tanter, Michaël Vernaillen, José Piquer 
+ 8th ECOOP Workshop on Mobile Object Systems (EWMOS 2002), Málaga, Spain, June 2002 
+ 2001 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2001/tanter_ref_mig-sccc2001.ps.gz" - pdf
+] 
+ Managing References upon Object Migration: Applying Separation of Concerns 
+ Éric Tanter, José Piquer 
+ Proceedings of the XXI International Conference of the Chilean Computer Science Society (SCCC 2001), pp.264-272, Punta Arenas, Chile, November 2001, IEEE Computer Society Press 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2001/tanterBouraqadiNoye-lmo2001.pdf" - pdf
+] 
+ Reflex : une extension réflexive de Java portable, souple et performante 
+ Éric Tanter, Noury Bouraqadi, Jacques Noyé 
+ Proceedings of Languages et Modèles à Objets (LMO 2001), volume 7, number 1-2, pp.165-180, 2001, Hermes 
+ [bib,href="http://pleiad.dcc.uchile.cl/papers/2001/tanterBouraqadiNoye-reflection2001.pdf" - pdf
+] 
+ Reflex -- Towards an Open Reflective Extension of Java 
+ Éric Tanter, Noury Bouraqadi, Jacques Noyé 
+ Proceedings of the 3rd International Conference on Metalevel Architectures and Advanced Separation of Concerns (Reflection 2001), volume 2192, pp.25-43, Kyoto, Japan, September 2001, Springer-Verlag 
+ Other material 
+ I teach severalcoursesrelated to programming languages. 
+ In particular, I use Shriram Krishnamurthi'sPLAIbook for the first PL course. I have written a couple of add-ons for PLAI: 
+ PrePLAI: crash course on Scheme and functional programming (in spanish) 
+ A Note on Scope 
+ A Note on Recursion 
+ OOPLAI: exploring OOP from scratch using macros 
+ I have also gathered somewriting tipsover time. 
+ Charla sobreética en investigación(curso postgrado DCC) 
+ [Back to top|Sitemap] 
+ [Log In|Old revisions|New posting] 
+ mnml-blog on DWunder the hood
+

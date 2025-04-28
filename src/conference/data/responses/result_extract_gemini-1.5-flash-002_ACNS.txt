@@ -1,0 +1,21 @@
+```json
+{
+  "Conference dates": "June 23 - 26, 2025",
+  "Year": "2025",
+  "Location": "Munich, Germany",
+  "City-State-Province": "Munich",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "1st submission deadline": "September 9, 2024",
+    "2nd submission deadline": "January 13, 2025"
+  },
+  "Other Date": {
+    "deadline for nominations": "March 18, 2025"
+  },
+  "Topics": "Applied Cryptography, Cyber Security, Network Security, Computer Security, Privacy",
+  "Summary": "The 23rd International Conference on Applied Cryptography and Network Security (ACNS 2025) will be held in Munich, Germany from June 23-26, 2025. ACNS is an annual conference focusing on current developments that advance the areas of applied cryptography, cybersecurity (including network & computer security), and privacy.  The conference will also host satellite workshops and will give awards for best student paper, best workshop paper, best poster, and an inaugural Test-of-Time Award.",
+  "Call for Papers": "# ACNS 2025: Call for Papers (Cycle 2)\n\nThe 23rd International Conference on Applied Cryptography and Network Security (ACNS 2025) will be held in **Munich, Germany, on June 23–26, 2025.**\n\nACNS is an annual conference focusing on current developments that advance the areas of applied cryptography, cybersecurity (including network and computer security), and privacy. The goal is to represent both academic research works as well as developments in industrial and technical frontiers.\n\n## Submission\n\nThe deadline for registering submissions has passed.\n\n## ACNS 2025 Important Dates\n\n*   **1st submission deadline:** September 9, 2024 (AoE)\n*   **2nd submission deadline:** January 13, 2025 (AoE)\n*   **Paper submission:** [https://acns25-cycle2.hotcrp.com/](https://acns25-cycle2.hotcrp.com/)\n\n## Test-of-Time Award\n\nACNS will give the inaugural Test-of-Time Award in 2025 to recognize papers that have had a lasting impact on the field. Any person can nominate a paper published at ACNS between 2003 and 2010 for the award in 2025. Self-nomination is also allowed. The deadline for nominations is March 18, 2025."
+}
+```

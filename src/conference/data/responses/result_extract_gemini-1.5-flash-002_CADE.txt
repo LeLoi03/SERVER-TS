@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "July 28 - August 2, 2025",
+  "Year": "2025",
+  "Location": "Stuttgart, Germany",
+  "City-State-Province": "Stuttgart",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract deadline": "February 17, 2025",
+    "Submission deadline": "February 24, 2025",
+    "Final version deadline": "May 30, 2025"
+  },
+  "Notification Date": {
+    "Notification": "April 28, 2025"
+  },
+  "Other Date": {
+    "Rebuttal period": "April 14 - 18, 2025",
+    "Main conference": "July 28 - 31, 2025",
+    "Satellite events": "August 1 - 2, 2025"
+  },
+  "Topics": "Automated Deduction",
+  "Summary": "The 30th International Conference on Automated Deduction (CADE-30) will take place from July 28th to August 2nd, 2025 in Stuttgart, Germany.  The conference program includes invited talks, paper presentations, workshops, tutorials, and system competitions. The Herbrand Award, Skolem Award(s), and Bill McCune PhD Award will also be presented.",
+  "Call for Papers": "No call for papers available"
+}
+```

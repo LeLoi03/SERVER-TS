@@ -1,0 +1,14 @@
+output:
+{
+  "Conference dates": "No conference dates specified",
+  "Year": "2026",
+  "Location": "Santander, Spain",
+  "City-State-Province": "Santander",
+  "Country": "Spain",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Topics": "Finite Field Arithmetic, Bases, Polynomials, Boolean Functions, Algebraic Curves, Dynamical Systems, Hardware Implementations, Software Implementations, Finite Field Processors, Arithmetic Algorithms, Pseudorandom Number Generators, Hardware/Software Co-design, Cryptography, Ciphers, Post-Quantum Cryptography, Coding Theory, AG Codes, LDPC Codes, Combinatorics, Designs, Arrays, Finite Geometry",
+  "Summary": "The International Workshop on the Arithmetic of Finite Fields (WAIFI 2026) will be held in Santander, Spain. This workshop is a forum for mathematicians, computer scientists, engineers, and physicists performing research on finite field arithmetic.",
+  "Call for Papers": "No call for papers available"
+}
+

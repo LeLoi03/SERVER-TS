@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "November 1 - 3, 2025",
+  "Year": "2025",
+  "Location": "Zagreb, Croatia",
+  "City-State-Province": "Zagreb",
+  "Country": "Croatia",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline (1st CFP)": "Not specified"
+  },
+  "Notification Date": {
+    "Notification to Authors (1st CFP)": "Not specified"
+  },
+  "Camera-ready Date": {
+    "Final Camera-Ready Submission and Early Registration (1st CFP)": "Not specified"
+  },
+  "Registration Date": {
+    "Late Registration (1st CFP)": "Not specified"
+  },
+  "Topics": "eCommerce, ePayment, eLearning, eHealth, eSports, IT services, Mobile computing, Knowledge management and distribution, Algorithms, Databases, Data mining, Information Systems, Information sourcing and aggregation, Programming languages and concepts, Security and Privacy, Automation of Services, Human-centred Computing, Multimedia and Visualization, Modalities of User Interfacing, Personalization, Empathic systems, Virtual Reality, Distributed and parallel systems, Cloud Computing, Evaluation and Assessment, Intelligent systems, Large-scale applications, Local and distributed storage, IoT, Industry 4.0, Mobile Systems and Networks, Protocols, Standards and Mark-up Languages, Sensor Networks, WWW Applications and Technologies, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts and devices, Wideband Information streaming",
+  "Publisher": "IADIS",
+  "Summary": "The Applied Computing 2025 conference aims to address the main issues of concern within the applied computing area and related fields. This conference covers essentially technical aspects. The proceedings of the conference will be published in the form of a book and digital copy with ISBN.",
+  "Call for Papers": "# Applied Computing 2025: Call for Papers\n\nThe Applied Computing 2025 conference aims to address the main issues of concern within the applied computing area and related fields. This conference covers essentially technical aspects. The proceedings of the conference will be published in the form of a book and digital copy with ISBN.  The conference will be held from **November 1-3, 2025, in Zagreb, Croatia**.\n\n## Topics of Interest\n\nAll areas related to Applied Computing are of interest, including, but not limited to:\n\n### Application Fields\n\n*   eCommerce and ePayment\n*   eLearning\n*   eHealth and eSports\n*   IT services\n*   Mobile computing\n*   Knowledge management and distribution\n\n### Fundamental Concepts and Engineering\n\n*   Algorithms\n*   Databases and data mining\n*   Information Systems\n*   Information sourcing and aggregation\n*   Programming languages and concepts\n*   Security and Privacy\n\n### Usability\n\n*   Automation of Services\n*   Human-centred Computing\n*   Multimedia and Visualization\n*   Modalities of User Interfacing\n*   Personalization and empathic systems\n*   Virtual Reality\n\n### Performance – Distributed and parallel systems\n\n*   Cloud Computing\n*   Evaluation and Assessment\n*   Intelligent systems\n*   Large-scale applications\n*   Local and distributed storage\n\n### Communication\n\n*   IoT\n*   Industry 4.0\n*   Mobile Systems and Networks\n*   Protocols, Standards and Mark-up Languages\n*   Sensor Networks\n*   WWW Applications and Technologies\n\n### Hardware scope\n\n*   Embedded Computing\n*   Environment-friendly Constructions\n*   Mobile Aspects\n*   Realization of IoT nodes\n*   Security concepts and devices\n*   Wideband Information streaming\n\n## Types of Contributions\n\nThe Conference will be composed of several types of contributions:\n\n*   **Full Papers:** (maximum 8 pages / 5,000 words)\n*   **Short Papers:** (maximum 4 pages / 2,500 words)\n*   **Reflection Papers:** (maximum 2 pages / 1,500 words)\n*   **Posters / Demonstrations:** (maximum 1 page / 625 words)\n*   **Tutorials:** (maximum 250 words)\n*   **Panels:** (maximum 250 words)\n*   **Invited Talks:** (abstract included in proceedings)\n*   **Doctoral Consortium:** (maximum 4 pages / 2,500 words)\n*   **Corporate Showcases & Exhibitions**\n\n## Submission\n\nThis is a blind peer-reviewed conference.  The first call for papers will be available soon. For further details please contact the publicity chair: [secretariat@computing-conf.org](mailto:secretariat@computing-conf.org)."
+}
+

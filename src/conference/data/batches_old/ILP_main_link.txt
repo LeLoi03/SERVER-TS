@@ -1,0 +1,97 @@
+Conference ILP:
+
+Home 
+ Registration 
+ Speakers 
+ Programme 
+ href="/dates/index.html" - Dates 
+ href="/submission/index.html" - Submission 
+ href="/papers/index.html" - Call for Papers 
+ Organisation 
+ Attending 
+ About 
+ Back to top5th International Joint Conference on Learning & Reasoning 
+ 11 - 14 September 2025 
+ The 5th International Joint Conference on Learning and Reasoning (IJCLR) will be held at University of Surrey, Guildford, UK, 11-14 September 2025. 
+ The rapid progress in machine learning has been the primary reason for a fresh look at the transformative potential of AI as a whole during the past decade. A crucial milestone for taking full advantage of this potential is the endowment of algorithms that learn from experience with the ability to reason, which could consult existing knowledge that has already been learned and draw inferences that have a soundness guarantee. 
+ The integration of learning and reasoning has been the key open question in AI, which calls for approaches that combine knowledge representation and machine reasoning techniques with learning algorithms from the fields of neural, statistical and relational learning, as well as cognition-inspired AI. In 2021, IJCLR was initiated through the amalgamation of several distinguished conferences/workshops in this field, each boasting a legacy spanning ten to thirty years: the International Conference on Inductive Logic Programming (ILP), the International Workshop on Approaches and Applications of Inductive Programming (AAIP), the International Workshop on Neural-Symbolic Learning and Reasoning (NeSy), the International Workshop on Statistical Relational AI (StarAI), and the International Workshop on Cognitive AI has became a member from 2023. 
+ Commencing in 2024, the International Joint Conference on Learning and Reasoning (IJCLR) has evolved from an aggregation of distinct workshops into a cohesive conference entity. This transformation encompasses the amalgamation of various topics of interest within the domains of learning and reasoning in artificial intelligence into a singular, integrated program. Furthermore, the conference now boasts a unified and extensive proceeding that serves as the official record for publications in this area. The ILP, AAIP, and CogAI have been integrated into the IJCLR program, signifying a consolidation of these areas under the IJCLR umbrella. Concurrently, NeSy and StarAI maintain their distinct conferences/workshops, focusing on their respective specialized topics. Despite this, they persist as pivotal components within the IJCLR framework, embodying two of the primary research domains. Their contribution to the IJCLR is further evidenced by the inclusion of dedicated area chairs and reviewers from both fields, underscoring their integral role in shaping the conference’s comprehensive academic direction and ensuring its high quality. For more information and history events of IJCLR please see theAboutpage. 
+ Conference venue 
+ Stag Hill campus, University of Surrey, Guildford, UK. Please visit theAttendingpage for more information.Recent Updates 
+ [13/01/2025] A Machine Learning Journal Special Issue is planned for IJCLR 2025. | Please note that submissions to the Journal Special Issue for IJCLR 2025 are by invitation only and from the papers submitted to the conference. | Please see | href="https://ijclr2025.surrey.ac.uk/papers/index.html" - Call for Paper | for more information. 
+ [25/11/2024] Draft conference website 
+ Important Dates 
+ Please visit thehref="dates/index.html" - Important Dates
+page for more information on the IJCLR important dates. 
+ × 
+
+Call for Papers information:
+Home 
+ Registration 
+ Speakers 
+ Programme 
+ href="../dates/index.html" - Dates 
+ href="/submission/index.html" - Submission 
+ href="../papers/index.html" - Call for Papers 
+ Organisation 
+ Attending 
+ About 
+ Back to topCall for paper 
+ General Information: 
+ Submissions are invited for the 5th International Joint Conference on Learning and Reasoning to be held at University of Surrey, Guildford, UK, 12-14 September 2025. Since 2021, IJCLR has aimed at being the conference bringing together the international AI community that is interested in the research of integrating learning and reasoning for addressing many of the shortcomings of contemporary AI approaches, including the black-box nature and the brittleness of deep learning, and the difficulty to adapt knowledge representation models in the light of new data. 
+  
+ The authors could submit their papers to the "Main Track" or "Recently Published Papers Track". Selected conference papers from these two tracks are also invited to submit a significantly revised and extended version of their paper to a post-conference special issue of the Machine Learning Journal (please see below). 
+  
+ Submissions are solicited on all aspects of Learning and Reasoning and topics where machine learning is combined with machine reasoning or knowledge representation. 
+  
+ Authors are invited to submit novel, high-quality work that has neither appeared in nor is under consideration for publication by other journals or conferences (except for the Recently Published Papers Track). 
+  
+ Topics of interest for the Journal Track include, but are not limited to: 
+ Theory & foundations of logical & relational learning. 
+ Learning in various logical representations and formalisms, such as logic programming & answer set programming, first-order & higher-order logic, description logic & ontologies. 
+ Inductive methods for program synthesis or example-driven programming. 
+ Combining logic and functional program induction, meta-interpretative learning & predicate invention. 
+ Statistical Relational AI, including structure/parameter learning for probabilistic logic languages, relational probabilistic graphical models, kernel-based methods, neural-symbolic learning. 
+ Systems and techniques that integrate neural, statistical & symbolic learning. 
+ Systems and techniques addressing aspects of integrating learning, reasoning & optimization. 
+ Knowledge representation and reasoning in deep neural networks. 
+ Symbolic knowledge extraction from neural and statistical learning models. 
+ Neural-symbolic AI. 
+ Techniques that foster explainability & trustworthiness of AI models, including combinations of machine learning with constraints & satisfiability, explainable AI frameworks and reasoning about the behavior of machine learning models. 
+ Scaling-up logical & relational learning: parallel & distributed learning techniques, online learning and learning structured representations from data streams. 
+ Human-Like Computing, including Cognitive and AI aspects of perception, action and learning. 
+ Main Track 
+ Conference papers, describing original work with appropriate experimental evaluation and/or a self-contained theoretical contribution. Submitted conference papers should not have been published, or be under review for a journal, or another conference with published proceedings. Conference papers may be either long papers, of up to 15 pages, including references, or short papers of up to 6-9 pages, including references. Submitted papers should contain a substantial contribution that justifies their length, e.g. proofs of extensive experimental studies. Visit thehref="../dates/index.html" - Important Dates
+page for the Main Track cut-off dates. Visit thehref="../guidelines/index.html" - Submission Guidelines
+page for more information. Papers accepted to the Main Track will be presented at IJCLR. 
+ Recently Published Papers Track: 
+ IJCLR invites high-quality papers relevant to the scope of the conference, which have been recently published, or accepted for publication, by a first-class conference such as IJCAI, AAAI, NeurIPS, ICML, KDD, ECML/PKDD, ICDM, etc., or journals such as AIJ, MLJ, DMKD, JMLR, etc. Visit thehref="../dates/index.html" - Important Dates
+page for the Recently Published Papers Track cut-off dates. Visit thehref="../guidelines/index.html" - Submission Guidelines
+page for more information. Papers submitted to the “Recently Published Papers Track” will be accepted on the grounds of relevance and quality of the original publication venue. Accepted papers will be presented at IJCLR. 
+ Journal Special Issue: 
+ Please note that submissions to the Journal Special Issue for IJCLR 2025 are by invitation only and from the papers submitted to the conference.A post-conference special issue of the Machine Learning Journal is planned with papers selected by the PC from the "Main Track" and “Recently Published Papers Track (conference papers)". The authors of invited papers should submit a significantly revised and/or extended version of their conference papers to meet the MLJ criteria, and re-reviewed by the PC. More information including the deadline and submission instructions will be sent to the authors of invited papers and will be also available from the conference website. 
+ Publication: 
+ Conference papers (either short or long) will be included in the conference proceedings, to be published by Springer Verlag in the Lecture Notes in Artificial Intelligence (LNAI) Series. Late Breaking abstracts will be published on the conference website. A link to recently published papers will be included in the conference website. 
+ × 
+
+Important Dates information:
+Home 
+ Registration 
+ Speakers 
+ Programme 
+ href="index.html" - Dates 
+ href="/submission/index.html" - Submission 
+ href="../papers/index.html" - Call for Papers 
+ Organisation 
+ Attending 
+ About 
+ Back to topImportant Dates 
+ The deadline on each of the dates below is midnight AOE (Anywhere on Earth) time. 
+ Deadline | Date 
+ Conference paper submission | 31st May 2025 
+ IJCLR 2025 | Conference paper notification | 30th July 2025 
+ Extended abstracts & already published papers submission | 5th August 2025 
+ Journal Special Issue | By invitation from papers submitted to the conference | TBC 
+ Miscellaneous | Registration opens | TBC 
+ IJCLR 2025 Conference | 11-14 September 2025 
+ ×

@@ -1,0 +1,504 @@
+Conference CRITIS:
+
+href="https://critis2024.uniroma3.it" - 
+News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ The 19th International Conference on Critical Information Infrastructures Security 
+ Rome, September 18th-20th 2024 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/05/V3_CFP_CRITIS_2024.pdf" - Download Flyer
+Welcome to CRITIS2024 ! 
+ The CRITIS Conference 
+ In an era where the security and stability of critical infrastructures are increasingly under threat, this conference serves as a vital platform for interdisciplinary dialogue and collaboration. We welcome submissions focused on Critical (Information) Infrastructure Security aimed at addressing the challenges and solutions in defending our vital systems against emerging threats and vulnerabilities. 
+ Welcome to Rome 
+ The Eternal City welcomes you! Throughout the centuries, the magic of Rome has been recounted on paper in the words of poets and writers, wonderfully depicted in the works of great artists. Rome's grandiose monuments, hundreds of churches, and spectacular fountains outline its marvellous skyline, making it the city with the highest concentration of historical, archaeological, and architectural heritage worldwide. Its historic centre, bounded by the perimeter of the Aurelian Walls, is an overlay of evidence spanning nearly three millennia and has been listed as a UNESCO World Heritage Site. The heart of Catholic Christianity, Rome is also the only city in the world to host a foreign state within its borders, the enclave of Vatican City. 
+ Organization 
+ Sponsors 
+ Latest News 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/08/CRITISUpdatedtentativeprogram.pdf" - Tentative detailed programme is out
+! 
+ June 6th, 2024: applications are now open for the Young CRITIS Award! 
+ May 15th, 2024: In response to numerous requests, we have further extended the deadline for papers submission to May 31, 2024. 
+ April 15th 2024: Deadline extension. 
+ Call for Papers 
+ CRITIS 2024 continues the tradition of bringing forth innovative research in the field ofcritical information infrastructures protection C(I)IP, exploring ideas that address challenges to resilience and societal safety & security, and fostering dialogue with stakeholders. 
+ CRITIS 2024 welcomes especially but not limited to, research topics focusing on information exchange security and securing information infrastructures in various ways, also, topics related to hybrid threats and critical information infrastructure security are encouraged. Furthermore, during 2024, papers focusing oncomplex safety & security, digital twins, technology forecasting, monitoring, foresight, and scouting for C(I)IPare most welcome in a specialTechWatch & TechForecast track. 
+ Moreover,CRITIS 2024will also focus on critical infrastructure protection in general and in the context of C(I)IP. Papers, testbeds, datasets reports, and industrial/practical experience reports on that crisis are especially welcome. 
+ IMPORTANT DATESInvited Session Deadline: | April 15th | May 15th,2024 | May 31st, 2024 
+ Regular Paper Submission: | April 15th | May 15th,2024 | May 31st, 2024 
+ Ongoing Research Paper Submission: | May 15th | June 15th,2024 | June 30th, 2024 
+ Notification of acceptance - Regular Papers: | May 15th | June 15th,2024 | July 7th, 2024 
+ Notification of acceptance - Ongoing Research Papers: | June 15th | July 1st,2024 | July 15th, 2024 
+ Paper re-submission for inclusion in the pre-proceedings: | July 20th | July,2024 | September 1st, 2024 
+ Final version (for LNCS): | December 1st, 2024 
+ CRITIS 2024 Topics 
+ Topics for CRITIS 2024 include, but are not limited to:Protection of Cyber-Physical/Cyber-Physical Human Systems and Industrial Control Systems 
+ Analytics, Strategic Management, (C(I)IP Organization) 
+ Security Awareness & Crisis Management for C(I)IP, Human Factors and Critical Services 
+ Future, TechWatch & Forecast for C(I)IP and Services Oriented Approaches, Explainable AI and Digital Twins 
+ Safety & Security: Complex Vulnerability Analysis 
+ Intelligence Analysis & Quantum Intelligence 
+ Legal Aspects and Ethical Perspectives 
+ Climate change implications in Critical Infrastructures and services 
+ Natural Threats to Critical Infrastructures 
+ Young CRITIS Award 
+ Following the tradition of the previous years, CRITIS will continue to award the best work presented by young scientists have excelled in their work. To promote and support young researchers working in CIP, we will provide a grant for the best young researcher paper on critical infrastructure protection.Who should apply?Every young engineer / scientist interested in CRITIS who is less than 32 year old by Dec 31st, 2024 is invited to apply. We explicitly invite junior experts and researchers form universities, research organisations and industry to apply.ModerationBernhard M. Hämmerli, Lucerne University of Applied Sciences, Acris GmbH, Switzerland.ApplicationSubmit your contribution via EasyChair. 
+ Inform the General Chair (g.oliva@unicampus.it) that your contribution is an application for YCA by sending an e-mail with the subject | "YCA Application" | . In the e-mail have to specify the submission number(s) of your paper(s) and send as attachments your CV and the | Young CRITIS Award questionnaire | properly filled out. 
+ The deadline for the application isJuly 15th, 2024.If you do not get a acknowledgement of receipt, please try to resend in order to exclude transfer problems.Download YCA form here 
+ Paper Submission & Guidelines 
+ All contributions must be submitted viahref="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Feasychair.org%2Fconferences%2F%3Fconf%3Dcritis2024&data=05%7C02%7C%7C8824e6758922421ade2d08dc34797560%7Cffb4df68f464458ca54600fb3af66f6a%7C0%7C0%7C638442943464261986%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=Ip29jcyCiySoVZLhGrWDZZHkXnFiNSrrvWhleoDYJAw%3D&reserved=0" - EasyChair
+(please exclusively use this provided link for submissions). As per tradition, paper designated as "full paper" will be included in the post-proceedings published in SpringerLecture Notes in Computer Science(LNCS).Regular paper submission guidelines 
+ The following two paper categories are welcome. Any submission must be explicitly marked as “full paper” or “short paper”.Full papers | – scientific research papers, surveying works and industrial experiences describing significant C(I)IP advances. Papers should be no longer than 20 pages, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "regular papers" in the call for papers. 
+ Short papers | – early results or work in progress with initial findings. Papers should be 4 to 6 pages long, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "ongoing research" in the call for papers. Short papers will be presented as posters and they will NOT be included in the post-proceedings published in Springer Lecture Notes in Computer Science (LNCS). 
+ All papers must be original and not simultaneously submitted to another journal or conference. All paper submissions must contain a title, a short abstract, and a list of keywords. All submissions will be subjected to a thoroughdouble‐blind reviewby at least three reviewers. Submitted papers shall be anonymised, and all author names, affiliations, acknowledgements, and obvious traceable references should be eliminated to be eligible for the review process.Submission 
+ Submitted manuscripts should represent significant and novel research contributions. All manuscripts will have to be submitted in anonymized form for double-blind review. (Seehttps://cacm.acm.org/magazines/2018/6/228027-effectiveness-of-anonymization-in-double-blind-review/abstractfor arguments substantiating this change.) To that effect:The title page should not contain any author names or affiliations. 
+ Authors should carefully review figures and appendices (especially survey instruments) to ensure affiliations are not accidentally included. 
+ When referring to your previous work, do so in the third person, as though it were written by someone else. Only blind the reference itself in the (unusual) case that a third-person reference is infeasible. 
+ Authors may include links to websites that contain source code, tools, or other supplemental material. Neither the link in the paper nor the website or any of the materials therein may contain the authors’ names and affiliations. 
+ Papers that are not properly anonymized may be rejected without review.While submitted papers must be anonymous, authors may choose to give talks about their work, post a preprint of the paper online, disclose security vulnerabilities to vendors or the public, etc. during the review process. Submissions should be made according to the Springer LNCS format. For optimisation reasons, authors are encourage to use the followingLaTeX Proceedings Templates, available in the scentific autoring platform Overleaf. For detailed guidelines, please refer to the officialhref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - Guidelines for Authors of Papers to be Published in Springer Computer Science Proceedings.
+. Kindly note that we prefer the use ofAmerican English. Maximum length of text abstracts: 180 words. 
+ Registration 
+ ++++ Registration is now open! ++++ 
+ href="http://grupposymposia.onlinecongress.it/CRITIS2024" - REGISTRATION: CLICK HERE
+We are pleased to provide the fee structure for the upcoming CRITIS 2024 conference. Please find the details below: 
+  
+ Tickets | Price EUR 
+ Full Registration | 490 
+ Student Registration | 200 
+ Conference Dinner | 80 
+ Late Registration (after 1st September) | 550 
+ Late Student Registration (after 1st September) | 230 
+ Accompanying Person | 100 
+ Accompanying Person (after 1st September) | 120 
+ Please note that each registration is intended for ONE person and covers ONE accepted paper. The registration does not include the social dinner. Please also note that registration for the conference is not yet open. We will announce when registration is available and provide detailed instructions on how to register and the accepted payment methods. 
+ Organization 
+  
+ Organizing Committee CRITIS 2024 
+ HONORARY CHAIRFabio Pistella, | Italy 
+ GENERAL CHAIRSStefano Panzieri | , Director of MCIPlab (Models for Critical Infrastructure Protection laboratory), University Roma TRE, Italy 
+ Gabriele Oliva | , Director of the Complex Systems and Security Laboratory, University Campus Bio-Medico of Rome, Italy 
+ PROGRAM CHAIRSFederica Pascucci | , University Roma TRE, Italy 
+ Luca Faramondi | , University Campus Bio-Medico of Rome, Italy 
+ Special Session ChairMaurizio Pollino | Head of "Analysis and Protection of Critical Infrastructures" Laboratory - ENEA 
+ Poster Session ChairGregorio D'Agostino | - Knowledge Exchange Officer, ENEA – Netonets, President 
+ Local Organizing ChairsValeria Bonagura | , University Roma TRE, Italy 
+ Camilla Fioravanti | , University Campus Bio-Medico of Roma, Italy 
+ Industrial ChairChiara Foglietta | , University Roma TRE, Italy 
+ Publicity and Communication ChairGraziana Cavone | , University Roma TRE, Italy 
+ Young Critis Award ChairBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Critis Steering Committee ChairsBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Javier Lopez | , University of Malaga, Spain 
+ Stephen D. Wolthusen | , Royal Holloway, University of London, UK and NTNU, Norway | Program CommitteeCristina Alcaraz, University of Malaga 
+ Magnus Almagren, Chalmers University of Technology 
+ Sandro Bologna, AIIC 
+ Valeria Bonagura, Università degli Studi Roma TRE 
+ Graziana Cavone, Università degli Studi Roma TRE 
+ Gregorio D'Agostino, ENEA 
+ Antonio Di Pietro, ENEA 
+ Camilla Fioravanti, Campus Bio-Medico University 
+ Chiara Foglietta, Università degli Studi Roma TRE 
+ Joseph Gardiner, University of Bristol 
+ Dimitris Gritzalis, Athens University of Economics & Buisness 
+ Simone Guarino, Campus Bio-Medico University 
+ Chris Hankin, Imperial College London 
+ Jukka Heikkenen, Univeristy of Turku 
+ Mikel Iturbe, Mondragon Unibersitatea 
+ Panayiotis Kotzanikolaou, University of Piraeus 
+ Linas Martišauskas, Lithuanian Energy Institute 
+ Päivi Mattila, Laurea 
+ Simin Nadjm-Tehrani, Linköping university 
+ Gabriele Oliva, University Campus Biomedico of Rome 
+ Stefano Panzieri, Università degli Studi Roma TRE 
+ Federica Pascucci, Università degli Studi Roma TRE 
+ Maurizio Pollino, ENEA 
+ Peter Popov, City University 
+ Vladimir Stankovic, City University of London 
+ Alberto Tofani, ENEA 
+ Venue 
+ The CRITIS 2024 conference will be hosted at theDepartment of Civil, Computer Science and Aeronautical Technologies Engineeringof the University of Roma Tre, located in Rome, Italy. You can find us atVia Vito Volterra 62, nestled within the Marconi district in the southern quadrant of the city. 
+ How to Reach the Venue 
+ The pedestrian entrance to the venue is located inVia Vito Volterra 62. The most efficient and straightforward route to reach the venue is by metro, with the nearest station being Stazione Basilica S. Paolo on the B line (also known as blue line). From there, you can easily reach the venue with just a10-minute walkfollowing these directions: 
+ Upon exiting the station, head towards the Basilica di San Paolo. If you're on the right side, you'll easily spot the white bell tower of the Basilica. 
+ Proceed to cross the traffic light and continue westward along Viale Ferdinando Baldelli, staying left-hand sidewalk. 
+ At the traffic lights, shortly after passing the Bambino Gesù Hospital, make a left turn onto Via Tullio Levi Civita, ensuring you stay on the right-hand sidewalk. 
+ As soon as you reach the intersection of Via Tullio Levi Civita and Viale Marconi, cross Viale Marconi. 
+ Continue straight for one more block along Via Corrado Segrè. Here, you will reach the pedestrian gate of the Faculty, identifiable by the University's distinctive pyramid-shaped logo. 
+ Alternatively, bus 170, which connects Stazione Termini (an interchange stop between the A and B metro lines) with the EUR district, stops at Viale Guglielmo Marconi, just one block away from the venue in both southbound and northbound directions. Additionally, bus 23 departs from the terminal bus stop at Largo San Leonardo Murialdo, just a 5-minute walk from the venue, and provides a direct connection to the Vatican City district. It's important to note that the bus service may experience delays during heavy traffic or rush hours. Furthermore, bus 670 has its terminus at Via Salvatore Pincherle, which is about 400 meters far from the conference venue. It is important to note that the bus service may experience delays during heavy traffic or rush hours. 
+ Parking Spots 
+ A spacious free car parking lot, open until late evening, is conveniently located just 50 meters from the venue atVia della Vasca Navale 109. To reach the venue from there, simply head east until you reach the gate atVia della Vasca Navale 81. 
+ Special Discounts for Conference Participants 
+ We are pleased to offer exclusive discounts for our conferenfe attendees at two estimated establishments: 
+ Hotel Pulitzer Roma | , Viale Guglielmo Marconi, 905, 00146 Roma RM 
+ BV Oly Hotel | , Via del Santuario Regina degli Apostoli, 36, 00145 Roma RM 
+ Additional instructions on how to access these discounts will be sent via email to all registered participants. We hope you enjoy your stay and dining experience! 
+ Social Events 
+ We are delighted to invite you to a guided tour of Rome followed by a social dinner on the rooftop ofThe Hive Hotelon September 19th. 
+ Tour Details: 
+ The tour includes a guided visit inside theThe Basilica of Santa Maria Maggioreand a guided walk through the Monti district. The meeting point is directly atPiazza di Santa Maria Maggioreat 6:00 PM. However, for those who prefer, we are organizing a group departure directly from the university, which will leave at the end of the afternoon session using public transportation. 
+ Meeting Point:Piazza di Santa Maria Maggioreat 6:00 PM 
+ Tour Duration:The tour will conclude at 7:45 PM, after which guests will be transported directly toThe Hive Hotel. 
+ Dinner Time:The social dinner will begin at 8:00 PM at the rooftop ofThe Hive Hotel. 
+ Transportation: 
+ Below is a list of available public transport options to reach the hotel from the university area (and vice-versa): 
+ Bus: mMB (Night Bus) or 170. 
+ Metro: Line A to Repubblica (5 min by foot to reach the hotel) or Line B to Termini (7 min by foot to reach the hotel) 
+ Taxi: Directly to Piazza di Santa Maria Maggiore 
+ Please be aware that during the week, the metro in Rome closes at 9.00 PM, so taking the metro after dinner is not an option. We look forward to your participation in both the tour and the dinner. 
+ Contact us 
+  
+ Stefano Panzieri | E-mail | : stefano.panzieri@uniroma3.it 
+ Address | : University Roma Tre, Via della Vasca Navale, 79, 00146, Roma, Italy | Gabriele Oliva | E-mail | : g.oliva@unicampus.it 
+ Address | : Università Campus Biomedico, Via Alvaro del Portillo, 21, 00128, Roma, Italy 
+
+Call for Papers information:
+href="https://critis2024.uniroma3.it" - 
+News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ The 19th International Conference on Critical Information Infrastructures Security 
+ Rome, September 18th-20th 2024 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/05/V3_CFP_CRITIS_2024.pdf" - Download Flyer
+Welcome to CRITIS2024 ! 
+ The CRITIS Conference 
+ In an era where the security and stability of critical infrastructures are increasingly under threat, this conference serves as a vital platform for interdisciplinary dialogue and collaboration. We welcome submissions focused on Critical (Information) Infrastructure Security aimed at addressing the challenges and solutions in defending our vital systems against emerging threats and vulnerabilities. 
+ Welcome to Rome 
+ The Eternal City welcomes you! Throughout the centuries, the magic of Rome has been recounted on paper in the words of poets and writers, wonderfully depicted in the works of great artists. Rome's grandiose monuments, hundreds of churches, and spectacular fountains outline its marvellous skyline, making it the city with the highest concentration of historical, archaeological, and architectural heritage worldwide. Its historic centre, bounded by the perimeter of the Aurelian Walls, is an overlay of evidence spanning nearly three millennia and has been listed as a UNESCO World Heritage Site. The heart of Catholic Christianity, Rome is also the only city in the world to host a foreign state within its borders, the enclave of Vatican City. 
+ Organization 
+ Sponsors 
+ Latest News 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/08/CRITISUpdatedtentativeprogram.pdf" - Tentative detailed programme is out
+! 
+ June 6th, 2024: applications are now open for the Young CRITIS Award! 
+ May 15th, 2024: In response to numerous requests, we have further extended the deadline for papers submission to May 31, 2024. 
+ April 15th 2024: Deadline extension. 
+ Call for Papers 
+ CRITIS 2024 continues the tradition of bringing forth innovative research in the field ofcritical information infrastructures protection C(I)IP, exploring ideas that address challenges to resilience and societal safety & security, and fostering dialogue with stakeholders. 
+ CRITIS 2024 welcomes especially but not limited to, research topics focusing on information exchange security and securing information infrastructures in various ways, also, topics related to hybrid threats and critical information infrastructure security are encouraged. Furthermore, during 2024, papers focusing oncomplex safety & security, digital twins, technology forecasting, monitoring, foresight, and scouting for C(I)IPare most welcome in a specialTechWatch & TechForecast track. 
+ Moreover,CRITIS 2024will also focus on critical infrastructure protection in general and in the context of C(I)IP. Papers, testbeds, datasets reports, and industrial/practical experience reports on that crisis are especially welcome. 
+ IMPORTANT DATESInvited Session Deadline: | April 15th | May 15th,2024 | May 31st, 2024 
+ Regular Paper Submission: | April 15th | May 15th,2024 | May 31st, 2024 
+ Ongoing Research Paper Submission: | May 15th | June 15th,2024 | June 30th, 2024 
+ Notification of acceptance - Regular Papers: | May 15th | June 15th,2024 | July 7th, 2024 
+ Notification of acceptance - Ongoing Research Papers: | June 15th | July 1st,2024 | July 15th, 2024 
+ Paper re-submission for inclusion in the pre-proceedings: | July 20th | July,2024 | September 1st, 2024 
+ Final version (for LNCS): | December 1st, 2024 
+ CRITIS 2024 Topics 
+ Topics for CRITIS 2024 include, but are not limited to:Protection of Cyber-Physical/Cyber-Physical Human Systems and Industrial Control Systems 
+ Analytics, Strategic Management, (C(I)IP Organization) 
+ Security Awareness & Crisis Management for C(I)IP, Human Factors and Critical Services 
+ Future, TechWatch & Forecast for C(I)IP and Services Oriented Approaches, Explainable AI and Digital Twins 
+ Safety & Security: Complex Vulnerability Analysis 
+ Intelligence Analysis & Quantum Intelligence 
+ Legal Aspects and Ethical Perspectives 
+ Climate change implications in Critical Infrastructures and services 
+ Natural Threats to Critical Infrastructures 
+ Young CRITIS Award 
+ Following the tradition of the previous years, CRITIS will continue to award the best work presented by young scientists have excelled in their work. To promote and support young researchers working in CIP, we will provide a grant for the best young researcher paper on critical infrastructure protection.Who should apply?Every young engineer / scientist interested in CRITIS who is less than 32 year old by Dec 31st, 2024 is invited to apply. We explicitly invite junior experts and researchers form universities, research organisations and industry to apply.ModerationBernhard M. Hämmerli, Lucerne University of Applied Sciences, Acris GmbH, Switzerland.ApplicationSubmit your contribution via EasyChair. 
+ Inform the General Chair (g.oliva@unicampus.it) that your contribution is an application for YCA by sending an e-mail with the subject | "YCA Application" | . In the e-mail have to specify the submission number(s) of your paper(s) and send as attachments your CV and the | Young CRITIS Award questionnaire | properly filled out. 
+ The deadline for the application isJuly 15th, 2024.If you do not get a acknowledgement of receipt, please try to resend in order to exclude transfer problems.Download YCA form here 
+ Paper Submission & Guidelines 
+ All contributions must be submitted viahref="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Feasychair.org%2Fconferences%2F%3Fconf%3Dcritis2024&data=05%7C02%7C%7C8824e6758922421ade2d08dc34797560%7Cffb4df68f464458ca54600fb3af66f6a%7C0%7C0%7C638442943464261986%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=Ip29jcyCiySoVZLhGrWDZZHkXnFiNSrrvWhleoDYJAw%3D&reserved=0" - EasyChair
+(please exclusively use this provided link for submissions). As per tradition, paper designated as "full paper" will be included in the post-proceedings published in SpringerLecture Notes in Computer Science(LNCS).Regular paper submission guidelines 
+ The following two paper categories are welcome. Any submission must be explicitly marked as “full paper” or “short paper”.Full papers | – scientific research papers, surveying works and industrial experiences describing significant C(I)IP advances. Papers should be no longer than 20 pages, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "regular papers" in the call for papers. 
+ Short papers | – early results or work in progress with initial findings. Papers should be 4 to 6 pages long, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "ongoing research" in the call for papers. Short papers will be presented as posters and they will NOT be included in the post-proceedings published in Springer Lecture Notes in Computer Science (LNCS). 
+ All papers must be original and not simultaneously submitted to another journal or conference. All paper submissions must contain a title, a short abstract, and a list of keywords. All submissions will be subjected to a thoroughdouble‐blind reviewby at least three reviewers. Submitted papers shall be anonymised, and all author names, affiliations, acknowledgements, and obvious traceable references should be eliminated to be eligible for the review process.Submission 
+ Submitted manuscripts should represent significant and novel research contributions. All manuscripts will have to be submitted in anonymized form for double-blind review. (Seehttps://cacm.acm.org/magazines/2018/6/228027-effectiveness-of-anonymization-in-double-blind-review/abstractfor arguments substantiating this change.) To that effect:The title page should not contain any author names or affiliations. 
+ Authors should carefully review figures and appendices (especially survey instruments) to ensure affiliations are not accidentally included. 
+ When referring to your previous work, do so in the third person, as though it were written by someone else. Only blind the reference itself in the (unusual) case that a third-person reference is infeasible. 
+ Authors may include links to websites that contain source code, tools, or other supplemental material. Neither the link in the paper nor the website or any of the materials therein may contain the authors’ names and affiliations. 
+ Papers that are not properly anonymized may be rejected without review.While submitted papers must be anonymous, authors may choose to give talks about their work, post a preprint of the paper online, disclose security vulnerabilities to vendors or the public, etc. during the review process. Submissions should be made according to the Springer LNCS format. For optimisation reasons, authors are encourage to use the followingLaTeX Proceedings Templates, available in the scentific autoring platform Overleaf. For detailed guidelines, please refer to the officialhref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - Guidelines for Authors of Papers to be Published in Springer Computer Science Proceedings.
+. Kindly note that we prefer the use ofAmerican English. Maximum length of text abstracts: 180 words. 
+ Registration 
+ ++++ Registration is now open! ++++ 
+ href="http://grupposymposia.onlinecongress.it/CRITIS2024" - REGISTRATION: CLICK HERE
+We are pleased to provide the fee structure for the upcoming CRITIS 2024 conference. Please find the details below: 
+  
+ Tickets | Price EUR 
+ Full Registration | 490 
+ Student Registration | 200 
+ Conference Dinner | 80 
+ Late Registration (after 1st September) | 550 
+ Late Student Registration (after 1st September) | 230 
+ Accompanying Person | 100 
+ Accompanying Person (after 1st September) | 120 
+ Please note that each registration is intended for ONE person and covers ONE accepted paper. The registration does not include the social dinner. Please also note that registration for the conference is not yet open. We will announce when registration is available and provide detailed instructions on how to register and the accepted payment methods. 
+ Organization 
+  
+ Organizing Committee CRITIS 2024 
+ HONORARY CHAIRFabio Pistella, | Italy 
+ GENERAL CHAIRSStefano Panzieri | , Director of MCIPlab (Models for Critical Infrastructure Protection laboratory), University Roma TRE, Italy 
+ Gabriele Oliva | , Director of the Complex Systems and Security Laboratory, University Campus Bio-Medico of Rome, Italy 
+ PROGRAM CHAIRSFederica Pascucci | , University Roma TRE, Italy 
+ Luca Faramondi | , University Campus Bio-Medico of Rome, Italy 
+ Special Session ChairMaurizio Pollino | Head of "Analysis and Protection of Critical Infrastructures" Laboratory - ENEA 
+ Poster Session ChairGregorio D'Agostino | - Knowledge Exchange Officer, ENEA – Netonets, President 
+ Local Organizing ChairsValeria Bonagura | , University Roma TRE, Italy 
+ Camilla Fioravanti | , University Campus Bio-Medico of Roma, Italy 
+ Industrial ChairChiara Foglietta | , University Roma TRE, Italy 
+ Publicity and Communication ChairGraziana Cavone | , University Roma TRE, Italy 
+ Young Critis Award ChairBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Critis Steering Committee ChairsBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Javier Lopez | , University of Malaga, Spain 
+ Stephen D. Wolthusen | , Royal Holloway, University of London, UK and NTNU, Norway | Program CommitteeCristina Alcaraz, University of Malaga 
+ Magnus Almagren, Chalmers University of Technology 
+ Sandro Bologna, AIIC 
+ Valeria Bonagura, Università degli Studi Roma TRE 
+ Graziana Cavone, Università degli Studi Roma TRE 
+ Gregorio D'Agostino, ENEA 
+ Antonio Di Pietro, ENEA 
+ Camilla Fioravanti, Campus Bio-Medico University 
+ Chiara Foglietta, Università degli Studi Roma TRE 
+ Joseph Gardiner, University of Bristol 
+ Dimitris Gritzalis, Athens University of Economics & Buisness 
+ Simone Guarino, Campus Bio-Medico University 
+ Chris Hankin, Imperial College London 
+ Jukka Heikkenen, Univeristy of Turku 
+ Mikel Iturbe, Mondragon Unibersitatea 
+ Panayiotis Kotzanikolaou, University of Piraeus 
+ Linas Martišauskas, Lithuanian Energy Institute 
+ Päivi Mattila, Laurea 
+ Simin Nadjm-Tehrani, Linköping university 
+ Gabriele Oliva, University Campus Biomedico of Rome 
+ Stefano Panzieri, Università degli Studi Roma TRE 
+ Federica Pascucci, Università degli Studi Roma TRE 
+ Maurizio Pollino, ENEA 
+ Peter Popov, City University 
+ Vladimir Stankovic, City University of London 
+ Alberto Tofani, ENEA 
+ Venue 
+ The CRITIS 2024 conference will be hosted at theDepartment of Civil, Computer Science and Aeronautical Technologies Engineeringof the University of Roma Tre, located in Rome, Italy. You can find us atVia Vito Volterra 62, nestled within the Marconi district in the southern quadrant of the city. 
+ How to Reach the Venue 
+ The pedestrian entrance to the venue is located inVia Vito Volterra 62. The most efficient and straightforward route to reach the venue is by metro, with the nearest station being Stazione Basilica S. Paolo on the B line (also known as blue line). From there, you can easily reach the venue with just a10-minute walkfollowing these directions: 
+ Upon exiting the station, head towards the Basilica di San Paolo. If you're on the right side, you'll easily spot the white bell tower of the Basilica. 
+ Proceed to cross the traffic light and continue westward along Viale Ferdinando Baldelli, staying left-hand sidewalk. 
+ At the traffic lights, shortly after passing the Bambino Gesù Hospital, make a left turn onto Via Tullio Levi Civita, ensuring you stay on the right-hand sidewalk. 
+ As soon as you reach the intersection of Via Tullio Levi Civita and Viale Marconi, cross Viale Marconi. 
+ Continue straight for one more block along Via Corrado Segrè. Here, you will reach the pedestrian gate of the Faculty, identifiable by the University's distinctive pyramid-shaped logo. 
+ Alternatively, bus 170, which connects Stazione Termini (an interchange stop between the A and B metro lines) with the EUR district, stops at Viale Guglielmo Marconi, just one block away from the venue in both southbound and northbound directions. Additionally, bus 23 departs from the terminal bus stop at Largo San Leonardo Murialdo, just a 5-minute walk from the venue, and provides a direct connection to the Vatican City district. It's important to note that the bus service may experience delays during heavy traffic or rush hours. Furthermore, bus 670 has its terminus at Via Salvatore Pincherle, which is about 400 meters far from the conference venue. It is important to note that the bus service may experience delays during heavy traffic or rush hours. 
+ Parking Spots 
+ A spacious free car parking lot, open until late evening, is conveniently located just 50 meters from the venue atVia della Vasca Navale 109. To reach the venue from there, simply head east until you reach the gate atVia della Vasca Navale 81. 
+ Special Discounts for Conference Participants 
+ We are pleased to offer exclusive discounts for our conferenfe attendees at two estimated establishments: 
+ Hotel Pulitzer Roma | , Viale Guglielmo Marconi, 905, 00146 Roma RM 
+ BV Oly Hotel | , Via del Santuario Regina degli Apostoli, 36, 00145 Roma RM 
+ Additional instructions on how to access these discounts will be sent via email to all registered participants. We hope you enjoy your stay and dining experience! 
+ Social Events 
+ We are delighted to invite you to a guided tour of Rome followed by a social dinner on the rooftop ofThe Hive Hotelon September 19th. 
+ Tour Details: 
+ The tour includes a guided visit inside theThe Basilica of Santa Maria Maggioreand a guided walk through the Monti district. The meeting point is directly atPiazza di Santa Maria Maggioreat 6:00 PM. However, for those who prefer, we are organizing a group departure directly from the university, which will leave at the end of the afternoon session using public transportation. 
+ Meeting Point:Piazza di Santa Maria Maggioreat 6:00 PM 
+ Tour Duration:The tour will conclude at 7:45 PM, after which guests will be transported directly toThe Hive Hotel. 
+ Dinner Time:The social dinner will begin at 8:00 PM at the rooftop ofThe Hive Hotel. 
+ Transportation: 
+ Below is a list of available public transport options to reach the hotel from the university area (and vice-versa): 
+ Bus: mMB (Night Bus) or 170. 
+ Metro: Line A to Repubblica (5 min by foot to reach the hotel) or Line B to Termini (7 min by foot to reach the hotel) 
+ Taxi: Directly to Piazza di Santa Maria Maggiore 
+ Please be aware that during the week, the metro in Rome closes at 9.00 PM, so taking the metro after dinner is not an option. We look forward to your participation in both the tour and the dinner. 
+ Contact us 
+  
+ Stefano Panzieri | E-mail | : stefano.panzieri@uniroma3.it 
+ Address | : University Roma Tre, Via della Vasca Navale, 79, 00146, Roma, Italy | Gabriele Oliva | E-mail | : g.oliva@unicampus.it 
+ Address | : Università Campus Biomedico, Via Alvaro del Portillo, 21, 00128, Roma, Italy 
+
+Important Dates information:
+href="https://critis2024.uniroma3.it" - 
+News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ News 
+ href="#about" - Call for Papers 
+ href="#paper-submission" - Paper Submission 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/09/Programma.pdf" - Programme 
+ Online Proceedings 
+ Registration 
+ Organization 
+ Venue 
+ Social Events 
+ Contact us 
+ The 19th International Conference on Critical Information Infrastructures Security 
+ Rome, September 18th-20th 2024 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/05/V3_CFP_CRITIS_2024.pdf" - Download Flyer
+Welcome to CRITIS2024 ! 
+ The CRITIS Conference 
+ In an era where the security and stability of critical infrastructures are increasingly under threat, this conference serves as a vital platform for interdisciplinary dialogue and collaboration. We welcome submissions focused on Critical (Information) Infrastructure Security aimed at addressing the challenges and solutions in defending our vital systems against emerging threats and vulnerabilities. 
+ Welcome to Rome 
+ The Eternal City welcomes you! Throughout the centuries, the magic of Rome has been recounted on paper in the words of poets and writers, wonderfully depicted in the works of great artists. Rome's grandiose monuments, hundreds of churches, and spectacular fountains outline its marvellous skyline, making it the city with the highest concentration of historical, archaeological, and architectural heritage worldwide. Its historic centre, bounded by the perimeter of the Aurelian Walls, is an overlay of evidence spanning nearly three millennia and has been listed as a UNESCO World Heritage Site. The heart of Catholic Christianity, Rome is also the only city in the world to host a foreign state within its borders, the enclave of Vatican City. 
+ Organization 
+ Sponsors 
+ Latest News 
+ href="https://critis2024.uniroma3.it/wp-content/uploads/2024/08/CRITISUpdatedtentativeprogram.pdf" - Tentative detailed programme is out
+! 
+ June 6th, 2024: applications are now open for the Young CRITIS Award! 
+ May 15th, 2024: In response to numerous requests, we have further extended the deadline for papers submission to May 31, 2024. 
+ April 15th 2024: Deadline extension. 
+ Call for Papers 
+ CRITIS 2024 continues the tradition of bringing forth innovative research in the field ofcritical information infrastructures protection C(I)IP, exploring ideas that address challenges to resilience and societal safety & security, and fostering dialogue with stakeholders. 
+ CRITIS 2024 welcomes especially but not limited to, research topics focusing on information exchange security and securing information infrastructures in various ways, also, topics related to hybrid threats and critical information infrastructure security are encouraged. Furthermore, during 2024, papers focusing oncomplex safety & security, digital twins, technology forecasting, monitoring, foresight, and scouting for C(I)IPare most welcome in a specialTechWatch & TechForecast track. 
+ Moreover,CRITIS 2024will also focus on critical infrastructure protection in general and in the context of C(I)IP. Papers, testbeds, datasets reports, and industrial/practical experience reports on that crisis are especially welcome. 
+ IMPORTANT DATESInvited Session Deadline: | April 15th | May 15th,2024 | May 31st, 2024 
+ Regular Paper Submission: | April 15th | May 15th,2024 | May 31st, 2024 
+ Ongoing Research Paper Submission: | May 15th | June 15th,2024 | June 30th, 2024 
+ Notification of acceptance - Regular Papers: | May 15th | June 15th,2024 | July 7th, 2024 
+ Notification of acceptance - Ongoing Research Papers: | June 15th | July 1st,2024 | July 15th, 2024 
+ Paper re-submission for inclusion in the pre-proceedings: | July 20th | July,2024 | September 1st, 2024 
+ Final version (for LNCS): | December 1st, 2024 
+ CRITIS 2024 Topics 
+ Topics for CRITIS 2024 include, but are not limited to:Protection of Cyber-Physical/Cyber-Physical Human Systems and Industrial Control Systems 
+ Analytics, Strategic Management, (C(I)IP Organization) 
+ Security Awareness & Crisis Management for C(I)IP, Human Factors and Critical Services 
+ Future, TechWatch & Forecast for C(I)IP and Services Oriented Approaches, Explainable AI and Digital Twins 
+ Safety & Security: Complex Vulnerability Analysis 
+ Intelligence Analysis & Quantum Intelligence 
+ Legal Aspects and Ethical Perspectives 
+ Climate change implications in Critical Infrastructures and services 
+ Natural Threats to Critical Infrastructures 
+ Young CRITIS Award 
+ Following the tradition of the previous years, CRITIS will continue to award the best work presented by young scientists have excelled in their work. To promote and support young researchers working in CIP, we will provide a grant for the best young researcher paper on critical infrastructure protection.Who should apply?Every young engineer / scientist interested in CRITIS who is less than 32 year old by Dec 31st, 2024 is invited to apply. We explicitly invite junior experts and researchers form universities, research organisations and industry to apply.ModerationBernhard M. Hämmerli, Lucerne University of Applied Sciences, Acris GmbH, Switzerland.ApplicationSubmit your contribution via EasyChair. 
+ Inform the General Chair (g.oliva@unicampus.it) that your contribution is an application for YCA by sending an e-mail with the subject | "YCA Application" | . In the e-mail have to specify the submission number(s) of your paper(s) and send as attachments your CV and the | Young CRITIS Award questionnaire | properly filled out. 
+ The deadline for the application isJuly 15th, 2024.If you do not get a acknowledgement of receipt, please try to resend in order to exclude transfer problems.Download YCA form here 
+ Paper Submission & Guidelines 
+ All contributions must be submitted viahref="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Feasychair.org%2Fconferences%2F%3Fconf%3Dcritis2024&data=05%7C02%7C%7C8824e6758922421ade2d08dc34797560%7Cffb4df68f464458ca54600fb3af66f6a%7C0%7C0%7C638442943464261986%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=Ip29jcyCiySoVZLhGrWDZZHkXnFiNSrrvWhleoDYJAw%3D&reserved=0" - EasyChair
+(please exclusively use this provided link for submissions). As per tradition, paper designated as "full paper" will be included in the post-proceedings published in SpringerLecture Notes in Computer Science(LNCS).Regular paper submission guidelines 
+ The following two paper categories are welcome. Any submission must be explicitly marked as “full paper” or “short paper”.Full papers | – scientific research papers, surveying works and industrial experiences describing significant C(I)IP advances. Papers should be no longer than 20 pages, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "regular papers" in the call for papers. 
+ Short papers | – early results or work in progress with initial findings. Papers should be 4 to 6 pages long, including bibliography and well‐marked appendices. These submissions correspond to what was previously indicated as "ongoing research" in the call for papers. Short papers will be presented as posters and they will NOT be included in the post-proceedings published in Springer Lecture Notes in Computer Science (LNCS). 
+ All papers must be original and not simultaneously submitted to another journal or conference. All paper submissions must contain a title, a short abstract, and a list of keywords. All submissions will be subjected to a thoroughdouble‐blind reviewby at least three reviewers. Submitted papers shall be anonymised, and all author names, affiliations, acknowledgements, and obvious traceable references should be eliminated to be eligible for the review process.Submission 
+ Submitted manuscripts should represent significant and novel research contributions. All manuscripts will have to be submitted in anonymized form for double-blind review. (Seehttps://cacm.acm.org/magazines/2018/6/228027-effectiveness-of-anonymization-in-double-blind-review/abstractfor arguments substantiating this change.) To that effect:The title page should not contain any author names or affiliations. 
+ Authors should carefully review figures and appendices (especially survey instruments) to ensure affiliations are not accidentally included. 
+ When referring to your previous work, do so in the third person, as though it were written by someone else. Only blind the reference itself in the (unusual) case that a third-person reference is infeasible. 
+ Authors may include links to websites that contain source code, tools, or other supplemental material. Neither the link in the paper nor the website or any of the materials therein may contain the authors’ names and affiliations. 
+ Papers that are not properly anonymized may be rejected without review.While submitted papers must be anonymous, authors may choose to give talks about their work, post a preprint of the paper online, disclose security vulnerabilities to vendors or the public, etc. during the review process. Submissions should be made according to the Springer LNCS format. For optimisation reasons, authors are encourage to use the followingLaTeX Proceedings Templates, available in the scentific autoring platform Overleaf. For detailed guidelines, please refer to the officialhref="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" - Guidelines for Authors of Papers to be Published in Springer Computer Science Proceedings.
+. Kindly note that we prefer the use ofAmerican English. Maximum length of text abstracts: 180 words. 
+ Registration 
+ ++++ Registration is now open! ++++ 
+ href="http://grupposymposia.onlinecongress.it/CRITIS2024" - REGISTRATION: CLICK HERE
+We are pleased to provide the fee structure for the upcoming CRITIS 2024 conference. Please find the details below: 
+  
+ Tickets | Price EUR 
+ Full Registration | 490 
+ Student Registration | 200 
+ Conference Dinner | 80 
+ Late Registration (after 1st September) | 550 
+ Late Student Registration (after 1st September) | 230 
+ Accompanying Person | 100 
+ Accompanying Person (after 1st September) | 120 
+ Please note that each registration is intended for ONE person and covers ONE accepted paper. The registration does not include the social dinner. Please also note that registration for the conference is not yet open. We will announce when registration is available and provide detailed instructions on how to register and the accepted payment methods. 
+ Organization 
+  
+ Organizing Committee CRITIS 2024 
+ HONORARY CHAIRFabio Pistella, | Italy 
+ GENERAL CHAIRSStefano Panzieri | , Director of MCIPlab (Models for Critical Infrastructure Protection laboratory), University Roma TRE, Italy 
+ Gabriele Oliva | , Director of the Complex Systems and Security Laboratory, University Campus Bio-Medico of Rome, Italy 
+ PROGRAM CHAIRSFederica Pascucci | , University Roma TRE, Italy 
+ Luca Faramondi | , University Campus Bio-Medico of Rome, Italy 
+ Special Session ChairMaurizio Pollino | Head of "Analysis and Protection of Critical Infrastructures" Laboratory - ENEA 
+ Poster Session ChairGregorio D'Agostino | - Knowledge Exchange Officer, ENEA – Netonets, President 
+ Local Organizing ChairsValeria Bonagura | , University Roma TRE, Italy 
+ Camilla Fioravanti | , University Campus Bio-Medico of Roma, Italy 
+ Industrial ChairChiara Foglietta | , University Roma TRE, Italy 
+ Publicity and Communication ChairGraziana Cavone | , University Roma TRE, Italy 
+ Young Critis Award ChairBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Critis Steering Committee ChairsBernhard M. Hämmerli | , Lucerne University of Applied Sciences, Acris GmbH, Switzerland 
+ Javier Lopez | , University of Malaga, Spain 
+ Stephen D. Wolthusen | , Royal Holloway, University of London, UK and NTNU, Norway | Program CommitteeCristina Alcaraz, University of Malaga 
+ Magnus Almagren, Chalmers University of Technology 
+ Sandro Bologna, AIIC 
+ Valeria Bonagura, Università degli Studi Roma TRE 
+ Graziana Cavone, Università degli Studi Roma TRE 
+ Gregorio D'Agostino, ENEA 
+ Antonio Di Pietro, ENEA 
+ Camilla Fioravanti, Campus Bio-Medico University 
+ Chiara Foglietta, Università degli Studi Roma TRE 
+ Joseph Gardiner, University of Bristol 
+ Dimitris Gritzalis, Athens University of Economics & Buisness 
+ Simone Guarino, Campus Bio-Medico University 
+ Chris Hankin, Imperial College London 
+ Jukka Heikkenen, Univeristy of Turku 
+ Mikel Iturbe, Mondragon Unibersitatea 
+ Panayiotis Kotzanikolaou, University of Piraeus 
+ Linas Martišauskas, Lithuanian Energy Institute 
+ Päivi Mattila, Laurea 
+ Simin Nadjm-Tehrani, Linköping university 
+ Gabriele Oliva, University Campus Biomedico of Rome 
+ Stefano Panzieri, Università degli Studi Roma TRE 
+ Federica Pascucci, Università degli Studi Roma TRE 
+ Maurizio Pollino, ENEA 
+ Peter Popov, City University 
+ Vladimir Stankovic, City University of London 
+ Alberto Tofani, ENEA 
+ Venue 
+ The CRITIS 2024 conference will be hosted at theDepartment of Civil, Computer Science and Aeronautical Technologies Engineeringof the University of Roma Tre, located in Rome, Italy. You can find us atVia Vito Volterra 62, nestled within the Marconi district in the southern quadrant of the city. 
+ How to Reach the Venue 
+ The pedestrian entrance to the venue is located inVia Vito Volterra 62. The most efficient and straightforward route to reach the venue is by metro, with the nearest station being Stazione Basilica S. Paolo on the B line (also known as blue line). From there, you can easily reach the venue with just a10-minute walkfollowing these directions: 
+ Upon exiting the station, head towards the Basilica di San Paolo. If you're on the right side, you'll easily spot the white bell tower of the Basilica. 
+ Proceed to cross the traffic light and continue westward along Viale Ferdinando Baldelli, staying left-hand sidewalk. 
+ At the traffic lights, shortly after passing the Bambino Gesù Hospital, make a left turn onto Via Tullio Levi Civita, ensuring you stay on the right-hand sidewalk. 
+ As soon as you reach the intersection of Via Tullio Levi Civita and Viale Marconi, cross Viale Marconi. 
+ Continue straight for one more block along Via Corrado Segrè. Here, you will reach the pedestrian gate of the Faculty, identifiable by the University's distinctive pyramid-shaped logo. 
+ Alternatively, bus 170, which connects Stazione Termini (an interchange stop between the A and B metro lines) with the EUR district, stops at Viale Guglielmo Marconi, just one block away from the venue in both southbound and northbound directions. Additionally, bus 23 departs from the terminal bus stop at Largo San Leonardo Murialdo, just a 5-minute walk from the venue, and provides a direct connection to the Vatican City district. It's important to note that the bus service may experience delays during heavy traffic or rush hours. Furthermore, bus 670 has its terminus at Via Salvatore Pincherle, which is about 400 meters far from the conference venue. It is important to note that the bus service may experience delays during heavy traffic or rush hours. 
+ Parking Spots 
+ A spacious free car parking lot, open until late evening, is conveniently located just 50 meters from the venue atVia della Vasca Navale 109. To reach the venue from there, simply head east until you reach the gate atVia della Vasca Navale 81. 
+ Special Discounts for Conference Participants 
+ We are pleased to offer exclusive discounts for our conferenfe attendees at two estimated establishments: 
+ Hotel Pulitzer Roma | , Viale Guglielmo Marconi, 905, 00146 Roma RM 
+ BV Oly Hotel | , Via del Santuario Regina degli Apostoli, 36, 00145 Roma RM 
+ Additional instructions on how to access these discounts will be sent via email to all registered participants. We hope you enjoy your stay and dining experience! 
+ Social Events 
+ We are delighted to invite you to a guided tour of Rome followed by a social dinner on the rooftop ofThe Hive Hotelon September 19th. 
+ Tour Details: 
+ The tour includes a guided visit inside theThe Basilica of Santa Maria Maggioreand a guided walk through the Monti district. The meeting point is directly atPiazza di Santa Maria Maggioreat 6:00 PM. However, for those who prefer, we are organizing a group departure directly from the university, which will leave at the end of the afternoon session using public transportation. 
+ Meeting Point:Piazza di Santa Maria Maggioreat 6:00 PM 
+ Tour Duration:The tour will conclude at 7:45 PM, after which guests will be transported directly toThe Hive Hotel. 
+ Dinner Time:The social dinner will begin at 8:00 PM at the rooftop ofThe Hive Hotel. 
+ Transportation: 
+ Below is a list of available public transport options to reach the hotel from the university area (and vice-versa): 
+ Bus: mMB (Night Bus) or 170. 
+ Metro: Line A to Repubblica (5 min by foot to reach the hotel) or Line B to Termini (7 min by foot to reach the hotel) 
+ Taxi: Directly to Piazza di Santa Maria Maggiore 
+ Please be aware that during the week, the metro in Rome closes at 9.00 PM, so taking the metro after dinner is not an option. We look forward to your participation in both the tour and the dinner. 
+ Contact us 
+  
+ Stefano Panzieri | E-mail | : stefano.panzieri@uniroma3.it 
+ Address | : University Roma Tre, Via della Vasca Navale, 79, 00146, Roma, Italy | Gabriele Oliva | E-mail | : g.oliva@unicampus.it 
+ Address | : Università Campus Biomedico, Via Alvaro del Portillo, 21, 00128, Roma, Italy

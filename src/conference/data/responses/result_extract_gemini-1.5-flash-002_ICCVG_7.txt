@@ -1,0 +1,25 @@
+{
+  "Conference dates": "February 21 - 23, 2025",
+  "Year": "2025",
+  "Location": "Chengdu, China",
+  "City-State-Province": "Chengdu, Sichuan",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submission Deadline": "January 15, 2025"
+  },
+  "Notification Date": {
+    "Paper Acceptance Notification": "January 25, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Paper Submission": "February 5, 2025"
+  },
+  "Registration Date": {
+    "Registration Deadline": "February 5, 2025"
+  },
+  "Topics": "Computer Graphics, Image Processing, Computer Vision, Rendering, Computational Photography, Graphics Hardware, Geometric Modeling, CAD, Simulation, Computer Animation, Geometric Data Processing, GIS, Big Data Modeling, Segmentation, Object Retrieval, Information Visualization, Scientific Visualization, Virtual Reality, Augmented Reality, Mixed Reality, Image Scanning, Display and Printing, Volume Graphics, Machine Learning, User Interface Design, Human-Computer Interaction, Storage and Retrieval, Tracking and Sensing, Input Devices for VR/AR/MR, Advanced Display Technology, Immersive Projection Technology, Haptics, Audio, Non-visual Interfaces, Modeling and Simulation, Virtual Humans, Avatars, Multi-user and Distributed VR/AR/MR, Locomotion and Navigation in Virtual Environments, User Studies and Evaluation, Perception, Presence, Virtual Embodiment, Cognition, Teleoperation, Telepresence, Applications of VR/AR/MR, Ethical Issues in VR/AR/MR, Interactive Storytelling in 360 Videos, 3D Interaction, 3DUI Metaphors, Mobile, Desktop or Hybrid 3DUIs, Non-fatiguing 3DUIs, Evaluation Methods for 3DUIs, Empirical Studies of 3DUIs, Applications of 3DUIs",
+  "Publisher": "SPIE",
+  "Summary": "The Eighth International Conference on Computer Graphics and Virtuality (ICCGV 2025) will take place in Chengdu, China, from February 21-23, 2025. The conference consists of keynote lectures, oral presentations, poster presentations, and online presentations on all aspects of computer graphics and virtuality.",
+  "Call for Papers": "# ICCGV 2025: Call for Papers\n\nThe Eighth International Conference on Computer Graphics and Virtuality (ICCGV 2025) will take place in **Chengdu, China, from February 21-23, 2025**.\n\nThe conference welcomes submissions of papers for oral and poster presentations covering all aspects of Computer Graphics and Virtuality from scientists, engineers, researchers, and practitioners worldwide.\n\n## Topics of Interest\n\n*   Computer Graphics\n*   Image Processing and Computer Vision\n*   Rendering (including real-time rendering, illumination, photo-realistic graphics)\n*   Computational Photography\n*   Graphics Hardware, GPU, and hardware-related techniques\n*   Image-based Computer Graphics\n*   Geometric Modeling, CAD, Simulation, Computer Animation\n*   Geometric Data Processing, GIS, Big Data modeling and processing\n*   Segmentation, Object Retrieval\n*   Information Visualization\n*   Computer Graphics and Visualization\n*   Scientific Visualization, massive and Big Data visualization\n*   Computer Vision\n*   Virtual Reality Environments / Augmented Reality / Mixed Reality\n*   Image Scanning, Display, and Printing\n*   Volume Graphics, Semi-transparent Media\n*   Machine Learning, Computer Graphics, Biological Vision\n*   User Interface Design, Human-Computer Interaction, and Advanced Interaction\n*   Storage and Retrieval\n*   Tracking and Sensing\n*   Input Devices for VR/AR/MR\n*   Advanced Display Technology\n*   Immersive Projection Technology\n*   Haptics, Audio, and other non-visual interfaces\n*   Modeling and Simulation\n*   Computer Graphics Techniques for VR/AR/MR\n*   Virtual Humans and Avatars\n*   Multi-user and Distributed VR/AR/MR\n*   VR Systems and Toolkits\n*   Locomotion and Navigation in Virtual Environments\n*   User Studies and Evaluation\n*   Perception, Presence, Virtual Embodiment, and Cognition\n*   Teleoperation and Telepresence\n*   Applications of VR/AR/MR\n*   Ethical Issues in VR/AR/MR\n*   Interactive Storytelling in 360° Videos\n*   3D Interaction for VR/AR/MR\n*   3DUI Metaphors for VR/AR/MR\n*   Mobile, Desktop or Hybrid 3DUIs\n*   Non-fatiguing 3DUIs\n*   Evaluation Methods for 3DUIs\n*   Empirical Studies of 3DUIs\n*   Applications of 3DUIs: Games, entertainment, CAD, education, etc.\n\n## Submission Method\n\nPlease log in to the [Online Submission System](http://confsys.iconf.org/submission/iccgv2025) and submit your full paper or abstract before the submission deadline.\n\n## Important Dates\n\n*   **Paper Submission Deadline:** January 15, 2025\n*   **Paper Acceptance Notification:** January 25, 2025\n*   **Camera Ready Paper Submission:** February 5, 2025\n*   **Registration Deadline:** February 5, 2025\n\n## Publication\n\nAfter a careful reviewing process, all accepted papers after proper registration and presentation will be published in the ICCGV 2025 Conference Proceedings by SPIE, which will be included in the SPIE Digital Library and indexed by Ei Compendex, Scopus, and CPCI (Web of Science)."
+}

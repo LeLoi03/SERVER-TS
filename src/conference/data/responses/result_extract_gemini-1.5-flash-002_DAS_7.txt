@@ -1,0 +1,23 @@
+```json
+{
+  "Conference dates": "December 2025",
+  "Year": "2025",
+  "Location": "ECU Joondalup Campus, Perth, Australia",
+  "City-State-Province": "Perth",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission of full-length papers": "September 7, 2025"
+  },
+  "Notification Date": {
+    "Notification of paper acceptance": "October 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Submission of camera-ready papers": "November 3, 2025"
+  },
+  "Topics": "Robotics, Automation, Mechatronics, Artificial Intelligence",
+  "Summary": "The 2025 Australasian Conference on Robotics and Automation (ACRA 2025) is jointly organised by Edith Cowan University and the Australian Robotics and Automation Association (ARAA).  The conference will be held in person in December 2025 at the ECU Joondalup Campus in Perth, Australia.",
+  "Call for Papers": "# ACRA 2025: Call for Papers\n\nThe 2025 Australasian Conference on Robotics and Automation (ACRA 2025) is jointly organised by Edith Cowan University and the Australian Robotics and Automation Association (ARAA). The conference will be held in person at the **ECU Joondalup Campus in Perth, Australia, from December 1-3, 2025**.\n\nACRA has brought together Australian and New Zealand researchers and students in robotics, automation, and mechatronics since 1999. It provides a forum to present a breadth of research activities to the broader Australasian community and is featured in Scopus, Google Scholar, and other ranking engines.\n\nAll full papers submitted to ACRA 2025 will undergo a peer-review process. Each manuscript will be reviewed by at least two reviewers, who will provide detailed comments. If the submission is accepted, the authors will submit a revised (\"camera-ready\") version that takes into account this feedback. All papers are reviewed using a single-blind review process. Papers from all areas of robotics are encouraged.\n\n## Important Dates\n\n*   **Submission of full-length papers:** September 7, 2025 (23:59 AWST)\n*   **Notification of paper acceptance:** October 15, 2025 (23:59 AWST)\n*   **Submission of camera-ready papers:** November 3, 2025 (23:59 AWST)\n\n## Paper Format\n\nACRA papers must be 6-10 pages in length (including text, references, figures, and acknowledgements). Papers that do not follow these guidelines may be rejected without review.\n\n## Paper Templates\n\n[Download LaTeX and Microsoft Word templates](https://ssl.linklings.net/conferences/acra/)\n\n## Submission Portal\n\nTo make your submission, please use [this portal](https://ssl.linklings.net/conferences/acra/).\n\n## Inquiries\n\n*   **For attendance inquiries:** Dr. Md Moniruzzaman ([m.moniruzzaman@ecu.edu.au](mailto:m.moniruzzaman@ecu.edu.au)), Dr Jumana Abu-Khalaf ([j.abukhalaf@ecu.edu.au](mailto:j.abukhalaf@ecu.edu.au))\n*   **For sponsorship inquiries:** Dr Syed Afaq Shah ([afaq.shah@ecu.edu.au](mailto:afaq.shah@ecu.edu.au)), Dr Bilal Shaikh ([m.shaikh@ecu.edu.au](mailto:m.shaikh@ecu.edu.au))"
+}
+```

@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "July 26 - 28, 2025",
+  "Year": "2025",
+  "Location": "Kyoto International Conference Center, Kyoto, Japan",
+  "City-State-Province": "Kyoto",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission deadline": "April 7, 2025"
+  },
+  "Notification Date": {
+    "Decision notification": "June 13, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready due": "To be announced"
+  },
+  "Other Date": {
+    "Paper assignments": "April 18, 2025",
+    "Review due": "May 16, 2025",
+    "Paper recommendation": "May 17 - June 11, 2025"
+  },
+  "Topics": "Machine Vision, Applications, Sensing, Vision Sensors, Imaging, Shape from X, Calibration, Low-level Vision, Emerging Sensing Technologies, Algorithms, Pattern Recognition, Deep Learning, Shape Analysis, Motion Analysis, Deformation Analysis, Large-Scale Data Analysis, Image Processing, System Architecture, Generative AI, VLM, ML, LM, Foundation Models, 2D/3D Representation Learning, Factory Automation, Robotics, Intelligent Transport Systems, Autonomous Vehicles, Surveillance, Human Analysis, Human-Computer Interaction",
+  "Summary": "The Nineteenth International Conference on Machine Vision Applications (MVA2025) will be held in Kyoto, Japan, from July 26 through 28, 2025.  The conference aims to bring together researchers and practitioners from both academia and industry and to stimulate the exchange of knowledge through intensive discussions on cutting-edge research topics on machine vision and its applications.",
+  "Call for Papers": "# MVA 2025: Call for Papers\n\nThe Nineteenth International Conference on Machine Vision Applications (MVA 2025) will be held in **Kyoto, Japan, from July 26 through 28, 2025** at the **Kyoto International Conference Center.**\n\nThe conference aims to bring together researchers and practitioners from both academia and industry and to stimulate the exchange of knowledge through intensive discussions on cutting-edge research topics on machine vision and its applications.\n\n## Important Dates\n\n*   **Paper submission deadline:** April 7, 2025, 23:59 AOE (extended)\n*   **Decision notification:** June 13, 2025\n*   **Camera ready due:** To be announced\n\n## Submission Guidelines\n\n*   The page limit is 4 pages, excluding references.\n*   At least one of the authors for each submission must serve as a reviewer. This reviewer must have a Ph.D. or be a Ph.D. student and have experience with peer review. If no such reviewer is available, it is not necessary to provide a reviewer to that submission. Additionally, the same person can serve as a reviewer for multiple submissions.\n*   You may not submit papers that are under review at other conferences or journals.\n*   The proceedings of MVA2025 will be published in IEICE Proceeding Series and submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore’s scope and quality requirements.\n\n## Topics\n\nMain Topic: Machine Vision and its Applications\n\n*   Sensing\n*   Vision Sensors\n*   Imaging\n*   Shape from X\n*   Calibration\n*   Low-level Vision\n*   Emerging Sensing Technologies\n*   Algorithms\n*   Pattern Recognition\n*   Deep Learning\n*   Shape / Motion / Deformation Analysis\n*   Large-Scale Data Analysis\n*   Image Processing\n*   System Architecture\n*   Generative AI\n*   VLM / ML\n*   LM\n*   Foundation Models\n*   2D/3D Representation Learning\n*   Applications\n    *   Factory Automation and Robotics\n    *   Intelligent Transport Systems and Autonomous Vehicles\n    *   Surveillance\n    *   Human Analysis and Human-Computer Interaction\n    *   Life (Sports, Agriculture / Forestry / Fishery, Civil Engineering, Commerce, Fashion, Food, Home, etc.)\n\n## Invited Talks\n\n*   Ming-Yu Liu (NVIDIA)\n*   Katerina Fragkiadaki (CMU)\n*   Yasuyuki Matsushita (MSRA Tokyo)\n\n## Tutorials\n\n*   Bo Wu (MIT-IBM Watson AI Lab)\n*   Cathal Gurrin (Dublin City University)\n\n## Co-location\n\nThis MVA2025 will be co-located with [MIRU2025](https://cvim.ipsj.or.jp/MIRU2025/index-en.html), which will be held from July 29th to August 1st 2025. Some events will be planned together.\n\n## Awards\n\nPresented papers will be considered for Best Paper Award, Best Practical Paper Award, and Best Poster Award."
+}
+

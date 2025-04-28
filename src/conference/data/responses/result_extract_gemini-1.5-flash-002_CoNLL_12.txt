@@ -1,0 +1,22 @@
+output:
+{
+  "Conference dates": "July 31 - August 1, 2025",
+  "Year": "2025",
+  "Location": "Vienna, Austria",
+  "City-State-Province": "Vienna",
+  "Country": "Austria",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline (archival and non-archival)": "March 14, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "May 23, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready papers due": "June 17, 2025"
+  },
+  "Topics": "Computational Psycholinguistics, Cognition and Linguistics, Computational Social Science and Sociolinguistics, Interaction and Dialogue, Language Acquisition, Learning, Emergence, and Evolution, Multimodality and Grounding, Typology and Multilinguality, Speech and Phonology, Syntax and Morphology, Semantics and Pragmatics, Theoretical Analysis and Interpretation of ML Models for NLP, Resources and Tools for Scientifically Motivated Research",
+  "Summary": "The 29th Conference on Computational Natural Language Learning (CoNLL 2025) will be held in Vienna, Austria, from July 31 - August 1, 2025, co-located with ACL. CoNLL focuses on theoretically, cognitively, and scientifically motivated approaches to computational linguistics, exploring the interaction between theoretical issues in linguistics and cognition and computational modeling.",
+  "Call for Papers": "No call for papers available"
+}

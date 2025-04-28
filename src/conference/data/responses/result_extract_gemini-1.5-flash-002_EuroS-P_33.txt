@@ -1,0 +1,32 @@
+```json
+{
+  "Conference dates": "June 30 - July 4, 2025",
+  "Year": "2025",
+  "Location": "Venice, Italy",
+  "City-State-Province": "Venice",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Registration deadline (incl. topics and abstracts)": "October 21, 2024",
+    "Submission deadline": "October 24, 2024",
+    "Submission for posters is now open": "March 27, 2025"
+  },
+  "Notification Date": {
+    "Early rejection notification": "December 11, 2024",
+    "Author Notification": "February 13, 2025",
+    "Revision Decisions": "April 3, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "April 17, 2025"
+  },
+  "Other Date": {
+    "R1 Rebuttal period": "December 12 - 16, 2024",
+    "R2 Rebuttal period": "January 20 - 23, 2025",
+    "Submission of revised papers": "March 20, 2025"
+  },
+  "Topics": "Computer Security, Electronic Privacy",
+  "Summary": "The 10th IEEE European Symposium on Security and Privacy (EuroS&P 2025) will be held in Venice, Italy, from June 30 to July 4, 2025. EuroS&P is a premier forum for computer security and privacy research, presenting the latest developments and bringing together researchers and practitioners.",
+  "Call for Papers": "# EuroS&P 2025: Call for Papers\n\nThe 10th IEEE European Symposium on Security and Privacy (EuroS&P 2025) will be held in **Venice, Italy, from June 30 to July 4, 2025.**\n\nEuroS&P is a premier forum for computer security and privacy research, presenting the latest developments and bringing together researchers and practitioners.\n\n## Call for Papers\n\nWe solicit previously unpublished papers offering novel research contributions in security or privacy, as well as Systematization of Knowledge papers that systematize previous results. EuroS&P is interested in all aspects of applied computer security and privacy. We especially encourage papers that are far-reaching and risky, provided those papers show sufficient promise for creating interesting discussions and usefully questioning widely-held beliefs. Papers without a clear connection to security or privacy will be considered out of scope and may be rejected without full review.\n\n## Conference Expectations\n\nEuroS&P aims for a rigorous and thorough review process, resulting in the acceptance of every paper with scientific merit and sufficient value to the community.  A four-week revision opportunity is incorporated, in which the PC assists authors to try to get as many papers as possible to the level needed.\n\n## New in 2025: Per-Reviewer Responses\n\nEuroS&P 2025 will feature per-reviewer responses. Reviewers will be asked to provide a limited set of explicit questions that the response should focus on. Authors are then expected to solely focus on the questions as well as factual errors.  We hope to improve on the communication between individual reviewers and authors.\n\n## Returning from 2024: Meta Reviews\n\nEuroS&P 2025 will feature a publicly available meta-review (accessible through the EuroS&P website) for each accepted paper. This meta-review will outline the PC’s main reasons for accepting the paper and may also contain limitations the PC identified.\n\n## Systematization of Knowledge Papers\n\nWe solicit systematization of knowledge (SoK) papers that evaluate, systematize, and contextualize existing knowledge. Submissions will be distinguished by the prefix \"SoK:\" in the title on the submission form. They will be reviewed by the full PC and held to the same standards as traditional research papers, except instead of emphasizing novel research contributions, the emphasis will be on their value to the community.\n\n## Paper Awards\n\nOutstanding papers will be selected by the program committee for paper awards. The award finalists and winners will be announced at the symposium.\n\n## Important Dates\n\nAll deadlines are Anywhere on Earth (AoE = UTC-12h).\n\n*   **Research Papers**\n    *   Registration deadline (incl. topics and abstracts): October 21, 2024\n    *   Submission deadline: October 24, 2024\n    *   Early rejection notification: December 11, 2024\n    *   R1 Rebuttal period: December 12 - 16, 2024\n    *   R2 Rebuttal period: January 20 - 23, 2025\n    *   Author Notification: February 13, 2025\n    *   Submission of revised papers: March 20, 2025\n    *   Revision Decisions: April 3, 2025\n    *   Camera-ready deadline: tentatively: April 17, 2025\n*   **Conference:** June 30 - July 4, 2025\n\n## Submission Guidelines\n\n*   **Proactive Prevention of Harm:** We expect authors to carefully consider and address potential harms associated with their research and publication.\n*   **Open Science Expectations:** We expect researchers to maximize the scientific and community value of their work by making it as open as possible.\n*   **Plagiarism and Duplicate Submission:** All submissions must be original work. Plagiarism will be grounds for rejection. Simultaneous submission to another venue is not allowed.\n*   **Anonymous Submission:** Papers must be submitted in a form suitable for anonymous review.\n*   **Reviews from Prior Submissions:** For papers previously submitted and rejected, authors may optionally submit prior reviews.\n*   **Page Limit and Formatting:** Papers shall not exceed 13 pages of body text, with unlimited additional pages for references and appendices. Papers must be typeset in LaTeX in A4 format using the supplied template.\n*   **Conference Submission Server:** Papers must be submitted at [https://hotcrp.eurosp2025.ieee-security.org](https://hotcrp.eurosp2025.ieee-security.org)\n*   **Publication and Presentation:** Authors are responsible for obtaining appropriate publication clearances. One of the authors of the accepted paper is expected to present the paper at the conference."
+}
+```

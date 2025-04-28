@@ -1,0 +1,78 @@
+output:
+{
+  "Conference dates": "June 17 - 20, 2025",
+  "Year": "2025",
+  "Location": "Istanbul Technical University, Istanbul, Turkey",
+  "City-State-Province": "Istanbul",
+  "Country": "Turkey",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Papers) Submission Deadline": "January 31, 2025",
+    "(Research Papers) Abstract Submission Deadline": "January 24, 2025",
+    "(Short Papers, Emerging Results) Full Paper Submission Deadline": "March 16, 2025",
+    "(Short Papers, Emerging Results) Abstract Submission Deadline": "March 9, 2025",
+    "(Industry Papers) Submission Deadline": "March 16, 2025",
+    "(Industry Papers) Abstract Submission Deadline": "March 9, 2025",
+    "(Posters and Vision) Submission Deadline": "March 16, 2025",
+    "(Journal-first) Submission Deadline": "March 20, 2025",
+    "(Journal-first) Notification Deadline": "March 15, 2025",
+    "(Doctoral Symposium) Submission Deadline": "March 17, 2025",
+    "(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Submission Deadline": "March 16, 2025",
+    "(AI Models / Data) Submission Deadline": "March 23, 2025",
+    "(Workshops) Workshop Proposal Deadline": "December 10, 2024",
+    "(Workshops) Workshop Paper Submission Deadline": "March 16, 2025",
+    "(Tutorials) Submission Deadline": "March 16, 2025",
+    "(DevOps Quality Management) Submissions Due": "March 20, 2025",
+    "(EQUISA) Submission deadline": "March 28, 2025",
+    "(International Workshop on Software Security Engineering) Papers submission": "March 16, 2025",
+    "(LEARNER) Paper Submission": "March 16, 2025",
+    "(E-QSE) Submission Deadline": "March 16, 2025"
+  },
+  "Notification Date": {
+    "(Research Papers) Notification Deadline": "March 21, 2025",
+    "(Short Papers, Emerging Results) Notification Deadline": "April 18, 2025",
+    "(Industry Papers) Notification Deadline": "April 13, 2025",
+    "(Posters and Vision) Notification Deadline": "April 13, 2025",
+    "(Workshops) Workshop Paper Notification Deadline": "April 13, 2025",
+    "(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Notification Deadline": "April 13, 2025",
+    "(Tutorials) Notification Deadline": "April 13, 2025",
+    "(LEARNER) Author Notification": "April 14, 2025",
+    "(Doctoral Symposium) Notification Deadline": "April 14, 2025",
+    "(AI Models / Data) Notification Deadline": "April 20, 2025",
+    "(Workshops) Workshop Proposal Notification Deadline": "December 16, 2024",
+    "(EQUISA) Notification to authors": "April 13, 2025",
+    "(International Workshop on Software Security Engineering) Notifications to authors": "April 13, 2025",
+    "(E-QSE) Notification Deadline": "April 13, 2025"
+  },
+  "Camera-ready Date": {
+    "(Research Papers) Camera Ready Deadline": "April 27, 2025",
+    "(Short Papers, Emerging Results) Camera Ready Deadline": "April 27, 2025",
+    "(Industry Papers) Camera Ready Deadline": "April 27, 2025",
+    "(Posters and Vision) Camera Ready Deadline": "April 27, 2025",
+    "(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Camera Ready Deadline": "April 27, 2025",
+    "(AI Models / Data) Camera Ready Deadline": "April 27, 2025",
+    "(Tutorials) Camera Ready Deadline": "April 27, 2025",
+    "(EQUISA) Camera Ready Deadline": "April 27, 2025",
+    "(International Workshop on Software Security Engineering) Camera Ready Deadline": "April 27, 2025",
+    "(LEARNER) Camera Ready Deadline": "April 27, 2025",
+    "(E-QSE) Camera Ready Deadline": "April 27, 2025"
+  },
+  "Registration Date": {
+    "(Research Papers) Early Registration Deadline for Authors": "April 27, 2025",
+    "(EQUISA) Early Registration Deadline": "May 2, 2025",
+    "(LEARNER) Early Registration Deadline": "May 2, 2025",
+    "(International Workshop on Software Security Engineering) Early Registration Deadline": "May 2, 2025",
+    "(E-QSE) Early Registration Deadline": "May 2, 2025",
+    "(Research Papers) Early Registration Deadline": "May 2, 2025"
+  },
+  "Other Date": {
+    "(EQUISA) Workshop date": "June 20, 2025",
+    "(International Workshop on Software Security Engineering) Workshop date": "June 20, 2025",
+    "(LEARNER) Workshop Date": "June 20, 2025"
+  },
+  "Topics": "Empirical Software Engineering, Software Evaluation, Software Assessment, Research Methods, Methodological Issues, Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps, Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models, Software Engineering Process, Software Quality, AI-Based Software Development, Human factors, Behavioral aspects of Software Engineering, Software development practices, Process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies, Artificial Intelligence for Software Engineering, Ethics in Software Engineering",
+  "Summary": "The International Conference on Evaluation and Assessment in Software Engineering (EASE 2025) will take place in Istanbul, Turkey, from June 17-20, 2025. EASE is an internationally leading venue for academics and practitioners to present and discuss their research on evidence-based software engineering and its implications for software practice.",
+  "Call for Papers": "# EASE 2025: Call for Papers\n\nThe International Conference on Evaluation and Assessment in Software Engineering (EASE 2025) will take place from **June 17-20, 2025, at Istanbul Technical University in Istanbul, Turkey**.\n\nEASE is a premier conference for research related to empirical software engineering. The EASE research track seeks high-quality submissions of technical research papers describing original and unpublished results.\n\n## Topics\n\nEASE welcomes papers addressing topics related to evaluating and assessing software products, processes, practices, tools & techniques, including:\n\n*   Meta-science (e.g., papers about research methods and methodological issues, whether empirical or conceptual)\n*   Infrastructure and techniques for conducting empirical studies on software engineering\n*   Theory development, operationalization, testing, and application\n*   Applications of evaluation and assessment in specific contexts (Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps and Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models and Methods, Software Engineering Process, Software Quality, AI-Based Software Development, Human factors and behavioral aspects of Software Engineering, Software development practices and process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies intersecting software engineering, Artificial Intelligence for Software Engineering, Ethics in Software Engineering)\n*   EASE also welcomes studies with negative findings or non-significant results.\n\n## Submission Instructions\n\nAll papers must be submitted in PDF format through the web-based submission system [EasyChair for EASE 2025](https://easychair.org/conferences/?conf=ease2025). Submissions must not exceed 10 pages for the main text, including all figures, tables, appendices, etc. Up to two additional pages containing ONLY references are permitted.\n\nAll submissions should use the official ACM Primary Article Template. Deviating from the ACM formatting instructions may lead to a desk rejection. LaTeX users should use the following options:\n\n`\\documentclass[sigconf,review,anonymous]{acmart}`\n\n`\\acmConference[EASE 2025]{The 29th International Conference on Evaluation and Assessment in Software Engineering}{17–20 June, 2025}{Istanbul, Türkiye}`\n\nAuthors must comply with the SIGSOFT Open Science Policy ([SIGSOFT Open Science Policies](https://www.sig-soft.org/open-science/)).\n\nEASE 2025 will employ a double-anonymous review process. Do not include author names or affiliations in submissions. All references to the author’s prior work should be in the third person. Any online supplements, replication packages, etc., referred to in the work should also be anonymized.\n\nBy submitting to EASE, authors agree to the ACM Policy and Procedures on Plagiarism, Misrepresentation, and Falsification ([ACM Policy on Plagiarism, etc.](https://www.acm.org/publications/policies/plagiarism)). If the research involves human participants/subjects, the authors must adhere to the ACM Publications Policy on Research Involving Human Participants and Subjects ([ACM Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects)).\n\n## Review Criteria\n\nThe reviewers will be encouraged to do a standards-based review. To see the criteria for standards-based reviews, please use this tool: [Empirical Standards Checklist](https://acmsigsoft.github.io/EmpiricalStandards/form_generator/Checklist.html?role=author).\n\nThe reviews will evaluate submissions additionally against the following criteria:\n\n*   Soundness\n*   Significance\n*   Novelty\n*   Verifiability and Transparency\n*   Presentation\n\n## Important Dates (AoE)\n\n*   **Abstract Submission Deadline:** January 24, 2025\n*   **Submission Deadline:** January 31, 2025\n*   **Notification Deadline:** March 21, 2025\n*   **Camera Ready Deadline:** April 27, 2025\n*   **Early Registration Deadline for Authors:** April 27, 2025\n*   **Early Registration Deadline:** May 2, 2025"
+}
+

@@ -647,63 +647,64 @@ export const extract_information_api = async (
     acronym: string | undefined,
     parentLogger: typeof logger
 ): Promise<ApiResponse> => {
-    const apiType = API_TYPE_EXTRACT;
-    const config: ApiConfig | undefined = apiConfigs[apiType];
-    const defaultResponse: ApiResponse = { responseText: "", metaData: null };
-    const baseLogContext = { apiType, batchIndex, title: title || 'N/A', acronym: acronym || 'N/A', function: 'extract_information_api' };
+        return { responseText: "", metaData: null };
+    // const apiType = API_TYPE_EXTRACT;
+    // const config: ApiConfig | undefined = apiConfigs[apiType];
+    // const defaultResponse: ApiResponse = { responseText: "", metaData: null };
+    // const baseLogContext = { apiType, batchIndex, title: title || 'N/A', acronym: acronym || 'N/A', function: 'extract_information_api' };
 
-    if (!config) {
-        parentLogger.error(baseLogContext, "Configuration not found.");
-        return defaultResponse;
-    }
-    const modelNames = config.modelNames;
-    if (!modelNames || modelNames.length === 0) {
-        parentLogger.error(baseLogContext, "No model names configured.");
-        return defaultResponse;
-    }
+    // if (!config) {
+    //     parentLogger.error(baseLogContext, "Configuration not found.");
+    //     return defaultResponse;
+    // }
+    // const modelNames = config.modelNames;
+    // if (!modelNames || modelNames.length === 0) {
+    //     parentLogger.error(baseLogContext, "No model names configured.");
+    //     return defaultResponse;
+    // }
 
-    const selectedModelName = modelNames[extractModelIndex];
-    const nextIndex = (extractModelIndex + 1) % modelNames.length;
-    parentLogger.debug({ ...baseLogContext, selectedModel: selectedModelName, nextIndex }, "Initiating API call (round-robin)");
-    extractModelIndex = nextIndex; // Update index *after* logging
+    // const selectedModelName = modelNames[extractModelIndex];
+    // const nextIndex = (extractModelIndex + 1) % modelNames.length;
+    // parentLogger.debug({ ...baseLogContext, selectedModel: selectedModelName, nextIndex }, "Initiating API call (round-robin)");
+    // extractModelIndex = nextIndex; // Update index *after* logging
 
-    try {
-        const { responseText, metaData } = await callGeminiAPI({
-            batch, batchIndex, title, acronym, apiType,
-            systemInstruction: config.systemInstruction || "",
-            modelName: selectedModelName,
-            generationConfig: config.generationConfig,
-            parentLogger: parentLogger
-        });
+    // try {
+    //     const { responseText, metaData } = await callGeminiAPI({
+    //         batch, batchIndex, title, acronym, apiType,
+    //         systemInstruction: config.systemInstruction || "",
+    //         modelName: selectedModelName,
+    //         generationConfig: config.generationConfig,
+    //         parentLogger: parentLogger
+    //     });
 
-        // JSON Cleaning Logic
-        const firstCurly = responseText.indexOf('{');
-        const lastCurly = responseText.lastIndexOf('}');
-        let cleanedResponseText = "";
-        const cleaningLogContext = { ...baseLogContext, modelUsed: selectedModelName };
+    //     // JSON Cleaning Logic
+    //     const firstCurly = responseText.indexOf('{');
+    //     const lastCurly = responseText.lastIndexOf('}');
+    //     let cleanedResponseText = "";
+    //     const cleaningLogContext = { ...baseLogContext, modelUsed: selectedModelName };
 
-        if (firstCurly !== -1 && lastCurly !== -1 && lastCurly >= firstCurly) {
-            const potentialJson = responseText.substring(firstCurly, lastCurly + 1);
-            try {
-                JSON.parse(potentialJson); // Validate
-                cleanedResponseText = potentialJson.trim();
-                parentLogger.debug(cleaningLogContext, "Successfully cleaned and validated JSON response.");
-            } catch (parseError: unknown) {
-                const errorDetails = parseError instanceof Error ? { name: parseError.name, message: parseError.message } : { details: String(parseError) };
-                parentLogger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200), err: errorDetails }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
-            }
-        } else {
-            parentLogger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
-        }
+    //     if (firstCurly !== -1 && lastCurly !== -1 && lastCurly >= firstCurly) {
+    //         const potentialJson = responseText.substring(firstCurly, lastCurly + 1);
+    //         try {
+    //             JSON.parse(potentialJson); // Validate
+    //             cleanedResponseText = potentialJson.trim();
+    //             parentLogger.debug(cleaningLogContext, "Successfully cleaned and validated JSON response.");
+    //         } catch (parseError: unknown) {
+    //             const errorDetails = parseError instanceof Error ? { name: parseError.name, message: parseError.message } : { details: String(parseError) };
+    //             parentLogger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200), err: errorDetails }, "Failed to parse extracted text as JSON after cleaning, returning empty string.");
+    //         }
+    //     } else {
+    //         parentLogger.warn({ ...cleaningLogContext, rawResponseSnippet: responseText.substring(0, 200) }, "Could not find valid JSON structure ({...}) in response, returning empty string.");
+    //     }
 
-        parentLogger.info({ ...cleaningLogContext, cleanedResponseLength: cleanedResponseText.length }, "API call finished.");
-        return { responseText: cleanedResponseText, metaData };
+    //     parentLogger.info({ ...cleaningLogContext, cleanedResponseLength: cleanedResponseText.length }, "API call finished.");
+    //     return { responseText: cleanedResponseText, metaData };
 
-    } catch (error: unknown) {
-        const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
-        parentLogger.error({ ...baseLogContext, modelUsed: selectedModelName, err: errorDetails }, "Unhandled error in main function");
-        return defaultResponse;
-    }
+    // } catch (error: unknown) {
+    //     const errorDetails = error instanceof Error ? { name: error.name, message: error.message } : { details: String(error) };
+    //     parentLogger.error({ ...baseLogContext, modelUsed: selectedModelName, err: errorDetails }, "Unhandled error in main function");
+    //     return defaultResponse;
+    // }
 };
 
 export const determine_links_api = async (
@@ -713,6 +714,7 @@ export const determine_links_api = async (
     acronym: string | undefined,
     parentLogger: typeof logger
 ): Promise<ApiResponse> => {
+
     const apiType = API_TYPE_DETERMINE;
     const config: ApiConfig | undefined = apiConfigs[apiType];
     const defaultResponse: ApiResponse = { responseText: "", metaData: null };

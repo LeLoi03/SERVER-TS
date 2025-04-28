@@ -1,0 +1,88 @@
+Conference HotOS:
+
+href="./index.html" - HotOS XX
+Home 
+ Attend 
+ Venue 
+ Travel 
+ Register 
+ Program 
+ href="cfp.html" - CFP 
+ Organizers 
+ HotOS XX 
+ The ACM SIGOPS 20th Workshop on Hot Topics in Operating Systems 
+ May 14–16, 2025, Banff, Alberta, Canada. 
+ Welcome 
+ Participants in the 20th Workshop on Hot Topics in Operating Systems will present and discuss new ideas in systems research and how technological advances and new applications are shaping our computational infrastructure. We welcome researchers and practitioners old and new. 
+ Accepted Papers, Panels and Schedule Available! 
+ We have posted the accepted papers, panels and the workshop schedule in theProgram Tab. 
+ Key Dates 
+ Paper or Panel Proposal Submission Deadline: | January 15, 2025 (AoE) 
+ First Round Registration Lottery Deadline: | February 3, 2025 
+ Author Notifications: accept/reject decisions April 1, 2025 
+ Second Registration Lottery Deadline: April 2, 2025 
+ Second Registration Lottery Notification: April 4, 2025 
+ Early Registration Deadline: April 7, 2025 
+ Hotel Reservation Deadline: April 7, 2025 
+ Camera-ready Deadline: April 15, 2025 
+ Workshop: May 14–16, 2025 
+ Sponsors 
+ Gold 
+ Silver 
+ Bronze 
+ Diversity and Code of Conduct 
+ HotOS 2025 is committed to diversity, equity and inclusion, and providing a welcoming environment. For details see ourdiversity, equity and inclusion planand ourcode of conduct. 
+ For further information, contact workshop organizers athref="mailto:hotos25-oc@lists.uwaterloo.ca" - hotos25-oc@lists.uwaterloo.ca
+© SIGOPS, 2024. 
+ Home 
+ Attend 
+ Venue 
+ Travel 
+ Register 
+ Program 
+ href="cfp.html" - CFP 
+ Organizers 
+
+Call for Papers information:
+href="./index.html" - HotOS 
+                        XX
+Home 
+ Attend 
+ Venue 
+ Travel 
+ Register 
+ Program 
+ href="cfp.html" - CFP 
+ Organizers 
+ Call for Papers and Discussions 
+ The 20th Workshop on Hot Topics in Operating Systems hopes to bring together researchers and practitioners in computer systems to engage in a lively discussion on the principles and practices of building systems software. Continuing the HotOS tradition, participants will present new ideas and debate future research agendas in systems research. 
+ We solicit position papers that propose new directions of systems research, advocate innovative approaches to long-standing problems, or report on deep insights gained from experience with real-world systems. We seek early-stage work where the authors can benefit from community feedback. An ideal submission has the potential to open a line of inquiry that results in multiple conference papers by different authors in related venues, rather than a single follow-on conference paper. The program committee will explicitly favor papers likely to stimulate reflection and discussion. 
+ HotOS takes a broad view of systems research. This includes operating systems, storage distributed systems, mobile and embedded systems, virtualization, programming languages, networking security, dependability, and manageability, as well as new systems contributions influenced by other fields such as hardware design, training and serving machine learning verification, economics, social organization, and biological or other nontraditional computing systems. 
+ Research and position paper submissions must be no longer than 5 pages including figures and tables, plus as many pages as needed for references. Text should be formatted according to ACM's formatting conventions with 10-point font (two columns, 8.5x11-inch paper, 10-point Times Roman or Libertine font on 12-point (single-spaced) leading, 0.75-inch margins, 0.33-inch gutter [column separation]). Paper submissions will be double blind. The title and an abstract should appear on the first page; authors should not. Authors must make a good faith effort to anonymize their submissions, and they should not identify themselves either explicitly or by implication (e.g., through the references or acknowledgments). Pages should be numbered. Figures and tables should not require magnification for viewing; they may contain color, but should be legible when printed or displayed in black and white. Submissions not meeting these criteria will be rejected without review, and no deadline extensions will be granted for reformatting. Please use theacmartstyle (\documentclass[sigconf,10pt]{acmart}). 
+ HotOS XX will also feature panels and events with the aim of inspiring lively discussion and research direction-setting independent of any specific work. Panels and events may have many formats, from conventional panel discussions to breakouts to games. If you are interested in hosting or proposing an event, please submit a 1-page proposal (using the same format as above) describing topic, format, and length (up to 90 minutes), plus as many pages as necessary for references and supporting letters from planned participants. Unlike papers, panel and event proposals need not be anonymous (i.e., they may be single blind). Proposals will be evaluated based on relevance of topic and potential to engage the audience. We especially encourage panel topics including but not limited to: industry perspectives on systems research; diversity and inclusion in systems research; under-appreciated open source technologies; and hardware trends and their implications for the future of systems research. 
+ Research and position papers as well as panel proposals must be received by Thursday January 15 AoE. This is a hard deadline. Papers and proposals should be submitted as PDF files viahref="https://www.google.com/url?q=https://hotos25.hotcrp.com/&sa=D&source=editors&ust=1726851695132824&usg=AOvVaw3SrvjPqf9j2_vpsyLZn0NL" - the
+        web submission form
+. Please select your submission type on the form (paper or proposal). 
+ Revised versions of all accepted papers will be available online to registered attendees before the workshop. After the workshop, accepted papers will be made available on the workshop site, along with slides of the presentation and in some cases a summary of the discussion. 
+ Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for any accepted paper. ACM has been involved in ORCID from the start and has recently committed to collecting ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts. 
+ HotOS will be an in-person workshop, and we expect at least one author of each accepted paper to present it and participate in the discussion. In extreme cases (in particular, if authors are unable to obtain a visa) we may consider alternatives, but please contact the chairs if you anticipate any problems attending. 
+ In order to encourage deeper discussion and interactions, registration for HotOS will be limited. We expect at least two authors per accepted paper will receive invitations to attend if desired. For non-authors, especially students and industry practitioners, there will be a registration process to request an invitation (to be announced closer to the event). 
+ Simultaneous submission of the same work to multiple venues, submission of previously published work, or plagiarism constitutes dishonesty or fraud. ACM, like other scientific and technical conferences and journals, prohibits these practices and may take action against authors who have committed them. See theACM plagiarism policy and proceduresfor details. Prior or concurrent publication in non-peer-reviewed contexts, like arXiv.org, technical reports, talks, and social media posts is permitted. However, your HotOS submission must use an anonymized name for your project or system that differs from any used in such contexts. 
+ Furthermore, by submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, includinghref="https://www.google.com/url?q=https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects&sa=D&source=editors&ust=1726851695134163&usg=AOvVaw11RQSdnm-X5EZneSWcl6SQ" - ACM's
+        new Publications Policy on Research Involving Human Participants and Subjects
+. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy. 
+ See the ACMcode of conductanddiversity and inclusion guidelines. 
+ Key Dates 
+ Paper or Panel Proposal Submission Deadline: Jan 15, 2025 (AoE) 
+ Author notifications: accept/reject decisions April 1, 2025 
+ Camera-ready deadline: April 15, 2025 
+ Workshop: May 14–16, 2025 
+ © SIGOPS, 2024. 
+ Home 
+ Attend 
+ Venue 
+ Travel 
+ Register 
+ Program 
+ href="cfp.html" - CFP 
+ Organizers

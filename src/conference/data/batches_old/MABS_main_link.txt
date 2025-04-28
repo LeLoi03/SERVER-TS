@@ -1,0 +1,105 @@
+Conference MABS:
+
+href="/" - MABS 2025 - The 26th International Workshop on Multi-Agent-Based Simulation
+Committeeshref="/cfp/" - Call for Papers
+Registrationhref="/mabsseries/" - MABS Series
+The 2025 Multi-Agent-Based Simulation (MABS) workshop is the 26th of thehref="http://www.pcs.usp.br/~mabs/" - MABS series
+, which began in 1998. Its scientific focus lies in the confluence of social sciences and multi-agent systems, with a strong application/empirical vein, and it emphasizes, (i) exploratory agent-based simulation as a principled way of undertaking scientific research in the social sciences and (ii) using social theories as an inspiration for new frameworks and developments in multi-agent systems. 
+ The excellent quality level of this workshop has been recognized since its inception and its proceedings have been regularly published in Springer’s Lecture Notes series. MABS 2025 will be hosted athref="https://aamas2025.org/" - AAMAS 2025 (24rd International Conference on Autonomous Agents and Multiagent Systems)
+, which will take place in Detroit, Michigan, USA, from May 19th to 23rd, 2025. 
+ MABS 2025 continues its tradition of fostering cross-fertilisation and innovation in MAS engineering and complex social and sociotechnical systems modeling. The workshop encourages submissions in areas such as simulation methodology and tools, simulation of social and intelligent behaviour, diverse applications, and simulation analytics. See the detailed call for papers from the link above. 
+ Important Dates (2025) 
+ Feb 4 | Feb 11: Submission deadline (extended) 
+ Feb 26 | Mar 3: Review deadline 
+ Mar 23: Acceptance/rejection notifications 
+ Mar 30: Deadline for revised submissions 
+ Mar 30: Submission of workshop notes 
+ Apr 8: Preliminary program and online article availability 
+ May 19/20: Workshop event 
+ Aug-Dec: Preparation of Post-Proceedings for Springer LNAI 
+ Program chairs 
+ Samarth Swarup (University of Virginia) 
+ Alicia Vidler (University of New South Wales) 
+ MABS2025 
+ href="mailto:mabs2025workshop@gmail.com" - mabs2025workshop@gmail.com 
+
+Call for Papers information:
+href="/" - MABS 2025 - The 26th International Workshop on Multi-Agent-Based Simulation
+Committeeshref="/cfp/" - Call for Papers
+Registrationhref="/mabsseries/" - MABS Series
+We are excited to announce the Call for Papers for the 26th International Workshop on Multi-Agent-Based Simulation (MABS 2025), a pivotal event that brings together leading researchers from Multi-Agent Systems (MAS) engineering and the social, economic, and organisational sciences. 
+ MABS 2025 is part of thehref="https://www.aamas2024-conference.auckland.ac.nz/" - AAMAS 2025 conference
+taking place in Detroit, Michigan, USA from the 19th to the 23rd of May, 2025. 
+ MABS 2025 continues its tradition of fostering cross-fertilisation and innovation in MAS engineering and complex social and sociotechnical systems modeling. The workshop encourages submissions in areas such as simulation methodology and tools, simulation of social and intelligent behaviour, diverse applications, and simulation analytics. 
+ The MABS workshop has run alongside the main conference since AAMAS was first held in Bologna in 2002 and continues to attract a diverse and enthusiastic group of participants. 
+ For the MABS workshop, we encourage submission of work that is in a less finished state than we would expect to see at the main conference. We particularly encourage the submission of work that has open questions which would be worthy of discussion at the workshop. 
+ Quick Link to Submission Page 
+ href="https://openreview.net/group?id=ifaamas.org/AAMAS/2025/Workshop/MABS" - MABS OpenReview
+Relevant topics 
+ The range of technical issues that MABS has dealt with, and continues to deal with, is quite diverse and extensive. Topics relevant to this workshop include, but are not limited to: 
+ Simulation methodologies and tools 
+ Standards for MABS 
+ Methodologies and modeling formalism for MABS 
+ Methodologies to combine MABS with other modeling approaches 
+ Simulation languages, platforms and tools for MABS 
+ Digital twins as MABS platforms 
+ Large-scale and distributed MABS 
+ Scalability and robustness in MABS 
+ Future challenges in MABS 
+ Simulation of Social and Intelligent behavior 
+ Formal and agent models of social behavior 
+ Cognitive modeling and simulation 
+ Game theory and simulation 
+ Integration of LLMs and generative AI for agent behavior modeling 
+ Social structure, social networks and simulating organizations 
+ Simulating social complexity (e.g. structures and norms, social order, emergence of cooperation and coordinated action, self-organization, the micro-macro link) 
+ Applications and Empirical Work 
+ MABS for socio-ecological systems 
+ MABS for socio-technical systems 
+ Agent-based experimental economics 
+ Participatory and Human-in-the-Loop simulation 
+ MABS and games 
+ MABS and cloud computing 
+ Digital twin applications in MABS 
+ MABS in governance and policy-making 
+ Applications of generative AI in MABS ecosystems 
+ Simulation Analytics 
+ Visualization and analytic tools for MABS 
+ Experimental design for MABS 
+ Statistical and data analysis methods for MABS 
+ Data mining and machine learning methods for MABS 
+ LLM-assisted simulation analysis and interpretation 
+ AI-driven pattern recognition in simulation outcomes 
+ Workshop Format and Location.MABS 2025 will be an in-person event in Detroit, USA. The workshop will feature an invited speaker/s, paper presentations, and a concluding panel discussion. The workshop duration and presentation times will be contingent on the number of submissions. 
+ Audience and Scope.MABS 2025 welcomes social scientists, policy-makers, AI, MAS, and simulation researchers and developers. It is an ideal platform for those engaged in modelling multi-agent systems and applying agent-based simulation in real-world scenarios. 
+ Proceedings.Post-proceedings will be reviewed further and published in the Springer LNAI series under “Multi-Agent-Based Simulation XXVI, 26th International Workshop, Detroit, May 2025, Revised Papers”. 
+ Target audience.The workshop will provide a forum for social scientists, policy-makers, and AI, MAS and simulation researchers and developers, to assess the current state of the art in the agent-based modeling and simulation of social and socio-technical systems, to identify where and discuss how existing approaches can be successfully applied, to learn about new approaches and explore future research challenges, and to exchange ideas and knowledge in an interdisciplinary environment. 
+ The workshop will be of interest to researchers engaged in modeling and analyzing multi-agent systems, and those interested in applying agent-based simulation techniques to real-world problems. In addition, it will attract researchers committed to cross-cutting research that is complementary to more orthodox modeling approaches. 
+ MABS intends to be a place where researchers can exchange ideas about their work and we are looking forward to the community meeting once again in person. 
+ Submission guidelines 
+ Submissions arelimited to 12 pages including referencesformatted according to theSpringer LNCS styleand must be electronically submitted before the submission deadline through the workshop conference system, which is available here: 
+ href="https://openreview.net/group?id=ifaamas.org/AAMAS/2025/Workshop/MABS" - MABS OpenReview
+All contributions will be peer-reviewed by at least two independent PC members. The evaluation criteria of contributions will be based on originality, quality, clarity, and its relevance to the workshop. 
+ Publication 
+ Following the tradition of the previous MABS workshops, we intend to publish the accepted papers, after a further reviewing process, in thehref="https://link.springer.com/conference/mabs" - Springer Multi-Agent-Based Simulation book series, LNAI
+. 
+ Important Dates 
+ Feb 4Feb 11, 2025: Submission deadline (extended) 
+ Feb 26Mar 3: Review deadline 
+ Mar 23: Acceptance/rejection notifications 
+ Mar 30: Deadline for revised submissions 
+ Mar 30: Submission of workshop notes 
+ Apr 8: Preliminary program and online article availability 
+ May 19/20: Workshop event, Detroit USA 
+ Aug-Dec: Preparation of Post-Proceedings for Springer LNAI 
+ Submission Page 
+ href="https://openreview.net/group?id=ifaamas.org/AAMAS/2025/Workshop/MABS" - MABS OpenReview
+More information 
+ For more information or if you have queries relating to the workshop, please contact our 2025 MABS workshop Chairs: 
+ Samarth Swarup 
+ Alicia Vidler 
+ You can reach both chairs by sending email to mabs2025workshop@gmail.com. 
+ Sponsors 
+ The MABS workshop is proudly supported by the European Social Simulation Association 
+ MABS2025 
+ href="mailto:mabs2025workshop@gmail.com" - mabs2025workshop@gmail.com

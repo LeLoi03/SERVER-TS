@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "September 22 - 26, 2025",
+  "Year": "2025",
+  "Location": "Yerevan, Armenia",
+  "City-State-Province": "Yerevan",
+  "Country": "Armenia",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshop Proposals": "June 30, 2025",
+    "Papers submission deadline": "June 30, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "July 31, 2025"
+  },
+  "Camera-ready Date": {
+    "Final papers due": "August 31, 2025"
+  },
+  "Registration Date": {
+    "Deadline for early registration": "August 31, 2025"
+  },
+  "Topics": "Artificial intelligence and Machine Learning, Big Data and Data Analytics, High Performance and Cloud Computing, Design and Test, Information and Cybersecurity, Pattern Recognition and Image Processing, Mathematical Modelling, Telecommunication and Networking",
+  "Summary": "The National Academy of Sciences of the Republic of Armenia and The Institute for Informatics and Automation Problems invite you to the 15th International Conference on Computer Science and Information Technologies (CSIT 2025), to be held in Yerevan, Armenia from September 22 - 26, 2025.  The aim of the Conference is to encourage the exchange of scientific and technological information between researchers in the field of Computer Science and Information Technologies.",
+  "Call for Papers": "# CSIT 2025: Call for Papers\n\nThe National Academy of Sciences of the Republic of Armenia and The Institute for Informatics and Automation Problems invite you to the 15th International Conference on Computer Science and Information Technologies (CSIT 2025), to be held in **Yerevan, Armenia from September 22-26, 2025.**\n\nThe aim of the conference is to encourage the exchange of scientific and technological information between researchers in the field of Computer Science and Information Technologies.\n\n## Topics\n\nThe major topics include, but are not limited to:\n\n*   Artificial intelligence and Machine Learning\n*   Big Data and Data Analytics\n*   High Performance and Cloud Computing\n*   Design and Test\n*   Information and Cybersecurity\n*   Pattern Recognition and Image Processing\n*   Mathematical Modelling\n*   Telecommunication and Networking\n\n## Paper Submission\n\nAuthors are encouraged to use LaTeX to format their papers, using the style file and template below. You can also use MS Word. The formatted paper must be converted to a PDF file, and the paper size must be set to A4.\n\n### Templates\n\n*   **Style file:** IEEEtran.cls\n*   **Template (.tex):** [CSIT_TeX_template.tex](templates/CSIT_TeX_template.tex)\n*   **Template (.pdf):** [CSIT_TeX_template.pdf](templates/CSIT_TeX_template.pdf)\n*   **Template (.docx):** [CSIT_word_template.docx](templates/CSIT_word_template.docx)\n*   **Template (.pdf):** [CSIT_word_template.pdf](templates/CSIT_word_template.pdf)\n\n## Important Dates\n\n*   **Workshop Proposals:** June 30, 2025\n*   **Papers submission deadline:** June 30, 2025\n*   **Notification of acceptance:** July 31, 2025\n*   **Final papers due:** August 31, 2025\n*   **Deadline for early registration:** August 31, 2025"
+}
+```

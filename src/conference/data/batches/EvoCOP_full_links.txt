@@ -1,0 +1,782 @@
+Conference full name: European Conference on Evolutionary Computation in Combinatorial Optimisation (EvoCOP)
+
+1. Website of EvoCOP_2: https://www.evostar.org/2025/evocop/
+Website information of EvoCOP_2:
+
+Skip to main contenthref="https://www.evostar.org/2025/" - 
+Toggle navigationAbout | href="https://www.evostar.org/2025/about-evostar/" - About Evostar 
+ href="https://www.evostar.org/2025/the-evostar-code/" - The Evostar Code 
+ href="https://www.evostar.org/2025/organisers/" - Organisers 
+ href="https://www.evostar.org/2025/previous-events/" - Previous Events 
+ href="https://www.evostar.org/2025/contact-us/" - Contact us 
+ href="#" - Calls | href="https://www.evostar.org/2025/eurogp/" - EuroGP 
+ href="https://www.evostar.org/2025/evoapps/" - EvoApplications | href="https://www.evostar.org/2025/evoapps/pso/" - 30 years of Particle Swarm Optimization 
+ href="https://www.evostar.org/2025/evoapps/terwa/" - Analysis of Evolutionary Computation Methods: Theory, Empirics, and Real-World Applications 
+ href="https://www.evostar.org/2025/evoapps/biosocnet/" - Applications of Bioinspired techniques on Social Networks 
+ href="https://www.evostar.org/2025/evoapps/bagcscs/" - Bioinspired Algorithms for Green Computing and Sustainable Complex Systems 
+ href="https://www.evostar.org/2025/evoapps/cis/" - Computational Intelligence for Sustainability 
+ href="https://www.evostar.org/2025/evoapps/evollms/" - EvoLLMs: Integrating Evolutionary Computing with Large Language Models (LLMs) 
+ href="https://www.evostar.org/2025/evoapps/ecml-hldf/" - Evolutionary Computation and Machine Learning in Humanitarian Logistics and Disaster Forecasting 
+ href="https://www.evostar.org/2025/evoapps/ecefcc/" - Evolutionary Computation in Edge, Fog, and Cloud Computing 
+ href="https://www.evostar.org/2025/evoapps/iasppr/" - Evolutionary Computation in Image Analysis, Signal Processing and Pattern Recognition 
+ href="https://www.evostar.org/2025/evoapps/ecdhpm/" - Machine Learning and AI in Digital Healthcare and Personalized Medicine 
+ href="https://www.evostar.org/2025/evoapps/rba/" - Resilient Bio-Inspired Algorithms 
+ href="https://www.evostar.org/2025/evoapps/scag/" - Soft Computing Applied to Games 
+ href="https://www.evostar.org/2025/evocop/" - EvoCOP 
+ href="https://www.evostar.org/2025/evomusart/" - EvoMUSART 
+ href="https://www.evostar.org/2025/eml/" - Joint Track on EML 
+ href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts 
+ Submit | href="https://www.evostar.org/2025/submission-camera-ready/" - Camera-Ready Submission 
+ href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts 
+ href="https://www.evostar.org/2025/important-dates/" - Important Dates 
+ Participants | href="https://www.evostar.org/2025/registration/" - Registration 
+ href="https://www.evostar.org/2025/instructions-for-presenters/" - Instructions for Presenters 
+ href="https://www.evostar.org/2025/preparing-your-poster/" - Preparing Your Poster 
+ href="https://www.evostar.org/2025/preparing-your-online-poster/" - Preparing your online poster 
+ Programme | href="https://www.evostar.org/2025/invited-speakers/" - Invited Speakers 
+ href="https://www.evostar.org/2025/programme-overview/" - Programme Overview 
+ Accepted Contributions | href="https://www.evostar.org/2025/eurogp-accepted-papers/" - EuroGP Accepted Papers 
+ href="https://www.evostar.org/2025/evoapplications-accepted-papers/" - EvoApplications Accepted Papers 
+ href="https://www.evostar.org/2025/evocop-accepted-papers/" - EvoCOP Accepted Papers 
+ href="https://www.evostar.org/2025/evomusart-accepted-papers/" - EvoMUSART Accepted Papers 
+ href="https://www.evostar.org/2025/evolutionary-machine-learning-accepted-papers/" - Evolutionary Machine Learning Accepted Papers 
+ Best Paper Nominations | href="https://www.evostar.org/2025/eurogp-best-paper-nominees/" - EuroGP Best Paper Nominees 
+ href="https://www.evostar.org/2025/evoapplications-best-paper-nominees/" - EvoApplications Best Paper Nominees 
+ href="https://www.evostar.org/2025/evocop-best-paper-nominees/" - EvoCOP Best Paper Nominees 
+ href="https://www.evostar.org/2025/evomusart-best-paper-nominees/" - EvoMUSART Best Paper Nominees 
+ href="https://www.evostar.org/2025/online-poster-session-in-gather/" - Online poster session (in Gather) 
+ Students | href="https://www.evostar.org/2025/student-reception/" - Student Reception 
+ href="https://www.evostar.org/2025/student-accommodation/" - Student Accommodation 
+ href="https://www.evostar.org/2025/evostar-outstanding-students/" - Evostar Outstanding Students 
+ href="https://www.evostar.org/2025/outstanding-students-of-2025/" - Outstanding Students of 2025 
+ href="https://www.evostar.org/2025/the-great-evostar-scavenger-hunt-2025/" - The Great EvoStar Scavenger Hunt 2025 
+ Location | href="https://www.evostar.org/2025/about-trieste/" - About Trieste 
+ href="https://www.evostar.org/2025/venue/" - Venue 
+ href="https://www.evostar.org/2025/travel-information/" - Travel Information 
+ href="https://www.evostar.org/2025/accommodation/" - Accommodation 
+ The 25th European Conference on Evolutionary Computation in Combinatorial Optimisation is a multidisciplinary conference that brings together researchers working on applications and theory of evolutionary computation methods and other metaheuristics for solving difficult combinatorial optimisation problems appearing in various industrial, economic, and scientific domains. 
+ Successfully solved problems include, but are not limited to, multi-objective, uncertain, dynamic and stochastic problems in the context of scheduling, timetabling, network design, transportation and distribution, vehicle routing, stringology, graphs, satisfiability, energy optimisation, cutting, packing, planning and search-based software engineering. 
+ Successfully addressed theoretical and translational challenges encompass, but are not limited to, the development and analysis of novel (components of) evolutionary and other metaheuristic algorithms, work on neighbourhood and landscape structures, problem-agnostic and problem-specific variation operators, parallelisation strategies, and hybridizations. ⁠ 
+ The EvoCOP 2025 conference will be held together with EuroGP (the 28th European Conference on Genetic Programming), EvoMUSART (the 14th European conference on evolutionary and biologically inspired music, sound, art and design) and EvoApplications (the 28th European Conference on the Applications of Evolutionary Computation), in a joint event collectively known as EvoStar (Evo*). 
+ Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Previous proceedings can be found in thehref="https://link.springer.com/conference/evocop" - EvoCOP Conference Proceedings in SpringerLink
+. 
+ Download the CFP in PDFhref="https://www.evostar.org/2025/wp-content/uploads/sites/2/2024/09/evo2025-flyers-evocop.pdf" - here
+. 
+ NEW:The proceedings of EvoCOP 2025 are available in the followinglink. 
+ Areas of Interest and Contributions 
+ EvoCOP welcomes submissions in all experimental and theoretical aspects of evolutionary computation and other metaheuristics to combinatorial optimisation problems, including (but not limited to) the following areas: 
+ Applications of metaheuristics to combinatorial optimization problems 
+ Theoretical developments 
+ Neighbourhoods and efficient algorithms for searching them 
+ Variation operators for stochastic search methods 
+ Constraint-handling techniques 
+ Parallelisation and grid computing 
+ Search space and landscape analyses 
+ Comparisons between different (also exact) methods 
+ Automatic algorithm configuration and design 
+ Prominent examples of metaheuristics include (but are not limited to): 
+ Evolutionary algorithms 
+ Estimation of distribution algorithms 
+ Swarm intelligence methods such as ant colony and particle swarm optimisation 
+ Artificial immune systems 
+ Local search methods such as simulated annealing, tabu search, variable neighbourhood search, iterated local search, scatter search and path relinking 
+ Hybrid methods such as memetic algorithms 
+ Matheuristics (hybrids of exact and heuristic methods) 
+ Hyper-heuristics and autonomous search 
+ Surrogate-model-based methods 
+ Notice that, by tradition, continuous/numerical optimisation is *not* part of the topics of interest of EvoCOP. Interested authors might consider submitting to other EvoStar conferences such as EvoApplications. 
+ Conference Chairs 
+ Markus Wagner | Monash University, Australia | markus.wagner(at)monash.edu 
+ Martin Krejca | Ecole Polytechnique, France | martin.krejca(at)polytechnique.edu 
+ Submission Details 
+ Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Submissions must be original and not published elsewhere. They will be peer reviewed by at least three members of the program committee. The reviewing process will bedouble-blind, so please omit information about the authors in the submitted paper. 
+ Page limit: 14 + unlimited references pages OR 6 + unlimited references pages 
+ If your paper has at most 6 pages of content (plus additional pages for references), then we consider it a short paper. If your paper has between 7 and 14 pages of content (plus additional pages for references), then we consider it as a full paper. In case of acceptance, a short paper will get a shorter time slot for presentation at EvoCOP than a full paper; exact durations are yet to be decided. 
+ Followhref="https://www.evostar.org/2025/submit-paper/" - these instructions
+to submit a paper. 
+ Programme Committee 
+ Richard Allmendinger, University of Manchester, UK 
+ Denis Antipov, Sorbonne University, France 
+ Matthieu Basseur, University of the Littoral Opal Coast, France 
+ Christian Blum, Spanish National Research Council (CSIC), Spain 
+ Jakob Bossek, Paderborn University, Germany 
+ Alexander Brownlee, University of Stirling, UK 
+ Maxim Buzdalov, Aberystwyth University, UK 
+ Josu Ceberio, University of the Basque Country, Spain 
+ Francisco Chicano, University of Málaga, Spain 
+ Carlos Cotta, University of Málaga, Spain 
+ Nguyen Dang, St Andrews University, UK 
+ Bilel Derbel, University of Lille, France 
+ Karl Doerner, University of Vienna, Austria 
+ Benjamin Doerr, Ecole Polytechnique, IP Paris, France 
+ Mehdi El Krari, British Antarctic Survey, UK 
+ Mohamed El Yafrani, Aalborg University, Denmark 
+ Talbi El-Ghazali, University of Lille, France 
+ Jonathan Fieldsend, University of Exeter, UK 
+ Carlos M. Fonseca, University of Coimbra, Portugal 
+ Carlos García-Martínez, Univiversity of Córdoba, Spain 
+ Adrien Goeffon, University of Angers, France 
+ Andreia Guerreiro, University of Coimbra, Portugal 
+ Jin-Kao Hao, University of Angers, France 
+ Geir Hasle, SINTEF Digital, Norway 
+ Mario Hevia Fajardo, University of Birmingham, UK 
+ Ekhine Irurozki, Telecom Paris, France 
+ Anja Jankovic, RWTH Aachen University, Germany 
+ Thomas Jansen, Aberystwyth University, UK 
+ Andrzej Jaszkiewicz, Poznan University of Technology, Poland 
+ Maria João Alves, University of Coimbra / INESC Coimbra, Portugal 
+ Jiby Mariya Jose, Indian Initute of Information Technology Kottayam, India 
+ Marie-Eleonore Kessaci, University of Lille, France 
+ Ahmed Kheiri, University of Manchester, UK 
+ Timo Kötzing, Hasso Plattner Institute, University of Potsdam, Germany 
+ Frederic Lardeux, University of Angers, France 
+ Per Kristian Lehre, University of Birmingham, UK 
+ Johannes Lengler, ETH Zurich, Switzerland 
+ Rhydian Lewis, Cardiff University, UK 
+ Manuel López-Ibáñez, University of Manchester, UK 
+ Jose A. Lozano, University of the Basque Country, Spain 
+ Gabriel Luque, University of Málaga, Spain 
+ Krzysztof Michalak, Wroclaw University of Economics, Poland 
+ Nysret Musliu, Vienna University of Technology, Austria 
+ Frank Neumann, University of Adelaide, Australia 
+ Gabriela Ochoa, University of Stirling, UK 
+ Pietro S. Oliveto, Southern University of Science and Technology, China 
+ Beatrice Ombuki-Berman, Brock University, Canada 
+ Andre Opris, University of Passau 
+ Luis Paquete, University of Coimbra, Portugal 
+ Mario Pavone, University of Catania, Italy 
+ Paola Pellegrini, IFSTTAR, France 
+ Francisco Pereira, Instituto Superior de Engenharia de Coimbra, Portugal 
+ Daniel Porumbel, CEDRIC, CNAM, France 
+ Abraham Punnen, Simon Fraser University, Canada 
+ Chao Qian, Nanjing University, China 
+ Wu Qinghua, Huazhong University of Science and Technology, China 
+ Günther Raidl, Vienna University of Technology, Austria 
+ Elena Raponi, Leiden University, Netherlands 
+ María Cristina Riff, Federico Santa María Technical University, Chile 
+ Marcus Ritt, Federal University of Rio Grande do Sul, Brazil 
+ Eduardo Arturo Rodriguez Tello, Cinvestav Tamaulipas, Mexico 
+ Andrea Roli, University of Bologna, Italy 
+ Jonathan Rowe, University of Birmingham, UK 
+ Günter Rudolph, TU Dortmund University, Germany 
+ Valentino Santucci, University for Foreigners of Perugia, Italy 
+ Frédéric Saubion, University of Angers, France 
+ Marcella Scoczynski Ribeiro Martins, Federal University of Technology — Paraná, Brazil 
+ Kevin Sim, Edinburgh Napier University, UK 
+ Thomas Stützle, Université Libre de Bruxelles, Belgium 
+ Dirk Sudholt, University of Passau, Germany 
+ Andrew M. Sutton, University of Minnesota, USA 
+ Sara Tari, University of the Littoral Opal Coast, France 
+ Renato Tinós, University of São Paulo, Brazil 
+ Niki van Stein, Leiden University, Netherlands 
+ Nadarajen Veerapen, University of Lille, France 
+ Sébastien Verel, University of the Littoral Opal Coast, France 
+ Hao Wang, Leiden University, Netherlands 
+ Carsten Witt, Technical University of Denmark, Denmark 
+ Furong Ye, Leiden University, Netherlands 
+ Christine Zarges, Aberystwyth University, UK 
+ Fangfang Zhang, Victoria University of Wellington, New Zealand 
+ Weijie Zheng, Harbin Institute of Technology, China 
+ SearchSearch 
+ Important dates 
+ EvoApps Special Session Proposals 
+ 8 September 2024 
+  
+ Submission deadline 
+ 1 November 2024 AoE 
+ 15 November 2024 AoE (extended) 
+  
+ Notification to authors 
+ 10 January 2025 
+  
+ Camera-ready submission 
+ 24 January 2025 
+  
+ Author's mandatory registration 
+ 26 February 2025 
+  
+ Early registration deadline 
+ 19 March 2025 
+  
+ Late-Breaking Abstracts submission 
+ 13 April 2025 
+  
+ EvoStar Conference 
+ 23-25 April 2025 
+ News 
+ The submission for Late-Breaking Abstracts is open, follow the instructions in the | href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts page | . 
+ The submission link is ready. Visit the | href="https://www.evostar.org/2025/submit-paper/" - Submit Paper | page 
+ EvoApplpications Special Sessions are published 
+ Welcome to the Evostar 2025 Webpage! 
+ Follow us 
+ X 
+ Facebook 
+ LinkedIn 
+ href="https://twitter.com/EvostarConf/" - Evostar
+
+Follow                
+
+Official X account for Evo* - the Main European Event on Bio-Inspired Artificial Intelligence. Evo* 2025 will be held in Trieste, from  23 to 25 April 2025.
+Evostar@evostarconf·17 JanExciting news fromhref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+!Paper acceptance notifications have been sent—check your inboxes! 
+ Congratulations to everyone whose work has been accepted!Your contributions in#BioInspiredAIand#EvolutionaryComputationare paving the way for the future of innovation!Reply on Twitter 1880213179969720540Retweet on Twitter 18802131799697205401Like on Twitter 188021317996972054012Twitter1880213179969720540Evostar@evostarconf·8 JanEvoStar 2025 Loading… evolution is in the air! 
+  
+ The local chairs are already busy preparing to welcome you tohref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+in beautiful Trieste! 
+  
+ Get ready for groundbreaking ideas, inspiring talks, good food, and unforgettable moments. 
+  
+ 23-25 April 2025Reply on Twitter 1876981031250674078Retweet on Twitter 18769810312506740783Like on Twitter 187698103125067407819Twitter1876981031250674078Evostar@evostarconf·31 DecWe’re excited to create new memories with you in Trieste forhref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+. 
+ See you there!4 
+ Reply on Twitter 1874140673139761421Retweet on Twitter 18741406731397614212Like on Twitter 187414067313976142110Twitter1874140673139761421Evostar@evostarconf·29 DecWe're wrapping#EvoStarWrappedthanking the organizers and attendees of#EvoStar2024, and celebrating the moments we shared 
+  
+ To everyone who joined us—whether in person or online—thank you for being part of this unforgettable journey.Reply on Twitter 1873431851886682425Retweet on Twitter 18734318518866824251Like on Twitter 18734318518866824255Twitter1873431851886682425Load MoreEvostar is Organized by 
+ Evostar is Published by 
+ sparkling Theme byColorlibPowered byWordPress
+
+2. Website of EvoCOP_2: https://www.evostar.org/2025/evocop/
+Website information of EvoCOP_2:
+
+Skip to main contenthref="https://www.evostar.org/2025/" - 
+Toggle navigationAbout | href="https://www.evostar.org/2025/about-evostar/" - About Evostar 
+ href="https://www.evostar.org/2025/the-evostar-code/" - The Evostar Code 
+ href="https://www.evostar.org/2025/organisers/" - Organisers 
+ href="https://www.evostar.org/2025/previous-events/" - Previous Events 
+ href="https://www.evostar.org/2025/contact-us/" - Contact us 
+ href="#" - Calls | href="https://www.evostar.org/2025/eurogp/" - EuroGP 
+ href="https://www.evostar.org/2025/evoapps/" - EvoApplications | href="https://www.evostar.org/2025/evoapps/pso/" - 30 years of Particle Swarm Optimization 
+ href="https://www.evostar.org/2025/evoapps/terwa/" - Analysis of Evolutionary Computation Methods: Theory, Empirics, and Real-World Applications 
+ href="https://www.evostar.org/2025/evoapps/biosocnet/" - Applications of Bioinspired techniques on Social Networks 
+ href="https://www.evostar.org/2025/evoapps/bagcscs/" - Bioinspired Algorithms for Green Computing and Sustainable Complex Systems 
+ href="https://www.evostar.org/2025/evoapps/cis/" - Computational Intelligence for Sustainability 
+ href="https://www.evostar.org/2025/evoapps/evollms/" - EvoLLMs: Integrating Evolutionary Computing with Large Language Models (LLMs) 
+ href="https://www.evostar.org/2025/evoapps/ecml-hldf/" - Evolutionary Computation and Machine Learning in Humanitarian Logistics and Disaster Forecasting 
+ href="https://www.evostar.org/2025/evoapps/ecefcc/" - Evolutionary Computation in Edge, Fog, and Cloud Computing 
+ href="https://www.evostar.org/2025/evoapps/iasppr/" - Evolutionary Computation in Image Analysis, Signal Processing and Pattern Recognition 
+ href="https://www.evostar.org/2025/evoapps/ecdhpm/" - Machine Learning and AI in Digital Healthcare and Personalized Medicine 
+ href="https://www.evostar.org/2025/evoapps/rba/" - Resilient Bio-Inspired Algorithms 
+ href="https://www.evostar.org/2025/evoapps/scag/" - Soft Computing Applied to Games 
+ href="https://www.evostar.org/2025/evocop/" - EvoCOP 
+ href="https://www.evostar.org/2025/evomusart/" - EvoMUSART 
+ href="https://www.evostar.org/2025/eml/" - Joint Track on EML 
+ href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts 
+ Submit | href="https://www.evostar.org/2025/submission-camera-ready/" - Camera-Ready Submission 
+ href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts 
+ href="https://www.evostar.org/2025/important-dates/" - Important Dates 
+ Participants | href="https://www.evostar.org/2025/registration/" - Registration 
+ href="https://www.evostar.org/2025/instructions-for-presenters/" - Instructions for Presenters 
+ href="https://www.evostar.org/2025/preparing-your-poster/" - Preparing Your Poster 
+ href="https://www.evostar.org/2025/preparing-your-online-poster/" - Preparing your online poster 
+ Programme | href="https://www.evostar.org/2025/invited-speakers/" - Invited Speakers 
+ href="https://www.evostar.org/2025/programme-overview/" - Programme Overview 
+ Accepted Contributions | href="https://www.evostar.org/2025/eurogp-accepted-papers/" - EuroGP Accepted Papers 
+ href="https://www.evostar.org/2025/evoapplications-accepted-papers/" - EvoApplications Accepted Papers 
+ href="https://www.evostar.org/2025/evocop-accepted-papers/" - EvoCOP Accepted Papers 
+ href="https://www.evostar.org/2025/evomusart-accepted-papers/" - EvoMUSART Accepted Papers 
+ href="https://www.evostar.org/2025/evolutionary-machine-learning-accepted-papers/" - Evolutionary Machine Learning Accepted Papers 
+ Best Paper Nominations | href="https://www.evostar.org/2025/eurogp-best-paper-nominees/" - EuroGP Best Paper Nominees 
+ href="https://www.evostar.org/2025/evoapplications-best-paper-nominees/" - EvoApplications Best Paper Nominees 
+ href="https://www.evostar.org/2025/evocop-best-paper-nominees/" - EvoCOP Best Paper Nominees 
+ href="https://www.evostar.org/2025/evomusart-best-paper-nominees/" - EvoMUSART Best Paper Nominees 
+ href="https://www.evostar.org/2025/online-poster-session-in-gather/" - Online poster session (in Gather) 
+ Students | href="https://www.evostar.org/2025/student-reception/" - Student Reception 
+ href="https://www.evostar.org/2025/student-accommodation/" - Student Accommodation 
+ href="https://www.evostar.org/2025/evostar-outstanding-students/" - Evostar Outstanding Students 
+ href="https://www.evostar.org/2025/outstanding-students-of-2025/" - Outstanding Students of 2025 
+ href="https://www.evostar.org/2025/the-great-evostar-scavenger-hunt-2025/" - The Great EvoStar Scavenger Hunt 2025 
+ Location | href="https://www.evostar.org/2025/about-trieste/" - About Trieste 
+ href="https://www.evostar.org/2025/venue/" - Venue 
+ href="https://www.evostar.org/2025/travel-information/" - Travel Information 
+ href="https://www.evostar.org/2025/accommodation/" - Accommodation 
+ The 25th European Conference on Evolutionary Computation in Combinatorial Optimisation is a multidisciplinary conference that brings together researchers working on applications and theory of evolutionary computation methods and other metaheuristics for solving difficult combinatorial optimisation problems appearing in various industrial, economic, and scientific domains. 
+ Successfully solved problems include, but are not limited to, multi-objective, uncertain, dynamic and stochastic problems in the context of scheduling, timetabling, network design, transportation and distribution, vehicle routing, stringology, graphs, satisfiability, energy optimisation, cutting, packing, planning and search-based software engineering. 
+ Successfully addressed theoretical and translational challenges encompass, but are not limited to, the development and analysis of novel (components of) evolutionary and other metaheuristic algorithms, work on neighbourhood and landscape structures, problem-agnostic and problem-specific variation operators, parallelisation strategies, and hybridizations. ⁠ 
+ The EvoCOP 2025 conference will be held together with EuroGP (the 28th European Conference on Genetic Programming), EvoMUSART (the 14th European conference on evolutionary and biologically inspired music, sound, art and design) and EvoApplications (the 28th European Conference on the Applications of Evolutionary Computation), in a joint event collectively known as EvoStar (Evo*). 
+ Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Previous proceedings can be found in thehref="https://link.springer.com/conference/evocop" - EvoCOP Conference Proceedings in SpringerLink
+. 
+ Download the CFP in PDFhref="https://www.evostar.org/2025/wp-content/uploads/sites/2/2024/09/evo2025-flyers-evocop.pdf" - here
+. 
+ NEW:The proceedings of EvoCOP 2025 are available in the followinglink. 
+ Areas of Interest and Contributions 
+ EvoCOP welcomes submissions in all experimental and theoretical aspects of evolutionary computation and other metaheuristics to combinatorial optimisation problems, including (but not limited to) the following areas: 
+ Applications of metaheuristics to combinatorial optimization problems 
+ Theoretical developments 
+ Neighbourhoods and efficient algorithms for searching them 
+ Variation operators for stochastic search methods 
+ Constraint-handling techniques 
+ Parallelisation and grid computing 
+ Search space and landscape analyses 
+ Comparisons between different (also exact) methods 
+ Automatic algorithm configuration and design 
+ Prominent examples of metaheuristics include (but are not limited to): 
+ Evolutionary algorithms 
+ Estimation of distribution algorithms 
+ Swarm intelligence methods such as ant colony and particle swarm optimisation 
+ Artificial immune systems 
+ Local search methods such as simulated annealing, tabu search, variable neighbourhood search, iterated local search, scatter search and path relinking 
+ Hybrid methods such as memetic algorithms 
+ Matheuristics (hybrids of exact and heuristic methods) 
+ Hyper-heuristics and autonomous search 
+ Surrogate-model-based methods 
+ Notice that, by tradition, continuous/numerical optimisation is *not* part of the topics of interest of EvoCOP. Interested authors might consider submitting to other EvoStar conferences such as EvoApplications. 
+ Conference Chairs 
+ Markus Wagner | Monash University, Australia | markus.wagner(at)monash.edu 
+ Martin Krejca | Ecole Polytechnique, France | martin.krejca(at)polytechnique.edu 
+ Submission Details 
+ Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Submissions must be original and not published elsewhere. They will be peer reviewed by at least three members of the program committee. The reviewing process will bedouble-blind, so please omit information about the authors in the submitted paper. 
+ Page limit: 14 + unlimited references pages OR 6 + unlimited references pages 
+ If your paper has at most 6 pages of content (plus additional pages for references), then we consider it a short paper. If your paper has between 7 and 14 pages of content (plus additional pages for references), then we consider it as a full paper. In case of acceptance, a short paper will get a shorter time slot for presentation at EvoCOP than a full paper; exact durations are yet to be decided. 
+ Followhref="https://www.evostar.org/2025/submit-paper/" - these instructions
+to submit a paper. 
+ Programme Committee 
+ Richard Allmendinger, University of Manchester, UK 
+ Denis Antipov, Sorbonne University, France 
+ Matthieu Basseur, University of the Littoral Opal Coast, France 
+ Christian Blum, Spanish National Research Council (CSIC), Spain 
+ Jakob Bossek, Paderborn University, Germany 
+ Alexander Brownlee, University of Stirling, UK 
+ Maxim Buzdalov, Aberystwyth University, UK 
+ Josu Ceberio, University of the Basque Country, Spain 
+ Francisco Chicano, University of Málaga, Spain 
+ Carlos Cotta, University of Málaga, Spain 
+ Nguyen Dang, St Andrews University, UK 
+ Bilel Derbel, University of Lille, France 
+ Karl Doerner, University of Vienna, Austria 
+ Benjamin Doerr, Ecole Polytechnique, IP Paris, France 
+ Mehdi El Krari, British Antarctic Survey, UK 
+ Mohamed El Yafrani, Aalborg University, Denmark 
+ Talbi El-Ghazali, University of Lille, France 
+ Jonathan Fieldsend, University of Exeter, UK 
+ Carlos M. Fonseca, University of Coimbra, Portugal 
+ Carlos García-Martínez, Univiversity of Córdoba, Spain 
+ Adrien Goeffon, University of Angers, France 
+ Andreia Guerreiro, University of Coimbra, Portugal 
+ Jin-Kao Hao, University of Angers, France 
+ Geir Hasle, SINTEF Digital, Norway 
+ Mario Hevia Fajardo, University of Birmingham, UK 
+ Ekhine Irurozki, Telecom Paris, France 
+ Anja Jankovic, RWTH Aachen University, Germany 
+ Thomas Jansen, Aberystwyth University, UK 
+ Andrzej Jaszkiewicz, Poznan University of Technology, Poland 
+ Maria João Alves, University of Coimbra / INESC Coimbra, Portugal 
+ Jiby Mariya Jose, Indian Initute of Information Technology Kottayam, India 
+ Marie-Eleonore Kessaci, University of Lille, France 
+ Ahmed Kheiri, University of Manchester, UK 
+ Timo Kötzing, Hasso Plattner Institute, University of Potsdam, Germany 
+ Frederic Lardeux, University of Angers, France 
+ Per Kristian Lehre, University of Birmingham, UK 
+ Johannes Lengler, ETH Zurich, Switzerland 
+ Rhydian Lewis, Cardiff University, UK 
+ Manuel López-Ibáñez, University of Manchester, UK 
+ Jose A. Lozano, University of the Basque Country, Spain 
+ Gabriel Luque, University of Málaga, Spain 
+ Krzysztof Michalak, Wroclaw University of Economics, Poland 
+ Nysret Musliu, Vienna University of Technology, Austria 
+ Frank Neumann, University of Adelaide, Australia 
+ Gabriela Ochoa, University of Stirling, UK 
+ Pietro S. Oliveto, Southern University of Science and Technology, China 
+ Beatrice Ombuki-Berman, Brock University, Canada 
+ Andre Opris, University of Passau 
+ Luis Paquete, University of Coimbra, Portugal 
+ Mario Pavone, University of Catania, Italy 
+ Paola Pellegrini, IFSTTAR, France 
+ Francisco Pereira, Instituto Superior de Engenharia de Coimbra, Portugal 
+ Daniel Porumbel, CEDRIC, CNAM, France 
+ Abraham Punnen, Simon Fraser University, Canada 
+ Chao Qian, Nanjing University, China 
+ Wu Qinghua, Huazhong University of Science and Technology, China 
+ Günther Raidl, Vienna University of Technology, Austria 
+ Elena Raponi, Leiden University, Netherlands 
+ María Cristina Riff, Federico Santa María Technical University, Chile 
+ Marcus Ritt, Federal University of Rio Grande do Sul, Brazil 
+ Eduardo Arturo Rodriguez Tello, Cinvestav Tamaulipas, Mexico 
+ Andrea Roli, University of Bologna, Italy 
+ Jonathan Rowe, University of Birmingham, UK 
+ Günter Rudolph, TU Dortmund University, Germany 
+ Valentino Santucci, University for Foreigners of Perugia, Italy 
+ Frédéric Saubion, University of Angers, France 
+ Marcella Scoczynski Ribeiro Martins, Federal University of Technology — Paraná, Brazil 
+ Kevin Sim, Edinburgh Napier University, UK 
+ Thomas Stützle, Université Libre de Bruxelles, Belgium 
+ Dirk Sudholt, University of Passau, Germany 
+ Andrew M. Sutton, University of Minnesota, USA 
+ Sara Tari, University of the Littoral Opal Coast, France 
+ Renato Tinós, University of São Paulo, Brazil 
+ Niki van Stein, Leiden University, Netherlands 
+ Nadarajen Veerapen, University of Lille, France 
+ Sébastien Verel, University of the Littoral Opal Coast, France 
+ Hao Wang, Leiden University, Netherlands 
+ Carsten Witt, Technical University of Denmark, Denmark 
+ Furong Ye, Leiden University, Netherlands 
+ Christine Zarges, Aberystwyth University, UK 
+ Fangfang Zhang, Victoria University of Wellington, New Zealand 
+ Weijie Zheng, Harbin Institute of Technology, China 
+ SearchSearch 
+ Important dates 
+ EvoApps Special Session Proposals 
+ 8 September 2024 
+  
+ Submission deadline 
+ 1 November 2024 AoE 
+ 15 November 2024 AoE (extended) 
+  
+ Notification to authors 
+ 10 January 2025 
+  
+ Camera-ready submission 
+ 24 January 2025 
+  
+ Author's mandatory registration 
+ 26 February 2025 
+  
+ Early registration deadline 
+ 19 March 2025 
+  
+ Late-Breaking Abstracts submission 
+ 13 April 2025 
+  
+ EvoStar Conference 
+ 23-25 April 2025 
+ News 
+ The submission for Late-Breaking Abstracts is open, follow the instructions in the | href="https://www.evostar.org/2025/late-breaking-abstracts/" - Late-Breaking Abstracts page | . 
+ The submission link is ready. Visit the | href="https://www.evostar.org/2025/submit-paper/" - Submit Paper | page 
+ EvoApplpications Special Sessions are published 
+ Welcome to the Evostar 2025 Webpage! 
+ Follow us 
+ X 
+ Facebook 
+ LinkedIn 
+ href="https://twitter.com/EvostarConf/" - Evostar
+
+Follow                
+
+Official X account for Evo* - the Main European Event on Bio-Inspired Artificial Intelligence. Evo* 2025 will be held in Trieste, from  23 to 25 April 2025.
+Evostar@evostarconf·17 JanExciting news fromhref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+!Paper acceptance notifications have been sent—check your inboxes! 
+ Congratulations to everyone whose work has been accepted!Your contributions in#BioInspiredAIand#EvolutionaryComputationare paving the way for the future of innovation!Reply on Twitter 1880213179969720540Retweet on Twitter 18802131799697205401Like on Twitter 188021317996972054012Twitter1880213179969720540Evostar@evostarconf·8 JanEvoStar 2025 Loading… evolution is in the air! 
+  
+ The local chairs are already busy preparing to welcome you tohref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+in beautiful Trieste! 
+  
+ Get ready for groundbreaking ideas, inspiring talks, good food, and unforgettable moments. 
+  
+ 23-25 April 2025Reply on Twitter 1876981031250674078Retweet on Twitter 18769810312506740783Like on Twitter 187698103125067407819Twitter1876981031250674078Evostar@evostarconf·31 DecWe’re excited to create new memories with you in Trieste forhref="https://twitter.com/hashtag/EvoStar2025" - #EvoStar2025
+. 
+ See you there!4 
+ Reply on Twitter 1874140673139761421Retweet on Twitter 18741406731397614212Like on Twitter 187414067313976142110Twitter1874140673139761421Evostar@evostarconf·29 DecWe're wrapping#EvoStarWrappedthanking the organizers and attendees of#EvoStar2024, and celebrating the moments we shared 
+  
+ To everyone who joined us—whether in person or online—thank you for being part of this unforgettable journey.Reply on Twitter 1873431851886682425Retweet on Twitter 18734318518866824251Like on Twitter 18734318518866824255Twitter1873431851886682425Load MoreEvostar is Organized by 
+ Evostar is Published by 
+ sparkling Theme byColorlibPowered byWordPress
+
+3. Website of EvoCOP_2: http://www.wikicfp.com/cfp/servlet/event.showcfp?copyownerid=90704&eventid=182513
+Website information of EvoCOP_2:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] | posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] 
+ posted by user:href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+|| 1323 views || tracked by 3 users:[display]href="/cfp/servlet/event.showlist?lownerid=106070&ltype=w" - Ritt
+,href="/cfp/servlet/event.showlist?lownerid=189716&ltype=w" - alizafer4828
+,href="/cfp/servlet/event.showlist?lownerid=192043&ltype=w" - amarero
+[hide] 
+ EvoCOP 2025 : Evolutionary Computation in Combinatorial Optimizationhref="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/servlet/event.showcfp?copyownerid=90704&eventid=182513" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/servlet/event.showcfp?copyownerid=90704&eventid=182513&text=EvoCOP 2025 : Evolutionary Computation in Combinatorial Optimization" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/servlet/event.showcfp?copyownerid=90704&eventid=182513" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/servlet/event.showcfp?copyownerid=90704&eventid=182513" - 
+ 
+ Conference Series :href="/cfp/program?id=987&s=EvoCOP&f=Evolutionary Computation in Combinatorial Optimization" - Evolutionary Computation in Combinatorial Optimization 
+ Link:href="https://www.evostar.org/2025/evocop" - https://www.evostar.org/2025/evocop 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 | When | Apr 23, 2025 - Apr 25, 2025 | Where | Trieste, Italy | Submission Deadline | Nov 1, 2024 
+ When | Apr 23, 2025 - Apr 25, 2025 
+ Where | Trieste, Italy 
+ Submission Deadline | Nov 1, 2024 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics | href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ href="/cfp/allcat" - Categories
+href="../call?conference=evolutionary computation" - evolutionary computation
+href="../call?conference=combinatorial optimization" - combinatorial optimization
+href="../call?conference=local search" - local search
+href="../call?conference=matheuristics" - matheuristics 
+ Call For Papers 
+ The 25th European Conference on Evolutionary Computation in Combinatorial Optimisation is a multidisciplinary conference that brings together researchers working on applications and theory of evolutionary computation methods and other metaheuristics for solving difficult combinatorial optimisation problems appearing in various industrial, economic, and scientific domains. 
+  
+ Successfully solved problems include, but are not limited to, multi-objective, uncertain, dynamic and stochastic problems in the context of scheduling, timetabling, network design, transportation and distribution, vehicle routing, stringology, graphs, satisfiability, energy optimisation, cutting, packing, planning and search-based software engineering. 
+  
+ Successfully addressed theoretical and translational challenges encompass, but are not limited to, the development and analysis of novel (components of) evolutionary and other metaheuristic algorithms, work on neighbourhood and landscape structures, problem-agnostic and problem-specific variation operators, parallelisation strategies, and hybridizations. ⁠ 
+  
+ The EvoCOP 2025 conference will be held together with EuroGP (the 28th European Conference on Genetic Programming), EvoMUSART (the 14th European conference on evolutionary and biologically inspired music, sound, art and design) and EvoApplications (the 28th European Conference on the Applications of Evolutionary Computation), in a joint event collectively known as EvoStar (Evo*). 
+  
+ Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Previous proceedings can be found in the EvoCOP Conference Proceedings in SpringerLink. 
+  
+ Download the CFP in PDF here. 
+ Areas of Interest and Contributions 
+  
+ EvoCOP welcomes submissions in all experimental and theoretical aspects of evolutionary computation and other metaheuristics to combinatorial optimisation problems, including (but not limited to) the following areas: 
+  
+ Applications of metaheuristics to combinatorial optimization problems 
+ Theoretical developments 
+ Neighbourhoods and efficient algorithms for searching them 
+ Variation operators for stochastic search methods 
+ Constraint-handling techniques 
+ Parallelisation and grid computing 
+ Search space and landscape analyses 
+ Comparisons between different (also exact) methods 
+ Automatic algorithm configuration and design 
+  
+ Prominent examples of metaheuristics include (but are not limited to): 
+  
+ Evolutionary algorithms 
+ Estimation of distribution algorithms 
+ Swarm intelligence methods such as ant colony and particle swarm optimisation 
+ Artificial immune systems 
+ Local search methods such as simulated annealing, tabu search, variable neighbourhood search, iterated local search, scatter search and path relinking 
+ Hybrid methods such as memetic algorithms 
+ Matheuristics (hybrids of exact and heuristic methods) 
+ Hyper-heuristics and autonomous search 
+ Surrogate-model-based methods 
+  
+ Notice that, by tradition, continuous/numerical optimisation is *not* part of the topics of interest of EvoCOP. Interested authors might consider submitting to other EvoStar conferences such as EvoApplications. 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=185525" - ECTA 2025
+17th International Conference on Evolutionary Computation Theory and Applications 
+ href="/cfp/servlet/event.showcfp?eventid=185523" - EXPLAINS 2025
+2nd International Conference on Explainable AI for Neural and Symbolic Methods 
+ href="/cfp/servlet/event.showcfp?eventid=182438" - IEEE CEC 2025
+IEEE Congress on Evolutionary Computation 
+ href="/cfp/servlet/event.showcfp?eventid=187690" - ICAISC 2026
+International Conference on Artificial Intelligence and Soft Computing 
+ href="/cfp/servlet/event.showcfp?eventid=183477" - GECCO 2025
+Genetic and Evolutionary Computation Conference 
+ href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search 
+ href="/cfp/servlet/event.showcfp?eventid=183567" - IEEE CEC SS IMLMEO 2025
+Special Session on Integrating Machine Learning Methods into Evolutionary Optimization 
+ href="/cfp/servlet/event.showcfp?eventid=185954" - ICNC-FSKD 2025
+21th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery 
+ href="/cfp/servlet/event.showcfp?eventid=185033" - COSI 2025
+17th Conference on Optimization and Information Systems 
+ href="/cfp/servlet/event.showcfp?eventid=186534" - Student Workshop GECCO 2025
+Student Workshop @ GECCO 2025 | href="/cfp/servlet/event.showcfp?eventid=185525" - ECTA 2025
+17th International Conference on Evolutionary Computation Theory and Applications | href="/cfp/servlet/event.showcfp?eventid=185523" - EXPLAINS 2025
+2nd International Conference on Explainable AI for Neural and Symbolic Methods | href="/cfp/servlet/event.showcfp?eventid=182438" - IEEE CEC 2025
+IEEE Congress on Evolutionary Computation | href="/cfp/servlet/event.showcfp?eventid=187690" - ICAISC 2026
+International Conference on Artificial Intelligence and Soft Computing | href="/cfp/servlet/event.showcfp?eventid=183477" - GECCO 2025
+Genetic and Evolutionary Computation Conference | href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search | href="/cfp/servlet/event.showcfp?eventid=183567" - IEEE CEC SS IMLMEO 2025
+Special Session on Integrating Machine Learning Methods into Evolutionary Optimization | href="/cfp/servlet/event.showcfp?eventid=185954" - ICNC-FSKD 2025
+21th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery | href="/cfp/servlet/event.showcfp?eventid=185033" - COSI 2025
+17th Conference on Optimization and Information Systems | href="/cfp/servlet/event.showcfp?eventid=186534" - Student Workshop GECCO 2025
+Student Workshop @ GECCO 2025 
+ href="/cfp/servlet/event.showcfp?eventid=185525" - ECTA 2025
+17th International Conference on Evolutionary Computation Theory and Applications 
+ href="/cfp/servlet/event.showcfp?eventid=185523" - EXPLAINS 2025
+2nd International Conference on Explainable AI for Neural and Symbolic Methods 
+ href="/cfp/servlet/event.showcfp?eventid=182438" - IEEE CEC 2025
+IEEE Congress on Evolutionary Computation 
+ href="/cfp/servlet/event.showcfp?eventid=187690" - ICAISC 2026
+International Conference on Artificial Intelligence and Soft Computing 
+ href="/cfp/servlet/event.showcfp?eventid=183477" - GECCO 2025
+Genetic and Evolutionary Computation Conference 
+ href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search 
+ href="/cfp/servlet/event.showcfp?eventid=183567" - IEEE CEC SS IMLMEO 2025
+Special Session on Integrating Machine Learning Methods into Evolutionary Optimization 
+ href="/cfp/servlet/event.showcfp?eventid=185954" - ICNC-FSKD 2025
+21th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery 
+ href="/cfp/servlet/event.showcfp?eventid=185033" - COSI 2025
+17th Conference on Optimization and Information Systems 
+ href="/cfp/servlet/event.showcfp?eventid=186534" - Student Workshop GECCO 2025
+Student Workshop @ GECCO 2025 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+

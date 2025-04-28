@@ -1,0 +1,48 @@
+output:
+{
+  "Conference dates": "October 5 - 10, 2025",
+  "Year": "2025",
+  "Location": "University of Michigan - Ann Arbor, Michigan, United States",
+  "City-State-Province": "Ann Arbor, Michigan",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Workshops Proposal Submissions Deadline": "March 28, 2025",
+    "Research Papers Submission deadline": "April 3, 2025",
+    "Workshops Submissions Deadline": "July 3, 2025",
+    "New Ideas and Emerging Results (NIER) Paper submission": "July 8, 2025",
+    "Tutorials Submission deadline": "July 11, 2025",
+    "Journal-First Submission deadline": "July 11, 2025",
+    "ACM SRC Submission deadline": "July 18, 2025",
+    "Student Volunteers Application deadline": "July 18, 2025",
+    "Doctoral Symposium Submission deadline": "July 24, 2025",
+    "Educators Symposium Submission deadline": "July 24, 2025",
+    "Artifact Evaluation Submission deadline": "August 7, 2025",
+    "Tools and Demonstrations Submission deadline": "August 7, 2025"
+  },
+  "Notification Date": {
+    "Workshops Proposal Acceptance Notification": "April 25, 2025",
+    "Research Papers Author notification": "June 24, 2025",
+    "Workshops Notification of Authors": "July 31, 2025",
+    "New Ideas and Emerging Results (NIER) Author notification": "August 19, 2025",
+    "EDTconf Technical Track Notification of acceptance": "August 5, 2025"
+  },
+  "Camera-ready Date": {
+    "Research Papers Camera Ready": "August 7, 2025",
+    "Workshops Camera-ready Deadline": "August 7, 2025",
+    "New Ideas and Emerging Results (NIER) Camera Ready Due": "September 2, 2025",
+    "EDTconf Technical Track Camera-ready submission": "August 20, 2025"
+  },
+  "Other Date": {
+    "Research Papers Author responses": "June 3 - 5, 2025",
+    "EDTconf Technical Track Abstract submission deadline": "June 27, 2025",
+    "New Ideas and Emerging Results (NIER) Abstract submission": "July 1, 2025",
+    "EDTconf Technical Track Paper submission deadline": "July 2, 2025",
+    "Workshops Dates": "October 5 - 7, 2025"
+  },
+  "Topics": "Model-Driven Engineering, Modeling Languages, Model-Based Software and Systems Engineering, Cyber-physical systems, Embedded systems, Socio-technical systems, Cloud computing, Big data, Machine learning, Security, Open source, Sustainability",
+  "Summary": "MODELS 2025, the ACM/IEEE International Conference on Model-Driven Engineering Languages and Systems, will be held at the University of Michigan - Ann Arbor, from October 5-10, 2025.  MODELS is the premier conference series for model-driven software and systems engineering.",
+  "Call for Papers": "# MODELS 2025: Call for Papers\n\nMODELS 2025, the ACM/IEEE International Conference on Model-Driven Engineering Languages and Systems, will be held at the **University of Michigan - Ann Arbor from October 5-10, 2025**.\n\nMODELS is the premier conference series for model-based software and systems engineering.  MODELS 2025 is a forum for participants to share the latest research and practical experiences around modeling, modeling languages, and model-based software and systems engineering.\n\n## Tracks\n\nMODELS 2025 includes the following tracks:\n\n*   ACM Student Research Competition\n*   Artifact Evaluation\n*   Doctoral Symposium\n*   Educators Symposium\n*   Industry Days\n*   Journal-First\n*   New Ideas and Emerging Results (NIER)\n*   Research Papers\n*   SAM Conference\n*   Student Volunteers\n*   Tools and Demonstrations\n*   Tutorials\n*   Workshops\n\n## Co-located Conferences\n\n*   EDTconf 2025\n\n## Important Dates\n\nAll submission dates are at 23:59 AoE (Anywhere on Earth). Submission deadlines are hard, i.e., there will be no submission deadline extensions.\n\n### Workshops\n\n*   **Proposal Submissions Deadline:** March 28, 2025\n*   **Proposal Acceptance Notification:** April 25, 2025\n*   **Submissions Deadline:** July 3, 2025\n*   **Notification of Authors:** July 31, 2025\n*   **Camera-ready Deadline:** August 7, 2025\n*   **Dates:** October 5 - 7, 2025\n\n### Research Papers\n\n*   **Abstract submission:** March 27, 2025\n*   **Submission deadline:** April 3, 2025\n*   **Author responses:** June 3–5, 2025\n*   **Author notification:** June 24, 2025\n*   **Camera Ready Due:** August 7, 2025\n\n### New Ideas and Emerging Results (NIER)\n\n*   **Abstract submission:** July 1, 2025\n*   **Paper submission:** July 8, 2025\n*   **Author notification:** August 19, 2025\n*   **Camera Ready Due:** September 2, 2025\n\n### EDTconf Technical Track\n\n*   **Abstract submission deadline:** June 27, 2025\n*   **Paper submission deadline:** July 2, 2025\n*   **Notification of acceptance:** August 5, 2025\n*   **Camera-ready submission:** August 20, 2025\n\n### Tutorials\n\n*   **Submission deadline:** July 11, 2025\n\n### Journal-First\n\n*   **Submission deadline:** July 11, 2025\n\n### ACM SRC\n\n*   **Submission deadline:** July 18, 2025\n\n### Student Volunteers\n\n*   **Application deadline:** July 18, 2025\n\n### Doctoral Symposium\n\n*   **Submission deadline:** July 24, 2025\n\n### Educators Symposium\n\n*   **Submission deadline:** July 24, 2025\n\n### Artifact Evaluation\n\n*   **Submission deadline:** August 7, 2025\n\n### Tools and Demonstrations\n\n*   **Submission deadline:** August 7, 2025\n\n## Topics of Interest\n\nMODELS 2025 solicits submissions on a variety of topics related to modeling for software and systems engineering, including but not limited to:\n\n*   Fundamentals of model-based engineering\n*   New paradigms for model-based engineering\n*   Model-based generative and re-engineering approaches\n*   Model-based monitoring, analysis, and adaptation\n*   Development of model-based systems engineering approaches\n*   Applications of AI to model-related engineering problems\n*   Model-based engineering foundations for AI-based systems\n*   Human and organizational factors in model-based engineering\n*   Tools for model-based engineering\n*   Hybrid multi-modeling approaches\n*   Evaluation and comparison of modeling languages, techniques, and tools\n*   Quality assurance for models and model transformations\n*   Collaborative modeling\n*   Evolution of modeling languages and related standards\n*   Modeling education\n*   Modeling in software engineering\n*   Modeling for specific challenges (collaboration, scalability, security, interoperability, etc.)\n*   Modeling with, and for, novel systems and paradigms (cyber-physical systems, IoT, cloud computing, etc.)\n*   Empirical studies on the application of model-based engineering\n\n## Tracks: Foundations and Practice\n\nMODELS 2025 offers two tracks for technical papers: the Foundations Track and the Practice Track.  See the conference website for more details."
+}
+

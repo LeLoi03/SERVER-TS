@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "September 1 - 5, 2025",
+  "Year": "2025",
+  "Location": "Queen Elizabeth II Centre (QEII Centre), London, UK",
+  "City-State-Province": "London",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Research Track) Submissions Deadline": "March 1, 2025",
+    "(Industrial Track) Submissions Deadline": "March 17, 2025",
+    "(Tutorials) Submissions Deadline": "April 15, 2025",
+    "(Demonstrations) Submissions Deadline": "March 30, 2025",
+    "(Panels) Submissions Deadline": "May 15, 2025",
+    "(PhD Workshop Track) Submissions Deadline": "May 22, 2025"
+  },
+  "Notification Date": {
+    "(Research Track) Notifications": "April 15, 2025",
+    "(Industrial Track) Notifications": "May 19, 2025",
+    "(Tutorials) Notifications": "May 30, 2025",
+    "(Demonstrations) Notifications": "May 27, 2025",
+    "(Panels) Notifications": "May 30, 2025",
+    "(PhD Workshop Track) Notifications": "June 30, 2025"
+  },
+  "Camera-ready Date": {
+    "(Research Track) Camera-Ready Submissions": "May 5, 2025",
+    "(Industrial Track) Camera-Ready Submissions": "July 14, 2025",
+    "(Tutorials) Camera-ready": "July 1, 2025",
+    "(Panels) Camera-Ready Submissions": "June 31, 2025",
+    "(PhD Workshop Track) Camera-Ready Submissions": "July 22, 2025"
+  },
+  "Other Date": {
+    "(Workshop Proposals) Submissions Deadline": "January 17, 2025",
+    "(Tutorials) Slides availability": "August 20, 2025",
+    "(Workshop Proposals) Notifications": "January 31, 2025"
+  },
+  "Topics": "Data Management, Scalable Data Science, Database Systems, Data Mining and Analytics, Data Privacy and Security, Database Engines, Database Performance and Manageability, Distributed Database Systems, Graph and Network Data, Information Integration and Data Quality, Languages, Machine Learning, AI, Databases, Novel Database Architectures, Provenance and Workflows, Specialized and Domain-specific Data Management, Text and Semi-structured Data, User Interfaces",
+  "Summary": "The Very Large Data Bases (VLDB) is a premier annual international forum for data management, scalable data science, and database researchers, vendors, practitioners, application developers, and users. VLDB 2025 will take place from September 1-5, 2025 at the Queen Elizabeth II Centre (QEII Centre) in London, UK.",
+  "Call for Papers": "# VLDB 2025: Call for Contributions\n\nThe 51st International Conference on Very Large Data Bases (VLDB 2025) will take place from **September 1-5, 2025, at the Queen Elizabeth II Centre (QEII Centre) in London, UK**.\n\nVLDB is a premier annual international forum for data management, scalable data science, and database researchers, vendors, practitioners, application developers, and users.\n\n## Key Areas of Interest\n\nKey areas of interest include, but are not limited to, data mining and analytics, data privacy and security, database engines, database performance and manageability, distributed database systems, graph and network data, information integration and data quality, languages, machine learning, AI and databases, novel database architectures, provenance and workflows, specialized and domain-specific data management, text and semi-structured data, and user interfaces.\n\n## Call for Contributions\n\nVLDB 2025 features a variety of submission tracks:\n\n*   Research Track\n*   Industrial Track\n*   PhD Workshop\n*   Workshops\n*   Tutorials\n*   Demonstrations\n*   Panels\n\n## Important Dates\n\nAll deadlines below are 5 p.m. PT, unless otherwise noted.\n\n### Research Track\n\n*   **Submissions Open:** 20th of every month starting March 2024\n*   **Submissions Deadline:** 1st of every month until March 2025\n*   **Notifications:** 15th of the next month following the deadline\n*   **Camera-Ready Submissions:** Proceedings chairs will contact the authors with CR instructions by the 5th of the next month following the acceptance notification\n\n### Industrial Track\n\n*   **Submissions Open:** TBD\n*   **Submissions Deadline:** March 17, 2025\n*   **Notifications:** May 19, 2025\n*   **Camera-Ready Submissions:** July 14, 2025\n\n### Tutorials\n\n*   **Submissions Open:** TBD\n*   **Submissions Deadline:** April 15, 2025\n*   **Notifications:** May 30, 2025\n*   **Camera-ready:** July 1, 2025\n*   **Slides availability:** August 20, 2025\n\n### Demonstrations\n\n*   **Submissions Open:** TBD\n*   **Submissions Deadline:** March 30, 2025\n*   **Notifications:** May 27, 2025\n*   **Camera-Ready Submissions:** TBD\n\n### Panels\n\n*   **Submissions Open:** TBD\n*   **Submissions Deadline:** May 15, 2025\n*   **Notifications:** May 30, 2025\n*   **Camera-Ready Submissions:** June 31, 2025\n\n### Workshop Proposals\n\n*   **Submissions Deadline:** January 17, 2025\n*   **Notifications:** January 31, 2025\n\n### PhD Workshop Track\n\n*   **Submissions Open:** TBD\n*   **Submissions Deadline:** May 22, 2025\n*   **Notifications:** June 30, 2025\n*   **Camera-Ready Submissions:** July 22, 2025"
+}
+

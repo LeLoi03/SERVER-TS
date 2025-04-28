@@ -1,0 +1,29 @@
+```json
+{
+  "Conference dates": "June 22 - 25, 2025",
+  "Year": "2025",
+  "Location": "University of Leeds, Leeds, UK",
+  "City-State-Province": "Leeds",
+  "Country": "United Kingdom",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract submission closes": "March 18, 2025"
+  },
+  "Notification Date": {
+    "Notification of abstract acceptance": "March 23, 2025"
+  },
+  "Registration Date": {
+    "Early registration closes": "April 1, 2025",
+    "Author registration and payment deadline": "April 20, 2025",
+    "Conference registration closes": "May 25, 2025"
+  },
+  "Other Date": {
+    "Abstract submission opens": "October 30, 2024",
+    "Registration opens": "November 6, 2024"
+  },
+  "Topics": "Operational Research",
+  "Summary": "The 34th European Conference on Operational Research (EURO 2025) will take place at the University of Leeds, UK, from June 22 to June 25, 2025. This event celebrates the 50th Anniversary of the Association of European Operational Research Societies (EURO).  The conference warmly encourages researchers, academics, practitioners, and students involved in Operational Research and related fields to submit their abstracts for consideration.",
+  "Call for Papers": "# EURO 2025: Call for Abstracts\n\nThe 34th European Conference on Operational Research (EURO 2025) will take place in **Leeds, United Kingdom, from June 22 to June 25, 2025**. This event celebrates the 50th Anniversary of the Association of European Operational Research Societies (EURO).\n\n## Submission Guidelines\n\n*   **Deadline:** Abstracts must be submitted by March 18, 2025, at 23:59 GMT.\n*   **Format:** Abstracts should not exceed 1500 characters.\n*   **Restrictions:** Each participant can submit only one research abstract for evaluation. The same abstract cannot be submitted by different delegates.\n*   **Submission:** Abstracts should be submitted using this link: [https://www.euro-online.org/conf/euro34/](https://www.euro-online.org/conf/euro34/)\n\n## Additional Information\n\nAccepted abstracts will be organized into regular sessions of 3-4 abstracts, or invited sessions or contributed sessions.\n\nFor further details regarding the conference, including registration and accommodation, please visit the official EURO 2025 Conference website or reach out to the conference organizers."
+}
+```

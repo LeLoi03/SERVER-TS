@@ -1,0 +1,48 @@
+```json
+{
+  "Conference dates": "September 9 - 12, 2025",
+  "Year": "2025",
+  "Location": "Lisbon, Portugal",
+  "City-State-Province": "Lisbon",
+  "Country": "Portugal",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission for EDOC – First round": "April 21, 2025",
+    "Submission for Workshops": "April 21, 2025",
+    "Submission of abstract for CBI": "May 12, 2025",
+    "Submission of full-papers for CBI": "May 19, 2025",
+    "Submission for the “Mini-Dagstuhl” seminar": "May 19, 2025",
+    "Submission for EDOC – Second round": "June 16, 2025",
+    "Submission for Forum": "June 30, 2025",
+    "Submission for Doctoral Consortium": "June 30, 2025",
+    "Submission for Industry & Case Reports": "June 30, 2025",
+    "Submission for Journal-first paper presentations": "June 30, 2025",
+    "Submission for Tools and Demos": "June 30, 2025",
+    "Submission for Tutorials": "June 30, 2025",
+    "Submission of joint papers for the “Mini-Dagstuhl” seminar (optional)": "July 28, 2025"
+  },
+  "Notification Date": {
+    "Notification of workshop acceptance": "April 28, 2025",
+    "Notification of authors for EDOC – First round": "May 24, 2025",
+    "Notification of accepted “Mini-Dagstuhl” seminars": "June 30, 2025",
+    "Notification of authors for CBI": "July 11, 2025",
+    "Notification of authors for Doctoral Consortium": "July 11, 2025",
+    "Notification of authors for EDOC – Second round": "July 11, 2025",
+    "Notification of authors for Forum": "July 11, 2025",
+    "Notification of authors for Industry & Case Reports": "July 11, 2025",
+    "Notification of authors for Journal-first": "July 11, 2025",
+    "Notification of authors for Tools & Demos": "July 11, 2025",
+    "Notification of authors for Tutorials": "July 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera ready copy submission for Doctoral Consortium": "September 28, 2025"
+  },
+  "Registration Date": {
+    "Authors registration deadline / early registration deadline": "July 28, 2025"
+  },
+  "Topics": "Enterprise Design, Operations, and Computing, Business Informatics, Enterprise Architecture & Engineering, Service-Oriented Software System Architectures, Model-Based Software Engineering, Enterprise Security, Business Process and Business rules, Semantics and Information Management, Modeling in an enterprise context",
+  "Summary": "The 29th International Conference on Enterprise Design, Operations, and Computing (EDOC 2025) and the 27th International Conference on Business Informatics (CBI 2025) will be collocated in Lisbon, Portugal, from September 9-12, 2025.  These conferences bring together leading computer science researchers, IT decision makers, enterprise architects, solution designers, and practitioners to discuss enterprise computing challenges, models, and solutions.",
+  "Call for Papers": "# EDOC 2025 & CBI 2025: Call for Papers\n\nThe 29th International Conference on Enterprise Design, Operations, and Computing (EDOC 2025) and the 27th International Conference on Business Informatics (CBI 2025) will be collocated in **Lisbon, Portugal from September 9-12, 2025.**\n\n## EDOC 2025 Call for Papers\n\nThe EDOC conference series brings together leading computer science researchers, IT decision makers, enterprise architects, solution designers, and practitioners to discuss enterprise computing challenges, models, and solutions from the perspectives of academia, industry, and government. The conference emphasizes a holistic view of enterprise applications engineering and management, fostering integrated approaches that can address and relate processes, people, and technology. The conference welcomes high-quality scientific submissions as well as experience papers from industry.\n\n## Topics\n\nWe solicit submissions of scientific papers that describe original results not having been accepted or submitted for publication elsewhere. These papers will be peer-reviewed based on their scientific and technical contribution, originality, and relevance. These also include case studies following a formal case study research method (e.g., involving elaborate and well-structured gathering and processing of data from the case).\n\n*   Enterprise Architecture & Engineering\n*   Service-Oriented Software System Architectures\n*   Model-Based Software Engineering\n*   Enterprise Security\n*   Business Process and Business rules\n*   Semantics and Information Management\n*   Modeling in an enterprise context\n\n## Submissions\n\nEDOC 2025 is offering two submission deadlines ([see important dates](https://cbi-edoc-2025.inesc-id.pt/important-dates/)):\n\n*   Papers submitted by the first deadline may be accepted in a first review round. Alternatively, authors of not accepted papers may be invited to submit a revised version to a second round for re-examination (with feedback similar to journal submissions).\n*   Papers submitted by the second deadline are reviewed in the traditional way in one review round.\n\nSubmissions must have at most 15 pages (plus bibliography), and must follow the Springer CS Style (an Overleaf LaTeX template is available). Submissions must be done in English, as PDF files, via EasyChair ([https://easychair.org/conferences/?conf=cbiedoc2025](https://easychair.org/conferences/?conf=cbiedoc2025)).\n\n## Publication\n\nThe proceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series. EDOC will adopt a post-proceeding format. That is, authors will be allowed to submit the final version of their papers after the conference, having the opportunity to improve them with the feedback received meanwhile. To support this, final papers may be extended by 1 page.\n\n## Important Dates\n\nAll the dates for the CBI and EDOC events (dates for camera-ready papers to be announced):\n\n*   **April 21, 2025:** Submission for EDOC – First round, Submission for Workshops\n*   **April 28, 2025:** Notification of workshop acceptance\n*   **May 12, 2025:** Submission of abstract for CBI\n*   **May 19, 2025:** Submission of full-papers for CBI, Submission for the “Mini-Dagstuhl” seminar\n*   **May 24, 2025:** Notification of authors for EDOC – First round\n*   **June 16, 2025:** Submission for EDOC – Second round\n*   **June 30, 2025:** Submission for Forum, Submission for Doctoral Consortium, Submission for Industry & Case Reports, Submission for Journal-first paper presentations, Submission for Tools and Demos, Submission for Tutorials\n*   **July 11, 2025:** Notification of authors for CBI, Notification of authors for Doctoral Consortium, Notification of authors for EDOC – Second round, Notification of authors for Forum, Notification of authors for Industry & Case Reports, Notification of authors for Journal-first, Notification of authors for Tools & Demos, Notification of authors for Tutorials\n*   **July 28, 2025:** Submission of joint papers for the “Mini-Dagstuhl” seminar (optional), Authors registration deadline / early registration deadline\n*   **September 9, 2025:** THE CONFERENCES START!!!!\n*   **September 28, 2025:** Camera ready copy submission for Doctoral Consortium"
+}
+```

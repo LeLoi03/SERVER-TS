@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "June 4, 2025",
+  "Year": "2025",
+  "Location": "Politecnico di Milano, Milan, Italy",
+  "City-State-Province": "Milan",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Manuscript submission deadline": "February 9, 2025"
+  },
+  "Notification Date": {
+    "Author notification": "February 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready submission": "March 6, 2025"
+  },
+  "Topics": "Heterogeneous computing systems, cluster computing, grid computing, cloud computing, heterogeneous multicore systems and architectures, heterogeneous parallel and distributed systems, deep memory hierarchies, on-chip, off-chip, and heterogeneous network architectures, programming models and tools, resource management and algorithms for heterogeneous systems, modeling, characterization, and optimizations, applications on heterogeneous systems, Heterogeneous Integration of Quantum Computing, Heterogeneity and Interoperability in Software & Data Systems, Heterogeneous Computing for Machine Learning (ML) and Deep Learning (DL), Closing the loop on the design of heterogeneous compilers, runtimes, and hardware",
+  "Publisher": "IEEE Xplore Digital Library",
+  "Summary": "The thirty-fourth Heterogeneity in Computing Workshop (HCW 2025) will be held at the Politecnico di Milano, Milan, Italy, on June 4, 2025. HCW is annually organized in conjunction with the International Parallel and Distributed Processing Symposium (IPDPS).  HCW encourages paper submissions from both the research and industry communities presenting novel ideas on theoretical and practical aspects of computing in heterogeneous computing environments.",
+  "Call for Papers": "# HCW 2025: Call for Papers\n\nThe thirty-fourth Heterogeneity in Computing Workshop (HCW 2025) will be held at the **Politecnico di Milano, Milan, Italy, on June 4, 2025**, in conjunction with the International Parallel and Distributed Processing Symposium (IPDPS).\n\n## Topics of Interest\n\nTopics of interest include, but are not limited to, the following areas:\n\n*   Heterogeneous multicore systems and architectures\n*   Heterogeneous parallel and distributed systems\n*   Deep memory hierarchies\n*   On-chip, off-chip, and heterogeneous network architectures\n*   Programming models and tools\n*   Resource management and algorithms for heterogeneous systems\n*   Modeling, characterization, and optimizations\n*   Applications on heterogeneous systems\n\n### Hot Topics\n\nThis year we wish to focus on and expand submissions and presentations in the following “hot topics” areas; therefore, we especially invite submissions in the following four areas:\n\n*   Heterogeneous Integration of Quantum Computing\n*   Heterogeneity and Interoperability in Software & Data Systems\n*   Heterogeneous Computing for Machine Learning (ML) and Deep Learning (DL)\n*   Closing the loop on the design of heterogeneous compilers, runtimes, and hardware\n\n## Important Dates\n\n*   **Paper submission:** February 9, 2025\n*   **Author notification:** February 24, 2025\n*   **Camera-ready submission:** March 6, 2025\n\n## Paper Submissions\n\nManuscripts submitted to HCW 2025 should not have been previously published or be under review for a different workshop, conference, or journal. Submissions must use the latest IEEE manuscript templates for conference proceedings. Submissions may not exceed a total of ten single-spaced double-column pages using 10-point size font on 8.5x11 inch pages. The page limit includes figures, tables, and references. A single-blind review process will be followed.\n\nFiles should be submitted by following the instructions at the [IPDPS 2025 submission site](https://ssl.linklings.net/conferences/ipdps).\n\n## Best Paper Award\n\nNew this year, we plan to recognize an outstanding HCW 2025 publication with a Best Paper Award. The Best Paper Award will be determined by taking into account the recommendations provided by the Technical Program Committee, along with detailed evaluations of the paper’s originality, significance, and overall quality.\n\n## Workshop Organization\n\n*   **General Co-Chairs:** DK Panda and Hari Subramoni, The Ohio State University, USA\n*   **Technical Program Committee Chair:** Ali Akoglu, University of Arizona, USA\n\nQuestions may be sent to the HCW 2025 General Co-Chairs or the Technical Program Committee Chair.\n\n## Sponsors\n\nHCW 2025 is sponsored by IEEE IPDPS 2025, which is sponsored by the IEEE Computer Society, through the Technical Committee on Parallel Processing (TCPP), and is held in cooperation with the IEEE Computer Society Technical Committees on Computer Architecture (TCCA) and Distributed Processing (TCDP)."
+}
+

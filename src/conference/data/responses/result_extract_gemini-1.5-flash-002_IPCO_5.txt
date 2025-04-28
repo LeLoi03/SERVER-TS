@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "June 11 - 13, 2025",
+  "Year": "2025",
+  "Location": "Johns Hopkins University, Baltimore, Maryland, USA",
+  "City-State-Province": "Baltimore, Maryland",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "November 4, 2024",
+    "Poster abstract submissions": "April 13, 2025"
+  },
+  "Notification Date": {
+    "Notification": "January 22, 2025",
+    "The committee will communicate notifications of acceptance by": "April 20, 2025"
+  },
+  "Camera-ready Date": {
+    "Final versions for proceedings": "March 25, 2025"
+  },
+  "Other Date": {
+    "Summer school": "June 9 - 10, 2025"
+  },
+  "Topics": "Integer Programming, Combinatorial Optimization",
+  "Summary": "IPCO 2025, the 26th Conference on Integer Programming and Combinatorial Optimization, will take place at Johns Hopkins University in Baltimore, Maryland, USA, from June 11-13, 2025.  IPCO is a forum for researchers and practitioners working on various aspects of integer programming and combinatorial optimization.",
+  "Call for Papers": "# IPCO 2025: Call for Papers and Posters\n\nThe 26th Conference on Integer Programming and Combinatorial Optimization (IPCO 2025) will take place at **Johns Hopkins University in Baltimore, Maryland, USA, from June 11-13, 2025.**\n\nIPCO is a forum for researchers and practitioners working on various aspects of integer programming and combinatorial optimization.\n\n## Call for Papers\n\nAuthors are invited to submit extended abstracts of their recent work by **November 4, 2024**. The Program Committee will select the papers to be presented on the basis of the submitted extended abstracts.\n\nContributions are expected to be original, unpublished, and not under review by journals or conferences with proceedings before the notification date (January 22, 2024). Papers violating these requirements will not be considered by the Program Committee.\n\nDuring the conference, approximately 33 papers will be presented in single-track sessions. Each lecture will be 30 minutes long and given by one of the authors in person (on-site). The proceedings will be published as a volume of Springer Lecture Notes in Computer Science. They will contain extended abstracts (at most 14 pages) of all accepted submissions.\n\n### Submission Guidelines\n\n*   Authors are invited to submit an extended abstract for a double-blind reviewing process.\n*   Submissions must be formatted in LaTeX using the Springer LNCS style and can have a maximum length of 12 pages, plus references and an optional appendix.\n*   An appendix containing additional technical material and full proofs can be added for consideration by the program committee and will not be published in the proceedings.\n*   The first page should contain the title and a short abstract. The introduction should be a broadly accessible exposition of the main ideas and techniques used to achieve the results, including motivation and a clear comparison with related work.\n\n## Call for Posters\n\nIPCO 2025 will feature a poster session and a best poster award. The poster session will take place on June 11, 2025. We particularly welcome posters from Ph.D. students and postdocs.\n\nPoster abstracts (a PDF file, one letter-size page maximum, one-inch margins, 11-point font, single-space) can be submitted to [basu.amitabh@jhu.edu](mailto:basu.amitabh@jhu.edu). The deadline for poster abstract submissions is **April 13, 2025**.\n\nThe local organizing committee will select poster presenters, subject to the number of available poster slots. A committee will evaluate posters during the poster session and select the best poster. We have some funding to provide travel support to a limited number of poster presenters, as judged by the local organizing committee. The committee will communicate notifications of acceptance by April 20, 2025. Poster presenters are required to register for the conference.\n\n## Important Dates\n\n*   **Submission deadline:** November 4, 2024, 23:59 AoE\n*   **Notification:** January 22, 2025\n*   **Final versions for proceedings:** March 25, 2025\n*   **Conference:** June 11-13, 2025\n\n## Program Committee\n\n*   Amitabh Basu, Johns Hopkins University, US\n*   Deeparnab Chakrabarty, Dartmouth College, US\n*   Friedrich Eisenbrand, EPFL, CH\n*   Vineet Goyal, Columbia University, US\n*   Robert Hildebrand, Virginia Tech, US\n*   Christopher Hojny, Eindhoven University of Technology, NL\n*   Ivana Ljubic, ESSEC Business School, FR\n*   Nicole Megow, University of Bremen, DE (PC chair)\n*   Ben Moseley, Carnegie Mellon University, US\n*   Giacomo Nannicini, University of Southern California, US\n*   Laura Sanità, Bocconi University, IT\n*   Chaitanya Swamy, University of Waterloo, CA\n*   Laura Vargas Koch, University of Bonn, DE\n*   José Verschae, Pontificia Universidad Católica de Chile, CL\n*   Angelika Wiegele, University of Klagenfurt, AT\n*   Rico Zenklusen, ETH Zurich, CH"
+}
+

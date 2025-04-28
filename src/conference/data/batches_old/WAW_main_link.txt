@@ -1,0 +1,239 @@
+Conference WAW:
+
+href="index.html" - WAW 2025
+20th Workshop on Modelling and Mining Networks 
+ Home 
+ Organization 
+ href="cfp.html" - CFP 
+ Speakers 
+ Schedule 
+ WAW 2025 
+ Vilnius University (June 30-July 3, 2025) 
+ WAW 2025 
+ Vilnius University (June 30-July 3, 2025) 
+ WAW 2025 
+ Vilnius University (June 30-July 3, 2025) 
+ WAW 2025 
+ Vilnius University (June 30-July 3, 2025) 
+ PreviousNextOverview 
+ Virtually every human-technology interaction, or sensor network, generates observations that are in some relation with each other. As a result, many data science problems can be viewed as a study of some properties of complex networks in which nodes represent the entities that are being studied and edges represent relations between these entities. Such networks are often large-scale, decentralized, and evolve dynamically over time. Modeling and mining complex networks in order to understand the principles governing the organization and the behaviour of such networks is crucial for a broad range of fields of study, including information and social sciences, economics, biology, and neuroscience. 
+ The aim of the20th Workshop on Modelling and Mining Networks (WAW 2025)is to further the understanding of networks that arise in theoretical as well as applied domains. The goal is also to stimulate the development of high-performance and scalable algorithms that exploit these networks. The workshop welcomes the researchers who are working on graph-theoretic and algorithmic aspects of networks represented as graphs or hypergraphs and other higher order structures. 
+ WAW 2025will be held at theVilnius University, Vilnius, Lithuania. 
+ Important Dates 
+ Full paper submission: | February 1, 2025 
+ Notification of acceptance: | March 1, 2025 
+ Final version due: | April 1, 2025 
+ Registration 
+ Registration isclosed. For late registration please contactMindaugas.Bloznelis@mif.vu.lt. 
+ List of participants: 
+  
+ Masaki Aida | , Tokyo Metropolitan University 
+ Kalle Alaluusua | , Aalto University 
+ Daumilas Ardickas | , Vilnius University 
+ Konstantin Avrachenkov | , INRIA 
+ Danila Bakhta | , Vilnius University 
+ Mindaugas Bloznelis | , Vilnius University 
+ Povilas Bockus | , Euromonitor International 
+ Paolo Boldi | , Università degli Studi di Milano 
+ Marián Boguñá | , Universitat de Barcelona 
+ Farid Bozorgnia | , Tecnico Lisboa 
+ Hocine Cherifi | , Université de Bourgogne 
+ Michał Czuba | , Wrocław University of Science and Technology 
+ Povilas Daniušis | , Neurotechnology and VDU 
+ Lucas Campos Ferreira | , Euromonitor International 
+ Flavio Furia | , Università degli Studi di Milano 
+ Emilija Globienė | , Vilnius University 
+ Martijn Gösgens | , CWI Amsterdam 
+ Lorenzo Gregoris | , Eindhoven University of Technology 
+ Andrius Grigutis | , Vilnius University 
+ Florian Henning | , Eindhoven University of Technology 
+ Gerda Jankeviciute | , Euromonitor International 
+ Jerzy Jaworski | , Adam Mickiewicz University in Poznan 
+ Ivona Juchnevičiūtė | , VU CHGF, Geomokslų institutas 
+ Rūta Juozaitienė | , Vytautas Magnus University 
+ Tomas Juškevičius | , Vilnius University 
+ Bogumił Kamiński | , SGH Warsaw School of Economics 
+ Severina Kardis | , SGH Warsaw School of Economics 
+ Dmytro Klepachevskyi | , Vytautas Magnus University 
+ Tereza Klimosova | , Charles University 
+ Tomas Krilavičius | , Vytautas Magnus University 
+ Vinay Kumar Bindiganavile Ramadas | , TU Eindhoven 
+ Daichi Kuroda | , École Polytechnique Fédérale de Lausanne 
+ Rūta Levulienė | , Vilnius University 
+ Qiu Liang | , Eindhoven University of Technology 
+ Nelly Litvak | , Eindhoven University of Tehcnology 
+ Jurgita Markevičiūtė | , Vilnius University 
+ Dominykas Marma | , Saarland University 
+ François G Meyer | , University of Colorado at Boulder 
+ Kazuki Nakajima | , Tokyo Metropolitan University 
+ Virgilijus Naruševičius | , Euromonitor International 
+ Bartosz Pankratz | , SGH Warsaw School of Economics 
+ Aurimas Petrėtis | , Vilniaus Universitetas 
+ Olexandr Polishchuk | , National Academy of Sciences of Ukraine 
+ Paweł Prałat | , Toronto Metropolitan University 
+ Gesine Reinert | , University of Oxford 
+ Katarzyna Rybarczyk | , Adam Mickiewicz University in Poznań 
+ Lucas Schätze | , University of Cologne 
+ Lars Schroeder | , University of Twente 
+ Matas Šileikis | , Institute of Computer Science of the Czech Academy of Sciences 
+ Milita Songailaitė | , Vytautas Magnus University 
+ Donatas Surgailis | , Vilnius University 
+ James Tuite | , Klaipeda University & Open University 
+ Rimantas Vaicekauskas | , Vilnius University 
+ Mariam Walaa | , Toronto Metropolitan University 
+ Ali Yassin | , University of Burgundy 
+ Sebastian Zając | , SGH Warsaw School of Economics 
+ ... | , ... 
+ Poster 
+ href="images/WAW2025-poster.pdf" - 
+Venue and Local Information 
+ WAW 2025will take place at the Faculty of Philosophy, Vilnius University (Universiteto 9, Vilnius). The venue is conveniently located in the Old Town, within walking distance of numerous hotels. 
+  
+ Getting to Vilnius: 
+ Vilnius is well-connected internationally via Vilnius Airport, located within the city. Alternatively, you can fly to Kaunas Airport (approximately 100 km from Vilnius) and either a shuttle bus to Vilnius (visitollex.lt/enfor details) or ask ChatGPT for help. Direct train connections are available from Warsaw, Krakow and Riga (visitltglink.lt), and there are also extensive international bus options (seeomio.com). 
+  
+ Getting around Vilnius: 
+ For public transportation within the city, we recommend using the Trafi app or visitingstops.ltfor route planning. You can purchase a 60-minute ticket (allowing transfers) for €0.90 directly on buses or trolleybuses using a contactless bank card (see alsojudu.lt). Ride-hailing apps such as Bolt and Uber are widely available. For information on traditional taxis, visitGo Vilnius. 
+  
+ Official currency in Lithuania is Euro. Electronic payments with MasterCard and Visa are accepted in majority of shops and other points of interest. Currency exchange services are relatively uncommon. It is recommended to withdraw cash from ATMs operated by local banks, such as Šiaulių bankas, Citadele, Swedbank, Luminor, or SEB. 
+  
+ Within the European Economic Area (EEA), there are no mobile roaming charges. This means you can use your calls and data at domestic rates when using an EEA SIM card. Prepaid SIM cards (EZYS, LABAS, PILDYK) can be purchased at supermarkets and newsagents, but registration requires providing personal information. 
+  
+ Vilnius University was founded in 1579 by king Stephen Báthory of the Polish–Lithuanian Commonwealth it was closed down in 1832 by Tsar Nikolas I of Russia after the November uprising. The university was reopened in 1919 and operates since then with a short break of 1943-1944, when it was closed by the Nazis. The first university campus shaped in the 16th century in an old city quarter is open for visitors. 
+
+Sponsors 
+ href="https://www.cse-cst.gc.ca/en/culture-and-community/research" - 
+Contact us 
+ Mindaugas Bloznelis 
+ Paulius Drungilas 
+ Rimantas Vaicekauskas 
+ Faculty of Mathematics and Informatics 
+ Vilnius University 
+ Vilnius, Lithuania 
+ mindaugas.bloznelis@mif.vu.lt 
+ paulius.drungilas@mif.vu.lt 
+ rimantas.vaicekauskas@mif.vu.ltMatas Šileikis 
+ Institute of Computer Science 
+ Czech Academy of Sciences 
+ Praha, Czech Republic 
+ Pawel Pralat 
+ Department of Mathematics 
+ Toronto Metropolitan University 
+ Toronto, ON, Canada 
+ pralat@torontomu.ca 
+ Bogumil KaminskiDecision Analysis and Support Unit 
+ SGH Warsaw School of Economics 
+ Warsaw, Poland 
+ href="mailto:bkamins@sgh.waw.pl" - bkamins@sgh.waw.pl
+Francois Theberge 
+ Tutte Institute for Mathematics and Computing 
+ Ottawa, ON, Canada 
+ theberge@ieee.org© 2024 Pawel Pralat. All rights reserved. 
+
+Call for Papers information:
+href="index.html" - WAW 2025
+20th Workshop on Modelling and Mining Networks 
+ Home 
+ Organization 
+ href="cfp.html" - CFP 
+ Speakers 
+ Schedule 
+ Call for Papers 
+ WAW 2025invites original research papers and abstracts on all aspects of algorithmic and mathematical research in the areas pertaining to the graph and hypergraph theory and applications. We especially encourage submission of papers that espouse the view of complex data as networks. 
+ Submissions are invited in, but not limited to, the following areas: 
+ Algorithms | : graph and hypergraph algorithms, clustering, collaborative filtering, routing optimization. 
+ Analysis | : structural properties, visualization, patterns, communities, discovery, flow simulation. 
+ Data Models | : graph and hypergraph models, evolution, trust and reputation networks. 
+ Topics | : Web, social networks, transportation networks, economic interactions, communication networks, recommender networks, citation networks, Wikipedia, biological networks, blogs, p2p. 
+ Applications | : web mining, social and business applications, routing & transportation, web search and ranking. 
+ Theory | : properties of random graphs models that are used to model complex networks, higher-order structures, network geometry, temporal networks and dynamics, dynamic processes such as polarization, social learning, contagions. 
+ The papers must be formatted according to SpringerLNCS style. The maximum length of papers is at most15pages but shorter papers are welcome. Acceptance of papers will be based on the reviews provided by the program committee members. The workshop proceedings will be published as a SpringerLNCS volume. Talks associated with proceedings papers will be 30 minutes. 
+ Abstracts are a maximum of one page, may be in any style, and must be pdf files. They should include the title, speakers, and a summary of research. All abstracts related to the conference areas will be evaluated by the program committee. Accepted abstracts will be published on the conference website (but not published in the proceedings). Talks associated with abstracts will be 20 minutes. 
+ Papers must be submitted viahref="https://easychair.org/conferences?conf=waw2025" - Easy Chair
+. Abstracts should be sent via email (as attachment, PDF file) tomindaugas.bloznelis@mif.vu.lt. (Confirmation will be sent via e-mail; please donotsubmit abstracts via Easy Chair.) 
+ Important Dates 
+ Full paper submission: | February 1, 2025 
+ Notification of acceptance: | March 1, 2025 
+ Final version due: | April 1, 2025 
+ href="#cfp" - Call for Papers 
+ href="#dates" - Important Dates 
+ Contact us 
+ Mindaugas Bloznelis 
+ Paulius Drungilas 
+ Rimantas Vaicekauskas 
+ Faculty of Mathematics and Informatics 
+ Vilnius University 
+ Vilnius, Lithuania 
+ mindaugas.bloznelis@mif.vu.lt 
+ paulius.drungilas@mif.vu.lt 
+ rimantas.vaicekauskas@mif.vu.ltMatas Šileikis 
+ Institute of Computer Science 
+ Czech Academy of Sciences 
+ Praha, Czech Republic 
+ Pawel Pralat 
+ Department of Mathematics 
+ Toronto Metropolitan University 
+ Toronto, ON, Canada 
+ pralat@torontomu.ca 
+ Bogumil KaminskiDecision Analysis and Support Unit 
+ SGH Warsaw School of Economics 
+ Warsaw, Poland 
+ href="mailto:bkamins@sgh.waw.pl" - bkamins@sgh.waw.pl
+Francois Theberge 
+ Tutte Institute for Mathematics and Computing 
+ Ottawa, ON, Canada 
+ theberge@ieee.org© 2024 Pawel Pralat. All rights reserved. 
+
+Important Dates information:
+href="index.html" - WAW 2025
+20th Workshop on Modelling and Mining Networks 
+ Home 
+ Organization 
+ href="cfp.html" - CFP 
+ Speakers 
+ Schedule 
+ Call for Papers 
+ WAW 2025invites original research papers and abstracts on all aspects of algorithmic and mathematical research in the areas pertaining to the graph and hypergraph theory and applications. We especially encourage submission of papers that espouse the view of complex data as networks. 
+ Submissions are invited in, but not limited to, the following areas: 
+ Algorithms | : graph and hypergraph algorithms, clustering, collaborative filtering, routing optimization. 
+ Analysis | : structural properties, visualization, patterns, communities, discovery, flow simulation. 
+ Data Models | : graph and hypergraph models, evolution, trust and reputation networks. 
+ Topics | : Web, social networks, transportation networks, economic interactions, communication networks, recommender networks, citation networks, Wikipedia, biological networks, blogs, p2p. 
+ Applications | : web mining, social and business applications, routing & transportation, web search and ranking. 
+ Theory | : properties of random graphs models that are used to model complex networks, higher-order structures, network geometry, temporal networks and dynamics, dynamic processes such as polarization, social learning, contagions. 
+ The papers must be formatted according to SpringerLNCS style. The maximum length of papers is at most15pages but shorter papers are welcome. Acceptance of papers will be based on the reviews provided by the program committee members. The workshop proceedings will be published as a SpringerLNCS volume. Talks associated with proceedings papers will be 30 minutes. 
+ Abstracts are a maximum of one page, may be in any style, and must be pdf files. They should include the title, speakers, and a summary of research. All abstracts related to the conference areas will be evaluated by the program committee. Accepted abstracts will be published on the conference website (but not published in the proceedings). Talks associated with abstracts will be 20 minutes. 
+ Papers must be submitted viahref="https://easychair.org/conferences?conf=waw2025" - Easy Chair
+. Abstracts should be sent via email (as attachment, PDF file) tomindaugas.bloznelis@mif.vu.lt. (Confirmation will be sent via e-mail; please donotsubmit abstracts via Easy Chair.) 
+ Important Dates 
+ Full paper submission: | February 1, 2025 
+ Notification of acceptance: | March 1, 2025 
+ Final version due: | April 1, 2025 
+ href="#cfp" - Call for Papers 
+ href="#dates" - Important Dates 
+ Contact us 
+ Mindaugas Bloznelis 
+ Paulius Drungilas 
+ Rimantas Vaicekauskas 
+ Faculty of Mathematics and Informatics 
+ Vilnius University 
+ Vilnius, Lithuania 
+ mindaugas.bloznelis@mif.vu.lt 
+ paulius.drungilas@mif.vu.lt 
+ rimantas.vaicekauskas@mif.vu.ltMatas Šileikis 
+ Institute of Computer Science 
+ Czech Academy of Sciences 
+ Praha, Czech Republic 
+ Pawel Pralat 
+ Department of Mathematics 
+ Toronto Metropolitan University 
+ Toronto, ON, Canada 
+ pralat@torontomu.ca 
+ Bogumil KaminskiDecision Analysis and Support Unit 
+ SGH Warsaw School of Economics 
+ Warsaw, Poland 
+ href="mailto:bkamins@sgh.waw.pl" - bkamins@sgh.waw.pl
+Francois Theberge 
+ Tutte Institute for Mathematics and Computing 
+ Ottawa, ON, Canada 
+ theberge@ieee.org© 2024 Pawel Pralat. All rights reserved.

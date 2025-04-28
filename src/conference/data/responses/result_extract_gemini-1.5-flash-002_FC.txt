@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "April 14 - 18, 2025",
+  "Year": "2025",
+  "Location": "Hotel Shigira Mirage, Miyakojima, Japan",
+  "City-State-Province": "Miyakojima",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper submission": "October 11, 2024"
+  },
+  "Notification Date": {
+    "Paper notification": "December 6, 2024"
+  },
+  "Camera-ready Date": {
+    "Final pre-proceedings papers": "February 14, 2025"
+  },
+  "Workshop Date": {
+    "Workshop and tutorial submission": "September 13, 2024",
+    "Workshop and tutorial notification": "September 27, 2024"
+  },
+  "Topics": "Information assurance, commercial contexts, securing transactions and systems, commerce security, cryptography, systems security, interdisciplinary works",
+  "Summary": "Financial Cryptography and Data Security 2025 (FC 2025) is a major international forum for research, advanced development, education, exploration, and debate regarding information assurance, with a specific focus on commercial contexts. The conference will be held at the Hotel Shigira Mirage in Miyakojima, Japan from April 14-18, 2025.",
+  "Call for Papers": "# Financial Cryptography and Data Security 2025: Call for Papers\n\nThe Twenty-Ninth International Conference on Financial Cryptography and Data Security (FC 2025) will take place from **April 14–18, 2025**, at the **Hotel Shigira Mirage in Miyakojima, Japan**.\n\n## Conference Theme\n\nFinancial Cryptography and Data Security is a major international forum for research, advanced development, education, exploration, and debate regarding information assurance, with a specific focus on commercial contexts. The conference covers all aspects of securing transactions and systems. Original works focusing on both fundamental and applied real-world deployments on all aspects surrounding commerce security are solicited. Submissions need not be exclusively concerned with cryptography. Systems security and interdisciplinary works are particularly encouraged.\n\nThe goal of the conference is to bring security and cryptography researchers and practitioners together with economists, bankers, implementers, and policy-makers.\n\n## Important Dates\n\n*   **Paper submission:** October 11, 2024 (23:59 AoE UTC-12)\n*   **Paper notification:** December 6, 2024\n*   **Final pre-proceedings papers:** February 14, 2025\n*   **Workshop and tutorial submission:** September 13, 2024*\n*   **Workshop and tutorial notification:** September 27, 2024\n*   **Conference:** April 14–18, 2025\n\n\*Late workshop and tutorial submissions considered on a rolling basis, as space allows.\n\n## Topics of Interest\n\n*   Access control, authorization and trust management\n*   Anonymity and privacy enhancing technologies\n*   Applied cryptography\n*   Attacks, attack techniques, and attack case studies\n*   Auctions and incentive design\n*   Authentication, identity management and biometrics\n*   Behavioral aspects of security and privacy\n*   Blockchain applications\n*   Blockchain protocols, proof-of-work, -stake, -burn\n*   Censorship circumvention and resistance\n*   Central bank digital currency (CBDC)\n*   Certification and audits\n*   Cloud computing and data outsourcing security\n*   Cryptographic protocols\n*   Data security and privacy\n*   Decentralized finance (DeFi)\n*   Digital cash and payment systems\n*   Digital rights management\n*   Distributed consensus protocols\n*   Economic and monetary aspects of cryptocurrencies\n*   Economics of security and privacy\n*   Electronic crime and underground markets\n*   Electronic payments and ticketing systems\n*   Empirical studies, real-world measurements and metrics\n*   Forensics, monitoring and transaction graph analysis\n*   Fraud detection and management\n*   Game theory for security, privacy, and blockchain\n*   Language-based security and formal verification\n*   Legal and regulatory issues of blockchains, cryptocurrencies, and electronic payments\n*   Machine learning and AI security\n*   Malware and software security\n*   Mobile payments\n*   Network and distributed system security\n*   Phishing and social engineering\n*   Scalability and interoperability of cryptocurrencies\n*   Security of banking, financial services, and electronic commerce\n*   Security of peer-to-peer networks\n*   Smart contracts and financial instruments\n*   Smartcards, secure tokens, and secure hardware\n*   Surveillance and tracking\n*   System security\n*   Trusted execution environments (TEE), their security and applications\n*   Usability and security\n*   Web security\n*   Zero-knowledge proofs\n\n## Submission Categories\n\nContributions are sought in the following categories:\n\n*   Research papers (regular papers, short papers, and systematization of knowledge (SoK) papers)\n*   Workshop proposals\n*   Tutorial proposals\n\n## Submission Instructions\n\nResearch paper submissions must be uploaded through the conference submission website: [https://crypto.unibe.ch/fc25/](https://crypto.unibe.ch/fc25/)\n\nWorkshop and tutorial proposals should be sent by email to [fc25workshops@ifca.ai](mailto:fc25workshops@ifca.ai), and should not be anonymized.\n\n## General Information\n\nFor each accepted paper, the conference requires at least one registration at the general or academic rate, and paper authors must sign the IFCA copyright form when submitting the final version. Alternatively, individual papers can be published as fully open access—the publisher charges authors a fee for this."
+}
+```

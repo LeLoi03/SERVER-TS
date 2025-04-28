@@ -1,0 +1,30 @@
+output:
+{
+  "Conference dates": "June 23 - 26, 2025",
+  "Year": "2025",
+  "Location": "Santa Fe, New Mexico, USA",
+  "City-State-Province": "Santa Fe, New Mexico",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "(First Call) Submission Deadline": "November 13, 2024",
+    "(Second Call) Submission Deadline": "February 9, 2025",
+    "(PhD Colloquium) PhD Colloquium Abstracts": "April 4, 2025",
+    "(Tutorials/Position/Panel) Submission Deadline": "April 4, 2025"
+  },
+  "Notification Date": {
+    "(First Call) First Notification of Acceptance": "December 16, 2024",
+    "(Second Call) Second Notification of Acceptance": "March 24, 2025",
+    "(PhD Colloquium) PhD Colloquium Notification": "April 18, 2025",
+    "(Tutorials/Position/Panel) Notification": "April 11, 2025"
+  },
+  "Other Date": {
+    "Author Registration": "May 2, 2025",
+    "Student Travel Grant Application Deadline": "April 29, 2025"
+  },
+  "Topics": "Modeling and Simulation, Simulation algorithms and infrastructure, Modeling Methodology, Applications of advanced discrete simulation methods, Model reduction, Cutting-edge approaches in Computational Economics, Visualization for communicating and understanding simulation studies and results, Digital Twins",
+  "Summary": "The ACM SIGSIM International Conference on Principles of Advanced Discrete Simulation (SIGSIM-PADS) focuses on cutting-edge research at the intersection of Computer Science and Modeling and Simulation (M&S). PADS'25 will be held in Santa Fe, New Mexico, USA, from June 23-26, 2025.",
+  "Call for Papers": "# PADS 2025: Call for Papers\n\nThe ACM SIGSIM International Conference on Principles of Advanced Discrete Simulation (SIGSIM-PADS) focuses on cutting-edge research at the intersection of Computer Science and Modeling and Simulation (M&S).  PADS'25 will be held from **June 23-26, 2025 in Santa Fe, New Mexico, USA**.\n\n## Submission Process\n\nAll submissions are made through EasyChair: [https://easychair.org/conferences/?conf=sigsimpads2025](https://easychair.org/conferences/?conf=sigsimpads2025)\n\n## Tracks\n\nSIGSIM-PADS'25 offers a set of thematic tracks (regular and special), a two-phase submission process, an optional artifact review and badging, and the opportunity for authors (based on the decision of the Technical Program Committee) to have their paper included in a special issue of the ACM Transactions on Modeling and Computer Simulation (TOMACS).\n\n### Regular Tracks\n\n1.  **Simulation algorithms and infrastructure:** Synchronization, scheduling, memory management, load balancing, runtime environments, fault tolerance, Simulation on emerging hardware platforms, Data-driven simulation systems, Simulation engines and techniques for differentiable simulation and reinforcement learning, Performance evaluation of simulation systems\n2.  **Modeling Methodology:** Modeling formalisms and domain-specific languages, Model-based approaches for reuse, composition, Experiment design, V&V, model calibration, uncertainty quantification, simulation-based inference, Conceptual modeling, Automatic model generation, data-driven model creation, and model adaptations, Model ensembles, explorative modeling\n3.  **Applications of advanced discrete simulation methods:** Case studies considering the application of new or advanced computational methods to applications of contemporary interest, such as: Cell biology, Cyber-physical systems, Emergency response and crisis preparedness, Epidemics and healthcare, Manufacturing and logistics, Social networks and human behavior, Transportation and urban planning, Wireless, mobile, ad-hoc, and sensor networks\n\n### Special Tracks\n\n1.  **Model reduction:** Exact, numerically approximate, or interval-based model reduction approaches, Both differential and stochastic approaches, Approaches based on low-level descriptions (such as ODEs and CTMCs) or higher lever descriptions (such as rule-based models) of models.\n2.  **Cutting-edge approaches in Computational Economics:** Reasoning agents, Learning agents, Discrete vs continuous simulations, Can we trust agents?, Methodologies to explain and automate agent-based analyses, Methodologies to automate the calibration of agent models, Supporting modelers, Agents mining\n3.  **Visualization for communicating and understanding simulation studies and results:** Visualization for Decision Support, Comparative Visualization, Uncertainty Visualization, Scalability in Visualization, Storytelling and Narrative Visualization, Immersive Analytics, User-Centered Design, Automated Visualization Pipelines, Machine Learning Integration\n4.  **Digital Twins:** Optimization of Simulation for Digital Twins, Digital Twins Multi-Scale Issues, Digital Twins Validation and Verification, Digital Twins of Complex Systems, Digital Twins Energy Aspects, Digital Twins Real-Time Constraints\n\n### Special Formats\n\n1.  **PhD Colloquium**\n2.  **Tutorials**\n3.  **Position Papers**\n4.  **Panel Papers**\n\n## Important Dates\n\n*   **Submission Deadline, First Call:** November 13, 2024\n*   **First Notification of Acceptance:** December 16, 2024\n*   **Submission Deadline, Second Call:** February 9, 2025\n*   **Second Notification of Acceptance:** March 24, 2025\n*   **PhD Colloquium Abstracts:** April 4, 2025\n*   **PhD Colloquium Notification:** April 18, 2025\n*   **Submission Deadline Tutorials/Position/Panel:** April 4, 2025\n*   **Notification Tutorials/Position/Panel:** April 11, 2025\n*   **Author Registration:** May 2, 2025\n*   **Student Travel Grant Application Deadline:** April 29, 2025\n*   **Conference:** June 23-26th 2025"
+}
+

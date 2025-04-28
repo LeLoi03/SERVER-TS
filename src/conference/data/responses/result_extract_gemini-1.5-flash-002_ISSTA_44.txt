@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "June 25 - 28, 2025",
+  "Year": "2025",
+  "Location": "Trondheim, Norway",
+  "City-State-Province": "Trondheim",
+  "Country": "Norway",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission": "October 31, 2024",
+    "Revised Manuscript Submissions (Major Revisions Only)": "February 27, 2025",
+    "Artifact Submission Deadline": "April 11, 2025",
+    "Submission Deadline": "March 31, 2025",
+    "Workshop Proposals Deadline": "January 10, 2025",
+    "Doctoral Symposium Submission Deadline": "February 24, 2025",
+    "Tool Demonstrations Submission Deadline": "March 20, 2025"
+  },
+  "Notification Date": {
+    "Initial Notification": "December 19, 2024",
+    "Final Notification for Major Revisions": "March 31, 2025",
+    "Doctoral Symposium Notification": "April 10, 2025",
+    "Tool Demonstrations Author Notification": "April 10, 2025",
+    "EXPRESS Notification of Acceptance": "April 17, 2025",
+    "Artifact Evaluation Artifact Notification": "May 16, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready": "April 24, 2025",
+    "Doctoral Symposium Camera-Ready Version": "April 24, 2025",
+    "EXPRESS Camera-ready Deadline": "April 24, 2025",
+    "Tool Demonstrations Camera-Ready Deadline": "April 24, 2025"
+  },
+  "Other Date": {
+    "Self-nominations for the ISSTA PC": "February 20, 2024",
+    "EXPRESS Workshop Date": "June 28, 2025"
+  },
+  "Topics": "Software Testing, Software Analysis",
+  "Publisher": "ACM",
+  "Summary": "The ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) is the leading research symposium on software testing and analysis, bringing together academics, industrial researchers, and practitioners to exchange new ideas, problems, and experience on how to analyze and test software systems. ISSTA 2025 will be the 34th edition and will be held in Trondheim, Norway from June 25-28, 2025.",
+  "Call for Papers": "# ISSTA 2025: Call for Papers\n\nThe ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2025) will be held in **Trondheim, Norway from Wednesday, June 25th to Saturday, June 28th, 2025**.\n\nISSTA is the leading research symposium on software testing and analysis, bringing together academics, industrial researchers, and practitioners.\n\n## Call for Papers\n\nWe invite high-quality submissions, from both industry and academia, describing original and unpublished results of theoretical, empirical, conceptual, and experimental research on software testing and analysis.\n\nISSTA invites three kinds of submissions:\n\n*   Research Papers\n*   Experience Papers\n*   Replicability Studies\n\n### Research Papers\n\nAuthors are invited to submit research papers describing original contributions in testing or analysis of computer software. Papers describing original theoretical or empirical research, new techniques, methods for emerging systems, in-depth case studies, infrastructures of testing and analysis, or tools are welcome.\n\n### Experience Papers\n\nAuthors are invited to submit experience papers describing a significant experience in applying software testing and analysis methods or tools and should carefully identify and discuss important lessons learned so that other researchers and/or practitioners can benefit from the experience.\n\n### Replicability Studies\n\nISSTA would like to encourage researchers to replicate results from previous papers. A replicability study must go beyond simply re-implementing an algorithm and/or re-running the artefacts provided by the original paper. It should at the very least apply the approach to new, significantly broadened inputs.\n\nReplicability Studies will be evaluated according to the following standards:\n\n*   Depth and breadth of experiments\n*   Clarity of writing\n*   Appropriateness of conclusions\n*   Amount of useful, actionable insights\n*   Availability of artefacts\n\nWe expect replicability studies to clearly point out the artefacts the study is built on, and to submit those artefacts to the artefact evaluation. Artefacts evaluated positively will be eligible to obtain the prestigious Results Reproduced badge.\n\n## Submission Guidelines\n\nSubmissions must be original and should not have been published previously or be under consideration for publication while being evaluated for ISSTA.\n\nAt the time of submission, each paper should have no more than 18 pages for all text and figures, plus 4 pages for references. Papers may be submitted using numeric citations, but final versions of accepted papers must use the author-year format for citations. Submissions that do not comply with the above instructions will be desk rejected without review. The page limit is strict.\n\nPapers must be submitted electronically through the ISSTA 2025 submission site: [https://issta2025.hotcrp.com](https://issta2025.hotcrp.com).\n\n## Double-anonymous Reviewing\n\nISSTA 2025 will conduct double-anonymous reviewing. Submissions should not reveal the identity of the authors in any way.\n\n## Open Science Policy and “Data Availability” Section\n\nISSTA has adopted an open science policy. Upon submission, authors are asked to make their code, data, etc. available to the program committee or to comment on why this is not possible or desirable. While sharing the data is not mandatory for submission or acceptance, it will inform the program committee’s decision. We ask authors to provide a supporting statement on the data availability (or lack thereof) in their submitted papers in a section named “Data Availability” after the Conclusion section.\n\n## Important Dates\n\nAll dates are 23:59:59 AoE (UTC-12h):\n\n*   **Full paper submission:** October 31, 2024\n*   **Initial notification:** December 19, 2024\n*   **Revised manuscript submissions (major revisions only):** February 27, 2025\n*   **Final notification for major revisions:** March 31, 2025\n*   **Camera ready:** April 24, 2025\n\n## Publication Date\n\nThe official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the ISSTA conference. The official publication date affects the deadline for any patent filings related to published work."
+}
+

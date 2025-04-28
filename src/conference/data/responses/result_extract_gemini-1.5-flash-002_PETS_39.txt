@@ -1,0 +1,42 @@
+output:
+{
+  "Conference dates": "July 14 - 19, 2025",
+  "Year": "2025",
+  "Location": "Washington, DC and Online",
+  "City-State-Province": "Washington, DC",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "(Issue 1) Paper submission deadline": "May 31, 2024",
+    "(Issue 2) Paper submission deadline": "August 31, 2024",
+    "(Issue 3) Paper submission deadline": "November 30, 2024",
+    "(Issue 4) Paper submission deadline": "February 28, 2025"
+  },
+  "Notification Date": {
+    "(Issue 1) Author notification": "August 1, 2024",
+    "(Issue 2) Author notification": "November 1, 2024",
+    "(Issue 3) Author notification": "February 1, 2025",
+    "(Issue 4) Author notification": "May 1, 2025"
+  },
+  "Camera-ready Date": {
+    "(Issue 1) Camera-ready deadline for accepted papers and accepted revisions": "September 15, 2024",
+    "(Issue 2) Camera-ready deadline for accepted papers and accepted revisions": "December 15, 2024",
+    "(Issue 3) Camera-ready deadline for accepted papers and accepted revisions": "March 15, 2025",
+    "(Issue 4) Camera-ready deadline for accepted papers and accepted revisions": "June 15, 2025"
+  },
+  "Other Date": {
+    "(Issue 1) Rebuttal period": "July 16–19, 2024",
+    "(Issue 1) Revision deadline": "September 1, 2024",
+    "(Issue 2) Rebuttal period": "October 15–18, 2024",
+    "(Issue 2) Revision deadline": "December 1, 2024",
+    "(Issue 3) Rebuttal period": "January 14–17, 2025",
+    "(Issue 3) Revision deadline": "March 1, 2025",
+    "(Issue 4) Rebuttal period": "April 15–18, 2025",
+    "(Issue 4) Revision deadline": "June 1, 2025"
+  },
+  "Topics": "Privacy Enhancing Technologies, Anonymous communication, Censorship resistance, Blockchain privacy, Cloud computing, Compliance with privacy laws, Cryptographic tools, Data protection, Differential privacy, Economics of privacy, Forensics and privacy, Genomic privacy, Human factors, Usability, User-centered design, Internet of Things privacy, Location privacy, Machine learning and privacy, Mobile devices and privacy, Policy languages, Profiling, Social network privacy, Surveillance, Traffic analysis, Transparency, Fairness, Robustness, Abuse in privacy systems, Web privacy",
+  "Summary": "The annual Privacy Enhancing Technologies Symposium (PETS) brings together privacy experts from around the world to discuss recent advances and new perspectives on research in privacy technologies. PETS 2025, the 25th edition, will be a hybrid event with a physical gathering held in Washington, DC, and a concurrent virtual event.",
+  "Call for Papers": "# PETS 2025: Call for Papers\n\nThe 25th Privacy Enhancing Technologies Symposium (PETS 2025) will be a **hybrid event** held in **Washington, DC, USA and online from July 14–19, 2025**.\n\n## Submission Information\n\nPapers undergo a journal-style reviewing process, and accepted papers are published in the journal *Proceedings on Privacy Enhancing Technologies* (PoPETs). Authors of accepted papers are encouraged to attend and present at the physical event, where their presentations can be recorded for the virtual event and where they can participate directly in in-person research, technical, and social activities. However, in-person attendance is not required for publication in the proceedings.\n\nPoPETs is a scholarly, open-access journal for research papers on privacy; it provides high-quality reviewing and publication while also supporting the successful PETS community event. PoPETs is self-published and does not have article processing charges or article submission charges.\n\nAuthors can submit papers to PoPETs four times a year, every three months, and are notified of decisions about two months after submission.  Authors will receive a decision of accept, revise, or reject; those receiving revise will be invited to revise their article with the guidance of a revision editor.\n\n## Submission Guidelines\n\nThe submission guidelines contain important submission information for authors. Please note especially the instructions for anonymizing submissions, for ensuring ethical research, and for using AI in writing or editing the manuscript. Papers must be submitted via the PETS 2025 submission server: [https://submit.petsymposium.org](https://submit.petsymposium.org).\n\n## Important Dates\n\nAll deadlines are 23:59:59 Anywhere on Earth (UTC-12)\n\n### Issue 1\n\n*   Paper submission deadline: May 31, 2024 (firm)\n*   Rebuttal period: July 16–19, 2024\n*   Author notification: August 1, 2024\n*   Revision deadline: September 1, 2024\n*   Camera-ready deadline for accepted papers and accepted revisions: September 15, 2024\n\n### Issue 2\n\n*   Paper submission deadline: August 31, 2024 (firm)\n*   Rebuttal period: October 15–18, 2024\n*   Author notification: November 1, 2024\n*   Revision deadline: December 1, 2024\n*   Camera-ready deadline for accepted papers and accepted revisions: December 15, 2024\n\n### Issue 3\n\n*   Paper submission deadline: November 30, 2024 (firm)\n*   Rebuttal period: January 14–17, 2025\n*   Author notification: February 1, 2025\n*   Revision deadline: March 1, 2025\n*   Camera-ready deadline for accepted papers and accepted revisions: March 15, 2025\n\n### Issue 4\n\n*   Paper submission deadline: February 28, 2025 (firm)\n*   Rebuttal period: April 15–18, 2025\n*   Author notification: May 1, 2025\n*   Revision deadline: June 1, 2025\n*   Camera-ready deadline for accepted papers and accepted revisions: June 15, 2025\n\n## Review Process\n\nAuthors invited to revise their submissions will be provided with a set of revision criteria that must be satisfactorily completed before their paper can be accepted. Authors of such papers will be assigned a revision editor who will guide the revision process.\n\n## Resubmission of Rejected Papers\n\nAuthors of rejected papers must skip one full issue before resubmission.\n\n## Scope\n\nPapers submitted to PETS/PoPETs should present novel practical and/or theoretical research into the requirements, design, analysis, experimentation, or fielding of privacy-enhancing technologies and the social, cultural, legal, or situational contexts in which they are used.\n\n## Suggested Topics\n\nSuggested topics include, but are not restricted to:\n\n*   Anonymous communication and censorship resistance\n*   Blockchain privacy\n*   Building and deploying privacy-enhancing systems\n*   Cloud computing and privacy\n*   Compliance with privacy laws and regulations\n*   Cryptographic tools for privacy\n*   Data protection technologies\n*   Defining and quantifying privacy\n*   Differential privacy and private data analysis\n*   Economics and game-theoretical approaches to privacy\n*   Forensics and privacy\n*   Genomic and medical privacy\n*   Human factors, usability, and user-centered design of privacy technologies\n*   Information leakage, data correlation, and abstract attacks on privacy\n*   Interdisciplinary research connecting privacy to economics, law, psychology, etc.\n*   Internet of Things privacy\n*   Location privacy\n*   Machine learning and privacy\n*   Measurement of privacy in real-world systems\n*   Mobile devices and privacy\n*   Policy languages and tools for privacy\n*   Profiling and data mining\n*   Social network privacy\n*   Surveillance\n*   Traffic analysis\n*   Transparency, fairness, robustness, and abuse in privacy systems\n*   Web privacy\n\n### Systematization of Knowledge (SoK) Papers\n\nSoK submissions should include \"SoK:\" in their title and check the corresponding option in the submission form.\n\n## Awards\n\n*   Caspar Bowden Award for Outstanding Research in Privacy Enhancing Technologies\n*   Andreas Pfitzmann Best Student Paper Award\n*   Artifact Award\n\n## Contact Information\n\n*   General Chair ([gc25@petsymposium.org](mailto:gc25@petsymposium.org)): Adam Aviv, The George Washington University\n*   Program Chairs/Co-Editors-in-Chief ([pets25-chairs@petsymposium.org](mailto:pets25-chairs@petsymposium.org)): Zubair Shafiq, University of California, Davis; Rob Jansen, U.S. Naval Research Laboratory"
+}
+

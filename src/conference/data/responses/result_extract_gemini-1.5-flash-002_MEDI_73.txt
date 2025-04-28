@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "November 18 - 20, 2024",
+  "Year": "2024",
+  "Location": "Naples, Italy",
+  "City-State-Province": "Naples",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full-paper submission": "September 20, 2024"
+  },
+  "Notification Date": {
+    "Acceptance notification": "October 17, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera Ready submission": "October 30, 2024"
+  },
+  "Registration Date": {
+    "Registration deadline": "October 20, 2024"
+  },
+  "Topics": "Model and Data Engineering, Models and Data Theory, Advanced Technologies Related to Models and Data, Advanced Applications of Models and Data",
+  "Summary": "The Thirteenth International Conference on Model & Data Engineering (MEDI) will be held from 18 to 20 November 2024 in Naples, Italy. Its main objective is to provide a forum for disseminating research accomplishments and to promote the interaction and collaboration between the models and data research communities.",
+  "Call for Papers": "No call for papers available"
+}
+```

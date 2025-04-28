@@ -1,0 +1,554 @@
+Conference full name: Asia and South Pacific Design Automation Conference (ASPDAC)
+
+1. Website of ASPDAC_0: https://www.aspdac.com/aspdac2025/
+Website information of ASPDAC_0:
+
+30th Asia and South Pacific Design Automation Conference  
+ ASP-DAC 2025   
+ Date: Jan  . 20  - 23  , 2025  
+  Place: Tokyo Odaiba Miraikan, Japan  
+
+  ASP-DAC Bylaws  
+
+  Home 
+  Tutorial  
+  (Call for Proposals) 
+  Archive 
+  Photos 
+  Technical Program 
+  Keynote Addresses 
+  Tutorials 
+  Design Contest 
+  Student Research Forum 
+  WIP Poster Session 
+  Author's Guide 
+  Registration 
+  Venue 
+  Banquet 
+  Transportation 
+  Information 
+  Call for Participation 
+  Call for Papers 
+  Call for Designs 
+  Call for Supporters 
+  Hotel Information 
+  ASP-DAC History 
+  Sister Conferences 
+  Committees 
+  ASP-DAC Award History 
+  Actions for Sustainability 
+  Contacts 
+  Sponsors / Supporters 
+  Supporter's Exhibition 
+    
+ Sponsored by:  
+
+  Supported by:  
+
+  中部電気利用基礎研究振興財団  
+
+  公益財団法人東京観光財団  
+
+ Home  
+ Archive  
+   
+ The presentation slides can be accessed from the above site. If you cannot see the slides, please reload the page.  
+ Receipt / Certificate system  
+   
+ Receipt and Certificate of Attendance are available from the above site.  
+ Proceedings:  
+ ASP-DAC 2025 will be providing authority to access the download site for the conference proceedings.  
+  https://tsys.jp/aspdac/cgi/online_archive.cgi  
+  This site is available from Jan 20 00:00 JST. You can download:  
+   
+ Proceedings 
+  Tutorial materials (-Jan 24 21:00 JST) 
+  Technical Program  
+  
+ Technical Program | (html-version with Author Index) 
+  Final Program | (PDF version) 
+   
+ Banquet  
+  
+ Date: Wednesday, January 22, 2025. 18:30-20:30 
+  Place: Hilton Tokyo Odaiba 1F, Room Pegasus 
+  *Extra banquet tickets will be available. 
+  Place: In front of Room Pegasus (Hilton Tokyo Odaiba 1F) 
+  Time: January 22, 2025 18:30- 
+  Fee: 5,000 yen (cash only) 
+  More detailed information including the map around the venue can be found here .  
+ Author's Guide  
+ Presentation guidelines are available from here . Please read "Presentation & Audio Visual Guidelines" and prepare your slides carefully.  
+ Registration Desk  
+ Registration desk opening hour:  
+ January 20(Mon) 8:00 - 18:00 
+  January 21(Tue) 7:30 - 18:00 
+  January 22(Wed) 7:30 - 18:00 
+  January 23(Thu) 7:30 - 17:00 
+   
+ GC Reception  
+  
+ Date: Monday, January 20, 2025. 18:30-20:30 
+  Place: Niji (29F), Grand Nikko Tokyo Daiba 
+   
+ General Information  
+ ASP-DAC is the largest conference in Asia and South-Pacific regions on Electronic Design Automation (EDA) area for VLSI and systems. ASP-DAC has been started at 1995 and this ASP-DAC 2025 is 30th conference. ASP-DAC 2025 offers you an ideal opportunity to touch the recent technologies and the future directions on the LSI design and design automation areas by technical papers and tutorials. ASP-DAC also holds Designers' Forum to make presentations about the latest designs for designers. Please do not miss ASP-DAC 2025.  
+ Date: Jan. 20-23, 2025 
+  Place: Tokyo Odaiba Miraikan, Japan 
+  General Chair: Yuichi Nakamura (NEC) 
+  Technical Program Chair: Yu Wang (Tsinghua University) 
+  Design Contest Co-Chairs: Mahfuzul Islam (Institute of Science Tokyo), Shinya Takamaeda Yamazaki (The University of Tokyo) 
+   
+ Last Updated on March 21, 2025  
+
+ Conference Secretariat E-mail: aspdac2025 [at] aspdac.com
+
+2. Website of ASPDAC_1: https://www.aspdac.com/aspdac2025/cfp/
+Website information of ASPDAC_1:
+
+  
+   
+ Call for Papers  
+   
+ Download the Call for Papers / Call for Designs in PDF format (317KB).  
+ Call for Papers ASP-DAC 2025  
+ Aims of the Conference:   
+  ASP-DAC 2025 is the 30th annual international conference on VLSI design automation in Asia and South Pacific regions, one of the most active regions of design, CAD and fabrication of silicon chips in the world. The conference aims at providing the Asian and South Pacific CAD/DA and Design community with opportunities of presenting recent advances and with forums for future directions in technologies related to design and Electronic Design Automation (EDA). The format of the meeting intends to cultivate and promote an instructive and productive interchange of ideas among EDA researchers/developers and system/circuit/device designers. All scientists, engineers, and students who are interested in theoretical and practical aspects of VLSI design and design automation are welcomed to ASP-DAC. ASP-DAC recognizes excellent contributions with the Best Paper Award and 10-Year Retrospective Most Influential Paper Award. Selected papers will be invited to submit the extended version of their work to a Special Issue of Integration, the VLSI Journal.  
+ Areas of Interest:   
+  Original papers in, but not limited to, the following areas are invited.  
+ 1 System-Level Modeling and Design Methodology:   
+  1.1. HW/SW co-design, co-simulation and co-verification  
+  1.2. System-level design exploration, synthesis, and optimization  
+  1.3. System-level formal verification  
+  1.4. System-level modeling, simulation and validation  
+  1.5. Networks-on-chip and NoC-based system design  
+   
+ 2 Embedded, Cyberphysical (CPS), IoT Systems, and Software:   
+  2.1. Many- and multi-core SoC architecture  
+  2.2. IP/platform-based SoC design  
+  2.3. Dependable architecture  
+  2.4. Cyber physical system and Internet of Things  
+  2.5. Kernel, middleware, and virtual machine  
+  2.6. Compiler and toolchain  
+  2.7. Real-time system  
+  2.8. Resource allocation for heterogeneous computing platform  
+  2.9. Storage software and application  
+  2.10. Human-computer interface  
+   
+ 3 Memory Architecture and Near/In Memory Computing:   
+  3.1. Storage system and memory architecture  
+  3.2. On-chip memory architectures and management: Scratchpads, compiler, controlled memories, etc.  
+  3.3. Memory/storage hierarchies and management for emerging memory technologies  
+  3.4. Near-memory and in-memory computing  
+   
+ 4 Tools and Design Methods with and for Artificial Intelligence (AI):   
+  4.1. Design method for learning on a chip  
+  4.2. Deep neural network for EDA  
+  4.3. Large language model (LLM) for circuit design and EDA  
+  4.4. Tools and design methodologies for edge AI and TinyML  
+  4.5. Efficient ML training and inference  
+   
+ 5 Hardware Systems and Architectures for AI:   
+  5.1. Hardware, device, architecture, and system-level design for deep neural networks  
+  5.2. Hardware acceleration for large language model  
+  5.3. Neural network acceleration co-design techniques  
+  5.4. Novel reconfigurable architectures, including FPGAs for AI/MLs  
+   
+ 6 Photonic/RF/Analog-Mixed Signal Design:   
+  6.1. Analog/mixed-signal/RF synthesis  
+  6.2. Analog layout, verification, and simulation techniques  
+  6.3. High-frequency electromagnetic simulation of circuit  
+  6.4. Mixed-signal design consideration  
+  6.5. Communication and computing using photonics  
+   
+ 7 Approximate, Bio-Inspired and Neuromorphic Computing:   
+  7.1. Circuit and system techniques for approximate, hyper-dimensional, and stochastic computing  
+  7.2. Neuromorphic computing  
+  7.3. CAD for approximate and stochastic systems  
+  7.4. CAD for bio-inspired and neuromorphic systems  
+   
+ 8 High-Level, Behavioral, and Logic Synthesis and Optimization:   
+  8.1. High-level/Behavioral synthesis tool and methodology  
+  8.2. Combinational, sequential, and asynchronous logic synthesis  
+  8.3. Synthesis for deep neural networks  
+  8.4. Technology mapping, resource scheduling, allocation and synthesis  
+  8.5. Functional, logic, and timing ECO (engineering change order)  
+  8.6. Interaction between logic synthesis and physical design  
+   
+ 9 Physical Design and Timing Analysis:   
+  9.1. Floorplanning, partitioning, placement and routing optimization  
+  9.2. Interconnect planning and synthesis  
+  9.3. Clock network synthesis  
+  9.4. Post layout and post-silicon optimization  
+  9.5. Package/PCB/3D-IC placement and routing  
+  9.6. Extraction, TSV, and package modeling  
+  9.7. Deterministic/statistical timing analysis and optimization  
+   
+ 10 Design for Manufacturability/Reliability and Low Power:   
+  10.1. Reticle enhancement, lithography-related design and optimization  
+  10.2. Resilience under manufacturing variation  
+  10.3. Design for manufacturability, yield, and defect tolerance  
+  10.4. Reliability, robustness, aging, and soft error analysis  
+  10.5. Power modeling, analysis and simulation  
+  10.6. Low-power design and optimization at circuit and system levels  
+  10.7. Thermal aware design and dynamic thermal management  
+  10.8. Energy harvesting and battery management  
+  10.9. Signal/Power integrity, EM modeling and analysis  
+   
+ 11 Testing, Validation, Simulation, and Verification:   
+  11.1. ATPG, BIST and DFT  
+  11.2. System test and 3D IC test, online test and fault tolerance  
+  11.3. Memory test and repair  
+  11.4. RTL and gate-leveling modeling, simulation, and verification  
+  11.5. Circuit-level formal verification  
+  11.6. Device/circuit-level simulation tool and methodology  
+   
+ 12 Hardware and Embedded Security:   
+  12.1. Hardware-based security  
+  12.2. Detection and prevention of hardware trojans  
+  12.3. Side-channel attacks, fault attacks and countermeasures  
+  12.4. Design and CAD for security  
+  12.5. Cyberphysical system security  
+  12.6. Nanoelectronic security  
+  12.7. Supply chain security and anti-counterfeiting  
+  12.8. Security/privacy for LLM/AI/ML  
+   
+ 13 Emerging Devices, Technologies and Applications:   
+  13.1. EDA and circuits design for quantum and Ising computing  
+  13.2. Nanotechnology, MEMS  
+  13.3. Biomedical, biochip, and biodata processing  
+  13.4. Edge, fog and cloud computing  
+  13.5. Energy-storage/smart-grid/smart-building design and optimization  
+  13.6. Automotive system design and optimization  
+  13.7. New transistor/device and process technology: spintronic, phase-change, single-electron, 2D materials, etc.  
+   
+ Authors must submit full-length, double-columned, original papers, with a maximum of 6 pages in PDF format (including the abstract, figures and tables) and are recommended to format their papers based on the ACM template. One page of references is allowed, which does not count towards the 6-page limitation. ASP-DAC does not allow double and/or parallel submissions of similar work to any other conferences, symposia, and journals. The submission must not include information that serves to identify the authors of the manuscript, such as name(s) or affiliation(s) of the author(s), anywhere in the manuscript, abstract, references and bibliographic citations. While research papers with open-source software are highly encouraged where the software will be made publicly available (via GitHub or similar), the authors’ identities need to be anonymized in the submitted paper for the double-blind review process. Issuing the paper as a technical report, posting the paper on a website, or presenting the paper at a workshop that does not publish formally reviewed proceedings, does not disqualify it from appearing in the proceedings. Submissions of pre-print papers, e.g., published on arXiv, are also allowed in ASP-DAC 2025. However, that the authors are expected to follow all reasonable efforts to ensure that the submission is compliant with the double-blind review process. Note that each paper shall be accompanied by at least one different conference registration at the speaker’s registration rate. ACM and IEEE reserve the right to exclude a paper from distribution after the conference (e.g., removal from ACM Digital Library and IEEE Xplore) if the paper is not presented at the conference by any author.  
+ Submission of Papers:   
+  Deadline for Abstract submission: 5 PM AOE (Anywhere on earth) July 5 (Fri), 2024   
+  Deadline for PDF uploading: 5 PM AOE (Anywhere on earth) July 12 (Fri), 2024   
+  Announcement of accepted manuscript IDs: Sept. 2 (Mon), 2024   
+  Notification of acceptance: Sept. 4 (Wed), 2024   Sept. 8 (Sun), 2024    
+  Deadline for final version: 5 PM AOE (Anywhere on earth) Nov. 1 (Fri), 2024   
+   
+ For detailed instructions for submission, please refer to the “Authors’ Guide” at:  
+  https://www.aspdac.com/aspdac2025/author  
+  Paper submission site:  
+  https://tsys.jp/aspdac/cgi/submit.cgi  
+   
+ ASP-DAC 2025 Chairs:   
+  General Chair: Yuichi Nakamura (NEC)  
+  Technical Program Chairs: Yu Wang (Tsinghua University)  
+  Technical Program Vice Chairs: Takashi Sato (Kyoto University), Tsung-Yi Ho (The Chinese University of Hong Kong)  
+   
+ Panels, Special Sessions and Tutorials:   
+  Suggestions and proposals are welcome and have to be addressed to aspdac2025-ss [at] aspdac.com  for special sessions & panels, aspdac2025-tutorial [at] aspdac.com  for tutorials, no later than September 9 (Mon), 2024.   
+   
+ Contact:   
+  Conference Secretariat: aspdac2025 [at] aspdac.com   
+  TPC Secretariat: aspdac2025-tpc [at] aspdac.com   
+ Last Updated on: September 5, 2024  
+
+ Conference Secretariat E-mail: aspdac2025 [at] aspdac.com
+
+3. Website of ASPDAC_2: https://ieee-ceda.org/event/conference/2025-asia-and-south-pacific-design-automation-conference
+Website information of ASPDAC_2:
+
+Opens in a new window  Opens an external website  Opens an external website in a new window    
+ Close this dialog      This website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising. You may change your settings at any time or accept the default settings. You may close this banner to continue with only essential cookies.  Privacy Policy Storage Preferences  
+ Targeted Advertising 
+  Personalization 
+  Analytics 
+    
+ Save  Accept All  Reject All    
+
+ Close Cookie Preferences        
+
+  Skip to main content   
+   
+ IEEE.org 
+  IEEE Xplore Digital Library 
+  IEEE Standards 
+  IEEE Spectrum 
+  More Sites 
+
+ About | About Us | About CEDA 
+  Member Societies 
+  History 
+  Council Presidents 
+   
+    Leadership | Executive Committee 
+  Board of Governors 
+   
+  Governing Documents | Constitution & Bylaws 
+  Minutes & Presentations 
+   
+    Publicity | Publicity Resources 
+  YouTube Presentations 
+   
+  Staff | Operations Manager 
+  Awards | Awards & Recognitions Program | About Awards & Recognitions Program 
+   
+  Council Awards | Chapter of the Year 
+  Distinguished Service Award 
+  Ernest S. Kuh Early Career Award 
+  Phil Kaufman Award 
+  Phil Kaufman Hall of Fame 
+   
+    Publications Awards | A. Richard Newton Award 
+  Donald O. Pederson Award 
+   
+  Conference Awards | Outstanding Service Recognition 
+  William J McCalla Award 
+   
+    IEEE Awards | Fellows 
+  Activities | Education | Distinguished Lecturer Program 
+  Virtual Distinguished Lecturer Program 
+  CAD for Assurance 
+  Design Automation Webinars 
+   
+    Chapters | Chapter Listings 
+  Chapter Resources 
+   
+  Students and YP | Students 
+  Student Travel Program 
+  Young Professionals 
+   
+    Diversity, Equity, & Inclusion | About 
+  Women in Technology at DAC 
+  DivEDA at DATE 
+  IEEE WIE 
+   
+  Technical Operations | About Technical Operations 
+  Technical Committees 
+  Conferences | About Conferences | About Conferences 
+  Conference Listing 
+   
+    Event Calendar | Conference Calendar 
+  Publications | About Publications | About Publications 
+  Currents Newsletter 
+  Subscribe to Newsletter 
+   
+    Transactions on Computer-Aided Design of Integrated Circuits & Systems | About TCAD 
+  TCAD's Editorial Corner 
+  Editorial Board 
+  Call for Papers 
+  Instructions for Authors 
+  Current Issue 
+  Donald O. Pederson Award 
+   
+    Embedded Systems Letters | About ESL 
+  Editorial Board 
+  Special Issues 
+  Instructions for Authors 
+  Apply to Become External Reviewer 
+  Current Issue 
+   
+  Co-Sponsored Publications | IEEE Design&Test (D&T) 
+  IEEE Internet of Things Magazine (IoTM) 
+  IEEE Journal on Exploratory Solid-State Computational Devices and Circuits (JxCDC) 
+  IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI) 
+  IEEE Transactions on Signal and Power Integrity (TSPI) 
+  IEEE Transactions on Sustainable Computing (T-SUSC) 
+   
+ Search          
+
+ Close panel       
+ About      About Us      About CEDA 
+  Member Societies 
+  History 
+  Council Presidents 
+  Leadership      Executive Committee 
+  Board of Governors 
+  Governing Documents      Constitution & Bylaws 
+  Minutes & Presentations 
+  Publicity      Publicity Resources 
+  YouTube Presentations 
+  Staff      Operations Manager 
+  Awards      Awards & Recognitions Program      About Awards & Recognitions Program 
+  Council Awards      Chapter of the Year 
+  Distinguished Service Award 
+  Ernest S. Kuh Early Career Award 
+  Phil Kaufman Award 
+  Phil Kaufman Hall of Fame 
+  Publications Awards      A. Richard Newton Award 
+  Donald O. Pederson Award 
+  Conference Awards      Outstanding Service Recognition 
+  William J McCalla Award 
+  IEEE Awards      Fellows 
+  Activities      Education      Distinguished Lecturer Program 
+  Virtual Distinguished Lecturer Program 
+  CAD for Assurance 
+  Design Automation Webinars 
+  Chapters      Chapter Listings 
+  Chapter Resources 
+  Students and YP      Students 
+  Student Travel Program 
+  Young Professionals 
+  Diversity, Equity, & Inclusion      About 
+  Women in Technology at DAC 
+  DivEDA at DATE 
+  IEEE WIE 
+  Technical Operations      About Technical Operations 
+  Technical Committees 
+  Conferences      About Conferences      About Conferences 
+  Conference Listing 
+  Event Calendar      Conference Calendar 
+  Publications      About Publications      About Publications 
+  Currents Newsletter 
+  Subscribe to Newsletter 
+  Transactions on Computer-Aided Design of Integrated Circuits & Systems      About TCAD 
+  TCAD's Editorial Corner 
+  Editorial Board 
+  Call for Papers 
+  Instructions for Authors 
+  Current Issue 
+  Donald O. Pederson Award 
+  Embedded Systems Letters      About ESL 
+  Editorial Board 
+  Special Issues 
+  Instructions for Authors 
+  Apply to Become External Reviewer 
+  Current Issue 
+  Co-Sponsored Publications      IEEE Design&Test (D&T) 
+  IEEE Internet of Things Magazine (IoTM) 
+  IEEE Journal on Exploratory Solid-State Computational Devices and Circuits (JxCDC) 
+  IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI) 
+  IEEE Transactions on Signal and Power Integrity (TSPI) 
+  IEEE Transactions on Sustainable Computing (T-SUSC) 
+
+ Breadcrumb  
+ Home 
+  Event 
+  Conference 
+  2025 Asia and South Pacific Design Automation Conference 
+
+ Acronym   
+ ASP-DAC 2025   
+
+ 2025 Asia and South Pacific Design Automation Conference   
+   
+ Date   
+    20 January 2025  – 23 January 2025     
+   
+ Promotions   
+    Flagship    
+
+ Geographic Location   
+    Tokyo, Japan    
+   
+ IEEE Region   
+    Region 10 (Asia and Pacific)    
+
+ Event Menu  
+      
+   Description   News   Documents  
+   
+ Description   
+ Registration is now open for the Asia and South Pacific Design Automation Conference (ASP-DAC), the largest conference in Asia and South-Pacific regions on Electronic Design Automation (EDA) area for VLSI and systems. ASP-DAC was started in 1995 and ASP-DAC 2025 will be 30th conference. ASP-DAC 2025 offers an ideal opportunity to touch the recent technologies and the future directions on the LSI design and design automation areas by technical papers and tutorials. ASP-DAC also holds Designers' Forum to make presentations about the latest designs for designers. Please do not miss ASP-DAC 2025.  
+
+ 2025  
+
+ 2025-01-10  |  ASP-DAC 2025: CEDA/CASS/SSCC Joint Session on Silicon Photonics 
+  2024  
+
+ 2024-12-10  |  ASP-DAC 2025: CEDA 20th Anniversary Panel 
+
+ Call Document(s)   
+ Call Doc Category    ASP-DAC     Name  ASP-DAC 2025 CFP   
+   Deadline  Deadline: 5 Jul 2024 
+
+ Share on:        
+
+ Event Type   
+    Conference    
+   
+ Series   
+    ASP-DAC    
+
+ Sponsorship   
+    Financially Sponsored    
+   
+ Website   
+    View website    
+   
+ Submission Deadline   
+    5 Jul 2024     
+
+    Follow CEDA   
+
+   Subscribe to Our Email List    
+   
+ IEEE Home 
+  More IEEE Sites 
+
+ © Copyright 2025 IEEE – All rights reserved. Use of this website signifies your agreement to the IEEE Terms & Disclosures .  
+ A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.  
+
+ This site is created, maintained, and managed by Conference Catalysts, LLC .  
+  Please feel free to contact us for any assistance.
+
+4. Website of ASPDAC_3: https://www.aspdac.com/aspdac2024/welcome/index.html
+Website information of ASPDAC_3:
+
+29th Asia and South Pacific Design Automation Conference  
+ ASP-DAC 2024   
+ Date: Jan  . 22  - 25  , 2024  
+  Place: Incheon Songdo Convensia, South Korea  
+  ASP-DAC Bylaws  
+
+ Home 
+  Welcome Message 
+  Archive 
+  Awards 
+  Technical Program 
+  Keynotes 
+  Special Sessions 
+  Tutorials 
+  Designers’ Forum 
+  Student Research  
+  Forum 
+  Author's Guide 
+  Registration 
+  Accomodation 
+  Call for Papers 
+  Call for Designs 
+  Exhibition 
+  Venue 
+  Transportation 
+  General Information 
+  Committees 
+  Sponsors / Supporters 
+  ASP-DAC History 
+  ASP-DAC Award History 
+  Sister Conferences 
+  Contacts 
+    
+ Sponsored by:    
+
+  Supported by:    
+
+  Hosted by:    
+
+ Welcome to the ASP-DAC 2024  
+ On behalf of the Organizing Committee, I would like to invite all of the engineers on the LSI design and design automation areas to the 29th Asia and South Pacific Design Automation Conference (ASP-DAC 2024). ASP-DAC 2024 will be held from January 22 (Mon.) to January 25 (Thur.), 2024 at Songdo Convention Center, Incheon, Korea.  
+ ASP-DAC is a high-quality and premium conference on Electronic Design Automation (EDA) area like other sister conferences such as Design Automation Conference (DAC), Design, Automation & Test in Europe (DATE), International Conference on Computer-Aided Design (ICCAD), and Embedded Systems Week (ESWEEK). ASP-DAC started in 1995 and has continuously offered opportunity to know the recent advanced technologies on LSI design and design automation areas, and to communicate each other for researchers and designers around Asia and South Pacific regions.  
+ The conference site is Songdo Convensia, which is an international convention center, and is located at Westside in Incheon, Korea. Songdo Convensia is close to central Seoul, about 40 minutes by bus, and Incheon International airport, about 20 minutes by bus. Joining the conference and participating in technological discussions, you can also enjoy many attractions in Seoul area, such as Gang-Nam (modern restaurants and K-pop), Myung-Dong (shopping), and Buk-Chon/Nam-Dae-Mon (traditional architecture and traditional food market), etc.  
+ ASP-DAC 2024 received 482 submissions, which is ever the highest submission record, from all over the world. Based on rigorous and thorough reviews and a full-day face-to-face meeting by the Technical Program Committee in early September at Taiwan, 139 papers have been accepted and 36 technical sessions have been organized. Five Special Sessions have also been organized based on invited talks by the Technical Program Committee.  
+ We have arranged four Keynote sessions at the beginning of each day to know the future directions of this area. The first keynote address in the morning on January 23 is ‘Advanced Technology and Design Enablement’ by Dr. Sei-Seung Yoon of Samsung Foundry, Korea. The second one in the morning on January 24 is ‘Present and Future Challenges of High Bandwidth Memory’ by Dr. Myeong-Jae Park of SK Hynix, Korea. The third keynote address during the banquet in the evening on January 24 is ‘ALM and EDA: Current Status and Prospectives on the Future’ by Prof. Andrew B. Kahng of University of California San Diego, USA. The fourth keynote address in the morning on January 25 is ‘Unleashing the Future of IC Design with AI Innovation’ by Dr. Erick Chao of Cadence Design Systems, Taiwan.  
+ The Designers’ Forum is a unique program that will share design experience and solutions of actual product designs of the industries, which will be held in the afternoon of January 23 and 24. The topics discussed in this forum include Next Generation AI Semiconductor Design, Heterogeneous Integration and Chiplet Design, and AI/ML for Chip Design and EDA — Current Status and Future Perspectives from Diverse Views. Additionally, a joint short workshop of AI-EDA and Tilos projects in two-session format will be held in the last of the conference.  
+ The University Design Contest is also an important annual event of ASP-DAC where 11 high-quality designs all including actual silicon proof were selected for presentation at Tuesday, January 23.  
+ Eight tutorials have been arranged on Monday, January 22nd. Each tutorial has 3-hour presentation. Registrants can choose one topic from the morning session including 4 topics and another one from the afternoon session including 4 topics depending on their interests and can obtain wider perspective on the recent hot topics with the reduced tutorial fee.  
+ ASP-DAC 2024 offers you an ideal opportunity to touch the recent technologies and the future directions on the LSI design and design automation areas. You will be able to meet and discuss with a lot of researchers and designers on this area, so please do not miss ASP-DAC 2024. Finally, we would like to express our sincere appreciation to authors, speakers, reviewers, session organizers, session chairs, sponsors, supporters, and committee members.  
+  
+ Taewhan Kim   
+  General Chair  
+  ASP-DAC 2024  
+
+ Conference Secretariat  
+  E-mail: aspdac2024@gmail.com  
+  201, Seoun-ro, Seocho-gu, Seoul, Republic of Korea  
+  Tel: +82-757-0981  
+   
+  단체명: 2024년 아시아 남태평양 설계 자동화 학술대회(ASP-DAC 2024) / 고유번호: 681-80-02508  
+  대표자: 김태환 / 소재지: 서울특별시 서초구 서운로 201
+

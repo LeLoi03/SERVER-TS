@@ -1,0 +1,574 @@
+Conference DIMVA:
+
+href="#page-top" - DIMVA 2025
+Home 
+ Registration 
+ href="#cfp" - Call for Papers 
+ href="#cfposter" - Call for Posters 
+ Committee 
+ Venue 
+  
+ 22nd Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA '25) 
+ July 9 to 11, 2025 at Graz University of Technology, Austria 
+ href="https://infosec.exchange/@DIMVAConf" - Follow us on Mastodon
+href="https://twitter.com/DIMVAConf" - Follow us on X/Twitter
+href="https://bsky.app/profile/dimvaconf.bsky.social" - Follow us on Bluesky
+ 
+ Registration 
+ Registration will be open until July 1, 23:59. 
+ At least one Member or Regular fee must be paid for each accepted paper. Papers without registered author(s) will be withdrawn from the program. 
+ All registration fee includes admission to all DIMVA 2025 sessions, selected meals and welcome reception, dinner and social event throughout the official event July 9 – July 11. You will be charged in EUR as stated below. 
+ Please note: On-site registration isnotpossible! 
+ Requests for cancellation and refunds must be received no later thanJuly, 1, 2025. No refunds will be processed after this date. 
+ The registration does not include the accommodation - please book your accommodation separately. 
+  
+ Ticket | Normal | Late (starting June 7th till July 1st) 
+ Regular | 340 | 390 
+ GI members and other scientific organization members | 260 | 310 
+ B.Sc./M.Sc. Student | 270 | 320 
+ Thestudent ticketis available for Bachelor and Master students only! 
+ Pleasehref="https://pretix.eu/gi/DIMVA25/" - register for the conference here
+. 
+ Please also have a look at ourterms of participationand ourprivacy notice. 
+ Reach out tohref="mailto:dimva2025.isec@tugraz.at" - dimva2025.isec@tugraz.at
+if you have questions. 
+  
+ Call for Papers 
+ Important Dates (AoE) 
+ Cycle 1:Submission: | Dec 4, 2024 | Dec 10, 2024 (extended!) 
+ Notification (accept/reject): | Jan 22, 2025 | Jan 27, 2025 (extended!) 
+ Submission Site: | href="https://dimva25.hotcrp.com/" - https://dimva25.hotcrp.com/ 
+ Cycle 2: | Submission: | Feb 12, 2024 | Feb 19, 2024 (extended!) 
+ Notification (accept/reject): Wed. Apr 2, 2025 
+ Submission Site: | href="https://dimva25r2.hotcrp.com/" - https://dimva25r2.hotcrp.com/ 
+ Camera ready deadline: Apr 30, 2025 
+ Conference: July 9 to 11, 2025 
+ General Information 
+ The annual DIMVA conference serves as a premier forum for advancing the state of the art in the broader areas of intrusion detection, malware analysis, and vulnerability assessment. Each year, DIMVA brings together international experts from academia, industry, and government to present and discuss novel research in these areas. DIMVA is organized by the special interest group Security - Intrusion Detection and Response (SIDAR) of the German Informatics Society (GI). The conference proceedings will appear in the Springer Lecture Notes in Computer Science (LNCS) series. 
+ Topics of Interest 
+ DIMVA solicits submissions of high-quality, original scientific papers presenting novel research on malware analysis, intrusion detection, vulnerability assessment, and related systems security topics. 
+ Topics of interest include, but are not limited to: 
+ Intrusions 
+ Novel approaches and domains 
+ Insider detection 
+ Prevention and response 
+ Data leakage, exfiltration, and poisoning 
+ Result correlation and cooperation 
+ Evasion and other attacks 
+ Potentials and limitation 
+ Operational experiences 
+ Privacy, legal, and social aspects 
+ Targeted attacks 
+ Analysis or detection of cryptocurrency heists 
+ Malware 
+ Automated analyses 
+ Behavioral models 
+ Prevention and containment 
+ Classification 
+ Lineage 
+ Forensics and recovery 
+ Underground economy 
+ Vulnerabilities in malware 
+ Financially targeted malware (e.g., ransomware, DeFi) 
+ Vulnerability detection 
+ Vulnerability prevention 
+ Vulnerability analysis 
+ Exploitation and defenses 
+ Hardware vulnerabilities 
+ Situational awareness 
+ Active probing 
+ Vulnerabilities in decentralized systems 
+ Papers will be judged on novelty, significance, correctness, and clarity. We expect all papers to provide enough details to enable reproducibility of the experimental results. We encourage papers that bridge research in different communities. We also welcome experience papers that clearly articulate lessons learnt. 
+ Types of Submissions Solicited 
+ We invitefull papersfor submission that present novel and mature research results. Full papers are limited to 20 pages in Springer LNCS format, including bibliography and appendices. 
+ Papers that do not follow these formatting guidelines may be rejected without review. 
+ While we do not accept short papers, we encourage authors to submit a poster instead, presenting original, still ongoing work that has not yet reached the maturity required for a full paper. For more information, please refer to the Call for Posters. 
+ Submission Guidelines 
+ DIMVA 2025 will adopt a double-blind reviewing process. All submissions should be appropriately anonymized. Author names and affiliations must be excluded from the paper. Furthermore, authors should avoid obvious self-references, and should cite their own previous work in third person, whenever necessary. Papers that are not properly anonymized risk being rejected without review. 
+ Submissions must be original work and may not be under submission to another venue at the time of review. At least one author of each accepted paper is required to physically present the submitted work at the conference, for the paper to be included in the proceedings. 
+ Authors are encouraged to submit code appropriately anonymized, using, e.g.,https://anonymous.4open.science/. 
+ Ethical considerations 
+ Submissions that report experiments with data gathered from human subjects should disclose whether the research received approval from an institutional ethics review board (IRB), if applicable, and what measures were adopted to minimize risks to privacy. 
+ Submissions that describe experiments related to vulnerabilities in software or systems should discuss the steps taken to avoid negatively affecting any third-parties (e.g., in case of probing of network devices), and how the authors plan to responsibly disclose the vulnerabilities to the appropriate software or system vendors or owners before publication. 
+ If you have any questions, please contact the program chairs athref="mailto:pc-chairs@dimva.org:" - pc-chairs@dimva.org
+. 
+  
+ Call for Posters 
+ Important Dates (AoE) 
+ Submission: up to April 11th, 2025 
+ Notification: April 21st, 2025 
+ Camera-ready: April 30th, 2025 
+ High-quality posters facilitate discussions about recent research findings, encourage meaningful interactions with interested attendees, showcase ongoing projects, and present innovative ideas. DIMVA invites submissions of posters that highlight preliminary results, ongoing work, or recently published research. Posters will be displayed in a forum setting, allowing attendees to mingle and engage with the presenters. 
+ Submission Guidelines 
+ Poster submissions must include two components: the poster draft and an accompanying poster paper. The poster paper should be at least 4 pages, but no more than 6 pages long, formatted according to the Springer LNCS guidelines, and this page count includes the bibliography and any appendices. Proposals are not anonymized and must clearly state the authors' names, affiliations, and contact information. The poster papers will be published in the proceedings. Please ensure that the title of the poster paper begins with the word "Poster". 
+ The poster submission system is available athref="https://dimva25posters.hotcrp.com/" - https://dimva25posters.hotcrp.com/
+. 
+ Note: Poster sessions will be held in-person. At least one author of each accepted poster will be required to attend the conference. During the conference, we will provide poster stands. Attendees may bring printed posters up to size A0. 
+  
+ Committee 
+ Program co-chairs (email:href="mailto:pc-chairs@dimva.org" - pc-chairs@dimva.org
+) 
+ Manuel Egele | (Boston University) 
+ Veelasha Moonsamy | (Ruhr University Bochum) 
+ Program committee 
+ Advait Patel, Broadcom 
+ Amin Kharraz, Florida International University 
+ Andrea Continella, University of Twente 
+ Andrea Lanzi, University of Milan 
+ Andrea Mambretti, IBM Research Europe - Zurich 
+ Anita Nikolich, University of Illinois-Urbana Champaign 
+ Bart Coppens, Ghent University 
+ Behzad Ousat, Florida International University 
+ Daniel Gruss, Graz University of Technology 
+ Daniel Plohmann, Fraunhofer FKIE 
+ Daniele Antonioli, EURECOM 
+ Daniele Cono D'Elia, Sapienza University of Rome 
+ David Klein, Technische Universität Braunschweig 
+ Eleonora Losiouk, University of Padua 
+ Emilio Coppa, LUISS University 
+ Fabio Pagani, Binarly 
+ Fabio Pierazzi, King's College London 
+ Flavio Toffalini, RUB 
+ Hervé Debar, Télécom SudParis 
+ Ilya Grishchenko, University of California, Santa Barbara 
+ Jan Wichelmann, Universität zu Lübeck 
+ Johanna Ullrich, University of Vienna 
+ Johannes Kinder, LMU Munich 
+ Juan Caballero, IMDEA Software Institute 
+ Juan Tapiador, Universidad Carlos III de Madrid 
+ Kaan Onarlioglu, Akamai 
+ Kimberly Tam, University of Plymouth / Alan Turing Institute 
+ Konrad Rieck, TU Berlin 
+ Mannat Kaur, Max-Planck-Institute for Informatics 
+ Manuel Egele, Boston University 
+ Marco Cova, VMware 
+ Martina Lindorfer, TU Wien 
+ Mathias Fischer, University of Hamburg 
+ Michael Meier, University of Bonn and Fraunhofer FKIE 
+ Michael Schwarz, CISPA Helmholtz Center for Information Security 
+ Michalis Polychronakis, Stony Brook University 
+ Michele Carminati, Politecnico di Milano 
+ Moritz Schloegel, CISPA Helmholtz Center for Information Security 
+ Prashast Srivastava, Columbia University 
+ Ricardo J. Rodríguez, Universidad de Zaragoza (Spain) 
+ Roland Yap, National University of Singapore 
+ Seungwon Shin, KAIST 
+ Silvia Sebastián, CISPA 
+ Simon Koch, TU Braunschweig 
+ Stefano Zanero, Politecnico di Milano 
+ Stijn Volckaert, DistriNet, KU Leuven 
+ Sven Dietrich, City University of New York 
+ Tapti Palit, UC Davis 
+ Tiago Heinrich, Max-Planck-Institut für Informatik 
+ Urko Zurutuza, Mondragon Unibertsitatea 
+ Vasileios Kemerlis, Brown University 
+ Vasilios Mavroudis, Alan Turing Institute 
+ Veelasha Moonsamy, Ruhr University Bochum 
+ Vera Rimmer, DistriNet, KU Leuven 
+ Vinod Yegneswaran, SRI 
+ Yang Zhang, CISPA 
+ Yinzhi Cao, Johns Hopkins University 
+ Publication chair 
+ Michele Carminati 
+ Poster co-chairs 
+ Tarini Saka 
+ Flavio Toffalini 
+ General chair 
+ Daniel Gruss | (Graz University of Technology) 
+ Steering committee 
+ Ulrich Flegel (co-chair) 
+ Michael Meier (co-chair) 
+ Magnus Almgren 
+ Sébastien Bardin 
+ Leyla Bilge 
+ Gregory Blanc 
+ Herbert Bos 
+ Danilo M. Bruschi 
+ Roland Bueschkes 
+ Juan Caballero 
+ Lorenzo Cavallaro 
+ Hervé Debar 
+ Sven Dietrich 
+ Mathias Fischer 
+ Giorgio Giacinto 
+ Cristiano Giuffrida 
+ Daniel Gruss 
+ Bernhard Haemmerli 
+ Thorsten Holz 
+ Marko Jahnke 
+ Klaus Julisch 
+ Christian Kreibich 
+ Christopher Kruegel 
+ Pavel Laskov 
+ Federico Maggi 
+ Clémentine Maurice 
+ Nuno Neves 
+ Roberto Perdisci 
+ Michalis Polychronakis 
+ Konrad Rieck 
+ Jean-Pierre Seifert 
+ Robin Sommer 
+ Urko Zurutuza 
+  
+ Venue: Graz University of Technology 
+
+DIMVA will be held in theAula of the historic main buildingofGraz University of Technology(aka "old campus"), located atRechbauerstraße 12, 8010 Graz. You can reach it via tram lines 1 or 7 from station "Mayffredygasse" within 3 minutes, via tram line 3 from stations "Mandellstraße" or "Rechbauerstraße" within 3-4 minutes, or via tram line 6 from station "Dietrichsteinplatz" within 8 minutes. Tram lines 1 and 7 also pass the main railway station ("Graz Hauptbahnhof") as well as central point of transfer ("Jakominiplatz"). Navigation via Google Maps works fine in Graz. You can buy tickets via theOEBB website or app, or at the ticket machineinsidethe trams. 
+ As the campus is located right in the city center, there are many hotels and apartments around so that it is easy to find an accommodation that meets your expectations. 
+ Travel Information 
+ By Plane 
+ If you come by plane, the simplest way to get to the venue is to take a taxi from Graz Airport. The fare is approximately EUR 35 and the journey takes around 30 minutes. 
+ By Train 
+ Fare: | EUR 3,10 to "Graz Hauptbahnhof" (main railway station) 
+ Duration: | Approximately 20 minutes 
+ Walk: | A short (~100 m) walk from the airport to the station is required 
+ Frequency: | Leaves every 30 minutes 
+ Ticket Options: | 1-hour ticket EUR 3,10; 24-hour ticket EUR 6,80 (includes all city trams, buses, and the train to/from the airport) 
+ Hotels 
+ We have blocked room allotments in three hotels within walking distance to our conference location. Please mention the code "DIMVA" when booking. Contact the hotel directly (email/phone) to make your reservation! 
+ Motel One Graz 
+ Jakominiplatz 7 
+ 8010 Graz 
+ res.graz@motel-one.com 
+ www.motel-one.comSingle room: EUR 101,50 per night (price includes breakfast) 
+ Hotel Gollner 
+ Schloegelgasse 14 
+ 8010 Graz 
+ Tel: +43 316 822521 0 
+ office@hotelgollner.com 
+ www.hotelgollner.comSingle room basic: EUR 119 per night 
+ Single room business: EUR 124 per night 
+ Price includes breakfast 
+ Boutique Hotel Dom 
+ Bürgergasse 14, 8010 Graz 
+ Tel: +43 316/824 800 
+ domhotel@domhotel.co.at 
+ www.domhotel.co.atSingle room: EUR 111,50 per night 
+ Double room for single use: EUR 151,50 per night 
+ Price includes breakfast 
+ Further Hotels 
+ Hotel Weitzer **** | : | Grieskai 12-16, 8020 Graz | , | www.hotelweitzer.com 
+ Hotel Wiesler **** | : | Grieskai 4-8, 8020 Graz | , | www.hotelwiesler.com 
+ Austria Trend Hotel Europa **** | : | Bahnhofgürtel 89, 8020 Graz | , | www.austria-trend.at/Hotel-Europa-Graz 
+ Das Parkhotel Graz **** | : | Leonhardstraße 8, 8010 Graz | , | www.parkhotel-graz.at 
+ Hotel roomz Graz | : | Conrad-von-Hötzendorf-Straße 96, 8010 Graz | , | www.roomz-graz.com 
+ If you mention "TU Graz" upon booking, you should also receive a reduced tariff. 
+ Sponsors 
+
+Sponsorship Opportunities 
+ We are looking for a few industry sponsors, primarily to provide them with an opportunity to engage with the participants. This way, we hope to make the local security community more visible to an international audience and create networking opportunities. 
+ We offer three sponsorship levels, each of which includes a ticket for a researcher from the sponsoring company to mingle with attendees or place goodies/swag in the welcome bag that we hand out at check-in. 
+ Sponsorship Benefits 
+ All sponsors will have their logos displayed on the conference website. 
+ Sponsors will be acknowledged in the opening remarks. 
+ Sponsors will be mentioned in the acknowledgments of the conference proceedings. 
+ An early confirmation (or decline) of sponsorship would help us with planning, but we need to know by June at the latest whether sponsorship is possible. 
+ Sponsorship Levels 
+ Gold: €4000 | (includes up to 4 free registrations, the option to have a table in the break area, the option to display a roll-up/poster, and the ability to place swag/goodies in the attendee bags) 
+ Silver: €3000 | (includes up to 3 free registrations, the option to display a roll-up/poster, and the ability to place swag/goodies in the attendee bags) 
+ Bronze: €2000 | (includes up to 2 free registrations, the ability to place swag/goodies in the attendee bags) 
+ Other individual levels can be arranged. 
+ We are happy to discuss other sponsorship options as well. If you have any questions, feel free to reach out. We look forward to this big and international event in Graz! 
+ Content Responsibility and Admin 
+ Daniel Gruss 
+ Graz University of Technology 
+ Rechbauerstraße 12 
+ 8010 Graz, Austria 
+ Telephone: +43 316 873 5544 
+ E-Mail:daniel.gruss@tugraz.at 
+ Privacy Policy 
+ Processing of your personal data when you visit this website 
+ We do not store any personal data about your visit to our project website. 
+ We only process your IP address to the extent necessary for the technical delivery of the web content. In addition to the IP address, your browser - depending on the configuration - also transmits other data, e.g. browser type, browser version, operating system used, referrer URL, which we use for delivering the website optimized for your display. Your personal data will not be processed by us beyond what is necessary for delivering the website and will be directly deleted afterwards. 
+ Cookies 
+ We do not use Cookies. 
+ Server log files 
+ Your access to our website will be logged for a maximum of 7 days in order to be able to analyse any problems. 
+ External resources 
+ All pictures, fonts, and additional resources are retrieved solely from our server, so that your visit to our website does not leave any traces at third parties. 
+
+Call for Papers information:
+href="#page-top" - DIMVA 2025
+Home 
+ Registration 
+ href="#cfp" - Call for Papers 
+ href="#cfposter" - Call for Posters 
+ Committee 
+ Venue 
+  
+ 22nd Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA '25) 
+ July 9 to 11, 2025 at Graz University of Technology, Austria 
+ href="https://infosec.exchange/@DIMVAConf" - Follow us on Mastodon
+href="https://twitter.com/DIMVAConf" - Follow us on X/Twitter
+href="https://bsky.app/profile/dimvaconf.bsky.social" - Follow us on Bluesky
+ 
+ Registration 
+ Registration will be open until July 1, 23:59. 
+ At least one Member or Regular fee must be paid for each accepted paper. Papers without registered author(s) will be withdrawn from the program. 
+ All registration fee includes admission to all DIMVA 2025 sessions, selected meals and welcome reception, dinner and social event throughout the official event July 9 – July 11. You will be charged in EUR as stated below. 
+ Please note: On-site registration isnotpossible! 
+ Requests for cancellation and refunds must be received no later thanJuly, 1, 2025. No refunds will be processed after this date. 
+ The registration does not include the accommodation - please book your accommodation separately. 
+  
+ Ticket | Normal | Late (starting June 7th till July 1st) 
+ Regular | 340 | 390 
+ GI members and other scientific organization members | 260 | 310 
+ B.Sc./M.Sc. Student | 270 | 320 
+ Thestudent ticketis available for Bachelor and Master students only! 
+ Pleasehref="https://pretix.eu/gi/DIMVA25/" - register for the conference here
+. 
+ Please also have a look at ourterms of participationand ourprivacy notice. 
+ Reach out tohref="mailto:dimva2025.isec@tugraz.at" - dimva2025.isec@tugraz.at
+if you have questions. 
+  
+ Call for Papers 
+ Important Dates (AoE) 
+ Cycle 1:Submission: | Dec 4, 2024 | Dec 10, 2024 (extended!) 
+ Notification (accept/reject): | Jan 22, 2025 | Jan 27, 2025 (extended!) 
+ Submission Site: | href="https://dimva25.hotcrp.com/" - https://dimva25.hotcrp.com/ 
+ Cycle 2: | Submission: | Feb 12, 2024 | Feb 19, 2024 (extended!) 
+ Notification (accept/reject): Wed. Apr 2, 2025 
+ Submission Site: | href="https://dimva25r2.hotcrp.com/" - https://dimva25r2.hotcrp.com/ 
+ Camera ready deadline: Apr 30, 2025 
+ Conference: July 9 to 11, 2025 
+ General Information 
+ The annual DIMVA conference serves as a premier forum for advancing the state of the art in the broader areas of intrusion detection, malware analysis, and vulnerability assessment. Each year, DIMVA brings together international experts from academia, industry, and government to present and discuss novel research in these areas. DIMVA is organized by the special interest group Security - Intrusion Detection and Response (SIDAR) of the German Informatics Society (GI). The conference proceedings will appear in the Springer Lecture Notes in Computer Science (LNCS) series. 
+ Topics of Interest 
+ DIMVA solicits submissions of high-quality, original scientific papers presenting novel research on malware analysis, intrusion detection, vulnerability assessment, and related systems security topics. 
+ Topics of interest include, but are not limited to: 
+ Intrusions 
+ Novel approaches and domains 
+ Insider detection 
+ Prevention and response 
+ Data leakage, exfiltration, and poisoning 
+ Result correlation and cooperation 
+ Evasion and other attacks 
+ Potentials and limitation 
+ Operational experiences 
+ Privacy, legal, and social aspects 
+ Targeted attacks 
+ Analysis or detection of cryptocurrency heists 
+ Malware 
+ Automated analyses 
+ Behavioral models 
+ Prevention and containment 
+ Classification 
+ Lineage 
+ Forensics and recovery 
+ Underground economy 
+ Vulnerabilities in malware 
+ Financially targeted malware (e.g., ransomware, DeFi) 
+ Vulnerability detection 
+ Vulnerability prevention 
+ Vulnerability analysis 
+ Exploitation and defenses 
+ Hardware vulnerabilities 
+ Situational awareness 
+ Active probing 
+ Vulnerabilities in decentralized systems 
+ Papers will be judged on novelty, significance, correctness, and clarity. We expect all papers to provide enough details to enable reproducibility of the experimental results. We encourage papers that bridge research in different communities. We also welcome experience papers that clearly articulate lessons learnt. 
+ Types of Submissions Solicited 
+ We invitefull papersfor submission that present novel and mature research results. Full papers are limited to 20 pages in Springer LNCS format, including bibliography and appendices. 
+ Papers that do not follow these formatting guidelines may be rejected without review. 
+ While we do not accept short papers, we encourage authors to submit a poster instead, presenting original, still ongoing work that has not yet reached the maturity required for a full paper. For more information, please refer to the Call for Posters. 
+ Submission Guidelines 
+ DIMVA 2025 will adopt a double-blind reviewing process. All submissions should be appropriately anonymized. Author names and affiliations must be excluded from the paper. Furthermore, authors should avoid obvious self-references, and should cite their own previous work in third person, whenever necessary. Papers that are not properly anonymized risk being rejected without review. 
+ Submissions must be original work and may not be under submission to another venue at the time of review. At least one author of each accepted paper is required to physically present the submitted work at the conference, for the paper to be included in the proceedings. 
+ Authors are encouraged to submit code appropriately anonymized, using, e.g.,https://anonymous.4open.science/. 
+ Ethical considerations 
+ Submissions that report experiments with data gathered from human subjects should disclose whether the research received approval from an institutional ethics review board (IRB), if applicable, and what measures were adopted to minimize risks to privacy. 
+ Submissions that describe experiments related to vulnerabilities in software or systems should discuss the steps taken to avoid negatively affecting any third-parties (e.g., in case of probing of network devices), and how the authors plan to responsibly disclose the vulnerabilities to the appropriate software or system vendors or owners before publication. 
+ If you have any questions, please contact the program chairs athref="mailto:pc-chairs@dimva.org:" - pc-chairs@dimva.org
+. 
+  
+ Call for Posters 
+ Important Dates (AoE) 
+ Submission: up to April 11th, 2025 
+ Notification: April 21st, 2025 
+ Camera-ready: April 30th, 2025 
+ High-quality posters facilitate discussions about recent research findings, encourage meaningful interactions with interested attendees, showcase ongoing projects, and present innovative ideas. DIMVA invites submissions of posters that highlight preliminary results, ongoing work, or recently published research. Posters will be displayed in a forum setting, allowing attendees to mingle and engage with the presenters. 
+ Submission Guidelines 
+ Poster submissions must include two components: the poster draft and an accompanying poster paper. The poster paper should be at least 4 pages, but no more than 6 pages long, formatted according to the Springer LNCS guidelines, and this page count includes the bibliography and any appendices. Proposals are not anonymized and must clearly state the authors' names, affiliations, and contact information. The poster papers will be published in the proceedings. Please ensure that the title of the poster paper begins with the word "Poster". 
+ The poster submission system is available athref="https://dimva25posters.hotcrp.com/" - https://dimva25posters.hotcrp.com/
+. 
+ Note: Poster sessions will be held in-person. At least one author of each accepted poster will be required to attend the conference. During the conference, we will provide poster stands. Attendees may bring printed posters up to size A0. 
+  
+ Committee 
+ Program co-chairs (email:href="mailto:pc-chairs@dimva.org" - pc-chairs@dimva.org
+) 
+ Manuel Egele | (Boston University) 
+ Veelasha Moonsamy | (Ruhr University Bochum) 
+ Program committee 
+ Advait Patel, Broadcom 
+ Amin Kharraz, Florida International University 
+ Andrea Continella, University of Twente 
+ Andrea Lanzi, University of Milan 
+ Andrea Mambretti, IBM Research Europe - Zurich 
+ Anita Nikolich, University of Illinois-Urbana Champaign 
+ Bart Coppens, Ghent University 
+ Behzad Ousat, Florida International University 
+ Daniel Gruss, Graz University of Technology 
+ Daniel Plohmann, Fraunhofer FKIE 
+ Daniele Antonioli, EURECOM 
+ Daniele Cono D'Elia, Sapienza University of Rome 
+ David Klein, Technische Universität Braunschweig 
+ Eleonora Losiouk, University of Padua 
+ Emilio Coppa, LUISS University 
+ Fabio Pagani, Binarly 
+ Fabio Pierazzi, King's College London 
+ Flavio Toffalini, RUB 
+ Hervé Debar, Télécom SudParis 
+ Ilya Grishchenko, University of California, Santa Barbara 
+ Jan Wichelmann, Universität zu Lübeck 
+ Johanna Ullrich, University of Vienna 
+ Johannes Kinder, LMU Munich 
+ Juan Caballero, IMDEA Software Institute 
+ Juan Tapiador, Universidad Carlos III de Madrid 
+ Kaan Onarlioglu, Akamai 
+ Kimberly Tam, University of Plymouth / Alan Turing Institute 
+ Konrad Rieck, TU Berlin 
+ Mannat Kaur, Max-Planck-Institute for Informatics 
+ Manuel Egele, Boston University 
+ Marco Cova, VMware 
+ Martina Lindorfer, TU Wien 
+ Mathias Fischer, University of Hamburg 
+ Michael Meier, University of Bonn and Fraunhofer FKIE 
+ Michael Schwarz, CISPA Helmholtz Center for Information Security 
+ Michalis Polychronakis, Stony Brook University 
+ Michele Carminati, Politecnico di Milano 
+ Moritz Schloegel, CISPA Helmholtz Center for Information Security 
+ Prashast Srivastava, Columbia University 
+ Ricardo J. Rodríguez, Universidad de Zaragoza (Spain) 
+ Roland Yap, National University of Singapore 
+ Seungwon Shin, KAIST 
+ Silvia Sebastián, CISPA 
+ Simon Koch, TU Braunschweig 
+ Stefano Zanero, Politecnico di Milano 
+ Stijn Volckaert, DistriNet, KU Leuven 
+ Sven Dietrich, City University of New York 
+ Tapti Palit, UC Davis 
+ Tiago Heinrich, Max-Planck-Institut für Informatik 
+ Urko Zurutuza, Mondragon Unibertsitatea 
+ Vasileios Kemerlis, Brown University 
+ Vasilios Mavroudis, Alan Turing Institute 
+ Veelasha Moonsamy, Ruhr University Bochum 
+ Vera Rimmer, DistriNet, KU Leuven 
+ Vinod Yegneswaran, SRI 
+ Yang Zhang, CISPA 
+ Yinzhi Cao, Johns Hopkins University 
+ Publication chair 
+ Michele Carminati 
+ Poster co-chairs 
+ Tarini Saka 
+ Flavio Toffalini 
+ General chair 
+ Daniel Gruss | (Graz University of Technology) 
+ Steering committee 
+ Ulrich Flegel (co-chair) 
+ Michael Meier (co-chair) 
+ Magnus Almgren 
+ Sébastien Bardin 
+ Leyla Bilge 
+ Gregory Blanc 
+ Herbert Bos 
+ Danilo M. Bruschi 
+ Roland Bueschkes 
+ Juan Caballero 
+ Lorenzo Cavallaro 
+ Hervé Debar 
+ Sven Dietrich 
+ Mathias Fischer 
+ Giorgio Giacinto 
+ Cristiano Giuffrida 
+ Daniel Gruss 
+ Bernhard Haemmerli 
+ Thorsten Holz 
+ Marko Jahnke 
+ Klaus Julisch 
+ Christian Kreibich 
+ Christopher Kruegel 
+ Pavel Laskov 
+ Federico Maggi 
+ Clémentine Maurice 
+ Nuno Neves 
+ Roberto Perdisci 
+ Michalis Polychronakis 
+ Konrad Rieck 
+ Jean-Pierre Seifert 
+ Robin Sommer 
+ Urko Zurutuza 
+  
+ Venue: Graz University of Technology 
+
+DIMVA will be held in theAula of the historic main buildingofGraz University of Technology(aka "old campus"), located atRechbauerstraße 12, 8010 Graz. You can reach it via tram lines 1 or 7 from station "Mayffredygasse" within 3 minutes, via tram line 3 from stations "Mandellstraße" or "Rechbauerstraße" within 3-4 minutes, or via tram line 6 from station "Dietrichsteinplatz" within 8 minutes. Tram lines 1 and 7 also pass the main railway station ("Graz Hauptbahnhof") as well as central point of transfer ("Jakominiplatz"). Navigation via Google Maps works fine in Graz. You can buy tickets via theOEBB website or app, or at the ticket machineinsidethe trams. 
+ As the campus is located right in the city center, there are many hotels and apartments around so that it is easy to find an accommodation that meets your expectations. 
+ Travel Information 
+ By Plane 
+ If you come by plane, the simplest way to get to the venue is to take a taxi from Graz Airport. The fare is approximately EUR 35 and the journey takes around 30 minutes. 
+ By Train 
+ Fare: | EUR 3,10 to "Graz Hauptbahnhof" (main railway station) 
+ Duration: | Approximately 20 minutes 
+ Walk: | A short (~100 m) walk from the airport to the station is required 
+ Frequency: | Leaves every 30 minutes 
+ Ticket Options: | 1-hour ticket EUR 3,10; 24-hour ticket EUR 6,80 (includes all city trams, buses, and the train to/from the airport) 
+ Hotels 
+ We have blocked room allotments in three hotels within walking distance to our conference location. Please mention the code "DIMVA" when booking. Contact the hotel directly (email/phone) to make your reservation! 
+ Motel One Graz 
+ Jakominiplatz 7 
+ 8010 Graz 
+ res.graz@motel-one.com 
+ www.motel-one.comSingle room: EUR 101,50 per night (price includes breakfast) 
+ Hotel Gollner 
+ Schloegelgasse 14 
+ 8010 Graz 
+ Tel: +43 316 822521 0 
+ office@hotelgollner.com 
+ www.hotelgollner.comSingle room basic: EUR 119 per night 
+ Single room business: EUR 124 per night 
+ Price includes breakfast 
+ Boutique Hotel Dom 
+ Bürgergasse 14, 8010 Graz 
+ Tel: +43 316/824 800 
+ domhotel@domhotel.co.at 
+ www.domhotel.co.atSingle room: EUR 111,50 per night 
+ Double room for single use: EUR 151,50 per night 
+ Price includes breakfast 
+ Further Hotels 
+ Hotel Weitzer **** | : | Grieskai 12-16, 8020 Graz | , | www.hotelweitzer.com 
+ Hotel Wiesler **** | : | Grieskai 4-8, 8020 Graz | , | www.hotelwiesler.com 
+ Austria Trend Hotel Europa **** | : | Bahnhofgürtel 89, 8020 Graz | , | www.austria-trend.at/Hotel-Europa-Graz 
+ Das Parkhotel Graz **** | : | Leonhardstraße 8, 8010 Graz | , | www.parkhotel-graz.at 
+ Hotel roomz Graz | : | Conrad-von-Hötzendorf-Straße 96, 8010 Graz | , | www.roomz-graz.com 
+ If you mention "TU Graz" upon booking, you should also receive a reduced tariff. 
+ Sponsors 
+
+Sponsorship Opportunities 
+ We are looking for a few industry sponsors, primarily to provide them with an opportunity to engage with the participants. This way, we hope to make the local security community more visible to an international audience and create networking opportunities. 
+ We offer three sponsorship levels, each of which includes a ticket for a researcher from the sponsoring company to mingle with attendees or place goodies/swag in the welcome bag that we hand out at check-in. 
+ Sponsorship Benefits 
+ All sponsors will have their logos displayed on the conference website. 
+ Sponsors will be acknowledged in the opening remarks. 
+ Sponsors will be mentioned in the acknowledgments of the conference proceedings. 
+ An early confirmation (or decline) of sponsorship would help us with planning, but we need to know by June at the latest whether sponsorship is possible. 
+ Sponsorship Levels 
+ Gold: €4000 | (includes up to 4 free registrations, the option to have a table in the break area, the option to display a roll-up/poster, and the ability to place swag/goodies in the attendee bags) 
+ Silver: €3000 | (includes up to 3 free registrations, the option to display a roll-up/poster, and the ability to place swag/goodies in the attendee bags) 
+ Bronze: €2000 | (includes up to 2 free registrations, the ability to place swag/goodies in the attendee bags) 
+ Other individual levels can be arranged. 
+ We are happy to discuss other sponsorship options as well. If you have any questions, feel free to reach out. We look forward to this big and international event in Graz! 
+ Content Responsibility and Admin 
+ Daniel Gruss 
+ Graz University of Technology 
+ Rechbauerstraße 12 
+ 8010 Graz, Austria 
+ Telephone: +43 316 873 5544 
+ E-Mail:daniel.gruss@tugraz.at 
+ Privacy Policy 
+ Processing of your personal data when you visit this website 
+ We do not store any personal data about your visit to our project website. 
+ We only process your IP address to the extent necessary for the technical delivery of the web content. In addition to the IP address, your browser - depending on the configuration - also transmits other data, e.g. browser type, browser version, operating system used, referrer URL, which we use for delivering the website optimized for your display. Your personal data will not be processed by us beyond what is necessary for delivering the website and will be directly deleted afterwards. 
+ Cookies 
+ We do not use Cookies. 
+ Server log files 
+ Your access to our website will be logged for a maximum of 7 days in order to be able to analyse any problems. 
+ External resources 
+ All pictures, fonts, and additional resources are retrieved solely from our server, so that your visit to our website does not leave any traces at third parties.

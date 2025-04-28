@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "March 21 - 23, 2025",
+  "Year": "2025",
+  "Location": "Guangzhou, China",
+  "City-State-Province": "Guangzhou",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "January 25, 2025"
+  },
+  "Notification Date": {
+    "Notification of Acceptance": "February 15, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Submission & Registration Deadline": "February 25, 2025"
+  },
+  "Topics": "Natural Language Processing, Language Analysis and Representation, Language Processing Models and Techniques, Language Resources and Tools, Multilingual and Cross-Lingual Processing, Information Extraction and Retrieval, Sentiment Analysis and Human Interaction, Specialized NLP Applications, Multi-modal Information Processing",
+  "Publisher": "IEEE",
+  "Summary": "The 7th International Conference on Natural Language Processing (ICNLP 2025) will be held in Guangzhou, China, from March 21 to 23, 2025. The conference covers a wide range of topics in natural language processing, including natural language understanding, speech recognition, text generation, knowledge graphs, sentiment analysis, and cross-lingual information processing.",
+  "Call for Papers": "# ICNLP 2025: Call for Papers\n\nThe 7th International Conference on Natural Language Processing (ICNLP 2025) will be held in **Guangzhou, China, from March 21 to 23, 2025.**\n\n## Topics\n\nTopics cover all areas related to natural language processing, including but not limited to:\n\n**1. Language Analysis and Representation:**\n\n*   Phonetics, Phonology, and Morphology\n*   Syntax, Semantics, Discourse, Pragmatics, Dialogue, and Lexicon\n*   Word and Sentence Representation\n*   POS Tagging\n*   Parsing\n*   Semantic Role Labelling\n*   Word-Sense Disambiguation\n*   Multiword Expressions\n*   Anaphora Resolution\n\n**2. Language Processing Models and Techniques:**\n\n*   Complexity\n*   Mathematical, Statistical, Machine Learning, and Deep Learning Models\n\n**3. Language Resources and Tools:**\n\n*   Language Resources and Corpora\n*   Electronic Dictionaries, Terminologies, and Ontologies\n*   Linked Data\n\n**4. Multilingual and Cross-Lingual Processing:**\n\n*   Multilingual NLP\n*   Machine Translation, Translation Memory Systems, and Computer-Aided Translation Tools\n*   Text Simplification and Readability Estimation\n\n**5. Information Extraction and Retrieval:**\n\n*   Knowledge Acquisition\n*   Information Retrieval\n*   Text Categorization\n*   Information Extraction\n*   Text Summarization\n*   Terminology Extraction\n*   Question Answering\n*   Fact Checking\n\n**6. Sentiment Analysis and Human Interaction:**\n\n*   Opinion Mining and Sentiment Analysis\n*   Stance Recognition\n*   Author Profiling\n*   Dialogue Systems\n*   Computer-Aided Language Learning\n\n**7. Specialized NLP Applications:**\n\n*   NLP for Biomedical Texts and Healthcare\n*   NLP for the Semantic Web\n\n**8. Special Session I topics: Multi-modal Information Processing:**\n\n*   Recent advances and applications\n*   Single Modal Data Analysis\n*   Acquisition Techniques for Multi-Modal Data\n*   Multi-Modal Representation and Translation\n*   Multi-Modal Alignment and Fusion\n*   Cross-Modal Retrieval, Co-Training, Transfer Learning, Few/Zero-Shot Learning\n*   Applications of Multi-Modal Information Processing\n\n## Important Dates\n\n*   **Submission Deadline:** January 25, 2025 at 11:59 PM PDT\n*   **Notification of Acceptance:** February 15, 2025 at 11:59 PM PDT\n*   **Camera Ready Submission & Registration Deadline:** February 25, 2025 at 11:59 PM PDT"
+}
+

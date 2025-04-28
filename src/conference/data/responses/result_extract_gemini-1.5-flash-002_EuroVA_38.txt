@@ -1,0 +1,27 @@
+```json
+{
+  "Conference dates": "June 2, 2025",
+  "Year": "2025",
+  "Location": "Luxembourg",
+  "City-State-Province": "Luxembourg",
+  "Country": "Luxembourg",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission": "February 28, 2025"
+  },
+  "Notification Date": {
+    "Notification": "April 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready": "May 2, 2025"
+  },
+  "Other Date": {
+    "Workshop": "June 2, 2025"
+  },
+  "Topics": "Visual Analytics, Visualization, Human-Computer Interaction, Data Science, Statistics, Mathematics, Data Management, Knowledge Representation, Data Analysis, Machine Learning, Cognitive and Perceptual Sciences, Immersive Analytics, Human-Centered VA, Human Factors, Decision Making, Explainable AI, Scalable VA, Progressive Visual Analytics, VA for machine learning, Machine learning for VA, Uncertainty-aware VA, Visual Data Science, Interaction techniques, Novel data representations, Analytical processes and provenance, Infrastructures, systems, frameworks, and architectures, Evaluation and user studies, Methodologic and theoretical foundations, Applications and problem-driven work",
+  "Publisher": "Eurographics Association",
+  "Summary": "EuroVA 2025 is the sixteenth international EuroVis Workshop on Visual Analytics. It will take place on Monday, June 2, 2025, in Luxembourg, and is co-located with EuroVis 2025.  The workshop will accept a wide range of contributions within the broad area of Visual Analytics, including novel techniques, systems, applications, evaluation studies and methods, and theoretical foundations.",
+  "Call for Papers": "# EuroVA 2025: Call for Submissions\n\nEuroVA 2025 is the sixteenth international EuroVis Workshop on Visual Analytics. It will take place on **Monday, June 2, 2025, in Luxembourg**, co-located with EuroVis 2025.\n\nEuroVA 2025 is the premier workshop in Europe to present and discuss fresh ideas on new methods and theories, novel applications, designs, and studies on the use of Visual Analytics methods and systems.\n\n## Topics\n\nThe workshop covers topics in the area of Visual Analytics (VA) including, but not limited to:\n\n*   Immersive analytics\n*   Human-Centered VA and Human Factors\n*   Decision making through VA\n*   Explainable AI through VA\n*   Scalable VA\n*   Progressive Visual Analytics\n*   VA for machine learning & machine learning for VA\n*   Uncertainty-aware VA\n*   Visual Data Science\n*   Interaction techniques\n*   Novel data representations\n*   Analytical processes and provenance\n*   Infrastructures, systems, frameworks, and architectures\n*   Evaluation and user studies\n*   Methodologic and theoretical foundations\n*   Applications and problem-driven work\n\n## Submission Guidelines\n\n*   Papers can be up to 5 pages in length + references.\n*   Papers must be prepared using the EuroVA LaTeX template ([download link](https://www.eurova.org/wp-content/uploads/egPublStyle-EuroVA2025.zip)).\n*   Papers are to be submitted via the new PCS at [https://new.precisionconference.com/submissions](https://new.precisionconference.com/submissions) under Eurographics → EuroVis 2025 → EuroVis 2025 EuroVA.\n*   At least one author of an accepted paper must register and participate in the workshop to present the accepted work.\n\n## Publication\n\nThe EuroVA Workshop Proceedings will be published by the Eurographics Association and stored in the Eurographics Digital Library.\n\n## Important Dates\n\nAll submission deadlines are at 23:59 GMT on the date indicated.\n\n*   **Submission:** February 28, 2025\n*   **Notification:** April 11, 2025\n*   **Camera-ready:** May 2, 2025\n*   **Workshop:** June 2, 2025\n\n## Organizers\n\n*   **Program Chairs:**\n    *   Hans-Jörg Schulz, Aarhus University, Denmark\n    *   Anna Villanova, TU Eindhoven, The Netherlands\n*   **Publicity Chair:** Alex Ulmer, Fraunhofer IGD, Germany\n*   **Steering Committee:**\n    *   Daniel Keim, University of Konstanz, Germany\n    *   Jörn Kohlhammer, Fraunhofer IGD, Germany\n    *   Jürgen Bernard, University of Zurich, Switzerland\n    *   Marco Angelini, Link Campus University of Rome\n*   **International Program Committee:** Gennady Andrienko, Daniel Archambault, Michael Behrisch, Jürgen Bernard, Nadia Boukhelifa, Remco Chang, Angelos Chatzimparmpas, Jordan Crouser, Martin Eisemann, Stef v.d.Elzen, Marina Evers, David Gotz, Helwig Hauser, Christoph Heinzl, Petra Isenberg, Stefan Jänicke, Daniel Keim, Kostiantyn Kucher, Tatiana v.Landesberger, Gabriela Molina León, Lars Linsen, Quynh Quang Ngo, Fernando Paulovich, Maria Riveiro, Willy Scheibel, Tobias Schreck, John Stasko, Alexandru Telea, Christian Tominski, Thomas Torsney-Weir, Cagatay Turkay, Alex Ulmer, Katerina Vrotsou, Chris Weaver"
+}
+```

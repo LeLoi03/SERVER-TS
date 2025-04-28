@@ -1,0 +1,184 @@
+Conference TrustBus:
+
+Ghent | Belgium 
+ August 11 - 14, 2025 
+ Archive 
+ Archive 
+ Contact 
+ Privacy Policy 
+ Imprint 
+ Code of Conduct 
+ Organised by 
+ TrustBus 
+ 21st International Workshop on Trust, Privacy and Security in the Digital Society 
+ Jul 31, 2024 
+ SR03 
+ 08:45 — 16:45 
+ TrustBus Steering Committee 
+ → Simone Fischer-Hübner 
+ → Steven Furnell 
+ → Sokratis Katsikas 
+ → Costas Lamprinoudakis 
+ → Javier Lopez 
+ → Günther Pernul 
+ more 
+ Accepted Paper 
+ Individual privacy levels in query-based anonymization 
+ Sascha Schiegg(University of Passau, Germany),Florian Strohmeier(University of Passau, Germany),Armin Gerl(HM University of Applied Sciences Munich, Germany),Harald Kosch(University of Passau, Germany) 
+ Full PaperArtificial intelligence systems like large language models (LLM) source their knowledge from large datasets. Systems like ChatGPT therefore rely on shared data to train on. For enterprises, releasing data to the public domain requires anonymization as soon as a individual is identifiable. While multiple privacy models exist that guarantee a specific level of distortion applied to a dataset, to mitigate re-identification with e.g. k-anonymity, the required level is in general defined by the data processor. We propose the idea to combine individual privacy levels defined by the data subjects themselves with a privacy language such as LPL (Gerl et al., 2018) to get a more fine-granular understanding of the effectively required privacy level. Queries targeting subsets of the to be released dataset can only profit from lower privacy requirements set by data subjects as these response subsets may do not contain users with high privacy requirements, which can then lead to more utility. By analyzing the results of different queries directed at a privacy-aware data-transforming database system, we demonstrate the characteristics needed for this assumption to really take effect. For a more realistic evaluation we also take changes of the underlying data sources in consideration. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Aligning eIDAS and Trust Over IP: A Mapping Approach 
+ Cristian Lepore(IRIT, France),Romain Laborde(IRIT, France),Jessica Eynard(Uniersity Toulouse Capitole, France) 
+ Full PaperOn 29 February 2024, the European Parliament approved the amendment of the eIDAS Regulation. The revision introduces new elements and a new EU Digital Identity Wallet, expected to be ready by the end of 2026. Even after the wallet is released, the numerous digital identity schemes operating within the Member States will continue to function for some time. The introduction of the new wallet and the coexistence of numerous digital identity schemes will pose challenges for service providers, who will need to adapt to support various means of identity, including the EU wallet, for their services. In response to this challenge, this study examines how to plan interoperability between eIDAS and existing frameworks. First, we organize the eIDAS components in a knowledge graph that encodes information through entities and their relations. While doing this, we highlight various design patterns and use a graph entity alignment method to map components of eIDAS and the Trust Over IP. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+A Unified Framework for GDPR Compliance in Cloud Computing 
+ Argyri Pattakou(Dept. of Cultural Technology and Communication, University of the Aegean Lesvos, Greece, Greece),Vasiliki Diamantopoulou(Dept. of Information and Communication Systems Engineering, University of the Aegean Samos, Greece, Greece),Christos Kalloniatis(Dept. of Cultural Technology and Communication, University of the Aegean Lesvos, Greece, Greece),Stefanos Gritzalis(Department of Digital Systems University of Piraeus, Greece, Piraeus, Greece, Greece) 
+ Full PaperIn parallel with the rapid development of Information and Communication technologies and the digitization of information in every aspect of daily life, the enforcement of the GDPR, in May 2018, brought significant changes to the processes that organisations should follow during collecting, processing, and storing personal data and revealed the immediate need for integrating the Regulation’s requirements for integrating into organisational activities that process personal and sensitive data. On the other hand, cloud computing is a cutting-edge technology that is widely used in order to support most, if not every, organisational activities. As a result, such infrastructure constitutes huge pools of personal data and, in this context, a careful consideration and implementation of the rules imposed by the Regulation is considered crucial. In this paper, after highlighting the need to consider the GDPR requirements when designing cloud-based systems, we determined those GDPR compliance controls that should be incorporated at the early stages of the system design process. As a next step, those compliance controls were integrated into a holistic framework that considers both the security and privacy aspects of a cloud-based system as well as the requirements arising from the Regulation during the design of such systems. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+A Framework for Managing Separation of Duty Policies 
+ Sebastian Groll(University of Regensburg, Germany),Sascha Kern(Nexis GmbH, Germany),Ludwig Fuchs(Nexis GmbH, Germany),Günther Pernul(Universität Regensburg, Germany) 
+ Full PaperSeparation of Duty (SoD) is a fundamental principle in information security. Especially large and highly regulated companies have to manage a huge number of SoD policies. These policies need to be maintained in an ongoing effort in order to remain accurate and compliant with regulatory requirements. In this work we develop a framework for managing SoD policies that pays particular attention to policy comprehensibility. We conducted seven semi-structured interviews with SoD practitioners from large organizations in order to understand the requirements for managing and maintaining SoD policies. Drawing from the obtained insights, we developed a framework, which includes the relevant stakeholders and tasks, as well as a policy structure that aims to simplify policy maintenance. We anchor the proposed policy structure in a generic IAM data model to ensure compatibility and flexibility with other IAM models. We then show exemplary how our approach can be enforced within Role-Based Access Control. Finally, we evaluate the proposed framework with a real-world IAM data set provided by a large finance company. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Further Insights: Balancing Privacy, Explainability, and Utility in Machine Learning-based Tabular Data Analysis 
+ Wisam Abbasi(Informatics and Telematics Institute (IIT) of National Research Council, Italy),Paolo Mori(IIT-CNR, Italy),Andrea Saracino(Consiglio Nazionale delle Ricerche, Italy) 
+ Full PaperIn this paper, we present further contributions to the field of privacy-preserving and explainable data analysis applied to tabular datasets. Our approach defines a comprehensive optimization criterion that balances the key aspects of data privacy, model explainability, and data utility. By carefully regulating the privacy parameter and exploring various configurations, our methodology identifies the optimal trade-off that maximizes privacy gain and explainability similarity while minimizing any adverse impact on data utility. To validate our approach, we conducted experiments using five classifiers on a binary classification problem using the well-known Adult dataset, which contains sensitive attributes. We employed (epsilon, delta)-differential privacy with generative adversarial networks as a privacy mechanism and incorporated various model explanation methods. The results showcase the capabilities of our approach in achieving the dual objectives of preserving data privacy and generating model explanations. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Article 45 of the eIDAS Directive Unveils the need to implement the X.509 4-cornered trust model for the WebPKI 
+ Ahmad Samer Wazan(Zayed University, United Arab Emirates),Romain Laborde(Université Toulouse 3 Paul Sabatier, France),Abdelmalek Benzekri(Université Toulouse 3 Paul Sabatier, France),Imran Taj(Zayed University, United Arab Emirates) 
+ Full PaperArticle 45 of the new eIDAS Directive (eIDAS 2.0) is causing a bit of shock on the Internet as it gives European governments the power to make EU-certificated web certificates accepted without the approval of web browsers/OS, which are considered to be the current gatekeepers of the WebPKI ecosystem. This paper goes beyond the current debate between the WebPKI gatekeepers and the European Commission (EC) about the implications of Article 45. It shows how both approaches do not provide full protection to web users. We propose a better approach that Europe can follow to regulate web X.509 certificates: Rather than regulating the issuance of web X.509 certificates, the EC can play the role of a validator that recommends the acceptance of certificates at the web scale. 
+  
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Create, Read, Update, Delete: Implications on Security and Privacy Principles regarding GDPR 
+ Michail Pantelelis(University of the Aegean, Greece),Christos Kalloniatis(Department of Cultural Technology and Communication-University of the Aegean, Greece) 
+ Full PaperCreate, Read, Update and Delete operations (CRUD) are a well-established abstraction to model data access in software systems of different architectures. Most system requirements, generated during the specification phase, will be realized by combining these operations on different entities of the system under development. The majority of these requirements will be business operations and objectives. Security requirements come on top of business requirements in a mostly network-connected world and risk the existence of a software system as a business. Through the enforcement of privacy laws, modern systems must also legally comply with privacy requirements or face the possibility of high fines. While there is a great interest in methodologies to elicit security and privacy requirements, little has been done to practically apply those requirements during the software development phase. This paper investigates the implication of those four basic operations regarding security and privacy principles as they are implied by the law. Analysis findings aim to raise awareness among developers about privacy when implementing high-level business requirements, and result in a bottom-up compliance procedure regarding privacy and the GDPR by proposing a systematic approach in this direction. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+The Trade-off Between Privacy & Quality for Counterfactual Explanations 
+ Vincent Dunning(Netherlands Organisation for Applied Scientific Research (TNO), Netherlands),Dayana Spagnuelo(Netherlands Organisation for Applied Scientific Research (TNO), Netherlands),Thijs Veugen(Netherlands Organisation for Applied Scientific Research (TNO), University of Twente, Netherlands),Sjoerd Berning(Netherlands Organisation for Applied Scientific Research (TNO), Netherlands),Jasper van der Waa(Netherlands Organisation for Applied Scientific Research (TNO), Netherlands) 
+ Full PaperCounterfactual explanations are a promising direction of explainable AI in many domains such as healthcare. These explanations produce a counterexample from the dataset that shows, for example, what should change about a patient to reduce their risk of developing diabetes type 2. However, this poses a clear privacy risk when the dataset contains information about people. Recent literature shows that this risk can be mitigated by using $k$-anonymity to generalise the explanation, such that it is not about a single person. In this paper, we investigate the trade-offs between privacy and explanation quality in the medical domain. Our results show that for around 40\% of the explained cases, the real gain in privacy is limited as the generalisation increases while the explanations continue decreasing in quality. 
+  
+ These findings suggest that this can be an unsuitable strategy in some situations, as its effectiveness depends on characteristics of the underlying dataset. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Deployment of Cybersecurity Controls in the Norwegian Industry 4.0 
+ Kristian Kannelønning(NTNU, Norway),Sokratis Katsikas(Norwegian University of Science and Technology, Norway) 
+ Full PaperCybersecurity threats and attacks on Industry are increasing, and the outcome of a successful cyber-attack can be severe for organizations. A successful cyber-attack on an Industry where Cyber-Physical Systems are present can be particularly devastating as such systems could cause harm to people and the environment if they malfunction. This paper reports on the results of a survey investigating what security measures organizations implement within the industry to strengthen their security posture. The survey instrument used has been developed using the NIST Special Publication "Guide to Operational Technology" and contained 70 questions to determine the level of security controls deployed within the Norwegian Industry. The results show that the average usage of the different security controls is 63%, and 53% of the organizations have a security controls usage of 60% or more. The most used security control is backup of critical software, whereas the two least used are specific-OT cybersecurity training and response planning. Both are highlighted as areas for improvement. Dedicated OT security standards have not been found to influence the level of security controls used. However, employees within an organization following a dedicated security standard have higher cybersecurity knowledge. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Trust-minimizing BDHKE-based e-cash mint using secure hardware and distributed computation 
+ Antonín Dufka(Masaryk University, Czechia),Jakub Janků(Masaryk University, Czechia),Petr Švenda(Masaryk University, Czechia) 
+ Full PaperThe electronic cash (or e-cash) technology based on the foundational work of Chaum is emerging as a scalability and privacy layer atop of expensive and traceable blockchain-based currencies. Unlike trustless blockchains, e-cash designs inherently rely on a trusted party with full control over the currency supply. Since this trusted component cannot be eliminated from the system, we aim to minimize the trust it requires. 
+  
+ We approach this goal from two angles. Firstly, we employ misuse-resistant hardware to mitigate the risk of compromise via physical access to the trusted device. Secondly, we divide the trusted device's capabilities among multiple independent devices, in a way that ensures unforgeability of its currency as long as at least a single device remains uncompromised. Finally, we combine both these approaches to leverage their complementary benefits. 
+  
+ In particular, we surveyed blind protocols used in e-cash designs with the goal of identifying those suitable for misuse-resistant, yet resource-constrained devices. Based on the survey, we focused on the BDHKE-based construction suitable for the implementation on devices with limited resources. Next, we proposed a new multi-party protocol for distributing the operations needed in BDHKE-based e-cash and analyzed its security. Finally, we implemented the protocol for the JavaCard platform and demonstrated the practicality of the approach by measuring its performance on a physical smartcard. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Elevating TARA: A Maturity Model for Automotive Threat Analysis and Risk Assessment 
+ Manfred Vielberth(Continental Engineering Services GmbH, Germany),Kristina Raab(University of Regensburg, Germany),Magdalena Glas(University of Regensburg, Germany),Patrick Grümer(Continental Engineering Services GmbH, Portugal),Günther Pernul(University of Regensburg, Germany) 
+ Full PaperThe importance of automotive cybersecurity is increasing in tandem with the evolution of more complex vehicles, fueled by trends like V2X or over-the-air updates. Regulatory bodies are trying to cope with this problem with the introduction of ISO 21434, which standardizes automotive cybersecurity engineering. One piece of the puzzle for compliant cybersecurity engineering is the creation of a TARA (Threat Analysis and Risk Assessment) for identifying and managing cybersecurity risks. The more time security experts invest in creating a TARA, the more detailed and mature it becomes. Thus, organizations must balance the benefits of a more mature TARA against the costs and resources required to achieve it. However, there is a lack of guidance on determining the appropriate level of effort. In this paper, we propose a data-driven maturity model as a management utility facilitating the decision on the maturity-cost trade-off for creating TARAs. To evaluate the model, we conducted interviews with seven automotive cybersecurity experts from the industry. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+What Johnny thinks about using two-factor authentication on GitHub: A survey among open-source developers 
+ Agata Kruzikova(Masaryk University, Czechia),Jakub Suchanek(Masaryk University, Czechia),Milan Broz(Masaryk Universtiy, Czechia),Martin Ukrop(Red Hat, Czechia),Vashek Matyas(Masaryk Universtiy, Czechia) 
+ Full PaperSeveral security issues in open-source projects demonstrate that developer accounts get misused or stolen if weak authentication is used. Many services have started to enforce second-factor authentication (2FA) for their users. This is also the case for GitHub, the largest open-source development platform. We surveyed 110 open-source developers in GitHub to explore how they perceive the importance of authentication on GitHub. Our participants perceived secure authentication as important as other security mechanisms (e.g., commit signing) to improve open-source security. 2FA usage of the project owner was perceived as one of the most important mechanisms. 
+  
+ Around half of the participants (51%) were aware of the planned 2FA enforcement on GitHub. Their perception of this enforcement was rather positive. They agreed to enforce 2FA for new devices and new locations, but they were slightly hesitant to use it after some time. They also rather agreed to enforce various user groups on GitHub to use 2FA. Our participants also perceived GitHub authentication methods positively with respect to their usability and security. Most of our participants (68%) reported that they had enabled 2FA on their GitHub accounts. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+A Trust and Reputation System for Examining Compliance with Access Control 
+ Thomas Baumer(Nexis GmbH, Germany),Johannes Grill(Universität Regensburg, Germany),Jacob Adan(Universität Regensburg, Germany),Günther Pernul(Universität Regensburg, Germany) 
+ Full PaperTrust is crucial when a truster allows a trustee to carry out desired services. Regulatory authorities thus set requirements for organizations under their jurisdiction to ensure a basic trust level. Trusted auditors periodically verify the auditee's compliance with these requirements. However, the quality of the auditees' compliance and the auditors' verification performance often remain unclear and unavailable to the public. In this work, we examine the regulations of Identity and Access Management (IAM) and identify typical patterns. We enhance these patterns to include trust measurements for the auditee providing services and the auditors verifying compliance. We demonstrate the feasibility of this approach for an application utilizing decentralized blockchain technologies and discuss the implications, potential, and benefits of this architecture. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+A Risk Assessment and Legal Compliance Framework for Supporting Personal Data Sharing with Privacy Preservation for Scientific Research 
+ Christos Baloukas(National Technical University of Athens, Greece),Lazaros Papadopoulos(National Technical University of Athens, Greece),Kostas Demestichas(National Technical University of Athens, Greece),Axel Weissenfeld(AIT Austrian Institute of Technology, Austria),Sven Schlarb(AIT Austrian Institute of Technology, Austria),Mikel Aramburu(Fundación Vicomtech, Basque Research and Technology Alliance (BRTA), Spain),David Redó(Fundación Vicomtech, Basque Research and Technology Alliance (BRTA), Spain),Jorge García(Fundación Vicomtech, Basque Research and Technology Alliance (BRTA), Spain),Seán Gaines(Fundación Vicomtech, Basque Research and Technology Alliance (BRTA), Spain),Thomas Marquenie(KU Leuven, Belgium),Ezgi Eren(KU Leuven, Belgium),Irmak Erdogan Peter(KU Leuven, Belgium) 
+ Full PaperIn order to perform cutting-edge research like AI model training, a large amount of data needs to be accessed. However, data providers are often reluctant to share their data with researchers as these might contain personal data and thereby sharing may introduce serious risks with significant personal, institutional or societal impacts. Apart from the need to control these risks, data providers must also comply with regulations like GDPR, which creates an additional overhead that makes data sharing even less appealing to data providers. Technologies like anonymization can play a critical role when sharing data that may contain personal information by offering privacy preservation measures like face or license plate anonymization. Therefore, we propose a framework to support data sharing of personal data for research by integrating anonymization, risk assessment and automatic licence agreement generation. The framework offers a practical and efficient solution for organisations seeking to enhance data-sharing practices without compromising information security. 
+  
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+OOBKey: Key Exchange with Implantable Medical Devices Using Out-Of-Band Channels 
+ Mo Zhang(University of Birmingham, UK; University of Melbourne, Australia, United Kingdom),Eduard Marin(Telefonica Research, Spain),Mark Ryan(University of Birmingham, UK, United Kingdom),Vassilis Kostakos(The University of Melbourne, Australia),Toby Murray(University of Melbourne and Data61, Australia),Benjamin Tag(Monash University, Australia),David Oswald(The University of Birmingham, School of Computer Science, United Kingdom),Full PaperImplantable Medical Devices (IMDs) are widely deployed today and often use wireless communication. Establishing a secure communication channel to these devices is challenging in practice. To address this issue, researchers have proposed IMD key exchange protocols, particularly ones that leverage an Out-Of-Band (OOB) channel such as audio, vibration and physiological signals. While these solutions have advantages over traditional key exchange, they are often proposed in an ad-hoc manner and lack a systematic evaluation of their security, usability and deployability properties. In this paper, we provide an in-depth analysis of existing OOB-based solutions for IMDs and, based on our findings, propose a novel IMD key exchange protocol that includes a new class of OOB channel based on human bodily motions. We implement prototypes and validate our designs through a user study (N = 24). The results demonstrate the feasibility of our approach and its unique features, establishing a new direction in the context of IMD security. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+DealSecAgg: Efficient Dealer-Assisted Secure Aggregation for Federated Learning 
+ Daniel Demmler(ZAMA, Germany),Joshua Stock(Universität Hamburg, Germany),Henry Heitmann(Universität Hamburg, Germany),Janik Noel Schug(Universität Hamburg, Germany),Daniel Demmler(ZAMA, Germany) 
+ Full PaperFederated learning eliminates the necessity of transferring private training data and instead relies on the aggregation of model updates. Several publications on privacy attacks show how these individual model updates are vulnerable to the extraction of sensitive information. State-of-the-art secure aggregation protocols provide privacy for participating clients, yet, they are restrained by high computation and communication overhead. 
+  
+ We propose the efficient secure aggregation protocol DealSecAgg. The cryptographic scheme is based on a lightweight single-masking approach and allows the aggregation of the global model under encryption. DealSecAgg utilizes at least one additional dealer party to outsource the aggregation of masks and to reduce the computational complexity for mobile clients. At the same time, our protocol is scalable and resilient against client dropouts. 
+  
+ We provide a security proof and experimental results regarding the performance of DealSecAgg. The experimental evidence on the CIFAR-10 data set confirms that using our protocol, model utility remains unchanged compared to federated learning without secure aggregation. Furthermore, the results show how our work outperforms other state-of-the-art masking strategies both in the number of communication rounds per training step and in computational costs, which grows linearly in the amount of active clients. By employing our protocol, runtimes can be reduced by up to 87.8% compared to related work. 
+ href="https://www.ares-conference.eu/trustbus" - Workshop TrustBus
+		Workshop TrustBus
+Detail Trustbus02/0521st International Workshop on Trust, Privacy and Security in the Digital Society to be held in conjunction with the 19th International Conference on Availability, Reliability and Security 
+ New computing paradigms, such as cloud computing, big data or the Internet of Things, open new horizons to citizens, businesses and our whole society worldwide. All these developments ultimately aim to improve our quality of life, make it easier to generate wealth, and ensure that businesses remain competitive in the global marketplace. These developments have been made possible in a remarkably short time span because information and communication technologies move fast; sometimes, they move too fast for society and governments. This explains why such rapid technological evolutions cannot be problem-free. In the domain of a digital society, concerns are raised regarding the lack of trust in electronic procedures and the extent to which information security and user privacy can be ensured. 
+
+The TrustBus series of conferences has a long tradition going back as an annual event to 2004. In answer to the concerns mentioned above, the 21stedition of the International Conference on Trust, Privacy and Security in Digital Society (TrustBus 2024) will be held as an ARES 2024 workshop. It will provide an international forum for researchers and practitioners to exchange information regarding advancements in the state of the art and practice of trust and privacy in the digital society. TrustBus 2024 will bring together researchers from different disciplines, developers, and users, all interested in the critical success factors of the technical advances of our digital systems. 
+ Topics of interest include, but are not limited to03/05Anonymity and pseudonymity 
+ Common practices, legal and regulatory issues 
+ Economics of information systems security and privacy 
+ Intellectual property and digital rights management 
+ Languages for the description of services and contracts 
+ Models for access control and authentication 
+ Cryptographic building-blocks for digital society applications 
+ Security and privacy policies 
+ Security and privacy patterns for digital societies 
+ Security and privacy for cloud computing 
+ Security and privacy in cyber-physical systems 
+ Security and privacy governance and management 
+ Security and privacy models for pervasive systems 
+ Security and privacy in Big Data processing 
+ Usability of security and privacy technologies and services 
+ Security and privacy of P2P transactions and scenarios 
+ Security, privacy and trust for digital society services 
+ Reliable auction, e-procurement and negotiation technology 
+ Identity management, identity theft and trust management 
+ Information audit and trust 
+ Trust and reputation for digital societies 
+ Security, privacy and trust in mobile commerce environments 
+ Security, privacy and trust in the metaverse (AI, digital twins, blockchain, 5G/6G, etc.) 
+ Shopping, trading, and contract management tools 
+ Accountability, Transparency and Intervenability 
+ Intrusion detection and information filtering 
+ TrustBus Steering Committee04/05TrustBus Steering Committee 
+ Simone Fischer-Hübner 
+ Karlstad University, Sweden 
+ Steven Furnell 
+ University of Nottingham, United Kingdom 
+ Sokratis Katsikas 
+ Norwegian University of Science and Technology, Norway 
+ Costas Lamprinoudakis 
+ University of Piraeus, Greece 
+ Javier Lopez 
+ University of Malaga, Spain 
+ Günther Pernul 
+ University of Regensburg, Germany 
+ Program Chair / Workshop Chair 
+ Marijke Coetzee 
+ North-West University, South Africa 
+ Sokratis Katsikas 
+ Norwegian University of Science and Technology, Norway 
+ Program Committee 
+ Aida Akbarzadeh| Norwegian University of Science and Technology, NorwayAhmed Walid Amro| Norwegian University of Science and Technology, NorwayReinhardt Botha| Nelson Mandela University, South AfricaVasiliki Diamantopoulou| University of the Aegean, GreeceSimone Fischer-Hübner| Karlstad University, SwedenSteven Furnell| University of Nottingham, UKDimitris Geneiatakis| European Commission, BelgiumVasileios Gkioulos| Norwegian University of Science and Technology, NorwayStefanos Gritzalis| University of Piraeus, GreeceChristos Kalloniatis| University of the Aegean, GreeceGeorgios Kambourakis| University of the Aegean, GreeceMaria Karyda| University of the Aegean, GreeceVasilios Katos| Bournemouth University, UKGeorgios Kavallieratos| Norwegian University of Science and Technology, NorwaySpyros Kokolakis| University of the Aegean, GreeceCostas Lamprinoudakis| University of Piraeus, GreeceJavier Lopez| University of Malaga, SpainHaris Mouratidis| University of Essex, UKMartin Olivier| University of Pretoria, South AfricaNikolaos Pitropakis| Edinburgh Napier University, UKPanagiotis Rizomiliotis| Harokopio University, GreeceGeorgios Spathoulas| University of Thessaly, GreeceAggeliki Tsohou| Ionian University, GreeceAdéle da Veiga| University of South Africa, South AfricaChristos Xenakis| University of Piraeus, GreeceGünther Pernul| University of Regensburg, GermanySubmission05/05Submission Guidelines 
+ The submission guidelines valid for the workshop are the same as for the ARES conference. 
+ href="/submission-guidelines" - More Information
+Important Dates 
+ Extended Submission DeadlineMay 10, 2024Author NotificationJun 02, 2024Proceedings VersionJun 18, 2024ConferenceJul 30 — Aug 02, 2024href="https://2025.ares-conference.eu/" - Join ARES 2025!
+Join us at ARES 2025 in Ghent, Belgium 
+ to the top© 2025 SBA ResearchThe 20th International Conference on Availability, Reliability and Security (ARES 2025), will be held August 11 – 14, 2025 in Ghent, Belgium. 
+ @ARES_ConferenceContact 
+ Privacy Policy 
+ Imprint 
+ Code of Conduct 
+ © 2025 SBA ResearchOrganised by 
+
+Call for Papers information:
+Page Not Found 
+ Page not found. 
+ Notifications

@@ -1,0 +1,201 @@
+Conference full name: International Conference on Provable Security (ProvSec)
+
+1. Website of ProvSec_3: https://provsec2024.github.io/ProvSec2024/
+Website information of ProvSec_3:
+
+ProvSec 2024ProvSec 2024 
+ Gold Coast, Australia 
+ 25 — 27 September 2024 
+ Homehref="cfp.html" - Call For Papers
+CommitteesRegistrationhref="accepted-papers.html" - Accepted Papers
+ProgramVenueKeynotesThe 18th International Conference on Provable and Practical Security 
+ (ProvSec 2024) 
+ Gold Coast, Australia 
+ Date: 
+ 25-27 Sep, 2024 
+ Location: 
+ Gold Coast, Australia 
+ Paper Submission extended to 12 June 2024 (A.O.E.) (firmed deadline). 
+ © 2024 ProvSec. All rights reserved.
+
+2. Website of ProvSec_3: https://provsec2023.github.io/ProvSec2023/
+Website information of ProvSec_3:
+
+The 17TH INTERNATIONAL CONFERENCE ON 
+ PROVABLE AND PRACTICAL SECURITY 
+ (ProvSec 2023) 
+ Wuhan, China, 20 - 22 October 2023 
+ Home 
+ href="#" - Call for Papers 
+ Committees 
+ Registration 
+ href="#" - Accepted Papers 
+ Programme 
+ Venue 
+ Keynotes 
+ About Wuhan 
+ OverviewCall for PapersCommitteesRegistrationAccepted PapersProgrammeVenueKeynotesAbout Wuhan
+
+3. Website of ProvSec_3: https://research.monash.edu/en/publications/threshold-ring-signatures-from-dualring-tothet1rings
+Website information of ProvSec_3:
+
+Skip to main navigation 
+ Skip to search 
+ Skip to main content 
+ Monash University Homehref="http://www.monash.edu/research" - Help & FAQ 
+ Home 
+ Profiles 
+ href="/en/organisations/" - Research units 
+ Equipment 
+ Projects 
+ Outputs 
+ Prizes 
+ 0More | Activities 
+ Press/Media 
+ Search by expertise, name or affiliationThreshold Ring Signatures: From DualRing to the t+1Rings 
+ href="https://research.monash.edu/en/persons/john-yuen" - Tsz Hon Yuen
+, Shimin Pan 
+ href="https://research.monash.edu/en/organisations/department-of-software-systems-cybersecurity" - Department of Software Systems & Cybersecurity 
+ Research output:Chapter in Book/Report/Conference proceeding›Conference Paper›Research›peer-review 
+ Overview 
+ Abstract 
+ A t-out-of-n threshold ring signature allows t signers to sign a message while anonymizing themselves within a set of n public keys. One of the key research directions is to build a practical threshold ring signature with a short signature size, which is logarithmic to the parameters (t, n). 
+  
+ Original language | English 
+ Title of host publication | Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I 
+ Editors | Joseph K. Liu, Liqun Chen, Shi-Feng Sun, Xiaoning Liu 
+ Place of Publication | Singapore Singapore 
+ Publisher | Springer 
+ Pages | 269-288 
+ Number of pages | 20 
+ ISBN (Electronic) | 9789819609543 
+ ISBN (Print) | 9789819609536 
+ DOIs | https://doi.org/10.1007/978-981-96-0954-3_14 
+ Publication status | Published -1 Feb 2025 
+ Event | International Conference on Provable Security 2024- Gold Coast, Australia 
+ Duration:25 Sept 2024→27 Sept 2024 
+ Conference number: 18th 
+ https://link.springer.com/book/10.1007/978-981-96-0954-3(Proceedings) 
+ href="https://provsec2024.github.io/ProvSec2024/" - https://provsec2024.github.io/ProvSec2024/
+(Website) 
+ Conference 
+  
+ Conference | International Conference on Provable Security 2024 
+ Abbreviated title | ProvSec 2024 
+ Country/Territory | Australia 
+ City | Gold Coast 
+ Period | 25/09/24→27/09/24 
+ Internet address | https://link.springer.com/book/10.1007/978-981-96-0954-3 | (Proceedings) 
+ href="https://provsec2024.github.io/ProvSec2024/" - https://provsec2024.github.io/ProvSec2024/ | (Website) 
+ Keywords 
+ ring signature 
+ threshold 
+ anonymity 
+ Access to Document 
+ 10.1007/978-981-96-0954-3_14 
+ Cite this 
+ APA 
+ Author 
+ BIBTEX 
+ Harvard 
+ Standard 
+ RIS 
+ Vancouver 
+ Yuen, T. H., & Pan, S. (2025).Threshold Ring Signatures: From DualRing to the t+1Rings. In J. K. Liu, L. Chen, S.-F. Sun, & X. Liu (Eds.),Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I(pp. 269-288). Springer.https://doi.org/10.1007/978-981-96-0954-3_14 
+ Yuen, Tsz Hon; Pan, Shimin. /Threshold Ring Signatures : From DualRing to the t+1Rings. Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I. editor / Joseph K. Liu ; Liqun Chen ; Shi-Feng Sun ; Xiaoning Liu. Singapore Singapore : Springer, 2025. pp. 269-288 
+ @inproceedings{2de3494416c74181aa499ed3b56fedcd, 
+ title = "Threshold Ring Signatures: From DualRing to the t+1Rings", 
+ abstract = "A t-out-of-n threshold ring signature allows t signers to sign a message while anonymizing themselves within a set of n public keys. One of the key research directions is to build a practical threshold ring signature with a short signature size, which is logarithmic to the parameters (t, n).", 
+ keywords = "ring signature, threshold, anonymity", 
+ author = "Yuen, {Tsz Hon} and Shimin Pan", 
+ year = "2025", 
+ month = feb, 
+ day = "1", 
+ doi = "10.1007/978-981-96-0954-3_14", 
+ language = "English", 
+ isbn = "9789819609536", 
+ pages = "269--288", 
+ editor = "Liu, {Joseph K.} and Liqun Chen and Shi-Feng Sun and Xiaoning Liu", 
+ booktitle = "Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I", 
+ publisher = "Springer", 
+ note = "International Conference on Provable Security 2024, ProvSec 2024 ; Conference date: 25-09-2024 Through 27-09-2024", 
+ url = "https://link.springer.com/book/10.1007/978-981-96-0954-3, https://provsec2024.github.io/ProvSec2024/", 
+ } 
+ Yuen, TH& Pan, S 2025,Threshold Ring Signatures: From DualRing to the t+1Rings. in JK Liu, L Chen, S-F Sun & X Liu (eds),Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I.Springer, Singapore Singapore, pp. 269-288, International Conference on Provable Security 2024, Gold Coast, Queensland, Australia,25/09/24.https://doi.org/10.1007/978-981-96-0954-3_14 
+ Threshold Ring Signatures: From DualRing to the t+1Rings./Yuen, Tsz Hon; Pan, Shimin. 
+ Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I. ed. / Joseph K. Liu; Liqun Chen; Shi-Feng Sun; Xiaoning Liu. Singapore Singapore: Springer, 2025. p. 269-288.Research output:Chapter in Book/Report/Conference proceeding›Conference Paper›Research›peer-review 
+ TY - GEN 
+ T1 - Threshold Ring Signatures 
+ T2 - International Conference on Provable Security 2024 
+ AU - Yuen, Tsz Hon 
+ AU - Pan, Shimin 
+ N1 - Conference code: 18th 
+ PY - 2025/2/1 
+ Y1 - 2025/2/1 
+ N2 - A t-out-of-n threshold ring signature allows t signers to sign a message while anonymizing themselves within a set of n public keys. One of the key research directions is to build a practical threshold ring signature with a short signature size, which is logarithmic to the parameters (t, n). 
+ AB - A t-out-of-n threshold ring signature allows t signers to sign a message while anonymizing themselves within a set of n public keys. One of the key research directions is to build a practical threshold ring signature with a short signature size, which is logarithmic to the parameters (t, n). 
+ KW - ring signature 
+ KW - threshold 
+ KW - anonymity 
+ U2 - 10.1007/978-981-96-0954-3_14 
+ DO - 10.1007/978-981-96-0954-3_14 
+ M3 - Conference Paper 
+ SN - 9789819609536 
+ SP - 269 
+ EP - 288 
+ BT - Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I 
+ A2 - Liu, Joseph K. 
+ A2 - Chen, Liqun 
+ A2 - Sun, Shi-Feng 
+ A2 - Liu, Xiaoning 
+ PB - Springer 
+ CY - Singapore Singapore 
+ Y2 - 25 September 2024 through 27 September 2024 
+ ER - 
+ Yuen TH, Pan S.Threshold Ring Signatures:From DualRing to the t+1Rings. In Liu JK, Chen L, Sun SF, Liu X, editors, Provable and Practical Security - 18th International Conference, ProvSec 2024 Gold Coast, QLD, Australia, September 25–27, 2024 Proceedings, Part I. Singapore Singapore: Springer. 2025. p. 269-288 doi: 10.1007/978-981-96-0954-3_14 
+ href="https://www.facebook.com/sharer.php?u=https://research.monash.edu/en/publications/threshold-ring-signatures-from-dualring-tothet1rings%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1007%2F978-981-96-0954-3_14&p[summary]=Check+out+this+research+output+at+Monash+University%3A+Threshold+Ring+Signatures%3A+From+DualRing+to%C2%A0the%C2%A0t%2B1Rings" - 
+ href="https://twitter.com/intent/tweet?url=https://research.monash.edu/en/publications/threshold-ring-signatures-from-dualring-tothet1rings%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1007%2F978-981-96-0954-3_14&text=Check+out+this+research+output+at+Monash+University%3A+Threshold+Ring+Signatures%3A+From+DualRing+to%C2%A0the%C2%A0t%2B1Rings" - 
+ href="https://www.linkedin.com/shareArticle?mini=true&url=https://research.monash.edu/en/publications/threshold-ring-signatures-from-dualring-tothet1rings%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1007%2F978-981-96-0954-3_14&summary=Check+out+this+research+output+at+Monash+University%3A+Threshold+Ring+Signatures%3A+From+DualRing+to%C2%A0the%C2%A0t%2B1Rings" - 
+ href="mailto:?subject=Threshold%20Ring%20Signatures%3A%20From%20DualRing%20to%C2%A0the%C2%A0t%2B1Rings&body=Check%20out%20this%20research%20output%20at%20Monash%20University%3A%20Threshold%20Ring%20Signatures%3A%20From%20DualRing%20to%C2%A0the%C2%A0t%2B1Rings | https://research.monash.edu/en/publications/threshold-ring-signatures-from-dualring-tothet1rings?utm_source=email&utm_medium=email&utm_campaign=sharelink" - 
+ Powered byhref="http://www.elsevier.com/online-tools/research-intelligence/products-and-services/pure" - Pure
+,Scopus&Elsevier Fingerprint Engine™All content on this site: Copyright © 2025 Monash University, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply 
+ We use cookies to help provide and enhance our service and tailor content. By continuing you agree to theuse of cookies 
+ Monash University data protection policy 
+ About web accessibility 
+ Report vulnerabilityhref="mailto:myresearch@monash.edu" - Contact us
+
+4. Website of ProvSec_3: https://sulab-sever.u-aizu.ac.jp/provsec2025/cfp.html
+Website information of ProvSec_3:
+
+Homehref="cfp.html" - Call For Papers
+CommitteesRegistrationhref="accepted-papers.html" - Accepted Papers
+ProgramVenueKeynotesAuthors are invited to submit original research papers on provable and practical security. Areas of interest include, but are not limited to: 
+ Provable security for asymmetric cryptography 
+ Provable security for symmetric cryptography 
+ Provable security for physical attacks 
+ Privacy and anonymity technologies 
+ Secure cryptographic protocols and applications 
+ Security notions, approaches, and paradigms 
+ Leakage-resilient cryptography 
+ Lattice-based cryptography and post-quantum cryptography 
+ Steganography and steganalysis 
+ Blockchain and cryptocurrency 
+ IoT security 
+ Cloud security 
+ Access control 
+ Privacy-enhancing technologies 
+ Database security 
+ Big data security and privacy 
+ Biometric security 
+ Network security 
+ Formal methods for security 
+ Embedded systems security 
+ Lightweight security 
+ Cyber-physical security 
+ Important Dates 
+ Paper Submission: 31 May, 2025 
+ Instructions for Authors 
+ Authors should submit their paper using this link: 
+ href="https://easychair.org/conferences?conf=provsec2025" - https://easychair.org/my/conference?conf=provsec2025
+Proceedings including all accepted papers will be published in Springer LNCS and will be available at the conference.
+

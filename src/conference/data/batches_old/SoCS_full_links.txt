@@ -1,0 +1,526 @@
+Conference full name: The Symposium of Combinatorial Search (SoCS)
+
+1. Website of SoCS_3: https://socs25.search-conference.org/
+Website information of SoCS_3:
+
+Search this site 
+ Embedded Files 
+ Skip to main content 
+ Skip to navigation 
+ href="/home" - SoCS 2025
+Home 
+ href="/important-dates" - Important Dates 
+ href="/call-for-papers" - Call for Papers 
+ Doctoral Consortium 
+ Program | Program Overview 
+ Talks 
+ Venue | Venue 
+ Accommodation 
+ Organizers 
+ href="/home" - SoCS 2025
+Home 
+ href="/important-dates" - Important Dates 
+ href="/call-for-papers" - Call for Papers 
+ Doctoral Consortium 
+ Program | Program Overview 
+ Talks 
+ Venue | Venue 
+ Accommodation 
+ Organizers 
+ More | Home 
+ href="/important-dates" - Important Dates 
+ href="/call-for-papers" - Call for Papers 
+ Doctoral Consortium 
+ Program | Program Overview 
+ Talks 
+ Venue | Venue 
+ Accommodation 
+ Organizers 
+ SoCS 2025 
+ The 18th International Symposium on Combinatorial Search 
+ August 12-15, 2025 
+ University of Glasgow, Scotland, United Kingdom 
+ co-located with CP 2025 and SAT 2025 
+  
+ Photo credits: Glasgow Life 
+ Submissions to the main conference are now closed. 
+ TheDoctoral Consortiumsubmission deadlineisMay 7, 2025(May 17 for applicants with accepted paper/extended abstract to SoCS 2025). 
+ Speakers of invited talks, the DoctoralConsortium invited talk, and tutorials arepublished! 
+ Share our conference flyer inPDF 
+ Heuristic search and other forms of combinatorial search and optimization are very active areas of research in artificial intelligence, robotics, planning, constraint programming, meta-reasoning, navigation, bioinformatics, and other areas of computer science and operations research. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange their ideas and cross-fertilize the field. We especially invite submissions presentingreal-world applicationsof heuristic search.All accepted papers will be included in the proceedings published byAAAI Pressashref="https://ojs.aaai.org/index.php/SOCS/issue/archive" - usual
+. 
+ The18th International Symposium on Combinatorial Search(SoCS 2025) will be hosted at the University of Glasgow in Scotland, United Kingdom, and itwill be co-located with 
+ The31st International Conference on Principles and Practice of Constraint Programming(href="https://cp2025.a4cp.org/" - CP 2025
+) and 
+ The18th International Conference on Theory and Applications of Satisfiability Testinghref="https://satisfiability.org/SAT25" - (SAT 2025)
+. 
+ The SoCS conference, together with its doctoral program, will be organized on August 12-15, 2025. 
+ The joint conference will be organized on August 10-15, 2025, which includesthe 23rd International Workshop on Satisfiability Modulo Theories (href="https://smt-workshop.cs.uiowa.edu/2025/" - SMT 2025
+)held onAugust 10-11and theSAT/SMT/AR Summer Schoolin St Andrews during the week before the conference. 
+ SoCS 2025 is kindly supported by: 
+ If you want your logo to appear here, please contactconference chairs. 
+ Page updated 
+ Google Sites 
+ Report abuse
+
+2. Website of SoCS_3: https://ojs.aaai.org/index.php/SOCS/issue/view/607
+Website information of SoCS_3:
+
+Skip to main contentSkip to main navigation menuSkip to site footerOpen Menuhref="						https://ojs.aaai.org/index.php/SOCS/index
+					" - Proceedings of the International Symposium on Combinatorial Search
+href="https://ojs.aaai.org/index.php/SOCS/issue/current" - Current 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/archive" - Archives 
+ About | href="https://ojs.aaai.org/index.php/SOCS/about" - About the Journal 
+ href="https://ojs.aaai.org/index.php/SOCS/about/submissions" - Submissions 
+ href="https://ojs.aaai.org/index.php/SOCS/about/privacy" - Privacy Statement 
+ Searchhref="https://ojs.aaai.org/index.php/SOCS/search/search" - Search
+href="https://ojs.aaai.org/index.php/SOCS/login" - Login 
+ Searchhref="https://ojs.aaai.org/index.php/SOCS/search/search" - Search
+href="https://ojs.aaai.org/index.php/SOCS/index" - Home | / 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/archive" - Archives | / 
+ Vol. 17 (2024): Seventeenth International Symposium on Combinatorial Search 
+ Vol. 17 (2024): Seventeenth International Symposium on Combinatorial Search 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/607" - 
+Edited by Ariel Felner, Jiaoyang Li 
+ June 6–8, 2024, Kananaskis, Alberta, Canada. 
+ Published by The AAAI Press, Washington, DC, USA 
+ Copyright © 2024, Association for the Advancement of Artificial Intelligence 
+ 1101 Pennsylvania Ave, NW, Suite 300, Washington, DC 20004 
+ All Rights Reserved. No part of this proceedings may be reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher. 
+  
+ 308 pp., illus, references. 
+  
+ ISSN 2832-9163 (Online) 
+ ISSN 2832-9171 (Print) 
+ ISBN-10 1-57735-891-0 
+ ISBN-13 978-1-57735-891-6 
+ The Seventeenth International Symposium on Combinatorial Search (SoCS 2024) from June 6-8, 2024 in Kananaskis, Alberta, Canada. The symposium co-chairs were Ariel Felner and Jiaoyang Li. 
+ The International Symposium on Combinatorial Search is meant to bring researchers in such areas together to exchange ideas and cross-fertilize the field. SoCS serves researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, meta-reasoning, operations research, navigation, and bioinformatics. Papers exploring the boundaries between combinatorial search and planning & scheduling research are particularly welcome, given the co-location with the 2024 International Conference on Automated Planning and Scheduling (ICAPS 2024). The papers included in this issue have been organized into three categories — technical papers, position papers, and extended abstracts. 
+ Published:2024-06-01Long Papers 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31536" - Efficient and Exact Public Transport Routing via a Transfer Connection Database
+Abdallah Abuaisha, Mark Wallace, Daniel Harabor, Bojie Shen 
+ 2-10 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31536/33696" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31537" - Heuristic Search for the Orienteering Problem with Time-Varying Reward
+Chao Cao, Jinyun Xu, Ji Zhang, Howie Choset, Zhongqiang Ren 
+ 11-19 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31537/33697" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31538" - Avoiding Node Re-Expansions Can Break Symmetry Breaking
+Mark Carlson, Daniel Harabor, Peter J. Stuckey 
+ 20-27 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31538/33698" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31539" - Generalized Longest Simple Path Problems: Speeding up Search Using SPQR Trees
+Gal Dahan, Itay Tabib, Solomon Eyal Shimony, Yefim Dinitz 
+ 28-36 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31539/33699" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31540" - Introducing Delays in Multi Agent Path Finding
+Justin Kottinger, Tzvika Geft, Shaull Almagor, Oren Salzman, Morteza Lahijanian 
+ 37-45 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31540/33700" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31541" - Solving Facility Location Problems via FastMap and Locality Sensitive Hashing
+Ang Li, Peter J. Stuckey, Sven Koenig, T. K. Satish Kumar 
+ 46-54 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31541/33701" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31542" - Modeling Assistance for Hierarchical Planning: An Approach for Correcting Hierarchical Domains with Missing Actions
+Songtuan Lin, Daniel Höller, Pascal Bercher 
+ 55-63 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31542/33702" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31543" - Multi-Agent Path Execution with Uncertainty
+Yihao Liu, Xueyan Tang, Wentong Cai, Jingning Li 
+ 64-72 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31543/33703" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31544" - A Deterministic Search Approach for Solving Stochastic Drone Search and Rescue Planning Without Communications
+Evgeny Mishlyakov, Mikhail Gruntov, Alexander Shleyfman, Erez Karpas 
+ 73-81 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31544/33704" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31545" - Prioritised Planning with Guarantees
+Jonathan Morag, Yue Zhang, Daniel Koyfman, Zhe Chen, Ariel Felner, Daniel Harabor, Roni Stern 
+ 82-90 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31545/33705" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31546" - Curriculum Generation for Learning Guiding Functions in State-Space Search Algorithms
+Sumedh Pendurkar, Levi H. S. Lelis, Nathan R. Sturtevant, Guni Sharon 
+ 91-99 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31546/33706" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31547" - Optimised Variants of Polynomial Compilation for Conditional Effects in Classical Planning
+Francesco Percassi, Enrico Scala, Alfonso Emilio Gerevini 
+ 100-108 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31547/33707" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31548" - Unconstraining Multi-Robot Manipulation: Enabling Arbitrary Constraints in ECBS with Bounded Sub-Optimality
+Yorai Shaoul, Rishi Veerapaneni, Maxim Likhachev, Jiaoyang Li 
+ 109-117 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31548/33708" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31549" - Neural Sequence Generation with Constraints via Beam Search with Cuts: A Case Study on VRP
+Pouya Shati, Eldan Cohen, Sheila McIlraith 
+ 118-126 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31549/33709" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31550" - On the Properties of All-Pair Heuristics
+Shahaf Shperberg, Ariel Felner, Lior Siag, Nathan R. Sturtevant 
+ 127-133 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31550/33710" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31551" - ITA-ECBS: A Bounded-Suboptimal Algorithm for Combined Target-Assignment and Path-Finding Problem
+Yimin Tang, Sven Koenig, Jiaoyang Li 
+ 134-142 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31551/33711" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31552" - The Bench Transition System and Stochastic Exploration
+Dawson Tomasz, Richard Valenzano 
+ 143-151 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31552/33712" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31553" - Clique Analysis and Bypassing in Continuous-Time Conflict-Based Search
+Thayne T. Walker, Nathan R. Sturtevant, Ariel Felner 
+ 152-160 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31553/33713" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31554" - Real-time Safe Interval Path Planning
+Devin Wild Thomas, Wheeler Ruml, Solomon Eyal Shimony 
+ 161-169 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31554/33714" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31555" - Tunable Suboptimal Heuristic Search
+Stephen Wissow, Fanhao Yu, Wheeler Ruml 
+ 170-178 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31555/33715" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31556" - A-A*pex: Efficient Anytime Approximate Multi-Objective Search
+Han Zhang, Oren Salzman, Ariel Felner, Carlos Hernández Ulloa, Sven Koenig 
+ 179-187 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31556/33716" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31557" - Bi-Criteria Diverse Plan Selection via Beam Search Approximation
+Shanhe Zhong, Pouya Shati, Eldan Cohen 
+ 188-196 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31557/33717" - PDF 
+ Short Papers 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31558" - Hitting Set Heuristics for Overlapping Landmarks in Satisficing Planning
+Clemens Büchner, Remo Christen, Salomé Eriksson, Thomas Keller 
+ 198-202 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31558/33718" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31559" - Novelty Heuristics, Multi-Queue Search, and Portfolios for Numeric Planning
+Dillon Z. Chen, Sylvie Thiébaux 
+ 203-207 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31559/33719" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31560" - Efficient Set Dominance Checks in Multi-Objective Shortest-Path Algorithms via Vectorized Operations
+Carlos Hernández Ulloa, Han Zhang, Sven Koenig, Ariel Felner, Oren Salzman 
+ 208-212 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31560/33720" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31561" - Some Orders Are Important: Partially Preserving Orders in Top-Quality Planning
+Michael Katz, Junkyu Lee, Jungkoo Kang, Shirin Sohrabi 
+ 213-217 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31561/33721" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31562" - Optimal Unlabeled Pebble Motion on Trees
+Pierre Le Bodic, Edward Lam 
+ 218-222 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31562/33722" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31563" - A Data Efficient Framework for Learning Local Heuristics
+Rishi Veerapaneni, Jonathan Park, Muhammad Suhail Saleem, Maxim Likhachev 
+ 223-227 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31563/33723" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31564" - Speeding Up Dominance Checks in Multi-Objective Search: New Techniques and Data Structures
+Han Zhang, Oren Salzman, Ariel Felner, T. K. Satish Kumar, Carlos Hernández Ulloa, Sven Koenig 
+ 228-232 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31564/33724" - PDF 
+ Position Papers 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31565" - Scaling Lifelong Multi-Agent Path Finding to More Realistic Settings: Research Challenges and Opportunities
+He Jiang, Yulun Zhang, Rishi Veerapaneni, Jiaoyang Li 
+ 234-242 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31565/33725" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31566" - Fools Rush in Where Angels Fear to Tread in Multi-Goal CBS
+Grigorios Mouratidis, Bernhard Nebel, Sven Koenig 
+ 243-251 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31566/33726" - PDF 
+ Extended Abstracts 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31567" - Parallelizing Multi-objective A* Search (Extended Abstract)
+Saman Ahmadi 
+ 253-254 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31567/33727" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31568" - Finding a Small, Diverse Subset of the Pareto Solution Set in Bi-Objective Search (Extended Abstract)
+Pablo Araneda, Carlos Hernández Ulloa, Nicolás Rivera, Jorge A. Baier 
+ 255-256 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31568/33728" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31569" - Extreme Value Monte Carlo Tree Search (Extended Abstract)
+Masataro Asai, Stephen Wissow 
+ 257-258 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31569/33729" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31570" - Finiding All Optimal Solutions in Multi-Agent Path Finding (Extended Abstract)
+Shahar Bardugo, Dor Atzmon 
+ 259-260 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31570/33730" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31571" - Crafting a Pogo Stick in Minecraft with Heuristic Search (Extended Abstract)
+Yarin Benyamin, Argaman Mordoch, Shahaf Shperberg, Wiktor Piotrowski, Roni Stern 
+ 261-262 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31571/33731" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31572" - Taming Discretised PDDL+ through Multiple Discretisations (Extended Abstract)
+Matteo Cardellini, Marco Maratea, Francesco Percassi, Enrico Scala, Mauro Vallati 
+ 263-264 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31572/33732" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31573" - Traffic Flow Optimisation for Lifelong Multi-Agent Path Finding (Extended Abstract)
+Zhe Chen, Daniel Harabor, Jiaoyang Li, Peter J. Stuckey 
+ 265-266 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31573/33733" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31574" - Exploring Conflict Generating Decisions: Initial Results (Extended Abstract)
+Md Solimul Chowdhury, Martin Müller, Jia-Huai You 
+ 267-268 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31574/33734" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31575" - Deployable Yet Effective Traffic Signal Optimisation via Automated Planning (Extended Abstract)
+Anas El Kouaiti, Francesco Percassi, Alessandro Saetti, Thomas Leo McCluskey, Mauro Vallati 
+ 269-270 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31575/33735" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31576" - Lazy Evaluation of Negative Preconditions in Planning Domains (Extended Abstract)
+Santiago Franco, Jamie O. Roberts, Sara Bernardini 
+ 271-272 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31576/33736" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31577" - Minimizing State Exploration While Searching Graphs with Unknown Obstacles (Extended Abstract)
+Daniel Koyfman, Shahaf Shperberg, Dor Atzmon, Ariel Felner 
+ 273-274 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31577/33737" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31578" - A New Upper Bound for the Makespan of Cost-Optimal Solutions for Multi-Agent Path Finding (Extended Abstract)
+Rodrigo López, Roberto Asín-Achá, Jorge A. Baier 
+ 275-276 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31578/33738" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31579" - Evaluating Distributional Predictions of Search Time: Put Up or Shut Up Games (Extended Abstract)
+Sean Mariasin, Andrew Coles, Erez Karpas, Wheeler Ruml, Solomon Eyal Shimony, Shahaf Shperberg 
+ 277-278 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31579/33739" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31580" - A Quality Diversity Approach to Automatically Generate Multi-Agent Path Finding Benchmark Maps (Extended Abstract)
+Cheng Qian, Yulun Zhang, Jiaoyang Li 
+ 279-280 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31580/33740" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31581" - Spectral Clustering in Rule-based Algorithms for Multi-agent Path Finding (Extended Abstract)
+Irene Saccani, Kristýna Janovská, Pavel Surynek 
+ 281-282 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31581/33741" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31582" - On Parallel External-Memory Bidirectional Search (Extended Abstract)
+Lior Siag, Shahaf Shperberg, Ariel Felner, Nathan R. Sturtevant 
+ 283-284 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31582/33742" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31583" - CoRe Challenge 2022/2023: Empirical Evaluations for Independent Set Reconfiguration Problems (Extended Abstract)
+Takehide Soh, Tomoya Tanjo, Yoshio Okamoto, Takehiro Ito 
+ 285-286 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31583/33743" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31584" - Non-Refined Abstractions in Counterexample Guided Abstraction Refinement for Multi-Agent Path Finding (Extended Abstract)
+Pavel Surynek 
+ 287-288 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31584/33744" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31585" - Mixed Integer Programming for Time-Optimal Multi-Robot Coverage Path Planning with Efficient Heuristics (Extended Abstract)
+Jingtao Tang, Hang Ma 
+ 289-290 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31585/33745" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31586" - Large-Scale Multi-Robot Coverage Path Planning via Local Search (Extended Abstract)
+Jingtao Tang, Hang Ma 
+ 291-292 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31586/33746" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31587" - From Space-Time to Space-Order: Directly Planning a Temporal Planning Graph by Redefining CBS (Extended Abstract)
+Yu Wu, Rishi Veerapaneni, Jiaoyang Li, Maxim Likhachev 
+ 293-294 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31587/33747" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31588" - Optimal and Bounded Suboptimal Any-Angle Multi-agent Pathfinding (Extended Abstract)
+Konstantin Yakovlev, Anton Andreychuk, Roni Stern 
+ 295-296 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31588/33748" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31589" - Multi-agent Motion Planning through Stationary State Search (Extended Abstract)
+Jingtian Yan, Jiaoyang Li 
+ 297-298 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31589/33749" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31590" - Multi-Agent Motion Planning with Bézier Curve Optimization under Kinodynamic Constraints (Extended Abstract)
+Jingtian Yan, Jiaoyang Li 
+ 299-300 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31590/33750" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31591" - A Short Summary of Multi-Agent Combinatorial Path Finding with Heterogeneous Task Duration (Extended Abstract)
+Yuanhang Zhang, Hesheng Wang, Zhongqiang Ren 
+ 301-302 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31591/33751" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31592" - Planning and Exection in Multi-Agent Path Finding: Models and Algorithms (Extended Abstract)
+Yue Zhang, Zhe Chen, Daniel Harabor, Pierre Le Bodic, Peter J. Stuckey 
+ 303-304 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31592/33752" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31593" - Multi-Robot Coordination and Layout Design for Automated Warehousing (Extended Abstract)
+Yulun Zhang, Matthew C. Fontaine, Varun Bhatt, Stefanos Nikolaidis, Jiaoyang Li 
+ 305-306 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31593/33753" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31594" - Arbitrarily Scalable Environment Generators via Neural Cellular Automata (Extended Abstract)
+Yulun Zhang, Matthew C. Fontaine, Varun Bhatt, Stefanos Nikolaidis, Jiaoyang Li 
+ 307-308 
+ href="https://ojs.aaai.org/index.php/SOCS/article/view/31594/33754" - PDF 
+ href="https://ojs.aaai.org/index.php/SOCS/about/aboutThisPublishingSystem" -
+
+3. Website of SoCS_3: https://www.search-conference.org/
+Website information of SoCS_3:
+
+href="?action=home" - SoCS
+International Symposium on Combinatorial Search (SoCS)Welcome! 
+ Heuristic search and combinatorial optimizationare currently very active areas of research. For example, researchers investigate how to search in real-time, how to search with limited (possibly external) memory, how to solve sequences of similar search problems faster than with isolated searches, how to improve the runtime of the searches over time, how to trade-off between the runtime and memory consumption of the search and the resulting solution quality, and how to focus the searches with sophisticated heuristics such as pattern databases. Their results are published in different conferences such as IJCAI, AAAI, ICAPS, NIPS, ICRA, and IROS. 
+ The International Symposium on Combinatorial Search (SoCS) is meant to bring these researchers together to exchange their ideas and cross-fertilize the field. Thus, in addition to seeking separate answers to questions like how to design more accurate memory-based heuristics, more I/O-efficient disk-based search algorithms, or more efficient clause-learning strategies, the symposium is intended to stimulate thoughts on combining various techniques that originated in different areas of search. 
+ Thehref="http://socs25.search-conference.org" - Eighteenth International Symposium on Combinatorial Search (SoCS 2025)
+will be held from 11 to 15 August in Glasgow, Scotland. SoCS 2025 is co-located withhref="https://cp2025.a4cp.org/" - CP 2025
+andhref="https://satisfiability.org/SAT25/" - SAT 2025
+. 
+ To stay informed on search-related events, please join thesearch-list on Google groups. 
+
+Home Page 
+ OrganizationPrevious SymposiaProceedingsVideosContactPrint 
+ Login 
+ (search-conference.org)
+
+4. Website of SoCS_3: https://ojs.aaai.org/index.php/SOCS/issue/archive
+Website information of SoCS_3:
+
+Skip to main contentSkip to main navigation menuSkip to site footerOpen Menuhref="						https://ojs.aaai.org/index.php/SOCS/index
+					" - Proceedings of the International Symposium on Combinatorial Search
+href="https://ojs.aaai.org/index.php/SOCS/issue/current" - Current 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/archive" - Archives 
+ About | href="https://ojs.aaai.org/index.php/SOCS/about" - About the Journal 
+ href="https://ojs.aaai.org/index.php/SOCS/about/submissions" - Submissions 
+ href="https://ojs.aaai.org/index.php/SOCS/about/privacy" - Privacy Statement 
+ Searchhref="https://ojs.aaai.org/index.php/SOCS/search/search" - Search
+href="https://ojs.aaai.org/index.php/SOCS/login" - Login 
+ Searchhref="https://ojs.aaai.org/index.php/SOCS/search/search" - Search
+href="https://ojs.aaai.org/index.php/SOCS/index" - Home | / 
+ Archives 
+ Archives 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/607" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/607" - Seventeenth International Symposium on Combinatorial Search
+Vol. 17 (2024) 
+ Edited by Ariel Felner, Jiaoyang Li 
+ June 6–8, 2024, Kananaskis, Alberta, Canada. 
+ Published by The AAAI Press, Washington, DC, USA 
+ Copyright © 2024, Association for the Advancement of Artificial Intelligence 
+ 1101 Pennsylvania Ave, NW, Suite 300, Washington, DC 20004 
+ All Rights Reserved. No part of this proceedings may be reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher. 
+  
+ 308 pp., illus, references. 
+  
+ ISSN 2832-9163 (Online) 
+ ISSN 2832-9171 (Print) 
+ ISBN-10 1-57735-891-0 
+ ISBN-13 978-1-57735-891-6 
+ The Seventeenth International Symposium on Combinatorial Search (SoCS 2024) from June 6-8, 2024 in Kananaskis, Alberta, Canada. The symposium co-chairs were Ariel Felner and Jiaoyang Li. 
+ The International Symposium on Combinatorial Search is meant to bring researchers in such areas together to exchange ideas and cross-fertilize the field. SoCS serves researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, meta-reasoning, operations research, navigation, and bioinformatics. Papers exploring the boundaries between combinatorial search and planning & scheduling research are particularly welcome, given the co-location with the 2024 International Conference on Automated Planning and Scheduling (ICAPS 2024). The papers included in this issue have been organized into three categories — technical papers, position papers, and extended abstracts. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/565" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/565" - Sixteenth International Symposium on Combinatorial Search
+Vol. 16 No. 1 
+ Edited by Roman Barták, Wheeler Ruml, Oren Salzman 
+ July 14–16, 2023, Prague, Czech Republic. 
+ Published by The AAAI Press, Washington, DC, USA 
+ Copyright © 2023, Association for the Advancement of Artificial Intelligence 
+ 1101 Pennsylvania Ave, NW, Suite 300, Washington, DC 20004 
+ All Rights Reserved. No part of this proceedings may be reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher. 
+  
+ 209 pp., illus, references. 
+  
+ ISBN-10 1-57735-882-1 
+ ISBN-13 978-1-57735-882-4 
+ The 16th International Symposium on Combinatorial Search was held at the Aquapalace Hotel Prague, Czech Republic, from July 14-July 16, 2023. The symposium cochairs were Roman Barták, Wheeler Ruml, and Oren Salzman. The proceedings were published by AAAI Press. 
+ For 2023, SoCS invited paper submissions related to all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, meta-reasoning, operations research, navigation and bioinformatics. This year, papers exploring the boundaries between combinatorial search and planning & scheduling research were particularly welcome, given the co-location with the International Conference on Automated Planning and Scheduling (ICAPS 2023). The papers included in this issue have been organized into three categories — technical papers, position papers, and extended abstracts. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/524" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/524" - Fifteenth International Symposium on Combinatorial Search
+Vol. 15 No. 1 (2022) 
+ ISBN 1-57735-873-2 
+ 340 pp., illus, references. 
+ Copyright © 2022, Association for the Advancement of Artificial Intelligence 
+ The Fifteenth Annual Symposium on Combinatorial was held at the Technische Universität Wien, Vienna, Austria, from July 21–23, 2022. The symposium cochairs were Lukáš Chrpa and Alessandro Saetti. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimization are very active areas of research in artificial intelligence, robotics, planning, and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and crossfertilize the field. SoCS is a forum for researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, metareasoning, operations research, navigation, and bioinformatics. The symposium also welcomes submissions presenting real-world applications of heuristic search. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/445" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/445" - Fourteenth International Symposium on Combinatorial Search
+Vol. 12 No. 1 (2021) 
+ ISBN 978-1-57735-870-1 
+ 244 pp., references, index, illus. 
+ Copyright © 2021, Association for the Advancement of Artificial Intelligence 
+ The Fourteenth Annual Symposium on Combinatorial was a virtual conference originally scheduled to be held at Jinan University, Guangzhou, China, from July 26–30, 2021. The symposium cochairs were Hang Ma and Ivan Serina. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimization are very active areas of research in artificial intelligence, robotics, planning, and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and crossfertilize the field. SoCS is a forum for researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, metareasoning, operations research, navigation, and bioinformatics. The symposium also welcomed submissions presenting real-world applications of heuristic search. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/440" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/440" - Thirteenth Annual Symposium on Combinatorial Search
+Vol. 11 No. 1 (2020) 
+ ISBN 978-1-57735-822-0 
+ 154 pp., references, index, illus. 
+ Copyright © 2020, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Thirteenth International Symposium on Combinatorial Search (SoCS 2020) was conducted as an entirely online symposium from May 26-28 2020. The symposium cochairs were Daniel Harabor and Mauro Vallati. The spread of the COVID-19 disease, and the current international conditions forced cancellation of the original venue for the symposium in Vienna, Austria. 
+  
+ Heuristic search and other forms of combinatorial search optimization are very active areas of research in artificial intelligence, robotics, planning and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and crossfertilize the field. SoCS is a forum for researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, metareasoning, operations research, navigation, and bioin- formatics. The symposium also welcomes submissions presenting real-world applications of heuristic search. 
+ The 2019 SoCS program included 27 technical talks in five streaming sessions, and two keynotes. For the first time ever the symposium featured an entire day of Master Class sessions, where recognized experts told us about recent developments in search. A community forum with dedicated threads for every talk was established. There was also a Discord server for live text/voice/video interaction. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/439" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/439" - Twelfth Annual Symposium on Combinatorial Search
+Vol. 10 No. 1 (2019) 
+  
+ ISBN 978-1-57735-808-4 
+ 226 pp., references, index, illus. 
+ Copyright © 2019, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Twelfth International Symposium on Combinatorial Search (SoCS 2019), was held at the Embassy Suites by Hilton Napa Valley in Napa, California, USA, from July 16-17, 2019. The symposium cochairs were Pavel Surynek and, William Yeoh. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimization are very active areas of research in artificial intelligence, robotics, planning and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and crossfertilize the field. SoCS is a forum for researchers and submissions in all fields that use combinatorial search, including artificial intelligence, planning, robotics, constraint programming, metareasoning, operations research, navigation, and bioin- formatics. The symposium also welcomes submissions presenting real-world applications of heuristic search. 
+ The SoCS 2019 proceedings includes rigorously peer-reviewed long papers and short papers, a position paper and extended abstracts that report preliminary results and ongoing work. Out of the 46 technical and position paper submissions, 20 submissions (15 long and 5 short papers) were accepted in their submitted categories and 9 submissions were accepted as extended abstracts by the program committee. Out of the 19 extended abstract submissions, 18 were accepted by the program committee. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/438" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/438" - Eleventh Annual Symposium on Combinatorial Search
+Vol. 9 No. 1 (2018) 
+ ISBN 978-1-57735-802-2 
+ 202 pp., references, index, illus. 
+ Copyright © 2018, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Eleven Annual Symposium on Combinatorial was held Stockholmsmässan (Stockholm International Fairs) in Stockholm, Sweden, from July 14–15, 2018. The symposium cochairs were Vadim Bulitko and Sabine Storandt. The proceedings were published by AAAI Press. 
+ The objective of SoCS is to network researchers working in the area of combinatorial search. This area is important to several research communities, including artificial intelligence in general and auto- mated planning, operations research, and robotics in particular. SoCS is thus a meeting attended by ex- perts of different subfields, providing an excellent opportunity to foster collaboration, and to boost cross-fertilization among these subfields. This year, SoCS was part of the Federated AI Meeting (FAIM) which also included the International Joint Conference on Artificial Intelligence and the European Conference on Artificial Intelligence (IJCAI-ECAI), the International Conference on Au- tonomous Agents and Multiagent Systems (AAMAS), the International Conference on Machine Learning (ICML) and the International Conference on Case-Based Reasoning (ICCBR). SoCS sessions running in parallel with workshops and tutorials of other conferences as well as joint coffee breaks allowed the attendees to exchange ideas. 
+ The program committee accepted 25 of the 46 full paper submissions (54.3 percent acceptance rate) and both extended abstracts. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/437" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/437" - Tenth Annual Symposium on Combinatorial Search
+Vol. 8 No. 1 (2017) 
+ ISBN 978-1-57735-790-2 
+ 198 pp., references, index, illus. 
+ Copyright © 2017, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Tenth Annual Symposium on Combinatorial was held at Sheraton Pittsburgh Hotel at Station Square, in Pittsburgh, Pennsylvania, USA, from June 16–17, 2017. The symposium cochairs were Alex Fukunaga and Akihiro Kishimoto. The proceedings were published by AAAI Press. 
+ Thee objective of SoCS is to gather computer science researchers working on the area of combinatorial search. This area is relevant to several research communities, including artificial intelligence, automated planning, operations research, and robotics. SoCS is thus a venue attended by experts of different subfields, providing an excellent opportunity to exchange ideas, foster collaboration, and boost cross-fertilization among these subfields.The SoCS 2017 proceedings includes rigorously peer-reviewed long papers and short papers, as well as some extended abstracts that report preliminary results and ongoing work. The program committee accepted 20 of the 36 full paper submissions (55.6 percent acceptance rate). The authors of 5 of the rejected full paper submissions which were identified by the PC as showing significant potential were given the option of including a two-page version in this proceedings as extended abstracts. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/436" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/436" - Ninth Annual Symposium on Combinatorial Search
+Vol. 7 No. 1 (2016) 
+ ISBN 978-1-57735-769-8 
+ 172 pp., references, index, illus. 
+ Copyright © 2016, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Ninth Annual Symposium on Combinatorial was held at the Tarrytown House Estate and Conference Center, in Tarrytown, New York, USA, from July 6–8, 2016. The symposium cochairs were Jorge A. Baier and Adi Botea. The proceedings were published by AAAI Press. 
+ The objective of SoCS is to gather computer science researchers working on the area of combinatorial search. This area is relevant to several research communities, including artificial intelligence, automated planning, operations research, and robotics. SoCS is thus a venue attended by experts of different subfields, providing an excellent opportunity to exchange ideas, foster collaboration, and boost cross-fertilization among these subfields. In 2016, the program committee accepted 13 of the 34 long original submissions (38.2 percent acceptance rate), and 6 of the 9 short original submissions (66.6 percent acceptance rate). Following the tradition from previous years, among the rejected long submissions, PC members helped identify a subset of papers that described novel research and that was deemed as showing significant potential. The SoCS 2016 symposium was colocated with the International Joint Conference on Artificial Intelligence (IJCAI), held immediately after SoCS, in the city of New York. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/435" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/435" - Eighth Annual Symposium on Combinatorial Search
+Vol. 6 No. 1 (2015) 
+ ISBN 978-1-57735-732-2 
+ 268 pp., references, index, illus. 
+ Copyright © 2015, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Eighth Annual Symposium on Combinatorial was held in Ein Gedi, Israel, from June 11–13, 2015. The symposium cochairs were Levi H. S. Lelis and Roni Stern. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimization are active areas of research in artificial intelligence, robotics, planning and other areas of computer science. SoCS brings together researchers from such areas to exchange ideas and cross- fertilize the field. To bring in new ideas, every year SoCS features a special scope on a related research area. In 2015, SoCS’s special focus was applying metareasoning to combinatorial search. In addition to exciting talks on metareasoning, SoCS featured a special panel on this topic. SoCS 2015 was held in cooperation with AAAI and collocated with the International Conference on Planning and Scheduling (ICAPS) 2015). 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/434" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/434" - Seventh Annual Symposium on Combinatorial Search
+Vol. 5 No. 1 (2014) 
+ ISBN 978-1-57735-676-9 
+ 228 pp., references, index, illus. 
+ Copyright © 2014, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Seventh Annual Symposium on Combinatorial was held in Prague, Czech Republic, from August 15–17, 2014. The symposium cochairs were Stefan Edelkamp and Roman Barták. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search are currently very active areas of research in artificial intelligence, planning, robotics, constraint programming, operations research, bioinformatics, and other areas of computer science. SoCS is meant to bring researchers from these areas together to exchange their ideas and cross-fertilize the field. To bring in new ideas, every year SoCS features a special scope on a related research area. Previous SoCS events have provided a special focus on automated planning (2010), search in robotics (2011), grid-based path planning (2012), and algorithm engineering (2013). In 2014, SoCS specifically invited submissions from researchers in the big data community and related areas that work on large search problems. This special scope on big data has not been a clear success, but attracted a smaller number of stronger submissions outside the traditional AI search communities. SoCS 2014 was held in cooperation with AAAI and collocated with the European Conference on Artificial Intelligence (ECAI 2014) 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/433" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/433" - Sixth Annual Symposium on Combinatorial Search
+Vol. 4 No. 1 (2013) 
+ ISBN 978-1-57735-632-5 
+ 232 pp., references, index, illus. 
+ Copyright © 2013, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Sixth Annual Symposium on Combinatorial was held at the Sleeping Lady Mountain Resort in Leavenworth, Washington, USA, from July 11–13, 2013. The symposium cochairs were Malte Helmert and Gabriele Röger. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search are currently very active areas of research in artificial intelligence, planning, robotics, constraint programming, operations research, bioinformatics, and other areas of computer science. SoCS is meant to bring researchers from these areas together to exchange their ideas and cross-fertilize the field. To bring in new ideas, every year SoCS features a special scope on a related research area. This year, SoCS specifically invited submissions from researchers in the algorithm engineering community and related areas that work on graph search problems and other combinatorial search problems. This special scope on graph search engineering has been a clear success, attracting a considerable number of strong submissions outside the traditional AI search communities. 
+ The 2013 proceedings contains 23 full papers and 4 research abstracts of original work, and 6 summaries of previously published work. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/432" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/432" - Fifth Annual Symposium on Combinatorial Search
+Vol. 3 No. 1 (2012) 
+ ISBN 978-1-57735-584-7 
+ 232 pp., references, index, illus. 
+ Copyright © 2012, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Fifth Annual Symposium on Combinatorial was held in Niagara Falls, Ontario, Canada, from July 19–21, 2012. The symposium cochairs were Daniel Borrajo, Ariel Felner, Richard Korf, Maxim Likhachev, Carlos Linares Lopez, Wheeler Ruml, and Nathan Sturtevant. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimizations are currently very active areas of research in artificial intelligence, robotics, planning, and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and cross traditional academic boundaries. SoCS-2012 is the fifth event in this series. 
+ This volume contains all of the papers from the symposium held 19–21 July, 2012 in Niagara Falls, Ontario, Canada. The program included 18 oral talks, 11 poster presentations, one position paper, 9 summaries of papers presented at other venues, and 7 papers describing the Grid-Based Path Planning Competition. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/431" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/431" - Fourth Annual Symposium on Combinatorial Search
+Vol. 2 No. 1 (2011) 
+ ISBN 978-1-57735-537-3 
+ ISBN 978-1-57735-538-(CD) 
+ 228 pp., references, index, illus. 
+ Copyright © 2011, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Fourth Annual Symposium on Combinatorial was held at Castell de Cardona, Barcelona, Catalonia, Spain, from July 15–16, 2011. The symposium cochairs were Daniel Borrajo, Maxim Likhachev, and Carlos Linares Lopez. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimizations are currently very active areas of research in artificial intelligence, robotics, planning, and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and cross traditional academic boundaries. SoCS-2011 was the fourth event in this series. 
+ This volume contains all of the papers from the symposium held 15–16 July, 2011 at the Castell de Cardona, Cardona, Catalonia, Spain. The program included 23 oral talks, 7 poster presentations, and one position paper. 
+ href="https://ojs.aaai.org/index.php/SOCS/issue/view/430" - 
+href="https://ojs.aaai.org/index.php/SOCS/issue/view/430" - Third Annual Symposium on Combinatorial Search
+Vol. 1 No. 1 (2010) 
+ ISBN 978-1-57735-481-9 
+ ISBN 978-1-57735-482-6 (CD) 
+ 172 pp., references, index, illus. 
+ Copyright © 2010, Association for the Advancement of Artificial Intelligence. All rights reserved. 
+ The Third Annual Symposium on Combinatorial was held at Stone Mountain Resort, Atlanta, Georgia, USA, July 8–10, 2010. The symposium cochairs were Nathan Sturtevant and Ariel Felner. The proceedings were published by AAAI Press. 
+ Heuristic search and other forms of combinatorial search optimizations are currently very active areas of research in artificial intelligence, robotics, planning, and other areas of computer science. The International Symposium on Combinatorial Search (SoCS) is meant to bring researchers in such areas together to exchange ideas and cross traditional academic boundaries. SoCS-2010 is the third event in this series. A special scope this year is on the relationship between search in domain-independent planning and domain-specific search. For SoCS-2010 we also invited participation from the algorithmics community to share their recent successes in path planning in road networks. 
+ This was an important year for SoCS as archival proceedings were established for the first time. These proceedings are the result of hard work by many, from researchers to reviewers and the publisher. 
+ This volume contains all of the papers from the symposium held 8–10 July, 2010 at Stone Mountain near Atlanta, Georgia USA. The program includes 17 oral paper presentations, 6 poster papers, 2 position papers, and and 7 short summaries of papers presented at other conferences. 
+ href="https://ojs.aaai.org/index.php/SOCS/about/aboutThisPublishingSystem" -
+

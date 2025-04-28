@@ -1,0 +1,17 @@
+output:
+{
+  "Conference dates": null,
+  "Year": null,
+  "Location": null,
+  "City-State-Province": null,
+  "Country": null,
+  "Continent": null,
+  "Type": null,
+  "Submission Date": null,
+  "Notification Date": null,
+  "Camera-ready Date": null,
+  "Topics": null,
+  "Summary": "The International Symposium of Robotics Research (ISRR) is a conference series organized by the International Foundation of Robotics Research (IFRR). The goal of IFRR is to promote the development of robotics as a scientific field, establishing the theoretical foundations and technology basis for its ever-expanding applications, with emphasis on its potential role to benefit humans.",
+  "Call for Papers": null
+}
+

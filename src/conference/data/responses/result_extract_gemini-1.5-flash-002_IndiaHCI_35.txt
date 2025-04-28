@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "November 7 - 9, 2025",
+  "Year": "2025",
+  "Location": "Indraprastha Institute of Information Technology Delhi (IIIT-Delhi), New Delhi, India",
+  "City-State-Province": "New Delhi",
+  "Country": "India",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Portal opens for Submission": "April 1, 2025",
+    "Full Paper Submission Deadline": "June 10, 2025",
+    "Revised Submission": "August 10, 2025"
+  },
+  "Notification Date": {
+    "Initial Notification and Reviews": "August 1, 2025",
+    "Final Notification": "September 1, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Submission": "September 11, 2025"
+  },
+  "Topics": "Human-Computer Interaction, User Interfaces, Tangible & Ubiquitous Computing, Virtual & Augmented Reality, Multimedia and New Media, Natural User Interfaces, Interaction Techniques, Game Design, Privacy and Usable Security, Visualization, Health, Accessibility, and Aging, User Modeling, Engineering Interactive Systems, ICT for Development, Computer-Supported Collaborative Work (CSCW), Explainable Human Centric AI (XAI)",
+  "Summary": "India HCI 2025 is the 16th edition of the international conference series on Human-Computer Interaction (HCI). The conference will be held from November 7-9, 2025, at the Indraprastha Institute of Information Technology Delhi (IIIT-Delhi) in New Delhi, India.  The theme is “Transhumanism: Improving human condition through technology”.",
+  "Call for Papers": "# India HCI 2025: Call for Papers\n\nIndia HCI 2025 is the 16th edition of the international conference series on Human-Computer Interaction (HCI). The conference will be held from **November 7-9, 2025**, at the **Indraprastha Institute of Information Technology Delhi (IIIT-Delhi) in New Delhi, India**.\n\n## Theme\n\nThis year’s conference theme is **“Transhumanism: Improving human condition through technology,”** which aims to highlight emerging technologies in HCI that focus on:\n\n*   Understanding humans\n*   Enabling humans\n*   Augmenting humans\n*   Replacing humans\n*   Being humans\n\n## Topics of Relevance\n\nWe invite submissions of research papers spanning various areas of HCI and design, including, but not limited to:\n\n*   User Interfaces\n*   Tangible & Ubiquitous Computing\n*   Virtual & Augmented Reality\n*   Multimedia and New Media\n*   Natural User Interfaces\n*   Interaction Techniques\n*   Game Design\n*   Privacy and Usable Security\n*   Visualization\n*   Health, Accessibility, and Aging\n*   User Modeling\n*   Engineering Interactive Systems\n*   ICT for Development\n*   Computer-Supported Collaborative Work (CSCW)\n\n## Submission Instructions\n\nSubmissions are sought that describe original, unpublished work generally in the field of HCI. India HCI uses an anonymous submission process (similar to CHI) for paper submissions. Please consult the India HCI ‘25 Author’s Guide for information on the ACM Paper Format and conference policies on previous and simultaneous publications.\n\n*   To preserve anonymity during review, the authors must remove their names and affiliations from the masthead. If authors have conducted relevant prior work, they must cite it appropriately, while also referring to this work in the third person.\n*   Authors can revise their submissions based on the reviews they receive, prior to submitting their camera-ready manuscripts.\n*   All acceptances will be conditional pending changes that the papers committee may suggest or require for the final camera-ready draft of the paper.\n*   The primary author of each accepted paper will receive detailed instructions on how to submit a final, publication-ready version of the paper.\n*   The paper will not be formally accepted to India HCI until authors revise it and submit a final draft for approval by the programme committee.\n*   Some submissions may be asked to undergo a more intense shepherding process in order to bring them to the standard required for India HCI.\n*   The deadline for submitting the “camera ready” version after all changes will be September 10.\n*   Additionally, at least one author of each paper needs to register for the conference by this date.\n\n## Submission Portal\n\n[India HCI Electronic Submission site](https://cmt3.research.microsoft.com/IndiaHCI2025/Submission/Index)\n\n## Length and Format\n\n*   Format: All submissions need to follow ACM single-column format. Use of different templates or formats may result in desk rejection.  LaTeX or Overleaf templates can be found at [https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)\n*   Paper Length: Contributions can be 6-12 pages excluding references. Longer papers without a proportional contribution are more likely to be rejected.\n\n## Important Dates\n\n*   **Portal opens for Submission:** April 1, 2025\n*   **Full Paper Submission Deadline:** June 10, 2025\n*   **Initial Notification and Reviews:** August 1, 2025\n*   **Revised Submission:** August 10, 2025\n*   **Final Notification:** September 1, 2025\n*   **Camera Ready Submission:** September 11, 2025\n\n## Paper Track Chairs\n\n*   Gavin Sim, University of Central Lancashire, UK\n*   Dilrukshi Gamage, University of Colombo, Sri Lanka"
+}
+

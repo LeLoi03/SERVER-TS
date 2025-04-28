@@ -1,0 +1,24 @@
+output:
+{
+  "Conference dates": "October 11 - 14, 2024",
+  "Year": "2024",
+  "Location": "Dallas, Texas, USA",
+  "City-State-Province": "Dallas, Texas",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper registration": "July 4, 2024",
+    "Paper submission": "July 10, 2024"
+  },
+  "Notification Date": {
+    "Notification": "August 10, 2024"
+  },
+  "Camera-ready Date": {
+    "Final versions due": "August 21, 2024"
+  },
+  "Topics": "Logic Programming, Non-monotonic Reasoning, Knowledge Representation, Declarative Logic Programming, Logic-based Programming Languages, Database Systems",
+  "Summary": "LPNMR 2024 is the seventeenth in the series of international meetings on logic programming and non-monotonic reasoning. LPNMR is a forum for exchanging ideas on declarative logic programming, non-monotonic reasoning, and knowledge representation.",
+  "Call for Papers": "No call for papers available"
+}
+

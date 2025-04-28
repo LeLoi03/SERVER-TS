@@ -1,0 +1,49 @@
+output:
+{
+  "Conference dates": "April 6 - 11, 2025",
+  "Year": "2025",
+  "Location": "Hyderabad International Convention Centre, Hyderabad, India",
+  "City-State-Province": "Hyderabad",
+  "Country": "India",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper Submissions (ICASSP and ICASSP/ OJSP)": "September 9, 2024",
+    "Paper Update Deadline": "September 12, 2024",
+    "SPS Journal Presentation Request": "December 11, 2024",
+    "Call for Tutorials Proposal deadline": "September 23, 2024",
+    "Call for Special Session Proposals Submission deadline": "July 8, 2024",
+    "Call for Workshop Proposals Workshop Proposal Submission Deadline": "July 8, 2024",
+    "Call for Workshop Proposals Workshop Paper Submission Deadline": "November 1, 2024",
+    "Call for Short Course Proposals Deadline": "September 23, 2024",
+    "Call for SP Grand Challenge Proposals Proposal Submission deadline": "July 8, 2024",
+    "Call for SP Grand Challenge Proposals 2-page Papers Due (by invitation only)": "December 9, 2024",
+    "OJ-SP Papers Due (by invitation only)": "January 11, 2025"
+  },
+  "Notification Date": {
+    "Paper Acceptance": "December 18, 2024",
+    "Call for Tutorials Acceptance notification": "October 28, 2024",
+    "Call for Special Session Proposals Acceptance notification": "July 25, 2024",
+    "Call for Workshop Proposals Workshop Proposal Acceptance Notification": "August 2, 2024",
+    "Call for Workshop Proposals Workshop Paper Acceptance Notification": "December 18, 2024",
+    "Call for Short Course Proposals Acceptance Notification": "November 25, 2024",
+    "Call for SP Grand Challenge Proposals Proposal Acceptance Notification": "July 19, 2024",
+    "Call for SP Grand Challenge Proposals 2-page Paper Acceptance Notification": "December 30, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Paper Deadline": "January 18, 2025",
+    "Call for Workshop Proposals Workshop Camera Ready Paper Deadline": "January 18, 2025",
+    "Call for SP Grand Challenge Proposals Camera-ready 2-page Papers Due": "January 18, 2025"
+  },
+  "Registration Date": {
+    "Author Registration": "January 27, 2025"
+  },
+  "Other Date": {
+    "Author Response Period": "November 20-27, 2024",
+    "Open Preview Starts": "March 7, 2025"
+  },
+  "Topics": "Acoustics, Speech, Signal Processing, Applied Signal Processing Systems, Audio & Acoustic Signal Processing, Biomedical Imaging & Signal Processing, Compressive Sensing, Sparse Modeling, Computational Imaging, Computer Vision, Deep Learning, Machine Learning, Image, Video & Multidimensional Signal Processing, Industrial Signal Processing, Information Forensics & Security, Internet of Things, Multimedia Signal Processing, Quantum Signal Processing, Remote Sensing & Signal Processing, Sensor Array & Multichannel SP, Signal Processing for Big Data, Signal Processing for Communication, Signal Processing for Cyber Security, Signal Processing Education, Signal Processing for Robotics, Signal Processing Over Graphs, Signal Processing Theory & Methods, Speech & Language Processing",
+  "Summary": "The 50th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025) will be held in Hyderabad, India, from April 6 to 11, 2025, at the Hyderabad International Convention Centre. This flagship conference of the IEEE Signal Processing Society will offer a comprehensive technical program presenting the latest developments in signal processing research and applications.",
+  "Call for Papers": "# ICASSP 2025: Call for Papers\n\nThe 50th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025) will be held in **Hyderabad, India, from April 06 to 11, 2025**, at the **Hyderabad International Convention Centre**.\n\n## Submission Guidelines\n\nStarting this year, for its flagship conferences, the Signal Processing Society has decided to limit the number of submissions on which a single author can participate. For ICASSP 2025, a single individual can be an author on at most nine submissions.\n\n## Important Dates\n\nAll deadlines are set for 11:59 PM on the respective day in US Pacific Standard Time.\n\n*   **Paper Submissions (ICASSP and ICASSP/OJSP):** September 9, 2024. [No new submissions will be accepted after this deadline]\n*   **Paper Update Deadline:** September 12, 2024. [Authors may update the submitted paper. The title, author list, and EDICS of the submitted paper cannot be changed during the update.]\n*   **Author Response Period:** November 20-27, 2024\n*   **SPS Journal Presentation Request:** December 11, 2024\n*   **Paper Acceptance:** December 18, 2024\n*   **Camera Ready Paper Deadline:** January 18, 2025\n*   **Author Registration:** January 27, 2025\n*   **Open Preview Starts:** March 7, 2025\n\n## Technical Scope\n\n*   Applied Signal Processing Systems\n*   Audio & Acoustic Signal Processing\n*   Biomedical Imaging & Signal Processing\n*   Compressive Sensing, Sparse Modeling\n*   Computational Imaging\n*   Computer Vision\n*   Deep Learning/Machine Learning\n*   Image, Video & Multidimensional Signal Processing\n*   Industrial Signal Processing\n*   Information Forensics & Security\n*   Internet of Things\n*   Multimedia Signal Processing\n*   Quantum Signal Processing\n*   Remote Sensing & Signal Processing\n*   Sensor Array & Multichannel SP\n*   Signal Processing for Big Data\n*   Signal Processing for Communication\n*   Signal Processing for Cyber Security\n*   Signal Processing Education\n*   Signal Processing for Robotics\n*   Signal Processing Over Graphs\n*   Signal Processing Theory & Methods\n*   Speech & Language Processing\n\n## SP Society Journal Paper Presentations\n\nAuthors of papers published or accepted in IEEE SPS journals may present their work at ICASSP 2025 in appropriate tracks. These papers will not be re-reviewed or included in the proceedings. In addition, the IEEE Open Journal of Signal Processing (OJSP) will provide a special track for longer submissions with the same processing timeline as ICASSP. Accepted papers will be published in OJSP and presented at the conference but will not be included in the conference proceedings.\n\n## Technical Program Chairs\n\n*   Bhaskar D Rao (UCSD, USA)\n*   Isabel Trancoso (Univ. of Lisbon, Portugal)\n*   Gaurav Sharma, (Univ. of Rochester, USA)\n*   Neelesh B. Mehta (IISc, India)"
+}
+

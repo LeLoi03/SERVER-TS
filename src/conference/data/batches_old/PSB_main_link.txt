@@ -1,0 +1,110 @@
+Conference PSB:
+
+Pacific Symposium on Biocomputing (PSB) 2026 
+ January 3-7, 2026 
+ The Big Island of Hawaii 
+ @PacSym.Biohref="https://bsky.app/hashtag/PSB25" - #PSB26
+welcome 
+ href="/callfor/papers" - sessions 
+ workshops 
+ href="/keydates" - key dates 
+ registration 
+ href="/psb-online" - PSB electronic proceedings 
+ previous meetings 
+ videos 
+ href="https://researchparasite.com/" - parasite | & | href="https://researchsymbionts.org/" - symbiont | awards 
+ sponsors 
+ search 
+ trees 
+ contact us 
+
+Call for Papers information:
+href="/" - PSB 2026
+Call For Papers, Abstracts and Demonstrations 
+ Pacific Symposium on Biocomputing 
+ Big Island of Hawaii - January 3-7, 2026 
+ The thirtieth Pacific Symposium on Biocomputing (PSB), will be held January 3-7, 2026 at the Fairmont Orchid on the Big Island of Hawaii. PSB will bring together top researchers from North America, the Asian Pacific nations, Europe and around the world to exchange research results and address open issues in all aspects of computational biology. PSB will provide a forum for the presentation of work in databases, algorithms, interfaces, visualization, modeling and other computational methods, as applied to biological problems, with emphasis on applications in data-rich areas of molecular biology. PSB intends to attract a balanced combination of computer scientists and biologists to present significant original research, demonstrate computer systems, and facilitate formal and informal discussions on topics of importance to computational biology. 
+ To provide focus for the very broad area of biological computing, PSB is organized into a series of specific sessions. Each session will involve both formal research presentations and open discussion groups. 
+ AI and Machine Learning in Clinical Medicine: Bridging or Separating Model Intelligence and Human Expertise 
+ Biological molecular function: methods and benchmarks for finding function in biological dark matter 
+ Fairness and Bias in Biomedical AI/ML: Defining Goals and Putting Them Into Practice 
+ Precision Medicine: Integrating large scale data and intermediate phenotypes for understanding health and treating disease 
+ Systems Biology and Network Analysis: From Multi-omics Integration to Biological Mechanisms 
+ Papers and posters 
+ Papers must be submitted to thehref="http://psb.wufoo.com/forms/psb-paper-submission/ " - PSB 2026 paper management system
+. 
+ The core of the conference consists of rigorously peer-reviewed full-length papers reporting on original work. All accepted papers will be published electronically and indexed in PubMed, and the best of these will be presented orally to the entire conference. 
+ PSB's publisher, World Scientific Publishing (WSP), willhref="https://www.ncbi.nlm.nih.gov/pmc/about/submission-methods/" - initiate submission to PubMed Central (PMC)
+for accepted papers that must comply with thehref="https://www.ncbi.nlm.nih.gov/pmc/about/submission-methods/" - NIH Public Access Policy
+. Authors are responsible for ensuring that the manuscript is deposited into the NIHMS upon acceptance for publication. The author must complete all remaining steps in the NIHMS in order for the submission to be accepted. 
+ Per WSP, authors mayhref="http://www.worldscientific.com/page/authors/author-rights" - post their submitted manuscript (preprint)
+at any time on their personal website, in their company or institutional repository, in not-for-profit subject-based preprint servers or repositories and on scholarly collaboration networks (SCNs) which have signed up to the STM sharing principles. Please provide the following applicable acknowledgement along with a link to the article via its DOI if available. 
+ Preprint of an article submitted for consideration in Pacific Symposium on Biocomputing © [Year] World Scientific Publishing Co., Singapore, http://psb.stanford.edu/ 
+ Preprint of an article published in Pacific Symposium on Biocomputing © [Year] World Scientific Publishing Co., Singapore, http://psb.stanford.edu/ | (for accepted PSB papers only). 
+ Authors are encouraged to submit preprints (complete and unpublished manuscripts) tobioRxivand/ormedRxiv, these are online archives and distribution services operated by Cold Spring Harbor Laboratory for preprints in the life sciences and health sciences respectively.If you choose to submit your preprint, please ensure that the deposit is made at the time of the paper submission deadline rather than upon acceptance to avoid clashing with bioRxiv and medRxiv policies.Researchers wishing to present their research at PSB without official publication are encouraged to submit a one page abstract by the abstract/poster submission deadline listed below to present their work in the poster sessions. 
+ Important dates 
+ Paper submissions due (absolute deadline):August 1, 2025 11:59PM PT 
+ Notification of paper acceptance:September 8, 2025 
+ Final paper deadline:October 1, 2025 11:59PM PT 
+ Abstract deadline:December 1, 2025 11:59PM PT 
+ Meeting:January 3-7, 2026Paper format 
+ Please reference thehref="/psb-online/psb-submit/" - PSB paper format template and instructions
+. 
+ Papers must be submitted to thehref="http://psb.wufoo.com/forms/psb-paper-submission/ " - PSB 2026 paper management system
+. 
+ The accepted file format is PDF (Adobe Acrobat preferred). Files should be named with the last name of the first author (e.g. altman.pdf). Hardcopy submissions or unprocessed TEX or LATEX files or electronic submissions not submitted through thehref="http://psb.wufoo.com/forms/psb-paper-submission/ " - paper
+        management system
+will be rejected without review. 
+ Each paper must be accompanied by a cover letter. The cover letter should be the first page of your paper submission. The cover letter must state the following:The email address of the corresponding author. 
+ The specific PSB session that should review the paper. 
+ The submitted paper contains original, unpublished results, and is not currently under consideration elsewhere. 
+ All co-authors concur with the contents of the paper. 
+ Submitted papers are limited to twelve (12) pages (NOT including the cover letter, title page with author list, or references) in our publication format. Please format your paper according to instructions found athref="/psb-online/psb-submit/" - http://psb.stanford.edu/psb-online/psb-submit/
+. If figures cannot be easily resized and placed precisely in the text, then it should be clear that with appropriate modifications, the total manuscript length would be within the page limit. Color images are accepted for publication at no additional charge. Supplemental material may be referenced by URL (PSB will not host supplemental material). 
+ Contact PSB (psb.hawaii @ gmail.com) for additional information about paper submission requirements. 
+ Travel support 
+ We have been able to offer partial travel support to many PSB attendees in the past. However, please note that no one is guaranteed travel support. The online travel support application form will open in August. 
+ PSB 2026 Sessions: 
+ Each session has a chair who is responsible for organizing submissions. Please contact the specific session chair relevant to your interests for further information. Links on each of the session titles below lead to more detailed calls for participation for each session. 
+ AI and Machine Learning in Clinical Medicine: Bridging or Separating Model Intelligence and Human Expertise 
+ Session Chairs: Jonathan Chen, Roxana Daneshjou, Fateme Nateghi Haredasht, Carsten Görg, Joseph D. Romano, Dokyoon Kim, Alexander Ioannidis, Brett K Beaulieu-Jones, Geoffrey H. TisonAs AI increasingly shapes clinical decision-making, the challenge lies in aligning model intelligence with real-world medical needs. This session will highlight cutting-edge research on AI-driven decision support, clinician-AI collaboration, and responsible deployment of models in healthcare. From large language models enhancing documentation and patient communication to AI-assisted diagnostics and treatment planning, we will explore how these innovations improve clinical workflows while addressing concerns around trust, interpretability, and real-world impact. 
+ Contact: Carsten Goerg 
+ Email: carsten.goerg at cuanschutz.edu 
+ Biological molecular function: methods and benchmarks for finding function in biological dark matter 
+ Session Chairs: Jason McDermott, Yana Bromberg, Hannah Carter, Travis WheelerDespite incremental advances over time, existing methods struggle to annotate a large fraction of the proteins present, often failing to find even putative homologs in microbiomes and viruses. Meanwhile, the functional impact of mutations often evade computational prediction. The recent revolution in AI/ML methods represents a significant opportunity to make in-roads into the problem of inferring protein function. We welcome papers describing methods for labeling molecular function, computational investigations of functional determination broadly, and approaches for integrating data and existing knowledge in the process of functional determination. 
+ Contact: Jason McDermott 
+ Email: Jason.McDermott at pnnl.gov 
+ Fairness and Bias in Biomedical AI/ML: Defining Goals and Putting Them Into Practice 
+ Session Chairs: Nicole Martinez-Martin, Mildred ChoTBA 
+ Contact: Nicole Martinez-Martin 
+ Email: 
+ Precision Medicine: Integrating large scale data and intermediate phenotypes for understanding health and treating disease 
+ Session Chairs: Nilah Ioannidis, Tayo Obafemi-Ajayi, Anne O’Donnell-Luria, Steven BrennerPrecision medicine draws on deep biological knowledge to tailor medical decisions and treatments to individual patients in a data-driven manner. For PSB 2026, we are particularly interested in papers that use advanced computational and methodological approaches for analysis of varied large scale data that characterize health and disease. This includes studies that integrate high-throughput biological data that span intermediate molecular and cellular phenotypes underlying disease, with application to precision medicine. We welcome papers whose results will promote our understanding of disease mechanisms and treatment based on innovative analysis of biological data. 
+  
+ Achieving the promise of precision medicine will require applying state-of-the-art computational tools to integrate and interpret the large volumes of data being generated. To this end, we invite submission of papers that analyze genomic, epigenomic, transcriptomic, proteomic, multi-omic, metabolomic, metagenomic, or other similar data types, along with their connection to clinical phenotypes and medical outcomes with an emphasis on patient-specific data and precision medicine applications. We welcome submissions on topics including integration of multiple types of large-scale biological data, personalized risk prediction or intermediate phenotype prediction, mechanistic disease understanding, and advances in deep learning and artificial intelligence for application to precision medicine. 
+ Contact: Nilah Ioannidis 
+ Email: nilah at berkeley.edu 
+ Systems Biology and Network Analysis: From Multi-omics Integration to Biological Mechanisms 
+ Session Chairs: Gurkan Bebek, Onur Mutlu, Iman Hajirasouliha, Joshua Welch, Serguei PakhomovRecent multi-omics data, fueled by technological advances, offers unprecedented opportunities to understand complex biological systems. Decoding the interplay of molecular components will advance our knowledge of disease, toxicity, and other crucial biological processes. This session highlights cutting-edge computational methods for systems-level analysis of diverse omics datasets. 
+ Contact: Gurkan Bebek 
+ Email: gurkan.bebek at case.edu 
+ href="/" - Back to the main PSB page 
+
+Important Dates information:
+PSB 2026 Key Dates 
+ href="/" - PSB 2026
+PSB 2026 will be held January 3-7, 2026 at the Fairmont Orchid on the Big Island of Hawaii. Workshops are typically scheduled starting at 9am the first day of the conference; on the last day of the conference, sessions typically end in the early afternoon. 
+ href="/callfor/sessionproposals" - Call for session proposals
+February 18, 2025Proposals dueMarch 17, 2025Notification of proposal acceptancehref="/callfor/workshopproposals" - Call for workshop proposals
+February 18, 2025Proposals dueMarch 17, 2025Notification of proposal acceptanceCall for papers 
+ August 1, 2025Paper submissions dueSeptember 8, 2025Notification of paper acceptanceOctober 1, 2025 
+ at 11:59PM PTCamera-ready accepted paper deadlineRegistration 
+ August 1, 2025 
+ Online registration opensOctober 31, 2025 
+ Early registration deadlineTravel award applications 
+ We have been able to offer partial travel support to many PSB attendees in the past. However, please note that no one is guaranteed travel support.August 1, 2025AvailableOctober 15, 2025 
+ at 11:59PM PTDeadlinelate October 2025 
+ Decisions announcedAbstract/Poster submission 
+ Poster presenters will be provided with an easel and a poster board 32"x40" (80x100cm; either portrait or landscape orientation is acceptable). One poster from each paid participant is accepted. 
+ August 1, 2025AvailableDecember 1, 2025 
+ at 11:59PM PTAbsolute deadline. No Extensions.href="/" - Back to the main PSB page

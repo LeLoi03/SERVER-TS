@@ -1,0 +1,70 @@
+Conference Workshop on Domain Specific Modelling (DSM):
+
+href="https://models-and-evolution.github.io/call-for-paper/" - Call for Papers 
+ Program 
+ href="https://models-and-evolution.github.io/sponsors/" - Important Dates 
+ Organizers 
+ Past Editions 
+ Contact 
+ Tuesday 24 - September 2024ME 
+ 18th edition of the international workshop on Models and Evolutionhref="https://conf.researchr.org/home/models-2024" - Co-located with Models'24
+WorkshopMotivations 
+ Model artifacts are subject to constant evolution throughout the lifecycle of sys- tems. The evolutionary pressure emerges from various technical and business factors throughout the overall software/system engineering endeavor. Pertinent examples of such factors include changing requirements, changing environment and changing user base, all of which give rise to unique evolutionary challenges in various system artifacts from architecture to implementation, and even in infor- mal artifacts, such as documentation. These challenges, if left unmanaged, may lead to deteriorating quality attributes, and in severe cases inconsistent artifacts or even incorrect artifacts, preventing the system from operating as intended. Therefore, proper support for efficient and effective evolution is required. The Models and Evolution workshop promotes novel theories, techniques, and tools to support evolution. To this end, the workshop brings together researchers and practitioners to discuss the latest developments on the topic. 
+ Objectives 
+ Model artifacts are subject to constant evolution throughout the lifecycle of sys- tems. The evolutionary pressure emerges from various technical and business factors throughout the overall software/system engineering endeavor. Pertinent examples of such factors include changing requirements, changing environment and changing user base, all of which give rise to unique evolutionary challenges in various system artifacts from architecture to implementation, and even in infor- mal artifacts, such as documentation. These challenges, if left unmanaged, may lead to deteriorating quality attributes, and in severe cases inconsistent artifacts or even incorrect artifacts, preventing the system from operating as intended. Therefore, proper support for efficient and effective evolution is required. The Models and Evolution workshop promotes novel theories, techniques, and tools to support evolution. To this end, the workshop brings together researchers and practitioners to discuss the latest developments on the topic. 
+ KeynoteAbstract: Co-evolution in Industry and Research: Is it Convergent? 
+ The oldest continuously used and evolved domain-specific modelling language among MetaEdit+ customers is currently in its 30th year. In all that time, none of its many hundreds of users has ever had to manually edit a model file to solve a co-evolution issue. What is the reason, and is it possible to make a research career based on it? We will look at the evolutionary pressures that drive modeling language, modeling tool, and language workbench evolution. How do they differ between academia and industry, and are those differences necessary or useful? And finally, why is no co-evolution often the best form of evolution? Our hunt for answers will take us from Beijing to San Diego, from the Arctic Circle to Cape Town, before landing fully carbon-compensated back in Linz. 
+ Steven Kelly Biography 
+ Dr. Steven Kelly is the CTO of MetaCase and co-founder of the DSM Forum. He has over thirty years of experience of consulting and building tools for Domain-Specific Modeling. Steven is the architect and lead developer of MetaEdit+, MetaCase’s domain-specific modeling tool. He is co-author of a book on Domain-Specific Modeling and has published over 70 articles in various software development journals and conferences. Steven has a Ph.D. in computer science from the University of Jyväskylä and a Master’s degree from Cambridge. Outside of IT he has been a field linguist for a year and a footballer for far too many years. 
+ Tuesday 24, September 2024 
+ Johannes Kepler University Linz 
+ Austria 
+ href="https://conf.researchr.org/venue/models-2024/models-2024-venue" - Place
+Models and Evolution 
+ ME2024 Copyright © Conference. All rights reserved | Design By:Volcamp| Adapted by Juri Di Rocco 
+
+Call for Papers information:
+href="https://models-and-evolution.github.io/call-for-paper/" - Call for Papers 
+ Program 
+ href="https://models-and-evolution.github.io/sponsors/" - Important Dates 
+ Organizers 
+ Past Editions 
+ Contact 
+ Call for papers 
+ The workshop aims to provide a forum to present and discuss bleeding-edge research contributions related to model evolution, and to provide visibility to novel technical solutions, early new ideas, and outside-the-box approaches. 
+ Topic of interest 
+ The topics of interest include, but are not restricted to:Foundations | Theories, methods, and tools for (meta-)model evolution 
+ Co-evolution across multiple meta-levels (incl. instance and data levels) 
+ Correctness and quality aspects | Correctness and consistency concerns of model evolution 
+ Verification and validation of evolving MDE artifacts 
+ Applications | Software migration, reconstruction, reuse, and repurposing 
+ Evolution of heterogeneous systems, e.g., CPS and digital twins, including the (co-)evolution of virtual and physical artifacts and infrastructure 
+ Empirical works, industry reports, patterns and catalogs, training and education in the area of model evolution 
+ Paper format 
+ We solicit three types of papers. 
+ Full research papers (max. 10 pages): novel research contributions 
+ Position papers (max. 5 pages), including: | Work in progress: preliminary results especially by young researchers; 
+ Vision papers: new visions and strategic ideas; 
+ Industry experience reports. 
+ 3. Tool papers (max. 5 pages): experience with tools for model-based software evolution and evolution issues encountered in model-based development. 
+ Submission guidelines 
+ All submitted papers must adhere to the ACM Conference format, and submitted electronically through EasyChair (https://easychair.org/conferences/?conf=me20240). LaTeX users must use the provided acmart.cls and ACM-Reference-Format.bst without modification, enable the conference format in the preamble of the document (i.e.,\documentclass[sigconf,review]{acmart}), and use the ACM reference format for the bibliography (i.e.,\bibliographystyle{ACM-Reference-Format}). The review option adds line numbers, thereby allowing referees to refer to specific lines in their comments. All submissions will be reviewed by at least 3 members of the program committee. Papers submitted to the workshop should have at least 5 pages and 10 pages for full papers following the same style and format of the main tracks of the Conference. Submissions that do not adhere to the formatting instructions may be desk-rejected without review. 
+ Models and Evolution 
+ ME2024 Copyright © Conference. All rights reserved | Design By:Volcamp| Adapted by Juri Di Rocco 
+
+Important Dates information:
+href="https://models-and-evolution.github.io/call-for-paper/" - Call for Papers 
+ Program 
+ href="https://models-and-evolution.github.io/sponsors/" - Important Dates 
+ Organizers 
+ Past Editions 
+ Contact 
+ Important Dates 
+ Important dates 
+ We follow the defined deadlines by the MODELS workshop co-chairs. 
+ Abstract submission: | Fri 28 June, 2024 | Fri 5 July, 2024. 
+ Paper submission: | Fri 5 July, 2024. | Mon 15 July, 2024. 
+ Author notification: Wed 7 August, 2024. 
+ Camera-ready: Fri 16 August, 2024. 
+ In general, all deadlines will be aligned with the final deadlines of MODELS.Models and Evolution 
+ ME2024 Copyright © Conference. All rights reserved | Design By:Volcamp| Adapted by Juri Di Rocco

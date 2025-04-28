@@ -1,0 +1,25 @@
+output:
+{
+  "Conference dates": "July 21 - 24, 2025",
+  "Year": "2025",
+  "Location": "Bozeman, MT, USA",
+  "City-State-Province": "Bozeman, Montana",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Abstract Deadline": "March 4, 2025",
+    "Paper Deadline": "March 9, 2025"
+  },
+  "Notification Date": {
+    "Notification": "April 22, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready": "April 30, 2025"
+  },
+  "Topics": "Ad Hoc, Dynamic and Evolving Networks, Algorithms and Data Structures, Algorithms on Strings & Graphs, Algorithms for Big Data and Networks Analytics, Algorithmic Game Theory, Approximation Algorithms, Combinatorial Generation, Enumeration and Counting, Combinatorial Optimization, Complexity Theory, Combinatorics of Words, Computational Algebra and Geometry, Computational Biology, Cryptography and Information Security, Distributed and Parallel Algorithms, Experimental Evaluation of Algorithms, Fine-grained Complexity, Foundations of Cloud Computing, Graph Algorithms for Social Network Analysis, Graph Drawing and Labelling, Graph Theory & Combinatorics, Mobile Agents, New Paradigms of Computation, Online Algorithms, Parameterized and Exact Algorithms, Probabilistic and Randomized Algorithms, Scheduling, Streaming Algorithms",
+  "Publisher": "Springer",
+  "Summary": "The 36th International Workshop on Combinatorial Algorithms (IWOCA 2025) will be held in Bozeman, MT, USA, from July 21-24, 2025.  Bozeman is located 90 miles from Yellowstone National Park.",
+  "Call for Papers": "# IWOCA 2025: Call for Papers\n\nThe 36th International Workshop on Combinatorial Algorithms (IWOCA 2025) will be held from **July 21-24, 2025, in Bozeman, MT, USA**.\n\n## Topics of Interest\n\nThe topics of interest include (but are not limited to) the following:\n\n*   Ad Hoc, Dynamic and Evolving Networks\n*   Algorithms and Data Structures\n*   Algorithms on Strings & Graphs\n*   Algorithms for Big Data and Networks Analytics\n*   Algorithmic Game Theory\n*   Approximation Algorithms\n*   Combinatorial Generation, Enumeration and Counting\n*   Combinatorial Optimization\n*   Complexity Theory\n*   Combinatorics of Words\n*   Computational Algebra and Geometry\n*   Computational Biology\n*   Cryptography and Information Security\n*   Distributed and Parallel Algorithms\n*   Experimental Evaluation of Algorithms\n*   Fine-grained Complexity\n*   Foundations of Cloud Computing\n*   Graph Algorithms for Social Network Analysis\n*   Graph Drawing and Labelling\n*   Graph Theory & Combinatorics\n*   Mobile Agents\n*   New Paradigms of Computation\n*   Online Algorithms\n*   Parameterized and Exact Algorithms\n*   Probabilistic and Randomized Algorithms\n*   Scheduling\n*   Streaming Algorithms\n\n## Proceedings\n\nConference proceedings will be published in the LNCS series of Springer, within the ARCoSS subline.\n\n## Journal Special Issues\n\nAuthors of selected papers accepted to IWOCA will be invited to submit extended versions of their papers to a Special Issue in the Journal of Computer and Systems Sciences, and Acta Informatica.\n\n## Awards\n\nAwards will be given to the best paper and the best student paper.\n\n## Submission Instructions\n\nAuthors are invited to submit high-quality manuscripts reporting original unpublished research in the topics related to the symposium. Simultaneous submission to other conferences or workshops with published proceedings is not allowed. It is required that each accepted paper be presented at the conference by one of its authors.\n\nSubmissions must be in the form of a single PDF file prepared using the LNCS LaTeX templates and style files. Springer’s proceedings LaTeX templates are also available on Overleaf. Springer’s authors’ guidelines may be consulted [here](https://www.springer.com/gp/authors-editors/conference-proceedings-guidelines).\n\n*   Each submission should consist of the main part of the paper, not exceeding 12 pages (including the title page and excluding the references), plus an optional clearly marked appendix.\n*   Papers are to be submitted electronically through EquinOCS at: [https://equinocs.springernature.com/service/iwoca2025](https://equinocs.springernature.com/service/iwoca2025)\n\n## Important Dates (a.o.e.)\n\n*   **Abstract submission:** March 4, 2025\n*   **Paper submission:** March 9, 2025\n*   **Notification:** April 22, 2025\n*   **Camera Ready:** April 30, 2025\n*   **Conference:** July 21-24, 2025\n\n## Program Chairs\n\n*   Henning Fernau, University of Trier, Germany\n*   Binhai Zhu, Montana State University, USA\n\n## Invited Speakers\n\n*   Pawel Gawrychowski, University of Wrocław, Poland.\n*   Saket Saurabh, Institute of Mathematical Sciences, Chennai, India; and University of Bergen, Norway."
+}
+

@@ -1,0 +1,291 @@
+Conference full name: International Conference on Computer Vision and Graphics (ICCVG)
+
+1. Website of ICCVG_2: https://arxiv.org/abs/2410.10350
+Website information of ICCVG_2:
+
+Skip to main contentWe gratefully acknowledge support from the Simons Foundation,member institutions, and all contributors.Donate>cs>arXiv:2410.10350 
+ Help|Advanced Search 
+ value="author" - Author
+value="author_id" - arXiv author ID
+Searchopen searchGOopen navigation menuquick links 
+ Login 
+ Help Pages 
+ About 
+ Computer Science > Computer Vision and Pattern Recognition 
+ arXiv:2410.10350(cs) 
+ [Submitted on 14 Oct 2024 (v1), last revised 15 Oct 2024 (this version, v2)] 
+ Title:On Representation of 3D Rotation in the Context of Deep Learning 
+ Authors:href="https://arxiv.org/search/cs?searchtype=author&query=Pravdov%C3%A1,+V" - Viktória Pravdová
+,href="https://arxiv.org/search/cs?searchtype=author&query=Gajdo%C5%A1ech,+L" - Lukáš Gajdošech
+,href="https://arxiv.org/search/cs?searchtype=author&query=Ali,+H" - Hassan Ali
+,href="https://arxiv.org/search/cs?searchtype=author&query=Kocur,+V" - Viktor Kocur
+View a PDF of the paper titled On Representation of 3D Rotation in the Context of Deep Learning, by Vikt\'oria Pravdov\'a and 3 other authors 
+ View PDFHTML (experimental)Abstract:This paper investigates various methods of representing 3D rotations and their impact on the learning process of deep neural networks. We evaluated the performance of ResNet18 networks for 3D rotation estimation using several rotation representations and loss functions on both synthetic and real data. The real datasets contained 3D scans of industrial bins, while the synthetic datasets included views of a simple asymmetric object rendered under different rotations. On synthetic data, we also assessed the effects of different rotation distributions within the training and test sets, as well as the impact of the object's texture. In line with previous research, we found that networks using the continuous 5D and 6D representations performed better than the discontinuous ones. 
+  
+ Comments: | Accepted at International Conference on Computer Vision and Graphics ICCVG 2024. The proceedings of the conference will be published in Lecture Notes in Networks and Systems (LNNS), Springer 
+ Subjects: | Computer Vision and Pattern Recognition (cs.CV); Graphics (cs.GR) 
+ MSCclasses: | 65D19 
+ ACMclasses: | I.4.8; I.3.5 
+ Cite as: | arXiv:2410.10350[cs.CV] 
+ (orarXiv:2410.10350v2[cs.CV]for this version) 
+ https://doi.org/10.48550/arXiv.2410.10350Focus to learn morearXiv-issued DOI via DataCite 
+ Related DOI: | https://doi.org/10.5281/zenodo.13928310Focus to learn moreDOI(s) linking to related resources 
+ Submission history 
+ From: Lukáš Gajdošech [view email] 
+ [v1]Mon, 14 Oct 2024 10:09:44 UTC (17,386 KB) 
+ [v2]Tue, 15 Oct 2024 07:36:06 UTC (7,049 KB) 
+ Full-text links:Access Paper: 
+ View a PDF of the paper titled On Representation of 3D Rotation in the Context of Deep Learning, by Vikt\'oria Pravdov\'a and 3 other authors 
+ View PDF 
+ HTML (experimental) 
+ TeX Source 
+ Other Formats 
+ view license 
+ Current browse context:cs.CV 
+ < prev|next > 
+ new|recent|2024-10Change to browse by:cs 
+ cs.GR 
+ References & Citations 
+ NASA ADS 
+ Google Scholar 
+ Semantic Scholar 
+ aexport BibTeX citationLoading...BibTeX formatted citation 
+ ×loading...Data provided by:Bookmark 
+ Bibliographic ToolsBibliographic and Citation Tools 
+ Bibliographic Explorer ToggleBibliographic Explorer(What is the Explorer?)Connected Papers ToggleConnected Papers(href="https://www.connectedpapers.com/about" - What is Connected Papers?
+)Litmaps ToggleLitmaps(What is Litmaps?)scite.ai Togglescite Smart Citations(What are Smart Citations?)Code, Data, MediaCode, Data and Media Associated with this Article 
+ alphaXiv TogglealphaXiv(What is alphaXiv?)Links to Code ToggleCatalyzeX Code Finder for Papers(What is CatalyzeX?)DagsHub ToggleDagsHub(What is DagsHub?)GotitPub ToggleGotit.pub(What is GotitPub?)Huggingface ToggleHugging Face(What is Huggingface?)Links to Code TogglePapers with Code(href="https://paperswithcode.com/" - What is Papers with Code?
+)ScienceCast ToggleScienceCast(What is ScienceCast?)DemosDemos 
+ Replicate ToggleReplicate(What is Replicate?)Spaces ToggleHugging Face Spaces(What is Spaces?)Spaces ToggleTXYZ.AI(What is TXYZ.AI?)Related PapersRecommenders and Search Tools 
+ Link to Influence FlowerInfluence Flower(What are Influence Flowers?)Core recommender toggleCORE Recommender(What is CORE?) 
+ href="" - Author 
+ Venue 
+ Institution 
+ Topic 
+ About arXivLabsarXivLabs: experimental projects with community collaborators 
+ arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. 
+ Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. 
+ Have an idea for a project that will add value for arXiv's community?Learn more about arXivLabs. 
+ href="/auth/show-endorsers/2410.10350" - Which authors of this paper are endorsers?
+|Disable MathJax(What is MathJax?)About 
+ Help 
+ contact arXivClick here to contact arXiv | Contact 
+ subscribe to arXiv mailingsClick here to subscribe | Subscribe 
+ Copyright 
+ Privacy Policy 
+ Web Accessibility Assistance 
+ arXiv Operational Status 
+ Get status notifications viaemailorslack
+
+2. Website of ICCVG_2: https://okarma.zut.edu.pl/?id=recenzjekonf&L=1&no_cache=1
+Website information of ICCVG_2:
+
+Reviews of conference papers 
+ Zachodniopomorski Uniwersytet Technologiczny w Szczecinie 
+ Menu główne 
+ Treść strony 
+ kontrast - menu | kontrast normalny 
+ kontrast czasrno-biały 
+ kontrast czarno-zółty 
+ kontrast żółto-czarny 
+ A | A 
+ A+ 
+ A++ 
+ mapa stron 
+ enter text for search 
+ Zachodniopomorski Uniwersytet Technologiczny w SzczecinieProf. Krzysztof Okarma 
+ Department of Signal Processing and Multimedia Engineering 
+ Faculty of Electrical Engineering 
+ menu rozwijaneContactScientific biographyScientific activitiesSupervision and reviews 
+ Patents 
+ Membership in scientific committees 
+ Reviews for journals 
+ href="/index.php?id=recenzjekonf&L=1&no_cache=1" - Reviews of conference papers 
+ Special issues, plenary talks and chaired sessions 
+ Publicationshref="/index.php?id=jcr&L=1&no_cache=1" - JCR papers 
+ href="/index.php?id=core&L=1&no_cache=1" - Indexed conference papers 
+ href="/index.php?id=listab&L=1&no_cache=1" - Papers in "B" list journals 
+ href="/index.php?id=czasopismainne&L=1&no_cache=1" - Monographs and other journal papers 
+ href="/index.php?id=konfinne&L=1&no_cache=1" - Other conference papers 
+ TeachingFor studentsNews 
+ WEZUT OCR DatasetsDeclaration of accessibilityLinks | Scopus profile 
+ ORCID 
+ dblp 
+ href="/index.php?id=5960&L=1" - ResearchGate profile 
+ WoS profile 
+ Semantic Scholar 
+ ///⌂ 
+ Scientific activities 
+ Reviews of conference papers 
+ Recenzje konferencyjnehref="/index.php?id=recenzjekonf&L=1" - Reviews of conference papers
+Scientific activities: 
+ Supervision and reviews 
+ Patents 
+ Membership in scientific committees 
+ Reviews for journals 
+ href="/index.php?id=recenzjekonf&L=1&no_cache=1" - Reviews of conference papers 
+ Special issues, plenary talks and chaired sessions 
+ Reviews of conference papers 
+ Reviews of papers submitted to international conferences (foreign): 
+ 19 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2025 (Lisbon, Portugal) - 3 
+ 28 | th | International Conference ELECTRONICS 2024 (Palanga, Lithuania) - 1 
+ 18 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2024 (Budapest, Hungary) - 6 
+ 10 | th | IEEE International Conference on Data Science and Advance Analytics DSAA 2023 (Thessaloniki, Greece) - 1 
+ 27 | th | International Conference ELECTRONICS 2023 (Palanga, Lithuania) - 2 
+ 16 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2022 (Lisbon, Portugal) - 2 
+ 4 | th | International Workshop on Artificial Intelligence in Machine Vision and Graphics (AIMaViG’22) at the 17 | th | Conference on Computer Science and Intelligence Systems FedCSIS 2022 (Sofia, Bulgaria) - 2 
+ 13 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2021 (Porto, Portugal) - 1 
+ International Conference on Computational Science ICCS 2021 (Kraków) - 3 
+ 26 | th | International Conference ELECTRONICS 2022 (Palanga, Lithuania) - 4 
+ 15 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2021 - 2 
+ 16 | th | International Conference on Control, Automation, Robotics and Vision ICARCV 2020 (Shenzhen, China) - 2 
+ International Conference on Computational Science ICCS 2020 (Amsterdam, The Netherlands) - 1 
+ 25 | th | International Conference ELECTRONICS 2021 (Palanga, Lithuania) - 4 
+ 14 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2020 (Zagreb, Croatia) - 4 
+ 24 | th | International Conference ELECTRONICS 2020 (Palanga, Lithuania) - 6 
+ 12 | th | International Conference on Adaptive and Self-Adaptive Systems and Applications ADAPTIVE 2020 (Nice, France) - 1 
+ 9 | th | International Conference on Advanced Communications and Computation INFOCOMP 2019 (Nice, France) - 1 
+ 13 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2019 (Porto, Portugal) - 5 
+ 23 | rd | International Conference ELECTRONICS 2019 (Palanga, Lithuania) - 5 
+ International Interdisciplinary PhD Workshop IIPhDW 2019 (Wismar, Germany) - 2 
+ 12 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2018 (Madrid, Spain) - 6 
+ 7 | th | Computer Science On-line Conference CSOC 2018 - 4 
+ 10 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2018 (Barcelona, Spain) - 1 
+ 22 | nd | International Conference ELECTRONICS 2018 (Palanga, Lithuania) - 6 
+ Computational Methods in Systems and Software 2017 - 2 
+ 23 | rd | International Conference on Information and Software Technologies ICIST 2017 (Druskininkai, Lithuania) - 1 
+ 11 | th | IADIS International Conference on Computer Graphics, Visualization, Computer Vision and Image Processing CGVCVIP 2017 (Lisbon, Portugal) - 6 
+ 21 | st | International Conference ELECTRONICS 2017 (Palanga, Lithuania) - 8 
+ 6 | th | Computer Science On-line Conference CSOC 2017 - 4 
+ 9 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2017 (Athens, Greece) - 1 
+ Special Session on Intelligent Computer Vision Systems and Applications - ICVSA 2017 at the 9 | th | Asian Conference on Intelligent Information and Database Systems - ACIIDS 2017 (Kanazawa, Japan) - 3 
+ 10 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2016 (Madeira, Portugal) - 6 
+ 5 | th | Computer Science On-line Conference CSOC 2016 - 6 
+ 20 | th | International Conference ELECTRONICS 2016 (Palanga, Lithuania) - 8 
+ 8 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2016 (Rome, Italy) - 1 
+ 5 | th | International Conference on Advanced Communications and Computation INFOCOMP 2015 (Brussels, Belgium) - 1 
+ 9 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2015 (Las Palmas, Gran Canaria, Spain) - 5 
+ 19 | th | International Conference ELECTRONICS 2015 (Palanga, Lithuania) - 8 
+ 4 | th | Computer Science On-line Conference CSOC 2015 - 5 
+ 7 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2015 (Nice, France) - 1 
+ 8 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2014 (Lisbon, Portugal) - 6 
+ 18 | th | International Conference ELECTRONICS 2014 (Palanga, Lithuania) - 9 
+ 6 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2014 (Venice, Italy) - 1 
+ 7 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2013 (Prague, Czechia) - 4 
+ 17 | th | International Conference ELECTRONICS 2013 (Palanga, Lithuania) - 10 
+ 5 | th | International Conference on Pervasive Patterns and Applications PATTERNS 2013 (Valencia, Spain) - 1 
+ 6 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2012 (Lisbon, Portugal) - 6 
+ 5 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2011 (Rome, Italy) - 6 
+ 4 | th | IADIS International Conference on Computer Graphics, Visualisation, Computer Vision and Image Processing CGVCVIP 2010 (Freiburg, Germany) - 6 
+  
+ Reviews of papers submitted to international conferences organized in Poland: 
+ International Conference on Computer Vision and Graphics ICCVG 2024 (Warsaw) - 1 
+ 16 | th | International Symposium on Multimedia Applications and Processing (MMAP’23) at the 18 | th | Conference on Computer Science and Intelligence Systems FedCSIS 2023 (Warsaw) - 2 
+ International Conference on Computer Vision and Graphics ICCVG 2022 (Warsaw) - 1 
+ 12 | th | International Conference on Computer Recognition Systems CoReS 2021 (Bydgoszcz) - 2 
+ International Conference on Computer Vision and Graphics ICCVG 2020 (Warsaw) - 1 
+ 11 | th | International Conference on Image Processing and Communications IP&C 2019 (Bydgoszcz) - 1 
+ 11 | th | International Conference on Computer Recognition Systems CoReS 2019 (Polanica-Zdrój) - 2 
+ International Conference on Computer Vision and Graphics ICCVG 2018 (Warsaw) - 3 
+ 10 | th | International Conference on Image Processing and Communications IP&C 2018 (Bydgoszcz) - 4 
+ 21 | st | International Multi-Conference on Advanced Computer Systems ACS 2018 (Międzyzdroje) - 2 
+ International Interdisciplinary PhD Workshop IIPhDW 2018 (Świnoujście) - 1 
+ 22 | nd | International Conference on Methods and Models in Automation and Robotics MMAR 2017 (Międzyzdroje) - 1 
+ 10 | th | International Conference on Computer Recognition Systems CoReS 2017 (Polanica-Zdrój) - 2 
+ 9 | th | International Conference on Image Processing and Communications IP&C 2017 (Bydgoszcz) - 1 
+ 21 | st | International Conference on Methods and Models in Automation and Robotics MMAR 2016 (Międzyzdroje) - 5 
+ International Conference on Computer Vision and Graphics ICCVG 2016 (Warsaw) - 6 
+ 20 | th | International Conference on Methods and Models in Automation and Robotics MMAR 2015 (Międzyzdroje) - 1 
+ IV International Scientific and Technical | Conference MANUFACTURING 2014 (Poznań) - 1 
+ International Conference on Computer Vision and Graphics ICCVG 2014 (Warsaw) - 4 
+ 5 | th | International Conference on Image Processing and Communications IP&C 2013 (Bydgoszcz) - 2 
+ 8 | th | International Conference on Computer Recognition Systems CoReS 2013 (Milków) - 1 
+ International Conference on Computer Vision and Graphics ICCVG 2012 (Warsaw) - 5 
+ 15 | th | International Conference on Methods and Models in Automation and Robotics MMAR 2010 (Międzyzdroje) - 1 
+ 15 | th | European Signal Processing Conference EUSIPCO 2007 (Poznań) - 1 
+  
+ Reviews of papers submitted to domestic conferences: 
+ 21 | st | Polish Control Conference PCC 2023 (Gliwice) - 1 
+ 4 | th | Polish Conference on Artificial Intelligence PP-RAI 2023 (Łódź) - 3 
+ 3 | rd | Polish Conference on Artificial Intelligence PP-RAI 2022 (Gdynia) - 4 
+ 20 | th | Polish Control Conference PCC 2020 (Łódź) - 4 
+ 10 | th | Scientific-Technical Conference "Innovative Materials and Technologies in Electrical Engineering" i-MITEL 2018 (Sulęcin) - 1 
+ 13. Scientific Conference "Computer Applications in Electrical Engineering" ZKwE 2008 (Poznań) - 1 
+
+href="https://www.webofscience.com/wos/author/record/685665" - 
+
+copyright © Zachodniopomorski Uniwersytet Technologiczny w Szczecinie 
+ Prof. Krzysztof Okarma 
+ zamknijTa strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej.Dowiedz się więcej.
+
+3. Website of ICCVG_2: https://www.iccgv.org/
+Website information of ICCVG_2:
+
+Home 
+ href="index.html" - Authors | href="index.html" - Authors 
+ href="cfp.html" - Call for papers 
+ href="sub.html" - Submission Guidelines 
+ Registration 
+ Program 
+ Speakers 
+ Committees 
+ Information | Visa Information 
+ Congress Venue 
+ About Chengdu 
+ History | ICCGV2024 
+ ICCGV2023 
+ ICCGV2022 
+ ICCGV2021 
+ ICCGV2020 
+ ICCGV2019 
+ ICCGV2018 
+ 中文 
+ Contact us 
+ Computer Graphics and Virtuality (CGV) 2024 
+ January 15, 2025 | Paper Submission Deadline截稿日期：2025年01月15日 
+ January 25, 2025 | Paper Acceptance Notification录用通知: 2025年01月25日 
+ February 05, 2025 | Camera Ready Paper Submission提交终稿: 2025年02月05日 
+ February 05, 2025 | Registration Deadline注册截止: 2025年02月05日 
+ Welcome to ICCGV 2025 
+ Following the success of previous seven years' event in Tokyo(2018), Jeju Island(2019), online conferences from 2020-2022, Chengdu(2023), Hangzhou(2024) respectively, the Eighth International Conference on Computer Graphics and Virtuality(ICCGV 2025) will take place inChengdu, China,duringhref="tour.html" - February 21-23, 2025
+. Conference consists of keynote lectures, oral presentation, poster presentation, online presentation on all aspects of computer graphics and virtuality. All professors, researchers and university students in related fields are cordially invited to participate in the conference. You're welcome to contribute a paper to ICCGV 2025. It's advised that you read thehref="sub.html" - Submission Guidelines
+before submission. 
+ 继前七届会议分别在日本东京(2018)、韩国济州岛(2019)举办、以及由于疫情期间在线上开会(2020-2022), 2023年开始重新开启线下线上模式, 分别在成都(2023)、杭州(2024), 第八届计算机图形和虚拟国际会议(ICCGV2025)计划于2025年2月21-23日在四川成都举行。 会议诚挚邀请国内外学者提交计算机图形和虚拟等领域的论文, 请大家认真阅读投稿须知并踊跃投稿。 
+ Publication 
+ After a careful reviewing process, all accepted papers after proper registration and presentation will be published in the ICCGV 2025 Conference Proceedings by SPIE, which will be included in SPIE Digital Library and indexed byEi Compendex, Scopus, and CPCI (Web of Science). 
+ Recent News 
+ [April 3, 2025] ICCGV2025 proceedings are published inVolume 13557 of SPIE proceedingsand now available in SPIE digital Library. 
+ [September 9, 2024] ICCGV2024 proceedings are indexed byEI CompendexandScopus. 
+ [May 15, 2024] ICCGV2024 proceedings are published inVolume 13158 of SPIE proceedingsand now available in SPIE digital Library. 
+ [February 25, 2024] ICCGV2024 was held successfully at Hangzhou International Urbanplogy Research Center and in School of Information Science and Technology, Hangzhou Normal University, China. 
+ Topics of Interests 
+ Computer Graphics 
+ Images processing and computer vision 
+ Rendering including real-time rendering, illumination, photo-realistic graphics 
+ Computational photography 
+ Graphics hardware, GPU, and hardware-related techniques 
+ Image-based computer graphics 
+ Geometric modeling, CAD, Simulation, Computer animation 
+ image processing 
+ Geometric data processing, GIS, BigData modeling and processing 
+ Segmentation, Object Retrieval 
+ Information visualization 
+ Computer graphics and visualization 
+ Scientific visualization, massive and BigData visualization 
+ Computer visionSubmission Method 
+ Please log in thehref="http://confsys.iconf.org/submission/iccgv2025" - Online Submission System
+and submit your full paper or abstract before the submission deadline. 
+ href="file/iccgv2025.pdf" - ICCGV 2025 Leaflet(.pdf)
+ 
+ Paper Template (.tex) 
+ Paper Template (.doc) 
+ Abstract Template(.doc) 
+ Previous Editions of ICCGV 
+ ICCGV 2024Hangzhou | February 23-25 
+ ICCGV 2023Chengdu | February 17-19 
+ ICCGV 2022Fully Virtual | February 25-27 2022 
+ Co-sponsored by 
+
+Technically Supported by 
+ © ICCGV2025 All rights reserved.
+

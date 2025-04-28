@@ -1,0 +1,41 @@
+```json
+{
+  "Conference dates": "June 23 - 27, 2025",
+  "Year": "2025",
+  "Location": "Budapest, Hungary",
+  "City-State-Province": "Budapest",
+  "Country": "Hungary",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Call for Technical Session Papers) Submission deadline": "January 31, 2025",
+    "(Call for Demo Papers and Posters) Submission deadline": "April 4, 2025",
+    "(Call for Workshop Proposals) Submission deadline": "December 15, 2024",
+    "(Call for Workshop Papers) Submission deadline": "April 4, 2025",
+    "(Call for Tutorials) Submission deadline": "February 3, 2025",
+    "(Call for PhD Symposium Papers) Submission deadline": "April 17, 2025"
+  },
+  "Notification Date": {
+    "(Call for Technical Session Papers) Acceptance notification": "March 20, 2025",
+    "(Call for Demo Papers and Posters) Acceptance notification": "April 23, 2025",
+    "(Call for Workshop Proposals) Acceptance notification": "December 20, 2024",
+    "(Call for Workshop Papers) Acceptance notification": "April 23, 2025",
+    "(Call for Tutorials) Acceptance notification": "March 4, 2025",
+    "(Call for PhD Symposium Papers) Acceptance notification": "May 9, 2025"
+  },
+  "Camera-ready Date": {
+    "(Call for Technical Session Papers) Camera-ready paper": "April 28, 2025",
+    "(Call for Demo Papers and Posters) Camera-ready paper": "May 2, 2025",
+    "(Call for Workshop Papers) Camera-ready paper": "May 2, 2025",
+    "(Call for Tutorials) Tutorial material": "June 9, 2025",
+    "(Call for PhD Symposium Papers) Camera ready due": "May 15, 2025"
+  },
+  "Other Date": {
+    "Workshop dates": "June 23 and June 27, 2025"
+  },
+  "Topics": "Network Softwarization, 5G/6G, Network Slicing, Slice Management, Internet of Things (IoT), QoS, QoE, Service Function Chaining (SFC), Cognitive Networking, Autonomic Networking, Policy-Based Networking, Intent-Based Networking, Extended Reality (AR/VR/ER), Digital Twins, Future Internet, New IP Architectures, Value Chains, Service Models, Dynamic Resource Discovery, Negotiation Schemes, Cooperative Multi-domain Environments, Multi-tenant SDN/NFV Environments, Deterministic Networking, Dependable Networking, High-Precision Communications, Computing, Internet Re-engineering, Security, Safety, Trust, Privacy, Programmable SDN, NFV, Languages, Architectures (P4), Open Source, Softwarized Cloud, Fog, Edge Infrastructures, Resilience, Reliability, Robustness, Assurance, Measurements, Abstractions, Virtualization, Sustainability, Energy Efficiency, Carbon Emissions, Programmable Networking Protocols, Deployment Strategies, Transition Strategies, Experimental Testbeds, Deployments, Hardware Acceleration, Artificial Intelligence (AI), Machine Learning (ML), Generative AI, Socio-economic Impact, Regulations, Development Methodologies (DevOps, NetOps, Verification)",
+  "Publisher": "IEEE",
+  "Summary": "The 11th IEEE International Conference on Network Softwarization (IEEE NetSoft 2025) will be held in Budapest, Hungary, from June 23 to 27, 2025.  The conference addresses advanced research challenges and opportunities raised by the softwarization of network infrastructure and functionalities, particularly in the context of distributed AI and computing solutions.",
+  "Call for Papers": "# IEEE NetSoft 2025: Call for Papers\n\nThe 11th IEEE International Conference on Network Softwarization (IEEE NetSoft 2025) will be held in **Budapest, Hungary, from June 23-27, 2025.** The theme is **\"Sustainable and secure networks for distributed AI and compute.\"**\n\nNetSoft addresses advanced research challenges and opportunities raised by the overall transformation trend of network softwarization, which has been revolutionizing the networking field and has accelerated its convergence with adjacent industries.\n\n## Topics of Interest\n\nThe conference is soliciting paper submissions with significant research contributions to network softwarization. Topics of interest include, but are not limited to:\n\n**Network softwarization for…:**\n\n*   5G/6G\n*   Network slicing and slice management\n*   Internet of Things (IoT)\n*   QoS and QoE\n*   Service Function Chaining (SFC)\n*   Cognitive and autonomic networking\n*   Policy-based and Intent-based networking\n*   eXtended Reality (AR/VR/ER and digital twins)\n*   Future Internet and New IP architectures\n*   New value chains and service models\n*   Dynamic resource discovery and negotiation schemes\n*   Cooperative multi-domain, multi-tenant SDN/NFV environments\n*   Deterministic or dependable networking\n*   High-precision communications and computing\n*   Internet re-engineering\n\n**Security, Safety, Trust, and Privacy:**\n\n*   Programmable SDN and NFV: languages and architectures (P4 and others)\n*   Open source\n*   Softwarized cloud, fog, and edge infrastructures\n*   Resilience, reliability, and robustness\n*   Assurance and Measurements\n*   Abstractions and virtualization of resources, services, and functions\n*   Sustainability, energy efficiency, and carbon emissions\n*   Programmable Networking Protocols\n*   Deployment and transition strategies\n*   Experience reports from experimental testbeds and deployments\n*   Hardware acceleration\n\n**Artificial intelligence (AI) and Machine Learning (ML) techniques:**\n\n*   Applications of Generative AI\n*   Socio-economic impact and regulations\n*   Development methodologies (DevOps, NetOps, Verification)\n\n## Paper Submission\n\nProspective authors are invited to submit high-quality original technical papers for presentation at the conference and publication in the NetSoft 2025 Proceedings. All submissions must be written in English and must use the standard IEEE two-column conference template ([https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)).\n\nTechnical Papers can be of two types: Full or Short papers, up to 9 and 5 pages respectively, including references and all other material. If accepted, a paper will be published in the category (long/short) of its submission.\n\nPapers submitted should describe original, previously unpublished research results, not currently under review by another conference or journal. Papers not meeting the length and formatting requirements, or violating IEEE’s guidelines on plagiarized content will be rejected without review. All other papers will be reviewed. Selected papers for NetSoft 2025 may be conditionally accepted and subjected to shepherding before final acceptance. Only PDF files will be accepted for the review process, and all manuscripts must be electronically submitted through EDAS.\n\n## Important Dates\n\n*   **Paper submission deadline:** January 31, 2025 (Final)\n*   **Acceptance notification:** March 20, 2025\n*   **Camera-ready paper:** April 28, 2025\n\n## TPC Co-Chairs\n\n*   Carol Fung, Concordia University, Canada\n*   Massimo Tornatore, Politecnico di Milano, Italy\n*   Robert Szabo, Ericsson, Hungary\n\n## General Co-Chairs\n\n*   Pal Varga, Budapest University of Technology and Economics, Hungary\n*   Walter Cerroni, University of Bologna, Italy"
+}
+```

@@ -1,0 +1,34 @@
+output:
+{
+  "Conference dates": "September 28 - October 3, 2025",
+  "Year": "2025",
+  "Location": "Taipei, Taiwan",
+  "City-State-Province": "Taipei",
+  "Country": "Taiwan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Journal Track) Abstract Submission": "March 23, 2025",
+    "(Journal Track) Full Paper Submission": "March 30, 2025",
+    "(Late Breaking Track) Paper Submission": "June 1, 2025",
+    "(Journal Track) Revised paper submission": "June 15, 2025",
+    "Special Session Proposals": "March 30, 2025",
+    "Tutorial Proposals": "March 30, 2025",
+    "Workshops Proposals": "March 30, 2025",
+    "Education Class Proposals": "March 30, 2025"
+  },
+  "Notification Date": {
+    "(Journal Track) First Round Notification": "May 18, 2025",
+    "(Journal Track, Late Breaking Track) Notification": "July 13, 2025"
+  },
+  "Camera-ready Date": {
+    "All tracks (full paper, LB, Special Session): Camera ready": "August 11, 2025"
+  },
+  "Other Date": {
+    "Submission deadline for the Embedded System Software Competition (ESSC) and the ACM SIGBED Student Research Competition": "TBD"
+  },
+  "Topics": "Embedded Systems, Hardware Design, Software Design, Intelligent Computing Systems, Connected Computing Systems, Compilers, Architectures, High-Performance Embedded Systems, Low-Power Embedded Systems, Embedded Processor Architectures, Memory Architectures, Interconnect Architectures, Storage Architectures, Compiler Techniques, Performance Optimization, Power Optimization, Predictability, Security, Reliability, Heterogeneous Architectures, Accelerator-Rich Architectures, Embedded Software, Cyber-Physical Systems, System-Level Design, System Modeling, System Analysis, System Implementation, Multi-Processor Hardware/Software Implementations, Formal Methods, Models for System Design",
+  "Summary": "Embedded Systems Week (ESWEEK) is the premier event covering all aspects of hardware and software design for intelligent and connected computing systems. ESWEEK 2025 will take place as an in-person event from September 28th to October 3rd, 2025 in Taipei, Taiwan.  ESWEEK brings together three leading conferences (CASES, CODES+ISSS, EMSOFT), one symposium (MEMOCODE), and several workshops, tutorials, and education classes.",
+  "Call for Papers": "# ESWEEK 2025: Call for Papers and Participation\n\nEmbedded Systems Week (ESWEEK) is the premier event covering all aspects of hardware and software design for intelligent and connected computing systems. ESWEEK 2025 will take place as an in-person event from **September 28th to October 3rd, 2025 in Taipei, Taiwan.**\n\nESWEEK brings together three leading conferences (CASES, CODES+ISSS, EMSOFT), one symposium (MEMOCODE), and several workshops, tutorials, and education classes.\n\n## Publication Venues\n\nESWEEK 2025 has two publication venues:\n\n*   **Journal Track:** Full-length papers describing mature work, published in the ACM Transactions on Embedded Computing Systems (TECS).\n*   **Late Breaking (LB) Result Track:** Complete and mature works written in a condensed form (limited to 4 pages), published in IEEE Embedded Systems Letters (ESL).\n\nThese two venues are mutually exclusive.\n\n## Call for Papers, Workshops, Tutorials, Special Sessions\n\nESWEEK 2025 solicits submissions for its three conferences (ACM/IEEE CASES, CODES+ISSS, EMSOFT), one symposium (MEMOCODE), workshops, tutorials, and education classes.\n\n## Important Dates\n\nAll deadlines are Anywhere on Earth (AoE):\n\n### Journal Track\n\n*   **Abstract Submission:** March 23, 2025\n*   **Full Paper Submission:** March 30, 2025 (firm)\n*   **First Round Notification:** May 18, 2025\n*   **Revised Paper Submission:** June 15, 2025\n*   **Notification of Acceptance:** July 13, 2025\n\n### Late Breaking Track\n\n*   **Paper Submission:** June 1, 2025 (firm)\n*   **Notification of Acceptance:** July 13, 2025\n\n### Workshops, Tutorials, Special Sessions, and Education Classes\n\n*   **Proposals due:** March 30, 2025\n\n## ACM/IEEE CASES\n\nACM/IEEE CASES is a premier forum where researchers, developers, and practitioners exchange information on the latest advances in compilers and architectures for high-performance, low-power embedded systems.\n\n## International Conference on Embedded Software (EMSOFT)\n\nThe ACM/IEEE International Conference on Embedded Software (EMSOFT) brings together researchers and developers from academia, industry, and government to advance the science, engineering, and technology of embedded software development.\n\n## The ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS)\n\nThe ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS) is the premier event in system-level design, modeling, analysis, and implementation of modern embedded and cyber-physical systems.\n\n## International Symposium on Formal Methods and Models for System Design (MEMOCODE)\n\nMEMOCODE focuses on formal methods and models for developing computer systems and their components. MEMOCODE’s objective is to emphasize the importance of models and methodologies in correct system design and development.\n\n## Journal-integrated Publication Model\n\nAll full papers accepted for the three conferences will be published in the ACM Transactions on Embedded Computing Systems (TECS)."
+}
+

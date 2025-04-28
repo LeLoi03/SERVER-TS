@@ -1,0 +1,35 @@
+output:
+{
+  "Conference dates": "September 9 - 12, 2025",
+  "Year": "2025",
+  "Location": "KTH Royal Institute of Technology, Stockholm, Sweden",
+  "City-State-Province": "Stockholm",
+  "Country": "Sweden",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Regular papers) Full paper Submission": "February 24, 2025",
+    "(Workshop papers) Full paper Submission": "May 5, 2025",
+    "(Position paper track) Position paper submission": "July 9, 2025"
+  },
+  "Notification Date": {
+    "(Regular papers) Author notification": "April 12, 2025",
+    "(Workshop papers) Notification of acceptance": "May 19, 2025",
+    "(Position paper track) Author notification": "July 11, 2025"
+  },
+  "Camera-ready Date": {
+    "(Regular papers) Camera ready submission": "June 1, 2025",
+    "(Workshop papers) Camera ready submission": "June 10, 2025"
+  },
+  "Registration Date": {
+    "Registration early bird deadline": "July 14, 2025"
+  },
+  "Other Date": {
+    "Workshop": "September 9, 2025",
+    "Main Conference": "September 10-12, 2025"
+  },
+  "Topics": "Safety, Security, Reliability of Critical Computer Applications, Distributed and real-time monitoring and control, Fault-tolerant and resilient hardware and software architectures, Fault detection and recovery mechanisms, Security and privacy protection mechanisms for safety applications, Safety guidelines and standards, Safety/security co-engineering and tradeoffs, Safety and security qualification, quantification, assurance and certification, Threats and vulnerability analysis, Risk assessment in safe and secure systems, Dependability analysis using simulation and experimental measurement, Model-based analysis, design, and assessment, Formal methods for verification, validation, and fault tolerance, Testing, verification, and validation methodologies and tools, Multi-concern dependability assurance and standardization",
+  "Summary": "The 44th International Conference on Computer Safety, Reliability and Security (SafeComp 2025) will take place in Stockholm, Sweden, from September 9-12, 2025. The conference theme is “Managing safety in an era of a software defined computing continuum.”",
+  "Call for Papers": "# SafeComp 2025: Call for Papers\n\nThe 44th International Conference on Computer Safety, Reliability and Security (SafeComp 2025) will take place from **September 9-12, 2025, at the KTH Royal Institute of Technology in Stockholm, Sweden.**\n\n## Theme\n\nManaging safety in an era of a software defined computing continuum\n\n## Call for Papers\n\nSafeComp is an annual event covering the state-of-the-art, experience, and new trends in the areas of safety, security, and reliability of critical computer applications. SafeComp provides ample opportunity to exchange insights and experience on emerging methods, approaches, and practical solutions. It is a single-track conference allowing easy networking.\n\nThis 44th edition of SAFECOMP is a unique occasion to explore and debate hot topics of current challenges and solutions for future safety-critical systems.\n\n## Paper Submission Guidelines\n\nWe solicit two types of paper submission (in both cases, up to 14 pages incl. bibliography):\n\n*   Research papers address a research gap and illustrate how the contribution submitted can help improve the state-of-the-art by advancing current knowledge.\n*   Practical experience reports / tool descriptions provide new insights and valuable support to practitioners.\n\nPapers exceeding the page limit will be excluded from the review process. All papers will be reviewed by at least three members of the International Programme Committee. Papers must not have been previously published or concurrently submitted elsewhere. All paper submissions must be formatted according to the LNCS templates provided by Springer. Abstracts and papers should be submitted in pdf through EasyChair.\n\n## Workshop Submission Guidelines\n\nWorkshops will take place the day preceding the conference. Workshop Chairs are Erwin Schoitsch at AIT Austrian Institute of Technology, AT, and Elena Troubitsyna at KTH, SE. Accepted contributions will, as far as the publisher’s requirements are fulfilled, be included in the SAFECOMP Workshop Proceedings.\n\n## List of Topics\n\nThe conference covers all aspects related to the development, assessment, operation, and maintenance of safety-related and safety-critical computer systems. Major topics include, but are not limited to:\n\n*   Distributed and real-time monitoring and control\n*   Fault-tolerant and resilient hardware and software architectures\n*   Fault detection and recovery mechanisms\n*   Security and privacy protection mechanisms for safety applications\n*   Safety guidelines and standards\n*   Safety/security co-engineering and tradeoffs\n*   Safety and security qualification, quantification, assurance and certification\n*   Threats and vulnerability analysis\n*   Risk assessment in safe and secure systems\n*   Dependability analysis using simulation and experimental measurement\n*   Model-based analysis, design, and assessment\n*   Formal methods for verification, validation, and fault tolerance\n*   Testing, verification, and validation methodologies and tools\n*   Multi-concern dependability assurance and standardization\n\n## Domains of Application\n\n*   Railways, automotive, space, avionics & process industries\n*   Highly automated and autonomous systems\n*   Telecommunication and networks\n*   Safety-related applications of smart systems and IoT\n*   Critical infrastructures, smart grids, SCADA\n*   Medical devices and healthcare\n*   Surveillance, defense, emergency & rescue\n*   Logistics, industrial automation, off-shore technology\n*   Education & training\n\n## Publication\n\nAll accepted research papers, practical experience reports, and tool descriptions will be published by Springer in the LNCS series (Lecture Notes on Computer Science) in the SafeComp and the SafeComp Workshop volumes.\n\n## Important Dates\n\n*   **Regular papers**\n    *   Full paper Submission: February 24, 2025 (AoE)\n    *   Author notification: April 12, 2025 (AoE)\n    *   Camera ready submission: June 1, 2025 (AoE)\n*   **Workshop papers**\n    *   Full paper Submission: May 5, 2025 (AoE)\n    *   Notification of acceptance: May 19, 2025 (AoE)\n    *   Camera ready submission: June 10, 2025 (AoE)\n*   **Position paper track**\n    *   Position paper submission: July 9, 2025 (AoE)\n    *   Author notification: July 11, 2025 (AoE)\n*   **Registration**\n    *   Registration early bird deadline: July 14, 2025\n*   **Conference & Workshops**\n    *   Workshops: September 9, 2025\n    *   Main Conference: September 10-12, 2025\n\n## Contact\n\nAll questions about submissions should be emailed to [safecomp2025 (at) easychair (dot) org](mailto:safecomp2025@easychair.org)."
+}
+

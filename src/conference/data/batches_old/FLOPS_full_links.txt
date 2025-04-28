@@ -1,0 +1,1281 @@
+Conference full name: International Symposium on Functional and Logic Programming (FLOPS)
+
+1. Website of FLOPS_3: https://conf.researchr.org/home/flops-2024
+Website information of FLOPS_3:
+
+href="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+Wed 15 - Fri 17 May 2024href="https://conf.researchr.org/venue/flops-2024/flops-2024-venue" - Kumamoto, Japan
+Toggle navigation 
+ Attending | href="https://conf.researchr.org/venue/flops-2024/flops-2024-venue" - Venue: Kumamoto City International Center 
+ href="https://conf.researchr.org/attending/flops-2024/excursion" - Excursion and Banquet 
+ href="https://conf.researchr.org/attending/flops-2024/registration" - Registration 
+ href="https://conf.researchr.org/attending/flops-2024/announcements-to-participants" - Announcements to Participants 
+ Program | href="https://conf.researchr.org/program/flops-2024/program-flops-2024/" - FLOPS Program 
+ href="https://conf.researchr.org/program/flops-2024/program-flops-2024/" - Your Program 
+ href="https://conf.researchr.org/program/flops-2024/program-flops-2024/" - Wed 15 May 
+ href="https://conf.researchr.org/program/flops-2024/program-flops-2024/" - Thu 16 May 
+ href="https://conf.researchr.org/program/flops-2024/program-flops-2024/" - Fri 17 May 
+ href="https://conf.researchr.org/home/flops-2024" - Track/Call 
+ Organization | FLOPS 2024 Committees 
+ Organizing Committee 
+ href="https://conf.researchr.org/committee/flops-2024/flops-2024-programme-chairs" - Program Chairs 
+ Program committee 
+ Track Committees 
+ Programme Committee 
+ Contributors 
+ href="https://conf.researchr.org/people-index/flops-2024" - People Index 
+ href="https://conf.researchr.org/search/flops-2024//all" - Search 
+ Series | href="https://conf.researchr.org/series/flops" - Series 
+ FLOPS 2024 
+ href="https://conf.researchr.org/home/flops-2022" - FLOPS 2022 
+ href="https://conf.researchr.org/signin/flops-2024/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esflops-2024" - Sign in 
+ href="https://conf.researchr.org/signup/flops-2024" - Sign up 
+ Kumamoto Castle 
+ Suizenji Jojuen 
+ FLOPS 2024 (href="https://conf.researchr.org/series/flops" - series
+) /FLOPS 2024 
+ About 
+ Program 
+ Welcome to the website of the 17th International Symposium on Functional and Logic Programming (FLOPS 2024). FLOPS 2024 is co-sponsored bySpecial Interest Group on Programming and Programming Languages (SIG-PPL),Japan Society for Software Science and Technology (JSSST), in cooperation withACM SIGPLAN. 
+ Thehref="https://link.springer.com/book/10.1007/978-981-97-2300-3" - FLOPS 2024 proceedings
+are now available online (free to read and download until end of June 2024). 
+ href="#about-flops" - About FLOPS
+FLOPS aims to bring together practitioners, researchers and implementers of declarative programming, to discuss mutually interesting results and common problems: theoretical advances, their implementations in language systems and tools, and applications of these systems in practice. The scope includes all aspects of the design, semantics, theory, applications, implementations, and teaching of declarative programming. FLOPS specifically aims to promote cross-fertilization between theory and practice and among different styles of declarative programming. 
+ Previous FLOPS meetings were held at Fuji Susono (1995), Shonan Village (1996), Kyoto (1998), Tsukuba (1999),href="https://www.ueda.info.waseda.ac.jp/flops2001/" - Tokyo
+(2001), Aizu (2002),href="http://www.cs.tsukuba.ac.jp/~kam/flops2004/" - Nara
+(2004), Fuji Susono (2006),href="http://www.math.nagoya-u.ac.jp/~garrigue/FLOPS2008/" - Ise
+(2008),href="https://web.archive.org/web/20161224011357/http://www.kb.ecei.tohoku.ac.jp/flops2010/wiki/index.php?FrontPage" - Sendai
+(2010),href="http://www.org.kobe-u.ac.jp/flops2012/" - Kobe
+(2012),href="http://www.jaist.ac.jp/flops2014/" - Kanazawa
+(2014),href="http://www.info.kochi-tech.ac.jp/FLOPS2016/#pc" - Kochi
+(2016), Nagoya (2018),href="https://www.ipl.riec.tohoku.ac.jp/FLOPS2020/#program" - Akita online
+(2020), andhref="https://conf.researchr.org/home/flops-2022" - Kyoto online
+(2022). 
+ Schedule Overview 
+  
+ Wed 15 May | Thu 16 May | Fri 17 May 
+ 9:30 – 17:30 
+ Keynote talk and research talks | 9:30 – 12:00 
+ Keynote talk and research talks 
+  
+ 14:00 – 19:45 
+ Excursion and Banquet | 9:30 – 16:30 
+ Keynote talks and research talks 
+ Highlights 
+ href="https://conf.researchr.org/details/flops-2024/flops-2024-papers/3/Verification-of-Refactoring-in-Answer-Set-Programming" - Verification of Refactoring in Answer Set ProgrammingYuliya Lierler
+href="https://conf.researchr.org/details/flops-2024/flops-2024-papers/2/Algebraic-Connection-between-Logic-Programming-and-Machine-Learning" - Algebraic Connection between Logic Programming and Machine LearningKatsumi Inoue
+href="https://conf.researchr.org/details/flops-2024/flops-2024-papers/1/Continuations-from-Three-Angles" - Continuations from Three AnglesYouyou Cong
+href="https://conf.researchr.org/details/flops-2024/flops-2024-papers/4/Verse-A-New-Functional-Logic-Language" - Verse: A New Functional Logic LanguageLennart Augustsson
+Accepted Papers 
+  
+ Title 
+ A Complete Dependency Pair Framework for Almost-Sure Innermost Termination of Probabilistic Term RewritingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/janchristophkassing" - Jan-Christoph Kassing
+,href="https://conf.researchr.org/profile/flops-2024/stefandollase" - Stefan Dollase
+,href="https://conf.researchr.org/profile/flops-2024/jurgengiesl" - Jürgen Giesl 
+ An ML-Style Module System for Cross-Stage Type Abstraction in Multi-Stage ProgrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/takashisuwa1" - Takashi Suwa
+,href="https://conf.researchr.org/profile/flops-2024/atsushiigarashi" - Atsushi Igarashi 
+ Declarative Pearl: Rigged ContractsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/alexandervandenbroucke1" - Alexander Vandenbroucke
+,href="https://conf.researchr.org/profile/flops-2024/tomschrijvers" - Tom Schrijvers 
+ DeepLLM: Casting Dialog Threads into Logic ProgramsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/paultarau" - Paul Tarau 
+ Grants4Companies: Applying declarative methods for recommending and reasoning about business grants in the Austrian public administration (System description)FLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/bjoernlellmann" - Bjoern Lellmann
+,href="https://conf.researchr.org/profile/flops-2024/philippmarek1" - Philipp Marek
+,href="https://conf.researchr.org/profile/flops-2024/markustriska" - Markus Triska 
+ Inferring Non-Failure Conditions for Declarative ProgramsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/michaelhanus" - Michael Hanus 
+ Language-parameterized Proofs for Functional Languages with SubtypingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/sethgalasso" - Seth Galasso
+,href="https://conf.researchr.org/profile/flops-2024/matteocimini" - Matteo Cimini 
+ MetaOCaml: Ten Years Later (System Description)FLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/olegkiselyov" - Oleg Kiselyov 
+ Practical Constant-Time Memory Management for Functional ProgrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/chunkitlam" - Chun Kit Lam
+,href="https://conf.researchr.org/profile/flops-2024/lionelparreaux" - Lionel Parreaux
+Pre-print 
+ System Description: ACGtk: A Toolkit for Developing and Running Abstract Categorial GrammarsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/maximeguillaume" - Maxime Guillaume
+,href="https://conf.researchr.org/profile/flops-2024/sylvainpogodalla" - Sylvain Pogodalla
+,href="https://conf.researchr.org/profile/flops-2024/vincenttourneur" - Vincent Tourneur 
+ System Description: A theorem-prover for subregular systems: The Language Toolkit and its interpreter, plebbyFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/dakotahlambert" - Dakotah Lambert 
+ [System description paper] A Constraint-based Mathematical Modeling Library in Prolog with Answer Constraint SemanticsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/francoisfages" - François Fages 
+ [System Description] Rhyme: A Data-Centric Multi-Paradigm Query Language based on Functional Logic MetaprogrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/supunabeysinghe1" - Supun Abeysinghe
+,href="https://conf.researchr.org/profile/flops-2024/tiarkrompf" - Tiark Rompf 
+ Tabulation with ZippersFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/marcosviera" - Marcos Viera
+,href="https://conf.researchr.org/profile/flops-2024/albertopardo" - Alberto Pardo
+,href="https://conf.researchr.org/profile/flops-2024/joaosaraiva" - João Saraiva 
+ Term Evaluation Systems with Refinements: First-Order, Second-Order, and Contextual ImprovementFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/kokomuroya" - Koko Muroya
+,href="https://conf.researchr.org/profile/flops-2024/makotohamana" - Makoto Hamana 
+ Call for Papers 
+ FLOPS solicits original papers in all areas of declarative programming: 
+ functional, logic, functional-logic programming, rewriting systems, formal methods and model checking, program transformations and program refinements, developing programs with the help of theorem provers or SAT/SMT solvers, verifying properties of programs using declarative programming techniques; 
+ foundations, language design, implementation issues (compilation techniques, memory management, run-time systems, etc.), applications and case studies. 
+ FLOPS promotes cross-fertilization among different styles of declarative programming. Therefore, research papers must be written to be understandable by a wide audience of declarative programmers and researchers. In particular, each submission should explain its contributions in both general and technical terms, clearly identifying what has been accomplished, explaining why it is significant for its area, and comparing it with previous work. Submission of system descriptions and declarative pearls are especially encouraged. 
+ href="#submission" - Submission
+Submissions should fall into one of the following categories: 
+ Regular research papers: they should describe new results and will be judged on originality, correctness, and significance. 
+ System descriptions: they should describe a working system and will be judged on originality, usefulness, and design. 
+ Declarative pearls: new and excellent declarative programs or theories with illustrative applications. 
+ System descriptions and declarative pearls must be explicitly marked as such in the title. 
+ Submissions must be unpublished and not submitted for publication elsewhere. Work that already appeared in unpublished or informally published workshops proceedings may be submitted. Authors must followhref="https://www.springernature.com/gp/authors/book-authors-code-of-conduct" - Springer’s Code of Conduct
+. See also theACM SIGPLAN Republication Policy. At least one author of each accepted paper should plan to attend the conference in person to present the work: there will be no general facility for online or pre-recorded presentation (but we will do our best to accommodate visa issues and similar unavoidable obstacles). 
+ Submissions must be written in English and can be up to 15 pages excluding references, though system descriptions and pearls are typically shorter. The formatting has to conform toSpringer’s guidelines. Regular research papers should be supported by proofs and/or experimental results. In case of lack of space, this supporting information should be made accessible otherwise (e.g., a link to an anonymized web page or an appendix, which does not count towards the page limit). However, it is the responsibility of the authors to guarantee that their paper can be understood and appreciated without referring to this supporting information; reviewers may simply choose not to look at it when writing their review. 
+ Papers should be submitted electronically athref="https://easychair.org/conferences/?conf=flops2024" - https://easychair.org/conferences/?conf=flops2024
+. 
+ Reviewing process 
+ FLOPS 2024 will employ alight double-blindreviewing process; reviewers will not see author names until they submit a review. To facilitate this, submitted papers must adhere to two rules: 
+ author names and institutions must be omitted, and 
+ references to authors’ own related work should be in the third person (e.g., not “We build on our previous work…” but rather “We build on the work of…”). 
+ The purpose of this process is to help the reviewers come to an initial judgement about the paper without bias, not to make it impossible for them to discover the authors if they were to try. Nothing should be done in the name of anonymity that weakens the submission or makes the job of reviewing the paper more difficult (e.g., important background references should not be omitted or anonymized). In addition, authors should feel free to disseminate their ideas or draft versions of their paper as they normally would. For instance, authors may post drafts of their papers on the web or give talks on their research ideas. 
+ Publication 
+ The proceedings will be published by Springer International Publishing in theLecture Notes in Computer Science (LNCS) series. 
+ We expect to invite the authors of four to seven of the best papers to submit an extended version of their FLOPS paper to a special issue which will appear in the journalScience of Computer Programming (SCP). 
+ href="#important-dates" - Important dates
+All deadlines are Anywhere on Earth (AoE = UTC-12). 
+ Abstract due: Wed 6th Dec 2023 
+ Submission deadline: Wed 13th Dec 2023 
+ Notifications: Fri 26th Jan 2024 
+ Final versions due: Wed 28th Feb 2024 
+ Financial Supporters 
+ FLOPS 2024 is supported by 
+ Japan Society for Software Science and Technology ( | https://www.jssst.or.jp/ | ) 
+ KDDI Foundation ( | https://www.kddi-foundation.or.jp/english/ | ) 
+ Support Center for Advanced Telecommunications Technology Research ( | https://www.scat.or.jp/en/ | ) 
+ Dates 
+ Wed 15 May 2024 
+ Thu 16 May 2024 
+ Fri 17 May 2024 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT+09:00) Osaka, Sapporo, Tokyo.Use conference time zone: (GMT+09:00) Osaka, Sapporo, TokyoSelect other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Wed 15 May 
+ Displayed time zone:Osaka, Sapporo, Tokyochange 
+  
+ 09:20 - 09:30 | Openinghref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 09:30 - 10:30 | Invited Talkhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/jeremygibbons" - Jeremy Gibbons
+Department of Computer Science, University of Oxford 
+ 09:30 
+ 60m 
+ Keynote | Algebraic Connection between Logic Programming and Machine LearningFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/katsumiinoue" - Katsumi Inoue
+NII 
+  
+ 10:30 - 11:00 | Coffee breakhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 11:00 - 12:00 | Program Analysishref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/francoisfages" - François Fages
+Inria Saclay - Ile de France 
+ 11:00 
+ 30m 
+ Talk | Inferring Non-Failure Conditions for Declarative ProgramsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/michaelhanus" - Michael Hanus
+Kiel University 
+ 11:30 
+ 30m 
+ Full-paper | Practical Constant-Time Memory Management for Functional ProgrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/chunkitlam" - Chun Kit Lam
+Hong Kong University of Science and Technology,href="https://conf.researchr.org/profile/flops-2024/lionelparreaux" - Lionel Parreaux
+HKUST (The Hong Kong University of Science and Technology) 
+ Pre-print 
+  
+ 12:00 - 14:00 | Lunchhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 14:00 - 15:30 | Rewritinghref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/matteocimini" - Matteo Cimini
+University of Massachusetts Lowell 
+ 14:00 
+ 30m 
+ Talk | System Description: ACGtk: A Toolkit for Developing and Running Abstract Categorial GrammarsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/maximeguillaume" - Maxime Guillaume
+Yseop/INRIA,href="https://conf.researchr.org/profile/flops-2024/sylvainpogodalla" - Sylvain Pogodalla
+LORIA/INRIA Lorraine,href="https://conf.researchr.org/profile/flops-2024/vincenttourneur" - Vincent Tourneur
+LORIA/INRIA Nancy 
+ 14:30 
+ 30m 
+ Talk | Term Evaluation Systems with Refinements: First-Order, Second-Order, and Contextual ImprovementFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/kokomuroya" - Koko Muroya
+RIMS, Kyoto University,href="https://conf.researchr.org/profile/flops-2024/makotohamana" - Makoto Hamana
+Kyushu Institute of Technology, Japan 
+ 15:00 
+ 30m 
+ Talk | A Complete Dependency Pair Framework for Almost-Sure Innermost Termination of Probabilistic Term RewritingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/janchristophkassing" - Jan-Christoph Kassing
+RWTH Aachen,href="https://conf.researchr.org/profile/flops-2024/stefandollase" - Stefan Dollase
+RWTH Aachen, Research Group Computer Science 2,href="https://conf.researchr.org/profile/flops-2024/jurgengiesl" - Jürgen Giesl
+RWTH Aachen University 
+  
+ 15:30 - 16:00 | Coffee breakhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 16:00 - 17:30 | Metaprogramminghref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/michaelhanus" - Michael Hanus
+Kiel University 
+ 16:00 
+ 30m 
+ Talk | MetaOCaml: Ten Years Later (System Description)FLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/olegkiselyov" - Oleg Kiselyov
+Tohoku University 
+ 16:30 
+ 30m 
+ Talk | An ML-Style Module System for Cross-Stage Type Abstraction in Multi-Stage ProgrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/takashisuwa1" - Takashi Suwa
+Kyoto University and National Institute of Informatics,href="https://conf.researchr.org/profile/flops-2024/atsushiigarashi" - Atsushi Igarashi
+Kyoto University 
+ 17:00 
+ 30m 
+ Talk | [System Description] Rhyme: A Data-Centric Multi-Paradigm Query Language based on Functional Logic MetaprogrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/supunabeysinghe1" - Supun Abeysinghe
+Purdue University,href="https://conf.researchr.org/profile/flops-2024/tiarkrompf" - Tiark Rompf
+Purdue University 
+ Thu 16 May 
+ Displayed time zone:Osaka, Sapporo, Tokyochange 
+  
+ 09:30 - 10:30 | Invited Talkhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/olegkiselyov" - Oleg Kiselyov
+Tohoku University 
+ 09:30 
+ 60m 
+ Keynote | Verse: A New Functional Logic LanguageFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/lennartaugustsson" - Lennart Augustsson
+Epic Games 
+  
+ 10:30 - 11:00 | Coffee breakhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 11:00 - 12:00 | Algebrahref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/lennartaugustsson" - Lennart Augustsson
+Epic Games 
+ 11:00 
+ 30m 
+ Talk | Tabulation with ZippersFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/marcosviera" - Marcos Viera
+University of the Republic, Uruguay,href="https://conf.researchr.org/profile/flops-2024/albertopardo" - Alberto Pardo
+Universidad de la Republica, Uruguay,href="https://conf.researchr.org/profile/flops-2024/joaosaraiva" - João Saraiva
+HASLab/INESC TEC, University of Minho 
+ 11:30 
+ 30m 
+ Talk | Declarative Pearl: Rigged ContractsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/alexandervandenbroucke1" - Alexander Vandenbroucke
+Standard Chartered,href="https://conf.researchr.org/profile/flops-2024/tomschrijvers" - Tom Schrijvers
+KU Leuven 
+  
+ 12:00 - 14:00 | Lunchhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 14:00 - 19:45 | Excursion and banquethref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+ Fri 17 May 
+ Displayed time zone:Osaka, Sapporo, Tokyochange 
+  
+ 09:30 - 10:30 | Invited Talkhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/shinyakatsumata" - Shin-ya Katsumata
+Kyoto Sangyo University 
+ 09:30 
+ 60m 
+ Keynote | Verification of Refactoring in Answer Set ProgrammingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/yuliyalierler" - Yuliya Lierler
+University of Nebraska 
+  
+ 10:30 - 11:00 | Coffee breakhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 11:00 - 12:00 | Proofshref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/kokomuroya" - Koko Muroya
+RIMS, Kyoto University 
+ 11:00 
+ 30m 
+ Talk | Language-parameterized Proofs for Functional Languages with SubtypingFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/sethgalasso" - Seth Galasso
+University of Massachusetts Lowell,href="https://conf.researchr.org/profile/flops-2024/matteocimini" - Matteo Cimini
+University of Massachusetts Lowell 
+ 11:30 
+ 30m 
+ Talk | System Description: A theorem-prover for subregular systems: The Language Toolkit and its interpreter, plebbyFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/dakotahlambert" - Dakotah Lambert
+Université Jean Monnet 
+  
+ 12:00 - 13:30 | Lunchhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 13:30 - 15:00 | Applicationshref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/youyoucong" - Youyou Cong
+Tokyo Institute of Technology 
+ 13:30 
+ 30m 
+ Talk | DeepLLM: Casting Dialog Threads into Logic ProgramsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/paultarau" - Paul Tarau
+University of North Texas 
+ 14:00 
+ 30m 
+ Talk | [System description paper] A Constraint-based Mathematical Modeling Library in Prolog with Answer Constraint SemanticsFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/francoisfages" - François Fages
+Inria Saclay - Ile de France 
+ 14:30 
+ 30m 
+ Talk | Grants4Companies: Applying declarative methods for recommending and reasoning about business grants in the Austrian public administration (System description)FLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/bjoernlellmann" - Bjoern Lellmann
+Bundesministerium für Finanzen,href="https://conf.researchr.org/profile/flops-2024/philippmarek1" - Philipp Marek
+BRZ,href="https://conf.researchr.org/profile/flops-2024/markustriska" - Markus Triska
+Bundesministerium für Finanzen 
+  
+ 15:00 - 15:30 | Coffee breakhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+  
+ 15:30 - 16:30 | Invited Talkhref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+ 
+ Chair(s):href="https://conf.researchr.org/profile/flops-2024/naohikohoshino1" - Naohiko Hoshino
+Sojo University 
+ 15:30 
+ 60m 
+ Keynote | Continuations from Three AnglesFLOPS 2024 
+ href="https://conf.researchr.org/profile/flops-2024/youyoucong" - Youyou Cong
+Tokyo Institute of Technology 
+  
+ 16:30 - 16:40 | Closinghref="https://conf.researchr.org/home/flops-2024" - FLOPS 2024 
+ Important DatesAoE (UTC-12h) 
+  
+ Wed 15 May 2024 
+ Symposium starts 
+ Tue 7 May - Tue 14 May 2024 
+ Late registration 
+ Wed 27 Mar - Tue 7 May 2024 
+ Early registration (extended to 7 May) 
+ Wed 28 Feb 2024 
+ Final versions due 
+ Fri 26 Jan 2024 
+ Notifications 
+ Wed 13 Dec 2023 
+ Submission deadline 
+ Wed 6 Dec 2023 
+ Abstracts due 
+ Submission Link 
+ href="https://easychair.org/conferences/?conf=flops2024" - https://easychair.org/conferences/?conf=flops2024
+Programme Committee 
+ href="https://conf.researchr.org/profile/flops-2024/jeremygibbons" - Jeremy GibbonsCo-chairDepartment of Computer Science, University of OxfordUnited Kingdom 
+ href="https://conf.researchr.org/profile/flops-2024/dalemiller" - Dale MillerCo-chairINRIA Saclay and LIX/Institut Polytechnique de ParisFrance 
+ Sandra AlvesCommittee Member 
+ University of Porto 
+ Portugal 
+ Matteo CiminiCommittee Member 
+ University of Massachusetts Lowell 
+ United States 
+ Maribel FernandezCommittee Member 
+ King's College London 
+ United Kingdom 
+ Carsten FuhsCommittee Member 
+ Birkbeck, University of London 
+ United Kingdom 
+ Robert GlückCommittee Member 
+ University of Copenhagen 
+ Denmark 
+ Patricia JohannCommittee Member 
+ Appalachian State University 
+ Yukiyoshi KameyamaCommittee Member 
+ University of Tsukuba 
+ Japan 
+ Ekaterina KomendantskayaCommittee Member 
+ Heriot-Watt University and Southampton University 
+ United Kingdom 
+ Y. Annie LiuCommittee Member 
+ Stony Brook University 
+ United States 
+ Anil MadhavapeddyCommittee Member 
+ University of Cambridge, UK 
+ United Kingdom 
+ Aart MiddeldorpCommittee Member 
+ Akimasa MorihataCommittee Member 
+ University of Tokyo 
+ Japan 
+ Gopalan NadathurCommittee Member 
+ University of Minnesota 
+ United States 
+ Carlos OlarteCommittee Member 
+ CNRS; LIPN; Université Sorbonne Paris Nord 
+ France 
+ Andreas RossbergCommittee Member 
+ Independent 
+ Germany 
+ João SaraivaCommittee Member 
+ HASLab/INESC TEC, University of Minho 
+ Portugal 
+ Alexis SaurinCommittee Member 
+ Paul TarauCommittee Member 
+ University of North Texas 
+ United States 
+ Tachio TerauchiCommittee Member 
+ Waseda University 
+ Japan 
+ Alwen TiuCommittee Member 
+ Kanae TsushimaCommittee Member 
+ National Institute of Informatics, Japan 
+ Japan 
+ xWed 9 Apr 10:55 
+ href="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support/flops-2024" - Support page
+ 
+ Tracks 
+ href="https://conf.researchr.org/home/flops-2024" - FLOPS 2024
+Attending 
+ href="https://conf.researchr.org/venue/flops-2024/flops-2024-venue" - Venue: Kumamoto City International Center
+ 
+ href="https://conf.researchr.org/attending/flops-2024/excursion" - Excursion and Banquet
+ 
+ href="https://conf.researchr.org/attending/flops-2024/registration" - Registration
+ 
+ href="https://conf.researchr.org/attending/flops-2024/announcements-to-participants" - Announcements to Participants
+: 
+ :
+
+2. Website of FLOPS_3: http://www.wikicfp.com/cfp/program?id=1048
+Website information of FLOPS_3:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ FLOPS: International Symposium on Functional and Logic Programming 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=1048&text=FLOPS: International Symposium on Functional and Logic Programming" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=1048" - | FLOPS: International Symposium on Functional and Logic Programming | href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=1048&text=FLOPS: International Symposium on Functional and Logic Programming" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=1048" - 
+ FLOPS: International Symposium on Functional and Logic Programming 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=1048&text=FLOPS: International Symposium on Functional and Logic Programming" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=1048" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=1048" - 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/flops/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=International Symposium on Functional and Logic Programming&shortname=FLOPS&year=2025&sid=1048" - 2025 or later | Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/flops/index.html" - DBLP | Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=International Symposium on Functional and Logic Programming&shortname=FLOPS&year=2025&sid=1048" - 2025 or later 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/flops/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=International Symposium on Functional and Logic Programming&shortname=FLOPS&year=2025&sid=1048" - 2025 or later 
+ All CFPs on WikiCFP 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=175554&copyownerid=29520" - FLOPS 2024 | FLOPS 2024: 17th International Symposium on Functional and Logic Programming 
+ May 15, 2024 - May 17, 2024 | Kumamoto, Japan | Dec 13, 2023 (Dec 6, 2023) 
+ href="/cfp/servlet/event.showcfp?eventid=160920&copyownerid=41812" - FLOPS 2022 | International Symposium on Functional and Logic Programming 
+ May 10, 2022 - May 12, 2022 | Online | Dec 12, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=95242&copyownerid=41812" - FLOPS 2020 | International Symposium on Functional and Logic Programming 
+ Apr 23, 2020 - Apr 25, 2020 | Akita, Japan | Nov 22, 2019 (Nov 15, 2019) 
+ href="/cfp/servlet/event.showcfp?eventid=65962&copyownerid=101140" - FLOPS 2018 | International Symposium on Functional and Logic Programming 
+ May 9, 2018 - May 11, 2018 | Nagoya, Japan | Dec 4, 2017 (Nov 29, 2017) 
+ href="/cfp/servlet/event.showcfp?eventid=48271&copyownerid=41812" - FLOPS 2016 | International Symposium on Functional and Logic Programming 
+ Mar 3, 2016 - Mar 6, 2016 | Kochi, Japan | Sep 25, 2015 (Sep 21, 2015) 
+ href="/cfp/servlet/event.showcfp?eventid=31871&copyownerid=2" - FLOPS 2014 | International Symposium on Functional and Logic Programming 
+ Jun 4, 2014 - Jun 6, 2014 | Kanazawa, Japan | Dec 13, 2013 
+ href="/cfp/servlet/event.showcfp?eventid=18085&copyownerid=2" - FLOPS 2012 | International Symposium on Functional and Logic Programming 
+ May 23, 2012 - May 25, 2012 | Kobe, Japan | Dec 9, 2011 
+ href="/cfp/servlet/event.showcfp?eventid=5773&copyownerid=2" - FLOPS 2010 | Tenth International Symposium on Functional and Logic Programming 
+ Apr 19, 2010 - Apr 19, 2010 | Sendai, Japan | Nov 3, 2009 (Oct 27, 2009) | Event | When | Where | Deadline | href="/cfp/servlet/event.showcfp?eventid=175554&copyownerid=29520" - FLOPS 2024 | FLOPS 2024: 17th International Symposium on Functional and Logic Programming | May 15, 2024 - May 17, 2024 | Kumamoto, Japan | Dec 13, 2023 (Dec 6, 2023) | href="/cfp/servlet/event.showcfp?eventid=160920&copyownerid=41812" - FLOPS 2022 | International Symposium on Functional and Logic Programming | May 10, 2022 - May 12, 2022 | Online | Dec 12, 2021 | href="/cfp/servlet/event.showcfp?eventid=95242&copyownerid=41812" - FLOPS 2020 | International Symposium on Functional and Logic Programming | Apr 23, 2020 - Apr 25, 2020 | Akita, Japan | Nov 22, 2019 (Nov 15, 2019) | href="/cfp/servlet/event.showcfp?eventid=65962&copyownerid=101140" - FLOPS 2018 | International Symposium on Functional and Logic Programming | May 9, 2018 - May 11, 2018 | Nagoya, Japan | Dec 4, 2017 (Nov 29, 2017) | href="/cfp/servlet/event.showcfp?eventid=48271&copyownerid=41812" - FLOPS 2016 | International Symposium on Functional and Logic Programming | Mar 3, 2016 - Mar 6, 2016 | Kochi, Japan | Sep 25, 2015 (Sep 21, 2015) | href="/cfp/servlet/event.showcfp?eventid=31871&copyownerid=2" - FLOPS 2014 | International Symposium on Functional and Logic Programming | Jun 4, 2014 - Jun 6, 2014 | Kanazawa, Japan | Dec 13, 2013 | href="/cfp/servlet/event.showcfp?eventid=18085&copyownerid=2" - FLOPS 2012 | International Symposium on Functional and Logic Programming | May 23, 2012 - May 25, 2012 | Kobe, Japan | Dec 9, 2011 | href="/cfp/servlet/event.showcfp?eventid=5773&copyownerid=2" - FLOPS 2010 | Tenth International Symposium on Functional and Logic Programming | Apr 19, 2010 - Apr 19, 2010 | Sendai, Japan | Nov 3, 2009 (Oct 27, 2009) 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=175554&copyownerid=29520" - FLOPS 2024 | FLOPS 2024: 17th International Symposium on Functional and Logic Programming 
+ May 15, 2024 - May 17, 2024 | Kumamoto, Japan | Dec 13, 2023 (Dec 6, 2023) 
+ href="/cfp/servlet/event.showcfp?eventid=160920&copyownerid=41812" - FLOPS 2022 | International Symposium on Functional and Logic Programming 
+ May 10, 2022 - May 12, 2022 | Online | Dec 12, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=95242&copyownerid=41812" - FLOPS 2020 | International Symposium on Functional and Logic Programming 
+ Apr 23, 2020 - Apr 25, 2020 | Akita, Japan | Nov 22, 2019 (Nov 15, 2019) 
+ href="/cfp/servlet/event.showcfp?eventid=65962&copyownerid=101140" - FLOPS 2018 | International Symposium on Functional and Logic Programming 
+ May 9, 2018 - May 11, 2018 | Nagoya, Japan | Dec 4, 2017 (Nov 29, 2017) 
+ href="/cfp/servlet/event.showcfp?eventid=48271&copyownerid=41812" - FLOPS 2016 | International Symposium on Functional and Logic Programming 
+ Mar 3, 2016 - Mar 6, 2016 | Kochi, Japan | Sep 25, 2015 (Sep 21, 2015) 
+ href="/cfp/servlet/event.showcfp?eventid=31871&copyownerid=2" - FLOPS 2014 | International Symposium on Functional and Logic Programming 
+ Jun 4, 2014 - Jun 6, 2014 | Kanazawa, Japan | Dec 13, 2013 
+ href="/cfp/servlet/event.showcfp?eventid=18085&copyownerid=2" - FLOPS 2012 | International Symposium on Functional and Logic Programming 
+ May 23, 2012 - May 25, 2012 | Kobe, Japan | Dec 9, 2011 
+ href="/cfp/servlet/event.showcfp?eventid=5773&copyownerid=2" - FLOPS 2010 | Tenth International Symposium on Functional and Logic Programming 
+ Apr 19, 2010 - Apr 19, 2010 | Sendai, Japan | Nov 3, 2009 (Oct 27, 2009) 
+ Present CFP : 2024 
+ ============================================================================ 
+ Call For Papers 
+  
+ FLOPS 2024: 17th International Symposium on Functional and Logic Programming 
+ ============================================================================ 
+  
+ May 15-17, 2024, Kumamoto, Japan 
+  
+ https://conf.researchr.org/home/flops-2024 
+  
+ FLOPS aims to bring together practitioners, researchers and 
+ implementers of declarative programming, to discuss mutually 
+ interesting results and common problems: theoretical advances, their 
+ implementations in language systems and tools, and applications of 
+ these systems in practice. The scope includes all aspects of the 
+ design, semantics, theory, applications, implementations, and teaching 
+ of declarative programming. FLOPS specifically aims to promote 
+ cross-fertilization between theory and practice and among different 
+ styles of declarative programming. 
+  
+ Previous FLOPS meetings were held at Fuji Susono (1995), Shonan 
+ Village (1996), Kyoto (1998), Tsukuba (1999), Tokyo (2001), Aizu 
+ (2002), Nara (2004), Fuji Susono (2006), Ise (2008), Sendai (2010), 
+ Kobe (2012), Kanazawa (2014), Kochi (2016), Nagoya (2018), Akita 
+ (2020, online), and Kyoto (2022, online). 
+
+*** Scope *** 
+  
+ FLOPS solicits original papers in all areas of declarative programming: 
+  
+ * functional, logic, functional-logic programming, rewriting systems, 
+ formal methods and model checking, program transformations and 
+ program refinements, developing programs with the help of theorem 
+ provers or SAT/SMT solvers, verifying properties of programs using 
+ declarative programming techniques; 
+  
+ * foundations, language design, implementation issues (compilation 
+ techniques, memory management, run-time systems, etc.), applications 
+ and case studies. 
+  
+ FLOPS promotes cross-fertilization among different styles of 
+ declarative programming. Therefore, research papers must be written to 
+ be understandable by a wide audience of declarative programmers and 
+ researchers. In particular, each submission should explain its 
+ contributions in both general and technical terms, clearly identifying 
+ what has been accomplished, explaining why it is significant for its 
+ area, and comparing it with previous work. Submission of system 
+ descriptions and declarative pearls are especially encouraged. 
+
+*** Submission *** 
+  
+ Submissions should fall into one of the following categories: 
+  
+ * Regular research papers: they should describe new results and will 
+ be judged on originality, correctness, and significance. 
+  
+ * System descriptions: they should describe a working system and will 
+ be judged on originality, usefulness, and design. 
+  
+ * Declarative pearls: new and excellent declarative programs or 
+ theories with illustrative applications. 
+  
+ System descriptions and declarative pearls must be explicitly marked 
+ as such in the title. Submissions must be unpublished and not 
+ submitted for publication elsewhere. Work that already appeared in 
+ unpublished or informally published workshops proceedings may be 
+ submitted. Submissions must be written in English and can be up to 15 
+ pages excluding references, though system descriptions and pearls are 
+ typically shorter. The formatting has to conform to Springer’s LNCS 
+ guidelines. FLOPS 2024 will employ a lightweight double-blind reviewing process. 
+  
+ For more details, see 
+  
+ https://conf.researchr.org/home/flops-2024 
+  
+ Papers should be submitted electronically at 
+  
+ https://easychair.org/conferences/?conf=flops2024 
+
+*** Publication *** 
+  
+ The proceedings will be published by Springer in the LNCS series. We 
+ expect to invite the authors of a selection of the best papers to 
+ submit an extended version of their FLOPS paper to a special issue 
+ which will appear in the journal Science of Computer Programming. 
+
+*** Important Dates *** 
+  
+ All deadlines are Anywhere on Earth (AoE = UTC-12). 
+  
+ * Abstract due: Wed 6th Dec 2023 
+ * Submission deadline: Wed 13th Dec 2023 
+ * Notifications: Wed 31st Jan 2024 
+ * Final versions due: Wed 28th Feb 2024 
+
+*** Organizers *** 
+  
+ Shin-ya Katsumata National Institute of Informatics, JP (General Chair) 
+ Jeremy Gibbons University of Oxford, UK (PC Co-Chair) 
+ Dale Miller INRIA Saclay and LIX/IPP, FR (PC Co-Chair) 
+ Naohiko Hoshino Sojo University, JP (Local Chair) 
+  
+ *** FLOPS sponsorship *** 
+  
+ This symposium is sponsored by JSSST-SIGPPL (http://ppl.jssst.or.jp/). 
+  
+ *** Contact Address *** 
+  
+ flops2024@easychair.org 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=186057" - ICLP 2025
+International Conference on Logic Programming 
+ href="/cfp/servlet/event.showcfp?eventid=185101" - VL/HCC 2025
+IEEE Symposium on Visual Languages and Human-Centric Computing 
+ href="/cfp/servlet/event.showcfp?eventid=186493" - HCVS 2025
+12th Workshop on Horn Clauses for Verification and Synthesis 
+ href="/cfp/servlet/event.showcfp?eventid=181076" - CAIJ 2025
+Computer Applications: An International Journal 
+ href="/cfp/servlet/event.showcfp?eventid=183105" - ICFMCE 2025
+2025 International Conference on Functional Materials and Chemical Engineering (ICFMCE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185017" - SLATE  2025
+Symposium on Languages, Applications and Technologies 
+ href="/cfp/servlet/event.showcfp?eventid=184672" - Functional Materials -  2025
+6th International Conference on Advanced Functional Materials 
+ href="/cfp/servlet/event.showcfp?eventid=185779" - SETTA 2025
+11th Symposium on Dependable Software Engineering: Theories, Tools and Applications 
+ href="/cfp/servlet/event.showcfp?eventid=185538" - ASPLOS 2026
+The ACM International Conference on Architectural Support for Programming Languages and Operating Systems - Summer 
+ href="/cfp/servlet/event.showcfp?eventid=181461" - OOPSLA 2025 Round 2 2025
+Conference on Object-Oriented Programming Systems, Languages, and Applications (Round 2) | href="/cfp/servlet/event.showcfp?eventid=186057" - ICLP 2025
+International Conference on Logic Programming | href="/cfp/servlet/event.showcfp?eventid=185101" - VL/HCC 2025
+IEEE Symposium on Visual Languages and Human-Centric Computing | href="/cfp/servlet/event.showcfp?eventid=186493" - HCVS 2025
+12th Workshop on Horn Clauses for Verification and Synthesis | href="/cfp/servlet/event.showcfp?eventid=181076" - CAIJ 2025
+Computer Applications: An International Journal | href="/cfp/servlet/event.showcfp?eventid=183105" - ICFMCE 2025
+2025 International Conference on Functional Materials and Chemical Engineering (ICFMCE 2025) | href="/cfp/servlet/event.showcfp?eventid=185017" - SLATE  2025
+Symposium on Languages, Applications and Technologies | href="/cfp/servlet/event.showcfp?eventid=184672" - Functional Materials -  2025
+6th International Conference on Advanced Functional Materials | href="/cfp/servlet/event.showcfp?eventid=185779" - SETTA 2025
+11th Symposium on Dependable Software Engineering: Theories, Tools and Applications | href="/cfp/servlet/event.showcfp?eventid=185538" - ASPLOS 2026
+The ACM International Conference on Architectural Support for Programming Languages and Operating Systems - Summer | href="/cfp/servlet/event.showcfp?eventid=181461" - OOPSLA 2025 Round 2 2025
+Conference on Object-Oriented Programming Systems, Languages, and Applications (Round 2) 
+ href="/cfp/servlet/event.showcfp?eventid=186057" - ICLP 2025
+International Conference on Logic Programming 
+ href="/cfp/servlet/event.showcfp?eventid=185101" - VL/HCC 2025
+IEEE Symposium on Visual Languages and Human-Centric Computing 
+ href="/cfp/servlet/event.showcfp?eventid=186493" - HCVS 2025
+12th Workshop on Horn Clauses for Verification and Synthesis 
+ href="/cfp/servlet/event.showcfp?eventid=181076" - CAIJ 2025
+Computer Applications: An International Journal 
+ href="/cfp/servlet/event.showcfp?eventid=183105" - ICFMCE 2025
+2025 International Conference on Functional Materials and Chemical Engineering (ICFMCE 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=185017" - SLATE  2025
+Symposium on Languages, Applications and Technologies 
+ href="/cfp/servlet/event.showcfp?eventid=184672" - Functional Materials -  2025
+6th International Conference on Advanced Functional Materials 
+ href="/cfp/servlet/event.showcfp?eventid=185779" - SETTA 2025
+11th Symposium on Dependable Software Engineering: Theories, Tools and Applications 
+ href="/cfp/servlet/event.showcfp?eventid=185538" - ASPLOS 2026
+The ACM International Conference on Architectural Support for Programming Languages and Operating Systems - Summer 
+ href="/cfp/servlet/event.showcfp?eventid=181461" - OOPSLA 2025 Round 2 2025
+Conference on Object-Oriented Programming Systems, Languages, and Applications (Round 2) 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+
+3. Website of FLOPS_3: https://popl25.sigplan.org/home/PADL-2025
+Website information of FLOPS_3:
+
+href="https://popl25.sigplan.org" - POPL 2025
+Sun 19 - Sat 25 January 2025href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Denver, Colorado, United States
+Toggle navigation 
+ Attending | href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Program | href="https://popl25.sigplan.org/program/program-POPL-2025/" - POPL Program 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Your Program 
+ Filter by Day | href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sun 19 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Mon 20 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Tue 21 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Wed 22 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Thu 23 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Fri 24 Jan 
+ href="https://popl25.sigplan.org/program/program-POPL-2025/" - Sat 25 Jan 
+ href="#" - Tracks | POPL 2025 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events 
+ Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 
+ Organization | POPL 2025 Committees 
+ Organizing Committee 
+ AV Committee 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-volunteers" - Student Volunteers 
+ Track Committees 
+ href="https://popl25.sigplan.org/committee/POPL-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ href="https://popl25.sigplan.org/committee/POPL-2025-popl-research-papers-program-committee" - POPL 
+ href="https://popl25.sigplan.org/committee/POPL-2025-student-research-competition-selection-committee" - Student Research Competition 
+ Contributors 
+ People Index 
+ Co-hosted Conferences 
+ CPP | Organizing Committee 
+ Program Committee 
+ Steering Committee 
+ VMCAI | Organizing Committee 
+ Program Committee 
+ Artifact Evaluation Committee 
+ Workshops 
+ CoqPL | Program Committee 
+ Dafny | Program Committee Chairs 
+ Program Committee 
+ Steering Committee Chairs 
+ LAFI | Program Committee 
+ Steering Committee 
+ PEPM | href="https://popl25.sigplan.org/committee/pepm-2025-papers-organizing-committee" - Chairs 
+ Program Committee Members 
+ PLMW @ POPL | Organizing Committee 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-speakers" - Speakers 
+ href="https://popl25.sigplan.org/committee/PLMW-POPL-2025-panelists" - Panelists 
+ PLanQC | Organizing Committee 
+ Program Committee 
+ PriSC | Program Committee 
+ Steering Committee 
+ TPSA | Organizing Committee 
+ Program Committee 
+ WAW | href="https://popl25.sigplan.org/committee/waw-2025-papers-organizer" - Organizers 
+ Program Committee 
+ WITS | Program Committee 
+ Co-hosted Symposia 
+ PADL | href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs 
+ Program Committee 
+ Search 
+ Series | Series 
+ href="https://conf.researchr.org/home/POPL-2026" - POPL 2026 
+ POPL 2025 
+ POPL 2024 
+ POPL 2023 
+ POPL 2022 
+ POPL 2021 
+ POPL 2020 
+ POPL 2019 
+ POPL 2018 
+ POPL 2017 
+ POPL 2016 
+ href="https://conf.researchr.org/signin/POPL-2025/https%3A%5Es%5Espopl25.sigplan.org%5Eshome%5EsPADL-2025" - Sign in 
+ Sign up 
+ href="https://popl25.sigplan.org" - POPL 2025
+(series) /PADL 2025 (series) /PADL 2025: The 27th International Symposium on Practical Aspects of Declarative Languages 
+ About 
+ Program 
+ href="#event-overview" - Accepted Papers 
+ Awards 
+ href="#Registration-for-PADL-2025" - Registration for PADL 2025 
+ href="#Call-for-Papers" - Call for Papers 
+ Proceedings 
+ href="https://gvidal.webs.upv.es/PADL2025/ProceedingsPADL2025.pdf" - Preliminary proceedings | are available (pwd protected) 
+ Final Proceedings | (Springer LNCS, volume | 15537 | ) 
+ Introduction 
+ Declarative languages comprise several well-established classes of formalisms, namely, functional, logic, and constraint programming. Such formalisms enjoy both sound theoretical bases and the availability of attractive frameworks for application development. Indeed, they have been already successfully applied to many different real-world situations, ranging from database management to active networks to software engineering to decision support systems. 
+ New developments in theory and implementation fostered applications in new areas. At the same time, applications of declarative languages to novel and challenging problems raise many interesting research issues, including designing for scalability, language extensions for application deployment, and programming environments. Thus, applications drive the progress in the theory and implementation of declarative systems, and benefit from this progress as well. 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, database and constraint programming, and theorem proving. 
+ Student grants 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. You can apply by filling out the following form beforeDecember 25: 
+ https://forms.gle/Xr4HfxgNRxUAy7jv9 
+ The selection process will give preference to students who present their papers at the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ Venue 
+ PADL 2025 will take place at the Curtis Hotel Denver, 1405 Curtis Street, 80202 Denver, Colorado, United States. 
+ Sponsoring Institutions: 
+ href="https://aij.ijcai.org/funding-opportunities-for-promoting-ai-research/" - 
+Invited Talks 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/18/Invited-Talk-Bridging-Safety-and-Performance" - Invited Talk: Bridging Safety and PerformanceUmut A. Acar
+href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementY. Annie Liu
+Dates 
+ Mon 20 Jan 2025 
+ Tue 21 Jan 2025 
+ Plenary 
+ Hide plenary sessions 
+ Program Display Configuration 
+ Time Zone 
+ The program is currently displayed in(GMT-07:00) Mountain Time (US & Canada).Use conference time zone: (GMT-07:00) Mountain Time (US & Canada)Select other time zone 
+  
+ The GMT offsets shown reflect the offsetsat the moment of the conference. 
+ Time Band 
+ By setting a time band, the program will dim events that are outside this time window. This is useful for (virtual) conferences with a continuous program (with repeated sessions). 
+ The time band will also limit the events that are included in the personal iCalendar subscription service.Display full programSpecify a time band- 
+ Save 
+ Close 
+ ×You're viewing the program in a time zone which is different from your device's time zonechange time zone 
+ Mon 20 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 1href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):German VidalUniversitat Politecnica de Valencia 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Solvers, unite! A simple unified semantics for reasoning with assurance and agreementPADL 
+ Y. Annie LiuStony Brook University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/17/Invited-Talk-Solvers-unite-A-simple-unified-semantics-for-reasoning-with-assurance" - File Attached 
+ 10:00 
+ 30m 
+ Talk | Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento TakyuWaseda University,Kazunori UedaWaseda University 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 2href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Michael HanusKiel University 
+ 11:00 
+ 30m 
+ Talk | Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim NewtonEPITA / LRE https://www.lre.epita.fr 
+ 11:30 
+ 30m 
+ Talk | Haskell Based SpreadsheetsPADL 
+ Ignacio BallesterosIMDEA Software Institute and Universidad Politécnica de Madrid,Luis Eduardo Bueso de BarrioUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ 12:00 
+ 30m 
+ Talk | The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent RobinsonUniversity of Portland 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 14:00 - 15:30 | Session 3href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Kazunori UedaWaseda University 
+ 14:00 
+ 30m 
+ Talk | A practical approach to handling tabular data in logicPADL 
+ Robin De VogelaereKU Leuven,Kylian Van DesselLeuven.AI, Belgium,Joost VennekensKU Leuven 
+ 14:30 
+ 30m 
+ Talk | C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad ShakerinMicrosoft,Joaquín AriasUniversidad Rey Juan Carlos,Elmer SalazarThe University of Texas at Dallas,Gopal Gupta 
+ 15:00 
+ 30m 
+ Talk | On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos CostaUniversity of Porto, Portugal,Miguel AreiasUniversity of Porto, Portugal 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 16:00 - 17:30 | Session 4href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-duck%2C-duck-goose" - Duck, Duck Goose
+ 
+ Chair(s):Vitor Santos CostaUniversity of Porto, Portugal 
+ 16:00 
+ 30m 
+ Talk | MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe GorostiagaIMDEA Software Institute,Martin CeresaIMDEA Software Institute,César SánchezIMDEA Software Institute 
+ 16:30 
+ 30m 
+ Talk | Checking Concurrency Coding RulesPADL 
+ Lars-Åke FredlundUniversidad Politécnica de Madrid,Ángel HerranzUniversidad Politécnica de Madrid,Julio MariñoUniversidad Politécnica de Madrid 
+ 17:00 
+ 10m 
+ Talk | href="#" - Can Logic Programming Be Liberated from Predicates and Backtracking? (Lightning talk)
+PADL 
+ Michael HanusKiel University 
+ 17:10 
+ 10m 
+ Talk | Logic Programming with Extensible Types (Lightning talk)PADL 
+ Ivan PerezNASA Ames Research Center,Ángel HerranzUniversidad Politécnica de Madrid,P:Julio MariñoUniversidad Politécnica de Madrid 
+ Tue 21 Jan 
+ Displayed time zone:Mountain Time (US & Canada)change 
+  
+ 09:00 - 10:30 | Session 5href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Esra ErdemSabanci University 
+ 09:00 
+ 60m 
+ Keynote | Invited Talk: Bridging Safety and PerformancePADL 
+ Umut A. AcarCarnegie Mellon University 
+ 10:00 
+ 30m 
+ Talk | SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary HansenUniversity of Nebraska Omaha,Yuliya LierlerUniversity of Nebraska 
+  
+ 10:30 - 11:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 10:30 
+ 30m 
+ Coffee break | BreakCatering 
+  
+ 11:00 - 12:30 | Session 6href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Fang LiOklahoma Christian University 
+ 11:00 
+ 30m 
+ Talk | ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela InclezanMiami University, USA,Hunter LockwoodMyaamia Center & Miami University,Anita BaralMiami University,Jitendra SharmaMiami University,Pratiksha ShresthaMiami University 
+ 11:30 
+ 30m 
+ Talk | A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan YanSoutheast University, Nanjing,Junru LiSoutheast University, Nanjing,Fangzhou LiuSoutheast University, Nanjing,Zerong WangSoutheast University, Nanjing,Zhizheng ZhangSoutheast University, Nanjing 
+ 12:00 
+ 30m 
+ Talk | Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan NguyenUniversity of Texas at Dallas, USA,Bryant HargreavesUniversity of Texas at Dallas, USA,Keegan KimbrellUniversity of Texas at Dallas, USA,Gopal Gupta 
+  
+ 12:30 - 14:00 | Lunchhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-four-square-ballroom" - Four Square Ballroom 
+ 12:30 
+ 90m 
+ Lunch | LunchCatering 
+  
+ 12:30 - 14:00 | SIGPLAN SC Meetinghref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-virtual-only" - Virtual Only 
+ 12:30 
+ 90m 
+ Meeting | SIGPLAN SC MeetingCatering 
+  
+ 14:00 - 15:30 | Session 7href="https://popl25.sigplan.org/home/PADL-2025" - PADL
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-keep-away" - Keep Away
+ 
+ Chair(s):Daniela InclezanMiami University 
+ 14:00 
+ 30m 
+ Talk | Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang LiOklahoma Christian University,Fei ZuoUniversity of Central Oklahoma,Gopal Gupta 
+ 14:30 
+ 30m 
+ Talk | Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul TarauUniversity of North Texas 
+ 15:00 
+ 30m 
+ Talk | Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo WangTemple University, USA 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+  
+ 15:30 - 16:00 | Breakhref="https://popl25.sigplan.org/track/POPL-2025-catering" - Catering
+athref="https://popl25.sigplan.org/room/POPL-2025-venue-breakroom" - Breakroom 
+ 15:30 
+ 30m 
+ Coffee break | BreakCatering 
+ Accepted Papers 
+  
+ Title 
+ A practical approach to handling tabular data in logicPADL 
+ Robin De Vogelaere,Kylian Van Dessel,Joost Vennekens 
+ ASP for Language Documentation and Reclamation: A Derivational Stemming Tool for MyaamiaPADL 
+ Daniela Inclezan,Hunter Lockwood,Anita Baral,Jitendra Sharma,Pratiksha Shrestha 
+ Automated Playing of Survival Video Games with Commonsense Reasoning (short paper)PADL 
+ Dan Nguyen,Bryant Hargreaves,Keegan Kimbrell,Gopal Gupta 
+ A Weighted Bipolar Argumentation Framework and its ASP-based ImplementationPADL 
+ Yan Yan,Junru Li,Fangzhou Liu,Zerong Wang,Zhizheng Zhang 
+ C3G: Causally Constrained Counterfactual GenerationPADL 
+ Sopam Dasgupta,Farhad Shakerin,Joaquín Arias,Elmer Salazar,Gopal Gupta 
+ Checking Concurrency Coding RulesPADL 
+ Lars-Åke Fredlund,Ángel Herranz,Julio Mariño 
+ Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut EliminationBest Student Paper –Honorable MentionPADL 
+ Kento Takyu,Kazunori Ueda 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/3/Enhancing-a-Hierarchical-Graph-Rewriting-Language-based-on-MELL-Cut-Elimination" - File Attached 
+ Enhancing network diagnosis with reflection in Prolog (extended abstract)RECORDEDPADL 
+ Anduo Wang 
+ href="https://gvidal.webs.upv.es/PADL2025/WangExtendedAbstractPADL25.pdf" - Pre-print 
+ Exploring Answer Set Programming for Provenance Graph-Based Cyber Threat Detection: A Novel ApproachPADL 
+ Fang Li,Fei Zuo,Gopal Gupta 
+ Haskell Based SpreadsheetsPADL 
+ Ignacio Ballesteros,Luis Eduardo Bueso de Barrio,Julio Mariño 
+ href="https://popl25.sigplan.org/details/PADL-2025-papers/10/Haskell-Based-Spreadsheets" - File Attached 
+ Leveraging LLM Reasoning with Dual Horn ProgramsRECORDEDPADL 
+ Paul Tarau 
+ MOLA: A Runtime Verification Engine Factory by (Meta-)interpreting Embedded DSLsPADL 
+ Felipe Gorostiaga,Martin Ceresa,César Sánchez 
+ On Bridging Prolog and Python to Enhance an Inductive Logic Programming SystemPADL 
+ Vitor Santos Costa,Miguel Areias 
+ SM-based Semantics for Answer Set Programs Containing Conditional Literals and ArithmeticBest student paperPADL 
+ Zachary Hansen,Yuliya Lierler 
+ The Scenic Route to DeforestationPADL 
+ Steven Libby,Vincent Robinson 
+ Type-Checking Heterogeneous Sequences in a Simple Embeddable Type SystemPADL 
+ Jim Newton 
+ Call for Papers 
+ PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming, including functional and logic programming, databases and constraint programming, and theorem proving. 
+ Topics of interest include, but are not limited to: 
+ Innovative applications of declarative languages 
+ Declarative domain-specific languages and applications 
+ Practical applications of theoretical results 
+ New language developments and their impact on applications 
+ Declarative languages and software engineering 
+ Evaluation of implementation techniques on practical applications 
+ Practical experiences and industrial applications 
+ Novel uses of declarative languages in the classroom 
+ Practical extensions such as constraint-based, probabilistic, and reactive languages 
+ PADL 2025 especially welcomes new ideas and approaches related to applications, design, and implementation of declarative languages going beyond the scope of the past PADL symposia, for example, advanced database languages and contract languages, as well as verification and theorem-proving methods that rely on declarative languages. 
+ PADL 2025 encourages students to participate in the symposium by providing some student grants to partially cover the registration and travel costs. The selection process will give preference to students who present their paper in the symposium. Students from underrepresented groups are strongly encouraged to apply. 
+ href="#submissions" - Submissions
+PADL 2025 welcomesregular papers (max. 15 pages, excluding references)andshort papers (max. 8 pages, excluding references)that describe original and previously unpublished research results on 
+ complex and/or real-world applications in industry or in other areas of research, that rely on an innovative use of declarative languages, 
+ tools and/or systems developed for such applications, and/or to improve practical aspects of declarative languages, 
+ technical results related to the practical aspects of declarative languages. 
+ Application and systems descriptions, engineering solutions, and real-world experiences (both positive and negative) are in particular solicited. Regular and short papers will be published in the formal proceedings. 
+ PADL 2025 also welcomesextended abstracts (max. 3 pages)on the topics above, that describe new ideas, a new perspective on already published work, or work-in-progress that is not yet ready for a full publication. Extended abstracts will be posted on the symposium website but will not be published in the formal proceedings. 
+ All page limits exclude references. Submissions must be written in English and formatted according to the standard Springer LNCS style, seehttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines 
+ The review process of PADL 2025 isdouble-anonymous. In your submission, please, omit your names and institutions; refer to your prior work in the third person, just as you refer to prior work by others; do not include acknowledgments that might identify you. 
+ Additional material intended for reviewers but not for publication in the final version - for example, details of proofs - may be placed in a clearly marked appendix that is not included in the page limit. Reviewers are at liberty to ignore appendices and papers must be understandable without them. 
+ Page numbers (and, if possible, line numbers) should appear on the manuscript to help the reviewers in writing their reports. So, for LaTeX, we recommend that authors use: 
+ \pagestyle{plain} \usepackage{lineno} \linenumbersThe conference proceedings of PADL 2025 will be published by Springer-Verlag in the Lecture Notes in Computer Science series. Work that already appeared in unpublished or informally published Workshop proceedings may be submitted but the authors should notify the program chairs where it has previously appeared.Previous PADL proceedingscan be found onSpringerLink. 
+ Papers should be submitted electronically viahref="https://equinocs.springernature.com/service/padl2025" - EquinOCS
+(registration is required if you do not have an account). 
+ href="#distinguished-papers" - Distinguished Papers
+The authors of a small number of distinguished papers will be invited to submit a longer version for journal publication after the symposium. For papers related to logic programming, that will be in the journalTheory and Practice of Logic Programming (TPLP), and for papers related to functional programming, inJournal of Functional Programming (JFP). The extended journal submissions should be substantially (roughly 30%) extended: explanations for which there was no space, illuminating examples and proofs, additional definitions and theorems, further experimental results, implementational details and feedback from practical/engineering use, extended discussion of related work, and so on. These submissions will then be subject to the usual peer review process by the journal, although with the aim of a swifter review process by reusing original reviews from PADL. 
+ Awards 
+ Best Student Paper Award 
+ Zachary Hansen, Yuliya Lierler: “SM-based Semantics for Answer Set Programs Containing Conditional Literals and Arithmetic” 
+ Best Student Paper Honorable Mention 
+ Kento Takyu, Kazunori Ueda: “Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut Elimination” 
+ Registration for PADL 2025 
+ The registration for PADL 2025 is handled separately from POPL. Please note that at leastone author of each accepted paper must register specifically to PADL. 
+ Early registration deadline isDecember 29, 2024. 
+ Registration Rates for PADL 2025 
+ The registration rates are as follows: 
+
+Type of Registration | Early Rate (British pounds) | Regular Rate (British pounds) 
+ Student | £310 | £335 
+ Regular | £420 | £500 
+  
+ Registration rate includes the cost of venue, lunch, morning and afternoon coffee breaks. 
+ Steps for Registering 
+ You can wire a bank transfer to the following account number (transfer charges assumed by the payer): 
+ Bank: | Natwest (UK) 
+ Bank address: | NatWest Markets Plc is 36 St Andrew Square, Edinburgh, EH2 2YB 
+ Account name: | THE ASSOCIATION FOR LOGIC PROGRAMMING Ltd 
+ Account holders address: | The Association for Logic Programming, Care of Marina De Vos, Dept Computer Science, University of Bath, BA2 7AY 
+ Sort Code: | 60-02-05 
+ Account Number: | 66462738 
+ BIC: | NWBKGB2L 
+ IBAN: | GB74NWBK60020566462738 
+ Transfers usually take a week to complete. ContactMarina De Vosif you have any payment queries. 
+ Once the bank transfer has been made, send a copy of the receipt along with yourfirst name,last name,affiliation, andcountrytogvidal@dsic.upv.es(Cc:cssmdv@bath.ac.uk). 
+ Questions? Use thehref="https://popl25.sigplan.org/contact2/PADL-2025-papers" - PADL contact form
+. 
+ Important DatesAoE (UTC-12h) 
+  
+ Mon 20 - Tue 21 Jan 2025 
+ Symposium 
+ Sun 24 Nov 2024 
+ Final version 
+ Thu 14 Nov 2024 
+ Notification to authors 
+ Fri 18 Oct 2024 
+ Paper submission 
+ Fri 11 Oct 2024 
+ Abstract submission 
+ Submission Link 
+ href="https://equinocs.springernature.com/service/padl2025" - https://equinocs.springernature.com/service/padl2025
+href="https://popl25.sigplan.org/committee/PADL-2025-papers-programme-chairs" - Programme Chairs
+Esra ErdemSabanci University 
+ Turkey 
+ German VidalUniversitat Politecnica de Valencia 
+ Spain 
+ Program Committee 
+ Ozgur AkgunUniversity of St Andrews, St Andrews, UK 
+ United Kingdom 
+ Nada AminHarvard University 
+ United States 
+ Marcello BalducciniSaint Joseph's University, USA 
+ Mutsunori BanbaraNagoya University 
+ Japan 
+ Clara Benac EarleUniversidad Politécnica de Madrid 
+ Spain 
+ Malgorzata BiernackaUniversity of Wrocław 
+ Manuel CarroIMDEA Software Institute and Universidad Politécnica de Madrid 
+ Spain 
+ Laura M. CastroUniversity of A Coruña 
+ Spain 
+ Martin GebserUniversity of Klagenfurt, Austria 
+ Austria 
+ Gopal Gupta 
+ Michael HanusKiel University 
+ Germany 
+ Daniela InclezanMiami University 
+ United States 
+ Yusuf IzmirliogluUnited Kingdom 
+ Tomi JanhunenTampere University 
+ Finland 
+ Ekaterina KomendantskayaHeriot-Watt University and Southampton University 
+ United Kingdom 
+ Ivan LaneseUniversity of Bologna/INRIA 
+ Michael LeuschelHHU 
+ Germany 
+ Naoki NishidaNagoya University 
+ Japan 
+ Alberto PardoUniversidad de la Republica, Uruguay 
+ Enrico PontelliNew Mexico State University 
+ United States 
+ Orkunt SabuncuTED University 
+ Turkey 
+ Zeynep G. SaribaturTU Wien 
+ Austria 
+ Tom SchrijversKU Leuven 
+ Belgium 
+ Paul TarauUniversity of North Texas 
+ United States 
+ Laura TitoloAMA/NASA LaRC 
+ United States 
+ Melinda TóthEötvös Loránd University, Faculty of Informatics, Department of Programming Languages and Compilers & ELTE-Soft Nonprofit Ltd. 
+ Hungary 
+ Joost VennekensKU Leuven 
+ Sam WestrickNew York University 
+ United States 
+ Jessica ZangariUniversità della Calabria 
+ Italy 
+ Neng-Fa ZhouCUNY Brooklyn College and Graduate Center 
+ xWed 9 Apr 10:55 
+ href="https://popl25.sigplan.org" - POPL 2025
+contact form 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ Support page 
+ Tracks 
+ href="https://popl25.sigplan.org/track/POPL-2025-artifact-evaluation" - Artifact Evaluation
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-popl-research-papers" - POPL
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-research-competition" - Student Research Competition
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-student-volunteers" - Student Volunteers
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-tutorials" - Tutorials
+ 
+ href="https://popl25.sigplan.org/track/POPL-2025-workshops-and-co-located-events" - Workshops and Co-located Events
+Co-hosted Conferences 
+ href="https://popl25.sigplan.org/home/CPP-2025" - CPP 2025
+ 
+ href="https://conf.researchr.org/home/VMCAI-2025" - VMCAI 2025
+ 
+ Workshops 
+ href="https://popl25.sigplan.org/home/CoqPL-2025" - CoqPL 2025
+ 
+ href="https://popl25.sigplan.org/home/dafny-2025" - Dafny 2025
+ 
+ href="https://popl25.sigplan.org/home/lafi-2025" - LAFI 2025
+ 
+ href="https://popl25.sigplan.org/home/pepm-2025" - PEPM 2025
+ 
+ href="https://popl25.sigplan.org/home/PLMW-POPL-2025" - PLMW @ POPL 2025
+ 
+ href="https://popl25.sigplan.org/home/planqc-2025" - PLanQC 2025
+ 
+ href="https://popl25.sigplan.org/home/prisc-2025" - PriSC 2025
+ 
+ href="https://popl25.sigplan.org/home/tpsa-2025" - TPSA 2025
+ 
+ href="https://popl25.sigplan.org/home/waw-2025" - WAW 2025
+ 
+ href="https://popl25.sigplan.org/home/wits-2025" - WITS 2025
+ 
+ Co-hosted Symposia 
+ href="https://popl25.sigplan.org/home/PADL-2025" - PADL 2025
+Attending 
+ href="https://popl25.sigplan.org/venue/POPL-2025-venue" - Venue: Curtis Hotel Denver
+ 
+ Supporting POPL 
+ Registration 
+ Information for Virtual Attendees 
+ Information for Presenters 
+ Requesting a Visa 
+ POPL Live Streams 
+ Code of Conduct 
+ Sign Up 
+ : 
+ :
+
+4. Website of FLOPS_3: https://www.lix.polytechnique.fr/~dale/papers/proceedings.html
+Website information of FLOPS_3:
+
+Editor of special issues in journals 
+ To appear: Science of Computer Programming (SCP), Special Issue of papers from the | href="https://conf.researchr.org/home/flops-2024" - 17th
+  International Symposium on Functional and Logic Programming (FLOPS
+  2024) | , edited by Jeremy Gibbons and Dale Miller. 
+ Logic Methods in Computer Science (LMCS) | href="https://lmcs.episciences.org/volume/view/id/318" - Special
+  Issue of papers from the International Conference on Formal
+  Structures for Computation and Deduction, FSCD 2017 | , edited by Ugo Dal Lago and Dale Miller. 
+ Logic Methods in Computer Science (LMCS) | href="https://lmcs.episciences.org/volume/view/id/269" - Special
+  Issue of papers from the Computer Science Logic and Logic in
+  Computer Sciences (CSL-LICS) 2014 | , edited by T. A. Henzinger and D. Miller. 
+ Edited proceedings 
+ href="https://doi.org/10.1007/978-981-97-2300-3" - Proceedings of the
+     17th International Symposium on Functional and Logic Programming
+     (FLOPS 2024) | , Kumamoto, Japan, May 15-17, 2024. Edited by Jeremy Gibbons and Dale Miller. Published by Springer as LNCS 14659. 
+ Proceedings of the Fourteenth Workshop on Logical Frameworks and Meta-Languages: Theory and Practice | , Vancouver, Canada, 22 June 2019. Edited by Dale Miller and Ivan Scagnetto. Published by EPTCS. DOI 10.4204/EPTCS.307. 
+ Proceedings of the 2nd International Conference on Formal Structures for Computation and Deduction, FSCD 2017, | 2-9 September 2017, Oxford, UK. Edited by Dale Miller. Published by LIPIcs. ISBN 978-3-95977-047-7. DOI 10.4230/LIPIcs.FSCD.2017.0. 
+ Proceedings of the Joint Meeting of the Twenty-Third EACSL Annual Conference on Computer Science Logic (CSL) and the Twenty-Ninth Annual ACM/IEEE Symposium on Logic in Computer Science (LICS), CSL-LICS 2014 | edited by Tom Henzinger and Dale Miller, 14-18 July 2014, Vienna, Austria. Published by the ACM. ISBN 978-1-4503-2886-9. 
+ Proceedings of the 2nd International Conference on Certified Programs and Proofs (CPP 2012) | edited by Chris Hawblitzel and Dale Miller. Kyoto, Japan, December 2012. LNCS 7679, Springer. 
+ Proceedings of the 6th International Joint Conference on Automated Reasoning (IJCAR 2012) | edited by Bernhard Gramlich, Dale Miller, and Uli Sattler. Manchester, UK, June 2012. LNAI 7364, Springer. 
+ Proceedings of the 8th Workshop on Fixed Points in Computer Science (FICS 2012) | edited by Dale Miller and Zoltan Esik. Published as | EPTCS 77 | , Feb 2012: | pdf | . 
+ Proceedings of the 2003 International Conference on Principles and Practice of Declarative Programming, PPDP 2003 | , Vancouver Canada, October 1993. Edited by Dale Miller. Published by the ACM. 
+ Proceedings of the 1993 International Logic Programming Symposium (ILPS 1993) | , Vancouver, Canada, October 1993. Edited by Dale Miller. Published by | MIT Press | . 
+ Proceedings of the Workshop on Linear Logic and Logic Programming | , Washington, DC, November 1992. Edited by Dale Miller. Available as UPenn CIS technical report | MS-CIS-92-80 | . ( | PDF | ). 
+ Proceedings of the Workshop on the λProlog Programming Language | , University of Pennsylvania, July 1992. Edited by Dale Miller. Available as UPenn CIS technical report | MS-CIS-92-86 | . ( | PDF | ).
+

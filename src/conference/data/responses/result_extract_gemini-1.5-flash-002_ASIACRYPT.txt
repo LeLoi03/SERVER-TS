@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "December 8 - 12, 2025",
+  "Year": "2025",
+  "Location": "Melbourne, Australia",
+  "City-State-Province": "Melbourne",
+  "Country": "Australia",
+  "Continent": "Oceania",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline at 12:00 GMT": "May 16, 2025"
+  },
+  "Notification Date": {
+    "First round notification": "July 13, 2025",
+    "Final notification": "August 10, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready version due": "September 10, 2025"
+  },
+  "Other Date": {
+    "Rebuttals due": "July 18, 2025",
+    "End of interactive rebuttals": "July 25, 2025",
+    "Website launched": "March 10, 2025",
+    "The call for affiliated events has been added": "March 17, 2025"
+  },
+  "Topics": "No topics available",
+  "Summary": "Asiacrypt 2025 will take place in Melbourne, Australia on December 8-12, 2025.  It is organized by the International Association for Cryptologic Research (IACR).",
+  "Call for Papers": "No call for papers available"
+}
+```

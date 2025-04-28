@@ -1,0 +1,668 @@
+Conference full name: Cryptographers Track at RSA Conference (CT-RSA)
+
+1. Website of CT-RSA_3: https://ct-rsa-2025.csa.iisc.ac.in/
+Website information of CT-RSA_3:
+
+CT-RSA 2025 
+ The Cryptographers' Track at RSA Conference 
+ San Francisco, California, USA • April 28–May 1, 2025 
+ href="/" - Call for Papers
+href="/submission.html" - Paper Submission
+ProgramAttendingRSA Conferenceis the premiere trade show for the security industry, hosting over 40,000 attendees each year from industry, government, and academia. TheCryptographers' Track (CT-RSA)is RSAC's venue for scientific papers on cryptography. It presents a unique opportunity for researchers to share their work with a broader audience than at a typical academic conference. 
+ Important Dates 
+ Paper submission: | October 15, 2024 | October 30, 2024 
+ Notification of decision: January 10, 2025 
+ Camera-ready versions due: January 20, 2025 
+ Author presentations due: April 03, 2025 
+ Conference: April 28–May 1, 2025 
+ Call for Papers 
+ Original papers on all technical aspects of cryptology are solicited for submission. Papers of interest to the wider audience of security professionals at RSA Conference are especially encouraged. Topics include but are not limited to: 
+ Blockchains and distributed ledger security 
+ Code based cryptography 
+ Cryptanalysis 
+ Cryptographic standards 
+ Design and security analysis of cryptographic primitives and protocols 
+ Differential privacy 
+ Formal verification of cryptographic security properties 
+ Hardware & software implementations 
+ Indistinguishable obfuscation 
+ Information-theoretic cryptography 
+ Multi-party computation and zero-knowledge 
+ Novel applications of cryptography 
+ Physically unclonable functions 
+ Post-quantum cryptography 
+ Privacy 
+ Public-key cryptography algorithms and protocols 
+ Public-key encryption and advanced encryption schemes 
+ Side-channel attacks and defenses 
+ Symmetric-key cryptography 
+ Theory of leakage resistance 
+ Time-released cryptography and PoW 
+ White-box cryptography 
+ We also welcomesystematization of knowledge (SoK)papers. These papers will not be judged on novel research contributions, but on their value to the research community. SoK papers should provide an important new viewpoint on an established, major research area; support or challenge long-held beliefs in such an area with compelling evidence; or present a convincing, comprehensive new taxonomy of such an area. Survey papers without such insights are not appropriate for acceptance. 
+ For submissions including practical evaluations, it is encouraged (but not required) to make implementations available to facilitate replicability and reproducibility. 
+ Accepted papers (including SoK papers) will appear in the CT-RSA proceedings, published by Springer in its LNCS series. 
+ CT-RSA is scheduled to be an in-person event. One of the things that makes CT-RSA special is the interaction between academia and industry. For that reason, it isstronglypreferred that authors of accepted papers present their work in-person. Exceptions will be made only in the case of serious extenuating circumstances, such as COVID restrictions, visa delays, and other emergencies.The presenter of each paper will be given a free Full Pass to RSA Conference.Program Committee 
+ Riham AlTawy, University of Victoria, Canada 
+ Elena Andreeva, TU Wien, Austria 
+ Shi Bai, Florida, Atlantic University, USA 
+ Shivam Basin, NTU Singapore, Singapore 
+ Lejla Batina, Radboud University, The Netherlands 
+ Sarani Bhattacharya, IIT Kharagpur, India 
+ Michele Ciampi, University of Edinburg, UK 
+ Sofia Celi, Brave, Portugal 
+ Suvradip Chakraborty, Visa Research, USA 
+ Liqun Chen, University of Surrey, UK 
+ Avijit Dutta, TCG Crest, India 
+ Maria Eichlseder, Graz University of Technology, Austria 
+ Patrick Felke, University of Applied Sciences Emden/Leer, Germany 
+ Antonio Flórez-Gutiérrez, NTT Social Informatics Laboratories, Japan 
+ Julius Hermelink, MPI-SP, Germany 
+ Javier Herranz, Universitat Politècnica de Catalunya, Spain 
+ Tetsu Iwata, Nagoya University, Japan 
+ Fuyuki Kitagawa, NTT Social Informatics Laboratories, Japan 
+ Lisa Kohl, CWI Amsterdam, The Netherlands 
+ Péter Kutas, University of Birmingham and Eötvös Loránd University, Hungary 
+ Yi-fu Lai, Ruhr-Universität Bochum, Germany 
+ Fenghao Liu, Washington State University, USA 
+ Chen-Da Liu-Zhang, Lucerne University of Applied Sciences and Arts & Web3 Foundation, Switzerland 
+ Victor Mateu, TII, Abu Dhabi 
+ Brice Minaud, INRIA and ENS, France 
+ Amir Moradi, TU Darmstad, Germany 
+ David Naccache, École normale supérieure, France 
+ Khoa Nguyen, University of Wollongong, Australia 
+ Anca Nitulescu, Input Output Global, France 
+ Arpita Patra | (chair) | , Indian Institute of Science, Bangalore, India 
+ Sikhar Patranabis, IBM Research India, India 
+ Eduardo Persichetti, Florida Atlantic University, USA 
+ Divya Ravi, CCI Amsterdam, The Netherlands 
+ Chester Rebeiro, IIT Madras, India 
+ Amin Sakzad, Monash University, Australia 
+ Patrick Schaumont, Worcester Polytechnic Institute, USA 
+ Dominique Schroeder, TU Wien, Austria 
+ Mark Simkin, Ethereum Foundation, Switzerland 
+ Nigel Smart, KU Leuven and Zama, Belgium 
+ Benjamin Smith, INRIA, Ecole Polytechnique, France 
+ Fang Song, Portland State University, USA 
+ Yifan Song, IIIS, Tsinghua, China 
+ Pante Stanica, Naval Postgrad Institute, USA 
+ Igors Stepanovs, Amazon, USA 
+ Sri AravindaKrishnan Thyagarajan, University of Sydney, Australia 
+ Ni Trieu, Arizona State University, USA 
+ Srinivas Vivek, IIIT-Bangalore, India 
+ Rupeng Yang, University of Wollongong, Australia 
+ Contact 
+ For questions specific to the CT-RSA track, contact thehref="mailto:ctrsa2025chair.csa@iisc.ac.in" - CT-RSA program chair Arpita Patra
+. For other questions about RSAC, consult theRSAC webpage. 
+ CT-RSA 2025: The Cryptographers' Track at RSA Conference 
+ San Francisco, California, USA • April 28–May 1, 2025
+
+2. Website of CT-RSA_3: https://ct-rsa-2025.csa.iisc.ac.in/attending.html
+Website information of CT-RSA_3:
+
+CT-RSA 2025 
+ The Cryptographers' Track at RSA Conference 
+ San Francisco, California, USA • April 28–May 1, 2025 
+ href="/" - Call for Papers
+href="/submission.html" - Paper Submission
+ProgramAttendingInformation will appear on thehref="https://www.rsaconference.com/usa" - RSAC 2025
+website, as it becomes available. 
+ CT-RSA 2025: The Cryptographers' Track at RSA Conference 
+ San Francisco, California, USA • April 28–May 1, 2025
+
+3. Website of CT-RSA_3: https://www.rsaconference.com/events/2022-cryptography
+Website information of CT-RSA_3:
+
+Skip to Main Content 
+ ×RSA Conference 2022Agenda 
+ Keynote & Speakers 
+ Eventshref="https://www.rsaconference.com/usa" - 2025 USA 
+ Virtual Events 
+ Calendar 
+ MembershipLibraryBlogs 
+ Featured 
+ Innovation Showcases 
+ Monthly Focus 
+ Podcasts 
+ Presentations 
+ Virtual Seminars 
+ Webcasts 
+ Year-Round Content 
+ Full Library 
+ Expertshref="https://www.rsaconference.com/experts/us25-speakers" - 2025 USA Speakers 
+ All Speakers 
+ Become a Contributor 
+ MarketplaceAbout Marketplace 
+ All Marketplace Vendors 
+ RSAC ProgramsCISO Boot Camp 
+ College Day 
+ CPE Credits & Partners 
+ Cyber Leaders Forum 
+ eFraud Global Forum 
+ Executive Programs 
+ Executive Security Action Forum 
+ Innovation 
+ International Cybersecurity Forum 
+ LoyaltyPlus 
+ Security Scholar 
+ Top-Rated 
+ All RSAC™ Programs 
+ AboutAbout Us 
+ Careers 
+ Code of Conduct 
+ Community 
+ Contact Us 
+ Diversity, Equity, Inclusion & Belonging 
+ Editorial Calendar 
+ Leadership Team 
+ Press Releases 
+ RSAC™ Gives Back 
+ Sponsorship Opportunities 
+ Themes 
+ Events | href="https://www.rsaconference.com/usa" - 2025 USA 
+ Virtual Events 
+ Calendar 
+ Membership 
+ Library | Blogs 
+ Featured 
+ Innovation Showcases 
+ Monthly Focus 
+ Podcasts 
+ Presentations 
+ Virtual Seminars 
+ Webcasts 
+ Year-Round Content 
+ Full Library 
+ Experts | href="https://www.rsaconference.com/experts/us25-speakers" - 2025 USA Speakers 
+ All Speakers 
+ Become a Contributor 
+ Marketplace | About Marketplace 
+ All Marketplace Vendors 
+ RSAC Programs | CISO Boot Camp 
+ College Day 
+ CPE Credits & Partners 
+ Cyber Leaders Forum 
+ eFraud Global Forum 
+ Executive Programs 
+ Executive Security Action Forum 
+ Innovation 
+ International Cybersecurity Forum 
+ LoyaltyPlus 
+ Security Scholar 
+ Top-Rated 
+ All RSAC™ Programs 
+ About | About Us 
+ Careers 
+ Code of Conduct 
+ Community 
+ Contact Us 
+ Diversity, Equity, Inclusion & Belonging 
+ Editorial Calendar 
+ Leadership Team 
+ Press Releases 
+ RSAC™ Gives Back 
+ Sponsorship Opportunities 
+ Themes 
+ June 6 - 9, 2022 
+ San FranciscoEvents 
+ ×href="https://www.rsaconference.com/usa" - 2025 USA
+Virtual EventsCalendarLibrary 
+ ×BlogsFeaturedInnovation ShowcasesMonthly FocusPodcastsPresentationsVirtual SeminarsWebcastsYear-Round ContentFull LibraryExperts 
+ ×href="https://www.rsaconference.com/experts/us25-speakers" - 2025 USA Speakers
+All SpeakersBecome a ContributorMarketplace 
+ ×About MarketplaceAll Marketplace VendorsRSAC Programs 
+ ×CISO Boot CampCollege DayCPE Credits & PartnersCyber Leaders ForumeFraud Global ForumExecutive ProgramsExecutive Security Action ForumInnovationInternational Cybersecurity ForumLoyaltyPlusSecurity ScholarTop-RatedAll RSAC™ ProgramsAbout 
+ ×About UsCareersCode of ConductCommunityContact UsDiversity, Equity, Inclusion & BelongingEditorial CalendarLeadership TeamPress ReleasesRSAC™ Gives BackSponsorship OpportunitiesThemes 
+ Questions?No internet connection 
+ Home | > 
+ Cryptography Track 
+  
+ This academically focused and refereed track for mathematicians and computer scientists offers presentations of the very latest papers about the science of cryptography. 
+ We’re pleased to announce that the Cryptography papers for RSAC 2022 are published and electronically available through Springer Publishing. We also invite you to preview the authors’ research through videos and slide decks below. 
+  
+ href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Public Key Cryptography 
+ Features the authors of these papers: 1) Multicast Key Agreement, Revisited; 2) A Pairing-Free Signature Scheme from Correlation Intractable Hash Function and Strong Diffie-Hellman Assumption; and 3) Approximate Homomorphic Encryption with Reduced Approximation Error. Join to ask questions and learn from the experts. 
+ Session Chairs:Dr. Olivier Blazy and Dr. Tarik Moataz 
+ Authors:Alexander Bienstock, Benoit Chevallier-Mames, Yuriy Polyakov 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+ 
+ Theory 
+ Features the authors of these papers: 1) On Fingerprinting Attacks and Length-Hiding Encryption; 2)CCA Secure:A PosterioriOpenable Encryption in the Standard Model; and 3) Dynamic Universal Accumulator with Batch Update over Bilinear Groups. Join to ask questions and learn from the experts.Session Chairs:Dr. David Pointcheval and Dr. Jacques Traore 
+ Authors:Xavier Bultel, Dr. Lin Lyu, Giuseppe Vitto 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+
+Post-Quantum Cryptography & Isogenies 
+ Features the authors of these papers: 1) Faster Isogenies for Quantum-Safe SIKE; 2) Fully Projective Radical Isogenies in Constant-time; and 3) A New Adaptive Attack on SIDH. Join to ask questions and learn from the experts. 
+  
+ Session Chairs:Dr. Pierrick Gaudry and Dr. Luca De Feo 
+ Authors:Reza Azarderakhsh, Krijn Reijinders, Tako Boris Fouotsa 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Lattices 
+ Features the authors of these papers: 1) Lattice-based Fault Attacks on Deterministic Signature Schemes of ECDSA and EdDSA and 2) More Accurate Geometric Analysis on the Impact of Successful Decryptions for IND-CCA Secure Ring/Mod-LWE/LWR Based Schemes. Join to ask questions and learn from the experts. 
+ Session Chairs:Dr. Steven Galbraith and Dr. Prastudy Fauzi 
+ Authors:Weiqiong Cao, Han Wu 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Symmetric Cryptanalysis 
+ Features the authors of these papers: 1) Integral Attacks on Pyjamask-96 and Round-Reduced Pyjamask-128; 2) Related-Tweakey Impossible Differential Attack on Reduced-Round SKINNY-AEAD M1/M3; and 3) Side-Channeling the Kalyna Key Expansion. Join to ask questions and learn from the experts. 
+  
+ Session Chairs:Dr.Yu Sasaki and Dr. Qiang Tang 
+ Authors:Jiamin Cui, Yanhong Fan, Zhiyuan Zhang 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Symmetric Cryptography 
+ Features the authors of these papers: 1) FASTA – A Stream Cipher for Fast FHE Evaluation; 2) New Attacks from Old Distinguishers Improved Attacks on Serpent; and 3) Pholkos - Efficient Large-state Tweakable Block Ciphers from the AES Round Function. Join to ask questions and learn from the experts. 
+  
+ Session Chairs:Dr. Brice Minaud and Dr. Arnab Roy 
+ Authors:Jannis Bossert,Federico Canale, Håvard Raddum 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Cryptanalysis 
+ Features the authors of these papers: 1) Attacks on Pseudo Random Number Generators Hiding a Linear Structure and 2) Fake it till you make it: Data Augmentation using Generative Adversarial Networks for all the Crypto you need on Small Devices. Join to ask questions and learn from the experts. 
+  
+ Session Chairs:Dr. Helena Handschuh and Dr. Fernando Virdia 
+ Authors:Florette Martinez, Naila Mukhtar 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+
+Signatures & NIZK 
+ Features the authors of these papers: 1) Robust Subgroup Multi-Signatures for Consensus; 2) Subversion-Resilient Enhanced Privacy ID; and 3) PriBank: Confidential Blockchain Scaling Using Short Commit-and-Proof NIZK Argument. Join to ask questions and learn from the experts. Please note, David Galindo is unable to join this discussion so paper co-author Jia Liu will represent their paper. 
+  
+ Session Chairs:Dr. Giorgia Marson and Dr. Luisa Siniscalchi 
+ Authors:Antonio Faonio, David Galindo, Shuang Wu 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+ 
+ MPC 
+ Features the authors of these papers: 1) Adaptively Secure Laconic Function Evaluation for NC1 and 2) Private Liquidity Matching using MPC. Join to ask questions and learn from the experts. 
+  
+ Session Chairs:Dr. Stanislaw Jarecki and Dr. Mike Rosulek 
+ Authors:Răzvan Roşie, Nigel Smart 
+ View Presentation Materials|href="https://link.springer.com/book/10.1007/978-3-030-95312-6" - Read Papers
+Questions? 
+ June 6 - 9, 2022 
+ Joinour community 
+ Sign Up 
+ About RSAC 
+ About Us 
+ Contact Us 
+ Experts 
+ Leadership Team 
+ Press Releases 
+ Sponsorship Opportunities 
+ Upcoming Conference 
+ Resources 
+ Blogs 
+ Calendar 
+ FAQs 
+ Full Library 
+ Virtual Seminars 
+ Webcasts 
+ Year-Round Content 
+ Joinour community 
+ Sign Up 
+ Legal Notices 
+ Privacy Statement 
+ Cookie ConsentCCPA: Do Not Sell My Personal Info 
+  
+ © 2025 RSA Conference LLC or its affiliates. The RSAC and RSAC CONFERENCE logos and other trademarks are proprietary. All rights reserved.
+
+4. Website of CT-RSA_3: https://www.iacr.org/events/
+Website information of CT-RSA_3:
+
+International Association for Cryptologic Research 
+ International Association 
+ for Cryptologic Research 
+ IACREvents | All IACR eventsAsiacryptCryptoEurocryptCHESFSEPKCTCCRWCCryptology SchoolsIn cooperation with IACR 
+ Publications | All IACR PublicationsJournal of CryptologyTransactions on Symmetric CryptologyTransactions on CHESCommunications in CryptologyCryptology ePrint ArchiveArtifact ArchiveAccess IACR Publicationshref="/museum/" - Museum of Historic Papers
+Publication Statistics 
+ News | All NewsAwardsElectionsPetitions & Statements 
+ Services | JobsCryptoDBCalendar of EventsVideos 
+ Members | How to JoinUpdate Membership InformationAccess IACR Publicationshref="/news/subscribe" - Subscribe to News Updates 
+ About | About IACRBoard of DirectorsCommitteesDocumentsPrivacy Policy 
+ Suggestions fromlocal searchas you type. Hit enter to search with Google. 
+ Search 
+ Suggestions fromlocal searchas you type. Hit enter to search with Google. 
+ Calendar of Events in Cryptology 
+ Submit an eventAs a service to our members, IACR maintains a calendar of events related to research in cryptology. The accuracy of the contributed events is the responsibility of the submitters. No endorsement by IACR should be assumed, unless explicitly indicated.Events on this page are sorted by event start date. Options are: 
+ href="?order=submission" - View by submission date | (includes journal issues with no associated event) 
+ View by event start date | (excludes journal issues) 
+ View archived past events 
+ Map view of events 
+ icalendar feed | (ordered by date of conference) 
+ href="icalbysubmission.php" - icalendar feed | (ordered by date of submission) 
+ April 2025 
+ href="https://aicrypt2025.aisylab.com/" - 5th Workshop on Artificial Intelligence and Cryptography
+                        (AICrypt)
+Madrid, Spain 
+ Event: Apr 3 - May 3, 2025 
+ Submission deadline:14 March 2025 
+ href="https://pqcrypto2025.iis.sinica.edu.tw/" - 16th International Conference on Post-Quantum Cryptography
+                        (PQCrypto 2025)
+Taipei, Taiwan 
+ Event: Apr 8 - Apr 10, 2025 
+ Submission deadline:25 October 2024 
+ Notification date: 6 January 2025 
+ href="https://fc25.ifca.ai" - Financial Cryptography and Data Security
+                        (FC2025)
+Miyako Island, Japan 
+ Event: Apr 13 - Apr 18, 2025 
+ New England Hardware Security Day (NEHWS'25)Cambridge, USA 
+ Event: Apr 18 - Apr 18, 2025 
+ Submission deadline:10 February 2025 
+ href="https://fc25.ifca.ai/codecfin/cfp.html" - The 6th Workshop on Coordination of Decentralized Finance (CoDecFin) 2025
+                        (CoDecFin 25)
+Miyakojima, Japan 
+ Event: Apr 18 - Apr 18, 2025 
+ Submission deadline:31 December 2024 
+ Notification date: 31 January 2025 
+ href="https://ct-rsa-2025.csa.iisc.ac.in" - The Cryptographers' Track at RSA Conference 2025
+                        (CT-RSA 2025)
+San Francisco, USA 
+ Event: Apr 28 - May 1, 2025 
+ May 2025 
+ href="https://informatik.rub.de/symcrypt/lle2025/" - 2nd Workshop on Low-Latency Encryption
+                        (LLE 2025)
+Madrid, Spain 
+ Event: May 3 - May 3, 2025 
+ Workshop on Proofs and Proof Techniques for Cryptographic Security (ProTeCS)Madrid, España 
+ Event: May 3 - May 3, 2025 
+ Submission deadline:20 February 2025 
+ Notification date: 7 March 2025 
+ 6th International Workshop on Code-Based Cryptography (CBCrypto)Madrid, Spain 
+ Event: May 3 - May 4, 2025 
+ Submission deadline:7 February 2025 
+ href="https://caw.cryptanalysis.fun/" - Cryptographic Applications Workshop 2025
+                        (CAW '25)
+Madrid, Spain 
+ Event: May 4 - 
+ Submission deadline:7 February 2025 
+ href="https://permutationbasedcrypto.org/2025" - Permutation-based Crypto 2025
+                        (PBC 2025)
+Madrid, Spain 
+ Event: May 4 - May 4, 2025 
+ Submission deadline:28 February 2025 
+ Notification date: 15 March 2025 
+ Workshop on Quantum-Resistant Cryptography (QuRCry)Madrid, España 
+ Event: May 4 - May 4, 2025 
+ Submission deadline:20 February 2025 
+ Notification date: 17 March 2025 
+ href="https://eurocrypt.iacr.org/2025" - Eurocrypt 2025
+                        (Eurocrypt 2025)
+EUROCRYPT 
+ Madrid, Spain 
+ Event: May 4 - May 8, 2025 
+ IEEE International Symposium on Hardware Oriented Security and Trust (HOST) (HOST)San Jose, USA 
+ Event: May 5 - May 8, 2025 
+ Workshop on secret sharing schemesTarragona, Spain 
+ Event: May 12 - May 14, 2025 
+ href="https://pkc.iacr.org/2025" - The International Conference on Practice and Theory in Public Key Cryptography
+                        (PKC 2025)
+PKC 
+ Røros, Norway 
+ Event: May 12 - May 15, 2025 
+ Submission deadline:16 October 2024 
+ Notification date: 5 February 2025 
+ International Workshop on Network and Distributed Systems Security (WNDSS)Marburg, Slowenien 
+ Event: May 23 - May 23, 2025 
+ Submission deadline:31 January 2025 
+ Notification date: 28 February 2025 
+ href="https://sites.google.com/view/aisp2025/home" - First International Workshop on Artificial Intelligence Security and Privacy
+                        (AI Security & Privacy 2025)
+Osaka, Japan 
+ Event: May 26 - May 28, 2025 
+ Submission deadline:26 January 2025 
+ Notification date: 24 February 2025 
+ June 2025 
+ href="https://proact-school.cs.ru.nl/" - PROACT Training School 2025
+Chania, Greece 
+ Event: Jun 2 - Jun 5, 2025 
+ href="https://cecc2025.inf.elte.hu/en" - Central European Cryptology Conference
+                        (CECC 2025)
+Budapest, Hungary 
+ Event: Jun 19 - Jun 20, 2025 
+ Submission deadline:20 March 2025 
+ href="http://kmlabcw.iis.u-tokyo.ac.jp/weis/2025/" - The 24th Annual Workshop on the Economics of Information Security
+                        (WEIS 2025)
+Tokyo, Japan 
+ Event: Jun 23 - Jun 25, 2025 
+ Submission deadline:31 January 2025 
+ Notification date: 14 March 2025 
+ href="https://acns2025.fordaysec.de/" - 2025 International Conference on Applied Cryptography and Network Security 
+                        (ACNS'25)
+Munich, Germany 
+ Event: Jun 23 - Jun 26, 2025 
+ Submission deadline:9 September 2024 
+ Notification date: 11 November 2024 
+ 6th ACNS Workshop on Secure Cryptographic Implementation (SCI '25)München, Deutschland 
+ Event: Jun 23 - Jun 26, 2025 
+ Submission deadline:15 March 2025 
+ Notification date: 20 April 2025 
+ href="https://privcryptworkshop.github.io/cfp.html" - International Workshop on Foundations and Applications of Privacy-Enhancing Cryptography
+                        (PrivCrypt)
+Munich, Germany 
+ Event: Jun 24 - Jun 24, 2025 
+ Submission deadline:21 March 2025 
+ Notification date: 22 April 2025 
+ Workshop on Quantum-Safe Hybrid Cryptography (QSHC)Munich, Germany 
+ Event: Jun 25 - 
+ Submission deadline:31 March 2025 
+ Notification date: 30 April 2025 
+ href="https://aihws2025.aisylab.com/" - 6th Artificial Intelligence in Hardware Security (AIHWS) Workshop affiliated with ACNS2025
+Munich, Germany 
+ Event: Jun 25 - Jun 25, 2025 
+ Submission deadline:7 March 2025 
+ href="https://summerschool-croatia.cs.ru.nl/2025/index.html" - Croatia Summer School on real-world crypto and privacy 2025
+Dubrovnik, Croatia 
+ Event: Jun 29 - Jul 4, 2025 
+ Submission deadline:30 January 2025 
+ Notification date: 15 February 2025 
+ href="https://www.ieee-security.org/TC/EuroSP2025/" - IEEE European Symposium on Security and Privacy 2025
+                        (EuroS&P)
+Venice, Italy 
+ Event: Jun 30 - Jul 4, 2025 
+ Submission deadline:24 October 2024 
+ Notification date: 13 February 2025 
+ July 2025 
+ href="https://qubip.eu/qsns2025/" - 2nd Workshop on Quantum-Secure Networks and Systems
+                        (QSNS 2025)
+Bologna, Italy 
+ Event: Jul 2 - Jul 5, 2025 
+ Submission deadline:10 February 2025 
+ Notification date: 14 March 2025 
+ href="https://simula-uib.com/arcticcrypt2025/" - ArcticCrypt 2025
+Longyearbyen, Norge 
+ Event: Jul 6 - Jul 11, 2025 
+ Submission deadline:13 September 2024 
+ Notification date: 23 October 2024 
+ href="https://services.conferences.computer.org/2025/edge/" - IEEE International Conference on Edge Computing and Communications 
+                        (IEEE EDGE)
+Helsinki, Finland 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:3 March 2025 
+ Notification date: 6 May 2025 
+ href="https://services.conferences.computer.org/2025/qsw/" - IEEE International Conference On Qunatum Software 2025
+                        (IEEE QSW 2025)
+Helsinki, Finland 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:24 February 2025 
+ Notification date: 6 May 2025 
+ href="https://services.conferences.computer.org/2025/icws-2025/" - IEEE International Conference on Web Services (ICWS)
+                        (ICWS)
+Helsinki, Suomi 
+ Event: Jul 7 - Jul 12, 2025 
+ Submission deadline:24 February 2024 
+ Notification date: 6 May 2025 
+ href="https://uow-ic2.github.io/acisp2025/" - 30th Australasian Conference on Information Security and Privacy
+                        (ACISP 2025)
+Wollongong, Australia 
+ Event: Jul 14 - Jul 16, 2025 
+ Submission deadline:6 November 2024 
+ Notification date: 22 January 2025 
+ href="https://africacrypt2025.sciencesconf.org/" - 16th International Conference on Cryptology, AFRICACRYPT 2025
+                        (AFRICACRYPT 2025)
+Rabat-Salé-Kénitra, Maroc 
+ Event: Jul 21 - Jul 23, 2025 
+ Submission deadline:10 March 2025 
+ Notification date: 1 May 2025 
+ August 2025 
+ href="https://www.ieee-csr.org/" - 2025 IEEE International Conference on Cyber Security and Resilience
+                        (IEEE CSR 2025)
+Plataniás, Greece 
+ Event: Aug 4 - Aug 6, 2025 
+ Submission deadline:10 February 2025 
+ Notification date: 10 March 2025 
+ href="https://2025.ares-conference.eu/" - 20th International Conference on Availability, Reliability and Security
+                        (ARES '25)
+Ghent, Belgium 
+ Event: Aug 11 - Aug 14, 2025 
+ Submission deadline:28 February 2025 
+ Notification date: 2 May 2025 
+ href="https://sacworkshop.org/SAC25/" - Selected Areas in Cryptography 2025 cycle 1
+                        (SAC 2025)
+Toronto, Canada 
+ Event: Aug 11 - Aug 15, 2025 
+ Submission deadline:27 January 2025 
+ Notification date: 13 March 2025 
+ href="https://sacworkshop.org/SAC25/" - Selected Areas in Cryptography 2025 cycle 2
+                        (SAC 2025)
+Toronto, Canada 
+ Event: Aug 11 - Aug 15, 2025 
+ Submission deadline:7 May 2025 
+ Notification date: 20 June 2025 
+ href="https://crypto.iacr.org/2025/" - Crypto 2025
+                        (Crypto 2025)
+CRYPTO 
+ Santa Barbara, USA 
+ Event: Aug 17 - Aug 21, 2025 
+ Submission deadline:13 February 2025 
+ Notification date: 3 May 2025 
+ href="https://asiajcis2024.web2.ncku.edu.tw/" - 20th Asia Joint Conference on Information Security
+                        (AsiaJCIS 2025)
+Seoul, Korea 
+ Event: Aug 19 - Aug 20, 2025 
+ Submission deadline:17 April 2025 
+ Notification date: 19 June 2025 
+ href="https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2025.html" - 12th ACM ASIA Public-Key Cryptography Workshop
+                        (APKC 2025)
+Hanoi, Vietnam 
+ Event: Aug 26 - Aug 26, 2025 
+ Submission deadline:17 February 2025 
+ Notification date: 17 March 2025 
+ September 2025 
+ href="https://www.encrypt-on.com/activities/conferences/lightsec-2025/" - 6th International Workshop on LIGHTWEIGHT CRYPTOGRAPHY FOR SECURITY & PRIVACY
+                        (LightSEC 2025)
+Istanbul, Türkiye 
+ Event: Sep 1 - Sep 3, 2025 
+ Submission deadline:29 March 2025 
+ Notification date: 29 May 2025 
+ href="https://www.encrypt-on.com/activities/conferences/lightsec-2025/" - 6th International Workshop on LIGHTWEIGHT CRYPTOGRAPHY FOR SECURITY & PRIVACY
+                        (LightSEC 2025)
+Fatih, Türkiye 
+ Event: Sep 1 - Sep 3, 2025 
+ Submission deadline:18 April 2025 
+ Notification date: 29 May 2025 
+ href="https://fdtc.deib.polimi.it/FDTC25/index.html" - workshop on Fault Diagnosis and Tolerance in Cryptography 2025
+                        (FDTC 2025)
+Kuala Lumpur, Malesia 
+ Event: Sep 14 - Sep 14, 2025 
+ href="https://ches.iacr.org/2025/" - Cryptographic Hardware and Embedded Systems
+                        (CHES 2025)
+CHES 
+ Kuala Lumpur, Malaysia 
+ Event: Sep 14 - Sep 18, 2025 
+ href="https://blocktea.eai-conferences.org/" - 4th EAI International Conference on Blockchain Technology and Emerging Applications
+                        (BlockTEA 2025)
+Virtual event, Anywhere on Earth 
+ Event: Sep 18 - Sep 19, 2025 
+ Submission deadline:15 May 2025 
+ Notification date: 8 July 2025 
+ Sixth PQC Standardization ConferenceGaithersburg, USA 
+ Event: Sep 24 - Sep 26, 2025 
+ October 2025 
+ href="https://www.decifris.it/fcir25" - First international conference of Financial Cryptography in Rome 2025
+                        (FCiR25)
+Rome, Italy 
+ Event: Oct 1 - Oct 1, 2025 
+ Submission deadline:28 April 2025 
+ Notification date: 1 July 2025 
+ href="https://ciencias.medellin.unal.edu.co/eventos/latincrypt/" - 9th International Conference on Cryptology and Information Security in Latin America
+                        (LATINCRYPT 2025)
+Medellín, Colombia 
+ Event: Oct 1 - Oct 3, 2025 
+ Submission deadline:18 April 2025 
+ Notification date: 4 July 2025 
+ href="https://sulab-sever.u-aizu.ac.jp/provsec2025/cfp.html" - The 19th International Conference on Provable and Practical Security
+Yokohama, Japan 
+ Event: Oct 10 - Oct 12, 2025 
+ Submission deadline:31 May 2025 
+ Notification date: 15 July 2025 
+ href="https://www.icics2025.org/" - The 27th International Conference on Information and Communications Security 
+                        (ICICS 2025)
+Nanjing, China 
+ Event: Oct 29 - Oct 31, 2025 
+ November 2025 
+ href="https://cy2sec.comm.eng.osaka-u.ac.jp/miyaji-lab/event/cans2025/index.html" - The 24th International Conference on Cryptology and Network Security
+                        (CANS 2025)
+Osaka, Japan 
+ Event: Nov 17 - Nov 20, 2025 
+ Submission deadline:17 April 2025 
+ Notification date: 10 July 2025 
+ href="https://www.iwsec.org/2025/index.html" - The 20th International Workshop on Security (IWSEC 2025) (1st round submission)
+Fukuoka, Japan 
+ Event: Nov 25 - Nov 27, 2025 
+ Submission deadline:3 April 2025 
+ Notification date: 2 June 2025 
+ href="https://www.iwsec.org/2025/index.html" - The 20th International Workshop on Security (IWSEC 2025) (2nd round submission)
+Fukuoka, Japan 
+ Event: Nov 25 - Nov 27, 2025 
+ Submission deadline:17 July 2025 
+ Notification date: 15 September 2025 
+ December 2025 
+ href="https://tcc.iacr.org/2025/" - Theory of Cryptography Conference
+                        (TCC 2025)
+TCC 
+ Aarhus, Denmark 
+ Event: Dec 2 - Dec 5, 2025 
+ href="https://asiacrypt.iacr.org/2025/" - Asiacrypt 2025
+                        (Asiacrypt 2025)
+ASIACRYPT 
+ Melbourne, Australia 
+ Event: Dec 8 - Dec 12, 2025 
+ href="https://event.iitg.ac.in/space2025/" - Fifteenth International Conference on Security, Privacy and Applied Cryptographic Engineering
+                        (SPACE 2025)
+Indian Institute of Technology Guwahati, India 
+ Event: Dec 16 - Dec 19, 2025 
+ href="https://event.iitg.ac.in/space2025/" - SPACE 2025: Fifteenth International Conference on Security, Privacy and Applied Cryptographic Engineering
+                        (SPACE 2025)
+Guwahati, India 
+ Event: Dec 16 - Dec 19, 2025 
+ Submission deadline:1 May 2025 
+ March 2026 
+ Real World Crypto Symposium (RWC 2026)RWC 
+ Taipei, Taiwan 
+ Event: Mar 7 - Mar 9, 2026 
+ Real World Crypto Symposium (RWC 2026)RWC 
+ Taipei, Taiwan 
+ Event: Mar 9 - Mar 11, 2026 
+ AboutThehref="/" - International Association for Cryptologic Research (IACR)
+is a non-profit scientific organization whose purpose is to further research in cryptology and related fields.Learn more...EventsAsiacrypt | • | Crypto | • | Eurocrypt 
+ CHES | • | FSE | • | PKC | • | TCC 
+ Real World Crypto 
+ Schools 
+ Calendar of events 
+ PublicationsAccess to Publications 
+ Journal of Cryptology 
+ Trans. on Symmetric Cryptology 
+ Trans. on CHES 
+ Communications in Cryptology 
+ Cryptology ePrint Archive 
+ Publication database 
+ ServicesNews 
+ Awards 
+ Jobs 
+ Update your information 
+ How to join 
+ About the IACR 
+ href="/copyright.html" - Copyright ©
+        2025
+          by the IACRInternational Association for Cryptologic Research
+• 
+ Privacy Policy
+

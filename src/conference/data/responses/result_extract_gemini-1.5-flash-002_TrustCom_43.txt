@@ -1,0 +1,29 @@
+output:
+{
+  "Conference dates": "December 17 - 21, 2024",
+  "Year": "2024",
+  "Location": "Sanya, China",
+  "City-State-Province": "Sanya",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission Deadline": "October 1, 2024"
+  },
+  "Notification Date": {
+    "Author Notification": "November 1, 2024"
+  },
+  "Camera-ready Date": {
+    "Final Manuscript Due": "November 22, 2024"
+  },
+  "Registration Date": {
+    "Registration Due": "November 22, 2024"
+  },
+  "Other Date": {
+    "Workshop Proposal": "July 1, 2024"
+  },
+  "Topics": "Trust, Security, Privacy, Reliability, Dependability, Survivability, Availability, Fault Tolerance, Computer Systems, Networks, AI, Trust Semantics, Metrics, Models, Trusted Computing Platform, Trusted Network Computing, Trusted Operating Systems, Trusted Software and Applications, Trust in Social Networks, Trust in E-commerce, Trust in E-government, Trust in Mobile and Wireless Communications, Risk and Reputation Management, Survivable Computer Systems/Networks, Trust in 5G Networks, System Reverse Engineering, Watermarking and Security, Cryptanalysis and Security Solutions, Network and Cyber Security, Computer Security, Database Security, Web Applications Security, Security Policy, Model and Architecture, Security in Social Networks, Security in Parallel and Distributed Systems, Security in Mobile and Wireless Communications, Security in Cloud/Pervasive Computing, Authentication, Authorization and Accounting, Security of 5G Networks, Steganography and Steganalysis, Security-Aware Facial Recognition, Privacy in Web-Based Applications and Services, Privacy in Database Systems, Privacy in Parallel and Distributed Systems, Privacy in Cloud/Pervasive Computing, Privacy in Mobile and Wireless Communications, Privacy in E-commerce and E-government, Privacy in Network Deployment and Management, Privacy and Trust, Privacy and Security, Privacy and Anonymity, Privacy Preservation in 5G, Privacy-Preserving Biometrics, Anti-forensics and Analytics, Big Data Forensics, CCTV Forensics, Cloud Forensics, Computational Forensics, Cyber-Physical System Forensics, Datamining for Forensics, Fingerprint Forensics, Image Forensics, Malware Forensics, Mobile App Forensics, Mobile Device Forensics, Multimedia Forensics, Network Forensics, Emerging Hardware Security, Emerging Security Problems and Solutions in Edge/Fog Computing, Emerging Paradigms of Deep Learning in Security, Emerging Applications of Reinforcement Learning for Securing Networks, Emerging Secure Mechanisms for Service Delivery Models, Emerging Quantum Safe Cryptography for 5G, Emerging Techniques in Intelligent Transportation Systems, Emerging Network Attacks & Anomalies Detection and Prevention, Emerging Approaches to Cybersecurity, Emerging Techniques in Identity Management, Emerging Approaches of Smart Contract and Distributed Ledger, Emerging Blockchain Techniques, Robustness and Safety of Machine Learning, Attacks on AI Models, Non-discrimination and Fairness of AI, Transparency and Explainability of AI, Auditability and Accountability of AI, Privacy Preservation of AI, Data Truth Discovery, Trust Framework for AI Model Generation and Usage, Trusted Computing Platform for Big Data Learning, Adversarial Learning, Trustworthy Data Fusion",
+  "Summary": "The IEEE TrustCom-2024 (23rd IEEE International Conference on Trust, Security and Privacy in Computing and Communications) is a forum for presenting leading works on trusted computing, communications, networking, and machine learning.  TrustCom-2024 was hosted in Sanya, China.",
+  "Call for Papers": "# TrustCom 2024: Call for Papers\n\nThe IEEE TrustCom-2024 (23rd IEEE International Conference on Trust, Security and Privacy in Computing and Communications) is a forum for presenting leading works on trusted computing, communications, networking, and machine learning, with regard to trust, security, privacy, reliability, dependability, survivability, availability, and fault tolerance aspects of computer systems and networks, as well as AI.  TrustCom-2024 was held in **Sanya, China**.\n\n## Tracks and Topics\n\n*   **Track 1: Trust Track**\n*   **Track 2: Security Track**\n*   **Track 3: Privacy Track**\n*   **Track 4: Forensics and Analytics Track**\n*   **Track 5: Emerging Tech Track**\n*   **Track 6: AI Trust Track**\n\n## Paper Submission\n\nAll papers need to be submitted electronically through the conference submission website ([https://edas.info/N32607](https://edas.info/N32607)) with PDF format. The conference applies single-blind peer review. The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts).\n\n## Manuscript Templates\n\nManuscript Templates for Conference Proceedings can be found at: [https://www.ieee.org/conferences_events/conferences/publishing/templates.html](https://www.ieee.org/conferences_events/conferences/publishing/templates.html)\n\n## Important Dates\n\n*   **Workshop Proposal:** July 1, 2024\n*   **Submission Deadline:** October 1, 2024\n*   **Author Notification:** November 1 (AoE), 2024\n*   **Final Manuscript Due:** November 22, 2024\n*   **Registration Due:** November 22, 2024\n*   **Conference Date:** December 17-21, 2024"
+}
+

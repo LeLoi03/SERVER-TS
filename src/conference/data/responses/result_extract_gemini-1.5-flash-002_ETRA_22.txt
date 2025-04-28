@@ -1,0 +1,43 @@
+output:
+{
+  "Conference dates": "May 26 - 29, 2025",
+  "Year": "2025",
+  "Location": "Tokyo, Japan",
+  "City-State-Province": "Tokyo",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Full Paper) Abstract submission (mandatory)": "October 26, 2024",
+    "(Full Paper) Paper submission": "November 1, 2024",
+    "(Short Paper) Abstract submission (mandatory)": "January 14, 2025",
+    "(Short Paper) Paper submission": "January 21, 2025",
+    "(Workshop) Paper submission": "January 6, 2025",
+    "(Tutorials) Paper submission": "January 6, 2025",
+    "(Late-Breaking Work) Paper submission": "Rolling Deadline",
+    "(Doctoral Consortium) Paper submission": "March 17, 2025"
+  },
+  "Notification Date": {
+    "(Full Paper) First round reviews and notifications": "January 7, 2025",
+    "(Full Paper) Second round reviews and notifications": "March 13, 2025",
+    "(Short Paper) First round reviews and notifications": "March 8, 2025",
+    "(Workshop) First round reviews and notifications": "January 20, 2025",
+    "(Tutorials) First round reviews and notifications": "January 24, 2025",
+    "(Doctoral Consortium) First round reviews and notifications": "March 24, 2025"
+  },
+  "Camera-ready Date": {
+    "(Full Paper) Camera-ready deadline": "March 31, 2025",
+    "(Short Paper) Camera-ready deadline": "March 31, 2025",
+    "(Workshop) Camera-ready deadline": "January 31, 2025",
+    "(Tutorials) Camera-ready deadline": "February 7, 2025",
+    "(Late-Breaking Work) Camera-ready deadline": "March 31, 2025",
+    "(Doctoral Consortium) Camera-ready deadline": "March 31, 2025"
+  },
+  "Other Date": {
+    "(Full Paper) Revisions due": "February 18, 2025"
+  },
+  "Topics": "Oculomotor research, Gaze tracking systems, Eye tracking applications, Gaze-based interaction, Eye movement data analysis, Visuomotor neuroscience, Perception, Cognition, Data Analysis, Scanpath analysis, Gaze prediction, Action prediction, Intent prediction, Attribute prediction, Visual representation of gaze patterns, Visual analytics, Eye tracking devices, Head-mounted eye tracking, Remote eye tracking, Novel sensors, Wearables, Perception, Attention, Oculomotor control, Visual search, Scene perception, Eye movements in reading and communication, Eye-hand coordination, Eye tracking in naturalistic tasks, In-the-wild studies, Novel interaction methods, Virtual reality, Augmented reality, Multi-modal interaction, Security and privacy, Education, Driving, Medical/Health, Graphics, Virtual avatars, Media accessibility",
+  "Summary": "The 2025 ACM Symposium on Eye Tracking Research & Applications (ETRA) will be held in Tokyo, Japan, from May 26 to May 29, 2025. ETRA brings together researchers and practitioners from across fields with the common goal of continuing to move eye tracking research forward.",
+  "Call for Papers": "# ETRA 2025: Call for Papers\n\nThe 2025 ACM Symposium on Eye Tracking Research & Applications (ETRA) will be held in **Tokyo, Japan from May 26 to May 29, 2025**.\n\n## Long Papers\n\nThe symposium presents advances and innovations in oculomotor research, gaze tracking systems, eye tracking applications, gaze-based interaction, and eye movement data analysis. We invite high-quality papers in all areas of eye tracking research and applications and welcome submissions from all domains, including visuomotor neuroscience, perception, and cognition.\n\nPapers must be original and not accepted previously for publication or under review elsewhere. At least one author must register and present accepted work at the conference. Accepted full papers will be published as journal articles in special issues of either PACM CGIT or PACM HCI with the authors’ choice.\n\n**Required this year:** With burgeoning technological and social applications of eye-tracking research, we now require authors to discuss the potential societal risks that might result from its publication. Authors are required to include a privacy and ethics statement of two to three sentences related to their study findings or new advancements made possible by their developed methods.\n\n## Short Papers\n\nAuthors are also invited to submit original work in a shorter format ([https://etra.acm.org/2025/submissionprocess.html](https://etra.acm.org/2025/submissionprocess.html)).\n\n**Required this year:** With burgeoning technological and social applications of eye-tracking research, we now require authors to discuss the potential societal risks that might result from its publication. Authors are required to include a privacy and ethics statement of two to three sentences related to their study findings or new advancements made possible by their developed methods.\n\n## Topic Areas\n\nThe ACM Symposium on Eye Tracking Research & Applications (ETRA) solicits original full and short research papers on a diverse set of topics related to eye tracking. Research contributions are welcomed across a range of topics, including but not limited to:\n\n*   Data Analysis\n*   Prediction Methods\n*   Visualization\n*   Eye tracking devices\n*   Perception and cognition; Empirical studies\n*   Gaze based interaction\n*   Applications\n\n## Important Dates\n\n(Time Zone AoE/Anywhere on Earth)\n\n### Long Paper\n\n*   **Abstract submission (mandatory):** October 26, 2024\n*   **Paper submission:** November 1, 2024\n*   **First round reviews and notifications:** January 7, 2025\n*   **Revisions due:** February 18, 2025\n*   **Second round reviews and notifications:** March 13, 2025\n*   **Camera ready deadline:** March 31, 2025\n\n### Short Paper\n\n*   **Abstract submission (mandatory):** January 14, 2025\n*   **Paper submission:** January 21, 2025\n*   **First round reviews and notifications:** March 8, 2025\n*   **Camera ready deadline:** March 31, 2025\n\n### Workshop\n\n*   **Paper submission:** January 6, 2025\n*   **First round reviews and notifications:** January 20, 2025\n*   **Camera-ready deadline:** January 31, 2025\n\n### Tutorials\n\n*   **Paper submission:** January 6, 2025\n*   **First round reviews and notifications:** January 24, 2025\n*   **Camera-ready deadline:** February 7, 2025\n\n### Late-Breaking Work\n\n*   **Paper submission:** Rolling deadline\n*   **Camera-ready deadline:** March 31, 2025\n\n### Doctoral Consortium\n\n*   **Paper submission:** March 17, 2025\n*   **First round reviews and notifications:** March 24, 2025\n*   **Camera-ready deadline:** March 31, 2025\n\n## General Chairs\n\n*   [general.etra2025@acm.org](mailto:general.etra2025@acm.org)\n*   Yusuke Sugano, The University of Tokyo, Japan\n*   Mohamed Khamis, University of Glasgow, United Kingdom\n*   Aladine Chetouani, University Sorbonne - Paris Nord, France"
+}
+

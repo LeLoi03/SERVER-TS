@@ -1,0 +1,26 @@
+```json
+{
+  "Conference dates": "November 10 - 12, 2025",
+  "Year": "2025",
+  "Location": "Bucharest, Romania",
+  "City-State-Province": "Bucharest",
+  "Country": "Romania",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full paper Submission": "August 1, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "One month after submission"
+  },
+  "Camera-ready Date": {
+    "Submission of camera ready papers": "October 1, 2025"
+  },
+  "Registration Date": {
+    "Author online registration": "October 11, 2025"
+  },
+  "Topics": "eSystems Engineering, Artificial Intelligence, Intelligent Systems Applications, Evolutionary Computations, Fuzzy Systems, Neural Networks, Bioinformatics, Bioengineering, Robotics, Smart Applications, Sensors, Industry 4.0, Emergent Technologies, Cognitive Systems, Development Systems, Intelligent Computation, Machine Learning",
+  "Summary": "The 18th International Conference on Developments in eSystems Engineering (DeSE 2025) will be held in Bucharest, Romania, from November 10-12, 2025. The conference will focus on AI and Industry 4.0 for a sustainable world and disseminate the latest knowledge in eSystem Developments.",
+  "Call for Papers": "# DeSE 2025: Call for Papers\n\nThe 18th International Conference on Developments in eSystems Engineering (DeSE 2025) will be held from **November 10-12, 2025 in Bucharest, Romania**.\n\nDeSE is an international core-ranked non-profit conference that disseminates the latest knowledge in eSystem Developments, including Artificial Intelligence (AI), Intelligent Systems Applications, Evolutionary Computations, Fuzzy Systems, Neural Networks, Bioinformatics and Bioengineering, robotics, Smart Applications, Sensors, and other related subjects that support Industry 4.0.\n\n## Conference Topics\n\nThe conference is aimed at addressing current research issues in the design, engineering, and adoption of eSystems. DeSE 2025 comprises stimulating tracks:\n\n*   Advanced Robotics\n*   Nanomaterials and Energy\n*   Sensors, Sensors Applications, and Sensors Platforms\n*   Internet of Everything and its Applications\n*   AI and its Applications\n*   Biomedical Intelligence, Image Processing and Medical Imaging & Clinical Data Analysis\n*   Bio-informatics, Health Informatics, and Bio-Computing\n*   Computational intelligence\n*   Decision Support Systems\n*   Genetic Algorithms\n*   Novel Data Processing and Analytics, Tools and Systems\n*   Big Data Systems, Mining and Management, Tools and Applications\n*   Machine Learning, Web-based Decision Making\n*   Deep Learning Methods and Techniques\n*   General Session: eSystems Engineering\n\n## Submission Guidelines\n\nAll submitted papers will be peer-reviewed, and accepted papers will be published in the conference proceedings. The proceedings will be submitted for review by IEEE, and if it meets IEEE quality review standards, it may be eligible for inclusion in the IEEE Xplore Digital Library. The papers will also be included in SCOPUS and indexed by other relevant indexation services.\n\n## Important Dates\n\n*   **Full paper Submission:** August 1, 2025\n*   **Notification of acceptance:** Up to one month after submission\n*   **Submission of camera-ready papers:** October 1, 2025\n*   **Author online registration:** October 11, 2025\n\n## Publication\n\nAccepted papers will be published in the conference proceedings and may be eligible for inclusion in the IEEE Xplore Digital Library. The papers will also be included in SCOPUS and indexed by other relevant indexation services."
+}
+```

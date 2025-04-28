@@ -1,0 +1,21 @@
+```json
+{
+  "Conference dates": "January 12 - 13, 2025",
+  "Year": "2025",
+  "Location": "New Orleans, Louisiana, U.S.",
+  "City-State-Province": "New Orleans, Louisiana",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline Passed: Submissions Due": "July 18, 2024"
+  },
+  "Registration Date": {
+    "Early Registration Deadline": "December 9, 2024",
+    "Reserve Now: Hotel Reservation Deadline": "December 9, 2024"
+  },
+  "Topics": "Algorithm design, Algorithm implementation, Experimental algorithm evaluation, Databases, Geometry, Graphs and networks, Operations research, Combinatorial aspects of scientific computing, Computational problems in the natural sciences or engineering, Algorithms and data structures for advanced models of computing, Memory hierarchies, Parallel computing, Instruction parallelism, Multicore computing, High-performance computing, Cloud computing",
+  "Summary": "The SIAM Symposium on Algorithm Engineering and Experiments (ALENEX) is a forum for the presentation of original research in the design, implementation, and experimental evaluation of algorithms and data structures.  ALENEX 2025 was held in New Orleans, Louisiana from January 12-13, 2025.",
+  "Call for Papers": "No call for papers available"
+}
+```

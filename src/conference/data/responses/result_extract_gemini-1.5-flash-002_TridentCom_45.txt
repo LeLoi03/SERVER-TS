@@ -1,0 +1,24 @@
+```json
+{
+  "Conference dates": "November 11 - 13, 2023",
+  "Year": "2023",
+  "Location": "Nanjing, China",
+  "City-State-Province": "Nanjing",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "(Late Track) Submission deadline": "September 10, 2023"
+  },
+  "Notification Date": {
+    "(Late Track) Notification deadline": "October 1, 2023"
+  },
+  "Camera-ready Date": {
+    "(Late Track) Camera-ready deadline": "October 22, 2023"
+  },
+  "Topics": "Intrusion Detection and Prevention, Network Infrastructure Security, Wireless Security, Secure Networked Systems, Distributed Systems Security, Cloud Security, Mobile Security, Digital Forensics, Formal Verification for Network Systems and Protocols, Privacy-enhancing Techniques and Anonymity, Cryptographic Protocols with Networks and Systems, Blockchain Protocols and Systems, Smart Contract Security, Blockchain Powered Applications and Services, Trustworthy Machine Learning and AI, Privacy-preserving Machine Learning, Cyber-Physical Systems Security, Internet of Things Security, Confidential Computing and Its Applications, Watermarking and Digital Rights Management, Security and Privacy For Digital Health",
+  "Publisher": "Springer",
+  "Summary": "The 18th EAI International Conference on Tools for Design, Implementation and Verification of Emerging Information Technologies (TRIDENTCOM 2023) was held between 11th-13th November 2023 in Nanjing, China.  The scope of the conference covered the current and emerging aspects of technologies in network and information security.",
+  "Call for Papers": "# TRIDENTCOM 2023: Call for Papers\n\nThe 18th EAI International Conference on Tools for Design, Implementation and Verification of Emerging Information Technologies (TRIDENTCOM 2023) was held between **11th-13th November 2023 in Nanjing, China.** The conference covered the current and emerging aspects of technologies in network and information security.\n\n## Topics\n\nWe welcome contributions from the following fields:\n\n*   Intrusion Detection and Prevention\n*   Network Infrastructure Security\n*   Wireless Security\n*   Secure Networked Systems\n*   Distributed Systems Security\n*   Cloud Security\n*   Mobile Security\n*   Digital Forensics\n*   Formal Verification for Network Systems and Protocols\n*   Privacy-enhancing Techniques and Anonymity\n*   Cryptographic Protocols with Networks and Systems\n*   Blockchain Protocols and Systems\n*   Smart Contract Security\n*   Blockchain Powered Applications and Services\n*   Trustworthy Machine Learning and AI\n*   Privacy-preserving Machine Learning\n*   Cyber-Physical Systems Security\n*   Internet of Things Security\n*   Confidential Computing and Its Applications\n*   Watermarking and Digital Rights Management\n*   Security and Privacy For Digital Health\n\n## Publication\n\nAll registered papers were submitted for publishing by Springer and made available through SpringerLink Digital Library. Proceedings were submitted for inclusion in leading indexing services, such as Web of Science, Compendex, Scopus, DBLP, EU Digital Library, Google Scholar, IO-Port, MathSciNet, Inspec, and Zentralblatt MATH. Authors of selected papers were invited to submit an extended version to Wireless Networks (WINET) Journal [IF: 2.701 (2021)]. Additional publication opportunities included the EAI Transactions series (Open Access) and the EAI/Springer Innovations in Communications and Computing Book Series.\n\n## Paper Submission\n\nPapers should have been submitted through the EAI ‘Confy+‘ system and complied with the Springer format. Regular papers should have been up to 12-15+ pages in length. Short papers should have been 6-11 pages in length. All conference papers underwent a thorough peer review process prior to the final decision and publication.  This process was facilitated by experts in the Technical Program Committee during a dedicated conference period. Standard peer review was enhanced by EAI Community Review which allowed EAI members to bid to review specific papers.  All review assignments were ultimately decided by the responsible Technical Program Committee Members while the Technical Program Committee Chair was responsible for the final acceptance selection.\n\n## Important Dates (Late Track)\n\n*   **Submission deadline:** September 10, 2023\n*   **Notification deadline:** October 1, 2023\n*   **Camera-ready deadline:** October 22, 2023"
+}
+```

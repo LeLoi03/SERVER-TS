@@ -1,0 +1,916 @@
+Conference full name: Combinatorial Pattern Matching (CPM)
+
+1. Website of CPM_2: https://easychair.org/cfp/cpm2025
+Website information of CPM_2:
+
+EasyChair Smart CFP | Docs/Log in | EasyChair Smart CFP | Docs/Log in 
+ EasyChair Smart CFP | Docs/Log in 
+ Home | New CFP | My CFPs | Watchlist 
+ CFP 
+  
+ CPM 2025: 36th Annual Symposium on Combinatorial Pattern Matching 
+ University of Milano-Bicocca 
+ Milano, Italy, June 17-19, 2025 
+  
+ Conference website | href="https://cpm2025.pangenome.eu/" - https://cpm2025.pangenome.eu/ 
+ Submission link | href="https://easychair.org/conferences/?conf=cpm2025" - https://easychair.org/conferences/?conf=cpm2025 
+ Submission deadline | November 16, 2024 
+ Topics:href="/cfp/topic.cgi?tid=29133" - string algorithms
+href="/cfp/topic.cgi?tid=9431" - combinatorics on words
+href="/cfp/topic.cgi?tid=36470675" - text searching and indexing
+href="/cfp/topic.cgi?tid=744188" - bioinformatics and computational biology
+Call for Papers 
+ The 36th Annual Symposium on Combinatorial Pattern Matching (CPM 2025) will beheld in Milan, Italy, on June 17-19, 2025. 
+ href="https://cpm2025.pangenome.eu" - https://cpm2025.pangenome.eu
+Papers on original research unpublished elsewhere in all areas related to combinatorial pattern matching and its applications are sought. 
+ The proceedings will be published by LIPIcs (of Dagstuhl). 
+ Topics of Interest 
+ Papers are solicited on, but not limited to, the following topics: 
+ Bioinformatics and computational biology 
+ Coding and data compression 
+ Combinatorics on words 
+ Data mining 
+ Information retrieval 
+ Natural language processing 
+ Pattern discovery 
+ String algorithms 
+ String processing in databases 
+ Symbolic computing 
+ Text searching and indexing 
+ Keynote speakers 
+ Inge Li Gørtz (Technical University of Denmark, Denmark) 
+ Nicola Prezza (Ca’ Foscari University of Venice, Italy) 
+ Kunihiko Sadakane (Tokyo, University, Japan) 
+ Important dates 
+ This edition is piloting a two rounds system: The first round call aims to select half of the papers and the second round call the rest. Revised versions of the papers rejected in the first round call can be resubmitted in the second round call, competing with the solicited fresh submissions. 
+ First round submission deadline: November 16, 2024 (AoE) 
+ Author notification: December 23, 2024 
+ Second round submission deadline (tentative): February 21, 2025 (AoE) 
+ Author notification (tentative): March 21, 2025 
+ Conference: June 17-19, 2025 
+ Submission 
+ Submission is through the EasyChair conference system, by following thehref="https://easychair.org/conferences/?conf=cpm2025" - link
+.The submission server will be open on September 26th.The submission process requires registration to create an EasyChair account prior to submission. 
+ Submission format 
+ The authors should submit an extended abstract not exceeding 12 single-spaced pages on A4 paper, excluding the title page (containing title, authors, affiliations, e-mail addresses, a short abstract, and keywords) and the references. The authors are required to use the LaTeX style file supplied by Dagstuhl (LIPIcs). Papers must be submitted as a single file in PDF format. 
+ Additional material intended for the referees but not for publication in the final version - for example details of proofs - may be placed in a clearly marked appendix that is not included in the page limit. The program code of experimental papers should be made public, with reasonable documentation, such that the PC may evaluate replicability of experimental results. 
+ Papers submitted for review should represent original, previously unpublished work and surveys of important results. At the time the extended abstract is submitted to CPM, and for the entire review period, the paper (or essentially the same paper) should not be underreview by any other conference with published proceedings or by a scientific journal. 
+ At least one author of an accepted paper is expected to present the paper at the conference as a registered participant. The conference will be held in person at the University of Milano-Bicocca, within easy reach from the city center of Milan, Italy. | Home | New CFP | My CFPs | Watchlist | CPM 2025: 36th Annual Symposium on Combinatorial Pattern Matching 
+ University of Milano-Bicocca 
+ Milano, Italy, June 17-19, 2025 | Conference website | href="https://cpm2025.pangenome.eu/" - https://cpm2025.pangenome.eu/ | Submission link | href="https://easychair.org/conferences/?conf=cpm2025" - https://easychair.org/conferences/?conf=cpm2025 | Submission deadline | November 16, 2024 
+ Home | New CFP | My CFPs | Watchlist 
+ CPM 2025: 36th Annual Symposium on Combinatorial Pattern Matching 
+ University of Milano-Bicocca 
+ Milano, Italy, June 17-19, 2025 
+ Conference website | href="https://cpm2025.pangenome.eu/" - https://cpm2025.pangenome.eu/ 
+ Submission link | href="https://easychair.org/conferences/?conf=cpm2025" - https://easychair.org/conferences/?conf=cpm2025 
+ Submission deadline | November 16, 2024 
+ Copyright © 2002 – 2025 EasyChair
+
+2. Website of CPM_2: https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-296
+Website information of CPM_2:
+
+DROPS 
+ Series | LIPIcs – Leibniz International Proceedings in Informatics 
+ OASIcs – Open Access Series in Informatics 
+ Dagstuhl Follow-Ups 
+ Schloss Dagstuhl Jahresbericht 
+ Discontinued Series 
+ Journals | DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES – Leibniz Transactions on Embedded Systems 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Conferences | AFT 
+ AIB 
+ AofA 
+ APPROX 
+ ATMOS 
+ CALCO 
+ CCC 
+ CONCUR 
+ COSIT 
+ CP 
+ href="https://drops.dagstuhl.de/entities/conference/CPM" - CPM 
+ CSL 
+ DISC 
+ DITAM 
+ DNA 
+ ECOOP 
+ ECRTS 
+ ESA 
+ FAB 
+ FMBC 
+ FORC 
+ FSCD 
+ FSTTCS 
+ FUN 
+ GD 
+ GIScience 
+ ICALP 
+ ICDT 
+ ICPEC 
+ IPEC 
+ iPMVM 
+ ISAAC 
+ ITC 
+ ITCS 
+ ITP 
+ LDK 
+ MFCS 
+ Microservices 
+ NG-RES 
+ OPODIS 
+ PARMA 
+ RANDOM 
+ SAND 
+ SAT 
+ SEA 
+ SLATE 
+ SNAPL 
+ SoCG 
+ STACS 
+ SWAT 
+ TIME 
+ Tokenomics 
+ TQC 
+ TYPES 
+ WABI 
+ WCET 
+ Artifacts | Supplementary Materials (Software, Datasets, ...) 
+ dblp Artifacts 
+ DARTS (Evaluated Artifacts) 
+ Metadata Export | Metadata Export 
+ OAI Interface 
+ VolumeExport XML 
+ Export ACM-XML 
+ Export DOAJ-XML 
+ Export Schema.org 
+ Export HTML 
+ LIPIcs, Volume 296 
+ 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024) 
+ Part of: | Series: | Leibniz International Proceedings in Informatics (LIPIcs) | Part of: | Conference: | href="https://drops.dagstuhl.de/entities/conference/CPM" - Annual Symposium on Combinatorial Pattern Matching (CPM) 
+ Event 
+ href="https://cpm2024.github.io/" - CPM 2024, June 25-27, 2024, Fukuoka, Japan
+Editors 
+ Shunsuke Inenagahref="https://drops.dagstuhl.de/search/documents?author=Inenaga, Shunsuke" - 
+Kyushu University, Japan 
+ Simon J. Puglisihref="https://drops.dagstuhl.de/search/documents?author=Puglisi, Simon J." - 
+University of Helsinki, Finland 
+ Publication Details 
+ published at: 2024-06-18 
+ Publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ ISBN: 978-3-95977-326-3 
+ DBLP: | href="https://dblp.org/db/conf/cpm/cpm2024" - db/conf/cpm/cpm2024 
+  
+ Access Numbers 
+ Detailed Access Statistics available here 
+ Total Document Accesses (updated on a weekly basis): | 0 
+ PDF Downloads 
+ 0 
+ Metadata Views 
+ DocumentsNo documents found matching your filter selection. 
+ Document 
+ Complete Volume 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024" - DOI: 10.4230/LIPIcs.CPM.2024
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024/LIPIcs.CPM.2024.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024" - LIPIcs, Volume 296, CPM 2024, Complete Volume
+Authors:Shunsuke Inenaga and Simon J. Puglisi 
+ AbstractLIPIcs, Volume 296, CPM 2024, Complete Volume 
+ Cite as35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 1-472, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @Proceedings{inenaga_et_al:LIPIcs.CPM.2024 title = {{LIPIcs, Volume 296, CPM 2024, Complete Volume}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {1--472}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024}, URN = {urn:nbn:de:0030-drops-201098}, doi = {10.4230/LIPIcs.CPM.2024}, annote = {Keywords: LIPIcs, Volume 296, CPM 2024, Complete Volume} }@Proceedings{inenaga_et_al:LIPIcs.CPM.2024 title = {{LIPIcs, Volume 296, CPM 2024, Complete Volume}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {1--472}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024}, URN = {urn:nbn:de:0030-drops-201098}, doi = {10.4230/LIPIcs.CPM.2024}, annote = {Keywords: LIPIcs, Volume 296, CPM 2024, Complete Volume} }Document 
+ Front Matter 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.0" - DOI: 10.4230/LIPIcs.CPM.2024.0
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.0/LIPIcs.CPM.2024.0.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.0" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.0" - Front Matter, Table of Contents, Preface, Conference Organization
+Authors:Shunsuke Inenaga and Simon J. Puglisi 
+ AbstractFront Matter, Table of Contents, Preface, Conference Organization 
+ Cite as35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 0:i-0:xiv, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{inenaga_et_al:LIPIcs.CPM.2024.0 author = {Inenaga, Shunsuke and Puglisi, Simon J.}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {0:i--0:xiv}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.0}, URN = {urn:nbn:de:0030-drops-201101}, doi = {10.4230/LIPIcs.CPM.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }@InProceedings{inenaga_et_al:LIPIcs.CPM.2024.0 author = {Inenaga, Shunsuke and Puglisi, Simon J.}, title = {{Front Matter, Table of Contents, Preface, Conference Organization}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {0:i--0:xiv}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.0}, URN = {urn:nbn:de:0030-drops-201101}, doi = {10.4230/LIPIcs.CPM.2024.0}, annote = {Keywords: Front Matter, Table of Contents, Preface, Conference Organization} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.1" - DOI: 10.4230/LIPIcs.CPM.2024.1
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.1/LIPIcs.CPM.2024.1.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.1" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.1" - Computing the LCP Array of a Labeled Graph
+Authors:Jarno N. Alanko, Davide Cenzato, Nicola Cotumaccio, Sung-Hwan Kim, Giovanni Manzini, and Nicola Prezza 
+ AbstractThe LCP array is an important tool in stringology, allowing to speed up pattern matching algorithms and enabling compact representations of the suffix tree. Recently, Conte et al. [DCC 2023] and Cotumaccio et al. [SPIRE 2023] extended the definition of this array to Wheeler DFAs and, ultimately, to arbitrary labeled graphs, proving that it can be used to efficiently solve matching statistics queries on the graph’s paths. In this paper, we provide the first efficient algorithm building the LCP array of a directed labeled graph with n nodes and m edges labeled over an alphabet of size σ. The first step is to transform the input graph G into a deterministic Wheeler pseudoforest G_{is} with O(n) edges encoding the lexicographically- smallest and largest strings entering in each node of the original graph. Using state-of-the-art algorithms, this step runs in O(min{mlog n, m+n²}) time on arbitrary labeled graphs, and in O(m) time on Wheeler DFAs. The LCP array of G stores the longest common prefixes between those strings, i.e. it can easily be derived from the LCP array of G_{is}. After arguing that the natural generalization of a compact-space LCP-construction algorithm by Beller et al. [J. Discrete Algorithms 2013] runs in time Ω(nσ) on pseudoforests, we present a new algorithm based on dynamic range stabbing building the LCP array of G_{is} in O(nlog σ) time and O(nlogσ) bits of working space. Combined with our reduction, we obtain the first efficient algorithm to build the LCP array of an arbitrary labeled graph. An implementation of our algorithm is publicly available at https://github.com/regindex/Labeled-Graph-LCP. 
+ Cite asJarno N. Alanko, Davide Cenzato, Nicola Cotumaccio, Sung-Hwan Kim, Giovanni Manzini, and Nicola Prezza. Computing the LCP Array of a Labeled Graph. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 1:1-1:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{alanko_et_al:LIPIcs.CPM.2024.1 author = {Alanko, Jarno N. and Cenzato, Davide and Cotumaccio, Nicola and Kim, Sung-Hwan and Manzini, Giovanni and Prezza, Nicola}, title = {{Computing the LCP Array of a Labeled Graph}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {1:1--1:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.1}, URN = {urn:nbn:de:0030-drops-201113}, doi = {10.4230/LIPIcs.CPM.2024.1}, annote = {Keywords: LCP array, Wheeler automata, prefix sorting, pattern matching, sorting} }@InProceedings{alanko_et_al:LIPIcs.CPM.2024.1 author = {Alanko, Jarno N. and Cenzato, Davide and Cotumaccio, Nicola and Kim, Sung-Hwan and Manzini, Giovanni and Prezza, Nicola}, title = {{Computing the LCP Array of a Labeled Graph}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {1:1--1:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.1}, URN = {urn:nbn:de:0030-drops-201113}, doi = {10.4230/LIPIcs.CPM.2024.1}, annote = {Keywords: LCP array, Wheeler automata, prefix sorting, pattern matching, sorting} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.2" - DOI: 10.4230/LIPIcs.CPM.2024.2
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.2/LIPIcs.CPM.2024.2.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.2" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.2" - Reconstructing General Matching Graphs
+Authors:Amihood Amir and Michael Itzhaki 
+ AbstractThe classical pattern matching paradigm is that of seeking occurrences of one string in another, where both strings are drawn from an alphabet set Σ. Motivated by many applications, algorithms were developed for pattern matching where the matching relation is not necessarily the "=" relation. Examples are pattern matching with "don't cares", approximate matching, less-than matching, Cartesian-tree matching, order preserving matching, parameterized matching, degenerate matching, function matching, and more. Some of the matchings above allow for efficient pattern matching algorithms, while others do not. Much work has not been done on categorization of the complexity of various string matching queries based on the type of matching. For example, when can exact matching be done fast? When can approximate matching be calculated fast? When can tandem or palindrome recognition be efficiently calculated? This paper defines the matching graph of a given string under a matching relation. We show that the type of graph affects various string algorithms. The matching graph can also be a tool for lower bounds. We provide a lower bound for finding palindromes in a general degenerate graph. We also show some results in recognizing the minimum alphabet required for reconstructing a string that presents a given matching graph. 
+ Cite asAmihood Amir and Michael Itzhaki. Reconstructing General Matching Graphs. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 2:1-2:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{amir_et_al:LIPIcs.CPM.2024.2 author = {Amir, Amihood and Itzhaki, Michael}, title = {{Reconstructing General Matching Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {2:1--2:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.2}, URN = {urn:nbn:de:0030-drops-201120}, doi = {10.4230/LIPIcs.CPM.2024.2}, annote = {Keywords: Pattern Matching, Matching Graphs, Reconstruction, NP-hardness} }@InProceedings{amir_et_al:LIPIcs.CPM.2024.2 author = {Amir, Amihood and Itzhaki, Michael}, title = {{Reconstructing General Matching Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {2:1--2:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.2}, URN = {urn:nbn:de:0030-drops-201120}, doi = {10.4230/LIPIcs.CPM.2024.2}, annote = {Keywords: Pattern Matching, Matching Graphs, Reconstruction, NP-hardness} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.3" - DOI: 10.4230/LIPIcs.CPM.2024.3
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.3/LIPIcs.CPM.2024.3.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.3" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.3" - Maintaining the Size of LZ77 on Semi-Dynamic Strings
+Authors:Hideo Bannai, Panagiotis Charalampopoulos, and Jakub Radoszewski 
+ AbstractWe consider the problem of maintaining the size of the LZ77 factorization of a string S of length at most n under the following operations: (a) appending a given letter to S and (b) deleting the first letter of S. Our main result is an algorithm for this problem with amortized update time Õ(√n). As a corollary, we obtain an Õ(n√n)-time algorithm for computing the most LZ77-compressible rotation of a length-n string - a naive approach for this problem would compute the LZ77 factorization of each possible rotation and would thus take quadratic time in the worst case. We also show an Ω(√n) lower bound for the additive sensitivity of LZ77 with respect to the rotation operation. Our algorithm employs dynamic trees to maintain the longest-previous-factor array information and depends on periodicity-based arguments that bound the number of the required updates and enable their efficient computation. 
+ Cite asHideo Bannai, Panagiotis Charalampopoulos, and Jakub Radoszewski. Maintaining the Size of LZ77 on Semi-Dynamic Strings. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 3:1-3:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bannai_et_al:LIPIcs.CPM.2024.3 author = {Bannai, Hideo and Charalampopoulos, Panagiotis and Radoszewski, Jakub}, title = {{Maintaining the Size of LZ77 on Semi-Dynamic Strings}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {3:1--3:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.3}, URN = {urn:nbn:de:0030-drops-201134}, doi = {10.4230/LIPIcs.CPM.2024.3}, annote = {Keywords: Lempel-Ziv, compression, LZ77, semi-dynamic algorithm, cyclic rotation} }@InProceedings{bannai_et_al:LIPIcs.CPM.2024.3 author = {Bannai, Hideo and Charalampopoulos, Panagiotis and Radoszewski, Jakub}, title = {{Maintaining the Size of LZ77 on Semi-Dynamic Strings}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {3:1--3:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.3}, URN = {urn:nbn:de:0030-drops-201134}, doi = {10.4230/LIPIcs.CPM.2024.3}, annote = {Keywords: Lempel-Ziv, compression, LZ77, semi-dynamic algorithm, cyclic rotation} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.4" - DOI: 10.4230/LIPIcs.CPM.2024.4
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.4/LIPIcs.CPM.2024.4.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.4" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.4" - Internal Pattern Matching in Small Space and Applications
+Authors:Gabriel Bathie, Panagiotis Charalampopoulos, and Tatiana Starikovskaya 
+ AbstractIn this work, we consider pattern matching variants in small space, that is, in the read-only setting, where we want to bound the space usage on top of storing the strings. Our main contribution is a space-time trade-off for the Internal Pattern Matching (IPM) problem, where the goal is to construct a data structure over a string S of length n that allows one to answer the following type of queries: Compute the occurrences of a fragment P of S inside another fragment T of S, provided that |T| < 2|P|. For any τ ∈ [1 . . n/log² n], we present a nearly-optimal Õ(n/τ)-size data structure that can be built in Õ(n) time using Õ(n/τ) extra space, and answers IPM queries in O(τ+log n log³ log n) time. IPM queries have been identified as a crucial primitive operation for the analysis of algorithms on strings. In particular, the complexities of several recent algorithms for approximate pattern matching are expressed with regards to the number of calls to a small set of primitive operations that include IPM queries; our data structure allows us to port these results to the small-space setting. We further showcase the applicability of our IPM data structure by using it to obtain space-time trade-offs for the longest common substring and circular pattern matching problems in the asymmetric streaming setting. 
+ Cite asGabriel Bathie, Panagiotis Charalampopoulos, and Tatiana Starikovskaya. Internal Pattern Matching in Small Space and Applications. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 4:1-4:20, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bathie_et_al:LIPIcs.CPM.2024.4 author = {Bathie, Gabriel and Charalampopoulos, Panagiotis and Starikovskaya, Tatiana}, title = {{Internal Pattern Matching in Small Space and Applications}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {4:1--4:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.4}, URN = {urn:nbn:de:0030-drops-201148}, doi = {10.4230/LIPIcs.CPM.2024.4}, annote = {Keywords: internal pattern matching, longest common substring, small-space algorithms} }@InProceedings{bathie_et_al:LIPIcs.CPM.2024.4 author = {Bathie, Gabriel and Charalampopoulos, Panagiotis and Starikovskaya, Tatiana}, title = {{Internal Pattern Matching in Small Space and Applications}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {4:1--4:20}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.4}, URN = {urn:nbn:de:0030-drops-201148}, doi = {10.4230/LIPIcs.CPM.2024.4}, annote = {Keywords: internal pattern matching, longest common substring, small-space algorithms} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.5" - DOI: 10.4230/LIPIcs.CPM.2024.5
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.5/LIPIcs.CPM.2024.5.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.5" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.5" - Random Wheeler Automata
+Authors:Ruben Becker, Davide Cenzato, Sung-Hwan Kim, Bojana Kodric, Riccardo Maso, and Nicola Prezza 
+ AbstractWheeler automata were introduced in 2017 as a tool to generalize existing indexing and compression techniques based on the Burrows-Wheeler transform. Intuitively, an automaton is said to be Wheeler if there exists a total order on its states reflecting the natural co-lexicographic order of the strings labeling the automaton’s paths; this property makes it possible to represent the automaton’s topology in a constant number of bits per transition, as well as efficiently solving pattern matching queries on its accepted regular language. After their introduction, Wheeler automata have been the subject of a prolific line of research, both from the algorithmic and language-theoretic points of view. A recurring issue faced in these studies is the lack of large datasets of Wheeler automata on which the developed algorithms and theories could be tested. One possible way to overcome this issue is to generate random Wheeler automata. Motivated by this observation of practical nature, in this paper we initiate the theoretical study of random Wheeler automata, focusing our attention on the deterministic case (Wheeler DFAs - WDFAs). We start by naturally extending the Erdős-Rényi random graph model to WDFAs, and proceed by providing an algorithm generating uniform WDFAs according to this model. Our algorithm generates a uniform WDFA with n states, m transitions, and alphabet’s cardinality σ in O(m) expected time (O(mlog m) time w.h.p.) and constant working space for all alphabets of size σ ≤ m/ln m. The output WDFA is streamed directly to the output. As a by-product, we also give formulas for the number of distinct WDFAs and obtain that nσ + (n - σ) log σ bits are necessary and sufficient to encode a WDFA with n states and alphabet of size σ, up to an additive Θ(n) term. We present an implementation of our algorithm and show that it is extremely fast in practice, with a throughput of over 8 million transitions per second. 
+ Cite asRuben Becker, Davide Cenzato, Sung-Hwan Kim, Bojana Kodric, Riccardo Maso, and Nicola Prezza. Random Wheeler Automata. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 5:1-5:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{becker_et_al:LIPIcs.CPM.2024.5 author = {Becker, Ruben and Cenzato, Davide and Kim, Sung-Hwan and Kodric, Bojana and Maso, Riccardo and Prezza, Nicola}, title = {{Random Wheeler Automata}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {5:1--5:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.5}, URN = {urn:nbn:de:0030-drops-201157}, doi = {10.4230/LIPIcs.CPM.2024.5}, annote = {Keywords: Wheeler automata, Burrows-Wheeler transform, random graphs} }@InProceedings{becker_et_al:LIPIcs.CPM.2024.5 author = {Becker, Ruben and Cenzato, Davide and Kim, Sung-Hwan and Kodric, Bojana and Maso, Riccardo and Prezza, Nicola}, title = {{Random Wheeler Automata}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {5:1--5:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.5}, URN = {urn:nbn:de:0030-drops-201157}, doi = {10.4230/LIPIcs.CPM.2024.5}, annote = {Keywords: Wheeler automata, Burrows-Wheeler transform, random graphs} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.6" - DOI: 10.4230/LIPIcs.CPM.2024.6
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.6/LIPIcs.CPM.2024.6.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.6" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.6" - Connecting de Bruijn Graphs
+Authors:Giulia Bernardini, Huiping Chen, Inge Li Gørtz, Christoffer Krogh, Grigorios Loukides, Solon P. Pissis, Leen Stougie, and Michelle Sweering 
+ AbstractWe study the problem of making a de Bruijn graph (dBG), constructed from a collection of strings, weakly connected while minimizing the total cost of edge additions. The input graph is a dBG that can be made weakly connected by adding edges (along with extra nodes if needed) from the underlying complete dBG. The problem arises from genome reconstruction, where the dBG is constructed from a set of sequences generated from a genome sample by a sequencing experiment. Due to sequencing errors, the dBG is never Eulerian in practice and is often not even weakly connected. We show the following results for a dBG G(V,E) of order k consisting of d weakly connected components: 1) Making G weakly connected by adding a set of edges of minimal total cost is NP-hard. 2) No PTAS exists for making G weakly connected by adding a set of edges of minimal total cost (unless the unique games conjecture fails). We complement this result by showing that there does exist a polynomial-time (2-2/d)-approximation algorithm for the problem. 3) We consider a restricted version of the above problem, where we are asked to make G weakly connected by only adding directed paths between pairs of components. We show that making G weakly connected by adding d-1 such paths of minimal total cost can be done in 𝒪(k|V|α(|V|)+|E|) time, where α(⋅) is the inverse Ackermann function. This improves on the 𝒪(k|V|log(|V|)+|E|)-time algorithm proposed by Bernardini et al. [CPM 2022] for the same restricted problem. 4) An ILP formulation of polynomial size for making G Eulerian with minimal total cost. 
+ Cite asGiulia Bernardini, Huiping Chen, Inge Li Gørtz, Christoffer Krogh, Grigorios Loukides, Solon P. Pissis, Leen Stougie, and Michelle Sweering. Connecting de Bruijn Graphs. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 6:1-6:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bernardini_et_al:LIPIcs.CPM.2024.6 author = {Bernardini, Giulia and Chen, Huiping and G{\o}rtz, Inge Li and Krogh, Christoffer and Loukides, Grigorios and Pissis, Solon P. and Stougie, Leen and Sweering, Michelle}, title = {{Connecting de Bruijn Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {6:1--6:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.6}, URN = {urn:nbn:de:0030-drops-201168}, doi = {10.4230/LIPIcs.CPM.2024.6}, annote = {Keywords: string algorithm, graph algorithm, de Bruijn graph, Eulerian graph} }@InProceedings{bernardini_et_al:LIPIcs.CPM.2024.6 author = {Bernardini, Giulia and Chen, Huiping and G{\o}rtz, Inge Li and Krogh, Christoffer and Loukides, Grigorios and Pissis, Solon P. and Stougie, Leen and Sweering, Michelle}, title = {{Connecting de Bruijn Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {6:1--6:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.6}, URN = {urn:nbn:de:0030-drops-201168}, doi = {10.4230/LIPIcs.CPM.2024.6}, annote = {Keywords: string algorithm, graph algorithm, de Bruijn graph, Eulerian graph} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.7" - DOI: 10.4230/LIPIcs.CPM.2024.7
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.7/LIPIcs.CPM.2024.7.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.7" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.7" - A Class of Heuristics for Reducing the Number of BWT-Runs in the String Ordering Problem
+Authors:Gianmarco Bertola, Anthony J. Cox, Veronica Guerrini, and Giovanna Rosone 
+ AbstractThe Burrows-Wheeler transform (BWT) is a famous text transformation that rearranges the symbols of the input strings so that occurrences of a same symbol tend to occur in runs. The number of runs is an important parameter in the BWT output string, historically associated with its high compressibility and more recently used as a measure for the space complexity of efficient data structures. It is a known fact that reordering the strings in the input collection 𝒮 affects the number of runs in the output string bwt(𝒮) produced by applying the BWT to the string collection. In this paper, we define a class of transformed strings where symbols in particular blocks of the bwt(𝒮) can be reordered according to a different adaptive alphabet order. Then, we introduce new heuristics to reduce the number of runs in the BWT output of a string collection that improve on the two existing heuristics introduced in Cox et al. [Anthony J. Cox et al., 2012]. These new heuristics are computed when applying the BWT to a string collection assuming no a priori order on the input strings and without requiring any pre- and/or post- processing of the collection 𝒮 or of the BWT string. In this paper, we also face the problem of reconstructing the input collection 𝒮 from the string bwt(𝒮) together with the string permutation realized when applying an alphabetical reordering of symbols during the construction of bwt(𝒮). 
+ Cite asGianmarco Bertola, Anthony J. Cox, Veronica Guerrini, and Giovanna Rosone. A Class of Heuristics for Reducing the Number of BWT-Runs in the String Ordering Problem. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 7:1-7:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bertola_et_al:LIPIcs.CPM.2024.7 author = {Bertola, Gianmarco and Cox, Anthony J. and Guerrini, Veronica and Rosone, Giovanna}, title = {{A Class of Heuristics for Reducing the Number of BWT-Runs in the String Ordering Problem}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.7}, URN = {urn:nbn:de:0030-drops-201179}, doi = {10.4230/LIPIcs.CPM.2024.7}, annote = {Keywords: Burrows-Wheeler Transform, SAP-interval, repetitive text, string compression} }@InProceedings{bertola_et_al:LIPIcs.CPM.2024.7 author = {Bertola, Gianmarco and Cox, Anthony J. and Guerrini, Veronica and Rosone, Giovanna}, title = {{A Class of Heuristics for Reducing the Number of BWT-Runs in the String Ordering Problem}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {7:1--7:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.7}, URN = {urn:nbn:de:0030-drops-201179}, doi = {10.4230/LIPIcs.CPM.2024.7}, annote = {Keywords: Burrows-Wheeler Transform, SAP-interval, repetitive text, string compression} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.8" - DOI: 10.4230/LIPIcs.CPM.2024.8
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.8/LIPIcs.CPM.2024.8.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.8" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.8" - Faster Sliding Window String Indexing in Streams
+Authors:Philip Bille, Paweł Gawrychowski, Inge Li Gørtz, and Simon R. Tarnow 
+ AbstractThe classical string indexing problem asks to preprocess the input string S for efficient pattern matching queries. Bille, Fischer, Gørtz, Pedersen, and Stordalen [CPM 2023] generalized this to the {streaming sliding window string indexing} problem, where the input string S arrives as a stream, and we are asked to maintain an index of the last w characters, called the window. Further, at any point in time, a pattern P might appear, again given as a stream, and all occurrences of P in the current window must be output. We require that the time to process each character of the text or the pattern is worst-case. It appears that standard string indexing structures, such as suffix trees, do not provide an efficient solution in such a setting, as to obtain a good worst-case bound, they necessarily need to work right-to-left, and we cannot reverse the pattern while keeping a worst-case guarantee on the time to process each of its characters. Nevertheless, it is possible to obtain a bound of 𝒪(log w) (with high probability) by maintaining a hierarchical structure of multiple suffix trees. We significantly improve this upper bound by designing a black-box reduction to maintain a suffix tree under prepending characters to the current text. By plugging in the known results, this allows us to obtain a bound of 𝒪(log log w +log log σ) (with high probability), where σ is the size of the alphabet. Further, we introduce an even more general problem, called the {streaming dynamic window string indexing}, where the goal is to maintain the current text under adding and deleting characters at either end and design a similar black-box reduction. 
+ Cite asPhilip Bille, Paweł Gawrychowski, Inge Li Gørtz, and Simon R. Tarnow. Faster Sliding Window String Indexing in Streams. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 8:1-8:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bille_et_al:LIPIcs.CPM.2024.8 author = {Bille, Philip and Gawrychowski, Pawe{\l} and G{\o}rtz, Inge Li and Tarnow, Simon R.}, title = {{Faster Sliding Window String Indexing in Streams}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {8:1--8:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.8}, URN = {urn:nbn:de:0030-drops-201183}, doi = {10.4230/LIPIcs.CPM.2024.8}, annote = {Keywords: data structures, pattern matching, string indexing} }@InProceedings{bille_et_al:LIPIcs.CPM.2024.8 author = {Bille, Philip and Gawrychowski, Pawe{\l} and G{\o}rtz, Inge Li and Tarnow, Simon R.}, title = {{Faster Sliding Window String Indexing in Streams}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {8:1--8:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.8}, URN = {urn:nbn:de:0030-drops-201183}, doi = {10.4230/LIPIcs.CPM.2024.8}, annote = {Keywords: data structures, pattern matching, string indexing} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.9" - DOI: 10.4230/LIPIcs.CPM.2024.9
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.9/LIPIcs.CPM.2024.9.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.9" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.9" - Tight Bounds for Compressing Substring Samples
+Authors:Philip Bille, Christian Mikkelsen Fuglsang, and Inge Li Gørtz 
+ AbstractWe consider the problem of compressing a set of substrings sampled from a string and analyzing the size of the compression. Given a string S of length n, and integers d and m where n ≥ m ≥ 2d > 0, let SCS(S, m, d) be the string obtained by sequentially concatenating substrings of length m sampled regularly at intervals of d starting at position 1 in S. We consider the size of the LZ77 parsing of SCS(S, m, d), in relation to the size of the LZ77 parsing of S. This is motivated by genome sequencing, where the mentioned sampling process is an idealization of the short-read DNA sequencing. We show the following upper bound: |LZ77(SCS(S, m, d))| ≤ |LZ77(S)| + 2(n-m)/d. We also give a lower bound showing that this is tight. This improves previous results by Badkobeh et al. [ICTCS 2022], and closes the open problem of whether their bound can be improved. Another natural question is whether assuming that all letters in S are part of a sample, it is always the case that |LZ77(S)| ≤ |LZ77(SCS(S, m, d))|. Surprisingly, we show that there is a family of strings such that |LZ77(SCS(S, m, d))| = |LZ77(S)| - 1. 
+ Cite asPhilip Bille, Christian Mikkelsen Fuglsang, and Inge Li Gørtz. Tight Bounds for Compressing Substring Samples. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 9:1-9:14, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bille_et_al:LIPIcs.CPM.2024.9 author = {Bille, Philip and Fuglsang, Christian Mikkelsen and G{\o}rtz, Inge Li}, title = {{Tight Bounds for Compressing Substring Samples}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {9:1--9:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.9}, URN = {urn:nbn:de:0030-drops-201192}, doi = {10.4230/LIPIcs.CPM.2024.9}, annote = {Keywords: Compression, Algorithms, Lempel-Ziv} }@InProceedings{bille_et_al:LIPIcs.CPM.2024.9 author = {Bille, Philip and Fuglsang, Christian Mikkelsen and G{\o}rtz, Inge Li}, title = {{Tight Bounds for Compressing Substring Samples}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {9:1--9:14}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.9}, URN = {urn:nbn:de:0030-drops-201192}, doi = {10.4230/LIPIcs.CPM.2024.9}, annote = {Keywords: Compression, Algorithms, Lempel-Ziv} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.10" - DOI: 10.4230/LIPIcs.CPM.2024.10
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.10/LIPIcs.CPM.2024.10.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.10" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.10" - Searching 2D-Strings for Matching Frames
+Authors:Itai Boneh, Dvir Fried, Shay Golan, Matan Kraus, Adrian Miclăuş, and Arseny Shur 
+ AbstractWe study a natural type of repetitions in 2-dimensional strings. Such a repetition, called a matching frame, is a rectangular substring of size at least 2× 2 with equal marginal rows and equal marginal columns. Matching frames first appeared in literature in the context of Wang tiles. We present two algorithms finding a matching frame with the maximum perimeter in a given n× m input string. The first algorithm solves the problem exactly in Õ(n^{2.5}) time (assuming n ≥ m). The second algorithm finds a (1-ε)-approximate solution in Õ((nm)/ε⁴) time, which is near linear in the size of the input for constant ε. In particular, by setting ε = O(1) the second algorithm decides the existence of a matching frame in a given string in Õ(nm) time. Some technical elements and structural properties used in these algorithms can be of independent interest. 
+ Cite asItai Boneh, Dvir Fried, Shay Golan, Matan Kraus, Adrian Miclăuş, and Arseny Shur. Searching 2D-Strings for Matching Frames. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 10:1-10:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{boneh_et_al:LIPIcs.CPM.2024.10 author = {Boneh, Itai and Fried, Dvir and Golan, Shay and Kraus, Matan and Micl\u{a}u\c{s}, Adrian and Shur, Arseny}, title = {{Searching 2D-Strings for Matching Frames}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {10:1--10:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.10}, URN = {urn:nbn:de:0030-drops-201205}, doi = {10.4230/LIPIcs.CPM.2024.10}, annote = {Keywords: 2D string, matching frame, LCP, multidimensional range query} }@InProceedings{boneh_et_al:LIPIcs.CPM.2024.10 author = {Boneh, Itai and Fried, Dvir and Golan, Shay and Kraus, Matan and Micl\u{a}u\c{s}, Adrian and Shur, Arseny}, title = {{Searching 2D-Strings for Matching Frames}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {10:1--10:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.10}, URN = {urn:nbn:de:0030-drops-201205}, doi = {10.4230/LIPIcs.CPM.2024.10}, annote = {Keywords: 2D string, matching frame, LCP, multidimensional range query} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.11" - DOI: 10.4230/LIPIcs.CPM.2024.11
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.11/LIPIcs.CPM.2024.11.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.11" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.11" - Hairpin Completion Distance Lower Bound
+Authors:Itai Boneh, Dvir Fried, Shay Golan, and Matan Kraus 
+ AbstractHairpin completion, derived from the hairpin formation observed in DNA biochemistry, is an operation applied to strings, particularly useful in DNA computing. Conceptually, a right hairpin completion operation transforms a string S into S⋅ S' where S' is the reverse complement of a prefix of S. Similarly, a left hairpin completion operation transforms a string S into S'⋅ S where S' is the reverse complement of a suffix of S. The hairpin completion distance from S to T is the minimum number of hairpin completion operations needed to transform S into T. Recently Boneh et al. [Itai Boneh et al., 2023] showed an O(n²) time algorithm for finding the hairpin completion distance between two strings of length at most n. In this paper we show that for any ε > 0 there is no O(n^{2-ε})-time algorithm for the hairpin completion distance problem unless the Strong Exponential Time Hypothesis (SETH) is false. Thus, under SETH, the time complexity of the hairpin completion distance problem is quadratic, up to sub-polynomial factors. 
+ Cite asItai Boneh, Dvir Fried, Shay Golan, and Matan Kraus. Hairpin Completion Distance Lower Bound. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 11:1-11:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{boneh_et_al:LIPIcs.CPM.2024.11 author = {Boneh, Itai and Fried, Dvir and Golan, Shay and Kraus, Matan}, title = {{Hairpin Completion Distance Lower Bound}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {11:1--11:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.11}, URN = {urn:nbn:de:0030-drops-201215}, doi = {10.4230/LIPIcs.CPM.2024.11}, annote = {Keywords: Fine-grained complexity, Hairpin completion, LCS} }@InProceedings{boneh_et_al:LIPIcs.CPM.2024.11 author = {Boneh, Itai and Fried, Dvir and Golan, Shay and Kraus, Matan}, title = {{Hairpin Completion Distance Lower Bound}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {11:1--11:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.11}, URN = {urn:nbn:de:0030-drops-201215}, doi = {10.4230/LIPIcs.CPM.2024.11}, annote = {Keywords: Fine-grained complexity, Hairpin completion, LCS} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.12" - DOI: 10.4230/LIPIcs.CPM.2024.12
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.12/LIPIcs.CPM.2024.12.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.12" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.12" - Solving the Minimal Positional Substring Cover Problem in Sublinear Space
+Authors:Paola Bonizzoni, Christina Boucher, Davide Cozzi, Travis Gagie, and Yuri Pirola 
+ AbstractWithin the field of haplotype analysis, the Positional Burrows-Wheeler Transform (PBWT) stands out as a key innovation, addressing numerous challenges in genomics. For example, Sanaullah et al. introduced a PBWT-based method that addresses the haplotype threading problem, which involves representing a query haplotype through a minimal set of substrings. To solve this problem using the PBWT data structure, they formulate the Minimal Positional Substring Cover (MPSC) problem, and then, subsequently present a solution for it. Additionally, they present and solve several variants of this problem: k-MPSC, leftmost MPSC, rightmost MPSC, and length-maximal MPSC. Yet, a full PBWT is required for each of their solutions, which yields a significant memory usage requirement. Here, we take advantage of the latest results on run-length encoding the PBWT, to solve the MPSC in a sublinear amount of space. Our methods involve demonstrating that k-Set Maximal Exact Matches (k-SMEMs) can be computed in a sublinear amount of space via efficient computation of k-Matching Statistics (k-MS). This leads to a solution that requires sublinear space for, not only the MPSC problem, but for all its variations proposed by Sanaullah et al. Most importantly, we present experimental results on haplotype panels from the 1000 Genomes Project data that show the utility of these theoretical results. We conclusively demonstrate that our approach markedly decreases the memory required to solve the MPSC problem, achieving a reduction of at least two orders of magnitude compared to the method proposed by Sanaullah et al. This efficiency allows us to solve the problem on large versions of the problem, where other methods are unable to scale to. In summary, the creation of {μ}-PBWT paves the way for new possibilities in conducting in-depth genetic research and analysis on a large scale. All source code is publicly available at https://github.com/dlcgold/muPBWT/tree/k-smem. 
+ Cite asPaola Bonizzoni, Christina Boucher, Davide Cozzi, Travis Gagie, and Yuri Pirola. Solving the Minimal Positional Substring Cover Problem in Sublinear Space. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 12:1-12:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{bonizzoni_et_al:LIPIcs.CPM.2024.12 author = {Bonizzoni, Paola and Boucher, Christina and Cozzi, Davide and Gagie, Travis and Pirola, Yuri}, title = {{Solving the Minimal Positional Substring Cover Problem in Sublinear Space}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {12:1--12:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.12}, URN = {urn:nbn:de:0030-drops-201225}, doi = {10.4230/LIPIcs.CPM.2024.12}, annote = {Keywords: Positional Burrows-Wheeler Transform, r-index, minimal position substring cover, set-maximal exact matches} }@InProceedings{bonizzoni_et_al:LIPIcs.CPM.2024.12 author = {Bonizzoni, Paola and Boucher, Christina and Cozzi, Davide and Gagie, Travis and Pirola, Yuri}, title = {{Solving the Minimal Positional Substring Cover Problem in Sublinear Space}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {12:1--12:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.12}, URN = {urn:nbn:de:0030-drops-201225}, doi = {10.4230/LIPIcs.CPM.2024.12}, annote = {Keywords: Positional Burrows-Wheeler Transform, r-index, minimal position substring cover, set-maximal exact matches} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.13" - DOI: 10.4230/LIPIcs.CPM.2024.13
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.13/LIPIcs.CPM.2024.13.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13" - Online Context-Free Recognition in OMv Time
+Authors:Bartłomiej Dudek and Paweł Gawrychowski 
+ AbstractOne of the classical algorithmic problems in formal languages is the context-free recognition problem: for a given context-free grammar and a length-n string, check if the string belongs to the language described by the grammar. Already in 1975, Valiant showed that this can be solved in {O}̃(n^ω) time, where ω is the matrix multiplication exponent. More recently, Abboud, Backurs, and Vassilevska Williams [FOCS 2015] showed that any improvement on this complexity would imply a breakthrough algorithm for the k-Clique problem. We study the natural online version of this problem, where the input string w[1..n] is given left-to-right, and after having seen every prefix w[1..t] we should output if it belongs to the language. The goal is to maintain the total running time to process the whole input. Even though this version has been extensively studied in the past, the best known upper bound was {O}(n³/log²n). We connect the complexity of online context-free recognition to that of Online Matrix-Vector Multiplication, which allows us to improve the upper bound to n³/2^{Ω(√{log{n}})}. 
+ Cite asBartłomiej Dudek and Paweł Gawrychowski. Online Context-Free Recognition in OMv Time. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 13:1-13:9, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{dudek_et_al:LIPIcs.CPM.2024.13 author = {Dudek, Bart{\l}omiej and Gawrychowski, Pawe{\l}}, title = {{Online Context-Free Recognition in OMv Time}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {13:1--13:9}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13}, URN = {urn:nbn:de:0030-drops-201235}, doi = {10.4230/LIPIcs.CPM.2024.13}, annote = {Keywords: data structures, context-free grammar parsing, online matrix-vector multiplication} }@InProceedings{dudek_et_al:LIPIcs.CPM.2024.13 author = {Dudek, Bart{\l}omiej and Gawrychowski, Pawe{\l}}, title = {{Online Context-Free Recognition in OMv Time}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {13:1--13:9}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13}, URN = {urn:nbn:de:0030-drops-201235}, doi = {10.4230/LIPIcs.CPM.2024.13}, annote = {Keywords: data structures, context-free grammar parsing, online matrix-vector multiplication} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.14" - DOI: 10.4230/LIPIcs.CPM.2024.14
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.14/LIPIcs.CPM.2024.14.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.14" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.14" - When Is the Normalized Edit Distance over Non-Uniform Weights a Metric?
+Authors:Dana Fisman and Ilay Tzarfati 
+ AbstractThe well known Normalized Edit Distance (ned) [Marzal and Vidal 1993] is known to disobey the triangle inequality on contrived weight functions, while in practice it often exhibits a triangular behavior. Let d be a weight function on basic edit operations, and let ned_{d} be the resulting normalized edit distance. The question what criteria should d satisfy for ned_{d} to be a metric is long standing. It was recently shown that when d is the uniform weight function (all operations cost 1 except for no-op which costs 0) then ned_{d} is a metric. The question regarding non-uniform weights remained open. In this paper we answer this question by providing a necessary and sufficient condition on d under which ned_{d} is a metric. 
+ Cite asDana Fisman and Ilay Tzarfati. When Is the Normalized Edit Distance over Non-Uniform Weights a Metric?. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 14:1-14:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{fisman_et_al:LIPIcs.CPM.2024.14 author = {Fisman, Dana and Tzarfati, Ilay}, title = {{When Is the Normalized Edit Distance over Non-Uniform Weights a Metric?}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {14:1--14:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.14}, URN = {urn:nbn:de:0030-drops-201247}, doi = {10.4230/LIPIcs.CPM.2024.14}, annote = {Keywords: Normalized Edit Distance, Non-uniform Weights, Triangle Inequality, Metric} }@InProceedings{fisman_et_al:LIPIcs.CPM.2024.14 author = {Fisman, Dana and Tzarfati, Ilay}, title = {{When Is the Normalized Edit Distance over Non-Uniform Weights a Metric?}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {14:1--14:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.14}, URN = {urn:nbn:de:0030-drops-201247}, doi = {10.4230/LIPIcs.CPM.2024.14}, annote = {Keywords: Normalized Edit Distance, Non-uniform Weights, Triangle Inequality, Metric} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.15" - DOI: 10.4230/LIPIcs.CPM.2024.15
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.15/LIPIcs.CPM.2024.15.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.15" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.15" - Efficient Construction of Long Orientable Sequences
+Authors:Daniel Gabrić and Joe Sawada 
+ AbstractAn orientable sequence of order n is a cyclic binary sequence such that each length-n substring appears at most once in either direction. Maximal length orientable sequences are known only for n ≤ 7, and a trivial upper bound on their length is 2^{n-1} - 2^{⌊(n-1)/2⌋}. This paper presents the first efficient algorithm to construct orientable sequences with asymptotically optimal length; more specifically, our algorithm constructs orientable sequences via cycle-joining and a successor-rule approach requiring O(n) time per bit and O(n) space. This answers a longstanding open question from Dai, Martin, Robshaw, Wild [Cryptography and Coding III (1993)]. Our sequences are applied to find new longest-known orientable sequences for n ≤ 20. 
+ Cite asDaniel Gabrić and Joe Sawada. Efficient Construction of Long Orientable Sequences. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 15:1-15:12, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{gabric_et_al:LIPIcs.CPM.2024.15 author = {Gabri\'{c}, Daniel and Sawada, Joe}, title = {{Efficient Construction of Long Orientable Sequences}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {15:1--15:12}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.15}, URN = {urn:nbn:de:0030-drops-201255}, doi = {10.4230/LIPIcs.CPM.2024.15}, annote = {Keywords: orientable sequence, de Bruijn sequence, concatenation tree, cycle-joining, universal cycle} }@InProceedings{gabric_et_al:LIPIcs.CPM.2024.15 author = {Gabri\'{c}, Daniel and Sawada, Joe}, title = {{Efficient Construction of Long Orientable Sequences}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {15:1--15:12}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.15}, URN = {urn:nbn:de:0030-drops-201255}, doi = {10.4230/LIPIcs.CPM.2024.15}, annote = {Keywords: orientable sequence, de Bruijn sequence, concatenation tree, cycle-joining, universal cycle} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.16" - DOI: 10.4230/LIPIcs.CPM.2024.16
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.16/LIPIcs.CPM.2024.16.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.16" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.16" - Exploiting New Properties of String Net Frequency for Efficient Computation
+Authors:Peaker Guo, Patrick Eades, Anthony Wirth, and Justin Zobel 
+ AbstractKnowing which strings in a massive text are significant - that is, which strings are common and distinct from other strings - is valuable for several applications, including text compression and tokenization. Frequency in itself is not helpful for significance, because the commonest strings are the shortest strings. A compelling alternative is net frequency, which has the property that strings with positive net frequency are of maximal length. However, net frequency remains relatively unexplored, and there is no prior art showing how to compute it efficiently. We first introduce a characteristic of net frequency that simplifies the original definition. With this, we study strings with positive net frequency in Fibonacci words. We then use our characteristic and solve two key problems related to net frequency. First, single-nf, how to compute the net frequency of a given string of length m, in an input text of length n over an alphabet size σ. Second, all-nf, given length-n input text, how to report every string of positive net frequency (and its net frequency). Our methods leverage suffix arrays, components of the Burrows-Wheeler transform, and solution to the coloured range listing problem. We show that, for both problems, our data structure has O(n) construction cost: with this structure, we solve single-nf in O(m + σ) time and all-nf in O(n) time. Experimentally, we find our method to be around 100 times faster than reasonable baselines for single-nf. For all-nf, our results show that, even with prior knowledge of the set of strings with positive net frequency, simply confirming that their net frequency is positive takes longer than with our purpose-designed method. All in all, we show that net frequency is a cogent method for identifying significant strings. We show how to calculate net frequency efficiently, and how to report efficiently the set of plausibly significant strings. 
+ Cite asPeaker Guo, Patrick Eades, Anthony Wirth, and Justin Zobel. Exploiting New Properties of String Net Frequency for Efficient Computation. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 16:1-16:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{guo_et_al:LIPIcs.CPM.2024.16 author = {Guo, Peaker and Eades, Patrick and Wirth, Anthony and Zobel, Justin}, title = {{Exploiting New Properties of String Net Frequency for Efficient Computation}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {16:1--16:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.16}, URN = {urn:nbn:de:0030-drops-201265}, doi = {10.4230/LIPIcs.CPM.2024.16}, annote = {Keywords: Fibonacci words, suffix arrays, Burrows-Wheeler transform, LCP arrays, irreducible LCP values, coloured range listing} }@InProceedings{guo_et_al:LIPIcs.CPM.2024.16 author = {Guo, Peaker and Eades, Patrick and Wirth, Anthony and Zobel, Justin}, title = {{Exploiting New Properties of String Net Frequency for Efficient Computation}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {16:1--16:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.16}, URN = {urn:nbn:de:0030-drops-201265}, doi = {10.4230/LIPIcs.CPM.2024.16}, annote = {Keywords: Fibonacci words, suffix arrays, Burrows-Wheeler transform, LCP arrays, irreducible LCP values, coloured range listing} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.17" - DOI: 10.4230/LIPIcs.CPM.2024.17
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.17/LIPIcs.CPM.2024.17.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.17" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.17" - Closing the Gap: Minimum Space Optimal Time Distance Labeling Scheme for Interval Graphs
+Authors:Meng He and Kaiyu Wu 
+ AbstractWe present a distance labeling scheme for an interval graph on n vertices that uses at most 3lg n + lg lg n + O(1) bits per vertex to answer distance queries, which ask for the distance between two given vertices, in constant time. Our labeling scheme improves the distance labeling scheme of Gavoille and Paul for connected interval graphs which uses at most 5lg n + O(1) bits per vertex to achieve constant query time. Our improved space cost matches a lower bound proven by Gavoille and Paul within additive lower order terms and is thus optimal. Based on this scheme, we further design a 6lg n + 2lg lg n +O(1) bit distance labeling scheme for circular-arc graphs, with constant distance query time, which improves the 10lg n + O(1) bit distance labeling scheme of Gavoille and Paul. We give a n/2 + O(lg^ 2n) bit labeling scheme for chordal graphs which answers distance queries in O(1) time. The best known lower bound is n/4 - o(n) bits. 
+ Cite asMeng He and Kaiyu Wu. Closing the Gap: Minimum Space Optimal Time Distance Labeling Scheme for Interval Graphs. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 17:1-17:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{he_et_al:LIPIcs.CPM.2024.17 author = {He, Meng and Wu, Kaiyu}, title = {{Closing the Gap: Minimum Space Optimal Time Distance Labeling Scheme for Interval Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {17:1--17:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.17}, URN = {urn:nbn:de:0030-drops-201275}, doi = {10.4230/LIPIcs.CPM.2024.17}, annote = {Keywords: Distance Labeling, Interval Graph, Circular-Arc Graph, Chordal Graph} }@InProceedings{he_et_al:LIPIcs.CPM.2024.17 author = {He, Meng and Wu, Kaiyu}, title = {{Closing the Gap: Minimum Space Optimal Time Distance Labeling Scheme for Interval Graphs}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {17:1--17:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.17}, URN = {urn:nbn:de:0030-drops-201275}, doi = {10.4230/LIPIcs.CPM.2024.17}, annote = {Keywords: Distance Labeling, Interval Graph, Circular-Arc Graph, Chordal Graph} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.18" - DOI: 10.4230/LIPIcs.CPM.2024.18
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.18/LIPIcs.CPM.2024.18.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.18" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.18" - Algorithms for Galois Words: Detection, Factorization, and Rotation
+Authors:Diptarama Hendrian, Dominik Köppl, Ryo Yoshinaka, and Ayumi Shinohara 
+ AbstractLyndon words are extensively studied in combinatorics on words - they play a crucial role on upper bounding the number of runs a word can have [Bannai+, SIAM J. Comput.'17]. We can determine Lyndon words, factorize a word into Lyndon words in lexicographically non-increasing order, and find the Lyndon rotation of a word, all in linear time within constant additional working space. A recent research interest emerged from the question of what happens when we change the lexicographic order, which is at the heart of the definition of Lyndon words. In particular, the alternating order, where the order of all odd positions becomes reversed, has been recently proposed. While a Lyndon word is, among all its cyclic rotations, the smallest one with respect to the lexicographic order, a Galois word exhibits the same property by exchanging the lexicographic order with the alternating order. Unfortunately, this exchange has a large impact on the properties Galois words exhibit, which makes it a nontrivial task to translate results from Lyndon words to Galois words. Up until now, it has only been conjectured that linear-time algorithms with constant additional working space in the spirit of Duval’s algorithm are possible for computing the Galois factorization or the Galois rotation. Here, we affirm this conjecture as follows. Given a word T of length n, we can determine whether T is a Galois word, in O(n) time with constant additional working space. Within the same complexities, we can also determine the Galois rotation of T, and compute the Galois factorization of T online. The last result settles Open Problem 1 in [Dolce et al., TCS 2019] for Galois words. 
+ Cite asDiptarama Hendrian, Dominik Köppl, Ryo Yoshinaka, and Ayumi Shinohara. Algorithms for Galois Words: Detection, Factorization, and Rotation. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 18:1-18:16, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{hendrian_et_al:LIPIcs.CPM.2024.18 author = {Hendrian, Diptarama and K\"{o}ppl, Dominik and Yoshinaka, Ryo and Shinohara, Ayumi}, title = {{Algorithms for Galois Words: Detection, Factorization, and Rotation}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {18:1--18:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.18}, URN = {urn:nbn:de:0030-drops-201288}, doi = {10.4230/LIPIcs.CPM.2024.18}, annote = {Keywords: Galois Factorization, Alternating Order, Word Factorization Algorithm, Regularity Detection} }@InProceedings{hendrian_et_al:LIPIcs.CPM.2024.18 author = {Hendrian, Diptarama and K\"{o}ppl, Dominik and Yoshinaka, Ryo and Shinohara, Ayumi}, title = {{Algorithms for Galois Words: Detection, Factorization, and Rotation}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {18:1--18:16}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.18}, URN = {urn:nbn:de:0030-drops-201288}, doi = {10.4230/LIPIcs.CPM.2024.18}, annote = {Keywords: Galois Factorization, Alternating Order, Word Factorization Algorithm, Regularity Detection} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.19" - DOI: 10.4230/LIPIcs.CPM.2024.19
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.19/LIPIcs.CPM.2024.19.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.19" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.19" - Simplified Tight Bounds for Monotone Minimal Perfect Hashing
+Authors:Dmitry Kosolobov 
+ AbstractGiven an increasing sequence of integers x₁,…,x_n from a universe {0,…,u-1}, the monotone minimal perfect hash function (MMPHF) for this sequence is a data structure that answers the following rank queries: rank(x) = i if x = x_i, for i ∈ {1,…,n}, and rank(x) is arbitrary otherwise. Assadi, Farach-Colton, and Kuszmaul recently presented at SODA'23 a proof of the lower bound Ω(n min{log log log u, log n}) for the bits of space required by MMPHF, provided u ≥ n 2^{2^{√{log log n}}}, which is tight since there is a data structure for MMPHF that attains this space bound (and answers the queries in O(log u) time). In this paper, we close the remaining gap by proving that, for u ≥ (1+ε)n, where ε > 0 is any constant, the tight lower bound is Ω(n min{log log log u/n, log n}), which is also attainable; we observe that, for all reasonable cases when n < u < (1+ε)n, known facts imply tight bounds, which virtually settles the problem. Along the way we substantially simplify the proof of Assadi et al. replacing a part of their heavy combinatorial machinery by trivial observations. However, an important part of the proof still remains complicated. This part of our paper repeats arguments of Assadi et al. and is not novel. Nevertheless, we include it, for completeness, offering a somewhat different perspective on these arguments. 
+ Cite asDmitry Kosolobov. Simplified Tight Bounds for Monotone Minimal Perfect Hashing. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 19:1-19:13, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kosolobov:LIPIcs.CPM.2024.19 author = {Kosolobov, Dmitry}, title = {{Simplified Tight Bounds for Monotone Minimal Perfect Hashing}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {19:1--19:13}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.19}, URN = {urn:nbn:de:0030-drops-201296}, doi = {10.4230/LIPIcs.CPM.2024.19}, annote = {Keywords: monotone minimal perfect hashing, lower bound, MMPHF, hash} }@InProceedings{kosolobov:LIPIcs.CPM.2024.19 author = {Kosolobov, Dmitry}, title = {{Simplified Tight Bounds for Monotone Minimal Perfect Hashing}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {19:1--19:13}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.19}, URN = {urn:nbn:de:0030-drops-201296}, doi = {10.4230/LIPIcs.CPM.2024.19}, annote = {Keywords: monotone minimal perfect hashing, lower bound, MMPHF, hash} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.20" - DOI: 10.4230/LIPIcs.CPM.2024.20
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.20/LIPIcs.CPM.2024.20.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.20" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.20" - Construction of Sparse Suffix Trees and LCE Indexes in Optimal Time and Space
+Authors:Dmitry Kosolobov and Nikita Sivukhin 
+ AbstractThe notions of synchronizing and partitioning sets are recently introduced variants of locally consistent parsings with a great potential in problem-solving. In this paper we propose a deterministic algorithm that constructs for a given readonly string of length n over the alphabet {0,1,…,n^{𝒪(1)}} a variant of a τ-partitioning set with size 𝒪(b) and τ = n/b using 𝒪(b) space and 𝒪(1/(ε)n) time provided b ≥ n^ε, for ε > 0. As a corollary, for b ≥ n^ε and constant ε > 0, we obtain linear time construction algorithms with 𝒪(b) space on top of the string for two major small-space indexes: a sparse suffix tree, which is a compacted trie built on b chosen suffixes of the string, and a longest common extension (LCE) index, which occupies 𝒪(b) space and allows us to compute the longest common prefix for any pair of substrings in 𝒪(n/b) time. For both, the 𝒪(b) construction storage is asymptotically optimal since the tree itself takes 𝒪(b) space and any LCE index with 𝒪(n/b) query time must occupy at least 𝒪(b) space by a known trade-off (at least for b ≥ Ω(n / log n)). In case of arbitrary b ≥ Ω(log² n), we present construction algorithms for the partitioning set, sparse suffix tree, and LCE index with 𝒪(nlog_b n) running time and 𝒪(b) space, thus also improving the state of the art. 
+ Cite asDmitry Kosolobov and Nikita Sivukhin. Construction of Sparse Suffix Trees and LCE Indexes in Optimal Time and Space. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 20:1-20:18, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{kosolobov_et_al:LIPIcs.CPM.2024.20 author = {Kosolobov, Dmitry and Sivukhin, Nikita}, title = {{Construction of Sparse Suffix Trees and LCE Indexes in Optimal Time and Space}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {20:1--20:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.20}, URN = {urn:nbn:de:0030-drops-201309}, doi = {10.4230/LIPIcs.CPM.2024.20}, annote = {Keywords: (\tau,\delta)-partitioning set, longest common extension, sparse suffix tree} }@InProceedings{kosolobov_et_al:LIPIcs.CPM.2024.20 author = {Kosolobov, Dmitry and Sivukhin, Nikita}, title = {{Construction of Sparse Suffix Trees and LCE Indexes in Optimal Time and Space}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {20:1--20:18}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.20}, URN = {urn:nbn:de:0030-drops-201309}, doi = {10.4230/LIPIcs.CPM.2024.20}, annote = {Keywords: (\tau,\delta)-partitioning set, longest common extension, sparse suffix tree} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.21" - DOI: 10.4230/LIPIcs.CPM.2024.21
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.21/LIPIcs.CPM.2024.21.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.21" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.21" - BAT-LZ out of hell
+Authors:Zsuzsanna Lipták, Francesco Masillo, and Gonzalo Navarro 
+ AbstractDespite consistently yielding the best compression on repetitive text collections, the Lempel-Ziv parsing has resisted all attempts at offering relevant guarantees on the cost to access an arbitrary symbol. This makes it less attractive for use on compressed self-indexes and other compressed data structures. In this paper we introduce a variant we call BAT-LZ (for Bounded Access Time Lempel-Ziv) where the access cost is bounded by a parameter given at compression time. We design and implement a linear-space algorithm that, in time O(nlog³ n), obtains a BAT-LZ parse of a text of length n by greedily maximizing each next phrase length. The algorithm builds on a new linear-space data structure that solves 5-sided orthogonal range queries in rank space, allowing updates to the coordinate where the one-sided queries are supported, in O(log³ n) time for both queries and updates. This time can be reduced to O(log² n) if O(nlog n) space is used. We design a second algorithm that chooses the sources for the phrases in a clever way, using an enhanced suffix tree, albeit no longer guaranteeing longest possible phrases. This algorithm is much slower in theory, but in practice it is comparable to the greedy parser, while achieving significantly superior compression. We then combine the two algorithms, resulting in a parser that always chooses the longest possible phrases, and the best sources for those. Our experimentation shows that, on most repetitive texts, our algorithms reach an access cost close to log₂ n on texts of length n, while incurring almost no loss in the compression ratio when compared with classical LZ-compression. Several open challenges are discussed at the end of the paper. 
+ Cite asZsuzsanna Lipták, Francesco Masillo, and Gonzalo Navarro. BAT-LZ out of hell. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 21:1-21:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{liptak_et_al:LIPIcs.CPM.2024.21 author = {Lipt\'{a}k, Zsuzsanna and Masillo, Francesco and Navarro, Gonzalo}, title = {{BAT-LZ out of hell}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.21}, URN = {urn:nbn:de:0030-drops-201317}, doi = {10.4230/LIPIcs.CPM.2024.21}, annote = {Keywords: Lempel-Ziv parsing, data compression, compressed data structures, repetitive text collections} }@InProceedings{liptak_et_al:LIPIcs.CPM.2024.21 author = {Lipt\'{a}k, Zsuzsanna and Masillo, Francesco and Navarro, Gonzalo}, title = {{BAT-LZ out of hell}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {21:1--21:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.21}, URN = {urn:nbn:de:0030-drops-201317}, doi = {10.4230/LIPIcs.CPM.2024.21}, annote = {Keywords: Lempel-Ziv parsing, data compression, compressed data structures, repetitive text collections} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.22" - DOI: 10.4230/LIPIcs.CPM.2024.22
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.22/LIPIcs.CPM.2024.22.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.22" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.22" - Subsequences with Generalised Gap Constraints: Upper and Lower Complexity Bounds
+Authors:Florin Manea, Jonas Richardsen, and Markus L. Schmid 
+ AbstractFor two strings u, v over some alphabet A, we investigate the problem of embedding u into w as a subsequence under the presence of generalised gap constraints. A generalised gap constraint is a triple (i, j, C_{i, j}), where 1 ≤ i < j ≤ |u| and C_{i, j} ⊆ A^*. Embedding u as a subsequence into v such that (i, j, C_{i, j}) is satisfied means that if u[i] and u[j] are mapped to v[k] and v[𝓁], respectively, then the induced gap v[k + 1..𝓁 - 1] must be a string from C_{i, j}. This generalises the setting recently investigated in [Day et al., ISAAC 2022], where only gap constraints of the form C_{i, i + 1} are considered, as well as the setting from [Kosche et al., RP 2022], where only gap constraints of the form C_{1, |u|} are considered. We show that subsequence matching under generalised gap constraints is NP-hard, and we complement this general lower bound with a thorough (parameterised) complexity analysis. Moreover, we identify several efficiently solvable subclasses that result from restricting the interval structure induced by the generalised gap constraints. 
+ Cite asFlorin Manea, Jonas Richardsen, and Markus L. Schmid. Subsequences with Generalised Gap Constraints: Upper and Lower Complexity Bounds. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 22:1-22:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{manea_et_al:LIPIcs.CPM.2024.22 author = {Manea, Florin and Richardsen, Jonas and Schmid, Markus L.}, title = {{Subsequences with Generalised Gap Constraints: Upper and Lower Complexity Bounds}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {22:1--22:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.22}, URN = {urn:nbn:de:0030-drops-201329}, doi = {10.4230/LIPIcs.CPM.2024.22}, annote = {Keywords: String algorithms, subsequences with gap constraints, pattern matching, fine-grained complexity, conditional lower bounds, parameterised complexity} }@InProceedings{manea_et_al:LIPIcs.CPM.2024.22 author = {Manea, Florin and Richardsen, Jonas and Schmid, Markus L.}, title = {{Subsequences with Generalised Gap Constraints: Upper and Lower Complexity Bounds}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {22:1--22:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.22}, URN = {urn:nbn:de:0030-drops-201329}, doi = {10.4230/LIPIcs.CPM.2024.22}, annote = {Keywords: String algorithms, subsequences with gap constraints, pattern matching, fine-grained complexity, conditional lower bounds, parameterised complexity} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.23" - DOI: 10.4230/LIPIcs.CPM.2024.23
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.23/LIPIcs.CPM.2024.23.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.23" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.23" - The Rational Construction of a Wheeler DFA
+Authors:Giovanni Manzini, Alberto Policriti, Nicola Prezza, and Brian Riccardi 
+ AbstractDeterministic Finite Wheeler Automata are a natural generalisation to regular languages of the theory of compressed data structures originated by the introduction of the Burrows-Wheeler transform. Indeed, if we can find a Wheeler automaton recognizing a given language L, such automaton can be used to design time and space efficient algorithms for representing and searching L. In this paper we introduce an alternative representation of Deterministic Wheeler Automata by showing that a natural map between strings and rational numbers in ℚ [0,1) can be extended to represent the automaton’s states as intervals in ℚ [0,1). Using this representation it emerges a natural relationship between automata properties and some properties of real numbers. In addition, such representation enables us to formulate problems related to automata in a numerical setting. Although at the moment the numerical approach does not lead to time efficient algorithms, we believe this new perspective deserves further consideration. As a further demonstration of the convenience of this new representation, we use it to provide a simple proof of an unexpected result on regular languages. More precisely, we compare the size of the smallest Wheeler automaton recognizing a given language L with respect to the size of the smallest automaton, possibly non-Wheeler, recognizing the same language. We show settings in which there can be an exponential gap between the two sizes, and we discuss the implications of this result on the problem of representing regular languages. 
+ Cite asGiovanni Manzini, Alberto Policriti, Nicola Prezza, and Brian Riccardi. The Rational Construction of a Wheeler DFA. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 23:1-23:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{manzini_et_al:LIPIcs.CPM.2024.23 author = {Manzini, Giovanni and Policriti, Alberto and Prezza, Nicola and Riccardi, Brian}, title = {{The Rational Construction of a Wheeler DFA}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {23:1--23:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.23}, URN = {urn:nbn:de:0030-drops-201336}, doi = {10.4230/LIPIcs.CPM.2024.23}, annote = {Keywords: String Matching, Deterministic Finite Automata, Wheeler languages, Graph Indexing, Co-lexicographical Sorting} }@InProceedings{manzini_et_al:LIPIcs.CPM.2024.23 author = {Manzini, Giovanni and Policriti, Alberto and Prezza, Nicola and Riccardi, Brian}, title = {{The Rational Construction of a Wheeler DFA}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {23:1--23:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.23}, URN = {urn:nbn:de:0030-drops-201336}, doi = {10.4230/LIPIcs.CPM.2024.23}, annote = {Keywords: String Matching, Deterministic Finite Automata, Wheeler languages, Graph Indexing, Co-lexicographical Sorting} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.24" - DOI: 10.4230/LIPIcs.CPM.2024.24
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.24/LIPIcs.CPM.2024.24.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.24" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.24" - Shortest Cover After Edit
+Authors:Kazuki Mitani, Takuya Mieno, Kazuhisa Seto, and Takashi Horiyama 
+ AbstractThis paper investigates the (quasi-)periodicity of a string when the string is edited. A string C is called a cover (as known as a quasi-period) of a string T if each character of T lies within some occurrence of C. By definition, a cover of T must be a border of T; that is, it occurs both as a prefix and as a suffix of T. In this paper, we focus on the changes in the longest border and the shortest cover of a string when the string is edited only once. We propose a data structure of size O(n) that computes the longest border and the shortest cover of the string in O(𝓁 log n) time after an edit operation (either insertion, deletion, or substitution of some string) is applied to the input string T of length n, where 𝓁 is the length of the string being inserted or substituted. The data structure can be constructed in O(n) time given string T. 
+ Cite asKazuki Mitani, Takuya Mieno, Kazuhisa Seto, and Takashi Horiyama. Shortest Cover After Edit. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 24:1-24:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{mitani_et_al:LIPIcs.CPM.2024.24 author = {Mitani, Kazuki and Mieno, Takuya and Seto, Kazuhisa and Horiyama, Takashi}, title = {{Shortest Cover After Edit}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {24:1--24:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.24}, URN = {urn:nbn:de:0030-drops-201345}, doi = {10.4230/LIPIcs.CPM.2024.24}, annote = {Keywords: string algorithm, border, cover, quasi-periodicity, dynamic string} }@InProceedings{mitani_et_al:LIPIcs.CPM.2024.24 author = {Mitani, Kazuki and Mieno, Takuya and Seto, Kazuhisa and Horiyama, Takashi}, title = {{Shortest Cover After Edit}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {24:1--24:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.24}, URN = {urn:nbn:de:0030-drops-201345}, doi = {10.4230/LIPIcs.CPM.2024.24}, annote = {Keywords: string algorithm, border, cover, quasi-periodicity, dynamic string} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.25" - DOI: 10.4230/LIPIcs.CPM.2024.25
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.25/LIPIcs.CPM.2024.25.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.25" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.25" - Walking on Words
+Authors:Ian Pratt-Hartmann 
+ AbstractAny function f with domain {1, … , m} and co-domain {1, … , n} induces a natural map from words of length n to those of length m: the ith letter of the output word (1 ≤ i ≤ m) is given by the f(i)th letter of the input word. We study this map in the case where f is a surjection satisfying the condition |f(i+1)-f(i)| ≤ 1 for 1 ≤ i < m. Intuitively, we think of f as describing a "walk" on a word u, visiting every position, and yielding a word w as the sequence of letters encountered en route. If such an f exists, we say that u generates w. Call a word primitive if it is not generated by any word shorter than itself. We show that every word has, up to reversal, a unique primitive generator. Observing that, if a word contains a non-trivial palindrome, it can generate the same word via essentially different walks, we obtain conditions under which, for a chosen pair of walks f and g, those walks yield the same word when applied to a given primitive word. Although the original impulse for studying primitive generators comes from their application to decision procedures in logic, we end, by way of further motivation, with an analysis of the primitive generators for certain word sequences defined via morphisms. 
+ Cite asIan Pratt-Hartmann. Walking on Words. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 25:1-25:17, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{pratthartmann:LIPIcs.CPM.2024.25 author = {Pratt-Hartmann, Ian}, title = {{Walking on Words}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {25:1--25:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.25}, URN = {urn:nbn:de:0030-drops-201352}, doi = {10.4230/LIPIcs.CPM.2024.25}, annote = {Keywords: word combinatorics, palindrome, Rauzy morphism} }@InProceedings{pratthartmann:LIPIcs.CPM.2024.25 author = {Pratt-Hartmann, Ian}, title = {{Walking on Words}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {25:1--25:17}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.25}, URN = {urn:nbn:de:0030-drops-201352}, doi = {10.4230/LIPIcs.CPM.2024.25}, annote = {Keywords: word combinatorics, palindrome, Rauzy morphism} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.26" - DOI: 10.4230/LIPIcs.CPM.2024.26
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.26/LIPIcs.CPM.2024.26.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.26" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.26" - A Data Structure for the Maximum-Sum Segment Problem with Offsets
+Authors:Yoshifumi Sakai 
+ AbstractConsider a variant of the maximum-sum segment problem for a sequence X₀ of n real numbers, which asks an arbitrary contiguous subsequence of X_a that maximizes the sum of its elements for any given real number a, where X_a is the sequence obtained by subtracting a from each element in X₀. Although this problem can be solved in O(n) time from scratch for any given X₀ and a, appropriate data structures for X₀ could support efficient queries of the solution for arbitrary a. We propose an O(n log² n)-time, O(n)-space algorithm that takes X₀ as input and outputs such a data structure supporting O(log n)-time queries. 
+ Cite asYoshifumi Sakai. A Data Structure for the Maximum-Sum Segment Problem with Offsets. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 26:1-26:15, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{sakai:LIPIcs.CPM.2024.26 author = {Sakai, Yoshifumi}, title = {{A Data Structure for the Maximum-Sum Segment Problem with Offsets}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {26:1--26:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.26}, URN = {urn:nbn:de:0030-drops-201361}, doi = {10.4230/LIPIcs.CPM.2024.26}, annote = {Keywords: algorithms, sequence of real numbers, maximum-sum segment} }@InProceedings{sakai:LIPIcs.CPM.2024.26 author = {Sakai, Yoshifumi}, title = {{A Data Structure for the Maximum-Sum Segment Problem with Offsets}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {26:1--26:15}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.26}, URN = {urn:nbn:de:0030-drops-201361}, doi = {10.4230/LIPIcs.CPM.2024.26}, annote = {Keywords: algorithms, sequence of real numbers, maximum-sum segment} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.27" - DOI: 10.4230/LIPIcs.CPM.2024.27
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.27/LIPIcs.CPM.2024.27.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.27" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.27" - Finding Diverse Strings and Longest Common Subsequences in a Graph
+Authors:Yuto Shida, Giulia Punzi, Yasuaki Kobayashi, Takeaki Uno, and Hiroki Arimura 
+ AbstractIn this paper, we study for the first time the Diverse Longest Common Subsequences (LCSs) problem under Hamming distance. Given a set of a constant number of input strings, the problem asks to decide if there exists some subset X of K longest common subsequences whose diversity is no less than a specified threshold Δ, where we consider two types of diversities of a set X of strings of equal length: the Sum diversity and the Min diversity defined as the sum and the minimum of the pairwise Hamming distance between any two strings in X, respectively. We analyze the computational complexity of the respective problems with Sum- and Min-diversity measures, called the Max-Sum and Max-Min Diverse LCSs, respectively, considering both approximation algorithms and parameterized complexity. Our results are summarized as follows. When K is bounded, both problems are polynomial time solvable. In contrast, when K is unbounded, both problems become NP-hard, while Max-Sum Diverse LCSs problem admits a PTAS. Furthermore, we analyze the parameterized complexity of both problems with combinations of parameters K and r, where r is the length of the candidate strings to be selected. Importantly, all positive results above are proven in a more general setting, where an input is an edge-labeled directed acyclic graph (DAG) that succinctly represents a set of strings of the same length. Negative results are proven in the setting where an input is explicitly given as a set of strings. The latter results are equipped with an encoding such a set as the longest common subsequences of a specific input string set. 
+ Cite asYuto Shida, Giulia Punzi, Yasuaki Kobayashi, Takeaki Uno, and Hiroki Arimura. Finding Diverse Strings and Longest Common Subsequences in a Graph. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 27:1-27:19, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{shida_et_al:LIPIcs.CPM.2024.27 author = {Shida, Yuto and Punzi, Giulia and Kobayashi, Yasuaki and Uno, Takeaki and Arimura, Hiroki}, title = {{Finding Diverse Strings and Longest Common Subsequences in a Graph}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {27:1--27:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.27}, URN = {urn:nbn:de:0030-drops-201370}, doi = {10.4230/LIPIcs.CPM.2024.27}, annote = {Keywords: Sequence analysis, longest common subsequence, Hamming distance, dispersion, approximation algorithms, parameterized complexity} }@InProceedings{shida_et_al:LIPIcs.CPM.2024.27 author = {Shida, Yuto and Punzi, Giulia and Kobayashi, Yasuaki and Uno, Takeaki and Arimura, Hiroki}, title = {{Finding Diverse Strings and Longest Common Subsequences in a Graph}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {27:1--27:19}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.27}, URN = {urn:nbn:de:0030-drops-201370}, doi = {10.4230/LIPIcs.CPM.2024.27}, annote = {Keywords: Sequence analysis, longest common subsequence, Hamming distance, dispersion, approximation algorithms, parameterized complexity} }Document 
+ href="https://doi.org/10.4230/LIPIcs.CPM.2024.28" - DOI: 10.4230/LIPIcs.CPM.2024.28
+href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol296-cpm2024/LIPIcs.CPM.2024.28/LIPIcs.CPM.2024.28.pdf" - 
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.28" - 
+
+href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.28" - Minimizing the Minimizers via Alphabet Reordering
+Authors:Hilde Verbeek, Lorraine A.K. Ayad, Grigorios Loukides, and Solon P. Pissis 
+ AbstractMinimizers sampling is one of the most widely-used mechanisms for sampling strings [Roberts et al., Bioinformatics 2004]. Let S = S[1]… S[n] be a string over a totally ordered alphabet Σ. Further let w ≥ 2 and k ≥ 1 be two integers. The minimizer of S[i..i+w+k-2] is the smallest position in [i,i+w-1] where the lexicographically smallest length-k substring of S[i..i+w+k-2] starts. The set of minimizers over all i ∈ [1,n-w-k+2] is the set ℳ_{w,k}(S) of the minimizers of S. We consider the following basic problem: Given S, w, and k, can we efficiently compute a total order on Σ that minimizes |ℳ_{w,k}(S)|? We show that this is unlikely by proving that the problem is NP-hard for any w ≥ 3 and k ≥ 1. Our result provides theoretical justification as to why there exist no exact algorithms for minimizing the minimizers samples, while there exists a plethora of heuristics for the same purpose. 
+ Cite asHilde Verbeek, Lorraine A.K. Ayad, Grigorios Loukides, and Solon P. Pissis. Minimizing the Minimizers via Alphabet Reordering. In 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024). Leibniz International Proceedings in Informatics (LIPIcs), Volume 296, pp. 28:1-28:13, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2024) 
+ Copy BibTex To Clipboard 
+  
+ @InProceedings{verbeek_et_al:LIPIcs.CPM.2024.28 author = {Verbeek, Hilde and Ayad, Lorraine A.K. and Loukides, Grigorios and Pissis, Solon P.}, title = {{Minimizing the Minimizers via Alphabet Reordering}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {28:1--28:13}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.28}, URN = {urn:nbn:de:0030-drops-201383}, doi = {10.4230/LIPIcs.CPM.2024.28}, annote = {Keywords: sequence analysis, minimizers, alphabet reordering, feedback arc set} }@InProceedings{verbeek_et_al:LIPIcs.CPM.2024.28 author = {Verbeek, Hilde and Ayad, Lorraine A.K. and Loukides, Grigorios and Pissis, Solon P.}, title = {{Minimizing the Minimizers via Alphabet Reordering}}, booktitle = {35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024)}, pages = {28:1--28:13}, series = {Leibniz International Proceedings in Informatics (LIPIcs)}, ISBN = {978-3-95977-326-3}, ISSN = {1868-8969}, year = {2024}, volume = {296}, editor = {Inenaga, Shunsuke and Puglisi, Simon J.}, publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}, address = {Dagstuhl, Germany}, URL = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.28}, URN = {urn:nbn:de:0030-drops-201383}, doi = {10.4230/LIPIcs.CPM.2024.28}, annote = {Keywords: sequence analysis, minimizers, alphabet reordering, feedback arc set} }Filters 
+ 83Authors 
+ Show AllCollapse 
+ Show All 
+ A 
+ Alanko, Jarno N. 
+ Amir, Amihood 
+ Arimura, Hiroki 
+ Ayad, Lorraine A.K. 
+ B 
+ Bannai, Hideo 
+ Bathie, Gabriel 
+ Becker, Ruben 
+ Bernardini, Giulia 
+ Bertola, Gianmarco 
+ Bille, Philip 
+ Boneh, Itai 
+ Bonizzoni, Paola 
+ Boucher, Christina 
+ C 
+ Cenzato, Davide 
+ Charalampopoulos, Panagiotis 
+ Chen, Huiping 
+ Cotumaccio, Nicola 
+ Cox, Anthony J. 
+ Cozzi, Davide 
+ D 
+ Dudek, Bartłomiej 
+ E 
+ Eades, Patrick 
+ F 
+ Fisman, Dana 
+ Fried, Dvir 
+ Fuglsang, Christian Mikkelsen 
+ G 
+ Gabrić, Daniel 
+ Gagie, Travis 
+ Gawrychowski, Paweł 
+ Golan, Shay 
+ Gørtz, Inge Li 
+ Guerrini, Veronica 
+ Guo, Peaker 
+ H 
+ He, Meng 
+ Hendrian, Diptarama 
+ Horiyama, Takashi 
+ I 
+ Inenaga, Shunsuke 
+ Itzhaki, Michael 
+ K 
+ Kim, Sung-Hwan 
+ Kobayashi, Yasuaki 
+ Kodric, Bojana 
+ Köppl, Dominik 
+ Kosolobov, Dmitry 
+ Kraus, Matan 
+ Krogh, Christoffer 
+ L 
+ Lipták, Zsuzsanna 
+ Loukides, Grigorios 
+ M 
+ Manea, Florin 
+ Manzini, Giovanni 
+ Masillo, Francesco 
+ Maso, Riccardo 
+ Miclăuş, Adrian 
+ Mieno, Takuya 
+ Mitani, Kazuki 
+ N 
+ Navarro, Gonzalo 
+ P 
+ Pirola, Yuri 
+ Pissis, Solon P. 
+ Policriti, Alberto 
+ Pratt-Hartmann, Ian 
+ Prezza, Nicola 
+ Puglisi, Simon J. 
+ Punzi, Giulia 
+ R 
+ Radoszewski, Jakub 
+ Riccardi, Brian 
+ Richardsen, Jonas 
+ Rosone, Giovanna 
+ S 
+ Sakai, Yoshifumi 
+ Sawada, Joe 
+ Schmid, Markus L. 
+ Seto, Kazuhisa 
+ Shida, Yuto 
+ Shinohara, Ayumi 
+ Shur, Arseny 
+ Sivukhin, Nikita 
+ Starikovskaya, Tatiana 
+ Stougie, Leen 
+ Sweering, Michelle 
+ T 
+ Tarnow, Simon R. 
+ Tzarfati, Ilay 
+ U 
+ Uno, Takeaki 
+ V 
+ Verbeek, Hilde 
+ W 
+ Wirth, Anthony 
+ Wu, Kaiyu 
+ Y 
+ Yoshinaka, Ryo 
+ Z 
+ Zobel, Justin 
+  
+ 22Subjects 
+ Show AllCollapse 
+ Show All 
+ Applied computing 
+ Applied computing → Bioinformatics 
+ Applied computing → Computational biology 
+ Mathematics of computing 
+ Mathematics of computing → Combinatorial algorithms 
+ Mathematics of computing → Combinatoric problems 
+ Mathematics of computing → Combinatorics on words 
+ Mathematics of computing → Discrete mathematics 
+ Theory of computation 
+ Theory of computation 
+ Theory of computation → Algorithm design techniques 
+ Theory of computation → Data compression 
+ Theory of computation → Data structures design and analysis 
+ Theory of computation → Design and analysis of algorithms 
+ Theory of computation → Fixed parameter tractability 
+ Theory of computation → Formal languages and automata theory 
+ Theory of computation → Generating random combinatorial structures 
+ Theory of computation → Grammars and context-free languages 
+ Theory of computation → Graph algorithms analysis 
+ Theory of computation → Parameterized complexity and exact algorithms 
+ Theory of computation → Pattern matching 
+ Theory of computation → Problems, reductions and completeness 
+ Theory of computation → Sorting and searching 
+ Theory of computation → Streaming, sublinear and near linear time algorithms 
+ Theory of computation → Theory and algorithms for application domains 
+ Questions / Remarks / FeedbackXFeedback for Dagstuhl Publishing 
+  
+ SendThanks for your feedback! 
+ Feedback submitted 
+ OKCould not send message 
+ Please try again later or send anE-mail 
+ OKAbout DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#author" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#author" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#author" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#author" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#author" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#author" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#author" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#author" - TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ href="https://submission.dagstuhl.de/series/details/lipics#editor" - LIPIcs 
+ href="https://submission.dagstuhl.de/series/details/oasics#editor" - OASIcs 
+ href="https://submission.dagstuhl.de/series/details/dfu#editor" - Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ href="https://submission.dagstuhl.de/series/details/darts#editor" - DARTS – Dagstuhl Artifacts Series 
+ href="https://submission.dagstuhl.de/series/details/dagrep#editor" - Dagstuhl Reports 
+ href="https://submission.dagstuhl.de/series/details/dagman#editor" - Dagstuhl Manifestos 
+ href="https://submission.dagstuhl.de/series/details/lites#editor" - LITES 
+ href="https://submission.dagstuhl.de/series/details/tgdk#editor" - TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2025Schloss Dagstuhl – LZI GmbHAbout DROPSImprintPrivacyContact
+
+3. Website of CPM_2: http://www.wikicfp.com/cfp/program?id=575
+Website information of CPM_2:
+
+href="/cfp/home" - Home
+href="/cfp/servlet/user.regin?mode=login" - Login 
+ href="/cfp/servlet/user.regin?mode=register" - Register 
+ href="/cfp/servlet/user.profile" - Account 
+ href="/cfp/servlet/user.logout" - Logout 
+ href="/cfp/allcat" - Categories
+ 
+ href="/cfp/allcfp" - CFPs
+href="/cfp/servlet/event.trycfp" - Post a CFP 
+ href="/cfp/series?t=c&i=A" - Conf Series
+ 
+ href="/cfp/servlet/event.showlist?ltype=w" - My List
+ 
+ href="/cfp/servlet/event.showtl?" - Timeline 
+ href="/cfp/servlet/event.showlist?ltype=a" - My Archive
+ 
+ href="http://www.todordimitrov.de/cfp-app/index.html" - On iPhone
+ 
+ href="https://play.google.com/store/apps/details?id=net.kuratkoo.wikicfp" - On Android
+
+value="t" - 2025
+value="f" - 2025+ 
+ href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - 
+ 
+ CPM: Combinatorial Pattern Matching 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=575" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=575&text=CPM: Combinatorial Pattern Matching" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=575" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=575" - | CPM: Combinatorial Pattern Matching | href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=575" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=575&text=CPM: Combinatorial Pattern Matching" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=575" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=575" - 
+ CPM: Combinatorial Pattern Matching 
+ href="http://www.facebook.com/sharer.php?u=http://www.wikicfp.com/cfp/program?id=575" - 
+href="http://twitter.com/share?url=http://www.wikicfp.com/cfp/program?id=575&text=CPM: Combinatorial Pattern Matching" - 
+href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wikicfp.com/cfp/program?id=575" - 
+href="https://plus.google.com/share?url=http://www.wikicfp.com/cfp/program?id=575" - 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/cpm/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Combinatorial Pattern Matching&shortname=CPM&year=2025&sid=575" - 2025 or later | Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/cpm/index.html" - DBLP | Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Combinatorial Pattern Matching&shortname=CPM&year=2025&sid=575" - 2025 or later 
+ Past:Proceedings onhref="http://dblp.uni-trier.de/db/conf/cpm/index.html" - DBLP 
+ Future:Post a CFP forhref="/cfp/servlet/event.postcfp?fullname=Combinatorial Pattern Matching&shortname=CPM&year=2025&sid=575" - 2025 or later 
+ All CFPs on WikiCFP 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=177448&copyownerid=184766" - CPM 2024 | Combinatorial Pattern Matching 
+ Jun 25, 2024 - Jun 27, 2024 | Fukuoka | Feb 28, 2024 
+ href="/cfp/servlet/event.showcfp?eventid=170417&copyownerid=178360" - CPM 2023 | Combinatorial Pattern Matching 
+ Jun 26, 2023 - Jun 28, 2023 | Marne-la-Vallée, France | Jan 27, 2023 
+ href="/cfp/servlet/event.showcfp?eventid=118364&copyownerid=166247" - CPM 2021 | Combinatorial Pattern Matching 
+ May 5, 2021 - Jul 7, 2021 | Wrocław, Poland | Jan 29, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=72734&copyownerid=35838" - CPM 2018 | Combinatorial Pattern Matching 
+ Jul 2, 2018 - Jul 4, 2018 | Qingdao, China | Feb 7, 2018 
+ href="/cfp/servlet/event.showcfp?eventid=58535&copyownerid=49798" - CPM 2017 | Combinatorial Pattern Matching 
+ Jul 4, 2017 - Jul 6, 2017 | Warsaw, Poland | Feb 7, 2017 
+ href="/cfp/servlet/event.showcfp?eventid=49870&copyownerid=83329" - CPM 2016 | Combinatorial Pattern Matching 
+ Jun 27, 2016 - Jun 29, 2016 | Tel Aviv, Israel | Jan 28, 2016 (Jan 21, 2016) 
+ href="/cfp/servlet/event.showcfp?eventid=41332&copyownerid=70992" - CPM 2015 | 26th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 28, 2015 - Jul 1, 2015 | Ischia Island, Italy | Feb 2, 2015 
+ href="/cfp/servlet/event.showcfp?eventid=33435&copyownerid=16341" - CPM 2014 | 25th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 16, 2014 - Jun 18, 2014 | Moscow, Russia | Jan 10, 2014 
+ href="/cfp/servlet/event.showcfp?eventid=26984&copyownerid=17762" - CPM 2013 | Combinatorial Pattern Matching 
+ Jun 17, 2013 - Jun 19, 2013 | Bad Herrenalb near Karlsruhe, Germany | Jan 18, 2013 
+ href="/cfp/servlet/event.showcfp?eventid=19003&copyownerid=17762" - CPM 2012 | Combinatorial Pattern Matching 
+ Jul 3, 2012 - Jul 5, 2012 | Helsinki, Finland | Feb 10, 2012 
+ href="/cfp/servlet/event.showcfp?eventid=4374&copyownerid=2" - CPM 2009 | 20th Annual Symposium on Combinatorial Pattern Matching (Special anniversary edition) 
+ Jun 22, 2009 - Jun 24, 2009 | Lille, France | Jan 12, 2009 
+ href="/cfp/servlet/event.showcfp?eventid=2079&copyownerid=320" - CPM 2008 | 19th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 18, 2008 - Jun 20, 2008 | Pisa, Italy | Jan 14, 2008 | Event | When | Where | Deadline | href="/cfp/servlet/event.showcfp?eventid=177448&copyownerid=184766" - CPM 2024 | Combinatorial Pattern Matching | Jun 25, 2024 - Jun 27, 2024 | Fukuoka | Feb 28, 2024 | href="/cfp/servlet/event.showcfp?eventid=170417&copyownerid=178360" - CPM 2023 | Combinatorial Pattern Matching | Jun 26, 2023 - Jun 28, 2023 | Marne-la-Vallée, France | Jan 27, 2023 | href="/cfp/servlet/event.showcfp?eventid=118364&copyownerid=166247" - CPM 2021 | Combinatorial Pattern Matching | May 5, 2021 - Jul 7, 2021 | Wrocław, Poland | Jan 29, 2021 | href="/cfp/servlet/event.showcfp?eventid=72734&copyownerid=35838" - CPM 2018 | Combinatorial Pattern Matching | Jul 2, 2018 - Jul 4, 2018 | Qingdao, China | Feb 7, 2018 | href="/cfp/servlet/event.showcfp?eventid=58535&copyownerid=49798" - CPM 2017 | Combinatorial Pattern Matching | Jul 4, 2017 - Jul 6, 2017 | Warsaw, Poland | Feb 7, 2017 | href="/cfp/servlet/event.showcfp?eventid=49870&copyownerid=83329" - CPM 2016 | Combinatorial Pattern Matching | Jun 27, 2016 - Jun 29, 2016 | Tel Aviv, Israel | Jan 28, 2016 (Jan 21, 2016) | href="/cfp/servlet/event.showcfp?eventid=41332&copyownerid=70992" - CPM 2015 | 26th Annual Symposium on Combinatorial Pattern Matching | Jun 28, 2015 - Jul 1, 2015 | Ischia Island, Italy | Feb 2, 2015 | href="/cfp/servlet/event.showcfp?eventid=33435&copyownerid=16341" - CPM 2014 | 25th Annual Symposium on Combinatorial Pattern Matching | Jun 16, 2014 - Jun 18, 2014 | Moscow, Russia | Jan 10, 2014 | href="/cfp/servlet/event.showcfp?eventid=26984&copyownerid=17762" - CPM 2013 | Combinatorial Pattern Matching | Jun 17, 2013 - Jun 19, 2013 | Bad Herrenalb near Karlsruhe, Germany | Jan 18, 2013 | href="/cfp/servlet/event.showcfp?eventid=19003&copyownerid=17762" - CPM 2012 | Combinatorial Pattern Matching | Jul 3, 2012 - Jul 5, 2012 | Helsinki, Finland | Feb 10, 2012 | href="/cfp/servlet/event.showcfp?eventid=4374&copyownerid=2" - CPM 2009 | 20th Annual Symposium on Combinatorial Pattern Matching (Special anniversary edition) | Jun 22, 2009 - Jun 24, 2009 | Lille, France | Jan 12, 2009 | href="/cfp/servlet/event.showcfp?eventid=2079&copyownerid=320" - CPM 2008 | 19th Annual Symposium on Combinatorial Pattern Matching | Jun 18, 2008 - Jun 20, 2008 | Pisa, Italy | Jan 14, 2008 
+ Event | When | Where | Deadline 
+ href="/cfp/servlet/event.showcfp?eventid=177448&copyownerid=184766" - CPM 2024 | Combinatorial Pattern Matching 
+ Jun 25, 2024 - Jun 27, 2024 | Fukuoka | Feb 28, 2024 
+ href="/cfp/servlet/event.showcfp?eventid=170417&copyownerid=178360" - CPM 2023 | Combinatorial Pattern Matching 
+ Jun 26, 2023 - Jun 28, 2023 | Marne-la-Vallée, France | Jan 27, 2023 
+ href="/cfp/servlet/event.showcfp?eventid=118364&copyownerid=166247" - CPM 2021 | Combinatorial Pattern Matching 
+ May 5, 2021 - Jul 7, 2021 | Wrocław, Poland | Jan 29, 2021 
+ href="/cfp/servlet/event.showcfp?eventid=72734&copyownerid=35838" - CPM 2018 | Combinatorial Pattern Matching 
+ Jul 2, 2018 - Jul 4, 2018 | Qingdao, China | Feb 7, 2018 
+ href="/cfp/servlet/event.showcfp?eventid=58535&copyownerid=49798" - CPM 2017 | Combinatorial Pattern Matching 
+ Jul 4, 2017 - Jul 6, 2017 | Warsaw, Poland | Feb 7, 2017 
+ href="/cfp/servlet/event.showcfp?eventid=49870&copyownerid=83329" - CPM 2016 | Combinatorial Pattern Matching 
+ Jun 27, 2016 - Jun 29, 2016 | Tel Aviv, Israel | Jan 28, 2016 (Jan 21, 2016) 
+ href="/cfp/servlet/event.showcfp?eventid=41332&copyownerid=70992" - CPM 2015 | 26th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 28, 2015 - Jul 1, 2015 | Ischia Island, Italy | Feb 2, 2015 
+ href="/cfp/servlet/event.showcfp?eventid=33435&copyownerid=16341" - CPM 2014 | 25th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 16, 2014 - Jun 18, 2014 | Moscow, Russia | Jan 10, 2014 
+ href="/cfp/servlet/event.showcfp?eventid=26984&copyownerid=17762" - CPM 2013 | Combinatorial Pattern Matching 
+ Jun 17, 2013 - Jun 19, 2013 | Bad Herrenalb near Karlsruhe, Germany | Jan 18, 2013 
+ href="/cfp/servlet/event.showcfp?eventid=19003&copyownerid=17762" - CPM 2012 | Combinatorial Pattern Matching 
+ Jul 3, 2012 - Jul 5, 2012 | Helsinki, Finland | Feb 10, 2012 
+ href="/cfp/servlet/event.showcfp?eventid=4374&copyownerid=2" - CPM 2009 | 20th Annual Symposium on Combinatorial Pattern Matching (Special anniversary edition) 
+ Jun 22, 2009 - Jun 24, 2009 | Lille, France | Jan 12, 2009 
+ href="/cfp/servlet/event.showcfp?eventid=2079&copyownerid=320" - CPM 2008 | 19th Annual Symposium on Combinatorial Pattern Matching 
+ Jun 18, 2008 - Jun 20, 2008 | Pisa, Italy | Jan 14, 2008 
+ Present CFP : 2024 
+ The 35th Annual Symposium on Combinatorial Pattern Matching (CPM 2024) will be held in Fukuoka, Japan, on June 25-27, 2024. 
+  
+ https://cpm2024.github.io/ 
+ ================================ 
+  
+ [Call for papers] 
+ Papers on original research unpublished elsewhere in all areas related to combinatorial pattern matching and its applications are sought. The proceedings will be published by LIPIcs (of Dagstuhl). 
+  
+ [Topics of Interest] 
+ Papers are solicited on, but not limited to, the following topics: 
+ - Bioinformatics and computational biology 
+ - Coding and data compression 
+ - Combinatorics on words 
+ - Data mining 
+ - Information retrieval 
+ - Natural language processing 
+ - Pattern discovery 
+ - String algorithms 
+ - String processing in databases 
+ - Symbolic computing 
+ - Text searching and indexing 
+  
+ [Keynote speakers] 
+ Martin Farach-Colton (Rutgers University) 
+ Zsuzsanna Lipták (University of Verona) 
+ Tetsuo Shibuya (University of Tokyo) 
+  
+ [Important dates] 
+ - Submission deadline: February 28, 2024 (AoE) (Extended) 
+ - Author notification: April 10, 2024 (Extended) 
+ - Conference: June 25-27, 2024 
+  
+ [Submission] 
+ Submission is through the EasyChair conference system, by using the link below. The submission process requires registration to create an 
+ EasyChair account prior to submission. 
+  
+ https://easychair.org/conferences/?conf=cpm2024 
+  
+ [Submission format] 
+ The authors should submit an extended abstract not exceeding 12 single-spaced pages on A4 paper, excluding the title page (containing title, authors, affiliations, e-mail addresses, a short abstract, and keywords) and the references. The authors are required to use the LaTeX style file supplied by Dagstuhl (LIPIcs). Papers must be submitted as a single file in PDF format. 
+  
+ Additional material intended for the referees but not for publication in the final version - for example details of proofs - may be placed in a clearly marked appendix that is not included in the page limit. The program code of experimental papers should be made public, with reasonable documentation, such that the PC may evaluate replicability of experimental results. 
+  
+ Papers submitted for review should represent original, previously unpublished work and surveys of important results. At the time the extended abstract is submitted to CPM, and for the entire review period, the paper (or essentially the same paper) should not be under review by any other conference with published proceedings or by a scientific journal. 
+  
+ At least one author of an accepted paper is expected to present the paper at the conference as a registered participant. The conference will be held in person at the ACROS Fukuoka, located at the heart of the city of Fukuoka, Japan. 
+  
+ [Programme Committee] 
+ Golnaz Badkobeh (City University of London) 
+ Giulia Bernardini (University of Trieste) 
+ Philip Bille (Technical University of Denmark) 
+ Manuel Careces (University of Helsinki) 
+ Panagiotis Charalampopoulos (Birkbeck, University of London) 
+ Gabriele Fici (University of Palermo) 
+ Daniel Gibney (University of Texas at Dallas) 
+ Veronica Guerrini (University of Pisa) 
+ Shunsuke Inenaga (Co-chair) (Kyushu University) 
+ Jesper Jansson (Kyoto University) 
+ Artur Jeż (University of Wrocław) 
+ Dominik Köppl (University of Yamanashi) 
+ Gregory Kucherov (Gustave Eiffel University) 
+ Susana Ladra (University of A Coruna) 
+ Avivit Levy (Shenkar College) 
+ Gonzalo Navarro (University of Chile) 
+ Nicola Prezza (Ca’ Foscari University of Venice) 
+ Simon J. Puglisi (Co-chair) (University of Helsinki) 
+ Giulia Punzi (NII) 
+ Marinella Sciortino (Università di Palermo) 
+ Kana Shimizu (Waseda University) 
+  
+ [Sattelite workshops] 
+ CPM Summer School will be held in Tokyo, on June 20 and 21, 2024. 
+ StringMasters will be held in Fukuoka, on June 24 and 28, 2024. 
+ Related Resources 
+  
+ href="/cfp/servlet/event.showcfp?eventid=182818" - ACM MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=183295" - IEEE PRAI 2025
+IEEE--2025 the 8th International Conference on Pattern Recognition and Artificial Intelligence (PRAI 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186316" - S+SSPR  2026
+Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition and Structural and Syntactic Pattern Recognition 
+ href="/cfp/servlet/event.showcfp?eventid=182624" - ICPRS 2025
+15th International Conference on Pattern Recognition Systems 
+ href="/cfp/servlet/event.showcfp?eventid=185273" - IMW 2025
+CVPR Workshop on Image Matching: Local Features and Beyond 2025 
+ href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search 
+ href="/cfp/servlet/event.showcfp?eventid=182812" - IEEE PRML 2025
+IEEE--2025 6th International Conference on Pattern Recognition and Machine Learning (PRML 2025)--ESCI 
+ href="/cfp/servlet/event.showcfp?eventid=186498" - SPIE SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=182819" - MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186499" - SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) | href="/cfp/servlet/event.showcfp?eventid=182818" - ACM MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) | href="/cfp/servlet/event.showcfp?eventid=183295" - IEEE PRAI 2025
+IEEE--2025 the 8th International Conference on Pattern Recognition and Artificial Intelligence (PRAI 2025) | href="/cfp/servlet/event.showcfp?eventid=186316" - S+SSPR  2026
+Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition and Structural and Syntactic Pattern Recognition | href="/cfp/servlet/event.showcfp?eventid=182624" - ICPRS 2025
+15th International Conference on Pattern Recognition Systems | href="/cfp/servlet/event.showcfp?eventid=185273" - IMW 2025
+CVPR Workshop on Image Matching: Local Features and Beyond 2025 | href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search | href="/cfp/servlet/event.showcfp?eventid=182812" - IEEE PRML 2025
+IEEE--2025 6th International Conference on Pattern Recognition and Machine Learning (PRML 2025)--ESCI | href="/cfp/servlet/event.showcfp?eventid=186498" - SPIE SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) | href="/cfp/servlet/event.showcfp?eventid=182819" - MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) | href="/cfp/servlet/event.showcfp?eventid=186499" - SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=182818" - ACM MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=183295" - IEEE PRAI 2025
+IEEE--2025 the 8th International Conference on Pattern Recognition and Artificial Intelligence (PRAI 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186316" - S+SSPR  2026
+Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition and Structural and Syntactic Pattern Recognition 
+ href="/cfp/servlet/event.showcfp?eventid=182624" - ICPRS 2025
+15th International Conference on Pattern Recognition Systems 
+ href="/cfp/servlet/event.showcfp?eventid=185273" - IMW 2025
+CVPR Workshop on Image Matching: Local Features and Beyond 2025 
+ href="/cfp/servlet/event.showcfp?eventid=186007" - SoCS 2025
+18th International Symposium on Combinatorial Search 
+ href="/cfp/servlet/event.showcfp?eventid=182812" - IEEE PRML 2025
+IEEE--2025 6th International Conference on Pattern Recognition and Machine Learning (PRML 2025)--ESCI 
+ href="/cfp/servlet/event.showcfp?eventid=186498" - SPIE SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) 
+ href="/cfp/servlet/event.showcfp?eventid=182819" - MLPR 2025
+ACM--2025 The 3rd International Conference on Machine Learning and Pattern Recognition (MLPR 2025) 
+ href="/cfp/servlet/event.showcfp?eventid=186499" - SPRA 2026
+SPIE--2026 6th Symposium on Pattern Recognition and Applications (SPRA 2026) 
+  
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. | href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions | Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar | This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License. 
+ href="/cfp/about.jsp" - About Us
+|href="mailto:wikicfp@gmail.com" - Contact Us
+|href="/cfp/data.jsp" - Data
+|href="/cfp/privacy.jsp" - Privacy Policy
+|href="/cfp/terms.jsp" - Terms and Conditions 
+ Partners:href="https://www.semanticscholar.org/?utm_source=WikiCFP&utm_medium=Display&utm_term=home&utm_content=semantic-scholar-rail-try-it&utm_campaign=WikiCFP%20Test" - AI2's Semantic Scholar 
+ This wiki is licensed under aCreative Commons Attribution-Share Alike 3.0 License.
+

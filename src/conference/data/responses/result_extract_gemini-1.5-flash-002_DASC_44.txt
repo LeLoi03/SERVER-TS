@@ -1,0 +1,28 @@
+output:
+{
+  "Conference dates": "October 21 - 24, 2025",
+  "Year": "2025",
+  "Location": "Hakodate City, Hokkaido, Japan",
+  "City-State-Province": "Hakodate City, Hokkaido",
+  "Country": "Japan",
+  "Continent": "Asia",
+  "Type": "Hybrid",
+  "Submission Date": {
+    "Regular Paper Due": "June 10, 2025",
+    "WiP/Workshop/SS Paper Due": "June 20, 2025",
+    "Workshop/SS Proposal Due": "May 10, 2025"
+  },
+  "Notification Date": {
+    "Author Notification": "August 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready Submission Due": "September 12, 2025"
+  },
+  "Registration Date": {
+    "Paper Registration Due": "September 5, 2025"
+  },
+  "Topics": "Dependability, Security, Trust, Autonomic Computing, Autonomous Systems, Self-Organization, Organic Computing, Cognitive Computing, Self-Aware Computing, Energy Management, Fault-tolerant Computing, Big Data, CPS, IoT, SDN, Real-time Systems, Hardware Reliability, Software Reliability, Verification, Testing, Cloud Computing, Fog Computing, Edge Computing, Mobile Computing, Pervasive Computing, Artificial Intelligence, Network Security, System Security, Privacy, Software Development, IoT Applications, Sensor Network Applications, Big Data Applications, Smart Grid Applications, Aerospace Applications, Transportation Applications",
+  "Summary": "The 23rd IEEE International Conference on Dependable, Autonomic and Secure Computing (DASC 2025) will be held as a hybrid conference (in-person and virtual) from October 21-24, 2025, in Hakodate City, Hokkaido, Japan. The conference aims to bring together computer scientists, industrial engineers, and researchers to discuss and exchange theoretical and implementation results in the areas of dependability, security, trust, and/or autonomic computing, and autonomous systems.",
+  "Call for Papers": "No call for papers available"
+}
+

@@ -1,0 +1,36 @@
+output:
+{
+  "Conference dates": "November 10 - 14, 2025",
+  "Year": "2025",
+  "Location": "Coex, Seoul, Korea",
+  "City-State-Province": "Seoul",
+  "Country": "Korea",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Research Papers Abstract Deadline": "May 16, 2025",
+    "Full Research Papers Submission Deadline": "May 23, 2025",
+    "Applied Research Papers Abstract Deadline": "May 23, 2025",
+    "Applied Research Papers Submission Deadline": "May 30, 2025",
+    "Short Research Papers Abstract Deadline": "May 30, 2025",
+    "Short Research Papers Submission Deadline": "June 6, 2025",
+    "Resource Papers Abstract Deadline": "June 10, 2025",
+    "Demo Papers Abstract Deadline": "June 10, 2025",
+    "Resource Papers Submission Deadline": "July 17, 2025",
+    "Demo Papers Submission Deadline": "July 17, 2025",
+    "Tutorials Proposal Submission": "June 14, 2025",
+    "Workshops Proposal Submission": "June 28, 2025"
+  },
+  "Notification Date": {
+    "Notification (for Full, Short, Applied, Resource, and Demo Papers)": "August 4, 2025",
+    "Tutorials Proposal Notification": "July 8, 2025",
+    "Workshops Proposal Notification": "July 19, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Deadline": "August 27, 2025"
+  },
+  "Topics": "Artificial Intelligence, Data Science, Databases, Information Retrieval, Knowledge Management, Data Acquisition and Processing, Data Integration and Aggregation, Efficient Data Processing, Special Data Processing, Analytics and Machine Learning, Neural Information and Knowledge Processing, Information Access and Retrieval, Users and Interfaces for Information Systems, Evaluation, Crowdsourcing, Mining Multi-modal Content, Data Presentation, Fairness, Ethics, and Explainability, Applications, Generative AI for Data and Knowledge Management, Resource Efficient Generative AI models",
+  "Summary": "The Conference on Information and Knowledge Management (CIKM) provides a unique venue for industry and academia to present and discuss state-of-the-art research on artificial intelligence, search and discovery, data mining, and database systems. CIKM 2025 will take place between Nov 10-14, 2025 in Coex, Seoul, Korea.",
+  "Call for Papers": "# CIKM 2025: Call for Papers\n\nThe Conference on Information and Knowledge Management (CIKM 2025) will take place from **November 10-14, 2025, in Coex, Seoul, Korea**.\n\n## Topics of Interest\n\nWe encourage submissions of high-quality research papers on the general areas of artificial intelligence, data science, databases, information retrieval, and knowledge management. Topics of interest include, but are not limited to:\n\n*   Data acquisition and processing (e.g., IoT Data, Data Quality, Data Privacy, Mitigating Biases, Data Wrangling, Data exploration, Data Preparation, Valuation, and Trading)\n*   Data Integration and aggregation (e.g., Semantic Processing, data provenance, data linkage, data fusion, knowledge graph, data warehousing, data lake, privacy and security, modeling, information credibility)\n*   Efficient data processing (e.g., serverless, data-intensive computing, database systems, indexing and compression, architectures, distributed data systems, dataspaces, customized hardware)\n*   Special data processing (e.g., multilingual text, sequential, stream, time series, spatio-temporal, (knowledge) graph, multimedia, scientific, and social media data)\n*   Analytics and machine learning (e.g., OLAP, data mining, machine learning and AI, scalable analysis algorithms, algorithmic biases, event detection and tracking, algorithmic interpretability)\n*   Neural Information and knowledge processing (e.g., graph neural networks, domain adaptation, transfer learning, network architectures, neural ranking, neural recommendation, and neural prediction)\n*   Information access and retrieval (e.g., Information Retrieval with Large Language Models, Question Answering and Dialogue Systems, Open-ended Question Answering Systems, Generation of Knowledge Graphs from Unstructured data, Retrieval Models, Query Processing, Personalization, Recommender Systems, Filtering Systems)\n*   Users and interfaces for information systems (e.g., user behavior analysis, user interface design, perception of biases, interactive information retrieval, interactive analysis, spoken interfaces)\n*   Evaluation (e.g., performance studies, benchmarks, online and offline evaluation, best practices)\n*   Crowdsourcing (e.g., task assignment, worker reliability, optimization, trustworthiness, transparency, crowdsourcing in the era of large language models)\n*   Mining multi-modal content (e.g., natural language processing, speech recognition, computer vision, content understanding, knowledge extraction, knowledge representations)\n*   Data presentation (e.g., visualization, summarization, readability, VR, speech input/output)\n*   Fairness, Ethics, and Explainability in Information and Knowledge Management (e.g., fairness, accountability, ethics, explainability)\n*   Applications (e.g., urban systems, biomedical and health informatics, legal informatics, crisis informatics, computational social science, data-enabled discovery, social networks, education, business)\n*   Generative AI for Data and Knowledge Management (e.g., GenAI for structured and unstructured data processing, GenAI for data synthesis and simulation, GenAI for information summarization, content creation, and visualization)\n*   Resource Efficient Generative AI models for knowledge management (e.g., model compression, distributed learning, and leveraging edge computing to reduce computational overhead.)\n\n## Paper Submissions\n\nAuthors are invited to submit original, full-length research papers that are not previously published, accepted to be published, or being considered for publication in any other forum.\n\n## Submission Guidelines\n\nManuscripts should be submitted to the CIKM 2025 Easychair site in PDF format, using the 2-column ACM sigconf template ([https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)). Full papers cannot exceed 9 pages, including an appendix, plus unlimited references (paper content is limited to 9 pages).\n\n## Important Dates\n\nAll deadlines are at 11:59 pm in the Anywhere on Earth (AoE) time zone.\n\n*   **Full Papers Abstract Deadline:** May 16, 2025\n*   **Full Papers Final Deadline:** May 23, 2025\n*   **Papers Notifications:** August 4, 2025\n*   **Camera Ready Deadline:** August 27, 2025\n\n### Workshops & Tutorials\n\n*   **Tutorials Proposal Submission:** June 14, 2025\n*   **Workshops Proposal Submission:** June 28, 2025\n*   **Tutorials Proposal Notification:** July 8, 2025\n*   **Workshops Proposal Notification:** July 19, 2025\n\n## PC Chairs Contact Information\n\nFor more information, contact the PC chairs at [cikm2025-pc@easychair.org](mailto:cikm2025-pc@easychair.org)\n\n*   Carl Yang, Emory University, USA\n*   Senjuti Basu Roy, New Jersey Institute of Technology, USA\n*   Jessie Li, Yunqi Academy of Engineering, China\n*   Jaap Kamps, University of Amsterdam, Netherlands"
+}
+

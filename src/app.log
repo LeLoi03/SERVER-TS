@@ -1172,3 +1172,1405 @@ Stack: Error: Not Found - /api/v1/conference/save-to-json
 [2025-04-25T20:22:42.358Z] [Socket _nRM55kyfqJHXoSBAAAB] Core event handlers registered.
 [2025-04-25T20:22:52.039Z] [HTTP Request] --> POST /api/v1/save-conference from ::1 (User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36)
 [2025-04-25T20:22:52.722Z] [HTTP Response] <-- POST /api/v1/save-conference 200 683ms
+[2025-04-26T01:42:35.474Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T01:42:35.476Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T01:42:35.476Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T01:42:35.477Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T01:42:35.477Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T01:42:42.697Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T01:42:42.698Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T01:42:43.117Z] [Server Start] Initializing loaders...
+[2025-04-26T01:42:43.118Z] [Loader] Starting application loading process...
+[2025-04-26T01:42:43.120Z] [Loader DB] Attempting database connection...
+[2025-04-26T01:42:43.120Z] [Database] Attempting MongoDB connection...
+[2025-04-26T01:42:43.822Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T01:42:43.822Z] [Loader DB] Database connection successful.
+[2025-04-26T01:42:43.823Z] [Loader] Database loaded.
+[2025-04-26T01:42:43.823Z] [History Service] Initialized.
+[2025-04-26T01:42:43.824Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T01:42:43.824Z] [Loader] Services initialized.
+[2025-04-26T01:42:43.829Z] [Express] Mounted API routes at /api
+[2025-04-26T01:42:43.829Z] [Express] Registered Not Found handler.
+[2025-04-26T01:42:43.830Z] [Express] Registered Global Error handler.
+[2025-04-26T01:42:43.830Z] [Express] Express app configured.
+[2025-04-26T01:42:43.831Z] [Loader] Express loaded.
+[2025-04-26T01:42:43.832Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T01:42:43.836Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T01:42:43.836Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T01:42:43.837Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T01:42:43.837Z] [Loader] Socket.IO loaded.
+[2025-04-26T01:42:43.837Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T01:42:43.837Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T01:42:43.871Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T01:42:43.872Z] [Loader] Jobs scheduled.
+[2025-04-26T01:42:43.872Z] [Loader] Performing initial log analysis...
+[2025-04-26T01:42:43.873Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T01:42:43.975Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T01:42:43.976Z] [Loader] Initial log analysis completed.
+[2025-04-26T01:42:43.976Z] [Loader] All loaders completed successfully.
+[2025-04-26T01:42:43.981Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T01:42:43.981Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T01:42:43.982Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T01:42:43.982Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T01:42:58.363Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-26T01:42:58.365Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-26T01:42:58.366Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T01:42:58.380Z] [Socket Auth MW] Attempting auth for socket oLmOyKXo08t6rPoIAAAC. Token provided: false
+[2025-04-26T01:42:58.380Z] [Socket Auth MW] No token provided for socket oLmOyKXo08t6rPoIAAAC. Treating as anonymous.
+[2025-04-26T01:42:58.383Z] [Socket.IO oLmOyKXo08t6rPoIAAAC] Client connected. Token present: false
+[2025-04-26T01:42:58.383Z] [Socket.IO oLmOyKXo08t6rPoIAAAC] Anonymous user connected.
+[2025-04-26T01:42:58.387Z] [Socket oLmOyKXo08t6rPoIAAAC] Registering core event handlers. UserID: Anonymous
+[2025-04-26T01:42:58.388Z] [Socket oLmOyKXo08t6rPoIAAAC] Core event handlers registered.
+[2025-04-26T01:42:58.595Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T01:42:58.596Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-26T01:42:58.613Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 250ms
+[2025-04-26T01:42:58.620Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-26T01:42:58.623Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-26T01:42:58.624Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T01:42:58.813Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T01:42:58.813Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-26T01:42:58.822Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 202ms
+[2025-04-26T01:48:24.006Z] [Socket.IO oLmOyKXo08t6rPoIAAAC] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-26T01:50:54.419Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-26T01:50:54.421Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-26T01:50:54.421Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T01:50:54.445Z] [Socket Auth MW] Attempting auth for socket SDTXlXLm_PwkAUiIAAAF. Token provided: false
+[2025-04-26T01:50:54.446Z] [Socket Auth MW] No token provided for socket SDTXlXLm_PwkAUiIAAAF. Treating as anonymous.
+[2025-04-26T01:50:54.446Z] [Socket.IO SDTXlXLm_PwkAUiIAAAF] Client connected. Token present: false
+[2025-04-26T01:50:54.447Z] [Socket.IO SDTXlXLm_PwkAUiIAAAF] Anonymous user connected.
+[2025-04-26T01:50:54.447Z] [Socket SDTXlXLm_PwkAUiIAAAF] Registering core event handlers. UserID: Anonymous
+[2025-04-26T01:50:54.448Z] [Socket SDTXlXLm_PwkAUiIAAAF] Core event handlers registered.
+[2025-04-26T01:50:54.573Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T01:50:54.574Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-26T01:50:54.582Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 163ms
+[2025-04-26T01:50:54.588Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-26T01:50:54.589Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-26T01:50:54.589Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T01:50:54.785Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T01:50:54.785Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-26T01:50:54.795Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 207ms
+[2025-04-26T02:19:52.815Z] [Socket.IO SDTXlXLm_PwkAUiIAAAF] Client disconnected. Reason: client namespace disconnect. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-26T02:21:50.578Z] [Socket Auth MW] Attempting auth for socket qZBKZ9vpjWMpWMEnAAAI. Token provided: false
+[2025-04-26T02:21:50.579Z] [Socket Auth MW] No token provided for socket qZBKZ9vpjWMpWMEnAAAI. Treating as anonymous.
+[2025-04-26T02:21:50.580Z] [Socket.IO qZBKZ9vpjWMpWMEnAAAI] Client connected. Token present: false
+[2025-04-26T02:21:50.580Z] [Socket.IO qZBKZ9vpjWMpWMEnAAAI] Anonymous user connected.
+[2025-04-26T02:21:50.581Z] [Socket qZBKZ9vpjWMpWMEnAAAI] Registering core event handlers. UserID: Anonymous
+[2025-04-26T02:21:50.581Z] [Socket qZBKZ9vpjWMpWMEnAAAI] Core event handlers registered.
+[2025-04-26T02:21:50.591Z] [Socket.IO qZBKZ9vpjWMpWMEnAAAI] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-26T02:21:50.613Z] [Socket Auth MW] Attempting auth for socket M4Flei2N3ZV3WjSBAAAK. Token provided: true
+[2025-04-26T02:21:50.623Z] [Socket Auth MW] Token signature validated successfully for socket M4Flei2N3ZV3WjSBAAAK.
+[2025-04-26T02:21:50.624Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Client connected. Token present: true
+[2025-04-26T02:21:50.624Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Attempting to fetch user info using token...
+[2025-04-26T02:21:50.626Z] [API Client] Fetching user info from: http://confhub.engineer/api/v1/user/me
+[2025-04-26T02:21:50.787Z] [API Client] Successfully fetched user info for ID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:21:50.788Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] User info fetched successfully. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82, Email: loicute5fps@gmail.com, Role: undefined
+[2025-04-26T02:21:50.788Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Fetching initial conversation list for user c0d9d488-3fee-4dda-98f3-5df278ed0e82...
+[2025-04-26T02:21:50.788Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:21:50.989Z] [History Service] Found 6 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:21:50.990Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Sent initial conversation list (6 items) to user c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:21:50.990Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Authenticated user c0d9d488-3fee-4dda-98f3-5df278ed0e82 session ready.
+[2025-04-26T02:21:50.991Z] [Socket M4Flei2N3ZV3WjSBAAAK] Registering core event handlers. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:21:50.992Z] [Socket M4Flei2N3ZV3WjSBAAAK] Core event handlers registered.
+[2025-04-26T02:22:45.890Z] [Socket M4Flei2N3ZV3WjSBAAAK] Event 'start_new_conversation' received for user c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:22:45.891Z] [History Service] Explicitly creating new conversation for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:22:45.990Z] [History Service] Created new conversationId: 680c43754167ae21d26a927d for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:22:45.991Z] [Socket M4Flei2N3ZV3WjSBAAAK] Started new conversation 680c43754167ae21d26a927d. Set as active.
+[2025-04-26T02:22:45.991Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:22:46.166Z] [History Service] Found 7 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:22:46.166Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after new conversation start.
+[2025-04-26T02:23:02.060Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634182060] Event 'send_message' received: UserInput="HEllo...", Streaming=false, Lang=en, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43754167ae21d26a927d
+[2025-04-26T02:23:02.060Z] [History Service] Getting history for conversationId: 680c43754167ae21d26a927d, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:23:02.062Z] [History Service] Applying message limit: 50
+[2025-04-26T02:23:02.121Z] [History Service] Found history for conversationId: 680c43754167ae21d26a927d. Message count: 0
+[2025-04-26T02:23:02.121Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634182060] Fetched 0 history items for conv 680c43754167ae21d26a927d.
+[2025-04-26T02:23:02.123Z] --- [MsgHandler-1745634182060 Socket M4Flei2N3ZV3WjSBAAAK] Handling NON-STREAMING input: "HEllo", Lang: en ---
+[2025-04-26T02:23:02.124Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-04-26T02:23:02.126Z] [MsgHandler-1745634182060 Socket Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:02.126Z] --- [MsgHandler-1745634182060 Socket M4Flei2N3ZV3WjSBAAAK] HostAgent Turn 1: Sending to Model (History size: 1) ---
+[2025-04-26T02:23:02.126Z] [MsgHandler-1745634182060 Socket Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:02.128Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-26T02:23:02.128Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-26T02:23:02.171Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:23:02.172Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:23:02.176Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:23:02.176Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:23:02.183Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:23:02.183Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-26T02:23:02.184Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:23:04.015Z] Model Finish Reason: STOP
+[2025-04-26T02:23:04.016Z] Model generated final text response: Hello! How can I help you today with the Global Conference & Journal Hub?
+...
+[2025-04-26T02:23:04.016Z] [MsgHandler-1745634182060 Socket M4Flei2N3ZV3WjSBAAAK] HostAgent Turn 1: Received final_text.
+[2025-04-26T02:23:04.017Z] [MsgHandler-1745634182060 Socket Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:04.017Z] [MsgHandler-1745634182060 History Check - Final] Appended final HostAgent response. History size: 2
+[2025-04-26T02:23:04.018Z] [MsgHandler-1745634182060 Socket Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:23:04.018Z] --- [MsgHandler-1745634182060 Socket M4Flei2N3ZV3WjSBAAAK Lang: en] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:23:04.018Z] [MsgHandler-1745634182060 Save History Check] History to save. Size: 2.
+[2025-04-26T02:23:04.019Z] [History Service] Updating history for conversationId: 680c43754167ae21d26a927d, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 2
+[2025-04-26T02:23:04.104Z] [History Service] Successfully updated history for conversationId: 680c43754167ae21d26a927d. Modified: true
+[2025-04-26T02:23:04.104Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634182060] Successfully updated history in DB for conv 680c43754167ae21d26a927d.
+[2025-04-26T02:23:04.105Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:23:04.260Z] [History Service] Found 7 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:23:04.261Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:23:27.503Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634207503] Event 'send_message' received: UserInput="Who arre you ?...", Streaming=true, Lang=en, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43754167ae21d26a927d
+[2025-04-26T02:23:27.503Z] [History Service] Getting history for conversationId: 680c43754167ae21d26a927d, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:23:27.504Z] [History Service] Applying message limit: 50
+[2025-04-26T02:23:27.559Z] [History Service] Found history for conversationId: 680c43754167ae21d26a927d. Message count: 2
+[2025-04-26T02:23:27.560Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634207503] Fetched 2 history items for conv 680c43754167ae21d26a927d.
+[2025-04-26T02:23:27.562Z] --- [MsgHandler-1745634207503 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "Who arre you ?", Lang: en ---
+[2025-04-26T02:23:27.562Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-04-26T02:23:27.563Z] [MsgHandler-1745634207503] Using HostAgent Config (Lang: en). Tools: routeToAgent
+[2025-04-26T02:23:27.565Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:27.565Z] [MsgHandler-1745634207503 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 3
+[2025-04-26T02:23:27.565Z] --- [MsgHandler-1745634207503 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:23:27.566Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:27.566Z] [MsgHandler-1745634207503 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 3
+[2025-04-26T02:23:27.568Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-04-26T02:23:27.568Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-04-26T02:23:27.568Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:23:27.569Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:23:27.569Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:23:27.569Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:23:27.570Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:23:27.570Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-04-26T02:23:27.570Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:23:29.258Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:23:29.258Z] [MsgHandler-1745634207503 Stream T1 Direct - M4Flei2N3ZV3WjSBAAAK] HostAgent provided stream directly. Processing...
+[2025-04-26T02:23:29.259Z] [MsgHandler-1745634207503 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:23:29.259Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:23:29.260Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:23:29.278Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:23:29.400Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:23:29.448Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:23:29.474Z] [MsgHandler-1745634207503 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 238
+[2025-04-26T02:23:29.474Z] [MsgHandler-1745634207503 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:23:29.475Z] [MsgHandler-1745634207503 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:23:29.475Z] [MsgHandler-1745634207503 History T1 Direct Done - M4Flei2N3ZV3WjSBAAAK] Appended initial HostAgent response. Size: 4
+[2025-04-26T02:23:29.475Z] --- [MsgHandler-1745634207503 M4Flei2N3ZV3WjSBAAAK Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:23:29.476Z] [MsgHandler-1745634207503 Save History Check] History to save. Size: 4.
+[2025-04-26T02:23:29.476Z] [History Service] Updating history for conversationId: 680c43754167ae21d26a927d, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 4
+[2025-04-26T02:23:29.542Z] [History Service] Successfully updated history for conversationId: 680c43754167ae21d26a927d. Modified: true
+[2025-04-26T02:23:29.543Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634207503] Successfully updated history in DB for conv 680c43754167ae21d26a927d.
+[2025-04-26T02:23:29.543Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:23:29.702Z] [History Service] Found 7 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:23:29.703Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:23:32.806Z] [Socket M4Flei2N3ZV3WjSBAAAK] Event 'load_conversation' received for ID: 680bad82b87475e14aa96ca2, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:23:32.807Z] [History Service] Getting history for conversationId: 680bad82b87475e14aa96ca2, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:23:32.807Z] [History Service] Applying message limit: 50
+[2025-04-26T02:23:32.954Z] [History Service] Found history for conversationId: 680bad82b87475e14aa96ca2. Message count: 16
+[2025-04-26T02:23:32.956Z] [Socket M4Flei2N3ZV3WjSBAAAK] Sent history for conversation 680bad82b87475e14aa96ca2. Set as active.
+[2025-04-26T02:23:33.637Z] [Socket M4Flei2N3ZV3WjSBAAAK] Event 'load_conversation' received for ID: 680c43754167ae21d26a927d, User: c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:23:33.637Z] [History Service] Getting history for conversationId: 680c43754167ae21d26a927d, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:23:33.638Z] [History Service] Applying message limit: 50
+[2025-04-26T02:23:33.688Z] [History Service] Found history for conversationId: 680c43754167ae21d26a927d. Message count: 4
+[2025-04-26T02:23:33.688Z] [Socket M4Flei2N3ZV3WjSBAAAK] Sent history for conversation 680c43754167ae21d26a927d. Set as active.
+[2025-04-26T02:23:44.165Z] [Socket M4Flei2N3ZV3WjSBAAAK] Event 'start_new_conversation' received for user c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:23:44.165Z] [History Service] Explicitly creating new conversation for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:23:44.222Z] [History Service] Created new conversationId: 680c43b04167ae21d26a9288 for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:23:44.223Z] [Socket M4Flei2N3ZV3WjSBAAAK] Started new conversation 680c43b04167ae21d26a9288. Set as active.
+[2025-04-26T02:23:44.223Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:23:44.370Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:23:44.371Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after new conversation start.
+[2025-04-26T02:24:54.515Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634294515] Event 'send_message' received: UserInput="hội nghị KDIR là Onl...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:24:54.516Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:24:54.516Z] [History Service] Applying message limit: 50
+[2025-04-26T02:24:54.569Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 0
+[2025-04-26T02:24:54.569Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634294515] Fetched 0 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:24:54.569Z] --- [MsgHandler-1745634294515 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "hội nghị KDIR là Online hay Offline", Lang: vi ---
+[2025-04-26T02:24:54.570Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:24:54.570Z] [MsgHandler-1745634294515] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:24:54.570Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:24:54.571Z] [MsgHandler-1745634294515 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 1
+[2025-04-26T02:24:54.571Z] --- [MsgHandler-1745634294515 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:24:54.571Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:24:54.571Z] [MsgHandler-1745634294515 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 1
+[2025-04-26T02:24:54.572Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-04-26T02:24:54.572Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-04-26T02:24:54.572Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:24:54.572Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:24:54.572Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:24:54.572Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:24:54.573Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:24:54.576Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-04-26T02:24:54.579Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:24:56.366Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:24:56.366Z] [MsgHandler-1745634294515 Stream T1 Direct - M4Flei2N3ZV3WjSBAAAK] HostAgent provided stream directly. Processing...
+[2025-04-26T02:24:56.366Z] [MsgHandler-1745634294515 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:24:56.367Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:24:56.367Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:24:56.485Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:24:56.614Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:24:56.778Z] [MsgHandler-1745634294515 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 99
+[2025-04-26T02:24:56.779Z] [MsgHandler-1745634294515 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:24:56.779Z] [MsgHandler-1745634294515 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:24:56.780Z] [MsgHandler-1745634294515 History T1 Direct Done - M4Flei2N3ZV3WjSBAAAK] Appended initial HostAgent response. Size: 2
+[2025-04-26T02:24:56.780Z] --- [MsgHandler-1745634294515 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:24:56.780Z] [MsgHandler-1745634294515 Save History Check] History to save. Size: 2.
+[2025-04-26T02:24:56.780Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 2
+[2025-04-26T02:24:56.845Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:24:56.845Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634294515] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:24:56.845Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:24:56.992Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:24:56.993Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:25:02.761Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634302761] Event 'send_message' received: UserInput="OKe...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:25:02.762Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:25:02.762Z] [History Service] Applying message limit: 50
+[2025-04-26T02:25:02.816Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 2
+[2025-04-26T02:25:02.816Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634302761] Fetched 2 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:25:02.816Z] --- [MsgHandler-1745634302761 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "OKe", Lang: vi ---
+[2025-04-26T02:25:02.816Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:25:02.817Z] [MsgHandler-1745634302761] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:25:02.817Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:02.818Z] [MsgHandler-1745634302761 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 3
+[2025-04-26T02:25:02.818Z] --- [MsgHandler-1745634302761 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:25:02.818Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:02.819Z] [MsgHandler-1745634302761 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 3
+[2025-04-26T02:25:02.819Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-04-26T02:25:02.819Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-04-26T02:25:02.819Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:25:02.819Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:02.820Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:02.820Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:25:02.820Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:02.820Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-04-26T02:25:02.820Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:03.696Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-04-26T02:25:03.696Z] [MsgHandler-1745634302761 HostAgent T1 - M4Flei2N3ZV3WjSBAAAK] HostAgent requested function call: routeToAgent
+[2025-04-26T02:25:03.697Z] [MsgHandler-1745634302761 History T1 Prep - M4Flei2N3ZV3WjSBAAAK] Appended HostAgent FC request. Size: 4
+[2025-04-26T02:25:03.697Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:03.699Z] --- [MsgHandler-1745634302761 SubAgent Call Start - M4Flei2N3ZV3WjSBAAAK] Calling ConferenceAgent via callSubAgent ---
+[2025-04-26T02:25:03.700Z] --- [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Socket M4Flei2N3ZV3WjSBAAAK] Calling Sub Agent: ConferenceAgent, Task: 80112b03-b528-47fe-8c0c-02a12411e789 ---
+[2025-04-26T02:25:03.700Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: vi
+[2025-04-26T02:25:03.700Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700] Sending request to ConferenceAgent LLM.
+[2025-04-26T02:25:03.700Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-26T02:25:03.701Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-26T02:25:03.701Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:25:03.701Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:03.701Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:03.701Z] Tools provided: ["getConferences","followUnfollowItem","drawChart"]
+[2025-04-26T02:25:03.701Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:03.702Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-26T02:25:03.702Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:05.538Z] Model Finish Reason: STOP
+[2025-04-26T02:25:05.538Z] Model requested function call: getConferences
+[2025-04-26T02:25:05.538Z] Arguments: {"searchQuery":"acronym=KDIR&mode=detail"}
+[2025-04-26T02:25:05.538Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700] Received result from ConferenceAgent LLM: Status requires_function_call
+[2025-04-26T02:25:05.539Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700] ConferenceAgent requested function call: getConferences
+[2025-04-26T02:25:05.540Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Attempting execution: getConferences
+[2025-04-26T02:25:05.541Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Status Stub] Step: function_call, Msg: Received request to call function: getConferences
+[2025-04-26T02:25:05.543Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 M4Flei2N3ZV3WjSBAAAK] Handler: GetConferences, Args: {"searchQuery":"acronym=KDIR&mode=detail"}
+[2025-04-26T02:25:05.544Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Status Stub] Step: validating_function_args, Msg: Validating arguments for getConferences...
+[2025-04-26T02:25:05.544Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Status Stub] Step: retrieving_info, Msg: Retrieving conference data...
+[2025-04-26T02:25:05.545Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=KDIR&mode=detail
+[2025-04-26T02:25:05.649Z] Backend API Success for conference. Data length: 109
+[2025-04-26T02:25:05.651Z] Transforming conference data with Markdown. Search query: acronym=KDIR&mode=detail
+[2025-04-26T02:25:05.652Z] Conference data transformed successfully.
+[2025-04-26T02:25:05.652Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 M4Flei2N3ZV3WjSBAAAK] API result: Success=true
+[2025-04-26T02:25:05.653Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Status Stub] Step: data_found, Msg: Successfully retrieved and processed conference data.
+[2025-04-26T02:25:05.653Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Execution finished for getConferences.
+[2025-04-26T02:25:05.653Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700 Status Stub] Step: processing_function_result, Msg: Received result from getConferences.
+[2025-04-26T02:25:05.654Z] [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700] Function getConferences executed. Result: **Meta:**
+- **Current page:** 1
+- **Per page:** 10
+- **Total items:** 0
+- **Total page:** 0
+- **Prev...
+[2025-04-26T02:25:05.654Z] --- [MsgHandler-1745634302761-Sub-ConferenceAgent-1745634303700] Sub Agent ConferenceAgent finished. Status: success ---
+[2025-04-26T02:25:05.654Z] --- [MsgHandler-1745634302761 SubAgent Call End - M4Flei2N3ZV3WjSBAAAK] ConferenceAgent finished. Status: success ---
+[2025-04-26T02:25:05.654Z] [MsgHandler-1745634302761 History T1 Done - M4Flei2N3ZV3WjSBAAAK] Appended function/routing response to Host history. Size: 5
+[2025-04-26T02:25:05.655Z] --- [MsgHandler-1745634302761 HostAgent Turn 2 Start - M4Flei2N3ZV3WjSBAAAK] Requesting final stream from HostAgent ---
+[2025-04-26T02:25:05.655Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:05.655Z] [MsgHandler-1745634302761 History T2 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 5
+[2025-04-26T02:25:05.656Z] [GeminiService] Received history with 5 items before mapping (for stream).
+[2025-04-26T02:25:05.659Z] [GeminiService] Mapped history (SDK Content[]) with 5 items (for stream).
+[2025-04-26T02:25:05.660Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-26T02:25:05.660Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:05.660Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:05.660Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:25:05.661Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:05.661Z] [GeminiService Stream] Preparing stream request with 5 Content items.
+[2025-04-26T02:25:05.661Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:06.216Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:25:06.216Z] [MsgHandler-1745634302761 Stream T2 - M4Flei2N3ZV3WjSBAAAK] Processing final stream from HostAgent...
+[2025-04-26T02:25:06.216Z] [MsgHandler-1745634302761 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:25:06.217Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:06.217Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:06.318Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:06.403Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:06.420Z] [MsgHandler-1745634302761 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 126
+[2025-04-26T02:25:06.420Z] [MsgHandler-1745634302761 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:25:06.421Z] [MsgHandler-1745634302761 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:25:06.421Z] [MsgHandler-1745634302761 History T2 Done - M4Flei2N3ZV3WjSBAAAK] Appended final HostAgent response. Size: 6
+[2025-04-26T02:25:06.421Z] --- [MsgHandler-1745634302761 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:25:06.422Z] [MsgHandler-1745634302761 Save History Check] History to save. Size: 6.
+[2025-04-26T02:25:06.422Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 6
+[2025-04-26T02:25:06.484Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:25:06.485Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634302761] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:25:06.485Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:25:06.630Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:25:06.631Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:25:40.470Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634340470] Event 'send_message' received: UserInput="Hội nghị IC3K là Onl...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:25:40.471Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:25:40.472Z] [History Service] Applying message limit: 50
+[2025-04-26T02:25:40.527Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 6
+[2025-04-26T02:25:40.528Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634340470] Fetched 6 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:25:40.529Z] --- [MsgHandler-1745634340470 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "Hội nghị IC3K là Online hay Offline", Lang: vi ---
+[2025-04-26T02:25:40.530Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:25:40.530Z] [MsgHandler-1745634340470] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:25:40.531Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:40.531Z] [MsgHandler-1745634340470 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 7
+[2025-04-26T02:25:40.531Z] --- [MsgHandler-1745634340470 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:25:40.531Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:40.532Z] [MsgHandler-1745634340470 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 7
+[2025-04-26T02:25:40.532Z] [GeminiService] Received history with 7 items before mapping (for stream).
+[2025-04-26T02:25:40.532Z] [GeminiService] Mapped history (SDK Content[]) with 7 items (for stream).
+[2025-04-26T02:25:40.532Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:25:40.533Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:40.533Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:40.533Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:25:40.533Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:40.533Z] [GeminiService Stream] Preparing stream request with 7 Content items.
+[2025-04-26T02:25:40.534Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:42.305Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-04-26T02:25:42.306Z] [MsgHandler-1745634340470 HostAgent T1 - M4Flei2N3ZV3WjSBAAAK] HostAgent requested function call: routeToAgent
+[2025-04-26T02:25:42.307Z] [MsgHandler-1745634340470 History T1 Prep - M4Flei2N3ZV3WjSBAAAK] Appended HostAgent FC request. Size: 8
+[2025-04-26T02:25:42.309Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:42.309Z] --- [MsgHandler-1745634340470 SubAgent Call Start - M4Flei2N3ZV3WjSBAAAK] Calling ConferenceAgent via callSubAgent ---
+[2025-04-26T02:25:42.310Z] --- [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Socket M4Flei2N3ZV3WjSBAAAK] Calling Sub Agent: ConferenceAgent, Task: 8a081d70-0a34-4757-9440-38e1155e1f56 ---
+[2025-04-26T02:25:42.310Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: vi
+[2025-04-26T02:25:42.310Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310] Sending request to ConferenceAgent LLM.
+[2025-04-26T02:25:42.310Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-26T02:25:42.311Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-26T02:25:42.311Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:25:42.311Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:42.312Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:42.312Z] Tools provided: ["getConferences","followUnfollowItem","drawChart"]
+[2025-04-26T02:25:42.312Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:42.312Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-26T02:25:42.312Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:44.098Z] Model Finish Reason: STOP
+[2025-04-26T02:25:44.099Z] Model requested function call: getConferences
+[2025-04-26T02:25:44.099Z] Arguments: {"searchQuery":"acronym=IC3K&mode=detail&perPage=5&page=1"}
+[2025-04-26T02:25:44.100Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310] Received result from ConferenceAgent LLM: Status requires_function_call
+[2025-04-26T02:25:44.100Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310] ConferenceAgent requested function call: getConferences
+[2025-04-26T02:25:44.100Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Attempting execution: getConferences
+[2025-04-26T02:25:44.101Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Status Stub] Step: function_call, Msg: Received request to call function: getConferences
+[2025-04-26T02:25:44.101Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 M4Flei2N3ZV3WjSBAAAK] Handler: GetConferences, Args: {"searchQuery":"acronym=IC3K&mode=detail&perPage=5&page=1"}
+[2025-04-26T02:25:44.101Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Status Stub] Step: validating_function_args, Msg: Validating arguments for getConferences...
+[2025-04-26T02:25:44.101Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Status Stub] Step: retrieving_info, Msg: Retrieving conference data...
+[2025-04-26T02:25:44.101Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=IC3K&mode=detail&perPage=5&page=1
+[2025-04-26T02:25:44.227Z] Backend API Success for conference. Data length: 13269
+[2025-04-26T02:25:44.227Z] Transforming conference data with Markdown. Search query: acronym=IC3K&mode=detail&perPage=5&page=1
+[2025-04-26T02:25:44.259Z] Conference data transformed successfully.
+[2025-04-26T02:25:44.260Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 M4Flei2N3ZV3WjSBAAAK] API result: Success=true
+[2025-04-26T02:25:44.260Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Status Stub] Step: data_found, Msg: Successfully retrieved and processed conference data.
+[2025-04-26T02:25:44.260Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Execution finished for getConferences.
+[2025-04-26T02:25:44.261Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310 Status Stub] Step: processing_function_result, Msg: Received result from getConferences.
+[2025-04-26T02:25:44.261Z] [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310] Function getConferences executed. Result: **Meta:**
+- **Current page:** 1
+- **Per page:** 5
+- **Total items:** 1
+- **Total page:** 1
+- **Prev ...
+[2025-04-26T02:25:44.262Z] --- [MsgHandler-1745634340470-Sub-ConferenceAgent-1745634342310] Sub Agent ConferenceAgent finished. Status: success ---
+[2025-04-26T02:25:44.262Z] --- [MsgHandler-1745634340470 SubAgent Call End - M4Flei2N3ZV3WjSBAAAK] ConferenceAgent finished. Status: success ---
+[2025-04-26T02:25:44.262Z] [MsgHandler-1745634340470 History T1 Done - M4Flei2N3ZV3WjSBAAAK] Appended function/routing response to Host history. Size: 9
+[2025-04-26T02:25:44.262Z] --- [MsgHandler-1745634340470 HostAgent Turn 2 Start - M4Flei2N3ZV3WjSBAAAK] Requesting final stream from HostAgent ---
+[2025-04-26T02:25:44.263Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:44.263Z] [MsgHandler-1745634340470 History T2 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 9
+[2025-04-26T02:25:44.264Z] [GeminiService] Received history with 9 items before mapping (for stream).
+[2025-04-26T02:25:44.264Z] [GeminiService] Mapped history (SDK Content[]) with 9 items (for stream).
+[2025-04-26T02:25:44.264Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-26T02:25:44.264Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:25:44.265Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:25:44.265Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:25:44.266Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:25:44.267Z] [GeminiService Stream] Preparing stream request with 9 Content items.
+[2025-04-26T02:25:44.267Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:25:44.852Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:25:44.852Z] [MsgHandler-1745634340470 Stream T2 - M4Flei2N3ZV3WjSBAAAK] Processing final stream from HostAgent...
+[2025-04-26T02:25:44.853Z] [MsgHandler-1745634340470 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:25:44.853Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:25:44.855Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:44.953Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:45.093Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:25:45.101Z] [MsgHandler-1745634340470 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 100
+[2025-04-26T02:25:45.101Z] [MsgHandler-1745634340470 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:25:45.102Z] [MsgHandler-1745634340470 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:25:45.102Z] [MsgHandler-1745634340470 History T2 Done - M4Flei2N3ZV3WjSBAAAK] Appended final HostAgent response. Size: 10
+[2025-04-26T02:25:45.102Z] --- [MsgHandler-1745634340470 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:25:45.103Z] [MsgHandler-1745634340470 Save History Check] History to save. Size: 10.
+[2025-04-26T02:25:45.106Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 10
+[2025-04-26T02:25:45.176Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:25:45.177Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634340470] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:25:45.177Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:25:45.330Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:25:45.331Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:26:16.163Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634376163] Event 'send_message' received: UserInput="Mở Google map địa đi...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:26:16.163Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:26:16.163Z] [History Service] Applying message limit: 50
+[2025-04-26T02:26:16.221Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 10
+[2025-04-26T02:26:16.222Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634376163] Fetched 10 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:16.222Z] --- [MsgHandler-1745634376163 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "Mở Google map địa điểm của hội nghị", Lang: vi ---
+[2025-04-26T02:26:16.223Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:26:16.223Z] [MsgHandler-1745634376163] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:26:16.224Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:16.224Z] [MsgHandler-1745634376163 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 11
+[2025-04-26T02:26:16.225Z] --- [MsgHandler-1745634376163 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:26:16.225Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:16.225Z] [MsgHandler-1745634376163 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 11
+[2025-04-26T02:26:16.226Z] [GeminiService] Received history with 11 items before mapping (for stream).
+[2025-04-26T02:26:16.226Z] [GeminiService] Mapped history (SDK Content[]) with 11 items (for stream).
+[2025-04-26T02:26:16.226Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:26:16.226Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:26:16.226Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:26:16.227Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:26:16.227Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:26:16.227Z] [GeminiService Stream] Preparing stream request with 11 Content items.
+[2025-04-26T02:26:16.227Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:26:17.917Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:26:17.917Z] [MsgHandler-1745634376163 Stream T1 Direct - M4Flei2N3ZV3WjSBAAAK] HostAgent provided stream directly. Processing...
+[2025-04-26T02:26:17.917Z] [MsgHandler-1745634376163 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:26:17.918Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:17.918Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:17.994Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:18.041Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:18.058Z] [MsgHandler-1745634376163 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 110
+[2025-04-26T02:26:18.058Z] [MsgHandler-1745634376163 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:26:18.059Z] [MsgHandler-1745634376163 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:26:18.060Z] [MsgHandler-1745634376163 History T1 Direct Done - M4Flei2N3ZV3WjSBAAAK] Appended initial HostAgent response. Size: 12
+[2025-04-26T02:26:18.060Z] --- [MsgHandler-1745634376163 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:26:18.061Z] [MsgHandler-1745634376163 Save History Check] History to save. Size: 12.
+[2025-04-26T02:26:18.061Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 12
+[2025-04-26T02:26:18.120Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:26:18.121Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634376163] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:18.121Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:26:18.278Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:26:18.279Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:26:32.810Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634392810] Event 'send_message' received: UserInput="Tìm địa điểm hội ngh...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:26:32.810Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:26:32.811Z] [History Service] Applying message limit: 50
+[2025-04-26T02:26:32.865Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 12
+[2025-04-26T02:26:32.866Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634392810] Fetched 12 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:32.867Z] --- [MsgHandler-1745634392810 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "Tìm địa điểm hội nghị và mở map", Lang: vi ---
+[2025-04-26T02:26:32.867Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:26:32.867Z] [MsgHandler-1745634392810] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:26:32.869Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:32.871Z] [MsgHandler-1745634392810 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 13
+[2025-04-26T02:26:32.871Z] --- [MsgHandler-1745634392810 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:26:32.872Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:32.872Z] [MsgHandler-1745634392810 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 13
+[2025-04-26T02:26:32.873Z] [GeminiService] Received history with 13 items before mapping (for stream).
+[2025-04-26T02:26:32.873Z] [GeminiService] Mapped history (SDK Content[]) with 13 items (for stream).
+[2025-04-26T02:26:32.873Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:26:32.874Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:26:32.874Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:26:32.874Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:26:32.875Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:26:32.875Z] [GeminiService Stream] Preparing stream request with 13 Content items.
+[2025-04-26T02:26:32.875Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:26:34.544Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:26:34.545Z] [MsgHandler-1745634392810 Stream T1 Direct - M4Flei2N3ZV3WjSBAAAK] HostAgent provided stream directly. Processing...
+[2025-04-26T02:26:34.545Z] [MsgHandler-1745634392810 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:26:34.546Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:34.546Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:34.643Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:34.707Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:34.835Z] [MsgHandler-1745634392810 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 72
+[2025-04-26T02:26:34.835Z] [MsgHandler-1745634392810 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:26:34.836Z] [MsgHandler-1745634392810 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:26:34.837Z] [MsgHandler-1745634392810 History T1 Direct Done - M4Flei2N3ZV3WjSBAAAK] Appended initial HostAgent response. Size: 14
+[2025-04-26T02:26:34.838Z] --- [MsgHandler-1745634392810 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:26:34.839Z] [MsgHandler-1745634392810 Save History Check] History to save. Size: 14.
+[2025-04-26T02:26:34.839Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 14
+[2025-04-26T02:26:34.907Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:26:34.908Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634392810] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:34.908Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:26:35.048Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:26:35.049Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:26:38.495Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634398495] Event 'send_message' received: UserInput="oke...", Streaming=true, Lang=vi, UserID=c0d9d488-3fee-4dda-98f3-5df278ed0e82, ActiveConvID=680c43b04167ae21d26a9288
+[2025-04-26T02:26:38.495Z] [History Service] Getting history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 50
+[2025-04-26T02:26:38.496Z] [History Service] Applying message limit: 50
+[2025-04-26T02:26:38.552Z] [History Service] Found history for conversationId: 680c43b04167ae21d26a9288. Message count: 14
+[2025-04-26T02:26:38.553Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634398495] Fetched 14 history items for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:38.553Z] --- [MsgHandler-1745634398495 Socket M4Flei2N3ZV3WjSBAAAK] Handling STREAMING input: "oke", Lang: vi ---
+[2025-04-26T02:26:38.553Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-04-26T02:26:38.553Z] [MsgHandler-1745634398495] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-04-26T02:26:38.554Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:38.555Z] [MsgHandler-1745634398495 History Init - M4Flei2N3ZV3WjSBAAAK] Added user turn. Size: 15
+[2025-04-26T02:26:38.555Z] --- [MsgHandler-1745634398495 HostAgent Turn 1 Start - M4Flei2N3ZV3WjSBAAAK] Requesting initial response from HostAgent ---
+[2025-04-26T02:26:38.556Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:38.556Z] [MsgHandler-1745634398495 History T1 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 15
+[2025-04-26T02:26:38.556Z] [GeminiService] Received history with 15 items before mapping (for stream).
+[2025-04-26T02:26:38.557Z] [GeminiService] Mapped history (SDK Content[]) with 15 items (for stream).
+[2025-04-26T02:26:38.557Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:26:38.557Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:26:38.557Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:26:38.557Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:26:38.558Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:26:38.558Z] [GeminiService Stream] Preparing stream request with 15 Content items.
+[2025-04-26T02:26:38.558Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:26:39.440Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-04-26T02:26:39.441Z] [MsgHandler-1745634398495 HostAgent T1 - M4Flei2N3ZV3WjSBAAAK] HostAgent requested function call: routeToAgent
+[2025-04-26T02:26:39.441Z] [MsgHandler-1745634398495 History T1 Prep - M4Flei2N3ZV3WjSBAAAK] Appended HostAgent FC request. Size: 16
+[2025-04-26T02:26:39.442Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:39.442Z] --- [MsgHandler-1745634398495 SubAgent Call Start - M4Flei2N3ZV3WjSBAAAK] Calling ConferenceAgent via callSubAgent ---
+[2025-04-26T02:26:39.442Z] --- [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Socket M4Flei2N3ZV3WjSBAAAK] Calling Sub Agent: ConferenceAgent, Task: 9b1246cc-6688-4861-91df-9acfba11efca ---
+[2025-04-26T02:26:39.443Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: vi
+[2025-04-26T02:26:39.443Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442] Sending request to ConferenceAgent LLM.
+[2025-04-26T02:26:39.443Z] [GeminiService] Received history with 1 items before mapping.
+[2025-04-26T02:26:39.443Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-04-26T02:26:39.443Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-04-26T02:26:39.444Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:26:39.444Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:26:39.444Z] Tools provided: ["getConferences","followUnfollowItem","drawChart"]
+[2025-04-26T02:26:39.444Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:26:39.444Z] [GeminiService] Sending total 1 Content items to API.
+[2025-04-26T02:26:39.445Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:26:41.128Z] Model Finish Reason: STOP
+[2025-04-26T02:26:41.129Z] Model requested function call: getConferences
+[2025-04-26T02:26:41.129Z] Arguments: {"searchQuery":"acronym=IC3K&perPage=5&page=1"}
+[2025-04-26T02:26:41.129Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442] Received result from ConferenceAgent LLM: Status requires_function_call
+[2025-04-26T02:26:41.129Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442] ConferenceAgent requested function call: getConferences
+[2025-04-26T02:26:41.129Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Attempting execution: getConferences
+[2025-04-26T02:26:41.130Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Status Stub] Step: function_call, Msg: Received request to call function: getConferences
+[2025-04-26T02:26:41.130Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 M4Flei2N3ZV3WjSBAAAK] Handler: GetConferences, Args: {"searchQuery":"acronym=IC3K&perPage=5&page=1"}
+[2025-04-26T02:26:41.130Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Status Stub] Step: validating_function_args, Msg: Validating arguments for getConferences...
+[2025-04-26T02:26:41.131Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Status Stub] Step: retrieving_info, Msg: Retrieving conference data...
+[2025-04-26T02:26:41.131Z] Executing backend API call: GET http://confhub.engineer/api/v1/conference?acronym=IC3K&perPage=5&page=1
+[2025-04-26T02:26:41.237Z] Backend API Success for conference. Data length: 983
+[2025-04-26T02:26:41.238Z] Transforming conference data with Markdown. Search query: acronym=IC3K&perPage=5&page=1
+[2025-04-26T02:26:41.242Z] Conference data transformed successfully.
+[2025-04-26T02:26:41.242Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 M4Flei2N3ZV3WjSBAAAK] API result: Success=true
+[2025-04-26T02:26:41.242Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Status Stub] Step: data_found, Msg: Successfully retrieved and processed conference data.
+[2025-04-26T02:26:41.243Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 M4Flei2N3ZV3WjSBAAAK] FunctionRegistry: Execution finished for getConferences.
+[2025-04-26T02:26:41.243Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442 Status Stub] Step: processing_function_result, Msg: Received result from getConferences.
+[2025-04-26T02:26:41.243Z] [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442] Function getConferences executed. Result: **Meta:**
+- **Current page:** 1
+- **Per page:** 5
+- **Total items:** 1
+- **Total page:** 1
+- **Prev ...
+[2025-04-26T02:26:41.245Z] --- [MsgHandler-1745634398495-Sub-ConferenceAgent-1745634399442] Sub Agent ConferenceAgent finished. Status: success ---
+[2025-04-26T02:26:41.245Z] --- [MsgHandler-1745634398495 SubAgent Call End - M4Flei2N3ZV3WjSBAAAK] ConferenceAgent finished. Status: success ---
+[2025-04-26T02:26:41.245Z] [MsgHandler-1745634398495 History T1 Done - M4Flei2N3ZV3WjSBAAAK] Appended function/routing response to Host history. Size: 17
+[2025-04-26T02:26:41.246Z] --- [MsgHandler-1745634398495 HostAgent Turn 2 Start - M4Flei2N3ZV3WjSBAAAK] Requesting final stream from HostAgent ---
+[2025-04-26T02:26:41.246Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:41.246Z] [MsgHandler-1745634398495 History T2 Send - M4Flei2N3ZV3WjSBAAAK] Host History Size: 17
+[2025-04-26T02:26:41.247Z] [GeminiService] Received history with 17 items before mapping (for stream).
+[2025-04-26T02:26:41.247Z] [GeminiService] Mapped history (SDK Content[]) with 17 items (for stream).
+[2025-04-26T02:26:41.247Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-04-26T02:26:41.247Z] Calling generateContent for model: gemini-2.0-flash
+[2025-04-26T02:26:41.247Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T02:26:41.247Z] Tools provided: ["routeToAgent"]
+[2025-04-26T02:26:41.247Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-04-26T02:26:41.248Z] [GeminiService Stream] Preparing stream request with 17 Content items.
+[2025-04-26T02:26:41.248Z]   - No valid next turn added, sending only history.
+[2025-04-26T02:26:41.919Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-04-26T02:26:41.919Z] [MsgHandler-1745634398495 Stream T2 - M4Flei2N3ZV3WjSBAAAK] Processing final stream from HostAgent...
+[2025-04-26T02:26:41.921Z] [MsgHandler-1745634398495 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Starting... (Emit final: true)
+[2025-04-26T02:26:41.923Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: status_update, Type: status
+[2025-04-26T02:26:41.923Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:42.051Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:42.092Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_update, Type: partial_result
+[2025-04-26T02:26:42.110Z] [MsgHandler-1745634398495 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Finished. Length: 99
+[2025-04-26T02:26:42.111Z] [MsgHandler-1745634398495 Stream Processing - M4Flei2N3ZV3WjSBAAAK] Emitting final chat_result via safeEmit.
+[2025-04-26T02:26:42.111Z] [MsgHandler-1745634398495 Emit Sent - M4Flei2N3ZV3WjSBAAAK] Event: chat_result, Type: result
+[2025-04-26T02:26:42.112Z] [MsgHandler-1745634398495 History T2 Done - M4Flei2N3ZV3WjSBAAAK] Appended final HostAgent response. Size: 18
+[2025-04-26T02:26:42.112Z] --- [MsgHandler-1745634398495 M4Flei2N3ZV3WjSBAAAK Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-04-26T02:26:42.112Z] [MsgHandler-1745634398495 Save History Check] History to save. Size: 18.
+[2025-04-26T02:26:42.112Z] [History Service] Updating history for conversationId: 680c43b04167ae21d26a9288, userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82. New history length: 18
+[2025-04-26T02:26:42.179Z] [History Service] Successfully updated history for conversationId: 680c43b04167ae21d26a9288. Modified: true
+[2025-04-26T02:26:42.180Z] [Socket M4Flei2N3ZV3WjSBAAAK MsgHandler-1745634398495] Successfully updated history in DB for conv 680c43b04167ae21d26a9288.
+[2025-04-26T02:26:42.180Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:26:42.321Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:26:42.323Z] [Socket M4Flei2N3ZV3WjSBAAAK] Emitted updated conversation list to user c0d9d488-3fee-4dda-98f3-5df278ed0e82 after message save.
+[2025-04-26T02:30:00.046Z] [Cron] Running scheduled log analysis...
+[2025-04-26T02:30:00.047Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T02:30:00.393Z] [LogAnalysis Service] Analysis completed successfully. Requests: 52, Errors: 0
+[2025-04-26T02:30:00.408Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-26T02:32:18.513Z] [Socket.IO M4Flei2N3ZV3WjSBAAAK] Client disconnected. Reason: transport close. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82. ActiveConvID: 680c43b04167ae21d26a9288
+[2025-04-26T02:32:21.992Z] [Socket Auth MW] Attempting auth for socket JJsWA2CINi1cFK0oAAAO. Token provided: true
+[2025-04-26T02:32:21.996Z] [Socket Auth MW] Token validation failed for socket JJsWA2CINi1cFK0oAAAO. Reason: jwt expired
+[2025-04-26T02:33:27.433Z] [Socket Auth MW] Attempting auth for socket fSJQbf95N8qwBFjTAAAR. Token provided: false
+[2025-04-26T02:33:27.434Z] [Socket Auth MW] No token provided for socket fSJQbf95N8qwBFjTAAAR. Treating as anonymous.
+[2025-04-26T02:33:27.435Z] [Socket.IO fSJQbf95N8qwBFjTAAAR] Client connected. Token present: false
+[2025-04-26T02:33:27.436Z] [Socket.IO fSJQbf95N8qwBFjTAAAR] Anonymous user connected.
+[2025-04-26T02:33:27.436Z] [Socket fSJQbf95N8qwBFjTAAAR] Registering core event handlers. UserID: Anonymous
+[2025-04-26T02:33:27.436Z] [Socket fSJQbf95N8qwBFjTAAAR] Core event handlers registered.
+[2025-04-26T02:33:27.461Z] [Socket.IO fSJQbf95N8qwBFjTAAAR] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-26T02:33:27.478Z] [Socket Auth MW] Attempting auth for socket EAbtT2NJ0AA2eZIVAAAT. Token provided: true
+[2025-04-26T02:33:27.481Z] [Socket Auth MW] Token signature validated successfully for socket EAbtT2NJ0AA2eZIVAAAT.
+[2025-04-26T02:33:27.482Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Client connected. Token present: true
+[2025-04-26T02:33:27.482Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Attempting to fetch user info using token...
+[2025-04-26T02:33:27.482Z] [API Client] Fetching user info from: http://confhub.engineer/api/v1/user/me
+[2025-04-26T02:33:27.607Z] [API Client] Successfully fetched user info for ID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:33:27.607Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] User info fetched successfully. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82, Email: loicute5fps@gmail.com, Role: undefined
+[2025-04-26T02:33:27.608Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Fetching initial conversation list for user c0d9d488-3fee-4dda-98f3-5df278ed0e82...
+[2025-04-26T02:33:27.608Z] [History Service] Getting conversation list for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82, limit: 20
+[2025-04-26T02:33:27.754Z] [History Service] Found 8 conversations for userId: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:33:27.755Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Sent initial conversation list (8 items) to user c0d9d488-3fee-4dda-98f3-5df278ed0e82.
+[2025-04-26T02:33:27.755Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Authenticated user c0d9d488-3fee-4dda-98f3-5df278ed0e82 session ready.
+[2025-04-26T02:33:27.755Z] [Socket EAbtT2NJ0AA2eZIVAAAT] Registering core event handlers. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82
+[2025-04-26T02:33:27.756Z] [Socket EAbtT2NJ0AA2eZIVAAAT] Core event handlers registered.
+[2025-04-26T02:43:55.775Z] [Socket.IO EAbtT2NJ0AA2eZIVAAAT] Client disconnected. Reason: transport close. UserID: c0d9d488-3fee-4dda-98f3-5df278ed0e82. ActiveConvID: N/A
+[2025-04-26T09:58:03.734Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T09:58:03.736Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T09:58:03.736Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T09:58:03.736Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T09:58:03.737Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T09:58:14.958Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T09:58:14.960Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T09:58:15.750Z] [Server Start] Initializing loaders...
+[2025-04-26T09:58:15.752Z] [Loader] Starting application loading process...
+[2025-04-26T09:58:15.755Z] [Loader DB] Attempting database connection...
+[2025-04-26T09:58:15.756Z] [Database] Attempting MongoDB connection...
+[2025-04-26T09:58:16.696Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T09:58:16.696Z] [Loader DB] Database connection successful.
+[2025-04-26T09:58:16.697Z] [Loader] Database loaded.
+[2025-04-26T09:58:16.697Z] [History Service] Initialized.
+[2025-04-26T09:58:16.697Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T09:58:16.698Z] [Loader] Services initialized.
+[2025-04-26T09:58:16.705Z] [Express] Mounted API routes at /api
+[2025-04-26T09:58:16.705Z] [Express] Registered Not Found handler.
+[2025-04-26T09:58:16.706Z] [Express] Registered Global Error handler.
+[2025-04-26T09:58:16.706Z] [Express] Express app configured.
+[2025-04-26T09:58:16.707Z] [Loader] Express loaded.
+[2025-04-26T09:58:16.708Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T09:58:16.714Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T09:58:16.715Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T09:58:16.715Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T09:58:16.715Z] [Loader] Socket.IO loaded.
+[2025-04-26T09:58:16.715Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T09:58:16.716Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T09:58:16.766Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T09:58:16.766Z] [Loader] Jobs scheduled.
+[2025-04-26T09:58:16.767Z] [Loader] Performing initial log analysis...
+[2025-04-26T09:58:16.768Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T09:58:16.779Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-26T09:58:16.780Z] [Loader] Initial log analysis completed.
+[2025-04-26T09:58:16.780Z] [Loader] All loaders completed successfully.
+[2025-04-26T09:58:16.784Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T09:58:16.785Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T09:58:16.785Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T09:58:16.786Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T09:58:56.314Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T09:59:26.926Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 30612ms
+[2025-04-26T10:30:00.630Z] [Cron] Running scheduled log analysis...
+[2025-04-26T10:30:00.631Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T10:30:00.645Z] [LogAnalysis Service] Analysis completed successfully. Requests: 1, Errors: 0
+[2025-04-26T10:30:00.649Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-26T11:30:00.616Z] [Cron] Running scheduled log analysis...
+[2025-04-26T11:30:00.618Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T11:30:00.628Z] [LogAnalysis Service] Analysis completed successfully. Requests: 1, Errors: 0
+[2025-04-26T11:30:00.630Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-26T13:46:37.890Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T13:46:37.893Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T13:46:37.893Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T13:46:37.893Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T13:46:37.893Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T13:46:48.754Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T13:46:48.755Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T13:46:49.404Z] [Server Start] Initializing loaders...
+[2025-04-26T13:46:49.404Z] [Loader] Starting application loading process...
+[2025-04-26T13:46:49.405Z] [Loader DB] Attempting database connection...
+[2025-04-26T13:46:49.405Z] [Database] Attempting MongoDB connection...
+[2025-04-26T13:46:50.220Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T13:46:50.220Z] [Loader DB] Database connection successful.
+[2025-04-26T13:46:50.220Z] [Loader] Database loaded.
+[2025-04-26T13:46:50.221Z] [History Service] Initialized.
+[2025-04-26T13:46:50.221Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T13:46:50.222Z] [Loader] Services initialized.
+[2025-04-26T13:46:50.230Z] [Express] Mounted API routes at /api
+[2025-04-26T13:46:50.230Z] [Express] Registered Not Found handler.
+[2025-04-26T13:46:50.231Z] [Express] Registered Global Error handler.
+[2025-04-26T13:46:50.231Z] [Express] Express app configured.
+[2025-04-26T13:46:50.232Z] [Loader] Express loaded.
+[2025-04-26T13:46:50.233Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T13:46:50.238Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T13:46:50.238Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T13:46:50.238Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T13:46:50.239Z] [Loader] Socket.IO loaded.
+[2025-04-26T13:46:50.239Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T13:46:50.239Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T13:46:50.320Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T13:46:50.321Z] [Loader] Jobs scheduled.
+[2025-04-26T13:46:50.323Z] [Loader] Performing initial log analysis...
+[2025-04-26T13:46:50.328Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T13:46:50.368Z] [LogAnalysis Service] Analysis completed successfully. Requests: 1, Errors: 0
+[2025-04-26T13:46:50.368Z] [Loader] Initial log analysis completed.
+[2025-04-26T13:46:50.370Z] [Loader] All loaders completed successfully.
+[2025-04-26T13:46:50.377Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T13:46:50.378Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T13:46:50.381Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T13:46:50.382Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T13:47:15.181Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T13:48:14.358Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 59178ms
+[2025-04-26T14:11:26.190Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T14:11:26.191Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T14:11:26.192Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T14:11:26.193Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T14:11:26.193Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T14:11:32.569Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T14:11:32.570Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T14:11:33.115Z] [Server Start] Initializing loaders...
+[2025-04-26T14:11:33.116Z] [Loader] Starting application loading process...
+[2025-04-26T14:11:33.117Z] [Loader DB] Attempting database connection...
+[2025-04-26T14:11:33.117Z] [Database] Attempting MongoDB connection...
+[2025-04-26T14:11:33.888Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T14:11:33.888Z] [Loader DB] Database connection successful.
+[2025-04-26T14:11:33.889Z] [Loader] Database loaded.
+[2025-04-26T14:11:33.889Z] [History Service] Initialized.
+[2025-04-26T14:11:33.889Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T14:11:33.890Z] [Loader] Services initialized.
+[2025-04-26T14:11:33.895Z] [Express] Mounted API routes at /api
+[2025-04-26T14:11:33.896Z] [Express] Registered Not Found handler.
+[2025-04-26T14:11:33.896Z] [Express] Registered Global Error handler.
+[2025-04-26T14:11:33.896Z] [Express] Express app configured.
+[2025-04-26T14:11:33.898Z] [Loader] Express loaded.
+[2025-04-26T14:11:33.898Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T14:11:33.903Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T14:11:33.903Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T14:11:33.904Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T14:11:33.904Z] [Loader] Socket.IO loaded.
+[2025-04-26T14:11:33.904Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T14:11:33.907Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T14:11:33.941Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T14:11:33.941Z] [Loader] Jobs scheduled.
+[2025-04-26T14:11:33.942Z] [Loader] Performing initial log analysis...
+[2025-04-26T14:11:33.943Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T14:11:33.961Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-26T14:11:33.962Z] [Loader] Initial log analysis completed.
+[2025-04-26T14:11:33.962Z] [Loader] All loaders completed successfully.
+[2025-04-26T14:11:33.966Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T14:11:33.966Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T14:11:33.966Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T14:11:33.966Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T14:12:47.489Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T14:12:47.490Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T14:12:47.491Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T14:12:47.491Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T14:12:47.491Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T14:12:55.209Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T14:12:55.210Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T14:12:55.895Z] [Server Start] Initializing loaders...
+[2025-04-26T14:12:55.896Z] [Loader] Starting application loading process...
+[2025-04-26T14:12:55.897Z] [Loader DB] Attempting database connection...
+[2025-04-26T14:12:55.898Z] [Database] Attempting MongoDB connection...
+[2025-04-26T14:12:56.727Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T14:12:56.727Z] [Loader DB] Database connection successful.
+[2025-04-26T14:12:56.728Z] [Loader] Database loaded.
+[2025-04-26T14:12:56.728Z] [History Service] Initialized.
+[2025-04-26T14:12:56.728Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T14:12:56.729Z] [Loader] Services initialized.
+[2025-04-26T14:12:56.736Z] [Express] Mounted API routes at /api
+[2025-04-26T14:12:56.737Z] [Express] Registered Not Found handler.
+[2025-04-26T14:12:56.737Z] [Express] Registered Global Error handler.
+[2025-04-26T14:12:56.737Z] [Express] Express app configured.
+[2025-04-26T14:12:56.739Z] [Loader] Express loaded.
+[2025-04-26T14:12:56.740Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T14:12:56.745Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T14:12:56.745Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T14:12:56.746Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T14:12:56.746Z] [Loader] Socket.IO loaded.
+[2025-04-26T14:12:56.746Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T14:12:56.747Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T14:12:56.791Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T14:12:56.791Z] [Loader] Jobs scheduled.
+[2025-04-26T14:12:56.791Z] [Loader] Performing initial log analysis...
+[2025-04-26T14:12:56.792Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T14:12:56.814Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-26T14:12:56.815Z] [Loader] Initial log analysis completed.
+[2025-04-26T14:12:56.822Z] [Loader] All loaders completed successfully.
+[2025-04-26T14:12:56.826Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T14:12:56.826Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T14:12:56.826Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T14:12:56.826Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T14:13:21.500Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T14:14:49.926Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 88427ms
+[2025-04-26T14:22:35.361Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T14:22:54.430Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 19069ms
+[2025-04-26T14:30:00.747Z] [Cron] Running scheduled log analysis...
+[2025-04-26T14:30:00.749Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T14:30:00.777Z] [LogAnalysis Service] Analysis completed successfully. Requests: 4, Errors: 0
+[2025-04-26T14:30:00.781Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-26T14:30:59.351Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T14:31:40.930Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 41579ms
+[2025-04-26T14:56:38.359Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T14:57:12.856Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 34497ms
+[2025-04-26T15:08:06.179Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:08:34.928Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 28749ms
+[2025-04-26T15:13:19.225Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:13:52.006Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 32781ms
+[2025-04-26T15:16:49.884Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:18:55.752Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 125868ms
+[2025-04-26T15:22:30.481Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T15:22:30.482Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T15:22:30.483Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T15:22:30.483Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:22:30.483Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:22:40.526Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T15:22:40.528Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T15:22:41.778Z] [Server Start] Initializing loaders...
+[2025-04-26T15:22:41.780Z] [Loader] Starting application loading process...
+[2025-04-26T15:22:41.781Z] [Loader DB] Attempting database connection...
+[2025-04-26T15:22:41.781Z] [Database] Attempting MongoDB connection...
+[2025-04-26T15:22:43.163Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T15:22:43.164Z] [Loader DB] Database connection successful.
+[2025-04-26T15:22:43.164Z] [Loader] Database loaded.
+[2025-04-26T15:22:43.165Z] [History Service] Initialized.
+[2025-04-26T15:22:43.165Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:22:43.165Z] [Loader] Services initialized.
+[2025-04-26T15:22:43.172Z] [Express] Mounted API routes at /api
+[2025-04-26T15:22:43.173Z] [Express] Registered Not Found handler.
+[2025-04-26T15:22:43.173Z] [Express] Registered Global Error handler.
+[2025-04-26T15:22:43.173Z] [Express] Express app configured.
+[2025-04-26T15:22:43.174Z] [Loader] Express loaded.
+[2025-04-26T15:22:43.175Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T15:22:43.180Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T15:22:43.180Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T15:22:43.181Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T15:22:43.181Z] [Loader] Socket.IO loaded.
+[2025-04-26T15:22:43.181Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T15:22:43.181Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T15:22:43.300Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T15:22:43.301Z] [Loader] Jobs scheduled.
+[2025-04-26T15:22:43.302Z] [Loader] Performing initial log analysis...
+[2025-04-26T15:22:43.304Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T15:22:43.422Z] [LogAnalysis Service] Analysis completed successfully. Requests: 9, Errors: 0
+[2025-04-26T15:22:43.425Z] [Loader] Initial log analysis completed.
+[2025-04-26T15:22:43.426Z] [Loader] All loaders completed successfully.
+[2025-04-26T15:22:43.433Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T15:22:43.435Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T15:22:43.435Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:22:43.436Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T15:22:48.936Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T15:22:48.937Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T15:22:48.938Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T15:22:48.938Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:22:48.938Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:22:56.909Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T15:22:56.909Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T15:22:57.390Z] [Server Start] Initializing loaders...
+[2025-04-26T15:22:57.390Z] [Loader] Starting application loading process...
+[2025-04-26T15:22:57.391Z] [Loader DB] Attempting database connection...
+[2025-04-26T15:22:57.391Z] [Database] Attempting MongoDB connection...
+[2025-04-26T15:22:58.105Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T15:22:58.106Z] [Loader DB] Database connection successful.
+[2025-04-26T15:22:58.106Z] [Loader] Database loaded.
+[2025-04-26T15:22:58.106Z] [History Service] Initialized.
+[2025-04-26T15:22:58.107Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:22:58.107Z] [Loader] Services initialized.
+[2025-04-26T15:22:58.113Z] [Express] Mounted API routes at /api
+[2025-04-26T15:22:58.114Z] [Express] Registered Not Found handler.
+[2025-04-26T15:22:58.114Z] [Express] Registered Global Error handler.
+[2025-04-26T15:22:58.114Z] [Express] Express app configured.
+[2025-04-26T15:22:58.115Z] [Loader] Express loaded.
+[2025-04-26T15:22:58.116Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T15:22:58.120Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T15:22:58.121Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T15:22:58.121Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T15:22:58.121Z] [Loader] Socket.IO loaded.
+[2025-04-26T15:22:58.121Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T15:22:58.122Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T15:22:58.156Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T15:22:58.157Z] [Loader] Jobs scheduled.
+[2025-04-26T15:22:58.157Z] [Loader] Performing initial log analysis...
+[2025-04-26T15:22:58.158Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T15:22:58.191Z] [LogAnalysis Service] Analysis completed successfully. Requests: 9, Errors: 0
+[2025-04-26T15:22:58.191Z] [Loader] Initial log analysis completed.
+[2025-04-26T15:22:58.192Z] [Loader] All loaders completed successfully.
+[2025-04-26T15:22:58.229Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T15:22:58.230Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T15:22:58.230Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:22:58.231Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T15:23:02.473Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:24:22.633Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 80161ms
+[2025-04-26T15:27:30.790Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:27:59.747Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 28957ms
+[2025-04-26T15:30:00.165Z] [Cron] Running scheduled log analysis...
+[2025-04-26T15:30:00.167Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T15:30:00.296Z] [LogAnalysis Service] Analysis completed successfully. Requests: 10, Errors: 0
+[2025-04-26T15:30:00.304Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-26T15:34:25.643Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:35:21.741Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 56098ms
+[2025-04-26T15:37:30.978Z] [Server Config] Loaded PORT: 3001
+[2025-04-26T15:37:30.982Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-26T15:37:30.983Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-26T15:37:30.985Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:37:30.988Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:37:49.123Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-26T15:37:49.124Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-26T15:37:49.549Z] [Server Start] Initializing loaders...
+[2025-04-26T15:37:49.550Z] [Loader] Starting application loading process...
+[2025-04-26T15:37:49.551Z] [Loader DB] Attempting database connection...
+[2025-04-26T15:37:49.552Z] [Database] Attempting MongoDB connection...
+[2025-04-26T15:37:50.349Z] [Database] MongoDB Connected Successfully.
+[2025-04-26T15:37:50.349Z] [Loader DB] Database connection successful.
+[2025-04-26T15:37:50.349Z] [Loader] Database loaded.
+[2025-04-26T15:37:50.350Z] [History Service] Initialized.
+[2025-04-26T15:37:50.350Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-26T15:37:50.351Z] [Loader] Services initialized.
+[2025-04-26T15:37:50.358Z] [Express] Mounted API routes at /api
+[2025-04-26T15:37:50.358Z] [Express] Registered Not Found handler.
+[2025-04-26T15:37:50.358Z] [Express] Registered Global Error handler.
+[2025-04-26T15:37:50.359Z] [Express] Express app configured.
+[2025-04-26T15:37:50.360Z] [Loader] Express loaded.
+[2025-04-26T15:37:50.361Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-26T15:37:50.365Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-26T15:37:50.366Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-26T15:37:50.366Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-26T15:37:50.366Z] [Loader] Socket.IO loaded.
+[2025-04-26T15:37:50.366Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-26T15:37:50.367Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-26T15:37:50.411Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-26T15:37:50.412Z] [Loader] Jobs scheduled.
+[2025-04-26T15:37:50.412Z] [Loader] Performing initial log analysis...
+[2025-04-26T15:37:50.414Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-26T15:37:50.460Z] [LogAnalysis Service] Analysis completed successfully. Requests: 11, Errors: 0
+[2025-04-26T15:37:50.461Z] [Loader] Initial log analysis completed.
+[2025-04-26T15:37:50.462Z] [Loader] All loaders completed successfully.
+[2025-04-26T15:37:50.468Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-26T15:37:50.469Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-26T15:37:50.470Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-26T15:37:50.473Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-26T15:38:16.011Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:38:55.967Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 39956ms
+[2025-04-26T15:42:46.215Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:43:32.034Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 45820ms
+[2025-04-26T15:47:54.623Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:48:49.113Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 54490ms
+[2025-04-26T15:51:41.653Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-26T15:52:09.954Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 28301ms
+[2025-04-27T03:43:12.483Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T03:43:12.486Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T03:43:12.486Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T03:43:12.487Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T03:43:12.488Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T03:43:22.860Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T03:43:22.861Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T03:43:23.693Z] [Server Start] Initializing loaders...
+[2025-04-27T03:43:23.695Z] [Loader] Starting application loading process...
+[2025-04-27T03:43:23.700Z] [Loader DB] Attempting database connection...
+[2025-04-27T03:43:23.701Z] [Database] Attempting MongoDB connection...
+[2025-04-27T03:43:24.524Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T03:43:24.524Z] [Loader DB] Database connection successful.
+[2025-04-27T03:43:24.525Z] [Loader] Database loaded.
+[2025-04-27T03:43:24.525Z] [History Service] Initialized.
+[2025-04-27T03:43:24.525Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T03:43:24.526Z] [Loader] Services initialized.
+[2025-04-27T03:43:24.532Z] [Express] Mounted API routes at /api
+[2025-04-27T03:43:24.533Z] [Express] Registered Not Found handler.
+[2025-04-27T03:43:24.533Z] [Express] Registered Global Error handler.
+[2025-04-27T03:43:24.533Z] [Express] Express app configured.
+[2025-04-27T03:43:24.534Z] [Loader] Express loaded.
+[2025-04-27T03:43:24.535Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T03:43:24.540Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T03:43:24.540Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T03:43:24.540Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T03:43:24.540Z] [Loader] Socket.IO loaded.
+[2025-04-27T03:43:24.541Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T03:43:24.541Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T03:43:24.575Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T03:43:24.576Z] [Loader] Jobs scheduled.
+[2025-04-27T03:43:24.576Z] [Loader] Performing initial log analysis...
+[2025-04-27T03:43:24.577Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T03:43:24.616Z] [LogAnalysis Service] Analysis completed successfully. Requests: 15, Errors: 0
+[2025-04-27T03:43:24.617Z] [Loader] Initial log analysis completed.
+[2025-04-27T03:43:24.617Z] [Loader] All loaders completed successfully.
+[2025-04-27T03:43:24.621Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T03:43:24.622Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T03:43:24.622Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T03:43:24.622Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T03:43:34.018Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T03:45:23.491Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 109473ms
+[2025-04-27T03:46:57.208Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T03:47:49.258Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 52051ms
+[2025-04-27T03:48:53.059Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T03:49:30.890Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 37831ms
+[2025-04-27T03:56:48.061Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T03:57:19.768Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 31707ms
+[2025-04-27T03:59:14.512Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T03:59:52.418Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 37906ms
+[2025-04-27T04:05:52.536Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:06:29.975Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 37439ms
+[2025-04-27T04:09:15.638Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:09:38.335Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 22697ms
+[2025-04-27T04:12:17.374Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:12:55.974Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 38600ms
+[2025-04-27T04:24:50.929Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:25:24.020Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 33092ms
+[2025-04-27T04:29:17.370Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:29:52.508Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 35138ms
+[2025-04-27T04:30:00.403Z] [Cron] Running scheduled log analysis...
+[2025-04-27T04:30:00.404Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T04:30:00.463Z] [LogAnalysis Service] Analysis completed successfully. Requests: 25, Errors: 0
+[2025-04-27T04:30:00.469Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-27T04:32:02.123Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:32:40.817Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 38694ms
+[2025-04-27T04:40:03.846Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:40:43.761Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 39915ms
+[2025-04-27T04:45:47.151Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T04:47:56.281Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 129130ms
+[2025-04-27T06:39:51.142Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T06:39:51.144Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T06:39:51.145Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T06:39:51.145Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T06:39:51.145Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T06:40:05.552Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T06:40:05.553Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T06:40:06.560Z] [Server Start] Initializing loaders...
+[2025-04-27T06:40:06.603Z] [Loader] Starting application loading process...
+[2025-04-27T06:40:06.615Z] [Loader DB] Attempting database connection...
+[2025-04-27T06:40:06.616Z] [Database] Attempting MongoDB connection...
+[2025-04-27T06:40:08.282Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T06:40:08.282Z] [Loader DB] Database connection successful.
+[2025-04-27T06:40:08.283Z] [Loader] Database loaded.
+[2025-04-27T06:40:08.284Z] [History Service] Initialized.
+[2025-04-27T06:40:08.285Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T06:40:08.286Z] [Loader] Services initialized.
+[2025-04-27T06:40:08.297Z] [Express] Mounted API routes at /api
+[2025-04-27T06:40:08.298Z] [Express] Registered Not Found handler.
+[2025-04-27T06:40:08.298Z] [Express] Registered Global Error handler.
+[2025-04-27T06:40:08.299Z] [Express] Express app configured.
+[2025-04-27T06:40:08.301Z] [Loader] Express loaded.
+[2025-04-27T06:40:08.301Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T06:40:08.327Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T06:40:08.328Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T06:40:08.329Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T06:40:08.329Z] [Loader] Socket.IO loaded.
+[2025-04-27T06:40:08.330Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T06:40:08.337Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T06:40:08.646Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T06:40:08.647Z] [Loader] Jobs scheduled.
+[2025-04-27T06:40:08.647Z] [Loader] Performing initial log analysis...
+[2025-04-27T06:40:08.652Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T06:40:09.098Z] [LogAnalysis Service] Analysis completed successfully. Requests: 28, Errors: 0
+[2025-04-27T06:40:09.099Z] [Loader] Initial log analysis completed.
+[2025-04-27T06:40:09.099Z] [Loader] All loaders completed successfully.
+[2025-04-27T06:40:09.116Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T06:40:09.119Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T06:40:09.120Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T06:40:09.125Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T06:56:05.715Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T06:57:10.089Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 64374ms
+[2025-04-27T07:01:19.073Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:02:03.040Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 43968ms
+[2025-04-27T07:07:09.833Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:07:45.733Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 35900ms
+[2025-04-27T07:22:54.655Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:23:36.709Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 42054ms
+[2025-04-27T07:27:03.061Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:27:52.716Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 49655ms
+[2025-04-27T07:30:00.277Z] [Cron] Running scheduled log analysis...
+[2025-04-27T07:30:00.278Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T07:30:00.356Z] [LogAnalysis Service] Analysis completed successfully. Requests: 33, Errors: 0
+[2025-04-27T07:30:00.364Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-27T07:35:13.208Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:36:00.457Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 47249ms
+[2025-04-27T07:38:57.929Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:39:36.940Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 39011ms
+[2025-04-27T07:44:39.234Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:45:07.036Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 27802ms
+[2025-04-27T07:46:45.435Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-04-27T07:47:34.336Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 48901ms
+[2025-04-27T07:50:22.214Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T07:50:22.215Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T07:50:22.216Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T07:50:22.216Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T07:50:22.216Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T07:50:28.568Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T07:50:28.569Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T07:50:29.013Z] [Server Start] Initializing loaders...
+[2025-04-27T07:50:29.013Z] [Loader] Starting application loading process...
+[2025-04-27T07:50:29.014Z] [Loader DB] Attempting database connection...
+[2025-04-27T07:50:29.014Z] [Database] Attempting MongoDB connection...
+[2025-04-27T07:50:29.821Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T07:50:29.822Z] [Loader DB] Database connection successful.
+[2025-04-27T07:50:29.822Z] [Loader] Database loaded.
+[2025-04-27T07:50:29.822Z] [History Service] Initialized.
+[2025-04-27T07:50:29.823Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T07:50:29.823Z] [Loader] Services initialized.
+[2025-04-27T07:50:29.828Z] [Express] Mounted API routes at /api
+[2025-04-27T07:50:29.828Z] [Express] Registered Not Found handler.
+[2025-04-27T07:50:29.829Z] [Express] Registered Global Error handler.
+[2025-04-27T07:50:29.829Z] [Express] Express app configured.
+[2025-04-27T07:50:29.830Z] [Loader] Express loaded.
+[2025-04-27T07:50:29.831Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T07:50:29.835Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T07:50:29.836Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T07:50:29.836Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T07:50:29.836Z] [Loader] Socket.IO loaded.
+[2025-04-27T07:50:29.836Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T07:50:29.837Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T07:50:29.871Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T07:50:29.871Z] [Loader] Jobs scheduled.
+[2025-04-27T07:50:29.871Z] [Loader] Performing initial log analysis...
+[2025-04-27T07:50:29.873Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T07:50:29.956Z] [LogAnalysis Service] Analysis completed successfully. Requests: 37, Errors: 0
+[2025-04-27T07:50:29.957Z] [Loader] Initial log analysis completed.
+[2025-04-27T07:50:29.958Z] [Loader] All loaders completed successfully.
+[2025-04-27T07:50:29.962Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T07:50:29.963Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T07:50:29.963Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T07:50:29.963Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T07:57:54.529Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T07:57:54.531Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T07:57:54.531Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T07:57:54.534Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T07:57:54.535Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T07:57:54.542Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 13ms
+[2025-04-27T07:57:54.552Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T07:57:54.554Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T07:57:54.555Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T07:57:54.558Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T07:57:54.559Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T07:57:54.560Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 8ms
+[2025-04-27T07:57:54.591Z] [Socket Auth MW] Attempting auth for socket 7IWqCkST4Ejk6rd_AAAC. Token provided: false
+[2025-04-27T07:57:54.592Z] [Socket Auth MW] No token provided for socket 7IWqCkST4Ejk6rd_AAAC. Treating as anonymous.
+[2025-04-27T07:57:54.594Z] [Socket.IO 7IWqCkST4Ejk6rd_AAAC] Client connected. Token present: false
+[2025-04-27T07:57:54.594Z] [Socket.IO 7IWqCkST4Ejk6rd_AAAC] Anonymous user connected.
+[2025-04-27T07:57:54.596Z] [Socket 7IWqCkST4Ejk6rd_AAAC] Registering core event handlers. UserID: Anonymous
+[2025-04-27T07:57:54.596Z] [Socket 7IWqCkST4Ejk6rd_AAAC] Core event handlers registered.
+[2025-04-27T08:04:12.637Z] [Socket.IO 7IWqCkST4Ejk6rd_AAAC] Client disconnected. Reason: transport close. UserID: Anonymous. ActiveConvID: N/A
+[2025-04-27T08:04:15.142Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:04:15.143Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:04:15.143Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:04:15.152Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-27T08:04:15.153Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T08:04:15.153Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:04:15.155Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 13ms
+[2025-04-27T08:04:15.161Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:04:15.162Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:04:15.162Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:04:15.164Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-27T08:04:15.165Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T08:04:15.165Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:04:15.167Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 6ms
+[2025-04-27T08:04:15.198Z] [Socket Auth MW] Attempting auth for socket hhJbN0A2pWjcEH5PAAAF. Token provided: false
+[2025-04-27T08:04:15.198Z] [Socket Auth MW] No token provided for socket hhJbN0A2pWjcEH5PAAAF. Treating as anonymous.
+[2025-04-27T08:04:15.199Z] [Socket.IO hhJbN0A2pWjcEH5PAAAF] Client connected. Token present: false
+[2025-04-27T08:04:15.199Z] [Socket.IO hhJbN0A2pWjcEH5PAAAF] Anonymous user connected.
+[2025-04-27T08:04:15.200Z] [Socket hhJbN0A2pWjcEH5PAAAF] Registering core event handlers. UserID: Anonymous
+[2025-04-27T08:04:15.200Z] [Socket hhJbN0A2pWjcEH5PAAAF] Core event handlers registered.
+[2025-04-27T08:05:02.506Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:02.507Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:02.507Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:02.510Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-27T08:05:02.511Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T08:05:02.511Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:02.512Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 6ms
+[2025-04-27T08:05:03.443Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:03.444Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:03.444Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:03.447Z] [LogAnalysis Service] WARN: No request data found in logs.
+[2025-04-27T08:05:03.447Z] [LogAnalysis Service] Analysis completed successfully. Requests: 0, Errors: 0
+[2025-04-27T08:05:03.448Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:03.450Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 7ms
+[2025-04-27T08:05:09.882Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:11.809Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:11.810Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:11.810Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:11.820Z] [LogAnalysis Service] Analysis completed successfully. Requests: 5, Errors: 0
+[2025-04-27T08:05:11.821Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:11.822Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 13ms
+[2025-04-27T08:05:19.322Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:19.323Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:19.323Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:22.161Z] [LogAnalysis Service] Analysis completed successfully. Requests: 5, Errors: 0
+[2025-04-27T08:05:22.162Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:22.166Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 2844ms
+[2025-04-27T08:05:29.210Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:29.211Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:29.211Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:29.420Z] [LogAnalysis Service] Analysis completed successfully. Requests: 5, Errors: 0
+[2025-04-27T08:05:29.421Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:29.425Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 215ms
+[2025-04-27T08:05:35.143Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:35.145Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:35.146Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:35.159Z] [LogAnalysis Service] Analysis completed successfully. Requests: 7, Errors: 0
+[2025-04-27T08:05:35.160Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:35.162Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 19ms
+[2025-04-27T08:05:54.332Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:05:54.333Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:05:54.333Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:05:54.705Z] [LogAnalysis Service] Analysis completed successfully. Requests: 13, Errors: 0
+[2025-04-27T08:05:54.706Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:05:54.711Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 379ms
+[2025-04-27T08:06:13.251Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:06:13.252Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:06:13.253Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:06:13.279Z] [LogAnalysis Service] Analysis completed successfully. Requests: 21, Errors: 0
+[2025-04-27T08:06:13.279Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:06:13.282Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 31ms
+[2025-04-27T08:06:37.022Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:06:37.022Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:06:37.023Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:06:37.061Z] [LogAnalysis Service] Analysis completed successfully. Requests: 31, Errors: 0
+[2025-04-27T08:06:37.062Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:06:37.065Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 43ms
+[2025-04-27T08:06:57.707Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:06:57.709Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:06:57.715Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:06:57.887Z] [LogAnalysis Service] Analysis completed successfully. Requests: 37, Errors: 0
+[2025-04-27T08:06:57.887Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:06:57.893Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 186ms
+[2025-04-27T08:07:43.773Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:07:43.774Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:07:43.775Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:07:45.225Z] [LogAnalysis Service] Analysis completed successfully. Requests: 54, Errors: 0
+[2025-04-27T08:07:45.226Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:07:45.229Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 1456ms
+[2025-04-27T08:08:13.059Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:08:13.061Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:08:13.062Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:08:13.285Z] [LogAnalysis Service] Analysis completed successfully. Requests: 65, Errors: 0
+[2025-04-27T08:08:13.286Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:08:13.293Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 234ms
+[2025-04-27T08:16:58.219Z] [HTTP Request] --> GET /api/v1/logs/analysis/latest from ::1 (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0)
+[2025-04-27T08:16:58.220Z] [LogAnalysis Controller] Request received for latest analysis results (will re-analyze).
+[2025-04-27T08:16:58.220Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:16:58.364Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T08:16:58.364Z] [LogAnalysis Controller] Log analysis performed successfully via API request.
+[2025-04-27T08:16:58.371Z] [HTTP Response] <-- GET /api/v1/logs/analysis/latest 200 152ms
+[2025-04-27T08:21:06.734Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T08:21:06.736Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T08:21:06.738Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T08:21:06.739Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T08:21:06.739Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T08:21:15.595Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T08:21:15.595Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T08:21:16.065Z] [Server Start] Initializing loaders...
+[2025-04-27T08:21:16.068Z] [Loader] Starting application loading process...
+[2025-04-27T08:21:16.069Z] [Loader DB] Attempting database connection...
+[2025-04-27T08:21:16.071Z] [Database] Attempting MongoDB connection...
+[2025-04-27T08:21:16.826Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T08:21:16.827Z] [Loader DB] Database connection successful.
+[2025-04-27T08:21:16.827Z] [Loader] Database loaded.
+[2025-04-27T08:21:16.828Z] [History Service] Initialized.
+[2025-04-27T08:21:16.828Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T08:21:16.829Z] [Loader] Services initialized.
+[2025-04-27T08:21:16.837Z] [Express] Mounted API routes at /api
+[2025-04-27T08:21:16.837Z] [Express] Registered Not Found handler.
+[2025-04-27T08:21:16.837Z] [Express] Registered Global Error handler.
+[2025-04-27T08:21:16.838Z] [Express] Express app configured.
+[2025-04-27T08:21:16.839Z] [Loader] Express loaded.
+[2025-04-27T08:21:16.839Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T08:21:16.846Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T08:21:16.846Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T08:21:16.846Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T08:21:16.847Z] [Loader] Socket.IO loaded.
+[2025-04-27T08:21:16.847Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T08:21:16.847Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T08:21:16.892Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T08:21:16.892Z] [Loader] Jobs scheduled.
+[2025-04-27T08:21:16.909Z] [Loader] Performing initial log analysis...
+[2025-04-27T08:21:16.921Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:21:17.116Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T08:21:17.117Z] [Loader] Initial log analysis completed.
+[2025-04-27T08:21:17.119Z] [Loader] All loaders completed successfully.
+[2025-04-27T08:21:17.125Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T08:21:17.126Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T08:21:17.127Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T08:21:17.128Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T08:21:17.953Z] [Socket Auth MW] Attempting auth for socket DeIV6YzrGKTylR7HAAAB. Token provided: false
+[2025-04-27T08:21:17.954Z] [Socket Auth MW] No token provided for socket DeIV6YzrGKTylR7HAAAB. Treating as anonymous.
+[2025-04-27T08:21:17.956Z] [Socket.IO DeIV6YzrGKTylR7HAAAB] Client connected. Token present: false
+[2025-04-27T08:21:17.956Z] [Socket.IO DeIV6YzrGKTylR7HAAAB] Anonymous user connected.
+[2025-04-27T08:21:17.958Z] [Socket DeIV6YzrGKTylR7HAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-27T08:21:17.958Z] [Socket DeIV6YzrGKTylR7HAAAB] Core event handlers registered.
+[2025-04-27T08:29:15.374Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T08:29:15.375Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T08:29:15.376Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T08:29:15.376Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T08:29:15.376Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T08:29:23.289Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T08:29:23.290Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T08:29:23.907Z] [Server Start] Initializing loaders...
+[2025-04-27T08:29:23.908Z] [Loader] Starting application loading process...
+[2025-04-27T08:29:23.908Z] [Loader DB] Attempting database connection...
+[2025-04-27T08:29:23.909Z] [Database] Attempting MongoDB connection...
+[2025-04-27T08:29:24.737Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T08:29:24.739Z] [Loader DB] Database connection successful.
+[2025-04-27T08:29:24.739Z] [Loader] Database loaded.
+[2025-04-27T08:29:24.739Z] [History Service] Initialized.
+[2025-04-27T08:29:24.740Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T08:29:24.740Z] [Loader] Services initialized.
+[2025-04-27T08:29:24.751Z] [Express] Mounted API routes at /api
+[2025-04-27T08:29:24.751Z] [Express] Registered Not Found handler.
+[2025-04-27T08:29:24.752Z] [Express] Registered Global Error handler.
+[2025-04-27T08:29:24.752Z] [Express] Express app configured.
+[2025-04-27T08:29:24.753Z] [Loader] Express loaded.
+[2025-04-27T08:29:24.754Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T08:29:24.760Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T08:29:24.760Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T08:29:24.760Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T08:29:24.761Z] [Loader] Socket.IO loaded.
+[2025-04-27T08:29:24.761Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T08:29:24.761Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T08:29:24.909Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T08:29:24.909Z] [Loader] Jobs scheduled.
+[2025-04-27T08:29:24.911Z] [Loader] Performing initial log analysis...
+[2025-04-27T08:29:24.917Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:29:25.226Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T08:29:25.226Z] [Loader] Initial log analysis completed.
+[2025-04-27T08:29:25.226Z] [Loader] All loaders completed successfully.
+[2025-04-27T08:29:25.232Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T08:29:25.232Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T08:29:25.233Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T08:29:25.234Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T08:29:29.041Z] [Socket Auth MW] Attempting auth for socket ULt2NhBB8Pzv8onpAAAB. Token provided: false
+[2025-04-27T08:29:29.041Z] [Socket Auth MW] No token provided for socket ULt2NhBB8Pzv8onpAAAB. Treating as anonymous.
+[2025-04-27T08:29:29.044Z] [Socket.IO ULt2NhBB8Pzv8onpAAAB] Client connected. Token present: false
+[2025-04-27T08:29:29.044Z] [Socket.IO ULt2NhBB8Pzv8onpAAAB] Anonymous user connected.
+[2025-04-27T08:29:29.046Z] [Socket ULt2NhBB8Pzv8onpAAAB] Registering core event handlers. UserID: Anonymous
+[2025-04-27T08:29:29.047Z] [Socket ULt2NhBB8Pzv8onpAAAB] Core event handlers registered.
+[2025-04-27T08:30:00.216Z] [Cron] Running scheduled log analysis...
+[2025-04-27T08:30:00.218Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T08:30:00.539Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T08:30:00.558Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-27T11:19:02.025Z] [Server Config] Loaded PORT: 3001
+[2025-04-27T11:19:02.027Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-27T11:19:02.027Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-27T11:19:02.028Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T11:19:02.028Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T11:19:08.474Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-27T11:19:08.474Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-27T11:19:08.861Z] [Server Start] Initializing loaders...
+[2025-04-27T11:19:08.862Z] [Loader] Starting application loading process...
+[2025-04-27T11:19:08.862Z] [Loader DB] Attempting database connection...
+[2025-04-27T11:19:08.862Z] [Database] Attempting MongoDB connection...
+[2025-04-27T11:19:09.708Z] [Database] MongoDB Connected Successfully.
+[2025-04-27T11:19:09.708Z] [Loader DB] Database connection successful.
+[2025-04-27T11:19:09.708Z] [Loader] Database loaded.
+[2025-04-27T11:19:09.709Z] [History Service] Initialized.
+[2025-04-27T11:19:09.709Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-27T11:19:09.710Z] [Loader] Services initialized.
+[2025-04-27T11:19:09.715Z] [Express] Mounted API routes at /api
+[2025-04-27T11:19:09.715Z] [Express] Registered Not Found handler.
+[2025-04-27T11:19:09.715Z] [Express] Registered Global Error handler.
+[2025-04-27T11:19:09.716Z] [Express] Express app configured.
+[2025-04-27T11:19:09.717Z] [Loader] Express loaded.
+[2025-04-27T11:19:09.718Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-27T11:19:09.722Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-27T11:19:09.723Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-27T11:19:09.723Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-27T11:19:09.723Z] [Loader] Socket.IO loaded.
+[2025-04-27T11:19:09.723Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-27T11:19:09.724Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-27T11:19:09.757Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-27T11:19:09.757Z] [Loader] Jobs scheduled.
+[2025-04-27T11:19:09.758Z] [Loader] Performing initial log analysis...
+[2025-04-27T11:19:09.759Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T11:19:09.874Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T11:19:09.874Z] [Loader] Initial log analysis completed.
+[2025-04-27T11:19:09.875Z] [Loader] All loaders completed successfully.
+[2025-04-27T11:19:09.880Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-27T11:19:09.880Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-27T11:19:09.881Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-27T11:19:09.881Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-27T11:30:00.242Z] [Cron] Running scheduled log analysis...
+[2025-04-27T11:30:00.243Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-27T11:30:00.606Z] [LogAnalysis Service] Analysis completed successfully. Requests: 200, Errors: 0
+[2025-04-27T11:30:00.616Z] [Cron] Log analysis finished and results broadcasted.

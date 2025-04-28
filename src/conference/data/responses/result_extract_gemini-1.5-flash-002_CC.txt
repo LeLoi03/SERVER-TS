@@ -1,0 +1,30 @@
+```json
+{
+  "Conference dates": "March 1 - 2, 2025",
+  "Year": "2025",
+  "Location": "Las Vegas, Nevada, United States",
+  "City-State-Province": "Las Vegas, Nevada",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Submission deadline": "November 12, 2024",
+    "Abstract deadline": "November 5, 2024"
+  },
+  "Notification Date": {
+    "Author notification": "December 21, 2024"
+  },
+  "Camera-ready Date": {
+    "Camera-Ready Deadline": "January 24, 2025"
+  },
+  "Artifact Date": {
+    "Artifact Submission Deadline": "January 17, 2025"
+  },
+  "Other Date": {
+    "Author response": "December 11 - 13, 2024"
+  },
+  "Topics": "Compiler Construction, Compilation Techniques, Program Representation, Program Analysis, Program Transformation, Code Generation, Code Optimization, Code Synthesis, Program Verification, Run-time Techniques, Memory Management, Virtual Machines, Dynamic Compilation, Just-in-time Compilation, Programming Tools, Refactoring Editors, Checkers, Verifiers, Compilers, Debuggers, Profilers, Programming Languages, Micro-architectural Support, Secure Environments, Parallel Environments, Distributed Environments, Embedded Environments, Mobile Environments, Novel Language Constructs, Programming Models, Domain-Specific Languages, Deep Learning, Quantum Computing, DNA Computing",
+  "Summary": "The ACM SIGPLAN 2025 International Conference on Compiler Construction (CC 2025) will be held in Las Vegas, Nevada, from March 1-2, 2025. The conference is interested in work on processing programs in the most general sense: analyzing, transforming, or executing input programs that describe how a system operates, including traditional compiler construction as a special case.",
+  "Call for Papers": "# CC 2025: Call for Papers\n\nThe ACM SIGPLAN 2025 International Conference on Compiler Construction (CC 2025) will take place on **March 1-2, 2025, in Las Vegas, Nevada, USA.**\n\nCC 2025 is interested in work on processing programs in the most general sense: analyzing, transforming, or executing input programs that describe how a system operates, including traditional compiler construction as a special case.\n\n## Topics of Interest\n\nOriginal contributions are solicited on the topics of interest, which include, but are not limited to:\n\n*   Compilation and interpretation techniques, including program representation, analysis, and transformation; code generation, optimization, and synthesis; the verification thereof\n*   Run-time techniques, including memory management, virtual machines, and dynamic and just-in-time compilation\n*   Programming tools, including refactoring editors, checkers, verifiers, compilers, debuggers, and profilers\n*   Techniques, ranging from programming languages to micro-architectural support, for specific domains such as secure, parallel, distributed, embedded, or mobile environments\n*   Design and implementation of novel language constructs, programming models, and domain-specific languages\n*   Implications to compiler construction from emerging or non-conventional applications (e.g., deep learning, quantum computing, DNA computing, etc.)\n\n## Call for Tool and Practical Experience Papers\n\nThis year, CC will offer a second category of papers called “Tools and Practical Experience”. Papers in this category must either give a clear account of a tool’s functionality or summarize a practical experience with realistic case studies.\n\n## Submission Guidelines\n\n*   Submission site: [https://cc25.hotcrp.com](https://cc25.hotcrp.com)\n*   All submissions must be made electronically through the conference submission website and include an abstract (100–400 words), author contact information, the full list of authors and their affiliations.\n*   Full paper submissions must be in PDF formatted printable on US letter size paper.\n*   All papers must be prepared in ACM Conference Format using the 2-column acmart format.\n*   Papers should contain a maximum of 10 pages of text (in a typeface no smaller than 10 point) or figures, NOT INCLUDING references. There is no page limit for references.\n*   Appendices are not allowed, but the authors may submit anonymous supplementary material, such as proofs, source code, or data sets; all supplementary material must be in PDF or ZIP format.\n*   Papers may be resubmitted to the submission site multiple times up until the deadline, but the last version submitted before the deadline will be the version reviewed.\n\n## Important Dates\n\n*   **Abstract deadline:** November 5, 2024 (AoE)\n*   **Submission deadline:** November 12, 2024 (AoE)\n*   **Author response:** December 11 - 13, 2024 (AoE)\n*   **Author notification:** December 21, 2024 (AoE)\n*   **Artifact Submission Deadline:** January 17, 2025 (AoE)\n*   **Camera-Ready Deadline:** January 24, 2025 (AoE)\n\n## Organizers\n\n*   **General Chair:** Daniel Kluss - Archeo Futurus / Our Virtue\n*   **Program Co-Chairs:**\n    *   Sara Achour - Stanford\n    *   Jens Palsberg - UCLA\n\nFor additional contact information and details, see [https://conf.researchr.org/home/CC-2025](https://conf.researchr.org/home/CC-2025)."
+}
+```

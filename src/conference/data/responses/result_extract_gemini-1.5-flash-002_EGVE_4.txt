@@ -1,0 +1,28 @@
+```json
+{
+  "Conference dates": "December 3 - 5, 2025",
+  "Year": "2025",
+  "Location": "Blekinge Institute of Technology, Karlskrona, Sweden",
+  "City-State-Province": "Karlskrona",
+  "Country": "Sweden",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Paper: Title and abstract deadline (please also submit a draft of the paper if possible)": "August 15, 2025",
+    "Paper: Full submission deadline": "August 29, 2025",
+    "Posters / Demos submission deadline": "October 3, 2025"
+  },
+  "Notification Date": {
+    "Paper author notification": "October 17, 2025",
+    "Posters / Demos author notification": "October 24, 2025"
+  },
+  "Camera-ready Date": {
+    "Paper camera-ready deadline": "October 27, 2025",
+    "Posters / Demos camera-ready deadline": "November 8, 2025"
+  },
+  "Topics": "Virtual Environments, Augmented Reality, Mixed Reality, Telexistence, 3D User Interfaces, VR/AR/MR systems and toolkits, User studies and evaluation for VR/AR/MR, Telepresence and Teleimmersion, Haptics, audio, and other non-visual modalities, Serious games and edutainment using VR/AR/MR, Presence, cognition, perception, and embodiment in VR/AR/MR, Novel devices (both input and output) for VR/AR/MR, and haptics, Multi-user and distributed VR/AR/MR, Tele-immersion and Telepresence, Immersive projection technologies and other advanced display technologies",
+  "Publisher": "Eurographics Digital Library",
+  "Summary": "ICAT-EGVE 2025, the joint 35th International Conference on Artificial Reality and Telexistence & the 30th Eurographics Symposium on Virtual Environments, will be hosted at Blekinge Institute of Technology in Karlskrona, Sweden, from December 3-5, 2025.  The conference features a technical program of papers, keynote talks, posters, and demos on topics including Virtual Environments, Telexistence, the Metaverse, and Virtual Social Interactions in VR/AR/MR/XR.",
+  "Call for Papers": "# ICAT-EGVE 2025: Call for Papers, Posters, and Demonstrations\n\nThe ICAT-EGVE 2025 conference will be held from **December 3rd to 5th at Blekinge Institute of Technology, Karlskrona, Sweden.** This is a joint conference of the 35th International Conference on Artificial Reality and Telexistence (ICAT 2025) and the 30th Eurographics Symposium on Virtual Environments (EGVE 2025).\n\n## Submission Guidelines\n\nWe invite submissions of Papers, Posters, and Demonstrations describing novel research ideas, work in progress, recently completed work, preliminary results, or unusual systems and applications. ICAT-EGVE 2025 seeks inspiring submissions describing research, applications, or systems in all areas of Virtual Reality, Augmented Reality, Mixed Reality, Telexistence, and 3D User Interfaces.\n\n*   Full papers must not exceed eight (8) pages in length (excluding references).\n*   Short papers must not exceed four (4) pages in length (excluding references).\n*   Both full and short papers must be in English and should be formatted using the Eurographics format.\n*   ICAT-EGVE uses a double-blind review process. Submissions should not contain information that unnecessarily identifies the authors or their institutions.\n*   All papers must be submitted electronically as PDF. Authors are encouraged to submit videos to aid the program committee in the review of their submissions.\n*   Submissions should be original, unpublished work and should not be in submission to other venues concurrently. Any dual submission will be rejected outright without review.\n\n## Submission Portal\n\nAll submissions should be made through the online submission system: [https://srmv2.eg.org/COMFy/Conference/ICAT-EGVE_2025](https://srmv2.eg.org/COMFy/Conference/ICAT-EGVE_2025)\n\n**Note:** On SRMv2, for your full paper submission, please select “-” as the category. If you have any questions regarding how to modify your submission, please see the following help link: [https://wiki.eg.org/SRMv2Wiki/index.php/Modify_your_submission](https://wiki.eg.org/SRMv2Wiki/index.php/Modify_your_submission)\n\n## Call for Posters and Demos\n\nThere is a separate submission portal for our Posters and Demos programme: [https://a.bth.se/icat-egve2025/posters-demos/](https://a.bth.se/icat-egve2025/posters-demos/)\n\n## Review and Publication\n\nAll accepted Papers/Posters/Demos will be published in the Eurographics Digital Library and presented interactively at the conference. All Papers/Posters/Demos submissions will undergo a double-blind review process.\n\n## Special Section in Computers & Graphics Journal\n\nA selection of the best papers at ICAT-EGVE 2025 will be invited to submit an extended version (for peer-review) in a Special Section to the Computers & Graphics journal after the conference.\n\n## Important Dates (All times: AoE)\n\n*   **Paper (Short and Full):**\n    *   Paper Submission Deadline: August 15, 2025 – Title and abstract deadline (please submit a draft of the paper if possible)\n    *   Paper Submission Deadline: August 29, 2025 – Full submission deadline\n    *   Paper Submission Notification: October 17, 2025\n    *   Paper Camera Ready Deadline: October 27, 2025 (TBC)\n*   **Conference:** December 3-5, 2025\n\n## Program Chairs\n\n*   Joaquim Jorge (University of Lisboa, Portugal)\n*   Nobuchika Sakata (Ryukoku University, Japan)\n\n## Contact\n\n[chairs-icategve2025@eg.org](mailto:chairs-icategve2025@eg.org)"
+}
+```

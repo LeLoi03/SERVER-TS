@@ -1,0 +1,23 @@
+```json
+{
+  "Conference dates": "July 21 - 25, 2025",
+  "Year": "2025",
+  "Location": "Riga, Latvia",
+  "City-State-Province": "Riga",
+  "Country": "Latvia",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full paper submission deadline": "February 28, 2025",
+    "Abstract submission deadline": "April 30, 2025",
+    "Special sessions proposals deadline": "November 10, 2024"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "March 31, 2025"
+  },
+  "Topics": "Computational intelligence, fuzzy logic, fuzzy systems, soft computing, approximate reasoning, data aggregation and fusion, decision-making, fuzzy control, fuzzy logic and fuzzy set theory, imprecise probabilities, fuzzy methods in statistics, image processing and computer vision, knowledge representation and knowledge engineering, machine learning and neuro-fuzzy systems, natural language processing, generation and understanding, stochastic and fuzzy optimization, rough sets theory",
+  "Publisher": "Springer",
+  "Summary": "The 14th Conference of the European Society for Fuzzy Logic and Technology (EUSFLAT 2025) will take place in Riga, Latvia from July 21-25, 2025.  The conference aims to bring together researchers dealing with the theory and applications of computational intelligence, fuzzy logic, fuzzy systems, soft computing and related areas.",
+  "Call for Papers": "# EUSFLAT 2025: Call for Papers\n\nThe 14th Conference of the European Society for Fuzzy Logic and Technology (EUSFLAT 2025) will take place in **Riga, Latvia, from July 21-25, 2025.**\n\n## Publication Types\n\nThere are two types of publications related to the EUSFLAT 2025 Conference:\n\n1.  **Full papers in the conference proceedings:** Full papers will be reviewed by independent reviewers and, if accepted, published in the Lecture Notes in Computer Science (LNCS) series by Springer.\n2.  **Abstracts in the joint Book of Abstracts:** Submitted abstracts will be considered by the programme committee and, if accepted, published in the Book of Abstracts.\n\n## Abstracts (Submission Deadline: April 30, 2025)\n\n*   Submitted abstracts should be at most 1 page long.\n*   There is no specific format template; plain text is expected.\n*   Submit electronically in English through EasyChair: [https://easychair.org/conferences/?conf=eusflat2025](https://easychair.org/conferences/?conf=eusflat2025)\n*   Do not attach files; edit the abstract directly in the EasyChair online window.\n*   Accepted abstracts will be published in a separate Book of Abstracts by the University of Latvia.\n\n## Full Papers (Submission Deadline: February 28, 2025)\n\n*   The proceedings of EUSFLAT regarding full papers will be published in the Lecture Notes in Computer Science (LNCS) series by Springer.\n*   Authors should consult Springer’s authors’ instructions ([Springer_Instructions_for_Authors_of_Proceedings_CS.pdf](Springer_Instructions_for_Authors_of_Proceedings_CS.pdf)) and use the proceedings template (LaTeX or Word).\n*   The length of a submission is at most 12 pages in the LNCS/CCIS one-column page format.\n*   Submit in English in PDF format via EasyChair: [https://easychair.org/conferences/?conf=eusflat2025](https://easychair.org/conferences/?conf=eusflat2025)\n*   Check the \"Student Paper\" box to apply for the Best Student Paper Award.\n\n## Important Dates\n\n*   **Special sessions proposals deadline:** November 10, 2024\n*   **Full paper submission deadline:** February 28, 2025\n*   **Notification of acceptance:** March 31, 2025\n*   **Abstract submission deadline:** April 30, 2025\n\n## General Chairs\n\n*   Martin Štěpnička, University of Ostrava\n*   Susana Montes, University of Oviedo, Spain\n*   Svetlana Asmuss, University of Latvia\n\n## Plenary Speakers\n\n*   Bernard De Baets, Ghent University, Belgium\n*   Humberto Bustince, Universidad Publica de Navarra, Spain\n*   Oscar Cordón, University of Granada, Spain\n*   Katarzyna Kaczmarek-Majer, Systems Research Institute, Polish Academy of Sciences\n*   Ulrich Bodenhofer, University of Applied Sciences Upper Austria\n*   Andris Ambainis, University of Latvia"
+}
+```

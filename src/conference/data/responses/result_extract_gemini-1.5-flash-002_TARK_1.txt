@@ -1,0 +1,22 @@
+output:
+{
+  "Conference dates": "July 14 - 16, 2025",
+  "Year": "2025",
+  "Location": "Heinrich-Heine-Universität Düsseldorf, Düsseldorf, Germany",
+  "City-State-Province": "Düsseldorf",
+  "Country": "Germany",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "Deadline for abstract registrations": "March 24, 2025",
+    "Deadline for submissions": "March 28, 2025"
+  },
+  "Notification Date": {
+    "Notification of acceptance": "May 2, 2025"
+  },
+  "Topics": "Reasoning about rationality and knowledge, Semantic models for knowledge, belief, awareness and uncertainty, Bounded rationality and resource-bounded reasoning, Commonsense epistemic reasoning, Epistemic logic, Epistemic game theory, Knowledge and action, Applications of reasoning about knowledge and other mental states, Belief revision, Computational social choice, Algorithmic game theory, Foundations of multi-agent systems",
+  "Publisher": "EPTCS",
+  "Summary": "The Theoretical Aspects of Rationality & Knowledge (TARK) conference series brings together researchers from a wide variety of fields to further our understanding of interdisciplinary issues involving reasoning about rationality and knowledge. TARK 2025 will be held at the Heinrich-Heine-Universität Düsseldorf in Düsseldorf, Germany from July 14-16, 2025.",
+  "Call for Papers": "# TARK 2025: Call for Papers\n\nThe Theoretical Aspects of Rationality & Knowledge (TARK 2025) conference will be held at the **Heinrich-Heine-Universität Düsseldorf in Düsseldorf, Germany, from July 14-16, 2025**.\n\n## Scope and Mission\n\nThe mission of the TARK conferences is to bring together researchers from a wide variety of fields, including Computer Science, Artificial Intelligence, Game Theory, Decision Theory, Philosophy, Logic, Linguistics, and Cognitive Science, in order to further our understanding of interdisciplinary issues involving reasoning about rationality and knowledge.\n\n## Topics of Interest\n\nThese include, but are not limited to:\n\n*   Semantic models for knowledge, belief, awareness, and uncertainty\n*   Bounded rationality and resource-bounded reasoning\n*   Commonsense epistemic reasoning\n*   Epistemic logic\n*   Epistemic game theory\n*   Knowledge and action\n*   Applications of reasoning about knowledge and other mental states\n*   Belief revision\n*   Computational social choice\n*   Algorithmic game theory\n*   Foundations of multi-agent systems\n\n## Submission Guidelines\n\n*   Extended abstracts should be no longer than 10 pages (excluding references). Optional technical details such as proofs may be included in an appendix.\n*   One author of each accepted paper will be expected to present the paper at the conference.\n*   To format your paper, please use the EPTCS LaTeX style from: [https://style.eptcs.org/](https://style.eptcs.org/).\n*   TARK reviewing is not double-anonymised, so author names can be included in the submission.\n\n## Important Dates\n\n*   **Deadline for abstract registrations:** March 24, 2025 (anywhere on earth)\n*   **Deadline for submissions:** March 28, 2025 (anywhere on earth)\n*   **Notification of acceptance:** May 2, 2025\n\n## Proceedings\n\nThere will be a proceedings for TARK 2025 at EPTCS (Electronic Proceedings in Theoretical Computer Science). The proceedings will be open access and available online."
+}
+

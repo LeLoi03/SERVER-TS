@@ -1,0 +1,379 @@
+Conference full name: Principles and Practice of Parallel Programming (PPoPP)
+
+1. Website of PPoPP_3: https://ppopp25.sigplan.org/
+Website information of PPoPP_3:
+
+href="https://ppopp25.sigplan.org" - PPoPP 2025
+Sat 1 - Wed 5 March 2025href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Las Vegas, Nevada, United States
+Toggle navigation 
+ Attending | href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct 
+ Program | href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - PPoPP Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Your Program 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sat 1 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Sun 2 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Mon 3 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Tue 4 Mar 
+ href="https://ppopp25.sigplan.org/program/program-PPoPP-2025/" - Wed 5 Mar 
+ href="#" - Tracks | PPoPP 2025 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation 
+ Organization | PPoPP 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-Main-Conference-1-program-committee" - Main Conference 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-workshops-and-tutorials-workshop-and-tutorial-evaluation-committee" - Workshops and Tutorials 
+ href="https://ppopp25.sigplan.org/committee/PPoPP-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ Contributors 
+ href="https://ppopp25.sigplan.org/people-index" - People Index 
+ href="https://ppopp25.sigplan.org/info/mailing-list" - PPoPP Mailing List 
+ href="https://ppopp25.sigplan.org/search//all" - Search 
+ Series | href="https://ppopp25.sigplan.org/series/PPoPP" - Series 
+ PPoPP 2025 
+ href="https://ppopp24.sigplan.org" - PPoPP 2024 
+ href="https://ppopp23.sigplan.org" - PPoPP 2023 
+ href="https://ppopp22.sigplan.org" - PPoPP 2022 
+ href="https://ppopp21.sigplan.org" - PPoPP 2021 
+ href="https://ppopp20.sigplan.org" - PPoPP  2020 
+ href="https://ppopp19.sigplan.org" - PPoPP 2019 
+ href="https://ppopp18.sigplan.org" - PPoPP 2018 
+ href="https://ppopp17.sigplan.org" - PPoPP 2017 
+ href="https://ppopp16.sigplan.org" - PPoPP 2016 
+ href="https://ppopp15.soe.ucsc.edu/" - PPoPP 2015 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 
+ href="http://dl.acm.org/citation.cfm?id=2442516" - PPoPP 2013 
+ href="http://dl.acm.org/citation.cfm?id=2145816&picked=prox" - PPoPP 2012 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 
+ href="http://dl.acm.org/citation.cfm?id=1693453" - PPoPP 2010 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 
+ href="https://conf.researchr.org/signin/PPoPP-2025/https%3A%5Es%5Esppopp25.sigplan.org%5Es" - Sign in 
+ href="https://ppopp25.sigplan.org/signup" - Sign up 
+ ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 2025 
+ href="#march-1st-march-5th-2025-las-vegas-nv" - March 1st – March 5th, 2025, Las Vegas, NV
+Co-located with CC, CGO and HPCA 
+ PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large-scale machines, and quantum computers). PPoPP is interested in all aspects related to improving the productivity of parallel programming on modern architectures. PPoPP is also interested in work that addresses new parallel workloads and issues that arise out of large-scale scientific or enterprise workloads. 
+ Proceedings are available in the ACM Digital Library:https://dl.acm.org/doi/proceedings/10.1145/3710848. 
+  
+ href="#distinguished-papers" - Distinguished Papers
+BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+ EVeREST: An Effective and Versatile Runtime Energy Saving Tool for GPUs 
+ Anna Yue (University of Minnesota at Twin Cities), Pen-Chung Yew (University of Minnesota at Twin Cities), Sanyam Mehta (HPE) 
+ Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data Structures 
+ Ajay Singh (FORTH ICS and University of Waterloo), Trevor Brown (University of Toronto) 
+ Best Artifact 
+ BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+  
+ Sponsors 
+ Platinum 
+ Gold 
+ Silver 
+ Bronze 
+ Loading... 
+ Powered ByWhova 
+ Best Event Apps 
+ PPoPP 2025 Tracks 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+|href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Posts 
+ href="https://twitter.com/PPoPPConf" - PPoPP Conference
+xSat 5 Apr 04:38 
+ href="https://ppopp25.sigplan.org" - PPoPP 2025
+href="https://ppopp25.sigplan.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://ppopp25.sigplan.org/support" - Support page
+ 
+ Tracks 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-keynotes" - Keynotes
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+ 
+ href="https://ppopp25.sigplan.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Attending 
+ href="https://ppopp25.sigplan.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa
+ 
+ href="https://ppopp25.sigplan.org/attending/registration" - Registration
+ 
+ href="https://ppopp25.sigplan.org/attending/accommodation" - Accommodation Options
+ 
+ href="https://ppopp25.sigplan.org/attending/student-travel-grant" - Student Travel Grants
+ 
+ href="https://ppopp25.sigplan.org/attending/visa" - Visa
+ 
+ href="https://ppopp25.sigplan.org/attending/codeofconduct" - Code of Conduct
+href="https://ppopp25.sigplan.org/signup" - Sign Up
+
+2. Website of PPoPP_3: https://conf.researchr.org/series/PPoPP
+Website information of PPoPP_3:
+
+href="https://ppopp.org" - PPoPP 2025
+Sat 1 - Wed 5 March 2025href="https://ppopp.org/venue/PPoPP-2025-venue" - Las Vegas, Nevada, United States
+Toggle navigation 
+ href="https://conf.researchr.org/series/PPoPP" - Series 
+ href="https://ppopp.org" - PPoPP 2025 
+ All Editions | PPoPP 2025 
+ href="https://ppopp24.sigplan.org" - PPoPP 2024 
+ href="https://ppopp23.sigplan.org" - PPoPP 2023 
+ href="https://ppopp22.sigplan.org" - PPoPP 2022 
+ href="https://ppopp21.sigplan.org" - PPoPP 2021 
+ href="https://ppopp20.sigplan.org" - PPoPP  2020 
+ href="https://ppopp19.sigplan.org" - PPoPP 2019 
+ href="https://ppopp18.sigplan.org" - PPoPP 2018 
+ href="https://ppopp17.sigplan.org" - PPoPP 2017 
+ href="https://ppopp16.sigplan.org" - PPoPP 2016 
+ href="https://ppopp15.soe.ucsc.edu/" - PPoPP 2015 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 
+ href="http://dl.acm.org/citation.cfm?id=2442516" - PPoPP 2013 
+ href="http://dl.acm.org/citation.cfm?id=2145816&picked=prox" - PPoPP 2012 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 
+ href="http://dl.acm.org/citation.cfm?id=1693453" - PPoPP 2010 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 
+ href="https://conf.researchr.org/signin/PPoPP-2025/https%3A%5Es%5Esconf.researchr.org%5Esseries%5EsPPoPP" - Sign in 
+ href="https://ppopp.org/signup" - Sign up 
+ Principles and Practice of Parallel Programming 
+ All Editions 
+  
+ Sat 1 - Wed 5 March 2025 Las Vegas, Nevada, United Stateshref="https://ppopp.org" - PPoPP 2025
+March 1st – March 5th, 2025, Las Vegas, NV Co-located with CC, CGO and HPCA PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, ... 
+ Sat 2 - Wed 6 March 2024 Edinburgh, United Kingdomhref="https://ppopp24.sigplan.org" - PPoPP 2024
+March 2nd – March 6th, 2024, Edinburgh, UK Co-located with CC, CGO and HPCA PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded ... 
+ Sat 25 February - Wed 1 March 2023 Montreal, Canadahref="https://ppopp23.sigplan.org" - PPoPP 2023
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 2 - Wed 6 April 2022href="https://ppopp22.sigplan.org" - PPoPP 2022
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 27 February - Wed 3 March 2021href="https://ppopp21.sigplan.org" - PPoPP 2021
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 22 - Wed 26 February 2020 San Diego, California, United Stateshref="https://ppopp20.sigplan.org" - PPoPP  2020
+withhref="https://ppopp20.sigplan.org/home/WPMVP-2020" - WPMVP 2020
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 16 - Wed 20 February 2019 Washington, DC, United Stateshref="https://ppopp19.sigplan.org" - PPoPP 2019
+withhref="https://ppopp19.sigplan.org/home/pmam-2019" - PMAM 2019
+,href="https://ppopp19.sigplan.org/home/WPMVP-2019" - WPMVP 2019
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 24 - Wed 28 February 2018 Vösendorf / Wien, Austriahref="https://ppopp18.sigplan.org" - PPoPP 2018
+withhref="https://ppopp18.sigplan.org/track/GPGPU-2018-papers" - GPGPU 2018
+,href="https://ppopp18.sigplan.org/track/pmam-2018" - PMAM 2018
+,href="https://ppopp18.sigplan.org/track/WPMVP2018" - WPMVP 2018
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems; grids; datacenters; clouds ... 
+ Sat 4 - Wed 8 February 2017 Austin, Texas, United Stateshref="https://ppopp17.sigplan.org" - PPoPP 2017
+withhref="https://ppopp17.sigplan.org/track/GPGPU-2017-papers" - GPGPU 2017
+,href="https://ppopp17.sigplan.org/track/pmam-2017-papers" - PMAM 2017
+,href="https://ppopp17.sigplan.org/track/SYCL-2017-papers" - SYCL 2017
+,href="https://ppopp17.sigplan.org/track/TRANSACT-2017-papers" - TRANSACT 2017
+,href="https://ppopp17.sigplan.org/track/WCIRE-2017-papers" - WCIRE 2017
+PPoPP 2017 is the 22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming PPoPP is the forum for leading work on all aspects of parallel programming, including foundational and theoretical aspects, techniques, languages, compilers, runtime systems, tools, and practical experiences. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (m ... 
+ Sat 12 - Wed 16 March 2016 Barcelona, Spainhref="https://ppopp16.sigplan.org" - PPoPP 2016
+withhref="https://ppopp16.sigplan.org/track/GPGPU-2016-papers" - GPGPU-9
+,href="https://conf.researchr.org/home/pmam-2016" - PMAM 2016
+,href="https://ppopp16.sigplan.org/track/PP4REE-2016-papers" - PP4REE 2016
+,href="https://ppopp16.sigplan.org/track/PPAA-2016-papers" - PPAA - cancelled
+,href="https://ppopp16.sigplan.org/track/SYCL-2016-papers" - SYCL 2016
+,href="https://ppopp16.sigplan.org/track/TRANSACT-2016" - TRANSACT 2016
+,href="https://ppopp16.sigplan.org/track/PMSVP-2016-papers" - WPMVP 2016
+Barcelona, Spain, March 12-16 2016 Updated: Feedback Survey PPoPP 2016 is the 21st ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming PPoPP is the forum for leading work on all aspects of parallel programming, including foundational and theoretical aspects, techniques, languages, compilers, runtime systems, tools, and practical experiences. In the context of the symposium, “parallel p ... 
+ February 2015PPoPP 2015 
+ More information on this edition athref="https://ppopp15.soe.ucsc.edu/" - https://ppopp15.soe.ucsc.edu/ 
+ February 2014PPoPP 2014 
+ More information on this edition athref="https://sites.google.com/site/ppopp2014/" - https://sites.google.com/site/ppopp2014/ 
+ February 2013PPoPP 2013 
+ More information on this edition athttp://dl.acm.org/citation.cfm?id=2442516 
+ February 2012PPoPP 2012 
+ More information on this edition athttp://dl.acm.org/citation.cfm?id=2145816&picked=prox 
+ February 2011PPoPP 2011 
+ More information on this edition athref="http://ppopp11.ac.uma.es/tiki-index.php" - http://ppopp11.ac.uma.es/tiki-index.php 
+ January 2010PPoPP 2010 
+ More information on this edition athttp://dl.acm.org/citation.cfm?id=1693453 
+ February 2009PPoPP 2009 
+ More information on this edition athref="http://ppopp09.rice.edu/" - http://ppopp09.rice.edu/ 
+ Steering Committee (PPoPP 2025) 
+ No members yet 
+ xSat 5 Apr 04:38 
+ usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://conf.researchr.org/support" - Support page
+ 
+ href="https://conf.researchr.org/signup" - Sign Up
+
+3. Website of PPoPP_3: https://conf.researchr.org/home/ppopp-2025
+Website information of PPoPP_3:
+
+href="https://ppopp.org" - PPoPP 2025
+Sat 1 - Wed 5 March 2025href="https://ppopp.org/venue/PPoPP-2025-venue" - Las Vegas, Nevada, United States
+Toggle navigation 
+ Attending | href="https://ppopp.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa 
+ href="https://ppopp.org/attending/registration" - Registration 
+ href="https://ppopp.org/attending/accommodation" - Accommodation Options 
+ href="https://ppopp.org/attending/student-travel-grant" - Student Travel Grants 
+ href="https://ppopp.org/attending/visa" - Visa 
+ href="https://ppopp.org/attending/codeofconduct" - Code of Conduct 
+ Program | href="https://ppopp.org/program/program-PPoPP-2025/" - PPoPP Program 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Your Program 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Sat 1 Mar 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Sun 2 Mar 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Mon 3 Mar 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Tue 4 Mar 
+ href="https://ppopp.org/program/program-PPoPP-2025/" - Wed 5 Mar 
+ href="#" - Tracks | PPoPP 2025 
+ href="https://ppopp.org/track/PPoPP-2025-keynotes" - Keynotes 
+ href="https://ppopp.org/track/PPoPP-2025-Main-Conference-1" - Main Conference 
+ href="https://ppopp.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials 
+ href="https://ppopp.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation 
+ Organization | PPoPP 2025 Committees 
+ Organizing Committee 
+ Steering Committee 
+ Track Committees 
+ href="https://ppopp.org/committee/PPoPP-2025-Main-Conference-1-program-committee" - Main Conference 
+ href="https://ppopp.org/committee/PPoPP-2025-workshops-and-tutorials-workshop-and-tutorial-evaluation-committee" - Workshops and Tutorials 
+ href="https://ppopp.org/committee/PPoPP-2025-artifact-evaluation-artifact-evaluation-committee" - Artifact Evaluation 
+ Contributors 
+ href="https://ppopp.org/people-index" - People Index 
+ href="https://ppopp.org/info/mailing-list" - PPoPP Mailing List 
+ href="https://ppopp.org/search//all" - Search 
+ Series | href="https://conf.researchr.org/series/PPoPP" - Series 
+ PPoPP 2025 
+ href="https://ppopp24.sigplan.org" - PPoPP 2024 
+ href="https://ppopp23.sigplan.org" - PPoPP 2023 
+ href="https://ppopp22.sigplan.org" - PPoPP 2022 
+ href="https://ppopp21.sigplan.org" - PPoPP 2021 
+ href="https://ppopp20.sigplan.org" - PPoPP  2020 
+ href="https://ppopp19.sigplan.org" - PPoPP 2019 
+ href="https://ppopp18.sigplan.org" - PPoPP 2018 
+ href="https://ppopp17.sigplan.org" - PPoPP 2017 
+ href="https://ppopp16.sigplan.org" - PPoPP 2016 
+ href="https://ppopp15.soe.ucsc.edu/" - PPoPP 2015 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 
+ href="http://dl.acm.org/citation.cfm?id=2442516" - PPoPP 2013 
+ href="http://dl.acm.org/citation.cfm?id=2145816&picked=prox" - PPoPP 2012 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 
+ href="http://dl.acm.org/citation.cfm?id=1693453" - PPoPP 2010 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 
+ href="https://conf.researchr.org/signin/PPoPP-2025/https%3A%5Es%5Esconf.researchr.org%5Eshome%5Esppopp-2025" - Sign in 
+ href="https://ppopp.org/signup" - Sign up 
+ ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming 2025 
+ href="#march-1st-march-5th-2025-las-vegas-nv" - March 1st – March 5th, 2025, Las Vegas, NV
+Co-located with CC, CGO and HPCA 
+ PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. In the context of the symposium, “parallel programming” encompasses work on concurrent and parallel systems (multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large-scale machines, and quantum computers). PPoPP is interested in all aspects related to improving the productivity of parallel programming on modern architectures. PPoPP is also interested in work that addresses new parallel workloads and issues that arise out of large-scale scientific or enterprise workloads. 
+ Proceedings are available in the ACM Digital Library:https://dl.acm.org/doi/proceedings/10.1145/3710848. 
+  
+ href="#distinguished-papers" - Distinguished Papers
+BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+ EVeREST: An Effective and Versatile Runtime Energy Saving Tool for GPUs 
+ Anna Yue (University of Minnesota at Twin Cities), Pen-Chung Yew (University of Minnesota at Twin Cities), Sanyam Mehta (HPE) 
+ Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data Structures 
+ Ajay Singh (FORTH ICS and University of Waterloo), Trevor Brown (University of Toronto) 
+ Best Artifact 
+ BerryBees: Breadth First Search by Bit-Tensor-Cores 
+ Yuyao Niu (Barcelona Supercomputing Center (BSC) - Universitat Politècnica de Catalunya (UPC)), Marc Casas (Barcelona Supercomputing Center) 
+  
+ Sponsors 
+ Platinum 
+ Gold 
+ Silver 
+ Bronze 
+ Powered ByWhova 
+ Best Event Apps 
+ PPoPP 2025 Tracks 
+ href="https://ppopp.org/track/PPoPP-2025-keynotes" - Keynotes
+|href="https://ppopp.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+|href="https://ppopp.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+|href="https://ppopp.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Posts 
+ href="https://twitter.com/PPoPPConf" - PPoPP Conference
+xSat 5 Apr 04:38 
+ href="https://ppopp.org" - PPoPP 2025
+href="https://ppopp.org/contact" - contact form
+usinghref="https://conf.researchr.org" - conf.researchr.org
+(href="http://yellowgrass.org/roadmap/conf.researchr.org" - v1.69.0
+) 
+ href="https://ppopp.org/support" - Support page
+ 
+ Tracks 
+ href="https://ppopp.org/track/PPoPP-2025-keynotes" - Keynotes
+ 
+ href="https://ppopp.org/track/PPoPP-2025-Main-Conference-1" - Main Conference
+ 
+ href="https://ppopp.org/track/PPoPP-2025-workshops-and-tutorials" - Workshops and Tutorials
+ 
+ href="https://ppopp.org/track/PPoPP-2025-artifact-evaluation" - Artifact Evaluation
+Attending 
+ href="https://ppopp.org/venue/PPoPP-2025-venue" - Venue: The Westin Las Vegas Hotel & Spa
+ 
+ href="https://ppopp.org/attending/registration" - Registration
+ 
+ href="https://ppopp.org/attending/accommodation" - Accommodation Options
+ 
+ href="https://ppopp.org/attending/student-travel-grant" - Student Travel Grants
+ 
+ href="https://ppopp.org/attending/visa" - Visa
+ 
+ href="https://ppopp.org/attending/codeofconduct" - Code of Conduct
+href="https://ppopp.org/signup" - Sign Up
+
+4. Website of PPoPP_3: https://www.sigplan.org/Conferences/PPOPP/
+Website information of PPoPP_3:
+
+ACM SIGPLANHome 
+ Conferences 
+ OpenTOC 
+ Awards 
+ href="/Highlights" - Research Highlights 
+ Membership 
+ Principles and Practice of Parallel Programming (PPoPP) 
+ The PPoPP Symposia is the forum for leading papers on the principles and foundations of parallel programming, tools and techniques for parallel programming, and experiences in using parallel programming to solve applications problems. 
+ Co-located Events 
+ HPCA: | The IEEE International Symposium on High Performance Computing Architecture 
+ CGO: | International Symposium on Code Generation and Optimization 
+ Steering Committee 
+ The current PPoPP Steering Committee is: 
+ Albert Cohen | , Chair 
+ Rafael Asenjo 
+ Calin Cascaval 
+ Thomas Gross 
+ Mary Hall 
+ Tim Harris 
+ Andreas Krall 
+ David Padua 
+ Keshav Pingali 
+ Lawrence Rauchwerger 
+ Vivek Sarkar 
+ Web Pages of Previous Conferences 
+ href="http://ppopp22.sigplan.org" - PPoPP 2022 | (Seoul, South Korea) 
+ href="http://ppopp21.sigplan.org" - PPoPP 2021 | (virtual) 
+ href="http://ppopp20.sigplan.org" - PPoPP 2020 | (San Diego, CA) 
+ href="http://ppopp19.sigplan.org" - PPoPP 2019 | (Washington, DC) 
+ href="http://ppopp18.sigplan.org" - PPoPP 2018 | (Vienna, Austria) 
+ href="http://ppopp17.sigplan.org" - PPoPP 2017 | (Austin, TX) 
+ href="http://conf.researchr.org/home/ppopp-2016" - PPoPP 2016 | (Barcelona, Spain) 
+ href="http://ppopp15.soe.ucsc.edu/" - PPoPP 2015 | (San Francisco, CA) 
+ href="https://sites.google.com/site/ppopp2014/" - PPoPP 2014 | (Orlando, FL) 
+ href="http://ppopp2013.ics.uci.edu" - PPoPP 2013 | (Shenzhen, China) 
+ PPoPP 2012 (New Orleans, LA) 
+ href="http://ppopp11.ac.uma.es/tiki-index.php" - PPoPP 2011 | (San Antonio, TX) 
+ href="http://polaris.cs.uiuc.edu/ppopp10/" - PPoPP 2010 | (Bangalore, India) 
+ href="http://ppopp09.rice.edu/" - PPoPP 2009 | (Raleigh, NC) 
+ href="http://research.ihost.com/ppopp08/" - PPoPP 2008 | (Salt Lake City, UT) 
+ href="http://ftg.lbl.gov/ppopp07/" - PPoPP 2007 | (San Jose, CA) 
+ href="http://dynamo.ecn.purdue.edu/~smidkiff/ppopp/" - PPoPP 2006 | (Manhattan, NY) 
+ href="http://www.cs.cornell.edu/Conferences/PPoPP05/" - PPoPP 2005 | (Chicago, IL) 
+ href="http://ppopp.lcs.mit.edu/" - PPoPP 2003 | (San Diego, CA) 
+ href="http://www.lsc.nd.edu/ppopp/" - PPoPP 2001 | (Snowbird, UT) 
+ href="http://csag.ucsd.edu/ppopp/" - PPoPP 1999 | (Atlanta, GA) 
+
+Page generated Fri, 14 Mar 2025 00:11:07 +0000
+

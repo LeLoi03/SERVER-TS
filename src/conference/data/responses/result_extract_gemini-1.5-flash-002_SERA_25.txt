@@ -1,0 +1,27 @@
+output:
+{
+  "Conference dates": "May 29 - 31, 2025",
+  "Year": "2025",
+  "Location": "UNLV Campus, Las Vegas, Nevada, USA",
+  "City-State-Province": "Las Vegas, Nevada",
+  "Country": "United States",
+  "Continent": "North America",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission": "March 28, 2025"
+  },
+  "Notification Date": {
+    "Acceptance Notification (papers submitted by March 14)": "April 4, 2025",
+    "Acceptance Notification (Papers submitted after March 14)": "April 11, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera Ready Papers/Registration": "April 18, 2025"
+  },
+  "Other Date": {
+    "Workshop/Special Session Proposal": "January 10, 2025"
+  },
+  "Topics": "Software Engineering, Management, Applications",
+  "Summary": "The 23rd IEEE/ACIS International Conference on Software Engineering, Management and Applications (SERA 2025) will be held at the UNLV Campus in Las Vegas, Nevada, USA, from May 29-31, 2025.  The conference brings together researchers, scientists, engineers, industry practitioners, and students to discuss, encourage and exchange new ideas, research results, and experiences on all aspects of Software Engineering, Management, and Applications.",
+  "Call for Papers": "# SERA 2025: Call for Papers\n\nThe 23rd IEEE/ACIS International Conference on Software Engineering, Management and Applications (SERA 2025) will be held at the **UNLV Campus in Las Vegas, Nevada, USA, from May 29-31, 2025**.\n\nSERA 2025 brings together researchers, scientists, engineers, industry practitioners, and students to discuss, encourage, and exchange new ideas, research results, and experiences on all aspects of Software Engineering, Management, and Applications.\n\n## Call for Papers\n\n[Call For Papers](http://acisinternational.org/wp-content/uploads/2025/03/SERA_2025_CFP-9.pdf)\n\n## Paper Submission Instructions\n\n[Paper Submission Instructions](https://acisinternational.org/sera-2025-paper-submission-for-review-2/)\n\n## Special Sessions\n\n[Special Sessions](https://acisinternational.org/sera-2025-special-sessions)\n\n## Special Session/Workshop Proposal Form\n\n[Special Session/Workshop Proposal Form](http://acisinternational.org/wp-content/uploads/2025/01/WorkshopSpecialSessionProposal1-25.pdf)\n\n## Fee Schedule\n\n[Fee Schedule](http://acisinternational.org/wp-content/uploads/2024/09/SERA2025FeeSchedule.pdf)\n\n## Final Paper Submissions\n\n[Final Paper Submissions](https://acisinternational.org/sera-2025-final-paper-submission-instructions-2)\n\n## Important Dates\n\n*   **Workshop/Special Session Proposal:** January 10, 2025\n*   **Full Paper Submission:** March 28, 2025 (extended)\n*   **Acceptance Notification (papers submitted by March 14):** April 4, 2025\n*   **Acceptance Notification (Papers submitted after March 14):** April 11, 2025\n*   **Camera Ready Papers/Registration:** April 18, 2025"
+}
+

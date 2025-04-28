@@ -1,0 +1,24 @@
+```json
+{
+  "Conference dates": "Not specified",
+  "Year": "2024",
+  "Location": "Hangzhou, China",
+  "City-State-Province": "Hangzhou",
+  "Country": "China",
+  "Continent": "Asia",
+  "Type": "Offline",
+  "Submission Date": {
+    "Full Paper Submission deadline": "August 17, 2023"
+  },
+  "Notification Date": {
+    "Notification deadline": "August 31, 2023"
+  },
+  "Camera-ready Date": {
+    "Camera-ready deadline": "October 5, 2023"
+  },
+  "Topics": "Quality of Service (QoS) and Quality of Experience (QoE), Reliability and Scalability, Network Security and Privacy, Robustness, Artificial Intelligence and Machine Learning, Transportation Networks, E-Health Networks, Networks and Applications",
+  "Publisher": "Springer",
+  "Summary": "QSHINE 2024, the 20th EAI International Conference on Heterogeneous Networking for Quality, Reliability, Security and Robustness, will be held in Hangzhou, China.  The conference is a primary venue for researchers and practitioners to present novel ideas on heterogeneous networking related subjects, particularly for quality, experience, reliability, security and robustness of heterogeneous networking.",
+  "Call for Papers": "# QSHINE 2024: Call for Papers\n\nQSHINE 2024, the 20th EAI International Conference on Heterogeneous Networking for Quality, Reliability, Security and Robustness, will be held in **Hangzhou, China**.\n\n## Scope\n\nHeterogeneous networking has long been the focus of computer network and communications researchers worldwide. Since 2004, QSHINE has been established as the primary venue for researchers and practitioners to present novel ideas on heterogeneous networking-related subjects, particularly for quality, experience, reliability, security, and robustness of heterogeneous networking. QSHINE 2024 sets the goal to be a high-quality conference and an international forum for presentation and discussion of cutting-edge research in the field. The scope of QSHINE 2024 covers both newest theoretical and practical research topics to address the challenges from both the trending application requirements and the communication technologies.\n\n## Topics\n\nWe welcome contributions from the following fields:\n\n*   Quality of Service (QoS) and Quality of Experience (QoE): Architectures, Protocols and Mechanisms\n*   Reliability and Scalability: Modeling, Cognition, Extensibility, Big Data\n*   Network Security and Privacy: Intrusion Detection, Encryption, and Blockchain\n*   Robustness: Fault/Disruption/Disaster-tolerance, Resilience, Survivability\n*   Artificial Intelligence and Machine Learning: Online Computational Intelligence, Distributed Learning, Federated Learning, Edge Intelligence, Game-Theoretic Approaches\n*   Transportation Networks: Traffic Control, Traffic Signal Processing, Intelligent Transportation\n*   E-Health Networks: Biomedical Signal processing, Data Mining and Pattern Recognition\n*   Networks and Applications: Internet of Things, Space-Air-Ground Networks, Cloud/Edge/Fog Computing, SDN/NFV, Smart Grid, Quantum Communications & Computing, AR/VR\n\n## Publication\n\nAll registered papers will be submitted for publishing by Springer and made available through SpringerLink Digital Library: [QSHINE Conference Proceedings](https://link.springer.com/conference/qshine?utm_source=confweb&utm_medium=outbound&utm_campaign=proceedings-series).\n\nQSHINE proceedings are indexed in leading indexing services, such as Web of Science, Compendex, Scopus, DBLP, EU Digital Library, Google Scholar, IO-Port, MathSciNet, Inspec, and Zentralblatt MATH.\n\nAuthors of selected best accepted and presented papers will be invited to submit an extended version to:\n\n*   Wireless Networks (WINET) Journal [IF: 2.701 (2020)]\n*   IEEE Internet of Things Journal [IF: 10.238]\n*   IEEE Journal of Biomedical and Health Informatics [IF: 7.021]\n*   Digital Communications and Networks [IF: 6.348]\n\nAll accepted authors are eligible to submit an extended version in a fast track of:\n\n*   EAI Endorsed Transactions on Scalable Information Systems (Open Access) – indexed in ESCI, Ei Compendex & Scopus\n\nAdditional publication opportunities:\n\n*   EAI Transactions series (Open Access)\n*   EAI/Springer Innovations in Communications and Computing Book Series (titles in this series are indexed in Ei Compendex, Web of Science & Scopus)\n\n## Paper Submission\n\nPapers should be submitted through EAI ‘Confy+‘ system, and have to comply with the Springer format (see [Author’s kit section](https://qshine.eai-conferences.org/2023/submission/#authorskit)).\n\n*   Regular papers should be up to 12-15+ pages in length.\n*   Short papers should be 6-11 pages in length.\n\n## Important Dates\n\n*   **Full Paper Submission deadline:** August 17, 2023\n*   **Notification deadline:** August 31, 2023\n*   **Camera-ready deadline:** October 5, 2023"
+}
+```

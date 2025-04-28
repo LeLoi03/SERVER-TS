@@ -1,0 +1,505 @@
+Conference full name: Mathematics of Program Construction (MPC)
+
+1. Website of MPC_3: https://profiles.imperial.ac.uk/n.wu/publications
+Website information of MPC_3:
+
+
+
+2. Website of MPC_3: https://people.cs.nott.ac.uk/pszgmh/
+Website information of MPC_3:
+
+Activities 
+ Publications 
+ Videos 
+ Teaching 
+ People 
+ Projects 
+ Personal 
+ Contact 
+ Scholar 
+ Maps 
+ Weather 
+  
+ Graham Hutton 
+ Professor ofComputer Scienceat theUniversity of NottinghamMy research interests are in themathematics of program construction. The aim of my research is to develop simple but powerful techniques for writing and reasoning about computer programs, by recognising and exploiting their underlying mathematical structure. Most of my work takes place in the context of functional languages such as Haskell and Agda. 
+ I'm co-leader of the Functional Programming Lab, director of the Midlands Graduate School, an editor of the Journal of Functional Programming, and an ACM Distinguished Scientist. I've also served as vice-chair of the ACM Special Interest Group on Programming Languages steering committee chair of the International Conference on Functional Programming, program committee chair of the Haskell Symposium, and board member of the Haskell Foundation. 
+ Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.-- Edsger Dijkstra 
+  
+ Activities 
+ Current and recent activities: 
+ Co-leader, | href="https://nottingham.ac.uk/research/groups/fp-lab/" - Functional Programming Lab | , 2008-date 
+ Director, | Midlands Graduate School | , 2023-date 
+ Editor, | Journal of Functional Programming | , 2014-date 
+ Board member, | Haskell Foundation | , 2022-2025 
+ Co-editor, | href="https://www.cambridge.org/core/journals/journal-of-functional-programming/announcements/call-for-papers/special-issue-on-program-calculation" - JFP Special Issue on Program Calculation | , 2023-2025 
+ Principal investigator, | Semantics-Directed Compiler Construction | , 2024-2027 
+ Program co-chair, | href="https://icfp23.sigplan.org/home/funarch-2023" - Functional Software Architecture - FP in the Large | , Seattle, 2023 
+ Program committee, | Haskell Symposium | , Seattle, 2023 
+ Award committee, | ACM SIGPLAN Distinguished Eductator Award | , 2021-2024 
+ Advisory board, | EPSRC Network on Model Driven Engineering | , 2022-date 
+ Steering committee, | href="https://icfp24.sigplan.org/home/funarch-2024" - Functional Software Architecture - FP in the Large | , 2024-date 
+ Steering committee, | href="https://www.cs.nott.ac.uk/~pszgmh/mpc19.html" - Mathematics of Program Construction | , 2017-date 
+ Member, | IFIP Working Group 2.1 on Algorithmic Languages and Calculi | , 2004-date 
+ Member, | EPSRC Peer Review College | , 2006-date 
+  
+ Publications 
+ A list ofpublications,bibtex entries, andcitations, is available, or you can select below: 
+ A compositional semantics for explicit naming | (2025) 
+ The calculated typer | (2025) 
+ Quotient polymorphism | (2025) 
+ Calculating compilers effectively | (HASKELL 2024) 
+ Beyond trees: calculating graph-based compilers | (ICFP 2024) 
+ HoTT operads | (2024) 
+ Quotient Haskell: lightweight quotient types for all | (POPL 2024) 
+ Programming language semantics: it's easy as 1,2,3 | (JFP 2023) 
+ Calculating compilers for concurrency | (ICFP 2023) 
+ Subtyping without reduction | (MPC 2022) 
+ Monadic compiler calculation | (ICFP 2022) 
+ Calculating dependently-typed compilers | (ICFP 2021) 
+ Calculating correct compilers II: return of the register machines | (JFP 2020) 
+ Pre-ordered metric spaces for program improvement | (2020) 
+ Liquidate your assets: reasoning about resource usage in Liquid Haskell | (POPL 2020) 
+ href="https://www.cs.nott.ac.uk/~pszgmh/bib.html#mpc19" - Proceedings of the MPC conference | (MPC 2019); 
+ href="http://www.cs.nott.ac.uk/~pszgmh/bib.html#clairvoyant" - Call-by-need is 
+clairvoyant call-by-value | (ICFP 2019) 
+ Theorem proving for all: equational reasoning in Liquid Haskell | (HASKELL 2018) 
+ AutoBench: comparing the time performance of Haskell programs | (HASKELL 2018) 
+ Parametric polymorphism and operational improvement | (ICFP 2018) 
+ Improving Haskell | (TFP 2018) 
+ Compiling a 50-year journey | (JFP 2017) 
+ Failing faster: overlapping patterns for property-based testing | (PADL 2017) 
+ Programming in Haskell | (CUP 2016) 
+ Contractive functions on infinite data structures | (IFL 2016) 
+ Cutting out continuations | (WF 2016) 
+ Calculating correct compilers | (JFP 2015) 
+ Programs for cheap! | (LICS 2015) 
+ Towards a theory of reach | (TFP 2015) 
+ Worker/wrapper/makes it/faster | (ICFP 2014) 
+ Work it, wrap it, fix it, fold it | (JFP 2014) 
+ The under-performing unfold | (IFL 2013) 
+ Compilation à la carte | (IFL 2013) 
+ Representing contractive functions on streams | (2011) 
+ Towards modular compilers for effects | (TFP 2011) 
+ Factorising folds for faster functions | (JFP 2010) 
+ Compiling concurrency correctly: cutting out the middle man | (TFP 2009) 
+ The worker/wrapper transformation | (JFP 2009) 
+ Modularity and implementation of mathematical operational semantics | (MSFP 2008) 
+ Towards a verified implementation of software transactional memory | (TFP 2008) 
+ Reasoning about effects: seeing the wood through the trees | (TFP 2008) 
+ What is the meaning of these constant interruptions? | (JFP 2007) 
+ Programming in Haskell | (CUP 2007) 
+ Compact fusion | (MSFP 2006) 
+ Accurate step counting | (IFL 2005) 
+ Report on the BCTCS colloquium | (BCTCS 2005) 
+ Proof methods for corecursive programs | (FI 2005) 
+ Calculating an exceptional machine | (TFP 2004) 
+ Compiling exceptions correctly | (MPC 2004) 
+ Proceedings of the APPSEM workshop | (APPSEM 2003) 
+ The countdown problem | (JFP 2002) 
+ Special double issue on Haskell | (JFP 2002) 
+ The generic approximation lemma | (IPL 2001) 
+ When is a function a fold or an unfold? | (CMCS 2001) 
+ Proceedings of the Haskell workshop | (HASKELL 2000) 
+ Proof methods for structured corecursive programs | (SFPW 1999) 
+ A tutorial on the universality and expressiveness of fold | (JFP 1999) 
+ Fold and unfold for program semantics | (ICFP 1998) 
+ Monadic parsing in Haskell | (JFP 1998) 
+ Monadic parser combinators | (1996) 
+ Back to basics: deriving representation changers functionally | (JFP 1996) 
+ Bananas in space: extending fold and unfold to exponential types | (FPCA 1995) 
+ Categories, allegories, and circuit design | (LICS 1994) 
+ The Ruby interpreter | (1993) 
+ A relational derivation of a functional program | (STOP 1992) 
+ Between functions and relations in calculating programs | (1992) 
+ Higher-order functions for parsing | (JFP 1992) 
+ A calculational theory of pers as types | (1992) 
+ Making functionality more general | (GWFP 1992) 
+ Functional programming with relations | (GWFP 1991) 
+ Parsing using combinators | (GWFP 1990) 
+  
+ Videos 
+ YouTube channel:@haskellhutt 
+ Teaching videos:Functional programming 
+ Advanced functional programming 
+ Computerphile videos:Quicksort 
+ Program correctness 
+ Tail recursion 
+ Curried functions 
+ Functional parsing 
+ To infinity and beyond 
+ What is a monad? 
+ The Y combinator 
+ Lambda calculus 
+ A secret of sorting 
+ Other videos:Podcast | ( | Haskell Foundation | ) 
+ Calculating correct compilers | ( | Haskell eXchange | ) 
+ Programming in Haskell | ( | FutureLearn | ) 
+ How to be more productive | ( | Channel 9 | ) 
+ Calculating an exceptional machine 
+ The countdown problem | ( | Channel 9 | ) 
+  
+ Teaching 
+ Current teaching: 
+ Functional programming | (1st year course) 
+ Advanced functional programming | (2nd year course) 
+ Previous teaching: 
+ Introduction to category theory | (postgraduate course) 
+ Introduction to domain theory | (postgraduate course) 
+ Principles of programming languages | (3rd year course) 
+ Concepts of concurrency | (2nd year course) 
+  
+ People 
+ href="" - Research fellows:
+href="https://www.nottingham.ac.uk/research/groups/fp-lab/people/brandon.hewer" - Brandon Hewer | , | Semantics-Directed Compiler Construction | , 2024-2027 
+ Jennifer Hackett | , | Unified Reasoning About Program Correctness and Efficiency | , 2016-2021 
+ Nils Anders Danielsson | , | Reasoning About Exceptions and Interrupts | , 2007-2010 
+ Joel Wright | , Compiler Correctness, 2005 
+ Current PhD students: 
+ Sky Wilshaw | , Semantics of Memory Safety and Borrowing 
+ Zac Garby | , Compiler Calculation for Effectful Languages 
+ Mitchell Pickard | , Dependent Types for Compiler Calculation 
+ Former PhD students: 
+ Brandon Hewer, | Types With Extra Structure: Predicates, Equations, Composition | , 2024 
+ Martin Handley, | Efficiency Three Ways: Tested, Verified, and Formalised | , 2020 
+ Jonathan Fowler, | Narrowing in on Property-Based Testing | , 2019 
+ Jennifer Hackett, | The Worker/Wrapper Transformation | , 2017 
+ Ambrus Kaposi, | Type Theory in a Type Theory with Quotient Inductive Types | , 2016 
+ Laurence Day, | The Modular Compilation of Effects | , 2015 
+ Liyang Hu, | Compiling Concurrency Correctly | , 2012 
+ Mauro Jaskelioff, | Lifting of Operations in Modular Monadic Semantics | , 2009 
+ Catherine Hope, | href="http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf" - A Functional Semantics for Space and Time | , 2008 
+ Joel Wright, | href="http://www.cs.nott.ac.uk/Research/fop/wright-thesis.pdf" - Compiling and
+Reasoning about Exceptions and Interrupts | , 2005 
+ Paul Blampied, | href="http://www.cs.nott.ac.uk/Research/fop/blampied-thesis.pdf" - Structured
+Recursion for Non-Uniform Data-Types | , 2000 
+ Anthony Daniels, | href="http://www.cs.nott.ac.uk/Research/fop/daniels-thesis.pdf" - A
+Semantics of Functions and Behaviours | , 1999 
+ Colin Taylor, | href="http://www.cs.nott.ac.uk/Research/fop/taylor-thesis.pdf" - Formalising
+and Reasoning about Fudgets | , 1998 
+  
+ Projects 
+ Semantics-Directed Compiler Construction: From Formal Semantics to Certified Compilers | Principal investigator, EPSRC, £912,000, 2024-2027 
+ Mind the Gap: Unified Reasoning About Program Correctness and Efficiency | Principal investigator, EPSRC, £424,000, 2016-2021 
+ Reasoning About Exceptions and Interrupts | Principal investigator, EPSRC, £306,000, 2007-2010 
+ Midlands Graduate School in the Foundations of Computing Science | Principal investigator, EPSRC, £39,000, 2007-2009 
+ British Colloquium for Theoretical Computer Science | Co-investigator, EPSRC, £65,000, 2008-2010 
+ British Colloquium for Theoretical Computer Science | Co-investigator, EPSRC, £24,000, 2005-2007 
+ IST Working Group on Applied Semantics II | Site leader, £250,000, 2003-2006 
+ Concurrent Haskell | Principal investigator, Microsoft Research, £25,000, 2001-2004 
+ ESPRIT Working Group on Applied Semantics | Site leader, £190,000, 1998-2002 
+ Structured Recursive Programming | Principal investigator, EPSRC, £11,000, 1997-2000 
+ The 'mind the gap' project was featured inimpact magazine. 
+  
+ Personal 
+ href="" - I'm from Glasgow in Scotland.  After completing a BSc and PhD at the University
+of Glasgow, I spent a few years as a researcher in Gothenburg and
+Utrecht, before moving to Nottingham where I am Professor of
+Computer Science.  I'm married to the lovely Annette, and we have
+two grown up sons.  In my spare time I enjoy cars, cooking,
+board games, and restoring our house.
+Contact 
+ If you are a student or PhD applicant, please readthese notesbefore sending me an email. 
+  
+ Twitter: | @haskellhutt 
+ YouTube: | @haskellhutt 
+ Email: | graham.hutton@nottingham.ac.uk 
+ Phone: | I don't have an office phone and my university number is inactive 
+ Address: | Professor Graham Hutton 
+ School of Computer Science 
+ University of Nottingham 
+ Jubilee Campus, Wollaton Road 
+ Nottingham NG8 1BB 
+ United Kingdom
+
+3. Website of MPC_3: https://www.nsf.gov/funding/opportunities/s-stem-nsf-scholarships-science-technology-engineering-mathematics
+Website information of MPC_3:
+
+Skip to main contentAn official website of the United States government 
+ Here's how you know 
+ Here's how you knowOfficial websites use .gov 
+ A.govwebsite belongs to an official government organization in the United States. 
+ Secure .gov websites use HTTPS. 
+ Alock(LockLocked padlock) orhttps://means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. 
+ Learn about NSF's implementation of recent executive orders. 
+ SearchMenuSearchsearch 
+ Find Funding & Apply | Where to Starthref="/funding/getting-started" - For All Researchers & Educators 
+ href="/funding/early-career-researchers" - For Early-career Researchers 
+ For Postdoctoral Fellows 
+ For Graduate Students 
+ For Undergraduates 
+ For Entrepreneurs 
+ For Industry 
+ Explore FundingSearch All Opportunities 
+ By Directorate 
+ href="/funding/opportunities?sort=nsf_funding_upcoming_due_dates_DESC" - By Upcoming Due Date 
+ NSF-wide Initiatives 
+ Search Funded Projects (Awards) 
+ How to ApplyPreparing Your Proposal 
+ Submitting Your Proposal 
+ How We Make Funding Decisions 
+ Proposal & Award Policies & Procedures Guide (PAPPG) 
+ Additional Resourceshref="https://www.research.gov/" - Research.gov 
+ Grants.gov 
+ Baam.nsf.gov 
+ Our Directorates & Offices 
+ Manage Your Award | Guidance For AwardeesGetting Started 
+ Request a Change to Your Award 
+ Report Your Outcomes 
+ Proposal & Award Policies & Procedures Guide (PAPPG) 
+ Additional ResourcesWho to Contact About Your Award 
+ href="https://www.research.gov/" - Research.gov 
+ NSF Public Access Repository (PAR) 
+ Our Directorates & Offices 
+ Search Funded Projects (Awards) 
+ Focus Areas | Areas We FundArctic & Antarctic 
+ Astronomy & Space 
+ Biology 
+ Broadening Participation in STEM 
+ Chemistry 
+ Computing 
+ Earth & Environment 
+ Education & Training 
+ Engineering 
+ Facilities & Infrastructure 
+ href="/focus-areas/materials" - Materials Research 
+ Mathematics 
+ People & Society 
+ Physics 
+ href="/focus-areas/research-partnerships" - Research Partnerships 
+ Technology 
+ Explore all Focus Areas 
+ Additional ResourcesExplore Our Impacts 
+ Search Funded Projects (Awards) 
+ NSF by the Numbers 
+ Our Directorates & Offices 
+ News & Events | NewsNews & Announcements 
+ Science Matters Blog 
+ For the Press 
+ EventsUpcoming Events 
+ NSF 75th Anniversary 
+ NSF Grants Conference 
+ About | Learn About NSFOverview 
+ Our Directorates & Offices 
+ NSF & Congress 
+ Honorary Awards 
+ Visit NSF 
+ Contact Us 
+ Work With NSFCareers at NSF 
+ Contracting With NSF 
+ Partnering With NSF 
+ Additional ResourcesNational Science Board 
+ National Center for Science & Engineering Statistics (NCSES) 
+ Documents & Reports 
+ Budget, Performance & Financial Reporting 
+ NSF Scholarships in Science, Technology, Engineering, and Mathematics Program (S-STEM)View guidelines 
+ NSF 25-514View image creditHome 
+ Funding at NSF 
+ Funding Search 
+ NSF Scholarships in Science, Technology, Engineering, and Mathematics Program (S-STEM) 
+ Printthis PageToggle entire alert textImportant information about NSF’s implementation of the revised 2 CFR 
+ NSF Financial Assistance awards (grants and cooperative agreements) made on or after October 1, 2024, will be subject to the applicable set of award conditions, dated October 1, 2024, available on theNSF website. These terms and conditions are consistent with the revised guidance specified in theOMB Guidance for Federal Financial Assistancepublished in the Federal Register on April 22, 2024. 
+ Toggle entire alert textImportant information for proposers 
+ All proposals must be submitted in accordance with the requirements specified in this funding opportunity and in the NSFProposal & Award Policies & Procedures Guide (PAPPG)that is in effect for the relevant due date to which the proposal is being submitted. It is the responsibility of the proposer to ensure that the proposal meets these requirements. Submitting a proposal prior to a specified deadline does not negate this requirement. 
+ Supports institutions of higher education to fund scholarships for academically talented low-income STEM majors and to study and implement a program of activities that support their recruitment, retention and graduation. 
+ Supports institutions of higher education to fund scholarships for academically talented low-income STEM majors and to study and implement a program of activities that support their recruitment, retention and graduation. 
+ Synopsis 
+ The main goal of the S-STEM program is to enable academically talented, low-income students to pursue successful careers in promising STEM fields. Ultimately, the S-STEM program seeks to increase the number of academically promising low-income students who graduate with an S-STEM eligible degree and contribute to the American innovation economy with their STEM knowledge. Recognizing that financial aid alone cannot increase retention and graduation in STEM, the program provides awards to institutions of higher education (IHEs) not only to fund scholarships, but also to adapt, implement, and study evidence-based curricular and co-curricular[a]activities that have been shown to be effective in supporting recruitment, retention, transfer (if appropriate), student success, academic/career pathways, and graduation in STEM. 
+ To be eligible, scholars must be domestic low-income students with academic ability, talent, or potential and demonstrated unmet financial need who are enrolled in an associate, baccalaureate, or graduate degree program in an S-STEM eligible discipline. Proposers must provide an analysis that articulates the characteristics and academic needs of the population of students they are trying to serve. NSF is particularly interested in supporting the attainment of degrees in fields identified as critical needs for the Nation. It is up to the proposer to make a compelling case that such a field serves a critical need in the United States. 
+ [a]an activity at a school or college pursued in addition to the normal course of study. 
+ S-STEM Eligible Degree Programs 
+ Associate of Arts, Associate of Science, Associate of Engineering, and Associate of Applied Science 
+ Bachelor of Arts, Bachelor of Science, Bachelor of Engineering and Bachelor of Applied Science 
+ Master of Arts, Master of Science, and Master of Engineering 
+ Doctoral (Ph.D. or other comparable doctoral degree) 
+ S-STEM Eligible Disciplines 
+ Disciplinary fields in which research is funded by NSF, including technology fields associated with the S-STEM-eligible disciplines (e.g., biotechnology, chemical technology, engineering technology, information technology, etc.). 
+ The following degrees and disciplines areexcluded: 
+ Clinical degree programs, including medical degrees, nursing, veterinary medicine, pharmacy, physical therapy, and others not funded by NSF, are ineligible degrees. 
+ Programs for STEM teacher certification or licensure currently covered by the Robert Noyce Teacher Scholarship program (NOYCE) are ineligible for S-STEM funding. 
+ Business school programs that lead to Bachelor of Arts or Science in Business Administration degrees (BABA/BSBA/BBA) are not eligible for S-STEM funding. 
+ Masters and Doctoral degrees in Business Administration are also excluded. 
+ Proposers are strongly encouraged to contact Program Officers before submitting a proposal if they have questions concerning degree or disciplinary eligibility. 
+ The S-STEM program particularly encourages proposals from 2-year institutions, Minority Serving Institutions (MSIs), predominately undergraduate institutions, and urban, suburban, and rural public institutions. 
+ ExpandUpdates and announcements 
+ href="/funding/opportunities/s-stem-nsf-scholarships-science-technology-engineering-mathematics/announcements/115971" - NSF S-STEM: Reviewer Survey 2025
+February 13, 2025 
+ NSF S-STEM: FAQs Now Available 
+ February 13, 2025 
+ href="/funding/opportunities/s-stem-nsf-scholarships-science-technology-engineering-mathematics/announcements" - View more updates
+Program contacts 
+  
+ Name | Email | Phone | Organization 
+ Thomas D. Kim 
+ Lead | tkim@nsf.gov | (703) 292-4458 | EDU/DUE 
+ Michael J. Ferrara 
+ Co-Lead | mferrara@nsf.gov | (703) 292-2635 
+ Olivia S. Long 
+ Co-lead | olong@nsf.gov | (703) 292-7897 | EDU/DUE 
+ Nasser Alaraje | nalaraje@nsf.gov | (703) 292-8063 
+ Karen Crosby | kcrosby@nsf.gov | (703) 292-2124 | EDU/DUE 
+ Christine Delahanty | cdelahan@nsf.gov | (703) 292-8492 | EDU/DUE 
+ Connie K. Della-Piana | cdellapi@nsf.gov | (703) 292-5309 
+ Edgar Fuller | efuller@nsf.gov | (703) 292-7210 | EDU/DUE 
+ Abiodun Ilumoka | ailumoka@nsf.gov | (703) 292-2703 
+ Jennifer E. Lewis | jenlewis@nsf.gov | (703) 292-7340 | EDU/DUE 
+ Lynnette D. Madsen | lmadsen@nsf.gov | (703) 292-4936 | EDU/DUE 
+ Suazette R. Mooring | smooring@nsf.gov | (703) 292-2311 | EDU/DUE 
+ Jeffrey Osborn | jeosborn@nsf.gov | (703) 292-2277 | EDU/DUE 
+ Kalyn Owens | kowens@nsf.gov | (703) 292-4615 
+ Olga Pierrakos | olpierra@nsf.gov | (703) 292-7253 | EDU/DUE 
+ Monisha Pulimood | spulimoo@nsf.gov | (703) 292-4257 | EDU/DUE 
+ Josephine J. Rodriguez | jrodrigu@nsf.gov | (703)292-2986 | EDU/DUE 
+ Lulu Sun | lsun@nsf.gov | (703) 292-7260 | EDU/DUE 
+ Paul Tymann | ptymann@nsf.gov | (703) 292-2832 
+ Gordon E. Uno | geuno@nsf.gov | (703) 292-2574 | EDU/DUE 
+ ExpandProgram events 
+ Past 
+ February 29, 2024 - S-STEM: Office Hours 
+ February 23, 2024 - S-STEM: Office Hours 
+ February 13, 2024 - S-STEM: Office Hours 
+ February 8, 2024 - S-STEM: Office Hours 
+ February 1, 2023 - S-STEM: Proposal Preparation Webinar Sessions 
+ January 31, 2023 - S-STEM: Proposal Preparation Webinar Sessions 
+ January 30, 2023 - S-STEM: Proposal Preparation Webinar Sessions 
+ January 26, 2023 - S-STEM: Proposal Preparation Webinar Sessions 
+ Awards made through this program 
+ Browse projects funded by this programMap of recent awards made through this programOrganization(s) 
+ Directorate for STEM Education (EDU) 
+ Division of Undergraduate Education (EDU/DUE) 
+ Upcoming due dates 
+ Full proposal 
+ 2026 
+ March 3 2026- Deadline date 
+ First Tuesday in March, Annually Thereafter 
+ Due by 5pm submitting organization's local time 
+ Program guidelines 
+ Award information 
+ Awards for Track 1 (Institutional Capacity Building) projects may not exceed $2,000,000 total for a maximum duration of 6 years. 
+ Awards for Track 2 (Implementation Projects) projects may not exceed $2,000,000 total for a maximum duration of 6 years. 
+ Awards for Track 3 (Inter-institutional Consortia) projects may not exceed $5,000,000 total for a maximum duration of 6 years. 
+ Estimated number of awards 
+ 40 to 60 
+ Estimated number of awards description 
+ -subject to availability of funds. 
+ Proposals may only be submitted by certain types of organizations. Please see solicitation for details. 
+ Limit on number of proposals per organization 
+ 2 
+ Limit on number of proposals per organization description 
+ -For a given S-STEM deadline, an institution may submit up to two proposals in which it will be directly involved in providing scholarships. Multiple proposals from an institution must not overlap with regard to S-STEM eligible disciplines. See Additional Eligibility Information below for more details (see IV. Eligibility Information). 
+ Institutions with a current S-STEM award should wait at least until the end of the third year of execution of their current award before submitting a new Track 2 or Track 3 S-STEM proposal focused on students pursuing degrees in the same discipline(s). 
+ There is additional eligibility information. Please see solicitation for details. 
+ Review full program guidelines and learn how to submit a proposal in the latest solicitation.Read the solicitationNSF 25-514Share 
+ Share on FacebookShare on X (formerly known as Twitter)Share on LinkedInEmailPublished: 
+ December 2, 2024TopImage credits & captions on this page 
+ Credit: National Science Foundation 
+ 2415 Eisenhower Ave Alexandria, VA 22314 
+ (703) 292-5111(link is a phone number) 
+ href="https://service.govdelivery.com/accounts/USNSF/subscriber/new?qsp=823" - Sign up for email updates
+Footer 
+ About Us | About NSF 
+ Careers 
+ Our Directorates & Offices 
+ National Science Board 
+ Contact Us 
+ What's New | News & Announcements 
+ Events 
+ Science Matters Blog 
+ Information For | Funding Seekers 
+ NSF Awardees 
+ Congress 
+ Media 
+ Educators 
+ Panelists 
+ Resources | Documents & Reports 
+ Budget, Performance & Financial Reporting 
+ Public Access 
+ Stopping Harassment 
+ href="/research-security" - Research Security 
+ Scientific Integrity 
+ href="https://www.research.gov/research-web/" - Research.gov 
+ Required Policy Links 
+ Vulnerability disclosure 
+ Inspector General 
+ Privacy 
+ FOIA 
+ No FEAR Act 
+ USA.gov 
+ Accessibility 
+ Plain language
+
+4. Website of MPC_3: https://archimendes.com/further/
+Website information of MPC_3:
+
+Search 
+ Alexandra Mendes 
+ Alexandra Mendes 
+ Home 
+ Projects 
+ Publications 
+ Teaching 
+ Contact 
+ href="/opportunities" - Research Opportunities 
+ Funded Projects & Service 
+ Selected Experience 
+ Selected Projects 
+ ENACTEST: European Innovation Alliance for Testing Education | (2022 - 2025) – Research Team Member 
+ PassCert: Exploring the Impact of Formal Verification on the Adoption of Password Security Software | (2021 - 2022) – Research Team Member | CMU Portugal Exploratory Research Project funded by FCT under contract CMU/TIC/0006/2019 (€69,994) 
+ Cloud Computing Competence Centre, in Covilhã, Portugal (2019-Feb 2020) | Ref. WP4.1: Use and impact of cloud computing on public regional and local administration – Scientific Leader (€51,000) 
+ Ref. WP4.2: Use and impact of cloud computing in the social sector - Research Team Member (€51,000) 
+ Ref. WP4.4: Security services for public clouds in the context of public administration - Research Team Member (€51,000) 
+ Data Automation for Supplier Information Management and Supplier Contract Management (2017 - 2018) - Academic Lead | Knowledge Exchange Internship co-funded by Innovate Tees Valley, European Regional Development Fund (ERDF) (approximately £20,000) 
+ Review: an Innovative Intelligent Evidence Exploration System (Jan 2015-Sept 2017) - Research Team Member | Knowledge Transfer Partnership co-funded by Innovate UK (£147,354) 
+ MathIS: Reinvigorating Mathematics for the Information Society} (2009-2012) - Research Team Member | Funded by FCT under contract PTDC/EIA/73252/2006 (€54,000) 
+ GORDA: Open Replication of Database (2004-2005) - Research Team Member | Funded by the European Community under the Sixth European Union Framework Programme for Research and Technological Development under contract 004758 (€1,250,000), thematic priority Information Society Technologies 
+ CAMILA project has been funded by JNICT contract Ref. 169/90. 
+ Selected Service 
+ Program Committee Member 
+ ICST 2024, 2025 | - IEEE International Conference on Software Testing, Verification and Validation 
+ ICSE 2024 | - IEEE/ACM International Conference on Software Engineering 
+ PADL 2024 | - International Symposium on Practical Aspects of Declarative Languages – Co-located with POPL 2024 
+ FMTea 2019, 2023, 2024 | - Formal Methods Teaching Workshop and Tutorial – Event affiliated with FM 2019, 2023, 2024 
+ LEARNER 2023, 2024 | - International Workshop on evaLuation and assEssment in softwARe eNgineers’ Education and tRaining Co-located EASE 2023, 2024 
+ SOFT-PT, | INForum 2022, 2023, 2024 | - INForum — Simpósio de Informática) 
+ SPLASH-E 2023 | – Co-located with SPLASH 2023 
+ A-TEST 2021, 2022, 2023 | - Workshop on Automating TEST case Design, Selection and Evaluation – Co-located ESEC/FSE 2021, 2022, and ASE 2023 
+ AIST 2023 | - International Workshop on Artificial Intelligence in Software Testing – co-located with ICST 2023 
+ PhD-iFM’22 | - PhD Symposium at iFM 2022 
+ RSDA 2021, 2022 | - IEEE International Workshop on Reliability and Security Data Analysis – Co-located ISSRE 2021, 2022 
+ ISS 2016, 2018, 2019 | - ACM Interactive Surfaces and Spaces 
+ Journal Editorial Board 
+ Proceedings of the ACM on Human-Computer Interaction – Interactive Surfaces and Spaces, July Round, 2022 ( | PACMHCI ISS | ) 
+ Proceedings of the ACM on Human-Computer Interaction – Interactive Surfaces and Spaces, February Round, 2022 ( | PACMHCI ISS | ) 
+ Proceedings of the ACM on Human-Computer Interaction – Interactive Surfaces and Spaces, Summer Round, 2021 ( | PACMHCI ISS | ) 
+ Organization of Technical-Scientific Events 
+ Proceedings Chair | : International Conference on the Quality of Information and Communications Technology 2024 ( | QUATIC 2024 | ) 
+ Steering Committee | : International Workshop on Artificial Intelligence in Software Testing ( | AIST 2023, 2024 | ) – Co-located with ICST 
+ Organizer | : International Workshop on Artificial Intelligence in Software Testing ( | AIST 2021, 2022, 2023, 2024 | ) – Co-located ICST 
+ Chair | : International Workshop on Artificial Intelligence in Software Testing ( | AIST 2021, 2022 | ) – Co-located with ICST 
+ Organizer | and | Chair | : Formal Methods Teaching Workshop and Tutorial ( | FMTea21 | ) – affiliated with FM 2021 
+ Organizer | : Formal Methods Teaching Workshop and Tutorial ( | FMTea19 | ), 2019, event affiliated with FM 2019, 3rd World Congress on Formal Methods 
+ Organizer | : of the Turing-Tape Games competition, an official event of the Alan Turing Year celebrations (2012) 
+ Journal and Conference Reviewer 
+ International Symposium on Formal Methods ( | FM 2019, 2024 | ) 
+ Expert Systems With Applications Journal, Elsevier, 2023 
+ Journal of Logical and Algebraic Methods in Programming ( | JLAMP 2015, 2022 | ), Elsevier 
+ ACM Technical Symposium on Computing Science Education ( | SIGCSE 2017, 2018, 2019, 2020, 2021 | ) 
+ ACM International Conference on Tangible, Embedded and Embodied Interaction ( | TEI 2021 | ) 
+ ACM | CHI PLAY 2018, 2019, 2020, 2021 
+ International Symposium on Wearable Computers 2020 ( | ISWC 2020 | ) 
+ ACM Symposium on Virtual Reality Software and Technology 2020 ( | VRST 2020 | ) 
+ 22nd ACM International Conference on Multimodal Interaction ( | ICMI 2020 | ) 
+ International Conference on Knowledge Capture 2019 ( | K-Cap 2019 | ) 
+ ACM Interactive Surfaces and Spaces ( | ISS 2019 | ) 
+ Formal Methods Teaching Workshop and Tutorial ( | FMTea19 | ) 
+ 13th International Conference on Mathematics of Program Construction ( | MPC 2019 | ) 
+ 21st ACM International Conference on Multimodal Interaction ( | ICMI 2019 | ) 
+ 17th IFIP TC.13 International Conference on Human-Computer Interaction ( | INTERACT 2019 | ) 
+ 31st International Florida Artificial Intelligence Research Society Conference ( | FLAIRS-31 | ), 2018 
+ Journal of Science of Computer Programming ( | SCP 2017 | ) 
+ ACM Interactive Surfaces and Spaces ( | ISS 2016, 2018 | ) 
+ Brazilian Symposium on Programming Languages ( | SBLP 2015, 2016, 2018, 2019 | ) 
+ © 2019—2024 Alexandra Mendes. All opinions are personal and do not necessarily represent the entities I am affiliated with. · Powered by theAcademic themeforHugo. 
+ Cite 
+ × 
+ CopyDownload
+

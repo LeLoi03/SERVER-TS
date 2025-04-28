@@ -1,0 +1,685 @@
+Conference full name: International Symposium on Algorithms and Experiments for  Wireless Networks (Algosensors)
+
+1. Website of Algosensors_3: https://algo-conference.org/2025/algowin/
+Website information of Algosensors_3:
+
+Skip to contenthref="https://algo-conference.org/2025" - ALGO2025
+href="http://algo-conference.org/2025" - HomeHome 
+ href="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 
+ href="https://algo-conference.org/2025/atmos/" - ATMOS 
+ href="https://algo-conference.org/2025/ipec/" - IPEC 
+ href="https://algo-conference.org/2025/esa/" - ESA 
+ href="https://algo-conference.org/2025/waoa/" - WAOA 
+ href="https://algo-conference.org/2025/local-info/" - Local Info 
+ ALGOWIN 
+ 2025 
+ Scope 
+ TheInternational Symposium on Algorithmics of Wireless Networks(ALGOWIN), previously known as ALGOSENSORS, is an international forum dedicated to the algorithmic aspects of wireless networks. It covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots, and drones. The focus is on the design and analysis of algorithms, models of computation, graph and network algorithms, and experimental analysis. 
+ ALGOWIN 2025 will be held at the Faculty of Physics, University of Warsaw, Poland. It will be part ofhref="http://algo-conference.org/2025" - ALGO 2025
+, which also hostshref="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD
+,href="https://algo-conference.org/2025/atmos/" - ATMOS
+,href="https://algo-conference.org/2025/esa/" - ESA
+,href="https://algo-conference.org/2025/ipec/" - IPEC
+andhref="https://algo-conference.org/2025/waoa/" - WAOA
+. 
+ Important Dates 
+ Submission deadline: June 6, 2025 (AoE) 
+ Notification: August 1, 2025 
+ Camera-ready due: August 29, 2025 
+ Conference: September 18-19, 2025 
+ Invited Speaker 
+ Thomas Erlebach, University of Durham, UK 
+ Call for Papers 
+ Original research contributions are solicited related to diverse algorithmic aspects of sensor networks, wireless networks, broadly construed, as well as distributed robotics, including the theoretical, experimental and application perspectives. 
+ Topics 
+ Topics of interest include, but are not limited to: 
+ Ad Hoc Networks 
+ Autonomous Mobile Robots 
+ Communication Protocols 
+ Complexity and Computability 
+ Computational Models 
+ Data Aggregation and Fusion 
+ Distributed Aspects of Group Search 
+ Dynamic Networks 
+ Temporal Graphs 
+ Energy Management, Power Saving Schemes 
+ Fault Tolerance and Dependability 
+ Game Theoretic Aspects 
+ Infrastructure Discovery 
+ Internet of Things 
+ Localization 
+ Medium Access Control 
+ Mobility and Dynamics 
+ Obstacle Avoidance 
+ Pattern Formation 
+ Performance Evaluation, Experimental Analysis 
+ Population Protocols, Swarm Computing 
+ Resource Efficiency 
+ RFID Algorithms 
+ Routing and Data Propagation 
+ Self-stabilization, Self-* Properties 
+ Sensor Networks 
+ Systems and Testbeds 
+ Time Synchronization 
+ Topology Control 
+ Tracking 
+ Unmanned Autonomous Entities 
+ Virtual Infrastructures 
+ Committees 
+ Program Committee 
+ Othon Michail | , University of Liverpool, UK (chair) 
+ Giuseppe Prencipe | , University of Pisa, Italy (chair) 
+ Davide Bilò, University of L’Aquila, Italy 
+ Paolo Boldi, University of Milan, Italy 
+ Quentin Bramas, University of Strasbourg, France 
+ Arnaud Casteigts, University of Geneva, Switzerland 
+ Shantanu Das, Aix-Marseille University, France 
+ Giuseppe Antonio Di Luna, University of Rome Sapienza, Italy 
+ Shlomi Dolev, Ben-Gurion University of the Negev, Israel 
+ Thomas Erlebach, Durham University, UK 
+ Chryssis Georgiou, University of Cyprus, Cyprus 
+ Olga Goussevskaia, Federal University of Minas Gerais (UFMG), Brazil 
+ Ralf Klasing, CNRS and University of Bordeaux, France 
+ Evangelos Kranakis, Carleton University, Canada 
+ George Mertzios, Durham University, UK 
+ Nils Morawietz, Friedrich Schiller University Jena, Germany 
+ Alfredo Navarra, University of Perugia, Italy 
+ Lorenzo Palazzetti, University of Perugia, Italy 
+ Christoforos Raptopoulos, University of Patras, Greece 
+ Christian Scheideler, Paderborn University, Germany 
+ Christian Schindelhauer, University of Freiburg, Germany 
+ George Skretas, Hasso Plattner Institute, Germany 
+ Paul Spirakis, University of Liverpool, UK 
+ Tami Tamir, Reichman University, Israel 
+ Sébastien Tixeuil, Sorbonne University, France 
+ Prudence Wong, University of Liverpool, UK 
+ STEERING Committee 
+ Sotiris Nikoletseas, University of Patras and CTI, Greece (Chair) 
+ Jie Gao, Rutgers University, USA 
+ Magnús M. Halldórsson, Reykjavik University, Iceland 
+ Bhaskar Krishnamachari, University of Southern California, USA 
+ P. R. Kumar, Texas A&M University, USA 
+ José Rolim, University of Geneva, Switzerland 
+ Christian Scheideler, Paderborn University, Germany 
+ Paul Spirakis, University of Liverpool, UK 
+ Proceedings 
+ The conference proceedings will be published in the Springer “Lecture Notes in Computer Science” series after the conference (expected October 2025). 
+ Special Issue 
+ Selected papers will be invited to a special issue of the Theoretical Computer Science journal. 
+ Awards 
+ Awards will be given to the best paper and the best student paper. The awards are kindly sponsored by Springer. To be eligible for the best student paper award, at least one of the paper authors must be a full-time student at the time of submission, and the student(s) must have made a significant contribution to the paper. The program committee may decline to make these awards or may split them. 
+ Paper Submission 
+ Papers are to be submitted electronically using thehref="https://easychair.org/conferences/?conf=algowin2025" - EasyChair server
+. The submissions must contain original results that have not already been published and are not concurrently submitted to a journal or conference with published proceedings. By submitting a paper, the authors acknowledge that in case of acceptance at least one of the authors will register for ALGO/ALGOWIN 2025 and present the paper. 
+ Submissions must be in the form of a single pdf file prepared using the LNCS latex templates and style files (available, together with Springer’s authors’ guidelines, fromhttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines). Springer’s proceedings LaTeX templates are also available on Overleaf (https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WsdHOy5uZpg). 
+ Each submission should consist of the main part of the paper, not exceeding 12 pages (including the title page and excluding the references), plus an optional clearly marked appendix (to be read at the discretion of the program committee). Any figure pertaining to the main part of the paper should be included therein (within the 12 page limit). The first page must include an indication of whether the paper is eligible for the best student paper award. 
+ href="https://algo-conference.org/2025" - ALGO2025
+Imprint 
+ href="https://algo-conference.org/2025/privacy-policy/" - Privacy Policy
+Powered byWordPress
+
+2. Website of Algosensors_3: https://www.algosensors-symposium.org/
+Website information of Algosensors_3:
+
+Skip to contenthref="https://www.algosensors-symposium.org/" - International Symposium on Algorithmics of Wireless Networks
+Menu and widgetshref="https://www.algosensors-symposium.org/?p=160" - ALGOWIN 2025 
+ ALGOWIN 2024 
+ href="https://algo-conference.org/2023/algosensors/" - ALGOWIN 2023 
+ href="https://algo-conference.org/2022/algosensors/" - ALGOSENSORS 2022 
+ href="http://algo2021.tecnico.ulisboa.pt/ALGOSENSORS2021/index.html" - ALGOSENSORS 2021 
+ href="http://algo2020.di.unipi.it" - ALGOSENSORS 2020 
+ href="https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview" - ALGOSENSORS 2019 
+ href="http://algo2018.hiit.fi/algosensors/" - ALGOSENSORS 2018 
+ href="https://algo2017.ac.tuwien.ac.at/algosensors/" - ALGOSENSORS 2017 
+ href="http://conferences.au.dk/algo16/algosensors/" - ALGOSENSORS 2016 
+ href="http://algo2015.upatras.gr/algosensors/" - ALGOSENSORS 2015 
+ href="https://sites.google.com/site/algosensors2014/" - ALGOSENSORS 2014 
+ href="http://www.di.unipi.it/~vigliett/algosensors2013/" - ALGOSENSORS 2013 
+ href="https://sites.google.com/site/algosensors2012/home" - ALGOSENSORS 2012 
+ href="https://www.algosensors-symposium.org/?page_id=15" - ALGOSENSORS 2011 
+ href="https://www.algosensors-symposium.org/?page_id=32" - ALGOSENSORS 2010 
+ href="https://www.algosensors-symposium.org/?page_id=36" - ALGOSENSORS 2009 
+ href="https://www.algosensors-symposium.org/?page_id=38" - ALGOSENSORS 2008 
+ href="https://algosensors2007.im.pwr.wroc.pl/html/index.php" - ALGOSENSORS 2007 
+ href="https://www.algosensors-symposium.org/?page_id=40" - ALGOSENSORS 2006 
+ href="https://www.algosensors-symposium.org/?page_id=46" - ALGOSENSORS 2004 
+ Steering Committee 
+ href="https://www.algosensors-symposium.org/?page_id=54" - Sponsors 
+ href="https://www.algosensors-symposium.org/?p=160" - ALGOWIN 2025 
+ ALGOWIN 2024 
+ href="https://algo-conference.org/2023/algosensors/" - ALGOWIN 2023 
+ href="https://algo-conference.org/2022/algosensors/" - ALGOSENSORS 2022 
+ href="http://algo2021.tecnico.ulisboa.pt/ALGOSENSORS2021/index.html" - ALGOSENSORS 2021 
+ href="http://algo2020.di.unipi.it" - ALGOSENSORS 2020 
+ href="https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview" - ALGOSENSORS 2019 
+ href="http://algo2018.hiit.fi/algosensors/" - ALGOSENSORS 2018 
+ href="https://algo2017.ac.tuwien.ac.at/algosensors/" - ALGOSENSORS 2017 
+ href="http://conferences.au.dk/algo16/algosensors/" - ALGOSENSORS 2016 
+ href="http://algo2015.upatras.gr/algosensors/" - ALGOSENSORS 2015 
+ href="https://sites.google.com/site/algosensors2014/" - ALGOSENSORS 2014 
+ href="http://www.di.unipi.it/~vigliett/algosensors2013/" - ALGOSENSORS 2013 
+ href="https://sites.google.com/site/algosensors2012/home" - ALGOSENSORS 2012 
+ href="https://www.algosensors-symposium.org/?page_id=15" - ALGOSENSORS 2011 
+ href="https://www.algosensors-symposium.org/?page_id=32" - ALGOSENSORS 2010 
+ href="https://www.algosensors-symposium.org/?page_id=36" - ALGOSENSORS 2009 
+ href="https://www.algosensors-symposium.org/?page_id=38" - ALGOSENSORS 2008 
+ href="https://algosensors2007.im.pwr.wroc.pl/html/index.php" - ALGOSENSORS 2007 
+ href="https://www.algosensors-symposium.org/?page_id=40" - ALGOSENSORS 2006 
+ href="https://www.algosensors-symposium.org/?page_id=46" - ALGOSENSORS 2004 
+ Steering Committee 
+ href="https://www.algosensors-symposium.org/?page_id=54" - Sponsors 
+ Search for: 
+ Recent Posts 
+ href="https://www.algosensors-symposium.org/?p=160" - ALGOWIN 2025 
+ href="https://www.algosensors-symposium.org/?p=154" - ALGOWIN 2024 
+ href="https://www.algosensors-symposium.org/?p=134" - ALGOWIN 2023 
+ href="https://www.algosensors-symposium.org/?p=124" - International Symposium on Algorithmics of Wireless Networks 2022 
+ href="https://www.algosensors-symposium.org/?p=117" - International Symposium on Algorithmics of Wireless Networks 2021 
+ Archives 
+ href="https://www.algosensors-symposium.org/?m=202501" - January 2025 
+ href="https://www.algosensors-symposium.org/?m=202412" - December 2024 
+ href="https://www.algosensors-symposium.org/?m=202301" - January 2023 
+ href="https://www.algosensors-symposium.org/?m=202203" - March 2022 
+ href="https://www.algosensors-symposium.org/?m=202106" - June 2021 
+ href="https://www.algosensors-symposium.org/?m=202002" - February 2020 
+ href="https://www.algosensors-symposium.org/?m=201903" - March 2019 
+ href="https://www.algosensors-symposium.org/?m=201803" - March 2018 
+ href="https://www.algosensors-symposium.org/?m=201802" - February 2018 
+ href="https://www.algosensors-symposium.org/?attachment_id=23" - 
+href="https://www.algosensors-symposium.org/?attachment_id=24" - 
+href="https://www.algosensors-symposium.org/?attachment_id=28" - 
+href="https://www.algosensors-symposium.org/?attachment_id=25" - 
+href="https://www.algosensors-symposium.org/?attachment_id=27" - 
+href="https://www.algosensors-symposium.org/?attachment_id=26" - 
+href="https://www.algosensors-symposium.org/?p=160" - ALGOWIN 2025
+International Symposium on Algorithmics of Wireless Networks 2025 
+ The International Symposium on Algorithmics of Wireless Networks (ALGOSENSORS)<href="http://www.algosensors-symposium.org/" - http://www.algosensors-symposium.org/
+> is an international symposium dedicated to the algorithmic aspects of wireless networks. Originally focused on sensor networks, it now covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots. The focus is on the design and analysis of algorithms, models of computation, and experimental analysis. ALGOSENSORS 2025 will be held September 15-19, 2025, in Warsaw, Poland. It will be part of ALGO 2025, link:href="https://algo-conference.org/2025/algowin" - https://algo-conference.org/2025/algowin
+Chairs: 
+ Othon Michail | , University of Liverpool, UK 
+ Giuseppe Prencipe | , University of Pisa, Italy. 
+ Posted onhref="https://www.algosensors-symposium.org/?p=160" - January 15, 2025January 15, 2025
+href="https://www.algosensors-symposium.org/?p=154" - ALGOWIN 2024
+International Symposium on Algorithmics of Wireless Networks 2024 
+ TheInternational Symposium on Algorithmics of Wireless Networkshref="http://www.algosensors-symposium.org/" - (ALGOSENSORS)
+is an international symposium dedicated to the algorithmic aspects of wireless networks. Originally focused on sensor networks, it now covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots. The focus is on the design and analysis of algorithms, models of computation, and experimental analysis. ALGOSENSORS 2023 will be held in Amsterdam, the Netherlands. It will be part ofALGO 2024, which also hostsALGOCLOUD,ATMOS,ESA,IPECandWAOA. link:https://algo-conference.org/2024/algowin/ 
+ Note: Starting from 2023 the event adopts a broader scope of wireless networks in general and its new acronym becomes ALGOWIN. 
+ Chairs: 
+ Quentin Bramas | , University of Strasbourg, France 
+ Arnaud Casteigts | , University of Geneva, Switzerland 
+ Kitty Meeks | , University of Glasgow, Scotland 
+ Posted onhref="https://www.algosensors-symposium.org/?p=154" - December 18, 2024December 18, 2024
+href="https://www.algosensors-symposium.org/?p=134" - ALGOWIN 2023
+International Symposium on Algorithmics of Wireless Networks 2023 
+ TheInternational Symposium on Algorithmics of Wireless Networkshref="http://www.algosensors-symposium.org/" - (ALGOSENSORS)
+is an international symposium dedicated to the algorithmic aspects of wireless networks. Originally focused on sensor networks, it now covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots. The focus is on the design and analysis of algorithms, models of computation, and experimental analysis. ALGOSENSORS 2023 will be held in Amsterdam, the Netherlands. It will be part ofALGO 2023, which also hostsALGOCLOUD,ATMOS,ESA,IPECandWAOA. link:https://algo-conference.org/2023/algowin/ 
+ Note: Starting from 2023 the event adopts a broader scope of wireless networks in general and its new acronym becomes ALGOWIN. 
+ Chairs: 
+ Evangelos Kranakis | , Carleton University, Canada 
+ Konstantinos Georgiou | , Toronto Metropolitan University, Canada 
+ Posted onhref="https://www.algosensors-symposium.org/?p=134" - January 17, 2023December 18, 2024
+href="https://www.algosensors-symposium.org/?p=124" - International Symposium on Algorithmics of Wireless Networks 2022
+International Symposium on Algorithmics of Wireless Networks 2022 will be held September 5, 2022 – September 9, 2022 in Potsdam, Germany. It will be part of ALGO 2022. 
+ Chairs: 
+ Thomas Erlebach | , Durham University, UK 
+ Michael Segal | , Ben-Gurion University of the Negev, Israel 
+ link:href="https://algo-conference.org/2022/algosensors/" - https://algo2022.eu/algosensors/
+Posted onhref="https://www.algosensors-symposium.org/?p=124" - March 31, 2022January 17, 2023
+href="https://www.algosensors-symposium.org/?p=117" - International Symposium on Algorithmics of Wireless Networks 2021
+International Symposium on Algorithmics of Wireless Networks 2021 will be held on September 9-10, 2021 in Lisbon, Portugal. It will be part of ALGO 2021. 
+ Chairs: 
+ Leszek Gąsieniec | , University of Liverpool, UK 
+ Ralf Klasing | , CNRS and University of Bordeaux, France 
+ Tomasz Radzik | , King’s College London, UK 
+ link: 
+ href="http://algo2021.tecnico.ulisboa.pt/ALGOSENSORS2021/index.html" - http://algo2021.tecnico.ulisboa.pt/ALGOSENSORS2021/index.html
+Posted onhref="https://www.algosensors-symposium.org/?p=117" - June 3, 2021June 9, 2021
+href="https://www.algosensors-symposium.org/?p=108" - ALGOSENSORS 2020
+ALGOSENSORS 2020 will be held on September 7-11, 2020 in Pisa, Italy. It will be part of ALGO 2020. 
+ PC Chairs: 
+ Amitabha Bagchi, IIT Delhi (Algorithms and Theory) 
+ Alfredo Navarra, University of Perugia (Distributed and Mobile) 
+ Cristina M. Pinotti, University of Perugia (Wireless Sensor Networks and Emergent applications) 
+ link: 
+ http://algo2020.di.unipi.it 
+ Posted onhref="https://www.algosensors-symposium.org/?p=108" - February 3, 2020February 3, 2020
+href="https://www.algosensors-symposium.org/?p=100" - ALGOSENSORS 2019
+ALGOSENSORS 2019 will be held on September 12-13, 2019 in Munich, Germany. It will be part of ALGO 2019, which also hosts ALGOCLOUD, ATMOS, ESA, IPEC, and WAOA. 
+ PC Chairs: 
+ Falko Dressler, Paderborn University (Experiments and Applications Track) 
+ Christian Scheideler, Paderborn University (Algorithms and Theory Track) 
+ link: 
+ href="https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview" - https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview
+Posted onhref="https://www.algosensors-symposium.org/?p=100" - March 26, 2019April 16, 2019
+href="https://www.algosensors-symposium.org/?p=95" - AlgoSensors 2018 – Call for Papers
+====================================================== 
+ AlgoSensors 2018 Call for Papers 
+ ====================================================== 
+ 14th International Symposium on 
+ Algorithms and Experiments for Wireless Networks 
+ August 23-24, 2018 
+ Helsinki, Finland 
+ ====================================================== 
+ Important Dates: 
+ – Abstract Submission :May 30, 2018 
+ – Submission:June 3, 2018 
+ – Notification:July 12, 2018 
+ – Camera Ready:July 31, 2018 
+ ====================================================== 
+ AlgoSensors is an international symposium dedicated to the algorithmic aspects of wireless networks. Originally focused on sensor networks, it now covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots. The focus is on the design and analysis of algorithms, models of computation, and experimental analysis. 
+ AlgoSensors 2018 will be part of ALGO 2018, which also hosts AlgoCloud, ATMOS, ESA, IPEC, WABI, and WAOA. 
+ Submissions are sought in all areas of wireless networking, broadly construed, including both theoretical and experimental perspectives. This year AlgoSensors has two tracks: 
+ – Algorithms & Theory 
+ – Experiments & Applications 
+ Each paper may be submitted only to one track. 
+ Topics of interest include, but are not limited to: 
+ – Ad Hoc Networks 
+ – Algorithms 
+ – Approximation Algorithms 
+ – Communication Protocols 
+ – Complexity and Computability 
+ – Computational Models 
+ – Cryptography, Security and Trust 
+ – Cyber Physical Systems 
+ – Data Aggregation and Fusion 
+ – Deployment 
+ – Energy Management 
+ – Error Correcting Codes 
+ – Experimental Analysis 
+ – Fault Tolerance and Dependability 
+ – Game Theoretic Aspects 
+ – Infrastructure Discovery 
+ – Internet of Things (IoT) 
+ – Localization 
+ – Medium Access Control 
+ – Mobility & Dynamics 
+ – Obstacle Avoidance 
+ – Pattern Formation 
+ – Performance Evaluation 
+ – Power Saving Schemes 
+ – Randomized Algorithms 
+ – Resource Efficiency 
+ – RFID Algorithms 
+ – Routing and Data Propagation 
+ – Self-stabilization, Self-* Properties 
+ – Sensor Networks 
+ – Swarm Computing 
+ – Systems and Testbeds 
+ – Time Synchronization 
+ – Topology Control 
+ – Tracking 
+ – Virtual Infrastructures 
+ – Wireless Networks 
+ Submission guidelines: 
+ Papers are to be submitted electronically using the EasyChair server. Original research papers must contain results that have not previously appeared and have not been concurrently submitted to a journal or conference with published proceedings. Each paper should select one of the two tracks (Algorithms & Theory or Experiments & Applications) for submission. Authors need to ensure that for each accepted paper at least one author will register and attend the symposium. 
+ Submissions are limited to twelve (12) single-column pages in the LNCS format. This includes figures, but excludes references and an optional appendix (to be read at the program committee’s discretion). Papers will be published by LNCS after the conference. 
+ Awards: 
+ The best paper from each track will be given a Best Paper Award. 
+ ====================================================== 
+ Conference Committee: 
+ Program Chair: Seth Gilbert (NUS) 
+ Program Chair: Danny Hughes (KU Leuven) 
+ Program Chair: Bhaskar Krishnamachari (University of Southern California) 
+ Publicity Chair: Theofanis Raptis (CNR) 
+ Local Co-Chair: Parinya Chalermsook (Aalto University) 
+ Local Co-Chair: Petteri Kaski (Aalto University) 
+ Local Co-Chair: Jukka Suomela (Aalto University) 
+ Posted onhref="https://www.algosensors-symposium.org/?p=95" - March 22, 2018
+href="https://www.algosensors-symposium.org/?p=1" - ALGOSENSORS 2018
+The new ALGOSENSORS 2018 symposium has just been announced. 
+ More information at the link below: 
+ href="http://algo2018.hiit.fi/algosensors/" - http://algo2018.hiit.fi/algosensors/
+Posted onhref="https://www.algosensors-symposium.org/?p=1" - February 27, 2018February 27, 2018
+Proudly powered by WordPress
+
+3. Website of Algosensors_3: https://algo-conference.org/2025/algowin/
+Website information of Algosensors_3:
+
+Skip to contenthref="https://algo-conference.org/2025" - ALGO2025
+href="http://algo-conference.org/2025" - HomeHome 
+ href="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD 
+ href="https://algo-conference.org/2025/algowin" - ALGOWIN 
+ href="https://algo-conference.org/2025/atmos/" - ATMOS 
+ href="https://algo-conference.org/2025/ipec/" - IPEC 
+ href="https://algo-conference.org/2025/esa/" - ESA 
+ href="https://algo-conference.org/2025/waoa/" - WAOA 
+ href="https://algo-conference.org/2025/local-info/" - Local Info 
+ ALGOWIN 
+ 2025 
+ Scope 
+ TheInternational Symposium on Algorithmics of Wireless Networks(ALGOWIN), previously known as ALGOSENSORS, is an international forum dedicated to the algorithmic aspects of wireless networks. It covers algorithmic issues arising in wireless networks of all types of computational entities, static or mobile, including sensor networks, sensor-actuator networks, autonomous robots, and drones. The focus is on the design and analysis of algorithms, models of computation, graph and network algorithms, and experimental analysis. 
+ ALGOWIN 2025 will be held at the Faculty of Physics, University of Warsaw, Poland. It will be part ofhref="http://algo-conference.org/2025" - ALGO 2025
+, which also hostshref="https://algo-conference.org/2025/algocloud/" - ALGOCLOUD
+,href="https://algo-conference.org/2025/atmos/" - ATMOS
+,href="https://algo-conference.org/2025/esa/" - ESA
+,href="https://algo-conference.org/2025/ipec/" - IPEC
+andhref="https://algo-conference.org/2025/waoa/" - WAOA
+. 
+ Important Dates 
+ Submission deadline: June 6, 2025 (AoE) 
+ Notification: August 1, 2025 
+ Camera-ready due: August 29, 2025 
+ Conference: September 18-19, 2025 
+ Invited Speaker 
+ Thomas Erlebach, University of Durham, UK 
+ Call for Papers 
+ Original research contributions are solicited related to diverse algorithmic aspects of sensor networks, wireless networks, broadly construed, as well as distributed robotics, including the theoretical, experimental and application perspectives. 
+ Topics 
+ Topics of interest include, but are not limited to: 
+ Ad Hoc Networks 
+ Autonomous Mobile Robots 
+ Communication Protocols 
+ Complexity and Computability 
+ Computational Models 
+ Data Aggregation and Fusion 
+ Distributed Aspects of Group Search 
+ Dynamic Networks 
+ Temporal Graphs 
+ Energy Management, Power Saving Schemes 
+ Fault Tolerance and Dependability 
+ Game Theoretic Aspects 
+ Infrastructure Discovery 
+ Internet of Things 
+ Localization 
+ Medium Access Control 
+ Mobility and Dynamics 
+ Obstacle Avoidance 
+ Pattern Formation 
+ Performance Evaluation, Experimental Analysis 
+ Population Protocols, Swarm Computing 
+ Resource Efficiency 
+ RFID Algorithms 
+ Routing and Data Propagation 
+ Self-stabilization, Self-* Properties 
+ Sensor Networks 
+ Systems and Testbeds 
+ Time Synchronization 
+ Topology Control 
+ Tracking 
+ Unmanned Autonomous Entities 
+ Virtual Infrastructures 
+ Committees 
+ Program Committee 
+ Othon Michail | , University of Liverpool, UK (chair) 
+ Giuseppe Prencipe | , University of Pisa, Italy (chair) 
+ Davide Bilò, University of L’Aquila, Italy 
+ Paolo Boldi, University of Milan, Italy 
+ Quentin Bramas, University of Strasbourg, France 
+ Arnaud Casteigts, University of Geneva, Switzerland 
+ Shantanu Das, Aix-Marseille University, France 
+ Giuseppe Antonio Di Luna, University of Rome Sapienza, Italy 
+ Shlomi Dolev, Ben-Gurion University of the Negev, Israel 
+ Thomas Erlebach, Durham University, UK 
+ Chryssis Georgiou, University of Cyprus, Cyprus 
+ Olga Goussevskaia, Federal University of Minas Gerais (UFMG), Brazil 
+ Ralf Klasing, CNRS and University of Bordeaux, France 
+ Evangelos Kranakis, Carleton University, Canada 
+ George Mertzios, Durham University, UK 
+ Nils Morawietz, Friedrich Schiller University Jena, Germany 
+ Alfredo Navarra, University of Perugia, Italy 
+ Lorenzo Palazzetti, University of Perugia, Italy 
+ Christoforos Raptopoulos, University of Patras, Greece 
+ Christian Scheideler, Paderborn University, Germany 
+ Christian Schindelhauer, University of Freiburg, Germany 
+ George Skretas, Hasso Plattner Institute, Germany 
+ Paul Spirakis, University of Liverpool, UK 
+ Tami Tamir, Reichman University, Israel 
+ Sébastien Tixeuil, Sorbonne University, France 
+ Prudence Wong, University of Liverpool, UK 
+ STEERING Committee 
+ Sotiris Nikoletseas, University of Patras and CTI, Greece (Chair) 
+ Jie Gao, Rutgers University, USA 
+ Magnús M. Halldórsson, Reykjavik University, Iceland 
+ Bhaskar Krishnamachari, University of Southern California, USA 
+ P. R. Kumar, Texas A&M University, USA 
+ José Rolim, University of Geneva, Switzerland 
+ Christian Scheideler, Paderborn University, Germany 
+ Paul Spirakis, University of Liverpool, UK 
+ Proceedings 
+ The conference proceedings will be published in the Springer “Lecture Notes in Computer Science” series after the conference (expected October 2025). 
+ Special Issue 
+ Selected papers will be invited to a special issue of the Theoretical Computer Science journal. 
+ Awards 
+ Awards will be given to the best paper and the best student paper. The awards are kindly sponsored by Springer. To be eligible for the best student paper award, at least one of the paper authors must be a full-time student at the time of submission, and the student(s) must have made a significant contribution to the paper. The program committee may decline to make these awards or may split them. 
+ Paper Submission 
+ Papers are to be submitted electronically using thehref="https://easychair.org/conferences/?conf=algowin2025" - EasyChair server
+. The submissions must contain original results that have not already been published and are not concurrently submitted to a journal or conference with published proceedings. By submitting a paper, the authors acknowledge that in case of acceptance at least one of the authors will register for ALGO/ALGOWIN 2025 and present the paper. 
+ Submissions must be in the form of a single pdf file prepared using the LNCS latex templates and style files (available, together with Springer’s authors’ guidelines, fromhttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines). Springer’s proceedings LaTeX templates are also available on Overleaf (https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WsdHOy5uZpg). 
+ Each submission should consist of the main part of the paper, not exceeding 12 pages (including the title page and excluding the references), plus an optional clearly marked appendix (to be read at the discretion of the program committee). Any figure pertaining to the main part of the paper should be included therein (within the 12 page limit). The first page must include an indication of whether the paper is eligible for the best student paper award. 
+ href="https://algo-conference.org/2025" - ALGO2025
+Imprint 
+ href="https://algo-conference.org/2025/privacy-policy/" - Privacy Policy
+Powered byWordPress
+
+4. Website of Algosensors_3: https://sites.rutgers.edu/jie-gao/publications/
+Website information of Algosensors_3:
+
+Skip to main contentRutgers.edu 
+ New Brunswick 
+ Newark 
+ Camden 
+ Rutgers Health 
+ Online 
+ Rutgers Search 
+ Jie GaoMenu 
+ Home 
+ About Me 
+ Projects 
+ Publications 
+ Talks 
+ Courses 
+ Students 
+ Services 
+ Contact 
+ Open Search Input 
+ Generic selectorsExact matches only 
+ Search in title 
+ Search in content 
+ Post Type SelectorsFilter by CategoriesPublications 
+ 2025 
+ ( | FORC | ) | Hardness and Approximation Algorithms for Balanced Districting Problems | Prathamesh Dharangutte, Jie Gao, Shang-En Huang, Fang-Yi Yu | The 6th Annual Symposium on Foundations of Responsible Computing (FORC 2025) | June 4-6, 2025. | arXiv:2501.17277 
+ ( | AAMAS | ) | Maximizing Truth Learning in a Social Network is NP-hard | Filip Uradnik, Amanda Wang, Jie Gao | The 24th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS’25) | 19–23 May 2025. | arXiv:2502.12704 
+ ( | AISTATS | ) | Differentially Private Range Queries with Correlated Input Perturbation | Prathamesh Dharangutte, Jie Gao, Ruobin Gong, Guanyang Wang | The 28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025) | May 3-5th, 2025. | arXiv:2402.07066 
+ ( | ICLR | ) | On the Price of Differential Privacy for Hierarchical Clustering | Chengyuan Deng, Jie Gao, Jalaj Upadhyay, Chen Wang, Samson Zhou | The Thirteenth International Conference on Learning Representations (ICLR 2025) | April 24-28, 2025. 
+ ( | AAAI | ) | Approximating Metric Magnitude of Point Sets | Rayna Andreeva, James Ward, Primoz Skraba, Jie Gao, Rik Sarkar | Proceedings of the 39th AAAI Conference on Artificial Intelligence (AAAI-25) | February-March, 2025. | arXiv:2409.04411 
+ ( | ITCS | ) | Low Sensitivity Hopsets | Vikrant Ashvinkumar, Aaron Bernstein, Chengyuan Deng, Jie Gao, Nicole Wein | The 16th Innovations in Theoretical Computer Science (ITCS’25) | January 7-10th, 2025. | arXiv:2407.10249 
+ 2024 
+ ( | NeurIPS | ) | Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms | Chengyuan Deng, Jie Gao, Kevin Lu, Feng Luo, Hongbin Sun, Cheng Xin | Proceedings of the Thirty-eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024) | December 9-15th, 2024. | arXiv 2411.10889 | . 
+ ( | WINE | ) | Enabling Asymptotic Truth Learning in a Social Network | Kevin Lu, Jordan Chong, Matt Lu, Jie Gao | Proceedings of the 20th Conference on Web and Internet Economics (WINE’24) | December 2-5th, 2024. | arxiv 2410.04317 | . 
+ ( | ICML | ) | Optimally Improving Cooperative Learning in a Social Setting | Shahrzad Haddadan, Cheng Xin, Jie Gao | Proceedings of the 41st International Conference on Machine Learning (ICML 2024) | PMLR 235:17148-17188, July, 2024. | arxiv 2405.20808 | . 
+ ( | ICALP | ) | The Discrepancy of Shortest Paths | Greg Bodwin, Chengyuan Deng, Jie Gao, Gary Hoppenworth, Jalaj Upadhyay, Chen Wang | Proceedings of the 51st EATCS International Colloquium on Automata, Languages and Programming (ICALP 2024) | 27:1-27:20, July, 2024. | arxiv 2401.15781 
+ ( | SoCG | ) | Computing Diameter+2 in Truly Subquadratic Time for Unit-Disk Graphs | Hsien-Chih Chang, Jie Gao, Hung Le | Proceedings of the 40th International Symposium on Computational Geometry (SoCG 2024) | 38:1-38:14, June, 2024. | Improvement to: Diameter+1 | , see | arxiv 2401.12881 
+ ( | AAAI | ) | Composite Active Learning: Towards Multi-Domain Active Learning with Theoretical Guarantees | Guang-Yuan Hao, Hengguan Huang, Haotian Wang, Jie Gao, Hao Wang, | Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI-24)} | 38(11): 12286-12294, February 20-27, 2024. | arxiv 2402.02110 
+ 2023 
+ Data Analytics for Health Relevant Events Detection based upon Longitudinal Fitbit Heart Rate Data | Prathamesh Dharangutte, Zongxing Xie, Jie Gao, Yindong Hua, Elinor Schoenfeld and Fan Ye, | The Gerontological Society of America (GSA) 2023 Annual Scientific Meeting, Tampa, Florida, November 8-12, 2023. 
+ HeartInsightify: Interpreting Longitudinal Heart Rate Data for Health Insights through Conformal Clustering | Prathamesh Dharangutte, Zongxing Xie, Jie Gao, Elinor Schoenfeld, Yindong Hua, and Fan Ye, | Proceedings of the 13th International Workshop on Biomedical and Health Informatics (BHI 2023), December 7-8, 2023. 
+ ( | RANDOM | ) | Evaluating Stability in Massive Social Networks: Efficient Streaming Algorithms for Structural Balances | Vikrant Ashvinkumar, Sepehr Assadi, Chengyuan Deng, Jie Gao, Chen Wang | Proceedings of the International Conference on Randomization and Computation (RANDOM 2023) | 58:1-58:23, September 11-13, 2023. | arXiv:2306.00668 | . 
+ ( | WADS | ) | Differentially Private Range Query on Shortest Paths | Chengyuan Deng, Jie Gao, Jalaj Upadhyay, Chen Wang | Proceedings of the 18th Algorithms and Data Structures Symposium (WADS 2023) | 340-370, July 31-August 2, 2023. 
+ ( | AAAI | ) | Integer Subspace Differential Privacy | Prathamesh Dharangutte, Jie Gao, Ruobin Gong, Fang-Yi Yu | Proceedings of the 37th AAAI Conference on Artificial Intelligence (AAAI-23) | 7349-7357, February 7-14, 2023. | arXiv:2212.00936 | . 
+ 2022 
+ ( | LATIN | ) | Obtaining Approximately Optimal and Diverse Solutions via Dispersion | Jie Gao, Mayank Goswami, Karthik C. S., Meng-Tsung Tsai, Shih-Yu Tsai, Hao-Tsung Yang | Proceedings of the 15th Latin American Theoretical Informatics Symposium (LATIN 2022) | 222-239, November 7-11, 2022. | arXiv:2202.10028 | . 
+ ( | SoCG | ) | On Cyclic Solutions to the Min-Max Latency Multi-Robot Patrolling Problem | Peyman Afshani, Mark de Berg, Kevin Buchin, Jie Gao, Maarten Loffler, Amir Nayyeri, Benjamin Raichel, Rik Sarkar, Haotian Wang and Hao-Tsung Yang | Proceedings of the 38th International Symposium on Computational Geometry (SoCG 2022) | 2:1-2:14, June 7-10, 2022. | arXiv:2203.07280 | . 
+ ( | IPSN | ) | Clustering of Trajectories Using Non-Parametric Conformal DBSCAN Algorithm | Haotian Wang, Jie Gao, Minge Xie | Proceedings of the 21st ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2022) | 451-462, May 4-6, 2022. 
+ ( | AAMAS | ) | Optimal Local Bayesian Differential Privacy over Markov Chains | Darshan Chakrabarti, Jie Gao, Aditya Saraf, Grant Schoenebeck, Fang-Yi Yu | Proc. of the 21st International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2022) | 1563-1565, May 9-13, 2022. 
+ ( | AAAI | ) | Subspace Differential Privacy | Jie Gao, Ruobin Gong, Fang-Yi Yu | Proceedings of the 36th AAAI Conference on Artificial Intelligence (AAAI-22) | 3986-3995, February 22 – March 1st, 2022. | arXiv:2108.11527 | . 
+ ( | SODA | ) | Co-evolution of Opinion and Social Tie Dynamics Towards Structural Balance | Haotian Wang, Feng Luo, Jie Gao | Proceedings of the ACM-SIAM Symposium on Discrete Algorithms (SODA’22) | 3362-3388, January 9 – 12, 2022. | arXiv:2107.05796 | . 
+ 2021 
+ ( | SDM | ) | Influencers and the Giant Component: the Fundamental Hardness in Privacy Protection for Socially Contagious Attributes | Aria Rezaei, Jie Gao, Anand D. Sarwate | Proceedings of the SIAM International Conference on Data Mining (SDM’2021) | 217-225, April 29-May 1, 2021. | arXiv 2012.11877 | . Youtube. 
+ ( | EWSN | ) | Application-Driven Privacy-Preserving Data Publishing with Correlated Attributes | Aria Rezaei, Chaowei Xiao, Jie Gao, Bo Li, Sirajum Munir | Proceedings of the 18th International Conference on Embedded Wireless Systems and Networks (EWSN 2021) | 91-102, February 17-19, 2021. | arXiv 1812.10193 | , | Youtube | . | Received the | Best Paper Award | . 
+ ( | Journal | ) | Heterogeneous Interventions Reduce the Spread of COVID-19 in Simulations on Real Mobility Data | Haotian Wang, Abhirup Ghosh, Jiaxin Ding, Rik Sarkar, Jie Gao | Scientific Reports, (2021) 11(1), 1-12, article 7809. | arXiv 2008.06549 
+ 2020 
+ ( | ESA | ) | Cutting Polygons into Small Pieces with Chords: Laser-Based Localization | Esther M. Arkin, Rathish Das, Jie Gao, Mayank Goswami, Joseph S. B. Mitchell, Valentin Polishchuk, Csaba D. Toth | Proceedings of the Twenty-Eighth European Symposium on Algorithms (ESA) | 7:1-7:23, September 7-11, 2020. | arXiv 2006.15089 | . 
+ ( | MobiHoc | ) | Data Inference from Encrypted Databases: A Multi-dimensional Order-Preserving Matching Approach | Yanjun Pan, Alon Efrat, Ming Li, Boyang Wang, Hanyu Quan, Joseph Mitchell, Esther Arkin, Jie Gao | Proceedings of the Twenty-First International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (MobiHoc 2020) | 151-160, October 11-14, 2020. | arXiv 2001.08773 | . 
+ ( | WAFR | ) | Approximation Algorithms for Multi-Robot Patrol-Scheduling with Min-Max Latency | Peyman Afshani, Mark De Berg, Kevin Buchin, Jie Gao, Maarten Loffler, Amir Nayyeri, Benjamin Raichel, Rik Sarkar, Haotian Wang and Hao-Tsung Yang | Proceedings of the 14th International Workshop on the Algorithmic Foundations of Robotics (WAFR’20) | 107-123, June 21-23, 2021. | arXiv 2005.02530 | . | Presentation video | by Hao-Tsung Yang 
+ ( | IPSN | ) | Distributed Human Trajectory Sensing and Partial Similarity Queries | Haotian Wang, Jie Gao | Proceedings of the 19th International Symposium on Information Processing in Sensor Networks (IPSN 2020) | 253-264, April 21-24, 2020. 
+ ( | ICLR | ) | Curvature Graph Network | Ze Ye, Kin Sum Liu, Tengfei Ma, Jie Gao and Chao Chen | Proceedings of the 8th International Conference on Learning Representations (ICLR 2020) | April 26-30, 2020. | Poster | . | Github | . 
+ ( | INFOCOM | ) | Differentially Private Range Counting in Planar Graphs for Spatial Sensing | Abhirup Ghosh, Jiaxin Ding, Rik Sarkar, Jie Gao | Proceedings of the 39th Annual IEEE International Conference on Computer Communications (INFOCOM’20) | 2233-2242, July 6-9, 2020. | Slides | . 
+ ( | Journal | ) | Connected Wireless Camera Network Deployment with Visibility Coverage | Hua Huang, Chien-Chun Ni, Xiaomeng Ban, Andrew T. Schneider, Jie Gao, Shan Lin | ACM Transactions on Internet of Thing | Article 25, Volume 1, Issue 4, 25:1-25:19, July 2020. 
+ 2019 
+ ( | SIGSPATIAL | ) | Efficient Beacon Placement Algorithms for Time-of-Flight Indoor Localization | Haotian Wang, Niranjini Rajagopal, Anthony Rowe, Bruno Sinopoli, Jie Gao | Proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL’19) | 119-128, November 5-8, 2019. 
+ ( | ICDM | ) | On Privacy of Socially Contagious Attributes | Aria Rezaei, Jie Gao | Proceedings of the 19th IEEE International Conference on Data Mining (ICDM’19) | 1294-1299, November 8-11, 2019. | arXiv | . 
+ ( | ICDM | ) | Performing Co-Membership Attacks Against Deep Generative Models | Kin Sum Liu, Chaowei Xiao, Bo Li, Jie Gao | Proceedings of the 19th IEEE International Conference on Data Mining (ICDM’19) | 459-467, November 8-11, 2019. | arXiv | . 
+ ( | ALGOSENSORS | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/ALGOSENSORS19.pdf" - Multi-Channel Assignment and Link Scheduling for Prioritized Latency-Sensitive Applications | Shih-Yu Tsai, Hao-Tsung Yang, Kin Sum Liu, Shan Lin, Rezaul Chowdhury and Jie Gao | Proceedings of the 15th International Symposium on Algorithms and Experiments for Wireless Sensor Networks (ALGOSENSORS 2019) | 137-157, September 12-13, 2019. 
+ ( | Journal | ) | Community Detection on Networks with Ricci Flow | Chien-Chun Ni, Yu-Yao Lin, Feng Luo, Jie Gao | Scientific Reports | 9, Article number 9984, published 10 July 2019. | arXiv | . | Youtube | , | code on Github | . 
+ ( | Workshop | ) | Penny for the Poor: Complex Contagions in Charitable Donations | Jie Gao, Golnaz Ghasemiesfeh, Jason Jones, Grant Schoenebeck | The First Workshop on Behavioral EC | June, 2019. SocArXiv. November 20. | doi:10.31235/osf.io/tczvw | . 
+ ( | AAMAS | ) | The Volatility of Weak Ties: Co-evolution of Selection and Influence in Social Networks | Jie Gao, Grant Schoenebeck, Fang-Yi Yu | Proceedings of the 18th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2019) | 619-627, May 13-17, 2019. 
+ ( | AAMAS | ) | Patrol Scheduling Against Adversaries with Varying Attack Durations | Hao-Tsung Yang, Shih-Yu Tsai, Kin Sum Liu, Shan Lin, Jie Gao, | Proceedings of the 18th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2019) | 1179-1188, May 13-17, 2019. 
+ ( | EWSN | ) | Optimizing Sensor Deployment With Line-Of-Sight Constraints: Theory and Practice | Kin Sum Liu, Brent Schiller, Jie Gao, Shan Lin, Joseph S. B. Mitchell, | Proceedings of the 16th International Conference on Embedded Wireless Systems and Networks (EWSN’19) | 95-105, February 25-27, 2019. 
+ 2018 
+ ( | SIGSPATIAL | ) | Improved Bounds on Information Dissemination by Manhattan Random Waypoint Model | arXiv:1809.07392 | . | Aria Rezaei, Jie Gao, Jeff Phillips, Csaba Toth | Proceedings of the 26th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL’18) | 139-148, November 6-9, 2018. 
+ ( | GD | ) | Network Alignment by Discrete Ollivier-Ricci Flow | arXiv:1809.00320 | . | Chien-Chun Ni, Yu-Yao Lin, Jie Gao, Xianfeng Gu | Proceedings of the 26th International Symposium on Graph Drawing and Network Visualization (GD’18) | 447-462, September 26-28, 2018. 
+ ( | SECON | ) | On-Street Parking Guidance with Real-Time Sensing Data for Smart Cities | Kin Sum Liu, Jie Gao, Xiaobing Wu, Shan Lin | Proceedings of the IEEE International Conference on Sensing, Communication and Networking (SECON’18) | 154-162, June 11-13, 2018. 
+ ( | MobiHoc | ) | Are Friends of My Friends Too Social? Limitations of Location Privacy in a Socially-Connected World | Boris Aronov, Alon Efrat, Ming Li, Jie Gao, Joseph S. B. Mitchell, Valentin Polishchuk, Boyang Wang, Hanyu Quan, Jiaxin Ding | Proceedings of the 19th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’18) | 280-289, June 26-29, 2018. 
+ 2017 
+ ( | WINE | ) | Cascades and Myopic Routing in Nonhomogeneous Kleinberg’s Small World Model | Jie Gao, Grant Schoenebeck, Fang-Yi Yu | Proceedings of the 13th Conference on Web and Internet Economics (WINE 2017) | 383-394, December 17-20, 2017. 
+ ( | SIGSPATIAL | ) | Fighting Statistical Re-Identification in Human Trajectory Publication | Jiaxin Ding, Chien-Chun Ni, Jie Gao | Proceedings of the 25rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL 2017) | 82:1-82:4, November, 2017. 
+ ( | JOURNAL | ) | Complex Contagions in Preferential Attachment Models and Other Time-Evolving Networks | arXiv:1404.2668 | Roozbeh Ebrahimi, Jie Gao, Golnaz Ghasemiesfeh, Grant Schoenebeck | IEEE Transactions on Network Science and Engineering | 4(4), 201-214, 2017. 
+ ( | MobiHoc | ) | Mobile r-gather: Distributed Geographic Clustering for Location Anonymity | Jiemin Zeng, Gaurish Telang, Matthew P. Johnson, Rik Sarkar, Jie Gao, Esther Arkin, Joseph S. B. Mitchell | Proceedings of the 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’17) | 7:1-7:10, July 10-13, 2017. 
+ ( | SECON | ) | Reliable Stream Scheduling with Minimum Latency for Wireless Sensor Networks | Hao Tsung Yang, Kin Sum Liu, Jie Gao, Shan Lin, Sirajum Munir, Kamin Whitehouse, John Stankovic | Proceedings of 2017 IEEE International Conference on Sensing, Communication and Networking (SECON’17) | 1-9, June 12-14, 2017. 
+ ( | ICRA | ) | Robot Coverage Path Planning for General Surfaces Using Quadratic Differentials | Yu-Yao Lin, Chien-Chun Ni, Na Lei, Xianfeng David Gu, Jie Gao | Proceedings of 2017 IEEE International Conference on Robotics and Automation (ICRA’17) | 5005-5011, May 29 – June 3, 2017, Marina Bay Sands Convention Centre, Singapore. 
+ ( | IPSN | ) | MinHash Hierarchy for Privacy Preserving Trajectory Sensing and Query | Jiaxin Ding, Chien-Chun Ni, Mengyu Zhou, Jie Gao | Proc. of the 16th International Symposium on Information Processing in Sensor Networks (IPSN’17) | 17-28, April, 2017. 
+ ( | INFOCOM | ) | Competitive Analysis for Online Scheduling in Software-Defined Optical WAN | Su Jia, Xin Jin, Golnaz Ghasemiesfeh, Jiaxin Ding, Jie Gao | Proceedings of the 36th Annual IEEE International Conference on Computer Communications (INFOCOM’17) | May, 2017. 
+ ( | INFOCOM | ) | Joint Sensing Duty Cycle Scheduling for Heterogeneous Coverage Guarantee | Kin Sum Liu, Tyler Mayer, Hao Tsung Yang, Esther Arkin, Jie Gao, Mayank Goswami, Matthew P. Johnson, Nirman Kumar, Shan Lin | Proceedings of the 36th Annual IEEE International Conference on Computer Communications (INFOCOM’17) | May, 2017. 
+ ( | AAAI | ) | Engineering Agreement: The Naming Game with Asymmetric and Heterogeneous Agents | Jie Gao, Bo Li, Grant Schoenebeck, Fang-Yi Yu | Proceedings of the 31st AAAI Conference on Artificial Intelligence (AAAI-17) | 537-543, February 4-9, 2017. 
+ 2016 
+ ( | WAFR | ) | Approximation Algorithms for Time-Window TSP and Prize Collecting TSP Problems | Su Jia, Jie Gao, Joseph Mitchell and Lu Zhao | Proceedings of the International Workshop on the Algorithmic Foundations of Robotics (WAFR’16) | December, 2016. 
+ ( | WAOA | ) | The Shortest Separating Cycle Problem | Esther Arkin, Jie Gao, Adam Hesterberg, Joseph Mitchell and Jiemin Zeng | Proceedings of the 14th Workshop on Approximation and Online Algorithms (WAOA’16) | 1-13, August, 2016. 
+ ( | SIGCOMM | ) | Optimizing Bulk Transfer with Software-Defined Optical WAN | Xin Jin, Yiran Li, Da Wei, Siming Li, Jie Gao, Lei Xu, Guangzhi Li, Wei Xu, Jennifer Rexford | Proceedings of the 2016 ACM Conference on Special Interest Group on Data Communication (SIGCOMM’16) | 87-100, August, 2016. 
+ ( | EC | ) | General Threshold Model for Social Cascades: Analysis and Simulations | Jie Gao, Golnaz Ghasemiesfeh, Grant Schoenebeck, Fang-Yi Yu | Proceedings of the 17th ACM Conference on Electronic Commerce (EC’16) | 617–634, July, 2016. 
+ ( | MobiHoc | ) | Joint Sensor Duty Cycle Scheduling with Coverage Guarantee | Kin Sum Liu, Jie Gao, Shan Lin, Hua Huang, Brent Schiller | Proceedings of the 17th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’16) | 11-20, July, 2016. 
+ ( | INFOCOM | ) | Capacitated Kinetic Clustering in Mobile Networks by Optimal Transportation Theory | Chien-Chun Ni, Zhengyu Su, Jie Gao, Xianfeng David Gu | Proceedings of the 35th Annual IEEE International Conference on Computer Communications (INFOCOM’16) | 1-9, April, 2016. | arXiv | . 
+ ( | Journal | ) | Discrete Ricci Flow for Geometric Routing | Jie Gao, Xianfeng David Gu, Feng Luo | Encyclopedia of Algorithms | 556-563, 2016. 
+ ( | Journal | ) | Well Separated Pair Decomposition for Unit-Disk Graph | Jie Gao, Li Zhang | Encyclopedia of Algorithms | 2371-2374, 2016. 
+ ( | Journal | ) | Compact Conformal Map for Greedy Routing in Wireless Mobile Sensor Networks | Siming Li, Wei Zeng, Dengpan Zhou, Xianfeng Gu, Jie Gao | IEEE Transactions on Mobile Computing (TMC) | 15(7): 1632-1646, 2016. 
+ 2015 
+ ( | Journal | ) | Stable Delaunay Graphs | Pankaj K. Agarwal, Jie Gao, Leonidas J. Guibas, Haim Kaplan, Natan Rubin, Micha Sharir | Discrete Computational Geometry | 54(4): 905-929, 2015. 
+ ( | SIGSPATIAL | ) | Understanding and Modelling Information Dissemination Patterns in Vehicle-to-Vehicle Networks | Jiaxin Ding, Jie Gao and Hui Xiong | Proceedings of the 23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL 2015) | 41:1-41:10, November, 2015. 
+ ( | SIGSPATIAL | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/hodge-short.pdf" - Decentralized Human Trajectories Tracking Using Hodge Decomposition in Sensor Networks | Xiaotian Yin, Chien-Chun Ni, Jiaxin Ding, Wei Han, Dengpan Zhou, Jie Gao and Xianfeng Gu | Proceedings of the 23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL 2015) | 54:1-54:4, November, 2015. 
+ ( | ALGOSENSORS | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/datagathering-ALGOSENSORS.pdf" - Exact and Approximation Algorithms for Data Mule Scheduling in a Sensor Network | Gui Citovsky, Jie Gao, Joseph Mitchell, Jiemin Zeng | Proceedings of the 11th International Symposium on Algorithms and Experiments for Wireless Sensor Networks (ALGOSENSORS’15) | 57-70, September, 2015. Invited to Theoretical Computer Science. 
+ ( | ESA | ) | Medial Axis Based Routing Has Constant Load Balancing Factor | Jie Gao, Mayank Goswami | Proceedings of the 23rd Annual European Symposium on Algorithms (ESA’15) | 557-569, September, 2015. 
+ ( | CCCG | ) | Space Filling Curves for 3D Sensor Networks with Complex Topology | arXiv:1507.02931v1. | Siming Li, Jie Gao, David Xianfeng Gu, Mayank Goswami, Junwei Zhang, Emil Saucan | Proceedings of the 27th Canadian Conference on Computational Geometry (CCCG’15) | August, 2015. 
+ ( | IPSN | ) | Graph Scale-Space Theory for Distributed Peak and Pit Identification | Andreas Loukas, Marco Cattani, Marco Zuniga, Jie Gao | Proceedings of the 14th International Symposium on Information Processing in Sensor Networks (IPSN’15) | 118-129, April, 2015. 
+ ( | INFOCOM | ) | Ricci Curvature of the Internet Topology | arXiv:1501.04138 | Chien-Chun Ni, Yu-Yao Lin, Jie Gao, Xianfeng Gu, Emil Saucan | Proceedings of the 34th Annual IEEE International Conference on Computer Communications (INFOCOM’15) | 2758-2766, April-May, 2015. 
+ ( | ITCS | ) | Complex Contagions in Kleinberg’s Small World Model | arXiv:1408.2159 | Roozbeh Ebrahimi, Jie Gao, Golnaz Ghasemiesfeh, Grant Schoenebeck | Proceedings of the 6th Innovations in Theoretical Computer Science (ITCS’15) | 63-72, January 2015. 
+ ( | MASS | ) | Dynamic Mobile Charger Scheduling in Heterogeneous Wireless Sensor Networks | Hua Huang, Shan Lin, Lin Chen, Jie Gao, Anwar Mamat, Jie Wu | Proceedings of the 11th IEEE International Conference on Mobile Ad hoc and Sensor Systems (MASS’15) | 379-387, 2015. 
+ 2014 
+ ( | SIGSPATIAL | ) | Persistence Based Online Signal and Trajectory Simplification for Mobile Devices | Panagiota Katsikouli, Rik Sarkar, Jie Gao | Proceedings of the 22nd ACM International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL2014) | 371-380, November, 2014. 
+ ( | MASS | ) | Distributed Hole Detection Algorithms for Wireless Sensor Networks | Pradipta Ghosh, Jie Gao, Andrea Gasparri, Bhaskar Krishnamachari | Proceedings of the 11th IEEE International Conference on Mobile Ad hoc and Sensor Systems (MASS’14) | 257-261, October, 2014. 
+ ( | MobiHoc | ) | Load Balanced Short Path Routing in Large-Scale Wireless Networks Using Area-Preserving Maps | Mayank Goswami, Chien-Chun Ni, Xiaomeng Ban, Jie Gao, David Xianfeng Gu, Vamsi Pingali | Proc. of the 15th ACM International Symposium on Mobile Ad Hoc Networking and Computing (Mobihoc’14) | 63-72, August, 2014. 
+ ( | CCCG | ) | A Linear Time Euclidean Spanner on Imprecise Points | Jiemin Zeng and Jie Gao | Proceedings of the 26th Canadian Conference on Computational Geometry (CCCG’14) | August, 2014. 
+ ( | CCCG | ) | Distributed Algorithm for Approximate Mobile Sensor Coverage | Esther Ezra, Jiemin Zeng and Jie Gao | Proceedings of the 26th Canadian Conference on Computational Geometry (CCCG’14) | August, 2014. 
+ ( | Workshop | ) | RiverSwarm: Topology-Aware Distributed Planning for Obstacle Encirclement in Connected Robotic Swarms | Pradipta Ghosh, Jie Gao, Andrea Gasparri, Bhaskar Krishnamachari | Proceedings of the First Workshop on Robotic Sensor Networks (RSN’14) | 257-261, April, 2014. 
+ ( | INFOCOM | ) | Bounded Stretch Geographic Homotopic Routing in Sensor Networks | Kan Huang, Chien-Chun Ni, Rik Sarkar, Jie Gao, Joseph Mitchell | Proceedings of the 33rd Annual IEEE Conference on Computer Communications (INFOCOM’14) | 979-987, April, 2014. 
+ ( | INFOCOM | ) | Connected Wireless Camera Network Deployment with Visibility Coverage | Hua Huang, Chien-Chun Ni, Jie Gao, Xiaomeng Ban, Andrew Schneider, Shan Lin | Proc. of the 33rd Annual IEEE Conference on Computer Communications (INFOCOM’14) | 1204-1212, April, 2014. 
+ ( | INFOCOM | ) | How to Identify Global Trends From Local Decisions? Spatial Event Detection on Mobile Networks | Andreas Loukas, Marco Zuniga, Ioannis Protonotarios, Jie Gao | Proc. of the 33rd Annual IEEE Conference on Computer Communications (INFOCOM’14) | 1177-1185, April, 2014. 
+ 2013 
+ ( | Journal | ) | Area-Preserving Mapping using Optimal Mass Transport | Xin Zhao, Zhengyu Su, Xianfeng David Gu, Arie Kaufman, Jian Sun, Jie Gao, Feng Luo | IEEE Transactions on Visualization and Computer Graphics (IEEE TVCG) | 19(12): 2838-2847, 2013. 
+ ( | SocialCom | ) | Quantifying Social Influence in Epinions | Akshay Patil, Golnaz Ghasemiesfeh, Roozbeh Ebrahimi, Jie Gao | Proceedings of ASE/IEEE International Conference on Social Computing (SocialCom) | 87-92, September 8-14, 2013. 
+ ( | SocialCom | ) | Modeling Attrition in Organizations From Email Communication | Akshay Patil, Juan Liu, Jianqiang Shen, Oliver Brdiczka, Jie Gao, John Hanley | Proceedings of ASE/IEEE International Conference on Social Computing (SocialCom) | 331-338, September 8-14, 2013. 
+ ( | CCCG | ) | Combinatorics of Beacon Routing and Coverage | Michael Biro, Jie Gao, Justin Iwerks, Irina Kostitsyna, Joseph S.B. Mitchell | Proceedings of the 25th Canadian Conference on Computational Geometry (CCCG’13) | August 8-10, 2013. 
+ ( | EC | ) | Complex Contagion and The Weakness of Long Ties in Social Networks: Revisited | Golnaz Ghasemiesfeh, Roozbeh Ebrahimi, Jie Gao | Proceedings of the 14th ACM Conference on Electronic Commerce (EC’13) | 507-524, June 16-20, 2013. 
+ ( | WWW | ) | Predicting Group Stability in Online Social Networks | Akshay Patil, Juan Liu, Jie Gao | Proceedings of the 22nd International World Wide Web Conference (WWW’13) | 1021-1030, May 13-17, 2013. 
+ ( | INFOCOM | ) | Topology Dependent Space Filling Curves for Sensor Networks and Applications | Xiaomeng Ban, Mayank Goswami, Wei Zeng, Xianfeng David Gu, Jie Gao | Proc. of the 32nd Annual IEEE Conference on Computer Communications (INFOCOM’13) | 2166-2174, April, 2013. 
+ ( | INFOCOM | ) | Compact Conformal Map for Greedy Routing in Wireless Mobile Sensor Networks | Siming Li, Wei Zeng, Dengpan Zhou, Xianfeng David Gu, Jie Gao | Proc. of the 32nd Annual IEEE Conference on Computer Communications (INFOCOM’13) | 2409-2417, April, 2013. 
+ ( | INFOCOM | ) | Is Random Walk Truly Memoryless – Traffic Analysis and Source Location Privacy Under Random Walks | Rui Shi, Mayank Goswami, Jie Gao, Xianfeng David Gu | Proc. of the 32nd Annual IEEE Conference on Computer Communications (INFOCOM’13) | 3021-3029, April, 2013. 
+ ( | Journal | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/differentialform-journal.pdf" - Differential Forms for Target Tracking and Aggregate Queries in Distributed Networks | Rik Sarkar, Jie Gao | IEEE/ACM Transactions on Networking | 21(4): 1159-1172, 2013. 
+ ( | Journal | ) | Distributed and Compact Routing Using Spatial Distributions in Wireless Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | ACM Transactions on Sensor Networks | 9(3): 32 (2013). 
+ 2012 
+ ( | Journal | ) | The Emergence of Sparse Spanners and Well-Separated Pair Decomposition Under Anarchy | Jie Gao, Dengpan Zhou | Journal of Computational Geometry | 3(1), 1-19, 2012. 
+ ( | INFOCOM | ) | Scalable Routing in 3D High Genus Sensor Networks Using Graph Embedding | Xiaokang Yu, Xiaotian Yin, Wei Han, Jie Gao, Xianfeng David Gu | Proc. of the 31st Annual IEEE Conference on Computer Communications (INFOCOM’12) | mini-conference, 2681-2685, March, 2012. 
+ ( | INFOCOM | ) | Efficient Algorithms for K-Anonymous Location Privacy in Participatory Sensing | Khuong Vu, Rong Zheng, Jie Gao | Proc. of the 31st Annual IEEE Conference on Computer Communications (INFOCOM’12) | 2399-2407, March, 2012. 
+ ( | Journal | ) | Geometric Algorithms for Sensor Networks | Jie Gao, Leonidas J. Guibas | Philosophical Transactions of the Royal Society A | vol. 370, no. 1958, 27-51, Janurary 2012. 
+ ( | Journal | ) | Hierarchical Spatial Gossip for Multi-Resolution Representations in Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | ACM Transactions on Sensor Networks | 8(1), 4:1-4:24, Feb, 2012. 
+ 2011 
+ ( | WADS | ) | Resilient and Low Stretch Routing Through Embedding into Tree Metrics | Jie Gao, Dengpan Zhou | Proc. of the 12th Algorithms and Data Structures Symposium (WADS’11) | 438-450, August, 2011. 
+ ( | MobiHoc | ) | Local Connectivity Tests to Identify Wormholes in Wireless Networks | Xiaomeng Ban, Rik Sarkar, Jie Gao | Proc. of the 12th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’11) | 13:1-13:11, May, 2011. 
+ ( | IPSN | ) | Exploration of Path Space using Sensor Network Geometry | Ruirui Jiang, Xiaomeng Ban, Mayank Goswami, Wei Zeng, Jie Gao, Xianfeng David Gu | Proc. of the 10th International Symposium on Information Processing in Sensor Networks (IPSN’11) | 49-60, April, 2011. 
+ ( | INFOCOM | ) | Spherical Representation and Polyhedron Routing for Load Balancing in Wireless Sensor Networks | Xiaokang Yu, Xiaomeng Ban, Rik Sarkar, Wei Zeng, Xianfeng David Gu, Jie Gao | Proc. of the 30th Annual IEEE Conference on Computer Communications (INFOCOM’11) | mini-conference, 612-615, March, 2011. 
+ 2010 
+ ( | MobiCOM | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/differentialform-mobicom10.pdf" - Differential Forms for Target Tracking and Aggregate Queries in Distributed Networks | Rik Sarkar, Jie Gao | Proc. of the 16th Annual International Conference on Mobile Computing and Networking (MobiCom’10) | 377-388, September, 2010. 
+ ( | MobiHoc | ) | Data Preservation Under Spatial Failures in Sensor Networks | Navid Azimi, Himanshu Gupta, Xiaoxiao Hou, Jie Gao | Proc. of the 11th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’10) | 171-180, September, 2010. 
+ ( | ALGOSENSORS | ) | In-Network Coding for Resilient Sensor Data Storage and Efficient Data Mule Collection | Michele Albano, Jie Gao | Proc. of the 6th International Workshop on Algorithms for Sensor Systems, Wireless Ad Hoc Networks and Autonomous Mobile Entities (ALGOSENSOR’10) | 105-117, July, 2010. | Slides | . 
+ ( | SWAT | ) | The Emergence of Sparse Spanners and Greedy Well Separated Pair Decomposition | Jie Gao, Dengpan Zhou | Proc. of the the 12th Scandinavian Symposium and Workshops on Algorithm Theory (SWAT’10) | 50-61, June, 2010. 
+ ( | SoCG | ) | Kinetic Stable Delaunay Graph | Pankaj K. Agarwal, Jie Gao, Leonidas Guibas, Haim Kaplan, Vladlen Koltun, Natan Rubin, Micha Sharir | Proc. of the 26th ACM Symposium on Computational Geometry (SoCG’10) | 127-136, June, 2010. 
+ ( | IPSN | ) | Covering Space for In-Network Sensor Data Storage | Rik Sarkar, Wei Zeng, Jie Gao, Xianfeng David Gu | Proc. of the 9th International Symposium on Information Processing in Sensor Networks (IPSN’10) | 232-243, April, 2010. 
+ ( | INFOCOM | ) | Resilient Routing for Sensor Networks using Hyperbolic Embedding of Universal Covering Space | Wei Zeng, Rik Sarkar, Feng Luo, Xianfeng David Gu, Jie Gao | Proc. of the 29th Annual IEEE Conference on Computer Communications (INFOCOM’10) | 1694-1702,March, 2010 
+ ( | INFOCOM | ) | Maintaining Approximate Minimum Steiner Tree and k-center for Mobile Agents in a Sensor Network | Dengpan Zhou, Jie Gao | Proc. of the 29th Annual IEEE Conference on Computer Communications (INFOCOM’10) | mini-conference, 511-515, March, 2010. 
+ ( | ALENEX | ) | Navigation in Real-World Complex Networks through Embedding in Latent Spaces | Xiaomeng Ban, Jie Gao, Arnout van de Rijt | Workshop on Algorithm Engineering and Experiments (ALENEX10) | January, 2010. 
+ ( | Journal | ) | Geodesic Delaunay Triangulations in Bounded Planar Domains | Steve Y. Oudot, Leonidas J. Guibas, Jie Gao, Yue Wang | Invited to a special issue of ACM Transactions on Algorithms (TALG) | 6(4), 61:1–61:47, 2010. 
+ ( | Journal | ) | Clustering Lines in High Dimensional Space: Classification of Incomplete Data | Jie Gao, Michael Langberg, Leonard Schulman | ACM Transaction on Algorithms | 7(1), 8:1-8:26, 2010. 
+ ( | Journal | ) | Collaborative Location Certification for Sensor Networks | Jie Gao, Radu Sion, Sol Lederer | ACM Transactions on Sensor Networks (TOSN) | 6(4), 30:1-30:26, 2010. 
+ 2009 
+ ( | IMC | ) | Moving Beyond End-to-End Path Information to Optimize CDN Performance | Rupa Krishnan, Harsha V. Madhyastha, Sridhar Srinivasan, Sushant Jain, Arvind Krishnamurthy, Thomas Anderson, Jie Gao | Proc. of the Internet Measurement Conference (IMC’09) | 190-201, November, 2009. | Received the | Best Paper Award | . 
+ ( | Chapter | ) | Geometric Routiing in Wireless Sensor Networks | Jie Gao | Chapter in | Guide to Wireless Sensor Networks | Springer-Verlag, 2009. 
+ ( | IPSN | ) | Greedy Routing with Guaranteed Delivery Using Ricci Flows | Rik Sarkar, Xiaotian Yin, Jie Gao, Feng Luo, Xianfeng David Gu | Proc. of the 8th International Symposium on Information Processing in Sensor Networks (IPSN’09) | 121-132, April, 2009. 
+ ( | IPSN | ) | Distributed Resource Management and Matching in Sensor Networks | Jie Gao, Leonidas J. Guibas, Nikola Milosavljevic, Dengpan Zhou | Proc. of the 8th International Symposium on Information Processing in Sensor Networks (IPSN’09) | 97-108, April, 2009. 
+ ( | INFOCOM | ) | Connectivity-based Sensor Network Localization with Incremental Delaunay Refinement Method | Yue Wang, Sol Lederer, Jie Gao Proc. of the 28th Annual IEEE Conference on Computer Communications (INFOCOM’09) | 2401-2409, April, 2009. 
+ ( | INFOCOM | ) | Opportunistic Processing and Query of Motion Trajectories in Wireless Sensor Networks | Dengpan Zhou, Jie Gao | Proc. of the 28th Annual IEEE Conference on Computer Communications (INFOCOM’09) | 1197-1205, April, 2009. 
+ ( | INFOCOM | ) | Topological Data Processing for Distributed Sensor Networks with Morse-Smale Decomposition | Xianjin Zhu, Rik Sarkar, Jie Gao | Proc. of the 28th Annual IEEE Conference on Computer Communications (INFOCOM’09) | Mini-conference, 2911-2915, April, 2009. 
+ ( | INFOCOM | ) | Spatial Distributions in Routing Table Design for Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | Proc. of the 28th Annual IEEE Conference on Computer Communications (INFOCOM’09) | Mini-conference, 2766-2770, April, 2009. 
+ ( | Journal | ) | Double Rulings for Information Brokerage in Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | IEEE/ACM Transactions on Networking | 17(6), 1902-1915, December, 2009. 
+ ( | Journal | ) | Connectivity-based Localization of Large Scale Sensor Networks with Complex Shape | Sol Lederer, Yue Wang, Jie Gao | ACM Transactions on Sensor Networks | 5(4), 31:1–31:32, November, 2009. 
+ ( | Journal | ) | Segmenting a Sensor Field: Algorithms and Applications in Network design | Xianjin Zhu, Rik Sarkar, Jie Gao | ACM Transactions on Sensor Networks | 5(2), 1-32, 2009. 
+ ( | Journal | ) | Tradeoffs between Stretch Factor and Load Balancing Ratio in Routing on Growth Restricted Graphs | Jie Gao, Li Zhang | IEEE Transactions on Parallel and Distributed Systems | 20(2), 171-179, February, 2009. 
+ ( | Journal | ) | Localization and Routing in Sensor Networks by Local Angle Information | Jehoshua Bruck, Jie Gao, Anxiao Jiang | ACM Transactions on Sensor Networks | 5(1), 1-31, February, 2009. 
+ 2008 
+ ( | Journal | ) | Analysis of Incomplete Data and an Intrinsic-Dimension Helly Theorem | Jie Gao, Michael Langberg, Leonard Schulman | Discrete and Computational Geometry | 40(4), 537-560, 2008. 
+ ( | IPSN | ) | Composable Information Gradients in Wireless Sensor Networks | Huijia Lin, Maohua Lu, Nikola Milosavljevic, Jie Gao, Leonidas J. Guibas | Proc. of the International Conference on Information Processing in Sensor Networks (IPSN’08) | 121-132, April, 2008. 
+ ( | INFOCOM | ) | href="http://sites.rutgers.edu/jie-gao/wp-content/uploads/sites/375/2021/10/contour-infocom08.pdf" - Light-weight Contour Tracking in Wireless Sensor Networks | Xianjin Zhu, Rik Sarkar, Jie Gao, Joseph S. B. Mitchell | Proc. of the 27th Annual IEEE Conference on Computer Communications (INFOCOM’08) | 960-967, May, 2008. 
+ ( | INFOCOM | ) | Iso-Contour Queries and Gradient Descent with Guaranteed Delivery in Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao, Leonidas J. Guibas, Joseph S. B. Mitchell | Proc. of the 27th Annual IEEE Conference on Computer Communications (INFOCOM’08) | 1175-1183, May, 2008. 
+ ( | INFOCOM | ) | Drive-by Localization of Roadside WiFi Networks | Anand Prabhu Subramanian, Pralhad Deshpande, Jie Gao, Samir R. Das | Proc. of the 27th Annual IEEE Conference on Computer Communications (INFOCOM’08) | 718-225, May, 2008. 
+ ( | INFOCOM | ) | Connectivity-based Localization of Large Scale Sensor Networks with Complex Shape | Sol Lederer, Yue Wang, Jie Gao | Proc. of the 27th Annual IEEE Conference on Computer Communications (INFOCOM’08) | 789-797, May, 2008. 
+ ( | SODA | ) | Geodesic Delaunay Triangulation and Witness Complex in the Plane | Jie Gao, Leonidas J. Guibas, Steve Y. Oudot, Yue Wang | Proc. of ACM-SIAM Symposium on Discrete Algorithms (SODA’08) | 571-580, January, 2008. 
+ 2007 
+ ( | Chapter | ) | Well Separated Pair Decompositions | Jie Gao, Li Zhang | Encyclopedia of Algorithms | 2007. 
+ ( | Journal | ) | MAP: Medial Axis Based Geometric Routing in Sensor Net works | Jehoshua Bruck, Jie Gao, Anxiao Jiang | Wireless Networks (WINET) | 13(6), 835-853, 2007. 
+ ( | IPSN | ) | Sparse Data Aggregation in Sensor Networks | Jie Gao, Leonidas J. Guibas, John Hershberger, Nikola Milosavljevic | Proc. of International Conference on Information Processing in Sensor Networks (IPSN’07) | 430-439, April, 2007. 
+ ( | IPSN | ) | Hierarchical Spatial Gossip for Multi-Resolution Representations in Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | Proc. of International Conference on Information Processing in Sensor Networks (IPSN’07) | 420-429, April, 2007. 
+ ( | INFOCOM | ) | Shape Segmentation and Applications in Sensor Networks | Xianjin Zhu, Rik Sarkar, Jie Gao | Proc. of the 26th Annual IEEE Conference on Computer Communications (INFOCOM’07) | 1838-1846, May, 2007. 
+ ( | INFOCOM | ) | Detecting Wormhole Attacks in Wireless Networks Using Connectivity Information | Ritesh Maheshwari, Jie Gao, Samir R. Das | Proc. of the 26th Annual IEEE Conference on Computer Communications (INFOCOM’07) | 107-115, May, 2007. 
+ ( | INFOCOM | ) | Landmark Selection and Greedy Landmark-descent Routing for Sensor Networks | An Nguyen, Nikola Milosavljevic, Qing Fang, Jie Gao, Leonidas J. Guibas | Proc. of the 26th Annual IEEE Conference on Computer Communications (INFOCOM’07) | 661-669, May, 2007. 
+ 2006 
+ ( | MobiCom | ) | Double Rulings for Information Brokerage in Sensor Networks | Rik Sarkar, Xianjin Zhu, Jie Gao | The 12th Annual International Conference on Mobile Computing and Networking (MobiCom’06) | 286-297, September, 2006. 
+ ( | MobiCom | ) | Boundary Recognition in Sensor Networks by Topological Methods | Yue Wang, Jie Gao, Joseph S.B. Mitchell | The 12th Annual International Conference on Mobile Computing and Networking (MobiCom’06) | 122-133, September, 2006. 
+ ( | Journal | ) | Deformable Spanners and Applications | Jie Gao, Leonidas J. Guibas, An Nguyen | Computational Geometry: Theory and Applications | vol. 35, Issues 1-2, 2-19, 2006. 
+ ( | ISIT | ) | Weighted Bloom Filter | Jehoshua Bruck, Jie Gao, Anxiao Jiang | 2006 IEEE International Symposium on Information Theory (ISIT’06) | July, 2006. 
+ ( | MobiHoc | ) | Distributed Localization by Noisy Distance and Angle Information | Amitabh Basu, Jie Gao, Joseph S.B. Mitchell, Girishkumar Sabhnani | Proc. of the Seventh ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’06) | 262-273, May, 2006. 
+ ( | INFOCOM | ) | Landmark-Based Information Storage and Retrieval in Sensor Networks | Qing Fang, Jie Gao, Leonidas J. Guibas | The 25th Conference of the IEEE Communication Society (INFOCOM’06) | 1-12, April, 2006. 
+ ( | Journal | ) | Load Balanced Short Path Routing in Wireless Networks | Jie Gao, Li Zhang | IEEE Transactions on Parallel and Distributed Systems, Special Issue on Localized Communication | vol. 17, no. 4, 377-388, April, 2006. 
+ ( | SODA | ) | Analysis of Incomplete Data and an Intrinsic-Dimension Helly Theorem | Jie Gao, Michael Langberg, Leonard Schulman | Proc. of ACM-SIAM Symposium on Discrete Algorithms (SODA’06) | 464-473, January, 2006. 
+ ( | Journal | ) | Locating and Bypassing Routing Holes in Sensor Networks | Qing Fang, Jie Gao, Leonidas J. Guibas | MONET Special Issue on Foundations of Mobile Computing | 11, 187-200, 2006. 
+ 2005 
+ ( | Journal | ) | Well-Separated Pair Decomposition for the Unit-Disk Graph Metric and its Applications | Jie Gao, Li Zhang | SIAM J. Computing | 35(1), 151-169, 2005. 
+ ( | MobiCom | ) | MAP: Medial Axis Based Geometric Routing in Sensor Networks | Jehoshua Bruck, Jie Gao, Anxiao Jiang | Proc. of the 11th Annual International Conference on Mobile Computing and Networking (MobiCom’05) | 88-102, August, 2005. 
+ ( | CCCG | ) | Staying in the Middle: Exact and Approximate Medians in R1 and R2 for Moving Points | Pankaj K. Agarwal, Mark de Berg, Jie Gao, Leonidas J. Guibas, Sariel Har-Peled | Proc. of the 17th Canadian Conference on Computational Geometry (CCCG’05) | 42-45, August, 2005. | full version | . 
+ ( | MobiHoc | ) | Localization and Routing in Sensor Networks by Local Angle Information | Jehoshua Bruck, Jie Gao, Anxiao Jiang | Proc. of the Sixth ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc’05) | 181-192, May, 2005. 
+ ( | DCOSS | ) | Distributed Proximity Maintenance in Ad Hoc Mobile Networks | Jie Gao, Leonidas J. Guibas, An Nguyen | Proc. of the IEEE International Conference on Distributed Computing in Sensor Systems (DCOSS’05) | 4-19, June, 2005. | full version | . 
+ ( | INFOCOM | ) | GLIDER: Gradient Landmark-Based Distributed Routing for Sensor Networks | Qing Fang, Jie Gao, Leonidas J. Guibas, Vin de Silva, Li Zhang | Proc. of the 24th Conference of the IEEE Communication Society (INFOCOM’05) | volume 1, pages 339-350, March, 2005. 
+ ( | Journal | ) | Geometric Spanners for Routing in Mobile Networks | Jie Gao, Leonidas J. Guibas, John Hershberger, Li Zhang, An Zhu | IEEE Journal on Selected Areas in Communications Wireless Ad Hoc Networks (J-SAC) | 23(1), 174-185, Jan, 2005. 
+ 2004 
+ ( | Thesis | ) | Hierarchical Data Structures for Mobile Networks | Jie Gao | Ph.D dissertation, Stanford University | August 2004. 
+ ( | PODC | ) | Tradeoffs between Stretch Factor and Load Balancing Ratio in Routing on Growth Restricted Graphs | Jie Gao, Li Zhang | Proc. of the 23rd ACM Symposium on Principles of Distributed Computing (PODC’04) | 189-196, July, 2004. 
+ ( | SoCG | ) | Deformable Spanners and Applications | Jie Gao, Leonidas J. Guibas, An Nguyen | Proc. of the 20th ACM Symposium on Computational Geometry (SoCG’04) | 190-199, June, 2004. 
+ ( | IPSN | ) | Fractionally Cascaded Information in a Sensor Network | Jie Gao, Leonidas J. Guibas, John Hershberger, Li Zhang | Proc. of the 3rd International Symposium on Information Processing in Sensor Networks (IPSN’04) | 311-319, April, 2004. 
+ ( | INFOCOM | ) | Load Balanced Short Path Routing in Wireless Networks | Jie Gao, Li Zhang | The 23rd Conference of the IEEE Communications Society (INFOCOM) | vol. 23, no. 1, 1099-1108, March, 2004. 
+ ( | INFOCOM | ) | Locating and Bypassing Routing Holes in Sensor Networks | Qing Fang, Jie Gao, Leonidas J. Guibas | The 23rd Conference of the IEEE Communications Society (INFOCOM) | vol. 23, no. 1, 2458-2468, March 2004. 
+ 2003 
+ ( | STOC | ) | Well-Separated Pair Decomposition for the Unit-Disk Graph Metric and its Applications | Jie Gao, Li Zhang | Proc. the 35th ACM Symposium on Theory of Computing (STOC’03) | 483-492, June, 2003. 
+ ( | Journal | ) | Discrete Mobile Centers | Jie Gao, Leonidas J. Guibas, John Hershberger, Li Zhang, An Zhu | Discrete and Computational Geometry | 30(1), 45-65, 2003. 
+ 2002 
+ ( | ESA | ) | Kinetic Medians and kd-trees | Pankaj K. Agarwal, Jie Gao, Leonidas J. Guibas | Proc. of the 10th Annual European Symposium on Algorithms (ESA’02) | Lecture Notes in Computer Science 2461, 5-16, September 2002. 
+ 2001 
+ ( | MobiHoc | ) | Geometric Spanner for Routing in Mobile Networks | Jie Gao, Leonidas J. Guibas, John Hershberger, Li Zhang, An Zhu | Proc. of the 2nd ACM Symposium on Mobile Ad Hoc Networking & Computing (MobiHoc’01) | 45-55, October 2001. 
+ ( | SoCG | ) | Discrete Mobile Centers | Jie Gao, Leonidas J. Guibas, John Hershberger, Li Zhang, An Zhu | Proc. of the 17th ACM Symposium on Computational Geometry (SoCG’01) | 188-196, June 2001. 
+ Jie Gao 
+ Hill Center 411 
+ 110 Frelinghuysen Road 
+ Piscataway, NJ 08854 
+ Phone:8484457295 
+ Email:jg1555@cs.rutgers.edu 
+ Contact Webmaster|AccessibilityCopyright ©2025,Rutgers, The State University of New Jersey 
+ Accessibility Information 
+ ×Rutgers is an equal access/equal opportunity institution. Individuals with disabilities are encouraged to direct suggestions, comments, or complaints concerning any accessibility issues with Rutgers web sites toaccessibility@rutgers.eduor complete theReport Accessibility Barrier or Provide Feedback Form. 
+ Close
+

@@ -1,0 +1,557 @@
+Conference full name: ACM Symposium on Solid and Physical Modelling (SPM)
+
+1. Website of SPM_2: https://spmconf.github.io/SPM2024/
+Website information of SPM_2:
+
+About | href="index.html" - Conference 
+ Organizers 
+ Program | href="CfP.html" - Call for Papers 
+ href="Poster.html" - Call for Posters 
+ href="CAD.html" - Presentation-only Papers 
+ Schedule 
+ Travel | Venue 
+ Accommodation 
+ Local Info 
+ Keynotes 
+ href="http://solidmodeling.org/spm-conferences/" - Previous Conferences 
+ Register NowSymposium on Solid and Physical Modeling (SPM) 2024 
+ July 8 - 10, 2024 
+ Concordia University, Montreal, QC, Canada 
+ 00 
+ Days 
+ 00 
+ Hours 
+ 00 
+ Minutes 
+ 00 
+ Secondes 
+ The Symposium on Solid and Physical Modeling (SPM) is an international conference series organized annually with the support of theSolid Modeling Association (SMA). SPM'24 will be hosted atConcordia University, July 8-10, 2024. The conference aims at all aspects of geometric and physical modeling, and their application in design, analysis and manufacturing, as well as in biomedical, geophysical, digital entertainment, and other areas. The conference serves also as a ceremony for awarding the 2024 Pierre Bézier Prize for contributions to solid, shape, and physical modeling. 
+ href="Program.html" - 01
+
+Program
+                        Check the SPM2024 final program. There's a laptop and HDMI connection on the podium.
+href="Keynote.html" - 02
+
+Keynotes
+                        Each day at SPM begins with a keynote as the first talk!
+03Things to do 
+ Discover things to do in Montreal, provided by Tourisme Montréal. 
+ 04Venue 
+ Find out more about the Concordia University Conference Center and Montreal, Canada. 
+ 05Accommodation 
+ See the exclusive rates offered by local hotels for participants of our conference. 
+ 06Visit Canada 
+ Information regarding visiting Canada and the process for requesting invitation letters. 
+ Thanks to our sponsors 
+ If you are interested in sponsoring to be recognized as partners of SPM24, please check theSponsor page. 
+ Designed and Developed byGrayGrids
+
+2. Website of SPM_2: https://people.tamu.edu/~xinli/
+Website information of SPM_2:
+
+Home 
+ Projects 
+ Publications 
+ Software 
+ Teaching 
+ Service 
+ Group&Students 
+ About Me 
+ Xin (Shane) Li 
+ Professor 
+ Chair, Section of Visual Computing and Computational Media 
+ College of Performance, Visualization, & Fine Arts 
+ Joint Faculty,Department of Computer Science and Engineering 
+ Aggie Computer Graphics Group 
+ Texas A&M University 
+ Email:xinli@tamu.edu 
+ Google Scholar 
+ Bio 
+ I am a Professor and Chair of theSection of Visual Computing and Computational Media, within the College of Performance, Visualization, and Fine Arts. I am an affiliated faculty member (courtesy appointment) of the Department of Computer Science and Engineering, College of Engineering. I am also affiliated withAggie Computer Graphics Group. I got my B.S. degree in Computer Science in 2003 atUniversity of Science and Technology of China (USTC)with a major inComputer Science, and obtained my M.S. and Ph.D. degrees inComputer SciencefromState University of New York at Stony Brookin 2005 and 2008. Before I joined Texas A&M University, I was a faculty member at School of Electrical Engineering and Computer Science, Louisiana State University (from 2008 to 2022). 
+ Awards and Media Coverage 
+ Solid Modeling Association (SMA) | Young Investigator Award, 2020. 
+ IBM Faculty Award | , December 2011. 
+ LSU Flagship Faculty, Oct. 2010. 
+ C. W. Armstrong Jr. Professor of Engineering, LSU, December 2012. 
+ Oskar R. Menton Professor of Electrical Engineering, LSU, since December 2013. 
+ LSU Distinguished Dissertation Award (as supervisor of Dr. Kang Zhang), 2016 
+ Forensic Data Restoration and Facial Reconstruction: | Talk | , Media Coverage: | BBC (2019) | , | 225 Magazine (2018) | . 
+ Research Interests and Projects 
+ Recent Research Interests: 
+ Visual Computing: Geometric/Spatiotemporal Data Processing, Understanding, and Modeling 
+ Computer Vision, Image/Video Analysis with Deep Learning 
+ Generative Modeling: AI image and 3D content generation 
+ 3D Reconstruction, Visual Simultaneous Localization and Mapping (VSLAM) 
+ Real-time AI Algorithms for Virtual/Augmented Reality (VR/AR) 
+ Computer-aided Design, Computer-aided Forensics, Medical Image Analysis 
+ Research Projects: 
+ Computer-aided Design/Engineering (CAD/CAE): Polycube Mapping, Parameterization & Structured Regular Mesh Generation.Computational Forensics: Fragmented and Damaged Data Restoration, Facial Reconstruction From SkullGenerative AIfor Image/Scene Creation from Text DescriptionLow-bandwidth/Sparse SLAM: Simultaneous Localization and Mapping (SLAM) from Sparse DatasetDigital Jigsaw Puzzle Solving: Reassembly of Fragments (Shredded Documents, Torn Images, Fractured Geometries)WaterNet: Semantic Segmentation of Appearance-changing Objects in Videos/Images; Flood and Hydrograph ReconstructionDigital Avatar Reconstruction: Real-time 3D+Thermal Body Scanning and Reconstructionhref="CBiomedicine/TumorTracking.html" - Computational Medicine and Medical Image Analysis
+Robotic 3D Environment Exploration and InspectionLarge-scale Data Processing and Parallel Mesh GenerationHuman Action Modeling and AnalysisDeepfake Analysis and DetectionControllable 3D Scene GenerationSelected Recent Publications (Acomplete list of publications) 
+ (Acomplete list of publications) 
+ Skull-to-Face: Anatomy-Guided 3D Facial Reconstruction and Editing, 
+ Y. Liang, C. Zhang, J. Zhao, W. Wang, X. Li. 
+ arXiv:2403.16207, 2024. 
+ [Paper] [Webpage] 
+ SO-SMPL: Disentangled Clothed Avatar Generation from Text Descriptions, 
+ J. Wang, Y. Liu, Z. Dou, Z. Yu, Y. Liang, X. Li, W. Wang, R. Xie, L. Song. 
+ European Conference on Computer Vision (ECCV) 2024. 
+ [Paper] [Webpage] 
+ Surf-D: Generating High-Quality Surfaces of Arbitrary Topologies Using Diffusion Models, 
+ Z. Yu, Z. Dou, X. Long, C. Lin, Z. Li, Y. Liu, N. Muller, T. Komura, M. Habermann, C. Theobalt, X. Li, W. Wang, 
+ European Conference on Computer Vision (ECCV) 2024. 
+ [Paper] [Webpage] 
+ Commonsense Prototype for Outdoor Unsupervised 3D Object Detection, 
+ H. Wu, S. Zhao, X. Huang, C. Wen, X. Li, C. Wang. 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2024. 
+ [Paper] 
+ HINTED: Hard Instance Enhanced Detector with Mixed-Density Feature Fusion for Sparsely-Supervised 3D Object Detection, 
+ Q. Xia, W. Ye, H. Wu, S. Zhao, L. Xing, X. Huang, J. Deng, X. Li, C. Wen, C. Wang, 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2024. 
+ Sunshine to Rainstorm: Cross-Weather Knowledge Distillation for Robust 3D Object Detection, 
+ X. Huang, H. Wu, X. Li, X. Fan, C. Wen, C. Wang. 
+ AAAI Conference on Artificial Intelligence (AAAI), 2024. 
+ [Paper] 
+ Batch-based Model Registration for Fast 3D Sherd Reconstruction, 
+ J. Wang, C. Zhang, P. Wang, X. Li, P. Cobb, C. Theobalt, W. Wang. 
+ Proc. International Conference on Computer Vision (ICCV), 2023. 
+ [Paper] [Webpage] 
+ Surface Extraction from Neural Unsigned Distance Fields, 
+ C. Zhang, G. Lin, L. Yang, X. Li, T. Komura, S. Schaefer, J. Keyser, and W. Wang, 
+ Proc. International Conference on Computer Vision (ICCV), 2023. 
+ [Paper] 
+ Virtual Sparse Convolution for Multimodal 3D Object Detection. 
+ H. Wu, C. Wen, S. Shi, X. Li, C. Wang, 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023. 
+ [href="Research/bib/Wu23CVPR.htm" - Bibtex
+] 
+ Transformation-Equivariant 3D Object Detection for Autonomous Driving. 
+ H. Wu, C. Wen, W. Li, X. Li, R. Yang, and C. Wang 
+ AAAI Conference on Artificial Intelligence (AAAI), 2023. 
+ [Paper] [href="Research/bib/Wu23AAAI.htm" - Bibtex
+] 
+ V-FloodNet: A Video Segmentation System for Urban Flood Detection and Quantification. 
+ Y. Liang, X. Li, B. Tsai, Q. Chen, and N. Jafari 
+ Environmental Modeling and Software, 2022. 
+ [href="Research/bib/Liang22EMS.htm" - Bibtex
+] 
+ DR-GAN: Distribution Regularization for Text-to-Image Generation. 
+ H. Tan, X. Liu, B. Yin, and X. Li 
+ IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2022. 
+ [href="Research/bib/Tan22TMM.htm" - Bibtex
+] 
+ Video Object Segmentation with Adaptive Feature Bank and Uncertain-Region Refinement. 
+ Y. Liang, X. Li, N. Jafari, Q. Chen 
+ Neural Information Processing Systems (NIPS), 2020. 
+ [href="Research/bib/Liang20NIPS.htm" - Bibtex
+] 
+ KT-GAN: Knowledge-Transfer Generative Adversarial Network for Text-to-Image Synthesis. 
+ H. Tan, X. Liu, M. Liu, B. Yin, and X. Li 
+ IEEE Transactions on Image Processing, 2020. 
+ [href="Research/KTGAN_T2I_2020TIP.pdf" - Paper
+] [href="Research/bib/Tan20TIP.htm" - Bibtex
+] 
+ DDGCN: A Dynamic Directed Graph Convolutional Network for Action Recognition. 
+ M. Korban and X. Li 
+ European Conference on Computer Vision (ECCV), 2020. 
+ [Webpage][href="Research/bib/Korban20ECCV.htm" - Bibtex
+] 
+ A Discriminative Multi-Channel Facial Shape (MCFS) Representation and Feature Extraction for 3D Human Faces. 
+ X. Gong, X. Li, T. Li, and Y. Liang 
+ Computer Graphics Forum (CGF), 2020. 
+ [href="Research/bib/Gong20CGF.htm" - Bibtex
+] 
+ Point2Node: Correlation Learning of Dynamic-Node for Point Cloud Feature Modeling. 
+ W. Han, C. Wen, C. Wang, Q. Li, and X. Li 
+ AAAI Conference on Artificial Intelligence (AAAI), Oral, 2020. 
+ [href="Research/bib/Han20AAAI.htm" - Bibtex
+] 
+ Reassembling Shredded Document Stripes Using Word-path Metric and Greedy Composition Optimal Matching Solver. 
+ Y. Liang and X. Li 
+ IEEE Transactions on Multimedia (TMM), 2019 . 
+ [Webpage] [href="Research/bib/Liang19TMM.htm" - Bibtex
+] 
+ Semantics-enhanced Adversarial Nets for Text-to-Image Synthesis. 
+ H. Tan, X. Liu, X. Li, Y. Zhang, and B. Yin 
+ International Conference on Computer Vision (ICCV) 2019. 
+ [href="Research/bib/Tan19ICCV.htm" - Bibtex
+] 
+ Superimposition-guided Facial Reconstruction from Skull. 
+ C. Liu and X. Li. 
+ arXiv:1810.00107, 2019. 
+ [href="Research/bib/Liu18Arxiv.htm" - Bibtex
+] [Paper] 
+ JigsawNet: Shredded Image Reassembly Using Convolutional Neural Network and Loop-based Composition. 
+ C. Le and X. Li. 
+ IEEE Transactions on Image Processing, 2019. 
+ [href="Research/bib/Le19TIP.htm" - Bibtex
+] [Paper] 
+ RF-Net: An End-to-End Image Matching Network based on Receptive Field. 
+ X. Shen, C. Wang, X. Li, M. Cheng, Zenglei Y., J. Li, C. Wen, M. Cheng, and Z. He 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019. 
+ [href="Research/bib/Shen19CVPR.htm" - Bibtex
+] 
+ LO-Net: Deep Real-time Lidar Odometry. 
+ Q. Li, S. Chen, C. Wang, X. Li, C. Wen, M. Cheng, J. Li. 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019. 
+ [href="Research/bib/Li19CVPR.htm" - Bibtex
+] 
+ Non-iterative Topology Optimization for Heat Conduction Structures using Deep Learning 
+ B. Li, C. Huang, X. Li, S. Zheng and J. Hong 
+ Computer-aided Design (CAD), ACM Symposium of Solid and Physical Modeling (SPM19), 2019 
+ [href="Research/bib/Li19CAD.htm" - Bibtex
+]Hierarchical Fragmented Image Reassembly using a Bundle-of-Superpixel Representation 
+ X. Li, K. Xie, W. Hong, C. Liu 
+ Computer-aided Geometric Design (CAGD), International Conf. on Geometric Modeling and Processing (GMP19), 2019 
+ [href="Research/bib/Li19CAGD.htm" - Bibtex
+]On-the-fly Extrinsic Calibration of Multimodal Sensing System for Fast 3D Thermographic Scanning 
+ B. Xu, Z. Ye, F. Wang, J. Yang, Y. Cao, C-L. Tisse, X. Li, and Y. Cao 
+ Applied Optics, 58(12): 3238-3246, 2019. 
+ [href="Research/bib/Xu19AO.htm" - Bibtex
+]Fast and accurate single image super-resolution via an energy- aware improved deep residual network 
+ Y. Cao, Z. He, Z. Ye, X. Li, Y. Cao, J. Yang 
+ Signal Processing, 162: 115-125, 2019. 
+ [href="Research/bib/Cao19SP.htm" - Bibtex
+]Robust procedural model fitting with a new geometric similarity estimator 
+ Z. Zhang, J. Li, Y. Guo, X. Li, Y. Lin, G. Xiao, C. Wang 
+ Pattern Recognition (PR), 85:120-131, 2019. 
+ [href="Research/bib/Zhang19PR.htm" - Bibtex
+]Sparse3D: A New Global Model for Matching Sparse RGB-D Dataset with Small Inter-frame Overlap 
+ C. Le and X. Li 
+ Computer-aided Design (CAD) (Proc. ACM Symp. Solid and Physical Modeling SPM'18), 102:33-43, 2018. 
+ [href="Research/bib/Le18CAD.htm" - Bibtex
+]Depth and Thermal Sensor Fusion to Enhance 3D Thermographic Reconstruction 
+ Y. Cao, B. Xu, Z. Ye, J. Yang, Y. Cao, C. Tisse, and X. Li 
+ Optics Express, 26(7), pp. 8179-8193, 2018. 
+ [href="Research/bib/Cao18OE.htm" - Bibtex
+]Distributed Poly-square Mapping for Large-scale Semi-Structured Quad Mesh Generation 
+ C. Liu, W. Yu, Z. Chen, and X. Li 
+ Computer-aided Design (CAD) (Proc ACM Solid and Physical Modeling SPM'17), Vol. 90, pp. 5-17, 2017. 
+ [href="Research/bib/Liu17CAD.htm" - Bibtex
+]Geometry-aware Partitioning of Complex Domains for Parallel Quad Meshing 
+ X. Li, W. Yu, and C. Liu 
+ Computer-aided Design (CAD), 85:20-33, 2017. 
+ [href="Research/bib/Li17CAD.htm" - Bibtex
+]A Multi-frame Graph Matching Algorithm for Low-bandwidth RGB-D SLAM 
+ S. Zheng, B. Li, K. Zhang, J. Hong, and X. Li 
+ Computer-aided Design (CAD), (ACM Symp. Solid and Physical Modeling SPM16), 78:107-117, 2016. 
+ [href="Research/SPM16.pdf" - Paper
+] [href="Research/bib/Zheng16CAD.htm" - Bibtex
+] 
+ 3D Fragment Reassembly using Integrated Template Guidance and Fracture-Region Matching 
+ K. Zhang, W. Yu, M. Manhein, W. Waggenspack, and X. Li 
+ International Conference on Computer Vision (ICCV), pp. 2138-2146, 2015. 
+ [href="Research/ReassemblyICCV2015.pdf" - Paper
+] [href="Research/bib/Zhang15ICCV.htm" - Bibtex
+] 
+ Automatic Quad Meshing by Simulating NaCl Crystallization 
+ C. Zhang and Xin Li 
+ International Meshing Roundtable (IMR), Procedia Engineering, pp. 284-296, 2017. 
+ [href="Research/bib/Zhang17IMR.htm" - Bibtex
+]On Computing Mapping of 3D Objects, A Survey 
+ X. Li, S. Iyengar 
+ ACM Computing Surveys, Vol. 47, Issue 2, 34:1--34:45, 2015. 
+ [href="Research/Survey_Mapping_CSUR14.pdf" - Paper
+] [href="Research/bib/ACMCS15.htm" - Bibtex
+] 
+ A Graph-based Optimization Algorithm for Fragmented Image Reassembly 
+ K. Zhang and X. Li 
+ Graphical Models (Geometric Modeling and Processing GMP'14), 76(5):484-495, 2014. 
+ [href="Research/ZL14GMP.pdf" - Paper
+] [href="Research/bib/Zhang14GMP.htm" - Bibtex
+] 
+ Optimizing Polycube Domain Construction for Hexahedral Remeshing 
+ W. Yu, K. Zhang, S. Wan, X. Li 
+ Computer-aided Design, Vol. 46, pp. 58-68, 2014. 
+ [href="Research/PolycubeOpt_CAD14.pdf" - Paper
+] [href="Research/bib/Yu14CAD.htm" - Bibtex
+] 
+ Surface Mesh to Volumetric Spline Conversion with Generalized Poly-cubes 
+ Bo Li, Xin Li, Kexiang Wang, Hong Qin 
+ IEEE Trans. on Visualization and Computer Graphics(TVCG), 19(9):1539-1551, 2013. 
+ [href="Research/LLWQ13TVCG.pdf" - Paper
+][href="Research/bib/Li13TVCG.htm" - Bibtex
+] 
+ Biharmonic Volumetric Mapping using Fundamental Solutions 
+ Huanhuan Xu, Wuyi Yu, Shiyuan Gu, Xin Li 
+ IEEE Trans. on Visualization and Computer Graphics(TVCG), vol. 19, issue 5, pp. 787-798, 2013. 
+ [href="Research/XYGL13TVCG.pdf" - Paper
+][href="Research/bib/Xu13TVCG.htm" - Bibtex
+] 
+ A Symmetric 4D Registration Algorithm for Respiratory Motion Modeling 
+ Huanhuan Xu, Xin Li 
+ International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), pp. 149-156, 2013. 
+ [href="Research/MICCAI13.pdf" - Paper
+] [href="Research/MICCAI13Poster.pdf" - Poster
+] [href="Research/bib/Xu13MICCAI.htm" - Bibtex
+] 
+ Spherical DCB-Spline Surfaces with Hierarchical and Adaptive Knot Insertion 
+ J. Cao, X. Li, Z. Chen, H. Qin 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 18, No. 8, pp. 1290-1303, 2012. 
+ [href="Research/CLCQ12TVCG.pdf" - paper
+][href="Research/bib/CLCQ12TVCG.htm" - Bibtex
+]Efficient Spherical Parameterization using Progressive Optimization 
+ Shenghua Wan, Tengfei Ye, Maoqing Li, Hongchao Zhang, Xin Li 
+ Computational Visual Media Conference, pp. 170-177, 2012. 
+ [href="Research/SphMap12CVM.pdf" - Paper
+][Webpage] [href="Research/bib/Wan12CVM.htm" - Bibtex
+] 
+ Computing 3D Shape Guarding and Star Decomposition 
+ Wuyi Yu, Xin Li 
+ Computer Graphics Forum (CGF), 30(7):2087-2096, 2011. 
+ [Project Webpage] [href="Research/CGF2011.pdf" - Paper
+] [href="Research/PG2011_Slides.pdf" - Slides
+][href="Research/bib/Yu11CGF.htm" - Bibtex
+] 
+ Poster presented inSIGGRAPH 2011, ACM Student Research Competition Semifinalists[Webpage] [href="Research/SIG11_Abstract.pdf" - Abstract
+] [href="Research/SIG11_Poster.pdf" - Poster
+] 
+ Restricted Trivariate Polycube Splines for Volumetric Data Modeling 
+ Kexiang Wang, Xin Li, Bo Li, Huanhuan Xu, and Hong Qin 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG)Vol. 18, Issue 5, pp. 703-716, 2012 
+ [href="Research/WLLXQ12TVCG.pdf" - Paper
+] [Video:FittingDistanceField_X],[Video:FittingDistanceField_Y], [Video:FittingNoise_X],[Video:FittingNoise_Z][href="Research/bib/Wang12TVCG.htm" - Bibtex
+] 
+ On Optimizing Autonomous Pipeline Inspection in 3D Environment 
+ Xin Li, Wuyi Yu, Xiao Lin, and S. S. Iyengar 
+ IEEE Trans. on Robotics (TRO), vol. 28, no. 1, pp. 223-233, 2012. 
+ [href="Research/LYLI12TRO.pdf" - Paper
+] [href="Research/TROVideo" - Video
+][href="Research/bib/Li12TRO.htm" - Bibtex
+]An Automatic Assembly and Completion Framework for Fragmented Skulls 
+ Zhao Yin, Li Wei, Mary Manhein, Xin Li 
+ International Conference on Computer Vision (ICCV) 2011. 
+ [Website][href="Research/SkullAssemblyICCV11.pdf" - Paper
+][href="Research/SkullAssembly_ICCV.avi" - Video
+][href="Research/bib/Yin11ICCV.htm" - Bibtex
+] 
+ Surface Mapping using Consistent Pants Decomposition 
+ Xin Li, Xianfeng Gu, and Hong Qin 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 15, No. 4, pp. 558-571, 2009. (Invited as one of the two best papers from ACM Solid and Physical Modeling Symposium 2008) 
+ [href="Research/Li_PD_TVCG09.wmv" - Video
+] [href="Research/LiPDMapTVCG09.pdf" - Paper
+] [href="Research/bib/PD09TVCG.htm" - Bibtex
+] 
+ Meshless Harmonic Volumetric Mapping using Fundamental Solution Methods 
+ Xin Li, Xiaohu Guo, Hongyu Wang, Ying He, Xianfeng Gu, and Hong Qin 
+ IEEE Trans. on Automation Science and Engineering (TASE), Vol. 6, Issue 3, pp. 409 - 422, 2009. 
+ [href="Research/VMap09TASE.pdf" - Paper
+] [href="Research/SolidTextureSynthesis.avi" - Video
+] [href="Research/bib/bibVMapTASE09.htm" - Bibtex
+] 
+ SPM07 Conference Version:Harmonic Volumetric Mapping for Solid Modeling Applications 
+ Xin Li, Xiaohu Guo, Hongyu Wang, Ying He, Xianfeng Gu, and Hong Qin 
+ Proc. of ACM Solid and Physical Modeling Symposium, pp. 109-120, 2007. 
+ [href="Research/XinLiSPM07.pdf" - Paper
+] [href="Research/bib/VMap09TASE.htm" - Bibtex
+] [href="Research/" - Video
+] 
+ Globally Optimal Surface Mapping for Shapes of Arbitrary Topology 
+ Xin Li, Yunfan Bao, Xiaohu Guo, Miao Jin, Xianfeng Gu, and Hong Qin 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 14, No. 4, pp. 805-819, 2008. 
+ [href="Research/LiSMapTVCG08.pdf" - Paper
+] [href="Research/SurfaceMapping_divx.avi" - Video:Optimization
+] [href="Research/SMapGreekToTorus.mov" - Video:Morph:GreekToTorus
+] [href="Research/SMapTorusToGreek.mov" - Video:Morph:TorusToGreek
+] [href="Research/bib/SMap08TVCG.htm" - Bibtex
+] 
+ Polycube Splines 
+ Hongyu Wang, Ying He, Xin Li, Xianfeng Gu, and Hong Qin 
+ Computer Aided Design (CAD), Vol. 40, No. 6, pp. 721-733, 2008. 
+ [href="Research/PolycubeSpline08.pdf" - Paper
+][href="Research/bib/Wang08CAD.htm" - Bibtex
+] 
+ Meshless Thin-shell Simulation Based on Global Conformal Parameterization 
+ Xiaohu Guo, Xin Li, Yunfan Bao, Xianfeng Gu, and Hong Qin 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 12, No. 3, pp. 375-385, 2006. 
+ [href="Research/Point_TVCG06.pdf" - Paper
+] [href="Research/Point_parameterization.mov" - Video1
+] [href="Research/PointMap_part2.mov" - Video2
+] [href="Research/PointMap_part3.mov" - Video3
+] [href="Research/PointMap_part4.mov" - Video4
+][href="Research/bib/Guo06TVCG.htm" - Bibtex
+] 
+ Spatial Analysis of News Sources 
+ Andrew Mehler, Yunfan Bao, Xin Li, Yue Wang, and Steven Skiena 
+ IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 12, No. 5, pp. 765-772, 2006. 
+ [href="Research/HeatMap_TVCG06.pdf" - Paper
+][href="Research/bib/HeatMap06TVCG.htm" - Bibtex
+] 
+ Students 
+ Please visit ourGVC group websitefor detail. 
+ I am looking for intelligent, self-motivated, and dedicated Master/Ph.D students with solid math and computer science/engineering background. If you are interested, please email me your resume. 
+ Teaching 
+ Graphics and Visual Computing (EE7750) 
+ (Spring 2014, Fall 2016, Fall 2018) 
+ Introduction to Computer Vision (EE4780) 
+ (Spring 2014, 2016, 2017, 2019) 
+ 3D Graphical and Geometric Modeling (EE4730) 
+ (Spring 2012, 2013, 2018, 2020, Fall 2015) 
+ Digital Logics II (EE2730) 
+ (Fall 2012) 
+ Digital Logics Lab (EE2731) 
+ (Fall 2012) 
+ 3D Graphics and Visual Computing (EE7000) 
+ (Spring 2009, 2010, Fall 2011) 
+ 3D Graphics and Modeling (EE4702-1) 
+ (Fall 2010) 
+ Geometric Modeling and Computer Graphics(EE4700-2) 
+ (Fall 2009) 
+ Professional Service 
+ International Conference Technical Program Committee 
+ 2025 
+ Annual AAAI Conference on Artificial Intelligence (AAAI) (2025) 
+ International Conference on Computational Visual Media (CVM) (2025) 
+ International Conference on Geometric Modeling and Processing (GMP) (2025) 
+ International Conference on Shape Modeling and Applications (SMI) (2025) 
+ ACM Symposium on Solid and Physical Modeling (SPM) (2025) 
+ 2024 
+ Annual AAAI Conference on Artificial Intelligence (AAAI) (2024) 
+ ACM SIGGRAPH VRCAI (2024) 
+ International Symposium on Visual Computing (ISVC) (2024) 
+ International Conference on Geometric Modeling and Processing (GMP) (2024) 
+ Shape Modeling International (SMI) 2024 
+ Computer Graphics International (CGI) 2024 
+ Pacific Graphics (PG) 2024 
+ 2023 
+ SIAM/ACM Geometric Design Conference (GD) (Technical Program Co-Chair) 
+ Pacific Graphics (PG) (2023) 
+ Computer Graphics International (CGI) (2023) 
+ International Conference on Geometric Modeling and Processing (GMP) (2023) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) 2023 
+ International Symposium on Visual Computing (ISVC) 2023 
+ 2022 
+ International Conference on Geometric Modeling and Processing (GMP) 2022. (Technical Program Co-Chair) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) 2022. 
+ Winter Conference on Applications of Computer Vision (WACV) 2022. 
+ International Conference on Computer Animation and Social Agents (CASA) 2022 
+ International Conference on Computer Graphics, Visualization and Computer Vision (WSCG) 2022 
+ International Symposium on Visual Computing (ISVC) 2022 
+ Motion, Interaction and Games (MIG) 2022 
+ 2021 
+ SIAM/ACM Symposium on Solid and Physical Modeling (SPM) 2021. (Conference Co-Chair) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) 2021 
+ Winter Conference on Applications of Computer Vision (WACV) 2021 
+ SIAM Geometric Design Conference (GD) 2021 
+ 2020 
+ ACM Symposium on Solid and Physical Modeling (SPM) 2020. (Technical Program Co-Chair) 
+ International Symposium of Visual Computing (ISVC) 2020. 
+ International Conference on Computational Visual Media (CVM) 2020. 
+ International Conference on Computer Graphics, Visualization and Computer Vision (WSCG) 2020. 
+ 2019 
+ ACM Symposium on Solid and Physical Modeling (SPM) 2019. (Technical Paper Program Co-Chair) 
+ International Symposium of Visual Computing (ISVC) 2019. (Computer Graphics Paper Program Co-Chair) 
+ International Geometry Summit (IGS) 2019. (Technical Poster Program Co-Chair) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) 2019. 
+ 2018 
+ ACM Symposium on Solid and Physical Modeling (SPM) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) (Poster Session Chair) 
+ Geometric Modeling and Processing (GMP) 
+ ACM SIGGRAPH International Conference on Virtual-Reality Continuum and its Applications in Industry (VRCAI) 
+ International Symposium on Visual Computing (ISVC) 
+ 2017 
+ ACM Symposium on Solid and Physical Modeling (SPM) 
+ IEEE International Conference on Shape Modeling and Applications (SMI) (Poster Session Chair) 
+ Geometric Modeling and Processing (GMP) 
+ International Conference on Computer Animation and Social Agents (CASA) 
+ ACM SIGGRAPH International Conference on Virtual-Reality Continuum and its Applications in Industry (VRCAI) 
+ International Symposium on Visual Computing (ISVC) 
+ International Conference on Virtual Reality and Visualization (ICVRV) 
+ Previous Years 
+ SIAM/ACM Conference on Geometric and Physical Modeling (GD/SPM) 2015 
+ ACM Symposium on Solid and Physical Modeling (SPM) 2014, 2016 
+ IEEE International Conference on Shape Modeling and Applications (SMI) 2014, 2015 
+ Geometric Modeling and Processing (GMP) 2012, 2014, 2015, 2016 
+ IEEE International Symposium on Haptic Audio Visual Environments and Games (HAVE) 2014, 2015 
+ International Conference on Computer Animation and Social Agents (CASA) 2014, 2015 
+ International Symposium on Visual Computing (ISVC) 2014, 2015, 2016 
+ ACM SIGGRAPH International Conference on Virtual-Reality Continuum and its Applications in Industry (VRCAI) 2013, 2014 
+ International Conference on Computer Vision in Remote Sensing (CVRS) 2012 
+ International Conference on Computer Science & Education 2009-2016 
+ Journal Editorial Board 
+ Computer-aided Design (CAD): Guest Editor (2019-2020), Associate Editor (2020-Present) 
+ Computer Aided Geometric Design (CAGD): Guest Editor (2021-2022), Associate Editor (2024-Present) 
+ The Visual Computer (TVC): Associate Editor (2025-Present) 
+ Sensors (Guest Editor, 2021-2022) 
+ Lecture Notes of Computer Science (LNCS) (Guest Editor, 2019) 
+ Journal of Computer Science and Technology (JCST) (Associate Editor, 2018-Present) 
+ AAAS Science Partner Journal - Research (Associate Editor, 2018-Present) 
+ Paper Reviewing 
+ Journals: 
+ IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 
+ ACM Transactions on Graphics (TOG) 
+ IEEE Transactions on Visualization and Computer Graphics (TVCG) 
+ IEEE Transactions on Image Processing (TIP) 
+ IEEE Transactions on Robotics (TRO) 
+ IEEE Transactions on Signal Processing (TSP) 
+ IEEE Transactions on Neural Networks and Learning Systems (TNNLS) 
+ IEEE Robotics and Automation Letters 
+ Computer-aided Design (CAD) 
+ Computer Graphics Forum (CGF) 
+ The Visual Computer (TVC) 
+ Computer-aided Geometric Design (CAGD) 
+ Graphical Models (GMOD) 
+ Computers & Graphics (CAG) 
+ Computer Vision and Image Understanding (CVIU) 
+ Computer Animation and Virtual Worlds (CAVW) 
+ Journal of Computational and Applied Mathematics (JCAM) 
+ International Journal of Robotics Research (IJRR) 
+ Conferences:ACM SIGGRAPH 
+ ACM SIGGRAPH Asia (SIGAsia) 
+ IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 
+ IEEE International Conference on Computer Vision (ICCV) 
+ European Conference on Computer Vision (ECCV) 
+ IEEE Visualization (VIS) 
+ IEEE InfoVis (InfoVIS) 
+ EuroGraphics (EG) 
+ Pacific Graphics (PG) 
+ Geometric Modeling and Processing (GMP) 
+ ACM Symposium on Soli and Physical Modeling (SPM) 
+ IEEE Shape Modeling International (SMI) 
+ ACM SIGGRAPH International Conference on Virtual-Reality Continuum and its Applications in Industry (VRCAI) 
+ Acknowledgements 
+ We gratefully acknowledge our sponsors. Our research are supported by the following federal, state, and university entities. 
+ Home|Group & | Students|Projects|Publications|Software|Teaching|ServiceAll rights reserved. Copyright (c) Xin (Shane) Li
+
+3. Website of SPM_2: http://solidmodeling.org/
+Website information of SPM_2:
+
+Join SMA 
+ Home 
+ Contact Us 
+ href="http://solidmodeling.org/spm-conferences/" - SPM Conferences 
+ Awards | Bézier Award 
+ SMA Pioneers 
+ SMA Fellows 
+ SMA Young Investigator 
+ SMA | Executive Committee 
+ Procedures 
+ Forums 
+ Events & News 
+ ×Login Error 
+ Your username or password are incorrect. Please try again. 
+ username:password:forgot your password? 
+ join SMA 
+ 25.03.2025 | Call for Papers: CAD/Graphics 2025 | more 
+ 15.11.2024 | Job Postings | more 
+ 09.07.2022 | Announcing SMA Awards 2022! | more 
+ 03.10.2021 | Announcing SMA Awards 2021! | more 
+ 14.12.2020 | SMA EC & AB Updates | more 
+ 07.12.2020 | DARPA TRADES Challenge Problems | more 
+ 14.05.2020 | Announcing SMA Awards 2020! | more 
+ 11.05.2019 | Announcing SMA Awards 2019! | more 
+ 22.02.2019 | Announcement: New SMA Award Categories! | more 
+ 01.02.2018 | Call for papers: Advances in Generative Design (A special issue in Computer-Aided Design) | more 
+ 21.11.2017 | Post-Doctoral Opportunity at University of Wisconsin – Madison | more 
+ 22.06.2017 | SPM2017: Replicability Stamp | more 
+ 13.06.2017 | SPM 2018 in Spain | more 
+ 15.12.2016 | Call for nominations for the Pierre Bézier award 2017 | more 
+ 15.12.2016 | The SPM 2017 Conference | more 
+ moreWelcome! 
+ This is the homepage for theSolid Modeling Association (SMA), servingresearch, development, and user communities in CAD/CAM and in the broader field of Solid Modeling and its applications. 
+ Solid Modeling refers to theories and computations that define and manipulate representations of physical objects, of their properties, and of the associated abstractions, and that support a variety of processes. The representations and computations used in solid modeling are based on sound mathematical and physical principles, innovative and compact data structures, and efficient and reliable algorithms. They support the creation, exchange, visualization, evolution, analyzing, animation, interrogation, annotation, manufacturing and fabrication of the digital models of the objects. 
+ Since its inception in 1991, the ACM Symposium on Solid Modeling and Applications has been the primary venue for disseminating research results in the design, representation, analysis, visualization, manufacturing, fabrication, and use of digital models of real or planned solid objects and of their bounding surfaces. This initial period was primarily focused on the theoretical and algorithmic tools that produce and exploit unambiguous representations of the geometry of such objects. 
+ We continue to seek research contributions that strive to advance the domain, accuracy, and effectiveness of such representations and algorithms. At the same time, modeling solids entails not only modeling their geometric shape, but also their physical properties and behaviors. To emphasize this broader mission, the name of the mainSMAinternational conference was changed to Symposium on Solid and Physical Modeling (abbreviated SPM). SPM is the prime international venue for state-of-the-art research in these areas and is typically executed in cooperation with ACM and in collocation with SIAM GD meetings (every other year). 
+ TheSMAwas formed to develop and oversee the series of SPM annual meetings and to provide the members of the Solid Modeling community with means to inform each other about their activities and progress and to track and influence the events, funding, and research opportunities in this field. Membership in theSMAis free while active members receive important email messages and announcements, have the right to be actively involved in the SMA technical eForms and gain search access in the database of participating members.SMAis administered by an executive committee of five volunteers. 
+ Copyright © 2015 by Solid Modeling Association. All rights reserved. 
+ INTERIAWeb Design & Development
+

@@ -1,0 +1,26 @@
+output:
+{
+  "Conference dates": "June 17 - 19, 2025",
+  "Year": "2025",
+  "Location": "Milano, Italy",
+  "City-State-Province": "Milano",
+  "Country": "Italy",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "First round submission deadline": "November 16, 2024",
+    "Second round submission deadline": "February 21, 2025"
+  },
+  "Notification Date": {
+    "Author notification": "December 23, 2024",
+    "Author notification": "March 31, 2025"
+  },
+  "Camera-ready Date": {
+    "Camera-ready due": "April 14, 2025"
+  },
+  "Topics": "Combinatorial Pattern Matching, Bioinformatics and computational biology, Coding and data compression, Combinatorics on words, Data mining, Information retrieval, Natural language processing, Pattern discovery, String algorithms, String processing in databases, Symbolic computing, Text searching and indexing",
+  "Publisher": "LIPIcs",
+  "Summary": "The 36th Annual Symposium on Combinatorial Pattern Matching (CPM 2025) will be held in Milano, Italy, from June 17-19, 2025. The symposium seeks papers on original research in all areas related to combinatorial pattern matching and its applications.",
+  "Call for Papers": "# CPM 2025: Call for Papers\n\nThe 36th Annual Symposium on Combinatorial Pattern Matching (CPM 2025) will be held in **Milano, Italy, from June 17-19, 2025**.\n\n## Scope\n\nPapers on original research unpublished elsewhere in all areas related to combinatorial pattern matching and its applications are sought.\n\nThe proceedings will be published by LIPIcs (of Dagstuhl). A selection of the best papers will be invited to be submitted to Algorithmica.\n\n## Topics of Interest\n\nPapers are solicited on, but not limited to, the following topics:\n\n*   Bioinformatics and computational biology\n*   Coding and data compression\n*   Combinatorics on words\n*   Data mining\n*   Information retrieval\n*   Natural language processing\n*   Pattern discovery\n*   String algorithms\n*   String processing in databases\n*   Symbolic computing\n*   Text searching and indexing\n\n## Keynote Speakers\n\n*   Inge Li Gørtz (Technical University of Denmark, Denmark)\n*   Nicola Prezza (Ca’ Foscari University of Venice, Italy)\n*   Kunihiko Sadakane (The University of Tokyo, Japan)\n\n## Submission Details\n\nThis edition is piloting a two-round system:\n\n*   The first round call aims to select half of the papers.\n*   The second round call selects the rest. Revised versions of papers rejected in the first round can be resubmitted in the second round.\n\n### Important Dates\n\n*   **First round submission deadline:** November 16, 2024 (AoE)\n*   **Author notification (Round 1):** December 23, 2024\n*   **Second round submission deadline:** February 21, 2025 (AoE)\n*   **Author notification (Round 2):** March 31, 2025\n*   **Camera-ready due:** April 14, 2025\n*   **Conference:** June 17-19, 2025\n\n### Submission\n\nSubmission is through the EasyChair conference system: [https://easychair.org/conferences/?conf=cpm2025](https://easychair.org/conferences/?conf=cpm2025)\n\n### Submission Format\n\nAuthors should submit an extended abstract not exceeding 12 single-spaced pages on A4 paper, excluding the title page and references.  Use the LaTeX style file supplied by Dagstuhl (LIPIcs): [https://submission.dagstuhl.de/series/details/LIPIcs#author](https://submission.dagstuhl.de/series/details/LIPIcs#author). Papers must be submitted as a single file in PDF format."
+}
+

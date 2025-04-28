@@ -1,0 +1,14 @@
+output:
+{
+  "Conference dates": "No conference dates available",
+  "Year": "No year available",
+  "Location": "No location available",
+  "City-State-Province": "No city available",
+  "Country": "No country available",
+  "Continent": "No continent available",
+  "Type": "No type available",
+  "Topics": "No topics available",
+  "Summary": "The Language Resources and Evaluation Conference (LREC) is a major event in the field of language engineering, and constitutes a milestone in the life of Human Language Technologies (HLT). It is organised by ELRA biennially with the support of institutions and organisations involved in HLT, and brings together a large number of people working and interested in HLT.  The next edition will be announced soon.",
+  "Call for Papers": "No call for papers available"
+}
+

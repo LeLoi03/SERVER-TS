@@ -1,0 +1,1402 @@
+Conference full name: IEEE International Conference on High Performance Computing and Communications (HPCC)
+
+1. Website of HPCC_3: http://www.ieee-hust-ncc.org/2024/HPCC/
+Website information of HPCC_3:
+
+HPCC 2024 - Home 
+ The conference will be held in 13-15 December, 2024 
+ Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2024 conference is the 26th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2024 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2024 High Performance Computing and Communications (HPCC-2024) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. 
+  
+ WeChat Conference Consultation Group 
+ WeChat group has reached its 200-person limit. Please add the WeChat below to be invited into the consultation group. 
+  
+ Presentation and Poster Instruction 
+ For allregular full papers, authors need to prepare an oralpresentation. And forfull papers, authors need to prepare aposterto show their work. Posters need to be printed and brought to the venue. 
+ Presentation requirements: 
+ Please make sure that your presentation file follows these guidelines: 
+ The presentation should | not exceed 15 minutes | ; 
+ Presentation should be prepared in the PPTX format; 
+ Poster requirements: 
+ Please make sure that your poster follows these guidelines: 
+ A0 size (width × height = 841mm × 1189mm or 33.1 inches × 46.8 inches) | portrait format (Vertical) | . This corresponds to a 2384 x 3370px resolution at 72 PPI; 
+  
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter 
+  
+ Paper Submission Guideline 
+ The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). The review process of HPCC 2024 is single-blind. All papers need to be submitted electronically through the conference submission website with PDF format: (https://edas.info/N32666) 
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further extensions and revisions, will be recommended to special issues. 
+  
+ Important Dates 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Important Dates | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Important Dates 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 
+  
+ Conference History 
+ href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Welcome Message | With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2024 conference is the 26th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2024 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2024 High Performance Computing and Communications (HPCC-2024) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. | WeChat Conference Consultation Group | WeChat group has reached its 200-person limit. Please add the WeChat below to be invited into the consultation group. | Presentation and Poster Instruction | For allregular full papers, authors need to prepare an oralpresentation. And forfull papers, authors need to prepare aposterto show their work. Posters need to be printed and brought to the venue. | Presentation requirements: 
+ Please make sure that your presentation file follows these guidelines: 
+ The presentation should | not exceed 15 minutes | ; 
+ Presentation should be prepared in the PPTX format; 
+ Poster requirements: 
+ Please make sure that your poster follows these guidelines: 
+ A0 size (width × height = 841mm × 1189mm or 33.1 inches × 46.8 inches) | portrait format (Vertical) | . This corresponds to a 2384 x 3370px resolution at 72 PPI; | Scope and Topics | Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter | Paper Submission Guideline | The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). The review process of HPCC 2024 is single-blind. All papers need to be submitted electronically through the conference submission website with PDF format: (https://edas.info/N32666) 
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further extensions and revisions, will be recommended to special issues. | Important Dates 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Important Dates | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 | Conference History | href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Sponsors | Sponsors 
+ Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2024 conference is the 26th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2024 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2024 High Performance Computing and Communications (HPCC-2024) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. 
+ WeChat Conference Consultation Group 
+ WeChat group has reached its 200-person limit. Please add the WeChat below to be invited into the consultation group. 
+ Presentation and Poster Instruction 
+ For allregular full papers, authors need to prepare an oralpresentation. And forfull papers, authors need to prepare aposterto show their work. Posters need to be printed and brought to the venue. 
+ Presentation requirements: 
+ Please make sure that your presentation file follows these guidelines: 
+ The presentation should | not exceed 15 minutes | ; 
+ Presentation should be prepared in the PPTX format; 
+ Poster requirements: 
+ Please make sure that your poster follows these guidelines: 
+ A0 size (width × height = 841mm × 1189mm or 33.1 inches × 46.8 inches) | portrait format (Vertical) | . This corresponds to a 2384 x 3370px resolution at 72 PPI; 
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter 
+ Paper Submission Guideline 
+ The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). The review process of HPCC 2024 is single-blind. All papers need to be submitted electronically through the conference submission website with PDF format: (https://edas.info/N32666) 
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further extensions and revisions, will be recommended to special issues. 
+ Important Dates 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Important Dates | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Important Dates 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 | Paper Submission : | 15 August, 2024 
+ 10 September, 2024 | Authors Notification: | 30 September, 2024 
+ 15 October, 2024 | Final Manuscript: | 15 November, 2024 | Registration Due: | 10 November, 2024 
+ 15 November, 2024 | Conference Date: | 13-15 December, 2024 
+ Paper Submission : | 15 August, 2024 
+ 10 September, 2024 
+ Authors Notification: | 30 September, 2024 
+ 15 October, 2024 
+ Final Manuscript: | 15 November, 2024 
+ Registration Due: | 10 November, 2024 
+ 15 November, 2024 
+ Conference Date: | 13-15 December, 2024 
+ Conference History 
+ href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea 
+ Sponsors 
+
+Copyright© HPCC-2024. Created and Maintained byhref="XXXXX@XXXX.XXX" - HPCC-2024.
+
+2. Website of HPCC_3: https://hpcn.exeter.ac.uk/hpcc2025/
+Website information of HPCC_3:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+  
+ HPCC 2025 - Home 
+ HomeOrganisation CommitteeProgram Committeehref="important_dates.php" - Important Dates
+href="call4paper.php" - Call for Papers
+Workshop/SymbosiumConference Venuehref="https://hpcn.exeter.ac.uk/dss2025/" - DSS-2025
+href="https://hpcn.exeter.ac.uk/smartcity2025/" - SmartCity-2025
+href="https://hpcn.exeter.ac.uk/dependsys2025/" - DependSys-2025
+href="https://hpcn.exeter.ac.uk/icess2025/" - ICESS-2025
+href="https://hpcn.exeter.ac.uk/dikw2025/" - DIKW-2025
+Contacts | The conference will be held on 13-15 August 2025. 
+ Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2025 conference is the 27th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2025 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 27th IEEE HPCC follows the tradition of previous successful IEEE HPCC conferences in the years from 2005 to 2024 in Asia, Europe, Australia, and America. It will feature sessions of regular presentations, workshops, tutorials and keynote speeches. IEEE HPCC-2025 will be hosted in Exeter, the capital city of Devon and provides the county with a central base for education, medicine, religion, commerce and culture. The city is also home to the magnificent Exeter Cathedral, which dates back to Norman times. Exeter is also ideally placed to base a trip to branch out visiting places such as the famous Dartmoor National Park and the unspoilt beaches of the North and South Devon coastlines. 
+ Prospective authors are invited to submit their papers to HPCC-2025. Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements. The authors of selected best papers will be invited post conference to extend their contributions for special issues of prestigious journals to be planned in conjunction with the conference. 
+  
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter 
+  
+ Paper Submission Guideline 
+ All papers need to be submitted electronically through the conference submission website (href="https://hpcn.exeter.ac.uk/hpcc/" - https://hpcn.exeter.ac.uk/hpcc/
+) with PDF format. The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). 
+ Manuscript Templates for Conference Proceedings can be found at: 
+ https://www.ieee.org/conferences_events/conferences/publishing/templates.htmlOnce accepted, the paper will be included into the IEEE conference proceedings published by IEEE Computer Society Press (indexed by EI). At least one of the authors of any accepted paper is requested to register the paper at the conference. 
+  
+ Important Dates 
+ Workshop Proposal: | 1 March 2025 
+ Submission Deadline: | 30 April 2025 
+ Authors Notification: | 15 June 2025 
+ Final Manuscript Due: | 15 July 2025 
+ Registration Due: | 15 July 2025 | Workshop Proposal: | 1 March 2025 | Submission Deadline: | 30 April 2025 | Authors Notification: | 15 June 2025 | Final Manuscript Due: | 15 July 2025 | Registration Due: | 15 July 2025 
+ Workshop Proposal: | 1 March 2025 
+ Submission Deadline: | 30 April 2025 
+ Authors Notification: | 15 June 2025 
+ Final Manuscript Due: | 15 July 2025 
+ Registration Due: | 15 July 2025 
+  
+ Conference History 
+ href="http://www.ieee-hust-ncc.org/2024/HPCC/" - HPCC-2024
+, Wuhan, China 
+ href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Welcome Message | With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2025 conference is the 27th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2025 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 27th IEEE HPCC follows the tradition of previous successful IEEE HPCC conferences in the years from 2005 to 2024 in Asia, Europe, Australia, and America. It will feature sessions of regular presentations, workshops, tutorials and keynote speeches. IEEE HPCC-2025 will be hosted in Exeter, the capital city of Devon and provides the county with a central base for education, medicine, religion, commerce and culture. The city is also home to the magnificent Exeter Cathedral, which dates back to Norman times. Exeter is also ideally placed to base a trip to branch out visiting places such as the famous Dartmoor National Park and the unspoilt beaches of the North and South Devon coastlines. 
+ Prospective authors are invited to submit their papers to HPCC-2025. Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements. The authors of selected best papers will be invited post conference to extend their contributions for special issues of prestigious journals to be planned in conjunction with the conference. | Scope and Topics | Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter | Paper Submission Guideline | All papers need to be submitted electronically through the conference submission website (href="https://hpcn.exeter.ac.uk/hpcc/" - https://hpcn.exeter.ac.uk/hpcc/
+) with PDF format. The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). 
+ Manuscript Templates for Conference Proceedings can be found at: 
+ https://www.ieee.org/conferences_events/conferences/publishing/templates.htmlOnce accepted, the paper will be included into the IEEE conference proceedings published by IEEE Computer Society Press (indexed by EI). At least one of the authors of any accepted paper is requested to register the paper at the conference. | Important Dates | Workshop Proposal: | 1 March 2025 
+ Submission Deadline: | 30 April 2025 
+ Authors Notification: | 15 June 2025 
+ Final Manuscript Due: | 15 July 2025 
+ Registration Due: | 15 July 2025 | Workshop Proposal: | 1 March 2025 | Submission Deadline: | 30 April 2025 | Authors Notification: | 15 June 2025 | Final Manuscript Due: | 15 July 2025 | Registration Due: | 15 July 2025 | Conference History | href="http://www.ieee-hust-ncc.org/2024/HPCC/" - HPCC-2024
+, Wuhan, China 
+ href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Sponsors | Sponsors 
+ Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2025 conference is the 27th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2025 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 27th IEEE HPCC follows the tradition of previous successful IEEE HPCC conferences in the years from 2005 to 2024 in Asia, Europe, Australia, and America. It will feature sessions of regular presentations, workshops, tutorials and keynote speeches. IEEE HPCC-2025 will be hosted in Exeter, the capital city of Devon and provides the county with a central base for education, medicine, religion, commerce and culture. The city is also home to the magnificent Exeter Cathedral, which dates back to Norman times. Exeter is also ideally placed to base a trip to branch out visiting places such as the famous Dartmoor National Park and the unspoilt beaches of the North and South Devon coastlines. 
+ Prospective authors are invited to submit their papers to HPCC-2025. Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements. The authors of selected best papers will be invited post conference to extend their contributions for special issues of prestigious journals to be planned in conjunction with the conference. 
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Track 4: Computing Power Network(CPN) and Network for AI Computing 
+ Computing and network convergence technology for AI application 
+ Resource allocation and collaboration in CPN 
+ Computing power identification and measurement technology 
+ Lossless network design 
+ Technology for RDMA 
+ IPv6/SRv6-based hyperscale AI Datacenter 
+ Paper Submission Guideline 
+ All papers need to be submitted electronically through the conference submission website (href="https://hpcn.exeter.ac.uk/hpcc/" - https://hpcn.exeter.ac.uk/hpcc/
+) with PDF format. The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 12 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). 
+ Manuscript Templates for Conference Proceedings can be found at: 
+ https://www.ieee.org/conferences_events/conferences/publishing/templates.htmlOnce accepted, the paper will be included into the IEEE conference proceedings published by IEEE Computer Society Press (indexed by EI). At least one of the authors of any accepted paper is requested to register the paper at the conference. 
+ Important Dates 
+ Workshop Proposal: | 1 March 2025 
+ Submission Deadline: | 30 April 2025 
+ Authors Notification: | 15 June 2025 
+ Final Manuscript Due: | 15 July 2025 
+ Registration Due: | 15 July 2025 | Workshop Proposal: | 1 March 2025 | Submission Deadline: | 30 April 2025 | Authors Notification: | 15 June 2025 | Final Manuscript Due: | 15 July 2025 | Registration Due: | 15 July 2025 
+ Workshop Proposal: | 1 March 2025 
+ Submission Deadline: | 30 April 2025 
+ Authors Notification: | 15 June 2025 
+ Final Manuscript Due: | 15 July 2025 
+ Registration Due: | 15 July 2025 
+ Conference History 
+ href="http://www.ieee-hust-ncc.org/2024/HPCC/" - HPCC-2024
+, Wuhan, China 
+ href="http://www.swinflow.org/confs/2023/hpcc/" - HPCC-2023
+, Melbourne, Australia 
+ href="http://www.ieee-hpcc.org/2022/" - HPCC-2022
+, Chengdu, China 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea 
+ Sponsors 
+  
+ Copyright© HPCC-2025. Created and Maintained byhref="mailto:hpcc2025@googlegroups.com" - HPCC-2025.
+
+3. Website of HPCC_3: https://isc-hpc.com/
+Website information of HPCC_3:
+
+Skip to contenthref="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - REGISTER
+Program | Schedule 
+ Speakers 
+ Invited program 
+ Contributed program 
+ Vendor Program 
+ Awards | Jack Dongarra Early Career Award 
+ Hans Meuer Award 
+ href="https://isc-hpc.com/program/#research-poster-award" - Research Poster Award 
+ Student Cluster Competition 
+ Student Volunteer Program 
+ Exhibition | To Exhibit 
+ To Visit 
+ Exhibitor Listing 
+ Exhibitor Manual & Portal 
+ Attendance | Registration 
+ Travel & Visa 
+ Accommodation 
+ Hamburg 
+ Event Platform 
+ News & Media 
+ href="https://isc-hpc.com/submissions/" - Submissions | href="https://isc-hpc.com/submissions/research-paper/" - Research Paper 
+ href="https://isc-hpc.com/submissions/research-poster/" - Research Poster 
+ href="https://isc-hpc.com/submissions/project-poster/" - Project Poster 
+ href="https://isc-hpc.com/submissions/women-in-hpc-poster/" - Women in HPC Poster 
+ href="https://isc-hpc.com/submissions/bof/" - Birds of a Feather 
+ href="https://isc-hpc.com/submissions/workshop/" - Workshop 
+ href="https://isc-hpc.com/submissions/tutorial/" - Tutorial 
+ Our Story 
+ Newsletter 
+ Contact 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - Register 
+ Floorplan 
+ MenuProgram | Schedule 
+ Speakers 
+ Invited program 
+ Contributed program 
+ Vendor Program 
+ Awards | Jack Dongarra Early Career Award 
+ Hans Meuer Award 
+ href="https://isc-hpc.com/program/#research-poster-award" - Research Poster Award 
+ Student Cluster Competition 
+ Student Volunteer Program 
+ Exhibition | To Exhibit 
+ To Visit 
+ Exhibitor Listing 
+ Exhibitor Manual & Portal 
+ Attendance | Registration 
+ Travel & Visa 
+ Accommodation 
+ Hamburg 
+ Event Platform 
+ News & Media 
+ href="https://isc-hpc.com/submissions/" - Submissions | href="https://isc-hpc.com/submissions/research-paper/" - Research Paper 
+ href="https://isc-hpc.com/submissions/research-poster/" - Research Poster 
+ href="https://isc-hpc.com/submissions/project-poster/" - Project Poster 
+ href="https://isc-hpc.com/submissions/women-in-hpc-poster/" - Women in HPC Poster 
+ href="https://isc-hpc.com/submissions/bof/" - Birds of a Feather 
+ href="https://isc-hpc.com/submissions/workshop/" - Workshop 
+ href="https://isc-hpc.com/submissions/tutorial/" - Tutorial 
+ Our Story 
+ Newsletter 
+ Contact 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - Register 
+ Floorplan 
+ SearchSearchClose this search box.href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - REGISTER
+Newsletter 
+ Contact 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - Register
+Floorplan 
+ CONNECTING THE DOTS 
+ Program | Schedule 
+ Speakers 
+ Invited program 
+ Contributed program 
+ Vendor Program 
+ Awards | Jack Dongarra Early Career Award 
+ Hans Meuer Award 
+ href="https://isc-hpc.com/program/#research-poster-award" - Research Poster Award 
+ Student Cluster Competition 
+ Student Volunteer Program 
+ Exhibition | To Exhibit 
+ To Visit 
+ Exhibitor Listing 
+ Exhibitor Manual & Portal 
+ Attendance | Registration 
+ Travel & Visa 
+ Accommodation 
+ Hamburg 
+ Event Platform 
+ News & Media 
+ href="https://isc-hpc.com/submissions/" - Submissions | href="https://isc-hpc.com/submissions/research-paper/" - Research Paper 
+ href="https://isc-hpc.com/submissions/research-poster/" - Research Poster 
+ href="https://isc-hpc.com/submissions/project-poster/" - Project Poster 
+ href="https://isc-hpc.com/submissions/women-in-hpc-poster/" - Women in HPC Poster 
+ href="https://isc-hpc.com/submissions/bof/" - Birds of a Feather 
+ href="https://isc-hpc.com/submissions/workshop/" - Workshop 
+ href="https://isc-hpc.com/submissions/tutorial/" - Tutorial 
+ Our Story 
+ Newsletter 
+ Contact 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - Register 
+ Floorplan 
+ MenuProgram | Schedule 
+ Speakers 
+ Invited program 
+ Contributed program 
+ Vendor Program 
+ Awards | Jack Dongarra Early Career Award 
+ Hans Meuer Award 
+ href="https://isc-hpc.com/program/#research-poster-award" - Research Poster Award 
+ Student Cluster Competition 
+ Student Volunteer Program 
+ Exhibition | To Exhibit 
+ To Visit 
+ Exhibitor Listing 
+ Exhibitor Manual & Portal 
+ Attendance | Registration 
+ Travel & Visa 
+ Accommodation 
+ Hamburg 
+ Event Platform 
+ News & Media 
+ href="https://isc-hpc.com/submissions/" - Submissions | href="https://isc-hpc.com/submissions/research-paper/" - Research Paper 
+ href="https://isc-hpc.com/submissions/research-poster/" - Research Poster 
+ href="https://isc-hpc.com/submissions/project-poster/" - Project Poster 
+ href="https://isc-hpc.com/submissions/women-in-hpc-poster/" - Women in HPC Poster 
+ href="https://isc-hpc.com/submissions/bof/" - Birds of a Feather 
+ href="https://isc-hpc.com/submissions/workshop/" - Workshop 
+ href="https://isc-hpc.com/submissions/tutorial/" - Tutorial 
+ Our Story 
+ Newsletter 
+ Contact 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - Register 
+ Floorplan 
+ ISC HIGH PERFORMANCE 
+ 2025 
+ JUNE 10-13, 2025 
+ HAMBURG 
+ GERMANY 
+ href="https://isc-hpc.com/submissions/" - Calls are now open
+CONFERENCE & EXHIBITION 
+ THE EVENT FOR HIGH PERFORMANCE COMPUTING, AI, DATA ANALYTICS & QUANTUM COMPUTING 
+ ISC 2025 is the 40thanniversary of the world’s leading forum for advancing the application of high performance computing in academia, government, and the private sector. The goal of this annual event is to foster a global exchange of knowledge, innovation, and collaboration in the field. 
+ href="https://isc-hpc.com/submissions/" - 
+All information 
+ TO SUBMIT 
+ All information 
+ TO ATTEND 
+ All information 
+ TO EXHIBIT 
+ JOIN THE GLOBAL HPC COMMUNITY! 
+ EARLY BIRD REGISTRATION 
+ Days 
+ Hours 
+ Minutes 
+ JOIN THE GLOBAL HPC COMMUNITY! 
+ ISC 2025 unitesover 3,000technology developers, providers and users to foster a strong community.Join now and take advantage of early bird pricing! 
+ href="https://eu.avolio.swapcard.com/ISC/2025/registrations/Start" - 
+REGISTER NOW 
+ PASS TYPES 
+ join as a contributor now! 
+ UPCOMING SUBMISSION DEADLINES 
+ JANUARY 24, 2025 (extended) 
+ href="https://isc-hpc.com/submissions/research-poster/" - Research Poster
+href="https://isc-hpc.com/submissions/project-poster/" - Project Poster
+href="https://isc-hpc.com/submissions/women-in-hpc-poster/" - Women in HPC Poster
+KEYNOTE SPEAKERS 
+ Opening Keynote 
+  
+ MARK PAPERMASTER 
+ AMD Chief Technology Officer & Executive Vice President, USA 
+ Midweek Keynote 
+  
+ BJORN STEVENS 
+ Director of Climate Physics Department, Max Planck Institute for Meteorology Hamburg, Germany 
+ Closing Keynote 
+  
+ YUTONG LU 
+ Director, National Supercomputing Center, Guangzhou & Shenzhen, China 
+ All ISC 2025 
+ SPEAKERS 
+ ISC Fellow 
+ KATHY YELICK 
+ ISC 2024 Topic Area Chair 
+ ISABELL GRADERT 
+ ISC Fellow 
+ JOHN SHALF 
+ Sollten hier nur die drei Keynotesprecher gezeigt werden, können in dieser vierten Kachel Anmerkungen auf weitere Speaker gemacht werden. 
+ Chairs | Committees2025 PROGRAM 
+ The ISC program is designed to help you find the sessions that best match your interests. It features invited talks, contributed sessions, a vendor program, and the exhibition – each offering valuable insights and the latest advancements in the field. 
+ Beyond the sessions, ISC provides various opportunities to connect with peers through networking and social activities, fostering collaboration and meaningful discussions within the HPC community. 
+ browse the 
+ schedule 
+ PROGRAM AT A GLANCE 
+ The Invited Program Committee (IPC) ensures that all relevant topic areas in HPC systems and applications are addressed at ISC 2025. 
+ Click on the image for a larger view 
+ href="https://isc-hpc.com/wp-content/uploads/2025/02/ISC2025_Program-at-a-Glance_250214.pdf" - Download as PDF
+guide to sessionsA UNIQUE EVENT 
+ The elements that set ISC apart from other events in the industry: 
+ 01 
+ Comprehensive Program Addressing HPC and AI Innovation 
+ Stay ahead in the industry by engaging with a program that highlights cutting-edge innovations and discusses key issues that are shaping the future of high performance computing. 
+ 02 
+ Networking Opportunities & Social Activities 
+ Engage with as many attendees as possible during the event and through curated social activities. Nearly 50% of HPC users, vendors, and providers participate exclusively at ISC. 
+ 03 
+ Insights From 750+ Speakers 
+ Gain valuable insights from scientists, researchers, and engineers across all career levels, geographies, and research domains. 
+ 04 
+ Bridging Technology and Community 
+ Foster collaboration across technologies and communities. ISC offers engaging formats and unique sessions that cater to a diverse audience with varied perspectives. 
+ 05 
+ Europe’s Largest HPC Exhibition 
+ Explore the latest breakthroughs in HPC, AI, and quantum computing, all brought to the show floor by 160 vendors, public institutions, and startups. 
+ EXHIBITION 
+ The exhibition brings together more than 160 exhibitors from across the HPC community, showcasing cutting-edge technologies, solutions, and services. From expert talks and networking opportunities to career insights and exciting exhibitor events – it’s a space to connect, engage, and explore what’s next in HPC. 
+ Plan your visit now! 
+ If you want to connect with ISC’s distinctive attendee crowd, you should showcase your organization at the event. To participate as an exhibitor or sponsor, pleaseexpress your interest, and we will get in touch with you. 
+ EXHIBITION SCHEDULE 
+ June 10, 3:00 pm – 8:30 pm 
+ June 11, 10:00 pm – 6:00 pm 
+ June 12, 9:00 am – 4:00 pm 
+ Check the 
+ Floor plan 
+ Discover Exhibition 
+ HIGHLIGHTS 
+ ISC 2025 SPONSORS 
+ THEME: 
+ CONNECTING THE DOTS 
+ ISC 2025 will bring together a mix of people from different backgrounds and areas of expertise to drive HPC. Whether you are just entering the field, in a mid-level position, a part of senior management, or a student, we welcome you to join our efforts to connect people and technologies. 
+ READ MORE2025 PROGRAM CHAIR & DEPUTY CHAIR 
+ “We look forward to seeing everyone interested in HPC and AI at the 40th edition of ISC. 
+ If you have a passion for big iron, whether you’re a student, a researcher, a decision-maker, or a politician, we welcome your participation.“ 
+ Torsten Hoefler 
+ TORSTEN HOEFLER 
+ Professor of Computer Science, ETH Zurich, Switzerland 
+ rosa badia 
+ Manager of the Workflows & Distributed Computing Research Group; Barcelona Supercomputing Center (BSC), Spain 
+ TORSTEN HOEFLER 
+ Torsten Hoefler, ISC 2025 Program Chair, is a Professor of Computer Science at ETH Zurich, a member of Academia Europaea, and a Fellow of the ACM and IEEE. His research interests revolve around the central topic of “Performance-centric System Design” and include scalable networks, parallel programming techniques, and performance modeling. 
+ send requestROSA BADIA 
+ Rosa M. Badia, ISC 2025 Program Deputy Chair, manages the Workflows and Distributed Computing research group at the Barcelona Supercomputing Center (BSC), and she is involved in several notable European projects – AI-Sprint, CALESTIS, ICOS, CEEC CoE, PerMedCoE, and DT-GEO. She is the PI of the EuroHPC eFlows4HPC project. Her current research interest is programming models for complex platforms (from multicore GPUs to Grid/Cloud). 
+ send requestBIOGRAPHIESISC 2025 SPONSORS 
+ SUBMISSIONS AND ALL INFORMATIONS ABOUT 
+ FOR EXHIBITS 
+ RESERVE YOUR BOOTH SPACE NOW!News 
+ FOR EXHIBITS 
+ Scientists, researchers, and engineers of all career levels are invited to contribute to the program. Their submissions will have an impact on the conference program. 
+ read moreFOR EXHIBITS 
+ Scientists, researchers, and engineers of all career levels are invited to contribute to the program. Their submissions will have an impact on the conference program. 
+ read moreFOR EXHIBITS 
+ Scientists, researchers, and engineers of all career levels are invited to contribute to the program. Their submissions will have an impact on the conference program. 
+ read moreISC Midweek Keynote Explores New Paradigms to Revolutionize Climate Forecasting 
+ We are pleased to announce that esteemed climate scientist and meteorologist Prof. Dr. Bjorn Stevens will deliver a keynote address at this year’s conference. In his presentation entitled “The New Landscape of Climate Computing” he will talk about how artificial intelligence (AI), high performance computing (HPC), and new digital models can be used to tackle the urgent challenges in climate change science. During his Midweek Keynote on Wednesday, June 11, Professor Stevens will address more than 3,500 HPC practitioners and enthusiasts gathered in Hamburg, Germany. 
+ read moreISC 2025 Closing Keynote on Meeting the Challenges of the Post-Exascale Era 
+ We are excited to announce that Prof. Dr. Yutong Lu, the Director of the National Supercomputing Center in Guangzhou, China, will deliver the ISC 2025 Closing Keynote. She is recognized as a leading authority in next-generation architectures and the convergence of advanced artificial intelligence (AI) and high performance computing (HPC) systems and applications. 
+ href="https://isc-hpc.com/isc-2025-closing-keynote-on-meeting-the-challenges-of-the-post-exascale-era/" - read more
+2025 IS THE YEAR OF EXTREME SCALING 
+ As we embark on a new year, I extend my warmest greetings to the global AI and HPC community. I trust you enjoyed a restful holiday season and have returned with renewed energy to tackle the exciting challenges and opportunities that lie ahead in HPC development. 
+ href="https://isc-hpc.com/2025-is-the-year-of-extreme-scaling/" - read more
+LAST YEAR'S KEYNOTE SPEAKERS 
+ Conference Keynote 
+  
+ KATHY YELICK 
+ Vice Chancellor for Research, Cal, UC Berkeley, USA 
+ Tuesday Keynote 
+  
+ ISABELL GRADERT 
+ Vice President Central Research & Technology, Airbus 
+ Wednesday Keynote 
+  
+ JOHN SHALF 
+ Department Head for Computer Science LBNL, USA 
+ Wednesday Keynote 
+  
+ ROSA BADIA 
+ Manager Workflows & Distributed Computing Group, BSC, Spain 
+ ISC Fellow 
+ KATHY YELICK 
+ ISC 2024 Topic Area Chair 
+ ISABELL GRADERT 
+ ISC Fellow 
+ JOHN SHALF 
+ Sollten hier nur die drei Keynotesprecher gezeigt werden, können in dieser vierten Kachel Anmerkungen auf weitere Speaker gemacht werden. 
+ Chairs | CommitteesAll informations 
+ SCHEDULE 
+ ISC 2024 WORKSHOP PROCEEDINGS 
+ The ISC 2024 Workshop Proceedings are now available in Springer’s Lecture Notes in Computer Science (LNCS) and can be downloaded for free until the end of January. Click below to explore the papers and gain valuable insights. 
+ ACCESS proceedingsCOMPLIMENTARY 2024 CONTENT 
+ If you were unable to attend ISC 2024 and would like to watch the main talks, we are happy to register you for complimentary on-demand access. 
+ REGISTER NOWPLATINUM SPONSORS 
+ SITEMAP 
+ CONTACT 
+ IMPRINT 
+ PRIVACY 
+ SITEMAP 
+ CONTACT 
+ IMPRINT 
+ PRIVACY 
+ LinkedinFlickrYoutube
+
+4. Website of HPCC_3: http://www.ieee-hpcc.org/2022/
+Website information of HPCC_3:
+
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read ourPrivacy Policy.Accept & Close 
+  
+ HPCC 2022 - Home 
+ HomeOrganizing CommitteeProgram Committeehref="important_dates.html" - Important Dates
+href="call4paper.html" - Call for Papers
+href="call4workshop.html" - Special Session
+Keynote SpeechesRegistrationFinal Paper Instructionhref="HPCC2022-final.htm" - Accepted Paper List
+Program BookletJournal Special IssuesConference VenueTravel & VisaContactsDSS-2022SmartCity-2022DependSys-2022ICESS-2022DIKW-2022Hyper-Intelligence-2022 | Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2022 conference is the 24th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2022 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2022 High Performance Computing and Communications (HPCC-2022) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. 
+  
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+  
+ Paper Submission Guideline 
+ The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 10 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). All papers need to be submitted electronically through the conference submission website with PDF format:https://edas.info/N29969 
+  
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further exte-nsions and revisions, will be recommended to special issues. 
+  
+ Important Dates 
+ Special Session Due: | 30 June, 2022 
+ Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 
+ Authors Notification: | 15 October, 2022 
+ 24 October, 2022 
+ Final Manuscript Due: | 10 November, 2022 
+ Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 | Special Session Due: | 30 June, 2022 | Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 | Authors Notification: | 15 October, 2022 
+ 24 October, 2022 | Final Manuscript Due: | 10 November, 2022 | Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 
+ Special Session Due: | 30 June, 2022 
+ Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 
+ Authors Notification: | 15 October, 2022 
+ 24 October, 2022 
+ Final Manuscript Due: | 10 November, 2022 
+ Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 
+  
+ Conference History 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Welcome Message | With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2022 conference is the 24th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2022 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2022 High Performance Computing and Communications (HPCC-2022) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. | Scope and Topics | Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement | Paper Submission Guideline | The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 10 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). All papers need to be submitted electronically through the conference submission website with PDF format:https://edas.info/N29969 
+  
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further exte-nsions and revisions, will be recommended to special issues. | Important Dates | Special Session Due: | 30 June, 2022 
+ Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 
+ Authors Notification: | 15 October, 2022 
+ 24 October, 2022 
+ Final Manuscript Due: | 10 November, 2022 
+ Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 | Special Session Due: | 30 June, 2022 | Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 | Authors Notification: | 15 October, 2022 
+ 24 October, 2022 | Final Manuscript Due: | 10 November, 2022 | Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 | Conference History | href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea | Sponsors | Sponsors 
+ Welcome Message 
+ With the rapid growth in computing and communications technology, the past decade has witnessed a proliferation of powerful parallel and distributed systems and an ever increasing demand for practice of high performance computing and communications (HPCC). HPCC has moved into the mainstream of computing and has become a key technology in determining future research and development activities in many academic and industrial branches, especially when the solution of large and complex problems must cope with very tight timing schedules. 
+ Among a series of highly successful International Conferences on High Performance Computing and Communications (HPCC), the HPCC-2022 conference is the 24th edition of a forum for engineers and scientists in academia, industry, and government to address the resulting profound challenges and to present and discuss their new ideas, research results, applications and experience on all aspects of high performance computing and communications. IEEE HPCC-2022 is sponsored by IEEE, IEEE Computer Society, and IEEE Technical Committee on Scalable Computing (TCSC). 
+ The 2022 High Performance Computing and Communications (HPCC-2022) will provide a high-profile, leading-edge forum for researchers, engineers, and practitioners to present state-of-art advances and innovations in theoretical foundations, systems, infrastructure, tools, testbeds, and applications for the HPCC, as well as to identify emerging research topics and define the future. 
+ Scope and Topics 
+ Topics of interest include, but are not limited to: 
+ Track 1: High Performance Computing and Applications 
+ High Performance Computing Theory 
+ High Performance Computing Architectures 
+ System Software and Middleware 
+ System Software Support for Scientific Workflows 
+ Storage and I/O Systems 
+ Resource Management 
+ Instruction-Level and Thread-Level Parallelism 
+ Performance Modeling and Evaluation 
+ Massively Multicore Systems 
+ Future Novel Computing Platforms 
+ Database Applications and Data Mining 
+ High Performance Computing for Bioinformatics 
+ High Performance Computing for Big Data 
+ High Performance Computing for AI 
+ High Performance Computing for Block Chains 
+ Green High Performance Computing 
+ Track 2: Parallel and Distributed Computing and Systems 
+ Parallel and Distributed System Architectures 
+ Parallel and Distributed Algorithms 
+ Data Center Architectures 
+ Resource Virtualization 
+ Web Services and Internet Computing 
+ Cloud Computing 
+ Grid and Cluster Computing 
+ Federated Learning 
+ Embedded Systems 
+ Distributed Systems and Applications 
+ Pervasive/Ubiquitous Computing & Intelligence 
+ Distributed Graphics and VR/AR/MR Systems 
+ Distributed AI and Soft/Natural Computing 
+ Power-Efficient and Green Computing Systems 
+ Parallel and Distributed Computing for Big Data 
+ Parallel and Distributed Computing for AI 
+ Track 3: Communications and Networking 
+ Network and Interconnect Architectures 
+ Computer Networks 
+ Internet Architectures and Protocols 
+ Telecommunications 
+ Trust, Security, and Privacy 
+ Energy-Aware Computing and Networking 
+ 5G Network 
+ Software Defined Networking 
+ Network Functions Virtualization 
+ Machine Learning and Deep Learning 
+ Social Networking and Computing 
+ Performance Evaluation and Measurement 
+ Paper Submission Guideline 
+ The materials presented in the papers should not be published or under submission elsewhere. Each paper is limited to 8 pages (or 10 pages with over length charge) including figures and references using IEEE Computer Society Proceedings Manuscripts style (two columns, single-spaced, 10 fonts). All papers need to be submitted electronically through the conference submission website with PDF format:https://edas.info/N29969 
+  
+ Accepted conference papers will be published by IEEE (IEEE-DL and El indexed). At least one author of each accepted paper is required to register and present their work at the conference; otherwise the paper will not be included in the proceedings. Selected papers, after further exte-nsions and revisions, will be recommended to special issues. 
+ Important Dates 
+ Special Session Due: | 30 June, 2022 
+ Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 
+ Authors Notification: | 15 October, 2022 
+ 24 October, 2022 
+ Final Manuscript Due: | 10 November, 2022 
+ Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 | Special Session Due: | 30 June, 2022 | Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 | Authors Notification: | 15 October, 2022 
+ 24 October, 2022 | Final Manuscript Due: | 10 November, 2022 | Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 
+ Special Session Due: | 30 June, 2022 
+ Paper Submission Deadline: | 01 September, 2022 
+ 20 September, 2022 
+ Authors Notification: | 15 October, 2022 
+ 24 October, 2022 
+ Final Manuscript Due: | 10 November, 2022 
+ Conference Date: | 18-20 December, 2022 
+ 18-21 December, 2022 
+ Conference History 
+ href="http://www.ieee-hpcc.org/2021/" - HPCC-2021
+, Haikou, China 
+ href="http://www.ieee-hpcc.org/2020/" - HPCC-2020
+, Fiji 
+ href="http://csee.hnu.edu.cn/hpcc2019/" - HPCC-2019
+, Zhangjiajie, China 
+ href="http://cse.stfx.ca/~hpcc2018/" - HPCC-2018
+, Exeter, UK 
+ href="https://hpcc2017.seas.gwu.edu" - HPCC-2017
+, Bangkok, Thailand 
+ href="http://www.swinflow.org/confs/2016/hpcc/" - HPCC-2016
+, Sydney, Australia 
+ href="http://cse.stfx.ca/~hpcc2015/" - HPCC-2015
+, New York, USA 
+ href="http://conference.hpcc2014.studiocheik.fr" - HPCC-2014
+, Paris, France 
+ href="http://trust.csu.edu.cn/conference/hpcc2013/" - HPCC-2013
+, Zhangjiajie, China 
+ href="http://www.scim.brad.ac.uk/~hmibrahi/HPCC2012/" - HPCC-2012
+, Liverpool, UK 
+ href="http://cse.stfx.ca/~hpcc2011/" - HPCC-2011
+, Banff, Canada 
+ href="http://www.nsclab.org/hpcc2010/index.htm" - HPCC-2010
+, Melbourne, Australia 
+ href="http://www.sersc.org/HPCC2009/" - HPCC-2009
+, Seoul, Korea 
+ Sponsors 
+  
+ Copyright© HPCC-2022. Created and Maintained by HPCC-2022.
+

@@ -1,0 +1,59 @@
+```json
+{
+  "Conference dates": "March 31 - April 2, 2025",
+  "Year": "2025",
+  "Location": "Lyon, France",
+  "City-State-Province": "Lyon",
+  "Country": "France",
+  "Continent": "Europe",
+  "Type": "Offline",
+  "Submission Date": {
+    "(D, A, T and E papers) abstracts": "September 15, 2024",
+    "(D, A, T and E papers) full papers": "September 22, 2024",
+    "(Late Breaking Results papers) full papers": "December 1, 2024",
+    "(Special Initiative \"Autonomous Systems Design\") abstracts": "November 9, 2024",
+    "(Special Initiative \"Autonomous Systems Design\") full papers": "November 16, 2024",
+    "(Focus Session) proposals": "October 11, 2024",
+    "(Embedded Tutorials) proposals": "October 31, 2024",
+    "(Workshops) proposals": "October 11, 2024",
+    "(Multi-Partner Projects) abstracts": "October 29, 2024",
+    "(Multi-Partner Projects) full papers": "November 5, 2024",
+    "(Young People Programme) PhD Forum": "December 5, 2024",
+    "(Young People Programme) Careers Fair – Industry & Student Teams Fair": "January 31, 2025",
+    "(Young People Programme) Careers Fair – Academia & University Fair": "March 24, 2025",
+    "(Young People Programme) Registration Sponsorship": "February 9, 2025",
+    "(Young People Programme) Student Teams Presentations": "January 31, 2025",
+    "(Young People Programme) University Fair": "February 28, 2025",
+    "(Young People Programme) Career Fair - Academia": "March 24, 2025"
+  },
+  "Notification Date": {
+    "(D, A, T and E papers) notification of acceptance": "November 19, 2024",
+    "(Late Breaking Results papers) notification of acceptance": "January 15, 2025",
+    "(Special Initiative \"Autonomous Systems Design\") notification of acceptance": "December 17, 2024",
+    "(Focus Session) notification of acceptance": "November 19, 2024",
+    "(Embedded Tutorials) notification of acceptance": "November 15, 2024",
+    "(Workshops) notification of acceptance": "November 15, 2024",
+    "(Multi-Partner Projects) notification of acceptance": "December 9, 2024",
+    "(Young People Programme) PhD Forum": "January 10, 2025"
+  },
+  "Camera-ready Date": {
+    "(D, A, T and E papers) camera-ready papers": "January 17, 2025",
+    "(Late Breaking Results papers) camera-ready papers": "January 31, 2025",
+    "(Special Initiative \"Autonomous Systems Design\") camera-ready papers": "January 17, 2025",
+    "(Focus Session) camera-ready manuscripts": "January 17, 2025",
+    "(Embedded Tutorials) final information": "January 17, 2025",
+    "(Multi-Partner Projects) camera-ready papers": "January 17, 2025"
+  },
+  "Other Date": {
+    "(D, A, T and E papers) Paper presentation videos": "February 7, 2025",
+    "(Late Breaking Results papers) Paper presentation videos": "February 7, 2025",
+    "(Special Initiative \"Autonomous Systems Design\") Paper presentation videos": "February 7, 2025",
+    "(Embedded Tutorials) hand-out material": "March 14, 2025",
+    "(Multi-Partner Projects) Paper presentation videos": "February 7, 2025",
+    "Online registration closes": "April 2, 2025"
+  },
+  "Topics": "Electronic Systems Engineering, Design Automation, Hardware Design, Embedded Software Design, Sustainable Computing, Smart Societies, Digital Wellness, Secure Systems, Autonomous Systems, Smart Industry, Artificial Intelligence",
+  "Summary": "The Design, Automation and Test in Europe Conference (DATE) is the main European event bringing together designers and design automation users, researchers and vendors as well as specialists in the hardware and software design, test and manufacturing of electronic circuits and systems. DATE 2025 will be held in Lyon, France, from March 31 to April 2, 2025.",
+  "Call for Papers": "# DATE 2025: Call for Papers\n\nThe Design, Automation and Test in Europe Conference (DATE) is the main European event bringing together designers and design automation users, researchers and vendors as well as specialists in the hardware and software design, test and manufacturing of electronic circuits and systems. DATE 2025 will be held in **Lyon, France, from March 31 to April 2, 2025**.\n\n## Conference Overview\n\nThe three-day event consists of a conference with regular papers, late-breaking results papers, and extended abstracts, complemented by timely keynotes, special days, focus sessions, embedded tutorials, half-day workshops, and multi-partner project sessions. The event will also host the Young People Programme and unplugged sessions fostering the networking and the exchange of information on relevant issues, recent research outcomes and career opportunities.\n\n## Submission Key Dates\n\nAll deadlines are Anywhere on Earth (AoE). Deadlines are strict and no extensions will be given.\n\n### D, A, T and E papers\n\n*   **Abstracts:** Sunday, September 15, 2024 AoE\n*   **Full papers:** Sunday, September 22, 2024 AoE\n*   **Notification of acceptance:** Tuesday, November 19, 2024 AoE\n*   **Camera-ready papers:** Friday, January 17, 2025 AoE\n*   **Paper presentation videos:** Friday, February 7, 2025 AoE\n\n### Late Breaking Results papers\n\n*   **Full papers:** Sunday, December 1, 2024 AoE\n*   **Notification of acceptance:** Wednesday, January 15, 2025 AoE\n*   **Camera-ready papers:** Friday, January 31, 2025 AoE\n*   **Paper presentation videos:** Friday, February 7, 2025 AoE\n\n### Special Initiative \"Autonomous Systems Design\"\n\n*   **Abstracts:** Saturday, November 9, 2024 AoE\n*   **Full papers:** Saturday, November 16, 2024 AoE\n*   **Notification of acceptance:** Tuesday, December 17, 2024 AoE\n*   **Camera-ready papers:** Friday, January 17, 2025 AoE\n*   **Paper presentation videos:** Friday, February 7, 2025 AoE\n\n### Focus Session\n\n*   **Proposals:** Friday, October 11, 2024 AoE\n*   **Notification of acceptance:** Tuesday, November 19, 2024 AoE\n*   **Camera-ready manuscripts:** Friday, January 17, 2025 AoE\n\n### Embedded Tutorials\n\n*   **Proposals:** Thursday, October 31, 2024 AoE\n*   **Notification of acceptance:** Friday, November 15, 2024 AoE\n*   **Final information:** Friday, January 17, 2025 AoE\n*   **Hand-out material:** Friday, March 14, 2025 AoE\n\n### Workshops\n\n*   **Proposals:** Friday, October 11, 2024 AoE\n*   **Notification of acceptance:** Friday, November 15, 2024 AoE\n\n### Multi-Partner Projects\n\n*   **Abstracts:** Tuesday, October 29, 2024 AoE\n*   **Full papers:** Tuesday, November 5, 2024 AoE\n*   **Notification of acceptance:** Monday, December 9, 2024 AoE\n*   **Camera-ready papers:** Friday, January 17, 2025 AoE\n*   **Paper presentation videos:** Friday, February 7, 2025 AoE\n\n### Young People Programme\n\n*   **PhD Forum:** Thursday, December 5, 2024 AoE\n*   **Careers Fair – Industry & Student Teams Fair:** Friday, January 31, 2025 AoE\n*   **Careers Fair – Academia & University Fair:** Monday, March 24, 2025 AoE\n*   **Student Teams Presentations:** Friday, January 31, 2025 AoE\n*   **University Fair:** Friday, February 28, 2025 AoE\n\n## The Conference\n\nThe conference addresses all aspects of research into technologies for electronic and (embedded) systems engineering. It covers the design process, test, and tools for design automation of electronic products ranging from integrated circuits to distributed large-scale systems. This includes both hardware and embedded software design issues. The conference scope also includes the elaboration of design requirements and new architectures for challenging application fields such as sustainable computing, smart societies and digital wellness, secure systems, autonomous systems and smart industry, and state-of-the-art applications of artificial intelligence.\n\n## Special Days on Emerging Topics\n\nThe scientific research track is complemented by a set of sessions focusing on emerging topics bringing new challenges to the community, with presentations and interactions on interesting and timely issues. \n\n## Topic Areas for Submission\n\nWithin the scope of the conference, the main areas of interest are organized in the following tracks. Submissions can be made to any of the track topics. \n\n*   **Track D:** Design Methods and Tools\n*   **Track A:** Application Design\n*   **Track T:** Test and Dependability\n*   **Track E:** Embedded Systems Design\n\n## Submission Instructions\n\nAll manuscripts for any technical topic of the D, A, T, and E tracks must be submitted for review electronically, following the instructions below.\n\n*   The accepted file format is PDF.\n*   Submissions must not exceed 6 pages in length, plus one extra page only for references.\n*   All submitted papers should be formatted as close as possible to the final format: A4 pages or Letter sheets, double-column, single-spaced, Times or equivalent font of minimum 10pt, avoid the use of type-3 fonts. Do not use baseline stretch to compress text. Paper templates are available on the DATE website for your convenience.\n*   DATE follows a double-blind review process. To support it, submissions must not include authors’ names. In addition, prior work by the same authors should be referenced in full and it should be discussed in such a way that it does not disclose that the work is from the same authors.\n*   Submissions simultaneously under review or accepted by another conference, symposium, or journal will be rejected.\n*   The deadline to submit papers is Sunday, September 15, 2024 AoE. The full paper must be uploaded at the latest by Sunday, September 22, 2024 AoE. Otherwise, the initial submission will be automatically withdrawn. \n*   The contact author of a submitted paper will be notified of acceptance or rejection by Tuesday, November 19, 2024 AoE. In case of acceptance, authors need to prepare a final, camera-ready manuscript by Friday, January 17, 2025 AoE.\n*   It is mandatory that at least one author of each accepted paper attends the session where the paper is discussed and presents the work as requested; otherwise, the paper will be deleted from the proceedings afterwards.\n\n## Submission Site\n\n[https://softconf.com/date25/conference/](https://softconf.com/date25/conference/)\n\n## Contact\n\n**Programme Chair:** Theocharis Theocharides, University of Cyprus, CY ([papers@date-conference.com](mailto:papers@date-conference.com))"
+}
+```
