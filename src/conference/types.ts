@@ -84,15 +84,16 @@ export interface ConferenceData {
 export interface BatchEntry {
     conferenceTitle: string;
     conferenceAcronym: string;
- 
+
     conferenceIndex: string;
     conferenceLink: string;
-    
+
     cfpLink?: string;
     impLink?: string;
-   
+
     determineMetaData?: any; // TODO: Refine type for determineMetaData
     extractMetaData?: any; // TODO: Refine type for extractMetaData
+    cfpMetaData?: any | null;     // <<< ADDED
 
     // --- Các trường Path ---
     conferenceTextPath?: string; // Đường dẫn đến file chứa full text của trang gốc/đã sửa
@@ -100,6 +101,7 @@ export interface BatchEntry {
     impTextPath?: string | null;        // Đường dẫn đến file chứa text của trang Important Dates
     determineResponseTextPath?: string; // Đường dẫn file chứa response của determine_links_api
     extractResponseTextPath?: string;   // Đường dẫn file chứa response của extract_information_api
+    cfpResponseTextPath?: string;   // <<< ADDED
 
 }
 
@@ -118,8 +120,9 @@ export interface BatchUpdateEntry { // Dữ liệu batch sau khi updateBatchToFi
     cfpTextPath?: string | null;
     impTextPath?: string | null;
     extractResponseTextPath?: string;
-    // Metadata (keep if small)
     extractMetaData?: any;
+    cfpResponseTextPath?: string;   // <<< ADDED
+    cfpMetaData?: any | null;     // <<< ADDED
 }
 // ---------------------7_gemini_api_utils.ts-----------------------
 
@@ -223,6 +226,7 @@ export interface InputRowData {
     impLink?: string; // Added based on usage in writeCSVFile
     determineResponseTextPath?: string; // Đường dẫn file chứa response của determine_links_api
     extractResponseTextPath?: string    // Add other potential fields if necessary
+    cfpResponseTextPath?: string    // Add other potential fields if necessary
 }
 
 // Describes the structure of the final row written to the CSV

@@ -4,8 +4,9 @@ import { createReadStream, promises as fsPromises, ReadStream } from 'fs'; // Im
 // import { logger } from './11_utils'; // Adjust path and ensure 11_utils is also TS
 import path from 'path';
 import { apiConfigs } from '../config'; // Import from .ts file (or let resolution handle it)
-const EXTRACT_INFORMATION_CSV: string = path.join(__dirname, "./examples/extract_infor.csv");
-const DETERMINE_LINKS_CSV: string = path.join(__dirname, "./examples/determine_links.csv");
+// const EXTRACT_INFORMATION_CSV: string = path.join(__dirname, "./examples/extract_infor.csv");
+const CFP_INFORMATION_CSV: string = path.join(__dirname, "./examples/extract_cfp.csv");
+// const DETERMINE_LINKS_CSV: string = path.join(__dirname, "./examples/determine_links.csv");
 
 import { InputsOutputs, CsvRowData } from './types';
 
@@ -119,72 +120,103 @@ const createInputsOutputs = (data: CsvRowData[]): InputsOutputs => {
     return { inputs, outputs };
 };
 
+// /**
+//  * Prepares data for the 'determine' API type by reading its CSV
+//  * and attaching inputs/outputs to the config.
+//  * @returns A promise resolving to the prepared inputs and outputs.
+//  */
+// export const prepareDetermineData = async (): Promise<InputsOutputs> => {
+//     try {
+//         console.log(`Preparing determine data from: ${DETERMINE_LINKS_CSV}`);
+//         const determineData = await read_csv(DETERMINE_LINKS_CSV);
+//         const { inputs, outputs } = createInputsOutputs(determineData);
+
+//         // Modify the imported config object (ensure ApiConfig interface allows this)
+//         if (apiConfigs.determine) {
+//             apiConfigs.determine.inputs = inputs;
+//             apiConfigs.determine.outputs = outputs;
+//             console.log(`Determine data prepared. ${Object.keys(inputs).length} examples loaded.`);
+//         } else {
+//              console.error("Error: apiConfigs.determine is not defined in config.");
+//              return { inputs: {}, outputs: {} }; // Return empty if config structure is wrong
+//         }
+//         return { inputs, outputs };
+//     } catch (error: unknown) {
+//         const message = error instanceof Error ? error.message : String(error);
+//         // logger.error('Error preparing determine data:', error); // Use logger if available
+//         console.error('Error preparing determine data:', message);
+//         if (error instanceof Error) console.error(error.stack);
+//         return { inputs: {}, outputs: {} }; // Return empty objects on error
+//     }
+// };
+
+// /**
+//  * Prepares data for the 'extract' API type by reading its CSV
+//  * and attaching inputs/outputs to the config.
+//  * @returns A promise resolving to the prepared inputs and outputs.
+//  */
+// export const prepareExtractData = async (): Promise<InputsOutputs> => {
+//     try {
+//         console.log(`Preparing extract data from: ${EXTRACT_INFORMATION_CSV}`);
+//         const extractData = await read_csv(EXTRACT_INFORMATION_CSV);
+//         const { inputs, outputs } = createInputsOutputs(extractData);
+
+//          // Modify the imported config object (ensure ApiConfig interface allows this)
+//         if (apiConfigs.extract) {
+//             apiConfigs.extract.inputs = inputs;
+//             apiConfigs.extract.outputs = outputs;
+//             console.log(`Extract data prepared. ${Object.keys(inputs).length} examples loaded.`);
+//         } else {
+//              console.error("Error: apiConfigs.extract is not defined in config.");
+//              return { inputs: {}, outputs: {} }; // Return empty if config structure is wrong
+//         }
+//         return { inputs, outputs };
+//     } catch (error: unknown) {
+//         const message = error instanceof Error ? error.message : String(error);
+//         // logger.error('Error preparing extract data:', error); // Use logger if available
+//         console.error('Error preparing extract data:', message);
+//          if (error instanceof Error) console.error(error.stack);
+//         return { inputs: {}, outputs: {} }; // Return empty objects on error
+//     }
+// };
+
 /**
- * Prepares data for the 'determine' API type by reading its CSV
+ * Prepares data for the 'cfp' API type by reading its CSV
  * and attaching inputs/outputs to the config.
  * @returns A promise resolving to the prepared inputs and outputs.
  */
-export const prepareDetermineData = async (): Promise<InputsOutputs> => {
+export const prepareCfpData = async (): Promise<InputsOutputs> => {
     try {
-        console.log(`Preparing determine data from: ${DETERMINE_LINKS_CSV}`);
-        const determineData = await read_csv(DETERMINE_LINKS_CSV);
-        const { inputs, outputs } = createInputsOutputs(determineData);
-
-        // Modify the imported config object (ensure ApiConfig interface allows this)
-        if (apiConfigs.determine) {
-            apiConfigs.determine.inputs = inputs;
-            apiConfigs.determine.outputs = outputs;
-            console.log(`Determine data prepared. ${Object.keys(inputs).length} examples loaded.`);
-        } else {
-             console.error("Error: apiConfigs.determine is not defined in config.");
-             return { inputs: {}, outputs: {} }; // Return empty if config structure is wrong
-        }
-        return { inputs, outputs };
-    } catch (error: unknown) {
-        const message = error instanceof Error ? error.message : String(error);
-        // logger.error('Error preparing determine data:', error); // Use logger if available
-        console.error('Error preparing determine data:', message);
-        if (error instanceof Error) console.error(error.stack);
-        return { inputs: {}, outputs: {} }; // Return empty objects on error
-    }
-};
-
-/**
- * Prepares data for the 'extract' API type by reading its CSV
- * and attaching inputs/outputs to the config.
- * @returns A promise resolving to the prepared inputs and outputs.
- */
-export const prepareExtractData = async (): Promise<InputsOutputs> => {
-    try {
-        console.log(`Preparing extract data from: ${EXTRACT_INFORMATION_CSV}`);
-        const extractData = await read_csv(EXTRACT_INFORMATION_CSV);
-        const { inputs, outputs } = createInputsOutputs(extractData);
+        console.log(`Preparing cfp data from: ${CFP_INFORMATION_CSV}`);
+        const cfpData = await read_csv(CFP_INFORMATION_CSV);
+        const { inputs, outputs } = createInputsOutputs(cfpData);
 
          // Modify the imported config object (ensure ApiConfig interface allows this)
-        if (apiConfigs.extract) {
-            apiConfigs.extract.inputs = inputs;
-            apiConfigs.extract.outputs = outputs;
-            console.log(`Extract data prepared. ${Object.keys(inputs).length} examples loaded.`);
+        if (apiConfigs.cfp) {
+            apiConfigs.cfp.inputs = inputs;
+            apiConfigs.cfp.outputs = outputs;
+            console.log(`Cfp data prepared. ${Object.keys(inputs).length} examples loaded.`);
         } else {
-             console.error("Error: apiConfigs.extract is not defined in config.");
+             console.error("Error: apiConfigs.cfp is not defined in config.");
              return { inputs: {}, outputs: {} }; // Return empty if config structure is wrong
         }
         return { inputs, outputs };
     } catch (error: unknown) {
         const message = error instanceof Error ? error.message : String(error);
-        // logger.error('Error preparing extract data:', error); // Use logger if available
-        console.error('Error preparing extract data:', message);
+        // logger.error('Error preparing cfp data:', error); // Use logger if available
+        console.error('Error preparing cfp data:', message);
          if (error instanceof Error) console.error(error.stack);
         return { inputs: {}, outputs: {} }; // Return empty objects on error
     }
 };
+
 
 // Initialization state
 let isInitialized: boolean = false;
 let initializationPromise: Promise<void> | undefined = undefined;
 
 /**
- * Initializes the CSV data by preparing both extract and determine data.
+ * Initializes the CSV data by preparing both extract and cfp data.
  * Ensures initialization only runs once.
  * @returns A promise that resolves when initialization is complete or throws if it fails.
  */
@@ -200,8 +232,7 @@ export async function init(): Promise<void> {
             try {
                 // Run preparations in parallel for potentially faster init
                 await Promise.all([
-                    prepareExtractData(),
-                    prepareDetermineData()
+                    prepareCfpData()
                 ]);
                 // logger.info("Data initialization complete."); // Use logger if available
                 console.log("Data initialization complete.");

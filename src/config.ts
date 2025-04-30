@@ -105,6 +105,7 @@ if (!GEMINI_API_KEY) {
 
 // --- Constants ---
 export const API_TYPE_EXTRACT: string = "extract";
+export const API_TYPE_CFP: string = "cfp";
 export const API_TYPE_DETERMINE: string = "determine";
 
 // --- Concurrency Control ---
@@ -127,6 +128,12 @@ const extractModelNamesList: string[] = extractModelNamesEnv
     ? extractModelNamesEnv.split(',').map(name => name.trim()).filter(name => name)
     : []; // Handle case where EXTRACT_MODEL_NAMES might be undefined
 
+const cfpModelNamesEnv: string | undefined = process.env.CFP_MODEL_NAMES;
+const cfpModelNamesList: string[] = cfpModelNamesEnv
+    ? cfpModelNamesEnv.split(',').map(name => name.trim()).filter(name => name)
+    : []; // Handle case where CFP_MODEL_NAMES might be undefined
+
+
 if (extractModelNamesList.length === 0) {
     console.error("FATAL: No models specified in EXTRACT_MODEL_NAMES environment variable or the variable is not set.");
     // Consider throwing an error
@@ -134,6 +141,14 @@ if (extractModelNamesList.length === 0) {
     // process.exit(1);
 }
 console.log("Using Extract Models:", extractModelNamesList);
+
+if (cfpModelNamesList.length === 0) {
+    console.error("FATAL: No models specified in CFP_MODEL_NAMES environment variable or the variable is not set.");
+    // Consider throwing an error
+    // throw new Error("FATAL: No models specified in CFP_MODEL_NAMES environment variable.");
+    // process.exit(1);
+}
+console.log("Using Cfp Models:", cfpModelNamesList);
 
 
 // **** DEFINE API CONFIG INTERFACE USING SDK TYPES ****
@@ -157,16 +172,16 @@ export interface ApiConfigs {
 export const apiConfigs: ApiConfigs = {
     [API_TYPE_EXTRACT]: {
         generationConfig: {
-            temperature: parseFloat(process.env.EXTRACT_TEMPERATURE || "0.7"),
-            topP: parseFloat(process.env.EXTRACT_TOP_P || "0.9"),
-            topK: parseInt(process.env.EXTRACT_TOP_K || "32", 10),
+            temperature: parseFloat(process.env.EXTRACT_TEMPERATURE || "0"),
+            // topP: parseFloat(process.env.EXTRACT_TOP_P || "0.5"),
+            // topK: parseInt(process.env.EXTRACT_TOP_K || "32", 10),
             maxOutputTokens: parseInt(process.env.EXTRACT_MAX_OUTPUT_TOKENS || "8192", 10),
-            responseMimeType: process.env.EXTRACT_RESPONSE_MIME_TYPE, // Can be undefined if not set
+            responseMimeType: process.env.EXTRACT_RESPONSE_MIME_TYPE || "text/plain",
         },
         // Use environment variables safely, providing empty string defaults if needed
         systemInstruction: `
-            Role: ${process.env.EXTRACT_ROLE || ''}
-            Instruction:
+            **Role:** ${process.env.EXTRACT_ROLE || ''}
+            **Instruction:**
               1. ${process.env.EXTRACT_INSTRUCTION_1 || ''}
               2. ${process.env.EXTRACT_INSTRUCTION_2 || ''}
               3. ${process.env.EXTRACT_INSTRUCTION_3 || ''}
@@ -174,13 +189,34 @@ export const apiConfigs: ApiConfigs = {
               5. ${process.env.EXTRACT_INSTRUCTION_5 || ''}
               6. ${process.env.EXTRACT_INSTRUCTION_6 || ''}
 
-            Situation: ${process.env.EXTRACT_SITUATION || ''}
+            **Situation:** ${process.env.EXTRACT_SITUATION || ''}
         `.trim(), // Trim whitespace from template literal
         modelNames: extractModelNamesList,
     },
+    [API_TYPE_CFP]: {
+        generationConfig: {
+            temperature: parseFloat(process.env.CFP_TEMPERATURE || "1"),
+            topP: parseFloat(process.env.CFP_TOP_P || "0.9"),
+            topK: parseInt(process.env.CFP_TOP_K || "32", 10),
+            maxOutputTokens: parseInt(process.env.CFP_MAX_OUTPUT_TOKENS || "8192", 10),
+            responseMimeType: process.env.CFP_RESPONSE_MIME_TYPE || "application/json",
+            responseSchema: {
+                type: SchemaType.OBJECT, // Use the enum value
+                properties: {
+                    "summary": { type: SchemaType.STRING }, // Use enum
+                    "callForPapers": { type: SchemaType.STRING }, // Use enum
+                },
+                required: ["summary", "callForPapers"]
+            } as ObjectSchema, // Assert type for clarity if needed, ensure it matches SDK's ObjectSchema
+            // ***************************
+        },
+        // Use environment variables safely, providing empty string defaults if needed
+        systemInstruction: `${process.env.CFP_SYSTEM_INSTRUCTION || ''}`.trim(), // Trim whitespace from template literal
+        modelNames: cfpModelNamesList,
+    },
     [API_TYPE_DETERMINE]: {
         generationConfig: {
-            temperature: parseFloat(process.env.DETERMINE_TEMPERATURE || "0.5"),
+            temperature: parseFloat(process.env.DETERMINE_TEMPERATURE || "0.1"),
             topP: parseFloat(process.env.DETERMINE_TOP_P || "0.9"),
             topK: parseInt(process.env.DETERMINE_TOP_K || "32", 10),
             maxOutputTokens: parseInt(process.env.DETERMINE_MAX_OUTPUT_TOKENS || "8192", 10),
@@ -197,13 +233,13 @@ export const apiConfigs: ApiConfigs = {
             // ***************************
         },
         systemInstruction: `
-            Role: ${process.env.DETERMINE_ROLE || ''}
-            Instruction:
+            **Role:** ${process.env.DETERMINE_ROLE || ''}
+            **Instruction:**
               1. ${process.env.DETERMINE_INSTRUCTION_1 || ''}
               2. ${process.env.DETERMINE_INSTRUCTION_2 || ''}
               3. ${process.env.DETERMINE_INSTRUCTION_3 || ''}
               4. ${process.env.DETERMINE_INSTRUCTION_4 || ''}
-            Situation: ${process.env.DETERMINE_SITUATION || ''}
+            **Situation:** ${process.env.DETERMINE_SITUATION || ''}
         `.trim(),
         modelName: process.env.DETERMINE_MODEL_NAME // Can be undefined if not set
     },
@@ -241,8 +277,8 @@ export const CACHE_OPTIONS: CacheOptions = {
 
 // Filter out potential undefined values from process.env
 export const GOOGLE_CUSTOM_SEARCH_API_KEYS: string[] = [
-   
-    
+
+
     process.env.CUSTOM_SEARCH_API_KEY_11,
     process.env.CUSTOM_SEARCH_API_KEY_12,
     process.env.CUSTOM_SEARCH_API_KEY_13,

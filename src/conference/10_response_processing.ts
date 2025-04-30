@@ -1,3 +1,4 @@
+
 import { logger } from './11_utils';
 import fs from 'fs';
 import readline from 'readline';
@@ -16,32 +17,36 @@ const VALID_TYPES = new Set(['Hybrid', 'Online', 'Offline']);
 const YEAR_REGEX = /^\d{4}$/; // Simple check for 4 digits
 
 
-// --- Helper Functions (toCamelCase, isDateDetailKey, isDirectStringKey) ---
+// --- Helper Functions (toCamelCase, isDateDetailKey, isDirectStringKey - MODIFIED) ---
 function toCamelCase(str: string): string {
-    if (!str) return ""; // Handle empty or nullish input
+    // (Implementation remains the same)
+    if (!str) return "";
     try {
-        // Keep the original logic, but ensure input is treated as string
         return String(str).replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => {
-            // Explicitly check match type if needed, but JS coercion usually handles it
-            if (+match === 0) return ""; // Check for whitespace converted to 0
+            if (+match === 0) return "";
             return index === 0 ? match.toLowerCase() : match.toUpperCase();
-        }).replace(/[^a-zA-Z0-9]+/g, ''); // Remove non-alphanumeric characters
-    } catch (camelCaseError: unknown) { // Catch as unknown
+        }).replace(/[^a-zA-Z0-9]+/g, '');
+    } catch (camelCaseError: unknown) {
         const message = camelCaseError instanceof Error ? camelCaseError.message : String(camelCaseError);
         console.error("Error converting to camelCase:", message, "Input string:", str);
-        return ""; // Or some other default value
+        return "";
     }
 }
 function isDateDetailKey(key: string): key is keyof Pick<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate'> {
     return ["submissionDate", "notificationDate", "cameraReadyDate", "registrationDate", "otherDate"].includes(key);
 }
-function isDirectStringKey(key: string): key is keyof Omit<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate' | 'information'> {
-    return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher", "summary", "callForPapers"].includes(key);
+// MODIFIED: Removed "summary" and "callForPapers"
+function isDirectStringKey(key: string): key is keyof Omit<ProcessedResponseData, 'submissionDate' | 'notificationDate' | 'cameraReadyDate' | 'registrationDate' | 'otherDate' | 'information' | 'summary' | 'callForPapers'> {
+    // Excludes summary and callForPapers as they now come from CFP response
+    return ["conferenceDates", "year", "location", "cityStateProvince", "country", "continent", "type", "topics", "publisher"].includes(key);
 }
 
+
 // --- Main Functions ---
-export const processResponse = (response: Record<string, any> | null | undefined): ProcessedResponseData => {
-    const result: ProcessedResponseData = {
+// MODIFIED: processResponse no longer handles summary/callForPapers extraction
+export const processResponse = (response: Record<string, any> | null | undefined): Omit<ProcessedResponseData, 'summary' | 'callForPapers'> => {
+    // Initialize result *without* summary/callForPapers fields being actively populated here
+    const result: Omit<ProcessedResponseData, 'summary' | 'callForPapers'> & { information: string } = {
         conferenceDates: "",
         year: "",
         location: "",
@@ -56,96 +61,85 @@ export const processResponse = (response: Record<string, any> | null | undefined
         otherDate: {},
         topics: "",
         publisher: "",
-        summary: "",
-        callForPapers: "",
-        information: ""
+        // summary: "", // Not populated here
+        // callForPapers: "", // Not populated here
+        information: "" // Initialize information
     };
 
-    if (!response) return result; // Return default if input is null or undefined
+    if (!response) return result;
 
     try {
         for (const key in response) {
-            // Use hasOwnProperty for safe iteration
             if (Object.prototype.hasOwnProperty.call(response, key)) {
                 try {
                     const value = response[key];
                     const camelCaseKey = toCamelCase(key);
 
-                    // Check if it's a non-null, non-array object (for date groups)
                     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
                         if (isDateDetailKey(camelCaseKey)) {
-                            // Handle nested date objects safely
-                            result[camelCaseKey] = {}; // Initialize the date detail object
+                            result[camelCaseKey] = {};
                             for (const subKey in value) {
                                 if (Object.prototype.hasOwnProperty.call(value, subKey)) {
                                     try {
-                                        // Ensure value[subKey] is treated as string
-                                        const subValue = String(value[subKey] ?? ''); // Default to empty string if null/undefined
+                                        const subValue = String(value[subKey] ?? '');
                                         result[camelCaseKey][subKey] = subValue;
-                                        // Append to information string
                                         result.information += `${subKey}: ${subValue}\n`;
                                     } catch (subKeyError: unknown) {
-                                        const message = subKeyError instanceof Error ? subKeyError.message : String(subKeyError);
-                                        console.error("Error processing subkey:", message, "Key:", subKey, "Value:", value[subKey]);
+                                        // Log subkey processing error
                                     }
                                 }
                             }
                         } else {
-                            // Handle other nested objects (just add to information)
+                            // Other nested objects - add raw to information
                             try {
-                                result.information += `${key}: ${JSON.stringify(value)}\n`;
+                                // *** CRITICAL: Ensure summary/callForPapers from EXTRACT are NOT added here ***
+                                if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
+                                    result.information += `${key}: ${JSON.stringify(value)}\n`;
+                                }
                             } catch (stringifyError: unknown) {
-                                const message = stringifyError instanceof Error ? stringifyError.message : String(stringifyError);
-                                console.error("Error stringifying nested object:", message, "Key:", key, "Value:", value);
+                                // Log stringify error
                             }
                         }
                     } else {
-                        // Handle primitive values and arrays (treat as string)
-                        const stringValue = String(value ?? ''); // Convert value to string, handle null/undefined
+                        // Primitive values and arrays
+                        const stringValue = String(value ?? '');
 
                         if (isDirectStringKey(camelCaseKey)) {
+                            // Assign directly if it's a recognized direct string key
                             result[camelCaseKey] = stringValue;
-                            // Append to information if not summary or callForPapers
-                            if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
-                                result.information += `${key}: ${stringValue}\n`;
-                            }
+                            // Add to information (already excluded summary/cfp via isDirectStringKey check)
+                            result.information += `${key}: ${stringValue}\n`;
                         } else {
-                            // Handle any other keys not explicitly matched (like potential future fields)
-                            // Append to information string, avoiding summary/callForPapers
+                            // Handle any other keys
+                            // *** CRITICAL: Explicitly skip adding summary/callForPapers from EXTRACT response to information ***
                             if (camelCaseKey !== "summary" && camelCaseKey !== "callForPapers") {
                                 result.information += `${key}: ${stringValue}\n`;
                             }
                         }
                     }
                 } catch (valueProcessingError: unknown) {
-                    const message = valueProcessingError instanceof Error ? valueProcessingError.message : String(valueProcessingError);
-                    console.error("Error processing value for key:", key, message);
+                    // Log value processing error
                 }
             }
         }
-        result.information = result.information.trim(); // Remove trailing newline
+        result.information = result.information.trim();
     } catch (responseProcessingError: unknown) {
-        const message = responseProcessingError instanceof Error ? responseProcessingError.message : String(responseProcessingError);
-        console.error("Error in processResponse:", message);
-        if (responseProcessingError instanceof Error) console.error(responseProcessingError.stack);
-        // Return the partially processed result object on error
+        // Log main processing error
     }
     return result;
 };
 
 
-// --- Định nghĩa các trường cho CSV ---
+// --- CSV Fields Definition (remains the same) ---
 const CSV_FIELDS: (keyof ProcessedRowData | { label: string; value: keyof ProcessedRowData })[] = [
     "title", "acronym", "link", "cfpLink", "impLink",
-    // "source", "rank", "rating", "fieldOfResearch",
-    // 'determineLinks', // Consider flattening or omitting
     "information", "conferenceDates", "year",
     "location", "cityStateProvince", "country", "continent", "type",
     "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
-    "otherDate", "topics", "publisher", "summary", "callForPapers"
+    "otherDate", "topics", "publisher", "summary", "callForPapers" // Keep columns in output
 ];
 
-// --- Hàm xử lý từng dòng JSONL và tạo ProcessedRowData ---
+// --- MODIFIED: processJsonlStream to handle CFP response for summary/callForPapers ---
 async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof logger): AsyncGenerator<ProcessedRowData | null> {
     const fileStream = fs.createReadStream(jsonlFilePath);
     const rl = readline.createInterface({
@@ -158,9 +152,7 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
     for await (const line of rl) {
         lineNumber++;
         const logContext = { ...logContextBase, lineNumber };
-        if (!line.trim()) {
-            continue;
-        }
+        if (!line.trim()) continue;
 
         let inputRow: InputRowData | null = null;
         let acronym: string | undefined = undefined;
@@ -195,15 +187,17 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
             continue;
         }
 
-        let determineFileContent: string = "";
-        let extractFileContent: string = "";
-        let parsedTruncatedInfo: Record<string, any> = {};
+
+        // --- Read and Parse API Response Files ---
         let parsedDetermineInfo: Record<string, any> = {};
+        let parsedExtractInfo: Record<string, any> = {}; // Renamed for clarity
+        let parsedCfpInfo: Record<string, any> = {};   // <<< NEW: For CFP data
 
         try {
+            // Determine Response
             if (inputRow.determineResponseTextPath) {
                 try {
-                    determineFileContent = await readContentFromFile(inputRow.determineResponseTextPath);
+                    const determineFileContent = await readContentFromFile(inputRow.determineResponseTextPath);
                     const cleaned = determineFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                     parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
                     if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
@@ -211,36 +205,68 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
                     parentLogger.warn({ ...rowLogContext, err: readOrParseError, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' }, `Warning reading/parsing determine file`);
                     parsedDetermineInfo = {};
                 }
-            } else {
-                parsedDetermineInfo = {};
             }
 
+            // Extract Response
             if (inputRow.extractResponseTextPath) {
                 try {
-                    extractFileContent = await readContentFromFile(inputRow.extractResponseTextPath);
+                    const extractFileContent = await readContentFromFile(inputRow.extractResponseTextPath);
                     const cleaned = extractFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                    parsedTruncatedInfo = cleaned ? JSON.parse(cleaned) : {};
-                    if (typeof parsedTruncatedInfo !== 'object' || parsedTruncatedInfo === null) parsedTruncatedInfo = {};
+                    parsedExtractInfo = cleaned ? JSON.parse(cleaned) : {}; // Assign to new var name
+                    if (typeof parsedExtractInfo !== 'object' || parsedExtractInfo === null) parsedExtractInfo = {};
                 } catch (readOrParseError: any) {
                     parentLogger.warn({ ...rowLogContext, err: readOrParseError, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' }, `Warning reading/parsing extract file`);
-                    parsedTruncatedInfo = {};
+                    parsedExtractInfo = {};
                 }
-            } else {
-                parsedTruncatedInfo = {};
             }
 
-            // --- Process the parsed data ---
-            const processedResponse = processResponse(parsedTruncatedInfo);
+            // <<< NEW: CFP Response >>>
+            if (inputRow.cfpResponseTextPath) { // Check if the path exists in the input data
+                try {
+                    const cfpFileContent = await readContentFromFile(inputRow.cfpResponseTextPath);
+                    const cleaned = cfpFileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+                    parsedCfpInfo = cleaned ? JSON.parse(cleaned) : {};
+                    if (typeof parsedCfpInfo !== 'object' || parsedCfpInfo === null) parsedCfpInfo = {};
+                } catch (readOrParseError: any) {
+                    parentLogger.warn({ ...rowLogContext, err: readOrParseError, path: inputRow.cfpResponseTextPath, type: 'cfp', event: 'file_read_parse_warn' }, `Warning reading/parsing CFP file`);
+                    parsedCfpInfo = {}; // Default to empty object on error
+                }
+            }
+            // --- End Read and Parse ---
 
+
+            // --- Process the parsed EXTRACT data (excluding summary/cfp) ---
+            const processedExtractResponse = processResponse(parsedExtractInfo); // processResponse now excludes summary/cfp
+
+            // --- Create the final row object ---
             const finalRow: ProcessedRowData = {
+                // Base info from input line
                 title: title,
-                acronym: acronym.replace(/_\d+$/, ''),
+                acronym: acronym.replace(/_\d+$/, ''), // Remove potential index suffix
                 link: inputRow.conferenceLink || "",
                 cfpLink: inputRow.cfpLink || "",
                 impLink: inputRow.impLink || "",
+                // Data from Determine response
                 determineLinks: parsedDetermineInfo,
-                ...processedResponse,
+                // Data from processed Extract response
+                ...processedExtractResponse, // Spread fields like location, dates, topics etc.
+                // Initialize summary/cfp before populating from CFP data
+                summary: "",
+                callForPapers: "",
             };
+
+            // <<< NEW: Populate summary and callForPapers from parsed CFP data >>>
+            // Handle potential variations in key casing/naming from the API
+            finalRow.summary = String(parsedCfpInfo?.summary ?? parsedCfpInfo?.Summary ?? '');
+            finalRow.callForPapers = String(
+                parsedCfpInfo?.callForPapers
+                ?? parsedCfpInfo?.['Call for Papers']
+                ?? parsedCfpInfo?.['Call For Papers']
+                ?? parsedCfpInfo?.cfp // Add other potential variations if needed
+                ?? ''
+            );
+            // --- End Populating from CFP data ---
+
 
             // ************************************************
             // *** START: VALIDATION & NORMALIZATION LOGIC ***
@@ -251,8 +277,6 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
             const originalContinent = finalRow.continent?.trim();
             if (!originalContinent) {
                 finalRow.continent = "No continent";
-                // Optional: Log normalization of empty value if needed for tracking
-                // parentLogger.trace({ ...validationLogContext, event: 'normalization_applied', field: 'continent', reason: 'empty_value' }, `Normalized empty continent`);
             } else if (!VALID_CONTINENTS.has(originalContinent)) {
                 parentLogger.info({ // Log as info since we are normalizing
                     ...validationLogContext,
@@ -268,9 +292,7 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
             // --- Type Validation & Normalization ---
             const originalType = finalRow.type?.trim();
             if (!originalType) {
-                finalRow.type = "Offline"; // Default for empty
-                // Optional: Log normalization
-                // parentLogger.trace({ ...validationLogContext, event: 'normalization_applied', field: 'type', reason: 'empty_value' }, `Normalized empty type to 'Offline'.`);
+                finalRow.type = "Offline";
             } else if (!VALID_TYPES.has(originalType)) {
                 parentLogger.info({ // Log as info
                     ...validationLogContext,
@@ -283,26 +305,18 @@ async function* processJsonlStream(jsonlFilePath: string, parentLogger: typeof l
                 finalRow.type = "Offline"; // Default for invalid
             } // else: type is valid, keep the trimmed original value
 
-            // --- Location, City, Country Normalization (only for empty/missing) ---
-            if (!finalRow.location?.trim()) {
-                finalRow.location = "No location";
-            }
-            if (!finalRow.cityStateProvince?.trim()) {
-                finalRow.cityStateProvince = "No city/state/province";
-            }
-            if (!finalRow.country?.trim()) {
-                finalRow.country = "No country";
-            }
-            if (!finalRow.publisher?.trim()) {
-                finalRow.publisher = "No publisher";
-            }
-            if (!finalRow.topics?.trim()) {
-                finalRow.topics = "No topics";
-            }
-            if (!finalRow.summary?.trim()) {
+            // --- Location, City, Country, Publisher, Topics Normalization (for empty/missing) ---
+            if (!finalRow.location?.trim()) finalRow.location = "No location";
+            if (!finalRow.cityStateProvince?.trim()) finalRow.cityStateProvince = "No city/state/province";
+            if (!finalRow.country?.trim()) finalRow.country = "No country";
+            if (!finalRow.publisher?.trim()) finalRow.publisher = "No publisher";
+            if (!finalRow.topics?.trim()) finalRow.topics = "No topics";
+
+            // <<< MODIFIED: Apply default/normalization AFTER attempting to populate from CFP >>>
+            if (!finalRow.summary?.trim()) { // Check if summary is still empty after trying CFP data
                 finalRow.summary = "No summary available";
             }
-            if (!finalRow.callForPapers?.trim()) {
+            if (!finalRow.callForPapers?.trim()) { // Check if cfp is still empty after trying CFP data
                 finalRow.callForPapers = "No call for papers available";
             }
 

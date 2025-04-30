@@ -183,6 +183,7 @@ const fetchAndProcessWebsiteInfo = async (page: Page, officialWebsite: string, b
     }
 };
 
+
 // --- processDetermineLinksResponse ---
 export const processDetermineLinksResponse = async (
     responseText: string,
@@ -230,16 +231,21 @@ export const processDetermineLinksResponse = async (
             return [batch[0]];
         }
 
+        // --- Normalize the official website URL ONCE ---
         officialWebsite = officialWebsite.endsWith('/') ? officialWebsite.slice(0, -1) : officialWebsite;
-        const originalOfficialWebsite = officialWebsite;
-        cfpLink = normalizeAndJoinLink(officialWebsite, cfpLink);
-        impLink = normalizeAndJoinLink(officialWebsite, impLink);
-        parentLogger.debug({ ...baseLogContext, officialWebsite, cfpLink, impLink, event: 'process_determine_links_normalized' }, "Parsed and normalized initial links");
+        const originalOfficialWebsite = officialWebsite; // Keep the initially determined official website URL
+
+        // --- Normalize CFP and IMP links relative to the *original* official website ---
+        // Use originalOfficialWebsite as the base for normalization here
+        cfpLink = normalizeAndJoinLink(originalOfficialWebsite, cfpLink);
+        impLink = normalizeAndJoinLink(originalOfficialWebsite, impLink);
+        parentLogger.debug({ ...baseLogContext, officialWebsite: originalOfficialWebsite, cfpLink, impLink, event: 'process_determine_links_normalized' }, "Parsed and normalized initial links");
 
         let matchingEntry: BatchEntry | undefined;
         try {
             matchingEntry = batch.find(entry => {
                 if (!entry.conferenceLink) return false;
+                // Ensure comparison uses similarly normalized links
                 const normalizedEntryLink = entry.conferenceLink.endsWith('/') ? entry.conferenceLink.slice(0, -1) : entry.conferenceLink;
                 return normalizedEntryLink === originalOfficialWebsite;
             });
@@ -251,26 +257,48 @@ export const processDetermineLinksResponse = async (
             return [batch[0]];
         }
 
-
+        // =============================================
+        // === BRANCH 1: MATCHING ENTRY FOUND        ===
+        // =============================================
         if (matchingEntry) {
             parentLogger.info({ ...baseLogContext, matchedLink: matchingEntry.conferenceLink, event: 'process_determine_entry_match_found' }, "Found matching entry in batch based on official website");
             let saveErrorOccurred = false;
             try {
+                // Use the already normalized official website link from the matching entry
+                const matchedOfficialWebsite = matchingEntry.conferenceLink.endsWith('/') ? matchingEntry.conferenceLink.slice(0, -1) : matchingEntry.conferenceLink;
+
                 matchingEntry.cfpLink = cfpLink || "";
                 matchingEntry.impLink = impLink || "";
 
-                if (cfpLink && cfpLink.toLowerCase() !== "none") {
+                // --- Check before saving CFP ---
+                const shouldSaveCfp = cfpLink && cfpLink.toLowerCase() !== "none" && cfpLink !== matchedOfficialWebsite;
+                if (shouldSaveCfp) {
                     const saveContext = { ...baseLogContext, url: cfpLink, contentType: 'CFP' };
                     parentLogger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving CFP content for matched entry");
                     matchingEntry.cfpTextPath = await saveHTMLFromCallForPapers(page, cfpLink, matchingEntry.conferenceAcronym, year);
                     parentLogger.info({ ...saveContext, filePath: matchingEntry.cfpTextPath, event: 'process_determine_save_matched_success' }, "Saved CFP content for matched entry");
+                } else if (cfpLink && cfpLink.toLowerCase() !== "none") {
+                    parentLogger.info({ ...baseLogContext, url: cfpLink, contentType: 'CFP', reason: 'CFP link matches official website', event: 'process_determine_save_matched_skipped' }, "Skipping save for CFP content (matches official website)");
+                } else {
+                     parentLogger.info({ ...baseLogContext, contentType: 'CFP', reason: 'CFP link is None or empty', event: 'process_determine_save_matched_skipped' }, "Skipping save for CFP content (link is None or empty)");
                 }
-                if (impLink && impLink.toLowerCase() !== "none") {
+
+                // --- Check before saving IMP ---
+                const shouldSaveImp = impLink && impLink.toLowerCase() !== "none" && impLink !== matchedOfficialWebsite && impLink !== cfpLink;
+                 if (shouldSaveImp) {
                     const saveContext = { ...baseLogContext, url: impLink, contentType: 'IMP' };
                     parentLogger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving Important Dates content for matched entry");
                     matchingEntry.impTextPath = await saveHTMLFromImportantDates(page, impLink, matchingEntry.conferenceAcronym, year);
                     parentLogger.info({ ...saveContext, filePath: matchingEntry.impTextPath, event: 'process_determine_save_matched_success' }, "Saved Important Dates content for matched entry");
+                } else if (impLink && impLink.toLowerCase() !== "none") {
+                    let skipReason = 'Unknown';
+                    if (impLink === matchedOfficialWebsite) skipReason = 'IMP link matches official website';
+                    else if (impLink === cfpLink) skipReason = 'IMP link matches CFP link';
+                    parentLogger.info({ ...baseLogContext, url: impLink, contentType: 'IMP', reason: skipReason, event: 'process_determine_save_matched_skipped' }, `Skipping save for Important Dates content (${skipReason})`);
+                } else {
+                     parentLogger.info({ ...baseLogContext, contentType: 'IMP', reason: 'IMP link is None or empty', event: 'process_determine_save_matched_skipped' }, "Skipping save for IMP content (link is None or empty)");
                 }
+
             } catch (saveContentError: any) {
                 saveErrorOccurred = true;
                 parentLogger.error({ ...baseLogContext, err: saveContentError, cfpLink, impLink, event: 'process_determine_save_matched_failed' }, "Error saving CFP/IMP content for matched entry");
@@ -281,10 +309,14 @@ export const processDetermineLinksResponse = async (
             parentLogger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for matched entry (save error: ${saveErrorOccurred})`);
             return [matchingEntry];
 
+        // =============================================
+        // === BRANCH 2: NO MATCHING ENTRY FOUND     ===
+        // =============================================
         } else {
             parentLogger.info({ ...baseLogContext, officialWebsite: originalOfficialWebsite, event: 'process_determine_entry_match_not_found' }, "No matching entry found. Fetching content from official website directly.");
             let websiteInfo;
             try {
+                // Fetch using the originalOfficialWebsite determined by the first API call
                 websiteInfo = await fetchAndProcessWebsiteInfo(page, originalOfficialWebsite, batch[0], year);
             } catch (fetchError: any) {
                 parentLogger.error({ ...baseLogContext, url: originalOfficialWebsite, err: fetchError, event: 'process_determine_fetch_new_failed' }, "Failed to fetch and process main website info");
@@ -294,8 +326,7 @@ export const processDetermineLinksResponse = async (
                 return [batch[0]];
             }
 
-
-            if (!websiteInfo) { // Double check in case fetchAndProcessWebsiteInfo returns null without error
+            if (!websiteInfo) { // Double check
                 parentLogger.error({ ...baseLogContext, url: originalOfficialWebsite, event: 'process_determine_fetch_new_failed' }, "Fetched main website info is null/undefined");
                 if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after null fetch result"));
                 batch[0].conferenceLink = "None";
@@ -303,7 +334,10 @@ export const processDetermineLinksResponse = async (
                 return [batch[0]];
             }
 
-            const { finalUrl, textPath } = websiteInfo;
+            // --- Use the FINAL URL after potential redirects from fetching ---
+            // Normalize the finalUrl as well for reliable comparison
+            let finalUrl = websiteInfo.finalUrl.endsWith('/') ? websiteInfo.finalUrl.slice(0, -1) : websiteInfo.finalUrl;
+            const textPath = websiteInfo.textPath;
             parentLogger.info({ ...baseLogContext, initialUrl: originalOfficialWebsite, finalUrl, filePath: textPath, event: 'process_determine_fetch_new_success' }, "Successfully fetched and processed main website info");
 
             let fullText = '';
@@ -311,10 +345,9 @@ export const processDetermineLinksResponse = async (
                 fullText = await readContentFromFile(textPath);
             } catch (readErr: any) {
                 parentLogger.error({ ...baseLogContext, filePath: textPath, err: readErr, event: 'process_determine_read_fetched_failed' }, "Failed to read fetched content file");
-                // Consider failing the process here? For now, continue, API call will likely fail.
+                // Continue, but API call 2 might fail or give bad results
             }
 
-            // Corrected structure for determine_links_api (assuming it expects this format)
             const batchContentForApi = `Conference full name: ${batch[0].conferenceTitle} (${batch[0].conferenceAcronym})\n\n1. Website of ${batch[0].conferenceAcronym}: ${finalUrl}\nWebsite information of ${batch[0].conferenceAcronym}:\n\n${fullText.trim()}`;
 
             let websiteLinksResponseText: string = "";
@@ -322,15 +355,17 @@ export const processDetermineLinksResponse = async (
 
             try {
                 parentLogger.info({ ...baseLogContext, event: 'process_determine_api2_start' }, "Calling determine_links_api (2nd call) for the fetched website");
-                // Pass correct conference name/acronym
                 websiteLinksResponse = await determine_links_api(batchContentForApi, batchIndex, batch[0].conferenceTitle, batch[0].conferenceAcronym, parentLogger);
                 websiteLinksResponseText = websiteLinksResponse.responseText || "";
                 parentLogger.info({ ...baseLogContext, responseLength: websiteLinksResponseText.length, event: 'process_determine_api2_end', success: true }, "Received response from determine_links_api (2nd call)");
             } catch (determineLinksError: any) {
                 parentLogger.error({ ...baseLogContext, err: determineLinksError, event: 'process_determine_api2_call_failed' }, "Error calling determine_links_api (2nd call)");
+                // Don't close the page yet, it might be needed for saving below if API succeeded partially or links were already known
+                // If page is needed, we need to handle its closure in the finally block
+                batch[0].conferenceLink = "None"; // Mark as error since API failed
+                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'API call 2 failed' }, "Finishing processDetermineLinksResponse with error state after API 2 failure");
+                // Ensure page is closed before returning
                 if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after API 2 error"));
-                batch[0].conferenceLink = "None";
-                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'API call 2 failed' }, "Finishing processDetermineLinksResponse with error state");
                 return [batch[0]];
             }
 
@@ -339,7 +374,7 @@ export const processDetermineLinksResponse = async (
                 websiteLinksData = JSON.parse(websiteLinksResponseText);
             } catch (parseError: any) {
                 parentLogger.error({ ...baseLogContext, err: parseError, responseTextPreview: websiteLinksResponseText.substring(0, 100), event: 'process_determine_json_parse_failed', apiCallNumber: 2 }, "Error parsing JSON response from determine_links_api (2nd call)");
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse 2 error"));
+                 if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse 2 error"));
                 batch[0].conferenceLink = "None";
                 parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'JSON parse 2 failed' }, "Finishing processDetermineLinksResponse with error state");
                 return [batch[0]];
@@ -348,30 +383,51 @@ export const processDetermineLinksResponse = async (
             let websiteCfpLink: string | undefined = websiteLinksData["Call for papers link"]?.trim();
             let websiteImpDatesLink: string | undefined = websiteLinksData["Important dates link"]?.trim();
 
+            // --- Normalize links from 2nd API call relative to the FINAL fetched URL ---
             websiteCfpLink = normalizeAndJoinLink(finalUrl, websiteCfpLink);
             websiteImpDatesLink = normalizeAndJoinLink(finalUrl, websiteImpDatesLink);
             parentLogger.debug({ ...baseLogContext, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_links_normalized', source: 'api_call_2' }, "Parsed and normalized links from 2nd API call");
 
             let saveErrorOccurred = false;
             try {
-                batch[0].conferenceLink = finalUrl;
+                // Update the primary entry (batch[0])
+                batch[0].conferenceLink = finalUrl; // Use the final URL found
                 batch[0].conferenceTextPath = textPath;
                 batch[0].cfpLink = websiteCfpLink || "";
                 batch[0].impLink = websiteImpDatesLink || "";
 
-                if (websiteCfpLink && websiteCfpLink.toLowerCase() !== "none") {
+                // --- Check before saving CFP ---
+                const shouldSaveCfp = websiteCfpLink && websiteCfpLink.toLowerCase() !== "none" && websiteCfpLink !== finalUrl;
+                if (shouldSaveCfp) {
                     const saveContext = { ...baseLogContext, url: websiteCfpLink, contentType: 'CFP', source: 'api_call_2' };
                     parentLogger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving CFP content (from 2nd API call)");
                     batch[0].cfpTextPath = await saveHTMLFromCallForPapers(page, websiteCfpLink, batch[0].conferenceAcronym, year);
                     parentLogger.info({ ...saveContext, filePath: batch[0].cfpTextPath, event: 'process_determine_save_new_success' }, "Saved CFP content (from 2nd API call)");
-                }
-                if (websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none") {
+                } else if (websiteCfpLink && websiteCfpLink.toLowerCase() !== "none") {
+                    parentLogger.info({ ...baseLogContext, url: websiteCfpLink, contentType: 'CFP', source: 'api_call_2', reason: 'CFP link matches final official website', event: 'process_determine_save_new_skipped' }, "Skipping save for CFP content (matches final official website)");
+                 } else {
+                     parentLogger.info({ ...baseLogContext, contentType: 'CFP', source: 'api_call_2', reason: 'CFP link is None or empty', event: 'process_determine_save_new_skipped' }, "Skipping save for CFP content (link is None or empty)");
+                 }
+
+
+                // --- Check before saving IMP ---
+                const shouldSaveImp = websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none" && websiteImpDatesLink !== finalUrl && websiteImpDatesLink !== websiteCfpLink;
+                if (shouldSaveImp) {
                     const saveContext = { ...baseLogContext, url: websiteImpDatesLink, contentType: 'IMP', source: 'api_call_2' };
                     parentLogger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving Important Dates content (from 2nd API call)");
                     batch[0].impTextPath = await saveHTMLFromImportantDates(page, websiteImpDatesLink, batch[0].conferenceAcronym, year);
                     parentLogger.info({ ...saveContext, filePath: batch[0].impTextPath, event: 'process_determine_save_new_success' }, "Saved Important Dates content (from 2nd API call)");
+                } else if (websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none") {
+                     let skipReason = 'Unknown';
+                    if (websiteImpDatesLink === finalUrl) skipReason = 'IMP link matches final official website';
+                    else if (websiteImpDatesLink === websiteCfpLink) skipReason = 'IMP link matches CFP link';
+                     parentLogger.info({ ...baseLogContext, url: websiteImpDatesLink, contentType: 'IMP', source: 'api_call_2', reason: skipReason, event: 'process_determine_save_new_skipped' }, `Skipping save for Important Dates content (${skipReason})`);
+                } else {
+                     parentLogger.info({ ...baseLogContext, contentType: 'IMP', source: 'api_call_2', reason: 'IMP link is None or empty', event: 'process_determine_save_new_skipped' }, "Skipping save for IMP content (link is None or empty)");
                 }
+
                 parentLogger.info({ ...baseLogContext, event: 'process_determine_update_entry_success' }, "Updated original batch entry with new links and paths");
+
             } catch (saveContentError: any) {
                 saveErrorOccurred = true;
                 parentLogger.error({ ...baseLogContext, err: saveContentError, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_save_new_failed', source: 'api_call_2' }, "Error saving CFP/IMP content (from 2nd API call)");
@@ -379,7 +435,7 @@ export const processDetermineLinksResponse = async (
                 if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page for new entry"));
             }
             parentLogger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for new entry (save error: ${saveErrorOccurred})`);
-            return [batch[0]];
+            return [batch[0]]; // Return the updated original entry
         }
     } catch (error: any) {
         parentLogger.error({ ...baseLogContext, err: error, event: 'process_determine_unhandled_error' }, "Unhandled error in processDetermineLinksResponse");
