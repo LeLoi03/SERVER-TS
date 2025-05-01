@@ -1,454 +1,743 @@
 // 5_playwright_utils.ts
-import { Page, BrowserContext } from 'playwright'; // Import Playwright types
+import { Page, BrowserContext, Response } from 'playwright'; // Import Playwright types
+import { URL } from 'url'; // Use Node's built-in URL for robust parsing/joining
 
 import { cleanDOM, traverseNodes, removeExtraEmptyLines } from './2_dom_processing';
 import { determine_links_api } from './7_gemini_api_utils';
 import { extractTextFromPDF } from './9_pdf_utils';
-import { logger } from './11_utils';
-import { MAIN_CONTENT_KEYWORDS, YEAR2 } from '../config';
+import { logger as defaultLogger } from './11_utils'; // Rename default import
+import { MAIN_CONTENT_KEYWORDS } from '../config'; // YEAR2 seems unused here?
 
-import { BatchEntry} from './types';
+import { BatchEntry } from './types';
 
 import { readContentFromFile, writeTempFile } from './11_utils';
 
+// Type alias for logger for easier usage
+type Logger = typeof defaultLogger;
+
+export type LogContextBase = {
+    batchIndex: number;
+    conferenceAcronym: string | undefined;
+    conferenceTitle: string | undefined;
+    function: string;
+    apiCallNumber?: 1 | 2;
+    // Add other fields if they are consistently part of the base context
+};
+
+// --- Helper Functions (Existing and New) ---
+
+/**
+ * Fetches page content with retry mechanism.
+ */
 export async function fetchContentWithRetry(page: Page, maxRetries: number = 3): Promise<string> {
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
         try {
+            // Ensure page is not closed before attempting to get content
+            if (page.isClosed()) {
+                throw new Error("Page is closed, cannot fetch content.");
+            }
             return await page.content();
-        } catch (err: any) { // Type err as any or Error
-            console.error(`[Attempt ${attempt}] Error fetching page content: ${err.message}`);
-            if (attempt === maxRetries) throw err;
-            await page.waitForTimeout(2000);
+        } catch (err: unknown) {
+            const errorMessage = err instanceof Error ? err.message : String(err);
+            console.error(`[Attempt ${attempt}] Error fetching page content: ${errorMessage}`);
+            if (attempt === maxRetries || page.isClosed()) { // Also stop if page closed during wait
+                // Re-throw the original error or a new one with context
+                if (err instanceof Error) throw err;
+                throw new Error(`Failed to fetch content after ${maxRetries} attempts: ${errorMessage}`);
+            }
+            // Avoid waiting if the page is already closed
+            if (!page.isClosed()) {
+                await page.waitForTimeout(2000);
+            }
         }
     }
-    return ""; // Should not reach here, but to satisfy return type
+    // This should theoretically not be reached if maxRetries >= 1
+    // but needed for TS compiler and as a fallback.
+    throw new Error("fetchContentWithRetry failed unexpectedly after loop.");
 }
 
-// --- processHTMLContent trả về text, nơi gọi sẽ ghi file ---
-async function processHTMLContent(page: Page, link: string | null, acronym: string | undefined, year: number, useMainContentKeywords: boolean = false): Promise<string> {
+
+
+/**
+ * Normalizes a URL or joins a potentially relative link with a base URL.
+ * Uses URL constructor for robustness.
+ *
+ * Logic:
+ * 1. If 'link' is explicitly invalid (null, undefined, empty, "none"), return "".
+ * 2. If 'link' is a valid absolute URL, return 'link'.
+ * 3. If 'link' is relative and 'baseUrl' is a valid absolute HTTP/HTTPS URL, join them. Return result or "" on error.
+ * 4. If 'link' was NOT provided (null/undefined) AND 'baseUrl' is valid, return 'baseUrl' (for normalizing base URL itself).
+ * 5. Otherwise (e.g., relative link without base, invalid base), return "".
+ */
+const normalizeAndJoinLink = (baseUrl: string | undefined | null, link: string | undefined | null): string => {
+    const trimmedLink = (typeof link === 'string' ? link.trim() : '');
+    const trimmedBaseUrl = (typeof baseUrl === 'string' ? baseUrl.trim() : '');
+    // Check if the 'link' argument was actually provided vs being null/undefined
+    const wasLinkArgumentProvided = link !== null && link !== undefined;
+    const isLinkEffectivelyEmpty = !trimmedLink || trimmedLink.toLowerCase() === "none";
+
+    // --- Case 1: Link argument was provided but is effectively empty/invalid ---
+    if (wasLinkArgumentProvided && isLinkEffectivelyEmpty) {
+        // Logger.debug(`normalizeAndJoinLink: Link is explicitly invalid ('${link}'). Returning empty string.`);
+        return ""; // Explicitly no link provided, return empty string.
+    }
+
+    // --- Case 2: Link looks like a valid absolute URL ---
+    // Check this only if link wasn't effectively empty
+    if (!isLinkEffectivelyEmpty && /^(https?:\/\/|mailto:|tel:)/i.test(trimmedLink)) {
+        try {
+            new URL(trimmedLink); // Validate parsing
+            // Logger.debug(`normalizeAndJoinLink: Link ('${trimmedLink}') is absolute and valid.`);
+            return trimmedLink; // It's absolute and valid
+        } catch (e) {
+            console.warn(`normalizeAndJoinLink: Link "${trimmedLink}" looks absolute but failed URL parsing. Treating as invalid.`);
+            return ""; // Treat as invalid if parsing fails
+        }
+    }
+
+    // --- Case 3: Link is relative, try joining with a valid Base URL ---
+    // Check this only if link wasn't effectively empty and base URL is valid for joining
+    if (!isLinkEffectivelyEmpty && trimmedBaseUrl && /^https?:\/\//i.test(trimmedBaseUrl)) {
+        try {
+            const base = new URL(trimmedBaseUrl);
+            // Ensure base URL ends with '/' for correct relative resolution if needed, URL constructor handles this well
+            const resolvedUrl = new URL(trimmedLink, base); // Use base object directly
+            // Logger.debug(`normalizeAndJoinLink: Joined relative link '${trimmedLink}' with base '${trimmedBaseUrl}' to '${resolvedUrl.toString()}'.`);
+            return resolvedUrl.toString(); // Successfully joined.
+        } catch (error: unknown) {
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            console.error(`normalizeAndJoinLink: Error joining base "${trimmedBaseUrl}" and link "${trimmedLink}": ${errorMessage}.`);
+            return ""; // Return empty if joining failed
+        }
+    }
+
+    // --- Case 4: Only Base URL was relevant (link argument was null/undefined) ---
+    // This handles the case normalizeAndJoinLink(baseUrl, null)
+    if (!wasLinkArgumentProvided && trimmedBaseUrl && /^(https?:\/\/|mailto:|tel:)/i.test(trimmedBaseUrl)) {
+         try {
+            new URL(trimmedBaseUrl); // Validate parsing
+            // Logger.debug(`normalizeAndJoinLink: Normalizing base URL '${trimmedBaseUrl}'.`);
+            return trimmedBaseUrl; // Return normalized base URL
+         } catch (e) {
+             console.warn(`normalizeAndJoinLink: Base URL "${trimmedBaseUrl}" failed URL parsing when normalizing. Treating as invalid.`);
+             return "";
+         }
+    }
+
+    // --- Default: All other cases ---
+    // (e.g., relative link without base, invalid base, link was provided but couldn't be resolved/joined)
+    if (!isLinkEffectivelyEmpty && wasLinkArgumentProvided && !trimmedBaseUrl) {
+         console.warn(`normalizeAndJoinLink: Cannot resolve relative link "${trimmedLink}" without a valid absolute base URL.`);
+    } else if (!isLinkEffectivelyEmpty && wasLinkArgumentProvided && trimmedBaseUrl && !/^https?:\/\//i.test(trimmedBaseUrl)) {
+         console.warn(`normalizeAndJoinLink: Cannot resolve relative link "${trimmedLink}" with non-HTTP/HTTPS base URL "${trimmedBaseUrl}".`);
+    }
+    // Logger.debug(`normalizeAndJoinLink: No valid URL determined for link ('${link}') and base ('${baseUrl}'). Returning empty string.`);
+    return ""; // Return empty string otherwise.
+};
+
+export async function extractTextFromUrl(page: Page, url: string, acronym: string | undefined, year: number, useMainContentKeywords: boolean = false): Promise<string> {
+    const logContext = { url, acronym, year, useMainContentKeywords };
+    defaultLogger.debug({ ...logContext, event: 'extractTextFromUrl_start' });
+
+    // --- NEW: Pre-check for invalid URL ---
+    if (!url || typeof url !== 'string' || url.trim() === '' || !/^(https?:\/\/|file:\/\/)/i.test(url)) {
+        // Allow http, https, and potentially file URLs (for local PDFs if needed), reject others/empty.
+        // Note: We don't handle mailto: or tel: here as they aren't fetchable pages.
+        // normalizeAndJoinLink should prevent mailto/tel from reaching here unless explicitly passed.
+        let reason = "URL is empty, null, or not a string.";
+        if (url && typeof url === 'string' && url.trim() !== '') {
+            reason = `URL is not a valid fetchable (http/https/file) URL: ${url}`;
+        }
+        defaultLogger.warn({ ...logContext, reason, event: 'extractTextFromUrl_skipped_invalid_url' });
+        return ""; // Return empty string immediately for invalid URLs
+    }
+    // --- End NEW ---
+
     try {
-        if (link && link.toLowerCase().endsWith(".pdf")) {
+        // 1. Handle PDF (Check extension AFTER ensuring it's a valid URL structure)
+        if (url.toLowerCase().endsWith(".pdf")) {
+            defaultLogger.info({ ...logContext, type: 'pdf', event: 'extractTextFromUrl_pdf_start' });
             try {
-                const pdfText = await extractTextFromPDF(link);
+                const pdfText = await extractTextFromPDF(url);
+                defaultLogger.info({ ...logContext, type: 'pdf', success: true, event: 'extractTextFromUrl_pdf_success' });
                 return pdfText || "";
-            } catch (pdfError: any) { // Type pdfError as any or Error
-                console.error(`Error extracting text from PDF ${link}:`, pdfError);
-                return "";
+            } catch (pdfError: unknown) {
+                defaultLogger.error({ ...logContext, type: 'pdf', err: pdfError, event: 'extractTextFromUrl_pdf_failed' });
+                return ""; // Return empty on PDF extraction error
             }
         }
 
-        if (link) {
-            try {
-                await page.goto(link, { waitUntil: "domcontentloaded", timeout: 25000 });
-            } catch (gotoError: any) { // Type gotoError as any or Error
-                console.error(`Error navigating to ${link}:`, gotoError);
-                return "";
+        // 2. Handle HTML
+        defaultLogger.info({ ...logContext, type: 'html', event: 'extractTextFromUrl_html_start' });
+        try {
+            // Check if page is closed before navigation
+            if (page.isClosed()) {
+                throw new Error(`Page closed before navigating to ${url}`);
             }
+            await page.goto(url, { waitUntil: "domcontentloaded", timeout: 25000 });
+        } catch (gotoError: unknown) {
+            defaultLogger.error({ ...logContext, type: 'html', err: gotoError, event: 'extractTextFromUrl_goto_failed' });
+            return ""; // Return empty on navigation error
         }
 
-        let mainContentHTML: string = await page.content();
+        let htmlContent: string;
+        try {
+            // Use retry mechanism for fetching content
+            htmlContent = await fetchContentWithRetry(page, 3);
+        } catch (contentError: unknown) {
+            defaultLogger.error({ ...logContext, type: 'html', err: contentError, event: 'extractTextFromUrl_fetch_content_failed' });
+            return ""; // Return empty if content fetch fails
+        }
 
-        if (useMainContentKeywords) {
+
+        // 3. Extract Main Content (Optional)
+        let mainContentHTML = htmlContent;
+        if (useMainContentKeywords && MAIN_CONTENT_KEYWORDS && MAIN_CONTENT_KEYWORDS.length > 0) {
+            defaultLogger.debug({ ...logContext, type: 'html', event: 'extractTextFromUrl_main_content_eval_start' });
             try {
-                const extractedContentRaw: string | string[] = await page.$$eval("*", (els, keywords) => { // Changed type to string | string[]
-                    if (!Array.isArray(keywords)) {
-                        return document ? document.body.outerHTML : "";
+                // Ensure page is usable for evaluation
+                if (page.isClosed()) {
+                    throw new Error(`Page closed before $$eval on ${url}`);
+                }
+
+                // Robust $$eval: handle potential non-array keywords and element filtering
+                const extractedContentRaw: string | string[] = await page.$$eval("body *", (els, keywords) => {
+                    // Type guard inside $$eval
+                    const safeKeywords = Array.isArray(keywords) ? keywords.map(k => String(k).toLowerCase()) : [];
+                    if (safeKeywords.length === 0) {
+                        // FIX: Check for document existence before accessing body
+                        return document ? (document.body?.outerHTML || "") : ""; // Fallback if no keywords
                     }
+
                     return els
                         .filter((el: Element) =>
+                            el.hasAttributes() && // Optimization: check if element has attributes first
                             Array.from(el.attributes).some((attr: Attr) =>
-                                keywords.some((keyword: string) =>
-                                    attr.name.toLowerCase().includes(keyword)
+                                safeKeywords.some((keyword: string) =>
+                                    attr.name.toLowerCase().includes(keyword) || // Check attribute name
+                                    attr.value.toLowerCase().includes(keyword)   // Optionally check attribute value too? (Consider performance)
                                 )
                             )
                         )
-                        .map((el: Element) => el.outerHTML)
-                        .join("\n\n");
-                }, MAIN_CONTENT_KEYWORDS);
+                        .map((el: Element) => el.outerHTML) // Get outerHTML of matching elements
+                        .join("\n\n"); // Join the HTML strings
+                }, MAIN_CONTENT_KEYWORDS); // Pass keywords array
 
-                let extractedContent: string; // Declare extractedContent as string
-                if (Array.isArray(extractedContentRaw)) {
-                    extractedContent = extractedContentRaw.join('\n\n'); // Join array elements into a string if it's an array
-                } else {
-                    extractedContent = extractedContentRaw; // Otherwise, it's already a string
-                }
+                // Ensure extractedContent is a string
+                const extractedContent = Array.isArray(extractedContentRaw)
+                    ? extractedContentRaw.join('\n\n')
+                    : extractedContentRaw;
 
-
-                if (extractedContent.length > 0) {
+                if (extractedContent && extractedContent.length > 50) { // Use a threshold to ensure meaningful content was extracted
                     mainContentHTML = extractedContent;
+                    defaultLogger.debug({ ...logContext, type: 'html', event: 'extractTextFromUrl_main_content_eval_success', usedExtracted: true });
+                } else {
+                    defaultLogger.debug({ ...logContext, type: 'html', event: 'extractTextFromUrl_main_content_eval_skipped', reason: 'No significant content found' });
                 }
-            } catch (evalError: any) {
-                console.error("Error extracting main content:", evalError);
+            } catch (evalError: unknown) {
+                // Log error but continue with full HTML content as fallback
+                defaultLogger.warn({ ...logContext, type: 'html', err: evalError, event: 'extractTextFromUrl_main_content_eval_failed' });
             }
         }
 
+        // 4. Clean DOM and Traverse
+        defaultLogger.debug({ ...logContext, type: 'html', event: 'extractTextFromUrl_dom_processing_start' });
         const document = cleanDOM(mainContentHTML);
-        if (!document) {
+        if (!document || !document.body) {
+            defaultLogger.warn({ ...logContext, type: 'html', event: 'extractTextFromUrl_dom_processing_failed', reason: 'Cleaned DOM or body is null' });
             return "";
         }
         let fullText = traverseNodes(document.body as HTMLElement, acronym, year);
         fullText = removeExtraEmptyLines(fullText);
+        defaultLogger.info({ ...logContext, type: 'html', success: true, textLength: fullText.length, event: 'extractTextFromUrl_html_success' });
         return fullText;
 
-    } catch (error: any) { // Type error as any or Error
-        console.error("Error in processHTMLContent:", error);
-        console.error(error.stack);
-        return "";
+    } catch (error: unknown) {
+        defaultLogger.error({ ...logContext, err: error, event: 'extractTextFromUrl_unexpected_error' });
+        console.error("Stack trace for extractTextFromUrl error:", error instanceof Error ? error.stack : 'N/A');
+        return ""; // Return empty on any unexpected error
     }
 }
 
-export const saveHTMLFromCallForPapers = async (page: Page, link: string | null, acronym: string | undefined, year: number): Promise<string | null> => {
-    const textContent = await processHTMLContent(page, link, acronym, year, true);
-    if (textContent) {
-        // Ghi vào file tạm và trả về path
-        const safeAcronym = acronym?.replace(/[^a-zA-Z0-9_-]/g, '-') || 'unknown';
-        return await writeTempFile(textContent, `${safeAcronym}_cfp_${year}`);
+/**
+ * Saves content to a temporary file if the content is not empty.
+ * Returns the file path or null.
+ */
+export async function saveContentToTempFile(
+    content: string,
+    baseName: string,
+    logContext: object,
+    logger: Logger
+): Promise<string | null> {
+    if (!content || content.trim().length === 0) {
+        logger.info({ ...logContext, event: 'saveContentToTempFile_skipped', reason: 'Content is empty' });
+        return null;
     }
-    return null;
-};
-
-export const saveHTMLFromImportantDates = async (page: Page, link: string | null, acronym: string | undefined, year: number): Promise<string | null> => {
-    const textContent = await processHTMLContent(page, link, acronym, year, false);
-    if (textContent) {
-        // Ghi vào file tạm và trả về path
-        const safeAcronym = acronym?.replace(/[^a-zA-Z0-9_-]/g, '-') || 'unknown';
-        return await writeTempFile(textContent, `${safeAcronym}_imp_${year}`);
-    }
-    return null;
-};
-
-// --- normalizeAndJoinLink giữ nguyên ---
-const normalizeAndJoinLink = (baseUrl: string, link: string | undefined): string => {
     try {
-        if (!link || link.toLowerCase() === "none") {
-            return link || ""; // Return empty string if link is null or undefined after checking "none"
-        }
-        if (link.startsWith('http')) {
-            return link;
-        }
-
-        let normalizedLinkPart: string = link;
-        normalizedLinkPart = normalizedLinkPart.replace(/^[^a-zA-Z0-9]+/, '');
-        // Ensure baseUrl doesn't end with '/' if normalizedLinkPart doesn't start with '/'
-        if (baseUrl.endsWith('/') && !normalizedLinkPart.startsWith('/')) {
-            baseUrl = baseUrl.slice(0, -1);
-        } else if (!baseUrl.endsWith('/') && normalizedLinkPart.startsWith('/')) {
-            // This case should ideally not happen if normalize removes leading non-alphanum
-            // but just in case, remove the leading '/' from link part
-            normalizedLinkPart = normalizedLinkPart.substring(1);
-        } else if (baseUrl.endsWith('/') && normalizedLinkPart.startsWith('/')) {
-            // Avoid double slash if both end/start with slash
-            normalizedLinkPart = normalizedLinkPart.substring(1);
-        }
-
-        // Simple concatenation might still fail for relative paths like '../'
-        // Using URL constructor is more robust
-        try {
-            return new URL(normalizedLinkPart, baseUrl + (baseUrl.endsWith('/') ? '' : '/')).toString();
-        } catch (urlError) {
-            console.warn(`Could not construct URL from base "${baseUrl}" and link "${link}". Falling back to simple join.`);
-            // Fallback to previous logic if URL constructor fails (e.g., invalid base)
-            return `${baseUrl}/${normalizedLinkPart}`;
-        }
-    } catch (normalizeError: any) {
-        console.error("Error normalizing and joining link:", normalizeError);
-        return "";
+        const filePath = await writeTempFile(content, baseName);
+        logger.info({ ...logContext, filePath, event: 'saveContentToTempFile_success' });
+        return filePath;
+    } catch (writeError: unknown) {
+        logger.error({ ...logContext, err: writeError, event: 'saveContentToTempFile_failed' });
+        return null; // Indicate failure to save
     }
-};
+}
 
-// --- fetchAndProcessWebsiteInfo trả về { finalUrl, textPath } ---
-const fetchAndProcessWebsiteInfo = async (page: Page, officialWebsite: string, batchEntry: BatchEntry, year: number): Promise<{ finalUrl: string; textPath: string } | null> => {
+/**
+ * Processes a specific URL (CFP or IMP), extracts text, and saves it.
+ */
+async function processAndSaveLinkedPage(
+    page: Page,
+    link: string | undefined | null,
+    baseLink: string, // The main official website URL (normalized)
+    otherLink: string | undefined | null, // The *other* link (e.g., CFP link when processing IMP)
+    acronym: string | undefined,
+    year: number,
+    contentType: 'CFP' | 'IMP',
+    useMainContentKeywords: boolean,
+    logContext: LogContextBase, // FIX: Use specific type
+    logger: Logger
+): Promise<string | null> {
+    const safeAcronym = acronym?.replace(/[^a-zA-Z0-9_-]/g, '-') || 'unknown';
+    const fileBaseName = `${safeAcronym}_${contentType.toLowerCase()}_${year}`;
+    const currentLogContext = { ...logContext, contentType, url: link, fileBaseName };
+
+    // 1. Check if saving is needed
+    const normalizedLink = normalizeAndJoinLink(baseLink, link); // Normalize here for comparison
+    const normalizedBaseLink = baseLink; // Already normalized
+    const normalizedOtherLink = normalizeAndJoinLink(baseLink, otherLink); // Normalize other link too
+
+    if (!normalizedLink || normalizedLink === normalizedBaseLink || (normalizedOtherLink && normalizedLink === normalizedOtherLink)) {
+        let reason = 'Link is empty or None';
+        if (normalizedLink === normalizedBaseLink) reason = `Link matches official website (${normalizedBaseLink})`;
+        else if (normalizedOtherLink && normalizedLink === normalizedOtherLink) reason = `Link matches ${contentType === 'CFP' ? 'IMP' : 'CFP'} link (${normalizedOtherLink})`;
+        logger.info({ ...currentLogContext, reason, event: 'processAndSaveLinkedPage_skipped' });
+        return null;
+    }
+
+    // 2. Extract content
+    logger.info({ ...currentLogContext, event: 'processAndSaveLinkedPage_extract_start' });
+    const textContent = await extractTextFromUrl(page, normalizedLink, acronym, year, useMainContentKeywords);
+
+    // 3. Save content
+    return await saveContentToTempFile(textContent, fileBaseName, currentLogContext, logger);
+}
+
+/**
+ * Fetches and processes the main official website.
+ * Returns the final URL and the path to the saved text content.
+ */
+const fetchAndProcessWebsiteInfo = async (
+    page: Page,
+    officialWebsite: string, // Expect normalized URL
+    batchEntry: BatchEntry,
+    year: number,
+    logContext: LogContextBase, // FIX: Use specific type
+    logger: Logger
+): Promise<{ finalUrl: string; textPath: string } | null> => {
+    const currentLogContext = { ...logContext, url: officialWebsite, function: 'fetchAndProcessWebsiteInfo' };
+    logger.info({ ...currentLogContext, event: 'fetch_website_start' });
     try {
-        const response = await page.goto(officialWebsite, { waitUntil: 'domcontentloaded', timeout: 25000 });
+        // Check page status before navigation
+        if (page.isClosed()) {
+            throw new Error(`Page closed before navigating to main website ${officialWebsite}`);
+        }
+        const response: Response | null = await page.goto(officialWebsite, { waitUntil: 'domcontentloaded', timeout: 25000 });
+
         if (!response || !response.ok()) {
-            console.error(`Failed to load ${officialWebsite}. Status code: ${response ? response.status() : 'Unknown'}`);
+            logger.error({ ...currentLogContext, status: response?.status(), event: 'fetch_website_failed', reason: 'Non-OK response' });
             return null;
         }
-        const finalUrl = page.url();
-        const htmlContent = await page.content(); // Hoặc fetchContentWithRetry
-        const document = cleanDOM(htmlContent);
-        if (!document) return null;
-        let fullText = traverseNodes(document.body as HTMLElement, batchEntry.conferenceAcronym, year);
-        fullText = removeExtraEmptyLines(fullText);
 
-        // Ghi vào file tạm và trả về path
+        const finalUrl = page.url(); // Get URL after potential redirects
+        const normalizedFinalUrl = finalUrl.endsWith('/') ? finalUrl.slice(0, -1) : finalUrl; // Normalize final URL
+
+        logger.info({ ...currentLogContext, finalUrl: normalizedFinalUrl, event: 'fetch_website_navigated' });
+
+        // Extract text content (using the helper function, no main content keywords for main page)
+        const textContent = await extractTextFromUrl(page, normalizedFinalUrl, batchEntry.conferenceAcronym, year, false);
+
+        // Save content to temp file
         const safeAcronym = batchEntry.conferenceAcronym.replace(/[^a-zA-Z0-9_-]/g, '-') || 'unknown';
-        const textPath = await writeTempFile(fullText, `${safeAcronym}_main_${year}`);
+        const fileBaseName = `${safeAcronym}_main_${year}`;
+        const textPath = await saveContentToTempFile(textContent, fileBaseName, currentLogContext, logger);
 
-        return { finalUrl, textPath };
-    } catch (error: any) {
-        console.error("Error fetching and processing website info:", error);
-        console.error(error.stack);
+        if (!textPath) {
+            logger.warn({ ...currentLogContext, finalUrl: normalizedFinalUrl, event: 'fetch_website_save_failed' });
+            // Decide if you want to return null here or continue without textPath
+            return null; // Returning null as saving failed
+        }
+
+        logger.info({ ...currentLogContext, finalUrl: normalizedFinalUrl, textPath, event: 'fetch_website_success' });
+        return { finalUrl: normalizedFinalUrl, textPath };
+
+    } catch (error: unknown) {
+        logger.error({ ...currentLogContext, err: error, event: 'fetch_website_error' });
+        console.error("Stack trace for fetchAndProcessWebsiteInfo error:", error instanceof Error ? error.stack : 'N/A');
         return null;
     }
 };
 
+// --- Private Helper Functions for processDetermineLinksResponse ---
 
-// --- processDetermineLinksResponse ---
+/**
+ * Handles the logic when a matching entry is found in the batch.
+ */
+async function _handleMatchingEntry(
+    page: Page,
+    matchingEntry: BatchEntry,
+    cfpLink: string, // Already normalized relative to original official website
+    impLink: string, // Already normalized relative to original official website
+    year: number,
+    logContext: LogContextBase, // FIX: Use specific type
+    logger: Logger
+): Promise<BatchEntry> {
+    const currentLogContext = { ...logContext, matchedLink: matchingEntry.conferenceLink, function: '_handleMatchingEntry' };
+    logger.info({ ...currentLogContext, event: 'start' });
+
+    // Use the matched entry's link as the base for saving checks
+    const baseLink = matchingEntry.conferenceLink.endsWith('/') ? matchingEntry.conferenceLink.slice(0, -1) : matchingEntry.conferenceLink;
+
+    matchingEntry.cfpLink = cfpLink; // Store the normalized link
+    matchingEntry.impLink = impLink; // Store the normalized link
+
+    let cfpSaveError = false;
+    let impSaveError = false;
+
+    try {
+        // Process and save CFP page (useMainContentKeywords = true)
+        matchingEntry.cfpTextPath = await processAndSaveLinkedPage(
+            page, cfpLink, baseLink, impLink, matchingEntry.conferenceAcronym, year, 'CFP', true, currentLogContext, logger
+        );
+        if (cfpLink && !matchingEntry.cfpTextPath && cfpLink !== baseLink) cfpSaveError = true; // Mark error if saving was expected but failed
+
+    } catch (error) {
+        logger.error({ ...currentLogContext, contentType: 'CFP', err: error, event: 'save_cfp_error' });
+        cfpSaveError = true;
+    }
+
+    try {
+        // Process and save IMP page (useMainContentKeywords = false)
+        // Pass cfpLink as the 'otherLink' to avoid saving if IMP == CFP
+        matchingEntry.impTextPath = await processAndSaveLinkedPage(
+            page, impLink, baseLink, cfpLink, matchingEntry.conferenceAcronym, year, 'IMP', false, currentLogContext, logger
+        );
+        if (impLink && !matchingEntry.impTextPath && impLink !== baseLink && impLink !== cfpLink) impSaveError = true; // Mark error if saving was expected but failed
+
+    } catch (error) {
+        logger.error({ ...currentLogContext, contentType: 'IMP', err: error, event: 'save_imp_error' });
+        impSaveError = true;
+    }
+
+    const success = !cfpSaveError && !impSaveError;
+    logger.info({ ...currentLogContext, success, cfpSaveError, impSaveError, event: 'finish' });
+    return matchingEntry; // Return the updated entry
+}
+
+/**
+ * Handles the logic when no matching entry is found (fetch new, call API 2, save).
+ */
+async function _handleNewEntry(
+    page: Page,
+    originalOfficialWebsite: string, // Normalized URL from API 1
+    batchEntry: BatchEntry, // The entry to update (usually batch[0])
+    year: number,
+    logContext: LogContextBase, // FIX: Use specific type
+    logger: Logger
+): Promise<BatchEntry | null> { // Return null on critical failure
+    const currentLogContext = { ...logContext, initialUrl: originalOfficialWebsite, function: '_handleNewEntry' };
+    logger.info({ ...currentLogContext, event: 'start' });
+
+    // 1. Fetch and process the main website
+    const websiteInfo = await fetchAndProcessWebsiteInfo(page, originalOfficialWebsite, batchEntry, year, currentLogContext, logger);
+
+    if (!websiteInfo) {
+        logger.error({ ...currentLogContext, event: 'fetch_main_website_failed' });
+        batchEntry.conferenceLink = "None"; // Mark as failed
+        return batchEntry; // Return the entry marked as failed
+    }
+
+    const { finalUrl, textPath } = websiteInfo; // finalUrl is already normalized by fetchAndProcessWebsiteInfo
+    batchEntry.conferenceLink = finalUrl;
+    batchEntry.conferenceTextPath = textPath;
+
+    // 2. Read fetched content for API call 2
+    let fullText = '';
+    try {
+        fullText = await readContentFromFile(textPath);
+        logger.info({ ...currentLogContext, filePath: textPath, event: 'read_fetched_content_success' });
+    } catch (readErr: unknown) {
+        logger.error({ ...currentLogContext, filePath: textPath, err: readErr, event: 'read_fetched_content_failed' });
+        // Continue, but API call 2 might fail or give bad results without content
+    }
+
+
+    // 3. Call determine_links_api (2nd call)
+    const batchContentForApi = `Conference full name: ${batchEntry.conferenceTitle} (${batchEntry.conferenceAcronym})\n\n1. Website of ${batchEntry.conferenceAcronym}: ${finalUrl}\nWebsite information of ${batchEntry.conferenceAcronym}:\n\n${fullText.trim()}`;
+    let websiteLinksResponseText: string = "";
+    let api2Success = false;
+
+    try {
+        logger.info({ ...currentLogContext, event: 'api2_call_start' });
+        // FIX: logContext now correctly typed, access is safe
+        const websiteLinksResponse = await determine_links_api(batchContentForApi, logContext.batchIndex, batchEntry.conferenceTitle, batchEntry.conferenceAcronym, logger);
+        websiteLinksResponseText = websiteLinksResponse.responseText || "";
+        api2Success = true;
+        logger.info({ ...currentLogContext, responseLength: websiteLinksResponseText.length, event: 'api2_call_success' });
+    } catch (determineLinksError: unknown) {
+        logger.error({ ...currentLogContext, err: determineLinksError, event: 'api2_call_failed' });
+        // Don't mark as "None" yet, maybe we can still save based on API 1 links?
+        // Or decide here: if API 2 fails, the whole process for this entry fails.
+        // Let's mark as failed if API 2 fails critically.
+        batchEntry.conferenceLink = "None"; // Mark as failed due to API 2 error
+        return batchEntry;
+    }
+
+    // 4. Parse API 2 response
+    let websiteLinksData: any;
+    try {
+        // Add similar robust parsing as in processDetermineLinksResponse
+        if (typeof websiteLinksResponseText !== 'string' || websiteLinksResponseText.trim() === '') {
+            throw new Error("API 2 response text is empty or not a string.");
+        }
+        websiteLinksData = JSON.parse(websiteLinksResponseText);
+        if (typeof websiteLinksData !== 'object' || websiteLinksData === null) {
+            throw new Error("Parsed API 2 response is not a valid object.");
+        }
+    } catch (parseError: unknown) {
+        logger.error({ ...currentLogContext, err: parseError, responseTextPreview: String(websiteLinksResponseText).substring(0, 100), event: 'api2_json_parse_failed' });
+        batchEntry.conferenceLink = "None"; // Mark as failed if parsing fails
+        return batchEntry;
+    }
+
+    // 5. Normalize links from API 2 relative to the FINAL URL
+    // Use safe access and String conversion
+    const websiteCfpLinkRaw = String(websiteLinksData?.["Call for papers link"] ?? '').trim();
+    const websiteImpDatesLinkRaw = String(websiteLinksData?.["Important dates link"] ?? '').trim();
+
+    // Normalize using the finalUrl as base. Result is "" if raw link is invalid or cannot be joined.
+    const websiteCfpLink = normalizeAndJoinLink(finalUrl, websiteCfpLinkRaw);
+    const websiteImpDatesLink = normalizeAndJoinLink(finalUrl, websiteImpDatesLinkRaw);
+    logger.debug({ ...currentLogContext, finalUrl, websiteCfpLinkRaw, websiteCfpLink, websiteImpDatesLinkRaw, websiteImpDatesLink, event: 'api2_links_normalized' });
+
+    batchEntry.cfpLink = websiteCfpLink; // Store the normalized link (or "")
+    batchEntry.impLink = websiteImpDatesLink; // Store the normalized link (or "")
+
+    // 6. Save CFP and IMP content based on API 2 results
+    let cfpSaveError = false;
+    let impSaveError = false;
+
+    try {
+        // Process and save CFP page (useMainContentKeywords = true)
+        batchEntry.cfpTextPath = await processAndSaveLinkedPage(
+            page, websiteCfpLink, finalUrl, websiteImpDatesLink, batchEntry.conferenceAcronym, year, 'CFP', true, currentLogContext, logger
+        );
+        if (websiteCfpLink && !batchEntry.cfpTextPath && websiteCfpLink !== finalUrl) cfpSaveError = true;
+
+    } catch (error) {
+        logger.error({ ...currentLogContext, contentType: 'CFP', source: 'api2', err: error, event: 'save_cfp_error' });
+        cfpSaveError = true;
+    }
+
+    try {
+        // Process and save IMP page (useMainContentKeywords = false)
+        batchEntry.impTextPath = await processAndSaveLinkedPage(
+            page, websiteImpDatesLink, finalUrl, websiteCfpLink, batchEntry.conferenceAcronym, year, 'IMP', false, currentLogContext, logger
+        );
+        if (websiteImpDatesLink && !batchEntry.impTextPath && websiteImpDatesLink !== finalUrl && websiteImpDatesLink !== websiteCfpLink) impSaveError = true;
+
+    } catch (error) {
+        logger.error({ ...currentLogContext, contentType: 'IMP', source: 'api2', err: error, event: 'save_imp_error' });
+        impSaveError = true;
+    }
+
+    const success = !cfpSaveError && !impSaveError; // Overall success depends on saving steps too
+    logger.info({ ...currentLogContext, success, cfpSaveError, impSaveError, event: 'finish' });
+
+    // Even if saving failed, we return the entry with the fetched info and attempted links
+    return batchEntry;
+}
+
+
+// --- Main Orchestrating Function ---
+
+/**
+ * Processes the response from the first determine_links_api call.
+ * Finds matching entries or fetches new website info, potentially calls API again,
+ * and saves relevant content (CFP, IMP dates).
+ * Manages Playwright page lifecycle.
+ */
 export const processDetermineLinksResponse = async (
     responseText: string,
     batch: BatchEntry[],
     batchIndex: number,
     browserContext: BrowserContext,
     year: number,
-    apiCallNumber: 1 | 2 = 1, // Thêm tham số để biết đây là lần gọi API thứ mấy
-    parentLogger: typeof logger
-
+    apiCallNumber: 1 | 2 = 1, // Keep for context, though logic focuses on call 1 response
+    parentLogger: Logger // Use the specific Logger type
 ): Promise<BatchEntry[]> => {
-    // Base context cho function này
+
+    // Ensure batch has at least one entry to process
+    if (!batch || batch.length === 0 || !batch[0]) {
+        parentLogger.error({ batchIndex, year, apiCallNumber, event: 'process_determine_invalid_batch' }, "Invalid or empty batch provided.");
+        return []; // Return empty array for invalid input
+    }
+
+    const primaryEntry = batch[0]; // Work primarily with the first entry for context/logging
     const baseLogContext = {
         batchIndex,
-        conferenceAcronym: batch[0]?.conferenceAcronym,
-        conferenceTitle: batch[0]?.conferenceTitle,
+        conferenceAcronym: primaryEntry.conferenceAcronym,
+        conferenceTitle: primaryEntry.conferenceTitle,
         function: 'processDetermineLinksResponse',
-        apiCallNumber // Thêm số lần gọi API vào context
+        apiCallNumber
     };
-    parentLogger.info({ ...baseLogContext, event: 'process_determine_start' }, "Starting processDetermineLinksResponse");
+    parentLogger.info({ ...baseLogContext, event: 'process_determine_start' });
+
     let page: Page | null = null;
 
     try {
-        page = await browserContext.newPage();
+        // 1. Create Playwright Page
+        try {
+            page = await browserContext.newPage();
+            parentLogger.info({ ...baseLogContext, event: 'page_created' });
+        } catch (pageError: unknown) {
+            parentLogger.error({ ...baseLogContext, err: pageError, event: 'page_creation_failed' });
+            primaryEntry.conferenceLink = "None"; // Mark as failed if page cannot be created
+            return [primaryEntry];
+        }
+
+
+        // 2. Parse Initial API Response
         let linksData: any;
         try {
+            // Handle potential non-string responseText gracefully
+            if (typeof responseText !== 'string' || responseText.trim() === '') {
+                throw new Error("API response text is empty or not a string.");
+            }
             linksData = JSON.parse(responseText);
-        } catch (parseError: any) {
-            parentLogger.error({ ...baseLogContext, err: parseError, responseTextPreview: responseText.substring(0, 100), event: 'process_determine_json_parse_failed' }, `Error parsing JSON response from determine_links_api (call ${apiCallNumber})`);
-            if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse error"));
-            batch[0].conferenceLink = "None"; // Mark as error
-            parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'JSON parse failed' }, "Finishing processDetermineLinksResponse with error state");
-            return [batch[0]];
+            // Basic check if it's an object
+            if (typeof linksData !== 'object' || linksData === null) {
+                throw new Error("Parsed API response is not a valid object.");
+            }
+        } catch (parseError: unknown) {
+            parentLogger.error({ ...baseLogContext, err: parseError, responseTextPreview: String(responseText).substring(0, 100), event: 'process_determine_json_parse_failed' });
+            primaryEntry.conferenceLink = "None";
+            return [primaryEntry];
         }
 
-        let officialWebsite: string | undefined = linksData["Official Website"]?.trim();
-        let cfpLink: string | undefined = linksData["Call for papers link"]?.trim();
-        let impLink: string | undefined = linksData["Important dates link"]?.trim();
+        // 3. Extract and Validate Official Website from API 1
+        // Use optional chaining and nullish coalescing for safer access
+        const officialWebsiteRaw = linksData?.["Official Website"] ?? null; // Get value or null
 
-        if (!officialWebsite || officialWebsite.toLowerCase() === "none") {
-            parentLogger.warn({ ...baseLogContext, linksData, event: 'process_determine_no_official_website' }, "Official website link not found or 'None' in determine_links_api response");
-            if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after no official website"));
-            batch[0].conferenceLink = "None";
-            parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'No official website' }, "Finishing processDetermineLinksResponse with error state");
-            return [batch[0]];
+        // Check if raw value indicates no valid URL BEFORE normalization
+        if (!officialWebsiteRaw || typeof officialWebsiteRaw !== 'string' || officialWebsiteRaw.trim().toLowerCase() === "none" || officialWebsiteRaw.trim() === '') {
+            parentLogger.warn({ ...baseLogContext, officialWebsiteRaw, event: 'process_determine_no_official_website', reason: 'Raw value is null, empty, or "none"' });
+            primaryEntry.conferenceLink = "None";
+            return [primaryEntry];
         }
 
-        // --- Normalize the official website URL ONCE ---
-        officialWebsite = officialWebsite.endsWith('/') ? officialWebsite.slice(0, -1) : officialWebsite;
-        const originalOfficialWebsite = officialWebsite; // Keep the initially determined official website URL
+        // 4. Normalize URLs from API 1 Response
+        // Normalize the official website URL. Pass null for the 'link' argument to normalize the base URL itself.
+        const officialWebsiteNormalized = normalizeAndJoinLink(officialWebsiteRaw, null);
 
-        // --- Normalize CFP and IMP links relative to the *original* official website ---
-        // Use originalOfficialWebsite as the base for normalization here
-        cfpLink = normalizeAndJoinLink(originalOfficialWebsite, cfpLink);
-        impLink = normalizeAndJoinLink(originalOfficialWebsite, impLink);
-        parentLogger.debug({ ...baseLogContext, officialWebsite: originalOfficialWebsite, cfpLink, impLink, event: 'process_determine_links_normalized' }, "Parsed and normalized initial links");
+        // Check if normalization resulted in a valid URL
+        if (!officialWebsiteNormalized) {
+            parentLogger.error({ ...baseLogContext, rawUrl: officialWebsiteRaw, event: 'process_determine_invalid_official_website' }, "Official website URL is invalid after normalization.");
+            primaryEntry.conferenceLink = "None";
+            return [primaryEntry];
+        }
+        parentLogger.info({ ...baseLogContext, officialWebsiteNormalized, event: 'process_determine_official_website_normalized' });
 
+
+        // Extract and normalize CFP/IMP links relative to the *normalized* official website
+        // Use String() to handle potential non-string values gracefully before trim()
+        const cfpLinkRaw = String(linksData?.["Call for papers link"] ?? linksData?.["call_for_papers_link"] ?? '').trim();
+        const impLinkRaw = String(linksData?.["Important dates link"] ?? linksData?.["important_dates_link"] ?? '').trim();
+
+        // Normalize. Result will be "" if raw link is invalid ("none", empty, etc.) or cannot be joined.
+        const cfpLinkNormalized = normalizeAndJoinLink(officialWebsiteNormalized, cfpLinkRaw);
+        const impLinkNormalized = normalizeAndJoinLink(officialWebsiteNormalized, impLinkRaw);
+        parentLogger.debug({ ...baseLogContext, officialWebsiteNormalized, cfpLinkRaw, cfpLinkNormalized, impLinkRaw, impLinkNormalized, event: 'process_determine_links_normalized' });
+
+        // 5. Find Matching Entry in Batch based on the *normalized* official website
         let matchingEntry: BatchEntry | undefined;
         try {
             matchingEntry = batch.find(entry => {
                 if (!entry.conferenceLink) return false;
-                // Ensure comparison uses similarly normalized links
-                const normalizedEntryLink = entry.conferenceLink.endsWith('/') ? entry.conferenceLink.slice(0, -1) : entry.conferenceLink;
-                return normalizedEntryLink === originalOfficialWebsite;
+                // Normalize the entry's link for comparison using the same logic
+                const normalizedEntryLink = normalizeAndJoinLink(entry.conferenceLink, null);
+                // Compare non-empty normalized links
+                return normalizedEntryLink && normalizedEntryLink === officialWebsiteNormalized;
             });
-        } catch (findError: any) {
-            parentLogger.error({ ...baseLogContext, err: findError, event: 'process_determine_entry_match_error' }, "Error during batch.find matching entry");
-            if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after find error"));
-            batch[0].conferenceLink = "None";
-            parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Error finding matching entry' }, "Finishing processDetermineLinksResponse with error state");
-            return [batch[0]];
+        } catch (findError: unknown) {
+            parentLogger.error({ ...baseLogContext, err: findError, event: 'process_determine_entry_match_error' });
+            primaryEntry.conferenceLink = "None"; // Mark primary as failed
+            return [primaryEntry]; // Return only the failed primary entry
         }
 
-        // =============================================
-        // === BRANCH 1: MATCHING ENTRY FOUND        ===
-        // =============================================
+
+        // 6. Delegate to Helper Functions based on Match
+        let processedEntry: BatchEntry | null = null; // Store the entry that was actually processed
+
         if (matchingEntry) {
-            parentLogger.info({ ...baseLogContext, matchedLink: matchingEntry.conferenceLink, event: 'process_determine_entry_match_found' }, "Found matching entry in batch based on official website");
-            let saveErrorOccurred = false;
-            try {
-                // Use the already normalized official website link from the matching entry
-                const matchedOfficialWebsite = matchingEntry.conferenceLink.endsWith('/') ? matchingEntry.conferenceLink.slice(0, -1) : matchingEntry.conferenceLink;
-
-                matchingEntry.cfpLink = cfpLink || "";
-                matchingEntry.impLink = impLink || "";
-
-                // --- Check before saving CFP ---
-                const shouldSaveCfp = cfpLink && cfpLink.toLowerCase() !== "none" && cfpLink !== matchedOfficialWebsite;
-                if (shouldSaveCfp) {
-                    const saveContext = { ...baseLogContext, url: cfpLink, contentType: 'CFP' };
-                    parentLogger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving CFP content for matched entry");
-                    matchingEntry.cfpTextPath = await saveHTMLFromCallForPapers(page, cfpLink, matchingEntry.conferenceAcronym, year);
-                    parentLogger.info({ ...saveContext, filePath: matchingEntry.cfpTextPath, event: 'process_determine_save_matched_success' }, "Saved CFP content for matched entry");
-                } else if (cfpLink && cfpLink.toLowerCase() !== "none") {
-                    parentLogger.info({ ...baseLogContext, url: cfpLink, contentType: 'CFP', reason: 'CFP link matches official website', event: 'process_determine_save_matched_skipped' }, "Skipping save for CFP content (matches official website)");
-                } else {
-                     parentLogger.info({ ...baseLogContext, contentType: 'CFP', reason: 'CFP link is None or empty', event: 'process_determine_save_matched_skipped' }, "Skipping save for CFP content (link is None or empty)");
-                }
-
-                // --- Check before saving IMP ---
-                const shouldSaveImp = impLink && impLink.toLowerCase() !== "none" && impLink !== matchedOfficialWebsite && impLink !== cfpLink;
-                 if (shouldSaveImp) {
-                    const saveContext = { ...baseLogContext, url: impLink, contentType: 'IMP' };
-                    parentLogger.info({ ...saveContext, event: 'process_determine_save_matched_start' }, "Saving Important Dates content for matched entry");
-                    matchingEntry.impTextPath = await saveHTMLFromImportantDates(page, impLink, matchingEntry.conferenceAcronym, year);
-                    parentLogger.info({ ...saveContext, filePath: matchingEntry.impTextPath, event: 'process_determine_save_matched_success' }, "Saved Important Dates content for matched entry");
-                } else if (impLink && impLink.toLowerCase() !== "none") {
-                    let skipReason = 'Unknown';
-                    if (impLink === matchedOfficialWebsite) skipReason = 'IMP link matches official website';
-                    else if (impLink === cfpLink) skipReason = 'IMP link matches CFP link';
-                    parentLogger.info({ ...baseLogContext, url: impLink, contentType: 'IMP', reason: skipReason, event: 'process_determine_save_matched_skipped' }, `Skipping save for Important Dates content (${skipReason})`);
-                } else {
-                     parentLogger.info({ ...baseLogContext, contentType: 'IMP', reason: 'IMP link is None or empty', event: 'process_determine_save_matched_skipped' }, "Skipping save for IMP content (link is None or empty)");
-                }
-
-            } catch (saveContentError: any) {
-                saveErrorOccurred = true;
-                parentLogger.error({ ...baseLogContext, err: saveContentError, cfpLink, impLink, event: 'process_determine_save_matched_failed' }, "Error saving CFP/IMP content for matched entry");
-            } finally {
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page for matched entry"));
-            }
-            // Vẫn trả về entry ngay cả khi lưu lỗi, nhưng log trạng thái cuối cùng
-            parentLogger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for matched entry (save error: ${saveErrorOccurred})`);
-            return [matchingEntry];
-
-        // =============================================
-        // === BRANCH 2: NO MATCHING ENTRY FOUND     ===
-        // =============================================
+            parentLogger.info({ ...baseLogContext, matchedLink: matchingEntry.conferenceLink, event: 'process_determine_entry_match_found' });
+            // Pass the *normalized* official website and CFP/IMP links
+            processedEntry = await _handleMatchingEntry(
+                page,
+                matchingEntry, // Pass the specific entry that matched
+                cfpLinkNormalized,
+                impLinkNormalized,
+                year,
+                baseLogContext,
+                parentLogger
+            );
         } else {
-            parentLogger.info({ ...baseLogContext, officialWebsite: originalOfficialWebsite, event: 'process_determine_entry_match_not_found' }, "No matching entry found. Fetching content from official website directly.");
-            let websiteInfo;
-            try {
-                // Fetch using the originalOfficialWebsite determined by the first API call
-                websiteInfo = await fetchAndProcessWebsiteInfo(page, originalOfficialWebsite, batch[0], year);
-            } catch (fetchError: any) {
-                parentLogger.error({ ...baseLogContext, url: originalOfficialWebsite, err: fetchError, event: 'process_determine_fetch_new_failed' }, "Failed to fetch and process main website info");
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after fetch error"));
-                batch[0].conferenceLink = "None";
-                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Fetch new website failed' }, "Finishing processDetermineLinksResponse with error state");
-                return [batch[0]];
-            }
-
-            if (!websiteInfo) { // Double check
-                parentLogger.error({ ...baseLogContext, url: originalOfficialWebsite, event: 'process_determine_fetch_new_failed' }, "Fetched main website info is null/undefined");
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after null fetch result"));
-                batch[0].conferenceLink = "None";
-                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Fetch new website returned null' }, "Finishing processDetermineLinksResponse with error state");
-                return [batch[0]];
-            }
-
-            // --- Use the FINAL URL after potential redirects from fetching ---
-            // Normalize the finalUrl as well for reliable comparison
-            let finalUrl = websiteInfo.finalUrl.endsWith('/') ? websiteInfo.finalUrl.slice(0, -1) : websiteInfo.finalUrl;
-            const textPath = websiteInfo.textPath;
-            parentLogger.info({ ...baseLogContext, initialUrl: originalOfficialWebsite, finalUrl, filePath: textPath, event: 'process_determine_fetch_new_success' }, "Successfully fetched and processed main website info");
-
-            let fullText = '';
-            try {
-                fullText = await readContentFromFile(textPath);
-            } catch (readErr: any) {
-                parentLogger.error({ ...baseLogContext, filePath: textPath, err: readErr, event: 'process_determine_read_fetched_failed' }, "Failed to read fetched content file");
-                // Continue, but API call 2 might fail or give bad results
-            }
-
-            const batchContentForApi = `Conference full name: ${batch[0].conferenceTitle} (${batch[0].conferenceAcronym})\n\n1. Website of ${batch[0].conferenceAcronym}: ${finalUrl}\nWebsite information of ${batch[0].conferenceAcronym}:\n\n${fullText.trim()}`;
-
-            let websiteLinksResponseText: string = "";
-            let websiteLinksResponse: any;
-
-            try {
-                parentLogger.info({ ...baseLogContext, event: 'process_determine_api2_start' }, "Calling determine_links_api (2nd call) for the fetched website");
-                websiteLinksResponse = await determine_links_api(batchContentForApi, batchIndex, batch[0].conferenceTitle, batch[0].conferenceAcronym, parentLogger);
-                websiteLinksResponseText = websiteLinksResponse.responseText || "";
-                parentLogger.info({ ...baseLogContext, responseLength: websiteLinksResponseText.length, event: 'process_determine_api2_end', success: true }, "Received response from determine_links_api (2nd call)");
-            } catch (determineLinksError: any) {
-                parentLogger.error({ ...baseLogContext, err: determineLinksError, event: 'process_determine_api2_call_failed' }, "Error calling determine_links_api (2nd call)");
-                // Don't close the page yet, it might be needed for saving below if API succeeded partially or links were already known
-                // If page is needed, we need to handle its closure in the finally block
-                batch[0].conferenceLink = "None"; // Mark as error since API failed
-                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'API call 2 failed' }, "Finishing processDetermineLinksResponse with error state after API 2 failure");
-                // Ensure page is closed before returning
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after API 2 error"));
-                return [batch[0]];
-            }
-
-            let websiteLinksData: any;
-            try {
-                websiteLinksData = JSON.parse(websiteLinksResponseText);
-            } catch (parseError: any) {
-                parentLogger.error({ ...baseLogContext, err: parseError, responseTextPreview: websiteLinksResponseText.substring(0, 100), event: 'process_determine_json_parse_failed', apiCallNumber: 2 }, "Error parsing JSON response from determine_links_api (2nd call)");
-                 if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page after JSON parse 2 error"));
-                batch[0].conferenceLink = "None";
-                parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'JSON parse 2 failed' }, "Finishing processDetermineLinksResponse with error state");
-                return [batch[0]];
-            }
-
-            let websiteCfpLink: string | undefined = websiteLinksData["Call for papers link"]?.trim();
-            let websiteImpDatesLink: string | undefined = websiteLinksData["Important dates link"]?.trim();
-
-            // --- Normalize links from 2nd API call relative to the FINAL fetched URL ---
-            websiteCfpLink = normalizeAndJoinLink(finalUrl, websiteCfpLink);
-            websiteImpDatesLink = normalizeAndJoinLink(finalUrl, websiteImpDatesLink);
-            parentLogger.debug({ ...baseLogContext, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_links_normalized', source: 'api_call_2' }, "Parsed and normalized links from 2nd API call");
-
-            let saveErrorOccurred = false;
-            try {
-                // Update the primary entry (batch[0])
-                batch[0].conferenceLink = finalUrl; // Use the final URL found
-                batch[0].conferenceTextPath = textPath;
-                batch[0].cfpLink = websiteCfpLink || "";
-                batch[0].impLink = websiteImpDatesLink || "";
-
-                // --- Check before saving CFP ---
-                const shouldSaveCfp = websiteCfpLink && websiteCfpLink.toLowerCase() !== "none" && websiteCfpLink !== finalUrl;
-                if (shouldSaveCfp) {
-                    const saveContext = { ...baseLogContext, url: websiteCfpLink, contentType: 'CFP', source: 'api_call_2' };
-                    parentLogger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving CFP content (from 2nd API call)");
-                    batch[0].cfpTextPath = await saveHTMLFromCallForPapers(page, websiteCfpLink, batch[0].conferenceAcronym, year);
-                    parentLogger.info({ ...saveContext, filePath: batch[0].cfpTextPath, event: 'process_determine_save_new_success' }, "Saved CFP content (from 2nd API call)");
-                } else if (websiteCfpLink && websiteCfpLink.toLowerCase() !== "none") {
-                    parentLogger.info({ ...baseLogContext, url: websiteCfpLink, contentType: 'CFP', source: 'api_call_2', reason: 'CFP link matches final official website', event: 'process_determine_save_new_skipped' }, "Skipping save for CFP content (matches final official website)");
-                 } else {
-                     parentLogger.info({ ...baseLogContext, contentType: 'CFP', source: 'api_call_2', reason: 'CFP link is None or empty', event: 'process_determine_save_new_skipped' }, "Skipping save for CFP content (link is None or empty)");
-                 }
-
-
-                // --- Check before saving IMP ---
-                const shouldSaveImp = websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none" && websiteImpDatesLink !== finalUrl && websiteImpDatesLink !== websiteCfpLink;
-                if (shouldSaveImp) {
-                    const saveContext = { ...baseLogContext, url: websiteImpDatesLink, contentType: 'IMP', source: 'api_call_2' };
-                    parentLogger.info({ ...saveContext, event: 'process_determine_save_new_start' }, "Saving Important Dates content (from 2nd API call)");
-                    batch[0].impTextPath = await saveHTMLFromImportantDates(page, websiteImpDatesLink, batch[0].conferenceAcronym, year);
-                    parentLogger.info({ ...saveContext, filePath: batch[0].impTextPath, event: 'process_determine_save_new_success' }, "Saved Important Dates content (from 2nd API call)");
-                } else if (websiteImpDatesLink && websiteImpDatesLink.toLowerCase() !== "none") {
-                     let skipReason = 'Unknown';
-                    if (websiteImpDatesLink === finalUrl) skipReason = 'IMP link matches final official website';
-                    else if (websiteImpDatesLink === websiteCfpLink) skipReason = 'IMP link matches CFP link';
-                     parentLogger.info({ ...baseLogContext, url: websiteImpDatesLink, contentType: 'IMP', source: 'api_call_2', reason: skipReason, event: 'process_determine_save_new_skipped' }, `Skipping save for Important Dates content (${skipReason})`);
-                } else {
-                     parentLogger.info({ ...baseLogContext, contentType: 'IMP', source: 'api_call_2', reason: 'IMP link is None or empty', event: 'process_determine_save_new_skipped' }, "Skipping save for IMP content (link is None or empty)");
-                }
-
-                parentLogger.info({ ...baseLogContext, event: 'process_determine_update_entry_success' }, "Updated original batch entry with new links and paths");
-
-            } catch (saveContentError: any) {
-                saveErrorOccurred = true;
-                parentLogger.error({ ...baseLogContext, err: saveContentError, websiteCfpLink, websiteImpDatesLink, event: 'process_determine_save_new_failed', source: 'api_call_2' }, "Error saving CFP/IMP content (from 2nd API call)");
-            } finally {
-                if (page && !page.isClosed()) await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page for new entry"));
-            }
-            parentLogger.info({ ...baseLogContext, success: !saveErrorOccurred, event: 'process_determine_finish_success' }, `Finishing processDetermineLinksResponse for new entry (save error: ${saveErrorOccurred})`);
-            return [batch[0]]; // Return the updated original entry
+            parentLogger.info({ ...baseLogContext, officialWebsite: officialWebsiteNormalized, event: 'process_determine_entry_match_not_found' });
+            // If no match, handle the officialWebsite as a new entry, updating the primary entry (batch[0])
+            // Pass the *normalized* official website. If CFP/IMP links should be processed even for new
+            // entries, they need to be passed here too.
+            processedEntry = await _handleNewEntry(
+                page,
+                officialWebsiteNormalized, // Pass the validated & normalized URL
+                primaryEntry, // Pass the primary entry to be updated
+                year,
+                baseLogContext,
+                parentLogger
+                // Pass cfpLinkNormalized, impLinkNormalized here if needed for new entries
+            );
+            // Note: _handleNewEntry modifies primaryEntry in place, so processedEntry === primaryEntry (unless it returned null)
         }
-    } catch (error: any) {
-        parentLogger.error({ ...baseLogContext, err: error, event: 'process_determine_unhandled_error' }, "Unhandled error in processDetermineLinksResponse");
+
+        // 7. Return Result
+        if (processedEntry) {
+            // If the processed entry failed (link set to "None"), log it as failed status
+            const finalStatus = processedEntry.conferenceLink === "None" ? 'failed' : 'success';
+            parentLogger.info({ ...baseLogContext, finalStatus, event: 'process_determine_finish' });
+            // Return an array containing the single entry that was processed (either the match or the updated primary)
+            return [processedEntry];
+        } else {
+            // This case implies _handleNewEntry returned null (critical fetch failure)
+            parentLogger.error({ ...baseLogContext, event: 'process_determine_finish_critical_failure' });
+            // primaryEntry should already be marked as "None" by _handleNewEntry
+            return [primaryEntry];
+        }
+
+    } catch (error: unknown) {
+        // Catch any unexpected errors during the main orchestration
+        parentLogger.error({ ...baseLogContext, err: error, event: 'process_determine_unhandled_error' });
+        console.error("Stack trace for processDetermineLinksResponse unhandled error:", error instanceof Error ? error.stack : 'N/A');
+        // Ensure the primary entry is marked as failed
+        primaryEntry.conferenceLink = "None";
+        return [primaryEntry];
+    } finally {
+        // 8. Ensure Page Closure
         if (page && !page.isClosed()) {
-            await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }, "Error closing page in outer catch block"));
+            parentLogger.info({ ...baseLogContext, event: 'page_closing' });
+            await page.close().catch(e => parentLogger.error({ ...baseLogContext, err: e, event: 'page_close_failed' }));
+        } else if (!page) {
+            parentLogger.info({ ...baseLogContext, event: 'page_not_created' });
+        } else {
+            parentLogger.info({ ...baseLogContext, event: 'page_already_closed' });
         }
-        if (batch && batch[0]) {
-            batch[0].conferenceLink = "None";
-            parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Unhandled error' }, "Finishing processDetermineLinksResponse with error state due to unhandled error");
-            return [batch[0]];
-        }
-        parentLogger.warn({ ...baseLogContext, event: 'process_determine_finish_failed', reason: 'Unhandled error and invalid batch' }, "Finishing processDetermineLinksResponse empty due to unhandled error and invalid batch");
-        return [];
     }
 };
-

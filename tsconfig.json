@@ -9,8 +9,10 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "NodeNext" // <--- CHANGE THIS (or Node16)
+    "moduleResolution": "NodeNext", // <--- CHANGE THIS (or Node16)
     // "noEmitOnError": false
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

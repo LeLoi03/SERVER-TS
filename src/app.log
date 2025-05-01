@@ -3718,3 +3718,1218 @@ Stack: Error: Not Found - /api/v1/conference/save-to-json
 [2025-04-30T14:30:00.960Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
 [2025-04-30T14:30:00.976Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
 [2025-04-30T14:30:00.979Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-30T14:55:02.577Z] [Server Config] Loaded PORT: 3001
+[2025-04-30T14:55:02.578Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-30T14:55:02.579Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-30T14:55:02.579Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T14:55:02.580Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T14:55:11.241Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-30T14:55:11.242Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-30T14:55:11.832Z] [Server Start] Initializing loaders...
+[2025-04-30T14:55:11.833Z] [Loader] Starting application loading process...
+[2025-04-30T14:55:11.833Z] [Loader DB] Attempting database connection...
+[2025-04-30T14:55:11.835Z] [Database] Attempting MongoDB connection...
+[2025-04-30T14:55:12.609Z] [Database] MongoDB Connected Successfully.
+[2025-04-30T14:55:12.610Z] [Loader DB] Database connection successful.
+[2025-04-30T14:55:12.610Z] [Loader] Database loaded.
+[2025-04-30T14:55:12.611Z] [History Service] Initialized.
+[2025-04-30T14:55:12.611Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T14:55:12.611Z] [Loader] Services initialized.
+[2025-04-30T14:55:12.617Z] [Express] Mounted API routes at /api
+[2025-04-30T14:55:12.617Z] [Express] Registered Not Found handler.
+[2025-04-30T14:55:12.617Z] [Express] Registered Global Error handler.
+[2025-04-30T14:55:12.618Z] [Express] Express app configured.
+[2025-04-30T14:55:12.619Z] [Loader] Express loaded.
+[2025-04-30T14:55:12.619Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-30T14:55:12.624Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-30T14:55:12.624Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-30T14:55:12.625Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-30T14:55:12.625Z] [Loader] Socket.IO loaded.
+[2025-04-30T14:55:12.625Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-30T14:55:12.625Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-30T14:55:12.660Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-30T14:55:12.660Z] [Loader] Jobs scheduled.
+[2025-04-30T14:55:12.660Z] [Loader] Performing initial log analysis...
+[2025-04-30T14:55:12.661Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-30T14:55:12.690Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-30T14:55:12.690Z] [Loader] Initial log analysis completed.
+[2025-04-30T14:55:12.691Z] [Loader] All loaders completed successfully.
+[2025-04-30T14:55:12.696Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-30T14:55:12.697Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-30T14:55:12.697Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T14:55:12.698Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-30T14:57:59.666Z] [Server Config] Loaded PORT: 3001
+[2025-04-30T14:57:59.668Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-30T14:57:59.669Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-30T14:57:59.670Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T14:57:59.671Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T14:58:08.651Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-30T14:58:08.652Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-30T14:58:09.131Z] [Server Start] Initializing loaders...
+[2025-04-30T14:58:09.132Z] [Loader] Starting application loading process...
+[2025-04-30T14:58:09.133Z] [Loader DB] Attempting database connection...
+[2025-04-30T14:58:09.134Z] [Database] Attempting MongoDB connection...
+[2025-04-30T14:58:09.831Z] [Database] MongoDB Connected Successfully.
+[2025-04-30T14:58:09.831Z] [Loader DB] Database connection successful.
+[2025-04-30T14:58:09.832Z] [Loader] Database loaded.
+[2025-04-30T14:58:09.832Z] [History Service] Initialized.
+[2025-04-30T14:58:09.833Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T14:58:09.833Z] [Loader] Services initialized.
+[2025-04-30T14:58:09.840Z] [Express] Mounted API routes at /api
+[2025-04-30T14:58:09.841Z] [Express] Registered Not Found handler.
+[2025-04-30T14:58:09.842Z] [Express] Registered Global Error handler.
+[2025-04-30T14:58:09.842Z] [Express] Express app configured.
+[2025-04-30T14:58:09.844Z] [Loader] Express loaded.
+[2025-04-30T14:58:09.844Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-30T14:58:09.848Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-30T14:58:09.848Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-30T14:58:09.849Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-30T14:58:09.849Z] [Loader] Socket.IO loaded.
+[2025-04-30T14:58:09.849Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-30T14:58:09.850Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-30T14:58:09.889Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-30T14:58:09.890Z] [Loader] Jobs scheduled.
+[2025-04-30T14:58:09.890Z] [Loader] Performing initial log analysis...
+[2025-04-30T14:58:09.891Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-30T14:58:09.913Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-30T14:58:09.914Z] [Loader] Initial log analysis completed.
+[2025-04-30T14:58:09.914Z] [Loader] All loaders completed successfully.
+[2025-04-30T14:58:09.921Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-30T14:58:09.921Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-30T14:58:09.922Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T14:58:09.922Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-04-30T15:30:00.986Z] [Cron] Running scheduled log analysis...
+[2025-04-30T15:30:00.987Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-30T15:30:01.004Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-30T15:30:01.006Z] [Cron] Log analysis finished and results broadcasted.
+[2025-04-30T15:52:16.596Z] [Server Config] Loaded PORT: 3001
+[2025-04-30T15:52:16.598Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-04-30T15:52:16.598Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-04-30T15:52:16.598Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T15:52:16.598Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T15:52:23.972Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-04-30T15:52:23.973Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-04-30T15:52:24.498Z] [Server Start] Initializing loaders...
+[2025-04-30T15:52:24.499Z] [Loader] Starting application loading process...
+[2025-04-30T15:52:24.499Z] [Loader DB] Attempting database connection...
+[2025-04-30T15:52:24.500Z] [Database] Attempting MongoDB connection...
+[2025-04-30T15:52:25.312Z] [Database] MongoDB Connected Successfully.
+[2025-04-30T15:52:25.313Z] [Loader DB] Database connection successful.
+[2025-04-30T15:52:25.313Z] [Loader] Database loaded.
+[2025-04-30T15:52:25.313Z] [History Service] Initialized.
+[2025-04-30T15:52:25.314Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-04-30T15:52:25.314Z] [Loader] Services initialized.
+[2025-04-30T15:52:25.320Z] [Express] Mounted API routes at /api
+[2025-04-30T15:52:25.320Z] [Express] Registered Not Found handler.
+[2025-04-30T15:52:25.321Z] [Express] Registered Global Error handler.
+[2025-04-30T15:52:25.321Z] [Express] Express app configured.
+[2025-04-30T15:52:25.323Z] [Loader] Express loaded.
+[2025-04-30T15:52:25.323Z] [Loader Socket] Initializing Socket.IO server...
+[2025-04-30T15:52:25.328Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-04-30T15:52:25.328Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-04-30T15:52:25.329Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-04-30T15:52:25.329Z] [Loader] Socket.IO loaded.
+[2025-04-30T15:52:25.329Z] [Loader Jobs] Scheduling background jobs...
+[2025-04-30T15:52:25.330Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-04-30T15:52:25.365Z] [Loader Jobs] Background jobs scheduled.
+[2025-04-30T15:52:25.366Z] [Loader] Jobs scheduled.
+[2025-04-30T15:52:25.366Z] [Loader] Performing initial log analysis...
+[2025-04-30T15:52:25.367Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-04-30T15:52:25.393Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-04-30T15:52:25.394Z] [Loader] Initial log analysis completed.
+[2025-04-30T15:52:25.394Z] [Loader] All loaders completed successfully.
+[2025-04-30T15:52:25.402Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-04-30T15:52:25.403Z] 🔗 Access the server at: http://localhost:3001
+[2025-04-30T15:52:25.403Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-04-30T15:52:25.403Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T04:22:55.291Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T04:22:55.292Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T04:22:55.293Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T04:22:55.293Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:22:55.293Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:23:03.792Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T04:23:03.793Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T04:23:04.215Z] [Server Start] Initializing loaders...
+[2025-05-01T04:23:04.216Z] [Loader] Starting application loading process...
+[2025-05-01T04:23:04.216Z] [Loader DB] Attempting database connection...
+[2025-05-01T04:23:04.217Z] [Database] Attempting MongoDB connection...
+[2025-05-01T04:23:04.950Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T04:23:04.950Z] [Loader DB] Database connection successful.
+[2025-05-01T04:23:04.950Z] [Loader] Database loaded.
+[2025-05-01T04:23:04.951Z] [History Service] Initialized.
+[2025-05-01T04:23:04.952Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:23:04.952Z] [Loader] Services initialized.
+[2025-05-01T04:23:04.957Z] [Express] Mounted API routes at /api
+[2025-05-01T04:23:04.958Z] [Express] Registered Not Found handler.
+[2025-05-01T04:23:04.958Z] [Express] Registered Global Error handler.
+[2025-05-01T04:23:04.958Z] [Express] Express app configured.
+[2025-05-01T04:23:04.960Z] [Loader] Express loaded.
+[2025-05-01T04:23:04.960Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T04:23:04.965Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T04:23:04.966Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T04:23:04.966Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T04:23:04.966Z] [Loader] Socket.IO loaded.
+[2025-05-01T04:23:04.966Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T04:23:04.967Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T04:23:05.002Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T04:23:05.003Z] [Loader] Jobs scheduled.
+[2025-05-01T04:23:05.003Z] [Loader] Performing initial log analysis...
+[2025-05-01T04:23:05.004Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T04:23:05.027Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T04:23:05.027Z] [Loader] Initial log analysis completed.
+[2025-05-01T04:23:05.028Z] [Loader] All loaders completed successfully.
+[2025-05-01T04:23:05.032Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T04:23:05.032Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T04:23:05.033Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:23:05.033Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T04:23:42.720Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:23:57.652Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 14933ms
+[2025-05-01T04:27:05.856Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:27:20.160Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 14304ms
+[2025-05-01T04:30:00.300Z] [Cron] Running scheduled log analysis...
+[2025-05-01T04:30:00.301Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T04:30:00.319Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T04:30:00.323Z] [Cron] Log analysis finished and results broadcasted.
+[2025-05-01T04:30:57.133Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:31:10.882Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 13749ms
+[2025-05-01T04:33:44.609Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:33:54.817Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 10208ms
+[2025-05-01T04:52:54.949Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T04:52:54.951Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T04:52:54.972Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T04:52:54.973Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:52:54.974Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:53:03.444Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T04:53:03.445Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T04:53:03.972Z] [Server Start] Initializing loaders...
+[2025-05-01T04:53:03.979Z] [Loader] Starting application loading process...
+[2025-05-01T04:53:03.982Z] [Loader DB] Attempting database connection...
+[2025-05-01T04:53:03.983Z] [Database] Attempting MongoDB connection...
+[2025-05-01T04:53:04.799Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T04:53:04.800Z] [Loader DB] Database connection successful.
+[2025-05-01T04:53:04.800Z] [Loader] Database loaded.
+[2025-05-01T04:53:04.801Z] [History Service] Initialized.
+[2025-05-01T04:53:04.801Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:53:04.802Z] [Loader] Services initialized.
+[2025-05-01T04:53:04.808Z] [Express] Mounted API routes at /api
+[2025-05-01T04:53:04.809Z] [Express] Registered Not Found handler.
+[2025-05-01T04:53:04.809Z] [Express] Registered Global Error handler.
+[2025-05-01T04:53:04.810Z] [Express] Express app configured.
+[2025-05-01T04:53:04.811Z] [Loader] Express loaded.
+[2025-05-01T04:53:04.812Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T04:53:04.817Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T04:53:04.818Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T04:53:04.818Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T04:53:04.818Z] [Loader] Socket.IO loaded.
+[2025-05-01T04:53:04.818Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T04:53:04.819Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T04:53:04.873Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T04:53:04.874Z] [Loader] Jobs scheduled.
+[2025-05-01T04:53:04.874Z] [Loader] Performing initial log analysis...
+[2025-05-01T04:53:04.876Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T04:53:04.908Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T04:53:04.908Z] [Loader] Initial log analysis completed.
+[2025-05-01T04:53:04.908Z] [Loader] All loaders completed successfully.
+[2025-05-01T04:53:04.913Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T04:53:04.913Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T04:53:04.913Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:53:04.913Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T04:53:09.685Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:53:27.852Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 18167ms
+[2025-05-01T04:54:47.274Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T04:55:07.296Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 20023ms
+[2025-05-01T04:57:39.802Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T04:57:39.804Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T04:57:39.804Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T04:57:39.805Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:57:39.805Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:57:46.380Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T04:57:46.380Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T04:57:46.815Z] [Server Start] Initializing loaders...
+[2025-05-01T04:57:46.816Z] [Loader] Starting application loading process...
+[2025-05-01T04:57:46.816Z] [Loader DB] Attempting database connection...
+[2025-05-01T04:57:46.817Z] [Database] Attempting MongoDB connection...
+[2025-05-01T04:57:47.515Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T04:57:47.515Z] [Loader DB] Database connection successful.
+[2025-05-01T04:57:47.515Z] [Loader] Database loaded.
+[2025-05-01T04:57:47.516Z] [History Service] Initialized.
+[2025-05-01T04:57:47.516Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T04:57:47.517Z] [Loader] Services initialized.
+[2025-05-01T04:57:47.522Z] [Express] Mounted API routes at /api
+[2025-05-01T04:57:47.522Z] [Express] Registered Not Found handler.
+[2025-05-01T04:57:47.523Z] [Express] Registered Global Error handler.
+[2025-05-01T04:57:47.523Z] [Express] Express app configured.
+[2025-05-01T04:57:47.524Z] [Loader] Express loaded.
+[2025-05-01T04:57:47.525Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T04:57:47.530Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T04:57:47.530Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T04:57:47.530Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T04:57:47.530Z] [Loader] Socket.IO loaded.
+[2025-05-01T04:57:47.531Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T04:57:47.531Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T04:57:47.563Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T04:57:47.563Z] [Loader] Jobs scheduled.
+[2025-05-01T04:57:47.563Z] [Loader] Performing initial log analysis...
+[2025-05-01T04:57:47.564Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T04:57:47.595Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T04:57:47.595Z] [Loader] Initial log analysis completed.
+[2025-05-01T04:57:47.596Z] [Loader] All loaders completed successfully.
+[2025-05-01T04:57:47.600Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T04:57:47.600Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T04:57:47.600Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T04:57:47.601Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:19:20.160Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:19:20.162Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:19:20.162Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:19:20.163Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:19:20.163Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:19:34.816Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:19:34.817Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:19:34.818Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:19:34.818Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:19:34.818Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:19.882Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:22:19.887Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:22:19.887Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:22:19.888Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:22:19.889Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:22.572Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:22:22.574Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:22:22.574Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:22:22.575Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:22:22.576Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:30.762Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:22:30.762Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:22:31.425Z] [Server Start] Initializing loaders...
+[2025-05-01T05:22:31.425Z] [Loader] Starting application loading process...
+[2025-05-01T05:22:31.426Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:22:31.433Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:22:32.392Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:22:32.392Z] [Loader DB] Database connection successful.
+[2025-05-01T05:22:32.393Z] [Loader] Database loaded.
+[2025-05-01T05:22:32.393Z] [History Service] Initialized.
+[2025-05-01T05:22:32.394Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:32.394Z] [Loader] Services initialized.
+[2025-05-01T05:22:32.400Z] [Express] Mounted API routes at /api
+[2025-05-01T05:22:32.400Z] [Express] Registered Not Found handler.
+[2025-05-01T05:22:32.400Z] [Express] Registered Global Error handler.
+[2025-05-01T05:22:32.401Z] [Express] Express app configured.
+[2025-05-01T05:22:32.402Z] [Loader] Express loaded.
+[2025-05-01T05:22:32.402Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:22:32.408Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:22:32.409Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:22:32.409Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:22:32.411Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:22:32.411Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:22:32.412Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:22:32.447Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:22:32.447Z] [Loader] Jobs scheduled.
+[2025-05-01T05:22:32.448Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:22:32.449Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:22:32.485Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:22:32.486Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:22:32.486Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:22:32.492Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:22:32.492Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:22:32.493Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:22:32.493Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:22:42.879Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:22:42.881Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:22:42.881Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:22:42.881Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:22:42.881Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:51.050Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:22:51.051Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:22:51.531Z] [Server Start] Initializing loaders...
+[2025-05-01T05:22:51.532Z] [Loader] Starting application loading process...
+[2025-05-01T05:22:51.534Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:22:51.534Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:22:52.236Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:22:52.237Z] [Loader DB] Database connection successful.
+[2025-05-01T05:22:52.237Z] [Loader] Database loaded.
+[2025-05-01T05:22:52.237Z] [History Service] Initialized.
+[2025-05-01T05:22:52.238Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:22:52.238Z] [Loader] Services initialized.
+[2025-05-01T05:22:52.244Z] [Express] Mounted API routes at /api
+[2025-05-01T05:22:52.244Z] [Express] Registered Not Found handler.
+[2025-05-01T05:22:52.245Z] [Express] Registered Global Error handler.
+[2025-05-01T05:22:52.245Z] [Express] Express app configured.
+[2025-05-01T05:22:52.246Z] [Loader] Express loaded.
+[2025-05-01T05:22:52.247Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:22:52.251Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:22:52.251Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:22:52.252Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:22:52.252Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:22:52.252Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:22:52.253Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:22:52.289Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:22:52.289Z] [Loader] Jobs scheduled.
+[2025-05-01T05:22:52.289Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:22:52.290Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:22:52.323Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:22:52.324Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:22:52.324Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:22:52.328Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:22:52.329Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:22:52.329Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:22:52.330Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:23:56.053Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:23:56.055Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:23:56.055Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:23:56.055Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:23:56.055Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:24:05.181Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:24:05.184Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:24:05.940Z] [Server Start] Initializing loaders...
+[2025-05-01T05:24:05.940Z] [Loader] Starting application loading process...
+[2025-05-01T05:24:05.941Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:24:05.941Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:24:06.886Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:24:06.886Z] [Loader DB] Database connection successful.
+[2025-05-01T05:24:06.887Z] [Loader] Database loaded.
+[2025-05-01T05:24:06.887Z] [History Service] Initialized.
+[2025-05-01T05:24:06.887Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:24:06.888Z] [Loader] Services initialized.
+[2025-05-01T05:24:06.894Z] [Express] Mounted API routes at /api
+[2025-05-01T05:24:06.895Z] [Express] Registered Not Found handler.
+[2025-05-01T05:24:06.895Z] [Express] Registered Global Error handler.
+[2025-05-01T05:24:06.895Z] [Express] Express app configured.
+[2025-05-01T05:24:06.897Z] [Loader] Express loaded.
+[2025-05-01T05:24:06.897Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:24:06.904Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:24:06.904Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:24:06.905Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:24:06.905Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:24:06.905Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:24:06.906Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:24:06.948Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:24:06.949Z] [Loader] Jobs scheduled.
+[2025-05-01T05:24:06.951Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:24:06.952Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:24:06.998Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:24:06.998Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:24:06.999Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:24:07.003Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:24:07.003Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:24:07.003Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:24:07.004Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:24:41.245Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:24:41.248Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:24:41.251Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:24:41.253Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:24:41.264Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:24:48.828Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:24:48.830Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:24:48.830Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:24:48.831Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:24:48.831Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:25:24.763Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:25:24.764Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:25:24.765Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:25:24.766Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:25:24.766Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:25:31.351Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:25:31.351Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:25:31.869Z] [Server Start] Initializing loaders...
+[2025-05-01T05:25:31.871Z] [Loader] Starting application loading process...
+[2025-05-01T05:25:31.872Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:25:31.873Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:25:32.493Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:25:32.493Z] [Loader DB] Database connection successful.
+[2025-05-01T05:25:32.493Z] [Loader] Database loaded.
+[2025-05-01T05:25:32.494Z] [History Service] Initialized.
+[2025-05-01T05:25:32.494Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:25:32.495Z] [Loader] Services initialized.
+[2025-05-01T05:25:32.500Z] [Express] Mounted API routes at /api
+[2025-05-01T05:25:32.500Z] [Express] Registered Not Found handler.
+[2025-05-01T05:25:32.500Z] [Express] Registered Global Error handler.
+[2025-05-01T05:25:32.501Z] [Express] Express app configured.
+[2025-05-01T05:25:32.502Z] [Loader] Express loaded.
+[2025-05-01T05:25:32.502Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:25:32.506Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:25:32.507Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:25:32.507Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:25:32.507Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:25:32.507Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:25:32.508Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:25:32.540Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:25:32.541Z] [Loader] Jobs scheduled.
+[2025-05-01T05:25:32.541Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:25:32.542Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:25:32.576Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:25:32.577Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:25:32.577Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:25:32.581Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:25:32.581Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:25:32.581Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:25:32.581Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:25:56.517Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T05:26:17.816Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 21299ms
+[2025-05-01T05:30:00.429Z] [Cron] Running scheduled log analysis...
+[2025-05-01T05:30:00.430Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:30:00.463Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:30:00.465Z] [Cron] Log analysis finished and results broadcasted.
+[2025-05-01T05:41:37.619Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:41:37.624Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:41:37.626Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:41:37.629Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:41:37.630Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:41:46.270Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:41:46.270Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:41:46.638Z] [Server Start] Initializing loaders...
+[2025-05-01T05:41:46.638Z] [Loader] Starting application loading process...
+[2025-05-01T05:41:46.639Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:41:46.639Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:41:47.395Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:41:47.396Z] [Loader DB] Database connection successful.
+[2025-05-01T05:41:47.396Z] [Loader] Database loaded.
+[2025-05-01T05:41:47.396Z] [History Service] Initialized.
+[2025-05-01T05:41:47.397Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:41:47.397Z] [Loader] Services initialized.
+[2025-05-01T05:41:47.404Z] [Express] Mounted API routes at /api
+[2025-05-01T05:41:47.404Z] [Express] Registered Not Found handler.
+[2025-05-01T05:41:47.405Z] [Express] Registered Global Error handler.
+[2025-05-01T05:41:47.405Z] [Express] Express app configured.
+[2025-05-01T05:41:47.406Z] [Loader] Express loaded.
+[2025-05-01T05:41:47.407Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:41:47.412Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:41:47.412Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:41:47.412Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:41:47.413Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:41:47.413Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:41:47.413Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:41:47.450Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:41:47.451Z] [Loader] Jobs scheduled.
+[2025-05-01T05:41:47.451Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:41:47.452Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:41:47.488Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:41:47.488Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:41:47.489Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:41:47.493Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:41:47.494Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:41:47.495Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:41:47.495Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:42:45.410Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:42:45.411Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:42:45.412Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:42:45.412Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:42:45.414Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:42:56.509Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:42:56.510Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:42:57.511Z] [Server Start] Initializing loaders...
+[2025-05-01T05:42:57.512Z] [Loader] Starting application loading process...
+[2025-05-01T05:42:57.512Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:42:57.513Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:42:58.371Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:42:58.371Z] [Loader DB] Database connection successful.
+[2025-05-01T05:42:58.372Z] [Loader] Database loaded.
+[2025-05-01T05:42:58.372Z] [History Service] Initialized.
+[2025-05-01T05:42:58.372Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:42:58.373Z] [Loader] Services initialized.
+[2025-05-01T05:42:58.379Z] [Express] Mounted API routes at /api
+[2025-05-01T05:42:58.379Z] [Express] Registered Not Found handler.
+[2025-05-01T05:42:58.380Z] [Express] Registered Global Error handler.
+[2025-05-01T05:42:58.380Z] [Express] Express app configured.
+[2025-05-01T05:42:58.381Z] [Loader] Express loaded.
+[2025-05-01T05:42:58.382Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:42:58.386Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:42:58.387Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:42:58.387Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:42:58.387Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:42:58.387Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:42:58.388Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:42:58.421Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:42:58.421Z] [Loader] Jobs scheduled.
+[2025-05-01T05:42:58.421Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:42:58.422Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:42:58.462Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:42:58.463Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:42:58.463Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:42:58.468Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:42:58.469Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:42:58.470Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:42:58.470Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:43:12.296Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T05:43:34.757Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 22461ms
+[2025-05-01T05:47:59.271Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T05:47:59.273Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T05:47:59.273Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T05:47:59.273Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:47:59.274Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:48:06.864Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T05:48:06.865Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T05:48:07.385Z] [Server Start] Initializing loaders...
+[2025-05-01T05:48:07.386Z] [Loader] Starting application loading process...
+[2025-05-01T05:48:07.386Z] [Loader DB] Attempting database connection...
+[2025-05-01T05:48:07.387Z] [Database] Attempting MongoDB connection...
+[2025-05-01T05:48:08.100Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T05:48:08.100Z] [Loader DB] Database connection successful.
+[2025-05-01T05:48:08.100Z] [Loader] Database loaded.
+[2025-05-01T05:48:08.101Z] [History Service] Initialized.
+[2025-05-01T05:48:08.101Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T05:48:08.101Z] [Loader] Services initialized.
+[2025-05-01T05:48:08.107Z] [Express] Mounted API routes at /api
+[2025-05-01T05:48:08.108Z] [Express] Registered Not Found handler.
+[2025-05-01T05:48:08.108Z] [Express] Registered Global Error handler.
+[2025-05-01T05:48:08.108Z] [Express] Express app configured.
+[2025-05-01T05:48:08.110Z] [Loader] Express loaded.
+[2025-05-01T05:48:08.110Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T05:48:08.115Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T05:48:08.115Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T05:48:08.115Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T05:48:08.115Z] [Loader] Socket.IO loaded.
+[2025-05-01T05:48:08.116Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T05:48:08.116Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T05:48:08.150Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T05:48:08.151Z] [Loader] Jobs scheduled.
+[2025-05-01T05:48:08.151Z] [Loader] Performing initial log analysis...
+[2025-05-01T05:48:08.152Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T05:48:08.194Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T05:48:08.194Z] [Loader] Initial log analysis completed.
+[2025-05-01T05:48:08.194Z] [Loader] All loaders completed successfully.
+[2025-05-01T05:48:08.199Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T05:48:08.199Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T05:48:08.199Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T05:48:08.200Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T05:49:50.911Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T05:50:11.434Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 20523ms
+[2025-05-01T05:54:27.095Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T05:54:37.883Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 10788ms
+[2025-05-01T05:56:46.723Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T05:56:51.307Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 4584ms
+[2025-05-01T06:00:45.416Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T06:00:48.371Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 2955ms
+[2025-05-01T06:05:40.260Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T06:05:44.897Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 4637ms
+[2025-05-01T06:20:05.877Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T06:20:05.883Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T06:20:05.884Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T06:20:05.884Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T06:20:05.887Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T06:20:13.960Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T06:20:13.960Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T06:20:14.506Z] [Server Start] Initializing loaders...
+[2025-05-01T06:20:14.508Z] [Loader] Starting application loading process...
+[2025-05-01T06:20:14.510Z] [Loader DB] Attempting database connection...
+[2025-05-01T06:20:14.512Z] [Database] Attempting MongoDB connection...
+[2025-05-01T06:20:15.281Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T06:20:15.282Z] [Loader DB] Database connection successful.
+[2025-05-01T06:20:15.282Z] [Loader] Database loaded.
+[2025-05-01T06:20:15.282Z] [History Service] Initialized.
+[2025-05-01T06:20:15.283Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T06:20:15.283Z] [Loader] Services initialized.
+[2025-05-01T06:20:15.289Z] [Express] Mounted API routes at /api
+[2025-05-01T06:20:15.289Z] [Express] Registered Not Found handler.
+[2025-05-01T06:20:15.289Z] [Express] Registered Global Error handler.
+[2025-05-01T06:20:15.290Z] [Express] Express app configured.
+[2025-05-01T06:20:15.291Z] [Loader] Express loaded.
+[2025-05-01T06:20:15.291Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T06:20:15.296Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T06:20:15.296Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T06:20:15.297Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T06:20:15.297Z] [Loader] Socket.IO loaded.
+[2025-05-01T06:20:15.297Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T06:20:15.298Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T06:20:15.332Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T06:20:15.332Z] [Loader] Jobs scheduled.
+[2025-05-01T06:20:15.333Z] [Loader] Performing initial log analysis...
+[2025-05-01T06:20:15.334Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T06:20:15.348Z] [LogAnalysis Service] Analysis completed successfully. Requests: 1, Errors: 0
+[2025-05-01T06:20:15.348Z] [Loader] Initial log analysis completed.
+[2025-05-01T06:20:15.348Z] [Loader] All loaders completed successfully.
+[2025-05-01T06:20:15.353Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T06:20:15.353Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T06:20:15.354Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T06:20:15.354Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T06:20:21.209Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T06:20:34.480Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 13271ms
+[2025-05-01T06:21:08.641Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T06:21:24.315Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 15674ms
+[2025-05-01T07:22:48.026Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:22:48.028Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:22:48.028Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:22:48.029Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:22:48.029Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:22:58.913Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:22:58.915Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:22:59.557Z] [Server Start] Initializing loaders...
+[2025-05-01T07:22:59.558Z] [Loader] Starting application loading process...
+[2025-05-01T07:22:59.558Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:22:59.559Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:23:00.405Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:23:00.406Z] [Loader DB] Database connection successful.
+[2025-05-01T07:23:00.406Z] [Loader] Database loaded.
+[2025-05-01T07:23:00.407Z] [History Service] Initialized.
+[2025-05-01T07:23:00.407Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:23:00.408Z] [Loader] Services initialized.
+[2025-05-01T07:23:00.415Z] [Express] Mounted API routes at /api
+[2025-05-01T07:23:00.416Z] [Express] Registered Not Found handler.
+[2025-05-01T07:23:00.416Z] [Express] Registered Global Error handler.
+[2025-05-01T07:23:00.416Z] [Express] Express app configured.
+[2025-05-01T07:23:00.418Z] [Loader] Express loaded.
+[2025-05-01T07:23:00.418Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:23:00.424Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:23:00.424Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:23:00.425Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:23:00.425Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:23:00.425Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:23:00.426Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:23:00.472Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:23:00.473Z] [Loader] Jobs scheduled.
+[2025-05-01T07:23:00.473Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:23:00.474Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:23:00.503Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:23:00.504Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:23:00.505Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:23:00.522Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:23:00.523Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:23:00.524Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:23:00.525Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:23:56.880Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:23:56.881Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:23:56.882Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:23:56.882Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:23:56.882Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:24:05.409Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:24:05.410Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:24:05.983Z] [Server Start] Initializing loaders...
+[2025-05-01T07:24:05.984Z] [Loader] Starting application loading process...
+[2025-05-01T07:24:05.984Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:24:05.985Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:24:06.638Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:24:06.638Z] [Loader DB] Database connection successful.
+[2025-05-01T07:24:06.639Z] [Loader] Database loaded.
+[2025-05-01T07:24:06.639Z] [History Service] Initialized.
+[2025-05-01T07:24:06.639Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:24:06.640Z] [Loader] Services initialized.
+[2025-05-01T07:24:06.646Z] [Express] Mounted API routes at /api
+[2025-05-01T07:24:06.647Z] [Express] Registered Not Found handler.
+[2025-05-01T07:24:06.647Z] [Express] Registered Global Error handler.
+[2025-05-01T07:24:06.648Z] [Express] Express app configured.
+[2025-05-01T07:24:06.649Z] [Loader] Express loaded.
+[2025-05-01T07:24:06.650Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:24:06.655Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:24:06.655Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:24:06.656Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:24:06.656Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:24:06.656Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:24:06.657Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:24:06.700Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:24:06.701Z] [Loader] Jobs scheduled.
+[2025-05-01T07:24:06.701Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:24:06.702Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:24:06.723Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:24:06.724Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:24:06.727Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:24:06.732Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:24:06.733Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:24:06.734Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:24:06.735Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:26:14.131Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:26:14.133Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:26:14.133Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:26:14.133Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:26:14.134Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:26:20.629Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:26:20.631Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:26:20.631Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:26:20.632Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:26:20.632Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:26:29.317Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:26:29.318Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:26:29.854Z] [Server Start] Initializing loaders...
+[2025-05-01T07:26:29.855Z] [Loader] Starting application loading process...
+[2025-05-01T07:26:29.855Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:26:29.856Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:26:30.541Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:26:30.541Z] [Loader DB] Database connection successful.
+[2025-05-01T07:26:30.542Z] [Loader] Database loaded.
+[2025-05-01T07:26:30.542Z] [History Service] Initialized.
+[2025-05-01T07:26:30.543Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:26:30.543Z] [Loader] Services initialized.
+[2025-05-01T07:26:30.550Z] [Express] Mounted API routes at /api
+[2025-05-01T07:26:30.550Z] [Express] Registered Not Found handler.
+[2025-05-01T07:26:30.550Z] [Express] Registered Global Error handler.
+[2025-05-01T07:26:30.551Z] [Express] Express app configured.
+[2025-05-01T07:26:30.552Z] [Loader] Express loaded.
+[2025-05-01T07:26:30.553Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:26:30.558Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:26:30.558Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:26:30.558Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:26:30.559Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:26:30.559Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:26:30.560Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:26:30.597Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:26:30.597Z] [Loader] Jobs scheduled.
+[2025-05-01T07:26:30.598Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:26:30.599Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:26:30.618Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:26:30.619Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:26:30.619Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:26:30.625Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:26:30.625Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:26:30.626Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:26:30.626Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:26:41.866Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:26:41.868Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:26:41.868Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:26:41.868Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:26:41.869Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:26:52.388Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:26:52.391Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:26:53.160Z] [Server Start] Initializing loaders...
+[2025-05-01T07:26:53.160Z] [Loader] Starting application loading process...
+[2025-05-01T07:26:53.161Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:26:53.161Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:26:53.888Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:26:53.889Z] [Loader DB] Database connection successful.
+[2025-05-01T07:26:53.889Z] [Loader] Database loaded.
+[2025-05-01T07:26:53.889Z] [History Service] Initialized.
+[2025-05-01T07:26:53.890Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:26:53.890Z] [Loader] Services initialized.
+[2025-05-01T07:26:53.897Z] [Express] Mounted API routes at /api
+[2025-05-01T07:26:53.897Z] [Express] Registered Not Found handler.
+[2025-05-01T07:26:53.898Z] [Express] Registered Global Error handler.
+[2025-05-01T07:26:53.898Z] [Express] Express app configured.
+[2025-05-01T07:26:53.899Z] [Loader] Express loaded.
+[2025-05-01T07:26:53.900Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:26:53.905Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:26:53.905Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:26:53.906Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:26:53.906Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:26:53.906Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:26:53.907Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:26:53.946Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:26:53.946Z] [Loader] Jobs scheduled.
+[2025-05-01T07:26:53.946Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:26:53.947Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:26:53.967Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:26:53.967Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:26:53.967Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:26:53.974Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:26:53.974Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:26:53.975Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:26:53.976Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:27:03.684Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:27:03.707Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:27:03.710Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:27:03.715Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:27:03.717Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:27:11.559Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:27:11.560Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:27:12.078Z] [Server Start] Initializing loaders...
+[2025-05-01T07:27:12.079Z] [Loader] Starting application loading process...
+[2025-05-01T07:27:12.079Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:27:12.080Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:27:12.744Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:27:12.745Z] [Loader DB] Database connection successful.
+[2025-05-01T07:27:12.745Z] [Loader] Database loaded.
+[2025-05-01T07:27:12.745Z] [History Service] Initialized.
+[2025-05-01T07:27:12.746Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:27:12.746Z] [Loader] Services initialized.
+[2025-05-01T07:27:12.753Z] [Express] Mounted API routes at /api
+[2025-05-01T07:27:12.754Z] [Express] Registered Not Found handler.
+[2025-05-01T07:27:12.754Z] [Express] Registered Global Error handler.
+[2025-05-01T07:27:12.754Z] [Express] Express app configured.
+[2025-05-01T07:27:12.756Z] [Loader] Express loaded.
+[2025-05-01T07:27:12.756Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:27:12.762Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:27:12.762Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:27:12.762Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:27:12.763Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:27:12.763Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:27:12.764Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:27:12.810Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:27:12.811Z] [Loader] Jobs scheduled.
+[2025-05-01T07:27:12.811Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:27:12.812Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:27:12.841Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:27:12.842Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:27:12.842Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:27:12.846Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:27:12.846Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:27:12.847Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:27:12.847Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:27:27.641Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:27:27.643Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:27:27.644Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:27:27.645Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:27:27.646Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:27:36.384Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:27:36.385Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:27:36.910Z] [Server Start] Initializing loaders...
+[2025-05-01T07:27:36.911Z] [Loader] Starting application loading process...
+[2025-05-01T07:27:36.912Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:27:36.912Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:27:37.547Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:27:37.547Z] [Loader DB] Database connection successful.
+[2025-05-01T07:27:37.548Z] [Loader] Database loaded.
+[2025-05-01T07:27:37.548Z] [History Service] Initialized.
+[2025-05-01T07:27:37.549Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:27:37.549Z] [Loader] Services initialized.
+[2025-05-01T07:27:37.555Z] [Express] Mounted API routes at /api
+[2025-05-01T07:27:37.556Z] [Express] Registered Not Found handler.
+[2025-05-01T07:27:37.556Z] [Express] Registered Global Error handler.
+[2025-05-01T07:27:37.557Z] [Express] Express app configured.
+[2025-05-01T07:27:37.558Z] [Loader] Express loaded.
+[2025-05-01T07:27:37.558Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:27:37.563Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:27:37.563Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:27:37.563Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:27:37.564Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:27:37.564Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:27:37.565Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:27:37.601Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:27:37.601Z] [Loader] Jobs scheduled.
+[2025-05-01T07:27:37.602Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:27:37.603Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:27:37.623Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:27:37.623Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:27:37.624Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:27:37.628Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:27:37.629Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:27:37.629Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:27:37.629Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:28:50.784Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:28:50.786Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:28:50.786Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:28:50.787Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:28:50.787Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:29:02.637Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:29:02.640Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:29:03.727Z] [Server Start] Initializing loaders...
+[2025-05-01T07:29:03.731Z] [Loader] Starting application loading process...
+[2025-05-01T07:29:03.732Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:29:03.733Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:29:04.647Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:29:04.647Z] [Loader DB] Database connection successful.
+[2025-05-01T07:29:04.648Z] [Loader] Database loaded.
+[2025-05-01T07:29:04.648Z] [History Service] Initialized.
+[2025-05-01T07:29:04.649Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:29:04.649Z] [Loader] Services initialized.
+[2025-05-01T07:29:04.655Z] [Express] Mounted API routes at /api
+[2025-05-01T07:29:04.655Z] [Express] Registered Not Found handler.
+[2025-05-01T07:29:04.656Z] [Express] Registered Global Error handler.
+[2025-05-01T07:29:04.656Z] [Express] Express app configured.
+[2025-05-01T07:29:04.657Z] [Loader] Express loaded.
+[2025-05-01T07:29:04.658Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:29:04.662Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:29:04.663Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:29:04.663Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:29:04.663Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:29:04.664Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:29:04.664Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:29:04.703Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:29:04.703Z] [Loader] Jobs scheduled.
+[2025-05-01T07:29:04.703Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:29:04.704Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:29:04.724Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:29:04.724Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:29:04.725Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:29:04.731Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:29:04.732Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:29:04.733Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:29:04.734Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:29:14.943Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:29:14.945Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:29:14.945Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:29:14.946Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:29:14.946Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:29:23.592Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:29:23.593Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:29:24.230Z] [Server Start] Initializing loaders...
+[2025-05-01T07:29:24.230Z] [Loader] Starting application loading process...
+[2025-05-01T07:29:24.231Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:29:24.231Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:29:24.907Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:29:24.908Z] [Loader DB] Database connection successful.
+[2025-05-01T07:29:24.908Z] [Loader] Database loaded.
+[2025-05-01T07:29:24.908Z] [History Service] Initialized.
+[2025-05-01T07:29:24.909Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:29:24.910Z] [Loader] Services initialized.
+[2025-05-01T07:29:24.917Z] [Express] Mounted API routes at /api
+[2025-05-01T07:29:24.917Z] [Express] Registered Not Found handler.
+[2025-05-01T07:29:24.917Z] [Express] Registered Global Error handler.
+[2025-05-01T07:29:24.918Z] [Express] Express app configured.
+[2025-05-01T07:29:24.919Z] [Loader] Express loaded.
+[2025-05-01T07:29:24.920Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:29:24.925Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:29:24.925Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:29:24.926Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:29:24.926Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:29:24.926Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:29:24.927Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:29:24.977Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:29:24.978Z] [Loader] Jobs scheduled.
+[2025-05-01T07:29:24.979Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:29:24.981Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:29:25.003Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:29:25.003Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:29:25.003Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:29:25.008Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:29:25.008Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:29:25.008Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:29:25.009Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:30:00.403Z] [Cron] Running scheduled log analysis...
+[2025-05-01T07:30:00.404Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:30:00.415Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:30:00.418Z] [Cron] Log analysis finished and results broadcasted.
+[2025-05-01T07:30:14.599Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:30:14.600Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:30:14.605Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:30:14.607Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:30:14.610Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:30:25.506Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:30:25.507Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:30:26.512Z] [Server Start] Initializing loaders...
+[2025-05-01T07:30:26.514Z] [Loader] Starting application loading process...
+[2025-05-01T07:30:26.515Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:30:26.517Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:30:27.881Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:30:27.881Z] [Loader DB] Database connection successful.
+[2025-05-01T07:30:27.882Z] [Loader] Database loaded.
+[2025-05-01T07:30:27.882Z] [History Service] Initialized.
+[2025-05-01T07:30:27.883Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:30:27.883Z] [Loader] Services initialized.
+[2025-05-01T07:30:27.891Z] [Express] Mounted API routes at /api
+[2025-05-01T07:30:27.892Z] [Express] Registered Not Found handler.
+[2025-05-01T07:30:27.893Z] [Express] Registered Global Error handler.
+[2025-05-01T07:30:27.893Z] [Express] Express app configured.
+[2025-05-01T07:30:27.894Z] [Loader] Express loaded.
+[2025-05-01T07:30:27.895Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:30:27.901Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:30:27.902Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:30:27.902Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:30:27.902Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:30:27.902Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:30:27.903Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:30:27.982Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:30:27.983Z] [Loader] Jobs scheduled.
+[2025-05-01T07:30:27.984Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:30:27.986Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:30:28.044Z] [LogAnalysis Service] Analysis completed successfully. Requests: 2, Errors: 0
+[2025-05-01T07:30:28.046Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:30:28.262Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:30:28.273Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:30:28.273Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:30:28.274Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:30:28.274Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:30:47.283Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T07:31:06.806Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 19523ms
+[2025-05-01T07:36:14.004Z] [HTTP Request] --> POST /api/v1/crawl-conferences?dataSource=client from ::1 (User-Agent: axios/1.7.9)
+[2025-05-01T07:36:25.971Z] [HTTP Response] <-- POST /api/v1/crawl-conferences?dataSource=client 200 11967ms
+[2025-05-01T07:38:59.127Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:38:59.130Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:38:59.131Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:38:59.132Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:38:59.132Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:39:06.551Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:39:06.551Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:39:07.101Z] [Server Start] Initializing loaders...
+[2025-05-01T07:39:07.102Z] [Loader] Starting application loading process...
+[2025-05-01T07:39:07.102Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:39:07.103Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:39:08.005Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:39:08.006Z] [Loader DB] Database connection successful.
+[2025-05-01T07:39:08.006Z] [Loader] Database loaded.
+[2025-05-01T07:39:08.006Z] [History Service] Initialized.
+[2025-05-01T07:39:08.007Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:39:08.007Z] [Loader] Services initialized.
+[2025-05-01T07:39:08.013Z] [Express] Mounted API routes at /api
+[2025-05-01T07:39:08.013Z] [Express] Registered Not Found handler.
+[2025-05-01T07:39:08.014Z] [Express] Registered Global Error handler.
+[2025-05-01T07:39:08.014Z] [Express] Express app configured.
+[2025-05-01T07:39:08.015Z] [Loader] Express loaded.
+[2025-05-01T07:39:08.016Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:39:08.020Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:39:08.021Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:39:08.021Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:39:08.021Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:39:08.022Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:39:08.022Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:39:08.077Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:39:08.078Z] [Loader] Jobs scheduled.
+[2025-05-01T07:39:08.078Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:39:08.080Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:39:08.108Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T07:39:08.108Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:39:08.144Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:39:08.154Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:39:08.156Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:39:08.157Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:39:08.158Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:42:47.235Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:42:47.237Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:42:47.237Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:42:47.237Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:42:47.238Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:42:59.062Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:42:59.063Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:42:59.929Z] [Server Start] Initializing loaders...
+[2025-05-01T07:42:59.929Z] [Loader] Starting application loading process...
+[2025-05-01T07:42:59.930Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:42:59.930Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:43:00.995Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:43:00.995Z] [Loader DB] Database connection successful.
+[2025-05-01T07:43:00.996Z] [Loader] Database loaded.
+[2025-05-01T07:43:00.996Z] [History Service] Initialized.
+[2025-05-01T07:43:00.997Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:43:00.997Z] [Loader] Services initialized.
+[2025-05-01T07:43:01.004Z] [Express] Mounted API routes at /api
+[2025-05-01T07:43:01.004Z] [Express] Registered Not Found handler.
+[2025-05-01T07:43:01.005Z] [Express] Registered Global Error handler.
+[2025-05-01T07:43:01.005Z] [Express] Express app configured.
+[2025-05-01T07:43:01.006Z] [Loader] Express loaded.
+[2025-05-01T07:43:01.007Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:43:01.013Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:43:01.013Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:43:01.013Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:43:01.014Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:43:01.014Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:43:01.014Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:43:01.058Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:43:01.059Z] [Loader] Jobs scheduled.
+[2025-05-01T07:43:01.059Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:43:01.060Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:43:01.104Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T07:43:01.104Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:43:01.158Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:43:01.162Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:43:01.162Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:43:01.164Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:43:01.164Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:43:58.144Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:43:58.145Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:43:58.146Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:43:58.146Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:43:58.146Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:44:07.023Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:44:07.024Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:44:07.715Z] [Server Start] Initializing loaders...
+[2025-05-01T07:44:07.716Z] [Loader] Starting application loading process...
+[2025-05-01T07:44:07.716Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:44:07.716Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:44:08.630Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:44:08.631Z] [Loader DB] Database connection successful.
+[2025-05-01T07:44:08.631Z] [Loader] Database loaded.
+[2025-05-01T07:44:08.631Z] [History Service] Initialized.
+[2025-05-01T07:44:08.632Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:44:08.632Z] [Loader] Services initialized.
+[2025-05-01T07:44:08.639Z] [Express] Mounted API routes at /api
+[2025-05-01T07:44:08.640Z] [Express] Registered Not Found handler.
+[2025-05-01T07:44:08.640Z] [Express] Registered Global Error handler.
+[2025-05-01T07:44:08.640Z] [Express] Express app configured.
+[2025-05-01T07:44:08.642Z] [Loader] Express loaded.
+[2025-05-01T07:44:08.642Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:44:08.648Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:44:08.648Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:44:08.648Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:44:08.648Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:44:08.649Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:44:08.649Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:44:08.719Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:44:08.719Z] [Loader] Jobs scheduled.
+[2025-05-01T07:44:08.720Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:44:08.722Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:44:08.755Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T07:44:08.755Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:44:08.794Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:44:08.801Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:44:08.802Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:44:08.803Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:44:08.803Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T07:47:40.782Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T07:47:40.784Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T07:47:40.784Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T07:47:40.784Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:47:40.785Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:47:53.010Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T07:47:53.012Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T07:47:53.580Z] [Server Start] Initializing loaders...
+[2025-05-01T07:47:53.581Z] [Loader] Starting application loading process...
+[2025-05-01T07:47:53.581Z] [Loader DB] Attempting database connection...
+[2025-05-01T07:47:53.582Z] [Database] Attempting MongoDB connection...
+[2025-05-01T07:47:54.302Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T07:47:54.302Z] [Loader DB] Database connection successful.
+[2025-05-01T07:47:54.302Z] [Loader] Database loaded.
+[2025-05-01T07:47:54.303Z] [History Service] Initialized.
+[2025-05-01T07:47:54.303Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T07:47:54.303Z] [Loader] Services initialized.
+[2025-05-01T07:47:54.310Z] [Express] Mounted API routes at /api
+[2025-05-01T07:47:54.310Z] [Express] Registered Not Found handler.
+[2025-05-01T07:47:54.310Z] [Express] Registered Global Error handler.
+[2025-05-01T07:47:54.310Z] [Express] Express app configured.
+[2025-05-01T07:47:54.320Z] [Loader] Express loaded.
+[2025-05-01T07:47:54.321Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T07:47:54.328Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T07:47:54.328Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T07:47:54.329Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T07:47:54.329Z] [Loader] Socket.IO loaded.
+[2025-05-01T07:47:54.329Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T07:47:54.330Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T07:47:54.393Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T07:47:54.393Z] [Loader] Jobs scheduled.
+[2025-05-01T07:47:54.396Z] [Loader] Performing initial log analysis...
+[2025-05-01T07:47:54.397Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T07:47:54.435Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T07:47:54.436Z] [Loader] Initial log analysis completed.
+[2025-05-01T07:47:54.476Z] [Loader] All loaders completed successfully.
+[2025-05-01T07:47:54.481Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T07:47:54.483Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T07:47:54.483Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T07:47:54.483Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T08:17:34.568Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T08:17:34.574Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T08:17:34.576Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T08:17:34.576Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T08:17:34.577Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T08:17:43.838Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-01T08:17:43.839Z] Loaded model config for CHATBOT: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-01T08:17:44.462Z] [Server Start] Initializing loaders...
+[2025-05-01T08:17:44.463Z] [Loader] Starting application loading process...
+[2025-05-01T08:17:44.463Z] [Loader DB] Attempting database connection...
+[2025-05-01T08:17:44.464Z] [Database] Attempting MongoDB connection...
+[2025-05-01T08:17:45.282Z] [Database] MongoDB Connected Successfully.
+[2025-05-01T08:17:45.283Z] [Loader DB] Database connection successful.
+[2025-05-01T08:17:45.283Z] [Loader] Database loaded.
+[2025-05-01T08:17:45.283Z] [History Service] Initialized.
+[2025-05-01T08:17:45.284Z] [LogAnalysis Service] Initialized. Log file path: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T08:17:45.284Z] [Loader] Services initialized.
+[2025-05-01T08:17:45.292Z] [Express] Mounted API routes at /api
+[2025-05-01T08:17:45.292Z] [Express] Registered Not Found handler.
+[2025-05-01T08:17:45.292Z] [Express] Registered Global Error handler.
+[2025-05-01T08:17:45.293Z] [Express] Express app configured.
+[2025-05-01T08:17:45.294Z] [Loader] Express loaded.
+[2025-05-01T08:17:45.295Z] [Loader Socket] Initializing Socket.IO server...
+[2025-05-01T08:17:45.301Z] [Loader Socket] Socket.IO authentication middleware applied.
+[2025-05-01T08:17:45.302Z] [Loader Socket] Socket.IO connection handler registered.
+[2025-05-01T08:17:45.302Z] [Loader Socket] Socket.IO server initialized successfully.
+[2025-05-01T08:17:45.303Z] [Loader] Socket.IO loaded.
+[2025-05-01T08:17:45.303Z] [Loader Jobs] Scheduling background jobs...
+[2025-05-01T08:17:45.304Z] [Cron] Scheduling log analysis job with schedule: "30 * * * *"
+[2025-05-01T08:17:45.357Z] [Loader Jobs] Background jobs scheduled.
+[2025-05-01T08:17:45.358Z] [Loader] Jobs scheduled.
+[2025-05-01T08:17:45.360Z] [Loader] Performing initial log analysis...
+[2025-05-01T08:17:45.364Z] [LogAnalysis Service] Starting analysis. Filters: Start=undefined, End=undefined
+[2025-05-01T08:17:45.404Z] [LogAnalysis Service] Analysis completed successfully. Requests: 3, Errors: 0
+[2025-05-01T08:17:45.405Z] [Loader] Initial log analysis completed.
+[2025-05-01T08:17:45.520Z] [Loader] All loaders completed successfully.
+[2025-05-01T08:17:45.524Z] 🚀 Server (HTTP + Socket.IO) listening on port 3001
+[2025-05-01T08:17:45.525Z] 🔗 Access the server at: http://localhost:3001
+[2025-05-01T08:17:45.525Z] 🌐 Allowed CORS origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T08:17:45.525Z] [Server Start] Server listening on port 3001. Access at http://localhost:3001
+[2025-05-01T08:26:33.231Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T08:26:33.233Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T08:26:33.233Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T08:26:33.234Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T08:26:33.236Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T08:26:37.529Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T08:26:37.531Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T08:26:37.531Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T08:26:37.531Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T08:26:37.532Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log
+[2025-05-01T08:26:47.600Z] [Server Config] Loaded PORT: 3001
+[2025-05-01T08:26:47.602Z] [Server Config] Loaded MONGODB_URI: Set
+[2025-05-01T08:26:47.602Z] [Server Config] Loaded JWT_SECRET: Set
+[2025-05-01T08:26:47.602Z] [Server Config] Allowed CORS Origins: http://localhost:8386,  http://confhub.ddns.net
+[2025-05-01T08:26:47.602Z] [Server Config] Loaded LOG_FILE_PATH: D:\NEW-SERVER-TS\logs\app.log

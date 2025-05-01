@@ -9,6 +9,7 @@ import { scheduleJobs } from './jobs.loader';
 import { ConversationHistoryService } from '../chatbot/services/conversationHistory.service';
 import logToFile from '../utils/logger';
 import { LogAnalysisService } from '../services/logAnalysis.service'; // Đã import
+import { init as initDataManager } from '../conference/8_data_manager'; // Rename init import
 
 interface LoadersResult {
     app: Express;
@@ -52,6 +53,10 @@ export const initLoaders = async (): Promise<LoadersResult> => {
         // Cân nhắc log chi tiết lỗi ở đây
         console.error("Initial log analysis failed:", error);
     }
+
+    // 7. Data manager (few-show examples)
+    await initDataManager();
+
 
     logToFile('[Loader] All loaders completed successfully.');
 

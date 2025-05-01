@@ -49,11 +49,13 @@
     "pino": "^9.6.0",
     "playwright": "^1.51.1",
     "rate-limiter-flexible": "^6.2.1",
+    "reflect-metadata": "^0.2.2",
     "socket.io": "^4.8.1",
+    "tsyringe": "^4.10.0",
     "uuid": "^11.1.0",
     "web-audio-api": "^0.2.2",
     "ws": "^8.18.1",
-    "zod": "^3.24.2"
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

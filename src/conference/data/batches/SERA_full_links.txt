@@ -1,24 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import dotenv from 'dotenv'; // Cài đặt thư viện dotenv để quản lý API Key một cách an toàn
-
-dotenv.config(); // Load các biến môi trường từ file .env
-
-// Lấy API Key từ biến môi trường (an toàn hơn so với đặt trực tiếp trong code)
-const API_KEY = "AIzaSyDK5eYs2PBVYP3l9UH0YMIFshxBMq6EsE8";
-if (!API_KEY) {
-  console.error("Lỗi: GOOGLE_API_KEY không được đặt trong file .env");
-  process.exit(1);
-}
-
-async function run() {
-  try {
-    // Khởi tạo Generative Model
-    const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "tunedModels/extractinforedit100-gngylj3g8qz3" }); // Sử dụng model "gemini-pro" hoặc các model khác có sẵn
-
-    // Định nghĩa nội dung cho request
-    const prompt = `
-    Conference full name: ACIS Conference on Software Engineering Research, Management and Applications (SERA)
+Conference full name: ACIS Conference on Software Engineering Research, Management and Applications (SERA)
 
 1. Website of SERA_0: https://acisinternational.org/conferences/sera-2025/
 Website information of SERA_0:
@@ -367,20 +347,3 @@ People | April 29, 2025
  Produced by | UNLV Web & Digital Strategy 
  Social Media at UNLV
 
-
- `;
-
-    // Gọi API để tạo nội dung
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-
-    console.log("Nội dung được tạo ra:");
-    console.log(text);
-
-  } catch (error) {
-    console.error("Đã xảy ra lỗi khi gọi Gemini API:", error);
-  }
-}
-
-run();

@@ -1,3 +1,4 @@
+// src/config/environment.ts
 import 'dotenv/config';
 import logToFile from '../utils/logger'; // Hoặc logger chính
 import path from 'path';
