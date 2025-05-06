@@ -5,46 +5,62 @@ import logToFile from '../../utils/logger'; // Adjust path if needed
 
 export class OpenGoogleMapHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        const { args, handlerId, socketId, onStatusUpdate } = context;
+        const logPrefix = `[${handlerId} ${socketId}]`;
         const location = args?.location as string | undefined;
 
-        logToFile(`[${handlerId} ${socketId}] Handler: OpenGoogleMap, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Handler: OpenGoogleMap, Args: ${JSON.stringify(args)}`);
 
-        // REMOVED internal safeEmitStatus definition
+        // --- Helper function để gửi status update ---
+        const sendStatus = (step: string, message: string, details?: object) => {
+            if (onStatusUpdate) {
+                onStatusUpdate('status_update', {
+                    type: 'status',
+                    step,
+                    message,
+                    details,
+                    timestamp: new Date().toISOString(),
+                });
+            } else {
+                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+            }
+        };
 
         try {
-            // --- Start Detailed Emits using context.onStatusUpdate ---
+            // --- 1. Validation (Guard Clause) ---
+            sendStatus('validating_map_location', 'Validating location argument...', { args });
 
-            // 1. Validation
-             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_map_location', message: 'Validating location argument...', details: { args }, timestamp: new Date().toISOString() })) {
-                 if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
-             }
-
-            if (location && typeof location === 'string' && location.trim() !== '') {
-                const trimmedLocation = location.trim();
-                logToFile(`[${handlerId} ${socketId}] OpenGoogleMap: Valid location string: ${trimmedLocation}`);
-
-                // 2. Prepare Action (Success Case)
-                onStatusUpdate('status_update', { type: 'status', step: 'map_action_prepared', message: 'Google Maps action prepared.', details: { location: trimmedLocation }, timestamp: new Date().toISOString() });
+            // Trim and check if the location is a non-empty string
+            const trimmedLocation = location?.trim();
+            if (!trimmedLocation) { // Checks for null, undefined, '', or ' '
+                const errorMsg = "Invalid or missing 'location' argument.";
+                logToFile(`${logPrefix} OpenGoogleMap: Validation Failed - ${errorMsg} Received: "${location}"`);
+                sendStatus('function_error', 'Invalid location provided for map.', { error: errorMsg, location });
                 return {
-                    modelResponseContent: `Map action acknowledged. Google Maps will be opened for the location: "${trimmedLocation}".`,
-                    frontendAction: { type: 'openMap', location: trimmedLocation },
-                };
-            } else {
-                logToFile(`[${handlerId} ${socketId}] OpenGoogleMap: Invalid or missing 'location' argument: ${location}`);
-
-                // 2. Handle Validation Failure
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Invalid location provided for map.', details: { error: 'Invalid or missing location argument', location }, timestamp: new Date().toISOString() });
-                return {
-                    modelResponseContent: `Error: Invalid or missing 'location' argument provided for opening Google Maps. Received: "${location}"`,
+                    modelResponseContent: `Error: ${errorMsg} Please provide a valid location for the map. Received: "${location || 'not provided'}"`,
                     frontendAction: undefined,
                 };
             }
-            // --- End Detailed Emits ---
+            // --- Location is now confirmed to be a non-empty string ---
+
+            // --- 2. Prepare Action (Success Case) ---
+            logToFile(`${logPrefix} OpenGoogleMap: Valid location string: ${trimmedLocation}`);
+            sendStatus('map_action_prepared', 'Google Maps action prepared.', { location: trimmedLocation });
+
+            return {
+                modelResponseContent: `Map action acknowledged. Google Maps will be opened for the location: "${trimmedLocation}".`,
+                frontendAction: { type: 'openMap', location: trimmedLocation },
+            };
+
         } catch (error: any) {
-            logToFile(`[${handlerId} ${socketId}] Error in OpenGoogleMapHandler: ${error.message}`);
-            onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during map processing: ${error.message}`, timestamp: new Date().toISOString() });
-            return { modelResponseContent: `Error executing openGoogleMap: ${error.message}`, frontendAction: undefined };
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} Error in OpenGoogleMapHandler: ${errorMessage}`);
+            // Use optional chaining for sendStatus in catch
+            sendStatus?.('function_error', `Error during map processing: ${errorMessage}`);
+            return {
+                modelResponseContent: `An unexpected error occurred while preparing the map action: ${errorMessage}`,
+                frontendAction: undefined
+            };
         }
     }
 }

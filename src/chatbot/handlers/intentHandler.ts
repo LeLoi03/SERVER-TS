@@ -1,14 +1,17 @@
 // src/chatbot/handlers/intentHandler.ts
+import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
+import { container } from 'tsyringe'; // Import container for resolving singletons
 import {
     GenerationConfig,
     Tool,
     FunctionResponsePart,
     EnhancedGenerateContentResponse,
     Part,
+    FunctionDeclaration,
 } from "@google/generative-ai";
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
-import logToFile from '../../utils/logger';
+import logToFile from '../../utils/logger'; // Điều chỉnh đường dẫn nếu cần
 import {
     HistoryItem,
     GeminiInteractionResult,
@@ -19,132 +22,170 @@ import {
     FrontendAction,
     ChatUpdate,
     Language,
-    AgentCardRequest, 
+    AgentCardRequest,
     AgentCardResponse
-} from '../shared/types';
-import { Gemini } from '../gemini/gemini';
-import { loadModelConfig } from '../gemini/configLoader';
-// Change import to use the new function
-import { getAgentLanguageConfig, AgentId } from '../utils/languageConfig';
-import { executeFunction } from '../gemini/functionRegistry';
-import { GEMINI_API_KEY, CHATBOT_MODEL_NAME } from "../../config";
+} from '../shared/types'; // Điều chỉnh đường dẫn nếu cần
+import { Gemini } from '../gemini/gemini'; // Điều chỉnh đường dẫn nếu cần
+// import { loadModelConfig } from '../gemini/configLoader'; // **KHÔNG CẦN NỮA** cho chatbot config
+import { getAgentLanguageConfig, AgentId } from '../utils/languageConfig'; // Điều chỉnh đường dẫn nếu cần
+import { executeFunction } from '../gemini/functionRegistry'; // Điều chỉnh đường dẫn nếu cần
+import { ConfigService } from "../../config/config.service"; // **IMPORT ConfigService**
 
-const chatbotService = new Gemini(GEMINI_API_KEY!, CHATBOT_MODEL_NAME || "gemini-2.0-flash"); 
-const chatbotConfigPrefix = "CHATBOT";
-const chatbotGenerationConfig: GenerationConfig = loadModelConfig(chatbotConfigPrefix);
+// --- Lấy ConfigService Instance ---
+const configService = container.resolve(ConfigService); // Resolve singleton instance
 
+// --- Constants ---
+const MAX_TURNS_HOST_AGENT = 5;
+const ALLOWED_SUB_AGENTS: AgentId[] = ['ConferenceAgent', 'JournalAgent', 'AdminContactAgent', 'NavigationAgent', 'WebsiteInfoAgent'];
+
+// --- Lấy cấu hình từ ConfigService ---
+const geminiApiKey = configService.config.GEMINI_API_KEY; // Lấy API key
+const chatbotModelName = configService.config.GEMINI_CHATBOT_MODEL_NAME || "gemini-1.5-flash-latest"; // Lấy tên model chatbot, có fallback
+
+// Log cảnh báo nếu dùng fallback model
+if (!configService.config.GEMINI_CHATBOT_MODEL_NAME) {
+    logToFile(`Warning: GEMINI_CHATBOT_MODEL_NAME not set in config, using fallback "${chatbotModelName}".`);
+}
+
+// Khởi tạo Gemini Service với cấu hình đã lấy
+const GEMINI_SERVICE = new Gemini(geminiApiKey, chatbotModelName);
+
+// Tạo Chatbot Generation Config từ ConfigService
+const CHATBOT_GENERATION_CONFIG: GenerationConfig = {
+    temperature: configService.config.GEMINI_CHATBOT_TEMPERATURE,
+    topP: configService.config.GEMINI_CHATBOT_TOP_P,
+    topK: configService.config.GEMINI_CHATBOT_TOP_K,
+    maxOutputTokens: configService.config.GEMINI_CHATBOT_MAX_OUTPUT_TOKENS,
+    // Thêm responseMimeType nếu nó được định nghĩa trong config
+    ...(configService.config.GEMINI_CHATBOT_RESPONSE_MIME_TYPE && {
+        responseMimeType: configService.config.GEMINI_CHATBOT_RESPONSE_MIME_TYPE
+    }),
+};
+
+logToFile(`Chatbot Initialized. Model: ${chatbotModelName}, Config: ${JSON.stringify(CHATBOT_GENERATION_CONFIG)}`);
+
+
+// --- Types ---
 interface NonStreamingHandlerResult {
     history: HistoryItem[];
     action?: FrontendAction;
 }
 
-
-// --- Define type for routeToAgent arguments ---
 interface RouteToAgentArgs {
-    targetAgent: string;
+    targetAgent: AgentId | string;
     taskDescription: string;
-    inputData: any; // Hoặc một kiểu cụ thể hơn nếu bạn biết rõ inputData
+    inputData?: any;
 }
 
+interface AgentLanguageConfig {
+    systemInstructions: string | Part | (string | Part)[]; // Sửa lại để linh hoạt hơn
+    functionDeclarations: FunctionDeclaration[];
+}
 
-// --- Function to handle calling a Sub Agent ---
+/**
+ * Handles the invocation of a Sub Agent based on an AgentCardRequest.
+ */
 async function callSubAgent(
     requestCard: AgentCardRequest,
-    parentHandlerId: string, // ID of the Host Agent's handler process
+    parentHandlerId: string,
     language: Language,
-    socket: Socket // Pass socket for potential direct emits if needed, but unlikely
+    socket: Socket
 ): Promise<AgentCardResponse> {
-    const subAgentId = requestCard.receiverAgentId as AgentId; // Cast to known AgentId type
-    const subHandlerId = `${parentHandlerId}-Sub-${subAgentId}-${Date.now()}`;
+    const subAgentId = requestCard.receiverAgentId as AgentId;
+    const subHandlerId = `${parentHandlerId}-Sub-${subAgentId}-${requestCard.taskId.substring(0, 8)}`;
     const socketId = socket.id;
-    logToFile(`--- [${subHandlerId} Socket ${socketId}] Calling Sub Agent: ${subAgentId}, Task: ${requestCard.taskId} ---`);
+    const logPrefix = `[${subHandlerId} Socket ${socketId}]`;
 
-    // 1. Get Config for Sub Agent
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, subAgentId);
-    const subAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
+    logToFile(`${logPrefix} --- Calling Sub Agent ${subAgentId} for Task ${requestCard.taskId} ---`);
+    logToFile(`${logPrefix} Task Description: ${requestCard.taskDescription}`);
 
-    // 2. Prepare Input for Sub Agent (Use AgentCard as input context)
-    // Convert AgentCardRequest to a Part for the history
-    // Option A: Simple text description (might lose structure)
-    // const subAgentInputText = `Task: ${requestCard.taskDescription}. Input Data: ${JSON.stringify(requestCard.inputData || {})}`;
-    // const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
-
-    // Option B: Pass structured data (if model supports it well in history)
-    // This might require adjusting how Gemini service handles non-text parts.
-    // Let's stick to text for simplicity in V1.
-    const subAgentInputText = `Received Task Request (ID: ${requestCard.taskId}):\nDescription: ${requestCard.taskDescription}\nInput Data: ${JSON.stringify(requestCard.inputData || {})}\nPlease execute using your available tools.`;
-    const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
-
-    // Sub agent history starts fresh or with minimal context from the card
-    const subAgentHistory: HistoryItem[] = [{ role: 'user', parts: subAgentInputParts }]; // Simulating the request as a 'user' turn for the sub-agent
-
-    // 3. Call Sub Agent's LLM
-    // Note: This is a simplified loop, a real sub-agent might need multiple turns too.
-    // For PoC, assume ConferenceAgent calls its function in one turn.
     let subAgentResultData: any = null;
     let subAgentErrorMessage: string | undefined = undefined;
     let subAgentFrontendAction: FrontendAction | undefined = undefined;
-    let subAgentStatus: 'success' | 'error' = 'error'; // Default to error
+    let subAgentStatus: 'success' | 'error' = 'error';
 
     try {
-        logToFile(`[${subHandlerId}] Sending request to ${subAgentId} LLM.`);
-        const subAgentResult: GeminiInteractionResult = await chatbotService.generateTurn(
-            [], subAgentHistory, chatbotGenerationConfig, systemInstructions, subAgentTools
-        );
-        logToFile(`[${subHandlerId}] Received result from ${subAgentId} LLM: Status ${subAgentResult.status}`);
+        // 1. Get Config for Sub Agent
+        // Giả định getAgentLanguageConfig có thể lấy config cần thiết (nếu có) từ ConfigService hoặc nguồn khác
+        const agentConfig = getAgentLanguageConfig(language, subAgentId) as AgentLanguageConfig; // Type cast
+        if (!agentConfig) {
+            throw new Error(`Could not load language config for agent ${subAgentId} and language ${language}`);
+        }
+        const subAgentTools: Tool[] = agentConfig.functionDeclarations?.length > 0 ? [{ functionDeclarations: agentConfig.functionDeclarations }] : [];
+        const systemInstructionsString = agentConfig.systemInstructions;
 
+        logToFile(`${logPrefix} Loaded config for ${subAgentId}. Tools: ${agentConfig.functionDeclarations?.map(f => f.name).join(', ') || 'None'}`);
+        // logToFile(`${logPrefix} System Instructions (stringified): ${systemInstructionsString?.substring(0, 100)}...`); // Log snippet nếu cần
+
+        // 2. Prepare Input for Sub Agent
+        const subAgentInputText = `Received Task Request (ID: ${requestCard.taskId}):\nDescription: ${requestCard.taskDescription}\nPlease execute this task using your available tools. Provide the result directly or state if you cannot fulfill the request.`;
+        const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
+        const subAgentHistory: HistoryItem[] = [{ role: 'user', parts: subAgentInputParts }];
+
+        // 3. Call Sub Agent's LLM
+        logToFile(`${logPrefix} Sending request to ${subAgentId} LLM using model ${chatbotModelName}.`); // Sử dụng chatbotModelName đã lấy từ config
+        if (!socket.connected) throw new Error(`Client disconnected before calling ${subAgentId} LLM.`);
+
+        const subAgentResult: GeminiInteractionResult = await GEMINI_SERVICE.generateTurn(
+            [], // Assuming sub-agent starts fresh, no previous history passed here
+            subAgentHistory, // Pass the prepared input history
+            CHATBOT_GENERATION_CONFIG, // **SỬ DỤNG CONFIG CHATBOT ĐÃ LẤY TỪ ConfigService**
+            systemInstructionsString, // Pass the stringified instructions
+            subAgentTools
+        );
+
+        if (!socket.connected) throw new Error(`Client disconnected after ${subAgentId} LLM call.`);
+        logToFile(`${logPrefix} Received result from ${subAgentId} LLM: Status ${subAgentResult.status}`);
+
+        // 4. Process Sub Agent's Response
         if (subAgentResult.status === "requires_function_call" && subAgentResult.functionCall) {
             const functionCall = subAgentResult.functionCall;
-            logToFile(`[${subHandlerId}] ${subAgentId} requested function call: ${functionCall.name}`);
+            logToFile(`${logPrefix} ${subAgentId} requested function call: ${functionCall.name}`);
 
-            // Execute the function requested by the Sub Agent
-            // The status callback here is tricky - should it emit under the subHandlerId? Or parentHandlerId?
-            // Let's keep it simple for now and not emit sub-agent internal steps to frontend directly.
+            // Execute the function
             const statusUpdateCallbackStub = (eventName: 'status_update', data: StatusUpdate): boolean => {
-                logToFile(`[${subHandlerId} Status Stub] Step: ${data.step}, Msg: ${data.message}`);
-                return socket.connected; // Check connection
+                logToFile(`${logPrefix} [SubAgent Status Stub] Step: ${data.step}, Msg: ${data.message}, Details: ${JSON.stringify(data.details)}`);
+                return socket.connected; // Check connection status
             };
 
+            // Giả định executeFunction có thể cần ConfigService hoặc các config khác được truyền vào nếu cần
             const functionResult = await executeFunction(
                 functionCall,
-                subHandlerId, // Use sub-handler ID for logging within executeFunction
+                subHandlerId,
                 language,
-                statusUpdateCallbackStub, // Use stub or a more sophisticated callback
-                socket // Pass socket if handlers need it
+                statusUpdateCallbackStub,
+                socket,
+                requestCard.context // Pass context if needed by functions
             );
-            logToFile(`[${subHandlerId}] Function ${functionCall.name} executed. Result: ${functionResult.modelResponseContent.substring(0, 100)}...`);
+            logToFile(`${logPrefix} Function ${functionCall.name} executed. Result Snippet: ${String(functionResult.modelResponseContent).substring(0, 100)}...`);
 
-            // Simulate the Sub Agent processing the function result and preparing the final response
-            // For ConferenceAgent PoC, we assume the result of getConferences IS the final resultData
-            if (functionResult.modelResponseContent.toLowerCase().startsWith('error:')) {
+            if (typeof functionResult.modelResponseContent === 'string' && functionResult.modelResponseContent.toLowerCase().startsWith('error:')) {
                 subAgentErrorMessage = functionResult.modelResponseContent;
                 subAgentStatus = 'error';
             } else {
-                subAgentResultData = functionResult.modelResponseContent; // Raw data expected
+                subAgentResultData = functionResult.modelResponseContent; // Có thể là string, object, etc.
                 subAgentStatus = 'success';
-                // Check if the *sub-agent's function call* resulted in a FE action
                 subAgentFrontendAction = functionResult.frontendAction;
             }
 
         } else if (subAgentResult.status === "final_text") {
-            // Sub agent responded directly without function call (unlikely for ConferenceAgent)
-            logToFile(`[${subHandlerId}] ${subAgentId} provided direct text response (unexpected for PoC): ${subAgentResult.text}`);
+            logToFile(`${logPrefix} ${subAgentId} provided direct text response: ${subAgentResult.text}`);
             subAgentResultData = subAgentResult.text;
             subAgentStatus = 'success';
         } else {
-            // Error from Sub Agent LLM call
-            logToFile(`[${subHandlerId}] Error during ${subAgentId} LLM call: ${subAgentResult.errorMessage}`);
-            subAgentErrorMessage = subAgentResult.errorMessage || `Error processing task in ${subAgentId}.`;
+            subAgentErrorMessage = subAgentResult.errorMessage || `Error processing task in ${subAgentId} (Status: ${subAgentResult.status}).`;
+            logToFile(`${logPrefix} Error during ${subAgentId} LLM interaction: ${subAgentErrorMessage}`);
             subAgentStatus = 'error';
         }
 
     } catch (error: any) {
-        logToFile(`[${subHandlerId}] CRITICAL Error calling Sub Agent ${subAgentId}: ${error.message}`);
-        subAgentErrorMessage = `Failed to execute task via ${subAgentId}: ${error.message}`;
+        const errorMsg = error instanceof Error ? error.message : String(error);
+        logToFile(`${logPrefix} CRITICAL Error calling Sub Agent ${subAgentId}: ${errorMsg} Stack: ${error.stack}`);
+        subAgentErrorMessage = `Failed to execute task via ${subAgentId}: ${errorMsg}`;
         subAgentStatus = 'error';
     }
 
-    // 4. Construct Response Card
+    // 5. Construct Response Card
     const responseCard: AgentCardResponse = {
         taskId: requestCard.taskId,
         conversationId: requestCard.conversationId,
@@ -154,524 +195,546 @@ async function callSubAgent(
         status: subAgentStatus,
         resultData: subAgentResultData,
         errorMessage: subAgentErrorMessage,
-        frontendAction: subAgentFrontendAction, // Pass FE action back if generated
+        frontendAction: subAgentFrontendAction,
     };
 
-    logToFile(`--- [${subHandlerId}] Sub Agent ${subAgentId} finished. Status: ${responseCard.status} ---`);
+    logToFile(`${logPrefix} --- Sub Agent ${subAgentId} finished Task ${requestCard.taskId}. Status: ${responseCard.status}, Action: ${!!responseCard.frontendAction} ---`);
     return responseCard;
 }
 
-// --- Main Handler (handleNonStreaming) ---
+/**
+ * Handles non-streaming chat interactions, orchestrating between HostAgent and SubAgents.
+ */
 export async function handleNonStreaming(
     userInput: string,
     historyForHandler: HistoryItem[],
     socket: Socket,
     language: Language,
-    handlerId: string // Renamed from initialHandlerId for clarity
-): Promise<NonStreamingHandlerResult | void> {
+    handlerId: string
+): Promise<NonStreamingHandlerResult | void> { // Return void if aborting early due to disconnection
 
     const socketId = socket.id;
-    const conversationId = handlerId; // Use handlerId as conversationId for simplicity
-    logToFile(`--- [${handlerId} Socket ${socketId}] Handling NON-STREAMING input: "${userInput}", Lang: ${language} ---`);
+    const conversationId = handlerId; // Use handlerId for correlation
+    const logPrefix = `[${handlerId} Socket ${socketId}]`;
+    logToFile(`${logPrefix} --- Handling NON-STREAMING input: "${userInput}", Lang: ${language} ---`);
 
-    // --- Start with HOST AGENT ---
-    const currentAgentId: AgentId = 'HostAgent';
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId);
-    const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
+    // --- Host Agent Setup ---
+    const hostAgentId: AgentId = 'HostAgent';
+    let hostAgentConfig: AgentLanguageConfig;
+    try {
+        hostAgentConfig = getAgentLanguageConfig(language, hostAgentId) as AgentLanguageConfig;
+    } catch (error: any) {
+        logToFile(`${logPrefix} CRITICAL ERROR: Failed to load HostAgent config for lang ${language}. ${error.message}`);
+        // Attempt to emit error if possible
+        socket.emit('chat_error', { type: 'error', message: `Internal server error: Could not load agent configuration.`, step: 'config_load' });
+        return; // Cannot proceed
+    }
+    const hostAgentTools: Tool[] = hostAgentConfig.functionDeclarations.length > 0 ? [{ functionDeclarations: hostAgentConfig.functionDeclarations }] : [];
     // --------------------------
 
     const userTurn: HistoryItem = { role: 'user', parts: [{ text: userInput }] };
-    let history: HistoryItem[] = [...historyForHandler, userTurn]; // This is the HOST's history
+    let history: HistoryItem[] = [...historyForHandler, userTurn]; // This handler manages the HOST's history
     const thoughts: ThoughtStep[] = [];
     let finalFrontendAction: FrontendAction | undefined = undefined;
     let currentTurn = 1;
-    const MAX_TURNS = 5; // Max turns for the HOST agent loop
 
-    // --- Safe Emit Helper ---
+    // --- Local Safe Emit Helper ---
+    // Captures 'thoughts' and 'finalFrontendAction' via closure
     const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ResultUpdate | ErrorUpdate): boolean => {
         if (!socket.connected) {
-            logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] SKIPPED: Client disconnected. Event: ${eventName}`);
+            logToFile(`${logPrefix} [Emit SKIPPED] Client disconnected. Event: ${eventName}`);
             return false;
         }
-        try {
-            if (eventName === 'status_update' && data.type === 'status') {
-                thoughts.push({ step: data.step, message: data.message, timestamp: new Date().toISOString(), details: (data as StatusUpdate).details });
-            }
-
-            let dataToSend: any = data;
-
-
-            // Attach thoughts and action to the *final* chat_result or chat_error
-            if (eventName === 'chat_result' || eventName === 'chat_error') {
-                dataToSend = { ...data, thoughts: thoughts };
-                // Only attach the action if it's the final result being emitted by this handler
-                if (eventName === 'chat_result' && finalFrontendAction) {
-                    (dataToSend as ResultUpdate).action = finalFrontendAction;
-                    logToFile(`[${handlerId} ${socketId}] Attaching frontendAction to final event: ${JSON.stringify(finalFrontendAction)}`);
-                }
-            }
-
-            socket.emit(eventName, dataToSend);
-            logToFile(`[${handlerId} Socket Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}`);
-            return true;
-        } catch (error: any) {
-            logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] FAILED: Error during emit. Event: ${eventName}, Error: ${error.message}`);
-            return false;
-        }
-    };
-
-    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-        return safeEmit(eventName, data);
-    };
-
-
-    try {
-        if (!statusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return;
-
-        while (currentTurn <= MAX_TURNS) {
-            logToFile(`--- [${handlerId} Socket ${socketId}] HostAgent Turn ${currentTurn}: Sending to Model (History size: ${history.length}) ---`);
-            if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentTurn > 1 ? 'Thinking based on previous results...' : 'Thinking...' })) return;
-            if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected before Model call in Turn ${currentTurn}.`); return; }
-
-            // --- Call the Host Agent's LLM ---
-            const modelResult: GeminiInteractionResult = await chatbotService.generateTurn(
-                [], history, chatbotGenerationConfig, systemInstructions, tools
-            );
-
-            if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected during/after HostAgent Model call in Turn ${currentTurn}.`); return; }
-
-            // --- Process Host Agent's Response ---
-            if (modelResult.status === "final_text") {
-                // Host agent decided to respond directly
-                logToFile(`[${handlerId} Socket ${socketId}] HostAgent Turn ${currentTurn}: Received final_text.`);
-                statusUpdateCallback('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
-                const finalModelResponseText = modelResult.text || (finalFrontendAction ? "Please follow the instructions on screen." : "Okay.");
-                const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: finalModelResponseText }] };
-                history.push(finalModelTurn);
-                logToFile(`[${handlerId} History Check - Final] Appended final HostAgent response. History size: ${history.length}`);
-                safeEmit('chat_result', { type: 'result', message: finalModelResponseText }); // safeEmit handles adding action/thoughts
-                return { history: history, action: finalFrontendAction }; // <<< EXIT LOOP: Interaction successful
-
-            } else if (modelResult.status === "error") {
-                logToFile(`[${handlerId} Socket ${socketId}] HostAgent Turn ${currentTurn}: Received error from model: ${modelResult.errorMessage}`);
-                safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `An error occurred processing your request (Turn ${currentTurn}).`, step: 'thinking' });
-                return { history: history };
-
-            } else if (modelResult.status === "requires_function_call" && modelResult.functionCall) {
-                const functionCall = modelResult.functionCall;
-                logToFile(`[${handlerId} Socket ${socketId}] HostAgent Turn ${currentTurn}: Requested function call: ${functionCall.name}`);
-
-                // Append Host's request to its history
-                const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
-                history.push(modelFunctionCallTurn);
-                logToFile(`[${handlerId} History Check - Host FC Prep ${currentTurn}] Appended HostAgent FC request. History size: ${history.length}`);
-
-
-                let functionResponseContent: string | null = null;
-                let functionError: string | undefined = undefined;
-
-                if (functionCall.name === 'routeToAgent') {
-
-
-                    // --- TYPE ASSERTION HERE ---
-                    const routeArgs = functionCall.args as RouteToAgentArgs;
-                    // --------------------------
-
-                    statusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${routeArgs.targetAgent}...`, details: functionCall.args });
-
-
-                    // --- Use the typed variable 'routeArgs' ---
-                    const targetAgent = routeArgs.targetAgent;
-                    const taskDescription = routeArgs.taskDescription;
-                    const inputData = routeArgs.inputData;
-                    // -----------------------------------------
-
-                    // Expand allowed agents
-                    const allowedSubAgents: AgentId[] = ['ConferenceAgent', 'JournalAgent', 'AdminContactAgent', 'NavigationAgent', 'WebsiteInfoAgent']; // <-- Add WebsiteInfoAgent
-
-                    // Validation
-                    if (!targetAgent || !taskDescription /* inputData can be optional for WebsiteInfo */) {
-                        functionError = "Routing failed: Missing targetAgent or taskDescription.";
-                        logToFile(`[${handlerId} Error] Invalid routing arguments: ${JSON.stringify(functionCall.args)}`);
-                    }
-                    else if (!allowedSubAgents.includes(targetAgent as AgentId)) {
-                        functionError = `Routing failed: Agent "${targetAgent}" is not supported or implemented yet.`;
-                        logToFile(`[${handlerId} Error] Unsupported target agent: ${targetAgent}`);
-                    }
-                    else {
-                        // --- Prepare and Call Sub Agent ---
-                        const requestCard: AgentCardRequest = {
-                            taskId: uuidv4(),
-                            conversationId: conversationId,
-                            senderAgentId: 'HostAgent',
-                            receiverAgentId: targetAgent,
-                            timestamp: new Date().toISOString(),
-                            taskDescription: taskDescription,
-                            inputData: inputData || {}, // Ensure inputData exists
-                            context: { userToken: socket.data.token }
-                        };
-
-                        const subAgentResponse: AgentCardResponse = await callSubAgent(
-                            requestCard, handlerId, language, socket
-                        );
-
-                        // --- Process Sub Agent Response ---
-                        if (subAgentResponse.status === 'success') {
-                            functionResponseContent = JSON.stringify(subAgentResponse.resultData || "Sub agent provided no data.");
-                            if (subAgentResponse.frontendAction) {
-                                finalFrontendAction = subAgentResponse.frontendAction;
-                                logToFile(`[${handlerId}] Stored frontendAction returned from ${targetAgent}.`);
-                            }
-                        } else {
-                            functionError = subAgentResponse.errorMessage || `Error occurred in ${targetAgent}.`;
-                        }
-                    }
-                    // --- END Sub Agent Call Logic ---
-
-                } else {
-                    // --- THIS BLOCK SHOULD NOT BE REACHED if Host Agent is configured correctly ---
-                    logToFile(`[${handlerId} ERROR] HostAgent attempted to call function '${functionCall.name}' directly, but it should only use 'routeToAgent'. Check HostAgent prompt and tool configuration.`);
-                    functionError = `Internal configuration error: HostAgent cannot directly call function '${functionCall.name}'.`;
-                    // -------------------------------------------------------------------------
-                }
-
-
-                // --- Prepare Function Response for Host Agent ---
-                if (!socket.connected) { logToFile(`[${handlerId} Abort - ${socketId}] Client disconnected after function/routing execution in Turn ${currentTurn}.`); return; }
-
-                const responsePartContent = functionError ? { error: functionError } : { content: functionResponseContent };
-                const functionResponsePart: FunctionResponsePart = {
-                    functionResponse: {
-                        name: functionCall.name, // Use the original function name called by Host
-                        response: responsePartContent
-                    }
-                };
-                const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
-                history.push(functionTurn);
-                logToFile(`[${handlerId} History Check - Host FC Done ${currentTurn}] Appended function/routing response. History size: ${history.length}`);
-
-                currentTurn++;
-                continue; // <<< CONTINUE HOST AGENT LOOP
-
-            } else {
-                // Unexpected status from Host Agent LLM
-                logToFile(`[${handlerId} Socket ${socketId}] HostAgent Turn ${currentTurn}: Received unexpected model status: ${modelResult.status}`);
-                safeEmit('chat_error', { type: 'error', message: `An unexpected internal error occurred (Turn ${currentTurn}).`, step: 'unknown_model_status' });
-                return { history: history };
-            }
-        } // End while loop
-
-        if (currentTurn > MAX_TURNS) {
-            logToFile(`[${handlerId} Socket ${socketId}] Error: HostAgent Exceeded maximum interaction turns (${MAX_TURNS}).`);
-            safeEmit('chat_error', { type: 'error', message: 'Request processing took too long or got stuck.', step: 'max_turns_exceeded' });
-            return { history: history };
-        }
-
-    } catch (error: any) {
-        logToFile(`[${handlerId} Socket ${socketId} Lang: ${language}] CRITICAL Error in handleNonStreaming (HostAgent): ${error.message}\nStack: ${error.stack}`);
-        safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'unknown_handler_error' });
-        return { history: history };
-    } finally {
-        logToFile(`--- [${handlerId} Socket ${socketId} Lang: ${language}] NON-STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
-    }
-    return { history: history }; // Should be unreachable
-}
-
-// --- handleStreaming function - Updated with A2A Logic ---
-export async function handleStreaming(
-    userInput: string,
-    currentHistoryFromSocket: HistoryItem[],
-    socket: Socket,
-    language: Language,
-    handlerId: string,
-    onActionGenerated?: (action: FrontendAction) => void
-): Promise<HistoryItem[] | void> {
-
-    const socketId = socket.id;
-    const conversationId = handlerId; // Use handlerId as conversationId
-    logToFile(`--- [${handlerId} Socket ${socketId}] Handling STREAMING input: "${userInput}", Lang: ${language} ---`);
-
-    // --- Start with HOST AGENT Config ---
-    const currentAgentId: AgentId = 'HostAgent';
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId);
-    const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
-    logToFile(`[${handlerId}] Using HostAgent Config (Lang: ${language}). Tools: ${functionDeclarations.map((f: any) => f.name).join(', ') || 'None'}`);
-    // ----------------------------------
-
-    let history: HistoryItem[] = [...currentHistoryFromSocket];
-    const thoughts: ThoughtStep[] = [];
-    let finalFrontendAction: FrontendAction | undefined = undefined; // <<< Changed name for clarity
-
-    // --- Safe Emit Helper (Remains the same) ---
-    const safeEmit = (eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
-        if (!socket.connected) { logToFile(`[${handlerId} Emit SKIPPED - ${socketId}] Client disconnected. Event: ${eventName}`); return false; }
         try {
             // Collect thoughts from status updates
             if (eventName === 'status_update' && data.type === 'status') {
                 thoughts.push({ step: data.step, message: data.message, timestamp: new Date().toISOString(), details: (data as StatusUpdate).details });
             }
 
-            let dataToSend: any = data; // Use 'any' temporarily
+            let dataToSend: any = data;
 
-            // Add collected thoughts and potential action to final result/error
-            if ((eventName === 'chat_result' || eventName === 'chat_error')) {
-                // Clone and add context
-                dataToSend = { ...data, thoughts: thoughts };
-                if (eventName === 'chat_result' && finalFrontendAction) { // <<< Use finalFrontendAction
-                    (dataToSend as ResultUpdate).action = finalFrontendAction; // Type assertion
-                    logToFile(`[${handlerId} ${socketId}] Attaching frontendAction to final stream event: ${JSON.stringify(finalFrontendAction)}`);
+            // Attach thoughts and action ONLY to the final chat_result or chat_error
+            if (eventName === 'chat_result' || eventName === 'chat_error') {
+                dataToSend = { ...data, thoughts: thoughts }; // Add thoughts
+                if (eventName === 'chat_result' && finalFrontendAction) {
+                    (dataToSend as ResultUpdate).action = finalFrontendAction; // Add action if present
+                    logToFile(`${logPrefix} Attaching finalFrontendAction to ${eventName}: ${JSON.stringify(finalFrontendAction)}`);
                 }
             }
 
-            socket.emit(eventName, dataToSend); // Emit potentially modified data
-            logToFile(`[${handlerId} Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}`); return true;
-        } catch (error: any) { logToFile(`[${handlerId} Emit FAILED - ${socketId}] Error: ${error.message}. Event: ${eventName}`); return false; }
+            socket.emit(eventName, dataToSend);
+            logToFile(`${logPrefix} [Emit Sent] Event: ${eventName}, Type: ${data.type}`);
+            return true;
+        } catch (error: any) {
+            logToFile(`${logPrefix} [Emit FAILED] Error: ${error.message}. Event: ${eventName}`);
+            return false;
+        }
     };
+    // --- Status Callback using local safeEmit ---
+    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => safeEmit(eventName, data);
 
-    // --- Status Update Callback ---
-    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-        return safeEmit(eventName, data);
+
+    try {
+        // Initial status update
+        if (!statusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return; // Abort if disconnected
+
+        // --- Host Agent Interaction Loop ---
+        while (currentTurn <= MAX_TURNS_HOST_AGENT) {
+            logToFile(`${logPrefix} --- HostAgent Turn ${currentTurn}/${MAX_TURNS_HOST_AGENT} Start ---`);
+            const thinkingMsg = currentTurn > 1 ? 'Thinking based on previous results...' : 'Thinking...';
+            if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: thinkingMsg })) return; // Abort
+            if (!socket.connected) { logToFile(`${logPrefix} [Abort] Client disconnected before HostAgent Model call in Turn ${currentTurn}.`); return; }
+
+            // --- Call the Host Agent's LLM ---
+            logToFile(`${logPrefix} History Size (Send): ${history.length}`);
+            const modelResult: GeminiInteractionResult = await GEMINI_SERVICE.generateTurn(
+                [], history, CHATBOT_GENERATION_CONFIG,
+                hostAgentConfig.systemInstructions,
+                hostAgentTools
+            );
+
+            if (!socket.connected) { logToFile(`${logPrefix} [Abort] Client disconnected after HostAgent Model call in Turn ${currentTurn}.`); return; }
+            logToFile(`${logPrefix} HostAgent Turn ${currentTurn}: Received Model Status: ${modelResult.status}`);
+
+            // --- Process Host Agent's Response ---
+            switch (modelResult.status) {
+                case "final_text":
+                    // Host agent decided to respond directly
+                    statusUpdateCallback('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
+                    const finalModelResponseText = modelResult.text || (finalFrontendAction ? "Okay, please follow the instructions on your screen." : "Okay.");
+                    const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: finalModelResponseText }] };
+                    history.push(finalModelTurn);
+                    logToFile(`${logPrefix} History Update: Appended final HostAgent response. Size: ${history.length}`);
+                    safeEmit('chat_result', { type: 'result', message: finalModelResponseText }); // Emits final result with thoughts/action
+                    return { history: history, action: finalFrontendAction }; // <<< EXIT LOOP: Interaction successful
+
+                case "error":
+                    logToFile(`${logPrefix} Error Turn ${currentTurn}: HostAgent model error: ${modelResult.errorMessage}`);
+                    safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `An error occurred processing your request (Turn ${currentTurn}).`, step: 'thinking' });
+                    return { history: history }; // Exit with current history
+
+                case "requires_function_call":
+                    if (!modelResult.functionCall) { // Should not happen based on status, but check defensively
+                        logToFile(`${logPrefix} Error Turn ${currentTurn}: Status 'requires_function_call' but no functionCall data.`);
+                        safeEmit('chat_error', { type: 'error', message: 'Internal error: Invalid response from AI model.', step: 'thinking' });
+                        return { history: history };
+                    }
+
+                    const functionCall = modelResult.functionCall;
+                    logToFile(`${logPrefix} Turn ${currentTurn}: HostAgent requested function call: ${functionCall.name}`);
+
+                    // Append Host's function call request to its history
+                    const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
+                    history.push(modelFunctionCallTurn);
+                    logToFile(`${logPrefix} History Update: Appended HostAgent FC request. Size: ${history.length}`);
+
+                    let functionResponseContent: string | null = null;
+                    let functionError: string | undefined = undefined;
+
+                    // --- Handle Host Agent's Function Call (Expecting routeToAgent) ---
+                    if (functionCall.name === 'routeToAgent') {
+                        // --- Validate RouteToAgent Args ---
+                        const routeArgs = functionCall.args as RouteToAgentArgs; // Assume structure based on prompt
+                        const targetAgent = routeArgs?.targetAgent;
+                        const taskDescription = routeArgs?.taskDescription;
+                        let routingValidationError: string | undefined;
+
+                        if (!targetAgent || typeof targetAgent !== 'string') {
+                            routingValidationError = "Routing failed: Missing or invalid 'targetAgent'.";
+                        } else if (!taskDescription || typeof taskDescription !== 'string') {
+                            routingValidationError = "Routing failed: Missing or invalid 'taskDescription'.";
+                        } else if (!ALLOWED_SUB_AGENTS.includes(targetAgent as AgentId)) {
+                            routingValidationError = `Routing failed: Agent "${targetAgent}" is not supported or implemented.`;
+                        }
+
+                        if (routingValidationError) {
+                            functionError = routingValidationError;
+                            logToFile(`${logPrefix} Error Turn ${currentTurn}: Invalid routing arguments: ${JSON.stringify(functionCall.args)}. Reason: ${functionError}`);
+                            statusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: functionError, details: functionCall.args });
+                        } else {
+                            // --- Arguments Valid: Prepare and Call Sub Agent ---
+                            const validTargetAgentId = targetAgent as AgentId; // Cast now safe
+                            statusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${validTargetAgentId}...`, details: functionCall.args });
+
+                            const requestCard: AgentCardRequest = {
+                                taskId: uuidv4(),
+                                conversationId: conversationId,
+                                senderAgentId: hostAgentId,
+                                receiverAgentId: validTargetAgentId,
+                                timestamp: new Date().toISOString(),
+                                taskDescription: taskDescription,
+                                context: { userToken: socket.data.token } // Pass context like token
+                            };
+
+                            const subAgentResponse: AgentCardResponse = await callSubAgent(
+                                requestCard, handlerId, language, socket
+                            );
+
+                            // --- Process Sub Agent Response ---
+                            if (subAgentResponse.status === 'success') {
+                                // Use stringified data as content for the Host Agent's history
+                                functionResponseContent = JSON.stringify(subAgentResponse.resultData ?? "Sub agent completed task successfully.");
+                                if (subAgentResponse.frontendAction) {
+                                    finalFrontendAction = subAgentResponse.frontendAction; // Store action
+                                    logToFile(`${logPrefix} Stored frontendAction from ${validTargetAgentId}.`);
+                                }
+                                statusUpdateCallback('status_update', { type: 'status', step: 'routing_complete', message: `Received successful response from ${validTargetAgentId}.`, details: { action: !!finalFrontendAction } });
+                            } else {
+                                functionError = subAgentResponse.errorMessage || `Error occurred in ${validTargetAgentId}.`;
+                                logToFile(`${logPrefix} Error Turn ${currentTurn}: Sub agent ${validTargetAgentId} failed: ${functionError}`);
+                                statusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: `Error from ${validTargetAgentId}: ${functionError}` });
+                            }
+                        }
+                        // --- END Sub Agent Call Logic ---
+
+                    } else {
+                        // --- Host Agent called a non-routing function (Configuration Error) ---
+                        functionError = `Internal configuration error: HostAgent attempted to call unsupported function '${functionCall.name}'. It should only use 'routeToAgent'.`;
+                        logToFile(`${logPrefix} ERROR Turn ${currentTurn}: ${functionError}`);
+                        statusUpdateCallback('status_update', { type: 'status', step: 'function_error', message: functionError, details: { functionName: functionCall.name } });
+                    }
+
+                    // --- Prepare Function Response Part for Host Agent ---
+                    if (!socket.connected) { logToFile(`${logPrefix} [Abort] Client disconnected after function/routing execution in Turn ${currentTurn}.`); return; }
+
+                    // Use the error or the stringified content
+                    const responsePartContent = functionError
+                        ? { error: functionError }
+                        : { content: functionResponseContent ?? "Function executed, no specific content returned." }; // Fallback content
+
+                    const functionResponsePart: FunctionResponsePart = {
+                        functionResponse: {
+                            name: functionCall.name, // Use the original function name called by Host
+                            response: responsePartContent
+                        }
+                    };
+                    const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
+                    history.push(functionTurn);
+                    logToFile(`${logPrefix} History Update: Appended function/routing response. Size: ${history.length}`);
+
+                    currentTurn++; // Increment turn and continue the loop
+                    break; // Break switch statement, continue while loop
+
+                default:
+                    // Unexpected status from Host Agent LLM
+                    logToFile(`${logPrefix} Error Turn ${currentTurn}: Received unexpected model status: ${modelResult.status}`);
+                    safeEmit('chat_error', { type: 'error', message: `An unexpected internal error occurred (Turn ${currentTurn}).`, step: 'unknown_model_status' });
+                    return { history: history }; // Exit with current history
+            } // End switch
+        } // End while loop
+
+        // --- Check if loop exited due to max turns ---
+        if (currentTurn > MAX_TURNS_HOST_AGENT) {
+            logToFile(`${logPrefix} Error: HostAgent Exceeded maximum interaction turns (${MAX_TURNS_HOST_AGENT}).`);
+            safeEmit('chat_error', { type: 'error', message: 'Request processing took too long or got stuck in a loop.', step: 'max_turns_exceeded' });
+            return { history: history }; // Return current history
+        }
+
+    } catch (error: any) {
+        const errorMsg = error instanceof Error ? error.message : String(error);
+        logToFile(`${logPrefix} CRITICAL Error in handleNonStreaming: ${errorMsg}\nStack: ${error.stack}`);
+        safeEmit('chat_error', { type: "error", message: errorMsg || "An unexpected server error occurred during processing.", step: 'unknown_handler_error' });
+        return { history: history }; // Return history on critical error
+    } finally {
+        logToFile(`${logPrefix} --- NON-STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
+    }
+
+    // This point should ideally be unreachable if the loop terminates correctly
+    logToFile(`${logPrefix} Warning: Reached end of handleNonStreaming unexpectedly.`);
+    return { history: history };
+}
+
+/**
+ * Handles streaming chat interactions, orchestrating between HostAgent and SubAgents.
+ */
+export async function handleStreaming(
+    userInput: string,
+    currentHistoryFromSocket: HistoryItem[],
+    socket: Socket,
+    language: Language,
+    handlerId: string,
+    onActionGenerated?: (action: FrontendAction) => void // Callback for server.ts
+): Promise<HistoryItem[] | void> { // Return void if aborting early
+
+    const socketId = socket.id;
+    const conversationId = handlerId;
+    const logPrefix = `[${handlerId} Socket ${socketId}]`;
+    logToFile(`${logPrefix} --- Handling STREAMING input: "${userInput}", Lang: ${language} ---`);
+
+    // --- Host Agent Setup ---
+    const hostAgentId: AgentId = 'HostAgent';
+    let hostAgentConfig: AgentLanguageConfig;
+    try {
+        hostAgentConfig = getAgentLanguageConfig(language, hostAgentId) as AgentLanguageConfig;
+    } catch (error: any) {
+        logToFile(`${logPrefix} CRITICAL ERROR: Failed to load HostAgent config for lang ${language}. ${error.message}`);
+        socket.emit('chat_error', { type: 'error', message: `Internal server error: Could not load agent configuration.`, step: 'config_load' });
+        return; // Cannot proceed
+    }
+    const hostAgentTools: Tool[] = hostAgentConfig.functionDeclarations.length > 0 ? [{ functionDeclarations: hostAgentConfig.functionDeclarations }] : [];
+    logToFile(`${logPrefix} Loaded HostAgent Config (Lang: ${language}). Tools: ${hostAgentConfig.functionDeclarations.map((f: any) => f.name).join(', ') || 'None'}`);
+    // ----------------------------------
+
+    let history: HistoryItem[] = [...currentHistoryFromSocket];
+    const thoughts: ThoughtStep[] = [];
+    let finalFrontendAction: FrontendAction | undefined = undefined;
+
+    // --- Local Safe Emit Helper (Captures thoughts/action via closure) ---
+    const safeEmit = (eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate): boolean => {
+        if (!socket.connected) { logToFile(`${logPrefix} [Emit SKIPPED] Client disconnected. Event: ${eventName}`); return false; }
+        try {
+            if (eventName === 'status_update' && data.type === 'status') {
+                thoughts.push({ step: data.step, message: data.message, timestamp: new Date().toISOString(), details: (data as StatusUpdate).details });
+            }
+            let dataToSend: any = data;
+            if ((eventName === 'chat_result' || eventName === 'chat_error')) {
+                dataToSend = { ...data, thoughts: thoughts };
+                if (eventName === 'chat_result' && finalFrontendAction) {
+                    (dataToSend as ResultUpdate).action = finalFrontendAction;
+                    logToFile(`${logPrefix} Attaching finalFrontendAction to ${eventName}: ${JSON.stringify(finalFrontendAction)}`);
+                }
+            }
+            socket.emit(eventName, dataToSend);
+            logToFile(`${logPrefix} [Emit Sent] Event: ${eventName}, Type: ${data.type}`); return true;
+        } catch (error: any) { logToFile(`${logPrefix} [Emit FAILED] Error: ${error.message}. Event: ${eventName}`); return false; }
     };
+    // --- Status Callback ---
+    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => safeEmit(eventName, data);
 
-
-    // --- Helper to Process Stream Chunks (Remains the same) ---
+    // --- Local Stream Processing Helper ---
+    // Uses the outer 'safeEmit' which correctly handles thoughts and finalFrontendAction
     async function processAndEmitStream(
         stream: AsyncGenerator<EnhancedGenerateContentResponse>,
-        emitFinalResult: boolean = true
+        isFinalResponse: boolean = true // Flag to control emitting chat_result
     ): Promise<{ fullText: string } | null> {
         let accumulatedText = "";
         let streamFinished = false;
-        logToFile(`[${handlerId} Stream Processing - ${socketId}] Starting... (Emit final: ${emitFinalResult})`);
+        logToFile(`${logPrefix} [Stream Processing] Starting... (Final emit: ${isFinalResponse})`);
 
         if (!statusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) {
-            logToFile(`[${handlerId} Stream Processing Abort - ${socketId}] Failed initial status emit (disconnected?).`);
+            logToFile(`${logPrefix} [Stream Processing Abort] Failed initial status emit.`);
             return null;
         }
 
         try {
             for await (const chunk of stream) {
-                if (!socket.connected) { logToFile(`[${handlerId} Stream Abort - ${socketId}] Disconnected during stream.`); return null; }
+                if (!socket.connected) { logToFile(`${logPrefix} [Stream Abort] Disconnected during stream.`); return null; }
                 const chunkText = chunk.text();
                 if (chunkText) {
                     accumulatedText += chunkText;
                     if (!safeEmit('chat_update', { type: 'partial_result', textChunk: chunkText })) {
-                        logToFile(`[${handlerId} Stream Abort - ${socketId}] Failed to emit chat_update.`);
-                        return null;
+                        logToFile(`${logPrefix} [Stream Abort] Failed to emit chat_update.`);
+                        return null; // Stop processing if emit fails
                     }
                 }
+                // Add checks here for function calls within the stream if the API supports it
             }
             streamFinished = true;
-            logToFile(`[${handlerId} Stream Processing - ${socketId}] Finished. Length: ${accumulatedText.length}`);
+            logToFile(`${logPrefix} [Stream Processing] Finished. Length: ${accumulatedText.length}`);
 
-            if (emitFinalResult) {
-                logToFile(`[${handlerId} Stream Processing - ${socketId}] Emitting final chat_result via safeEmit.`);
-                // safeEmit will add thoughts and finalFrontendAction automatically
+            if (isFinalResponse) {
+                // Let safeEmit handle adding thoughts/action to the final result
                 if (!safeEmit('chat_result', { type: 'result', message: accumulatedText })) {
-                    logToFile(`[${handlerId} Stream Processing Warning - ${socketId}] Failed to emit final chat_result.`);
+                    logToFile(`${logPrefix} [Stream Processing Warning] Failed to emit final chat_result.`);
                 }
             }
             return { fullText: accumulatedText };
 
         } catch (error: any) {
-            logToFile(`[${handlerId} Stream Processing Error - ${socketId}] ${error.message}`);
-            safeEmit('chat_error', { type: 'error', message: `Error processing stream: ${error.message}`, step: 'streaming_response' });
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} [Stream Processing Error] ${errorMsg}`);
+            safeEmit('chat_error', { type: 'error', message: `Error processing AI response stream: ${errorMsg}`, step: 'streaming_response' });
             return null;
         } finally {
-            if (!streamFinished) logToFile(`[${handlerId} Stream Processing Warning - ${socketId}] Stream loop exited unexpectedly.`);
+            if (!streamFinished) logToFile(`${logPrefix} [Stream Processing Warning] Stream loop exited unexpectedly.`);
         }
     }
 
-
-    // --- Main Streaming Logic with A2A ---
+    // --- Main Streaming Logic ---
     try {
         // 0. Initial Status & Append User Input
         if (!statusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return;
         const userTurn: HistoryItem = { role: 'user', parts: [{ text: userInput }] };
         history.push(userTurn);
-        logToFile(`[${handlerId} History Init - ${socketId}] Added user turn. Size: ${history.length}`);
+        logToFile(`${logPrefix} History Update: Added user turn. Size: ${history.length}`);
 
         // --- Turn 1: Initial HOST AGENT Call ---
-        logToFile(`--- [${handlerId} HostAgent Turn 1 Start - ${socketId}] Requesting initial response from HostAgent ---`);
+        logToFile(`${logPrefix} --- HostAgent Turn 1 (Stream) Start ---`);
         if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: 'Thinking...' })) return;
-        if (!socket.connected) { logToFile(`[${handlerId} Abort T1 - ${socketId}] Disconnected before HostAgent model call.`); return; }
+        if (!socket.connected) { logToFile(`${logPrefix} [Abort T1] Disconnected before HostAgent model call.`); return; }
 
-        logToFile(`[${handlerId} History T1 Send - ${socketId}] Host History Size: ${history.length}`);
-        // Call Host Agent
-        const initialResult = await chatbotService.generateStream(
-            [], history, chatbotGenerationConfig, systemInstructions, tools
+        logToFile(`${logPrefix} History Size (Send T1): ${history.length}`);
+        const initialResult = await GEMINI_SERVICE.generateStream(
+            [], history, CHATBOT_GENERATION_CONFIG,
+            hostAgentConfig.systemInstructions,
+            hostAgentTools
         );
 
-        if (!socket.connected) { logToFile(`[${handlerId} Abort T1 - ${socketId}] Disconnected after HostAgent model call response received.`); return; }
+        if (!socket.connected) { logToFile(`${logPrefix} [Abort T1] Disconnected after HostAgent model call response received.`); return; }
 
         // --- Process Host Agent Initial Response ---
         if (initialResult.error) {
-            logToFile(`[${handlerId} Error T1 - ${socketId}] HostAgent model returned error: ${initialResult.error}`);
+            logToFile(`${logPrefix} Error T1: HostAgent model returned error: ${initialResult.error}`);
             safeEmit('chat_error', { type: 'error', message: initialResult.error, step: 'thinking' });
-            return history;
+            return history; // Return history on error
 
         } else if (initialResult.functionCalls) {
-            // --- Host Agent Requires Routing ---
-            const functionCall = initialResult.functionCalls;
-            logToFile(`[${handlerId} HostAgent T1 - ${socketId}] HostAgent requested function call: ${functionCall.name}`);
+            // --- Host Agent Requires Routing (Turn 1) ---
+            const functionCall = initialResult.functionCalls; // Gemini returns only one FC per turn in current API
+            logToFile(`${logPrefix} Turn 1: HostAgent requested function call: ${functionCall.name}`);
 
-            // Append Host's request to its history
             const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
             history.push(modelFunctionCallTurn);
-            logToFile(`[${handlerId} History T1 Prep - ${socketId}] Appended HostAgent FC request. Size: ${history.length}`);
+            logToFile(`${logPrefix} History Update: Appended HostAgent FC request. Size: ${history.length}`);
 
             let functionResponseContent: string | null = null;
             let functionError: string | undefined = undefined;
 
-            // --- Verify it's the routeToAgent call ---
+            // --- Handle routeToAgent (Same logic as non-streaming) ---
             if (functionCall.name === 'routeToAgent') {
-                const routeArgs = functionCall.args as RouteToAgentArgs; // Type assertion
-                statusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${routeArgs.targetAgent}...`, details: functionCall.args });
+                const routeArgs = functionCall.args as RouteToAgentArgs;
+                const targetAgent = routeArgs?.targetAgent;
+                const taskDescription = routeArgs?.taskDescription;
+                let routingValidationError: string | undefined;
 
-                const targetAgent = routeArgs.targetAgent;
-                const taskDescription = routeArgs.taskDescription;
-                const inputData = routeArgs.inputData;
+                if (!targetAgent || typeof targetAgent !== 'string') {
+                    routingValidationError = "Routing failed: Missing or invalid 'targetAgent'.";
+                } else if (!taskDescription || typeof taskDescription !== 'string') {
+                    routingValidationError = "Routing failed: Missing or invalid 'taskDescription'.";
+                } else if (!ALLOWED_SUB_AGENTS.includes(targetAgent as AgentId)) {
+                    routingValidationError = `Routing failed: Agent "${targetAgent}" is not supported.`;
+                }
 
-                // --- Validation (Copied from non-streaming) ---
-                const allowedSubAgents: AgentId[] = ['ConferenceAgent', 'JournalAgent', 'AdminContactAgent', 'NavigationAgent', 'WebsiteInfoAgent'];
-                if (!targetAgent || !taskDescription) {
-                    functionError = "Routing failed: Missing targetAgent or taskDescription.";
-                    logToFile(`[${handlerId} Error] Invalid routing arguments: ${JSON.stringify(functionCall.args)}`);
-                } else if (!allowedSubAgents.includes(targetAgent as AgentId)) {
-                    functionError = `Routing failed: Agent "${targetAgent}" is not supported.`;
-                    logToFile(`[${handlerId} Error] Unsupported target agent: ${targetAgent}`);
+                if (routingValidationError) {
+                    functionError = routingValidationError;
+                    logToFile(`${logPrefix} Error T1: Invalid routing arguments: ${JSON.stringify(functionCall.args)}. Reason: ${functionError}`);
+                    statusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: functionError, details: functionCall.args });
                 } else {
-                    // --- Prepare and Call Sub Agent ---
+                    const validTargetAgentId = targetAgent as AgentId;
+                    statusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${validTargetAgentId}...`, details: functionCall.args });
+
                     const requestCard: AgentCardRequest = {
                         taskId: uuidv4(),
                         conversationId: conversationId,
-                        senderAgentId: 'HostAgent',
-                        receiverAgentId: targetAgent,
+                        senderAgentId: hostAgentId,
+                        receiverAgentId: validTargetAgentId,
                         timestamp: new Date().toISOString(),
                         taskDescription: taskDescription,
-                        inputData: inputData || {},
                         context: { userToken: socket.data.token }
                     };
 
-                    // --- Call the Sub Agent ---
-                    logToFile(`--- [${handlerId} SubAgent Call Start - ${socketId}] Calling ${targetAgent} via callSubAgent ---`);
+                    logToFile(`${logPrefix} --- SubAgent Call Start ---`);
                     const subAgentResponse: AgentCardResponse = await callSubAgent(
-                        requestCard, handlerId, language, socket // Pass socket here
+                        requestCard, handlerId, language, socket
                     );
-                    logToFile(`--- [${handlerId} SubAgent Call End - ${socketId}] ${targetAgent} finished. Status: ${subAgentResponse.status} ---`);
+                    logToFile(`${logPrefix} --- SubAgent Call End - Status: ${subAgentResponse.status} ---`);
 
-
-                    // --- Process Sub Agent Response ---
                     if (subAgentResponse.status === 'success') {
-                        functionResponseContent = JSON.stringify(subAgentResponse.resultData || "Sub agent completed task."); // Provide content for Host history
+                        functionResponseContent = JSON.stringify(subAgentResponse.resultData ?? "Sub agent completed task.");
                         if (subAgentResponse.frontendAction) {
-                            finalFrontendAction = subAgentResponse.frontendAction; // Store action for final emit
-                            logToFile(`[${handlerId} ${socketId}] Stored frontendAction from ${targetAgent}.`);
-                            // --- Notify server.ts about the action ---
-                            onActionGenerated?.(finalFrontendAction);
+                            finalFrontendAction = subAgentResponse.frontendAction; // Store action
+                            logToFile(`${logPrefix} Stored frontendAction from ${validTargetAgentId}.`);
+                            onActionGenerated?.(finalFrontendAction); // Notify server
                         }
+                        statusUpdateCallback('status_update', { type: 'status', step: 'routing_complete', message: `Received successful response from ${validTargetAgentId}.`, details: { action: !!finalFrontendAction } });
                     } else {
-                        functionError = subAgentResponse.errorMessage || `Error occurred in ${targetAgent}.`;
+                        functionError = subAgentResponse.errorMessage || `Error occurred in ${validTargetAgentId}.`;
+                        logToFile(`${logPrefix} Error T1: Sub agent ${validTargetAgentId} failed: ${functionError}`);
+                        statusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: `Error from ${validTargetAgentId}: ${functionError}` });
                     }
                 }
-                // --- END Sub Agent Call Logic ---
-
             } else {
                 // Host agent called something other than routeToAgent - ERROR
-                logToFile(`[${handlerId} ERROR T1 - ${socketId}] HostAgent called unexpected function '${functionCall.name}'. Only 'routeToAgent' expected.`);
-                functionError = `Internal configuration error: HostAgent called invalid function '${functionCall.name}'.`;
+                functionError = `Internal configuration error: HostAgent called unexpected function '${functionCall.name}'. Only 'routeToAgent' expected.`;
+                logToFile(`${logPrefix} ERROR T1: ${functionError}`);
+                statusUpdateCallback('status_update', { type: 'status', step: 'function_error', message: functionError, details: { functionName: functionCall.name } });
             }
 
             // --- Prepare Function Response for Host Agent History ---
-            if (!socket.connected) { logToFile(`[${handlerId} Abort T1 - ${socketId}] Disconnected after routing/sub-agent execution.`); return; }
+            if (!socket.connected) { logToFile(`${logPrefix} [Abort T1] Disconnected after routing/sub-agent execution.`); return; }
 
-            const responsePartContent = functionError ? { error: functionError } : { content: functionResponseContent };
-            const functionResponsePart: FunctionResponsePart = {
-                functionResponse: { name: functionCall.name, response: responsePartContent }
-            };
+            const responsePartContent = functionError ? { error: functionError } : { content: functionResponseContent ?? "Function executed." };
+            const functionResponsePart: FunctionResponsePart = { functionResponse: { name: functionCall.name, response: responsePartContent } };
             const functionTurn: HistoryItem = { role: 'function', parts: [functionResponsePart] };
             history.push(functionTurn);
-            logToFile(`[${handlerId} History T1 Done - ${socketId}] Appended function/routing response to Host history. Size: ${history.length}`);
+            logToFile(`${logPrefix} History Update: Appended function/routing response to Host history. Size: ${history.length}`);
 
             // --- Turn 2: Second HOST AGENT Call (Request Final Stream) ---
-            logToFile(`--- [${handlerId} HostAgent Turn 2 Start - ${socketId}] Requesting final stream from HostAgent ---`);
-            if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: 'Synthesizing response...' })) return;
-            if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected before final HostAgent model call.`); return; }
+            logToFile(`${logPrefix} --- HostAgent Turn 2 (Stream) Start ---`);
+            if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: 'Synthesizing final response...' })) return;
+            if (!socket.connected) { logToFile(`${logPrefix} [Abort T2] Disconnected before final HostAgent model call.`); return; }
 
-            logToFile(`[${handlerId} History T2 Send - ${socketId}] Host History Size: ${history.length}`);
-            const finalResult = await chatbotService.generateStream(
-                [], history, chatbotGenerationConfig, systemInstructions, tools // Still Host Agent config
+            logToFile(`${logPrefix} History Size (Send T2): ${history.length}`);
+            const finalResult = await GEMINI_SERVICE.generateStream(
+                [], history, CHATBOT_GENERATION_CONFIG,
+                hostAgentConfig.systemInstructions,
+                hostAgentTools
             );
 
-            if (!socket.connected) { logToFile(`[${handlerId} Abort T2 - ${socketId}] Disconnected after final HostAgent model call response received.`); return; }
+            if (!socket.connected) { logToFile(`${logPrefix} [Abort T2] Disconnected after final HostAgent model call response received.`); return; }
 
-            // --- Process Final Result from Host Agent ---
+            // --- Process Final Result from Host Agent (Turn 2) ---
             if (finalResult.error) {
-                logToFile(`[${handlerId} Error T2 - ${socketId}] HostAgent model returned error on final call: ${finalResult.error}`);
+                logToFile(`${logPrefix} Error T2: HostAgent model returned error on final call: ${finalResult.error}`);
                 safeEmit('chat_error', { type: 'error', message: finalResult.error, step: 'thinking' });
-
                 return history;
             } else if (finalResult.functionCalls) {
                 // Should not happen ideally, Host should provide text now
-                logToFile(`[${handlerId} Error T2 - ${socketId}] HostAgent requested another function call unexpectedly.`);
+                logToFile(`${logPrefix} Error T2: HostAgent requested another function call unexpectedly.`);
                 safeEmit('chat_error', { type: 'error', message: 'Unexpected AI response during final synthesis.', step: 'thinking' });
                 const unexpectedTurn: HistoryItem = { role: 'model', parts: [{ functionCall: finalResult.functionCalls }] };
                 history.push(unexpectedTurn);
-
                 return history;
             } else if (finalResult.stream) {
-                logToFile(`[${handlerId} Stream T2 - ${socketId}] Processing final stream from HostAgent...`);
-                // Process the final stream - safeEmit inside processAndEmitStream will attach finalFrontendAction
-                const streamOutput = await processAndEmitStream(finalResult.stream, true); // Emit final result=true
+                logToFile(`${logPrefix} Turn 2: Processing final stream from HostAgent...`);
+                // processAndEmitStream handles emitting final chat_result with thoughts/action
+                const streamOutput = await processAndEmitStream(finalResult.stream, true); // isFinalResponse = true
                 if (streamOutput) {
                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                     history.push(finalModelTurn);
-                    logToFile(`[${handlerId} History T2 Done - ${socketId}] Appended final HostAgent response. Size: ${history.length}`);
-
+                    logToFile(`${logPrefix} History Update: Appended final HostAgent response. Size: ${history.length}`);
                     return history; // <<< SUCCESSFUL COMPLETION (A2A STREAM)
                 } else {
-                    logToFile(`[${handlerId} Error T2 - ${socketId}] Final stream processing failed.`);
-                    // safeEmit for error was likely called inside processAndEmitStream
-
+                    logToFile(`${logPrefix} Error T2: Final stream processing failed.`);
+                    // Error likely emitted within processAndEmitStream
                     return history;
                 }
             } else {
-                logToFile(`[${handlerId} Error T2 - ${socketId}] Unexpected empty state from final HostAgent model call.`);
+                logToFile(`${logPrefix} Error T2: Unexpected empty state from final HostAgent model call.`);
                 safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected final response.', step: 'thinking' });
-
                 return history;
             }
             // --- End Turn 2 Logic ---
 
         } else if (initialResult.stream) {
-            // --- Initial Host Agent Result is a Stream ---
-            // This is less likely now but handle it. No Sub Agent involved here.
-            logToFile(`[${handlerId} Stream T1 Direct - ${socketId}] HostAgent provided stream directly. Processing...`);
-            const streamOutput = await processAndEmitStream(initialResult.stream, true); // Emit final result=true
+            // --- Initial Host Agent Result is a Stream (Direct Response, No Routing) ---
+            logToFile(`${logPrefix} Turn 1: HostAgent provided stream directly. Processing...`);
+            // processAndEmitStream handles emitting final chat_result with thoughts/action
+            const streamOutput = await processAndEmitStream(initialResult.stream, true); // isFinalResponse = true
             if (streamOutput) {
                 const modelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }] };
                 history.push(modelTurn);
-                logToFile(`[${handlerId} History T1 Direct Done - ${socketId}] Appended initial HostAgent response. Size: ${history.length}`);
-
+                logToFile(`${logPrefix} History Update: Appended initial HostAgent stream response. Size: ${history.length}`);
                 return history; // <<< SUCCESSFUL COMPLETION (DIRECT STREAM)
             } else {
-                logToFile(`[${handlerId} Error T1 Direct - ${socketId}] Initial stream processing failed.`);
-
+                logToFile(`${logPrefix} Error T1: Initial stream processing failed.`);
+                // Error likely emitted within processAndEmitStream
                 return history;
             }
 
         } else {
-            logToFile(`[${handlerId} Error T1 - ${socketId}] Unexpected empty state from initial HostAgent model call.`);
-            safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response.', step: 'thinking' });
-
+            // Unexpected empty state from initial call
+            logToFile(`${logPrefix} Error T1: Unexpected empty state from initial HostAgent model call.`);
+            safeEmit('chat_error', { type: 'error', message: 'Internal error: Unexpected initial response from AI.', step: 'thinking' });
             return history;
         }
 
     } catch (error: any) {
-        logToFile(`[${handlerId} CRITICAL Error - ${socketId} Lang: ${language}] ${error.message}\nStack: ${error.stack}`);
-        safeEmit('chat_error', { type: "error", message: error.message || "An unexpected server error occurred.", step: 'handler_exception' });
-
-        return history;
+        const errorMsg = error instanceof Error ? error.message : String(error);
+        logToFile(`${logPrefix} CRITICAL Error in handleStreaming: ${errorMsg}\nStack: ${error.stack}`);
+        safeEmit('chat_error', { type: "error", message: errorMsg || "An unexpected server error occurred during processing.", step: 'handler_exception' });
+        return history; // Return history on critical error
     } finally {
-        logToFile(`--- [${handlerId} ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
+        logToFile(`${logPrefix} --- STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
     }
 }

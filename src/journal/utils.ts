@@ -1,38 +1,91 @@
+// src/journal/utils.ts
+
 import fs from 'fs';
 import path from 'path';
 import { parse, Parser } from 'csv-parse'; // Use specific import if possible
 import { CSVRecord } from './types'; // Assuming CSVRecord type definition
-
+import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
+import { container } from 'tsyringe';
+import pino, { Logger, LoggerOptions, stdTimeFunctions, LevelWithSilent } from 'pino';
 
 import { JournalDetails } from './types'; // Assuming you have this interface defined
-
-export const LOG_FILE: string = path.join(__dirname, './data/crawl_journal.log');
-import pino, { Logger, LoggerOptions, stdTimeFunctions } from 'pino';
-import { APP_LOG_FILE_PATH, LOG_LEVEL, LOGS_DIRECTORY } from '../config'; // Import từ config.ts
-
+import { ConfigService } from '../config/config.service';
 import { PinoFileDestination } from './types';
 
-// --- Đảm bảo thư mục log tồn tại ---
-// // LOGS_DIRECTORY và APP_LOG_FILE_PATH đã là đường dẫn tuyệt đối từ config.ts
-// console.log(`[DEBUG] Target log directory: ${LOGS_DIRECTORY}`);
-// console.log(`[DEBUG] Target absolute log file path: ${APP_LOG_FILE_PATH}`);
-
+// --- Resolve ConfigService via tsyringe ---
+// Ensure this runs early enough for subsequent code needing config
+let configService: ConfigService;
 try {
-    // Kiểm tra và tạo thư mục nếu chưa tồn tại
+    configService = container.resolve(ConfigService);
+} catch (error) {
+    console.error("CRITICAL ERROR: Failed to resolve ConfigService via tsyringe.", error);
+    // Depending on the application structure, you might need a fallback or just exit
+    process.exit(1);
+}
+
+// --- Get configuration values from ConfigService ---
+// Use getters for resolved paths
+const LOGS_DIRECTORY: string = configService.logsDirectory;
+const APP_LOG_FILE_PATH: string = configService.appLogFilePath;
+// Get log level directly from the parsed config object
+const LOG_LEVEL: LevelWithSilent = configService.config.LOG_LEVEL;
+
+// --- Define a separate log file for journal-specific crawling (if needed) ---
+// This seems independent of the main application log defined by APP_LOG_FILE_PATH
+export const JOURNAL_CRAWL_LOG_FILE: string = path.join(__dirname, './data/crawl_journal.log');
+// Ensure its directory exists too (optional, depending on requirements)
+// const journalLogDir = path.dirname(JOURNAL_CRAWL_LOG_FILE);
+// if (!fs.existsSync(journalLogDir)) {
+//     fs.mkdirSync(journalLogDir, { recursive: true });
+// }
+
+
+// --- Simple logging function (for early use or specific files like crawl_journal.log) ---
+// Note: This writes to JOURNAL_CRAWL_LOG_FILE, not APP_LOG_FILE_PATH
+const LOG_PREFIX = `[${new Date().toISOString()}]`;
+export function logToFile(message: string): void {
+    try {
+        fs.appendFileSync(JOURNAL_CRAWL_LOG_FILE, `${LOG_PREFIX} ${message}\n`);
+    } catch (err) {
+        // Fallback to console if file logging fails
+        console.error(`${LOG_PREFIX} FAILED TO WRITE TO LOG FILE (${JOURNAL_CRAWL_LOG_FILE}): ${message}`, err);
+    }
+}
+
+// --- Validate essential config paths retrieved ---
+if (!LOGS_DIRECTORY) {
+    // Use console.error as the main logger might not be ready/writable yet
+    console.error(`${LOG_PREFIX} CRITICAL ERROR: Logs directory path could not be determined from ConfigService.`);
+    // Optionally use logToFile for the journal log as a fallback record
+    logToFile(`CRITICAL ERROR: Logs directory path could not be determined from ConfigService.`);
+    throw new Error("Logs directory path is not configured or retrievable.");
+}
+if (!APP_LOG_FILE_PATH) {
+    console.error(`${LOG_PREFIX} CRITICAL ERROR: Application log file path could not be determined from ConfigService.`);
+    logToFile(`CRITICAL ERROR: Application log file path could not be determined from ConfigService.`);
+    throw new Error("Application log file path is not configured or retrievable.");
+}
+
+// --- Ensure the main application log directory exists and is writable ---
+// Use the resolved LOGS_DIRECTORY from ConfigService
+console.log(`[DEBUG] Ensuring main log directory exists and is writable: ${LOGS_DIRECTORY}`);
+try {
+    // Check/create directory
     if (!fs.existsSync(LOGS_DIRECTORY)) {
         fs.mkdirSync(LOGS_DIRECTORY, { recursive: true });
-        console.log(`[DEBUG] Log directory created: ${LOGS_DIRECTORY}`);
+        console.log(`[DEBUG] Main log directory created: ${LOGS_DIRECTORY}`);
     }
-    // Kiểm tra quyền ghi vào thư mục
+    // Check write access
     fs.accessSync(LOGS_DIRECTORY, fs.constants.W_OK);
     // console.log(`[DEBUG] Write access to directory ${LOGS_DIRECTORY} confirmed.`);
 } catch (err: unknown) {
-    // Sử dụng unknown và kiểm tra kiểu lỗi
     const errorMessage = err instanceof Error ? err.message : String(err);
+    // Use console.error for critical startup issues
     console.error(`CRITICAL: Error checking/creating log directory or no write access: ${LOGS_DIRECTORY}. Error: ${errorMessage}`, err instanceof Error ? err.stack : '');
-    process.exit(1); // Thoát nếu không thể ghi log
+    // Optionally try logging to the separate journal log
+    logToFile(`CRITICAL: Error checking/creating log directory or no write access: ${LOGS_DIRECTORY}. Error: ${errorMessage}`);
+    process.exit(1); // Exit if main logging directory isn't usable
 }
-
 // --- Cấu hình Pino ---
 // Định nghĩa kiểu cho levelLabels rõ ràng hơn
 const levelLabels: { [key: number]: string } = {
@@ -49,7 +102,7 @@ const pinoConfig: LoggerOptions = {
             level: levelLabels[number] || label
         }),
     },
-    
+
     base: undefined, // Bỏ các trường mặc định như pid, hostname
 };
 
@@ -77,7 +130,7 @@ const createFallbackLogger = (): MinimalLogger => ({
     fatal: (...args: any[]) => console.error('[FALLBACK LOGGER]', ...args),
     debug: (...args: any[]) => console.debug('[FALLBACK LOGGER]', ...args),
     trace: (...args: any[]) => console.trace('[FALLBACK LOGGER]', ...args),
-    child: function() { return this; }, // Trả về chính nó để tránh lỗi khi gọi .child()
+    child: function () { return this; }, // Trả về chính nó để tránh lỗi khi gọi .child()
 });
 
 
@@ -94,12 +147,12 @@ try {
 
     // Bắt sự kiện error trên stream - .on hợp lệ vì kế thừa Writable
     fileDestination.on('error', (err: Error) => {
-      console.error('[PINO DESTINATION ERROR] Error writing to log file:', err);
-      // Cân nhắc chuyển sang fallback logger nếu lỗi ghi file nghiêm trọng
-      // if (!isShuttingDown) { // Tránh chuyển đổi logger trong quá trình shutdown
-      //    console.warn('[PINO DESTINATION ERROR] Switching to fallback logger due to file write error.');
-      //    logger = createFallbackLogger();
-      // }
+        console.error('[PINO DESTINATION ERROR] Error writing to log file:', err);
+        // Cân nhắc chuyển sang fallback logger nếu lỗi ghi file nghiêm trọng
+        // if (!isShuttingDown) { // Tránh chuyển đổi logger trong quá trình shutdown
+        //    console.warn('[PINO DESTINATION ERROR] Switching to fallback logger due to file write error.');
+        //    logger = createFallbackLogger();
+        // }
     });
 
     // Khởi tạo logger Pino thật sự, truyền vào destination đã được ép kiểu
@@ -162,9 +215,9 @@ const gracefulShutdown = (signal: ShutdownSignal, error?: Error | unknown): void
             if (exitCode === 0) exitCode = 1; // Đặt mã lỗi nếu flush thất bại
         }
     } else if (fileDestination) {
-         console.warn('[GRACEFUL SHUTDOWN] Log destination exists but flushSync is not available? (Type issue or sync=true?)');
+        console.warn('[GRACEFUL SHUTDOWN] Log destination exists but flushSync is not available? (Type issue or sync=true?)');
     } else {
-         console.log('[GRACEFUL SHUTDOWN] No file destination to flush (using fallback logger or sync=true).');
+        console.log('[GRACEFUL SHUTDOWN] No file destination to flush (using fallback logger or sync=true).');
     }
 
     // Đóng stream nếu cần (thường không bắt buộc sau flushSync, nhưng có thể giúp giải phóng tài nguyên ngay lập tức)
@@ -216,57 +269,57 @@ process.on('unhandledRejection', (reason: unknown, promise: Promise<any>) => {
     if (!isShuttingDown) {
         gracefulShutdown('unhandledRejection', error);
     } else {
-         console.error('[FATAL] Unhandled promise rejection occurred during shutdown process.');
-         // Có thể cần thoát ngay lập tức
-         process.exit(1);
+        console.error('[FATAL] Unhandled promise rejection occurred during shutdown process.');
+        // Có thể cần thoát ngay lập tức
+        process.exit(1);
     }
 });
 
 
 export const traverseNodes = (node: Node | null): string => {
-  if (!node) return '';
-  if (node.nodeType === Node.TEXT_NODE) {
-    return node.textContent?.trim() || ''; // Null safe access
-  } else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length > 0) {
-    return Array.from(node.childNodes).map(traverseNodes).join(' ').trim();
-  }
-  return '';
+    if (!node) return '';
+    if (node.nodeType === Node.TEXT_NODE) {
+        return node.textContent?.trim() || ''; // Null safe access
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length > 0) {
+        return Array.from(node.childNodes).map(traverseNodes).join(' ').trim();
+    }
+    return '';
 };
 
 export const createURLList = (baseURL: string, lastPageNumber: number): string[] => {
-  return Array.from({ length: lastPageNumber }, (_, i) => `${baseURL}&page=${i + 1}`); // Corrected length
+    return Array.from({ length: lastPageNumber }, (_, i) => `${baseURL}&page=${i + 1}`); // Corrected length
 };
 
 export const formatISSN = (issn: string): string | null => {
-  if (!issn) { // Thêm kiểm tra đầu vào null/undefined/empty
-      return null;
-  }
-  const issnValues = issn.split(',').map(item => item.trim());
-  // Ưu tiên phần tử thứ 2 nếu có, nếu không lấy phần tử đầu tiên
-  const issnToSearch = (issnValues[1] || issnValues[0] || '').replace(/-/g, ''); // Xóa dấu gạch nối cũ nếu có
+    if (!issn) { // Thêm kiểm tra đầu vào null/undefined/empty
+        return null;
+    }
+    const issnValues = issn.split(',').map(item => item.trim());
+    // Ưu tiên phần tử thứ 2 nếu có, nếu không lấy phần tử đầu tiên
+    const issnToSearch = (issnValues[1] || issnValues[0] || '').replace(/-/g, ''); // Xóa dấu gạch nối cũ nếu có
 
-  // Regex mới: 4 số, sau đó là 3 số và ký tự cuối cùng là số hoặc X
-  // Thêm ^ và $ để đảm bảo khớp toàn bộ chuỗi 8 ký tự sau khi xóa gạch nối
-  const issnRegex = /^(\d{4})(\d{3}[\dX])$/i; // i để không phân biệt hoa thường cho X
+    // Regex mới: 4 số, sau đó là 3 số và ký tự cuối cùng là số hoặc X
+    // Thêm ^ và $ để đảm bảo khớp toàn bộ chuỗi 8 ký tự sau khi xóa gạch nối
+    const issnRegex = /^(\d{4})(\d{3}[\dX])$/i; // i để không phân biệt hoa thường cho X
 
-  const match = issnToSearch.match(issnRegex);
+    const match = issnToSearch.match(issnRegex);
 
-  if (match) {
-    // match[1] là group 1 (\d{4})
-    // match[2] là group 2 (\d{3}[\dX])
-    return `${match[1]}-${match[2]}`;
-  }
+    if (match) {
+        // match[1] là group 1 (\d{4})
+        // match[2] là group 2 (\d{3}[\dX])
+        return `${match[1]}-${match[2]}`;
+    }
 
-  // Nếu không khớp định dạng 8 ký tự chuẩn (vd: 12345, ABCDEFGH) thì trả về null
-  return null;
+    // Nếu không khớp định dạng 8 ký tự chuẩn (vd: 12345, ABCDEFGH) thì trả về null
+    return null;
 };
 
 
 
 interface RetryOptions {
-  retries: number;
-  minTimeout: number; // Base delay in ms
-  factor: number;     // Multiplier for exponential backoff
+    retries: number;
+    minTimeout: number; // Base delay in ms
+    factor: number;     // Multiplier for exponential backoff
 }
 
 /**
@@ -278,50 +331,50 @@ interface RetryOptions {
 * @throws The error from the last attempt if all retries fail.
 */
 export const retryAsync = async <T>(
-  fn: (attempt: number) => Promise<T>, // Function now accepts attempt number
-  options: RetryOptions,
-  logger: Logger | MinimalLogger // Accept logger instance
+    fn: (attempt: number) => Promise<T>, // Function now accepts attempt number
+    options: RetryOptions,
+    logger: Logger | MinimalLogger // Accept logger instance
 ): Promise<T> => {
-  const { retries, minTimeout, factor } = options;
-  let lastError: any = null; // Store the last error
+    const { retries, minTimeout, factor } = options;
+    let lastError: any = null; // Store the last error
 
-  for (let attempt = 1; attempt <= retries; attempt++) {
-      try {
-          // Pass the current attempt number to the function
-          return await fn(attempt);
-      } catch (error: any) {
-          lastError = error; // Store the error
-          if (attempt >= retries) {
-              logger.error({
-                  event: 'retry_max_attempts_reached',
-                  attempt,
-                  maxRetries: retries,
-                  err: lastError // Log the actual error object
-              }, `Function failed after maximum ${retries} attempts. Throwing last error.`);
-              throw lastError; // Throw the actual error from the last attempt
-          }
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+            // Pass the current attempt number to the function
+            return await fn(attempt);
+        } catch (error: any) {
+            lastError = error; // Store the error
+            if (attempt >= retries) {
+                logger.error({
+                    event: 'retry_max_attempts_reached',
+                    attempt,
+                    maxRetries: retries,
+                    err: lastError // Log the actual error object
+                }, `Function failed after maximum ${retries} attempts. Throwing last error.`);
+                throw lastError; // Throw the actual error from the last attempt
+            }
 
-          // Calculate delay using exponential backoff
-          // Delay = minTimeout * (factor ^ (attempt - 1)) -> Common pattern
-          // Or use factor ^ attempt for slightly faster increase: minTimeout * (factor ^ attempt)
-          const timeout = Math.round(minTimeout * Math.pow(factor, attempt - 1));
+            // Calculate delay using exponential backoff
+            // Delay = minTimeout * (factor ^ (attempt - 1)) -> Common pattern
+            // Or use factor ^ attempt for slightly faster increase: minTimeout * (factor ^ attempt)
+            const timeout = Math.round(minTimeout * Math.pow(factor, attempt - 1));
 
-          logger.warn({
-              event: 'retry_attempt_failed',
-              attempt,
-              maxRetries: retries,
-              delayMs: timeout,
-              err: error // Log the error for this specific attempt
-          }, `Attempt ${attempt}/${retries} failed. Retrying in ${timeout}ms...`);
+            logger.warn({
+                event: 'retry_attempt_failed',
+                attempt,
+                maxRetries: retries,
+                delayMs: timeout,
+                err: error // Log the error for this specific attempt
+            }, `Attempt ${attempt}/${retries} failed. Retrying in ${timeout}ms...`);
 
-          await new Promise((resolve) => setTimeout(resolve, timeout));
-      }
-  }
+            await new Promise((resolve) => setTimeout(resolve, timeout));
+        }
+    }
 
-  // This part should theoretically not be reached if retries >= 1
-  // But it satisfies TypeScript's need for a return/throw at the end
-  logger.error({ event: 'retry_logic_error', err: lastError }, "Retry loop completed without success or throwing an error (unexpected). Throwing last encountered error.");
-  throw lastError || new Error("Retry failed after multiple attempts, but no specific error was captured.");
+    // This part should theoretically not be reached if retries >= 1
+    // But it satisfies TypeScript's need for a return/throw at the end
+    logger.error({ event: 'retry_logic_error', err: lastError }, "Retry loop completed without success or throwing an error (unexpected). Throwing last encountered error.");
+    throw lastError || new Error("Retry failed after multiple attempts, but no specific error was captured.");
 };
 
 
@@ -459,10 +512,10 @@ export const parseCSVString = async (csvContent: string, parentLogger: typeof lo
 
         // Error handling for the stream itself
         parser.on('error', (streamError) => {
-             if (!parser.destroyed) {
-                 csvLogger.error({ err: streamError, event: 'parse_stream_error' }, `CSV parsing stream error.`);
-                 reject(new Error(`CSV parsing stream error: ${streamError.message}`));
-             }
+            if (!parser.destroyed) {
+                csvLogger.error({ err: streamError, event: 'parse_stream_error' }, `CSV parsing stream error.`);
+                reject(new Error(`CSV parsing stream error: ${streamError.message}`));
+            }
         });
     });
 };
@@ -498,45 +551,45 @@ export const readCSV = async (filePath: string, parentLogger: typeof logger = lo
 
 // Define OUTPUT_JSON path if not already globally available in this scope
 export async function appendJournalToFile(
-  journalData: JournalDetails,
-  filePath: string,
-  taskLogger: typeof logger // Sử dụng kiểu logger được truyền vào
+    journalData: JournalDetails,
+    filePath: string,
+    taskLogger: typeof logger // Sử dụng kiểu logger được truyền vào
 ): Promise<void> {
-  let jsonLine: string | undefined = undefined;
-  try {
-      // Log đối tượng gốc (sẽ trông giống Object Literal trên console)
-      taskLogger.debug({ event: 'append_received_object', journalTitle: journalData?.title || 'Untitled' }, "Received journalData object for appending.");
-      // console.log("Object received:", journalData); // Bật nếu cần xem chi tiết
+    let jsonLine: string | undefined = undefined;
+    try {
+        // Log đối tượng gốc (sẽ trông giống Object Literal trên console)
+        taskLogger.debug({ event: 'append_received_object', journalTitle: journalData?.title || 'Untitled' }, "Received journalData object for appending.");
+        // console.log("Object received:", journalData); // Bật nếu cần xem chi tiết
 
-      taskLogger.debug({ event: 'stringify_start' }, "Attempting to stringify journal data...");
-      // ----> Bước 1: Cô lập lỗi stringify <----
-      try {
-          jsonLine = JSON.stringify(journalData);
-           if (!jsonLine) {
-             taskLogger.error({ event: 'stringify_failed_undefined', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL: JSON.stringify returned undefined!");
-             console.error(`!!!!!!!! STRINGIFY RETURNED UNDEFINED for ${journalData?.title || 'Untitled'} !!!!!!!!`);
-             return;
-           }
-           // Log một phần chuỗi JSON đã được stringify
-           taskLogger.debug({ event: 'stringify_success', firstChars: jsonLine.substring(0, 150) + "..." }, "Successfully stringified data. Output starts with keys in quotes.");
-           // console.log("Stringified JSON:", jsonLine.substring(0,150)+"..."); // Bật nếu cần xem chuỗi JSON thực tế
-      } catch (stringifyError: any) {
-          taskLogger.error({ err: stringifyError, event: 'stringify_failed_exception', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL ERROR DURING JSON.stringify!");
-          console.error(`!!!!!!!! STRINGIFY FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, stringifyError);
-          // Xem xét stack trace của lỗi stringifyError để tìm nguyên nhân (ví dụ: circular structure)
-          return; // Dừng lại nếu không stringify được
-      }
+        taskLogger.debug({ event: 'stringify_start' }, "Attempting to stringify journal data...");
+        // ----> Bước 1: Cô lập lỗi stringify <----
+        try {
+            jsonLine = JSON.stringify(journalData);
+            if (!jsonLine) {
+                taskLogger.error({ event: 'stringify_failed_undefined', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL: JSON.stringify returned undefined!");
+                console.error(`!!!!!!!! STRINGIFY RETURNED UNDEFINED for ${journalData?.title || 'Untitled'} !!!!!!!!`);
+                return;
+            }
+            // Log một phần chuỗi JSON đã được stringify
+            taskLogger.debug({ event: 'stringify_success', firstChars: jsonLine.substring(0, 150) + "..." }, "Successfully stringified data. Output starts with keys in quotes.");
+            // console.log("Stringified JSON:", jsonLine.substring(0,150)+"..."); // Bật nếu cần xem chuỗi JSON thực tế
+        } catch (stringifyError: any) {
+            taskLogger.error({ err: stringifyError, event: 'stringify_failed_exception', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL ERROR DURING JSON.stringify!");
+            console.error(`!!!!!!!! STRINGIFY FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, stringifyError);
+            // Xem xét stack trace của lỗi stringifyError để tìm nguyên nhân (ví dụ: circular structure)
+            return; // Dừng lại nếu không stringify được
+        }
 
-      // ----> Bước 2: Thực hiện ghi file <----
-      const lineToWrite = jsonLine + '\n';
-      taskLogger.debug({ event: 'append_start', path: filePath }, `Attempting to append stringified data...`);
-      await fs.promises.appendFile(filePath, lineToWrite, 'utf8');
-      taskLogger.info({ event: 'append_success', path: filePath, journalTitle: journalData?.title || 'Untitled' }, `Successfully appended journal.`);
-      // console.log("Append successful for:", journalData?.title);
+        // ----> Bước 2: Thực hiện ghi file <----
+        const lineToWrite = jsonLine + '\n';
+        taskLogger.debug({ event: 'append_start', path: filePath }, `Attempting to append stringified data...`);
+        await fs.promises.appendFile(filePath, lineToWrite, 'utf8');
+        taskLogger.info({ event: 'append_success', path: filePath, journalTitle: journalData?.title || 'Untitled' }, `Successfully appended journal.`);
+        // console.log("Append successful for:", journalData?.title);
 
-  } catch (appendError: any) {
-      // Lỗi này là lỗi của fs.promises.appendFile
-      taskLogger.error({ err: appendError, path: filePath, event: 'append_failed_fs', journalTitle: journalData?.title || 'Untitled' }, `CRITICAL ERROR during fs.appendFile!`);
-      console.error(`!!!!!!!! FS APPEND FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, appendError);
-  }
+    } catch (appendError: any) {
+        // Lỗi này là lỗi của fs.promises.appendFile
+        taskLogger.error({ err: appendError, path: filePath, event: 'append_failed_fs', journalTitle: journalData?.title || 'Untitled' }, `CRITICAL ERROR during fs.appendFile!`);
+        console.error(`!!!!!!!! FS APPEND FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, appendError);
+    }
 }

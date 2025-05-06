@@ -1,11 +1,12 @@
 // src/chatbot/gemini/functionRegistry.ts
 import { Socket } from 'socket.io';
-import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput, Language } from '../shared/types';
-import logToFile from '../../utils/logger';
-import { StatusUpdate } from '../shared/types';
+import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
+import { FunctionHandlerInput, FunctionHandlerOutput, Language, StatusUpdate } from '../shared/types'; // Adjust path if needed
+import logToFile from '../../utils/logger'; // Adjust path if needed
+import { Logger } from 'pino'; // <<< Import Logger
 
-// Import all handlers
+// --- Import Handlers ---
+// Ensure paths are correct relative to this file's location
 import { GetConferencesHandler } from '../handlers/getConferences.handler';
 import { GetJournalsHandler } from '../handlers/getJournals.handler';
 import { GetWebsiteInfoHandler } from '../handlers/getWebsiteInfo.handler';
@@ -13,104 +14,164 @@ import { NavigationHandler } from '../handlers/navigation.handler';
 import { OpenGoogleMapHandler } from '../handlers/openGoogleMap.handler';
 import { FollowUnfollowItemHandler } from '../handlers/followUnfollowItem.handler';
 import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
-// ... import other handlers as they are created
+// ... import other handlers
 
-// Simple handler for unknown functions
+// --- Unknown Function Handler ---
 class UnknownFunctionHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const functionName = context.args?.__functionName || 'unknown'; // Pass name if possible
-        logToFile(`[${context.handlerId} ${context.socketId}] Error: Unknown function call requested: ${functionName}`);
+        // Attempt to get the function name from context if passed down, otherwise use a generic message
+        const functionName = context.functionName || 'unknown function';
+        const logPrefix = `[${context.handlerId} ${context.socketId}]`;
+        logToFile(`${logPrefix} Error: Attempted to execute unknown function: ${functionName}`);
+        // No need to emit status here, as the calling function (executeFunction) already did.
         return {
-            modelResponseContent: `Error: The requested function "${functionName}" is not available or not recognized by the system.`,
+            modelResponseContent: `Error: I cannot perform the action associated with "${functionName}" as it's not a recognized capability.`,
             frontendAction: undefined,
         };
     }
 }
 
-// Registry mapping function names to handlers
+// --- Function Registry ---
+// Maps the function names called by the LLM to their corresponding handler instances.
 const functionRegistry: Record<string, IFunctionHandler> = {
+    // Map function names exactly as defined in the FunctionDeclarations provided to the LLM
     getConferences: new GetConferencesHandler(),
     getJournals: new GetJournalsHandler(),
     getWebsiteInfo: new GetWebsiteInfoHandler(),
     navigation: new NavigationHandler(),
     openGoogleMap: new OpenGoogleMapHandler(),
     followUnfollowItem: new FollowUnfollowItemHandler(),
-    sendEmailToAdmin: new SendEmailToAdminHandler(),
-    // Add other function names and their corresponding handlers here
-    __unknown__: new UnknownFunctionHandler(), // Fallback handler
+    sendEmailToAdmin: new SendEmailToAdminHandler(), // Handles the confirmation step initiation
+    // Add other function handlers here...
+
+    // Explicit fallback handler (can be used if needed, but direct lookup failure is handled below)
+    '__unknown__': new UnknownFunctionHandler(),
 };
 
 /**
- * Executes the appropriate function handler based on the function call name.
+ * Looks up and executes the appropriate function handler based on the LLM's function call.
+ * Handles status updates via the provided callback and manages execution errors.
  *
- * @param functionCall The function call object from the LLM.
- * @param socket The socket object for emitting status updates.
- * @param handlerId The ID of the parent handler process.
- * @param language The current language.
- * @returns Promise<FunctionHandlerOutput> The result from the executed handler.
+ * @param functionCall The function call object { name: string; args: any } from the LLM.
+ * @param handlerId A unique identifier for the parent process handling this interaction.
+ * @param language The current language context.
+ * @param onStatusUpdate A callback function to send status updates back to the orchestrator.
+ * @param socket The Socket.IO client socket instance.
+ * @param executionContext Optional context passed down from the caller (e.g., userToken from Agent Card).
+ * @returns A Promise resolving to the FunctionHandlerOutput from the executed handler.
  */
-
 export async function executeFunction(
     functionCall: { name: string; args: any },
-    // socket: Socket, // Keep socket if handlers need it for non-status things
     handlerId: string,
     language: Language,
-    // ADD the callback parameter
     onStatusUpdate: (eventName: 'status_update', data: StatusUpdate) => boolean,
-    // Pass socket separately if needed by handlers for other reasons
-    socket: Socket
+    socket: Socket,
+    executionContext?: any // Optional context from caller (like AgentCard context)
 ): Promise<FunctionHandlerOutput> {
 
-    // REMOVE internal safeEmitStatus helper from executeFunction
-
     const functionName = functionCall.name;
-    const args = functionCall.args;
-    const socketId = socket.id; // Get socketId from the passed socket
-    const userToken = socket.data.token as string | null;
+    const args = functionCall.args || {}; // Ensure args is an object
+    const socketId = socket.id;
+    // Prefer token from executionContext if available (e.g., from AgentCard), otherwise fallback to socket data
+    const userToken = executionContext?.userToken ?? (socket.data.token as string | null);
+    const logPrefix = `[${handlerId} ${socketId}]`;
 
-    logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Attempting execution: ${functionName}`);
+    logToFile(`${logPrefix} FunctionRegistry: Received request for function: ${functionName}`);
 
-    // Use the passed-in onStatusUpdate callback
-    if (!onStatusUpdate('status_update', { type: 'status', step: 'function_call', message: `Received request to call function: ${functionName}`, details: { functionName, args }, timestamp: new Date().toISOString() })) {
-        logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Failed to emit 'function_call' status via callback (maybe disconnected).`);
-        // Decide if this is fatal. If the callback returns false, it implies disconnection.
-        return { modelResponseContent: "Error: Client disconnected before function call initiation.", frontendAction: undefined };
+    // 1. Initial Status Update & Disconnect Check
+    // Inform the orchestrator that a function call is being attempted.
+    if (!onStatusUpdate('status_update', {
+        type: 'status',
+        step: 'function_call_received', // Renamed step for clarity
+        message: `Executing function: ${functionName}`,
+        details: { functionName, argsPreview: JSON.stringify(args).substring(0, 100) + '...' },
+        timestamp: new Date().toISOString()
+    })) {
+        // If the callback returns false, it typically means the client disconnected.
+        logToFile(`${logPrefix} FunctionRegistry: Aborting execution - Client disconnected (onStatusUpdate returned false).`);
+        return {
+            modelResponseContent: "Error: Could not execute function because the client disconnected.",
+            frontendAction: undefined
+        };
     }
 
-    const handler = functionRegistry[functionName]; // Use ?? functionRegistry.__unknown__ later if needed
+    // 2. Handler Lookup
+    const handler = functionRegistry[functionName];
 
+    // 3. Handle Unknown Function
     if (!handler) {
-        logToFile(`[${handlerId} ${socketId}] Error: Unknown function: ${functionName}`);
-        // Emit via callback
-        onStatusUpdate('status_update', { type: 'status', step: 'unknown_function', message: `Error: Function "${functionName}" is not recognized.`, timestamp: new Date().toISOString() });
-        return { modelResponseContent: `Error: The requested function "${functionName}" is not available.`, frontendAction: undefined };
+        const errorMsg = `Function "${functionName}" is not recognized or implemented.`;
+        logToFile(`${logPrefix} FunctionRegistry Error: ${errorMsg}`);
+        // Send a specific status update for unknown function
+        onStatusUpdate('status_update', {
+            type: 'status',
+            step: 'unknown_function',
+            message: `Error: ${errorMsg}`,
+            details: { functionName },
+            timestamp: new Date().toISOString()
+        });
+        // Return an error message suitable for the LLM
+        return {
+            modelResponseContent: `Error: ${errorMsg}`,
+            frontendAction: undefined
+        };
+        // Alternatively, you could use the UnknownFunctionHandler instance:
+        // const unknownHandler = new UnknownFunctionHandler();
+        // const context = { ... create context ... functionName }; // Pass functionName in context
+        // return await unknownHandler.execute(context);
     }
 
+    // 4. Execute Found Handler
+    logToFile(`${logPrefix} FunctionRegistry: Executing handler for ${functionName}...`);
     try {
         const context: FunctionHandlerInput = {
             args: args,
-            userToken,
-            language,
-            handlerId,
-            socketId,
-            onStatusUpdate, // Pass the callback down
-            socket // Pass the socket down
+            userToken: userToken,
+            language: language,
+            handlerId: handlerId,
+            socketId: socketId,
+            onStatusUpdate: onStatusUpdate,
+            socket: socket,
+            functionName: functionName,
+            executionContext: executionContext
         };
 
-        // Execute the handler - IT will now use context.onStatusUpdate
+
+        // --- Execute the handler ---
         const result = await handler.execute(context);
+        // -------------------------
 
-        logToFile(`[${handlerId} ${socketId}] FunctionRegistry: Execution finished for ${functionName}.`);
-        // Emit completion status *after* handler execution via callback
-        onStatusUpdate('status_update', { type: 'status', step: 'processing_function_result', message: `Received result from ${functionName}.`, details: { success: !result.modelResponseContent.toLowerCase().startsWith('error:') }, timestamp: new Date().toISOString() });
-        return result;
+        const isErrorResult = result.modelResponseContent.toLowerCase().startsWith('error:');
+        logToFile(`${logPrefix} FunctionRegistry: Execution finished for ${functionName}. Result indicates error: ${isErrorResult}`);
 
-    } catch (execError: any) {
-        logToFile(`[${handlerId} ${socketId}] CRITICAL Error executing handler for ${functionName}: ${execError.message}`);
-        // Emit error via callback
-        onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: `System error during function execution (${functionName}).`, details: { error: execError.message }, timestamp: new Date().toISOString() });
+        // Send a final status update indicating the result processing stage
+        onStatusUpdate('status_update', {
+            type: 'status',
+            step: 'function_result_processed', // Renamed step
+            message: `Function ${functionName} execution completed${isErrorResult ? ' with error' : ''}.`,
+            details: { functionName, success: !isErrorResult }, // Simple success check based on convention
+            timestamp: new Date().toISOString()
+        });
+
+        return result; // Return the handler's output
+
+    } catch (executionError: any) {
+        // Catch unexpected errors *during* handler execution (not errors returned *by* the handler)
+        const errorMsg = executionError instanceof Error ? executionError.message : String(executionError);
+        logToFile(`${logPrefix} FunctionRegistry CRITICAL Error executing ${functionName}: ${errorMsg}\nStack: ${executionError.stack}`);
+
+        // Send a critical error status update
+        onStatusUpdate('status_update', {
+            type: 'status',
+            step: 'function_error', // Use a generic function error step
+            message: `System error during execution of function ${functionName}.`,
+            details: { functionName, error: errorMsg },
+            timestamp: new Date().toISOString()
+        });
+
+        // Return an error output suitable for the LLM
         return {
-            modelResponseContent: `Error encountered while trying to execute the function ${functionName}: ${execError.message}`,
+            modelResponseContent: `Error: An unexpected system error occurred while trying to execute ${functionName}. (${errorMsg})`,
             frontendAction: undefined,
         };
     }

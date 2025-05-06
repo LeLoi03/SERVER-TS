@@ -1,9 +1,9 @@
-// src/socket/middleware/auth.middleware.ts
 import { Socket } from 'socket.io';
 import jwt from 'jsonwebtoken';
-// Bỏ import crypto nếu không dùng nữa
-import { config } from '../../config/environment';
-import logToFile from '../../utils/logger';
+import { container } from 'tsyringe'; // <<< Import container
+import { Logger } from 'pino'; // <<< Import Logger type
+import { LoggingService } from '../../services/logging.service'; // <<< Import LoggingService (Adjust path if needed)
+import { ConfigService } from '../../config/config.service';
 
 interface ExtendedError extends Error {
     data?: any;
@@ -12,37 +12,47 @@ interface ExtendedError extends Error {
 export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError) => void) => {
     const token = socket.handshake.auth.token as string | undefined;
     const socketId = socket.id;
-    logToFile(`[Socket Auth MW] Attempting auth for socket ${socketId}. Token provided: ${!!token}`);
+
+    // <<< Resolve LoggingService
+    const loggingService = container.resolve(LoggingService);
+    const configService = container.resolve(ConfigService);
+
+    // <<< Create a logger specific to this socket's auth attempt
+    const logger: Logger = loggingService.getLogger({
+        middleware: 'socketAuth',
+        socketId,
+    });
+
+    // <<< Use logger instance
+    logger.info({ hasToken: !!token }, 'Authentication attempt');
 
     if (!token) {
-        logToFile(`[Socket Auth MW] No token provided for socket ${socketId}. Treating as anonymous.`);
-        // Đánh dấu là anonymous và không có token/user data
+        logger.info('No token provided. Treating as anonymous.');
+        // Mark as anonymous
         socket.data.userId = null;
-        socket.data.user = null; // Sẽ chứa { id, email, role } sau khi fetch
+        socket.data.user = null;
         socket.data.token = null;
         return next();
     }
 
     try {
-        // Chỉ cần verify token, không cần decode ở đây nữa
-        jwt.verify(token, config.jwtSecret);
+        jwt.verify(token, configService.config.JWT_SECRET);
 
-        logToFile(`[Socket Auth MW] Token signature validated successfully for socket ${socketId}.`);
+        logger.info('Token signature validated successfully.'); // <<< Use logger
 
-        // --- LƯU TOKEN GỐC ---
-        // Không tạo hash nữa. Lưu token để handler connection sử dụng gọi API /me
+        // Store original token for connection handler
         socket.data.token = token;
-        // Khởi tạo các trường user data là null, sẽ được điền sau khi fetch /me
-        socket.data.userId = null;
-        socket.data.user = null;
-        // --------------------
+        socket.data.userId = null; // To be filled by connection handler
+        socket.data.user = null;   // To be filled by connection handler
 
-        next(); // Cho phép kết nối
+        next(); // Allow connection
 
     } catch (err: any) {
-        logToFile(`[Socket Auth MW] Token validation failed for socket ${socketId}. Reason: ${err.message}`);
+        // <<< Use logger for authentication failure (Warn level seems appropriate)
+        logger.warn({ reason: err.message }, `Token validation failed.`);
+
         const error: ExtendedError = new Error(`Authentication error: Invalid or expired token.`);
         error.data = { code: 'AUTH_FAILED', message: err.message };
-        next(error); // Từ chối kết nối
+        next(error); // Reject connection
     }
 };

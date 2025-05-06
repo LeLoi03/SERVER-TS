@@ -1,227 +1,363 @@
 // src/chatbot/shared/types.ts
-import { FunctionCall, Part } from "@google/generative-ai"; // Import necessary types
-// Ensure HistoryItem part can hold various types
-export interface HistoryItem {
-    role: "user" | "model" | "function"; // Add 'function' role
-    parts: Part[]; // Use the SDK's Part type directly
-    timestamp?: string;
-}
 
-// ChatResponse might just return the final outcome
-export interface ChatResponse {
-    type: "text" | "error";
-    message: string;
-    thought?: string; // Optional field for internal reasoning/steps
-}
+import { FunctionCall, Part } from "@google/generative-ai"; // SDK types
+import { Socket } from "socket.io";
 
-// You might want an intermediate response type if handleUserInput needs more info
-export interface GeminiInteractionResult {
-    status: "requires_function_call" | "final_text" | "error";
-    functionCall?: FunctionCall; // Present if status is 'requires_function_call'
-    text?: string; // Present if status is 'final_text'
-    errorMessage?: string; // Present if status is 'error'
-}
+// --- Basic Types ---
 
-// Define the structure for a single step in the thought process
-export interface ThoughtStep {
-    step: string;       // The identifier (e.g., 'thinking', 'function_call')
-    message: string;    // The descriptive message for that step
-    timestamp: string;  // ISO timestamp when the step occurred
-    details?: any;      // Optional: Any extra data (like function args)
-}
+/** Represents supported languages for the application. */
+export type Language = 'en' | 'vi' | 'zh'; // Add more as needed
 
-export interface StatusUpdate {
-    type: 'status';
-    step: string;
-    message: string;
-    details?: any; // Optional details relevant to the step (e.g., function name/args)
-    thoughts?: ThoughtStep[]; // Add the thought process history
-    timestamp?: string;
-}
-
-export interface ChatUpdate {
-    type: 'partial_result';
-    textChunk: string;
-
-}
-// --- ResultUpdate (No change needed here, already has optional 'action') ---
-export interface ResultUpdate {
-    type: 'result';
-    message: string; // The text message to display
-    thoughts?: ThoughtStep[];
-    action?: FrontendAction; // Now includes NavigationAction or OpenMapAction
-}
-
-
-export interface ErrorUpdate {
-    type: 'error';
-    message: string;
-    step?: string; // The step where the error might have occurred
-    thought?: string; // Optional: keep if used elsewhere, or remove
-    thoughts?: ThoughtStep[]; // Add the thought process history leading to the error
-}
-
-
-
+/** Represents the available prebuilt voices for text-to-speech. */
 export type PrebuiltVoice = "Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" | "Orus" | "Zephyr";
+
+/** Defines the possible output modalities (text, audio, image). */
 export type OutputModality = "text" | "audio" | "image";
-export type Language = 'en' | 'vi' | 'zh';
+
+/** Defines the chat interaction mode (live streaming vs. regular request/response). */
 export type ChatMode = 'live' | 'regular';
+
+/** Defines the structure for a language option displayed to the user. */
 export interface LanguageOption {
     code: Language;
     name: string;
-    flagCode: string;
+    flagCode: string; // e.g., 'gb', 'vn', 'cn' for flag icons
+}
+
+/** Defines the structure for a single item in the conversation history. */
+export interface HistoryItem {
+    /** The role of the entity that produced this part of the conversation. */
+    role: "user" | "model" | "function"; // 'function' role represents the *result* returned to the model
+    /** The content parts, directly using the Google AI SDK's Part type. */
+    parts: Part[];
+    /** Optional ISO timestamp indicating when the item was added. */
+    timestamp?: string;
+}
+
+// --- API & Service Result Types ---
+
+/** Represents the result of an internal API call (e.g., to the backend service). */
+export interface ApiCallResult {
+    /** Indicates whether the API call was successful in retrieving and processing data. */
+    success: boolean;
+    /** The raw string data received from the API (may be JSON, error text, etc.). Null if no response obtained. */
+    rawData: string | null;
+    /** Optional formatted string data after transformation (null if not applicable or failed). */
+    formattedData: string | null;
+    /** Optional error message describing issues during the call, parsing, or transformation. */
+    errorMessage?: string;
+}
+
+/** Represents the structure of a followed item retrieved from the backend. */
+export interface FollowItem {
+    /** The unique ID of the followed conference or journal. */
+    id: string;
+    // Add other relevant fields returned by the API (e.g., title, acronym) if needed later.
+    // title?: string;
+    // acronym?: string;
+}
+
+// --- Gemini Model Interaction ---
+
+/** Defines the possible outcomes of a single interaction turn with the Gemini model. */
+export interface GeminiInteractionResult {
+    /** The status indicating the outcome of the generation attempt. */
+    status: "requires_function_call" | "final_text" | "error";
+    /** The function call requested by the model (present if status is 'requires_function_call'). */
+    functionCall?: FunctionCall;
+    /** The final text response generated by the model (present if status is 'final_text'). */
+    text?: string;
+    /** An error message if the generation failed (present if status is 'error'). */
+    errorMessage?: string;
+}
+
+// --- Frontend Interaction & Updates ---
+
+/** Defines the types of actions the backend can request the frontend to perform. */
+export type FrontendAction =
+    | { type: 'navigate'; url: string }
+    | { type: 'openMap'; location: string }
+    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Payload defined below
+    // | { type: 'otherAction'; payload: any } // Example for future actions
+    | undefined; // Allows for no action
+
+/** Defines the payload for the 'confirmEmailSend' frontend action. */
+export interface ConfirmSendEmailAction {
+    /** A unique identifier for this specific confirmation request. */
+    confirmationId: string;
+    /** The email subject line. */
+    subject: string;
+    /** The type of email request (e.g., for contact or reporting). */
+    requestType: 'contact' | 'report'; // Use specific types if known
+    /** The main body/message of the email. */
+    message: string;
+    /** The duration (in milliseconds) the confirmation dialog should wait for user input. */
+    timeoutMs: number;
+}
+
+/** Represents a single step in the backend's thought process during a request. */
+export interface ThoughtStep {
+    /** An identifier for the stage (e.g., 'receiving_input', 'calling_gemini', 'executing_function'). */
+    step: string;
+    /** A human-readable description of the step being performed. */
+    message: string;
+    /** ISO timestamp when the step occurred. */
+    timestamp: string;
+    /** Optional: Additional details relevant to the step (e.g., function arguments, API endpoint). */
+    details?: any;
+}
+
+/** Represents a status update sent to the frontend during processing. */
+export interface StatusUpdate {
+    type: 'status';
+    /** Identifier for the current processing stage. */
+    step: string;
+    /** User-friendly message describing the current status. */
+    message: string;
+    /** Optional details relevant to this specific status update. */
+    details?: any;
+    /** Optional: The accumulated thought process steps up to this point. */
+    thoughts?: ThoughtStep[];
+    /** Optional but recommended: ISO timestamp of the update. */
+    timestamp?: string;
+}
+
+/** Represents a chunk of text sent during streaming responses. */
+export interface ChatUpdate {
+    type: 'partial_result';
+    /** The piece of text generated in this chunk. */
+    textChunk: string;
+}
+
+/** Represents the final result of a chat interaction turn sent to the frontend. */
+export interface ResultUpdate {
+    type: 'result';
+    /** The complete final text message to display to the user. */
+    message: string;
+    /** Optional: The complete thought process for this interaction turn. */
+    thoughts?: ThoughtStep[];
+    /** Optional: An action for the frontend to perform alongside displaying the message. */
+    action?: FrontendAction;
+}
+
+/** Represents an error update sent to the frontend. */
+export interface ErrorUpdate {
+    type: 'error';
+    /** The error message to display to the user. */
+    message: string;
+    /** Optional: The processing step where the error occurred. */
+    step?: string;
+     /** Optional: The complete thought process leading up to the error. */
+    thoughts?: ThoughtStep[];
+}
+
+/** Represents an warning update sent to the frontend. */
+export interface WarningUpdate {
+    type: 'warning';
+    /** The warning message to display to the user. */
+    message: string;
+    /** Optional: The processing step where the warning occurred. */
+    step?: string;
+     /** Optional: The complete thought process leading up to the warning. */
+    thoughts?: ThoughtStep[];
 }
 
 
+/** Defines the possible types for a message displayed in the chat UI. */
+export type ChatDisplayMessageType = 'text' | 'error' | 'warning' | 'map' | undefined;
+
+/** Represents a single message object used for rendering the chat history in the UI. */
+export interface ChatMessage {
+    /** A unique identifier for the message (e.g., generated by UUID). */
+    id: string;
+    /** The primary text content of the message (can be label for map). */
+    message: string;
+    /** Flag indicating if the message originated from the user. */
+    isUser: boolean;
+    /** The display type of the message (text, map, error, etc.). */
+    type: ChatDisplayMessageType;
+    /** Optional: Accumulated thought steps associated with this message generation. */
+    thoughts?: ThoughtStep[];
+    /** Optional: Location string used if the message type is 'map'. */
+    location?: string;
+    /** Optional: Timestamp when the message was created/received. */
+    timestamp?: string | Date; // Allow Date object as well
+}
+
+/** Payload informing the frontend about the result of a user confirmation action (e.g., email send). */
+export interface ConfirmationResultPayload {
+    /** The ID matching the original `ConfirmSendEmailAction` request. */
+    confirmationId: string;
+    /** The outcome status of the confirmation process. */
+    status:
+        | 'confirmed' // User clicked confirm, backend action succeeded (or attempted)
+        | 'cancelled' // User clicked cancel/dismiss
+        | 'timeout'   // Confirmation window expired
+        | 'not_found' // Backend couldn't find a pending confirmation with this ID
+        | 'failed'    // User confirmed, but subsequent backend action failed (e.g., sending email)
+        | 'unauthorized' // Attempt to confirm/cancel by wrong user/session
+        | 'error';    // Internal server error during confirmation processing
+    /** A user-friendly message summarizing the outcome. */
+    message: string;
+    /** Optional: Additional details, especially for 'failed' or 'error' statuses. */
+    details?: any;
+}
+
+// --- Agent Communication Protocol (Example V1) ---
+
+/** Represents a request sent between agents (e.g., Host to ConferenceAgent). */
+export interface AgentCardRequest {
+    /** Unique ID for this specific task request. */
+    taskId: string;
+    /** ID of the overarching conversation. */
+    conversationId: string;
+    /** ID of the agent sending the request ('HostAgent' or another agent's ID). */
+    senderAgentId: 'HostAgent' | string;
+    /** ID of the agent designated to handle the request. */
+    receiverAgentId: string;
+    /** ISO timestamp of when the request was created. */
+    timestamp: string;
+    /** Natural language description of the task for the receiving agent. */
+    taskDescription: string;
+    /** Optional context to provide the receiving agent. */
+    context?: {
+        history?: HistoryItem[]; // e.g., last few messages
+        userToken?: string | null;
+        language?: Language;
+    };
+}
+
+/** Represents a response sent back from a receiving agent to the sender. */
+export interface AgentCardResponse {
+    /** The ID of the original task request this response corresponds to. */
+    taskId: string;
+    /** ID of the overarching conversation. */
+    conversationId: string;
+    /** ID of the agent sending this response. */
+    senderAgentId: string;
+    /** ID of the intended recipient of the response ('HostAgent' or another agent). */
+    receiverAgentId: 'HostAgent' | string;
+    /** ISO timestamp of when the response was created. */
+    timestamp: string;
+    /** The status indicating the outcome of the task processing. */
+    status: 'success' | 'error' | 'in_progress';
+    /** Optional data containing the result of the task (e.g., JSON string, text summary). */
+    resultData?: any;
+    /** Optional error message if the status is 'error'. */
+    errorMessage?: string;
+    /** Optional action requested by the sub-agent for the frontend to perform. */
+    frontendAction?: FrontendAction;
+}
+
+
+// --- Socket Event Data Payloads --- <<< THÊM SECTION NÀY VÀ CÁC TYPE BÊN DƯỚI
+
+/** Data structure expected when the client sends a message. */
+export interface SendMessageData {
+    /** The text input from the user. */
+    userInput: string;
+    /** Flag indicating if the response should be streamed (defaults to true if omitted). */
+    isStreaming?: boolean;
+    /** The language context for the message. */
+    language: Language;
+}
+
+/** Data structure expected when the client requests to load a specific conversation. */
+export interface LoadConversationData {
+    /** The unique ID of the conversation to load. */
+    conversationId: string;
+}
+
+/** Data structure expected for email confirmation/cancellation events from the client. */
+export interface ConfirmationEventData {
+    /** The unique ID of the confirmation process being responded to. */
+    confirmationId: string;
+}
+
+/** Data structure expected when the client requests to delete a conversation. */
+export interface DeleteConversationData {
+    /** The unique ID of the conversation to delete. */
+    conversationId: string;
+}
+
+/** Data structure expected when the client requests to clear messages from a conversation. */
+export interface ClearConversationData {
+    /** The unique ID of the conversation whose messages should be cleared. */
+    conversationId: string;
+}
+
+
+// --- Constants ---
+
+/** List of available language options for UI selection. */
 export const AVAILABLE_LANGUAGES: LanguageOption[] = [
     { code: 'en', name: 'English', flagCode: 'gb' },
     { code: 'vi', name: 'Tiếng Việt', flagCode: 'vn' },
     { code: 'zh', name: '中文', flagCode: 'cn' },
-    // Add other languages
 ];
 
+/** Default language used if none is specified or detected. */
 export const DEFAULT_LANGUAGE: Language = 'vi';
+/** Default voice used for text-to-speech. */
 export const DEFAULT_VOICE: PrebuiltVoice = 'Puck';
+/** Default output modality. */
 export const DEFAULT_MODALITY: OutputModality = 'audio';
 
-
-
-// src/chabot/gemini/types.ts
-import { Socket } from 'socket.io';
+// --- Gemini types ---
 
 /**
- * Input context provided to each function handler.
+ * Input context provided to each function handler during execution.
+ * Contains all necessary data and callbacks for the handler's operation.
  */
-
 export interface FunctionHandlerInput {
-    args: any;
+    /** Arguments provided by the LLM for the function call. Structure varies per function. */
+    args: Record<string, any>; // Use Record<string, any> or a more specific union if possible
+
+    /** Authentication token for the user associated with the request, if available. */
     userToken: string | null;
+
+    /** The current language setting for the interaction (e.g., 'en', 'vi'). */
     language: Language;
+
+    /** A unique identifier for this specific function execution instance (can trace back to parent process). */
     handlerId: string;
-    socketId: string; // Keep for logging
-    // ADD the callback
+
+    /** The unique ID of the client's socket connection. */
+    socketId: string;
+
+    /**
+     * Callback function to send status updates back to the central orchestrator (e.g., intentHandler).
+     * Should return `true` if the update was likely sent successfully, `false` if the underlying connection is likely closed.
+     * @param eventName - Should always be 'status_update'.
+     * @param data - The StatusUpdate payload.
+     * @returns Boolean indicating likely success of sending the update.
+     */
     onStatusUpdate: (eventName: 'status_update', data: StatusUpdate) => boolean;
-    // REMOVE socket if ONLY used for status, otherwise keep it for other potential uses.
-    // Let's assume for now it might be needed elsewhere, so we keep it.
+
+    /** The raw Socket.IO client socket instance. Use with caution, prefer onStatusUpdate. */
     socket: Socket;
+
+    /** Optional: The name of the function being executed, passed down from the registry for context. */
+    functionName?: string;
+
+    /** Optional: Any additional context passed down from the calling layer (e.g., agent card context). */
+    executionContext?: any;
 }
-
-
-
-// Define the payload structure for the email confirmation action
-export interface ConfirmSendEmailAction {
-    confirmationId: string; // Unique ID for this confirmation request
-    subject: string;
-    requestType: 'contact' | 'report';
-    message: string;
-    timeoutMs: number; // Timeout duration in milliseconds
-}
-
-
-
-// Add the new action type to your FrontendAction union type
-export type FrontendAction =
-    | { type: 'navigate'; url: string }
-    | { type: 'openMap'; location: string }
-    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // <-- Add this
-    // | { type: 'otherAction'; ... } // Add other existing actions
-    | undefined; // Keep undefined if it's used
-
 
 /**
- * Standardized output structure for all function handlers.
+ * Output structure expected from every function handler after execution.
  */
 export interface FunctionHandlerOutput {
-    modelResponseContent: string; // Content to be sent back to the LLM in the function response
-    frontendAction?: FrontendAction; // Optional action to be executed by the frontend
-}
+    /**
+     * The response content formulated for the LLM.
+     * This typically includes the results of the function's operation or a description of an error.
+     * It should guide the LLM on what to say next to the user.
+     */
+    modelResponseContent: string;
 
-
-// --- Define the return type ---
-// --- Define the return type ---
-export interface ApiCallResult {
-    success: boolean;
-    rawData: string; // Raw JSON string or error message string
-    formattedData: string | null; // Formatted Markdown or null if transformation failed/not applicable
-    errorMessage?: string; // Specific error message if success is false
-}
-
-
-export interface FollowItem {
-    id: string; // Can be conferenceId or journalId depending on context
-    // Add other fields if your API returns them (like title, acronym)
-}
-
-
-// --- Agent Card Protocol V1 ---
-export interface AgentCardRequest {
-    taskId: string;             // ID duy nhất cho nhiệm vụ này
-    conversationId: string;     // ID của cuộc hội thoại chung
-    senderAgentId: 'HostAgent' | string; // ID của agent gửi (string cho các sub agent sau này)
-    receiverAgentId: string;   // ID của agent nhận (ví dụ: 'ConferenceAgent')
-    timestamp: string;          // ISO Timestamp
-    taskDescription: string;    // Mô tả nhiệm vụ bằng ngôn ngữ tự nhiên
-    inputData?: any;            // Dữ liệu đầu vào cấu trúc cho nhiệm vụ (ví dụ: args cho function call)
-    context?: {                 // Ngữ cảnh tùy chọn
-        history?: HistoryItem[]; // Vài tin nhắn cuối
-        userToken?: string | null;
-    };
-}
-
-export interface AgentCardResponse {
-    taskId: string;             // ID của nhiệm vụ gốc
-    conversationId: string;
-    senderAgentId: string;      // ID của agent gửi phản hồi
-    receiverAgentId: 'HostAgent' | string;
-    timestamp: string;
-    status: 'success' | 'error' | 'in_progress'; // Trạng thái kết quả
-    resultData?: any;           // Dữ liệu kết quả (ví dụ: JSON string, text)
-    errorMessage?: string;      // Thông báo lỗi nếu status='error'
-    frontendAction?: FrontendAction; // Cho phép Sub Agent trả về action nếu cần (ví dụ: confirmEmailSend)
-}
-
-
-
-export type MessageType = 'text' | 'error' | 'warning' | 'map' | undefined; // <<< Add 'map'
-
-export interface ChatMessageType {
-    id: string;
-    message: string; // Can be used as a label for the map or fallback text
-    isUser: boolean;
-    type: MessageType; // <<< Use the updated type
-    thoughts?: ThoughtStep[];
-    location?: string; // <<< ADDED: Optional location for map messages
-    // Add other potential properties if needed
-}
-
-
-
-
-// Payload for the confirmation action from backend
-export interface ConfirmSendEmailAction {
-    confirmationId: string;
-    subject: string;
-    requestType: 'contact' | 'report';
-    message: string;
-    timeoutMs: number;
-}
-
-
-/**
- * Payload for the result of a confirmation action (sent FROM backend TO frontend).
- * Informs the client about the outcome of a 'confirmEmailSend' or similar action.
- */
-export interface ConfirmationResultPayload {
-    confirmationId: string; // The ID of the original confirmation request
-    status:
-        | 'confirmed'      // User confirmed, action likely succeeded (e.g., email sent)
-        | 'cancelled'      // User cancelled the action
-        | 'timeout'        // The confirmation request timed out before user interaction
-        | 'not_found'      // The confirmation ID was not found (already processed or invalid)
-        | 'failed'         // User confirmed, but the action failed (e.g., email sending error)
-        | 'unauthorized'   // The user trying to confirm/cancel was not the original requester
-        | 'error';         // Generic error processing the confirmation/cancellation
-    message: string;       // A user-friendly message describing the outcome
-    details?: any;         // Optional: Additional details (e.g., error specifics if status is 'failed' or 'error')
+    /**
+     * Optional action to be triggered on the frontend UI after the function completes.
+     * Examples include navigating to a URL, opening a map, or showing a confirmation dialog.
+     */
+    frontendAction?: FrontendAction; // Use FrontendAction from shared types
 }

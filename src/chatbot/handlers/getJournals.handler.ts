@@ -1,73 +1,97 @@
 // src/handlers/getJournals.handler.ts
-import { executeGetJournals } from '../services/getJournals.service'; // Adjust path if needed
-import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
-import logToFile from '../../utils/logger'; // Adjust path if needed
+import { executeGetJournals } from '../services/getJournals.service'; 
+import { IFunctionHandler } from '../interface/functionHandler.interface'; 
+import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types'; 
+import logToFile from '../../utils/logger'; 
 
 export class GetJournalsHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        const { args, handlerId, socketId, onStatusUpdate } = context;
+        const logPrefix = `[${handlerId} ${socketId}]`;
         const searchQuery = args?.searchQuery as string | undefined;
-        const dataType = "journal";
+        const dataType = "journal"; // Constant for the data type
 
-        logToFile(`[${handlerId} ${socketId}] Handler: GetJournals, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Handler: GetJournals, Args: ${JSON.stringify(args)}`);
 
-        // REMOVED internal safeEmitStatus definition
+        // --- Helper function để gửi status update ---
+        const sendStatus = (step: string, message: string, details?: object) => {
+            if (onStatusUpdate) {
+                onStatusUpdate('status_update', {
+                    type: 'status',
+                    step,
+                    message,
+                    details,
+                    timestamp: new Date().toISOString(),
+                });
+            } else {
+                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+            }
+        };
 
         try {
-            // --- Start Detailed Emits using context.onStatusUpdate ---
+            // --- 1. Validation (Guard Clause) ---
+            sendStatus('validating_function_args', `Validating arguments for getting ${dataType}...`, { args });
 
-            // 1. Validation
-             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating arguments for getJournals...', details: { args }, timestamp: new Date().toISOString() })) {
-                 if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
-             }
-             // Add specific validation if needed
-
-            // 2. Prepare & Execute API Call
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'retrieving_info', message: `Retrieving ${dataType} data...`, details: { dataType, searchQuery: searchQuery || 'N/A' }, timestamp: new Date().toISOString() })) {
-                if (!socket?.connected) throw new Error(`Client disconnected before retrieving ${dataType} data.`);
-                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'retrieving_info' status via callback, but continuing...`);
+            // Validate that searchQuery is a non-empty string
+            if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '') {
+                const errorMsg = "Missing or empty search query.";
+                logToFile(`${logPrefix} GetJournals: Validation Failed - ${errorMsg}`);
+                sendStatus('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
+                return { modelResponseContent: `Error: ${errorMsg} Please provide a search query for journals.`, frontendAction: undefined };
             }
+            // searchQuery is now confirmed to be a non-empty string
 
-            // --- KIỂM TRA SỰ TỒN TẠI VÀ TRẢ VỀ SỚM ---
-            if (!searchQuery) {
-                const errorMsg = "Missing search query.";
-                logToFile(`[${handlerId} ${socketId}] getJournals: Failed: ${errorMsg}`);
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Missing search query.', details: { error: errorMsg, args }, timestamp: new Date().toISOString() });
-                return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined };
-            }
+            // --- 2. Prepare & Execute API Call ---
+            sendStatus('retrieving_info', `Retrieving ${dataType} data for query: "${searchQuery}"...`, { dataType, searchQuery });
 
             const apiResult = await executeGetJournals(searchQuery);
-            logToFile(`[${handlerId} ${socketId}] API result: Success=${apiResult.success}`);
+            logToFile(`${logPrefix} API Result: Success=${apiResult.success}, Query="${searchQuery}"`);
 
-            // 3. Process Result & Emit Detailed Status via callback
+            // --- 3. Process Result ---
             let modelResponseContent: string;
+
             if (apiResult.success) {
-                modelResponseContent = apiResult.formattedData ?? apiResult.rawData;
-                 if (apiResult.formattedData === null) {
-                    onStatusUpdate('status_update', { type: 'status', step: 'function_warning', message: `Data formatting issue for ${dataType}. The structure might be unexpected.`, details: { rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 50) + '...' : '[object]' }, timestamp: new Date().toISOString() });
-                    logToFile(`[${handlerId} ${socketId}] Warning: Formatted data is null for ${dataType}.`);
-                    if (apiResult.errorMessage) {
-                        modelResponseContent = apiResult.errorMessage;
-                    }
-                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Retrieved ${dataType} data, but formatting issue occurred.`, details: { success: true, formattingIssue: true }, timestamp: new Date().toISOString() });
+                // Successfully retrieved data, check formatting
+                if (apiResult.formattedData !== null) {
+                    // Ideal case: data retrieved and formatted
+                    modelResponseContent = apiResult.formattedData;
+                    sendStatus('data_found', `Successfully retrieved and processed ${dataType} data.`, { success: true, query: searchQuery });
                 } else {
-                    onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: `Successfully retrieved and processed ${dataType} data.`, details: { success: true }, timestamp: new Date().toISOString() });
+                    // Data retrieved but formatting failed or returned null
+                    // Use rawData if available, otherwise use errorMessage, otherwise a default message
+                    modelResponseContent = apiResult.rawData ?? (apiResult.errorMessage || `Received raw ${dataType} data for "${searchQuery}", but formatting was unavailable.`);
+                    const warningMsg = `Data formatting issue for ${dataType}. Displaying raw data or error message.`;
+                    logToFile(`${logPrefix} Warning: ${warningMsg}`);
+                    sendStatus('function_warning', warningMsg, {
+                        rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 100) + '...' : '[object]',
+                        errorMessage: apiResult.errorMessage,
+                        query: searchQuery
+                    });
+                    // Still considered "data_found" but with issues
+                    sendStatus('data_found', `Retrieved ${dataType} data, but with formatting issues.`, { success: true, formattingIssue: true, query: searchQuery });
                 }
             } else {
-                modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data.`;
-                onStatusUpdate('status_update', { type: 'status', step: 'api_call_failed', message: `API call failed for ${dataType}.`, details: { error: apiResult.errorMessage, success: false }, timestamp: new Date().toISOString() });
+                // API call failed entirely
+                modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data for query: "${searchQuery}".`;
+                logToFile(`${logPrefix} API call failed: ${modelResponseContent}`);
+                sendStatus('api_call_failed', `API call failed for ${dataType}.`, { error: modelResponseContent, success: false, query: searchQuery });
             }
-            // --- End Detailed Emits ---
 
+            // --- 4. Return Result ---
             return {
                 modelResponseContent,
+                frontendAction: undefined // No direct frontend action needed
+            };
+
+        } catch (error: any) {
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} CRITICAL Error in GetJournalsHandler: ${errorMessage}\nStack: ${error.stack}`);
+            // Use optional chaining for sendStatus in catch
+            sendStatus?.('function_error', `Critical error during ${dataType} retrieval: ${errorMessage}`);
+            return {
+                modelResponseContent: `An unexpected error occurred while trying to get journals: ${errorMessage}`,
                 frontendAction: undefined
             };
-        } catch (error: any) {
-             logToFile(`[${handlerId} ${socketId}] Error in GetJournalsHandler: ${error.message}`);
-             onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during journal retrieval: ${error.message}`, timestamp: new Date().toISOString() });
-             return { modelResponseContent: `Error executing getJournals: ${error.message}`, frontendAction: undefined };
         }
     }
 }

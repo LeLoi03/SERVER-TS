@@ -1,8 +1,8 @@
 // src/chatbot/utils/historyMapper.ts
-import { HistoryItem, ChatMessageType } from '../shared/types'; // Import backend types
+import { HistoryItem, ChatMessage } from '../shared/types'; // Import backend types
 import { generateMessageId } from './chatUtils'; // Import frontend utility
 
-export const mapHistoryToFrontendMessages = (history: HistoryItem[]): ChatMessageType[] => {
+export const mapHistoryToFrontendMessages = (history: HistoryItem[]): ChatMessage[] => {
     if (!history) return [];
 
     // 1. Lọc ra chỉ những tin nhắn cần hiển thị cho người dùng
@@ -22,7 +22,7 @@ export const mapHistoryToFrontendMessages = (history: HistoryItem[]): ChatMessag
     });
 
     // 2. Map những tin nhắn đã lọc thành định dạng frontend
-    return filteredHistory.map((item): ChatMessageType => {
+    return filteredHistory.map((item): ChatMessage => {
         // Tại đây, chúng ta biết chắc chắn item.parts[0].text tồn tại
         const messageText = item.parts[0].text!; // Sử dụng non-null assertion vì đã lọc ở trên
         const messageId = generateMessageId();
@@ -41,6 +41,3 @@ export const mapHistoryToFrontendMessages = (history: HistoryItem[]): ChatMessag
         };
     });
 };
-
-// Helper getTextFromParts không còn cần thiết cho mục đích mapping này nữa
-// vì chúng ta đã lọc và chỉ xử lý phần text. Bạn có thể xóa nó nếu không dùng ở đâu khác.

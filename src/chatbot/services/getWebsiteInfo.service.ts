@@ -1,6 +1,23 @@
 // src/chatbot/services/getWebsiteInfo.service.ts
+import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
+import { container } from 'tsyringe'; // Import container for resolving singletons
 import logToFile from "../../utils/logger";
-import { CONFERENCE_WEBSITE_DESCRIPTION } from "../../config";
+import { ConfigService } from '../../config/config.service';
+
+
+const LOG_PREFIX = "[GetWebsiteInfoService]";
+
+
+// --- Lấy ConfigService Instance ---
+const configService = container.resolve(ConfigService); // Resolve singleton instance
+
+// --- Lấy cấu hình từ ConfigService ---
+// Đảm bảo CONFERENCE_WEBSITE_DESCRIPTION tồn tại trong config
+const CONFERENCE_WEBSITE_DESCRIPTION = configService.config.CONFERENCE_WEBSITE_DESCRIPTION;
+if (!CONFERENCE_WEBSITE_DESCRIPTION) {
+    logToFile(`${LOG_PREFIX} CRITICAL ERROR: CONFERENCE_WEBSITE_DESCRIPTION is not configured.`);
+    throw new Error("CONFERENCE_WEBSITE_DESCRIPTION is not configured.");
+}
 
 // Define the return type structure (you might want a shared types file)
 interface WebsiteInfoResult {

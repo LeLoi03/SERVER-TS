@@ -1,4 +1,4 @@
-// src/gemini/gemini.ts
+// src/chatbot/gemini/gemini.ts
 import {
     GoogleGenerativeAI,
     GenerationConfig,
@@ -9,11 +9,15 @@ import {
     GenerateContentResult,
     EnhancedGenerateContentResponse,
     FinishReason,
-    FunctionCall
+    FunctionCall,
+    ModelParams
+    // Role // You might need to import Role if you use it explicitly below
 } from "@google/generative-ai";
-import logToFile from '../../utils/logger';
-import { HistoryItem } from '../shared/types';
-import { GeminiInteractionResult } from '../shared/types';
+import logToFile from '../../utils/logger'; // Adjust path if needed
+import { HistoryItem } from '../shared/types'; // Adjust path if needed
+import { GeminiInteractionResult } from '../shared/types'; // Adjust path if needed
+
+const LOG_PREFIX = "[GeminiService]";
 
 export class Gemini {
     private genAI: GoogleGenerativeAI;
@@ -21,342 +25,365 @@ export class Gemini {
 
     constructor(apiKey: string, modelName: string) {
         if (!apiKey) {
-            throw new Error("API Key is not set.");
+            logToFile(`${LOG_PREFIX} Error: API Key is missing or empty.`);
+            throw new Error("API Key is not set for GeminiService.");
         }
         this.genAI = new GoogleGenerativeAI(apiKey);
         this.modelName = modelName;
-        logToFile(`GeminiService initialized for model: ${modelName}`);
+        logToFile(`${LOG_PREFIX} Initialized for model: ${modelName}`);
     }
 
-    // getModel remains the same
-    private getModel(systemInstruction?: string, tools?: Tool[]): GenerativeModel {
-        // Construct system instruction part only if provided
-        const systemInstructionPart = systemInstruction
-            ? { role: "system", parts: [{ text: systemInstruction }] } // SDK now recommends 'system' role
-            : undefined;
+    /**
+     * Gets a configured GenerativeModel instance.
+     * @param systemInstruction Optional system instruction (string, single Part, or array of strings/Parts).
+     * @param tools Optional list of tools (FunctionDeclarations).
+     * @returns Configured GenerativeModel.
+     */
+    private getModel(
+        systemInstructionInput?: string | Part | (string | Part)[],
+        tools?: Tool[]
+    ): GenerativeModel {
 
-        return this.genAI.getGenerativeModel({
+        let systemInstructionForModel: string | Part | Content | undefined;
+
+        if (typeof systemInstructionInput === 'string' || systemInstructionInput === undefined) {
+            systemInstructionForModel = systemInstructionInput;
+        } else if (!Array.isArray(systemInstructionInput) && typeof systemInstructionInput === 'object' && systemInstructionInput !== null) {
+            // Optional: Add stricter check if this object is definitely a Part
+            // e.g., if ('text' in systemInstructionInput || 'inlineData' in systemInstructionInput) { ... }
+            systemInstructionForModel = systemInstructionInput;
+        } else if (Array.isArray(systemInstructionInput)) {
+            const parts: Part[] = [];
+            for (const item of systemInstructionInput) {
+                if (typeof item === 'string') {
+                    parts.push({ text: item });
+                } else if (typeof item === 'object' && item !== null) {
+                    // Basic check if it looks like a Part object
+                    if ('text' in item || 'inlineData' in item || 'functionCall' in item || 'functionResponse' in item) {
+                        parts.push(item);
+                    } else {
+                        logToFile(`${LOG_PREFIX} getModel Warning: Invalid object found in systemInstruction array. Ignoring.`);
+                    }
+                }
+            }
+            if (parts.length > 0) {
+                // --- *** SỬA ĐỔI Ở ĐÂY *** ---
+                // Luôn thêm role: 'system' một cách tường minh
+                systemInstructionForModel = { role: 'system', parts: parts };
+                // --- *** KẾT THÚC SỬA ĐỔI *** ---
+            } else {
+                systemInstructionForModel = undefined;
+            }
+        } else {
+            logToFile(`${LOG_PREFIX} getModel Warning: Unexpected type for systemInstructionInput. Ignoring.`);
+            systemInstructionForModel = undefined;
+        }
+
+        const modelParams: ModelParams = {
             model: this.modelName,
-            // Conditionally add systemInstruction and tools
-            ...(systemInstructionPart && { systemInstruction: systemInstructionPart }),
-            ...(tools && tools.length > 0 && { tools: tools }),
-        });
+        };
+        if (systemInstructionForModel) {
+            modelParams.systemInstruction = systemInstructionForModel;
+        }
+        if (tools && tools.length > 0) {
+            modelParams.tools = tools;
+        }
+
+        return this.genAI.getGenerativeModel(modelParams);
     }
 
 
+    /**
+     * Maps internal HistoryItem[] to the SDK's Content[] format.
+     * Ensures roles are valid ('user', 'model', 'function', 'tool').
+     */
+    private mapHistoryToContent(history: HistoryItem[]): Content[] {
+        const validRoles = ['user', 'model', 'function', 'tool']; // 'tool' is alias for 'function' role response
+        return history
+            .map((item, index) => {
+                // Basic validation/mapping for roles if needed
+                // Assuming HistoryItem.role directly maps ('function' for function response)
+                const role = item.role === 'function' ? 'function' : item.role; // Ensure 'function' role is used for responses
+                if (!validRoles.includes(role)) {
+                    logToFile(`${LOG_PREFIX} Warning: History item at index ${index} has invalid role '${item.role}'. Skipping.`);
+                    return null; // Skip invalid items
+                }
+                // Ensure parts are valid Part objects
+                if (!Array.isArray(item.parts) || item.parts.length === 0) {
+                    logToFile(`${LOG_PREFIX} Warning: History item at index ${index} (Role: ${role}) has missing or empty 'parts'. Skipping.`);
+                    return null;
+                }
+                // Add more validation on part structure if necessary
+                return { role, parts: item.parts };
+            })
+            .filter((item): item is Content => item !== null); // Filter out null items
+    }
+
+    /**
+     * Generates content for a single turn (non-streaming).
+     *
+     * @param nextTurnInput Content for the next turn (user text or function response parts).
+     * @param history Previous conversation history.
+     * @param generationConfig Configuration for generation.
+     * @param systemInstruction Optional system instructions.
+     * @param tools Optional tools (function declarations).
+     * @returns A promise resolving to the interaction result.
+     */
     async generateTurn(
-        // Renamed for clarity: This represents the parts for the *next* turn we are adding
-        // This can be user input (as string) or function response (as Part[])
         nextTurnInput: string | Part[],
         history: HistoryItem[],
         generationConfig: GenerationConfig,
-        systemInstruction?: string,
+        systemInstruction?: string | Part | (string | Part)[], // Accept complex type
         tools?: Tool[]
     ): Promise<GeminiInteractionResult> {
 
         const model = this.getModel(systemInstruction, tools);
+        logToFile(`${LOG_PREFIX} generateTurn: Processing ${history.length} history items.`);
 
-        logToFile(`[GeminiService] Received history with ${history.length} items before mapping.`);
-
-        // Map history to the SDK's Content format
-        const effectiveHistory: Content[] = history.map(item => ({
-            // Ensure roles are compatible with the SDK's expected roles ('user', 'model', 'function')
-            // If your HistoryItem uses different role names, map them here.
-            role: item.role,
-            parts: item.parts // Assuming item.parts is already compatible with SDK Part[]
-        }));
-
-        logToFile(`[GeminiService] Mapped to effectiveHistory (SDK Content[]) with ${effectiveHistory.length} items.`);
+        // 1. Map history
+        const effectiveHistory: Content[] = this.mapHistoryToContent(history);
+        logToFile(`${LOG_PREFIX} generateTurn: Mapped to ${effectiveHistory.length} valid Content items.`);
         if (effectiveHistory.length > 0) {
-            logToFile(`[GeminiService] Last item role in effectiveHistory: ${effectiveHistory[effectiveHistory.length - 1].role}`);
+            logToFile(`${LOG_PREFIX} generateTurn: Last history item role: ${effectiveHistory[effectiveHistory.length - 1].role}`);
         }
 
-        logToFile(`Calling generateContent for model: ${this.modelName}`);
-        logToFile(`Generation Config: ${JSON.stringify(generationConfig)}`);
-        // Log tools (existing logic seems okay)
-        if (tools) {
-            const toolNames = tools.map(t => {
-                if ('functionDeclarations' in t && t.functionDeclarations) {
-                    return t.functionDeclarations.map(fd => fd.name);
-                } else if ('codeExecution' in t) {
-                    return '[CodeExecutionTool]';
-                } else if ('googleSearchRetrieval' in t) { return '[GoogleSearchRetrievalTool]'; }
-                return '[UnknownToolType]';
-            }).flat();
-            logToFile(`Tools provided: ${JSON.stringify(toolNames)}`);
-        }
-
-        // --- *** MODIFICATION START *** ---
-        // Prepare the content for the *next* turn based on nextTurnInput
-
+        // 2. Prepare content for the *next* turn
         let nextTurnContent: Content | null = null;
-
         if (typeof nextTurnInput === 'string') {
-            // It's a user text prompt
-            if (nextTurnInput.trim()) { // Check if string is not empty/whitespace
-                logToFile(`[GeminiService] Preparing next turn with user prompt: ${nextTurnInput}`);
-                nextTurnContent = { role: 'user', parts: [{ text: nextTurnInput }] };
+            const trimmedInput = nextTurnInput.trim();
+            if (trimmedInput) {
+                logToFile(`${LOG_PREFIX} generateTurn: Preparing next turn with user text.`);
+                nextTurnContent = { role: 'user', parts: [{ text: trimmedInput }] };
             } else {
-                logToFile(`[GeminiService] Received empty string as nextTurnInput, skipping adding a user turn.`);
+                logToFile(`${LOG_PREFIX} generateTurn: Received empty string as nextTurnInput, skipping.`);
             }
         } else if (Array.isArray(nextTurnInput) && nextTurnInput.length > 0) {
-            // It's parts, likely a function response. Check if the array is not empty.
-            logToFile(`[GeminiService] Preparing next turn with Function Response Parts: ${JSON.stringify(nextTurnInput)}`);
-            // Assume function responses should have the 'function' role for the API
-            nextTurnContent = { role: 'function', parts: nextTurnInput };
+            logToFile(`${LOG_PREFIX} generateTurn: Preparing next turn with function response parts.`);
+            // Ensure the input parts are valid (basic check)
+            if (nextTurnInput.every(p => typeof p === 'object' && p !== null)) {
+                nextTurnContent = { role: 'function', parts: nextTurnInput }; // Use 'function' role for function responses
+            } else {
+                logToFile(`${LOG_PREFIX} generateTurn: Error: nextTurnInput (Part[]) contains invalid parts.`);
+                return { status: "error", errorMessage: "Invalid function response parts provided." };
+            }
         } else {
-            // Input is an empty array or some other unexpected type. Log and skip adding this turn.
-            logToFile(`[GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.`);
+            logToFile(`${LOG_PREFIX} generateTurn: Received empty array or unexpected type as nextTurnInput, skipping.`);
         }
 
-
-        // Construct the final 'contents' array for the API call
+        // 3. Construct final 'contents' payload
         const contentsToSend: Content[] = [...effectiveHistory];
         if (nextTurnContent) {
-            // Only add the next turn if it was validly created
             contentsToSend.push(nextTurnContent);
-        } else if (effectiveHistory.length === 0) {
-            // Edge case: If history is empty AND nextTurnInput was also empty/invalid,
-            // we cannot send an empty contents array to the API.
-            logToFile(`[GeminiService] Error: Cannot generate content with empty history and no valid input for the next turn.`);
+        }
+
+        // 4. Validate payload size
+        if (contentsToSend.length === 0) {
+            logToFile(`${LOG_PREFIX} generateTurn: Error: Cannot generate content with empty effective history and no valid next turn input.`);
             return { status: "error", errorMessage: "Cannot generate content: No history or valid input provided." };
         }
 
-        logToFile(`[GeminiService] Sending total ${contentsToSend.length} Content items to API.`);
+        logToFile(`${LOG_PREFIX} generateTurn: Sending ${contentsToSend.length} Content items to API.`);
         if (nextTurnContent) {
-            logToFile(`  - Added next turn role: ${nextTurnContent.role}`);
+            logToFile(`${LOG_PREFIX}   - Final turn role: ${nextTurnContent.role}`);
         } else {
-            logToFile(`  - No valid next turn added, sending only history.`);
+            logToFile(`${LOG_PREFIX}   - Sending only mapped history.`);
         }
-        // Optional detailed log:
-        // logToFile(`[GeminiService] Full 'contents' payload: ${JSON.stringify(contentsToSend, null, 2)}`);
-        // --- *** MODIFICATION END *** ---
+        // Detailed log (optional, can be verbose)
+        // logToFile(`${LOG_PREFIX} generateTurn: Contents Payload: ${JSON.stringify(contentsToSend)}`);
 
 
+        // 5. Call API
         try {
-            // Use the constructed contentsToSend array
             const result: GenerateContentResult = await model.generateContent({
                 contents: contentsToSend,
                 generationConfig: generationConfig,
-                // Safety settings can be added here if needed
+                // safetySettings can be added here
             });
 
-            // --- Result processing logic remains the same ---
             const response = result.response;
-            if (!response) { // Handle cases where response might be missing
-                logToFile(`Error in generateTurn: API returned no response object.`);
+            if (!response) {
+                logToFile(`${LOG_PREFIX} generateTurn Error: API returned no response object.`);
                 return { status: "error", errorMessage: "API returned no response." };
             }
 
-            const finishReason = response.candidates?.[0]?.finishReason;
-            const firstCandidateContent = response.candidates?.[0]?.content;
-
-            logToFile(`Model Finish Reason: ${finishReason}`);
-
-            // Check for function calls first
-            const functionCallPart = firstCandidateContent?.parts?.find(part => part.functionCall); // Optional chaining
-
-            if (functionCallPart?.functionCall) {
-                logToFile(`Model requested function call: ${functionCallPart.functionCall.name}`);
-                logToFile(`Arguments: ${JSON.stringify(functionCallPart.functionCall.args)}`);
+            // Check for function call using response.functionCalls() helper
+            const functionCalls = response.functionCalls(); // Returns FunctionCall[] or undefined
+            if (functionCalls && functionCalls.length > 0) {
+                logToFile(`${LOG_PREFIX} generateTurn: Model requested function call: ${functionCalls[0].name}`);
+                logToFile(`${LOG_PREFIX}   Arguments: ${JSON.stringify(functionCalls[0].args)}`);
                 return {
                     status: "requires_function_call",
-                    functionCall: functionCallPart.functionCall
+                    functionCall: functionCalls[0] // Return the first one
                 };
             }
 
-            // Check for text response if no function call
-            const responseText = response.text(); // response.text() handles candidate checking internally
-            if (responseText) { // Check if text is not null/undefined/empty string
-                logToFile(`Model generated final text response: ${responseText}...`);
+            // Check for text response using response.text() helper
+            const responseText = response.text();
+            if (responseText) { // Handles null/undefined/empty string check
+                logToFile(`${LOG_PREFIX} generateTurn: Model generated final text response. Length: ${responseText.length}`);
                 return {
                     status: "final_text",
                     text: responseText
                 };
             }
 
-            // If no function call and no text, analyze the finish reason
-            logToFile(`Warning: Model finished (Reason: ${finishReason}) but produced no text and no function call.`);
+            // If no function call and no text, analyze finish reason
+            const finishReason = response.candidates?.[0]?.finishReason;
+            logToFile(`${LOG_PREFIX} generateTurn Warning: Model finished (Reason: ${finishReason}) but produced no text or function call.`);
             let errorMessage = `Model generation stopped unexpectedly. Reason: ${finishReason || 'Unknown'}`;
             switch (finishReason) {
-                case FinishReason.SAFETY:
-                    errorMessage = "Model stopped due to safety concerns.";
-                    break;
-                case FinishReason.RECITATION:
-                    errorMessage = "Model stopped due to recitation policy.";
-                    break;
-                case FinishReason.MAX_TOKENS:
-                    errorMessage = "Model stopped because the maximum output token limit was reached.";
-                    // For MAX_TOKENS, you might still have partial text in response.candidates[0].content.parts
-                    // You could attempt to extract it, but response.text() likely handles this best.
-                    // If response.text() was empty, then the partial text was probably not useful.
-                    break;
+                case FinishReason.SAFETY: errorMessage = "Model stopped due to safety concerns."; break;
+                case FinishReason.RECITATION: errorMessage = "Model stopped due to recitation policy."; break;
+                case FinishReason.MAX_TOKENS: errorMessage = "Model stopped because the maximum output token limit was reached."; break;
                 // Add other specific reasons if needed
             }
             return { status: "error", errorMessage: errorMessage };
 
-
         } catch (error: any) {
-            logToFile(`Error in generateTurn: ${error.message}, Stack: ${error.stack}`);
-            // Check for specific GoogleGenerativeAI errors if possible
-            return { status: "error", errorMessage: error.message || "Failed to generate content." };
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${LOG_PREFIX} generateTurn Error: ${errorMsg}\nStack: ${error.stack}`);
+            return { status: "error", errorMessage: `Failed to generate content: ${errorMsg}` };
         }
     }
 
 
+    /**
+     * Generates content as a stream. Handles potential function calls in the first chunk.
+     *
+     * @param nextTurnInput Content for the next turn (user text or function response parts).
+     * @param history Previous conversation history.
+     * @param generationConfig Configuration for generation.
+     * @param systemInstruction Optional system instructions.
+     * @param tools Optional tools (function declarations).
+     * @returns A promise resolving to an object containing either the stream or an error/function call.
+     */
     async generateStream(
         nextTurnInput: string | Part[],
         history: HistoryItem[],
         generationConfig: GenerationConfig,
-        systemInstruction?: string,
+        systemInstruction?: string | Part | (string | Part)[], // Accept complex type
         tools?: Tool[]
-    ): Promise<{ stream?: AsyncGenerator<EnhancedGenerateContentResponse>; error?: string; functionCalls?: FunctionCall }> {
+    ): Promise<{ stream?: AsyncGenerator<EnhancedGenerateContentResponse>; error?: string; functionCalls?: FunctionCall }> { // Corrected return type - single FC
 
         const model = this.getModel(systemInstruction, tools);
+        logToFile(`${LOG_PREFIX} generateStream: Processing ${history.length} history items.`);
 
-        logToFile(`[GeminiService] Received history with ${history.length} items before mapping (for stream).`);
+        // 1. Map history
+        const effectiveHistory: Content[] = this.mapHistoryToContent(history);
+        logToFile(`${LOG_PREFIX} generateStream: Mapped to ${effectiveHistory.length} valid Content items.`);
 
-        // Map history to the SDK's Content format
-        const effectiveHistory: Content[] = history.map(item => ({
-            // Ensure roles are compatible with the SDK's expected roles ('user', 'model', 'function')
-            // If your HistoryItem uses different role names, map them here.
-            role: item.role,
-            parts: item.parts // Assuming item.parts is already compatible with SDK Part[]
-        }));
-
-        logToFile(`[GeminiService] Mapped history (SDK Content[]) with ${effectiveHistory.length} items (for stream).`);
-
-        if (effectiveHistory.length > 0) {
-            logToFile(`[GeminiService] Last item role in effectiveHistory: ${effectiveHistory[effectiveHistory.length - 1].role}`);
-        }
-
-        logToFile(`Calling generateContent for model: ${this.modelName}`);
-        logToFile(`Generation Config: ${JSON.stringify(generationConfig)}`);
-        // Log tools (existing logic seems okay)
-        if (tools) {
-            const toolNames = tools.map(t => {
-                if ('functionDeclarations' in t && t.functionDeclarations) {
-                    return t.functionDeclarations.map(fd => fd.name);
-                } else if ('codeExecution' in t) {
-                    return '[CodeExecutionTool]';
-                } else if ('googleSearchRetrieval' in t) { return '[GoogleSearchRetrievalTool]'; }
-                return '[UnknownToolType]';
-            }).flat();
-            logToFile(`Tools provided: ${JSON.stringify(toolNames)}`);
-        }
-
-        // --- *** MODIFICATION START *** ---
-        // Prepare the content for the *next* turn based on nextTurnInput
-
+        // 2. Prepare content for the *next* turn (same logic as generateTurn)
         let nextTurnContent: Content | null = null;
-
         if (typeof nextTurnInput === 'string') {
-            // It's a user text prompt
-            if (nextTurnInput.trim()) { // Check if string is not empty/whitespace
-                logToFile(`[GeminiService] Preparing next turn with user prompt: ${nextTurnInput}`);
-                nextTurnContent = { role: 'user', parts: [{ text: nextTurnInput }] };
+            const trimmedInput = nextTurnInput.trim();
+            if (trimmedInput) {
+                logToFile(`${LOG_PREFIX} generateStream: Preparing next turn with user text.`);
+                nextTurnContent = { role: 'user', parts: [{ text: trimmedInput }] };
             } else {
-                logToFile(`[GeminiService] Received empty string as nextTurnInput, skipping adding a user turn.`);
+                logToFile(`${LOG_PREFIX} generateStream: Received empty string as nextTurnInput, skipping.`);
             }
         } else if (Array.isArray(nextTurnInput) && nextTurnInput.length > 0) {
-            // It's parts, likely a function response. Check if the array is not empty.
-            logToFile(`[GeminiService] Preparing next turn with Function Response Parts: ${JSON.stringify(nextTurnInput)}`);
-            // Assume function responses should have the 'function' role for the API
-            nextTurnContent = { role: 'function', parts: nextTurnInput };
+            logToFile(`${LOG_PREFIX} generateStream: Preparing next turn with function response parts.`);
+            if (nextTurnInput.every(p => typeof p === 'object' && p !== null)) {
+                nextTurnContent = { role: 'function', parts: nextTurnInput };
+            } else {
+                logToFile(`${LOG_PREFIX} generateStream: Error: nextTurnInput (Part[]) contains invalid parts.`);
+                return { error: "Invalid function response parts provided." };
+            }
         } else {
-            // Input is an empty array or some other unexpected type. Log and skip adding this turn.
-            logToFile(`[GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.`);
+            logToFile(`${LOG_PREFIX} generateStream: Received empty array or unexpected type as nextTurnInput, skipping.`);
         }
 
-
-        // Construct the final 'contents' array for the API call
+        // 3. Construct final 'contents' payload
         const contentsToSend: Content[] = [...effectiveHistory];
         if (nextTurnContent) {
             contentsToSend.push(nextTurnContent);
-        } else if (effectiveHistory.length === 0) {
-            logToFile(`[GeminiService Stream] Error: Cannot generate content with empty history and no valid input.`);
-            return { error: "Cannot generate content: No history or valid input provided." };
         }
 
-        logToFile(`[GeminiService Stream] Preparing stream request with ${contentsToSend.length} Content items.`);
+        // 4. Validate payload size
+        if (contentsToSend.length === 0) {
+            logToFile(`${LOG_PREFIX} generateStream: Error: Cannot generate content stream with empty effective history and no valid next turn input.`);
+            return { error: "Cannot generate content stream: No history or valid input provided." };
+        }
+
+        logToFile(`${LOG_PREFIX} generateStream: Sending ${contentsToSend.length} Content items to API.`);
         if (nextTurnContent) {
-            logToFile(`  - Added next turn role: ${nextTurnContent.role}`);
+            logToFile(`${LOG_PREFIX}   - Final turn role: ${nextTurnContent.role}`);
         } else {
-            logToFile(`  - No valid next turn added, sending only history.`);
+            logToFile(`${LOG_PREFIX}   - Sending only mapped history.`);
         }
+        // logToFile(`${LOG_PREFIX} generateStream: Contents Payload: ${JSON.stringify(contentsToSend)}`);
 
 
-        // Optional detailed log:
-        // logToFile(`[GeminiService] Full 'contents' payload: ${JSON.stringify(contentsToSend, null, 2)}`);
-        // --- *** MODIFICATION END *** ---
-
-
+        // 5. Call API and Handle Stream/Function Call
         try {
-            // *** Use generateContentStream ***
             const streamResult = await model.generateContentStream({
                 contents: contentsToSend,
                 generationConfig: generationConfig,
+                // safetySettings can be added here
             });
 
-            // --- IMPORTANT: Handling Function Calls with Streams ---
-            // The stream needs to be partially consumed to check for an initial function call.
-            // We'll iterate *once* to see if the *first* chunk contains a function call.
-            // If it does, we return the function call immediately and *don't* return the stream.
-            // If it doesn't, we return the full stream generator for the handler to process.
-
+            // --- Peek at the first chunk for function calls ---
             const iterator = streamResult.stream[Symbol.asyncIterator]();
             const firstChunkResult = await iterator.next();
 
             if (firstChunkResult.done) {
-                // Stream finished immediately (e.g., error, safety block before any content)
-                // Try to get aggregated response info if available (might be limited)
-                logToFile(`[GeminiService Stream] Stream finished on first chunk. Checking aggregated response.`);
-                let aggregatedResponse;
+                // Stream ended immediately (error/safety/empty)
+                logToFile(`${LOG_PREFIX} generateStream: Stream ended prematurely on first chunk.`);
                 try {
-                    aggregatedResponse = await streamResult.response; // Wait for the promise
+                    const aggregatedResponse = await streamResult.response; // Attempt to get aggregated info
                     const finishReason = aggregatedResponse?.candidates?.[0]?.finishReason;
-                    logToFile(`[GeminiService Stream] Aggregated response finish reason: ${finishReason}`);
-                    // Construct error message based on aggregated response
+                    const safetyRatings = aggregatedResponse?.promptFeedback?.safetyRatings;
+                    logToFile(`${LOG_PREFIX} generateStream: Aggregated response finish reason: ${finishReason}`);
+                    if (safetyRatings) logToFile(`${LOG_PREFIX} generateStream: Safety Ratings: ${JSON.stringify(safetyRatings)}`);
+
                     let errorMessage = `Stream ended unexpectedly. Reason: ${finishReason || 'Unknown'}`;
-                    if (finishReason === FinishReason.SAFETY) { errorMessage = "Content blocked due to safety concerns."; }
-                    // Add other reasons
+                    if (finishReason === FinishReason.SAFETY || aggregatedResponse?.promptFeedback?.blockReason) {
+                        errorMessage = `Content generation blocked. Reason: ${aggregatedResponse?.promptFeedback?.blockReason || 'Safety concern'}.`;
+                    } else if (finishReason === FinishReason.MAX_TOKENS) {
+                        errorMessage = "Model stopped because the maximum output token limit was reached.";
+                    }
+                    // Add other reasons if necessary
                     return { error: errorMessage };
                 } catch (aggError: any) {
-                    logToFile(`[GeminiService Stream] Error getting aggregated response after immediate stream end: ${aggError.message}`);
+                    logToFile(`${LOG_PREFIX} generateStream: Error getting aggregated response after immediate stream end: ${aggError.message}`);
                     return { error: "Stream ended unexpectedly without providing data." };
                 }
             }
 
-            // Check the first chunk for a function call
-            const firstChunk = firstChunkResult.value;
-            const functionCalls = firstChunk.functionCalls(); // Use helper method
+            // We have the first chunk, check for function calls
+            const firstChunk = firstChunkResult.value; // This is EnhancedGenerateContentResponse
+            const functionCalls = firstChunk.functionCalls(); // Helper checks parts for functionCall
 
             if (functionCalls && functionCalls.length > 0) {
-                logToFile(`[GeminiService Stream] Received function call in first chunk: ${functionCalls[0].name}`);
-                // We found a function call, return it and *discard* the rest of the stream for now.
-                // The handler will need to call the service again after executing the function.
-                return { functionCalls: functionCalls[0] };
+                logToFile(`${LOG_PREFIX} generateStream: Function call detected in first chunk: ${functionCalls[0].name}`);
+                // Return the function call, *not* the stream
+                return { functionCalls: functionCalls[0] }; // Corrected: return the single FC object
             }
 
-            // --- No function call in the first chunk ---
-            // Return a *new* async generator that yields the first chunk
-            // and then continues with the rest of the original stream.
-            logToFile(`[GeminiService Stream] No function call in first chunk. Returning stream generator.`);
-            // *** SỬA ĐỔI Ở ĐÂY ***
+            // --- No function call found, return the stream ---
+            logToFile(`${LOG_PREFIX} generateStream: No function call in first chunk. Returning stream generator.`);
+
+            // Create a new generator that includes the already-retrieved first chunk
             async function* combinedStream(): AsyncGenerator<EnhancedGenerateContentResponse> {
-                // firstChunk thực chất đã là EnhancedGenerateContentResponse từ iterator.next()
-                yield firstChunk;
-                // Các chunk tiếp theo từ iterator cũng là EnhancedGenerateContentResponse
+                yield firstChunk; // Yield the first chunk we already have
+                // Continue iterating from where we left off
                 for await (const chunk of { [Symbol.asyncIterator]: () => iterator }) {
+                    // Basic check within loop (optional but good practice)
+                    if (!chunk) {
+                        logToFile(`${LOG_PREFIX} generateStream Warning: Received null/undefined chunk during iteration.`);
+                        continue;
+                    }
                     yield chunk;
                 }
             }
 
-            return { stream: combinedStream() }; // Return the generator
+            return { stream: combinedStream() }; // Return the new generator
 
         } catch (error: any) {
-            logToFile(`[GeminiService Stream] Error initiating stream: ${error.message}, Stack: ${error.stack}`);
-            return { error: error.message || "Failed to initiate content stream." };
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${LOG_PREFIX} generateStream Error: Failed to initiate or process stream: ${errorMsg}\nStack: ${error.stack}`);
+            return { error: `Failed to generate content stream: ${errorMsg}` };
         }
     }
 }

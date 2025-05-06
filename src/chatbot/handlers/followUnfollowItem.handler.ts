@@ -3,174 +3,162 @@ import {
     findItemId,
     executeGetUserFollowedItems,
     executeFollowUnfollowApi,
-    // ApiCallResult // Đảm bảo type này được import hoặc định nghĩa đúng nếu sử dụng
-} from '../services/followUnfollowItem.service'; // Điều chỉnh đường dẫn nếu cần
-import { IFunctionHandler } from '../interface/functionHandler.interface'; // Điều chỉnh đường dẫn nếu cần
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Điều chỉnh đường dẫn nếu cần
-import logToFile from '../../utils/logger'; // Điều chỉnh đường dẫn nếu cần
+} from '../services/followUnfollowItem.service'; 
+import { IFunctionHandler } from '../interface/functionHandler.interface'; 
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; 
+import logToFile from '../../utils/logger'; 
+
+// --- Định nghĩa các kiểu dữ liệu hẹp hơn để code rõ ràng hơn ---
+type ValidItemType = 'conference' | 'journal';
+type ValidIdentifierType = 'acronym' | 'title' | 'id';
+type ValidAction = 'follow' | 'unfollow';
 
 export class FollowUnfollowItemHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        // Destructure các thành phần cần thiết bao gồm cả callback
-        const { args, userToken, handlerId, socketId, onStatusUpdate, socket } = context;
-        const itemType = args?.itemType as ('conference' | 'journal' | undefined);
-        const identifier = args?.identifier as (string | undefined);
-        const identifierType = args?.identifierType as ('acronym' | 'title' | 'id' | undefined);
-        const action = args?.action as ('follow' | 'unfollow' | undefined);
+        const { args, userToken, handlerId, socketId, onStatusUpdate } = context;
+        const logPrefix = `[${handlerId} ${socketId}]`;
 
-        logToFile(`[${handlerId} ${socketId}] Handler: FollowUnfollowItem, Args: ${JSON.stringify(args)} Auth: ${!!userToken}`);
+        logToFile(`${logPrefix} Handler: FollowUnfollowItem, Args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
 
-        // --- LOẠI BỎ định nghĩa safeEmitStatus nội bộ ---
+        // --- Helper function để gửi status update ---
+        const sendStatus = (step: string, message: string, details?: object) => {
+            if (onStatusUpdate) {
+                onStatusUpdate('status_update', {
+                    type: 'status',
+                    step,
+                    message,
+                    details,
+                    timestamp: new Date().toISOString(),
+                });
+            } else {
+                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+            }
+        };
 
         try {
-            // --- Bắt đầu các emit chi tiết sử dụng context.onStatusUpdate ---
+            // --- 1. Validation ---
+            sendStatus('validating_function_args', 'Validating follow/unfollow arguments...', { args });
 
-            // 1. Kiểm tra tính hợp lệ của Input (Bước 1: Sự tồn tại)
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating follow/unfollow arguments...', details: { args }, timestamp: new Date().toISOString() })) {
-                if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
-                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'validating_function_args' status via callback.`);
-            }
+            const itemType = args?.itemType as string | undefined;
+            const identifier = args?.identifier as string | undefined;
+            const identifierType = args?.identifierType as string | undefined;
+            const action = args?.action as string | undefined;
 
-            // --- KIỂM TRA SỰ TỒN TẠI VÀ TRẢ VỀ SỚM ---
+            // a) Check for missing arguments (Guard Clause 1)
             if (!itemType || !identifier || !identifierType || !action) {
                 const errorMsg = "Missing required information (item type, identifier, identifier type, or action).";
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: Validation Failed: ${errorMsg}`);
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Invalid arguments provided.', details: { error: errorMsg, args }, timestamp: new Date().toISOString() });
+                logToFile(`${logPrefix} FollowUnfollow: Validation Failed - ${errorMsg}`);
+                sendStatus('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined };
             }
-            // --- TỪ ĐÂY TRỞ ĐI: itemType, identifier, identifierType, action KHÔNG PHẢI LÀ undefined ---
-            // TypeScript bây giờ biết:
-            // identifier: string
-            // itemType: 'conference' | 'journal' (hoặc giá trị string khác chưa được kiểm tra)
-            // identifierType: 'acronym' | 'title' | 'id' (hoặc giá trị string khác chưa được kiểm tra)
-            // action: 'follow' | 'unfollow' (hoặc giá trị string khác chưa được kiểm tra)
 
-            // 1. Kiểm tra tính hợp lệ của Input (Bước 2: Giá trị cụ thể)
+            // b) Check for invalid argument values (Guard Clause 2)
             let validationError: string | null = null;
-            if (!['conference', 'journal'].includes(itemType)) { // Bây giờ itemType chắc chắn là string
-                validationError = `Invalid item type "${itemType}". Can only follow/unfollow 'conference' or 'journal'.`;
-            } else if (!['acronym', 'title', 'id'].includes(identifierType)) { // identifierType chắc chắn là string
+            if (!(['conference', 'journal'] as string[]).includes(itemType)) {
+                validationError = `Invalid item type "${itemType}". Must be 'conference' or 'journal'.`;
+            } else if (!(['acronym', 'title', 'id'] as string[]).includes(identifierType)) {
                 validationError = `Invalid identifier type "${identifierType}". Must be 'acronym', 'title', or 'id'.`;
-            } else if (!['follow', 'unfollow'].includes(action)) { // action chắc chắn là string
+            } else if (!(['follow', 'unfollow'] as string[]).includes(action)) {
                 validationError = `Invalid action "${action}". Must be 'follow' or 'unfollow'.`;
             }
 
             if (validationError) {
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: Validation Failed: ${validationError}`);
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Invalid arguments provided.', details: { error: validationError, args }, timestamp: new Date().toISOString() });
+                logToFile(`${logPrefix} FollowUnfollow: Validation Failed - ${validationError}`);
+                sendStatus('function_error', 'Invalid arguments provided.', { error: validationError, args });
                 return { modelResponseContent: `Error: ${validationError}`, frontendAction: undefined };
             }
-            // --- TỪ ĐÂY TRỞ ĐI: Các biến có kiểu đã được thu hẹp chính xác ---
-            // itemType: 'conference' | 'journal'
-            // identifier: string
-            // identifierType: 'acronym' | 'title' | 'id'
-            // action: 'follow' | 'unfollow'
 
+            // --- Types are now narrowed ---
+            const validItemType = itemType as ValidItemType;
+            const validIdentifier = identifier; // Already known as string
+            const validIdentifierType = identifierType as ValidIdentifierType;
+            const validAction = action as ValidAction;
 
-            // 2. Kiểm tra Xác thực (Authentication)
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'checking_authentication', message: 'Checking authentication status...', timestamp: new Date().toISOString() })) {
-                if (!socket?.connected) throw new Error("Client disconnected during auth check status update.");
-                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'checking_authentication' status via callback.`);
-            }
+            // --- 2. Authentication Check (Guard Clause 3) ---
+            sendStatus('checking_authentication', 'Checking authentication status...');
             if (!userToken) {
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: User not authenticated.`);
-                // Emit lỗi xác thực qua callback
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'User not authenticated.', details: { error: 'Authentication required' }, timestamp: new Date().toISOString() });
-                // Trả về lỗi cho model
+                const errorMsg = "Authentication required.";
+                logToFile(`${logPrefix} FollowUnfollow: User not authenticated.`);
+                sendStatus('function_error', 'User not authenticated.', { error: errorMsg });
                 return { modelResponseContent: "Error: You must be logged in to follow or unfollow items.", frontendAction: undefined };
             }
-            // Optional: Emit trạng thái thành công nếu cần
-            // onStatusUpdate('status_update', { type: 'status', step: 'authentication_success', message: 'User authenticated.', timestamp: new Date().toISOString() });
+            // sendStatus('authentication_success', 'User authenticated.'); // Optional success status
 
-            // Emit bắt đầu xử lý yêu cầu
-            onStatusUpdate('status_update', { type: 'status', step: 'processing_request', message: `Processing ${action} request for ${itemType}: "${identifier}"...`, timestamp: new Date().toISOString() });
+            // --- 3. Find Item ID ---
+            sendStatus('finding_item_id', `Searching for ${validItemType} with ${validIdentifierType}: "${validIdentifier}"...`, { identifier: validIdentifier, identifierType: validIdentifierType, itemType: validItemType });
+            const idResult = await findItemId(validIdentifier, validIdentifierType, validItemType);
 
-
-            // 3. Tìm Item ID
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'finding_item_id', message: `Searching for ${itemType} with ${identifierType}: "${identifier}"...`, details: { identifier, identifierType, itemType }, timestamp: new Date().toISOString() })) {
-                if (!socket?.connected) throw new Error("Client disconnected during item ID search status update.");
-                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'finding_item_id' status via callback.`);
-            }
-            const idResult = await findItemId(identifier, identifierType, itemType);
+            // Guard Clause 4
             if (!idResult.success || !idResult.itemId) {
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: Error finding ID: ${idResult.errorMessage}`);
-                onStatusUpdate('status_update', { type: 'status', step: 'item_id_not_found', message: `Could not find ${itemType} "${identifier}".`, details: { error: idResult.errorMessage }, timestamp: new Date().toISOString() });
-                return { modelResponseContent: idResult.errorMessage || `Sorry, I couldn't find the specific ${itemType} "${identifier}" to ${action}.`, frontendAction: undefined };
+                const errorMsg = idResult.errorMessage || `Could not find ${validItemType} "${validIdentifier}".`;
+                logToFile(`${logPrefix} FollowUnfollow: Error finding ID - ${errorMsg}`);
+                sendStatus('item_id_not_found', `Could not find ${validItemType} "${validIdentifier}".`, { error: errorMsg, identifier: validIdentifier, identifierType: validIdentifierType, itemType: validItemType });
+                return { modelResponseContent: errorMsg, frontendAction: undefined };
             }
             const itemId = idResult.itemId;
-            onStatusUpdate('status_update', { type: 'status', step: 'item_id_found', message: `Found ${itemType} (ID: ${itemId}).`, details: { itemId }, timestamp: new Date().toISOString() });
+            sendStatus('item_id_found', `Found ${validItemType} (ID: ${itemId}).`, { itemId, itemType: validItemType });
 
-            // 4. Kiểm tra Trạng thái Follow Hiện tại
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'checking_follow_status', message: `Checking your follow status for item ${itemId}...`, details: { itemId }, timestamp: new Date().toISOString() })) {
-                if (!socket?.connected) throw new Error("Client disconnected during follow status check update.");
-                logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'checking_follow_status' status via callback.`);
-            }
-            const followStatusResult = await executeGetUserFollowedItems(itemType, userToken); // Truyền token
+            // --- 4. Check Current Follow Status ---
+            sendStatus('checking_follow_status', `Checking your follow status for item ${itemId}...`, { itemId });
+            const followStatusResult = await executeGetUserFollowedItems(validItemType, userToken);
+
+            // Guard Clause 5
             if (!followStatusResult.success) {
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: Error checking status: ${followStatusResult.errorMessage}`);
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Failed to check follow status.', details: { error: followStatusResult.errorMessage }, timestamp: new Date().toISOString() });
-                return { modelResponseContent: followStatusResult.errorMessage || `Sorry, I couldn't check your current follow status due to an error.`, frontendAction: undefined };
+                const errorMsg = followStatusResult.errorMessage || 'Failed to check follow status.';
+                logToFile(`${logPrefix} FollowUnfollow: Error checking status - ${errorMsg}`);
+                sendStatus('function_error', 'Failed to check follow status.', { error: errorMsg, itemId });
+                return { modelResponseContent: `Sorry, I couldn't check your current follow status: ${errorMsg}`, frontendAction: undefined };
             }
             const isCurrentlyFollowing = followStatusResult.itemIds.includes(itemId);
-            onStatusUpdate('status_update', { type: 'status', step: 'follow_status_checked', message: `Current follow status: ${isCurrentlyFollowing ? 'Following' : 'Not Following'}.`, details: { itemId, isCurrentlyFollowing }, timestamp: new Date().toISOString() });
+            sendStatus('follow_status_checked', `Current follow status: ${isCurrentlyFollowing ? 'Following' : 'Not Following'}.`, { itemId, isCurrentlyFollowing });
 
-            // 5. Xác định Hành động và Thực thi nếu cần
-            onStatusUpdate('status_update', { type: 'status', step: 'determining_follow_action', message: `Determining required action based on request ('${action}') and status...`, timestamp: new Date().toISOString() });
+            // --- 5. Determine if API Call is Needed ---
+            sendStatus('determining_follow_action', `Determining required action based on request ('${validAction}') and status...`);
+            const needsApiCall = (validAction === 'follow' && !isCurrentlyFollowing) || (validAction === 'unfollow' && isCurrentlyFollowing);
+            sendStatus('follow_action_determined', needsApiCall ? `API call required to ${validAction} item ${itemId}.` : `No API call needed (action: '${validAction}', current status: ${isCurrentlyFollowing}).`, { needsApiCall, currentStatus: isCurrentlyFollowing, requestedAction: validAction });
+
+            // --- 6. Execute API Call or Return Status Message ---
             let finalMessage = "";
-            let needsApiCall = false;
-            if (action === 'follow') {
-                if (!isCurrentlyFollowing) needsApiCall = true;
-            } else { // action === 'unfollow'
-                if (isCurrentlyFollowing) needsApiCall = true;
-            }
-            // Emit trạng thái xác định hành động
-            onStatusUpdate('status_update', { type: 'status', step: 'follow_action_determined', message: needsApiCall ? `API call required to ${action} item ${itemId}.` : `No API call needed (action: '${action}', current status: ${isCurrentlyFollowing}).`, details: { needsApiCall }, timestamp: new Date().toISOString() });
-
-
-            // 6. Gọi API Follow/Unfollow nếu cần
             if (needsApiCall) {
-                if (!onStatusUpdate('status_update', { type: 'status', step: 'preparing_follow_api_call', message: `${action === 'follow' ? 'Following' : 'Unfollowing'} item ${itemId}...`, details: { action, itemId, itemType }, timestamp: new Date().toISOString() })) {
-                    if (!socket?.connected) throw new Error("Client disconnected before follow/unfollow API call status update.");
-                    logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'preparing_follow_api_call' status via callback.`);
-                }
-                // Thực hiện gọi API
-                const apiActionResult = await executeFollowUnfollowApi(itemId, itemType, action, userToken);
+                sendStatus('preparing_follow_api_call', `${validAction === 'follow' ? 'Following' : 'Unfollowing'} item ${itemId}...`, { action: validAction, itemId, itemType: validItemType });
+                const apiActionResult = await executeFollowUnfollowApi(itemId, validItemType, validAction, userToken);
 
                 if (apiActionResult.success) {
-                    finalMessage = `Successfully ${action === 'follow' ? 'followed' : 'unfollowed'} the ${itemType} "${identifier}" (ID: ${itemId}).`;
-                    logToFile(`[${handlerId} ${socketId}] FollowUnfollow: API call for ${action} successful.`);
-                    // Emit trạng thái thành công
-                    onStatusUpdate('status_update', { type: 'status', step: 'follow_update_success', message: `Successfully ${action}ed ${itemType}.`, details: { itemId }, timestamp: new Date().toISOString() });
+                    finalMessage = `Successfully ${validAction === 'follow' ? 'followed' : 'unfollowed'} the ${validItemType} "${validIdentifier}" (ID: ${itemId}).`;
+                    logToFile(`${logPrefix} FollowUnfollow: API call for ${validAction} successful.`);
+                    sendStatus('follow_update_success', `Successfully ${validAction}ed ${validItemType}.`, { itemId, itemType: validItemType });
                 } else {
-                    finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${action} the ${itemType}: "${identifier}". Please try again later.`;
-                    logToFile(`[${handlerId} ${socketId}] FollowUnfollow: API call for ${action} failed: ${apiActionResult.errorMessage}`);
-                    // Emit trạng thái thất bại
-                    onStatusUpdate('status_update', { type: 'status', step: 'follow_update_failed', message: `Failed to ${action} ${itemType}.`, details: { error: apiActionResult.errorMessage, itemId }, timestamp: new Date().toISOString() });
+                    finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the ${validItemType}: "${validIdentifier}". Please try again later.`;
+                    logToFile(`${logPrefix} FollowUnfollow: API call for ${validAction} failed - ${apiActionResult.errorMessage}`);
+                    sendStatus('follow_update_failed', `Failed to ${validAction} ${validItemType}.`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType });
                 }
             } else {
-                // Xây dựng thông báo dựa trên lý do không cần gọi API
-                if (action === 'follow' && isCurrentlyFollowing) { finalMessage = `You are already following the ${itemType} "${identifier}" (ID: ${itemId}).`; }
-                else if (action === 'unfollow' && !isCurrentlyFollowing) { finalMessage = `You are not currently following the ${itemType} "${identifier}" (ID: ${itemId}).`; }
-                else {
-                    // Trường hợp này không nên xảy ra với logic hiện tại, nhưng để dự phòng
-                    finalMessage = `No action taken for ${itemType} "${identifier}" (ID: ${itemId}).`;
-                    logToFile(`[${handlerId} ${socketId}] Warning: No API call needed and no standard message determined for action '${action}'.`);
+                // Build message based on why no call was needed
+                if (validAction === 'follow' /* && isCurrentlyFollowing */) {
+                    finalMessage = `You are already following the ${validItemType} "${validIdentifier}" (ID: ${itemId}).`;
+                } else { // action === 'unfollow' && !isCurrentlyFollowing
+                    finalMessage = `You are not currently following the ${validItemType} "${validIdentifier}" (ID: ${itemId}).`;
                 }
-                logToFile(`[${handlerId} ${socketId}] FollowUnfollow: No API call executed for action '${action}'. Current status: ${isCurrentlyFollowing}`);
+                logToFile(`${logPrefix} FollowUnfollow: No API call executed for action '${validAction}'. Current status: ${isCurrentlyFollowing}`);
+                // Optional: Send a status update indicating no action was taken
+                // sendStatus('no_action_needed', finalMessage, { itemId, action: validAction, isCurrentlyFollowing });
             }
-            // --- End Detailed Emits ---
 
+            // --- Return Final Result ---
             return {
                 modelResponseContent: finalMessage,
-                frontendAction: undefined // Không có action trực tiếp cho UI từ backend
+                frontendAction: undefined // No direct UI action needed from backend
             };
 
         } catch (error: any) {
-            logToFile(`[${handlerId} ${socketId}] CRITICAL Error in FollowUnfollowItemHandler: ${error.message}\nStack: ${error.stack}`);
-            // Cố gắng emit lỗi qua callback nếu có thể
-            onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during follow/unfollow processing: ${error.message}`, timestamp: new Date().toISOString() });
-            // Trả về thông báo lỗi cho model
-            return { modelResponseContent: `Error executing followUnfollowItem: ${error.message}`, frontendAction: undefined };
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} CRITICAL Error in FollowUnfollowItemHandler: ${errorMessage}\nStack: ${error.stack}`);
+            // Use optional chaining for sendStatus in catch, just in case error happens very early
+            sendStatus?.('function_error', `Critical error during follow/unfollow processing: ${errorMessage}`);
+            return {
+                modelResponseContent: `An unexpected error occurred: ${errorMessage}`,
+                frontendAction: undefined
+            };
         }
     }
 }

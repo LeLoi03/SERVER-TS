@@ -5,46 +5,71 @@ import logToFile from '../../utils/logger'; // Adjust path if needed
 
 export class NavigationHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        const { args, handlerId, socketId, onStatusUpdate } = context;
+        // Sử dụng optional chaining (?) để lấy url an toàn hơn
         const targetUrl = args?.url as string | undefined;
+        const logPrefix = `[${handlerId} ${socketId}]`; // Tiền tố log dùng chung
 
-        logToFile(`[${handlerId} ${socketId}] Handler: Navigation, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Handler: Navigation, Args: ${JSON.stringify(args)}`);
 
-        // REMOVED internal safeEmitStatus definition
+        // --- Helper function để gửi status update ---
+        // Giúp giảm lặp code và kiểm tra onStatusUpdate chỉ một lần
+        const sendStatus = (step: string, message: string, details?: object) => {
+            if (onStatusUpdate) {
+                onStatusUpdate('status_update', {
+                    type: 'status',
+                    step,
+                    message,
+                    details, // Thêm details nếu có
+                    timestamp: new Date().toISOString(),
+                });
+            } else {
+                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+            }
+        };
 
         try {
-            // --- Start Detailed Emits using context.onStatusUpdate ---
-
             // 1. Validation
-             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_navigation_url', message: 'Validating navigation URL argument...', details: { args }, timestamp: new Date().toISOString() })) {
-                  if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
-             }
+            sendStatus('validating_navigation_url', 'Validating navigation URL argument...', { args });
 
-            if (targetUrl && typeof targetUrl === 'string' && (targetUrl.startsWith('/') || targetUrl.startsWith('http://') || targetUrl.startsWith('https://'))) {
-                logToFile(`[${handlerId} ${socketId}] Navigation: Valid target URL: ${targetUrl}`);
+            const isValidUrl = targetUrl &&
+                               typeof targetUrl === 'string' &&
+                               (targetUrl.startsWith('/') || targetUrl.startsWith('http://') || targetUrl.startsWith('https://'));
 
-                // 2. Prepare Action (Success Case)
-                onStatusUpdate('status_update', { type: 'status', step: 'navigation_action_prepared', message: 'Navigation action prepared.', details: { url: targetUrl }, timestamp: new Date().toISOString() });
-                return {
-                    modelResponseContent: `Navigation action acknowledged. The user will be directed to the requested page (${targetUrl}).`,
-                    frontendAction: { type: 'navigate', url: targetUrl },
-                };
-            } else {
-                logToFile(`[${handlerId} ${socketId}] Navigation: Invalid or missing 'url' argument: ${targetUrl}`);
-
-                // 2. Handle Validation Failure
+            // Sử dụng Guard Clause: Xử lý trường hợp lỗi trước và return sớm
+            if (!isValidUrl) {
                 const errorMsg = "Invalid or missing 'url' argument. URL must start with '/' or 'http(s)://'.";
-                onStatusUpdate('status_update', { type: 'status', step: 'function_error', message: 'Invalid navigation URL provided.', details: { error: errorMsg, url: targetUrl }, timestamp: new Date().toISOString() });
+                logToFile(`${logPrefix} Navigation: Invalid or missing 'url': ${targetUrl}`);
+                sendStatus('function_error', 'Invalid navigation URL provided.', { error: errorMsg, url: targetUrl });
                 return {
-                    modelResponseContent: `Error: ${errorMsg} Received: "${targetUrl}"`,
+                    modelResponseContent: `Error: ${errorMsg} Received: "${targetUrl || 'undefined'}"`, // Hiển thị rõ hơn nếu url là undefined
                     frontendAction: undefined,
                 };
             }
-            // --- End Detailed Emits ---
+
+            // --- Nếu validation thành công ---
+            logToFile(`${logPrefix} Navigation: Valid target URL: ${targetUrl}`);
+
+            // 2. Prepare Action
+            sendStatus('navigation_action_prepared', 'Navigation action prepared.', { url: targetUrl });
+
+            // Trả về kết quả thành công
+            return {
+                modelResponseContent: `Navigation action acknowledged. The user will be directed to the requested page (${targetUrl}).`,
+                // targetUrl chắc chắn là string ở đây do đã qua validation
+                frontendAction: { type: 'navigate', url: targetUrl },
+            };
+
         } catch (error: any) {
-             logToFile(`[${handlerId} ${socketId}] Error in NavigationHandler: ${error.message}`);
-             onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during navigation processing: ${error.message}`, timestamp: new Date().toISOString() });
-             return { modelResponseContent: `Error executing navigation: ${error.message}`, frontendAction: undefined };
+            // Xử lý lỗi chung
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} Error in NavigationHandler: ${errorMessage}`);
+            // Sử dụng helper sendStatus
+            sendStatus('function_error', `Error during navigation processing: ${errorMessage}`);
+            return {
+                modelResponseContent: `Error executing navigation: ${errorMessage}`,
+                frontendAction: undefined
+            };
         }
     }
 }

@@ -1,54 +1,74 @@
 // src/handlers/getWebsiteInfo.handler.ts
-import { executeGetWebsiteInfo} from '../services/getWebsiteInfo.service'; // Adjust path if needed
-import { IFunctionHandler } from '../interface/functionHandler.interface'; // Adjust path if needed
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; // Adjust path if needed
-import logToFile from '../../utils/logger'; // Adjust path if needed
+import { executeGetWebsiteInfo } from '../services/getWebsiteInfo.service';
+import { IFunctionHandler } from '../interface/functionHandler.interface';
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types';
+import logToFile from '../../utils/logger';
 
 export class GetWebsiteInfoHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, onStatusUpdate, socket } = context;
+        // Destructure only what's needed. Args might not be used if executeGetWebsiteInfo takes no args.
+        const { args, handlerId, socketId, onStatusUpdate } = context;
+        const logPrefix = `[${handlerId} ${socketId}]`;
 
-        logToFile(`[${handlerId} ${socketId}] Handler: GetWebsiteInfo, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Handler: GetWebsiteInfo, Args: ${JSON.stringify(args)}`);
 
-        // REMOVED internal safeEmitStatus definition
+        // --- Helper function để gửi status update ---
+        const sendStatus = (step: string, message: string, details?: object) => {
+            if (onStatusUpdate) {
+                onStatusUpdate('status_update', {
+                    type: 'status',
+                    step,
+                    message,
+                    details,
+                    timestamp: new Date().toISOString(),
+                });
+            } else {
+                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+            }
+        };
 
         try {
-            // --- Start Detailed Emits using context.onStatusUpdate ---
+            // --- 1. Validation (Minimal for this handler) ---
+            // Send status indicating validation step, even if no complex validation is done
+            sendStatus('validating_function_args', 'Validating arguments for getWebsiteInformation...', { args });
+            // Note: No specific argument validation (like searchQuery) seems needed here based on the original code.
+            // If there were required args, a Guard Clause would go here.
 
-            // 1. Validation
-             if (!onStatusUpdate('status_update', { type: 'status', step: 'validating_function_args', message: 'Validating arguments for getWebsiteInformation...', details: { args }, timestamp: new Date().toISOString() })) {
-                 if (!socket?.connected) throw new Error("Client disconnected during validation status update.");
-             }
+            // --- 2. Prepare & Execute Call ---
+            sendStatus('retrieving_info', 'Retrieving general website information...', { target: 'general website info' });
 
-            // 2. Prepare & Execute Call
-            if (!onStatusUpdate('status_update', { type: 'status', step: 'retrieving_info', message: 'Retrieving general website information...', details: { target: 'general website info' }, timestamp: new Date().toISOString() })) {
-                 if (!socket?.connected) throw new Error("Client disconnected before retrieving website info.");
-                 logToFile(`[${handlerId} ${socketId}] Warning: Failed to emit 'retrieving_info' status via callback, but continuing...`);
-            }
-
-            // Assuming executeGetWebsiteInformation returns structured result { success: boolean, data?: string, errorMessage?: string }
+            // Assuming executeGetWebsiteInfo returns { success: boolean, data?: string, errorMessage?: string }
+            // And it doesn't require specific arguments from 'args' based on original call
             const result = await executeGetWebsiteInfo();
-            logToFile(`[${handlerId} ${socketId}] API result: Success=${result.success}`);
+            logToFile(`${logPrefix} API result: Success=${result.success}`);
 
-            // 3. Process Result & Emit Detailed Status via callback
+            // --- 3. Process Result ---
             if (result.success && result.data) {
-                onStatusUpdate('status_update', { type: 'status', step: 'data_found', message: 'Successfully retrieved website information.', details: { success: true, infoLength: result.data.length }, timestamp: new Date().toISOString() });
+                // Successfully retrieved data
+                sendStatus('data_found', 'Successfully retrieved website information.', { success: true, infoLength: result.data.length });
                 return {
                     modelResponseContent: result.data,
                     frontendAction: undefined,
                 };
             } else {
-                onStatusUpdate('status_update', { type: 'status', step: 'api_call_failed', message: 'Failed to retrieve website information.', details: { error: result.errorMessage || 'Unknown error', success: false }, timestamp: new Date().toISOString() });
+                // Handle failure: API call failed OR succeeded but returned no data
+                const errorMsg = result.errorMessage || 'Failed to retrieve website information (no data or specific error returned).';
+                logToFile(`${logPrefix} Failed to retrieve website info: ${errorMsg}`);
+                sendStatus('api_call_failed', 'Failed to retrieve website information.', { error: errorMsg, success: result.success }); // Include success status from API if available
                 return {
-                    modelResponseContent: result.errorMessage || 'Error: Could not retrieve website information.',
+                    modelResponseContent: `Error: ${errorMsg}`,
                     frontendAction: undefined,
                 };
             }
-            // --- End Detailed Emits ---
         } catch (error: any) {
-             logToFile(`[${handlerId} ${socketId}] Error in GetWebsiteInfoHandler: ${error.message}`);
-             onStatusUpdate?.('status_update', { type: 'status', step: 'function_error', message: `Error during website info retrieval: ${error.message}`, timestamp: new Date().toISOString() });
-             return { modelResponseContent: `Error executing getWebsiteInformation: ${error.message}`, frontendAction: undefined };
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logToFile(`${logPrefix} CRITICAL Error in GetWebsiteInfoHandler: ${errorMessage}\nStack: ${error.stack}`);
+            // Use optional chaining for sendStatus in catch
+            sendStatus?.('function_error', `Critical error during website info retrieval: ${errorMessage}`);
+            return {
+                modelResponseContent: `An unexpected error occurred while trying to get website information: ${errorMessage}`,
+                frontendAction: undefined
+            };
         }
     }
 }

@@ -3,7 +3,7 @@ import { Router } from 'express';
 import crawlRouter from './crawl/crawl.routes';
 
 // <<< Hàm tạo router nhận service
-const createV1Router = (): Router => {
+const createV2Router = (): Router => {
     const router = Router();
 
     router.use('/', crawlRouter);
@@ -12,4 +12,4 @@ const createV1Router = (): Router => {
 };
 
 
-export default createV1Router; // <<< Export hàm tạo
+export default createV2Router; // <<< Export hàm tạo

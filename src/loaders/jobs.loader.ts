@@ -1,19 +1,22 @@
-import { Server as SocketIOServer } from 'socket.io';
+// src/loaders/jobs.loader.ts
+import { container } from 'tsyringe';
+import { Logger } from 'pino';
+import { LoggingService } from '../services/logging.service'; // <<< Import LoggingService
 import { scheduleLogAnalysisJob } from '../jobs/logAnalysis.job';
-import logToFile from '../utils/logger';
-import { LogAnalysisService } from '../services/logAnalysis.service';
+// import logToFile from '../utils/logger'; // <<< XÓA
 
-export const scheduleJobs = (
-    logAnalysisService: LogAnalysisService,
-    io: SocketIOServer
-) => {
-    logToFile('[Loader Jobs] Scheduling background jobs...');
+export const scheduleJobs = () => {
+    // <<< Resolve LoggingService
+    const loggingService = container.resolve(LoggingService);
+    const logger: Logger = loggingService.getLogger({ loader: 'Jobs' }); // <<< Tạo child logger
 
-    // Lên lịch cho job phân tích log
-    scheduleLogAnalysisJob(logAnalysisService, io);
+    logger.info('Scheduling background jobs...'); // <<< Dùng logger
+
+    // scheduleLogAnalysisJob sẽ tự resolve dependencies và logger bên trong nó
+    scheduleLogAnalysisJob();
 
     // Lên lịch cho các jobs khác nếu có
-    // scheduleAnotherJob(...);
+    // scheduleAnotherJob();
 
-    logToFile('[Loader Jobs] Background jobs scheduled.');
+    logger.info('Background jobs scheduling initiated.'); // <<< Dùng logger
 };

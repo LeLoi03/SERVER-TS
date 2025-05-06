@@ -1,46 +1,64 @@
 import { Request, Response, NextFunction } from 'express';
-import logToFile from '../../utils/logger';
+import { container } from 'tsyringe'; // <<< Import container
+import { Logger } from 'pino'; // <<< Import Logger type
+import { LoggingService } from '../../services/logging.service'; // <<< Import LoggingService (Adjust path if needed)
 
 interface HttpError extends Error {
     status?: number;
-    statusCode?: number; // Một số thư viện dùng statusCode
-    isOperational?: boolean; // Đánh dấu lỗi dự kiến (vd: validation error)
+    statusCode?: number;
+    isOperational?: boolean;
 }
 
 export const errorHandlerMiddleware = (
     err: HttpError,
     req: Request,
     res: Response,
-    next: NextFunction // Mặc dù không dùng next() ở đây, nó cần thiết cho Express nhận diện đây là error handler
+    next: NextFunction // Keep next for Express signature
 ): void => {
+    // <<< Resolve LoggingService
+    const loggingService = container.resolve(LoggingService);
+    // <<< Create a logger specific to this request/error context
+    const logger: Logger = loggingService.getLogger({
+        middleware: 'errorHandler',
+        requestId: (req as any).id, // Assuming you have a request ID middleware (like express-pino-logger or custom)
+        method: req.method,
+        url: req.originalUrl,
+    });
+
     const statusCode = err.status || err.statusCode || 500;
     const message = err.message || 'Internal Server Error';
-    const isOperational = err.isOperational === true; // Lỗi có phải do client hay logic nghiệp vụ dự kiến không?
+    // Treat non-operational errors and status >= 500 as server errors
+    const isServerError = !err.isOperational || statusCode >= 500;
 
-    const logFileMethod = isOperational || statusCode < 500 ? '[WARN]' : '[ERROR]';
+    // <<< Use the logger instance
+    if (isServerError) {
+        // Log the full error object for server errors, pino handles stack trace serialization
+        logger.error({ err, statusCode }, `Unhandled error occurred: ${message}`);
+    } else {
+        // Log operational/client errors as warnings
+        // No need to log stack trace for expected errors usually
+        logger.warn({ err: { message: err.message }, statusCode }, `Handled operational error: ${message}`);
+    }
 
-    
-    logToFile(`[Error Handler] ${logFileMethod} ${statusCode} ${req.method} ${req.originalUrl} - ${err.message}${err.stack ? `\nStack: ${err.stack}` : ''}`);
-
-    // Chỉ gửi thông tin lỗi cơ bản về client, đặc biệt với lỗi 500
-    // Không nên gửi stack trace về client trong môi trường production
+    // Determine client message (hide details in production for 500 errors)
     const clientMessage = (statusCode === 500 && process.env.NODE_ENV === 'production')
         ? 'An unexpected error occurred on the server.'
         : message;
 
-    // Trả về JSON response
+    // Send JSON response
     res.status(statusCode).json({
         status: 'error',
         statusCode,
         message: clientMessage,
-        // Có thể thêm các trường khác như 'code' nếu cần
     });
 };
 
-// --- Middleware cho route không tồn tại (đặt SAU các routes khác, TRƯỚC errorHandlerMiddleware) ---
+// --- Middleware cho route không tồn tại ---
 export const notFoundHandler = (req: Request, res: Response, next: NextFunction) => {
+    // No specific logging needed here, as the error is passed to errorHandlerMiddleware
+    // which will log it.
     const error: HttpError = new Error(`Not Found - ${req.originalUrl}`);
     error.status = 404;
-    error.isOperational = true; // Đánh dấu là lỗi dự kiến
-    next(error); // Chuyển đến errorHandlerMiddleware
+    error.isOperational = true; // Mark as expected
+    next(error); // Pass to the main error handler
 };

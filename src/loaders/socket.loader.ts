@@ -1,84 +1,64 @@
 // src/loaders/socket.loader.ts
-
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
-import { config } from '../config/environment'; // Import config chung
-// Không cần import corsOptions trực tiếp ở đây, vì Socket.IO có cấu hình CORS riêng
-import { socketAuthMiddleware } from '../socket/middleware/auth.middleware'; // Import middleware xác thực
-import { handleConnection } from '../socket/handlers/connection.handlers';   // Import handler chính cho kết nối mới
-import logToFile from '../utils/logger';       // Import logger ghi file
-import { ConversationHistoryService } from '../chatbot/services/conversationHistory.service';
+import { container } from 'tsyringe';
+import { Logger } from 'pino';
+import { ConfigService } from '../config/config.service';
+import { LoggingService } from '../services/logging.service'; // <<< Import LoggingService
+import { socketAuthMiddleware } from '../socket/middleware/auth.middleware'; // Assume this uses LoggingService or gets logger passed
+import { handleConnection } from '../socket/handlers/connection.handlers';
+// import logToFile from '../utils/logger'; // <<< XÓA
 
-// Biến cục bộ để lưu trữ instance của Socket.IO server sau khi khởi tạo
 let ioInstance: SocketIOServer | null = null;
 
-/**
- * Khởi tạo và cấu hình Socket.IO server.
- * Gắn nó vào HTTP server, áp dụng middleware và đăng ký connection handler.
- * @param httpServer - Instance của HTTP server đã được tạo.
- * @param conversationHistoryService - Instance của ConversationHistoryService để truyền cho connection handler.
- * @returns Instance của SocketIOServer đã được khởi tạo.
- */
 export const initSocketIO = (
-    httpServer: HttpServer,
-    conversationHistoryService: ConversationHistoryService // Nhận dependencies qua tham số
+    httpServer: HttpServer
 ): SocketIOServer => {
+    // <<< Resolve services
+    const loggingService = container.resolve(LoggingService);
+    const configService = container.resolve(ConfigService);
+    const logger: Logger = loggingService.getLogger({ loader: 'SocketIO' }); // <<< Tạo child logger
 
-    logToFile('[Loader Socket] Initializing Socket.IO server...');
+    logger.info('Initializing Socket.IO server...'); // <<< Dùng logger
 
-    // Tạo instance SocketIOServer
     const io = new SocketIOServer(httpServer, {
         cors: {
-            origin: config.allowedOrigins, // Sử dụng danh sách origins từ config
-            methods: ["GET", "POST"],       // Các phương thức HTTP được phép cho CORS handshake
-            credentials: true              // Cho phép gửi credentials (như cookie, auth headers)
+            origin: configService.config.CORS_ALLOWED_ORIGINS,
+            methods: ["GET", "POST"],
+            credentials: true
         },
-        // transports: ['websocket', 'polling'], // Có thể chỉ định transports nếu cần
-        // path: '/socket.io', // Đường dẫn mặc định, có thể thay đổi nếu muốn
-        // pingTimeout: 60000, // Thời gian chờ ping (ms)
-        // pingInterval: 25000 // Khoảng thời gian gửi ping (ms)
+        // ... other configs ...
     });
 
-
-
-    // --- Áp dụng Middleware ---
-    // Middleware này sẽ chạy cho mọi kết nối socket đến
+    // --- Middleware ---
+    // Assume middleware resolves LoggingService internally or gets logger passed
     io.use(socketAuthMiddleware);
+    logger.info('Socket.IO authentication middleware applied.'); // <<< Dùng logger
 
-    logToFile('[Loader Socket] Socket.IO authentication middleware applied.');
-
-    // --- Đăng ký Connection Handler ---
-    // Hàm này sẽ được gọi mỗi khi có một client mới kết nối thành công (sau khi qua middleware)
+    // --- Connection Handler ---
     io.on('connection', (socket: Socket) => {
-        // Gọi hàm xử lý kết nối từ module handlers, truyền các dependencies cần thiết
-        handleConnection(io, socket, conversationHistoryService);
+        // handleConnection tự resolve dependencies và logger bên trong nó
+        handleConnection(io, socket);
     });
+    logger.info('Socket.IO connection handler registered.'); // <<< Dùng logger
 
-    logToFile('[Loader Socket] Socket.IO connection handler registered.');
-
-    // Lưu instance vào biến cục bộ để có thể truy cập qua getIO()
     ioInstance = io;
-
-
-    logToFile('[Loader Socket] Socket.IO server initialized successfully.');
-    return io; // Trả về instance đã tạo
+    logger.info('Socket.IO server initialized successfully.'); // <<< Dùng logger
+    return io;
 };
 
-/**
- * Lấy instance của Socket.IO server đã được khởi tạo.
- * Hàm này dùng cho các module khác (ví dụ: services, jobs) cần emit sự kiện.
- * @throws Error nếu initSocketIO chưa được gọi.
- * @returns Instance SocketIOServer đã được khởi tạo.
- */
 export const getIO = (): SocketIOServer => {
     if (!ioInstance) {
-        const errorMsg = "[Loader Socket] FATAL: Attempted to get IO instance before initialization. Call initSocketIO first.";
-
-        logToFile(errorMsg);
-        // Ném lỗi để dừng chương trình hoặc báo hiệu rõ ràng vấn đề
-        throw new Error(errorMsg);
+        const errorMsg = "FATAL: Attempted to get IO instance before initialization. Call initSocketIO first.";
+        try {
+            // Cố gắng resolve logger để ghi lỗi, nếu không được thì dùng console
+            const loggingService = container.resolve(LoggingService);
+            const logger = loggingService.getLogger({ function: 'getIO' });
+            logger.fatal(errorMsg); // <<< Dùng logger nếu resolve thành công
+        } catch (resolveError) {
+            console.error(`[getIO - Pre-Log Init] ${errorMsg}`); // Fallback to console if logger fails
+        }
+        throw new Error(errorMsg); // Ném lỗi như cũ
     }
     return ioInstance;
 };
-
-// Có thể thêm các hàm tiện ích khác liên quan đến Socket.IO loader ở đây nếu cần
