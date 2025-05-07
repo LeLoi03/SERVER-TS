@@ -7,7 +7,6 @@ import { Logger } from 'pino';
 import { ConfigService } from './config/config.service';
 import http from 'http';
 import mongoose from 'mongoose';
-import { GeminiApiService } from './services/geminiApi.service';
 
 // --- Global Variables ---
 let logger: Logger;

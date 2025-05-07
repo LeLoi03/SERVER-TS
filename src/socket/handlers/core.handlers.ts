@@ -1,32 +1,31 @@
 // src/socket/handlers/core.handlers.ts
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe';
-import { Logger } from 'pino'; // Import Logger type
-import { LoggingService } from '../../services/logging.service'; // Adjust path if needed
-import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service'; // Adjust path, import Metadata
-import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper'; // Adjust path, import FrontendMessage
-import { handleStreaming, handleNonStreaming } from '../../chatbot/handlers/intentHandler'; // Adjust path
-import { stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation } from '../../chatbot/utils/confirmationManager'; // Adjust path
+import { Logger } from 'pino';
+import { LoggingService } from '../../services/logging.service';
+import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
+import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper';
+import { handleStreaming, handleNonStreaming } from '../../chatbot/handlers/intentHandler';
+import { stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation } from '../../chatbot/utils/confirmationManager';
 // --- Import types ---
 import {
     HistoryItem,
     FrontendAction,
     ConfirmSendEmailAction,
-    ErrorUpdate, // Ensure this is correctly defined/used
+    ErrorUpdate,
     SendMessageData,
     LoadConversationData,
     ConfirmationEventData,
     DeleteConversationData,
     ClearConversationData,
-    Language, // Assuming Language is defined here or imported
+    Language,
     WarningUpdate,
     ChatMessage,
     RenameConversationData,
     PinConversationData,
-    SearchConversationsData,
-    ClientConversationMetadata, // Nếu bạn dùng type riêng cho client
+    ClientConversationMetadata,
     RenameResult
-} from '../../chatbot/shared/types'; // Adjust path if needed
+} from '../../chatbot/shared/types';
 
 // --- Constants ---
 const CORE_HANDLER_NAME = 'coreHandlers';
@@ -144,9 +143,13 @@ export const registerCoreHandlers = (
         handlerLogger.info({ userId: currentUserId, count: conversationList.length }, 'Sent conversation list.');
     });
 
-
     // --- Handler: Load Specific Conversation ---
     socket.on('load_conversation', async (data: unknown) => {
+        // LOG NÀY PHẢI XUẤT HIỆN NẾU EVENT ĐẾN ĐƯỢC ĐÚNG HANDLER NÀY
+        console.log(`[SERVER DEBUG - HANDLER ENTERED] Received 'load_conversation' event. Socket ID: ${socket.id}. Data:`, data);
+        logger.info({ eventRaw: 'load_conversation', dataReceived: data, socketId: socket.id }, "Raw 'load_conversation' event received by specific handler.");
+
+
         const eventName = 'load_conversation';
         const handlerLogger = logger.child({ event: eventName });
         const currentUserId = ensureAuthenticated(handlerLogger, eventName);
@@ -496,30 +499,6 @@ export const registerCoreHandlers = (
         } catch (error: any) {
             sendChatError(handlerLogger, 'Server error updating pin status.', 'pin_fail_server', { conversationId, error: error.message });
         }
-    });
-
-    // --- Handler: Search Conversations ---
-    socket.on('search_conversations', async (data: unknown) => {
-        const eventName = 'search_conversations';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
-        if (!currentUserId) return;
-
-        const payload = data as SearchConversationsData;
-        if (
-            typeof payload !== 'object' || payload === null ||
-            typeof payload.searchTerm !== 'string' // Cho phép searchTerm rỗng, service sẽ xử lý
-        ) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "searchTerm".', 'invalid_request_search');
-        }
-        const { searchTerm, limit } = payload; // limit có thể undefined
-        handlerLogger.info({ searchTermPreview: searchTerm.substring(0, 30), limit, userId: currentUserId }, 'Request received.');
-
-        // Service trả về mảng rỗng nếu không tìm thấy hoặc lỗi, không cần try-catch trừ khi muốn xử lý đặc biệt
-        const searchResults: ConversationMetadata[] = await conversationHistoryService.searchConversationsByTerm(currentUserId, searchTerm, limit);
-
-        socket.emit('conversation_search_results', searchResults as ClientConversationMetadata[]);
-        handlerLogger.info({ searchTermPreview: searchTerm.substring(0, 30), count: searchResults.length }, 'Sent search results.');
     });
 
     // Log successful registration
