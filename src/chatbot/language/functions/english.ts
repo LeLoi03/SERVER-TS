@@ -249,7 +249,7 @@ export const englishNavigationDeclaration: FunctionDeclaration = {
 
 export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
     name: "openGoogleMap",
-    description: "Opens Google Maps in a new browser tab directed to a specific location string (e.g., city, address, landmark). Use this ONLY AFTER obtaining the location string, often from the 'getConferences' or 'getJournals' functions.",
+    description: "Opens Google Maps in a new browser tab directed to a specific location string (e.g., city, address, landmark).",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
@@ -264,7 +264,7 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
 
 export const englishFollowUnfollowItemDeclaration: FunctionDeclaration = {
     name: "followUnfollowItem",
-    description: "Follows or unfollows a specific conference or journal for the currently logged-in user. Requires identifying the item first (e.g., using getConferences/getJournals).",
+    description: "Follows or unfollows a specific conference or journal for the currently logged-in user.",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
@@ -275,7 +275,7 @@ export const englishFollowUnfollowItemDeclaration: FunctionDeclaration = {
             },
             identifier: {
                 type: SchemaType.STRING,
-                description: "A unique identifier for the item, such as its acronym or exact title, that was previously retrieved.",
+                description: "A unique identifier for the item, such as its acronym or exact title.",
             },
             identifierType: {
                  type: SchemaType.STRING,

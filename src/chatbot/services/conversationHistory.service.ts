@@ -1,13 +1,15 @@
 // src/chatbot/services/conversationHistory.service.ts
 import mongoose, { Types, Error as MongooseError } from 'mongoose';
-import ConversationModel, { IConversation } from '../models/conversation.model'; // Đảm bảo đường dẫn đúng
-import { HistoryItem } from '../shared/types'; // Đảm bảo đường dẫn đúng
+import ConversationModel, { IConversation } from '../models/conversation.model';
+import { HistoryItem, RenameResult } from '../shared/types';
 import logToFile from '../../utils/logger'; // Đảm bảo đường dẫn đúng
 
 const LOG_PREFIX = "[HistoryService]";
 const DEFAULT_CONVERSATION_LIMIT = 20;
-const MAX_TITLE_LENGTH = 50;
+const MAX_TITLE_LENGTH = 50; // Cho tiêu đề tự động
+const MAX_CUSTOM_TITLE_LENGTH = 120; // Cho tiêu đề người dùng đặt
 const TRUNCATE_SUFFIX = '...';
+const DEFAULT_SEARCH_LIMIT = 10; // Giới hạn kết quả tìm kiếm mặc định
 
 /**
  * Định nghĩa kiểu dữ liệu cho metadata của cuộc trò chuyện.
@@ -16,7 +18,11 @@ export interface ConversationMetadata {
     id: string;
     title: string;
     lastActivity: Date;
+    isPinned: boolean; // Thêm isPinned
+    // snippet?: string; // Có thể thêm một đoạn trích từ tin nhắn khớp khi tìm kiếm
 }
+
+
 
 /**
  * Service quản lý lịch sử cuộc trò chuyện của người dùng.
@@ -30,6 +36,19 @@ export class ConversationHistoryService {
         logToFile(`${LOG_PREFIX} Initialized.`);
     }
 
+    private mapConversationToMetadata(conv: (IConversation & { _id: Types.ObjectId }) | (Omit<IConversation, keyof Document> & { _id: Types.ObjectId })): ConversationMetadata {
+        // Omit<IConversation, keyof Document> sẽ loại bỏ các phương thức của Mongoose Document
+        // và chỉ giữ lại các trường dữ liệu.
+        const title = conv.customTitle || this.generateTitleFromMessages(conv.messages || []);
+        return {
+            id: conv._id.toString(),
+            title: title,
+            lastActivity: conv.lastActivity,
+            isPinned: conv.isPinned || false,
+        };
+    }
+
+
     /**
      * Lấy danh sách metadata cuộc trò chuyện cho một người dùng cụ thể.
      * @param userId - ID của người dùng.
@@ -42,36 +61,25 @@ export class ConversationHistoryService {
     ): Promise<ConversationMetadata[]> {
         const logContext = `${LOG_PREFIX} [List User: ${userId}, Limit: ${limit}]`;
         logToFile(`${logContext} Fetching conversation list.`);
-
         try {
-            // Sử dụng lean() để cải thiện hiệu suất và trả về plain JavaScript objects
-            // Điều này cũng thường giúp tránh các vấn đề phức tạp về kiểu của Mongoose Document
             const conversations = await this.model.find({ userId })
-                .sort({ lastActivity: -1 }) // Sắp xếp mới nhất trước
+                .sort({ isPinned: -1, lastActivity: -1 })
                 .limit(limit)
-                .select('_id messages lastActivity') // Chỉ chọn các trường cần thiết
-                .lean() // Quan trọng: Lấy plain objects thay vì Mongoose Documents
+                .select('_id messages lastActivity customTitle isPinned')
+                .lean()
                 .exec();
 
-            const metadataList: ConversationMetadata[] = conversations.map(conv => {
-                // Hàm helper để tạo tiêu đề
-                const title = this.generateTitleFromMessages(conv.messages || []);
-                return {
-                    // _id từ lean object vẫn là ObjectId, cần toString()
-                    id: conv._id.toString(),
-                    title: title,
-                    // lastActivity đã là kiểu Date từ schema
-                    lastActivity: conv.lastActivity,
-                };
-            });
+            // conversations ở đây là một mảng các POJOs
+            const metadataList: ConversationMetadata[] = conversations.map(conv =>
+                // Ép kiểu cẩn thận hơn cho POJO từ lean()
+                this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }))
+            );
 
             logToFile(`${logContext} Found ${metadataList.length} conversations.`);
             return metadataList;
-
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
-            logToFile(`${logContext} Error fetching conversation list: ${errorMsg}`);
-            // Trả về mảng rỗng khi có lỗi, cho phép frontend xử lý mượt mà hơn
+            logToFile(`${LOG_PREFIX} Error fetching conversation list for user ${userId}: ${errorMsg}`);
             return [];
         }
     }
@@ -86,39 +94,26 @@ export class ConversationHistoryService {
     async getLatestOrCreateConversation(userId: string): Promise<{ conversationId: string; history: HistoryItem[] }> {
         const logContext = `${LOG_PREFIX} [GetOrCreate User: ${userId}]`;
         logToFile(`${logContext} Attempting to find latest or create new conversation.`);
-
         try {
-            // Tìm cuộc trò chuyện gần đây nhất của người dùng
-            // Không dùng lean() ở đây vì chúng ta cần gọi .save() trên document
             const latestConversation = await this.model.findOne({ userId })
                 .sort({ lastActivity: -1 })
                 .exec();
 
             if (latestConversation) {
                 logToFile(`${logContext} Found latest conversation: ${latestConversation._id}. Updating lastActivity.`);
-                // Cập nhật lastActivity để đánh dấu là đang hoạt động
-                latestConversation.lastActivity = new Date();
-                await latestConversation.save(); // Lưu cập nhật dấu thời gian
-
-                // Kiểm tra _id tồn tại trước khi sử dụng (phòng ngừa)
-                if (!latestConversation._id) {
-                    logToFile(`${logContext} Error: Found conversation document is missing _id.`);
-                    throw new Error("Found conversation document is missing _id");
-                }
+                latestConversation.lastActivity = new Date(); // Hook 'pre_save' sẽ cập nhật
+                await latestConversation.save();
                 return {
-                    // Sử dụng type assertion để đảm bảo _id là ObjectId và có thể gọi toString()
-                    conversationId: (latestConversation._id as Types.ObjectId).toString(),
+                    conversationId: latestConversation._id.toString(),
                     history: latestConversation.messages || []
                 };
             } else {
-                // Không tìm thấy cuộc trò chuyện nào, tạo mới
                 logToFile(`${logContext} No existing conversation found. Creating new.`);
-                return this.createNewConversation(userId); // Tái sử dụng phương thức tạo mới
+                return this.createNewConversation(userId);
             }
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
             logToFile(`${logContext} Error: ${errorMsg}`);
-            // Ném lại lỗi cụ thể hơn để lớp gọi xử lý
             throw new Error(`Database error getting/creating conversation: ${errorMsg}`);
         }
     }
@@ -137,28 +132,22 @@ export class ConversationHistoryService {
         limit?: number
     ): Promise<HistoryItem[] | null> {
         const logContext = `${LOG_PREFIX} [GetHistory Conv: ${conversationId}, User: ${userId}, Limit: ${limit ?? 'None'}]`;
-        logToFile(`${logContext} Fetching history.`);
-
-        // Kiểm tra định dạng conversationId sớm
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
             logToFile(`${logContext} Invalid conversationId format.`);
-            return null; // Trả về null cho định dạng ID không hợp lệ
+            return null;
         }
-
         try {
+            const projection = limit && limit > 0 ? { messages: { $slice: -limit } } : { messages: 1 };
+            // Ép kiểu kết quả của lean() thành một object có cấu trúc mong đợi
             const conversation = await this.model
                 .findOne({ _id: conversationId, userId })
-                .select({ messages: limit && limit > 0 ? { $slice: -limit } : 1 })
-                .lean<{ _id: Types.ObjectId; messages?: HistoryItem[] }>()  // ép kiểu kết quả của lean
+                .select(projection)
+                .lean<{ _id: Types.ObjectId; messages?: HistoryItem[] }>() //  <-- Dùng kiểu cụ thể hơn
                 .exec();
             if (conversation) {
-                logToFile(`${logContext} History found. Message count: ${conversation.messages?.length ?? 0}`);
-                // messages từ lean object sẽ là mảng thông thường (hoặc undefined/null)
                 return conversation.messages || [];
-            } else {
-                logToFile(`${logContext} Conversation not found or not authorized.`);
-                return null; // Không tìm thấy hoặc người dùng không khớp
             }
+            return null;
 
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
@@ -188,39 +177,19 @@ export class ConversationHistoryService {
         newHistory: HistoryItem[]
     ): Promise<boolean> {
         const logContext = `${LOG_PREFIX} [UpdateHistory Conv: ${conversationId}, User: ${userId}]`;
-        logToFile(`${logContext} Updating history. New length: ${newHistory.length}.`);
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) return false;
 
-        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format for update.`);
-            return false;
-        }
-
-        // Thêm dấu thời gian cho tin nhắn nếu thiếu
         const historyWithTimestamps = newHistory.map(item => ({
             ...item,
-            timestamp: item.timestamp || new Date() // Gán timestamp nếu chưa có
+            timestamp: item.timestamp || new Date()
         }));
-
         try {
+            // lastActivity sẽ được cập nhật bởi pre.updateOne hook
             const result = await this.model.updateOne(
-                { _id: conversationId, userId: userId }, // Điều kiện tìm kiếm và xác thực quyền
-                {
-                    $set: {
-                        messages: historyWithTimestamps,
-                        lastActivity: new Date() // Cập nhật lastActivity thủ công
-                    }
-                }
+                { _id: conversationId, userId: userId },
+                { $set: { messages: historyWithTimestamps /* lastActivity sẽ được hook xử lý */ } }
             ).exec();
-
-            // Kiểm tra xem có document nào khớp với query không
-            if (result.matchedCount === 0) {
-                logToFile(`${logContext} Update failed: Conversation not found or not authorized.`);
-                return false; // Không tìm thấy mục tiêu hoặc người dùng không khớp
-            }
-
-            // Ghi log thành công, cho biết có thực sự sửa đổi hay không
-            logToFile(`${logContext} History update targeted successfully. Modified: ${result.modifiedCount > 0}`);
-            return true; // Thao tác đã nhắm đúng document
+            return result.matchedCount > 0;
 
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
@@ -242,26 +211,16 @@ export class ConversationHistoryService {
     */
     async createNewConversation(userId: string): Promise<{ conversationId: string; history: HistoryItem[] }> {
         const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}]`;
-        logToFile(`${logContext} Explicitly creating new conversation.`);
-
         try {
+            // lastActivity sẽ được gán giá trị default hoặc cập nhật bởi pre.save hook
             const newConversation = await this.model.create({
                 userId: userId,
-                messages: [], // Bắt đầu với lịch sử trống
-                lastActivity: new Date(), // Đặt lastActivity ban đầu
-                // Các trường khác có giá trị mặc định trong schema sẽ được áp dụng
+                messages: [],
+                // lastActivity: new Date() // Để hook xử lý
             });
-            logToFile(`${logContext} Created new conversation: ${newConversation._id}`);
-
-            // Kiểm tra _id tồn tại (phòng ngừa)
-            if (!newConversation._id) {
-                logToFile(`${logContext} Error: Created conversation document is missing _id.`);
-                throw new Error("Created conversation document is missing _id");
-            }
             return {
-                // Sử dụng type assertion để đảm bảo _id là ObjectId
-                conversationId: (newConversation._id as Types.ObjectId).toString(),
-                history: [] // Lịch sử ban đầu là trống
+                conversationId: newConversation._id.toString(),
+                history: []
             };
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
@@ -279,26 +238,10 @@ export class ConversationHistoryService {
      */
     async deleteConversation(conversationId: string, userId: string): Promise<boolean> {
         const logContext = `${LOG_PREFIX} [Delete Conv: ${conversationId}, User: ${userId}]`;
-        logToFile(`${logContext} Attempting to delete conversation.`);
-
-        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format for delete.`);
-            return false;
-        }
-
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) return false;
         try {
-            const result = await this.model.deleteOne({
-                _id: conversationId,
-                userId: userId // Đảm bảo chỉ xóa của đúng người dùng
-            }).exec();
-
-            if (result.deletedCount === 1) {
-                logToFile(`${logContext} Deletion successful.`);
-                return true;
-            } else {
-                logToFile(`${logContext} Delete failed: Conversation not found or not authorized.`);
-                return false; // Không tìm thấy hoặc không có quyền
-            }
+            const result = await this.model.deleteOne({ _id: conversationId, userId: userId }).exec();
+            return result.deletedCount === 1;
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
             logToFile(`${logContext} Error deleting conversation: ${errorMsg}`);
@@ -316,31 +259,15 @@ export class ConversationHistoryService {
      */
     async clearConversationMessages(conversationId: string, userId: string): Promise<boolean> {
         const logContext = `${LOG_PREFIX} [ClearMessages Conv: ${conversationId}, User: ${userId}]`;
-        logToFile(`${logContext} Attempting to clear messages.`);
-
-        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format for clear.`);
-            return false;
-        }
-
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) return false;
         try {
+            // lastActivity sẽ được cập nhật bởi pre.updateOne hook
             const result = await this.model.updateOne(
-                { _id: conversationId, userId: userId }, // Điều kiện tìm kiếm và xác thực quyền
-                {
-                    $set: {
-                        messages: [], // Đặt lại mảng messages thành rỗng
-                        lastActivity: new Date() // Cập nhật lastActivity
-                    }
-                }
+                { _id: conversationId, userId: userId },
+                { $set: { messages: [] /* lastActivity sẽ được hook xử lý */ } }
             ).exec();
+            return result.matchedCount > 0;
 
-            if (result.matchedCount === 1) {
-                logToFile(`${logContext} Messages cleared successfully. Modified: ${result.modifiedCount > 0}`);
-                return true; // Tìm thấy và nhắm đúng document
-            } else {
-                logToFile(`${logContext} Clear messages failed: Conversation not found or not authorized.`);
-                return false; // Không tìm thấy hoặc không có quyền
-            }
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
             logToFile(`${logContext} Error clearing messages: ${errorMsg}`);
@@ -351,6 +278,143 @@ export class ConversationHistoryService {
             }
             // Trả về false khi có lỗi DB khác
             return false;
+        }
+    }
+
+
+    /**
+    * Đổi tên một cuộc trò chuyện cụ thể.
+    */
+    async renameConversation(
+        conversationId: string,
+        userId: string,
+        newTitle: string
+    ): Promise<RenameResult> { // <-- Thay đổi kiểu trả về
+        const logContext = `${LOG_PREFIX} [Rename Conv: ${conversationId}, User: ${userId}]`;
+        logToFile(`${logContext} Attempting to rename to "${newTitle.substring(0, 30)}..."`);
+
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
+            logToFile(`${logContext} Invalid conversationId format.`);
+            return { success: false, conversationId };
+        }
+
+        const trimmedTitle = newTitle.trim().substring(0, MAX_CUSTOM_TITLE_LENGTH);
+        if (trimmedTitle.length === 0) {
+            logToFile(`${logContext} New title cannot be empty after trimming.`);
+            // Bạn có thể quyết định reset customTitle thành null/undefined ở đây nếu muốn
+            // Ví dụ:
+            // const updateResult = await this.model.updateOne(... { $unset: { customTitle: "" }, $set: { lastActivity: new Date() }});
+            // Hoặc đơn giản là trả về lỗi
+            return { success: false, conversationId };
+        }
+
+        try {
+            const result = await this.model.updateOne(
+                { _id: conversationId, userId: userId },
+                { $set: { customTitle: trimmedTitle, lastActivity: new Date() } }
+            ).exec();
+
+            if (result.matchedCount === 0) {
+                logToFile(`${logContext} Rename failed: Conversation not found or not authorized.`);
+                return { success: false, conversationId };
+            }
+
+            // Nếu result.modifiedCount === 0 nhưng matchedCount === 1, có nghĩa là title không thay đổi
+            // nhưng thao tác vẫn nhắm đúng document.
+            const wasModified = result.modifiedCount > 0;
+            logToFile(`${logContext} Renamed. Matched: ${result.matchedCount}, Modified: ${wasModified}`);
+
+            // Trả về tiêu đề đã được chuẩn hóa
+            return { success: true, updatedTitle: trimmedTitle, conversationId };
+
+        } catch (error: any) {
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${logContext} Error renaming: ${errorMsg}`);
+            return { success: false, conversationId, updatedTitle: newTitle /* có thể trả về title gốc */ };
+        }
+    }
+
+    /**
+     * Ghim hoặc bỏ ghim một cuộc trò chuyện.
+     */
+    async pinConversation(
+        conversationId: string,
+        userId: string,
+        pinStatus: boolean
+    ): Promise<boolean> {
+        const logContext = `${LOG_PREFIX} [Pin Conv: ${conversationId}, User: ${userId}, Status: ${pinStatus}]`;
+        logToFile(`${logContext} Attempting to set pin status.`);
+
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
+            logToFile(`${logContext} Invalid conversationId format.`);
+            return false;
+        }
+
+        try {
+            // lastActivity sẽ được cập nhật bởi pre.updateOne hook
+            const result = await this.model.updateOne(
+                { _id: conversationId, userId: userId },
+                { $set: { isPinned: pinStatus /* lastActivity sẽ được hook xử lý */ } }
+            ).exec();
+
+            if (result.matchedCount === 0) {
+                logToFile(`${logContext} Pin/Unpin failed: Conversation not found or not authorized.`);
+                return false;
+            }
+            logToFile(`${logContext} Pin status updated. Modified: ${result.modifiedCount > 0}`);
+            return true;
+        } catch (error: any) {
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${logContext} Error updating pin status: ${errorMsg}`);
+            return false;
+        }
+    }
+
+    /**
+     * Tìm kiếm các cuộc trò chuyện dựa trên một thuật ngữ trong tin nhắn.
+     * Trả về metadata của các cuộc trò chuyện khớp.
+     */
+    async searchConversationsByTerm(
+        userId: string,
+        searchTerm: string,
+        limit: number = DEFAULT_SEARCH_LIMIT
+    ): Promise<ConversationMetadata[]> {
+        const logContext = `${LOG_PREFIX} [Search User: ${userId}, Term: "${searchTerm.substring(0, 30)}...", Limit: ${limit}]`;
+        logToFile(`${logContext} Searching conversations.`);
+
+        if (!searchTerm || searchTerm.trim().length === 0) {
+            logToFile(`${logContext} Search term is empty.`);
+            return [];
+        }
+
+        try {
+            // Sử dụng $text search của MongoDB
+            // `score` được thêm vào để có thể sắp xếp theo mức độ liên quan nếu muốn
+            const conversations = await this.model.find(
+                {
+                    userId: userId,
+                    $text: { $search: searchTerm.trim() }
+                },
+                { score: { $meta: 'textScore' } } // Lấy điểm số liên quan
+            )
+                .sort({ isPinned: -1, score: { $meta: 'textScore' }, lastActivity: -1 }) // Sắp xếp: ghim, điểm, hoạt động gần nhất
+                .limit(limit)
+                .select('_id messages lastActivity customTitle isPinned') // Chọn các trường cần thiết
+                .lean()
+                .exec();
+
+            // Ép kiểu cẩn thận hơn cho POJO từ lean()
+            const metadataList: ConversationMetadata[] = conversations.map(conv =>
+                this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }))
+            );
+
+            logToFile(`${logContext} Found ${metadataList.length} conversations matching search term.`);
+            return metadataList;
+
+        } catch (error: any) {
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${logContext} Error searching conversations: ${errorMsg}`);
+            return [];
         }
     }
 
@@ -393,6 +457,3 @@ export class ConversationHistoryService {
         return title;
     }
 }
-
-// Có thể export một instance nếu bạn muốn dùng singleton pattern
-// export const conversationHistoryService = new ConversationHistoryService();

@@ -255,7 +255,7 @@ export const vietnameseNavigationDeclaration: FunctionDeclaration = {
 
 export const vietnameseOpenGoogleMapDeclaration: FunctionDeclaration = {
     name: "openGoogleMap",
-    description: "Mở Google Maps trong một tab trình duyệt mới, hướng đến một chuỗi địa điểm cụ thể (ví dụ: thành phố, địa chỉ, địa danh). CHỈ sử dụng chức năng này SAU KHI đã lấy được chuỗi địa điểm, thường là từ các hàm 'getConferences' hoặc 'getJournals'.",
+    description: "Mở Google Maps trong một tab trình duyệt mới, hướng đến một chuỗi địa điểm cụ thể (ví dụ: thành phố, địa chỉ, địa danh).",
     parameters: {
         type: SchemaType.OBJECT, // Kiểu SchemaType.OBJECT
         properties: { // Thuộc tính
@@ -270,7 +270,7 @@ export const vietnameseOpenGoogleMapDeclaration: FunctionDeclaration = {
 
 export const vietnameseFollowUnfollowItemDeclaration: FunctionDeclaration = {
     name: "followUnfollowItem",
-    description: "Theo dõi hoặc bỏ theo dõi một hội nghị hoặc tạp chí cụ thể cho người dùng đang đăng nhập. Yêu cầu xác định mục trước (ví dụ: sử dụng getConferences/getJournals).",
+    description: "Theo dõi hoặc bỏ theo dõi một hội nghị hoặc tạp chí cụ thể cho người dùng đang đăng nhập.",
     parameters: {
         type: SchemaType.OBJECT, // Kiểu SchemaType.OBJECT
         properties: { // Thuộc tính

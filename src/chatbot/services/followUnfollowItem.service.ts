@@ -1,4 +1,3 @@
-// src/chatbot/services/followUnfollowItem.service.ts // Renamed file for consistency
 import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
 import { container } from 'tsyringe'; // Import container for resolving singletons
 import { ApiCallResult, FollowItem } from '../shared/types'; // Adjust path if needed
@@ -13,42 +12,32 @@ const LOG_PREFIX = "[FollowService]";
 const configService = container.resolve(ConfigService); // Resolve singleton instance
 
 // --- Lấy cấu hình từ ConfigService ---
-// Đảm bảo DATABASE_URL tồn tại trong config
 const DATABASE_URL = configService.config.DATABASE_URL;
 if (!DATABASE_URL) {
     logToFile(`${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`);
     throw new Error("DATABASE_URL is not configured.");
 }
 
+// --- Type Definitions (replacing enums) ---
+type ServiceItemType = 'conference' | 'journal';
+type ServiceActionType = 'follow' | 'unfollow';
+// This type should align with ValidIdentifierType from the handler for clarity
+// and represent what findItemId can meaningfully process.
+type ServiceIdentifierType = 'id' | 'acronym' | 'title';
 
-// --- Constants ---
-const enum ItemType {
-    CONFERENCE = 'conference',
-    JOURNAL = 'journal',
-}
-
-const enum ActionType {
-    FOLLOW = 'follow',
-    UNFOLLOW = 'unfollow',
-}
-
-const enum IdentifierType {
-    ID = 'id',
-    ACRONYM = 'acronym',
-    // TITLE = 'title', // Add if explicitly supported and used
-}
-
+// --- Constants (HEADERS remain the same) ---
 const HEADERS = {
     'Content-Type': 'application/json',
-    'Accept': 'application/json', // Good practice to include Accept header
+    'Accept': 'application/json',
 };
 
 // --- Helper Function for URL Construction ---
 function getApiUrl(
-    itemType: ItemType,
+    itemType: ServiceItemType, // CHANGED from ItemType enum
     operation: 'followedList' | 'add' | 'remove'
 ): string {
-    const base = itemType === ItemType.CONFERENCE ? 'follow-conference' : 'follow-journal';
+    // CHANGED: Compare with string literals
+    const base = itemType === 'conference' ? 'follow-conference' : 'follow-journal';
     switch (operation) {
         case 'followedList':
             return `${DATABASE_URL}/${base}/followed`;
@@ -57,7 +46,6 @@ function getApiUrl(
         case 'remove':
             return `${DATABASE_URL}/${base}/remove`;
         default:
-            // Should not happen with defined operations
             logToFile(`${LOG_PREFIX} Error: Invalid operation type for URL construction: ${operation}`);
             throw new Error(`Invalid follow/unfollow operation: ${operation}`);
     }
@@ -72,7 +60,7 @@ function getApiUrl(
  * @returns A promise resolving to the result, containing item IDs on success.
  */
 export async function executeGetUserFollowedItems(
-    itemType: ItemType, // Use enum
+    itemType: ServiceItemType, // CHANGED from ItemType enum
     token: string | null
 ): Promise<{ success: boolean; itemIds: string[]; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [GetFollowed ${itemType}]`;
@@ -101,12 +89,10 @@ export async function executeGetUserFollowedItems(
             return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching followed ${itemType} list.` };
         }
 
-        // Assuming the API returns an array of objects like { id: string, ... }
-        // Defined by the FollowItem type. Adjust if API structure differs.
         const followedItems: FollowItem[] = await response.json();
         const itemIds = followedItems.map(item => item.id);
         logToFile(`${logContext} Success. Found ${itemIds.length} followed item(s).`);
-        return { success: true, itemIds }; // Removed redundant itemIds: itemIds
+        return { success: true, itemIds };
 
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : String(error);
@@ -125,8 +111,8 @@ export async function executeGetUserFollowedItems(
  */
 export async function executeFollowUnfollowApi(
     itemId: string,
-    itemType: ItemType, // Use enum
-    action: ActionType, // Use enum
+    itemType: ServiceItemType, // CHANGED from ItemType enum
+    action: ServiceActionType, // CHANGED from ActionType enum
     token: string | null
 ): Promise<{ success: boolean; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [${action} ${itemType} ID: ${itemId}]`;
@@ -140,9 +126,11 @@ export async function executeFollowUnfollowApi(
         return { success: false, errorMessage: "Item ID is required." };
     }
 
-    const operation = action === ActionType.FOLLOW ? 'add' : 'remove';
+    // CHANGED: Compare with string literals
+    const operation = action === 'follow' ? 'add' : 'remove';
     const url = getApiUrl(itemType, operation);
-    const bodyPayload = itemType === ItemType.CONFERENCE
+    // CHANGED: Compare with string literals
+    const bodyPayload = itemType === 'conference'
         ? { conferenceId: itemId }
         : { journalId: itemId };
 
@@ -159,13 +147,11 @@ export async function executeFollowUnfollowApi(
         });
 
         if (!response.ok) {
-            // Attempt to parse JSON error response, fallback to status text
             let errorDetails = `Status ${response.status}`;
             try {
                 const errorData = await response.json();
                 errorDetails = errorData?.message || errorData?.error || JSON.stringify(errorData).substring(0, 100);
             } catch {
-                // Ignore JSON parse error if body is not JSON or empty
                 try {
                     const textError = await response.text();
                     errorDetails = textError.substring(0, 100) || `Status ${response.status}`;
@@ -188,17 +174,17 @@ export async function executeFollowUnfollowApi(
 /**
  * Finds the ID of a conference or journal using an identifier (like acronym or ID).
  * @param identifier - The value used for searching (e.g., 'ICML', 'Nature', 'specific-id-123').
- * @param identifierType - The type of the identifier ('id', 'acronym').
+ * @param identifierType - The type of the identifier ('id', 'acronym', 'title').
  * @param itemType - The type of item ('conference' or 'journal').
  * @returns A promise resolving to the found item ID or an error message.
  */
 export async function findItemId(
     identifier: string,
-    identifierType: IdentifierType | string | undefined, // Allow string for flexibility from LLM
-    itemType: ItemType // Use enum
+    identifierType: ServiceIdentifierType, // CHANGED from IdentifierType enum | string | undefined
+    itemType: ServiceItemType // CHANGED from ItemType enum
 ): Promise<{ success: boolean; itemId?: string; errorMessage?: string }> {
-    const effectiveIdType = identifierType as IdentifierType; // Cast for internal use
-    const logContext = `${LOG_PREFIX} [FindID ${itemType} Ident:"${identifier}" Type:${effectiveIdType || 'unknown'}]`;
+    // No need for `effectiveIdType` cast anymore
+    const logContext = `${LOG_PREFIX} [FindID ${itemType} Ident:"${identifier}" Type:${identifierType}]`;
     logToFile(`${logContext} Attempting to find item ID.`);
 
     if (!identifier || typeof identifier !== 'string' || identifier.trim() === '') {
@@ -206,30 +192,26 @@ export async function findItemId(
         return { success: false, errorMessage: "Identifier is required to find the item ID." };
     }
 
-    // If the identifier type is explicitly 'id', return it directly.
-    if (effectiveIdType === IdentifierType.ID) {
+    // CHANGED: Compare with string literal
+    if (identifierType === 'id') {
         logToFile(`${logContext} Identifier type is ID, returning directly: ${identifier}`);
         return { success: true, itemId: identifier };
     }
 
-    // --- Prepare Search ---
-    // NOTE: Assumes API uses 'acronym' param for both acronym and potentially title searches.
-    // If API supports specific 'title=' param, adjust this logic.
-    // Using URLSearchParams for robust encoding.
     const searchParams = new URLSearchParams({
-        // Use the appropriate parameter key expected by the backend API
-        acronym: identifier, // Or potentially title: identifier if API differs
-        perPage: '1', // Limit results to 1 as we only need the ID
+        // If 'title' is passed as identifierType, it will be searched using the 'acronym' API parameter.
+        // This matches the previous behavior where 'title' wasn't an explicit enum member for IdentifierType.
+        acronym: identifier,
+        perPage: '1',
         page: '1'
     });
     const searchQuery = searchParams.toString();
     logToFile(`${logContext} Constructed search query: ${searchQuery}`);
 
-
-    // --- Call appropriate search service ---
-    const apiResult: ApiCallResult = itemType === ItemType.CONFERENCE
-        ? await executeGetConferences(searchQuery) // Assumes executeGetConferences handles the query string
-        : await executeGetJournals(searchQuery);  // Assumes executeGetJournals handles the query string
+    // CHANGED: Compare with string literal
+    const apiResult: ApiCallResult = itemType === 'conference'
+        ? await executeGetConferences(searchQuery)
+        : await executeGetJournals(searchQuery);
 
     if (!apiResult.success || !apiResult.rawData) {
         const errorDetail = apiResult.errorMessage ? `: ${apiResult.errorMessage}` : '.';
@@ -237,23 +219,19 @@ export async function findItemId(
         return { success: false, errorMessage: `Could not find ${itemType} using identifier "${identifier}"${errorDetail}` };
     }
 
-    // --- Parse and Extract ID ---
     try {
         const parsedData = JSON.parse(apiResult.rawData);
-
-        // Attempt to find the item data within common API response structures
         let itemData: any = null;
         if (parsedData && Array.isArray(parsedData.payload) && parsedData.payload.length > 0) {
-            itemData = parsedData.payload[0]; // Structure: { payload: [item, ...] }
+            itemData = parsedData.payload[0];
             logToFile(`${logContext} Extracted item from parsedData.payload[0]`);
         } else if (Array.isArray(parsedData) && parsedData.length > 0) {
-            itemData = parsedData[0]; // Structure: [item, ...]
+            itemData = parsedData[0];
             logToFile(`${logContext} Extracted item from parsedData[0]`);
         } else if (typeof parsedData === 'object' && parsedData !== null && !Array.isArray(parsedData) && parsedData.id) {
-            itemData = parsedData; // Structure: { id: ..., ... } (single object result)
+            itemData = parsedData;
             logToFile(`${logContext} Extracted item from single object parsedData`);
         }
-
 
         if (itemData && itemData.id && typeof itemData.id === 'string') {
             logToFile(`${logContext} Successfully found ID: ${itemData.id}`);

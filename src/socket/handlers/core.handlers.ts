@@ -20,7 +20,12 @@ import {
     ClearConversationData,
     Language, // Assuming Language is defined here or imported
     WarningUpdate,
-    ChatMessage
+    ChatMessage,
+    RenameConversationData,
+    PinConversationData,
+    SearchConversationsData,
+    ClientConversationMetadata, // Nếu bạn dùng type riêng cho client
+    RenameResult
 } from '../../chatbot/shared/types'; // Adjust path if needed
 
 // --- Constants ---
@@ -72,8 +77,7 @@ export const registerCoreHandlers = (
      */
     const sendChatError = (log: Logger, message: string, step: string, details?: Record<string, any>): void => {
         log.error({ step, errorMsg: message, ...details }, 'Chat error occurred');
-        const errorPayload: ErrorUpdate = { type: 'error', message, step };
-        socket.emit('chat_error', errorPayload);
+        socket.emit('chat_error', { type: 'error', message, step } as ErrorUpdate);
     };
 
     /**
@@ -85,8 +89,7 @@ export const registerCoreHandlers = (
      */
     const sendChatWarning = (log: Logger, message: string, step: string, details?: Record<string, any>): void => {
         log.warn({ step, warningMsg: message, ...details }, 'Chat warning occurred');
-        const warningPayload: WarningUpdate = { type: 'warning', message, step }; // Reuse ErrorUpdate type for warnings
-        socket.emit('chat_warning', warningPayload); // Use a different event for warnings
+        socket.emit('chat_warning', { type: 'warning', message, step } as WarningUpdate);
     };
 
 
@@ -100,11 +103,12 @@ export const registerCoreHandlers = (
     const emitUpdatedConversationList = async (log: Logger, userId: string, reason: string): Promise<void> => {
         log.debug({ userId, reason }, 'Attempting to fetch and emit updated conversation list.');
         try {
+            // Sử dụng ConversationMetadata từ service
             const updatedList: ConversationMetadata[] = await conversationHistoryService.getConversationListForUser(userId);
-            socket.emit('conversation_list', updatedList);
+            // Client có thể cần map lại sang ClientConversationMetadata nếu type khác
+            socket.emit('conversation_list', updatedList as ClientConversationMetadata[]);
             log.info({ userId, reason, count: updatedList.length }, 'Emitted updated conversation list.');
         } catch (error: any) {
-            // Log warning, don't send error to client for this background update failure
             log.warn({ userId, reason, error: error.message }, 'Failed to fetch/emit updated conversation list.');
         }
     };
@@ -118,7 +122,7 @@ export const registerCoreHandlers = (
     const ensureAuthenticated = (log: Logger, eventName: string): string | null => {
         const currentUserId = socket.data.userId as string | undefined;
         if (!currentUserId) {
-            sendChatError(log, `Authentication required to perform action: ${eventName}.`, 'auth_required', { event: eventName });
+            sendChatError(log, `Authentication required for ${eventName}.`, 'auth_required', { event: eventName });
             return null;
         }
         return currentUserId;
@@ -134,15 +138,12 @@ export const registerCoreHandlers = (
         if (!currentUserId) return;
 
         handlerLogger.info({ userId: currentUserId }, 'Request received.');
-        try {
-            const conversationList = await conversationHistoryService.getConversationListForUser(currentUserId);
-            socket.emit('conversation_list', conversationList);
-            handlerLogger.info({ userId: currentUserId, count: conversationList.length }, 'Sent conversation list.');
-        } catch (error: any) {
-            // Service itself doesn't throw for list, but catch potential unexpected errors
-            sendChatError(handlerLogger, `Server error fetching conversation list.`, 'list_fetch_fail_unexpected', { error: error.message });
-        }
+        // Service trả về mảng rỗng nếu lỗi, không cần try-catch ở đây trừ khi muốn xử lý đặc biệt
+        const conversationList = await conversationHistoryService.getConversationListForUser(currentUserId);
+        socket.emit('conversation_list', conversationList as ClientConversationMetadata[]);
+        handlerLogger.info({ userId: currentUserId, count: conversationList.length }, 'Sent conversation list.');
     });
+
 
     // --- Handler: Load Specific Conversation ---
     socket.on('load_conversation', async (data: unknown) => {
@@ -203,11 +204,9 @@ export const registerCoreHandlers = (
     // --- Handler: Send Message ---
     socket.on('send_message', async (data: unknown) => {
         const eventName = 'send_message';
-        // Generate a unique ID for this specific message processing flow
         const handlerId = `Msg-${socketId.substring(0, 4)}-${Date.now()}`;
         const handlerLogger = logger.child({ event: eventName, handlerId });
 
-        // Authentication and Token Check
         const currentUserId = ensureAuthenticated(handlerLogger, eventName);
         if (!currentUserId) return;
         const token = socket.data.token as string | undefined;
@@ -215,8 +214,6 @@ export const registerCoreHandlers = (
             return sendChatError(handlerLogger, 'Authentication session error. Please re-login.', 'missing_token_auth', { userId: currentUserId });
         }
 
-        // Input Validation
-        // Consider using a validation library (like Zod) for complex objects
         if (
             typeof data !== 'object' || data === null ||
             typeof (data as SendMessageData)?.userInput !== 'string' || !(data as SendMessageData).userInput?.trim() ||
@@ -240,7 +237,6 @@ export const registerCoreHandlers = (
 
         let targetConversationId: string;
 
-        // 1. Ensure a Target Conversation Exists
         if (activeConversationId) {
             targetConversationId = activeConversationId;
         } else {
@@ -248,23 +244,21 @@ export const registerCoreHandlers = (
             try {
                 const { conversationId: newConvId } = await conversationHistoryService.createNewConversation(currentUserId);
                 targetConversationId = newConvId;
-                socket.data.currentConversationId = newConvId; // Set the newly created one as active
+                socket.data.currentConversationId = newConvId;
                 handlerLogger.info({ newConvId: targetConversationId }, 'Implicitly created and set active conversation.');
-                socket.emit('new_conversation_started', { conversationId: targetConversationId }); // Inform client
+                socket.emit('new_conversation_started', { conversationId: targetConversationId });
                 await emitUpdatedConversationList(handlerLogger, currentUserId, 'implicit new conversation');
             } catch (error: any) {
                 return sendChatError(handlerLogger, `Could not start chat session.`, 'implicit_new_conv_fail', { userId: currentUserId, error: error.message });
             }
         }
 
-        // 2. Fetch Current History for the Target Conversation
         let currentHistory: HistoryItem[];
         try {
             const fetchedHistory = await conversationHistoryService.getConversationHistory(targetConversationId, currentUserId, DEFAULT_HISTORY_LIMIT);
             if (fetchedHistory === null) {
-                // This might happen if the activeConversationId is somehow invalid or belongs to another user (edge case)
                 handlerLogger.error({ convId: targetConversationId, userId: currentUserId }, 'Failed to fetch history for supposedly active conversation.');
-                socket.data.currentConversationId = undefined; // Clear potentially invalid active ID
+                socket.data.currentConversationId = undefined;
                 return sendChatError(handlerLogger, 'Chat session error. Please select a conversation or start a new one.', 'history_not_found_send');
             }
             currentHistory = fetchedHistory;
@@ -273,98 +267,56 @@ export const registerCoreHandlers = (
             return sendChatError(handlerLogger, `Could not load chat history.`, 'history_fetch_fail_send', { convId: targetConversationId, error: error.message });
         }
 
-        // 3. Process User Input via Intent Handler
         try {
-            let updatedHistory: HistoryItem[] | undefined = undefined;
+            let updatedHistory: HistoryItem[] | void | undefined = undefined; // <<< Sửa: có thể là void từ streaming
             let resultAction: FrontendAction | undefined = undefined;
 
-            // Action handler closure - captures handlerLogger, token, etc.
             const handleAction = (action: FrontendAction | undefined) => {
                 if (action?.type === 'confirmEmailSend') {
                     handlerLogger.info({ confirmationId: action.payload.confirmationId }, 'Staging email confirmation action.');
-                    // TODO: Refactor stageEmailConfirmation to accept logger instance
                     stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, handlerId, io /*, handlerLogger */);
                 }
-                // Handle other action types here if needed
             };
 
-            // Call the appropriate intent handler
-            // Call the appropriate intent handler
             if (isStreaming) {
                 handlerLogger.debug({ convId: targetConversationId }, 'Calling streaming intent handler.');
-                // TODO: Refactor handleStreaming to accept logger instance
-                // <<< KHÔNG GÁN KẾT QUẢ >>>
-                await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction /*, handlerLogger */);
-                // <<< Set updatedHistory thành undefined vì streaming tự xử lý emit >>>
-                updatedHistory = undefined;
+                // <<< SỬA: Gán kết quả trả về từ handleStreaming >>>
+                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction /*, handlerLogger */);
+                // <<< Không cần gán updatedHistory = undefined nữa >>>
             } else {
                 handlerLogger.debug({ convId: targetConversationId }, 'Calling non-streaming intent handler.');
-                // TODO: Refactor handleNonStreaming to accept logger instance
                 const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language as Language, handlerId /*, handlerLogger */);
                 if (handlerResult) {
-                    updatedHistory = handlerResult.history; // Chỉ gán khi non-streaming
+                    updatedHistory = handlerResult.history;
                     resultAction = handlerResult.action;
-                    handleAction(resultAction); // Handle action from non-streaming result
-                } else {
-                    updatedHistory = undefined; // Không có kết quả từ non-streaming
+                    handleAction(resultAction);
                 }
             }
 
-            // 4. Save Updated History (if returned by non-streaming handler)
-            // <<< Chỉ lưu nếu updatedHistory là một mảng (tức là từ non-streaming) >>>
-            if (Array.isArray(updatedHistory)) {
-                handlerLogger.info({ convId: targetConversationId, newHistorySize: updatedHistory.length }, 'Non-streaming handler returned updated history. Attempting save.');
-                try {
-                    // Use the service to update the history
-                    const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, currentUserId, updatedHistory);
-
-                    if (updateSuccess) {
-                        handlerLogger.info({ convId: targetConversationId }, 'Successfully updated history in DB.');
-                        // Optionally emit updated list *after* successful save
-                        await emitUpdatedConversationList(handlerLogger, currentUserId, 'message saved');
-                    } else {
-                        // The update targeted a non-existent/unauthorized conversation
-                        handlerLogger.error({ convId: targetConversationId }, 'History save failed: Target conversation not found or unauthorized during update.');
-                        sendChatWarning(handlerLogger, 'Failed to save message history. Conversation might be out of sync.', 'history_save_fail_target');
-                    }
-                } catch (dbError: any) {
-                    // Catch actual database exceptions during the update
-                    handlerLogger.error({ convId: targetConversationId, error: dbError.message }, 'CRITICAL: Error updating history in DB.');
-                    sendChatError(handlerLogger, 'A critical error occurred while saving your message.', 'history_save_exception', { error: dbError.message });
-                }
-            } else {
-                // Log này giờ áp dụng cho cả streaming (luôn là undefined) và non-streaming không trả về history
-                handlerLogger.info({ convId: targetConversationId, reason: isStreaming ? 'Streaming handled emits' : 'Non-streaming returned no history' }, 'No history array returned by handler. DB not updated.');
-            }
-
-            // 4. Save Updated History (if returned by handler)
+            // <<< SỬA: Chỉ còn một khối if để lưu history >>>
             if (Array.isArray(updatedHistory)) {
                 handlerLogger.info({ convId: targetConversationId, newHistorySize: updatedHistory.length }, 'Intent handler returned updated history. Attempting save.');
                 try {
-                    // Use the service to update the history
                     const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, currentUserId, updatedHistory);
 
                     if (updateSuccess) {
                         handlerLogger.info({ convId: targetConversationId }, 'Successfully updated history in DB.');
-                        // Optionally emit updated list *after* successful save
                         await emitUpdatedConversationList(handlerLogger, currentUserId, 'message saved');
                     } else {
-                        // The update targeted a non-existent/unauthorized conversation (should be rare if fetched history worked)
                         handlerLogger.error({ convId: targetConversationId }, 'History save failed: Target conversation not found or unauthorized during update.');
-                        // Send a warning to the client - data might be slightly stale
                         sendChatWarning(handlerLogger, 'Failed to save message history. Conversation might be out of sync.', 'history_save_fail_target');
                     }
                 } catch (dbError: any) {
-                    // Catch actual database exceptions during the update
-                    handlerLogger.error({ convId: targetConversationId, error: dbError.message }, 'CRITICAL: Error updating history in DB.');
+                    handlerLogger.error({ convId: targetConversationId, error: dbError.message, stack: dbError.stack }, 'CRITICAL: Error updating history in DB.');
                     sendChatError(handlerLogger, 'A critical error occurred while saving your message.', 'history_save_exception', { error: dbError.message });
                 }
             } else {
-                handlerLogger.info({ convId: targetConversationId }, 'Intent handler did not return an updated history array. DB not updated.');
+                // Log này giờ áp dụng cho streaming trả về void/undefined, hoặc non-streaming không trả về history
+                handlerLogger.info({ convId: targetConversationId, reason: isStreaming ? 'Streaming handler did not return history or returned void' : 'Non-streaming returned no history' }, 'No history array returned by handler for explicit DB update here. DB not updated by this block.');
             }
 
         } catch (handlerError: any) {
-            // Catch errors thrown *by* the intent handlers (handleStreaming/handleNonStreaming)
+            handlerLogger.error({ error: handlerError.message, stack: handlerError.stack }, 'Error processing message via intent handler');
             sendChatError(handlerLogger, `Error processing message: ${handlerError.message}`, 'handler_exception', { error: handlerError.message });
         }
     });
@@ -474,12 +426,102 @@ export const registerCoreHandlers = (
         }
     });
 
+    // --- Handler: Rename Conversation ---
+    socket.on('rename_conversation', async (data: unknown) => {
+        const eventName = 'rename_conversation';
+        const handlerLogger = logger.child({ event: eventName });
+        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        if (!currentUserId) return;
+
+        const payload = data as RenameConversationData;
+        if (
+            typeof payload !== 'object' || payload === null ||
+            typeof payload.conversationId !== 'string' || !payload.conversationId ||
+            typeof payload.newTitle !== 'string'
+        ) {
+            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId" or "newTitle".', 'invalid_request_rename');
+        }
+        const { conversationId, newTitle } = payload;
+        handlerLogger.info({ conversationId, newTitlePreview: newTitle.substring(0, 30), userId: currentUserId }, 'Request received.');
+
+        try {
+            // Gọi service method và nhận kết quả chi tiết hơn
+            const renameOpResult: RenameResult = await conversationHistoryService.renameConversation(conversationId, currentUserId, newTitle);
+
+            if (renameOpResult.success) {
+                handlerLogger.info({ conversationId, updatedTitle: renameOpResult.updatedTitle }, 'Successfully renamed conversation.');
+                // Sử dụng updatedTitle từ kết quả của service
+                socket.emit('conversation_renamed', {
+                    conversationId: renameOpResult.conversationId,
+                    newTitle: renameOpResult.updatedTitle // Đây là tiêu đề đã được xử lý bởi service
+                });
+                await emitUpdatedConversationList(handlerLogger, currentUserId, `renamed conv ${conversationId}`);
+            } else {
+                // Service đã xử lý lỗi logic (ví dụ: không tìm thấy, title không hợp lệ)
+                sendChatError(handlerLogger, 'Could not rename. Check ID, permissions, or title validity.', 'rename_fail_logic', { conversationId });
+            }
+        } catch (error: any) {
+            // Lỗi không mong muốn từ service (ví dụ: lỗi DB)
+            sendChatError(handlerLogger, 'Server error renaming conversation.', 'rename_fail_server', { conversationId, error: error.message });
+        }
+    });
+
+    // --- Handler: Pin Conversation ---
+    socket.on('pin_conversation', async (data: unknown) => {
+        const eventName = 'pin_conversation';
+        const handlerLogger = logger.child({ event: eventName });
+        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        if (!currentUserId) return;
+
+        const payload = data as PinConversationData;
+        if (
+            typeof payload !== 'object' || payload === null ||
+            typeof payload.conversationId !== 'string' || !payload.conversationId ||
+            typeof payload.isPinned !== 'boolean'
+        ) {
+            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId" or "isPinned" status.', 'invalid_request_pin');
+        }
+        const { conversationId, isPinned } = payload;
+        handlerLogger.info({ conversationId, isPinned, userId: currentUserId }, 'Request received.');
+
+        try {
+            const success = await conversationHistoryService.pinConversation(conversationId, currentUserId, isPinned);
+            if (success) {
+                handlerLogger.info({ conversationId, isPinned }, 'Successfully updated pin status.');
+                socket.emit('conversation_pin_status_changed', { conversationId, isPinned });
+                await emitUpdatedConversationList(handlerLogger, currentUserId, `pinned/unpinned conv ${conversationId}`);
+            } else {
+                sendChatError(handlerLogger, 'Could not update pin status. Check ID or permissions.', 'pin_fail', { conversationId });
+            }
+        } catch (error: any) {
+            sendChatError(handlerLogger, 'Server error updating pin status.', 'pin_fail_server', { conversationId, error: error.message });
+        }
+    });
+
+    // --- Handler: Search Conversations ---
+    socket.on('search_conversations', async (data: unknown) => {
+        const eventName = 'search_conversations';
+        const handlerLogger = logger.child({ event: eventName });
+        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        if (!currentUserId) return;
+
+        const payload = data as SearchConversationsData;
+        if (
+            typeof payload !== 'object' || payload === null ||
+            typeof payload.searchTerm !== 'string' // Cho phép searchTerm rỗng, service sẽ xử lý
+        ) {
+            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "searchTerm".', 'invalid_request_search');
+        }
+        const { searchTerm, limit } = payload; // limit có thể undefined
+        handlerLogger.info({ searchTermPreview: searchTerm.substring(0, 30), limit, userId: currentUserId }, 'Request received.');
+
+        // Service trả về mảng rỗng nếu không tìm thấy hoặc lỗi, không cần try-catch trừ khi muốn xử lý đặc biệt
+        const searchResults: ConversationMetadata[] = await conversationHistoryService.searchConversationsByTerm(currentUserId, searchTerm, limit);
+
+        socket.emit('conversation_search_results', searchResults as ClientConversationMetadata[]);
+        handlerLogger.info({ searchTermPreview: searchTerm.substring(0, 30), count: searchResults.length }, 'Sent search results.');
+    });
+
     // Log successful registration
     logger.info('Core event handlers successfully registered.');
 };
-
-// --- TODO ---
-// 1. Refactor external functions (handleStreaming, handleNonStreaming, stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation)
-//    to accept a Pino Logger instance (`handlerLogger`) as an argument for consistent, contextual logging.
-// 2. Consider implementing more robust data validation using a library like Zod, especially for the `send_message` payload.
-// 3. Define the `ErrorUpdate` type more formally if it's used for both errors and warnings, perhaps renaming it or creating a separate `WarningUpdate` type.

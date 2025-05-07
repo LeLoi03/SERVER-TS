@@ -46,7 +46,7 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             functionDeclarations: [
                 LangData.englishGetConferencesDeclaration, // <-- Use LangData
                 LangData.englishFollowUnfollowItemDeclaration, // <-- Use LangData
-                LangData.englishDrawChartDeclaration, // Assuming this should be here or Host? Added based on imports
+                // LangData.englishDrawChartDeclaration, // Assuming this should be here or Host? Added based on imports
             ],
         },
         'vi': {
@@ -54,7 +54,7 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             functionDeclarations: [
                 LangData.vietnamGetConferencesDeclaration, // <-- Use LangData (Note: original import name)
                 LangData.vietnameseFollowUnfollowItemDeclaration, // <-- Use LangData
-                LangData.vietnamDrawChartDeclaration, // <-- Use LangData (Note: original import name)
+                // LangData.vietnamDrawChartDeclaration, // <-- Use LangData (Note: original import name)
             ],
         },
         'zh': {
@@ -62,7 +62,7 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             functionDeclarations: [
                 LangData.chineseGetConferencesDeclaration, // <-- Use LangData
                 LangData.chineseFollowUnfollowItemDeclaration, // <-- Use LangData
-                LangData.chineseDrawChartDeclaration, // <-- Use LangData
+                // LangData.chineseDrawChartDeclaration, // <-- Use LangData
             ],
         },
         // ... potentially add other languages

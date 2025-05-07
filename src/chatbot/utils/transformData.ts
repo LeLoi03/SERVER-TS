@@ -2,6 +2,13 @@
 import logToFile from '../../utils/logger';
 // --- Helper Functions ---
 
+interface ConferenceData {
+    payload: any[]; // Thay any[] bằng kiểu dữ liệu chính xác của payload
+    meta: any; // Thay any bằng kiểu dữ liệu chính xác của meta
+    // Thêm các thuộc tính khác nếu có
+}
+
+
 /**
  * Safely gets a nested property from an object.
  * @param obj The object to traverse.
@@ -50,13 +57,13 @@ const formatDateRange = (fromDateStr?: string | null, toDateStr?: string | null)
         } else {
             // Check if dates are in the same month and year to avoid redundancy
             if (fromDate.getFullYear() === toDate.getFullYear() && fromDate.getMonth() === toDate.getMonth()) {
-                 const fromDay = fromDate.toLocaleDateString('en-US', { day: 'numeric' });
-                 const toDay = toDate.toLocaleDateString('en-US', { day: 'numeric' });
-                 const month = fromDate.toLocaleDateString('en-US', { month: 'long' });
-                 return `${month} ${fromDay} - ${toDay}, ${year}`;
+                const fromDay = fromDate.toLocaleDateString('en-US', { day: 'numeric' });
+                const toDay = toDate.toLocaleDateString('en-US', { day: 'numeric' });
+                const month = fromDate.toLocaleDateString('en-US', { month: 'long' });
+                return `${month} ${fromDay} - ${toDay}, ${year}`;
             } else {
                 // Different months or years
-                 return `${fromFormatted} - ${toFormatted}, ${year}`; // Consider adding year to 'toFormatted' if needed
+                return `${fromFormatted} - ${toFormatted}, ${year}`; // Consider adding year to 'toFormatted' if needed
             }
         }
     } catch (error) {
@@ -71,16 +78,16 @@ const formatDateRange = (fromDateStr?: string | null, toDateStr?: string | null)
  * @returns Formatted date string "Month Day, Year" or "N/A".
  */
 const formatSingleDate = (dateStr?: string | null): string => {
-     if (!dateStr) return "N/A";
-     try {
-         const date = new Date(dateStr);
-         if (isNaN(date.getTime())) return "N/A";
-         const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
-         return date.toLocaleDateString('en-US', options);
-     } catch (error) {
+    if (!dateStr) return "N/A";
+    try {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return "N/A";
+        const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    } catch (error) {
         logToFile(`Error formatting single date (${dateStr}): ${error}`);
         return "N/A";
-     }
+    }
 };
 
 /**
@@ -97,7 +104,7 @@ const formatChange = (currentValue: any, previousValue: any, formatter?: (val: a
     const formattedPrev = formatter ? formatter(previousValue) : String(previousValue || "N/A");
     // Only show change if current value is also defined, otherwise it might be a removal (handled elsewhere if needed)
     if (currentValue !== undefined && currentValue !== null) {
-         return ` (changed from "${formattedPrev}")`;
+        return ` (changed from "${formattedPrev}")`;
     }
     return ""; // Or handle removal case if required by prompt later
 };
@@ -116,30 +123,19 @@ const formatChangeMarkdown = (currentValue: any, previousValue: any, formatter?:
     }
     const formattedPrev = formatter ? formatter(previousValue) : String(previousValue || "N/A");
     if (currentValue !== undefined && currentValue !== null) {
-         // Use bold for emphasis
-         return ` **(changed from "${formattedPrev}")**`;
+        // Use bold for emphasis
+        return ` **(changed from "${formattedPrev}")**`;
     }
     return "";
 };
 
 
 // --- Data Transformation Logic with Markdown ---
-export function transformConferenceData(rawData: string, searchQuery: string): string {
+export function transformConferenceData(parsedData: ConferenceData, searchQuery: string): string {
     logToFile(`Transforming conference data with Markdown. Search query: ${searchQuery}`);
-    let data;
-    try {
-        data = JSON.parse(rawData);
-        if (!data || typeof data !== 'object') {
-            logToFile(`Transformation Error: Parsed data is not a valid object.`);
-            return "Error: Could not parse conference data from API.";
-        }
-    } catch (error) {
-        logToFile(`Transformation Error: Failed to parse JSON: ${error}`);
-        return "Error: Invalid data format received from API.";
-    }
 
-    const payload = safeGet(data, 'payload', []);
-    const meta = safeGet(data, 'meta', {});
+    const payload = safeGet(parsedData, 'payload', []);
+    const meta = safeGet(parsedData, 'meta', {});
     const isDetailMode = searchQuery.includes("mode=detail");
 
     // 1. Format Metadata with Markdown
@@ -153,7 +149,7 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
 
     // 2. Format Payload with Markdown
     let payloadString = "\n**Payload:**\n"; // Bold header
-     payloadString += "---\n"; // Horizontal rule for separation
+    payloadString += "---\n"; // Horizontal rule for separation
 
     if (!Array.isArray(payload) || payload.length === 0) {
         payloadString += "*No conferences found matching your criteria.*\n"; // Italicize if none found
@@ -178,7 +174,7 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
                         payloadString += `       - **Research field:** ${safeGet(rank, 'researchField', 'N/A')}\n`;
                     });
                 } else {
-                     payloadString += `  - **Ranks:** N/A\n`;
+                    payloadString += `  - **Ranks:** N/A\n`;
                 }
 
                 // Organizations - Use latest, compare with previous if exists
@@ -200,7 +196,7 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
                 const previousAccessType = safeGet(previousOrg, 'accessType', undefined);
                 payloadString += `  - **Type:** ${currentAccessType}${formatChangeMarkdown(currentAccessType, previousAccessType)}\n`;
 
-                 // Location (address) with change tracking
+                // Location (address) with change tracking
                 const currentAddress = safeGet(currentLocation, 'address', 'N/A');
                 const previousAddress = safeGet(previousLocation, 'address', undefined);
                 payloadString += `  - **Location:** ${currentAddress}${formatChangeMarkdown(currentAddress, previousAddress)}\n`;
@@ -209,7 +205,7 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
                 // Website link with change tracking
                 const currentLink = safeGet(currentOrg, 'link', 'N/A');
                 const previousLink = safeGet(previousOrg, 'link', undefined);
-                 // Display link directly, maybe make it clickable if platform supports auto-linking
+                // Display link directly, maybe make it clickable if platform supports auto-linking
                 payloadString += `  - **Website link:** ${currentLink}${formatChangeMarkdown(currentLink, previousLink)}\n`;
 
                 // CFP link with change tracking
@@ -217,19 +213,19 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
                 const previousCfpLink = safeGet(previousOrg, 'cfpLink', undefined);
                 payloadString += `  - **Call for papers link:** ${currentCfpLink}${formatChangeMarkdown(currentCfpLink, previousCfpLink)}\n`;
 
-                 // Important Dates link with change tracking
+                // Important Dates link with change tracking
                 const currentImpLink = safeGet(currentOrg, 'impLink', 'N/A'); // Adjust key if needed
                 const previousImpLink = safeGet(previousOrg, 'impLink', undefined);
                 if (currentImpLink !== 'N/A' || previousImpLink) {
-                     payloadString += `  - **Important dates link:** ${currentImpLink}${formatChangeMarkdown(currentImpLink, previousImpLink)}\n`;
+                    payloadString += `  - **Important dates link:** ${currentImpLink}${formatChangeMarkdown(currentImpLink, previousImpLink)}\n`;
                 }
 
-                 // Publisher with change tracking
+                // Publisher with change tracking
                 const currentPublisher = safeGet(currentOrg, 'publisher', 'N/A');
                 const previousPublisher = safeGet(previousOrg, 'publisher', undefined);
-                 if (currentPublisher !== 'N/A' || previousPublisher) {
+                if (currentPublisher !== 'N/A' || previousPublisher) {
                     payloadString += `  - **Publisher:** ${currentPublisher}${formatChangeMarkdown(currentPublisher, previousPublisher)}\n`;
-                 }
+                }
 
                 // Topics (Comma-separated list)
                 const topics = safeGet(currentOrg, 'topics', []);
@@ -250,11 +246,11 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
 
                     let foundPrevIndex = -1;
                     const prevDate = previousDates.find((pDate: any, index: number) => {
-                         if (safeGet(pDate, 'type') === dateType && safeGet(pDate, 'name') === dateName) {
-                              foundPrevIndex = index;
-                              return true;
-                         }
-                         return false;
+                        if (safeGet(pDate, 'type') === dateType && safeGet(pDate, 'name') === dateName) {
+                            foundPrevIndex = index;
+                            return true;
+                        }
+                        return false;
                     });
 
                     let changeIndicator = "";
@@ -279,23 +275,23 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
                     }
                 });
 
-                 // Check for removed dates
+                // Check for removed dates
                 if (previousOrg) {
                     previousDates.forEach((pDate: any, index: number) => {
                         if (!processedPrevDateIndices.has(index)) {
-                             const dateType = safeGet(pDate, 'type', '');
-                             const dateName = safeGet(pDate, 'name', 'Unnamed Date');
-                             const formattedPrevDate = formatDateRange(safeGet(pDate, 'fromDate'), safeGet(pDate, 'toDate'));
-                             const removedTag = " **(removed)**"; // Bold 'removed'
+                            const dateType = safeGet(pDate, 'type', '');
+                            const dateName = safeGet(pDate, 'name', 'Unnamed Date');
+                            const formattedPrevDate = formatDateRange(safeGet(pDate, 'fromDate'), safeGet(pDate, 'toDate'));
+                            const removedTag = " **(removed)**"; // Bold 'removed'
 
-                             if (dateType === 'conferenceDates') {
-                                 // Only add if no current conference date exists
-                                 if (conferenceDateStr === "N/A" || conferenceDateStr.endsWith(removedTag)) {
+                            if (dateType === 'conferenceDates') {
+                                // Only add if no current conference date exists
+                                if (conferenceDateStr === "N/A" || conferenceDateStr.endsWith(removedTag)) {
                                     conferenceDateStr = `${formattedPrevDate}${removedTag}`;
-                                 }
-                             } else {
-                                 importantDates.push(`  - **${dateName}:** ${formattedPrevDate}${removedTag}`);
-                             }
+                                }
+                            } else {
+                                importantDates.push(`  - **${dateName}:** ${formattedPrevDate}${removedTag}`);
+                            }
                         }
                     });
                 }
@@ -315,7 +311,7 @@ export function transformConferenceData(rawData: string, searchQuery: string): s
 
                 // Summary and Call for Papers
                 payloadString += `  - **Summary:** ${safeGet(currentOrg, 'summary', 'N/A')}\n`;
-                 // Keep CFP as plain text for now, potential for complex markdown inside
+                // Keep CFP as plain text for now, potential for complex markdown inside
                 payloadString += `  - **Call for papers:** \n${safeGet(currentOrg, 'callForPaper', 'N/A')}\n`;
 
 

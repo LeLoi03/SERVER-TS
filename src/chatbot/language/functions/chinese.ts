@@ -251,7 +251,7 @@ export const chineseNavigationDeclaration: FunctionDeclaration = {
 
 export const chineseOpenGoogleMapDeclaration: FunctionDeclaration = {
     name: "openGoogleMap",
-    description: "在新的浏览器标签页中打开 Google 地图，并指向特定的位置字符串（例如：城市、地址、地标）。仅在获取位置字符串之后（通常来自 'getConferences' 或 'getJournals' 函数）才使用此功能。",
+    description: "在新的浏览器标签页中打开 Google 地图，并指向特定的位置字符串（例如：城市、地址、地标）",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
@@ -266,7 +266,7 @@ export const chineseOpenGoogleMapDeclaration: FunctionDeclaration = {
 
 export const chineseFollowUnfollowItemDeclaration: FunctionDeclaration = {
     name: "followUnfollowItem",
-    description: "为当前登录的用户关注或取消关注特定的会议或期刊。需要先识别该项目（例如，使用 getConferences/getJournals）。",
+    description: "为当前登录的用户关注或取消关注特定的会议或期刊",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {

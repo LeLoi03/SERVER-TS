@@ -27,15 +27,14 @@ if (!DATABASE_URL) {
  * Returns formatted string data or null if transformation fails/not applicable.
  * Can throw an error if transformation encounters critical issues.
  */
-// *** SỬA ĐỔI TYPE: queryValue giờ là string (luôn được cung cấp) ***
-type DataTransformer = (parsedData: any, queryValue: string) => string | null;
+type DataTransformer = (parsedData: any, queryString: string) => string | null;
 
 // --- Transformation Registry (Scalable Approach) ---
 // Maps endpoint names to their specific transformer functions.
 // Makes adding new transformations easier.
 const dataTransformers: Record<string, DataTransformer | undefined> = {
     // *** QUAN TRỌNG: Hàm transformConferenceData PHẢI được sửa đổi ***
-    // *** để khớp với type DataTransformer (nhận parsedData, queryValue) ***
+    // *** để khớp với type DataTransformer (nhận parsedData, queryString) ***
     'conference': transformConferenceData,
     // 'journal': transformJournalData, // Add when implemented
     // Add other endpoints and their transformers here
@@ -46,13 +45,11 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
  * and optionally transforms the data based on the endpoint.
  *
  * @param endpoint The specific API endpoint (e.g., 'conference', 'journal').
- * @param queryValue The value for the search query (e.g., the search term). The key 'q' is assumed.
+ * @param queryString The value for the search query (e.g., the search term). The key 'q' is assumed.
  * @returns Promise<ApiCallResult> The result including success status, raw data, formatted data, and error messages.
  */
-export async function executeApiCall(endpoint: string, queryValue: string): Promise<ApiCallResult> {
-    // Use URLSearchParams for safe query string construction
-    const params = new URLSearchParams({ q: queryValue }); // Assumes the query parameter key is 'q'
-    const fullUrl = `${DATABASE_URL}/${endpoint}?${params.toString()}`;
+export async function executeApiCall(endpoint: string, queryString: string): Promise<ApiCallResult> {
+    const fullUrl = `${DATABASE_URL}/${endpoint}?${queryString}}`;
     const logContext = `${LOG_PREFIX} [${endpoint}]`; // Context for logging
 
     logToFile(`${logContext} Executing API call: GET ${fullUrl}`);
@@ -126,8 +123,8 @@ export async function executeApiCall(endpoint: string, queryValue: string): Prom
         if (transformer) {
             logToFile(`${logContext} Applying transformation function: ${transformer.name || 'anonymous'}`);
             try {
-                // Call the transformer with the *parsed* data and required queryValue
-                formattedData = transformer(parsedData, queryValue);
+                // Call the transformer with the *parsed* data and required queryString
+                formattedData = transformer(parsedData, queryString);
                 if (formattedData !== null) {
                     logToFile(`${logContext} Transformation successful.`);
                 } else {

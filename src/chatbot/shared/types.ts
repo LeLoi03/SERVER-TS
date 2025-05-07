@@ -147,7 +147,7 @@ export interface ErrorUpdate {
     message: string;
     /** Optional: The processing step where the error occurred. */
     step?: string;
-     /** Optional: The complete thought process leading up to the error. */
+    /** Optional: The complete thought process leading up to the error. */
     thoughts?: ThoughtStep[];
 }
 
@@ -158,7 +158,7 @@ export interface WarningUpdate {
     message: string;
     /** Optional: The processing step where the warning occurred. */
     step?: string;
-     /** Optional: The complete thought process leading up to the warning. */
+    /** Optional: The complete thought process leading up to the warning. */
     thoughts?: ThoughtStep[];
 }
 
@@ -190,13 +190,13 @@ export interface ConfirmationResultPayload {
     confirmationId: string;
     /** The outcome status of the confirmation process. */
     status:
-        | 'confirmed' // User clicked confirm, backend action succeeded (or attempted)
-        | 'cancelled' // User clicked cancel/dismiss
-        | 'timeout'   // Confirmation window expired
-        | 'not_found' // Backend couldn't find a pending confirmation with this ID
-        | 'failed'    // User confirmed, but subsequent backend action failed (e.g., sending email)
-        | 'unauthorized' // Attempt to confirm/cancel by wrong user/session
-        | 'error';    // Internal server error during confirmation processing
+    | 'confirmed' // User clicked confirm, backend action succeeded (or attempted)
+    | 'cancelled' // User clicked cancel/dismiss
+    | 'timeout'   // Confirmation window expired
+    | 'not_found' // Backend couldn't find a pending confirmation with this ID
+    | 'failed'    // User confirmed, but subsequent backend action failed (e.g., sending email)
+    | 'unauthorized' // Attempt to confirm/cancel by wrong user/session
+    | 'error';    // Internal server error during confirmation processing
     /** A user-friendly message summarizing the outcome. */
     message: string;
     /** Optional: Additional details, especially for 'failed' or 'error' statuses. */
@@ -286,6 +286,36 @@ export interface ClearConversationData {
     conversationId: string;
 }
 
+export interface RenameConversationData {
+    conversationId: string;
+    newTitle: string;
+}
+
+export interface RenameResult {
+    success: boolean;
+    updatedTitle?: string; // Tiêu đề đã được chuẩn hóa và lưu
+    conversationId?: string;
+}
+
+export interface PinConversationData {
+    conversationId: string;
+    isPinned: boolean;
+}
+
+export interface SearchConversationsData {
+    searchTerm: string;
+    limit?: number; // Tùy chọn, client có thể yêu cầu số lượng kết quả
+}
+
+// --- Metadata cho danh sách cuộc trò chuyện (để đảm bảo đồng bộ với service) ---
+// Bạn có thể import trực tiếp từ service nếu cấu trúc module cho phép,
+// hoặc định nghĩa lại ở đây để frontend sử dụng.
+export interface ClientConversationMetadata {
+    id: string;
+    title: string;
+    lastActivity: Date; // Hoặc string nếu bạn parse ở client
+    isPinned: boolean;
+}
 
 // --- Constants ---
 
