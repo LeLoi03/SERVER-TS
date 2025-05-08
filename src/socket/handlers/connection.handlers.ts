@@ -1,3 +1,4 @@
+
 // src/socket/handlers/connection.handlers.ts
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe';
@@ -113,3 +114,5 @@ export const handleConnection = async (
         socket.disconnect(true);
     }
 };
+
+

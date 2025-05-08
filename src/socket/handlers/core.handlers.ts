@@ -193,7 +193,8 @@ export const registerCoreHandlers = (
         handlerLogger.info({ userId: currentUserId }, 'Request received.');
         try {
             const { conversationId } = await conversationHistoryService.createNewConversation(currentUserId);
-            socket.data.currentConversationId = conversationId; // Set new conversation as active
+            socket.data.currentConversationId = conversationId;
+            handlerLogger.info({ conversationId, userId: currentUserId }, `[SERVER DEBUG] Emitting 'new_conversation_started' for convId: ${conversationId}`); // <--- ADD THIS LOG
             socket.emit('new_conversation_started', { conversationId });
             handlerLogger.info({ conversationId, userId: currentUserId }, 'Started new conversation. Set as active.');
             // Update the list on the frontend
@@ -203,6 +204,7 @@ export const registerCoreHandlers = (
             sendChatError(handlerLogger, `Could not start new conversation.`, 'new_conv_fail_server', { userId: currentUserId, error: error.message });
         }
     });
+
 
     // --- Handler: Send Message ---
     socket.on('send_message', async (data: unknown) => {

@@ -309,3 +309,448 @@
 [2025-05-07T10:40:26.700Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
 [2025-05-07T10:40:26.779Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
 [2025-05-07T10:41:18.540Z] [HistoryService] Initialized.
+[2025-05-08T09:22:16.122Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-08T09:22:16.123Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:22:16.445Z] [Database] Attempting MongoDB connection...
+[2025-05-08T09:22:17.578Z] [Database] MongoDB Connected Successfully.
+[2025-05-08T09:23:08.694Z] [HistoryService] Initialized.
+[2025-05-08T09:23:08.698Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:23:09.381Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:23:09.384Z] [HistoryService] Initialized.
+[2025-05-08T09:23:09.387Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:23:09.495Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
+[2025-05-08T09:27:09.642Z] [HistoryService] Initialized.
+[2025-05-08T09:27:09.644Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:27:10.325Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:27:10.326Z] [HistoryService] Initialized.
+[2025-05-08T09:27:10.328Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:27:10.402Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
+[2025-05-08T09:27:18.943Z] [HistoryService] Initialized.
+[2025-05-08T09:27:18.945Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:27:19.681Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:27:19.683Z] [HistoryService] Initialized.
+[2025-05-08T09:27:19.685Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:27:19.853Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
+[2025-05-08T09:29:14.438Z] [HistoryService] Initialized.
+[2025-05-08T09:29:14.440Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:29:15.104Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:29:15.105Z] [HistoryService] Initialized.
+[2025-05-08T09:29:15.108Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:29:15.177Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
+[2025-05-08T09:41:13.669Z] [HistoryService] Initialized.
+[2025-05-08T09:41:13.671Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:41:14.383Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:41:14.384Z] [HistoryService] Initialized.
+[2025-05-08T09:41:14.386Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:14.460Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 3 conversations.
+[2025-05-08T09:41:40.843Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:40.925Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:41:40.997Z] --- [Msg-dyu8-1746697300735 Socket dyu8crWNwbxzKiPhAAAJ] Handling STREAMING input: "HEllo", Lang: vi ---
+[2025-05-08T09:41:40.998Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:41:40.998Z] [Msg-dyu8-1746697300735] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:41:40.999Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: status_update, Type: status
+[2025-05-08T09:41:40.999Z] [Msg-dyu8-1746697300735 History Init - dyu8crWNwbxzKiPhAAAJ] Added user turn. Size: 1
+[2025-05-08T09:41:41.000Z] --- [Msg-dyu8-1746697300735 HostAgent Turn 1 Start - dyu8crWNwbxzKiPhAAAJ] Requesting response from HostAgent ---
+[2025-05-08T09:41:41.000Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: status_update, Type: status
+[2025-05-08T09:41:41.000Z] [Msg-dyu8-1746697300735 History T1 Send - dyu8crWNwbxzKiPhAAAJ] Host History Size: 1
+[2025-05-08T09:41:41.002Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T09:41:41.002Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T09:41:41.003Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:41:41.003Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:41:41.003Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:41:41.003Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:41:41.003Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:41:41.004Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T09:41:41.005Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:41:42.976Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:41:42.977Z] [Msg-dyu8-1746697300735 Stream T1 - dyu8crWNwbxzKiPhAAAJ] Processing final stream from HostAgent...
+[2025-05-08T09:41:42.978Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: status_update, Type: status
+[2025-05-08T09:41:42.979Z] [Msg-dyu8-1746697300735 Stream Processing - dyu8crWNwbxzKiPhAAAJ] Starting... (Emit final: true)
+[2025-05-08T09:41:42.981Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: status_update, Type: status
+[2025-05-08T09:41:42.984Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: chat_update, Type: partial_result
+[2025-05-08T09:41:43.066Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: chat_update, Type: partial_result
+[2025-05-08T09:41:43.112Z] [Msg-dyu8-1746697300735 Stream Processing - dyu8crWNwbxzKiPhAAAJ] Finished. Length: 46
+[2025-05-08T09:41:43.113Z] [Msg-dyu8-1746697300735 History T1 Done - dyu8crWNwbxzKiPhAAAJ] Appended final HostAgent response. Size: 2
+[2025-05-08T09:41:43.113Z] [Msg-dyu8-1746697300735 Emit Sent - dyu8crWNwbxzKiPhAAAJ] Event: chat_result, Type: result
+[2025-05-08T09:41:43.114Z] --- [Msg-dyu8-1746697300735 dyu8crWNwbxzKiPhAAAJ Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:41:43.209Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:43.284Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:41:49.794Z] [HistoryService] Initialized.
+[2025-05-08T09:41:49.796Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:41:50.465Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:41:50.466Z] [HistoryService] Initialized.
+[2025-05-08T09:41:50.468Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:50.539Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:41:55.803Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:55.871Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:41:55.942Z] --- [Msg-nV7w-1746697315722 Socket nV7w3jPdCCRQeUigAAAL] Handling STREAMING input: "hươidhi3", Lang: vi ---
+[2025-05-08T09:41:55.942Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:41:55.942Z] [Msg-nV7w-1746697315722] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:41:55.943Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:41:55.943Z] [Msg-nV7w-1746697315722 History Init - nV7w3jPdCCRQeUigAAAL] Added user turn. Size: 1
+[2025-05-08T09:41:55.943Z] --- [Msg-nV7w-1746697315722 HostAgent Turn 1 Start - nV7w3jPdCCRQeUigAAAL] Requesting response from HostAgent ---
+[2025-05-08T09:41:55.944Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:41:55.944Z] [Msg-nV7w-1746697315722 History T1 Send - nV7w3jPdCCRQeUigAAAL] Host History Size: 1
+[2025-05-08T09:41:55.944Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T09:41:55.944Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T09:41:55.944Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:41:55.945Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:41:55.945Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:41:55.945Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:41:55.945Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:41:55.945Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T09:41:55.945Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:41:56.703Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:41:56.704Z] [Msg-nV7w-1746697315722 Stream T1 - nV7w3jPdCCRQeUigAAAL] Processing final stream from HostAgent...
+[2025-05-08T09:41:56.705Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:41:56.706Z] [Msg-nV7w-1746697315722 Stream Processing - nV7w3jPdCCRQeUigAAAL] Starting... (Emit final: true)
+[2025-05-08T09:41:56.706Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:41:56.707Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_update, Type: partial_result
+[2025-05-08T09:41:56.773Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_update, Type: partial_result
+[2025-05-08T09:41:56.789Z] [Msg-nV7w-1746697315722 Stream Processing - nV7w3jPdCCRQeUigAAAL] Finished. Length: 75
+[2025-05-08T09:41:56.790Z] [Msg-nV7w-1746697315722 History T1 Done - nV7w3jPdCCRQeUigAAAL] Appended final HostAgent response. Size: 2
+[2025-05-08T09:41:56.791Z] [Msg-nV7w-1746697315722 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_result, Type: result
+[2025-05-08T09:41:56.791Z] --- [Msg-nV7w-1746697315722 nV7w3jPdCCRQeUigAAAL Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:41:56.868Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:41:56.935Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:42:05.498Z] --- [Msg-nV7w-1746697325434 Socket nV7w3jPdCCRQeUigAAAL] Handling STREAMING input: "ưdhwoidj", Lang: vi ---
+[2025-05-08T09:42:05.499Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:42:05.499Z] [Msg-nV7w-1746697325434] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:42:05.499Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:42:05.500Z] [Msg-nV7w-1746697325434 History Init - nV7w3jPdCCRQeUigAAAL] Added user turn. Size: 3
+[2025-05-08T09:42:05.500Z] --- [Msg-nV7w-1746697325434 HostAgent Turn 1 Start - nV7w3jPdCCRQeUigAAAL] Requesting response from HostAgent ---
+[2025-05-08T09:42:05.500Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:42:05.500Z] [Msg-nV7w-1746697325434 History T1 Send - nV7w3jPdCCRQeUigAAAL] Host History Size: 3
+[2025-05-08T09:42:05.501Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-05-08T09:42:05.501Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-05-08T09:42:05.501Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:42:05.501Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:42:05.501Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:42:05.502Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:42:05.502Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:42:05.502Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-05-08T09:42:05.502Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:42:06.122Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:42:06.123Z] [Msg-nV7w-1746697325434 Stream T1 - nV7w3jPdCCRQeUigAAAL] Processing final stream from HostAgent...
+[2025-05-08T09:42:06.123Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:42:06.124Z] [Msg-nV7w-1746697325434 Stream Processing - nV7w3jPdCCRQeUigAAAL] Starting... (Emit final: true)
+[2025-05-08T09:42:06.124Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: status_update, Type: status
+[2025-05-08T09:42:06.124Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_update, Type: partial_result
+[2025-05-08T09:42:06.236Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_update, Type: partial_result
+[2025-05-08T09:42:06.328Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_update, Type: partial_result
+[2025-05-08T09:42:06.346Z] [Msg-nV7w-1746697325434 Stream Processing - nV7w3jPdCCRQeUigAAAL] Finished. Length: 142
+[2025-05-08T09:42:06.346Z] [Msg-nV7w-1746697325434 History T1 Done - nV7w3jPdCCRQeUigAAAL] Appended final HostAgent response. Size: 4
+[2025-05-08T09:42:06.347Z] [Msg-nV7w-1746697325434 Emit Sent - nV7w3jPdCCRQeUigAAAL] Event: chat_result, Type: result
+[2025-05-08T09:42:06.347Z] --- [Msg-nV7w-1746697325434 nV7w3jPdCCRQeUigAAAL Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:42:06.424Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:42:06.489Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:42:08.326Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:42:08.394Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 6 conversations.
+[2025-05-08T09:42:14.825Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:42:14.892Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:42:32.247Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:42:32.316Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:54:08.414Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-08T09:54:08.414Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:54:08.676Z] [Database] Attempting MongoDB connection...
+[2025-05-08T09:54:09.766Z] [Database] MongoDB Connected Successfully.
+[2025-05-08T09:54:09.921Z] [HistoryService] Initialized.
+[2025-05-08T09:54:09.923Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:54:10.740Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:54:10.742Z] [HistoryService] Initialized.
+[2025-05-08T09:54:10.746Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:54:10.881Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:54:22.196Z] [HistoryService] Initialized.
+[2025-05-08T09:54:22.197Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:54:22.902Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:54:22.904Z] [HistoryService] Initialized.
+[2025-05-08T09:54:22.906Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:54:22.983Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 4 conversations.
+[2025-05-08T09:54:28.314Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:54:28.513Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:54:28.750Z] --- [Msg-MEJ9-1746698068174 Socket MEJ9PqPlj00qWJqTAAAD] Handling STREAMING input: "Helllo", Lang: vi ---
+[2025-05-08T09:54:28.751Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:54:28.752Z] [Msg-MEJ9-1746698068174] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:54:28.753Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: status_update, Type: status
+[2025-05-08T09:54:28.753Z] [Msg-MEJ9-1746698068174 History Init - MEJ9PqPlj00qWJqTAAAD] Added user turn. Size: 1
+[2025-05-08T09:54:28.754Z] --- [Msg-MEJ9-1746698068174 HostAgent Turn 1 Start - MEJ9PqPlj00qWJqTAAAD] Requesting response from HostAgent ---
+[2025-05-08T09:54:28.754Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: status_update, Type: status
+[2025-05-08T09:54:28.754Z] [Msg-MEJ9-1746698068174 History T1 Send - MEJ9PqPlj00qWJqTAAAD] Host History Size: 1
+[2025-05-08T09:54:28.756Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T09:54:28.756Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T09:54:28.756Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:54:28.757Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:54:28.757Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:54:28.757Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:54:28.758Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:54:28.758Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T09:54:28.758Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:54:29.634Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:54:29.635Z] [Msg-MEJ9-1746698068174 Stream T1 - MEJ9PqPlj00qWJqTAAAD] Processing final stream from HostAgent...
+[2025-05-08T09:54:29.636Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: status_update, Type: status
+[2025-05-08T09:54:29.637Z] [Msg-MEJ9-1746698068174 Stream Processing - MEJ9PqPlj00qWJqTAAAD] Starting... (Emit final: true)
+[2025-05-08T09:54:29.637Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: status_update, Type: status
+[2025-05-08T09:54:29.638Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: chat_update, Type: partial_result
+[2025-05-08T09:54:29.700Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: chat_update, Type: partial_result
+[2025-05-08T09:54:29.740Z] [Msg-MEJ9-1746698068174 Stream Processing - MEJ9PqPlj00qWJqTAAAD] Finished. Length: 46
+[2025-05-08T09:54:29.741Z] [Msg-MEJ9-1746698068174 History T1 Done - MEJ9PqPlj00qWJqTAAAD] Appended final HostAgent response. Size: 2
+[2025-05-08T09:54:29.741Z] [Msg-MEJ9-1746698068174 Emit Sent - MEJ9PqPlj00qWJqTAAAD] Event: chat_result, Type: result
+[2025-05-08T09:54:29.742Z] --- [Msg-MEJ9-1746698068174 MEJ9PqPlj00qWJqTAAAD Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:54:29.923Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:54:30.023Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 5 conversations.
+[2025-05-08T09:55:06.442Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:06.522Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 6 conversations.
+[2025-05-08T09:55:15.731Z] [HistoryService] Initialized.
+[2025-05-08T09:55:15.733Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:55:16.464Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:55:16.465Z] [HistoryService] Initialized.
+[2025-05-08T09:55:16.468Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:16.541Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 6 conversations.
+[2025-05-08T09:55:17.882Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:17.966Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 7 conversations.
+[2025-05-08T09:55:47.836Z] [HistoryService] Initialized.
+[2025-05-08T09:55:47.837Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:55:48.556Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:55:48.558Z] [HistoryService] Initialized.
+[2025-05-08T09:55:48.560Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:48.637Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 7 conversations.
+[2025-05-08T09:55:55.920Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:55.994Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 8 conversations.
+[2025-05-08T09:55:56.070Z] --- [Msg-wmLX-1746698155841 Socket wmLXlRF102lZR15FAAAH] Handling NON-STREAMING input: "WHo are you ?", Lang: vi ---
+[2025-05-08T09:55:56.070Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:55:56.071Z] [Msg-wmLX-1746698155841 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:55:56.071Z] --- [Msg-wmLX-1746698155841 Socket wmLXlRF102lZR15FAAAH] HostAgent Turn 1: Sending to Model (History size: 1) ---
+[2025-05-08T09:55:56.072Z] [Msg-wmLX-1746698155841 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:55:56.073Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-08T09:55:56.073Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-08T09:55:56.073Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:55:56.074Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:55:56.074Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:55:56.074Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:55:56.075Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:55:56.075Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-08T09:55:56.075Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:55:57.301Z] Model Finish Reason: STOP
+[2025-05-08T09:55:57.301Z] Model generated final text response: Tôi là HCMUS Orchestrator, một điều phối viên đặc vụ thông minh cho Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Vai trò chính của tôi là hiểu yêu cầu của bạn, xác định các bước cần thiết (có thể gồm nhiều bước liên quan đến các đặc vụ khác nhau), định tuyến nhiệm vụ đến các đặc vụ chuyên môn phù hợp và tổng hợp phản hồi của họ cho bạn.
+...
+[2025-05-08T09:55:57.301Z] [Msg-wmLX-1746698155841 Socket wmLXlRF102lZR15FAAAH] HostAgent Turn 1: Received final_text.
+[2025-05-08T09:55:57.302Z] [Msg-wmLX-1746698155841 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:55:57.302Z] [Msg-wmLX-1746698155841 History Check - Final] Appended final HostAgent response. History size: 2
+[2025-05-08T09:55:57.303Z] [Msg-wmLX-1746698155841 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_result, Type: result
+[2025-05-08T09:55:57.303Z] --- [Msg-wmLX-1746698155841 Socket wmLXlRF102lZR15FAAAH Lang: vi] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:55:57.386Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:55:57.471Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 8 conversations.
+[2025-05-08T09:58:58.174Z] --- [Msg-wmLX-1746698338097 Socket wmLXlRF102lZR15FAAAH] Handling NON-STREAMING input: "HEllo", Lang: vi ---
+[2025-05-08T09:58:58.174Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:58:58.175Z] [Msg-wmLX-1746698338097 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:58:58.175Z] --- [Msg-wmLX-1746698338097 Socket wmLXlRF102lZR15FAAAH] HostAgent Turn 1: Sending to Model (History size: 1) ---
+[2025-05-08T09:58:58.176Z] [Msg-wmLX-1746698338097 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:58:58.176Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-08T09:58:58.176Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-08T09:58:58.176Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:58:58.176Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:58:58.177Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:58:58.177Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:58:58.177Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:58:58.177Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-08T09:58:58.177Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:58:59.061Z] Model Finish Reason: STOP
+[2025-05-08T09:58:59.061Z] Model generated final text response: Xin chào! Tôi có thể giúp gì cho bạn hôm nay?
+...
+[2025-05-08T09:58:59.062Z] [Msg-wmLX-1746698338097 Socket wmLXlRF102lZR15FAAAH] HostAgent Turn 1: Received final_text.
+[2025-05-08T09:58:59.062Z] [Msg-wmLX-1746698338097 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:58:59.063Z] [Msg-wmLX-1746698338097 History Check - Final] Appended final HostAgent response. History size: 2
+[2025-05-08T09:58:59.063Z] [Msg-wmLX-1746698338097 Socket Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_result, Type: result
+[2025-05-08T09:58:59.063Z] --- [Msg-wmLX-1746698338097 Socket wmLXlRF102lZR15FAAAH Lang: vi] NON-STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:58:59.144Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:58:59.217Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 8 conversations.
+[2025-05-08T09:59:04.392Z] --- [Msg-wmLX-1746698344318 Socket wmLXlRF102lZR15FAAAH] Handling STREAMING input: "oke", Lang: vi ---
+[2025-05-08T09:59:04.392Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:59:04.392Z] [Msg-wmLX-1746698344318] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:59:04.393Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:59:04.393Z] [Msg-wmLX-1746698344318 History Init - wmLXlRF102lZR15FAAAH] Added user turn. Size: 3
+[2025-05-08T09:59:04.393Z] --- [Msg-wmLX-1746698344318 HostAgent Turn 1 Start - wmLXlRF102lZR15FAAAH] Requesting response from HostAgent ---
+[2025-05-08T09:59:04.394Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:59:04.394Z] [Msg-wmLX-1746698344318 History T1 Send - wmLXlRF102lZR15FAAAH] Host History Size: 3
+[2025-05-08T09:59:04.394Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-05-08T09:59:04.395Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-05-08T09:59:04.395Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:59:04.395Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:59:04.395Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:59:04.396Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:59:04.396Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:59:04.396Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-05-08T09:59:04.396Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:59:05.242Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:59:05.242Z] [Msg-wmLX-1746698344318 Stream T1 - wmLXlRF102lZR15FAAAH] Processing final stream from HostAgent...
+[2025-05-08T09:59:05.243Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:59:05.243Z] [Msg-wmLX-1746698344318 Stream Processing - wmLXlRF102lZR15FAAAH] Starting... (Emit final: true)
+[2025-05-08T09:59:05.243Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: status_update, Type: status
+[2025-05-08T09:59:05.244Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_update, Type: partial_result
+[2025-05-08T09:59:05.426Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_update, Type: partial_result
+[2025-05-08T09:59:05.486Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_update, Type: partial_result
+[2025-05-08T09:59:05.501Z] [Msg-wmLX-1746698344318 Stream Processing - wmLXlRF102lZR15FAAAH] Finished. Length: 119
+[2025-05-08T09:59:05.501Z] [Msg-wmLX-1746698344318 History T1 Done - wmLXlRF102lZR15FAAAH] Appended final HostAgent response. Size: 4
+[2025-05-08T09:59:05.502Z] [Msg-wmLX-1746698344318 Emit Sent - wmLXlRF102lZR15FAAAH] Event: chat_result, Type: result
+[2025-05-08T09:59:05.502Z] --- [Msg-wmLX-1746698344318 wmLXlRF102lZR15FAAAH Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:59:05.586Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:59:05.674Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 8 conversations.
+[2025-05-08T09:59:16.826Z] [HistoryService] Initialized.
+[2025-05-08T09:59:16.828Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T09:59:17.521Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T09:59:17.523Z] [HistoryService] Initialized.
+[2025-05-08T09:59:17.524Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:59:17.600Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 8 conversations.
+[2025-05-08T09:59:34.742Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:59:34.829Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 9 conversations.
+[2025-05-08T09:59:34.910Z] --- [Msg-IALn-1746698374659 Socket IALn5fayst5yogLJAAAJ] Handling STREAMING input: "HEllo", Lang: vi ---
+[2025-05-08T09:59:34.911Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T09:59:34.911Z] [Msg-IALn-1746698374659] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T09:59:34.911Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: status_update, Type: status
+[2025-05-08T09:59:34.912Z] [Msg-IALn-1746698374659 History Init - IALn5fayst5yogLJAAAJ] Added user turn. Size: 1
+[2025-05-08T09:59:34.912Z] --- [Msg-IALn-1746698374659 HostAgent Turn 1 Start - IALn5fayst5yogLJAAAJ] Requesting response from HostAgent ---
+[2025-05-08T09:59:34.912Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: status_update, Type: status
+[2025-05-08T09:59:34.912Z] [Msg-IALn-1746698374659 History T1 Send - IALn5fayst5yogLJAAAJ] Host History Size: 1
+[2025-05-08T09:59:34.913Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T09:59:34.913Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T09:59:34.913Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T09:59:34.913Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T09:59:34.914Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T09:59:34.914Z] Tools provided: ["routeToAgent"]
+[2025-05-08T09:59:34.914Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T09:59:34.914Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T09:59:34.914Z]   - No valid next turn added, sending only history.
+[2025-05-08T09:59:35.646Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T09:59:35.647Z] [Msg-IALn-1746698374659 Stream T1 - IALn5fayst5yogLJAAAJ] Processing final stream from HostAgent...
+[2025-05-08T09:59:35.647Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: status_update, Type: status
+[2025-05-08T09:59:35.647Z] [Msg-IALn-1746698374659 Stream Processing - IALn5fayst5yogLJAAAJ] Starting... (Emit final: true)
+[2025-05-08T09:59:35.648Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: status_update, Type: status
+[2025-05-08T09:59:35.648Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: chat_update, Type: partial_result
+[2025-05-08T09:59:35.776Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: chat_update, Type: partial_result
+[2025-05-08T09:59:35.783Z] [Msg-IALn-1746698374659 Stream Processing - IALn5fayst5yogLJAAAJ] Finished. Length: 46
+[2025-05-08T09:59:35.783Z] [Msg-IALn-1746698374659 History T1 Done - IALn5fayst5yogLJAAAJ] Appended final HostAgent response. Size: 2
+[2025-05-08T09:59:35.783Z] [Msg-IALn-1746698374659 Emit Sent - IALn5fayst5yogLJAAAJ] Event: chat_result, Type: result
+[2025-05-08T09:59:35.784Z] --- [Msg-IALn-1746698374659 IALn5fayst5yogLJAAAJ Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T09:59:35.873Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T09:59:35.972Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 9 conversations.
+[2025-05-08T10:00:06.170Z] [HistoryService] Initialized.
+[2025-05-08T10:00:06.172Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T10:00:06.892Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T10:00:06.893Z] [HistoryService] Initialized.
+[2025-05-08T10:00:06.895Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:00:06.983Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 9 conversations.
+[2025-05-08T10:01:21.979Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:01:22.068Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 10 conversations.
+[2025-05-08T10:01:22.162Z] --- [Msg-LeHK-1746698481875 Socket LeHKVq8kBe1X9F91AAAL] Handling STREAMING input: "Hello", Lang: vi ---
+[2025-05-08T10:01:22.163Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T10:01:22.163Z] [Msg-LeHK-1746698481875] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T10:01:22.163Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: status_update, Type: status
+[2025-05-08T10:01:22.164Z] [Msg-LeHK-1746698481875 History Init - LeHKVq8kBe1X9F91AAAL] Added user turn. Size: 1
+[2025-05-08T10:01:22.164Z] --- [Msg-LeHK-1746698481875 HostAgent Turn 1 Start - LeHKVq8kBe1X9F91AAAL] Requesting response from HostAgent ---
+[2025-05-08T10:01:22.164Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: status_update, Type: status
+[2025-05-08T10:01:22.164Z] [Msg-LeHK-1746698481875 History T1 Send - LeHKVq8kBe1X9F91AAAL] Host History Size: 1
+[2025-05-08T10:01:22.165Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T10:01:22.166Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T10:01:22.166Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T10:01:22.166Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T10:01:22.167Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T10:01:22.167Z] Tools provided: ["routeToAgent"]
+[2025-05-08T10:01:22.167Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T10:01:22.167Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T10:01:22.167Z]   - No valid next turn added, sending only history.
+[2025-05-08T10:01:23.846Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T10:01:23.846Z] [Msg-LeHK-1746698481875 Stream T1 - LeHKVq8kBe1X9F91AAAL] Processing final stream from HostAgent...
+[2025-05-08T10:01:23.847Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: status_update, Type: status
+[2025-05-08T10:01:23.847Z] [Msg-LeHK-1746698481875 Stream Processing - LeHKVq8kBe1X9F91AAAL] Starting... (Emit final: true)
+[2025-05-08T10:01:23.847Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: status_update, Type: status
+[2025-05-08T10:01:23.848Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: chat_update, Type: partial_result
+[2025-05-08T10:01:24.014Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: chat_update, Type: partial_result
+[2025-05-08T10:01:24.192Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: chat_update, Type: partial_result
+[2025-05-08T10:01:24.209Z] [Msg-LeHK-1746698481875 Stream Processing - LeHKVq8kBe1X9F91AAAL] Finished. Length: 122
+[2025-05-08T10:01:24.209Z] [Msg-LeHK-1746698481875 History T1 Done - LeHKVq8kBe1X9F91AAAL] Appended final HostAgent response. Size: 2
+[2025-05-08T10:01:24.210Z] [Msg-LeHK-1746698481875 Emit Sent - LeHKVq8kBe1X9F91AAAL] Event: chat_result, Type: result
+[2025-05-08T10:01:24.210Z] --- [Msg-LeHK-1746698481875 LeHKVq8kBe1X9F91AAAL Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T10:01:24.299Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:01:24.391Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 10 conversations.
+[2025-05-08T10:12:40.392Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-08T10:12:40.394Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T10:12:40.659Z] [Database] Attempting MongoDB connection...
+[2025-05-08T10:12:41.641Z] [Database] MongoDB Connected Successfully.
+[2025-05-08T10:12:45.476Z] [HistoryService] Initialized.
+[2025-05-08T10:12:45.477Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T10:12:46.201Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T10:12:46.205Z] [HistoryService] Initialized.
+[2025-05-08T10:12:46.208Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:12:46.344Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 10 conversations.
+[2025-05-08T10:12:55.672Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:12:55.769Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 11 conversations.
+[2025-05-08T10:12:55.844Z] --- [Msg-Jmnt-1746699175556 Socket JmnteNF1ViHH01UxAAAB] Handling STREAMING input: "HEllo", Lang: vi ---
+[2025-05-08T10:12:55.844Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T10:12:55.845Z] [Msg-Jmnt-1746699175556] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T10:12:55.847Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: status_update, Type: status
+[2025-05-08T10:12:55.847Z] [Msg-Jmnt-1746699175556 History Init - JmnteNF1ViHH01UxAAAB] Added user turn. Size: 1
+[2025-05-08T10:12:55.847Z] --- [Msg-Jmnt-1746699175556 HostAgent Turn 1 Start - JmnteNF1ViHH01UxAAAB] Requesting response from HostAgent ---
+[2025-05-08T10:12:55.848Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: status_update, Type: status
+[2025-05-08T10:12:55.848Z] [Msg-Jmnt-1746699175556 History T1 Send - JmnteNF1ViHH01UxAAAB] Host History Size: 1
+[2025-05-08T10:12:55.851Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T10:12:55.851Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T10:12:55.852Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T10:12:55.852Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T10:12:55.852Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T10:12:55.853Z] Tools provided: ["routeToAgent"]
+[2025-05-08T10:12:55.853Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T10:12:55.853Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T10:12:55.853Z]   - No valid next turn added, sending only history.
+[2025-05-08T10:12:56.739Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T10:12:56.739Z] [Msg-Jmnt-1746699175556 Stream T1 - JmnteNF1ViHH01UxAAAB] Processing final stream from HostAgent...
+[2025-05-08T10:12:56.741Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: status_update, Type: status
+[2025-05-08T10:12:56.742Z] [Msg-Jmnt-1746699175556 Stream Processing - JmnteNF1ViHH01UxAAAB] Starting... (Emit final: true)
+[2025-05-08T10:12:56.742Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: status_update, Type: status
+[2025-05-08T10:12:56.743Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: chat_update, Type: partial_result
+[2025-05-08T10:12:56.811Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: chat_update, Type: partial_result
+[2025-05-08T10:12:56.885Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: chat_update, Type: partial_result
+[2025-05-08T10:12:56.954Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: chat_update, Type: partial_result
+[2025-05-08T10:12:56.973Z] [Msg-Jmnt-1746699175556 Stream Processing - JmnteNF1ViHH01UxAAAB] Finished. Length: 152
+[2025-05-08T10:12:56.974Z] [Msg-Jmnt-1746699175556 History T1 Done - JmnteNF1ViHH01UxAAAB] Appended final HostAgent response. Size: 2
+[2025-05-08T10:12:56.974Z] [Msg-Jmnt-1746699175556 Emit Sent - JmnteNF1ViHH01UxAAAB] Event: chat_result, Type: result
+[2025-05-08T10:12:56.975Z] --- [Msg-Jmnt-1746699175556 JmnteNF1ViHH01UxAAAB Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T10:12:57.084Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:12:57.167Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 11 conversations.
+[2025-05-08T10:20:09.221Z] [HistoryService] Initialized.
+[2025-05-08T10:20:09.223Z] [API Client] Fetching user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-08T10:20:09.908Z] [API Client] Successfully fetched user info for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-08T10:20:09.909Z] [HistoryService] Initialized.
+[2025-05-08T10:20:09.913Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:20:09.994Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 11 conversations.
+[2025-05-08T10:20:26.538Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:20:26.612Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 12 conversations.
+[2025-05-08T10:20:26.685Z] --- [Msg-08OQ-1746699626460 Socket 08OQohxBipHfpARUAAAD] Handling STREAMING input: "HEllo", Lang: vi ---
+[2025-05-08T10:20:26.685Z] [Language Config] Using configuration for Agent: HostAgent, Language: vi
+[2025-05-08T10:20:26.685Z] [Msg-08OQ-1746699626460] Using HostAgent Config (Lang: vi). Tools: routeToAgent
+[2025-05-08T10:20:26.686Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: status_update, Type: status
+[2025-05-08T10:20:26.686Z] [Msg-08OQ-1746699626460 History Init - 08OQohxBipHfpARUAAAD] Added user turn. Size: 1
+[2025-05-08T10:20:26.687Z] --- [Msg-08OQ-1746699626460 HostAgent Turn 1 Start - 08OQohxBipHfpARUAAAD] Requesting response from HostAgent ---
+[2025-05-08T10:20:26.687Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: status_update, Type: status
+[2025-05-08T10:20:26.687Z] [Msg-08OQ-1746699626460 History T1 Send - 08OQohxBipHfpARUAAAD] Host History Size: 1
+[2025-05-08T10:20:26.688Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-08T10:20:26.688Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-08T10:20:26.688Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-08T10:20:26.688Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-08T10:20:26.688Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-08T10:20:26.689Z] Tools provided: ["routeToAgent"]
+[2025-05-08T10:20:26.689Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-08T10:20:26.689Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-08T10:20:26.689Z]   - No valid next turn added, sending only history.
+[2025-05-08T10:20:28.499Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-08T10:20:28.500Z] [Msg-08OQ-1746699626460 Stream T1 - 08OQohxBipHfpARUAAAD] Processing final stream from HostAgent...
+[2025-05-08T10:20:28.500Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: status_update, Type: status
+[2025-05-08T10:20:28.500Z] [Msg-08OQ-1746699626460 Stream Processing - 08OQohxBipHfpARUAAAD] Starting... (Emit final: true)
+[2025-05-08T10:20:28.501Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: status_update, Type: status
+[2025-05-08T10:20:28.501Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: chat_update, Type: partial_result
+[2025-05-08T10:20:28.598Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: chat_update, Type: partial_result
+[2025-05-08T10:20:28.606Z] [Msg-08OQ-1746699626460 Stream Processing - 08OQohxBipHfpARUAAAD] Finished. Length: 38
+[2025-05-08T10:20:28.607Z] [Msg-08OQ-1746699626460 History T1 Done - 08OQohxBipHfpARUAAAD] Appended final HostAgent response. Size: 2
+[2025-05-08T10:20:28.609Z] [Msg-08OQ-1746699626460 Emit Sent - 08OQohxBipHfpARUAAAD] Event: chat_result, Type: result
+[2025-05-08T10:20:28.610Z] --- [Msg-08OQ-1746699626460 08OQohxBipHfpARUAAAD Lang: vi] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-08T10:20:28.693Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-08T10:20:28.772Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 12 conversations.
