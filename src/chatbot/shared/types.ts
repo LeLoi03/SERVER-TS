@@ -142,14 +142,38 @@ export interface ResultUpdate {
 
 /** Represents an error update sent to the frontend. */
 export interface ErrorUpdate {
-    type: 'error';
-    /** The error message to display to the user. */
+    type: 'error'; // Luôn là 'error' để phân biệt với các update khác
     message: string;
-    /** Optional: The processing step where the error occurred. */
-    step?: string;
-    /** Optional: The complete thought process leading up to the error. */
-    thoughts?: ThoughtStep[];
+    step?: string; // Bước mà lỗi có thể đã xảy ra (ví dụ: 'tool_execution', 'final_formatting')
+    // thought?: string; // Bỏ đi nếu thoughts đã bao gồm thông tin này
+    thoughts?: ThoughtStep[]; // Lịch sử quá trình suy nghĩ dẫn đến lỗi
+    code?: string; // Mã lỗi cụ thể từ server (ví dụ: 'CONVERSATION_NOT_FOUND', 'AUTH_REQUIRED')
+    details?: any; // Thông tin chi tiết thêm về lỗi
 }
+
+
+//   // Ví dụ payload cho event 'chat_error' từ server
+// {
+//     "type": "error",
+//     "message": "Conversation with ID 'xyz123' not found.",
+//     "step": "load_conversation_db_query",
+//     "code": "CONVERSATION_NOT_FOUND",
+//     "details": { "conversationId": "xyz123" },
+//     "thoughts": [
+//       { "level": 0, "thought": "User requested to load conversation 'xyz123'." },
+//       { "level": 1, "thought": "Querying database for conversation 'xyz123'." },
+//       { "level": 2, "thought": "Database query returned no results." }
+//     ]
+//   }
+
+
+//   // Ví dụ payload cho event 'chat_error' từ server (lỗi nghiêm trọng)
+// {
+//     "type": "error",
+//     "message": "Authentication token is invalid or expired.",
+//     "code": "AUTH_REQUIRED",
+//     "details": { "reason": "token_expired" }
+//   }
 
 /** Represents an warning update sent to the frontend. */
 export interface WarningUpdate {
