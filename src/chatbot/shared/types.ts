@@ -105,7 +105,11 @@ export interface ThoughtStep {
     timestamp: string;
     /** Optional: Additional details relevant to the step (e.g., function arguments, API endpoint). */
     details?: any;
+
+    agentId?: string;
 }
+
+export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'JournalAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent' | string; // Allow string for flexibility if needed
 
 /** Represents a status update sent to the frontend during processing. */
 export interface StatusUpdate {
@@ -120,6 +124,8 @@ export interface StatusUpdate {
     thoughts?: ThoughtStep[];
     /** Optional but recommended: ISO timestamp of the update. */
     timestamp?: string;
+    agentId?: AgentId; // <<< THÊM DÒNG NÀY
+
 }
 
 /** Represents a chunk of text sent during streaming responses. */
@@ -271,6 +277,9 @@ export interface AgentCardResponse {
     errorMessage?: string;
     /** Optional action requested by the sub-agent for the frontend to perform. */
     frontendAction?: FrontendAction;
+
+    thoughts?: ThoughtStep[]; // <<< THÊM DÒNG NÀY
+
 }
 
 
@@ -284,6 +293,9 @@ export interface SendMessageData {
     isStreaming?: boolean;
     /** The language context for the message. */
     language: Language;
+    /** Conversation id */
+    conversationId?: string | null; // Client sẽ gửi cái này
+
 }
 
 /** Data structure expected when the client requests to load a specific conversation. */
@@ -341,6 +353,17 @@ export interface ClientConversationMetadata {
     isPinned: boolean;
 }
 
+export interface NewConversationResult {
+    conversationId: string;
+    history: HistoryItem[];
+    title: string; // Thêm title
+    lastActivity: Date; // Thêm lastActivity
+    isPinned: boolean; // Thêm isPinned
+}
+
+
+
+
 // --- Constants ---
 
 /** List of available language options for UI selection. */
@@ -396,6 +419,8 @@ export interface FunctionHandlerInput {
 
     /** Optional: Any additional context passed down from the calling layer (e.g., agent card context). */
     executionContext?: any;
+
+    agentId?: string;
 }
 
 /**
@@ -414,4 +439,7 @@ export interface FunctionHandlerOutput {
      * Examples include navigating to a URL, opening a map, or showing a confirmation dialog.
      */
     frontendAction?: FrontendAction; // Use FrontendAction from shared types
+
+    thoughts?: ThoughtStep[]; // <<< THÊM DÒNG NÀY
+
 }

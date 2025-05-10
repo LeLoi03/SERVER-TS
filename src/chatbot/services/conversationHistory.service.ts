@@ -1,7 +1,7 @@
 // src/chatbot/services/conversationHistory.service.ts
 import mongoose, { Types, Error as MongooseError } from 'mongoose';
 import ConversationModel, { IConversation } from '../models/conversation.model';
-import { HistoryItem, RenameResult } from '../shared/types';
+import { HistoryItem, RenameResult, NewConversationResult } from '../shared/types';
 import logToFile from '../../utils/logger'; // Đảm bảo đường dẫn đúng
 
 const LOG_PREFIX = "[HistoryService]";
@@ -204,23 +204,36 @@ export class ConversationHistoryService {
     }
 
     /**
-    * Tạo một cuộc trò chuyện mới, trống cho người dùng đã cho một cách tường minh.
+     * Tạo một cuộc trò chuyện mới, trống cho người dùng đã cho một cách tường minh.
     * @param userId - ID của người dùng.
-    * @returns Promise trả về ID cuộc trò chuyện mới và lịch sử trống.
+    * @returns Promise trả về thông tin của cuộc trò chuyện mới.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-    async createNewConversation(userId: string): Promise<{ conversationId: string; history: HistoryItem[] }> {
+    async createNewConversation(userId: string, initialTitle?: string): Promise<NewConversationResult> { // Sửa kiểu trả về
         const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}]`;
         try {
-            // lastActivity sẽ được gán giá trị default hoặc cập nhật bởi pre.save hook
-            const newConversation = await this.model.create({
+            const defaultTitle = initialTitle || "New chat"; // Hoặc "New Chat"
+            const newConversationDoc = await this.model.create({
                 userId: userId,
                 messages: [],
-                // lastActivity: new Date() // Để hook xử lý
+                customTitle: defaultTitle, // Lưu title vào customTitle để nhất quán
+                isPinned: false, // Mặc định
+                // lastActivity sẽ được hook hoặc default schema xử lý
             });
+
+            // Lấy lastActivity thực tế sau khi tạo (nếu schema có default hoặc hook)
+            const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
+            if (!savedConversation) {
+                throw new Error("Failed to retrieve newly created conversation.");
+            }
+
+
             return {
-                conversationId: newConversation._id.toString(),
-                history: []
+                conversationId: savedConversation._id.toString(),
+                history: [],
+                title: savedConversation.customTitle || defaultTitle, // Lấy từ customTitle nếu có
+                lastActivity: savedConversation.lastActivity,
+                isPinned: savedConversation.isPinned || false,
             };
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);

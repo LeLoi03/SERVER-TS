@@ -1,14 +1,11 @@
 // src/chatbot/utils/languageConfig.ts
 import { FunctionDeclaration } from '@google/generative-ai';
-import { Language } from '../shared/types';
+// Import AgentId from shared/types
+import { Language, AgentId } from '../shared/types';
 import logToFile from '../../utils/logger';
 
 // Import all language data (instructions and functions) from the language index file
-import * as LangData from '../language'; // <-- Import from the new index file
-
-// --- Define Agent IDs ---
-// (Keep AgentId definition as is)
-export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'JournalAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent';
+import * as LangData from '../language';
 
 // --- Define the structure for language-specific configuration per agent ---
 interface LanguageAgentConfig {
@@ -17,186 +14,168 @@ interface LanguageAgentConfig {
 }
 
 // --- Map configurations ---
-// Update the references to use the LangData namespace
+// The keys of this record will now correctly use the imported AgentId type
 const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, LanguageAgentConfig>>> = {
     'HostAgent': {
         'en': {
-            systemInstructions: LangData.englishHostAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishHostAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration, // <-- Use LangData
+                LangData.englishRouteToAgentDeclaration,
             ],
         },
         'vi': {
-             systemInstructions: LangData.vietnameseHostAgentSystemInstructions, // <-- Use LangData
+             systemInstructions: LangData.vietnameseHostAgentSystemInstructions,
              functionDeclarations: [
-                 LangData.vietnameseRouteToAgentDeclaration, // <-- Use LangData
+                 LangData.vietnameseRouteToAgentDeclaration,
              ],
         },
         'zh': {
-             systemInstructions: LangData.chineseHostAgentSystemInstructions, // <-- Use LangData
+             systemInstructions: LangData.chineseHostAgentSystemInstructions,
              functionDeclarations: [
-                 LangData.chineseRouteToAgentDeclaration, // <-- Use LangData
+                 LangData.chineseRouteToAgentDeclaration,
              ],
         },
-        // ... potentially add other languages if defined in the index
     },
     'ConferenceAgent': {
         'en': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration, // <-- Use LangData
-                LangData.englishFollowUnfollowItemDeclaration, // <-- Use LangData
-                // LangData.englishDrawChartDeclaration, // Assuming this should be here or Host? Added based on imports
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishFollowUnfollowItemDeclaration,
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseConferenceAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.vietnameseConferenceAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetConferencesDeclaration, // <-- Use LangData (Note: original import name)
-                LangData.vietnameseFollowUnfollowItemDeclaration, // <-- Use LangData
-                // LangData.vietnamDrawChartDeclaration, // <-- Use LangData (Note: original import name)
+                LangData.vietnamGetConferencesDeclaration,
+                LangData.vietnameseFollowUnfollowItemDeclaration,
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseConferenceAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.chineseConferenceAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetConferencesDeclaration, // <-- Use LangData
-                LangData.chineseFollowUnfollowItemDeclaration, // <-- Use LangData
-                // LangData.chineseDrawChartDeclaration, // <-- Use LangData
+                LangData.chineseGetConferencesDeclaration,
+                LangData.chineseFollowUnfollowItemDeclaration,
             ],
         },
-        // ... potentially add other languages
     },
     'JournalAgent': {
         'en': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration, // <-- Use LangData
-                LangData.englishFollowUnfollowItemDeclaration, // <-- Use LangData
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishFollowUnfollowItemDeclaration,
             ],
         },
          'vi': {
-            systemInstructions: LangData.vietnameseJournalAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.vietnameseJournalAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetJournalsDeclaration, // <-- Use LangData (Note: original import name)
-                LangData.vietnameseFollowUnfollowItemDeclaration, // <-- Use LangData
+                LangData.vietnamGetJournalsDeclaration,
+                LangData.vietnameseFollowUnfollowItemDeclaration,
             ],
         },
          'zh': {
-            systemInstructions: LangData.chineseJournalAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.chineseJournalAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetJournalsDeclaration, // <-- Use LangData
-                LangData.chineseFollowUnfollowItemDeclaration, // <-- Use LangData
+                LangData.chineseGetJournalsDeclaration,
+                LangData.chineseFollowUnfollowItemDeclaration,
             ],
         },
-        // Add 'vi', 'zh' configs for JournalAgent if needed
     },
     'AdminContactAgent': {
         'en': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration, // <-- Use LangData
+                LangData.englishSendEmailToAdminDeclaration,
             ],
         },
          'vi': {
-            systemInstructions: LangData.vietnameseAdminContactAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.vietnameseAdminContactAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnameseSendEmailToAdminDeclaration, // <-- Use LangData
+                LangData.vietnameseSendEmailToAdminDeclaration,
             ],
         },
          'zh': {
-            systemInstructions: LangData.chineseAdminContactAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.chineseAdminContactAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseSendEmailToAdminDeclaration, // <-- Use LangData
+                LangData.chineseSendEmailToAdminDeclaration,
             ],
         },
-        // Add 'vi', 'zh' configs if needed
     },
     'NavigationAgent': {
         'en': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishNavigationDeclaration, // <-- Use LangData (Corrected name based on likely intent)
-                LangData.englishOpenGoogleMapDeclaration, // <-- Use LangData (Corrected name based on likely intent)
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseNavigationAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.vietnameseNavigationAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnameseNavigationDeclaration, // <-- Use LangData
-                LangData.vietnameseOpenGoogleMapDeclaration, // <-- Use LangData
+                LangData.vietnameseNavigationDeclaration,
+                LangData.vietnameseOpenGoogleMapDeclaration,
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseNavigationAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.chineseNavigationAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseNavigationDeclaration, // <-- Use LangData
-                LangData.chineseOpenGoogleMapDeclaration, // <-- Use LangData
+                LangData.chineseNavigationDeclaration,
+                LangData.chineseOpenGoogleMapDeclaration,
             ],
         },
-        // Add 'vi', 'zh' configs if needed
     },
     'WebsiteInfoAgent': {
         'en': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration, // <-- Use LangData (Corrected name based on likely intent)
+                LangData.englishGetWebsiteInfoDeclaration,
             ],
         },
          'vi': {
-            systemInstructions: LangData.vietnameseWebsiteInfoAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.vietnameseWebsiteInfoAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetWebsiteInfoDeclaration, // <-- Use LangData (Note: original import name)
+                LangData.vietnamGetWebsiteInfoDeclaration,
             ],
         },
          'zh': {
-            systemInstructions: LangData.chineseWebsiteInfoAgentSystemInstructions, // <-- Use LangData
+            systemInstructions: LangData.chineseWebsiteInfoAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetWebsiteInfoDeclaration, // <-- Use LangData
+                LangData.chineseGetWebsiteInfoDeclaration,
             ],
         },
-        // Add 'vi', 'zh' configs if needed
     }
-    // ------------------------------
 };
 
-// --- Default language and agent ID for fallback ---
-// (Keep defaults as is)
 const DEFAULT_LANGUAGE: Language = 'en';
+// DEFAULT_AGENT_ID will now correctly use the imported AgentId type
 const DEFAULT_AGENT_ID: AgentId = 'HostAgent';
 
-// --- Helper function to get the configuration ---
-// (Keep getAgentLanguageConfig function as is, it doesn't need changes)
+// The agentId parameter will now correctly use the imported AgentId type
 export function getAgentLanguageConfig(
     lang: Language | undefined,
-    agentId: AgentId = DEFAULT_AGENT_ID
+    agentId: AgentId = DEFAULT_AGENT_ID // Now uses AgentId from shared/types
 ): LanguageAgentConfig {
     const targetLang = lang || DEFAULT_LANGUAGE;
 
-    // Ensure the agentId exists in our configuration map
     const agentConfigMap = agentLanguageConfigurations[agentId];
     if (!agentConfigMap) {
         logToFile(`[Language Config] WARN: Config not found for agent "${agentId}". Falling back to agent "${DEFAULT_AGENT_ID}".`);
-        // Avoid infinite recursion if DEFAULT_AGENT_ID is also missing
         if (agentId === DEFAULT_AGENT_ID) {
              logToFile(`[Language Config] CRITICAL: Default agent config missing for agent "${DEFAULT_AGENT_ID}". Returning empty config.`);
              return { systemInstructions: "Error: Critical config missing.", functionDeclarations: [] };
         }
-        return getAgentLanguageConfig(targetLang, DEFAULT_AGENT_ID); // Recursive call for default agent
+        return getAgentLanguageConfig(targetLang, DEFAULT_AGENT_ID);
     }
 
-    // Try to get the configuration for the target language
     let langConfig = agentConfigMap[targetLang];
 
-    // If the target language config is missing, try the default language for this agent
     if (!langConfig) {
         logToFile(`[Language Config] WARN: Config not found for language "${targetLang}" in agent "${agentId}". Falling back to default language "${DEFAULT_LANGUAGE}" for this agent.`);
         langConfig = agentConfigMap[DEFAULT_LANGUAGE];
 
-        // If even the default language is missing for this agent, handle critically
         if (!langConfig) {
             logToFile(`[Language Config] CRITICAL: Default language config missing for agent "${agentId}". Trying to return config for default agent/default language.`);
-             // As a last resort, try getting the config for the absolute default agent and language
              const absoluteDefaultConfig = agentLanguageConfigurations[DEFAULT_AGENT_ID]?.[DEFAULT_LANGUAGE];
              if (absoluteDefaultConfig) {
                  return absoluteDefaultConfig;
@@ -207,13 +186,11 @@ export function getAgentLanguageConfig(
         }
     }
 
-    // Ensure the retrieved config is not undefined/null before returning
     if (!langConfig) {
          logToFile(`[Language Config] CRITICAL: Could not resolve any valid config for Agent: ${agentId}, Language: ${targetLang}. Returning empty config.`);
          return { systemInstructions: "Error: Config resolution failed.", functionDeclarations: [] };
     }
 
     logToFile(`[Language Config] Using configuration for Agent: ${agentId}, Language: ${targetLang}`);
-    // Type assertion might be needed if TypeScript can't infer langConfig is defined
     return langConfig as LanguageAgentConfig;
 }

@@ -12,7 +12,7 @@ import {
 } from "@google/generative-ai";
 import { read_csv, createInputsOutputs } from '../utils/crawl/fewShotExamplesInit';
 import fs from 'fs';
-import { InputsOutputs } from '../types.ts/types'; // Đổi thành đường dẫn đúng nếu cần
+import { InputsOutputs } from '../types/crawl.types'; // Đổi thành đường dẫn đúng nếu cần
 
 // Đường dẫn đến file CSV - Nên lấy từ config hoặc định nghĩa rõ ràng
 const CFP_INFORMATION_CSV_PATH: string = path.resolve(__dirname, "../conference/examples/extract_cfp.csv"); // Dùng path.resolve

@@ -82,7 +82,7 @@ export const englishGetConferencesDeclaration: FunctionDeclaration = {
                     "To specify multiple topics or research fields, repeat the key for each value. For example: `topics=AI&topics=Machine+Learning&researchFields=Computer+Vision&researchFields=Natural+Language+Processing`. " +
                     "Always URL-encode special characters in values. For example, use `+` for spaces, `&` for ampersands, `=` for equals signs, and `+` for plus signs. " +
                     "To search for conferences between two dates, use `fromDate` and `toDate`. For example, to search for conferences happening between January 1, 2023, and December 31, 2023, use `fromDate=2023-01-01&toDate=2023-12-31`. " +
-                    "If the user requests *detailed* information about the conferences (e.g., full descriptions, specific dates, call for papers, summary, etc.), include the parameter `mode=detail` in the query string."
+                    "If the user requests *detailed* information about the conferences (e.g., details information, full descriptions, specific dates, call for papers, summary, etc.), add the parameter `mode=detail` in beginning of the query string."
             }
         },
         // Đảm bảo Gemini luôn cung cấp tham số này

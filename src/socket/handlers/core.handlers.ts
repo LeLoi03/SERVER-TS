@@ -207,6 +207,7 @@ export const registerCoreHandlers = (
 
 
     // --- Handler: Send Message ---
+    // --- Handler: Send Message ---
     socket.on('send_message', async (data: unknown) => {
         const eventName = 'send_message';
         const handlerId = `Msg-${socketId.substring(0, 4)}-${Date.now()}`;
@@ -219,15 +220,18 @@ export const registerCoreHandlers = (
             return sendChatError(handlerLogger, 'Authentication session error. Please re-login.', 'missing_token_auth', { userId: currentUserId });
         }
 
+        // Validate data including conversationId (optional, can be null)
         if (
             typeof data !== 'object' || data === null ||
             typeof (data as SendMessageData)?.userInput !== 'string' || !(data as SendMessageData).userInput?.trim() ||
             typeof (data as SendMessageData)?.language !== 'string' || !(data as SendMessageData).language
+            // conversationId có thể là null hoặc undefined, nên không cần check chặt ở đây nếu client có thể bỏ qua nó
         ) {
             return sendChatError(handlerLogger, 'Invalid message data: Missing or invalid "userInput" or "language".', 'invalid_input_send');
         }
-        const { userInput, isStreaming = true, language } = data as SendMessageData;
-        const activeConversationId = socket.data.currentConversationId as string | undefined;
+
+        // Lấy conversationId từ payload trước tiên
+        const { userInput, isStreaming = true, language, conversationId: payloadConversationId } = data as SendMessageData;
 
         handlerLogger.info(
             {
@@ -235,36 +239,71 @@ export const registerCoreHandlers = (
                 isStreaming,
                 language,
                 userId: currentUserId,
-                activeConvId: activeConversationId || 'None (will create)'
+                payloadConvId: payloadConversationId, // Log ID từ payload
+                socketDataConvId: socket.data.currentConversationId // Log ID hiện tại trong socket.data để so sánh
             },
             'Request received.'
         );
 
         let targetConversationId: string;
+        let conversationTitleForNew: string | undefined; // Để truyền title nếu tạo mới
 
-        if (activeConversationId) {
-            targetConversationId = activeConversationId;
+        if (payloadConversationId) {
+            // Client cung cấp một ID cụ thể
+            targetConversationId = payloadConversationId;
+            // Đồng bộ socket.data.currentConversationId nếu nó khác
+            if (socket.data.currentConversationId !== targetConversationId) {
+                handlerLogger.info({ oldSocketConvId: socket.data.currentConversationId, newSocketConvId: targetConversationId }, 'Updating socket.data.currentConversationId to match payloadConversationId.');
+                socket.data.currentConversationId = targetConversationId;
+            }
+            handlerLogger.info({ targetConversationId }, 'Using conversationId from payload.');
         } else {
-            handlerLogger.info('No active conversation set. Creating new conversation implicitly.');
+            // Client muốn tạo conversation mới (payloadConversationId là null, undefined, hoặc rỗng)
+            handlerLogger.info('payloadConversationId is null/undefined. Client requests new conversation.');
             try {
-                const { conversationId: newConvId } = await conversationHistoryService.createNewConversation(currentUserId);
-                targetConversationId = newConvId;
-                socket.data.currentConversationId = newConvId;
-                handlerLogger.info({ newConvId: targetConversationId }, 'Implicitly created and set active conversation.');
-                socket.emit('new_conversation_started', { conversationId: targetConversationId });
-                await emitUpdatedConversationList(handlerLogger, currentUserId, 'implicit new conversation');
+                // Bạn có thể muốn lấy title mặc định hoặc từ một nguồn nào đó nếu cần
+                const newConvResult = await conversationHistoryService.createNewConversation(currentUserId, "Chat mới"); // Truyền title mặc định nếu muốn
+                targetConversationId = newConvResult.conversationId;
+                conversationTitleForNew = newConvResult.title; // Bây giờ newConvResult.title đã tồnぞん
+
+                socket.data.currentConversationId = targetConversationId;
+                handlerLogger.info({ newConvId: targetConversationId, title: conversationTitleForNew }, 'Explicitly created new conversation based on payload and set as active.');
+
+                socket.emit('new_conversation_started', {
+                    conversationId: targetConversationId,
+                    title: conversationTitleForNew, // Sử dụng title từ kết quả
+                    lastActivity: newConvResult.lastActivity.toISOString(), // Sử dụng lastActivity từ kết quả
+                    isPinned: newConvResult.isPinned, // Sử dụng isPinned từ kết quả
+                });
+                await emitUpdatedConversationList(handlerLogger, currentUserId, 'new conversation from send_message');
             } catch (error: any) {
-                return sendChatError(handlerLogger, `Could not start chat session.`, 'implicit_new_conv_fail', { userId: currentUserId, error: error.message });
+                return sendChatError(handlerLogger, `Could not start new chat session as requested by client.`, 'explicit_new_conv_payload_fail', { userId: currentUserId, error: error.message });
             }
         }
+
+        // Nếu sau tất cả các logic trên mà targetConversationId vẫn chưa được xác định
+        // (điều này không nên xảy ra nếu client luôn gửi payloadConversationId hoặc null)
+        // thì bạn có thể xem xét một fallback cuối cùng, nhưng lý tưởng là không cần.
+        if (!targetConversationId) {
+            handlerLogger.error('CRITICAL: targetConversationId could not be determined. This should not happen with new client logic.');
+            return sendChatError(handlerLogger, 'Internal server error: Could not determine chat session.', 'target_id_undetermined');
+        }
+
+
+        // Phần còn lại của logic (lấy history, xử lý intent, lưu history) giữ nguyên
+        // nhưng sử dụng `targetConversationId` đã được xác định ở trên.
 
         let currentHistory: HistoryItem[];
         try {
             const fetchedHistory = await conversationHistoryService.getConversationHistory(targetConversationId, currentUserId, DEFAULT_HISTORY_LIMIT);
             if (fetchedHistory === null) {
-                handlerLogger.error({ convId: targetConversationId, userId: currentUserId }, 'Failed to fetch history for supposedly active conversation.');
-                socket.data.currentConversationId = undefined;
-                return sendChatError(handlerLogger, 'Chat session error. Please select a conversation or start a new one.', 'history_not_found_send');
+                handlerLogger.error({ convId: targetConversationId, userId: currentUserId }, 'Failed to fetch history for target conversation.');
+                // Có thể client gửi một ID không tồn tại hoặc không có quyền truy cập
+                // Reset socket.data.currentConversationId nếu nó không hợp lệ nữa
+                if (socket.data.currentConversationId === targetConversationId) {
+                    socket.data.currentConversationId = undefined;
+                }
+                return sendChatError(handlerLogger, 'Chat session error or invalid conversation ID. Please select a valid conversation or start a new one.', 'history_not_found_send');
             }
             currentHistory = fetchedHistory;
             handlerLogger.info({ convId: targetConversationId, historyCount: currentHistory.length }, 'Fetched current history.');

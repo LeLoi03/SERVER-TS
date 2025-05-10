@@ -88,7 +88,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
             logToFile(`${logContext} API Error (${response.status}): ${truncatedError}`);
             return {
                 success: false,
-                 // *** SỬA LỖI: rawResponseText có thể là string hoặc null, khớp với string | null ***
+                // *** SỬA LỖI: rawResponseText có thể là string hoặc null, khớp với string | null ***
                 rawData: rawResponseText, // Include raw error body if available
                 formattedData: null,
                 errorMessage: errorMessage
@@ -103,12 +103,14 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         try {
             // rawResponseText ở đây chắc chắn là string vì response.ok
             parsedData = JSON.parse(rawResponseText);
+            logToFile(`${logContext} Parsed successful. Raw data: \n${rawResponseText}`);
+
         } catch (parseError: any) {
             const errorMsg = parseError instanceof Error ? parseError.message : String(parseError);
             logToFile(`${logContext} JSON Parsing Error: ${errorMsg}. Raw data: ${rawResponseText.substring(0, 250)}...`);
             return {
                 success: false, // Parsing failure means we can't proceed reliably
-                 // *** SỬA LỖI: rawResponseText là string, khớp với string | null ***
+                // *** SỬA LỖI: rawResponseText là string, khớp với string | null ***
                 rawData: rawResponseText,
                 formattedData: null,
                 errorMessage: `Data Error: Received invalid JSON format from the API. Details: ${errorMsg}`
@@ -126,7 +128,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
                 // Call the transformer with the *parsed* data and required queryString
                 formattedData = transformer(parsedData, queryString);
                 if (formattedData !== null) {
-                    logToFile(`${logContext} Transformation successful.`);
+                    logToFile(`${logContext} Transformation successful. Transformed data: \n${formattedData}`);
                 } else {
                     logToFile(`${logContext} Transformation function returned null (potentially expected).`);
                 }
@@ -155,7 +157,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         logToFile(`${logContext} Error Processing Response: ${errorMsg}`);
         return {
             success: false,
-             // *** SỬA LỖI: rawResponseText có thể là string hoặc null, khớp với string | null ***
+            // *** SỬA LỖI: rawResponseText có thể là string hoặc null, khớp với string | null ***
             rawData: rawResponseText, // May or may not have text at this point
             formattedData: null,
             errorMessage: `Error processing API response. Details: ${errorMsg}`
