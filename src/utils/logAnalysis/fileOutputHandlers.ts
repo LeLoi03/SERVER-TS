@@ -39,14 +39,14 @@ const ensureOverallAnalysis = (results: any): OverallAnalysis => {
     return results.overall as OverallAnalysis;
 };
 
-export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO, logContext) => {
+export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO) => {
     const fileOutputStats = ensureFileOutputAnalysis(results);
     const overallStats = ensureOverallAnalysis(results); // Đảm bảo overall stats tồn tại
 
-    // Tìm confDetail dựa trên context của logEntry, vì confDetailFromInput có thể không đúng ở đây
+    // Tìm confDetail dựa trên của logEntry, vì confDetailFromInput có thể không đúng ở đây
     // (confDetailFromInput là confDetail của log entry trước đó, không phải của event này)
-    const confKey = logEntry.context?.conferenceAcronym && logEntry.context?.conferenceTitle ?
-        `${logEntry.context.conferenceAcronym}_${logEntry.context.conferenceTitle}` : null;
+    const confKey = logEntry.conferenceAcronym && logEntry.conferenceTitle ?
+        `${logEntry.conferenceAcronym} - ${logEntry.conferenceTitle}` : null;
     const confDetail = confKey ? results.conferenceAnalysis[confKey] : null;
 
     if (confDetail) {
@@ -64,12 +64,12 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, confDe
     }
 };
 
-export const handleCsvWriteFailed: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO, logContext) => {
+export const handleCsvWriteFailed: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO) => {
     const fileOutputStats = ensureFileOutputAnalysis(results);
     const overallStats = ensureOverallAnalysis(results); // Đảm bảo overall stats tồn tại
 
-    const confKey = logEntry.context?.conferenceAcronym && logEntry.context?.conferenceTitle ?
-        `${logEntry.context.conferenceAcronym}_${logEntry.context.conferenceTitle}` : null;
+    const confKey = logEntry.conferenceAcronym && logEntry.conferenceTitle ?
+        `${logEntry.conferenceAcronym} - ${logEntry.conferenceTitle}` : null;
     const confDetail = confKey ? results.conferenceAnalysis[confKey] : null;
 
     const error = logEntry.err || logEntry.reason || logEntry.msg || 'CSV record write failed';
@@ -95,7 +95,7 @@ export const handleCsvWriteFailed: LogEventHandler = (logEntry, results, confDet
     }
 };
 
-export const handleJsonlWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleJsonlWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // confDetail ở đây là confDetail của conference mà event này thuộc về, được tìm bởi getConferenceDetail
     const fileOutputStats = ensureFileOutputAnalysis(results);
     if (confDetail) {
@@ -105,11 +105,11 @@ export const handleJsonlWriteSuccess: LogEventHandler = (logEntry, results, conf
         fileOutputStats.jsonlRecordsSuccessfullyWritten = (fileOutputStats.jsonlRecordsSuccessfullyWritten || 0) + 1;
     } else {
         // Trường hợp này ít xảy ra nếu getConferenceDetail hoạt động đúng,
-        // vì event 'save_batch_append_success' thường có context acronym/title.
+        // vì event 'save_batch_append_success' thường có acronym/title.
     }
 };
 
-export const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // confDetail ở đây là confDetail của conference mà event này thuộc về
     const fileOutputStats = ensureFileOutputAnalysis(results);
     const overallStats = ensureOverallAnalysis(results); // Đảm bảo overall stats tồn tại
@@ -131,12 +131,18 @@ export const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confD
 };
 
 // Handler mới cho các event từ ResultProcessingService (nội bộ, không trực tiếp cập nhật confDetail)
-export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const fileOutputStats = ensureFileOutputAnalysis(results);
     const event = logEntry.event;
 
+    
     if (event === 'csv_record_processed_for_writing') { // Từ ResultProcessingService
         fileOutputStats.csvRecordsAttempted = (fileOutputStats.csvRecordsAttempted || 0) + 1;
+        // logContext ở đây sẽ chứa { requestId, event, time, conferenceAcronym, conferenceTitle }
+        // Nếu bạn muốn log thêm từ handler:
+        // const logger = (logContext as any).baseLogger?.child({ handler: 'handleCsvProcessingEvent', event });
+        // logger?.trace({ acronym: logContext.conferenceAcronym }, 'Incremented csvRecordsAttempted');
+    
     } else if (event === 'csv_stream_collect_success') { // Từ ResultProcessingService
         fileOutputStats.csvFileGenerated = true;
     } else if (event === 'csv_stream_collect_failed') { // Từ ResultProcessingService

@@ -2,13 +2,13 @@
 import { LogEventHandler } from './index'; // Hoặc từ './index'
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
 
-export const handleBatchTaskCreate: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchTaskCreate: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'batch_task_create', 'batch_task_create_delegation_start'
     results.batchProcessing.totalBatchesAttempted = (results.batchProcessing.totalBatchesAttempted || 0) + 1;
     // Không cập nhật confDetail ở đây vì đây là event tạo batch, chưa xử lý.
 };
 
-export const handleBatchRejectionOrLogicFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchRejectionOrLogicFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'save_batch_unhandled_error_or_rethrown',
     //         'batch_processing_abort_no_main_text',
     //         'conference_link_processor_link_missing_for_update',  <-- Mới
@@ -44,7 +44,7 @@ export const handleBatchRejectionOrLogicFailure: LogEventHandler = (logEntry, re
     }
 };
 
-export const handleBatchApiFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchApiFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events:
     // 'save_batch_determine_api_call_failed', 'save_batch_extract_api_call_failed',
     // 'save_batch_cfp_api_call_failed', 'save_batch_process_determine_call_failed',
@@ -104,7 +104,7 @@ export const handleBatchApiFailure: LogEventHandler = (logEntry, results, confDe
     }
 };
 
-export const handleBatchFileSystemFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchFileSystemFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'save_batch_dir_create_failed', 'save_batch_read_content_failed',
     // 'save_batch_read_content_failed_missing_path', 'save_batch_write_file_failed'
     results.batchProcessing.fileSystemFailures = (results.batchProcessing.fileSystemFailures || 0) + 1;
@@ -128,7 +128,7 @@ export const handleBatchFileSystemFailure: LogEventHandler = (logEntry, results,
     // nên không cập nhật confDetail ở đây trừ khi có logic cụ thể hơn.
 };
 
-export const handleBatchFinishSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchFinishSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'save_batch_finish_success'
     results.batchProcessing.successfulBatches = (results.batchProcessing.successfulBatches || 0) + 1;
 
@@ -141,7 +141,7 @@ export const handleBatchFinishSuccess: LogEventHandler = (logEntry, results, con
     }
 };
 
-export const handleBatchAggregationEnd: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleBatchAggregationEnd: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'save_batch_aggregate_content_end'
     if (logEntry.context?.aggregatedCount !== undefined && logEntry.context?.aggregatedCount !== null) { // Ưu tiên aggregatedCount
         results.batchProcessing.aggregatedResultsCount = logEntry.context.aggregatedCount;

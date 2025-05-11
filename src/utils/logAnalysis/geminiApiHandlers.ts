@@ -1,9 +1,28 @@
 // src/client/utils/eventHandlers/geminiApiHandlers.ts
 import { LogEventHandler } from './index'; // Hoặc từ './index'
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
+import { OverallAnalysis } from '../../types/logAnalysis.types';
+
+const ensureOverallAnalysis = (results: any): OverallAnalysis => {
+    if (!results.overall) {
+        results.overall = {
+            startTime: null,
+            endTime: null,
+            durationSeconds: null,
+            totalConferencesInput: 0,
+            processedConferencesCount: 0,
+            completedTasks: 0,
+            failedOrCrashedTasks: 0,
+            processingTasks: 0,
+            skippedTasks: 0,
+            successfulExtractions: 0,
+        };
+    }
+    return results.overall as OverallAnalysis;
+};
 
 // --- Final Failures ---
-export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const error = logEntry.context?.finalError || logEntry.err || logEntry.reason || logEntry.msg;
     const event = logEntry.event;
     const failureMsg = error || `Gemini API call failed (${event})`; // Giữ nguyên
@@ -33,7 +52,7 @@ export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, con
 };
 
 // --- Setup & Critical Initialization Failures ---
-export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const error = logEntry.err || logEntry.reason || logEntry.msg || `Gemini setup/call failed (${logEntry.event})`;
     const errorKey = normalizeErrorKey(error);
 
@@ -65,13 +84,14 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
 };
 
 // --- Successful API Call ---
-export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    const overallStats = ensureOverallAnalysis(results); // Đảm bảo overall stats tồn tại
     results.geminiApi.successfulCalls++;
 
     if (logEntry.tokens) { // Nên là logEntry.metaData.totalTokenCount hoặc tương tự từ response
         results.geminiApi.totalTokens += Number(logEntry.tokens) || 0;
     } else if (logEntry.metaData?.totalTokenCount) { // Thường thì token nằm trong metaData
-         results.geminiApi.totalTokens += Number(logEntry.metaData.totalTokenCount) || 0;
+        results.geminiApi.totalTokens += Number(logEntry.metaData.totalTokenCount) || 0;
     }
 
 
@@ -89,6 +109,7 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
         } else if (apiType === 'extract') {
             if (confDetail.steps.gemini_extract_success !== false) {
                 confDetail.steps.gemini_extract_success = true;
+                overallStats.successfulExtractions = (overallStats.successfulExtractions || 0) + 1;
             }
             if (confDetail.steps.gemini_extract_cache_used === null) {
                 confDetail.steps.gemini_extract_cache_used = usingCache;
@@ -105,7 +126,7 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
 };
 
 // --- Cache Specific Handlers ---
-export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_setup_use_success'
     results.geminiApi.cacheContextHits = (results.geminiApi.cacheContextHits || 0) + 1;
 
@@ -121,17 +142,17 @@ export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDet
     }
 };
 
-export const handleCacheContextCreateStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheContextCreateStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_create_start' (for context cache)
     results.geminiApi.cacheContextAttempts = (results.geminiApi.cacheContextAttempts || 0) + 1;
 };
 
-export const handleCacheContextCreationSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheContextCreationSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_create_success' (for context cache from getOrCreateContextCache)
     results.geminiApi.cacheContextCreationSuccess = (results.geminiApi.cacheContextCreationSuccess || 0) + 1;
 };
 
-export const handleCacheContextCreationFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheContextCreationFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'cache_create_failed', 'cache_create_invalid_model_error',
     // 'cache_setup_get_or_create_failed', 'cache_manager_unavailable_early',
     // 'cache_logic_outer_exception', 'cache_setup_getmodel_failed'
@@ -142,12 +163,12 @@ export const handleCacheContextCreationFailed: LogEventHandler = (logEntry, resu
     // Không aggregate vào results.errorsAggregated trừ khi đây là lỗi nghiêm trọng dừng cả task
 };
 
-export const handleCacheContextInvalidation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheContextInvalidation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'cache_create_failed_invalid_object', 'cache_invalidate', 'retry_cache_invalidate'
     results.geminiApi.cacheContextInvalidations = (results.geminiApi.cacheContextInvalidations || 0) + 1;
 };
 
-export const handleCacheContextRetrievalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheContextRetrievalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'cache_retrieval_failed_not_found', 'cache_retrieval_failed_exception'
     results.geminiApi.cacheContextRetrievalFailures = (results.geminiApi.cacheContextRetrievalFailures || 0) + 1;
     // Có thể coi đây là một dạng cache invalidation hoặc creation failed tùy theo logic
@@ -155,7 +176,7 @@ export const handleCacheContextRetrievalFailure: LogEventHandler = (logEntry, re
 };
 
 
-export const handleCacheMapLoadFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheMapLoadFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_load_failed' (for cache map file)
     results.geminiApi.cacheMapLoadFailures = (results.geminiApi.cacheMapLoadFailures || 0) + 1;
     results.geminiApi.cacheMapLoadSuccess = false;
@@ -163,18 +184,18 @@ export const handleCacheMapLoadFailure: LogEventHandler = (logEntry, results, co
     results.geminiApi.serviceInitializationFailures = (results.geminiApi.serviceInitializationFailures || 0) + 1;
 };
 
-export const handleCacheMapWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheMapWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_write_success' (for cache map file from saveCacheNameMap)
     results.geminiApi.cacheMapWriteSuccess = (results.geminiApi.cacheMapWriteSuccess || 0) + 1;
 };
 
-export const handleCacheMapWriteFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheMapWriteFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_write_failed' (for cache map file)
     results.geminiApi.cacheMapWriteFailures = (results.geminiApi.cacheMapWriteFailures || 0) + 1;
     // Lỗi này có thể không nghiêm trọng bằng load failure nhưng vẫn cần theo dõi
 };
 
-export const handleCacheManagerCreateFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCacheManagerCreateFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'cache_manager_create_failed'
     results.geminiApi.cacheManagerCreateFailures = (results.geminiApi.cacheManagerCreateFailures || 0) + 1;
     results.geminiApi.serviceInitializationFailures = (results.geminiApi.serviceInitializationFailures || 0) + 1;
@@ -182,7 +203,7 @@ export const handleCacheManagerCreateFailure: LogEventHandler = (logEntry, resul
 
 
 // --- Call & Retry Stats ---
-export const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'gemini_call_start'
     results.geminiApi.totalCalls++;
 
@@ -207,7 +228,7 @@ export const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDe
     }
 };
 
-export const handleRetryAttemptStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleRetryAttemptStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'retry_attempt_start'
     results.geminiApi.totalRetries = (results.geminiApi.totalRetries || 0) + 1;
 
@@ -223,12 +244,12 @@ export const handleRetryAttemptStart: LogEventHandler = (logEntry, results, conf
 };
 
 // --- Intermediate Errors & Limits ---
-export const handleRateLimitWait: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleRateLimitWait: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'retry_wait_before_next', 'retry_internal_rate_limit_wait'
     results.geminiApi.rateLimitWaits++;
 };
 
-export const handleGeminiIntermediateError: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleGeminiIntermediateError: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Events: 'retry_attempt_error_cache', 'retry_attempt_error_429', 'retry_attempt_error_5xx',
     // 'retry_attempt_error_unknown', 'retry_loop_exit_unexpected', 'gemini_api_generate_failed', 'retry_genai_not_init'
     results.geminiApi.intermediateErrors = (results.geminiApi.intermediateErrors || 0) + 1;

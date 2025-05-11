@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { container } from 'tsyringe';
 import { LogAnalysisService } from '../../../services/logAnalysis.service';
 import { LoggingService } from '../../../services/logging.service';
-import { LogAnalysisResult } from '../../../client/types/logAnalysis.types';
+import { LogAnalysisResult } from '../../../types/logAnalysis.types';
 
 export const getLatestAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     // <<< Resolve dependencies >>>

@@ -1,7 +1,7 @@
 // src/client/utils/eventHandlers/taskLifecycleHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis, ConferenceAnalysisDetail } from '../../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu
+import { OverallAnalysis } from '../../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu
 
 // Khởi tạo overall analysis trong results nếu chưa có
 const ensureOverallAnalysis = (results: any): OverallAnalysis => {
@@ -23,7 +23,7 @@ const ensureOverallAnalysis = (results: any): OverallAnalysis => {
 };
 
 
-export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
     overall.processedConferencesCount = (overall.processedConferencesCount || 0) + 1;
 
@@ -46,7 +46,7 @@ export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, 
     }
 };
 
-export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
 
     if (confDetail) {
@@ -56,12 +56,12 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
         // hoặc các lỗi nghiêm trọng khác đã set status.
         if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') { // Thêm điều kiện !== 'skipped'
             confDetail.endTime = entryTimestampISO;
-            if (logEntry.context?.success === true) {
+            if (logEntry.success === true) {
                 // Status có thể là 'processed_ok' để phân biệt với 'completed' cuối cùng từ CSV
                 confDetail.status = 'processed_ok'; // Ví dụ: Đã xử lý xong các bước nội bộ
-            } else if (logEntry.context?.success === false) {
+            } else if (logEntry.success === false) {
                 confDetail.status = 'failed'; // Lỗi logic trong task
-                const errorMsg = logEntry.context?.error_details || "Task logic indicated failure.";
+                const errorMsg = logEntry.error_details || "Task logic indicated failure.";
                 addConferenceError(confDetail, entryTimestampISO, errorMsg, normalizeErrorKey(errorMsg));
                 // Lỗi logic làm task fail, tăng failedOrCrashedTasks
                 overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
@@ -95,7 +95,7 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
     }
 };
 
-export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
     const error = logEntry.err || logEntry.reason || logEntry.msg || `Task failed due to unhandled error (${logEntry.event})`;
     const errorKey = normalizeErrorKey(error);
@@ -130,7 +130,7 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
     }
 };
 
-export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
 
     if (confDetail) {

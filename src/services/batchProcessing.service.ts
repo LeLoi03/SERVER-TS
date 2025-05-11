@@ -597,7 +597,7 @@ export class BatchProcessingService {
             } catch (determineLinksError: any) {
                 determineApiLogger.error({ err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 1 });
                 await writeFullLinksPromise;
-                throw new Error(`Critical: Determine links API failed for batch ${batchIndex} (SAVE): ${determineLinksError.message || determineLinksError}`);
+                throw new Error(`Critical: Determine links API failed for batch ${batchIndex} (SAVE): ${determineLinksError}`);
             }
 
             // 3. Process determine_links_api response using ConferenceDeterminationService

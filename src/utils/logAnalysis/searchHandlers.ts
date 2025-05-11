@@ -2,7 +2,7 @@
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
 
-export const handleSearchFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleSearchFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const error = logEntry.err || logEntry.reason || logEntry.msg;
     const event = logEntry.event;
     const defaultMsg = (event === 'search_skip_all_keys_exhausted' || event === 'search_skip_no_key' || event === 'search_key_rotation_failed_after_quota')
@@ -30,7 +30,7 @@ export const handleSearchFailure: LogEventHandler = (logEntry, results, confDeta
 };
 
 // NEW: Handler for Search related warnings or non-critical errors within attempts
-export const handleSearchAttemptIssue: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleSearchAttemptIssue: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const event = logEntry.event;
     const error = logEntry.err || logEntry.msg;
     const details = logEntry.details;
@@ -48,7 +48,7 @@ export const handleSearchAttemptIssue: LogEventHandler = (logEntry, results, con
     // Log chi tiết hơn vào confDetail nếu cần
 };
 
-export const handleSearchSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleSearchSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     results.googleSearch.successfulSearches++;
     if (confDetail) {
         if (confDetail.steps.search_success !== false) {
@@ -61,14 +61,14 @@ export const handleSearchSuccess: LogEventHandler = (logEntry, results, confDeta
     }
 };
 
-export const handleSearchResultsFiltered: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleSearchResultsFiltered: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     if (confDetail) {
-        confDetail.steps.search_filtered_count = logEntry.filteredCount ?? null;
+        confDetail.steps.search_filtered_count = logEntry.filteredResultsCount ?? null;
     }
 };
 
 
-export const handleSearchAttempt: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleSearchAttempt: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     results.googleSearch.totalRequests++; // Tổng số attempts
     if (logEntry.keyIndex !== undefined) {
         // `keyIndex` là 0-based từ GoogleSearchService
@@ -81,7 +81,7 @@ export const handleSearchAttempt: LogEventHandler = (logEntry, results, confDeta
 };
 
 // NEW: Handlers for ApiKeyManager events
-export const handleApiKeyUsageLimitReached: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleApiKeyUsageLimitReached: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     results.googleSearch.apiKeyLimitsReached = (results.googleSearch.apiKeyLimitsReached || 0) + 1;
     const keyIndex = logEntry.keyIndex; // 0-based
     if (keyIndex !== undefined) {
@@ -93,12 +93,12 @@ export const handleApiKeyUsageLimitReached: LogEventHandler = (logEntry, results
     }
 };
 
-export const handleApiKeyProvided: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleApiKeyProvided: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     results.googleSearch.apiKeysProvidedCount = (results.googleSearch.apiKeysProvidedCount || 0) + 1;
     // Không cập nhật keyUsage ở đây để tránh đếm kép với handleSearchAttempt
 };
 
-export const handleAllApiKeysExhaustedInfo: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleAllApiKeysExhaustedInfo: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Phân biệt giữa 'api_keys_all_exhausted_checked' (khi getNextKey không tìm thấy)
     // và 'api_keys_all_exhausted_status' (khi gọi hàm areAllKeysExhausted)
     if (logEntry.event === 'api_keys_all_exhausted_checked') {
@@ -108,7 +108,7 @@ export const handleAllApiKeysExhaustedInfo: LogEventHandler = (logEntry, results
     }
 };
 
-export const handleApiKeyRotation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleApiKeyRotation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const event = logEntry.event;
     if (event === 'api_key_force_rotated_success') {
         results.googleSearch.apiKeyRotationsSuccess = (results.googleSearch.apiKeyRotationsSuccess || 0) + 1;

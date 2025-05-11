@@ -16,7 +16,7 @@ export type LogEventHandler = (
   results: LogAnalysisResult,
   confDetail: ConferenceAnalysisDetail | null,
   entryTimestampISO: string,
-  logContext: object
+  // logContext: object
 ) => void;
 
 
@@ -85,7 +85,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   // Lỗi từ PageContentExtractorService liên quan đến Playwright
   'html_processing_failed': playwright.handleOtherPlaywrightFailure, // Khi page null hoặc closed
   'goto_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.goto()
-  'fetch_content_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.content()
+  // 'fetch_content_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.content()
   'unexpected_error': playwright.handleOtherPlaywrightFailure, // Lỗi chung trong PageContentExtractorService
 
 

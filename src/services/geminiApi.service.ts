@@ -810,6 +810,7 @@ export class GeminiApiService {
                 logger.info({ ...callAttemptContext, responseLength: responseText.length, metaData, tokens: metaData?.totalTokenCount, apiType, modelName, usingCache: usingCacheActual, event: 'gemini_api_attempt_success' }, "Gemini API request processed successfully for this attempt.");
                 return { responseText, metaData };
             }, apiType, batchIndex, modelName, modelRateLimiter, logger);
+        
     }
 
     // --- Helper to Prepare Few-Shot Parts ---

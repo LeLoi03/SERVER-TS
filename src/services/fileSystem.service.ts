@@ -115,9 +115,9 @@ export class FileSystemService {
             await fs.promises.writeFile(filePath, content, 'utf8');
             logger.trace({ ...logContext, filePath, event: 'saveTemporaryFile_success' });
             return filePath;
-        } catch (writeError) {
-            logger.error({ ...logContext, err: writeError, event: 'save_batch_write_file_failed', fileType: `temp_content_${baseName}` });
-            throw writeError;
+        } catch (error) {
+            logger.error({ ...logContext, err: error, event: 'save_batch_write_file_failed', fileType: `temp_content_${baseName}` });
+            throw error;
         }
     }
 

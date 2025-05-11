@@ -22,19 +22,19 @@ const ensureOverallAnalysis = (results: any): OverallAnalysis => {
     return results.overall as OverallAnalysis;
 };
 
-export const handleCrawlStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleCrawlStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
     // Lấy startTime từ context của logEntry nếu có, vì đó là thời điểm bắt đầu thực sự
     overall.startTime = logEntry.context?.startTime ?? overall.startTime ?? entryTimestampISO;
 
     // totalConferencesInput được gán một lần từ context của event này
-    if (logEntry.context?.totalConferences && typeof logEntry.context.totalConferences === 'number') {
-        overall.totalConferencesInput = logEntry.context.totalConferences;
+    if (logEntry.totalConferences && typeof logEntry.totalConferences === 'number') {
+        overall.totalConferencesInput = logEntry.totalConferences;
     }
 };
 
 // Đổi tên handler cho rõ ràng hơn về việc nó xử lý event từ controller
-export const handleControllerProcessingFinished: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
+export const handleControllerProcessingFinished: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
 
     // Event 'processing_finished_successfully' từ controller báo hiệu toàn bộ request đã hoàn thành.

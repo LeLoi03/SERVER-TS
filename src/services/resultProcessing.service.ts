@@ -343,21 +343,31 @@ export class ResultProcessingService {
         try {
             rowObjectStream = Readable.from(this._processJsonlStream(jsonlFilePath, taskLogger));
 
+            // ResultProcessingService.ts (trích đoạn trong _writeCSVAndCollectDataInternal)
+
             filterLogCollectTransform = new NodeTransform({
                 objectMode: true,
                 transform: (chunk: ProcessedRowData | null, encoding, callback) => {
-                    recordsProcessed++;
-                    if (chunk !== null && chunk.acronym && chunk.title) { // Đảm bảo chunk hợp lệ
-                        taskLogger.trace({ event: 'csv_record_to_write', acronym: chunk.acronym, title: chunk.title }, `Passing record to CSV transform`);
-                        collectedData.push(chunk); // Thu thập trước khi đẩy vào CSV transform
+                    recordsProcessed++; // Đây là tổng số dòng từ JSONL đã qua _processJsonlStream
+                    if (chunk !== null && chunk.acronym && chunk.title) {
+                        // Log event này trước khi đẩy vào CSV transform
+                        // Event này sẽ được LogProcessor bắt để tăng csvRecordsAttempted
+                        taskLogger.info({ // Sử dụng info level để đảm bảo nó được ghi lại
+                            event: 'csv_record_processed_for_writing', // EVENT
+                            conferenceAcronym: chunk.acronym, // Cung cấp context cho LogProcessor
+                            conferenceTitle: chunk.title,
+                            // Không cần truyền thêm data của chunk ở đây, chỉ cần event và key
+                        }, `Record for ${chunk.acronym} processed and is being prepared for CSV writing.`);
+
+                        taskLogger.trace({ event: 'csv_record_to_write_internal', acronym: chunk.acronym, title: chunk.title }, `Passing record to CSV transform (internal trace)`);
+                        collectedData.push(chunk);
                         recordsWrittenToCsv++;
                         callback(null, chunk);
                     } else {
-                        // Log nếu chunk không hợp lệ nhưng không null
                         if (chunk !== null) {
                             taskLogger.warn({ event: 'csv_invalid_record_skipped_in_transform', recordData: { acronym: chunk.acronym, title: chunk.title } }, 'Invalid record skipped in transform for CSV writing');
                         }
-                        callback(); // Không đẩy dữ liệu nếu chunk là null hoặc không hợp lệ
+                        callback();
                     }
                 }
             });

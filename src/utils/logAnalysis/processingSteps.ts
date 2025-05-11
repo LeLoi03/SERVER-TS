@@ -11,12 +11,12 @@ import {
 
 // Import eventHandlerMap từ vị trí mới của nó (thường là từ eventHandlers/index.ts)
 import { eventHandlerMap } from './index';
-import { Logger } from 'pino';
+// import { Logger } from 'pino';
 
 // --- Step 1: readAndGroupLogs (Giữ nguyên, đã có tham số logger) ---
-export const readAndGroupLogs = async (logFilePath: string, baseLogger: Logger): Promise<ReadLogResult> => {
-    const logger = baseLogger.child({ function: 'readAndGroupLogs', filePath: logFilePath });
-    logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by requestId');
+export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
+    // const logger = baseLogger.child({ function: 'readAndGroupLogs', filePath: logFilePath });
+    // logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by requestId');
 
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
@@ -25,7 +25,7 @@ export const readAndGroupLogs = async (logFilePath: string, baseLogger: Logger):
     const tempLogProcessingErrors: string[] = [];
 
     if (!fs.existsSync(logFilePath)) {
-        logger.error({ event: 'read_group_error_file_not_found' }, 'Log file not found.');
+        // logger.error({ event: 'read_group_error_file_not_found' }, 'Log file not found.');
         throw new Error(`Log file not found at ${logFilePath}`);
     }
 
@@ -52,22 +52,22 @@ export const readAndGroupLogs = async (logFilePath: string, baseLogger: Logger):
                     requestInfo.startTime = Math.min(entryTimeMillis, requestInfo.startTime ?? entryTimeMillis);
                     requestInfo.endTime = Math.max(entryTimeMillis, requestInfo.endTime ?? entryTimeMillis);
                 } else {
-                    logger.trace({ event: 'read_group_skip_entry', lineNum: totalEntries, hasRequestId: !!requestId, hasValidTime: !isNaN(entryTimeMillis), lineStart: line.substring(0, 50) }, "Skipping log entry (missing requestId or invalid time)");
+                    // logger.trace({ event: 'read_group_skip_entry', lineNum: totalEntries, hasRequestId: !!requestId, hasValidTime: !isNaN(entryTimeMillis), lineStart: line.substring(0, 50) }, "Skipping log entry (missing requestId or invalid time)");
                 }
 
             } catch (parseError: any) {
                 parseErrorsCount++;
                 const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
                 tempLogProcessingErrors.push(errorMsg);
-                logger.warn({ event: 'read_group_parse_error', lineNum: totalEntries, err: parseError.message, originalLine: line.substring(0, 200) }, "Error parsing log line during phase 1");
+                // logger.warn({ event: 'read_group_parse_error', lineNum: totalEntries, err: parseError.message, originalLine: line.substring(0, 200) }, "Error parsing log line during phase 1");
             }
         }
     } catch (readError: any) {
-        logger.error({ event: 'read_group_stream_error', err: readError.message, stack: readError.stack }, 'Error reading log file stream');
+        // logger.error({ event: 'read_group_stream_error', err: readError.message, stack: readError.stack }, 'Error reading log file stream');
         throw readError;
     }
 
-    logger.info({ event: 'read_group_end', totalEntries, parsedEntries, requestIdsFound: requestsData.size, parseErrors: parseErrorsCount }, 'Finished Phase 1');
+    // logger.info({ event: 'read_group_end', totalEntries, parsedEntries, requestIdsFound: requestsData.size, parseErrors: parseErrorsCount }, 'Finished Phase 1');
 
     return {
         requestsData,
@@ -83,10 +83,10 @@ export const filterRequestsByTime = (
     allRequestsData: Map<string, RequestLogData>,
     filterStartMillis: number | null,
     filterEndMillis: number | null,
-    baseLogger: Logger
+    // baseLogger: Logger
 ): FilteredData => {
-    const logger = baseLogger.child({ function: 'filterRequestsByTime' });
-    logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis }, 'Starting Phase 2a: Filtering requests by time');
+    // const logger = baseLogger.child({ function: 'filterRequestsByTime' });
+    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis }, 'Starting Phase 2a: Filtering requests by time');
 
     const filteredRequests = new Map<string, RequestLogData>();
     let analysisStartMillis: number | null = null;
@@ -112,7 +112,7 @@ export const filterRequestsByTime = (
         }
     }
 
-    logger.info({ event: 'filter_end', totalRequests: allRequestsData.size, includedRequests: filteredRequests.size, analysisStartMillis, analysisEndMillis }, 'Finished Phase 2a: Filtering requests');
+    // logger.info({ event: 'filter_end', totalRequests: allRequestsData.size, includedRequests: filteredRequests.size, analysisStartMillis, analysisEndMillis }, 'Finished Phase 2a: Filtering requests');
     return { filteredRequests, analysisStartMillis, analysisEndMillis };
 };
 
@@ -123,24 +123,24 @@ export const processLogEntry = (
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
     // logContextBase: object, // Sẽ được tạo bên trong từ logger
-    baseLoggerForEntry: Logger // Logger được truyền vào, có thể là logger của request cụ thể
+    // baseLoggerForEntry: Logger // Logger được truyền vào, có thể là logger của request cụ thể
 ): void => {
     const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
     const entryTimestampISO = !isNaN(entryTimeMillis) ? new Date(entryTimeMillis).toISOString() : new Date().toISOString() + '_INVALID_TIME';
 
     // Tạo logger cụ thể cho log entry này, dựa trên baseLoggerForEntry
     // baseLoggerForEntry thường là logger đã có context của requestId
-    const entrySpecificLogger = baseLoggerForEntry.child({
-        event_being_processed: logEntry.event, // log context cho event đang xử lý
-        entry_timestamp_iso: entryTimestampISO
-    });
-    const logContextForHandler = { // Context để truyền vào handler
-        requestId: logEntry.requestId,
-        event: logEntry.event,
-        time: entryTimestampISO,
-        // Thêm các trường từ logEntry.context vào đây nếu handler cần
-        ...(logEntry.context || {})
-    };
+    // const entrySpecificLogger = baseLoggerForEntry.child({
+    //     event_being_processed: logEntry.event, // log context cho event đang xử lý
+    //     entry_timestamp_iso: entryTimestampISO
+    // });
+    // const logContextForHandler = { // Context để truyền vào handler
+    //     requestId: logEntry.requestId,
+    //     event: logEntry.event,
+    //     time: entryTimestampISO,
+    //     // Thêm các trường từ logEntry.context vào đây nếu handler cần
+    //     ...(logEntry.context || {})
+    // };
 
 
     // Update overall error counts
@@ -148,7 +148,7 @@ export const processLogEntry = (
         if (logEntry.level >= 50) results.errorLogCount++;
         if (logEntry.level >= 60) results.fatalLogCount++;
     } else if (logEntry.level !== undefined) {
-        entrySpecificLogger.trace({ level_value: logEntry.level }, 'Log entry has invalid level type');
+        // entrySpecificLogger.trace({ level_value: logEntry.level }, 'Log entry has invalid level type');
     }
 
     const eventName = logEntry.event as string | undefined; // Tên event từ log entry
@@ -164,16 +164,16 @@ export const processLogEntry = (
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
             results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(acronym!, title!);
-            entrySpecificLogger.trace({ compositeKey }, 'Initialized new conference detail');
+            // entrySpecificLogger.trace({ compositeKey }, 'Initialized new conference detail');
         }
         confDetail = results.conferenceAnalysis[compositeKey];
         if (!isNaN(entryTimeMillis)) {
             conferenceLastTimestamp[compositeKey] = Math.max(entryTimeMillis, conferenceLastTimestamp[compositeKey] ?? 0);
         }
     } else if (acronym && (eventName?.startsWith('task_') || eventName?.includes('conference') || eventName?.includes('gemini') || eventName?.includes('save_') || eventName?.includes('csv_'))) {
-        entrySpecificLogger.warn({ logEvent: eventName, acronym }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
+        // entrySpecificLogger.warn({ logEvent: eventName, acronym }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
     } else if (eventName && !compositeKey && !acronym) {
-        entrySpecificLogger.trace({ logEvent: eventName }, 'Log entry event without acronym or title.');
+        // entrySpecificLogger.trace({ logEvent: eventName }, 'Log entry event without acronym or title.');
     }
 
     // --- Event-Based Analysis Dispatcher ---
@@ -182,13 +182,13 @@ export const processLogEntry = (
         try {
             // Truyền logContextForHandler chứa các trường đã được chuẩn hóa từ logEntry.context
             // Handler sẽ sử dụng logger riêng của nó nếu cần log, hoặc chúng ta có thể truyền entrySpecificLogger
-            handler(logEntry, results, confDetail, entryTimestampISO, logContextForHandler);
+            handler(logEntry, results, confDetail, entryTimestampISO);
         } catch (handlerError: any) {
-            entrySpecificLogger.error({
-                handler_event_name: eventName,
-                err_message: handlerError.message,
-                err_stack: handlerError.stack
-            }, `Error executing handler for event: ${eventName}`);
+            // entrySpecificLogger.error({
+            //     handler_event_name: eventName,
+            //     err_message: handlerError.message,
+            //     err_stack: handlerError.stack
+            // }, `Error executing handler for event: ${eventName}`);
             if (confDetail) {
                 // addConferenceError không nên tự log, chỉ tạo object lỗi
                 addConferenceError(confDetail, entryTimestampISO, handlerError, `Internal error processing event ${eventName}`);
@@ -197,7 +197,7 @@ export const processLogEntry = (
             results.logProcessingErrors.push(`Handler error for event '${eventName}' on requestId '${logEntry.requestId}': ${handlerError.message}`);
         }
     } else if (eventName) {
-        entrySpecificLogger.trace(`No specific handler registered for event: ${eventName}`);
+        // entrySpecificLogger.trace(`No specific handler registered for event: ${eventName}`);
     }
 };
 
@@ -208,10 +208,10 @@ export const calculateFinalMetrics = (
     conferenceLastTimestamp: { [compositeKey: string]: number },
     analysisStartMillis: number | null,
     analysisEndMillis: number | null,
-    baseLogger: Logger
+    // baseLogger: Logger
 ): void => {
-    const logger = baseLogger.child({ function: 'calculateFinalMetrics' });
-    logger.info({ event: 'final_calc_start' }, "Performing final calculations on analyzed data");
+    // const logger = baseLogger.child({ function: 'calculateFinalMetrics' });
+    // logger.info({ event: 'final_calc_start' }, "Performing final calculations on analyzed data");
 
     // --- Calculate Overall Duration ---
     if (analysisStartMillis !== null && analysisEndMillis !== null) {
@@ -283,7 +283,7 @@ export const calculateFinalMetrics = (
             // và không có endTime, thì coi là đang xử lý.
             if (!detail.endTime) {
                 stillProcessingCount++;
-                logger.trace({ event: 'final_calc_task_still_processing', compositeKey: key, status: detail.status }, 'Task considered still actively processing at end of analysis window (no endTime).');
+                // logger.trace({ event: 'final_calc_task_still_processing', compositeKey: key, status: detail.status }, 'Task considered still actively processing at end of analysis window (no endTime).');
             } else {
                 // Có endTime nhưng không phải completed/failed/skipped (ví dụ 'processed_ok')
                 // Có thể coi là một dạng "chưa hoàn tất" nhưng không hẳn là "đang xử lý".
@@ -335,13 +335,13 @@ export const calculateFinalMetrics = (
         });
     }
 
-    logger.info({
-        event: 'final_calc_end',
-        // Các counter này nên phản ánh giá trị đã được cập nhật bởi các handler
-        completed_final: results.overall.completedTasks,
-        failed_final: results.overall.failedOrCrashedTasks,
-        skipped_final: results.overall.skippedTasks,
-        still_processing_final: results.overall.processingTasks,
-        processed_conferences_total: results.overall.processedConferencesCount
-    }, "Finished final calculations.");
+    // logger.info({
+    //     event: 'final_calc_end',
+    //     // Các counter này nên phản ánh giá trị đã được cập nhật bởi các handler
+    //     completed_final: results.overall.completedTasks,
+    //     failed_final: results.overall.failedOrCrashedTasks,
+    //     skipped_final: results.overall.skippedTasks,
+    //     still_processing_final: results.overall.processingTasks,
+    //     processed_conferences_total: results.overall.processedConferencesCount
+    // }, "Finished final calculations.");
 };

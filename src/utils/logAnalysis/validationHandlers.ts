@@ -15,7 +15,7 @@ const ensureValidationStats = (results: any): ValidationStats => {
     return results.validationStats as ValidationStats;
 };
 
-export const handleValidationWarning: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO, logContext) => {
+export const handleValidationWarning: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO) => {
     const stats = ensureValidationStats(results);
     const field = logEntry.context?.field as string | undefined;
     const invalidValue = logEntry.context?.invalidValue;
@@ -50,7 +50,7 @@ export const handleValidationWarning: LogEventHandler = (logEntry, results, conf
     }
 };
 
-export const handleNormalizationApplied: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO, logContext) => {
+export const handleNormalizationApplied: LogEventHandler = (logEntry, results, confDetailFromInput, entryTimestampISO) => {
     const stats = ensureValidationStats(results);
     const field = logEntry.context?.field as string | undefined;
     // const reason = logEntry.context?.reason; // Có thể dùng để phân loại thêm nếu cần

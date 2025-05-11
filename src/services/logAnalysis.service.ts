@@ -2,7 +2,7 @@
 import 'reflect-metadata'; // Import reflect-metadata
 import { singleton, inject } from 'tsyringe'; // Import singleton and inject
 import fs from 'fs';
-import { LogAnalysisResult, ReadLogResult, FilteredData } from '../client/types/logAnalysis.types';
+import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis.types';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service'; // Import LoggingService
 import { Logger } from 'pino'; // Import Logger type
