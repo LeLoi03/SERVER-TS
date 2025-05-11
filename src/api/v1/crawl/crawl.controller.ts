@@ -2,19 +2,20 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { CrawlOrchestratorService } from '../../../services/crawlOrchestrator.service';
-import { ConferenceData, ProcessedRowData } from '../../../types.ts/types'; 
+import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
 import { Logger } from 'pino';
-import { LoggingService } from '../../../services/logging.service'; 
-import { ConfigService } from '../../../config/config.service';   
+import { LoggingService } from '../../../services/logging.service';
+import { ConfigService } from '../../../config/config.service';
 
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
-    
+
     const loggingService = container.resolve(LoggingService) as LoggingService;
     const configService = container.resolve(ConfigService) as ConfigService;
     const crawlOrchestrator = container.resolve(CrawlOrchestratorService) as CrawlOrchestratorService;
 
-    const reqLogger = (req as any).log as Logger || loggingService.getLogger(); 
+    const reqLogger = (req as any).log as Logger || loggingService.getLogger();
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    // routeLogger này sẽ là logger cha cho toàn bộ request
     const routeLogger = reqLogger.child({ requestId, route: '/crawl-conferences' });
 
     routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
@@ -41,7 +42,6 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
             return;
         }
 
-        // --- Kiểm tra conferenceList cuối cùng ---
         if (!conferenceList || !Array.isArray(conferenceList)) {
              routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
              res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
@@ -58,11 +58,10 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
              return;
         }
 
-        // --- Gọi Orchestrator Service ---
         routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, "Calling CrawlOrchestratorService to run the process...");
 
-        // *** Gọi service chính và nhận kết quả ***
-        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(conferenceList);
+        // *** Truyền routeLogger vào service chính ***
+        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(conferenceList, routeLogger); // <--- THAY ĐỔI Ở ĐÂY
 
         const endTime = Date.now();
         const runTimeSeconds = ((endTime - startTime) / 1000).toFixed(2);
@@ -88,8 +87,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     } catch (error: any) {
         const endTime = Date.now();
         const runTime = endTime - startTime;
-        // routeLogger có thể chưa được khởi tạo nếu lỗi xảy ra sớm
-        const errorLogger = routeLogger || loggingService.getLogger({ requestId }); // Fallback logger
+        const errorLogger = routeLogger || loggingService.getLogger({ requestId });
         errorLogger.error({ err: error, stack: error.stack, runtimeMs: runTime, dataSource }, "Conference processing failed within route handler or orchestrator");
 
         if (!res.headersSent) {

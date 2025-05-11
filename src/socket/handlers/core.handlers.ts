@@ -1,12 +1,14 @@
 // src/socket/handlers/core.handlers.ts
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe';
-import { Logger } from 'pino';
-import { LoggingService } from '../../services/logging.service';
+// import { Logger } from 'pino'; // Xóa import Logger
+// import { LoggingService } from '../../services/logging.service'; // Xóa import LoggingService
 import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
 import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper';
 import { handleStreaming, handleNonStreaming } from '../../chatbot/handlers/intentHandler';
 import { stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation } from '../../chatbot/utils/confirmationManager';
+import logToFile from '../../utils/logger';
+
 // --- Import types ---
 import {
     HistoryItem,
@@ -42,17 +44,18 @@ export const registerCoreHandlers = (
     socket: Socket
 ): void => {
     const socketId = socket.id;
+    const userId = socket.data.userId || 'Anonymous'; // Lấy userId sớm để dùng cho log
 
     // --- Resolve Dependencies (Singleton Pattern) ---
     // These services are resolved once per socket connection when handlers are registered.
-    let loggingService: LoggingService;
+    // let loggingService: LoggingService; // Xóa loggingService
     let conversationHistoryService: ConversationHistoryService;
     try {
-        loggingService = container.resolve(LoggingService);
+        // loggingService = container.resolve(LoggingService); // Xóa resolve LoggingService
         conversationHistoryService = container.resolve(ConversationHistoryService);
     } catch (error: any) {
         // Critical error if services cannot be resolved. Log and potentially disconnect/error out.
-        console.error(`[${CORE_HANDLER_NAME}] CRITICAL: Failed to resolve core services for socket ${socketId}: ${error.message}`);
+        logToFile(`[${CORE_HANDLER_NAME}][${socketId}][${userId}] CRITICAL: Failed to resolve core services: ${error.message}, Stack: ${error.stack}`);
         socket.emit('critical_error', { message: "Server configuration error. Please try reconnecting later." });
         socket.disconnect(true); // Disconnect the socket as it cannot function
         return; // Stop registration
@@ -60,34 +63,37 @@ export const registerCoreHandlers = (
 
     // --- Create Logger Context ---
     // Base logger for this specific socket connection's core handlers
-    const logger = loggingService.getLogger({ socketId, handler: CORE_HANDLER_NAME });
+    // const logger = loggingService.getLogger({ socketId, handler: CORE_HANDLER_NAME }); // Xóa logger
 
     // Log initial registration attempt
-    logger.info({ userId: socket.data.userId || 'Anonymous' }, 'Registering core event handlers for connection.');
+    logToFile(`[${CORE_HANDLER_NAME}][${socketId}][${userId}] Registering core event handlers for connection.`);
+
 
     // --- Helper Functions ---
 
     /**
      * Sends a structured error message to the client via 'chat_error' event and logs it.
-     * @param log - The specific Pino logger instance (often a child logger) for context.
+     * @param logContext - Chuỗi context cho log (ví dụ: "[handlerName][socketId][userId]").
      * @param message - The user-facing error message.
      * @param step - A machine-readable code indicating where the error occurred.
      * @param details - Optional additional details for logging.
      */
-    const sendChatError = (log: Logger, message: string, step: string, details?: Record<string, any>): void => {
-        log.error({ step, errorMsg: message, ...details }, 'Chat error occurred');
+    const sendChatError = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
+        const logMessage = `[ERROR] ${logContext} Chat error occurred. Step: ${step}, Message: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        logToFile(logMessage);
         socket.emit('chat_error', { type: 'error', message, step } as ErrorUpdate);
     };
 
     /**
      * Sends a structured warning message to the client via 'chat_warning' event and logs it.
-     * @param log - The specific Pino logger instance.
+     * @param logContext - Chuỗi context cho log.
      * @param message - The user-facing warning message.
      * @param step - A machine-readable code indicating the context of the warning.
      * @param details - Optional additional details for logging.
      */
-    const sendChatWarning = (log: Logger, message: string, step: string, details?: Record<string, any>): void => {
-        log.warn({ step, warningMsg: message, ...details }, 'Chat warning occurred');
+    const sendChatWarning = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
+        const logMessage = `[WARNING] ${logContext} Chat warning occurred. Step: ${step}, Message: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        logToFile(logMessage);
         socket.emit('chat_warning', { type: 'warning', message, step } as WarningUpdate);
     };
 
@@ -95,33 +101,33 @@ export const registerCoreHandlers = (
     /**
      * Fetches the updated conversation list for the user and emits it via 'conversation_list'.
      * Logs success or failure.
-     * @param log - The specific Pino logger instance for context.
+     * @param logContext - Chuỗi context cho log.
      * @param userId - The ID of the user whose list should be updated.
      * @param reason - A brief description of why the list is being updated (for logging).
      */
-    const emitUpdatedConversationList = async (log: Logger, userId: string, reason: string): Promise<void> => {
-        log.debug({ userId, reason }, 'Attempting to fetch and emit updated conversation list.');
+    const emitUpdatedConversationList = async (logContext: string, userId: string, reason: string): Promise<void> => {
+        logToFile(`[DEBUG] ${logContext} Attempting to fetch and emit updated conversation list. Reason: ${reason}`);
         try {
             // Sử dụng ConversationMetadata từ service
             const updatedList: ConversationMetadata[] = await conversationHistoryService.getConversationListForUser(userId);
             // Client có thể cần map lại sang ClientConversationMetadata nếu type khác
             socket.emit('conversation_list', updatedList as ClientConversationMetadata[]);
-            log.info({ userId, reason, count: updatedList.length }, 'Emitted updated conversation list.');
+            logToFile(`[INFO] ${logContext} Emitted updated conversation list. Reason: ${reason}, Count: ${updatedList.length}`);
         } catch (error: any) {
-            log.warn({ userId, reason, error: error.message }, 'Failed to fetch/emit updated conversation list.');
+            logToFile(`[WARNING] ${logContext} Failed to fetch/emit updated conversation list. Reason: ${reason}, Error: ${error.message}`);
         }
     };
 
     /**
      * Centralized authentication check for handlers.
-     * @param log The logger instance for the specific handler.
+     * @param logContext - Chuỗi context cho log.
      * @param eventName The name of the event being handled.
      * @returns The userId if authenticated, otherwise null (and sends error).
      */
-    const ensureAuthenticated = (log: Logger, eventName: string): string | null => {
+    const ensureAuthenticated = (logContext: string, eventName: string): string | null => {
         const currentUserId = socket.data.userId as string | undefined;
         if (!currentUserId) {
-            sendChatError(log, `Authentication required for ${eventName}.`, 'auth_required', { event: eventName });
+            sendChatError(logContext, `Authentication required for ${eventName}.`, 'auth_required', { event: eventName });
             return null;
         }
         return currentUserId;
@@ -132,36 +138,37 @@ export const registerCoreHandlers = (
     // --- Handler: Get Conversation List ---
     socket.on('get_conversation_list', async () => {
         const eventName = 'get_conversation_list';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
-        handlerLogger.info({ userId: currentUserId }, 'Request received.');
+        logToFile(`[INFO] ${handlerLogContext} Request received.`);
         // Service trả về mảng rỗng nếu lỗi, không cần try-catch ở đây trừ khi muốn xử lý đặc biệt
         const conversationList = await conversationHistoryService.getConversationListForUser(currentUserId);
         socket.emit('conversation_list', conversationList as ClientConversationMetadata[]);
-        handlerLogger.info({ userId: currentUserId, count: conversationList.length }, 'Sent conversation list.');
+        logToFile(`[INFO] ${handlerLogContext} Sent conversation list. Count: ${conversationList.length}`);
     });
 
     // --- Handler: Load Specific Conversation ---
     socket.on('load_conversation', async (data: unknown) => {
+        const eventName = 'load_conversation';
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+
         // LOG NÀY PHẢI XUẤT HIỆN NẾU EVENT ĐẾN ĐƯỢC ĐÚNG HANDLER NÀY
         console.log(`[SERVER DEBUG - HANDLER ENTERED] Received 'load_conversation' event. Socket ID: ${socket.id}. Data:`, data);
-        logger.info({ eventRaw: 'load_conversation', dataReceived: data, socketId: socket.id }, "Raw 'load_conversation' event received by specific handler.");
+        logToFile(`[INFO] ${handlerLogContext} Raw 'load_conversation' event received. Data: ${JSON.stringify(data)?.substring(0, 200) + (JSON.stringify(data)?.length > 200 ? '...' : '')}`);
 
-
-        const eventName = 'load_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         // Improved validation
         if (typeof data !== 'object' || data === null || typeof (data as LoadConversationData)?.conversationId !== 'string' || !(data as LoadConversationData).conversationId) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_load');
+            return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_load');
         }
         const requestedConvId = (data as LoadConversationData).conversationId;
+        const convLogContext = `${handlerLogContext}[Conv:${requestedConvId}]`; // Thêm context ID cuộc hội thoại
 
-        handlerLogger.info({ conversationId: requestedConvId, userId: currentUserId }, 'Request received.');
+        logToFile(`[INFO] ${convLogContext} Request received.`);
 
         try {
             // Use constant for limit
@@ -169,55 +176,62 @@ export const registerCoreHandlers = (
 
             if (history === null) {
                 // Handles not found, not authorized, or invalid ID format cases
-                return sendChatError(handlerLogger, 'Conversation not found or access denied.', 'history_not_found_load', { conversationId: requestedConvId });
+                return sendChatError(convLogContext, 'Conversation not found or access denied.', 'history_not_found_load', { conversationId: requestedConvId });
             }
 
             const frontendMessages: ChatMessage[] = mapHistoryToFrontendMessages(history);
             socket.data.currentConversationId = requestedConvId; // Set active conversation on the socket
             socket.emit('initial_history', { conversationId: requestedConvId, messages: frontendMessages });
-            handlerLogger.info({ conversationId: requestedConvId, messageCount: frontendMessages.length }, 'Sent history. Set as active conversation.');
+            logToFile(`[INFO] ${convLogContext} Sent history. Set as active conversation. Message Count: ${frontendMessages.length}`);
 
         } catch (error: any) {
             // Catch errors thrown by getConversationHistory (unexpected DB errors)
-            sendChatError(handlerLogger, `Server error loading conversation history.`, 'history_load_fail_server', { conversationId: requestedConvId, error: error.message });
+            sendChatError(convLogContext, `Server error loading conversation history.`, 'history_load_fail_server', { conversationId: requestedConvId, error: error.message, stack: error.stack });
         }
     });
 
     // --- Handler: Start New Conversation ---
     socket.on('start_new_conversation', async () => {
         const eventName = 'start_new_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
-        handlerLogger.info({ userId: currentUserId }, 'Request received.');
+        logToFile(`[INFO] ${handlerLogContext} Request received.`);
         try {
             const { conversationId } = await conversationHistoryService.createNewConversation(currentUserId);
             socket.data.currentConversationId = conversationId;
-            handlerLogger.info({ conversationId, userId: currentUserId }, `[SERVER DEBUG] Emitting 'new_conversation_started' for convId: ${conversationId}`); // <--- ADD THIS LOG
+            const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`; // Thêm context ID cuộc hội thoại mới
+            logToFile(`[DEBUG] ${convLogContext} Emitting 'new_conversation_started'.`); // <--- ADD THIS LOG
             socket.emit('new_conversation_started', { conversationId });
-            handlerLogger.info({ conversationId, userId: currentUserId }, 'Started new conversation. Set as active.');
+            logToFile(`[INFO] ${convLogContext} Started new conversation. Set as active.`);
             // Update the list on the frontend
-            await emitUpdatedConversationList(handlerLogger, currentUserId, 'new conversation started');
+            await emitUpdatedConversationList(handlerLogContext, currentUserId, 'new conversation started');
 
         } catch (error: any) {
-            sendChatError(handlerLogger, `Could not start new conversation.`, 'new_conv_fail_server', { userId: currentUserId, error: error.message });
+            sendChatError(handlerLogContext, `Could not start new conversation.`, 'new_conv_fail_server', { userId: currentUserId, error: error.message, stack: error.stack });
         }
     });
 
 
     // --- Handler: Send Message ---
-    // --- Handler: Send Message ---
     socket.on('send_message', async (data: unknown) => {
         const eventName = 'send_message';
-        const handlerId = `Msg-${socketId.substring(0, 4)}-${Date.now()}`;
-        const handlerLogger = logger.child({ event: eventName, handlerId });
+        // Tạo ID duy nhất cho mỗi yêu cầu gửi tin nhắn để theo dõi
+        const handlerId = `${socketId.substring(0, 4)}-${Date.now()}`;
+        let handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}][Req:${handlerId}]`;
 
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
+
+        // Cập nhật log context với userId thực tế nếu nó khác 'Anonymous'
+         handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${currentUserId}][Req:${handlerId}]`;
+
+
         const token = socket.data.token as string | undefined;
         if (!token) {
-            return sendChatError(handlerLogger, 'Authentication session error. Please re-login.', 'missing_token_auth', { userId: currentUserId });
+            return sendChatError(handlerLogContext, 'Authentication session error. Please re-login.', 'missing_token_auth', { userId: currentUserId });
         }
 
         // Validate data including conversationId (optional, can be null)
@@ -227,22 +241,19 @@ export const registerCoreHandlers = (
             typeof (data as SendMessageData)?.language !== 'string' || !(data as SendMessageData).language
             // conversationId có thể là null hoặc undefined, nên không cần check chặt ở đây nếu client có thể bỏ qua nó
         ) {
-            return sendChatError(handlerLogger, 'Invalid message data: Missing or invalid "userInput" or "language".', 'invalid_input_send');
+            return sendChatError(handlerLogContext, 'Invalid message data: Missing or invalid "userInput" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
         // Lấy conversationId từ payload trước tiên
         const { userInput, isStreaming = true, language, conversationId: payloadConversationId } = data as SendMessageData;
 
-        handlerLogger.info(
-            {
-                userInputPreview: userInput.substring(0, 30) + (userInput.length > 30 ? '...' : ''),
-                isStreaming,
-                language,
-                userId: currentUserId,
-                payloadConvId: payloadConversationId, // Log ID từ payload
-                socketDataConvId: socket.data.currentConversationId // Log ID hiện tại trong socket.data để so sánh
-            },
-            'Request received.'
+        logToFile(
+            `[INFO] ${handlerLogContext} Request received.` +
+            ` UserInput: "${userInput.substring(0, 30) + (userInput.length > 30 ? '...' : '')}"` +
+            `, Streaming: ${isStreaming}` +
+            `, Language: ${language}` +
+            `, PayloadConvId: ${payloadConversationId || 'N/A'}` +
+            `, SocketDataConvId: ${socket.data.currentConversationId || 'N/A'}`
         );
 
         let targetConversationId: string;
@@ -251,23 +262,29 @@ export const registerCoreHandlers = (
         if (payloadConversationId) {
             // Client cung cấp một ID cụ thể
             targetConversationId = payloadConversationId;
+             // Cập nhật log context với conversationId từ payload
+            handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${currentUserId}][Req:${handlerId}][Conv:${targetConversationId}]`;
+
             // Đồng bộ socket.data.currentConversationId nếu nó khác
             if (socket.data.currentConversationId !== targetConversationId) {
-                handlerLogger.info({ oldSocketConvId: socket.data.currentConversationId, newSocketConvId: targetConversationId }, 'Updating socket.data.currentConversationId to match payloadConversationId.');
+                logToFile(`[INFO] ${handlerLogContext} Updating socket.data.currentConversationId to match payloadConversationId. Old: ${socket.data.currentConversationId || 'N/A'}`);
                 socket.data.currentConversationId = targetConversationId;
             }
-            handlerLogger.info({ targetConversationId }, 'Using conversationId from payload.');
+            logToFile(`[INFO] ${handlerLogContext} Using conversationId from payload.`);
         } else {
             // Client muốn tạo conversation mới (payloadConversationId là null, undefined, hoặc rỗng)
-            handlerLogger.info('payloadConversationId is null/undefined. Client requests new conversation.');
+            logToFile(`[INFO] ${handlerLogContext} payloadConversationId is null/undefined. Client requests new conversation.`);
             try {
                 // Bạn có thể muốn lấy title mặc định hoặc từ một nguồn nào đó nếu cần
                 const newConvResult = await conversationHistoryService.createNewConversation(currentUserId, "Chat mới"); // Truyền title mặc định nếu muốn
                 targetConversationId = newConvResult.conversationId;
-                conversationTitleForNew = newConvResult.title; // Bây giờ newConvResult.title đã tồnぞん
+                conversationTitleForNew = newConvResult.title; // Bây giờ newConvResult.title đã tồn tại
+
+                // Cập nhật log context với conversationId mới
+                 handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${currentUserId}][Req:${handlerId}][Conv:${targetConversationId}]`;
 
                 socket.data.currentConversationId = targetConversationId;
-                handlerLogger.info({ newConvId: targetConversationId, title: conversationTitleForNew }, 'Explicitly created new conversation based on payload and set as active.');
+                logToFile(`[INFO] ${handlerLogContext} Explicitly created new conversation based on payload and set as active. Title: "${conversationTitleForNew}"`);
 
                 socket.emit('new_conversation_started', {
                     conversationId: targetConversationId,
@@ -275,9 +292,9 @@ export const registerCoreHandlers = (
                     lastActivity: newConvResult.lastActivity.toISOString(), // Sử dụng lastActivity từ kết quả
                     isPinned: newConvResult.isPinned, // Sử dụng isPinned từ kết quả
                 });
-                await emitUpdatedConversationList(handlerLogger, currentUserId, 'new conversation from send_message');
+                await emitUpdatedConversationList(handlerLogContext, currentUserId, 'new conversation from send_message');
             } catch (error: any) {
-                return sendChatError(handlerLogger, `Could not start new chat session as requested by client.`, 'explicit_new_conv_payload_fail', { userId: currentUserId, error: error.message });
+                return sendChatError(handlerLogContext, `Could not start new chat session as requested by client.`, 'explicit_new_conv_payload_fail', { userId: currentUserId, error: error.message, stack: error.stack });
             }
         }
 
@@ -285,8 +302,8 @@ export const registerCoreHandlers = (
         // (điều này không nên xảy ra nếu client luôn gửi payloadConversationId hoặc null)
         // thì bạn có thể xem xét một fallback cuối cùng, nhưng lý tưởng là không cần.
         if (!targetConversationId) {
-            handlerLogger.error('CRITICAL: targetConversationId could not be determined. This should not happen with new client logic.');
-            return sendChatError(handlerLogger, 'Internal server error: Could not determine chat session.', 'target_id_undetermined');
+            logToFile(`[ERROR] ${handlerLogContext} CRITICAL: targetConversationId could not be determined. This should not happen with new client logic.`);
+            return sendChatError(handlerLogContext, 'Internal server error: Could not determine chat session.', 'target_id_undetermined');
         }
 
 
@@ -297,18 +314,19 @@ export const registerCoreHandlers = (
         try {
             const fetchedHistory = await conversationHistoryService.getConversationHistory(targetConversationId, currentUserId, DEFAULT_HISTORY_LIMIT);
             if (fetchedHistory === null) {
-                handlerLogger.error({ convId: targetConversationId, userId: currentUserId }, 'Failed to fetch history for target conversation.');
+                logToFile(`[ERROR] ${handlerLogContext} Failed to fetch history for target conversation.`);
                 // Có thể client gửi một ID không tồn tại hoặc không có quyền truy cập
                 // Reset socket.data.currentConversationId nếu nó không hợp lệ nữa
                 if (socket.data.currentConversationId === targetConversationId) {
                     socket.data.currentConversationId = undefined;
+                    logToFile(`[INFO] ${handlerLogContext} Cleared socket.data.currentConversationId as target was invalid.`);
                 }
-                return sendChatError(handlerLogger, 'Chat session error or invalid conversation ID. Please select a valid conversation or start a new one.', 'history_not_found_send');
+                return sendChatError(handlerLogContext, 'Chat session error or invalid conversation ID. Please select a valid conversation or start a new one.', 'history_not_found_send', { convId: targetConversationId });
             }
             currentHistory = fetchedHistory;
-            handlerLogger.info({ convId: targetConversationId, historyCount: currentHistory.length }, 'Fetched current history.');
+            logToFile(`[INFO] ${handlerLogContext} Fetched current history. Count: ${currentHistory.length}`);
         } catch (error: any) {
-            return sendChatError(handlerLogger, `Could not load chat history.`, 'history_fetch_fail_send', { convId: targetConversationId, error: error.message });
+            return sendChatError(handlerLogContext, `Could not load chat history.`, 'history_fetch_fail_send', { convId: targetConversationId, error: error.message, stack: error.stack });
         }
 
         try {
@@ -317,19 +335,21 @@ export const registerCoreHandlers = (
 
             const handleAction = (action: FrontendAction | undefined) => {
                 if (action?.type === 'confirmEmailSend') {
-                    handlerLogger.info({ confirmationId: action.payload.confirmationId }, 'Staging email confirmation action.');
-                    stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, handlerId, io /*, handlerLogger */);
+                    logToFile(`[INFO] ${handlerLogContext} Staging email confirmation action. Confirmation ID: ${action.payload.confirmationId}`);
+                    // Truyền handlerLogContext vào hàm stageEmailConfirmation nếu nó cần logging context
+                    stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, handlerId, io /*, handlerLogContext */);
                 }
             };
 
             if (isStreaming) {
-                handlerLogger.debug({ convId: targetConversationId }, 'Calling streaming intent handler.');
-                // <<< SỬA: Gán kết quả trả về từ handleStreaming >>>
-                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction /*, handlerLogger */);
+                logToFile(`[DEBUG] ${handlerLogContext} Calling streaming intent handler.`);
+                // Truyền handlerLogContext vào hàm handleStreaming nếu nó cần logging context
+                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction /*, handlerLogContext */);
                 // <<< Không cần gán updatedHistory = undefined nữa >>>
             } else {
-                handlerLogger.debug({ convId: targetConversationId }, 'Calling non-streaming intent handler.');
-                const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language as Language, handlerId /*, handlerLogger */);
+                logToFile(`[DEBUG] ${handlerLogContext} Calling non-streaming intent handler.`);
+                 // Truyền handlerLogContext vào hàm handleNonStreaming nếu nó cần logging context
+                const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language as Language, handlerId /*, handlerLogContext */);
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
                     resultAction = handlerResult.action;
@@ -339,63 +359,65 @@ export const registerCoreHandlers = (
 
             // <<< SỬA: Chỉ còn một khối if để lưu history >>>
             if (Array.isArray(updatedHistory)) {
-                handlerLogger.info({ convId: targetConversationId, newHistorySize: updatedHistory.length }, 'Intent handler returned updated history. Attempting save.');
+                logToFile(`[INFO] ${handlerLogContext} Intent handler returned updated history. Attempting save. New size: ${updatedHistory.length}`);
                 try {
                     const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, currentUserId, updatedHistory);
 
                     if (updateSuccess) {
-                        handlerLogger.info({ convId: targetConversationId }, 'Successfully updated history in DB.');
-                        await emitUpdatedConversationList(handlerLogger, currentUserId, 'message saved');
+                        logToFile(`[INFO] ${handlerLogContext} Successfully updated history in DB.`);
+                        await emitUpdatedConversationList(handlerLogContext, currentUserId, 'message saved');
                     } else {
-                        handlerLogger.error({ convId: targetConversationId }, 'History save failed: Target conversation not found or unauthorized during update.');
-                        sendChatWarning(handlerLogger, 'Failed to save message history. Conversation might be out of sync.', 'history_save_fail_target');
+                        logToFile(`[ERROR] ${handlerLogContext} History save failed: Target conversation not found or unauthorized during update.`);
+                        sendChatWarning(handlerLogContext, 'Failed to save message history. Conversation might be out of sync.', 'history_save_fail_target', { convId: targetConversationId });
                     }
                 } catch (dbError: any) {
-                    handlerLogger.error({ convId: targetConversationId, error: dbError.message, stack: dbError.stack }, 'CRITICAL: Error updating history in DB.');
-                    sendChatError(handlerLogger, 'A critical error occurred while saving your message.', 'history_save_exception', { error: dbError.message });
+                    logToFile(`[ERROR] ${handlerLogContext} CRITICAL: Error updating history in DB. Error: ${dbError.message}, Stack: ${dbError.stack}`);
+                    sendChatError(handlerLogContext, 'A critical error occurred while saving your message.', 'history_save_exception', { error: dbError.message });
                 }
             } else {
                 // Log này giờ áp dụng cho streaming trả về void/undefined, hoặc non-streaming không trả về history
-                handlerLogger.info({ convId: targetConversationId, reason: isStreaming ? 'Streaming handler did not return history or returned void' : 'Non-streaming returned no history' }, 'No history array returned by handler for explicit DB update here. DB not updated by this block.');
+                logToFile(`[INFO] ${handlerLogContext} No history array returned by handler for explicit DB update here. DB not updated by this block. Reason: ${isStreaming ? 'Streaming handler (or void)' : 'Non-streaming handler returned no history'}`);
             }
 
         } catch (handlerError: any) {
-            handlerLogger.error({ error: handlerError.message, stack: handlerError.stack }, 'Error processing message via intent handler');
-            sendChatError(handlerLogger, `Error processing message: ${handlerError.message}`, 'handler_exception', { error: handlerError.message });
+            logToFile(`[ERROR] ${handlerLogContext} Error processing message via intent handler. Error: ${handlerError.message}, Stack: ${handlerError.stack}`);
+            sendChatError(handlerLogContext, `Error processing message: ${handlerError.message}`, 'handler_exception', { error: handlerError.message });
         }
     });
 
     // --- Handlers for Email Confirmation ---
     socket.on('user_confirm_email', (data: unknown) => {
         const eventName = 'user_confirm_email';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         if (typeof data === 'object' && data !== null && typeof (data as ConfirmationEventData)?.confirmationId === 'string' && (data as ConfirmationEventData).confirmationId) {
             const { confirmationId } = data as ConfirmationEventData;
-            handlerLogger.info({ confirmationId, userId: currentUserId }, 'Request received.');
-            // TODO: Refactor handleUserEmailConfirmation to accept logger instance
-            handleUserEmailConfirmation(confirmationId, socket /*, handlerLogger */);
+            const confirmationLogContext = `${handlerLogContext}[Confirm:${confirmationId}]`; // Thêm context ID xác nhận
+            logToFile(`[INFO] ${confirmationLogContext} Request received.`);
+            // TODO: Refactor handleUserEmailConfirmation to accept logger instance or logToFile context
+            handleUserEmailConfirmation(confirmationId, socket /*, confirmationLogContext */);
         } else {
-            handlerLogger.warn({ dataReceived: JSON.stringify(data)?.substring(0, 100) }, 'Received invalid event data.');
+             logToFile(`[WARNING] ${handlerLogContext} Received invalid event data for email confirmation. Data: ${JSON.stringify(data)?.substring(0, 100)}`);
             socket.emit('confirmation_result', { confirmationId: 'N/A', status: 'failed', message: 'Invalid confirmation data received.' });
         }
     });
 
     socket.on('user_cancel_email', (data: unknown) => {
         const eventName = 'user_cancel_email';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         if (typeof data === 'object' && data !== null && typeof (data as ConfirmationEventData)?.confirmationId === 'string' && (data as ConfirmationEventData).confirmationId) {
             const { confirmationId } = data as ConfirmationEventData;
-            handlerLogger.info({ confirmationId, userId: currentUserId }, 'Request received.');
-            // TODO: Refactor handleUserEmailCancellation to accept logger instance
-            handleUserEmailCancellation(confirmationId, socket /*, handlerLogger */);
+             const confirmationLogContext = `${handlerLogContext}[Cancel:${confirmationId}]`; // Thêm context ID xác nhận
+            logToFile(`[INFO] ${confirmationLogContext} Request received.`);
+            // TODO: Refactor handleUserEmailCancellation to accept logger instance or logToFile context
+            handleUserEmailCancellation(confirmationId, socket /*, confirmationLogContext */);
         } else {
-            handlerLogger.warn({ dataReceived: JSON.stringify(data)?.substring(0, 100) }, 'Received invalid event data.');
+             logToFile(`[WARNING] ${handlerLogContext} Received invalid event data for email cancellation. Data: ${JSON.stringify(data)?.substring(0, 100)}`);
             socket.emit('confirmation_result', { confirmationId: 'N/A', status: 'failed', message: 'Invalid cancellation data received.' });
         }
     });
@@ -403,78 +425,80 @@ export const registerCoreHandlers = (
     // --- Handler: Delete Conversation ---
     socket.on('delete_conversation', async (data: unknown) => {
         const eventName = 'delete_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         if (typeof data !== 'object' || data === null || typeof (data as DeleteConversationData)?.conversationId !== 'string' || !(data as DeleteConversationData).conversationId) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_delete');
+            return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_delete');
         }
         const conversationIdToDelete = (data as DeleteConversationData).conversationId;
+        const convLogContext = `${handlerLogContext}[Conv:${conversationIdToDelete}]`; // Thêm context ID cuộc hội thoại
 
-        handlerLogger.info({ conversationId: conversationIdToDelete, userId: currentUserId }, 'Request received.');
+        logToFile(`[INFO] ${convLogContext} Request received.`);
         try {
             const success = await conversationHistoryService.deleteConversation(conversationIdToDelete, currentUserId);
             if (success) {
-                handlerLogger.info({ conversationId: conversationIdToDelete }, 'Successfully processed deletion.');
+                logToFile(`[INFO] ${convLogContext} Successfully processed deletion.`);
                 socket.emit('conversation_deleted', { conversationId: conversationIdToDelete });
                 // If the deleted conversation was the currently active one, clear it
                 if (socket.data.currentConversationId === conversationIdToDelete) {
-                    handlerLogger.info({ conversationId: conversationIdToDelete }, 'Deleted conversation was active. Clearing active ID.');
+                     logToFile(`[INFO] ${convLogContext} Deleted conversation was active. Clearing active ID.`);
                     socket.data.currentConversationId = undefined;
                 }
                 // Update the list on the frontend
-                await emitUpdatedConversationList(handlerLogger, currentUserId, `deleted conversation ${conversationIdToDelete}`);
+                await emitUpdatedConversationList(handlerLogContext, currentUserId, `deleted conversation ${conversationIdToDelete}`);
             } else {
                 // Service returned false (not found or not authorized)
-                sendChatError(handlerLogger, 'Could not delete conversation. It might not exist or you may not have permission.', 'delete_fail_permission', { conversationId: conversationIdToDelete });
+                sendChatError(convLogContext, 'Could not delete conversation. It might not exist or you may not have permission.', 'delete_fail_permission', { conversationId: conversationIdToDelete });
             }
         } catch (error: any) {
             // Catch unexpected DB errors during deletion
-            sendChatError(handlerLogger, `Server error deleting conversation.`, 'delete_fail_server', { conversationId: conversationIdToDelete, error: error.message });
+            sendChatError(convLogContext, `Server error deleting conversation.`, 'delete_fail_server', { conversationId: conversationIdToDelete, error: error.message, stack: error.stack });
         }
     });
 
     // --- Handler: Clear Conversation Messages ---
     socket.on('clear_conversation', async (data: unknown) => {
         const eventName = 'clear_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         if (typeof data !== 'object' || data === null || typeof (data as ClearConversationData)?.conversationId !== 'string' || !(data as ClearConversationData).conversationId) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_clear');
+            return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_clear');
         }
         const conversationIdToClear = (data as ClearConversationData).conversationId;
+         const convLogContext = `${handlerLogContext}[Conv:${conversationIdToClear}]`; // Thêm context ID cuộc hội thoại
 
-        handlerLogger.info({ conversationId: conversationIdToClear, userId: currentUserId }, 'Request received.');
+        logToFile(`[INFO] ${convLogContext} Request received.`);
         try {
             const success = await conversationHistoryService.clearConversationMessages(conversationIdToClear, currentUserId);
             if (success) {
-                handlerLogger.info({ conversationId: conversationIdToClear }, 'Successfully processed message clearing.');
+                logToFile(`[INFO] ${convLogContext} Successfully processed message clearing.`);
                 socket.emit('conversation_cleared', { conversationId: conversationIdToClear }); // Inform client
                 // If the cleared conversation is active, send empty history to reset the view
                 if (socket.data.currentConversationId === conversationIdToClear) {
-                    handlerLogger.info({ conversationId: conversationIdToClear }, 'Cleared conversation was active. Emitting empty history.');
+                    logToFile(`[INFO] ${convLogContext} Cleared conversation was active. Emitting empty history.`);
                     socket.emit('initial_history', { conversationId: conversationIdToClear, messages: [] });
                 }
                 // Update the list on the frontend (lastActivity time changes)
-                await emitUpdatedConversationList(handlerLogger, currentUserId, `cleared conversation ${conversationIdToClear}`);
+                await emitUpdatedConversationList(handlerLogContext, currentUserId, `cleared conversation ${conversationIdToClear}`);
             } else {
                 // Service returned false (not found or not authorized)
-                sendChatError(handlerLogger, 'Could not clear conversation messages. It might not exist or you may not have permission.', 'clear_fail_permission', { conversationId: conversationIdToClear });
+                sendChatError(convLogContext, 'Could not clear conversation messages. It might not exist or you may not have permission.', 'clear_fail_permission', { conversationId: conversationIdToClear });
             }
         } catch (error: any) {
             // Catch unexpected DB errors during clear
-            sendChatError(handlerLogger, `Server error clearing conversation messages.`, 'clear_fail_server', { conversationId: conversationIdToClear, error: error.message });
+            sendChatError(convLogContext, `Server error clearing conversation messages.`, 'clear_fail_server', { conversationId: conversationIdToClear, error: error.message, stack: error.stack });
         }
     });
 
     // --- Handler: Rename Conversation ---
     socket.on('rename_conversation', async (data: unknown) => {
         const eventName = 'rename_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         const payload = data as RenameConversationData;
@@ -483,38 +507,41 @@ export const registerCoreHandlers = (
             typeof payload.conversationId !== 'string' || !payload.conversationId ||
             typeof payload.newTitle !== 'string'
         ) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId" or "newTitle".', 'invalid_request_rename');
+            return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId" or "newTitle".', 'invalid_request_rename');
         }
         const { conversationId, newTitle } = payload;
-        handlerLogger.info({ conversationId, newTitlePreview: newTitle.substring(0, 30), userId: currentUserId }, 'Request received.');
+        const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`; // Thêm context ID cuộc hội thoại
+
+        logToFile(`[INFO] ${convLogContext} Request received. New Title Preview: "${newTitle.substring(0, 30) + (newTitle.length > 30 ? '...' : '')}"`);
 
         try {
             // Gọi service method và nhận kết quả chi tiết hơn
             const renameOpResult: RenameResult = await conversationHistoryService.renameConversation(conversationId, currentUserId, newTitle);
 
             if (renameOpResult.success) {
-                handlerLogger.info({ conversationId, updatedTitle: renameOpResult.updatedTitle }, 'Successfully renamed conversation.');
+                logToFile(`[INFO] ${convLogContext} Successfully renamed conversation. Updated Title: "${renameOpResult.updatedTitle}"`);
                 // Sử dụng updatedTitle từ kết quả của service
                 socket.emit('conversation_renamed', {
                     conversationId: renameOpResult.conversationId,
                     newTitle: renameOpResult.updatedTitle // Đây là tiêu đề đã được xử lý bởi service
                 });
-                await emitUpdatedConversationList(handlerLogger, currentUserId, `renamed conv ${conversationId}`);
+                await emitUpdatedConversationList(handlerLogContext, currentUserId, `renamed conv ${conversationId}`);
             } else {
                 // Service đã xử lý lỗi logic (ví dụ: không tìm thấy, title không hợp lệ)
-                sendChatError(handlerLogger, 'Could not rename. Check ID, permissions, or title validity.', 'rename_fail_logic', { conversationId });
+                 logToFile(`[ERROR] ${convLogContext} Rename failed based on service logic. Check ID, permissions, or title validity.`);
+                sendChatError(convLogContext, 'Could not rename. Check ID, permissions, or title validity.', 'rename_fail_logic', { conversationId });
             }
         } catch (error: any) {
             // Lỗi không mong muốn từ service (ví dụ: lỗi DB)
-            sendChatError(handlerLogger, 'Server error renaming conversation.', 'rename_fail_server', { conversationId, error: error.message });
+            sendChatError(convLogContext, 'Server error renaming conversation.', 'rename_fail_server', { conversationId, error: error.message, stack: error.stack });
         }
     });
 
     // --- Handler: Pin Conversation ---
     socket.on('pin_conversation', async (data: unknown) => {
         const eventName = 'pin_conversation';
-        const handlerLogger = logger.child({ event: eventName });
-        const currentUserId = ensureAuthenticated(handlerLogger, eventName);
+        const handlerLogContext = `[${CORE_HANDLER_NAME}][${socketId}][${userId}]`;
+        const currentUserId = ensureAuthenticated(handlerLogContext, eventName);
         if (!currentUserId) return;
 
         const payload = data as PinConversationData;
@@ -523,25 +550,28 @@ export const registerCoreHandlers = (
             typeof payload.conversationId !== 'string' || !payload.conversationId ||
             typeof payload.isPinned !== 'boolean'
         ) {
-            return sendChatError(handlerLogger, 'Invalid request: Missing or invalid "conversationId" or "isPinned" status.', 'invalid_request_pin');
+            return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId" or "isPinned" status.', 'invalid_request_pin');
         }
         const { conversationId, isPinned } = payload;
-        handlerLogger.info({ conversationId, isPinned, userId: currentUserId }, 'Request received.');
+        const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`; // Thêm context ID cuộc hội thoại
+
+        logToFile(`[INFO] ${convLogContext} Request received. IsPinned: ${isPinned}`);
 
         try {
             const success = await conversationHistoryService.pinConversation(conversationId, currentUserId, isPinned);
             if (success) {
-                handlerLogger.info({ conversationId, isPinned }, 'Successfully updated pin status.');
+                logToFile(`[INFO] ${convLogContext} Successfully updated pin status. IsPinned: ${isPinned}`);
                 socket.emit('conversation_pin_status_changed', { conversationId, isPinned });
-                await emitUpdatedConversationList(handlerLogger, currentUserId, `pinned/unpinned conv ${conversationId}`);
+                await emitUpdatedConversationList(handlerLogContext, currentUserId, `pinned/unpinned conv ${conversationId}`);
             } else {
-                sendChatError(handlerLogger, 'Could not update pin status. Check ID or permissions.', 'pin_fail', { conversationId });
+                 logToFile(`[ERROR] ${convLogContext} Pin status update failed. Check ID or permissions.`);
+                sendChatError(convLogContext, 'Could not update pin status. Check ID or permissions.', 'pin_fail', { conversationId });
             }
         } catch (error: any) {
-            sendChatError(handlerLogger, 'Server error updating pin status.', 'pin_fail_server', { conversationId, error: error.message });
+            sendChatError(convLogContext, 'Server error updating pin status.', 'pin_fail_server', { conversationId, error: error.message, stack: error.stack });
         }
     });
 
     // Log successful registration
-    logger.info('Core event handlers successfully registered.');
+    logToFile(`[INFO] Core event handlers successfully registered.`);
 };

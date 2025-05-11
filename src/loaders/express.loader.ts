@@ -4,19 +4,22 @@ import cors from 'cors';
 import { container } from 'tsyringe';
 import { Logger } from 'pino'; // Import Logger type
 import { ConfigService } from '../config/config.service';
-import { LoggingService } from '../services/logging.service'; // <<< Import LoggingService
 import { requestLoggerMiddleware } from '../socket/middleware/logging.middleware'; // Assuming this uses LoggingService internally or gets logger passed
 // import logToFile from '../utils/logger'; // <<< XÓA
 import apiRouter from '../api';
 import { errorHandlerMiddleware, notFoundHandler } from '../socket/middleware/errorHandler.middleware'; // Assuming these use LoggingService internally or get logger passed
+import logToFile from '../utils/logger';
 
 export const loadExpress = (): Express => {
     // <<< Resolve services cần thiết
-    const loggingService = container.resolve(LoggingService);
+    // LoggingService không cần resolve nữa
     const configService = container.resolve(ConfigService);
-    const logger: Logger = loggingService.getLogger({ loader: 'Express' }); // <<< Tạo child logger
+    // const logger: Logger = loggingService.getLogger({ loader: 'Express' }); // Xóa logger
 
-    logger.info('Configuring Express app...'); // <<< Dùng logger
+    const logContext = `[ExpressLoader]`; // Chuỗi context cho log
+
+    // <<< Use logToFile
+    logToFile(`${logContext} Configuring Express app...`);
 
     const app = express();
 
@@ -32,9 +35,10 @@ export const loadExpress = (): Express => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.text({ type: ['text/plain', 'text/csv'] }));
-    // Pass logger to middleware if it needs it, otherwise assume it resolves LoggingService itself
-    app.use(requestLoggerMiddleware); // Example: Assuming it resolves LoggingService
-    logger.info('Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).'); // <<< Dùng logger
+    // Middleware ghi log request đã được điều chỉnh để dùng logToFile
+    app.use(requestLoggerMiddleware);
+    // <<< Use logToFile
+    logToFile(`${logContext} Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).`);
 
     // --- Basic Root Route ---
     app.get('/', (req: Request, res: Response) => {
@@ -43,18 +47,22 @@ export const loadExpress = (): Express => {
 
     // API Routes
     app.use('/api', apiRouter()); // apiRouter tự resolve dependencies
-    logger.info('Mounted API routes at /api.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Mounted API routes at /api.`);
 
     // --- Not Found Handler ---
-    // Assume notFoundHandler uses LoggingService internally or gets logger passed
+    // notFoundHandler đã được điều chỉnh để chuyển lỗi đến errorHandlerMiddleware
     app.use(notFoundHandler);
-    logger.info('Registered Not Found handler.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Registered Not Found handler.`);
 
     // --- Global Error Handler ---
-    // Assume errorHandlerMiddleware uses LoggingService internally or gets logger passed
+    // errorHandlerMiddleware đã được điều chỉnh để dùng logToFile
     app.use(errorHandlerMiddleware);
-    logger.info('Registered Global Error handler.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Registered Global Error handler.`);
 
-    logger.info('Express app configured successfully.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Express app configured successfully.`);
     return app;
 };

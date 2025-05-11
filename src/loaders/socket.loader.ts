@@ -1,25 +1,28 @@
 // src/loaders/socket.loader.ts
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
-import { container } from 'tsyringe';
-import { Logger } from 'pino';
+import { container } from 'tsyringe'; // Giữ container cho getIO fallback
+// import { Logger } from 'pino'; // Xóa import Logger
 import { ConfigService } from '../config/config.service';
-import { LoggingService } from '../services/logging.service'; // <<< Import LoggingService
-import { socketAuthMiddleware } from '../socket/middleware/auth.middleware'; // Assume this uses LoggingService or gets logger passed
-import { handleConnection } from '../socket/handlers/connection.handlers';
-// import logToFile from '../utils/logger'; // <<< XÓA
+// import { LoggingService } from '../services/logging.service'; // Xóa import LoggingService
+import { handleConnection } from '../socket/handlers/connection.handlers'; // Giữ nguyên import
+import { socketAuthMiddleware } from '../socket/middleware/auth.middleware';
+import logToFile from '../utils/logger';
 
 let ioInstance: SocketIOServer | null = null;
 
 export const initSocketIO = (
     httpServer: HttpServer
 ): SocketIOServer => {
-    // <<< Resolve services
-    const loggingService = container.resolve(LoggingService);
+    // <<< Resolve services (Chỉ ConfigService còn cần)
+    // LoggingService không cần resolve nữa
     const configService = container.resolve(ConfigService);
-    const logger: Logger = loggingService.getLogger({ loader: 'SocketIO' }); // <<< Tạo child logger
+    // const logger: Logger = loggingService.getLogger({ loader: 'SocketIO' }); // Xóa logger
 
-    logger.info('Initializing Socket.IO server...'); // <<< Dùng logger
+    const logContext = `[SocketIOLoader]`; // Chuỗi context cho log
+
+    // <<< Use logToFile
+    logToFile(`${logContext} Initializing Socket.IO server...`);
 
     const io = new SocketIOServer(httpServer, {
         cors: {
@@ -28,36 +31,35 @@ export const initSocketIO = (
             credentials: true
         },
         // ... other configs ...
+        // Bạn có thể thêm `pingTimeout`, `pingInterval`, etc. ở đây nếu cần
     });
 
     // --- Middleware ---
-    // Assume middleware resolves LoggingService internally or gets logger passed
+    // socketAuthMiddleware đã được điều chỉnh để dùng logToFile bên trong
     io.use(socketAuthMiddleware);
-    logger.info('Socket.IO authentication middleware applied.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Socket.IO authentication middleware applied.`);
 
     // --- Connection Handler ---
+    // handleConnection đã được điều chỉnh để dùng logToFile bên trong
     io.on('connection', (socket: Socket) => {
-        // handleConnection tự resolve dependencies và logger bên trong nó
-        handleConnection(io, socket);
+        handleConnection(io, socket); // Truyền io và socket
     });
-    logger.info('Socket.IO connection handler registered.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Socket.IO connection handler registered.`);
 
     ioInstance = io;
-    logger.info('Socket.IO server initialized successfully.'); // <<< Dùng logger
+    // <<< Use logToFile
+    logToFile(`${logContext} Socket.IO server initialized successfully.`);
     return io;
 };
 
 export const getIO = (): SocketIOServer => {
     if (!ioInstance) {
         const errorMsg = "FATAL: Attempted to get IO instance before initialization. Call initSocketIO first.";
-        try {
-            // Cố gắng resolve logger để ghi lỗi, nếu không được thì dùng console
-            const loggingService = container.resolve(LoggingService);
-            const logger = loggingService.getLogger({ function: 'getIO' });
-            logger.fatal(errorMsg); // <<< Dùng logger nếu resolve thành công
-        } catch (resolveError) {
-            console.error(`[getIO - Pre-Log Init] ${errorMsg}`); // Fallback to console if logger fails
-        }
+        // Thay vì cố gắng resolve logger, chỉ dùng logToFile và console.error fallback
+        logToFile(`[FATAL ERROR][getIO] ${errorMsg}`);
+        console.error(`[getIO - Pre-Log Init] ${errorMsg}`); // Fallback to console if logToFile somehow fails
         throw new Error(errorMsg); // Ném lỗi như cũ
     }
     return ioInstance;

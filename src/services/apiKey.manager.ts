@@ -1,9 +1,9 @@
-// src/services/apiKey.manager.ts (hoặc giữ tên cũ)
+// src/services/apiKey.manager.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
-import { Logger } from 'pino'; // Import Logger từ pino
+import { Logger } from 'pino';
 
 interface ApiKeyInfo {
     key: string;
@@ -15,24 +15,24 @@ interface ApiKeyInfo {
 @singleton()
 export class ApiKeyManager {
     private keys: ApiKeyInfo[];
-    private currentKeyIndex: number = -1; // Bắt đầu từ -1 để lần đầu tiên getNextKey() chọn key 0
+    private currentKeyIndex: number = -1;
     private totalRequests: number = 0;
     private readonly maxUsagePerKey: number;
     private readonly rotationDelay: number;
-    private readonly logger: Logger;
+    private readonly serviceBaseLogger: Logger; // Logger cơ sở của service
 
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService
     ) {
-        this.logger = this.loggingService.getLogger({ service: 'ApiKeyManager' });
+        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'ApiKeyManagerBase' });
 
         const apiKeys = this.configService.config.GOOGLE_CUSTOM_SEARCH_API_KEYS;
         this.maxUsagePerKey = this.configService.config.MAX_USAGE_PER_KEY;
         this.rotationDelay = this.configService.config.KEY_ROTATION_DELAY_MS;
 
         if (!apiKeys || apiKeys.length === 0) {
-            this.logger.error('No Google Search API keys found in configuration.');
+            this.serviceBaseLogger.error('No Google Search API keys found in configuration.');
             throw new Error('Google Search API keys are required.');
         }
 
@@ -42,85 +42,115 @@ export class ApiKeyManager {
             lastUsed: 0,
             isExhausted: false,
         }));
-        this.logger.info(`Initialized with ${this.keys.length} API keys. Max usage/key: ${this.maxUsagePerKey}, Rotation delay: ${this.rotationDelay}ms`);
+        this.serviceBaseLogger.info(`Initialized with ${this.keys.length} API keys. Max usage/key: ${this.maxUsagePerKey}, Rotation delay: ${this.rotationDelay}ms`);
     }
 
-    public async getNextKey(): Promise<string | null> {
+    // Helper để tạo logger cho phương thức với context từ parentLogger
+    private getMethodLogger(parentLogger: Logger | undefined, methodName: string, additionalContext?: object): Logger {
+        const base = parentLogger || this.serviceBaseLogger;
+        // Thêm context của serviceMethod vào, giữ lại context từ parentLogger (nếu có)
+        return base.child({ serviceMethod: `ApiKeyManager.${methodName}`, ...additionalContext });
+    }
+
+
+    // Phương thức getNextKey giờ đây chấp nhận parentLogger
+    public async getNextKey(parentLogger?: Logger): Promise<string | null> {
+        // Tạo logger cho lần gọi này, thừa hưởng context từ parentLogger
+        const logger = this.getMethodLogger(parentLogger, 'getNextKey');
+
         const startIndex = (this.currentKeyIndex + 1) % this.keys.length;
-        let triedIndices = 0;
 
         for (let i = 0; i < this.keys.length; i++) {
             const keyIndex = (startIndex + i) % this.keys.length;
             const keyInfo = this.keys[keyIndex];
+            const keyContext = { keyIndex, currentUsage: keyInfo.usageCount, isExhaustedFlag: keyInfo.isExhausted };
 
             if (keyInfo.isExhausted) {
-                this.logger.debug({ keyIndex }, `Key ${keyIndex} is marked exhausted, skipping.`);
+                logger.debug(keyContext, `Key is marked exhausted, skipping.`);
                 continue;
             }
 
-            // Check usage count
             if (keyInfo.usageCount >= this.maxUsagePerKey) {
-                this.logger.warn({ keyIndex, usage: keyInfo.usageCount }, `Key ${keyIndex} reached usage limit (${this.maxUsagePerKey}). Marking as exhausted.`);
+                logger.warn({ ...keyContext, maxUsage: this.maxUsagePerKey }, `Key reached usage limit. Marking as exhausted.`);
                 keyInfo.isExhausted = true;
                 continue;
             }
 
-            // Check rotation delay (optional, nhưng giữ lại từ code gốc)
             const now = Date.now();
             const timeSinceLastUse = now - keyInfo.lastUsed;
             if (this.currentKeyIndex !== -1 && keyIndex === this.currentKeyIndex && timeSinceLastUse < this.rotationDelay) {
                 const waitTime = this.rotationDelay - timeSinceLastUse;
-                this.logger.debug({ keyIndex, waitTimeMs: waitTime }, `Waiting for rotation delay on key ${keyIndex}...`);
+                logger.debug({ ...keyContext, waitTimeMs: waitTime }, `Waiting for rotation delay on key...`);
                 await new Promise(resolve => setTimeout(resolve, waitTime));
             }
 
-            // Key hợp lệ
             this.currentKeyIndex = keyIndex;
             keyInfo.usageCount++;
             keyInfo.lastUsed = Date.now();
             this.totalRequests++;
-            this.logger.debug({ keyIndex, usage: keyInfo.usageCount, totalRequests: this.totalRequests }, `Providing API key ${keyIndex}`);
+            logger.info({ // Dùng info khi key được cung cấp thành công
+                 keyIndexProvided: keyIndex,
+                 newUsageCount: keyInfo.usageCount,
+                 totalRequestsAcrossAllKeys: this.totalRequests
+            }, `Providing API key`);
             return keyInfo.key;
         }
 
-        // Nếu chạy hết vòng lặp mà không tìm thấy key hợp lệ
-        this.logger.error("All API keys are exhausted or unusable.");
+        logger.error("All API keys are exhausted or unusable after checking all available keys.");
         return null;
     }
 
-    // Hàm này được gọi khi Google trả về lỗi quota/rate limit
-    public async forceRotate(): Promise<boolean> {
+    // forceRotate cũng chấp nhận parentLogger
+    public async forceRotate(parentLogger?: Logger): Promise<boolean> {
+        const logger = this.getMethodLogger(parentLogger, 'forceRotate');
+
         if (this.currentKeyIndex === -1) {
-             this.logger.warn("forceRotate called but no key was previously selected.");
-             return false; // Không có key nào để đánh dấu
+             logger.warn("forceRotate called but no key was previously selected. Cannot mark key as exhausted.");
+             // Vẫn thử lấy key tiếp theo vì có thể là lần đầu tiên hoặc không có key nào đang active
+        } else {
+            const currentKeyInfo = this.keys[this.currentKeyIndex];
+            if (!currentKeyInfo.isExhausted) {
+                logger.warn({ keyIndex: this.currentKeyIndex, currentUsage: currentKeyInfo.usageCount }, `Forcing key to exhausted due to external error (e.g., quota).`);
+                currentKeyInfo.isExhausted = true;
+            } else {
+                logger.debug({ keyIndex: this.currentKeyIndex }, `Key was already marked exhausted. Proceeding to find next key.`);
+            }
         }
 
-        const currentKey = this.keys[this.currentKeyIndex];
-        if (!currentKey.isExhausted) {
-            this.logger.warn({ keyIndex: this.currentKeyIndex }, `Forcing key ${this.currentKeyIndex} to exhausted due to external error (e.g., quota).`);
-            currentKey.isExhausted = true;
+        // Gọi getNextKey với logger hiện tại để nó có cùng context
+        const nextKey = await this.getNextKey(logger);
+        if (nextKey) {
+            logger.info(`Successfully rotated to a new key after forceRotate.`);
+        } else {
+            logger.error(`Failed to rotate to a new key after forceRotate (all keys likely exhausted).`);
         }
-
-        // Thử tìm key *khác* ngay lập tức
-        const nextKey = await this.getNextKey(); // getNextKey sẽ tự động bỏ qua key vừa đánh dấu
-        return nextKey !== null; // Trả về true nếu tìm được key mới, false nếu hết key
+        return nextKey !== null;
     }
 
-
-    public areAllKeysExhausted(): boolean {
+    // areAllKeysExhausted có thể chấp nhận logger nếu cần log chi tiết hơn, nhưng thường không cần
+    public areAllKeysExhausted(parentLogger?: Logger): boolean {
+        const logger = this.getMethodLogger(parentLogger, 'areAllKeysExhausted_check');
         const allExhausted = this.keys.every(k => k.isExhausted || k.usageCount >= this.maxUsagePerKey);
         if (allExhausted) {
-             this.logger.warn("All API keys are now considered exhausted.");
+             // Log này có thể hơi thừa nếu getNextKey đã log "All API keys are exhausted"
+             // Tuy nhiên, nó xác nhận trạng thái tại thời điểm gọi
+             logger.warn("Check confirmed: All API keys are currently considered exhausted.");
+        } else {
+            logger.trace("Check: Not all keys are exhausted.");
         }
         return allExhausted;
     }
 
+    // Các hàm getter thường không cần logger, trừ khi bạn muốn log mỗi lần chúng được gọi
     public getCurrentKeyIndex(): number {
         return this.currentKeyIndex;
     }
 
-    public getCurrentKeyUsage(): number {
-         return this.currentKeyIndex !== -1 ? this.keys[this.currentKeyIndex].usageCount : 0;
+    public getCurrentKeyUsage(parentLogger?: Logger): number {
+        // Nếu muốn log mỗi lần gọi, có thể thêm:
+        // const logger = this.getMethodLogger(parentLogger, 'getCurrentKeyUsage');
+        // logger.trace({ currentIndex: this.currentKeyIndex }, "Getting current key usage.");
+        return this.currentKeyIndex !== -1 ? this.keys[this.currentKeyIndex].usageCount : 0;
     }
 
     public getTotalRequests(): number {

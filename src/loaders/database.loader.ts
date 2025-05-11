@@ -1,23 +1,29 @@
 // src/loaders/database.loader.ts
 import { container } from 'tsyringe';
-import { Logger } from 'pino';
-import { LoggingService } from '../services/logging.service'; // <<< Import LoggingService
-import { connectDB as connectMongo } from '../config/database'; // Đổi tên để tránh trùng lặp
-// import logToFile from '../utils/logger'; // <<< XÓA
+// import { Logger } from 'pino'; // Xóa import Logger
+// import { LoggingService } from '../services/logging.service'; // Xóa import LoggingService
+import { connectDB as connectMongo } from '../config/database'; // Giữ nguyên import và đổi tên
+import logToFile from '../utils/logger';
 
 export const connectDB = async (): Promise<void> => {
-    // <<< Resolve LoggingService
-    const loggingService = container.resolve(LoggingService);
-    const logger: Logger = loggingService.getLogger({ loader: 'Database' }); // <<< Tạo child logger
+    // --- No Need to Resolve Services or Create Pino Logger ---
+    // const loggingService = container.resolve(LoggingService); // Xóa resolve
+    // const logger: Logger = loggingService.getLogger({ loader: 'Database' }); // Xóa logger
 
-    logger.info('Attempting database connection...'); // <<< Dùng logger
+    const logContext = `[DatabaseLoader]`; // Chuỗi context cho log
+
+    // <<< Use logToFile
+    logToFile(`${logContext} Attempting database connection...`);
+
     try {
         await connectMongo(); // Gọi hàm kết nối từ config/database.ts
 
-        logger.info('Database connection successful.'); // <<< Dùng logger
-    } catch (error) {
+        // <<< Use logToFile
+        logToFile(`${logContext} Database connection successful.`);
+    } catch (error: any) { // Chỉ định loại lỗi là any
         const errorMessage = error instanceof Error ? error.message : String(error);
-        logger.error({ error: errorMessage, stack: error instanceof Error ? error.stack : undefined }, 'Database connection failed.'); // <<< Dùng logger
+        // <<< Use logToFile
+        logToFile(`[ERROR] ${logContext} Database connection failed. Error: "${errorMessage}", Stack: ${error.stack}`);
         // Ném lại lỗi để initLoaders có thể bắt và dừng khởi động server
         throw error;
     }

@@ -1,5 +1,6 @@
 // server.ts
 import 'reflect-metadata'; // MUST be first
+import './container';
 import { container } from 'tsyringe';
 import { initLoaders } from './loaders';
 import { LoggingService } from './services/logging.service';

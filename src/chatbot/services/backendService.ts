@@ -103,7 +103,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         try {
             // rawResponseText ở đây chắc chắn là string vì response.ok
             parsedData = JSON.parse(rawResponseText);
-            logToFile(`${logContext} Parsed successful. Raw data: \n${rawResponseText}`);
+            logToFile(`${logContext} Parsed successful. Raw data: \n${rawResponseText.substring(0, 250)}...`);
 
         } catch (parseError: any) {
             const errorMsg = parseError instanceof Error ? parseError.message : String(parseError);
@@ -128,7 +128,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
                 // Call the transformer with the *parsed* data and required queryString
                 formattedData = transformer(parsedData, queryString);
                 if (formattedData !== null) {
-                    logToFile(`${logContext} Transformation successful. Transformed data: \n${formattedData}`);
+                    logToFile(`${logContext} Transformation successful. Transformed data: \n${formattedData.substring(0, 250)}...`);
                 } else {
                     logToFile(`${logContext} Transformation function returned null (potentially expected).`);
                 }

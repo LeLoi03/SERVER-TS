@@ -1,11 +1,11 @@
-// src/api/v1/crawl/crawl.routes.ts
-import { Router } from 'express';
-import { handleCrawlJournals } from './crawl.controller';
+// // src/api/v1/crawl/crawl.routes.ts
+// import { Router } from 'express';
+// import { handleCrawlJournals } from './crawl.controller';
 
-const router = Router();
+// const router = Router();
 
-// Định nghĩa routes cho crawl
-// router.post('/crawl-conferences', handleCrawlConferences);
-router.post('/crawl-journals', handleCrawlJournals);
+// // Định nghĩa routes cho crawl
+// // router.post('/crawl-conferences', handleCrawlConferences);
+// router.post('/crawl-journals', handleCrawlJournals);
 
-export default router;
+// export default router;

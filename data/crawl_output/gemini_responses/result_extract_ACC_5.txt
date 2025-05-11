@@ -1,0 +1,22 @@
+{
+  "conferenceDates": "November 1 - 3, 2025",
+  "year": "2025",
+  "submissionDate": {
+    "Submission Deadline (1st CFP)": "May 23, 2025"
+  },
+  "notificationDate": {
+    "Notification to Authors (1st CFP)": "June 23, 2025"
+  },
+  "cameraReadyDate": {
+    "Final Camera-Ready Submission and Early Registration (1st CFP)": "July 18, 2025"
+  },
+  "registrationDate": {
+    "Late Registration (1st CFP)": "After July 18, 2025"
+  },
+  "topics": "Applied Computing",
+  "language": "English",
+  "contactInfo": {
+    "email": "secretariat@computing-conf.org",
+    "phone": "+351 969 833 989"
+  }
+}

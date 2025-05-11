@@ -10,75 +10,109 @@ import { Logger } from 'pino';
 export class PlaywrightService {
     private browser: Browser | null = null;
     private browserContext: BrowserContext | null = null;
-    private readonly logger: Logger;
+    private readonly serviceBaseLogger: Logger; // Logger cơ sở của service
     private isInitialized = false;
-    private isInitializing = false;
+    private isInitializing = false; // Cờ để xử lý các cuộc gọi đồng thời đến initialize
 
     constructor(@inject(LoggingService) private loggingService: LoggingService) {
-        this.logger = this.loggingService.getLogger({ service: 'PlaywrightService' });
+        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'PlaywrightServiceBase' });
+        this.serviceBaseLogger.info("PlaywrightService initialized (constructor).");
+    }
+
+    // Helper để tạo logger cho phương thức với context từ parentLogger
+    private getMethodLogger(parentLogger: Logger | undefined, methodName: string): Logger {
+        const base = parentLogger || this.serviceBaseLogger;
+        return base.child({ serviceMethod: `PlaywrightService.${methodName}` });
     }
 
     // Khởi tạo trình duyệt và context (chỉ chạy 1 lần)
-    async initialize(): Promise<void> {
-        if (this.isInitialized || this.isInitializing) {
-            this.logger.debug("Playwright already initialized or initializing.");
-            // Optional: Wait if another process is initializing
-            while (this.isInitializing) {
-               await new Promise(resolve => setTimeout(resolve, 100));
-            }
+    async initialize(parentLogger?: Logger): Promise<void> {
+        const logger = this.getMethodLogger(parentLogger, 'initialize');
+
+        if (this.isInitialized) {
+            logger.debug("Playwright already initialized. Skipping.");
             return;
         }
+
+        if (this.isInitializing) {
+            logger.debug("Playwright is already initializing. Waiting for completion...");
+            while (this.isInitializing) {
+                await new Promise(resolve => setTimeout(resolve, 100)); // Chờ cho tiến trình khác hoàn thành
+            }
+            if (this.isInitialized) {
+                 logger.debug("Playwright initialization completed by another call.");
+                 return;
+            }
+            // Nếu sau khi chờ mà vẫn chưa init (có thể do lỗi ở lần init kia) -> thử init lại
+            logger.warn("Initialization by another call did not complete. Proceeding with current call.");
+        }
+
         this.isInitializing = true;
-        this.logger.info("Initializing Playwright browser...");
+        logger.info("Initializing Playwright browser...");
         try {
             const { browser, browserContext } = await setupPlaywright(); // Gọi hàm gốc
             this.browser = browser;
             this.browserContext = browserContext;
             this.isInitialized = true;
-            this.logger.info("Playwright browser initialized successfully.");
+            logger.info("Playwright browser initialized successfully.");
         } catch (error) {
-            this.logger.fatal({ err: error }, "Failed to initialize Playwright browser.");
-            throw error; // Ném lỗi để dừng quá trình nếu cần
+            logger.fatal({ err: error }, "Failed to initialize Playwright browser.");
+            // Sau khi lỗi, isInitialized vẫn là false, isInitializing sẽ được set false ở finally
+            throw error;
         } finally {
-             this.isInitializing = false;
+            this.isInitializing = false;
         }
     }
 
     // Lấy browser context (phải gọi initialize trước)
-    getBrowserContext(): BrowserContext {
+    getBrowserContext(parentLogger?: Logger): BrowserContext {
+        // Nếu có parentLogger, dùng nó để log lỗi, nếu không dùng serviceBaseLogger
+        const logger = this.getMethodLogger(parentLogger, 'getBrowserContext');
+
         if (!this.isInitialized || !this.browserContext) {
-            const errorMsg = "Playwright browser context requested before initialization or initialization failed.";
-            this.logger.error(errorMsg);
+            const errorMsg = "Playwright browser context requested before successful initialization or initialization failed.";
+            logger.error(errorMsg); // Log với context của request (nếu có)
             throw new Error(errorMsg);
         }
         return this.browserContext;
     }
 
     // Đóng trình duyệt
-    async close(): Promise<void> {
-        if (this.isInitializing){
-            this.logger.warn("Attempting to close Playwright while it is still initializing.");
-            // Wait for initialization to finish before closing
-             while (this.isInitializing) {
-               await new Promise(resolve => setTimeout(resolve, 100));
-             }
+    async close(parentLogger?: Logger): Promise<void> {
+        const logger = this.getMethodLogger(parentLogger, 'close');
+
+        if (this.isInitializing) {
+            logger.warn("Attempting to close Playwright while it is still initializing. Waiting for initialization to finish...");
+            while (this.isInitializing) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+            // Sau khi chờ, kiểm tra lại trạng thái
+            if (!this.isInitialized) {
+                logger.warn("Playwright initialization did not complete. Nothing to close regarding browser instance.");
+                this.browser = null; // Đảm bảo các biến được reset
+                this.browserContext = null;
+                this.isInitialized = false; // Đảm bảo trạng thái đúng
+                return;
+            }
         }
 
         if (this.isInitialized && this.browser) {
-            this.logger.info("Closing Playwright browser...");
+            logger.info("Closing Playwright browser...");
             try {
                 await this.browser.close();
-                this.logger.info("Playwright browser closed successfully.");
+                logger.info("Playwright browser closed successfully.");
             } catch (error) {
-                this.logger.error({ err: error }, "Error closing Playwright browser.");
-                // Decide if you need to throw here
+                logger.error({ err: error }, "Error closing Playwright browser.");
+                // Không ném lỗi ở đây thường là tốt, nhưng tùy vào yêu cầu
             } finally {
                 this.browser = null;
                 this.browserContext = null;
-                this.isInitialized = false;
+                this.isInitialized = false; // Reset trạng thái
             }
         } else {
-             this.logger.info("Playwright browser was not initialized or already closed.");
+            if (!this.isInitialized && !this.isInitializing) { // Chỉ log nếu không phải đang init hoặc đã init
+                 logger.info("Playwright browser was not initialized or already closed. No action taken.");
+            }
         }
     }
 }

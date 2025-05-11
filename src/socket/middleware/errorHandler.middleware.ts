@@ -1,7 +1,9 @@
+// src/middleware/errorHandler.middleware.ts
 import { Request, Response, NextFunction } from 'express';
-import { container } from 'tsyringe'; // <<< Import container
-import { Logger } from 'pino'; // <<< Import Logger type
-import { LoggingService } from '../../services/logging.service'; // <<< Import LoggingService (Adjust path if needed)
+// import { container } from 'tsyringe'; // Xóa import container nếu không dùng service nào khác
+// import { Logger } from 'pino'; // Xóa import Logger type
+// import { LoggingService } from '../../services/logging.service'; // Xóa import LoggingService
+import logToFile from '../../utils/logger';
 
 interface HttpError extends Error {
     status?: number;
@@ -9,35 +11,39 @@ interface HttpError extends Error {
     isOperational?: boolean;
 }
 
+// Cố gắng lấy request ID nếu có (từ middleware khác)
+const getRequestId = (req: Request): string | undefined => {
+    // Giả sử req.id được set bởi middleware request ID (ví dụ: uuid)
+    return (req as any).id as string | undefined;
+};
+
+
 export const errorHandlerMiddleware = (
     err: HttpError,
     req: Request,
     res: Response,
     next: NextFunction // Keep next for Express signature
 ): void => {
-    // <<< Resolve LoggingService
-    const loggingService = container.resolve(LoggingService);
-    // <<< Create a logger specific to this request/error context
-    const logger: Logger = loggingService.getLogger({
-        middleware: 'errorHandler',
-        requestId: (req as any).id, // Assuming you have a request ID middleware (like express-pino-logger or custom)
-        method: req.method,
-        url: req.originalUrl,
-    });
+    // --- No Need to Resolve Services or Create Pino Logger ---
+    // const loggingService = container.resolve(LoggingService); // Xóa resolve
+    // const logger: Logger = loggingService.getLogger({ ... }); // Xóa logger
+
+    const requestId = getRequestId(req);
+    const logContext = `[errorHandler]${requestId ? `[Req:${requestId}]` : ''}[${req.method} ${req.originalUrl}]`;
+
 
     const statusCode = err.status || err.statusCode || 500;
     const message = err.message || 'Internal Server Error';
     // Treat non-operational errors and status >= 500 as server errors
     const isServerError = !err.isOperational || statusCode >= 500;
 
-    // <<< Use the logger instance
+    // <<< Use logToFile
     if (isServerError) {
-        // Log the full error object for server errors, pino handles stack trace serialization
-        logger.error({ err, statusCode }, `Unhandled error occurred: ${message}`);
+        // Ghi log lỗi server, bao gồm stack trace
+        logToFile(`[ERROR] ${logContext} Unhandled error occurred. Status: ${statusCode}, Message: "${message}", Error: ${err.message}, Stack: ${err.stack}`);
     } else {
-        // Log operational/client errors as warnings
-        // No need to log stack trace for expected errors usually
-        logger.warn({ err: { message: err.message }, statusCode }, `Handled operational error: ${message}`);
+        // Ghi log lỗi hoạt động/client dưới dạng cảnh báo (thường không cần stack trace)
+        logToFile(`[WARNING] ${logContext} Handled operational error. Status: ${statusCode}, Message: "${message}"`);
     }
 
     // Determine client message (hide details in production for 500 errors)
@@ -51,14 +57,18 @@ export const errorHandlerMiddleware = (
         statusCode,
         message: clientMessage,
     });
+
+    // Không gọi next(err) ở đây nữa vì chúng ta đã xử lý response.
+    // Nếu bạn có middleware xử lý lỗi khác sau này, bạn có thể cân nhắc gọi next(err)
+    // nhưng thường thì middleware xử lý lỗi cuối cùng sẽ gửi response.
 };
 
 // --- Middleware cho route không tồn tại ---
 export const notFoundHandler = (req: Request, res: Response, next: NextFunction) => {
-    // No specific logging needed here, as the error is passed to errorHandlerMiddleware
-    // which will log it.
+    // Middleware này vẫn chỉ tạo lỗi và chuyển tiếp cho errorHandlerMiddleware
+    // Logger sẽ được xử lý trong errorHandlerMiddleware
     const error: HttpError = new Error(`Not Found - ${req.originalUrl}`);
     error.status = 404;
-    error.isOperational = true; // Mark as expected
+    error.isOperational = true; // Mark as expected operational error
     next(error); // Pass to the main error handler
 };
