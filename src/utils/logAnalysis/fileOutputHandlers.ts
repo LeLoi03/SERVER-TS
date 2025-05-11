@@ -1,7 +1,7 @@
 // src/client/utils/eventHandlers/fileOutputHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { FileOutputAnalysis, OverallAnalysis } from '../types/logAnalysis.types'; // Giả sử bạn có type này
+import { FileOutputAnalysis, OverallAnalysis } from '../../types/logAnalysis.types'; // Giả sử bạn có type này
 
 // Khởi tạo fileOutput trong results nếu chưa có
 const ensureFileOutputAnalysis = (results: any): FileOutputAnalysis => {

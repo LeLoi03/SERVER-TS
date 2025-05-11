@@ -1,6 +1,6 @@
 // src/client/utils/eventHandlers/validationHandlers.ts
 import { LogEventHandler } from './index';
-import { ValidationStats } from '../types/logAnalysis.types'; // Giả sử bạn có type này
+import { ValidationStats } from '../../types/logAnalysis.types'; // Giả sử bạn có type này
 
 // Khởi tạo validationStats trong results nếu chưa có
 const ensureValidationStats = (results: any): ValidationStats => {

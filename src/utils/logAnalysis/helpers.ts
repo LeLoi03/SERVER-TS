@@ -1,5 +1,4 @@
-import { ConferenceAnalysisDetail } from '../types/logAnalysis.types';
-import { LogAnalysisResult } from '../types/logAnalysis.types';
+import { ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types';
 
 // --- Helper function: Normalize Error Key ---
 export const normalizeErrorKey = (error: any): string => {
@@ -167,7 +166,7 @@ export const initializeLogAnalysisResult = (logFilePath: string): LogAnalysisRes
         totalTokens: 0,
         cacheContextAttempts: 0, // Đổi tên từ cacheAttempts
         cacheContextHits: 0,     // Đổi tên từ cacheHits
-        totalCacheableCalls: 0,     // Đổi tên từ cacheHits
+        cacheContextMisses: 0,     // Đổi tên từ cacheHits
 
         // cacheContextMisses đã bị loại bỏ, sẽ tính toán sau
         cacheContextCreationSuccess: 0, // Đổi tên từ cacheCreationSuccess

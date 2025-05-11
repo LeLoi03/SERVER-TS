@@ -1,7 +1,7 @@
 // src/client/utils/eventHandlers/taskLifecycleHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis, ConferenceAnalysisDetail } from '../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu
+import { OverallAnalysis, ConferenceAnalysisDetail } from '../../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu
 
 // Khởi tạo overall analysis trong results nếu chưa có
 const ensureOverallAnalysis = (results: any): OverallAnalysis => {

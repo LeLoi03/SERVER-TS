@@ -124,7 +124,7 @@ export interface GeminiApiAnalysis {
     // --- Cache Specific Stats ---
     cacheContextAttempts: number;       // Attempts to create a new cache context ('cache_create_start')
     cacheContextHits: number;           // Successful use of existing cache ('cache_setup_use_success')
-    // cacheContextMisses: number;      // Calculated: totalCalls (for cacheable types) - cacheContextHits
+    cacheContextMisses: number;      // Calculated: totalCalls (for cacheable types) - cacheContextHits
     cacheContextCreationSuccess: number;// Successful creation of new cache context ('cache_create_success')
     cacheContextCreationFailed: number; // Failures to create new cache context (various 'cache_create_failed_*' events)
     cacheContextInvalidations: number;  // Times a cache context was invalidated/removed ('cache_invalidate', 'retry_cache_invalidate', 'cache_create_failed_invalid_object')
