@@ -55,7 +55,7 @@ export interface ConferenceAnalysisDetail {
 
     validationIssues?: { field: string; value: any; action: string; timestamp: string }[];
 
-    
+
     finalResult?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
 }
 
@@ -74,14 +74,14 @@ export interface LogAnalysisResult {
     analysisTimestamp: string;
     logFilePath: string;
 
-     // +++ ADDED PROPERTIES +++
+    // +++ ADDED PROPERTIES +++
     /** The overall status of the analysis execution itself. */
     status?: 'Completed' | 'Failed' | 'Processing'; // Added 'Processing' as a potential intermediate state
     /** A top-level error message if the analysis failed catastrophically (e.g., file not found, fatal error). */
     errorMessage?: string;
     // ++++++++++++++++++++++++
 
-    
+
     totalLogEntries: number;
     parsedLogEntries: number;
     parseErrors: number;
@@ -108,6 +108,18 @@ export interface LogAnalysisResult {
         quotaErrors: number;
         keyUsage: { [key: string]: number };
         errorsByType: { [key: string]: number }; // Lỗi tổng hợp của Google Search
+        attemptIssues: number; // Tổng số các vấn đề trong các attempt
+        attemptIssueDetails: Record<string, number>; // Chi tiết các loại vấn_đề_attempt
+        quotaErrorsEncountered: number;
+        malformedResultItems: number;
+        successfulSearchesWithNoItems: number; // Search thành công nhưng không có item nào
+        apiKeyLimitsReached: number; // Tổng số lần key đạt giới hạn
+        keySpecificLimitsReached: Record<string, number>; // Số lần đạt giới hạn cho từng key cụ thể
+        apiKeysProvidedCount: number; // Số lần key được cấp phát (từ ApiKeyManager)
+        allKeysExhaustedEvents_GetNextKey: number; // Số lần getNextKey báo hết key
+        allKeysExhaustedEvents_StatusCheck: number; // Số lần check trạng thái báo hết key
+        apiKeyRotationsSuccess: number;
+        apiKeyRotationsFailed: number;
     };
     playwright: {
         setupSuccess: boolean | null;

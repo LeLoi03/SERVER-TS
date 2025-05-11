@@ -15,11 +15,11 @@ interface ApiKeyInfo {
 @singleton()
 export class ApiKeyManager {
     private keys: ApiKeyInfo[];
-    private currentKeyIndex: number = -1;
+    private currentKeyIndex: number = -1; // 0-based
     private totalRequests: number = 0;
     private readonly maxUsagePerKey: number;
     private readonly rotationDelay: number;
-    private readonly serviceBaseLogger: Logger; // Logger cơ sở của service
+    private readonly serviceBaseLogger: Logger;
 
     constructor(
         @inject(ConfigService) private configService: ConfigService,
@@ -32,7 +32,7 @@ export class ApiKeyManager {
         this.rotationDelay = this.configService.config.KEY_ROTATION_DELAY_MS;
 
         if (!apiKeys || apiKeys.length === 0) {
-            this.serviceBaseLogger.error('No Google Search API keys found in configuration.');
+            this.serviceBaseLogger.error({ event: 'init_no_keys_error' },'No Google Search API keys found in configuration.');
             throw new Error('Google Search API keys are required.');
         }
 
@@ -42,112 +42,127 @@ export class ApiKeyManager {
             lastUsed: 0,
             isExhausted: false,
         }));
-        this.serviceBaseLogger.info(`Initialized with ${this.keys.length} API keys. Max usage/key: ${this.maxUsagePerKey}, Rotation delay: ${this.rotationDelay}ms`);
+        this.serviceBaseLogger.info(
+            {
+                keyCount: this.keys.length,
+                maxUsagePerKey: this.maxUsagePerKey,
+                rotationDelayMs: this.rotationDelay,
+                event: 'init_success'
+            },
+            `Initialized with ${this.keys.length} API keys.`
+        );
     }
 
-    // Helper để tạo logger cho phương thức với context từ parentLogger
     private getMethodLogger(parentLogger: Logger | undefined, methodName: string, additionalContext?: object): Logger {
         const base = parentLogger || this.serviceBaseLogger;
-        // Thêm context của serviceMethod vào, giữ lại context từ parentLogger (nếu có)
         return base.child({ serviceMethod: `ApiKeyManager.${methodName}`, ...additionalContext });
     }
 
-
-    // Phương thức getNextKey giờ đây chấp nhận parentLogger
     public async getNextKey(parentLogger?: Logger): Promise<string | null> {
-        // Tạo logger cho lần gọi này, thừa hưởng context từ parentLogger
         const logger = this.getMethodLogger(parentLogger, 'getNextKey');
+        const initialKeyIndexAttempt = this.currentKeyIndex; // Để debug nếu không tìm thấy key
 
+        // Bắt đầu tìm từ key tiếp theo của key hiện tại (hoặc từ 0 nếu chưa có key nào được chọn)
         const startIndex = (this.currentKeyIndex + 1) % this.keys.length;
 
         for (let i = 0; i < this.keys.length; i++) {
-            const keyIndex = (startIndex + i) % this.keys.length;
-            const keyInfo = this.keys[keyIndex];
-            const keyContext = { keyIndex, currentUsage: keyInfo.usageCount, isExhaustedFlag: keyInfo.isExhausted };
+            const keyIndexToTry = (startIndex + i) % this.keys.length; // 0-based
+            const keyInfo = this.keys[keyIndexToTry];
+            const keyContext = { keyIndex: keyIndexToTry, currentUsage: keyInfo.usageCount, isExhaustedFlag: keyInfo.isExhausted };
 
             if (keyInfo.isExhausted) {
-                logger.debug(keyContext, `Key is marked exhausted, skipping.`);
+                logger.debug({ ...keyContext, event: 'key_check_skipped_exhausted_flag' }, `Key is marked exhausted, skipping.`);
                 continue;
             }
 
             if (keyInfo.usageCount >= this.maxUsagePerKey) {
-                logger.warn({ ...keyContext, maxUsage: this.maxUsagePerKey }, `Key reached usage limit. Marking as exhausted.`);
+                logger.warn({ ...keyContext, maxUsage: this.maxUsagePerKey, event: 'api_key_usage_limit_reached' }, `Key reached usage limit. Marking as exhausted.`);
                 keyInfo.isExhausted = true;
                 continue;
             }
 
             const now = Date.now();
             const timeSinceLastUse = now - keyInfo.lastUsed;
-            if (this.currentKeyIndex !== -1 && keyIndex === this.currentKeyIndex && timeSinceLastUse < this.rotationDelay) {
+
+            // Chỉ áp dụng rotationDelay nếu key này là key đang được sử dụng (currentKeyIndex)
+            // và nó không phải là lần đầu tiên lấy key (currentKeyIndex !== -1)
+            // và nó không phải là key mới sau khi vừa xoay vòng (keyIndexToTry === this.currentKeyIndex)
+            if (this.currentKeyIndex !== -1 && keyIndexToTry === this.currentKeyIndex && timeSinceLastUse < this.rotationDelay && this.rotationDelay > 0) {
                 const waitTime = this.rotationDelay - timeSinceLastUse;
-                logger.debug({ ...keyContext, waitTimeMs: waitTime }, `Waiting for rotation delay on key...`);
+                logger.debug({ ...keyContext, waitTimeMs: waitTime, event: 'key_rotation_delay_wait' }, `Waiting for rotation delay on current key...`);
                 await new Promise(resolve => setTimeout(resolve, waitTime));
+                // Sau khi đợi, kiểm tra lại key một lần nữa vì trạng thái có thể đã thay đổi
+                if (keyInfo.isExhausted || keyInfo.usageCount >= this.maxUsagePerKey) {
+                    logger.warn({ ...keyContext, event: 'key_check_failed_after_delay' }, `Key became unusable after rotation delay.`);
+                    continue;
+                }
             }
 
-            this.currentKeyIndex = keyIndex;
+            this.currentKeyIndex = keyIndexToTry;
             keyInfo.usageCount++;
             keyInfo.lastUsed = Date.now();
             this.totalRequests++;
-            logger.info({ // Dùng info khi key được cung cấp thành công
-                 keyIndexProvided: keyIndex,
+            logger.info({
+                 keyIndex: this.currentKeyIndex, // QUAN TRỌNG: Sử dụng 'keyIndex' (0-based)
                  newUsageCount: keyInfo.usageCount,
-                 totalRequestsAcrossAllKeys: this.totalRequests
+                 totalRequestsAcrossAllKeys: this.totalRequests,
+                 event: 'api_key_provided' // Thêm event
             }, `Providing API key`);
             return keyInfo.key;
         }
 
-        logger.error("All API keys are exhausted or unusable after checking all available keys.");
+        logger.error({
+            initialKeyIndexAttempt,
+            checkedKeysCount: this.keys.length,
+            event: 'api_keys_all_exhausted_checked' // Thêm event
+        }, "All API keys are exhausted or unusable after checking all available keys.");
         return null;
     }
 
-    // forceRotate cũng chấp nhận parentLogger
     public async forceRotate(parentLogger?: Logger): Promise<boolean> {
         const logger = this.getMethodLogger(parentLogger, 'forceRotate');
+        const oldKeyIndex = this.currentKeyIndex;
 
         if (this.currentKeyIndex === -1) {
-             logger.warn("forceRotate called but no key was previously selected. Cannot mark key as exhausted.");
-             // Vẫn thử lấy key tiếp theo vì có thể là lần đầu tiên hoặc không có key nào đang active
+             logger.warn({ event: 'force_rotate_no_active_key' }, "forceRotate called but no key was previously selected. Will attempt to get a new key.");
         } else {
             const currentKeyInfo = this.keys[this.currentKeyIndex];
             if (!currentKeyInfo.isExhausted) {
-                logger.warn({ keyIndex: this.currentKeyIndex, currentUsage: currentKeyInfo.usageCount }, `Forcing key to exhausted due to external error (e.g., quota).`);
+                logger.warn({ keyIndex: this.currentKeyIndex, currentUsage: currentKeyInfo.usageCount, event: 'force_rotate_marking_exhausted' }, `Forcing key to exhausted due to external error (e.g., quota).`);
                 currentKeyInfo.isExhausted = true;
             } else {
-                logger.debug({ keyIndex: this.currentKeyIndex }, `Key was already marked exhausted. Proceeding to find next key.`);
+                logger.debug({ keyIndex: this.currentKeyIndex, event: 'force_rotate_already_exhausted' }, `Key was already marked exhausted. Proceeding to find next key.`);
             }
         }
 
-        // Gọi getNextKey với logger hiện tại để nó có cùng context
+        // Cố gắng lấy key tiếp theo, truyền logger hiện tại để giữ context
         const nextKey = await this.getNextKey(logger);
         if (nextKey) {
-            logger.info(`Successfully rotated to a new key after forceRotate.`);
+            logger.info({ oldKeyIndex, newKeyIndex: this.currentKeyIndex, event: 'api_key_force_rotated_success' }, `Successfully rotated to a new key after forceRotate.`);
+            return true;
         } else {
-            logger.error(`Failed to rotate to a new key after forceRotate (all keys likely exhausted).`);
+            logger.error({ oldKeyIndex, event: 'api_key_force_rotated_fail' }, `Failed to rotate to a new key after forceRotate (all keys likely exhausted).`);
+            return false;
         }
-        return nextKey !== null;
     }
 
-    // areAllKeysExhausted có thể chấp nhận logger nếu cần log chi tiết hơn, nhưng thường không cần
     public areAllKeysExhausted(parentLogger?: Logger): boolean {
         const logger = this.getMethodLogger(parentLogger, 'areAllKeysExhausted_check');
         const allExhausted = this.keys.every(k => k.isExhausted || k.usageCount >= this.maxUsagePerKey);
         if (allExhausted) {
-             // Log này có thể hơi thừa nếu getNextKey đã log "All API keys are exhausted"
-             // Tuy nhiên, nó xác nhận trạng thái tại thời điểm gọi
-             logger.warn("Check confirmed: All API keys are currently considered exhausted.");
+             logger.warn({ event: 'api_keys_all_exhausted_status' }, "Check confirmed: All API keys are currently considered exhausted.");
         } else {
-            logger.trace("Check: Not all keys are exhausted.");
+            logger.trace({ event: 'api_keys_not_all_exhausted_status' }, "Check: Not all keys are exhausted.");
         }
         return allExhausted;
     }
 
-    // Các hàm getter thường không cần logger, trừ khi bạn muốn log mỗi lần chúng được gọi
     public getCurrentKeyIndex(): number {
-        return this.currentKeyIndex;
+        // Không cần log ở đây trừ khi debug đặc biệt
+        return this.currentKeyIndex; // 0-based
     }
 
     public getCurrentKeyUsage(parentLogger?: Logger): number {
-        // Nếu muốn log mỗi lần gọi, có thể thêm:
         // const logger = this.getMethodLogger(parentLogger, 'getCurrentKeyUsage');
         // logger.trace({ currentIndex: this.currentKeyIndex }, "Getting current key usage.");
         return this.currentKeyIndex !== -1 ? this.keys[this.currentKeyIndex].usageCount : 0;
