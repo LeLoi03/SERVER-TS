@@ -1,7 +1,7 @@
 // src/client/utils/eventHandlers/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
 import { createConferenceKey } from './helpers';
-import { OverallAnalysis, ConferenceAnalysisDetail } from '../types/logAnalysis.types';
+import { OverallAnalysis, ConferenceAnalysisDetail } from '../../types/logAnalysis.types';
 
 // Khởi tạo overall analysis nếu chưa có (đã có trong taskLifecycleHandlers, nhưng có thể cần ở đây nếu event này đến trước)
 const ensureOverallAnalysis = (results: any): OverallAnalysis => {

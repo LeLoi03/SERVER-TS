@@ -1,7 +1,7 @@
 // src/client/utils/processingSteps.ts
 import fs from 'fs';
 import readline from 'readline';
-import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../types/logAnalysis.types';
+import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../../types/logAnalysis.types';
 import {
     createConferenceKey,
     initializeConferenceDetail,
@@ -305,7 +305,7 @@ export const calculateFinalMetrics = (
     results.overall.processingTasks = stillProcessingCount; // Cập nhật processingTasks ở đây
 
     // --- Calculate Derived Stats ---
-    results.geminiApi.totalCacheableCalls = Math.max(0, results.geminiApi.cacheContextAttempts - results.geminiApi.cacheContextHits);
+    results.geminiApi.cacheContextMisses = Math.max(0, results.geminiApi.cacheContextAttempts - results.geminiApi.cacheContextHits);
 
     if (results.fileOutput.csvFileGenerated === false &&
         (results.fileOutput.csvPipelineFailures > 0 /* một cờ khác từ orchestrator nếu cần */ )) {
