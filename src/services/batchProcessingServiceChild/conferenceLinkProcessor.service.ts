@@ -65,7 +65,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         this.year2 = this.configService.config.YEAR2;
     }
 
-    // --- Helper (was _saveContentToTempFile) ---
+    // --- Helper ---
     private async saveContentToFile(
         content: string,
         baseName: string,
@@ -149,7 +149,6 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         );
     }
 
-
     public async processInitialLinkForSave(
         page: Page,
         link: string,
@@ -159,13 +158,6 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         existingAcronyms: Set<string>,
         parentProcessLogger: Logger // <--- THAY ĐỔI: Nhận logger cha từ processConferenceSave
     ): Promise<BatchEntry | null> {
-        // Logic from _processSingleLink
-        // Uses pageContentExtractorService.extractTextFromUrl
-        // Uses this.saveContentToFile
-        // ... (implementation as in original, but calling services)
-        // Example call within:
-        // const fullText = await this.pageContentExtractorService.extractTextFromUrl(page, finalLink, conference.Acronym, false /* for initial */, year, linkLogger);
-        // const textPath = await this.saveContentToFile(fullText, textFileBaseName, contentExtractionLogger);
         const linkLogger = parentProcessLogger.child({
             service: 'ConferenceLinkProcessorService',
             function: 'processInitialLinkForSave',
@@ -301,131 +293,145 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         conference: ConferenceUpdateData,
         parentLogger: Logger // <--- CHANGED: Receive parentLogger
     ): Promise<{ finalUrl: string | null; textPath: string | null }> {
-        // Logic from _processMainLinkUpdate
-        // Uses pageContentExtractorService.extractTextFromUrl (page is navigated first here)
-        // Uses this.saveContentToFile
         const url = conference.mainLink;
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
-            function: '_processMainLinkUpdate',
+            function: 'processMainLinkForUpdate', // Sửa tên cho nhất quán
             linkTypeToProcess: 'main',
             initialUrl: url,
+            conferenceAcronym: conference.Acronym // Thêm context
         });
 
-        logger.info({ event: 'process_main_link_start' });
-        let finalUrl: string | null = url; // Start with the given URL
+        logger.info({ event: 'conference_link_processor_update_link_start' });
+        let finalUrl: string | null = url;
         let textPath: string | null = null;
 
         if (!url) {
-            logger.error({ event: 'missing_main_url_for_update' });
-            return { finalUrl: null, textPath: null };
+            // ĐỔI THÀNH ERROR VÀ EVENT SẼ ĐƯỢC MAP VÀO BATCH REJECTION
+            logger.error({ event: 'conference_link_processor_link_missing_for_update', linkType: 'main', reason: 'Main link URL is missing for update process.' });
+            return { finalUrl: null, textPath: null }; // Logic vẫn trả về, nhưng BatchProcessingService sẽ thấy lỗi này và có thể quyết định dừng
         }
+        logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'main' });
 
         try {
             if (page.isClosed()) {
-                logger.warn({ event: 'page_already_closed_before_goto_main_link' });
-                throw new Error('Page was closed before navigation for mainLink could start.');
+                // EVENT CHO PLAYWRIGHT HANDLER
+                logger.warn({ event: 'html_processing_failed', reason: 'Page already closed before goto', linkType: 'main' });
+                // Không throw lỗi ở đây nếu pageContentExtractorService sẽ xử lý và log lỗi khi page closed
+                // Tuy nhiên, nếu muốn dừng sớm, có thể throw
+                return { finalUrl: null, textPath: null }; // Hoặc throw
             }
-            // Note: extractTextFromUrl will do its own page.goto if the URL is different or if it's the first load.
-            // However, the original logic had a separate goto here, then extract. Let's maintain that.
-            // The page object itself will be at the new URL after this.
-            const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });
-            finalUrl = page.url(); // Update finalUrl after goto
-            logger.info({ finalUrlAfterGoto: finalUrl, status: response?.status(), event: 'main_link_navigation_success' });
 
-            // Extract text from the page, which is now at finalUrl
-            // For main link update, useMainContentKeywords is usually false.
+            const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });
+            finalUrl = page.url();
+            logger.info({ finalUrlAfterGoto: finalUrl, status: response?.status(), event: 'conference_link_processor_navigation_success', linkType: 'main' });
+
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
-                page,       // Page is already at finalUrl
-                finalUrl,   // Pass finalUrl for context
-                conference.Acronym,
-                false,      // Main link update typically doesn't use keywords
-                this.year2,
-                logger.child({ operation: 'extract_main_update_text' })
+                page, finalUrl, conference.Acronym, false, this.year2,
+                logger.child({ operation: 'extract_update_text', linkType: 'main' })
             );
 
             if (textContent && textContent.trim()) {
                 const safeAcronym = (conference.Acronym || 'unknown').replace(/[^a-zA-Z0-9_.-]/g, '-');
-                const batchIndexForFile = (logger as any).bindings().batchIndex || 'unknownBatchIdx'; // batchIndex from parent
+                const batchIndexForFile = (logger as any).bindings().batchIndex || 'unknownBatchIdx';
                 const baseName = `${safeAcronym}_main_update_${batchIndexForFile}`;
 
+                // saveContentToFile nên log 'save_batch_write_file_failed' nếu có lỗi
                 textPath = await this.saveContentToFile(
-                    textContent.trim(),
-                    baseName,
-                    logger.child({ operation: 'save_main_update_text' })
+                    textContent.trim(), baseName,
+                    logger.child({ operation: 'save_update_text', linkType: 'main' })
                 );
 
                 if (textPath) {
-                    logger.info({ filePath: textPath, event: 'main_link_content_saved' });
+                    logger.info({ filePath: textPath, event: 'conference_link_processor_content_saved', linkType: 'main' });
                 } else {
-                    logger.warn({ event: 'main_link_content_save_failed_null_path' });
+                    // Lỗi đã được log bởi saveContentToFile (nếu có)
+                    logger.warn({ event: 'conference_link_processor_content_save_failed_null_path', linkType: 'main' });
                 }
             } else {
-                logger.warn({ event: 'main_link_content_empty_after_processing' });
+                logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'main' });
+                // Quyết định: Nội dung rỗng có làm fail batch không? Nếu có, log event lỗi nghiêm trọng.
+                // Hiện tại, chỉ là warning.
             }
         } catch (error: any) {
-            logger.error({ finalUrlAtError: finalUrl, err: error, event: 'main_link_process_failed_exception' });
-            // Error logging to file is handled by the orchestrator or higher level if necessary
+            const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            if (error.message?.includes('Navigation timeout') || error.message?.includes('Target page, context or browser has been closed')) {
+                logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'goto_failed', linkType: 'main' });
+            } else {
+                // EVENT NÀY SẼ ĐƯỢC MAP VÀO BATCH REJECTION
+                logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'main' });
+            }
             textPath = null;
-            finalUrl = null; // If critical error, nullify finalUrl too
+            finalUrl = null;
         }
         return { finalUrl: finalUrl ?? null, textPath };
     }
 
-    public async processCfpLinkForUpdate(page: Page | null, // Can be null for PDF
+
+    public async processCfpLinkForUpdate(
+        page: Page | null, // Can be null for PDF
         conference: ConferenceUpdateData,
-        parentLogger: Logger // <--- CHANGED: Receive parentLogger
+        parentLogger: Logger
     ): Promise<string | null> {
-        // Logic from _processCfpLinkUpdate
-        // Uses pageContentExtractorService.extractTextFromUrl
-        // Uses this.saveContentToFile
         const url = conference.cfpLink;
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
             function: 'processCfpLinkForUpdate',
             linkTypeToProcess: 'cfp',
             initialUrl: url,
+            conferenceAcronym: conference.Acronym // Thêm context
         });
         let textPath: string | null = null;
 
         if (!url || url.trim().toLowerCase() === "none") {
-            logger.debug({ event: 'skipped_cfp_link_no_url_or_none' });
+            // NẾU VIỆC THIẾU CFP LÀ NGHIÊM TRỌNG
+            // logger.error({ event: 'conference_link_processor_link_missing_for_update', linkType: 'cfp', reason: 'CFP link URL is missing or "none".' });
+            // return null;
+            // HIỆN TẠI: Coi CFP là tùy chọn, chỉ debug log
+            logger.debug({ event: 'conference_link_processor_skipped_link_no_url_or_none', linkType: 'cfp' });
             return null;
         }
-        logger.info({ event: 'process_cfp_link_start' });
+        logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'cfp' });
 
         try {
-            // For CFP link update, useMainContentKeywords is true.
+            // `pageContentExtractorService.extractTextFromUrl` sẽ log các lỗi Playwright (goto_failed, fetch_content_failed, html_processing_failed)
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
                 page,
                 url,
                 conference.Acronym,
                 true, // useMainContentKeywords = true for CFP
                 this.year2,
-                logger.child({ operation: 'extract_cfp_update_text' })
+                logger.child({ operation: 'extract_update_text', linkType: 'cfp' })
             );
 
             if (textContent && textContent.trim().length > 0) {
                 const safeAcronym = (conference.Acronym || 'unknown').replace(/[^a-zA-Z0-9_.-]/g, '-');
-                const batchIndexForFile = (logger as any).bindings().batchIndex || 'unknownBatchIdx';
+                // Cố gắng lấy batchIndex từ logger cha nếu có
+                const batchIndexContext = (logger as any).bindings()?.batchIndex;
+                const batchIndexForFile = batchIndexContext !== undefined ? String(batchIndexContext) : 'unknownBatchIdx';
                 const baseName = `${safeAcronym}_cfp_update_${batchIndexForFile}`;
 
+                // saveContentToFile nên log 'save_batch_write_file_failed' nếu có lỗi
                 textPath = await this.saveContentToFile(
                     textContent,
                     baseName,
-                    logger.child({ operation: 'save_cfp_update_text' })
+                    logger.child({ operation: 'save_update_text', linkType: 'cfp' })
                 );
 
                 if (textPath) {
-                    logger.info({ filePath: textPath, event: 'cfp_link_content_saved_successfully' });
+                    logger.info({ filePath: textPath, event: 'conference_link_processor_content_saved', linkType: 'cfp' });
                 } else {
-                    logger.warn({ event: 'cfp_link_content_save_failed_null_path' });
+                    // Lỗi đã được log bởi saveContentToFile (nếu có) là 'save_batch_write_file_failed'
+                    logger.warn({ event: 'conference_link_processor_content_save_failed_null_path', linkType: 'cfp', reason: 'saveContentToFile returned null' });
                 }
             } else {
-                logger.warn({ event: 'cfp_link_extraction_returned_empty_content' });
+                logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'cfp' });
+                // Quyết định: Nội dung CFP rỗng có làm fail batch không?
             }
         } catch (error: any) {
-            logger.error({ err: error, event: 'cfp_link_process_failed_exception' });
+            const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            // EVENT NÀY SẼ ĐƯỢC MAP VÀO BATCH REJECTION (NẾU LỖI XỬ LÝ CFP LÀ NGHIÊM TRỌNG)
+            logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'cfp' });
             textPath = null;
         }
         return textPath;
@@ -434,64 +440,74 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
     public async processImpLinkForUpdate(
         page: Page | null, // Can be null for PDF
         conference: ConferenceUpdateData,
-        cfpResultPath: string | null, // Keep this for optimization
-        parentLogger: Logger, // <--- CHANGED: Receive parentLogger
+        cfpResultPath: string | null,
+        parentLogger: Logger
     ): Promise<string | null> {
-        // Logic from _processImpLinkUpdate
-        // Uses pageContentExtractorService.extractTextFromUrl
-        // Uses this.saveContentToFile
         const url = conference.impLink;
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
             function: 'processImpLinkForUpdate',
             linkTypeToProcess: 'imp',
             initialUrl: url,
+            conferenceAcronym: conference.Acronym // Thêm context
         });
         let textPath: string | null = null;
 
         if (!url || url.trim().toLowerCase() === "none") {
-            logger.debug({ event: 'skipped_imp_link_no_url_or_none' });
+            // NẾU VIỆC THIẾU IMP LÀ NGHIÊM TRỌNG
+            // logger.error({ event: 'conference_link_processor_link_missing_for_update', linkType: 'imp', reason: 'Important Dates link URL is missing or "none".' });
+            // return null;
+            // HIỆN TẠI: Coi IMP là tùy chọn, chỉ debug log
+            logger.debug({ event: 'conference_link_processor_skipped_link_no_url_or_none', linkType: 'imp' });
             return null;
         }
 
-        if (url === conference.cfpLink) { // cfpLink could be "none" or empty string
-            logger.info({ event: 'skipped_imp_link_same_as_cfp', resolvedCfpPath: cfpResultPath });
-            return ""; // Original logic: indicates processed (as same as CFP), no new file.
+        // Nếu IMP link giống CFP link và CFP đã được xử lý (có cfpResultPath), trả về ""
+        // "" cho biết không cần xử lý lại nhưng cũng không phải lỗi.
+        // Nếu cfpResultPath là null (CFP link không tồn tại hoặc xử lý lỗi), thì vẫn cần xử lý IMP riêng.
+        if (url === conference.cfpLink && cfpResultPath !== null) {
+            logger.info({ event: 'conference_link_processor_skipped_link_same_as_other', linkType: 'imp', otherLinkType: 'cfp', resolvedOtherPath: cfpResultPath });
+            return ""; // Dấu hiệu đã xử lý (giống CFP)
         }
 
-        logger.info({ event: 'process_imp_link_start' });
+        logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'imp' });
         try {
-            // For IMP link update, useMainContentKeywords is false.
+            // `pageContentExtractorService.extractTextFromUrl` sẽ log các lỗi Playwright
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
                 page,
                 url,
                 conference.Acronym,
                 false, // useMainContentKeywords = false for IMP
                 this.year2,
-                logger.child({ operation: 'extract_imp_update_text' })
+                logger.child({ operation: 'extract_update_text', linkType: 'imp' })
             );
 
             if (textContent && textContent.trim().length > 0) {
                 const safeAcronym = (conference.Acronym || 'unknown').replace(/[^a-zA-Z0-9_.-]/g, '-');
-                const batchIndexForFile = (logger as any).bindings().batchIndex || 'unknownBatchIdx';
+                const batchIndexContext = (logger as any).bindings()?.batchIndex;
+                const batchIndexForFile = batchIndexContext !== undefined ? String(batchIndexContext) : 'unknownBatchIdx';
                 const baseName = `${safeAcronym}_imp_update_${batchIndexForFile}`;
 
+                // saveContentToFile nên log 'save_batch_write_file_failed' nếu có lỗi
                 textPath = await this.saveContentToFile(
                     textContent,
                     baseName,
-                    logger.child({ operation: 'save_imp_update_text' })
+                    logger.child({ operation: 'save_update_text', linkType: 'imp' })
                 );
 
                 if (textPath) {
-                    logger.info({ filePath: textPath, event: 'imp_link_content_saved_successfully' });
+                    logger.info({ filePath: textPath, event: 'conference_link_processor_content_saved', linkType: 'imp' });
                 } else {
-                    logger.warn({ event: 'imp_link_content_save_failed_null_path' });
+                    logger.warn({ event: 'conference_link_processor_content_save_failed_null_path', linkType: 'imp', reason: 'saveContentToFile returned null' });
                 }
             } else {
-                logger.warn({ event: 'imp_link_extraction_returned_empty_content' });
+                logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'imp' });
+                // Quyết định: Nội dung IMP rỗng có làm fail batch không?
             }
         } catch (error: any) {
-            logger.error({ err: error, event: 'imp_link_process_failed_exception' });
+            const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            // EVENT NÀY SẼ ĐƯỢC MAP VÀO BATCH REJECTION (NẾU LỖI XỬ LÝ IMP LÀ NGHIÊM TRỌNG)
+            logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'imp' });
             textPath = null;
         }
         return textPath;

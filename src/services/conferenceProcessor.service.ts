@@ -61,11 +61,13 @@ export class ConferenceProcessorService {
         });
 
         taskLogger.info({ event: 'task_start' }, `Processing conference task`);
+        let taskSuccessfullyCompleted = true; // Giả định thành công ban đầu
+        let specificTaskError: any = null;     // Để lưu lỗi cụ thể nếu có
 
         try {
             const hasAllRequiredKeys = 'mainLink' in conference &&
-                                       'cfpLink' in conference &&
-                                       'impLink' in conference;
+                'cfpLink' in conference &&
+                'impLink' in conference;
 
             if (hasAllRequiredKeys) {
                 taskLogger.info({ event: 'update_flow_start' }, `Processing with pre-defined keys (UPDATE flow)`);
@@ -79,6 +81,10 @@ export class ConferenceProcessorService {
                 // Truyền taskLogger (đã có context đầy đủ) xuống service con
                 const updateSuccess = await this.htmlPersistenceService.processUpdateFlow(conferenceUpdateData, taskLogger);
                 taskLogger.info({ event: 'update_flow_finish', success: updateSuccess }, `Update flow finished.`);
+                if (!updateSuccess) {
+                    taskSuccessfullyCompleted = false; // Nếu update flow không thành công
+                    specificTaskError = new Error("Update flow did not complete successfully."); // Tạo lỗi mô tả
+                }
             } else {
                 taskLogger.info({ event: 'save_flow_start' }, `Searching and processing (SAVE flow)`);
                 let searchResultsLinks: string[] = [];
@@ -115,19 +121,43 @@ export class ConferenceProcessorService {
 
                 if (searchResultsLinks.length > 0) {
                     // Truyền taskLogger xuống HtmlPersistenceService
-                    await this.htmlPersistenceService.processSaveFlow(conference, searchResultsLinks, taskLogger);
+                    // Giả sử processSaveFlow có thể trả về boolean hoặc throw lỗi
+                    const saveSuccess = await this.htmlPersistenceService.processSaveFlow(conference, searchResultsLinks, taskLogger);
+                    if (saveSuccess === false) { // Nếu processSaveFlow trả về false
+                        taskSuccessfullyCompleted = false;
+                        specificTaskError = new Error("Save flow did not complete successfully (processSaveFlow returned false).");
+                    }
                 } else {
-                     taskLogger.warn({ event: 'save_html_skipped_no_links_in_task' }, "Skipping save HTML step as no valid search links were found or processed.");
+                    taskLogger.warn({ event: 'save_html_skipped_no_links_in_task' }, "Skipping save HTML step as no valid search links were found or processed.");
+                    taskSuccessfullyCompleted = false;
+                    specificTaskError = new Error("Save HTML step as no valid search links were found or processed.");
+
                 }
             }
+            // Nếu không có lỗi nào được ném hoặc cờ taskSuccessfullyCompleted không bị set false,
+            // thì task coi như thành công ở điểm này (trước khi vào finally).
 
         } catch (taskError: any) {
-            // Log lỗi chưa được xử lý ở cấp task
+            taskSuccessfullyCompleted = false; // Bất kỳ lỗi nào bắt được ở đây đều làm task fail
+            specificTaskError = taskError;     // Lưu lỗi để có thể log trong finally nếu cần
             taskLogger.error({ err: taskError, stack: taskError.stack, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
-            // Không ném lỗi ra ngoài để queue tiếp tục xử lý các task khác, trừ khi đó là yêu cầu.
-            // throw taskError; // Nếu muốn task bị đánh dấu là failed trong queue và có thể retry
+            // Event 'task_unhandled_error' sẽ set status='failed' và endTime trong handler của nó.
         } finally {
-            taskLogger.info({ event: 'task_finish' }, `Finished processing conference task.`);
+            // Log 'task_finish' với status dựa trên taskSuccessfullyCompleted.
+            // Handler của 'task_unhandled_error' đã set status='failed' và endTime nếu có lỗi.
+            // Nếu không có 'task_unhandled_error', thì 'task_finish' sẽ set endTime.
+            const finishContext: { event: string; success?: boolean; error_details?: string } = { event: 'task_finish' };
+            if (!specificTaskError) { // Nếu không có lỗi cụ thể nào được ghi nhận VÀ không có unhandled error
+                finishContext.success = taskSuccessfullyCompleted;
+            } else if (specificTaskError && taskSuccessfullyCompleted === false && !taskLogger.bindings().err) {
+                // Trường hợp taskSuccessfullyCompleted = false do lỗi logic (không phải unhandled exception)
+                // và chưa có lỗi nào được log ở 'task_unhandled_error'
+                finishContext.success = false;
+                finishContext.error_details = specificTaskError instanceof Error ? specificTaskError.message : String(specificTaskError);
+            }
+            // Nếu đã có 'task_unhandled_error', thì finishContext.success sẽ không được set (để handler không ghi đè status)
+
+            taskLogger.info(finishContext, `Finished processing conference task.`);
         }
     }
 }

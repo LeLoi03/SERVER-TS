@@ -115,9 +115,9 @@ export class FileSystemService {
             await fs.promises.writeFile(filePath, content, 'utf8');
             logger.trace({ ...logContext, filePath, event: 'saveTemporaryFile_success' });
             return filePath;
-        } catch (error) {
-            logger.error({ ...logContext, err: error, event: 'saveTemporaryFile_failed' });
-            throw error;
+        } catch (writeError) {
+            logger.error({ ...logContext, err: writeError, event: 'save_batch_write_file_failed', fileType: `temp_content_${baseName}` });
+            throw writeError;
         }
     }
 
@@ -160,7 +160,7 @@ export class FileSystemService {
             await fs.promises.writeFile(filePath, content, encoding);
             logger.trace({ ...logContext, contentLength: content.length, event: 'writeFile_success' });
         } catch (error) {
-            logger.error({ ...logContext, err: error, event: 'writeFile_failed' });
+            logger.error({ ...logContext, err: error, event: 'save_batch_write_file_failed' });
             throw error;
         }
     }
@@ -188,11 +188,11 @@ export class FileSystemService {
             try {
                 await fs.promises.rm(tempDirPath, { recursive: true, force: true });
                 logger.info({ path: tempDirPath }, "Removed temporary directory.");
-            } catch(rmError) {
-                logger.error({err: rmError, path: tempDirPath}, "Failed to remove temporary directory.")
+            } catch (rmError) {
+                logger.error({ err: rmError, path: tempDirPath }, "Failed to remove temporary directory.")
             }
         } else {
-            logger.info({path: tempDirPath}, "Temporary directory does not exist, no cleanup needed.")
+            logger.info({ path: tempDirPath }, "Temporary directory does not exist, no cleanup needed.")
         }
     }
 }

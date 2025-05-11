@@ -149,7 +149,7 @@ export class ResultProcessingService {
                 title = inputRow?.conferenceTitle;
 
                 if (!inputRow || !acronym || !title) {
-                    lineLogger.warn({ event: 'jsonl_missing_core_data', hasInputRow: !!inputRow, hasAcronym: !!acronym, hasTitle: !!title, lineContentSubstring: line.substring(0,100) }, "Parsed line missing essential data, skipping row.");
+                    lineLogger.warn({ event: 'jsonl_missing_core_data', hasInputRow: !!inputRow, hasAcronym: !!acronym, hasTitle: !!title, lineContentSubstring: line.substring(0, 100) }, "Parsed line missing essential data, skipping row.");
                     yield null;
                     continue;
                 }
@@ -212,33 +212,102 @@ export class ResultProcessingService {
                     callForPapers: String(parsedCfpInfo?.callForPapers ?? parsedCfpInfo?.['Call for Papers'] ?? parsedCfpInfo?.['Call For Papers'] ?? parsedCfpInfo?.cfp ?? ''), // Xử lý các biến thể
                 };
 
-                // Validation & Normalization
+                // --- Validation & Normalization ---
                 const originalContinent = finalRow.continent?.trim();
-                if (!originalContinent) finalRow.continent = "No continent";
-                else if (!this.VALID_CONTINENTS.has(originalContinent)) {
-                    rowContextLogger.info({ event: 'validation_warning', field: 'continent', invalidValue: originalContinent, normalizedTo: 'No continent' }, `Invalid continent. Normalizing.`);
+                if (!originalContinent) {
+                    // NORMALIZE: Gán giá trị mặc định khi rỗng
+                    finalRow.continent = "No continent";
+                    // LOG NORMALIZATION (nếu muốn)
+                    rowContextLogger.info({
+                        event: 'normalization_applied', // EVENT
+                        field: 'continent',
+                        originalValue: originalContinent, // Là undefined hoặc ""
+                        normalizedValue: "No continent",
+                        reason: 'empty_value',
+                        conferenceAcronym: acronym, // Đảm bảo context có trong log entry
+                        conferenceTitle: title
+                    }, `Continent was empty, normalized to "No continent".`);
+                } else if (!this.VALID_CONTINENTS.has(originalContinent)) {
+                    // VALIDATION WARNING và NORMALIZE
+                    rowContextLogger.info({ // Giữ info vì nó cũng là 1 dạng "cảnh báo" về dữ liệu đầu vào
+                        event: 'validation_warning', // EVENT
+                        field: 'continent',
+                        invalidValue: originalContinent,
+                        action: 'normalized', // Hành động là normalize
+                        normalizedTo: 'No continent', // Giá trị sau khi normalize
+                        conferenceAcronym: acronym,
+                        conferenceTitle: title
+                    }, `Invalid continent "${originalContinent}". Normalizing to "No continent".`);
                     finalRow.continent = "No continent";
                 }
 
                 const originalType = finalRow.type?.trim();
-                if (!originalType) finalRow.type = "Offline";
-                else if (!this.VALID_TYPES.has(originalType)) {
-                    rowContextLogger.info({ event: 'validation_warning', field: 'type', invalidValue: originalType, normalizedTo: 'Offline' }, `Invalid type. Normalizing.`);
+                if (!originalType) {
+                    // NORMALIZE
+                    finalRow.type = "Offline";
+                    // LOG NORMALIZATION (nếu muốn)
+                    rowContextLogger.info({
+                        event: 'normalization_applied', // EVENT
+                        field: 'type',
+                        originalValue: originalType,
+                        normalizedValue: "Offline",
+                        reason: 'empty_value',
+                        conferenceAcronym: acronym,
+                        conferenceTitle: title
+                    }, `Type was empty, normalized to "Offline".`);
+                } else if (!this.VALID_TYPES.has(originalType)) {
+                    // VALIDATION WARNING và NORMALIZE
+                    rowContextLogger.info({
+                        event: 'validation_warning', // EVENT
+                        field: 'type',
+                        invalidValue: originalType,
+                        action: 'normalized',
+                        normalizedTo: 'Offline',
+                        conferenceAcronym: acronym,
+                        conferenceTitle: title
+                    }, `Invalid type "${originalType}". Normalizing to "Offline".`);
                     finalRow.type = "Offline";
                 }
 
-                if (!finalRow.location?.trim()) finalRow.location = "No location";
-                if (!finalRow.cityStateProvince?.trim()) finalRow.cityStateProvince = "No city/state/province";
-                if (!finalRow.country?.trim()) finalRow.country = "No country";
-                if (!finalRow.publisher?.trim()) finalRow.publisher = "No publisher";
-                if (!finalRow.topics?.trim()) finalRow.topics = "No topics";
-                if (!finalRow.summary?.trim()) finalRow.summary = "No summary available";
-                if (!finalRow.callForPapers?.trim()) finalRow.callForPapers = "No call for papers available";
+                // Normalization cho các trường text rỗng
+                const fieldsToNormalizeIfEmpty: { field: keyof ProcessedRowData, defaultValue: string }[] = [
+                    { field: 'location', defaultValue: "No location" },
+                    { field: 'cityStateProvince', defaultValue: "No city/state/province" },
+                    { field: 'country', defaultValue: "No country" },
+                    { field: 'publisher', defaultValue: "No publisher" },
+                    { field: 'topics', defaultValue: "No topics" },
+                    { field: 'summary', defaultValue: "No summary available" },
+                    { field: 'callForPapers', defaultValue: "No call for papers available" }
+                ];
+
+                for (const item of fieldsToNormalizeIfEmpty) {
+                    const currentValue = String(finalRow[item.field] ?? '').trim(); // Ép kiểu về string trước khi trim
+                    if (!currentValue) {
+                        (finalRow as any)[item.field] = item.defaultValue; // Gán giá trị mặc định
+                        // LOG NORMALIZATION
+                        rowContextLogger.info({
+                            event: 'normalization_applied', // EVENT
+                            field: item.field,
+                            originalValue: currentValue, // Là ""
+                            normalizedValue: item.defaultValue,
+                            reason: 'empty_value',
+                            conferenceAcronym: acronym,
+                            conferenceTitle: title
+                        }, `${item.field} was empty, normalized to "${item.defaultValue}".`);
+                    }
+                }
 
                 const originalYear = finalRow.year?.trim();
                 if (originalYear && !this.YEAR_REGEX.test(originalYear)) {
-                    rowContextLogger.info({ event: 'validation_warning', field: 'year', invalidValue: originalYear, action: 'logged_only' }, `Invalid year format.`);
-                    // Không thay đổi giá trị, chỉ log
+                    // VALIDATION WARNING (chỉ log, không normalize ở đây)
+                    rowContextLogger.info({ // Giữ info vì nó cũng là 1 dạng "cảnh báo" về dữ liệu đầu vào
+                        event: 'validation_warning', // EVENT
+                        field: 'year',
+                        invalidValue: originalYear,
+                        action: 'logged_only', // Hành động chỉ là log
+                        conferenceAcronym: acronym,
+                        conferenceTitle: title
+                    }, `Invalid year format "${originalYear}". Value kept as is.`);
                 }
                 rowContextLogger.trace({ event: 'row_processed_successfully' }, "Row processed for yielding.");
                 yield finalRow;

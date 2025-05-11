@@ -36,13 +36,13 @@ export class HtmlPersistenceService {
     // }
 
     public setBrowserContext(parentLogger?: Logger) { // Nhận parentLogger tùy chọn từ Orchestrator
-        const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.setBrowserContext'}) : this.serviceBaseLogger;
+        const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.setBrowserContext' }) : this.serviceBaseLogger;
         try {
             // Truyền logger vào getBrowserContext của PlaywrightService nếu nó cũng được cập nhật để nhận logger
             this.browserContext = this.playwrightService.getBrowserContext(logger);
             logger.debug("BrowserContext set for HtmlPersistenceService.");
         } catch (error) {
-            logger.error({ err: error }, "Failed to get browser context in HtmlPersistenceService.");
+            logger.error({ err: error, event: 'htmlpersistence_set_context_failed', reason: 'Failed to get browser context from PlaywrightService' }, "Failed to get browser context in HtmlPersistenceService.");
             throw error; // Ném lại lỗi để Orchestrator biết
         }
     }
@@ -56,7 +56,7 @@ export class HtmlPersistenceService {
         return this.browserContext;
     }
 
-     async processUpdateFlow(conference: ConferenceUpdateData, taskLogger: Logger): Promise<boolean> {
+    async processUpdateFlow(conference: ConferenceUpdateData, taskLogger: Logger): Promise<boolean> {
         // taskLogger đã có context đầy đủ từ ConferenceProcessorService
         // Tạo một child logger cụ thể hơn cho flow này nếu muốn
         const flowLogger = taskLogger.child({ persistenceFlow: 'update' });
@@ -84,15 +84,15 @@ export class HtmlPersistenceService {
         }
     }
 
-    async processSaveFlow(conference: ConferenceData, searchResultLinks: string[], taskLogger: Logger): Promise<void> {
+    async processSaveFlow(conference: ConferenceData, searchResultLinks: string[], taskLogger: Logger): Promise<boolean> {
         // taskLogger đã có context đầy đủ từ ConferenceProcessorService
         const flowLogger = taskLogger.child({ persistenceFlow: 'save' });
 
-        flowLogger.info({ linksCount: searchResultLinks.length, event: 'process_save_start' }, `Processing SAVE flow by delegating to BatchProcessingService`);
+        flowLogger.info({ linksCount: searchResultLinks.length, event: 'save_html_start' }, `Processing SAVE flow by delegating to BatchProcessingService`);
 
         if (searchResultLinks.length === 0) {
             flowLogger.warn({ event: 'process_save_skipped_no_links' }, "Skipping save flow as no search links were provided.");
-            return;
+            return false;
         }
 
         try {
@@ -105,18 +105,21 @@ export class HtmlPersistenceService {
                 flowLogger // <--- TRUYỀN flowLogger (hoặc taskLogger) XUỐNG BatchProcessingService
             );
 
-            if (initiationSuccess) {
+            if (initiationSuccess === true) {
                 flowLogger.info({ event: 'process_save_delegation_initiated' }, 'BatchProcessingService.processConferenceSave initiated successfully (batch save running async).');
+                return true;
             } else {
                 flowLogger.warn({ event: 'process_save_delegation_initiation_failed' }, 'BatchProcessingService.processConferenceSave reported failure during initiation.');
             }
+            return false;
         } catch (saveError: any) {
             flowLogger.error({ err: saveError, event: 'process_save_delegation_error' }, 'Error occurred while calling BatchProcessingService.processConferenceSave initiation');
+            return false;
         }
     }
 
     public resetState(parentLogger?: Logger): void { // Nhận parentLogger tùy chọn từ Orchestrator
-        const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.resetState'}) : this.serviceBaseLogger;
+        const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.resetState' }) : this.serviceBaseLogger;
         this.existingAcronyms.clear();
         this.batchIndexRef.current = 1;
         logger.info("HtmlPersistenceService state (existingAcronyms, batchIndexRef) reset.");

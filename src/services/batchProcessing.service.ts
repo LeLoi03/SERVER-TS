@@ -77,8 +77,6 @@ export class BatchProcessingService {
     private readonly finalOutputPath: string;
     private readonly tempDir: string;
     private readonly errorLogPath: string;
-    // private readonly year2: number; // Now used by PageContentExtractorService or passed
-    // private readonly mainContentKeywords: string[]; // Now used by PageContentExtractorService
 
     private activeBatchSaves: Set<Promise<boolean>> = new Set();
 
@@ -106,21 +104,12 @@ export class BatchProcessingService {
         this.finalOutputPath = this.configService.finalOutputJsonlPath;
         this.tempDir = this.configService.tempDir;
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log'); // More specific error log
-        // this.year2 = this.configService.config.YEAR2;
 
         this.serviceBaseLogger.info("BatchProcessingService constructed.");
         this.serviceBaseLogger.info(`Batches Directory: ${this.batchesDir}`);
         this.serviceBaseLogger.info(`Final Output Path: ${this.finalOutputPath}`);
         this.serviceBaseLogger.info(`Temp Directory: ${this.tempDir}`);
     }
-
-    // _extractTextFromUrl -> Moved to PageContentExtractorService
-    // _saveContentToTempFile -> Logic moved to FileSystemService or internal to ConferenceLinkProcessorService
-    // _processAndSaveLinkedPage -> Moved to ConferenceLinkProcessorService as processAndSaveGeneralLink
-    // _fetchAndProcessWebsiteInfo -> Logic moved to ConferenceDeterminationService (internal helper)
-    // _handleDetermineMatch -> Logic moved to ConferenceDeterminationService (internal helper)
-    // _handleDetermineNoMatch -> Logic moved to ConferenceDeterminationService (internal helper)
-    // _processDetermineApiResponse -> Logic moved to ConferenceDeterminationService as determineAndProcessOfficialSite
 
     private async ensureDirectories(paths: string[], loggerToUse?: Logger): Promise<void> {
         const logger = loggerToUse || this.serviceBaseLogger;
@@ -131,19 +120,17 @@ export class BatchProcessingService {
                 : path.dirname(dirPath);
 
             if (!fs.existsSync(dir)) {
-                logger.info({ ...logContext, path: dir, event: 'ensure_dir_create' });
+                logger.info({ ...logContext, path: dir, event: 'batch_processing_ensure_dir_create_attempt' }); // Đổi event cho rõ
                 try {
-                    await this.fileSystemService.ensureDirExists(dir, logger); // FileSystemService handles mkdir
+                    await this.fileSystemService.ensureDirExists(dir, logger);
                 } catch (mkdirError: unknown) {
-                    logger.error({ ...logContext, path: dir, err: mkdirError, event: 'ensure_dir_create_failed' });
+                    // SỬA EVENT NAME
+                    logger.error({ ...logContext, path: dir, err: mkdirError, event: 'save_batch_dir_create_failed' });
                     throw mkdirError;
                 }
             }
         }
     }
-
-    // readBatchContentFiles -> Moved to ConferenceDataAggregatorService
-    // aggregateContentForApi -> Moved to ConferenceDataAggregatorService
 
     /**
     * Executes extractInformation and extractCfp APIs in parallel using GeminiApiService.
@@ -173,7 +160,8 @@ export class BatchProcessingService {
         const extractFileBase = `${safeConferenceAcronym}_extract${suffix}`;
         const cfpFileBase = `${safeConferenceAcronym}_cfp${suffix}`;
 
-        logger.info({ event: 'parallel_final_apis_start' });
+        // SỬA EVENT NAME (thêm flow)
+        logger.info({ event: 'batch_processing_parallel_final_apis_start', flow: isUpdate ? 'update' : 'save' });
 
         const commonApiParams: Omit<GeminiApiParams, 'batch'> = {
             batchIndex, title: titleForApis, acronym: acronymForApis,
@@ -181,7 +169,7 @@ export class BatchProcessingService {
 
         const extractPromise = (async () => {
             const extractApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_EXTRACT });
-            extractApiLogger.info({ inputLength: contentSendToAPI.length, event: 'final_extract_api_call_start' });
+            extractApiLogger.info({ inputLength: contentSendToAPI.length, event: 'batch_processing_final_extract_api_call_start' });
             try {
                 const response = await this.geminiApiService.extractInformation(
                     { ...commonApiParams, batch: contentSendToAPI, }, extractApiLogger
@@ -189,17 +177,18 @@ export class BatchProcessingService {
                 const path = await this.fileSystemService.saveTemporaryFile(
                     response.responseText || "", extractFileBase, extractApiLogger
                 );
-                extractApiLogger.info({ responseLength: response.responseText?.length, filePath: path, event: 'final_extract_api_call_end', success: !!path });
+                extractApiLogger.info({ responseLength: response.responseText?.length, filePath: path, event: 'batch_processing_final_extract_api_call_end', success: !!path });
                 return { responseTextPath: path, metaData: response.metaData };
             } catch (error: any) {
-                extractApiLogger.error({ err: error, event: 'final_extract_api_call_failed' });
+                // SỬA EVENT NAME và thêm context
+                extractApiLogger.error({ err: error, event: 'save_batch_extract_api_call_failed', apiType: this.geminiApiService.API_TYPE_EXTRACT });
                 return { responseTextPath: undefined, metaData: null };
             }
         })();
 
         const cfpPromise = (async () => {
             const cfpApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_CFP });
-            cfpApiLogger.info({ inputLength: contentSendToAPI.length, event: 'final_cfp_api_call_start' });
+            cfpApiLogger.info({ inputLength: contentSendToAPI.length, event: 'batch_processing_final_cfp_api_call_start' });
             try {
                 const response = await this.geminiApiService.extractCfp(
                     { ...commonApiParams, batch: contentSendToAPI, }, cfpApiLogger
@@ -207,22 +196,25 @@ export class BatchProcessingService {
                 const path = await this.fileSystemService.saveTemporaryFile(
                     response.responseText || "", cfpFileBase, cfpApiLogger
                 );
-                cfpApiLogger.info({ responseLength: response.responseText?.length, filePath: path, event: 'final_cfp_api_call_end', success: !!path });
+                cfpApiLogger.info({ responseLength: response.responseText?.length, filePath: path, event: 'batch_processing_final_cfp_api_call_end', success: !!path });
                 return { responseTextPath: path, metaData: response.metaData };
             } catch (error: any) {
-                cfpApiLogger.error({ err: error, event: 'final_cfp_api_call_failed' });
+                // SỬA EVENT NAME và thêm context
+                cfpApiLogger.error({ err: error, event: 'save_batch_cfp_api_call_failed', apiType: this.geminiApiService.API_TYPE_CFP });
                 return { responseTextPath: undefined, metaData: null };
             }
         })();
 
         const [extractResult, cfpResult] = await Promise.all([extractPromise, cfpPromise]);
         logger.info({
-            event: 'parallel_final_apis_finished',
+            event: 'batch_processing_parallel_final_apis_finished',
             extractSuccess: !!extractResult.responseTextPath,
-            cfpSuccess: !!cfpResult.responseTextPath
+            cfpSuccess: !!cfpResult.responseTextPath,
+            flow: isUpdate ? 'update' : 'save'
         });
         if (!extractResult.responseTextPath && !cfpResult.responseTextPath) {
-            logger.error({ event: 'parallel_final_apis_both_failed' });
+            // SỬA EVENT NAME
+            logger.error({ event: 'save_batch_parallel_final_apis_both_failed', flow: isUpdate ? 'update' : 'save' });
         }
         return {
             extractResponseTextPath: extractResult.responseTextPath,
@@ -232,126 +224,9 @@ export class BatchProcessingService {
         };
     }
 
-    private async appendFinalRecord(
-        record: BatchEntry | BatchUpdateEntry,
-        parentLogger: Logger
-    ): Promise<void> {
-        const logger = parentLogger.child({
-            batchServiceFunction: 'appendFinalRecord',
-            outputPath: this.finalOutputPath,
-            recordAcronymForAppend: record.conferenceAcronym,
-            service: 'BatchProcessingServiceOrchestrator'
-        });
-        try {
-            logger.info({ event: 'append_final_record_start' });
-            const dataToWrite = JSON.stringify(record) + '\n';
-            await this.fileSystemService.appendFile(this.finalOutputPath, dataToWrite, logger);
-            logger.info({ event: 'append_final_record_success' });
-        } catch (appendError: any) {
-            logger.error({ err: appendError, event: 'append_final_record_failed' });
-            throw appendError;
-        }
-    }
-
-    // _processSingleLink -> Moved to ConferenceLinkProcessorService as processInitialLinkForSave
-    // _processMainLinkUpdate -> Moved to ConferenceLinkProcessorService
-    // _processCfpLinkUpdate -> Moved to ConferenceLinkProcessorService
-    // _processImpLinkUpdate -> Moved to ConferenceLinkProcessorService
 
 
-    private async _executeBatchTaskForUpdate(
-        batchInput: BatchUpdateEntry, // This already has conferenceTextPath, cfpTextPath, impTextPath
-        batchIndex: number,
-        parentLogger: Logger
-    ): Promise<boolean> {
-        const logger = parentLogger.child({
-            batchServiceFunction: '_executeBatchTaskForUpdate',
-            service: 'BatchProcessingServiceOrchestrator'
-        });
-        logger.info({ event: 'execute_update_batch_start' });
 
-        try {
-            const safeConferenceAcronym = (batchInput.conferenceAcronym || 'unknownAcro').replace(/[^a-zA-Z0-9_.-]/g, '-');
-            await this.ensureDirectories([this.batchesDir, path.dirname(this.finalOutputPath)], logger);
-
-            // 1. Read and Aggregate Content
-            const contentPaths: ContentPaths = {
-                conferenceTextPath: batchInput.conferenceTextPath,
-                cfpTextPath: batchInput.cfpTextPath,
-                impTextPath: batchInput.impTextPath,
-            };
-            const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
-            const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
-                batchInput.conferenceTitle, batchInput.conferenceAcronym, aggregatedFileContent, logger
-            );
-
-            // Intermediate file write (non-critical)
-            const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
-            const fileUpdateName = `${safeConferenceAcronym}_update_${batchIndex}.txt`;
-            const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
-            const fileUpdatePromise = this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
-                .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'write_intermediate_success' }))
-                .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'write_intermediate_failed' }));
-
-            // 2. Execute Final Extraction APIs
-            const apiResults = await this.executeFinalExtractionApis(
-                contentSendToAPI, batchIndex, batchInput.conferenceTitle, batchInput.conferenceAcronym,
-                safeConferenceAcronym, true, logger
-            );
-
-            await fileUpdatePromise; // Wait for non-critical write
-            logger.debug({ event: 'intermediate_update_file_write_settled' });
-
-            // 3. Prepare and Append Final Record
-            const finalRecord: BatchUpdateEntry = {
-                ...batchInput, // Contains original text paths
-                extractResponseTextPath: apiResults.extractResponseTextPath,
-                extractMetaData: apiResults.extractMetaData,
-                cfpResponseTextPath: apiResults.cfpResponseTextPath,
-                cfpMetaData: apiResults.cfpMetaData,
-            };
-            await this.appendFinalRecord(finalRecord, logger);
-
-            logger.info({ event: 'execute_update_batch_finish_success' });
-            return true;
-        } catch (error: any) {
-            logger.error({ err: error, event: 'execute_update_batch_finish_failed' });
-            // Log detailed error to a specific file if needed
-            const timestamp = new Date().toISOString();
-            const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchIndex: ${batchIndex}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
-            this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_update_task_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
-            return false;
-        }
-    }
-
-    private async _closePages(pages: Page[], parentLogger: Logger): Promise<void> {
-        const logger = parentLogger.child({
-            batchServiceFunction: '_closePages',
-            service: 'BatchProcessingServiceOrchestrator'
-        });
-        const pageCount = pages.filter(p => p && !p.isClosed()).length;
-        if (pageCount === 0) {
-            logger.debug({ initialPageCount: pages.length, openPageCount: 0, event: 'no_pages_to_close_or_already_closed' });
-            return;
-        }
-
-        logger.debug({ initialPageCount: pages.length, openPageCount: pageCount, event: 'closing_pages_start' });
-        let closedCount = 0;
-        let failedCount = 0;
-
-        for (const p of pages) {
-            if (p && !p.isClosed()) {
-                try {
-                    await p.close();
-                    closedCount++;
-                } catch (err: any) {
-                    failedCount++;
-                    logger.error({ pageId: (p as any)._guid, err: err, event: 'page_close_failed_in_loop' });
-                }
-            }
-        }
-        logger.debug({ closedCount, failedCount, totalAttemptedToClose: pageCount, event: 'closing_pages_finish' });
-    }
 
     public async processConferenceUpdate(
         browserContext: BrowserContext,
@@ -367,7 +242,7 @@ export class BatchProcessingService {
             conferenceTitle: conference.Title,
             service: 'BatchProcessingServiceOrchestrator'
         });
-        methodLogger.info({ event: 'process_update_start' });
+        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'update' }); // Tổng quát hơn
         const pages: Page[] = [];
 
         try {
@@ -439,7 +314,8 @@ export class BatchProcessingService {
 
 
             if (!mainResult.textPath) {
-                methodLogger.error({ event: 'abort_update_no_main_text_path' });
+                // SỬA EVENT NAME
+                methodLogger.error({ event: 'batch_processing_abort_no_main_text', flow: 'update', reason: 'Main text path missing after link processing' });
                 await this._closePages(pages, methodLogger);
                 return false;
             }
@@ -456,11 +332,12 @@ export class BatchProcessingService {
             methodLogger.info({ nextBatchIndex: batchIndexRef.current, event: 'batch_index_incremented_update_flow' });
 
             const updateSuccess = await this._executeBatchTaskForUpdate(batchData, currentBatchIndex, methodLogger);
-            methodLogger.info({ event: 'process_update_finish', success: updateSuccess });
+            // SỬA EVENT NAME
+            methodLogger.info({ event: 'batch_processing_flow_finish', success: updateSuccess, flow: 'update' });
             return updateSuccess;
-
         } catch (error: any) {
-            methodLogger.error({ err: error, event: 'process_update_unhandled_error' });
+            // SỬA EVENT NAME
+            methodLogger.error({ err: error, event: 'save_batch_unhandled_error_or_rethrown', flow: 'update_initiation_error' });
             return false;
         } finally {
             await this._closePages(pages, methodLogger);
@@ -485,10 +362,10 @@ export class BatchProcessingService {
             conferenceTitle: conference.Title,     // From original conference data
             service: 'BatchProcessingServiceOrchestrator'
         });
-        methodLogger.info({ event: 'process_save_start' });
+        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'save_initiation' });
 
         if (!links || links.length === 0) {
-            methodLogger.warn({ event: 'skipped_save_no_links' }); return false;
+            methodLogger.warn({ event: 'batch_processing_skipped_no_links_for_save' }); return false; // Event cụ thể hơn
         }
 
         let page: Page | null = null;
@@ -550,6 +427,9 @@ export class BatchProcessingService {
                 });
                 batchTaskLogger.info({ entriesInBatch: batchForDetermineApi.length, event: 'initiating_async_batch_task_for_save' });
 
+                // BỔ SUNG EVENT
+                methodLogger.info({ entriesInBatch: batchForDetermineApi.length, assignedBatchIndex: currentBatchIndexForThisTask, event: 'batch_task_create_delegation_start', flow: 'save' });
+
                 const batchPromise = this._executeBatchTaskForSave(
                     batchForDetermineApi, currentBatchIndexForThisTask,
                     taskAcronymContext, // Pass adjusted/derived acronym for file naming etc.
@@ -557,14 +437,15 @@ export class BatchProcessingService {
                 );
                 this.activeBatchSaves.add(batchPromise);
                 batchPromise.finally(() => this.activeBatchSaves.delete(batchPromise));
-                methodLogger.info({ assignedBatchIndex: currentBatchIndexForThisTask, event: 'async_batch_task_initiated_successfully' });
+                methodLogger.info({ assignedBatchIndex: currentBatchIndexForThisTask, event: 'batch_task_create_delegation_finish', flow: 'save' });
             } else {
-                methodLogger.warn({ event: 'batch_creation_skipped_empty_after_link_processing_save_flow' });
+                methodLogger.warn({ event: 'batch_processing_skipped_empty_after_link_processing_save_flow' });
             }
-            methodLogger.info({ event: 'process_save_initiation_finish_success' });
+            methodLogger.info({ event: 'batch_processing_flow_finish', success: true, flow: 'save_initiation' }); // success: true vì chỉ khởi tạo, task chạy async
             return true;
         } catch (error: any) {
-            methodLogger.error({ err: error, event: 'process_save_initiation_unhandled_error' });
+            // SỬA EVENT NAME
+            methodLogger.error({ err: error, event: 'save_batch_unhandled_error_or_rethrown', flow: 'save_initiation_error' });
             return false;
         } finally {
             if (page && !page.isClosed()) await this._closePages([page], methodLogger);
@@ -573,6 +454,73 @@ export class BatchProcessingService {
     }
 
 
+    private async _executeBatchTaskForUpdate(
+        batchInput: BatchUpdateEntry, // This already has conferenceTextPath, cfpTextPath, impTextPath
+        batchIndex: number,
+        parentLogger: Logger
+    ): Promise<boolean> {
+        const logger = parentLogger.child({
+            batchServiceFunction: '_executeBatchTaskForUpdate',
+            service: 'BatchProcessingServiceOrchestrator'
+        });
+        logger.info({ event: 'batch_task_create', flow: 'update', batchIndex });
+
+        try {
+            const safeConferenceAcronym = (batchInput.conferenceAcronym || 'unknownAcro').replace(/[^a-zA-Z0-9_.-]/g, '-');
+            await this.ensureDirectories([this.batchesDir, path.dirname(this.finalOutputPath)], logger);
+
+            // 1. Read and Aggregate Content
+            const contentPaths: ContentPaths = {
+                conferenceTextPath: batchInput.conferenceTextPath,
+                cfpTextPath: batchInput.cfpTextPath,
+                impTextPath: batchInput.impTextPath,
+            };
+            const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
+            const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
+                batchInput.conferenceTitle, batchInput.conferenceAcronym, aggregatedFileContent, logger
+            );
+
+            // Intermediate file write (non-critical)
+            const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
+            const fileUpdateName = `${safeConferenceAcronym}_update_${batchIndex}.txt`;
+            const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
+            const fileUpdatePromise = this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
+                .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
+                // SỬA EVENT NAME (nếu fileSystemService không log event này)
+                .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
+
+            // 2. Execute Final Extraction APIs
+            const apiResults = await this.executeFinalExtractionApis(
+                contentSendToAPI, batchIndex, batchInput.conferenceTitle, batchInput.conferenceAcronym,
+                safeConferenceAcronym, true, logger
+            );
+
+            await fileUpdatePromise; // Wait for non-critical write
+            logger.debug({ event: 'intermediate_update_file_write_settled' });
+
+            // 3. Prepare and Append Final Record
+            const finalRecord: BatchUpdateEntry = {
+                ...batchInput, // Contains original text paths
+                extractResponseTextPath: apiResults.extractResponseTextPath,
+                extractMetaData: apiResults.extractMetaData,
+                cfpResponseTextPath: apiResults.cfpResponseTextPath,
+                cfpMetaData: apiResults.cfpMetaData,
+            };
+            await this.appendFinalRecord(finalRecord, logger.child({ subOperation: 'append_final_update_record' }));
+
+            // SỬA EVENT NAME và thêm context
+            logger.info({ event: 'save_batch_finish_success', flow: 'update', batchIndex });
+            return true;
+        } catch (error: any) {
+            logger.error({ err: error, event: 'save_batch_unhandled_error_or_rethrown', flow: 'update', batchIndex });
+            // Log detailed error to a specific file if needed
+            const timestamp = new Date().toISOString();
+            const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchIndex: ${batchIndex}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
+            this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_update_task_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
+            return false;
+        }
+    }
+
     public async _executeBatchTaskForSave(
         initialBatchEntries: BatchEntry[], // Results from ConferenceLinkProcessorService.processInitialLinkForSave
         batchIndex: number,
@@ -580,7 +528,7 @@ export class BatchProcessingService {
         browserContext: BrowserContext,
         logger: Logger // Logger already has rich context
     ): Promise<boolean> {
-        logger.info({ event: '_execute_batch_task_for_save_start', entryCountInBatch: initialBatchEntries.length });
+        logger.info({ event: 'batch_task_create', flow: 'save', entryCountInBatch: initialBatchEntries.length, batchIndex });
 
         if (!initialBatchEntries || initialBatchEntries.length === 0 || !initialBatchEntries[0]?.conferenceAcronym || !initialBatchEntries[0]?.conferenceTitle) {
             logger.warn({ event: 'invalid_batch_input_for_save_task' });
@@ -621,8 +569,9 @@ export class BatchProcessingService {
             const fileFullLinksPath = path.join(this.batchesDir, fileFullLinksName);
             const writeFileFullLinksLogger = logger.child({ fileOperation: 'write_intermediate_full_links_save', filePath: fileFullLinksPath });
             const writeFullLinksPromise = this.fileSystemService.writeFile(fileFullLinksPath, batchContentForDetermine, writeFileFullLinksLogger)
-                .then(() => writeFileFullLinksLogger.debug({ event: 'write_intermediate_success' }))
-                .catch(writeError => writeFileFullLinksLogger.error({ err: writeError, event: 'write_intermediate_failed' }));
+                .then(() => writeFileFullLinksLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
+                // SỬA EVENT NAME (nếu fileSystemService không log event này)
+                .catch(writeError => writeFileFullLinksLogger.error({ err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_full_links_content' }));
 
 
             // 2. Call determine_links_api (API 1)
@@ -646,7 +595,7 @@ export class BatchProcessingService {
                 (primaryEntryForContext as any).determineMetaData = determineLinksResponse.metaData; // Temporary holding
                 determineApiLogger.info({ responseLength: determineLinksResponse.responseText?.length, event: 'gemini_determine_api_call_end_save_task', success: true });
             } catch (determineLinksError: any) {
-                determineApiLogger.error({ err: determineLinksError, event: 'gemini_determine_api_call_failed_save_task' });
+                determineApiLogger.error({ err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 1 });
                 await writeFullLinksPromise;
                 throw new Error(`Critical: Determine links API failed for batch ${batchIndex} (SAVE): ${determineLinksError.message || determineLinksError}`);
             }
@@ -663,7 +612,7 @@ export class BatchProcessingService {
                     processDetermineLogger
                 );
             } catch (processError: any) {
-                processDetermineLogger.error({ err: processError, event: 'process_determine_response_call_failed_save_task' });
+                processDetermineLogger.error({ err: processError, event: 'save_batch_process_determine_call_failed' });
                 throw processError;
             }
 
@@ -672,7 +621,7 @@ export class BatchProcessingService {
                     resultCount: processedMainEntries?.length,
                     mainLinkResult: processedMainEntries?.[0]?.conferenceLink,
                     mainTextPathResult: processedMainEntries?.[0]?.conferenceTextPath,
-                    event: 'invalid_result_after_processing_determine_response_save_task'
+                    event: 'save_batch_process_determine_failed_invalid'
                 });
                 await writeFullLinksPromise;
                 // Log error to specific file
@@ -710,9 +659,9 @@ export class BatchProcessingService {
             const fileMainLinkPath = path.join(this.batchesDir, fileMainLinkName);
             const writeFileMainLinkLogger = logger.child({ fileOperation: 'write_intermediate_main_link_content_save', filePath: fileMainLinkPath });
             const fileMainLinkPromise = this.fileSystemService.writeFile(fileMainLinkPath, contentSendToFinalApi, writeFileMainLinkLogger)
-                .then(() => writeFileMainLinkLogger.debug({ event: 'write_intermediate_success' }))
-                .catch(writeError => writeFileMainLinkLogger.error({ err: writeError, event: 'write_intermediate_failed' }));
-
+                .then(() => writeFileMainLinkLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
+                // SỬA EVENT NAME (nếu fileSystemService không log event này)
+                .catch(writeError => writeFileMainLinkLogger.error({ err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_main_link_content' }));
 
             // 5. Execute Final Extraction APIs
             const finalApiResults = await this.executeFinalExtractionApis(
@@ -736,11 +685,12 @@ export class BatchProcessingService {
             };
             await this.appendFinalRecord(finalRecord, logger.child({ subOperation: 'append_final_save_record' }));
 
-            logger.info({ event: '_execute_batch_task_for_save_finish_success' });
+            logger.info({ event: 'save_batch_finish_success', flow: 'save', batchIndex });
             return true;
 
         } catch (error: any) {
-            logger.error({ err: error, event: '_execute_batch_task_for_save_unhandled_error' });
+            // SỬA EVENT NAME và thêm context
+            logger.error({ err: error, event: 'save_batch_unhandled_error_or_rethrown', flow: 'save', batchIndex });
             // Log detailed error to a specific file
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForSave for ${primaryEntryForContext.conferenceAcronym} (BatchIndex: ${batchIndex}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
@@ -749,6 +699,28 @@ export class BatchProcessingService {
         }
     }
 
+    
+    private async appendFinalRecord(
+        record: BatchEntry | BatchUpdateEntry,
+        parentLogger: Logger
+    ): Promise<void> {
+        const logger = parentLogger.child({
+            batchServiceFunction: 'appendFinalRecord',
+            outputPath: this.finalOutputPath,
+            recordAcronymForAppend: record.conferenceAcronym,
+            service: 'BatchProcessingServiceOrchestrator'
+        });
+        try {
+            logger.info({ event: 'append_final_record_start' });
+            const dataToWrite = JSON.stringify(record) + '\n';
+            await this.fileSystemService.appendFile(this.finalOutputPath, dataToWrite, logger);
+            logger.info({ event: 'append_final_record_success' });
+        } catch (appendError: any) {
+            logger.error({ err: appendError, event: 'append_final_record_failed' });
+            throw appendError;
+        }
+    }
+    
     public async awaitCompletion(parentLogger?: Logger): Promise<void> {
         const logger = (parentLogger || this.serviceBaseLogger).child({
             batchServiceMethod: 'awaitCompletion',
@@ -777,5 +749,34 @@ export class BatchProcessingService {
         } else {
             logger.info({ initialAwaitedCount: initialCount, event: 'all_tracked_batch_save_operations_completed_await' });
         }
+    }
+
+    private async _closePages(pages: Page[], parentLogger: Logger): Promise<void> {
+        const logger = parentLogger.child({
+            batchServiceFunction: '_closePages',
+            service: 'BatchProcessingServiceOrchestrator'
+        });
+        const pageCount = pages.filter(p => p && !p.isClosed()).length;
+        if (pageCount === 0) {
+            logger.debug({ initialPageCount: pages.length, openPageCount: 0, event: 'no_pages_to_close_or_already_closed' });
+            return;
+        }
+
+        logger.debug({ initialPageCount: pages.length, openPageCount: pageCount, event: 'closing_pages_start' });
+        let closedCount = 0;
+        let failedCount = 0;
+
+        for (const p of pages) {
+            if (p && !p.isClosed()) {
+                try {
+                    await p.close();
+                    closedCount++;
+                } catch (err: any) {
+                    failedCount++;
+                    logger.error({ pageId: (p as any)._guid, err: err, event: 'page_close_failed_in_loop' });
+                }
+            }
+        }
+        logger.debug({ closedCount, failedCount, totalAttemptedToClose: pageCount, event: 'closing_pages_finish' });
     }
 }

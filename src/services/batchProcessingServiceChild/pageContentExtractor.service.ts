@@ -1,4 +1,4 @@
-// src/services/batchProcessingServiceChild/PageContentExtractor.service.ts
+// src/services/batchProcessingServiceChild/pageContentExtractor.service.ts
 import { Page } from 'playwright';
 import { Logger } from 'pino';
 import { ConfigService } from '../../config/config.service';

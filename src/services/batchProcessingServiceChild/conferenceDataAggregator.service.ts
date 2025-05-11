@@ -1,4 +1,4 @@
-// src/services/conferenceDataAggregator.service.ts
+// src/services/batchProcessingServiceChild/conferenceDataAggregator.service.ts
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
 import { singleton, inject } from 'tsyringe';
@@ -35,7 +35,7 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
         @inject(FileSystemService) private fileSystemService: FileSystemService,
     ) {}
 
-    public async readContentFiles(
+      public async readContentFiles(
         paths: ContentPaths,
         logger: Logger
     ): Promise<AggregatedContent> {
@@ -48,12 +48,14 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
                 this.fileSystemService.readFileContent(paths.conferenceTextPath, logger)
                     .then(text => { content.mainText = text; })
                     .catch(e => {
-                        logger.error({ ...logContext, err: e, filePath: paths.conferenceTextPath, contentType: 'main', event: 'read_content_failed' });
-                        throw e; // Critical for main text
+                        // SỬA EVENT NAME và thêm context
+                        logger.error({ ...logContext, err: e, filePath: paths.conferenceTextPath, contentType: 'main', event: 'save_batch_read_content_failed', isCritical: true });
+                        throw e;
                     })
             );
         } else {
-            logger.error({ ...logContext, contentType: 'main', event: 'read_content_failed_missing_path' });
+            // SỬA EVENT NAME và thêm context
+            logger.error({ ...logContext, contentType: 'main', event: 'save_batch_read_content_failed_missing_path', isCritical: true });
             throw new Error("Missing main text path for content aggregation.");
         }
 
@@ -61,7 +63,8 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
             readPromises.push(
                 this.fileSystemService.readFileContent(paths.cfpTextPath, logger)
                     .then(text => { content.cfpText = text; })
-                    .catch(e => logger.warn({ ...logContext, err: e, filePath: paths.cfpTextPath, contentType: 'cfp', event: 'read_content_failed_non_critical' }))
+                    // SỬA EVENT NAME và thêm context
+                    .catch(e => logger.warn({ ...logContext, err: e, filePath: paths.cfpTextPath, contentType: 'cfp', event: 'save_batch_read_content_warn_non_critical', isCritical: false }))
             );
         }
 
@@ -69,11 +72,12 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
             readPromises.push(
                 this.fileSystemService.readFileContent(paths.impTextPath, logger)
                     .then(text => { content.impText = text; })
-                    .catch(e => logger.warn({ ...logContext, err: e, filePath: paths.impTextPath, contentType: 'imp', event: 'read_content_failed_non_critical' }))
+                    // SỬA EVENT NAME và thêm context
+                    .catch(e => logger.warn({ ...logContext, err: e, filePath: paths.impTextPath, contentType: 'imp', event: 'save_batch_read_content_warn_non_critical', isCritical: false }))
             );
         }
         await Promise.all(readPromises);
-        logger.debug({ ...logContext, event: 'read_content_complete', hasCfp: !!content.cfpText, hasImp: !!content.impText });
+        logger.debug({ ...logContext, event: 'conference_data_aggregator_read_content_complete', hasCfp: !!content.cfpText, hasImp: !!content.impText });
         return content;
     }
 
@@ -87,7 +91,7 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
         const impContent = content.impText ? ` \n\nImportant Dates information:\n${content.impText.trim()}` : "";
         const cfpContentAggregated = content.cfpText ? ` \n\nCall for Papers information:\n${content.cfpText.trim()}` : "";
         const aggregated = `Conference Title: ${title}\nConference Acronym: ${acronym}\n\nMain Website Content:\n${content.mainText.trim()}${cfpContentAggregated}${impContent}`;
-        logger.debug({ ...logContext, charCount: aggregated.length, event: 'aggregate_content_complete' });
+        logger.info({ ...logContext, charCount: aggregated.length, aggregatedItems: 1, event: 'save_batch_aggregate_content_end' });
         return aggregated;
     }
 }

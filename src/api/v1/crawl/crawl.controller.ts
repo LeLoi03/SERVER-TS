@@ -23,6 +23,8 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     const startTime = Date.now();
     const dataSource = (req.query.dataSource as string) || 'client';
 
+    const operationStartTime = Date.now(); // Thời gian bắt đầu của controller
+
     try {
         let conferenceList: ConferenceData[];
 
@@ -30,12 +32,12 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
 
         if (dataSource === 'client') {
             conferenceList = req.body;
-             if (!Array.isArray(conferenceList)) {
-                 routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
-                 res.status(400).json({ message: 'Invalid conference list provided in the request body (must be an array).' });
-                 return;
-             }
-             routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
+            if (!Array.isArray(conferenceList)) {
+                routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
+                res.status(400).json({ message: 'Invalid conference list provided in the request body (must be an array).' });
+                return;
+            }
+            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
         } else {
             routeLogger.warn("Internal data source ('api') is not implemented in this refactoring. Please provide data via 'client' source.");
             res.status(400).json({ message: "dataSource=api is not currently supported. Use dataSource=client and provide data in the body." });
@@ -43,19 +45,19 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         }
 
         if (!conferenceList || !Array.isArray(conferenceList)) {
-             routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
-             res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
-             return;
+            routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
+            res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
+            return;
         }
         if (conferenceList.length === 0) {
-             routeLogger.warn("Conference list is empty. Nothing to process.");
-             res.status(200).json({
-                 message: 'Conference list provided or fetched was empty. No processing performed.',
-                 runtime: `0.00 s`,
-                 outputJsonlPath: configService.finalOutputJsonlPath,
-                 outputCsvPath: configService.evaluateCsvPath
-             });
-             return;
+            routeLogger.warn("Conference list is empty. Nothing to process.");
+            res.status(200).json({
+                message: 'Conference list provided or fetched was empty. No processing performed.',
+                runtime: `0.00 s`,
+                outputJsonlPath: configService.finalOutputJsonlPath,
+                outputCsvPath: configService.evaluateCsvPath
+            });
+            return;
         }
 
         routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, "Calling CrawlOrchestratorService to run the process...");
@@ -63,17 +65,24 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         // *** Truyền routeLogger vào service chính ***
         const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(conferenceList, routeLogger); // <--- THAY ĐỔI Ở ĐÂY
 
-        const endTime = Date.now();
-        const runTimeSeconds = ((endTime - startTime) / 1000).toFixed(2);
+        const operationEndTime = Date.now(); // Thời gian kết thúc của controller
+        const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
 
+         // Log event thành công với context đầy đủ
         routeLogger.info({
-            runtimeSeconds: runTimeSeconds,
-            totalInput: conferenceList.length,
-            resultsReturned: processedResults.length,
-            event: 'processing_finished_successfully',
-            outputJsonl: configService.finalOutputJsonlPath,
-            outputCsv: configService.evaluateCsvPath
-        }, "Conference processing finished via orchestrator. Returning results.");
+            event: 'processing_finished_successfully', // EVENT
+            context: { // Đưa các thông tin vào context để handler dễ truy cập
+                runtimeSeconds: parseFloat(runTimeSeconds),
+                totalInput: conferenceList.length,
+                resultsReturned: processedResults.length,
+                outputJsonl: configService.finalOutputJsonlPath,
+                outputCsv: configService.evaluateCsvPath,
+                processed_results: processedResults, // GỬI KẾT QUẢ VÀO CONTEXT
+                startTime: new Date(operationStartTime).toISOString(), // Thời gian bắt đầu của controller
+                endTime: new Date(operationEndTime).toISOString(),     // Thời gian kết thúc của controller
+            }
+        }, "Conference processing finished successfully via controller. Returning results.");
+
 
         res.status(200).json({
             message: `Conference processing completed. Orchestrator returned ${processedResults.length} processed records. See server files for details.`,
@@ -85,19 +94,31 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         routeLogger.info({ statusCode: 200, resultsCount: processedResults.length }, "Sent successful response");
 
     } catch (error: any) {
-        const endTime = Date.now();
-        const runTime = endTime - startTime;
+        const operationEndTime = Date.now();
+        const runTimeMs = operationEndTime - operationStartTime;
         const errorLogger = routeLogger || loggingService.getLogger({ requestId });
-        errorLogger.error({ err: error, stack: error.stack, runtimeMs: runTime, dataSource }, "Conference processing failed within route handler or orchestrator");
+
+        // Log event thất bại
+        errorLogger.error({
+            err: error,
+            stack: error.stack,
+            event: 'processing_failed_in_controller', // EVENT MỚI
+            context: {
+                runtimeMs: runTimeMs,
+                dataSource: (req.query.dataSource as string) || 'client',
+                startTime: new Date(operationStartTime).toISOString(),
+                endTime: new Date(operationEndTime).toISOString(),
+            }
+        }, "Conference processing failed within route handler or orchestrator");
 
         if (!res.headersSent) {
-             res.status(500).json({
-                 message: 'Conference processing failed',
-                 error: error.message
-             });
-             errorLogger.warn({ statusCode: 500 }, "Sent error response");
+            res.status(500).json({
+                message: 'Conference processing failed',
+                error: error.message
+            });
+            errorLogger.warn({ statusCode: 500 }, "Sent error response");
         } else {
-             errorLogger.error("Headers already sent, could not send 500 error response.");
+            errorLogger.error("Headers already sent, could not send 500 error response.");
         }
     }
 }

@@ -1,5 +1,5 @@
 // src/client/utils/eventHandlers/searchHandlers.ts
-import { LogEventHandler } from './commonHandlers';
+import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
 
 export const handleSearchFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {

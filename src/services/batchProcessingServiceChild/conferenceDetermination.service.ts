@@ -1,4 +1,4 @@
-// src/services/conferenceDetermination.service.ts
+// src/services/batchProcessingServiceChild/conferenceDetermination.service.ts
 import { Page, BrowserContext } from 'playwright';
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
@@ -24,7 +24,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         @inject(FileSystemService) private fileSystemService: FileSystemService,
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
         @inject('IConferenceLinkProcessorService') private linkProcessorService: IConferenceLinkProcessorService,
-    ) {}
+    ) { }
 
     // --- Helper: was _fetchAndProcessWebsiteInfo ---
     private async fetchAndProcessOfficialSiteInternal(
@@ -96,7 +96,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             return null;
         }
     }
-    
+
     // --- Helper: was _handleDetermineMatch ---
     private async handleDetermineMatchInternal(
         page: Page,
@@ -113,15 +113,15 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             matchedLink: matchingEntry.conferenceLink,
         });
         childLogger.info({ event: 'start' });
-    
+
         // Update entry with links from API1 (already normalized relative to officialWebsiteNormalized)
         matchingEntry.cfpLink = cfpLinkFromApi1;
         matchingEntry.impLink = impLinkFromApi1;
-    
+
         const safeAcronym = (matchingEntry.conferenceAcronym || 'unknown').replace(/[^a-zA-Z0-9_-]/g, '-');
         let cfpSaveError = false;
         let impSaveError = false;
-    
+
         try {
             const cfpFileBase = `${safeAcronym}_cfp_determine_match_${batchIndex}`;
             matchingEntry.cfpTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
@@ -133,7 +133,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 'cfp',
                 true, // useMainContentKeywords = true for CFP
                 cfpFileBase,
-                childLogger.child({contentType: 'cfp'})
+                childLogger.child({ contentType: 'cfp' })
             );
             if (cfpLinkFromApi1 && !matchingEntry.cfpTextPath && cfpLinkFromApi1 !== officialWebsiteNormalized) {
                 cfpSaveError = true;
@@ -142,7 +142,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             childLogger.error({ contentType: 'cfp', err: error, event: 'save_cfp_error' });
             cfpSaveError = true;
         }
-    
+
         try {
             const impFileBase = `${safeAcronym}_imp_determine_match_${batchIndex}`;
             matchingEntry.impTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
@@ -154,16 +154,16 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 'imp',
                 false, // useMainContentKeywords = false for IMP
                 impFileBase,
-                childLogger.child({contentType: 'imp'})
+                childLogger.child({ contentType: 'imp' })
             );
             if (impLinkFromApi1 && !matchingEntry.impTextPath && impLinkFromApi1 !== officialWebsiteNormalized && impLinkFromApi1 !== cfpLinkFromApi1) {
-                 impSaveError = true;
+                impSaveError = true;
             }
         } catch (error) {
             childLogger.error({ contentType: 'imp', err: error, event: 'save_imp_error' });
             impSaveError = true;
         }
-    
+
         childLogger.info({ success: !cfpSaveError && !impSaveError, cfpSaveError, impSaveError, event: 'finish' });
         return matchingEntry;
     }
@@ -185,8 +185,8 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
         // 1. Fetch and process the main website (officialWebsiteNormalizedFromApi1)
         const websiteInfo = await this.fetchAndProcessOfficialSiteInternal(
-            page, 
-            officialWebsiteNormalizedFromApi1, 
+            page,
+            officialWebsiteNormalizedFromApi1,
             primaryEntryToUpdate.conferenceAcronym,
             primaryEntryToUpdate.conferenceTitle,
             batchIndex,
@@ -208,7 +208,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             fullTextForApi2 = await this.fileSystemService.readFileContent(mainTextPath, childLogger);
             childLogger.info({ filePath: mainTextPath, textLength: fullTextForApi2.length, event: 'read_fetched_main_content_success' });
         } catch (readErr: any) {
-            childLogger.error({ filePath: mainTextPath, err: readErr, event: 'read_fetched_main_content_failed' });
+            childLogger.error({ filePath: mainTextPath, err: readErr, event: 'save_batch_read_content_failed', contentType: 'main_for_api2_determination', isCritical: true });            
             // Continue, API 2 might fail or give poor results
         }
 
@@ -231,7 +231,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             // primaryEntryToUpdate.determineMetaDataApi2 = api2Response.metaData; // Store if needed
             childLogger.info({ ...api2LogContext, responseLength: api2ResponseText.length, event: 'api2_determine_call_success' });
         } catch (determineLinksError: any) {
-            childLogger.error({ ...api2LogContext, err: determineLinksError, event: 'api2_determine_call_failed' });
+            childLogger.error({ ...api2LogContext, err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 2 });
             primaryEntryToUpdate.conferenceLink = "None";
             return primaryEntryToUpdate;
         }
@@ -246,7 +246,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             }
             childLogger.debug({ ...api2LogContext, event: 'api2_json_parse_success' });
         } catch (parseError: any) {
-            childLogger.error({ ...api2LogContext, err: parseError, responseTextPreview: api2ResponseText.substring(0, 200), event: 'api2_json_parse_failed' });
+            childLogger.error({ ...api2LogContext, err: parseError, responseTextPreview: api2ResponseText.substring(0, 200), event: 'save_batch_api_response_parse_failed', apiType: this.geminiApiService.API_TYPE_DETERMINE, apiCallNumber: 2 });
             primaryEntryToUpdate.conferenceLink = "None";
             return primaryEntryToUpdate;
         }
@@ -269,7 +269,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         try {
             const cfpFileBase = `${safeAcronym}_cfp_determine_nomatch_api2_${batchIndex}`;
             primaryEntryToUpdate.cfpTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
-                page, cfpLinkFromApi2, actualFinalUrl, impLinkFromApi2, primaryEntryToUpdate.conferenceAcronym, 'cfp', true, cfpFileBase, childLogger.child({contentType: 'cfp', source: 'api2'})
+                page, cfpLinkFromApi2, actualFinalUrl, impLinkFromApi2, primaryEntryToUpdate.conferenceAcronym, 'cfp', true, cfpFileBase, childLogger.child({ contentType: 'cfp', source: 'api2' })
             );
             if (cfpLinkFromApi2 && !primaryEntryToUpdate.cfpTextPath && cfpLinkFromApi2 !== actualFinalUrl) {
                 cfpSaveError = true;
@@ -282,7 +282,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         try {
             const impFileBase = `${safeAcronym}_imp_determine_nomatch_api2_${batchIndex}`;
             primaryEntryToUpdate.impTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
-                page, impLinkFromApi2, actualFinalUrl, cfpLinkFromApi2, primaryEntryToUpdate.conferenceAcronym, 'imp', false, impFileBase, childLogger.child({contentType: 'imp', source: 'api2'})
+                page, impLinkFromApi2, actualFinalUrl, cfpLinkFromApi2, primaryEntryToUpdate.conferenceAcronym, 'imp', false, impFileBase, childLogger.child({ contentType: 'imp', source: 'api2' })
             );
             if (impLinkFromApi2 && !primaryEntryToUpdate.impTextPath && impLinkFromApi2 !== actualFinalUrl && impLinkFromApi2 !== cfpLinkFromApi2) {
                 impSaveError = true;
@@ -311,7 +311,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
         if (!originalBatch?.[0]) {
             logger.error({ batchIndexForApi, event: 'invalid_or_empty_batch_input' });
-            return []; 
+            return [];
         }
         const primaryEntryForContext = originalBatch[0]; // Used if no match or for context
 
@@ -325,11 +325,11 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 if (!api1ResponseText) throw new Error("API 1 response text is empty.");
                 linksDataFromApi1 = JSON.parse(api1ResponseText);
                 if (typeof linksDataFromApi1 !== 'object' || linksDataFromApi1 === null) {
-                     throw new Error("Parsed API 1 response is not a valid object.");
+                    throw new Error("Parsed API 1 response is not a valid object.");
                 }
                 logger.debug({ event: 'api1_json_parse_success' });
             } catch (parseError: any) {
-                logger.error({ err: parseError, responseTextPreview: String(api1ResponseText).substring(0, 200), event: 'api1_json_parse_failed' });
+                logger.error({ err: parseError, responseTextPreview: String(api1ResponseText).substring(0, 200), event: 'save_batch_api_response_parse_failed', apiType: this.geminiApiService.API_TYPE_DETERMINE, apiCallNumber: 1 });
                 primaryEntryForContext.conferenceLink = "None";
                 return [primaryEntryForContext];
             }
@@ -395,10 +395,13 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 return [primaryEntryForContext];
             }
 
-        } catch (error: any) {
-            logger.error({ err: error, event: 'unhandled_error_in_determineAndProcessOfficialSite' });
-            primaryEntryForContext.conferenceLink = "None";
-            return [primaryEntryForContext];
+         } catch (error: any) {
+            // SỬA EVENT NAME và thêm context (nếu lỗi này không được bắt và rethrow ở BatchProcessingService)
+            // Hiện tại, lỗi này nên được bắt bởi _executeBatchTaskForSave và log 'save_batch_process_determine_call_failed'
+            // hoặc 'save_batch_unhandled_error_or_rethrown' ở cấp cao hơn.
+            // Nếu muốn log cụ thể lỗi của service này trước khi rethrow:
+            logger.error({ err: error, event: 'conference_determination_service_unhandled_error' });
+            throw error; // Rethrow để BatchProcessingService xử lý
         } finally {
             if (page && !page.isClosed()) {
                 await page.close().catch(e => logger.error({ err: e, event: 'page_close_failed_determination' }));
