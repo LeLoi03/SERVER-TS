@@ -78,6 +78,7 @@ const handleSearchAttemptIssue: LogEventHandler = (logEntry, results, confDetail
     }
     // Log chi tiết hơn vào confDetail nếu cần
 };
+
 const handlePlaywrightSetupFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO, logContext) => {
     results.playwright.setupSuccess = false;
     results.playwright.setupError = true;

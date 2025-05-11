@@ -56,7 +56,7 @@ export interface ConferenceAnalysisDetail {
     validationIssues?: { field: string; value: any; action: string; timestamp: string }[];
 
 
-    finalResult?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
+    finalResultPreview?: any; // Lưu kết quả cuối cùng nếu có log 'crawlConferences finished successfully'
 }
 
 

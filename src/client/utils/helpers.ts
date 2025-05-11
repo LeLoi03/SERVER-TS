@@ -1,5 +1,5 @@
 import { ConferenceAnalysisDetail } from '../types/logAnalysis'; // Adjust path if needed
-import { logger } from '../../conference/11_utils'; // Adjust path if needed
+// import { logger } from '../../conference/11_utils'; // Adjust path if needed
 import { LogAnalysisResult } from '../types/logAnalysis';
 
 // --- Helper function: Normalize Error Key ---
@@ -91,7 +91,10 @@ export const initializeLogAnalysisResult = (logFilePath: string): LogAnalysisRes
         processedConferencesCount: 0, completedTasks: 0, failedOrCrashedTasks: 0, processingTasks: 0, successfulExtractions: 0
     },
     googleSearch: {
-        totalRequests: 0, successfulSearches: 0, failedSearches: 0, skippedSearches: 0, quotaErrors: 0, keyUsage: {}, errorsByType: {}
+        totalRequests: 0, successfulSearches: 0, failedSearches: 0, skippedSearches: 0, quotaErrors: 0, keyUsage: {}, errorsByType: {},
+        attemptIssues: 0, attemptIssueDetails: {}, quotaErrorsEncountered: 0, malformedResultItems: 0, successfulSearchesWithNoItems: 0, 
+        apiKeyLimitsReached: 0, keySpecificLimitsReached: {}, apiKeysProvidedCount: 0, allKeysExhaustedEvents_GetNextKey: 0,
+        allKeysExhaustedEvents_StatusCheck: 0, apiKeyRotationsSuccess: 0, apiKeyRotationsFailed: 0
     },
     playwright: {
         setupSuccess: null, setupError: null, htmlSaveAttempts: 0, successfulSaves: 0, failedSaves: 0, linkProcessing: { totalLinksAttempted: 0, successfulAccess: 0, failedAccess: 0, redirects: 0 }, errorsByType: {}
@@ -130,7 +133,7 @@ export const doesRequestOverlapFilter = (
 
     if (reqStartMillis === null || reqEndMillis === null) {
         // If strict filtering is needed, exclude requests without a full time range
-        logger.debug({ ...logContext, event: 'filter_exclude_incomplete_timestamp' }, 'Excluding request from filtered analysis due to missing start/end time.');
+        // logger.debug({ ...logContext, event: 'filter_exclude_incomplete_timestamp' }, 'Excluding request from filtered analysis due to missing start/end time.');
         return false;
     }
 
@@ -153,7 +156,7 @@ export const doesRequestOverlapFilter = (
     */
 
     if (!overlaps) {
-        logger.trace({ ...logContext, event: 'filter_exclude_no_overlap', reqStartMillis, reqEndMillis, filterStartMillis, filterEndMillis }, 'Excluding request: time range does not overlap with filter.');
+        // logger.trace({ ...logContext, event: 'filter_exclude_no_overlap', reqStartMillis, reqEndMillis, filterStartMillis, filterEndMillis }, 'Excluding request: time range does not overlap with filter.');
     }
 
     return overlaps;
