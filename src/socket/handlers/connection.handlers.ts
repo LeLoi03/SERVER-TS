@@ -5,7 +5,7 @@ import { container } from 'tsyringe';
 // import { LoggingService } from '../../services/logging.service'; // Xóa import LoggingService
 import { ConversationHistoryService } from '../../chatbot/services/conversationHistory.service';
 import { registerCoreHandlers } from './core.handlers';
-import { fetchUserInfo } from '../../utils/chatbot/apiClient';
+import { fetchUserInfo } from '../../utils/chatbot/auth';
 import logToFile from '../../utils/logger';
 
 export const handleConnection = async (
